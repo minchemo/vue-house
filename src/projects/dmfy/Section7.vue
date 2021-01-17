@@ -222,7 +222,7 @@
   text-align: left;
   color: #976a4b;
   font-family: "DFLiSongStd";
-  span {
+  .large {
     font-size: size(40);
   }
 }
@@ -266,9 +266,12 @@
   .title {
     top: size-m(540);
     right: auto;
-    left: size-m(110);
+    left: size-m(95);
     font-size: size-m(20);
     text-align: center;
+    .large {
+      font-size: size-m(30);
+    }
   }
   .desc {
     width: size-m(295);

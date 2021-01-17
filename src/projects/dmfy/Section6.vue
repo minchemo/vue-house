@@ -245,9 +245,12 @@
   .title {
     top: size-m(540);
     right: auto;
-    left: size-m(120);
+    left: size-m(95);
     font-size: size-m(20);
     text-align: center;
+    .large {
+      font-size: size-m(30);
+    }
   }
   .desc {
     width: size-m(295);
