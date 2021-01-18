@@ -145,6 +145,31 @@ export default {
           .on("load", imageLoaded)
           .attr("src", $(img).attr("src"));
       });
+
+      $(".decor").each(function(i, el) {
+        const $this = $(el);
+        const img = $this.find("img");
+
+        $this.append('<div class="decor-shine"></div>');
+
+        $this.css({
+          mask: "url(" + img.attr("src") + ") no-repeat center center",
+          "-webkit-mask":
+            "url(" + img.attr("src") + ") no-repeat center center",
+          "-webkit-mask-size": "cover",
+          "mask-size": "cover"
+        });
+
+        $this.find(".decor-shine").css({
+          mask: "url(" + img.attr("src") + ") no-repeat center center",
+          "-webkit-mask":
+            "url(" + img.attr("src") + ") no-repeat center center",
+          "-webkit-mask-size": "cover",
+          "mask-size": "cover"
+        });
+
+        img.css("visibility", "hidden");
+      });
     });
   },
   mounted() {

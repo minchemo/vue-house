@@ -40,7 +40,9 @@
               立即預約
             </div>
           </div>
-          <div class="bg"></div>
+          <div class="bg">
+            <div class="bg-decor"></div>
+          </div>
         </div>
       </div>
 
@@ -103,10 +105,6 @@
     width: 47vw;
     top: 28vh;
     left: -9vw;
-    animation: decor-rotate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
 
     img {
       width: 100%;
@@ -116,11 +114,6 @@
     width: 33vw;
     top: 88vh;
     left: -11vw;
-    animation: decor-rotate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse;
-    animation-timing-function: ease-in-out;
 
     img {
       width: 100%;
@@ -130,10 +123,6 @@
     width: 30vw;
     bottom: 0;
     right: -4vw;
-    animation: decor-rotate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
 
     img {
       width: 100%;
@@ -149,6 +138,29 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+
+    div {
+      &:after {
+        content: "";
+        position: absolute;
+        top: -30%;
+        right: -200%;
+        width: 20%;
+        height: 200%;
+        opacity: 0;
+        transform: rotate(30deg);
+        background: rgba(255, 255, 255, 0.13);
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.13) 0%,
+          rgba(255, 255, 255, 0.13) 10%,
+          rgba(255, 255, 255, 0.5) 20%,
+          rgba(255, 255, 255, 0) 30%
+        );
+        animation: shine 2s;
+        animation-iteration-count: 2;
+      }
+    }
 
     > div > img {
       transform: scale(0.8);
@@ -274,10 +286,34 @@
         position: absolute;
         width: 100vw;
         height: 100vh;
-        background: url(.~@/projects/dmfy/mo/decor.png);
+        mask: url(.~@/projects/dmfy/mo/decor.png) no-repeat center center;
+        -webkit-mask: url(.~@/projects/dmfy/mo/decor.png) no-repeat center
+          center;
+        -webkit-mask-size: cover;
+        mask-size: cove;
+        background: url(.~@/projects/dmfy/mo/decor-bg.jpg);
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
+        .bg-decor {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: linear-gradient(
+            235deg,
+            transparent 50%,
+            rgba(255, 255, 255, 0.1) 60%,
+            rgba(255, 255, 255, 0.3) 69%,
+            transparent 70%,
+            transparent 100%
+          );
+          background-repeat: no-repeat;
+          background-position: -100vw;
+          animation: shine 3s infinite;
+          animation-timing-function: ease-in-out;
+        }
       }
     }
 

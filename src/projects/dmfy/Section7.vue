@@ -79,10 +79,6 @@
   bottom: -17vh;
   right: 0vw;
   z-index: 5;
-  animation: decor-rotate;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
 
   img {
     width: 100%;

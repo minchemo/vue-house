@@ -55,10 +55,6 @@ export default {
     bottom: 0;
     right: 10vw;
     z-index: -1;
-    animation: decor-rotate-re;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
     img {
       width: 100%;
     }
