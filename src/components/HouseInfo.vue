@@ -8,9 +8,6 @@
           <p class="desc" v-html="infos[1]"></p>
         </div>
       </div>
-      <div class="absolute decor decor-6">
-        <img src="@/projects/dmfy/decor/decor-f.png" alt="" srcset="" />
-      </div>
     </div>
     <Footer />
   </div>
@@ -49,16 +46,6 @@ export default {
   justify-content: center;
   flex-direction: column;
   padding-bottom: 20vh;
-
-  .decor-6 {
-    width: 35vw;
-    bottom: 0;
-    right: 10vw;
-    z-index: -1;
-    img {
-      width: 100%;
-    }
-  }
 }
 
 .title {

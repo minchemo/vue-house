@@ -9,33 +9,6 @@
       :options="options"
       id="fullpage"
     > -->
-    <vue-lazy-component class="section" id="section1" @init="init">
-      <Section1 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section2" @init="init">
-      <Section2 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section3" @init="init">
-      <Section3 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section4" @init="init">
-      <Section4 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section5" @init="init">
-      <Section5 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section6" @init="init">
-      <Section6 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section7" @init="init">
-      <Section7 />
-    </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
@@ -67,14 +40,6 @@ import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/dmfy/Section1.vue";
-import Section2 from "@/projects/dmfy/Section2.vue";
-import Section3 from "@/projects/dmfy/Section3.vue";
-import Section4 from "@/projects/dmfy/Section4.vue";
-import Section5 from "@/projects/dmfy/Section5.vue";
-import Section6 from "@/projects/dmfy/Section6.vue";
-import Section7 from "@/projects/dmfy/Section7.vue";
-
 export default {
   name: "home",
   components: {
@@ -83,14 +48,7 @@ export default {
     Navigation,
     SideNavigation,
     ContactSection,
-    MobileNav,
-    Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7
+    MobileNav
   },
 
   data() {
@@ -144,31 +102,6 @@ export default {
         $("<img>")
           .on("load", imageLoaded)
           .attr("src", $(img).attr("src"));
-      });
-
-      $(".decor").each(function(i, el) {
-        const $this = $(el);
-        const img = $this.find("img");
-
-        $this.append('<div class="decor-shine"></div>');
-
-        $this.css({
-          mask: "url(" + img.attr("src") + ") no-repeat center center",
-          "-webkit-mask":
-            "url(" + img.attr("src") + ") no-repeat center center",
-          "-webkit-mask-size": "cover",
-          "mask-size": "cover"
-        });
-
-        $this.find(".decor-shine").css({
-          mask: "url(" + img.attr("src") + ") no-repeat center center",
-          "-webkit-mask":
-            "url(" + img.attr("src") + ") no-repeat center center",
-          "-webkit-mask-size": "cover",
-          "mask-size": "cover"
-        });
-
-        img.css("visibility", "hidden");
       });
     });
   },

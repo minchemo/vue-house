@@ -1,9 +1,6 @@
 <template>
   <div>
     <div class="contact-info" id="contact-info">
-      <div class="absolute decor decor-5">
-        <img src="@/projects/dmfy/decor/decor-e.png" alt="" srcset="" />
-      </div>
       <img
         v-if="!isMobile"
         class="logo"
@@ -139,17 +136,6 @@ export default {
   transform: translateY(0);
   margin: 2vw auto 2vw;
   padding: 70px 0 30px;
-
-  .decor-5 {
-    width: 22vw;
-    top: -12vh;
-    left: -2vw;
-    z-index: 5;
-
-    img {
-      width: 100%;
-    }
-  }
 }
 
 .logo {
