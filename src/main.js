@@ -37,6 +37,8 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueSvgIcon from "vue-svgicon";
 import "./plugins/element.js";
 
+import "@/lib/motionBlurJs/blur.js";
+
 // AOS.init()
 
 library.add(faBars);

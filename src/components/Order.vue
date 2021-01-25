@@ -3,25 +3,27 @@
     <!-- <img src="@/projects/fs/order/bg.png" alt="" class="bg-img"> -->
     <!-- <img src="@/projects/fs/order/bg1.png" alt="" class="bg-img no-mix"> -->
     <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
-    <div class="order-top">
-      <!-- <div class="title-block">
+
+    <div class="o_c">
+      <div class="order-top">
+        <!-- <div class="title-block">
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
-      <h3 class="order-title" v-html="order.title"></h3>
-      <div class="order-subtitle" v-html="order.subTitle"></div>
-      <div class="order">
-        <div class="form">
-          <div class="group">
-            <div class="row">
-              <label>姓名</label>
-              <el-input v-model="form.name" placeholder></el-input>
-            </div>
-            <div class="row">
-              <label>手機</label>
-              <el-input v-model="form.phone" placeholder></el-input>
-            </div>
-            <!-- <div class="row">
+        <h3 class="order-title" v-html="order.title"></h3>
+        <div class="order-subtitle" v-html="order.subTitle"></div>
+        <div class="order">
+          <div class="form">
+            <div class="group">
+              <div class="row">
+                <label>姓名</label>
+                <el-input v-model="form.name" placeholder></el-input>
+              </div>
+              <div class="row">
+                <label>手機</label>
+                <el-input v-model="form.phone" placeholder></el-input>
+              </div>
+              <!-- <div class="row">
               <label>聯絡時間(起)</label>
               <el-time-select
                 v-model="form.time_start"
@@ -45,7 +47,7 @@
                 }"
               ></el-time-select>
             </div> -->
-            <!-- <div class="row">
+              <!-- <div class="row">
               <label>想看房型</label>
               <el-select v-model="form.house" placeholder>
                 <el-option
@@ -57,86 +59,97 @@
                 ></el-option>
               </el-select>
             </div> -->
-            <!-- <div class="row">
+              <!-- <div class="row">
               <label>E-mail</label>
               <el-input v-model="form.email" placeholder></el-input>
             </div> -->
-            <div class="row">
-              <label>居住城市</label>
-              <el-select v-model="form.city" placeholder>
-                <el-option
-                  v-for="city in cityList"
-                  :key="city.value"
-                  :label="city.label"
-                  :value="city.value"
-                  no-data-text="無數據"
-                ></el-option>
-              </el-select>
+              <div class="row">
+                <label>居住城市</label>
+                <el-select v-model="form.city" placeholder>
+                  <el-option
+                    v-for="city in cityList"
+                    :key="city.value"
+                    :label="city.label"
+                    :value="city.value"
+                    no-data-text="無數據"
+                  ></el-option>
+                </el-select>
+              </div>
+              <div class="row">
+                <label>居住地區</label>
+                <el-select v-model="form.area" placeholder>
+                  <el-option
+                    v-for="area in areaList"
+                    :key="area.value"
+                    :label="area.label"
+                    :value="area.value"
+                    no-data-text="請先選擇居住城市"
+                  ></el-option>
+                </el-select>
+              </div>
             </div>
-            <div class="row">
-              <label>居住地區</label>
-              <el-select v-model="form.area" placeholder>
-                <el-option
-                  v-for="area in areaList"
-                  :key="area.value"
-                  :label="area.label"
-                  :value="area.value"
-                  no-data-text="請先選擇居住城市"
-                ></el-option>
-              </el-select>
+            <div class="group">
+              <div class="row">
+                <el-input
+                  type="textarea"
+                  :rows="2"
+                  placeholder="請輸入您的留言 (選填)"
+                  v-model="form.msg"
+                ></el-input>
+              </div>
             </div>
           </div>
-          <div class="group">
-            <div class="row">
-              <el-input
-                type="textarea"
-                :rows="2"
-                placeholder="請輸入您的留言 (選填)"
-                v-model="form.msg"
-              ></el-input>
-            </div>
+          <div class="control">
+            <el-checkbox v-model="checked">
+              <h3>
+                本人知悉並同意
+                <span @click="showPolicyDialog">「個資告知事項聲明」</span>
+                內容
+              </h3>
+            </el-checkbox>
           </div>
+          <div style="margin: 0 auto;z-index:2;" v-if="!isMobile">
+            <vue-recaptcha
+              :sitekey="info.recaptcha_site_key_v2"
+              @verify="isVerify = true"
+              :loadRecaptchaScript="true"
+            ></vue-recaptcha>
+          </div>
+          <div style="margin: 0 auto;z-index:2;" v-if="isMobile">
+            <vue-recaptcha
+              :sitekey="info.recaptcha_site_key_v2"
+              @verify="isVerify = true"
+              :loadRecaptchaScript="true"
+            ></vue-recaptcha>
+          </div>
+          <el-button
+            class="form-submit"
+            type="primary"
+            :disabled="!checked || !isVerify"
+            @click="submit"
+            :loading="isSubmit"
+            >立即預約</el-button
+          >
+          <Loading :loading="isSubmit" :isOpacity="true" />
         </div>
-        <div class="control">
-          <el-checkbox v-model="checked">
-            <h3>
-              本人知悉並同意
-              <span @click="showPolicyDialog">「個資告知事項聲明」</span>
-              內容
-            </h3>
-          </el-checkbox>
-        </div>
-        <div style="margin: 0 auto;z-index:2;" v-if="!isMobile">
-          <vue-recaptcha
-            :sitekey="info.recaptcha_site_key_v2"
-            @verify="isVerify = true"
-            :loadRecaptchaScript="true"
-          ></vue-recaptcha>
-        </div>
-        <div style="margin: 0 auto;z-index:2;" v-if="isMobile">
-          <vue-recaptcha
-            :sitekey="info.recaptcha_site_key_v2"
-            @verify="isVerify = true"
-            :loadRecaptchaScript="true"
-          ></vue-recaptcha>
-        </div>
-        <el-button
-          class="form-submit"
-          type="primary"
-          :disabled="!checked || !isVerify"
-          @click="submit"
-          :loading="isSubmit"
-          >立即預約</el-button
-        >
-        <Loading :loading="isSubmit" :isOpacity="true" />
       </div>
-    </div>
 
+      <ContactInfo />
+    </div>
     <GoogleMap />
-    <ContactInfo />
     <PolicyDialog :policyVisible="policyVisible" />
   </div>
 </template>
+<style>
+.o_c {
+  background: rgb(196, 255, 237);
+  background: linear-gradient(
+    0deg,
+    rgb(87, 166, 255) 20%,
+    rgba(41, 102, 255, 1) 100%
+  );
+}
+</style>
 
 <script>
 import GoogleMap from "@/components/GoogleMap.vue";
@@ -302,6 +315,7 @@ export default {
   .order-top {
     position: relative;
     overflow: hidden;
+    padding-top: 50px;
   }
   .order-title {
     font-family: $family2;
@@ -313,7 +327,7 @@ export default {
     font-size: calc(100vw * 36 / 1920);
     text-align: center;
     color: #fff;
-    background-color: $order_title_color;
+    color: $order_title_color;
     margin: 0 auto;
   }
 
@@ -415,7 +429,6 @@ export default {
 @media only screen and (max-width: 767px) {
   .order-bg {
     background-image: $order_bg_image_m;
-    padding-top: 40px;
     margin: 0;
     position: relative;
     z-index: 2;

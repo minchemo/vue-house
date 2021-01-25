@@ -134,7 +134,7 @@ export default {
   background-attachment: fixed;
   background-position: 0% 50%; */
   transform: translateY(0);
-  margin: 2vw auto 2vw;
+  margin: 2vw auto 0;
   padding: 70px 0 30px;
 }
 
@@ -161,11 +161,10 @@ export default {
   text-decoration: none;
   color: $contact_btn_color;
   background: $contact_btn_bg;
-  box-shadow: $contact_btn_border;
+  /*box-shadow: $contact_btn_border;*/
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
   font-family: $family3;
 
   &.half {
@@ -213,12 +212,12 @@ export default {
   height: 60px;
   background: #fff;
   box-shadow: $contact_btn_border;
-  border-radius: 10px 0 0 10px;
+  /*border-radius: 10px 0 0 10px;*/
   // border:1px solid $contact_btn_bg;
   font-family: $family3;
   + .google-btn,
   + .btn {
-    border-radius: 0 10px 10px 0;
+    /*border-radius: 0 10px 10px 0;*/
     font-family: $family3;
   }
 }
@@ -275,7 +274,7 @@ export default {
     padding: 40px;
     transform: none;
     position: static;
-    margin: 40px auto 40px auto;
+    margin: 40px auto 0 auto;
 
     .logo {
       width: $contact_logo_mobile_width;
@@ -324,7 +323,7 @@ export default {
     width: 280px;
     padding: 0 1em;
     text-align: justify;
-    border-radius: 10px 10px 0 0;
+    /*border-radius: 10px 10px 0 0;*/
     + .google-btn,
     + .btn {
       border-radius: 0 0 10px 10px;

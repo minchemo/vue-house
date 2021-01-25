@@ -1,14 +1,18 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
-    <SideNavigation v-if="isSide" />
-    <Navigation v-else />
+    <!--<SideNavigation v-if="isSide" />
+    <Navigation v-else />-->
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page
       ref="fullPage"
       :options="options"
       id="fullpage"
     > -->
+
+    <vue-lazy-component class="section" id="section1" @init="init">
+      <Section1 />
+    </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
@@ -40,6 +44,8 @@ import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
+import Section1 from "@/projects/yj/Section1.vue";
+
 export default {
   name: "home",
   components: {
@@ -48,13 +54,14 @@ export default {
     Navigation,
     SideNavigation,
     ContactSection,
-    MobileNav
+    MobileNav,
+    Section1
   },
 
   data() {
     return {
       isMobile,
-      isSide: false,
+      isSide: true,
       load: true
       // viewIndex: 0,
       // action: {
