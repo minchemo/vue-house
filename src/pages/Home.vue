@@ -171,9 +171,9 @@ export default {
             'mask-size': 'cover',
           })
 
-          img.css('visibility', 'hidden')
+          // img.css('visibility', 'hidden')
         })
-      }, 200)
+      }, 500)
     })
   },
   mounted() {
