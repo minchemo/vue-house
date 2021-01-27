@@ -147,7 +147,7 @@ export default {
       setTimeout(() => {
         $('.decor').each(function (i, el) {
           const $this = $(el)
-          const img = $this.find('img')
+          const img = $this.find('.decor-img')
 
           $this.append('<div class="decor-shine"></div>')
 
@@ -171,7 +171,7 @@ export default {
             'mask-size': 'cover',
           })
 
-          // img.css('visibility', 'hidden')
+          img.css('visibility', 'hidden')
         })
       }, 500)
     })
