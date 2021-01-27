@@ -10,10 +10,10 @@
         為人與土地樹立共美共好的傳世價值<br /><br />
 
         <span>
-          業績作品<br />
+          <span class="work-c">業績作品</span>
           <span class="dash">－</span>宏普頤和<br />
-          <span class="dash">－</span>西華富邦<br />
-          <span class="dash">－</span>寶徠花園廣場
+          <span class="dash">－</span>礁溪寒沐酒店<br />
+          <span class="dash">－</span>璞真仰睦
         </span>
       </h3>
       <div
@@ -245,11 +245,11 @@
   .title {
     top: size-m(540);
     right: auto;
-    left: size-m(95);
+    left: size-m(110);
     font-size: size-m(20);
     text-align: center;
     .large {
-      font-size: size-m(30);
+      font-size: size-m(20);
     }
   }
   .desc {

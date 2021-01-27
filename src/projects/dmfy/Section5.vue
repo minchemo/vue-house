@@ -10,11 +10,11 @@
         沉穩建築敬邀大器之人<br /><br />
 
         <span>
-          業績作品<br />
+          <span class="work-c">業績作品</span>
           <span class="dash">－</span>
           <span class="en">Mode</span>學園繭之塔<br />
-          <span class="dash">－</span>
-          <span class="en">2020</span>奧運東京水上運動中心
+          <span class="dash">－</span>FCG富士電視臺總部<br />
+          <span class="dash">－</span>信義之冠
         </span>
       </h3>
       <div
@@ -245,16 +245,16 @@
 @media screen and (max-width: 767px) {
   .section5 {
     width: 100vw;
-    height: size-m(840);
+    height: size-m(870);
   }
   .title {
     top: size-m(540);
     right: auto;
-    left: size-m(85);
+    left: size-m(100);
     font-size: size-m(20);
     text-align: center;
     .large {
-      font-size: size-m(30);
+      font-size: size-m(20);
     }
   }
   .desc {

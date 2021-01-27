@@ -14,9 +14,9 @@
         將建築設計者的狂想實現為土地上的音符<br /><br />
 
         <span>
-          業績作品<br />
+          <span class="work-c">業績作品</span>
+          <span class="dash">－</span>富富話合<br />
           <span class="dash">－</span>高雄市立圖書館總館<br />
-          <span class="dash">－</span>宏普頤和<br />
           <span class="dash">－</span>璞真碧湖畔
         </span>
       </h3>
@@ -263,11 +263,11 @@
   .title {
     top: size-m(540);
     right: auto;
-    left: size-m(95);
+    left: size-m(110);
     font-size: size-m(20);
     text-align: center;
     .large {
-      font-size: size-m(30);
+      font-size: size-m(20);
     }
   }
   .desc {

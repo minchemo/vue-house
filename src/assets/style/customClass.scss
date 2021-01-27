@@ -214,6 +214,10 @@
     margin-right: 0.5rem;
 }
 
+.work-c {
+    display: block !important;
+}
+
 @keyframes rotate1 {
     0% {
         transform: rotate(0deg);
@@ -312,5 +316,10 @@
 
     .decor {
         display: none;
+    }
+
+    .work-c {
+        text-align: center !important;
+        margin-bottom: 12px;
     }
 }
