@@ -143,6 +143,7 @@ export default {
       $('img').each(function (idx, img) {
         $('<img>').on('load', imageLoaded).attr('src', $(img).attr('src'))
       })
+
       setTimeout(() => {
         $('.decor').each(function (i, el) {
           const $this = $(el)
@@ -172,7 +173,7 @@ export default {
 
           img.css('visibility', 'hidden')
         })
-      })
+      }, 200)
     })
   },
   mounted() {
