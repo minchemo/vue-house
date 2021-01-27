@@ -148,11 +148,17 @@ export default {
 
       $(".decor").each(function(i, el) {
         const $this = $(el);
-        const img = $this.find("img");
+
+        const img = $this.find(".decor-img");
+        const bgImg = $this.find(".decor-bg");
 
         $this.append('<div class="decor-shine"></div>');
 
-        $this.css({
+        $this.append(
+          '<div class="decor-mask"><img src="' + img.attr("src") + '"></div>'
+        );
+
+        $this.find(".decor-mask").css({
           mask: "url(" + img.attr("src") + ") no-repeat center center",
           "-webkit-mask":
             "url(" + img.attr("src") + ") no-repeat center center",

@@ -383,6 +383,7 @@ export default {
     label {
       width: 92px;
       font-size: 16px;
+      font-weight: 500;
       opacity: 0.8;
       color: $order_input_label_color;
     }
@@ -426,7 +427,7 @@ export default {
     .order-title {
       padding-top: 10px;
       padding-bottom: 5px;
-      font-size: calc(100vw * 38 / 375);
+      font-size: calc(100vw * 20 / 375);
     }
 
     .order-subtitle {

@@ -7,8 +7,8 @@
       </h3>
       <h3 class="desc absolute" data-aos="fade-up" data-aos-delay="400">
         近鄰博愛特區、臨沂富域、永康商圈<br />
-        左擁78,000坪大安森林公園<br />
-        右抱75,000坪中正紀念堂<br />
+        左擁<span class="en">78,000</span>坪大安森林公園<br />
+        右抱<span class="en">75,000</span>坪中正紀念堂<br />
         稀有私藏「中正－大安」首都雙菁華
       </h3>
       <div
@@ -185,7 +185,7 @@
 @import "@/assets/style/function.scss";
 .section3 {
   width: 100vw;
-  height: 37vw;
+  height: 42vw;
 }
 
 .title {
@@ -216,8 +216,8 @@
   color: #000000;
 }
 .swipe {
-  width: size(1040);
-  height: size(720);
+  width: size(1200);
+  height: size(800);
   top: 0;
   right: 0;
   object-fit: cover;
@@ -285,12 +285,24 @@ export default {
       slideList: isMobile
         ? [
             {
-              img: require("./mo/3/1.jpg")
+              img: require("./mo/3/B-1.jpg")
+            },
+            {
+              img: require("./mo/3/B-2.jpg")
+            },
+            {
+              img: require("./mo/3/B-3.jpg")
             }
           ]
         : [
             {
-              img: require("./s3/1.jpg")
+              img: require("./s3/B-1.jpg")
+            },
+            {
+              img: require("./s3/B-2.jpg")
+            },
+            {
+              img: require("./s3/B-3.jpg")
             }
           ]
     };

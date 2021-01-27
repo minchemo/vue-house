@@ -2,10 +2,11 @@
 $bg: url('~@/projects/dmfy/all/bg.png');
 
 /* font-family */
-/* 1主要字體  2次要字體  3表單字體 */
+/* 1主要字體  2次要字體  3表單字體  4黑體 */
 $family1: Arial, 'youmin', 'Noto Serif TC', 'Noto Sans TC', sans-serif;
 $family2: Arial, 'Noto Serif TC', 'Noto Sans TC', sans-serif;
 $family3: Arial, 'Noto Serif TC', 'Noto Sans TC', sans-serif;
+$family4: Arial, 'Noto Sans TC', sans-serif;
 
 /* navigation */
 $nav_bg: #c18c68;
@@ -33,7 +34,7 @@ $order_bg_image: transparent;
 $order_bg_image_m: transparent;
 $order_title_color: #ce9a78;
 $order_subtitle_color: #cc2617;
-$order_input_label_color: #c18c68;
+$order_input_label_color: #9b6a49;
 $order_input_color: #000 !important;
 $order_input_placeholder: #999 !important;
 $order_input_bg: #fff !important;

@@ -11,9 +11,9 @@
 
         <span>
           業績作品<br />
-          － 宏普頤和<br />
-          － 西華富邦<br />
-          － 寶徠花園廣場
+          <span class="dash">－</span>宏普頤和<br />
+          <span class="dash">－</span>西華富邦<br />
+          <span class="dash">－</span>寶徠花園廣場
         </span>
       </h3>
       <div
@@ -186,12 +186,12 @@
 @import "@/assets/style/function.scss";
 .section6 {
   width: 100vw;
-  height: 37vw;
+  height: 42vw;
 }
 
 .title {
   top: size(160);
-  right: size(360);
+  right: size(290);
   font-size: size(30);
   font-weight: 500;
   font-stretch: normal;
@@ -209,7 +209,7 @@
   font-family: "DFLiSongStd";
   width: size(442);
   top: size(280);
-  right: size(182);
+  right: size(120);
   font-size: size(21);
   font-weight: normal;
   font-stretch: normal;
@@ -220,8 +220,8 @@
   color: #000000;
 }
 .swipe {
-  width: size(1040);
-  height: size(720);
+  width: size(1200);
+  height: size(800);
   top: 0;
   left: 0;
   object-fit: cover;
@@ -297,12 +297,24 @@ export default {
       slideList: isMobile
         ? [
             {
-              img: require("./mo/6/1.jpg")
+              img: require("./mo/6/E-1.jpg")
+            },
+            {
+              img: require("./mo/6/E-2.jpg")
+            },
+            {
+              img: require("./mo/6/E-3.jpg")
             }
           ]
         : [
             {
-              img: require("./s6/1.jpg")
+              img: require("./s6/E-1.jpg")
+            },
+            {
+              img: require("./s6/E-2.jpg")
+            },
+            {
+              img: require("./s6/E-3.jpg")
             }
           ]
     };

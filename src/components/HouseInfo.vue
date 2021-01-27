@@ -9,7 +9,18 @@
         </div>
       </div>
       <div class="absolute decor decor-6">
-        <img src="@/projects/dmfy/decor/decor-f.png" alt="" srcset="" />
+        <img
+          class="decor-img"
+          src="@/projects/dmfy/decor/decor-f.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          class="decor-bg"
+          src="@/projects/dmfy/decor/decor-f-bg.png"
+          alt=""
+          srcset=""
+        />
       </div>
     </div>
     <Footer />
@@ -66,8 +77,11 @@ export default {
   line-height: 36px;
   margin: 60px 0;
   font-weight: 500;
-  color: $house_title_color;
+  color: #fff;
   font-family: $family3;
+  background: #ce9a78;
+  width: 80vw;
+  padding: 10px 20px;
 }
 
 .info {
@@ -119,8 +133,9 @@ export default {
   }
 
   .title {
-    font-size: 32px;
+    font-size: 24px;
     margin: 40px 0 24px;
+    width: 100vw;
   }
 
   .item {
@@ -144,7 +159,7 @@ export default {
   }
 
   .title {
-    font-size: 32px;
+    font-size: 24px;
     margin: 40px 0 24px;
   }
 
