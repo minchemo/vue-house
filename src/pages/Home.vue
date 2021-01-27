@@ -143,34 +143,44 @@ export default {
       $('img').each(function (idx, img) {
         $('<img>').on('load', imageLoaded).attr('src', $(img).attr('src'))
       })
-
       setTimeout(() => {
         $('.decor').each(function (i, el) {
-        const $this = $(el)
-        const img = $this.find('img')
+          const $this = $(el)
+          const img = $this.find('img')
 
-        $this.append('<div class="decor-shine"></div>')
+          $this.append('<div class="decor-shine"></div>')
 
-        $this.css({
-          mask: 'url(' + img.attr('src') + ') no-repeat center center',
-          '-webkit-mask':
-            'url(' + img.attr('src') + ') no-repeat center center',
-          '-webkit-mask-size': 'cover',
-          'mask-size': 'cover',
+          $this.append(
+            '<div class="decor-mask"><img src="' + img.attr('src') + '"></div>',
+          )
+
+          $this.find('.decor-mask').css({
+            mask: 'url(' + img.attr('src') + ') no-repeat center center',
+            '-webkit-mask':
+              'url(' + img.attr('src') + ') no-repeat center center',
+            '-webkit-mask-size': 'cover',
+            'mask-size': 'cover',
+          })
+
+          $this.find('.decor-shine').css({
+            mask: 'url(' + img.attr('src') + ') no-repeat center center',
+            '-webkit-mask':
+              'url(' + img.attr('src') + ') no-repeat center center',
+            '-webkit-mask-size': 'cover',
+            'mask-size': 'cover',
+          })
+
+          img.css('visibility', 'hidden')
         })
-
-        $this.find('.decor-shine').css({
-          mask: 'url(' + img.attr('src') + ') no-repeat center center',
-          '-webkit-mask':
-            'url(' + img.attr('src') + ') no-repeat center center',
-          '-webkit-mask-size': 'cover',
-          'mask-size': 'cover',
-        })
-
-        img.css('visibility', 'hidden')
       })
-      }, 200);
     })
+  },
+  mounted() {
+    // window.addEventListener('scroll', this.onScroll, false)
+    // this.action = this.$refs.fullPage.api
+    // if (this.isMobile) {
+    //   this.$refs.fullPage.api.setResponsive(true)
+    // }
   },
   // mounted() {
   // window.addEventListener('scroll', this.onScroll, false)

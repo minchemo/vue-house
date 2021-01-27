@@ -184,12 +184,12 @@
 @import "@/assets/style/function.scss";
 .section2 {
   width: 100vw;
-  height: 37vw;
+  height: 42vw;
 }
 
 .title {
   top: size(160);
-  right: size(350);
+  right: size(300);
   font-size: size(30);
   font-weight: 500;
   font-stretch: normal;
@@ -204,7 +204,7 @@
   font-family: "DFLiSongStd";
   width: size(442);
   top: size(330);
-  right: size(182);
+  right: size(128);
   font-size: size(21);
   font-weight: normal;
   font-stretch: normal;
@@ -215,8 +215,8 @@
   color: #000000;
 }
 .swipe {
-  width: size(1040);
-  height: size(720);
+  width: size(1200);
+  height: size(800);
   top: 0;
   left: 0;
   object-fit: cover;
@@ -284,24 +284,24 @@ export default {
       slideList: isMobile
         ? [
             {
-              img: require("./mo/2/1.jpg")
+              img: require("./mo/2/A-1.jpg")
             },
             {
-              img: require("./mo/2/2.jpg")
+              img: require("./mo/2/A-2.jpg")
             },
             {
-              img: require("./mo/2/3.jpg")
+              img: require("./mo/2/A-3.jpg")
             }
           ]
         : [
             {
-              img: require("./s2/1.jpg")
+              img: require("./s2/A-1.jpg")
             },
             {
-              img: require("./s2/2.jpg")
+              img: require("./s2/A-2.jpg")
             },
             {
-              img: require("./s2/3.jpg")
+              img: require("./s2/A-3.jpg")
             }
           ]
     };

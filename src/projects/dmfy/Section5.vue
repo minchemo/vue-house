@@ -11,8 +11,10 @@
 
         <span>
           業績作品<br />
-          － Mode學園繭之塔<br />
-          － 2020奧運東京水上運動中心
+          <span class="dash">－</span>
+          <span class="en">Mode</span>學園繭之塔<br />
+          <span class="dash">－</span>
+          <span class="en">2020</span>奧運東京水上運動中心
         </span>
       </h3>
       <div
@@ -189,7 +191,7 @@
 @import "@/assets/style/function.scss";
 .section5 {
   width: 100vw;
-  height: 37vw;
+  height: 42vw;
 }
 
 .title {
@@ -223,8 +225,8 @@
   color: #000000;
 }
 .swipe {
-  width: size(1040);
-  height: size(720);
+  width: size(1200);
+  height: size(800);
   top: 0;
   right: 0;
   object-fit: cover;
@@ -300,12 +302,24 @@ export default {
       slideList: isMobile
         ? [
             {
-              img: require("./mo/5/1.jpg")
+              img: require("./mo/5/D-1.jpg")
+            },
+            {
+              img: require("./mo/5/D-2.jpg")
+            },
+            {
+              img: require("./mo/5/D-3.jpg")
             }
           ]
         : [
             {
-              img: require("./s5/1.jpg")
+              img: require("./s5/D-1.jpg")
+            },
+            {
+              img: require("./s5/D-2.jpg")
+            },
+            {
+              img: require("./s5/D-3.jpg")
             }
           ]
     };

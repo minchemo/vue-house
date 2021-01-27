@@ -2,7 +2,8 @@
   <div>
     <div class="section7">
       <div class="absolute decor decor-4">
-        <img src="./decor/decor-d.png" alt="" srcset="" />
+        <img class="decor-img" src="./decor/decor-d.png" alt="" srcset="" />
+        <img class="decor-bg" src="./decor/decor-d-bg.png" alt="" srcset="" />
       </div>
       <h3 class="title absolute" data-aos="fade-up" data-aos-delay="200">
         結構工程｜<span class="large">張盈智</span>
@@ -14,9 +15,9 @@
 
         <span>
           業績作品<br />
-          － 高雄市立圖書館總館<br />
-          － 宏普頤和<br />
-          － 璞真碧湖畔
+          <span class="dash">－</span>高雄市立圖書館總館<br />
+          <span class="dash">－</span>宏普頤和<br />
+          <span class="dash">－</span>璞真碧湖畔
         </span>
       </h3>
       <div
@@ -203,7 +204,7 @@
 @import "@/assets/style/function.scss";
 .section7 {
   width: 100vw;
-  height: 37vw;
+  height: 42vw;
 }
 
 .title {
@@ -237,8 +238,8 @@
   color: #000000;
 }
 .swipe {
-  width: size(1040);
-  height: size(720);
+  width: size(1200);
+  height: size(800);
   top: 0;
   right: 0;
   object-fit: cover;
@@ -314,12 +315,24 @@ export default {
       slideList: isMobile
         ? [
             {
-              img: require("./mo/7/1.jpg")
+              img: require("./mo/7/F-1.jpg")
+            },
+            {
+              img: require("./mo/7/F-2.jpg")
+            },
+            {
+              img: require("./mo/7/F-3.jpg")
             }
           ]
         : [
             {
-              img: require("./s7/1.jpg")
+              img: require("./s7/F-1.jpg")
+            },
+            {
+              img: require("./s7/F-2.jpg")
+            },
+            {
+              img: require("./s7/F-3.jpg")
             }
           ]
     };

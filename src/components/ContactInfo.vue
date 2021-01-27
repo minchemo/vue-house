@@ -2,7 +2,18 @@
   <div>
     <div class="contact-info" id="contact-info">
       <div class="absolute decor decor-5">
-        <img src="@/projects/dmfy/decor/decor-e.png" alt="" srcset="" />
+        <img
+          class="decor-img"
+          src="@/projects/dmfy/decor/decor-e.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          class="decor-bg"
+          src="@/projects/dmfy/decor/decor-e-bg.png"
+          alt=""
+          srcset=""
+        />
       </div>
       <img
         v-if="!isMobile"
@@ -180,7 +191,7 @@ export default {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  font-family: $family3;
+  font-family: $family4;
 
   &.half {
     width: 49%;
@@ -229,11 +240,11 @@ export default {
   box-shadow: $contact_btn_border;
   border-radius: 10px 0 0 10px;
   // border:1px solid $contact_btn_bg;
-  font-family: $family3;
+  font-family: $family4;
   + .google-btn,
   + .btn {
     border-radius: 0 10px 10px 0;
-    font-family: $family3;
+    font-family: $family4;
   }
 }
 .google-btn {

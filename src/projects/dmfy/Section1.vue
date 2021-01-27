@@ -3,13 +3,16 @@
     <div class="section1 relative">
       <div v-if="!isMobile">
         <div class="absolute decor decor-1" data-aos="fade-down">
-          <img src="./decor/decor-a.png" alt="" srcset="" />
+          <img class="decor-img" src="./decor/decor-a.png" alt="" srcset="" />
+          <img class="decor-bg" src="./decor/decor-a-bg.png" alt="" srcset="" />
         </div>
         <div class="absolute decor decor-2" data-aos="fade-down">
-          <img src="./decor/decor-b.png" alt="" srcset="" />
+          <img class="decor-img" src="./decor/decor-b.png" alt="" srcset="" />
+          <img class="decor-bg" src="./decor/decor-b-bg.png" alt="" srcset="" />
         </div>
         <div class="absolute decor decor-3" data-aos="fade-down">
-          <img src="./decor/decor-c.png" alt="" srcset="" />
+          <img class="decor-img" src="./decor/decor-c.png" alt="" srcset="" />
+          <img class="decor-bg" src="./decor/decor-c-bg.png" alt="" srcset="" />
         </div>
         <div class="intro relative">
           <div data-aos="fade-up">
@@ -238,7 +241,7 @@
       letter-spacing: 8px;
       line-height: 2;
       font-size: 28px;
-      font-weight: 600;
+      font-weight: 100;
     }
   }
 }
@@ -295,24 +298,27 @@
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
+
         .bg-decor {
           width: 100%;
           height: 100%;
           position: absolute;
           top: 0;
           left: 0;
-          background-image: linear-gradient(
-            235deg,
-            transparent 50%,
-            rgba(255, 255, 255, 0.1) 60%,
-            rgba(255, 255, 255, 0.3) 69%,
-            transparent 70%,
-            transparent 100%
-          );
+          background-image: url("~@/projects/dmfy/decor/decor-shine.png");
           background-repeat: no-repeat;
-          background-position: -100vw;
-          animation: shine 3s infinite;
+          background-position: top -200vw right -200vw;
+          animation: shine2 4s infinite;
           animation-timing-function: ease-in-out;
+        }
+
+        @keyframes shine2 {
+          0% {
+            background-position: top -200vw right -200vw;
+          }
+          100% {
+            background-position: top 200vw right 200vw;
+          }
         }
       }
     }
@@ -320,6 +326,7 @@
     .desc {
       p {
         font-size: 20px;
+        line-height: 1.5;
       }
     }
   }
