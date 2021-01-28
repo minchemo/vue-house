@@ -6,21 +6,21 @@ export default {
   phone: "02-2297-8899",
   fbLink:
     "https://www.facebook.com/%E6%98%8E%E6%97%A5%E5%9F%8E2-102181241308191/",
-  fbMessage: "",
+  fbMessage: "https://m.me/102181241308191/",
   caseName: "明日城2",
   indigatorLength: 10,
 
   houseInfos: [
     ["投資興建", "勝華建設有限公司"],
-    ["營造公司", ""],
+    ["營造公司", "協侑營造有限公司"],
     ["企劃銷售", "新智力廣告有限公司"],
     ["景觀設計", "上馥工程有限公司"]
   ],
 
   gtmCode: [""], // 可放置多個
-  recaptcha_site_key_v2: "",
-  recaptcha_site_key: "", // recaptcha v3
-  recaptcha_user_token: "",
+  recaptcha_site_key_v2: '6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz',
+  recaptcha_site_key: '6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s', // recaptcha v3
+  recaptcha_user_token: '6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa',
   order: {
     title: "預約賞屋",
     subTitle: ""
