@@ -43,6 +43,7 @@ body {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: hidden; //試底下多的那塊哪來的
 
     &.no-padding-top {
@@ -347,6 +348,7 @@ img[lazy='loaded'] {
     }
 
     .home {
+        background: $bg_m;
         padding-top: $nav_phone_height;
         background-color: $order_bg_color;
         background-image: $order_bg_image_m;
