@@ -51,33 +51,26 @@
 
       <div class="desc">
         <p>
-          <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"
-            >台北城東門町</span
+          <span data-aos="fade-up" data-aos-duration="1500">台北城東門町</span
           ><br />
-          <span data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500"
+          <span data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"
             >走過世紀榮耀</span
           ><br />
-          <span
-            data-aos="fade-up"
-            data-aos-delay="1000"
-            data-aos-duration="1500"
+          <span data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500"
             >釀藏百年城粹</span
           ><br />
-          <span
-            data-aos="fade-up"
-            data-aos-delay="1400"
-            data-aos-duration="1500"
+          <span data-aos="fade-up" data-aos-delay="900" data-aos-duration="1500"
             >居餘香　新況味</span
           ><br />
           <span
             data-aos="fade-up"
-            data-aos-delay="1800"
+            data-aos-delay="1200"
             data-aos-duration="1500"
             >首善核心最珍席</span
           ><br />
           <span
             data-aos="fade-up"
-            data-aos-delay="2200"
+            data-aos-delay="1500"
             data-aos-duration="1500"
             >家傳富域　馥寓傳家</span
           >
@@ -178,8 +171,8 @@
       right: 0;
       bottom: 35px;
       width: 150px;
-      height: 40px;
-      line-height: 40px;
+      height: 48px;
+      line-height: 48px;
       font-weight: 500;
       transition: all 0.3s;
       z-index: 1;
