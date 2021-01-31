@@ -128,13 +128,14 @@ export default {
   justify-content: space-between;
   position: relative;
   z-index: 3;
-  width: 100%;
+  width: 80%;
   // height: 480px;
   /* background-size: 100vw auto;
   background-attachment: fixed;
   background-position: 0% 50%; */
   transform: translateY(0);
-  margin: 2vw auto 2vw;
+  margin: 0 auto;
+  margin-bottom: 5vh;
   padding: 70px 0 30px;
 }
 
@@ -165,7 +166,7 @@ export default {
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   font-family: $family3;
 
   &.half {
@@ -213,12 +214,12 @@ export default {
   height: 60px;
   background: #fff;
   box-shadow: $contact_btn_border;
-  border-radius: 10px 0 0 10px;
+  /*border-radius: 10px 0 0 10px;*/
   // border:1px solid $contact_btn_bg;
   font-family: $family3;
   + .google-btn,
   + .btn {
-    border-radius: 0 10px 10px 0;
+    /*border-radius: 0 10px 10px 0;*/
     font-family: $family3;
   }
 }
@@ -275,7 +276,7 @@ export default {
     padding: 40px;
     transform: none;
     position: static;
-    margin: 40px auto 40px auto;
+    margin: 0;
 
     .logo {
       width: $contact_logo_mobile_width;
@@ -324,11 +325,11 @@ export default {
     width: 280px;
     padding: 0 1em;
     text-align: justify;
-    border-radius: 10px 10px 0 0;
+    /*border-radius: 10px 10px 0 0;
     + .google-btn,
     + .btn {
       border-radius: 0 0 10px 10px;
-    }
+    }*/
   }
 }
 

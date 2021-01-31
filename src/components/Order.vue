@@ -132,8 +132,8 @@
       </div>
     </div>
 
-    <GoogleMap />
     <ContactInfo />
+    <GoogleMap />
     <PolicyDialog :policyVisible="policyVisible" />
   </div>
 </template>
@@ -312,9 +312,9 @@ export default {
     line-height: 1.3;
     font-size: calc(100vw * 36 / 1920);
     text-align: center;
-    color: #fff;
-    background-color: $order_title_color;
+    color: $order_title_color;
     margin: 0 auto;
+    margin-top: 5vh;
   }
 
   .order-subtitle {

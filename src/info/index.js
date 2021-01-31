@@ -1,23 +1,21 @@
 export default {
-  address: "100台北市中正區金山南路一段96號",
+  address: "104臺北市台北市南京東路二段178號13樓",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9458772365715!2d121.52524151544696!3d25.03591074436781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9786e8befb1%3A0x19f3d9b9d592eda!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A6YeR5bGx5Y2X6Lev5LiA5q61OTbomZ8!5e0!3m2!1szh-TW!2stw!4v1610898747209!5m2!1szh-TW!2stw",
-  googleLink: "https://goo.gl/maps/QYtBMbZcVRxrQ4wN6",
-  phone: "02-87878888",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4773426715083!2d121.53289061544568!3d25.051805383964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a961b32de35d%3A0x73ea0e1696ce8fa1!2zMTA05Y-w5YyX5biC5Lit5bGx5Y2A5Y2X5Lqs5p2x6Lev5LqM5q61MTc46JmfMTPmqJM!5e0!3m2!1szh-TW!2stw!4v1612103452768!5m2!1szh-TW!2stw",
+  googleLink: "https://goo.gl/maps/ExGkLmFMvxXvPG586",
+  phone: "02-2516-1888",
   fbLink: "",
   fbMessage: "",
-  caseName: "東門馥寓",
+  caseName: "聯悅臻",
   indigatorLength: 10,
 
   houseInfos: [
-    ["投資新建", "達欣開發股份有限公司"],
-    ["建築設計", "林秀芬建築師事務所"],
-    ["美學顧問", "世界建築名家丹下憲孝"],
-    ["結構工程", "築遠工程顧問有限公司"],
-    ["建築代銷", "聯碩行銷股份有限公司"],
-    ["公設設計", "樂工設計凌志佳"],
-    ["建照號碼", "109建字第XXXX號"],
-    ["建案位置", "台北市中正區金山南路一段96號"]
+    ["投資興建", "聯悦建設股份有限公司"],
+    ["企劃銷售", "聯悦建設股份有限公司"],
+    ["設計規劃", "永豐建築師事務所"],
+    ["基地位置", "梧棲區市鎮南段133地號"],
+    ["接待中心", "大仁路 四維路口"],
+    ["電話", "04-2656-8736"]
   ],
 
   gtmCode: [""], // 可放置多個

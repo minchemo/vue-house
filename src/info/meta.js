@@ -1,5 +1,5 @@
 exports.info = {
-  title: "東門馥寓",
+  title: "聯悅臻",
   description: "",
   keywords: ""
 };
