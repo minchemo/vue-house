@@ -38,7 +38,7 @@
             <img src="./mo/1/1.png" alt="達欣|東門馥寓" />
           </div>
           <div class="relative" data-aos="fade-up">
-            <img src="./mo/1/2.png" alt="" />
+            <img width="100px" height="429px" src="./mo/1/2.png" alt="" />
             <div class="order-btn" data-aos="fade-down" data-aos-delay="400">
               立即預約
             </div>
@@ -320,6 +320,11 @@
       p {
         font-size: 20px;
         line-height: 1.5;
+        white-space: nowrap;
+
+        span {
+          white-space: nowrap;
+        }
       }
     }
   }
