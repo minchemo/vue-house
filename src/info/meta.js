@@ -1,5 +1,5 @@
 exports.info = {
-  title: "東門馥寓",
+  title: "達欣東門馥寓｜首善身段，大安生活｜官網",
   description: "",
   keywords: ""
 };
