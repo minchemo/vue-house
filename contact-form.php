@@ -1,6 +1,7 @@
 <?php
     $case_name = "聯悅臻";
-    $case_code = 'lyj';
+    $src =$_SERVER['SERVER_NAME']; 
+    $case_code = substr($src,0,strpos($src,'.'));
 
     $name         = isset($_POST['name']) ? $_POST['name'] : '';
     $phone        = isset($_POST['phone']) ? $_POST['phone'] : '';

@@ -1,5 +1,6 @@
 <?php
-$case_code = 'sc'; 
+$src =$_SERVER['SERVER_NAME']; 
+$case_code = substr($src,0,strpos($src,'.'));
 $pdo = new pdo('mysql:host=localhost;dbname=htw_web', 'htw', '748aSgl5Ni');
 $pdo->exec("SET NAMES 'utf8'");
 $sql = "SELECT title,description,keyword FROM susers WHERE email = '" . $case_code . "'";
