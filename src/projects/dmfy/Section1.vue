@@ -23,7 +23,11 @@
           </div>
           <div data-aos="fade-down" class="relative">
             <img src="./s1/subtitle.png" alt="" />
-            <div data-aos="fade-up" class="order-btn">
+            <div
+              data-aos="fade-up"
+              class="order-btn"
+              v-scroll-to="{ element: `#contact`, offset: 0 }"
+            >
               立即預約
             </div>
           </div>
@@ -1796,7 +1800,12 @@ cmVhdGUAMjAyMS0wMi0wNFQwMjo0NDo0NiswMDowMIXFFTcAAAAldEVYdGRhdGU6bW9kaWZ5ADIw
 MjEtMDItMDRUMDI6NDQ6NDYrMDA6MDD0mK2LAAAAAElFTkSuQmCC"
               />
             </svg>
-            <div class="order-btn" data-aos="fade-down" data-aos-delay="400">
+            <div
+              class="order-btn"
+              data-aos="fade-down"
+              data-aos-delay="400"
+              v-scroll-to="{ element: `#contact`, offset: 0 }"
+            >
               立即預約
             </div>
           </div>
