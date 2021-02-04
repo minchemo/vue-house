@@ -1,19 +1,19 @@
 <template>
   <div class="section2">
     <div class="title">
-      <div class="title1">低基期<span>✕</span>高獲利</div>
-      <div class="title2">
+      <div class="title1" data-aos="fade-down" data-aos-delay="100">低基期<span>✕</span>高獲利</div>
+      <div class="title2" data-aos="fade-down" data-aos-delay="200">
         首購價圓豪宅夢
       </div>
-      <div class="title3">
+      <div class="title3" data-aos="fade-down" data-aos-delay="400">
         五項唯一質感建商　全台矚目　潛銷個案
       </div>
-      <div class="title4">
+      <div class="title4" data-aos="fade-down" data-aos-delay="600">
         1字頭投資台中港新市鎮<br />
         超前部署10倍高投報
       </div>
     </div>
-    <div class="badge">
+    <div class="badge" data-aos="fade-down" data-aos-delay="800" data-aos-offset="500" v-scroll-to="{ element: `#contact` }">
       <span class="badge-text">首創台北聯銷</span
       ><span class="badge-text-2">限戶賞屋</span>
     </div>
@@ -94,6 +94,8 @@
       padding: size(20) size(32);
       background: #004881;
       color: #fff;
+      cursor: pointer;
+      &:hover{background: #003057;}
     }
   }
 
