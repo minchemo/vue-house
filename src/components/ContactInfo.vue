@@ -10,7 +10,7 @@
       <img
         v-if="isMobile"
         class="logo"
-        src="@/assets/img/mo-contact-logo.png"
+        src="@/assets/img/contact-logo.png"
         :alt="info.caseName"
       />
       <div class="info">
@@ -118,7 +118,7 @@ export default {
 @import "@/assets/style/variableDefault.scss";
 
 .contact-info {
-  background: $contact_bg;
+  //background: $contact_bg;
   // background-image: url('../assets/img/contact_bg.jpg');/
   background-size: cover;
   //box-shadow: $contact_shadow;
@@ -217,6 +217,7 @@ export default {
   /*border-radius: 10px 0 0 10px;*/
   // border:1px solid $contact_btn_bg;
   font-family: $family3;
+  z-index: 3;
   + .google-btn,
   + .btn {
     /*border-radius: 0 10px 10px 0;*/
@@ -226,6 +227,7 @@ export default {
 .google-btn {
   width: 280px;
   height: 60px;
+  z-index: 3;
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;

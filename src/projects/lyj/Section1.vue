@@ -20,6 +20,8 @@
 .section1 {
   width: 100%;
   height: 100vh;
+  min-height: size(830);
+  max-height: size(1080);
   position: relative;
   overflow: hidden;
 
@@ -210,7 +212,7 @@
       z-index: 2;
     }
     .bg-img {
-      background: url(~@/projects/lyj/s1/bg.png) no-repeat top center;
+      background: url(~@/projects/lyj/s1/bg.png) no-repeat center;
       background-size: cover;
       animation: bg-zoom-in 2.8s;
       z-index: 1;
@@ -244,7 +246,9 @@
 @media only screen and (max-width: 767px) {
   .section1 {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 63px);
+  min-height: size-m(604);
+  max-height: size-m(812);
     overflow: hidden;
 
     .title {
@@ -322,7 +326,7 @@
       }
 
       .bg-img {
-        background: url(~@/projects/lyj/mo/s1/bg.png) no-repeat top center;
+        background: url(~@/projects/lyj/mo/s1/bg.jpg) no-repeat top center;
         background-size: cover;
       }
     }
