@@ -212,6 +212,7 @@ export default {
   height: 60px;
   background: #fff;
   box-shadow: $contact_btn_border;
+  color: $contact_google_btn_color;
   /*border-radius: 10px 0 0 10px;*/
   // border:1px solid $contact_btn_bg;
   font-family: $family3;

@@ -1,11 +1,13 @@
 <template>
   <div class="house-info" id="house-info">
-    <div class="content">
-      <h3 class="title">建案資訊</h3>
-      <div class="info">
-        <div class="item" :key="infos[0]" v-for="infos in houseInfos">
-          <h3 class="label">{{ infos[0] }}</h3>
-          <p class="desc" v-html="infos[1]"></p>
+    <div class="content-bg">
+      <div class="content">
+        <h3 class="title">建案資訊</h3>
+        <div class="info">
+          <div class="item" :key="infos[0]" v-for="infos in houseInfos">
+            <h3 class="label">{{ infos[0] }}</h3>
+            <p class="desc" v-html="infos[1]"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -34,9 +36,15 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  // background: $house_bg;
+  padding-top: 4vw;
+  background: $house_bg;
   position: relative;
   z-index: 1;
+}
+.content-bg {
+  background: $house_bg2;
+  max-width: 70%;
+  margin: 0 auto;
 }
 .content {
   width: 686px;

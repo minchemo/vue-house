@@ -13,10 +13,12 @@
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
     </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="contact">
-      <ContactSection />
-    </vue-lazy-component>
+    <div class="section" @init="init">
+      <GoogleMap />
+    </div>
+    <div class="section" @init="init">
+      <HouseInfo />
+    </div>
 
     <MobileNav />
   </div>
@@ -39,10 +41,12 @@ import $ from "jquery";
 import Navigation from "@/layouts/Navigation.vue";
 import { isMobile } from "@/utils";
 import SideNavigation from "@/layouts/SideNavigation.vue";
-import ContactSection from "@/layouts/ContactSection.vue";
 import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
+
+import HouseInfo from "@/components/HouseInfo.vue";
+import GoogleMap from "@/components/GoogleMap.vue";
 
 import Section1 from "@/projects/yj/Section1.vue";
 
@@ -53,8 +57,10 @@ export default {
     // Indigator,
     Navigation,
     SideNavigation,
-    ContactSection,
+    //ContactSection,
     MobileNav,
+    HouseInfo,
+    GoogleMap,
     Section1
   },
 
@@ -109,6 +115,80 @@ export default {
         $("<img>")
           .on("load", imageLoaded)
           .attr("src", $(img).attr("src"));
+      });
+
+      function generatePagination(items) {
+        let pH = "<div class='item-cal-pagination'>";
+        for (let i = 0; i < items; i++) {
+          pH += `<div data-index="${i}" class="item-cal-pagination-dot ${
+            i == 0 ? "active" : ""
+          }"></div>`;
+        }
+        pH += "</div>";
+
+        return pH;
+      }
+
+      $(".item").each(function(index, value) {
+        let itemImg = $(value).find(".item-img");
+        let maskImgSrc = $(value)
+          .find(".item-img-mask")
+          .attr("src");
+
+        $(itemImg).each(function(i, val) {
+          let imgSrc = $(val).attr("src");
+
+          let box = `
+          <div class="item-cal ${i == 0 ? "active" : ""}" 
+          data-index="${i}" 
+          style="
+          background-image:url(${imgSrc});
+          background-size: cover;
+          mask: url(${maskImgSrc}) no-repeat center center;
+          -webkit-mask: url(${maskImgSrc}) no-repeat center center;
+          mask-size: cover;
+          -webkit-mask-size: cover;
+          ">
+            <img style="visibility:hidden;width:100%" src="${imgSrc}">
+          </div>
+        `;
+
+          $(val)
+            .parent()
+            .append(box);
+
+          $(val).remove();
+        });
+
+        $(value).append(generatePagination(itemImg.length));
+      });
+
+      $(".item-cal-pagination-dot").click(function() {
+        let parent = $(this).parent();
+        let item = $(this).closest(".item");
+        let targetIndex = $(this).attr("data-index");
+
+        item.find(".item-cal").removeClass("active");
+        parent.find(".item-cal-pagination-dot").removeClass("active");
+
+        item
+          .find(".item-cal[data-index=" + targetIndex + "]")
+          .addClass("active");
+
+        $(this).addClass("active");
+      });
+
+      $(".item6 .photos .photo").click(function() {
+        $(".item6 .photos .photo").removeClass("active");
+        $(this).addClass("active");
+      });
+
+      $(".float-btn.open").click(function() {
+        $(".float-menu").show();
+      });
+
+      $(".float-menu .close").click(function() {
+        $(".float-menu").hide();
       });
     });
   },

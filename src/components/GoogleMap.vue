@@ -4,7 +4,7 @@
       title="googlemap"
       :src="googleSrc"
       width="100%"
-      height="555"
+      height="355"
       frameborder="0"
       style="border: 0"
       allowfullscreen
@@ -12,17 +12,17 @@
   </div>
 </template>
 <script>
-import info from '@/info'
-import { isMobile } from '@/utils'
+import info from "@/info";
+import { isMobile } from "@/utils";
 export default {
-  name: 'googleMap',
+  name: "googleMap",
   data() {
     return {
       isMobile,
-      googleSrc: info.googleSrc,
-    }
-  },
-}
+      googleSrc: info.googleSrc
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>

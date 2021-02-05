@@ -12,8 +12,8 @@ $nav_bg: #1d2083;
 $nav_btn_color: #595757;
 $nav_link_color: #fff;
 $nav_link_subtitle_color: #fff;
-$nav_link_hover_color: #976a4b;
-$nav_link_hover_bg: #976a4b;
+$nav_link_hover_color: #ffff00;
+$nav_link_hover_bg: #ffff00;
 
 /* loading */
 $loading_bg_color: #ccc;
@@ -32,16 +32,16 @@ $order_bg_color: transparent;
 $order_bg_image: transparent;
 $order_bg_image_m: transparent;
 $order_title_color: #ffff00;
-$order_subtitle_color: #cc2617;
-$order_input_label_color: #ffff00;
+$order_subtitle_color: #fff;
+$order_input_label_color: #fff;
 $order_input_color: #000 !important;
 $order_input_placeholder: #999 !important;
 $order_input_bg: #fff !important;
 $order_input_border: solid 1px #1d2083;
 $order_input_focus_border: solid 1px rgba(0, 0, 0, 1) !important;
 $order_input_selected_color: solid 1px rgba(0, 0, 0, 1) !important;
-$order_check_desc_color: #000 !important;
-$order_check_span_color: #000 !important;
+$order_check_desc_color: #fff !important;
+$order_check_span_color: #ffff00 !important;
 $order_submit_bg: #ffff00 !important;
 $order_submit_color: #1d2083 !important;
 $order_sumbit_disable_bg: #ffff00 !important;
@@ -52,26 +52,27 @@ $contact_bg_m: transparent;
 $contact_shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
 
 $contact_btn_border: inset 0 0 0px 0.7px #1d2083;
-$contact_btn_color: #ffff00;
-$contact_btn_icon: #ffff00;
-$contact_btn_bg: #1d2083;
-$contact_btn_hover_color: #1d2083;
-$contact_btn_hover_icon: #1d2083;
+$contact_btn_color: #0042ad;
+$contact_btn_icon: #0042ad;
+$contact_btn_bg: #fff;
+$contact_btn_hover_color: #0042ad;
+$contact_btn_hover_icon: #0042ad;
 $contact_btn_hover_bg: #ffff00;
 
-$contact_google_btn_color: #ffff00;
-$contact_google_btn_icon: #ffff00;
-$contact_google_btn_bg: #1d2083;
-$contact_google_hover_btn_color: #1d2083;
-$contact_google_hover_btn_icon: #1d2083;
+$contact_google_btn_color: #0042ad;
+$contact_google_btn_icon: #0042ad;
+$contact_google_btn_bg: #ffff00;
+$contact_google_hover_btn_color: #fff;
+$contact_google_hover_btn_icon: #0042ad;
 $contact_google_hover_btn_bg: #ffff00;
 
 // houseInfo
-$house_bg: #fff;
-$house_title_color: #1d2083;
-$house_border_color: #1d2083;
-$house_label_color: #1d2083;
-$house_desc_color: #000;
+$house_bg: #1d2083;
+$house_bg2: #0042ad;
+$house_title_color: #ffff00;
+$house_border_color: #ffff00;
+$house_label_color: #ffff00;
+$house_desc_color: #ffff00;
 
 // mobileNav
 $mobile_nav_background: #1d2083;
