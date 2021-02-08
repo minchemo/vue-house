@@ -201,22 +201,19 @@
       margin-right: -45%;
       justify-content: flex-start;
     padding: 3em 0 0 1em;
-        font-size: size-m(15);
+        font-size: size-m(15); transform: scaleX(0.95);
+      letter-spacing:0.2em;
 
       .title1 {
       font-size:2.2em;
       }
-      .title2 {
-      margin-top:0.35em;
-      }
-      .title3 {
-      font-size:1.2em;
-      margin-top: 1.05em;
-      margin-bottom: 0.8em;
-      padding:0.4em 0.3em;
-      letter-spacing:0.0em;
-      }
       .title4 {
+      font-size:1em;
+    color: #000c;
+      margin-top: 0.6em;
+      padding:0.8em 0.3em;
+      letter-spacing:0.3em;
+      line-height: 1.8;
       }
     }
 
