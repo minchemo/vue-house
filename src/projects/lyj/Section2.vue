@@ -19,12 +19,12 @@
         </div>
     <div class="title">
       <div class="title1" data-aos="fade-down" data-aos-delay="100">低基期<span>✕</span>高獲利</div>
-      <div class="title2" data-aos="fade-down" data-aos-delay="200">
+ <!--     <div class="title2" data-aos="fade-down" data-aos-delay="200">
         首購價圓豪宅夢
       </div>
       <div class="title3" data-aos="fade-down" data-aos-delay="400">
         五項唯一質感建商　全台矚目　潛銷個案
-      </div>
+      </div>  -->
       <div class="title4" data-aos="fade-down" data-aos-delay="600">
         1字頭投資台中港新市鎮<br />
         超前部署10倍高投報
@@ -56,20 +56,22 @@
     width: 40%;
     height: 100%;
     z-index: 1;
-    color: #606060;
+    color: #000a;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     padding: 0 0 3em 0;
-    align-items: center;
+    align-items:flex-start;
+    padding: 0 0 0 5em;
       font-size: size(20);
       line-height: 1.6;
       letter-spacing:0.15em;
 
+
     .title1 {
       font-size:2.75em;
-      font-weight: 500;
+      font-weight: 300;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,14 +91,24 @@
       margin-bottom: 1.1em;
       padding:0.7em 0.3em;
       border-top: 1px solid;
-      border-bottom: 1px solid;
+      border-bottom: 1px solid ;
+    }
+    .title4 {
+      font-size:1.3em;
+      margin-top: 0.5em;
+      padding:0.5em 0.3em;
+      border-top: 1px solid #0004;
+      text-align: left;
+      width: 26em;
+      font-weight: 300;
+      line-height: 1.7;
     }
   }
 
   .badge {
     position: absolute;
-    right: 0;
-    bottom: size(30);
+    right: 1em;
+    bottom:2em;
     z-index: 10;
 
     .badge-text {
@@ -122,7 +134,7 @@
     top: 0;left: 0;
   width:60%;
   height: 100%;
-    .name {
+  /*  .name {
       position: absolute;
       right: 0;
       margin: 0 auto;
@@ -132,7 +144,7 @@
       letter-spacing: 2px;
       background: rgba(0, 0, 0, 0.6);
       padding: 5px 15px;
-    }
+    }*/
     .slide-img {
       width: 100%;
       height: 100%;
@@ -180,6 +192,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section2 {
+  height: size-m(575);
   min-height: size-m(0);
   max-height: size-m(1000);
     .title {
@@ -187,7 +200,7 @@
       right: 50%;
       margin-right: -45%;
       justify-content: flex-start;
-      padding-top: size-m(25);
+    padding: 3em 0 0 1em;
         font-size: size-m(15);
 
       .title1 {
@@ -209,7 +222,7 @@
 
     .badge {
       bottom: unset;
-      top: size-m(280);
+      top: size-m(240);
       right: size-m(20);
 
       .badge-text {
@@ -225,7 +238,7 @@
     }
 
   .slide {
-    top:size-m(340);
+    top:size-m(300);
   width:100%;
   height:size-m(275);
   
