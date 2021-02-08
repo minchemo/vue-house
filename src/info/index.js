@@ -1,5 +1,5 @@
 export default {
-  address: "10491台北市中山區南京東路二段174-200",
+  address: "臺北市台北市南京東路二段178號13樓",
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14457.7682561433!2d121.5247434!3d25.0530018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9604c91ec59%3A0x3d58013a5b675fe2!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuozmrrUxNzQtMjAw!5e0!3m2!1szh-TW!2stw!4v1612426464493!5m2!1szh-TW!2stw",
   googleLink: "https://goo.gl/maps/WKqbLzL4YabeT2Yb8",
@@ -14,8 +14,8 @@ export default {
     ["企劃銷售", "聯悦建設股份有限公司"],
     ["設計規劃", "永豐建築師事務所"],
     ["基地位置", "梧棲區市鎮南段133地號"],
-    ["接待中心", "大仁路 四維路口"],
-    ["電話", "04-2656-8736"]
+    ["接待中心", "臺北市台北市南京東路二段178號13樓"],
+    ["電話", "02-2516-1888"]
   ],
 
   gtmCode: [""], // 可放置多個

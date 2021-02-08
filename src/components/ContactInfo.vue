@@ -162,7 +162,7 @@ export default {
   text-decoration: none;
   color: $contact_btn_color;
   background: $contact_btn_bg;
-  box-shadow: $contact_btn_border;
+// box-shadow: $contact_btn_border;
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
@@ -213,7 +213,7 @@ export default {
   width: 600px;
   height: 60px;
   background: #fff;
-  box-shadow: $contact_btn_border;
+ // box-shadow: $contact_btn_border;
   /*border-radius: 10px 0 0 10px;*/
   // border:1px solid $contact_btn_bg;
   font-family: $family3;
@@ -234,7 +234,7 @@ export default {
   color: $contact_google_btn_color;
   background: $contact_google_btn_bg;
   background-position: center !important;
-  box-shadow: $contact_btn_border;
+  //box-shadow: $contact_btn_border;
   transition: all 0.5s;
 
   svg {
