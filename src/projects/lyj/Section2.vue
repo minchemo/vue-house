@@ -30,10 +30,10 @@
         超前部署10倍高投報
       </div>
     </div>
-    <div class="badge" data-aos="fade-down" data-aos-delay="800" data-aos-offset="-300" v-scroll-to="{ element: `#contact` }">
+ <!--   <div class="badge" data-aos="fade-down" data-aos-delay="800" data-aos-offset="-300" v-scroll-to="{ element: `#contact` }">
       <span class="badge-text">首創台北聯銷</span
       ><span class="badge-text-2">限戶賞屋</span>
-    </div>
+    </div> -->
   </div>
 </template>
 <style lang="scss" scoped>
@@ -45,7 +45,8 @@
   height: 90vh;
   min-height: size(800);
   max-height: size(1080);
-    background: #EBE3D4;
+    background: #EBE3D4 url('./s2/bg.jpg') 50% 50%;
+    background-size: cover;
 
   position: relative;
 
@@ -64,14 +65,17 @@
     padding: 0 0 3em 0;
     align-items:flex-start;
     padding: 0 0 0 5em;
-      font-size: size(20);
+      font-size: size(18);
       line-height: 1.6;
       letter-spacing:0.15em;
+      transform: scaleX(0.95);
+      transform-origin: 0 0;
 
 
     .title1 {
       font-size:2.75em;
-      font-weight: 300;
+      font-weight: 500;
+      letter-spacing: 0.2em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -94,21 +98,22 @@
       border-bottom: 1px solid ;
     }
     .title4 {
-      font-size:1.3em;
+      font-size:1em;
       margin-top: 0.5em;
-      padding:0.5em 0.3em;
+      padding:0.5em 0.3em 5em 0.3em;
       border-top: 1px solid #0004;
       text-align: left;
-      width: 26em;
+      width: 120%;
+      letter-spacing: 0.5em;
       font-weight: 300;
-      line-height: 1.7;
+      line-height: 2;
     }
   }
 
   .badge {
     position: absolute;
     right: 1em;
-    bottom:2em;
+    bottom:52%;
     z-index: 10;
 
     .badge-text {
@@ -166,7 +171,8 @@
   font-size: size(40);
         transform: scaleX(-1);
       z-index:2;
-      &::before{
+      cursor: pointer;
+      &::after{
         position: absolute;
         content: "";
         top:calc(50% - 0.5em);
@@ -179,6 +185,13 @@
         border-width: 0.1em 0.1em 0 0;
         transform-origin: center center;
   }
+  &::before{
+        position: absolute;
+        right: 0;top: 0;
+        content: "";opacity: 0;
+        width:100%;transition: all 0.2s;
+        height:100%;background: linear-gradient(to right, #00305700 0%,#00305799 100%);}
+  &:hover:before{opacity: 1;}
 }
 .arrow-r{right: 0;
         transform: scaleX(1);}
@@ -192,7 +205,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section2 {
-  height: size-m(575);
+  height: size-m(525);
   min-height: size-m(0);
   max-height: size-m(1000);
     .title {
@@ -200,7 +213,7 @@
       right: 50%;
       margin-right: -45%;
       justify-content: flex-start;
-    padding: 3em 0 0 1em;
+    padding: 4em 0 0 1em;
         font-size: size-m(15); transform: scaleX(0.95);
       letter-spacing:0.2em;
 
@@ -235,7 +248,7 @@
     }
 
   .slide {
-    top:size-m(300);
+    top:size-m(250);
   width:100%;
   height:size-m(275);
   

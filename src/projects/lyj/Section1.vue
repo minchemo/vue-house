@@ -3,6 +3,8 @@
     <div class="title">
       <div class="title-1">360度環景森海泳池俱樂部</div>
       <div class="title-2">全台首座聯名日本蔦屋</div>
+    </div>
+    <div class="title title-7">
       <div class="title-6">
       <div class="title-3"><span>2021</span>新灣區霸氣新作</div>
       <div class="title-4"><span>F</span>ORMOSA</div>
@@ -72,17 +74,17 @@
     .title-3 {
       position: absolute;
       font-size:1.44444em;
-      letter-spacing:0.27em;
+      letter-spacing:0.4em;
       vertical-align: middle;
       font-weight: 300;
       top:0.4em;
-      left: 3.7em;
+      left: 3.9em;
       transform: scaleX(0.95);
       transform-origin: 0 0;
       span {
         font-family: "Arial", serif;
         font-size: 1.6em;
-        letter-spacing: 0;
+        letter-spacing: 0.05em;
         font-weight: bold;
         display: inline-block;margin: -0.16em 0.2em 0 0;
         vertical-align:inherit;
@@ -102,7 +104,7 @@
       font-family: "Arial", serif;
       font-size: 4.72em;
       font-weight: bold;
-      margin:1.6em 0 0 0.16em;
+      margin:0.55em 0 0 0.16em;
       width: 10.5em;
 
       span {
@@ -134,7 +136,7 @@
     .title-5 {
         position: absolute;
         left: 3.85em;
-        top: 1.38em;
+        top: 0em;
       font-size:6.5em;
       letter-spacing:0.1282em;
       padding-left:0.3846em;
@@ -153,6 +155,9 @@
         animation: text-mask-out 5s cubic-bezier(0, 0, 0.2, 1) 0.35s 1 forwards;
         animation-delay: 400ms;
       }*/
+    }
+    &.title-7{
+    top: calc(50% - 6.5vw);
     }
     @keyframes text-mask-out {
       0%,
@@ -262,6 +267,10 @@
       top: size-m(60);
       left: size-m(24);
       font-size: size-m(16);
+    .title-1,
+    .title-2 {
+      font-size: size-m(16);
+       }
       .title-4 {
         margin: .8em 0 -0.5em 0.16em;
         &::before {
@@ -282,6 +291,9 @@
       .title-6 {
         font-size: size-m(12);
       }
+    &.title-7{
+    top:size-m(130);
+    }
 
     @keyframes line-out {
       0%,
