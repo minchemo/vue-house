@@ -1,20 +1,6 @@
 <template>
   <div>
     <div class="contact-info" id="contact-info">
-      <div class="absolute decor decor-5">
-        <img
-          class="decor-img"
-          src="@/projects/dmfy/decor/decor-e.png"
-          alt=""
-          srcset=""
-        />
-        <img
-          class="decor-bg"
-          src="@/projects/dmfy/decor/decor-e-bg.png"
-          alt=""
-          srcset=""
-        />
-      </div>
       <img
         v-if="!isMobile"
         class="logo"

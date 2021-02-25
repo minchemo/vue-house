@@ -8,20 +8,6 @@
           <p class="desc" v-html="infos[1]"></p>
         </div>
       </div>
-      <div class="absolute decor decor-6">
-        <img
-          class="decor-img"
-          src="@/projects/dmfy/decor/decor-f.png"
-          alt=""
-          srcset=""
-        />
-        <img
-          class="decor-bg"
-          src="@/projects/dmfy/decor/decor-f-bg.png"
-          alt=""
-          srcset=""
-        />
-      </div>
     </div>
     <Footer />
   </div>

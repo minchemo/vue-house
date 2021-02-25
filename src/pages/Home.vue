@@ -13,30 +13,6 @@
       <Section1 />
     </vue-lazy-component>
 
-    <vue-lazy-component class="section" id="section2" @init="init">
-      <Section2 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section3" @init="init">
-      <Section3 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section4" @init="init">
-      <Section4 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section5" @init="init">
-      <Section5 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section6" @init="init">
-      <Section6 />
-    </vue-lazy-component>
-
-    <vue-lazy-component class="section" id="section7" @init="init">
-      <Section7 />
-    </vue-lazy-component>
-
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
     </vue-lazy-component>
@@ -46,8 +22,8 @@
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Playball&display=swap');
-@import '../assets/style/variableColor.scss';
+@import url("https://fonts.googleapis.com/css?family=Playball&display=swap");
+@import "../assets/style/variableColor.scss";
 
 .section,
 .section .fp-slide,
@@ -58,25 +34,19 @@
 
 <script>
 // @ is an alias to /src
-import $ from 'jquery'
-import Navigation from '@/layouts/Navigation.vue'
-import { isMobile } from '@/utils'
-import SideNavigation from '@/layouts/SideNavigation.vue'
-import ContactSection from '@/layouts/ContactSection.vue'
-import MobileNav from '@/layouts/MobileNav.vue'
-import Loading from '@/components/Loading.vue'
+import $ from "jquery";
+import Navigation from "@/layouts/Navigation.vue";
+import { isMobile } from "@/utils";
+import SideNavigation from "@/layouts/SideNavigation.vue";
+import ContactSection from "@/layouts/ContactSection.vue";
+import MobileNav from "@/layouts/MobileNav.vue";
+import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from '@/projects/dmfy/Section1.vue'
-import Section2 from '@/projects/dmfy/Section2.vue'
-import Section3 from '@/projects/dmfy/Section3.vue'
-import Section4 from '@/projects/dmfy/Section4.vue'
-import Section5 from '@/projects/dmfy/Section5.vue'
-import Section6 from '@/projects/dmfy/Section6.vue'
-import Section7 from '@/projects/dmfy/Section7.vue'
+import Section1 from "@/projects/whtj/Section1.vue";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
     Loading,
     // Indigator,
@@ -84,20 +54,14 @@ export default {
     SideNavigation,
     ContactSection,
     MobileNav,
-    Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
+    Section1
   },
 
   data() {
     return {
       isMobile,
       isSide: false,
-      load: true,
+      load: true
       // viewIndex: 0,
       // action: {
       //   moveTo: () => {},
@@ -115,7 +79,7 @@ export default {
       //   // navigation: true,
       //   // sectionsColor: ['#41b883', '#ff5f45', '#0798ec'],
       // },
-    }
+    };
   },
   created() {
     // setTimeout(() => {
@@ -127,54 +91,25 @@ export default {
 
     $(document).ready(() => {
       // Images loaded is zero because we're going to process a new set of images.
-      var imagesLoaded = 0
+      var imagesLoaded = 0;
       // Total images is still the total number of <img> elements on the page.
-      var totalImages = $('img').length
+      var totalImages = $("img").length;
 
       const allImagesLoaded = () => {
-        this.load = false
-      }
+        this.load = false;
+      };
       const imageLoaded = () => {
-        imagesLoaded++
+        imagesLoaded++;
         if (imagesLoaded == totalImages) {
-          allImagesLoaded()
+          allImagesLoaded();
         }
-      }
-      $('img').each(function (idx, img) {
-        $('<img>').on('load', imageLoaded).attr('src', $(img).attr('src'))
-      })
-
-      setTimeout(() => {
-        $('.decor').each(function (i, el) {
-          const $this = $(el)
-          const img = $this.find('.decor-img')
-
-          $this.append('<div class="decor-shine"></div>')
-
-          $this.append(
-            '<div class="decor-mask"><img src="' + img.attr('src') + '"></div>',
-          )
-
-          $this.find('.decor-mask').css({
-            mask: 'url(' + img.attr('src') + ') no-repeat center center',
-            '-webkit-mask':
-              'url(' + img.attr('src') + ') no-repeat center center',
-            '-webkit-mask-size': 'cover',
-            'mask-size': 'cover',
-          })
-
-          $this.find('.decor-shine').css({
-            mask: 'url(' + img.attr('src') + ') no-repeat center center',
-            '-webkit-mask':
-              'url(' + img.attr('src') + ') no-repeat center center',
-            '-webkit-mask-size': 'cover',
-            'mask-size': 'cover',
-          })
-
-          img.css('visibility', 'hidden')
-        })
-      }, 500)
-    })
+      };
+      $("img").each(function(idx, img) {
+        $("<img>")
+          .on("load", imageLoaded)
+          .attr("src", $(img).attr("src"));
+      });
+    });
   },
   mounted() {
     // window.addEventListener('scroll', this.onScroll, false)
@@ -191,7 +126,7 @@ export default {
   // }
   // },
   methods: {
-    init() {},
+    init() {}
     // onScroll() {
     //   // 获取所有锚点元素
     //   const navContents = document.querySelectorAll('.section')
@@ -242,6 +177,6 @@ export default {
     //     this.$refs.fullPage.api.setResponsive(true)
     //   }
     // },
-  },
-}
+  }
+};
 </script>

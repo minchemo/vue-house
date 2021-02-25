@@ -1,31 +1,29 @@
 export default {
-  address: "100台北市中正區金山南路一段96號",
+  address: "桃園市龜山區文桃路與樂善路口",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9458772365715!2d121.52524151544696!3d25.03591074436781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9786e8befb1%3A0x19f3d9b9d592eda!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A6YeR5bGx5Y2X6Lev5LiA5q61OTbomZ8!5e0!3m2!1szh-TW!2stw!4v1610898747209!5m2!1szh-TW!2stw",
-  googleLink: "https://goo.gl/maps/QYtBMbZcVRxrQ4wN6",
-  phone: "02-87878888",
-  fbLink: "",
-  fbMessage: "",
-  caseName: "東門馥寓",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5928786474415!2d121.3877746!3d25.0478868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAyJzUyLjQiTiAxMjHCsDIzJzE2LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1614266126683!5m2!1szh-TW!2stw",
+  googleLink: "https://goo.gl/maps/e6zuP3sw2EQSuNSp6",
+  phone: "03-388-3888",
+  fbLink:
+    "https://www.facebook.com/%E6%96%87%E8%8F%AF%E5%A4%A9%E9%9A%9B-191595829072462",
+  fbMessage: "https://m.me/191595829072462/",
+  caseName: "文華天際",
   indigatorLength: 10,
 
   houseInfos: [
-    ["投資新建", "達欣開發股份有限公司"],
-    ["建築設計", "林秀芬建築師事務所"],
-    ["美學顧問", "世界建築名家丹下憲孝"],
-    ["結構工程", "築遠工程顧問有限公司"],
-    ["建築代銷", "聯碩行銷股份有限公司"],
-    ["公設設計", "樂工設計凌志佳"],
-    ["建照號碼", "109建字第XXXX號"],
-    ["建案位置", "台北市中正區金山南路一段96號"]
+    ["投資新建", "合遠建設股份有限公司"],
+    ["營造公司", "國城營造有限公司"],
+    ["建築設計", "蔡智勸建築師事務所"],
+    ["企劃銷售", "新誠家廣告有限公司"],
+    ["接待中心", "桃園市龜山區文桃路與樂善一路口"]
   ],
 
-  gtmCode: ["K4H35M8"], // 可放置多個
-  recaptcha_site_key_v2: '6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz',
-  recaptcha_site_key: '6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s', // recaptcha v3
-  recaptcha_user_token: '6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa',
+  gtmCode: [""], // 可放置多個
+  recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
+  recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
+  recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
     title: "預約賞屋",
     subTitle: ""
   }
-}
+};

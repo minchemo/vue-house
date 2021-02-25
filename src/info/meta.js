@@ -1,5 +1,6 @@
 exports.info = {
-  title: "東門馥寓",
-  description: "",
-  keywords: ""
+  title: "文華天際｜林口A7頂級度假村",
+  description:
+    "文華天際｜公園手排泳池花園｜接待中心 ; 桃園市龜山區文桃路與樂善一路口｜貴賓專線 : 03-388-3888",
+  keywords: "文華天際, A7建案, 林口建案, A8建案, 龜山建案"
 };
