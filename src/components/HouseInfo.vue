@@ -34,7 +34,7 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  // background: $house_bg;
+  background: $house_bg;
   position: relative;
   z-index: 1;
 }
@@ -62,10 +62,9 @@ export default {
   font-size: 32px;
   line-height: 36px;
   margin: 60px 0;
-  font-weight: 500;
-  color: #fff;
+  font-weight: bold;
+  color: $house_title_color;
   font-family: $family3;
-  background: #ce9a78;
   width: 80vw;
   padding: 10px 20px;
 }

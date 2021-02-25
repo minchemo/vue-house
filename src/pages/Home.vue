@@ -1,8 +1,6 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
-    <SideNavigation v-if="isSide" />
-    <Navigation v-else />
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page
       ref="fullPage"
@@ -43,7 +41,7 @@ import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/whtj/Section1.vue";
+import Section1 from "@/projects/sv/Section1.vue";
 
 export default {
   name: "home",
@@ -60,7 +58,7 @@ export default {
   data() {
     return {
       isMobile,
-      isSide: false,
+      isSide: true,
       load: true
       // viewIndex: 0,
       // action: {

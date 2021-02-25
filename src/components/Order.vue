@@ -8,7 +8,10 @@
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
-      <h3 class="order-title" v-html="order.title"></h3>
+      <!--<h3 class="order-title" v-html="order.title"></h3>-->
+      <div class="order-title-img">
+        <img src="@/assets/img/order-title.png" alt="" />
+      </div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
@@ -132,8 +135,8 @@
       </div>
     </div>
 
-    <GoogleMap />
     <ContactInfo />
+    <GoogleMap />
     <PolicyDialog :policyVisible="policyVisible" />
   </div>
 </template>
@@ -294,6 +297,8 @@ export default {
   background-attachment: fixed;
   background-position: 0% 50%;
   font-family: $family3;
+  padding-top: 10vw;
+
   input,
   textarea,
   button {
@@ -312,9 +317,16 @@ export default {
     line-height: 1.3;
     font-size: calc(100vw * 36 / 1920);
     text-align: center;
-    color: #fff;
-    background-color: $order_title_color;
+    color: $order_title_color;
     margin: 0 auto;
+  }
+  .order-title-img {
+    width: 50vw;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
   }
 
   .order-subtitle {
@@ -386,6 +398,7 @@ export default {
       font-weight: 500;
       opacity: 0.8;
       color: $order_input_label_color;
+      text-align: left;
     }
   }
 
@@ -399,6 +412,10 @@ export default {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .order-title {
     font-size: 32px;
+  }
+
+  .order-title-img {
+    width: 90vw;
   }
 
   .order-subtitle {
@@ -416,6 +433,7 @@ export default {
 @media only screen and (max-width: 767px) {
   .order-bg {
     background-image: $order_bg_image_m;
+    background-position: top center;
     padding-top: 40px;
     margin: 0;
     position: relative;
@@ -428,6 +446,9 @@ export default {
       padding-top: 10px;
       padding-bottom: 5px;
       font-size: calc(100vw * 20 / 375);
+    }
+    .order-title-img {
+      width: 90vw;
     }
 
     .order-subtitle {
@@ -458,7 +479,8 @@ export default {
         margin-top: 20px;
       }
       label {
-        width: 30% !important;
+        /*width: 30% !important;*/
+        text-align: left;
       }
     }
 
