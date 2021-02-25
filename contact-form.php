@@ -1,7 +1,25 @@
 <?php
-    $case_name = "東門馥寓";
-    $case_code = 'dmfy';
 
+#下3段式抓 為案件編號 $case_code
+#$case_code_test 是用來判斷是否為1的測試頁
+#$case_code = "jw";特殊案使用
+$src =$_SERVER['SERVER_NAME']; 
+$case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
+$case_code = substr($src,0,strpos($src,$case_code_test=='1'?'1':'.'));
+
+# PDO DB 連線 Start
+    $pdo=new pdo('mysql:host=localhost;dbname=htw_web','htw','748aSgl5Ni');
+    $pdo->exec("SET NAMES 'utf8'");
+# PDO DB 連線 End
+
+# 下3段 抓$case_name 這樣就不會打錯案名了
+# $case_name = "鳳翔"; 特殊案使用
+$sql_name = "SELECT casename FROM susers WHERE email = '" . $case_code . "'";
+$dataList = $pdo->query($sql_name)->fetchAll();
+$case_name = $dataList[0]['casename'];
+
+    $activity         = isset($_POST['activity']) ? $_POST['activity'] : ''; // 活動名稱
+    $count         = isset($_POST['count']) ? $_POST['count'] : ''; // 報名人數
     $name         = isset($_POST['name']) ? $_POST['name'] : '';
     $phone        = isset($_POST['phone']) ? $_POST['phone'] : '';
     $user_email   = isset($_POST['email']) ? $_POST['email'] : '';
@@ -58,11 +76,6 @@
 
     $datetime = date ("Y-m-d H:i:s" , mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y'))) ;
     # 不同版本前端相容 End
-
-    # PDO DB 連線 Start
-    $pdo=new pdo('mysql:host=localhost;dbname=htw_web','htw','748aSgl5Ni');
-    $pdo->exec("SET NAMES 'utf8'");
-    # PDO DB 連線 End
 
     $bCheck = true; //信件檢查
 
@@ -238,7 +251,7 @@
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://".$case_code.".h35.tw/<BR>姓名：".$name."<BR>電話：".$phone."<BR>信箱：".$user_email."<BR>城市：".$city.$area."<BR>留言：".$msg."<BR>可聯絡時間：".$time_start."-".$time_end."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://".$case_code.".h35.tw/<BR>姓名：".$name."<BR>活動名稱：".$activity."<BR>報名人數：".$count."<BR>電話：".$phone."<BR>城市：".$city.$area."<BR>留言：".$msg."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
