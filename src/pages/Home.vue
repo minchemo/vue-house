@@ -137,21 +137,46 @@ export default {
 
         $(itemImg).each(function(i, val) {
           let imgSrc = $(val).attr("src");
+          let box;
 
-          let box = `
-          <div class="item-cal ${i == 0 ? "active" : ""}" 
-          data-index="${i}" 
-          style="
-          background-image:url(${imgSrc});
-          background-size: cover;
-          mask: url(${maskImgSrc}) no-repeat center center;
-          -webkit-mask: url(${maskImgSrc}) no-repeat center center;
-          mask-size: cover;
-          -webkit-mask-size: cover;
-          ">
-            <img style="visibility:hidden;width:100%" src="${imgSrc}">
-          </div>
-        `;
+          let imgSize = "width:100%;";
+          if (isMobile && index == 0) {
+            imgSize = "height:240vw;";
+          } else if (isMobile) {
+            imgSize = "width:150%;";
+          }
+
+          if (index == 0 && isMobile) {
+            box = `
+              <div class="item-cal ${i == 0 ? "active" : ""}"
+              data-index="${i}"
+              style="
+              mask: url(${maskImgSrc}) no-repeat center center;
+              -webkit-mask: url(${maskImgSrc}) no-repeat center center;
+              -webkit-mask-size: 100%;
+              -webkit-mask-position: top center;
+              overflow-y: hidden;
+              overflow-x: scroll;
+              ">
+                <img style="${imgSize}" src="${imgSrc}">
+              </div>
+            `;
+          } else {
+            box = `
+              <div class="item-cal ${i == 0 ? "active" : ""}"
+              data-index="${i}"
+              style="
+              background-image:url(${imgSrc});
+              background-size: cover;
+              mask: url(${maskImgSrc}) no-repeat center center;
+              -webkit-mask: url(${maskImgSrc}) no-repeat center center;
+              mask-size: cover;
+              -webkit-mask-size: cover;
+              ">
+                <img style="visibility:hidden;${imgSize}" src="${imgSrc}">
+              </div>
+            `;
+          }
 
           $(val)
             .parent()
@@ -159,6 +184,10 @@ export default {
 
           $(val).remove();
         });
+
+        $(value)
+          .find(".item-img-mask")
+          .remove();
 
         $(value).append(generatePagination(itemImg.length));
       });
@@ -180,7 +209,18 @@ export default {
 
       $(".item6 .photos .photo").click(function() {
         $(".item6 .photos .photo").removeClass("active");
-        $(this).addClass("active");
+        $(this)
+          .removeClass("right left")
+          .addClass("active");
+
+        if (isMobile) {
+          $(this)
+            .next()
+            .addClass("right");
+          $(this)
+            .prev()
+            .addClass("left");
+        }
       });
 
       $(".float-btn.open").click(function() {
@@ -190,6 +230,55 @@ export default {
       $(".float-menu .close").click(function() {
         $(".float-menu").hide();
       });
+
+      if (isMobile) {
+        $(".item0 .item-cal").scrollLeft(320);
+
+        $(".item0 .item-cal").on("scroll", function() {
+          $(".item0 .movehere").hide();
+
+          setTimeout(function() {
+            $(".item0 .movehere").fadeIn();
+          }, 200);
+        });
+
+        //photos
+        let currentPhoto = 1;
+
+        function carousellPhotos(type) {
+          if (type == "prev") {
+            if (currentPhoto == 1) {
+              return;
+            } else {
+              currentPhoto = currentPhoto - 1;
+            }
+          } else {
+            if (currentPhoto == 4) {
+              return;
+            } else {
+              currentPhoto = currentPhoto + 1;
+            }
+          }
+
+          $(".photos .square.active")
+            .removeClass("next active")
+            .addClass("prev");
+          $(".photos .square" + currentPhoto)
+            .removeClass(type)
+            .addClass("active");
+          $(".photos .square" + currentPhoto)
+            .next()
+            .removeClass("prev")
+            .addClass("next");
+        }
+
+        $(".photos-arrow .photos-arrow-prev").click(function() {
+          carousellPhotos("prev");
+        });
+        $(".photos-arrow .photos-arrow-next").click(function() {
+          carousellPhotos("next");
+        });
+      }
     });
   },
   mounted() {
