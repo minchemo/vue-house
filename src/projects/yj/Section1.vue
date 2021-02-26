@@ -949,10 +949,9 @@
     }
 
     .build {
-      width: 100%;
-      height: 100%;
+      width: 100%;height: 70%;
       position: absolute;
-      top: 0;
+      top:70.4%;
       left: 0;
       overflow: hidden;
       z-index: 100;
@@ -967,8 +966,8 @@
         background-repeat: no-repeat;
         mask: url(./s1/build-mask.png) no-repeat center center;
         mask-size: cover;
-        mask-position: 0 47.8vw;
-        background-position: 0 47.8vw;
+        mask-position: 0 20vw;
+        background-position: 0 20vw;
         img {
           visibility: hidden;
           width: 100%;
@@ -984,8 +983,8 @@
         background-repeat: no-repeat;
         mask: url(./s1/build-mask.png) no-repeat center center;
         mask-size: cover;
-        mask-position: 0 47.8vw;
-        background-position: -60vw 47.8vw;
+        mask-position: 0 20vw;
+        background-position: -60vw 20vw;
         animation: train 7.5s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
@@ -998,14 +997,14 @@
 
       @keyframes train {
         0% {
-          background-position: 100vw 47.5vw;
+          background-position: 100vw 20vw;
         }
         65%,
         70% {
-          background-position: 65vw 47.5vw;
+          background-position: 65vw 20vw;
         }
         100% {
-          background-position: -60vw 47.5vw;
+          background-position: -60vw 20vw;
         }
       }
     }
