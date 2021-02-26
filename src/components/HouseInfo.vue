@@ -36,24 +36,23 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  padding-top: 4vw;
   background: $house_bg;
   position: relative;
   z-index: 1;
 }
 .content-bg {
   background: $house_bg2;
-  max-width: 70%;
+ //max-width: 70%;
   margin: 0 auto;
 }
 .content {
-  width: 686px;
+ width: 686px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 20vh;
+//  padding-bottom: 20vh;
 }
 
 .title {

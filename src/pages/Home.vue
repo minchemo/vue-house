@@ -239,7 +239,7 @@ export default {
 
           setTimeout(function() {
             $(".item0 .movehere").fadeIn();
-          }, 200);
+          }, 2000);
         });
 
         //photos

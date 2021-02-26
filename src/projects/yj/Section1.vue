@@ -566,7 +566,7 @@
               <div class="photos-arrow-prev"></div>
             </div>
           </div>
-          <img class="building-5" src="./s1/building-5.png" alt="" />
+        <!--  <img class="building-5" src="./s1/building-5.png" alt="" /> -->
         </div>
         <div class="title2">
           <div class="main-title">
@@ -773,8 +773,8 @@
 @import "@/assets/style/function.scss";
 .section1 {
   .svg-1 {
-    width: size(500);
-    top: size(160);
+    width: size(600);
+    top:calc(50% + 100vw * (200 - 540) / 1920);
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
@@ -823,9 +823,10 @@
       top: 1vw;
       width: 20vw;
       background: #9fc9f5;
-      height: 70vh;
+      //height: 100h;
       box-shadow: 0 0 20px #4660864f;
       display: none;
+      padding: 0 0 2em;
 
       .close {
         width: 3vw;
@@ -860,11 +861,6 @@
             &:hover {
               color: #1d2083;
             }
-
-            &:first-child {
-              border: 0;
-              color: #1d2083;
-            }
           }
         }
       }
@@ -872,8 +868,7 @@
   }
   .main {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100vw;height: 58vw;
     background: rgb(196, 255, 237);
     background: linear-gradient(
       30deg,
@@ -940,31 +935,16 @@
 
     .cloud {
       z-index: 1;
-      width: 60vw;
+      width: 80vw;
       position: absolute;
-      right: 3%;
-      top: 5%;
-      animation: cloud 8s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+      right: 5%;
+      top: 2%;
+      animation: cloud 8s ease-in-out infinite alternate;
     }
 
     @keyframes cloud {
-      0% {
-        right: 3%;
-        top: 5%;
-      }
-      40% {
-        right: 2%;
-        top: 4%;
-      }
-      70% {
-        right: 2%;
-        top: 6%;
-      }
-      100% {
-        top: 5%;
-        right: 3%;
+      to{
+        transform: translateX(-10%);
       }
     }
 
@@ -1196,12 +1176,12 @@
     }
 
     .item4 {
-      top: 284vw;
+      top: 286vw;
       z-index: 7;
     }
 
     .item5 {
-      top: 350vw;
+      top: 352vw;
       z-index: 6;
     }
 

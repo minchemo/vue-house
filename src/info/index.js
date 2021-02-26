@@ -1,5 +1,5 @@
 export default {
-  address: "信華六街&信華三街口",
+  address: "243新北市泰山區信華六街&信華三街口",
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1807.346360911593!2d121.440119!3d25.0445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb575f9fad8e0edd4!2z5piO5pel5Z-OMuaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1611812905624!5m2!1szh-TW!2stw",
   googleLink: "https://goo.gl/maps/wzA8yWbP9v4FE4J29",
@@ -16,7 +16,7 @@ export default {
     ["企劃銷售", "新智力廣告有限公司"],
     ["景觀設計", "上馥工程有限公司"],
     ["基地位置", "新北市泰山區信華段五小段14地號"],
-    ["接待中心", "信華六街&信華三街口"]
+    ["接待中心", "新北市泰山區信華六街&信華三街口"]
   ],
 
   gtmCode: [""], // 可放置多個
