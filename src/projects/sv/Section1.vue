@@ -397,6 +397,8 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
+    background-position: 50% calc(100% - 45px);
+    min-height: 126vw;
     .main-logo {
       margin-top: 15vh;
       width: 50vw;
