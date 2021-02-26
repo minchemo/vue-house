@@ -398,6 +398,7 @@
 @media only screen and (max-width: 767px) {
   .section1 {
     background-position: 50% calc(100% - 45px);
+    background-size: auto 160vw;
     min-height: 126vw;
     .main-logo {
       margin-top: 15vh;
