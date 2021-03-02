@@ -369,6 +369,7 @@
     margin-top: 3.5vw;
     width: 40vw;
     max-width: 680px;
+    filter: drop-shadow(0 0 4px #394f7e66);
     .cls-1 {
       fill: #fff;
     }
@@ -397,9 +398,10 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
-    background-position: 50% calc(100% - 45px);
-    background-size: auto 160vw;
-    min-height: 126vw;
+    height: calc(100vh - 63px);
+    background-image: url("~@/projects/sv/s1/bg-mo.png");
+    background-attachment: scroll;
+
     .main-logo {
       margin-top: 15vh;
       width: 50vw;
