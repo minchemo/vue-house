@@ -477,9 +477,9 @@
         </g>
       </svg>
 
-      <img class="s1bg" src="./s1/s1bg.png" alt="s1bg" v-if="!isMobile"/>
-      <img class="s1bg" src="./s1/s1bg_m.png" alt="s1bg_m" v-if="isMobile"/>
-     <!-- <img class="building-1" src="./s1/building-1.png" alt="" />
+      <img class="s1bg" src="./s1/s1bg.png" alt="s1bg" v-if="!isMobile" />
+      <img class="s1bg" src="./s1/s1bg_m.png" alt="s1bg_m" v-if="isMobile" />
+      <!-- <img class="building-1" src="./s1/building-1.png" alt="" />
       <img
         class="building-2"
         data-aos="fade-up"
@@ -572,10 +572,22 @@
           <!--  <img class="building-5" src="./s1/building-5.png" alt="" /> -->
         </div>
         <div class="title2">
-          <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 462" style="enable-background:new 0 0 1920 462;" xml:space="preserve">
-   <path class="st0" d="M769.5,49C431.5-15.6,253-23-3,71.2v217.2c165.1,19.6,309.1,57.1,378.6,75.3c14.2,3.7,28.3,7.4,42.2,11.1c529.6,139,923.1,77.5,1179.8,44c81.4-10.6,199.9-41.9,323.5-97.3V34C1461.5,137.5,1225.1,136.2,769.5,49z"/>
-</svg>
+          <svg
+            version="1.1"
+            id="圖層_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 1920 462"
+            style="enable-background:new 0 0 1920 462;"
+            xml:space="preserve"
+          >
+            <path
+              class="st0"
+              d="M769.5,49C431.5-15.6,253-23-3,71.2v217.2c165.1,19.6,309.1,57.1,378.6,75.3c14.2,3.7,28.3,7.4,42.2,11.1c529.6,139,923.1,77.5,1179.8,44c81.4-10.6,199.9-41.9,323.5-97.3V34C1461.5,137.5,1225.1,136.2,769.5,49z"
+            />
+          </svg>
 
           <div class="main-title">
             便利機能
@@ -909,13 +921,14 @@
       top: 39vh;
       right: 19vh;
     }
-    .s1bg{
+    .s1bg {
       position: absolute;
       left: 0;
       z-index: 12;
       bottom: 0;
-      width:100%;}
-/*
+      width: 100%;
+    }
+    /*
     .building-1 {
       z-index: 0;
       width: 45vw;
@@ -949,7 +962,7 @@
     }
 
     .cloud {
-      z-index:15;
+      z-index: 15;
       width: 80vw;
       position: absolute;
       right: 5%;
@@ -977,7 +990,7 @@
         top: 0;
         right: 0;
         position: absolute;
-       img {
+        img {
           width: 100%;
         }
       }
@@ -990,14 +1003,16 @@
 
         img {
           width: 100%;
-          animation: train 5s linear infinite;transform: translateX(100%);
+          animation: train 5s linear infinite;
+          transform: translateX(100%);
         }
       }
 
       @keyframes train {
-        to {transform: translateX(0);
+        to {
+          transform: translateX(0);
         }
-      } 
+      }
     }
   }
   .main-2 {
@@ -1011,17 +1026,17 @@
       position: relative;
       z-index: 100;
       width: 100%;
-  /*  background: url("./s1/title1_bg.png") no-repeat 0 77.04vw;
+      /*  background: url("./s1/title1_bg.png") no-repeat 0 77.04vw;
       background-size:100% auto;
       height: 200vw;
-      top: 0; */ 
+      top: 0; */
 
       .main-title {
         font-size: 46px;
         font-weight: bold;
         color: #ffff0b;
-          position: relative;
-          z-index: 3;
+        position: relative;
+        z-index: 3;
 
         &.reverse-color {
           color: #0042ad;
@@ -1033,8 +1048,8 @@
         margin-bottom: 20px;
         font-weight: bold;
         color: #fff;
-          position: relative;
-          z-index: 3;
+        position: relative;
+        z-index: 3;
 
         &.reverse-color {
           color: #0042ad;
@@ -1045,8 +1060,8 @@
         font-size: 18px;
         line-height: 1.5;
         color: #fff;
-          position: relative;
-          z-index: 3;
+        position: relative;
+        z-index: 3;
 
         &.reverse-color {
           color: #606060;
@@ -1110,10 +1125,16 @@
         top: 138.5vw;
         left: 50%;
         width: 100%;
-        svg{width:calc(100% + 2px);
+        svg {
+          width: calc(100% + 2px);
           z-index: 2;
-        position: absolute;top:-8.2vw;left: -1px;}
-        .st0{fill:#0042AD;}
+          position: absolute;
+          top: -8.2vw;
+          left: -1px;
+        }
+        .st0 {
+          fill: #0042ad;
+        }
       }
 
       .title3 {
@@ -1433,26 +1454,27 @@
       }
 
       .build {
-      height: size-m(200);
-      top: 88%;
-      .building-3 {
-       img {
-          width: 200%;
+        height: size-m(200);
+        top: 88%;
+        .building-3 {
+          img {
+            width: 200%;
+          }
         }
-      }
 
-      .train {
-        width: 200%;
-        img {
-          width: 100%;
-          animation: train 5s linear infinite;transform: translateX(100%);
+        .train {
+          width: 200%;
+          img {
+            width: 100%;
+            animation: train 5s linear infinite;
+            transform: translateX(100%);
+          }
         }
-      }
       }
     }
 
     .main-2 {
-    margin-top: -40vw;
+      margin-top: -40vw;
       .title {
         .main-title {
           font-size: 28px;
@@ -1684,6 +1706,226 @@ export default {
     };
   },
   methods: {},
-  mounted() {}
+  mounted() {
+    function generatePagination(items) {
+      let pH = "<div class='item-cal-pagination'>";
+      for (let i = 0; i < items; i++) {
+        pH += `<div data-index="${i}" class="item-cal-pagination-dot ${
+          i == 0 ? "active" : ""
+        }"></div>`;
+      }
+      pH += "</div>";
+
+      return pH;
+    }
+
+    $(".item").each(function(index, value) {
+      let itemImg = $(value).find(".item-img");
+      let maskImgSrc = $(value)
+        .find(".item-img-mask")
+        .attr("src");
+
+      $(itemImg).each(function(i, val) {
+        let imgSrc = $(val).attr("src");
+        let box;
+
+        let imgSize = "width:100%;";
+        if (isMobile && index == 0) {
+          imgSize = "height:240vw;";
+        } else if (isMobile) {
+          imgSize = "width:150%;";
+        }
+
+        if (index == 0 && isMobile) {
+          box = `
+              <div class="${i == 0 ? "active" : ""}"
+              data-index="${i}"
+              style="
+              mask: url(${maskImgSrc}) no-repeat center center;
+              -webkit-mask: url(${maskImgSrc}) no-repeat center center;
+              -webkit-mask-size: 100%;
+              -webkit-mask-position: top center;
+              overflow-y: hidden;
+              overflow-x: scroll;
+              ">
+                <img style="${imgSize}" src="${imgSrc}">
+              </div>
+            `;
+        } else {
+          box = `
+              <div class="item-cal ${i == 0 ? "active" : ""}"
+              data-index="${i}"
+              style="
+              background-image:url(${imgSrc});
+              background-size: cover;
+              mask: url(${maskImgSrc}) no-repeat center center;
+              -webkit-mask: url(${maskImgSrc}) no-repeat center center;
+              mask-size: cover;
+              -webkit-mask-size: cover;
+              ">
+                <img style="visibility:hidden;${imgSize}" src="${imgSrc}">
+              </div>
+            `;
+        }
+
+        $(val)
+          .parent()
+          .append(box);
+
+        $(val).remove();
+      });
+
+      $(value)
+        .find(".item-img-mask")
+        .remove();
+
+      $(value).append(generatePagination(itemImg.length));
+    });
+
+    $(".item-cal-pagination-dot").click(function() {
+      let parent = $(this).parent();
+      let item = $(this).closest(".item");
+      let targetIndex = $(this).attr("data-index");
+
+      item.find(".item-cal").removeClass("active");
+      parent.find(".item-cal-pagination-dot").removeClass("active");
+
+      item.find(".item-cal[data-index=" + targetIndex + "]").addClass("active");
+
+      $(this).addClass("active");
+    });
+
+    $(".item6 .photos .photo").click(function() {
+      $(".item6 .photos .photo").removeClass("active");
+      $(this)
+        .removeClass("right left")
+        .addClass("active");
+
+      if (isMobile) {
+        $(this)
+          .next()
+          .addClass("right");
+        $(this)
+          .prev()
+          .addClass("left");
+      }
+    });
+
+    $(".float-btn.open").click(function() {
+      $(".float-menu").show();
+    });
+
+    $(".float-menu .close").click(function() {
+      $(".float-menu").hide();
+    });
+
+    if (isMobile) {
+      $(".item0 .item-cal").scrollLeft(320);
+
+      $(".item0 .item-cal").on("scroll", function() {
+        $(".item0 .movehere").hide();
+
+        setTimeout(function() {
+          $(".item0 .movehere").fadeIn();
+        }, 2000);
+      });
+
+      //photos
+      let currentPhoto = 1;
+
+      function carousellPhotos(type) {
+        if (type == "prev") {
+          if (currentPhoto == 1) {
+            return;
+          } else {
+            currentPhoto = currentPhoto - 1;
+          }
+        } else {
+          if (currentPhoto == 4) {
+            return;
+          } else {
+            currentPhoto = currentPhoto + 1;
+          }
+        }
+
+        $(".photos .square.active")
+          .removeClass("next active")
+          .addClass("prev");
+        $(".photos .square" + currentPhoto)
+          .removeClass(type)
+          .addClass("active");
+        $(".photos .square" + currentPhoto)
+          .next()
+          .removeClass("prev")
+          .addClass("next");
+      }
+
+      $(".photos-arrow .photos-arrow-prev").click(function() {
+        carousellPhotos("prev");
+      });
+      $(".photos-arrow .photos-arrow-next").click(function() {
+        carousellPhotos("next");
+      });
+
+      let hammerItems1 = $(".item6 .photos .photo");
+
+      $.each(hammerItems1, function(i, val) {
+        let hammertime = new Hammer($(val)[0]);
+        hammertime.on("swipeleft", function(ev) {
+          let target = $(ev.target);
+          target.next().click();
+        });
+        hammertime.on("swiperight", function(ev) {
+          let target = $(ev.target);
+          target.prev().click();
+        });
+      });
+
+      let hammerItems2 = $(".item-cal");
+
+      $.each(hammerItems2, function(i, val) {
+        let hammertime = new Hammer($(val)[0]);
+        hammertime.on("swipeleft", function(ev) {
+          let target = $(ev.target);
+          let targetIndex = parseInt(target.attr("data-index")) + 1;
+
+          target
+            .parent()
+            .find(".item-cal-pagination-dot[data-index='" + targetIndex + "']")
+            .click();
+        });
+
+        hammertime.on("swiperight", function(ev) {
+          let target = $(ev.target);
+          let targetIndex = parseInt(target.attr("data-index")) - 1;
+
+          target
+            .parent()
+            .find(".item-cal-pagination-dot[data-index='" + targetIndex + "']")
+            .click();
+        });
+      });
+
+      let hammerItems3 = $(".title1 .photos .square");
+
+      $.each(hammerItems3, function(i, val) {
+        let hammertime = new Hammer($(val)[0]);
+        hammertime.on("swipeleft", function(ev) {
+          let target = $(ev.target);
+          target
+            .parent()
+            .find(".photos-arrow-next")
+            .click();
+        });
+        hammertime.on("swiperight", function(ev) {
+          let target = $(ev.target);
+          target
+            .parent()
+            .find(".photos-arrow-prev")
+            .click();
+        });
+      });
+    }
+  }
 };
 </script>
