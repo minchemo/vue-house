@@ -397,6 +397,10 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
+    height: calc(100vh - 63px);
+    background-image: url("~@/projects/sv/s1/bg-mo.png");
+    background-attachment: scroll;
+
     .main-logo {
       margin-top: 15vh;
       width: 50vw;

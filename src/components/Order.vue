@@ -88,12 +88,40 @@
                 ></el-option>
               </el-select>
             </div>
+            <div class="row">
+              <label>需求房型</label>
+              <el-select v-model="form.room" placeholder>
+                <el-option
+                  v-for="room in roomList"
+                  :key="room.value"
+                  :label="room.label"
+                  :value="room.value"
+                  no-data-text="請先選擇房型"
+                ></el-option>
+              </el-select>
+            </div>
           </div>
           <div class="group">
             <div class="row">
               <el-input
                 type="textarea"
-                :rows="2"
+                :rows="1"
+                placeholder="以您需求的房型評估，認為合理的總價範圍是多少錢?"
+                v-model="form.msg2"
+              ></el-input>
+            </div>
+            <div class="row">
+              <el-input
+                type="textarea"
+                :rows="1"
+                placeholder="符合您購買意願的單坪售價?"
+                v-model="form.msg3"
+              ></el-input>
+            </div>
+            <div class="row">
+              <el-input
+                type="textarea"
+                :rows="7"
                 placeholder="請輸入您的留言 (選填)"
                 v-model="form.msg"
               ></el-input>
@@ -124,7 +152,7 @@
           ></vue-recaptcha>
         </div>
         <el-button
-          class="form-submit"
+          class="form-submit bt_registration"
           type="primary"
           :disabled="!checked || !isVerify"
           @click="submit"
@@ -173,7 +201,10 @@ export default {
         email: "",
         city: "",
         area: "",
+        room: "",
         msg: "",
+        msg2: "",
+        msg3: "",
         time_start: "",
         time_end: ""
       },
@@ -188,6 +219,12 @@ export default {
   computed: {
     areaList() {
       return renderAreaList(this.form.city);
+    },
+    roomList() {
+      return [
+        { label: "兩房", value: 2 },
+        { label: "三房", value: 3 }
+      ];
     }
   },
 
@@ -326,6 +363,7 @@ export default {
 
     img {
       width: 100%;
+      max-width: 500px;
     }
   }
 
@@ -369,12 +407,10 @@ export default {
         justify-content: flex-start;
       }
     }
-
     &:nth-child(2) {
       .row {
         justify-content: flex-end;
         align-items: flex-start;
-        height: 100%;
       }
     }
   }
@@ -403,7 +439,7 @@ export default {
   }
 
   .control {
-    margin-top: 0px;
+    margin-top: 40px;
     margin-bottom: 20px;
   }
 }
