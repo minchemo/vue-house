@@ -222,8 +222,8 @@ export default {
     },
     roomList() {
       return [
-        { label: "兩房", value: 2 },
-        { label: "三房", value: 3 }
+        { label: "兩房", value: "兩房" },
+        { label: "三房", value: "三房" }
       ];
     }
   },
@@ -271,6 +271,9 @@ export default {
       formData.append("phone", this.form.phone);
       formData.append("email", this.form.email);
       formData.append("msg", this.form.msg);
+      formData.append("msg2", this.form.msg2);
+      formData.append("msg3", this.form.msg3);
+      formData.append("room", this.form.room);
       // formData.append('time_start', this.form.time_start)
       // formData.append('time_end', this.form.time_end)
       formData.append("city", this.form.city);

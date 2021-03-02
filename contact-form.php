@@ -18,8 +18,9 @@ $sql_name = "SELECT casename FROM susers WHERE email = '" . $case_code . "'";
 $dataList = $pdo->query($sql_name)->fetchAll();
 $case_name = $dataList[0]['casename'];
 
-    $activity         = isset($_POST['activity']) ? $_POST['activity'] : ''; // 活動名稱
-    $count         = isset($_POST['count']) ? $_POST['count'] : ''; // 報名人數
+    $room         = isset($_POST['room']) ? $_POST['room'] : ''; // 房型
+    $msg2          = isset($_POST['msg2']) ? $_POST['msg2'] : ''; // 評估合理價位
+    $msg3          = isset($_POST['msg3']) ? $_POST['msg3'] : ''; // 購買意願的單坪售價
     $name         = isset($_POST['name']) ? $_POST['name'] : '';
     $phone        = isset($_POST['phone']) ? $_POST['phone'] : '';
     $user_email   = isset($_POST['email']) ? $_POST['email'] : '';
@@ -251,7 +252,7 @@ $case_name = $dataList[0]['casename'];
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://".$case_code.".h35.tw/<BR>姓名：".$name."<BR>電話：".$phone."<BR>城市：".$city.$area."<BR>留言：".$msg."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://".$case_code.".h35.tw/<BR>姓名：".$name."<BR>電話：".$phone."<BR>城市：".$city.$area."<BR>需求房型：".$room."<BR>留言：".$msg."<BR>備註："."<BR>評估合理總價範圍：".$msg2."<BR>購買意願的單坪售價：".$msg3."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
