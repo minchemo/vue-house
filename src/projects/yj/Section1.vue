@@ -569,6 +569,11 @@
           <!--  <img class="building-5" src="./s1/building-5.png" alt="" /> -->
         </div>
         <div class="title2">
+          <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 462" style="enable-background:new 0 0 1920 462;" xml:space="preserve">
+   <path class="st0" d="M769.5,49C431.5-15.6,253-23-3,71.2v217.2c165.1,19.6,309.1,57.1,378.6,75.3c14.2,3.7,28.3,7.4,42.2,11.1c529.6,139,923.1,77.5,1179.8,44c81.4-10.6,199.9-41.9,323.5-97.3V34C1461.5,137.5,1225.1,136.2,769.5,49z"/>
+</svg>
+
           <div class="main-title">
             便利機能
           </div>
@@ -1021,11 +1026,18 @@
       font-family: "Noto Sans TC", serif;
       position: relative;
       z-index: 100;
+      width: 100%;
+  /*  background: url("./s1/title1_bg.png") no-repeat 0 77.04vw;
+      background-size:100% auto;
+      height: 200vw;
+      top: 0; */ 
 
       .main-title {
         font-size: 46px;
         font-weight: bold;
         color: #ffff0b;
+          position: relative;
+          z-index: 3;
 
         &.reverse-color {
           color: #0042ad;
@@ -1037,6 +1049,8 @@
         margin-bottom: 20px;
         font-weight: bold;
         color: #fff;
+          position: relative;
+          z-index: 3;
 
         &.reverse-color {
           color: #0042ad;
@@ -1047,6 +1061,8 @@
         font-size: 18px;
         line-height: 1.5;
         color: #fff;
+          position: relative;
+          z-index: 3;
 
         &.reverse-color {
           color: #606060;
@@ -1109,6 +1125,11 @@
         transform: translate(-50%, 0%);
         top: 138.5vw;
         left: 50%;
+        width: 100%;
+        svg{width:calc(100% + 2px);
+          z-index: 2;
+        position: absolute;top:-8.2vw;left: -1px;}
+        .st0{fill:#0042AD;}
       }
 
       .title3 {
