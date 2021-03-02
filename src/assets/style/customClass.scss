@@ -171,31 +171,36 @@ svg {
 
 .item-cal {
     display: none;
-    transition: all 0.5s;
-    background-position: 10vw 0;
-    animation: OutCal 0.5s;
+    transition: all 1s;
+    background-position: 0 0;
+    opacity: 1;
+    animation: OutCal 2s;
 
     &.active {
         display: block;
-        background-position: 0vw 0;
-        animation: InCal 0.5s;
+        /*ackground-position: 0vw 0;*/
+        animation: InCal 2s;
     }
 
     @keyframes InCal {
         from {
-            background-position: 10vw 0;
+            opacity: 0.7;
+            /*background-position: 10vw 0;*/
         }
         to {
-            background-position: 0vw 0;
+            opacity: 1;
+            /*background-position: 0vw 0;*/
         }
     }
 
     @keyframes OutCal {
         from {
-            background-position: 0vw 0;
+            opacity: 1;
+            /* background-position: 0vw 0;*/
         }
         to {
-            background-position: -10vw 0;
+            opacity: 0.7;
+            /* background-position: -10vw 0;*/
         }
     }
 }

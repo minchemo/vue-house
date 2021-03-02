@@ -48,6 +48,8 @@ import Loading from "@/components/Loading.vue";
 import HouseInfo from "@/components/HouseInfo.vue";
 import GoogleMap from "@/components/GoogleMap.vue";
 
+import Hammer from "hammerjs";
+
 import Section1 from "@/projects/yj/Section1.vue";
 
 export default {
@@ -148,7 +150,7 @@ export default {
 
           if (index == 0 && isMobile) {
             box = `
-              <div class="item-cal ${i == 0 ? "active" : ""}"
+              <div class="${i == 0 ? "active" : ""}"
               data-index="${i}"
               style="
               mask: url(${maskImgSrc}) no-repeat center center;
@@ -277,6 +279,69 @@ export default {
         });
         $(".photos-arrow .photos-arrow-next").click(function() {
           carousellPhotos("next");
+        });
+
+        let hammerItems1 = $(".item6 .photos .photo");
+
+        $.each(hammerItems1, function(i, val) {
+          let hammertime = new Hammer($(val)[0]);
+          hammertime.on("swipeleft", function(ev) {
+            let target = $(ev.target);
+            target.next().click();
+          });
+          hammertime.on("swiperight", function(ev) {
+            let target = $(ev.target);
+            target.prev().click();
+          });
+        });
+
+        let hammerItems2 = $(".item-cal");
+
+        $.each(hammerItems2, function(i, val) {
+          let hammertime = new Hammer($(val)[0]);
+          hammertime.on("swipeleft", function(ev) {
+            let target = $(ev.target);
+            let targetIndex = parseInt(target.attr("data-index")) + 1;
+
+            target
+              .parent()
+              .find(
+                ".item-cal-pagination-dot[data-index='" + targetIndex + "']"
+              )
+              .click();
+          });
+
+          hammertime.on("swiperight", function(ev) {
+            let target = $(ev.target);
+            let targetIndex = parseInt(target.attr("data-index")) - 1;
+
+            target
+              .parent()
+              .find(
+                ".item-cal-pagination-dot[data-index='" + targetIndex + "']"
+              )
+              .click();
+          });
+        });
+
+        let hammerItems3 = $(".title1 .photos .square");
+
+        $.each(hammerItems3, function(i, val) {
+          let hammertime = new Hammer($(val)[0]);
+          hammertime.on("swipeleft", function(ev) {
+            let target = $(ev.target);
+            target
+              .parent()
+              .find(".photos-arrow-next")
+              .click();
+          });
+          hammertime.on("swiperight", function(ev) {
+            let target = $(ev.target);
+            target
+              .parent()
+              .find(".photos-arrow-prev")
+              .click();
+          });
         });
       }
     });
