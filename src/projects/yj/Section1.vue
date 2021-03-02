@@ -1032,7 +1032,7 @@
       top: 0; */
 
       .main-title {
-        font-size: 46px;
+        font-size: size(46);
         font-weight: bold;
         color: #ffff0b;
         position: relative;
@@ -1043,9 +1043,9 @@
         }
       }
       .subtitle {
-        font-size: 24px;
-        margin-top: 16px;
-        margin-bottom: 20px;
+        font-size: size(24);
+        margin-top:0.6667em;
+        margin-bottom: 0.833em;
         font-weight: bold;
         color: #fff;
         position: relative;
@@ -1057,7 +1057,7 @@
       }
 
       .content {
-        font-size: 18px;
+        font-size: size(18);
         line-height: 1.5;
         color: #fff;
         position: relative;
@@ -1264,7 +1264,7 @@
     }
 
     .item-contact {
-      bottom: 0vw;
+      top: 407vw;
       z-index: 50;
     }
 
@@ -1661,6 +1661,11 @@
           }
         }
       }
+    .item-contact {
+      top:1160vw;
+      z-index: 50;
+    }
+
     }
   }
 }
