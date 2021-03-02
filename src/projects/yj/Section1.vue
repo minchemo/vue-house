@@ -566,7 +566,7 @@
               <div class="photos-arrow-prev"></div>
             </div>
           </div>
-        <!--  <img class="building-5" src="./s1/building-5.png" alt="" /> -->
+          <!--  <img class="building-5" src="./s1/building-5.png" alt="" /> -->
         </div>
         <div class="title2">
           <div class="main-title">
@@ -774,7 +774,7 @@
 .section1 {
   .svg-1 {
     width: size(600);
-    top:calc(50% + 100vw * (200 - 540) / 1920);
+    top: calc(50% + 100vw * (200 - 540) / 1920);
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
@@ -868,7 +868,8 @@
   }
   .main {
     position: relative;
-    width: 100vw;height: 58vw;
+    width: 100vw;
+    height: 58vw;
     background: rgb(196, 255, 237);
     background: linear-gradient(
       30deg,
@@ -943,15 +944,16 @@
     }
 
     @keyframes cloud {
-      to{
+      to {
         transform: translateX(-10%);
       }
     }
 
     .build {
-      width: 100%;height: 70%;
+      width: 100%;
+      height: 70%;
       position: absolute;
-      top:70.4%;
+      top: 70.4%;
       left: 0;
       overflow: hidden;
       z-index: 100;
@@ -1185,6 +1187,7 @@
     }
 
     .item6 {
+      display: none;
       top: 410vw;
       z-index: 50;
 
