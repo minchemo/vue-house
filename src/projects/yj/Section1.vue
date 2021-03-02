@@ -477,7 +477,9 @@
         </g>
       </svg>
 
-      <img class="building-1" src="./s1/building-1.png" alt="" />
+      <img class="s1bg" src="./s1/s1bg.png" alt="s1bg" v-if="!isMobile"/>
+      <img class="s1bg" src="./s1/s1bg_m.png" alt="s1bg_m" v-if="isMobile"/>
+     <!-- <img class="building-1" src="./s1/building-1.png" alt="" />
       <img
         class="building-2"
         data-aos="fade-up"
@@ -500,6 +502,7 @@
         src="./s1/tree.png"
         alt=""
       />
+      -->
       <img
         class="cloud"
         data-aos="fade-left"
@@ -520,10 +523,10 @@
 
       <div class="build">
         <div class="building-3">
-          <img src="./s1/building-3.png" alt="" />
+          <img src="./s1/building-x.png" alt="" />
         </div>
         <div class="train">
-          <img src="./s1/train.png" alt="" />
+          <img src="./s1/train_s.png" alt="" />
         </div>
       </div>
     </div>
@@ -906,7 +909,13 @@
       top: 39vh;
       right: 19vh;
     }
-
+    .s1bg{
+      position: absolute;
+      left: 0;
+      z-index: 12;
+      bottom: 0;
+      width:100%;}
+/*
     .building-1 {
       z-index: 0;
       width: 45vw;
@@ -922,7 +931,7 @@
       left: 0;
       bottom: 0;
     }
-
+ */
     .building-4 {
       z-index: 2;
       width: 8vw;
@@ -940,7 +949,7 @@
     }
 
     .cloud {
-      z-index: 1;
+      z-index:15;
       width: 80vw;
       position: absolute;
       right: 5%;
@@ -956,64 +965,39 @@
 
     .build {
       width: 100%;
-      height: 70%;
+      height: size(200);
       position: absolute;
       top: 70.4%;
       left: 0;
       overflow: hidden;
-      z-index: 100;
+      z-index: 11;
       pointer-events: none;
 
       .building-3 {
-        bottom: 0;
+        top: 0;
         right: 0;
         position: absolute;
-        background-image: url(./s1/building-3.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        mask: url(./s1/build-mask.png) no-repeat center center;
-        mask-size: cover;
-        mask-position: 0 20vw;
-        background-position: 0 20vw;
-        img {
-          visibility: hidden;
+       img {
           width: 100%;
         }
       }
 
       .train {
         position: absolute;
-        bottom: 0;
+        top: 0;
         right: 0;
-        background-image: url(./s1/train.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        mask: url(./s1/build-mask.png) no-repeat center center;
-        mask-size: cover;
-        mask-position: 0 20vw;
-        background-position: -60vw 20vw;
-        animation: train 7.5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
+        width: 100%;
 
         img {
-          visibility: hidden;
           width: 100%;
+          animation: train 5s linear infinite;transform: translateX(100%);
         }
       }
 
       @keyframes train {
-        0% {
-          background-position: 100vw 20vw;
+        to {transform: translateX(0);
         }
-        65%,
-        70% {
-          background-position: 65vw 20vw;
-        }
-        100% {
-          background-position: -60vw 20vw;
-        }
-      }
+      } 
     }
   }
   .main-2 {
@@ -1419,7 +1403,7 @@
       }
 
       .cloud-2 {
-        z-index: 1;
+        z-index: 15;
         width: 22vw;
         position: absolute;
         right: 10%;
@@ -1449,19 +1433,26 @@
       }
 
       .build {
-        .building-3 {
-          mask-position: 0 49vw;
-          background-position: 0 48vw;
+      height: size-m(200);
+      top: 88%;
+      .building-3 {
+       img {
+          width: 200%;
         }
+      }
 
-        .train {
-          mask-position: 0 49vw;
-          background-position: -60vw 51vw;
+      .train {
+        width: 200%;
+        img {
+          width: 100%;
+          animation: train 5s linear infinite;transform: translateX(100%);
         }
+      }
       }
     }
 
     .main-2 {
+    margin-top: -40vw;
       .title {
         .main-title {
           font-size: 28px;
