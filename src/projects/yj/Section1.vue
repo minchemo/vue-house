@@ -534,24 +534,34 @@
     <div class="main-2">
       <div class="title">
         <div class="title1">
-          <div class="main-title">
+          <div class="main-title"
+        data-aos="fade"
+        data-aos-delay="200">
             重劃未來
           </div>
-          <div class="subtitle">
+          <div class="subtitle"
+        data-aos="fade"
+        data-aos-delay="400">
             大重劃、大街廓，成家夢想無限大
           </div>
-          <div v-if="!isMobile" class="content">
+          <div v-if="!isMobile" class="content"
+        data-aos="fade"
+        data-aos-delay="600">
             北台灣第三大塭仔圳重劃區，大街廓整體開發，大棟距綠覆環境。<br />
             坐擁重劃區規劃，近享市區繁華機能，雙享共同生活圈。<br />
             成家選怡家，一次買最好，一生住更好。
           </div>
-          <div v-if="isMobile" class="content">
+          <div v-if="isMobile" class="content"
+        data-aos="fade"
+        data-aos-delay="600">
             北台灣第三大塭仔圳重劃區，大街廓整體開發，<br />
             大棟距綠覆環境。坐擁重劃區規劃，近享市區繁<br />
             華機能，雙享共同生活圈。成家選怡家，一次買最<br />
             好，一生住更好。
           </div>
-          <div class="photos">
+          <div class="photos"
+        data-aos="fade"
+        data-aos-delay="200">
             <div class="square square1 active">
               <p>明日街廓實景圖</p>
             </div>
@@ -589,26 +599,38 @@
             />
           </svg>
 
-          <div class="main-title">
+          <div class="main-title"
+        data-aos="fade"
+        data-aos-delay="200">
             便利機能
           </div>
-          <div class="subtitle">
+          <div class="subtitle"
+        data-aos="fade"
+        data-aos-delay="400">
             麵包與玫瑰花，精采生活全都要
           </div>
-          <div class="content">
+          <div class="content"
+        data-aos="fade"
+        data-aos-delay="600">
             新泰路金融商圈，小資理財最上手；<br />
             中平路家樂福商圈，最愛裝滿購物車；<br />
             幸福路佳瑪商圈，饗樂享樂一次到位。
           </div>
         </div>
         <div class="title3 text-align-left">
-          <div class="main-title reverse-color">
+          <div class="main-title reverse-color"
+        data-aos="fade"
+        data-aos-delay="200">
             暢行雙北
           </div>
-          <div class="subtitle reverse-color">
+          <div class="subtitle reverse-color"
+        data-aos="fade"
+        data-aos-delay="400">
             速連城際遊，串聯雙北精華
           </div>
-          <div class="content reverse-color">
+          <div class="content reverse-color"
+        data-aos="fade"
+        data-aos-delay="600">
             台一線快速道路，快意抵達北車核心區域；<br />
             台65線快速道路，轉接國道1號、國道2號，<br
               v-if="isMobile"
@@ -616,29 +638,41 @@
           </div>
         </div>
         <div class="title4 text-align-right">
-          <div class="main-title reverse-color">
+          <div class="main-title reverse-color"
+        data-aos="fade"
+        data-aos-delay="200">
             迅捷移動
           </div>
-          <div class="subtitle reverse-color">
+          <div class="subtitle reverse-color"
+        data-aos="fade"
+        data-aos-delay="400">
             步行抵捷運，權掌軌道網絡
           </div>
-          <div class="content reverse-color">
+          <div class="content reverse-color"
+        data-aos="fade"
+        data-aos-delay="600">
             輕鬆散步就到機捷A5泰山站，<br
               v-if="isMobile"
             />4站抵台北車站，7站抵達桃園國際機場；<br />
-            近擁未來」新五泰轉運站」，<br
+            近擁未來「新五泰轉運站」，<br
               v-if="isMobile"
             />預約國際都會運轉核心。
           </div>
         </div>
         <div class="title5">
-          <div class="main-title">
+          <div class="main-title"
+        data-aos="fade"
+        data-aos-delay="200">
             萬坪公園
           </div>
-          <div class="subtitle">
+          <div class="subtitle"
+        data-aos="fade"
+        data-aos-delay="400">
             收藏都市綠心，樂享好森活
           </div>
-          <div class="content">
+          <div class="content"
+        data-aos="fade"
+        data-aos-delay="600">
             「新莊運動公園」22公頃廣闊生態綠地，漫遊都會<br
               v-if="isMobile"
             />森活綠境；<br
@@ -649,13 +683,19 @@
           </div>
         </div>
         <div class="title6">
-          <div class="main-title">
+          <div class="main-title"
+        data-aos="fade"
+        data-aos-delay="200">
             宏觀規劃
           </div>
-          <div class="subtitle">
+          <div class="subtitle"
+        data-aos="fade"
+        data-aos-delay="400">
             大棟距，大街廓，國際級壯闊視野
           </div>
-          <div class="content">
+          <div class="content"
+        data-aos="fade"
+        data-aos-delay="600">
             坐擁七千八百坪4區完整規劃，雄偉建築重繪新<br
               v-if="isMobile"
             />北天際線，<br v-if="!isMobile" />
@@ -775,7 +815,9 @@
           </div>
         </div>
       </div>
-      <div class="item item-contact">
+      <div class="item item-contact"
+        data-aos="fade"
+        data-aos-delay="200">
         <vue-lazy-component class="section" id="contact">
           <ContactSection />
         </vue-lazy-component>
@@ -1264,7 +1306,9 @@
     }
 
     .item-contact {
-      top: 407vw;
+      //上面區塊高
+      margin:407vw 0 0 0;
+      position: relative;
       z-index: 50;
     }
 
@@ -1278,7 +1322,8 @@
     }
 
     .bg {
-      position: relative;
+      position:absolute;
+      top: 0;left: 0;
       z-index: 10;
       overflow: hidden;
       pointer-events: none;
@@ -1662,7 +1707,8 @@
         }
       }
     .item-contact {
-      top:1160vw;
+      margin:1160vw 0 0 0;
+      position: relative;
       z-index: 50;
     }
 
