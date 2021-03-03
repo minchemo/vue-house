@@ -1750,6 +1750,7 @@ export default {
   },
   methods: {},
   mounted() {
+    // 輪播分頁按鈕產製
     function generatePagination(items) {
       let pH = "<div class='item-cal-pagination'>";
       for (let i = 0; i < items; i++) {
@@ -1762,6 +1763,7 @@ export default {
       return pH;
     }
 
+    //輪播背景處理
     $(".item").each(function(index, value) {
       let itemImg = $(value).find(".item-img");
       let maskImgSrc = $(value)
@@ -1792,7 +1794,7 @@ export default {
               overflow-y: hidden;
               overflow-x: scroll;
               ">
-                <img style="${imgSize}" src="${imgSrc}">
+                <img class="bigplan" style="${imgSize}" src="${imgSrc}">
               </div>
             `;
         } else {
@@ -1838,6 +1840,14 @@ export default {
         .append(generatePagination(itemImg.length));
     });
 
+    //鳥瞰圖捲動偵測
+    $(".bigplan")
+      .parent()
+      .on("scroll", function() {
+        $(".movehere").fadeOut();
+      });
+
+    //輪播圖分頁按鈕監聽
     $(".item-cal-pagination-dot").click(function() {
       let parent = $(this).parent();
       let item = $(this).closest(".item");
@@ -1982,6 +1992,33 @@ export default {
           .click();
       });
     });
+
+    let autoPlayInternal = [];
+    let autoPlayDelay = 3500;
+
+    function autoPlayCarousell() {
+      let paginations = $(".item-cal-pagination");
+
+      $.each(paginations, function(i, val) {
+        let $this = $(val);
+        const pages = $this.find(".item-cal-pagination-dot").length;
+
+        let interval = setInterval(() => {
+          let next = $this.find(".item-cal-pagination-dot.active").next();
+          let first = $this.find(".item-cal-pagination-dot").eq(0);
+
+          if (next.length != 0) {
+            next.click();
+          } else {
+            first.click();
+          }
+        }, autoPlayDelay);
+
+        autoPlayInternal.push(interval);
+      });
+    }
+
+    autoPlayCarousell();
   }
 };
 </script>
