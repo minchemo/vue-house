@@ -274,7 +274,7 @@ $case_name = $dataList[0]['casename'];
             $url .= "&email=".$user_email;
             $url .= "&city=".$city;
             $url .= "&area=".$area;
-            $url .= "&message="."需求房型：".$room.";評估總價：".$msg2.";意願單坪價：".$msg3.";留言：".$msg3;
+            $url .= "&message="."需求房型：".$room.";評估總價：".$msg2.";意願單坪價：".$msg3.";留言：".$msg;
             $url .= "&utm_source=".$utm_source;
             $url .= "&utm_medium=".$utm_medium;
             $url .= "&utm_content=".$utm_content;
