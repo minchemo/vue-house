@@ -479,30 +479,7 @@
 
       <img class="s1bg" src="./s1/s1bg.png" alt="s1bg" v-if="!isMobile" />
       <img class="s1bg" src="./s1/s1bg_m.png" alt="s1bg_m" v-if="isMobile" />
-      <!-- <img class="building-1" src="./s1/building-1.png" alt="" />
-      <img
-        class="building-2"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        src="./s1/building-2.png"
-        alt=""
-      />
-      <img
-        class="building-4"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        src="./s1/building-4.png"
-        alt=""
-      />
-      <img
-        class="tree"
-        data-aos="fade-up"
-        data-aos-delay="800"
-        data-aos-duration="1000"
-        src="./s1/tree.png"
-        alt=""
-      />
-      -->
+
       <img
         class="cloud"
         data-aos="fade-left"
@@ -611,6 +588,8 @@
             幸福路佳瑪商圈，饗樂享樂一次到位。
           </div>
         </div>
+
+
         <div class="title3 text-align-left">
           <div
             class="main-title reverse-color"
@@ -637,6 +616,8 @@
             />秒速暢行雙北。
           </div>
         </div>
+
+
         <div class="title4 text-align-right">
           <div
             class="main-title reverse-color"
@@ -666,20 +647,44 @@
           </div>
         </div>
         <div class="title5">
-          <div class="main-title" data-aos="fade" data-aos-delay="200">
-            萬坪公園
+          <div class="txt5-12">
+            <div class="main-title" data-aos="fade" data-aos-delay="200">
+              萬坪公園
+            </div>
+            <div class="subtitle" data-aos="fade" data-aos-delay="400">
+              收藏都市綠心，樂享好森活
+            </div>
+            <div class="content" data-aos="fade" data-aos-delay="600">
+              「新莊運動公園」22公頃廣闊生態綠地，漫遊都會<br
+                v-if="isMobile"
+              />森活綠境；<br
+                v-if="!isMobile"
+              />散步運動，暢快流汗，小小孩&毛小孩<br
+                v-if="isMobile"
+              />假日放電跑不停。
+            </div>
           </div>
-          <div class="subtitle" data-aos="fade" data-aos-delay="400">
-            收藏都市綠心，樂享好森活
+          <div class="txt5-34">
+            <div class="main-title" data-aos="fade" data-aos-delay="200">
+              快意休閒
+            </div>
+            <div class="subtitle" data-aos="fade" data-aos-delay="400">
+              都會動男女，輕鬆運動好自在
+            </div>
+            <div class="content" data-aos="fade" data-aos-delay="600">
+              「一起動起來，別再當沙發動物！鄰近「新五泰國民運動中心｣，多元運動設施，下班紓壓、假日揮汗，輕鬆釋放運動魂。
+            </div>
           </div>
-          <div class="content" data-aos="fade" data-aos-delay="600">
-            「新莊運動公園」22公頃廣闊生態綠地，漫遊都會<br
-              v-if="isMobile"
-            />森活綠境；<br
-              v-if="!isMobile"
-            />散步運動，暢快流汗，小小孩&毛小孩<br
-              v-if="isMobile"
-            />假日放電跑不停。
+          <div class="txt5-5">
+            <div class="main-title" data-aos="fade" data-aos-delay="200">
+              頂級照護
+            </div>
+            <div class="subtitle" data-aos="fade" data-aos-delay="400">
+              國際醫療園區，守護新五泰健康
+            </div>
+            <div class="content" data-aos="fade" data-aos-delay="600">
+              鄰近大新莊生活圈唯一大型醫學中心「輔大醫療園區｣，匯集國家級醫療資源，給新五泰居民最好的健康照護。
+            </div>
           </div>
         </div>
         <div class="title6">
@@ -1726,24 +1731,45 @@ export default {
       isMobile,
       slideList: [
         {
-          img: require("./s1/item1-1.jpg")
+          img: require("./s1/item1-1.jpg"),
+          title:"便利機能",
+          subtitle:"麵包與玫瑰花，精采生活全都要",
+          content:"新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。",
         },
         {
-          img: require("./s1/item1-2.jpg")
+          img: require("./s1/item1-2.jpg"),
+          title:"便利機能",
+          subtitle:"麵包與玫瑰花，精采生活全都要",
+          content:"新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。",
         },
         {
-          img: require("./s1/item1-3.jpg")
+          img: require("./s1/item1-3.jpg"),
+          title:"便利機能",
+          subtitle:"麵包與玫瑰花，精采生活全都要",
+          content:"新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。",
+        },
+        {
+          img: require("./s1/item1-4.jpg"),
+          title:"潮流饗宴",
+          subtitle:"逛不停、玩不膩，潮流熱點宏匯廣場",
+          content:"超過400個頂尖娛樂品牌，VR ZONE虛擬實境樂園、SONY Zepp表演展館、美麗新影城，時尚購物、感官饗宴跨領域新地標。",
+        },
+        {
+          img: require("./s1/item1-5.jpg"),
+          title:"明星學區",
+          subtitle:"文風名校當鄰居，預約資優學習",
+          content:"鄰近新泰國小、高詢問度「夢不落幼兒園｣散步就到，國小&國中預定地也位於步行生活圈；上學離家近，學習有效率。",
         }
       ],
       slideList2: [
         {
-          img: require("./s1/item2-1.jpg")
+          img: require("./s1/item2-1.jpg"),
         },
         {
-          img: require("./s1/item2-2.jpg")
+          img: require("./s1/item2-2.jpg"),
         },
         {
-          img: require("./s1/item2-3.jpg")
+          img: require("./s1/item2-3.jpg"),
         }
       ]
     };
