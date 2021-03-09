@@ -13,7 +13,8 @@
           <span class="work-c">業績作品</span>
           <span class="dash">－</span>
           <span class="en">Mode</span>學園繭之塔<br />
-          <span class="dash">－</span>FCG富士電視臺總部<br />
+          <span class="dash">－</span
+          ><span class="en">FCG</span>富士電視臺總部<br />
           <span class="dash">－</span>信義之冠
         </span>
       </h3>

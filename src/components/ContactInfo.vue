@@ -309,8 +309,10 @@ export default {
   }
 
   .btn {
+      width: 290px;
+
     &.half {
-      width: 280px;
+      width: 290px;
     }
     svg {
       position: absolute;
@@ -346,12 +348,13 @@ export default {
   }
 
   .address {
-    width: 280px;
+    width: 290px;
     padding: 0 1em;
     text-align: justify;
     border-radius: 10px 10px 0 0;
     + .google-btn,
     + .btn {
+      width: 290px;
       border-radius: 0 0 10px 10px;
     }
   }
