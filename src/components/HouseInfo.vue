@@ -63,9 +63,8 @@ export default {
   line-height: 36px;
   margin: 60px 0;
   font-weight: 500;
-  color: #fff;
+  color: $house_title_color;
   font-family: $family3;
-  background: #ce9a78;
   width: 80vw;
   padding: 10px 20px;
 }

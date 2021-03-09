@@ -10,7 +10,7 @@
             v-scroll-to="{ element: `#section1` }"
           />
           <div class="menu" @click="toggleSidebar">
-            <!-- font-awesome-icon icon="bars" / -->
+            <font-awesome-icon icon="bars" />
           </div>
           <div :class="`mask ${isOpen ? 'open' : ''}`" @click="toggleSidebar" />
           <ul :class="`navlist ${isOpen ? 'open' : ''}`">
@@ -18,7 +18,7 @@
               :key="item.name"
               v-scroll-to="{
                 element: `#${item.section}`,
-                offset: item.offset ? item.offset : offset
+                offset: isMobile ? item.mobileOffset : offset
               }"
               v-for="item in list"
               class="flex-ac"
@@ -117,12 +117,12 @@ export default {
 }
 
 .logo {
-  height: 50%;
+  height: 70%;
   // width:auto;
   // height: 100%;
   cursor: pointer;
   position: absolute;
-  left: size(38);
+  left: 8vw;
   right: auto;
   display: block;
   transform: translateY(0%);
@@ -140,15 +140,18 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin-right: 3vw;
+  margin-right: 10vw;
+
   li {
     height: 100%;
+    writing-mode: vertical-rl;
+    letter-spacing: 2px;
   }
 
   .link {
     color: $nav_link_color;
     height: 100%;
-    width: 6em;
+    width: 4em;
     text-align: center;
     display: block;
     cursor: pointer;
@@ -173,7 +176,7 @@ export default {
       content: "";
       width: 1px;
       height: 20%;
-      display: block;
+      display: none;
       background: $nav_link_hover_bg;
       position: absolute;
       left: 0;
@@ -193,9 +196,13 @@ export default {
     }
 
     img {
-      width: calc(100vw * 50 / 1920);
-      height: auto;
+      //width: calc(100vw * 50 / 1920);
+      height: 80%;
       margin-right: 10px;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
   .flex-ac:first-child .link::before {
@@ -255,19 +262,18 @@ export default {
   .navigation {
     height: $nav_phone_height;
     z-index: 110;
-    display: none;
   }
 
   .nav-container {
     //   display: block;
     height: auto;
-    display: none;
   }
 
   .logo {
-    width: $logo_phone_width;
+    //width: $logo_phone_width;
+    height: 40px;
     left: 15px;
-    top: 15px;
+    top: 10px;
   }
 
   .mo {
@@ -299,7 +305,7 @@ export default {
       font-size: 15px;
     }
   }
-  /*
+
   .navlist {
     position: absolute;
     z-index: 111;
@@ -313,15 +319,19 @@ export default {
     display: block;
     transform: translateX(40%);
 
+    margin-right: 0vw;
+
     li {
-      height: 50px;
+      height: auto;
+      min-height: 50px;
       margin-bottom: 5px;
+      writing-mode: unset;
     }
 
     .link {
-      height: 50px;
+      height: auto;
       width: 100%;
-      font-size: 17px;
+      font-size: 16px;
       margin-top: 10px;
       display: flex;
       align-items: center;
@@ -339,7 +349,7 @@ export default {
       img {
         width: calc(100vw * 200 / 1920);
         height: auto;
-        margin-right: 10px;
+        margin-right: 0px;
       }
     }
 
@@ -365,7 +375,7 @@ export default {
     right: 0;
     background: $nav_bg;
     position: fixed;
-    z-index:-1;
+    z-index: -1;
     height: calc(100vh - #{$nav_phone_height});
     opacity: 0;
     transition: all 0.3s ease-in;
@@ -373,10 +383,9 @@ export default {
       display: block;
       width: 100vw;
       opacity: 1;
-    z-index: 110;
+      z-index: 110;
     }
   }
-*/
 }
 @media only screen and (max-width: 374px) {
   .navlist {

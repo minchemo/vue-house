@@ -3,17 +3,16 @@
     <font-awesome-icon :icon="['fab', 'facebook-messenger']" />
     <div class="dialog-desc">Facebook Messenger</div>
     <div class="info">線上諮詢</div>
-    <a class="cta" :href="messenger" target="_blank">立即諮詢</a>
+    <a class="cta bt_lead" :href="messenger" target="_blank">立即諮詢</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MessengerDialog',
+  name: "MessengerDialog",
   components: {},
-  props: ['messenger'],
+  props: ["messenger"],
 
-  methods: {
-  },
-}
+  methods: {}
+};
 </script>

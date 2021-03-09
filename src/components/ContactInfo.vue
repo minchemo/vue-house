@@ -27,7 +27,7 @@
             >
           </span>
         </div>
-        <a class="btn flex-c" :href="info.fbLink" target="_blank">
+        <a class="btn flex-c bt_fanpage" :href="info.fbLink" target="_blank">
           <span class="flex-c">
             <font-awesome-icon :icon="['fab', 'facebook-f']" /><span
               >前往粉絲專頁</span
@@ -128,13 +128,13 @@ export default {
   justify-content: space-between;
   position: relative;
   z-index: 3;
-  width: 100%;
+  width: 80%;
   // height: 480px;
   /* background-size: 100vw auto;
   background-attachment: fixed;
   background-position: 0% 50%; */
   transform: translateY(0);
-  margin: 2vw auto 2vw;
+  margin: 2vw auto 0vw;
   padding: 70px 0 30px;
 
   .decor-5 {
@@ -176,7 +176,7 @@ export default {
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0px;
   font-family: $family4;
 
   &.half {
@@ -224,12 +224,12 @@ export default {
   height: 60px;
   background: #fff;
   box-shadow: $contact_btn_border;
-  border-radius: 10px 0 0 10px;
+  border-radius: 0;
   // border:1px solid $contact_btn_bg;
   font-family: $family4;
   + .google-btn,
   + .btn {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0;
     font-family: $family4;
   }
 }
@@ -335,10 +335,10 @@ export default {
     width: 280px;
     padding: 0 1em;
     text-align: justify;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0;
     + .google-btn,
     + .btn {
-      border-radius: 0 0 10px 10px;
+      border-radius: 0;
     }
   }
 }
