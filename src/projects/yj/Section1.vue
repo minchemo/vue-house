@@ -576,19 +576,62 @@
             />
           </svg>
 
-          <div class="main-title" data-aos="fade" data-aos-delay="200">
-            便利機能
+          <div class="txt-main">
+            <div class="main-title" data-aos="fade" data-aos-delay="200">
+              便利機能
+            </div>
+            <div class="subtitle" data-aos="fade" data-aos-delay="400">
+              麵包與玫瑰花，精采生活全都要
+            </div>
+            <div class="content" data-aos="fade" data-aos-delay="600">
+              新泰路金融商圈，小資理財最上手；<br />
+              中平路家樂福商圈，最愛裝滿購物車；<br />
+              幸福路佳瑪商圈，饗樂享樂一次到位。
+            </div>
           </div>
-          <div class="subtitle" data-aos="fade" data-aos-delay="400">
-            麵包與玫瑰花，精采生活全都要
+
+          <div class="txt-hide txt2-12">
+            <div class="main-title" data-aos="fade" data-aos-delay="200">
+              便利機能
+            </div>
+            <div class="subtitle" data-aos="fade" data-aos-delay="400">
+              麵包與玫瑰花，精采生活全都要
+            </div>
+            <div class="content" data-aos="fade" data-aos-delay="600">
+              新泰路金融商圈，小資理財最上手；<br />
+              中平路家樂福商圈，最愛裝滿購物車；<br />
+              幸福路佳瑪商圈，饗樂享樂一次到位。
+            </div>
           </div>
-          <div class="content" data-aos="fade" data-aos-delay="600">
-            新泰路金融商圈，小資理財最上手；<br />
-            中平路家樂福商圈，最愛裝滿購物車；<br />
-            幸福路佳瑪商圈，饗樂享樂一次到位。
+
+          <div class="txt-hide txt2-34">
+            <div class="main-title" data-aos="fade" data-aos-delay="200">
+              潮流饗宴
+            </div>
+            <div class="subtitle" data-aos="fade" data-aos-delay="400">
+              逛不停、玩不膩，潮流熱點宏匯廣場
+            </div>
+            <div class="content" data-aos="fade" data-aos-delay="600">
+              超過400個頂尖娛樂品牌，VR ZONE虛擬實境樂園、<br />
+              SONY Zepp表演展館、美麗新影城，<br />
+              時尚購物、感官饗宴跨領域新地標。
+            </div>
+          </div>
+
+          <div class="txt-hide txt2-56">
+            <div class="main-title" data-aos="fade" data-aos-delay="200">
+              明星學區
+            </div>
+            <div class="subtitle" data-aos="fade" data-aos-delay="400">
+              文風名校當鄰居，預約資優學習
+            </div>
+            <div class="content" data-aos="fade" data-aos-delay="600">
+              鄰近新泰國小、高詢問度「夢不落幼兒園｣散步就到，<br />
+              國小&國中預定地也位於步行生活圈；<br />
+              上學離家近，學習有效率。
+            </div>
           </div>
         </div>
-
 
         <div class="title3 text-align-left">
           <div
@@ -616,7 +659,6 @@
             />秒速暢行雙北。
           </div>
         </div>
-
 
         <div class="title4 text-align-right">
           <div
@@ -647,7 +689,7 @@
           </div>
         </div>
         <div class="title5">
-          <div class="txt5-12">
+          <div class="txt-main">
             <div class="main-title" data-aos="fade" data-aos-delay="200">
               萬坪公園
             </div>
@@ -664,7 +706,24 @@
               />假日放電跑不停。
             </div>
           </div>
-          <div class="txt5-34">
+          <div class="txt-hide txt5-12" data-i="1">
+            <div class="main-title" data-aos="fade" data-aos-delay="200">
+              萬坪公園
+            </div>
+            <div class="subtitle" data-aos="fade" data-aos-delay="400">
+              收藏都市綠心，樂享好森活
+            </div>
+            <div class="content" data-aos="fade" data-aos-delay="600">
+              「新莊運動公園」22公頃廣闊生態綠地，漫遊都會<br
+                v-if="isMobile"
+              />森活綠境；<br
+                v-if="!isMobile"
+              />散步運動，暢快流汗，小小孩&毛小孩<br
+                v-if="isMobile"
+              />假日放電跑不停。
+            </div>
+          </div>
+          <div class="txt-hide txt5-34" data-i="2">
             <div class="main-title" data-aos="fade" data-aos-delay="200">
               快意休閒
             </div>
@@ -675,7 +734,7 @@
               「一起動起來，別再當沙發動物！鄰近「新五泰國民運動中心｣，多元運動設施，下班紓壓、假日揮汗，輕鬆釋放運動魂。
             </div>
           </div>
-          <div class="txt5-5">
+          <div class="txt-hide txt5-5" data-i="3">
             <div class="main-title" data-aos="fade" data-aos-delay="200">
               頂級照護
             </div>
@@ -721,11 +780,14 @@
           alt=""
         />
       </div>
-      <div class="item item1">
+      <div class="item item1" data-title="title2">
         <img class="item-img" src="./s1/item1-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
         <img class="item-img" src="./s1/item1-3.jpg" alt="" />
         <img class="item-img" src="./s1/item1-4.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-5.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-6.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-7.jpg" alt="" />
         <img
           v-if="!isMobile"
           class="item-img-mask"
@@ -774,7 +836,7 @@
           alt=""
         />
       </div>
-      <div class="item item4">
+      <div class="item item4" data-title="title5">
         <img class="item-img" src="./s1/item4-1.jpg" alt="" />
         <img class="item-img" src="./s1/item4-2.jpg" alt="" />
         <img class="item-img" src="./s1/item4-3.jpg" alt="" />
@@ -1174,6 +1236,10 @@
         .st0 {
           fill: #0042ad;
         }
+
+        .txt-hide {
+          display: none;
+        }
       }
 
       .title3 {
@@ -1195,6 +1261,10 @@
         transform: translate(-50%, 0%);
         top: 289vw;
         left: 50%;
+
+        .txt-hide {
+          display: none;
+        }
       }
 
       .title6 {
@@ -1732,44 +1802,49 @@ export default {
       slideList: [
         {
           img: require("./s1/item1-1.jpg"),
-          title:"便利機能",
-          subtitle:"麵包與玫瑰花，精采生活全都要",
-          content:"新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。",
+          title: "便利機能",
+          subtitle: "麵包與玫瑰花，精采生活全都要",
+          content:
+            "新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。"
         },
         {
           img: require("./s1/item1-2.jpg"),
-          title:"便利機能",
-          subtitle:"麵包與玫瑰花，精采生活全都要",
-          content:"新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。",
+          title: "便利機能",
+          subtitle: "麵包與玫瑰花，精采生活全都要",
+          content:
+            "新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。"
         },
         {
           img: require("./s1/item1-3.jpg"),
-          title:"便利機能",
-          subtitle:"麵包與玫瑰花，精采生活全都要",
-          content:"新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。",
+          title: "便利機能",
+          subtitle: "麵包與玫瑰花，精采生活全都要",
+          content:
+            "新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。"
         },
         {
           img: require("./s1/item1-4.jpg"),
-          title:"潮流饗宴",
-          subtitle:"逛不停、玩不膩，潮流熱點宏匯廣場",
-          content:"超過400個頂尖娛樂品牌，VR ZONE虛擬實境樂園、SONY Zepp表演展館、美麗新影城，時尚購物、感官饗宴跨領域新地標。",
+          title: "潮流饗宴",
+          subtitle: "逛不停、玩不膩，潮流熱點宏匯廣場",
+          content:
+            "超過400個頂尖娛樂品牌，VR ZONE虛擬實境樂園、SONY Zepp表演展館、美麗新影城，時尚購物、感官饗宴跨領域新地標。"
         },
         {
           img: require("./s1/item1-5.jpg"),
-          title:"明星學區",
-          subtitle:"文風名校當鄰居，預約資優學習",
-          content:"鄰近新泰國小、高詢問度「夢不落幼兒園｣散步就到，國小&國中預定地也位於步行生活圈；上學離家近，學習有效率。",
+          title: "明星學區",
+          subtitle: "文風名校當鄰居，預約資優學習",
+          content:
+            "鄰近新泰國小、高詢問度「夢不落幼兒園｣散步就到，國小&國中預定地也位於步行生活圈；上學離家近，學習有效率。"
         }
       ],
       slideList2: [
         {
-          img: require("./s1/item2-1.jpg"),
+          img: require("./s1/item2-1.jpg")
         },
         {
-          img: require("./s1/item2-2.jpg"),
+          img: require("./s1/item2-2.jpg")
         },
         {
-          img: require("./s1/item2-3.jpg"),
+          img: require("./s1/item2-3.jpg")
         }
       ]
     };
@@ -1873,6 +1948,47 @@ export default {
         $(".movehere").fadeOut();
       });
 
+    function updateTxt(item, title) {
+      let currentIndex = $(item)
+        .find(".item-cal-pagination .item-cal-pagination-dot.active")
+        .attr("data-index");
+
+      let mainTxt = $("." + title).find(".txt-main");
+      let targetTxt;
+
+      if (title == "title5") {
+        if (currentIndex == 0 || currentIndex == 1) {
+          targetTxt = $("." + title)
+            .find(".txt5-12")
+            .html();
+        } else if (currentIndex == 2 || currentIndex == 3) {
+          targetTxt = $("." + title)
+            .find(".txt5-34")
+            .html();
+        } else if (currentIndex == 4) {
+          targetTxt = $("." + title)
+            .find(".txt5-5")
+            .html();
+        }
+      } else if (title == "title2") {
+        if (currentIndex == 0 || currentIndex == 1 || currentIndex == 2) {
+          targetTxt = $("." + title)
+            .find(".txt2-12")
+            .html();
+        } else if (currentIndex == 3) {
+          targetTxt = $("." + title)
+            .find(".txt2-34")
+            .html();
+        } else if (currentIndex >= 4) {
+          targetTxt = $("." + title)
+            .find(".txt2-56")
+            .html();
+        }
+      }
+
+      $(mainTxt).html(targetTxt);
+    }
+
     //輪播圖分頁按鈕監聽
     $(".item-cal-pagination-dot").click(function() {
       let parent = $(this).parent();
@@ -1885,6 +2001,14 @@ export default {
       item.find(".item-cal[data-index=" + targetIndex + "]").addClass("active");
 
       $(this).addClass("active");
+
+      let titleData = item.attr("data-title");
+
+      if (titleData == "title5") {
+        updateTxt(item, "title5");
+      } else if (titleData == "title2") {
+        updateTxt(item, "title2");
+      }
     });
 
     $(".item6 .photos .photo").click(function() {
@@ -1986,6 +2110,10 @@ export default {
           .parent()
           .find(".item-cal-pagination-dot[data-index='" + targetIndex + "']")
           .click();
+
+        $.each(autoPlayInternal, function(i, val) {
+          clearInterval(val);
+        });
       });
 
       hammertime.on("swiperight", function(ev) {
@@ -1996,6 +2124,10 @@ export default {
           .parent()
           .find(".item-cal-pagination-dot[data-index='" + targetIndex + "']")
           .click();
+
+        $.each(autoPlayInternal, function(i, val) {
+          clearInterval(val);
+        });
       });
     });
 
