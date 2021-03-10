@@ -5,7 +5,8 @@ export default [
     subTitle: "",
     section: "section2",
     svgSrc: "",
-    offset: 0
+    offset: 0,
+    mobileOffset: -60
   },
   {
     name: "全時交通",
@@ -13,7 +14,8 @@ export default [
     subTitle: "",
     section: "section3",
     svgSrc: "",
-    offset: 0
+    offset: 0,
+    mobileOffset: -50
   },
   {
     name: "願景未來",

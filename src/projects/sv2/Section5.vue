@@ -72,7 +72,7 @@
           </g>
         </svg>
       </div>
-      <swiper v-if="isMobile" :options="swiperOptions">
+      <swiper v-if="isMobile" :options="swiperOptions1" :instanceName="3">
         <swiper-slide
           v-for="item of swiperList"
           :key="item.id"
@@ -90,19 +90,37 @@
           class="swiper-button-next"
           slot="button-next"
         ></div>
-        <div class="swiper-pagination" slot="pagination"></div>
+        <div
+          class="swiper-pagination swiper-pagination1"
+          slot="pagination"
+        ></div>
       </swiper>
       <div v-if="!isMobile" class="waterfall">
         <div>
-          <img src="~@/projects/sv2/s5/1.jpg" alt="" data-aos="fade-down" data-aos-delay="100"  />
+          <img
+            src="~@/projects/sv2/s5/1.jpg"
+            alt=""
+            data-aos="fade-down"
+            data-aos-delay="100"
+          />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/3.jpg" alt="" data-aos="fade-down" data-aos-delay="300" />
+          <img
+            src="~@/projects/sv2/s5/3.jpg"
+            alt=""
+            data-aos="fade-down"
+            data-aos-delay="300"
+          />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/7.jpg" alt="" data-aos="fade-up" data-aos-delay="700" />
+          <img
+            src="~@/projects/sv2/s5/7.jpg"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="700"
+          />
         </div>
-        <div class="title" data-aos="fade-up" data-aos-delay="300" >
+        <div class="title" data-aos="fade-up" data-aos-delay="300">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.51 692.43">
             <g id="圖層_2" data-name="圖層 2">
               <g id="圖層_1-2" data-name="圖層 1">
@@ -212,22 +230,52 @@
           </svg>
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/5.jpg" alt="" data-aos="fade-up" data-aos-delay="300" />
+          <img
+            src="~@/projects/sv2/s5/5.jpg"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="300"
+          />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/6.jpg" alt="" data-aos="fade-up" data-aos-delay="600" />
+          <img
+            src="~@/projects/sv2/s5/6.jpg"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="600"
+          />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/8.jpg" alt="" data-aos="fade-up" data-aos-delay="600" />
+          <img
+            src="~@/projects/sv2/s5/8.jpg"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="600"
+          />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/2.jpg" alt="" data-aos="fade-down" data-aos-delay="600" />
+          <img
+            src="~@/projects/sv2/s5/2.jpg"
+            alt=""
+            data-aos="fade-down"
+            data-aos-delay="600"
+          />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/4.jpg" alt="" data-aos="fade-up" data-aos-delay="600" />
+          <img
+            src="~@/projects/sv2/s5/4.jpg"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="600"
+          />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/9.jpg" alt="" data-aos="fade-up" data-aos-delay="300" />
+          <img
+            src="~@/projects/sv2/s5/9.jpg"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="300"
+          />
         </div>
       </div>
     </div>
@@ -262,7 +310,7 @@
           </g>
         </svg>
       </div>
-      <swiper v-if="isMobile" :options="swiperOptions">
+      <swiper v-if="isMobile" :options="swiperOptions2" :instanceName="4">
         <swiper-slide
           v-for="item of swiperList2"
           :key="item.id"
@@ -280,7 +328,10 @@
           class="swiper-button-next"
           slot="button-next"
         ></div>
-        <div class="swiper-pagination" slot="pagination"></div>
+        <div
+          class="swiper-pagination swiper-pagination2"
+          slot="pagination"
+        ></div>
       </swiper>
     </div>
     <div v-if="isMobile" class="section-item">
@@ -313,7 +364,7 @@
           </g>
         </svg>
       </div>
-      <swiper v-if="isMobile" :options="swiperOptions">
+      <swiper v-if="isMobile" :options="swiperOptions3" :instanceName="5">
         <swiper-slide
           v-for="item of swiperList3"
           :key="item.id"
@@ -635,13 +686,46 @@ export default {
   data() {
     return {
       isMobile,
-      swiperOptions: {
+      swiperOptions1: {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination1",
+          clickable: true
+        },
+        autoplay: true,
+        speed: 100,
+        slidesPerView: isMobile ? 1 : 1,
+        spaceBetween: isMobile ? 0 : 0,
+        resistanceRatio: isMobile ? 1 : 0,
+        loop: isMobile ? false : false
+      },
+      swiperOptions2: {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination2",
+          clickable: true
+        },
+        autoplay: true,
+        speed: 100,
+        slidesPerView: isMobile ? 1 : 1,
+        spaceBetween: isMobile ? 0 : 0,
+        resistanceRatio: isMobile ? 1 : 0,
+        loop: isMobile ? false : false
+      },
+      swiperOptions3: {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination3",
+          clickable: true
         },
         autoplay: true,
         speed: 100,

@@ -139,6 +139,15 @@ export default {
           .on("load", imageLoaded)
           .attr("src", $(img).attr("src"));
       });
+
+      if (this.isMobile) {
+        $(".navlist li").click(function() {
+          $(".navlist .active").removeClass("active");
+          $(this)
+            .find("span")
+            .addClass("active");
+        });
+      }
     });
   },
   mounted() {

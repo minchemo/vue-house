@@ -1,6 +1,6 @@
 <template>
   <div class="section7">
-    <swiper :options="swiperOptions">
+    <swiper :options="swiperOptions" :instanceName="8">
       <swiper-slide
         v-for="item of swiperList"
         :key="item.id"
@@ -350,7 +350,8 @@ export default {
           prevEl: ".swiper-button-prev"
         },
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
+          clickable: true
         },
         autoplay: true,
         speed: 100,

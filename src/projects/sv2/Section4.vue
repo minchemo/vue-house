@@ -1,11 +1,11 @@
 <template>
   <div class="section4">
-    <swiper :options="swiperOptions">
+    <swiper :options="swiperOptions" :instanceName="2">
       <swiper-slide
         v-for="item of swiperList"
         :key="item.id"
-        :style="{ backgroundImage: `url(${item.imgUrl})` }">
-
+        :style="{ backgroundImage: `url(${item.imgUrl})` }"
+      >
         <p>{{ item.title }}</p>
       </swiper-slide>
       <div v-if="isMobile" class="swiper-button-prev" slot="button-prev"></div>
@@ -13,7 +13,8 @@
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
 
-    <div class="title" data-aos="fade-up" data-aos-delay="300">>
+    <div class="title" data-aos="fade-up" data-aos-delay="300">
+      >
       <svg
         v-if="!isMobile"
         xmlns="http://www.w3.org/2000/svg"
@@ -381,7 +382,7 @@
     height: 28vw;
     position: absolute;
     z-index: 1;
-    top:calc(50% - 14vw);
+    top: calc(50% - 14vw);
     left: 10vw;
 
     svg {
@@ -550,7 +551,8 @@ export default {
           prevEl: ".swiper-button-prev"
         },
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
+          clickable: true
         },
         autoplay: true,
         speed: 100,

@@ -85,7 +85,7 @@
         </g>
       </svg>
 
-      <swiper :options="swiperOptions">
+      <swiper :options="swiperOptions1" :instanceName="6">
         <swiper-slide
           v-for="item of swiperList"
           :key="item.id"
@@ -103,7 +103,10 @@
           class="swiper-button-next"
           slot="button-next"
         ></div>
-        <div class="swiper-pagination" slot="pagination"></div>
+        <div
+          class="swiper-pagination swiper-pagination1"
+          slot="pagination"
+        ></div>
       </swiper>
     </div>
     <div class="section-item">
@@ -541,7 +544,7 @@
         </g>
       </svg>
 
-      <swiper :options="swiperOptions">
+      <swiper :options="swiperOptions2" :instanceName="7">
         <swiper-slide
           v-for="item of swiperList2"
           :key="item.id"
@@ -559,7 +562,10 @@
           class="swiper-button-next"
           slot="button-next"
         ></div>
-        <div class="swiper-pagination" slot="pagination"></div>
+        <div
+          class="swiper-pagination swiper-pagination2"
+          slot="pagination"
+        ></div>
       </swiper>
     </div>
   </div>
@@ -590,7 +596,8 @@
       width: 50vw;
       left: 50%;
       transform: translate(-50%, 0);
-      pointer-events: none;filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.6));
+      pointer-events: none;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.6));
 
       .cls-1 {
         isolation: isolate;
@@ -636,7 +643,8 @@
       width: 30vw;
       left: 10vw;
       transform: translate(0, 0);
-      pointer-events: none;filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.6));
+      pointer-events: none;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.6));
       .cls-1 {
         fill: #fff;
       }
@@ -824,13 +832,30 @@ export default {
   data() {
     return {
       isMobile,
-      swiperOptions: {
+      swiperOptions1: {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination1",
+          clickable: true
+        },
+        autoplay: true,
+        speed: 100,
+        slidesPerView: isMobile ? 1 : 1,
+        spaceBetween: isMobile ? 0 : 0,
+        resistanceRatio: isMobile ? 1 : 0,
+        loop: isMobile ? false : false
+      },
+      swiperOptions2: {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination2",
+          clickable: true
         },
         autoplay: true,
         speed: 100,

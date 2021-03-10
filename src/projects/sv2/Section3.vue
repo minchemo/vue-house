@@ -5,43 +5,46 @@
       v-if="!isMobile"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 892.6 500.38"
-       data-aos="fade-up" data-aos-delay="300">
+      data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-anchor-placement="bottom"
     >
-          <text class="cls-1">
-            <tspan x="280.86" y="106.82">美好旅程，始於家裡</tspan>
-            <tspan class="cls-3">
-              <tspan x="354.17" y="192.44">近雙</tspan>
-              <tspan class="cls-4" x="402.57" y="192.44">捷、</tspan>
-              <tspan x="439.97" y="192.44">騎UBi</tspan>
-              <tspan class="cls-5" x="509.91" y="192.44">k</tspan>
-              <tspan x="525.31" y="192.44">e</tspan>
-            </tspan>
-            <tspan class="cls-6">
-              <tspan x="160.3" y="233.44">將旅行的樂趣帶到家門</tspan>
-              <tspan class="cls-7" x="380.3" y="233.44">前，</tspan>
-              <tspan x="414.3" y="233.44">為下一趟精彩旅</tspan>
-              <tspan class="cls-7" x="568.3" y="233.44">程，</tspan>
-              <tspan x="602.3" y="233.44">啟發無限靈感</tspan>
-            </tspan>
-            <tspan class="cls-3">
-              <tspan x="357.36" y="315.44">體驗/城市與旅行</tspan>
-            </tspan>
-            <tspan class="cls-6">
-              <tspan x="274.53" y="356.44">A7捷運站1.3KM | A8捷運站2.1KM</tspan>
-              <tspan x="274.57" y="397.44">
-                UBIKE下樓就到 | 林口交流道7分鐘
-              </tspan>
-              <tspan x="259.3" y="438.44">壽山</tspan>
-              <tspan class="cls-7" x="303.3" y="438.44">路、</tspan>
-              <tspan x="337.3" y="438.44">青山</tspan>
-              <tspan class="cls-7" x="381.3" y="438.44">路、</tspan>
-              <tspan x="415.3" y="438.44">振興路聯外交通金三角</tspan>
-            </tspan>
-          </text>
-          <rect class="cls-8" x="351.64" y="200" width="185" height="0.5" />
-          <rect class="cls-8" x="351.64" y="166" width="185" height="0.5" />
-          <rect class="cls-8" x="351.64" y="328" width="185" height="0.5" />
-          <rect class="cls-8" x="351.64" y="289" width="185" height="0.5" />
+      >
+      <text class="cls-1">
+        <tspan x="280.86" y="106.82">美好旅程，始於家裡</tspan>
+        <tspan class="cls-3">
+          <tspan x="354.17" y="192.44">近雙</tspan>
+          <tspan class="cls-4" x="402.57" y="192.44">捷、</tspan>
+          <tspan x="439.97" y="192.44">騎UBi</tspan>
+          <tspan class="cls-5" x="509.91" y="192.44">k</tspan>
+          <tspan x="525.31" y="192.44">e</tspan>
+        </tspan>
+        <tspan class="cls-6">
+          <tspan x="160.3" y="233.44">將旅行的樂趣帶到家門</tspan>
+          <tspan class="cls-7" x="380.3" y="233.44">前，</tspan>
+          <tspan x="414.3" y="233.44">為下一趟精彩旅</tspan>
+          <tspan class="cls-7" x="568.3" y="233.44">程，</tspan>
+          <tspan x="602.3" y="233.44">啟發無限靈感</tspan>
+        </tspan>
+        <tspan class="cls-3">
+          <tspan x="357.36" y="315.44">體驗/城市與旅行</tspan>
+        </tspan>
+        <tspan class="cls-6">
+          <tspan x="274.53" y="356.44">A7捷運站1.3KM | A8捷運站2.1KM</tspan>
+          <tspan x="274.57" y="397.44">
+            UBIKE下樓就到 | 林口交流道7分鐘
+          </tspan>
+          <tspan x="259.3" y="438.44">壽山</tspan>
+          <tspan class="cls-7" x="303.3" y="438.44">路、</tspan>
+          <tspan x="337.3" y="438.44">青山</tspan>
+          <tspan class="cls-7" x="381.3" y="438.44">路、</tspan>
+          <tspan x="415.3" y="438.44">振興路聯外交通金三角</tspan>
+        </tspan>
+      </text>
+      <rect class="cls-8" x="351.64" y="200" width="185" height="0.5" />
+      <rect class="cls-8" x="351.64" y="166" width="185" height="0.5" />
+      <rect class="cls-8" x="351.64" y="328" width="185" height="0.5" />
+      <rect class="cls-8" x="351.64" y="289" width="185" height="0.5" />
     </svg>
 
     <svg
@@ -96,12 +99,12 @@
     </svg>
     <img class="cloud" src="~@/projects/sv2/s3/cloud.png" alt="" />
 
-    <swiper :options="swiperOptions">
+    <swiper :options="swiperOptions" :instanceName="1">
       <swiper-slide
         v-for="item of swiperList"
         :key="item.id"
         :style="{ backgroundImage: `url(${item.imgUrl})` }"
-       data-aos="fade-up"
+        data-aos="fade-up"
       >
         <p>{{ item.title }}</p>
       </swiper-slide>
@@ -130,9 +133,8 @@
   .t1 {
     position: absolute;
     width: 50vw;
-    left:calc(50% - 25vw);
+    left: calc(50% - 25vw);
     top: 10vw;
-
 
     .cls-1 {
       font-size: 37.18px;
@@ -337,7 +339,8 @@ export default {
           prevEl: ".swiper-button-prev"
         },
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
+          clickable: true
         },
         autoplay: true,
         speed: 100,
