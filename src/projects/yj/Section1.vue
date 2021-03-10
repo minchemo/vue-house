@@ -1799,7 +1799,7 @@ export default {
     return {
       isMobile,
       slideList: [
-    /* 
+        /* 
      {
           img: require("./s1/item1-1.jpg"),
           title: "便利機能",
@@ -1835,7 +1835,7 @@ export default {
           content:
             "鄰近新泰國小、高詢問度「夢不落幼兒園｣散步就到，國小&國中預定地也位於步行生活圈；上學離家近，學習有效率。"
         }
-         */ 
+         */
       ],
       slideList2: [
         {
@@ -1929,16 +1929,24 @@ export default {
         $(value).append(box);
       } else {
         $(value).append(`<div class="item-cal-box">${box}</div>`);
-        let height = $(value)
-          .find(".item-cal")
-          .height();
-        $(value)
-          .find(".item-cal-box")
-          .height(height + "px");
+
+        let firstImage = $(value)
+          .find("img")
+          .eq(0);
+
+        $(firstImage).one("load", function() {
+          let height = $(value)
+            .find(".item-cal")
+            .height();
+
+          $(value)
+            .find(".item-cal-box")
+            .height(height + "px");
+        });
       }
 
       $(value)
-        .find(".item-cal")
+        .find(".item-cal-box")
         .append(generatePagination(itemImg.length));
     });
 
@@ -2010,6 +2018,10 @@ export default {
       } else if (titleData == "title2") {
         updateTxt(item, "title2");
       }
+
+      $.each(autoPlayInternal, function(i, val) {
+        clearInterval(val);
+      });
     });
 
     $(".item6 .photos .photo").click(function() {
