@@ -782,12 +782,11 @@
       </div>
       <div class="item item1" data-title="title2">
         <img class="item-img" src="./s1/item1-1.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
         <img class="item-img" src="./s1/item1-3.jpg" alt="" />
         <img class="item-img" src="./s1/item1-4.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
         <img class="item-img" src="./s1/item1-5.jpg" alt="" />
         <img class="item-img" src="./s1/item1-6.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-7.jpg" alt="" />
         <img
           v-if="!isMobile"
           class="item-img-mask"
@@ -1800,7 +1799,8 @@ export default {
     return {
       isMobile,
       slideList: [
-        {
+    /* 
+     {
           img: require("./s1/item1-1.jpg"),
           title: "便利機能",
           subtitle: "麵包與玫瑰花，精采生活全都要",
@@ -1835,6 +1835,7 @@ export default {
           content:
             "鄰近新泰國小、高詢問度「夢不落幼兒園｣散步就到，國小&國中預定地也位於步行生活圈；上學離家近，學習有效率。"
         }
+         */ 
       ],
       slideList2: [
         {
@@ -1971,11 +1972,11 @@ export default {
             .html();
         }
       } else if (title == "title2") {
-        if (currentIndex == 0 || currentIndex == 1 || currentIndex == 2) {
+        if (currentIndex == 0 || currentIndex == 1) {
           targetTxt = $("." + title)
             .find(".txt2-12")
             .html();
-        } else if (currentIndex == 3) {
+        } else if (currentIndex == 2 || currentIndex == 3) {
           targetTxt = $("." + title)
             .find(".txt2-34")
             .html();
