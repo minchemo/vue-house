@@ -5,13 +5,10 @@
       v-if="!isMobile"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 892.6 500.38"
+       data-aos="fade-up" data-aos-delay="300">
     >
-      <g id="圖層_2" data-name="圖層 2">
-        <g id="圖層_1-2" data-name="圖層 1">
           <text class="cls-1">
-            <tspan x="280.86" y="106.82">美好旅</tspan>
-            <tspan class="cls-2" x="392.39" y="106.82">程，</tspan>
-            <tspan x="463.03" y="106.82">始於家裡</tspan>
+            <tspan x="280.86" y="106.82">美好旅程，始於家裡</tspan>
             <tspan class="cls-3">
               <tspan x="354.17" y="192.44">近雙</tspan>
               <tspan class="cls-4" x="402.57" y="192.44">捷、</tspan>
@@ -45,8 +42,6 @@
           <rect class="cls-8" x="351.64" y="166" width="185" height="0.5" />
           <rect class="cls-8" x="351.64" y="328" width="185" height="0.5" />
           <rect class="cls-8" x="351.64" y="289" width="185" height="0.5" />
-        </g>
-      </g>
     </svg>
 
     <svg
@@ -106,6 +101,7 @@
         v-for="item of swiperList"
         :key="item.id"
         :style="{ backgroundImage: `url(${item.imgUrl})` }"
+       data-aos="fade-up"
       >
         <p>{{ item.title }}</p>
       </swiper-slide>
@@ -134,9 +130,9 @@
   .t1 {
     position: absolute;
     width: 50vw;
-    left: 50%;
+    left:calc(50% - 25vw);
     top: 10vw;
-    transform: translate(-50%, 0);
+
 
     .cls-1 {
       font-size: 37.18px;
@@ -242,9 +238,8 @@
     .t1 {
       position: absolute;
       width: 80vw;
-      left: 50%;
       top: 10vw;
-      transform: translate(-50%, 0);
+      left: calc(50% - 80vw * 0.5);
 
       .cls-1 {
         font-size: 30px;

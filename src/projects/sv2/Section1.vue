@@ -1,6 +1,6 @@
 <template>
   <div class="section1">
-    <img src="./s1/t1.gif" class="logo">
+    <img src="./s1/t1.gif" class="logo" data-aos="fade" data-aos-delay="100">
     <svg
       class="t1"
       xmlns="http://www.w3.org/2000/svg"
@@ -116,24 +116,17 @@
             points="280.2 94.65 282.65 99.61 288.11 100.4 284.16 104.25 285.09 109.69 280.2 107.13 275.32 109.69 276.25 104.25 272.3 100.4 277.76 99.61 280.2 94.65"
           />
           -->
-          <text class="cls-3" transform="translate(67.69 367.67)">
+          <text class="cls-3" y="367.67" x="67.69"   data-aos="fade-up" data-aos-delay="300">
             Check in奢華的完美假期
           </text>
-          <text class="cls-4" transform="translate(66.25 430.87)">
+          <text class="cls-4" y="430.87" x="66.25"  data-aos="fade-up" data-aos-delay="500">
             體驗式風格 休旅美學
             <tspan class="cls-1">
               <tspan x="237.8" y="65.04" xml:space="preserve"></tspan>
             </tspan>
           </text>
-          <text class="cls-5" transform="translate(0 479.91)">
-            打
-            <tspan class="cls-6" x="27.34" y="0">造</tspan>
-            <tspan class="cls-7" x="51.4" y="0">２０</tspan>
-            <tspan class="cls-8" x="92.96" y="0">２</tspan>
-            <tspan class="cls-9" x="113.82" y="0">１</tspan>
-            <tspan class="cls-10" x="137.79" y="0">
-              獨有生活風格新地標｜重繪A7最美天際線
-            </tspan>
+          <text class="cls-5" y="479.91" x="0" data-aos="fade-up" data-aos-delay="700">
+            打造２０２１獨有生活風格新地標｜重繪A7最美天際線
             <tspan x="311.43" y="32.81" xml:space="preserve"></tspan>
           </text>
         </g>
@@ -151,14 +144,14 @@
 .logo{
     width: 14.9vw;
     position: absolute;
-    top: calc(50% - 9.05vw);
+    top: calc(50% - 12.05vw);
     left: calc(50% - 7.5vw);
     z-index: 2;}
   .t1 {
     width: 35vw;
     max-width: 600px;
     position: absolute;
-    bottom: 0;
+    top: calc(50% - 11vw);
     z-index: 1;
     left: 50%;
     transform: translate(-50%, 0);
@@ -225,6 +218,11 @@
     width: 100vw;
     height: calc(100vh - 60px - 63px);
     margin-top: 60px;
+.logo{
+    width: 58vw;
+    top: calc(50% - 40vw);
+    left: calc(50% - 29vw);
+    z-index: 2;}
 
     .t1 {
       width: 80vw;

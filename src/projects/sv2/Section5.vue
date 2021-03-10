@@ -94,15 +94,15 @@
       </swiper>
       <div v-if="!isMobile" class="waterfall">
         <div>
-          <img src="~@/projects/sv2/s5/1.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/1.jpg" alt="" data-aos="fade-down" data-aos-delay="100"  />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/3.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/3.jpg" alt="" data-aos="fade-down" data-aos-delay="300" />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/7.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/7.jpg" alt="" data-aos="fade-up" data-aos-delay="700" />
         </div>
-        <div class="title">
+        <div class="title" data-aos="fade-up" data-aos-delay="300" >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.51 692.43">
             <g id="圖層_2" data-name="圖層 2">
               <g id="圖層_1-2" data-name="圖層 1">
@@ -212,22 +212,22 @@
           </svg>
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/5.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/5.jpg" alt="" data-aos="fade-up" data-aos-delay="300" />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/6.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/6.jpg" alt="" data-aos="fade-up" data-aos-delay="600" />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/8.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/8.jpg" alt="" data-aos="fade-up" data-aos-delay="600" />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/2.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/2.jpg" alt="" data-aos="fade-down" data-aos-delay="600" />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/4.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/4.jpg" alt="" data-aos="fade-up" data-aos-delay="600" />
         </div>
         <div>
-          <img src="~@/projects/sv2/s5/9.jpg" alt="" />
+          <img src="~@/projects/sv2/s5/9.jpg" alt="" data-aos="fade-up" data-aos-delay="300" />
         </div>
       </div>
     </div>

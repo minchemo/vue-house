@@ -4,8 +4,8 @@
       <swiper-slide
         v-for="item of swiperList"
         :key="item.id"
-        :style="{ backgroundImage: `url(${item.imgUrl})` }"
-      >
+        :style="{ backgroundImage: `url(${item.imgUrl})` }">
+
         <p>{{ item.title }}</p>
       </swiper-slide>
       <div v-if="isMobile" class="swiper-button-prev" slot="button-prev"></div>
@@ -13,7 +13,7 @@
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
 
-    <div class="title">
+    <div class="title" data-aos="fade-up" data-aos-delay="300">>
       <svg
         v-if="!isMobile"
         xmlns="http://www.w3.org/2000/svg"
@@ -381,9 +381,8 @@
     height: 28vw;
     position: absolute;
     z-index: 1;
-    top: 50%;
+    top:calc(50% - 14vw);
     left: 10vw;
-    transform: translateY(-50%);
 
     svg {
       position: relative;

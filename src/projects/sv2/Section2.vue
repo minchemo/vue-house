@@ -2,13 +2,12 @@
     <div class="section2">
         <div class="view">
             <img v-if="isMobile" src="~@/projects/sv2/s2/view.jpg" alt="" />
-            <svg class="t1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 398.86 306.62">
+            <svg class="t1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 398.86 306.62" data-aos="fade-up" data-aos-delay="300">
                 <g id="圖層_2" data-name="圖層 2">
                     <g id="圖層_1-2" data-name="圖層 1">
                         <text class="cls-1" transform="translate(50.73 32.72)">
                             頂級雙園景渡假村
-                            <tspan x="-50.73" y="50" xml:space="preserve">把幸福生活，</tspan>
-                            <tspan x="169.26" y="50">帶往新高度</tspan>
+                            <tspan x="-50.73" y="50" xml:space="preserve">把幸福生活，帶往新高度</tspan>
                         </text>
                         <text class="cls-3" transform="translate(61.43 162.68)">
                             置身城市綠
@@ -47,8 +46,8 @@
             position: absolute;
             top: 10vw;
             z-index: 1;
-            left: 50%;
-            transform: translate(-50%, 0);
+            left: calc(50% - 25vw * 0.5);
+           // transform: translate(-50%, 0);
             overflow: visible;
 
             .cls-1 {
@@ -99,6 +98,7 @@
             .t1 {
                 top: 20vw;
                 width: 80vw;
+            left: calc(50% - 80vw * 0.5);
             }
         }
     }

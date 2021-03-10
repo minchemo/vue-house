@@ -590,7 +590,7 @@
       width: 50vw;
       left: 50%;
       transform: translate(-50%, 0);
-      pointer-events: none;
+      pointer-events: none;filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.6));
 
       .cls-1 {
         isolation: isolate;
@@ -636,7 +636,7 @@
       width: 30vw;
       left: 10vw;
       transform: translate(0, 0);
-      pointer-events: none;
+      pointer-events: none;filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.6));
       .cls-1 {
         fill: #fff;
       }

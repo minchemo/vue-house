@@ -144,7 +144,7 @@ export default {
 
   li {
     height: 100%;
-    writing-mode: vertical-rl;
+  //  writing-mode: vertical-rl;
     letter-spacing: 2px;
   }
 
@@ -156,37 +156,59 @@ export default {
     display: block;
     cursor: pointer;
     padding: 0;
-    transition: all 0.3s;
+    transition: all 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    text-align: center;
     overflow: hidden;
     // border-right: 1px solid $nav_link_hover_bg;
     > span {
       z-index: 3;
     }
+    &.active,
     &:hover {
       color: $nav_link_hover_color;
       // background-color: $nav_link_hover_bg;
       img {
       }
     }
-    &::before {
+    &::after,
+    &::before{
       content: "";
       width: 1px;
-      height: 20%;
-      display: none;
-      background: $nav_link_hover_bg;
+      height: 0%;
+      display: block;
+    //  background: $nav_link_hover_bg;
       position: absolute;
-      left: 0;
-      top: 40%;
+      right: 15%;
+      top: 0%;
+      opacity: 0;
+      transition: all 0.5s;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='圖層_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 1 122' enable-background='new 0 0 1 122' xml:space='preserve'%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='0.5' y1='111.96' x2='0.5' y2='0.12' gradientTransform='matrix(1 0 0 -1 0 123)'%3E%3Cstop offset='0' style='stop-color:%23B59668;stop-opacity:0'/%3E%3Cstop offset='0.5' style='stop-color:%23B59668'/%3E%3Cstop offset='1' style='stop-color:%23B59668;stop-opacity:0'/%3E%3C/linearGradient%3E%3Crect fill='url(%23SVGID_1_)' width='1' height='122'/%3E%3C/svg%3E");
+    }
+    &::after{
+      left:15%;
+      right:auto;}
+
+    &.active::after,
+    &.active::before,
+    &:hover:after,
+    &:hover:before{
+      height: 100%;
+      opacity: 1;
+
     }
 
     .title {
       position: relative;
       z-index: 3;
       font-family: $family2;
+    text-align: center;
+    width: 1.1em;
+    align-items: center;
+    justify-content: center;
     }
 
     .subTitle {
@@ -205,9 +227,10 @@ export default {
       }
     }
   }
+  /*
   .flex-ac:first-child .link::before {
     display: none;
-  }
+  }*/
 }
 
 .menu {
@@ -337,6 +360,7 @@ export default {
       align-items: center;
       justify-content: center;
       display: none;
+    .title{width: 100%;}
 
       img,
       span {

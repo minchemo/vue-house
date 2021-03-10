@@ -1,7 +1,7 @@
 export default [
   {
-    name: "",
-    imgSrc: require("../assets/img/nav/view.png"),
+    name: "大林口俯瞰圖",
+    //imgSrc: require("../assets/img/nav/view.png"),
     subTitle: "",
     section: "section2",
     svgSrc: "",
