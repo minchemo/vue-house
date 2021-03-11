@@ -67,6 +67,7 @@
 
       .cls-1 {
         font-size: 37.18px;
+        font-weight: bold;
         fill: #f4f1f2;
         font-family: NotoSansCJKtc-Black-B5pc-H, Noto Sans CJK TC;
       }

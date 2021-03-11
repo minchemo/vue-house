@@ -1,13 +1,13 @@
 <template>
   <div class="section1">
-    <img src="./s1/t1.gif" class="logo" data-aos="fade" data-aos-delay="100">
+    <img src="./s1/t1.gif" class="logo" data-aos="fade" data-aos-delay="100" />
     <svg
       class="t1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 635.17 617.69"
     >
-        <g id="圖層_1-2" data-name="圖層 1">
-   <!--       <path
+      <g id="圖層_1-2" data-name="圖層 1">
+        <!--       <path
             class="cls-1"
             d="M328,152.42l.45,1.2h-.08l-.36-.38a2.49,2.49,0,0,0-.82-.59,2.69,2.69,0,0,0-1.05-.2,2.13,2.13,0,0,0-1.55.56,1.86,1.86,0,0,0-.58,1.35,1.58,1.58,0,0,0,.27.92,2.44,2.44,0,0,0,1.13.73q1.47.49,2,.75a3.2,3.2,0,0,1,1.05.85,2.28,2.28,0,0,1,.5,1.52,3.08,3.08,0,0,1-.09.75,2.68,2.68,0,0,1-.29.68,3.41,3.41,0,0,1-.49.59,2.09,2.09,0,0,1-.57.41,3.21,3.21,0,0,1-.92.21c-.42.05-.7.07-.83.07H323.2v-2.77h.1A2.4,2.4,0,0,0,324,161a2.93,2.93,0,0,0,2,.55,2.66,2.66,0,0,0,1.86-.58,1.81,1.81,0,0,0,.63-1.39,1.59,1.59,0,0,0-.22-.84,2.12,2.12,0,0,0-.62-.61,7.38,7.38,0,0,0-1.5-.64,7.81,7.81,0,0,1-1.54-.67,2.22,2.22,0,0,1-.74-.87,2.59,2.59,0,0,1,.46-3,2.74,2.74,0,0,1,2-.75,4.91,4.91,0,0,1,1,.11,5.79,5.79,0,0,1,.63.14Z"
           />
@@ -116,20 +116,38 @@
             points="280.2 94.65 282.65 99.61 288.11 100.4 284.16 104.25 285.09 109.69 280.2 107.13 275.32 109.69 276.25 104.25 272.3 100.4 277.76 99.61 280.2 94.65"
           />
           -->
-          <text class="cls-3" y="367.67" x="67.69"   data-aos="fade-up" data-aos-delay="300">
-            Check in奢華的完美假期
-          </text>
-          <text class="cls-4" y="430.87" x="66.25"  data-aos="fade-up" data-aos-delay="500">
-            體驗式風格 休旅美學
-            <tspan class="cls-1">
-              <tspan x="237.8" y="65.04" xml:space="preserve"></tspan>
-            </tspan>
-          </text>
-          <text class="cls-5" y="479.91" x="0" data-aos="fade-up" data-aos-delay="700">
-            打造２０２１獨有生活風格新地標｜重繪A7最美天際線
-            <tspan x="311.43" y="32.81" xml:space="preserve"></tspan>
-          </text>
-        </g>
+        <text
+          class="cls-3"
+          y="367.67"
+          x="67.69"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Check in奢華的完美假期
+        </text>
+        <text
+          class="cls-4"
+          y="430.87"
+          x="66.25"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          體驗式風格 休旅美學
+          <tspan class="cls-1">
+            <tspan x="237.8" y="65.04" xml:space="preserve"></tspan>
+          </tspan>
+        </text>
+        <text
+          class="cls-5"
+          y="479.91"
+          x="0"
+          data-aos="fade-up"
+          data-aos-delay="700"
+        >
+          打造２０２１獨有生活風格新地標｜重繪A7最美天際線
+          <tspan x="311.43" y="32.81" xml:space="preserve"></tspan>
+        </text>
+      </g>
     </svg>
     <div class="bg"></div>
   </div>
@@ -141,12 +159,13 @@
   width: 100%;
   height: calc(100vh - #{$nav_pc_height});
   margin-top: $nav_pc_height;
-.logo{
+  .logo {
     width: 14.9vw;
     position: absolute;
     top: calc(50% - 12.05vw);
     left: calc(50% - 7.5vw);
-    z-index: 2;}
+    z-index: 2;
+  }
   .t1 {
     width: 35vw;
     max-width: 600px;
@@ -161,6 +180,7 @@
     .cls-3,
     .cls-5 {
       fill: #fff;
+      font-weight: bold;
     }
     .cls-2,
     .cls-4 {
@@ -218,11 +238,12 @@
     width: 100vw;
     height: calc(100vh - 60px - 63px);
     margin-top: 60px;
-.logo{
-    width: 58vw;
-    top: calc(50% - 40vw);
-    left: calc(50% - 29vw);
-    z-index: 2;}
+    .logo {
+      width: 58vw;
+      top: calc(50% - 40vw);
+      left: calc(50% - 29vw);
+      z-index: 2;
+    }
 
     .t1 {
       width: 80vw;

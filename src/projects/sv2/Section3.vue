@@ -11,7 +11,7 @@
     >
       >
       <text class="cls-1">
-        <tspan x="280.86" y="106.82">美好旅程，始於家裡</tspan>
+        <tspan class="bold" x="280.86" y="106.82">美好旅程，始於家裡</tspan>
         <tspan class="cls-3">
           <tspan x="354.17" y="192.44">近雙</tspan>
           <tspan class="cls-4" x="402.57" y="192.44">捷、</tspan>
@@ -56,9 +56,11 @@
       <g id="圖層_2" data-name="圖層 2">
         <g id="圖層_1-2" data-name="圖層 1">
           <text class="cls-1" transform="translate(29 26.4)">
-            美好旅
-            <tspan class="cls-2" x="90" y="0">程，</tspan>
-            <tspan x="147" y="0">始於家裡</tspan>
+            <tspan class="bold">
+              美好旅
+              <tspan class="cls-2" x="90" y="0">程，</tspan>
+              <tspan x="147" y="0">始於家裡</tspan>
+            </tspan>
             <tspan class="cls-3"><tspan x="133.5" y="25"></tspan></tspan>
             <tspan class="cls-4">
               <tspan x="41.38" y="66">近雙</tspan>
@@ -140,6 +142,9 @@
       font-size: 37.18px;
       fill: #b59668;
       font-family: NotoSansCJKtc-Black-B5pc-H, Noto Sans CJK TC;
+      .bold {
+        font-weight: bold;
+      }
     }
     .cls-2 {
       letter-spacing: -0.05em;
@@ -165,11 +170,6 @@
     }
     .cls-7 {
       letter-spacing: -0.15em;
-    }
-    .cls-8 {
-      fill: none;
-      stroke: #606060;
-      stroke-miterlimit: 10;
     }
   }
 
@@ -247,6 +247,9 @@
         font-size: 30px;
         fill: #b59668;
         font-family: NotoSansCJKtc-Black-B5pc-H, Noto Sans CJK TC;
+        .bold {
+          font-weight: bold;
+        }
       }
       .cls-2 {
         letter-spacing: -0.05em;
@@ -343,7 +346,7 @@ export default {
           clickable: true
         },
         autoplay: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: isMobile ? 1 : 4,
         spaceBetween: isMobile ? 0 : 5,
         resistanceRatio: isMobile ? 1 : 0,

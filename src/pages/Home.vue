@@ -3,12 +3,14 @@
     <Loading :loading="load" />
     <SideNavigation v-if="isSide" />
     <Navigation v-else />
+
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page
       ref="fullPage"
       :options="options"
       id="fullpage"
     > -->
+
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
     </vue-lazy-component>
@@ -31,6 +33,8 @@
       <Section7 />
     </vue-lazy-component>
 
+    <img class="cloud-left" src="~@/projects/sv2/cloud_left.png" alt="" />
+
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
     </vue-lazy-component>
@@ -47,6 +51,16 @@
 .section .fp-slide,
 .section .fp-tableCell {
   height: auto !important;
+}
+
+.home {
+  .cloud-left {
+    position: absolute;
+    left: 0;
+    top: 193vw;
+    z-index: -1;
+    width: 40vw;
+  }
 }
 </style>
 
@@ -149,6 +163,22 @@ export default {
         });
       }
     });
+  },
+  updated() {
+    setTimeout(() => {
+      let el = $(".swiper-container");
+
+      $.each(el, function(i, val) {
+        const mask = $(val).attr("data-mask");
+
+        if (mask == 1) {
+          $(val)
+            .find(".swiper-wrapper")
+            .find(".swiper-slide")
+            .prepend("<div class='mask'></div>");
+        }
+      });
+    }, 1000);
   },
   mounted() {
     // window.addEventListener('scroll', this.onScroll, false)

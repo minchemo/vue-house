@@ -120,6 +120,7 @@
 @import "~@/assets/style/variableDefault.scss";
 /* 螢幕尺寸標準 */
 .section7 {
+  display: none;
   width: 100%;
   height: 70vw;
   background-color: rgba(96, 96, 96, 0.2);
@@ -354,7 +355,7 @@ export default {
           clickable: true
         },
         autoplay: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: isMobile ? 1 : 1,
         spaceBetween: isMobile ? 0 : 0,
         resistanceRatio: isMobile ? 1 : 0,

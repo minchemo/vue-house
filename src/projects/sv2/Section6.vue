@@ -544,7 +544,7 @@
         </g>
       </svg>
 
-      <swiper :options="swiperOptions2" :instanceName="7">
+      <swiper :options="swiperOptions2" :instanceName="7" data-mask="1">
         <swiper-slide
           v-for="item of swiperList2"
           :key="item.id"
@@ -567,6 +567,21 @@
           slot="pagination"
         ></div>
       </swiper>
+
+      <div v-if="isMobile" class="title2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.07 80">
+          <g id="圖層_2" data-name="圖層 2">
+            <g id="圖層_1-2" data-name="圖層 1">
+              <text class="cls-1" transform="translate(1.14 62.37)">
+                給家人尊榮的返家體驗
+              </text>
+              <text class="cls-2" transform="translate(0 26.4)">
+                7.4米挑高接待大廳
+              </text>
+            </g>
+          </g>
+        </svg>
+      </div>
     </div>
   </div>
 </template>
@@ -608,6 +623,7 @@
       }
       .cls-3 {
         font-size: 23px;
+        font-weight: bold;
         fill: #f4f1f2;
         letter-spacing: 0.1em;
         font-weight: bold;
@@ -670,6 +686,7 @@
           bottom: 2vw;
           letter-spacing: 1px;
           font-size: 20px;
+          z-index: 11;
         }
       }
 
@@ -720,7 +737,32 @@
       &:nth-child(2) {
         background: #000;
         margin-top: 0vw;
-        height: 210vw;
+        height: 240vw;
+        .swiper-container {
+          top: 85%;
+        }
+      }
+
+      .title2 {
+        width: 90%;
+        bottom: 15px;
+        position: absolute;
+        left: -7vw;
+
+        svg {
+          width: 70%;
+          .cls-1 {
+            font-size: 20px;
+          }
+          .cls-1,
+          .cls-2 {
+            fill: #fff;
+            font-family: NotoSansCJKtc-Black-B5pc-H, Noto Sans CJK TC;
+          }
+          .cls-2 {
+            font-size: 30px;
+          }
+        }
       }
 
       .t2 {
@@ -755,6 +797,7 @@
         }
         .cls-5 {
           font-family: AdobeMingStd-Light-B5pc-H, Adobe Ming Std;
+          font-weight: bold;
         }
         .cls-6 {
           letter-spacing: -0.15em;
@@ -842,7 +885,7 @@ export default {
           clickable: true
         },
         autoplay: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: isMobile ? 1 : 1,
         spaceBetween: isMobile ? 0 : 0,
         resistanceRatio: isMobile ? 1 : 0,
@@ -858,7 +901,7 @@ export default {
           clickable: true
         },
         autoplay: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: isMobile ? 1 : 1,
         spaceBetween: isMobile ? 0 : 0,
         resistanceRatio: isMobile ? 1 : 0,

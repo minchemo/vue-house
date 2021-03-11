@@ -14,7 +14,6 @@
     </swiper>
 
     <div class="title" data-aos="fade-up" data-aos-delay="300">
-      >
       <svg
         v-if="!isMobile"
         xmlns="http://www.w3.org/2000/svg"
@@ -408,6 +407,7 @@
         font-size: 23px;
         font-family: NotoSansCJKtc-Black-B5pc-H, Noto Sans CJK TC;
         letter-spacing: 0.1em;
+        font-weight: bold;
       }
     }
   }
@@ -487,6 +487,7 @@
         .cls-2 {
           font-size: 20.47px;
           letter-spacing: 0.1em;
+          font-weight: bold;
         }
         .cls-2,
         .cls-3,
@@ -555,7 +556,7 @@ export default {
           clickable: true
         },
         autoplay: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: isMobile ? 1 : 1,
         spaceBetween: isMobile ? 0 : 0,
         resistanceRatio: isMobile ? 1 : 0,

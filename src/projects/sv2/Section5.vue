@@ -96,36 +96,24 @@
         ></div>
       </swiper>
       <div v-if="!isMobile" class="waterfall">
-        <div>
-          <img
-            src="~@/projects/sv2/s5/1.jpg"
-            alt=""
-            data-aos="fade-down"
-            data-aos-delay="100"
-          />
+        <div data-aos="fade-down" data-aos-delay="100">
+          <img src="~@/projects/sv2/s5/1.jpg" alt="" />
+          <p>三井OUTLET</p>
         </div>
-        <div>
-          <img
-            src="~@/projects/sv2/s5/3.jpg"
-            alt=""
-            data-aos="fade-down"
-            data-aos-delay="300"
-          />
+        <div data-aos="fade-down" data-aos-delay="300">
+          <img src="~@/projects/sv2/s5/3.jpg" alt="" />
+          <p>林口長庚醫院</p>
         </div>
-        <div>
-          <img
-            src="~@/projects/sv2/s5/7.jpg"
-            alt=""
-            data-aos="fade-up"
-            data-aos-delay="700"
-          />
+        <div data-aos="fade-up" data-aos-delay="700">
+          <img src="~@/projects/sv2/s5/7.jpg" alt="" />
+          <p>復興一路商圈</p>
         </div>
         <div class="title" data-aos="fade-up" data-aos-delay="300">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.51 692.43">
             <g id="圖層_2" data-name="圖層 2">
               <g id="圖層_1-2" data-name="圖層 1">
                 <text class="cls-1" transform="translate(3.57 33.44)">
-                  大林口四百貨商圈
+                  <tspan class="bold">大林口四百貨商圈</tspan>
                   <tspan class="cls-2">
                     <tspan x="0" y="50">A7</tspan>
                     <tspan class="cls-3" x="43.15" y="50">旗艦風格新地標</tspan>
@@ -144,7 +132,9 @@
                     <tspan x="0" y="258.61">體驗/生活與校園</tspan>
                   </tspan>
                   <tspan class="cls-7">
-                    <tspan x="0" y="305.61">5-6分鐘雙國小學區|</tspan>
+                    <tspan class="bold" x="-10" y="305.61">
+                      5-6分鐘雙國小學區|
+                    </tspan>
                     <tspan
                       class="cls-8"
                       x="197.56"
@@ -164,7 +154,9 @@
                     <tspan class="cls-5" x="254" y="346.61">境。</tspan>
                   </tspan>
                   <tspan class="cls-7">
-                    <tspan x="0" y="387.61">6分鐘長庚生活圈|</tspan>
+                    <tspan class="bold" x="-10" y="387.61">
+                      6分鐘長庚生活圈|
+                    </tspan>
                     <tspan
                       class="cls-8"
                       x="175.02"
@@ -182,7 +174,9 @@
                     <tspan class="cls-5" x="364" y="428.61">能。</tspan>
                   </tspan>
                   <tspan class="cls-7">
-                    <tspan x="0" y="469.61">10分鐘樂遊大林口|</tspan>
+                    <tspan class="bold" x="-10" y="469.61">
+                      10分鐘樂遊大林口|
+                    </tspan>
                     <tspan
                       class="cls-8"
                       x="188.42"
@@ -229,53 +223,29 @@
             </g>
           </svg>
         </div>
-        <div>
-          <img
-            src="~@/projects/sv2/s5/5.jpg"
-            alt=""
-            data-aos="fade-up"
-            data-aos-delay="300"
-          />
+        <div data-aos="fade-up" data-aos-delay="300">
+          <img src="~@/projects/sv2/s5/5.jpg" alt="" />
+          <p>環球百貨</p>
         </div>
-        <div>
-          <img
-            src="~@/projects/sv2/s5/6.jpg"
-            alt=""
-            data-aos="fade-up"
-            data-aos-delay="600"
-          />
+        <div data-aos="fade-up" data-aos-delay="600">
+          <img src="~@/projects/sv2/s5/6.jpg" alt="" />
+          <p>樂善國小</p>
         </div>
-        <div>
-          <img
-            src="~@/projects/sv2/s5/8.jpg"
-            alt=""
-            data-aos="fade-up"
-            data-aos-delay="600"
-          />
+        <div data-aos="fade-up" data-aos-delay="600">
+          <img src="~@/projects/sv2/s5/8.jpg" alt="" />
+          <p>文欣國小</p>
         </div>
-        <div>
-          <img
-            src="~@/projects/sv2/s5/2.jpg"
-            alt=""
-            data-aos="fade-down"
-            data-aos-delay="600"
-          />
+        <div data-aos="fade-down" data-aos-delay="600">
+          <img src="~@/projects/sv2/s5/2.jpg" alt="" />
+          <p>復興二路商圈</p>
         </div>
-        <div>
-          <img
-            src="~@/projects/sv2/s5/4.jpg"
-            alt=""
-            data-aos="fade-up"
-            data-aos-delay="600"
-          />
+        <div data-aos="fade-up" data-aos-delay="600">
+          <img src="~@/projects/sv2/s5/4.jpg" alt="" />
+          <p>昕境廣場</p>
         </div>
-        <div>
-          <img
-            src="~@/projects/sv2/s5/9.jpg"
-            alt=""
-            data-aos="fade-up"
-            data-aos-delay="300"
-          />
+        <div data-aos="fade-up" data-aos-delay="300">
+          <img src="~@/projects/sv2/s5/9.jpg" alt="" />
+          <p>大崗國中</p>
         </div>
       </div>
     </div>
@@ -356,8 +326,8 @@
                   <tspan class="cls-5" x="9.6" y="30">
                     文化二路串連都會生活
                   </tspan>
-                  <tspan x="185.6" y="30">圈，</tspan>
-                  <tspan class="cls-5" x="212.8" y="30">盡享便利機能。</tspan>
+                  <tspan x="191.6" y="30">圈，</tspan>
+                  <tspan class="cls-5" x="219.8" y="30">盡享便利機能。</tspan>
                 </tspan>
               </text>
             </g>
@@ -409,6 +379,9 @@
             font-size: 38px;
             fill: #b59668;
             font-family: NotoSansCJKtc-Black-B5pc-H, Noto Sans CJK TC;
+            .bold {
+              font-weight: bold;
+            }
           }
           .cls-2 {
             font-size: 34px;
@@ -450,6 +423,7 @@
       div {
         width: 31.1%;
         margin: 0 1.5vw 1.5vw 0;
+        position: relative;
 
         &:nth-child(5) {
           width: 37.7%;
@@ -464,6 +438,13 @@
         img {
           width: 100%;
           overflow: hidden;
+        }
+        p {
+          position: absolute;
+          right: 15px;
+          bottom: 15px;
+          color: #fff;
+          letter-spacing: 1px;
         }
       }
     }
@@ -696,7 +677,7 @@ export default {
           clickable: true
         },
         autoplay: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: isMobile ? 1 : 1,
         spaceBetween: isMobile ? 0 : 0,
         resistanceRatio: isMobile ? 1 : 0,
@@ -712,7 +693,7 @@ export default {
           clickable: true
         },
         autoplay: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: isMobile ? 1 : 1,
         spaceBetween: isMobile ? 0 : 0,
         resistanceRatio: isMobile ? 1 : 0,
@@ -728,7 +709,7 @@ export default {
           clickable: true
         },
         autoplay: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: isMobile ? 1 : 1,
         spaceBetween: isMobile ? 0 : 0,
         resistanceRatio: isMobile ? 1 : 0,
