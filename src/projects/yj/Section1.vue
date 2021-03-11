@@ -766,7 +766,7 @@
       <div class="item item0">
         <img v-if="isMobile" class="movehere" src="./s1/movehere.png" alt="" />
         <img v-if="!isMobile" class="item-img" src="./s1/a1.jpg" alt="" />
-        <img v-if="isMobile" class="item-img" src="./s1/a1-mo.png" alt="" />
+        <img v-if="isMobile" class="item-img" src="./s1/a1-mo.jpg" alt="" />
         <img
           v-if="!isMobile"
           class="item-img-mask"
@@ -781,11 +781,10 @@
         />
       </div>
       <div class="item item1" data-title="title2">
+        <img class="item-img" src="./s1/item1-8.jpg" alt="" />
         <img class="item-img" src="./s1/item1-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-3.jpg" alt="" />
         <img class="item-img" src="./s1/item1-4.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-5.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
         <img class="item-img" src="./s1/item1-6.jpg" alt="" />
         <img
           v-if="!isMobile"
@@ -837,9 +836,9 @@
       </div>
       <div class="item item4" data-title="title5">
         <img class="item-img" src="./s1/item4-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item4-2.jpg" alt="" />
         <img class="item-img" src="./s1/item4-3.jpg" alt="" />
-        <img class="item-img" src="./s1/item4-4.jpg" alt="" />
+        <img class="item-img" src="./s1/item4-2.jpg" alt="" />
+        <img class="item-img" src="./s1/item4-6.jpg" alt="" />
         <img class="item-img" src="./s1/item4-5.jpg" alt="" />
         <img
           v-if="!isMobile"
@@ -1966,11 +1965,11 @@ export default {
       let targetTxt;
 
       if (title == "title5") {
-        if (currentIndex == 0 || currentIndex == 1) {
+        if (currentIndex == 0 || currentIndex == 1 || currentIndex == 2) {
           targetTxt = $("." + title)
             .find(".txt5-12")
             .html();
-        } else if (currentIndex == 2 || currentIndex == 3) {
+        } else if (currentIndex == 3) {
           targetTxt = $("." + title)
             .find(".txt5-34")
             .html();
@@ -1980,15 +1979,15 @@ export default {
             .html();
         }
       } else if (title == "title2") {
-        if (currentIndex == 0 || currentIndex == 1) {
+        if (currentIndex == 0 || currentIndex == 1 || currentIndex == 2) {
           targetTxt = $("." + title)
             .find(".txt2-12")
             .html();
-        } else if (currentIndex == 2 || currentIndex == 3) {
+        } else if (currentIndex == 3) {
           targetTxt = $("." + title)
             .find(".txt2-34")
             .html();
-        } else if (currentIndex >= 4) {
+        } else if (currentIndex == 4) {
           targetTxt = $("." + title)
             .find(".txt2-56")
             .html();
