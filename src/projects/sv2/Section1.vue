@@ -235,8 +235,9 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
-    width: 100vw;
     height: calc(100vh - 60px - 63px);
+    max-height:calc(100vw * 750 / 375);
+    min-height: calc(100vw * 580 / 375);
     margin-top: 60px;
     .logo {
       width: 58vw;
@@ -246,7 +247,7 @@
     }
 
     .t1 {
-      width: 80vw;
+      width: 80vw;top: calc(50% - 21vw);
     }
   }
 }

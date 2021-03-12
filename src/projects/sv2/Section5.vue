@@ -13,15 +13,9 @@
                 大林口四百貨商圈
                 <tspan x="-4.03" y="50">A7旗艦風格新地標</tspan>
               </text>
-              <text class="cls-2" transform="translate(45.96 124.08)">
-                雙影
-                <tspan class="cls-3" x="35.2" y="0">城、</tspan>
-                <tspan x="62.4" y="0">四百</tspan>
-                <tspan class="cls-4" x="97.6" y="0">貨，</tspan>
-                <tspan x="124.8" y="0">釋放城市精髓</tspan>
-                <tspan x="-21.6" y="30">盡興探索都</tspan>
-                <tspan class="cls-4" x="66.4" y="30">會、</tspan>
-                <tspan class="cls-5" x="93.6" y="30">饗樂風格和生活品味</tspan>
+              <text class="cls-2" transform="translate(37 125)">
+                雙影城、四百貨，釋放城市精髓
+                <tspan x="-21.6" y="30">盡興探索都會、饗樂風格和生活品味</tspan>
               </text>
               <rect
                 class="cls-6"
@@ -45,27 +39,11 @@
               </text>
               <text class="cls-8" transform="translate(0 335.31)">
                 10分鐘樂遊大林口|
-                <tspan class="cls-9" x="150.74" y="0" xml:space="preserve">
-                  共享A
-                </tspan>
-                <tspan class="cls-10" x="202.69" y="0">7、</tspan>
-                <tspan class="cls-9" x="223.01" y="0">A</tspan>
-                <tspan class="cls-11" x="234.56" y="0">8、</tspan>
-                <tspan class="cls-9" x="254.88" y="0">A9三大</tspan>
+                <tspan class="cls-9" x="151" y="0" xml:space="preserve">
+                  共享A7、A8、A9三大</tspan>
                 <tspan class="cls-9">
-                  <tspan x="0" y="30">生活</tspan>
-                  <tspan class="cls-3" x="35.2" y="30">圈，</tspan>
-                  <tspan x="62.4" y="30">國</tspan>
-                  <tspan class="cls-4" x="80" y="30">賓、</tspan>
-                  <tspan class="cls-5" x="107.2" y="30">威秀雙影</tspan>
-                  <tspan class="cls-4" x="177.6" y="30">城、</tspan>
-                  <tspan x="204.8" y="30">A8 &amp; A9環球</tspan>
-                  <tspan x="0" y="60">百</tspan>
-                  <tspan class="cls-4" x="17.6" y="60">貨、</tspan>
-                  <tspan x="44.8" y="60">林口OUTLE</tspan>
-                  <tspan class="cls-4" x="140.06" y="60">T，</tspan>
-                  <tspan class="cls-5" x="161.02" y="60">近享城市精</tspan>
-                  <tspan class="cls-3" x="249.02" y="60">彩。</tspan>
+                  <tspan x="0" y="30">生活圈，國賓、威秀雙影城、A8 &amp; A9環</tspan>
+                  <tspan x="0" y="60">球百貨、林口OUTLET，近享城市精彩。</tspan>
                 </tspan>
               </text>
             </g>
@@ -119,14 +97,8 @@
                     <tspan class="cls-3" x="43.15" y="50">旗艦風格新地標</tspan>
                   </tspan>
                   <tspan class="cls-4">
-                    <tspan x="0" y="135.61">雙影</tspan>
-                    <tspan class="cls-5" x="44" y="135.61">城、</tspan>
-                    <tspan x="78" y="135.61">四百</tspan>
-                    <tspan class="cls-5" x="122" y="135.61">貨，</tspan>
-                    <tspan x="156" y="135.61">釋放城市精髓</tspan>
-                    <tspan x="0" y="176.61">盡興探索都</tspan>
-                    <tspan class="cls-5" x="110" y="176.61">會、</tspan>
-                    <tspan x="144" y="176.61">饗樂風格和生活品味</tspan>
+                    <tspan x="0" y="135.61">雙影城、四百貨，釋放城市精髓</tspan>
+                    <tspan x="0" y="176.61">盡興探索都會、饗樂風格和生活品味</tspan>
                   </tspan>
                   <tspan class="cls-6">
                     <tspan x="0" y="258.61">體驗/生活與校園</tspan>
@@ -137,21 +109,14 @@
                     </tspan>
                     <tspan
                       class="cls-8"
-                      x="197.56"
+                      x="199"
                       y="305.61"
                       xml:space="preserve"
                     >
-                      樂善國
-                    </tspan>
-                    <tspan class="cls-9" x="270.06" y="305.61">小、</tspan>
-                    <tspan class="cls-8" x="304.06" y="305.61">文欣國</tspan>
-                    <tspan class="cls-9" x="370.06" y="305.61">小、</tspan>
+                      樂善國小、文欣國小、</tspan>
                   </tspan>
                   <tspan class="cls-4">
-                    <tspan x="0" y="346.61">大崗國</tspan>
-                    <tspan class="cls-5" x="66" y="346.61">中，</tspan>
-                    <tspan x="100" y="346.61">人文書香薰陶環</tspan>
-                    <tspan class="cls-5" x="254" y="346.61">境。</tspan>
+                    <tspan x="0" y="346.61">大崗國中，人文書香薰陶環境。</tspan>
                   </tspan>
                   <tspan class="cls-7">
                     <tspan class="bold" x="-10" y="387.61">
@@ -163,15 +128,10 @@
                       y="387.61"
                       xml:space="preserve"
                     >
-                      國內規模最大醫療機
-                    </tspan>
-                    <tspan class="cls-9" x="379.52" y="387.61">構，</tspan>
+                      國內規模最大醫療機構，</tspan>
                   </tspan>
                   <tspan class="cls-4">
-                    <tspan x="0" y="428.61">文化二路串連都會生活</tspan>
-                    <tspan class="cls-5" x="220" y="428.61">圈，</tspan>
-                    <tspan x="254" y="428.61">盡享便利機</tspan>
-                    <tspan class="cls-5" x="364" y="428.61">能。</tspan>
+                    <tspan x="0" y="428.61">文化二路串連都會生活圈，盡享便利機能。</tspan>
                   </tspan>
                   <tspan class="cls-7">
                     <tspan class="bold" x="-10" y="469.61">
@@ -183,26 +143,11 @@
                       y="469.61"
                       xml:space="preserve"
                     >
-                      共享A
-                    </tspan>
-                    <tspan class="cls-9" x="253.36" y="469.61">7、</tspan>
-                    <tspan class="cls-8" x="278.76" y="469.61">A</tspan>
-                    <tspan class="cls-9" x="293.2" y="469.61">8、</tspan>
-                    <tspan class="cls-8" x="318.6" y="469.61">A9三大生</tspan>
+                      共享A7、A8、A9三大生</tspan>
                   </tspan>
                   <tspan class="cls-4">
-                    <tspan x="0" y="510.61">活</tspan>
-                    <tspan class="cls-5" x="22" y="510.61">圈，</tspan>
-                    <tspan x="56" y="510.61">國</tspan>
-                    <tspan class="cls-5" x="78" y="510.61">賓、</tspan>
-                    <tspan x="112" y="510.61">威秀雙影</tspan>
-                    <tspan class="cls-5" x="200" y="510.61">城、</tspan>
-                    <tspan x="234" y="510.61">A8 &amp; A9環球百</tspan>
-                    <tspan class="cls-5" x="384.78" y="510.61">貨、</tspan>
-                    <tspan x="0" y="551.61">林口OUTLE</tspan>
-                    <tspan class="cls-5" x="119.08" y="551.61">T，</tspan>
-                    <tspan x="145.28" y="551.61">近享城市精</tspan>
-                    <tspan class="cls-5" x="255.28" y="551.61">彩。</tspan>
+                    <tspan x="0" y="510.61">活圈，國賓、威秀雙影城、A8 &amp; A9環球百</tspan>
+                    <tspan x="0" y="551.61">貨、林口OUTLET，近享城市精彩。</tspan>
                   </tspan>
                 </text>
                 <rect
@@ -251,34 +196,9 @@
     </div>
     <div v-if="isMobile" class="section-item">
       <div v-if="isMobile">
-        <svg
-          class="t2"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 323.66 102.44"
-        >
-          <g id="圖層_2" data-name="圖層 2">
-            <g id="圖層_1-2" data-name="圖層 1">
-              <text class="cls-1" transform="translate(0.16 17.6)">
-                雙國小學區
-              </text>
-              <text class="cls-2" transform="translate(0 52.72)">
-                5-6分鐘雙國小學區|
-                <tspan class="cls-3" x="158.05" y="0" xml:space="preserve">
-                  樂善國
-                </tspan>
-                <tspan class="cls-4" x="216.05" y="0">小、</tspan>
-                <tspan class="cls-5" x="243.25" y="0">文欣國</tspan>
-                <tspan class="cls-4" x="296.05" y="0">小、</tspan>
-                <tspan class="cls-3">
-                  <tspan x="0" y="30">大崗國</tspan>
-                  <tspan class="cls-6" x="52.8" y="30">中，</tspan>
-                  <tspan x="80" y="30">人文書香薰陶環</tspan>
-                  <tspan class="cls-7" x="203.2" y="30">境。</tspan>
-                </tspan>
-              </text>
-            </g>
-          </g>
-        </svg>
+<h3 class="title">雙國小學區</h3>
+<div class="desc"><b>5-6分鐘雙國小學區｜</b>
+                  樂善國小、文欣國小、大崗國中，人文書香薰陶環境。</div>
       </div>
       <swiper v-if="isMobile" :options="swiperOptions2" :instanceName="4">
         <swiper-slide
@@ -306,33 +226,10 @@
     </div>
     <div v-if="isMobile" class="section-item">
       <div v-if="isMobile">
-        <svg
-          class="t3"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 330.66 129.47"
-        >
-          <g id="圖層_2" data-name="圖層 2">
-            <g id="圖層_1-2" data-name="圖層 1">
-              <text class="cls-1" transform="translate(0.16 17.6)">
-                長庚生活圈
-              </text>
-              <text class="cls-2" transform="translate(0 52.72)">
-                6分鐘長庚生活圈|
-                <tspan class="cls-3" x="140.02" y="0" xml:space="preserve">
-                  國內規模最大醫療機構
-                </tspan>
-                <tspan class="cls-4">
-                  <tspan x="-4" y="30">，</tspan>
-                  <tspan class="cls-5" x="9.6" y="30">
-                    文化二路串連都會生活
-                  </tspan>
-                  <tspan x="191.6" y="30">圈，</tspan>
-                  <tspan class="cls-5" x="219.8" y="30">盡享便利機能。</tspan>
-                </tspan>
-              </text>
-            </g>
-          </g>
-        </svg>
+        
+<h3 class="title">長庚生活圈</h3>
+<div class="desc"><b>6分鐘長庚生活圈</b>
+                  國內規模最大醫療機構文化二路串連都會生活盡享便利機能。</div>
       </div>
       <swiper v-if="isMobile" :options="swiperOptions3" :instanceName="5">
         <swiper-slide
@@ -512,6 +409,22 @@
       margin-top: 10vw;
       padding: 0;
       background: rgba(96, 96, 96, 0.2);
+      font-size: calc(100vw * 16 / 375);
+      line-height: 1.7;
+      text-align: justify;
+      color: #606060;
+      overflow: hidden;
+      .title{font-size:1.25em;
+      margin: 10vw 10vw 0;
+      font-weight:400;}
+      .desc{font-size:1em;
+      margin: 0 10vw;
+      font-weight:400;
+      b{
+      font-weight:500;
+        color: #000;
+      }}
+    
 
       &:nth-child(2) {
         margin-top: 0;
@@ -572,11 +485,10 @@
           letter-spacing: 0.1em;
         }
       }
-
       .t2 {
         width: 80vw;
         position: absolute;
-        top: 12vw;
+        top: 30vw;
         left: 50%;
         transform: translateX(-50%);
 
@@ -638,6 +550,7 @@
       }
 
       .swiper-container {
+        position: absolute;
         width: 100%;
         top: 100%;
         transform: translateY(-100%);
