@@ -102,7 +102,7 @@
     .view {
       display: inline-flex;
       width: auto;
-      background: url("~@/projects/sv2/s2/view.jpg");
+      background: url("s2/view.jpg");
       background-size: cover;
       background-position: bottom;
 

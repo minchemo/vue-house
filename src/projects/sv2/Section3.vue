@@ -355,22 +355,22 @@ export default {
       swiperList: [
         {
           id: "0001",
-          imgUrl: require("./s3/1.png"),
+          imgUrl: require("./s3/1.jpg"),
           title: "中山高速道路"
         },
         {
           id: "0002",
-          imgUrl: require("./s3/2.png"),
+          imgUrl: require("./s3/2.jpg"),
           title: "A7體育大學站"
         },
         {
           id: "0003",
-          imgUrl: require("./s3/3.png"),
+          imgUrl: require("./s3/3.jpg"),
           title: "Youbike站"
         },
         {
           id: "0004",
-          imgUrl: require("./s3/4.png"),
+          imgUrl: require("./s3/4.jpg"),
           title: "A7捷運站"
         }
       ]

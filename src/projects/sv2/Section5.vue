@@ -228,7 +228,7 @@
       <div v-if="isMobile">
         
 <h3 class="title">長庚生活圈</h3>
-<div class="desc"><b>6分鐘長庚生活圈</b>
+<div class="desc"><b>6分鐘長庚生活圈｜</b>
                   國內規模最大醫療機構文化二路串連都會生活盡享便利機能。</div>
       </div>
       <swiper v-if="isMobile" :options="swiperOptions3" :instanceName="5">

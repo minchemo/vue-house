@@ -221,7 +221,7 @@
     display: block;
     height: 100%;
     position: relative;
-    background: url("~@/projects/sv2/s1/bg.png");
+    background: url("s1/bg.jpg");
     background-size: cover;
     background-position: bottom;
     filter: brightness(0.3);
