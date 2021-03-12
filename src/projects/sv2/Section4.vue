@@ -13,7 +13,14 @@
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
 
+    <div class="txt">
+      <h3 class="title1">全台最美<br>科學園區第一排</h3>
+      <div class="title2">體驗/未來與成就</div>
+      <div class="desc1">華亞科學園區<hr v-if="!isMobile"><br v-if="isMobile">樂善科技園區<hr v-if="!isMobile"><br v-if="isMobile">中華郵政物流中心</div>
+      <div class="desc2">三大園區制霸A7高科技廊帶<br>領袖菁英首選住居</div>
+    </div>
     <div class="title" data-aos="fade-up" data-aos-delay="300">
+
       <svg
         v-if="!isMobile"
         xmlns="http://www.w3.org/2000/svg"
@@ -375,7 +382,46 @@
   height: 70vw;
   background-color: rgba(96, 96, 96, 0.2);
 
+
+  .txt{width:100%;
+    position: absolute;
+    top: calc(50% - 14vw);
+    width: 30vw;
+    height: 28vw;
+    z-index: 1;
+    left: 10vw;
+    color: #fff;
+    font-size:calc(100vw * 21 / 1920);
+    line-height: 2;
+    background: #b59668;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    letter-spacing: 0.1em;
+    
+    .title1{font-weight: 700;
+    line-height: 1.3;
+    font-size: 1.8em;}
+    .title2{font-weight: 600;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 1.3em 0 0.9em 0;
+    border: solid currentColor;
+    border-width: 1px 0 1px 0;
+    }
+    .desc1{font-weight: 400;
+    font-size: 1em;
+    hr{display:inline-block;width:1em;border: 0;background: currentColor;height: 1px;transform: rotate(90deg);transform-origin: center center;vertical-align: middle;}
+    }
+    .desc2{font-weight: 400;
+    font-size: 1em;
+    }
+    }
+
+
   .title {
+    display: none;
     background: #b59668;
     width: 30vw;
     height: 28vw;
@@ -470,6 +516,18 @@
     width: 100vw;
     height: 210vw;
     margin-top: 10vw;
+
+    .txt{
+      width: 100%;
+      height: 110vw;
+      top:0;
+      left: 0;
+    font-size:calc(100vw * 16 / 375);
+    .title2{
+    margin: 1.3em 0 0.5em 0;}
+    .desc2{border-top: 1px solid #fff;margin-top: 0.5em;padding-top: 0.5em;
+    }
+    }
 
     .title {
       width: 100%;

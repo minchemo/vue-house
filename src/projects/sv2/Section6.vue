@@ -114,7 +114,7 @@
         class="t3"
         v-if="!isMobile"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 450.37 641.07"
+        viewBox="0 0 450.37 330"
       >
         <g id="圖層_2" data-name="圖層 2">
           <g id="圖層_1-2" data-name="圖層 1">
@@ -508,6 +508,9 @@
           </g>
         </g>
       </svg>
+      <div class="l" v-if="!isMobile"></div>
+      <div class="txt3"><b>7.4米挑高接待大廳</b>
+        給家人尊榮的返家體驗</div>
 
       <svg
         v-if="isMobile"
@@ -568,20 +571,6 @@
         ></div>
       </swiper>
 
-      <div v-if="isMobile" class="title2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.07 80">
-          <g id="圖層_2" data-name="圖層 2">
-            <g id="圖層_1-2" data-name="圖層 1">
-              <text class="cls-1" transform="translate(1.14 62.37)">
-                給家人尊榮的返家體驗
-              </text>
-              <text class="cls-2" transform="translate(0 26.4)">
-                7.4米挑高接待大廳
-              </text>
-            </g>
-          </g>
-        </svg>
-      </div>
     </div>
   </div>
 </template>
@@ -591,7 +580,9 @@
 .section6 {
   .section-item {
     width: 100%;
-    height: 70vw;
+  height: calc(100vh - 55px);
+  min-height:calc(100vw * 900 / 1920 - 55px);
+  max-height:calc(100vw * 1080 / 1920 - 55px);
     background-color: rgba(96, 96, 96, 0.2);
     position: relative;
 
@@ -607,7 +598,7 @@
     .t1 {
       position: absolute;
       z-index: 2;
-      top: 40vw;
+      bottom:0 ;
       width: 50vw;
       left: 50%;
       transform: translate(-50%, 0);
@@ -655,7 +646,7 @@
     .t3 {
       position: absolute;
       z-index: 2;
-      top: 18vw;
+      top:5vw;
       width: 30vw;
       left: 10vw;
       transform: translate(0, 0);
@@ -668,14 +659,29 @@
         fill: #b59668;
       }
     }
-
+    .l{width: 1px;height: calc(100% - 32vw);position: absolute;top: 27vw;left: 11vw;background: #fff;z-index: 3;}
+.txt3{
+  font-size:calc(100vw * 30 / 1920);
+    position: absolute;
+    left:12.5vw;
+    bottom: 5vw;
+    color: #fff;
+      z-index: 2;
+      line-height: 1.6;
+      text-align: left;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      b{display: block;font-size: 1.3em;
+      letter-spacing: 0em;}
+    }
     .swiper-container {
       width: 100%;
+      height: 100%;
       top: 0;
       transform: translateY(0%);
 
       .swiper-slide {
-        height: 70vw;
+      height: 100%;
         background-size: cover;
         background-position: center center;
 
@@ -730,6 +736,8 @@
       position: relative;
       width: 100vw;
       height: 200vw;
+  min-height:0;
+  max-height:calc(100vw * 9000 / 375);
       margin-top: 0vw;
       padding: 0;
       background: #fff;
@@ -737,15 +745,16 @@
       &:nth-child(2) {
         background: #000;
         margin-top: 0vw;
-        height: 240vw;
-        .swiper-container {
-          top: 85%;
+      height: 240vw;
+     .swiper-container {
+          top: 43%;
+        height: 100vw;
         }
       }
 
       .title2 {
         width: 90%;
-        bottom: 15px;
+        bottom: 6vw;
         position: absolute;
         left: -7vw;
 
@@ -804,6 +813,10 @@
         }
       }
 
+      .txt3{
+  font-size:calc(100vw * 23 / 375);
+    left:13vw;
+    bottom: 8vw;}
       .t4 {
         position: absolute;
         z-index: 2;
@@ -841,8 +854,11 @@
 
       .swiper-container {
         width: 100%;
-        top: 100%;
-        transform: translateY(-100%);
+        top: auto;
+        left: 0;
+        bottom: 0;
+        height: auto;
+        position: absolute;
 
         .swiper-slide {
           height: 100vw;

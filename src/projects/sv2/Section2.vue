@@ -2,6 +2,14 @@
   <div class="section2">
     <div class="view">
       <img v-if="isMobile" src="~@/projects/sv2/s2/view.jpg" alt="" />
+    <div class="txt">
+      <h3 class="title1">頂級雙園景渡假村<br>把幸福生活，帶往新高度</h3>
+      <div class="title3">
+        置身城市綠洲，體驗四季優美<br>
+        林口大生活圈A7全新視野<br>
+        構築無憂假期，無需遠求，就是家的日常</div>
+    </div>
+    <!--
       <svg
         class="t1"
         xmlns="http://www.w3.org/2000/svg"
@@ -38,6 +46,7 @@
           </g>
         </g>
       </svg>
+      -->
     </div>
   </div>
 </template>
@@ -46,7 +55,9 @@
 /* 螢幕尺寸標準 */
 .section2 {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 55px);
+  min-height:calc(100vw * 900 / 1920 - 55px);
+  max-height:calc(100vw * 1080 / 1920 - 55px);
 
   .view {
     height: 100%;
@@ -54,36 +65,21 @@
     background: url("~@/projects/sv2/s2/view.jpg");
     background-size: cover;
     background-position: bottom;
-
-    .t1 {
-      width: 25vw;
-      max-width: 600px;
-      position: absolute;
-      top: 10vw;
-      z-index: 1;
-      left: calc(50% - 25vw * 0.5);
-      // transform: translate(-50%, 0);
-      overflow: visible;
-
-      .cls-1 {
-        font-size: 37.18px;
-        font-weight: bold;
-        fill: #f4f1f2;
-        font-family: NotoSansCJKtc-Black-B5pc-H, Noto Sans CJK TC;
-      }
-      .cls-2 {
-        letter-spacing: -0.25em;
-      }
-      .cls-3 {
-        font-size: 20px;
-        fill: #fff;
-        font-family: NotoSansCJKtc-Medium-B5pc-H, Noto Sans CJK TC;
-        letter-spacing: 0.1em;
-      }
-      .cls-4 {
-        letter-spacing: -0.15em;
-      }
+  .txt{width:100%;
+    position: absolute;
+    top: calc(50% - 15vw);
+    z-index: 1;
+    left: 0;
+    color: #fff;
+    font-size:calc(100vw * 45 / 1920);
+    line-height: 1.3;
+    .title3{font-weight: 400;
+    font-size: 0.55em;
+    letter-spacing: 0.04em;
+    margin: 4em 0 0;
+    line-height: 2;
     }
+  }
   }
 }
 
@@ -96,6 +92,8 @@
   .section2 {
     width: 100vw;
     height: calc(100vh - 60px - 63px);
+  min-height:calc(100vw * 604 / 375 - 60px - 63px);
+  max-height:calc(100vw * 750 / 375 - 60px - 63px);
     overflow-y: hidden;
     overflow-x: scroll;
 
@@ -110,12 +108,11 @@
         height: 100%;
         visibility: hidden;
       }
+  .txt{
+    font-size:calc(100vw * 27 / 375);top: calc(75% - 90vw);
+    .title3{font-weight:400;letter-spacing: 0.1em;}
+    }
 
-      .t1 {
-        top: 20vw;
-        width: 80vw;
-        left: calc(50% - 80vw * 0.5);
-      }
     }
   }
 }

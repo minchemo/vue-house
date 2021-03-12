@@ -2,6 +2,14 @@
   <div class="section5">
     <div class="section-item">
       <div v-if="isMobile">
+<h3 class="title1">大林口四百貨商圈<br>A7旗艦風格新地標</h3>
+<h3 class="title2">雙影城、四百貨，釋放城市精髓盡興探索都會、饗樂風格和生活品味</h3>
+<h3 class="title3">體驗/生活與校園</h3>
+<h3 class="title">大林口商圈</h3>
+<div class="desc"><b>10分鐘樂遊大林口｜</b>共享A7、A8、A9三大生活圈，國賓、威秀雙影城、A8 &amp; A9環球百貨、林口OUTLET，近享城市精彩。</div>
+      </div>
+      <!--
+      <div v-if="isMobile">
         <svg
           class="t1"
           xmlns="http://www.w3.org/2000/svg"
@@ -50,6 +58,8 @@
           </g>
         </svg>
       </div>
+
+      -->
       <swiper v-if="isMobile" :options="swiperOptions1" :instanceName="3">
         <swiper-slide
           v-for="item of swiperList"
@@ -87,6 +97,9 @@
           <p>復興一路商圈</p>
         </div>
         <div class="title" data-aos="fade-up" data-aos-delay="300">
+
+
+
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.51 692.43">
             <g id="圖層_2" data-name="圖層 2">
               <g id="圖層_1-2" data-name="圖層 1">
@@ -197,8 +210,7 @@
     <div v-if="isMobile" class="section-item">
       <div v-if="isMobile">
 <h3 class="title">雙國小學區</h3>
-<div class="desc"><b>5-6分鐘雙國小學區｜</b>
-                  樂善國小、文欣國小、大崗國中，人文書香薰陶環境。</div>
+<div class="desc"><b>5-6分鐘雙國小學區｜</b>樂善國小、文欣國小、大崗國中，人文書香薰陶環境。</div>
       </div>
       <swiper v-if="isMobile" :options="swiperOptions2" :instanceName="4">
         <swiper-slide
@@ -228,8 +240,7 @@
       <div v-if="isMobile">
         
 <h3 class="title">長庚生活圈</h3>
-<div class="desc"><b>6分鐘長庚生活圈｜</b>
-                  國內規模最大醫療機構文化二路串連都會生活盡享便利機能。</div>
+<div class="desc"><b>6分鐘長庚生活圈｜</b>國內規模最大醫療機構文化二路串連都會生活盡享便利機能。</div>
       </div>
       <swiper v-if="isMobile" :options="swiperOptions3" :instanceName="5">
         <swiper-slide
@@ -411,16 +422,34 @@
       background: rgba(96, 96, 96, 0.2);
       font-size: calc(100vw * 16 / 375);
       line-height: 1.7;
-      text-align: justify;
+      text-align: center;
       color: #606060;
       overflow: hidden;
+      font-weight:400;
+      
+      .title1{font-size:1.75em;
+      margin: 5vw 10vw 0;
+      color: #b59668;
+      font-weight:400;}
+      .title2{
+      margin: 3vw 10vw 0;
+      font-weight:400;}
+      .title3{font-size:1.3em;
+      margin: 6vw auto 0;
+      display:inline-block;
+      border: solid currentColor;
+      border-width: 1px 0 1px 0;
+      font-weight:400;}
       .title{font-size:1.25em;
-      margin: 10vw 10vw 0;
+      text-align: justify;
+      margin: 1.5em 10vw 0;
       font-weight:400;}
       .desc{font-size:1em;
+      text-align: justify;
       margin: 0 10vw;
       font-weight:400;
       b{
+      text-align: justify;
       font-weight:500;
         color: #000;
       }}
