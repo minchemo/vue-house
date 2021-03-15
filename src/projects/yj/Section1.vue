@@ -1320,7 +1320,7 @@
     }
 
     .item6 {
-      display: none;
+      display: block;
       top: 410vw;
       z-index: 50;
 
@@ -1372,7 +1372,7 @@
 
     .item-contact {
       //上面區塊高
-      margin: 407vw 0 0 0;
+      margin: 447vw 0 0 0;
       position: relative;
       z-index: 50;
     }
