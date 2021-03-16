@@ -27,6 +27,9 @@
     height: 100%;
 }
 
+.img-fluid {
+    max-width: 100%;
+}
 .relative {
     position: relative;
 }
@@ -153,22 +156,42 @@
 }
 
 .swiper-container {
-    .mask {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-image: url('~@/projects/sv2/mask.png');
+    .swiper-slide {
+        height: 25vw;
         background-size: cover;
-        z-index: 10;
+        background-position: center center;
     }
 
+    .swiper-button-next {
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 0;
+        border-radius: 100%;
+        &:after {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    }
+
+    .swiper-button-prev {
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 0;
+        border-radius: 100%;
+        &:after {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    }
     .swiper-pagination-bullets {
         bottom: 1.5vw !important;
 
         .swiper-pagination-bullet {
-            background: transparent;
+            background: #fff;
             border: 1px solid #fff;
             opacity: 0.8;
             width: 18px;
@@ -176,7 +199,8 @@
             margin: 0 0.5vw !important;
         }
         .swiper-pagination-bullet-active {
-            background: #fff;
+            background: #000;
+            border-color: #000;
         }
     }
 }
@@ -266,14 +290,11 @@
     }
 
     .swiper-container {
-        .mask {
-            display: none;
-        }
         .swiper-pagination-bullets {
             bottom: 30px !important;
 
             .swiper-pagination-bullet {
-                background: transparent;
+                background: #fff;
                 border: 1px solid #fff;
                 opacity: 0.8;
                 width: 12px;
@@ -281,7 +302,8 @@
                 margin: 0 1.2vw !important;
             }
             .swiper-pagination-bullet-active {
-                background: #fff;
+                background: #000;
+                border-color: #000;
             }
         }
 

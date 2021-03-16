@@ -85,36 +85,8 @@
                 ></el-option>
               </el-select>
             </div>
-            <div class="row">
-              <label>需求房型</label>
-              <el-select v-model="form.room" placeholder>
-                <el-option
-                  v-for="room in roomList"
-                  :key="room.value"
-                  :label="room.label"
-                  :value="room.value"
-                  no-data-text="請先選擇房型"
-                ></el-option>
-              </el-select>
-            </div>
           </div>
           <div class="group">
-            <div class="row">
-              <el-input
-                type="textarea"
-                :rows="1"
-                placeholder="以您需求的房型評估，認為合理的總價範圍是多少錢?"
-                v-model="form.msg2"
-              ></el-input>
-            </div>
-            <div class="row">
-              <el-input
-                type="textarea"
-                :rows="1"
-                placeholder="符合您購買意願的單坪售價?"
-                v-model="form.msg3"
-              ></el-input>
-            </div>
             <div class="row">
               <el-input
                 type="textarea"
@@ -154,7 +126,7 @@
           :disabled="!checked || !isVerify"
           @click="submit"
           :loading="isSubmit"
-          >立即預約</el-button
+          >預約賞屋</el-button
         >
         <Loading :loading="isSubmit" :isOpacity="true" />
       </div>
@@ -216,12 +188,6 @@ export default {
   computed: {
     areaList() {
       return renderAreaList(this.form.city);
-    },
-    roomList() {
-      return [
-        { label: "兩房", value: "兩房" },
-        { label: "三房", value: "三房" }
-      ];
     }
   },
 
@@ -268,9 +234,9 @@ export default {
       formData.append("phone", this.form.phone);
       formData.append("email", this.form.email);
       formData.append("msg", this.form.msg);
-      formData.append("msg2", this.form.msg2);
-      formData.append("msg3", this.form.msg3);
-      formData.append("room", this.form.room);
+      //formData.append("msg2", this.form.msg2);
+      //formData.append("msg3", this.form.msg3);
+      //formData.append("room", this.form.room);
       // formData.append('time_start', this.form.time_start)
       // formData.append('time_end', this.form.time_end)
       formData.append("city", this.form.city);
@@ -331,13 +297,16 @@ export default {
   background-repeat: no-repeat;
   position: relative;
   background-size: 100vw auto;
-  background-attachment: fixed;
-  background-position: 0% 50%;
+  //background-attachment: fixed;
+  background-position: 0% 0%;
   font-family: $family3;
   input,
   textarea,
   button {
     font-family: $family3;
+
+    border-color: $order_submit_color;
+    border: 2px solid !important;
   }
   .order-top {
     position: relative;
@@ -402,7 +371,7 @@ export default {
       .row {
         justify-content: flex-end;
         align-items: flex-start;
-        //height: 100%;
+        height: 100%;
       }
     }
   }
@@ -469,7 +438,7 @@ export default {
     .order-title {
       padding-top: 10px;
       padding-bottom: 5px;
-      font-size: calc(100vw * 20 / 375);
+      font-size: calc(100vw * 30 / 375);
     }
 
     .order-subtitle {

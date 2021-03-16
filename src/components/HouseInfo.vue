@@ -34,7 +34,7 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  // background: $house_bg;
+  background: $house_bg;
   position: relative;
   z-index: 1;
 }

@@ -255,7 +255,7 @@ img[lazy='loaded'] {
     .home {
         padding-top: $nav_tablet_height;
         background-color: $order_bg_color;
-        background-image: $order_bg_image;
+        //background-image: $order_bg_image;
         background-repeat: no-repeat;
         background-size: 100vw auto;
         background-attachment: fixed;
@@ -349,7 +349,7 @@ img[lazy='loaded'] {
     .home {
         padding-top: $nav_phone_height;
         background-color: $order_bg_color;
-        background-image: $order_bg_image_m;
+        //background-image: $order_bg_image_m;
         // background-repeat: no-repeat;
         // background-size: cover;
         background-attachment: fixed;

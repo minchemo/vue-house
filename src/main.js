@@ -70,6 +70,9 @@ Vue.use(Vue2TouchEvents);
 
 Vue.use(VueAwesomeSwiper /* { default options with global component } */);
 
+import imageZoom from "vue-image-zoomer";
+Vue.component("image-zoom", imageZoom);
+
 new Vue({
   router,
   store,

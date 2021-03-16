@@ -136,22 +136,11 @@ export default {
   transform: translateY(0);
   margin: 2vw auto 0vw;
   padding: 70px 0 30px;
-
-  .decor-5 {
-    width: 22vw;
-    top: -12vh;
-    left: -2vw;
-    z-index: 5;
-
-    img {
-      width: 100%;
-    }
-  }
 }
 
 .logo {
-  width: auto;
-  height: $contact_logo_pc_width;
+  //width: auto;
+  width: $contact_logo_pc_width;
   margin: 0 auto;
   margin-bottom: 60px;
 }
@@ -242,7 +231,7 @@ export default {
   color: $contact_google_btn_color;
   background: $contact_google_btn_bg;
   background-position: center !important;
-  box-shadow: $contact_btn_border;
+  //box-shadow: $contact_btn_border;
   transition: all 0.5s;
 
   svg {
