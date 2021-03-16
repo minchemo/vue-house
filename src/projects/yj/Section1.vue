@@ -864,13 +864,17 @@
         <h1>怡家．格局</h1>
         <div class="photos">
           <div class="photo photo-1 left">
-            <div class="info">圖的說明</div>
+            <img src="./s1/item6-1.jpg" alt="" class="img" />
+         <!--   <div class="info">圖的說明</div>  -->
           </div>
           <div class="photo photo-2 active">
-            <div class="info">圖的說明</div>
+            <img src="./s1/item6-2.jpg" alt="" class="img" />
           </div>
           <div class="photo photo-3 right">
-            <div class="info">圖的說明</div>
+            <img src="./s1/item6-3.jpg" alt="" class="img" />
+          </div>
+          <div class="photo photo-4 right">
+            <img src="./s1/item6-4.jpg" alt="" class="img" />
           </div>
         </div>
       </div>
@@ -1346,7 +1350,10 @@
           position: relative;
           box-shadow: 0 0 20px rgb(0 0 0 / 30%);
           transition: all 0.3s;
-          cursor: pointer;
+          cursor: pointer; 
+          .img{
+              width: 100%;
+            }
 
           .info {
             position: absolute;
@@ -1745,6 +1752,7 @@
 
         .photos {
           padding-top: 20vw;
+
           .photo {
             width: 70vw;
             height: 50vw;
@@ -1773,7 +1781,7 @@
         }
       }
       .item-contact {
-        margin: 1160vw 0 0 0;
+        margin: 1260vw 0 0 0;
         position: relative;
         z-index: 50;
       }
