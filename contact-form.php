@@ -1,7 +1,7 @@
-
-    $room         = isset($_POST['room']) ? $_POST['room'] : ''; // 房型
-    $msg2          = isset($_POST['msg2']) ? $_POST['msg2'] : ''; // 評估合理價位
-    $msg3          = isset($_POST['msg3']) ? $_POST['msg3'] : ''; // 購買意願的單坪售價
+<?php
+    //$room         = isset($_POST['room']) ? $_POST['room'] : ''; // 房型
+    //$msg2          = isset($_POST['msg2']) ? $_POST['msg2'] : ''; // 評估合理價位
+    //$msg3          = isset($_POST['msg3']) ? $_POST['msg3'] : ''; // 購買意願的單坪售價
     $name         = isset($_POST['name']) ? $_POST['name'] : '';
     $phone        = isset($_POST['phone']) ? $_POST['phone'] : '';
     $user_email   = isset($_POST['email']) ? $_POST['email'] : '';
