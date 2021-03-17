@@ -6,8 +6,8 @@
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 892.6 500.38"
       data-aos="fade-up"
-      data-aos-delay="300"
-      data-aos-anchor-placement="bottom"
+      data-aos-duration="1000"
+      data-aos-delay="1000"
     >
       >
       <text class="cls-1">
@@ -52,6 +52,9 @@
       class="t1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 326.4 360"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="2000"
     >
       <g id="圖層_2" data-name="圖層 2">
         <g id="圖層_1-2" data-name="圖層 1">

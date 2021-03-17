@@ -1,10 +1,17 @@
 <template>
   <div class="section1">
     <img src="./s1/t1.gif" class="logo" data-aos="fade" data-aos-delay="100" />
-    <div class="txt">
+    <div
+      class="txt"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="500"
+    >
       <h3 class="title1">Check in奢華的完美假期</h3>
       <h4 class="title2">體驗式風格 休旅美學</h4>
-      <div class="title3">打造<b>2021</b>獨有生活風格新地標｜重繪A7最美天際線</div>
+      <div class="title3">
+        打造<b>2021</b>獨有生活風格新地標｜重繪A7最美天際線
+      </div>
     </div>
     <div class="bg"></div>
   </div>
@@ -23,22 +30,29 @@
     left: calc(50% - 7.5vw);
     z-index: 2;
   }
-  .txt{width:100%;
+  .txt {
+    width: 100%;
     position: absolute;
     top: calc(50% + 5vw);
     z-index: 1;
     left: 0;
     color: #fff;
-    font-size:calc(100vw * 46 / 1920);
+    font-size: calc(100vw * 46 / 1920);
     line-height: 1.3;
-    .title2{font-weight: 400;
-    font-size: 1.22em;
-    color:#b59668;}
-    .title3{font-weight: 600;
-    font-size: 0.6em;
-    b{letter-spacing: 0.02em;font-size: 1.15em;}
+    .title2 {
+      font-weight: 400;
+      font-size: 1.22em;
+      color: #b59668;
     }
+    .title3 {
+      font-weight: 600;
+      font-size: 0.6em;
+      b {
+        letter-spacing: 0.02em;
+        font-size: 1.15em;
+      }
     }
+  }
   .bg {
     display: block;
     height: 100%;
@@ -58,7 +72,7 @@
 @media only screen and (max-width: 767px) {
   .section1 {
     height: calc(100vh - 60px - 63px);
-    max-height:calc(100vw * 750 / 375);
+    max-height: calc(100vw * 750 / 375);
     min-height: calc(100vw * 530 / 375);
     margin-top: 60px;
     .logo {
@@ -67,9 +81,14 @@
       left: calc(50% - 29vw);
       z-index: 2;
     }
-  .txt{
-    font-size:calc(100vw * 21 / 375);top: calc(50% + 20vw);
-    .title3{font-weight:400;letter-spacing: 0.1em;text-shadow: 0 0 0.8em #069;}
+    .txt {
+      font-size: calc(100vw * 21 / 375);
+      top: calc(50% + 20vw);
+      .title3 {
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-shadow: 0 0 0.8em #069;
+      }
     }
   }
 }

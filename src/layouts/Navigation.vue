@@ -7,7 +7,7 @@
             class="logo"
             src="@/assets/img/nav-logo.png"
             alt
-            v-scroll-to="{ element: `#section1` }"
+            v-scroll-to="{ element: `#app` }"
           />
           <div class="menu" @click="toggleSidebar">
             <font-awesome-icon icon="bars" />
@@ -17,7 +17,7 @@
             <li
               :key="item.name"
               v-scroll-to="{
-                element: `#${item.section}`,
+                element: `.${item.section}`,
                 offset: isMobile ? item.mobileOffset : offset
               }"
               v-for="item in list"

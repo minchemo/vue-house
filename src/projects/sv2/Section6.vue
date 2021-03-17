@@ -7,6 +7,9 @@
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 959 489"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="2000"
       >
         <g class="cls-1">
           <g id="圖層_2" data-name="圖層 2">
@@ -57,6 +60,9 @@
         class="t2"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 326.4 263.49"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="2000"
       >
         <g id="圖層_2" data-name="圖層 2">
           <g id="圖層_1-2" data-name="圖層 1">
@@ -109,12 +115,15 @@
         ></div>
       </swiper>
     </div>
-    <div class="section-item">
+    <div class="section-item section6-scroll">
       <svg
         class="t3"
         v-if="!isMobile"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 450.37 330"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="2000"
       >
         <g id="圖層_2" data-name="圖層 2">
           <g id="圖層_1-2" data-name="圖層 1">
@@ -508,15 +517,30 @@
           </g>
         </g>
       </svg>
-      <div class="l" v-if="!isMobile"></div>
-      <div class="txt3"><b>7.4米挑高接待大廳</b>
-        給家人尊榮的返家體驗</div>
+      <div
+        class="l"
+        v-if="!isMobile"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
+      ></div>
+      <div
+        class="txt3"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
+      >
+        <b>7.4米挑高接待大廳</b> 給家人尊榮的返家體驗
+      </div>
 
       <svg
         v-if="isMobile"
         class="t4"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 326.49 349.52"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
       >
         <g id="圖層_2" data-name="圖層 2">
           <g id="圖層_1-2" data-name="圖層 1">
@@ -570,7 +594,6 @@
           slot="pagination"
         ></div>
       </swiper>
-
     </div>
   </div>
 </template>
@@ -580,9 +603,9 @@
 .section6 {
   .section-item {
     width: 100%;
-  height: calc(100vh - 55px);
-  min-height:calc(100vw * 900 / 1920 - 55px);
-  max-height:calc(100vw * 1080 / 1920 - 55px);
+    height: calc(100vh - 55px);
+    min-height: calc(100vw * 900 / 1920 - 55px);
+    max-height: calc(100vw * 1080 / 1920 - 55px);
     background-color: rgba(96, 96, 96, 0.2);
     position: relative;
 
@@ -598,12 +621,12 @@
     .t1 {
       position: absolute;
       z-index: 2;
-      bottom:0 ;
+      bottom: 0;
       width: 50vw;
       left: 50%;
-      transform: translate(-50%, 0);
       pointer-events: none;
       filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.6));
+      margin-left: -25vw;
 
       .cls-1 {
         isolation: isolate;
@@ -646,10 +669,9 @@
     .t3 {
       position: absolute;
       z-index: 2;
-      top:5vw;
+      top: 5vw;
       width: 30vw;
       left: 10vw;
-      transform: translate(0, 0);
       pointer-events: none;
       filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.6));
       .cls-1 {
@@ -659,20 +681,31 @@
         fill: #b59668;
       }
     }
-    .l{width: 1px;height: calc(100% - 32vw);position: absolute;top: 27vw;left: 11vw;background: #fff;z-index: 3;}
-.txt3{
-  font-size:calc(100vw * 30 / 1920);
-    position: absolute;
-    left:12.5vw;
-    bottom: 5vw;
-    color: #fff;
+    .l {
+      width: 1px;
+      height: calc(100% - 32vw);
+      position: absolute;
+      top: 27vw;
+      left: 11vw;
+      background: #fff;
+      z-index: 3;
+    }
+    .txt3 {
+      font-size: calc(100vw * 30 / 1920);
+      position: absolute;
+      left: 12.5vw;
+      bottom: 5vw;
+      color: #fff;
       z-index: 2;
       line-height: 1.6;
       text-align: left;
       font-weight: 400;
       letter-spacing: 0.1em;
-      b{display: block;font-size: 1.3em;
-      letter-spacing: 0em;}
+      b {
+        display: block;
+        font-size: 1.3em;
+        letter-spacing: 0em;
+      }
     }
     .swiper-container {
       width: 100%;
@@ -681,7 +714,7 @@
       transform: translateY(0%);
 
       .swiper-slide {
-      height: 100%;
+        height: 100%;
         background-size: cover;
         background-position: center center;
 
@@ -736,8 +769,8 @@
       position: relative;
       width: 100vw;
       height: 200vw;
-  min-height:0;
-  max-height:calc(100vw * 9000 / 375);
+      min-height: 0;
+      max-height: calc(100vw * 9000 / 375);
       margin-top: 0vw;
       padding: 0;
       background: #fff;
@@ -745,10 +778,10 @@
       &:nth-child(2) {
         background: #000;
         margin-top: 0vw;
-      height: 240vw;
-     .swiper-container {
+        height: 240vw;
+        .swiper-container {
           top: 43%;
-        height: 100vw;
+          height: 100vw;
         }
       }
 
@@ -780,7 +813,7 @@
         top: 16vw;
         width: 90vw;
         left: 50%;
-        transform: translate(-50%, 0);
+        margin-left: -45vw;
         pointer-events: none;
 
         .cls-1,
@@ -813,10 +846,11 @@
         }
       }
 
-      .txt3{
-  font-size:calc(100vw * 23 / 375);
-    left:13vw;
-    bottom: 8vw;}
+      .txt3 {
+        font-size: calc(100vw * 23 / 375);
+        left: 13vw;
+        bottom: 8vw;
+      }
       .t4 {
         position: absolute;
         z-index: 2;
@@ -825,6 +859,7 @@
         left: 50%;
         transform: translate(-50%, 0);
         pointer-events: none;
+        margin-left: -45vw;
 
         .cls-1 {
           font-size: 30px;

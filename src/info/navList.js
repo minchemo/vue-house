@@ -33,7 +33,7 @@ export default [
     section: "section5",
     svgSrc: "",
     offset: -150,
-    mobileOffset: -50
+    mobileOffset: 730
   },
   {
     name: "公園綠地",
@@ -48,12 +48,12 @@ export default [
     name: "極上公設",
     imgSrc: "",
     subTitle: "",
-    section: "section6",
+    section: "section6-scroll",
     svgSrc: "",
     offset: 1250,
-    mobileOffset: 700
+    mobileOffset: 1250
   },
-  {
+  /*{
     name: "閱讀人文",
     imgSrc: "",
     subTitle: "",
@@ -61,7 +61,7 @@ export default [
     svgSrc: "",
     offset: 100,
     mobileOffset: 0
-  },
+  },*/
   {
     name: "預約賞屋",
     imgSrc: "",
