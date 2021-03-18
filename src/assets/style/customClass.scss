@@ -174,9 +174,9 @@ svg {
 
     .item-cal {
         position: absolute;
-        transition: all 1s;
+        transition: all 0.5s;
         background-position: 0 0;
-        animation: OutCal 1s;
+        animation: OutCal 0.5s;
         z-index: 1;
         cursor: pointer;
         opacity: 0;
@@ -184,7 +184,7 @@ svg {
 
         &.active {
             /*ackground-position: 0vw 0;*/
-            animation: InCal 1s;
+            animation: InCal 0.5s;
             opacity: 1;
             z-index: 2;
         }
@@ -213,6 +213,12 @@ svg {
     }
 }
 .item {
+    &.item6 {
+        .next,
+        .prev {
+            display: none;
+        }
+    }
     &.item5 {
         .item-cal-pagination {
             bottom: 15vw;
@@ -227,15 +233,27 @@ svg {
         .item-cal-pagination {
             bottom: 10vw;
         }
+        .next,
+        .prev {
+            top: 60%;
+        }
     }
     &.item2 {
         .item-cal-pagination {
             bottom: 12vw;
         }
+        .next,
+        .prev {
+            top: 55%;
+        }
     }
     &.item1 {
         .item-cal-pagination {
             bottom: 15vw;
+        }
+        .next,
+        .prev {
+            top: 40%;
         }
     }
 
@@ -259,6 +277,61 @@ svg {
             &.active {
                 background-color: #fff;
             }
+        }
+    }
+
+    .next {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 3vw;
+        top: 50%;
+        z-index: 50;
+        border-top: 5px solid #fff;
+        border-right: 5px solid #fff;
+        transform: rotate(45deg);
+        cursor: pointer;
+        transition: all 0.3s;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    .prev {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 3vw;
+        top: 50%;
+        z-index: 50;
+        border-bottom: 5px solid #fff;
+        border-left: 5px solid #fff;
+        transform: rotate(45deg);
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}
+
+.swiper-container {
+    .swiper-pagination-bullets {
+        bottom: 1.5vw !important;
+
+        .swiper-pagination-bullet {
+            background: transparent;
+            border: 1px solid #fff;
+            opacity: 0.8;
+            width: 18px;
+            height: 18px;
+            margin: 0 0.5vw !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: #fff;
         }
     }
 }
@@ -338,7 +411,51 @@ svg {
         justify-content: flex-end;
     }
 
-    .decor {
-        display: none;
+    .item {
+        &.item6 {
+            .next,
+            .prev {
+                display: none;
+            }
+        }
+        &.item5 {
+        }
+        &.item4 {
+            .next,
+            .prev {
+                top: 60%;
+            }
+        }
+        &.item3 {
+            .next,
+            .prev {
+                top: 60%;
+            }
+        }
+        &.item2 {
+            .next,
+            .prev {
+                top: 55%;
+            }
+        }
+        &.item1 {
+            .next,
+            .prev {
+                top: 60%;
+            }
+        }
+
+        .next {
+            width: 20px;
+            height: 20px;
+            right: 6vw;
+            top: 50%;
+        }
+        .prev {
+            width: 20px;
+            height: 20px;
+            left: 6vw;
+            top: 50%;
+        }
     }
 }

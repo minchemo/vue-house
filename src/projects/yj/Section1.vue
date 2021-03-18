@@ -862,10 +862,31 @@
       </div>
       <div class="item item6">
         <h1>怡家．格局</h1>
-        <div class="photos">
+        <swiper :options="swiperOptions" :instanceName="2">
+          <swiper-slide
+            v-for="item of swiperList"
+            :key="item.id"
+            :style="{ backgroundImage: `url(${item.imgUrl})` }"
+          >
+            <img :src="item.imgUrl" alt="" />
+          </swiper-slide>
+
+          <div
+            v-if="isMobile"
+            class="swiper-button-prev"
+            slot="button-prev"
+          ></div>
+          <div
+            v-if="isMobile"
+            class="swiper-button-next"
+            slot="button-next"
+          ></div>
+        </swiper>
+
+        <!--<div class="photos">
           <div class="photo photo-1 left">
             <img src="./s1/item6-1.jpg" alt="" class="img" />
-         <!--   <div class="info">圖的說明</div>  -->
+           <div class="info">圖的說明</div> 
           </div>
           <div class="photo photo-2 active">
             <img src="./s1/item6-2.jpg" alt="" class="img" />
@@ -876,7 +897,7 @@
           <div class="photo photo-4 right">
             <img src="./s1/item6-4.jpg" alt="" class="img" />
           </div>
-        </div>
+        </div>-->
       </div>
       <div class="item item-contact" data-aos="fade" data-aos-delay="200">
         <vue-lazy-component class="section" id="contact">
@@ -887,6 +908,13 @@
       <div class="bg">
         <img v-if="!isMobile" src="./s1/bg-2.png" alt="" />
         <img v-if="isMobile" src="./s1/bg-mo.png" alt="" />
+      </div>
+    </div>
+
+    <div v-if="isMobile" class="zoom">
+      <img src="" alt="" />
+      <div class="close">
+        <font-awesome-icon icon="times" />
       </div>
     </div>
   </div>
@@ -1350,10 +1378,10 @@
           position: relative;
           box-shadow: 0 0 20px rgb(0 0 0 / 30%);
           transition: all 0.3s;
-          cursor: pointer; 
-          .img{
-              width: 100%;
-            }
+          cursor: pointer;
+          .img {
+            width: 100%;
+          }
 
           .info {
             position: absolute;
@@ -1375,11 +1403,40 @@
           }
         }
       }
+
+      .swiper-container {
+        margin-top: 10vw;
+        width: 90%;
+        padding: 10vw 0;
+
+        .swiper-slide {
+          background-size: cover;
+          background-repeat: no-repeat;
+          transition: transform 0.4s;
+          filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.54));
+          border: 2px solid #ffff0b;
+
+          &:hover {
+            border-color: #eee;
+            cursor: pointer;
+          }
+
+          img {
+            width: 100%;
+            visibility: hidden;
+          }
+          &.swiper-slide-active {
+            z-index: 10;
+            transform: perspective(1px) translateZ(0) scale(1.5);
+            backface-visibility: hidden;
+          }
+        }
+      }
     }
 
     .item-contact {
       //上面區塊高
-      margin: 447vw 0 0 0;
+      margin: 490vw 0 0 0;
       position: relative;
       z-index: 50;
     }
@@ -1779,13 +1836,72 @@
             z-index: 3;
           }
         }
+
+        .swiper-container {
+          margin-top: 20vw;
+          width: 100% !important;
+          padding: 0 !important;
+
+          .swiper-slide {
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: transform 0.4s;
+            filter: unset;
+            border: 1px solid rgb(119, 119, 119);
+
+            &:hover {
+              border-color: initial;
+              cursor: pointer;
+            }
+
+            img {
+              width: 100%;
+              visibility: hidden;
+            }
+
+            &.swiper-slide-active {
+              z-index: 10;
+              transform: perspective(1px) translateZ(0) scale(1);
+              backface-visibility: hidden;
+            }
+          }
+        }
       }
       .item-contact {
-        margin: 1260vw 0 0 0;
+        margin: 1280vw 0 0 0;
         position: relative;
         z-index: 50;
       }
     }
+  }
+}
+.zoom {
+  position: fixed;
+  z-index: 5000;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  top: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+
+  img {
+    height: 100%;
+  }
+
+  .close {
+    z-index: 10;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: rgb(0, 122, 255, 0.9);
+    color: yellow;
+    border-radius: 100px;
   }
 }
 </style>
@@ -1805,59 +1921,53 @@ export default {
   data() {
     return {
       isMobile,
-      slideList: [
-        /* 
-     {
-          img: require("./s1/item1-1.jpg"),
-          title: "便利機能",
-          subtitle: "麵包與玫瑰花，精采生活全都要",
-          content:
-            "新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。"
+      swiperOptions: {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        initialSlide: 1,
+        watchOverflow: true,
+        centeredSlides: true,
+        slideToClickedSlide: true,
+        autoplay: true,
+        speed: 500,
+        slidesPerView: isMobile ? 1 : 3,
+        spaceBetween: isMobile ? 0 : 0,
+        loop: isMobile ? false : false
+      },
+      swiperList: [
+        {
+          id: "0001",
+          imgUrl: require("./s1/item6-1.jpg")
         },
         {
-          img: require("./s1/item1-2.jpg"),
-          title: "便利機能",
-          subtitle: "麵包與玫瑰花，精采生活全都要",
-          content:
-            "新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。"
+          id: "0002",
+          imgUrl: require("./s1/item6-2.jpg")
         },
         {
-          img: require("./s1/item1-3.jpg"),
-          title: "便利機能",
-          subtitle: "麵包與玫瑰花，精采生活全都要",
-          content:
-            "新泰路金融商圈，小資理財最上手；中平路家樂福商圈，最愛裝滿購物車；幸福路佳瑪商圈，饗樂享樂一次到位。"
+          id: "0003",
+          imgUrl: require("./s1/item6-3.jpg")
         },
         {
-          img: require("./s1/item1-4.jpg"),
-          title: "潮流饗宴",
-          subtitle: "逛不停、玩不膩，潮流熱點宏匯廣場",
-          content:
-            "超過400個頂尖娛樂品牌，VR ZONE虛擬實境樂園、SONY Zepp表演展館、美麗新影城，時尚購物、感官饗宴跨領域新地標。"
-        },
-        {
-          img: require("./s1/item1-5.jpg"),
-          title: "明星學區",
-          subtitle: "文風名校當鄰居，預約資優學習",
-          content:
-            "鄰近新泰國小、高詢問度「夢不落幼兒園｣散步就到，國小&國中預定地也位於步行生活圈；上學離家近，學習有效率。"
-        }
-         */
-      ],
-      slideList2: [
-        {
-          img: require("./s1/item2-1.jpg")
-        },
-        {
-          img: require("./s1/item2-2.jpg")
-        },
-        {
-          img: require("./s1/item2-3.jpg")
+          id: "0004",
+          imgUrl: require("./s1/item6-4.jpg")
         }
       ]
     };
   },
-  methods: {},
+  methods: {
+    prev() {
+      this.$refs.swiper.$swiper.slidePrev();
+    },
+    next() {
+      this.$refs.swiper.$swiper.slideNext();
+    }
+  },
   mounted() {
     // 輪播分頁按鈕產製
     function generatePagination(items) {
@@ -1872,8 +1982,19 @@ export default {
       return pH;
     }
 
+    // 輪播前後頁按鈕
+    function generateArrowButton() {
+      let h = "";
+
+      let arrowNext = "<div class='next'></div>";
+      let arrowPrev = "<div class='prev'></div>";
+
+      h += arrowNext + arrowPrev;
+      return h;
+    }
+
     //輪播背景處理
-    $(".item").each(function(index, value) {
+    $("#section1 .item").each(function(index, value) {
       let itemImg = $(value).find(".item-img");
       let maskImgSrc = $(value)
         .find(".item-img-mask")
@@ -1954,7 +2075,8 @@ export default {
 
       $(value)
         .find(".item-cal-box")
-        .append(generatePagination(itemImg.length));
+        .append(generatePagination(itemImg.length))
+        .append(generateArrowButton());
     });
 
     //鳥瞰圖捲動偵測
@@ -2030,6 +2152,25 @@ export default {
         clearInterval(val);
       });
     });
+    $(".next").click(function() {
+      let target = $(this);
+      let next = target
+        .closest(".item-cal-box")
+        .find(".item-cal-pagination-dot.active")
+        .next();
+
+      next.click();
+    });
+    $(".prev").click(function() {
+      let target = $(this);
+
+      let prev = target
+        .closest(".item-cal-box")
+        .find(".item-cal-pagination-dot.active")
+        .prev();
+
+      prev.click();
+    });
 
     $(".item6 .photos .photo").click(function() {
       $(".item6 .photos .photo").removeClass("active");
@@ -2102,6 +2243,19 @@ export default {
       $(".photos-arrow .photos-arrow-next").click(function() {
         carousellPhotos("next");
       });
+
+      $(".swiper-slide").click(function() {
+        let img = $(this)
+          .find("img")
+          .attr("src");
+
+        $(".zoom img").attr("src", img);
+        $(".zoom").fadeIn();
+      });
+
+      $(".zoom .close").click(function() {
+        $(".zoom").fadeOut();
+      });
     }
 
     let hammerItems1 = $(".item6 .photos .photo");
@@ -2109,11 +2263,11 @@ export default {
     $.each(hammerItems1, function(i, val) {
       let hammertime = new Hammer($(val)[0]);
       hammertime.on("swipeleft", function(ev) {
-        let target = $(ev.target);
+        let target = $(ev.target).parent();
         target.next().click();
       });
       hammertime.on("swiperight", function(ev) {
-        let target = $(ev.target);
+        let target = $(ev.target).parent();
         target.prev().click();
       });
     });
