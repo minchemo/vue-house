@@ -334,6 +334,8 @@ export default {
   background-attachment: fixed;
   background-position: 0% 50%;
   font-family: $family3;
+
+  padding-top: 2vw;
   input,
   textarea,
   button {

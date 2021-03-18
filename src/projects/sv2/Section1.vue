@@ -1,15 +1,30 @@
 <template>
   <div class="section1">
-    <img src="./s1/t1.gif" class="logo" data-aos="fade" data-aos-delay="100" />
-    <div
-      class="txt"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="500"
-    >
-      <h3 class="title1">Check in奢華的完美假期</h3>
-      <h4 class="title2">體驗式風格 休旅美學</h4>
-      <div class="title3">
+    <img
+      src="./s1/t1.gif"
+      class="logo"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-delay="100"
+    />
+    <div class="txt">
+      <h3 class="title1" data-aos="fade-right" data-aos-duration="1500">
+        Check in奢華的完美假期
+      </h3>
+      <h4
+        class="title2"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        data-aos-delay="200"
+      >
+        體驗式風格 休旅美學
+      </h4>
+      <div
+        class="title3"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="400"
+      >
         打造<b>2021</b>獨有生活風格新地標｜重繪A7最美天際線
       </div>
     </div>

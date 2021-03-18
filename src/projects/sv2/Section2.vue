@@ -2,14 +2,16 @@
   <div class="section2">
     <div class="view">
       <img v-if="isMobile" src="~@/projects/sv2/s2/view.jpg" alt="" />
-      <div
-        class="txt"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="500"
-      >
-        <h3 class="title1">頂級雙園景渡假村<br />把幸福生活，帶往新高度</h3>
-        <div class="title3">
+      <div class="txt">
+        <h3 class="title1" data-aos="fade-up" data-aos-duration="1500">
+          頂級雙園景渡假村<br />把幸福生活，帶往新高度
+        </h3>
+        <div
+          class="title3"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="500"
+        >
           置身城市綠洲，體驗四季優美<br />
           林口大生活圈A7全新視野<br />
           構築無憂假期，無需遠求，就是家的日常

@@ -8,6 +8,8 @@
             src="@/assets/img/nav-logo.png"
             alt
             v-scroll-to="{ element: `#app` }"
+            data-aos="fade-right"
+            data-aos-duration="1500"
           />
           <div class="menu" @click="toggleSidebar">
             <font-awesome-icon icon="bars" />
@@ -20,9 +22,12 @@
                 element: `.${item.section}`,
                 offset: isMobile ? item.mobileOffset : offset
               }"
-              v-for="item in list"
+              v-for="(item, index) in list"
               class="flex-ac"
               @click="toggleSidebar"
+              data-aos="fade-down"
+              data-aos-duration="1500"
+              :data-aos-delay="1000 - index * 100"
             >
               <span class="link">
                 <img v-if="item.imgSrc" :src="item.imgSrc" alt />

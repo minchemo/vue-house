@@ -102,6 +102,8 @@
           v-for="item of swiperList"
           :key="item.id"
           :style="{ backgroundImage: `url(${item.imgUrl})` }"
+          data-aos="fade-right"
+          data-aos-duration="1500"
         >
           <p>{{ item.title }}</p>
         </swiper-slide>
@@ -253,7 +255,12 @@
       </div>
     </div>
     <div v-if="isMobile" class="section-item">
-      <div v-if="isMobile">
+      <div
+        v-if="isMobile"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-delay="200"
+      >
         <h3 class="title">雙國小學區</h3>
         <div class="desc">
           <b>5-6分鐘雙國小學區｜</b
@@ -265,6 +272,8 @@
           v-for="item of swiperList2"
           :key="item.id"
           :style="{ backgroundImage: `url(${item.imgUrl})` }"
+          data-aos="fade-right"
+          data-aos-duration="1500"
         >
           <p>{{ item.title }}</p>
         </swiper-slide>
@@ -285,7 +294,12 @@
       </swiper>
     </div>
     <div v-if="isMobile" class="section-item">
-      <div v-if="isMobile">
+      <div
+        v-if="isMobile"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-delay="200"
+      >
         <h3 class="title">長庚生活圈</h3>
         <div class="desc">
           <b>6分鐘長庚生活圈｜</b
@@ -297,6 +311,8 @@
           v-for="item of swiperList3"
           :key="item.id"
           :style="{ backgroundImage: `url(${item.imgUrl})` }"
+          data-aos="fade-right"
+          data-aos-duration="1500"
         >
           <p>{{ item.title }}</p>
         </swiper-slide>

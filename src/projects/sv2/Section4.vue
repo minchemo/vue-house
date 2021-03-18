@@ -5,6 +5,8 @@
         v-for="item of swiperList"
         :key="item.id"
         :style="{ backgroundImage: `url(${item.imgUrl})` }"
+        data-aos="fade-left"
+        data-aos-duration="1500"
       >
         <p>{{ item.title }}</p>
       </swiper-slide>

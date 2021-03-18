@@ -1,9 +1,18 @@
 <template>
   <div class="house-info" id="house-info">
     <div class="content">
-      <h3 class="title">建案資訊</h3>
+      <h3 class="title" data-aos="fade-right" data-aos-duration="1000">
+        建案資訊
+      </h3>
       <div class="info">
-        <div class="item" :key="infos[0]" v-for="infos in houseInfos">
+        <div
+          class="item"
+          :key="infos[0]"
+          v-for="(infos, index) in houseInfos"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          :data-aos-delay="index * 150"
+        >
           <h3 class="label">{{ infos[0] }}</h3>
           <p class="desc" v-html="infos[1]"></p>
         </div>

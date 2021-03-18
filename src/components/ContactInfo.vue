@@ -6,12 +6,18 @@
         class="logo"
         src="@/assets/img/contact-logo.png"
         :alt="info.caseName"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
       />
       <img
         v-if="isMobile"
         class="logo"
         src="@/assets/img/mo-contact-logo.png"
         :alt="info.caseName"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
       />
       <div class="info">
         <div class="btn flex-c" @click="showCallDialog">
