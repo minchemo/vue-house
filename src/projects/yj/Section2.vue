@@ -509,36 +509,8 @@
     </div>
 
     <div class="main-2">
-      <div class="item item0">
-        <img v-if="isMobile" class="movehere" src="./s1/movehere.png" alt="" />
-        <img v-if="!isMobile" class="item-img" src="./s1/a1.jpg" alt="" />
-        <img v-if="isMobile" class="item-img" src="./s1/a1-mo.jpg" alt="" />
-        <img
-          v-if="!isMobile"
-          class="item-img-mask"
-          src="./s1/item0-mask.png"
-          alt=""
-        />
-        <img
-          v-if="isMobile"
-          class="item-img-mask"
-          src="./s1/item0-mask-mo.png"
-          alt=""
-        />
-      </div>
       <div class="title">
         <div class="title1">
-      <svg version="1.1" id="svg1" class="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1105" style="enable-background:new 0 0 1920 1105;" xml:space="preserve">
-
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1102.4883" y1="1279.1797" x2="798.9469" y2="-233.7092">
-	<stop  offset="0.2067" style="stop-color:#74B3FF"/>
-	<stop  offset="0.5475" style="stop-color:#0062FF"/>
-	<stop  offset="1" style="stop-color:#1D2083"/>
-</linearGradient>
-<path class="st0" d="M1920,1105V33c-86-17-413,90-653,82C378.5,85.4,458.9-67.3,0,36.1V1105"/>
-</svg>
-
           <div class="main-title" data-aos="fade" data-aos-delay="200">
             重劃未來
           </div>
@@ -660,45 +632,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="item item1" data-title="title2">
-        <img class="item-img" src="./s1/item1-8.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-4.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-6.jpg" alt="" />
-        <img
-          v-if="!isMobile"
-          class="item-img-mask"
-          src="./s1/item1-mask.png"
-          alt=""
-        />
-        <img
-          v-if="isMobile"
-          class="item-img-mask"
-          src="./s1/item1-mask-mo.png"
-          alt=""
-        />
-      </div>
-      <div class="title">
+
         <div class="title3 text-align-left">
-          <svg class="svg3" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 612" style="enable-background:new 0 0 1920 612;" xml:space="preserve">
-<g>
-	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1295.1907" y1="244.5132" x2="1920" y2="244.5132">
-		<stop  offset="0" style="stop-color:#FFFF0B"/>
-		<stop  offset="1" style="stop-color:#E0A72C"/>
-	</linearGradient>
-	<path class="st0" d="M1690.6,239.3c-87.6,58.4-199,175.3-395.4,249.7c411.3-138.1,580.9-313.7,624.8-358.9V0
-		C1920,0,1778.1,180.9,1690.6,239.3z"/>
-	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="0" y1="337.6145" x2="1745.3656" y2="337.6145">
-		<stop  offset="0" style="stop-color:#FFFF0B"/>
-		<stop  offset="1" style="stop-color:#E0A72C"/>
-	</linearGradient>
-	<path class="st1" d="M696.2,603.2c488.6-27.6,807.3-195.6,1049.2-431.3C841.1,747.7,1,69.9,1,69.9L1,64v448.7v0l-1,71.5
-		C37.9,593.1,287.3,626.3,696.2,603.2z"/>
-</g>
-</svg>
           <div
             class="main-title reverse-color"
             data-aos="fade"
@@ -724,39 +659,8 @@
             />秒速暢行雙北。
           </div>
         </div>
-      </div>
-      <div class="item item2">
-        <img class="item-img" src="./s1/item2-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item2-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item2-3.jpg" alt="" />
-        <img class="item-img" src="./s1/item2-4.jpg" alt="" />
-        <img
-          v-if="!isMobile"
-          class="item-img-mask"
-          src="./s1/item2-mask.png"
-          alt=""
-        />
-        <img
-          v-if="isMobile"
-          class="item-img-mask"
-          src="./s1/item2-mask-mo.png"
-          alt=""
-        />
-      </div>
 
-      <div class="title">
         <div class="title4 text-align-right">
-          <svg version="1.1" class="svg4" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 543" style="enable-background:new 0 0 1920 543;" xml:space="preserve">
-
-<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-5655.1318" y1="268.3787" x2="-3361.1318" y2="268.3787" gradientTransform="matrix(-1 0 0 1 -3735.1318 0)">
-	<stop  offset="0" style="stop-color:#FFFF0B"/>
-	<stop  offset="1" style="stop-color:#E0A72C"/>
-</linearGradient>
-<path class="st0" d="M868,531C292.5,488.5-272,276-374,239C1132,602,1920,0,1920,0v377C1875,396,1400.5,570.3,868,531z"/>
-</svg>
-
-          
           <div
             class="main-title reverse-color"
             data-aos="fade"
@@ -784,37 +688,7 @@
             />預約國際都會運轉核心。
           </div>
         </div>
-      </div>
-      <div class="item item3">
-        <img class="item-img" src="./s1/item3-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item3-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item3-3.jpg" alt="" />
-        <img
-          v-if="!isMobile"
-          class="item-img-mask"
-          src="./s1/item3-mask.png"
-          alt=""
-        />
-        <img
-          v-if="isMobile"
-          class="item-img-mask"
-          src="./s1/item3-mask-mo.png"
-          alt=""
-        />
-      </div>
-      <div class="title">
         <div class="title5">
-          <svg version="1.1" class="svg5" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 390" style="enable-background:new 0 0 1920 390;" xml:space="preserve">
-
-<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="2759.0662" y1="975.7862" x2="879.3441" y2="100.2153">
-	<stop  offset="0.2067" style="stop-color:#74B3FF"/>
-	<stop  offset="0.5475" style="stop-color:#0062FF"/>
-	<stop  offset="1" style="stop-color:#1D2083"/>
-</linearGradient>
-<path class="st0" d="M1920,0c-104.4,19.4-276.6,46-488.2,53.9c-360.1,13.5-526.9-38.6-899.6-32C410.3,24.1,226.3,33.3,0,68.9v206.7
-	c164.7,12.9,308.7,37.2,378,49.2c14.2,2.5,28.2,4.9,42.1,7.3c528.1,91.7,920.4,51.1,1176.4,29c81.2-7,200.4-30,323.6-66.6V0z"/>
-</svg>
           <div class="txt-main">
             <div class="main-title" data-aos="fade" data-aos-delay="200">
               萬坪公園
@@ -872,6 +746,93 @@
             </div>
           </div>
         </div>
+        <div class="title6">
+          <div class="main-title" data-aos="fade" data-aos-delay="200">
+            宏觀規劃
+          </div>
+          <div class="subtitle" data-aos="fade" data-aos-delay="400">
+            大棟距，大街廓，國際級壯闊視野
+          </div>
+          <div class="content" data-aos="fade" data-aos-delay="600">
+            坐擁七千八百坪4區完整規劃，雄偉建築重繪新<br
+              v-if="isMobile"
+            />北天際線，<br v-if="!isMobile" />
+            以大棟距街廓串聯城市景觀，漫步林<br
+              v-if="isMobile"
+            />蔭大道，坐享四季風光流轉。
+          </div>
+        </div>
+      </div>
+      <div class="item item0">
+        <img v-if="isMobile" class="movehere" src="./s1/movehere.png" alt="" />
+        <img v-if="!isMobile" class="item-img" src="./s1/a1.jpg" alt="" />
+        <img v-if="isMobile" class="item-img" src="./s1/a1-mo.jpg" alt="" />
+        <img
+          v-if="!isMobile"
+          class="item-img-mask"
+          src="./s1/item0-mask.png"
+          alt=""
+        />
+        <img
+          v-if="isMobile"
+          class="item-img-mask"
+          src="./s1/item0-mask-mo.png"
+          alt=""
+        />
+      </div>
+      <div class="item item1" data-title="title2">
+        <img class="item-img" src="./s1/item1-8.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-1.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-4.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-6.jpg" alt="" />
+        <img
+          v-if="!isMobile"
+          class="item-img-mask"
+          src="./s1/item1-mask.png"
+          alt=""
+        />
+        <img
+          v-if="isMobile"
+          class="item-img-mask"
+          src="./s1/item1-mask-mo.png"
+          alt=""
+        />
+      </div>
+      <div class="item item2">
+        <img class="item-img" src="./s1/item2-1.jpg" alt="" />
+        <img class="item-img" src="./s1/item2-2.jpg" alt="" />
+        <img class="item-img" src="./s1/item2-3.jpg" alt="" />
+        <img class="item-img" src="./s1/item2-4.jpg" alt="" />
+        <img
+          v-if="!isMobile"
+          class="item-img-mask"
+          src="./s1/item2-mask.png"
+          alt=""
+        />
+        <img
+          v-if="isMobile"
+          class="item-img-mask"
+          src="./s1/item2-mask-mo.png"
+          alt=""
+        />
+      </div>
+      <div class="item item3">
+        <img class="item-img" src="./s1/item3-1.jpg" alt="" />
+        <img class="item-img" src="./s1/item3-2.jpg" alt="" />
+        <img class="item-img" src="./s1/item3-3.jpg" alt="" />
+        <img
+          v-if="!isMobile"
+          class="item-img-mask"
+          src="./s1/item3-mask.png"
+          alt=""
+        />
+        <img
+          v-if="isMobile"
+          class="item-img-mask"
+          src="./s1/item3-mask-mo.png"
+          alt=""
+        />
       </div>
       <div class="item item4" data-title="title5">
         <img class="item-img" src="./s1/item4-1.jpg" alt="" />
@@ -892,35 +853,6 @@
           alt=""
         />
       </div>
-      <div class="title">
-        <div class="title6">
-          <svg version="1.1" class="svg6" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 390" style="enable-background:new 0 0 1920 390;" xml:space="preserve">
-
-<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="912.3488" y1="732.8369" x2="987.4792" y2="-231.337">
-	<stop  offset="0.2067" style="stop-color:#74B3FF"/>
-	<stop  offset="0.5475" style="stop-color:#0062FF"/>
-	<stop  offset="1" style="stop-color:#1D2083"/>
-</linearGradient>
-<path class="st0" d="M1923,0h-740.7H0v174c164.9,19.6,303.2,57,372.6,75.2c14.2,3.7,28.2,7.4,42.1,11.1
-	c529,138.9,921.9,77.4,1178.2,44c81.3-10.6,206.7-44.7,330.1-100.1V0z"/>
-</svg>
-          <div class="main-title" data-aos="fade" data-aos-delay="200">
-            宏觀規劃
-          </div>
-          <div class="subtitle" data-aos="fade" data-aos-delay="400">
-            大棟距，大街廓，國際級壯闊視野
-          </div>
-          <div class="content" data-aos="fade" data-aos-delay="600">
-            坐擁七千八百坪4區完整規劃，雄偉建築重繪新<br
-              v-if="isMobile"
-            />北天際線，<br v-if="!isMobile" />
-            以大棟距街廓串聯城市景觀，漫步林<br
-              v-if="isMobile"
-            />蔭大道，坐享四季風光流轉。
-          </div>
-        </div>
-      </div>
       <div class="item item5">
         <img class="item-img" src="./s1/item5-1.jpg" alt="" />
         <img class="item-img" src="./s1/item5-2.jpg" alt="" />
@@ -929,23 +861,6 @@
         <img class="item-img-mask" src="./s1/item5-mask.png" alt="" />
       </div>
       <div class="item item6">
-<svg version="1.1" class="svg6" id="svg6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 2958" style="enable-background:new 0 0 1920 2958;" xml:space="preserve">
-
-<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="500.0722" y1="-350.5462" x2="1009.5332" y2="1778.2731">
-	<stop  offset="1.889726e-02" style="stop-color:#74B3FF"/>
-	<stop  offset="3.039975e-02" style="stop-color:#579FFF"/>
-	<stop  offset="4.416089e-02" style="stop-color:#3C8CFF"/>
-	<stop  offset="5.992822e-02" style="stop-color:#267CFF"/>
-	<stop  offset="7.827424e-02" style="stop-color:#1570FF"/>
-	<stop  offset="0.1008" style="stop-color:#0968FF"/>
-	<stop  offset="0.1322" style="stop-color:#0263FF"/>
-	<stop  offset="0.2162" style="stop-color:#0062FF"/>
-	<stop  offset="1" style="stop-color:#1D2083"/>
-</linearGradient>
-<path class="st0" d="M142.7,41.9c-27.8,8.3-55.2,17.3-81.5,28.5C39,79.9,17.7,91-2,103.7V2958h1924V184.6
-	c-369.9-62.5-588.8-83.2-921.5-146.7c-182.7-34.9-446.4-59-805.4-11C177.6,31.9,160.1,36.7,142.7,41.9z"/>
-</svg>
         <h1>怡家．格局</h1>
         <swiper :options="swiperOptions" :instanceName="2">
           <swiper-slide
@@ -967,6 +882,22 @@
             slot="button-next"
           ></div>
         </swiper>
+
+        <!--<div class="photos">
+          <div class="photo photo-1 left">
+            <img src="./s1/item6-1.jpg" alt="" class="img" />
+           <div class="info">圖的說明</div> 
+          </div>
+          <div class="photo photo-2 active">
+            <img src="./s1/item6-2.jpg" alt="" class="img" />
+          </div>
+          <div class="photo photo-3 right">
+            <img src="./s1/item6-3.jpg" alt="" class="img" />
+          </div>
+          <div class="photo photo-4 right">
+            <img src="./s1/item6-4.jpg" alt="" class="img" />
+          </div>
+        </div>-->
       </div>
       <div class="item item-contact" data-aos="fade" data-aos-delay="200">
         <vue-lazy-component class="section" id="contact">
@@ -1218,9 +1149,8 @@
   .main-2 {
     position: relative;
     overflow: hidden;
-    margin-top:0;
+    margin-top: -36vw;
     z-index: 10;
-    margin: -48vw 0 0 0;
 
     .title {
       font-family: "Noto Sans TC", serif;
@@ -1270,24 +1200,14 @@
       }
 
       .title1 {
-        position: relative;
-       //transform: translate(-50%, 0%);
-        //top: 90vw;
-        margin: -6vw 0 0 0;
-        padding: 12vw 0 0 0;
-
-      //  left: 0;
-        width: 100%;
-        .svg1{position: absolute;width: 100%;
-        top:0;
-        left: 0;}
-	.st0{fill:url(#SVGID_1_);}
+        position: absolute;
+        transform: translate(-50%, 0%);
+        top: 90vw;
+        left: 50%;
 
         .photos {
           display: flex;
           margin-top: 2vw;
-          justify-content: center;
-
 
           .square {
             width: 18vw;
@@ -1331,19 +1251,16 @@
       }
 
       .title2 {
-        position: relative;
-       // transform: translate(-50%, 0%);
-        top:0;
-        left: 0;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        top: 138.5vw;
+        left: 50%;
         width: 100%;
-        padding: 5vw 0 0 0;
-        margin:10vw 0 -4vw 0 ;
-
         svg {
           width: calc(100% + 2px);
           z-index: 2;
           position: absolute;
-          top: -3.5vw;
+          top: -8.2vw;
           left: -1px;
         }
         .st0 {
@@ -1356,64 +1273,40 @@
       }
 
       .title3 {
-        margin: -8vw 0 -15vw 0;
-        padding: 7.5vw 0 0 22.5vw;
-        position: relative;
-    //    transform: translate(-114%, 0%);
-        top: 0;
-        left: 0;
-        .svg3{position: absolute;width: 100%;
-        top:-13vw;
-        left: 0;}
-	.st0{fill:url(#SVGID_2_);}
-	.st1{fill:url(#SVGID_3_);}
+        position: absolute;
+        transform: translate(-114%, 0%);
+        top: 198vw;
+        left: 50%;
       }
 
       .title4 {
-        margin: -5.5vw 0 -15vw 0;
-        padding: 2vw 16.5vw 0 0;
-        position: relative;
-        top: 0;
-        left: 0;
-        .svg4{position: absolute;width: 100%;
-        top:-13vw;
-        left: 0;}
-	.st0{fill:url(#SVGID_4_);}
+        position: absolute;
+        transform: translate(15%, 0%);
+        top: 239vw;
+        left: 50%;
       }
 
       .title5 {
-        margin: 0vw 0 -15vw 0;
-        padding: 2.5vw 0 0 0;
-        position: relative;
-        top: 0;
-        left: 0;
-        .svg5{position: absolute;width: 100%;
-        top:-4vw;
-        left: 0;}
-	.st0{fill:url(#SVGID_5_);}
+        position: absolute;
+        transform: translate(-50%, 0%);
+        top: 289vw;
+        left: 50%;
+
         .txt-hide {
           display: none;
         }
       }
 
       .title6 {
-        position: relative;
-        padding: 3vw 0 0 0;
-        margin: 0vw 0 -3vw 0;
-        top: 0;
-        left: 0;
-        .svg6{position: absolute;width: 100%;
-        top:0vw;
-        left: 0;}
-	.st0{fill:url(#SVGID_6_);}
-        .txt-hide {
-          display: none;
-        }
+        position: absolute;
+        transform: translate(-50%, 0%);
+        top: 353vw;
+        left: 50%;
       }
     }
 
     .item {
-      position: relative;
+      position: absolute;
       width: 100%;
       .item-img-mask {
         display: none;
@@ -1421,6 +1314,7 @@
     }
 
     .item0 {
+      top: -10.4vw;
       z-index: 1;
       .movehere {
         width: 100%;
@@ -1433,51 +1327,34 @@
     }
 
     .item1 {
-      top: 0;
+      top: 141vw;
       z-index: 10;
-      height: calc(100vh - 1vw);
     }
 
     .item2 {
-      top:0;
+      top: 183.5vw;
       z-index: 9;
-      height: calc(100vh + 4vw);
-      &::before{z-index: 5;
-        content: "";position: absolute;top: 0;left: 0;width: 100%;height: 8vw;background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);}
     }
 
     .item3 {
-      top:0;
+      top: 223.5vw;
       z-index: 8;
-      height: calc(100vh + 4vw);
     }
 
     .item4 {
-      top:0;
+      top: 286vw;
       z-index: 7;
-      height: calc(100vh + 4vw);
     }
 
     .item5 {
-      top:0;
+      top: 352vw;
       z-index: 6;
-      height: calc(100vh - 3vw);
     }
 
     .item6 {
       display: block;
-      top:0;
-      z-index: 7;
-      padding: 4vw 0 0 0;
-      margin: -7vw 0 0 0;
-
-        .svg6{position: absolute;width: 100%;
-        top:-3vw;
-        left: 0;}
-	.st0{fill:url(#SVGID_7_);}
-        .txt-hide {
-          display: none;
-        }
+      top: 410vw;
+      z-index: 50;
 
       h1 {
         font-size: 46px;
@@ -1528,8 +1405,8 @@
       }
 
       .swiper-container {
-        margin-top: 0;
-        width: 90%;        
+        margin-top: 10vw;
+        width: 90%;
         padding: 10vw 0;
 
         .swiper-slide {
@@ -1559,9 +1436,9 @@
 
     .item-contact {
       //上面區塊高
-      margin: 0 0 0 0;
+      margin: 490vw 0 0 0;
       position: relative;
-     z-index: 50;
+      z-index: 50;
     }
 
     .building-6 {
@@ -1574,7 +1451,6 @@
     }
 
     .bg {
-      display: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -2062,7 +1938,7 @@ export default {
         speed: 500,
         slidesPerView: isMobile ? 1 : 3,
         spaceBetween: isMobile ? 0 : 0,
-        loop: isMobile ? true : true
+        loop: isMobile ? false : false
       },
       swiperList: [
         {
@@ -2151,7 +2027,7 @@ export default {
                 <img class="bigplan" style="${imgSize}" src="${imgSrc}">
               </div>
             `;
-        } else if(index == 1) {
+        } else {
           box += `
               <div class="item-cal ${i == 0 ? "active" : ""}"
               data-index="${i}"
@@ -2162,17 +2038,6 @@ export default {
               -webkit-mask: url(${maskImgSrc}) no-repeat center center;
               mask-size: cover;
               -webkit-mask-size: cover;
-              ">
-                <img style="visibility:hidden;${imgSize}" src="${imgSrc}">
-              </div>
-            `;
-        }else {
-          box += `
-              <div class="item-cal ${i == 0 ? "active" : ""}"
-              data-index="${i}"
-              style="
-              background-image:url(${imgSrc});
-              background-size: cover;
               ">
                 <img style="visibility:hidden;${imgSize}" src="${imgSrc}">
               </div>
@@ -2203,23 +2068,12 @@ export default {
             .height();
 
           $(value)
-            .filter(".item0")
             .find(".item-cal-box")
             .height(height + "px");
-          $(value)
-            .not(".item0")
-            .find(".item-cal-box")
-            .height("100%")
-            .find(".item-cal")
-            .height("100%")
-            .find("img")
-            .css({height:"100%",
-            "object-fit":"cover"});
         });
       }
 
       $(value)
-      .not(".item0")
         .find(".item-cal-box")
         .append(generatePagination(itemImg.length))
         .append(generateArrowButton());
