@@ -1801,7 +1801,7 @@
         }
 
         .title1 {
-          top: 238vw;
+        //  top: 238vw;
           width: 100%;
 
           .photos {
@@ -1877,25 +1877,25 @@
           }
         }
         .title2 {
-          top: 442vw;
+    //      top: 442vw;
           width: 100%;
         }
         .title3 {
-          top: 603vw;
+      //    top: 603vw;
           width: 100%;
           transform: translate(-42%, 0%);
         }
         .title4 {
-          top: 745vw;
+     //     top: 745vw;
           width: 100%;
           transform: translate(-58%, 0%);
         }
         .title5 {
-          top: 888vw;
+      //    top: 888vw;
           width: 100%;
         }
         .title6 {
-          top: 1031vw;
+     //     top: 1031vw;
           width: 100%;
         }
       }
