@@ -311,11 +311,12 @@ export default {
   .order-top {
     position: relative;
     overflow: hidden;
+    padding-bottom: 50vw;
   }
   .order-title {
     font-family: $family2;
     width: 80vw;
-    padding-top: 20px;
+    padding-top: 4vw;
     padding-bottom: 8px;
     font-weight: bold;
     line-height: 1.3;
@@ -426,11 +427,18 @@ export default {
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .order-bg {
-    background-image: $order_bg_image_m;
+    background-image: none;
     padding-top: 40px;
     margin: 0;
     position: relative;
     z-index: 2;
+
+    .order-top {
+      background-image: $order_bg_image_m;
+      background-position: bottom;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
 
     > img {
       display: block;

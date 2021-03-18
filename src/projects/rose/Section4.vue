@@ -109,11 +109,10 @@
         }
 
         p {
-          font-size: 16px;
+          font-size: 14px;
           text-align: justify;
           letter-spacing: 1px;
           line-height: 1.5;
-          font-weight: bold;
         }
       }
 

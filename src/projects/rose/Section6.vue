@@ -42,7 +42,24 @@
     >
       <div class="title2">
         <h2>VR格局圖</h2>
-        <a target="_blank" href="#">Read more</a>
+        <a class="show-vr" data-room="2">兩房規格</a>
+        <a class="show-vr" data-room="3">三房規格</a>
+      </div>
+    </div>
+    <div class="vr-iframe">
+      <div class="vr-iframe-loading">
+        正在載入 VR 格局圖．．．
+      </div>
+      <iframe
+        src=""
+        frameborder="0"
+        width="100%"
+        height="100%"
+        allowfullscreen="allowfullscreen"
+        style="border: 0"
+      ></iframe>
+      <div class="close">
+        <font-awesome-icon icon="times" />
       </div>
     </div>
   </div>
@@ -53,6 +70,46 @@
 .section6 {
   width: 100%;
   height: auto;
+
+  .vr-iframe {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 50;
+    background: #eee;
+
+    .vr-iframe-loading {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
+      color: #1f7fb2;
+    }
+
+    .close {
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        font-size: 50px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
 
   .sub-section {
     height: auto;
@@ -137,7 +194,9 @@
       border: 1px solid #fff;
       width: 250px;
       padding: 4px;
+      margin: 10px;
       transition: all 0.5s;
+      cursor: pointer;
 
       &:hover {
         color: #1f7fb2;
@@ -152,6 +211,14 @@
     left: 0;
     bottom: 0;
     z-index: 15;
+    animation: rose 2s ease-in-out 0s infinite alternate-reverse;
+
+    @keyframes rose {
+      100% {
+        -webkit-transform: skewX(5deg);
+        transform: skewX(5deg);
+      }
+    }
   }
 }
 
@@ -330,6 +397,23 @@ export default {
     }
   },
 
-  created() {}
+  created() {},
+  mounted() {
+    $(".show-vr").click(function() {
+      let room = $(this).attr("data-room");
+      let vrSrc =
+        room == 2
+          ? "https://www.eyehouse.co/i?c=c2669302975"
+          : "https://www.eyehouse.co/i?c=c4389526598";
+
+      $(".vr-iframe iframe").attr("src", vrSrc);
+      $(".vr-iframe").fadeIn();
+    });
+
+    $(".vr-iframe .close").click(function() {
+      $(".vr-iframe iframe").attr("src", "");
+      $(".vr-iframe").hide();
+    });
+  }
 };
 </script>

@@ -19,29 +19,26 @@
         </swiper>
         <div class="title">中庭花園3D參考圖</div>
       </div>
-      <div
-        class="title2"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="0"
-      >
-        <h2>稀有700坪立體花園劇場</h2>
-        <p>
+      <div class="title2">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          稀有700坪立體花園劇場
+        </h2>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           區域內少有之700坪大中庭規劃，彎曲、流動、高低、富有層次的花園設計，四季流動的自然風光，每一處轉角都有驚喜。
         </p>
         <img
           class="draw1"
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-duration="1000"
-          data-aos-delay="0"
+          data-aos-delay="600"
           src="~@/projects/rose/s5/draw1.png"
           alt=""
         />
         <img
           class="draw2"
-          data-aos="fade-down"
+          data-aos="fade-left"
           data-aos-duration="1000"
-          data-aos-delay="0"
+          data-aos-delay="1000"
           src="~@/projects/rose/s5/draw2.png"
           alt=""
         />
@@ -135,6 +132,8 @@
       right: 5vw;
       bottom: 0;
       z-index: 20;
+
+      animation: float 8s ease-in-out 0s infinite alternate-reverse;
     }
   }
 }
