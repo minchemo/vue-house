@@ -265,8 +265,6 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 310.88 302.5"
       >
-        <g id="圖層_2" data-name="圖層 2">
-          <g id="圖層_1-2" data-name="圖層 1">
             <path
               class="cls-1"
               d="M83.37,112.61c-.52-1.23-1.17-2.64-2-4.18-21.61,2-25.43,2.33-28.22,3.44-.33-1.11-1.11-3.32-1.89-5.4l-2.72,1.22c-.46-1.65-1.24-3.86-2.08-6.2v39.24H37.17V106.1a73.24,73.24,0,0,1-1.63,7.37L28.4,111a79.17,79.17,0,0,0,3-16.27l5.78.74V82.4h9.34V94.25L51,92.47c1,2.27,2.27,5,3.24,7.43l.07-.06a77.93,77.93,0,0,0,8.11-17.38l9.86,2.39a103.12,103.12,0,0,1-8.89,16.7l13.37-.92c-1.43-2.15-2.92-4.29-4.41-6.14l7.46-3.68c4.61,5.4,9.35,12.53,11.55,17.44Zm-28.94,1.84H85.84v26.22h-9v-2.4H63v2.4H54.43Zm8.56,7.8v8.22H76.82v-8.22Z"
@@ -473,8 +471,6 @@
               class="cls-4"
               d="M259.46,286.93l-6-11.18h6.16l1.85,4.12c.5,1.08,1,2.29,1.68,3.78h.12c.53-1.49,1-2.7,1.49-3.78l1.67-4.12h5.85l-5.95,11.43,6.35,11.61h-6.16l-2.14-4.49c-.55-1.21-1.08-2.42-1.7-3.84h-.12c-.56,1.42-1,2.63-1.58,3.84l-2,4.49h-5.92Z"
             />
-          </g>
-        </g>
       </svg>
 
       <img class="s1bg" src="./s1/s1bg.png" alt="s1bg" v-if="!isMobile" />
@@ -528,17 +524,26 @@
       </div>
       <div class="title">
         <div class="title1">
-      <svg version="1.1" id="svg1" class="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1105" style="enable-background:new 0 0 1920 1105;" xml:space="preserve">
+          <svg version="1.1" v-if="!isMobile" id="svg1" class="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 1920 1105" style="enable-background:new 0 0 1920 1105;" xml:space="preserve">
 
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1102.4883" y1="1279.1797" x2="798.9469" y2="-233.7092">
-	<stop  offset="0.2067" style="stop-color:#74B3FF"/>
-	<stop  offset="0.5475" style="stop-color:#0062FF"/>
-	<stop  offset="1" style="stop-color:#1D2083"/>
-</linearGradient>
-<path class="st0" d="M1920,1105V33c-86-17-413,90-653,82C378.5,85.4,458.9-67.3,0,36.1V1105"/>
-</svg>
+          <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1102.4883" y1="1279.1797" x2="798.9469" y2="-233.7092">
+            <stop  offset="0.2067" style="stop-color:#74B3FF"/>
+            <stop  offset="0.5475" style="stop-color:#0062FF"/>
+            <stop  offset="1" style="stop-color:#1D2083"/>
+          </linearGradient>
+          <path class="st0" d="M1920,1105V33c-86-17-413,90-653,82C378.5,85.4,458.9-67.3,0,36.1V1105"/>
+          </svg>
 
+          <svg version="1.1" v-if="isMobile" id="svg1" class="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 375 774" style="enable-background:new 0 0 375 774;" xml:space="preserve">
+          <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="267.3254" y1="801.4406" x2="90.3369" y2="-80.6943">
+            <stop  offset="0.2067" style="stop-color:#74B3FF"/>
+            <stop  offset="0.5475" style="stop-color:#0062FF"/>
+            <stop  offset="1" style="stop-color:#1D2083"/>
+          </linearGradient>
+          <path class="st0" d="M374.6,774V28.9c-28,4.3-56.6,7.3-82.3,6.4C119.2,29.6,53.1,10.2-0.4,1v773"/>
+          </svg>
           <div class="main-title" data-aos="fade" data-aos-delay="200">
             重劃未來
           </div>
@@ -593,7 +598,7 @@
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px"
-            y="0px"
+            y="0px" v-if="!isMobile"
             viewBox="0 0 1920 462"
             style="enable-background:new 0 0 1920 462;"
             xml:space="preserve"
@@ -603,6 +608,12 @@
               d="M769.5,49C431.5-15.6,253-23-3,71.2v217.2c165.1,19.6,309.1,57.1,378.6,75.3c14.2,3.7,28.3,7.4,42.2,11.1c529.6,139,923.1,77.5,1179.8,44c81.4-10.6,199.9-41.9,323.5-97.3V34C1461.5,137.5,1225.1,136.2,769.5,49z"
             />
           </svg>
+          <svg version="1.1" v-if="isMobile" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 375 332" style="enable-background:new 0 0 375 332;" xml:space="preserve">
+
+<path class="st0" d="M122.3,16.8C73.8,7.5,35.1,1.7,0,0.4v291c158.2,55.2,283.3,42.5,375,26.4v-282
+	C294.6,43.3,224.6,36.4,122.3,16.8z"/>
+</svg>
 
           <div class="txt-main">
             <div class="main-title" data-aos="fade" data-aos-delay="200">
@@ -682,7 +693,7 @@
       </div>
       <div class="title">
         <div class="title3 text-align-left">
-          <svg class="svg3" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg class="svg3" v-if="!isMobile" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 612" style="enable-background:new 0 0 1920 612;" xml:space="preserve">
 <g>
 	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1295.1907" y1="244.5132" x2="1920" y2="244.5132">
@@ -698,6 +709,20 @@
 	<path class="st1" d="M696.2,603.2c488.6-27.6,807.3-195.6,1049.2-431.3C841.1,747.7,1,69.9,1,69.9L1,64v448.7v0l-1,71.5
 		C37.9,593.1,287.3,626.3,696.2,603.2z"/>
 </g>
+</svg>
+<svg version="1.1" class="svg3"  id="圖層_1" v-if="isMobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 375 332" style="enable-background:new 0 0 375 332;" xml:space="preserve">
+
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="242.4738" y1="254.1499" x2="378.5" y2="254.1499">
+		<stop  offset="0" style="stop-color:#FFFF0B"/>
+		<stop  offset="1" style="stop-color:#E0A72C"/>
+	</linearGradient>
+	<path class="st0" d="M242.5,299.3c63-11.6,114-40.6,136-62V209C366.5,236.7,303.5,278.7,242.5,299.3z"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="0" y1="158.9983" x2="375" y2="158.9983">
+		<stop  offset="0" style="stop-color:#FFFF0B"/>
+		<stop  offset="1" style="stop-color:#E0A72C"/>
+	</linearGradient>
+	<path class="st1" d="M375,201.2V10.7C208.1,112.9,51.1,32.3,0,0v309.2C68,326.2,239.8,331.5,375,201.2z"/>
 </svg>
           <div
             class="main-title reverse-color"
@@ -746,7 +771,7 @@
 
       <div class="title">
         <div class="title4 text-align-right">
-          <svg version="1.1" class="svg4" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg version="1.1" class="svg4" v-if="!isMobile" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 543" style="enable-background:new 0 0 1920 543;" xml:space="preserve">
 
 <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-5655.1318" y1="268.3787" x2="-3361.1318" y2="268.3787" gradientTransform="matrix(-1 0 0 1 -3735.1318 0)">
@@ -754,6 +779,14 @@
 	<stop  offset="1" style="stop-color:#E0A72C"/>
 </linearGradient>
 <path class="st0" d="M868,531C292.5,488.5-272,276-374,239C1132,602,1920,0,1920,0v377C1875,396,1400.5,570.3,868,531z"/>
+</svg>
+<svg version="1.1" class="svg4" v-if="isMobile" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 375 423" style="enable-background:new 0 0 375 423;" xml:space="preserve">
+<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="0" y1="211.5" x2="375" y2="211.5">
+	<stop  offset="0" style="stop-color:#FFFF0B"/>
+	<stop  offset="1" style="stop-color:#E0A72C"/>
+</linearGradient>
+<path class="st0" d="M0,303.1c60,51.8,239.7,149.1,375,110.7V0.5C303.2,85.5,169,141,0,102.7V303.1z"/>
 </svg>
 
           
@@ -804,7 +837,7 @@
       </div>
       <div class="title">
         <div class="title5">
-          <svg version="1.1" class="svg5" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg version="1.1" class="svg5" v-if="!isMobile" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 390" style="enable-background:new 0 0 1920 390;" xml:space="preserve">
 
 <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="2759.0662" y1="975.7862" x2="879.3441" y2="100.2153">
@@ -814,6 +847,20 @@
 </linearGradient>
 <path class="st0" d="M1920,0c-104.4,19.4-276.6,46-488.2,53.9c-360.1,13.5-526.9-38.6-899.6-32C410.3,24.1,226.3,33.3,0,68.9v206.7
 	c164.7,12.9,308.7,37.2,378,49.2c14.2,2.5,28.2,4.9,42.1,7.3c528.1,91.7,920.4,51.1,1176.4,29c81.2-7,200.4-30,323.6-66.6V0z"/>
+</svg>
+
+<svg version="1.1" class="svg5" v-if="isMobile" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 375 298" style="enable-background:new 0 0 375 298;" xml:space="preserve">
+
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="629.149" y1="343.6652" x2="166.783" y2="128.2961">
+		<stop  offset="0.2067" style="stop-color:#74B3FF"/>
+		<stop  offset="0.5475" style="stop-color:#0062FF"/>
+		<stop  offset="1" style="stop-color:#1D2083"/>
+	</linearGradient>
+	<path class="st0" d="M375.1,1.9c-20.4,3.8-53.8,9-95.2,10.6c-70.5,2.6-103.2-7.6-176.2-6.3C79.9,6.6,43.8,8.4-0.5,15.4
+		c0,13.5,0,245,0,258.5c32.2,2.5,60.5,7.3,74,9.6c2.8,0.5,5.5,1,8.2,1.4c103.4,18,180.3,10,230.4,5.7c15.9-1.4,39.2-5.9,63.4-13
+		L375.1,1.9z"/>
+
 </svg>
           <div class="txt-main">
             <div class="main-title" data-aos="fade" data-aos-delay="200">
@@ -894,7 +941,7 @@
       </div>
       <div class="title">
         <div class="title6">
-          <svg version="1.1" class="svg6" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg version="1.1" class="svg6" v-if="!isMobile" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 390" style="enable-background:new 0 0 1920 390;" xml:space="preserve">
 
 <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="912.3488" y1="732.8369" x2="987.4792" y2="-231.337">
@@ -904,6 +951,17 @@
 </linearGradient>
 <path class="st0" d="M1923,0h-740.7H0v174c164.9,19.6,303.2,57,372.6,75.2c14.2,3.7,28.2,7.4,42.1,11.1
 	c529,138.9,921.9,77.4,1178.2,44c81.3-10.6,206.7-44.7,330.1-100.1V0z"/>
+</svg>
+
+<svg version="1.1" v-if="isMobile" class="svg6" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 375 298" style="enable-background:new 0 0 375 298;" xml:space="preserve">
+<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="154.1658" y1="554.6024" x2="207.1342" y2="-125.1593">
+	<stop  offset="0.2067" style="stop-color:#74B3FF"/>
+	<stop  offset="0.5475" style="stop-color:#0062FF"/>
+	<stop  offset="1" style="stop-color:#1D2083"/>
+</linearGradient>
+<path class="st0" d="M230.6-0.4H0v248.5c32.2,3.8,59.1,11.1,72.7,14.7c2.8,0.7,5.5,1.4,8.2,2.2C184,292,260.6,280,310.6,273.5
+	c15.9-2.1,40.3-8.7,64.4-19.5V-0.4H230.6z"/>
 </svg>
           <div class="main-title" data-aos="fade" data-aos-delay="200">
             宏觀規劃
@@ -929,7 +987,7 @@
         <img class="item-img-mask" src="./s1/item5-mask.png" alt="" />
       </div>
       <div class="item item6">
-<svg version="1.1" class="svg6" id="svg6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" class="svg6" id="svg6" v-if="!isMobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 2958" style="enable-background:new 0 0 1920 2958;" xml:space="preserve">
 
 <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="500.0722" y1="-350.5462" x2="1009.5332" y2="1778.2731">
@@ -946,6 +1004,24 @@
 <path class="st0" d="M142.7,41.9c-27.8,8.3-55.2,17.3-81.5,28.5C39,79.9,17.7,91-2,103.7V2958h1924V184.6
 	c-369.9-62.5-588.8-83.2-921.5-146.7c-182.7-34.9-446.4-59-805.4-11C177.6,31.9,160.1,36.7,142.7,41.9z"/>
 </svg>
+
+<svg version="1.1" v-if="isMobile"  class="svg6" id="svg6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 375 682" style="enable-background:new 0 0 375 682;" xml:space="preserve">
+
+<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="83.6561" y1="-74.58" x2="199.0938" y2="407.7841">
+	<stop  offset="1.889730e-02" style="stop-color:#74B3FF"/>
+	<stop  offset="3.039976e-02" style="stop-color:#579FFF"/>
+	<stop  offset="4.416079e-02" style="stop-color:#3C8CFF"/>
+	<stop  offset="5.992813e-02" style="stop-color:#267CFF"/>
+	<stop  offset="7.827416e-02" style="stop-color:#1570FF"/>
+	<stop  offset="0.1008" style="stop-color:#0968FF"/>
+	<stop  offset="0.1322" style="stop-color:#0263FF"/>
+	<stop  offset="0.2162" style="stop-color:#0062FF"/>
+	<stop  offset="1" style="stop-color:#1D2083"/>
+</linearGradient>
+<path class="st0" d="M26.5,8.6C21,10.2,15.6,12,10.4,14.2c-4.4,1.9-8.6,4-12.4,6.6V682h379V36.7C304.1,24.4,261,20.3,195.5,7.8
+	c-36-6.9-87.9-11.6-158.7-2.2C33.4,6.6,29.9,7.6,26.5,8.6z"/>
+</svg>
         <h1>怡家．格局</h1>
         <swiper :options="swiperOptions" :instanceName="2">
           <swiper-slide
@@ -958,12 +1034,12 @@
 
           <div
             v-if="isMobile"
-            class="swiper-button-prev"
+            class="swiper-button-prev prev6"
             slot="button-prev"
           ></div>
           <div
             v-if="isMobile"
-            class="swiper-button-next"
+            class="swiper-button-next next6"
             slot="button-next"
           ></div>
         </swiper>
@@ -1553,6 +1629,7 @@
             transform: perspective(1px) translateZ(0) scale(1.5);
             backface-visibility: hidden;
           }
+          
         }
       }
     }
@@ -1803,11 +1880,12 @@
         .title1 {
         //  top: 238vw;
           width: 100%;
+          .svg1{top:-17vw}
 
           .photos {
             justify-content: center;
             align-items: center;
-            padding-top: 50vw;
+            padding: 50vw 0;
 
             .square {
               width: 80vw;
@@ -1879,23 +1957,25 @@
         .title2 {
     //      top: 442vw;
           width: 100%;
+        padding: 20vw 0 0 0;
         }
         .title3 {
-      //    top: 603vw;
           width: 100%;
-          transform: translate(-42%, 0%);
+          padding: 15vw 0 0 15vw;
         }
         .title4 {
-     //     top: 745vw;
           width: 100%;
-          transform: translate(-58%, 0%);
+          padding: 12vw 16.5vw 0 0;
+          .svg4{
+            top: -30vw;
+          }
         }
         .title5 {
-      //    top: 888vw;
+          padding: 15vw 0 0 0;
           width: 100%;
         }
         .title6 {
-     //     top: 1031vw;
+          padding: 15vw 0 0 0;
           width: 100%;
         }
       }
@@ -1905,30 +1985,37 @@
       }
 
       .item1 {
-        top: 480vw;
+      height: calc(100vh - 50vw);
+     //   top: 480vw;
       }
 
       .item2 {
-        top: 632vw;
+    //    top: 632vw;
+      height: calc(100vh - 50vw);
       }
 
       .item3 {
-        top: 774vw;
+     //   top: 774vw;
+      height: calc(100vh - 50vw);
       }
 
       .item4 {
-        top: 916vw;
+      //  top: 916vw;
+      height: calc(100vh - 50vw);
       }
 
       .item5 {
-        top: 1073vw;
+    //    top: 1073vw;
+      height: calc(100vh - 50vw);
       }
 
       .item6 {
-        top: 1183vw;
+      padding: 10vw 0 0 0;
+    //    top: 1183vw;
         h1 {
           font-size: 28px;
           transform: translate(-108%, 0%);
+      margin: 3vw 0 0 0;
         }
 
         .photos {
@@ -1992,7 +2079,7 @@
         }
       }
       .item-contact {
-        margin: 1280vw 0 0 0;
+        margin:  0;
         position: relative;
         z-index: 50;
       }
@@ -2027,6 +2114,8 @@
     color: yellow;
     border-radius: 100px;
   }
+
+  .prev6, .next6 {color:#fff;}
 }
 </style>
 
