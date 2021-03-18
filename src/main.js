@@ -13,6 +13,7 @@ import "element-ui/lib/theme-chalk/index.css";
 import VueScrollTo from "vue-scrollto"; // scroll 錨點
 import VueLazyload from "vue-lazyload"; // 圖片 lazy load
 import VueFullPage from "vue-fullpage.js";
+import "@/lib/fullpage.js/fullpage.min.css";
 import VueLazyComponent from "@xunlei/vue-lazy-component";
 import Vue2TouchEvents from "vue2-touch-events";
 import VueRellax from "vue-rellax";
@@ -69,9 +70,6 @@ Vue.use(VueRellax);
 Vue.use(Vue2TouchEvents);
 
 Vue.use(VueAwesomeSwiper /* { default options with global component } */);
-
-import imageZoom from "vue-image-zoomer";
-Vue.component("image-zoom", imageZoom);
 
 new Vue({
   router,

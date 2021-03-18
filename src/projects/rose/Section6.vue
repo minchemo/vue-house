@@ -78,7 +78,7 @@
     left: 0;
     top: 0;
     display: none;
-    z-index: 50;
+    z-index: 5000;
     background: #eee;
 
     .vr-iframe-loading {

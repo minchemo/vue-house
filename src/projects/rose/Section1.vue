@@ -1,6 +1,6 @@
 <template>
   <div class="section1">
-    <div class="sub-section">
+    <div class="sub-section fp-section">
       <div class="main-title" data-aos="fade-right" data-aos-duration="1500">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 977.83 520.79">
           <g id="圖層_2" data-name="圖層 2">

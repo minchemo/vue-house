@@ -11,29 +11,30 @@
       id="fullpage"
     > -->
 
-    <vue-lazy-component class="section" id="section1" @init="init">
-      <Section1 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section2" @init="init">
-      <Section2 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section3" @init="init">
-      <Section3 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section4" @init="init">
-      <Section4 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section5" @init="init">
-      <Section5 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section6" @init="init">
-      <Section6 />
-    </vue-lazy-component>
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <vue-lazy-component class="section" id="section1" @init="init">
+        <Section1 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section2" @init="init">
+        <Section2 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section3" @init="init">
+        <Section3 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section4" @init="init">
+        <Section4 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section5" @init="init">
+        <Section5 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section6" @init="init">
+        <Section6 />
+      </vue-lazy-component>
 
-    <vue-lazy-component class="section" id="contact">
-      <ContactSection />
-    </vue-lazy-component>
-
+      <vue-lazy-component class="section" id="contact">
+        <ContactSection />
+      </vue-lazy-component>
+    </full-page>
     <MobileNav />
   </div>
 </template>
@@ -88,24 +89,22 @@ export default {
     return {
       isMobile,
       isSide: false,
-      load: true
+      load: true,
       // viewIndex: 0,
       // action: {
       //   moveTo: () => {},
       // },
 
       // indigatorIndex: 0,
-      // options: {
-      //   menu: '#menu',
-      //   anchors: [],
-      //   scrollBar: true,
-      //   onLeave: this.onLeave,
-      //   afterLoad: this.afterLoad,
-      //   continuousHorizontal: true,
-
-      //   // navigation: true,
-      //   // sectionsColor: ['#41b883', '#ff5f45', '#0798ec'],
-      // },
+      options: {
+        navigation: true,
+        navigationPosition: "right",
+        fitToSection: false,
+        scrollBar: false,
+        verticalCentered: false,
+        sectionSelector: ".section",
+        autoScrolling: false
+      }
     };
   },
   created() {
