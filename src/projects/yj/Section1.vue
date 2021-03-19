@@ -2067,7 +2067,7 @@ export default {
   },
   mounted() {
     // 輪播分頁按鈕產製
-    function generatePagination(items) {
+   function generatePagination(items) {
       let pH = "<div class='item-cal-pagination'>";
       for (let i = 0; i < items; i++) {
         pH += `<div data-index="${i}" class="item-cal-pagination-dot ${

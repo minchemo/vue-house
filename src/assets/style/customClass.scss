@@ -221,16 +221,17 @@ svg {
     }
     &.item5 {
         .item-cal-pagination {
+            display: none;
             bottom: 15vw;
         }
     }
     &.item4 {
-        .item-cal-pagination {
+        .item-cal-pagination {display: none;
             bottom: 5vw;
         }
     }
     &.item3 {
-        .item-cal-pagination {
+        .item-cal-pagination {display: none;
             bottom: 10vw;
         }
         .next,
@@ -239,7 +240,7 @@ svg {
         }
     }
     &.item2 {
-        .item-cal-pagination {
+        .item-cal-pagination {display: none;
             bottom: 12vw;
         }
         .next,
@@ -248,7 +249,7 @@ svg {
         }
     }
     &.item1 {
-        .item-cal-pagination {
+        .item-cal-pagination {display: none;
             bottom: 15vw;
         }
         .next,
