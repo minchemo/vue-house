@@ -178,7 +178,6 @@ svg {
         background-position: 0 0;
         animation: OutCal 0.5s;
         z-index: 1;
-        cursor: pointer;
         opacity: 0;
         width: 100vw;
 
@@ -221,17 +220,22 @@ svg {
     }
     &.item5 {
         .item-cal-pagination {
-            display: none;
+            //display: none;
+            visibility: hidden;
             bottom: 15vw;
         }
     }
     &.item4 {
-        .item-cal-pagination {display: none;
+        .item-cal-pagination {
+            //display: none;
+            visibility: hidden;
             bottom: 5vw;
         }
     }
     &.item3 {
-        .item-cal-pagination {display: none;
+        .item-cal-pagination {
+            //display: none;
+            visibility: hidden;
             bottom: 10vw;
         }
         .next,
@@ -240,7 +244,9 @@ svg {
         }
     }
     &.item2 {
-        .item-cal-pagination {display: none;
+        .item-cal-pagination {
+            //display: none;
+            visibility: hidden;
             bottom: 12vw;
         }
         .next,
@@ -249,7 +255,9 @@ svg {
         }
     }
     &.item1 {
-        .item-cal-pagination {display: none;
+        .item-cal-pagination {
+            //display: none;
+            visibility: hidden;
             bottom: 15vw;
         }
         .next,
@@ -297,6 +305,10 @@ svg {
         &:active {
             opacity: 0.5;
         }
+
+        &.disable {
+            opacity: 0.2;
+        }
     }
 
     .prev {
@@ -315,6 +327,10 @@ svg {
 
         &:active {
             opacity: 0.5;
+        }
+
+        &.disable {
+            opacity: 0.2;
         }
     }
 }
