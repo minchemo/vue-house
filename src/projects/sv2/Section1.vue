@@ -5,17 +5,22 @@
       class="logo"
       data-aos="fade-down"
       data-aos-duration="1500"
-      data-aos-delay="100"
+      data-aos-delay="500"
     />
     <div class="txt">
-      <h3 class="title1" data-aos="fade-right" data-aos-duration="1500">
+      <h3
+        class="title1"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-delay="500"
+      >
         Check in奢華的完美假期
       </h3>
       <h4
         class="title2"
         data-aos="fade-left"
         data-aos-duration="1500"
-        data-aos-delay="200"
+        data-aos-delay="700"
       >
         體驗式風格 休旅美學
       </h4>
@@ -23,7 +28,7 @@
         class="title3"
         data-aos="fade-up"
         data-aos-duration="1500"
-        data-aos-delay="400"
+        data-aos-delay="900"
       >
         打造<b>2021</b>獨有生活風格新地標｜重繪A7最美天際線
       </div>
