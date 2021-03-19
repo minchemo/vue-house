@@ -17,31 +17,31 @@
 
 <script>
 // @ is an alias to /src
-import Loading from '@/components/Loading.vue'
-import { setTimeout } from 'timers'
+import Loading from "@/components/Loading.vue";
+import { setTimeout } from "timers";
 
 export default {
-  name: 'section1',
+  name: "section1",
   components: {
-    Loading,
+    Loading
   },
 
   data() {
     return {
-      loading: false,
-    }
+      loading: false
+    };
   },
 
   methods: {},
 
   created() {
-    this.$Lazyload.$on('loaded', ({ el, src }) => {
+    this.$Lazyload.$on("loaded", ({ el, src }) => {
       setTimeout(() => {
         if (this.loading) {
-          this.loading = false
+          this.loading = false;
         }
-      }, 500)
-    })
-  },
-}
+      }, 500);
+    });
+  }
+};
 </script>

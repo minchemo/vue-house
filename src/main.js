@@ -80,7 +80,8 @@ new Vue({
     //   })
     // }
   },
-  created() {
+  created() {},
+  mounted() {
     AOS.init();
   },
   render: h => h(App)
