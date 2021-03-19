@@ -84,9 +84,6 @@ import Section5 from "@/projects/sv2/Section5.vue";
 import Section6 from "@/projects/sv2/Section6.vue";
 import Section7 from "@/projects/sv2/Section7.vue";
 
-import AOS from "@/lib/aos/src/js/aos";
-import "aos/dist/aos.css";
-
 export default {
   name: "home",
   components: {
@@ -184,7 +181,6 @@ export default {
     }, 1000);
   },
   mounted() {
-    AOS.init();
     // window.addEventListener('scroll', this.onScroll, false)
     // this.action = this.$refs.fullPage.api
     // if (this.isMobile) {

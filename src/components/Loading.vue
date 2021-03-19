@@ -1,15 +1,13 @@
 <template>
-  <div :class="`loading-bg ${loading ? '' : 'hide'} ${isOpacity ? 'opacity': ''}`">
-    <img
-      src="~@/assets/img/loading_b.gif"
-      alt
-      class="loading-icon"
-    />
+  <div
+    :class="`loading-bg ${loading ? '' : 'hide'} ${isOpacity ? 'opacity' : ''}`"
+  >
+    <img src="~@/assets/img/loading_b.gif" alt class="loading-icon" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/style/variableColor.scss';
+@import "@/assets/style/variableColor.scss";
 
 .loading-bg {
   background-color: $loading_bg_color;
@@ -76,31 +74,36 @@
 
 <script>
 // import { setTimeout } from 'timers'
+import AOS from "@/lib/aos/src/js/aos";
+import "aos/dist/aos.css";
 
 export default {
-  name: 'loadingComponent',
+  name: "loadingComponent",
 
-  props: ['loading', 'isOpacity'],
+  props: ["loading", "isOpacity"],
 
   data() {
     return {
-      remove: false,
-    }
+      remove: false
+    };
   },
 
   watch: {
     loading: {
       handler(loading) {
-        this.remove = !loading
-      },
+        this.remove = !loading;
+
+        console.log("remove");
+        AOS.init();
+      }
       // immediate: true,
-    },
-  },
+    }
+  }
 
   // created() {
   //   setTimeout(() => {
   //     this.remove = true
   //   }, 1000)
   // },
-}
+};
 </script>

@@ -40,8 +40,6 @@ import "swiper/swiper-bundle.css";
 import Swiper2, { Navigation, Pagination, Autoplay } from "swiper";
 Swiper2.use([Navigation, Pagination, Autoplay]);
 
-// AOS.init()
-
 library.add(faBars);
 library.add(faTimes);
 library.add(faPhone);
@@ -78,6 +76,5 @@ new Vue({
     // }
   },
   created() {},
-  mounted() {},
   render: h => h(App)
 }).$mount("#app");
