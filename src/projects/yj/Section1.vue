@@ -343,7 +343,7 @@
       </svg>
       <div class="txt0" data-aos="fade" data-aos-delay="700">
 <span>邊間好光景近副心</span>
-場仔圳｜4併2~3房</div>
+塭仔圳｜4併2~3房</div>
       <img class="s1bg" src="./s1/s1bg.png" alt="s1bg" v-if="!isMobile" />
       <img class="s1bg" src="./s1/s1bg_m.png" alt="s1bg_m" v-if="isMobile" />
 
