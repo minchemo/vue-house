@@ -26,9 +26,6 @@ import {
   faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
 
-import AOS from "@/lib/aos/src/js/aos";
-import "aos/dist/aos.css";
-
 import {
   faFacebookMessenger,
   faFacebookF
@@ -82,7 +79,7 @@ new Vue({
     // }
   },
   created() {
-    AOS.init();
+    // AOS.init();
   },
   render: h => h(App)
 }).$mount("#app");
