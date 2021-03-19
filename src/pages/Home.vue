@@ -1,6 +1,6 @@
 <template>
   <div class="home no-padding-top">
-    <Loading :loading="load" />
+    <!--<Loading :loading="load" />-->
     <SideNavigation v-if="isSide" />
     <Navigation v-else />
 
