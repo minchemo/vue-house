@@ -2366,7 +2366,9 @@ export default {
         watchOverflow: true,
         centeredSlides: true,
         slideToClickedSlide: true,
-        autoplay: true,
+        autoplay: {
+          delay: 5000
+        },
         speed: 500,
         slidesPerView: isMobile ? 1 : 3,
         spaceBetween: isMobile ? 0 : 0,
