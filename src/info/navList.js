@@ -50,8 +50,8 @@ export default [
     subTitle: "",
     section: "section6-scroll",
     svgSrc: "",
-    offset: 1250,
-    mobileOffset: 1250
+    offset: 0,
+    mobileOffset: -50
   },
   /*{
     name: "閱讀人文",
