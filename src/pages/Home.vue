@@ -99,7 +99,7 @@ export default {
       options: {
         navigation: true,
         navigationPosition: "right",
-        fitToSection: false,
+        fitToSection: true,
         scrollBar: false,
         verticalCentered: false,
         sectionSelector: ".section",

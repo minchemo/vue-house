@@ -205,9 +205,33 @@
     }
 }
 
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-    background: #fff !important;
+#fp-nav {
+    ul {
+        li {
+            margin: 9px;
+            a {
+                span {
+                    background: #e4e4e4 !important;
+                }
+            }
+            a.active {
+                span {
+                    height: 18px !important;
+                    width: 18px !important;
+                    margin: -9px 0 0 -9px !important;
+                    background: #f1f100 !important;
+                }
+            }
+            &:hover {
+                a.active {
+                    span {
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes float {

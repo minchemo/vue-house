@@ -311,7 +311,6 @@ export default {
   .order-top {
     position: relative;
     overflow: hidden;
-    padding-bottom: 50vw;
   }
   .order-title {
     font-family: $family2;
@@ -438,6 +437,7 @@ export default {
       background-position: bottom;
       background-size: 100%;
       background-repeat: no-repeat;
+      padding-bottom: 50vw;
     }
 
     > img {
