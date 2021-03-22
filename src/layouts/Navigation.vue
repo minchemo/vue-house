@@ -151,6 +151,9 @@ export default {
     height: 100%;
     //  writing-mode: vertical-rl;
     letter-spacing: 2px;
+    &:first-child {
+      margin-right: 1vw;
+    }
   }
 
   .link {
@@ -355,6 +358,9 @@ export default {
       min-height: 50px;
       margin-bottom: 5px;
       writing-mode: unset;
+      &:first-child {
+        margin-right: 0;
+      }
     }
 
     .link {
