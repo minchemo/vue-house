@@ -15,7 +15,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1000;
+  z-index: -1000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +44,7 @@
       oacity: 1;
       left: 0;
       display: block;
+      z-index: 1000;
     }
 
     99% {
@@ -51,7 +52,6 @@
       height: 100vh;
       // left: -100vw;
       // display: block !important; not work
-      z-index: 1000;
     }
 
     100% {
