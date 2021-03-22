@@ -2370,6 +2370,7 @@ export default {
           delay: 5000
         },
         speed: 500,
+        loop: true,
         slidesPerView: isMobile ? 1 : 3,
         spaceBetween: isMobile ? 0 : 0,
         loop: isMobile ? true : true
@@ -2745,10 +2746,18 @@ export default {
         let target = $(ev.target);
         let targetIndex = parseInt(target.attr("data-index")) + 1;
 
-        target
+        let targetEl = target
           .parent()
-          .find(".item-cal-pagination-dot[data-index='" + targetIndex + "']")
-          .click();
+          .find(".item-cal-pagination-dot[data-index='" + targetIndex + "']");
+
+        if (targetEl.length == 0) {
+          target
+            .parent()
+            .find(".item-cal-pagination-dot[data-index=0]")
+            .click();
+        } else {
+          targetEl.click();
+        }
 
         $.each(autoPlayInternal, function(i, val) {
           clearInterval(val);
@@ -2759,10 +2768,20 @@ export default {
         let target = $(ev.target);
         let targetIndex = parseInt(target.attr("data-index")) - 1;
 
-        target
+        let targetEl = target
           .parent()
-          .find(".item-cal-pagination-dot[data-index='" + targetIndex + "']")
-          .click();
+          .find(".item-cal-pagination-dot[data-index='" + targetIndex + "']");
+
+        let total = target.parent().find(".item-cal-pagination-dot").length;
+
+        if (targetEl.length == 0) {
+          target
+            .parent()
+            .find(".item-cal-pagination-dot[data-index=" + (total - 1) + "]")
+            .click();
+        } else {
+          targetEl.click();
+        }
 
         $.each(autoPlayInternal, function(i, val) {
           clearInterval(val);
@@ -2806,7 +2825,12 @@ export default {
 
         let interval = setInterval(() => {
           let nextBtn = $this.parent().find(".next");
-          nextBtn.click();
+
+          if (nextBtn.hasClass("disable")) {
+            $this.find(".item-cal-pagination-dot[data-index=0]").click();
+          } else {
+            nextBtn.click();
+          }
         }, autoPlayDelay);
 
         autoPlayInternal.push(interval);
