@@ -121,7 +121,7 @@
 	L629.7,382z M634.7,400.8h-21.4v8.9h21.4V400.8z"/>
 <polyline class="cls-3" points="641.5,121.7 742,121.7 742,456.7 1,456.7 1,121.7 122.6,121.7 "/>
       </svg>
-      <div class="txt0" data-aos="fade" data-aos-delay="700">
+      <div class="txt0" data-aos="fade" data-aos-delay="700" data-aos-offset="-500" >
         <span>邊間好光景 近享副都心</span>
         塭仔圳｜4併2~3房
       </div>
@@ -1594,8 +1594,8 @@
 
       .swiper-container {
         margin-top: 0;
-        width: 90%;
-        padding: 10vw 0;
+        width: 100%;
+        padding: 5vw 0;
 
         .swiper-slide {
           background-size: cover;
@@ -1603,7 +1603,6 @@
           transition: transform 0.4s;
           filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.54));
           border: 2px solid #ffff0b;
-
           &:hover {
             border-color: #eee;
             cursor: pointer;
@@ -1613,9 +1612,15 @@
             width: 100%;
             visibility: hidden;
           }
+          &.swiper-slide-prev {
+            transform:translateX(50%) scale(0.8);
+          }
+          &.swiper-slide-next {
+            transform:translateX(-50%)  scale(0.8);
+          }
           &.swiper-slide-active {
             z-index: 10;
-            transform: perspective(1px) translateZ(0) scale(1.5);
+            transform: perspective(1px) translateZ(0) scale(1);
             backface-visibility: hidden;
           }
         }
@@ -2137,7 +2142,7 @@ export default {
         },
         speed: 500,
         loop: true,
-        slidesPerView: isMobile ? 1 : 3,
+        slidesPerView: isMobile ? 1 : 2.15,
         spaceBetween: isMobile ? 0 : 0,
         loop: isMobile ? true : true
       },
