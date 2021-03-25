@@ -5,7 +5,7 @@ export default [
     subTitle: "",
     section: "section2",
     svgSrc: "",
-    offset: 0,
+    offset: -70,
     mobileOffset: -60
   },
   {
@@ -14,7 +14,7 @@ export default [
     subTitle: "",
     section: "section3",
     svgSrc: "",
-    offset: 0,
+    offset: 100,
     mobileOffset: -50
   },
   {
@@ -33,7 +33,7 @@ export default [
     section: "section5",
     svgSrc: "",
     offset: -150,
-    mobileOffset: 730
+    mobileOffset: 820
   },
   {
     name: "公園綠地",
@@ -41,7 +41,7 @@ export default [
     subTitle: "",
     section: "section6",
     svgSrc: "",
-    offset: 320,
+    offset: -80,
     mobileOffset: -50
   },
   {
@@ -50,10 +50,10 @@ export default [
     subTitle: "",
     section: "section6-scroll",
     svgSrc: "",
-    offset: 0,
+    offset: -80,
     mobileOffset: -50
   },
-  /*{
+  {
     name: "閱讀人文",
     imgSrc: "",
     subTitle: "",
@@ -61,7 +61,7 @@ export default [
     svgSrc: "",
     offset: 100,
     mobileOffset: 0
-  },*/
+  },
   {
     name: "預約賞屋",
     imgSrc: "",

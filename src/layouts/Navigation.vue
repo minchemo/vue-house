@@ -20,7 +20,7 @@
               :key="item.name"
               v-scroll-to="{
                 element: `.${item.section}`,
-                offset: isMobile ? item.mobileOffset : offset
+                offset: isMobile ? item.mobileOffset :  item.offset
               }"
               v-for="(item, index) in list"
               class="flex-ac"
