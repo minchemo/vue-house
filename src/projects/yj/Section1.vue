@@ -18,7 +18,7 @@
             <li v-scroll-to="{ element: `.title3`, offset: 0 }">怡家．移動</li>
             <li v-scroll-to="{ element: `.title5`, offset: 0 }">怡家．樂活</li>
             <li v-scroll-to="{ element: `.title6`, offset: 0 }">怡家．築夢</li>
-            <li v-scroll-to="{ element: `.item6`, offset: 0 }">怡家．格局</li>
+        <!--     <li v-scroll-to="{ element: `.item6`, offset: 0 }">怡家．格局</li> -->
             <li
               class="bt_registration"
               v-scroll-to="{ element: `.item-contact`, offset: 0 }"
@@ -874,11 +874,11 @@
         <img class="item-img" src="./s1/item5-4.jpg" alt="" />
         <img class="item-img-mask" src="./s1/item5-mask.png" alt="" />
       </div>
-      <div class="item item6">
-        <svg
+
+       <svg
           version="1.1"
-          class="svg6"
-          id="svg6"
+          class="svg7"
+          id="svg7"
           v-if="!isMobile"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -916,8 +916,8 @@
         <svg
           version="1.1"
           v-if="isMobile"
-          class="svg6"
-          id="svg6"
+          class="svg7"
+          id="svg7"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
@@ -950,6 +950,9 @@
 	c-36-6.9-87.9-11.6-158.7-2.2C33.4,6.6,29.9,7.6,26.5,8.6z"
           />
         </svg>
+      <!--
+      <div class="item item6">
+       
         <h1>怡家．格局</h1>
         <swiper :options="swiperOptions" :instanceName="2">
           <swiper-slide
@@ -971,7 +974,7 @@
             slot="button-next"
           ></div>
         </swiper>
-      </div>
+      </div> -->
       <div class="item item-contact" data-aos="fade" data-aos-delay="200">
         <vue-lazy-component class="section" id="contact">
           <ContactSection />
@@ -1453,6 +1456,20 @@
         }
       }
     }
+        .svg7 {
+          position: relative;
+          width: 100%;
+          margin: -11.5vw 0 -140.5vw 0;
+          z-index: 6;
+        //  top: 0vw;
+      //    left: 0;
+        }
+        .st0 {
+          fill: url(#SVGID_7_);
+        }
+        .txt-hide {
+          display: none;
+        }
 
     .item {
       position: relative;
@@ -1629,7 +1646,7 @@
 
     .item-contact {
       //上面區塊高
-      margin: 0 0 0 0;
+      margin: -7vw 0 0 0;
       position: relative;
       z-index: 50;
     }
@@ -2071,7 +2088,7 @@
         }
       }
       .item-contact {
-        margin: 0;
+      margin: -30vw 0 0 0;
         position: relative;
         z-index: 50;
       }
