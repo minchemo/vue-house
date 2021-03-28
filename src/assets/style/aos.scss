@@ -1,0 +1,89 @@
+[data-aos='mini-in'] {
+  opacity: 0;
+  transform: scale(1.1);
+  transform-origin: center;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+[data-aos='scale-in'] {
+  opacity: 0;
+  transform: scale(.8);
+  transform-origin: center;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+[data-aos='scale-bottom'] {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+[data-aos='scale-right'] {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+
+[data-aos='sky-in'] {
+  opacity: 0;
+  transform: translateY(-100vh);
+  transform-origin: top;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos='jump-in'] {
+  opacity: 1;
+
+  &.aos-animate {
+    opacity: 1;
+    animation: jump 1s 0 forwards;
+  }
+}
+
+
+@keyframes jump {
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(0);
+  }
+  40%{
+    transform: translateY(-30px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  60%{
+    transform: translateY(-15px);
+  }
+  80%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}

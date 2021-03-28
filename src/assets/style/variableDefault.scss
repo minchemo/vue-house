@@ -1,0 +1,18 @@
+@import './function.scss';
+/* navigation */
+$nav_pc_height: size(100);
+$nav_tablet_height: 100px;
+$nav_phone_height: 60px;
+$logo_pc_width: 120px;
+$logo_tablet_width: 120px;
+$logo_phone_width: 80px;
+
+/* contactInfo */
+$contact_logo_pc_width: 560px;
+$contact_logo_tablet_width: 170px;
+$contact_logo_mobile_width: 295px;
+
+// for calculate
+$nav_pc_height_number: 60;
+$nav_tablet_height_number: 60;
+$nav_phone_height_number: 60;
