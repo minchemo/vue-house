@@ -3,13 +3,28 @@
     <!-- <div class="order-title" v-scroll-to="{ element: `#contact` }">{{order.title}}</div> -->
     <div class="section section-form">
       <div class="title" data-aos="fade-up" data-aos-duration="1000">
-        <img :src="isMobile ? require('../pages/mobile-texture/section-form/title1.png') : require('../pages/texture/section-form/title1.png')" alt="2021市心質感高規宅 西門大院 LIFE WITH BOOKS & GARDEN" />
+        <img
+          :src="
+            isMobile
+              ? require('../pages/mobile-texture/section-form/title1.png')
+              : require('../pages/texture/section-form/title1.png')
+          "
+          alt="2021市心質感高規宅 西門大院 LIFE WITH BOOKS & GARDEN"
+        />
       </div>
       <div class="subtitle" data-aos="fade-up" data-aos-duration="1000">
-        <img src="../pages/texture/section-form/title2.png" alt="院中有園，圓滿一家子心願 即將公開 歡迎預約優先賞屋" v-if="!isMobile" />
+        <img
+          src="../pages/texture/section-form/title2.png"
+          alt="院中有園，圓滿一家子心願 即將公開 歡迎預約優先賞屋"
+          v-if="!isMobile"
+        />
       </div>
       <div class="bg">
-        <img src="../pages/texture/section-form/bg.png" alt="" v-if="!isMobile" />
+        <img
+          src="../pages/texture/section-form/bg.png"
+          alt=""
+          v-if="!isMobile"
+        />
       </div>
       <div class="form" data-aos="fade-up" data-aos-duration="1000">
         <div class="left">
@@ -24,26 +39,49 @@
           <div>
             <label for="city">居住城市</label>
             <select type="text" name="" id="city" v-model="form.city">
-              <option v-for="city in cityList" :key="city.value" :label="city.label" :value="city.value"></option>
+              <option
+                v-for="city in cityList"
+                :key="city.value"
+                :label="city.label"
+                :value="city.value"
+                >{{ city.label }}</option
+              >
             </select>
           </div>
           <div>
             <label for="county">居住地區</label>
             <select type="text" name="" id="county" v-model="form.area">
-              <option v-for="area in areaList" :key="area.value" :label="area.label" :value="area.value"></option>
+              <option
+                v-for="area in areaList"
+                :key="area.value"
+                :label="area.label"
+                :value="area.value"
+                >{{ area.label }}</option
+              >
             </select>
           </div>
         </div>
         <div class="right">
-          <textarea name="" id="note" placeholder="請輸入您的留言 (選填)" cols="30" rows="10" v-model="form.msg"></textarea>
+          <textarea
+            name=""
+            id="note"
+            placeholder="請輸入您的留言 (選填)"
+            cols="30"
+            rows="10"
+            v-model="form.msg"
+          ></textarea>
         </div>
         <div class="bottom">
           <label class="policy-container" for="policy">
-            本人知悉並同意<span @click="showPolicyDialog">「個資告知事項聲明」</span>內容
+            本人知悉並同意<span @click="showPolicyDialog"
+              >「個資告知事項聲明」</span
+            >內容
             <input type="checkbox" id="policy" v-model="checked" />
             <span class="checkmark"></span>
           </label>
-          <div id="send-form" class="hover" @click="submit" :loading="isSubmit">立即預約</div>
+          <div id="send-form" class="hover" @click="submit" :loading="isSubmit">
+            立即預約
+          </div>
         </div>
       </div>
     </div>
@@ -98,7 +136,15 @@
     </div> -->
     <ContactInfo />
     <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.218562810977!2d120.20789631542323!3d23.015745922357652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAwJzU2LjciTiAxMjDCsDEyJzM2LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1609495064404!5m2!1szh-TW!2stw" width="100%" height="600" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.218562810977!2d120.20789631542323!3d23.015745922357652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAwJzU2LjciTiAxMjDCsDEyJzM2LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1609495064404!5m2!1szh-TW!2stw"
+        width="100%"
+        height="600"
+        frameborder="0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
     </div>
     <!-- <GoogleMap /> -->
     <PolicyDialog :policyVisible="policyVisible" />
@@ -106,23 +152,23 @@
 </template>
 
 <script>
-import ContactInfo from '@/components/ContactInfo.vue'
-import GoogleMap from '@/components/GoogleMap.vue'
-import PolicyDialog from '@/components/PolicyDialog.vue'
-import info from '@/info'
-import { isMobile } from '@/utils'
-import { cityList, renderAreaList } from '@/info/address'
+import ContactInfo from "@/components/ContactInfo.vue";
+import GoogleMap from "@/components/GoogleMap.vue";
+import PolicyDialog from "@/components/PolicyDialog.vue";
+import info from "@/info";
+import { isMobile } from "@/utils";
+import { cityList, renderAreaList } from "@/info/address";
 // import Loading from '@/components/Loading.vue'
-import VueRecaptcha from 'vue-recaptcha'
+import VueRecaptcha from "vue-recaptcha";
 
 export default {
-  name: 'order',
+  name: "order",
   components: {
     ContactInfo,
     GoogleMap,
     PolicyDialog,
     // Loading,
-    VueRecaptcha,
+    VueRecaptcha
   },
 
   data() {
@@ -132,50 +178,46 @@ export default {
       info,
       order: info.order,
       form: {
-        name: '',
-        phone: '',
-        email: '',
-        city: '',
-        area: '',
-        msg: '',
+        name: "",
+        phone: "",
+        email: "",
+        city: "",
+        area: "",
+        msg: ""
       },
       checked: false,
       isSubmit: false,
       isVerify: false, // google 機器人驗證
       policyVisible: false,
       showValidateDialog: false,
-      window,
-    }
+      window
+    };
   },
 
   computed: {
     areaList() {
-      return renderAreaList(this.form.city)
-    },
+      return renderAreaList(this.form.city);
+    }
   },
 
   methods: {
     showPolicyDialog() {
-      this.policyVisible = true
+      this.policyVisible = true;
     },
 
     alertValidate() {
-      const h = this.$createElement
+      const h = this.$createElement;
       this.$notify({
-        title: '請填寫必填欄位',
-        message: h(
-          'i',
-          { style: 'color: #82191d' },
-          '「姓名、手機」是必填欄位',
-        ),
-      })
+        title: "請填寫必填欄位",
+        message: h("i", { style: "color: #82191d" }, "「姓名、手機」是必填欄位")
+      });
     },
 
     submit() {
-      if (this.isSubmit) return
+      if (this.isSubmit) return;
       // if (!this.isVerify) return
-      if (!this.checked) return
-      this.isSubmit = true
+      if (!this.checked) return;
+      this.isSubmit = true;
       if (
         !this.form.name ||
         !this.form.phone
@@ -184,68 +226,68 @@ export default {
         // !this.form.city ||
         // !this.form.area
       ) {
-        this.alertValidate()
-        this.isSubmit = false
-        return
+        this.alertValidate();
+        this.isSubmit = false;
+        return;
       }
-      const urlParams = new URLSearchParams(window.location.search)
-      const utmSource = urlParams.get('utm_source')
-      const utmMedium = urlParams.get('utm_medium')
-      const utmContent = urlParams.get('utm_content')
-      const utmCampaign = urlParams.get('utm_campaign')
-      const formData = new FormData()
-      formData.append('name', this.form.name)
-      formData.append('phone', this.form.phone)
-      formData.append('email', this.form.email)
-      formData.append('msg', this.form.msg)
-      formData.append('city', this.form.city)
-      formData.append('area', this.form.area)
-      formData.append('utm_source', utmSource)
-      formData.append('utm_medium', utmMedium)
-      formData.append('utm_content', utmContent)
-      formData.append('utm_campaign', utmCampaign)
-      const time = new Date()
-      const year = time.getFullYear()
-      const month = time.getMonth() + 1
-      const day = time.getDate()
-      const hour = time.getHours()
-      const min = time.getMinutes()
-      const sec = time.getSeconds()
-      const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmSource = urlParams.get("utm_source");
+      const utmMedium = urlParams.get("utm_medium");
+      const utmContent = urlParams.get("utm_content");
+      const utmCampaign = urlParams.get("utm_campaign");
+      const formData = new FormData();
+      formData.append("name", this.form.name);
+      formData.append("phone", this.form.phone);
+      formData.append("email", this.form.email);
+      formData.append("msg", this.form.msg);
+      formData.append("city", this.form.city);
+      formData.append("area", this.form.area);
+      formData.append("utm_source", utmSource);
+      formData.append("utm_medium", utmMedium);
+      formData.append("utm_content", utmContent);
+      formData.append("utm_campaign", utmCampaign);
+      const time = new Date();
+      const year = time.getFullYear();
+      const month = time.getMonth() + 1;
+      const day = time.getDate();
+      const hour = time.getHours();
+      const min = time.getMinutes();
+      const sec = time.getSeconds();
+      const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
       fetch(
         `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}
       `,
         {
-          method: 'GET',
-        },
-      )
-      fetch('contact-form.php', {
-        method: 'POST',
-        body: formData,
-      }).then((response) => {
-        this.isSubmit = false
-        if (response.status === 200) {
-          window.location.href = 'formThanks'
+          method: "GET"
         }
-      })
-      window.dotq = window.dotq || []
+      );
+      fetch("contact-form.php", {
+        method: "POST",
+        body: formData
+      }).then(response => {
+        this.isSubmit = false;
+        if (response.status === 200) {
+          window.location.href = "formThanks";
+        }
+      });
+      window.dotq = window.dotq || [];
 
       window.dotq.push({
-        projectId: '10000',
+        projectId: "10000",
 
         properties: {
-          pixelId: '10101258',
+          pixelId: "10101258",
 
           qstrings: {
-            et: 'custom',
+            et: "custom",
 
-            ea: 'lead10101258',
-          },
-        },
-      })
-    },
-  },
-}
+            ea: "lead10101258"
+          }
+        }
+      });
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
