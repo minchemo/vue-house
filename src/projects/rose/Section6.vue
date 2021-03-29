@@ -11,18 +11,19 @@
             data-aos-duration="1000"
             data-aos-delay="0"
           >
-          </swiper-slide>
-          <div class="swiper-pagination" slot="pagination"></div>
-        </swiper>
         <div
           class="title"
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-delay="0"
         >
-          <h2>單層排氣</h2>
-          <p>各層規劃專屬排氣設備及管路<br />不會混雜樓上樓下別人的廢氣</p>
+          <h2 v-html="item.h2"></h2>
+          <p v-html="item.p"></p>
         </div>
+          </swiper-slide>
+          <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+        
       </div>
 
       <img
@@ -377,12 +378,16 @@ export default {
         {
           id: "0001",
           imgUrl: require("./s6/1.jpg"),
-          title: "中庭花園3D參考圖"
+          title: "中庭花園3D參考圖",
+          h2: "當層排氣",
+          p: "各層規劃專屬排氣設備及管路<br />不會混雜樓上樓下別人的廢氣"
         },
         {
           id: "0002",
-          imgUrl: require("./s6/1.jpg"),
-          title: "中庭花園3D參考圖"
+          imgUrl: require("./s6/2.jpg"),
+          title: "中庭花園3D參考圖",
+          h2: "特選銀立淨乳膠漆",
+          p: "醫師推薦，銀離子長效抑菌<br />防霉除臭環保，健康安全"
         }
       ]
     };
