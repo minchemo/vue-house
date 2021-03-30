@@ -439,7 +439,7 @@
           color: #fff;
           position: absolute;
           right: 15px;
-          bottom: 15px;
+          bottom: 6px;
           letter-spacing: 1px;
         }
       }
@@ -483,7 +483,7 @@
     .section-item {
       position: relative;
       width: 100vw;
-      height: 210vw;
+      height: 169vw;
       margin-top: 10vw;
       padding: 0;
       background: rgba(96, 96, 96, 0.2);
@@ -532,11 +532,11 @@
 
       &:nth-child(2) {
         margin-top: 0;
-        height: 140vw;
+        height: 100vw;
       }
       &:nth-child(3) {
         margin-top: 0;
-        height: 140vw;
+        height: 100vw;
       }
 
       .t1 {
@@ -659,7 +659,7 @@
         top: 100%;
         transform: translateY(-100%);
         .swiper-slide {
-          height: 100vw;
+          height: 61vw !important;
         }
       }
     }
