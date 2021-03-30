@@ -2,14 +2,17 @@
   <div class="section7">
     <swiper :options="swiperOptions" :instanceName="8">
       <swiper-slide
-        v-for="item of swiperList"
+        v-for="(item, index) of swiperList"
         :key="item.id"
         :style="{ backgroundImage: `url(${item.imgUrl})` }"
         data-aos="fade-left"
         data-aos-duration="1500"
         data-aos-delay="400"
+        :data-index="index"
+        class="click-zoom"
       >
         <p>{{ item.title }}</p>
+        <img class="click-zoom-tip" src="~@/projects/sv2/s7/touch.png" alt="" />
       </swiper-slide>
       <div v-if="isMobile" class="swiper-button-prev" slot="button-prev"></div>
       <div v-if="isMobile" class="swiper-button-next" slot="button-next"></div>
@@ -212,6 +215,37 @@
         bottom: 15px;
         letter-spacing: 1px;
       }
+
+      .click-zoom-tip {
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        margin-top: -50px;
+        left: 50%;
+        margin-left: -50px;
+        position: absolute;
+        opacity: 0.7;
+        animation: float 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transition: all 0.4s;
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+
+        &:hover {
+          opacity: 0.9;
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+
+        @keyframes float {
+          from {
+            opacity: 0.8;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
     }
 
     .swiper-button-next {
@@ -343,6 +377,7 @@
 <script>
 // @ is an alias to /src
 import { isMobile } from "@/utils";
+let dragscroll = require("dragscroll/dragscroll.js");
 
 export default {
   name: "section7",
@@ -393,6 +428,29 @@ export default {
     }
   },
   created() {},
-  mounted() {}
+  mounted() {
+    const fullImg = [
+      require("./s7/1_full.jpg"),
+      require("./s7/2_full.jpg"),
+      require("./s7/3_full.jpg")
+    ];
+
+    $(".click-zoom").click(function() {
+      let imgUrl = fullImg[$(this).attr("data-index")];
+
+      $("#app").append(`
+        <div class="click-zoom-box dragscroll">
+          <img height="100%" src="${imgUrl}">
+          <div class="close"></div>
+        </div>
+      `);
+
+      $(".click-zoom-box .close").click(function() {
+        $(".click-zoom-box").remove();
+      });
+
+      dragscroll.reset();
+    });
+  }
 };
 </script>
