@@ -33,7 +33,7 @@ export default [
     section: "section5",
     svgSrc: "",
     offset: -150,
-    mobileOffset: 820
+    mobileOffset: 580
   },
   {
     name: "公園綠地",
