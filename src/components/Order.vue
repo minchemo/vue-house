@@ -6,8 +6,8 @@
         <img
           :src="
             isMobile
-              ? require('../pages/mobile-texture/section-form/title1.png')
-              : require('../pages/texture/section-form/title1.png')
+              ? require('../pages/mobile-texture/section-form/title11.png')
+              : require('../pages/texture/section-form/title11.png')
           "
           alt="2021市心質感高規宅 西門大院 LIFE WITH BOOKS & GARDEN"
         />
