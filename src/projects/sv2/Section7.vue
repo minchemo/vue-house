@@ -431,8 +431,8 @@ export default {
   mounted() {
     const fullImg = [
       require("./s7/1_full.jpg"),
-      require("./s7/2_full.jpg"),
-      require("./s7/3_full.jpg")
+      require("./s7/3_full.jpg"),
+      require("./s7/2_full.jpg")
     ];
 
     $(".click-zoom").click(function() {
