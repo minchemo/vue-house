@@ -435,6 +435,8 @@ export default {
       require("./s7/3_full.jpg")
     ];
 
+    const swipeHereIcon = require("./s7/swipe-here.png");
+
     $(".click-zoom").click(function() {
       let imgUrl = fullImg[$(this).attr("data-index")];
 
@@ -444,6 +446,18 @@ export default {
           <div class="close"></div>
         </div>
       `);
+
+      if ($(this).attr("data-index") == 0) {
+        $(".click-zoom-box").append(
+          `<img class="swipeHere" src="${swipeHereIcon}">`
+        );
+
+        $(".click-zoom-box").on("scroll", function() {
+          $(this)
+            .find(".swipeHere")
+            .fadeOut();
+        });
+      }
 
       $(".click-zoom-box .close").click(function() {
         $(".click-zoom-box").remove();
