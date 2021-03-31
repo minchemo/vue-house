@@ -447,17 +447,15 @@ export default {
         </div>
       `);
 
-      if ($(this).attr("data-index") == 0) {
-        $(".click-zoom-box").append(
-          `<img class="swipeHere" src="${swipeHereIcon}">`
-        );
+      $(".click-zoom-box").append(
+        `<img class="swipeHere" src="${swipeHereIcon}">`
+      );
 
-        $(".click-zoom-box").on("scroll", function() {
-          $(this)
-            .find(".swipeHere")
-            .fadeOut();
-        });
-      }
+      $(".click-zoom-box").on("scroll", function() {
+        $(this)
+          .find(".swipeHere")
+          .fadeOut();
+      });
 
       $(".click-zoom-box .close").click(function() {
         $(".click-zoom-box").remove();
