@@ -408,12 +408,12 @@ export default {
         },
         {
           id: "0002",
-          imgUrl: !isMobile ? require("./s7/2.jpg") : require("./s7/mo/2.jpg"),
+          imgUrl: !isMobile ? require("./s7/2.jpg") : require("./s7/mo/3.jpg"),
           title: ""
         },
         {
           id: "0003",
-          imgUrl: !isMobile ? require("./s7/3.jpg") : require("./s7/mo/3.jpg"),
+          imgUrl: !isMobile ? require("./s7/3.jpg") : require("./s7/mo/2.jpg"),
           title: ""
         }
       ]
