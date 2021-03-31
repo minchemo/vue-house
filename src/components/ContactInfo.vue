@@ -8,6 +8,7 @@
     >
       <div class="title text-align-center">
         <img
+          class="sb-title"
           src="../pages/texture/section-bottom/title.png"
           alt="台南唯一 TSUTAYA BOOKSTORE 蔦屋書苑 西門大道凌空制震地標  文元學區2-4房"
           v-if="!isMobile"
@@ -31,6 +32,7 @@
     <div class="section section-bottom-mb" id="section-bottom">
       <div class="title text-align-center">
         <img
+          class=""
           src="../pages/mobile-texture/section-bottom/title.png"
           alt="台南唯一 TSUTAYA BOOKSTORE 蔦屋書苑 西門大道凌空制震地標  文元學區2-4房"
         />
@@ -154,6 +156,13 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
+
+.sb-title {
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 767px) {
+}
 
 // .contact-info {
 //   background: $contact_bg;

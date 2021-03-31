@@ -12,20 +12,6 @@
           alt="2021市心質感高規宅 西門大院 LIFE WITH BOOKS & GARDEN"
         />
       </div>
-      <div class="subtitle" data-aos="fade-up" data-aos-duration="1000">
-        <img
-          src="../pages/texture/section-form/title2.png"
-          alt="院中有園，圓滿一家子心願 即將公開 歡迎預約優先賞屋"
-          v-if="!isMobile"
-        />
-      </div>
-      <div class="bg">
-        <img
-          src="../pages/texture/section-form/bg.png"
-          alt=""
-          v-if="!isMobile"
-        />
-      </div>
       <div class="form" data-aos="fade-up" data-aos-duration="1000">
         <div class="left">
           <div>
@@ -255,7 +241,15 @@ export default {
       const sec = time.getSeconds();
       const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
       fetch(
-        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}
+        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${
+          this.form.name
+        }&phone=${this.form.phone}&email=${this.form.email}&cityarea=${
+          this.form.city
+        }${this.form.area}&msg=${
+          this.form.msg
+        }&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${
+          info.caseName
+        }
       `,
         {
           method: "GET"
