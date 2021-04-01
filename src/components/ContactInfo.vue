@@ -46,12 +46,12 @@
       <div class="title text-align-center" @click="showMessengerDialog">
         <img src="../pages/mobile-texture/section-bottom/2.png" alt="FB諮詢" />
       </div>
-      <div class="title text-align-center" :href="info.fbLink" target="_blank">
+      <a class="title text-align-center" :href="info.fbLink" target="_blank">
         <img
           src="../pages/mobile-texture/section-bottom/3.png"
           alt="前往粉絲專頁"
         />
-      </div>
+      </a>
       <div class="mapbutton" @click="isShowMapDialog = true">
         <a v-html="info.address"></a>
         <a class="hover">導航GOOGLE地圖</a>
