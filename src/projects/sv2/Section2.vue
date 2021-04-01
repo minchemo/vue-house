@@ -76,7 +76,7 @@
     .txt {
       width: 100%;
       position: absolute;
-      top: calc(50% - 15vw);
+      top: calc(50% - 17vw);
       z-index: 1;
       left: 0;
       color: #fff;
@@ -86,7 +86,7 @@
         font-weight: 400;
         font-size: 0.55em;
         letter-spacing: 0.04em;
-        margin: 4em 0 0;
+        margin: 2em 0 0;
         line-height: 2;
       }
     }

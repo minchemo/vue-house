@@ -1038,6 +1038,11 @@ export default {
           id: "0011",
           imgUrl: require("./s7/3_full.jpg"),
           title: "3D琴房"
+        },
+        {
+          id: "0012",
+          imgUrl: require("./s6/10.jpg"),
+          title: "3D游泳池"
         }
       ]
     };
