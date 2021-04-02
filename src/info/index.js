@@ -3,7 +3,7 @@ export default {
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1807.346360911593!2d121.440119!3d25.0445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb575f9fad8e0edd4!2z5piO5pel5Z-OMuaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1611812905624!5m2!1szh-TW!2stw",
   googleLink: "https://goo.gl/maps/wzA8yWbP9v4FE4J29",
-  phone: "02-8287-6888",
+  phone: "02-2297-8899",
   fbLink:
     "https://www.facebook.com/%E6%98%8E%E6%97%A5%E5%9F%8E2-102181241308191/",
   fbMessage: "https://m.me/102181241308191/",
