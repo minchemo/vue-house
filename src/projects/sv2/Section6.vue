@@ -1007,42 +1007,42 @@ export default {
         {
           id: "0005",
           imgUrl: require("./s6/5.jpg"),
-          title: "3D大廳"
+          title: "大廳"
         },
         {
           id: "0006",
           imgUrl: require("./s6/6.jpg"),
-          title: "3D大廳"
+          title: "大廳"
         },
         {
           id: "0007",
           imgUrl: require("./s6/7.jpg"),
-          title: "3D大廳"
+          title: "健身房"
         },
         {
           id: "0008",
           imgUrl: require("./s6/8.jpg"),
-          title: "3D大廳"
+          title: "媽媽才藝教室"
         },
         {
           id: "0009",
           imgUrl: require("./s6/9.jpg"),
-          title: "3D大廳"
+          title: "韻律教室"
         },
         {
           id: "0010",
           imgUrl: require("./s7/2_full.jpg"),
-          title: "3D遊戲室"
+          title: "兒童遊戲室"
         },
         {
           id: "0011",
           imgUrl: require("./s7/3_full.jpg"),
-          title: "3D琴房"
+          title: "琴室"
         },
         {
           id: "0012",
           imgUrl: require("./s6/10.jpg"),
-          title: "3D游泳池"
+          title: "中庭泳池"
         }
       ]
     };
