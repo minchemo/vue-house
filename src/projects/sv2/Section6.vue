@@ -1043,6 +1043,11 @@ export default {
           id: "0012",
           imgUrl: require("./s6/10.jpg"),
           title: "中庭泳池"
+        },
+        {
+          id: "0013",
+          imgUrl: require("./s6/11.jpg"),
+          title: "閱覽室"
         }
       ]
     };
