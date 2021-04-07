@@ -1016,39 +1016,59 @@ export default {
         },
         {
           id: "0007",
+          imgUrl: require("./s6/14.jpg"),
+          title: "大廳"
+        },
+        {
+          id: "0008",
           imgUrl: require("./s6/7.jpg"),
           title: "健身房"
         },
         {
-          id: "0008",
+          id: "0009",
           imgUrl: require("./s6/8.jpg"),
           title: "媽媽才藝教室"
         },
         {
-          id: "0009",
+          id: "00010",
           imgUrl: require("./s6/9.jpg"),
           title: "韻律教室"
         },
         {
-          id: "0010",
+          id: "0011",
           imgUrl: require("./s7/2_full.jpg"),
           title: "兒童遊戲室"
         },
         {
-          id: "0011",
+          id: "0012",
           imgUrl: require("./s7/3_full.jpg"),
           title: "琴室"
         },
         {
-          id: "0012",
+          id: "0013",
           imgUrl: require("./s6/10.jpg"),
           title: "中庭泳池"
         },
         {
-          id: "0013",
+          id: "0014",
           imgUrl: require("./s6/11.jpg"),
           title: "閱覽室"
-        }
+        },
+        {
+          id: "0015",
+          imgUrl: require("./s6/12.jpg"),
+          title: "KTV室"
+        },
+        {
+          id: "0016",
+          imgUrl: require("./s6/13.jpg"),
+          title: "KTV室"
+        },
+        {
+          id: "0017",
+          imgUrl: require("./s6/15.jpg"),
+          title: "棋藝室"
+        },
       ]
     };
   },
