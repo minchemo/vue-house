@@ -1103,12 +1103,12 @@ export default {
   created() {},
  mounted() {
     const swipeHereIcon = require("./s7/swipe-here.png");
-    const isOverflown = element => {
+    /*const isOverflown = element => {
       return (
         element.scrollHeight > element.clientHeight ||
         element.scrollWidth > element.clientWidth
       );
-    };
+    };*/
     $(".click-zoom").click(function() {
       let imgUrl = $(this)
         .css("background-image")
@@ -1123,12 +1123,12 @@ export default {
           <div class="close"></div>
         </div>
       `);
-      let notOverflown = isOverflown($(".click-zoom-box")[0]);
+      //let notOverflown = isOverflown($(".click-zoom-box")[0]);
       if (isMobile) {
         $(".click-zoom-box").append(
           `<img class="swipeHere" src="${swipeHereIcon}">`
         );
-      } else if (!isMobile && !notOverflown) {
+      } else if (!isMobile && $(this).attr('data-index') == 8) {
         $(".click-zoom-box").append(
           `<img class="swipeHere" src="${swipeHereIcon}">`
         );
