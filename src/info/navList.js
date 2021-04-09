@@ -53,15 +53,15 @@ export default [
     offset: -80,
     mobileOffset: -50
   },
-  {
-    name: "閱讀人文",
-    imgSrc: "",
-    subTitle: "",
-    section: "section7",
-    svgSrc: "",
-    offset: 100,
-    mobileOffset: 0
-  },
+ // {
+ //   name: "閱讀人文",
+  //  imgSrc: "",
+ //   subTitle: "",
+ //   section: "section7",
+ //   svgSrc: "",
+ //   offset: 100,
+ //   mobileOffset: 0
+ // },
   {
     name: "預約賞屋",
     imgSrc: "",
