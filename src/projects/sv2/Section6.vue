@@ -1101,35 +1101,29 @@ export default {
     }
   },
   created() {},
-  mounted() {
+ mounted() {
     const swipeHereIcon = require("./s7/swipe-here.png");
-
     const isOverflown = element => {
       return (
         element.scrollHeight > element.clientHeight ||
         element.scrollWidth > element.clientWidth
       );
     };
-
     $(".click-zoom").click(function() {
       let imgUrl = $(this)
         .css("background-image")
         .slice(4, -1)
         .replace(/"/g, "");
-
       if ($(this).attr("data-index") == 8) {
         imgUrl = require("./s7/1_full.jpg");
       }
-
       $("#app").append(`
         <div class="click-zoom-box dragscroll">
           <img height="100%" src="${imgUrl}">
           <div class="close"></div>
         </div>
       `);
-
       let notOverflown = isOverflown($(".click-zoom-box")[0]);
-
       if (isMobile) {
         $(".click-zoom-box").append(
           `<img class="swipeHere" src="${swipeHereIcon}">`
