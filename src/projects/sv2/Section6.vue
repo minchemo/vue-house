@@ -578,7 +578,7 @@
               <text class="cls-3" transform="translate(12.7 248.58)">
                 日光泳池
                 <tspan x="0" y="40">15項飯店式公設</tspan>
-               <!-- <tspan x="0" y="80">A7首座蔦屋選冊</tspan> -->
+                <!-- <tspan x="0" y="80">A7首座蔦屋選冊</tspan> -->
               </text>
               <rect
                 class="cls-4"
@@ -595,13 +595,20 @@
 
       <swiper :options="swiperOptions2" :instanceName="7" data-mask="1">
         <swiper-slide
-          v-for="item of swiperList2"
+          v-for="(item, index) of swiperList2"
           :key="item.id"
           :style="{ backgroundImage: `url(${item.imgUrl})` }"
           data-aos="fade-left"
           data-aos-duration="1500"
+          class="click-zoom"
+          :data-index="index"
         >
           <p>{{ item.title }}</p>
+          <img
+            class="click-zoom-tip"
+            src="~@/projects/sv2/s7/touch.png"
+            alt=""
+          />
         </swiper-slide>
         <div
           v-if="isMobile"
@@ -750,6 +757,38 @@
           letter-spacing: 1px;
           font-size: 20px;
           z-index: 11;
+        }
+
+        .click-zoom-tip {
+          width: 100px;
+          height: 100px;
+          top: 50%;
+          margin-top: -50px;
+          left: 50%;
+          margin-left: -50px;
+          position: absolute;
+          opacity: 0.7;
+          z-index: 50;
+          animation: float 1s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          transition: all 0.4s;
+          filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+
+          &:hover {
+            opacity: 0.9;
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+
+          @keyframes float {
+            from {
+              opacity: 0.8;
+            }
+            to {
+              opacity: 1;
+            }
+          }
         }
       }
 
@@ -943,6 +982,7 @@
 <script>
 // @ is an alias to /src
 import { isMobile } from "@/utils";
+let dragscroll = require("dragscroll/dragscroll.js");
 
 export default {
   name: "section3",
@@ -1061,6 +1101,57 @@ export default {
     }
   },
   created() {},
-  mounted() {}
+  mounted() {
+    const swipeHereIcon = require("./s7/swipe-here.png");
+
+    const isOverflown = element => {
+      return (
+        element.scrollHeight > element.clientHeight ||
+        element.scrollWidth > element.clientWidth
+      );
+    };
+
+    $(".click-zoom").click(function() {
+      let imgUrl = $(this)
+        .css("background-image")
+        .slice(4, -1)
+        .replace(/"/g, "");
+
+      if ($(this).attr("data-index") == 8) {
+        imgUrl = require("./s7/1_full.jpg");
+      }
+
+      $("#app").append(`
+        <div class="click-zoom-box dragscroll">
+          <img height="100%" src="${imgUrl}">
+          <div class="close"></div>
+        </div>
+      `);
+
+      let notOverflown = isOverflown($(".click-zoom-box")[0]);
+
+      if (isMobile) {
+        $(".click-zoom-box").append(
+          `<img class="swipeHere" src="${swipeHereIcon}">`
+        );
+      } else if (!isMobile && !notOverflown) {
+        $(".click-zoom-box").append(
+          `<img class="swipeHere" src="${swipeHereIcon}">`
+        );
+      }
+
+      $(".click-zoom-box").on("scroll", function() {
+        $(this)
+          .find(".swipeHere")
+          .fadeOut();
+      });
+
+      $(".click-zoom-box .close").click(function() {
+        $(".click-zoom-box").remove();
+      });
+
+      dragscroll.reset();
+    });
+  }
 };
 </script>
