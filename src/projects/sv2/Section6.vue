@@ -604,7 +604,7 @@
           :data-index="index"
         >
           <p>{{ item.title }}</p>
-          <img
+          <img v-if="item.click"
             class="click-zoom-tip"
             src="~@/projects/sv2/s7/touch.png"
             alt=""
@@ -1000,10 +1000,10 @@ export default {
         },
         autoplay: true,
         speed: 1000,
-        slidesPerView: isMobile ? 1 : 1,
-        spaceBetween: isMobile ? 0 : 0,
+        slidesPerView:  1,
+        spaceBetween:  0,
         resistanceRatio: isMobile ? 1 : 0,
-        loop: isMobile ? false : false
+        loop: false
       },
       swiperOptions2: {
         navigation: {
@@ -1016,10 +1016,10 @@ export default {
         },
         autoplay: true,
         speed: 1000,
-        slidesPerView: isMobile ? 1 : 1,
-        spaceBetween: isMobile ? 0 : 0,
+        slidesPerView:  1,
+        spaceBetween: 0,
         resistanceRatio: isMobile ? 1 : 0,
-        loop: isMobile ? false : false
+        loop: false
       },
       swiperList: [
         {
@@ -1046,46 +1046,55 @@ export default {
       swiperList2: [
         {
           id: "0005",
+          click:isMobile ? true : false,
           imgUrl: require("./s6/5.jpg"),
           title: "大廳"
         },
         {
           id: "0006",
+          click:isMobile ? true : false,
           imgUrl: require("./s6/6.jpg"),
           title: "大廳"
         },
         {
           id: "0007",
+          click:isMobile ? true : false,
           imgUrl: require("./s6/7.jpg"),
           title: "健身房"
         },
         {
           id: "0008",
+          click:isMobile ? true : false,
           imgUrl: require("./s6/8.jpg"),
           title: "媽媽才藝教室"
         },
         {
           id: "0009",
+          click:isMobile ? true : false,
           imgUrl: require("./s6/9.jpg"),
           title: "韻律教室"
         },
         {
           id: "0010",
+          click:isMobile ? true : false,
           imgUrl: require("./s6/17.jpg"),
           title: "兒童遊戲室"
         },
         {
           id: "0011",
+          click:isMobile ? true : false,
           imgUrl: require("./s6/16.jpg"),
           title: "琴室"
         },
         {
           id: "0012",
+          click:isMobile ? true : false,
           imgUrl: require("./s6/10.jpg"),
           title: "中庭泳池"
         },
         {
           id: "0013",
+          click:true,
           imgUrl: require("./s6/11.jpg"),
           title: "閱覽室"
         }

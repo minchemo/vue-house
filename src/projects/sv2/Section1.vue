@@ -42,6 +42,8 @@
 .section1 {
   width: 100%;
   height: calc(100vh - #{$nav_pc_height});
+  min-height:calc(100vw * 900 / 1920 - #{$nav_pc_height});
+  max-height:calc(100vw * 1080 / 1920 - #{$nav_pc_height});
   margin-top: $nav_pc_height;
   .logo {
     width: 14.9vw;
@@ -60,6 +62,7 @@
     color: #fff;
     font-size: calc(100vw * 46 / 1920);
     line-height: 1.3;
+    text-shadow: 0 0 0.6em #0367, 0 0 0.2em #0369;
     .title2 {
       font-weight: 500;
       font-size: 1.22em;
