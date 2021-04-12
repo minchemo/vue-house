@@ -1046,49 +1046,49 @@ export default {
       swiperList2: [
         {
           id: "0005",
-          click:isMobile ? true : false,
+          click:isMobile ? false : true,
           imgUrl: require("./s6/5.jpg"),
           title: "大廳"
         },
         {
           id: "0006",
-          click:isMobile ? true : false,
+          click:isMobile ? false : true,
           imgUrl: require("./s6/6.jpg"),
           title: "大廳"
         },
         {
           id: "0007",
-          click:isMobile ? true : false,
+          click:isMobile ? false : true,
           imgUrl: require("./s6/7.jpg"),
           title: "健身房"
         },
         {
           id: "0008",
-          click:isMobile ? true : false,
+          click:isMobile ? false : true,
           imgUrl: require("./s6/8.jpg"),
           title: "媽媽才藝教室"
         },
         {
           id: "0009",
-          click:isMobile ? true : false,
+          click:isMobile ? false : true,
           imgUrl: require("./s6/9.jpg"),
           title: "韻律教室"
         },
         {
           id: "0010",
-          click:isMobile ? true : false,
+          click:isMobile ? false : true,
           imgUrl: require("./s6/17.jpg"),
           title: "兒童遊戲室"
         },
         {
           id: "0011",
-          click:isMobile ? true : false,
+          click:isMobile ? false : true,
           imgUrl: require("./s6/16.jpg"),
           title: "琴室"
         },
         {
           id: "0012",
-          click:isMobile ? true : false,
+          click:isMobile ? false : true,
           imgUrl: require("./s6/10.jpg"),
           title: "中庭泳池"
         },
