@@ -14,8 +14,8 @@
             :style="{ backgroundImage: `url(${item.imgUrl})` }"
           >
           </swiper-slide>
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
+          <!--div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div-->
         </swiper>
         <div class="title">中庭花園3D參考圖</div>
       </div>
