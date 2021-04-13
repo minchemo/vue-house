@@ -249,11 +249,11 @@ export default {
           imgUrl: require("./s5/1.jpg"),
           title: "中庭花園3D參考圖"
         },
-        {
-          id: "0002",
-          imgUrl: require("./s5/1.jpg"),
-          title: "中庭花園3D參考圖"
-        }
+        //{
+        //  id: "0002",
+        //  imgUrl: require("./s5/1.jpg"),
+        //  title: "中庭花園3D參考圖"
+        //}
       ]
     };
   },
