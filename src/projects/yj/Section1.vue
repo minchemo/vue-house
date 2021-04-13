@@ -950,7 +950,7 @@
 	c-36-6.9-87.9-11.6-158.7-2.2C33.4,6.6,29.9,7.6,26.5,8.6z"
           />
         </svg>
-      <!--
+      
       <div class="item item6">
        
         <h1>怡家．格局</h1>
@@ -974,7 +974,7 @@
             slot="button-next"
           ></div>
         </swiper>
-      </div> -->
+      </div> 
       <div class="item item-contact" data-aos="fade" data-aos-delay="200">
         <vue-lazy-component class="section" id="contact">
           <ContactSection />
@@ -1546,7 +1546,7 @@
       top: 0;
       z-index: 7;
       padding: 4vw 0 0 0;
-      margin: -7vw 0 0 0;
+      margin: -7vw 0 7vw 0;
 
       .svg6 {
         position: absolute;
