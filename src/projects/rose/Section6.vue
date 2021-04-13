@@ -11,19 +11,18 @@
             data-aos-duration="1000"
             data-aos-delay="0"
           >
-        <div
-          class="title"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          data-aos-delay="0"
-        >
-          <h2 v-html="item.h2"></h2>
-          <p v-html="item.p"></p>
-        </div>
+            <div
+              class="title"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="0"
+            >
+              <h2 v-html="item.h2"></h2>
+              <p v-html="item.p"></p>
+            </div>
           </swiper-slide>
           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
-        
       </div>
 
       <img
@@ -41,13 +40,52 @@
       data-aos-duration="1000"
       data-aos-delay="0"
     >
-      <div class="title2">
+      <div v-if="isMobile" class="title2">
         <h2>VR格局圖</h2>
         <a class="show-vr" data-room="2">兩房規格</a>
         <a class="show-vr" data-room="3">三房規格</a>
       </div>
+      <iframe
+        v-else
+        id="vr-iframe"
+        src="https://www.eyehouse.co/i?c=c2669302975"
+        frameborder="0"
+        width="100%"
+        height="100%"
+        allowfullscreen="allowfullscreen"
+        style="border: 0"
+      ></iframe>
+      <div class="vr-iframe-loading">
+        正在載入 VR 格局圖．．．
+      </div>
     </div>
-    <div class="vr-iframe">
+    <div
+      class="option"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+    >
+      <img
+        class="img img1"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+        src="~@/projects/rose/s6/img1.png"
+      />
+      <img
+        class="img img2"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="600"
+        src="~@/projects/rose/s6/img2.png"
+      />
+      <div v-if="!isMobile" data-room="2" class="option-item active">
+        兩房規格
+      </div>
+      <div v-if="!isMobile" data-room="3" class="option-item">三房規格</div>
+      <div class="option-item">地產王</div>
+    </div>
+    <div class="vr-iframe" v-if="isMobile">
       <div class="vr-iframe-loading">
         正在載入 VR 格局圖．．．
       </div>
@@ -72,6 +110,16 @@
   width: 100%;
   height: auto;
 
+  .vr-iframe-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    color: #1f7fb2;
+  }
   .vr-iframe {
     position: fixed;
     width: 100%;
@@ -81,17 +129,6 @@
     display: none;
     z-index: 5000;
     background: #eee;
-
-    .vr-iframe-loading {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: -1;
-      color: #1f7fb2;
-    }
 
     .close {
       width: 100px;
@@ -118,10 +155,58 @@
 
     &:nth-child(2) {
       height: 100vh;
-      background: url(~@/projects/rose/s6/vr.jpg);
-      background-size: cover;
-      background-position: bottom;
-      background-repeat: no-repeat;
+      //background: url(~@/projects/rose/s6/vr.jpg);
+      //background-size: cover;
+      //background-position: bottom;
+      //background-repeat: no-repeat;
+    }
+  }
+
+  .option {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    .option-item {
+      border: 2px solid #d60050;
+      color: #d60050;
+      padding: 2% 8%;
+      font-size: 20px;
+      letter-spacing: 12px;
+      margin: 15px;
+
+      &:hover {
+        background: #d60050;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      &.active {
+        background: #d60050;
+        color: #fff;
+      }
+    }
+
+    .img {
+      position: absolute;
+
+      &.img1 {
+        left: -10px;
+        bottom: 0;
+        width: 280px;
+        transform: translate(-58px, 46px);
+      }
+
+      &.img2 {
+        right: 0px;
+        top: 0;
+        width: 180px;
+        transform: translate(-62px, -75px);
+      }
     }
   }
 
@@ -243,6 +328,26 @@
         background-size: cover;
         background-position: bottom;
         background-repeat: no-repeat;
+      }
+    }
+
+    .option {
+      height: 100px;
+
+      .img {
+        &.img1 {
+          left: -10px;
+          bottom: 0;
+          width: 150px;
+          transform: translate(-24px, 23px);
+        }
+
+        &.img2 {
+          right: 0px;
+          top: 0;
+          width: 80px;
+          transform: translate(-20px, -32px);
+        }
       }
     }
 
@@ -413,6 +518,30 @@ export default {
 
       $(".vr-iframe iframe").attr("src", vrSrc);
       $(".vr-iframe").fadeIn();
+    });
+
+    $(".option-item").click(function() {
+      if (isMobile) {
+        window.open("https://reurl.cc/Gd4DVy", "_blank");
+      } else {
+        let room = $(this).attr("data-room");
+
+        if (room) {
+          let vrSrc =
+            room == 2
+              ? "https://www.eyehouse.co/i?c=c2669302975"
+              : "https://www.eyehouse.co/i?c=c4389526598";
+
+          $("#vr-iframe")
+            .attr("src", "about:blank")
+            .attr("src", vrSrc);
+
+          $(".option-item.active").removeClass("active");
+          $(this).addClass("active");
+        } else {
+          window.open("https://reurl.cc/Gd4DVy", "_blank");
+        }
+      }
     });
 
     $(".vr-iframe .close").click(function() {
