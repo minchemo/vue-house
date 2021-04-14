@@ -1973,15 +1973,18 @@
         .title2 {
           //      top: 442vw;
           width: 100%;
-          padding: 20vw 0 0 0;
+          padding: 39vw 0 0 0;
         }
         .title3 {
+          background: #fff;
           width: 100%;
           padding: 15vw 0 0 15vw;
+          margin: -4vw 0 -3vw 0;
         }
         .title4 {
           width: 100%;
           padding: 12vw 16.5vw 0 0;
+          margin: -0.5vw 0 -6vw 0;
           .svg4 {
             top: -30vw;
           }
@@ -1989,10 +1992,12 @@
         .title5 {
           padding: 15vw 0 0 0;
           width: 100%;
+          margin: 0vw 0 15vw 0;
         }
         .title6 {
           padding: 15vw 0 0 0;
           width: 100%;
+          margin: 0vw 0 11vw 0;
         }
       }
 
@@ -2001,28 +2006,33 @@
       }
 
       .item1 {
-        height: calc(100vh - 60vw);
+        height:100vw;
+     //   height: calc(100vh - 60vw);
         //   top: 480vw;
       }
 
       .item2 {
+        height:100vw;
         //    top: 632vw;
-        height: calc(100vh - 60vw);
+        // height: calc(100vh - 60vw);
       }
 
       .item3 {
+        height:100vw;
         //   top: 774vw;
-        height: calc(100vh - 60vw);
+        // height: calc(100vh - 60vw);
       }
 
       .item4 {
+        height:100vw;
         //  top: 916vw;
-        height: calc(100vh - 60vw);
+        // height: calc(100vh - 60vw);
       }
 
       .item5 {
+        height:100vw;
         //    top: 1073vw;
-        height: calc(100vh - 60vw);
+       // height: calc(100vh - 60vw);
       }
 
       .item6 {
@@ -2259,7 +2269,7 @@ export default {
         if (isMobile && index == 0) {
           imgSize = "height:240vw;";
         } else if (isMobile) {
-          imgSize = "width:150%;";
+          imgSize = "width:100%;";
         }
 
         if (index == 0 && isMobile) {
