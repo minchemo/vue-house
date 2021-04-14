@@ -2001,28 +2001,28 @@
       }
 
       .item1 {
-        height: calc(100vh - 50vw);
+        height: calc(100vh - 60vw);
         //   top: 480vw;
       }
 
       .item2 {
         //    top: 632vw;
-        height: calc(100vh - 50vw);
+        height: calc(100vh - 60vw);
       }
 
       .item3 {
         //   top: 774vw;
-        height: calc(100vh - 50vw);
+        height: calc(100vh - 60vw);
       }
 
       .item4 {
         //  top: 916vw;
-        height: calc(100vh - 50vw);
+        height: calc(100vh - 60vw);
       }
 
       .item5 {
         //    top: 1073vw;
-        height: calc(100vh - 50vw);
+        height: calc(100vh - 60vw);
       }
 
       .item6 {
