@@ -1611,17 +1611,19 @@
 
       .swiper-container {
         margin-top: 0;
-        width: 100%;
+        width: 80%;
         padding: 5vw 0;
-
+        .swiper-wrapper{}
         .swiper-slide {
+          width:size(1110);
           background-size: cover;
           background-repeat: no-repeat;
           transition: transform 0.4s;
           filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.54));
-          border: 2px solid #ffff0b;
+          transform:scale(0.3);
+            z-index: 7;
+            opacity: 0;
           &:hover {
-            border-color: #eee;
             cursor: pointer;
           }
 
@@ -1630,15 +1632,20 @@
             visibility: hidden;
           }
           &.swiper-slide-prev {
-            transform:translateX(50%) scale(0.8);
+            transform:translateX(-7%)scale(0.7);
+            z-index: 9;
+            opacity: .8;
           }
           &.swiper-slide-next {
-            transform:translateX(-50%)  scale(0.8);
+            transform:translateX(7%)scale(.7);
+            z-index: 9;
+            opacity: .8;
           }
           &.swiper-slide-active {
             z-index: 10;
-            transform: perspective(1px) translateZ(0) scale(1);
+            transform:translateZ(0) scale(.9);
             backface-visibility: hidden;
+            opacity: 1;
           }
         }
       }
@@ -2068,7 +2075,6 @@
             transition: transform 0.4s;
             filter: unset;
             border: 1px solid rgb(119, 119, 119);
-
             &:hover {
               border-color: initial;
               cursor: pointer;
@@ -2159,8 +2165,8 @@ export default {
         },
         speed: 500,
         loop: true,
-        slidesPerView: isMobile ? 1 : 2.15,
-        spaceBetween: isMobile ? 0 : 0,
+        slidesPerView: isMobile ? 1 : "auto",
+        spaceBetween: isMobile ? 1 : -900,
         loop: isMobile ? true : true
       },
       swiperList: [
@@ -2174,11 +2180,27 @@ export default {
         },
         {
           id: "0003",
-          imgUrl: require("./s1/item6-3.jpg")
+          imgUrl: require("./s1/item6-1.jpg")
         },
         {
           id: "0004",
-          imgUrl: require("./s1/item6-4.jpg")
+          imgUrl: require("./s1/item6-2.jpg")
+        },
+        {
+          id: "0005",
+          imgUrl: require("./s1/item6-1.jpg")
+        },
+        {
+          id: "0006",
+          imgUrl: require("./s1/item6-2.jpg")
+        },
+        {
+          id: "0007",
+          imgUrl: require("./s1/item6-1.jpg")
+        },
+        {
+          id: "0008",
+          imgUrl: require("./s1/item6-2.jpg")
         }
       ]
     };
