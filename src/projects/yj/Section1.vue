@@ -1973,7 +1973,7 @@
         .title2 {
           //      top: 442vw;
           width: 100%;
-          padding: 39vw 0 0 0;
+          padding:25vw 0 0 0;margin: 10vw 0 10vw 0;
         }
         .title3 {
           background: #fff;
