@@ -975,7 +975,7 @@
           ></div>
         </swiper>
       </div> 
-      <div class="item item-contact" data-aos="fade" data-aos-delay="200">
+      <div class="item item-contact">
         <vue-lazy-component class="section" id="contact">
           <ContactSection />
         </vue-lazy-component>
@@ -1611,11 +1611,11 @@
 
       .swiper-container {
         margin-top: 0;
-        width: 80%;
+        width: 100%;
         padding: 5vw 0;
         .swiper-wrapper{}
         .swiper-slide {
-          width:size(1110);
+        //  width:size(1110);
           background-size: cover;
           background-repeat: no-repeat;
           transition: transform 0.4s;
@@ -1632,18 +1632,18 @@
             visibility: hidden;
           }
           &.swiper-slide-prev {
-            transform:translateX(-7%)scale(0.7);
+            transform:translateX(50%)scale(0.7);
             z-index: 9;
             opacity: .8;
           }
           &.swiper-slide-next {
-            transform:translateX(7%)scale(.7);
+            transform:translateX(-50%)scale(.7);
             z-index: 9;
             opacity: .8;
           }
           &.swiper-slide-active {
             z-index: 10;
-            transform:translateZ(0) scale(.9);
+            transform:translateZ(0) scale(1);
             backface-visibility: hidden;
             opacity: 1;
           }
@@ -2028,6 +2028,7 @@
       .item6 {
         padding: 10vw 0 0 0;
         //    top: 1183vw;
+        margin: -40vw auto 40vw auto;
         h1 {
           font-size: 28px;
           transform: translate(-108%, 0%);
@@ -2165,8 +2166,8 @@ export default {
         },
         speed: 500,
         loop: true,
-        slidesPerView: isMobile ? 1 : "auto",
-        spaceBetween: isMobile ? 1 : -900,
+        slidesPerView: isMobile ? 1 : 2.1,
+        spaceBetween: isMobile ? 1 : 0,
         loop: isMobile ? true : true
       },
       swiperList: [

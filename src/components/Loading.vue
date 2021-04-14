@@ -21,6 +21,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+    display: none;
 
   .loading-icon {
     width: 150px;
@@ -65,6 +66,7 @@
 
 @media screen and (max-width: 767px) {
   .loading-bg {
+    display: none;
     &.hide {
       display: none;
     }
