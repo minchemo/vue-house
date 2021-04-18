@@ -103,7 +103,8 @@ export default {
         scrollBar: false,
         verticalCentered: false,
         sectionSelector: ".section",
-        autoScrolling: false
+        autoScrolling: false,
+        fitToSection: false,
       }
     };
   },
