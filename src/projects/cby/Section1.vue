@@ -362,9 +362,9 @@
             </g>
           </svg>
         </div>
-        <div v-if="!isMobile" class="order">搶先鑑賞</div>
+        <div v-if="!isMobile" class="order" v-scroll-to="{ element: `#contact`, offset: 0 }">搶先鑑賞</div>
       </div>
-      <div v-if="isMobile" class="order" data-aos="fade-up" data-aos-duration="2000">搶先<br />鑑賞</div>
+      <div v-if="isMobile" class="order" data-aos="fade-up" data-aos-duration="2000" v-scroll-to="{ element: `#contact`, offset: 0 }">搶先<br />鑑賞</div>
     </div>
     <img
       class="ppl"
