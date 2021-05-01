@@ -35,7 +35,7 @@
           </span>
         </a>
         <div class="address flex-c">{{ info.address }}</div>
-        <div class="google-btn flex-c" @click="showMapDialog">
+        <div class="google-btn flex-c btn" @click="showMapDialog">
           <span class="flex-c">
             <font-awesome-icon icon="map-marker-alt" /><span
               >導航 Google 地圖</span
@@ -136,17 +136,6 @@ export default {
   transform: translateY(0);
   margin: 2vw auto -2vw;
   padding: 70px 0 30px;
-
-  .decor-5 {
-    width: 22vw;
-    top: -12vh;
-    left: -2vw;
-    z-index: 5;
-
-    img {
-      width: 100%;
-    }
-  }
 }
 
 .logo {
@@ -176,7 +165,7 @@ export default {
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
-  border-radius: 0px;
+  border-radius: 50px;
   font-family: $family4;
 
   &.half {
@@ -224,7 +213,7 @@ export default {
   height: 60px;
   background: #fff;
   box-shadow: $contact_btn_border;
-  border-radius: 0;
+  border-radius: 50px 0 0 50px;
   // border:1px solid $contact_btn_bg;
   font-family: $family4;
   + .google-btn,
@@ -242,8 +231,9 @@ export default {
   color: $contact_google_btn_color;
   background: $contact_google_btn_bg;
   background-position: center !important;
-  box-shadow: $contact_btn_border;
+  box-shadow: $contact_google_border;
   transition: all 0.5s;
+  border-radius: 0 50px 50px 0 !important;
 
   svg {
     color: $contact_google_btn_icon;
@@ -256,6 +246,7 @@ export default {
   &:hover {
     background: $contact_google_hover_btn_bg;
     color: $contact_google_hover_btn_color;
+    box-shadow: $contact_google_hover_border;
 
     svg {
       color: $contact_google_hover_btn_icon;
@@ -286,7 +277,7 @@ export default {
     padding: 40px;
     transform: none;
     position: static;
-    margin: 40px auto 40px auto;
+    margin: 80px auto 0 auto;
 
     .logo {
       width: $contact_logo_mobile_width;
@@ -320,6 +311,7 @@ export default {
       margin-bottom: 12px;
       &.address {
         margin-bottom: 0;
+        border-radius: 30px 30px 0 0;
       }
     }
   }
@@ -335,10 +327,10 @@ export default {
     width: 280px;
     padding: 0 1em;
     text-align: justify;
-    border-radius: 0;
+    border-radius: 0 0 30px 30px;
     + .google-btn,
     + .btn {
-      border-radius: 0;
+      border-radius: 0 0 30px 30px !important;  
     }
   }
 }

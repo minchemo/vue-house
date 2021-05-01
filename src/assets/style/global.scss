@@ -258,7 +258,6 @@ img[lazy='loaded'] {
         background-image: $order_bg_image;
         background-repeat: no-repeat;
         background-size: 100vw auto;
-        background-attachment: fixed;
         background-position: 0% 50%;
 
         &.no-padding-top {
@@ -352,7 +351,7 @@ img[lazy='loaded'] {
         /*background-image: $order_bg_image_m;*/
         // background-repeat: no-repeat;
         // background-size: cover;
-        background-attachment: fixed;
+        //background-attachment: fixed;
         background-position: 0% 50%;
 
         &.no-padding-top {

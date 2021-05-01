@@ -29,6 +29,7 @@ export default {
 .google-map {
   display: flex;
   position: relative;
+  z-index: 1;
   iframe {
     flex: 1;
     order: 2;

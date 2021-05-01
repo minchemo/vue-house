@@ -41,7 +41,7 @@ import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/sv/Section1.vue";
+import Section1 from "@/projects/cby/Section1.vue";
 
 export default {
   name: "home",
