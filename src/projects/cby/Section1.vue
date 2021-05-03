@@ -543,7 +543,6 @@
 
         &:hover {
           background: #00a199;
-          filter: drop-shadow(15px 20px 20px #1e7773);
           cursor: pointer;
         }
         &:after {
