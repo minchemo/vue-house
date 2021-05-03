@@ -373,7 +373,7 @@
       srcset=""
       data-aos="fade-right"
       data-aos-duration="3000"
-      data-aos-delay="200"
+      data-aos-offset="-500"
     />
     <img class="rtlogo" src="~@/projects/cby/s1/rtlogo.png" alt="" srcset="" />
     <div class="leaf">
@@ -672,7 +672,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
-    height: calc(100vh - 63px);
+    height: calc(200vw - 63px);
 
     .intro {
       position: absolute;

@@ -17,7 +17,7 @@
         <div class="btn flex-c" @click="showCallDialog">
           <span class="flex-c">
             <font-awesome-icon icon="phone" />
-            {{ info.phone }}
+            <span>{{ info.phone }}</span>
           </span>
         </div>
         <div class="btn flex-c" @click="showMessengerDialog">
@@ -82,7 +82,7 @@ export default {
   components: {
     CallDialog,
     MessengerDialog,
-    MapDialog
+    MapDialog,
   },
   data() {
     return {
@@ -92,7 +92,7 @@ export default {
       isTablet,
       isShowCallDialog: false,
       isShowMessengerDialog: false,
-      isShowMapDialog: false
+      isShowMapDialog: false,
     };
   },
   methods: {
@@ -108,8 +108,8 @@ export default {
     showMapDialog() {
       // if (!this.isMobile) return
       this.isShowMapDialog = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -277,7 +277,7 @@ export default {
     padding: 40px;
     transform: none;
     position: static;
-    margin: 80px auto 0 auto;
+    margin: 70vw auto 0 auto;
 
     .logo {
       width: $contact_logo_mobile_width;
@@ -330,7 +330,7 @@ export default {
     border-radius: 0 0 30px 30px;
     + .google-btn,
     + .btn {
-      border-radius: 0 0 30px 30px !important;  
+      border-radius: 0 0 30px 30px !important;
     }
   }
 }

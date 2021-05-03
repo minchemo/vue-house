@@ -605,7 +605,7 @@ export default {
 @media only screen and (max-width: 767px) {
   .order-bg {
     background-image: $order_bg_image_m;
-    background-position: top center;
+    background-size: cover;
     padding-top: 40px;
     margin: 0;
     position: relative;
@@ -665,6 +665,10 @@ export default {
       margin: 0 auto;
       margin-bottom: 10vw;
       line-height: 1.5;
+    }
+    .order-top {
+      
+    top:20vw;
     }
     .order {
       width: 95% !important;
