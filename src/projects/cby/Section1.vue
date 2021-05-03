@@ -540,6 +540,7 @@
         margin-left: 2vw;
         transition: all 0.3s;
         position: relative;
+        animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in;
 
         &:hover {
           background: #00a199;
@@ -562,6 +563,41 @@
           z-index: 10;
         }
       }
+      /* Declate color shifting animation */
+@keyframes colorShift {
+	0%, 100% {
+			background:#00fbff00;
+	}
+	/*33% {
+		background: #fb3e3e;
+	}
+	66%{
+		background: #0dcc00;
+	}*/
+}
+
+/* Declare border pulse animation */
+@keyframes borderPulse {
+  0% {
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255,.4), 0px 0px 0px 0px rgba(255,255,255,1);
+  }
+  100% {
+    box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255,.2), 0px 0px 0px 10px rgba(255,255,255,0);
+  }
+}
+
+/* Declare shine on hover animation */
+@keyframes hoverShine {
+	0%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
+	}
+	50%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.4) 50%, rgba(255,255,255,0) 100%);
+	}
+	100%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,.4) 100%);
+	}
+}
     }
   }
 
@@ -678,12 +714,13 @@
         border: 2px solid #fff;
         border-radius: 100px;
         padding: 6vw 6vw;
-        font-size: 5vw;
+        font-size: 8vw;
         font-weight: bold;
         color: #fff000;
         position: absolute;
-        right: 12vw;
-        bottom: 10px;
+        right: 8vw;
+        bottom: 20px;
+        animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in;
 
         &:hover {
           background: #00a199;
@@ -700,7 +737,6 @@
           height: 90%;
           margin-left: 5%;
           margin-top: 5%;
-          background: #fff;
           opacity: 0.5;
           z-index: -1;
         }
@@ -720,7 +756,46 @@
           transform: rotate(0deg);
           z-index: 10;
         }
+
+
       }
+
+            /* Declate color shifting animation */
+@keyframes colorShift {
+	0%, 100% {
+			background:#00fbff00;
+	}
+	/*33% {
+		background: #fb3e3e;
+	}
+	66%{
+		background: #0dcc00;
+	}*/
+}
+
+/* Declare border pulse animation */
+@keyframes borderPulse {
+  0% {
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255,.4), 0px 0px 0px 0px rgba(255,255,255,1);
+  }
+  100% {
+    box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255,.2), 0px 0px 0px 10px rgba(255,255,255,0);
+  }
+}
+
+/* Declare shine on hover animation */
+@keyframes hoverShine {
+	0%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
+	}
+	50%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.4) 50%, rgba(255,255,255,0) 100%);
+	}
+	100%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,.4) 100%);
+	}
+}
+
     }
 
     .ppl {
