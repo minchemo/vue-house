@@ -5,8 +5,8 @@ export default {
   googleLink: "https://goo.gl/maps/2AeoPvXVkJ1Frswp7",
   phone: "06-283-5866",
   fbLink:
-    "",
-  fbMessage: "",
+    "https://www.facebook.com/chunfubeautifulyear",
+  fbMessage: "https://m.me/chunfubeautifulyear/",
   caseName: "春福年年",
   indigatorLength: 10,
   houseInfos: [
