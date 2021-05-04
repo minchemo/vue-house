@@ -277,7 +277,7 @@ export default {
     padding: 40px;
     transform: none;
     position: static;
-    margin: 70vw auto 0 auto;
+    margin: 30vw auto 0 auto;
 
     .logo {
       width: $contact_logo_mobile_width;
