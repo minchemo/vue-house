@@ -362,7 +362,7 @@
             </g>
           </svg>
         </div>
-        <div v-if="!isMobile" class="order" v-scroll-to="{ element: `#contact`, offset: 0 }">搶先鑑賞</div>
+        <div v-if="!isMobile" class="order" v-scroll-to="{ element: `#contact`, offset: 0 }"><span>搶先鑑賞</span></div>
       </div>
       <div v-if="isMobile" class="order" data-aos="fade-up" data-aos-duration="2000" v-scroll-to="{ element: `#contact`, offset: 0 }">搶先<br />鑑賞</div>
     </div>
@@ -394,7 +394,9 @@
 /* 螢幕尺寸標準 */
 .section1 {
   width: 100vw;
-  height: 80vh;
+  height:calc(100vh - 100vw * 100 / 1920);
+  max-height:calc(80vw * 980 / 1920);
+  min-height:calc(80vw * 800 / 1920);
   //background-image: url("~@/projects/sv/s1/bg.png");
   background-size: cover;
   background-position: bottom;
@@ -403,8 +405,8 @@
 
   .intro {
     position: absolute;
-    right: 10vw;
-    top: 0;
+    left:42%;
+    top:2%;
     z-index: 1;
     height: 100%;
     display: flex;
@@ -413,8 +415,9 @@
     flex-wrap: wrap;
     flex-direction: column;
     .logo {
+          height:22%;
       svg {
-        width: 28vw;
+          height:100%;
         .cls-1 {
           fill: #fff;
         }
@@ -499,9 +502,10 @@
     }
 
     .subtitle {
-      margin-top: 2vw;
+      margin-top: 6%;
+          height:20%;
       svg {
-        width: 35vw;
+          height:100%;
         .cls-1 {
           fill: #fff;
         }
@@ -515,10 +519,13 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      margin-top: 3vw;
+      margin-top: 9%;
+          height: 7.7%;
+          position: relative;
       .tel {
+    height: 100%;
         svg {
-          width: 20vw;
+    height: 100%;
           .cls-1 {
             fill: #fff;
           }
@@ -531,22 +538,26 @@
         }
       }
       .order {
-        border: 2px solid #fff;
-        border-radius: 100px;
-        padding: 1.2vw 4.5vw;
-        font-size: 1.8vw;
+        font-size: 2vw;
         font-weight: bold;
         color: #fff000;
         margin-left: 2vw;
-        transition: all 0.3s;
         position: relative;
-        animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in;
-
-        &:hover {
+        span{
+          position: relative;
+          display: block;
+          z-index: 8;
+          border-radius: 1.5em;
+          padding: 1vw 4.5vw;
+          border:1.5px solid #fff;
+          transition: all 0.3s;
+          animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in;
+        }
+        &:hover span{
           background: #00a199;
           cursor: pointer;
         }
-        &:after {
+        &::after {
           content: "";
           position: absolute;
           width: 5vw;
@@ -603,10 +614,10 @@
 
   .ppl {
     position: absolute;
-    left: -6vw;
-    bottom: -30px;
-    width: auto;
-    height: 75vh;
+    right:68%;
+    top:6%;
+    width:auto;
+    height: 98%;
     z-index: 10;
     pointer-events: none;
   }
@@ -615,37 +626,39 @@
     z-index: 1;
     right: 10px;
     top: 10px;
-    width: 8vw;
+    width: auto;
+    height: 10%;
   }
 
   .leaf {
     pointer-events: none;
     .leaf1 {
       position: absolute;
-      width: 30vh;
-      left: 50vh;
-      top: -5vh;
+      height: 45%;
+      right:55%;
+      top: -8%;
       animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
+      transform-origin: 50% 0;
     }
     .leaf2 {
       position: absolute;
-      width: 15vh;
-      left: 6vh;
-      top: -3vh;
+      height: 30%;
+      right:calc(71% + 16vw);
+      top: -8%;
       animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
     }
     .leaf3 {
       position: absolute;
-      width: 20vh;
+      height: 25%;
       right: 0;
-      bottom: 22vh;
+      bottom:15%;
       animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
     }
     .leaf4 {
       position: absolute;
-      width: 20vh;
-      left: 50vh;
-      bottom: 6vh;
+      height: 40%;
+      right: 62%;
+      bottom: 3%;
       animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
     }
   }
@@ -672,40 +685,53 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
-    height: calc(200vw - 63px);
+  height:calc(100vh - 63px - 100vw * 50 / 375);
+  max-height:calc(100vw * 750 / 375);
+  min-height:calc(100vw * 550 / 375);
 
     .intro {
       position: absolute;
       right: 0;
       top: 0;
+      left: 0;
       height: 100%;
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+     // justify-content: flex-start;
       flex-wrap: wrap;
       flex-direction: column;
       z-index: 11;
+    padding-bottom: 52vw;
       .logo {
-        margin-top: 25vw;
+        margin-top:0;
+        height:auto;
+        width: 84%;
         svg {
-          width: 80vw;
+          width: 100%;
+          height:auto;
         }
       }
 
       .subtitle {
         margin-top: 7vw;
+        width: 84%;
+        height:auto;
         svg {
-          width: 80vw;
+          width: 100%;
+          height:auto;
         }
       }
 
       .tel-order {
         justify-content: space-around;
         margin-top: 2vw;
+        width: 60%;
+        height:auto;
         .tel {
           svg {
-            width: 70vw;
+          width: 100%;
+          height:auto;
           }
         }
       }
@@ -800,15 +826,17 @@
 
     .ppl {
       position: absolute;
-      left: -6vw;
-      bottom: -30px;
-      width: 75vw;
+      left: -9vw;
+      top: auto;
+      bottom: -6%;
+      width: 72vw;
       height: auto;
       z-index: 10;
       pointer-events: none;
     }
     .rtlogo {
       width: 30vw;
+      height: auto;
     }
 
     .leaf {
@@ -816,6 +844,7 @@
       .leaf1 {
         position: absolute;
         width: 40vw;
+        height: auto;
         left: 0;
         top: -5vw;
         animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
@@ -823,6 +852,7 @@
       .leaf3 {
         position: absolute;
         width: 20vh;
+        height: auto;
         right: 0;
         bottom: 20vh;
         animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
@@ -830,6 +860,7 @@
       .leaf4 {
         position: absolute;
         width: 20vh;
+        height: auto;
         left: 0;
         bottom: 6vh;
         animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
