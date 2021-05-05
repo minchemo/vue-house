@@ -20,6 +20,12 @@
       <HouseInfo />
     </div>
 
+      <div class="item item-contact" data-aos="fade" data-aos-delay="200">
+        <div class="section" id="contact">
+          <ContactSection />
+        </div>
+      </div>
+
     <MobileNav />
   </div>
 </template>

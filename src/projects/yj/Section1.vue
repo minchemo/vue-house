@@ -975,11 +975,6 @@
           ></div>
         </swiper>
       </div> -->
-      <div class="item item-contact" data-aos="fade" data-aos-delay="200">
-        <vue-lazy-component class="section" id="contact">
-          <ContactSection />
-        </vue-lazy-component>
-      </div>
       <img class="building-6" src="./s1/building-6.png" alt="" />
       <div class="bg">
         <img v-if="!isMobile" src="./s1/bg-2.png" alt="" />
