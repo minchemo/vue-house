@@ -49,7 +49,7 @@
     width: 14.9vw;
     position: absolute;
     top: calc(50% - 14.5vw);
-    left: 64.5vw;
+    left: 64.2vw;
     z-index: 2;
     filter: brightness(1.2);
   }
