@@ -3,7 +3,11 @@
     <Order />
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .contact {
+    background-color: #183eb9;
+  }
+</style>
 
 <script>
 import Order from "@/components/Order.vue";

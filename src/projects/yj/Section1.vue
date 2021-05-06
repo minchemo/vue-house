@@ -1538,7 +1538,7 @@
       top: 0;
       z-index: 7;
       padding: 4vw 0 0 0;
-      margin: -25vw 0 0 0;
+      margin: -7vw 0 0 0;
 
       .svg6 {
         position: absolute;
@@ -2004,6 +2004,8 @@
       .item6 {
         padding-top:10vw;
         //    top: 1183vw;
+
+      margin: -25vw 0 0 0;
         h1 {
           font-size: 28px;
           transform: translate(-108%, 0%);
