@@ -8,12 +8,13 @@ $case_code = substr($src,0,strpos($src,$case_code_test=='1'?'1':$case_code_test=
 
 $pdo = new pdo('mysql:host=localhost;dbname=htw_web', 'htw', '748aSgl5Ni');
 $pdo->exec("SET NAMES 'utf8'");
-$sql = "SELECT title,description,keyword FROM susers WHERE email = '" . $case_code . "'";
+$sql = "SELECT title,description,keyword,p0 FROM susers WHERE email = '" . $case_code . "'";
 $dataList = $pdo->query($sql)->fetchAll();
 $docTitle = $dataList[0]['title'];
 $siteName = $dataList[0]['title'];
 $docDesc = $dataList[0]['description'];
 $keyWords = $dataList[0]['keyword'];
+$p0 = $dataList[0]['p0'];
 $ogType = 'website';
 ?>
 <title><?php echo $docTitle; ?></title>
@@ -28,3 +29,4 @@ $ogType = 'website';
 <meta name="twitter:title" content="<?php echo $docTitle; ?>" />
 <meta itemprop="name" content="<?php echo $docTitle; ?>">
 <meta itemprop="description" content="<?php echo $docDesc ?>">
+<meta name="facebook-domain-verification" content="<?php echo $p0 ?>" />
