@@ -23,6 +23,7 @@
     .img {
       position: absolute;
       opacity: 1;
+      width: auto;
     }
     .img-hover {
       opacity: 0;
