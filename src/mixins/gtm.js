@@ -16,7 +16,7 @@ export default {
       }
       scriptArray.push(obj)
     })
-
+    
     scriptArray.forEach(script => {
       document.head.appendChild(script.s)
       this.$refs.gtmNoScript.appendChild(script.n)

@@ -1,13 +1,16 @@
 <template>
-  <div class="thanks">
-    <a href="/">
-      <img src="~@/assets/img/thank-img.png" alt="" class="img">
-      <img src="~@/assets/img/thank-img-hover.png" alt="" class="img-hover">
-    </a>
+  <div>
+    <div ref="gtmNoScript"/>
+    <div class="thanks">
+      <a href="/">
+        <img src="~@/assets/img/thank-img.png" alt="" class="img" />
+        <img src="~@/assets/img/thank-img-hover.png" alt="" class="img-hover" />
+      </a>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
-@import '@/assets/style/variableColor.scss';
+@import "@/assets/style/variableColor.scss";
 .thanks {
   width: 100vw;
   height: 100vh;
@@ -42,7 +45,8 @@
 @media screen and (max-width: 767px) {
   .thanks {
     a {
-      .img, .img-hover {
+      .img,
+      .img-hover {
         width: 90vw;
       }
     }
@@ -51,13 +55,13 @@
 </style>
 
 <script>
-import gtm from '@/mixins/gtm.js'
+import gtm from "@/mixins/gtm.js";
 
 export default {
-  name: 'phoneThanks',
+  name: "phoneThanks",
   mixins: [gtm],
   components: {},
 
   methods: {},
-}
+};
 </script>
