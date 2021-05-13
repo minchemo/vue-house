@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <div ref="gtmNoScript"/>
-    <div class="thanks">
-      <a href="/">
-        <img src="~@/assets/img/thank-img.png" alt="" class="img" />
-        <img src="~@/assets/img/thank-img-hover.png" alt="" class="img-hover" />
-      </a>
-    </div>
+  <div class="thanks">
+    <div ref="gtmNoScript" />
+    <a href="/">
+      <img src="~@/assets/img/thank-img.png" alt="" class="img" />
+      <img src="~@/assets/img/thank-img-hover.png" alt="" class="img-hover" />
+    </a>
   </div>
 </template>
 <style lang="scss" scoped>
