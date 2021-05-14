@@ -18,7 +18,7 @@
             <li v-scroll-to="{ element: `.title3`, offset: 0 }">怡家．移動</li>
             <li v-scroll-to="{ element: `.title5`, offset: 0 }">怡家．樂活</li>
             <li v-scroll-to="{ element: `.title6`, offset: 0 }">怡家．築夢</li>
-        <!--     <li v-scroll-to="{ element: `.item6`, offset: 0 }">怡家．格局</li> -->
+            <li v-scroll-to="{ element: `.item6`, offset: 0 }">怡家．格局</li>
             <li
               class="bt_registration"
               v-scroll-to="{ element: `.item-contact`, offset: 0 }"
@@ -950,9 +950,7 @@
 	c-36-6.9-87.9-11.6-158.7-2.2C33.4,6.6,29.9,7.6,26.5,8.6z"
           />
         </svg>
-      
       <div class="item item6">
-       
         <h1>怡家．格局</h1>
         <swiper :options="swiperOptions" :instanceName="2">
           <swiper-slide
@@ -974,13 +972,7 @@
             slot="button-next"
           ></div>
         </swiper>
-      </div> 
-      <div class="item item-contact">
-        <vue-lazy-component class="section" id="contact">
-          <ContactSection />
-        </vue-lazy-component>
       </div>
-      <img class="building-6" src="./s1/building-6.png" alt="" />
       <div class="bg">
         <img v-if="!isMobile" src="./s1/bg-2.png" alt="" />
         <img v-if="isMobile" src="./s1/bg-mo.png" alt="" />
@@ -1658,15 +1650,6 @@
       z-index: 50;
     }
 
-    .building-6 {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      right: 0;
-      z-index: 50;
-      pointer-events: none;
-    }
-
     .bg {
       display: none;
       position: absolute;
@@ -2036,9 +2019,8 @@
       }
 
       .item6 {
-        padding: 10vw 0 0 0;
-        //    top: 1183vw;
-        margin: -40vw auto 40vw auto;
+        padding-top:10vw;
+        margin: -25vw 0 0 0;
         h1 {
           font-size: 28px;
           transform: translate(-108%, 0%);

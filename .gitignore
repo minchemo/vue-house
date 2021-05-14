@@ -21,3 +21,6 @@ yarn-error.log*
 *.sw?
 
 *.mp4
+
+yarn.lcok
+package-lock.json

@@ -13,6 +13,13 @@
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
     </vue-lazy-component>
+
+      <div class="item item-contact" data-aos="fade" data-aos-delay="200">
+        <div class="section" id="contact">
+          <ContactSection />
+          
+        </div>
+      </div>
     <div class="section" @init="init">
       <GoogleMap />
     </div>
@@ -43,6 +50,7 @@ import { isMobile } from "@/utils";
 import SideNavigation from "@/layouts/SideNavigation.vue";
 import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
+import ContactSection from "@/layouts/ContactSection.vue";
 // import Indigator from '@/components/Indigator.vue'
 
 import HouseInfo from "@/components/HouseInfo.vue";
@@ -59,7 +67,7 @@ export default {
     // Indigator,
     Navigation,
     SideNavigation,
-    //ContactSection,
+    ContactSection,
     MobileNav,
     HouseInfo,
     GoogleMap,

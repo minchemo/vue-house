@@ -43,6 +43,7 @@
           </span>
         </div>
       </div>
+      <img class="building-6" src="~@/projects/yj/s1/building-6.png" alt="" />
     </div>
     <el-dialog
       title
@@ -136,6 +137,15 @@ export default {
   transform: translateY(0);
   margin: 2vw auto 0;
   padding: 70px 0 30px;
+
+    .building-6 {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      z-index: 50;
+      pointer-events: none;
+    }
 }
 
 .logo {
