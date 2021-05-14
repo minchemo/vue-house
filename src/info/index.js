@@ -13,10 +13,11 @@ export default {
     ["投資新建", "春上建設有限公司"],
     ["建築設計", "大磊聯合建築師事務所"],
     ["企劃銷售", "上揚國際建築團隊"],
-    ["接待中心", "台南市北區北安路一段314號"]
+    ["接待中心", "台南市北區北安路一段314號"],
+    ["建照號碼", "(110)南工造字第01522號"]
   ],
 
-  gtmCode: ["WF2G3HX"], // 可放置多個
+  gtmCode: ["WF2G3HX","PB7F29N"], // 可放置多個
   recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
