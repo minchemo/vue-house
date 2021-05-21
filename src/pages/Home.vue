@@ -9,7 +9,7 @@
           class="title1"
           data-aos="fade-down"
           data-aos-duration="2000"
-          data-aos-delay="200"
+          data-aos-delay="0"
         >
           <div>
             <svg
@@ -421,7 +421,8 @@
           class="title2"
           data-aos="fade-right"
           data-aos-duration="2000"
-          data-aos-delay="600"
+          data-aos-delay="200"
+          data-aos-offset="-300"
         >
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.03 99.53">
@@ -777,7 +778,8 @@
           class="title3"
           data-aos="fade-up"
           data-aos-duration="2000"
-          data-aos-delay="1000"
+          data-aos-delay="500"
+          data-aos-offset="-300"
         >
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 589.65 100.73">
@@ -1177,7 +1179,7 @@
           class="order-button"
           data-aos="fade-down"
           data-aos-duration="2000"
-          data-aos-delay="1000"
+          data-aos-delay="500"
           v-scroll-to="{ element: `#contact`, offset: 0 }"
         >
           立即預約
@@ -1188,7 +1190,7 @@
           <img
             data-aos="fade-left"
             data-aos-duration="2000"
-            data-aos-delay="800"
+            data-aos-delay="400"
             src="~@/pages/texture/section-1/fish.png"
             alt=""
           />
@@ -1202,7 +1204,7 @@
           <img
             data-aos="fade-left"
             data-aos-duration="2000"
-            data-aos-delay="800"
+            data-aos-delay="400"
             src="~@/pages/texture/section-1/fish.png"
             alt=""
           />
@@ -2254,7 +2256,7 @@
       class="button1"
       data-aos="fade-down"
       data-aos-duration="2000"
-      data-aos-delay="1000"
+      data-aos-delay="500"
     >
       <a href=""
         ><img
@@ -3114,6 +3116,8 @@
   margin: 0 auto;
   display: flex;
   height: 100vh;
+  min-height: 700px;
+  max-height:1080px;
   max-width: 1067px;
   align-items: center;
 
@@ -3238,6 +3242,8 @@
   .main {
     width: 90%;
     flex-wrap: wrap;
+  min-height: 0;
+  max-height:9999px;
     height: auto;
     margin-bottom: 50px;
     .top1 {
