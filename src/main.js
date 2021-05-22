@@ -37,6 +37,9 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueSvgIcon from "vue-svgicon";
 import "./plugins/element.js";
 
+import VueAwesomeSwiper from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
+
 // AOS.init()
 
 library.add(faBars);
@@ -61,6 +64,7 @@ Vue.use(VueLazyload);
 Vue.use(VueLazyComponent);
 Vue.use(VueRellax);
 Vue.use(Vue2TouchEvents);
+Vue.use(VueAwesomeSwiper /* { default options with global component } */);
 
 new Vue({
   router,

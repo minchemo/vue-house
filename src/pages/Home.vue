@@ -12,6 +12,15 @@
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
     </vue-lazy-component>
+    <vue-lazy-component class="section" id="section2" @init="init">
+      <Section2 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section3" @init="init">
+      <Section3 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section4" @init="init">
+      <Section4 />
+    </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
@@ -43,7 +52,10 @@ import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/whtj/Section1.vue";
+import Section1 from "@/projects/dm-h35/Section1.vue";
+import Section2 from "@/projects/dm-h35/Section2.vue";
+import Section3 from "@/projects/dm-h35/Section3.vue";
+import Section4 from "@/projects/dm-h35/Section4.vue";
 
 export default {
   name: "home",
@@ -54,7 +66,10 @@ export default {
     SideNavigation,
     ContactSection,
     MobileNav,
-    Section1
+    Section1,
+    Section2,
+    Section3,
+    Section4
   },
 
   data() {

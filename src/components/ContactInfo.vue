@@ -1,18 +1,6 @@
 <template>
   <div>
     <div class="contact-info" id="contact-info">
-      <img
-        v-if="!isMobile"
-        class="logo"
-        src="@/assets/img/contact-logo.png"
-        :alt="info.caseName"
-      />
-      <img
-        v-if="isMobile"
-        class="logo"
-        src="@/assets/img/mo-contact-logo.png"
-        :alt="info.caseName"
-      />
       <div class="info">
         <div class="btn flex-c" @click="showCallDialog">
           <span class="flex-c">
@@ -134,8 +122,9 @@ export default {
   background-attachment: fixed;
   background-position: 0% 50%; */
   transform: translateY(0);
-  margin: 2vw auto 2vw;
-  padding: 70px 0 30px;
+  //margin: 2vw auto 2vw;
+  padding: 70px 0 70px;
+  background: #234668;
 
   .decor-5 {
     width: 22vw;
@@ -176,7 +165,7 @@ export default {
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 50px;
   font-family: $family4;
 
   &.half {
@@ -224,12 +213,12 @@ export default {
   height: 60px;
   background: #fff;
   box-shadow: $contact_btn_border;
-  border-radius: 10px 0 0 10px;
+  border-radius: 50px 0 0 50px;
   // border:1px solid $contact_btn_bg;
   font-family: $family4;
   + .google-btn,
   + .btn {
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 50px 50px 0;
     font-family: $family4;
   }
 }
@@ -286,7 +275,7 @@ export default {
     padding: 40px;
     transform: none;
     position: static;
-    margin: 40px auto 40px auto;
+    margin: 40px auto 0px auto;
 
     .logo {
       width: $contact_logo_mobile_width;
@@ -316,6 +305,13 @@ export default {
     text-align: center;
     //margin-bottom: 40px;
 
+    .btn {
+      &:nth-child(1){
+        span {
+          margin-left: 24px;
+        }
+      }
+    }
     > * {
       margin-bottom: 12px;
       &.address {
@@ -335,10 +331,10 @@ export default {
     width: 280px;
     padding: 0 1em;
     text-align: justify;
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
     + .google-btn,
     + .btn {
-      border-radius: 0 0 10px 10px;
+      border-radius: 0 0 20px 20px;
     }
   }
 }

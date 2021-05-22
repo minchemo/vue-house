@@ -34,7 +34,7 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  // background: $house_bg;
+  background: $house_bg;
   position: relative;
   z-index: 1;
 }
@@ -63,11 +63,12 @@ export default {
   line-height: 36px;
   margin: 60px 0;
   font-weight: 500;
-  color: #fff;
+  color: $house_bg;
   font-family: $family3;
-  background: #ce9a78;
+  background: #fff;
   width: 80vw;
-  padding: 10px 20px;
+  padding: 20px 20px;
+  border-radius: 100px;
 }
 
 .info {
@@ -119,9 +120,11 @@ export default {
   }
 
   .title {
-    font-size: 24px;
+    font-size: 20px;
     margin: 40px 0 24px;
     width: 100vw;
+    padding: 10px 0 ;
+    border-radius: 0;
   }
 
   .item {
