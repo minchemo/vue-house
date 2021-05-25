@@ -19,7 +19,7 @@
         />
       </div>
       <div class="box2" data-aos="fade">
-        <img class="building" src="~@/projects/dm-h35/s4/building.png" alt="" />
+        <img class="building" src="~@/projects/dm-h35/s4/building.jpg" alt="" />
         <img class="draw" src="~@/projects/dm-h35/s4/draw.png" alt="" />
         <p>「大安謙韵」外觀參考示意</p>
       </div>
