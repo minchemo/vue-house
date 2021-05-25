@@ -1,23 +1,25 @@
 <template>
   <div class="section2">
     <div class="intro">
-      <div class="title" v-if="!isMobile">
+      <div class="title" v-if="!isMobile" data-aos="fade">
         盛世風華一如往昔　大安首善人文富域
       </div>
-      <div class="title" v-else>盛世風華一如往昔<br />大安首善人文富域</div>
-      <div class="des" v-if="!isMobile">
+      <div class="title" v-else data-aos="fade">盛世風華一如往昔<br />大安首善人文富域</div>
+      <div class="des" v-if="!isMobile" data-aos="fade">
         大安區用它獨有的時光豐壤，蘊藏歷史與人文交織的精彩篇章，映照國際使節與崢嶸將門、富賈商冑<br />熙來攘往的交錯身影；大安路彷如比例適度，穩妥大方的謙謙君子，以一貫秀麗清雅的身段，含蓄內<br />斂的演繹著旁人無法窺探的時代美學。
       </div>
-      <div class="des" v-else>
+      <div class="des" v-else data-aos="fade">
         大安區用它獨有的時光豐壤，蘊藏歷史與人文交織的精彩篇章；大安路彷如比例適度，穩妥大方的謙謙君子，以秀麗清雅的身段演繹著旁人無法窺探的時代美學。
       </div>
     </div>
-    <div class="divider"></div>
-    <div class="view" ref="view">
+    <div class="divider" data-aos="fade"></div>
+    <div class="view" ref="view" data-aos="fade">
       <img ref="viewImg" src="~@/projects/dm-h35/s2/view.jpg" alt="" />
     </div>
+    <div class="draw" data-aos="fade">
     <img v-if="!isMobile" class="draw1" src="~@/projects/dm-h35/s2/draw1.png" alt="">
-    <img v-if="!isMobile" class="draw2" src="~@/projects/dm-h35/s2/draw2.png" alt="">
+    <img v-if="!isMobile" class="draw2" src="~@/projects/dm-h35/s2/draw2.gif" alt="">
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -63,16 +65,21 @@
       width: 100%;
     }
   }
-  .draw1 {
+  .draw {
       width: 25vw;
       right: -5vw;
       top: 0;
       position: absolute;
   }
+  .draw1 {
+    width: 100%;
+    position: relative;
+  }
   .draw2 {
-      width: 25vw;
-      right: -5vw;
-      top: 0;
+      width: 5.2vw;
+    right: 15vw;
+    top: 0.4vw;
+    transform: rotate(-19deg);
       position: absolute;
   }
 }

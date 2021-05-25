@@ -3,22 +3,22 @@
     <div class="main">
       <div class="box1">
         <div class="text">
-          <div class="title">大安流域謙謙逸品<br />寥若晨星珍如拱璧</div>
-          <div v-if="!isMobile" class="des">
+          <div class="title" data-aos="fade">大安流域謙謙逸品<br />寥若晨星珍如拱璧</div>
+          <div v-if="!isMobile" class="des" data-aos="fade">
             「大安謙韵」依歷史為師，鑑古今之寓意，取汲<br />大安路街區悠遠綿長的時光厚度，展演出此刻的<br />建築篇章；建築身形清麗秀雅，白蒙卡石材佐淺<br />色細條磚，巧思裝綴馬賽克與網印玻璃，呼應靜<br />巷地貌，隱約透露古往今來的文人貴氣。
           </div>
-          <div v-else class="des">
-            「大安謙韵」取汲大安路街區悠遠的時光厚<br />度，展演此刻的建築篇章；建築以白蒙卡石<br />材佐淺色細條磚，巧思裝綴馬賽克與網印玻<br />璃，隱約透露古往今來的文人貴氣。
+          <div v-else class="des" data-aos="fade">
+            「大安謙韵」取汲大安路街區悠遠的時光厚度，展演此刻的建築篇章；建築以白蒙卡石材佐淺色細條磚，巧思裝綴馬賽克與網印玻璃，隱約透露古往今來的文人貴氣。
           </div>
         </div>
         <img
-          v-if="!isMobile"
+          v-if="!isMobile" data-aos="fade"
           class="bottle"
           src="~@/projects/dm-h35/s4/bottle.png"
           alt=""
         />
       </div>
-      <div class="box2">
+      <div class="box2" data-aos="fade">
         <img class="building" src="~@/projects/dm-h35/s4/building.png" alt="" />
         <img class="draw" src="~@/projects/dm-h35/s4/draw.png" alt="" />
         <p>「大安謙韵」外觀參考示意</p>
@@ -29,7 +29,9 @@
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section4 {
-  height: 100vh;
+  height:  calc(100vh - 70px);
+  min-height: calc(100vw * 900 / 1920 - 70px);
+  max-height: calc(100vw * 1080 / 1920 - 70px);
   .main {
     display: flex;
     height: 100%;
@@ -53,7 +55,7 @@
         position: relative;
         width: 60%;
         margin: 0 auto;
-        text-align: left;
+        text-align: justify;
         color: #fff;
 
         .title {
@@ -83,15 +85,18 @@
       overflow: hidden;
       .building {
         position: absolute;
-        width: 110%;
-        right: -8vw;
-        bottom: 2vw;
+          width: 110%;height:100%;
+          object-fit: contain;
+        right:-5%;
+        bottom:0;
       }
       .draw {
         position: absolute;
         width: 20vw;
         right: 0;
         bottom: -1vw;
+        transform-origin: 50% 100%;
+    animation:draw 3s infinite alternate;
       }
       p {
         position: absolute;
@@ -101,6 +106,12 @@
     }
   }
 }
+@keyframes draw {
+
+  to {
+    transform:skewX(3deg);
+  }
+}
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
@@ -108,7 +119,9 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section4 {
-    height: 100vh;
+    height:auto;
+  min-height:0;
+  max-height:initial;
     .main {
       flex-wrap: wrap;
       border: 0;
@@ -118,22 +131,21 @@
         border: 0;
         .text {
           position: relative;
-          width: 80%;
+          width: 70%;
           margin: 0 auto;
-          text-align: center;
           color: #fff;
 
           .title {
-            font-size: 4vw;
+            font-size:calc(100vw * 17 / 375);
             font-weight: bold;
             letter-spacing: 1vw;
             line-height: 5vw;
+          text-align: center;
           }
 
           .des {
-            font-size: 4.19vw;
+            font-size:calc(100vw * 13 / 375);
             line-height: 7vw;
-            text-align: left;
           }
         }
 
@@ -145,14 +157,13 @@
         }
       }
       .box2 {
-        height: 60vh;
+        height: 100vw;
         width: 100%;
+        height: 60vh;
         position: relative;
         .building {
           position: absolute;
-          width: 110%;
-          right: -8vw;
-          bottom: 6vh;
+          bottom: 2vh;
         }
         .draw {
           position: absolute;
@@ -164,6 +175,7 @@
           position: absolute;
           left: 2vw;
           bottom: 2vw;
+            font-size:calc(100vw * 12 / 375);
         }
       }
     }

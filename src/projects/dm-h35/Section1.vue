@@ -1,9 +1,9 @@
 <template>
   <div class="section1">
     <div class="intro">
-      <div class="title1">
+      <div class="title1"  data-aos="fade-right">
         <svg
-          v-if="!isMobile"
+          v-if="!isMobile" 
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 641.01 159.82"
         >
@@ -791,32 +791,40 @@
         </svg>
       </div>
       <div v-if="!isMobile" class="title3">
-        <p>43坪3房 · 單純雙併 · 捷運大安站200米</p>
-        <div class="order-num">
+        <p  data-aos="fade-right" data-aos-delay="100">43坪3房 · 單純雙併 · 捷運大安站200米</p>
+        <div class="order-num"  data-aos="fade-right" data-aos-delay="200">
           <div>預約<br />專線</div>
           <div>2325-6688</div>
         </div>
       </div>
-      <div class="order-btn">立即預約</div>
+      <div class="order-btn" data-aos="fade-right" data-aos-delay="300">立即預約</div>
     </div>
-    <div class="sub-intro">
-      <p>大安人文富域，</p>
-      <p>將門貴冑境地。</p>
+    <div class="sub-intro" >
+      <p data-aos="fade-down" data-aos-delay="200">大安人文富域，</p>
+      <p data-aos="fade-down" data-aos-delay="300">將門貴冑境地。</p>
     </div>
-    <div class="draw">
+    <div class="draw" data-aos="fade">
       <img class="draw1" src="~@/projects/dm-h35/s1/draw1.png" alt="" />
-      <img class="draw2" src="~@/projects/dm-h35/s1/draw2.png" alt="" />
-      <img class="draw3" src="~@/projects/dm-h35/s1/draw3.png" alt="" />
-      <img
+      <div class="draw2" data-aos="fade">
+        <img class="an2" src="~@/projects/dm-h35/s1/draw22.png" alt="" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw23.png" alt="" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw21.png" alt="" />
+      </div>
+      <div class="draw3" data-aos="fade">
+        <img src="~@/projects/dm-h35/s1/draw31.png" alt="" />
+        <img class="an" src="~@/projects/dm-h35/s1/draw32.png" alt="" />
+        <img class="an" src="~@/projects/dm-h35/s1/draw33.png" alt="" />
+        <img class="an" src="~@/projects/dm-h35/s1/draw34.png" alt="" />
+      </div>
+      <img data-aos="fade"
         v-if="isMobile"
         class="draw5"
         src="~@/projects/dm-h35/s1/draw5.png"
         alt=""
       />
       <img
-        v-if="!isMobile"
         class="draw4"
-        src="~@/projects/dm-h35/s1/draw4.png"
+        src="~@/projects/dm-h35/s1/draw4.gif"
         alt=""
       />
     </div>
@@ -833,15 +841,19 @@
 /* 螢幕尺寸標準 */
 .section1 {
   height: 100vh;
-
+  min-height: calc(100vw * 900 / 1920);
+  max-height: calc(100vw * 1080 / 1920);
+position: relative;
+margin: 0 0 calc(100vw * 80 / 1920) 0;
   .intro {
     position: absolute;
-    top: 15vw;
+    top:calc(50% - 10vw);
     left: 10vw;
     width: 30vw;
     text-align: left;
 
     .title1 {
+    //  height: calc(100vw * 143 / 1920);
       svg {
         width: 100%;
         .cls-1,
@@ -889,9 +901,9 @@
 
     .title3 {
       position: absolute;
-      top: 11vw;
+      top:10vw;
+      font-size: 1.6vw;
       p {
-        font-size: 1.6vw;
         font-weight: bold;
       }
       .order-num {
@@ -902,16 +914,24 @@
         div {
           &:nth-child(1) {
             color: #356292;
-            padding: .8vw 1vw;
+            padding: 0;
             border: 1.5px solid;
-            border-radius: 20px;
+            border-radius: 1em;
             font-weight: bold;
             line-height: 1.2;
-            letter-spacing: 1.2px;
+            letter-spacing: 0.07em;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            width:3.2em;
+            height:3.2em;
+            font-size:0.9em;
           }
           &:nth-child(2) {
-            font-size: 4vw;
+            font-size:2.8em;
             font-weight: bold;
+            position: relative;
+            top: -0.05em;
           }
         }
       }
@@ -943,7 +963,7 @@
   .sub-intro {
     position: absolute;
     right: 12vw;
-    top: 12vw;
+    top: calc(50% - 16vw);
     writing-mode: vertical-lr;
     letter-spacing: 0.2vw;
     line-height: 2.5vw;
@@ -962,31 +982,97 @@
       &.draw1 {
         width: 20vw;
         right: -3vw;
-        top: 20vw;
-      }
-      &.draw2 {
-        width: 24vw;
-        right: 32vw;
-        top: 20vw;
-      }
-      &.draw3 {
-        width: 15vw;
-        right: 28vw;
-        top: 20vw;
+        top:  calc(50% - 8vw);
       }
       &.draw4 {
         width: 8vw;
         right: 54vw;
-        top: 10vw;
+        top:  calc(50% - 18vw);
+        animation:draw4 4.6s linear infinite ;
       }
     }
+    .draw2 {
+      position: absolute;
+        width: 24vw;
+        right: 32vw;
+        top: calc(50% - 8vw);
+        mix-blend-mode: multiply;
+        img{width: 100%;position: absolute;left: 0;
+        &:nth-child(1){position: relative;top: 0;transform-origin: 50% 60%;}
+        &:nth-child(2){top: 0;transform-origin: 50% 100%;}
+        &:nth-child(3){bottom: 0;transform-origin: 50% 100%;}
+        }
+    }
+    .draw3 {
+      position: absolute;
+        width: 15vw;
+    right: 27vw;
+    top: calc(50% - 9vw);
+        img{width: 100%;position: absolute;left: 0;bottom: 0;
+        &:nth-child(1){position: relative;}
+        }
+    }
+    .an{
+    transform:skewX(10deg);transform-origin: 50% 0;
+    animation:an 4.6s linear infinite alternate;}
   }
-
+    .an2{
+    transform:skewX(10deg);
+    animation:an2 4.6s linear infinite alternate;}
+  }
+@keyframes an {
+  0% {
+    transform:skewX(5deg);filter: blur(0px);
+  }
+  20% {
+    transform:skewX(2deg)scaleX(1.03);filter: blur(0px);
+  }
+  25% {
+    transform:skewX(2.5deg)scaleX(1.05);filter: blur(2px);
+  }
+  30% {
+    transform:skewX(3deg)scaleX(1.03);filter: blur(0px);
+  }
+  50% {
+    transform:skewX(5deg)scaleX(1.03);filter: blur(0px);
+  }
+  55% {
+    transform:skewX(5.5deg)scaleX(1.05);filter: blur(2px);
+  }
+  60% {
+    transform:skewX(6deg)scaleX(1.03);filter: blur(0px);
+  }
+  100% {
+    transform:skewX(0deg);
+  }
+}
+@keyframes an2 {
+  to {
+    transform:skewX(-10deg);
+  }
+}
+@keyframes draw4 {
+  0% { 
+    transform:translate(270%, -235%) rotate(-14deg);
+  }
+  30% {
+    transform: translate(0, 0) rotate(-14deg);
+  }
+  70% {
+    transform: translate(-50%, 30%) rotate(21deg);
+  }
+  80% {
+    transform:translate(-100%, -10%) rotate(41deg)
+  }
+  100% {
+    transform: translate(-280%, -230%) rotate(41deg);
+  }
+}
   .scroll {
     position: absolute;
     width: 1vw;
     right: 10vw;
-    top: 40vw;
+    bottom:0;
   }
 
   .bg {
@@ -1004,7 +1090,7 @@
     );
     z-index: -1;
   }
-}
+
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
@@ -1012,7 +1098,10 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
-    height: 100vh;
+    height:100vh;
+  min-height: calc(100vw * 667 / 375);
+  max-height: calc(100vw * 812 / 375);
+margin: 0;
 
     .intro {
       position: absolute;
@@ -1132,12 +1221,12 @@
           top: 78vh;
           z-index: 1;
         }
-        &.draw3 {
-          width: 30vw;
-          right: 18vw;
-          top: 48vw;
-          z-index: 1;
-        }
+      &.draw4 {
+    width: 18vw;
+    right: 35vw;
+    top: 5vw;
+        animation:draw4 4.6s linear infinite ;
+      }
         &.draw5 {
           width: 70vw;
           right: -15vw;
@@ -1145,6 +1234,12 @@
           z-index: 0;
         }
       }
+      .draw3 {
+    width: 30vw;
+    right: 19vw;
+    top: calc(50% - 46vw);
+          z-index: 1;
+        }
     }
 
     .bg {

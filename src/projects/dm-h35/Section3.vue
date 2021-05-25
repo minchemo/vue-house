@@ -1,7 +1,7 @@
 <template>
   <div class="section3">
     <div class="main">
-      <div class="box1">
+      <div class="box1" data-aos="fade">
         <div v-swiper:mySwiper="swiperOption">
           <div class="swiper-wrapper">
             <div
@@ -18,15 +18,15 @@
       </div>
       <div class="box2">
         <div class="text">
-          <div class="title">匠人靈魂致敬時代<br />執著無懼創造自慢美學</div>
-          <div v-if="!isMobile" class="des">
-            興富謙建設在創作的過程中，用近乎自燃的方式，對追求<br />建築的獨特率先採取行動；逾20多年經驗，事必躬親、講<br />究細節、敬畏土地、提煉匠心，以內斂謙遜之姿、曖曖含<br />光之態，在大安中正等台北精華區域，持續追尋著足以自<br />身感到自慢的建築作品。
+          <div class="title" data-aos="fade">匠人靈魂致敬時代<br />執著無懼創造自慢美學</div>
+          <div v-if="!isMobile" class="des" data-aos="fade">
+            興富謙建設在創作的過程中，用近乎自燃的方式，對追求建築的獨特率先採取行動；逾20多年經驗，事必躬親、講究細節、敬畏土地、提煉匠心，以內斂謙遜之姿、曖曖含光之態，在大安中正等台北精華區域，持續追尋著足以自身感到自慢的建築作品。
           </div>
-          <div v-else class="des">
-            興富謙建設在創作的過程中，用近乎自燃的<br />方式，對追求獨特率先採取行動；逾20多年<br />經驗，在大安中正等台北精華區域，追尋著<br />足以令自身感到自慢的建築作品。
+          <div v-if="isMobile" class="des" data-aos="fade">
+            興富謙建設在創作的過程中，用近乎自燃的方式，對追求獨特率先採取行動；逾20多年經驗，在大安中正等台北精華區域，追尋著足以令自身感到自慢的建築作品。
           </div>
         </div>
-        <img
+        <img data-aos="fade"
           v-if="!isMobile"
           class="bottle"
           src="~@/projects/dm-h35/s3/bottle.png"
@@ -100,7 +100,9 @@
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section3 {
-  height: 100vh;
+  height:  calc(100vh - 70px);
+  min-height: calc(100vw * 900 / 1920 - 70px);
+  max-height: calc(100vw * 1080 / 1920 - 70px);
   .main {
     height: 100%;
     display: flex;
@@ -108,18 +110,20 @@
     border-bottom: 1px solid #356292;
     .box1 {
       width: 55%;
+    height: 100%;
       background-color: #fff;
       border-right: 1px solid #356292;
       .swiper-slide {
         .slide-text {
           position: absolute;
-          bottom: 5vw;
+          bottom:3vw;
           left: 5vw;
         }
       }
     }
     .box2 {
       width: 45%;
+    height: 100%;
       background: rgb(211, 227, 234);
       background: linear-gradient(
         -166deg,
@@ -135,7 +139,7 @@
         position: relative;
         width: 60%;
         margin: 0 auto;
-        text-align: left;
+        text-align: justify;
         color: #283555;
 
         .title {
@@ -160,9 +164,9 @@
       }
     }
   }
-
+.swiper-container{height: 100%;}
   .swiper-wrapper {
-    height: 100vh;
+    height: 100%;
     .swiper-slide {
       height: 100%;
       background-size: 100%;
@@ -179,7 +183,9 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section3 {
-    height: 100vh;
+    height:auto;
+  min-height:0;
+  max-height:initial;
     .main {
       height: 100%;
       display: flex;
@@ -195,6 +201,7 @@
             position: absolute;
             bottom: 5vw;
             left: 5vw;
+            font-size:calc(100vw * 12 / 375);
           }
         }
       }
@@ -204,22 +211,21 @@
 
         .text {
           position: relative;
-          width: 80%;
+          width: 70%;
           margin: 0 auto;
-          text-align: center;
           color: #283555;
 
           .title {
-            font-size: 4vw;
+            font-size:calc(100vw * 17 / 375);
             font-weight: bold;
             letter-spacing: 1vw;
             line-height: 5vw;
+          text-align: center;
           }
 
           .des {
-            font-size: 4.19vw;
+            font-size:calc(100vw * 13 / 375);
             line-height: 7vw;
-            text-align: left;
           }
         }
       }

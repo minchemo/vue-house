@@ -932,6 +932,8 @@ export default {
     width: 25vw;
     right: -2vw;
     top: 10vw;
+    animation:draw1 3s infinite alternate;
+    transform-origin: 100% 50%;
   }
   .draw2 {
     width: 25vw;
@@ -949,7 +951,12 @@ export default {
     top: 38vw;
   }
 }
+@keyframes draw1 {
 
+  to {
+    transform:skewY(3deg);
+  }
+}
 .bg-img {
   width: 100vw;
   position: absolute;
