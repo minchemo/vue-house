@@ -816,12 +816,13 @@
         <img class="an" src="~@/projects/dm-h35/s1/draw33.png" alt="" />
         <img class="an" src="~@/projects/dm-h35/s1/draw34.png" alt="" />
       </div>
-      <img data-aos="fade"
-        v-if="isMobile"
-        class="draw5"
-        src="~@/projects/dm-h35/s1/draw5.png"
-        alt=""
-      />
+      <div class="draw5"
+        v-if="isMobile" data-aos="fade">
+        <img src="~@/projects/dm-h35/s1/draw51.png" alt="" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw52.png" alt="" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw53.png" alt="" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw54.png" alt="" />
+      </div>
       <img
         class="draw4"
         src="~@/projects/dm-h35/s1/draw4.gif"
@@ -891,10 +892,10 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
           fill: #356292;
         }
         .cls-5 {
-          fill: none;
-          stroke: #356292;
-          stroke-miterlimit: 10;
-          stroke-width: 1.64px;
+          fill: #356292;
+         // stroke: #356292;
+          //stroke-miterlimit: 10;
+         // stroke-width: 1.64px;
         }
       }
     }
@@ -1073,8 +1074,14 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
     width: 1vw;
     right: 10vw;
     bottom:0;
+    animation:scroll 2s linear infinite alternate;
   }
 
+@keyframes scroll {
+  to {
+    transform:translateY(-10%);
+  }
+}
   .bg {
     position: absolute;
     width: 100%;
@@ -1227,12 +1234,6 @@ margin: 0;
     top: 5vw;
         animation:draw4 4.6s linear infinite ;
       }
-        &.draw5 {
-          width: 70vw;
-          right: -15vw;
-          top: 20vw;
-          z-index: 0;
-        }
       }
       .draw3 {
     width: 30vw;
@@ -1240,6 +1241,18 @@ margin: 0;
     top: calc(50% - 46vw);
           z-index: 1;
         }
+    .draw5 {
+      position: absolute;
+    width: 49vw;
+    right: -12vw;
+    top: 22vw;
+        mix-blend-mode: multiply;
+        img{width: 100%;position: absolute;left: 0;
+        &:nth-child(1){position: relative;top: 0;transform-origin: 50% 60%;}
+        &:nth-child(2){top: 0;transform-origin: 50% 100%;}
+        &:nth-child(4){bottom: 0;transform-origin: 50% 100%;}
+        }
+    }
     }
 
     .bg {
