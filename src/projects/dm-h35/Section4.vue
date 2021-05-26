@@ -57,18 +57,18 @@
         margin: 0 auto;
         text-align: justify;
         color: #fff;
+        font-size:calc(12px + 700vw / 1920);
+        line-height: 2;
 
         .title {
-          font-size: 1.6vw;
+          font-size:1.6em;
           font-weight: bold;
-          letter-spacing: 0.2vw;
-          line-height: 2.2vw;
+          letter-spacing:0.06em;
+          line-height: 1.4;
         }
 
         .des {
-          margin-top: 5vw;
-          font-size: 1.06vw;
-          line-height: 2vw;
+          margin: 2em 0 0;
         }
       }
 
@@ -133,19 +133,11 @@
           position: relative;
           width: 70%;
           margin: 0 auto;
-          color: #fff;
+          font-size:calc(12px + 100vw / 375);
 
           .title {
-            font-size:calc(100vw * 17 / 375);
-            font-weight: bold;
-            letter-spacing: 1vw;
-            line-height: 5vw;
-          text-align: center;
-          }
-
-          .des {
-            font-size:calc(100vw * 13 / 375);
-            line-height: 7vw;
+            font-size:1.3em;
+            text-align: center;
           }
         }
 

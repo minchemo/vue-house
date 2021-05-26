@@ -39,10 +39,12 @@
 
 <style lang="scss">
 .swiper-slide {
+  /*
   &:nth-child(1) {
     background-size: 150% !important;
     background-position: top !important;
   }
+  */
 }
 .swiper-pagination {
   width: unset;
@@ -77,13 +79,8 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .swiper-slide {
-    &:nth-child(1) {
-      background-size: 180% !important;
-      background-position: top !important;
-    }
-  }
   .swiper-pagination {
+    margin: 5vw 0 0 0;
     .swiper-pagination-bullet {
       margin: 0.5vh !important;
       width: 10px;
@@ -141,18 +138,18 @@
         margin: 0 auto;
         text-align: justify;
         color: #283555;
+        font-size:calc(12px + 700vw / 1920);
+        line-height: 2;
 
         .title {
-          font-size: 1.6vw;
+          font-size:1.6em;
           font-weight: bold;
-          letter-spacing: 0.2vw;
-          line-height: 2.2vw;
+          letter-spacing:0.06em;
+          line-height: 1.4;
         }
 
         .des {
-          margin-top: 5vw;
-          font-size: 1.06vw;
-          line-height: 2vw;
+          margin: 2em 0 0;
         }
       }
 
@@ -169,7 +166,7 @@
     height: 100%;
     .swiper-slide {
       height: 100%;
-      background-size: 100%;
+      background-size:100% auto;
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -213,28 +210,21 @@
           position: relative;
           width: 70%;
           margin: 0 auto;
-          color: #283555;
+          font-size:calc(12px + 100vw / 375);
 
           .title {
-            font-size:calc(100vw * 17 / 375);
-            font-weight: bold;
-            letter-spacing: 1vw;
-            line-height: 5vw;
-          text-align: center;
-          }
-
-          .des {
-            font-size:calc(100vw * 13 / 375);
-            line-height: 7vw;
+            font-size:1.3em;
+            text-align: center;
           }
         }
       }
     }
 
     .swiper-wrapper {
-      height: 100vh;
+      height: 100%;
       .swiper-slide {
         height: 60vh;
+        background-size: 120% auto;
       }
     }
   }

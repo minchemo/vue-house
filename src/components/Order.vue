@@ -861,10 +861,10 @@ export default {
 .intro {
   position: relative;
   width: 26vw;
-  height: 100vh;
+  height: 49vw;
   text-align: left;
   margin: 0 auto;
-  padding-top: 30vh;
+  padding-top: 15vw;
 
   .intro-text {
     color: #283555;

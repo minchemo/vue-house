@@ -5,6 +5,7 @@
         盛世風華一如往昔　大安首善人文富域
       </div>
       <div class="title" v-else data-aos="fade">盛世風華一如往昔<br />大安首善人文富域</div>
+      <div class="divider" data-aos="fade"></div>
       <div class="des" v-if="!isMobile" data-aos="fade">
         大安區用它獨有的時光豐壤，蘊藏歷史與人文交織的精彩篇章，映照國際使節與崢嶸將門、富賈商冑<br />熙來攘往的交錯身影；大安路彷如比例適度，穩妥大方的謙謙君子，以一貫秀麗清雅的身段，含蓄內<br />斂的演繹著旁人無法窺探的時代美學。
       </div>
@@ -12,7 +13,6 @@
         大安區用它獨有的時光豐壤，蘊藏歷史與人文交織的精彩篇章；大安路彷如比例適度，穩妥大方的謙謙君子，以秀麗清雅的身段演繹著旁人無法窺探的時代美學。
       </div>
     </div>
-    <div class="divider" data-aos="fade"></div>
     <div class="view" ref="view" data-aos="fade">
       <img ref="viewImg" src="~@/projects/dm-h35/s2/view.jpg" alt="" />
     </div>
@@ -25,41 +25,42 @@
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section2 {
-  height: calc(100vw * 930 / 1920);
+  height:auto;
   .intro {
-    position: absolute;
-    text-align: left;
-    left: 10vw;
-    width: 80%;
+    position: relative;
+    text-align: justify;
+    margin:0;
+    width:100%;
+    padding-left: 10%;
+    font-size:calc(12px + 700vw / 1920);
+    line-height: 2;
     .title {
       color: #356292;
-      font-size: 24px;
+      font-size:1.6em;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing:0.06em;
     }
     .des {
-      margin-top: 4.5vw;
-      line-height: 2;
+      margin: 2em 0 1em;
     }
   }
   .divider {
-    position: absolute;
-    top: 5vh;
+    position: relative;
+    margin: 0.5em 0 0 -12%;
     height: 1px;
-    width: 60vw;
+    width:70%;
     background: rgb(53, 98, 142);
-    background: linear-gradient(
-      90deg,
+    background: linear-gradient(90deg,
       rgba(53, 98, 142, 1) 14%,
       rgba(186, 211, 234, 0.4) 84%
     );
   }
   .view {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
-    max-height: 650px;
+    //max-height: 650px;
 
     img {
       width: 100%;
@@ -90,45 +91,27 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section2 {
-    height: calc(100vw * 667 / 375);
+   // height: calc(100vw * 667 / 375);
     .intro {
-      margin-top: 10vh;
-      position: absolute;
-      text-align: center;
+      margin:1em 0 0 0;
       left: 0;
       width: 100%;
+    padding-left: 0;
+      font-size:calc(12px + 100vw / 375);
       .title {
-        color: #356292;
-        font-size: 24px;
-        font-weight: bold;
-        letter-spacing: 2px;
+      font-size:1.3em;
+        text-align: center;line-height: 1.4;
       }
       .des {
-        margin-top: 15vw;
-        line-height: 2;
-        width: 80%;
-        text-align: left;
-        margin-left: auto;
-        margin-right: auto;
+        width: 75%;
+      margin: 1.5em auto 2em auto;
       }
     }
     .divider {
-      position: absolute;
-      top: 20vh;
-      height: 1px;
       width: 100%;
-      background: rgb(53, 98, 142);
-      background: linear-gradient(
-        90deg,
-        rgba(53, 98, 142, 1) 34%,
-        rgba(186, 211, 234, 0.4) 84%
-      );
+    margin: 1em 0 0 0;
     }
     .view {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
       height: 50vh;
       overflow-x: scroll;
       overflow-y: hidden;
