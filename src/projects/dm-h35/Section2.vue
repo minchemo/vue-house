@@ -25,7 +25,7 @@
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section2 {
-  height: 100vh;
+  height: calc(100vw * 930 / 1920);
   .intro {
     position: absolute;
     text-align: left;
@@ -90,7 +90,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section2 {
-    height: 100vh;
+    height: calc(100vw * 667 / 375);
     .intro {
       margin-top: 10vh;
       position: absolute;

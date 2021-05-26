@@ -5,7 +5,7 @@
       <div class="label">撥打電話</div>
     </a>
 
-    <a class="nav-item" v-scroll-to="{ element: `#contact`, offset: 0 }">
+    <a class="nav-item" v-scroll-to="{ element: `#order-top`, offset: 0 }">
       <font-awesome-icon icon="pen" />
       <div class="label">預約賞屋</div>
     </a>

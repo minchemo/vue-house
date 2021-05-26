@@ -270,7 +270,15 @@ export default {
       swiperOption: {
         pagination: {
           el: ".swiper-pagination",
+          clickable: true,
         },
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false
+        },
+        direction: "vertical",
       },
     };
   },

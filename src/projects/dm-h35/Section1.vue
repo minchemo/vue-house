@@ -797,7 +797,7 @@
           <div>2325-6688</div>
         </div>
       </div>
-      <div class="order-btn" data-aos="fade-right" data-aos-delay="300">立即預約</div>
+      <div class="order-btn" v-scroll-to="{ element: `#order-top` }" data-aos="fade-right" data-aos-delay="300">立即預約</div>
     </div>
     <div class="sub-intro" >
       <p data-aos="fade-down" data-aos-delay="200">大安人文富域，</p>
