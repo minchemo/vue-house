@@ -765,10 +765,10 @@
 
   svg {
     width: 60vw;
-    max-width: 900px;
+    max-width: 700px;
     position: absolute;
-    left: 7vw;
-    top: 12vw;
+    left: 10vw;
+    top: 15vw;
     z-index: 1;
 
     .cls-1 {
