@@ -765,7 +765,7 @@
 
   svg {
     width: 60vw;
-    max-width: 700px;
+    max-width: 900px;
     position: absolute;
     left: 10vw;
     top: 15vw;
