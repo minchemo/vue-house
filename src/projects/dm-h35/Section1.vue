@@ -1113,7 +1113,7 @@ margin: 0;
 
     .intro {
       position: absolute;
-      top: 15vw;
+    top: calc(50% - 72vw);
       left: 15vw;
       width: 25vw;
       text-align: left;
@@ -1192,7 +1192,7 @@ margin: 0;
       z-index: 1;
       position: absolute;
       right: 12vw;
-      top: 16vw;
+    top: calc(50% - 72vw);
       writing-mode: horizontal-tb;
       letter-spacing: 0.2vw;
       line-height: 4vw;
@@ -1215,18 +1215,16 @@ margin: 0;
       img {
         position: absolute;
         &.draw1 {
-          top: unset;
+          top:calc(50% + 45vw);
           width: 50vw;
           right: unset;
           left: -10vw;
-          bottom: 0;
-
           transform: scaleX(-1);
         }
         &.draw2 {
           width: 80vw;
           right: -30vw;
-          top: 78vh;
+    top: calc(50% - 10vw);
           z-index: 1;
         }
       &.draw4 {
@@ -1246,7 +1244,7 @@ margin: 0;
       position: absolute;
     width: 49vw;
     right: -12vw;
-    top: 22vw;
+    top: calc(50% - 66vw);
         mix-blend-mode: multiply;
         img{width: 100%;position: absolute;left: 0;
         &:nth-child(1){position: relative;top: 0;transform-origin: 50% 60%;}
