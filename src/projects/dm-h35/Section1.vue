@@ -916,17 +916,17 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
           &:nth-child(1) {
             color: #356292;
             padding: 0;
-            border: 1.5px solid;
-            border-radius: 1em;
+    border: 0.09em solid;
+            border-radius: 1.3em;
             font-weight: bold;
             line-height: 1.2;
             letter-spacing: 0.07em;
             display: flex;
             justify-content:center;
             align-items:center;
-            width:3.2em;
-            height:3.2em;
-            font-size:0.9em;
+    width: 3.8em;
+    height: 3.8em;
+    font-size: 0.75em;
           }
           &:nth-child(2) {
             font-size:2.8em;
@@ -947,10 +947,11 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
       padding: 0.7vw 1.5vw;
       border-radius: 100px;
       font-size: 1.3vw;
-      letter-spacing: 0.15vw;
+      letter-spacing:0.1em;
       cursor: pointer;
       transition: all 0.3s;
       border: 1px solid transparent;
+      font-weight: bold;
 
       &:hover {
         border: 1px solid #356292;

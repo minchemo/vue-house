@@ -113,7 +113,7 @@
       .swiper-slide {
         .slide-text {
           position: absolute;
-          bottom:3vw;
+          bottom:3.5vw;
           left: 5vw;
         }
       }

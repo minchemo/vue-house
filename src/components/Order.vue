@@ -1119,33 +1119,33 @@ export default {
     .draw1 {
       width: 55vw;
       right: -2vw;
-      top: 70vh;
+      top: 125vw;
     }
     .draw2 {
       width: 20vw;
       left: 10vw;
-      top: 80vh;
+      top: 150vw;
     }
     .draw3 {
       width: 30vw;
       right: 10vw;
-      top: 10vw;
+      top:6vw;
       left: unset;
     }
     .draw4 {
       width: 25vw;
       left: 14vw;
-      top: 68vh;
+      top: 130vw;
     }
   }
 
   .intro {
     position: relative;
     width: 70vw;
-    height: 100vh;
+  height: 180vw;
     text-align: left;
     margin: 0 auto;
-    padding-top: 10vh;
+    padding-top:17vw;
 
     .intro-text {
       color: #283555;
@@ -1155,7 +1155,7 @@ export default {
       font-weight: bold;
       margin-bottom: 4.5vw;
       text-align: left;
-      line-height: 4.4vh;
+      line-height:1.6;
     }
 
     .mo-intro {

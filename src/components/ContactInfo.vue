@@ -167,6 +167,7 @@ export default {
   overflow: hidden;
   border-radius: 50px;
   font-family: $family4;
+  font-weight:700;
 
   &.half {
     width: 49%;
@@ -233,6 +234,7 @@ export default {
   background-position: center !important;
   box-shadow: $contact_btn_border;
   transition: all 0.5s;
+  font-weight: 700;
 
   svg {
     color: $contact_google_btn_icon;
