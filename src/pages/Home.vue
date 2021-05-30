@@ -1,6 +1,7 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
+    <Navigation />
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page
       ref="fullPage"
@@ -9,6 +10,27 @@
     > -->
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section2" @init="init">
+      <Section2 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section3" @init="init">
+      <Section3 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section4" @init="init">
+      <Section4 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section5" @init="init">
+      <Section5 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section6" @init="init">
+      <Section6 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section7" @init="init">
+      <Section7 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section8" @init="init">
+      <Section8 />
     </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
@@ -42,6 +64,13 @@ import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
 import Section1 from "@/projects/cby/Section1.vue";
+import Section2 from "@/projects/cby/Section2.vue";
+import Section3 from "@/projects/cby/Section3.vue";
+import Section4 from "@/projects/cby/Section4.vue";
+import Section5 from "@/projects/cby/Section5.vue";
+import Section6 from "@/projects/cby/Section6.vue";
+import Section7 from "@/projects/cby/Section7.vue";
+import Section8 from "@/projects/cby/Section8.vue";
 
 export default {
   name: "home",
@@ -49,17 +78,24 @@ export default {
     Loading,
     // Indigator,
     Navigation,
-    SideNavigation,
+    //SideNavigation,
     ContactSection,
     MobileNav,
-    Section1
+    Section1,
+    Section2,
+    Section3,
+    Section4,
+    Section5,
+    Section6,
+    Section7,
+    Section8,
   },
 
   data() {
     return {
       isMobile,
-      isSide: true,
-      load: true
+      isSide: false,
+      load: true,
       // viewIndex: 0,
       // action: {
       //   moveTo: () => {},
@@ -102,10 +138,8 @@ export default {
           allImagesLoaded();
         }
       };
-      $("img").each(function(idx, img) {
-        $("<img>")
-          .on("load", imageLoaded)
-          .attr("src", $(img).attr("src"));
+      $("img").each(function (idx, img) {
+        $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
       });
     });
   },
@@ -124,7 +158,7 @@ export default {
   // }
   // },
   methods: {
-    init() {}
+    init() {},
     // onScroll() {
     //   // 获取所有锚点元素
     //   const navContents = document.querySelectorAll('.section')
@@ -175,6 +209,6 @@ export default {
     //     this.$refs.fullPage.api.setResponsive(true)
     //   }
     // },
-  }
+  },
 };
 </script>

@@ -35,6 +35,7 @@
 
   &.hide {
     animation: hide 1s ease-in 0s forwards;
+    display: none;
   }
 
   &.none {
