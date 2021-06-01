@@ -195,7 +195,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section8 {
-    height: 100vh;
+    height: auto;
 
     .main {
       display: flex;

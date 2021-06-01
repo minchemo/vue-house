@@ -132,7 +132,8 @@
       position: relative;
       background-size: cover;
       background-repeat: no-repeat;
-      height: 340px;
+      height: 0;
+      padding-bottom: 68.86%;
       width: 100% !important;
     }
     .info {
@@ -144,7 +145,7 @@
         margin-bottom: 18px;
         font-size: 1.5rem;
         font-weight: bold;
-        
+
         span {
           font-family: "DFLiSongStd";
           font-size: 2rem;
@@ -333,9 +334,10 @@
 @media only screen and (max-width: 767px) {
   .section5 {
     display: block;
-    height: 75vh;
+    height: 90vh;
     padding-top: 5vh;
     .main {
+      margin-right: auto;
       .swiper-box {
         width: 100%;
         border-right: 0;
@@ -356,6 +358,9 @@
           font-weight: bold;
           .arch_name {
             font-size: 1.5rem;
+          }
+          .name {
+            font-size: 1.25rem;
           }
         }
       }

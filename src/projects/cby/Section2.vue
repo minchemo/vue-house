@@ -16,16 +16,19 @@
         </p>
       </div>
     </div>
-    <div v-else class="mo-intro" 
+    <div
+      v-else
+      class="mo-intro"
       data-aos="fade-down"
       data-aos-duration="2000"
       data-aos-offset="0"
-      data-aos-delay="0">
+      data-aos-delay="0"
+    >
       <h2><b>LOCATION</b> 新北區 新潛力</h2>
       <p>預約北安特商區 綠地校園好適居<br />年年高質好生活 年年增值副都心</p>
     </div>
-    <div class="view" ref="view" 
-        data-aos="fade-up">
+    <div class="view" ref="view" data-aos="fade-up">
+      <div></div>
       <img
         class="view-img"
         ref="viewImg"
@@ -129,6 +132,8 @@
       background-color: #1d89d8;
       overflow-y: hidden;
       overflow-x: scroll;
+      height: 0;
+      padding-bottom: 150.7%;
       .view-hand {
         position: absolute;
         width: 30%;
@@ -138,7 +143,7 @@
         margin-left: -15%;
       }
       .view-img {
-        width: unset;
+        width: unset !important;
         height: 100%;
         transform: translate(-1px, 3px);
       }
@@ -174,7 +179,7 @@ export default {
       const handEl = this.$refs.viewHand;
       $(imgEl).one("load", () => {
         const scrollTarget = (el.scrollWidth - $(window).width()) / 2;
-        el.scrollLeft = scrollTarget + 100;
+        el.scrollLeft = scrollTarget + 50;
 
         setTimeout(() => {
           $(el).one("scroll", () => {
@@ -183,11 +188,16 @@ export default {
         }, 1000);
       });
     },
+    setViewImgHeight() {
+      const height = $(".view").outerHeight();
+      $(".view .view-img").css("height", height);
+    },
   },
 
   created() {},
   mounted() {
     if (isMobile) {
+      this.setViewImgHeight();
       this.scrollView();
     }
   },

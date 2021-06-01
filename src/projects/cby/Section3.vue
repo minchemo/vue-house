@@ -35,10 +35,13 @@
             【春福年年】基地15分鐘內上國道8號、大橋火車站，加上北外環線預計2026年完工，連通南科約10分鐘車程、更可以透過大台南「三橫三縱」快速道路網，橫跨遠近城市、無往不利！市區重要幹道交匯於此，包括海佃路、北安路、郡安路、府安路等，帶來大量車潮與人潮、形塑商圈，更有COSTCO、星巴克等指標連鎖品牌進駐，創造機能一流的黃金生活圈！
           </p>
         </div>
-        <div class="swiper-info" v-else 
+        <div
+          class="swiper-info"
+          v-else
           data-aos="fade-left"
           data-aos-duration="2000"
-          data-aos-delay="200">
+          data-aos-delay="200"
+        >
           <h2>TRAFFIC<br />新環線 新動能</h2>
           <p>
             北外環線2026年完工 南科約10min<br />星巴克、COSTCO 海佃路指標生活圈
@@ -101,18 +104,26 @@
       <img class="draw3" src="~@/projects/cby/s3/draw/3.png" alt="" />
       <img class="draw4" src="~@/projects/cby/s3/draw/4.png" alt="" />
       <img class="draw5" src="~@/projects/cby/s3/draw/5.png" alt="" />
-      <img class="draw6" src="~@/projects/cby/s3/draw/6.png" alt="" 
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          data-aos-delay="400"/>
-      <div class="draw7" 
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          data-aos-delay="300"></div>
-      <div class="draw8" 
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          data-aos-delay="300"></div>
+      <img
+        class="draw6"
+        src="~@/projects/cby/s3/draw/6.png"
+        alt=""
+        data-aos="fade-left"
+        data-aos-duration="2000"
+        data-aos-delay="400"
+      />
+      <div
+        class="draw7"
+        data-aos="fade-left"
+        data-aos-duration="2000"
+        data-aos-delay="300"
+      ></div>
+      <div
+        class="draw8"
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        data-aos-delay="300"
+      ></div>
     </div>
   </div>
 </template>
@@ -130,9 +141,9 @@
       .swiper-pagination-bullet {
         background: #fff;
         opacity: 1;
-          width: 16px;
-          height: 16px;
-          margin: 0 6px;
+        width: 16px;
+        height: 16px;
+        margin: 0 6px;
         &.swiper-pagination-bullet-active {
           background: #009991;
         }
@@ -140,7 +151,8 @@
     }
     .swiper-slide {
       background-size: cover;
-      height: 550px;
+      height: 0;
+      padding-bottom: 66.69%;
 
       .caption {
         color: #fff;
@@ -465,7 +477,7 @@ export default {
       swiperOptions1: {
         pagination: {
           el: ".swiper-pagination",
-          clickable: true
+          clickable: true,
         },
         autoplay: {
           delay: 2500,
@@ -475,7 +487,7 @@ export default {
       swiperOptions2: {
         pagination: {
           el: ".swiper-pagination",
-          clickable: true
+          clickable: true,
         },
         navigation: {
           nextEl: ".swiper-button-next",
