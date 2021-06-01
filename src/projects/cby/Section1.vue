@@ -353,7 +353,7 @@
         src="~@/projects/cby/s1/leaf1.png"
         alt=""
         srcset=""
-        data-aos="fade-up"
+        data-aos="fade-down"
         data-aos-duration="2000"
         data-aos-offset="-100"
         data-aos-delay="00"
@@ -364,7 +364,7 @@
         src="~@/projects/cby/s1/leaf2.png"
         alt=""
         srcset=""
-        data-aos="fade-up"
+        data-aos="fade-down"
         data-aos-duration="2000"
         data-aos-offset="-100"
         data-aos-delay="0"
@@ -374,7 +374,7 @@
         src="~@/projects/cby/s1/leaf3.png"
         alt=""
         srcset=""
-        data-aos="fade-up"
+        data-aos="fade-down"
         data-aos-duration="2000"
         data-aos-offset="-100"
         data-aos-delay="00"
@@ -385,7 +385,7 @@
         src="~@/projects/cby/s1/bird.png"
         alt=""
         srcset=""
-        data-aos="fade-up"
+        data-aos="fade-down"
         data-aos-duration="2000"
         data-aos-offset="-100"
         data-aos-delay="1500"
@@ -402,7 +402,18 @@
       />
     </div>
     <div class="piece">
-      <img src="~@/projects/cby/s1/piece.png" class="piece-1" alt="" />
+      <img
+        v-if="!isMobile"
+        src="~@/projects/cby/s1/piece.png"
+        class="piece-1"
+        alt=""
+      />
+      <img
+        v-else
+        src="~@/projects/cby/s1/mo-piece.png"
+        class="piece-1"
+        alt=""
+      />
       <img src="~@/projects/cby/s1/w-piece.png" class="piece-2" alt="" />
       <img src="~@/projects/cby/s1/w-piece.png" class="piece-3" alt="" />
       <img src="~@/projects/cby/s1/b-piece.png" class="piece-4" alt="" />
@@ -437,7 +448,7 @@
     position: absolute;
     left: 55%;
     top: 2%;
-    z-index: 1;
+    z-index: 50;
     height: 100%;
     display: flex;
     align-items: center;
@@ -722,7 +733,7 @@
       height: 13%;
       left: 18%;
       bottom: 70%;
-      z-index: 15;
+      z-index: 0;
     }
   }
 
@@ -1041,7 +1052,7 @@
         height: auto;
         left: 0;
         top: -5vw;
-        animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
+        animation: unset;
       }
       .leaf3 {
         position: absolute;
@@ -1050,7 +1061,7 @@
         right: 0;
         top: 20vh;
         bottom: unset;
-        animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
+        animation: unset;
       }
       .leaf4 {
         position: absolute;
@@ -1058,7 +1069,7 @@
         height: auto;
         left: 0;
         bottom: 6vh;
-        animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
+        animation: unset;
       }
       .bird {
         position: absolute;
@@ -1079,33 +1090,42 @@
     .piece {
       width: 100%;
       left: -50%;
-      bottom: 60%;
+      bottom: 63%;
       transform: rotate(180deg) scale(2);
       transform-origin: center;
       .piece-2 {
         animation: piece-2 5s;
         animation-iteration-count: infinite;
         filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
+        transform: rotate(180deg);
+        width: 1.7%;
+        bottom: 17.6vw;
       }
       .piece-3 {
         animation: piece-3 5s;
         animation-iteration-count: infinite;
         animation-delay: 2s;
         filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
+        transform: rotate(180deg);
+        width: 1.7%;
       }
       .piece-4 {
         animation: piece-4 5s;
         animation-iteration-count: infinite;
         animation-delay: 1s;
         filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
+        transform: rotate(180deg);
+        width: 1.7%;
       }
       .piece-5 {
         z-index: 0;
         left: 4.3%;
         bottom: 25vw;
         filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
+        transform: rotate(180deg);
+        width: 1.7%;
         &.scroll-to-s2 {
-          bottom: 59vw;
+          bottom: 28vh;
         }
       }
     }

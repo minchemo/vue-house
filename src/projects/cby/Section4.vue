@@ -45,7 +45,7 @@
 .section4 {
   height: auto;
   .info {
-    width: 25%;
+    width: 27%;
     position: absolute;
     text-align: left;
     top: 16vw;
@@ -78,10 +78,10 @@
   .architecture {
     position: absolute;
     color: #fff;
-    right: 14vw;
+    right: 4vw;
     top: 4vw;
-    font-size: 3rem;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    font-size: 2.5rem;
+    filter: drop-shadow(2px 2px 5px rgba(100, 98, 219, 0.8));
   }
   .bg {
     background-size: cover;

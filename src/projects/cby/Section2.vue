@@ -60,14 +60,15 @@
     margin-top: 4%;
 
     h2 {
-      width: 30%;
+      width: 38%;
       text-align: left;
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: #fff;
       line-height: 1.5;
+      white-space: nowrap;
     }
     div {
-      width: 65%;
+      width: 55%;
       text-align: left;
       p {
         color: #fff;

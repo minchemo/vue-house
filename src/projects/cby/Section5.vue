@@ -132,7 +132,7 @@
       position: relative;
       background-size: cover;
       background-repeat: no-repeat;
-      height: 42vh;
+      height: 340px;
       width: 100% !important;
     }
     .info {
@@ -142,23 +142,29 @@
       .name {
         margin-top: 24px;
         margin-bottom: 18px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        
         span {
           font-family: "DFLiSongStd";
-          font-size: 24px;
+          font-size: 2rem;
           margin: 0 12px;
+          font-weight: bold;
         }
       }
       .exp {
+        font-size: 1.2rem;
         line-height: 1.5;
         min-height: 96px;
+        font-weight: bold;
       }
       .sign {
         min-height: 50px;
         position: absolute;
-        right: 30px;
+        right: 0;
         top: 0;
         max-width: 100px;
-        max-height: 130px;
+        max-height: 150px;
       }
     }
 
@@ -217,7 +223,7 @@
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section5 {
-  height: 100vh;
+  height: 110vh;
   display: flex;
   align-items: center;
 
@@ -226,13 +232,13 @@
     position: absolute;
     color: #ae8355;
     writing-mode: vertical-lr;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.75rem;
+    font-weight: 500;
     letter-spacing: 3px;
     text-align: left;
     line-height: 1.5;
     top: 3vw;
-    left: 2vw;
+    left: 3vw;
     span {
       display: block;
       text-indent: 7rem;
@@ -244,11 +250,12 @@
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    margin: 0 auto;
+    max-height: 100%;
+    margin-left: auto;
 
     .swiper-box {
-      width: 55%;
-      padding: 3vw 5vw;
+      width: 50%;
+      padding: 1vw 5vw;
       border-right: 3px solid #ae8355;
       margin-right: 5vw;
       .swiper-desc {
@@ -259,11 +266,11 @@
     }
 
     .arch-list {
-      width: 45%;
+      width: 50%;
       text-align: left;
 
       .title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: bold;
         padding: 8px 12px;
         color: #fff;
@@ -275,17 +282,18 @@
         margin-top: 20px;
 
         li {
-          margin-bottom: 16px;
+          margin-bottom: 24px;
           padding-left: 24px;
           position: relative;
           .prj_name {
             font-family: "DFLiSongStd";
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #000;
             margin-bottom: 6px;
           }
           .prj_reward {
+            font-size: 1.25rem;
             color: #ae8355;
             font-weight: bold;
           }
@@ -429,6 +437,7 @@ export default {
       swiperOptions: {
         pagination: {
           el: ".swiper-pagination",
+          clickable: true,
         },
         navigation: {
           nextEl: ".swiper-button-next",

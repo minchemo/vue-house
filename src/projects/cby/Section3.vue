@@ -130,6 +130,9 @@
       .swiper-pagination-bullet {
         background: #fff;
         opacity: 1;
+          width: 16px;
+          height: 16px;
+          margin: 0 6px;
         &.swiper-pagination-bullet-active {
           background: #009991;
         }
@@ -137,7 +140,7 @@
     }
     .swiper-slide {
       background-size: cover;
-      height: 60vh;
+      height: 550px;
 
       .caption {
         color: #fff;
@@ -185,6 +188,9 @@
         .swiper-pagination-bullet {
           background: #fff;
           opacity: 1;
+          width: 12px;
+          height: 12px;
+          margin: 0 4px;
           &.swiper-pagination-bullet-active {
             background: #009991;
           }
@@ -254,11 +260,11 @@
 
   .sub-section1 {
     height: 100vh;
-    padding-top: 20vh;
+    padding-top: 10vh;
   }
   .sub-section2 {
     height: 100vh;
-    padding-top: 25vh;
+    padding-top: 15vh;
     .main {
       flex-direction: row-reverse;
       .swiper-info {
@@ -321,7 +327,7 @@
       right: 0;
       bottom: 16%;
       width: 18%;
-      height: 25%;
+      height: 30%;
       background: #009991;
     }
   }
@@ -459,6 +465,7 @@ export default {
       swiperOptions1: {
         pagination: {
           el: ".swiper-pagination",
+          clickable: true
         },
         autoplay: {
           delay: 2500,
@@ -468,6 +475,7 @@ export default {
       swiperOptions2: {
         pagination: {
           el: ".swiper-pagination",
+          clickable: true
         },
         navigation: {
           nextEl: ".swiper-button-next",
