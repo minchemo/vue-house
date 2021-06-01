@@ -200,8 +200,8 @@
         .swiper-pagination-bullet {
           background: #fff;
           opacity: 1;
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
           margin: 0 4px;
           &.swiper-pagination-bullet-active {
             background: #009991;
@@ -240,6 +240,9 @@
       }
       .swiper-slide {
         height: 25vh;
+        .caption {
+          font-size: .9rem;
+        }
       }
 
       .swiper-info {
