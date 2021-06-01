@@ -51,22 +51,8 @@
     </div>
     <div v-else>
       <div class="main">
-        <div
-          class="swiper-box"
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          data-aos-offset="0"
-          data-aos-delay="0"
-        >
-          <div
-            class="title"
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            data-aos-offset="0"
-            data-aos-delay="0"
-          >
-            MASTER<br />好團隊 好設計
-          </div>
+        <div class="swiper-box">
+          <div class="title">MASTER<br />好團隊 好設計</div>
           <swiper
             ref="swiper"
             :options="swiperOptions"
@@ -206,6 +192,16 @@
 @media only screen and (max-width: 767px) {
   .section5 {
     .swiper-box {
+      position: relative;
+
+      .swiper-button-prev,
+      .swiper-button-next {    
+        margin-top: -5vw;
+        right: 10px;
+      }
+      .swiper-button-prev {
+        left: 10px;
+      }
       .swiper-slide {
         height: 30vh;
       }
@@ -360,7 +356,8 @@
             font-size: 1.5rem;
           }
           .name {
-            font-size: 1.25rem;
+            font-size: 1.05rem;
+            white-space: nowrap;
           }
         }
       }
@@ -448,10 +445,10 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        autoplay: {
+        /*  autoplay: {
           delay: 2500,
           disableOnInteraction: false,
-        },
+        }, */
       },
       imgList: [
         {
@@ -466,27 +463,27 @@ export default {
           sign: require("@/projects/cby/s5/b_sign.png"),
           nameHtml: '綠建築博士<span class="l_name">石昭永</span>建築師',
           expHtml: `現任：大磊聯合建築師事務所 主持建築師<br>
-                    學經歷 / 美國紐約州建築師<br>
-                    &emsp;/ 國立成功大學建築學士‧博士<br>
-                    &emsp;/ 美國麻省理工學院建築碩士`,
+                    學經歷<br>/ 美國紐約州建築師<br>
+                    / 國立成功大學建築學士‧博士<br>
+                    / 美國麻省理工學院建築碩士`,
         },
         {
           img: require("@/projects/cby/s5/c.jpg"),
           sign: require("@/projects/cby/s5/c_sign.png"),
           nameHtml: '<span class="l_name">陳鵬宇</span>建築師',
           expHtml: `現任：大磊聯合建築師事務所 協同主持人<br>
-                    學經歷 / 成功大學建築學士<br>
-                        &emsp;/ 成功大學建築碩士<br>
-                        &emsp;/ 第十四屆高雄市建築師公會法規委員`,
+                    學經歷<br>/ 成功大學建築學士<br>
+                        / 成功大學建築碩士<br>
+                        / 第十四屆高雄市建築師公會法規委員`,
         },
         {
           img: require("@/projects/cby/s5/d.jpg"),
           sign: require("@/projects/cby/s5/d_sign.png"),
           nameHtml: '<span class="l_name">呂秩姍</span>建築師',
-          expHtml: `學經歷 / 逢甲大學建築學士<br>
-                           &emsp;/ 台南藝術大學建築碩士<br>
-                           &emsp;/ 第十五屆高雄市建築師公會理事<br>
-                           &emsp;/ 第十五屆高雄市建築師公會法規委員
+          expHtml: `學經歷<br>/ 逢甲大學建築學士<br>
+                           / 台南藝術大學建築碩士<br>
+                           / 第十五屆高雄市建築師公會理事<br>
+                           / 第十五屆高雄市建築師公會法規委員
                     `,
         },
       ],

@@ -56,16 +56,16 @@
     top: 0;
     left: 50%;
     z-index: 1;
-    width: 70%;
+    width: 75%;
     justify-content: space-between;
     align-items: center;
-    margin-left: -35%;
+    margin-left: -37%;
     margin-top: 4%;
 
     h2 {
-      width: 38%;
+      width: 40%;
       text-align: left;
-      font-size: 2.5rem;
+      font-size: 2.7rem;
       color: #fff;
       line-height: 1.5;
       white-space: nowrap;
@@ -106,7 +106,8 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section2 {
-    min-height: 100vh;
+    min-height: unset;
+    height: auto;
 
     .mo-intro {
       position: absolute;
@@ -117,6 +118,7 @@
       margin-left: -40%;
       color: #fff;
       margin-top: 20%;
+      white-space: nowrap;
       h2 {
         font-size: 1.5rem;
       }

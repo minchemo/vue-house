@@ -1119,13 +1119,13 @@
       }
       .piece-5 {
         z-index: 0;
-        left: 4.3%;
-        bottom: 25vw;
+        left: 4.4%;
+        bottom: 19.4vw;
         filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
         transform: rotate(180deg);
         width: 1.7%;
         &.scroll-to-s2 {
-          bottom: 28vh;
+          bottom: 30vh;
         }
       }
     }
