@@ -1097,6 +1097,12 @@ export default {
           click:true,
           imgUrl: require("./s6/11.jpg"),
           title: "閱覽室"
+        },
+        {
+          id: "0014",
+          click:isMobile ? false : true,
+          imgUrl: require("./s6/15.jpg"),
+          title: "棋藝室"
         }
       ]
     };
