@@ -262,6 +262,7 @@ export default {
     width: 90% !important;
     height: 460px;
     padding: 60px 0 80px;
+    min-width: unset;
 
     .logo {
       width: $contact_logo_tablet_width;
@@ -279,6 +280,7 @@ export default {
     transform: none;
     position: static;
     margin: 30vw auto 0 auto;
+    min-width: unset;
 
     .logo {
       width: $contact_logo_mobile_width;
