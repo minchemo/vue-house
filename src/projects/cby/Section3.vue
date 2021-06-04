@@ -364,8 +364,7 @@
   .section3 {
     .sub-section1 {
       height: 60vh;
-      padding-top: 0;
-      margin-top: 10vh;
+      padding-top: 10vh;
       .main {
         flex-direction: column-reverse;
 
