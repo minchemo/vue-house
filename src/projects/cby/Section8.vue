@@ -129,8 +129,8 @@
           width: 70%;
           color: #fff;
           text-align: justify;
-          line-height: 2;
-          font-size: 1.15rem;
+          line-height: 1.8;
+          font-size: 1.05rem;
           margin: 0 auto;
         }
       }

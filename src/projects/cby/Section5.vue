@@ -27,7 +27,6 @@
               現任 /大磊聯合建築師事務所 設計總監暨主持人<br />
               經歷 /林博容建築師事務所 總監
             </div>
-            <img class="sign" src="@/projects/cby/s5/a_sign.png" alt="" />
           </div>
         </div>
         <div class="arch-list">
@@ -83,12 +82,6 @@
               現任 /大磊聯合建築師事務所 設計總監暨主持人<br />
               經歷 /林博容建築師事務所 總監
             </div>
-            <img
-              v-if="!isMobile"
-              class="sign"
-              src="@/projects/cby/s5/a_sign.png"
-              alt=""
-            />
           </div>
         </div>
       </div>
@@ -144,14 +137,6 @@
         line-height: 1.5;
         min-height: 96px;
         font-weight: bold;
-      }
-      .sign {
-        min-height: 50px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        max-width: 100px;
-        max-height: 150px;
       }
     }
 
@@ -453,15 +438,15 @@ export default {
       },
       imgList: [
         {
-          img: require("@/projects/cby/s5/a.jpg"),
-          sign: require("@/projects/cby/s5/a_sign.png"),
+          img: isMobile ? require("@/projects/cby/s5/a.jpg") : require("@/projects/cby/s5/slider_0.jpg"),
+         // sign: require("@/projects/cby/s5/a_sign.png"),
           nameHtml: '住宅建築設計專家<span class="l_name">謝志雄</span>總監',
           expHtml: `現任 /大磊聯合建築師事務所 設計總監暨主持人<br>
                     經歷 /林博容建築師事務所  總監`,
         },
         {
-          img: require("@/projects/cby/s5/b.jpg"),
-          sign: require("@/projects/cby/s5/b_sign.png"),
+          img: isMobile ? require("@/projects/cby/s5/b.jpg") : require("@/projects/cby/s5/slider_1.jpg"),
+          //sign: require("@/projects/cby/s5/b_sign.png"),
           nameHtml: '綠建築博士<span class="l_name">石昭永</span>建築師',
           expHtml: `現任：大磊聯合建築師事務所 主持建築師<br>
                     學經歷<br>/ 美國紐約州建築師<br>
@@ -469,8 +454,8 @@ export default {
                     / 美國麻省理工學院建築碩士`,
         },
         {
-          img: require("@/projects/cby/s5/c.jpg"),
-          sign: require("@/projects/cby/s5/c_sign.png"),
+          img: isMobile ? require("@/projects/cby/s5/c.jpg") : require("@/projects/cby/s5/slider_2.jpg"),
+          //sign: require("@/projects/cby/s5/c_sign.png"),
           nameHtml: '<span class="l_name">陳鵬宇</span>建築師',
           expHtml: `現任：大磊聯合建築師事務所 協同主持人<br>
                     學經歷<br>/ 成功大學建築學士<br>
@@ -478,8 +463,8 @@ export default {
                         / 第十四屆高雄市建築師公會法規委員`,
         },
         {
-          img: require("@/projects/cby/s5/d.jpg"),
-          sign: require("@/projects/cby/s5/d_sign.png"),
+          img: isMobile ? require("@/projects/cby/s5/d.jpg") : require("@/projects/cby/s5/slider_3.jpg"),
+          //sign: require("@/projects/cby/s5/d_sign.png"),
           nameHtml: '<span class="l_name">呂秩姍</span>建築師',
           expHtml: `學經歷<br>/ 逢甲大學建築學士<br>
                            / 台南藝術大學建築碩士<br>
@@ -498,7 +483,6 @@ export default {
 
       $(".info .name").html(currentIndexData.nameHtml);
       $(".info .exp").html(currentIndexData.expHtml);
-      $(".info .sign").attr("src", currentIndexData.sign);
     },
   },
 
