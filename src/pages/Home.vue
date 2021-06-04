@@ -45,6 +45,10 @@
 @import url("https://fonts.googleapis.com/css?family=Playball&display=swap");
 @import "../assets/style/variableColor.scss";
 
+.home {
+  background :#009991 !important;
+}
+
 .section,
 .section .fp-slide,
 .section .fp-tableCell {

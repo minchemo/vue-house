@@ -1,5 +1,5 @@
 <template>
-  <div class="navigation">
+  <div class="navigation" ref="navigation">
     <div class="layout-container-fluid nav-container">
       <div class="layout-container nav-container">
         <div class="nav">
@@ -73,6 +73,24 @@ export default {
     toggleSidebar() {
       this.isOpen = !this.isOpen;
     },
+    componentDidMount() {
+      this.prev = window.scrollY;
+      window.addEventListener("scroll", (e) => this.handleNavigation(e));
+    },
+    handleNavigation(e) {
+      const window = e.currentTarget;
+      const nav = this.$refs.navigation;
+
+      if (this.prev > window.scrollY) {
+        $(nav).removeClass('scrollhide');
+      } else if (this.prev < window.scrollY) {
+        $(nav).addClass('scrollhide');
+      }
+      this.prev = window.scrollY;
+    },
+  },
+  mounted() {
+    this.componentDidMount();
   },
 };
 </script>
@@ -93,6 +111,11 @@ export default {
   display: flex;
   align-items: center;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &.scrollhide {
+    transform: translate(0, -90px);
+  }
 }
 .nav-container {
   height: 100%;

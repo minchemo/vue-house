@@ -220,6 +220,7 @@
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section5 {
+  background-color:#fff;
   height: 110vh;
   display: flex;
   align-items: center;

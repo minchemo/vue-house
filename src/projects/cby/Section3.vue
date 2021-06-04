@@ -129,6 +129,7 @@
 </template>
 <style lang="scss">
 .section3 {
+  background-color: #fff;
   .main {
     display: flex;
     justify-content: space-between;
