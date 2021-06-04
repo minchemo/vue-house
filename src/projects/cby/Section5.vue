@@ -431,10 +431,10 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        /*  autoplay: {
+        autoplay: {
           delay: 2500,
           disableOnInteraction: false,
-        }, */
+        },
       },
       imgList: [
         {

@@ -129,6 +129,7 @@ export default {
   position: relative;
   z-index: 3;
   width: 70%;
+  min-width: 1000px;
   // height: 480px;
   /* background-size: 100vw auto;
   background-attachment: fixed;
