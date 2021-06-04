@@ -362,9 +362,10 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section3 {
+      padding-top: 10vh;
     .sub-section1 {
       height: 60vh;
-      padding-top: 10vh;
+      padding-top: unset;
       .main {
         flex-direction: column-reverse;
 
@@ -385,7 +386,7 @@
     .sub-section2 {
       height: 70vh;
       padding-top: 0;
-      margin-top: 10vh;
+      margin-top: 5vw;
       .main {
         flex-direction: column-reverse;
         .swiper-info {
