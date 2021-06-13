@@ -11,27 +11,6 @@
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section2" @init="init">
-      <Section2 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section3" @init="init">
-      <Section3 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section4" @init="init">
-      <Section4 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section5" @init="init">
-      <Section5 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section6" @init="init" v-show="false">
-      <Section6 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section7" @init="init" v-show="false">
-      <Section7 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section8" @init="init">
-      <Section8 />
-    </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
@@ -46,7 +25,7 @@
 @import "../assets/style/variableColor.scss";
 
 .home {
-  background :#009991 !important;
+  background: #009991 !important;
 }
 
 .section,
@@ -67,14 +46,7 @@ import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/cby/Section1.vue";
-import Section2 from "@/projects/cby/Section2.vue";
-import Section3 from "@/projects/cby/Section3.vue";
-import Section4 from "@/projects/cby/Section4.vue";
-import Section5 from "@/projects/cby/Section5.vue";
-import Section6 from "@/projects/cby/Section6.vue";
-import Section7 from "@/projects/cby/Section7.vue";
-import Section8 from "@/projects/cby/Section8.vue";
+import Section1 from "@/projects/ab/section1.vue";
 
 export default {
   name: "home",
@@ -86,13 +58,6 @@ export default {
     ContactSection,
     MobileNav,
     Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
-    Section8,
   },
 
   data() {

@@ -105,12 +105,6 @@
     <!-- <img src="@/projects/fs/order/bg.png" alt="" class="bg-img"> -->
     <!-- <img src="@/projects/fs/order/bg1.png" alt="" class="bg-img no-mix"> -->
     <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
-    <img
-      class="order-leaf"
-      src="@/projects/cby/order-leaf.png"
-      alt=""
-      v-if="!isMobile"
-    />
     <div class="order-top">
       <!-- <div class="title-block">
         <h3 class="title">{{order.title}}</h3>
@@ -557,27 +551,6 @@ export default {
     }
   }
 
-  .order-leaf {
-    position: absolute;
-    right: -1vw;
-    width: 20vw;
-    animation: leaf-small 2s ease-in-out 0s infinite alternate-reverse;
-  }
-  .leaf {
-    animation: leaf 2s ease-in-out 0s infinite alternate-reverse;
-  }
-
-  @keyframes leaf {
-    100% {
-      transform: skew(4deg);
-    }
-  }
-
-  @keyframes leaf-small {
-    100% {
-      transform: skew(4deg);
-    }
-  }
 }
 
 /* 平板尺寸 */
