@@ -157,7 +157,7 @@ export default {
   background-attachment: fixed;
   background-position: 0% 50%; */
   transform: translateY(0);
-  margin: 2vw auto -2vw;
+  //margin: 2vw auto -2vw;
   padding: 70px 0 30px;
 
   .mosaic-box {
@@ -181,8 +181,7 @@ export default {
     transform-origin: center;
     transform: scaleX(1);
     animation: animate 10s infinite;
-    z-index: 1;
-
+    z-index: 0;
     &.fix-bar-1 {
       width: 10%;
       height: 6%;
@@ -224,7 +223,7 @@ export default {
   width: auto;
   height: $contact_logo_pc_width;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 .info {
   width: 880px;
@@ -314,7 +313,6 @@ export default {
   background: $contact_google_btn_bg;
   background-position: center !important;
 
-
   //box-shadow: $contact_google_border;
   transition: all 0.5s;
   border-radius: 0 50px 50px 0 !important;
@@ -369,13 +367,35 @@ export default {
       position: absolute;
       right: 0;
       top: 5.5%;
-      width: 40vw;
+      width: 35vw;
     }
 
     .logo {
       width: $contact_logo_mobile_width;
       height: auto;
       margin-left: -2vw;
+    }
+
+    .fix-bar {
+      &.fix-bar-1 {
+        width: 20%;
+        height: 5%;
+        left: 0;
+        top: 5vw;
+      }
+
+      &.fix-bar-2 {
+        width: 30%;
+        height: 3%;
+        left: 15vw;
+        top: 25vw;
+      }
+      &.fix-bar-3 {
+        width: 15%;
+        height: 3%;
+        left: 20vw;
+        top: 14vw;
+      }
     }
   }
 

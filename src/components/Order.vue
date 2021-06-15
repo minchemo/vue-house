@@ -1,5 +1,10 @@
 <template>
   <div class="order-bg">
+    <img
+      v-if="!isMobile"
+      class="contact-brick"
+      src="@/projects/ab/contact.png"
+    />
     <!-- <img src="@/projects/fs/order/bg.png" alt="" class="bg-img"> -->
     <!-- <img src="@/projects/fs/order/bg1.png" alt="" class="bg-img no-mix"> -->
     <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
@@ -293,16 +298,17 @@ export default {
     mix-blend-mode: normal;
     height: 100%;
   }
+  padding: 0 2vw;
 }
 .order-bg {
-  background-color: $order_bg_color;
-  background-image: $order_bg_image;
+  //background-color: $order_bg_color;
+  //background-image: $order_bg_image;
   background-repeat: no-repeat;
   position: relative;
   background-size: 100vw auto;
   background-position: top;
   font-family: $family3;
-  padding-top: 10vw;
+  // padding-top: 10vw;
 
   input,
   textarea,
@@ -310,8 +316,11 @@ export default {
     font-family: $family3;
   }
   .order-top {
+    background-color: $order_bg_color;
     position: relative;
     overflow: hidden;
+    padding-top: 5vw;
+    margin: 0 2vw;
   }
   .order-title {
     font-family: $family1;
@@ -333,6 +342,13 @@ export default {
       width: 100%;
       max-width: 500px;
     }
+  }
+
+  .contact-brick {
+    position: absolute;
+    width: 20vw;
+    left: 15vw;
+    top: 42vw;
   }
 
   .order-subtitle {
@@ -410,7 +426,6 @@ export default {
     margin-top: 40px;
     margin-bottom: 20px;
   }
-
 }
 
 /* 平板尺寸 */
@@ -437,9 +452,10 @@ export default {
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .order-bg {
+    background-color: $order_bg_color;
     background-image: $order_bg_image_m;
     background-size: cover;
-    padding-top: 40px;
+    padding-top: 0;
     margin: 0;
     position: relative;
     z-index: 2;
@@ -465,8 +481,7 @@ export default {
       line-height: 1.5;
     }
     .order-top {
-      
-    top:20vw;
+      top: 10vw;
     }
     .order {
       width: 95% !important;

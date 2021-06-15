@@ -6,7 +6,7 @@
           v-if="!isMobile"
           :width="13"
           :height="21"
-          :floatAmount="20"
+          :floatAmount="40"
           :horizontal="true"
         />
       </div>
@@ -44,7 +44,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
-  z-index: 1;
+  z-index: 101;
 
   .feature {
     font-family: $family1;
@@ -207,6 +207,7 @@
 .section2 {
   height: 100vh;
   position: relative;
+  background: #FAD2CD;
 
   .main {
     position: relative;

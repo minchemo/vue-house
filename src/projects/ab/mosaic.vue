@@ -10,25 +10,26 @@
     position: relative;
     float: right;
     transition: all 0.7s;
-    box-shadow: 0 0px 0px #9a29299e;
-    transform: translate(0, 0);
+    //box-shadow: 0 0px 0px #9a29299e;
+    //transform: translate(0, 0);
+    opacity: 1;
 
-    &.brick-float {
-      animation: float 5s;
+    &.brick-shrink {
+      animation: shrink 2s;
     }
 
-    @keyframes float {
+    @keyframes shrink {
       0% {
-        box-shadow: 0 0px 0px #4b0e0e;
-        transform: translate(0, 0);
+        //box-shadow: 0 0px 0px #4b0e0e;
+        opacity: 1;
       }
       50% {
-        box-shadow: 15px 10px 30px #4b0e0e;
-        transform: translate(-2px, -2px);
+        // box-shadow: 15px 10px 30px #4b0e0e;
+        opacity: 0;
       }
       0% {
-        box-shadow: 0 0px 0px #4b0e0e;
-        transform: translate(0, 0);
+        //box-shadow: 0 0px 0px #4b0e0e;
+        opacity: 1;
       }
     }
   }
@@ -73,7 +74,7 @@ export default {
         "#F73201",
         "#E50027",
         "#C30D23",
-        '#FAD2CD'
+        "#FAD2CD",
       ],
       isMobile,
     };
@@ -121,7 +122,7 @@ export default {
       this.animateBrick();
       setInterval(() => {
         this.animateBrick();
-      }, 6000);
+      }, 3000);
     },
     animateBrick() {
       const bricksContainer = $(this.$refs.bricksRef),
@@ -133,11 +134,11 @@ export default {
 
       selected.each((i, val) => {
         setTimeout(() => {
-          $(val).addClass("brick-float").css("z-index", 10);
+          $(val).addClass("brick-shrink").css("z-index", 10);
 
           setTimeout(() => {
-            $(val).removeClass("brick-float").css("z-index", 0);
-          }, 6000);
+            $(val).removeClass("brick-shrink").css("z-index", 0);
+          }, 3000);
         }, i * 500);
       });
     },

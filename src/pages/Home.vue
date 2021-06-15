@@ -14,7 +14,7 @@
     <vue-lazy-component class="section" id="section2" @init="init">
       <Section2 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section3" @init="init">
+    <vue-lazy-component class="section" id="section3" @init="init" v-show="false">
       <Section3 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section4" @init="init">
@@ -41,7 +41,7 @@
 @import "../assets/style/variableColor.scss";
 
 .home {
-  background: #FAD2CD !important;
+ background: #fff !important;
 }
 
 .section,

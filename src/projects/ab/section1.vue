@@ -1,8 +1,6 @@
 <template>
   <div class="section1">
-    <div class="landing"
-     v-bind:class="{ active: landing }"
-    >
+    <div class="landing" v-bind:class="{ active: landing }">
       <div class="mosaic-box">
         <Mosaic
           v-if="!isMobile"
@@ -105,8 +103,7 @@
         <div class="fix-brick fix-brick2"></div>
       </div>
     </div>
-    <div class="main" 
-     v-bind:class="{ active: !landing }">
+    <div class="main" v-bind:class="{ active: !landing }">
       <div class="info">
         <svg
           v-if="!isMobile"
@@ -955,14 +952,14 @@
           v-if="!isMobile"
           :width="20"
           :height="13"
-          :floatAmount="20"
+          :floatAmount="40"
           :horizontal="true"
         />
         <Mosaic
           v-else
           :width="13"
           :height="13"
-          :floatAmount="20"
+          :floatAmount="40"
           :horizontal="true"
         />
       </div>
@@ -980,7 +977,13 @@
         src="~@/projects/ab/s1/leftbottom-mo.png"
         alt=""
       />
-      <div v-scroll-to="{ element: `#contact`, offset: 0 }" v-if="!isMobile" class="float-btn">預約<br />今采</div>
+      <div
+        v-scroll-to="{ element: `#contact`, offset: 0 }"
+        v-if="!isMobile"
+        class="float-btn"
+      >
+        預約<br />今采
+      </div>
     </div>
   </div>
 </template>
@@ -988,20 +991,23 @@
 @import "@/assets/style/variableDefault.scss";
 /* 螢幕尺寸標準 */
 .section1 {
-  height: calc(100vh - #{$nav_pc_height});
-  margin-top: $nav_pc_height;
+  height: 100vh;
+  padding-top: $nav_pc_height;
   position: relative;
 
   .landing {
+    padding-top: $nav_pc_height;
     background-color: #c30d23;
     position: absolute;
     width: 100%;
-    height: calc(100vh - #{$nav_pc_height});
+    height: 100%;
     left: 0;
+    top: 0;
     display: flex;
     transform-origin: center center;
-    transition: all 2s ease-in-out;
-    transform: translate(100vw, 0);
+    transition: all 2.5s ease-in-out;
+    //transform: translate(100vw, 0);
+    opacity: 0;
     z-index: 100;
 
     .mosaic-box {
@@ -1062,22 +1068,25 @@
     }
 
     &.active {
-      transform: translate(0, 0);
+      //transform: translate(0, 0);
+      opacity: 1;
     }
-
   }
 
   .main {
+    padding-top: $nav_pc_height;
     background-color: #c30d23;
     position: absolute;
     width: 100%;
-    height: calc(100vh - #{$nav_pc_height});
+    height: 100%;
     left: 0;
+    top: 0;
     transform-origin: center center;
-    transition: all 3s ease-in-out;
+    transition: all 10s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    opacity: 0;
 
     .mosaic-box {
       width: 30vw;
@@ -1193,6 +1202,11 @@
         background-color: #c44e5c;
         color: #fff;
       }
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: none;
     }
   }
 }
@@ -1406,7 +1420,7 @@ export default {
 
     setTimeout(() => {
       this.hideLanding();
-    }, 3000);
+    }, 5000);
   },
 };
 </script>

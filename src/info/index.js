@@ -5,8 +5,8 @@ export default {
   googleLink: "https://goo.gl/maps/oiHRsxA7gAUaz6ec8",
   phone: "00-0000-0000",
   fbLink:
-    "",
-  fbMessage: "",
+    "https://www.facebook.com/%E8%99%B9%E8%80%80%E4%BB%8A%E9%87%87-100616525574893",
+  fbMessage: "https://m.me/100616525574893/",
   caseName: "虹耀今采",
   indigatorLength: 10,
   houseInfos: [

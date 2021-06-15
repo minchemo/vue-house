@@ -106,7 +106,7 @@ export default {
   background-image: $nav_bg;
   background-size: cover;
   height: $nav_pc_height;
-  z-index: 60;
+  z-index: 500;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -371,7 +371,7 @@ export default {
     .link {
       height: auto;
       width: 100%;
-      font-size: 34px;
+      font-size: 26px;
       display: flex;
       align-items: center;
       justify-content: center;

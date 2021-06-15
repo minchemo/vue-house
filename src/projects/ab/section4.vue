@@ -225,7 +225,7 @@
 <style lang="scss">
 @import "@/assets/style/variableColor.scss";
 .section4 {
-  background-color: transparent;
+  background: #FAD2CD;
 
   .sub-section1,
   .sub-section3 {
