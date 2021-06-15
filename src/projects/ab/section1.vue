@@ -980,7 +980,7 @@
         src="~@/projects/ab/s1/leftbottom-mo.png"
         alt=""
       />
-      <div v-if="!isMobile" class="float-btn">預約<br />今采</div>
+      <div v-scroll-to="{ element: `#contact`, offset: 0 }" v-if="!isMobile" class="float-btn">預約<br />今采</div>
     </div>
   </div>
 </template>

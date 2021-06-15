@@ -12,7 +12,7 @@
           :key="i"
           data-aos="fade-left"
           :data-aos-delay="i * 100"
-          @click="showDeatil()"
+          @click="showDeatil(i)"
         >
           <div
             class="cover"
@@ -30,7 +30,26 @@
     <div class="fix-bar fix-bar-4"></div>
 
     <div class="people-detail" v-bind:class="{ active: detailShow }">
-      <div class="close" @click="closeDeatil()">×</div>
+      <div
+        class="bg"
+        v-bind:style="{ backgroundImage: `url(${detailData.detailBg})` }"
+      ></div>
+
+      <div class="swiper-box">
+        <h2 v-html="detailData.detailIntro"></h2>
+        <swiper ref="swiper" :options="swiperOptions">
+          <swiper-slide
+            v-for="(imgList, i) in detailData.detailImg"
+            v-bind:key="i"
+            v-bind:style="{ backgroundImage: `url(${imgList})` }"
+          >
+          </swiper-slide>
+          <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+      </div>
+
+      <div class="p-name" v-html="detailData.detailTitle"></div>
+      <div class="close" @click="closeDeatil">×</div>
     </div>
   </div>
 </template>
@@ -121,8 +140,80 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    display: none;
-    transition: all 3s;
+    transition: all 0.7s;
+    font-family: $family1;
+    transform: translate(0, -100vh);
+    opacity: 0.5;
+
+    .bg {
+      width: 100%;
+      height: 100%;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .p-name {
+      position: absolute;
+      z-index: 1;
+      left: 30px;
+      bottom: 30px;
+      text-align: right;
+      color: #fff;
+      line-height: 1.2;
+
+      .name {
+        font-size: 28px;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      .badge {
+        font-size: 42px;
+        font-weight: bold;
+        opacity: 0.7;
+      }
+    }
+
+    .swiper-box {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 40vw;
+      h2 {
+        text-align: left;
+        color: #d20028;
+        font-size: 46px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 15px;
+      }
+      .swiper-pagination-bullets {
+        width: 100%;
+        height: auto;
+        display: block;
+        right: unset;
+        left: unset;
+        bottom: 30px;
+
+        .swiper-pagination-bullet {
+          background: #fff;
+          opacity: 1;
+          width: 16px;
+          height: 16px;
+          margin: 6px;
+          &.swiper-pagination-bullet-active {
+            background: #d20028;
+          }
+        }
+      }
+      .swiper-slide {
+        padding-bottom: 71.38%;
+        background-size: cover;
+      }
+    }
 
     .close {
       position: absolute;
@@ -135,7 +226,7 @@
     }
 
     &.active {
-      display: block;
+      transform: translate(0, 0);
       opacity: 1;
     }
   }
@@ -249,6 +340,34 @@
               rgba(0, 0, 0, 0) 41%
             );
           }
+
+          .plus {
+            position: absolute;
+            right: 16px;
+            bottom: unset;
+            top: 8px;
+            z-index: 1;
+            color: #fff;
+            font-weight: bold;
+            font-size: 32px;
+            &:after {
+              content: "";
+              width: 100px;
+              height: 45px;
+              background: rgb(0, 0, 0);
+              background: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(210, 0, 40, 1) 100%
+              );
+              position: absolute;
+              opacity: 0.45;
+              right: -16px;
+              top: -8px;
+              z-index: -1;
+            }
+          }
+
           .caption {
             font-family: $family1;
             writing-mode: horizontal-tb;
@@ -338,6 +457,110 @@
         }
       }
     }
+
+    .people-detail {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition: all 3s;
+      font-family: $family1;
+      transform: translate(0, -100%);
+      transition: all 2s;
+
+      .bg {
+        width: 100%;
+        height: 50%;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: unset;
+      }
+
+      .p-name {
+        position: absolute;
+        z-index: 1;
+        left: unset;
+        right: 30px;
+        bottom: 30px;
+        text-align: right;
+        color: #fff;
+        line-height: 1.2;
+
+        .name {
+          font-size: 28px;
+          font-weight: bold;
+          margin-left: 10px;
+        }
+        .badge {
+          font-size: 32px;
+          font-weight: bold;
+          opacity: 0.7;
+        }
+      }
+
+      .swiper-box {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: unset;
+        width: 100vw;
+        h2 {
+          text-align: left;
+          color: #d20028;
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 1.2;
+          margin-bottom: 0;
+          padding: 30px;
+          padding-top: 50px;
+          background: #fff;
+          white-space: nowrap;
+        }
+        .swiper-pagination-bullets {
+          width: 100%;
+          height: auto;
+          display: block;
+          right: unset;
+          left: unset;
+          bottom: 30px;
+
+          .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 1;
+            width: 12px;
+            height: 12px;
+            margin: 4px;
+            &.swiper-pagination-bullet-active {
+              background: #d20028;
+            }
+          }
+        }
+        .swiper-slide {
+          padding-bottom: 71.38%;
+          background-size: cover;
+        }
+      }
+
+      .close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        z-index: 1;
+        color: #d20028;
+        font-size: 48px;
+        cursor: pointer;
+      }
+
+      &.active {
+        transform: translate(0, 0);
+      }
+    }
   }
 }
 
@@ -351,16 +574,48 @@
 </style>
 
 <script>
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+// import style (>= Swiper 6.x)
+import "swiper/css/swiper.css";
 // @ is an alias to /src
 import { isMobile } from "@/utils";
 export default {
   name: "section5",
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  directives: {
+    swiper: directive,
+  },
 
   data() {
     return {
       detailShow: false,
+      swiperOptions: {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      },
       detailData: {
-          
+        title: !isMobile
+          ? '名門血統／虹耀建設 <span class="divider">｜</span>執行長／ <span class="large">陳柏亘</span>'
+          : '名門血統／虹耀建設<br> <span class="divider">｜</span>執行長／ <span class="large"><br>陳柏亘</span>',
+        img: require("@/projects/ab/s5/p1.jpg"),
+        detailBg: require("@/projects/ab/s5/detail/a.jpg"),
+        detailTitle:
+          '執行長<span class="name">陳柏亘</span><br><span class="badge">名門血統/虹耀建設</span>',
+        detailIntro: "精挑最優質地段<br>蓋人人住得起的「好宅」",
+        detailImg: [require("@/projects/ab/s5/detail/1.jpg")],
       },
       peoples: [
         {
@@ -368,30 +623,69 @@ export default {
             ? '名門血統／虹耀建設 <span class="divider">｜</span>執行長／ <span class="large">陳柏亘</span>'
             : '名門血統／虹耀建設<br> <span class="divider">｜</span>執行長／ <span class="large"><br>陳柏亘</span>',
           img: require("@/projects/ab/s5/p1.jpg"),
+          detailBg: require("@/projects/ab/s5/detail/a.jpg"),
+          detailTitle:
+            '執行長<span class="name">陳柏亘</span><br><span class="badge">名門血統/虹耀建設</span>',
+          detailIntro: "精挑最優質地段<br>蓋人人住得起的「好宅」",
+          detailImg: [require("@/projects/ab/s5/detail/1.jpg")],
         },
         {
           title: !isMobile
             ? '名宅工藝／森城營造 <span class="divider">｜</span>董事長／ <span class="large">鄒開鑄</span>'
             : '名宅工藝／森城營造<br> <span class="divider">｜</span>董事長／ <span class="large"><br>鄒開鑄</span>',
           img: require("@/projects/ab/s5/p2.jpg"),
+          detailBg: require("@/projects/ab/s5/detail/b.jpg"),
+          detailTitle:
+            '董事長<span class="name">鄒開鑄</span><br><span class="badge">名宅工藝/森城營造</span>',
+          detailIntro: "半世紀建築經驗<br>職人紮實精鑄成就完美",
+          detailImg: [
+            require("@/projects/ab/s5/detail/2.jpg"),
+            require("@/projects/ab/s5/detail/3.jpg"),
+          ],
         },
         {
           title: !isMobile
-            ? '名家美學／林峰池建築 <span class="divider">｜</span>建築師／ <span class="large">林峰池</span>'
-            : '名家美學／林峰池建築<br> <span class="divider">｜</span>建築師／ <span class="large"><br>林峰池</span>',
+            ? '名家美學／林峰池建築師 <span class="divider">｜</span>建築師／ <span class="large">林峰池</span>'
+            : '名家美學／林峰池建築師<br> <span class="divider">｜</span>建築師／ <span class="large"><br>林峰池</span>',
           img: require("@/projects/ab/s5/p3.jpg"),
+          detailBg: require("@/projects/ab/s5/detail/c.jpg"),
+          detailTitle:
+            '建築師<span class="name">林峰池</span><br><span class="badge">名家美學/林峰池建築師</span>',
+          detailIntro: "揉和城市五感地貌<br>以建築捏塑幸福載體",
+          detailImg: [
+            require("@/projects/ab/s5/detail/4.jpg"),
+            require("@/projects/ab/s5/detail/5.jpg"),
+          ],
         },
         {
           title: !isMobile
             ? '名園造景／六國景觀 <span class="divider">｜</span>設計師／<span class="large">蘇瑞泉</span>'
             : '名園造景／六國景觀<br> <span class="divider">｜</span>設計師／<span class="large"><br>蘇瑞泉</span>',
           img: require("@/projects/ab/s5/p4.jpg"),
+          detailBg: require("@/projects/ab/s5/detail/d.jpg"),
+          detailTitle:
+            '設計師<span class="name">蘇瑞泉</span><br><span class="badge">名園造景/六國景觀</span>',
+          detailIntro: "倫敦設計金獎團隊<br>描繪城市共好綠皮書",
+          detailImg: [
+            require("@/projects/ab/s5/detail/6.jpg"),
+            require("@/projects/ab/s5/detail/7.jpg"),
+            require("@/projects/ab/s5/detail/8.jpg"),
+          ],
         },
         {
           title: !isMobile
             ? '名邸公設／元佑設計 <span class="divider">｜</span>總   監／<span class="large">李志成</span>'
             : '名邸公設／元佑設計<br> <span class="divider">｜</span>總   監／<span class="large"><br>李志成</span>',
           img: require("@/projects/ab/s5/p5.jpg"),
+          detailBg: require("@/projects/ab/s5/detail/e.jpg"),
+          detailTitle:
+            '總   監<span class="name">李志成</span><br><span class="badge">名邸公設／元佑設計</span>',
+          detailIntro: "美學推手精準架構<br>家門外的璀燦社交場域",
+          detailImg: [
+            require("@/projects/ab/s5/detail/9.jpg"),
+            require("@/projects/ab/s5/detail/10.jpg"),
+            require("@/projects/ab/s5/detail/11.jpg"),
+          ],
         },
       ],
       isMobile,
@@ -399,8 +693,10 @@ export default {
   },
 
   methods: {
-    showDeatil() {
+    showDeatil(index) {
       this.detailShow = true;
+      const peopleData = this.peoples[index];
+      this.detailData = peopleData;
     },
     closeDeatil() {
       this.detailShow = false;

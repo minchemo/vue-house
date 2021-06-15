@@ -37,6 +37,8 @@
                 </span>
               </span>
             </li>
+            <img v-if="isMobile" class="d-m-1" src="@/projects/ab/mo-nav-1.png" alt="">
+            <img v-if="isMobile" class="d-m-2" src="@/projects/ab/mo-nav-2.png" alt="">
           </ul>
         </div>
       </div>
@@ -82,9 +84,9 @@ export default {
       const nav = this.$refs.navigation;
 
       if (this.prev > window.scrollY) {
-        $(nav).removeClass('scrollhide');
+        $(nav).removeClass("scrollhide");
       } else if (this.prev < window.scrollY) {
-        $(nav).addClass('scrollhide');
+        $(nav).addClass("scrollhide");
       }
       this.prev = window.scrollY;
     },
@@ -336,24 +338,45 @@ export default {
     display: block;
     transform: translateX(40%);
     margin-right: 0vw;
+    background: #a70028;
+    padding-top: 5vh;
+
+    .d-m-1 {
+      width: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .d-m-2 {
+      width: 50%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
     li {
       height: auto;
       min-height: 50px;
-      margin-bottom: 5px;
+      margin-bottom: 24px;
       writing-mode: unset;
+      border-bottom: 1px solid #ff8400;
+      padding-bottom: 24px;
       &:first-child {
         margin-right: 0;
+      }
+      &:last-child {
+        border: 0;
       }
     }
     .link {
       height: auto;
       width: 100%;
-      font-size: 16px;
-      margin-top: 10px;
+      font-size: 34px;
       display: flex;
       align-items: center;
       justify-content: center;
       display: none;
+      color: #fff;
       .title {
         width: 100%;
       }

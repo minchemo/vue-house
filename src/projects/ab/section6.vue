@@ -33,12 +33,10 @@
           slot="pagination"
         ></div>
       </swiper>
-      <div v-if="isMobile" class="swiper-button-prev"></div>
-      <div v-if="isMobile" class="swiper-button-next"></div>
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/style/variableColor.scss";
 /* 螢幕尺寸標準 */
 .section6 {
@@ -88,14 +86,8 @@
   .swiper-box {
     width: 100%;
     .swiper-pagination-bullets {
-      width: 30px;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
+      padding-right: 60vw;
+      bottom: 10vh;
       .swiper-pagination-bullet {
         background: #fff;
         opacity: 1;
@@ -151,20 +143,20 @@
         }
       }
       .content {
-          text-align: justify;
+        text-align: justify;
       }
     }
 
     .swiper-box {
       width: 100%;
+
       .swiper-pagination-bullets {
-        width: 30px;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        width: 100%;
+        height: auto;
+        display: block;
+        right: unset;
+        left: unset;
+        bottom: 30px;
 
         .swiper-pagination-bullet {
           background: #fff;

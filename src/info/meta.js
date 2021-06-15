@@ -1,6 +1,6 @@
 exports.info = {
-  title: "春福年年",
+  title: "虹耀今采",
   description:
-    "春福年年",
-  keywords: "春福年年"
+    "虹耀今采",
+  keywords: "虹耀今采"
 };
