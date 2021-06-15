@@ -23,6 +23,6 @@ export default {
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
     title: "預約賞屋",
-    subTitle: "若想了解建案資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！"
+    subTitle: ""
   }
 };

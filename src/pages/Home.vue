@@ -11,6 +11,22 @@
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
     </vue-lazy-component>
+    <vue-lazy-component class="section" id="section2" @init="init">
+      <Section2 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section3" @init="init">
+      <Section3 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section4" @init="init">
+      <Section4 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section5" @init="init">
+      <Section5 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section6" @init="init">
+      <Section6 />
+    </vue-lazy-component>
+
 
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
@@ -25,7 +41,7 @@
 @import "../assets/style/variableColor.scss";
 
 .home {
-  background: #009991 !important;
+  background: #FAD2CD !important;
 }
 
 .section,
@@ -47,6 +63,11 @@ import Loading from "@/components/Loading.vue";
 // import Indigator from '@/components/Indigator.vue'
 
 import Section1 from "@/projects/ab/section1.vue";
+import Section2 from "@/projects/ab/section2.vue";
+import Section3 from "@/projects/ab/section3.vue";
+import Section4 from "@/projects/ab/section4.vue";
+import Section5 from "@/projects/ab/section5.vue";
+import Section6 from "@/projects/ab/section6.vue";
 
 export default {
   name: "home",
@@ -58,6 +79,11 @@ export default {
     ContactSection,
     MobileNav,
     Section1,
+    Section2,
+    Section3,
+    Section4,
+    Section5,
+    Section6
   },
 
   data() {

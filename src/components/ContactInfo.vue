@@ -1,6 +1,25 @@
 <template>
   <div>
     <div class="contact-info" id="contact-info">
+      <div class="fix-bar fix-bar-1"></div>
+      <div class="fix-bar fix-bar-2"></div>
+      <div class="fix-bar fix-bar-3"></div>
+      <div class="mosaic-box">
+        <Mosaic
+          v-if="!isMobile"
+          :width="30"
+          :height="13"
+          :floatAmount="20"
+          :horizontal="true"
+        />
+        <Mosaic
+          v-else
+          :width="11"
+          :height="15"
+          :floatAmount="10"
+          :horizontal="true"
+        />
+      </div>
       <img
         v-if="!isMobile"
         class="logo"
@@ -77,12 +96,15 @@ import { isMobile, isTablet } from "@/utils";
 import CallDialog from "@/components/Dialog/Call";
 import MessengerDialog from "@/components/Dialog/Messenger";
 import MapDialog from "@/components/Dialog/Map";
+
+import Mosaic from "@/projects/ab/mosaic.vue";
 export default {
   name: "contactInfo",
   components: {
     CallDialog,
     MessengerDialog,
     MapDialog,
+    Mosaic,
   },
   data() {
     return {
@@ -128,7 +150,7 @@ export default {
   justify-content: space-between;
   position: relative;
   z-index: 3;
-  width: 70%;
+  width: 100%;
   min-width: 1000px;
   // height: 480px;
   /* background-size: 100vw auto;
@@ -137,6 +159,65 @@ export default {
   transform: translateY(0);
   margin: 2vw auto -2vw;
   padding: 70px 0 30px;
+
+  .mosaic-box {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 35vw;
+  }
+
+  .fix-bar {
+    background: rgba(231, 149, 14);
+    background: linear-gradient(
+      90deg,
+      rgba(253, 227, 82, 1) 0%,
+      rgba(231, 149, 14, 0.7) 20%,
+      rgba(195, 13, 35, 0.3) 70%,
+      rgba(195, 13, 35, 0) 100%
+    );
+    position: absolute;
+    transition: all 0.5s;
+    transform-origin: center;
+    transform: scaleX(1);
+    animation: animate 10s infinite;
+    z-index: 1;
+
+    &.fix-bar-1 {
+      width: 10%;
+      height: 6%;
+      left: 25vw;
+      top: 12vw;
+      animation-delay: random(5) + s;
+    }
+
+    &.fix-bar-2 {
+      width: 10%;
+      height: 2%;
+      left: 30vw;
+      top: 17vw;
+      animation-delay: random(5) + s;
+    }
+    &.fix-bar-3 {
+      width: 7%;
+      height: 3%;
+      left: 34vw;
+      top: 14vw;
+      animation-delay: random(5) + s;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(1.5);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
+  }
 }
 
 .logo {
@@ -232,7 +313,9 @@ export default {
   color: $contact_google_btn_color;
   background: $contact_google_btn_bg;
   background-position: center !important;
-  box-shadow: $contact_google_border;
+
+
+  //box-shadow: $contact_google_border;
   transition: all 0.5s;
   border-radius: 0 50px 50px 0 !important;
 
@@ -278,13 +361,21 @@ export default {
     height: auto;
     padding: 40px;
     transform: none;
-    position: static;
+    position: relative;
     margin: 30vw auto 0 auto;
     min-width: unset;
+
+    .mosaic-box {
+      position: absolute;
+      right: 0;
+      top: 5.5%;
+      width: 40vw;
+    }
 
     .logo {
       width: $contact_logo_mobile_width;
       height: auto;
+      margin-left: -2vw;
     }
   }
 

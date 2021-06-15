@@ -175,8 +175,8 @@ export default {
   }
   .link {
     color: $nav_link_color;
-    height: 50%;
-    width: 7em;
+    height: 25%;
+    width: 6.5em;
     text-align: center;
     display: block;
     cursor: pointer;
@@ -188,10 +188,10 @@ export default {
     position: relative;
     text-align: center;
     //overflow: hidden;
-    padding-right: 10px;
     white-space: nowrap;
-    border-right: 2px solid $nav_link_hover_bg;
-    margin-left: 10px;
+    border-right: 2px solid $nav_link_border_bg;
+    margin-left: 4px;
+    padding-right: 4px;
 
     > span {
       z-index: 3;
@@ -218,7 +218,7 @@ export default {
       }
     }
     &:hover {
-      color: #009991;
+      color: $nav_link_hover_color;
     }
     &:after {
       content: "";
