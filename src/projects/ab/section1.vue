@@ -19,7 +19,7 @@
       </div>
       <div class="intro">
         <div class="bar"></div>
-        <div class="title" data-aos="fade" data-aos-duration="3000">
+        <div class="title">
           收成大安百年薈萃<br />
           定位3捷核心熱點<br />
           佈局20年菁英教育<br />
@@ -1043,11 +1043,21 @@
         color: #fff;
         text-align: left;
         line-height: 1.8;
+        animation: fadein 3.5s;
         .a-b {
           margin-top: 8%;
           width: 70%;
           .cls-1 {
             fill: #f7b52c;
+          }
+        }
+
+        @keyframes fadein {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
           }
         }
       }
@@ -1430,6 +1440,9 @@ export default {
 
     setTimeout(() => {
       this.hideLanding();
+      setTimeout(function () {
+        $(".landing").remove();
+      }, 3000);
     }, 3000);
   },
 };

@@ -87,6 +87,7 @@ export default {
     },
     componentDidMount() {
       this.prev = window.scrollY;
+      return
       window.addEventListener("scroll", (e) => this.handleNavigation(e));
     },
     handleNavigation(e) {

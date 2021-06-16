@@ -216,9 +216,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 100%;
+    height: auto;
     width: 100%;
-    padding-bottom: 10vw;
+    top: 50%;
+    transform: translate(0, -50%);
 
     .mosaic-box {
       width: 14vw;
@@ -255,6 +256,10 @@
     height: auto;
     padding-top: 80px;
 
+    .main {
+      transform: unset;
+      padding-bottom: 10vw;
+    }
     .rightbottom {
       width: 100%;
       position: absolute;

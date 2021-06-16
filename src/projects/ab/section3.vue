@@ -83,7 +83,7 @@
         margin-bottom: 10px;
       }
       h3 {
-        font-size: 26px;
+        font-size: 7vw;
       }
     }
     .view {
