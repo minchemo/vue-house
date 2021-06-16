@@ -1113,7 +1113,7 @@
           stroke-miterlimit: 10;
         }
         .cls-2 {
-          stroke-width: 0.8px;
+          stroke-width: 0;
         }
         .cls-4 {
           fill: #e50027;
