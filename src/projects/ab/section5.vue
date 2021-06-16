@@ -512,6 +512,8 @@
         text-align: right;
         color: #fff;
         line-height: 1.2;
+        transform: scale(0.7);
+        transform-origin: bottom right;
 
         .name {
           font-size: 28px;

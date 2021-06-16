@@ -37,8 +37,18 @@
                 </span>
               </span>
             </li>
-            <img v-if="isMobile" class="d-m-1" src="@/projects/ab/mo-nav-1.png" alt="">
-            <img v-if="isMobile" class="d-m-2" src="@/projects/ab/mo-nav-2.png" alt="">
+            <img
+              v-if="isMobile"
+              class="d-m-1"
+              src="@/projects/ab/mo-nav-1.png"
+              alt=""
+            />
+            <img
+              v-if="isMobile"
+              class="d-m-2"
+              src="@/projects/ab/mo-nav-2.png"
+              alt=""
+            />
           </ul>
         </div>
       </div>
@@ -83,12 +93,16 @@ export default {
       const window = e.currentTarget;
       const nav = this.$refs.navigation;
 
-      if (this.prev > window.scrollY) {
+      if (window.scrollY > 500) {
+        if (this.prev > window.scrollY) {
+          $(nav).removeClass("scrollhide");
+        } else if (this.prev < window.scrollY) {
+          $(nav).addClass("scrollhide");
+        }
+        this.prev = window.scrollY;
+      } else {
         $(nav).removeClass("scrollhide");
-      } else if (this.prev < window.scrollY) {
-        $(nav).addClass("scrollhide");
       }
-      this.prev = window.scrollY;
     },
   },
   mounted() {

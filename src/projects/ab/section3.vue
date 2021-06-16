@@ -50,7 +50,7 @@
   }
 
   .view {
-    background-color: #1d89d8;
+    background-color: #FAD2CD;
     .view-img {
       width: 100%;
       transform: translate(-1px, 3px);
@@ -87,7 +87,7 @@
       }
     }
     .view {
-      background-color: #1d89d8;
+      background-color: #FAD2CD;
       overflow-y: hidden;
       overflow-x: scroll;
       height: 0;

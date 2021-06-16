@@ -19,7 +19,7 @@
       </div>
       <div class="intro">
         <div class="bar"></div>
-        <div class="title">
+        <div class="title" data-aos="fade" data-aos-duration="3000">
           收成大安百年薈萃<br />
           定位3捷核心熱點<br />
           佈局20年菁英教育<br />
@@ -1005,11 +1005,11 @@
     top: 0;
     display: flex;
     transform-origin: center center;
-    transition: all 2.5s ease-in-out;
+    transition: all 1.8s ease-in-out;
     //transform: translate(100vw, 0);
     opacity: 0;
-    z-index: -1;
-    
+    z-index: 5000;
+    pointer-events: none;
 
     .mosaic-box {
       width: 100%;
@@ -1071,8 +1071,7 @@
     &.active {
       //transform: translate(0, 0);
       opacity: 1;
-      z-index: 1000;
-      pointer-events: none;
+      z-index: 5000;
     }
   }
 
@@ -1085,7 +1084,7 @@
     left: 0;
     top: 0;
     transform-origin: center center;
-    transition: all 10s ease-in-out;
+    transition: all 5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -1224,6 +1223,8 @@
     .landing {
       display: block;
       height: 100%;
+      z-index: -1;
+      pointer-events: none;
 
       .mosaic-box {
         width: 75%;
@@ -1285,6 +1286,12 @@
           }
         }
       }
+
+      &.active {
+        //transform: translate(0, 0);
+        opacity: 1;
+        z-index: 5000;
+      }
     }
 
     .main {
@@ -1300,7 +1307,7 @@
         width: 45vw;
         height: 100%;
         position: absolute;
-        top: 10%;
+        top: 15%;
         right: 0;
       }
 
@@ -1336,7 +1343,7 @@
         height: auto;
         width: 40vw;
         position: absolute;
-        top: 10%;
+        top: 15%;
         padding-right: 0;
         left: 10%;
         svg {
@@ -1423,7 +1430,7 @@ export default {
 
     setTimeout(() => {
       this.hideLanding();
-    }, 5000);
+    }, 3000);
   },
 };
 </script>

@@ -5,7 +5,7 @@
         <Mosaic
           v-if="!isMobile"
           :width="13"
-          :height="15"
+          :height="16"
           :floatAmount="40"
           :horizontal="true"
         />
@@ -50,7 +50,7 @@
 
   .feature {
     font-family: $family1;
-    padding: 20px;
+    padding: 2vw;
     background: #fff;
 
     .header {
@@ -218,7 +218,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    padding-bottom: 9vw;
+    padding-bottom: 10vw;
 
     .mosaic-box {
       width: 14vw;
