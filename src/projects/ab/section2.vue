@@ -5,7 +5,7 @@
         <Mosaic
           v-if="!isMobile"
           :width="13"
-          :height="21"
+          :height="15"
           :floatAmount="40"
           :horizontal="true"
         />
@@ -16,7 +16,9 @@
           v-for="(feature, i) in featureList"
           :key="i"
           v-bind:class="{ reverse: feature.reverse == true }"
-          data-aos="fade" :data-aos-delay="i * 50" data-aos-duration="2000"
+          data-aos="fade"
+          :data-aos-delay="i * 50"
+          data-aos-duration="2000"
         >
           <div class="header">
             <div class="iconImg">
@@ -48,7 +50,7 @@
 
   .feature {
     font-family: $family1;
-    padding: 1.5vw;
+    padding: 20px;
     background: #fff;
 
     .header {
@@ -108,7 +110,7 @@
       z-index: 100;
       position: absolute;
       top: 0;
-      left: -14.5%;
+      left: -8.5vw;
       writing-mode: vertical-lr;
       text-orientation: upright;
       font-size: 1.5vw;
@@ -196,7 +198,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold
+      font-weight: bold;
     }
   }
 }
@@ -207,7 +209,7 @@
 .section2 {
   height: 100vh;
   position: relative;
-  background: #FAD2CD;
+  background: #fad2cd;
 
   .main {
     position: relative;
@@ -251,7 +253,7 @@
 @media only screen and (max-width: 767px) {
   .section2 {
     height: auto;
-    padding-top: 50px;
+    padding-top: 80px;
 
     .rightbottom {
       width: 100%;

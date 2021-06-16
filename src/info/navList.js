@@ -4,5 +4,5 @@ export default [
   { name: '雙星學區', imgSrc: '', subTitle: '', section: 'sub-section4', svgSrc: '', offset: -50, mobileOffset: 0  },
   { name: '頂尖團隊', imgSrc: '', subTitle: '', section: 'section5', svgSrc: '', offset: -50, mobileOffset: 0  },
   { name: '名門建築', imgSrc: '', subTitle: '', section: 'section6', svgSrc: '', offset: -50, mobileOffset: 0  },
-  { name: '手感訂製', imgSrc: '', subTitle: '', section: 'section6', svgSrc: '', offset: -50, mobileOffset: 0  },
+ // { name: '手感訂製', imgSrc: '', subTitle: '', section: 'section6', svgSrc: '', offset: -50, mobileOffset: 0  },
 ]

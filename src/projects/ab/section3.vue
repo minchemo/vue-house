@@ -133,7 +133,7 @@ export default {
       const handEl = this.$refs.viewHand;
       $(imgEl).one("load", () => {
         const scrollTarget = (el.scrollWidth - $(window).width()) / 2;
-        el.scrollLeft = scrollTarget + 50;
+        el.scrollLeft = scrollTarget;
         setTimeout(() => {
           $(el).one("scroll", () => {
             $(handEl).fadeOut();

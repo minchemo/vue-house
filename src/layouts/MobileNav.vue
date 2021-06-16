@@ -112,7 +112,7 @@ export default {
   display: flex;
   position: fixed;
   bottom: 0;
-  z-index: 100;
+  z-index: 1000;
   box-shadow: 0 -2px 5px 0 #000;
   display: none;
   transition: all 0.5s;

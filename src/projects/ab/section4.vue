@@ -226,6 +226,8 @@
 @import "@/assets/style/variableColor.scss";
 .section4 {
   background: #FAD2CD;
+  position: relative;
+  overflow: hidden;
 
   .sub-section1,
   .sub-section3 {

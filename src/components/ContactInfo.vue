@@ -120,6 +120,7 @@ export default {
   methods: {
     showCallDialog() {
       // if (!this.isMobile) return
+      return
       this.isShowCallDialog = true;
     },
     showMessengerDialog() {
@@ -131,7 +132,16 @@ export default {
       // if (!this.isMobile) return
       this.isShowMapDialog = true;
     },
+
+    fixLogoHeight() {
+      const targetHeight = $(".contact .mosaic-box").height();
+      $(".contact .logo").height(targetHeight);
+    },
   },
+
+  mounted(){
+    this.fixLogoHeight();
+  }
 };
 </script>
 
@@ -163,7 +173,7 @@ export default {
   .mosaic-box {
     position: absolute;
     right: 0;
-    top: 10%;
+    top: 70px;
     width: 35vw;
   }
 
@@ -371,8 +381,8 @@ export default {
     }
 
     .logo {
-      width: $contact_logo_mobile_width;
-      height: auto;
+      //width: $contact_logo_mobile_width;
+      width: auto;
       margin-left: -2vw;
     }
 

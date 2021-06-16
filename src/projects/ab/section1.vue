@@ -996,11 +996,11 @@
   position: relative;
 
   .landing {
-    padding-top: $nav_pc_height;
+    //padding-top: $nav_pc_height;
     background-color: #c30d23;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     left: 0;
     top: 0;
     display: flex;
@@ -1008,7 +1008,8 @@
     transition: all 2.5s ease-in-out;
     //transform: translate(100vw, 0);
     opacity: 0;
-    z-index: 100;
+    z-index: -1;
+    
 
     .mosaic-box {
       width: 100%;
@@ -1070,6 +1071,8 @@
     &.active {
       //transform: translate(0, 0);
       opacity: 1;
+      z-index: 1000;
+      pointer-events: none;
     }
   }
 
@@ -1087,6 +1090,7 @@
     align-items: center;
     justify-content: flex-end;
     opacity: 0;
+    z-index: 10;
 
     .mosaic-box {
       width: 30vw;
@@ -1206,7 +1210,6 @@
 
     &.active {
       opacity: 1;
-      pointer-events: none;
     }
   }
 }

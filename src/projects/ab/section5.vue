@@ -163,7 +163,7 @@
     background: #fff;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1001;
     transition: all 0.2s;
     font-family: $family1;
     transform: translate(0, -100vh);
@@ -322,11 +322,11 @@
 @media only screen and (max-width: 767px) {
   .section5 {
     height: auto;
-    padding: 180px 0 10vh 0;
+    padding: 180px 0 0 0;
     background-color: #d20028;
 
     .main {
-      width: 80vw;
+      width: 100%;
       margin: 0 auto;
 
       .title {
@@ -379,7 +379,7 @@
                 rgba(0, 0, 0, 0) 0%,
                 rgba(210, 0, 40, 1) 100%
               );
-            transform: translate(0,0);
+              transform: translate(0, 0);
               position: absolute;
               opacity: 0.45;
               right: -16px;
@@ -486,15 +486,16 @@
       background: #fff;
       top: 0;
       left: 0;
-      z-index: 1000;
+      z-index: 1001;
       font-family: $family1;
       transform: translate(100%, 0);
-      transition: all .5s;
+      transition: all 0.5s;
 
       .bg {
         width: 100%;
         height: 50%;
-        background-size: auto 100%;
+        background-size: cover;
+        background-position: top;
         background-repeat: no-repeat;
         position: absolute;
         bottom: 0;
@@ -518,7 +519,7 @@
           margin-left: 10px;
         }
         .badge {
-          font-size: 32px;
+          font-size: 7.5vw;
           font-weight: bold;
           opacity: 0.7;
         }
@@ -533,12 +534,12 @@
         h2 {
           text-align: left;
           color: #d20028;
-          font-size: 28px;
+          font-size: 7vw;
           font-weight: bold;
           line-height: 1.2;
           margin-bottom: 0;
-          padding: 30px;
-          padding-top: 50px;
+          padding: 8vw;
+          padding-top: 10vw;
           background: #fff;
           white-space: nowrap;
         }
@@ -569,8 +570,8 @@
 
       .close {
         position: absolute;
-        right: 30px;
-        top: 30px;
+        right: 5vw;
+        top: 5vw;
         z-index: 1;
         color: #d20028;
         font-size: 48px;
@@ -631,7 +632,9 @@ export default {
           ? '名門血統／虹耀建設 <span class="divider">｜</span>執行長／ <span class="large">陳柏亘</span>'
           : '名門血統／虹耀建設<br> <span class="divider">｜</span>執行長／ <span class="large"><br>陳柏亘</span>',
         img: require("@/projects/ab/s5/p1.jpg"),
-        detailBg: require("@/projects/ab/s5/detail/a.jpg"),
+        detailBg: isMobile
+          ? require("@/projects/ab/s5/detail/a-mo.jpg")
+          : require("@/projects/ab/s5/detail/a.jpg"),
         detailTitle:
           '執行長<span class="name">陳柏亘</span><br><span class="badge">名門血統/虹耀建設</span>',
         detailIntro: "精挑最優質地段<br>蓋人人住得起的「好宅」",
@@ -642,8 +645,12 @@ export default {
           title: !isMobile
             ? '名門血統／虹耀建設 <span class="divider">｜</span>執行長／ <span class="large">陳柏亘</span>'
             : '名門血統／虹耀建設<br> <span class="divider">｜</span>執行長／ <span class="large"><br>陳柏亘</span>',
-          img: isMobile ? require("@/projects/ab/s5/mo-p1.jpg") : require("@/projects/ab/s5/p1.jpg"),
-          detailBg: require("@/projects/ab/s5/detail/a.jpg"),
+          img: isMobile
+            ? require("@/projects/ab/s5/mo-p1.jpg")
+            : require("@/projects/ab/s5/p1.jpg"),
+          detailBg: isMobile
+            ? require("@/projects/ab/s5/detail/a-mo.jpg")
+            : require("@/projects/ab/s5/detail/a.jpg"),
           detailTitle:
             '執行長<span class="name">陳柏亘</span><br><span class="badge">名門血統/虹耀建設</span>',
           detailIntro: "精挑最優質地段<br>蓋人人住得起的「好宅」",
@@ -653,8 +660,12 @@ export default {
           title: !isMobile
             ? '名宅工藝／森城營造 <span class="divider">｜</span>董事長／ <span class="large">鄒開鑄</span>'
             : '名宅工藝／森城營造<br> <span class="divider">｜</span>董事長／ <span class="large"><br>鄒開鑄</span>',
-          img: isMobile ? require("@/projects/ab/s5/mo-p2.jpg") : require("@/projects/ab/s5/p2.jpg"),
-          detailBg: require("@/projects/ab/s5/detail/b.jpg"),
+          img: isMobile
+            ? require("@/projects/ab/s5/mo-p2.jpg")
+            : require("@/projects/ab/s5/p2.jpg"),
+          detailBg: isMobile
+            ? require("@/projects/ab/s5/detail/b-mo.jpg")
+            : require("@/projects/ab/s5/detail/b.jpg"),
           detailTitle:
             '董事長<span class="name">鄒開鑄</span><br><span class="badge">名宅工藝/森城營造</span>',
           detailIntro: "半世紀建築經驗<br>職人紮實精鑄成就完美",
@@ -667,8 +678,12 @@ export default {
           title: !isMobile
             ? '名家美學／林峰池建築師 <span class="divider">｜</span>建築師／ <span class="large">林峰池</span>'
             : '名家美學／林峰池建築師<br> <span class="divider">｜</span>建築師／ <span class="large"><br>林峰池</span>',
-          img: isMobile ? require("@/projects/ab/s5/mo-p3.jpg") : require("@/projects/ab/s5/p3.jpg"),
-          detailBg: require("@/projects/ab/s5/detail/c.jpg"),
+          img: isMobile
+            ? require("@/projects/ab/s5/mo-p3.jpg")
+            : require("@/projects/ab/s5/p3.jpg"),
+          detailBg: isMobile
+            ? require("@/projects/ab/s5/detail/c-mo.jpg")
+            : require("@/projects/ab/s5/detail/c.jpg"),
           detailTitle:
             '建築師<span class="name">林峰池</span><br><span class="badge">名家美學/林峰池建築師</span>',
           detailIntro: "揉和城市五感地貌<br>以建築捏塑幸福載體",
@@ -681,8 +696,12 @@ export default {
           title: !isMobile
             ? '名園造景／六國景觀 <span class="divider">｜</span>設計師／<span class="large">蘇瑞泉</span>'
             : '名園造景／六國景觀<br> <span class="divider">｜</span>設計師／<span class="large"><br>蘇瑞泉</span>',
-          img: isMobile ? require("@/projects/ab/s5/mo-p4.jpg") : require("@/projects/ab/s5/p4.jpg"),
-          detailBg: require("@/projects/ab/s5/detail/d.jpg"),
+          img: isMobile
+            ? require("@/projects/ab/s5/mo-p4.jpg")
+            : require("@/projects/ab/s5/p4.jpg"),
+          detailBg: isMobile
+            ? require("@/projects/ab/s5/detail/d-mo.jpg")
+            : require("@/projects/ab/s5/detail/d.jpg"),
           detailTitle:
             '設計師<span class="name">蘇瑞泉</span><br><span class="badge">名園造景/六國景觀</span>',
           detailIntro: "倫敦設計金獎團隊<br>描繪城市共好綠皮書",
@@ -696,8 +715,12 @@ export default {
           title: !isMobile
             ? '名邸公設／元佑設計 <span class="divider">｜</span>總   監／<span class="large">李志成</span>'
             : '名邸公設／元佑設計<br> <span class="divider">｜</span>總   監／<span class="large"><br>李志成</span>',
-          img: isMobile ? require("@/projects/ab/s5/mo-p5.jpg") : require("@/projects/ab/s5/p5.jpg"),
-          detailBg: require("@/projects/ab/s5/detail/e.jpg"),
+          img: isMobile
+            ? require("@/projects/ab/s5/mo-p5.jpg")
+            : require("@/projects/ab/s5/p5.jpg"),
+          detailBg: isMobile
+            ? require("@/projects/ab/s5/detail/e-mo.jpg")
+            : require("@/projects/ab/s5/detail/e.jpg"),
           detailTitle:
             '總   監<span class="name">李志成</span><br><span class="badge">名邸公設／元佑設計</span>',
           detailIntro: "美學推手精準架構<br>家門外的璀燦社交場域",
@@ -721,8 +744,20 @@ export default {
     closeDeatil() {
       this.detailShow = false;
     },
+    optimizeDetailBg() {
+      const totalHeight = $(".section5 .people-detail").height();
+      const existHeight = $(".section5 .people-detail .swiper-box").height();
+      const targetHeight = totalHeight - existHeight;
+
+      $(".section5 .people-detail .bg").height(targetHeight);
+    },
   },
 
+  mounted() {
+    if (isMobile) {
+      this.optimizeDetailBg();
+    }
+  },
   created() {},
 };
 </script>

@@ -14,7 +14,7 @@
     <vue-lazy-component class="section" id="section2" @init="init">
       <Section2 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section3" @init="init" v-show="false">
+    <vue-lazy-component class="section" id="section3" @init="init">
       <Section3 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section4" @init="init">
