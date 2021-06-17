@@ -100,13 +100,13 @@
           right: 12px;
           top: 24px;
           color: #fff;
-          font-size: 20px;
+          font-size: 1.25rem;
           font-weight: bold;
           .divider {
             color: #ffff00;
           }
           .large {
-            font-size: 28px;
+            font-size: 1.7rem;
           }
         }
 
@@ -592,7 +592,16 @@
 }
 
 // 避免過度到 1280 x 720 時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+        .caption {
+          right: 12px;
+          top: 24px;
+          font-size: 1rem !important;
+          .large {
+            font-size: 1.5rem !important;
+          }
+        }
+
 }
 </style>
 
