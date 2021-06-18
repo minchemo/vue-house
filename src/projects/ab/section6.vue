@@ -222,7 +222,7 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         autoplay: {
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         },
       },
@@ -233,18 +233,18 @@ export default {
             : require("@/projects/ab/s6/a.jpg"),
           caption: "3D外觀示意",
         },
-        {
-          img: isMobile
-            ? require("@/projects/ab/s6/mo-b.jpg")
-            : require("@/projects/ab/s6/b.jpg"),
-          caption: "交誼會館3D示意",
-        },
-        {
-          img: isMobile
-            ? require("@/projects/ab/s6/mo-c.jpg")
-            : require("@/projects/ab/s6/c.jpg"),
-          caption: "迎賓大廳3D示意",
-        },
+        // {
+        //   img: isMobile
+        //     ? require("@/projects/ab/s6/mo-b.jpg")
+        //     : require("@/projects/ab/s6/b.jpg"),
+        //   caption: "交誼會館3D示意",
+        // },
+        // {
+        //   img: isMobile
+        //     ? require("@/projects/ab/s6/mo-c.jpg")
+        //     : require("@/projects/ab/s6/c.jpg"),
+        //   caption: "迎賓大廳3D示意",
+        // },
       ],
     };
   },

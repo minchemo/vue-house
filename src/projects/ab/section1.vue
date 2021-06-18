@@ -1,6 +1,6 @@
 <template>
   <div class="section1">
-    <div class="landing" v-bind:class="{ active: landing }">
+<!--     <div class="landing" v-bind:class="{ active: landing }">
       <div class="mosaic-box">
         <Mosaic
           v-if="!isMobile"
@@ -102,7 +102,7 @@
         <div class="fix-brick fix-brick1 fix-brick-mo"></div>
         <div class="fix-brick fix-brick2"></div>
       </div>
-    </div>
+    </div> -->
     <div class="main" v-bind:class="{ active: !landing }">
       <div class="info">
         <svg
@@ -1191,7 +1191,7 @@
       bottom: 0;
     }
     .float-btn {
-      position: absolute;
+      position: fixed;
       z-index: 15;
       right: 3vw;
       bottom: 5vw;
@@ -1438,12 +1438,14 @@ export default {
       this.resetFixBrickPosition();
     }
 
-    setTimeout(() => {
+    this.landing = false;
+
+/*     setTimeout(() => {
       this.hideLanding();
       setTimeout(function () {
         $(".landing").remove();
       }, 3000);
-    }, 3000);
+    }, 3000); */
   },
 };
 </script>

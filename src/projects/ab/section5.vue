@@ -49,8 +49,14 @@
       </div>
 
       <div class="p-name" v-html="detailData.detailTitle"></div>
-      <div class="close" @click="closeDeatil">×</div>
+      <div class="close" v-if="isMobile" @click="closeDeatil">×</div>
     </div>
+    <div
+      v-if="!isMobile"
+      class="people-detail-overlay"
+      @click="closeDeatil"
+      v-bind:class="{ active: detailShow }"
+    ></div>
   </div>
 </template>
 <style lang="scss">
@@ -142,7 +148,8 @@
         &:hover {
           cursor: pointer;
           .cover {
-            filter: grayscale(0);
+            filter: grayscale(0) brightness(1.1);
+            
           }
           .plus {
             color: #ffef00;
@@ -156,6 +163,19 @@
     }
   }
 
+  .people-detail-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
   .people-detail {
     position: fixed;
     width: 100%;
@@ -163,7 +183,7 @@
     background: #fff;
     top: 0;
     left: 0;
-    z-index: 1001;
+    z-index: 1002;
     transition: all 0.2s;
     font-family: $family1;
     transform: translate(0, -100vh);
@@ -250,7 +270,7 @@
     }
 
     &.active {
-      transform: translate(0, 0);
+      transform: translate(0, 0) scale(0.85);
       opacity: 1;
     }
   }
@@ -581,7 +601,7 @@
       }
 
       &.active {
-        transform: translate(0, 0);
+        transform: translate(0, 0) scale(1);
       }
     }
   }
@@ -593,15 +613,14 @@
 
 // 避免過度到 1280 x 720 時，設計未考量的調整
 @media only screen and (min-width: 1025px) and (max-width: 1400px) {
-        .caption {
-          right: 12px;
-          top: 24px;
-          font-size: 1rem !important;
-          .large {
-            font-size: 1.5rem !important;
-          }
-        }
-
+  .caption {
+    right: 12px;
+    top: 24px;
+    font-size: 1rem !important;
+    .large {
+      font-size: 1.5rem !important;
+    }
+  }
 }
 </style>
 
@@ -634,7 +653,7 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         autoplay: {
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         },
       },
