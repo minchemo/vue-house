@@ -29,7 +29,7 @@
               data-aos-duration="1500"
               :data-aos-delay="1000 - index * 100"
             >
-              <span class="link">
+              <span class="link" :data-section="item.section">
                 <img v-if="item.imgSrc" :src="item.imgSrc" alt />
                 <span>
                   <h3 class="title">{{ item.name }}</h3>
@@ -86,24 +86,36 @@ export default {
       this.isOpen = !this.isOpen;
     },
     componentDidMount() {
-      this.prev = window.scrollY;
-      return
+      // return;
+      // this.prev = window.scrollY;
       window.addEventListener("scroll", (e) => this.handleNavigation(e));
     },
     handleNavigation(e) {
-      const window = e.currentTarget;
-      const nav = this.$refs.navigation;
-
-      if (window.scrollY > 500) {
-        if (this.prev > window.scrollY) {
-          $(nav).removeClass("scrollhide");
-        } else if (this.prev < window.scrollY) {
-          $(nav).addClass("scrollhide");
+      this.list.forEach((element) => {
+        let inviewport = this.elementInViewport("." + element.section);
+        console.log(inviewport);
+        if (inviewport) {
+          $(".navlist .link").removeClass('active');
+          $(".navlist .link[data-section='" + element.section + "']").addClass('active');
         }
-        this.prev = window.scrollY;
-      } else {
-        $(nav).removeClass("scrollhide");
-      }
+      });
+
+      // const window = e.currentTarget;
+      // const nav = this.$refs.navigation;
+
+      // if (window.scrollY > 500) {
+      //   if (this.prev > window.scrollY) {
+      //     $(nav).removeClass("scrollhide");
+      //   } else if (this.prev < window.scrollY) {
+      //     $(nav).addClass("scrollhide");
+      //   }
+      //   this.prev = window.scrollY;
+      // } else {
+      //   $(nav).removeClass("scrollhide");
+      // }
+    },
+    elementInViewport(elem) {
+      return $(elem).offset().top - $(window).scrollTop() < $(elem).height();
     },
   },
   mounted() {
@@ -233,6 +245,9 @@ export default {
       &:hover {
         opacity: 0.5;
       }
+    }
+    &.active {
+      color: $nav_link_hover_color;
     }
     &:hover {
       color: $nav_link_hover_color;
@@ -424,7 +439,7 @@ export default {
           display: none;
         }
         &.active {
-          color: $nav_btn_color;
+          color: $nav_link_hover_color;
         }
       }
     }
