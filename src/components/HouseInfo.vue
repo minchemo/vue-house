@@ -7,6 +7,10 @@
           <h3 class="label">{{ infos[0] }}</h3>
           <p class="desc" v-html="infos[1]"></p>
         </div>
+        <div class="item f-logo">
+         <h3 class="label">行銷企劃</h3>
+          <p class="desc"><img src="@/assets/img/f-logo.png" alt="上揚國際"></p>
+        </div>
       </div>
     </div>
     <Footer />
@@ -105,6 +109,7 @@ export default {
     line-height: 1.4;
     color: $house_desc_color;
     font-family: $family3;
+    img{height: 1.73em;}
   }
 }
 
@@ -123,6 +128,7 @@ export default {
     width: 100vw;
   }
 
+
   .item {
     margin-bottom: 20px;
     margin-right: 0;
@@ -130,6 +136,10 @@ export default {
     height: auto;
     margin-left: 20px;
     white-space: normal;
+  .desc {
+    font-size: 14px;
+    img{height: 1.7em;}
+  }
   }
 
   .info {
