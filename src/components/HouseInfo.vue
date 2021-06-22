@@ -105,6 +105,7 @@ export default {
     line-height: 1.4;
     color: $house_desc_color;
     font-family: $family3;
+    img{height: 1.73em;}
   }
 }
 
@@ -130,6 +131,10 @@ export default {
     height: auto;
     margin-left: 20px;
     white-space: normal;
+  .desc {
+    font-size: 14px;
+    img{height: 1.6em;}
+  }
   }
 
   .info {
