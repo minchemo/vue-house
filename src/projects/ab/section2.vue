@@ -346,9 +346,9 @@ export default {
           icon: isMobile
             ? require("../ab/s2/icon/8-mo.png")
             : require("../ab/s2/icon/8.png"),
-          title: isMobile ? "信心<br>保固" : "信心保固",
+          title: isMobile ? "旗艦<br>規劃" : "旗艦規劃",
           content:
-            "超越業界標準<br>防水<span class='large'>5</span>年/設備<span class='large'>2</span>年",
+            "高科技智慧保全<br>櫻花TOTO精品配備",
           reverse: isMobile ? false : true,
         },
       ],

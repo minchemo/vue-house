@@ -27,7 +27,7 @@
               @click="toggleSidebar"
               data-aos="fade-down"
               data-aos-duration="1500"
-              :data-aos-delay="1000 - index * 100"
+              :data-aos-delay="400 - index * 100"
             >
               <span class="link" :data-section="item.section">
                 <img v-if="item.imgSrc" :src="item.imgSrc" alt />
@@ -93,10 +93,11 @@ export default {
     handleNavigation(e) {
       this.list.forEach((element) => {
         let inviewport = this.elementInViewport("." + element.section);
-        console.log(inviewport);
         if (inviewport) {
-          $(".navlist .link").removeClass('active');
-          $(".navlist .link[data-section='" + element.section + "']").addClass('active');
+          $(".navlist .link").removeClass("active");
+          $(".navlist .link[data-section='" + element.section + "']").addClass(
+            "active"
+          );
         }
       });
 
@@ -115,7 +116,9 @@ export default {
       // }
     },
     elementInViewport(elem) {
-      return $(elem).offset().top - $(window).scrollTop() < $(elem).height();
+      return (
+        $(elem).offset().top - $(window).scrollTop() < $(elem).height() - 300
+      );
     },
   },
   mounted() {
@@ -204,7 +207,7 @@ export default {
   }
   .link {
     color: $nav_link_color;
-    height: 25%;
+    height: 35%;
     width: 6.5em;
     text-align: center;
     display: block;
@@ -219,8 +222,8 @@ export default {
     //overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid $nav_link_border_bg;
-    margin-left: 4px;
-    padding-right: 4px;
+    //margin-left: 4px;
+    //padding-right: 4px;
 
     > span {
       z-index: 3;
@@ -247,10 +250,12 @@ export default {
       }
     }
     &.active {
-      color: $nav_link_hover_color;
+      color: #fff;
+      background-color: #d20028;
     }
     &:hover {
-      color: $nav_link_hover_color;
+      color: #fff;
+      background-color: #d20028;
     }
     &:after {
       content: "";

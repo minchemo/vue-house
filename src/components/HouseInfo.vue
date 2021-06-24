@@ -19,14 +19,14 @@ import Footer from "@/layouts/Footer.vue";
 export default {
   name: "houseInfo",
   components: {
-    Footer
+    Footer,
   },
   data() {
     return {
-      houseInfos: info.houseInfos
+      houseInfos: info.houseInfos,
     };
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -105,6 +105,9 @@ export default {
     line-height: 1.4;
     color: $house_desc_color;
     font-family: $family3;
+    a {
+      color: #000;
+    }
   }
 }
 

@@ -79,7 +79,7 @@
       border-top: 1px solid #fff;
       padding-top: 12px;
       line-height: 2;
-      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.95));
     }
   }
 

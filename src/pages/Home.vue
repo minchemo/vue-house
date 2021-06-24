@@ -40,6 +40,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playball&display=swap");
 @import "../assets/style/variableColor.scss";
 
+
 .home {
  background: #fff !important;
 }
@@ -60,6 +61,7 @@ import SideNavigation from "@/layouts/SideNavigation.vue";
 import ContactSection from "@/layouts/ContactSection.vue";
 import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
+import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
 import Section1 from "@/projects/ab/section1.vue";
@@ -111,6 +113,7 @@ export default {
     };
   },
   created() {
+    AOS.init();
     // setTimeout(() => {
     //   this.load = false
     // }, 500)
@@ -136,6 +139,9 @@ export default {
       $("img").each(function (idx, img) {
         $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
       });
+
+      
+
     });
   },
   mounted() {
