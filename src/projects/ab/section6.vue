@@ -47,7 +47,7 @@
     position: absolute;
     text-align: left;
     top: 10vw;
-    left: 15vw;
+    left: 9vw;
     z-index: 10;
     color: #fff;
     pointer-events: none;
