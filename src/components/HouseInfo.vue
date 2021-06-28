@@ -7,6 +7,12 @@
           <h3 class="label">{{ infos[0] }}</h3>
           <p class="desc" v-html="infos[1]"></p>
         </div>
+        <div class="item f-logo">
+          <h3 class="label">行銷企劃</h3>
+          <p class="desc">
+            <img src="@/assets/img/f-logo.png" alt="上揚國際">
+          </p>
+        </div>
       </div>
     </div>
     <Footer />
