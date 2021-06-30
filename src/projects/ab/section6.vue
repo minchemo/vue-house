@@ -78,7 +78,7 @@
       margin-top: 15px;
       border-top: 1px solid #fff;
       padding-top: 12px;
-      line-height: 1.5;
+      line-height: 2;
       filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.95));
     }
   }
@@ -144,6 +144,7 @@
       }
       .content {
         text-align: justify;
+        line-height: 1.5;
       }
     }
 
