@@ -10,7 +10,7 @@
         引入了環境的綠植與光線，也獲得了市心難得的前庭大院子，<br
           v-if="!isMobile"
         />
-        這座建築還有更多的思考哲學，等你來推開門，推開屬於你的精彩人生。
+        這座建築還有更多的思考哲學，等你來推開門，找回你的精彩人生。
       </div>
     </div>
     <div
@@ -78,7 +78,7 @@
       margin-top: 15px;
       border-top: 1px solid #fff;
       padding-top: 12px;
-      line-height: 2;
+      line-height: 1.5;
       filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.95));
     }
   }
