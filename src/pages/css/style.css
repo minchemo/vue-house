@@ -33,7 +33,7 @@ img {
     text-align: center !important;
 }
 .text-align-right {
-    text-align: right;
+    text-align: right !important;
 }
 .padding-right {
     padding-right: 15px;
@@ -96,7 +96,7 @@ p {
 .button1 {
     position: fixed;
     top: 20%;
-    right: 2%;
+    right: 0%;
     margin: 0 auto;
     transform: translateZ(50px); /*透視深度*/
     width: calc(50% - 635px);
@@ -232,6 +232,7 @@ p {
 .section-swiper .swiper-container {
     padding-bottom: 3rem;
     max-width: 1067px;
+    cursor: pointer;
 }
 .section-swiper .swiper-container .swiper-pagination {
     bottom: 0;
@@ -764,6 +765,7 @@ p {
         font-size: 13px;
     }
     .section.section-form {
+        margin-top: 10vh;
         margin-bottom: 10vh;
     }
     .section-bottom {

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    initTilt();
+    //initTilt();
     initSwiper();
 
     let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
@@ -8,7 +8,7 @@ $(document).ready(function () {
     }
 
     AOS.init({
-        once: true,
+        once: false,
     });
 });
 

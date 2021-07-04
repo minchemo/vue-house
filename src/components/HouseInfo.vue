@@ -28,6 +28,10 @@
             <p data-v-4d6acc36="" class="desc">勝聯開發股份有限公司</p>
           </div>
           <div data-v-4d6acc36="" class="item">
+            <h3 data-v-4d6acc36="" class="label">營建施工</h3>
+            <p data-v-4d6acc36="" class="desc">大陸工程股份有限公司</p>
+          </div>
+          <div data-v-4d6acc36="" class="item">
             <h3 data-v-4d6acc36="" class="label">建築規劃</h3>
             <p data-v-4d6acc36="" class="desc">曾聰憲建築師事務所</p>
           </div>
@@ -50,7 +54,7 @@
           <div data-v-4d6acc36="" class="item">
             <h3 data-v-4d6acc36="" class="label">建案位置</h3>
             <p data-v-4d6acc36="" class="desc">
-              台南市北區西門路四段．文成三路口
+              台南市北區 西門路四段/文成三路口
             </p>
           </div>
           <div data-v-4d6acc36="" class="item">
@@ -59,7 +63,7 @@
           </div>
           <div data-v-4d6acc36="" class="item">
             <h3 data-v-4d6acc36="" class="label">經紀人</h3>
-            <p data-v-4d6acc36="" class="desc">林建汶 107年新北經字003583號</p>
+            <p data-v-4d6acc36="" class="desc">林建汶</p>
           </div>
         </div>
       </div>
