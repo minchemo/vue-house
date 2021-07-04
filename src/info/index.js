@@ -1,7 +1,7 @@
 // import { isMobile } from '@/utils'
 
 export default {
-  address:'接待會館：台南市北區西門路四段/文成三路口',
+  address:'台南市北區西門路四段 | 文成三路口',
   //address:  isMobile ? '接待會館：<br>台南市北區西門路四段/文成三路口':'接待會館：台南市北區西門路四段/文成三路口',
   // isMobile ? '接待中心：<br />106台北市大安區基隆路三段20-1號' : '接待中心：106台北市大安區基隆路三段20-1號',
   googleSrc:
