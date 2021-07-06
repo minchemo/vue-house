@@ -14,6 +14,9 @@
     />
   </div>
 </template>
+<style lang="scss" scoped>
+
+</style>
 <script>
 import { isMobile } from '@/utils'
 export default {

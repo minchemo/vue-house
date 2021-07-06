@@ -10,10 +10,10 @@
         <div
           class="f_tip"
           v-bind:class="{ 'flex-reverse': feature.flex_reverse == true }"
+          v-html="feature.f_tip"
         >
-          {{ feature.f_tip }}
         </div>
-        <div class="f_st">{{ feature.f_st }}</div>
+        <div class="f_st" v-html="feature.f_st"></div>
         <div class="feature-buttons" v-if="feature.f_t == 'SPACE AESTHETICS'">
           <div
             @click="changeP('26p')"
@@ -37,7 +37,7 @@
         <div class="f_des" v-html="feature.f_des"></div>
       </div>
 
-      <div class="swiper-box" data-aos="fade-right" data-aos-duration="1000">
+      <div :class="`swiper-box sw-${i + 1}`" ><!-- data-aos="fade-right" data-aos-duration="1000"> -->
         <swiper
           :ref="`swiper-${i + 1}`"
           :options="feature.swiperOptions"
@@ -67,7 +67,7 @@
           ></div>
         </swiper>
 
-        <div class="feature-buttons" v-if="feature.f_t == 'SPACE AESTHETICS'">
+        <div class="feature-buttons" v-if="feature.f_t == 'SPACE AESTHETICS' & !isMobile">
           <div
             @click="changeP('26p')"
             v-bind:class="{ active: activeP == '26p' }"
@@ -89,22 +89,21 @@
         </div>
       </div>
 
-      <div v-if="isMobile" class="f_t">{{ feature.f_t }}</div>
+      <div v-if="isMobile" class="f_t" v-html="feature.f_t"></div>
       <div
         v-if="!isMobile"
         class="feature-info"
         v-bind:class="{ 'flex-reverse': feature.flex_reverse == true }"
       >
-        <div class="f_t">{{ feature.f_t }}</div>
-        <div class="f_st">{{ feature.f_st }}</div>
+        <div class="f_t" v-html="feature.f_t"></div>
+        <div class="f_st" v-html="feature.f_st"></div>
         <div class="f_des" v-html="feature.f_des"></div>
         <div
           v-if="!isMobile"
           class="f_tip"
           v-bind:class="{ 'flex-reverse': feature.flex_reverse == true }"
-        >
-          {{ feature.f_tip }}
-        </div>
+          v-html="feature.f_tip"
+        ></div>
       </div>
     </div>
   </div>
@@ -135,9 +134,10 @@ export default {
         {
           f_t: "THE LANDMARK",
           f_st: "大道凌空鉅作 為古都帶來國際感天際線",
+          f_class:"f1",
           f_des: !isMobile
             ? "西門大道稀有千坪土地，三面臨路、基地方正，建物以南北座向配置，<br>三面立面全正面處理，雋永樸質色系融入地景風光，<br>創造充滿自鳴性的雙塔建築，在城市天際線聚集目光，<br>24層高度眺望城市景觀，未來將活躍古都天際線，註定是不凡地標。"
-            : "西門大道稀有千坪土地，三面臨路、基地方正，建物以南北座向配置，<br>三面立面全正面處理，雋永樸質色系融入地景風光，<br>創造充滿自鳴性的雙塔建築，在城市天際線聚集目光，<br>24層高度眺望城市景觀，未來將活躍古都天際線，註定是不凡地標。",
+            : "西門大道稀有千坪土地，三面臨路、基地方正<br>建物以南北座向配置，三面立面全正面處理<br>雋永樸質色系融入地景風光，創造充滿自鳴性的雙塔建築<br>在城市天際線聚集目光，24層高度眺望城市景觀<br>未來將活躍古都天際線，註定是不凡地標。",
           f_slides: [
             {
               f_type: "",
@@ -148,10 +148,13 @@ export default {
               ],
             },
           ],
-          f_tip:
-            "此為廣告效果示意，為單一建物電腦3D透視表現，周遭環境係電腦合成，建設公司保有建物外觀修正之權利",
+          f_tip:!isMobile ?
+            "此為廣告效果示意，為單一建物電腦3D透視表現，周遭環境係電腦合成，建設公司保有建物外觀修正之權利"
+            : "此為廣告效果示意，為單一建物電腦3D透視表現<br>周遭環境係電腦合成，建設公司保有建物外觀修正之權利",
           flex_reverse: true,
           swiperOptions: {
+            slidesPerView:!isMobile? 1 : 1.14,
+            loop : true,
             pagination: {
               el: ".swiper-pagination-1",
               clickable: true,
@@ -166,14 +169,15 @@ export default {
             },
             spaceBetween: 10,
           },
-          slideRatio: 88.64,
+          slideRatio: 75,
         },
         {
           f_t: "AESTHETICS LIFE",
           f_st: "臺灣蔦屋選書 全齡樂活苑邸",
+          f_class:"f2",
           f_des: !isMobile
             ? "以台南的溫厚歷史為基礎，古意中注入現代優雅，表現居遊空間的閒適，<br>讓人回家就能感受溫暖的迎接。<br><br><span style='color:#d90001'>●</span>迎賓門廳挑高七米四，可穿透的書櫃牆裝飾傳統窗花圖騰，<br>手感質地樸實，呼應古都歷史人文。<br><span style='color:#d90001'>●</span>臺灣蔦屋選書閱覽室以多寶格藏物格架設計，地板牆面以自然溫潤木質地鋪陳，<br>心自然沉靜下來。<br><span style='color:#d90001'>●</span>規劃兒童閱覽遊戲室、健身房、多功能交誼廳等多項休閒設施，在家也可隨時運動。"
-            : "以台南的溫厚歷史為基礎，古意中注入現代優雅，表現居遊空間的閒適，<br>讓人回家就能感受溫暖的迎接。<br><br><span style='color:#d90001'>●</span>迎賓門廳挑高七米四，可穿透的書櫃牆裝飾傳統窗花圖騰，<br>手感質地樸實，呼應古都歷史人文。<br><span style='color:#d90001'>●</span>臺灣蔦屋選書閱覽室以多寶格藏物格架設計，<br>地板牆面以自然溫潤木質地鋪陳，心自然沉靜下來。<br><span style='color:#d90001'>●</span>規劃兒童閱覽遊戲室、健身房、多功能交誼廳等多項休閒設施，<br>在家也可隨時運動。",
+            : "以台南的溫厚歷史為基礎，古意中注入現代優雅<br>表現居遊空間的閒適，讓人回家就能感受溫暖的迎接。<br><br><span style='color:#d90001'>●</span>迎賓門廳挑高七米四，可穿透的書櫃牆裝飾傳統窗花圖騰，<br>手感質地樸實，呼應古都歷史人文。<br><span style='color:#d90001'>●</span>臺灣蔦屋選書閱覽室以多寶格藏物格架設計，<br>地板牆面以自然溫潤木質地鋪陳，心自然沉靜下來。<br><span style='color:#d90001'>●</span>規劃兒童閱覽遊戲室、健身房、多功能交誼廳等<br>多項休閒設施，在家也可隨時運動。",
           f_slides: [
             {
               f_type: "",
@@ -189,10 +193,13 @@ export default {
               ],
             },
           ],
-          f_tip:
-            "公設3D透視參考示意圖，傢俱、飾品、藝術品與植栽皆為情境表現，建設公司保有修正之權利",
+          f_tip: !isMobile?
+            "公設3D透視參考示意圖，傢俱、飾品、藝術品與植栽皆為情境表現，建設公司保有修正之權利"  : 
+            "公設3D透視參考示意圖，傢俱、飾品、藝術品與植栽<br>皆為情境表現，建設公司保有修正之權利",
           flex_reverse: false,
           swiperOptions: {
+            slidesPerView:!isMobile? 1 : 1.14,
+            loop : true,
             pagination: {
               el: ".swiper-pagination-2",
               clickable: true,
@@ -212,9 +219,10 @@ export default {
         {
           f_t: "SPACE AESTHETICS",
           f_st: "高坪效空間美學 高規格奢華享受",
+          f_class:"f3",
           f_des: !isMobile
             ? "<span style='color:#d90001'>●</span>2房雙衛浴，客廳、餐廳、臥室均有採光通風，主浴標配浴缸及全自動智能馬桶<br><span style='color:#d90001'>●</span>3房邊間，兩面採光，雙衛開窗，主臥四件式衛浴，可規劃衣帽間<br><span style='color:#d90001'>●</span>4房3衛雙主臥孝親房，可規劃內、外廚房，媲美透天別墅空間機能"
-            : "<span style='color:#d90001'>●</span>2房雙衛浴，客廳、餐廳、臥室均有採光通風，<br>主浴標配浴缸及全自動智能馬桶<br><span style='color:#d90001'>●</span>3房邊間，兩面採光，雙衛開窗，主臥四件式衛浴，可規劃衣帽間<br><span style='color:#d90001'>●</span>4房3衛雙主臥孝親房，可規劃內、外廚房，媲美透天別墅空間機能",
+            : "<span style='color:#d90001'>●</span>2房雙衛浴，客廳、餐廳、臥室均有採光通風，<br>主浴標配浴缸及全自動智能馬桶<br><span style='color:#d90001'>●</span>3房邊間，兩面採光，雙衛開窗，主臥四件式衛浴，<br>可規劃衣帽間<br><span style='color:#d90001'>●</span>4房3衛雙主臥孝親房，可規劃內、外廚房，<br>媲美透天別墅空間機能",
           f_slides: [
             {
               f_type: "26p",
@@ -226,9 +234,15 @@ export default {
               ],
             },
           ],
-          f_tip: "樣品屋裝修、傢具及擺飾品，非屬標準建材，實際依買賣契約書為準",
+          f_tip:!isMobile?
+           "樣品屋裝修、傢具及擺飾品，非屬標準建材，實際依買賣契約書為準"
+           :
+           "樣品屋裝修、傢具及擺飾品，非屬標準建材，<br>實際依買賣契約書為準"
+           ,
           flex_reverse: true,
           swiperOptions: {
+            slidesPerView:!isMobile? 1 :  1.2,
+            loop : true,
             pagination: {
               el: ".swiper-pagination-3",
               clickable: true,
@@ -339,9 +353,10 @@ export default {
       }
       .swiper-slide {
         overflow: hidden;
-        height: 50vh;
+     //   height: 50vh;
         padding-top: 0;
         background-size: cover;
+        background-position: center;
         p {
           display: none;
         }
@@ -349,17 +364,20 @@ export default {
     }
     .feature-buttons {
       display: flex;
-      width: 70%;
+      width: 65%;
       margin: 1vw 0;
+      font-size:calc(100vw * 15 / 1920);
+      line-height: 1.6;
+      font-weight: 600;
       div {
         width: calc(100% / 3);
         border: 1px solid #d90001;
         color: #d90001;
-        padding: 1vw 0 1vw 0;
+        padding:0;
         margin: 4px;
         display: flex;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 2em;
         span {
           display: block;
           position: relative;
@@ -383,38 +401,44 @@ export default {
   .feature-info {
     width: 48%;
     position: relative;
+    font-size: calc(100vw * 30 / 1600);
+    line-height: 1.3;
     &.flex-reverse {
       text-align: right;
+    .f_st {float: right;clear: both;
+    }
     }
     .f_t {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #c9c9c9;
-      margin-bottom: 24px;
+      font-size: 1.7em;letter-spacing: 0.02em;
+      color: #c9c9c9;font-size: 1.7em;
+    font-family:"Playfair Display", serif;font-weight: 400;
     }
     .f_st {
-      font-size: 2.2rem;
+    padding: 0 0 0.9em;
       font-weight: bold;
       border-bottom: 7px solid #d90001;
       padding-bottom: 24px;
       margin-bottom: 36px;
+    width: 50vw;
     }
     .f_des {
-      font-size: 1rem;
+    font-size: calc(15 * 100vw / 1600);
       font-family: "Noto Sans TC", serif;
-      line-height: 1.8;
+      line-height: 2;
       .red-c {
         color: #d90001;
       }
     }
     .f_tip {
-      font-size: 0.8rem;
+      font-size:12px;
       font-family: "Noto Sans TC", serif;
       color: #d90001;
       position: absolute;
-      bottom: 5vh;
+      bottom: 2vh;
       left: 0;
       font-weight: bold;
+      width: 100%;
+      white-space: pre-wrap;
 
       &.flex-reverse {
         left: unset;
@@ -482,7 +506,7 @@ export default {
         .swiper-slide {
           overflow: hidden;
           height: 0;
-          padding-top: 67.99%;
+       //   padding-top: 67.99%;
           background-size: cover;
           p {
             display: none;
@@ -494,25 +518,28 @@ export default {
       width: 100%;
       text-align: center;
       padding: 0 5vw;
+      font-size:  calc(15 * 100vw / 375);
+
       .f_st {
-        font-size: 1.3rem;
+        font-size: 1.3em;
         font-weight: bold;
         border-bottom: 3px solid #d90001;
         padding-bottom: 12px;
         margin-bottom: 12px;
+        width: auto;
       }
       .f_des {
-        font-size: 0.7rem;
+        font-size: 0.8em;
         font-family: "Noto Sans TC", serif;
         line-height: 1.8;
         text-align: center;
-        white-space: nowrap;
+      //  white-space: nowrap;
         .red-c {
           color: #d90001;
         }
       }
       .f_tip {
-        font-size: 0.5rem;
+        font-size: 12px;
         font-family: "Noto Sans TC", serif;
         color: #d90001;
         position: relative;
@@ -528,7 +555,7 @@ export default {
       text-align: center;
       font-size: 2rem;
       font-weight: bold;
-      margin-bottom: -4px;
+      margin-bottom: -2px;
       margin-top: 4rem;
     }
   }

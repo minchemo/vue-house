@@ -16,25 +16,36 @@
 .map {
   position: relative;
   z-index: 1;
-  margin-top: 15vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-top: 0;
   .map-bg {
-    width: 100vw;
-    height: auto;
-    position: relative;
-  }
-
-  .hand {
-    display: none;
+    width: auto;
+    height: size(642);
   }
 
   img {
-    display: block;
-    width: 100vw;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: auto;
+    height: size(642);
+    max-width: size(9999);
   }
+  .hand {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: size(110);
+    height: auto !important;
+    //left: 0;
+    right:size(80);
+    margin: 0 auto;
+    top: size(500);
+    display: block;
+    z-index: 10;
+    animation: swing 2.5s ease-in-out 0s infinite;
+
+  }
+
+
 }
 
 @media screen and (max-width: 767px) {
@@ -44,24 +55,25 @@
     margin-top: 0;
     .map-bg {
       width: auto;
-      height: size-m(1404);
+      height: size-m(410);
     }
 
     img {
       width: auto;
-      height: size-m(1404);
+      height: size-m(420);
+      max-width: size-m(9999);
     }
 
     .hand {
       position: absolute;
       z-index: 2;
       display: block;
-      width: 133px;
+      width: size-m(60);
       height: auto !important;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      top: size-m(663);
+      //left: 0;
+      right: size-m(0);
+      margin: 0 auto 0 46vw;
+      top: size-m(230);
       display: block;
       z-index: 10;
       animation: swing 2.5s ease-in-out 0s infinite;

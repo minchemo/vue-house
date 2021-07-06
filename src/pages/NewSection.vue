@@ -357,7 +357,7 @@
             v-bind:key="i"
             v-bind:style="{ backgroundImage: `url(${img.s_image})` }"
           >
-            <p>{{ img.s_caption }}</p>
+          <p>{{ img.s_caption }}</p> 
           </swiper-slide>
           <div
             v-if="!isMobile"
@@ -565,6 +565,7 @@ export default {
       ],
       active_feature: {},
       swiperOptions: {
+        loop : true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -651,26 +652,39 @@ export default {
         height: 50vh;
         padding-top: 71%;
         background-size: cover;
+        background-position: center;
+        line-height: 1.6;
+        p{opacity: 0;}
       }
     }
   }
   .feature-info {
     width: 45%;
+    font-size: calc(15 * 100vw / 1600);
     .f_t {
-      font-size: 1.8rem;
+      font-size: 2em;
       font-weight: bold;
       color: #d90001;
-      margin-bottom: 24px;
+      margin-bottom: 0.5em;
     }
     .f_st {
-      font-size: 2.2rem;
+      font-size: 2.8em;position: relative;
       font-weight: bold;
-      border-bottom: 7px solid #d90001;
-      padding-bottom: 24px;
-      margin-bottom: 36px;
+      margin-bottom: 1em;
+    line-height: 1.3;
+    padding: 0 0 0.7em;
+      &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70vw;
+    height: calc(7 * 100vw / 1920);
+    background: #d0121b;
+}
     }
     .f_des {
-      font-size: 1rem;
+      font-size: 1em;
       font-family: "Noto Sans TC", serif;
       line-height: 1.8;
     }
@@ -686,7 +700,7 @@ export default {
     flex-wrap: wrap;
     border: 3px solid #d90001;
     padding: 5vw;
-    overflow: hidden;
+    overflow: initial;
     .feature-slide-caption {
       font-size: 0.8rem;
       width: 100%;
@@ -720,14 +734,17 @@ export default {
       width: 100%;
       text-align: center;
       .f_st {
-        font-size: 1.5rem;
+        font-size: calc(20 * 100vw / 375);
         font-weight: bold;
-        border-bottom: 1px solid;
-        padding-bottom: 24px;
+       // border-bottom: 1px solid;
+        padding-bottom:0.5em;
         margin-bottom: 12px;
+      &::after{
+    width: 100%;
+    height: calc(2 * 100vw / 375);}
       }
       .f_des {
-        font-size: 0.8rem;
+        font-size: calc(13 * 100vw / 375);
         font-family: "Noto Sans TC", serif;
         line-height: 1.8;
         text-align: left;
@@ -760,7 +777,7 @@ export default {
       border: 1px solid #d90001;
       color: #d90001;
       font-weight: bold;
-      font-size: 1.8rem;
+      font-size: calc(36 * 100vw / 1920);
       padding: 2% 3%;
       margin: 2px;
       box-sizing: border-box;
@@ -786,7 +803,7 @@ export default {
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .new-section {
-    padding: 0 10vw;
+    padding: 0 5%;
 
     .title {
       width: 100%;
@@ -802,11 +819,12 @@ export default {
       display: flex;
       .feature-button {
         width: calc(100% / 5);
-        border: 1px solid;
+        border: 1px solid #000;
         color: #000;
         font-weight: bold;
-        font-size: 0.8rem;
-        padding: 1% 1%;
+        font-size:calc(13 * 100vw / 375);
+        line-height: 1.8;
+        padding: 1% 0;
         margin: 2px;
         box-sizing: border-box;
         white-space: nowrap;
@@ -814,10 +832,12 @@ export default {
         &:hover {
           cursor: pointer;
           background: #d90001;
+        border: 1px solid #d90001;
           color: #fff;
         }
 
         &.active {
+        border: 1px solid #d90001;
           background: #d90001;
           color: #fff;
         }
