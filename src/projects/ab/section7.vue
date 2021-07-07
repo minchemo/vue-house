@@ -238,14 +238,14 @@
         flex-direction: column;
         align-items: center;
         .t-t {
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           margin-bottom: 1.5vh;
           color: #000;
         }
         .t-b-b {
           position: relative;
-          width: 3vw;
-          height: 3vw;
+          width: 2vw;
+          height: 2vw;
           margin-bottom: 1.5vh;
           border-radius: 100%;
           filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
@@ -269,8 +269,8 @@
 
           &::after {
             content: "";
-            width: 3.8vw;
-            height: 3.8vw;
+            width: 2.5vw;
+            height: 2.5vw;
             position: absolute;
             left: 50%;
             top: 50%;
