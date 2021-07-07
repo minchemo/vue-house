@@ -4,7 +4,9 @@
       <div class="subtitle">BOUTIQUE ARCHI</div>
       <div class="title">家的深度思考 <br />今采建築誕生</div>
       <div class="content">
-        退讓是為了獲得更多。面對百年的老樹靜巷，今采選擇讓建物謙遜退縮11米，<br
+        退讓是為了獲得更多。<br
+          v-if="!isMobile"
+        />面對百年的老樹靜巷，今采選擇讓建物謙遜退縮11米，<br
           v-if="!isMobile"
         />
         引入了環境的綠植與光線，也獲得了市心難得的前庭大院子，<br
