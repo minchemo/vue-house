@@ -46,8 +46,8 @@
     font-family: $family1;
     position: absolute;
     text-align: left;
-    top: 10vw;
-    left: 9vw;
+    top: 10vh;
+    left: 9vh;
     z-index: 10;
     color: #fff;
     pointer-events: none;

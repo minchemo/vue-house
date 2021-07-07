@@ -108,6 +108,7 @@
           color: #fff;
           font-size: 1.25rem;
           font-weight: bold;
+          filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
           .divider {
             color: #ffff00;
           }

@@ -82,6 +82,7 @@
     .subtitle {
       color: #d20028;
       padding-left: 1vw;
+      padding-right: 1vw;
       .large {
         font-size: 24px;
         font-weight: bold;
@@ -346,9 +347,9 @@ export default {
           icon: isMobile
             ? require("../ab/s2/icon/8-mo.png")
             : require("../ab/s2/icon/8.png"),
-          title: isMobile ? "旗艦<br>規劃" : "旗艦規劃",
+          title: isMobile ? "智能<br>保全" : "智能保全",
           content:
-            "高科技智慧保全<br>櫻花TOTO精品配備",
+            "360°智慧守門員<br>24小時安全守護",
           reverse: isMobile ? false : true,
         },
       ],

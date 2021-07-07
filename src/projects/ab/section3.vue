@@ -32,13 +32,14 @@
     left: 0;
     top: 5vw;
     z-index: 1;
-    width: 40vw;
+    min-width: 40vw;
     background: #fff;
     font-family: $family1;
     text-align: left;
     padding-top: 1vw;
     padding-bottom: 1vw;
     padding-left: 10vw;
+    padding-right: 5vw;
     color: #d20028;
     h5 {
       font-size: 18px;
