@@ -80,6 +80,7 @@
       padding-top: 12px;
       line-height: 2;
       filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.95));
+      font-size: 13px;
     }
   }
 

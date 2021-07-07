@@ -46,7 +46,7 @@
       margin-bottom: 10px;
     }
     h3 {
-      font-size: 36px;
+      font-size: 30px;
     }
   }
 
