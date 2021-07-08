@@ -317,7 +317,7 @@ p {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    margin-top: 4rem;
+    margin-top: 2rem;
     align-items: flex-end;
     justify-content: space-between;
 }

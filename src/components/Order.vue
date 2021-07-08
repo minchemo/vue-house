@@ -57,6 +57,22 @@
             v-model="form.msg"
           ></textarea>
         </div>
+        
+        <div style="margin: 0 auto;z-index:2;margin-top:2vh" v-if="!isMobile">
+          <vue-recaptcha
+            :sitekey="info.recaptcha_site_key_v2"
+            @verify="isVerify = true"
+            :loadRecaptchaScript="true"
+          ></vue-recaptcha>
+        </div>
+        <div style="margin: 0 auto;z-index:2;margin-top:8vh" v-else>
+          <vue-recaptcha
+            :sitekey="info.recaptcha_site_key_v2"
+            @verify="isVerify = true"
+            :loadRecaptchaScript="true"
+          ></vue-recaptcha>
+        </div>
+        
         <div class="bottom">
           <label class="policy-container" for="policy">
             本人知悉並同意<span @click="showPolicyDialog"
@@ -201,7 +217,7 @@ export default {
 
     submit() {
       if (this.isSubmit) return;
-      // if (!this.isVerify) return
+      if (!this.isVerify) return
       if (!this.checked) return;
       this.isSubmit = true;
       if (
