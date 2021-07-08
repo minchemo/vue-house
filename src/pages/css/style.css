@@ -89,14 +89,19 @@ p {
 
 .button1 {
     position: fixed;
-    top: calc(50% - 13vw);
-    left:calc(100vw * 1600 / 1920);
+    top: 0;
+    left:calc(100vw * 1630 / 1920);
     margin: 0 auto;
     transform: translateZ(50px); /*透視深度*/
-    width: calc(50% - 635px);
-    min-width: calc(100vw * 100 / 1920);
+    width: calc(100vw * 100 / 1920);
     text-align: left;
     z-index: 5;
+    height: 100vh;
+    min-height: calc(900 * 100vw / 1920);
+    max-height: calc(1080 * 100vw / 1920);}
+
+    .button1::before{content:"";
+        width: 1px; height: 15%;display: block;
 }
 
 .button1 > a {

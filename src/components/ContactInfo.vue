@@ -183,7 +183,7 @@ export default {
   position: relative;
   z-index: 4;
   width: 1200px;
-  height: 515px;
+  height:auto;
   padding: 30px;
   // border-radius: 20px;
 
