@@ -33,6 +33,7 @@ function initSwiper() {
         loop : true,
         pagination: {
             el: '.swiper-pagination',
+            clickable: true
         },
         speed: 400,
         spaceBetween: 10,
