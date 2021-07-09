@@ -118,7 +118,6 @@ export default {
     };
   },
   created() {
-    AOS.init();
     // setTimeout(() => {
     //   this.load = false
     // }, 500)
@@ -150,6 +149,7 @@ export default {
     });
   },
   mounted() {
+    AOS.init();
     // window.addEventListener('scroll', this.onScroll, false)
     // this.action = this.$refs.fullPage.api
     // if (this.isMobile) {

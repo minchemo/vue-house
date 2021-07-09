@@ -41,6 +41,7 @@
             v-bind:class="{ active: typeColor[0] == '石紋灰' }"
           >
             <img src="~@/projects/ab/s7/客廳/石紋灰.png" alt="" />
+            <p>石紋灰</p>
           </div>
           <div
             class="t-b-b"
@@ -48,6 +49,7 @@
             v-bind:class="{ active: typeColor[0] == '書卷黃' }"
           >
             <img src="~@/projects/ab/s7/客廳/書卷黃.png" alt="" />
+            <p>書卷黃</p>
           </div>
           <div
             class="t-b-b"
@@ -55,6 +57,7 @@
             v-bind:class="{ active: typeColor[0] == '清水灰' }"
           >
             <img src="~@/projects/ab/s7/客廳/清水灰.png" alt="" />
+            <p>清水灰</p>
           </div>
         </div>
         <div class="t-b">
@@ -65,6 +68,7 @@
             v-bind:class="{ active: typeColor[1] == 'A廚具' }"
           >
             <img src="~@/projects/ab/s7/客廳/A廚具.png" alt="" />
+            <p>橡木洗白</p>
           </div>
           <div
             class="t-b-b"
@@ -72,18 +76,20 @@
             v-bind:class="{ active: typeColor[1] == 'B廚具' }"
           >
             <img src="~@/projects/ab/s7/客廳/B廚具.png" alt="" />
+            <p>香杉洗白</p>
           </div>
         </div>
       </div>
       <div v-else class="type">
         <div class="t-b">
-          <div class="t-t">｜衛浴地磚｜</div>
+          <div class="t-t">｜衛浴壁磚｜</div>
           <div
             class="t-b-b"
             @click="changeColor(0, '義大利銀狐白')"
             v-bind:class="{ active: typeColor[0] == '義大利銀狐白' }"
           >
             <img src="~@/projects/ab/s7/衛浴/義大利銀狐白.png" alt="" />
+            <p>義大利銀狐白</p>
           </div>
           <div
             class="t-b-b"
@@ -91,16 +97,18 @@
             v-bind:class="{ active: typeColor[0] == '撒哈拉淺灰' }"
           >
             <img src="~@/projects/ab/s7/衛浴/撒哈拉淺灰.png" alt="" />
+            <p>撒哈拉淺灰</p>
           </div>
         </div>
         <div class="t-b">
-          <div class="t-t">｜衛浴壁磚｜</div>
+          <div class="t-t">｜衛浴地磚｜</div>
           <div
             class="t-b-b"
             @click="changeColor(1, '義大利馬莫灰')"
             v-bind:class="{ active: typeColor[1] == '義大利馬莫灰' }"
           >
             <img src="~@/projects/ab/s7/衛浴/義大利馬莫灰.png" alt="" />
+            <p>義大利馬莫灰</p>
           </div>
           <div
             class="t-b-b"
@@ -108,6 +116,7 @@
             v-bind:class="{ active: typeColor[1] == '撒哈拉深灰' }"
           >
             <img src="~@/projects/ab/s7/衛浴/撒哈拉深灰.png" alt="" />
+            <p>撒哈拉深灰</p>
           </div>
         </div>
       </div>
@@ -246,11 +255,20 @@
           position: relative;
           width: 2vw;
           height: 2vw;
-          margin-bottom: 1.5vh;
+          margin-bottom: 5vh;
           border-radius: 100%;
           filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
+          box-sizing: border-box;
           img {
             max-width: 100%;
+          }
+          p {
+            white-space: nowrap;
+            font-size: 14px;
+            margin-top: 1.5vh;
+            margin-left: -100%;
+            margin-right: -100%;
+            text-align: center;
           }
           &.active {
             border: 3px solid #d2002775;
@@ -262,7 +280,17 @@
           &:hover {
             cursor: pointer;
             border: 3px solid #d2002775;
+            p {
+              margin-top: calc(1.5vh + 3px);
+            }
+
+            &.active:hover {
+              p {
+                margin-top: calc(1.5vh);
+              }
+            }
           }
+
           &:hover::after {
             opacity: 1;
           }
@@ -342,7 +370,7 @@
         margin: 2vh 0;
       }
       .t3 {
-        font-size: .8rem;
+        font-size: 0.8rem;
         line-height: 2;
       }
     }
@@ -451,6 +479,9 @@
             border-radius: 100%;
             filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
             margin: 5px;
+            p {
+              display: none;
+            }
             img {
               max-width: 100%;
             }
@@ -568,6 +599,13 @@ export default {
   },
 
   methods: {
+    preloadImage() {
+      let images = [];
+      for (var i = 0; i < this.previewImg.length; i++) {
+        images[i] = new Image();
+        images[i].src = this.previewImg[i].src;
+      }
+    },
     changeType(type) {
       this.type = type;
       if (type == "客廳廚具") {
@@ -615,6 +653,7 @@ export default {
   mounted() {
     this.resizePreview();
     this.setPreviewImg();
+    this.preloadImage();
   },
 };
 </script>
