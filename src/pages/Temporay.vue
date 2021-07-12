@@ -13,7 +13,7 @@
 
 <style lang="scss" scoped>
 .bg {
-  width: 100vw;
+  width: 100%;
 }
 </style>
 

@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 #下3段式抓 為案件編號 $case_code
 #$case_code_test 是用來判斷是否為1的測試頁
 #$case_code = "jw";特殊案使用
@@ -153,6 +154,52 @@ foreach ($aFilterKeyWordList as $key => $sFilterKeyWord) {
     $checkConunt = explode($sFilterKeyWord, $msg);
     if (count($checkConunt) > 1) {
         $bCheck = false;
+=======
+    $src =$_SERVER['SERVER_NAME']; 
+    $case_name = "西門大院";
+    $case_code = 'sm1';
+
+    $name         = isset($_POST['name']) ? $_POST['name'] : '';
+    $phone        = isset($_POST['phone']) ? $_POST['phone'] : '';
+    $user_email   = isset($_POST['email']) ? $_POST['email'] : '';
+    $city         = isset($_POST['city']) ? $_POST['city'] : '';
+    $area         = isset($_POST['area']) ? $_POST['area'] : '';
+    $msg          = isset($_POST['msg']) ? $_POST['msg'] : '';
+    $utm_source   = isset($_POST['utm_source']) ? $_POST['utm_source'] : '';
+    $utm_medium   = isset($_POST['utm_medium']) ? $_POST['utm_medium'] : '';
+    $utm_content  = isset($_POST['utm_content']) ? $_POST['utm_content'] : '';
+    $utm_campaign = isset($_POST['utm_campaign']) ? $_POST['utm_campaign'] : '';
+    $datetime     = date ("Y-m-d H:i:s" , mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y'))) ;
+    
+    # 鳳翔 fs 客製資料：房型
+    $house        = isset($_POST['house']) ? $_POST['house'] : '';
+    
+    # 好站 hj 客製資料：可聯絡時間
+    $time_start        = isset($_POST['time_start']) ? $_POST['time_start'] : '';
+    $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
+
+    # 不同版本前端相容 Start
+    if ($name == '') {
+        $name = isset($_POST['widget-contact-form-name']) ? $_POST['widget-contact-form-name'] : '';
+    }
+    if ($phone == '') {
+        $phone = isset($_POST['widget-contact-form-phone']) ? $_POST['widget-contact-form-phone'] : '';
+    }
+    if ($user_email == '') {
+        $user_email = isset($_POST['widget-contact-form-email']) ? $_POST['widget-contact-form-email'] : '';
+    }
+    if ($city == '') {
+        $city = isset($_POST['widget-contact-form-city']) ? $_POST['widget-contact-form-city'] : '';
+    }
+    if ($area == '') {
+        $area = isset($_POST['widget-contact-form-area']) ? $_POST['widget-contact-form-area'] : '';
+    }
+    if ($msg == '') {
+        $msg = isset($_POST['widget-contact-form-msg']) ? $_POST['widget-contact-form-msg'] : '';
+    }
+    if ($utm_source == '') {
+        $utm_source = isset($_POST['widget-contact-form-utm_source']) ? $_POST['widget-contact-form-utm_source'] : '';
+>>>>>>> 24c0ca8eda53b77dd0cd0791b10ccd741a532e8a
     }
 }
 # 檢查留言關鍵字 End

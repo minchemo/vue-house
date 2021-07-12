@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    initTilt();
+    //initTilt();
     initSwiper();
 
     let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
@@ -8,7 +8,7 @@ $(document).ready(function () {
     }
 
     AOS.init({
-        once: true,
+        once: false,
     });
 });
 
@@ -29,8 +29,11 @@ function initTilt() {
 
 function initSwiper() {
     new Swiper('.swiper-container', {
+        slidesPerView: 1.13,
+        loop : true,
         pagination: {
             el: '.swiper-pagination',
+            clickable: true
         },
         speed: 400,
         spaceBetween: 10,
@@ -38,6 +41,11 @@ function initSwiper() {
             touchStart: function () {
                 $('.swipe-here').fadeOut();
             },
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+              },
         },
     });
 }
@@ -54,7 +62,7 @@ function initMoblie() {
             $this.attr('src', 'mobile-' + originURL);
         }
     });
-    mobileSwiperText();
+  //  mobileSwiperText();
 }
 
 function mobileSwiperText() {

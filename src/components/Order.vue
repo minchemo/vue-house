@@ -7,7 +7,7 @@
           :src="
             isMobile
               ? require('../pages/mobile-texture/section-form/title11.png')
-              : require('../pages/texture/section-form/title11.png')
+              : require('../pages/texture/section-form/title12.png')
           "
           alt="2021市心質感高規宅 西門大院 LIFE WITH BOOKS & GARDEN"
         />
@@ -57,6 +57,22 @@
             v-model="form.msg"
           ></textarea>
         </div>
+        
+        <div style="margin: 0 auto;z-index:2;margin-top:2vh" v-if="!isMobile">
+          <vue-recaptcha
+            :sitekey="info.recaptcha_site_key_v2"
+            @verify="isVerify = true"
+            :loadRecaptchaScript="true"
+          ></vue-recaptcha>
+        </div>
+        <div style="margin: 0 auto;z-index:2;margin-top:8vh" v-else>
+          <vue-recaptcha
+            :sitekey="info.recaptcha_site_key_v2"
+            @verify="isVerify = true"
+            :loadRecaptchaScript="true"
+          ></vue-recaptcha>
+        </div>
+        
         <div class="bottom">
           <label class="policy-container" for="policy">
             本人知悉並同意<span @click="showPolicyDialog"
@@ -201,7 +217,7 @@ export default {
 
     submit() {
       if (this.isSubmit) return;
-      // if (!this.isVerify) return
+      if (!this.isVerify) return
       if (!this.checked) return;
       this.isSubmit = true;
       if (

@@ -17,14 +17,8 @@ img {
 /* base */
 .section {
     position: relative;
-    max-width: 1400px;
     min-height: 800px;
     margin: 0 auto;
-}
-.divider {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    text-align: center;
 }
 .text-align-left {
     text-align: left !important;
@@ -33,7 +27,7 @@ img {
     text-align: center !important;
 }
 .text-align-right {
-    text-align: right;
+    text-align: right !important;
 }
 .padding-right {
     padding-right: 15px;
@@ -95,14 +89,19 @@ p {
 
 .button1 {
     position: fixed;
-    top: 20%;
-    right: 2%;
+    top: 0;
+    left:calc(100vw * 1630 / 1920);
     margin: 0 auto;
     transform: translateZ(50px); /*透視深度*/
-    width: calc(50% - 635px);
-    min-width: calc(100vw * 100 / 1920);
+    width: calc(100vw * 100 / 1920);
     text-align: left;
     z-index: 5;
+    height: 100vh;
+    min-height: calc(900 * 100vw / 1920);
+    max-height: calc(1080 * 100vw / 1920);}
+
+    .button1::before{content:"";
+        width: 1px; height: 15%;display: block;
 }
 
 .button1 > a {
@@ -207,31 +206,63 @@ p {
     margin-top: -80px;
 }
 .section-swiper {
-    max-width: 1067px;
+ /* max-width: 1067px; */
+ width:calc(100vw * 1070 / 1600);
 }
 .section-swiper .title {
-    margin-top: 1rem;
-    margin-bottom: 5rem;
+    margin: 1em auto 4em auto;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    width: 1217px;
+    width: 100%;
+    font-size:calc(100vw * 30 / 1600);
+   /* width: 1217px; */
 }
 .section-swiper .title p {
     margin: 0;
     line-height: 2;
-    font-size: 14px;
+    font-size:calc(100vw * 14 / 1600);
+    font-family: 'noto sans tc', serif;
+    font-weight: 400;
     color: #000;
 }
+.section-swiper .title .swiper-title{
+    color: #000;position: relative;
+    line-height: 1.3;
+    padding: 0 0 0.9em;font-size: calc(100vw * 30 / 1600);
+    min-width: 16em;
+    text-align: right;
+}
+.section-swiper .title .swiper-title.s-right{
+    text-align: left;}
+.section-swiper .title .swiper-title span{
+    font-family:"Playfair Display", serif;
+    display: block;
+    font-size: 1.7em;white-space:nowrap;font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #ccc;
+}
+.section-swiper .title .swiper-title::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70vw;
+    height: calc(7 * 100vw / 1920);
+    background: #d0121b;
+}
+.section-swiper .title .swiper-title.s-right::after {left: 0;}
+.section-swiper img{width: 100%;}
 .section-swiper .title.flex-reverse {
-    margin-left: -150px;
+ /*  margin-left: -150px; */
 }
 .section-swiper .feature-title {
     display: none;
 }
 .section-swiper .swiper-container {
-    padding-bottom: 3rem;
-    max-width: 1067px;
+    padding-bottom: 2em;
+
+    cursor: pointer;
 }
 .section-swiper .swiper-container .swiper-pagination {
     bottom: 0;
@@ -291,7 +322,7 @@ p {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    margin-top: 4rem;
+    margin-top: 2rem;
     align-items: flex-end;
     justify-content: space-between;
 }
@@ -676,25 +707,40 @@ p {
         display: none;
     }
     .section-swiper .title.flex-reverse {
-        margin-left: 0;
+       /*  margin-left: 0; */
     }
     .section-swiper .title {
         align-items: center;
         justify-content: center;
-        width: auto;
+        width: 90%;
         text-align: center;
         flex-wrap: wrap;
         flex-direction: column-reverse;
+        font-size:calc(100vw * 20 / 375);
+        margin:0.1em auto 2em auto; 
     }
     .section-swiper .title p {
-        /* text-align: justify;
-        text-align-last: center;
-        */
         text-align: center;
         text-align-last: center;
         font-size: 12px;
-        margin-top: 2rem;
+        margin-top: 1.5em;
     }
+    .section-swiper .title .swiper-title{
+        font-size:calc(100vw * 20 / 375);
+        text-align: center;
+        padding: 0.9em 0 0.6em;}
+        .section-swiper .title .swiper-title.s-right{
+            text-align: center;}
+.section-swiper .title .swiper-title::after{
+    content: "";
+    position: absolute;
+    left: calc(50% - 45vw);
+    bottom: 0;
+    width: 90vw;
+    height: calc(3 * 100vw / 375);
+    background: #d0121b;
+}.section-swiper .title .swiper-title.s-right::after{
+    left: calc(50% - 45vw);}
     .section-form .subtitle {
         display: none;
     }
@@ -727,7 +773,7 @@ p {
     }
     .section.section-form .title img {
         width: 80%;
-        margin-bottom:2em;
+        margin-bottom:1.2em;
     }
     .section.section-form .form {
         top: 0;
@@ -764,7 +810,8 @@ p {
         font-size: 13px;
     }
     .section.section-form {
-        margin-bottom: 10vh;
+        margin-top:20vw;
+        margin-bottom: 5vw;
     }
     .section-bottom {
         display: none;
@@ -879,5 +926,8 @@ p {
         position: absolute;
         left: 0;
         max-width: 400%;
+    }
+    .section-swiper {
+     width:100%;
     }
 }
