@@ -362,6 +362,7 @@
         h3 {
           margin-top: 16px;
           font-size: 32px;
+          line-height: 1.35;
         }
       }
       .peoples {

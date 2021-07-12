@@ -992,6 +992,8 @@
 /* 螢幕尺寸標準 */
 .section1 {
   height: 100vh;
+  min-height:calc(900 * 100vw / 1920);
+  max-height:calc(1080 * 100vw / 1920);
   padding-top: $nav_pc_height;
   position: relative;
 
@@ -1000,7 +1002,7 @@
     background-color: #c30d23;
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     left: 0;
     top: 0;
     display: flex;
@@ -1107,12 +1109,12 @@
     }
 
     .info {
-      height: 40vh;
+      //height: 40%;
       padding-top: 1vw;
       padding-right: 2vw;
       z-index: 1;
       svg {
-        height: 80%;
+        width:calc(600 * 100vw / 1920);
         .cls-1 {
           fill: #fff;
         }
@@ -1131,11 +1133,10 @@
       }
     }
     .logo {
-      height: 40vh;
       padding-right: 2vw;
       z-index: 10;
       svg {
-        height: 100%;
+        width:calc(300 * 100vw / 1920);
         .cls-1 {
           fill: #fff;
         }
@@ -1167,7 +1168,7 @@
         width: 15%;
         height: 8%;
         left: 32vw;
-        top: 62%;
+        top:calc(53% + 6.5vw);
         animation-delay: random(5) + s;
       }
 
@@ -1230,6 +1231,8 @@
 @media only screen and (max-width: 767px) {
   .section1 {
     height: 100vh;
+  min-height:0;
+  max-height:initial;
     .landing {
       display: block;
       height: 100%;
@@ -1357,7 +1360,8 @@
         padding-right: 0;
         left: 10%;
         svg {
-          height: 100%;
+          width: 100%;
+         // height: 100%;
           .cls-1 {
             fill: #fff;
           }

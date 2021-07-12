@@ -33,7 +33,7 @@
         >
           <h2><span class="large">3</span>捷超級動能<br />站站精彩絕倫</h2>
           <p>
-            捷運淡水信義線、中和新蘆線、松山新店線3線大會串，公車&U-bike站點雲集，悠遊一卡在手，通勤休閒生活全權在握。
+          捷運淡水信義線、中和新蘆線、松山新店線3線大會串，公車&U-bike站點雲集，悠遊一卡在手，通勤休閒生活全權在握。
           </p>
         </div>
         <div
@@ -49,7 +49,7 @@
             >
           </h2>
           <p>
-            捷運淡水信義線、中和新蘆線、松山新店線3線大會串，公車&U-bike站點雲集，悠遊一卡在手，通勤休閒生活全權在握。
+           捷運淡水信義線、中和新蘆線、松山新店線3線大會串，公車&U-bike站點雲集，悠遊一卡在手，通勤休閒生活全權在握。
           </p>
         </div>
       </div>
@@ -263,6 +263,7 @@
       .swiper-box {
         width: 65%;
         position: relative;
+        font-size: calc(15 * 100vw / 1920);
 
         &:after {
           content: "";
@@ -317,10 +318,10 @@
         justify-content: center;
         flex-direction: row;
         font-family: $family1;
-        margin-bottom: 30px;
+        margin-bottom:2em;
 
         h2 {
-          font-size: 1.8rem;
+          font-size: 1.8em;
           font-weight: bold;
           color: #d20028;
           text-align: left;
@@ -428,28 +429,31 @@
       justify-content: center;
       flex-direction: column;
       font-family: $family1;
+        font-size: calc(15 * 100vw / 1920);
 
       h2 {
-        font-size: 2rem;
+        font-size: 2em;
         font-weight: bold;
         color: #fadedb;
         text-align: center;
         border-bottom: 1px solid;
-        margin-bottom: 10px;
+        margin-bottom:0.333em;
         line-height: 1.2;
-        padding: 0 10px 10px 10px;
+        padding:0.333em;
+        padding-left: 0;
         display: inline;
         .large {
           font-family: Georgia, "Times New Roman", Times, serif;
-          font-size: 75px;
+          font-size:2.5em;
           font-style: italic;
-          margin-right: 10px;
+          margin-right: 0.13em;
         }
       }
       p {
+        font-size: 1em;
         text-align: justify;
         line-height: 2;
-        padding: 0 10px;
+        padding: 0 0.667em;
         width: 60%;
         color: #fff;
       }
@@ -536,6 +540,7 @@
       padding: 0;
       .swiper-box {
         width: 100%;
+        font-size: calc(15 * 100vw / 375);
         .swiper-pagination-bullets {
           display: block;
           width: 100%;
@@ -592,8 +597,9 @@
       }
       .swiper-info {
         width: 100%;
+        font-size: calc(15 * 100vw / 375);
         h2 {
-          font-size: 1.2rem;
+          font-size: 1.2em;
           font-weight: bold;
           color: #fadedb;
           text-align: left;

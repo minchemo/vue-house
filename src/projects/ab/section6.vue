@@ -42,14 +42,16 @@
 @import "@/assets/style/variableColor.scss";
 /* 螢幕尺寸標準 */
 .section6 {
-  height: auto;
+  height: calc(100vh - 60px);
+  min-height:calc(900 * 100vw / 1920 - 60px);
+  max-height:calc(1080 * 100vw / 1920 - 60px);
 
   .intro {
     font-family: $family1;
     position: absolute;
     text-align: left;
-    top: 10vh;
-    left: 9vh;
+    top:calc(50% - 20vw);
+    left: 5vw;
     z-index: 10;
     color: #fff;
     pointer-events: none;
@@ -71,23 +73,28 @@
       }
     }
     .title {
-      margin-top: 15px;
+      margin-top:0.5em;
       font-weight: bold;
-      font-size: 32px;
+      font-size: calc(32 * 100vw / 1920);
+    
       line-height: 1.2;
     }
     .content {
-      margin-top: 15px;
+      margin-top:1em;
       border-top: 1px solid #fff;
       padding-top: 12px;
       line-height: 2;
       filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.95));
-      font-size: 16px;
+      font-size: calc(16 * 100vw / 1920);
     }
   }
 
   .swiper-box {
     width: 100%;
+    height: 100%;
+    .swiper-container,
+    .swiper-wrapper{
+    height: 100%;}
     .swiper-pagination-bullets {
       padding-right: 60vw;
       bottom: 10vh;
@@ -105,13 +112,18 @@
     .swiper-slide {
       background-repeat: no-repeat;
       background-size: cover;
-      height: 100vh;
+      background-position: center;
+      position: relative;
+    width: 100%;
+    height: 100%;
       .caption {
         color: #fff;
         position: absolute;
         right: 3%;
+    top: auto;
+    height: auto;
         bottom: 5%;
-        font-size: 1rem;
+       // font-size: 1rem;
         letter-spacing: 1.5px;
         filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
       }
@@ -126,12 +138,16 @@
 @media only screen and (max-width: 767px) {
   .section6 {
     height: auto;
+  min-height:0;
+  max-height:initial;
 
     .intro {
       width: 90vw;
       top: 10vw;
       left: 50%;
       transform: translate(-50%, 0);
+        font-size: calc(14 * 100vw / 375);
+        .title{font-size: calc(32 * 100vw / 375);}
 
       .subtitle {
         &::after {
@@ -148,7 +164,8 @@
       .content {
         text-align: justify;
         line-height: 1.5;
-        font-size: 14px;
+        font-size: calc(14 * 100vw / 375);
+        filter: drop-shadow(0 0 2px rgba(71, 55, 55, 0.5));
       }
     }
 
@@ -178,12 +195,13 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
+        font-size: calc(15 * 100vw / 375);
         .caption {
           color: #fff;
           position: absolute;
           right: 3%;
           bottom: 5%;
-          font-size: 1rem;
+          font-size: 1em;
           letter-spacing: 1.5px;
           filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
         }

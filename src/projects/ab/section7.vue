@@ -172,6 +172,8 @@
     border: 3px solid #d20028;
     z-index: 10;
     margin: 0 auto;
+    background:rgb(211, 205, 192) url("s7/客廳/bg.jpg");
+    background-size: cover;
     .buttons {
       writing-mode: vertical-lr;
       display: flex;
@@ -205,6 +207,7 @@
             transform: translate(0, -50%) rotate(45deg);
             border-color: #d20028;
             background: #d20028;
+            z-index: -1;
             opacity: 1;
             animation: fadeIn 1s;
 
@@ -234,12 +237,12 @@
       z-index: 10;
       height: 100%;
       justify-content: space-around;
-      padding-left: 8vh;
-      background: rgb(0, 0, 0);
+      padding-left: 8vh;padding-right: 8vh;
+     background: rgb(0, 0, 0);
       background: linear-gradient(
         -90deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(255, 255, 255, 0.7) 20%,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 25%,
         rgba(255, 255, 255, 1) 100%
       );
       .t-b {
@@ -256,25 +259,31 @@
           width: 2vw;
           height: 2vw;
           margin-bottom: 5vh;
+          border: 3px solid #d2002700;
           border-radius: 100%;
-          filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
+       //   filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
           box-sizing: border-box;
+          transition: all 0.3s;
           img {
             max-width: 100%;
           }
           p {
             white-space: nowrap;
+            position:absolute;
             font-size: 14px;
-            margin-top: 1.5vh;
-            margin-left: -100%;
-            margin-right: -100%;
+            bottom:-2em;
+            left: calc(50% - 4em);
+            width: 8em;
             text-align: center;
+            //text-shadow:0 0 0.5em rgb(238, 232, 228),0 0 0.1em rgb(238, 232, 228);
           }
           &.active {
             border: 3px solid #d2002775;
           }
           &.active::after {
             opacity: 1;
+            width:150%;
+            height:150%;
           }
 
           &:hover {
@@ -291,14 +300,16 @@
             }
           }
 
-          &:hover::after {
+          &:hover:after {
             opacity: 1;
+            width:150%;
+            height:150%;
           }
 
           &::after {
             content: "";
-            width: 2.5vw;
-            height: 2.5vw;
+            width:100%;
+            height:100%;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -306,7 +317,7 @@
             border: 2px solid #d20028;
             border-radius: 100%;
             opacity: 0;
-            transition: opacity 0.3s;
+            transition: all 0.3s;
           }
         }
       }
@@ -452,7 +463,7 @@
         z-index: 10;
         height: auto;
         justify-content: space-around;
-        padding-left: 0;
+        padding-left: 0;padding-right:0;
         background: transparent;
         height: 50px;
         margin-bottom: -75px;
@@ -482,7 +493,7 @@
             p {
               display: none;
             }
-            img {
+           /*   img {
               max-width: 100%;
             }
             &.active {
@@ -496,7 +507,7 @@
               cursor: pointer;
               border: 3px solid #d2002775;
             }
-            &:hover::after {
+          &:hover::after {
               opacity: 1;
             }
 
@@ -513,6 +524,7 @@
               opacity: 0;
               transition: opacity 0.3s;
             }
+            */
           }
         }
       }
@@ -556,43 +568,43 @@ export default {
       previewImg: [
         {
           type: ["石紋灰", "A廚具"],
-          src: require("@/projects/ab/s7/客廳/石紋灰+A廚具.png"),
+          src: require("@/projects/ab/s7/客廳/石紋灰+A廚具.jpg"),
         },
         {
           type: ["清水灰", "A廚具"],
-          src: require("@/projects/ab/s7/客廳/清水灰+A廚具.png"),
+          src: require("@/projects/ab/s7/客廳/清水灰+A廚具.jpg"),
         },
         {
           type: ["書卷黃", "A廚具"],
-          src: require("@/projects/ab/s7/客廳/書卷黃+A廚具.png"),
+          src: require("@/projects/ab/s7/客廳/書卷黃+A廚具.jpg"),
         },
         {
           type: ["石紋灰", "B廚具"],
-          src: require("@/projects/ab/s7/客廳/石紋灰+B廚具.png"),
+          src: require("@/projects/ab/s7/客廳/石紋灰+B廚具.jpg"),
         },
         {
           type: ["清水灰", "B廚具"],
-          src: require("@/projects/ab/s7/客廳/清水灰+B廚具.png"),
+          src: require("@/projects/ab/s7/客廳/清水灰+B廚具.jpg"),
         },
         {
           type: ["書卷黃", "B廚具"],
-          src: require("@/projects/ab/s7/客廳/書卷黃+B廚具.png"),
+          src: require("@/projects/ab/s7/客廳/書卷黃+B廚具.jpg"),
         },
         {
           type: ["義大利銀狐白", "義大利馬莫灰"],
-          src: require("@/projects/ab/s7/衛浴/義大利銀狐白+義大利馬莫灰.png"),
+          src: require("@/projects/ab/s7/衛浴/義大利銀狐白+義大利馬莫灰.jpg"),
         },
         {
           type: ["撒哈拉淺灰", "義大利馬莫灰"],
-          src: require("@/projects/ab/s7/衛浴/撒哈拉淺灰+義大利馬莫灰.png"),
+          src: require("@/projects/ab/s7/衛浴/撒哈拉淺灰+義大利馬莫灰.jpg"),
         },
         {
           type: ["義大利銀狐白", "撒哈拉深灰"],
-          src: require("@/projects/ab/s7/衛浴/義大利銀狐白+撒哈拉深灰.png"),
+          src: require("@/projects/ab/s7/衛浴/義大利銀狐白+撒哈拉深灰.jpg"),
         },
         {
           type: ["撒哈拉淺灰", "撒哈拉深灰"],
-          src: require("@/projects/ab/s7/衛浴/撒哈拉淺灰+撒哈拉深灰.png"),
+          src: require("@/projects/ab/s7/衛浴/撒哈拉淺灰+撒哈拉深灰.jpg"),
         },
       ],
     };

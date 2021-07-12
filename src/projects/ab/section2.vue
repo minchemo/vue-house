@@ -209,6 +209,8 @@
 /* 螢幕尺寸標準 */
 .section2 {
   height: 100vh;
+  min-height:calc(900 * 100vw / 1920);
+  max-height:calc(1080 * 100vw / 1920);
   position: relative;
   background: #fad2cd;
 
@@ -224,7 +226,7 @@
 
     .mosaic-box {
       width: 14vw;
-      height: 80vh;
+      height: 80%;
     }
 
     .bg {
@@ -256,6 +258,8 @@
   .section2 {
     height: auto;
     padding-top: 80px;
+  min-height:0;
+  max-height:initial;
 
     .main {
       transform: unset;
