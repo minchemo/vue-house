@@ -488,10 +488,12 @@ export default {
               s_caption: "如榆建築及設計事務所公設實績-異雲書屋",
               s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/8.如榆建築及設計事務所公設實績-異雲書屋.jpg"),
             },
+            /*
             {
               s_caption: "如榆建築及設計事務所公設實績-異雲書屋",
               s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/9.如榆建築及設計事務所公設實績-異雲書屋.jpg"),
             },
+            */
             {
               s_caption: "如榆建築及設計事務所公設實績-W Hotel WOOBAR",
               s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/10.如榆建築及設計事務所公設實績-WHotelWOOBAR.jpg"),
@@ -500,10 +502,10 @@ export default {
               s_caption: "如榆建築及設計事務所公設實績-亞都LIZ",
               s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/11.如榆建築及設計事務所公設實績-亞都LIZ.jpg"),
             },
-            {
+          /*  {
               s_caption: "如榆建築及設計事務所公設實績-亞都LIZ",
               s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/12.如榆建築及設計事務所公設實績-亞都LIZ.jpg"),
-            },
+            },*/
           ],
         },
         {
