@@ -19,7 +19,7 @@
       class="switch-box"
       v-bind:style="
         type == '客廳廚具'
-          ? `background-image: url(${require('@/projects/ab/s7/客廳/石紋灰.png')})`
+          ? `background-image: url(${require('@/projects/ab/s7/客廳/石紋灰+A廚具.png')})`
           : `background-image: url(${require('@/projects/ab/s7/衛浴/義大利銀狐白+義大利馬莫灰.jpg')})`
       "
     >
