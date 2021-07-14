@@ -15,7 +15,14 @@
         />為你的專屬空間添上獨家品味。
       </p>
     </div>
-    <div class="switch-box">
+    <div
+      class="switch-box"
+      v-bind:style="
+        type == '客廳廚具'
+          ? `background-image: url(${require('@/projects/ab/s7/客廳/石紋灰.png')})`
+          : `background-image: url(${require('@/projects/ab/s7/衛浴/義大利銀狐白+義大利馬莫灰.jpg')})`
+      "
+    >
       <div class="buttons">
         <div
           class="b1"
@@ -172,7 +179,6 @@
     border: 3px solid #d20028;
     z-index: 10;
     margin: 0 auto;
-    background:rgb(211, 205, 192) url("s7/客廳/bg.jpg");
     background-size: cover;
     .buttons {
       writing-mode: vertical-lr;
@@ -237,8 +243,9 @@
       z-index: 10;
       height: 100%;
       justify-content: space-around;
-      padding-left: 8vh;padding-right: 8vh;
-     background: rgb(0, 0, 0);
+      padding-left: 8vh;
+      padding-right: 8vh;
+      background: rgb(0, 0, 0);
       background: linear-gradient(
         -90deg,
         rgba(255, 255, 255, 0) 0%,
@@ -261,7 +268,7 @@
           margin-bottom: 5vh;
           border: 3px solid #d2002700;
           border-radius: 100%;
-       //   filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
+          //   filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
           box-sizing: border-box;
           transition: all 0.3s;
           img {
@@ -269,9 +276,9 @@
           }
           p {
             white-space: nowrap;
-            position:absolute;
+            position: absolute;
             font-size: 14px;
-            bottom:-2em;
+            bottom: -2em;
             left: calc(50% - 4em);
             width: 8em;
             text-align: center;
@@ -282,8 +289,8 @@
           }
           &.active::after {
             opacity: 1;
-            width:150%;
-            height:150%;
+            width: 150%;
+            height: 150%;
           }
 
           &:hover {
@@ -302,14 +309,14 @@
 
           &:hover:after {
             opacity: 1;
-            width:150%;
-            height:150%;
+            width: 150%;
+            height: 150%;
           }
 
           &::after {
             content: "";
-            width:100%;
-            height:100%;
+            width: 100%;
+            height: 100%;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -463,7 +470,8 @@
         z-index: 10;
         height: auto;
         justify-content: space-around;
-        padding-left: 0;padding-right:0;
+        padding-left: 0;
+        padding-right: 0;
         background: transparent;
         height: 50px;
         margin-bottom: -75px;
@@ -493,7 +501,7 @@
             p {
               display: none;
             }
-           /*   img {
+            /*   img {
               max-width: 100%;
             }
             &.active {
