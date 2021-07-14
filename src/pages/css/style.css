@@ -558,7 +558,8 @@ p {
 
 .item:last-child {
     border-top: 1px solid #ccc;
-    color:#d0121b;
+    color:#d90001;
+    font-family: 'noto serif tc', serif;
 }
 
 .item {
@@ -597,7 +598,7 @@ p {
     margin: 20px 0 10px;
     font-family: 'noto serif tc', serif;
     font-weight: 700;
-    color: #fff;
+    color: #d90001;
 }
 .subtitle {
     font-size: 0.95rem;
