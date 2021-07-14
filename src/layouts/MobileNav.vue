@@ -88,7 +88,6 @@ export default {
   },
   methods: {
     showCallDialog() {
-      return;
       this.isShowCallDialog = true;
     },
     showMessengerDialog() {

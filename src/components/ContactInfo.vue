@@ -120,7 +120,6 @@ export default {
   methods: {
     showCallDialog() {
       // if (!this.isMobile) return
-      return
       this.isShowCallDialog = true;
     },
     showMessengerDialog() {
