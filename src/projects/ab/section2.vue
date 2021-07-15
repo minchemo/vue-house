@@ -302,7 +302,7 @@ export default {
           title: isMobile ? "捷運<br>熱點" : "捷運熱點",
           content: isMobile
             ? "紅綠橘3線<br>權掌大台北"
-            : "紅綠橘3線，權掌大台北",
+            : "紅綠橘3線<br>權掌大台北",
           reverse: true,
         },
         {
