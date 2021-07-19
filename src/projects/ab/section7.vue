@@ -19,8 +19,8 @@
       class="switch-box"
       v-bind:style="
         type == '客廳廚具'
-          ? `background-image: url(${require('@/projects/ab/s7/客廳/石紋灰+A廚具.png')})`
-          : `background-image: url(${require('@/projects/ab/s7/衛浴/義大利銀狐白+義大利馬莫灰.jpg')})`
+          ? `background-image: url(${require('@/projects/ab/s7/客廳/bg.jpg')})`
+          : `background-image: url(${require('@/projects/ab/s7/衛浴/bg.jpg')})`
       "
     >
       <div class="buttons">
@@ -71,18 +71,18 @@
           <div class="t-t">｜廚　　具｜</div>
           <div
             class="t-b-b"
-            @click="changeColor(1, 'A廚具')"
-            v-bind:class="{ active: typeColor[1] == 'A廚具' }"
+            @click="changeColor(1, '橡木洗白')"
+            v-bind:class="{ active: typeColor[1] == '橡木洗白' }"
           >
-            <img src="~@/projects/ab/s7/客廳/A廚具.png" alt="" />
+            <img src="~@/projects/ab/s7/客廳/橡木洗白.png" alt="" />
             <p>橡木洗白</p>
           </div>
           <div
             class="t-b-b"
-            @click="changeColor(1, 'B廚具')"
-            v-bind:class="{ active: typeColor[1] == 'B廚具' }"
+            @click="changeColor(1, '香杉洗白')"
+            v-bind:class="{ active: typeColor[1] == '香杉洗白' }"
           >
-            <img src="~@/projects/ab/s7/客廳/B廚具.png" alt="" />
+            <img src="~@/projects/ab/s7/客廳/香杉洗白.png" alt="" />
             <p>香杉洗白</p>
           </div>
         </div>
@@ -92,38 +92,38 @@
           <div class="t-t">｜衛浴壁磚｜</div>
           <div
             class="t-b-b"
-            @click="changeColor(0, '義大利銀狐白')"
-            v-bind:class="{ active: typeColor[0] == '義大利銀狐白' }"
+            @click="changeColor(0, '奢華風牆')"
+            v-bind:class="{ active: typeColor[0] == '奢華風牆' }"
           >
-            <img src="~@/projects/ab/s7/衛浴/義大利銀狐白.png" alt="" />
-            <p>義大利銀狐白</p>
+            <img src="~@/projects/ab/s7/衛浴/奢華風牆.png" alt="" />
+            <p>奢華風</p>
           </div>
           <div
             class="t-b-b"
-            @click="changeColor(0, '撒哈拉淺灰')"
-            v-bind:class="{ active: typeColor[0] == '撒哈拉淺灰' }"
+            @click="changeColor(0, '現代風牆')"
+            v-bind:class="{ active: typeColor[0] == '現代風牆' }"
           >
-            <img src="~@/projects/ab/s7/衛浴/撒哈拉淺灰.png" alt="" />
-            <p>撒哈拉淺灰</p>
+            <img src="~@/projects/ab/s7/衛浴/現代風牆.png" alt="" />
+            <p>現代風</p>
           </div>
         </div>
         <div class="t-b">
           <div class="t-t">｜衛浴地磚｜</div>
           <div
             class="t-b-b"
-            @click="changeColor(1, '義大利馬莫灰')"
-            v-bind:class="{ active: typeColor[1] == '義大利馬莫灰' }"
+            @click="changeColor(1, '奢華風地')"
+            v-bind:class="{ active: typeColor[1] == '奢華風地' }"
           >
-            <img src="~@/projects/ab/s7/衛浴/義大利馬莫灰.png" alt="" />
-            <p>義大利馬莫灰</p>
+            <img src="~@/projects/ab/s7/衛浴/奢華風地.png" alt="" />
+            <p>奢華風</p>
           </div>
           <div
             class="t-b-b"
-            @click="changeColor(1, '撒哈拉深灰')"
-            v-bind:class="{ active: typeColor[1] == '撒哈拉深灰' }"
+            @click="changeColor(1, '現代風地')"
+            v-bind:class="{ active: typeColor[1] == '現代風地' }"
           >
-            <img src="~@/projects/ab/s7/衛浴/撒哈拉深灰.png" alt="" />
-            <p>撒哈拉深灰</p>
+            <img src="~@/projects/ab/s7/衛浴/現代風地.png" alt="" />
+            <p>現代風</p>
           </div>
         </div>
       </div>
@@ -572,47 +572,47 @@ export default {
     return {
       isMobile,
       type: "客廳廚具",
-      typeColor: ["石紋灰", "A廚具"], // 預設先用
+      typeColor: ["石紋灰", "橡木洗白"], // 預設先用
       previewImg: [
         {
-          type: ["石紋灰", "A廚具"],
-          src: require("@/projects/ab/s7/客廳/石紋灰+A廚具.jpg"),
+          type: ["石紋灰", "橡木洗白"],
+          src: require("@/projects/ab/s7/客廳/石紋灰地磚-x-橡木洗白廚櫃.jpg"),
         },
         {
-          type: ["清水灰", "A廚具"],
-          src: require("@/projects/ab/s7/客廳/清水灰+A廚具.jpg"),
+          type: ["清水灰", "橡木洗白"],
+          src: require("@/projects/ab/s7/客廳/清水灰地磚-x-橡木洗白廚櫃.jpg"),
         },
         {
-          type: ["書卷黃", "A廚具"],
-          src: require("@/projects/ab/s7/客廳/書卷黃+A廚具.jpg"),
+          type: ["書卷黃", "橡木洗白"],
+          src: require("@/projects/ab/s7/客廳/書卷黃地磚-x-橡木洗白廚櫃.jpg"),
         },
         {
-          type: ["石紋灰", "B廚具"],
-          src: require("@/projects/ab/s7/客廳/石紋灰+B廚具.jpg"),
+          type: ["石紋灰", "香杉洗白"],
+          src: require("@/projects/ab/s7/客廳/石紋灰地磚-x-香杉洗白廚櫃.jpg"),
         },
         {
-          type: ["清水灰", "B廚具"],
-          src: require("@/projects/ab/s7/客廳/清水灰+B廚具.jpg"),
+          type: ["清水灰", "香杉洗白"],
+          src: require("@/projects/ab/s7/客廳/清水灰地磚-x-香杉洗白廚櫃.jpg"),
         },
         {
-          type: ["書卷黃", "B廚具"],
-          src: require("@/projects/ab/s7/客廳/書卷黃+B廚具.jpg"),
+          type: ["書卷黃", "香杉洗白"],
+          src: require("@/projects/ab/s7/客廳/書卷黃地磚-x-香杉洗白廚櫃.jpg"),
         },
         {
-          type: ["義大利銀狐白", "義大利馬莫灰"],
-          src: require("@/projects/ab/s7/衛浴/義大利銀狐白+義大利馬莫灰.jpg"),
+          type: ["奢華風牆", "奢華風地"],
+          src: require("@/projects/ab/s7/衛浴/(壁)奢華風-x-(地)奢華風.jpg"),
         },
         {
-          type: ["撒哈拉淺灰", "義大利馬莫灰"],
-          src: require("@/projects/ab/s7/衛浴/撒哈拉淺灰+義大利馬莫灰.jpg"),
+          type: ["現代風牆", "奢華風地"],
+          src: require("@/projects/ab/s7/衛浴/(壁)現代風-x-(地)奢華風.jpg"),
         },
         {
-          type: ["義大利銀狐白", "撒哈拉深灰"],
-          src: require("@/projects/ab/s7/衛浴/義大利銀狐白+撒哈拉深灰.jpg"),
+          type: ["奢華風牆", "現代風地"],
+          src: require("@/projects/ab/s7/衛浴/(壁)奢華風-x-(地)現代風.jpg"),
         },
         {
-          type: ["撒哈拉淺灰", "撒哈拉深灰"],
-          src: require("@/projects/ab/s7/衛浴/撒哈拉淺灰+撒哈拉深灰.jpg"),
+          type: ["現代風牆", "現代風地"],
+          src: require("@/projects/ab/s7/衛浴/(壁)現代風-x-(地)現代風.jpg"),
         },
       ],
     };
@@ -629,9 +629,9 @@ export default {
     changeType(type) {
       this.type = type;
       if (type == "客廳廚具") {
-        this.typeColor = ["石紋灰", "A廚具"];
+        this.typeColor = ["石紋灰", "橡木洗白"];
       } else {
-        this.typeColor = ["義大利銀狐白", "義大利馬莫灰"];
+        this.typeColor = ["奢華風牆", "奢華風地"];
       }
 
       this.setPreviewImg();
