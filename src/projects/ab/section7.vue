@@ -127,7 +127,11 @@
           </div>
         </div>
       </div>
-      <div class="preview"></div>
+      <div
+        class="preview"
+        v-bind:dataid="currentPreviewImg"
+        v-bind:style="{ backgroundImage: 'url(' + currentPreviewImg + ')' }"
+      ></div>
     </div>
     <div class="bg"></div>
   </div>
@@ -600,21 +604,22 @@ export default {
         },
         {
           type: ["奢華風牆", "奢華風地"],
-          src: require("@/projects/ab/s7/衛浴/(壁)奢華風-x-(地)奢華風.jpg"),
+          src: require("@/projects/ab/s7/衛浴/壁奢華風-x-地奢華風.jpg"),
         },
         {
           type: ["現代風牆", "奢華風地"],
-          src: require("@/projects/ab/s7/衛浴/(壁)現代風-x-(地)奢華風.jpg"),
+          src: require("@/projects/ab/s7/衛浴/壁現代風-x-地奢華風.jpg"),
         },
         {
           type: ["奢華風牆", "現代風地"],
-          src: require("@/projects/ab/s7/衛浴/(壁)奢華風-x-(地)現代風.jpg"),
+          src: require("@/projects/ab/s7/衛浴/壁奢華風-x-地現代風.jpg"),
         },
         {
           type: ["現代風牆", "現代風地"],
-          src: require("@/projects/ab/s7/衛浴/(壁)現代風-x-(地)現代風.jpg"),
+          src: require("@/projects/ab/s7/衛浴/壁現代風-x-地現代風.jpg"),
         },
       ],
+      currentPreviewImg: require("@/projects/ab/s7/客廳/石紋灰地磚-x-橡木洗白廚櫃.jpg"),
     };
   },
 
@@ -633,7 +638,6 @@ export default {
       } else {
         this.typeColor = ["奢華風牆", "奢華風地"];
       }
-
       this.setPreviewImg();
     },
     changeColor(group, color) {
@@ -648,9 +652,7 @@ export default {
         return key == target;
       });
 
-      if (filtered) {
-        $(".preview").css({ "background-image": `url(${filtered.src})` });
-      }
+      this.currentPreviewImg = filtered.src;
     },
     resizePreview() {
       let parentHeight = $(".switch-box").height();
@@ -671,9 +673,9 @@ export default {
   },
 
   mounted() {
+    this.preloadImage();
     this.resizePreview();
     this.setPreviewImg();
-    this.preloadImage();
   },
 };
 </script>
