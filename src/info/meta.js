@@ -1,6 +1,6 @@
 exports.info = {
-  title: "虹耀今采",
+  title: "宏貿臻璽",
   description:
-    "虹耀今采",
-  keywords: "虹耀今采"
+    "宏貿臻璽",
+  keywords: "宏貿臻璽"
 };
