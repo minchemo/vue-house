@@ -4,18 +4,18 @@ $bg: url("");
 /* font-family */
 /* 1主要字體  2次要字體  3表單字體  4黑體 */
 $family1: Arial, "youmin", "Noto Sans TC", sans-serif;
-$family2: "DFLiSongStd", "Noto Sans TC", sans-serif;
+$family2: Arial, "Noto Sans TC", sans-serif;
 $family3: Arial, "Noto Sans TC", sans-serif;
 $family4: Arial, "Noto Sans TC", sans-serif;
 
 /* navigation */
-$nav_bg: #fff;
+$nav_bg: #006934;
 $nav_btn_color: #595757;
-$nav_link_color: #d20028;
+$nav_link_color: #fff;
 $nav_link_subtitle_color: #fff;
 $nav_link_hover_color: #ff8400;
 $nav_link_hover_bg: #976a4b;
-$nav_link_border_bg: #d20028;
+$nav_link_border_bg: transparent;
 
 /* loading */
 $loading_bg_color: #ccc;
@@ -34,63 +34,51 @@ $mask_icon_color: #c82514;
 
 /* contactSection */
 // order
-$order_bg_color: #fad2cd;
+$order_bg_color: #FDD93F;
 $order_bg_image: transparent;
 $order_bg_image_m: transparent;
-$order_title_color: #d20028;
+$order_title_color: #333333;
 $order_subtitle_color: #757575;
-$order_input_label_color: #d20028;
+$order_input_label_color: #333333;
 $order_input_color: #000 !important;
 $order_input_placeholder: #999 !important;
 $order_input_bg: #f7f4f2 !important;
-$order_input_border: solid 0 #d20028;
-$order_input_focus_border: solid 1px #d20028 !important;
-$order_input_selected_color: solid 1px #d20028 !important;
+$order_input_border: solid 0 #333333;
+$order_input_focus_border: solid 1px #333333 !important;
+$order_input_selected_color: solid 1px #333333 !important;
 $order_check_desc_color: #000 !important;
 $order_check_span_color: #000 !important;
-$order_submit_bg: linear-gradient(
-  90deg,
-  rgba(253, 227, 82, 1) 0%,
-  rgba(231, 149, 14, 0.7) 20%,
-  rgba(195, 13, 35, 0.3) 70%,
-  rgba(195, 13, 35, 0) 100%
-);
+$order_submit_bg: #333333;
 $order_submit_color: #fff !important;
-$order_sumbit_disable_bg: #d20028 !important;
+$order_sumbit_disable_bg: #333333 !important;
 
 // contactInfo
-$contact_bg: #d20028;
-$contact_bg_m: #d20028;
+$contact_bg: #006934;
+$contact_bg_m: #006934;
 $contact_shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
 
 $contact_btn_border: inset 0 0 0px 1.2px #fff;
-$contact_btn_color: #fff;
-$contact_btn_icon: #fff;
-$contact_btn_bg: transparent;
-$contact_btn_hover_color: #fff;
-$contact_btn_hover_icon: #fff;
-$contact_btn_hover_bg: #d20028;
+$contact_btn_color: #333;
+$contact_btn_icon: #333;
+$contact_btn_bg: #FFF;
+$contact_btn_hover_color: #333;
+$contact_btn_hover_icon: #333;
+$contact_btn_hover_bg: #FDD93F;
 
 $contact_google_btn_color: #fff;
 $contact_google_btn_icon: #fff;
-$contact_google_btn_bg: linear-gradient(
-  90deg,
-  rgba(253, 227, 82, 1) 0%,
-  rgba(231, 149, 14, 0.7) 20%,
-  rgba(195, 13, 35, 0.3) 70%,
-  rgba(195, 13, 35, 0) 100%
-) !important;
-$contact_google_border: inset 0 0 0px 1.2px transparent;
-$contact_google_hover_btn_color: #fff;
-$contact_google_hover_btn_icon: #fff;
-$contact_google_hover_btn_bg: #fff;
-$contact_google_hover_border: inset 0 0 0px 1.2px #fff;
+$contact_google_btn_bg: #333;
+$contact_google_border: inset 0 0 0px 1.2px #333;
+$contact_google_hover_btn_color: #333;
+$contact_google_hover_btn_icon: #333;
+$contact_google_hover_btn_bg: #FDD93F;
+$contact_google_hover_border: inset 0 0 0px 1.2px #fdd93f;
 
 // houseInfo
-$house_bg: #fff;
-$house_title_color: #d20028;
-$house_border_color: #d20028;
-$house_label_color: #d20028;
+$house_bg: #FDD93F;
+$house_title_color: #333;
+$house_border_color: #333;
+$house_label_color: #333;
 $house_desc_color: #000;
 
 // mobileNav

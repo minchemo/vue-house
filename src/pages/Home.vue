@@ -20,16 +20,6 @@
     <vue-lazy-component class="section" id="section4" @init="init">
       <Section4 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section5" @init="init">
-      <Section5 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section6" @init="init">
-      <Section6 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section7" @init="init">
-      <Section7 />
-    </vue-lazy-component>
-
 
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
@@ -67,13 +57,10 @@ import Loading from "@/components/Loading.vue";
 import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/ab/section1.vue";
-import Section2 from "@/projects/ab/section2.vue";
-import Section3 from "@/projects/ab/section3.vue";
-import Section4 from "@/projects/ab/section4.vue";
-import Section5 from "@/projects/ab/section5.vue";
-import Section6 from "@/projects/ab/section6.vue";
-import Section7 from "@/projects/ab/section7.vue";
+import Section1 from "@/projects/js/section1.vue";
+import Section2 from "@/projects/js/section2.vue";
+import Section3 from "@/projects/js/section3.vue";
+import Section4 from "@/projects/js/section4.vue";
 
 export default {
   name: "home",
@@ -88,9 +75,6 @@ export default {
     Section2,
     Section3,
     Section4,
-    Section5,
-    Section6,
-    Section7
   },
 
   data() {

@@ -31,6 +31,7 @@
             >
               <span class="link" :data-section="item.section">
                 <img v-if="item.imgSrc" :src="item.imgSrc" alt />
+                <img v-if="item.iconSrc" :src="item.iconSrc" alt />
                 <span>
                   <h3 class="title">{{ item.name }}</h3>
                   <span class="subTitle">{{ item.subTitle }}</span>
@@ -207,8 +208,8 @@ export default {
   }
   .link {
     color: $nav_link_color;
-    height: 35%;
-    width: 6.5em;
+    height: 60%;
+    width: auto;
     text-align: center;
     display: block;
     cursor: pointer;
@@ -224,6 +225,8 @@ export default {
     border-right: 2px solid $nav_link_border_bg;
     //margin-left: 4px;
     //padding-right: 4px;
+    margin-right: 36px;
+    font-size: 20px;
 
     > span {
       z-index: 3;
@@ -245,32 +248,39 @@ export default {
       //width: calc(100vw * 50 / 1920);
       height: 80%;
       margin-right: 10px;
-      &:hover {
+      /*&:hover {
         opacity: 0.5;
-      }
+      }*/
     }
-    &.active {
+    /*:hover {
       color: #fff;
       background-color: #d20028;
-    }
-    &:hover {
-      color: #fff;
-      background-color: #d20028;
-    }
+      border-bottom: 2px solid #FDD93F;
+      box-sizing: border-box;
+    }*/
     &:after {
       content: "";
       background-image: none;
       position: absolute;
-      height: 100%;
-      width: 100%;
-      background-position: center;
-      background-size: 50%;
-      background-repeat: no-repeat;
-      transition: all 0.5s;
+      height: 3px;
+      width: 0;
+      bottom: -6px;
+      background-color: #FDD93F;
+      transition: all .4s;
+      opacity: 0;
+      // background-position: center;
+      // background-size: 50%;
+      // background-repeat: no-repeat;
+      // transition: all 0.5s;
     }
-    // &:hover::after {
-    //   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAAAxCAYAAAC4R6XiAAAACXBIWXMAAAsSAAALEgHS3X78AAABjUlEQVR4nO3cPU6EQBjG8YeNlbZzgbX3Ep7F7a09gLVnsV8vYW+vodV2jIuLIMwMH/PxDvP8CxImJLz8QoCKSmsNFreLrLzr6hrAXW9N6Ydk87iqqwOAfeeoI5Q+5oPegD8CuBQwjbu6ugdw+++415/NTuC4w7YB3iYf3Q7+lWAie3bwT4hHd4PLep7bwV+g9DNEo08BV/otwWTjucGfzjsy0TcMDpHoGweHOPQCwCEKvRBwiEEvCBwi0AsDR3L0AsGRFL1QcCRDLxgcSdALB0d0dIKfiodO8LY46ATvFR6d4IPCohN8tHDoBDcWBp3g1vyjE9yZX3SCT8ofOsEn5wed4LNaj07w2a1DJ/iilqMTfHHL0Am+qvnoBF/dPHSCe2k6OsG9NQ2d4F5zoxPce3Z0ggfJjE7wYI2jEzxoQ3SCB6+PTvAo/aETPFq73wsgeMTOd3pO4IecwdFBzwO8aW9YzwIclu90qeCmsgGHAZ3ggWv+91JXN53TvEPpD7ETNy/9q3Zf6dOfJbIJwDeKs5du3l7a7wAAAABJRU5ErkJggg==);
-    // }
+    &:hover::after {
+      width: 100%;
+      opacity: 1;
+    }
+    &.active::after {
+      width: 100%;
+      opacity: 1;
+    }
   }
   /*
   .flex-ac:first-child .link::before {

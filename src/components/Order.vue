@@ -1,14 +1,31 @@
 <template>
   <div class="order-bg">
-    <img
-      v-if="!isMobile"
-      class="contact-brick"
-      src="@/projects/ab/contact.png"
-    />
     <!-- <img src="@/projects/fs/order/bg.png" alt="" class="bg-img"> -->
     <!-- <img src="@/projects/fs/order/bg1.png" alt="" class="bg-img no-mix"> -->
     <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
     <div class="order-top">
+      <img
+        class="draw2"
+        src="@/assets/img/order-bg-tree.png"
+        alt=""
+        srcset=""
+      />
+      <img class="order-bg-draw" src="@/assets/img/draw/order-bg-draw.png" />
+
+      <div class="fall-container">
+        <img src="@/projects/js/s1/fall-leaf/1.png" />
+        <img class="leaf1" src="@/projects/js/s1/fall-leaf/1.png" />
+        <img class="leaf2" src="@/projects/js/s1/fall-leaf/2.png" />
+        <img class="leaf3" src="@/projects/js/s1/fall-leaf/3.png" />
+        <img class="leaf4" src="@/projects/js/s1/fall-leaf/4.png" />
+        <img class="leaf5" src="@/projects/js/s1/fall-leaf/5.png" />
+        <img class="leaf6" src="@/projects/js/s1/fall-leaf/6.png" />
+        <img class="leaf7" src="@/projects/js/s1/fall-leaf/7.png" />
+        <img class="leaf8" src="@/projects/js/s1/fall-leaf/8.png" />
+        <img class="leaf9" src="@/projects/js/s1/fall-leaf/9.png" />
+        <img class="leaf10" src="@/projects/js/s1/fall-leaf/10.png" />
+      </div>
+
       <!-- <div class="title-block">
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
@@ -282,6 +299,186 @@ export default {
 };
 </script>
 
+<style lang="scss">
+.order-bg-draw {
+  width: 300px;
+  position: absolute;
+  right: 5vw;
+  bottom: 0;
+  z-index: 15;
+}
+.draw2 {
+  width: 100%;
+  left: -1%;
+  top: 0;
+  animation: tree-skew 10s ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: left;
+  transform: skew(0, 0);
+  position: absolute;
+}
+.draw2-bird {
+  width: 3.5%;
+  left: 13vw;
+  top: 6.7vw;
+  animation: bird-skew 4s ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform: skew(0, 0);
+  position: absolute;
+}
+.draw2-leaf1 {
+  width: 30%;
+  left: 0vw;
+  top: 6.7vw;
+  position: absolute;
+}
+.draw2-leaf2 {
+  width: 30%;
+  left: 10vw;
+  top: 6.7vw;
+  position: absolute;
+}
+
+@keyframes tail-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes tree-skew {
+  0% {
+    transform: skew(0, 0);
+  }
+  50% {
+    transform: skew(3deg, 0deg);
+  }
+  100% {
+    transform: skew(0, 0);
+  }
+}
+
+@keyframes bird-skew {
+  0% {
+    transform: skew(0, 0);
+  }
+  50% {
+    transform: skew(8deg, 8deg);
+  }
+  100% {
+    transform: skew(0, 0);
+  }
+}
+
+.fall-container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+
+  img {
+    max-width: 50px;
+    position: absolute;
+    transform-origin: 0px -800px 0px;
+    animation-name: fall, sway;
+    animation-duration: 14s, 14s;
+    animation-fill-mode: both;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    z-index: 10;
+  }
+
+  .leaf {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+  }
+  .leaf1 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf2 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf3 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf4 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf5 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf6 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf7 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf8 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf9 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+  .leaf10 {
+    top: -#{random(200)}px;
+    left: #{random(100)}vw;
+    animation-delay: #{random(10)}s;
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: rotateZ(-15deg) rotateX(55deg);
+  }
+  30% {
+    transform: rotateZ(20deg) rotateX(80deg);
+    animation-timing-function: ease-in-out;
+  }
+  60% {
+    transform: rotateZ(-20deg) rotateX(55deg);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotateZ(0deg) rotateX(10deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes fall {
+  20% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 150vh;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 .bg-img {
@@ -314,13 +511,16 @@ export default {
   textarea,
   button {
     font-family: $family3;
+    background-color: #333;
+    border-radius: 15px !important;
   }
   .order-top {
     background-color: $order_bg_color;
     position: relative;
     overflow: hidden;
     padding-top: 5vw;
-    margin: 0 2vw;
+    padding-bottom: 20vh;
+    //margin: 0 2vw;
   }
   .order-title {
     font-family: $family1;

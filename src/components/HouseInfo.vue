@@ -10,6 +10,8 @@
       </div>
     </div>
     <Footer />
+
+    <img class="house-info-draw" src="@/assets/img/draw/houseinfo-draw.png" />
   </div>
 </template>
 
@@ -37,6 +39,13 @@ export default {
   background: $house_bg;
   position: relative;
   z-index: 1;
+
+  .house-info-draw {
+    width: 80%;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+  }
 }
 .content {
   width: 686px;

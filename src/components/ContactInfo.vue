@@ -1,25 +1,6 @@
 <template>
   <div>
     <div class="contact-info" id="contact-info">
-      <div class="fix-bar fix-bar-1"></div>
-      <div class="fix-bar fix-bar-2"></div>
-      <div class="fix-bar fix-bar-3"></div>
-      <div class="mosaic-box">
-        <Mosaic
-          v-if="!isMobile"
-          :width="30"
-          :height="13"
-          :floatAmount="20"
-          :horizontal="true"
-        />
-        <Mosaic
-          v-else
-          :width="11"
-          :height="15"
-          :floatAmount="10"
-          :horizontal="true"
-        />
-      </div>
       <img
         v-if="!isMobile"
         class="logo"
@@ -158,16 +139,19 @@ export default {
   align-content: center;
   justify-content: space-between;
   position: relative;
-  z-index: 3;
-  width: 100%;
+  z-index: 50;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   min-width: 1000px;
+  margin: 0 auto;
   // height: 480px;
   /* background-size: 100vw auto;
   background-attachment: fixed;
   background-position: 0% 50%; */
-  transform: translateY(0);
   //margin: 2vw auto -2vw;
   padding: 70px 0 30px;
+  position: absolute;
 
   .mosaic-box {
     position: absolute;
@@ -232,7 +216,7 @@ export default {
   width: auto;
   height: $contact_logo_pc_width;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .info {
   width: 880px;
@@ -322,7 +306,7 @@ export default {
   background: $contact_google_btn_bg;
   background-position: center !important;
 
-  //box-shadow: $contact_google_border;
+  box-shadow: $contact_google_border;
   transition: all 0.5s;
   border-radius: 0 50px 50px 0 !important;
 
