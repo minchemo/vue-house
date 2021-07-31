@@ -1,13 +1,13 @@
 export default {
-  address: "台北市大安區杭州南路二段61巷38號",
+  address: "台南市安平區永華路二段503號",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.122683596384!2d121.52230751500623!3d25.029910283974253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a99b5c9008c9%3A0xd609543f48213b6!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5p2t5bee5Y2X6Lev5LqM5q61NjHlt7czOOiZnw!5e0!3m2!1szh-TW!2stw!4v1623742907251!5m2!1szh-TW!2stw",
-  googleLink: "https://goo.gl/maps/oiHRsxA7gAUaz6ec8",
-  phone: "02-23913131",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d772.1349436750648!2d120.17480095241014!3d22.990209015341755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76094667a1d7%3A0x3e6bcd64a684b1a!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5rC46I-v6Lev5LqM5q61NTAz6Jmf!5e0!3m2!1szh-TW!2stw!4v1627747293671!5m2!1szh-TW!2stw",
+  googleLink: "https://goo.gl/maps/aszU9UBQKsEx6HUk8",
+  phone: "06-2930333",
   fbLink:
-    "https://www.facebook.com/%E8%99%B9%E8%80%80%E4%BB%8A%E9%87%87-100616525574893",
-  fbMessage: "https://m.me/100616525574893/",
-  caseName: "虹耀今采",
+    "",
+  fbMessage: "",
+  caseName: "春福御邸",
   indigatorLength: 10,
   houseInfos: [
     ["投資興建", "虹耀建設股份有限公司"],
@@ -25,6 +25,6 @@ export default {
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
     title: "預約賞屋",
-    subTitle: ""
+    subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！"
   }
 };

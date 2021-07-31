@@ -38,18 +38,6 @@
                 </span>
               </span>
             </li>
-            <img
-              v-if="isMobile"
-              class="d-m-1"
-              src="@/projects/ab/mo-nav-1.png"
-              alt=""
-            />
-            <img
-              v-if="isMobile"
-              class="d-m-2"
-              src="@/projects/ab/mo-nav-2.png"
-              alt=""
-            />
           </ul>
         </div>
       </div>

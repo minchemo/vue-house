@@ -1,18 +1,18 @@
-const webpack = require('webpack')
-const path = require('path')
-const meta = require('./src/info/meta')
+const webpack = require("webpack");
+const path = require("path");
+const meta = require("./src/info/meta");
 
 function resolve(dir) {
-  return path.join(__dirname, '.', dir)
+  return path.join(__dirname, ".", dir);
 }
 
 module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src')
-      },
-    },
+        "@": path.resolve(__dirname, "src")
+      }
+    }
     // optimization: {
     //   splitChunks: {
     //     minSize: 10000,
@@ -27,49 +27,64 @@ module.exports = {
   },
 
   chainWebpack: config => {
-    config.module.rules.delete('svg') // 重点:删除默认配置中处理svg,
+    config.module.rules.delete("svg"); // 重点:删除默认配置中处理svg,
     // const svgRule = config.module.rule('svg')
     // svgRule.uses.clear()
 
     config.module
-      .rule('@yzfe/vue-svgicon-loader')
-      .test(/\.svg$/)
-      .include.add(resolve('src/assets/svg')) // 处理svg目录
+      .rule("glslify-loader")
+      .test(/\.(glsl|frag|vert)$/)
+      .use("raw-loader")
+      .loader("raw-loader")
       .end()
-      .use('@yzfe/vue-svgicon-loader')
-      .loader('@yzfe/vue-svgicon-loader')
-      .options({
-        symbolId: 'icon-[name]'
-      })
-    config.plugin('html').tap(args => {
-      args[0].title = meta.info.title
-      args[0].metaTitle = meta.info.title
-      args[0].ogMetaTitle = meta.info.title
-      args[0].metaDescription = meta.info.description
-      args[0].ogMetaDescription = meta.info.description
-      args[0].metaKeywords = meta.info.keywords
-      args[0].ogMetaType = 'website'
+      .use("glslify-loader")
+      .loader("glslify-loader")
+      .end();
 
-      return args
-    })
-    config.plugin('preload')
-      .tap(options => {
-        // for import() lazy routes use initial https://github.com/vuejs/preload-webpack-plugin
-        options.include = 'initial'
-        // or split chunks at the bottom
-        options.include = ['chunk-elementUI']
-        return options
-      })
+    config.module
+      .rule("images")
+      .use("url-loader")
+      .loader("url-loader")
+      .tap(options => Object.assign(options, { limit: 2, esModule: false }));
+
+    config.module
+      .rule("@yzfe/vue-svgicon-loader")
+      .test(/\.svg$/)
+      .include.add(resolve("src/assets/svg")) // 处理svg目录
+      .end()
+      .use("@yzfe/vue-svgicon-loader")
+      .loader("@yzfe/vue-svgicon-loader")
+      .options({
+        symbolId: "icon-[name]"
+      });
+    config.plugin("html").tap(args => {
+      args[0].title = meta.info.title;
+      args[0].metaTitle = meta.info.title;
+      args[0].ogMetaTitle = meta.info.title;
+      args[0].metaDescription = meta.info.description;
+      args[0].ogMetaDescription = meta.info.description;
+      args[0].metaKeywords = meta.info.keywords;
+      args[0].ogMetaType = "website";
+
+      return args;
+    });
+    config.plugin("preload").tap(options => {
+      // for import() lazy routes use initial https://github.com/vuejs/preload-webpack-plugin
+      options.include = "initial";
+      // or split chunks at the bottom
+      options.include = ["chunk-elementUI"];
+      return options;
+    });
     // remove the prefetch plugin
-    config.plugins.delete('prefetch')
+    config.plugins.delete("prefetch");
   },
   configureWebpack: {
     plugins: [
       new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'windows.jQuery': 'jquery',
-      }),
-    ],
-  },
-}
+        $: "jquery",
+        jQuery: "jquery",
+        "windows.jQuery": "jquery"
+      })
+    ]
+  }
+};

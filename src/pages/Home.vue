@@ -1,7 +1,7 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
-    <Navigation />
+    <!--<Navigation />-->
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page
       ref="fullPage"
@@ -11,21 +11,13 @@
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section2" @init="init">
-      <Section2 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section3" @init="init">
-      <Section3 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section4" @init="init">
-      <Section4 />
-    </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
     </vue-lazy-component>
 
-    <MobileNav />
+
+    <!--<MobileNav />-->
   </div>
 </template>
 
@@ -33,17 +25,13 @@
 @import url("https://fonts.googleapis.com/css?family=Playball&display=swap");
 @import "../assets/style/variableColor.scss";
 
-
-.home {
- background: #fff !important;
-}
-
 .section,
 .section .fp-slide,
 .section .fp-tableCell {
   height: auto !important;
 }
 </style>
+
 
 <script>
 // @ is an alias to /src
@@ -57,10 +45,7 @@ import Loading from "@/components/Loading.vue";
 import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/js/section1.vue";
-import Section2 from "@/projects/js/section2.vue";
-import Section3 from "@/projects/js/section3.vue";
-import Section4 from "@/projects/js/section4.vue";
+import Section1 from "@/projects/cfyd/section1.vue";
 
 export default {
   name: "home",
@@ -72,9 +57,6 @@ export default {
     ContactSection,
     MobileNav,
     Section1,
-    Section2,
-    Section3,
-    Section4,
   },
 
   data() {
@@ -127,9 +109,6 @@ export default {
       $("img").each(function (idx, img) {
         $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
       });
-
-      
-
     });
   },
   mounted() {

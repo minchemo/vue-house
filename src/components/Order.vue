@@ -4,28 +4,6 @@
     <!-- <img src="@/projects/fs/order/bg1.png" alt="" class="bg-img no-mix"> -->
     <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
     <div class="order-top">
-      <img
-        class="draw2"
-        src="@/assets/img/order-bg-tree.png"
-        alt=""
-        srcset=""
-      />
-      <img class="order-bg-draw" src="@/assets/img/draw/order-bg-draw.png" />
-
-      <div class="fall-container">
-        <img src="@/projects/js/s1/fall-leaf/1.png" />
-        <img class="leaf1" src="@/projects/js/s1/fall-leaf/1.png" />
-        <img class="leaf2" src="@/projects/js/s1/fall-leaf/2.png" />
-        <img class="leaf3" src="@/projects/js/s1/fall-leaf/3.png" />
-        <img class="leaf4" src="@/projects/js/s1/fall-leaf/4.png" />
-        <img class="leaf5" src="@/projects/js/s1/fall-leaf/5.png" />
-        <img class="leaf6" src="@/projects/js/s1/fall-leaf/6.png" />
-        <img class="leaf7" src="@/projects/js/s1/fall-leaf/7.png" />
-        <img class="leaf8" src="@/projects/js/s1/fall-leaf/8.png" />
-        <img class="leaf9" src="@/projects/js/s1/fall-leaf/9.png" />
-        <img class="leaf10" src="@/projects/js/s1/fall-leaf/10.png" />
-      </div>
-
       <!-- <div class="title-block">
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
@@ -499,7 +477,7 @@ export default {
 }
 .order-bg {
   //background-color: $order_bg_color;
-  //background-image: $order_bg_image;
+  background-image: $order_bg_image;
   background-repeat: no-repeat;
   position: relative;
   background-size: 100vw auto;
@@ -511,11 +489,11 @@ export default {
   textarea,
   button {
     font-family: $family3;
-    background-color: #333;
-    border-radius: 15px !important;
+    background: $order_submit_bg;
+    border-radius: 0 !important;
   }
   .order-top {
-    background-color: $order_bg_color;
+    //background-color: $order_bg_color;
     position: relative;
     overflow: hidden;
     padding-top: 5vw;

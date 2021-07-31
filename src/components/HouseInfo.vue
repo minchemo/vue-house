@@ -1,6 +1,6 @@
 <template>
   <div class="house-info" id="house-info">
-    <div class="content">
+    <div class="content" v-show="false">
       <h3 class="title">建案資訊</h3>
       <div class="info">
         <div class="item" :key="infos[0]" v-for="infos in houseInfos">
@@ -10,8 +10,6 @@
       </div>
     </div>
     <Footer />
-
-    <img class="house-info-draw" src="@/assets/img/draw/houseinfo-draw.png" />
   </div>
 </template>
 

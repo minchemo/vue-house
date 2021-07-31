@@ -78,14 +78,12 @@ import CallDialog from "@/components/Dialog/Call";
 import MessengerDialog from "@/components/Dialog/Messenger";
 import MapDialog from "@/components/Dialog/Map";
 
-import Mosaic from "@/projects/ab/mosaic.vue";
 export default {
   name: "contactInfo",
   components: {
     CallDialog,
     MessengerDialog,
     MapDialog,
-    Mosaic,
   },
   data() {
     return {
@@ -213,8 +211,8 @@ export default {
 }
 
 .logo {
-  width: auto;
-  height: $contact_logo_pc_width;
+  width: 80%;
+  //height: $contact_logo_pc_width;
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -355,6 +353,7 @@ export default {
     position: relative;
     margin: 30vw auto 0 auto;
     min-width: unset;
+    left: unset;
 
     .mosaic-box {
       position: absolute;
@@ -365,8 +364,10 @@ export default {
 
     .logo {
       //width: $contact_logo_mobile_width;
-      width: auto;
-      margin-left: -2vw;
+      width: 80%;
+      //margin-left: -2vw;
+      margin: 0 auto;
+      margin-bottom: 5vh;
     }
 
     .fix-bar {
