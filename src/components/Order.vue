@@ -501,7 +501,8 @@ export default {
     //margin: 0 2vw;
   }
   .order-title {
-    font-family: $family1;
+    font-family: DFLiSongStd;
+    //font-family: $family1;
     width: 80vw;
     padding-top: 20px;
     padding-bottom: 8px;
@@ -660,6 +661,7 @@ export default {
     }
     .order-top {
       top: 10vw;
+      padding-bottom: 0;
     }
     .order {
       width: 95% !important;

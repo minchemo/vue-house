@@ -5,8 +5,8 @@ export default {
   googleLink: "https://goo.gl/maps/aszU9UBQKsEx6HUk8",
   phone: "06-2930333",
   fbLink:
-    "",
-  fbMessage: "",
+    "https://www.facebook.com/%E6%98%A5%E7%A6%8F%E6%A9%9F%E6%A7%8B-%E6%96%B0%E4%BD%9C-105225588476358/",
+  fbMessage: "https://m.me/105225588476358/",
   caseName: "春福御邸",
   indigatorLength: 10,
   houseInfos: [

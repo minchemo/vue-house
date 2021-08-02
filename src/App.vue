@@ -62,7 +62,6 @@
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:200,300,400,500,600,700,900&subset=chinese-traditional");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
 
 .icon {
   position: fixed;

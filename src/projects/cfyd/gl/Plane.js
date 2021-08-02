@@ -42,10 +42,9 @@ export default class extends GlObject {
 
     Gl.scene.add(this);
 
-
     gsap.to(this.material.uniforms.uProg, {
-      duration:20,
-      value: 1,
+      //duration:20,
+      value: 1
       //ease: "power.inOut"
     });
 

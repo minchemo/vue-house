@@ -1,5 +1,9 @@
 @import './variableColor.scss';
 
+.el-input__icon {
+    font-family: element-icons !important;
+}
+
 .el-dialog{
    // height:calc(100% - 123px) !important;
    margin-top: 60px !important;

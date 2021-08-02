@@ -284,8 +284,6 @@
       <div class="aspect" style="--aspect: 177.9%"></div>
       <img class="item__img" src="~@/projects/cfyd/s1/bg-mo.jpg" />
     </figure>
-
-
   </div>
 </template>
 
@@ -297,9 +295,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scale(1.25);
+  transform: scale(1.2);
   transform-origin: center;
-  background-image: url('~@/projects/cfyd/s1/bg.jpg');
+  background-image: url("~@/projects/cfyd/s1/bg.jpg");
   background-size: cover;
 }
 </style>
@@ -419,15 +417,14 @@ export default {
         elements.forEach((el, index) => {
           new Plane().init(el, index);
         });
-        const smooth = new Smooth();
-
-        this.getCanvas();
+        //const smooth = new Smooth();
+        this.canvasFollowUp();
       });
     },
-    getCanvas() {
-      //const canvas = document.querySelector(".dom-gl");
-      //document.querySelector(".section1").appendChild(canvas);
-      //$(".item__img").remove();
+    canvasFollowUp() {
+      $(document).scroll(function () {
+        $(".dom-gl").css("top", $(this).scrollTop() / 10);
+      });
     },
   },
 

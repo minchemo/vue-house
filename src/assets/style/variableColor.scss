@@ -35,7 +35,7 @@ $mask_icon_color: #c82514;
 /* contactSection */
 // order
 $order_bg_color: transparent;
-$order_bg_image: url('~@/assets/img/order-bg.png');
+$order_bg_image: url("~@/assets/img/order-bg.png");
 $order_bg_image_m: transparent;
 $order_title_color: #fff;
 $order_subtitle_color: #fff;
@@ -48,13 +48,31 @@ $order_input_focus_border: solid 1px #333333 !important;
 $order_input_selected_color: solid 1px #333333 !important;
 $order_check_desc_color: #000 !important;
 $order_check_span_color: #000 !important;
-$order_submit_bg: linear-gradient(45deg, rgba(254,160,22,1) 0%, rgba(237,0,0,1) 100%) !important;
+$order_submit_bg: linear-gradient(
+  45deg,
+  rgba(254, 160, 22, 1) 0%,
+  rgba(237, 0, 0, 1) 100%
+) !important;
 $order_submit_color: #fff !important;
-$order_sumbit_disable_bg: linear-gradient(45deg, rgba(254,160,22,1) 0%, rgba(237,0,0,1) 100%) !important;
+$order_sumbit_disable_bg: linear-gradient(
+  45deg,
+  rgba(254, 160, 22, 1) 0%,
+  rgba(237, 0, 0, 1) 100%
+) !important;
 
 // contactInfo
-$contact_bg: linear-gradient(135deg, rgba(254,160,22,1) 0%, rgba(237,0,0,1) 50%, rgba(124,0,189,1) 100%);
-$contact_bg_m: linear-gradient(135deg, rgba(254,160,22,1) 0%, rgba(237,0,0,1) 50%, rgba(124,0,189,1) 100%);
+$contact_bg: linear-gradient(
+  135deg,
+  rgba(254, 160, 22, 1) 0%,
+  rgba(237, 0, 0, 1) 50%,
+  rgba(124, 0, 189, 1) 100%
+);
+$contact_bg_m: linear-gradient(
+  135deg,
+  rgba(254, 160, 22, 1) 0%,
+  rgba(237, 0, 0, 1) 50%,
+  rgba(124, 0, 189, 1) 100%
+);
 $contact_shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
 
 $contact_btn_border: inset 0 0 0px 1.2px #fff;
@@ -63,26 +81,26 @@ $contact_btn_icon: #fff;
 $contact_btn_bg: transparent;
 $contact_btn_hover_color: #333;
 $contact_btn_hover_icon: #333;
-$contact_btn_hover_bg: #FDD93F;
+$contact_btn_hover_bg: #fdd93f;
 
 $contact_google_btn_color: #333;
 $contact_google_btn_icon: #333;
-$contact_google_btn_bg: #FFF000;
+$contact_google_btn_bg: #fff000;
 $contact_google_border: inset 0 0 0px 1.2px #fff000;
 $contact_google_hover_btn_color: #333;
 $contact_google_hover_btn_icon: #333;
-$contact_google_hover_btn_bg: #FDD93F;
+$contact_google_hover_btn_bg: #fdd93f;
 $contact_google_hover_border: inset 0 0 0px 1.2px #fdd93f;
 
 // houseInfo
-$house_bg: #FDD93F;
+$house_bg: #fdd93f;
 $house_title_color: #333;
 $house_border_color: #333;
 $house_label_color: #333;
 $house_desc_color: #000;
 
 // mobileNav
-$mobile_nav_background: #FF8400;
+$mobile_nav_background: #ff8400;
 $mobile_nav_color: #fff;
 $mobile_nav_border: #fff;
 $mobile_nav_icon: #fff;

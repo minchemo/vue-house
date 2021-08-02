@@ -19,7 +19,7 @@
     "cache-loader": "^4.1.0",
     "core-js": "^2.6.12",
     "createjs-cmd": "^0.1.0",
-    "element-ui": "^2.10.1",
+    "element-ui": "^2.15.3",
     "file-loader": "^5.0.2",
     "glsl-noise": "^0.0.0",
     "glslify": "^7.0.0",

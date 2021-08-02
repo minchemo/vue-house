@@ -32,6 +32,20 @@ module.exports = {
     // svgRule.uses.clear()
 
     config.module
+      .rule("fonts")
+      .test(/\.(ttf|otf|eot|woff|woff2)$/)
+      .use("file-loader")
+      .loader("file-loader")
+      .tap(options => {
+        options = {
+          // limit: 10000,
+          name: "/assets/font/[name].[ext]"
+        };
+        return options;
+      })
+      .end();
+
+    config.module
       .rule("glslify-loader")
       .test(/\.(glsl|frag|vert)$/)
       .use("raw-loader")
