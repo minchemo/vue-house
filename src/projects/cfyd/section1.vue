@@ -297,8 +297,9 @@
   height: 100%;
   transform: scale(1.2);
   transform-origin: center;
-  background-image: url("~@/projects/cfyd/s1/bg.jpg");
+  //background-image: url("~@/projects/cfyd/s1/bg.jpg");
   background-size: cover;
+  background-color:#000;
 }
 </style>
 
