@@ -78,14 +78,14 @@ import CallDialog from "@/components/Dialog/Call";
 import MessengerDialog from "@/components/Dialog/Messenger";
 import MapDialog from "@/components/Dialog/Map";
 
-import Mosaic from "@/projects/ab/mosaic.vue";
+//import Mosaic from "@/projects/ab/mosaic.vue";
 export default {
   name: "contactInfo",
   components: {
     CallDialog,
     MessengerDialog,
     MapDialog,
-    Mosaic,
+    //Mosaic,
   },
   data() {
     return {
