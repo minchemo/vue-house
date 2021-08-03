@@ -12,36 +12,40 @@
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section2 {
-  height: 90vh;
+  height: calc(100vh - 60px);
+  max-height: calc(108000vw / 1920 - 60px);
+  min-height: calc(90000vw / 1920 - 60px);
   .bg {
     position: absolute;
     z-index: 0;
     width: 100%;
     height: 100%;
+    background: url("~@/projects/js/s2/bg.jpg") center;
     background-size: cover;
-    background-image: url("~@/projects/js/s2/bg.jpg");
   }
   .title-box {
     position: absolute;
     z-index: 1;
     color: #fff;
     text-align: left;
-    left: 200px;
-    top: 200px;
+    left:7em;
+    top:calc(50% - 11em);
+    font-size: calc(2300vw / 1920);
+      line-height: 1.6;
     .title {
-      font-size: 80px;
+      font-size:3em;
       font-weight: bold;
       span {
         color: #fdd93f;
       }
     }
+    
     .subtitle {
-      margin-top: 40px;
-      font-size: 30px;
+      margin-top: 0.8em;
       text-align: justify;
-      letter-spacing: 3px;
-      line-height: 1.5;
-      width: 670px;
+      font-weight: 500;
+      letter-spacing:0.1em;
+      width: 25em;
     }
   }
 }
@@ -51,6 +55,15 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+.section2 {
+  height: calc(100vh - 123px);
+  max-height: calc(81200vw / 375 - 123px);
+  min-height: calc(66700vw / 375 - 123px);
+  .bg {
+    background:#395fb2 url("~@/projects/js/s2/bg-m.jpg") no-repeat bottom center;
+    background-size: contain;
+  } 
+}
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

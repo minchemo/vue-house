@@ -67,7 +67,7 @@
         />
         <p>搶先<br />預約</p>
       </div>
-      <div class="subtitle">首席校園宅2-3房，40米大棟距</div>
+      <div class="subtitle">首席校園宅<span>2-3</span>房<span v-if="!isMobile">，</span><br v-if="isMobile" /><span>40</span>米大棟距</div>
     </div>
   </div>
 </template>
@@ -76,6 +76,8 @@
 .section1 {
   margin-top: 60px;
   height: calc(100vh - 60px);
+  max-height: calc(108000vw / 1920 - 60px);
+  min-height: calc(90000vw / 1920 - 60px);
   background-color: #fdd93f;
   overflow: hidden;
   position: relative;
@@ -90,9 +92,9 @@
     }
     .logo-cattail {
       position: absolute;
-      width: 3.5%;
-      right: 55.5%;
-      bottom: 38%;
+      width: 25px;
+      right: calc(50% + 39px);
+      top:198px;
       animation: tail-rotate 5s ease-in-out;
       animation-iteration-count: infinite;
       transform-origin: right top;
@@ -112,13 +114,14 @@
     }
     .subtitle {
       border: 3px solid #fff;
-      border-radius: 50px;
-      font-size: 48px;
-      font-weight: bolder;
-      padding: 36px;
+      border-radius: 1em;
+      font-size: calc(4800vw / 1920);
+      font-weight: 800;
+      padding:0.75em;
       color: #000;
-      margin-top: 48px;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      margin-top: 1em;
+      span{font-size:1.25em;vertical-align:-0.05em;}
+     /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
     }
     .order {
       position: absolute;
@@ -145,7 +148,7 @@
         font-size: 40px;
         color: #fff;
         font-weight: bolder;
-        letter-spacing: 4px;
+        letter-spacing: 0.1em;
         line-height: 1.2;
       }
     }
@@ -352,7 +355,68 @@
 }
 
 /* 手機尺寸 */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px){
+.section1 {
+  margin-top: 60px;
+  height: calc(100vh - 123px);
+  max-height: calc(81200vw / 375 - 123px);
+  min-height: calc(66700vw / 375 - 123px);
+  background-color: #fdd93f;
+  overflow: hidden;
+  position: relative;
+  
+  .title-box {
+ //   margin-top:calc(3000vw / 375);
+ margin-top:calc(-1000vw / 375);
+    .title-logo {
+      width:calc(20400vw / 375);
+    }
+    .logo-cattail {
+      width:calc(1200vw / 375);
+      right: calc(50% + (2000vw / 375));
+      top:calc(10000vw / 375);}
+    .subtitle {width: 9.5em;
+      font-size: calc(2800vw / 375);
+      padding: 0.2em 0;
+      line-height: 1.4;
+    }
+    .order {
+      left:calc(-1000vw / 375);
+      top: calc(50% + 13000vw / 375);
+      bottom: auto;
+      img {
+        width: calc(14000vw / 375);height: auto;
+      }
+      p {
+        font-size: calc(2600vw / 375);
+        top: 50%;
+      }
+
+    }
+  }
+  .draw {
+    .draw1 {
+    width: 166%;
+    right: -13%;
+    }
+    .draw1-cattail {
+      width: 6.5%;
+    right: 43.5vw;
+    bottom: 5.6vw;
+      }
+    .draw2 {
+    width: 119%;
+    left: -15%;
+    top: -16vw;
+    }
+    .draw2-bird {
+    width: 12%;
+    left: 19vw;
+    top: 3.7vw;
+    }
+  }
+  
+}
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

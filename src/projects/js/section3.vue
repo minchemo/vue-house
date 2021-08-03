@@ -13,12 +13,12 @@
         src="~@/projects/js/s3/view.jpg"
         alt=""
       />
-      <img
+   <!--    <img
         class="view-img line"
         ref="viewImg"
         src="~@/projects/js/s3/line.gif"
         alt=""
-      />
+      />  -->
       <img
         v-if="isMobile"
         class="view-hand"
@@ -42,22 +42,22 @@
     z-index: 10;
     background: #fdd93f;
     text-align: left;
-    padding: 20px;
+    padding:0.77em;
     color: #000;
-    width: 400px;
+    width:16.8em;
+    font-size: calc(2300vw / 1920);
+      line-height: 1.6;
     h3 {
-      font-size: 70px;
-      font-weight: bolder;
+      font-size:3em;
+      font-weight: 900;
       line-height: 1.2;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+   //  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
     p {
-      margin-top: 12px;
-      font-size: 26px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      line-height: 1.5;
+      margin-top:0.46em;
+      margin-bottom:0.38em;
+      font-weight: 500;
+      letter-spacing:0.07em;
       text-align: justify;
     }
   }
@@ -65,12 +65,12 @@
   .view {
     background-color: #fad2cd;
     .view-img {
-      width: 100%;
-      transform: translate(-1px, 3px);
+      width: 100%;vertical-align: middle;
+     // transform: translate(-1px, 3px);
     }
     .line {
       width: 100%;
-      transform: translate(-1px, 3px);
+    // transform: translate(-1px, 3px);
       position: absolute;
       z-index: 1;
       left: 0;

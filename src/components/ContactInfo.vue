@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <div class="contact-info" id="contact-info">
+  <div id="contact-info">
+      <img class="order-bg-draw" src="@/assets/img/draw/order-bg-draw.png" />
+    <div class="contact-info">
       <img
         v-if="!isMobile"
         class="logo"
@@ -128,7 +129,16 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
-
+#contact-info{
+position: relative;
+background-color: $order_bg_color;}
+.order-bg-draw {
+  width: calc(30000 / 1920);
+  position: absolute;
+  right: 5vw;
+  bottom: 2.8vw;
+  z-index: 15;
+}
 .contact-info {
   background: $contact_bg;
   // background-image: url('../assets/img/contact_bg.jpg');/
@@ -141,8 +151,8 @@ export default {
   position: relative;
   z-index: 50;
   width: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /*left: 50%;
+  transform: translate(-50%, -50%);*/
   min-width: 1000px;
   margin: 0 auto;
   // height: 480px;
@@ -151,7 +161,8 @@ export default {
   background-position: 0% 50%; */
   //margin: 2vw auto -2vw;
   padding: 70px 0 30px;
-  position: absolute;
+ // position: absolute;
+ margin-bottom: -2.8vw;
 
   .mosaic-box {
     position: absolute;

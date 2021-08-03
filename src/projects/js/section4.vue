@@ -6,7 +6,7 @@
           <h2>
             15min<br />
             台北101<br />
-            房價更輕鬆
+            <b>房價更輕鬆</b>
           </h2>
           <p>
             開車約30秒上「基隆中和交流道」速遊八方，約2分鐘抵「復興商圈」豐美隨享，6分鐘達基隆市區，約15鐘串聯北市各精華商圈。一樣通勤時間，聰明選擇房價大不同。
@@ -161,16 +161,17 @@
           max-width: 40%;
           padding-right: 50px;
           align-self: flex-start;
+    font-size: calc(2300vw / 1920);
+      line-height: 1.6;
           h2 {
-            font-size: 80px;
+      font-size:3em;
             text-align: left;
-            font-weight: bold;
+            font-weight: 800;
             line-height: 1.2;
+            b{font-weight: 500;}
           }
           p {
-            font-size: 35px;
             text-align: justify;
-            line-height: 1.5;
             margin-top: 20px;
           }
         }
@@ -182,18 +183,19 @@
           bottom: 0;
         }
         .draw2 {
-          width: 400px;
+          width: calc(40000vw / 1920);
           position: absolute;
           z-index: 0;
-          left: 400px;
-          bottom: -100px;
+          left: calc(14000vw / 1920);
+          bottom: calc(-9500vw / 1920);
+          top: auto;
         }
         .draw3 {
-          width: 200px;
+          width:calc(15000vw / 1920);
           position: absolute;
           z-index: 0;
-          left: 500px;
-          top: 100px;
+          left:calc(43000vw / 1920);
+          top:calc(10000vw / 1920);
         }
       }
       .swiper-box {
@@ -223,19 +225,20 @@
         position: absolute;
         display: flex;
         align-items: flex-end;
-        left: 30px;
-        bottom: 30px;
+        left:1.3em;
+        bottom:1.3em;
+    font-size: calc(2000vw / 1920);
         .t1 {
-          font-size: 70px;
+      font-size:3em;
           text-align: justify;
           text-align-last: justify;
-          font-weight: bold;
+          font-weight:900;
           line-height: 1.2;
         }
         .t2 {
-          font-size: 70px;
+      font-size:2.9em;
           font-weight: 500;
-          margin-left: 30px;
+          margin-left:0.43em;
           line-height: 1.2;
         }
       }

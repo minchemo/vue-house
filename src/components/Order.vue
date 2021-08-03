@@ -10,7 +10,6 @@
         alt=""
         srcset=""
       />
-      <img class="order-bg-draw" src="@/assets/img/draw/order-bg-draw.png" />
 
       <div class="fall-container">
         <img src="@/projects/js/s1/fall-leaf/1.png" />
@@ -377,7 +376,7 @@ export default {
 }
 
 .fall-container {
-  height: 100vh;
+ // height: 100vh;
   width: 100%;
   overflow: hidden;
   position: absolute;
@@ -518,8 +517,8 @@ export default {
     background-color: $order_bg_color;
     position: relative;
     overflow: hidden;
-    padding-top: 5vw;
-    padding-bottom: 20vh;
+    padding: 5vw 0;
+   // padding-bottom: 20vh;
     //margin: 0 2vw;
   }
   .order-title {
@@ -584,17 +583,23 @@ export default {
   .group {
     height: 250px;
     margin-bottom: 40px;
+    align-content:space-between;display: flex;
+    flex-wrap: wrap;
 
     &:nth-child(1) {
       border-right: 1px solid rgba(0, 0, 0, 0.2);
+      margin-right:40px ;
+      padding-right: 40px;
       .row {
-        justify-content: flex-start;
+        width: 100%;
+       // justify-content: flex-start;
+        .el-input{width: auto;}
       }
     }
     &:nth-child(2) {
       .row {
         justify-content: flex-end;
-        align-items: flex-start;
+        align-items: flex-start;height: 100%;
       }
     }
   }
@@ -602,7 +607,9 @@ export default {
   .row {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    align-content:space-between;
+    justify-content:space-between;
+    //margin-bottom: 15px;
 
     &.house {
       margin-top: 50px;
@@ -613,7 +620,7 @@ export default {
     }
 
     label {
-      width: 92px;
+      width:4vw;
       font-size: 16px;
       font-weight: 500;
       opacity: 0.8;

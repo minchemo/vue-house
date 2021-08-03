@@ -12,7 +12,8 @@
             data-aos-duration="1500"
           />
           <div class="menu" @click="toggleSidebar">
-            <font-awesome-icon icon="bars" />
+            <div class="icon-menu"></div>
+            <!-- <font-awesome-icon icon="bars" />  -->
           </div>
           <div :class="`mask ${isOpen ? 'open' : ''}`" @click="toggleSidebar" />
           <ul :class="`navlist ${isOpen ? 'open' : ''}`">
@@ -290,6 +291,26 @@ export default {
 .menu {
   display: none;
 }
+.icon-menu{
+font-size:35px;
+width: 1em;
+height: 2px;
+padding: 0;
+background: #fff;
+&::before,
+&::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 100%;
+background: #fff;
+}
+&::before{transform: translateY(-500%);}
+&::after{transform: translateY(500%);}
+
+}
 .link {
   color: rgba(0, 0, 0, 0.7);
   font-size: 16px;
@@ -338,9 +359,9 @@ export default {
   }
   .logo {
     //width: $logo_phone_width;
-    height: 30px;
-    left: 25px;
-    top: 15px;
+    height: 45px;
+    left: 20px;
+    top: 13px;
   }
   .mo {
     display: block;
