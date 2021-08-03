@@ -45,15 +45,15 @@ module.exports = {
       })
       .end();
 
-    config.module
-      .rule("glslify-loader")
-      .test(/\.(glsl|frag|vert)$/)
-      .use("raw-loader")
-      .loader("raw-loader")
-      .end()
-      .use("glslify-loader")
-      .loader("glslify-loader")
-      .end();
+    // config.module
+    //   .rule("glslify-loader")
+    //   .test(/\.(glsl|frag|vert)$/)
+    //   .use("raw-loader")
+    //   .loader("raw-loader")
+    //   .end()
+    //   .use("glslify-loader")
+    //   .loader("glslify-loader")
+    //   .end();
 
     config.module
       .rule("images")

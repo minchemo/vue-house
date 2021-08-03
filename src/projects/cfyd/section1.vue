@@ -275,6 +275,7 @@
       </div>
     </div>
 
+    <!-- 
     <figure v-if="!isMobile" class="item__fig js-plane">
       <div class="aspect" style="--aspect: 56.25%"></div>
       <img class="item__img" src="~@/projects/cfyd/s1/bg.jpg" />
@@ -283,30 +284,17 @@
     <figure v-else class="item__fig js-plane">
       <div class="aspect" style="--aspect: 177.9%"></div>
       <img class="item__img" src="~@/projects/cfyd/s1/bg-mo.jpg" />
-    </figure>
+    </figure> -->
+
+    <div class="bg"></div>
   </div>
 </template>
-
-<style lang="scss">
-.dom-gl {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: scale(1);
-  transform-origin: center;
-  //background-image: url("~@/projects/cfyd/s1/bg.jpg");
-  background-size: cover;
-  background-color: #000;
-}
-</style>
 
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section1 {
   min-height: 100vh;
+  overflow: hidden;
   .title {
     position: absolute;
     z-index: 10;
@@ -329,16 +317,25 @@
     }
   }
 
-  .aspect {
-    padding-top: var(--aspect);
+  .bg {
+    position: absolute;
+    background-image: url("~@/projects/cfyd/s1/bg.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    animation: skew 2s ease-in-out 0s infinite alternate-reverse;
   }
 
-  .item__img {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
+  @keyframes skew {
+    0% {
+      transform: skewX(-5deg) scale(1.1);
+    }
+    100% {
+      transform: skewX(5deg) scale(1.1);
+    }
   }
 }
 /* 平板尺寸 */
@@ -358,6 +355,7 @@
       left: 0;
       top: 0;
       z-index: 1;
+    animation: skew 1.5s ease-in-out 0s infinite alternate-reverse;
     }
 
     .title {
@@ -383,6 +381,15 @@
       }
     }
   }
+
+  @keyframes skew {
+    0% {
+      transform: skewX(-2deg) scale(1.1);
+    }
+    100% {
+      transform: skewX(2deg) scale(1.1);
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -398,10 +405,6 @@
 // @ is an alias to /src
 import { isMobile } from "@/utils";
 
-import Smooth from "./components/Smooth";
-import Plane from "./gl/Plane";
-import { preloadImages } from "./utils";
-
 export default {
   name: "section1",
 
@@ -411,27 +414,9 @@ export default {
     };
   },
 
-  methods: {
-    initJsPlane() {
-      preloadImages().then(() => {
-        const elements = document.querySelectorAll(".js-plane");
-        elements.forEach((el, index) => {
-          new Plane().init(el, index);
-        });
-        //const smooth = new Smooth();
-        this.canvasFollowUp();
-      });
-    },
-    canvasFollowUp() {
-      $(document).scroll(function () {
-        $(".dom-gl").css("top", $(this).scrollTop() / 10);
-      });
-    },
-  },
+  methods: {},
 
-  mounted() {
-    this.initJsPlane();
-  },
+  mounted() {},
   created() {},
 };
 </script>
