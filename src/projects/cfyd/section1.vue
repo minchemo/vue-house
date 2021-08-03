@@ -295,11 +295,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scale(1.2);
+  transform: scale(1);
   transform-origin: center;
   //background-image: url("~@/projects/cfyd/s1/bg.jpg");
   background-size: cover;
-  background-color:#000;
+  background-color: #000;
 }
 </style>
 
