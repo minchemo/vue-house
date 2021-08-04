@@ -348,7 +348,7 @@ export default {
     display: flex;
     width: 100%;
     height: auto;
-    padding: 40px;
+    padding: 40px 25px;
     transform: none;
     position: relative;
     margin: 30vw auto 0 auto;
@@ -394,6 +394,7 @@ export default {
   }
 
   .btn {
+    width: 100%;
     &.half {
       width: 280px;
     }
@@ -432,12 +433,13 @@ export default {
   }
 
   .address {
-    width: 280px;
+    width: 100%;
     padding: 0 1em;
     text-align: justify;
     border-radius: 0 0 30px 30px;
     + .google-btn,
     + .btn {
+      width: 100%;
       border-radius: 0 0 30px 30px !important;
     }
   }

@@ -286,12 +286,15 @@
   min-height: 100vh;
   overflow: hidden;
   .title {
+    width: 20vw;
     position: absolute;
     z-index: 10;
-    right: 20vw;
-    bottom: 10vw;
+    right: 18vw;
+    bottom: 5vw;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.555));
     .t1 {
-      width: 20vw;
+      width: 26vw;
+      margin-bottom: 15px;
       svg {
         .cls-1 {
           fill: #fff;
@@ -327,7 +330,8 @@
     left: 0;
     top: 0;
     z-index: 1;
-    mix-blend-mode: overlay;
+    mix-blend-mode: screen;
+     filter: blur(15px);
   }
 }
 /* 平板尺寸 */
@@ -345,10 +349,11 @@
     .bg-gif {
       background-size: auto 100%;
       background-position-x: 50%;
-      mix-blend-mode: overlay;
+      mix-blend-mode: screen;
     }
 
     .title {
+      width: 63vw;
       position: absolute;
       z-index: 5;
       left: 10vw;

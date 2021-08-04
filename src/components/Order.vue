@@ -664,7 +664,7 @@ export default {
       padding-bottom: 0;
     }
     .order {
-      width: 95% !important;
+      width: 85% !important;
       margin: 0 auto;
       padding: 0;
     }
