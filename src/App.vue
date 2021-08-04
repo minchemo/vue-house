@@ -89,11 +89,11 @@
     position: fixed;
     z-index: 5;
     right: 50%;
-    bottom: 3px;
+    bottom: 60px;
     width: 80vw;
     transform: translateX(50%);
     svg {
-      width: 100%;
+      width: 85%;
       .cls-1 {
         fill: url(#未命名漸層_77);
       }

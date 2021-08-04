@@ -358,7 +358,7 @@
       z-index: 5;
       left: 10vw;
       right: unset;
-      bottom: 20vw;
+      bottom: 28vw;
       .t1 {
         width: 70vw;
         svg {
