@@ -126,7 +126,7 @@ export default {
   .content {
     width: 100%;
     margin-bottom: 20px;
-    padding-bottom: 0;
+    padding-bottom: 15vh;
   }
 
   .title {
@@ -146,6 +146,10 @@ export default {
 
   .info {
     width: 100%;
+  }
+
+  .house-info-draw {
+    width: 200% !important;
   }
 }
 

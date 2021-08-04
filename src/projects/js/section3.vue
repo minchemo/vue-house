@@ -6,6 +6,7 @@
         「市港再生標竿計畫」讓基隆港轉型，近年國門廣場、城際轉運站等開花結果，城市蛻變，從潛力股一躍成為績優股，迎上世界潮流，打造大台北首都圈海洋門戶。
       </p>
     </div>
+    <div v-if="isMobile" class="title-bg"></div>
     <div class="view" ref="view" data-aos="fade-up">
       <img
         class="view-img"
@@ -13,7 +14,7 @@
         src="~@/projects/js/s3/view.jpg"
         alt=""
       />
-   <!--    <img
+      <!--    <img
         class="view-img line"
         ref="viewImg"
         src="~@/projects/js/s3/line.gif"
@@ -27,7 +28,20 @@
         alt=""
       />
     </div>
-    <img class="draw" src="@/projects/js/s3/draw.png" alt="" srcset="" />
+    <img
+      v-if="!isMobile"
+      class="draw"
+      src="@/projects/js/s3/draw.png"
+      alt=""
+      srcset=""
+    />
+    <img
+      v-else
+      class="draw"
+      src="@/projects/js/s3/draw-mo.png"
+      alt=""
+      srcset=""
+    />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -35,6 +49,7 @@
 /* 螢幕尺寸標準 */
 .section3 {
   height: auto;
+  background-color: #1c7cc1;
   .title {
     position: absolute;
     right: 10vw;
@@ -42,35 +57,36 @@
     z-index: 10;
     background: #fdd93f;
     text-align: left;
-    padding:0.77em;
+    padding: 0.77em;
     color: #000;
-    width:16.8em;
+    width: 16.8em;
     font-size: calc(2300vw / 1920);
-      line-height: 1.6;
+    line-height: 1.6;
     h3 {
-      font-size:3em;
+      font-size: 3em;
       font-weight: 900;
       line-height: 1.2;
-   //  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      //  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
     p {
-      margin-top:0.46em;
-      margin-bottom:0.38em;
+      margin-top: 0.46em;
+      margin-bottom: 0.38em;
       font-weight: 500;
-      letter-spacing:0.07em;
+      letter-spacing: 0.07em;
       text-align: justify;
     }
   }
 
   .view {
-    background-color: #fad2cd;
+    background-color: #1c7cc1;
     .view-img {
-      width: 100%;vertical-align: middle;
-     // transform: translate(-1px, 3px);
+      width: 100%;
+      vertical-align: middle;
+      // transform: translate(-1px, 3px);
     }
     .line {
       width: 100%;
-    // transform: translate(-1px, 3px);
+      // transform: translate(-1px, 3px);
       position: absolute;
       z-index: 1;
       left: 0;
@@ -88,6 +104,7 @@
     animation-iteration-count: infinite;
     transform-origin: center;
     transform: skew(0, 0);
+    pointer-events: none;
   }
   @keyframes bird-skew {
     0% {
@@ -109,46 +126,68 @@
   .section3 {
     min-height: unset;
     height: auto;
+    padding-top: 40vh;
+
+    .title-bg {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      width: 100%;
+      height: 50vh;
+      background: rgb(28, 124, 193);
+      background: linear-gradient(
+        180deg,
+        rgba(28, 124, 193, 1) 0%,
+        rgba(28, 124, 193, 1) 80%,
+        rgba(28, 124, 193, 0) 100%
+      );
+      pointer-events: none;
+    }
+
     .title {
       position: absolute;
-      left: 0;
-      top: 5vw;
-      z-index: 1;
-      width: 100%;
-      background: #fff;
+      left: 50%;
+      top: 0;
+      width: 90%;
+      transform: translate(-50%, 10%);
+      background: #fdd93f;
       font-family: $family1;
       text-align: left;
-      padding-top: 5vw;
-      padding-bottom: 5vw;
-      padding-left: 10vw;
-      color: #d20028;
-      h5 {
-        font-size: 14px;
-        margin-bottom: 10px;
+      padding: 5%;
+      color: #333;
+      p {
+        font-size: 16px;
+        margin-top: 3vh;
       }
       h3 {
-        font-size: 7vw;
+        font-size: 5vh;
       }
     }
     .view {
-      background-color: #fad2cd;
       overflow-y: hidden;
       overflow-x: scroll;
       height: 0;
       padding-bottom: 150.7%;
       .view-hand {
         position: absolute;
-        width: 30%;
+        width: 100%;
         z-index: 1;
-        bottom: 20%;
-        left: 50%;
-        margin-left: -15%;
+        bottom: 30%;
+        left: 0;
       }
       .view-img {
         width: unset !important;
         height: 100%;
         transform: translate(-1px, 3px);
       }
+    }
+    .draw {
+      position: absolute;
+      z-index: 20;
+      width: 90%;
+      right: 5%;
+      top: 5%;
+      pointer-events: none;
     }
   }
 }
@@ -175,8 +214,11 @@ export default {
       const el = this.$refs.view;
       const imgEl = this.$refs.viewImg;
       const handEl = this.$refs.viewHand;
+
+      const offset = 110; //置中偏移微調
+
       $(imgEl).one("load", () => {
-        const scrollTarget = (el.scrollWidth - $(window).width()) / 2;
+        const scrollTarget = (el.scrollWidth - $(window).width()) / 2 + offset;
         el.scrollLeft = scrollTarget;
         setTimeout(() => {
           $(el).one("scroll", () => {

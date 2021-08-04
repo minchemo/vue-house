@@ -7,6 +7,7 @@
       </div>
     </div>
     <div class="bg"></div>
+    <img v-if="isMobile" src="@/projects/js/s2/draw-mo.png" class="draw-mo" alt="" srcset="">
   </div>
 </template>
 <style lang="scss" scoped>
@@ -28,23 +29,23 @@
     z-index: 1;
     color: #fff;
     text-align: left;
-    left:7em;
-    top:calc(50% - 11em);
+    left: 7em;
+    top: calc(50% - 11em);
     font-size: calc(2300vw / 1920);
-      line-height: 1.6;
+    line-height: 1.6;
     .title {
-      font-size:3em;
+      font-size: 3em;
       font-weight: bold;
       span {
         color: #fdd93f;
       }
     }
-    
+
     .subtitle {
       margin-top: 0.8em;
       text-align: justify;
       font-weight: 500;
-      letter-spacing:0.1em;
+      letter-spacing: 0.1em;
       width: 25em;
     }
   }
@@ -55,15 +56,50 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-.section2 {
-  height: calc(100vh - 123px);
-  max-height: calc(81200vw / 375 - 123px);
-  min-height: calc(66700vw / 375 - 123px);
-  .bg {
-    background:#395fb2 url("~@/projects/js/s2/bg-m.jpg") no-repeat bottom center;
-    background-size: contain;
-  } 
-}
+  .section2 {
+    height: calc(100vh - 123px);
+    max-height: calc(81200vw / 375 - 123px);
+    min-height: calc(66700vw / 375 - 123px);
+    .bg {
+      background: #395fb2 url("~@/projects/js/s2/bg-m.jpg") no-repeat bottom
+        center;
+      background-size: contain;
+    }
+    .title-box {
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      text-align: center;
+      left: 0;
+      top: 20%;
+      .title {
+        font-size: 40px;
+        font-weight: bold;
+        span {
+          color: #fdd93f;
+        }
+      }
+      .subtitle {
+        font-size: 16px;
+        text-align: justify;
+        letter-spacing: 3px;
+        line-height: 1.5;
+        font-weight: normal;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px !important;
+      }
+    }
+
+    .draw-mo {
+      width: 100px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      pointer-events: none;
+      z-index: 10;
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

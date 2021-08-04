@@ -36,7 +36,20 @@
         </div>
         <img class="draw1" src="@/projects/js/s4/draw1.png" alt="" srcset="" />
         <img class="draw2" src="@/projects/js/s4/draw2.png" alt="" srcset="" />
-        <img class="draw3" src="@/projects/js/s4/draw3.png" alt="" srcset="" />
+        <img
+          v-if="!isMobile"
+          class="draw3"
+          src="@/projects/js/s4/draw3.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-else
+          class="draw3"
+          src="@/projects/js/s4/draw3-mo.png"
+          alt=""
+          srcset=""
+        />
       </div>
     </div>
     <div class="subsection nav-section-2">
@@ -48,15 +61,48 @@
           </div>
           <div class="t2">享受生活</div>
         </div>
-        <img class="box2" src="@/projects/js/s4/box2.png" alt="" srcset="" />
         <img
+          v-if="!isMobile"
+          class="box2"
+          src="@/projects/js/s4/box2.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-else
+          class="box2"
+          src="@/projects/js/s4/box2-mo.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-if="!isMobile"
           class="box2-f"
           src="@/projects/js/s4/box2-f.png"
           alt=""
           srcset=""
         />
-        <img class="draw4" src="@/projects/js/s4/draw4.png" alt="" srcset="" />
-        <img class="draw5" src="@/projects/js/s4/draw5.png" alt="" srcset="" />
+        <img
+          v-if="!isMobile"
+          class="draw4"
+          src="@/projects/js/s4/draw4.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-else
+          class="draw4"
+          src="@/projects/js/s4/draw4-mo.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-if="!isMobile"
+          class="draw5"
+          src="@/projects/js/s4/draw5.png"
+          alt=""
+          srcset=""
+        />
       </div>
     </div>
     <div class="subsection nav-section-3">
@@ -89,8 +135,8 @@
           </swiper>
         </div>
       </div>
-        <img class="draw6" src="@/projects/js/s4/draw6.png" alt="" srcset="" />
-        <img class="draw7" src="@/projects/js/s4/draw7.png" alt="" srcset="" />
+      <img class="draw6" src="@/projects/js/s4/draw6.png" alt="" srcset="" />
+      <img class="draw7" src="@/projects/js/s4/draw7.png" alt="" srcset="" />
     </div>
     <div class="bg"></div>
   </div>
@@ -131,6 +177,43 @@
     }
   }
 }
+@media only screen and (max-width: 767px) {
+  .subsection {
+    &:nth-child(3) {
+      .swiper-pagination-bullets {
+        position: absolute;
+        right: 0;
+        left: unset;
+        width: 100%;
+        .swiper-pagination-bullet {
+          background: #fff;
+          opacity: 1;
+          width: 12px;
+          height: 12px;
+          margin: 4px !important;
+          &.swiper-pagination-bullet-active {
+            background: #666666;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-pagination-bullets {
+    position: absolute;
+    right: 0;
+    .swiper-pagination-bullet {
+      background: #fff;
+      opacity: 1;
+      width: 12px;
+      height: 12px;
+      margin: 4px !important;
+      &.swiper-pagination-bullet-active {
+        background: #fdd93f;
+      }
+    }
+  }
+}
 </style>
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
@@ -161,14 +244,16 @@
           max-width: 40%;
           padding-right: 50px;
           align-self: flex-start;
-    font-size: calc(2300vw / 1920);
-      line-height: 1.6;
+          font-size: calc(2300vw / 1920);
+          line-height: 1.6;
           h2 {
-      font-size:3em;
+            font-size: 3em;
             text-align: left;
             font-weight: 800;
             line-height: 1.2;
-            b{font-weight: 500;}
+            b {
+              font-weight: 500;
+            }
           }
           p {
             text-align: justify;
@@ -191,11 +276,11 @@
           top: auto;
         }
         .draw3 {
-          width:calc(15000vw / 1920);
+          width: calc(15000vw / 1920);
           position: absolute;
           z-index: 0;
-          left:calc(43000vw / 1920);
-          top:calc(10000vw / 1920);
+          left: calc(43000vw / 1920);
+          top: calc(10000vw / 1920);
         }
       }
       .swiper-box {
@@ -225,20 +310,20 @@
         position: absolute;
         display: flex;
         align-items: flex-end;
-        left:1.3em;
-        bottom:1.3em;
-    font-size: calc(2000vw / 1920);
+        left: 1.3em;
+        bottom: 1.3em;
+        font-size: calc(2000vw / 1920);
         .t1 {
-      font-size:3em;
+          font-size: 3em;
           text-align: justify;
           text-align-last: justify;
-          font-weight:900;
+          font-weight: 900;
           line-height: 1.2;
         }
         .t2 {
-      font-size:2.9em;
+          font-size: 2.9em;
           font-weight: 500;
-          margin-left:0.43em;
+          margin-left: 0.43em;
           line-height: 1.2;
         }
       }
@@ -361,6 +446,246 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section4 {
+    height: auto;
+    overflow: hidden;
+
+    .subsection {
+      position: relative;
+      height: auto;
+      min-height: 90vh;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5vh 0 3vh 0;
+      .box {
+        width: 80%;
+        height: 75%;
+        background-color: #fdd93f;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+        color: #333333;
+        flex-direction: column;
+      }
+      &:nth-child(1) {
+        .box {
+          width: 95%;
+          padding: 6vw 3vw 35vw 3vw;
+          height: auto;
+          .title {
+            max-width: 100%;
+            padding-right: 0;
+            align-self: flex-start;
+            font-size: calc(5000vw / 1920);
+            line-height: 1.6;
+            margin-bottom: 6vw;
+            h2 {
+              font-size: 3em;
+              text-align: left;
+              font-weight: 800;
+              line-height: 1.2;
+              b {
+                font-weight: 500;
+              }
+            }
+            p {
+              text-align: justify;
+              margin-top: 2vh;
+              font-size: 14px;
+            }
+          }
+          .draw1 {
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            bottom: 0;
+          }
+          .draw2 {
+            width: calc(90000vw / 1920);
+            position: absolute;
+            z-index: 0;
+            left: calc(40000vw / 1920);
+            bottom: calc(-9500vw / 1920);
+            top: auto;
+          }
+          .draw3 {
+            width: auto;
+            height: 150px;
+            position: absolute;
+            z-index: 0;
+            left: unset;
+            right: -3vw;
+            top: -90px;
+          }
+        }
+        .swiper-box {
+          width: 100%;
+          position: relative;
+
+          .swiper-slide {
+            background-size: cover;
+            height: 0;
+            padding-bottom: 66.76%;
+            min-width: 100%;
+            .caption {
+              right: 15px;
+              top: 15px;
+              color: #fff;
+              position: absolute;
+              font-size: 16px;
+              border-bottom: 4px solid #fff;
+              padding-bottom: 8px;
+              letter-spacing: 1.5px;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        height: auto;
+        .box {
+          width: 95%;
+          padding: 3vw;
+          height: 160vw;
+          .title {
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            left: 1.3em;
+            bottom: unset;
+            top: 1.3em;
+            font-size: calc(6500vw / 1920);
+            .t1 {
+              font-size: 3em;
+              text-align: justify;
+              text-align-last: justify;
+              font-weight: 900;
+              line-height: 1.2;
+            }
+            .t2 {
+              font-size: 2.9em;
+              font-weight: 500;
+              margin-left: 0.43em;
+              line-height: 1.2;
+            }
+          }
+          .box2 {
+            width: 100vw;
+            margin-top: 0;
+            position: absolute;
+            right: 0;
+            bottom: -10vh;
+          }
+          .draw4 {
+            height: 200px;
+            position: absolute;
+            z-index: 0;
+            right: unset;
+            left: -15vw;
+            top: unset;
+            bottom: -150px;
+          }
+          .draw5 {
+            display: none;
+          }
+        }
+      }
+      &:nth-child(3) {
+        height: auto;
+        padding: 20vw 0 20vw 0;
+
+        .box {
+          width: 100%;
+          padding: 0;
+          height: 90vh;
+          .title {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            color: #fff;
+            display: flex;
+            align-items: flex-start;
+            height: auto;
+            min-height: 100px;
+            left: 0;
+            bottom: 0;
+            padding: 30px;
+            flex-direction: column;
+            background: linear-gradient(
+              0deg,
+              rgba(253, 217, 63, 1) 0%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            h2 {
+              font-size: 40px;
+              white-space: nowrap;
+            }
+            p {
+              margin-left: 0;
+              margin-top: 10px;
+              font-size: 16px;
+              text-align: left;
+              line-height: 1.5;
+              max-width: 80%;
+            }
+          }
+          .swiper-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .swiper-container {
+              width: 100%;
+              height: 100%;
+
+              .swiper-slide {
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                .caption {
+                  right: 15px;
+                  top: 15px;
+                  color: #fff;
+                  position: absolute;
+                  font-size: 16px;
+                  border-bottom: 4px solid #fff;
+                  padding-bottom: 8px;
+                  letter-spacing: 1.5px;
+                }
+              }
+            }
+          }
+        }
+        .draw6 {
+          width: 90px;
+          position: absolute;
+          z-index: 10;
+          left: unset;
+          right: 0;
+          bottom: 20vw;
+          pointer-events: none;
+        }
+        .draw7 {
+          display: none;
+        }
+      }
+    }
+
+    .bg {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: url("~@/projects/js/s4/bg.jpg");
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

@@ -5,13 +5,21 @@
     <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
     <div class="order-top">
       <img
+        v-if="!isMobile"
         class="draw2"
         src="@/assets/img/order-bg-tree.png"
         alt=""
         srcset=""
       />
+      <img
+        v-else
+        class="draw2"
+        src="@/assets/img/order-bg-mo.png"
+        alt=""
+        srcset=""
+      />
 
-      <div class="fall-container">
+      <div v-if="!isMobile" class="fall-container">
         <img src="@/projects/js/s1/fall-leaf/1.png" />
         <img class="leaf1" src="@/projects/js/s1/fall-leaf/1.png" />
         <img class="leaf2" src="@/projects/js/s1/fall-leaf/2.png" />
@@ -299,13 +307,6 @@ export default {
 </script>
 
 <style lang="scss">
-.order-bg-draw {
-  width: 300px;
-  position: absolute;
-  right: 5vw;
-  bottom: 0;
-  z-index: 15;
-}
 .draw2 {
   width: 100%;
   left: -1%;
@@ -314,28 +315,6 @@ export default {
   animation-iteration-count: infinite;
   transform-origin: left;
   transform: skew(0, 0);
-  position: absolute;
-}
-.draw2-bird {
-  width: 3.5%;
-  left: 13vw;
-  top: 6.7vw;
-  animation: bird-skew 4s ease-in-out;
-  animation-iteration-count: infinite;
-  transform-origin: center;
-  transform: skew(0, 0);
-  position: absolute;
-}
-.draw2-leaf1 {
-  width: 30%;
-  left: 0vw;
-  top: 6.7vw;
-  position: absolute;
-}
-.draw2-leaf2 {
-  width: 30%;
-  left: 10vw;
-  top: 6.7vw;
   position: absolute;
 }
 
@@ -376,7 +355,7 @@ export default {
 }
 
 .fall-container {
- // height: 100vh;
+  // height: 100vh;
   width: 100%;
   overflow: hidden;
   position: absolute;
@@ -476,6 +455,19 @@ export default {
     margin-top: 150vh;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .draw2 {
+    width: 100%;
+    left: 0;
+    top: -30vw;
+    animation: tree-skew 10s ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: left;
+    transform: skew(0, 0);
+    position: absolute;
+  }
+}
 </style>
 
 <style lang="scss" scoped>
@@ -516,9 +508,9 @@ export default {
   .order-top {
     background-color: $order_bg_color;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
     padding: 5vw 0;
-   // padding-bottom: 20vh;
+    // padding-bottom: 20vh;
     //margin: 0 2vw;
   }
   .order-title {
@@ -583,23 +575,28 @@ export default {
   .group {
     height: 250px;
     margin-bottom: 40px;
-    align-content:space-between;display: flex;
+    align-content: space-between;
+    display: flex;
     flex-wrap: wrap;
 
     &:nth-child(1) {
       border-right: 1px solid rgba(0, 0, 0, 0.2);
-      margin-right:40px ;
+      margin-right: 40px;
       padding-right: 40px;
       .row {
         width: 100%;
-       // justify-content: flex-start;
-        .el-input{width: auto;}
+        // justify-content: flex-start;
+        .el-input {
+          width: auto;
+        }
       }
     }
     &:nth-child(2) {
       .row {
         justify-content: flex-end;
-        align-items: flex-start;height: 100%;
+        align-items: flex-start;
+        height: 100%;
+        max-width: 100%;
       }
     }
   }
@@ -607,8 +604,8 @@ export default {
   .row {
     display: flex;
     align-items: center;
-    align-content:space-between;
-    justify-content:space-between;
+    align-content: space-between;
+    justify-content: space-between;
     //margin-bottom: 15px;
 
     &.house {
@@ -620,7 +617,7 @@ export default {
     }
 
     label {
-      width:4vw;
+      width: 4vw;
       font-size: 16px;
       font-weight: 500;
       opacity: 0.8;
@@ -705,6 +702,7 @@ export default {
       height: auto !important;
       margin-bottom: 0px !important;
       border: none !important;
+      padding-right: 0 !important;
     }
 
     .row {
@@ -714,7 +712,7 @@ export default {
         margin-top: 20px;
       }
       label {
-        /*width: 30% !important;*/
+        width: 30% !important;
         text-align: left;
       }
     }

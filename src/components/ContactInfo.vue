@@ -1,6 +1,15 @@
 <template>
   <div id="contact-info">
-      <img class="order-bg-draw" src="@/assets/img/draw/order-bg-draw.png" />
+    <img
+      v-if="!isMobile"
+      class="order-bg-draw"
+      src="@/assets/img/draw/order-bg-draw.png"
+    />
+    <img
+      v-else
+      class="order-bg-draw"
+      src="@/assets/img/draw/order-bg-draw-mo.png"
+    />
     <div class="contact-info">
       <img
         v-if="!isMobile"
@@ -120,18 +129,19 @@ export default {
     },
   },
 
-  mounted(){
+  mounted() {
     this.fixLogoHeight();
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
-#contact-info{
-position: relative;
-background-color: $order_bg_color;}
+#contact-info {
+  position: relative;
+  background-color: $order_bg_color;
+}
 .order-bg-draw {
   width: calc(30000 / 1920);
   position: absolute;
@@ -161,8 +171,8 @@ background-color: $order_bg_color;}
   background-position: 0% 50%; */
   //margin: 2vw auto -2vw;
   padding: 70px 0 30px;
- // position: absolute;
- margin-bottom: -2.8vw;
+  // position: absolute;
+  margin-bottom: -2.8vw;
 
   .mosaic-box {
     position: absolute;
@@ -357,6 +367,15 @@ background-color: $order_bg_color;}
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .order-bg-draw {
+    height: 100px;
+    position: absolute;
+    right: unset;
+    bottom: unset;
+    left: 15px;
+    top: -100px;
+    z-index: 200;
+  }
   .contact-info {
     display: flex;
     width: 100%;
@@ -367,40 +386,12 @@ background-color: $order_bg_color;}
     margin: 30vw auto 0 auto;
     min-width: unset;
 
-    .mosaic-box {
-      position: absolute;
-      right: 0;
-      top: 5.5%;
-      width: 35vw;
-    }
-
     .logo {
       //width: $contact_logo_mobile_width;
       width: auto;
-      margin-left: -2vw;
+      //margin-left: -2vw;
     }
 
-    .fix-bar {
-      &.fix-bar-1 {
-        width: 20%;
-        height: 5%;
-        left: 0;
-        top: 5vw;
-      }
-
-      &.fix-bar-2 {
-        width: 30%;
-        height: 3%;
-        left: 15vw;
-        top: 25vw;
-      }
-      &.fix-bar-3 {
-        width: 15%;
-        height: 3%;
-        left: 20vw;
-        top: 14vw;
-      }
-    }
   }
 
   .btn {

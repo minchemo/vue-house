@@ -15,7 +15,7 @@
             <div class="icon-menu"></div>
             <!-- <font-awesome-icon icon="bars" />  -->
           </div>
-          <div :class="`mask ${isOpen ? 'open' : ''}`" @click="toggleSidebar" />
+          <!-- <div :class="`mask ${isOpen ? 'open' : ''}`" @click="toggleSidebar" /> -->
           <ul :class="`navlist ${isOpen ? 'open' : ''}`">
             <li
               :key="item.name"
@@ -362,6 +362,7 @@ background: #fff;
     height: 45px;
     left: 20px;
     top: 13px;
+    z-index: 1;
   }
   .mo {
     display: block;
@@ -378,6 +379,7 @@ background: #fff;
     position: absolute;
     right: 15px;
     width: 30px;
+    z-index: 1;
     svg {
       width: 100%;
       height: 100%;
@@ -387,25 +389,28 @@ background: #fff;
   .navlist {
     .link {
       width: 5em;
-      font-size: 15px;
+      font-size: 34px !important;
       border-right: 0;
+      margin: 0 auto;
     }
   }
   .navlist {
     position: absolute;
-    z-index: 111;
     background: transparent;
-    width: 0%;
+    width: 100%;
     right: 0;
     top: $nav_phone_height;
     height: calc(100vh - #{$nav_phone_height});
     text-align: center;
     transition: all 0.3s ease-in;
     display: block;
-    transform: translateX(40%);
+    transform: translateY(-100%);
     margin-right: 0vw;
-    background: #a70028;
-    padding-top: 5vh;
+    background: #006934;
+    //padding-top: 5vh;
+    padding: 0;
+      clip-path: polygon(0% 0%, 0% 80%, 100% 65%, 100% 0%);
+    
 
     .d-m-1 {
       width: 50%;
@@ -423,9 +428,8 @@ background: #fff;
     li {
       height: auto;
       min-height: 50px;
-      margin-bottom: 24px;
+      margin-bottom: 48px;
       writing-mode: unset;
-      border-bottom: 1px solid #ff8400;
       padding-bottom: 24px;
       &:first-child {
         margin-right: 0;
@@ -458,12 +462,17 @@ background: #fff;
         height: auto;
         margin-right: 0px;
       }
+        &.active::after {
+          display: none;
+        }
     }
     &.open {
       width: 100%;
-      transform: translateX(0%);
+      transform: translateY(0%);
       display: flex;
-      flex-direction: column;
+      flex-direction: column;    
+      justify-content: flex-start;
+      padding-top: 10vw;
 
       .link {
         display: flex;
