@@ -275,18 +275,8 @@
       </div>
     </div>
 
-    <!-- 
-    <figure v-if="!isMobile" class="item__fig js-plane">
-      <div class="aspect" style="--aspect: 56.25%"></div>
-      <img class="item__img" src="~@/projects/cfyd/s1/bg.jpg" />
-    </figure>
-
-    <figure v-else class="item__fig js-plane">
-      <div class="aspect" style="--aspect: 177.9%"></div>
-      <img class="item__img" src="~@/projects/cfyd/s1/bg-mo.jpg" />
-    </figure> -->
-
     <div class="bg"></div>
+    <div class="bg-gif"></div>
   </div>
 </template>
 
@@ -326,16 +316,18 @@
     left: 0;
     top: 0;
     z-index: 0;
-    animation: skew 2s ease-in-out 0s infinite alternate-reverse;
   }
 
-  @keyframes skew {
-    0% {
-      transform: skewX(-5deg) scale(1.1);
-    }
-    100% {
-      transform: skewX(5deg) scale(1.1);
-    }
+  .bg-gif {
+    position: absolute;
+    background-image: url("~@/projects/cfyd/s1/bg_light.gif");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    mix-blend-mode: overlay;
   }
 }
 /* 平板尺寸 */
@@ -347,15 +339,13 @@
   .section1 {
     height: 100vh;
     .bg {
-      position: absolute;
-      background-image: url("~@/projects/cfyd/s1/bg-mo.jpg");
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      z-index: 1;
-    animation: skew 1.5s ease-in-out 0s infinite alternate-reverse;
+      background-size: auto 100%;
+      background-position-x: 50%;
+    }
+    .bg-gif {
+      background-size: auto 100%;
+      background-position-x: 50%;
+      mix-blend-mode: overlay;
     }
 
     .title {
@@ -379,15 +369,6 @@
           }
         }
       }
-    }
-  }
-
-  @keyframes skew {
-    0% {
-      transform: skewX(-2deg) scale(1.1);
-    }
-    100% {
-      transform: skewX(2deg) scale(1.1);
     }
   }
 }
