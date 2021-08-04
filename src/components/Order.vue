@@ -129,7 +129,7 @@
           :disabled="!checked || !isVerify"
           @click="submit"
           :loading="isSubmit"
-          >立即預約</el-button
+          >確認送出</el-button
         >
         <Loading :loading="isSubmit" :isOpacity="true" />
       </div>
