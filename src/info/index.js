@@ -1,8 +1,8 @@
 export default {
   address: "台北市大安區大安路一段206巷",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.7450689312097!2d121.5451170262491!3d25.03474343269946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd3b66364ad%3A0x4add7bea8cc7c697!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5aSn5a6J6Lev5LiA5q61MjA25be3!5e0!3m2!1szh-TW!2stw!4v1621691052022!5m2!1szh-TW!2stw",
-  googleLink: "https://goo.gl/maps/xrUqKQuePh59dymt7",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.977362821159!2d121.54269841500629!3d25.03484228397193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x76b0fadb2644faaf!2z5aSn5a6J6KyZ6Z-1IOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1628075189539!5m2!1szh-TW!2stw",
+  googleLink: "https://goo.gl/maps/xmUat3NvLhvi8A7k7",
   phone: "02-23256688",
   fbLink: "https://www.facebook.com/大安謙韵-102705448688872",
   fbMessage: "https://m.me/102705448688872",
