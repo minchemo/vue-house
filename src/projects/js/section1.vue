@@ -48,17 +48,20 @@
     <div class="title-box">
       <img
         class="title-logo"
+        data-aos="fade" data-aos-delay="0"
         src="@/projects/js/s1/logo.png"
         alt=""
         srcset=""
       />
       <img
         class="logo-cattail"
+        data-aos="fade" data-aos-delay="0"
         src="@/projects/js/s1/logo-cattail.png"
         alt=""
         srcset=""
       />
-      <div class="order">
+      <div class="order"
+        data-aos="fade" data-aos-delay="200">
         <img
           class="order-leaf"
           src="@/projects/js/s1/order-leaf.png"
@@ -67,7 +70,8 @@
         />
         <p>搶先<br />預約</p>
       </div>
-      <div class="subtitle">首席校園宅<span>2-3</span>房<span v-if="!isMobile">，</span><br v-if="isMobile" /><span>40</span>米大棟距</div>
+      <div class="subtitle"
+        data-aos="fade" data-aos-delay="100">首席校園宅<span>2-3</span>房<span v-if="!isMobile">，</span><br v-if="isMobile" /><span>40</span>米大棟距</div>
     </div>
   </div>
 </template>
@@ -120,6 +124,7 @@
       padding:0.75em;
       color: #000;
       margin-top: 1em;
+      transform: scale(1.2);
       span{font-size:1.25em;vertical-align:-0.05em;}
      /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
     }
@@ -129,6 +134,7 @@
       bottom: -100px;
       cursor: pointer;
       transition: all 0.5s;
+        transform: translate(-30%,-40%);
       &:hover img {
         transform: rotate(-10deg);
       }

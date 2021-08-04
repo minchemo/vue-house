@@ -215,7 +215,7 @@ export default {
       display: block;
     }
     span {
-      line-height: 16px;
+     // line-height: 16px;
     }
 
     &:hover {
@@ -377,7 +377,7 @@ export default {
         display: block;
       }
       span {
-        line-height: 16px;
+        //line-height: 16px;
       }
     }
 

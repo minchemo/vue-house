@@ -3,18 +3,20 @@
     <div class="subsection nav-section-1">
       <div class="box">
         <div class="title">
-          <h2>
+          <h2 class="v"
+        data-aos="fade" data-aos-delay="0">
             15min<br />
             台北101<br />
             <b>房價更輕鬆</b>
           </h2>
-          <p>
+          <p class="v"
+        data-aos="fade" data-aos-delay="100">
             開車約30秒上「基隆中和交流道」速遊八方，約2分鐘抵「復興商圈」豐美隨享，6分鐘達基隆市區，約15鐘串聯北市各精華商圈。一樣通勤時間，聰明選擇房價大不同。
           </p>
         </div>
         <div
           class="swiper-box"
-          data-aos="fade-right"
+          data-aos="fade"
           data-aos-duration="2000"
           data-aos-offset="0"
           data-aos-delay="100"
@@ -35,7 +37,7 @@
           </swiper>
         </div>
         <img class="draw1" src="@/projects/js/s4/draw1.png" alt="" srcset="" />
-        <img class="draw2" src="@/projects/js/s4/draw2.png" alt="" srcset="" />
+        <img class="draw4" src="@/projects/js/s4/draw2.png" alt="" srcset="" data-aos="fade" data-aos-delay="300" />
         <img
           v-if="!isMobile"
           class="draw3"
@@ -54,8 +56,9 @@
     </div>
     <div class="subsection nav-section-2">
       <div class="box">
-        <div class="title">
-          <div class="t1">
+        <div class="title v"
+        data-aos="fade" data-aos-delay="0">
+          <div class="t1" >
             全球嚴選<br />
             8大精品
           </div>
@@ -67,6 +70,7 @@
           src="@/projects/js/s4/box2.png"
           alt=""
           srcset=""
+          data-aos="fade" data-aos-delay="100"
         />
         <img
           v-else
@@ -238,6 +242,9 @@
       padding: 50px;
       color: #333333;
     }
+    .v{transform:scale(1.2);}
+    .draw4{transform:translateX(-70%);}
+          
     &:nth-child(1) {
       .box {
         .title {
@@ -267,7 +274,7 @@
           left: 0;
           bottom: 0;
         }
-        .draw2 {
+        .draw4 {
           width: calc(40000vw / 1920);
           position: absolute;
           z-index: 0;
@@ -505,7 +512,7 @@
             left: 0;
             bottom: 0;
           }
-          .draw2 {
+          .draw4 {
             width: calc(90000vw / 1920);
             position: absolute;
             z-index: 0;

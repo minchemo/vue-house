@@ -688,7 +688,7 @@ export default {
       top: 10vw;
     }
     .order {
-      width: 95% !important;
+      width: 85% !important;
       margin: 0 auto;
       padding: 0;
     }
@@ -703,8 +703,14 @@ export default {
       margin-bottom: 0px !important;
       border: none !important;
       padding-right: 0 !important;
+      &:nth-child(1) {
+        .row {
+          .el-input {
+            width:100%;
+          }
+        }
+      }
     }
-
     .row {
       margin-bottom: 12px !important;
 

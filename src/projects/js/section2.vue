@@ -1,12 +1,20 @@
 <template>
   <div class="section2">
     <div class="title-box">
-      <div class="title"><span>幸福建築</span> 經典之作</div>
-      <div class="subtitle">
+      <div class="title"
+        data-aos="fade" data-aos-delay="0"><span>幸福建築</span> 經典之作</div>
+      <div class="subtitle"
+        data-aos="fade" data-aos-delay="100">
         當代美學經典再現，實現對幸福的想望，透過臻璽建築，看到理想的人生。今生最有價值的投資，換更新住更好，輕取未來的圓夢起點。
       </div>
     </div>
     <div class="bg"></div>
+    <svg class="draw-mo" v-if="!isMobile" version="1.1" id="葉子" xmlns="http://www.w3.org/2000/svg"
+	 viewBox="0 0 496.4 122.8">
+	<path data-aos="fade" data-aos-delay="0" d="M305.4,80.6c22-3.5,32,16.3,35.9,42C314.3,125.3,303.4,98.8,305.4,80.6z"/>
+	<path data-aos="fade" data-aos-delay="100" d="M479.2,72.6c-3.1-17.3,1-29.6,16.7-38.5C497.6,52.8,496.3,63.2,479.2,72.6z"/>
+	<path data-aos="fade" data-aos-delay="200" d="M0,20.7C2.2,11.9,9.5,2.9,19.4,0C19.2,14.4,7,26.9,0,20.7z"/>
+</svg>
     <img v-if="isMobile" src="@/projects/js/s2/draw-mo.png" class="draw-mo" alt="" srcset="">
   </div>
 </template>
@@ -36,6 +44,7 @@
     .title {
       font-size: 3em;
       font-weight: bold;
+      transform: scale(1.2)translateY(-10%);
       span {
         color: #fdd93f;
       }
@@ -47,6 +56,28 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       width: 25em;
+      transform: scale(1.2);
+    }
+  }
+
+  
+	.draw-mo{
+      width:calc(50000vw / 1920);
+      position: absolute;
+      left:calc(62500vw / 1920);
+      top:calc(50% + (130 - 450) * 100vw / 1920);
+      pointer-events: none;
+      z-index: 10;
+    animation: bird-skew 7s ease-in-out infinite alternate;
+      fill:#8FB729;
+      path:nth-child(1){transform:translate(-20%,-30%);}
+      path:nth-child(2){transform:translate(-30%,-20%);}
+      path:nth-child(3){transform:translate(10%,-40%);}
+      
+      }
+  @keyframes bird-skew {
+    to {
+      transform:rotate(8deg);
     }
   }
 }

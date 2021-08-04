@@ -11,7 +11,7 @@
             data-aos="fade-right"
             data-aos-duration="1500"
           />
-          <div class="menu" @click="toggleSidebar">
+          <div @click="toggleSidebar" :class="`menu ${isOpen ? 'open' : ''}`">
             <div class="icon-menu"></div>
             <!-- <font-awesome-icon icon="bars" />  -->
           </div>
@@ -290,13 +290,13 @@ export default {
 }
 .menu {
   display: none;
-}
 .icon-menu{
 font-size:35px;
 width: 1em;
 height: 2px;
 padding: 0;
 background: #fff;
+transition: all 0.3s;
 &::before,
 &::after{
   content: "";
@@ -305,11 +305,21 @@ background: #fff;
   left: 0;
   width: 1em;
   height: 100%;
-background: #fff;
+background: #fff;transition:top 0.3s 0.2s, transform 0.2s;
 }
-&::before{transform: translateY(-500%);}
-&::after{transform: translateY(500%);}
+&::before{top:-.35em}
+&::after{top:.35em}
 
+}
+&.open{
+.icon-menu{
+background: #fff0;
+&::before{top:0em;transform:rotate(45deg);
+transition:top 0.2s, transform 0.3s 0.2s;}
+&::after{top:0em;transform: rotate(-45deg);
+transition:top 0.2s, transform 0.3s 0.2s;}
+}
+}
 }
 .link {
   color: rgba(0, 0, 0, 0.7);
@@ -389,9 +399,11 @@ background: #fff;
   .navlist {
     .link {
       width: 5em;
-      font-size: 34px !important;
+      font-size:calc(2800vw / 375) !important;
       border-right: 0;
       margin: 0 auto;
+      .title{
+      font-weight: 500;}
     }
   }
   .navlist {
@@ -455,12 +467,12 @@ background: #fff;
         display: block;
       }
       span {
-        line-height: 16px;
+      //  line-height: 16px;
       }
       img {
         width: calc(100vw * 200 / 1920);
         height: auto;
-        margin-right: 0px;
+        margin-right:0.5em;
       }
         &.active::after {
           display: none;

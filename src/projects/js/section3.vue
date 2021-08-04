@@ -1,25 +1,30 @@
 <template>
   <div class="section3">
     <div class="title">
-      <h3>台北首都圈<br />海洋門戶</h3>
-      <p>
+      <h3 data-aos="fade" data-aos-delay="0">台北首都圈<br />海洋門戶</h3>
+      <p data-aos="fade" data-aos-delay="100">
         「市港再生標竿計畫」讓基隆港轉型，近年國門廣場、城際轉運站等開花結果，城市蛻變，從潛力股一躍成為績優股，迎上世界潮流，打造大台北首都圈海洋門戶。
       </p>
     </div>
     <div v-if="isMobile" class="title-bg"></div>
     <div class="view" ref="view" data-aos="fade-up">
+      <div class="view-img"
+        ref="viewImg">
       <img
-        class="view-img"
-        ref="viewImg"
-        src="~@/projects/js/s3/view.jpg"
+        src="~@/projects/js/s3/v-bg.jpg"
         alt=""
       />
-      <!--    <img
-        class="view-img line"
-        ref="viewImg"
+      <img
+        class="line"
         src="~@/projects/js/s3/line.gif"
         alt=""
-      />  -->
+      />
+      <img
+        class="v-bg"
+        src="~@/projects/js/s3/v-bg.png"
+        alt=""
+      />
+      </div>
       <img
         v-if="isMobile"
         class="view-hand"
@@ -66,9 +71,11 @@
       font-size: 3em;
       font-weight: 900;
       line-height: 1.2;
+      transform: scale(1.2);
       //  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
     p {
+      transform: scale(1.2);
       margin-top: 0.46em;
       margin-bottom: 0.38em;
       font-weight: 500;
@@ -79,18 +86,25 @@
 
   .view {
     background-color: #1c7cc1;
-    .view-img {
-      width: 100%;
+    .view-img {width: 100%;
       vertical-align: middle;
       // transform: translate(-1px, 3px);
-    }
+      img{ width: 100%;}
     .line {
-      width: 100%;
       // transform: translate(-1px, 3px);
       position: absolute;
       z-index: 1;
       left: 0;
       top: 0;
+      mix-blend-mode: screen
+    }
+    .v-bg {
+      // transform: translate(-1px, 3px);
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+    }
     }
   }
 
@@ -178,7 +192,11 @@
       .view-img {
         width: unset !important;
         height: 100%;
-        transform: translate(-1px, 3px);
+        position: relative;
+      //  transform: translate(-1px, 3px);
+      img{ 
+        width: auto;
+        height: 100%;}
       }
     }
     .draw {
