@@ -638,6 +638,7 @@ export default {
     margin: 0;
     position: relative;
     z-index: 2;
+    background-size: 325vw auto;
 
     > img {
       display: block;

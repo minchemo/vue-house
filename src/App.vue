@@ -67,7 +67,7 @@
   position: fixed;
   z-index: 5;
   right: 30px;
-  bottom: 30px;
+  bottom: 5px;
   width: 15vw;
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
   svg {
@@ -89,7 +89,7 @@
     position: fixed;
     z-index: 5;
     right: 50%;
-    bottom: 10px;
+    bottom: 3px;
     width: 80vw;
     transform: translateX(50%);
     svg {
