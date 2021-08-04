@@ -574,6 +574,7 @@ export default {
       .row {
         justify-content: flex-end;
         align-items: flex-start;
+        height: 100%;
       }
     }
   }
