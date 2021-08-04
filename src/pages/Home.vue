@@ -17,7 +17,7 @@
     </vue-lazy-component>
 
 
-    <!--<MobileNav />-->
+    <MobileNav />
   </div>
 </template>
 
