@@ -19,12 +19,12 @@ export default {
     ["企劃銷售", "<a style='color:#000'  href='https://www.haiwo.com.tw/' target='_blank'>海沃創意行銷股份有限公司</a>"]
   ],
 
-  gtmCode: ["WF2G3HX","PB7F29N"], // 可放置多個
+  gtmCode: [""], // 可放置多個
   recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    title: "預約賞屋",
+    title: "聯絡我們",
     subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！"
   }
 };
