@@ -61,12 +61,13 @@
         srcset=""
       />
       <div class="order"
-        data-aos="fade" data-aos-delay="200">
+        data-aos="fade" data-aos-delay="200"
+         v-scroll-to="{ element: `#contact`, offset:0 }">
         <img
           class="order-leaf"
           src="@/projects/js/s1/order-leaf.png"
           alt=""
-          srcset=""
+          srcset="" 
         />
         <p>搶先<br />預約</p>
       </div>
