@@ -37,7 +37,7 @@
           </swiper>
         </div>
         <img class="draw1" src="@/projects/js/s4/draw1.png" alt="" srcset="" />
-        <img class="draw4" src="@/projects/js/s4/draw2.png" alt="" srcset="" data-aos="fade" data-aos-delay="300" />
+        <img class="draw4" src="@/projects/js/s4/draw2.png" alt="" srcset="" data-aos="fade" data-aos-delay="300"  data-aos-offset="-300" />
         <img
           v-if="!isMobile"
           class="draw3"
@@ -226,20 +226,22 @@
 
   .subsection {
     position: relative;
-    height: 90vh;
+  height: calc(100vh - 60px);
+  max-height: calc(108000vw / 1920 - 60px);
+  min-height: calc(90000vw / 1920 - 60px);
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     .box {
       width: 80%;
-      height: 75%;
+      height: calc(71000vw / 1920);
       background-color: #fdd93f;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 50px;
+      padding:  calc(5000vw / 1920) calc(5000vw / 1920);
       color: #333333;
     }
     .v{transform:scale(1.2);}
@@ -249,7 +251,7 @@
       .box {
         .title {
           max-width: 40%;
-          padding-right: 50px;
+          padding-right: calc(5000vw / 1920);
           align-self: flex-start;
           font-size: calc(2300vw / 1920);
           line-height: 1.6;
@@ -265,10 +267,11 @@
           p {
             text-align: justify;
             margin-top: 20px;
+      font-weight: 500;
           }
         }
         .draw1 {
-          width: 35%;
+          width: calc(53000vw / 1920);
           position: absolute;
           z-index: 0;
           left: 0;
@@ -292,12 +295,14 @@
       }
       .swiper-box {
         width: 60%;
+        height:calc(62000vw / 1920);
         position: relative;
+      .swiper-container{height: 100%;}
 
         .swiper-slide {
           background-size: cover;
-          height: 0;
-          padding-bottom: 66.76%;
+          //height: 0;
+          //padding-bottom: 66.76%;
           min-width: 100%;
           .caption {
             right: 30px;
@@ -460,7 +465,8 @@
     .subsection {
       position: relative;
       height: auto;
-      min-height: 90vh;
+  max-height:initial;
+  min-height: calc(6670vw / 375 - 123px);
       z-index: 1;
       display: flex;
       align-items: center;
@@ -509,15 +515,15 @@
             width: 100%;
             position: absolute;
             z-index: 0;
-            left: 0;
+            left: -3vw;
             bottom: 0;
           }
           .draw4 {
-            width: calc(90000vw / 1920);
+            width: calc(20000vw / 375);
             position: absolute;
             z-index: 0;
-            left: calc(40000vw / 1920);
-            bottom: calc(-9500vw / 1920);
+            left: calc(10000vw / 375);
+            bottom: calc(-4000vw / 375);
             top: auto;
           }
           .draw3 {
@@ -532,12 +538,13 @@
         }
         .swiper-box {
           width: 100%;
+          height: calc(22000vw / 375);
           position: relative;
 
           .swiper-slide {
             background-size: cover;
-            height: 0;
-            padding-bottom: 66.76%;
+          /* height: 0;
+            padding-bottom: 66.76%; */
             min-width: 100%;
             .caption {
               right: 15px;
@@ -723,6 +730,7 @@ export default {
     return {
       isMobile,
       swiperOptions1: {
+  spaceBetween: 30,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

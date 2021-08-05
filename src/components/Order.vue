@@ -617,7 +617,7 @@ export default {
     }
 
     label {
-      width: 4vw;
+      width: 6em;
       font-size: 16px;
       font-weight: 500;
       opacity: 0.8;
@@ -718,7 +718,7 @@ export default {
         margin-top: 20px;
       }
       label {
-        width: 30% !important;
+        width: 6em !important;
         text-align: left;
       }
     }

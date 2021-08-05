@@ -143,7 +143,7 @@ export default {
   background-color: $order_bg_color;
 }
 .order-bg-draw {
-  width: calc(30000 / 1920);
+  width: calc(30000vw / 1920);
   position: absolute;
   right: 5vw;
   bottom: 2.8vw;

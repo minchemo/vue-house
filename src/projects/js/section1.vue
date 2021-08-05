@@ -61,8 +61,7 @@
         srcset=""
       />
       <div class="order"
-        data-aos="fade" data-aos-delay="200"
-         v-scroll-to="{ element: `#contact`, offset:0 }">
+        data-aos="fade" data-aos-delay="200" data-aos-offset="-300" v-scroll-to="{ element: `#contact`, offset: 0 }">
         <img
           class="order-leaf"
           src="@/projects/js/s1/order-leaf.png"

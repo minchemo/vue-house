@@ -102,16 +102,16 @@
       color: #fff;
       text-align: center;
       left: 0;
-      top: 20%;
+      top:calc(40% - 40vw);
+      font-size: calc(1600vw / 375);
       .title {
-        font-size: 40px;
+        font-size:2.5em;
         font-weight: bold;
         span {
           color: #fdd93f;
         }
       }
       .subtitle {
-        font-size: 16px;
         text-align: justify;
         letter-spacing: 3px;
         line-height: 1.5;

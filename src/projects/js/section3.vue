@@ -111,8 +111,8 @@
   .draw {
     position: absolute;
     z-index: 20;
-    width: 650px;
-    right: 4vw;
+    width: calc(70000vw / 1920);
+    right: 2.3vw;
     top: 20vw;
     animation: bird-skew 10s ease-in-out;
     animation-iteration-count: infinite;
@@ -169,8 +169,8 @@
       text-align: left;
       padding: 5%;
       color: #333;
+      font-size: calc(1600vw / 375);
       p {
-        font-size: 16px;
         margin-top: 3vh;
       }
       h3 {
@@ -204,7 +204,7 @@
       z-index: 20;
       width: 90%;
       right: 5%;
-      top: 5%;
+      top:calc(27% - 59vw);
       pointer-events: none;
     }
   }
