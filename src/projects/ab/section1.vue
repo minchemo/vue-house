@@ -963,20 +963,21 @@
         position: absolute;
         left: 5vw;
         bottom: 0;
+        z-index: -1;
       }
       .mosaic-box {
+        top:calc(50% + ( 130 - 667 * 0.5) * 100vw / 375);
         width: 45vw;
         height: 100%;
         position: absolute;
-        top: 15%;
         right: 0;
       }
 
       .info {
+        top:calc(50% + ( 340 - 667 * 0.5) * 100vw / 375);
         width: 85vw;
         height: auto;
         position: absolute;
-        top: unset;
         bottom: 30vw;
         left: 50%;
         transform: translate(-50%, 0);
@@ -1001,10 +1002,10 @@
       }
 
       .logo {
+        top:calc(50% + ( 130 - 667 * 0.5) * 100vw / 375);
         height: auto;
         width: 40vw;
         position: absolute;
-        top: 15%;
         padding-right: 0;
         left: 10%;
         svg {
@@ -1022,10 +1023,11 @@
         }
 
         &.fix-bar-2 {
+          top:calc(50% + ( 485 - 667 * 0.5) * 100vw / 375);
           width: 80%;
-          height: 5%;
+          height: 8%;
+          z-index: 0;
           left: 0;
-          top: unset;
           bottom: 37.5vw;
           animation-delay: random(5) + s;
         }
