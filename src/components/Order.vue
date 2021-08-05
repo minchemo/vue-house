@@ -232,7 +232,7 @@ export default {
         this.isSubmit = false;
         return;
       }
-      if (this.form.phone.length < 10) {
+      if (this.form.phone.length != 10) {
         this.alertPhoneValidate();
         this.isSubmit = false;
         return;
