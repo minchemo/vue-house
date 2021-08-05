@@ -236,8 +236,16 @@ export default {
           "「姓名、手機」是必填欄位"
         ),
       });
+    },    
+    
+    alertPhoneValidate() {
+      const h = this.$createElement;
+      this.$notify({
+        title: "格式錯誤",
+        message: h("i", { style: "color: #82191d" }, "「手機」需為 10 碼數字")
+      });
     },
-
+	
     submit() {
       if (this.isSubmit) return;
       if (!this.isVerify) return;
@@ -257,7 +265,12 @@ export default {
         this.alertValidate();
         this.isSubmit = false;
         return;
-      }
+      }      
+      if (this.form.phone.length != 10) {
+        this.alertPhoneValidate();
+        this.isSubmit = false;
+        return;
+      } 
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get("utm_source");
       const utmMedium = urlParams.get("utm_medium");
