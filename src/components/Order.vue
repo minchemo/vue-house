@@ -107,14 +107,14 @@
             </h3>
           </el-checkbox>
         </div>
-        <div style="margin: 0 auto;z-index:2;" v-if="!isMobile">
+        <div style="margin: 0 auto; z-index: 2" v-if="!isMobile">
           <vue-recaptcha
             :sitekey="info.recaptcha_site_key_v2"
             @verify="isVerify = true"
             :loadRecaptchaScript="true"
           ></vue-recaptcha>
         </div>
-        <div style="margin: 0 auto;z-index:2;" v-if="isMobile">
+        <div style="margin: 0 auto; z-index: 2" v-if="isMobile">
           <vue-recaptcha
             :sitekey="info.recaptcha_site_key_v2"
             @verify="isVerify = true"
@@ -154,7 +154,7 @@ export default {
     ContactInfo,
     PolicyDialog,
     Loading,
-    VueRecaptcha
+    VueRecaptcha,
   },
 
   data() {
@@ -171,20 +171,20 @@ export default {
         area: "",
         msg: "",
         time_start: "",
-        time_end: ""
+        time_end: "",
       },
       checked: false,
       isSubmit: false,
       isVerify: false, // google 機器人驗證
       policyVisible: false,
-      showValidateDialog: false
+      showValidateDialog: false,
     };
   },
 
   computed: {
     areaList() {
       return renderAreaList(this.form.city);
-    }
+    },
   },
 
   methods: {
@@ -196,7 +196,19 @@ export default {
       const h = this.$createElement;
       this.$notify({
         title: "請填寫必填欄位",
-        message: h("i", { style: "color: #82191d" }, "「姓名、手機」是必填欄位")
+        message: h(
+          "i",
+          { style: "color: #82191d" },
+          "「姓名、手機」是必填欄位"
+        ),
+      });
+    },
+
+    alertPhoneValidate() {
+      const h = this.$createElement;
+      this.$notify({
+        title: "格式錯誤",
+        message: h("i", { style: "color: #82191d" }, "「手機」需為 10 碼數字"),
       });
     },
 
@@ -217,6 +229,11 @@ export default {
         // !this.form.area
       ) {
         this.alertValidate();
+        this.isSubmit = false;
+        return;
+      }
+      if (this.form.phone.length < 10) {
+        this.alertPhoneValidate();
         this.isSubmit = false;
         return;
       }
@@ -250,20 +267,20 @@ export default {
         `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}
       `,
         {
-          method: "GET"
+          method: "GET",
         }
       );
       fetch("contact-form.php", {
         method: "POST",
-        body: formData
-      }).then(response => {
+        body: formData,
+      }).then((response) => {
         this.isSubmit = false;
         if (response.status === 200) {
           window.location.href = "formThanks";
         }
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -285,7 +302,7 @@ export default {
   }
 }
 .order-bg {
- // background-color: $order_bg_color;
+  // background-color: $order_bg_color;
   background-image: $order_bg_image;
   background-repeat: no-repeat;
   position: relative;
