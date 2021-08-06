@@ -8,6 +8,7 @@
         當代美學經典再現，實現對幸福的想望，透過臻璽建築，看到理想的人生。今生最有價值的投資，換更新住更好，輕取未來的圓夢起點。
       </div>
     </div>
+    <div class="name">3D示意參考圖</div>
     <div class="bg"></div>
     <svg class="draw-mo" v-if="!isMobile" version="1.1" id="葉子" xmlns="http://www.w3.org/2000/svg"
 	 viewBox="0 0 496.4 122.8">
@@ -59,7 +60,7 @@
       transform: scale(1.2);
     }
   }
-
+.name{position:absolute;right: 1em;bottom: 1em;font-size:calc(1500vw / 1920);z-index: 2;color: #fff;}
   
 	.draw-mo{
       width:calc(50000vw / 1920);
@@ -122,6 +123,8 @@
       }
     }
 
+.name{font-size:calc(1200vw / 375);}
+  
     .draw-mo {
       width: 100px;
       position: absolute;

@@ -109,6 +109,8 @@
         />
       </div>
     </div>
+    
+    <!-- 
     <div class="subsection nav-section-3">
       <div class="box">
         <div
@@ -142,6 +144,7 @@
       <img class="draw6" src="@/projects/js/s4/draw6.png" alt="" srcset="" />
       <img class="draw7" src="@/projects/js/s4/draw7.png" alt="" srcset="" />
     </div>
+    -->
     <div class="bg"></div>
   </div>
 </template>
