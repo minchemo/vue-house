@@ -8,7 +8,7 @@
         <Section1 />
       </vue-lazy-component>
       <vue-lazy-component
-        class="section"
+        class="section_"
         id="section2"
         @init="init"
         v-show="false"
