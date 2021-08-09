@@ -1,5 +1,5 @@
 <template>
-  <div class="section3">
+  <div class="section3 f-p-section">
     <GodModView />
   </div>
 </template>

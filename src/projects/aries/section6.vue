@@ -1,5 +1,5 @@
 <template>
-  <div class="section6">
+  <div class="section6 f-p-section">
     <div class="swiper-title" data-aos="fade-down" data-aos-duration="1000">
       <span v-if="!isMobile">　</span>新穎暢快<br v-if="isMobile" /><span
         class="db"
@@ -26,18 +26,26 @@
         </swiper-slide>
         <div class="swiper-pagination-s6" slot="pagination"></div>
       </swiper>
-      <div v-if="isMobile" class="full-box" v-show="showingFullBox">
-        <img
-          v-if="isMobile"
-          class="swiper-here"
-          src="~@/projects/aries/s5/swipe-here.png"
-          alt=""
-          srcset=""
-        />
-        <img :src="fullBoxImg" alt="" srcset="" v-show="showingFullBoxImg" />
-        <div id="viewer-fullbox" class="viewer-fullbox"></div>
-        <div class="close" @click="showingFullBox = false">×</div>
-      </div>
+      <img
+        v-if="isMobile"
+        class="touch-3d"
+        src="~@/projects/aries/s5/touch.png"
+        alt=""
+        srcset=""
+        v-show="!showingFullBox"
+      />
+    </div>
+    <div v-if="isMobile" class="full-box" v-show="showingFullBox">
+      <img
+        v-if="isMobile"
+        class="swiper-here"
+        src="~@/projects/aries/s5/swipe-here.png"
+        alt=""
+        srcset=""
+      />
+      <img :src="fullBoxImg" alt="" srcset="" v-show="showingFullBoxImg" />
+      <div id="viewer-fullbox" class="viewer-fullbox"></div>
+      <div class="close" @click="showingFullBox = false">×</div>
     </div>
 
     <template>
@@ -57,7 +65,7 @@
           @click="handleClickViewer(viewer.img)"
         ></div>
         <div v-else :id="'viewer-' + (i + 1)" class="viewer"></div>
-        <div v-if="isMobile" class="touch">
+        <div v-if="isMobile" class="touch" v-show="!showingFullBox">
           <img src="~@/projects/aries/s6/viewer/touch.png" alt="" srcset="" />
           <p>點擊觀看VR環景</p>
         </div>
@@ -79,7 +87,7 @@
       alt=""
     />
     <img
-      class="style2_1 floating"
+      class="style2_1 floating rotating"
       src="~@/projects/aries/s6/viewer/style_2.png"
       alt=""
     />
@@ -245,11 +253,12 @@
 
       .caption {
         position: absolute;
-        left: 8vw;
-        top: 5vw;
+        left: 6vw;
+        top: 2vw;
         z-index: 1;
         display: flex;
         align-items: center;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
 
         .title {
           margin-right: 0.7vw;
@@ -269,7 +278,6 @@
           font-size: 1vw;
           line-height: 1.3vw;
           color: #fff;
-          filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
         }
       }
       .tip-title {
@@ -279,6 +287,7 @@
         bottom: 2vw;
         z-index: 1;
         font-size: 1.2vw;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
       }
     }
   }
@@ -330,7 +339,6 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section6 {
-    z-index: 1000000;
     position: relative;
 
     .style1_1 {
@@ -418,18 +426,17 @@
           width: 90vw;
 
           .title {
-            font-size: 18px;
-            width: 120px;
-            height: 120px;
-            border: 5px solid;
+            font-size: 16px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid;
             margin-right: 10px;
             line-height: 1.2;
           }
           .content {
             width: 50%;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.5;
-            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
           }
         }
         .tip-title {
@@ -439,17 +446,18 @@
           left: 0;
           bottom: 10vw;
           z-index: 1;
-          font-size: 4.5vw;
+          font-size: 14px;
         }
       }
 
-      .touch {
+      .touch-3d {
         position: absolute;
         z-index: 2;
         pointer-events: none;
         width: 24vw;
         top: 50%;
-        left: 38vw;
+        left: 50%;
+        transform: translate(-50%, -20%);
       }
     }
 
@@ -699,7 +707,6 @@ export default {
         this.showingFullBox = true;
         this.showingFullBoxImg = true;
         this.fullBoxImg = this.imgList1[index].img;
-        $(".touch").fadeOut();
       }
     },
     handleFullBoxSlide() {

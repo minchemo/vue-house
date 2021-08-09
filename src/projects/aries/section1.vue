@@ -1,5 +1,5 @@
 <template>
-  <div class="section1 with-mask">
+  <div class="section1 with-mask f-p-section">
     <div class="intro">
       <img class="sea" src="~@/projects/aries/s1/sea.png" alt="" srcset="" />
       <img
@@ -41,7 +41,7 @@
         data-parallax='{"y" : 230}'
       />
       <img
-        class="w2 floating"
+        class="w2"
         src="~@/projects/aries/s1/style_w_2.png"
         alt=""
         srcset=""
@@ -223,7 +223,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, 0%);
+        transform: translate(-50%, -50%);
         h2 {
           font-size: 61px;
           letter-spacing: -1.53px;
@@ -251,10 +251,10 @@
         transform: translate(57%, 82%);
       }
       .ppl {
-        width:auto;
-        height: 60%;
+        width: auto;
+        height: 65%;
         position: absolute;
-        right: 10%;
+        right: 5%;
         bottom: -20%;
         z-index: 8;
       }
@@ -315,10 +315,13 @@ export default {
 
           setTimeout(() => {
             $(".intro").remove();
-            $(".after-intro").ripples({
-              resolution: !isMobile ? 1024 : 512,
-              dropRadius: 30,
-            });
+
+            if (!isMobile) {
+              $(".after-intro").ripples({
+                resolution: !isMobile ? 1024 : 512,
+                dropRadius: 30,
+              });
+            }
           }, 2000);
         }, 1000);
       }, 5000);

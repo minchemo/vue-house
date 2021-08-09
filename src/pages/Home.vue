@@ -3,41 +3,38 @@
     <Loading :loading="load" />
     <!-- <Navigation /> -->
     <!-- <Indigator :viewIndex="viewIndex" /> -->
-    <!-- <full-page
-      ref="fullPage"
-      :options="options"
-      id="fullpage"
-    > -->
-    <vue-lazy-component class="section" id="section1" @init="init">
-      <Section1 />
-    </vue-lazy-component>
-    <vue-lazy-component
-      class="section"
-      id="section2"
-      @init="init"
-      v-show="false"
-    >
-      <Section2 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section3" @init="init">
-      <Section3 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section4" @init="init">
-      <Section4 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section5" @init="init">
-      <Section5 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section6" @init="init">
-      <Section6 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section7" @init="init">
-      <Section7 />
-    </vue-lazy-component>
+    <full-page ref="fullPage" :options="options" id="fullpage">
+      <vue-lazy-component class="section" id="section1" @init="init">
+        <Section1 />
+      </vue-lazy-component>
+      <vue-lazy-component
+        class="section"
+        id="section2"
+        @init="init"
+        v-show="false"
+      >
+        <Section2 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section3" @init="init">
+        <Section3 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section4" @init="init">
+        <Section4 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section5" @init="init">
+        <Section5 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section6" @init="init">
+        <Section6 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section7" @init="init">
+        <Section7 />
+      </vue-lazy-component>
 
-    <vue-lazy-component class="section" id="contact">
-      <ContactSection />
-    </vue-lazy-component>
+      <vue-lazy-component class="section" id="contact">
+        <ContactSection />
+      </vue-lazy-component>
+    </full-page>
 
     <MobileNav />
   </div>
@@ -62,17 +59,74 @@
   mask-size: cover;
 }
 
+.floating {
+  transition: all 1.8s;
+}
+
+.rotating {
+  animation: rotating 40s infinite;
+
+  @keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }
+}
+
+.fp-left {
+  margin-left: 12px;
+}
+//間隔
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  margin: 24px 0 !important;
+}
+//基礎顏色
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 !important;
+  background: #fff !important;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+}
+//Active顏色
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  background: #fff000 !important;
+}
+
 @media only screen and (max-width: 767px) {
   .with-mask {
     mask: unset;
   }
-}
 
-.floating {
-  transition: all 0.8s;
+  .fp-left {
+    display: flex;
+    margin: 0 !important;
+    left: 50% !important;
+    top: 0 !important;
+    width: 80vw;
+    transform: translate(-53%, 20px) !important;
+  }
 
-  &.isFloating {
-    transform: translateY(50px);
+  #fp-nav ul li,
+  .fp-slidesNav ul li {
+    margin: 0 !important;
+  }
+
+  #fp-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    left: 0;
+    justify-content: space-around;
   }
 }
 </style>
@@ -126,17 +180,23 @@ export default {
       // },
 
       // indigatorIndex: 0,
-      // options: {
-      //   menu: '#menu',
-      //   anchors: [],
-      //   scrollBar: true,
-      //   onLeave: this.onLeave,
-      //   afterLoad: this.afterLoad,
-      //   continuousHorizontal: true,
+      options: {
+        menu: "#menu",
+        anchors: [],
+        scrollBar: true,
+        onLeave: this.onLeave,
+        afterLoad: this.afterLoad,
+        continuousHorizontal: true,
+        autoScrolling: false,
+        fitToSection: false,
+        verticalCentered: false,
 
-      //   // navigation: true,
-      //   // sectionsColor: ['#41b883', '#ff5f45', '#0798ec'],
-      // },
+        navigation: true,
+        navigationPosition: "left",
+        slidesNavigation: true,
+        slidesNavPosition: "top",
+        lazyLoading: false,
+      },
     };
   },
   created() {
@@ -189,64 +249,36 @@ export default {
       let lastScrollTop = 0;
       $(window).on("scroll", function () {
         let st = $(this).scrollTop();
+        const el = $(".floating");
+        let css;
+
         if (st < lastScrollTop) {
-          $(".floating").removeClass("isFloating");
+          $.each(el, function (i, val) {
+            let oldTransform = $(val).css("transform");
+            if (oldTransform == "none") {
+              css = "translateY(50px)";
+            } else {
+              css = oldTransform + " translateY(50px)";
+            }
+
+            $(val).css("transform", css);
+          });
         } else {
-          $(".floating").addClass("isFloating");
+          $.each(el, function (i, val) {
+            let oldTransform = $(val).css("transform");
+            if (oldTransform == "none") {
+              css = "translateY(-50px)";
+            } else {
+              css = oldTransform + " translateY(-50px)";
+            }
+
+            $(val).css("transform", css);
+          });
         }
+
         lastScrollTop = st;
       });
     },
-    // onScroll() {
-    //   // 获取所有锚点元素
-    //   const navContents = document.querySelectorAll('.section')
-    //   // 所有锚点元素的 offsetTop
-    //   const offsetTopArr = []
-    //   navContents.forEach(item => {
-    //     offsetTopArr.push(item.offsetTop)
-    //   })
-    //   // 获取当前文档流的 scrollTop
-    //   const scrollTop =
-    //     document.documentElement.scrollTop || document.body.scrollTop
-    //   // 定义当前点亮的导航下标
-    //   let navIndex = 0
-    //   for (let n = 0; n < offsetTopArr.length; n++) {
-    //     // 如果 scrollTop 大于等于第n个元素的 offsetTop 则说明 n-1 的内容已经完全不可见
-    //     // 那么此时导航索引就应该是n了
-    //     if (scrollTop >= offsetTopArr[n] - 100) {
-    //       navIndex = n
-    //     }
-    //   }
-    //   this.viewIndex = navIndex + 1
-    // },
-
-    // onLeave(origin, destination, direction) {
-    //   if (!this.isMobile) {
-    //     if (origin.isLast === true && direction === 'up') {
-    //       console.log('加固')
-    //       this.$refs.fullPage.api.setResponsive(false)
-    //     }
-    //     if (origin.isFirst === true && direction === 'down' && this.isMobile) {
-    //       this.$refs.fullPage.api.setResponsive(false)
-    //     }
-
-    //     if (
-    //       destination.isFirst === true &&
-    //       direction === 'up' &&
-    //       this.isMobile
-    //     ) {
-    //       this.$refs.fullPage.api.setResponsive(false)
-    //     }
-    //   }
-    // },
-
-    // afterLoad(origin, destination, direction) {
-    //   this.indigatorIndex = destination.index
-    //   if (destination.isLast === true && direction === 'down') {
-    //     console.log('解除')
-    //     this.$refs.fullPage.api.setResponsive(true)
-    //   }
-    // },
   },
 };
 </script>

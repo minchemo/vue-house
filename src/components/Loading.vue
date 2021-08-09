@@ -15,7 +15,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;

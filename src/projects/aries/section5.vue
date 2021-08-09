@@ -1,5 +1,5 @@
 <template>
-  <div class="section5">
+  <div class="section5 f-p-section">
     <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
       <swiper
         ref="swiper1"
@@ -30,6 +30,7 @@
         src="~@/projects/aries/s5/touch.png"
         alt=""
         srcset=""
+        v-show="!showingFullBox"
       />
     </div>
     <div v-if="isMobile" class="full-box" v-show="showingFullBox">
@@ -310,7 +311,6 @@ export default {
       if (isMobile) {
         this.showingFullBox = true;
         this.fullBoxImg = this.imgList1[index].img;
-        $(".touch").fadeOut();
       }
     },
     handleFullBoxSlide() {

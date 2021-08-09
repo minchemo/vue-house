@@ -6,8 +6,8 @@
 
     <div class="order-top">
       <img class="form_style_1 floating" src="~@/assets/img/form/style_1.png" alt="" />
-      <img class="form_style_2 floating" src="~@/assets/img/form/style_2.png" alt="" />
-      <img class="form_style_3 floating" src="~@/assets/img/form/style_3.png" alt="" />
+      <img class="form_style_2 floating rotating" src="~@/assets/img/form/style_2.png" alt="" />
+      <img class="form_style_3 floating rotating" src="~@/assets/img/form/style_3.png" alt="" />
       <img class="form_style_4 floating" src="~@/assets/img/form/style_4.png" alt="" />
 
       <div v-if="!isMobile" class="style3 style3_1"></div>
@@ -573,12 +573,14 @@ export default {
   }
 
   .order {
+    position: relative;
     width: 920px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     margin-bottom: 3rem;
     justify-content: space-between;
+    z-index: 1;
   }
 
   .form {
@@ -628,6 +630,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
+    background: #f7f4f2;
 
     &.house {
       margin-top: 50px;
@@ -644,6 +647,7 @@ export default {
       opacity: 0.8;
       color: $order_input_label_color;
       text-align: left;
+      padding-left: 15px;
     }
   }
 
@@ -765,7 +769,7 @@ export default {
         margin-top: 20px;
       }
       label {
-        width: 30% !important;
+        width: 40% !important;
         text-align: left;
       }
     }

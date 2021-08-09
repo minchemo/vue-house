@@ -1,18 +1,29 @@
 <template>
   <div id="contact-info">
     <img
-      class="contact-info-img"
-      src="~@/assets/img/contact-info-bg.svg"
+      class="form_style_1 floating"
+      src="~@/assets/img/form/style_1.png"
       alt=""
     />
-
-    <img class="form_style_1 floating" src="~@/assets/img/form/style_1.png" alt="" />
-    <img class="form_style_2 floating" src="~@/assets/img/form/style_2.png" alt="" />
-    <img class="form_style_3 floating" src="~@/assets/img/form/style_3.png" alt="" />
+    <img
+      class="form_style_2 floating"
+      src="~@/assets/img/form/style_2.png"
+      alt=""
+    />
+    <img
+      class="form_style_3 floating"
+      src="~@/assets/img/form/style_3.png"
+      alt=""
+    />
     <div v-if="!isMobile" class="style3 style3_1"></div>
     <div v-if="!isMobile" class="style3 style3_2"></div>
     <div v-if="!isMobile" class="style3 style3_3"></div>
     <div class="contact-info">
+      <img
+        class="contact-info-img"
+        src="~@/assets/img/contact-info-bg.svg"
+        alt=""
+      />
       <img
         v-if="!isMobile"
         class="logo"
@@ -143,6 +154,7 @@ export default {
 #contact-info {
   position: relative;
   background-color: $order_bg_color;
+  z-index: 0;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -154,9 +166,10 @@ export default {
 
 .contact-info-img {
   position: absolute;
-  width: 50vw;
-  left: 25vw;
-  bottom: -17vw;
+  height: 840px;
+  left: 50%;
+  bottom: -270px;
+  transform: translateX(-50%);
 }
 
 .style3 {
@@ -190,7 +203,7 @@ export default {
   justify-content: space-between;
   position: relative;
   z-index: 50;
-  width: 50%;
+  width: 100%;
   /*left: 50%;
   transform: translate(-50%, -50%);*/
   min-width: 1000px;
@@ -261,6 +274,7 @@ export default {
   height: $contact_logo_pc_width;
   margin: 0 auto;
   margin-bottom: 50px;
+  z-index: 1;
 }
 .info {
   width: 880px;
@@ -268,6 +282,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .btn {
@@ -393,8 +408,9 @@ export default {
   .contact-info-img {
     position: absolute;
     width: 270vw;
-    left: -92vw;
+    left: 50%;
     bottom: -52vw;
+    transform: translateX(-50%);
   }
   #contact-info {
     background: transparent;

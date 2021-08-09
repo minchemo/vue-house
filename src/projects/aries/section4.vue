@@ -1,5 +1,5 @@
 <template>
-  <div class="section4">
+  <div class="section4 f-p-section">
     <div class="bg bg1"></div>
     <div v-if="isMobile" class="bg bg1 wave"></div>
     <div class="bg bg2"></div>
@@ -434,15 +434,8 @@
             margin-bottom: 2vw;
             &::after {
               content: "";
-              background-image: url("~@/projects/aries/s4/img_line.png");
-              width: 6vw;
-              height: 5vw;
-              background-size: contain;
-              position: absolute;
-              background-repeat: no-repeat;
-              left: 47%;
-              margin-left: -2.5vw;
-              top: 1.9vw;
+              display: none;
+
             }
           }
           .titleImg {

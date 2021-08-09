@@ -1,5 +1,5 @@
 <template>
-  <div class="section7">
+  <div class="section7 f-p-section">
     <div class="title-box">
       <div
         class="img"

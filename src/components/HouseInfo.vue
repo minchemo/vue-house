@@ -124,7 +124,7 @@ export default {
   .content {
     width: 100%;
     margin-bottom: 20px;
-    padding-bottom: 15vh;
+    padding-bottom: 0;
   }
 
   .title {
