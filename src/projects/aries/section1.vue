@@ -104,7 +104,6 @@
       z-index: 2;
       h2 {
         font-size: 4.2vw;
-        font-weight: bold;
         color: #0071b6;
         letter-spacing: -2.7px;
       }
@@ -113,6 +112,7 @@
         color: #736357;
         font-size: 1.35vw;
         line-height: 1.5;
+        font-weight: bold;
       }
     }
 
@@ -168,6 +168,7 @@
         line-height: 1.42;
         text-align: center;
         color: #ffdc00;
+        font-weight: bold;
       }
     }
 

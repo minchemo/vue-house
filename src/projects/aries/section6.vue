@@ -262,7 +262,7 @@
 
         .title {
           margin-right: 0.7vw;
-          font-size: 1.2vw;
+          font-size: 1.1vw;
           color: #fff;
           width: 6vw;
           height: 6vw;
@@ -434,8 +434,8 @@
             line-height: 1.2;
           }
           .content {
-            width: 50%;
-            font-size: 14px;
+            width: 60%;
+            font-size: 12px;
             line-height: 1.5;
           }
         }

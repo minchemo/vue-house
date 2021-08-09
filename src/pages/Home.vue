@@ -91,6 +91,11 @@
 .fp-slidesNav ul li {
   margin: 24px 0 !important;
 }
+
+#fp-nav{
+    z-index: 9999 !important;
+}
+
 //基礎顏色
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
