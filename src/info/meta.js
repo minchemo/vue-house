@@ -1,6 +1,6 @@
 exports.info = {
-  title: "宏貿臻璽",
+  title: "牡羊座",
   description:
-    "宏貿臻璽",
-  keywords: "宏貿臻璽"
+    "牡羊座",
+  keywords: "牡羊座"
 };

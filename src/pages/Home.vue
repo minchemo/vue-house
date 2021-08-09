@@ -1,7 +1,7 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
-    <Navigation />
+    <!-- <Navigation /> -->
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page
       ref="fullPage"
@@ -11,7 +11,12 @@
     <vue-lazy-component class="section" id="section1" @init="init">
       <Section1 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section2" @init="init">
+    <vue-lazy-component
+      class="section"
+      id="section2"
+      @init="init"
+      v-show="false"
+    >
       <Section2 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section3" @init="init">
@@ -19,6 +24,15 @@
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section4" @init="init">
       <Section4 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section5" @init="init">
+      <Section5 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section6" @init="init">
+      <Section6 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section7" @init="init">
+      <Section7 />
     </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
@@ -33,15 +47,33 @@
 @import url("https://fonts.googleapis.com/css?family=Playball&display=swap");
 @import "../assets/style/variableColor.scss";
 
-
 .home {
- background: #fff !important;
+  background: #fff !important;
 }
 
 .section,
 .section .fp-slide,
 .section .fp-tableCell {
   height: auto !important;
+}
+
+.with-mask {
+  mask: url("~@/projects/aries/s1/section_mask.svg");
+  mask-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .with-mask {
+    mask: unset;
+  }
+}
+
+.floating {
+  transition: all 0.8s;
+
+  &.isFloating {
+    transform: translateY(50px);
+  }
 }
 </style>
 
@@ -57,10 +89,13 @@ import Loading from "@/components/Loading.vue";
 import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/js/section1.vue";
-import Section2 from "@/projects/js/section2.vue";
-import Section3 from "@/projects/js/section3.vue";
-import Section4 from "@/projects/js/section4.vue";
+import Section1 from "@/projects/aries/section1.vue";
+import Section2 from "@/projects/aries/section2.vue";
+import Section3 from "@/projects/aries/section3.vue";
+import Section4 from "@/projects/aries/section4.vue";
+import Section5 from "@/projects/aries/section5.vue";
+import Section6 from "@/projects/aries/section6.vue";
+import Section7 from "@/projects/aries/section7.vue";
 
 export default {
   name: "home",
@@ -75,6 +110,9 @@ export default {
     Section2,
     Section3,
     Section4,
+    Section5,
+    Section6,
+    Section7,
   },
 
   data() {
@@ -127,9 +165,6 @@ export default {
       $("img").each(function (idx, img) {
         $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
       });
-
-      
-
     });
   },
   mounted() {
@@ -139,6 +174,7 @@ export default {
     // if (this.isMobile) {
     //   this.$refs.fullPage.api.setResponsive(true)
     // }
+    this.scrolling();
   },
   // mounted() {
   // window.addEventListener('scroll', this.onScroll, false)
@@ -149,6 +185,18 @@ export default {
   // },
   methods: {
     init() {},
+    scrolling() {
+      let lastScrollTop = 0;
+      $(window).on("scroll", function () {
+        let st = $(this).scrollTop();
+        if (st < lastScrollTop) {
+          $(".floating").removeClass("isFloating");
+        } else {
+          $(".floating").addClass("isFloating");
+        }
+        lastScrollTop = st;
+      });
+    },
     // onScroll() {
     //   // 获取所有锚点元素
     //   const navContents = document.querySelectorAll('.section')

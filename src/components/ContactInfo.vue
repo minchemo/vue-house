@@ -1,26 +1,28 @@
 <template>
   <div id="contact-info">
     <img
-      v-if="!isMobile"
-      class="order-bg-draw"
-      src="@/assets/img/draw/order-bg-draw.png"
+      class="contact-info-img"
+      src="~@/assets/img/contact-info-bg.svg"
+      alt=""
     />
-    <img
-      v-else
-      class="order-bg-draw"
-      src="@/assets/img/draw/order-bg-draw-mo.png"
-    />
+
+    <img class="form_style_1 floating" src="~@/assets/img/form/style_1.png" alt="" />
+    <img class="form_style_2 floating" src="~@/assets/img/form/style_2.png" alt="" />
+    <img class="form_style_3 floating" src="~@/assets/img/form/style_3.png" alt="" />
+    <div v-if="!isMobile" class="style3 style3_1"></div>
+    <div v-if="!isMobile" class="style3 style3_2"></div>
+    <div v-if="!isMobile" class="style3 style3_3"></div>
     <div class="contact-info">
       <img
         v-if="!isMobile"
         class="logo"
-        src="@/assets/img/contact-logo.png"
+        src="@/assets/img/contact-logo.svg"
         :alt="info.caseName"
       />
       <img
         v-if="isMobile"
         class="logo"
-        src="@/assets/img/mo-contact-logo.png"
+        src="@/assets/img/contact-logo.svg"
         :alt="info.caseName"
       />
       <div class="info">
@@ -149,6 +151,34 @@ export default {
   bottom: 2.8vw;
   z-index: 15;
 }
+
+.contact-info-img {
+  position: absolute;
+  width: 50vw;
+  left: 25vw;
+  bottom: -17vw;
+}
+
+.style3 {
+  position: absolute;
+  width: 13vw;
+  height: 1px;
+  background: #2bb2d8;
+  transform: rotate(-45deg);
+  &.style3_1 {
+    top: 3vw;
+    left: 21vw;
+  }
+  &.style3_2 {
+    top: 0;
+    left: 31vw;
+  }
+  &.style3_3 {
+    top: 7vw;
+    right: 30vw;
+  }
+}
+
 .contact-info {
   background: $contact_bg;
   // background-image: url('../assets/img/contact_bg.jpg');/
@@ -170,16 +200,9 @@ export default {
   background-attachment: fixed;
   background-position: 0% 50%; */
   //margin: 2vw auto -2vw;
-  padding: 70px 0 30px;
+  padding: 70px 0 70px;
   // position: absolute;
-  margin-bottom: -2.8vw;
-
-  .mosaic-box {
-    position: absolute;
-    right: 0;
-    top: 70px;
-    width: 35vw;
-  }
+  margin-bottom: 0;
 
   .fix-bar {
     background: rgba(231, 149, 14);
@@ -367,6 +390,15 @@ export default {
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .contact-info-img {
+    position: absolute;
+    width: 270vw;
+    left: -92vw;
+    bottom: -52vw;
+  }
+  #contact-info {
+    background: transparent;
+  }
   .order-bg-draw {
     height: 100px;
     position: absolute;
@@ -383,15 +415,17 @@ export default {
     padding: 40px;
     transform: none;
     position: relative;
-    margin: 30vw auto 0 auto;
+    margin: 10vw auto 0 auto;
     min-width: unset;
+    background: transparent;
+    margin-top: 20vw;
 
     .logo {
       //width: $contact_logo_mobile_width;
-      width: auto;
+      width: 65vw;
       //margin-left: -2vw;
+      margin: 0;
     }
-
   }
 
   .btn {

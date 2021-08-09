@@ -10,8 +10,6 @@
       </div>
     </div>
     <Footer />
-
-    <img class="house-info-draw" src="@/assets/img/draw/houseinfo-draw.png" />
   </div>
 </template>
 

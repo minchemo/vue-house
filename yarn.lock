@@ -5701,6 +5701,11 @@ joi@^11.1.1:
     isemail "3.x.x"
     topo "2.x.x"
 
+jquery.ripples@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/jquery.ripples/-/jquery.ripples-0.6.3.tgz#c2374a5e30e722c3177e90f1770fc908f1c5ac80"
+  integrity sha512-ZZQtIoPdesJCx59eDpmbUThZs8HkAxNWG7eFogdziqwFx19oktRbC5XNIjY1PKbSx4YtmoQLHfbl4NHR1z9Wmw==
+
 jquery@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
@@ -6928,6 +6933,11 @@ pako@~1.0.5:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.10.tgz#4328badb5086a426aa90f541977d4955da5c9732"
   integrity sha512-0DTvPVU3ed8+HNXOu5Bs+o//Mbdj9VNQMUOe9oKCwh8l0GNwpTDMKCWbRjgtD291AWnkAgkqA/LOnQS8AmS1tw==
+
+pannellum@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/pannellum/-/pannellum-2.5.6.tgz#13bfec43ec272a70b729f20f70f9c34d05b25264"
+  integrity sha512-R4kSPpj36wQPlyIi9ZftxPfVYF11DEbNBATUEI+pkMGZDFYBV5Jxi6tYFVDdmxA2xaTeKZQHMIuIIj7njVSTQQ==
 
 parallel-transform@^1.1.0:
   version "1.1.0"

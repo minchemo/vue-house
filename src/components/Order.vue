@@ -3,44 +3,22 @@
     <!-- <img src="@/projects/fs/order/bg.png" alt="" class="bg-img"> -->
     <!-- <img src="@/projects/fs/order/bg1.png" alt="" class="bg-img no-mix"> -->
     <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
+
     <div class="order-top">
-      <img
-        v-if="!isMobile"
-        class="draw2"
-        src="@/assets/img/order-bg-tree.png"
-        alt=""
-        srcset=""
-      />
-      <img
-        v-else
-        class="draw2"
-        src="@/assets/img/order-bg-mo.png"
-        alt=""
-        srcset=""
-      />
+      <img class="form_style_1 floating" src="~@/assets/img/form/style_1.png" alt="" />
+      <img class="form_style_2 floating" src="~@/assets/img/form/style_2.png" alt="" />
+      <img class="form_style_3 floating" src="~@/assets/img/form/style_3.png" alt="" />
+      <img class="form_style_4 floating" src="~@/assets/img/form/style_4.png" alt="" />
 
-      <div v-if="!isMobile" class="fall-container">
-        <img src="@/projects/js/s1/fall-leaf/1.png" />
-        <img class="leaf1" src="@/projects/js/s1/fall-leaf/1.png" />
-        <img class="leaf2" src="@/projects/js/s1/fall-leaf/2.png" />
-        <img class="leaf3" src="@/projects/js/s1/fall-leaf/3.png" />
-        <img class="leaf4" src="@/projects/js/s1/fall-leaf/4.png" />
-        <img class="leaf5" src="@/projects/js/s1/fall-leaf/5.png" />
-        <img class="leaf6" src="@/projects/js/s1/fall-leaf/6.png" />
-        <img class="leaf7" src="@/projects/js/s1/fall-leaf/7.png" />
-        <img class="leaf8" src="@/projects/js/s1/fall-leaf/8.png" />
-        <img class="leaf9" src="@/projects/js/s1/fall-leaf/9.png" />
-        <img class="leaf10" src="@/projects/js/s1/fall-leaf/10.png" />
-      </div>
-
+      <div v-if="!isMobile" class="style3 style3_1"></div>
       <!-- <div class="title-block">
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
-      <h3 class="order-title" v-html="order.title"></h3>
-      <!--<div class="order-title-img">
+      <!-- <h3 class="order-title" v-html="order.title"></h3> -->
+      <div class="order-title-img">
         <img src="@/assets/img/order-title.png" alt="" />
-      </div>-->
+      </div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
@@ -236,16 +214,16 @@ export default {
           "「姓名、手機」是必填欄位"
         ),
       });
-    },    
-    
+    },
+
     alertPhoneValidate() {
       const h = this.$createElement;
       this.$notify({
         title: "格式錯誤",
-        message: h("i", { style: "color: #82191d" }, "「手機」需為 10 碼數字")
+        message: h("i", { style: "color: #82191d" }, "「手機」需為 10 碼數字"),
       });
     },
-	
+
     submit() {
       if (this.isSubmit) return;
       if (!this.isVerify) return;
@@ -265,12 +243,12 @@ export default {
         this.alertValidate();
         this.isSubmit = false;
         return;
-      }      
+      }
       if (this.form.phone.length != 10) {
         this.alertPhoneValidate();
         this.isSubmit = false;
         return;
-      } 
+      }
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get("utm_source");
       const utmMedium = urlParams.get("utm_medium");
@@ -320,15 +298,44 @@ export default {
 </script>
 
 <style lang="scss">
-.draw2 {
-  width: 100%;
-  left: -1%;
-  top: 0;
-  animation: tree-skew 10s ease-in-out;
-  animation-iteration-count: infinite;
-  transform-origin: left;
-  transform: skew(0, 0);
+.form_style_1 {
   position: absolute;
+  width: 11vw;
+  top: 18vw;
+  right: 16vw;
+  z-index: 1;
+}
+.form_style_2 {
+  position: absolute;
+  width: 15vw;
+  top: 26vw;
+  right: 16vw;
+}
+.form_style_3 {
+  position: absolute;
+  width: 20vw;
+  top: 16vw;
+  left: 10vw;
+}
+.form_style_4 {
+  position: absolute;
+  width: 12vw;
+  top: 6vw;
+  left: 16vw;
+}
+
+.style3 {
+  position: absolute;
+  width: 23vw;
+  height: 1px;
+  background: #2bb2d8;
+  transform: rotate(-45deg);
+  &.style3_1 {
+    top: 34vw;
+    right: 36vw;
+    width: 10vw;
+    z-index: 0;
+  }
 }
 
 @keyframes tail-rotate {
@@ -515,8 +522,8 @@ export default {
   textarea,
   button {
     font-family: $family3;
-    background-color: #333;
-    border-radius: 15px !important;
+    background: $order_submit_bg;
+    border-radius: $order_submit_borderradius !important;
   }
   .order-top {
     background-color: $order_bg_color;
@@ -539,8 +546,9 @@ export default {
     margin: 0 auto;
   }
   .order-title-img {
-    width: 50vw;
+    width: 12vw;
     margin: 0 auto;
+    margin-bottom: 1vw;
 
     img {
       width: 100%;
@@ -668,6 +676,32 @@ export default {
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .form_style_1 {
+    width: 31vw;
+    top: 200vw;
+    right: 6vw;
+    z-index: 0;
+  }
+  .form_style_2 {
+    width: 46vw;
+    top: 206vw;
+    right: unset;
+    left: -5vw;
+  }
+  .form_style_3 {
+    width: 72vw;
+    top: 46vw;
+    left: unset;
+    right: -24vw;
+  }
+  .form_style_4 {
+    width: 45vw;
+    top: 55vw;
+    left: 0;
+    z-index: 0;
+    opacity: 0.8;
+  }
+
   .order-bg {
     background-color: $order_bg_color;
     background-image: $order_bg_image_m;
@@ -686,7 +720,7 @@ export default {
       font-size: calc(100vw * 30 / 375);
     }
     .order-title-img {
-      width: 90vw;
+      width: 60vw;
     }
 
     .order-subtitle {
@@ -719,7 +753,7 @@ export default {
       &:nth-child(1) {
         .row {
           .el-input {
-            width:100%;
+            width: 100%;
           }
         }
       }
