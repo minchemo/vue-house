@@ -61,6 +61,13 @@
 
 .floating {
   transition: all 1.8s;
+
+  &.floating-up {
+    transform: translateY(50px);
+  }
+  &.floating-down {
+    transform: translateY(-50px);
+  }
 }
 
 .rotating {
@@ -250,30 +257,10 @@ export default {
       $(window).on("scroll", function () {
         let st = $(this).scrollTop();
         const el = $(".floating");
-        let css;
-
         if (st < lastScrollTop) {
-          $.each(el, function (i, val) {
-            let oldTransform = $(val).css("transform");
-            if (oldTransform == "none") {
-              css = "translateY(50px)";
-            } else {
-              css = oldTransform + " translateY(50px)";
-            }
-
-            $(val).css("transform", css);
-          });
+          el.removeClass('floating-down').addClass('floating-up');
         } else {
-          $.each(el, function (i, val) {
-            let oldTransform = $(val).css("transform");
-            if (oldTransform == "none") {
-              css = "translateY(-50px)";
-            } else {
-              css = oldTransform + " translateY(-50px)";
-            }
-
-            $(val).css("transform", css);
-          });
+          el.removeClass('floating-up').addClass('floating-down');
         }
 
         lastScrollTop = st;
