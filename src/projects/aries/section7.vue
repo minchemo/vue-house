@@ -46,13 +46,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      .tree {
-        width: 4vw;
-      }
+      
       .title {
         width: 23vw;
       }
     }
+    .tree {
+        width: 4vw;
+        position: absolute;
+        left: 35%;
+      }
     .content {
       margin-top: 5vw;
       color: #4d4d4d;
@@ -86,7 +89,8 @@
         .tree {
           width: 10vw;
           position: absolute;
-          right: 10vw;
+          right: 18vw;
+          left: auto;
         }
         .title {
           width: 61vw;

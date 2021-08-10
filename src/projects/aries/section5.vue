@@ -67,8 +67,8 @@
         background: linear-gradient(
           -90deg,
           rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 1) 95%,
-          rgba(255, 255, 255, 1) 100%
+          rgba(255, 255, 255, 0.3) 95%,
+          rgba(255, 255, 255, 0.6) 100%
         );
       }
       .caption {
@@ -84,17 +84,20 @@
           font-weight: bold;
           line-height: 2.4vw;
           margin-bottom: 1vw;
+          text-shadow:0px 0px 10px #fff,0px 0px 3px #fff;
         }
         .title {
           display: inline;
           margin-right: 0.7vw;
           font-size: 1.2vw;
           color: #666666;
+          text-shadow:0px 0px 10px #fff,0px 0px 3px #fff;
         }
         .content {
           display: inline;
           font-size: 1.2vw;
           color: #666666;
+          text-shadow:0px 0px 10px #fff,0px 0px 3px #fff;
         }
       }
       .tip-title {

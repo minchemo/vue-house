@@ -181,7 +181,7 @@
     }
     .para {
       position: absolute;
-      right: -5vw;
+      right: -9vw;
       top: 0;
     animation: para 5s ease-in-out infinite alternate;
 
