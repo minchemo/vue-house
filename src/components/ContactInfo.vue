@@ -154,7 +154,7 @@ export default {
 #contact-info {
   position: relative;
   background-color: $order_bg_color;
-  z-index: 0;
+  //z-index: 0;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -170,6 +170,7 @@ export default {
   left: 50%;
   bottom: -270px;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .style3 {
@@ -202,7 +203,7 @@ export default {
   align-content: center;
   justify-content: space-between;
   position: relative;
-  z-index: 50;
+ // z-index: 50;
   width: 100%;
   /*left: 50%;
   transform: translate(-50%, -50%);*/

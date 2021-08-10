@@ -53,6 +53,8 @@
 /* 螢幕尺寸標準 */
 .section1 {
   height: 100vh;
+  min-height:calc(90000vw / 1920);
+  max-height:calc(108000vw / 1920);
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -65,6 +67,23 @@
     z-index: 10;
     transition: all 2s;
     opacity: 1;
+    clip-path: polygon(0% 0%, 
+    0% calc(100% - 4vw), 
+    10%  calc(100% - 4.2vw),
+    20%  calc(100% - 3.9vw),
+    30%  calc(100% - 3.3vw),
+    40%  calc(100% - 2.4vw),
+    50%  calc(100% - 1.3vw),
+    60%  calc(100% - 0.4vw),
+    65%  calc(100% - 0.1vw),
+    68%  calc(100% - 0vw),
+    71%  calc(100% - 0.1vw),
+    76%  calc(100% - 0.4vw),
+    81%  calc(100% - 0.7vw),
+    86%  calc(100% - 1.3vw),
+    95%  calc(100% - 2.8vw),
+    100%  calc(100% - 4vw),
+    100% 0%);
     .sea {
       position: absolute;
       left: -5%;
@@ -121,6 +140,14 @@
     }
   }
 
+  .bg-svg{
+    width: 100%;
+    height:auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    }
+
   .after-intro {
     width: 100%;
     height: 100%;
@@ -130,6 +157,23 @@
     opacity: 1;
     background: url("~@/projects/aries/s1/bg.jpg");
     background-size: cover;
+    clip-path: polygon(0% 0%, 
+    0% calc(100% - 4vw), 
+    10%  calc(100% - 4.2vw),
+    20%  calc(100% - 3.9vw),
+    30%  calc(100% - 3.3vw),
+    40%  calc(100% - 2.4vw),
+    50%  calc(100% - 1.3vw),
+    60%  calc(100% - 0.4vw),
+    65%  calc(100% - 0.1vw),
+    68%  calc(100% - 0vw),
+    71%  calc(100% - 0.1vw),
+    76%  calc(100% - 0.4vw),
+    81%  calc(100% - 0.7vw),
+    86%  calc(100% - 1.3vw),
+    95%  calc(100% - 2.8vw),
+    100%  calc(100% - 4vw),
+    100% 0%);
 
     .yellow-style {
       width: 200%;
@@ -203,6 +247,8 @@
 @media only screen and (max-width: 767px) {
   .section1 {
     height: calc(100vh - 63px);
+  min-height:calc(66700vw / 375 - 63px);
+  max-height:calc(81200vw / 375 - 63px);
 
     .intro {
       background: #f4dc94;
@@ -210,6 +256,18 @@
       height: 100%;
       position: absolute;
       z-index: 1;
+    clip-path: polygon(0% 0%, 
+    0% calc(100% - 13.5vw), 
+    10%  calc(100% - 13vw),
+    20%  calc(100% - 11.5vw),
+    30%  calc(100% - 9vw),
+    50%  calc(100% - 3vw),
+    60%  calc(100% - 1vw),
+    70%  calc(100% - 0vw),
+    80%  calc(100% - 1vw),
+    90%  calc(100% - 3vw),
+    100%  calc(100% - 6vw),
+    100% 0%);
       .sea {
         height: auto;
         width: 180%;
@@ -246,10 +304,22 @@
       opacity: 1;
       background: url("~@/projects/aries/s1/bg.jpg");
       background-size: cover;
+    clip-path: polygon(0% 0%, 
+    0% calc(100% - 13.5vw), 
+    10%  calc(100% - 13vw),
+    20%  calc(100% - 11.5vw),
+    30%  calc(100% - 9vw),
+    50%  calc(100% - 3vw),
+    60%  calc(100% - 1vw),
+    70%  calc(100% - 0vw),
+    80%  calc(100% - 1vw),
+    90%  calc(100% - 3vw),
+    100%  calc(100% - 6vw),
+    100% 0%);
 
       .yellow-style {
         width: 400%;
-        transform: translate(57%, 82%);
+        transform: translate(57%, 78%);
       }
       .ppl {
         width: auto;

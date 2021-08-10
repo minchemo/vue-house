@@ -297,7 +297,7 @@ export default {
           content: "盡覽風光愜意運動",
         },
         {
-          img: require("@/projects/aries/s5/slider_4_full.jpg"),
+          img: isMobile? require("@/projects/aries/s5/slider_4_full.jpg") : require("@/projects/aries/s5/slider_4.jpg") ,
           title: "自助洗衣中心",
           content: "便利完善渡假機能",
         },

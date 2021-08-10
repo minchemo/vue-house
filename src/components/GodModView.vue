@@ -42,6 +42,7 @@
         transform: translate(-50%, 0%);
         pointer-events: none;
       }
+      //.view-img{height: 100%;}
     }
   }
 }
@@ -88,7 +89,8 @@ export default {
     },
     setViewBgHeight() {
       const targetHeight = $(".GodModView .view").outerHeight(true);
-      $(".GodModView .view .view-img").height(targetHeight);
+     if(isMobile){
+     $(".GodModView .view .view-img").height(targetHeight);}
     },
     onResize() {
       $(window).on("resize", (e) => {

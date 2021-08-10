@@ -55,7 +55,7 @@
 }
 
 .with-mask {
-  mask: url("~@/projects/aries/s1/section_mask.svg");
+ // mask: url("~@/projects/aries/s1/section_mask.svg");
   mask-size: cover;
 }
 
@@ -115,7 +115,7 @@
 
 @media only screen and (max-width: 767px) {
   .with-mask {
-    mask: unset;
+   // mask: unset;
   }
 
   .fp-left {

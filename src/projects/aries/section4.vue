@@ -112,7 +112,7 @@
       margin-top: -25vh;
       padding-bottom: 35.41%;
       background-image: url("~@/projects/aries/s4/tra.png");
-      background-size: 101%;
+      background-size: 100%;
       background-position: center;
     }
   }
@@ -128,14 +128,12 @@
     border-radius: 50vw 40vw 50vw 40vw;
     background-size: 122%;
     background-position: center bottom;
-    animation: border-radius 3s ease 2s infinite alternate;
+    animation: border-radius 3s ease-in-out 2s infinite alternate;
+    border-radius: 60% 40% 60% 40%;
 
     @keyframes border-radius {
-      0% {
-        border-radius: 50vw 40vw 50vw 40vw;
-      }
-      100% {
-        border-radius: 40vw 50vw 40vw 50vw;
+      to {
+        border-radius: 40% 60% 40% 60%;
       }
     }
 
@@ -183,10 +181,20 @@
     }
     .para {
       position: absolute;
-      right: -3.5vw;
+      right: -5vw;
       top: 0;
+    animation: para 5s ease-in-out infinite alternate;
+
+    @keyframes para {
+      to {
+        transform: translateY(-30%);
+      }
     }
-  }
+
+    }
+
+    }
+
 
   .tra-title {
     position: absolute;

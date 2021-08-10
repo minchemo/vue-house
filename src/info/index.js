@@ -5,8 +5,8 @@ export default {
   googleLink: "https://goo.gl/maps/tgKASisg7aDH9N3T7",
   phone: "03-990-8811",
   fbLink:
-    "",
-  fbMessage: "",
+    "https://www.facebook.com/The-ARIES-牡羊座-冷泉渡假行館-111516394449508/",
+  fbMessage: "https://m.me/111516394449508/",
   caseName: "牡羊座",
   indigatorLength: 10,
   houseInfos: [
