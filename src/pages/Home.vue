@@ -55,7 +55,7 @@
 }
 
 .with-mask {
- // mask: url("~@/projects/aries/s1/section_mask.svg");
+  // mask: url("~@/projects/aries/s1/section_mask.svg");
   mask-size: cover;
 }
 
@@ -92,8 +92,8 @@
   margin: 24px 0 !important;
 }
 
-#fp-nav{
-    z-index: 9999 !important;
+#fp-nav {
+  z-index: 9999 !important;
 }
 
 //基礎顏色
@@ -115,7 +115,7 @@
 
 @media only screen and (max-width: 767px) {
   .with-mask {
-   // mask: unset;
+    // mask: unset;
   }
 
   .fp-left {
@@ -196,8 +196,8 @@ export default {
         menu: "#menu",
         anchors: [],
         scrollBar: true,
-        onLeave: this.onLeave,
-        afterLoad: this.afterLoad,
+        // onLeave: this.onLeave,
+        //afterLoad: this.afterLoad,
         continuousHorizontal: true,
         autoScrolling: false,
         fitToSection: false,
@@ -216,13 +216,10 @@ export default {
     //   this.load = false
     // }, 500)
     // window.addEventListener('load', event => {
-
     // })
 
     $(document).ready(() => {
-      // Images loaded is zero because we're going to process a new set of images.
       var imagesLoaded = 0;
-      // Total images is still the total number of <img> elements on the page.
       var totalImages = $("img").length;
 
       const allImagesLoaded = () => {
@@ -230,7 +227,8 @@ export default {
       };
       const imageLoaded = () => {
         imagesLoaded++;
-        if (imagesLoaded == totalImages) {
+        
+        if (imagesLoaded > totalImages * 0.8) {
           allImagesLoaded();
         }
       };
@@ -263,9 +261,9 @@ export default {
         let st = $(this).scrollTop();
         const el = $(".floating");
         if (st < lastScrollTop) {
-          el.removeClass('floating-down').addClass('floating-up');
+          el.removeClass("floating-down").addClass("floating-up");
         } else {
-          el.removeClass('floating-up').addClass('floating-down');
+          el.removeClass("floating-up").addClass("floating-down");
         }
 
         lastScrollTop = st;
