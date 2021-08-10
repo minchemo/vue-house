@@ -285,7 +285,7 @@
 @media only screen and (max-width: 767px) {
   .section4 {
     margin-top: 0;
-    height: calc(auto - 17vw);
+    height: auto;
 
     .bg {
       position: relative;

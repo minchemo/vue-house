@@ -1,7 +1,7 @@
 <template>
   <div class="section1 with-mask f-p-section">
     <div class="intro">
-      <img class="sea" src="~@/projects/aries/s1/sea.png" alt="" srcset="" />
+      <img class="sea" src="~@/projects/aries/s1/sea.jpg" alt="" srcset="" />
       <img
         class="yellow-style"
         src="~@/projects/aries/s1/yellow_style.png"
