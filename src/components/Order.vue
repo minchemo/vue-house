@@ -657,6 +657,8 @@ export default {
   }
 }
 
+
+
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .order-title {
@@ -676,6 +678,13 @@ export default {
     margin: 0 auto;
   }
 }
+
+@media screen and (min-width: 767px) and (max-width: 1300px) {
+  .order-bg .row label{
+     width: 7vw;
+  }
+}
+
 
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */

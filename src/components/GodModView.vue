@@ -25,6 +25,12 @@
   }
 }
 
+@media screen and (min-width: 767px) and (max-width: 1300px) {
+  .view-img{
+     width: 100vw;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
@@ -47,6 +53,8 @@
   }
 }
 </style>
+
+
 
 <script>
 import { isMobile } from "@/utils";

@@ -28,6 +28,11 @@
     100%  calc(100% - 4vw),
     100% 0%);
 }
+
+
+
+
+
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
@@ -40,8 +45,11 @@
 @media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
 }
 
+
+
 // 避免過度到 1280 x 720 時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 767px) and (max-width: 700px) {
+
 }
 </style>
 

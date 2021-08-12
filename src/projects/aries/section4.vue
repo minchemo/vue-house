@@ -268,6 +268,7 @@
           position: absolute;
           right: -2vw;
           top: 0;
+          width: 43%;
         }
         .content {
           font-size: 0.8vw;
@@ -277,6 +278,17 @@
     }
   }
 }
+
+
+@media screen and (min-width: 767px) and (max-width: 1300px) {
+  .titleImg{
+    width: 43%;
+  }
+}
+
+
+
+
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
