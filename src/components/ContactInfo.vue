@@ -1,39 +1,30 @@
 <template>
   <div id="contact-info">
     <img
-      class="form_style_1 floating"
-      src="~@/assets/img/form/style_1.png"
+      v-if="!isMobile"
+      class="forest"
+      src="~@/assets/img/forest.svg"
       alt=""
+      srcset=""
     />
-    <img
-      class="form_style_2 floating"
-      src="~@/assets/img/form/style_2.png"
-      alt=""
-    />
-    <img
-      class="form_style_3 floating"
-      src="~@/assets/img/form/style_3.png"
-      alt=""
-    />
-    <div v-if="!isMobile" class="style3 style3_1"></div>
-    <div v-if="!isMobile" class="style3 style3_2"></div>
-    <div v-if="!isMobile" class="style3 style3_3"></div>
     <div class="contact-info">
       <img
-        class="contact-info-img"
-        src="~@/assets/img/contact-info-bg.svg"
+        v-if="isMobile"
+        class="forest_mb"
+        src="~@/assets/img/forest.png"
         alt=""
+        srcset=""
       />
       <img
         v-if="!isMobile"
         class="logo"
-        src="@/assets/img/contact-logo.svg"
+        src="@/assets/img/contact-logo.png"
         :alt="info.caseName"
       />
       <img
         v-if="isMobile"
         class="logo"
-        src="@/assets/img/contact-logo.svg"
+        src="@/assets/img/contact-logo.png"
         :alt="info.caseName"
       />
       <div class="info">
@@ -164,32 +155,19 @@ export default {
   z-index: 15;
 }
 
-.contact-info-img {
+.forest {
   position: absolute;
-  height: 840px;
-  left: 50%;
-  bottom: -270px;
-  transform: translateX(-50%);
-  z-index: 1;
-}
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  transform: scale(1.2) skew(0deg, 0);
+  transform-origin: center;
+  animation: forest 4s infinite alternate-reverse;
 
-.style3 {
-  position: absolute;
-  width: 13vw;
-  height: 1px;
-  background: #2bb2d8;
-  transform: rotate(-45deg);
-  &.style3_1 {
-    top: 3vw;
-    left: 21vw;
-  }
-  &.style3_2 {
-    top: 0;
-    left: 31vw;
-  }
-  &.style3_3 {
-    top: 7vw;
-    right: 30vw;
+  @keyframes forest {
+    100% {
+      transform: scale(1.2) skew(3deg, 0);
+    }
   }
 }
 
@@ -203,20 +181,12 @@ export default {
   align-content: center;
   justify-content: space-between;
   position: relative;
- // z-index: 50;
-  width: 100%;
-  /*left: 50%;
-  transform: translate(-50%, -50%);*/
+  width: 80%;
   min-width: 1000px;
   margin: 0 auto;
-  // height: 480px;
-  /* background-size: 100vw auto;
-  background-attachment: fixed;
-  background-position: 0% 50%; */
-  //margin: 2vw auto -2vw;
   padding: 70px 0 70px;
-  // position: absolute;
-  margin-bottom: 0;
+  margin-bottom: -100px;
+  z-index: 50;
 
   .fix-bar {
     background: rgba(231, 149, 14);
@@ -271,8 +241,8 @@ export default {
 }
 
 .logo {
-  width: auto;
-  height: $contact_logo_pc_width;
+  width: $contact_logo_pc_width;
+  height: auto;
   margin: 0 auto;
   margin-bottom: 50px;
   z-index: 1;
@@ -299,7 +269,7 @@ export default {
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: $contact_btn_border_radius;
   font-family: $family4;
 
   &.half {
@@ -347,8 +317,7 @@ export default {
   height: 60px;
   background: #fff;
   box-shadow: $contact_btn_border;
-  border-radius: 50px 0 0 50px;
-  // border:1px solid $contact_btn_bg;
+  border-radius: $contact_btn_addr_border_radius;
   font-family: $family4;
   + .google-btn,
   + .btn {
@@ -368,7 +337,7 @@ export default {
 
   box-shadow: $contact_google_border;
   transition: all 0.5s;
-  border-radius: 0 50px 50px 0 !important;
+  border-radius: $contact_btn_gbtn_border_radius !important;
 
   svg {
     color: $contact_google_btn_icon;
@@ -406,6 +375,23 @@ export default {
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .forest_mb {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 90vh;
+    margin-top: -90vh;
+    transform: translateX(0%);
+    animation: forest_mb 15s infinite alternate-reverse linear;
+    pointer-events: none;
+
+    @keyframes forest_mb {
+      100% {
+        transform: translateX(-70%);
+      }
+    }
+  }
+
   .contact-info-img {
     position: absolute;
     width: 270vw;
@@ -434,14 +420,17 @@ export default {
     position: relative;
     margin: 10vw auto 0 auto;
     min-width: unset;
-    background: transparent;
+    //background: transparent;
     margin-top: 20vw;
 
     .logo {
-      //width: $contact_logo_mobile_width;
-      width: 65vw;
+      width: $contact_logo_mobile_width;
+      height: auto;
+      //width: 65vw;
+      //height: auto;
       //margin-left: -2vw;
-      margin: 0;
+      margin: 0 auto;
+      margin-bottom: 40px;
     }
   }
 
@@ -471,7 +460,7 @@ export default {
       margin-bottom: 12px;
       &.address {
         margin-bottom: 0;
-        border-radius: 30px 30px 0 0;
+        border-radius: $contact_btn_addr_border_radius;
       }
     }
   }
@@ -490,7 +479,7 @@ export default {
     border-radius: 0 0 30px 30px;
     + .google-btn,
     + .btn {
-      border-radius: 0 0 30px 30px !important;
+      border-radius: $contact_btn_gbtn_border_radius;
     }
   }
 }

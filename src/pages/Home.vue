@@ -3,38 +3,15 @@
     <Loading :loading="load" />
     <!-- <Navigation /> -->
     <!-- <Indigator :viewIndex="viewIndex" /> -->
-    <full-page ref="fullPage" :options="options" id="fullpage">
+    <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
       <vue-lazy-component class="section" id="section1" @init="init">
         <Section1 />
-      </vue-lazy-component>
-      <vue-lazy-component
-        class="section_"
-        id="section2"
-        @init="init"
-        v-show="false"
-      >
-        <Section2 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section3" @init="init">
-        <Section3 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section4" @init="init">
-        <Section4 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section5" @init="init">
-        <Section5 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section6" @init="init">
-        <Section6 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section7" @init="init">
-        <Section7 />
       </vue-lazy-component>
 
       <vue-lazy-component class="section" id="contact">
         <ContactSection />
       </vue-lazy-component>
-    </full-page>
+    <!-- </full-page> -->
 
     <MobileNav />
   </div>
@@ -52,35 +29,6 @@
 .section .fp-slide,
 .section .fp-tableCell {
   height: auto !important;
-}
-
-.with-mask {
-  // mask: url("~@/projects/aries/s1/section_mask.svg");
-  mask-size: cover;
-}
-
-.floating {
-  transition: all 1.8s;
-
-  &.floating-up {
-    transform: translateY(50px);
-  }
-  &.floating-down {
-    transform: translateY(-50px);
-  }
-}
-
-.rotating {
-  animation: rotating 40s infinite;
-
-  @keyframes rotating {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(359deg);
-    }
-  }
 }
 
 .fp-left {
@@ -114,10 +62,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .with-mask {
-    // mask: unset;
-  }
-
   .fp-left {
     display: flex;
     margin: 0 !important;
@@ -155,13 +99,7 @@ import Loading from "@/components/Loading.vue";
 import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/aries/section1.vue";
-import Section2 from "@/projects/aries/section2.vue";
-import Section3 from "@/projects/aries/section3.vue";
-import Section4 from "@/projects/aries/section4.vue";
-import Section5 from "@/projects/aries/section5.vue";
-import Section6 from "@/projects/aries/section6.vue";
-import Section7 from "@/projects/aries/section7.vue";
+import Section1 from "@/projects/chy/section1.vue";
 
 export default {
   name: "home",
@@ -173,12 +111,6 @@ export default {
     ContactSection,
     MobileNav,
     Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
   },
 
   data() {
@@ -192,23 +124,23 @@ export default {
       // },
 
       // indigatorIndex: 0,
-      options: {
-        menu: "#menu",
-        anchors: [],
-        scrollBar: true,
-        // onLeave: this.onLeave,
-        //afterLoad: this.afterLoad,
-        continuousHorizontal: true,
-        autoScrolling: false,
-        fitToSection: false,
-        verticalCentered: false,
+      // options: {
+      //   menu: "#menu",
+      //   anchors: [],
+      //   scrollBar: true,
+      //   // onLeave: this.onLeave,
+      //   //afterLoad: this.afterLoad,
+      //   continuousHorizontal: true,
+      //   autoScrolling: false,
+      //   fitToSection: false,
+      //   verticalCentered: false,
 
-        navigation: true,
-        navigationPosition: "left",
-        slidesNavigation: true,
-        slidesNavPosition: "top",
-        lazyLoading: false,
-      },
+      //   navigation: true,
+      //   navigationPosition: "left",
+      //   slidesNavigation: true,
+      //   slidesNavPosition: "top",
+      //   lazyLoading: false,
+      // },
     };
   },
   created() {

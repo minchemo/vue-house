@@ -30,6 +30,21 @@ export default {
 };
 </script>
 
+<style lang="scss">
+.desc {
+  img {
+    width: 150%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .desc {
+    img {
+      width: 80%;
+    }
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 .house-info {
@@ -37,13 +52,6 @@ export default {
   background: $house_bg;
   position: relative;
   z-index: 1;
-
-  .house-info-draw {
-    width: 80%;
-    position: absolute;
-    right: 0;
-    bottom: 40px;
-  }
 }
 .content {
   width: 686px;
@@ -53,16 +61,6 @@ export default {
   justify-content: center;
   flex-direction: column;
   padding-bottom: 8vh;
-
-  .decor-6 {
-    width: 35vw;
-    bottom: 0;
-    right: 10vw;
-    z-index: -1;
-    img {
-      width: 100%;
-    }
-  }
 }
 
 .title {
