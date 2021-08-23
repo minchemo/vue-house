@@ -72,9 +72,9 @@
             </div>
             <div class="row">
               <label>資訊來源</label>
-              <el-select v-model="form.infoSource" placeholder>
+              <el-select v-model="form.info_source" placeholder>
                 <el-option
-                  v-for="infoSource in [
+                  v-for="info_source in [
                     '戶外廣告看版',
                     'FB',
                     '聯播網',
@@ -83,9 +83,9 @@
                     '介紹',
                     '其他',
                   ]"
-                  :key="infoSource"
-                  :label="infoSource"
-                  :value="infoSource"
+                  :key="info_source"
+                  :label="info_source"
+                  :value="info_source"
                   no-data-text=""
                 ></el-option>
               </el-select>
@@ -202,7 +202,7 @@ export default {
         city: "",
         area: "",
         gender: "",
-        infoSource: "",
+        info_source: "",
         parking: "",
         houseStyle: "",
         room: "",
@@ -290,7 +290,7 @@ export default {
       formData.append("city", this.form.city);
       formData.append("area", this.form.area);
       formData.append("gender", this.form.gender);
-      formData.append("infoSource", this.form.infoSource);
+      formData.append("info_source", this.form.info_source);
       formData.append("parking", this.form.parking);
       formData.append("houseStyle", this.form.houseStyle);
       formData.append("utm_source", utmSource);
