@@ -7,6 +7,9 @@
       <vue-lazy-component class="section" id="section1" @init="init">
         <Section1 />
       </vue-lazy-component>
+      <vue-lazy-component class="section" id="section2" @init="init">
+        <Section2 />
+      </vue-lazy-component>
 
       <vue-lazy-component class="section" id="contact">
         <ContactSection />
@@ -99,7 +102,8 @@ import Loading from "@/components/Loading.vue";
 import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/chy/section1.vue";
+import Section1 from "@/projects/llcs/section1.vue";
+import Section2 from "@/projects/llcs/section2.vue";
 
 export default {
   name: "home",
@@ -111,6 +115,7 @@ export default {
     ContactSection,
     MobileNav,
     Section1,
+    Section2,
   },
 
   data() {
