@@ -96,7 +96,7 @@
               <label>房型需求</label>
               <el-select v-model="form.houseStyle" placeholder>
                 <el-option
-                  v-for="houseStyle in ['2房', '3房', '4房', '店面']"
+                  v-for="houseStyle in ['2房', '3房', '店面']"
                   :key="houseStyle"
                   :label="houseStyle"
                   :value="houseStyle"
