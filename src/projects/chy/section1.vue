@@ -119,7 +119,7 @@
     position: absolute;
     right: 80px;
     top: 30px;
-    z-index: 10;
+    z-index: 999;
     img {
       width: 10vw;
     }
@@ -128,7 +128,7 @@
     position: fixed;
     right: 80px;
     bottom: 30px;
-    z-index: 10;
+    z-index: 999;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
     img {
       width: 20vw;
@@ -139,7 +139,7 @@
     width: 100%;
     bottom: 0;
     left: 50%;
-    height: 35vh;
+    height: 28vh;
     transform: translateX(-50%);
     img {
       height:  100%;
