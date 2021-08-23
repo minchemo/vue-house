@@ -12,6 +12,9 @@
         <img src="@/projects/chy/s1/t3.svg" alt="" srcset="" />
       </div>
     </div>
+    <div class="bush">
+      <img src="~@/projects/chy/s1/bush.png" alt="" srcset="">
+    </div>
     <div data-aos="fade" data-aos-duration="1000" class="rt-logo">
       <img src="@/projects/chy/s1/rt-logo.svg" alt="" srcset="" />
     </div>
@@ -112,7 +115,6 @@
       }
     }
   }
-
   .rt-logo {
     position: absolute;
     right: 80px;
@@ -130,6 +132,17 @@
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
     img {
       width: 20vw;
+    }
+  }
+  .bush {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    height: 35vh;
+    transform: translateX(-50%);
+    img {
+      height:  100%;
     }
   }
 }
