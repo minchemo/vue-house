@@ -202,7 +202,7 @@ export default {
         city: "",
         area: "",
         gender: "",
-        infosource: "",
+        infoSource: "",
         parking: "",
         houseStyle: "",
         room: "",
@@ -290,7 +290,7 @@ export default {
       formData.append("city", this.form.city);
       formData.append("area", this.form.area);
       formData.append("gender", this.form.gender);
-      formData.append("infosource", this.form.infosource);
+      formData.append("infoSource", this.form.infoSource);
       formData.append("parking", this.form.parking);
       formData.append("houseStyle", this.form.houseStyle);
       formData.append("utm_source", utmSource);
