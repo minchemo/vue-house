@@ -1,6 +1,6 @@
 exports.info = {
-  title: "巴克禮PARK2",
+  title: "朗朗城心",
   description:
-    "巴克禮PARK2",
-  keywords: "巴克禮PARK2"
+    "朗朗城心",
+  keywords: "朗朗城心"
 };

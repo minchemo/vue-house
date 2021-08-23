@@ -7,7 +7,7 @@ export default {
   fbLink:
     "",
   fbMessage: "",
-  caseName: "巴克禮PARK2",
+  caseName: "朗朗城心",
   indigatorLength: 10,
   houseInfos: [
     ["投資興建", "待提供"], 

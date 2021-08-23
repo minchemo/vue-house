@@ -91,7 +91,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 31vw;
+    width: 26vw;
     opacity: 1;
 
     .f-item-img {
@@ -105,13 +105,25 @@
     }
     .f-item-txt {
       max-width: 100%;
+      display: flex;
+      align-items: center;
+      color: #fff;
       .f-item-title {
+        font-size: 1.2vw;
+        letter-spacing: 3px;
+        min-width: 68px;
+        line-height: 1.2;
       }
       .f-item-content {
+        font-size: 0.9vw;
+        letter-spacing: 3px;
+        line-height: 1.3;
+        width: 100%;
+        text-align: left;
       }
     }
     .f-item-divider {
-      height: 54px;
+      height: 64px;
       width: 3px;
       margin: 0 20px;
     }
@@ -209,6 +221,8 @@
           line-height: 1.3;
           font-size: 16px;
           text-align: justify;
+          width: auto;
+          text-align: center;
         }
       }
       .f-item-divider {
@@ -427,6 +441,8 @@
 <script>
 // @ is an alias to /src
 import { isMobile } from "@/utils";
+import "hammerjs";
+
 export default {
   name: "section2",
 
@@ -597,6 +613,24 @@ export default {
         this.pushFeatureRemain--;
       }
     },
+    initGesture() {
+      const self = this;
+      const hammertime = new Hammer($(".features")[0]);
+      hammertime.on("swipeleft", function (ev) {
+        let target = self.currentActiveFeature - 1;
+        if (target <= 0) {
+          target = 10;
+        }
+        self.setFeatureCurrent(target);
+      });
+      hammertime.on("swiperight", function (ev) {
+        let target = self.currentActiveFeature + 1;
+        if (target > 10) {
+          target = 1;
+        }
+        self.setFeatureCurrent(target);
+      });
+    },
   },
 
   created() {},
@@ -606,6 +640,9 @@ export default {
       if (this.isInViewport) this.pushFeature();
     }, 500);
     this.onScreenShow();
+    if (isMobile) {
+      this.initGesture();
+    }
   },
 };
 </script>
