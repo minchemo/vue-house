@@ -268,10 +268,20 @@
         .f-item-img {
           margin-right: 0;
           .f-item-img-init {
-            width: 100px;
-          }
+            width: 70px;
+            }
           .f-item-img-hover {
             width: 100px;
+            animation: zoomIn .5s;
+
+            @keyframes zoomIn {
+              from {
+                width: 70px;
+              }
+              to {
+                width: 100px;
+              }
+            }
           }
         }
       }
@@ -622,6 +632,9 @@ export default {
           target = 10;
         }
         self.setFeatureCurrent(target);
+      });
+      hammertime.on("swipedown", function (ev) {
+        ev.preventDeafult;
       });
       hammertime.on("swiperight", function (ev) {
         let target = self.currentActiveFeature + 1;
