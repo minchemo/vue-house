@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="bush">
-      <img src="~@/projects/chy/s1/bush.png" alt="" srcset="">
+      <img src="~@/projects/chy/s1/bush.png" alt="" srcset="" />
     </div>
     <div data-aos="fade" data-aos-duration="1000" class="rt-logo">
       <img src="@/projects/chy/s1/rt-logo.svg" alt="" srcset="" />
@@ -140,9 +140,20 @@
     bottom: 0;
     left: 50%;
     height: 28vh;
-    transform: translateX(-50%);
+    transform: translateX(-50%) skew(-3deg, 0);
+    animation: bush 3s infinite alternate-reverse;
+    transform-origin: bottom center;
     img {
-      height:  100%;
+      height: 100%;
+    }
+
+    @keyframes bush {
+      from {
+        transform: translateX(-50%) skew(-3deg, 0);
+      }
+      to {
+        transform: translateX(-50%) skew(3deg, 0);
+      }
     }
   }
 }

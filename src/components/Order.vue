@@ -289,10 +289,10 @@ export default {
       // formData.append('time_end', this.form.time_end)
       formData.append("city", this.form.city);
       formData.append("area", this.form.area);
-      formData.append("gender", this.form.area);
-      formData.append("infosource", this.form.area);
-      formData.append("parking", this.form.area);
-      formData.append("houseStyle", this.form.area);
+      formData.append("gender", this.form.gender);
+      formData.append("infosource", this.form.infosource);
+      formData.append("parking", this.form.parking);
+      formData.append("houseStyle", this.form.houseStyle);
       formData.append("utm_source", utmSource);
       formData.append("utm_medium", utmMedium);
       formData.append("utm_content", utmContent);
