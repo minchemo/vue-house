@@ -7,18 +7,27 @@
     </div>
     <div class="subsection subsection2">
       <img
+        v-if="!isMobile"
         class="building"
         src="~@/projects/llcs/s2/building.png"
         alt=""
         srcset=""
       />
+      <img
+        v-else
+        class="building"
+        src="~@/projects/llcs/s2/building_mo.png"
+        alt=""
+        srcset=""
+      />
+      <div v-if="!isMobile" class="title">塭仔圳文教核心</div>
       <div class="features">
         <div
           class="f-item"
           v-bind:class="'f-i-' + feature.wheelIndex"
           v-for="(feature, i) in tenFeatures"
           :key="i"
-          @click="setFeatureCurrent(i + 1)"
+          @click="setFeatureCurrent(i + 3)"
         >
           <div class="f-item-img">
             <img
@@ -35,8 +44,11 @@
             />
           </div>
           <div class="f-item-txt">
-            <div class="f-item-title" v-html="feature.title"></div>
-
+            <div
+              v-if="!isMobile"
+              class="f-item-title"
+              v-html="feature.title"
+            ></div>
             <img
               class="f-item-divider"
               src="~@/projects/llcs/s2/10-features/divider.png"
@@ -44,8 +56,16 @@
               srcset=""
             />
             <div class="f-item-content" v-html="feature.content"></div>
+            <img
+              v-if="isMobile"
+              class="f-item-divider"
+              src="~@/projects/llcs/s2/10-features/divider.png"
+              alt=""
+              srcset=""
+            />
           </div>
           <img
+            v-if="!isMobile"
             class="f-item-divider"
             src="~@/projects/llcs/s2/10-features/divider.png"
             alt=""
@@ -61,13 +81,13 @@
   position: absolute;
   right: 38vw;
   z-index: 1;
-  top: 20vw;
+  top: 18vw;
 
   .f-item {
     display: flex;
     align-items: center;
     margin: 50px 0;
-    transition: all 0.9s;
+    transition: all 0.5s;
     position: absolute;
     top: 0;
     left: 0;
@@ -84,22 +104,10 @@
       }
     }
     .f-item-txt {
-      display: flex;
-      align-items: center;
-      color: #fff;
-      max-width: 50%;
+      max-width: 100%;
       .f-item-title {
-        min-width: 70px;
-        font-size: 28px;
-        letter-spacing: 4px;
-        line-height: 1.3;
-        font-weight: bold;
       }
       .f-item-content {
-        letter-spacing: 4px;
-        line-height: 1.3;
-        font-size: 20px;
-        text-align: justify;
       }
     }
     .f-item-divider {
@@ -159,6 +167,144 @@
       opacity: 0;
       pointer-events: none;
     }
+    &.f-i-11 {
+      transform: translate(-35vw, 36vw);
+      opacity: 0;
+      pointer-events: none;
+    }
+    &.f-i-12 {
+      transform: translate(-35vw, 36vw);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .features {
+    right: 95vw;
+    bottom: 270px;
+    top: unset;
+
+    .f-item {
+      flex-direction: column;
+      width: 90vw;
+
+      .f-item-img {
+        margin-right: 0;
+        .f-item-img-init {
+          width: 70px;
+        }
+        .f-item-img-hover {
+          width: 70px;
+        }
+      }
+      .f-item-txt {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        color: #fff;
+        .f-item-content {
+          letter-spacing: 4px;
+          line-height: 1.3;
+          font-size: 16px;
+          text-align: justify;
+        }
+      }
+      .f-item-divider {
+        height: 54px;
+        width: 5px;
+        margin: 0 15px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        left: 0;
+      }
+
+      &.f-i-1 {
+        transform: translate(58vw, -11vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-2 {
+        transform: translate(58vw, -11vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-3 {
+        transform: translate(46vw, -11vw);
+        pointer-events: none;
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-4 {
+        transform: translate(25vw, -2vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-5 {
+        //current
+        transform: translate(0, 0);
+        pointer-events: none;
+        .f-item-img {
+          margin-right: 0;
+          .f-item-img-init {
+            width: 100px;
+          }
+          .f-item-img-hover {
+            width: 100px;
+          }
+        }
+      }
+      &.f-i-6 {
+        transform: translate(-26vw, 4vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-7 {
+        transform: translate(-50vw, -2vw);
+        pointer-events: none;
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-8 {
+        transform: translate(-70vw, -2vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-9 {
+        transform: translate(-70vw, -2vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-10 {
+        transform: translate(-70vw, -2vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-11 {
+        transform: translate(-70vw, -2vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+      &.f-i-12 {
+        transform: translate(-70vw, -2vw);
+        .f-item-txt {
+          display: none;
+        }
+      }
+    }
   }
 }
 </style>
@@ -197,6 +343,19 @@
     }
 
     &.subsection2 {
+      .title {
+        position: absolute;
+        z-index: 2;
+        color: #fff000;
+        font-size: 2.5vw;
+        border-bottom: 4px solid;
+        padding-bottom: 1vh;
+        font-family: "Noto Serif TC";
+        font-weight: bold;
+        left: 50%;
+        top: 50%;
+        transform: translate(-60%, -100%);
+      }
       .building {
         position: absolute;
         left: 0;
@@ -212,6 +371,48 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section2 {
+    background-image: url("~@/projects/llcs/s2/bg_mo.jpg");
+
+    .subsection {
+      height: unset;
+
+      &.subsection1 {
+        height: 25vh;
+        .video-box {
+          width: 90%;
+          height: 80%;
+          img {
+            width: 15%;
+          }
+        }
+      }
+
+      &.subsection2 {
+        height: 157vw;
+        .title {
+          position: absolute;
+          z-index: 2;
+          color: #fff000;
+          font-size: 2.5vw;
+          border-bottom: 4px solid;
+          padding-bottom: 1vh;
+          font-family: "Noto Serif TC";
+          font-weight: bold;
+          left: 50%;
+          top: 50%;
+          transform: translate(-60%, -100%);
+        }
+        .building {
+          position: absolute;
+          left: -16vw;
+          bottom: 161px;
+          width: 178vw;
+          height: unset;
+        }
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -238,7 +439,7 @@ export default {
           imgHover: require("@/projects/llcs/s2/10-features/1.png"),
           title: "城市<br>新生",
           content: "398公頃城市新生計畫，新北門面全面翻新",
-          wheelIndex: 10,
+          wheelIndex: 8,
           realIndex: 3,
         },
         {
@@ -246,7 +447,7 @@ export default {
           imgHover: require("@/projects/llcs/s2/10-features/2.png"),
           title: "軌道<br>經濟",
           content: "機捷A5站、加乘五泰輕軌，交織增值美景",
-          wheelIndex: 10,
+          wheelIndex: 9,
           realIndex: 4,
         },
         {
@@ -262,7 +463,7 @@ export default {
           imgHover: require("@/projects/llcs/s2/10-features/4.png"),
           title: "商圈<br>環抱",
           content: "副都心等6大黃金商圈環抱，生活機能全包",
-          wheelIndex: 10,
+          wheelIndex: 11,
           realIndex: 6,
         },
         {
@@ -270,7 +471,7 @@ export default {
           imgHover: require("@/projects/llcs/s2/10-features/5.png"),
           title: "綠意<br>薈萃",
           content: "近鄰22公頃運動公園、16處塭仔圳公園地",
-          wheelIndex: 10,
+          wheelIndex: 12,
           realIndex: 7,
         },
         {
@@ -278,7 +479,7 @@ export default {
           imgHover: require("@/projects/llcs/s2/10-features/6.png"),
           title: "文教<br>核心",
           content: "下樓就是非營利幼兒園，鄰國中、小預定地",
-          wheelIndex: 10,
+          wheelIndex: 8,
           realIndex: 8,
         },
         {
@@ -286,7 +487,7 @@ export default {
           imgHover: require("@/projects/llcs/s2/10-features/7.png"),
           title: "復刻<br>信義",
           content: "新古典建築語彙，信義豪宅級大器飛簷頂蓋",
-          wheelIndex: 10,
+          wheelIndex: 9,
           realIndex: 9,
         },
         {
@@ -302,7 +503,7 @@ export default {
           imgHover: require("@/projects/llcs/s2/10-features/9.png"),
           title: "健康<br>防疫",
           content: "美國NASA指定防疫建材、全棟式濾水系統",
-          wheelIndex: 10,
+          wheelIndex: 1,
           realIndex: 1,
         },
         {
@@ -310,15 +511,51 @@ export default {
           imgHover: require("@/projects/llcs/s2/10-features/10.png"),
           title: "全齡<br>公設",
           content: "專為您打造空中花園、健身房、兒童遊戲室",
-          wheelIndex: 10,
+          wheelIndex: 2,
           realIndex: 2,
         },
       ],
       currentActiveFeature: 5,
+      pushFeatureInterval: null,
+      pushFeatureRemain: 5,
+      isInViewport: false,
     };
   },
 
   methods: {
+    onScreenShow() {
+      let self = this;
+
+      function isOnScreen(elem) {
+        if (elem.length == 0) {
+          return;
+        }
+        var $window = jQuery(window);
+        var viewport_top = $window.scrollTop();
+        var viewport_height = $window.height();
+        var viewport_bottom = viewport_top + viewport_height;
+        var $elem = jQuery(elem);
+        var top = $elem.offset().top;
+        var height = $elem.height();
+        var bottom = top + height;
+
+        return (
+          (top >= viewport_top && top < viewport_bottom) ||
+          (bottom > viewport_top && bottom <= viewport_bottom) ||
+          (height > viewport_height &&
+            top <= viewport_top &&
+            bottom >= viewport_bottom)
+        );
+      }
+
+      window.addEventListener("scroll", function (e) {
+        if (isOnScreen(jQuery(".subsection2"))) {
+          self.isInViewport = true;
+        } else {
+          self.isInViewport = false;
+        }
+      });
+    },
     setFeatureCurrent(i) {
       const offset = Math.abs(this.currentActiveFeature - i);
 
@@ -346,16 +583,18 @@ export default {
       }
     },
     pushFeature() {
-      for (let i = 0; i < 10; i++) {
-        for (let index = 0; index < this.tenFeatures.length; index++) {
-          setTimeout(() => {
-            const realIndex = this.tenFeatures[index]["realIndex"];
+      if (this.pushFeatureRemain > 0) {
+        this.tenFeatures.forEach((elem, i) => {
+          if (
+            this.tenFeatures[i]["realIndex"] !=
+              this.tenFeatures[i]["wheelIndex"] &&
+            this.tenFeatures[i]["realIndex"] < this.tenFeatures[i]["wheelIndex"]
+          ) {
+            this.tenFeatures[i]["wheelIndex"]--;
+          }
+        });
 
-            if (this.tenFeatures[index]["wheelIndex"] > realIndex) {
-              this.tenFeatures[index]["wheelIndex"]--;
-            }
-          }, 1000);
-        }
+        this.pushFeatureRemain--;
       }
     },
   },
@@ -363,9 +602,10 @@ export default {
   created() {},
 
   mounted() {
-    setInterval(() => {
-      this.pushFeature();
-    }, 100);
+    this.pushFeatureInterval = setInterval(() => {
+      if (this.isInViewport) this.pushFeature();
+    }, 500);
+    this.onScreenShow();
   },
 };
 </script>
