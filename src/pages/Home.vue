@@ -29,9 +29,9 @@
     <vue-lazy-component class="section" id="section6" @init="init">
       <Section6 />
     </vue-lazy-component>
-   <!-- <vue-lazy-component class="section" id="section7" @init="init">
+    <vue-lazy-component class="section" id="section7" @init="init">
       <Section7 />
-    </vue-lazy-component> -->
+    </vue-lazy-component>
 
     <img class="cloud-left" src="~@/projects/sv2/cloud_left.png" alt="" />
 
