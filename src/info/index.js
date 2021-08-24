@@ -1,20 +1,28 @@
 export default {
-  address: "待提供",
+  address: "新莊區坡雅路˙信華三街口",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d906.8003369365716!2d121.82645282926926!3d24.616744318228204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDM3JzAwLjMiTiAxMjHCsDQ5JzM3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1628334070649!5m2!1szh-TW!2stw",
-  googleLink: "",
-  phone: "06-2090888",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.6559218645876!2d121.44066682268664!3d25.046841773967902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51f286eecefc542e!2z5pyX5pyX5Z-O5b-D!5e0!3m2!1szh-TW!2stw!4v1629824891103!5m2!1szh-TW!2stw",
+  googleLink: "https://goo.gl/maps/wqyN7BBd7TjiZLUJA",
+  phone: "02-2909-2233",
   fbLink:
     "",
   fbMessage: "",
   caseName: "朗朗城心",
   indigatorLength: 10,
   houseInfos: [
-    ["投資興建", "待提供"], 
-    ["建築設計", "待提供"],
-    ["接待中心", "待提供"],
-    ["企劃銷售", "待提供"],
-    ["行銷企劃", "<img src='"+ require('@/assets/img/houseinfo-sales.png')+"'>"],
+    ["投資興建", "統一工商／築億建設"], 
+    ["基地面積", "542坪"],
+
+    ["建築規劃", "建築規劃"],
+    ["銷售房型", "2-3房"],
+
+    ["公設展演", "袁世賢／呈境設計"],
+    ["樓層規劃", "地上15層/地下5層"],
+    ["景觀美學", "徐世萃／大漢景觀設計工程"],
+
+
+    ["迎賓會館", "新莊區坡雅路˙信華三街口"],
+    ["新莊區坡雅路˙信華三街口", "02-29092233"],
   ],
 
   gtmCode: ["WCNSDTS"], // 可放置多個
@@ -23,6 +31,6 @@ export default {
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
     title: "立即預約",
-    subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！"
+    subTitle: "請留下資料，將有專人為您預約"
   }
 };

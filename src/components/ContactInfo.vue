@@ -1,20 +1,6 @@
 <template>
   <div id="contact-info">
-    <img
-      v-if="!isMobile"
-      class="forest"
-      src="~@/assets/img/forest.svg"
-      alt=""
-      srcset=""
-    />
     <div class="contact-info">
-      <img
-        v-if="isMobile"
-        class="forest_mb"
-        src="~@/assets/img/forest.png"
-        alt=""
-        srcset=""
-      />
       <img
         v-if="!isMobile"
         class="logo"
@@ -143,9 +129,10 @@ export default {
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
 #contact-info {
-  position: relative;
-  background-color: $order_bg_color;
-  //z-index: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 15;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -400,7 +387,10 @@ export default {
     transform: translateX(-50%);
   }
   #contact-info {
+    position: relative;
     background: transparent;
+    transform: unset;
+    left: 0;
   }
   .order-bg-draw {
     height: 100px;
@@ -421,7 +411,7 @@ export default {
     margin: 10vw auto 0 auto;
     min-width: unset;
     //background: transparent;
-    margin-top: 20vw;
+    margin-top: 0;
 
     .logo {
       width: $contact_logo_mobile_width;
@@ -460,7 +450,7 @@ export default {
       margin-bottom: 12px;
       &.address {
         margin-bottom: 0;
-        border-radius: $contact_btn_addr_border_radius;
+        border-radius: $contact_btn_addr_border_radius_m;
       }
     }
   }
@@ -476,10 +466,10 @@ export default {
     width: 280px;
     padding: 0 1em;
     text-align: justify;
-    border-radius: 0 0 30px 30px;
+    //border-radius: 0 0 30px 30px;
     + .google-btn,
     + .btn {
-      border-radius: $contact_btn_gbtn_border_radius;
+      border-radius: $contact_btn_gbtn_border_radius_m;
     }
   }
 }

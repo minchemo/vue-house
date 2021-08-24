@@ -30,6 +30,7 @@ export default {
   display: flex;
   position: relative;
   z-index: 5;
+  margin-top: -10px;
   iframe {
     flex: 1;
     order: 2;

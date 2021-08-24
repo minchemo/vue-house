@@ -1,5 +1,5 @@
 <template>
-  <div class="default">
+  <div class="section3">
   </div>
 </template>
 <style lang="scss" scoped>
@@ -24,8 +24,9 @@
 <script>
 // @ is an alias to /src
 import { isMobile } from '@/utils'
+
 export default {
-  name: 'default',
+  name: 'section3',
 
   data() {
     return {

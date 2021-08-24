@@ -10,6 +10,18 @@
       <vue-lazy-component class="section" id="section2" @init="init">
         <Section2 />
       </vue-lazy-component>
+      <vue-lazy-component class="section" id="section3" @init="init">
+        <Section3 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section4" @init="init">
+        <Section4 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section5" @init="init">
+        <Section5 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section6" @init="init">
+        <Section6 />
+      </vue-lazy-component>
 
       <vue-lazy-component class="section" id="contact">
         <ContactSection />
@@ -104,6 +116,10 @@ import AOS from "@/lib/aos/src/js/aos";
 
 import Section1 from "@/projects/llcs/section1.vue";
 import Section2 from "@/projects/llcs/section2.vue";
+import Section3 from "@/projects/llcs/section3.vue";
+import Section4 from "@/projects/llcs/section4.vue";
+import Section5 from "@/projects/llcs/section5.vue";
+import Section6 from "@/projects/llcs/section6.vue";
 
 export default {
   name: "home",
@@ -116,6 +132,10 @@ export default {
     MobileNav,
     Section1,
     Section2,
+    Section3,
+    Section4,
+    Section5,
+    Section6,
   },
 
   data() {

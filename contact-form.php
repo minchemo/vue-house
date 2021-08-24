@@ -28,6 +28,7 @@ $case_name = $dataList[0]['casename'];
     $parking      = isset($_POST['parking']) ? $_POST['parking'] : '';
     $houseStyle   = isset($_POST['houseStyle']) ? $_POST['houseStyle'] : '';
     $room         = isset($_POST['room']) ? $_POST['room'] : '';
+    $contacttime  = isset($_POST['contacttime']) ? $_POST['contacttime'] : '';
     $msg          = isset($_POST['msg']) ? $_POST['msg'] : '';
     $utm_source   = isset($_POST['utm_source']) ? $_POST['utm_source'] : '';
     $utm_medium   = isset($_POST['utm_medium']) ? $_POST['utm_medium'] : '';
@@ -254,7 +255,7 @@ $case_name = $dataList[0]['casename'];
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：".$name."<BR>電話：".$phone."<BR>城市：".$city.$area."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：".$name."<BR>電話：".$phone."<BR>留言：".$msg."<BR>喜好房型：".$room."<BR>方便接聽電話時間：".$contacttime."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);

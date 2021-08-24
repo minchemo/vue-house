@@ -1,0 +1,746 @@
+<template>
+  <div class="subsection">
+    <div class="container">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="500"   class="info">
+        <img
+          class="title"
+          src="~@/projects/llcs/s4/sb5/title.svg"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-if="!isMobile"
+          class="content"
+          src="~@/projects/llcs/s4/sb5/content.svg"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-else
+          class="content"
+          src="~@/projects/llcs/s4/sb5/content_mo.svg"
+          alt=""
+          srcset=""
+        />
+        <div class="archi-swiper" data-aos-duration="1000" data-aos="fade-up">
+          <swiper
+            ref="swiper"
+            :options="swiperOptionsArchi"
+            @click-slide="openDetail"
+          >
+            <swiper-slide
+              v-for="(archiList, i) in archiList"
+              v-bind:key="i"
+              v-bind:style="{
+                backgroundImage: `url(${archiList.imgSrc})`,
+              }"
+            >
+              <img class="content" :src="archiList.content" alt="" srcset="" />
+              <div class="archi-btn">
+                <img
+                  src="~@/projects/llcs/s4/sb5/archi_btn.png"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+            </swiper-slide>
+          </swiper>
+        </div>
+      </div>
+      <div
+        v-if="!isMobile"
+        class="swiper-box"
+        data-aos-duration="1000"
+        data-aos="fade-right"
+      >
+        <swiper ref="swiper" :options="swiperOptions">
+          <swiper-slide
+            v-for="(activeList, i) in activeList"
+            v-bind:key="i"
+            v-bind:style="{
+              backgroundImage: `url(${activeList.imgSrc})`,
+            }"
+          >
+          </swiper-slide>
+        </swiper>
+      </div>
+
+      <img
+        v-if="isMobile"
+        class="building"
+        src="~@/projects/llcs/s4/sb5/building.png"
+        alt=""
+        srcset=""
+      />
+
+      <img
+        v-if="!isMobile"
+        class="draw"
+        src="~@/projects/llcs/s4/sb5/draw.png"
+        alt=""
+        srcset=""
+      />
+      <img
+        v-else
+        class="draw"
+        src="~@/projects/llcs/s4/sb4/draw_mo.png"
+        alt=""
+        srcset=""
+      />
+
+      <img
+        src="~@/projects/llcs/s4/sb5/shadow.png"
+        class="shadow"
+        alt=""
+        srcset=""
+      />
+    </div>
+    <div v-show="activeArchiDetailOpen" class="archi_detail">
+      <div class="close" @click="activeArchiDetailOpen = false">
+        <img
+          src="~@/projects/llcs/s4/sb5/archi_detail/close.png"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="archi_detail_box">
+        <div class="archi_detail_info">
+          <img
+            class="avatar"
+            :src="activeArchiDetail.avatar"
+            alt=""
+            srcset=""
+          />
+          <img
+            class="detail_content"
+            :src="activeArchiDetail.detail_content"
+            alt=""
+            srcset=""
+          />
+          <img
+            class="rewards"
+            v-if="activeArchiDetail.rewards"
+            :src="activeArchiDetail.rewards"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="archi_detail_swiper">
+          <swiper ref="swiper" :options="swiperOptionsArchiDetail">
+            <swiper-slide
+              v-for="(slides, i) in activeArchiDetail.slides"
+              v-bind:key="i"
+              v-bind:style="{
+                backgroundImage: `url(${slides})`,
+              }"
+            >
+            </swiper-slide>
+            <div
+              v-if="!isMobile"
+              class="swiper-pagination"
+              slot="pagination"
+            ></div>
+            <div v-if="isMobile" class="swiper-button-next" slot="button-next">
+              <img src="~@/projects/llcs/s4/next_btn.svg" alt="" srcset="" />
+            </div>
+            <div v-if="isMobile" class="swiper-button-prev" slot="button-prev">
+              <img src="~@/projects/llcs/s4/prev_btn.svg" alt="" srcset="" />
+            </div>
+          </swiper>
+        </div>
+      </div>
+      <div class="title">
+        <img
+          v-if="!isMobile"
+          src="~@/projects/llcs/s4/sb5/archi_detail/title.svg"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-else
+          src="~@/projects/llcs/s4/sb5/archi_detail/title_mo.svg"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <img
+        v-if="!isMobile"
+        class="draw"
+        src="~@/projects/llcs/s4/sb5/archi_detail/draw.png"
+        alt=""
+        srcset=""
+      />
+      <img
+        v-else
+        class="draw"
+        src="~@/projects/llcs/s4/sb5/archi_detail/draw_mo.png"
+        alt=""
+        srcset=""
+      />
+    </div>
+  </div>
+</template>
+<style lang="scss">
+.archi_detail {
+  .swiper-pagination {
+    left: unset;
+    right: 0;
+    bottom: 12px;
+    width: auto;
+    .swiper-pagination-bullet {
+      border-radius: 0;
+      background-color: #fff;
+      opacity: 1;
+      width: 20px;
+      height: 20px;
+      margin-right: 24px;
+      &.swiper-pagination-bullet-active {
+        background-color: #005e3c;
+      }
+    }
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  margin: 0 12px;
+  img {
+    width: 100%;
+  }
+  &::after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 10px;
+    margin: 0;
+    img {
+      width: 100%;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+</style>
+<style lang="scss" scoped>
+/* 螢幕尺寸標準 */
+.subsection {
+  position: relative;
+  height: 100vh;
+
+  .container {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+    .info {
+      width: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      .title {
+        width: 24vw;
+      }
+      .content {
+        margin-top: 1vw;
+        width: 55vw;
+        max-height: 200px;
+      }
+    }
+    .swiper-box {
+      position: relative;
+      width: 35vw;
+      .swiper-slide {
+        height: 0;
+        padding-bottom: 139.87%;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    .archi-swiper {
+      position: relative;
+      width: 100%;
+      .swiper-container {
+        overflow: visible;
+        .swiper-slide {
+          width: 10vw !important;
+          height: 12.56vw;
+          margin-right: 10vw;
+          background-size: cover;
+          background-position: center;
+          transition: all 0.5s;
+          &:hover {
+            cursor: pointer;
+            transform: translateY(5%);
+            .archi-btn {
+              opacity: 0.5;
+            }
+          }
+          .content {
+            position: absolute;
+            width: 10vw;
+            bottom: 0;
+            left: 0;
+            transform: translateY(120%);
+          }
+          .archi-btn {
+            position: relative;
+            top: 0.5vw;
+            left: 0.5vw;
+            width: 2vw;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .draw {
+      position: absolute;
+      z-index: 0;
+      bottom: unset;
+      top: 0vh;
+      right: 0;
+      width: 79vw;
+      pointer-events: none;
+      transform: translateX(0);
+      animation: floating 8s infinite alternate-reverse;
+
+      @keyframes floating {
+        from {
+          transform: translate(-1%, -1%);
+        }
+        to {
+          transform: translate(1%, 1%);
+        }
+      }
+    }
+
+    .shadow {
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+    }
+  }
+  .archi_detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+    background-color: #fff;
+    background-image: url("~@/projects/llcs/s4/sb5/archi_detail/bg.jpg");
+    background-size: cover;
+    .archi_detail_box {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      .archi_detail_info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 22%;
+        .avatar {
+          width: 15vw;
+          border-bottom: 5px solid #005e3c;
+          padding-bottom: 4vh;
+          margin-bottom: 2vh;
+        }
+        .detail_content {
+          height: 20vh;
+        }
+        .rewards {
+          position: absolute;
+          width: 17%;
+          right: 12%;
+          top: 0;
+        }
+      }
+      .archi_detail_swiper {
+        position: relative;
+        width: 55%;
+        .swiper-slide {
+          height: 0;
+          padding-bottom: 62.45%;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+    .close {
+      width: 2vw;
+      position: absolute;
+      right: 4vw;
+      top: 4vw;
+      cursor: pointer;
+      z-index: 1;
+      img {
+        width: 100%;
+      }
+    }
+    .title {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 77vw;
+      bottom: 5%;
+    }
+    .draw {
+      pointer-events: none;
+      position: fixed;
+      z-index: -1;
+      width: 73vw;
+      right: -5vw;
+      bottom: -5vw;
+    }
+  }
+}
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .subsection {
+    height: 180vw;
+
+    .container {
+      flex-direction: column;
+      top: 0;
+      transform: translateY(0);
+      .info {
+        width: 100vw;
+        padding: 7vw;
+        margin: 0;
+        .title {
+          width: 50vw;
+        }
+        .content {
+          margin-top: 1vh;
+          width: 86vw;
+        }
+      }
+
+      .archi-swiper {
+        position: relative;
+        width: 100%;
+        margin-top: 3vh;
+        .swiper-container {
+          overflow: visible;
+          .swiper-slide {
+            width: 30vw !important;
+            height: 37.68vw;
+            margin-right: 0;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s;
+            &:hover {
+              transform: translateY(0);
+              .archi-btn {
+                opacity: 1;
+              }
+            }
+            .content {
+              position: absolute;
+              width: 55vw;
+              bottom: 0;
+              left: 0;
+              transform: translateY(120%);
+              display: none;
+            }
+            .archi-btn {
+              position: relative;
+              top: 0.5vw;
+              left: 0.5vw;
+              width: 2vw;
+              img {
+                width: 100%;
+              }
+            }
+            &.swiper-slide-active {
+              width: 55vw !important;
+              height: 69.08vw;
+              .content {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .draw {
+        position: absolute;
+        bottom: unset;
+        top: -12vh;
+        right: 0;
+        width: 102vw;
+        pointer-events: none;
+        transform: translateX(0);
+        animation: floating 8s infinite alternate-reverse;
+
+        @keyframes floating {
+          from {
+            transform: translate(-1%, -1%);
+          }
+          to {
+            transform: translate(1%, 1%);
+          }
+        }
+      }
+      .building {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 40vw;
+      }
+    }
+
+    .archi_detail {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5000;
+      background-color: #fff;
+      background-image: url("~@/projects/llcs/s4/sb5/archi_detail/bg_mo.jpg");
+      background-size: cover;
+      overflow-y: scroll;
+      .archi_detail_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        flex-direction: column;
+        .archi_detail_info {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          .avatar {
+            width: 50vw;
+            border-bottom: 5px solid #005e3c;
+            padding-bottom: 4vh;
+            margin-bottom: 2vh;
+          }
+          .detail_content {
+            height: 20vh;
+          }
+          .rewards {
+            width: 13%;
+            right: 5%;
+          }
+        }
+        .archi_detail_swiper {
+          position: relative;
+          width: 100%;
+          .swiper-slide {
+            height: 0;
+            padding-bottom: 62.45%;
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+      .close {
+        width: 6vw;
+        right: 6vw;
+        top: 6vw;
+      }
+      .title {
+        width: 90vw;
+        bottom: unset;
+        top: 3%;
+      }
+      .draw {
+        width: 30vw;
+        right: unset;
+        bottom: 21vh;
+        left: -9%;
+      }
+    }
+  }
+}
+
+// 避免內容電腦過渡平板時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
+}
+
+// 避免過度到 1280 x 720 時，設計未考量的調整
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+}
+</style>
+
+<script>
+// @ is an alias to /src
+import { isMobile } from "@/utils";
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
+
+export default {
+  name: "section4",
+
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  directives: {
+    swiper: directive,
+  },
+  data() {
+    return {
+      isMobile,
+      swiperOptions: {
+        resistanceRatio:0,
+        spaceBetween: 0,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          1000: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+        },
+      },
+      swiperOptionsArchiDetail: {
+        spaceBetween: 0,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          1000: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+        },
+      },
+      swiperOptionsArchi: {
+        centeredSlides: isMobile ? true : false,
+        slideToClickedSlide: true,
+        spaceBetween: 0,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1000: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+        },
+      },
+      activeList: [
+        {
+          imgSrc: require("@/projects/llcs/s4/sb5/building.png"),
+        },
+      ],
+      activeArchiDetail: {
+        imgSrc: require("@/projects/llcs/s4/sb5/archi/1.png"),
+        content: require("@/projects/llcs/s4/sb5/archi/1_content.svg"),
+        detail_content: require("@/projects/llcs/s4/sb5/archi/1_detail.svg"),
+        avatar: require("@/projects/llcs/s4/sb5/archi/1_avatar.jpg"),
+        slides: [
+          require("@/projects/llcs/s4/sb5/archi_detail/slides/1_1.jpg"),
+          require("@/projects/llcs/s4/sb5/archi_detail/slides/1_2.jpg"),
+          require("@/projects/llcs/s4/sb5/archi_detail/slides/1_3.jpg"),
+        ],
+      },
+      activeArchiDetailOpen: false,
+      archiList: [
+        {
+          imgSrc: require("@/projects/llcs/s4/sb5/archi/1.png"),
+          content: require("@/projects/llcs/s4/sb5/archi/1_content.svg"),
+          detail_content: require("@/projects/llcs/s4/sb5/archi/1_detail.svg"),
+          avatar: require("@/projects/llcs/s4/sb5/archi/1_avatar.jpg"),
+          slides: [
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/1_1.jpg"),
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/1_2.jpg"),
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/1_3.jpg"),
+          ],
+        },
+        {
+          imgSrc: require("@/projects/llcs/s4/sb5/archi/2.png"),
+          content: require("@/projects/llcs/s4/sb5/archi/2_content.svg"),
+          detail_content: require("@/projects/llcs/s4/sb5/archi/2_detail.svg"),
+          avatar: require("@/projects/llcs/s4/sb5/archi/2_avatar.jpg"),
+          slides: [
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/2_1.jpg"),
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/2_2.jpg"),
+          ],
+          rewards: require("@/projects/llcs/s4/sb5/archi/2_rewards.png"),
+        },
+        {
+          imgSrc: require("@/projects/llcs/s4/sb5/archi/3.png"),
+          content: require("@/projects/llcs/s4/sb5/archi/3_content.svg"),
+          detail_content: require("@/projects/llcs/s4/sb5/archi/3_detail.svg"),
+          avatar: require("@/projects/llcs/s4/sb5/archi/3_avatar.jpg"),
+          slides: [
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/3_1.jpg"),
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/3_2.jpg"),
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/3_3.jpg"),
+            require("@/projects/llcs/s4/sb5/archi_detail/slides/3_4.jpg"),
+          ],
+        },
+      ],
+    };
+  },
+
+  methods: {
+    openDetail(index, reallyIndex) {
+      this.activeArchiDetailOpen = true;
+      this.activeArchiDetail = this.archiList[index];
+    },
+  },
+
+  created() {},
+
+  mounted() {
+    const self = this;
+    $(document).keyup(function (e) {
+      if (e.key === "Escape") {
+        self.activeArchiDetailOpen = false;
+      }
+    });
+  },
+};
+</script>

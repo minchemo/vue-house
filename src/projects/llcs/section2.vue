@@ -1,12 +1,18 @@
 <template>
   <div class="section2">
-    <div class="subsection subsection1">
+    <div 
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="500" class="subsection subsection1">
       <div class="video-box">
         <img src="~@/projects/llcs/s2/play-btn.png" alt="" srcset="" />
       </div>
     </div>
     <div class="subsection subsection2">
       <img
+        data-aos="zoom-in-right"
+        data-aos-duration="1000"
+        data-aos-delay="500"
         v-if="!isMobile"
         class="building"
         src="~@/projects/llcs/s2/building.png"
@@ -14,13 +20,17 @@
         srcset=""
       />
       <img
+        data-aos="zoom-in-right"
+        data-aos-duration="1000"
+        data-aos-delay="500"
         v-else
         class="building"
         src="~@/projects/llcs/s2/building_mo.png"
         alt=""
         srcset=""
       />
-      <div v-if="!isMobile" class="title">塭仔圳文教核心</div>
+      <div 
+      data-aos="fade" data-aos-duration="1000" data-aos-delay="500"  v-if="!isMobile" class="title">塭仔圳文教核心</div>
       <div class="features">
         <div
           class="f-item"
@@ -81,7 +91,7 @@
   position: absolute;
   right: 38vw;
   z-index: 1;
-  top: 18vw;
+  bottom: 32vw;
 
   .f-item {
     display: flex;
@@ -97,10 +107,10 @@
     .f-item-img {
       margin-right: 30px;
       .f-item-img-init {
-        width: 130px;
+        width: 5vw;
       }
       .f-item-img-hover {
-        width: 130px;
+        width: 5vw;
       }
     }
     .f-item-txt {
@@ -125,7 +135,7 @@
     .f-item-divider {
       height: 64px;
       width: 3px;
-      margin: 0 20px;
+      margin: 0 1vw;
     }
 
     &:hover {
@@ -196,7 +206,6 @@
   .features {
     right: 95vw;
     bottom: 270px;
-    top: unset;
 
     .f-item {
       flex-direction: column;
@@ -269,10 +278,10 @@
           margin-right: 0;
           .f-item-img-init {
             width: 70px;
-            }
+          }
           .f-item-img-hover {
             width: 100px;
-            animation: zoomIn .5s;
+            animation: zoomIn 0.5s;
 
             @keyframes zoomIn {
               from {

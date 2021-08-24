@@ -6,13 +6,13 @@
       :style="{ 'padding-bottom': viewAspectRatioPercentage + '%' }"
     >
       <img ref="viewImg" class="view-img" :src="bgUrl" alt="" />
-      <img
+      <!-- <img
         v-if="isMobile"
         class="view-hand"
         ref="viewHand"
         :src="swipeUrl"
         alt=""
-      />
+      /> -->
     </div>
   </div>
 </template>
@@ -22,6 +22,9 @@
   .view {
     height: 0;
     width: 100%;
+    .view-img {
+      max-width: 100vw;
+    }
   }
 }
 
@@ -42,6 +45,9 @@
         transform: translate(-50%, 0%);
         pointer-events: none;
       }
+      .view-img {
+        max-width: unset;
+      }
       //.view-img{height: 100%;}
     }
   }
@@ -57,13 +63,16 @@ export default {
       isMobile,
       autoScrollView: false, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 110, //自動調整偏移微調
-      viewAspectRatioPercentage: isMobile ? this.getScreenHeight() : "58.16", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/aries/s3/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: require("@/projects/aries/s3/swipe-here.png"), //置換圖片路徑即可
+      viewAspectRatioPercentage: isMobile ? this.getScreenHeight() : "46.82", // 鳥瞰圖比例 高÷寬×100
+      bgUrl: isMobile
+        ? require("@/projects/llcs/s3/bg_mo.jpg")
+        : require("@/projects/llcs/s3/bg.jpg"), //置換圖片路徑即可
+      //swipeUrl: require("@/projects/chy/s3/swipe-here.png"), //置換圖片路徑即可
     };
   },
   methods: {
     getScreenHeight() {
+      return "220";
       const width = $(window).width();
       const height = $(window).height();
       const ratio = (height / width) * 100;
@@ -89,8 +98,9 @@ export default {
     },
     setViewBgHeight() {
       const targetHeight = $(".GodModView .view").outerHeight(true);
-     if(isMobile){
-     $(".GodModView .view .view-img").height(targetHeight);}
+      if (isMobile) {
+        $(".GodModView .view .view-img").height(targetHeight);
+      }
     },
     onResize() {
       $(window).on("resize", (e) => {
