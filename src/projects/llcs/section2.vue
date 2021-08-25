@@ -30,7 +30,7 @@
         srcset=""
       />
       <div 
-      data-aos="fade" data-aos-duration="1000" data-aos-delay="500"  v-if="!isMobile" class="title">塭仔圳文教核心</div>
+      data-aos="fade" data-aos-duration="1000" data-aos-delay="500" class="title">塭仔圳文教核心</div>
       <div class="features">
         <div
           class="f-item"
@@ -89,14 +89,14 @@
 <style lang="scss">
 .features {
   position: absolute;
-  right: 38vw;
+  right: 41vw;
   z-index: 1;
-  bottom: 32vw;
+  bottom: 26vw;
 
   .f-item {
     display: flex;
     align-items: center;
-    margin: 50px 0;
+    margin: 0 0;
     transition: all 0.5s;
     position: absolute;
     top: 0;
@@ -105,12 +105,12 @@
     opacity: 1;
 
     .f-item-img {
-      margin-right: 30px;
+      margin-right:1.6vw;
       .f-item-img-init {
-        width: 5vw;
+        width: 6vw;
       }
       .f-item-img-hover {
-        width: 5vw;
+        width: 6vw;
       }
     }
     .f-item-txt {
@@ -144,21 +144,21 @@
     }
 
     &.f-i-1 {
-      transform: translate(6vw, -32vw);
+      transform: translate(7vw, -32vw);
       opacity: 0;
       pointer-events: none;
     }
     &.f-i-2 {
-      transform: translate(6vw, -24vw);
+      transform: translate(8.5vw, -24vw);
       opacity: 0;
       pointer-events: none;
     }
     &.f-i-3 {
-      transform: translate(6vw, -16vw);
+      transform:translate(8.5vw, -20vw);
       opacity: 0.4;
     }
     &.f-i-4 {
-      transform: translate(4vw, -8vw);
+      transform:translate(5vw, -9.5vw);
       opacity: 1;
     }
     &.f-i-5 {
@@ -167,11 +167,11 @@
       opacity: 1;
     }
     &.f-i-6 {
-      transform: translate(-6vw, 8vw);
+      transform: translate(-8.2vw, 8vw);
       opacity: 1;
     }
     &.f-i-7 {
-      transform: translate(-15vw, 16vw);
+      transform:translate(-18.5vw, 14.5vw);
       opacity: 0.4;
     }
     &.f-i-8 {
@@ -204,8 +204,9 @@
 
 @media only screen and (max-width: 767px) {
   .features {
-    right: 95vw;
-    bottom: 270px;
+    right: 93vw;
+    bottom: auto;
+    top:96vw;
 
     .f-item {
       flex-direction: column;
@@ -345,12 +346,14 @@
 /* 螢幕尺寸標準 */
 .section2 {
   height: auto;
-  background-image: url("~@/projects/llcs/s2/bg.jpg");
-  background-size: cover;
+  // background-image: url("~@/projects/llcs/s2/bg.jpg");
+  // background-size: cover;
 
   .subsection {
     position: relative;
     height: 100vh;
+  max-height:calc(108000vw / 1920);
+  min-height:calc(90000vw / 1920);
 
     &.subsection1 {
       .video-box {
@@ -382,7 +385,7 @@
         color: #fff000;
         font-size: 2.5vw;
         border-bottom: 4px solid;
-        padding-bottom: 1vh;
+        padding-bottom: 0.5vw;
         font-family: "Noto Serif TC";
         font-weight: bold;
         left: 50%;
@@ -405,10 +408,11 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section2 {
-    background-image: url("~@/projects/llcs/s2/bg_mo.jpg");
 
     .subsection {
       height: unset;
+  max-height:unset;
+  min-height:0;
 
       &.subsection1 {
         height: 25vh;
@@ -424,17 +428,14 @@
       &.subsection2 {
         height: 157vw;
         .title {
-          position: absolute;
-          z-index: 2;
-          color: #fff000;
-          font-size: 2.5vw;
-          border-bottom: 4px solid;
-          padding-bottom: 1vh;
-          font-family: "Noto Serif TC";
-          font-weight: bold;
+        font-size:calc(2500vw / 375);
+          border-bottom: 0px solid;
+          border-left: 1px solid;
+          padding:0 0 0 0.2em;
+          width: 1.2em;
           left: 50%;
           top: 50%;
-          transform: translate(-60%, -100%);
+          transform: translate(340%, -150%);
         }
         .building {
           position: absolute;

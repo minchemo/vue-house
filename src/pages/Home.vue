@@ -37,7 +37,17 @@
 @import "../assets/style/variableColor.scss";
 
 .home {
-  background: #fff !important;
+&::before {
+  content: ' ';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("~@/projects/llcs/s1/bg.jpg") center 0 no-repeat;
+  background-size: cover;
+}
 }
 
 .section,
@@ -77,6 +87,11 @@
 }
 
 @media only screen and (max-width: 767px) {
+.home {
+&::before {
+  background-image: url("~@/projects/llcs/s1/bg_mo.jpg");
+}
+}
   .fp-left {
     display: flex;
     margin: 0 !important;

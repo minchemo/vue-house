@@ -2,12 +2,7 @@
   <div class="subsection">
     <div class="container">
       <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="500"   class="info">
-        <img
-          class="title"
-          src="~@/projects/llcs/s4/sb2/title.svg"
-          alt=""
-          srcset=""
-        />
+        <div class="title">繁華環抱<br>商圈金核心</div>
         <img
           v-if="!isMobile"
           class="content"
@@ -115,7 +110,15 @@
       flex-direction: column;
       margin-left: 5vw;
       .title {
-        width: 15vw;
+        font-size: calc(5500vw / 1920);
+        font-family: "Noto Serif TC";
+        color:#005e3c;
+        font-weight: bold;
+        text-align: left;
+        line-height: 1.3;
+        &::after{content:"";
+        margin: .45em 0 .2em 0;
+        width: 3em;height: 3px; background: currentColor;display: block;}
       }
       .content {
         margin-top: 1vw;
@@ -146,22 +149,21 @@
           flex-direction: column;
           align-items: flex-start;
           color: #005e3c;
-          padding-bottom: 3px;
           border-right: 3px solid;
           border-bottom: 3px solid;
           .toggle-circle {
+            width: 100%;
+            height: 100%;
+            padding: 0.3em;
             display: flex;
             align-items: flex-start;
             font-size: 1vw;
             font-weight: bold;
-            &.active {
-              background: #005e3c;
-              color: #fff;
-            }
-            &:hover {
-              background: #005e3c;
-              color: #fff;
-              cursor: pointer;
+            &::before{z-index: -1;content: "";}
+            &.active,
+            &:hover{
+              background: linear-gradient(to right, rgba(0,94,60,0) 0%,rgba(0,94,60,1) 100%);
+       //   color: #fff;
             }
           }
           .toggle-content {
@@ -225,7 +227,8 @@
         padding: 7vw;
         margin: 0;
         .title {
-          width: 50vw;
+        font-size: calc(3500vw / 375);
+        margin: .45em 0 .3em 0;
         }
         .content {
           margin-top: 1vh;

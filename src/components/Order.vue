@@ -386,8 +386,8 @@ export default {
   .order-top {
     //background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
-    background-image: $order_bg_image;
-    background-size: cover;
+    background: $order_bg_image no-repeat;
+    background-size: 50vw auto;
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;

@@ -240,7 +240,7 @@
         }
         .toggles {
           width: 100%;
-          margin-top: 1vw;
+          margin-top: 1vw;align-items:flex-start;
           .toggle-item {
             width: 15vw;
             .toggle-circle {
@@ -268,12 +268,24 @@
             .toggle-content {
               font-size: 12px;
             }
-
-            &:nth-child(1),
-            &:nth-child(2) {
+          &:nth-child(3){
+            transform: translateX(-14%);
+          }
+            &:nth-child(1){
+            transform: translateX(0%);
               &::after {
                 content: "";
-                width: 21vw;
+                width:19vw;
+                height: 2px;
+                top: 7.5vw;
+                left: 15vw;
+              }
+            }
+            &:nth-child(2) {
+            transform: translateX(-9%);
+              &::after {
+                content: "";
+                width: 20vw;
                 height: 2px;
                 top: 7.5vw;
                 left: 15vw;
@@ -420,7 +432,7 @@ export default {
         },
         {
           title: "5捷運",
-          content: "新莊線、環狀線、機場線<br>五泰、板泰輕軌(連結A5a站)",
+          content:isMobile? "新莊線、環狀線<br>機場線、五泰<br>板泰輕軌(連結A5a站)":"新莊線、環狀線、機場線<br>五泰、板泰輕軌(連結A5a站)",
           bind_list: imgList3,
         },
       ],

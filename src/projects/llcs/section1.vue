@@ -17,6 +17,9 @@
 /* 螢幕尺寸標準 */
 .section1 {
   height: 100vh;
+  max-height:calc(108000vw / 1920);
+  min-height:calc(90000vw / 1920);
+
   .main {
     width: 100%;
     height: 100%;
@@ -35,7 +38,7 @@
         width: 20vw;
       }
       .t1 {
-        margin-top: 3vh;
+        margin-top: 2vw;
         width: 25vw;
       }
       .t2 {
@@ -58,7 +61,7 @@
       font-size: 1vw;
     }
   }
-  .bg {
+  /*.bg {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -67,7 +70,7 @@
     z-index: 0;
     background-size: cover;
     background-image: url("~@/projects/llcs/s1/bg.jpg");
-  }
+  } */
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -77,6 +80,8 @@
 @media only screen and (max-width: 767px) {
   .section1 {
     height: calc(100vh - 63px);
+  max-height:calc(81200vw / 375 - 63px);
+  min-height:calc(66700vw / 375 - 63px);
     .main {
       .title {
         transform: translate(-50%, -70%);
@@ -104,7 +109,7 @@
         font-size: 16px;
       }
     }
-    .bg {
+  /*  .bg {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -114,6 +119,7 @@
       background-size: 100%;
       background-image: url("~@/projects/llcs/s1/bg_mo.jpg");
     }
+    */
   }
 }
 
