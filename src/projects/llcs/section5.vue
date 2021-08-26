@@ -1,14 +1,19 @@
 <template>
   <div class="section5">
-      <div  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500"   class="banner">
-          <img v-if="!isMobile" class="title" src="~@/projects/llcs/s5/b_title.svg" alt="" srcset="">
-          <img v-else class="title" src="~@/projects/llcs/s5/b_title_mo.svg" alt="" srcset="">
-
+    <div class="bg" v-if="!isMobile">
+      <img src='~@/projects/llcs/s5/bg1.jpg' alt="外觀日景">
+      <img src='~@/projects/llcs/s5/bg2.jpg' alt="外觀夜景">
+    </div>
+      <div  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0"   class="banner"> 
+<div class="title">精品建築<br>質感落款</div>
           <img v-if="!isMobile" class="content" src="~@/projects/llcs/s5/b_content.svg" alt="" srcset="">
           <img v-else class="content" src="~@/projects/llcs/s5/b_content_mo.svg" alt="" srcset="">
       </div>
-      <img v-if="!isMobile" class="building" src="~@/projects/llcs/s5/bg.jpg" alt="" srcset="">
-      <img v-else class="building" src="~@/projects/llcs/s5/bg_mo.jpg" alt="" srcset="">
+      <img v-if="isMobile" class="building" src="~@/projects/llcs/s5/bg_mo1.jpg" alt="" srcset="">
+    <div class="bg" v-if="isMobile">
+      <img class="building" src='~@/projects/llcs/s5/bg_mo1.jpg' alt="外觀日景">
+      <img class="building" src='~@/projects/llcs/s5/bg_mo2.jpg' alt="外觀夜景">
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -16,10 +21,28 @@
 .section5 {
     position: relative;
     height: 0;
-    padding-bottom: 47.10%;
-    background-size: cover;
-    background-image: url('~@/projects/llcs/s5/bg.jpg');
+    padding-bottom: 47.50%;
+    .bg{width: 100%;height: 100%;position: absolute;bottom: 0;left: 0;
+    img{width: 100%;height: 100%;position: relative;bottom: 0;left: 0;object-fit: cover;
 
+    &:last-child{position: absolute;animation: round 10s linear infinite;opacity: 0;}
+    
+    }
+    }
+
+
+@-webkit-keyframes round {
+6% {
+opacity: 1;
+}
+44% {
+opacity: 1;
+}
+50% {
+opacity: 0;
+}
+
+}
     .building {
         width: 100%;
         visibility: hidden;
@@ -38,10 +61,17 @@
         flex-direction: column;
         justify-content: center;
 
-        .title {
-            width: 100%;
-            margin-bottom: 4vh;
-        }
+      .title {
+        font-size: calc(5500vw / 1920);
+        font-family: "Noto Serif TC";
+        color:#FFF000;
+        font-weight: bold;
+        text-align: left;
+        line-height: 1.3;
+        &::after{content:"";
+        margin: .45em 0 .5em 0;
+        width: 8.5em;height: 3px; background: #FFF;display: block;}
+      }
         .content {
             width: 100%;
 
@@ -59,6 +89,8 @@
     height: auto;
     padding-bottom: 0;
     background-image: unset;
+    .bg{height:auto;
+    img{height:auto;}}
 
     .building {
         width: 100%;
@@ -80,8 +112,8 @@
         justify-content: center;
 
         .title {
-            width: 80%;
-            margin-bottom: 2vh;
+        font-size: calc(3500vw / 375);
+        margin: .45em 0 .3em 0;
         }
         .content {
             width: 100%;

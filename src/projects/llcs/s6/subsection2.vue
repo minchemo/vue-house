@@ -1,9 +1,10 @@
 <template>
   <div class="subsection">
-    <div 
-     data-aos="fade" data-aos-duration="1000" data-aos-delay="0" v-if="isMobile" class="title">
-      <img src="~@/projects/llcs/s6/sb2/title_mo.svg" alt="" srcset="" />
+    <div class="txt">
+    <div class="title">飯店式物管 尊榮級公設</div>
+    <div class="desc">氣派挑高大廳、專業物管恭迎主人歸來，榮寵來訪賓客，「朗朗城心」專為講究品味的您，留下一席讓身心棲息充電的處所，營造在家即是渡假的愜意感受。</div>
     </div>
+    
     <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
       <swiper ref="swiper" :options="swiperOptions">
         <swiper-slide
@@ -13,6 +14,7 @@
             backgroundImage: `url(${imgList})`,
           }"
         >
+        <div class="name">建設公司業績參考圖</div>
         </swiper-slide>
         <div class="swiper-button-next" slot="button-next">
           <img src="~@/projects/llcs/s4/next_btn.svg" alt="" srcset="" />
@@ -22,18 +24,17 @@
         </div>
       </swiper>
     </div>
-    <div v-if="!isMobile" 
-     data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="title">
-      <img src="~@/projects/llcs/s6/sb2/title.svg" alt="" srcset="" />
-    </div>
   </div>
 </template>
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .subsection {
   height: auto;
+  display: flex;
+  flex-direction:column;
 
   .swiper-box {
+    order:2;
     position: relative;
     width: 80vw;
     margin: 0 auto;
@@ -42,16 +43,44 @@
       padding-bottom: 44.54%;
       background-size: cover;
       background-position: center;
+      .name{
+      position: absolute;
+      bottom: 0.5em;left:1em;
+      color: #fff;
+      font-size: calc(1500vw / 1920);
+      opacity: 0.8;
+      }
     }
   }
-
-  .title {
+  .txt{
+    order:3;
+    display: flex;
     width: 80vw;
-    margin: 0 auto;
-    margin-top: 5vh;
-    img {
-      width: 100%;
-    }
+border: solid #005e3c;;
+border-width: 0 2px 2px 0;
+padding: 0 1em 0.5em 0;
+margin: 1.5em auto 1em auto;
+    align-items:center;
+    justify-content:space-between;
+        font-size: calc(2200vw / 1920);
+        line-height: 1.5;
+
+      .title {
+        font-size:2.5em;
+        font-family: "Noto Serif TC";
+        color:#005e3c;
+        font-weight: bold;
+        text-align: left;
+        line-height: 1.3;
+        white-space: nowrap;
+      }
+      .desc {
+        color:#333;
+        font-weight:400;
+        text-align: justify;
+        width: 35em;
+      }
+
   }
 }
 /* 平板尺寸 */
@@ -72,17 +101,26 @@
       padding-bottom: 61.41%;
       background-size: cover;
       background-position: center;
+      .name{
+      font-size: calc(1200vw / 375);
+      }
     }
   }
-
-  .title {
+  .txt{
+    order:1;
     width: 90vw;
-    margin: 0 auto;
-    margin-top: 5vh;
-    margin-bottom: -5vh;
-    img {
-      width: 100%;
-    }
+    font-size: calc(1500vw / 375);
+    flex-wrap:wrap;
+    padding: 0;
+    border: 0;
+      .title {
+        font-size:2em;
+        width: 100%;
+        text-align: center;
+        &::after{content:"";
+        margin: .45em auto .5em auto;
+        width: 6em;height: 3px; background: currentColor;display: block;}
+      }
   }
 }
 }

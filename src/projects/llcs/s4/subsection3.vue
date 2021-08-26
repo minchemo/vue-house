@@ -1,27 +1,15 @@
 <template>
   <div class="subsection">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="500"   class="info">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
         <img
           class="title"
           src="~@/projects/llcs/s4/sb3/title.png"
           alt=""
           srcset=""
         />
-        <img
-          v-if="!isMobile"
-          class="content"
-          src="~@/projects/llcs/s4/sb3/content.svg"
-          alt=""
-          srcset=""
-        />
-        <img
-          v-else
-          class="content"
-          src="~@/projects/llcs/s4/sb3/content_mo.svg"
-          alt=""
-          srcset=""
-        />
+<div class="subtitle">41公頃綠地<br>親水公園環繞</div>
+<div class="desc">「朗朗城心」近22公頃新莊運動公園，步行5分鐘享受近萬坪綠地空間，2.8公里貴子坑溪改善計畫，規劃超越中港大排，提供您親水、遊憩友善環境。</div>
       </div>
       <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
         <swiper ref="swiper" :options="swiperOptions">
@@ -101,8 +89,22 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+        color:#000;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: calc(2000vw / 1920);
       .title {
         width: 15vw;
+        margin: 0 0  1em 0;
+      }
+      .subtitle {
+        font-size:1.9em;
+        font-weight: 400;
+      }
+      .desc {
+        margin: 1em 0  1em 0;
+        font-weight: 300;
+        width: 80%;
       }
       .content {
         margin-top: 2vw;
@@ -158,9 +160,15 @@
       .info {
         width: 100vw;
         padding: 7vw;
+        font-size: calc(1500vw / 375);
         .title {
           width: 50vw;
         }
+        .subtitle {  font-size:1.7em;
+      }
+      .desc{
+          width: 86vw;
+      }
         .content {
           margin-top: 5vh;
           width: 86vw;

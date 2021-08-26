@@ -1,25 +1,6 @@
 <template>
   <div class="subsection">
-    <img
-      data-aos="fade"
-      data-aos-duration="1000"
-      data-aos-delay="0"
-      v-if="!isMobile"
-      class="title"
-      src="~@/projects/llcs/s6/sb1/title.svg"
-      alt=""
-      srcset=""
-    />
-    <img
-      data-aos="fade"
-      data-aos-duration="1000"
-      data-aos-delay="0"
-      v-else
-      class="title"
-      src="~@/projects/llcs/s6/sb1/title_mo.svg"
-      alt=""
-      srcset=""
-    />
+    <div class="title">豪宅建材 尊榮禮遇</div>
     <img
       data-aos="fade"
       data-aos-duration="1000"
@@ -103,12 +84,19 @@
   position: relative;
   height: 100vh;
   padding: 5vw;
-
-  .title {
-    width: 80vw;
-  }
+      .title {
+        font-size: calc(5500vw / 1920);
+        font-family: "Noto Serif TC";
+        color:#005e3c;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.3;
+        &::after{content:"";
+        margin: .45em auto .5em auto;
+        width: 28em;height: 3px; background: currentColor;display: block;}
+      }
   .content {
-    margin-top: -6vh;
+   //margin-top: -6vh;
     width: 50vw;
     margin-bottom: 6vh;
   }
@@ -260,10 +248,11 @@
     padding: 5vw;
     overflow: hidden;
 
-    .title {
-      margin-top: 2vh;
-      width: 60vw;
-    }
+        .title {
+        font-size: calc(3500vw / 375);
+        margin: .45em 0 .3em 0;
+        &::after{width: 6em;}
+        }
     .content {
       margin-top: 2vh;
       width: 80vw;

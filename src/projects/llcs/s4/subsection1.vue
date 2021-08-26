@@ -1,27 +1,15 @@
 <template>
   <div class="subsection">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="500"   class="info">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
         <img
           class="title"
           src="~@/projects/llcs/s4/sb1/title.png"
           alt=""
           srcset=""
         />
-        <img
-          v-if="!isMobile"
-          class="content"
-          src="~@/projects/llcs/s4/sb1/content.svg"
-          alt=""
-          srcset=""
-        />
-        <img
-          v-else
-          class="content"
-          src="~@/projects/llcs/s4/sb1/content_mo.svg"
-          alt=""
-          srcset=""
-        />
+        <div class="subtitle">3快4高5捷運<br>引領城市快速前進</div>
+<div class="desc">匯聚12大交通網，快速道路、高速公路、捷運路網一次到位，綿密串聯北台灣重要城市據點，無論出遊或通勤，皆讓您擁有最快通勤效率。</div>
         <div class="toggles">
           <div v-for="(toggle, i) in toggles" :key="i" class="toggle-item">
             <div
@@ -29,7 +17,8 @@
               v-html="toggle.title"
               v-bind:class="toggle.bind_list == activeList ? 'active' : ''"
               @click="toggleList(toggle.bind_list)"
-            ></div>
+            ><div class="name" v-html="toggle.name"></div>
+            </div>
             <div class="toggle-content" v-html="toggle.content"></div>
           </div>
         </div>
@@ -112,9 +101,24 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+        color:#000;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: calc(2000vw / 1920);
       .title {
         width: 15vw;
+        margin: 0 0  1em 0;
       }
+      .subtitle {
+        font-size:1.9em;
+        font-weight: 400;
+      }
+      .desc {
+        margin: 1em 0  1em 0;
+        font-weight: 300;
+        width: 80%;
+      }
+
       .content {
         margin-top: 2vw;
         width: 80%;
@@ -231,9 +235,15 @@
       .info {
         width: 100vw;
         padding: 7vw;
+        font-size: calc(1500vw / 375);
         .title {
           width: 50vw;
         }
+      .subtitle {  font-size:1.7em;
+      }
+      .desc{
+          width: 86vw;
+      }
         .content {
           margin-top: 5vh;
           width: 86vw;
@@ -356,43 +366,55 @@ export default {
     let imgList1 = [
         {
           imgSrc: require("@/projects/llcs/s4/sb1/slides/1_1.jpg"),
+          name:"65快速道路",
         },
         {
           imgSrc: require("@/projects/llcs/s4/sb1/slides/1_2.jpg"),
+          name:"台1線",
         },
         {
           imgSrc: require("@/projects/llcs/s4/sb1/slides/1_3.jpg"),
+          name:"五股交流道",
+        },
+        {
+          imgSrc: require("@/projects/llcs/s4/sb1/slides/2_1.jpg"),
+          name:"新北環快",
         },
       ],
       imgList2 = [
         {
-          imgSrc: require("@/projects/llcs/s4/sb1/slides/2_1.jpg"),
+          imgSrc: require("@/projects/llcs/s4/sb1/slides/3_1.jpg"),
+          name:"",
+        },
+        {
+          imgSrc: require("@/projects/llcs/s4/sb1/slides/3_2.jpg"),
+          name:"",
+        },
+        {
+          imgSrc: require("@/projects/llcs/s4/sb1/slides/3_3.jpg"),
+          name:"",
         },
       ],
       imgList3 = [
         {
-          imgSrc: require("@/projects/llcs/s4/sb1/slides/3_1.jpg"),
-        },
-        {
-          imgSrc: require("@/projects/llcs/s4/sb1/slides/3_2.jpg"),
-        },
-        {
-          imgSrc: require("@/projects/llcs/s4/sb1/slides/3_3.jpg"),
-        },
-        {
           imgSrc: require("@/projects/llcs/s4/sb1/slides/3_4.jpg"),
+          name:"",
         },
         {
           imgSrc: require("@/projects/llcs/s4/sb1/slides/3_5.jpg"),
+          name:"",
         },
         {
           imgSrc: require("@/projects/llcs/s4/sb1/slides/3_6.jpg"),
+          name:"",
         },
         {
           imgSrc: require("@/projects/llcs/s4/sb1/slides/3_7.jpg"),
+          name:"",
         },
         {
           imgSrc: require("@/projects/llcs/s4/sb1/slides/3_8.jpg"),
+          name:"",
         },
       ];
     return {

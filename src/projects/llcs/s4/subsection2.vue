@@ -1,22 +1,11 @@
 <template>
   <div class="subsection">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="500"   class="info">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
         <div class="title">繁華環抱<br>商圈金核心</div>
-        <img
-          v-if="!isMobile"
-          class="content"
-          src="~@/projects/llcs/s4/sb2/content.svg"
-          alt=""
-          srcset=""
-        />
-        <img
-          v-else
-          class="content"
-          src="~@/projects/llcs/s4/sb2/content_mo.svg"
-          alt=""
-          srcset=""
-        />
+<div class="subtitle">副都心3分鐘<br>6大商圈一次擁有</div>
+<div class="desc">「朗朗城心」3分鐘前進副都心，中平、幸福、輔大、新泰、廟街商圈轉瞬切換，便利生活盡情享受，提供全家生活所需應有盡有。</div>
+
         <div class="toggles-title">6大商圈</div>
         <div class="toggles">
           <div v-for="(toggle, i) in toggles" :key="i" class="toggle-item">
@@ -109,16 +98,28 @@
       display: flex;
       flex-direction: column;
       margin-left: 5vw;
+        color:#000;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: calc(2000vw / 1920);
       .title {
         font-size: calc(5500vw / 1920);
         font-family: "Noto Serif TC";
         color:#005e3c;
         font-weight: bold;
-        text-align: left;
         line-height: 1.3;
         &::after{content:"";
-        margin: .45em 0 .2em 0;
+        margin: .45em 0 .4em 0;
         width: 3em;height: 3px; background: currentColor;display: block;}
+      }
+      .subtitle {
+        font-size:1.9em;
+        font-weight: 400;
+      }
+      .desc {
+        margin: 1em 0  1em 0;
+        font-weight: 300;
+        width: 80%;
       }
       .content {
         margin-top: 1vw;
@@ -226,10 +227,15 @@
         width: 100vw;
         padding: 7vw;
         margin: 0;
+        font-size: calc(1500vw / 375);
         .title {
         font-size: calc(3500vw / 375);
-        margin: .45em 0 .3em 0;
+        margin: .45em 0 .0em 0;
         }
+      .subtitle {  font-size:1.7em;
+      }
+      .desc{
+      }
         .content {
           margin-top: 1vh;
           width: 86vw;
@@ -253,14 +259,14 @@
           grid-row-gap: 13px;
           .toggle-item {
             .toggle-circle {
-              height: auto;
-              width: auto;
+         /*     height: auto;
+              width: auto;*/
               font-size: 5vw;
             }
             .toggle-content {
               font-size: 0.5vw;
             }
-
+/*
             &:nth-child(1),
             &:nth-child(2) {
               &::after {
@@ -271,6 +277,7 @@
                 left: 15vw;
               }
             }
+            */
           }
         }
       }

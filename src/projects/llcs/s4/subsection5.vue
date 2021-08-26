@@ -1,27 +1,11 @@
 <template>
   <div class="subsection">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="500"   class="info">
-        <img
-          class="title"
-          src="~@/projects/llcs/s4/sb5/title.svg"
-          alt=""
-          srcset=""
-        />
-        <img
-          v-if="!isMobile"
-          class="content"
-          src="~@/projects/llcs/s4/sb5/content.svg"
-          alt=""
-          srcset=""
-        />
-        <img
-          v-else
-          class="content"
-          src="~@/projects/llcs/s4/sb5/content_mo.svg"
-          alt=""
-          srcset=""
-        />
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
+        <div class="title">金獎團隊 誠心打造</div>
+        <div class="subtitle">貼心設想極致禮遇　<br v-if="isMobile">打造生活饗宴</div>
+<div class="desc">「朗朗城心」邀請美國Muse、義大利A’Design設計金獎設計師加入建築團隊，致力規劃、貼心設想各種使用情境，為您與家人創造最細緻舒適的生活饗宴。</div>
+
         <div class="archi-swiper" data-aos-duration="1000" data-aos="fade-up">
           <swiper
             ref="swiper"
@@ -149,20 +133,7 @@
           </swiper>
         </div>
       </div>
-      <div class="title">
-        <img
-          v-if="!isMobile"
-          src="~@/projects/llcs/s4/sb5/archi_detail/title.svg"
-          alt=""
-          srcset=""
-        />
-        <img
-          v-else
-          src="~@/projects/llcs/s4/sb5/archi_detail/title_mo.svg"
-          alt=""
-          srcset=""
-        />
-      </div>
+      <div class="title">金獎團隊 誠心打造</div>
       <img
         v-if="!isMobile"
         class="draw"
@@ -245,8 +216,30 @@
       display: flex;
       flex-direction: column;
       align-items: baseline;
+        color:#000;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: calc(2000vw / 1920);
+      
       .title {
-        width: 24vw;
+        font-size: calc(5500vw / 1920);
+        font-family: "Noto Serif TC";
+        color:#005e3c;
+        font-weight: bold;
+        text-align: left;
+        line-height: 1.3;
+        &::after{content:"";
+        margin: .45em 0 .4em 0;
+        width: 3em;height: 3px; background: currentColor;display: block;}
+      }
+      .subtitle {
+        font-size:1.9em;
+        font-weight: 400;
+      }
+      .desc {
+        margin: 0.5em 0  2em 0;
+        font-weight: 300;
+        width: 55vw;
       }
       .content {
         margin-top: 1vw;
@@ -271,10 +264,11 @@
         overflow: visible;
         .swiper-slide {
           width: 10vw !important;
-          height: 12.56vw;
+          height: 18vw;
           margin-right: 10vw;
-          background-size: cover;
-          background-position: center;
+          background-size: 100% auto;
+          background-position:top center;
+          background-repeat: no-repeat;
           transition: all 0.5s;
           &:hover {
             cursor: pointer;
@@ -286,9 +280,9 @@
           .content {
             position: absolute;
             width: 10vw;
-            bottom: 0;
+            top:12vw;
             left: 0;
-            transform: translateY(120%);
+            //transform: translateY(120%);
           }
           .archi-btn {
             position: relative;
@@ -359,11 +353,11 @@
         .avatar {
           width: 15vw;
           border-bottom: 5px solid #005e3c;
-          padding-bottom: 4vh;
-          margin-bottom: 2vh;
+          padding-bottom: 2vw;
+          margin-bottom: 1vw;
         }
         .detail_content {
-          height: 20vh;
+          height: calc(18700vw / 1920);
         }
         .rewards {
           position: absolute;
@@ -394,13 +388,22 @@
         width: 100%;
       }
     }
-    .title {
+      .title {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, 0);
-      width: 77vw;
-      bottom: 5%;
-    }
+      transform: translate(-50%, 0%);
+      width: 76.4vw;
+      top: 40.6VW;
+        font-size: calc(5500vw / 1920);
+        font-family: "Noto Serif TC";
+        color:#005e3c;
+        font-weight: bold;
+        text-align: left;
+        line-height: 1.3;
+        padding: 0 0 0.3em;
+        border: solid currentColor;
+        border-width: 0 3px 3px 0;
+        }
     .draw {
       pointer-events: none;
       position: fixed;
@@ -418,7 +421,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .subsection {
-    height: 180vw;
+    height: 210vw;
 
     .container {
       flex-direction: column;
@@ -428,9 +431,17 @@
         width: 100vw;
         padding: 7vw;
         margin: 0;
+        font-size: calc(1500vw / 375);
+        
         .title {
-          width: 50vw;
+        font-size: calc(3500vw / 375);
+        margin: .45em 0 .3em 0;
         }
+      .subtitle {  font-size:1.7em;
+      }
+      .desc{
+          width: 86vw;
+      }
         .content {
           margin-top: 1vh;
           width: 86vw;
@@ -445,11 +456,11 @@
           overflow: visible;
           .swiper-slide {
             width: 30vw !important;
-            height: 37.68vw;
+            height: 60vw;
             margin-right: 0;
-            background-size: cover;
+           /* background-size: cover;
             background-position: center;
-            transition: all 0.5s;
+            transition: all 0.5s;*/
             &:hover {
               transform: translateY(0);
               .archi-btn {
@@ -459,16 +470,16 @@
             .content {
               position: absolute;
               width: 55vw;
-              bottom: 0;
-              left: 0;
-              transform: translateY(120%);
+            //  bottom: 0;
+              left: 0;top:70vw;
+             // transform: translateY(120%);
               display: none;
             }
             .archi-btn {
               position: relative;
-              top: 0.5vw;
-              left: 0.5vw;
-              width: 2vw;
+              top: 1vw;
+              left: 1vw;
+              width: 6vw;
               img {
                 width: 100%;
               }
@@ -487,7 +498,7 @@
       .draw {
         position: absolute;
         bottom: unset;
-        top: -12vh;
+        top: 10vw;
         right: 0;
         width: 102vw;
         pointer-events: none;
@@ -572,6 +583,8 @@
         width: 90vw;
         bottom: unset;
         top: 3%;
+        font-size: calc(3500vw / 375);
+        border-width: 0 0 3px 0;
       }
       .draw {
         width: 30vw;

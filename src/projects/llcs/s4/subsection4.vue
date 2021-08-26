@@ -1,27 +1,11 @@
 <template>
   <div class="subsection">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="500"  class="info">
-        <img
-          class="title"
-          src="~@/projects/llcs/s4/sb4/title.svg"
-          alt=""
-          srcset=""
-        />
-        <img
-          v-if="!isMobile"
-          class="content"
-          src="~@/projects/llcs/s4/sb4/content.svg"
-          alt=""
-          srcset=""
-        />
-        <img
-          v-else
-          class="content"
-          src="~@/projects/llcs/s4/sb4/content_mo.svg"
-          alt=""
-          srcset=""
-        />
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
+        <div class="title">贏在起點<br>書香新城心</div>
+<div class="subtitle">在地學習<br>從幼兒園到大學一應俱全</div>
+<div class="desc">「朗朗城心」坐落文教核心，下樓就是非營利幼兒園，周邊還有文中、小預定地、新莊高中、輔仁大學…等人文學區，教育資源一次為孩子準備齊全。</div>
+
       </div>
       <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
         <swiper ref="swiper" :options="swiperOptions">
@@ -103,10 +87,30 @@
       display: flex;
       flex-direction: column;
       margin-left: 5vw;
-
       z-index: 10;
+        color:#000;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: calc(2000vw / 1920);
       .title {
-        width: 15vw;
+        font-size: calc(5500vw / 1920);
+        font-family: "Noto Serif TC";
+        color:#005e3c;
+        font-weight: bold;
+        text-align: left;
+        line-height: 1.3;
+        &::after{content:"";
+        margin: .45em 0 .2em 0;
+        width: 3em;height: 3px; background: currentColor;display: block;}
+      }
+      .subtitle {
+        font-size:1.9em;
+        font-weight: 400;
+      }
+      .desc {
+        margin: 1em 0  1em 0;
+        font-weight: 300;
+        width: 80%;
       }
       .content {
         margin-top: 1vw;
@@ -163,9 +167,16 @@
         width: 100vw;
         padding: 7vw;
         margin: 0;
+        font-size: calc(1500vw / 375);
         .title {
-          width: 50vw;
+        font-size: calc(3500vw / 375);
+        margin: .45em 0 .3em 0;
         }
+      .subtitle {  font-size:1.7em;
+      }
+      .desc{
+          width: 86vw;
+      }
         .content {
           margin-top: 1vh;
           width: 86vw;

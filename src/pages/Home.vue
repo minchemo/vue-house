@@ -1,7 +1,7 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
-    <!-- <Navigation /> -->
+    <!-- <Navigation />-->
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
       <vue-lazy-component class="section" id="section1" @init="init">

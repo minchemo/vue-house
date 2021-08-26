@@ -171,8 +171,8 @@ export default {
   width: 80%;
   min-width: 1000px;
   margin: 0 auto;
-  padding: 70px 0 70px;
-  margin-bottom: -100px;
+  padding: 30px 0 30px;
+  margin-bottom: -20px;
   z-index: 50;
 
   .fix-bar {

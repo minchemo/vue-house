@@ -3,7 +3,7 @@
     <div 
         data-aos="fade"
         data-aos-duration="1000"
-        data-aos-delay="500" class="subsection subsection1">
+        data-aos-delay="0" class="subsection subsection1">
       <div class="video-box">
         <img src="~@/projects/llcs/s2/play-btn.png" alt="" srcset="" />
       </div>
@@ -12,7 +12,7 @@
       <img
         data-aos="zoom-in-right"
         data-aos-duration="1000"
-        data-aos-delay="500"
+        data-aos-delay="0"
         v-if="!isMobile"
         class="building"
         src="~@/projects/llcs/s2/building.png"
@@ -22,7 +22,7 @@
       <img
         data-aos="zoom-in-right"
         data-aos-duration="1000"
-        data-aos-delay="500"
+        data-aos-delay="0"
         v-else
         class="building"
         src="~@/projects/llcs/s2/building_mo.png"
@@ -30,7 +30,9 @@
         srcset=""
       />
       <div 
-      data-aos="fade" data-aos-duration="1000" data-aos-delay="500" class="title">塭仔圳文教核心</div>
+      data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="title">塭仔圳文教核心</div>
+      <div 
+      data-aos="fade" class="name">3D模擬示意圖，僅供參考</div>
       <div class="features">
         <div
           class="f-item"
@@ -392,6 +394,14 @@
         top: 50%;
         transform: translate(-60%, -100%);
       }
+      .name {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-47em, 15em);
+        font-size: calc(1500vw / 1920);
+        color: #fff;
+        }
       .building {
         position: absolute;
         left: 0;
@@ -436,6 +446,14 @@
           left: 50%;
           top: 50%;
           transform: translate(340%, -150%);
+        }
+      .name {
+        transform: translate(5em, -8em);
+        font-size: calc(1200vw / 375);
+        top: auto;
+          left: 0vw;
+          bottom: 161px;
+        color: #fff;
         }
         .building {
           position: absolute;
