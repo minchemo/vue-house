@@ -1,7 +1,8 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
-    <!-- <Navigation />-->
+    <!-- <Navigation /> -->
+    <CustomNavigation />
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
       <vue-lazy-component class="section" id="section1" @init="init">
@@ -121,6 +122,7 @@
 // @ is an alias to /src
 import $ from "jquery";
 import Navigation from "@/layouts/Navigation.vue";
+import CustomNavigation from "@/layouts/CustomNavigation.vue";
 import { isMobile } from "@/utils";
 import SideNavigation from "@/layouts/SideNavigation.vue";
 import ContactSection from "@/layouts/ContactSection.vue";
@@ -142,6 +144,7 @@ export default {
     Loading,
     // Indigator,
     Navigation,
+    CustomNavigation,
     //SideNavigation,
     ContactSection,
     MobileNav,
