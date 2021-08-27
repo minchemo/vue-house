@@ -170,7 +170,7 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         autoplay: {
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         },
         breakpoints: {

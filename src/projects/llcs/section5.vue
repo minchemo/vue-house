@@ -1,6 +1,7 @@
 <template>
   <div class="section5">
     <div class="bg" v-if="!isMobile">
+      <p>3D模擬示意圖</p>
       <img src='~@/projects/llcs/s5/bg1.jpg' alt="外觀日景">
       <img src='~@/projects/llcs/s5/bg2.jpg' alt="外觀夜景">
     </div>
@@ -10,7 +11,7 @@
           <img v-else class="content" src="~@/projects/llcs/s5/b_content_mo.svg" alt="" srcset="">
       </div>
       <img v-if="isMobile" class="building" src="~@/projects/llcs/s5/bg_mo1.jpg" alt="" srcset="">
-    <div class="bg" v-if="isMobile">
+    <div class="bg" v-if="isMobile"><p>3D模擬示意圖</p>
       <img class="building" src='~@/projects/llcs/s5/bg_mo1.jpg' alt="外觀日景">
       <img class="building" src='~@/projects/llcs/s5/bg_mo2.jpg' alt="外觀夜景">
     </div>
@@ -24,18 +25,17 @@
     padding-bottom: 47.50%;
     .bg{width: 100%;height: 100%;position: absolute;bottom: 0;left: 0;
     img{width: 100%;height: 100%;position: relative;bottom: 0;left: 0;object-fit: cover;
-
     &:last-child{position: absolute;animation: round 10s linear infinite;opacity: 0;}
-    
     }
+    p{position: absolute;bottom: 0.5vw;right: 38.5vw;color: #FFF;z-index: 3;font-size: calc(1500vw / 1920);}
     }
 
 
 @-webkit-keyframes round {
-6% {
+10% {
 opacity: 1;
 }
-44% {
+40% {
 opacity: 1;
 }
 50% {
@@ -90,7 +90,8 @@ opacity: 0;
     padding-bottom: 0;
     background-image: unset;
     .bg{height:auto;
-    img{height:auto;}}
+    img{height:auto;}
+    p{bottom: 0.5em;right: 0.5em;font-size: calc(1200vw / 375);}}
 
     .building {
         width: 100%;
