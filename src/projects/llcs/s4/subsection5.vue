@@ -690,7 +690,6 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 3000,
-          disableOnInteraction: true,
         },
         breakpoints: {
           320: {
@@ -706,8 +705,7 @@ export default {
       swiperOptionsArchiDetail: {
         spaceBetween: 0,
         autoplay: {
-          delay: 3000,
-          disableOnInteraction: true,
+          delay: 2000,
         },
         pagination: {
           el: ".swiper-pagination",
