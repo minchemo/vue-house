@@ -1,5 +1,5 @@
 <template>
-  <div class="subsection">
+  <div class="subsection subsection62">
     <div class="txt">
     <div class="title">飯店式物管 尊榮級公設</div>
     <div class="desc">氣派挑高大廳、專業物管恭迎主人歸來，榮寵來訪賓客，「朗朗城心」專為講究品味的您，留下一席讓身心棲息充電的處所，營造在家即是渡假的愜意感受。</div>
@@ -32,12 +32,14 @@
   height: auto;
   display: flex;
   flex-direction:column;
+    padding-bottom: 3vw ;
+
 
   .swiper-box {
     order:2;
     position: relative;
     width: 80vw;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     .swiper-slide {
       height: 0;
       padding-bottom: 44.54%;
@@ -164,11 +166,12 @@ export default {
         require("@/projects/llcs/s6/sb2/8.jpg"),
       ],
       swiperOptions: {
-        spaceBetween: 0,
+        spaceBetween:10,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        speed:1000,
         autoplay: {
           delay: 5000,
           disableOnInteraction: false,
@@ -176,11 +179,11 @@ export default {
         breakpoints: {
           320: {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 10,
           },
           1000: {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 10,
           },
         },
       },

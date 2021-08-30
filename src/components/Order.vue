@@ -575,7 +575,7 @@ export default {
       line-height: 1.5;
     }
     .order-top {
-      background-image: $order_bg_image_m;
+    //  background-image: $order_bg_image_m;
      // top: 10vw;
     }
     .order {

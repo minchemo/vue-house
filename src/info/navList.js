@@ -14,9 +14,9 @@ export default [
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "section2",
+    section: "subsection2",
     svgSrc: "",
-    offset: -50,
+    offset: 0,
     mobileOffset: 0
   },
   {
@@ -26,27 +26,7 @@ export default [
     subTitle: "",
     section: "section3",
     svgSrc: "",
-    offset: -50,
-    mobileOffset: 0
-  },
-  {
-    name: "綠意活心",
-    //iconSrc: require("@/assets/img/nav/1.png"),
-    imgSrc: "",
-    subTitle: "",
-    section: "section4",
-    svgSrc: "",
-    offset: -50,
-    mobileOffset: 0
-  },
-  {
-    name: "書香城心",
-    //iconSrc: require("@/assets/img/nav/1.png"),
-    imgSrc: "",
-    subTitle: "",
-    section: "section5",
-    svgSrc: "",
-    offset: -50,
+    offset: 0,
     mobileOffset: 0
   },
   {
@@ -54,9 +34,9 @@ export default [
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "",
+    section: "subsection41",
     svgSrc: "",
-    offset: -50,
+    offset: 0,
     mobileOffset: 0
   },
   {
@@ -64,9 +44,29 @@ export default [
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "",
+    section: "subsection42",
     svgSrc: "",
-    offset: -50,
+    offset: 0,
+    mobileOffset: 0
+  },
+  {
+    name: "綠意活心",
+    //iconSrc: require("@/assets/img/nav/1.png"),
+    imgSrc: "",
+    subTitle: "",
+    section: "subsection43",
+    svgSrc: "",
+    offset: 0,
+    mobileOffset: 0
+  },
+  {
+    name: "書香城心",
+    //iconSrc: require("@/assets/img/nav/1.png"),
+    imgSrc: "",
+    subTitle: "",
+    section: "subsection44",
+    svgSrc: "",
+    offset: 0,
     mobileOffset: 0
   },
   {
@@ -74,9 +74,9 @@ export default [
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "",
+    section: "subsection45",
     svgSrc: "",
-    offset: -50,
+    offset: 0,
     mobileOffset: 0
   },
   {
@@ -84,9 +84,9 @@ export default [
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "",
+    section: "section5",
     svgSrc: "",
-    offset: -50,
+    offset: 0,
     mobileOffset: 0
   },
   {
@@ -94,9 +94,9 @@ export default [
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "",
+    section: "subsection61",
     svgSrc: "",
-    offset: -50,
+    offset: 0,
     mobileOffset: 0
   },
   {
@@ -104,29 +104,30 @@ export default [
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "",
+    section: "subsection62",
     svgSrc: "",
-    offset: -50,
+    offset: -60,
     mobileOffset: 0
   },
+  /*
   {
     name: "質感住居",
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "",
+    section: "subsection63",
     svgSrc: "",
-    offset: -50,
+    offset: 0,
     mobileOffset: 0
-  },
+  }, */
   {
     name: "預約賞屋",
     //iconSrc: require("@/assets/img/nav/1.png"),
     imgSrc: "",
     subTitle: "",
-    section: "",
+    section: "contact",
     svgSrc: "",
-    offset: -50,
+    offset:0,
     mobileOffset: 0
   },
 ];

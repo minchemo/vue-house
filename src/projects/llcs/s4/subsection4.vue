@@ -1,5 +1,5 @@
 <template>
-  <div class="subsection">
+  <div class="subsection subsection44">
     <div class="container">
       <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
         <div class="title">贏在起點<br>書香新城心</div>

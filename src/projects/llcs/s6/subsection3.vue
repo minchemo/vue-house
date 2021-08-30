@@ -1,5 +1,5 @@
 <template>
-  <div class="subsection">
+  <div class="subsection subsection63">
     <div 
      data-aos="fade" data-aos-duration="1000" data-aos-delay="0" v-if="isMobile" class="title">
       <div class="title-btn">

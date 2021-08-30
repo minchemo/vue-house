@@ -1,5 +1,5 @@
 <template>
-  <div class="subsection">
+  <div class="subsection subsection61">
     <div class="title">豪宅建材 尊榮禮遇</div>
     <img
       data-aos="fade"

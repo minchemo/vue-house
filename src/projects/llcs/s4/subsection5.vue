@@ -1,5 +1,5 @@
 <template>
-  <div class="subsection">
+  <div class="subsection subsection45">
     <div class="container">
       <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
         <div class="title">金獎團隊 誠心打造</div>
@@ -80,74 +80,85 @@
       />
     </div>
     <div v-show="activeArchiDetailOpen" class="archi_detail">
-      <div class="close" @click="activeArchiDetailOpen = false">
+      <div class="archi_bg">
+        <div class="archi_box1" @click="activeArchiDetailOpen = false"></div>
+        <div class="archi_box2" @click="activeArchiDetailOpen = false"></div>
+        <div class="close" @click="activeArchiDetailOpen = false">
+          <img
+            src="~@/projects/llcs/s4/sb5/archi_detail/close.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="archi_detail_box">
+          <div class="archi_detail_info">
+            <img
+              class="avatar"
+              :src="activeArchiDetail.avatar"
+              alt=""
+              srcset=""
+            />
+            <img
+              class="detail_content"
+              :src="activeArchiDetail.detail_content"
+              alt=""
+              srcset=""
+            />
+            <img
+              class="rewards"
+              v-if="activeArchiDetail.rewards"
+              :src="activeArchiDetail.rewards"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="archi_detail_swiper">
+            <swiper ref="swiper" :options="swiperOptionsArchiDetail">
+              <swiper-slide
+                v-for="(slides, i) in activeArchiDetail.slides"
+                v-bind:key="i"
+                v-bind:style="{
+                  backgroundImage: `url(${slides})`,
+                }"
+              >
+              </swiper-slide>
+              <div
+                v-if="!isMobile"
+                class="swiper-pagination"
+                slot="pagination"
+              ></div>
+              <div v-if="isMobile" class="swiper-button-next" slot="button-next">
+                <img src="~@/projects/llcs/s4/next_btn.svg" alt="" srcset="" />
+              </div>
+              <div v-if="isMobile" class="swiper-button-prev" slot="button-prev">
+                <img src="~@/projects/llcs/s4/prev_btn.svg" alt="" srcset="" />
+              </div>
+            </swiper>
+          </div>
+        </div>
+        <div class="title">金獎團隊 誠心打造</div>
+        <div class="return" @click="activeArchiDetailOpen = false">回上一頁</div>
         <img
-          src="~@/projects/llcs/s4/sb5/archi_detail/close.png"
+          v-if="!isMobile"
+          class="draw1"
+          src="~@/projects/llcs/s4/sb5/archi_detail/draw1.png"
+          alt=""
+          srcset=""
+        /><img
+          v-if="!isMobile"
+          class="draw2"
+          src="~@/projects/llcs/s4/sb5/archi_detail/draw2.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          v-else
+          class="draw"
+          src="~@/projects/llcs/s4/sb5/archi_detail/draw_mo.png"
           alt=""
           srcset=""
         />
       </div>
-      <div class="archi_detail_box">
-        <div class="archi_detail_info">
-          <img
-            class="avatar"
-            :src="activeArchiDetail.avatar"
-            alt=""
-            srcset=""
-          />
-          <img
-            class="detail_content"
-            :src="activeArchiDetail.detail_content"
-            alt=""
-            srcset=""
-          />
-          <img
-            class="rewards"
-            v-if="activeArchiDetail.rewards"
-            :src="activeArchiDetail.rewards"
-            alt=""
-            srcset=""
-          />
-        </div>
-        <div class="archi_detail_swiper">
-          <swiper ref="swiper" :options="swiperOptionsArchiDetail">
-            <swiper-slide
-              v-for="(slides, i) in activeArchiDetail.slides"
-              v-bind:key="i"
-              v-bind:style="{
-                backgroundImage: `url(${slides})`,
-              }"
-            >
-            </swiper-slide>
-            <div
-              v-if="!isMobile"
-              class="swiper-pagination"
-              slot="pagination"
-            ></div>
-            <div v-if="isMobile" class="swiper-button-next" slot="button-next">
-              <img src="~@/projects/llcs/s4/next_btn.svg" alt="" srcset="" />
-            </div>
-            <div v-if="isMobile" class="swiper-button-prev" slot="button-prev">
-              <img src="~@/projects/llcs/s4/prev_btn.svg" alt="" srcset="" />
-            </div>
-          </swiper>
-        </div>
-      </div>
-      <div class="title">金獎團隊 誠心打造</div>
-      <img
-        v-if="!isMobile"
-        class="draw"
-        src="~@/projects/llcs/s4/sb5/archi_detail/draw.png"
-        alt=""
-        srcset=""
-      />
-      <img
-        v-else
-        class="draw"
-        src="~@/projects/llcs/s4/sb5/archi_detail/draw_mo.png"
-        alt=""
-        srcset=""
-      />
     </div>
   </div>
 </template>
@@ -332,18 +343,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5000;
+    z-index: 11000;
     background-color: #fff;
     background-image: url("~@/projects/llcs/s4/sb5/archi_detail/bg.jpg");
     background-size: cover;
+    overflow: auto;
+    .archi_bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: calc(85000vw / 1920);
+    max-height: calc(108000vw / 1920);
+    overflow: hidden;
+    }
     .archi_detail_box {
       display: flex;
       align-items: flex-start;
       justify-content: center;
       position: relative;
-      top: 10%;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, 0%);
+      transform: translate(-50%, -55%);
       .archi_detail_info {
         position: relative;
         display: flex;
@@ -388,12 +408,35 @@
         width: 100%;
       }
     }
-      .title {
+      .return{
       position: absolute;
       left: 50%;
-      transform: translate(-50%, 0%);
-      width: 76.4vw;
-      top: 40.6VW;
+      transform: translate(480%, 0%);
+      transition:transform 0.3s ;
+      width:auto;
+        top:calc(50% + 19vw);
+        font-size: calc(2000vw / 1920);
+        //font-family: "Noto Serif TC";
+        color:#000;
+        font-weight: bold;
+        text-align: right;
+        line-height: 1.3;
+        padding: 0 0.3em 0.3em;
+        cursor: pointer;
+        &::after{
+          content: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1000 1000'%3E%3Cpath d='M71.3,327.7L413.8,643V452c103.7,0,367.8,2.2,367.8,262.1c0,136.1-100.9,249.6-234.9,275.9c215.4-28,382.1-202.9,382.1-416.7c0-397.3-443.5-400.7-515-400.7V10L71.3,327.7z'/%3E%3C/svg%3E");
+          height: 1em;width: 1em;display: inline-block;
+          margin: 0 0 0 0.5em;
+          }
+        &:hover{
+      transform: translate(490%,0%);}
+        }
+      .title {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 76.4vw;
+        top:calc(50% + 16.5vw);
         font-size: calc(5500vw / 1920);
         font-family: "Noto Serif TC";
         color:#005e3c;
@@ -404,13 +447,26 @@
         border: solid currentColor;
         border-width: 0 3px 3px 0;
         }
-    .draw {
-      pointer-events: none;
-      position: fixed;
+
+     .archi_box1,
+     .archi_box2{position: absolute;width:10%;height: 100%;top: 0;z-index: 60;}
+     .archi_box1{left: 0;}
+     .archi_box2{right: 0;}
+    .draw1 {
+      position: absolute;
       z-index: -1;
-      width: 73vw;
-      right: -5vw;
-      bottom: -5vw;
+    top: calc(50% - 20vw);
+    left: calc(50% - 17.5vw);
+      width: calc(27000vw / 1920);
+
+    }
+    .draw2 {
+      position: absolute;
+      z-index: 0;
+      bottom:  -17vw;
+      right:  -17vw;
+      width: calc(23200vw / 1920);
+
     }
   }
 }
@@ -524,22 +580,22 @@
     }
 
     .archi_detail {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 5000;
-      background-color: #fff;
       background-image: url("~@/projects/llcs/s4/sb5/archi_detail/bg_mo.jpg");
       background-size: cover;
-      overflow-y: scroll;
+   //   overflow-y: scroll;
+    .archi_bg{
+    height: auto;
+    min-height: 0;
+    max-height: 9000vh;
+    }
+     .archi_box1,
+     .archi_box2{height: 139vw;}
       .archi_detail_box {
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        top: 15%;
+        top: 26vw;
         left: 50%;
         transform: translate(-50%, 0%);
         flex-direction: column;
@@ -577,7 +633,12 @@
       .close {
         width: 6vw;
         right: 6vw;
-        top: 6vw;
+        top: 10vw;
+      }
+      .return{
+    top: calc(50% + 32vw);
+    font-size: calc(1500vw / 375);
+    transform:translate(90%, 0)
       }
       .title {
         width: 90vw;

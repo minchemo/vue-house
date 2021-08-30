@@ -1,5 +1,5 @@
 <template>
-  <div class="subsection">
+  <div class="subsection subsection43">
     <div class="container">
       <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
         <img

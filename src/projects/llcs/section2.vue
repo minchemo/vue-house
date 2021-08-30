@@ -1,14 +1,14 @@
 <template>
   <div class="section2">
-    <div 
+  <!--  <div 
         data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="0" class="subsection subsection1">
       <div class="video-box">
         <img src="~@/projects/llcs/s2/play-btn.png" alt="" srcset="" />
       </div>
-    </div>
-    <div class="subsection subsection2">
+    </div> -->
+    <div class="subsection subsection2" id="subsection2">
       <img
         data-aos="zoom-in-right"
         data-aos-duration="1000"
