@@ -32,7 +32,7 @@
                 和孩子一起 盡情快樂
               </text>
               <text class="cls-1" transform="translate(44.29 233.22)">
-                台灣蔦屋合作選冊
+                臺灣蔦屋合作選冊
               </text>
               <text class="cls-2">
                 <tspan x="0" y="274.27">日系品牌設計美</tspan>
@@ -82,7 +82,7 @@
                 和孩子一起 盡情快樂
               </text>
               <text class="cls-1" transform="translate(43.26 232.9)">
-                台灣蔦屋合作選冊
+                臺灣蔦屋合作選冊
               </text>
               <text class="cls-2" transform="translate(8.1 277.27)">
                 日系品牌設計美
