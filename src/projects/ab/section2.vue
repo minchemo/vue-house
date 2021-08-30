@@ -308,7 +308,7 @@ export default {
         {
           icon: require("../ab/s2/icon/2.png"),
           title: isMobile ? "名校<br>雲集" : "名校雲集",
-          content: "金華中正學區<br>台大最前線",
+          content: "金華國小 中正國中<br>台大最前線",
           reverse: false,
         },
         {
