@@ -457,9 +457,9 @@
         }
         .building {
           position: absolute;
-          left: -16vw;
+          left: 0;
           bottom: 161px;
-          width: 178vw;
+          width:100%;
           height: unset;
         }
       }
