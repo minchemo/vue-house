@@ -44,14 +44,14 @@
       <img
         v-if="!isMobile"
         class="draw"
-        src="~@/projects/llcs/s4/sb1/draw.svg"
+        src="~@/projects/llcs/s4/sb1/draw.png"
         alt=""
         srcset=""
       />
       <img
         v-else
         class="draw"
-        src="~@/projects/llcs/s4/sb1/draw_mo.svg"
+        src="~@/projects/llcs/s4/sb1/draw_mo.png"
         alt=""
         srcset=""
       />
@@ -203,7 +203,7 @@
     z-index: -1;
     bottom: -9vh;
     right: 0;
-    width: 104vw;
+    width: 100vw;
     pointer-events: none;
     transform: translateX(0);
     animation: floating 8s infinite alternate-reverse;

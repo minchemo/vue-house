@@ -300,18 +300,12 @@ export default {
       activeList: {},
       slideList: [
         {
-          title1: isMobile
-            ? require("@/projects/llcs/s6/sb3/slides1/title_mo.svg")
-            : require("@/projects/llcs/s6/sb3/slides1/title.svg"),
           title:"<b style='font-size:1.5em;margin-top: -.3em'>A1</b>/光感時尚·優雅好室",
           desc:"以白色為空間主旋律，皮革與金屬、水磨石與玻璃呼應搭配，簡約大器空間語彙，為優雅時尚畫龍點睛，隨處充滿令人驚喜的巧思。",
           btnTitle: require("@/projects/llcs/s6/sb3/slides1/btn_title.png"),
           imgList: [require("@/projects/llcs/s6/sb3/slides1/1.jpg")],
         },
         {
-          title1: isMobile
-            ? require("@/projects/llcs/s6/sb3/slides2/title_mo.svg")
-            : require("@/projects/llcs/s6/sb3/slides2/title.svg"),
           title: "<b style='font-size:1.5em;margin-top: -.3em'>A2</b>/熱情活潑·質感住居",
           desc:"結合當代藝術幾何造型與色塊，利用大範圍低彩度空間底色，朱紅色主色在黑色、古銅金點綴下，賦予空間有若精品飯店高級質感。",
           btnTitle: require("@/projects/llcs/s6/sb3/slides2/btn_title.png"),

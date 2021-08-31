@@ -7,8 +7,8 @@
     </div>
       <div  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0"   class="banner"> 
 <div class="title">精品建築<br>質感落款</div>
-          <img v-if="!isMobile" class="content" src="~@/projects/llcs/s5/b_content.svg" alt="" srcset="">
-          <img v-else class="content" src="~@/projects/llcs/s5/b_content_mo.svg" alt="" srcset="">
+<div class="subtitle">新古典建築風格<br>國際飛簷榮耀加冕</div>
+<div class="desc">新重劃區，總需要一座經典建築，立定城市的不凡身價。「朗朗城心」以「現代新古典」語彙為塭仔圳落款，輕奢且具時尚感的樣貌、國際豪宅級的飛簷設計，讓城市居民傾羨仰望，為新世代經典建築榮耀加冕。</div>
       </div>
       <img v-if="isMobile" class="building" src="~@/projects/llcs/s5/bg_mo1.jpg" alt="" srcset="">
     <div class="bg" v-if="isMobile"><p>3D模擬示意圖</p>
@@ -32,15 +32,15 @@
 
 
 @-webkit-keyframes round {
-10% {
-opacity: 1;
-}
-40% {
-opacity: 1;
-}
-50% {
-opacity: 0;
-}
+  10% {
+  opacity: 1;
+  }
+  40% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  }
 
 }
     .building {
@@ -60,6 +60,10 @@ opacity: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        color:#FFF;
+        line-height: 1.6;
+        text-align: justify;
+        font-size: calc(2000vw / 1920);
 
       .title {
         font-size: calc(5500vw / 1920);
@@ -71,6 +75,15 @@ opacity: 0;
         &::after{content:"";
         margin: .45em 0 .5em 0;
         width: 8.5em;height: 3px; background: #FFF;display: block;}
+      }
+      .subtitle {
+        font-size:1.9em;
+        font-weight: 400;
+      }
+      .desc {
+        margin: 1em 0  1em 0;
+        font-weight: 300;
+        width: 100%;
       }
         .content {
             width: 100%;
@@ -111,11 +124,17 @@ opacity: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-size: calc(1500vw / 375);
 
         .title {
         font-size: calc(3500vw / 375);
         margin: .45em 0 .3em 0;
         }
+      .subtitle {  font-size:1.7em;
+      }
+      .desc{
+            width: 100%;
+      }
         .content {
             width: 100%;
 

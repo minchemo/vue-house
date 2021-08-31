@@ -8,9 +8,10 @@
 
         <div class="archi-swiper" data-aos-duration="1000" data-aos="fade-up">
           <swiper
-            ref="swiper"
+            ref="swiper_5_1"
             :options="swiperOptionsArchi"
             @click-slide="openDetail"
+            :key="archiList"
           >
             <swiper-slide
               v-for="(archiList, i) in archiList"
@@ -37,7 +38,7 @@
         data-aos-duration="1000"
         data-aos="fade-right"
       >
-        <swiper ref="swiper" :options="swiperOptions">
+        <swiper ref="swiper_5_2" :options="swiperOptions" :key="activeList">
           <swiper-slide
             v-for="(activeList, i) in activeList"
             v-bind:key="i"
@@ -113,7 +114,7 @@
             />
           </div>
           <div class="archi_detail_swiper">
-            <swiper ref="swiper" :options="swiperOptionsArchiDetail">
+            <swiper ref="swiper_5_3" :options="swiperOptionsArchiDetail" :key="activeArchiDetail">
               <swiper-slide
                 v-for="(slides, i) in activeArchiDetail.slides"
                 v-bind:key="i"
@@ -231,7 +232,6 @@
         line-height: 1.5;
         text-align: justify;
         font-size: calc(2000vw / 1920);
-      
       .title {
         font-size: calc(5500vw / 1920);
         font-family: "Noto Serif TC";
@@ -636,9 +636,12 @@
         top: 10vw;
       }
       .return{
-    top: calc(50% + 32vw);
-    font-size: calc(1500vw / 375);
-    transform:translate(90%, 0)
+        top: calc(50% + 32vw);
+        font-size: calc(1500vw / 375);
+        transform:translate(90%, 0);
+        &:hover{
+         transform:translate(90%, 0);
+        }
       }
       .title {
         width: 90vw;
@@ -689,7 +692,7 @@ export default {
         resistanceRatio:0,
         spaceBetween: 0,
         autoplay: {
-          delay: 3000,
+          delay:4000,
         },
         breakpoints: {
           320: {
@@ -705,7 +708,7 @@ export default {
       swiperOptionsArchiDetail: {
         spaceBetween: 0,
         autoplay: {
-          delay: 2000,
+          delay:4000,
         },
         pagination: {
           el: ".swiper-pagination",

@@ -1,26 +1,7 @@
 <template>
   <div class="subsection subsection61">
     <div class="title">豪宅建材 尊榮禮遇</div>
-    <img
-      data-aos="fade"
-      data-aos-duration="1000"
-      data-aos-delay="0"
-      v-if="!isMobile"
-      class="content"
-      src="~@/projects/llcs/s6/sb1/content.svg"
-      alt=""
-      srcset=""
-    />
-    <img
-      data-aos="fade"
-      data-aos-duration="1000"
-      data-aos-delay="0"
-      v-else
-      class="content"
-      src="~@/projects/llcs/s6/sb1/content_mo.svg"
-      alt=""
-      srcset=""
-    />
+    <div class="desc">為滿足新世代居住需求，提升規格一次到頂，免費升等豪宅級建材，從舒適生活到健康防疫，樣樣力求盡善盡美，營造您的絕佳生活體驗。</div>
     <div class="list-box">
       <div class="list list1">
         <div class="list-item list-title">世界優選</div>
@@ -82,8 +63,12 @@
 /* 螢幕尺寸標準 */
 .subsection {
   position: relative;
-  height: 100vh;
+  height: auto;
   padding: 5vw;
+        color:#000;
+        line-height: 1.6;
+        text-align: center;
+        font-size: calc(2000vw / 1920);
       .title {
         font-size: calc(5500vw / 1920);
         font-family: "Noto Serif TC";
@@ -94,6 +79,11 @@
         &::after{content:"";
         margin: .45em auto .5em auto;
         width: 28em;height: 3px; background: currentColor;display: block;}
+      }
+      .desc {
+        margin: 1em auto  1em auto;
+        font-weight: 300;
+    width: 45vw;
       }
   .content {
    //margin-top: -6vh;
@@ -247,12 +237,17 @@
     height: auto;
     padding: 5vw;
     overflow: hidden;
+        font-size: calc(1500vw / 375);
 
         .title {
         font-size: calc(3500vw / 375);
         margin: .45em 0 .3em 0;
         &::after{width: 6em;}
         }
+      .desc{
+          width: 80vw;
+          text-align: justify;
+      }
     .content {
       margin-top: 2vh;
       width: 80vw;

@@ -14,8 +14,8 @@
 /* 螢幕尺寸標準 */
 .section4 {
   height: auto;
-  background-size: cover;
-  background-image: url('~@/projects/llcs/s4/bg.jpg');
+  background-size: 100% auto;
+  background: url('~@/projects/llcs/s4/bg.jpg') fixed center ;
   
 }
 /* 平板尺寸 */
@@ -25,6 +25,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section4 {
+  background-image: url('~@/projects/llcs/s4/bg-mo.jpg');
     .spacer {
       position: relative;
       width: 100%;

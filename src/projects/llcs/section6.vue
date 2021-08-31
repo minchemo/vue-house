@@ -2,15 +2,15 @@
   <div class="section6">
     <Subsection1 />
     <Subsection2 />
-  <!--  <Subsection3 /> -->
+    <!-- <Subsection3 />  -->
   </div>
 </template>
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section6 {
   height: auto;
-  background-image: url("~@/projects/llcs/s6/bg.jpg");
-  background-size: cover;
+  background-size: 100% auto;
+  background: url('~@/projects/llcs/s4/bg.jpg') fixed center ;
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -18,6 +18,9 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section6 {
+  background-image: url('~@/projects/llcs/s4/bg-mo.jpg');
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
