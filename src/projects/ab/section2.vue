@@ -299,16 +299,16 @@ export default {
       featureList: [
         {
           icon: require("../ab/s2/icon/1.png"),
-          title: isMobile ? "捷運<br>熱點" : "捷運熱點",
-          content: isMobile
-            ? "紅綠橘3線<br>權掌大台北"
-            : "紅綠橘3線<br>權掌大台北",
+          title: isMobile ? "名校<br>雲集" : "名校雲集",
+          content: "金華國小 中正國中<br>台大最前線",
           reverse: true,
         },
         {
           icon: require("../ab/s2/icon/2.png"),
-          title: isMobile ? "名校<br>雲集" : "名校雲集",
-          content: "金華國小 中正國中<br>台大最前線",
+          title: isMobile ? "捷運<br>熱點" : "捷運熱點",
+          content: isMobile
+            ? "紅綠橘3線<br>權掌大台北"
+            : "紅綠橘3線<br>權掌大台北",
           reverse: false,
         },
         {
