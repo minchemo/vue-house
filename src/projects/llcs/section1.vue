@@ -38,7 +38,7 @@
         width: 20vw;
       }
       .t1 {
-        margin: 2.5vw auto 0.7vw;
+        margin: 2.5vw auto 1.2vw;
         width: 25vw;
       }
       .t2 {
@@ -90,7 +90,7 @@
         }
         .t1 {
           width: 90vw;
-        margin: 6vw auto 2vw;
+        margin: 9vw auto 5vw;
         }
         .t2 {
           width: 90vw;
