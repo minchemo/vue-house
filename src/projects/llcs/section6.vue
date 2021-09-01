@@ -2,7 +2,7 @@
   <div class="section6">
     <Subsection1 />
     <Subsection2 />
-    <!-- <Subsection3 />  -->
+    <Subsection3 />
   </div>
 </template>
 <style lang="scss" scoped>

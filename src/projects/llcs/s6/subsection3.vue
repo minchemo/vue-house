@@ -27,12 +27,13 @@
             backgroundImage: `url(${img})`,
           }"
         >
+        <p class="name">樣品屋實景拍攝</p>
         </swiper-slide>
         <div class="swiper-button-next" slot="button-next">
-          <img src="~@/projects/llcs/s4/next_btn.svg" alt="" srcset="" />
+          <img src="~@/projects/llcs/s4/next_btn.svg" alt="樣品屋" srcset="" />
         </div>
         <div class="swiper-button-prev" slot="button-prev">
-          <img src="~@/projects/llcs/s4/prev_btn.svg" alt="" srcset="" />
+          <img src="~@/projects/llcs/s4/prev_btn.svg" alt="樣品屋" srcset="" />
         </div>
       </swiper>
     </div>
@@ -46,7 +47,7 @@
           :key="i"
           @click="setData(data)"
         >
-          <img :src="data.btnTitle" alt="" srcset="" />
+          <img :src="data.btnTitle" alt="樣品屋" srcset="" />
         </div>
       </div>
 <!--      <img class="title-img" :src="activeList.title1" alt="" srcset="" /> -->
@@ -72,6 +73,9 @@
       padding-bottom: 44.54%;
       background-size: cover;
       background-position: center;
+      .name{position: absolute;bottom: 0.5em;right: 0.5em;color: #fff;font-size: calc(1500vw / 1920);
+      text-shadow:0 0 0.4em #000c;
+      }
     }
   }
 
@@ -132,6 +136,7 @@
         }
       }
     }
+    
   .txt{
     order:3;
     display: flex;
@@ -185,6 +190,7 @@ margin: 0em auto 1em auto;
         padding-bottom: 61.41%;
         background-size: cover;
         background-position: center;
+      .name{font-size: calc(1200vw / 375);}
       }
     }
 
@@ -303,13 +309,27 @@ export default {
           title:"<b style='font-size:1.5em;margin-top: -.3em'>A1</b>/光感時尚·優雅好室",
           desc:"以白色為空間主旋律，皮革與金屬、水磨石與玻璃呼應搭配，簡約大器空間語彙，為優雅時尚畫龍點睛，隨處充滿令人驚喜的巧思。",
           btnTitle: require("@/projects/llcs/s6/sb3/slides1/btn_title.png"),
-          imgList: [require("@/projects/llcs/s6/sb3/slides1/1.jpg")],
+          imgList: [
+            require("@/projects/llcs/s6/sb3/slides1/1.jpg"),
+            require("@/projects/llcs/s6/sb3/slides1/2.jpg"),
+            require("@/projects/llcs/s6/sb3/slides1/3.jpg"),
+            require("@/projects/llcs/s6/sb3/slides1/4.jpg"),
+            require("@/projects/llcs/s6/sb3/slides1/5.jpg"),
+            require("@/projects/llcs/s6/sb3/slides1/6-1.jpg")
+          ],
         },
         {
           title: "<b style='font-size:1.5em;margin-top: -.3em'>A2</b>/熱情活潑·質感住居",
           desc:"結合當代藝術幾何造型與色塊，利用大範圍低彩度空間底色，朱紅色主色在黑色、古銅金點綴下，賦予空間有若精品飯店高級質感。",
           btnTitle: require("@/projects/llcs/s6/sb3/slides2/btn_title.png"),
-          imgList: [require("@/projects/llcs/s6/sb3/slides2/1.jpg")],
+          imgList: [
+            require("@/projects/llcs/s6/sb3/slides2/1.jpg"),
+            require("@/projects/llcs/s6/sb3/slides2/2.jpg"),
+            require("@/projects/llcs/s6/sb3/slides2/3.jpg"),
+            require("@/projects/llcs/s6/sb3/slides2/4.jpg"),
+            require("@/projects/llcs/s6/sb3/slides2/5.jpg"),
+            require("@/projects/llcs/s6/sb3/slides2/6.jpg")
+          ],
         },
       ],
       swiperOptions: {
