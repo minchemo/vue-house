@@ -1,7 +1,7 @@
 <template>
   <div class="subsection subsection63">
     <div 
-     data-aos="fade" data-aos-duration="1000" data-aos-delay="0" v-if="isMobile" class="title">
+     data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-offset="-100"  v-if="isMobile" class="title">
       <div class="title-btn">
         <div
           v-bind:class="activeList == data ? 'active' : ''"
@@ -18,7 +18,7 @@
         <div class="desc" v-html="activeList.desc"></div>
       </div>
     </div>
-    <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
+    <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down" data-aos-offset="-100" >
       <swiper ref="swiper" :options="swiperOptions">
         <swiper-slide
           v-for="(img, i) in activeList.imgList"
@@ -38,7 +38,7 @@
       </swiper>
     </div>
     <div 
-     data-aos="fade" data-aos-duration="1000" data-aos-delay="0" v-if="!isMobile" class="title">
+     data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-offset="-100"  v-if="!isMobile" class="title">
       <div class="title-btn">
         <div
           v-bind:class="activeList == data ? 'active' : ''"

@@ -1,7 +1,7 @@
 <template>
   <div class="subsection subsection42">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-offset="-100"  class="info">
         <div class="title">繁華環抱<br>商圈金核心</div>
 <div class="subtitle">副都心3分鐘<br>6大商圈一次擁有</div>
 <div class="desc">「朗朗城心」3分鐘前進副都心，中平、幸福、輔大、新泰、廟街商圈轉瞬切換，便利生活盡情享受，提供全家生活所需應有盡有。</div>
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
+      <div class="swiper-box" data-aos-duration="1000" data-aos-offset="-100"  data-aos="fade-down">
         <swiper ref="swiper" :options="swiperOptions">
           <swiper-slide
             v-for="(activeList, i) in activeList"

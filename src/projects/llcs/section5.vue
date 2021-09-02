@@ -5,7 +5,7 @@
       <img src='~@/projects/llcs/s5/bg1.jpg' alt="外觀日景">
       <img src='~@/projects/llcs/s5/bg2.jpg' alt="外觀夜景">
     </div>
-      <div  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0"   class="banner"> 
+      <div  data-aos="fade-left" data-aos-offset="-100" data-aos-duration="1000" data-aos-delay="0"   class="banner"> 
 <div class="title">精品建築<br>質感落款</div>
 <div class="subtitle">新古典建築風格<br>國際飛簷榮耀加冕</div>
 <div class="desc">新重劃區，總需要一座經典建築，立定城市的不凡身價。「朗朗城心」以「現代新古典」語彙為塭仔圳落款，輕奢且具時尚感的樣貌、國際豪宅級的飛簷設計，讓城市居民傾羨仰望，為新世代經典建築榮耀加冕。</div>

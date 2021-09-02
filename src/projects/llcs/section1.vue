@@ -2,9 +2,9 @@
   <div class="section1">
     <div class="main">
       <div class="title">
-        <img data-aos="fade" data-aos-duration="1000" class="logo" src="~@/projects/llcs/s1/logoan.svg" alt="" srcset="" />
-        <img data-aos="fade" data-aos-duration="1000" data-aos-delay="200" class="t1" src="~@/projects/llcs/s1/t1.png" alt="" srcset="" />
-        <img data-aos="fade" data-aos-duration="1000" data-aos-delay="500" class="t2" src="~@/projects/llcs/s1/t2.png" alt="" srcset="" />
+        <img data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" class="logo" src="~@/projects/llcs/s1/logoan.svg" alt="" srcset="" />
+        <img data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" data-aos-delay="200" class="t1" src="~@/projects/llcs/s1/t1.png" alt="" srcset="" />
+        <img data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" data-aos-delay="500" class="t2" src="~@/projects/llcs/s1/t2.png" alt="" srcset="" />
       </div>
       <img class="draw" src="~@/projects/llcs/s1/draw.png" alt="" srcset="" />
 

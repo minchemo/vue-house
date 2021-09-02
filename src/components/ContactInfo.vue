@@ -129,10 +129,11 @@ export default {
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
 #contact-info {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -100%);
+  position: relative;
+ /* left: 50%;
+  transform: translate(-50%, -100%); */ 
   z-index: 15;
+  margin: -22vw 0 0 0;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -170,6 +171,7 @@ export default {
   position: relative;
   width: 80%;
   min-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 30px 0 30px;
   margin-bottom: -20px;

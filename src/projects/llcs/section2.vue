@@ -13,6 +13,7 @@
         data-aos="zoom-in-right"
         data-aos-duration="1000"
         data-aos-delay="0"
+        data-aos-offset="-100"
         v-if="!isMobile"
         class="building"
         src="~@/projects/llcs/s2/building.png"
@@ -23,6 +24,7 @@
         data-aos="zoom-in-right"
         data-aos-duration="1000"
         data-aos-delay="0"
+        data-aos-offset="-100"
         v-else
         class="building"
         src="~@/projects/llcs/s2/building_mo.png"
@@ -30,9 +32,10 @@
         srcset=""
       />
       <div 
-      data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="title">塭仔圳文教核心</div>
+      data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-offset="-100" class="title">塭仔圳文教核心</div>
       <div 
-      data-aos="fade" class="name">3D模擬示意圖，僅供參考</div>
+      data-aos="fade"
+        data-aos-offset="-100" class="name">3D模擬示意圖，僅供參考</div>
       <div class="features">
         <div
           class="f-item"

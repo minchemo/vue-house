@@ -1,12 +1,12 @@
 <template>
   <div class="subsection subsection45">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-offset="-100"  class="info">
         <div class="title">金獎團隊 誠心打造</div>
         <div class="subtitle">貼心設想極致禮遇　<br v-if="isMobile">打造生活饗宴</div>
 <div class="desc">「朗朗城心」邀請美國Muse、義大利A’Design設計金獎設計師加入建築團隊，致力規劃、貼心設想各種使用情境，為您與家人創造最細緻舒適的生活饗宴。</div>
 
-        <div class="archi-swiper" data-aos-duration="1000" data-aos="fade-up">
+        <div class="archi-swiper" data-aos-duration="1000" data-aos-offset="-100"  data-aos="fade-up">
           <swiper
             ref="swiper_5_1"
             :options="swiperOptionsArchi"

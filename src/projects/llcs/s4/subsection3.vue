@@ -1,7 +1,7 @@
 <template>
   <div class="subsection subsection43">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-offset="-100"  class="info">
         <img
           class="title"
           src="~@/projects/llcs/s4/sb3/title.png"
@@ -11,7 +11,7 @@
 <div class="subtitle">41公頃綠地<br>親水公園環繞</div>
 <div class="desc">「朗朗城心」近22公頃新莊運動公園，步行5分鐘享受近萬坪綠地空間，2.8公里貴子坑溪改善計畫，規劃超越中港大排，提供您親水、遊憩友善環境。</div>
       </div>
-      <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
+      <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down" data-aos-offset="-100" >
         <swiper ref="swiper" :options="swiperOptions">
           <swiper-slide
             v-for="(activeList, i) in activeList"

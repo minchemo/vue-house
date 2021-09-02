@@ -1,13 +1,13 @@
 <template>
   <div class="subsection subsection44">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-offset="-100"  class="info">
         <div class="title">贏在起點<br>書香新城心</div>
 <div class="subtitle">在地學習<br>從幼兒園到大學一應俱全</div>
 <div class="desc">「朗朗城心」坐落文教核心，下樓就是非營利幼兒園，周邊還有文中、小預定地、新莊高中、輔仁大學…等人文學區，教育資源一次為孩子準備齊全。</div>
 
       </div>
-      <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
+      <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down" data-aos-offset="-100" >
         <swiper ref="swiper" :options="swiperOptions">
           <swiper-slide
             v-for="(activeList, i) in activeList"

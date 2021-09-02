@@ -10,7 +10,7 @@
           v-for="(data, i) in list1"
           :key="i"
           data-aos="fade"
-          data-aos-duration="1000"
+          data-aos-duration="1000" data-aos-offset="-100" 
           :data-aos-delay="i * 200"
         >
           <div class="list-item-title" v-html="data.title"></div>
@@ -29,7 +29,7 @@
           v-for="(data, i) in list2"
           :key="i"
           data-aos="fade"
-          data-aos-duration="1000"
+          data-aos-duration="1000" data-aos-offset="-100" 
           :data-aos-delay="i * 200"
         >
           <div class="list-item-title" v-html="data.title"></div>

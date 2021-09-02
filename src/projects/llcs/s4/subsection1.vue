@@ -1,7 +1,7 @@
 <template>
   <div class="subsection subsection41">
     <div class="container">
-      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" class="info">
+      <div  data-aos="fade" data-aos-duration="1000" data-aos-delay="0" data-aos-offset="-100"  class="info">
         <img
           class="title"
           src="~@/projects/llcs/s4/sb1/title.png"
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
+      <div class="swiper-box" data-aos-duration="1000" data-aos-offset="-100"  data-aos="fade-down">
         <swiper ref="swiper" :options="swiperOptions">
           <swiper-slide
             v-for="(activeList, i) in activeList"
