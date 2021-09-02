@@ -109,7 +109,7 @@ export default [
     offset: -60,
     mobileOffset: 0
   },
-  /*
+  
   {
     name: "質感住居",
     //iconSrc: require("@/assets/img/nav/1.png"),
@@ -119,7 +119,7 @@ export default [
     svgSrc: "",
     offset: 0,
     mobileOffset: 0
-  }, */
+  }, 
   {
     name: "預約賞屋",
     //iconSrc: require("@/assets/img/nav/1.png"),
