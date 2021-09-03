@@ -5,8 +5,8 @@ export default {
   googleLink: "https://goo.gl/maps/6rSqEMzDiPw8fnqd8",
   phone: "06-2090888",
   fbLink:
-    "",
-  fbMessage: "",
+    "https://www.facebook.com/%E6%B8%85%E6%99%AF%E9%BA%9FPark2-107585728312128",
+  fbMessage: "https://m.me/107585728312128/",
   caseName: "巴克禮PARK2",
   indigatorLength: 10,
   houseInfos: [
