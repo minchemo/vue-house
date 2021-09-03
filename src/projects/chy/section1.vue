@@ -34,6 +34,9 @@
   position: relative;
   background: #006868;
   height: 100vh;
+  width: 100%;
+  max-height:calc(108000vw / 1920);
+  min-height:calc(90000vw / 1920);
 
   .title {
     position: absolute;
@@ -136,23 +139,20 @@
   }
   .bush {
     position: absolute;
-    width: 100%;
+    width: 102%;
     bottom: 0;
-    left: 50%;
-    height: 28vh;
-    transform: translateX(-50%) skew(-3deg, 0);
+    left: -1%;
+    height: auto;
+    transform:skew(-3deg, 0);
     animation: bush 3s infinite alternate-reverse;
     transform-origin: bottom center;
     img {
-      height: 100%;
+      width: 100%;
     }
 
     @keyframes bush {
-      from {
-        transform: translateX(-50%) skew(-3deg, 0);
-      }
       to {
-        transform: translateX(-50%) skew(3deg, 0);
+        transform: skew(3deg, 0);
       }
     }
   }
