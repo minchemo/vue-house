@@ -165,6 +165,9 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
+  max-height:calc(81200vw / 375 - 63px);
+  min-height:calc(66700vw / 375 - 63px);
+  height:calc( 100vh - 63px );
     .title {
       width: 100%;
       transform: translate(-50%, -70%);
@@ -260,6 +263,10 @@
         width: 70%;
       }
     }
+  .bush {
+    width: 300%;
+    left: -100%;
+  }
   }
 }
 
