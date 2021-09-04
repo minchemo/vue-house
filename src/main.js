@@ -62,6 +62,7 @@ Vue.use(VueLazyComponent);
 Vue.use(VueRellax);
 Vue.use(Vue2TouchEvents);
 
+
 new Vue({
   router,
   store,

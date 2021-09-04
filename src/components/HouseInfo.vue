@@ -50,6 +50,7 @@ export default {
 .house-info {
   width: 100vw;
   //background: $house_bg;
+  background-color: #000;
   position: relative;
   z-index: 1;
 }

@@ -9,10 +9,10 @@
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
-      <!-- <h3 class="order-title" v-html="order.title"></h3> -->
-      <div class="order-title-img">
+      <h3 class="order-title" v-html="order.title"></h3>
+      <!-- <div class="order-title-img">
         <img src="~@/assets/img/order-title.png" alt="" srcset="">
-      </div>
+      </div> -->
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
@@ -29,22 +29,22 @@
               <label>電子郵件</label>
               <el-input v-model="form.email" placeholder></el-input>
             </div>
-            <div class="row">
+            <!-- <div class="row">
               <label>喜好房型</label>
               <el-select v-model="form.room" placeholder>
                 <el-option
-                  v-for="room in ['2房','3房']"
+                  v-for="room in ['2房', '3房']"
                   :key="room"
                   :label="room"
                   :value="room"
                 ></el-option>
               </el-select>
-            </div>
+            </div> -->
             <div class="row">
-              <label>方便接聽<br>電話時間</label>
+              <label>方便接聽<br />電話時間</label>
               <el-select v-model="form.contacttime" placeholder>
                 <el-option
-                  v-for="contacttime in ['上午','中午','下午','晚上']"
+                  v-for="contacttime in ['上午', '中午', '下午', '晚上']"
                   :key="contacttime"
                   :label="contacttime"
                   :value="contacttime"
@@ -121,11 +121,9 @@
         </div>
         <div class="control">
           <el-checkbox v-model="checked">
-            <h3 style="color: #fff !important">
+            <h3>
               本人知悉並同意
-              <span style="color: #ffdd00 !important" @click="showPolicyDialog"
-                >「個資告知事項聲明」</span
-              >
+              <span @click="showPolicyDialog">「個資告知事項聲明」</span>
               內容
             </h3>
           </el-checkbox>
@@ -387,23 +385,46 @@ export default {
     //background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
     background: $order_bg_image no-repeat;
-    background-size: 50vw auto;
+    background-size: cover;
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 20vw;
+    padding-bottom: 25vw;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 1px;
+      background-color: #000;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 1px;
+      background-color: #000;
+      bottom: 20vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .order-title {
     font-family: $family1;
-    width: 80vw;
+    width: auto;
     padding-top: 20px;
-    padding-bottom: 8px;
+    padding-bottom: 1vw;
     font-weight: bold;
     line-height: 1.3;
-    font-size: calc(100vw * 60 / 1920);
+    font-size: 1.5vw;
     text-align: center;
     color: $order_title_color;
     margin: 0 auto;
+    margin-bottom: 2vw;
+    border-bottom: 1px solid;
+    display: inline-block;
   }
   .order-title-img {
     width: 30vw;
@@ -430,6 +451,8 @@ export default {
     color: $order_subtitle_color;
     margin-bottom: 40px;
     padding-bottom: 18px;
+    line-height: 1.5;
+    font-weight: bold;
   }
 
   .order {
@@ -490,7 +513,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
-    background: #f7f4f2;
+    background: $order_input_bg;
 
     &.house {
       margin-top: 50px;
@@ -547,8 +570,8 @@ export default {
   }
   .order-bg {
     //background-color: $order_bg_color;
-    //background-image: $order_bg_image_m;
-    background-size: cover;
+    background-image: $order_bg_image_m;
+    background-size: contain;
     padding-top: 0;
     margin: 0;
     position: relative;
@@ -575,8 +598,10 @@ export default {
       line-height: 1.5;
     }
     .order-top {
-    //  background-image: $order_bg_image_m;
-     // top: 10vw;
+      background-image: $order_bg_image_m;
+      background-size: contain;
+      background-repeat: repeat;
+      // top: 10vw;
     }
     .order {
       width: 85% !important;

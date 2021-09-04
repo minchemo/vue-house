@@ -1,25 +1,25 @@
 export default {
-  address: "新北市泰山區坡雅路．信華三街口",
+  address: "台北市大安區敦化南路一段177巷49號",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.6559218645876!2d121.44066682268664!3d25.046841773967902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51f286eecefc542e!2z5pyX5pyX5Z-O5b-D!5e0!3m2!1szh-TW!2stw!4v1629824891103!5m2!1szh-TW!2stw",
-  googleLink: "https://goo.gl/maps/wqyN7BBd7TjiZLUJA",
-  phone: "02-2909-2233",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d268.66670233779007!2d121.55165906551639!3d25.043104069670306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc450e4e9cd%3A0xc03c218eac66463e!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5pWm5YyW5Y2X6Lev5LiA5q61MTc35be3NDnomZ8!5e0!3m2!1szh-TW!2stw!4v1630729532445!5m2!1szh-TW!2stw",
+  googleLink: "https://goo.gl/maps/qH29xmo6rF7e9HMC9",
+  phone: "02-2772-6688",
   fbLink:
     "",
   fbMessage: "",
-  caseName: "朗朗城心",
+  caseName: "敦南麗舍",
   indigatorLength: 10,
   houseInfos: [
-    ["投資興建", "統一工商／築億建設"], 
-    ["基地面積", "542坪"],
-
-    ["建築規劃", "陳朝雄／A8聯合建築師事務所"],
-    ["銷售房型", "2-3房"],
-
-    ["公設展演", "袁世賢／呈境設計"],
-    ["樓層規劃", "地上15層/地下5層"],
-    ["景觀美學", "徐世萃／大漢景觀設計工程"],
-    ["經紀人", "陳嘉鴻(99)北市字第01597號"],
+    ["投資興建", "太平洋建設股份有限公司（2506）"], 
+    ["建築設計", "葉日明建築師事務所"], 
+    ["美學設計", "陳克聚建築師事務所"], 
+    ["結構設計", "周有結土木技師事務所"], 
+    ["公設設計", "如榆建築及設計事務所"], 
+    ["綠建築・智慧建築顧問", "楊謙柔博士"], 
+    ["建築代銷", "聯碩地產股份有限公司"], 
+    ["建案位置", "台北市大安區敦化南路一段177巷49號"], 
+    ["建照號碼", "110建字第0102號"], 
+    ["不動產經紀人", "周宗盟(108)南市字第00692號"], 
   ],
 
   gtmCode: ["WCNSDTS"], // 可放置多個
@@ -27,7 +27,7 @@ export default {
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    title: "立即預約",
-    subTitle: "請留下資料，將有專人為您預約"
+    title: "預約賞屋",
+    subTitle: "東區核心重逢太平洋精品之作<br>不必晝想夜夢 只須及早把握"
   }
 };

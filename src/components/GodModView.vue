@@ -61,12 +61,10 @@ export default {
   data() {
     return {
       isMobile,
-      autoScrollView: false, //是否自動調整鳥瞰圖至建案位置 (手機板)
-      autoScrollViewOffset: 110, //自動調整偏移微調
-      viewAspectRatioPercentage: isMobile ? this.getScreenHeight() : "46.82", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: isMobile
-        ? require("@/projects/llcs/s3/bg_mo.jpg")
-        : require("@/projects/llcs/s3/bg.jpg"), //置換圖片路徑即可
+      autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
+      autoScrollViewOffset: -150, //自動調整偏移微調
+      viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
+      bgUrl: require("@/projects/dnls/s5/view.jpg"), //置換圖片路徑即可
       //swipeUrl: require("@/projects/chy/s3/swipe-here.png"), //置換圖片路徑即可
     };
   },

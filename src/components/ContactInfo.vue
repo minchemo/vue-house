@@ -1,6 +1,6 @@
 <template>
   <div id="contact-info">
-    <div class="contact-info">
+    <div class="contact-info contact-sec">
       <img
         v-if="!isMobile"
         class="logo"
@@ -159,7 +159,7 @@ export default {
 }
 
 .contact-info {
-  background: $contact_bg;
+  //background: $contact_bg;
   // background-image: url('../assets/img/contact_bg.jpg');/
   background-size: cover;
   //box-shadow: $contact_shadow;
@@ -410,7 +410,8 @@ export default {
     position: relative;
     margin: 10vw auto 0 auto;
     min-width: unset;
-    //background: transparent;
+    background: $contact_bg_m;
+    background-size: contain;
     margin-top: 0;
 
     .logo {
