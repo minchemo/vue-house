@@ -1,9 +1,9 @@
 <template>
   <div class="section1">
     <div class="intro">
-      <div class="title1"  data-aos="fade-right">
+      <div class="title1" data-aos="fade-right">
         <svg
-          v-if="!isMobile" 
+          v-if="!isMobile"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 641.01 159.82"
         >
@@ -428,6 +428,7 @@
           v-if="!isMobile"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 595.48 235.64"
+          data-aos="fade"
         >
           <g id="圖層_2" data-name="圖層 2">
             <g id="design">
@@ -544,6 +545,7 @@
           v-else
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 285.2 161.35"
+          data-aos="fade"
         >
           <g id="圖層_2" data-name="圖層 2">
             <g id="design">
@@ -791,15 +793,24 @@
         </svg>
       </div>
       <div v-if="!isMobile" class="title3">
-        <p  data-aos="fade-right" data-aos-delay="100">43坪3房 · 單純雙併 · 捷運大安站200米</p>
-        <div class="order-num"  data-aos="fade-right" data-aos-delay="200">
+        <p data-aos="fade-right" data-aos-delay="100">
+          雙併43坪 ·和安公園旁 · 捷運大安站200米
+        </p>
+        <div class="order-num" data-aos="fade-right" data-aos-delay="200">
           <div>預約<br />專線</div>
           <div>2325-6688</div>
         </div>
       </div>
-      <div class="order-btn" v-scroll-to="{ element: `#order-top` }" data-aos="fade-right" data-aos-delay="300">立即預約</div>
+      <div
+        class="order-btn"
+        v-scroll-to="{ element: `#order-top` }"
+        data-aos="fade-right"
+        data-aos-delay="300"
+      >
+        立即預約
+      </div>
     </div>
-    <div class="sub-intro" >
+    <div class="sub-intro">
       <p data-aos="fade-down" data-aos-delay="200">大安人文富域，</p>
       <p data-aos="fade-down" data-aos-delay="300">將門貴冑境地。</p>
     </div>
@@ -816,18 +827,13 @@
         <img class="an" src="~@/projects/dm-h35/s1/draw33.png" alt="" />
         <img class="an" src="~@/projects/dm-h35/s1/draw34.png" alt="" />
       </div>
-      <div class="draw5"
-        v-if="isMobile" data-aos="fade">
+      <div class="draw5" v-if="isMobile" data-aos="fade">
         <img src="~@/projects/dm-h35/s1/draw51.png" alt="" />
         <img class="an2" src="~@/projects/dm-h35/s1/draw52.png" alt="" />
         <img class="an2" src="~@/projects/dm-h35/s1/draw53.png" alt="" />
         <img class="an2" src="~@/projects/dm-h35/s1/draw54.png" alt="" />
       </div>
-      <img
-        class="draw4"
-        src="~@/projects/dm-h35/s1/draw4.gif"
-        alt=""
-      />
+      <img class="draw4" src="~@/projects/dm-h35/s1/draw4.gif" alt="" />
     </div>
     <img
       v-if="!isMobile"
@@ -844,17 +850,17 @@
   height: 100vh;
   min-height: calc(100vw * 900 / 1920);
   max-height: calc(100vw * 1080 / 1920);
-position: relative;
-margin: 0 0 calc(100vw * 80 / 1920) 0;
+  position: relative;
+  //margin: 0 0 calc(100vw * 80 / 1920) 0;
   .intro {
     position: absolute;
-    top:calc(50% - 10vw);
+    top: calc(50% - 10vw);
     left: 10vw;
     width: 30vw;
     text-align: left;
 
     .title1 {
-    //  height: calc(100vw * 143 / 1920);
+      //  height: calc(100vw * 143 / 1920);
       svg {
         width: 100%;
         .cls-1,
@@ -893,16 +899,16 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
         }
         .cls-5 {
           fill: #356292;
-         // stroke: #356292;
+          // stroke: #356292;
           //stroke-miterlimit: 10;
-         // stroke-width: 1.64px;
+          // stroke-width: 1.64px;
         }
       }
     }
 
     .title3 {
       position: absolute;
-      top:10vw;
+      top: 10vw;
       font-size: 1.6vw;
       p {
         font-weight: bold;
@@ -916,20 +922,20 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
           &:nth-child(1) {
             color: #356292;
             padding: 0;
-    border: 0.09em solid;
+            border: 0.09em solid;
             border-radius: 1.3em;
             font-weight: bold;
             line-height: 1.2;
             letter-spacing: 0.07em;
             display: flex;
-            justify-content:center;
-            align-items:center;
-    width: 3.8em;
-    height: 3.8em;
-    font-size: 0.75em;
+            justify-content: center;
+            align-items: center;
+            width: 3.8em;
+            height: 3.8em;
+            font-size: 0.75em;
           }
           &:nth-child(2) {
-            font-size:2.8em;
+            font-size: 2.8em;
             font-weight: bold;
             position: relative;
             top: -0.05em;
@@ -947,7 +953,7 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
       padding: 0.7vw 1.5vw;
       border-radius: 100px;
       font-size: 1.3vw;
-      letter-spacing:0.1em;
+      letter-spacing: 0.1em;
       cursor: pointer;
       transition: all 0.3s;
       border: 1px solid transparent;
@@ -984,78 +990,107 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
       &.draw1 {
         width: 20vw;
         right: -3vw;
-        top:  calc(50% - 8vw);
+        top: calc(50% - 8vw);
       }
       &.draw4 {
         width: 8vw;
         right: 54vw;
-        top:  calc(50% - 18vw);
-        animation:draw4 4.6s linear infinite ;
+        top: calc(50% - 18vw);
+        animation: draw4 4.6s linear infinite;
       }
     }
     .draw2 {
       position: absolute;
-        width: 24vw;
-        right: 32vw;
-        top: calc(50% - 8vw);
-        mix-blend-mode: multiply;
-        img{width: 100%;position: absolute;left: 0;
-        &:nth-child(1){position: relative;top: 0;transform-origin: 50% 60%;}
-        &:nth-child(2){top: 0;transform-origin: 50% 100%;}
-        &:nth-child(3){bottom: 0;transform-origin: 50% 100%;}
+      width: 24vw;
+      right: 32vw;
+      top: calc(50% - 8vw);
+      mix-blend-mode: multiply;
+      img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        &:nth-child(1) {
+          position: relative;
+          top: 0;
+          transform-origin: 50% 60%;
         }
+        &:nth-child(2) {
+          top: 0;
+          transform-origin: 50% 100%;
+        }
+        &:nth-child(3) {
+          bottom: 0;
+          transform-origin: 50% 100%;
+        }
+      }
     }
     .draw3 {
       position: absolute;
-        width: 15vw;
-    right: 27vw;
-    top: calc(50% - 9vw);
-        img{width: 100%;position: absolute;left: 0;bottom: 0;
-        &:nth-child(1){position: relative;}
+      width: 15vw;
+      right: 27vw;
+      top: calc(50% - 9vw);
+      img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        &:nth-child(1) {
+          position: relative;
         }
+      }
     }
-    .an{
-    transform:skewX(10deg);transform-origin: 50% 0;
-    animation:an 4.6s linear infinite alternate;}
+    .an {
+      transform: skewX(10deg);
+      transform-origin: 50% 0;
+      animation: an 4.6s linear infinite alternate;
+    }
   }
-    .an2{
-    transform:skewX(10deg);
-    animation:an2 4.6s linear infinite alternate;}
+  .an2 {
+    transform: skewX(10deg);
+    animation: an2 4.6s linear infinite alternate;
   }
+}
 @keyframes an {
   0% {
-    transform:skewX(5deg);filter: blur(0px);
+    transform: skewX(5deg);
+    filter: blur(0px);
   }
   20% {
-    transform:skewX(2deg)scaleX(1.03);filter: blur(0px);
+    transform: skewX(2deg) scaleX(1.03);
+    filter: blur(0px);
   }
   25% {
-    transform:skewX(2.5deg)scaleX(1.05);filter: blur(2px);
+    transform: skewX(2.5deg) scaleX(1.05);
+    filter: blur(2px);
   }
   30% {
-    transform:skewX(3deg)scaleX(1.03);filter: blur(0px);
+    transform: skewX(3deg) scaleX(1.03);
+    filter: blur(0px);
   }
   50% {
-    transform:skewX(5deg)scaleX(1.03);filter: blur(0px);
+    transform: skewX(5deg) scaleX(1.03);
+    filter: blur(0px);
   }
   55% {
-    transform:skewX(5.5deg)scaleX(1.05);filter: blur(2px);
+    transform: skewX(5.5deg) scaleX(1.05);
+    filter: blur(2px);
   }
   60% {
-    transform:skewX(6deg)scaleX(1.03);filter: blur(0px);
+    transform: skewX(6deg) scaleX(1.03);
+    filter: blur(0px);
   }
   100% {
-    transform:skewX(0deg);
+    transform: skewX(0deg);
   }
 }
 @keyframes an2 {
   to {
-    transform:skewX(-10deg);
+    transform: skewX(-10deg);
   }
 }
 @keyframes draw4 {
-  0% { 
-    transform:translate(270%, -235%) rotate(-14deg);
+  0% {
+    transform: translate(270%, -235%) rotate(-14deg);
   }
   30% {
     transform: translate(0, 0) rotate(-14deg);
@@ -1064,40 +1099,34 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
     transform: translate(-50%, 30%) rotate(21deg);
   }
   80% {
-    transform:translate(-100%, -10%) rotate(41deg)
+    transform: translate(-100%, -10%) rotate(41deg);
   }
   100% {
     transform: translate(-280%, -230%) rotate(41deg);
   }
 }
-  .scroll {
-    position: absolute;
-    width: 1vw;
-    right: 10vw;
-    bottom:0;
-    animation:scroll 2s linear infinite alternate;
-  }
+.scroll {
+  position: absolute;
+  width: 1vw;
+  right: 10vw;
+  bottom: 0;
+  animation: scroll 2s linear infinite alternate;
+}
 
 @keyframes scroll {
   to {
-    transform:translateY(-10%);
+    transform: translateY(-10%);
   }
 }
-  .bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      0deg,
-      rgba(186, 211, 234, 0) 0%,
-      rgba(186, 211, 234, 0.4) 30%,
-      rgba(186, 211, 234, 1) 100%
-    );
-    z-index: -1;
-  }
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(186, 211, 234, 1) 100%;
+  z-index: -1;
+}
 
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -1106,14 +1135,14 @@ margin: 0 0 calc(100vw * 80 / 1920) 0;
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
-    height:100vh;
-  min-height: calc(100vw * 667 / 375);
-  max-height: calc(100vw * 812 / 375);
-margin: 0;
+    height: 100vh;
+    min-height: calc(100vw * 667 / 375);
+    max-height: calc(100vw * 812 / 375);
+    margin: 0;
 
     .intro {
       position: absolute;
-    top: calc(50% - 72vw);
+      top: calc(50% - 72vw);
       left: 15vw;
       width: 25vw;
       text-align: left;
@@ -1192,7 +1221,7 @@ margin: 0;
       z-index: 1;
       position: absolute;
       right: 12vw;
-    top: calc(50% - 72vw);
+      top: calc(50% - 72vw);
       writing-mode: horizontal-tb;
       letter-spacing: 0.2vw;
       line-height: 4vw;
@@ -1215,7 +1244,7 @@ margin: 0;
       img {
         position: absolute;
         &.draw1 {
-          top:calc(50% + 45vw);
+          top: calc(50% + 45vw);
           width: 50vw;
           right: unset;
           left: -10vw;
@@ -1224,34 +1253,47 @@ margin: 0;
         &.draw2 {
           width: 80vw;
           right: -30vw;
-    top: calc(50% - 10vw);
+          top: calc(50% - 10vw);
           z-index: 1;
         }
-      &.draw4 {
-    width: 18vw;
-    right: 35vw;
-    top: 5vw;
-        animation:draw4 4.6s linear infinite ;
-      }
+        &.draw4 {
+          width: 18vw;
+          right: 35vw;
+          top: 5vw;
+          animation: draw4 4.6s linear infinite;
+        }
       }
       .draw3 {
-    width: 30vw;
-    right: 19vw;
-    top: calc(50% - 46vw);
-          z-index: 1;
-        }
-    .draw5 {
-      position: absolute;
-    width: 49vw;
-    right: -12vw;
-    top: calc(50% - 66vw);
+        width: 30vw;
+        right: 19vw;
+        top: calc(50% - 46vw);
+        z-index: 1;
+      }
+      .draw5 {
+        position: absolute;
+        width: 49vw;
+        right: -12vw;
+        top: calc(50% - 66vw);
         mix-blend-mode: multiply;
-        img{width: 100%;position: absolute;left: 0;
-        &:nth-child(1){position: relative;top: 0;transform-origin: 50% 60%;}
-        &:nth-child(2){top: 0;transform-origin: 50% 100%;}
-        &:nth-child(4){bottom: 0;transform-origin: 50% 100%;}
+        img {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          &:nth-child(1) {
+            position: relative;
+            top: 0;
+            transform-origin: 50% 60%;
+          }
+          &:nth-child(2) {
+            top: 0;
+            transform-origin: 50% 100%;
+          }
+          &:nth-child(4) {
+            bottom: 0;
+            transform-origin: 50% 100%;
+          }
         }
-    }
+      }
     }
 
     .bg {
