@@ -115,7 +115,7 @@ export default {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 17vw;
+        width: 100%;
       }
 
       .item {
@@ -140,7 +140,7 @@ export default {
         }
 
         .label {
-          font-size: 20px;
+          font-size: 16px;
           color: $house_label_color;
           margin-bottom: 0;
           margin-right: 20px;
@@ -155,6 +155,7 @@ export default {
           line-height: 1.4;
           color: $house_desc_color;
           font-family: "Noto Sans TC";
+          font-weight: 300;
           a {
             color: #000;
           }

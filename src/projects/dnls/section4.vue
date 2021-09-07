@@ -325,37 +325,37 @@
 
           .cover {
             position: absolute;
-            width: 60vw;
+            width: 50vw;
             height: auto;
             transition: all 1s;
           }
 
           &.upside {
             .line {
-              transform: translateY(-100%);
+              transform: translateY(-80%);
             }
             .info {
-              transform: translate(20px, -90px);
+              transform: translate(20px, -70px);
             }
             .cover {
               transform: translate(10px, -350px);
               &.show {
-                transform: translate(10px, -285px);
+                transform: translate(10px, -235px);
               }
             }
           }
 
           &.downside {
             .line {
-              transform: translateY(20px);
+              transform: translateY(0px);
             }
             .info {
-              transform: translate(20px, 40px);
+              transform: translate(20px, 20px);
             }
             .cover {
               transform: translate(10px, 170px);
               &.show {
-                transform: translate(10px, 115px);
+                transform: translate(10px, 95px);
               }
             }
           }

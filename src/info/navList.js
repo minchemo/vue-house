@@ -6,7 +6,7 @@ export default [
     subTitle: "",
     section: "contact-info",
     svgSrc: "",
-    offset: -900,
+    offset: -600,
     mobileOffset: 0
   },
   {

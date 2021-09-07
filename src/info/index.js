@@ -5,8 +5,8 @@ export default {
   googleLink: "https://goo.gl/maps/qH29xmo6rF7e9HMC9",
   phone: "02-2772-6688",
   fbLink:
-    "",
-  fbMessage: "",
+    "https://www.facebook.com/%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%95%A6%E5%8D%97%E9%BA%97%E8%88%8D-105748701844313",
+  fbMessage: "https://m.me/105748701844313/",
   caseName: "敦南麗舍",
   indigatorLength: 10,
   houseInfos: [
