@@ -1,4 +1,6 @@
 <template>
+<div>
+
   <div id="contact-info">
     <div class="contact-info contact-sec">
       <img
@@ -44,6 +46,7 @@
         </div>
       </div>
     </div>
+  </div>
     <el-dialog
       title
       :visible.sync="isShowCallDialog"
@@ -68,7 +71,7 @@
     >
       <MapDialog :link="info.googleLink" :address="info.address" />
     </el-dialog>
-  </div>
+</div>
 </template>
 
 <script>
