@@ -1,11 +1,26 @@
 <template>
   <div class="house-info" id="house-info">
-    <div class="content">
-      <h3 class="title">建案資訊</h3>
-      <div class="info">
-        <div class="item" :key="infos[0]" v-for="infos in houseInfos">
-          <h3 class="label">{{ infos[0] }}</h3>
-          <p class="desc" v-html="infos[1]"></p>
+    <div class="main">
+      <div class="content-left">
+        <div class="title">聯碩地產行銷團隊</div>
+        <a class="link" href="https://unigiants.com.tw/" target="_blank">
+          <img src="~@/assets/img/house-logo.png" alt="" srcset="" />
+        </a>
+        <a
+          class="link"
+          href="https://www.facebook.com/unigiant/"
+          target="_blank"
+        >
+          <img src="~@/assets/img/house-logo2.png" alt="" srcset="" />
+        </a>
+      </div>
+      <div class="content">
+        <h3 class="title">建案資訊</h3>
+        <div class="info">
+          <div class="item" :key="infos[0]" v-for="infos in houseInfos">
+            <h3 class="label">{{ infos[0] }}</h3>
+            <p class="desc" v-html="infos[1]"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -53,66 +68,98 @@ export default {
   background-color: #000;
   position: relative;
   z-index: 1;
-}
-.content {
-  width: 686px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-bottom: 8vh;
-}
 
-.title {
-  font-size: 32px;
-  line-height: 36px;
-  margin: 60px 0;
-  font-weight: bold;
-  color: $house_title_color;
-  font-family: $family3;
-  width: 80vw;
-  padding: 10px 20px;
-}
+  .main {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px;
 
-.info {
-  display: flex;
-  flex-wrap: wrap;
-}
+    .content-left {
+      .title {
+        font-size: 30px;
+        color: #fff;
+        font-family: "Noto Sans TC";
+      }
+      .link {
+        display: block;
+        text-align: left;
+        margin: 30px 0;
+        img {
+          width: 200px;
+        }
+        &:hover {
+          opacity: 0.7;
+          cursor: pointer;
+        }
+      }
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
 
-.item {
-  font-size: 16px;
-  margin-bottom: 30px;
-  margin-right: 160px;
-  width: 260px;
-  height: 30px;
-  border-left: 4px solid $house_border_color;
-  padding-left: 12px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
+      .title {
+        font-size: 32px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: $house_title_color;
+        font-family: $family3;
+        text-align: left;
+        width: 100%;
+      }
 
-  &:nth-of-type(even) {
-    margin-right: 0;
-  }
+      .info {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 17vw;
+      }
 
-  .label {
-    font-size: 16px;
-    color: $house_label_color;
-    margin-bottom: 0;
-    margin-right: 20px;
-    white-space: nowrap;
-    font-family: $family3;
-  }
+      .item {
+        width: 100%;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid $house_border_color;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        justify-content: space-between;
 
-  .desc {
-    font-size: 15px;
-    text-align: left;
-    line-height: 1.4;
-    color: $house_desc_color;
-    font-family: $family3;
-    a {
-      color: #000;
+        &:nth-of-type(even) {
+          margin-right: 0;
+        }
+        &:nth-child(1) {
+          border-top: 1px solid $house_border_color;
+          padding-top: 16px;
+        }
+        &:nth-last-child(1) {
+          border-bottom: 1px solid $house_border_color;
+        }
+
+        .label {
+          font-size: 20px;
+          color: $house_label_color;
+          margin-bottom: 0;
+          margin-right: 20px;
+          white-space: nowrap;
+          font-family: "Noto Sans TC";
+          font-weight: 300;
+        }
+
+        .desc {
+          font-size: 16px;
+          text-align: left;
+          line-height: 1.4;
+          color: $house_desc_color;
+          font-family: "Noto Sans TC";
+          a {
+            color: #000;
+          }
+        }
+      }
     }
   }
 }
@@ -120,33 +167,84 @@ export default {
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .content {
-    width: 100%;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-  }
-
-  .title {
-    font-size: 24px;
-    margin: 40px 0 24px;
+  .house-info {
     width: 100vw;
-  }
+    //background: $house_bg;
+    background-color: #000;
+    position: relative;
+    z-index: 1;
 
-  .item {
-    margin-bottom: 20px;
-    margin-right: 0;
-    width: 100%;
-    height: auto;
-    margin-left: 20px;
-    white-space: normal;
-  }
+    .main {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+      padding: 10px;
+      padding: 30px 0;
+      flex-direction: column;
 
-  .info {
-    width: 100%;
-  }
+      .content-left {
+        .title {
+          font-size: 24px;
+          color: #fff;
+          font-family: "Noto Sans TC";
+          text-align: left;
+        }
+        .link {
+          display: block;
+          text-align: left;
+          margin: 20px 0;
+          img {
+            width: 50%;
+          }
+          &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+          }
+        }
+      }
+      .content {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
-  .house-info-draw {
-    width: 200% !important;
+        .title {
+          font-size: 32px;
+          margin-bottom: 20px;
+          font-weight: bold;
+          color: $house_title_color;
+          font-family: $family3;
+          text-align: left;
+          width: 100%;
+        }
+
+        .info {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .item {
+          padding-bottom: 8px;
+          margin-bottom: 8px;
+
+          &:nth-child(1) {
+            padding-top: 8px;
+          }
+
+          .label {
+            font-size: 16px;
+          }
+
+          .desc {
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 }
 

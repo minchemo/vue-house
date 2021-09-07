@@ -133,6 +133,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -100%);
   z-index: 15;
+    border-top: 1px solid #000 ;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);

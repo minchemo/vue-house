@@ -160,7 +160,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transform: translateY(-15%);
+        transform: translateY(-20%) scale(0.9);
 
         .logo {
           width: 50vw;

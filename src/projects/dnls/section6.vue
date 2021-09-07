@@ -94,6 +94,7 @@
     padding: 0 5vw;
     font-size: 1.8vw;
     font-weight: bold;
+    color:#000;
   }
   .slides-subtitle {
     text-align: left;
@@ -102,6 +103,7 @@
     margin-bottom: 2.5vw;
     font-size: 1vw;
     line-height: 1.5;
+    color:#000;
   }
 
   .slides {

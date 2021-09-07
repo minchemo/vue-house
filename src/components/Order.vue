@@ -25,10 +25,10 @@
               <label>手機</label>
               <el-input v-model="form.phone" placeholder></el-input>
             </div>
-            <div class="row">
+            <!-- <div class="row">
               <label>電子郵件</label>
               <el-input v-model="form.email" placeholder></el-input>
-            </div>
+            </div> -->
             <!-- <div class="row">
               <label>喜好房型</label>
               <el-select v-model="form.room" placeholder>
@@ -40,7 +40,7 @@
                 ></el-option>
               </el-select>
             </div> -->
-            <div class="row">
+            <!-- <div class="row">
               <label>方便接聽<br />電話時間</label>
               <el-select v-model="form.contacttime" placeholder>
                 <el-option
@@ -50,8 +50,8 @@
                   :value="contacttime"
                 ></el-option>
               </el-select>
-            </div>
-            <!-- <div class="row">
+            </div> -->
+            <div class="row">
               <label>居住城市</label>
               <el-select v-model="form.city" placeholder>
                 <el-option
@@ -75,7 +75,7 @@
                 ></el-option>
               </el-select>
             </div>
-            <div class="row">
+            <!-- <div class="row">
               <label>性別</label>
               <el-select v-model="form.gender" placeholder>
                 <el-option
@@ -389,7 +389,7 @@ export default {
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 25vw;
+    padding-bottom: 600px;
     &::before {
       content: "";
       position: absolute;
@@ -397,16 +397,6 @@ export default {
       height: 1px;
       background-color: #000;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      width: 60%;
-      height: 1px;
-      background-color: #000;
-      bottom: 20vw;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -602,6 +592,7 @@ export default {
       background-size: contain;
       background-repeat: repeat;
       // top: 10vw;
+      padding-bottom: 50px;
     }
     .order {
       width: 85% !important;

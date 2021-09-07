@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="bg"></div>
+    <div v-if="isMobile" class="bg"></div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -72,8 +72,8 @@
     width: 100%;
     height: 130vh;
     position: relative;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
     padding-left: 10vw;
     &::-webkit-scrollbar {
       display: none;
@@ -196,6 +196,15 @@
         }
       }
     }
+    &:after {
+      content: "";
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      left: 0;
+      top: 25%;
+      background-color: rgba(0, 0, 0, 0.15);
+    }
   }
   .bg {
     z-index: 0;
@@ -294,7 +303,7 @@
           .line {
             position: relative;
             width: 1px;
-            height: 100px;
+            height: 80px;
             background: #000;
             left: -10px;
           }
@@ -304,13 +313,13 @@
             text-align: left;
             line-height: 1.5;
             .year {
-              font-size: 20px;
+              font-size: 17px;
             }
             .title {
-              font-size: 18px;
+              font-size: 15px;
             }
             .subtitle {
-              font-size: 16px;
+              font-size: 13px;
             }
           }
 
@@ -326,12 +335,12 @@
               transform: translateY(-100%);
             }
             .info {
-              transform: translate(20px, -110px);
+              transform: translate(20px, -90px);
             }
             .cover {
               transform: translate(10px, -350px);
               &.show {
-                transform: translate(10px, -330px);
+                transform: translate(10px, -285px);
               }
             }
           }
@@ -346,11 +355,16 @@
             .cover {
               transform: translate(10px, 170px);
               &.show {
-                transform: translate(10px, 140px);
+                transform: translate(10px, 115px);
               }
             }
           }
         }
+      }
+
+      &:after {
+        content: "";
+        display: none;
       }
     }
     .bg {
@@ -380,7 +394,7 @@
 // @ is an alias to /src
 import info from "@/info";
 import { isMobile } from "@/utils";
-import "jquery-ui-dist/jquery-ui";
+import ScrollBooster from "scrollbooster";
 import "is-in-viewport";
 
 export default {
@@ -572,15 +586,6 @@ export default {
   methods: {},
 
   mounted() {
-    $(".timelines").draggable({
-      cursor: "move",
-      axis: "x",
-      scroll: true,
-      containment: "timelines-box",
-      drag: function (event, ui) {
-        showItem();
-      },
-    });
     const showItem = () => {
       const year = $(".timeline-item .info .year:in-viewport");
       const title = $(".timeline-item .info .title:in-viewport");
@@ -592,6 +597,24 @@ export default {
       subtitle.addClass("show");
       cover.addClass("show");
     };
+
+    if (!isMobile) {
+      const viewport = document.querySelector(".timelines-box");
+      const content = document.querySelector(".timelines");
+      //const image = document.querySelector(".example3-image");
+
+      const sb = new ScrollBooster({
+        viewport,
+        content,
+        scrollMode: "transform",
+        emulateScroll: true,
+        direction: "horizontal",
+        bounce: false,
+        onUpdate: (state) => {
+          showItem();
+        },
+      });
+    }
 
     document.addEventListener(
       "scroll",
