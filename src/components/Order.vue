@@ -249,14 +249,13 @@ export default {
       if (
         !this.form.name ||
         !this.form.phone ||
-        !this.form.email
         // ||
         // !this.form.time_start ||
         // !this.form.time_end
         // ||
         // !this.form.email ||
-        // !this.form.city ||
-        // !this.form.area
+        !this.form.city ||
+        !this.form.area
       ) {
         this.alertValidate();
         this.isSubmit = false;
