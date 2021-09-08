@@ -483,8 +483,8 @@ export default {
         },
         {
           year: 1994,
-          title: "太平洋翡翠灣溫泉渡假飯店",
-          subtitle: "創新台灣休閒型態",
+          title: "太平洋翡翠灣摘星樓",
+          subtitle: "創新台灣休閒不動產型態",
           img: require("@/projects/dnls/s4/1994.jpg"),
           below: true,
         },

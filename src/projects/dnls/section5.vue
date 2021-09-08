@@ -5,7 +5,7 @@
         URBAN LIFE <br v-if="isMobile" />精彩核心
       </div>
       <div class="view-divider"></div>
-      <GodModView />
+      <!--<GodModView />-->
     </div>
   </div>
 </template>
@@ -21,18 +21,19 @@
   .view {
     padding-left: 5vw;
     .view-divider {
-      width: 100%;
-      position: relative;
-      height: 2px;
-      background: #000;
-      opacity: 0.5;
-      margin-bottom: 4vw;
+    width: 100%;
+    position: relative;
+    height: 2px;
+    background: transparent;
+    opacity: 0.5;
+    padding-bottom: 4vw;
+    border-top: 2px solid;
     }
     .view-title {
       font-size: 2vw;
       font-weight: bold;
       text-align: left;
-      padding: 5vw 5vw 5vw 0;
+      padding: 5vw 5vw 3vw 0;
       position: relative;
     }
   }
@@ -56,9 +57,9 @@
         width: 100%;
         position: relative;
         height: 1px;
-        background: #000;
+        background: transparent;
         opacity: 0.5;
-        margin-bottom: 10vw;
+        padding-bottom: 0vw;
         margin-left: 10vw;
       }
       .view-title {

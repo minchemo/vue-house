@@ -213,7 +213,7 @@ export default {
         {
           title: "生活創新",
           img: require("@/projects/dnls/s3/3.jpg"),
-          caption: "1994 太平洋翡翠灣",
+          caption: "1994 太平洋翡翠灣摘星樓",
         },
         {
           title: "綠色創新",

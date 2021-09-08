@@ -2,6 +2,12 @@
   <div class="house-info" id="house-info">
     <div class="main">
       <div class="content-left">
+
+        <div class="title">太平洋建設</div>
+        <a class="link" href="https://www.pacific-group.com.tw/" target="_blank">
+          <img src="~@/assets/img/pacific-logo.png" alt="" class="pacific" srcset="" />
+        </a>
+        <br><br>
         <div class="title">聯碩地產行銷團隊</div>
         <a class="link" href="https://unigiants.com.tw/" target="_blank">
           <img src="~@/assets/img/house-logo.png" alt="" srcset="" />
@@ -77,15 +83,20 @@ export default {
     padding: 50px;
 
     .content-left {
+      .pacific{
+          width: 260px !important;
+        }
       .title {
         font-size: 30px;
         color: #fff;
         font-family: "Noto Sans TC";
+        text-align: left;
       }
       .link {
         display: block;
         text-align: left;
         margin: 30px 0;
+        
         img {
           width: 200px;
         }
@@ -185,6 +196,9 @@ export default {
       flex-direction: column;
 
       .content-left {
+        .pacific{
+          width: 220px !important;
+        }
         .title {
           font-size: 24px;
           color: #fff;
