@@ -333,13 +333,14 @@ export default {
         },
       ],
       swiperOptions: {
-        spaceBetween: 0,
+        spaceBetween:10,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        speed:1000,
         autoplay: {
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         },
         breakpoints: {
