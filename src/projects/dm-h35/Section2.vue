@@ -104,7 +104,7 @@
     //max-height: 650px;
 
     img {
-      width: 100%;
+      width: 100%;    vertical-align: bottom;
     }
   }
   .draw {
@@ -138,17 +138,19 @@
     // height: calc(100vw * 667 / 375);
     .intro {
       //margin: 1em 0 0 0;
-      left: 0;
-      width: 100%;
+      left: -25%;
+      width: 150%;
       padding-left: 0;
       font-size: calc(12px + 100vw / 375);
+      background: #FFF;
+      box-shadow: 0 4em 8em 2em #FFF, 0 0.7em 1.5em 1em #FFF;
       .title {
         font-size: 1.3em;
         text-align: center;
         line-height: 1.4;
       }
       .des {
-        width: 75%;
+        width:75vw;
         margin: 1.5em auto 2em auto;
       }
     }
@@ -157,18 +159,17 @@
       margin: 1em 0 0 0;
     }
     .view {
-      height: 100vh;
+      height: 190vw;
       overflow-x: scroll;
       overflow-y: hidden;
-      margin-top: -40vw;
-
-      mask-image: -webkit-gradient(
+      margin-top: -55vw;
+   /*   mask-image: -webkit-gradient(
         linear,
         left 40%,
         left 20%,
         from(rgba(0, 0, 0, 1)),
         to(rgba(0, 0, 0, 0))
-      );
+      );*/
 
       img {
         height: 100%;
@@ -213,7 +214,7 @@ export default {
       const imgEl = this.$refs.viewImg;
 
       $(imgEl).one("load", () => {
-        const scrollTarget = (el.scrollWidth - $(window).width()) / 2;
+        const scrollTarget = (el.scrollWidth - $(window).width()) * .583;
         el.scrollLeft = scrollTarget;
 
         setTimeout(() => {
