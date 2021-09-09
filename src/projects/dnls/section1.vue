@@ -113,7 +113,7 @@
           align-items: center;
           justify-content: center;
           font-size: 1.5vw;
-          font-weight: 100;
+          font-weight: 600;
           letter-spacing: 0.2vw;
           &:hover {
             transition: all 0.3s;

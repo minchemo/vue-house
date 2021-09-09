@@ -81,6 +81,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
+
 /* 螢幕尺寸標準 */
 .section6 {
   height: auto;
@@ -122,7 +123,7 @@
       box-sizing: border-box;
       position: relative;
       overflow: visible;
-      margin-top: 7vw;
+      margin-top: 3vw;
 
       .serial {
         position: absolute;
@@ -134,6 +135,7 @@
         top: -5.5vw;
         text-align: left;
         font-weight: bold;
+        display: none;
       }
       .title {
         position: absolute;
@@ -172,6 +174,7 @@
     width: 100vw;
     background-size: contain;
     background-image: url("~@/assets/img/bg.jpg");
+    padding-bottom: 90px;
 
     .slides-title {
       text-align: left;
@@ -203,13 +206,13 @@
           overflow-x: visible;
           .swiper-slide {
             height: 0;
-            padding-bottom: 90vw;
+            padding-bottom: 60vw;
             width: 90vw !important;
             overflow: visible;
             background-size: cover;
             background-position: center;
             margin-left: 20px;
-            margin-top: 100px;
+            margin-top: 70px;
             margin-bottom: 50px;
 
             .serial {
@@ -219,9 +222,11 @@
               padding: 0.6vw 0;
               color: #000;
               left: 0;
-              top: -12vw;
+              top: -4vw;
               text-align: left;
               font-weight: bold;
+              font-family: "Noto Serif TC", sans-serif;
+              display: none;
             }
             .title {
               position: absolute;
@@ -284,33 +289,27 @@ export default {
       isMobile,
       slides: [
         {
-          title: "核心精彩",
-          img: require("@/projects/dnls/s6/1.jpg"),
+          img: require("@/projects/dnls/s6/font_1.png"),
           caption: "敦化忠孝十字交會 北市腹地正中央",
         },
         {
-          title: "大道精彩",
-          img: require("@/projects/dnls/s6/2.jpg"),
+          img: require("@/projects/dnls/s6/font_2.png"),
           caption: "敦南國際林蔭 首都經貿中軸",
         },
         {
-          title: "時尚精彩",
-          img: require("@/projects/dnls/s6/3.jpg"),
+          img: require("@/projects/dnls/s6/font_3.png"),
           caption: "忠孝東路四段 百貨精品匯集",
         },
         {
-          title: "捷運精彩",
-          img: require("@/projects/dnls/s6/4.jpg"),
+          img: require("@/projects/dnls/s6/font_4.png"),
           caption: "忠孝敦化站 走路2分鐘",
         },
         {
-          title: "休閒精彩",
-          img: require("@/projects/dnls/s6/5.jpg"),
+          img: require("@/projects/dnls/s6/font_5.png"),
           caption: "松山文創園區、國父紀念館 萬坪雙綠意",
         },
         {
-          title: "未來精彩",
-          img: require("@/projects/dnls/s6/6.jpg"),
+          img: require("@/projects/dnls/s6/font_6.png"),
           caption: "台北大巨蛋 城市新動能",
         },
       ],

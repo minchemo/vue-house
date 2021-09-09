@@ -250,7 +250,8 @@ export default {
 .btn {
   width: 280px;
   height: 60px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 900;
   margin-bottom: 20px;
   cursor: pointer;
   text-decoration: none;
@@ -306,7 +307,9 @@ export default {
 .address {
   width: 600px;
   height: 60px;
+  font-size: 18px;
   background: #fff;
+  font-weight: 900;
   box-shadow: $contact_btn_border;
   border-radius: $contact_btn_addr_border_radius;
   font-family: $family4;
@@ -432,6 +435,7 @@ export default {
   .btn {
     &.half {
       width: 280px;
+      
     }
     svg {
       position: absolute;
@@ -441,6 +445,7 @@ export default {
       margin-right: 0;
       + span {
         margin-left: 1.5em;
+        font-size: 16px;
       }
     }
   }
@@ -469,6 +474,7 @@ export default {
 
   .address {
     width: 280px;
+    font-size: 16px;
     padding: 0 1em;
     text-align: justify;
     //border-radius: 0 0 30px 30px;

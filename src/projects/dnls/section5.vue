@@ -2,7 +2,7 @@
   <div class="section5">
     <div class="view">
       <div class="view-title" data-aos="flip-up" data-aos-duration="1000">
-        URBAN LIFE <br v-if="isMobile" />精彩核心
+        <span class="en">URBAN LIFE </span>  <br v-if="isMobile" />精彩核心
       </div>
       <div class="view-divider"></div>
       <!--<GodModView />-->
@@ -35,6 +35,10 @@
       text-align: left;
       padding: 5vw 5vw 3vw 0;
       position: relative;
+
+      .en{
+          font-family: "Times New Roman", Times, serif;
+        }
     }
   }
 }
@@ -70,7 +74,9 @@
         position: relative;
         line-height: 1.3;
         margin-left: 10vw;
+        
       }
+      
     }
   }
 }

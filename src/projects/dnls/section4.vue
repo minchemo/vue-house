@@ -1,7 +1,7 @@
 <template>
   <div class="section4">
     <div class="timeline-title" data-aos="flip-up" data-aos-duration="1000">
-      CHRONOLOGY <br v-if="isMobile" />太平洋建設作品年表
+       <span class="en">CHRONOLOGY </span> <br v-if="isMobile" />太平洋建設作品年表
     </div>
     <div class="timelines-box" id="timelines-box">
       <div class="timelines">
@@ -67,6 +67,9 @@
         }
       }
     }
+    .en{
+          font-family: "Times New Roman", Times, serif;
+        }
   }
   .timelines-box {
     width: 100%;

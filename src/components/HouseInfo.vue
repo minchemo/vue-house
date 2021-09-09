@@ -89,7 +89,7 @@ export default {
       .title {
         font-size: 30px;
         color: #fff;
-        font-family: "Noto Sans TC";
+        font-family: "Noto Serif TC", sans-serif;
         text-align: left;
       }
       .link {
@@ -156,7 +156,7 @@ export default {
           margin-bottom: 0;
           margin-right: 20px;
           white-space: nowrap;
-          font-family: "Noto Sans TC";
+          font-family: "Noto Serif TC", sans-serif;
           font-weight: 300;
         }
 
@@ -165,7 +165,7 @@ export default {
           text-align: left;
           line-height: 1.4;
           color: $house_desc_color;
-          font-family: "Noto Sans TC";
+          font-family: "Noto Serif TC", sans-serif;
           font-weight: 300;
           a {
             color: #000;
@@ -202,7 +202,8 @@ export default {
         .title {
           font-size: 24px;
           color: #fff;
-          font-family: "Noto Sans TC";
+          font-family: "Noto Serif TC", sans-serif;
+          font-weight: 600;
           text-align: left;
         }
         .link {
@@ -233,6 +234,7 @@ export default {
           font-family: $family3;
           text-align: left;
           width: 100%;
+          font-family: "Noto Serif TC", sans-serif;
         }
 
         .info {
@@ -252,10 +254,14 @@ export default {
 
           .label {
             font-size: 16px;
+            font-weight: 600;
+            font-family: "Noto Serif TC", sans-serif;
           }
 
           .desc {
             font-size: 12px;
+            font-weight: 600;
+            font-family: "Noto Serif TC", sans-serif;
           }
         }
       }
