@@ -1,9 +1,38 @@
 <template>
-<div>
-
-  <div id="contact-info">
-    <div class="contact-info contact-sec">
+  <div>
+    <div id="contact-info">
       <img
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        v-if="!isMobile"
+        class="contact-img-logo"
+        src="@/assets/img/contact-img-logo.png"
+        :alt="info.caseName"
+      />
+      <img
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        v-else
+        class="contact-img-logo"
+        src="@/assets/img/contact-img-logo-m.png"
+        :alt="info.caseName"
+      />
+      <img
+        v-if="!isMobile"
+        class="contact-img"
+        src="@/assets/img/contact-img.png"
+        :alt="info.caseName"
+      />
+      <img
+        v-else
+        class="contact-img"
+        src="@/assets/img/contact-img-m.png"
+        :alt="info.caseName"
+      />
+      <div class="contact-info contact-sec">
+        <!-- <img
         v-if="!isMobile"
         class="logo"
         src="@/assets/img/contact-logo.png"
@@ -14,39 +43,39 @@
         class="logo"
         src="@/assets/img/contact-logo.png"
         :alt="info.caseName"
-      />
-      <div class="info">
-        <div class="btn flex-c" @click="showCallDialog">
-          <span class="flex-c">
-            <font-awesome-icon icon="phone" />
-            <span>{{ info.phone }}</span>
-          </span>
-        </div>
-        <div class="btn flex-c" @click="showMessengerDialog">
-          <span class="flex-c">
-            <font-awesome-icon :icon="['fab', 'facebook-messenger']" /><span
-              >FB 諮詢</span
-            >
-          </span>
-        </div>
-        <a class="btn flex-c bt_fanpage" :href="info.fbLink" target="_blank">
-          <span class="flex-c">
-            <font-awesome-icon :icon="['fab', 'facebook-f']" /><span
-              >前往粉絲專頁</span
-            >
-          </span>
-        </a>
-        <div class="address flex-c">{{ info.address }}</div>
-        <div class="google-btn flex-c btn" @click="showMapDialog">
-          <span class="flex-c">
-            <font-awesome-icon icon="map-marker-alt" /><span
-              >導航 Google 地圖</span
-            >
-          </span>
+      /> -->
+        <div class="info">
+          <div class="btn flex-c" @click="showCallDialog">
+            <span class="flex-c">
+              <font-awesome-icon icon="phone" />
+              <span>{{ info.phone }}</span>
+            </span>
+          </div>
+          <div class="btn flex-c" @click="showMessengerDialog">
+            <span class="flex-c">
+              <font-awesome-icon :icon="['fab', 'facebook-messenger']" /><span
+                >FB 諮詢</span
+              >
+            </span>
+          </div>
+          <a class="btn flex-c bt_fanpage" :href="info.fbLink" target="_blank">
+            <span class="flex-c">
+              <font-awesome-icon :icon="['fab', 'facebook-f']" /><span
+                >前往粉絲專頁</span
+              >
+            </span>
+          </a>
+          <div class="address flex-c">{{ info.address }}</div>
+          <div class="google-btn flex-c btn" @click="showMapDialog">
+            <span class="flex-c">
+              <font-awesome-icon icon="map-marker-alt" /><span
+                >導航 Google 地圖</span
+              >
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <el-dialog
       title
       :visible.sync="isShowCallDialog"
@@ -71,7 +100,7 @@
     >
       <MapDialog :link="info.googleLink" :address="info.address" />
     </el-dialog>
-</div>
+  </div>
 </template>
 
 <script>
@@ -88,7 +117,6 @@ export default {
     CallDialog,
     MessengerDialog,
     MapDialog,
-    //Mosaic,
   },
   data() {
     return {
@@ -131,12 +159,12 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
+
 #contact-info {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -100%);
   z-index: 15;
-    border-top: 1px solid #000 ;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -163,10 +191,10 @@ export default {
 }
 
 .contact-info {
-  //background: $contact_bg;
-  // background-image: url('../assets/img/contact_bg.jpg');/
+  background: $contact_bg;
   background-size: cover;
-  //box-shadow: $contact_shadow;
+  box-shadow: $contact_shadow;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -175,7 +203,7 @@ export default {
   width: 80%;
   min-width: 1000px;
   margin: 0 auto;
-  padding: 30px 0 30px;
+  padding: 45px 0 30px 0;
   margin-bottom: -20px;
   z-index: 50;
 
@@ -237,6 +265,27 @@ export default {
   margin: 0 auto;
   margin-bottom: 50px;
   z-index: 1;
+}
+.contact-img {
+  width: 42vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  animation: skew 3s alternate-reverse infinite;
+  @keyframes skew {
+    to {
+      transform: translate(-50%, -75%) skew(-4deg);
+    }
+  }
+}
+.contact-img-logo {
+  width: 19vw;
+  position: absolute;
+  top: -90%;
+  left: 50%;
+  z-index: 1;
+  margin-left: -9.5vw;
 }
 .info {
   width: 880px;
@@ -366,23 +415,24 @@ export default {
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .forest_mb {
+  .contact-img {
+    width: 90vw;
     position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 90vh;
-    margin-top: -90vh;
-    transform: translateX(0%);
-    animation: forest_mb 15s infinite alternate-reverse linear;
-    pointer-events: none;
-
-    @keyframes forest_mb {
-      100% {
-        transform: translateX(-70%);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    animation: skew 5s alternate-reverse infinite;
+    @keyframes skew {
+      to {
+        transform: translate(-50%, -85%) skew(-4deg);
       }
     }
   }
-
+  .contact-img-logo {
+    width: 50vw;
+    top: -59vw;
+    margin-left: -25vw;
+  }
   .contact-info-img {
     position: absolute;
     width: 270vw;

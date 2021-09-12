@@ -389,30 +389,19 @@ export default {
     position: relative;
     padding: 5vw 0;
     padding-bottom: 600px;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 60%;
-      height: 1px;
-      background-color: #000;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
   .order-title {
     font-family: $family1;
     width: auto;
     padding-top: 20px;
-    padding-bottom: 1vw;
+    padding-bottom: 0vw;
     font-weight: bold;
     line-height: 1.3;
-    font-size: 1.5vw;
+    font-size: 3vw;
     text-align: center;
     color: $order_title_color;
     margin: 0 auto;
-    margin-bottom: 2vw;
-    border-bottom: 1px solid;
+    margin-bottom: 1vw;
     display: inline-block;
   }
   .order-title-img {
@@ -591,7 +580,7 @@ export default {
       background-size: contain;
       background-repeat: repeat;
       // top: 10vw;
-      padding-bottom: 50px;
+      padding-bottom: 70vw;
     }
     .order {
       width: 85% !important;

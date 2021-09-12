@@ -1,30 +1,13 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
-    <Navigation />
+    <!-- <Navigation /> -->
     <!-- <CustomNavigation /> -->
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
       <vue-lazy-component class="section" id="section1" @init="init">
         <Section1 />
       </vue-lazy-component>
-      <vue-lazy-component class="section" id="section2" @init="init">
-        <Section2 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section3" @init="init">
-        <Section3 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section4" @init="init">
-        <Section4 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section5" @init="init">
-        <Section5 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section6" @init="init">
-        <Section6 />
-      </vue-lazy-component>
-
-
 
       <vue-lazy-component class="section" id="contact">
         <ContactSection />
@@ -49,12 +32,7 @@ import AOS from "@/lib/aos/src/js/aos";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/dnls/section1.vue";
-import Section2 from "@/projects/dnls/section2.vue";
-import Section3 from "@/projects/dnls/section3.vue";
-import Section4 from "@/projects/dnls/section4.vue";
-import Section5 from "@/projects/dnls/section5.vue";
-import Section6 from "@/projects/dnls/section6.vue";
+import Section1 from "@/projects/ymv/section1.vue";
 
 export default {
   name: "home",
@@ -67,11 +45,6 @@ export default {
     ContactSection,
     MobileNav,
     Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
   },
 
   data() {
