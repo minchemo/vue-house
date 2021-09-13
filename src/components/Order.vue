@@ -25,32 +25,11 @@
               <label>手機</label>
               <el-input v-model="form.phone" placeholder></el-input>
             </div>
-            <!-- <div class="row">
+          <!--  <div class="row">
               <label>電子郵件</label>
               <el-input v-model="form.email" placeholder></el-input>
-            </div> -->
-            <!-- <div class="row">
-              <label>喜好房型</label>
-              <el-select v-model="form.room" placeholder>
-                <el-option
-                  v-for="room in ['2房', '3房']"
-                  :key="room"
-                  :label="room"
-                  :value="room"
-                ></el-option>
-              </el-select>
-            </div> -->
-            <!-- <div class="row">
-              <label>方便接聽<br />電話時間</label>
-              <el-select v-model="form.contacttime" placeholder>
-                <el-option
-                  v-for="contacttime in ['上午', '中午', '下午', '晚上']"
-                  :key="contacttime"
-                  :label="contacttime"
-                  :value="contacttime"
-                ></el-option>
-              </el-select>
-            </div> -->
+            </div>
+            -->
             <div class="row">
               <label>居住城市</label>
               <el-select v-model="form.city" placeholder>
@@ -75,41 +54,53 @@
                 ></el-option>
               </el-select>
             </div>
-            <!-- <div class="row">
-              <label>性別</label>
-              <el-select v-model="form.gender" placeholder>
+            <div class="row">
+              <label>可聯繫時間</label>
+              <el-select v-model="form.contacttime" placeholder>
                 <el-option
-                  v-for="gender in ['女', '男', '其他']"
-                  :key="gender"
-                  :label="gender"
-                  :value="gender"
-                  no-data-text=""
+                  v-for="contacttime in ['09:00-12:00', '12:00-14:00', '14:00-18:00', '18:00-20:00']"
+                  :key="contacttime"
+                  :label="contacttime"
+                  :value="contacttime"
                 ></el-option>
               </el-select>
             </div>
             <div class="row">
-              <label>資訊來源</label>
-              <el-select v-model="form.infoSource" placeholder>
+              <label>所需房型</label>
+              <el-select v-model="form.room" placeholder>
                 <el-option
-                  v-for="infoSource in [
-                    '戶外廣告看版',
-                    'FB',
-                    '聯播網',
-                    '邀請卡',
-                    '簡訊',
-                    '介紹',
-                    '其他',
-                  ]"
-                  :key="infoSource"
-                  :label="infoSource"
-                  :value="infoSource"
-                  no-data-text=""
+                  v-for="room in ['2房', '3房']"
+                  :key="room"
+                  :label="room"
+                  :value="room"
                 ></el-option>
               </el-select>
-            </div> -->
+            </div>
           </div>
           <div class="group">
-            <div class="row" style="height: 100%">
+            <div class="row">
+              <label>購屋自備款</label>
+              <el-select v-model="form.room" placeholder>
+                <el-option
+                  v-for="room in ['100萬-150萬', '150萬-200萬', '200萬以上']"
+                  :key="room"
+                  :label="room"
+                  :value="room"
+                ></el-option>
+              </el-select>
+            </div>
+            <div class="row">
+              <label>購屋總預算</label>
+              <el-select v-model="form.room" placeholder>
+                <el-option
+                  v-for="room in ['1000萬-1500萬', '1500萬-2000萬', '2000萬以上']"
+                  :key="room"
+                  :label="room"
+                  :value="room"
+                ></el-option>
+              </el-select>
+            </div>
+            <div class="row" style="height: calc(100% - 125px)">
               <el-input
                 type="textarea"
                 :rows="7"
@@ -461,7 +452,7 @@ export default {
   }
 
   .group {
-    height: 300px;
+    height: 360px;
     margin-bottom: 40px;
     align-content: space-between;
     display: flex;
@@ -617,6 +608,7 @@ export default {
       label {
         width: 40% !important;
         text-align: left;
+      padding-left: 8px;
       }
     }
 
