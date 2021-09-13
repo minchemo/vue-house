@@ -15,6 +15,7 @@ h2 {
     margin: 0;
     font-weight: normal;
 }
+
 h3,
 label {
     font-family: Arial, 'Noto Serif TC', sans-serif;
@@ -29,31 +30,31 @@ p {
     margin: 0;
 }
 
+
 /* animate css */
 
+
 /* font */
-@font-face {
-    font-family: DFPingJuStd;
-    src: url('~@/assets/font/DFPingJuStd-W7.otf?#iefix') format('embedded-opentype'),
-        url('~@/assets/font/DFPingJuStd-W7.otf');
-}
 
-@font-face {
-    font-family: DFLiSongStd;
-    src: url('~@/assets/font/DFLiSongStd-W5.otf?#iefix') format('embedded-opentype'),
-        url('~@/assets/font/DFLiSongStd-W5.otf');
-}
-
-@font-face {
-    font-family: 'TimesNewRoman';
-    src: url('~@/assets/font/TimesNewRoman.ttf') format('truetype'), url('~@/assets/font/TimesNewRoman.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: Impact;
-    src: url('~@/assets/font/Impact.ttf') format('truetype'), url('~@/assets/font/Impact.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: DFPingJuStd;
+//     src: url('~@/assets/font/DFPingJuStd-W7.otf?#iefix') format('embedded-opentype'),
+//         url('~@/assets/font/DFPingJuStd-W7.otf');
+// }
+// @font-face {
+//     font-family: DFLiSongStd;
+//     src: url('~@/assets/font/DFLiSongStd-W5.otf?#iefix') format('embedded-opentype'),
+//         url('~@/assets/font/DFLiSongStd-W5.otf');
+// }
+// @font-face {
+//     font-family: 'TimesNewRoman';
+//     src: url('~@/assets/font/TimesNewRoman.ttf') format('truetype'), url('~@/assets/font/TimesNewRoman.ttf');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: Impact;
+//     src: url('~@/assets/font/Impact.ttf') format('truetype'), url('~@/assets/font/Impact.ttf');
+//     font-weight: normal;
+//     font-style: normal;
+// }
