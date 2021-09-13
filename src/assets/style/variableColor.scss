@@ -52,10 +52,10 @@ $mask_icon_color: #c82514;
 $order_bg_color: #006868;
 $order_bg_image: linear-gradient(0deg,
 rgba(1, 57, 1, 1) 0%,
-rgba(66, 109, 28, 1) 100%);
+#3a6419 87%);
 $order_bg_image_m: linear-gradient(0deg,
 rgba(1, 57, 1, 1) 0%,
-rgba(66, 109, 28, 1) 100%);
+#466e1e 90%);
 $order_title_color: #FFD990;
 $order_subtitle_color: #fff;
 $order_input_label_color: #333333;
@@ -65,8 +65,8 @@ $order_input_bg: #fff !important;
 $order_input_border: solid 0 #fff;
 $order_input_focus_border: solid 1px #fff !important;
 $order_input_selected_color: solid 1px #fff !important;
-$order_check_desc_color: #000 !important;
-$order_check_span_color: #000 !important;
+$order_check_desc_color: #FFF !important;
+$order_check_span_color: #ff0 !important;
 $order_submit_borderradius: 0px;
 $order_submit_color: #fff !important;
 $order_sumbit_disable_bg: linear-gradient(-90deg,

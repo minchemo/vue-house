@@ -366,6 +366,7 @@ export default {
 .order-bg {
   //background-color: $order_bg_color;
   //background-image: $order_bg_image;
+  background: $order_bg_image no-repeat;
   background-repeat: no-repeat;
   position: relative;
   background-size: 110vw auto;
@@ -383,10 +384,12 @@ export default {
   .order-top {
     //background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
-    background: $order_bg_image no-repeat;
+   /*
     background-size: cover;
     background-position: bottom right;
+    */
     position: relative;
+    z-index: 5;
     padding: 5vw 0;
     padding-bottom: 600px;
   }
@@ -424,13 +427,14 @@ export default {
 
   .order-subtitle {
     width: 100vw;
-    font-size: 20px;
+    font-size:calc(2000vw / 1920);
     text-align: center;
     color: $order_subtitle_color;
-    margin-bottom: 40px;
-    padding-bottom: 18px;
+    margin-bottom:2em;
+    padding-bottom:0.9em;
     line-height: 1.5;
-    font-weight: bold;
+    letter-spacing: 0.06em;
+    font-weight: 500;
   }
 
   .order {
@@ -553,7 +557,7 @@ export default {
     padding-top: 0;
     margin: 0;
     position: relative;
-    z-index: 2;
+    //z-index: 1;
 
     > img {
       display: block;
@@ -569,16 +573,14 @@ export default {
 
     .order-subtitle {
       // display: none;
-      font-size: 14px;
-      max-width: 80vw;
+      font-size:calc(1400vw / 375);
+      width: 23em;
+     // max-width: 80vw;
       margin: 0 auto;
-      margin-bottom: 10vw;
+      margin-bottom: 2.6em;
       line-height: 1.5;
     }
     .order-top {
-      background-image: $order_bg_image_m;
-      background-size: contain;
-      background-repeat: repeat;
       // top: 10vw;
       padding-bottom: 70vw;
     }

@@ -3,64 +3,32 @@
     <img
       v-if="!isMobile"
       class="bg"
-      src="~@/projects/ymv/s1/bg.png"
+      src="~@/projects/ymv/s1/bg.jpg"
       :alt="info.caseName"
       srcset=""
     />
-    <img v-else class="bg" src="~@/projects/ymv/s1/bg_m.png" :alt="info.caseName" srcset="" />
+    <img v-else class="bg" src="~@/projects/ymv/s1/bg_m.jpg" :alt="info.caseName" srcset="" />
     <img
-      v-if="!isMobile"
       class="f f_1"
       src="~@/projects/ymv/s1/f_1.png"
       :alt="info.caseName"
       srcset=""
     />
     <img
-      v-if="!isMobile"
       class="f ff_1"
       src="~@/projects/ymv/s1/ff_1.png"
       :alt="info.caseName"
       srcset=""
     />
     <img
-      v-if="isMobile"
-      class="f f_1"
-      src="~@/projects/ymv/s1/f_1_m.png"
-      :alt="info.caseName"
-      srcset=""
-    />
-    <img
-      v-if="isMobile"
-      class="f ff_1"
-      src="~@/projects/ymv/s1/ff_1_m.png"
-      :alt="info.caseName"
-      srcset=""
-    />
-    <img
-      v-if="!isMobile"
       class="f f_2"
       src="~@/projects/ymv/s1/f_2.png"
       :alt="info.caseName"
       srcset=""
     />
     <img
-      v-if="!isMobile"
       class="f ff_2"
       src="~@/projects/ymv/s1/ff_2.png"
-      :alt="info.caseName"
-      srcset=""
-    />
-    <img
-      v-if="isMobile"
-      class="f f_2"
-      src="~@/projects/ymv/s1/f_2_m.png"
-      :alt="info.caseName"
-      srcset=""
-    />
-    <img
-      v-if="isMobile"
-      class="f ff_2"
-      src="~@/projects/ymv/s1/ff_2_m.png"
       :alt="info.caseName"
       srcset=""
     />
@@ -126,14 +94,11 @@
 /* 螢幕尺寸標準 */
 .section1 {
   position: relative;
-  z-index: 100;
+  z-index: 1;
+  //z-index: 100;
   height: 100vh;
-  background: rgb(66, 109, 28);
-  background: linear-gradient(
-    0deg,
-    rgba(66, 109, 28, 1) 0%,
-    rgba(104, 140, 44, 1) 100%
-  );
+  min-height: calc(900 * 100vw / 1920);
+  max-height: calc(1080 * 100vw / 1920);
   pointer-events: none;
   .bg {
     width: 100%;
@@ -145,7 +110,7 @@
   .f {
     position: absolute;
     z-index: 2;
-    animation: leaf 5s alternate-reverse infinite;
+    animation: leaf 5s ease-in-out alternate infinite;
     transform-origin: center;
     transition: all 0.5s;
     pointer-events: none;
@@ -153,6 +118,9 @@
       width: 25vw;
       left: -6vw;
       top: -4vw;
+      animation-duration: 3s;
+      transform: rotate(3deg);
+      transform-origin:0 0;
       &.fadeOut {
         left: -30vw;
       }
@@ -161,6 +129,9 @@
       width: 25vw;
       left: -36vw;
       bottom: -4vw;
+      animation-duration: 4.5s;
+      transform:skewY(-3deg);
+      transform-origin:0% 60%;
       &.fadeIn {
         left: -6vw;
       }
@@ -169,6 +140,9 @@
       width: 25vw;
       right: -5vw;
       bottom: -10vw;
+      animation-duration: 3.5s;
+      transform: rotate(-3deg);
+      transform-origin:100% 100%;
       &.fadeOut {
         right: -30vw;
       }
@@ -177,16 +151,16 @@
       width: 25vw;
       right: -35vw;
       top: -5vw;
+      animation-duration: 4.5s;
+      transform:skewY(3deg);
+      transform-origin:100% 60%;
       &.fadeIn {
         right: -5vw;
       }
     }
     @keyframes leaf {
-      from {
-        transform: skew(3deg, 2deg) translate(15px, -15px) rotate(-3deg);
-      }
       to {
-        transform: skew(-3deg, 2deg) translate(-15px, 15px) rotate(3deg);
+        transform: skew(0) rotate(0deg);
       }
     }
   }
@@ -258,11 +232,13 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
+    font-size:30vw;
     &.a_title_1 {
       position: absolute;
       width: 5vw;
       left: 50vw;
       top: -9vw;
+      filter:drop-shadow(0.009em 0.009em 0.009em #0004);
       &.fadeOut {
         transform: translateY(-10vw);
         opacity: 0;
@@ -273,6 +249,7 @@
       width: 5vw;
       left: 45vw;
       top: 5vw;
+      filter:drop-shadow(0.009em 0.009em 0.009em #0004);
       &.fadeOut {
         transform: translateY(10vw);
         opacity: 0;
@@ -288,6 +265,8 @@
       mask-size: 0%;
       mask-position: center center;
       mask-repeat: no-repeat;
+      filter:drop-shadow(0.01em 0.01em 0.01em #0006);
+  animation: shadow 2s 6.5s linear reverse both;
 
       &.fadeIn {
         mask-size: 150%;
@@ -295,9 +274,9 @@
     }
     &.aa_title_2 {
       position: absolute;
-      width: 1.7vw;
-      left: 30.5vw;
-      top: -9.5vw;
+    width: 1.95vw;
+    left: 29.6vw;
+    top: -9.25vw;
       opacity: 0;
       transition: all 1s;
       &.fadeIn {
@@ -311,6 +290,7 @@
       top: 7vw;
       opacity: 0;
       transition: all 1s;
+      filter:drop-shadow(0.005em 0.005em 0.005em #0006);
       &.fadeIn {
         opacity: 1;
       }
@@ -322,12 +302,17 @@
       top: 20vw;
       opacity: 0;
       transition: all 1s;
+      filter:drop-shadow(0.005em 0.005em 0.005em #0006);
       &.fadeIn {
         opacity: 1;
         top: 14vw;
       }
     }
   }
+}
+@keyframes shadow {
+    to {
+      filter:drop-shadow(0vw 0vw 0vw #0000);}
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -336,27 +321,9 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
-    position: relative;
-    z-index: 100;
-    height: 100vh;
-    background: rgb(66, 109, 28);
-    background: linear-gradient(
-      0deg,
-      rgba(66, 109, 28, 1) 0%,
-      rgba(104, 140, 44, 1) 100%
-    );
-    .bg {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
+  min-height: calc(667 * 100vw / 375);
+  max-height: calc(812 * 100vw / 375);
     .f {
-      position: absolute;
-      z-index: 2;
-      animation: leaf 5s alternate-reverse infinite;
-      transform-origin: center;
       &.f_1 {
         width: 76vw;
         left: -16vw;
@@ -389,24 +356,9 @@
           right: -26vw;
         }
       }
-      @keyframes leaf {
-        from {
-          transform: skew(3deg, 2deg) translate(5px, -5px) rotate(-1deg);
-        }
-        to {
-          transform: skew(-3deg, 2deg) translate(-5px, 5px) rotate(1deg);
-        }
-      }
     }
     .circles {
-      position: absolute;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
       div {
-        border-radius: 100%;
-        background-color: #fff;
-        position: absolute;
         &:nth-child(1) {
           width: 50vw;
           height: 50vw;
@@ -444,23 +396,10 @@
           top: unset;
           bottom: 36vw;
         }
-
-        @keyframes bubble {
-          from {
-            transform: translate(0, 0);
-          }
-          to {
-            transform: translate(-10px, 10px);
-            opacity: 0;
-          }
-        }
       }
     }
     .title {
-      position: absolute;
-      z-index: 5;
-      width: 100%;
-      height: 100%;
+      font-size:100vw;
       &.a_title_1 {
         position: absolute;
         width: 14vw;
@@ -486,15 +425,14 @@
         left: 25vw;
         top: -20vw;
         transition: all 3s;
-
         &.fadeIn {
           mask-size: 200%;
         }
       }
       &.aa_title_2 {
-        width: 5vw;
-        left: 19.5vw;
-        top: -36.5vw;
+    width: 4.85vw;
+    left: 19.5vw;
+    top: -36.7vw;
       }
       &.aa_title_3 {
         width: 40vw;
@@ -548,12 +486,12 @@ export default {
       //淡出主視覺文字
       $(".title.a_title_1").addClass("fadeOut");
       $(".title.a_title_2").addClass("fadeOut");
-    }, 3000);
+    }, 4500);
     setTimeout(() => {
       //淡出花
       $(".f.f_1").addClass("fadeOut");
       $(".f.f_2").addClass("fadeOut");
-    }, 3400);
+    }, 4900);
     setTimeout(() => {
       //淡入主視覺
       $(".f.ff_1").addClass("fadeIn");
@@ -562,7 +500,7 @@ export default {
       $(".title.aa_title_2").addClass("fadeIn");
       $(".title.aa_title_3").addClass("fadeIn");
       $(".title.aa_title_4").addClass("fadeIn");
-    }, 4000);
+    }, 5500);
   },
 };
 </script>

@@ -163,7 +163,6 @@ export default {
 .section .fp-tableCell {
   height: auto !important;
 }
-
 .fp-left {
   margin-left: 12px;
 }

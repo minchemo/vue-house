@@ -271,11 +271,12 @@ export default {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -75%);
-  animation: skew 3s alternate-reverse infinite;
+  transform: translate(-50%, -75%) skew(2deg);
+  transform-origin: 50% 100%;
+  animation: skew 3s ease-in-out alternate infinite;
   @keyframes skew {
     to {
-      transform: translate(-50%, -75%) skew(-4deg);
+      transform: translate(-50%, -75%) skew(-2deg);
     }
   }
 }
@@ -420,11 +421,11 @@ export default {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -85%);
-    animation: skew 5s alternate-reverse infinite;
+    transform: translate(-50%, -85%) skew(2deg);
+    animation: skew 3s ease-in-out alternate infinite;
     @keyframes skew {
       to {
-        transform: translate(-50%, -85%) skew(-4deg);
+        transform: translate(-50%, -85%) skew(-2deg);
       }
     }
   }
