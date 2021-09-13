@@ -80,23 +80,23 @@
           <div class="group">
             <div class="row">
               <label>購屋自備款</label>
-              <el-select v-model="form.room" placeholder>
+              <el-select v-model="form.money" placeholder>
                 <el-option
-                  v-for="room in ['100萬-150萬', '150萬-200萬', '200萬以上']"
-                  :key="room"
-                  :label="room"
-                  :value="room"
+                  v-for="money in ['100萬-150萬', '150萬-200萬', '200萬以上']"
+                  :key="money"
+                  :label="money"
+                  :value="money"
                 ></el-option>
               </el-select>
             </div>
             <div class="row">
               <label>購屋總預算</label>
-              <el-select v-model="form.room" placeholder>
+              <el-select v-model="form.totalmoney" placeholder>
                 <el-option
-                  v-for="room in ['1000萬-1500萬', '1500萬-2000萬', '2000萬以上']"
-                  :key="room"
-                  :label="room"
-                  :value="room"
+                  v-for="totalmoney in ['1000萬-1500萬', '1500萬-2000萬', '2000萬以上']"
+                  :key="totalmoney"
+                  :label="totalmoney"
+                  :value="totalmoney"
                 ></el-option>
               </el-select>
             </div>
@@ -187,8 +187,9 @@ export default {
         gender: "",
         infosource: "",
         parking: "",
-        houseStyle: "",
         room: "",
+        money: "",
+        totalmoney: "",
         msg: "",
         time_start: "",
         time_end: "",
@@ -219,7 +220,7 @@ export default {
         message: h(
           "i",
           { style: "color: #82191d" },
-          "「姓名、手機」是必填欄位"
+          "「姓名、手機、可聯繫時間、所需房型、購屋自備款、購屋總預算」是必填欄位"
         ),
       });
     },
@@ -246,7 +247,11 @@ export default {
         // ||
         // !this.form.email ||
         !this.form.city ||
-        !this.form.area
+        !this.form.area ||
+        !this.form.contacttime ||
+        !this.form.room ||
+        !this.form.money ||
+        !this.form.totalmoney
       ) {
         this.alertValidate();
         this.isSubmit = false;
@@ -266,17 +271,17 @@ export default {
       formData.append("name", this.form.name);
       formData.append("phone", this.form.phone);
       formData.append("email", this.form.email);
-      formData.append("contacttime", this.form.contacttime);
       formData.append("msg", this.form.msg);
-      formData.append("room", this.form.room);
       // formData.append('time_start', this.form.time_start)
       // formData.append('time_end', this.form.time_end)
       formData.append("city", this.form.city);
       formData.append("area", this.form.area);
-      formData.append("gender", this.form.area);
-      formData.append("infosource", this.form.area);
-      formData.append("parking", this.form.area);
-      formData.append("houseStyle", this.form.area);
+
+      formData.append("room", this.form.room);
+      formData.append("contacttime", this.form.contacttime);
+      formData.append("money", this.form.money);
+      formData.append("totalmoney", this.form.totalmoney);
+
       formData.append("utm_source", utmSource);
       formData.append("utm_medium", utmMedium);
       formData.append("utm_content", utmContent);
