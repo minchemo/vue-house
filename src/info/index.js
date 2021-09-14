@@ -3,8 +3,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.887330477424!2d121.49895931598127!3d25.139499740206013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae4f0af68525%3A0x8262339212753f2b!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A5Lit5ZKM6KGXMjM56Jmf!5e0!3m2!1szh-TW!2stw!4v1631441848806!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/c4K9esd9AJckvLBH8",
     phone: "02-28971888",
-    fbLink: "",
-    fbMessage: "",
+    fbLink: "https://www.facebook.com/%E9%99%BD%E6%98%8E%E8%BF%B4%E9%84%89-105686925186832",
+    fbMessage: "https://m.me/105686925186832/",
     caseName: "陽明迴鄉",
     indigatorLength: 10,
     houseInfos: [
