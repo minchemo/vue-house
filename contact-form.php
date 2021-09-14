@@ -5,7 +5,7 @@
 #$case_code = "jw";特殊案使用
 $src = $_SERVER['SERVER_NAME'];
 $case_code_test = substr(substr($src, 0, strpos($src, '.')), -1);
-$case_code = "dnls";
+$case_code = substr($src,0,strpos($src,$case_code_test=='1'?'1':'.'));
 
 # PDO DB 連線 Start
 $pdo = new pdo('mysql:host=localhost;dbname=htw_web', 'htw', '748aSgl5Ni');
@@ -255,21 +255,7 @@ $mail->From = "noreply@h35.tw"; //設定寄件者信箱
 $mail->FromName = $case_name . " - 官網網站"; //設定寄件者姓名
 
 $mail->Subject = $case_name . " - 官網網站"; //設定郵件標題
-$mail->Body =
-    "網站：https://" . $src . "/" .
-    "<BR>姓名：" . $name .
-    "<BR>手機：" . $phone .
-    "<BR>居住城市與地區：" . $city . " " . $area .
-    "<BR>可聯繫時間：" . $contacttime .
-    "<BR>所需房型：" . $room .
-    "<BR>購屋自備款：" . $money .
-    "<BR>購屋總預算：" . $totalmoney .
-    "<BR>備註：" . $msg .
-    "<BR><BR>填表日期：" . $datetime .
-    "<BR>廣告來源：" . $utm_source .
-    "<BR>廣告媒介：" . $utm_medium .
-    "<BR>廣告名稱：" . $utm_campaign .
-    "<BR>廣告內容：" . $utm_content; //設定郵件內容
+$mail->Body ="網站：https://" . $src . "/" ."<BR>姓名：" . $name ."<BR>手機：" . $phone ."<BR>居住城市與地區：" . $city . " " . $area ."<BR>可聯繫時間：" . $contacttime ."<BR>所需房型：" . $room ."<BR>購屋自備款：" . $money ."<BR>購屋總預算：" . $totalmoney ."<BR>備註：" . $msg ."<BR><BR>填表日期：" . $datetime ."<BR>廣告來源：" . $utm_source ."<BR>廣告媒介：" . $utm_medium ."<BR>廣告名稱：" . $utm_campaign ."<BR>廣告內容：" . $utm_content; //設定郵件內容
 $mail->IsHTML(true); //設定郵件內容為HTML
 
 $tomail_arr = explode(",", $tomail);
