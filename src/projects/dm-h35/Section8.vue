@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <p v-if="isMobile" class="tip">
+    <p class="tip">
       此為廣告效果示意，為單一建物電腦3D透視表現，周遭環境係電腦合成，建設公司保有建物外觀修正之權利。
     </p>
   </div>
@@ -89,8 +89,9 @@
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section8 {
-  height: auto;
-  min-height: calc(100vw * 900 / 1920 - 70px);
+  height:calc(100vh - 70px);
+  min-height: calc(100vw * 950 / 1920 - 70px);
+  max-height: calc(100vw * 1080 / 1920 - 70px);
 
   .main {
     height: 100%;
@@ -99,7 +100,7 @@
     border-bottom: 1px solid #356292;
     .box1 {
       width: 100%;
-      height: 67.18vw;
+      height:100%;
       background-color: #fff;
       border-right: 1px solid #356292;
       .swiper-slide {
@@ -129,6 +130,21 @@
       cursor: pointer;
     }
   }
+
+    .tip {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+      font-size: 15px;
+      padding:0.5em 1.6em ;
+      text-align: left;
+      font-family: "Noto Sans TC";
+      line-height: 1.5;
+      font-weight:500;
+      color: #FFF;
+      text-shadow: 0 0 0.5em #000;
+    }
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -148,7 +164,7 @@
       .box1 {
         width: 100%;
         background-color: #fff;
-        height: 80vh;
+        height: 140vw;
         border: 0;
         .swiper-slide {
           .slide-text {
@@ -171,13 +187,16 @@
     }
 
     .tip {
+      position: relative;
+      bottom: 0;
+      right: 0;
       font-size: 12px;
-      padding: 20px;
+      padding:1.6em;
       text-align: left;
       font-family: "Noto Sans TC";
       line-height: 1.5;
-      font-weight: bold;
       color: #283555;
+      text-shadow: 0 0 0 #0000;
     }
   }
 }
@@ -211,7 +230,7 @@ export default {
           text: "實際建材設備依銷售合約書為準，此為樣品屋裝修表現參考示意。",
         },
         {
-          imgSrc: require("@/projects/dm-h35/s8/E-3.jpg"),
+          imgSrc:isMobile? require("@/projects/dm-h35/s8/E-3m.jpg"): require("@/projects/dm-h35/s8/E-3.jpg"),
           text: "實際建材設備依銷售合約書為準，此為樣品屋裝修表現參考示意。",
         },
         {

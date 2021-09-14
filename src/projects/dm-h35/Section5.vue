@@ -305,7 +305,7 @@
     height: 100%;
     .swiper-slide {
       height: 100%;
-      background-size: 100% auto;
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
