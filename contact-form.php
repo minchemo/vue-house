@@ -291,13 +291,7 @@ if ($bCheck == true) { //if start
         $url .= "&email=" . $user_email;
         $url .= "&city=" . $city;
         $url .= "&area=" . $area;
-        $url .= "&message=" . 
-        "可聯繫時間：" .$contacttime.
-        ";所需房型：" .$room.
-        ";購屋自備款：" .$money.
-        ";購屋總預算：" .$totalmoney.
-        ";留言：" .$msg.
-        ;
+        $url .= "&message=" . "可聯繫時間：" . $contacttime . ";所需房型：" . $room . ";購屋自備款：" . $money . ";購屋總預算：" . $totalmoney . ";留言：" . $msg;
         $url .= "&utm_source=" . $utm_source;
         $url .= "&utm_medium=" . $utm_medium;
         $url .= "&utm_content=" . $utm_content;
