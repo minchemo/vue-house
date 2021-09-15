@@ -317,7 +317,7 @@ export default {
 
 <style lang="scss">
 .el-input {
-  border-left: 1px solid #eee !important;
+  border-bottom: 0px solid #eee !important;
 }
 </style>
 
@@ -492,6 +492,7 @@ export default {
     justify-content: space-between;
     //margin-bottom: 15px;
     background: $order_input_bg;
+    border-bottom:1px solid #fff6;
 
     &.house {
       margin-top: 50px;
@@ -503,9 +504,9 @@ export default {
 
     label {
       width: 5vw;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
-      opacity: 0.8;
+      opacity: 1;
       color: $order_input_label_color;
       text-align: left;
       padding-left: 15px;
