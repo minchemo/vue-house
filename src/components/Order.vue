@@ -320,8 +320,11 @@ export default {
 .el-input {
   border-bottom: 0px solid #eee !important;
 }
+.el-textarea {
+  width: 100% !important;
+}
 .el-textarea textarea {
-  color: #fff !important
+  color: #fff !important;
 }
 </style>
 
