@@ -93,7 +93,7 @@
               <label>購屋總預算</label>
               <el-select v-model="form.totalmoney" placeholder>
                 <el-option
-                  v-for="totalmoney in ['1000萬-1500萬', '1500萬-2000萬', '2000萬以上']"
+                  v-for="totalmoney in ['1300萬-1500萬', '1800萬-2000萬', '2300萬-2500萬']"
                   :key="totalmoney"
                   :label="totalmoney"
                   :value="totalmoney"
