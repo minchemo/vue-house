@@ -104,6 +104,7 @@
               <el-input
                 type="textarea"
                 :rows="7"
+                style="color:#fff"
                 placeholder="請輸入您的留言 (選填)"
                 v-model="form.msg"
               ></el-input>
@@ -318,6 +319,9 @@ export default {
 <style lang="scss">
 .el-input {
   border-bottom: 0px solid #eee !important;
+}
+.el-textarea textarea {
+  color: #fff !important
 }
 </style>
 
