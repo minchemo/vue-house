@@ -82,7 +82,7 @@
               <label>購屋自備款</label>
               <el-select v-model="form.money" placeholder>
                 <el-option
-                  v-for="money in ['100萬-150萬', '150萬-200萬', '200萬以上']"
+                  v-for="money in ['200萬-300萬', '300萬-400萬', '400萬以上']"
                   :key="money"
                   :label="money"
                   :value="money"
