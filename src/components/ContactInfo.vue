@@ -507,6 +507,7 @@ export default {
       &.address {
         margin-bottom: 0;
         border-radius: $contact_btn_addr_border_radius_m;
+        font-size: 15px;
       }
     }
   }
