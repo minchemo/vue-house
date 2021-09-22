@@ -320,7 +320,7 @@ export default {
         {
           icon: require("../ab/s2/icon/4.png"),
           title: isMobile ? "精彩<br>今採" : "精彩今採",
-          content: "總價<span class='large'>1156</span>萬起<br>入席大安不必等",
+          content: "總價<span class='large'>1398</span>萬起<br>入席大安不必等",
           reverse: false,
         },
         {
