@@ -238,7 +238,7 @@ export default {
           text: "實際建材設備依銷售合約書為準，此為樣品屋裝修表現參考示意。",
         },
         {
-          imgSrc: require("@/projects/dm-h35/s8/E-5.jpg"),
+          imgSrc: isMobile? require("@/projects/dm-h35/s8/E-5m.jpg"): require("@/projects/dm-h35/s8/E-5.jpg"),
           text: "實際建材設備依銷售合約書為準，此為樣品屋裝修表現參考示意。",
         },
       ],
