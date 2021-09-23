@@ -120,7 +120,7 @@ export default {
       };
       const imageLoaded = () => {
         imagesLoaded++;
-        if (imagesLoaded == totalImages) {
+        if (imagesLoaded >= totalImages * 0.75) {
           allImagesLoaded();
         }
       };
@@ -128,8 +128,7 @@ export default {
         $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
       });
 
-      
-
+    
     });
   },
   mounted() {

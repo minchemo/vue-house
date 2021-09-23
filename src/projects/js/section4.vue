@@ -36,16 +36,16 @@
             ></div>
           </swiper>
         </div>
-        <img class="draw1" src="@/projects/js/s4/draw1.png" alt="" srcset="" />
-        <img class="draw4" src="@/projects/js/s4/draw2.png" alt="" srcset="" data-aos="fade" data-aos-delay="300"  data-aos-offset="-300" />
-        <img
+        <img loading="lazy" class="draw1" src="@/projects/js/s4/draw1.png" alt="" srcset="" />
+        <img loading="lazy" class="draw4" src="@/projects/js/s4/draw2.png" alt="" srcset="" data-aos="fade" data-aos-delay="300"  data-aos-offset="-300" />
+        <img loading="lazy"
           v-if="!isMobile"
           class="draw3"
           src="@/projects/js/s4/draw3.png"
           alt=""
           srcset=""
         />
-        <img
+        <img loading="lazy"
           v-else
           class="draw3"
           src="@/projects/js/s4/draw3-mo.png"
@@ -64,7 +64,7 @@
           </div>
           <div class="t2">享受生活</div>
         </div>
-        <img
+        <img loading="lazy"
           v-if="!isMobile"
           class="box2"
           src="@/projects/js/s4/box2.png"
@@ -72,35 +72,35 @@
           srcset=""
           data-aos="fade" data-aos-delay="100"
         />
-        <img
+        <img loading="lazy"
           v-else
           class="box2"
           src="@/projects/js/s4/box2-mo.png"
           alt=""
           srcset=""
         />
-        <img
+        <img loading="lazy"
           v-if="!isMobile"
           class="box2-f"
           src="@/projects/js/s4/box2-f.png"
           alt=""
           srcset=""
         />
-        <img
+        <img loading="lazy"
           v-if="!isMobile"
           class="draw4"
           src="@/projects/js/s4/draw4.png"
           alt=""
           srcset=""
         />
-        <img
+        <img loading="lazy"
           v-else
           class="draw4"
           src="@/projects/js/s4/draw4-mo.png"
           alt=""
           srcset=""
         />
-        <img
+        <img loading="lazy"
           v-if="!isMobile"
           class="draw5"
           src="@/projects/js/s4/draw5.png"
@@ -141,8 +141,8 @@
           </swiper>
         </div>
       </div>
-      <img class="draw6" src="@/projects/js/s4/draw6.png" alt="" srcset="" />
-      <img class="draw7" src="@/projects/js/s4/draw7.png" alt="" srcset="" />
+      <img loading="lazy" class="draw6" src="@/projects/js/s4/draw6.png" alt="" srcset="" />
+      <img loading="lazy" class="draw7" src="@/projects/js/s4/draw7.png" alt="" srcset="" />
     </div>
     -->
     <div class="bg"></div>

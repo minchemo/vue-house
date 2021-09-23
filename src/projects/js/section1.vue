@@ -2,8 +2,8 @@
   <div class="section1">
     <div class="draw">
       <!--右下人物-->
-      <img class="draw1" src="@/projects/js/s1/draw1.png" alt="" srcset="" />
-      <img
+      <img loading="lazy" class="draw1" src="@/projects/js/s1/draw1.png" alt="" srcset="" />
+      <img loading="lazy"
         class="draw1-cattail"
         src="@/projects/js/s1/draw1-cattail.png"
         alt=""
@@ -11,20 +11,20 @@
       />
 
       <!--左上樹葉-->
-      <img class="draw2" src="@/projects/js/s1/draw2.png" alt="" srcset="" />
-      <img
+      <img loading="lazy" class="draw2" src="@/projects/js/s1/draw2.png" alt="" srcset="" />
+      <img loading="lazy"
         class="draw2-bird"
         src="@/projects/js/s1/draw2-bird.png"
         alt=""
         srcset=""
       />
-      <img
+      <img loading="lazy"
         class="draw2-leaf1"
         src="@/projects/js/s1/draw2-leaf1.png"
         alt=""
         srcset=""
       />
-      <img
+      <img loading="lazy"
         class="draw2-leaf2"
         src="@/projects/js/s1/draw2-leaf2.png"
         alt=""
@@ -32,28 +32,28 @@
       />
 
       <div class="fall-container">
-        <img src="@/projects/js/s1/fall-leaf/1.png" />
-        <img class="leaf1" src="@/projects/js/s1/fall-leaf/1.png" />
-        <img class="leaf2" src="@/projects/js/s1/fall-leaf/2.png" />
-        <img class="leaf3" src="@/projects/js/s1/fall-leaf/3.png" />
-        <img class="leaf4" src="@/projects/js/s1/fall-leaf/4.png" />
-        <img class="leaf5" src="@/projects/js/s1/fall-leaf/5.png" />
-        <img class="leaf6" src="@/projects/js/s1/fall-leaf/6.png" />
-        <img class="leaf7" src="@/projects/js/s1/fall-leaf/7.png" />
-        <img class="leaf8" src="@/projects/js/s1/fall-leaf/8.png" />
-        <img class="leaf9" src="@/projects/js/s1/fall-leaf/9.png" />
-        <img class="leaf10" src="@/projects/js/s1/fall-leaf/10.png" />
+        <img loading="lazy" src="@/projects/js/s1/fall-leaf/1.png" />
+        <img loading="lazy" class="leaf1" src="@/projects/js/s1/fall-leaf/1.png" />
+        <img loading="lazy" class="leaf2" src="@/projects/js/s1/fall-leaf/2.png" />
+        <img loading="lazy" class="leaf3" src="@/projects/js/s1/fall-leaf/3.png" />
+        <img loading="lazy" class="leaf4" src="@/projects/js/s1/fall-leaf/4.png" />
+        <img loading="lazy" class="leaf5" src="@/projects/js/s1/fall-leaf/5.png" />
+        <img loading="lazy" class="leaf6" src="@/projects/js/s1/fall-leaf/6.png" />
+        <img loading="lazy" class="leaf7" src="@/projects/js/s1/fall-leaf/7.png" />
+        <img loading="lazy" class="leaf8" src="@/projects/js/s1/fall-leaf/8.png" />
+        <img loading="lazy" class="leaf9" src="@/projects/js/s1/fall-leaf/9.png" />
+        <img loading="lazy" class="leaf10" src="@/projects/js/s1/fall-leaf/10.png" />
       </div>
     </div>
     <div class="title-box">
-      <img
+      <img loading="lazy"
         class="title-logo"
         data-aos="fade" data-aos-delay="0"
         src="@/projects/js/s1/logo.png"
         alt=""
         srcset=""
       />
-      <img
+      <img loading="lazy"
         class="logo-cattail"
         data-aos="fade" data-aos-delay="0"
         src="@/projects/js/s1/logo-cattail.png"
@@ -62,7 +62,7 @@
       />
       <div class="order"
         data-aos="fade" data-aos-delay="200" data-aos-offset="-300" v-scroll-to="{ element: `#contact`, offset: 0 }">
-        <img
+        <img loading="lazy"
           class="order-leaf"
           src="@/projects/js/s1/order-leaf.png"
           alt=""

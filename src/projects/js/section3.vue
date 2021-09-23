@@ -10,22 +10,22 @@
     <div class="view" ref="view" data-aos="fade-up">
       <div class="view-img"
         ref="viewImg">
-      <img
+      <img loading="lazy"
         src="~@/projects/js/s3/v-bg.jpg"
         alt=""
       />
-      <img
+      <img loading="lazy"
         class="line"
         src="~@/projects/js/s3/line.gif"
         alt=""
       />
-      <img
+      <img loading="lazy"
         class="v-bg"
         src="~@/projects/js/s3/v-bg.png"
         alt=""
       />
       </div>
-      <img
+      <img loading="lazy"
         v-if="isMobile"
         class="view-hand"
         ref="viewHand"
@@ -33,14 +33,14 @@
         alt=""
       />
     </div>
-    <img
+    <img loading="lazy"
       v-if="!isMobile"
       class="draw"
       src="@/projects/js/s3/draw.png"
       alt=""
       srcset=""
     />
-    <img
+    <img loading="lazy"
       v-else
       class="draw"
       src="@/projects/js/s3/draw-mo.png"

@@ -16,7 +16,7 @@
 	<path data-aos="fade" data-aos-delay="100" d="M479.2,72.6c-3.1-17.3,1-29.6,16.7-38.5C497.6,52.8,496.3,63.2,479.2,72.6z"/>
 	<path data-aos="fade" data-aos-delay="200" d="M0,20.7C2.2,11.9,9.5,2.9,19.4,0C19.2,14.4,7,26.9,0,20.7z"/>
 </svg>
-    <img v-if="isMobile" src="@/projects/js/s2/draw-mo.png" class="draw-mo" alt="" srcset="">
+    <img loading="lazy" v-if="isMobile" src="@/projects/js/s2/draw-mo.png" class="draw-mo" alt="" srcset="">
   </div>
 </template>
 <style lang="scss" scoped>
