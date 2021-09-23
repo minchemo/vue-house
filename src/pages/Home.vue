@@ -34,7 +34,6 @@
       <Section8 />
     </vue-lazy-component>
 
-
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
     </vue-lazy-component>
@@ -74,8 +73,6 @@ import Section6 from "@/projects/dm-h35/Section6.vue";
 import Section7 from "@/projects/dm-h35/Section7.vue";
 import Section8 from "@/projects/dm-h35/Section8.vue";
 
-
-
 export default {
   name: "home",
   components: {
@@ -92,14 +89,14 @@ export default {
     Section5,
     Section6,
     Section7,
-    Section8
+    Section8,
   },
 
   data() {
     return {
       isMobile,
       isSide: false,
-      load: true
+      load: true,
       // viewIndex: 0,
       // action: {
       //   moveTo: () => {},
@@ -138,14 +135,12 @@ export default {
       };
       const imageLoaded = () => {
         imagesLoaded++;
-        if (imagesLoaded == totalImages) {
+        if (imagesLoaded > totalImages * 0.5) {
           allImagesLoaded();
         }
       };
-      $("img").each(function(idx, img) {
-        $("<img>")
-          .on("load", imageLoaded)
-          .attr("src", $(img).attr("src"));
+      $("img").each(function (idx, img) {
+        $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
       });
     });
   },
@@ -164,7 +159,7 @@ export default {
   // }
   // },
   methods: {
-    init() {}
+    init() {},
     // onScroll() {
     //   // 获取所有锚点元素
     //   const navContents = document.querySelectorAll('.section')
@@ -215,6 +210,6 @@ export default {
     //     this.$refs.fullPage.api.setResponsive(true)
     //   }
     // },
-  }
+  },
 };
 </script>

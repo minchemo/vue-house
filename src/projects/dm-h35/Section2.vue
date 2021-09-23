@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="view" ref="view" data-aos="fade">
-      <img ref="viewImg" src="~@/projects/dm-h35/s2/view.jpg" alt="" />
+      <img ref="viewImg" src="~@/projects/dm-h35/s2/view.jpg" alt="" loading="lazy" />
     </div>
 
     <img
@@ -32,13 +32,13 @@
         v-if="!isMobile"
         class="draw1"
         src="~@/projects/dm-h35/s2/draw1.png"
-        alt=""
+        alt="" loading="lazy"
       />
       <img
         v-if="!isMobile"
         class="draw2"
         src="~@/projects/dm-h35/s2/draw2.gif"
-        alt=""
+        alt="" loading="lazy"
       />
     </div>
   </div>

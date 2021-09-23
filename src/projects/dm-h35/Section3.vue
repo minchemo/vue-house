@@ -37,7 +37,7 @@
           v-if="!isMobile"
           class="bottle"
           src="~@/projects/dm-h35/s3/bottle.png"
-          alt=""
+          alt="" loading="lazy"
         />
       </div>
     </div>
@@ -321,6 +321,7 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        lazy:true,
         loop: true,
         autoplay: {
           delay: 4000,

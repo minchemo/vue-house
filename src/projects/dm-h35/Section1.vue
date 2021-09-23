@@ -815,31 +815,31 @@
       <p data-aos="fade-down" data-aos-delay="300">將門貴冑境地。</p>
     </div>
     <div class="draw" data-aos="fade">
-      <img class="draw1" src="~@/projects/dm-h35/s1/draw1.png" alt="" />
+      <img class="draw1" src="~@/projects/dm-h35/s1/draw1.png" alt="" loading="lazy" />
       <div class="draw2" data-aos="fade">
-        <img class="an2" src="~@/projects/dm-h35/s1/draw22.png" alt="" />
-        <img class="an2" src="~@/projects/dm-h35/s1/draw23.png" alt="" />
-        <img class="an2" src="~@/projects/dm-h35/s1/draw21.png" alt="" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw22.png" alt="" loading="lazy" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw23.png" alt="" loading="lazy" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw21.png" alt="" loading="lazy" />
       </div>
       <div class="draw3" data-aos="fade">
-        <img src="~@/projects/dm-h35/s1/draw31.png" alt="" />
-        <img class="an" src="~@/projects/dm-h35/s1/draw32.png" alt="" />
-        <img class="an" src="~@/projects/dm-h35/s1/draw33.png" alt="" />
-        <img class="an" src="~@/projects/dm-h35/s1/draw34.png" alt="" />
+        <img src="~@/projects/dm-h35/s1/draw31.png" alt="" loading="lazy" />
+        <img class="an" src="~@/projects/dm-h35/s1/draw32.png" alt="" loading="lazy" />
+        <img class="an" src="~@/projects/dm-h35/s1/draw33.png" alt="" loading="lazy" />
+        <img class="an" src="~@/projects/dm-h35/s1/draw34.png" alt="" loading="lazy" />
       </div>
       <div class="draw5" v-if="isMobile" data-aos="fade">
-        <img src="~@/projects/dm-h35/s1/draw51.png" alt="" />
-        <img class="an2" src="~@/projects/dm-h35/s1/draw52.png" alt="" />
-        <img class="an2" src="~@/projects/dm-h35/s1/draw53.png" alt="" />
-        <img class="an2" src="~@/projects/dm-h35/s1/draw54.png" alt="" />
+        <img src="~@/projects/dm-h35/s1/draw51.png" alt="" loading="lazy" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw52.png" alt="" loading="lazy" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw53.png" alt="" loading="lazy" />
+        <img class="an2" src="~@/projects/dm-h35/s1/draw54.png" alt="" loading="lazy" />
       </div>
-      <img class="draw4" src="~@/projects/dm-h35/s1/draw4.gif" alt="" />
+      <img class="draw4" src="~@/projects/dm-h35/s1/draw4.gif" alt="" loading="lazy" />
     </div>
     <img
       v-if="!isMobile"
       class="scroll"
       src="~@/projects/dm-h35/s1/scroll.png"
-      alt=""
+      alt="" loading="lazy"
     />
     <div class="bg"></div>
   </div>
