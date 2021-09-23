@@ -449,8 +449,7 @@
     z-index: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-image: url("~@/projects/js/s4/bg.jpg");
+    background: url("~@/projects/js/s4/bg.jpg");
     top: 0;
     left: 0;
   }
@@ -749,39 +748,39 @@ export default {
       },
       imgList1: [
         {
-          img: require("@/projects/js/s4/swipe1/1.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/1.jpg"): require("@/projects/js/s4/swipe1/1.jpg"),
           caption: "中和國小",
         },
         {
-          img: require("@/projects/js/s4/swipe1/2.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/2.jpg"):require("@/projects/js/s4/swipe1/2.jpg"),
           caption: "復興商圈",
         },
         {
-          img: require("@/projects/js/s4/swipe1/3.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/3.jpg"):require("@/projects/js/s4/swipe1/3.jpg"),
           caption: "基隆夜市",
         },
         {
-          img: require("@/projects/js/s4/swipe1/4.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/4.jpg"):require("@/projects/js/s4/swipe1/4.jpg"),
           caption: "基隆中和交流道",
         },
         {
-          img: require("@/projects/js/s4/swipe1/5.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/5.jpg"):require("@/projects/js/s4/swipe1/5.jpg"),
           caption: "海洋廣場",
         },
         {
-          img: require("@/projects/js/s4/swipe1/6.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/6.jpg"):require("@/projects/js/s4/swipe1/6.jpg"),
           caption: "基隆燈塔",
         },
         {
-          img: require("@/projects/js/s4/swipe1/7.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/7.jpg"): require("@/projects/js/s4/swipe1/7.jpg"),
           caption: "外木山",
         },
         {
-          img: require("@/projects/js/s4/swipe1/8.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/8.jpg"):require("@/projects/js/s4/swipe1/8.jpg"),
           caption: "大武崙",
         },
         {
-          img: require("@/projects/js/s4/swipe1/9.jpg"),
+          img:isMobile?require("@/projects/js/s4/swipe1/m/9.jpg"):require("@/projects/js/s4/swipe1/9.jpg"),
           caption: "情人湖",
         },
       ],
