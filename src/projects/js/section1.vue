@@ -2,7 +2,7 @@
   <div class="section1">
     <div class="draw">
       <!--右下人物-->
-      <img loading="lazy" class="draw1" src="@/projects/js/s1/draw1.png" alt="" srcset="" />
+      <img class="draw1" src="@/projects/js/s1/draw1.png" alt="" srcset="" />
       <img loading="lazy"
         class="draw1-cattail"
         src="@/projects/js/s1/draw1-cattail.png"
