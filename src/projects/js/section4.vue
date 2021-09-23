@@ -678,7 +678,6 @@
         }
         .draw6 {
           width: 90px;
-          position: absolute;
           z-index: 10;
           left: unset;
           right: 0;
@@ -691,16 +690,6 @@
       }
     }
 
-    .bg {
-      position: absolute;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-image: url("~@/projects/js/s4/bg.jpg");
-      top: 0;
-      left: 0;
-    }
   }
 }
 
