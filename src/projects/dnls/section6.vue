@@ -94,7 +94,7 @@
     text-align: left;
     padding: 0 5vw;
     font-size: 1.8vw;
-    font-weight: bold;
+    font-weight: 600;
     color:#000;
   }
   .slides-subtitle {
@@ -105,6 +105,7 @@
     font-size: 1vw;
     line-height: 1.5;
     color:#000;
+    font-weight: 600;
   }
 
   .slides {
@@ -134,7 +135,7 @@
         left: 0;
         top: -5.5vw;
         text-align: left;
-        font-weight: bold;
+        font-weight: 600;
         display: none;
       }
       .title {
@@ -146,7 +147,7 @@
         left: 4.5vw;
         top: -4.4vw;
         text-align: left;
-        font-weight: bold;
+        font-weight: 600;
       }
 
       .caption {
@@ -154,7 +155,7 @@
         background: #000;
         position: absolute;
         font-size: 1.2vw;
-        font-weight: bold;
+        font-weight: 600;
         color: #fff;
         right: -1.5vw;
         bottom: 1vw;
@@ -180,7 +181,7 @@
       text-align: left;
       padding: 0 10vw;
       font-size: 28px;
-      font-weight: bold;
+      font-weight: 600;
       padding-top: 60px;
     }
     .slides-subtitle {
@@ -224,7 +225,7 @@
               left: 0;
               top: -4vw;
               text-align: left;
-              font-weight: bold;
+              font-weight: 600;
               font-family: "Noto Serif TC", sans-serif;
               display: none;
             }
@@ -237,7 +238,7 @@
               left: 12vw;
               top: -9.2vw;
               text-align: left;
-              font-weight: bold;
+              font-weight: 600;
             }
 
             .caption {
@@ -245,7 +246,7 @@
               background: #000;
               position: absolute;
               font-size: 14px;
-              font-weight: bold;
+              font-weight: 600;
               color: #fff;
               right: 0;
               bottom: -5vw;

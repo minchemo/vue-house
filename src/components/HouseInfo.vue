@@ -229,7 +229,7 @@ export default {
         .title {
           font-size: 32px;
           margin-bottom: 20px;
-          font-weight: bold;
+          font-weight: 600;
           color: $house_title_color;
           font-family: $family3;
           text-align: left;

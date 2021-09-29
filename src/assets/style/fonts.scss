@@ -19,7 +19,7 @@ h3,
 label {
     font-family: Arial, 'Noto Serif TC', sans-serif;
     margin: 0;
-    //font-weight: bold;
+    //font-weight: 300;
 }
 
 p {
@@ -47,13 +47,13 @@ p {
 @font-face {
     font-family: 'TimesNewRoman';
     src: url('~@/assets/font/TimesNewRoman.ttf') format('truetype'), url('~@/assets/font/TimesNewRoman.ttf');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: Impact;
     src: url('~@/assets/font/Impact.ttf') format('truetype'), url('~@/assets/font/Impact.ttf');
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal;
 }

@@ -163,7 +163,7 @@
 
   .title {
     font-size: 50px;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 5px;
     text-align: left;
     color: #ffffff;

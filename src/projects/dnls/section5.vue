@@ -31,7 +31,7 @@
     }
     .view-title {
       font-size: 2vw;
-      font-weight: bold;
+      font-weight: 900;
       text-align: left;
       padding: 5vw 5vw 3vw 0;
       position: relative;
@@ -68,7 +68,7 @@
       }
       .view-title {
         font-size: 30px;
-        font-weight: bold;
+        font-weight: 900;
         text-align: left;
         padding-top: 10vh;
         position: relative;

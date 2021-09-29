@@ -403,7 +403,7 @@ export default {
     width: auto;
     padding-top: 20px;
     padding-bottom: 1vw;
-    font-weight: bold;
+    font-weight: 900;
     line-height: 1.3;
     font-size: 1.5vw;
     text-align: center;
@@ -439,7 +439,7 @@ export default {
     margin-bottom: 40px;
     padding-bottom: 18px;
     line-height: 1.5;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .order {
@@ -513,7 +513,7 @@ export default {
     label {
       width: 5vw;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
       opacity: 0.8;
       color: $order_input_label_color;
       text-align: left;
@@ -635,7 +635,7 @@ export default {
     .hint {
       width: calc(100vw * 334 / 375);
       font-size: 12px;
-      font-weight: normal;
+      font-weight: 300;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.2;

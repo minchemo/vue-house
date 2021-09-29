@@ -88,7 +88,7 @@
 
   .view-title {
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 900;
     margin-top: -5px;
     margin-bottom: 10px;
     text-align: center;
@@ -140,14 +140,14 @@
 
     .view-title {
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 900;
       text-align: center;
       color: #ffffff;
     }
 
     .view-subtitle {
       font-size: 18px;
-      font-weight: 300;
+      font-weight: 600;
       line-height: 1.67;
       letter-spacing: 1.8px;
       text-align: center;

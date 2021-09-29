@@ -102,7 +102,7 @@
       .caption {
         position: absolute;
         font-size: 1.5vw;
-        font-weight: bold;
+        font-weight: 600;
         color: #fff;
         right: 1vw;
         bottom: 1vw;
@@ -157,7 +157,7 @@
             .caption {
               position: absolute;
               font-size: 24px;
-              font-weight: bold;
+              font-weight: 600;
               color: #fff;
               right: 24px;
               bottom: 16px;

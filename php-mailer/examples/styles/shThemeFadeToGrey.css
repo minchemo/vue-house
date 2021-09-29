@@ -24,8 +24,8 @@
 .syntaxhighlighter .value{color:#009900 !important;}
 .syntaxhighlighter .functions{color:#aaaaaa !important;}
 .syntaxhighlighter .constants{color:#96daff !important;}
-.syntaxhighlighter .script{font-weight:bold !important;color:#d01d33 !important;background-color:none !important;}
+.syntaxhighlighter .script{font-weight:600 !important;color:#d01d33 !important;background-color:none !important;}
 .syntaxhighlighter .color1,.syntaxhighlighter .color1 a{color:#ffc074 !important;}
 .syntaxhighlighter .color2,.syntaxhighlighter .color2 a{color:#4a8cdb !important;}
 .syntaxhighlighter .color3,.syntaxhighlighter .color3 a{color:#96daff !important;}
-.syntaxhighlighter .functions{font-weight:bold !important;}
+.syntaxhighlighter .functions{font-weight:600 !important;}

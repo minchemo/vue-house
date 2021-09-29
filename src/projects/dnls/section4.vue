@@ -36,7 +36,7 @@
   background-image: url("~@/assets/img/bg.jpg");
   .timeline-title {
     font-size: 2vw;
-    font-weight: bold;
+    font-weight: 900;
     text-align: left;
     padding: 5vw 5vw 0 5vw;
     position: relative;
@@ -125,7 +125,7 @@
           .year {
             color: #b0272d;
             font-size: 1.5vw;
-            font-weight: bold;
+            font-weight: 600;
             opacity: 0;
             transition: all 1s;
 
@@ -136,7 +136,7 @@
           .title {
             color: #000;
             font-size: 1vw;
-            font-weight: bold;
+            font-weight: 900;
             opacity: 0;
             transition: all 1s;
 
@@ -147,7 +147,7 @@
           .subtitle {
             color: #000;
             font-size: 0.8vw;
-            font-weight: bold;
+            font-weight: 900;
             opacity: 0;
             transition: all 1s;
 
@@ -235,7 +235,7 @@
 
     .timeline-title {
       font-size: 30px;
-      font-weight: bold;
+      font-weight: 900;
       text-align: left;
       padding-top: 10vh;
       position: relative;

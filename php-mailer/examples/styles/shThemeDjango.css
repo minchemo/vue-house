@@ -24,9 +24,9 @@
 .syntaxhighlighter .value{color:#f7e741 !important;}
 .syntaxhighlighter .functions{color:#ffaa3e !important;}
 .syntaxhighlighter .constants{color:#e0e8ff !important;}
-.syntaxhighlighter .script{font-weight:bold !important;color:#96dd3b !important;background-color:none !important;}
+.syntaxhighlighter .script{font-weight:600 !important;color:#96dd3b !important;background-color:none !important;}
 .syntaxhighlighter .color1,.syntaxhighlighter .color1 a{color:#eb939a !important;}
 .syntaxhighlighter .color2,.syntaxhighlighter .color2 a{color:#91bb9e !important;}
 .syntaxhighlighter .color3,.syntaxhighlighter .color3 a{color:#edef7d !important;}
 .syntaxhighlighter .comments{font-style:italic !important;}
-.syntaxhighlighter .keyword{font-weight:bold !important;}
+.syntaxhighlighter .keyword{font-weight:600 !important;}
