@@ -135,7 +135,7 @@ export default {
       };
       const imageLoaded = () => {
         imagesLoaded++;
-        if (imagesLoaded > totalImages * 0.5) {
+        if (imagesLoaded > totalImages * 0.75) {
           allImagesLoaded();
         }
       };
