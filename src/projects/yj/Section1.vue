@@ -379,7 +379,8 @@
         </div>
       </div>
       <div class="item item1" data-title="title2">
-        <img class="item-img" src="./s1/item1-8.jpg" alt="" />
+        <img class="item-img" src="./s1/item1-8.jpg" alt="" v-if="!isMobile" />
+        <img class="item-img" src="./s1/item1-8m.jpg" alt="" v-if="isMobile" />
         <img class="item-img" src="./s1/item1-1.jpg" alt="" />
         <img class="item-img" src="./s1/item1-4.jpg" alt="" />
         <img class="item-img" src="./s1/item1-2.jpg" alt="" />
@@ -769,10 +770,12 @@
       </div>
       <div class="item item4" data-title="title5">
         <img class="item-img" src="./s1/item4-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item4-3.jpg" alt="" />
+        <img class="item-img" src="./s1/item4-3.jpg" alt="" v-if="!isMobile"  />
+        <img class="item-img" src="./s1/item4-3m.jpg" alt="" v-if="isMobile" />
         <img class="item-img" src="./s1/item4-2.jpg" alt="" />
         <img class="item-img" src="./s1/item4-6.jpg" alt="" />
-        <img class="item-img" src="./s1/item4-5.jpg" alt="" />
+        <img class="item-img" src="./s1/item4-5.jpg" alt="" v-if="!isMobile" />
+        <img class="item-img" src="./s1/item4-5m.jpg" alt="" v-if="isMobile" />
         <img
           v-if="!isMobile"
           class="item-img-mask"
@@ -869,8 +872,10 @@
       </div>
       <div class="item item5">
         <img class="item-img" src="./s1/item5-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item5-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item5-3.jpg" alt="" />
+        <img class="item-img" src="./s1/item5-2.jpg" alt="" v-if="!isMobile" />
+        <img class="item-img" src="./s1/item5-2m.jpg" alt="" v-if="isMobile" />
+        <img class="item-img" src="./s1/item5-3.jpg" alt="" v-if="!isMobile" />
+        <img class="item-img" src="./s1/item5-3m.jpg" alt="" v-if="isMobile" />
         <img class="item-img" src="./s1/item5-4.jpg" alt="" />
         <img class="item-img-mask" src="./s1/item5-mask.png" alt="" />
       </div>
