@@ -125,10 +125,10 @@
         <span>邊間好光景 近享副都心</span>
         塭仔圳｜4併2~3房
       </div>
-      <img class="s1bg" src="./s1/s1bg.png" alt="s1bg" v-if="!isMobile" />
-      <img class="s1bg" src="./s1/s1bg_m.png" alt="s1bg_m" v-if="isMobile" />
+      <img loading="lazy" class="s1bg" src="./s1/s1bg.png" alt="s1bg" v-if="!isMobile" />
+      <img loading="lazy" class="s1bg" src="./s1/s1bg_m.png" alt="s1bg_m" v-if="isMobile" />
 
-      <img
+      <img loading="lazy"
         class="cloud"
         data-aos="fade-left"
         data-aos-delay="400"
@@ -136,7 +136,7 @@
         src="./s1/cloud-1.png"
         alt=""
       />
-      <img
+      <img loading="lazy"
         v-if="isMobile"
         class="cloud-2"
         data-aos="fade-left"
@@ -148,26 +148,26 @@
 
       <div class="build">
         <div class="building-3">
-          <img src="./s1/building-x.png" alt="" />
+          <img loading="lazy" src="./s1/building-x.png" alt="" />
         </div>
         <div class="train">
-          <img src="./s1/train_s.png" alt="" />
+          <img loading="lazy" src="./s1/train_s.png" alt="" />
         </div>
       </div>
     </div>
 
     <div class="main-2">
       <div class="item item0">
-        <img v-if="isMobile" class="movehere" src="./s1/movehere.png" alt="" />
-        <img v-if="!isMobile" class="item-img" src="./s1/a1.jpg" alt="" />
-        <img v-if="isMobile" class="item-img" src="./s1/a1-mo.jpg" alt="" />
-        <img
+        <img loading="lazy" v-if="isMobile" class="movehere" src="./s1/movehere.png" alt="" />
+        <img loading="lazy" v-if="!isMobile" class="item-img" src="./s1/a1.jpg" alt="" />
+        <img loading="lazy" v-if="isMobile" class="item-img" src="./s1/a1-mo.jpg" alt="" />
+        <img loading="lazy"
           v-if="!isMobile"
           class="item-img-mask"
           src="./s1/item0-mask.png"
           alt=""
         />
-        <img
+        <img loading="lazy"
           v-if="isMobile"
           class="item-img-mask"
           src="./s1/item0-mask-mo.png"
@@ -282,7 +282,7 @@
               <div class="photos-arrow-prev"></div>
             </div>
           </div>
-          <!--  <img class="building-5" src="./s1/building-5.png" alt="" /> -->
+          <!--  <img loading="lazy" class="building-5" src="./s1/building-5.png" alt="" /> -->
         </div>
         <div class="title2">
           <svg
@@ -379,19 +379,19 @@
         </div>
       </div>
       <div class="item item1" data-title="title2">
-        <img class="item-img" src="./s1/item1-8.jpg" alt="" v-if="!isMobile" />
-        <img class="item-img" src="./s1/item1-8m.jpg" alt="" v-if="isMobile" />
-        <img class="item-img" src="./s1/item1-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-4.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item1-6.jpg" alt="" />
-        <img
+        <img loading="lazy" class="item-img" src="./s1/item1-8.jpg" alt="" v-if="!isMobile" />
+        <img loading="lazy" class="item-img" src="./s1/item1-8m.jpg" alt="" v-if="isMobile" />
+        <img loading="lazy" class="item-img" src="./s1/item1-1.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item1-4.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item1-2.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item1-6.jpg" alt="" />
+        <img loading="lazy"
           v-if="!isMobile"
           class="item-img-mask"
           src="./s1/item1-mask.png"
           alt=""
         />
-        <img
+        <img loading="lazy"
           v-if="isMobile"
           class="item-img-mask"
           src="./s1/item1-mask-mo.png"
@@ -519,17 +519,17 @@
         </div>
       </div>
       <div class="item item2">
-        <img class="item-img" src="./s1/item2-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item2-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item2-3.jpg" alt="" />
-        <img class="item-img" src="./s1/item2-4.jpg" alt="" />
-        <img
+        <img loading="lazy" class="item-img" src="./s1/item2-1.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item2-2.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item2-3.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item2-4.jpg" alt="" />
+        <img loading="lazy"
           v-if="!isMobile"
           class="item-img-mask"
           src="./s1/item2-mask.png"
           alt=""
         />
-        <img
+        <img loading="lazy"
           v-if="isMobile"
           class="item-img-mask"
           src="./s1/item2-mask-mo.png"
@@ -628,16 +628,16 @@
         </div>
       </div>
       <div class="item item3">
-        <img class="item-img" src="./s1/item3-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item3-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item3-3.jpg" alt="" />
-        <img
+        <img loading="lazy" class="item-img" src="./s1/item3-1.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item3-2.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item3-3.jpg" alt="" />
+        <img loading="lazy"
           v-if="!isMobile"
           class="item-img-mask"
           src="./s1/item3-mask.png"
           alt=""
         />
-        <img
+        <img loading="lazy"
           v-if="isMobile"
           class="item-img-mask"
           src="./s1/item3-mask-mo.png"
@@ -769,20 +769,20 @@
         </div>
       </div>
       <div class="item item4" data-title="title5">
-        <img class="item-img" src="./s1/item4-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item4-3.jpg" alt="" v-if="!isMobile"  />
-        <img class="item-img" src="./s1/item4-3m.jpg" alt="" v-if="isMobile" />
-        <img class="item-img" src="./s1/item4-2.jpg" alt="" />
-        <img class="item-img" src="./s1/item4-6.jpg" alt="" />
-        <img class="item-img" src="./s1/item4-5.jpg" alt="" v-if="!isMobile" />
-        <img class="item-img" src="./s1/item4-5m.jpg" alt="" v-if="isMobile" />
-        <img
+        <img loading="lazy" class="item-img" src="./s1/item4-1.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item4-3.jpg" alt="" v-if="!isMobile"  />
+        <img loading="lazy" class="item-img" src="./s1/item4-3m.jpg" alt="" v-if="isMobile" />
+        <img loading="lazy" class="item-img" src="./s1/item4-2.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item4-6.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item4-5.jpg" alt="" v-if="!isMobile" />
+        <img loading="lazy" class="item-img" src="./s1/item4-5m.jpg" alt="" v-if="isMobile" />
+        <img loading="lazy"
           v-if="!isMobile"
           class="item-img-mask"
           src="./s1/item4-mask.png"
           alt=""
         />
-        <img
+        <img loading="lazy"
           v-if="isMobile"
           class="item-img-mask"
           src="./s1/item4-mask-mo.png"
@@ -871,13 +871,13 @@
         </div>
       </div>
       <div class="item item5">
-        <img class="item-img" src="./s1/item5-1.jpg" alt="" />
-        <img class="item-img" src="./s1/item5-2.jpg" alt="" v-if="!isMobile" />
-        <img class="item-img" src="./s1/item5-2m.jpg" alt="" v-if="isMobile" />
-        <img class="item-img" src="./s1/item5-3.jpg" alt="" v-if="!isMobile" />
-        <img class="item-img" src="./s1/item5-3m.jpg" alt="" v-if="isMobile" />
-        <img class="item-img" src="./s1/item5-4.jpg" alt="" />
-        <img class="item-img-mask" src="./s1/item5-mask.png" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item5-1.jpg" alt="" />
+        <img loading="lazy" class="item-img" src="./s1/item5-2.jpg" alt="" v-if="!isMobile" />
+        <img loading="lazy" class="item-img" src="./s1/item5-2m.jpg" alt="" v-if="isMobile" />
+        <img loading="lazy" class="item-img" src="./s1/item5-3.jpg" alt="" v-if="!isMobile" />
+        <img loading="lazy" class="item-img" src="./s1/item5-3m.jpg" alt="" v-if="isMobile" />
+        <img loading="lazy" class="item-img" src="./s1/item5-4.jpg" alt="" />
+        <img loading="lazy" class="item-img-mask" src="./s1/item5-mask.png" alt="" />
       </div>
 
        <svg
@@ -963,7 +963,7 @@
             :key="item.id"
             :style="{ backgroundImage: `url(${item.imgUrl})` }"
           >
-            <img :src="item.imgUrl" alt="" />
+            <img loading="lazy" :src="item.imgUrl" alt="" />
           </swiper-slide>
 
           <div
@@ -979,13 +979,13 @@
         </swiper>
       </div>
       <div class="bg">
-        <img v-if="!isMobile" src="./s1/bg-2.png" alt="" />
-        <img v-if="isMobile" src="./s1/bg-mo.png" alt="" />
+        <img loading="lazy" v-if="!isMobile" src="./s1/bg-2.png" alt="" />
+        <img loading="lazy" v-if="isMobile" src="./s1/bg-mo.png" alt="" />
       </div>
     </div>
 
     <div v-if="isMobile" class="zoom">
-      <img src="" alt="" />
+      <img loading="lazy" src="" alt="" />
       <div class="close">
         <font-awesome-icon icon="times" />
       </div>
@@ -2271,7 +2271,7 @@ export default {
               overflow-y: hidden;
               overflow-x: scroll;
               ">
-                <img class="bigplan" style="${imgSize}" src="${imgSrc}">
+                <img loading="lazy" class="bigplan" style="${imgSize}" src="${imgSrc}">
               </div>
             `;
         } else if (index == 1) {
@@ -2286,7 +2286,7 @@ export default {
               mask-size: cover;
               -webkit-mask-size: cover;
               ">
-                <img style="visibility:hidden;${imgSize}" src="${imgSrc}">
+                <img loading="lazy" style="visibility:hidden;${imgSize}" src="${imgSrc}">
               </div>
             `;
         } else {
@@ -2297,7 +2297,7 @@ export default {
               background-image:url(${imgSrc});
               background-size: cover;
               ">
-                <img style="visibility:hidden;${imgSize}" src="${imgSrc}">
+                <img loading="lazy" style="visibility:hidden;${imgSize}" src="${imgSrc}">
               </div>
             `;
         }
