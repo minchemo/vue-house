@@ -2,7 +2,7 @@
   <div class="section1">
     <div class="main">
       <div class="cover">
-        <img
+        <img loading="lazy"
           v-if="!isMobile"
           data-aos="fade-up"
           data-aos-duration="3000"
@@ -11,7 +11,7 @@
           :alt="info.caseName"
           srcset=""
         />
-        <img
+        <img loading="lazy"
           v-else
           data-aos="fade-up"
           data-aos-duration="3000"
@@ -22,7 +22,7 @@
         />
       </div>
       <div class="title-box">
-        <img
+        <img loading="lazy"
           class="logo"
           src="~@/projects/dnls/s1/logo.png"
           :alt="info.caseName"
@@ -31,7 +31,7 @@
           data-aos-duration="1500"
         />
         <div class="title">
-          <img
+          <img loading="lazy"
             src="~@/projects/dnls/s1/title.png"
             :alt="info.caseName"
             srcset=""

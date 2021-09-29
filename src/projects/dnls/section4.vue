@@ -20,7 +20,7 @@
             <div class="subtitle">{{ timeline.subtitle }}</div>
           </div>
 
-          <img class="cover" :src="timeline.img" alt="" srcset="" />
+          <img loading="lazy" class="cover" :src="timeline.img" alt="" srcset="" />
         </div>
       </div>
     </div>

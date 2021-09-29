@@ -2,7 +2,7 @@
   <div class="section2">
     <div class="main">
       <div class="content-box">
-        <img
+        <img loading="lazy"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="400"
@@ -12,7 +12,7 @@
           :alt="info.caseName"
           srcset=""
         />
-        <img
+        <img loading="lazy"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="400"
@@ -22,7 +22,7 @@
           :alt="info.caseName"
           srcset=""
         />
-        <img
+        <img loading="lazy"
           data-aos="flip-up"
           data-aos-duration="1000"
           data-aos-delay="400"
@@ -32,7 +32,7 @@
           :alt="info.caseName"
           srcset=""
         />
-        <img
+        <img loading="lazy"
           data-aos="flip-up"
           data-aos-duration="1000"
           data-aos-delay="400"
@@ -42,7 +42,7 @@
           :alt="info.caseName"
           srcset=""
         />
-        <img
+        <img loading="lazy"
           data-aos="fade"
           data-aos-duration="1000"
           data-aos-delay="400"
@@ -52,7 +52,7 @@
           :alt="info.caseName"
           srcset=""
         />
-        <img
+        <img loading="lazy"
           data-aos="fade"
           data-aos-duration="1000"
           data-aos-delay="400"
@@ -64,7 +64,7 @@
         />
       </div>
       <div class="cover">
-        <img
+        <img loading="lazy"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="400"
@@ -73,7 +73,7 @@
           :alt="info.caseName"
           srcset=""
         />
-        <img
+        <img loading="lazy"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="400"
