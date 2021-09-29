@@ -32,7 +32,7 @@
         />
         <div class="title">
           <img
-            src="~@/projects/dnls/s1/title.svg"
+            src="~@/projects/dnls/s1/title.png"
             :alt="info.caseName"
             srcset=""
             data-aos="fade-up"

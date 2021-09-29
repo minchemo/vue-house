@@ -28,7 +28,7 @@
           data-aos-delay="400"
           class="title"
           v-if="!isMobile"
-          src="~@/projects/dnls/s2/title.svg"
+          src="~@/projects/dnls/s2/title.png"
           :alt="info.caseName"
           srcset=""
         />
@@ -38,7 +38,7 @@
           data-aos-delay="400"
           class="title"
           v-else
-          src="~@/projects/dnls/s2/title_mo.svg"
+          src="~@/projects/dnls/s2/title_mo.png"
           :alt="info.caseName"
           srcset=""
         />
@@ -48,7 +48,7 @@
           data-aos-delay="400"
           class="content"
           v-if="!isMobile"
-          src="~@/projects/dnls/s2/content.svg"
+          src="~@/projects/dnls/s2/content.png"
           :alt="info.caseName"
           srcset=""
         />
@@ -58,7 +58,7 @@
           data-aos-delay="400"
           class="content"
           v-else
-          src="~@/projects/dnls/s2/content_mo.svg"
+          src="~@/projects/dnls/s2/content_mo.png"
           :alt="info.caseName"
           srcset=""
         />
