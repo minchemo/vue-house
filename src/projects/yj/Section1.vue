@@ -148,7 +148,7 @@
 
       <div class="build">
         <div class="building-3">
-          <img loading="lazy" src="./s1/building-x.png" alt="" />
+          <img src="./s1/building-x.png" alt="" />
         </div>
         <div class="train">
           <img loading="lazy" src="./s1/train_s.png" alt="" />
@@ -978,10 +978,10 @@
           ></div>
         </swiper>
       </div>
-      <div class="bg">
+      <!--div class="bg">
         <img loading="lazy" v-if="!isMobile" src="./s1/bg-2.png" alt="" />
         <img loading="lazy" v-if="isMobile" src="./s1/bg-mo.png" alt="" />
-      </div>
+      </div-->
     </div>
 
     <div v-if="isMobile" class="zoom">

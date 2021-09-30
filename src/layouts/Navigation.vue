@@ -3,12 +3,12 @@
     <div class="layout-container-fluid nav-container">
       <div class="layout-container nav-container">
         <div class="nav">
-          <img
+          <!--img
             class="logo"
             src="@/assets/img/nav-logo.png"
             alt
             v-scroll-to="{ element: `#section1` }"
-          />
+          /-->
           <div class="menu" @click="toggleSidebar">
             <!-- font-awesome-icon icon="bars" / -->
           </div>
