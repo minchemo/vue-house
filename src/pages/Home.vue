@@ -2568,7 +2568,7 @@
       </div>
       <div class="right">
         <div>
-          <img
+          <img loading="lazy"
             data-aos="fade-left"
             data-aos-duration="2000"
             data-aos-delay="400"
@@ -2582,7 +2582,7 @@
     <div class="main" v-if="isMobile">
       <div class="top1">
         <div>
-          <img
+          <img loading="lazy"
             data-aos="fade-left"
             data-aos-duration="2000"
             data-aos-delay="400"
@@ -4043,13 +4043,13 @@
       data-aos-delay="500"
     >
       <a href=""
-        ><img
+        ><img loading="lazy"
           src="./texture/section-1/r-button-1.png"
           v-scroll-to="{ element: `#contact`, offset: 0 }"
           alt="立即預約"
       /></a>
       <a href=""
-        ><img
+        ><img loading="lazy"
           src="./texture/section-1/r-button-2.png"
           alt="立即來電"
           v-scroll-to="{ element: `#section-bottom`, offset: 0 }"
@@ -4057,7 +4057,7 @@
     </div>
     <!-- S1延展 -->
     <div class="s1-ext">
-      <img src="./texture/section-swiper/s2-1-ext.png" alt="" />
+      <img loading="lazy" src="./texture/section-swiper/s2-1-ext.png" alt="" />
     </div>
     <!--滑動區塊-->
     <div class="section section-swiper">
@@ -4083,7 +4083,7 @@
       </div>
       <div class="swiper-container">
         <div class="feature-title text-align-center feature-title1">
-          <img
+          <img loading="lazy"
             src="./texture/section-swiper/s3-title.png"
             alt=""
             v-if="!isMobile"
@@ -4092,8 +4092,8 @@
         </div>
         <!--
         <div class="swipe-here">
-          <img src="./texture/swipe.png" alt="" v-if="!isMobile" />
-          <img src="./mobile-texture/swipe.png" alt="" v-else />
+          <img loading="lazy" src="./texture/swipe.png" alt="" v-if="!isMobile" />
+          <img loading="lazy" src="./mobile-texture/swipe.png" alt="" v-else />
         </div>  -->
         <div
           class="swiper-wrapper text-align-center"
@@ -4102,19 +4102,19 @@
           v-if="!isMobile"
         >
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s4-1.png" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s4-1.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s4-2.png" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s4-2.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s4-3.png" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s4-3.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s4-4.png" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s4-4.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s4-5.png" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s4-5.jpg" alt="" />
           </div>
         </div>
         <div
@@ -4124,19 +4124,19 @@
           v-else
         >
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s4-1.png" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s4-1.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s4-2.png" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s4-2.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s4-3.png" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s4-3.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s4-4.png" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s4-4.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s4-5.png" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s4-5.jpg" alt="" />
           </div>
         </div>
         <div class="swiper-pagination text-align-left"></div>
@@ -4165,7 +4165,7 @@
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          <img
+          <img loading="lazy"
             src="./texture/section-swiper/s4-title.png"
             alt=""
             v-if="!isMobile"
@@ -4174,8 +4174,8 @@
         </div>
         <!--
         <div class="swipe-here">
-          <img src="./texture/swipe.png" alt="" v-if="!isMobile" />
-          <img src="./mobile-texture/swipe.png" alt="" v-else />
+          <img loading="lazy" src="./texture/swipe.png" alt="" v-if="!isMobile" />
+          <img loading="lazy" src="./mobile-texture/swipe.png" alt="" v-else />
         </div>  -->
         <div
           class="swiper-wrapper text-align-center"
@@ -4184,10 +4184,10 @@
           v-if="!isMobile"
         >
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s5-1.jpg" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s5-1.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s5-2.jpg" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s5-2.jpg" alt="" />
           </div>
         </div>
         <div
@@ -4197,10 +4197,10 @@
           v-else
         >
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s5-1.jpg" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s5-1.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s5-2.jpg" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s5-2.jpg" alt="" />
           </div>
         </div>
         <div class="swiper-pagination text-align-right"></div>
@@ -4224,7 +4224,7 @@
       </div>
       <div class="swiper-container">
         <div class="feature-title text-align-center feature-title3">
-          <img
+          <img loading="lazy"
             src="./texture/section-swiper/s5-title.png"
             alt=""
             v-if="!isMobile"
@@ -4233,8 +4233,8 @@
         </div>
         <!--
         <div class="swipe-here">
-          <img src="./texture/swipe.png" alt="" v-if="!isMobile" />
-          <img src="./mobile-texture/swipe.png" alt="" v-else />
+          <img loading="lazy" src="./texture/swipe.png" alt="" v-if="!isMobile" />
+          <img loading="lazy" src="./mobile-texture/swipe.png" alt="" v-else />
         </div>  -->
         <div
           class="swiper-wrapper text-align-center"
@@ -4243,19 +4243,19 @@
           v-if="!isMobile"
         >
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s3-1.jpg" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s3-1.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s3-2.jpg" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s3-2.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s3-3.jpg" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s3-3.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s3-4.jpg" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s3-4.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./texture/section-swiper/s3-5.jpg" alt="" />
+            <img loading="lazy" src="./texture/section-swiper/s3-5.jpg" alt="" />
           </div>
         </div>
         <div
@@ -4265,19 +4265,19 @@
           v-else
         >
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s3-1.jpg" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s3-1.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s3-2.jpg" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s3-2.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s3-3.jpg" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s3-3.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s3-4.jpg" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s3-4.jpg" alt="" />
           </div>
           <div class="swiper-slide">
-            <img src="./mobile-texture/section-swiper/s3-5.jpg" alt="" />
+            <img loading="lazy" src="./mobile-texture/section-swiper/s3-5.jpg" alt="" />
           </div>
         </div>
         <div class="swiper-pagination text-align-left"></div>
@@ -4307,8 +4307,6 @@
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Playball&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("./css/style.css");
 @import url("./css/swiper-bundle.min.css");
 </style>

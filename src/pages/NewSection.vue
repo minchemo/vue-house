@@ -409,11 +409,11 @@ export default {
           f_slides: [
             {
               s_caption: "日本住友理工業績－台北大直美福大飯店",
-              s_image: require("../pages/new-section/5.團隊/1.日本住友理工/日本住友理工業績－台北大直美福大飯店.jpg"),
+              s_image: require("../pages/new-section/5.團隊/1.日本住友理工/01.jpg"),
             },
             {
               s_caption: "日本住友理工業績－海基會",
-              s_image: require("../pages/new-section/5.團隊/1.日本住友理工/日本住友理工業績－海基會.jpg"),
+              s_image: require("../pages/new-section/5.團隊/1.日本住友理工/02.jpg"),
             },
           ],
         },
@@ -425,27 +425,27 @@ export default {
           f_slides: [
             {
               s_caption: "曾聰憲建築師",
-              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/1.曾聰憲建築師.jpg"),
+              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/01.jpg"),
             },
             {
               s_caption: "曾聰憲建築師實績-麗寶微笑莊園",
-              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/2.曾聰憲建築師實績-麗寶微笑莊園.jpg"),
+              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/02.jpg"),
             },
             {
               s_caption: "曾聰憲建築師實績-廣春誠 春城韻",
-              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/3.曾聰憲建築師實績-廣春誠春城韻.jpg"),
+              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/03.jpg"),
             },
             {
               s_caption: "曾聰憲建築師實績-廣春誠 廣天下",
-              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/4.曾聰憲建築師實績-廣春誠廣天下.jpg"),
+              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/04.jpg"),
             },
             {
               s_caption: "曾聰憲建築師實績-廣春誠 御春城",
-              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/5.曾聰憲建築師實績-廣春誠御春城.jpg"),
+              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/05.jpg"),
             },
             {
               s_caption: "曾聰憲建築師實績-廣春誠 田園",
-              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/6.曾聰憲建築師實績-廣春誠田園.jpg"),
+              s_image: require("../pages/new-section/5.團隊/2.曾聰憲建築師事務所/06.jpg"),
             },
           ],
         },
@@ -458,35 +458,35 @@ export default {
             {
               s_caption:
                 "如榆建築及設計事務所 陳昫吟建築師（左）劉宇傑建築師（右）",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/1.如榆建築及設計事務所陳昫吟建築師（左）劉宇傑建築師（右）.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/01.jpg"),
             },
             {
               s_caption: "如榆建築及設計事務所實績-東騰越",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/2.如榆建築及設計事務所實績-東騰越.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/02.jpg"),
             },
             {
               s_caption: "如榆建築及設計事務所實績-高過案",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/3.如榆建築及設計事務所實績-高過案.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/03.jpg"),
             },
             {
               s_caption: "如榆建築及設計事務所實績-蒔璞",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/4.如榆建築及設計事務所實績-蒔璞.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/04.jpg"),
             },
             {
               s_caption: "如榆建築及設計事務所實績-至善VILLA",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/5.如榆建築及設計事務所實績-至善VILLA.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/05.jpg"),
             },
             {
               s_caption: "如榆建築及設計事務所公設實績-東騰越",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/6.如榆建築及設計事務所公設實績-東騰越.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/06.jpg"),
             },
             {
               s_caption: "如榆建築及設計事務所公設實績-東騰越",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/7.如榆建築及設計事務所公設實績-東騰越.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/07.jpg"),
             },
             {
               s_caption: "如榆建築及設計事務所公設實績-異雲書屋",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/8.如榆建築及設計事務所公設實績-異雲書屋.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/08.jpg"),
             },
             /*
             {
@@ -496,11 +496,11 @@ export default {
             */
             {
               s_caption: "如榆建築及設計事務所公設實績-W Hotel WOOBAR",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/10.如榆建築及設計事務所公設實績-WHotelWOOBAR.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/09.jpg"),
             },
             {
               s_caption: "如榆建築及設計事務所公設實績-亞都LIZ",
-              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/11.如榆建築及設計事務所公設實績-亞都LIZ.jpg"),
+              s_image: require("../pages/new-section/5.團隊/3.如榆建築_設計事務所/10.jpg"),
             },
           /*  {
               s_caption: "如榆建築及設計事務所公設實績-亞都LIZ",
@@ -516,19 +516,19 @@ export default {
           f_slides: [
             {
               s_caption: "邑埕設計業績－佳泰 花田囍市",
-              s_image: require("../pages/new-section/5.團隊/4.邑埕景觀設計/1.邑埕設計業績－佳泰花田囍市.jpg"),
+              s_image: require("../pages/new-section/5.團隊/4.邑埕景觀設計/01.jpg"),
             },
             {
               s_caption: "邑埕設計業績－佳泰 花田囍市",
-              s_image: require("../pages/new-section/5.團隊/4.邑埕景觀設計/2.邑埕設計業績－佳泰花田囍市.jpg"),
+              s_image: require("../pages/new-section/5.團隊/4.邑埕景觀設計/02.jpg"),
             },
             {
               s_caption: "邑埕設計業績－佳泰 花田囍市",
-              s_image: require("../pages/new-section/5.團隊/4.邑埕景觀設計/3.邑埕設計業績－佳泰花田囍市.jpg"),
+              s_image: require("../pages/new-section/5.團隊/4.邑埕景觀設計/03.jpg"),
             },
             {
               s_caption: "邑埕設計業績－佳泰 花田囍市",
-              s_image: require("../pages/new-section/5.團隊/4.邑埕景觀設計/4.邑埕設計業績－佳泰花田囍市.jpg"),
+              s_image: require("../pages/new-section/5.團隊/4.邑埕景觀設計/04.jpg"),
             },
           ],
         },
@@ -540,27 +540,27 @@ export default {
           f_slides: [
             {
               s_caption: "伯克錸物業服務管理業績－台北 元利和平大院",
-              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/1.伯克錸物業服務管理業績－台北元利和平大院.jpg"),
+              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/01.jpg"),
             },
             {
               s_caption: "伯克錸物業服務管理業績－台北 台北一號院",
-              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/2.伯克錸物業服務管理業績－台北台北一號院.jpg"),
+              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/02.jpg"),
             },
             {
               s_caption: "伯克錸物業服務管理業績－台北 冠德信義",
-              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/3.伯克錸物業服務管理業績－台北冠德信義.jpg"),
+              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/03.jpg"),
             },
             {
               s_caption: "伯克錸物業服務管理業績－台南 凌波揚",
-              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/4.伯克錸物業服務管理業績－台南凌波揚.jpg"),
+              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/04.jpg"),
             },
             {
               s_caption: "伯克錸物業服務管理業績－台南 富立 耘非凡",
-              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/5.伯克錸物業服務管理業績－台南富立耘非凡.jpg"),
+              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/05.jpg"),
             },
             {
               s_caption: "伯克錸物業服務管理業績－台南 遠奏曲",
-              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/6.伯克錸物業服務管理業績－台南遠奏曲.jpg"),
+              s_image: require("../pages/new-section/5.團隊/5.伯克錸物業服務/06.jpg"),
             },
           ],
         },
