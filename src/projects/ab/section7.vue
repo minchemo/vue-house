@@ -47,7 +47,7 @@
             @click="changeColor(0, '石紋灰')"
             v-bind:class="{ active: typeColor[0] == '石紋灰' }"
           >
-            <img src="~@/projects/ab/s7/客廳/石紋灰.png" alt="" />
+            <img  src="~@/projects/ab/s7/客廳/石紋灰.png" alt="" />
             <p>石紋灰</p>
           </div>
           <div
@@ -55,7 +55,7 @@
             @click="changeColor(0, '書卷黃')"
             v-bind:class="{ active: typeColor[0] == '書卷黃' }"
           >
-            <img src="~@/projects/ab/s7/客廳/書卷黃.png" alt="" />
+            <img  src="~@/projects/ab/s7/客廳/書卷黃.png" alt="" />
             <p>書卷黃</p>
           </div>
           <div
@@ -63,7 +63,7 @@
             @click="changeColor(0, '清水灰')"
             v-bind:class="{ active: typeColor[0] == '清水灰' }"
           >
-            <img src="~@/projects/ab/s7/客廳/清水灰.png" alt="" />
+            <img  src="~@/projects/ab/s7/客廳/清水灰.png" alt="" />
             <p>清水灰</p>
           </div>
         </div>
@@ -74,7 +74,7 @@
             @click="changeColor(1, '橡木洗白')"
             v-bind:class="{ active: typeColor[1] == '橡木洗白' }"
           >
-            <img src="~@/projects/ab/s7/客廳/橡木洗白.png" alt="" />
+            <img  src="~@/projects/ab/s7/客廳/橡木洗白.png" alt="" />
             <p>橡木洗白</p>
           </div>
           <div
@@ -82,7 +82,7 @@
             @click="changeColor(1, '香杉洗白')"
             v-bind:class="{ active: typeColor[1] == '香杉洗白' }"
           >
-            <img src="~@/projects/ab/s7/客廳/香杉洗白.png" alt="" />
+            <img  src="~@/projects/ab/s7/客廳/香杉洗白.png" alt="" />
             <p>香杉洗白</p>
           </div>
         </div>
@@ -95,7 +95,7 @@
             @click="changeColor(0, '奢華風牆')"
             v-bind:class="{ active: typeColor[0] == '奢華風牆' }"
           >
-            <img src="~@/projects/ab/s7/衛浴/奢華風牆.png" alt="" />
+            <img  src="~@/projects/ab/s7/衛浴/奢華風牆.png" alt="" />
             <p>奢華風</p>
           </div>
           <div
@@ -103,7 +103,7 @@
             @click="changeColor(0, '現代風牆')"
             v-bind:class="{ active: typeColor[0] == '現代風牆' }"
           >
-            <img src="~@/projects/ab/s7/衛浴/現代風牆.png" alt="" />
+            <img  src="~@/projects/ab/s7/衛浴/現代風牆.png" alt="" />
             <p>現代風</p>
           </div>
         </div>
@@ -114,7 +114,7 @@
             @click="changeColor(1, '奢華風地')"
             v-bind:class="{ active: typeColor[1] == '奢華風地' }"
           >
-            <img src="~@/projects/ab/s7/衛浴/奢華風地.png" alt="" />
+            <img  src="~@/projects/ab/s7/衛浴/奢華風地.png" alt="" />
             <p>奢華風</p>
           </div>
           <div
@@ -122,7 +122,7 @@
             @click="changeColor(1, '現代風地')"
             v-bind:class="{ active: typeColor[1] == '現代風地' }"
           >
-            <img src="~@/projects/ab/s7/衛浴/現代風地.png" alt="" />
+            <img  src="~@/projects/ab/s7/衛浴/現代風地.png" alt="" />
             <p>現代風</p>
           </div>
         </div>

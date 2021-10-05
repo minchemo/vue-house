@@ -208,7 +208,7 @@
       <p v-if="isMobile" class="mo-info">
         根據研究，戶藉在大安區的孩子上台大的機率遠高於其他縣市數倍，近82%台大生來自前20名明星學校。卡位20年菁英養成聚落，給孩子知識的沃土，讓他為自己贏得精彩人生。
       </p>
-      <img
+      <img loading="lazy" 
         class="leftbottom"
         v-if="!isMobile"
         src="~@/projects/ab/s4/leftbottom.png"
@@ -363,7 +363,7 @@
       }
     }
     .bg {
-      background-image: url(~@/projects/ab/s4/s4-bg.png);
+      background-image: url(~@/projects/ab/s4/s4-bg.jpg);
       position: absolute;
       width: 100%;
       height: 100vh;
@@ -822,7 +822,7 @@
       position: relative;
     }
     .bg {
-      background-image: url(~@/projects/ab/s4/s4-bg.png);
+      background-image: url(~@/projects/ab/s4/s4-bg.jpg);
       position: absolute;
       width: 100%;
       height: 50vh !important;

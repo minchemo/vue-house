@@ -617,13 +617,13 @@
       </div>
       <div class="fix-bar fix-bar-1"></div>
       <div class="fix-bar fix-bar-2"></div>
-      <img
+      <img loading="lazy" 
         class="leftbottom"
         v-if="!isMobile"
         src="~@/projects/ab/s1/leftbottom.png"
         alt=""
       />
-      <img
+      <img loading="lazy" 
         class="leftbottom"
         v-else
         src="~@/projects/ab/s1/leftbottom-mo.png"

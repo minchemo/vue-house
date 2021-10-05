@@ -22,7 +22,7 @@
         >
           <div class="header">
             <div class="iconImg">
-              <img :src="feature.icon" :alt="feature.title" />
+              <img loading="lazy"  :src="feature.icon" :alt="feature.title" />
             </div>
             <div class="title" v-html="feature.title"></div>
           </div>
@@ -31,13 +31,13 @@
       </div>
       <div v-if="!isMobile" class="bg"></div>
     </div>
-    <img
+    <img loading="lazy" 
       v-if="!isMobile"
       class="rightbottom"
       src="~@/projects/ab/s2/rightbottom.png"
       alt=""
     />
-    <img v-else class="rightbottom" src="~@/projects/ab/s2/bg-mo.png" alt="" />
+    <img loading="lazy"  v-else class="rightbottom" src="~@/projects/ab/s2/bg-mo.png" alt="" />
   </div>
 </template>
 <style lang="scss">

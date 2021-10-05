@@ -1,10 +1,10 @@
 <template>
   <div class="order-bg">
-    <img
+    <!--img
       v-if="!isMobile"
       class="contact-brick"
       src="@/projects/ab/contact.png"
-    />
+    /-->
     <!-- <img src="@/projects/fs/order/bg.png" alt="" class="bg-img"> -->
     <!-- <img src="@/projects/fs/order/bg1.png" alt="" class="bg-img no-mix"> -->
     <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
