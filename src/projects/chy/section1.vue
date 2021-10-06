@@ -2,21 +2,21 @@
   <div class="section1">
     <div class="title">
       <div class="animate-title title-1">
-        <img src="@/projects/chy/s1/t1.svg" alt="" srcset="" />
+        <img loading="lazy" src="@/projects/chy/s1/t1.svg" alt="" srcset="" />
       </div>
       <div class="animate-title title-2">
-        <img v-if="!isMobile" src="@/projects/chy/s1/t2.svg" alt="" srcset="" />
-        <img v-else src="@/projects/chy/s1/t2_mo.svg" alt="" srcset="" />
+        <img loading="lazy" v-if="!isMobile" src="@/projects/chy/s1/t2.svg" alt="" srcset="" />
+        <img loading="lazy" v-else src="@/projects/chy/s1/t2_mo.svg" alt="" srcset="" />
       </div>
       <div class="animate-title title-3">
-        <img src="@/projects/chy/s1/t3.svg" alt="" srcset="" />
+        <img loading="lazy" src="@/projects/chy/s1/t3.png" alt="" srcset="" />
       </div>
     </div>
     <div class="bush">
-      <img src="~@/projects/chy/s1/bush.png" alt="" srcset="" />
+      <img loading="lazy" src="~@/projects/chy/s1/bush.png" alt="" srcset="" />
     </div>
     <div data-aos="fade" data-aos-duration="1000" class="rt-logo">
-      <img src="@/projects/chy/s1/rt-logo.svg" alt="" srcset="" />
+      <img loading="lazy" src="@/projects/chy/s1/rt-logo.svg" alt="" srcset="" />
     </div>
     <div
       data-aos="fade"
@@ -24,7 +24,7 @@
       data-aos-delay="200"
       class="rb-logo"
     >
-      <img src="@/projects/chy/s1/rb-logo.svg" alt="" srcset="" />
+      <img loading="lazy" src="@/projects/chy/s1/rb-logo.svg" alt="" srcset="" />
     </div>
   </div>
 </template>
