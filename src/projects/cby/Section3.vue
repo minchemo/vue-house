@@ -99,12 +99,12 @@
       </div>
     </div>
     <div class="draw">
-      <img class="draw1" src="~@/projects/cby/s3/draw/1.png" alt="" />
-      <img class="draw2" src="~@/projects/cby/s3/draw/2.png" alt="" />
-      <img class="draw3" src="~@/projects/cby/s3/draw/3.png" alt="" />
-      <img class="draw4" src="~@/projects/cby/s3/draw/4.png" alt="" />
-      <img class="draw5" src="~@/projects/cby/s3/draw/5.png" alt="" />
-      <img
+      <img loading="lazy" class="draw1" src="~@/projects/cby/s3/draw/1.png" alt="" />
+      <img loading="lazy" class="draw2" src="~@/projects/cby/s3/draw/2.png" alt="" />
+      <img loading="lazy" class="draw3" src="~@/projects/cby/s3/draw/3.png" alt="" />
+      <img loading="lazy" class="draw4" src="~@/projects/cby/s3/draw/4.png" alt="" />
+      <img loading="lazy" class="draw5" src="~@/projects/cby/s3/draw/5.png" alt="" />
+      <img loading="lazy"
         class="draw6"
         src="~@/projects/cby/s3/draw/6.png"
         alt=""

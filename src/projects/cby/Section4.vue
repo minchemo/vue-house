@@ -35,8 +35,8 @@
       data-aos-duration="2000"
       data-aos-delay="0">ARCHITECTURE</div>
     <div class="bg">
-      <img v-if="!isMobile" src="~@/projects/cby/s4/view.jpg" alt="" />
-      <img v-else src="~@/projects/cby/s4/mo-view.jpg" alt="" />
+      <img loading="lazy" v-if="!isMobile" src="~@/projects/cby/s4/view.jpg" alt="" />
+      <img loading="lazy" v-else src="~@/projects/cby/s4/mo-view.jpg" alt="" />
     </div>
   </div>
 </template>

@@ -29,13 +29,13 @@
     </div>
     <div class="view" ref="view" data-aos="fade-up">
       <div></div>
-      <img
+      <img loading="lazy"
         class="view-img"
         ref="viewImg"
         src="~@/projects/cby/s2/view.jpg"
         alt=""
       />
-      <img
+      <img loading="lazy"
         v-if="isMobile"
         class="view-hand"
         ref="viewHand"

@@ -317,7 +317,7 @@
         搶先<br />鑑賞
       </div>
     </div>
-    <img
+    <img loading="lazy"
       v-if="!isMobile"
       class="ppl"
       src="~@/projects/cby/s1/ppl.png"
@@ -327,7 +327,7 @@
       data-aos-duration="3000"
       data-aos-offset="-500"
     />
-    <img
+    <img loading="lazy"
       v-else
       class="ppl"
       src="~@/projects/cby/s1/mo-ppl.png"
@@ -337,7 +337,7 @@
       data-aos-duration="3000"
       data-aos-offset="-500"
     />
-    <img
+    <img loading="lazy"
       v-if="!isMobile"
       class="ppl-sign"
       src="~@/projects/cby/s1/bkk.png"
@@ -348,7 +348,7 @@
       data-aos-offset="-500"
     />
     <div class="leaf">
-      <img
+      <img loading="lazy"
         class="leaf1"
         src="~@/projects/cby/s1/leaf1.png"
         alt=""
@@ -358,7 +358,7 @@
         data-aos-offset="-100"
         data-aos-delay="00"
       />
-      <img
+      <img loading="lazy"
         v-if="!isMobile"
         class="leaf2"
         src="~@/projects/cby/s1/leaf2.png"
@@ -369,7 +369,7 @@
         data-aos-offset="-100"
         data-aos-delay="0"
       />
-      <img
+      <img loading="lazy"
         class="leaf3"
         src="~@/projects/cby/s1/leaf3.png"
         alt=""
@@ -379,7 +379,7 @@
         data-aos-offset="-100"
         data-aos-delay="00"
       />
-      <img
+      <img loading="lazy"
         v-if="!isMobile"
         class="bird"
         src="~@/projects/cby/s1/bird.png"
@@ -390,7 +390,7 @@
         data-aos-offset="-100"
         data-aos-delay="1500"
       />
-      <img
+      <img loading="lazy"
         class="butterfly"
         src="~@/projects/cby/s1/butterfly.png"
         alt=""
@@ -402,24 +402,24 @@
       />
     </div>
     <div class="piece">
-      <img
+      <img loading="lazy"
         v-if="!isMobile"
         src="~@/projects/cby/s1/piece.png"
         class="piece-1"
         alt=""
       />
-      <img
+      <img loading="lazy"
         v-else
         src="~@/projects/cby/s1/mo-piece.png"
         class="piece-1"
         alt=""
       />
-      <img src="~@/projects/cby/s1/w-piece.png" class="piece-2" alt="" />
-      <img src="~@/projects/cby/s1/w-piece.png" class="piece-3" alt="" />
-      <img src="~@/projects/cby/s1/b-piece.png" class="piece-4" alt="" />
-      <img src="~@/projects/cby/s1/w-piece.png" class="piece-5" alt="" />
+      <img loading="lazy" src="~@/projects/cby/s1/w-piece.png" class="piece-2" alt="" />
+      <img loading="lazy" src="~@/projects/cby/s1/w-piece.png" class="piece-3" alt="" />
+      <img loading="lazy" src="~@/projects/cby/s1/b-piece.png" class="piece-4" alt="" />
+      <img loading="lazy" src="~@/projects/cby/s1/w-piece.png" class="piece-5" alt="" />
     </div>
-    <img
+    <img loading="lazy"
       data-aos="fade-down"
       data-aos-duration="2000"
       data-aos-offset="-100"
@@ -600,22 +600,6 @@
           background: #00a199;
           cursor: pointer;
         }
-        &::after {
-          content: "";
-          position: absolute;
-          width: 5vw;
-          height: 5vw;
-          left: -1vw;
-          top: -2vw;
-          background-image: url(~@/projects/cby/s1/leaf5.png);
-          background-size: 100%;
-          background-repeat: no-repeat;
-          background-position: center;
-          pointer-events: none;
-          animation: float 5s ease-out;
-          transform: rotate(0deg);
-          z-index: 10;
-        }
       }
       /* Declate color shifting animation */
       @keyframes colorShift {
@@ -685,7 +669,7 @@
 
   .ppl-sign {
     position: absolute;
-    right: 68%;
+    right: 71%;
     top: 8%;
     width: auto;
     height: 25%;
@@ -731,9 +715,9 @@
     .butterfly {
       position: absolute;
       height: 13%;
-      left: 18%;
+      left: 15%;
       bottom: 70%;
-      z-index: 0;
+      z-index: 15;
     }
   }
 
@@ -954,22 +938,6 @@
           margin-top: 5%;
           opacity: 0.5;
           z-index: -1;
-        }
-        &:after {
-          content: "";
-          position: absolute;
-          width: 12vw;
-          height: 12vw;
-          left: -1vw;
-          top: -5vw;
-          background-image: url(~@/projects/cby/s1/leaf5.png);
-          background-size: 100%;
-          background-repeat: no-repeat;
-          background-position: center;
-          pointer-events: none;
-          animation: float 2s ease-out;
-          transform: rotate(0deg);
-          z-index: 10;
         }
       }
 

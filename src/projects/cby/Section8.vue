@@ -3,7 +3,7 @@
     <div class="main">
       <div class="info">
         <div class="content">
-          <img
+          <img loading="lazy"
             class="chunfu"
             src="@/projects/cby/s8/chunfu.png"
             alt=""
@@ -62,9 +62,9 @@
           </div>
         </div>
         <div class="leaf">
-          <img class="leaf1" src="@/projects/cby/s8/leaf1.png" alt="" />
-          <img class="leaf2" src="@/projects/cby/s8/leaf2.png" alt="" />
-          <img class="leaf3" src="@/projects/cby/s8/leaf3.png" alt="" />
+          <img loading="lazy" class="leaf1" src="@/projects/cby/s8/leaf1.png" alt="" />
+          <img loading="lazy" class="leaf2" src="@/projects/cby/s8/leaf2.png" alt="" />
+          <img loading="lazy" class="leaf3" src="@/projects/cby/s8/leaf3.png" alt="" />
         </div>
       </div>
       <div class="swiper-box">
@@ -78,7 +78,7 @@
             data-aos-offset="0"
             data-aos-delay="0"
           >
-            <img :src="img.img" alt="" />
+            <img loading="lazy" :src="img.img" alt="" />
             <p
               data-aos="fade-up"
               data-aos-duration="2000"

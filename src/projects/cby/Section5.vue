@@ -86,22 +86,22 @@
         </div>
       </div>
     </div>
-    <img
+    <img loading="lazy"
       v-if="!isMobile"
       class="rt-plan"
       src="~@/projects/cby/s5/rt.png"
       alt=""
     />
-    <img v-else class="rt-plan" src="~@/projects/cby/s5/mo-rt.png" alt="" />
+    <img loading="lazy" v-else class="rt-plan" src="~@/projects/cby/s5/mo-rt.png" alt="" />
 
-    <img
+    <img loading="lazy"
       v-if="!isMobile"
       class="lb-plan"
       src="~@/projects/cby/s5/lb.png"
       alt=""
     />
 
-    <img v-else class="lb-plan" src="~@/projects/cby/s5/mo-lb.png" alt="" />
+    <img loading="lazy" v-else class="lb-plan" src="~@/projects/cby/s5/mo-lb.png" alt="" />
   </div>
 </template>
 <style lang="scss">
