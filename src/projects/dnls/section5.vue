@@ -5,7 +5,7 @@
         <span class="en">URBAN LIFE </span>  <br v-if="isMobile" />精彩核心
       </div>
       <div class="view-divider"></div>
-      <!--<GodModView />-->
+      <GodModView />
     </div>
   </div>
 </template>
@@ -18,6 +18,7 @@
   position: relative;
   background-size: cover;
   background-image: url("~@/assets/img/bg.jpg");
+  padding-bottom: 120px;
   .view {
     padding-left: 5vw;
     .view-divider {
