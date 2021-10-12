@@ -957,7 +957,8 @@
         </svg>
       <div class="item item6">
         <h1>怡家．格局</h1>
-        <swiper :options="swiperOptions" :instanceName="2">
+        <img loading="lazy"  class="item6-1" src="./s1/item6-1.jpg" alt="" />
+        <!--swiper :options="swiperOptions" :instanceName="2">
           <swiper-slide
             v-for="item of swiperList"
             :key="item.id"
@@ -976,7 +977,7 @@
             class="swiper-button-next next6"
             slot="button-next"
           ></div>
-        </swiper>
+        </swiper-->
       </div>
       <!--div class="bg">
         <img loading="lazy" v-if="!isMobile" src="./s1/bg-2.png" alt="" />
@@ -1673,6 +1674,9 @@
   }
 }
 
+.item6-1{
+  margin-top: 100px;
+}
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
@@ -1681,6 +1685,11 @@
         cursor: pointer;
       }
     }
+
+    .item6-1{
+  width: 100%;
+  margin-top: 70px;
+}
 
     .svg-1 {
       width: size-m(300);
