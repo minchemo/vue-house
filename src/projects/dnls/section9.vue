@@ -122,10 +122,7 @@
 @media only screen and (max-width: 767px) {
   .section9 {
     height: auto;
-    width: 100vw;
-    background-size: contain;
-    background-image: url("~@/assets/img/bg.jpg");
-    padding-bottom: 90px;
+    padding-bottom: 50px;
 
     .slides-title {
       text-align: left;
@@ -133,6 +130,59 @@
       font-size: 28px;
       font-weight: 600;
       padding-top: 60px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      position: relative;
+      height: 1px;
+      width: 90vw;
+      right: -5vw;
+      margin: 10vw auto;
+      background-color: #000;
+    }
+
+    .feature {
+      position: relative;
+      width: 100vw;
+      height: auto;
+      left: 0;
+      .feature-item {
+        padding: 0;
+        flex-direction: column-reverse;
+        .info {
+          width: 100%;
+          text-align: left;
+          position: relative;
+          z-index: 2;
+          .content {
+            padding: 0 10vw;
+            margin-top: 24px;
+            font-size: 16px;
+            line-height: 1.5;
+            display: block;
+          }
+        }
+
+        .slides {
+          width: 100%;
+          .slide-item {
+            .caption {
+              position: absolute;
+              right: 8vw;
+              bottom: 2vw;
+              color: #fff;
+              font-size: 1.2vw;
+              letter-spacing: 1px;
+              filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
+            }
+          }
+        }
+      }
+
+      &:after {
+        display: none;
+      }
     }
   }
 }
@@ -176,23 +226,21 @@ export default {
           delay: 3000,
         },
       },
-      slides:
-      {
-        content: `台北東區核心珍稀3.65米面寬精品宅，客餐<br/>
-廚、臥室、衛浴、陽台四進式空間規劃，舒<br/>
-適宜居的人性化尺度布局，生活有餘裕、時<br/>
-尚即日常，12-28坪輕門檻享樂型優質資產。`,
+      slides: {
+        content: !isMobile
+          ? `台北東區核心珍稀3.65米面寬精品宅，客餐<br/>廚、臥室、衛浴、陽台四進式空間規劃，舒<br/>適宜居的人性化尺度布局，生活有餘裕、時<br/>尚即日常，12-28坪輕門檻享樂型優質資產。`
+          : `台北東區核心珍稀3.65米面寬精品宅，客餐廚、臥室、衛浴、陽台四進式空間規劃，舒適宜居的人性化尺度布局，生活有餘裕、時尚即日常，12-28坪輕門檻享樂型優質資產。`,
         img: [
           {
-            url: require('@/projects/dnls/s8/2.jpg'),
+            url: require("@/projects/dnls/s8/2.jpg"),
           },
-        ]
+        ],
       },
     };
   },
 
   methods: {},
 
-  created() { },
+  created() {},
 };
 </script>

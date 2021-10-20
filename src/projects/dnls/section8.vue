@@ -124,9 +124,7 @@
   .section8 {
     height: auto;
     width: 100vw;
-    background-size: contain;
-    background-image: url("~@/assets/img/bg.jpg");
-    padding-bottom: 90px;
+    padding-bottom: 0;
 
     .slides-title {
       text-align: left;
@@ -134,6 +132,59 @@
       font-size: 28px;
       font-weight: 600;
       padding-top: 60px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      position: relative;
+      height: 1px;
+      width: 90vw;
+      right: -5vw;
+      margin: 10vw auto;
+      background-color: #000;
+    }
+
+    .feature {
+      position: relative;
+      width: 100vw;
+      height: auto;
+      left: 0;
+      .feature-item {
+        padding: 0;
+        flex-direction: column-reverse;
+        .info {
+          width: 100%;
+          text-align: left;
+          position: relative;
+          z-index: 2;
+          .content {
+            padding: 0 10vw;
+            margin-top: 24px;
+            font-size: 16px;
+            line-height: 1.5;
+            display: block;
+          }
+        }
+
+        .slides {
+          width: 100%;
+          .slide-item {
+            .caption {
+              position: absolute;
+              right: 8vw;
+              bottom: 2vw;
+              color: #fff;
+              font-size: 1.2vw;
+              letter-spacing: 1px;
+              filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
+            }
+          }
+        }
+      }
+
+      &:after {
+        display: none;
+      }
     }
   }
 }
@@ -177,20 +228,21 @@ export default {
           delay: 3000,
         },
       },
-      slides:
-      {
-        content: `〔太平洋敦南麗舍〕領銜時代建築再現東區富域<br/>核心，半世紀建築行家太平洋建設細心打磨精良<br/>質地，傲人出身與仁愛路名宅「鳳翔」、<br/>「百吉」、「百利」系出同門。`,
+      slides: {
+        content: !isMobile
+          ? `〔太平洋敦南麗舍〕領銜時代建築再現東區富域<br/>核心，半世紀建築行家太平洋建設細心打磨精良<br/>質地，傲人出身與仁愛路名宅「鳳翔」、<br/>「百吉」、「百利」系出同門。`
+          : `〔太平洋敦南麗舍〕領銜時代建築再現東區富域核心，半世紀建築行家太平洋建設細心打磨精良質地，傲人出身與仁愛路名宅「鳳翔」、「百吉」、「百利」系出同門。`,
         img: [
           {
-            url: require('@/projects/dnls/s8/1.jpg'),
+            url: require("@/projects/dnls/s8/1.jpg"),
           },
-        ]
+        ],
       },
     };
   },
 
   methods: {},
 
-  created() { },
+  created() {},
 };
 </script>
