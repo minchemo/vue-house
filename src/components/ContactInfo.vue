@@ -176,7 +176,7 @@ export default {
   min-width: 1000px;
   margin: 0 auto;
   padding: 30px 0 30px;
-  margin-bottom: -20px;
+  margin-bottom: 13px;
   z-index: 50;
 
   .fix-bar {

@@ -160,7 +160,8 @@
       }
       .cover {
         img {
-          width: 100vw;
+          width: auto;
+          height: 70.6vh;
         }
       }
     }

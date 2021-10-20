@@ -175,7 +175,7 @@
     width: 100vw;
     background-size: contain;
     background-image: url("~@/assets/img/bg.jpg");
-    padding-bottom: 90px;
+    padding-bottom: 0px;
 
     .slides-title {
       text-align: left;

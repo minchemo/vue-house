@@ -55,6 +55,7 @@
     position: relative;
     background-size: contain;
     background-image: url("~@/assets/img/bg.jpg");
+    padding-bottom: 0px;
 
     .view {
       padding-left: 0;
@@ -64,7 +65,7 @@
         height: 1px;
         background: transparent;
         opacity: 0.5;
-        padding-bottom: 0vw;
+        padding-bottom: 10vw;
         margin-left: 10vw;
       }
       .view-title {

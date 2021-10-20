@@ -50,8 +50,8 @@
 <style lang="scss">
 .swiper-pagination {
   .swiper-pagination-bullet {
-    width: 1vw;
-    height: 1vw;
+    width: 0.7vw;
+    height: 0.7vw;
     background: transparent;
     border: 1px solid #fff;
     opacity: 1;
@@ -112,6 +112,7 @@
           border-bottom: 2px solid;
           display: inline-block;
           padding-bottom: 0.5vw;
+          font-weight: 600;
           span {
             font-size: 2vw;
             font-weight: bold;
@@ -120,15 +121,16 @@
         }
 
         .subtitle {
-          font-size: 2vw;
+          font-size: 1.5vw;
           font-weight: bold;
           margin-top: 6vw;
         }
         .content {
           margin-top: 1vw;
-          font-size: 1.2vw;
+          font-size: 1vw;
           line-height: 2;
           text-align: justify;
+          font-weight: 600;
         }
         .works {
           position: absolute;
@@ -136,6 +138,7 @@
           left: 5vw;
           margin-top: 2vw;
           font-size: 1vw;
+          font-weight: 600;
         }
       }
 
@@ -258,7 +261,8 @@
           }
           .content {
             margin-top: 12px;
-            font-size: 16px;
+            font-size: 14px;
+           line-height: 1.5;
           }
           .works {
             position: relative;
@@ -277,7 +281,8 @@
             .caption {
               right: 14px;
               bottom: 14px;
-              font-size: 16px;
+              font-size: 12px;
+              font-weight: 600;
             }
           }
         }
