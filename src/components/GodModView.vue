@@ -23,10 +23,13 @@
 
 <style lang="scss" scoped>
 .GodModView {
+  display: flex;
+  justify-content: center;
   .view {
     height: 0;
     width: 100%;
     position: relative;
+    max-width: 1825px;
     .view-img {
       max-width: 100vw;
     }
@@ -35,7 +38,7 @@
 .viewtext{
   position: absolute;
   top: 0;
-  left: 0;
+  left:0;
 }
 
 @media only screen and (max-width: 767px) {
