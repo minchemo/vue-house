@@ -1,5 +1,5 @@
 <template>
-  <div class="dialog-content">
+  <div class="dialog-content size1">
     <font-awesome-icon icon="phone" />
     <div class="dialog-desc">賞屋專線</div>
     <div class="info">{{ phone }}</div>
