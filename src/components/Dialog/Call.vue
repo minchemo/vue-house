@@ -3,14 +3,26 @@
     <font-awesome-icon icon="phone" />
     <div class="dialog-desc">賞屋專線</div>
     <div class="info">{{ phone }}</div>
-    <div class="cta bt_contact" @click="redirectToPhoneThanks">撥打電話</div>
+    <div
+      class="cta bt_contact"
+      @click="redirectToPhoneThanks"
+      v-show="isMobile"
+    >
+      撥打電話
+    </div>
   </div>
 </template>
 
 <script>
+import { isMobile } from "@/utils";
 export default {
   name: "CallDialog",
   components: {},
+  data() {
+    return {
+      isMobile,
+    };
+  },
   props: ["phone"],
 
   methods: {
@@ -20,7 +32,7 @@ export default {
       setTimeout(() => {
         window.location.href = "phoneThanks";
       }, 1000);
-    }
-  }
+    },
+  },
 };
 </script>
