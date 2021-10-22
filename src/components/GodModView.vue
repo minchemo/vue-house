@@ -5,7 +5,11 @@
       ref="view"
       :style="{ 'padding-bottom': viewAspectRatioPercentage + '%' }"
     >
-      <img ref="viewImg" class="view-img" :src="bgUrl" alt="" />
+    <div ref="viewImg">
+      
+      <img  class="view-img" :src="bgUrl2" alt="" />
+      <img  class="view-img viewtext" :src="bgUrl" alt="" />
+      </div>
       <!-- <img
         v-if="isMobile"
         class="view-hand"
@@ -22,10 +26,16 @@
   .view {
     height: 0;
     width: 100%;
+    position: relative;
     .view-img {
       max-width: 100vw;
     }
   }
+}
+.viewtext{
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -64,8 +74,9 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: -150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/dnls/s5/view.jpg"), //置換圖片路徑即可
-      //swipeUrl: require("@/projects/chy/s3/swipe-here.png"), //置換圖片路徑即可
+      bgUrl: require("@/projects/dnls/s5/view-text.png"), //置換圖片路徑即可
+      bgUrl2: require("@/projects/dnls/s5/view.jpg"), //置換圖片路徑即可
+      //swipeUrl: require("@/projects/dnls/s5/view-text.png"), //置換圖片路徑即可
     };
   },
   methods: {
