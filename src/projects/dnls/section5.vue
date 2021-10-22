@@ -18,7 +18,7 @@
   position: relative;
   background-size: cover;
   background-image: url("~@/assets/img/bg.jpg");
-  padding-bottom: 120px;
+  padding-bottom: 62px;
   .view {
     padding-left: 5vw;
     .view-divider {
