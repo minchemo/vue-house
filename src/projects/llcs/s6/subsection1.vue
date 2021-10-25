@@ -13,6 +13,7 @@
           data-aos-duration="1000" data-aos-offset="-100" 
           :data-aos-delay="i * 200"
         >
+          <div class="list-item-name" v-html="data.name"></div>
           <div class="list-item-title" v-html="data.title"></div>
           <div class="list-item-flag">
             <img :src="data.flag" alt="" srcset="" />
@@ -32,6 +33,7 @@
           data-aos-duration="1000" data-aos-offset="-100" 
           :data-aos-delay="i * 200"
         >
+          <div class="list-item-name" v-html="data.name"></div>
           <div class="list-item-title" v-html="data.title"></div>
           <div class="list-item-flag">
             <img :src="data.flag" alt="" srcset="" />
@@ -121,7 +123,16 @@
         position: relative;
         margin: 0.1vw;
         overflow: hidden;
-
+        .list-item-name{
+          position: absolute;
+          top:0.3em;
+          left: 0.5em;
+          color: #fff;
+          font-size: 12px;
+          z-index: 6;
+          opacity: 0.9;
+          text-shadow:0 0 10px #0309,0 0 3px #030;
+        }
         .list-item-title {
           position: absolute;
           top: 55%;
@@ -412,26 +423,31 @@ export default {
           img: require("@/projects/llcs/s6/sb1/1.jpg"),
           flag: require("@/projects/llcs/s6/sb1/1_flag.png"),
           title: "德國INNOCI<br>馬桶、衛浴",
+          name:"選配建材",
         },
         {
           img: require("@/projects/llcs/s6/sb1/2.jpg"),
           flag: require("@/projects/llcs/s6/sb1/2_flag.png"),
           title: "德國IMPULS<br>廚具",
+          name:"選配建材",
         },
         {
           img: require("@/projects/llcs/s6/sb1/3.jpg"),
           flag: require("@/projects/llcs/s6/sb1/3_flag.png"),
           title: "杜拜RAK磁磚",
+          name:"",
         },
         {
           img: require("@/projects/llcs/s6/sb1/4.jpg"),
           flag: require("@/projects/llcs/s6/sb1/4_flag.png"),
           title: "日本PANASONIC<br>四合一暖風機",
+          name:"",
         },
         {
           img: require("@/projects/llcs/s6/sb1/5.jpg"),
           flag: require("@/projects/llcs/s6/sb1/5_flag.png"),
           title: "台灣錦鋐<br>隔音氣密窗",
+          name:"",
         },
       ],
       list2: [
@@ -439,18 +455,21 @@ export default {
           img: require("@/projects/llcs/s6/sb1/a.jpg"),
           flag: require("@/projects/llcs/s6/sb1/a_flag.png"),
           title: "英國STUDOR<br>管道防疫系統",
+          name:"",
         },
 
         {
           img: require("@/projects/llcs/s6/sb1/b.jpg"),
           flag: require("@/projects/llcs/s6/sb1/b_flag.png"),
           title: "英國STUDOR<br>P.A.P.A.正壓調節器",
+          name:"",
         },
 
         {
           img: require("@/projects/llcs/s6/sb1/c.jpg"),
           flag: require("@/projects/llcs/s6/sb1/c_flag.png"),
           title: "美國HONEYWEL<br>反沖洗過濾器",
+          name:"",
         },
       ],
     };
