@@ -53,7 +53,7 @@
       <img
         v-if="isMobile"
         class="building"
-        src="~@/projects/llcs/s4/sb5/building.png"
+        src="~@/projects/llcs/s4/sb5/building2.png"
         alt=""
         srcset=""
       />
@@ -746,7 +746,7 @@ export default {
       },
       activeList: [
         {
-          imgSrc: require("@/projects/llcs/s4/sb5/building.png"),
+          imgSrc: require("@/projects/llcs/s4/sb5/building2.png"),
         },
       ],
       activeArchiDetail: {

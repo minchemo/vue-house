@@ -16,7 +16,7 @@
         data-aos-offset="-100"
         v-if="!isMobile"
         class="building"
-        src="~@/projects/llcs/s2/building.png"
+        src="~@/projects/llcs/s2/building2.png"
         alt=""
         srcset=""
       />
@@ -27,7 +27,7 @@
         data-aos-offset="-100"
         v-else
         class="building"
-        src="~@/projects/llcs/s2/building_mo.png"
+        src="~@/projects/llcs/s2/building_mo2.png"
         alt=""
         srcset=""
       />
