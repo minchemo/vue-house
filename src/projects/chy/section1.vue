@@ -197,12 +197,14 @@
         }
         &.title-3 {
           width: 90%;
+          
           &::after {
             animation-delay: 1000ms;
           }
           img {
             opacity: 0;
             animation: text-out 3s cubic-bezier(0, 0, 0.2, 1) 2000ms forwards;
+            max-width: 100%;
           }
         }
 
