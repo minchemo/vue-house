@@ -39,6 +39,9 @@ import "./plugins/element.js";
 
 // AOS.init()
 
+import VueYoutube from 'vue-youtube'
+ 
+
 library.add(faBars);
 library.add(faTimes);
 library.add(faPhone);
@@ -61,6 +64,7 @@ Vue.use(VueLazyload);
 Vue.use(VueLazyComponent);
 Vue.use(VueRellax);
 Vue.use(Vue2TouchEvents);
+Vue.use(VueYoutube)
 
 
 new Vue({

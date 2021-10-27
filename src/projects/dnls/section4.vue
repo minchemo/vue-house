@@ -1,7 +1,26 @@
 <template>
   <div class="section4">
+    <div class="yt-frame">
+      <div v-if="!showYt" class="cover">
+        <img
+          src="@/projects/dnls/s4/player.png"
+          alt=""
+          srcset=""
+          @click="showYt = true"
+        />
+      </div>
+      <youtube
+        v-else
+        class="player"
+        :video-id="'PIYp7Q0gWbk'"
+        ref="youtube"
+        :fitParent="true"
+      ></youtube>
+    </div>
+
     <div class="timeline-title" data-aos="flip-up" data-aos-duration="1000">
-       <span class="en">CHRONOLOGY </span> <br v-if="isMobile" />太平洋建設作品年表
+      <span class="en">CHRONOLOGY </span>
+      <br v-if="isMobile" />太平洋建設作品年表
     </div>
     <div class="timelines-box" id="timelines-box">
       <div class="timelines">
@@ -20,7 +39,13 @@
             <div class="subtitle">{{ timeline.subtitle }}</div>
           </div>
 
-          <img loading="lazy" class="cover" :src="timeline.img" alt="" srcset="" />
+          <img
+            loading="lazy"
+            class="cover"
+            :src="timeline.img"
+            alt=""
+            srcset=""
+          />
         </div>
       </div>
     </div>
@@ -34,11 +59,43 @@
   width: 100vw;
   background-size: contain;
   background-image: url("~@/assets/img/bg.jpg");
+
+  .yt-frame {
+    position: relative;
+    width: 90vw;
+    height: 56.25vw;
+    padding-top: 10vw;
+    margin: 0 auto;
+    .cover {
+      width: 90vw;
+      height: 56.25vw;
+      position: absolute;
+      left: 0;
+      top: 10vw;
+      z-index: 10;
+      background-image: url("~@/projects/dnls/s4/video_img.jpeg");
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+    .player {
+      max-height: 100%;
+    }
+  }
+
   .timeline-title {
     font-size: 2vw;
     font-weight: 900;
     text-align: left;
     padding: 5vw 5vw 0 5vw;
+    margin-top: 10vw;
     position: relative;
     &::before {
       content: "";
@@ -67,9 +124,9 @@
         }
       }
     }
-    .en{
-          font-family: "Times New Roman", Times, serif;
-        }
+    .en {
+      font-family: "Times New Roman", Times, serif;
+    }
   }
   .timelines-box {
     width: 100%;
@@ -232,6 +289,21 @@
     width: 100vw;
     background-size: contain;
     background-image: url("~@/assets/img/bg.jpg");
+
+    .yt-frame {
+      width: 100vw;
+      height: 62.5vw;
+      .cover {
+        width: 100vw;
+        height: 62.5vw;
+        img {
+          width: 15vw;
+        }
+      }
+      .player {
+        max-height: 100%;
+      }
+    }
 
     .timeline-title {
       font-size: 30px;
@@ -404,6 +476,7 @@ export default {
   name: "section4",
   data() {
     return {
+      showYt: false,
       info,
       isMobile,
       timelines: [
