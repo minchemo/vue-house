@@ -283,6 +283,7 @@
     width: 100vw;
     background-size: contain;
     background-image: url("~@/assets/img/bg.jpg");
+    padding-top: 15vw;
 
     .yt-frame {
       width: 100vw;
@@ -639,42 +640,9 @@ export default {
           below: false,
         },
       ],
-      player: "",
-      ytId: "PIYp7Q0gWbk",
     };
   },
   methods: {
-    onPlayerReady(event) {
-      console.log("load");
-      event.target.playVideo();
-    },
-    loadVideo() {
-      this.player = new window.YT.Player(`youtube-player-${this.ytId}`, {
-        videoId: this.ytId,
-        width: "100%",
-        height: "100%",
-        playerVars: {
-          autoplay: 1,
-          loop: 1,
-          controls: 0,
-          showinfo: 0,
-          autohide: 1,
-          modestbranding: 1,
-          mute: 0,
-          suggestedQuality: "default",
-          iv_load_policy: 3,
-        },
-        events: {
-          onReady: this.onPlayerReady,
-          onStateChange: this.onPlayerStateChange,
-        },
-      });
-    },
-    onPlayerStateChange(e) {
-      if (e.data === window.YT.PlayerState.ENDED) {
-        this.player.loadVideoById(this.id);
-      }
-    },
   },
 
   mounted() {
@@ -717,21 +685,6 @@ export default {
     );
   },
   created() {
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    const firstScriptTag = document.getElementsByTagName("script")[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  },
-  mounted() {
-    setTimeout(() => {
-      if (!this.isMobile) {
-        if (!window.YT) {
-          window.onYouTubeIframeAPIReady = this.loadVideo;
-        } else {
-          this.loadVideo();
-        }
-      }
-    }, 2500);
   },
 };
 </script>
