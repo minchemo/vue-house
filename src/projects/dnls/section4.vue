@@ -80,6 +80,7 @@
     height: 50.6vw;
     margin: 0 auto;
     overflow: hidden;
+    z-index: 5;
   }
 
   .timeline-title {
