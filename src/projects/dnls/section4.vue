@@ -18,7 +18,6 @@
           suggestedQuality: 'default',
           iv_load_policy: 3,
         }"
-        :fitParent="true"
       ></youtube>
     </div>
 
@@ -61,8 +60,10 @@
   height: 200%;
   width: 100%;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  position: relative;
+  position: absolute;
+  left: 0;
 }
 </style>
 
