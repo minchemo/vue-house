@@ -1,19 +1,11 @@
 <template>
   <div class="section4">
     <div class="yt-frame">
-      <div v-if="!showYt" class="cover">
-        <img
-          src="@/projects/dnls/s4/player.png"
-          alt=""
-          srcset=""
-          @click="showYt = true"
-        />
-      </div>
       <youtube
-        v-else
         class="player"
         :video-id="'PIYp7Q0gWbk'"
         ref="youtube"
+        :player-vars="{ controls: 0 }"
         :fitParent="true"
       ></youtube>
     </div>
@@ -476,7 +468,6 @@ export default {
   name: "section4",
   data() {
     return {
-      showYt: false,
       info,
       isMobile,
       timelines: [
@@ -658,7 +649,6 @@ export default {
       ],
     };
   },
-
   methods: {},
 
   mounted() {
