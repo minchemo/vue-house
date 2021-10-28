@@ -431,10 +431,10 @@
       z-index: 0;
       position: absolute;
       width: 100%;
-      height: 65%;
+      height: 46%;
       background-color: #000;
       opacity: 0.15;
-      top: 57%;
+      top: 67%;
       left: 0;
       transform: translateY(-50%);
     }
