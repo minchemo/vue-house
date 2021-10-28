@@ -2,11 +2,13 @@
   <div class="section4">
     <div class="yt-frame">
       <youtube
+        id="yt-player"
         class="player"
         :video-id="'PIYp7Q0gWbk'"
         ref="youtube"
-        :player-vars="{ controls: 0 }"
+        :player-vars="{ controls: 0, iv_load_policy: 3 }"
         :fitParent="true"
+        @playing="onYtPlaying"
       ></youtube>
     </div>
 
@@ -649,7 +651,14 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    onYtPlaying() {
+      $("#yt-player").contents().find(".ytp-title").html("");
+      let iframe = document.getElementById('yt-player');
+      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      iframeDocument.querySelector('.ytp-title').remove();
+    },
+  },
 
   mounted() {
     const showItem = () => {
