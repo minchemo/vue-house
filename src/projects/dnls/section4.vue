@@ -6,9 +6,19 @@
         class="player"
         :video-id="'PIYp7Q0gWbk'"
         ref="youtube"
-        :player-vars="{ controls: 0, iv_load_policy: 3 }"
+        allowfullscreen
+        :player-vars="{
+          autoplay: 1,
+          loop: 1,
+          controls: 0,
+          showinfo: 0,
+          autohide: 1,
+          modestbranding: 1,
+          mute: 0,
+          suggestedQuality: 'default',
+          iv_load_policy: 3,
+        }"
         :fitParent="true"
-        @playing="onYtPlaying"
       ></youtube>
     </div>
 
@@ -46,6 +56,16 @@
     <div v-if="isMobile" class="bg"></div>
   </div>
 </template>
+<style lang="scss">
+.player {
+  height: 200%;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+</style>
+
 <style lang="scss" scoped>
 /* 螢幕尺寸標準 */
 .section4 {
@@ -53,35 +73,14 @@
   width: 100vw;
   background-size: contain;
   background-image: url("~@/assets/img/bg.jpg");
+  padding-top: 10vw;
 
   .yt-frame {
     position: relative;
     width: 90vw;
-    height: 56.25vw;
-    padding-top: 10vw;
+    height: 50.6vw;
     margin: 0 auto;
-    .cover {
-      width: 90vw;
-      height: 56.25vw;
-      position: absolute;
-      left: 0;
-      top: 10vw;
-      z-index: 10;
-      background-image: url("~@/projects/dnls/s4/video_img.jpeg");
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        &:hover {
-          opacity: 0.5;
-          cursor: pointer;
-        }
-      }
-    }
-    .player {
-      max-height: 100%;
-    }
+    overflow: hidden;
   }
 
   .timeline-title {
@@ -286,17 +285,7 @@
 
     .yt-frame {
       width: 100vw;
-      height: 62.5vw;
-      .cover {
-        width: 100vw;
-        height: 62.5vw;
-        img {
-          width: 15vw;
-        }
-      }
-      .player {
-        max-height: 100%;
-      }
+      height: 56.25vw;
     }
 
     .timeline-title {
@@ -649,14 +638,41 @@ export default {
           below: false,
         },
       ],
+      player: "",
+      ytId: "PIYp7Q0gWbk",
     };
   },
   methods: {
-    onYtPlaying() {
-      $("#yt-player").contents().find(".ytp-title").html("");
-      let iframe = document.getElementById('yt-player');
-      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-      iframeDocument.querySelector('.ytp-title').remove();
+    onPlayerReady(event) {
+      console.log("load");
+      event.target.playVideo();
+    },
+    loadVideo() {
+      this.player = new window.YT.Player(`youtube-player-${this.ytId}`, {
+        videoId: this.ytId,
+        width: "100%",
+        height: "100%",
+        playerVars: {
+          autoplay: 1,
+          loop: 1,
+          controls: 0,
+          showinfo: 0,
+          autohide: 1,
+          modestbranding: 1,
+          mute: 0,
+          suggestedQuality: "default",
+          iv_load_policy: 3,
+        },
+        events: {
+          onReady: this.onPlayerReady,
+          onStateChange: this.onPlayerStateChange,
+        },
+      });
+    },
+    onPlayerStateChange(e) {
+      if (e.data === window.YT.PlayerState.ENDED) {
+        this.player.loadVideoById(this.id);
+      }
     },
   },
 
@@ -699,6 +715,22 @@ export default {
       true
     );
   },
-  created() {},
+  created() {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  },
+  mounted() {
+    setTimeout(() => {
+      if (!this.isMobile) {
+        if (!window.YT) {
+          window.onYouTubeIframeAPIReady = this.loadVideo;
+        } else {
+          this.loadVideo();
+        }
+      }
+    }, 2500);
+  },
 };
 </script>
