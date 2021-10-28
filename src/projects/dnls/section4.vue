@@ -73,7 +73,6 @@
   width: 100vw;
   background-size: contain;
   background-image: url("~@/assets/img/bg.jpg");
-  padding-top: 10vw;
 
   .yt-frame {
     position: relative;
@@ -88,7 +87,6 @@
     font-weight: 900;
     text-align: left;
     padding: 5vw 5vw 0 5vw;
-    margin-top: 10vw;
     position: relative;
     &::before {
       content: "";
