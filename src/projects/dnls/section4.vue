@@ -1,26 +1,5 @@
 <template>
   <div class="section4">
-    <div class="yt-frame">
-      <youtube
-        id="yt-player"
-        class="player"
-        :video-id="'PIYp7Q0gWbk'"
-        ref="youtube"
-        allowfullscreen
-        :player-vars="{
-          autoplay: 1,
-          loop: 1,
-          controls: 0,
-          showinfo: 0,
-          autohide: 1,
-          modestbranding: 1,
-          mute: 0,
-          suggestedQuality: 'default',
-          iv_load_policy: 3,
-        }"
-      ></youtube>
-    </div>
-
     <div class="timeline-title" data-aos="flip-up" data-aos-duration="1000">
       <span class="en">CHRONOLOGY </span>
       <br v-if="isMobile" />太平洋建設作品年表
@@ -53,6 +32,26 @@
       </div>
     </div>
     <div v-if="isMobile" class="bg"></div>
+    <div class="yt-frame">
+      <youtube
+        id="yt-player"
+        class="player"
+        :video-id="'PIYp7Q0gWbk'"
+        ref="youtube"
+        allowfullscreen
+        :player-vars="{
+          autoplay: 1,
+          loop: 1,
+          controls: 0,
+          showinfo: 0,
+          autohide: 1,
+          modestbranding: 1,
+          mute: 0,
+          suggestedQuality: 'default',
+          iv_load_policy: 3,
+        }"
+      ></youtube>
+    </div>
   </div>
 </template>
 <style lang="scss">
@@ -431,10 +430,10 @@
       z-index: 0;
       position: absolute;
       width: 100%;
-      height: 46%;
+      height: 65%;
       background-color: #000;
       opacity: 0.15;
-      top: 67%;
+      top: 57%;
       left: 0;
       transform: translateY(-50%);
     }
