@@ -42,10 +42,12 @@
         :player-vars="{
           autoplay: 1,
           loop: 1,
-          controls: 0,
+          playlist:'PIYp7Q0gWbk',
+          controls: 1,
           showinfo: 0,
           autohide: 1,
           modestbranding: 1,
+          rel: 0,
           mute: 0,
           suggestedQuality: 'default',
           iv_load_policy: 3,
@@ -56,7 +58,7 @@
 </template>
 <style lang="scss">
 .player {
-  height: 200%;
+  height: 100%;
   width: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
