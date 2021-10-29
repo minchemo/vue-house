@@ -164,8 +164,6 @@ export default {
         require("@/projects/llcs/s6/sb2/6.jpg"),
         require("@/projects/llcs/s6/sb2/7.jpg"),
         require("@/projects/llcs/s6/sb2/8.jpg"),
-        require("@/projects/llcs/s6/sb2/9.jpg"),
-        require("@/projects/llcs/s6/sb2/10.jpg"),
       ],
       swiperOptions: {
         spaceBetween:10,
