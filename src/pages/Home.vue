@@ -28,10 +28,10 @@
       </vue-lazy-component>
       <!--<vue-lazy-component class="section" id="section8" @init="init">
         <Section8 />
-      </vue-lazy-component>
+      </vue-lazy-component>-->
       <vue-lazy-component class="section" id="section9" @init="init">
         <Section9 />
-      </vue-lazy-component>-->
+      </vue-lazy-component>
 
 
 

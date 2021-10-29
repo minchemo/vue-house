@@ -65,6 +65,17 @@
     }
   }
 }
+
+
+
+@media only screen and (min-width: 1980px) {
+  .GodModView {
+    .view {
+      right:2.6%;
+
+    }
+  }
+}
 </style>
 
 <script>

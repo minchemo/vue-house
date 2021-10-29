@@ -90,10 +90,10 @@
 
           .caption {
             position: absolute;
-            right: 8vw;
-            bottom: 2vw;
+            right: 1vw;
+            bottom: 1vw;
             color: #fff;
-            font-size: 1.2vw;
+            font-size: 14px;
             letter-spacing: 1px;
             filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
           }
@@ -169,12 +169,15 @@
           .slide-item {
             .caption {
               position: absolute;
-              right: 8vw;
+              width: 70vw;
+              right: 1vw;
               bottom: 2vw;
               color: #fff;
-              font-size: 1.2vw;
+              text-align: right;
+              font-size: 12px;
               letter-spacing: 1px;
-              filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
+              line-height: 1.3em;
+              filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.8));
             }
           }
         }
@@ -217,7 +220,7 @@ export default {
       info,
       isMobile,
       swiperOptions: {
-        spaceBetween: 0,
+        spaceBetween: 1,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -232,7 +235,24 @@ export default {
           : `台北東區核心珍稀3.65米面寬精品宅，客餐廚、臥室、衛浴、陽台四進式空間規劃，舒適宜居的人性化尺度布局，生活有餘裕、時尚即日常，12-28坪輕門檻享樂型優質資產。`,
         img: [
           {
-            url: require("@/projects/dnls/s8/2.jpg"),
+            url: require("@/projects/dnls/s8/01.jpg"),
+            caption: "裝潢風格情境參考示意,格局尺度,依銷售買賣合約書為準,建設公司保有修正之權利。",
+          },
+          {
+            url: require("@/projects/dnls/s8/02.jpg"),
+            caption: "裝潢風格情境參考示意,格局尺度,依銷售買賣合約書為準,建設公司保有修正之權利。",
+          },
+          {
+            url: require("@/projects/dnls/s8/03.jpg"),
+            caption: "裝潢風格情境參考示意,格局尺度,依銷售買賣合約書為準,建設公司保有修正之權利。",
+          },
+          {
+            url: require("@/projects/dnls/s8/04.jpg"),
+            caption: "裝潢風格情境參考示意,格局尺度,依銷售買賣合約書為準,建設公司保有修正之權利。",
+          },
+          {
+            url: require("@/projects/dnls/s8/05.jpg"),
+            caption: "裝潢風格情境參考示意,格局尺度,依銷售買賣合約書為準,建設公司保有修正之權利。",
           },
         ],
       },

@@ -336,7 +336,7 @@ export default {
       info,
       isMobile,
       swiperOptions: {
-        spaceBetween: 0,
+        spaceBetween: 1,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

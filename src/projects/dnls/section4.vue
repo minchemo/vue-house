@@ -83,6 +83,7 @@
     margin: 0 auto;
     overflow: hidden;
     z-index: 5;
+    max-width: 1825px;
   }
 
   .timeline-title {
