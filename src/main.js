@@ -36,6 +36,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueSvgIcon from "vue-svgicon";
 import "./plugins/element.js";
+import VS2 from 'vue-script2'
 
 //import "@/lib/motionBlurJs/blur.js";
 
@@ -63,6 +64,7 @@ Vue.use(VueLazyload);
 Vue.use(VueLazyComponent);
 Vue.use(VueRellax);
 Vue.use(Vue2TouchEvents);
+Vue.use(VS2);
 
 new Vue({
   router,

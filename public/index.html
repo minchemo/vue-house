@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh_TW">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <link rel="icon" href="<%= BASE_URL %>favicon.png" />
-        <title><%= htmlWebpackPlugin.options.title %></title>
-    </head>
-    <body>
-        <noscript>
-            <strong
-                >We're sorry but vue-house doesn't work properly without JavaScript enabled. Please enable it to
-                continue.</strong
-            >
-        </noscript>
-        <div id="app"></div>
-        <div id="fb-root"></div>
-        <script
-            async
-            defer
-            crossorigin="anonymous"
-            src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=542185515968935&autoLogAppEvents=1"
-        ></script>
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-        <script
-            src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit"
-            async
-            defer
-        ></script>
 
-        <!-- built files will be auto injected -->
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.png" />
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but vue-house doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=542185515968935&autoLogAppEvents=1"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async
+        defer></script>
+    <script>
+        window.appier_q = window.appier_q || [];
+        window.appier_q.push(
+            { "t": "register", "content": { "id": "3e02", "site": "yj-h35.tw" } },
+            { "t": "pv_track", "action_id": "PageView_d6bd", "track_id": "74515ad51b639f9", "isCountReload": true, "counter": 0 },
+            { "t": "pv_track", "action_id": "ViewTwoPages_0974", "track_id": "74515ad51b639f9", "isCountReload": false, "counter": 1 })
+    </script>
+    <script src="//jscdn.appier.net/aa.js?id=yj-h35.tw" async></script>
+    <script>
+        window.appier_q = window.appier_q || [];
+        window.appier_q.push(
+            { "t": "register", "content": { "id": "3e02", "site": "yj-h35.tw" } },
+            { "t": "type_landing", "action_id": "ViewLanding_4173", "track_id": "74515ad51b639f9", "opts": { "unique_key": "true" } })
+    </script>
+    <script src="//jscdn.appier.net/aa.js?id=yj-h35.tw" async></script>
+
+
+
+
+    <!-- built files will be auto injected -->
+</body>
+
 </html>

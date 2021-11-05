@@ -35,6 +35,7 @@
         "vue-recaptcha-v3": "^1.7.0",
         "vue-rellax": "^0.1.0",
         "vue-router": "^3.0.3",
+        "vue-script2": "^2.1.0",
         "vue-scroll-reveal": "^1.0.11",
         "vue-scrollto": "^2.15.0",
         "vue-svg-loader": "^0.12.0",
