@@ -37,6 +37,9 @@ import "./plugins/element.js";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 
+import VS2 from 'vue-script2'
+
+
 import Swiper2, { Navigation, Pagination, Autoplay } from "swiper";
 Swiper2.use([Navigation, Pagination, Autoplay]);
 
@@ -67,6 +70,7 @@ Vue.use(VueLazyComponent);
 Vue.use(VueRellax);
 Vue.use(Vue2TouchEvents);
 Vue.use(VueAwesomeSwiper /* { default options with global component } */);
+Vue.use(VS2);
 
 new Vue({
   router,
