@@ -14,12 +14,11 @@
       <Section1 />
     </vue-lazy-component>
 
-      <div class="item item-contact" data-aos="fade" data-aos-delay="200">
-        <div class="section" id="contact">
-          <ContactSection />
-          
-        </div>
+    <div class="item item-contact" data-aos="fade" data-aos-delay="200">
+      <div class="section" id="contact">
+        <ContactSection />
       </div>
+    </div>
     <div class="section" @init="init">
       <GoogleMap />
     </div>
@@ -71,14 +70,14 @@ export default {
     MobileNav,
     HouseInfo,
     GoogleMap,
-    Section1
+    Section1,
   },
 
   data() {
     return {
       isMobile,
       isSide: true,
-      load: true
+      load: true,
       // viewIndex: 0,
       // action: {
       //   moveTo: () => {},
@@ -121,10 +120,8 @@ export default {
           allImagesLoaded();
         }
       };
-      $("img").each(function(idx, img) {
-        $("<img>")
-          .on("load", imageLoaded)
-          .attr("src", $(img).attr("src"));
+      $("img").each(function (idx, img) {
+        $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
       });
     });
   },
@@ -134,59 +131,30 @@ export default {
     // if (this.isMobile) {
     //   this.$refs.fullPage.api.setResponsive(true)
     // }
+    this.landingPage()
   },
   methods: {
-    init() {}
-    // onScroll() {
-    //   // 获取所有锚点元素
-    //   const navContents = document.querySelectorAll('.section')
-    //   // 所有锚点元素的 offsetTop
-    //   const offsetTopArr = []
-    //   navContents.forEach(item => {
-    //     offsetTopArr.push(item.offsetTop)
-    //   })
-    //   // 获取当前文档流的 scrollTop
-    //   const scrollTop =
-    //     document.documentElement.scrollTop || document.body.scrollTop
-    //   // 定义当前点亮的导航下标
-    //   let navIndex = 0
-    //   for (let n = 0; n < offsetTopArr.length; n++) {
-    //     // 如果 scrollTop 大于等于第n个元素的 offsetTop 则说明 n-1 的内容已经完全不可见
-    //     // 那么此时导航索引就应该是n了
-    //     if (scrollTop >= offsetTopArr[n] - 100) {
-    //       navIndex = n
-    //     }
-    //   }
-    //   this.viewIndex = navIndex + 1
-    // },
+    init(){
 
-    // onLeave(origin, destination, direction) {
-    //   if (!this.isMobile) {
-    //     if (origin.isLast === true && direction === 'up') {
-    //       console.log('加固')
-    //       this.$refs.fullPage.api.setResponsive(false)
-    //     }
-    //     if (origin.isFirst === true && direction === 'down' && this.isMobile) {
-    //       this.$refs.fullPage.api.setResponsive(false)
-    //     }
-
-    //     if (
-    //       destination.isFirst === true &&
-    //       direction === 'up' &&
-    //       this.isMobile
-    //     ) {
-    //       this.$refs.fullPage.api.setResponsive(false)
-    //     }
-    //   }
-    // },
-
-    // afterLoad(origin, destination, direction) {
-    //   this.indigatorIndex = destination.index
-    //   if (destination.isLast === true && direction === 'down') {
-    //     console.log('解除')
-    //     this.$refs.fullPage.api.setResponsive(true)
-    //   }
-    // },
-  }
+    },
+    landingPage() {
+      this.$loadScript("https://jscdn.appier.net/aa.js?id=yj-h35.tw")
+        .then(() => {
+          window.appier_q = window.appier_q || [];
+          window.appier_q.push(
+            { t: "register", content: { id: "3e02", site: "yj-h35.tw" } },
+            {
+              t: "type_landing",
+              action_id: "ViewLanding_4173",
+              track_id: "74515ad51b639f9",
+              opts: { unique_key: "true" },
+            }
+          );
+        })
+        .catch(() => {
+          console.log("landing page script load fail");
+        });
+    },
+  },
 };
 </script>

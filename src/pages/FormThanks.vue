@@ -63,8 +63,9 @@ export default {
 
   methods: {},
   mounted() {
-    this.VueScript2.load("https://jscdn.appier.net/aa.js?id=yj-h35.tw").then(
-      function () {
+
+  this.$loadScript("https://jscdn.appier.net/aa.js?id=yj-h35.tw")
+    .then(() => {
         window.appier_q = window.appier_q || [];
         window.appier_q.push(
           { t: "register", content: { id: "3e02", site: "yj-h35.tw" } },
@@ -76,8 +77,11 @@ export default {
             opts: { unique_key: "true" },
           }
         );
-      }
-    );
+    })
+    .catch(() => {
+      console.log('script load fail');
+    });
+    
   },
 };
 </script>
