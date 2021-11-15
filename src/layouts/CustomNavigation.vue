@@ -92,7 +92,7 @@ $hamburger-layer-color: #fff;
 /* 螢幕尺寸標準 */
 .custom-navigation {
   position: fixed;
-  z-index: 10000;
+  z-index: 500;
   right: 0;
   top: 0;
 
