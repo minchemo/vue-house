@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="custom-navbar">
+    <div class="custom-navbar" data-aos="fade-down" data-aos-delay="2000">
       <div class="link">來電洽詢</div>
       <div class="link">立即預約</div>
       <div class="link">地圖導航</div>

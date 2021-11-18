@@ -1,13 +1,106 @@
 <template>
   <div class="section1">
-    <img v-lazy :temp="require('@/projects/pjr/s1/logo.svg')" alt="" />
+    <div class="intro">
+      <div class="i1" data-aos="fade-down" data-aos-delay="1000">
+        中山北路 盼到璞真
+      </div>
+      <div class="i2" data-aos="fade" data-aos-duration="2000">
+        <img
+          :temp="require('@/projects/pjr/s1/logo.svg')"
+          v-lazy
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div
+        class="i3"
+        ref="en"
+        data-aos="fade"
+        data-aos-duration="2000"
+        data-aos-delay="600"
+      >
+        <span>Z</span>
+        <span>h</span>
+        <span>o</span>
+        <span>n</span>
+        <span>g</span>
+        <span>s</span>
+        <span>h</span>
+        <span>a</span>
+        <span>n</span>
+        <span>&ensp;</span>
+        <span>A</span>
+        <span>r</span>
+        <span>t</span>
+        <span>&ensp;</span>
+        <span>M</span>
+        <span>a</span>
+        <span>n</span>
+        <span>s</span>
+        <span>i</span>
+        <span>o</span>
+        <span>n</span>
+      </div>
+      <div class="i4" data-aos="fade-up" data-aos-delay="1200">
+        61-89坪│中山北路首排│香港P&T│23層樹海地標
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
+@import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .section1 {
   min-height: 100vh;
   background-color: rgba($color: #231815, $alpha: 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../pjr/s1/bg.jpg");
+  background-size: cover;
+  .intro {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .i1 {
+      font-size: size(65.5);
+      font-weight: 500;
+      letter-spacing: size(5);
+    }
+    .i2 {
+      margin-top: size(40);
+      width: size(454);
+      img {
+        width: 100%;
+      }
+    }
+    .i3 {
+      margin-top: size(5);
+      font-family: "Noto Serif TC";
+      font-size: size(38);
+      font-weight: 100;
+      span {
+        &.flicking {
+          animation: flicking 2s;
+        }
+      }
+
+      @keyframes flicking {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.2;
+        }
+      }
+    }
+    .i4 {
+      margin-top: size(40);
+      font-size: size(36);
+      letter-spacing: size(5);
+    }
+  }
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -39,7 +132,45 @@ export default {
     }
   },
 
-  methods: {},
+  methods: {
+    getRandom(arr, n) {
+      var result = new Array(n),
+        len = arr.length,
+        taken = new Array(len);
+      if (n > len)
+        throw new RangeError("getRandom: more elements taken than available");
+      while (n--) {
+        var x = Math.floor(Math.random() * len);
+        result[n] = arr[x in taken ? taken[x] : x];
+        taken[x] = --len in taken ? taken[len] : len;
+      }
+      return result;
+    },
+    setAnimateToEn() {
+      const target = this.$refs.en.querySelectorAll('span');
+
+      let random = this.getRandom(target, 5);
+
+      random.forEach((element, i) => {
+        setTimeout(() => {
+          element.classList.remove('flicking');
+          element.classList.add('flicking');
+        }, i * 500);
+
+      });
+    }
+  },
+
+  mounted() {
+    let interval;
+    interval = setInterval(() => {
+      this.setAnimateToEn()
+    }, 1000);
+
+    setTimeout(() => {
+      clearInterval(interval)
+    }, 3000);
+  },
 
   created() { },
 }

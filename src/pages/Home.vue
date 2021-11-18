@@ -105,7 +105,9 @@ export default {
     });
   },
   mounted() {
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+    });
     // window.addEventListener('scroll', this.onScroll, false)
     // this.action = this.$refs.fullPage.api
     // if (this.isMobile) {
@@ -141,7 +143,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Playball&display=swap");
 @import "../assets/style/variableColor.scss";
 
 .home {
