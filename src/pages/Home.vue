@@ -1,43 +1,17 @@
 <template>
   <div class="home no-padding-top">
     <Loading :loading="load" />
-    <Navigation />
-    <!-- <CustomNavigation /> -->
+    <!-- <Navigation /> -->
+    <CustomNavigation />
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
-      <vue-lazy-component class="section" id="section1" @init="init">
-        <Section1 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section2" @init="init">
-        <Section2 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section3" @init="init">
-        <Section3 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section4" @init="init">
-        <Section4 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section5" @init="init">
-        <Section5 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section6" @init="init">
-        <Section6 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section7" @init="init">
-        <Section7 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section8" @init="init">
-        <Section8 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section9" @init="init">
-        <Section9 />
-      </vue-lazy-component>
+    <vue-lazy-component class="section" id="section1" @init="init">
+      <Section1 />
+    </vue-lazy-component>
 
-
-
-      <vue-lazy-component class="section" id="contact">
-        <ContactSection />
-      </vue-lazy-component>
+    <vue-lazy-component class="section" id="contact">
+      <ContactSection />
+    </vue-lazy-component>
     <!-- </full-page> -->
 
     <MobileNav />
@@ -58,15 +32,7 @@ import AOS from "@/lib/aos/src/js/aos";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/dnls/section1.vue";
-import Section2 from "@/projects/dnls/section2.vue";
-import Section3 from "@/projects/dnls/section3.vue";
-import Section4 from "@/projects/dnls/section4.vue";
-import Section5 from "@/projects/dnls/section5.vue";
-import Section6 from "@/projects/dnls/section6.vue";
-import Section7 from "@/projects/dnls/section7.vue";
-import Section8 from "@/projects/dnls/section8.vue";
-import Section9 from "@/projects/dnls/section9.vue";
+import Section1 from "@/projects/pjr/section1.vue";
 
 export default {
   name: "home",
@@ -79,14 +45,6 @@ export default {
     ContactSection,
     MobileNav,
     Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
-    Section8,
-    Section9
   },
 
   data() {
@@ -135,7 +93,7 @@ export default {
       };
       const imageLoaded = () => {
         imagesLoaded++;
-        
+
 
         if (imagesLoaded > totalImages * 0.5) {
           allImagesLoaded();
@@ -163,7 +121,7 @@ export default {
   // }
   // },
   methods: {
-    init() {},
+    init() { },
     scrolling() {
       let lastScrollTop = 0;
       $(window).on("scroll", function () {
@@ -187,17 +145,17 @@ export default {
 @import "../assets/style/variableColor.scss";
 
 .home {
-&::before {
-  content: ' ';
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  //background: url("~@/projects/llcs/s1/bg.jpg") center 0 no-repeat;
-  background-size: cover;
-}
+  &::before {
+    content: " ";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //background: url("~@/projects/llcs/s1/bg.jpg") center 0 no-repeat;
+    background-size: cover;
+  }
 }
 
 .section,
@@ -237,11 +195,11 @@ export default {
 }
 
 @media only screen and (max-width: 767px) {
-.home {
-&::before {
-  //background-image: url("~@/projects/llcs/s1/bg_mo.jpg");
-}
-}
+  .home {
+    &::before {
+      //background-image: url("~@/projects/llcs/s1/bg_mo.jpg");
+    }
+  }
   .fp-left {
     display: flex;
     margin: 0 !important;

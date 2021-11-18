@@ -10,6 +10,11 @@
         </div>
       </div>
     </div>
+    <div class="custom-navbar">
+      <div class="link">來電洽詢</div>
+      <div class="link">立即預約</div>
+      <div class="link">地圖導航</div>
+    </div>
     <div
       class="custom-navigation-list"
       v-bind:class="isOpen ? 'is-active' : ''"
@@ -70,7 +75,7 @@ export default {
     //         "active"
     //       );
     //     }
-        
+
     //   });
     // },
     // elementInViewport(elem) {
@@ -88,6 +93,7 @@ export default {
 <style lang="scss" scoped>
 $hamburger-layer-color: #fff;
 
+@import "../assets/style/function.scss";
 @import "../assets/style/variableColor.scss";
 /* 螢幕尺寸標準 */
 .custom-navigation {
@@ -99,22 +105,29 @@ $hamburger-layer-color: #fff;
   .custom-navigation-toggler {
     position: absolute;
     right: 2vw;
-    top: 2vw;
+    top: size(47.5);
+    margin-top: -#{size(17)};
     z-index: 1;
     background-size: cover;
-    background-image: url("~@/assets/img/nav-btn-bg.jpg");
-    width: 60px;
-    height: 60px;
+    // background-image: url("~@/assets/img/nav-btn-bg.jpg");
+    width: auto;
+    height: size(34);
     display: flex;
     align-items: center;
     justify-content: center;
 
     .hamburger {
       padding: 0;
-      .hamburger-inner,
-      .hamburger-inner:after,
-      .hamburger-inner:before {
-        background-color: #fff;
+      .hamburger-box {
+        width: size(34);
+        .hamburger-inner,
+        .hamburger-inner:after,
+        .hamburger-inner:before {
+          width: 100%;
+          background-color: #fff;
+          border-radius: 0;
+          height: 2px;
+        }
       }
     }
   }
@@ -157,6 +170,28 @@ $hamburger-layer-color: #fff;
           background: yellow;
           color: #005e3c;
         }
+      }
+    }
+  }
+
+  .custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: size(95);
+    background-color: rgba($color: #231815, $alpha: 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: size(150);
+    .link {
+      font-size: size(24);
+      margin-left: size(60);
+      color: #fff;
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
       }
     }
   }

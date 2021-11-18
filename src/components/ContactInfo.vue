@@ -1,52 +1,53 @@
 <template>
-<div>
-
-  <div id="contact-info">
-    <div class="contact-info contact-sec">
-      <img
-        v-if="!isMobile"
-        class="logo"
-        src="@/assets/img/contact-logo.png"
-        :alt="info.caseName"
-      />
-      <img
-        v-if="isMobile"
-        class="logo"
-        src="@/assets/img/contact-logo.png"
-        :alt="info.caseName"
-      />
-      <div class="info">
-        <div class="btn flex-c" @click="showCallDialog">
-          <span class="flex-c">
-            <font-awesome-icon icon="phone" />
-            <span>{{ info.phone }}</span>
-          </span>
-        </div>
-        <div class="btn flex-c" @click="showMessengerDialog">
-          <span class="flex-c">
-            <font-awesome-icon :icon="['fab', 'facebook-messenger']" /><span
-              >FB 諮詢</span
-            >
-          </span>
-        </div>
-        <a class="btn flex-c bt_fanpage" :href="info.fbLink" target="_blank">
-          <span class="flex-c">
-            <font-awesome-icon :icon="['fab', 'facebook-f']" /><span
-              >前往粉絲專頁</span
-            >
-          </span>
-        </a>
-        <div class="address flex-c">{{ info.address }}</div>
-        <div class="google-btn flex-c btn" @click="showMapDialog">
-          <span class="flex-c">
-            <font-awesome-icon icon="map-marker-alt" /><span
-              >導航 Google 地圖</span
-            >
-          </span>
+  <div>
+    <div id="contact-info">
+      <div class="contact-info contact-sec">
+        <img
+          v-if="!isMobile"
+          v-lazy
+          class="logo"
+          :temp="require('@/assets/img/contact-logo.png')"
+          :alt="info.caseName"
+        />
+        <img
+          v-if="isMobile"
+          class="logo"
+          v-lazy
+          :temp="require('@/assets/img/contact-logo.png')"
+          :alt="info.caseName"
+        />
+        <div class="info">
+          <div class="btn flex-c" @click="showCallDialog">
+            <span class="flex-c">
+              <font-awesome-icon icon="phone" />
+              <span>{{ info.phone }}</span>
+            </span>
+          </div>
+          <div class="btn flex-c" @click="showMessengerDialog">
+            <span class="flex-c">
+              <font-awesome-icon :icon="['fab', 'facebook-messenger']" /><span
+                >FB 諮詢</span
+              >
+            </span>
+          </div>
+          <a class="btn flex-c bt_fanpage" :href="info.fbLink" target="_blank">
+            <span class="flex-c">
+              <font-awesome-icon :icon="['fab', 'facebook-f']" /><span
+                >前往粉絲專頁</span
+              >
+            </span>
+          </a>
+          <div class="address flex-c">{{ info.address }}</div>
+          <div class="google-btn flex-c btn" @click="showMapDialog">
+            <span class="flex-c">
+              <font-awesome-icon icon="map-marker-alt" /><span
+                >導航 Google 地圖</span
+              >
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <el-dialog
       title
       :visible.sync="isShowCallDialog"
@@ -71,7 +72,7 @@
     >
       <MapDialog :link="info.googleLink" :address="info.address" />
     </el-dialog>
-</div>
+  </div>
 </template>
 
 <script>
@@ -136,7 +137,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -100%);
   z-index: 15;
-    border-top: 1px solid #000 ;
+  border-top: 1px solid #000;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -435,7 +436,6 @@ export default {
   .btn {
     &.half {
       width: 280px;
-      
     }
     svg {
       position: absolute;

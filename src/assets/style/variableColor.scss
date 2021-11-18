@@ -1,17 +1,29 @@
 /* html, body */
+
 $bg: url("");
 
 /* font-family */
-/* 1主要字體  2次要字體  3表單字體  4黑體 */
-$family1: "youmin", "Noto Serif TC", sans-serif;
-$family2: "Noto Serif TC", sans-serif;
-$family3: "Noto Serif TC", sans-serif;
-$family4: "Noto Serif TC", sans-serif;
 
+
+/* 1主要字體  2次要字體  3表單字體  4黑體 */
+
+$family1: "youmin",
+"Noto Sans TC",
+sans-serif;
+$family2: "Noto Sans TC",
+sans-serif;
+$family3: "Noto Sans TC",
+sans-serif;
+$family4: "Noto Sans TC",
+sans-serif;
 $selection_color: grey;
 
 /* navigation */
-$nav_bg: rgba(255, 255, 255, 0.4);
+
+$nav_bg: rgba(255,
+255,
+255,
+0.4);
 $nav_btn_color: #000;
 $nav_link_color: #000;
 $nav_link_subtitle_color: #000;
@@ -20,25 +32,26 @@ $nav_link_hover_bg: #976a4b;
 $nav_link_border_bg: #000;
 
 /* loading */
+
 $loading_bg_color: #ccc;
 $loading_bg_image: #ccc;
 $loading_icon_color: #f7931e #f7931e transparent;
 
 /* astrictMask */
+
 $mask_bg_color: #fff;
-$mask_bg_image: linear-gradient(
-  to top,
-  rgba(0, 0, 0, 0.24),
-  rgba(156, 30, 35, 0)
-);
+$mask_bg_image: linear-gradient( to top,
+rgba(0, 0, 0, 0.24),
+rgba(156, 30, 35, 0));
 $mask_color: #333;
 $mask_icon_color: #c82514;
 
 /* contactSection */
+
 // order
 $order_bg_color: #006868;
-$order_bg_image: url('~@/assets/img/order_bg.jpg');
-$order_bg_image_m: url('~@/assets/img/order_bg.jpg');
+$order_bg_image: url("~@/assets/img/order_bg.jpg");
+$order_bg_image_m: url("~@/assets/img/order_bg.jpg");
 $order_title_color: #000;
 $order_subtitle_color: #000;
 $order_input_label_color: #333333;
@@ -54,12 +67,13 @@ $order_submit_bg: #000;
 $order_submit_borderradius: 0px;
 $order_submit_color: #fff !important;
 $order_sumbit_disable_bg: #000;
-
 // contactInfo
-$contact_bg: url('~@/assets/img/order_bg.jpg');
-$contact_bg_m: url('~@/assets/img/order_bg.jpg');
-$contact_shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
-
+$contact_bg: url("~@/assets/img/order_bg.jpg");
+$contact_bg_m: url("~@/assets/img/order_bg.jpg");
+$contact_shadow: 0 0 80px 0 rgba(0,
+0,
+0,
+0.2);
 $contact_btn_border: inset 0 0 0px 0px #fff;
 $contact_btn_color: #000;
 $contact_btn_icon: #000;
@@ -70,10 +84,8 @@ $contact_btn_hover_bg: #000;
 $contact_btn_border_radius: 0px;
 $contact_btn_addr_border_radius: 0px 0 0 0px;
 $contact_btn_gbtn_border_radius: 0 0px 0px 0;
-
 $contact_btn_addr_border_radius_m: 0px 0px 0 0 !important;
 $contact_btn_gbtn_border_radius_m: 0 0 0px 0px !important;
-
 $contact_google_btn_color: #fff;
 $contact_google_btn_icon: #fff;
 $contact_google_btn_bg: #000;
@@ -82,28 +94,28 @@ $contact_google_hover_btn_color: #333333;
 $contact_google_hover_btn_icon: #333333;
 $contact_google_hover_btn_bg: #fff;
 $contact_google_hover_border: inset 0 0 0px 0px #fff;
-
 // houseInfo
-$house_bg: url('~@/assets/img/order_bg.jpg');
+$house_bg: url("~@/assets/img/order_bg.jpg");
 $house_title_color: #fff;
 $house_border_color: #fff;
 $house_label_color: #fff;
 $house_desc_color: #fff;
-
 // mobileNav
-$mobile_nav_background: #BF191F;
+$mobile_nav_background: #bf191f;
 $mobile_nav_color: #fff;
 $mobile_nav_border: #fff;
 $mobile_nav_icon: #fff;
-
 $mobile_dialog_bg: #fff;
-$mobile_dialog_icon: #BF191F;
+$mobile_dialog_icon: #bf191f;
 $mobile_dialog_desc: #000;
-$mobile_dialog_submit_bg: #BF191F;
+$mobile_dialog_submit_bg: #bf191f;
 $mobile_dialog_submit_color: #fff;
 
 /* dialog */
+
+
 /* PhoneThanks.vue */
+
 $phone_thanks_bg: url("~@/assets/img/thank_bg.png");
 $phone_thanks_title_color: #fff;
 $phone_thanks_desc_color: #fff;
