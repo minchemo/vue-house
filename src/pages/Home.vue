@@ -5,8 +5,14 @@
     <CustomNavigation />
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
-    <vue-lazy-component class="section" id="section1" @init="init">
+    <vue-lazy-component class="section" id="section1">
       <Section1 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section2">
+      <Section2 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section3">
+      <Section3 />
     </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
@@ -33,6 +39,13 @@ import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
 import Section1 from "@/projects/pjr/section1.vue";
+import Section2 from "@/projects/pjr/section2.vue";
+import Section3 from "@/projects/pjr/section3.vue";
+// import Section2 from "@/projects/pjr/section2.vue";
+// import Section2 from "@/projects/pjr/section2.vue";
+// import Section2 from "@/projects/pjr/section2.vue";
+// import Section2 from "@/projects/pjr/section2.vue";
+// import Section2 from "@/projects/pjr/section2.vue";
 
 export default {
   name: "home",
@@ -45,6 +58,8 @@ export default {
     ContactSection,
     MobileNav,
     Section1,
+    Section2,
+    Section3
   },
 
   data() {
