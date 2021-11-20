@@ -1,29 +1,41 @@
 <template>
   <div class="GodModView with-mask">
-    <div
-      class="view"
-      ref="view"
-      :style="{ 'padding-bottom': viewAspectRatioPercentage + '%' }"
-    >
-      <img ref="viewImg" class="view-img" :src="bgUrl" alt="" />
-      <!-- <img
-        v-if="isMobile"
-        class="view-hand"
-        ref="viewHand"
-        :src="swipeUrl"
-        alt=""
-      /> -->
+    <div class="view" ref="view">
+      <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
+      <img class="view-hand" ref="viewHand" v-lazy :temp="swipeUrl" alt="" />
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/style/function.scss";
 .GodModView {
   .view {
-    height: 0;
+    height: 100vh;
     width: 100%;
+
+    .view-hand {
+      position: absolute;
+      width: size(120);
+      z-index: 1;
+      right: size(400);
+      top: size(150);
+      pointer-events: none;
+      transform: translateX(0);
+      animation: move 2s alternate-reverse infinite ease-in-out;
+
+      @keyframes move {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    }
     .view-img {
-      max-width: 100vw;
+      height: 100%;
+      max-width: unset;
     }
   }
 }
@@ -31,10 +43,7 @@
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
-      height: 0;
-      width: 100%;
-      overflow-x: scroll;
-      overflow-y: hidden;
+      height: 100vh;
 
       .view-hand {
         position: absolute;
@@ -46,7 +55,9 @@
         pointer-events: none;
       }
       .view-img {
-        max-width: unset;
+        touch-action: none;
+        user-select: none;
+        height: 100%;
       }
       //.view-img{height: 100%;}
     }
@@ -55,7 +66,9 @@
 </style>
 
 <script>
-import { isMobile } from "@/utils";
+import { isMobile } from "@/utils"
+import interact from 'interactjs';
+
 export default {
   name: "GodModView",
   data() {
@@ -64,8 +77,8 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: -150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/dnls/s5/view.jpg"), //置換圖片路徑即可
-      //swipeUrl: require("@/projects/chy/s3/swipe-here.png"), //置換圖片路徑即可
+      bgUrl: require("@/projects/pjr/s6/bg.jpg"), //置換圖片路徑即可
+      swipeUrl: require("@/projects/pjr/s6/hand.png"), //置換圖片路徑即可
     };
   },
   methods: {
@@ -105,12 +118,53 @@ export default {
         this.setViewBgHeight();
       });
     },
+    dragMoveListener(event) {
+      $('.view-hand').hide();
+      var target = event.target
+      // keep the dragged position in the data-x/data-y attributes
+      var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+      var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+      // translate the element
+      target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+      // update the posiion attributes
+      target.setAttribute('data-x', x)
+      target.setAttribute('data-y', y)
+    }
   },
   mounted() {
     //this.getScreenHeight();
     this.setViewBgHeight();
     this.onResize();
     this.scrollView();
+
+
+    interact('.view-img')
+      .draggable({
+        inertia: true,
+        startAxis: 'x',
+        lockAxis: 'x',
+        modifiers: [
+          interact.modifiers.restrictRect({
+            restriction: 'parent',
+            endOnly: false
+          })
+        ],
+        listeners: {
+          move: this.dragMoveListener,
+          end(event) {
+            var textEl = event.target.querySelector('p')
+
+            textEl && (textEl.textContent =
+              'moved a distance of ' +
+              (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                Math.pow(event.pageY - event.y0, 2) | 0))
+                .toFixed(2) + 'px')
+          }
+        }
+      })
+
   },
 };
 </script>

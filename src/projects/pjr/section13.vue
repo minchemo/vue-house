@@ -1,9 +1,29 @@
 <template>
-  <div class="section3">
+  <div class="section13">
     <div class="info" data-aos="fade-up" data-aos-delay="400">
+      <div class="subtitle" v-html="activeSlide.subtitle"></div>
       <h2 v-html="activeSlide.title"></h2>
+      <div class="small-title" v-html="activeSlide.smallTitle"></div>
       <div class="divider"></div>
       <p v-html="activeSlide.content"></p>
+      <div class="s-nav">
+        <div class="prev" @click="prevS">
+          <img
+            v-lazy
+            :temp="require('@/projects/pjr/s11/prev.svg')"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="next" @click="nextS">
+          <img
+            v-lazy
+            :temp="require('@/projects/pjr/s11/next.svg')"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
     </div>
     <div class="swiper-box" data-aos="fade-up">
       <swiper
@@ -13,20 +33,16 @@
       >
         <swiper-slide
           class="slide"
-          v-for="(slide, i) in slides"
+          v-for="(slide, i) in activeSlide.img"
           v-bind:key="i"
           v-bind:style="{
-            backgroundImage: `url(${slide.img})`,
+            backgroundImage: `url(${slide})`,
           }"
         >
           <div class="caption">
-            {{ slide.caption }}
+            {{ activeSlide.caption }}
           </div>
         </swiper-slide>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-
-        <div class="swiper-pagination" v-if="!isMobile" slot="pagination"></div>
       </swiper>
     </div>
   </div>
@@ -34,58 +50,86 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
-.section3 {
+.section13 {
   background-color: #d2dee0;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
   .info {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
     text-align: left;
-    width: size(440);
-    margin-left: size(80);
-    margin-top: size(160);
-    height: size(600);
+    background-color: rgba($color: #d2dee0, $alpha: 0.6);
+    padding: size(60) size(80) size(60) size(120);
+    .subtitle {
+      font-size: size(29);
+      color: #231815;
+      line-height: 1.5;
+      margin-bottom: size(25);
+    }
     h2 {
-      text-align: center;
-      font-size: size(50);
-      font-weight: 400;
+      font-size: size(54);
+      font-weight: 300;
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
+      margin-bottom: size(25);
+    }
+    .small-title {
+      text-align: center;
+      font-size: size(39);
+      color: #267f98;
+      font-weight: 300;
     }
     .divider {
-      background: #009be4;
-      width: size(560);
+      position: relative;
+      background: #fff;
+      width: 200%;
       height: 1px;
-      margin: size(20) 0;
-      margin-left: -#{size(80)};
+      left: 0;
+      margin-right: -100%;
+      margin-top: size(25);
+      margin-bottom: size(25);
     }
     p {
-      font-size: size(26);
+      font-size: size(22);
       letter-spacing: size(3);
       font-weight: 300;
       line-height: 2;
       color: #231815;
+      max-width: size(570);
+    }
+    .s-nav {
+      width: size(140);
+      margin-top: size(25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .prev,
+      .next {
+        width: size(24);
+        cursor: pointer;
+        img {
+          width: 100%;
+        }
+      }
     }
   }
   .swiper-box {
-    width: size(1278);
+    position: relative;
+    width: 100vw;
     .swiper-container {
-      padding: size(80) 0;
-      margin: size(100) 0;
       .slide {
         height: 0;
-        padding-bottom: 66%;
+        padding-bottom: 56.25%;
         background-size: cover;
         .caption {
           position: absolute;
           z-index: 1;
-          color: #fff;
-          right: size(40);
-          bottom: size(30);
+          color: #000;
+          left: size(150);
+          bottom: size(50);
           font-size: size(20);
           font-weight: 200;
         }
@@ -142,7 +186,7 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .section3 {
+  .section13 {
     background-color: #d2dee0;
     min-height: unset;
     height: auto;
@@ -253,7 +297,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: "section3",
+  name: "section13",
 
   components: {
     Swiper,
@@ -265,31 +309,26 @@ export default {
   data() {
     return {
       isMobile,
+      currentSlide: 0,
       activeSlide: {},
       slides: [
         {
-          title: "百年林蔭至高地標<br/>璞真訂製傳世眼界",
-          content: `翻閱中山北路世紀繪卷，台灣第一條現代化大道，日本天皇敕使御道，國家外交官道，烜赫人物踏響中山北獨有的貴族身世。人文熟釀的大道胸豁，從昂首邁步到駐足仰望，23層百年樹海之巔，最懂居宅品味的「璞真之道」淬鍊來到。`,
-          img: require("@/projects/pjr/s3/1.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          subtitle: "璞真建設 建築摯美生活初衷",
+          title: "讓建築好好地長<br>就像那些很紮實的大樹",
+          content: `2002年成立，璞真像棵樹，也像種樹的人，作建築本心，對環境，對人，密密融合；對土地，念念不忘。致力發揮土地最高價值，秉持自然生態與居住環境和諧共生。`,
+          img: [require("@/projects/pjr/s13/1.jpg")],
+          caption: "3D 情境示意圖",
         },
         {
-          title: "樹海人文長鏡頭<br/>潛藏一世紀富裕壯遊",
-          content: `半輩子縱橫江山，滿胸懷超然際遇，繫念中山北路樹海第一排的窗，台北歷史最淵遠的林蔭大道，心上永恆富裕原鄉。樟楓漫天綠浪開道，企業總部、縉紳豪邸，相偕未來蓬勃盛放。傳奇在腳下波瀾，繁華燈火在側，群山濃淡疊翠，頂峰之上，照看歲月寧靜。`,
-          img: require("@/projects/pjr/s3/2.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          subtitle: "璞真建22設 建築摯美生活初衷",
+          title: "讓建築好好地長<br>就像那些很紮實的大樹",
+          content: `2002年成立，璞真像棵樹，也像種樹的人，作建築本心，對環境，對人，密密融合；對土地，念念不忘。致力發揮土地最高價值，秉持自然生態與居住環境和諧共生。`,
+          img: [require("@/projects/pjr/s13/1.jpg")],
+          caption: "3D 情境示意圖",
         },
       ],
       swiperOptions: {
         spaceBetween: 30,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        },
         autoplay: {
           delay: 3000,
         },
@@ -298,14 +337,25 @@ export default {
   },
 
   methods: {
-    onSwiperSlideChangeTransitionStart() {
-      const activeIndex = this.$refs.swiper.$swiper.activeIndex;
-      this.activeSlide = this.slides[activeIndex];
+    nextS() {
+      this.currentSlide++;
+      if (this.currentSlide == this.slides.length) {
+        this.currentSlide = 0
+      }
+      this.activeSlide = this.slides[this.currentSlide];
+    },
+    prevS() {
+      this.currentSlide--;
+      if (this.currentSlide < 0) {
+        this.currentSlide = this.slides.length - 1
+      }
+
+      this.activeSlide = this.slides[this.currentSlide];
     },
   },
 
   mounted() {
-    this.activeSlide = this.slides[0];
+    this.activeSlide = this.slides[this.currentSlide];
   },
 
   created() { },

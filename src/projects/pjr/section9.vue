@@ -1,94 +1,176 @@
 <template>
-  <div class="section3">
+  <div class="section9">
     <div class="info" data-aos="fade-up" data-aos-delay="400">
-      <h2 v-html="activeSlide.title"></h2>
+      <h2>
+        建築、自然永恆詩境<br />
+        鐫刻城市美學指標
+      </h2>
       <div class="divider"></div>
-      <p v-html="activeSlide.content"></p>
+      <p>
+        建築不只精密科學計算，而是有溫度、有情感、有故事的生活聚場，從結構形體昇華至精神領域。璞真願意花更多時間探索生活，量身訂製創新空間提案，以綠建築、智慧建築設計導入低碳思維。當建築擁有獨一無二的性格，自然吸引居住品味相契的人們，回歸生活最樸實且真摯的樣貌。
+      </p>
+      <div class="swiper-box1" data-aos="fade-up">
+        <swiper
+          :options="swiperOptions1"
+          ref="swiper1"
+          @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart1"
+        >
+          <swiper-slide
+            class="slide"
+            v-for="(slide, i) in slides1"
+            v-bind:key="i"
+            v-bind:style="{
+              backgroundImage: `url(${slide.img})`,
+            }"
+          >
+          </swiper-slide>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
+        <div class="caption" v-html="activeSlide1.caption"></div>
+      </div>
     </div>
     <div class="swiper-box" data-aos="fade-up">
+      <div class="caption large">璞真建設 經典業績</div>
       <swiper
-        :options="swiperOptions"
-        ref="swiper"
-        @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart"
+        :options="swiperOptions2"
+        ref="swiper2"
+        @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart2"
       >
         <swiper-slide
           class="slide"
-          v-for="(slide, i) in slides"
+          v-for="(slide, i) in slides2"
           v-bind:key="i"
           v-bind:style="{
             backgroundImage: `url(${slide.img})`,
           }"
         >
-          <div class="caption">
-            {{ slide.caption }}
-          </div>
         </swiper-slide>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
-
-        <div class="swiper-pagination" v-if="!isMobile" slot="pagination"></div>
       </swiper>
+      <div class="caption" v-html="activeSlide2.caption"></div>
     </div>
   </div>
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
-.section3 {
+.section9 {
   background-color: #d2dee0;
   min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: center;
   flex-direction: row;
+  padding: size(200) 0;
   .info {
     text-align: left;
-    width: size(440);
-    margin-left: size(80);
-    margin-top: size(160);
-    height: size(600);
+    width: size(600);
+    margin-right: size(50);
+    .subtitle {
+      text-align: center;
+      font-size: size(29);
+      color: #231815;
+      margin-bottom: size(25);
+    }
     h2 {
       text-align: center;
-      font-size: size(50);
-      font-weight: 400;
+      font-size: size(54);
+      font-weight: 300;
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
+      margin-bottom: size(25);
+    }
+    .small-title {
+      text-align: center;
+      font-size: size(39);
+      color: #267f98;
+      font-weight: 300;
     }
     .divider {
       background: #009be4;
-      width: size(560);
+      width: size(1000);
       height: 1px;
-      margin: size(20) 0;
-      margin-left: -#{size(80)};
+      right: 0;
+      margin-left: -#{size(400)} !important;
+      margin: size(25);
     }
     p {
-      font-size: size(26);
+      font-size: size(22);
       letter-spacing: size(3);
       font-weight: 300;
       line-height: 2;
       color: #231815;
     }
+    .swiper-box1 {
+      position: relative;
+      width: 100%;
+      margin-top: size(20);
+      padding-bottom: size(20);
+      .swiper-container {
+        .slide {
+          height: 0;
+          padding-bottom: 66.6%;
+          background-size: cover;
+        }
+        .swiper-button-prev {
+          left: size(50);
+          width: size(80);
+          height: size(80);
+          color: #fff;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: left;
+          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+
+          &::after {
+            content: "";
+          }
+        }
+        .swiper-button-next {
+          right: size(50);
+          color: #fff;
+          width: size(80);
+          height: size(80);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+
+          &::after {
+            content: "";
+          }
+        }
+
+        .swiper-pagination {
+          .swiper-pagination-bullet {
+            margin: 0 size(6);
+            border-radius: 0;
+            background: transparent;
+            border: 1px solid #267f98;
+            width: size(18);
+            height: size(18);
+            opacity: 1;
+            &.swiper-pagination-bullet-active {
+              background: #267f98;
+            }
+          }
+        }
+      }
+    }
   }
   .swiper-box {
-    width: size(1278);
+    position: relative;
+    width: size(600);
+    padding-bottom: size(20);
     .swiper-container {
-      padding: size(80) 0;
-      margin: size(100) 0;
       .slide {
         height: 0;
-        padding-bottom: 66%;
+        padding-bottom: 150%;
         background-size: cover;
-        .caption {
-          position: absolute;
-          z-index: 1;
-          color: #fff;
-          right: size(40);
-          bottom: size(30);
-          font-size: size(20);
-          font-weight: 200;
-        }
       }
       .swiper-button-prev {
         left: size(50);
@@ -135,6 +217,17 @@
       }
     }
   }
+  .caption {
+    text-align: center;
+    font-size: size(20);
+    letter-spacing: size(2);
+    font-weight: 300;
+    margin: size(12) 0;
+
+    &.large {
+      font-size: size(29);
+    }
+  }
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -142,7 +235,7 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .section3 {
+  .section9 {
     background-color: #d2dee0;
     min-height: unset;
     height: auto;
@@ -182,14 +275,6 @@
           height: 0;
           padding-bottom: 100%;
           background-size: cover;
-          .caption {
-            position: absolute;
-            z-index: 1;
-            color: #fff;
-            right: size-m(10);
-            bottom: size-m(10);
-            font-size: size-m(16);
-          }
         }
         .swiper-button-prev {
           left: size-m(20);
@@ -253,7 +338,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: "section3",
+  name: "section9",
 
   components: {
     Swiper,
@@ -265,22 +350,43 @@ export default {
   data() {
     return {
       isMobile,
-      activeSlide: {},
-      slides: [
+      activeSlide1: {},
+      activeSlide2: {},
+      slides1: [
         {
-          title: "百年林蔭至高地標<br/>璞真訂製傳世眼界",
-          content: `翻閱中山北路世紀繪卷，台灣第一條現代化大道，日本天皇敕使御道，國家外交官道，烜赫人物踏響中山北獨有的貴族身世。人文熟釀的大道胸豁，從昂首邁步到駐足仰望，23層百年樹海之巔，最懂居宅品味的「璞真之道」淬鍊來到。`,
-          img: require("@/projects/pjr/s3/1.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          img: require("@/projects/pjr/s9/1-1.jpg"),
+          caption: "2022 台中 勤美之森",
         },
         {
-          title: "樹海人文長鏡頭<br/>潛藏一世紀富裕壯遊",
-          content: `半輩子縱橫江山，滿胸懷超然際遇，繫念中山北路樹海第一排的窗，台北歷史最淵遠的林蔭大道，心上永恆富裕原鄉。樟楓漫天綠浪開道，企業總部、縉紳豪邸，相偕未來蓬勃盛放。傳奇在腳下波瀾，繁華燈火在側，群山濃淡疊翠，頂峰之上，照看歲月寧靜。`,
-          img: require("@/projects/pjr/s3/2.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          img: require("@/projects/pjr/s9/1-1.jpg"),
+          caption: "2022 台中 勤美之森2",
         },
       ],
-      swiperOptions: {
+      slides2: [
+        {
+          img: require("@/projects/pjr/s9/2-1.jpg"),
+          caption: "2011 大安 勤美璞真",
+        },
+        {
+          img: require("@/projects/pjr/s9/2-1.jpg"),
+          caption: "2011 大安 勤美璞真2",
+        },
+      ],
+      swiperOptions1: {
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        autoplay: {
+          delay: 3000,
+        },
+      },
+      swiperOptions2: {
         spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -298,14 +404,19 @@ export default {
   },
 
   methods: {
-    onSwiperSlideChangeTransitionStart() {
-      const activeIndex = this.$refs.swiper.$swiper.activeIndex;
-      this.activeSlide = this.slides[activeIndex];
+    onSwiperSlideChangeTransitionStart1() {
+      const activeIndex = this.$refs.swiper1.$swiper.activeIndex;
+      this.activeSlide1 = this.slides1[activeIndex];
+    },
+    onSwiperSlideChangeTransitionStart2() {
+      const activeIndex = this.$refs.swiper2.$swiper.activeIndex;
+      this.activeSlide2 = this.slides2[activeIndex];
     },
   },
 
   mounted() {
-    this.activeSlide = this.slides[0];
+    this.activeSlide1 = this.slides1[0];
+    this.activeSlide2 = this.slides2[0];
   },
 
   created() { },

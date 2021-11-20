@@ -1,7 +1,9 @@
 <template>
-  <div class="section3">
+  <div class="section7">
     <div class="info" data-aos="fade-up" data-aos-delay="400">
+      <div class="subtitle" v-html="activeSlide.subtitle"></div>
       <h2 v-html="activeSlide.title"></h2>
+      <div class="small-title" v-html="activeSlide.smallTitle"></div>
       <div class="divider"></div>
       <p v-html="activeSlide.content"></p>
     </div>
@@ -25,46 +27,64 @@
         </swiper-slide>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
-
-        <div class="swiper-pagination" v-if="!isMobile" slot="pagination"></div>
       </swiper>
+      <div class="info">
+        <div class="info-title" v-html="activeSlide.infoHeader"></div>
+        <div class="info-content" v-html="activeSlide.infoContent"></div>
+        <div class="info-logo">
+          <img :src="activeSlide.infoLogo" alt="" srcset="" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
-.section3 {
+.section7 {
   background-color: #d2dee0;
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: row;
+  padding: size(200) 0;
   .info {
     text-align: left;
-    width: size(440);
-    margin-left: size(80);
-    margin-top: size(160);
-    height: size(600);
+    width: size(600);
+    margin-right: size(50);
+    .subtitle {
+      text-align: center;
+      font-size: size(29);
+      color: #231815;
+      margin-bottom: size(25);
+    }
     h2 {
       text-align: center;
-      font-size: size(50);
-      font-weight: 400;
+      font-size: size(54);
+      font-weight: 300;
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
+      margin-bottom: size(25);
+    }
+    .small-title {
+      text-align: center;
+      font-size: size(39);
+      color: #267f98;
+      font-weight: 300;
     }
     .divider {
       background: #009be4;
-      width: size(560);
+      width: size(1000);
       height: 1px;
-      margin: size(20) 0;
-      margin-left: -#{size(80)};
+      right: 0;
+      margin-left: -#{size(400)} !important;
+      margin: size(25);
     }
     p {
-      font-size: size(26);
+      font-size: size(22);
       letter-spacing: size(3);
       font-weight: 300;
       line-height: 2;
@@ -72,13 +92,13 @@
     }
   }
   .swiper-box {
-    width: size(1278);
+    position: relative;
+    width: size(932);
+    padding: size(100) 0;
     .swiper-container {
-      padding: size(80) 0;
-      margin: size(100) 0;
       .slide {
         height: 0;
-        padding-bottom: 66%;
+        padding-bottom: 52.1%;
         background-size: cover;
         .caption {
           position: absolute;
@@ -134,6 +154,40 @@
         }
       }
     }
+
+    .info {
+      position: absolute;
+      color: #231815;
+      font-weight: 300;
+      width: size(932);
+      .info-title {
+        font-size: size(24);
+        margin: size(24) 0;
+      }
+      .info-content {
+        font-size: size(20);
+        line-height: 1.5;
+      }
+      .info-logo {
+        position: absolute;
+        right: size(24);
+        top: size(24);
+        height: size(100);
+        img {
+          min-height: 50%;
+          max-height: 100%;
+        }
+      }
+    }
+    &::before {
+      content: "翻轉傳統 開啟綠色生產新頁";
+      top: 0;
+      left: 0;
+      font-size: size(54);
+      font-weight: 300;
+      color: #267f98;
+      position: absolute;
+    }
   }
 }
 /* 平板尺寸 */
@@ -142,7 +196,7 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .section3 {
+  .section7 {
     background-color: #d2dee0;
     min-height: unset;
     height: auto;
@@ -253,7 +307,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: "section3",
+  name: "section7",
 
   components: {
     Swiper,
@@ -268,16 +322,59 @@ export default {
       activeSlide: {},
       slides: [
         {
-          title: "百年林蔭至高地標<br/>璞真訂製傳世眼界",
-          content: `翻閱中山北路世紀繪卷，台灣第一條現代化大道，日本天皇敕使御道，國家外交官道，烜赫人物踏響中山北獨有的貴族身世。人文熟釀的大道胸豁，從昂首邁步到駐足仰望，23層百年樹海之巔，最懂居宅品味的「璞真之道」淬鍊來到。`,
-          img: require("@/projects/pjr/s3/1.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          subtitle: "職人精神 專心做好一件事",
+          title: "CMP GROUP 勤美集團",
+          smallTitle: "亞洲指標專業鑄造集團",
+          content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
+          img: require("@/projects/pjr/s7/1.jpg"),
+          caption: "情境示意圖",
+          infoHeader: "金屬成型事業",
+          infoContent: "勤美新竹、勤美楊梅、化新精密、<br>天津勤威、蘇州勤堡、武漢勤美達",
+          infoLogo: require("@/projects/pjr/s7/1logo.png"),
         },
         {
-          title: "樹海人文長鏡頭<br/>潛藏一世紀富裕壯遊",
-          content: `半輩子縱橫江山，滿胸懷超然際遇，繫念中山北路樹海第一排的窗，台北歷史最淵遠的林蔭大道，心上永恆富裕原鄉。樟楓漫天綠浪開道，企業總部、縉紳豪邸，相偕未來蓬勃盛放。傳奇在腳下波瀾，繁華燈火在側，群山濃淡疊翠，頂峰之上，照看歲月寧靜。`,
-          img: require("@/projects/pjr/s3/2.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          subtitle: "CMP GROUP 勤美集團",
+          title: "亞洲指標專業鑄造集團",
+          smallTitle: "職人精神 專心做好一件事",
+          content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
+          img: require("@/projects/pjr/s7/2.png"),
+          caption: "勤美璞真碧湖畔",
+          infoHeader: "建設住宅",
+          infoContent: "璞真建設股份有限公司",
+          infoLogo: require("@/projects/pjr/s7/2logo.png"),
+        },
+        {
+          subtitle: "CMP GROUP 勤美集團",
+          title: "亞洲指標專業鑄造集團",
+          smallTitle: "職人精神 專心做好一件事",
+          content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
+          img: require("@/projects/pjr/s7/3.png"),
+          caption: "誠品書店",
+          infoHeader: "人文商場",
+          infoContent: "勤美誠品綠園道、金典綠園道",
+          infoLogo: require("@/projects/pjr/s7/3logo.png"),
+        },
+        {
+          subtitle: "CMP GROUP 勤美集團",
+          title: "亞洲指標專業鑄造集團",
+          smallTitle: "職人精神 專心做好一件事",
+          content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
+          img: require("@/projects/pjr/s7/4.png"),
+          caption: "全國大飯店",
+          infoHeader: "飯店休閒",
+          infoContent: "全國大飯店、日華金典國際酒店、勤美學山那村",
+          infoLogo: require("@/projects/pjr/s7/4logo.png"),
+        },
+        {
+          subtitle: "CMP GROUP 勤美集團",
+          title: "亞洲指標專業鑄造集團",
+          smallTitle: "職人精神 專心做好一件事",
+          content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
+          img: require("@/projects/pjr/s7/5.png"),
+          caption: "勤美學",
+          infoHeader: "藝術深耕",
+          infoContent: "勤美璞真文化藝術基金會、勤美術館、勤美學森大",
+          infoLogo: require("@/projects/pjr/s7/5logo.png"),
         },
       ],
       swiperOptions: {

@@ -1,9 +1,8 @@
 <template>
-  <div class="section3">
+  <div class="section4">
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <h2 v-html="activeSlide.title"></h2>
       <div class="divider"></div>
-      <p v-html="activeSlide.content"></p>
     </div>
     <div class="swiper-box" data-aos="fade-up">
       <swiper
@@ -26,7 +25,7 @@
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
 
-        <div class="swiper-pagination" v-if="!isMobile" slot="pagination"></div>
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
   </div>
@@ -34,20 +33,19 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
-.section3 {
+.section4 {
   background-color: #d2dee0;
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: row-reverse;
   .info {
+    position: relative;
     text-align: left;
     width: size(440);
-    margin-left: size(80);
-    margin-top: size(160);
-    height: size(600);
+    margin-right: size(80);
     h2 {
       text-align: center;
       font-size: size(50);
@@ -61,14 +59,17 @@
       width: size(560);
       height: 1px;
       margin: size(20) 0;
-      margin-left: -#{size(80)};
+      margin-right: -#{size(80)};
     }
-    p {
-      font-size: size(26);
-      letter-spacing: size(3);
-      font-weight: 300;
-      line-height: 2;
-      color: #231815;
+    &::after {
+      content: "";
+      width: 1px;
+      height: size(400);
+      background: #267f98;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -#{size(450)});
+      top: 0;
     }
   }
   .swiper-box {
@@ -120,6 +121,7 @@
       }
 
       .swiper-pagination {
+        padding-left: size(650);
         .swiper-pagination-bullet {
           margin: 0 size(6);
           border-radius: 0;
@@ -142,7 +144,7 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .section3 {
+  .section4 {
     background-color: #d2dee0;
     min-height: unset;
     height: auto;
@@ -151,17 +153,19 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    padding-top: size-m(50);
     .info {
       text-align: left;
       width: 80%;
-      margin-left: unset;
-      margin-top: size-m(30);
+      margin-right: unset;
+      margin-top: size-m(50);
       height: auto;
       h2 {
         text-align: center;
         font-size: size-m(25.5);
         font-weight: 300;
         line-height: 1.5;
+        height: size-m(70);
       }
       .divider {
         display: none;
@@ -172,15 +176,38 @@
         letter-spacing: size(3);
         line-height: 1.5;
       }
+      &::after {
+        content: "";
+        width: 80vw;
+        height: 1px;
+        background: #267f98;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -#{size-m(50)});
+        top: 0;
+        opacity: 1;
+        animation: fade 2s;
+
+        @keyframes fade {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
     }
     .swiper-box {
-      width: 80%;
+      margin-top: size-m(50);
+      width: 100%;
       .swiper-container {
-        padding: 0;
-        margin: size-m(20) 0;
+        padding-bottom: size-m(40);
+        margin-bottom: size-m(10);
+        margin-top: 0 !important;
         .slide {
           height: 0;
-          padding-bottom: 100%;
+          padding-bottom: 66%;
           background-size: cover;
           .caption {
             position: absolute;
@@ -220,12 +247,14 @@
         }
 
         .swiper-pagination {
+          padding: 0;
           .swiper-pagination-bullet {
             border-radius: 0;
             background: transparent;
             border: 1px solid #267f98;
-            width: size(18);
-            height: size(18);
+            width: size-m(10);
+            height: size-m(10);
+            margin: 0 size-m(2);
             opacity: 1;
             &.swiper-pagination-bullet-active {
               background: #267f98;
@@ -253,7 +282,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: "section3",
+  name: "section4",
 
   components: {
     Swiper,
@@ -268,16 +297,34 @@ export default {
       activeSlide: {},
       slides: [
         {
-          title: "百年林蔭至高地標<br/>璞真訂製傳世眼界",
-          content: `翻閱中山北路世紀繪卷，台灣第一條現代化大道，日本天皇敕使御道，國家外交官道，烜赫人物踏響中山北獨有的貴族身世。人文熟釀的大道胸豁，從昂首邁步到駐足仰望，23層百年樹海之巔，最懂居宅品味的「璞真之道」淬鍊來到。`,
-          img: require("@/projects/pjr/s3/1.jpg"),
+          title: "中山、雙連雙捷核心<br>盛裝優雅日常時光",
+          img: require("@/projects/pjr/s4/1.jpg"),
           caption: "新光三越與誠品生活南西店",
         },
         {
-          title: "樹海人文長鏡頭<br/>潛藏一世紀富裕壯遊",
-          content: `半輩子縱橫江山，滿胸懷超然際遇，繫念中山北路樹海第一排的窗，台北歷史最淵遠的林蔭大道，心上永恆富裕原鄉。樟楓漫天綠浪開道，企業總部、縉紳豪邸，相偕未來蓬勃盛放。傳奇在腳下波瀾，繁華燈火在側，群山濃淡疊翠，頂峰之上，照看歲月寧靜。`,
-          img: require("@/projects/pjr/s3/2.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          title: "百年雙連生活質蘊<br>難忘市井好味道",
+          img: require("@/projects/pjr/s4/2.jpg"),
+          caption: "情境圖",
+        },
+        {
+          title: "五星級飯店廊道<br>全球貴賓風光下榻",
+          img: require("@/projects/pjr/s4/3.jpg"),
+          caption: "晶華酒店",
+        },
+        {
+          title: "權掌松山機場<br>台北雙子星<br>雙國門輻輳",
+          img: require("@/projects/pjr/s4/4.jpg"),
+          caption: "台北雙子星",
+        },
+        {
+          title: "上海、陽信雙總部<br>第一大道再鑲榮耀",
+          img: require("@/projects/pjr/s4/5.jpg"),
+          caption: "上海陽信雙總部",
+        },
+        {
+          title: "百年古蹟藝術聚落<br>探不盡的人文靈光",
+          img: require("@/projects/pjr/s4/6.jpg"),
+          caption: "光點台北",
         },
       ],
       swiperOptions: {

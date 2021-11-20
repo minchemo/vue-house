@@ -1,7 +1,13 @@
 <template>
-  <div class="section3">
+  <div class="section11">
     <div class="info" data-aos="fade-up" data-aos-delay="400">
-      <h2 v-html="activeSlide.title"></h2>
+      <div class="avatar-box">
+        <img class="avatar" :src="activeSlide.avatar" alt="" srcset="" />
+        <div>
+          <div class="subtitle" v-html="activeSlide.subtitle"></div>
+          <h2 v-html="activeSlide.title"></h2>
+        </div>
+      </div>
       <div class="divider"></div>
       <p v-html="activeSlide.content"></p>
     </div>
@@ -13,58 +19,86 @@
       >
         <swiper-slide
           class="slide"
-          v-for="(slide, i) in slides"
-          v-bind:key="i"
+          v-for="slide in activeSlide.img"
+          :key="slide"
           v-bind:style="{
-            backgroundImage: `url(${slide.img})`,
+            backgroundImage: `url(${slide})`,
           }"
         >
           <div class="caption">
-            {{ slide.caption }}
+            {{ activeSlide.caption[0] }}
           </div>
         </swiper-slide>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-
-        <div class="swiper-pagination" v-if="!isMobile" slot="pagination"></div>
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
+    </div>
+    <div class="swiper-box-nav">
+      <div class="prev" @click="prevS">
+        <img
+          v-lazy
+          :temp="require('@/projects/pjr/s11/prev.svg')"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="next" @click="nextS">
+        <img
+          v-lazy
+          :temp="require('@/projects/pjr/s11/next.svg')"
+          alt=""
+          srcset=""
+        />
+      </div>
     </div>
   </div>
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
-.section3 {
+.section11 {
   background-color: #d2dee0;
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   .info {
     text-align: left;
-    width: size(440);
-    margin-left: size(80);
-    margin-top: size(160);
-    height: size(600);
-    h2 {
-      text-align: center;
-      font-size: size(50);
-      font-weight: 400;
-      line-height: 1.2;
-      color: #267f98;
-      white-space: nowrap;
+    width: size(700);
+    margin-right: size(50);
+    font-weight: 300;
+    .avatar-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: size(25);
+      height: size(240);
+      .subtitle {
+        font-size: size(29);
+        color: #231815;
+        line-height: 2;
+      }
+      h2 {
+        font-size: size(54);
+        font-weight: 300;
+        line-height: 1.2;
+        color: #267f98;
+        white-space: nowrap;
+      }
+      .avatar {
+        margin-right: size(10);
+        height: 100%;
+      }
     }
     .divider {
       background: #009be4;
-      width: size(560);
+      width: 100%;
       height: 1px;
-      margin: size(20) 0;
-      margin-left: -#{size(80)};
+      margin-top: size(25);
+      margin-bottom: size(25);
     }
     p {
-      font-size: size(26);
+      font-size: size(22);
       letter-spacing: size(3);
       font-weight: 300;
       line-height: 2;
@@ -72,13 +106,13 @@
     }
   }
   .swiper-box {
-    width: size(1278);
+    position: relative;
+    width: size(767);
     .swiper-container {
-      padding: size(80) 0;
-      margin: size(100) 0;
+      padding: size(50) 0;
       .slide {
         height: 0;
-        padding-bottom: 66%;
+        padding-bottom: 66.6%;
         background-size: cover;
         .caption {
           position: absolute;
@@ -135,6 +169,24 @@
       }
     }
   }
+  .swiper-box-nav {
+    width: size(1700);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .prev,
+    .next {
+      width: size(46);
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -142,7 +194,7 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .section3 {
+  .section11 {
     background-color: #d2dee0;
     min-height: unset;
     height: auto;
@@ -253,7 +305,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: "section3",
+  name: "section11",
 
   components: {
     Swiper,
@@ -266,46 +318,83 @@ export default {
     return {
       isMobile,
       activeSlide: {},
+      currentSlide: 0,
       slides: [
         {
-          title: "百年林蔭至高地標<br/>璞真訂製傳世眼界",
-          content: `翻閱中山北路世紀繪卷，台灣第一條現代化大道，日本天皇敕使御道，國家外交官道，烜赫人物踏響中山北獨有的貴族身世。人文熟釀的大道胸豁，從昂首邁步到駐足仰望，23層百年樹海之巔，最懂居宅品味的「璞真之道」淬鍊來到。`,
-          img: require("@/projects/pjr/s3/1.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          subtitle: '建築外觀<br/>P&T GROUP香港巴馬丹拿集團',
+          title: "全球百年建築巨擘<br>改寫亞洲建築史",
+          content: `操刀無數富紳豪邸、跨國總部、五星酒店。香港匯豐總行大廈、渣打銀行總部群像；上海外灘萬國建築博覽，二分之一出自P&T手筆；台北遠企香格里拉飯店、信義計畫區多幢百坪豪邸，亦是P&T經典鉅著。`,
+          img: [require("@/projects/pjr/s11/1.jpg")],
+          avatar: require("@/projects/pjr/s11/1avatar.jpg"),
+          caption: ["BELLAVITA寶麗廣塲"],
         },
         {
-          title: "樹海人文長鏡頭<br/>潛藏一世紀富裕壯遊",
-          content: `半輩子縱橫江山，滿胸懷超然際遇，繫念中山北路樹海第一排的窗，台北歷史最淵遠的林蔭大道，心上永恆富裕原鄉。樟楓漫天綠浪開道，企業總部、縉紳豪邸，相偕未來蓬勃盛放。傳奇在腳下波瀾，繁華燈火在側，群山濃淡疊翠，頂峰之上，照看歲月寧靜。`,
-          img: require("@/projects/pjr/s3/2.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          subtitle: '建築規劃<br/>美國密西根建築碩士',
+          title: "陳金水建築師事務所<br>陳金水",
+          content: `曾獲美國建築師協會Henry Adams獎章，執業超過二十年，擅以現代創新筆法回應地景脈絡，締造與自然相契的建築作品。<br><br>代表作品│祥德帝寶、綺華有仁愛`,
+          img: [require("@/projects/pjr/s11/2-1.jpg"), require("@/projects/pjr/s11/2-2.jpg"), require("@/projects/pjr/s11/2-3.jpg")],
+          avatar: require("@/projects/pjr/s11/2avatar.jpg"),
+          caption: ["BELLAVITA寶麗廣塲"],
         },
+        {
+          subtitle: '公設設計<br/>留美設計藝匠',
+          title: "萊比空間設計<br>施秋蓮",
+          content: `創立近二十年，集結頂尖設計團隊，深刻磨砥空間美學，從居者的生命體驗起始，巧妙契合實用機能與感官饗宴，重新定義家的奢華本質。<br><br>代表作品│璞真仰睦、岳泰峰範、全陽柏悅`,
+          img: [require("@/projects/pjr/s11/3-1.jpg"), require("@/projects/pjr/s11/3-2.jpg"), require("@/projects/pjr/s11/3-3.jpg")],
+          avatar: require("@/projects/pjr/s11/3avatar.jpg"),
+          caption: ["BELLAVITA寶麗廣塲"],
+        },
+        {
+          subtitle: '景觀設計<br/>當代景觀名家',
+          title: "頤和景觀<br>李淑雲",
+          content: `秉承當代景觀設計思潮，呼應中山北路浩瀚樹海地景，創造都市、建築、人文、生態深度共鳴，譜寫人居環境與自然萬物的優雅格調。<br><br>代表作品│璞真碧湖畔、華固名鑄、華固天鑄、華固樂慕`,
+          img: [require("@/projects/pjr/s11/4-1.jpg"), require("@/projects/pjr/s11/4-2.jpg"), require("@/projects/pjr/s11/4-3.jpg"), require("@/projects/pjr/s11/4-4.jpg")],
+          avatar: require("@/projects/pjr/s11/4avatar.jpg"),
+          caption: ["BELLAVITA寶麗廣塲"],
+        },
+        {
+          subtitle: '燈光設計<br/>光雕美學詩人',
+          title: "肯緒照明設計<br>林世秉",
+          content: `長年受劇場美學薰陶，擅長解構空間既有元素，伴隨自然與日夜星辰流轉，重建光影環境與視覺層次，彰顯璞真之道地標價值。<br><br>代表作品│璞真一一、富富話合、忠泰味、君悅酒店。`,
+          img: [require("@/projects/pjr/s11/5-1.jpg"), require("@/projects/pjr/s11/5-2.jpg"), require("@/projects/pjr/s11/5-3.jpg"), require("@/projects/pjr/s11/5-4.jpg")],
+          avatar: require("@/projects/pjr/s11/5avatar.jpg"),
+          caption: ["BELLAVITA寶麗廣塲"],
+        },
+
       ],
       swiperOptions: {
         spaceBetween: 30,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        autoplay: {
+          delay: 3000,
         },
         pagination: {
           el: ".swiper-pagination",
           clickable: true
-        },
-        autoplay: {
-          delay: 3000,
         },
       },
     };
   },
 
   methods: {
-    onSwiperSlideChangeTransitionStart() {
-      const activeIndex = this.$refs.swiper.$swiper.activeIndex;
-      this.activeSlide = this.slides[activeIndex];
+    nextS() {
+      this.currentSlide++;
+      if (this.currentSlide == this.slides.length) {
+        this.currentSlide = 0
+      }
+      this.activeSlide = this.slides[this.currentSlide];
     },
+    prevS() {
+      this.currentSlide--;
+      if (this.currentSlide < 0) {
+        this.currentSlide = this.slides.length - 1
+      }
+
+      this.activeSlide = this.slides[this.currentSlide];
+    }
   },
 
   mounted() {
-    this.activeSlide = this.slides[0];
+    this.activeSlide = this.slides[this.currentSlide];
   },
 
   created() { },
