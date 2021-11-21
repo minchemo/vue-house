@@ -44,19 +44,19 @@
   .GodModView {
     .view {
       height: 100vh;
+      overflow-x: scroll;
+      overflow-y: hidden;
 
       .view-hand {
         position: absolute;
         width: 100px;
         z-index: 1;
-        top: 50%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, 0%);
         pointer-events: none;
       }
       .view-img {
-        touch-action: none;
-        user-select: none;
         height: 100%;
       }
       //.view-img{height: 100%;}
@@ -78,7 +78,7 @@ export default {
       autoScrollViewOffset: -150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
       bgUrl: require("@/projects/pjr/s6/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: require("@/projects/pjr/s6/hand.png"), //置換圖片路徑即可
+      swipeUrl: !isMobile ? require("@/projects/pjr/s6/hand.png") : require("@/projects/pjr/s6/hand-mo.png"), //置換圖片路徑即可
     };
   },
   methods: {
@@ -121,14 +121,9 @@ export default {
     dragMoveListener(event) {
       $('.view-hand').hide();
       var target = event.target
-      // keep the dragged position in the data-x/data-y attributes
       var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
       var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
-
-      // translate the element
       target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
-
-      // update the posiion attributes
       target.setAttribute('data-x', x)
       target.setAttribute('data-y', y)
     }
@@ -140,31 +135,33 @@ export default {
     this.scrollView();
 
 
-    interact('.view-img')
-      .draggable({
-        inertia: true,
-        startAxis: 'x',
-        lockAxis: 'x',
-        modifiers: [
-          interact.modifiers.restrictRect({
-            restriction: 'parent',
-            endOnly: false
-          })
-        ],
-        listeners: {
-          move: this.dragMoveListener,
-          end(event) {
-            var textEl = event.target.querySelector('p')
+    if (!this.isMobile) {
 
-            textEl && (textEl.textContent =
-              'moved a distance of ' +
-              (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
-                Math.pow(event.pageY - event.y0, 2) | 0))
-                .toFixed(2) + 'px')
+      interact('.view-img')
+        .draggable({
+          inertia: true,
+          startAxis: 'x',
+          lockAxis: 'x',
+          modifiers: [
+            interact.modifiers.restrictRect({
+              restriction: 'parent',
+              endOnly: false
+            })
+          ],
+          listeners: {
+            move: this.dragMoveListener,
+            end(event) {
+              var textEl = event.target.querySelector('p')
+
+              textEl && (textEl.textContent =
+                'moved a distance of ' +
+                (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                  Math.pow(event.pageY - event.y0, 2) | 0))
+                  .toFixed(2) + 'px')
+            }
           }
-        }
-      })
-
+        })
+    }
   },
 };
 </script>

@@ -33,7 +33,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .section8 {
-  background-color: #d2dee0;
+  background-color: #ededee;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -154,7 +154,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section8 {
-    background-color: #d2dee0;
+    background-color: #ededee;
     min-height: unset;
     height: auto;
     width: 100%;
@@ -168,6 +168,12 @@
       margin-left: unset;
       margin-top: size-m(30);
       height: auto;
+      .subtitle {
+        font-size: size-m(14.5);
+      }
+      .small-title {
+        font-size: size-m(20);
+      }
       h2 {
         text-align: center;
         font-size: size-m(25.5);
@@ -191,7 +197,7 @@
         margin: size-m(20) 0;
         .slide {
           height: 0;
-          padding-bottom: 100%;
+          padding-bottom: 66.6%;
           background-size: cover;
           .caption {
             position: absolute;

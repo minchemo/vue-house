@@ -1,5 +1,6 @@
 <template>
   <div class="section9">
+    <div class="s-divider"></div>
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <h2>
         建築、自然永恆詩境<br />
@@ -9,7 +10,53 @@
       <p>
         建築不只精密科學計算，而是有溫度、有情感、有故事的生活聚場，從結構形體昇華至精神領域。璞真願意花更多時間探索生活，量身訂製創新空間提案，以綠建築、智慧建築設計導入低碳思維。當建築擁有獨一無二的性格，自然吸引居住品味相契的人們，回歸生活最樸實且真摯的樣貌。
       </p>
-      <div class="swiper-box1" data-aos="fade-up">
+      <template>
+        <div class="swiper-box1 swiper-box" data-aos="fade-up" v-if="!isMobile">
+          <swiper
+            :options="swiperOptions1"
+            ref="swiper1"
+            @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart1"
+          >
+            <swiper-slide
+              class="slide"
+              v-for="(slide, i) in slides1"
+              v-bind:key="i"
+              v-bind:style="{
+                backgroundImage: `url(${slide.img})`,
+              }"
+            >
+            </swiper-slide>
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
+          </swiper>
+          <div class="caption" v-html="activeSlide1.caption"></div>
+        </div>
+        <div class="swiper-box" data-aos="fade-up" v-else>
+          <div class="caption large">璞真建設 經典業績</div>
+          <swiper
+            :options="swiperOptions2"
+            ref="swiper2"
+            @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart2"
+          >
+            <swiper-slide
+              class="slide"
+              v-for="(slide, i) in slides2"
+              v-bind:key="i"
+              v-bind:style="{
+                backgroundImage: `url(${slide.img})`,
+              }"
+            >
+            </swiper-slide>
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
+          </swiper>
+          <div class="caption" v-html="activeSlide2.caption"></div>
+        </div>
+      </template>
+    </div>
+
+    <template>
+      <div class="swiper-box1 swiper-box" data-aos="fade-up" v-if="isMobile">
         <swiper
           :options="swiperOptions1"
           ref="swiper1"
@@ -29,35 +76,35 @@
         </swiper>
         <div class="caption" v-html="activeSlide1.caption"></div>
       </div>
-    </div>
-    <div class="swiper-box" data-aos="fade-up">
-      <div class="caption large">璞真建設 經典業績</div>
-      <swiper
-        :options="swiperOptions2"
-        ref="swiper2"
-        @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart2"
-      >
-        <swiper-slide
-          class="slide"
-          v-for="(slide, i) in slides2"
-          v-bind:key="i"
-          v-bind:style="{
-            backgroundImage: `url(${slide.img})`,
-          }"
+      <div class="swiper-box" data-aos="fade-up" v-else>
+        <div class="caption large">璞真建設 經典業績</div>
+        <swiper
+          :options="swiperOptions2"
+          ref="swiper2"
+          @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart2"
         >
-        </swiper-slide>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </swiper>
-      <div class="caption" v-html="activeSlide2.caption"></div>
-    </div>
+          <swiper-slide
+            class="slide"
+            v-for="(slide, i) in slides2"
+            v-bind:key="i"
+            v-bind:style="{
+              backgroundImage: `url(${slide.img})`,
+            }"
+          >
+          </swiper-slide>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
+        <div class="caption" v-html="activeSlide2.caption"></div>
+      </div>
+    </template>
   </div>
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .section9 {
-  background-color: #d2dee0;
+  background-color: #ededee;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -236,7 +283,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section9 {
-    background-color: #d2dee0;
+    background-color: #ededee;
     min-height: unset;
     height: auto;
     width: 100%;
@@ -244,6 +291,11 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    .s-divider {
+      width: 80%;
+      height: 1px;
+      background: #267f9b;
+    }
     .info {
       text-align: left;
       width: 80%;
@@ -266,19 +318,19 @@
         line-height: 1.5;
       }
     }
-    .swiper-box {
-      width: 80%;
+    .swiper-box1 {
+      width: 80% !important;
       .swiper-container {
         padding: 0;
         margin: size-m(20) 0;
         .slide {
           height: 0;
-          padding-bottom: 100%;
+          padding-bottom: 66.6% !important;
           background-size: cover;
         }
         .swiper-button-prev {
           left: size-m(20);
-          width: size-m(40);
+          width: size-m(40) !important;
           height: size-m(40);
           color: #fff;
           background-size: contain;
@@ -317,6 +369,71 @@
             }
           }
         }
+      }
+    }
+    .swiper-box {
+      width: 100%;
+      .swiper-container {
+        padding: 0;
+        margin: size-m(10) 0;
+        .slide {
+          height: 0;
+          padding-bottom: 150%;
+          background-size: cover;
+        }
+        .swiper-button-prev {
+          left: size-m(20);
+          width: size-m(40) !important;
+          height: size-m(40);
+          color: #fff;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: left;
+          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+
+          &::after {
+            content: "";
+          }
+        }
+        .swiper-button-next {
+          right: size-m(20);
+          width: size-m(40);
+          height: size-m(40);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+
+          &::after {
+            content: "";
+          }
+        }
+
+        .swiper-pagination {
+          .swiper-pagination-bullet {
+            border-radius: 0;
+            background: transparent;
+            border: 1px solid #267f98;
+            width: size(18);
+            height: size(18);
+            opacity: 1;
+            &.swiper-pagination-bullet-active {
+              background: #267f98;
+            }
+          }
+        }
+      }
+    }
+    .caption {
+      text-align: center;
+      font-size: size-m(12);
+      letter-spacing: size-m(0);
+      font-weight: 300;
+      margin: size-m(6) 0;
+
+      &.large {
+        font-size: size-m(14.5);
+        margin-top: size-m(50);
       }
     }
   }

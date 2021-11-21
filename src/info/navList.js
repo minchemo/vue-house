@@ -1,32 +1,72 @@
-export default [
-  {
-    name: "來電洽詢",
-    //iconSrc:xrequire("@/assets/img/nav/1.png"),
-    imgSrc: "",
-    subTitle: "",
-    section: "contact-info",
-    svgSrc: "",
-    offset: -600,
-    mobileOffset: 0
-  },
-  {
-    name: "立即預約",
-    //iconSrc:xrequire("@/assets/img/nav/1.png"),
-    imgSrc: "",
-    subTitle: "",
-    section: "order-top",
-    svgSrc: "",
-    offset: -50,
-    mobileOffset: 0
-  },
-  {
-    name: "地圖導航",
-    //iconSrc:xrequire("@/assets/img/nav/1.png"),
-    imgSrc: "",
-    subTitle: "",
-    section: "google-map",
-    svgSrc: "",
-    offset: -50,
-    mobileOffset: 0
-  },
+export default [{
+        name: "百年林蔭",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "section2",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0
+    },
+    {
+        name: "富饒巡禮",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "section3",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0
+    },
+    {
+        name: "樹海首席",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "section5",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0
+    },
+    {
+        name: "璞真品牌",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "section6",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0
+    },
+    {
+        name: "璞真建設",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "section7",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0
+    },
+    {
+        name: "建築團隊",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "section11",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0
+    },
+    {
+        name: "粉絲專頁",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0,
+        link: "https://facebook.com"
+    }
 ];

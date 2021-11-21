@@ -1,10 +1,34 @@
 <template>
   <div class="section11">
+    <div class="swiper-box-nav" v-if="isMobile">
+      <div class="prev" @click="prevS">
+        <img
+          v-lazy
+          :temp="require('@/projects/pjr/s11/prev.svg')"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="currentTitle" v-html="getTitle(0)"></div>
+      <div class="next" @click="nextS">
+        <img
+          v-lazy
+          :temp="require('@/projects/pjr/s11/next.svg')"
+          alt=""
+          srcset=""
+        />
+      </div>
+    </div>
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <div class="avatar-box">
         <img class="avatar" :src="activeSlide.avatar" alt="" srcset="" />
         <div>
-          <div class="subtitle" v-html="activeSlide.subtitle"></div>
+          <div
+            class="subtitle"
+            v-if="!isMobile"
+            v-html="activeSlide.subtitle"
+          ></div>
+          <div class="subtitle" v-else v-html="getTitle(1)"></div>
           <h2 v-html="activeSlide.title"></h2>
         </div>
       </div>
@@ -12,11 +36,7 @@
       <p v-html="activeSlide.content"></p>
     </div>
     <div class="swiper-box" data-aos="fade-up">
-      <swiper
-        :options="swiperOptions"
-        ref="swiper"
-        @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart"
-      >
+      <swiper :options="swiperOptions" ref="swiper">
         <swiper-slide
           class="slide"
           v-for="slide in activeSlide.img"
@@ -29,10 +49,20 @@
             {{ activeSlide.caption[0] }}
           </div>
         </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
+        <div
+          class="swiper-button-prev"
+          slot="button-prev"
+          v-if="isMobile"
+        ></div>
+        <div
+          class="swiper-button-next"
+          slot="button-next"
+          v-if="isMobile"
+        ></div>
+        <div class="swiper-pagination" v-if="!isMobile" slot="pagination"></div>
       </swiper>
     </div>
-    <div class="swiper-box-nav">
+    <div class="swiper-box-nav" v-if="!isMobile">
       <div class="prev" @click="prevS">
         <img
           v-lazy
@@ -208,12 +238,30 @@
       width: 80%;
       margin-left: unset;
       margin-top: size-m(30);
+      margin-right: 0;
       height: auto;
-      h2 {
-        text-align: center;
-        font-size: size-m(25.5);
-        font-weight: 300;
-        line-height: 1.5;
+      .avatar-box {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: size-m(25);
+        height: size-m(110);
+        .subtitle {
+          font-size: size-m(14.5);
+          color: #231815;
+          line-height: 1;
+          margin-bottom: size-m(10);
+        }
+        h2 {
+          font-size: size-m(25.2);
+          font-weight: 300;
+          line-height: 1.2;
+          color: #267f98;
+          white-space: nowrap;
+        }
+        .avatar {
+          margin-right: size-m(10);
+          height: 100%;
+        }
       }
       .divider {
         display: none;
@@ -232,7 +280,7 @@
         margin: size-m(20) 0;
         .slide {
           height: 0;
-          padding-bottom: 100%;
+          padding-bottom: 66.6%;
           background-size: cover;
           .caption {
             position: absolute;
@@ -283,6 +331,25 @@
               background: #267f98;
             }
           }
+        }
+      }
+    }
+    .swiper-box-nav {
+      width: 80%;
+      position: relative;
+      margin: size-m(30) 0;
+      top: 0%;
+      transform: translateY(0%);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .prev,
+      .next {
+        width: size-m(20);
+        cursor: pointer;
+        img {
+          width: 100%;
         }
       }
     }
@@ -367,6 +434,10 @@ export default {
         autoplay: {
           delay: 3000,
         },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true
@@ -376,11 +447,16 @@ export default {
   },
 
   methods: {
+    getTitle(index) {
+      const array = this.activeSlide.subtitle.split('<br/>')
+      return array[index]
+    },
     nextS() {
       this.currentSlide++;
       if (this.currentSlide == this.slides.length) {
         this.currentSlide = 0
       }
+
       this.activeSlide = this.slides[this.currentSlide];
     },
     prevS() {
@@ -392,11 +468,8 @@ export default {
       this.activeSlide = this.slides[this.currentSlide];
     }
   },
-
-  mounted() {
+  created() {
     this.activeSlide = this.slides[this.currentSlide];
   },
-
-  created() { },
 };
 </script>

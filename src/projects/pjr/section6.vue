@@ -44,6 +44,18 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section6 {
+    .intro {
+      top: size-m(70);
+      h2 {
+        font-size: size-m(25);
+        letter-spacing: size-m(2);
+      }
+      &::after {
+        content: unset;
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

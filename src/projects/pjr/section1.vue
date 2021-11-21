@@ -42,7 +42,14 @@
         <span>n</span>
       </div>
       <div class="i4" data-aos="fade-up" data-aos-delay="1200">
-        61-89坪│中山北路首排│香港P&T│23層樹海地標
+        61-89坪<span v-if="!isMobile">│</span
+        ><span else>&nbsp;</span>中山北路首排
+        <template>
+          <span v-if="!isMobile">│</span>
+          <br v-else />
+        </template>
+        香港P&T<span v-if="!isMobile">│</span
+        ><span else>&nbsp;</span>23層樹海地標
       </div>
     </div>
   </div>
@@ -108,6 +115,61 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section1 {
+    min-height: 100vh;
+    background-color: rgba($color: #231815, $alpha: 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../pjr/s1/bg.jpg");
+    background-size: cover;
+    .intro {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .i1 {
+        font-size: size-m(26);
+        font-weight: 500;
+        letter-spacing: size(5);
+      }
+      .i2 {
+        margin-top: size-m(40);
+        width: size-m(119);
+        img {
+          width: 100%;
+        }
+      }
+      .i3 {
+        margin-top: size-m(5);
+        font-family: "Noto Serif TC";
+        font-size: size-m(1);
+        font-weight: 100;
+        transform: scale(0.5) !important;
+        span {
+          &.flicking {
+            animation: flicking 2s;
+          }
+        }
+
+        @keyframes flicking {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0.2;
+          }
+        }
+      }
+      .i4 {
+        margin-top: size-m(40);
+        font-size: size-m(23);
+        line-height: 1.5;
+        letter-spacing: size-m(2);
+        text-align: center;
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

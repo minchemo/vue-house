@@ -1,5 +1,6 @@
 <template>
   <div class="section10">
+    <div class="s-divider"></div>
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <div class="subtitle" v-html="activeSlide.subtitle"></div>
       <h2 v-html="activeSlide.title"></h2>
@@ -33,7 +34,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .section10 {
-  background-color: #d2dee0;
+  background-color: #ededee;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -155,7 +156,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section10 {
-    background-color: #d2dee0;
+    background-color: #ededee;
     min-height: unset;
     height: auto;
     width: 100%;
@@ -163,12 +164,23 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    .s-divider {
+      width: 80%;
+      height: 1px;
+      background: #267f9b;
+    }
     .info {
       text-align: left;
       width: 80%;
       margin-left: unset;
       margin-top: size-m(30);
       height: auto;
+      .subtitle {
+        font-size: size-m(14.5);
+      }
+      .small-title {
+        font-size: size-m(20);
+      }
       h2 {
         text-align: center;
         font-size: size-m(25.5);

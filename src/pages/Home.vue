@@ -8,7 +8,7 @@
     <vue-lazy-component class="section" id="section1">
       <Section1 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section2">
+    <vue-lazy-component class="section" id="section2" v-show="false">
       <Section2 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section3">
@@ -17,10 +17,10 @@
     <vue-lazy-component class="section" id="section4">
       <Section4 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section5">
+    <vue-lazy-component class="section" id="section5" v-show="false">
       <Section5 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section6">
+    <vue-lazy-component class="section" id="section6" v-show="false">
       <Section6 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section7">
@@ -32,25 +32,28 @@
     <vue-lazy-component class="section" id="section9">
       <Section9 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section10">
+    <vue-lazy-component class="section" id="section10" v-show="false">
       <Section10 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section11">
       <Section11 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section12">
+    <vue-lazy-component class="section" id="section12" v-show="false">
       <Section12 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section13">
+    <vue-lazy-component class="section" id="section13" v-show="false">
       <Section13 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section2" v-show="false">
+      <Section2 />
     </vue-lazy-component>
 
     <vue-lazy-component class="section" id="contact">
-      <!-- <ContactSection /> -->
+      <CustomFooter />
     </vue-lazy-component>
     <!-- </full-page> -->
 
-    <MobileNav />
+    <!-- <MobileNav /> -->
   </div>
 </template>
 
@@ -65,6 +68,8 @@ import ContactSection from "@/layouts/ContactSection.vue";
 import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 import AOS from "@/lib/aos/src/js/aos";
+
+import CustomFooter from "@/layouts/CustomFooter.vue";
 
 // import Indigator from '@/components/Indigator.vue'
 
@@ -91,6 +96,7 @@ export default {
     CustomNavigation,
     //SideNavigation,
     ContactSection,
+    CustomFooter,
     MobileNav,
     Section1,
     Section2,

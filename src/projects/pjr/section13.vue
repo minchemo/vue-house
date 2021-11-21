@@ -26,11 +26,7 @@
       </div>
     </div>
     <div class="swiper-box" data-aos="fade-up">
-      <swiper
-        :options="swiperOptions"
-        ref="swiper"
-        @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart"
-      >
+      <swiper :options="swiperOptions" ref="swiper">
         <swiper-slide
           class="slide"
           v-for="(slide, i) in activeSlide.img"
@@ -43,6 +39,16 @@
             {{ activeSlide.caption }}
           </div>
         </swiper-slide>
+        <div
+          class="swiper-button-prev"
+          slot="button-prev"
+          v-if="isMobile"
+        ></div>
+        <div
+          class="swiper-button-next"
+          slot="button-next"
+          v-if="isMobile"
+        ></div>
       </swiper>
     </div>
   </div>
@@ -51,7 +57,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .section13 {
-  background-color: #d2dee0;
+  background-color: #ededee;
   min-height: 100vh;
   width: 100%;
   .info {
@@ -60,7 +66,7 @@
     right: 0;
     bottom: 0;
     text-align: left;
-    background-color: rgba($color: #d2dee0, $alpha: 0.6);
+    background-color: rgba($color: #ededee, $alpha: 0.6);
     padding: size(60) size(80) size(60) size(120);
     .subtitle {
       font-size: size(29);
@@ -187,7 +193,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section13 {
-    background-color: #d2dee0;
+    background-color: #ededee;
     min-height: unset;
     height: auto;
     width: 100%;
@@ -196,16 +202,20 @@
     justify-content: space-between;
     flex-direction: column;
     .info {
+      position: relative;
       text-align: left;
-      width: 80%;
+      width: 100%;
       margin-left: unset;
       margin-top: size-m(30);
       height: auto;
+      padding: size-m(20);
+      .subtitle {
+        text-align: center;
+        font-size: size-m(14.5);
+      }
       h2 {
         text-align: center;
-        font-size: size-m(25.5);
-        font-weight: 300;
-        line-height: 1.5;
+        font-size: size-m(25.2);
       }
       .divider {
         display: none;
@@ -215,13 +225,14 @@
         font-size: size-m(12);
         letter-spacing: size(3);
         line-height: 1.5;
+        max-width: 100%;
       }
     }
     .swiper-box {
-      width: 80%;
+      width: 100%;
       .swiper-container {
         padding: 0;
-        margin: size-m(20) 0;
+        margin: 0;
         .slide {
           height: 0;
           padding-bottom: 100%;
@@ -328,6 +339,10 @@ export default {
         },
       ],
       swiperOptions: {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         spaceBetween: 30,
         autoplay: {
           delay: 3000,

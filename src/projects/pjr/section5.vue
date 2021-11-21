@@ -40,6 +40,28 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section5 {
+    height: 100vh;
+    background-image: url("../pjr/s5/bg-mo.jpg");
+    background-size: cover;
+    .intro {
+      top: size-m(70);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      h2 {
+        color: #267f98;
+        font-size: size-m(25);
+        font-weight: 300;
+        line-height: 1.4;
+        letter-spacing: size-m(2);
+      }
+      &::after {
+        content: unset;
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

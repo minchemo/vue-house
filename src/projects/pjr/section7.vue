@@ -42,7 +42,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .section7 {
-  background-color: #d2dee0;
+  background-color: #d5e1e3;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -197,7 +197,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section7 {
-    background-color: #d2dee0;
+    background-color: #d5e1e3;
     min-height: unset;
     height: auto;
     width: 100%;
@@ -205,12 +205,19 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    padding-bottom: size-m(80);
     .info {
       text-align: left;
       width: 80%;
       margin-left: unset;
       margin-top: size-m(30);
       height: auto;
+      .subtitle {
+        font-size: size-m(14.5);
+      }
+      .small-title {
+        font-size: size-m(20);
+      }
       h2 {
         text-align: center;
         font-size: size-m(25.5);
@@ -229,9 +236,15 @@
     }
     .swiper-box {
       width: 80%;
+      margin-top: size-m(50);
+
+      padding: 0;
+      &::before {
+        font-size: size-m(24);
+      }
       .swiper-container {
         padding: 0;
-        margin: size-m(20) 0;
+        margin-top: size-m(50);
         .slide {
           height: 0;
           padding-bottom: 100%;
@@ -284,6 +297,33 @@
             &.swiper-pagination-bullet-active {
               background: #267f98;
             }
+          }
+        }
+      }
+      .info {
+        position: absolute;
+        color: #231815;
+        font-weight: 300;
+        width: 100%;
+        margin-top: 0;
+        .info-title {
+          font-size: size-m(12);
+          margin: size-m(15) 0 size-m(5) 0;
+        }
+        .info-content {
+          font-size: size(12);
+          line-height: 1.5;
+          max-width: 65%;
+        }
+        .info-logo {
+          right: 0;
+          top: unset;
+          bottom: -#{size-m(0)};
+          height: auto;
+          width: 30%;
+          img {
+            max-height: size-m(50);
+            max-width: 100%;
           }
         }
       }
