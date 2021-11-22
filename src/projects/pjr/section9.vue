@@ -31,7 +31,7 @@
           </swiper>
           <div class="caption" v-html="activeSlide1.caption"></div>
         </div>
-        <div class="swiper-box" data-aos="fade-up" v-else>
+        <div class="swiper-box swiper-box2" data-aos="fade-up" v-else>
           <div class="caption large">璞真建設 經典業績</div>
           <swiper
             :options="swiperOptions2"
@@ -499,7 +499,7 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-box1 .swiper-pagination",
           clickable: true
         },
         autoplay: {
@@ -513,7 +513,7 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-box2 .swiper-pagination",
           clickable: true
         },
         autoplay: {

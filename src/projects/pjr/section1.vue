@@ -41,7 +41,7 @@
         <span>o</span>
         <span>n</span>
       </div>
-      <div class="i4" data-aos="fade-up" data-aos-delay="1200" v-if="isPC">
+      <div class="i4" data-aos="fade-up" data-aos-delay="1200" v-if="!isMobile">
         61-89坪<span v-if="!isMobile">│</span
         ><span else>&nbsp;</span>中山北路首排
         <template>
@@ -155,9 +155,9 @@
       .i3 {
         margin-top: size-m(5);
         font-family: "Noto Serif TC";
-        font-size: size-m(1);
+        font-size: 12px;
         font-weight: 100;
-        transform: scale(0.5) !important;
+        transform: scale(.8) !important;
         span {
           &.flicking {
             animation: flicking 2s;

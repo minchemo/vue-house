@@ -4,54 +4,54 @@
     <!-- <Navigation /> -->
     <CustomNavigation />
     <!-- <Indigator :viewIndex="viewIndex" /> -->
-    <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
-    <vue-lazy-component class="section" id="section1">
-      <Section1 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section2" v-show="false">
-      <Section2 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section3">
-      <Section3 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section4">
-      <Section4 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section5" v-show="false">
-      <Section5 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section6">
-      <Section6 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section7">
-      <Section7 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section8">
-      <Section8 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section9">
-      <Section9 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section10" v-show="false">
-      <Section10 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section11">
-      <Section11 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section12" v-show="false">
-      <Section12 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section13" v-show="false">
-      <Section13 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section2" v-show="false">
-      <Section2 />
-    </vue-lazy-component>
+    <full-page ref="fullPage" :options="options" id="fullpage">
+      <vue-lazy-component class="section" id="section1">
+        <Section1 />
+      </vue-lazy-component>
+      <!-- <vue-lazy-component class="section" id="section2" v-show="false">
+        <Section2 />
+      </vue-lazy-component> -->
+      <vue-lazy-component class="section" id="section3">
+        <Section3 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section4">
+        <Section4 />
+      </vue-lazy-component>
+      <!-- <vue-lazy-component class="section" id="section5" v-show="false">
+        <Section5 />
+      </vue-lazy-component> -->
+      <vue-lazy-component class="section" id="section6">
+        <Section6 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section7">
+        <Section7 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section8">
+        <Section8 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section9">
+        <Section9 />
+      </vue-lazy-component>
+      <!-- <vue-lazy-component class="section" id="section10" v-show="false">
+        <Section10 />
+      </vue-lazy-component> -->
+      <vue-lazy-component class="section" id="section11">
+        <Section11 />
+      </vue-lazy-component>
+      <!-- <vue-lazy-component class="section" id="section12" v-show="false">
+        <Section12 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section13" v-show="false">
+        <Section13 />
+      </vue-lazy-component>
+      <vue-lazy-component class="section" id="section2" v-show="false">
+        <Section2 />
+      </vue-lazy-component> -->
 
-    <vue-lazy-component class="section" id="contact">
-      <CustomFooter />
-    </vue-lazy-component>
-    <!-- </full-page> -->
+      <vue-lazy-component class="section" id="contact">
+        <CustomFooter />
+      </vue-lazy-component>
+    </full-page>
 
     <!-- <MobileNav /> -->
   </div>
@@ -110,7 +110,7 @@ export default {
     Section10,
     Section11,
     Section12,
-    Section13
+    Section13,
   },
 
   data() {
@@ -124,23 +124,43 @@ export default {
       // },
 
       // indigatorIndex: 0,
-      // options: {
-      //   menu: "#menu",
-      //   anchors: [],
-      //   scrollBar: true,
-      //   // onLeave: this.onLeave,
-      //   //afterLoad: this.afterLoad,
-      //   continuousHorizontal: true,
-      //   autoScrolling: false,
-      //   fitToSection: false,
-      //   verticalCentered: false,
+      options: {
+        menu: "#menu",
+        anchors: [],
+        scrollBar: false,
+        // onLeave: this.onLeave,
+        //afterLoad: this.afterLoad,
+        continuousHorizontal: true,
+        autoScrolling: true,
+        fitToSection: true,
+        verticalCentered: false,
 
-      //   navigation: true,
-      //   navigationPosition: "left",
-      //   slidesNavigation: true,
-      //   slidesNavPosition: "top",
-      //   lazyLoading: false,
-      // },
+        navigation: false,
+        navigationPosition: "left",
+        slidesNavigation: false,
+        slidesNavPosition: "top",
+        lazyLoading: false,
+        onLeave: function () {
+          $(".section [data-aos]").each(function () {
+            $(this).removeClass("aos-animate");
+          });
+        },
+        onSlideLeave: function () {
+          $(".slide [data-aos]").each(function () {
+            $(this).removeClass("aos-animate");
+          });
+        },
+        afterSlideLoad: function () {
+          $(".slide.active [data-aos]").each(function () {
+            $(this).addClass("aos-animate");
+          });
+        },
+        afterLoad: function () {
+          $(".section.active [data-aos]").each(function () {
+            $(this).addClass("aos-animate");
+          });
+        },
+      },
     };
   },
   created() {
@@ -159,7 +179,6 @@ export default {
       };
       const imageLoaded = () => {
         imagesLoaded++;
-
 
         if (imagesLoaded > totalImages * 0.5) {
           allImagesLoaded();
@@ -189,7 +208,7 @@ export default {
   // }
   // },
   methods: {
-    init() { },
+    init() {},
     scrolling() {
       let lastScrollTop = 0;
       $(window).on("scroll", function () {

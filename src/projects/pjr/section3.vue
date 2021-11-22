@@ -294,7 +294,7 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".section3 .swiper-pagination",
           clickable: true
         },
         autoplay: {

@@ -103,7 +103,6 @@ export default {
             "active"
           );
         }
-
       });
     },
     elementInViewport(elem) {
@@ -133,7 +132,7 @@ $hamburger-layer-color: #fff;
   .custom-navigation-toggler {
     position: absolute;
     right: 2vw;
-    top: size(35);
+    top: size(47.5);
     margin-top: -#{size(17)};
     z-index: 1;
     background-size: cover;
@@ -167,7 +166,7 @@ $hamburger-layer-color: #fff;
     width: 15vw;
     height: 100vh;
     z-index: 0;
-    background: #d5e1e3;
+    background: rgba(0, 0, 0, 0.5);
     transform: translateX(15vw);
     transition: all 0.5s;
 
@@ -182,21 +181,50 @@ $hamburger-layer-color: #fff;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      padding: 0 20px;
+      
 
       li {
         font-size: 1vw;
         cursor: pointer;
         width: 100%;
-        color: #267f9b;
+        color: #fff;
         padding: 1vw 0;
+        border-top: 1px solid hsla(0, 0%, 100%, 0.4);
+        overflow: hidden;
+        position: relative;
 
         &.active {
-          background: #267f9b;
+          background: rgba(0, 0, 0, 0.6);
           color: #fff;
         }
         &:hover {
-          background: #267f9b;
+          background: rgba(0, 0, 0, 0.6);
           color: #fff;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
+        }
+
+        &:before {
+          content: "";
+          width: 40%;
+          height: 100%;
+          display: block;
+          background: #fff;
+          position: absolute;
+          transform: skewX(-20deg);
+          left: -10%;
+          opacity: 0;
+          top: 0;
+          z-index: 5;
+          transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+        }
+        &:hover:before {
+          opacity: 1;
+          width: 90%;
+          left: 140%;
         }
       }
     }
@@ -207,18 +235,16 @@ $hamburger-layer-color: #fff;
     top: 0;
     left: 0;
     width: 100%;
-    height: size(70);
+    height: size(95);
     background-color: rgba($color: #231815, $alpha: 0.5);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: size(150);
     .link {
-      font-size: size(20);
+      font-size: size(24);
       margin-left: size(60);
       color: #fff;
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
-      font-weight: 500;
       &:hover {
         opacity: 0.7;
         cursor: pointer;
@@ -273,6 +299,7 @@ $hamburger-layer-color: #fff;
       height: 100vh;
       z-index: 0;
       transform: translateX(100vw);
+    background: rgba(0, 0, 0, 0.8);
       transition: all 0.5s;
 
       &.is-active {

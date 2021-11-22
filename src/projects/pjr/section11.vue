@@ -39,14 +39,14 @@
       <swiper :options="swiperOptions" ref="swiper">
         <swiper-slide
           class="slide"
-          v-for="slide in activeSlide.img"
+          v-for="(slide, i) in activeSlide.img"
           :key="slide"
           v-bind:style="{
             backgroundImage: `url(${slide})`,
           }"
         >
           <div class="caption">
-            {{ activeSlide.caption[0] }}
+            {{ activeSlide.caption[i] }}
           </div>
         </swiper-slide>
         <div
@@ -107,7 +107,7 @@
         font-size: size(29);
         color: #231815;
         line-height: 2;
-        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-family: "Noto Serif TC", Noto Sans TC, serif;
         font-weight: 600;
       }
       h2 {
@@ -116,7 +116,7 @@
         line-height: 1.2;
         color: #267f98;
         white-space: nowrap;
-        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-family: "Noto Serif TC", Noto Sans TC, serif;
       }
       .avatar {
         margin-right: size(10);
@@ -237,8 +237,8 @@
     justify-content: space-between;
     flex-direction: column;
 
-    .currentTitle{
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+    .currentTitle {
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
       font-weight: 600;
     }
 
@@ -402,46 +402,71 @@ export default {
       currentSlide: 0,
       slides: [
         {
-          subtitle: '建築外觀<br/>P&T GROUP香港巴馬丹拿集團',
+          subtitle: "建築外觀<br/>P&T GROUP香港巴馬丹拿集團",
           title: "全球百年建築巨擘<br>改寫亞洲建築史",
           content: `操刀無數富紳豪邸、跨國總部、五星酒店。香港匯豐總行大廈、渣打銀行總部群像；上海外灘萬國建築博覽，二分之一出自P&T手筆；台北遠企香格里拉飯店、信義計畫區多幢百坪豪邸，亦是P&T經典鉅著。`,
-          img: [require("@/projects/pjr/s11/1.jpg"), require("@/projects/pjr/s11/1-2.jpg"), require("@/projects/pjr/s11/1-3.jpg"),require("@/projects/pjr/s11/1-4.jpg"),require("@/projects/pjr/s11/1-5.jpg"),require("@/projects/pjr/s11/1-6.jpg"),require("@/projects/pjr/s11/1-7.jpg")],
+          img: [
+            require("@/projects/pjr/s11/1.jpg"),
+            require("@/projects/pjr/s11/1-2.jpg"),
+            require("@/projects/pjr/s11/1-3.jpg"),
+            require("@/projects/pjr/s11/1-4.jpg"),
+            require("@/projects/pjr/s11/1-5.jpg"),
+            require("@/projects/pjr/s11/1-6.jpg"),
+            require("@/projects/pjr/s11/1-7.jpg"),
+          ],
           avatar: require("@/projects/pjr/s11/1avatar.jpg"),
           caption: ["BELLAVITA寶麗廣塲"],
         },
         {
-          subtitle: '建築規劃<br/>美國密西根建築碩士',
+          subtitle: "建築規劃<br/>美國密西根建築碩士",
           title: "陳金水建築師事務所<br>陳金水",
           content: `曾獲美國建築師協會Henry Adams獎章，執業超過二十年，擅以現代創新筆法回應地景脈絡，締造與自然相契的建築作品。<br><br>代表作品│祥德帝寶、綺華有仁愛`,
-          img: [require("@/projects/pjr/s11/2-1.jpg"), require("@/projects/pjr/s11/2-2.jpg"), require("@/projects/pjr/s11/2-3.jpg")],
+          img: [
+            require("@/projects/pjr/s11/2-1.jpg"),
+            require("@/projects/pjr/s11/2-2.jpg"),
+            require("@/projects/pjr/s11/2-3.jpg"),
+          ],
           avatar: require("@/projects/pjr/s11/2avatar.jpg"),
           caption: ["BELLAVITA寶麗廣塲"],
         },
         {
-          subtitle: '公設設計<br/>留美設計藝匠',
+          subtitle: "公設設計<br/>留美設計藝匠",
           title: "萊比空間設計<br>施秋蓮",
           content: `創立近二十年，集結頂尖設計團隊，深刻磨砥空間美學，從居者的生命體驗起始，巧妙契合實用機能與感官饗宴，重新定義家的奢華本質。<br><br>代表作品│璞真仰睦、岳泰峰範、全陽柏悅`,
-          img: [require("@/projects/pjr/s11/3-1.jpg"), require("@/projects/pjr/s11/3-2.jpg"), require("@/projects/pjr/s11/3-3.jpg")],
+          img: [
+            require("@/projects/pjr/s11/3-1.jpg"),
+            require("@/projects/pjr/s11/3-2.jpg"),
+            require("@/projects/pjr/s11/3-3.jpg"),
+          ],
           avatar: require("@/projects/pjr/s11/3avatar.jpg"),
           caption: ["BELLAVITA寶麗廣塲"],
         },
         {
-          subtitle: '景觀設計<br/>當代景觀名家',
+          subtitle: "景觀設計<br/>當代景觀名家",
           title: "頤和景觀<br>李淑雲",
           content: `秉承當代景觀設計思潮，呼應中山北路浩瀚樹海地景，創造都市、建築、人文、生態深度共鳴，譜寫人居環境與自然萬物的優雅格調。<br><br>代表作品│璞真碧湖畔、華固名鑄、華固天鑄、華固樂慕`,
-          img: [require("@/projects/pjr/s11/4-1.jpg"), require("@/projects/pjr/s11/4-2.jpg"), require("@/projects/pjr/s11/4-3.jpg"), require("@/projects/pjr/s11/4-4.jpg")],
+          img: [
+            require("@/projects/pjr/s11/4-1.jpg"),
+            require("@/projects/pjr/s11/4-2.jpg"),
+            require("@/projects/pjr/s11/4-3.jpg"),
+            require("@/projects/pjr/s11/4-4.jpg"),
+          ],
           avatar: require("@/projects/pjr/s11/4avatar.jpg"),
           caption: ["BELLAVITA寶麗廣塲"],
         },
         {
-          subtitle: '燈光設計<br/>光雕美學詩人',
+          subtitle: "燈光設計<br/>光雕美學詩人",
           title: "肯緒照明設計<br>林世秉",
           content: `長年受劇場美學薰陶，擅長解構空間既有元素，伴隨自然與日夜星辰流轉，重建光影環境與視覺層次，彰顯璞真之道地標價值。<br><br>代表作品│璞真一一、富富話合、忠泰味、君悅酒店。`,
-          img: [require("@/projects/pjr/s11/5-1.jpg"), require("@/projects/pjr/s11/5-2.jpg"), require("@/projects/pjr/s11/5-3.jpg"), require("@/projects/pjr/s11/5-4.jpg")],
+          img: [
+            require("@/projects/pjr/s11/5-1.jpg"),
+            require("@/projects/pjr/s11/5-2.jpg"),
+            require("@/projects/pjr/s11/5-3.jpg"),
+            require("@/projects/pjr/s11/5-4.jpg"),
+          ],
           avatar: require("@/projects/pjr/s11/5avatar.jpg"),
           caption: ["BELLAVITA寶麗廣塲"],
         },
-
       ],
       swiperOptions: {
         spaceBetween: 30,
@@ -453,8 +478,8 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true
+          el: ".section11 .swiper-pagination",
+          clickable: true,
         },
       },
     };
@@ -462,13 +487,13 @@ export default {
 
   methods: {
     getTitle(index) {
-      const array = this.activeSlide.subtitle.split('<br/>')
-      return array[index]
+      const array = this.activeSlide.subtitle.split("<br/>");
+      return array[index];
     },
     nextS() {
       this.currentSlide++;
       if (this.currentSlide == this.slides.length) {
-        this.currentSlide = 0
+        this.currentSlide = 0;
       }
 
       this.activeSlide = this.slides[this.currentSlide];
@@ -476,11 +501,11 @@ export default {
     prevS() {
       this.currentSlide--;
       if (this.currentSlide < 0) {
-        this.currentSlide = this.slides.length - 1
+        this.currentSlide = this.slides.length - 1;
       }
 
       this.activeSlide = this.slides[this.currentSlide];
-    }
+    },
   },
   created() {
     this.activeSlide = this.slides[this.currentSlide];

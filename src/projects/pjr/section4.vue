@@ -8,7 +8,7 @@
       <swiper
         :options="swiperOptions"
         ref="swiper"
-        @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart"
+        @slideChangeTransitionEnd="slidechange"
       >
         <swiper-slide
           class="slide"
@@ -339,7 +339,7 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".section4 .swiper-pagination",
           clickable: true
         },
         autoplay: {
@@ -350,7 +350,7 @@ export default {
   },
 
   methods: {
-    onSwiperSlideChangeTransitionStart() {
+    slidechange() {
       const activeIndex = this.$refs.swiper.$swiper.activeIndex;
       this.activeSlide = this.slides[activeIndex];
     },

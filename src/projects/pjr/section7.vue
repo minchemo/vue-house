@@ -439,7 +439,7 @@ export default {
           prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".section7 .swiper-pagination",
           clickable: true
         },
         autoplay: {
