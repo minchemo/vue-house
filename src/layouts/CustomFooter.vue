@@ -397,6 +397,36 @@ export default {
         this.showNotify('鄉鎮市區必須填寫', '', 'error')
       } else if (!this.form.checked) {
         this.showNotify('聲明事項尚未確認', '', 'error')
+      } else {
+
+        const urlParams = new URLSearchParams(window.location.search)
+        const utmSource = urlParams.get('utm_source')
+        const utmMedium = urlParams.get('utm_medium')
+        const utmContent = urlParams.get('utm_content')
+        const utmCampaign = urlParams.get('utm_campaign')
+
+
+        fetch('https://www.hiyes.tw/BuildingCase/Booking', {
+          method: 'POST',
+          body: {
+            Name: this.form.name,
+            Email: this.form.email,
+            MobilePhone: this.form.phone,
+            City: this.form.city,
+            Dist: this.form.area,
+            SmsVerifyCode: this.form.captcha,
+            ProjectId: 'hiyes case id',
+            utm_source: utmSource,
+            utm_medium: utmMedium,
+            utm_content: utmContent,
+            utm_campaign: utmCampaign,
+          },
+        }).then((response) => {
+          this.isSubmit = false
+          window.location.href = `formThanks${utmCampaign ? `?utm_campaign=${utmCampaign}` : ''
+            }`
+          this.recordPageView(1) // record user behavior
+        })
       }
 
     },
