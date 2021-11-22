@@ -107,13 +107,16 @@
         font-size: size(29);
         color: #231815;
         line-height: 2;
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-weight: 600;
       }
       h2 {
         font-size: size(54);
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1.2;
         color: #267f98;
         white-space: nowrap;
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
       }
       .avatar {
         margin-right: size(10);
@@ -130,8 +133,8 @@
     p {
       font-size: size(22);
       letter-spacing: size(3);
-      font-weight: 300;
-      line-height: 2;
+      font-weight: 400;
+      line-height: 1.5;
       color: #231815;
     }
   }
@@ -233,6 +236,12 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+
+    .currentTitle{
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-weight: 600;
+    }
+
     .info {
       text-align: left;
       width: 80%;
@@ -250,6 +259,7 @@
           color: #231815;
           line-height: 1;
           margin-bottom: size-m(10);
+          font-weight: 600;
         }
         h2 {
           font-size: size-m(25.2);
@@ -257,6 +267,7 @@
           line-height: 1.2;
           color: #267f98;
           white-space: nowrap;
+          font-weight: 600;
         }
         .avatar {
           margin-right: size-m(10);
@@ -271,6 +282,7 @@
         font-size: size-m(12);
         letter-spacing: size(3);
         line-height: 1.5;
+        font-weight: 500;
       }
     }
     .swiper-box {
@@ -289,6 +301,8 @@
             right: size-m(10);
             bottom: size-m(10);
             font-size: size-m(16);
+            text-shadow: #000 0.1em 0.1em 0.1em;
+            font-weight: 300;
           }
         }
         .swiper-button-prev {
@@ -391,7 +405,7 @@ export default {
           subtitle: '建築外觀<br/>P&T GROUP香港巴馬丹拿集團',
           title: "全球百年建築巨擘<br>改寫亞洲建築史",
           content: `操刀無數富紳豪邸、跨國總部、五星酒店。香港匯豐總行大廈、渣打銀行總部群像；上海外灘萬國建築博覽，二分之一出自P&T手筆；台北遠企香格里拉飯店、信義計畫區多幢百坪豪邸，亦是P&T經典鉅著。`,
-          img: [require("@/projects/pjr/s11/1.jpg")],
+          img: [require("@/projects/pjr/s11/1.jpg"), require("@/projects/pjr/s11/1-2.jpg"), require("@/projects/pjr/s11/1-3.jpg"),require("@/projects/pjr/s11/1-4.jpg"),require("@/projects/pjr/s11/1-5.jpg"),require("@/projects/pjr/s11/1-6.jpg"),require("@/projects/pjr/s11/1-7.jpg")],
           avatar: require("@/projects/pjr/s11/1avatar.jpg"),
           caption: ["BELLAVITA寶麗廣塲"],
         },

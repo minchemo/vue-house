@@ -113,6 +113,8 @@
       h2 {
         font-size: size(29);
         margin-bottom: size(30);
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-weight: 600;
       }
       .divider {
         width: 100%;
@@ -122,9 +124,11 @@
       }
       .houseInfo {
         .houseInfoItem {
-          font-size: size(29);
+          font-size: size(24);
           display: flex;
           margin: size(30) 0;
+          font-family: "Noto Serif TC",Noto Sans TC,serif;
+          font-weight: 600;
           .label {
             color: #267f98;
           }
@@ -140,6 +144,8 @@
       h2 {
         font-size: size(29);
         margin-bottom: size(30);
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-weight: 600;
       }
       .el-select {
         margin-left: 0;
@@ -183,6 +189,8 @@
         line-height: size(53);
         font-size: size(20);
         cursor: pointer;
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-weight: 600;
 
         &:hover {
           background-color: #146379;

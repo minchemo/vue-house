@@ -49,15 +49,18 @@
       font-size: size(29);
       color: #231815;
       margin-bottom: size(25);
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-weight: 600;
     }
     h2 {
       text-align: center;
       font-size: size(54);
-      font-weight: 300;
+      font-weight: 500;
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
       margin-bottom: size(25);
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
     }
     .small-title {
       text-align: center;
@@ -77,8 +80,8 @@
     p {
       font-size: size(22);
       letter-spacing: size(3);
-      font-weight: 300;
-      line-height: 2;
+      font-weight: 400;
+      line-height: 1.5;
       color: #231815;
     }
   }
@@ -99,6 +102,7 @@
           bottom: size(30);
           font-size: size(20);
           font-weight: 200;
+          text-shadow: #000 0.1em 0.1em 0.1em;
         }
       }
       .swiper-button-prev {
@@ -170,6 +174,7 @@
       height: auto;
       .subtitle {
         font-size: size-m(14.5);
+        font-weight: 600;
       }
       .small-title {
         font-size: size-m(20);
@@ -177,8 +182,9 @@
       h2 {
         text-align: center;
         font-size: size-m(25.5);
-        font-weight: 300;
+        font-weight: 600;
         line-height: 1.5;
+
       }
       .divider {
         display: none;
@@ -188,6 +194,7 @@
         font-size: size-m(12);
         letter-spacing: size(3);
         line-height: 1.5;
+        font-weight: 500;
       }
     }
     .swiper-box {
@@ -206,6 +213,7 @@
             right: size-m(10);
             bottom: size-m(10);
             font-size: size-m(16);
+            font-weight: 300;
           }
         }
         .swiper-button-prev {

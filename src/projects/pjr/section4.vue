@@ -49,10 +49,11 @@
     h2 {
       text-align: center;
       font-size: size(50);
-      font-weight: 400;
+      font-weight: 600;
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
     }
     .divider {
       background: #009be4;
@@ -89,6 +90,7 @@
           bottom: size(30);
           font-size: size(20);
           font-weight: 200;
+          text-shadow: #000 0.1em 0.1em 0.1em;
         }
       }
       .swiper-button-prev {
@@ -163,9 +165,10 @@
       h2 {
         text-align: center;
         font-size: size-m(25.5);
-        font-weight: 300;
+        font-weight: 600;
         line-height: 1.5;
         height: size-m(70);
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
       }
       .divider {
         display: none;
@@ -216,6 +219,8 @@
             right: size-m(10);
             bottom: size-m(10);
             font-size: size-m(16);
+            text-shadow: #000 0.1em 0.1em 0.1em;
+            font-weight: 300;
           }
         }
         .swiper-button-prev {

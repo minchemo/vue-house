@@ -41,7 +41,7 @@
         <span>o</span>
         <span>n</span>
       </div>
-      <div class="i4" data-aos="fade-up" data-aos-delay="1200">
+      <div class="i4" data-aos="fade-up" data-aos-delay="1200" v-if="isPC">
         61-89坪<span v-if="!isMobile">│</span
         ><span else>&nbsp;</span>中山北路首排
         <template>
@@ -50,6 +50,13 @@
         </template>
         香港P&T<span v-if="!isMobile">│</span
         ><span else>&nbsp;</span>23層樹海地標
+      </div>
+
+      <div class="i4" data-aos="fade-up" data-aos-delay="1200" v-if="isMobile">
+        61-89坪 中山北路二段
+      </div>
+      <div class="i5" data-aos="fade-up" data-aos-delay="1200" v-if="isMobile">
+        香港P&T 23層傳世眼界
       </div>
     </div>
   </div>
@@ -74,6 +81,7 @@
       font-size: size(65.5);
       font-weight: 500;
       letter-spacing: size(5);
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
     }
     .i2 {
       margin-top: size(40);
@@ -106,6 +114,8 @@
       margin-top: size(40);
       font-size: size(36);
       letter-spacing: size(5);
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-weight: 500;
     }
   }
 }
@@ -122,6 +132,7 @@
     align-items: center;
     justify-content: center;
     background-image: url("../pjr/s1/bg.jpg");
+    background-position: 50%;
     background-size: cover;
     .intro {
       color: #fff;
@@ -129,13 +140,14 @@
       align-items: center;
       flex-direction: column;
       .i1 {
-        font-size: size-m(26);
+        font-size: size-m(30);
         font-weight: 500;
         letter-spacing: size(5);
+        font-weight: 600;
       }
       .i2 {
         margin-top: size-m(40);
-        width: size-m(119);
+        width: size-m(150);
         img {
           width: 100%;
         }
@@ -167,6 +179,16 @@
         line-height: 1.5;
         letter-spacing: size-m(2);
         text-align: center;
+        font-weight: 600;
+      }
+      .i5 {
+        margin-top: size-m(3);
+        font-size: size-m(22);
+        line-height: 1.5;
+        letter-spacing: size-m(2);
+        text-align: center;
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-weight: 600;
       }
     }
   }

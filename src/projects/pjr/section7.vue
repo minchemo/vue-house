@@ -59,21 +59,26 @@
       font-size: size(29);
       color: #231815;
       margin-bottom: size(25);
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-weight: 600;
     }
     h2 {
       text-align: center;
       font-size: size(54);
-      font-weight: 300;
+      font-weight: 500;
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
       margin-bottom: size(25);
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
     }
     .small-title {
       text-align: center;
       font-size: size(39);
       color: #267f98;
-      font-weight: 300;
+      font-weight: 600;
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
+
     }
     .divider {
       background: #009be4;
@@ -86,8 +91,8 @@
     p {
       font-size: size(22);
       letter-spacing: size(3);
-      font-weight: 300;
-      line-height: 2;
+      font-weight: 400;
+      line-height: 1.5;
       color: #231815;
     }
   }
@@ -108,6 +113,7 @@
           bottom: size(30);
           font-size: size(20);
           font-weight: 200;
+          text-shadow: #000 0.1em 0.1em 0.1em;
         }
       }
       .swiper-button-prev {
@@ -158,7 +164,7 @@
     .info {
       position: absolute;
       color: #231815;
-      font-weight: 300;
+      font-weight: 400;
       width: size(932);
       .info-title {
         font-size: size(24);
@@ -172,9 +178,9 @@
         position: absolute;
         right: size(24);
         top: size(24);
-        height: size(100);
+        height: size(80);
         img {
-          min-height: 50%;
+          min-height: 40%;
           max-height: 100%;
         }
       }
@@ -184,9 +190,10 @@
       top: 0;
       left: 0;
       font-size: size(54);
-      font-weight: 300;
+      font-weight: 500;
       color: #267f98;
       position: absolute;
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
     }
   }
 }
@@ -205,7 +212,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    padding-bottom: size-m(80);
+    padding-bottom: size-m(40);
     .info {
       text-align: left;
       width: 80%;
@@ -214,15 +221,19 @@
       height: auto;
       .subtitle {
         font-size: size-m(14.5);
+        font-weight: 600;
       }
       .small-title {
         font-size: size-m(20);
+        font-weight: 600;
+
       }
       h2 {
         text-align: center;
         font-size: size-m(25.5);
         font-weight: 300;
         line-height: 1.5;
+        font-weight: 600;
       }
       .divider {
         display: none;
@@ -232,6 +243,7 @@
         font-size: size-m(12);
         letter-spacing: size(3);
         line-height: 1.5;
+        font-weight: 500;
       }
     }
     .swiper-box {
@@ -241,6 +253,8 @@
       padding: 0;
       &::before {
         font-size: size-m(24);
+        font-weight: 600;
+        
       }
       .swiper-container {
         padding: 0;
@@ -256,6 +270,7 @@
             right: size-m(10);
             bottom: size-m(10);
             font-size: size-m(16);
+            font-weight: 300;
           }
         }
         .swiper-button-prev {
@@ -301,26 +316,26 @@
         }
       }
       .info {
-        position: absolute;
+        position: relative;
         color: #231815;
-        font-weight: 300;
         width: 100%;
         margin-top: 0;
         .info-title {
-          font-size: size-m(12);
+          font-size: size-m(14);
           margin: size-m(15) 0 size-m(5) 0;
+          font-weight: 500;
         }
         .info-content {
-          font-size: size(12);
+          font-size: size-m(12);
           line-height: 1.5;
-          max-width: 65%;
+          max-width: 60%;
+          font-weight: 400;
         }
         .info-logo {
           right: 0;
-          top: unset;
-          bottom: -#{size-m(0)};
+          top: 40;
           height: auto;
-          width: 30%;
+          width: 38%;
           img {
             max-height: size-m(50);
             max-width: 100%;
@@ -373,9 +388,9 @@ export default {
           infoLogo: require("@/projects/pjr/s7/1logo.png"),
         },
         {
-          subtitle: "CMP GROUP 勤美集團",
-          title: "亞洲指標專業鑄造集團",
-          smallTitle: "職人精神 專心做好一件事",
+          subtitle: "職人精神 專心做好一件事",
+          title: "CMP GROUP 勤美集團",
+          smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
           img: require("@/projects/pjr/s7/2.png"),
           caption: "勤美璞真碧湖畔",
@@ -384,9 +399,9 @@ export default {
           infoLogo: require("@/projects/pjr/s7/2logo.png"),
         },
         {
-          subtitle: "CMP GROUP 勤美集團",
-          title: "亞洲指標專業鑄造集團",
-          smallTitle: "職人精神 專心做好一件事",
+          subtitle: "職人精神 專心做好一件事",
+          title: "CMP GROUP 勤美集團",
+          smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
           img: require("@/projects/pjr/s7/3.png"),
           caption: "誠品書店",
@@ -395,9 +410,9 @@ export default {
           infoLogo: require("@/projects/pjr/s7/3logo.png"),
         },
         {
-          subtitle: "CMP GROUP 勤美集團",
-          title: "亞洲指標專業鑄造集團",
-          smallTitle: "職人精神 專心做好一件事",
+          subtitle: "職人精神 專心做好一件事",
+          title: "CMP GROUP 勤美集團",
+          smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
           img: require("@/projects/pjr/s7/4.png"),
           caption: "全國大飯店",
@@ -406,9 +421,9 @@ export default {
           infoLogo: require("@/projects/pjr/s7/4logo.png"),
         },
         {
-          subtitle: "CMP GROUP 勤美集團",
-          title: "亞洲指標專業鑄造集團",
-          smallTitle: "職人精神 專心做好一件事",
+          subtitle: "職人精神 專心做好一件事",
+          title: "CMP GROUP 勤美集團",
+          smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
           img: require("@/projects/pjr/s7/5.png"),
           caption: "勤美學",

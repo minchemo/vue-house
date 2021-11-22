@@ -44,17 +44,18 @@
   flex-direction: row;
   .info {
     text-align: left;
-    width: size(440);
+    width: size(460);
     margin-left: size(80);
     margin-top: size(160);
     height: size(600);
     h2 {
       text-align: center;
       font-size: size(50);
-      font-weight: 400;
+      font-weight: 600;
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
     }
     .divider {
       background: #009be4;
@@ -64,11 +65,12 @@
       margin-left: -#{size(80)};
     }
     p {
-      font-size: size(26);
+      font-size: size(22);
       letter-spacing: size(3);
-      font-weight: 300;
-      line-height: 2;
+      font-weight: 400;
+      line-height: 1.5;
       color: #231815;
+
     }
   }
   .swiper-box {
@@ -88,6 +90,7 @@
           bottom: size(30);
           font-size: size(20);
           font-weight: 200;
+          text-shadow: #000 0.1em 0.1em 0.1em;
         }
       }
       .swiper-button-prev {
@@ -160,8 +163,9 @@
       h2 {
         text-align: center;
         font-size: size-m(25.5);
-        font-weight: 300;
+        font-weight: 600;
         line-height: 1.5;
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
       }
       .divider {
         display: none;
@@ -171,6 +175,7 @@
         font-size: size-m(12);
         letter-spacing: size(3);
         line-height: 1.5;
+        font-weight: 500;
       }
     }
     .swiper-box {
@@ -189,6 +194,8 @@
             right: size-m(10);
             bottom: size-m(10);
             font-size: size-m(16);
+            text-shadow: #000 0.1em 0.1em 0.1em;
+            font-weight: 300;
           }
         }
         .swiper-button-prev {
@@ -271,13 +278,13 @@ export default {
           title: "百年林蔭至高地標<br/>璞真訂製傳世眼界",
           content: `翻閱中山北路世紀繪卷，台灣第一條現代化大道，日本天皇敕使御道，國家外交官道，烜赫人物踏響中山北獨有的貴族身世。人文熟釀的大道胸豁，從昂首邁步到駐足仰望，23層百年樹海之巔，最懂居宅品味的「璞真之道」淬鍊來到。`,
           img: require("@/projects/pjr/s3/1.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          caption: "LV街景",
         },
         {
           title: "樹海人文長鏡頭<br/>潛藏一世紀富裕壯遊",
           content: `半輩子縱橫江山，滿胸懷超然際遇，繫念中山北路樹海第一排的窗，台北歷史最淵遠的林蔭大道，心上永恆富裕原鄉。樟楓漫天綠浪開道，企業總部、縉紳豪邸，相偕未來蓬勃盛放。傳奇在腳下波瀾，繁華燈火在側，群山濃淡疊翠，頂峰之上，照看歲月寧靜。`,
           img: require("@/projects/pjr/s3/2.jpg"),
-          caption: "新光三越與誠品生活南西店",
+          caption: "中山北樹海大道",
         },
       ],
       swiperOptions: {

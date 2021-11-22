@@ -20,7 +20,7 @@
     <vue-lazy-component class="section" id="section5" v-show="false">
       <Section5 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section6" v-show="false">
+    <vue-lazy-component class="section" id="section6">
       <Section6 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section7">
