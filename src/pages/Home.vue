@@ -4,7 +4,7 @@
     <!-- <Navigation /> -->
     <CustomNavigation />
     <!-- <Indigator :viewIndex="viewIndex" /> -->
-    <full-page ref="fullPage" :options="options" id="fullpage">
+    <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
       <vue-lazy-component class="section" id="section1">
         <Section1 />
       </vue-lazy-component>
@@ -51,7 +51,7 @@
       <vue-lazy-component class="section" id="contact">
         <CustomFooter />
       </vue-lazy-component>
-    </full-page>
+    <!-- </full-page> -->
 
     <!-- <MobileNav /> -->
   </div>

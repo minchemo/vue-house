@@ -34,7 +34,9 @@
             ></el-col>
 
             <el-col :span="12">
-              <div class="form-cus-btn">取得驗證碼</div>
+              <div class="form-cus-btn" @click="getMobileValidCode">
+                取得驗證碼
+              </div>
             </el-col>
           </el-row>
           <el-input
@@ -69,7 +71,7 @@
               >本人已知悉以上個人資料蒐集聲明事項</el-checkbox
             >
           </div>
-          <div class="form-cus-btn">立即送出</div>
+          <div class="form-cus-btn" @click="send()">立即送出</div>
         </div>
       </div>
       <div class="g-map">
@@ -113,7 +115,7 @@
       h2 {
         font-size: size(29);
         margin-bottom: size(30);
-        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-family: "Noto Serif TC", Noto Sans TC, serif;
         font-weight: 600;
       }
       .divider {
@@ -127,7 +129,7 @@
           font-size: size(24);
           display: flex;
           margin: size(30) 0;
-          font-family: "Noto Serif TC",Noto Sans TC,serif;
+          font-family: "Noto Serif TC", Noto Sans TC, serif;
           font-weight: 600;
           .label {
             color: #267f98;
@@ -144,7 +146,7 @@
       h2 {
         font-size: size(29);
         margin-bottom: size(30);
-        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-family: "Noto Serif TC", Noto Sans TC, serif;
         font-weight: 600;
       }
       .el-select {
@@ -189,7 +191,7 @@
         line-height: size(53);
         font-size: size(20);
         cursor: pointer;
-        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-family: "Noto Serif TC", Noto Sans TC, serif;
         font-weight: 600;
 
         &:hover {
@@ -362,6 +364,7 @@ export default {
         email: "",
         city: "",
         area: "",
+        captcha: "",
         checked: false
       },
     }
@@ -379,6 +382,114 @@ export default {
   },
 
   methods: {
+    send() {
+      if (this.form.name == '') {
+        this.showNotify('姓名必須填寫', '', 'error')
+      } else if (this.form.phone == '') {
+        this.showNotify('電話必須填寫', '', 'error')
+      } else if (!this.form.captcha) {
+        this.showNotify('驗證碼未填寫', '', 'error')
+      } else if (this.form.email == '') {
+        this.showNotify('Email 必須填寫', '', 'error')
+      } else if (this.form.city == '') {
+        this.showNotify('居住縣市必須填寫', '', 'error')
+      } else if (this.form.area == '') {
+        this.showNotify('鄉鎮市區必須填寫', '', 'error')
+      } else if (!this.form.checked) {
+        this.showNotify('聲明事項尚未確認', '', 'error')
+      }
+
+    },
+    showNotify(title, message, type) {
+      this.$notify({
+        title: title,
+        message: message,
+        duration: 5000,
+        offset: 100,
+        type: type
+      });
+    },
+    getCookie(name) {
+      var nameEQ = name + '='
+      var ca = document.cookie.split(';')
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i]
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length)
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length)
+      }
+      return null
+    },
+    setCookie(name, value, days) {
+      var expires = ''
+      if (days) {
+        var date = new Date()
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+        expires = '; expires=' + date.toUTCString()
+      }
+      document.cookie = name + '=' + (value || '') + expires + '; path=/'
+    },
+    listCookie() {
+      const cookieArray = document.cookie.split(';')
+      for (var i = 0; i < cookieArray.length; i++) {
+        let thisCookie = cookieArray[i].split('=')
+        let cName = unescape(thisCookie[0])
+        let cValue = unescape(thisCookie[1])
+        console.log(cName, cValue)
+      }
+    },
+    recordPageView(state) {
+      if (state === 1) {
+        fetch('https://data.hiyes.tw/rec/pv', {
+          method: 'POST',
+          body: {
+            guid: this.getCookie('hiyes_case_uid'),
+            project: info.caseName,
+            phone: this.form.phone,
+            state,
+          },
+        })
+      } else {
+        fetch('https://data.hiyes.tw/rec/pv', {
+          method: 'POST',
+          body: {
+            guid: this.getCookie('hiyes_case_uid'),
+            project: info.caseName,
+            state,
+          },
+        })
+      }
+    },
+    generateGUID() {
+      fetch('https://data.hiyes.tw/rec/uuid', {
+        method: 'GET',
+      })
+        .then((response) => {
+          return response.text()
+        })
+        .then((guid) => {
+          if (!this.getCookie('hiyes_case_uid')) {
+            this.setCookie('hiyes_case_uid', guid, 2)
+          }
+        })
+    },
+    // 跨域問題待處理
+    getMobileValidCode() {
+      if (this.form.phone == '') {
+        this.showNotify('請先填寫手機號碼', '', 'error')
+        return
+      }
+
+      const data = {
+        mobilePhone: this.form.phone,
+      }
+      fetch('https://www.hiyes.tw/Auth/SendSmsVerifyCode', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      }).then((response) => {
+        console.log(response)
+      })
+    },
+
   },
 
   mounted() {
