@@ -474,22 +474,62 @@ export default {
       activeSlide2: {},
       slides1: [
         {
-          img: require("@/projects/pjr/s9/1-1.jpg"),
+          img: require("@/projects/pjr/s9/2014.jpg"),
+          caption: "2018 內湖 勤美璞真碧湖畔",
+        },
+        {
+          img: require("@/projects/pjr/s9/2017.jpg"),
+          caption: "2016 大安 璞真作",
+        },
+        {
+          img: require("@/projects/pjr/s9/2020.jpg"),
+          caption: "2021 土城 璞真仰睦",
+        },
+        {
+          img: require("@/projects/pjr/s9/2022.jpg"),
           caption: "2022 台中 勤美之森",
         },
         {
-          img: require("@/projects/pjr/s9/1-1.jpg"),
-          caption: "2022 台中 勤美之森2",
+          img: require("@/projects/pjr/s9/2023.jpg"),
+          caption: "2023 松山 一方璞真",
+        },
+        {
+          img: require("@/projects/pjr/s9/2024-2.jpg"),
+          caption: "2024 台中 璞真榮華",
         },
       ],
       slides2: [
         {
-          img: require("@/projects/pjr/s9/2-1.jpg"),
+          img: require("@/projects/pjr/s9/2004.jpg"),
+          caption: "2005 忠孝 璞真本因坊",
+        },
+        {
+          img: require("@/projects/pjr/s9/2005.jpg"),
+          caption: "2007 天母 仰哲",
+        },
+        {
+          img: require("@/projects/pjr/s9/2007.jpg"),
+          caption: "20010 松山 璞真久石讓",
+        },
+        {
+          img: require("@/projects/pjr/s9/2010.jpg"),
+          caption: "2013 中山 璞真詠真",
+        },
+        {
+          img: require("@/projects/pjr/s9/2011.jpg"),
           caption: "2011 大安 勤美璞真",
         },
         {
-          img: require("@/projects/pjr/s9/2-1.jpg"),
-          caption: "2011 大安 勤美璞真2",
+          img: require("@/projects/pjr/s9/2019.jpg"),
+          caption: "2021 松山 勤耕延吉",
+        },
+        {
+          img: require("@/projects/pjr/s9/2024.jpg"),
+          caption: "2024 信義 璞真永吉",
+        },
+        {
+          img: require("@/projects/pjr/s9/2024-1.jpg"),
+          caption: "2024 大安 璞真合和",
         },
       ],
       swiperOptions1: {

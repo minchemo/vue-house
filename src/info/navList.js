@@ -3,7 +3,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section2",
+        section: "section3",
         svgSrc: "",
         offset: 0,
         mobileOffset: 0
@@ -13,7 +13,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section3",
+        section: "section4",
         svgSrc: "",
         offset: 0,
         mobileOffset: 0
@@ -23,7 +23,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section5",
+        section: "section6",
         svgSrc: "",
         offset: 0,
         mobileOffset: 0
@@ -53,7 +53,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section11",
+        section: "section9",
         svgSrc: "",
         offset: 0,
         mobileOffset: 0

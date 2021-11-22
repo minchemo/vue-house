@@ -44,6 +44,10 @@
     height: 100vh;
     background-image: url("../pjr/s5/bg-mo.jpg");
     background-size: cover;
+
+
+
+    
     .intro {
       top: size-m(70);
       position: absolute;

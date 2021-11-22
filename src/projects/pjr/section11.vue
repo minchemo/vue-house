@@ -155,6 +155,7 @@
           bottom: size(30);
           font-size: size(20);
           font-weight: 200;
+          text-shadow: #000 0.1em 0.1em 0.1em;
         }
       }
       .swiper-button-prev {
@@ -415,7 +416,7 @@ export default {
             require("@/projects/pjr/s11/1-7.jpg"),
           ],
           avatar: require("@/projects/pjr/s11/1avatar.jpg"),
-          caption: ["BELLAVITA寶麗廣塲"],
+          caption: ["台北Bellavita","上海IFC","交易廣場第一，二及第三期","杜拜Viceroy Palm Jumeirah","香港怡和大廈","曼谷Sathorn Square","新加坡Le Nouvel Ardmore"],
         },
         {
           subtitle: "建築規劃<br/>美國密西根建築碩士",
@@ -427,7 +428,7 @@ export default {
             require("@/projects/pjr/s11/2-3.jpg"),
           ],
           avatar: require("@/projects/pjr/s11/2avatar.jpg"),
-          caption: ["BELLAVITA寶麗廣塲"],
+          caption: ["九昱晴美","祥德帝寶","綺華有仁愛"],
         },
         {
           subtitle: "公設設計<br/>留美設計藝匠",
@@ -439,7 +440,7 @@ export default {
             require("@/projects/pjr/s11/3-3.jpg"),
           ],
           avatar: require("@/projects/pjr/s11/3avatar.jpg"),
-          caption: ["BELLAVITA寶麗廣塲"],
+          caption: ["全陽柏悅","岳泰峰範","璞真仰睦"],
         },
         {
           subtitle: "景觀設計<br/>當代景觀名家",
@@ -452,7 +453,7 @@ export default {
             require("@/projects/pjr/s11/4-4.jpg"),
           ],
           avatar: require("@/projects/pjr/s11/4avatar.jpg"),
-          caption: ["BELLAVITA寶麗廣塲"],
+          caption: ["2014勤美璞真碧湖畔","景觀華固天鑄","景觀華固天鑄","景觀華固樂慕"],
         },
         {
           subtitle: "燈光設計<br/>光雕美學詩人",
@@ -465,7 +466,7 @@ export default {
             require("@/projects/pjr/s11/5-4.jpg"),
           ],
           avatar: require("@/projects/pjr/s11/5avatar.jpg"),
-          caption: ["BELLAVITA寶麗廣塲"],
+          caption: ["忠泰味","君悅酒店","富富話合","璞真一一"],
         },
       ],
       swiperOptions: {

@@ -132,7 +132,7 @@ $hamburger-layer-color: #fff;
   .custom-navigation-toggler {
     position: absolute;
     right: 2vw;
-    top: size(47.5);
+    top: size(35);
     margin-top: -#{size(17)};
     z-index: 1;
     background-size: cover;
@@ -235,16 +235,17 @@ $hamburger-layer-color: #fff;
     top: 0;
     left: 0;
     width: 100%;
-    height: size(95);
+    height: size(70);
     background-color: rgba($color: #231815, $alpha: 0.5);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: size(150);
     .link {
-      font-size: size(24);
+      font-size: size(20);
       margin-left: size(60);
       color: #fff;
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
       &:hover {
         opacity: 0.7;
         cursor: pointer;
