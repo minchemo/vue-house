@@ -33,7 +33,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section6",
+        section: "section7",
         svgSrc: "",
         offset: 0,
         mobileOffset: 0
@@ -43,7 +43,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section7",
+        section: "section9",
         svgSrc: "",
         offset: 0,
         mobileOffset: 0
@@ -53,13 +53,13 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section9",
+        section: "section11",
         svgSrc: "",
         offset: 0,
         mobileOffset: 0
     },
     {
-        name: "粉絲專頁",
+        name: "海悅官網",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
@@ -67,6 +67,6 @@ export default [{
         svgSrc: "",
         offset: 0,
         mobileOffset: 0,
-        link: "https://facebook.com"
+        link: "https://www.hiyes.tw/"
     }
 ];
