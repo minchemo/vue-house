@@ -1,6 +1,6 @@
 <template>
   <div class="section5" >
-    <div class="intro">
+    <div class="intro hasdivider" data-aos="fade-up">
       <h2>擁有高度的中山北路<br />收藏無價的風景之作</h2>
     </div>
   </div>
