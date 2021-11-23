@@ -342,15 +342,15 @@
 
 <script>
 // @ is an alias to /src
-import { isMobile } from '@/utils'
+import { isMobile } from "@/utils";
 import { cityList, renderAreaList } from "@/info/address";
 import info from "@/info";
-import Footer from "@/layouts/Footer.vue"
+import Footer from "@/layouts/Footer.vue";
 
 export default {
-  name: 'custom-footer',
+  name: "custom-footer",
   components: {
-    Footer
+    Footer,
   },
   data() {
     return {
@@ -365,14 +365,14 @@ export default {
         city: "",
         area: "",
         captcha: "",
-        checked: false
+        checked: false,
       },
-    }
+      duration: 0
+    };
   },
 
   watch: {
-    'this.form.area': {
-    }
+    "this.form.area": {},
   },
 
   computed: {
@@ -383,31 +383,29 @@ export default {
 
   methods: {
     send() {
-      if (this.form.name == '') {
-        this.showNotify('姓名必須填寫', '', 'error')
-      } else if (this.form.phone == '') {
-        this.showNotify('電話必須填寫', '', 'error')
+      if (this.form.name == "") {
+        this.showNotify("姓名必須填寫", "", "error");
+      } else if (this.form.phone == "") {
+        this.showNotify("電話必須填寫", "", "error");
       } else if (!this.form.captcha) {
-        this.showNotify('驗證碼未填寫', '', 'error')
-      } else if (this.form.email == '') {
-        this.showNotify('Email 必須填寫', '', 'error')
-      } else if (this.form.city == '') {
-        this.showNotify('居住縣市必須填寫', '', 'error')
-      } else if (this.form.area == '') {
-        this.showNotify('鄉鎮市區必須填寫', '', 'error')
+        this.showNotify("驗證碼未填寫", "", "error");
+      } else if (this.form.email == "") {
+        this.showNotify("Email 必須填寫", "", "error");
+      } else if (this.form.city == "") {
+        this.showNotify("居住縣市必須填寫", "", "error");
+      } else if (this.form.area == "") {
+        this.showNotify("鄉鎮市區必須填寫", "", "error");
       } else if (!this.form.checked) {
-        this.showNotify('聲明事項尚未確認', '', 'error')
+        this.showNotify("聲明事項尚未確認", "", "error");
       } else {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get("utm_source");
+        const utmMedium = urlParams.get("utm_medium");
+        const utmContent = urlParams.get("utm_content");
+        const utmCampaign = urlParams.get("utm_campaign");
 
-        const urlParams = new URLSearchParams(window.location.search)
-        const utmSource = urlParams.get('utm_source')
-        const utmMedium = urlParams.get('utm_medium')
-        const utmContent = urlParams.get('utm_content')
-        const utmCampaign = urlParams.get('utm_campaign')
-
-
-        fetch('https://www.hiyes.tw/BuildingCase/Booking', {
-          method: 'POST',
+        fetch("https://www.hiyes.tw/BuildingCase/Booking", {
+          method: "POST",
           body: {
             Name: this.form.name,
             Email: this.form.email,
@@ -415,20 +413,20 @@ export default {
             City: this.form.city,
             Dist: this.form.area,
             SmsVerifyCode: this.form.captcha,
-            ProjectId: 'hiyes case id',
+            ProjectId: "hiyes case id",
             utm_source: utmSource,
             utm_medium: utmMedium,
             utm_content: utmContent,
             utm_campaign: utmCampaign,
           },
         }).then((response) => {
-          this.isSubmit = false
-          window.location.href = `formThanks${utmCampaign ? `?utm_campaign=${utmCampaign}` : ''
-            }`
-          this.recordPageView(1) // record user behavior
-        })
+          this.isSubmit = false;
+          window.location.href = `formThanks${
+            utmCampaign ? `?utm_campaign=${utmCampaign}` : ""
+          }`;
+          this.recordPageView(1); // record user behavior
+        });
       }
-
     },
     showNotify(title, message, type) {
       this.$notify({
@@ -436,96 +434,103 @@ export default {
         message: message,
         duration: 5000,
         offset: 100,
-        type: type
+        type: type,
       });
     },
     getCookie(name) {
-      var nameEQ = name + '='
-      var ca = document.cookie.split(';')
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(";");
       for (var i = 0; i < ca.length; i++) {
-        var c = ca[i]
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length)
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length)
+        var c = ca[i];
+        while (c.charAt(0) === " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0)
+          return c.substring(nameEQ.length, c.length);
       }
-      return null
+      return null;
     },
     setCookie(name, value, days) {
-      var expires = ''
+      var expires = "";
       if (days) {
-        var date = new Date()
-        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
-        expires = '; expires=' + date.toUTCString()
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
       }
-      document.cookie = name + '=' + (value || '') + expires + '; path=/'
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
     },
     listCookie() {
-      const cookieArray = document.cookie.split(';')
+      const cookieArray = document.cookie.split(";");
       for (var i = 0; i < cookieArray.length; i++) {
-        let thisCookie = cookieArray[i].split('=')
-        let cName = unescape(thisCookie[0])
-        let cValue = unescape(thisCookie[1])
-        console.log(cName, cValue)
+        let thisCookie = cookieArray[i].split("=");
+        let cName = unescape(thisCookie[0]);
+        let cValue = unescape(thisCookie[1]);
+        console.log(cName, cValue);
       }
     },
     recordPageView(state) {
       if (state === 1) {
-        fetch('https://data.hiyes.tw/rec/pv', {
-          method: 'POST',
+        fetch("https://data.hiyes.tw/rec/pv", {
+          method: "POST",
           body: {
-            guid: this.getCookie('hiyes_case_uid'),
-            project: 'pjavenue',
+            guid: this.getCookie("hiyes_case_uid"),
+            project: "pjavenue",
             phone: this.form.phone,
             state,
           },
-        })
+        });
       } else {
-        fetch('https://data.hiyes.tw/rec/pv', {
-          method: 'POST',
+        fetch("https://data.hiyes.tw/rec/pv", {
+          method: "POST",
           body: {
-            guid: this.getCookie('hiyes_case_uid'),
-            project: 'pjavenue',
+            guid: this.getCookie("hiyes_case_uid"),
+            project: "pjavenue",
             state,
           },
-        })
+        });
       }
     },
     generateGUID() {
-      fetch('https://data.hiyes.tw/rec/uuid', {
-        method: 'GET',
+      fetch("https://data.hiyes.tw/rec/uuid", {
+        method: "GET",
       })
         .then((response) => {
-          return response.text()
+          return response.text();
         })
         .then((guid) => {
-          if (!this.getCookie('hiyes_case_uid')) {
-            this.setCookie('hiyes_case_uid', guid, 2)
+          if (!this.getCookie("hiyes_case_uid")) {
+            this.setCookie("hiyes_case_uid", guid, 2);
           }
-        })
+        });
     },
     // 跨域問題待處理
     getMobileValidCode() {
-      if (this.form.phone == '') {
-        this.showNotify('請先填寫手機號碼', '', 'error')
-        return
+      if (this.form.phone == "") {
+        this.showNotify("請先填寫手機號碼", "", "error");
+        return;
       }
 
       const data = {
         mobilePhone: this.form.phone,
-      }
-      fetch('https://www.hiyes.tw/Auth/SendSmsVerifyCode', {
-        method: 'POST',
+      };
+      fetch("https://www.hiyes.tw/Auth/SendSmsVerifyCode", {
+        method: "POST",
         body: JSON.stringify(data),
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+        },
       }).then((response) => {
-        console.log(response)
-      })
+        console.log(response);
+      });
     },
-
   },
 
   mounted() {
-    this.generateGUID()
+    this.generateGUID();
+
+    setInterval(() => {
+      this.duration ++;
+    }, 1000);
   },
 
-  created() { },
-}
+  created() {},
+};
 </script>

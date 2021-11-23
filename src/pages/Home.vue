@@ -351,7 +351,6 @@ export default {
 .section,
 .section .fp-slide,
 .section .fp-tableCell {
-  height: auto !important;
   will-change: transform, opacity;
 }
 
