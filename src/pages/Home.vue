@@ -17,9 +17,9 @@
       <vue-lazy-component class="section" id="section4">
         <Section4 />
       </vue-lazy-component>
-      <!-- <vue-lazy-component class="section" id="section5" v-show="false">
+      <vue-lazy-component class="section" id="section5">
         <Section5 />
-      </vue-lazy-component> -->
+      </vue-lazy-component>
       <vue-lazy-component class="section" id="section6">
         <Section6 />
       </vue-lazy-component>
@@ -32,18 +32,19 @@
       <vue-lazy-component class="section" id="section9">
         <Section9 />
       </vue-lazy-component>
-      <!-- <vue-lazy-component class="section" id="section10" v-show="false">
+      <vue-lazy-component class="section" id="section10">
         <Section10 />
-      </vue-lazy-component> -->
+      </vue-lazy-component>
       <vue-lazy-component class="section" id="section11">
         <Section11 />
       </vue-lazy-component>
-      <!-- <vue-lazy-component class="section" id="section12" v-show="false">
+      <vue-lazy-component class="section" id="section12">
         <Section12 />
       </vue-lazy-component>
-      <vue-lazy-component class="section" id="section13" v-show="false">
+      <vue-lazy-component class="section" id="section13">
         <Section13 />
       </vue-lazy-component>
+      <!-- 
       <vue-lazy-component class="section" id="section2" v-show="false">
         <Section2 />
       </vue-lazy-component> -->

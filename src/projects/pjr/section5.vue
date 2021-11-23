@@ -19,9 +19,10 @@
     h2 {
       color: #267f98;
       font-size: size(60);
-      font-weight: 300;
+      font-weight: 600;
       line-height: 1.4;
       letter-spacing: size(2);
+      font-family: "Noto Serif TC",Noto Sans TC,serif;
     }
     &::after {
       content: "";
@@ -57,9 +58,11 @@
       h2 {
         color: #267f98;
         font-size: size-m(25);
-        font-weight: 300;
+        font-weight: 600;
         line-height: 1.4;
         letter-spacing: size-m(2);
+        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        
       }
       &::after {
         content: unset;
