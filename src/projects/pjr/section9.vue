@@ -1,5 +1,5 @@
 <template>
-  <div class="section9">
+  <div class="section9" >
     <div class="s-divider"></div>
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <h2>
@@ -111,6 +111,8 @@
   align-items: flex-end;
   justify-content: center;
   flex-direction: row;
+  overflow: hidden;
+  position: relative;
   padding: size(200) 0;
   .info {
     text-align: left;
@@ -495,21 +497,21 @@ export default {
         },
         {
           img: require("@/projects/pjr/s9/2024-2.jpg"),
-          caption: "2024 台中 璞真榮華",
+          caption: "2024 天母 璞真榮華",
         },
       ],
       slides2: [
         {
           img: require("@/projects/pjr/s9/2004.jpg"),
-          caption: "2005 忠孝 璞真本因坊",
+          caption: "2006 忠孝 璞真本因坊",
         },
         {
           img: require("@/projects/pjr/s9/2005.jpg"),
-          caption: "2007 天母 仰哲",
+          caption: "2008 天母 仰哲",
         },
         {
           img: require("@/projects/pjr/s9/2007.jpg"),
-          caption: "20010 松山 璞真久石讓",
+          caption: "2010 松山 璞真久石讓",
         },
         {
           img: require("@/projects/pjr/s9/2010.jpg"),

@@ -1,57 +1,73 @@
 <template>
   <div class="home no-padding-top">
-    <Loading :loading="load" />
+    <CustomNavigation :scrollInstance="locomotive" />
+    <div id="locomotive">
+      <Section1 class="section" data-scroll />
+      <!-- <Section2 class="section" data-scroll  /> -->
+      <Section3 class="section" data-scroll />
+      <Section4 class="section" data-scroll />
+      <Section5 class="section" data-scroll />
+      <Section6 class="section" data-scroll />
+      <Section7 class="section" data-scroll />
+      <Section8 class="section" data-scroll />
+      <Section9 class="section" data-scroll />
+      <Section10 class="section" data-scroll />
+      <Section11 class="section" data-scroll />
+      <Section12 class="section" data-scroll />
+      <Section13 class="section" data-scroll />
+      <CustomFooter class="section" data-scroll />
+    </div>
+    <Loading :loading="load" data-scroll />
     <!-- <Navigation /> -->
-    <CustomNavigation />
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
-      <vue-lazy-component class="section" id="section1">
-        <Section1 />
-      </vue-lazy-component>
-      <!-- <vue-lazy-component class="section" id="section2" v-show="false">
+    <!-- <vue-lazy-component class="section" id="section1" @init="init">
+      <Section1/>
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section2" v-show="false"  >
         <Section2 />
-      </vue-lazy-component> -->
-      <vue-lazy-component class="section" id="section3">
-        <Section3 />
       </vue-lazy-component>
-      <vue-lazy-component class="section" id="section4">
-        <Section4 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section5">
-        <Section5 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section6">
-        <Section6 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section7">
-        <Section7 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section8">
-        <Section8 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section9">
-        <Section9 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section10">
-        <Section10 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section11">
-        <Section11 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section12">
-        <Section12 />
-      </vue-lazy-component>
-      <vue-lazy-component class="section" id="section13">
-        <Section13 />
-      </vue-lazy-component>
-      <!-- 
-      <vue-lazy-component class="section" id="section2" v-show="false">
+    <vue-lazy-component class="section" id="section3" @init="init">
+      <Section3 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section4" @init="init">
+      <Section4 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section5" @init="init">
+      <Section5 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section6" @init="init">
+      <Section6 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section7" @init="init">
+      <Section7 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section8" @init="init">
+      <Section8 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section9" @init="init">
+      <Section9 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section10" @init="init">
+      <Section10 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section11" @init="init">
+      <Section11 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section12" @init="init">
+      <Section12 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section13" @init="init">
+      <Section13 />
+    </vue-lazy-component>
+    
+      <vue-lazy-component class="section" id="section2" v-show="false"  >
         <Section2 />
-      </vue-lazy-component> -->
+      </vue-lazy-component>
 
-      <vue-lazy-component class="section" id="contact">
-        <CustomFooter />
-      </vue-lazy-component>
+    <vue-lazy-component class="section" id="contact">
+      <CustomFooter />
+    </vue-lazy-component> -->
     <!-- </full-page> -->
 
     <!-- <MobileNav /> -->
@@ -62,7 +78,6 @@
 // @ is an alias to /src
 import $ from "jquery";
 import Navigation from "@/layouts/Navigation.vue";
-import CustomNavigation from "@/layouts/CustomNavigation.vue";
 import { isMobile } from "@/utils";
 import SideNavigation from "@/layouts/SideNavigation.vue";
 import ContactSection from "@/layouts/ContactSection.vue";
@@ -87,6 +102,8 @@ import Section10 from "@/projects/pjr/section10.vue";
 import Section11 from "@/projects/pjr/section11.vue";
 import Section12 from "@/projects/pjr/section12.vue";
 import Section13 from "@/projects/pjr/section13.vue";
+import LocomotiveScroll from "locomotive-scroll";
+import CustomNavigation from "@/layouts/CustomNavigation.vue";
 
 export default {
   name: "home",
@@ -94,8 +111,8 @@ export default {
     Loading,
     // Indigator,
     Navigation,
-    CustomNavigation,
     //SideNavigation,
+    CustomNavigation,
     ContactSection,
     CustomFooter,
     MobileNav,
@@ -112,6 +129,7 @@ export default {
     Section11,
     Section12,
     Section13,
+    locomotive: null,
   },
 
   data() {
@@ -194,22 +212,83 @@ export default {
     AOS.init({
       duration: 1000,
     });
-    // window.addEventListener('scroll', this.onScroll, false)
-    // this.action = this.$refs.fullPage.api
-    // if (this.isMobile) {
-    //   this.$refs.fullPage.api.setResponsive(true)
-    // }
+
+    this.locomotive = new LocomotiveScroll({
+      el: document.querySelector("#locomotive"),
+      smooth: true,
+      repeat: true,
+      tablet: {
+        smooth: true,
+        breakpoint: 250,
+      },
+      smartphone: {
+        smooth: false,
+      },
+      lerp: 0.05,
+    });
+
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("aos-animate");
+        } else {
+          entry.target.classList.remove("aos-animate");
+        }
+      });
+    });
+    document.querySelectorAll("[data-aos]").forEach((aosElem) => {
+      observer.observe(aosElem);
+    });
+
+    let observer2 = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("showin");
+          }, 500);
+        } else {
+          entry.target.classList.remove("showin");
+        }
+      });
+    });
+    document.querySelectorAll(".divider").forEach((aosElem) => {
+      observer2.observe(aosElem);
+    });
+
+    let observer3 = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("showin");
+          }, 500);
+        } else {
+          entry.target.classList.remove("showin");
+        }
+      });
+    });
+    document.querySelectorAll(".hasdivider").forEach((aosElem) => {
+      observer3.observe(aosElem);
+    });
+
+    let imgs = document.images;
+
+    [].forEach.call(imgs, function (img) {
+      if (img.complete) update_();
+      else img.addEventListener("load", update_, false);
+    });
+
+    const self = this;
+
+    function update_() {
+      self.locomotive.update();
+    }
+
     this.scrolling();
   },
-  // mounted() {
-  // window.addEventListener('scroll', this.onScroll, false)
-  // this.action = this.$refs.fullPage.api
-  // if (this.isMobile) {
-  //   this.$refs.fullPage.api.setResponsive(true)
-  // }
-  // },
   methods: {
-    init() {},
+    init() {
+      this.locomotive.update();
+    },
     scrolling() {
       let lastScrollTop = 0;
       $(window).on("scroll", function () {
@@ -243,12 +322,37 @@ export default {
     //background: url("~@/projects/llcs/s1/bg.jpg") center 0 no-repeat;
     background-size: cover;
   }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.divider {
+  transform: scale(0) !important;
+  transition: all 1s !important;
+  &.showin {
+    transform: scale(1) !important;
+  }
+}
+
+.hasdivider {
+  &:after {
+    transform: scale(0) !important;
+    transition: all 1s !important;
+  }
+
+  &.showin {
+    &::after {
+      transform: scale(1) !important;
+    }
+  }
 }
 
 .section,
 .section .fp-slide,
 .section .fp-tableCell {
   height: auto !important;
+  will-change: transform, opacity;
 }
 
 .fp-left {

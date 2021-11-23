@@ -1,5 +1,5 @@
 <template>
-  <div class="section5">
+  <div class="section5" >
     <div class="intro">
       <h2>擁有高度的中山北路<br />收藏無價的風景之作</h2>
     </div>
@@ -12,6 +12,8 @@
   height: 100vh;
   background-image: url("../pjr/s5/bg.jpg");
   background-size: cover;
+  overflow: hidden;
+  position: relative;
   .intro {
     position: absolute;
     left: size(180);
@@ -22,7 +24,7 @@
       font-weight: 600;
       line-height: 1.4;
       letter-spacing: size(2);
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
     }
     &::after {
       content: "";
@@ -46,9 +48,6 @@
     background-image: url("../pjr/s5/bg-mo.jpg");
     background-size: cover;
 
-
-
-    
     .intro {
       top: size-m(70);
       position: absolute;
@@ -61,8 +60,7 @@
         font-weight: 600;
         line-height: 1.4;
         letter-spacing: size-m(2);
-        font-family: "Noto Serif TC",Noto Sans TC,serif;
-        
+        font-family: "Noto Serif TC", Noto Sans TC, serif;
       }
       &::after {
         content: unset;
@@ -82,14 +80,14 @@
 
 <script>
 // @ is an alias to /src
-import { isMobile } from '@/utils'
+import { isMobile } from "@/utils";
 
 export default {
-  name: 'section5',
+  name: "section5",
   data() {
     return {
-      isMobile
-    }
+      isMobile,
+    };
   },
-}
+};
 </script>

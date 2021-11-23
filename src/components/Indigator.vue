@@ -1,5 +1,5 @@
 <template>
-  <div class="indigator">
+  <div class="indigator" >
     <div class="list-indigator">
       <div
         :class="`dot ${index == indigatorIndex ? 'active' : '' }`"

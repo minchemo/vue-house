@@ -1,6 +1,6 @@
 <template>
-  <div class="section4">
-    <div class="info" data-aos="fade-up" data-aos-delay="400">
+  <div class="section4" >
+    <div class="info hasdivider" data-aos="fade-up" data-aos-delay="400">
       <h2 v-html="activeSlide.title"></h2>
       <div class="divider"></div>
     </div>
@@ -41,6 +41,8 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
+  overflow: hidden;
+  position: relative;
   .info {
     position: relative;
     text-align: left;
@@ -53,7 +55,7 @@
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
     }
     .divider {
       background: #009be4;
@@ -68,9 +70,8 @@
       height: size(400);
       background: #267f98;
       position: absolute;
+      top: -#{size(450)};
       left: 50%;
-      transform: translate(-50%, -#{size(450)});
-      top: 0;
     }
   }
   .swiper-box {
@@ -168,7 +169,7 @@
         font-weight: 600;
         line-height: 1.5;
         height: size-m(70);
-        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-family: "Noto Serif TC", Noto Sans TC, serif;
       }
       .divider {
         display: none;
@@ -235,6 +236,8 @@
 
           &::after {
             content: "";
+            left: 0;
+            top: -50%;
           }
         }
         .swiper-button-next {
@@ -340,7 +343,7 @@ export default {
         },
         pagination: {
           el: ".section4 .swiper-pagination",
-          clickable: true
+          clickable: true,
         },
         autoplay: {
           delay: 3000,
@@ -360,6 +363,6 @@ export default {
     this.activeSlide = this.slides[0];
   },
 
-  created() { },
+  created() {},
 };
 </script>

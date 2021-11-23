@@ -90,6 +90,7 @@ export default {
       return ratio;
     },
     scrollView() {
+      const self = this;
       const el = this.$refs.view;
       const imgEl = this.$refs.viewImg;
       const handEl = this.$refs.viewHand;
@@ -102,6 +103,7 @@ export default {
         el.scrollLeft = scrollTarget;
         setTimeout(() => {
           $(el).one("scroll", () => {
+            if (self.isMobile) return
             $(handEl).fadeOut();
           });
         }, 1000);

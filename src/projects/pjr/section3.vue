@@ -1,5 +1,5 @@
 <template>
-  <div class="section3">
+  <div class="section3" >
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <h2 v-html="activeSlide.title"></h2>
       <div class="divider"></div>
@@ -42,6 +42,8 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  overflow: hidden;
+  position: relative;
   .info {
     text-align: left;
     width: size(460);
@@ -55,7 +57,7 @@
       line-height: 1.2;
       color: #267f98;
       white-space: nowrap;
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
     }
     .divider {
       background: #009be4;
@@ -70,7 +72,6 @@
       font-weight: 400;
       line-height: 1.5;
       color: #231815;
-
     }
   }
   .swiper-box {
@@ -165,7 +166,7 @@
         font-size: size-m(25.5);
         font-weight: 600;
         line-height: 1.5;
-        font-family: "Noto Serif TC",Noto Sans TC,serif;
+        font-family: "Noto Serif TC", Noto Sans TC, serif;
       }
       .divider {
         display: none;
@@ -295,7 +296,7 @@ export default {
         },
         pagination: {
           el: ".section3 .swiper-pagination",
-          clickable: true
+          clickable: true,
         },
         autoplay: {
           delay: 3000,
@@ -315,6 +316,6 @@ export default {
     this.activeSlide = this.slides[0];
   },
 
-  created() { },
+  created() {},
 };
 </script>

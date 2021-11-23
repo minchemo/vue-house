@@ -1,5 +1,5 @@
 <template>
-  <div class="section8">
+  <div class="section8" >
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <div class="subtitle" v-html="activeSlide.subtitle"></div>
       <h2 v-html="activeSlide.title"></h2>
@@ -40,6 +40,8 @@
   align-items: center;
   justify-content: flex-end;
   flex-direction: row-reverse;
+  overflow: hidden;
+  position: relative;
   .info {
     text-align: left;
     width: size(700);

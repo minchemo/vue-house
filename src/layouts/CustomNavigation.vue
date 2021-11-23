@@ -10,34 +10,10 @@
         </div>
       </div>
     </div>
-    <div class="custom-navbar" data-aos="fade-down" data-aos-delay="2000">
-      <div
-        class="link"
-        v-scroll-to="{
-          element: `.custom-footer`,
-          offset: 0,
-        }"
-      >
-        來電洽詢
-      </div>
-      <div
-        class="link"
-        v-scroll-to="{
-          element: `.order-now`,
-          offset: 0,
-        }"
-      >
-        立即預約
-      </div>
-      <div
-        class="link"
-        v-scroll-to="{
-          element: `.g-map`,
-          offset: 0,
-        }"
-      >
-        地圖導航
-      </div>
+    <div class="custom-navbar">
+      <div class="link" @click="scrollTo('.custom-footer')">來電洽詢</div>
+      <div class="link" @click="scrollTo('.order-now')">立即預約</div>
+      <div class="link" @click="scrollTo('.g-map')">地圖導航</div>
     </div>
     <div
       class="custom-navigation-list"
@@ -46,13 +22,9 @@
       <ul class="navlist">
         <li
           :key="item.name"
-          v-scroll-to="{
-            element: `.${item.section}`,
-            offset: isMobile ? item.mobileOffset : item.offset,
-          }"
           v-bind:class="item.name == activeSection ? 'active' : ''"
           v-for="item in navList"
-          @click="setActive(item.name, item.link)"
+          @click="setActive(item.name, item.link, `.${item.section}`)"
           class="link"
           :data-section="item.section"
         >
@@ -71,6 +43,7 @@ import "hamburgers/dist/hamburgers.min.css";
 export default {
   name: "custom-navigation",
   components: {},
+  props: ["scrollInstance"],
   data() {
     return {
       isOpen: false,
@@ -80,16 +53,21 @@ export default {
     };
   },
   methods: {
+    scrollTo(el) {
+      this.scrollInstance.scrollTo(el);
+    },
     openNav() {
       this.isOpen = !this.isOpen;
     },
-    setActive(section, link) {
+    setActive(section, link, scrollEl) {
       this.activeSection = section;
       this.isOpen = !this.isOpen;
 
       if (link) {
         window.open(link);
       }
+
+      this.scrollTo(scrollEl);
     },
     componentDidMount() {
       window.addEventListener("scroll", (e) => this.handleNavigation(e));
@@ -128,6 +106,7 @@ $hamburger-layer-color: #fff;
   z-index: 10000;
   right: 0;
   top: 0;
+  width: 100%;
 
   .custom-navigation-toggler {
     position: absolute;
@@ -182,7 +161,6 @@ $hamburger-layer-color: #fff;
       justify-content: center;
       flex-direction: column;
       padding: 0 20px;
-      
 
       li {
         font-size: 1vw;
@@ -245,7 +223,7 @@ $hamburger-layer-color: #fff;
       font-size: size(20);
       margin-left: size(60);
       color: #fff;
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
       &:hover {
         opacity: 0.7;
         cursor: pointer;
@@ -300,7 +278,7 @@ $hamburger-layer-color: #fff;
       height: 100vh;
       z-index: 0;
       transform: translateX(100vw);
-    background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.8);
       transition: all 0.5s;
 
       &.is-active {

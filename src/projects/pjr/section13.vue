@@ -1,5 +1,5 @@
 <template>
-  <div class="section13">
+  <div class="section13" >
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <div class="subtitle" v-html="activeSlide.subtitle"></div>
       <h2 v-html="activeSlide.title"></h2>
@@ -60,6 +60,8 @@
   background-color: #ededee;
   min-height: 100vh;
   width: 100%;
+  overflow: hidden;
+  position: relative;
   .info {
     position: absolute;
     z-index: 10;

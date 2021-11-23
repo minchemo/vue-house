@@ -5,6 +5,7 @@ import store from "./store";
 import "./registerServiceWorker";
 
 import "@/assets/style/global.scss";
+import "locomotive-scroll/dist/locomotive-scroll.min.css";
 
 /* 全局配置 https://blog.csdn.net/FireBird_one/article/details/80295229 */
 import config from "./lib/config.js";
@@ -16,6 +17,7 @@ import VueFullPage from "vue-fullpage.js";
 import VueLazyComponent from "@xunlei/vue-lazy-component";
 import Vue2TouchEvents from "vue2-touch-events";
 import VueRellax from "vue-rellax";
+
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -82,6 +84,8 @@ Vue.use(VueLazyload, {
 Vue.use(VueLazyComponent);
 Vue.use(VueRellax);
 Vue.use(Vue2TouchEvents);
+
+Vue.prototype.$locomotive = 'aa';
 
 new Vue({
     router,

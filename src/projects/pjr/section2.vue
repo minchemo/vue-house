@@ -1,7 +1,5 @@
 <template>
-  <div class="section2">
-    影片
-  </div>
+  <div class="section2" >影片</div>
 </template>
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
@@ -12,6 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -32,15 +32,15 @@
 
 <script>
 // @ is an alias to /src
-import { isMobile } from '@/utils'
+import { isMobile } from "@/utils";
 
 export default {
-  name: 'section2',
+  name: "section2",
 
   data() {
     return {
-      isMobile
-    }
+      isMobile,
+    };
   },
-}
+};
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="section10">
+  <div class="section10" >
     <div class="s-divider"></div>
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <div class="subtitle" v-html="activeSlide.subtitle"></div>
@@ -41,6 +41,8 @@
   align-items: center;
   justify-content: flex-end;
   flex-direction: row-reverse;
+  overflow: hidden;
+  position: relative;
   .info {
     text-align: left;
     width: size(700);

@@ -1,6 +1,6 @@
 <template>
-  <div class="section6">
-    <div class="intro">
+  <div class="section6 " >
+    <div class="intro hasdivider">
       <h2 data-aos="fade-up">擁有高度的中山北路<br />收藏無價的風景之作</h2>
     </div>
     <div class="caption">高層視野拍攝實景</div>
@@ -34,9 +34,7 @@
       width: 1px;
       height: size(240);
       background-color: #fff;
-      right: 50%;
-      transform: translate(50%, -#{size(180)});
-      bottom: 0;
+      bottom: size(200);
     }
   }
   .caption {
