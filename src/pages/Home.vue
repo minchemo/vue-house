@@ -218,7 +218,7 @@ export default {
       smooth: true,
       repeat: true,
       tablet: {
-        smooth: true,
+        smooth: false,
         breakpoint: 250,
       },
       smartphone: {

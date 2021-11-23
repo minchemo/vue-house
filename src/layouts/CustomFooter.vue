@@ -473,7 +473,7 @@ export default {
           method: 'POST',
           body: {
             guid: this.getCookie('hiyes_case_uid'),
-            project: info.caseName,
+            project: 'pjavenue',
             phone: this.form.phone,
             state,
           },
@@ -483,7 +483,7 @@ export default {
           method: 'POST',
           body: {
             guid: this.getCookie('hiyes_case_uid'),
-            project: info.caseName,
+            project: 'pjavenue',
             state,
           },
         })
