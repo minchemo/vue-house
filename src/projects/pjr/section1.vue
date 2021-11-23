@@ -522,8 +522,7 @@
   justify-content: center;
   background-image: url("../pjr/s1/bg.jpg");
   background-size: cover;
-  background-attachment:fixed;
-
+background-attachment:fixed;
 
 
 
@@ -658,6 +657,7 @@ animation: op 0.3s 8.2s linear reverse both;}
     background-image: url("../pjr/s1/bg.jpg");
     background-position: 50%;
     background-size: cover;
+	background-attachment:inherit;
 
 
 

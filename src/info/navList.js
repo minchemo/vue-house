@@ -45,7 +45,7 @@ export default [{
         subTitle: "",
         section: "section9",
         svgSrc: "",
-        offset: 0,
+        offset: 150,
         mobileOffset: 0
     },
     {
@@ -59,7 +59,7 @@ export default [{
         mobileOffset: 0
     },
     {
-        name: "海悅官網",
+        name: "粉絲專頁",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",

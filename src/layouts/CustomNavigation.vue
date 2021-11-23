@@ -317,10 +317,10 @@ $hamburger-layer-color: #fff;
         overflow: scroll;
 
         li {
-          font-size: 2.5vh;
+          font-size: 2.9vh;
           cursor: pointer;
           width: 100%;
-          padding: 2vh 0;
+          padding: 3.2vh 0;
         }
       }
     }
@@ -336,7 +336,7 @@ $hamburger-layer-color: #fff;
       justify-content: flex-end;
       padding-right: size-m(50);
       .link {
-        font-size: size-m(13);
+        font-size: size-m(14);
         margin-left: size-m(12);
         color: #fff;
         &:hover {
