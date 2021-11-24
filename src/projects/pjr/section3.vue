@@ -1,5 +1,5 @@
 <template>
-  <div class="section3" >
+  <div class="section3">
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <h2 v-html="activeSlide.title"></h2>
       <div class="divider"></div>
@@ -290,6 +290,7 @@ export default {
       ],
       swiperOptions: {
         spaceBetween: 30,
+        loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -299,7 +300,7 @@ export default {
           clickable: true,
         },
         autoplay: {
-          delay: 3000,
+          delay: 4500,
         },
       },
     };
@@ -316,6 +317,6 @@ export default {
     this.activeSlide = this.slides[0];
   },
 
-  created() {},
+  created() { },
 };
 </script>

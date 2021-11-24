@@ -75,7 +75,7 @@ export default {
     return {
       isMobile,
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
-      autoScrollViewOffset: -150, //自動調整偏移微調
+      autoScrollViewOffset: 700, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
       bgUrl: require("@/projects/pjr/s6/bg.jpg"), //置換圖片路徑即可
       swipeUrl: !isMobile ? require("@/projects/pjr/s6/hand.png") : require("@/projects/pjr/s6/hand-mo.png"), //置換圖片路徑即可
@@ -100,9 +100,10 @@ export default {
         const scrollTarget = this.autoScrollView
           ? (el.scrollWidth - $(window).width()) / 2 + offset
           : false;
-        el.scrollLeft = scrollTarget;
+
+        el.scrollLeft = offset;
         setTimeout(() => {
-          $(el).one("scroll", () => {
+          $(el).on("scroll", () => {
             if (self.isMobile) return
             $(handEl).fadeOut();
           });
@@ -126,6 +127,9 @@ export default {
       var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
       var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
       target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+      console.log(event);
+
       target.setAttribute('data-x', x)
       target.setAttribute('data-y', y)
     }
@@ -139,7 +143,7 @@ export default {
 
     if (!this.isMobile) {
 
-      interact('.view-img')
+      const _interact = interact('.view-img')
         .draggable({
           inertia: true,
           startAxis: 'x',
@@ -151,18 +155,11 @@ export default {
             })
           ],
           listeners: {
-            move: this.dragMoveListener,
-            end(event) {
-              var textEl = event.target.querySelector('p')
-
-              textEl && (textEl.textContent =
-                'moved a distance of ' +
-                (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
-                  Math.pow(event.pageY - event.y0, 2) | 0))
-                  .toFixed(2) + 'px')
-            }
+            move: this.dragMoveListener
           }
         })
+
+      console.log(_interact);
     }
   },
 };

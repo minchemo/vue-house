@@ -1,5 +1,5 @@
 <template>
-  <div class="section7" >
+  <div class="section7">
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <div class="subtitle" v-html="activeSlide.subtitle"></div>
       <h2 v-html="activeSlide.title"></h2>
@@ -61,7 +61,7 @@
       font-size: size(29);
       color: #231815;
       margin-bottom: size(25);
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
       font-weight: 600;
     }
     h2 {
@@ -72,15 +72,14 @@
       color: #267f98;
       white-space: nowrap;
       margin-bottom: size(25);
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
     }
     .small-title {
       text-align: center;
       font-size: size(39);
       color: #267f98;
       font-weight: 600;
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
-
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
     }
     .divider {
       background: #009be4;
@@ -195,7 +194,7 @@
       font-weight: 500;
       color: #267f98;
       position: absolute;
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
     }
   }
 }
@@ -228,7 +227,6 @@
       .small-title {
         font-size: size-m(20);
         font-weight: 600;
-
       }
       h2 {
         text-align: center;
@@ -256,7 +254,6 @@
       &::before {
         font-size: size-m(24);
         font-weight: 600;
-        
       }
       .swiper-container {
         padding: 0;
@@ -435,6 +432,7 @@ export default {
         },
       ],
       swiperOptions: {
+        loop: true,
         spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -445,7 +443,7 @@ export default {
           clickable: true
         },
         autoplay: {
-          delay: 3000,
+          delay: 4500,
         },
       },
     };
