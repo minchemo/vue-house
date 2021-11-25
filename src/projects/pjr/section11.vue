@@ -51,14 +51,19 @@
           ></h2>
         </div>
       </div>
-      <div class="divider" ></div>
+      <div class="divider"></div>
       <p
         v-html="activeSlide.content"
         data-aos="fade-up"
         data-aos-delay="300"
       ></p>
     </div>
-    <div class="swiper-box" data-aos="fade-up" data-aos-delay="350" :key="activeSlide.title">
+    <div
+      class="swiper-box"
+      data-aos="fade-up"
+      data-aos-delay="350"
+      :key="activeSlide.title"
+    >
       <swiper :options="swiperOptions" ref="swiper">
         <swiper-slide
           class="slide"
@@ -509,9 +514,10 @@ export default {
         },
       ],
       swiperOptions: {
+        loop: true,
         spaceBetween: 30,
         autoplay: {
-          delay: 3000,
+          delay: 4500,
         },
         navigation: {
           nextEl: ".swiper-button-next",

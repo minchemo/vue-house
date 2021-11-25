@@ -1,5 +1,5 @@
 <template>
-  <div class="section10" >
+  <div class="section10">
     <div class="s-divider"></div>
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <div class="subtitle" v-html="activeSlide.subtitle"></div>
@@ -53,7 +53,7 @@
       color: #231815;
       line-height: 1.5;
       margin-bottom: size(25);
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
       font-weight: 600;
     }
     h2 {
@@ -64,7 +64,7 @@
       color: #267f98;
       white-space: nowrap;
       margin-bottom: size(25);
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
     }
     .small-title {
       text-align: center;
@@ -106,7 +106,7 @@
           bottom: size(30);
           font-size: size(20);
           font-weight: 200;
-           text-shadow: #000 0.1em 0.1em 0.1em;
+          text-shadow: #000 0.1em 0.1em 0.1em;
         }
       }
       .swiper-button-prev {
@@ -311,9 +311,10 @@ export default {
 
       ],
       swiperOptions: {
+        loop: true,
         spaceBetween: 30,
         autoplay: {
-          delay: 3000,
+          delay: 4500,
         },
       },
     };

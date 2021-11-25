@@ -1,5 +1,5 @@
 <template>
-  <div class="section3" >
+  <div class="section3">
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <h2 v-html="activeSlide.title"></h2>
       <div class="divider"></div>
@@ -278,18 +278,23 @@ export default {
         {
           title: "百年林蔭至高地標<br/>璞真訂製傳世眼界",
           content: `翻閱中山北路世紀繪卷，台灣第一條現代化大道，日本天皇敕使御道，國家外交官道，烜赫人物踏響中山北獨有的貴族身世。人文熟釀的大道胸豁，從昂首邁步到駐足仰望，23層百年樹海之巔，最懂居宅品味的「璞真之道」淬鍊來到。`,
-          img: require("@/projects/pjr/s3/1.jpg"),
+          img: isMobile
+            ? require("@/projects/pjr/s3/1_mo.jpg")
+            : require("@/projects/pjr/s3/1.jpg"),
           caption: "LV街景",
         },
         {
           title: "樹海人文長鏡頭<br/>潛藏一世紀富裕壯遊",
           content: `半輩子縱橫江山，滿胸懷超然際遇，繫念中山北路樹海第一排的窗，台北歷史最淵遠的林蔭大道，心上永恆富裕原鄉。樟楓漫天綠浪開道，企業總部、縉紳豪邸，相偕未來蓬勃盛放。傳奇在腳下波瀾，繁華燈火在側，群山濃淡疊翠，頂峰之上，照看歲月寧靜。`,
-          img: require("@/projects/pjr/s3/2.jpg"),
+          img: isMobile
+            ? require("@/projects/pjr/s3/2_mo.jpg")
+            : require("@/projects/pjr/s3/2.jpg"),
           caption: "中山北樹海大道",
         },
       ],
       swiperOptions: {
         spaceBetween: 30,
+        loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -299,7 +304,7 @@ export default {
           clickable: true,
         },
         autoplay: {
-          delay: 3000,
+          delay: 4500,
         },
       },
     };

@@ -6,15 +6,15 @@
       <!-- <Section2 class="section" data-scroll  /> -->
       <Section3 class="section" data-scroll />
       <Section4 class="section" data-scroll />
-      <Section5 class="section" data-scroll />
+      <!-- <Section5 class="section" data-scroll /> -->
       <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
       <Section8 class="section" data-scroll />
       <Section9 class="section" data-scroll />
-      <Section10 class="section" data-scroll />
+      <!-- <Section10 class="section" data-scroll /> -->
       <Section11 class="section" data-scroll />
-      <Section12 class="section" data-scroll />
-      <Section13 class="section" data-scroll />
+      <!-- <Section12 class="section" data-scroll /> -->
+      <!-- <Section13 class="section" data-scroll /> -->
       <CustomFooter class="section" data-scroll />
     </div>
     <Loading :loading="load" data-scroll />

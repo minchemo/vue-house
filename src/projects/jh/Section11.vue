@@ -3,7 +3,12 @@
     <div class="bg">
       <div :class="`dialog ${isDialogShow ? 'show' : ''}`">
         <div class="relative">
-          <img src="./s4/close.png" alt class="close" @click="isDialogShow = false" />
+          <img
+            src="./s4/close.png"
+            alt
+            class="close"
+            @click="isDialogShow = false"
+          />
           <iframe
             ref="iframe"
             :src="currentIframe"
@@ -28,8 +33,14 @@
               :key="slide.img"
               class="item"
             >
-              <img :src="slide.src" :class="`item-img`" @click="showIframeDialog(slide.link)" />
-              <div class="title" @click="showIframeDialog(slide.link)">{{slide.title}}</div>
+              <img
+                :src="slide.src"
+                :class="`item-img`"
+                @click="showIframeDialog(slide.link)"
+              />
+              <div class="title" @click="showIframeDialog(slide.link)">
+                {{ slide.title }}
+              </div>
             </swiper-slide>
             <div class="swiper-button-prev" slot="button-prev">
               <img src="./arrow-left.png" alt />
@@ -73,12 +84,23 @@
 .swiper-button-next {
   border: 0px none #0000 !important;
   width: size(50);
-  height: 100%;top: 0;padding: 0 size(10);display: flex;margin: 0;
-  img{object-fit: contain;height: auto;}
+  height: 100%;
+  top: 0;
+  padding: 0 size(10);
+  display: flex;
+  margin: 0;
+  img {
+    object-fit: contain;
+    height: auto;
+  }
 }
 
-.swiper-button-prev {left:0;}
-.swiper-button-next {right:0;}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-button-next {
+  right: 0;
+}
 
 .container {
   width: 1160px;
@@ -132,7 +154,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       width: 40%;
       height: 100%;
       display: block;
@@ -270,11 +292,12 @@
   .swiper-slide {
     width: 90%;
   }
-.swiper-button-prev,
-.swiper-button-next {
-  width: size-m(30);
-  padding:0 size-m(5);cursor: none;
-}
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: size-m(30);
+    padding: 0 size-m(5);
+    cursor: none;
+  }
 }
 </style>
 
@@ -308,11 +331,11 @@ export default {
         allowSlidePrev: isMobile ? true : false,
         allowSlideNext: isMobile ? true : false,
         // centeredSlides: true,
-        // autoplay: {
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // },
-        loop: isMobile,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+        },
+        loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',

@@ -1,5 +1,5 @@
 <template>
-  <div class="section9" >
+  <div class="section9">
     <div class="s-divider"></div>
     <div class="info" data-aos="fade-up" data-aos-delay="400">
       <h2>
@@ -31,16 +31,16 @@
           </swiper>
           <div class="caption" v-html="activeSlide1.caption"></div>
         </div>
-        <div class="swiper-box swiper-box2" data-aos="fade-up" v-else>
+        <div class="swiper-box1 swiper-box" data-aos="fade-up" v-else>
           <div class="caption large">璞真建設 經典業績</div>
           <swiper
-            :options="swiperOptions2"
-            ref="swiper2"
-            @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart2"
+            :options="swiperOptions1"
+            ref="swiper1"
+            @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart1"
           >
             <swiper-slide
               class="slide"
-              v-for="(slide, i) in slides2"
+              v-for="(slide, i) in slides1"
               v-bind:key="i"
               v-bind:style="{
                 backgroundImage: `url(${slide.img})`,
@@ -50,21 +50,21 @@
             <div class="swiper-button-prev" slot="button-prev"></div>
             <div class="swiper-button-next" slot="button-next"></div>
           </swiper>
-          <div class="caption" v-html="activeSlide2.caption"></div>
+          <div class="caption" v-html="activeSlide1.caption"></div>
         </div>
       </template>
     </div>
 
     <template>
-      <div class="swiper-box1 swiper-box" data-aos="fade-up" v-if="isMobile">
+      <div class="swiper-box swiper-box2" data-aos="fade-up" v-if="isMobile">
         <swiper
-          :options="swiperOptions1"
-          ref="swiper1"
-          @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart1"
+          :options="swiperOptions2"
+          ref="swiper2"
+          @slideChangeTransitionStart="onSwiperSlideChangeTransitionStart2"
         >
           <swiper-slide
             class="slide"
-            v-for="(slide, i) in slides1"
+            v-for="(slide, i) in slides2"
             v-bind:key="i"
             v-bind:style="{
               backgroundImage: `url(${slide.img})`,
@@ -74,7 +74,7 @@
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
         </swiper>
-        <div class="caption" v-html="activeSlide1.caption"></div>
+        <div class="caption" v-html="activeSlide2.caption"></div>
       </div>
       <div class="swiper-box" data-aos="fade-up" v-else>
         <div class="caption large">璞真建設 經典業績</div>
@@ -132,7 +132,7 @@
       color: #267f98;
       white-space: nowrap;
       margin-bottom: size(25);
-      font-family: "Noto Serif TC",Noto Sans TC,serif;
+      font-family: "Noto Serif TC", Noto Sans TC, serif;
     }
     .small-title {
       text-align: center;
@@ -273,7 +273,7 @@
     letter-spacing: size(2);
     font-weight: 600;
     margin: size(12) 0;
-    font-family: "Noto Serif TC",Noto Sans TC,serif;
+    font-family: "Noto Serif TC", Noto Sans TC, serif;
 
     &.large {
       font-size: size(29);
@@ -302,10 +302,11 @@
     }
     .info {
       text-align: left;
-      width: 80%;
+      width: 100%;
       margin-left: unset;
       margin-top: size-m(30);
       height: auto;
+      padding: 0 10%;
       h2 {
         text-align: center;
         font-size: size-m(25.5);
@@ -324,7 +325,8 @@
       }
     }
     .swiper-box1 {
-      width: 80% !important;
+      width: 100vw !important;
+      margin-left: -9vw;
       .swiper-container {
         padding: 0;
         margin: size-m(20) 0;
@@ -376,8 +378,11 @@
         }
       }
     }
+    .swiper-box2 {
+      margin-top: size-m(20);
+    }
     .swiper-box {
-      width: 100%;
+      width: 80%;
       .swiper-container {
         padding: 0;
         margin: size-m(10) 0;
@@ -535,6 +540,7 @@ export default {
         },
       ],
       swiperOptions1: {
+        loop: true,
         spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -545,10 +551,11 @@ export default {
           clickable: true
         },
         autoplay: {
-          delay: 3000,
+          delay: 4500,
         },
       },
       swiperOptions2: {
+        loop: true,
         spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -559,7 +566,7 @@ export default {
           clickable: true
         },
         autoplay: {
-          delay: 3000,
+          delay: 4500,
         },
       },
     };
