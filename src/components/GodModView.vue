@@ -43,7 +43,7 @@
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
-      height: 100vh;
+      height: size-m(667);
       overflow-x: scroll;
       overflow-y: hidden;
 
@@ -66,8 +66,8 @@
 </style>
 
 <script>
-import { isMobile } from "@/utils"
-import interact from 'interactjs';
+import { isMobile } from "@/utils";
+import interact from "interactjs";
 
 export default {
   name: "GodModView",
@@ -75,10 +75,12 @@ export default {
     return {
       isMobile,
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
-      autoScrollViewOffset: 700, //自動調整偏移微調
+      autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
       bgUrl: require("@/projects/pjr/s6/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: !isMobile ? require("@/projects/pjr/s6/hand.png") : require("@/projects/pjr/s6/hand-mo.png"), //置換圖片路徑即可
+      swipeUrl: !isMobile
+        ? require("@/projects/pjr/s6/hand.png")
+        : require("@/projects/pjr/s6/hand-mo.png"), //置換圖片路徑即可
     };
   },
   methods: {
@@ -101,10 +103,13 @@ export default {
           ? (el.scrollWidth - $(window).width()) / 2 + offset
           : false;
 
-        el.scrollLeft = offset;
         setTimeout(() => {
-          $(el).on("scroll", () => {
-            if (self.isMobile) return
+          $(el).scrollLeft(scrollTarget);
+        }, 10);
+
+        setTimeout(() => {
+          $(el).one("scroll", () => {
+            if (self.isMobile) return;
             $(handEl).fadeOut();
           });
         }, 1000);
@@ -122,17 +127,15 @@ export default {
       });
     },
     dragMoveListener(event) {
-      $('.view-hand').hide();
-      var target = event.target
-      var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-      var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
-      target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+      $(".view-hand").hide();
+      var target = event.target;
+      var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+      var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+      target.style.transform = "translate(" + x + "px, " + y + "px)";
 
-      console.log(event);
-
-      target.setAttribute('data-x', x)
-      target.setAttribute('data-y', y)
-    }
+      target.setAttribute("data-x", x);
+      target.setAttribute("data-y", y);
+    },
   },
   mounted() {
     //this.getScreenHeight();
@@ -140,24 +143,21 @@ export default {
     this.onResize();
     this.scrollView();
 
-
     if (!this.isMobile) {
-
-      const _interact = interact('.view-img')
-        .draggable({
-          inertia: true,
-          startAxis: 'x',
-          lockAxis: 'x',
-          modifiers: [
-            interact.modifiers.restrictRect({
-              restriction: 'parent',
-              endOnly: false
-            })
-          ],
-          listeners: {
-            move: this.dragMoveListener
-          }
-        })
+      const _interact = interact(".view-img").draggable({
+        inertia: true,
+        startAxis: "x",
+        lockAxis: "x",
+        modifiers: [
+          interact.modifiers.restrictRect({
+            restriction: "parent",
+            endOnly: false,
+          }),
+        ],
+        listeners: {
+          move: this.dragMoveListener,
+        },
+      });
 
       console.log(_interact);
     }

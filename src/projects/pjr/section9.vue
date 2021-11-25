@@ -303,7 +303,8 @@
     .info {
       text-align: left;
       width: 100%;
-      margin-left: unset;
+      margin-left: 0;
+      margin-right: 0;
       margin-top: size-m(30);
       height: auto;
       padding: 0 10%;
@@ -326,7 +327,7 @@
     }
     .swiper-box1 {
       width: 100vw !important;
-      margin-left: -9vw;
+      margin-left: -10vw;
       .swiper-container {
         padding: 0;
         margin: size-m(20) 0;
@@ -336,9 +337,9 @@
           background-size: cover;
         }
         .swiper-button-prev {
-          left: size-m(20);
+          left: size-m(20) !important;
           width: size-m(40) !important;
-          height: size-m(40);
+          height: size-m(40) !important;
           color: #fff;
           background-size: contain;
           background-repeat: no-repeat;
@@ -350,9 +351,9 @@
           }
         }
         .swiper-button-next {
-          right: size-m(20);
-          width: size-m(40);
-          height: size-m(40);
+          right: size-m(20) !important;
+          width: size-m(40) !important;
+          height: size-m(40) !important;
           background-size: contain;
           background-repeat: no-repeat;
           background-position: right;
@@ -513,14 +514,14 @@ export default {
       ],
       swiperOptions1: {
         loop: true,
-        spaceBetween: 30,
+        spaceBetween: isMobile ? 0 : 30,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
         pagination: {
           el: ".swiper-box1 .swiper-pagination",
-          clickable: true
+          clickable: true,
         },
         autoplay: {
           delay: 4500,
@@ -528,14 +529,14 @@ export default {
       },
       swiperOptions2: {
         loop: true,
-        spaceBetween: 30,
+        spaceBetween: isMobile ? 0 : 30,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
         pagination: {
           el: ".swiper-box2 .swiper-pagination",
-          clickable: true
+          clickable: true,
         },
         autoplay: {
           delay: 4500,
@@ -560,6 +561,6 @@ export default {
     this.activeSlide2 = this.slides2[0];
   },
 
-  created() { },
+  created() {},
 };
 </script>

@@ -976,7 +976,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section1 {
-    min-height: 100vh;
+    min-height: size-m(667);
     background-color: rgba($color: #231815, $alpha: 0.25);
     display: flex;
     align-items: center;

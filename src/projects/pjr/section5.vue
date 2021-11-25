@@ -44,7 +44,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section5 {
-    height: 100vh;
+    height: size-m(667);
     background-image: url("../pjr/s5/bg-mo.jpg");
     background-size: cover;
 

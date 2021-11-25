@@ -1,14 +1,14 @@
 <template>
   <div class="section4">
-    <div class="info hasdivider" data-aos="fade-up" data-aos-delay="400">
-      <h2 v-html="activeSlide.title"></h2>
+    <div class="info hasdivider" :key="activeSlide.title">
+      <h2 v-html="activeSlide.title" data-aos="fade-up"></h2>
       <div class="divider"></div>
     </div>
     <div class="swiper-box" data-aos="fade-up">
       <swiper
         :options="swiperOptions"
         ref="swiper"
-        @slideChangeTransitionEnd="slidechange"
+        @slideChangeTransitionStart="slidechange"
       >
         <swiper-slide
           class="slide"
@@ -357,6 +357,18 @@ export default {
     slidechange() {
       const activeIndex = this.$refs.swiper.$swiper.realIndex;
       this.activeSlide = this.slides[activeIndex];
+
+      setTimeout(() => {
+        $("[data-aos]").each((i, val) => {
+          $(val).addClass("aos-animate");
+        });
+        setTimeout(() => {
+          $(".hasdivider").addClass("showin");
+        }, 200);
+        setTimeout(() => {
+          $(".divider").addClass("showin");
+        }, 400);
+      }, 0);
     },
   },
 
@@ -364,6 +376,6 @@ export default {
     this.activeSlide = this.slides[0];
   },
 
-  created() { },
+  created() {},
 };
 </script>

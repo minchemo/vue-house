@@ -301,16 +301,14 @@ export default {
           smallTitle: "",
           content: `2002年成立，璞真像棵樹，也像種樹的人，作建築本心，對環境，對人，密密融合；對土地，念念不忘。致力發揮土地最高價值，秉持自然生態與居住環境和諧共生，融入四季、晴雨、日夜、生態考量，涵養豐厚人文美學，為台灣創造深植人心的名邸，滿足居者返璞歸真的渴望。`,
           img: require("@/projects/pjr/s8/1.jpg"),
-          caption: "情境示意圖",
+          caption: "",
         },
 
       ],
       swiperOptions: {
-        loop: true,
+        loop: false,
         spaceBetween: 30,
-        autoplay: {
-          delay: 4500,
-        },
+        autoplay: false
       },
     };
   },
