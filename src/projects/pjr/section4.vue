@@ -360,7 +360,7 @@ export default {
 
   methods: {
     slidechange() {
-      const activeIndex = this.$refs.swiper.$swiper.activeIndex;
+      const activeIndex = this.$refs.swiper.$swiper.realIndex;
       this.activeSlide = this.slides[activeIndex];
     },
   },

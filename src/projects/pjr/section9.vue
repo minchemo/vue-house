@@ -574,11 +574,11 @@ export default {
 
   methods: {
     onSwiperSlideChangeTransitionStart1() {
-      const activeIndex = this.$refs.swiper1.$swiper.activeIndex;
+      const activeIndex = this.$refs.swiper1.$swiper.realIndex;
       this.activeSlide1 = this.slides1[activeIndex];
     },
     onSwiperSlideChangeTransitionStart2() {
-      const activeIndex = this.$refs.swiper2.$swiper.activeIndex;
+      const activeIndex = this.$refs.swiper2.$swiper.realIndex;
       this.activeSlide2 = this.slides2[activeIndex];
     },
   },

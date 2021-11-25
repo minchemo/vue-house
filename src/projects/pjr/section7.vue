@@ -260,7 +260,7 @@
         margin-top: size-m(50);
         .slide {
           height: 0;
-          padding-bottom: 100%;
+          padding-bottom: 66.6%;
           background-size: cover;
           .caption {
             position: absolute;
@@ -451,7 +451,7 @@ export default {
 
   methods: {
     onSwiperSlideChangeTransitionStart() {
-      const activeIndex = this.$refs.swiper.$swiper.activeIndex;
+      const activeIndex = this.$refs.swiper.$swiper.realIndex;
       this.activeSlide = this.slides[activeIndex];
     },
   },
