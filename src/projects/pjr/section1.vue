@@ -635,10 +635,10 @@
       </div>
 
       <div class="i4" data-aos="fade-up" data-aos-delay="1200" v-if="isMobile">
-        61-89坪 中山北路二段
+        61-89坪 中山北路首排
       </div>
       <div class="i5" data-aos="fade-up" data-aos-delay="1200" v-if="isMobile">
-        香港P&T 23層傳世眼界
+        香港P&T 23層樹海地標
       </div>
     </div>
   </div>
@@ -1356,7 +1356,7 @@
       }
       .i5 {
         margin-top: size-m(3);
-        font-size: size-m(22);
+        font-size: size-m(21.5);
         line-height: 1.5;
         letter-spacing: size-m(2);
         text-align: center;
