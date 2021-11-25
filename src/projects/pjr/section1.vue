@@ -1080,7 +1080,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../pjr/s1/bg.jpg");
+    background-image: url("../pjr/s1/bg_mo.jpg");
     background-position: 50%;
     background-size: cover;
     background-attachment: inherit;
