@@ -220,7 +220,7 @@
             color: #fff;
             right: size-m(10);
             bottom: size-m(10);
-            font-size: size-m(16);
+            font-size: size-m(12);
             text-shadow: #000 0.1em 0.1em 0.1em;
           }
         }

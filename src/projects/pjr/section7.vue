@@ -268,7 +268,7 @@
             color: #fff;
             right: size-m(10);
             bottom: size-m(10);
-            font-size: size-m(16);
+            font-size: size-m(12);
             font-weight: 300;
           }
         }
@@ -327,14 +327,14 @@
         .info-content {
           font-size: size-m(12);
           line-height: 1.5;
-          max-width: 60%;
+          max-width: 64%;
           font-weight: 400;
         }
         .info-logo {
           right: 0;
           top: 40;
           height: auto;
-          width: 38%;
+          width: 36%;
           img {
             max-height: size-m(50);
             max-width: 100%;
@@ -380,10 +380,12 @@ export default {
           title: "CMP GROUP 勤美集團",
           smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
-          img: require("@/projects/pjr/s7/1.jpg"),
+          img: isMobile
+            ? require("@/projects/pjr/s7/1_mo.jpg")
+            : require("@/projects/pjr/s7/1.jpg"),
           caption: "情境示意圖",
           infoHeader: "金屬成型事業",
-          infoContent: "勤美新竹、勤美楊梅、化新精密、<br>天津勤威、蘇州勤堡、武漢勤美達",
+          infoContent: "化新精密、新竹勤美<br>蘇州勤美達、蘇州勤堡、天津勤威",
           infoLogo: require("@/projects/pjr/s7/1logo.png"),
         },
         {
@@ -391,7 +393,9 @@ export default {
           title: "CMP GROUP 勤美集團",
           smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
-          img: require("@/projects/pjr/s7/2.png"),
+          img: isMobile
+            ? require("@/projects/pjr/s7/2_mo.jpg")
+            : require("@/projects/pjr/s7/2.jpg"),
           caption: "勤美璞真碧湖畔",
           infoHeader: "建設住宅",
           infoContent: "璞真建設股份有限公司",
@@ -402,33 +406,40 @@ export default {
           title: "CMP GROUP 勤美集團",
           smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
-          img: require("@/projects/pjr/s7/3.png"),
-          caption: "誠品書店",
+          img: isMobile
+            ? require("@/projects/pjr/s7/3_mo.jpg")
+            : require("@/projects/pjr/s7/3.jpg"),
+          caption: "勤美誠品綠園道",
           infoHeader: "人文商場",
           infoContent: "勤美誠品綠園道、金典綠園道",
           infoLogo: require("@/projects/pjr/s7/3logo.png"),
         },
+        
         {
           subtitle: "職人精神 專心做好一件事",
           title: "CMP GROUP 勤美集團",
           smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
-          img: require("@/projects/pjr/s7/4.png"),
-          caption: "全國大飯店",
-          infoHeader: "飯店休閒",
-          infoContent: "全國大飯店、日華金典國際酒店、勤美學山那村",
-          infoLogo: require("@/projects/pjr/s7/4logo.png"),
+          img: isMobile
+            ? require("@/projects/pjr/s7/5_mo.jpg")
+            : require("@/projects/pjr/s7/5.jpg"),
+          caption: "勤美術館",
+          infoHeader: "藝術深耕",
+          infoContent: "勤美璞真文化藝術基金會<br>勤美術館、工家美術館、森大青鳥",
+          infoLogo: require("@/projects/pjr/s7/5logo.png"),
         },
         {
           subtitle: "職人精神 專心做好一件事",
           title: "CMP GROUP 勤美集團",
           smallTitle: "亞洲指標專業鑄造集團",
           content: `勤美（1532）集團成立於1972年，以「勤儉誠信，永續經營」為念，為台灣大型上市集團，於大中華地區享有盛譽。近年轉型跨國控股企業，旗下擁有建設公司、大型商場、文化美學、基金會等大型事業部，追求人文美善之多角化經營。`,
-          img: require("@/projects/pjr/s7/5.png"),
-          caption: "勤美學",
-          infoHeader: "藝術深耕",
-          infoContent: "勤美璞真文化藝術基金會、勤美術館、勤美學森大",
-          infoLogo: require("@/projects/pjr/s7/5logo.png"),
+          img: isMobile
+            ? require("@/projects/pjr/s7/4_mo.jpg")
+            : require("@/projects/pjr/s7/4.jpg"),
+          caption: "勤美學⼭那村",
+          infoHeader: "飯店休閒",
+          infoContent: "臺中勤美洲際酒店、全國大飯店<br>台中金典酒店、勤美學",
+          infoLogo: require("@/projects/pjr/s7/4logo.png"),
         },
       ],
       swiperOptions: {

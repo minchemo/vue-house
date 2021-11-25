@@ -251,7 +251,7 @@
             color: #000;
             right: size-m(10);
             bottom: size-m(10);
-            font-size: size-m(16);
+            font-size: size-m(12);
             font-weight: 400;
             text-align: right;
           }

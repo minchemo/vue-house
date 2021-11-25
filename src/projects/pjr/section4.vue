@@ -224,7 +224,7 @@
             color: #fff;
             right: size-m(10);
             bottom: size-m(10);
-            font-size: size-m(16);
+            font-size: size-m(12);
             text-shadow: #000 0.1em 0.1em 0.1em;
             font-weight: 300;
           }
@@ -312,12 +312,7 @@ export default {
         {
           title: "中山、雙連雙捷核心<br>盛裝優雅日常時光",
           img: require("@/projects/pjr/s4/1.jpg"),
-          caption: "新光三越與誠品生活南西店",
-        },
-        {
-          title: "百年雙連生活質蘊<br>難忘市井好味道",
-          img: require("@/projects/pjr/s4/2.jpg"),
-          caption: "情境圖",
+          caption: "捷運中⼭站商圈",
         },
         {
           title: "五星級飯店廊道<br>全球貴賓風光下榻",
@@ -325,14 +320,14 @@ export default {
           caption: "晶華酒店",
         },
         {
-          title: "權掌松山機場<br>台北雙子星<br>雙國門輻輳",
+          title: "松山機場、雙子星<br>權掌雙國門輻輳",
           img: require("@/projects/pjr/s4/4.jpg"),
           caption: "台北雙子星",
         },
         {
           title: "上海、陽信雙總部<br>第一大道再鑲榮耀",
           img: require("@/projects/pjr/s4/5.jpg"),
-          caption: "上海陽信雙總部",
+          caption: "上海商業銀⾏總部⽰意圖",
         },
         {
           title: "百年古蹟藝術聚落<br>探不盡的人文靈光",

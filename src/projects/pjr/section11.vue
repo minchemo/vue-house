@@ -331,7 +331,7 @@
             color: #fff;
             right: size-m(10);
             bottom: size-m(10);
-            font-size: size-m(16);
+            font-size: size-m(12);
             text-shadow: #000 0.1em 0.1em 0.1em;
             font-weight: 300;
           }
@@ -436,24 +436,18 @@ export default {
         {
           subtitle: "建築外觀<br/>P&T GROUP香港巴馬丹拿集團",
           title: "全球百年建築巨擘<br>改寫亞洲建築史",
-          content: `操刀無數富紳豪邸、跨國總部、五星酒店。香港匯豐總行大廈、渣打銀行總部群像；上海外灘萬國建築博覽，二分之一出自P&T手筆；台北遠企香格里拉飯店、信義計畫區多幢百坪豪邸，亦是P&T經典鉅著。`,
+          content: `P&T集團成立於1868年，作為東南亞歷史最悠久、規模最龐大的建築集團，操刀無數富紳豪邸、跨國總部、五星酒店，締造劃時代建築里程碑。<br><br>代表作品│BELLAVITA寶麗廣場、上海IFC、杜拜Viceroy Palm Jumeirah`,
           img: [
             require("@/projects/pjr/s11/1.jpg"),
             require("@/projects/pjr/s11/1-2.jpg"),
-            require("@/projects/pjr/s11/1-3.jpg"),
             require("@/projects/pjr/s11/1-4.jpg"),
-            require("@/projects/pjr/s11/1-5.jpg"),
-            require("@/projects/pjr/s11/1-6.jpg"),
             require("@/projects/pjr/s11/1-7.jpg"),
           ],
           avatar: require("@/projects/pjr/s11/1avatar.jpg"),
           caption: [
             "台北Bellavita",
             "上海IFC",
-            "交易廣場第一，二及第三期",
             "杜拜Viceroy Palm Jumeirah",
-            "香港怡和大廈",
-            "曼谷Sathorn Square",
             "新加坡Le Nouvel Ardmore",
           ],
         },
@@ -484,7 +478,7 @@ export default {
         {
           subtitle: "景觀設計<br/>當代景觀名家",
           title: "頤和景觀<br>李淑雲",
-          content: `秉承當代景觀設計思潮，呼應中山北路浩瀚樹海地景，創造都市、建築、人文、生態深度共鳴，譜寫人居環境與自然萬物的優雅格調。<br><br>代表作品│璞真碧湖畔、華固名鑄、華固天鑄、華固樂慕`,
+          content: `秉承當代景觀設計思潮，呼應中山北路浩瀚樹海地景，創造都市、建築、人文、生態深度共鳴，譜寫人居環境與自然萬物的優雅格調。<br><br>代表作品│勤美璞真碧湖畔、華固天鑄、華固樂慕`,
           img: [
             require("@/projects/pjr/s11/4-1.jpg"),
             require("@/projects/pjr/s11/4-2.jpg"),
@@ -493,10 +487,10 @@ export default {
           ],
           avatar: require("@/projects/pjr/s11/4avatar.jpg"),
           caption: [
-            "2014勤美璞真碧湖畔",
-            "景觀華固天鑄",
-            "景觀華固天鑄",
-            "景觀華固樂慕",
+            "勤美璞真碧湖畔",
+            "華固天鑄",
+            "華固天鑄",
+            "華固樂慕",
           ],
         },
         {

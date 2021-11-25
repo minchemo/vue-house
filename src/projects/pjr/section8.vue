@@ -6,6 +6,7 @@
       <div class="small-title" v-html="activeSlide.smallTitle"></div>
       <div class="divider"></div>
       <p v-html="activeSlide.content"></p>
+
     </div>
     <div class="swiper-box" data-aos="fade-up">
       <swiper
@@ -198,6 +199,7 @@
         font-weight: 500;
       }
     }
+
     .swiper-box {
       width: 80%;
       .swiper-container {
@@ -213,7 +215,7 @@
             color: #fff;
             right: size-m(10);
             bottom: size-m(10);
-            font-size: size-m(16);
+            font-size: size-m(12);
             font-weight: 300;
           }
         }

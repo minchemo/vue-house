@@ -194,7 +194,7 @@
             color: #fff;
             right: size-m(10);
             bottom: size-m(10);
-            font-size: size-m(16);
+            font-size: size-m(12);
             text-shadow: #000 0.1em 0.1em 0.1em;
             font-weight: 300;
           }
@@ -281,7 +281,7 @@ export default {
           img: isMobile
             ? require("@/projects/pjr/s3/1_mo.jpg")
             : require("@/projects/pjr/s3/1.jpg"),
-          caption: "LV街景",
+          caption: "中⼭北路",
         },
         {
           title: "樹海人文長鏡頭<br/>潛藏一世紀富裕壯遊",
@@ -289,7 +289,7 @@ export default {
           img: isMobile
             ? require("@/projects/pjr/s3/2_mo.jpg")
             : require("@/projects/pjr/s3/2.jpg"),
-          caption: "中山北樹海大道",
+          caption: "中⼭北路",
         },
       ],
       swiperOptions: {

@@ -74,7 +74,7 @@
             color: #fff;
             right: size-m(10);
             bottom: size-m(20);
-            font-size: size-m(16);
+            font-size: size-m(12);
             text-shadow: #000 0.1em 0.1em 0.1em;
             font-weight: 300;
           }

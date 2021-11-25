@@ -871,131 +871,32 @@
     fill: #f3b2c1;
     animation: op 0.3s 8s linear reverse both;
   }
-  .l01 {
-    stroke-dasharray: 170;
-    stroke-dashoffset: 170;
-    animation: letterDraw 0.51s 0s linear forwards;
-  }
-  .l02 {
-    stroke-dasharray: 135;
-    stroke-dashoffset: 135;
-    animation: letterDraw 0.405s 0.51s linear forwards;
-  }
-  .l03 {
-    stroke-dasharray: 135;
-    stroke-dashoffset: 135;
-    animation: letterDraw 0.405s 0.915s linear forwards;
-  }
-  .l04 {
-    stroke-dasharray: 60;
-    stroke-dashoffset: 60;
-    animation: letterDraw 0.18s 1.32s linear forwards;
-  }
-  .l05 {
-    stroke-dasharray: 47;
-    stroke-dashoffset: 47;
-    animation: letterDraw 0.141s 1.5s linear forwards;
-  }
-  .l06 {
-    stroke-dasharray: 150;
-    stroke-dashoffset: 150;
-    animation: letterDraw 0.45s 1.641s linear forwards;
-  }
-  .l07 {
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
-    animation: letterDraw 0.15s 2.091s linear forwards;
-  }
-  .l08 {
-    stroke-dasharray: 165;
-    stroke-dashoffset: 165;
-    animation: letterDraw 0.495s 2.241s linear forwards;
-  }
-  .l09 {
-    stroke-dasharray: 92;
-    stroke-dashoffset: 92;
-    animation: letterDraw 0.276s 2.736s linear forwards;
-  }
-  .l10 {
-    stroke-dasharray: 36;
-    stroke-dashoffset: 36;
-    animation: letterDraw 0.108s 3.012s linear forwards;
-  }
-  .l11 {
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: letterDraw 0.144s 3.12s linear forwards;
-  }
-  .l12 {
-    stroke-dasharray: 260;
-    stroke-dashoffset: 260;
-    animation: letterDraw 0.78s 3.264s linear forwards;
-  }
-  .l13 {
-    stroke-dasharray: 67;
-    stroke-dashoffset: 67;
-    animation: letterDraw 0.201s 4.044s linear forwards;
-  }
-  .l14 {
-    stroke-dasharray: 110;
-    stroke-dashoffset: 110;
-    animation: letterDraw 0.33s 4.245s linear forwards;
-  }
-  .l15 {
-    stroke-dasharray: 26;
-    stroke-dashoffset: 26;
-    animation: letterDraw 0.078s 4.575s linear forwards;
-  }
-  .l16 {
-    stroke-dasharray: 28;
-    stroke-dashoffset: 28;
-    animation: letterDraw 0.084s 4.653s linear forwards;
-  }
-  .l17 {
-    stroke-dasharray: 16;
-    stroke-dashoffset: 16;
-    animation: letterDraw 0.048s 4.737s linear forwards;
-  }
-  .l18 {
-    stroke-dasharray: 72;
-    stroke-dashoffset: 72;
-    animation: letterDraw 0.216s 4.785s linear forwards;
-  }
-  .l19 {
-    stroke-dasharray: 86;
-    stroke-dashoffset: 86;
-    animation: letterDraw 0.258s 5.001s linear forwards;
-  }
-  .l20 {
-    stroke-dasharray: 120;
-    stroke-dashoffset: 120;
-    animation: letterDraw 0.36s 5.259s linear forwards;
-  }
-  .l21 {
-    stroke-dasharray: 320;
-    stroke-dashoffset: 320;
-    animation: letterDraw 0.96s 5.619s linear forwards;
-  }
-  .l22 {
-    stroke-dasharray: 107;
-    stroke-dashoffset: 107;
-    animation: letterDraw 0.321s 6.579s linear forwards;
-  }
-  .l23 {
-    stroke-dasharray: 82;
-    stroke-dashoffset: 82;
-    animation: letterDraw 0.246s 6.9s linear forwards;
-  }
-  .l24 {
-    stroke-dasharray: 17;
-    stroke-dashoffset: 17;
-    animation: letterDraw 0.051s 7.146s linear forwards;
-  }
-  .l25 {
-    stroke-dasharray: 210;
-    stroke-dashoffset: 210;
-    animation: letterDraw 0.63s 7.197s linear forwards;
-  }
+.l01	{stroke-dasharray:	170	;stroke-dashoffset:	170	;animation: letterDraw	0.17s 	0s linear forwards;}
+.l02	{stroke-dasharray:	135	;stroke-dashoffset:	135	;animation: letterDraw	0.135s 	0.17s linear forwards;}
+.l03	{stroke-dasharray:	135	;stroke-dashoffset:	135	;animation: letterDraw	0.135s 	0.305s linear forwards;}
+.l04	{stroke-dasharray:	60	;stroke-dashoffset:	60	;animation: letterDraw	0.06s 	0.44s linear forwards;}
+.l05	{stroke-dasharray:	47	;stroke-dashoffset:	47	;animation: letterDraw	0.047s 	0.5s linear forwards;}
+.l06	{stroke-dasharray:	150	;stroke-dashoffset:	150	;animation: letterDraw	0.15s 	0.547s linear forwards;}
+.l07	{stroke-dasharray:	50	;stroke-dashoffset:	50	;animation: letterDraw	0.05s 	0.697s linear forwards;}
+.l08	{stroke-dasharray:	165	;stroke-dashoffset:	165	;animation: letterDraw	0.165s 	0.747s linear forwards;}
+.l09	{stroke-dasharray:	92	;stroke-dashoffset:	92	;animation: letterDraw	0.092s 	0.912s linear forwards;}
+.l10	{stroke-dasharray:	36	;stroke-dashoffset:	36	;animation: letterDraw	0.036s 	1.004s linear forwards;}
+.l11	{stroke-dasharray:	48	;stroke-dashoffset:	48	;animation: letterDraw	0.048s 	1.04s linear forwards;}
+.l12	{stroke-dasharray:	260	;stroke-dashoffset:	260	;animation: letterDraw	0.26s 	1.088s linear forwards;}
+.l13	{stroke-dasharray:	67	;stroke-dashoffset:	67	;animation: letterDraw	0.067s 	1.348s linear forwards;}
+.l14	{stroke-dasharray:	110	;stroke-dashoffset:	110	;animation: letterDraw	0.11s 	1.415s linear forwards;}
+.l15	{stroke-dasharray:	26	;stroke-dashoffset:	26	;animation: letterDraw	0.026s 	1.525s linear forwards;}
+.l16	{stroke-dasharray:	28	;stroke-dashoffset:	28	;animation: letterDraw	0.028s 	1.551s linear forwards;}
+.l17	{stroke-dasharray:	16	;stroke-dashoffset:	16	;animation: letterDraw	0.016s 	1.579s linear forwards;}
+.l18	{stroke-dasharray:	72	;stroke-dashoffset:	72	;animation: letterDraw	0.072s 	1.595s linear forwards;}
+.l19	{stroke-dasharray:	86	;stroke-dashoffset:	86	;animation: letterDraw	0.086s 	1.667s linear forwards;}
+.l20	{stroke-dasharray:	120	;stroke-dashoffset:	120	;animation: letterDraw	0.12s 	1.753s linear forwards;}
+.l21	{stroke-dasharray:	320	;stroke-dashoffset:	320	;animation: letterDraw	0.32s 	1.873s linear forwards;}
+.l22	{stroke-dasharray:	107	;stroke-dashoffset:	107	;animation: letterDraw	0.107s 	2.193s linear forwards;}
+.l23	{stroke-dasharray:	82	;stroke-dashoffset:	82	;animation: letterDraw	0.082s 	2.3s linear forwards;}
+.l24	{stroke-dasharray:	17	;stroke-dashoffset:	17	;animation: letterDraw	0.017s 	2.382s linear forwards;}
+.l25	{stroke-dasharray:	210	;stroke-dashoffset:	210	;animation: letterDraw	0.21s 	2.399s linear forwards;}
+
 
   .t {
     top: calc(50% + (280 - 540) * 100vw / 1920);
