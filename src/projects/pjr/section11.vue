@@ -550,7 +550,7 @@ export default {
     },
     refreshAOS() {
       setTimeout(() => {
-        $("[data-aos]").each((i, val) => {
+        $(".section11 [data-aos]").each((i, val) => {
           $(val).addClass("aos-animate");
         });
       }, 0);

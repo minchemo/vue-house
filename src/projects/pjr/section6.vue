@@ -55,6 +55,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section6 {
+    height:size-m(667);
     .intro {
       top: size-m(70);
 

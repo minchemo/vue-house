@@ -143,43 +143,43 @@ export default {
       // },
 
       // indigatorIndex: 0,
-      options: {
-        menu: "#menu",
-        anchors: [],
-        scrollBar: false,
-        // onLeave: this.onLeave,
-        //afterLoad: this.afterLoad,
-        continuousHorizontal: true,
-        autoScrolling: true,
-        fitToSection: true,
-        verticalCentered: false,
+      // options: {
+      //   menu: "#menu",
+      //   anchors: [],
+      //   scrollBar: false,
+      //   // onLeave: this.onLeave,
+      //   //afterLoad: this.afterLoad,
+      //   continuousHorizontal: true,
+      //   autoScrolling: true,
+      //   fitToSection: true,
+      //   verticalCentered: false,
 
-        navigation: false,
-        navigationPosition: "left",
-        slidesNavigation: false,
-        slidesNavPosition: "top",
-        lazyLoading: false,
-        onLeave: function () {
-          $(".section [data-aos]").each(function () {
-            $(this).removeClass("aos-animate");
-          });
-        },
-        onSlideLeave: function () {
-          $(".slide [data-aos]").each(function () {
-            $(this).removeClass("aos-animate");
-          });
-        },
-        afterSlideLoad: function () {
-          $(".slide.active [data-aos]").each(function () {
-            $(this).addClass("aos-animate");
-          });
-        },
-        afterLoad: function () {
-          $(".section.active [data-aos]").each(function () {
-            $(this).addClass("aos-animate");
-          });
-        },
-      },
+      //   navigation: false,
+      //   navigationPosition: "left",
+      //   slidesNavigation: false,
+      //   slidesNavPosition: "top",
+      //   lazyLoading: false,
+      //   onLeave: function () {
+      //     $(".section [data-aos]").each(function () {
+      //       $(this).removeClass("aos-animate");
+      //     });
+      //   },
+      //   onSlideLeave: function () {
+      //     $(".slide [data-aos]").each(function () {
+      //       $(this).removeClass("aos-animate");
+      //     });
+      //   },
+      //   afterSlideLoad: function () {
+      //     $(".slide.active [data-aos]").each(function () {
+      //       $(this).addClass("aos-animate");
+      //     });
+      //   },
+      //   afterLoad: function () {
+      //     $(".section.active [data-aos]").each(function () {
+      //       $(this).addClass("aos-animate");
+      //     });
+      //   },
+      // },
     };
   },
   created() {
@@ -217,6 +217,7 @@ export default {
       el: document.querySelector("#locomotive"),
       smooth: true,
       repeat: true,
+      offset: ["45%", "45%"],
       tablet: {
         smooth: false,
         breakpoint: 250,
@@ -227,47 +228,12 @@ export default {
       lerp: 0.05,
     });
 
-    let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("aos-animate");
-        } else {
-          entry.target.classList.remove("aos-animate");
-        }
-      });
-    });
-    document.querySelectorAll("[data-aos]").forEach((aosElem) => {
-      observer.observe(aosElem);
-    });
-
-    let observer2 = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add("showin");
-          }, 500);
-        } else {
-          entry.target.classList.remove("showin");
-        }
-      });
-    });
-    document.querySelectorAll(".divider").forEach((aosElem) => {
-      observer2.observe(aosElem);
-    });
-
-    let observer3 = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add("showin");
-          }, 500);
-        } else {
-          entry.target.classList.remove("showin");
-        }
-      });
-    });
-    document.querySelectorAll(".hasdivider").forEach((aosElem) => {
-      observer3.observe(aosElem);
+    this.locomotive.on("scroll", (obj) => {
+      $(".is-inview [data-aos]").addClass("aos-animate");
+      setTimeout(() => {
+        $(".is-inview .divider").removeClass('showin').addClass("showin");
+        $(".is-inview .hasdivider").removeClass('showin').addClass("showin");
+      }, 2000);
     });
 
     let imgs = document.images;

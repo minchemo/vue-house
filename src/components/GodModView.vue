@@ -11,7 +11,7 @@
 @import "@/assets/style/function.scss";
 .GodModView {
   .view {
-    height: 100vh;
+    height: size(1080);
     width: 100%;
 
     .view-hand {

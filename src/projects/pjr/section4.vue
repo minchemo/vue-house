@@ -359,14 +359,14 @@ export default {
       this.activeSlide = this.slides[activeIndex];
 
       setTimeout(() => {
-        $("[data-aos]").each((i, val) => {
+        $(".section4 [data-aos]").each((i, val) => {
           $(val).addClass("aos-animate");
         });
         setTimeout(() => {
-          $(".hasdivider").addClass("showin");
+          $(".section4 .hasdivider").addClass("showin");
         }, 200);
         setTimeout(() => {
-          $(".divider").addClass("showin");
+          $(".section4 .divider").addClass("showin");
         }, 400);
       }, 0);
     },

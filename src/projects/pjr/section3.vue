@@ -1,6 +1,6 @@
 <template>
   <div class="section3">
-    <div class="info" :key="activeSlide.title">
+    <div class="info" :key="activeSlide.title + '1'">
       <h2 v-html="activeSlide.title" data-aos="fade-up"></h2>
       <div class="divider"></div>
       <p
@@ -308,7 +308,7 @@ export default {
           clickable: true,
         },
         autoplay: {
-          delay: 4500,
+          delay: 10000,
         },
       },
     };
@@ -320,11 +320,11 @@ export default {
       this.activeSlide = this.slides[activeIndex];
 
       setTimeout(() => {
-        $("[data-aos]").each((i, val) => {
+        $(".section3 [data-aos]").each((i, val) => {
           $(val).addClass("aos-animate");
         });
         setTimeout(() => {
-          $(".divider").addClass("showin");
+          $(".section3 .divider").addClass("showin");
         }, 400);
       }, 0);
     },
