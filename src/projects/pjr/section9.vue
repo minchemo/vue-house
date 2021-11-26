@@ -482,6 +482,10 @@ export default {
       activeSlide2: {},
       slides1: [
         {
+          img: require("@/projects/pjr/s9/2011-1.jpg"),
+          caption: "2011 大安 勤美璞真",
+        },
+        {
           img: require("@/projects/pjr/s9/2014.jpg"),
           caption: "2018 內湖 勤美璞真碧湖畔",
         },
@@ -489,10 +493,7 @@ export default {
           img: require("@/projects/pjr/s9/2022.jpg"),
           caption: "2022 台中 勤美之森",
         },
-        {
-          img: require("@/projects/pjr/s9/2011-1.jpg"),
-          caption: "2011 大安 勤美璞真",
-        },
+        
       ],
       slides2: [
         {
