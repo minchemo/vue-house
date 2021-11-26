@@ -45,7 +45,7 @@
   .GodModView {
     .view {
       height: size-m(667);
-    overflow: hidden;
+      overflow: hidden;
       .view-hand {
         position: absolute;
         width: 100px;
@@ -105,8 +105,10 @@ export default {
 
         let bs = new BScroll(this.$refs.view, {
           scrollX: true,
+          scrollY: true,
           disableTouch: false,
           bindToWrapper: true,
+          eventPassthrough: 'vertical',
           bounce: false,
         });
         bs.scrollTo(bs.maxScrollX / 2, 500);
