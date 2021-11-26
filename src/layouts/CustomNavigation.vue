@@ -11,7 +11,10 @@
       </div>
     </div>
     <div class="custom-navbar">
-      <div class="link" @click="scrollTo('.custom-footer')">來電洽詢</div>
+      <div class="link" v-if="!isMobile" @click="scrollTo('.custom-footer')">
+        來電洽詢
+      </div>
+      <a class="link" v-else href="tel:0225675888"> 來電洽詢 </a>
       <div class="link" @click="scrollTo('.order-now')">立即預約</div>
       <div class="link" @click="scrollTo('.g-map')">地圖導航</div>
     </div>

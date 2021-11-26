@@ -68,7 +68,13 @@
               (三)本公司行銷業務之推廣本案實際內容以現場公布為準
             </div>
             <el-checkbox v-model="form.checked" class="form-check"
-              >本人已知悉以上個人資料蒐集聲明事項 <a class="Privacy" href="https://www.hiyes.tw/Policy/Privacy" target="_blank">隱私權說明</a></el-checkbox
+              >本人已知悉以上個人資料蒐集聲明事項
+              <a
+                class="Privacy"
+                href="https://www.hiyes.tw/Policy/Privacy"
+                target="_blank"
+                >隱私權說明</a
+              ></el-checkbox
             >
           </div>
           <div class="form-cus-btn" @click="send()">立即送出</div>
@@ -124,8 +130,8 @@
         background-color: #267f98;
         position: relative;
       }
-      .Privacy{
-       color: #267f98; 
+      .Privacy {
+        color: #267f98;
       }
       .houseInfo {
         .houseInfoItem {
@@ -424,9 +430,8 @@ export default {
           },
         }).then((response) => {
           this.isSubmit = false;
-          window.location.href = `formThanks${
-            utmCampaign ? `?utm_campaign=${utmCampaign}` : ""
-          }`;
+          window.location.href = `formThanks${utmCampaign ? `?utm_campaign=${utmCampaign}` : ""
+            }`;
           this.recordPageView(1); // record user behavior
         });
       }
@@ -474,7 +479,7 @@ export default {
         fetch("https://data.hiyes.tw/rec/pv", {
           method: "POST",
           body: {
-            guid: this.getCookie("hiyes_case_uid"),
+            guid: this.getCookie("hiyes_uid"),
             project: "pjavenue",
             phone: this.form.phone,
             state,
@@ -484,7 +489,7 @@ export default {
         fetch("https://data.hiyes.tw/rec/pv", {
           method: "POST",
           body: {
-            guid: this.getCookie("hiyes_case_uid"),
+            guid: this.getCookie("hiyes_uid"),
             project: "pjavenue",
             state,
           },
@@ -499,8 +504,8 @@ export default {
           return response.text();
         })
         .then((guid) => {
-          if (!this.getCookie("hiyes_case_uid")) {
-            this.setCookie("hiyes_case_uid", guid, 2);
+          if (!this.getCookie("hiyes_uid")) {
+            this.setCookie("hiyes_uid", guid, 2);
           }
         });
     },
@@ -530,10 +535,10 @@ export default {
     this.generateGUID();
 
     setInterval(() => {
-      this.duration ++;
+      this.duration++;
     }, 1000);
   },
 
-  created() {},
+  created() { },
 };
 </script>
