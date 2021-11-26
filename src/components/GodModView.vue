@@ -1,7 +1,7 @@
 <template>
   <div class="GodModView with-mask">
     <div class="view" ref="view">
-      <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
+      <img ref="viewImg" class="view-img" :src="bgUrl" alt="" />
       <img class="view-hand" ref="viewHand" v-lazy :temp="swipeUrl" alt="" />
     </div>
   </div>
@@ -13,6 +13,7 @@
   .view {
     height: size(1080);
     width: 100%;
+    overflow: hidden;
 
     .view-hand {
       position: absolute;
@@ -44,9 +45,7 @@
   .GodModView {
     .view {
       height: size-m(667);
-      overflow-x: scroll;
-      overflow-y: hidden;
-
+    overflow: hidden;
       .view-hand {
         position: absolute;
         width: 100px;
@@ -68,6 +67,7 @@
 <script>
 import { isMobile } from "@/utils";
 import interact from "interactjs";
+import BScroll from "@better-scroll/core";
 
 export default {
   name: "GodModView",
@@ -103,9 +103,13 @@ export default {
           ? (el.scrollWidth - $(window).width()) / 2 + offset
           : false;
 
-        setTimeout(() => {
-          $(el).scrollLeft(scrollTarget);
-        }, 10);
+        let bs = new BScroll(this.$refs.view, {
+          scrollX: true,
+          disableTouch: false,
+          bindToWrapper: true,
+          bounce: false,
+        });
+        bs.scrollTo(bs.maxScrollX / 2, 500);
 
         setTimeout(() => {
           $(el).one("scroll", () => {
@@ -142,25 +146,6 @@ export default {
     this.setViewBgHeight();
     this.onResize();
     this.scrollView();
-
-    if (!this.isMobile) {
-      const _interact = interact(".view-img").draggable({
-        inertia: true,
-        startAxis: "x",
-        lockAxis: "x",
-        modifiers: [
-          interact.modifiers.restrictRect({
-            restriction: "parent",
-            endOnly: false,
-          }),
-        ],
-        listeners: {
-          move: this.dragMoveListener,
-        },
-      });
-
-      console.log(_interact);
-    }
   },
 };
 </script>
