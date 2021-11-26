@@ -1,8 +1,9 @@
 <template>
-  <div class="section3">
+  <div class="section">
   </div>
 </template>
 <style lang="scss" scoped>
+@import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -26,7 +27,7 @@
 import { isMobile } from '@/utils'
 
 export default {
-  name: 'section3',
+  name: 'section1',
 
   data() {
     return {

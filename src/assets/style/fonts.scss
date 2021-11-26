@@ -18,7 +18,7 @@ h2 {
 
 h3,
 label {
-    font-family: Arial, "Noto Serif TC", sans-serif;
+    font-family: Arial, "Noto Sans TC", sans-serif;
     margin: 0;
     //font-weight: 300;
 }
@@ -30,20 +30,20 @@ p {
     margin: 0;
 }
 
-
 /* animate css */
-
 
 /* font */
 
 @font-face {
     font-family: DFPingJuStd;
-    src: url("~@/assets/font/DFPingJuStd-W7.otf?#iefix") format("embedded-opentype"), url("~@/assets/font/DFPingJuStd-W7.otf");
+    src: url("~@/assets/font/DFPingJuStd-W7.otf?#iefix") format("embedded-opentype"),
+        url("~@/assets/font/DFPingJuStd-W7.otf");
 }
 
 @font-face {
     font-family: DFLiSongStd;
-    src: url("~@/assets/font/DFLiSongStd-W5.otf?#iefix") format("embedded-opentype"), url("~@/assets/font/DFLiSongStd-W5.otf");
+    src: url("~@/assets/font/DFLiSongStd-W5.otf?#iefix") format("embedded-opentype"),
+        url("~@/assets/font/DFLiSongStd-W5.otf");
 }
 
 @font-face {

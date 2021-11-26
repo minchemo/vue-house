@@ -1,6 +1,6 @@
 exports.info = {
-  title: "璞真之道",
+  title: "青青",
   description:
-    "璞真之道",
-  keywords: "璞真之道"
+    "青青",
+  keywords: "青青"
 };

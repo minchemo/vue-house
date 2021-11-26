@@ -3,21 +3,11 @@
     <CustomNavigation :scrollInstance="locomotive" />
     <div id="locomotive">
       <Section1 class="section" data-scroll />
-      <!-- <Section2 class="section" data-scroll  /> -->
-      <Section3 class="section" data-scroll />
-      <Section4 class="section" data-scroll />
-      <!-- <Section5 class="section" data-scroll /> -->
-      <Section6 class="section" data-scroll />
-      <Section7 class="section" data-scroll />
-      <Section8 class="section" data-scroll />
-      <Section9 class="section" data-scroll />
-      <!-- <Section10 class="section" data-scroll /> -->
-      <Section11 class="section" data-scroll />
-      <!-- <Section12 class="section" data-scroll /> -->
-      <!-- <Section13 class="section" data-scroll /> -->
-      <CustomFooter class="section" data-scroll />
+      <Section2 class="section" data-scroll />
+      <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
+    
     <!-- <Navigation /> -->
     <!-- <Indigator :viewIndex="viewIndex" /> -->
     <!-- <full-page ref="fullPage" :options="options" id="fullpage"> -->
@@ -70,7 +60,7 @@
     </vue-lazy-component> -->
     <!-- </full-page> -->
 
-    <!-- <MobileNav /> -->
+    <MobileNav />
   </div>
 </template>
 
@@ -81,29 +71,22 @@ import Navigation from "@/layouts/Navigation.vue";
 import { isMobile } from "@/utils";
 import SideNavigation from "@/layouts/SideNavigation.vue";
 import ContactSection from "@/layouts/ContactSection.vue";
+import CustomNavigation from "@/layouts/CustomNavigation.vue";
 import MobileNav from "@/layouts/MobileNav.vue";
 import Loading from "@/components/Loading.vue";
 import AOS from "@/lib/aos/src/js/aos";
 
-import CustomFooter from "@/layouts/CustomFooter.vue";
+// import CustomFooter from "@/layouts/CustomFooter.vue";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/pjr/section1.vue";
-import Section2 from "@/projects/pjr/section2.vue";
-import Section3 from "@/projects/pjr/section3.vue";
-import Section4 from "@/projects/pjr/section4.vue";
-import Section5 from "@/projects/pjr/section5.vue";
-import Section6 from "@/projects/pjr/section6.vue";
-import Section7 from "@/projects/pjr/section7.vue";
-import Section8 from "@/projects/pjr/section8.vue";
-import Section9 from "@/projects/pjr/section9.vue";
-import Section10 from "@/projects/pjr/section10.vue";
-import Section11 from "@/projects/pjr/section11.vue";
-import Section12 from "@/projects/pjr/section12.vue";
-import Section13 from "@/projects/pjr/section13.vue";
+import Section1 from "@/projects/cc/section1.vue";
+import Section2 from "@/projects/cc/section2.vue";
 import LocomotiveScroll from "locomotive-scroll";
-import CustomNavigation from "@/layouts/CustomNavigation.vue";
+
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+UIkit.use(Icons);
 
 export default {
   name: "home",
@@ -114,22 +97,10 @@ export default {
     //SideNavigation,
     CustomNavigation,
     ContactSection,
-    CustomFooter,
+    // CustomFooter,
     MobileNav,
     Section1,
     Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
-    Section8,
-    Section9,
-    Section10,
-    Section11,
-    Section12,
-    Section13,
-    locomotive: null,
   },
 
   data() {
@@ -137,6 +108,7 @@ export default {
       isMobile,
       isSide: false,
       load: true,
+      locomotive: null,
       // viewIndex: 0,
       // action: {
       //   moveTo: () => {},
@@ -188,17 +160,14 @@ export default {
     // }, 500)
     // window.addEventListener('load', event => {
     // })
-
     $(document).ready(() => {
       var imagesLoaded = 0;
       var totalImages = $("img").length;
-
       const allImagesLoaded = () => {
         this.load = false;
       };
       const imageLoaded = () => {
         imagesLoaded++;
-
         if (imagesLoaded > totalImages * 0.5) {
           allImagesLoaded();
         }
@@ -215,7 +184,7 @@ export default {
 
     this.locomotive = new LocomotiveScroll({
       el: document.querySelector("#locomotive"),
-      smooth: true,
+      smooth: false,
       repeat: true,
       offset: ["45%", "45%"],
       tablet: {
@@ -230,10 +199,6 @@ export default {
 
     this.locomotive.on("scroll", (obj) => {
       $(".is-inview [data-aos]").addClass("aos-animate");
-      setTimeout(() => {
-        $(".is-inview .divider").removeClass("showin").addClass("showin");
-        $(".is-inview .hasdivider").removeClass("showin").addClass("showin");
-      }, 2000);
     });
 
     // let imgs = document.images;
@@ -297,26 +262,6 @@ export default {
   }
 }
 
-.divider {
-  transform: scale(0) !important;
-  transition: all 1s !important;
-  &.showin {
-    transform: scale(1) !important;
-  }
-}
-
-.hasdivider {
-  &:after {
-    transform: scale(0) !important;
-    transition: all 1s !important;
-  }
-
-  &.showin {
-    &::after {
-      transform: scale(1) !important;
-    }
-  }
-}
 
 .section,
 .section .fp-slide,

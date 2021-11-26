@@ -37,6 +37,7 @@
         "register-service-worker": "^1.6.2",
         "scrollbooster": "^3.0.2",
         "swiper": "5.x",
+        "uikit": "^3.9.4",
         "vue": "^2.6.10",
         "vue-awesome-swiper": "^4.1.1",
         "vue-carousel-3d": "^0.2.0",

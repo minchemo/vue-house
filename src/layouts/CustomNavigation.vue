@@ -1,6 +1,6 @@
 <template>
   <div class="custom-navigation">
-    <div class="custom-navigation-toggler" @click="openNav()">
+    <div class="custom-navigation-toggler" @click="openNav()" v-if="isMobile">
       <div
         class="hamburger hamburger--collapse"
         v-bind:class="isOpen ? 'is-active' : ''"
@@ -10,10 +10,10 @@
         </div>
       </div>
     </div>
-    <div class="custom-navbar">
-      <div class="link" @click="scrollTo('.custom-footer')">來電洽詢</div>
-      <div class="link" @click="scrollTo('.order-now')">立即預約</div>
-      <div class="link" @click="scrollTo('.g-map')">地圖導航</div>
+    <div class="custom-navbar" v-if="!isMobile">
+      <div class="link" @click="scrollTo('.custom-footer')">國際CBD</div>
+      <div class="link" @click="scrollTo('.order-now')">新名邸特區</div>
+      <div class="link" @click="scrollTo('.g-map')">校園青建築</div>
     </div>
     <div
       class="custom-navigation-list"
@@ -214,19 +214,42 @@ $hamburger-layer-color: #fff;
     left: 0;
     width: 100%;
     height: size(70);
-    background-color: rgba($color: #231815, $alpha: 0.5);
+    background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: size(150);
+    justify-content: center;
     .link {
-      font-size: size(20);
-      margin-left: size(60);
-      color: #fff;
-      font-family: "Noto Serif TC", Noto Sans TC, serif;
+      position: relative;
+      font-size: size(24);
+      margin-left: size(30);
+      padding-left: size(30);
+      letter-spacing: size(8);
+      color: #bbb29b;
+      font-family: "Noto Sans TC", Noto Sans TC, serif;
       &:hover {
         opacity: 0.7;
         cursor: pointer;
+      }
+      &::before {
+        content: "";
+        width: 1px;
+        height: 60%;
+        position: absolute;
+        left: 0;
+        top: 30%;
+        background: #9e9d9c;
+      }
+      &:last-child {
+        padding-right: size(30);
+        &::after {
+          content: "";
+          width: 1px;
+          height: 60%;
+          position: absolute;
+          right: 0;
+          top: 30%;
+          background: #9e9d9c;
+        }
       }
     }
   }
@@ -241,8 +264,8 @@ $hamburger-layer-color: #fff;
 
     .custom-navigation-toggler {
       position: absolute;
-      right: 2vw;
-      top: size-m(26.5);
+      right: size-m(26.5);
+      top: size-m(40) !important;
       margin-top: -#{size-m(17)};
       z-index: 1;
       background-size: cover;
@@ -254,7 +277,7 @@ $hamburger-layer-color: #fff;
       justify-content: center;
 
       .hamburger {
-        transform: scale(0.5);
+        transform: scale(1);
         padding: 0;
         .hamburger-box {
           width: size-m(34);
@@ -262,7 +285,7 @@ $hamburger-layer-color: #fff;
           .hamburger-inner:after,
           .hamburger-inner:before {
             width: 100%;
-            background-color: #fff;
+            background-color: #bbb29b;
             border-radius: 0;
             height: 2px;
           }
