@@ -932,6 +932,7 @@
       font-weight: 500;
       letter-spacing: size(5);
       font-family: "Noto Serif TC", Noto Sans TC, serif;
+      white-space: nowrap;
     }
     .i2 {
       margin-top: size(40);
@@ -966,6 +967,7 @@
       letter-spacing: size(5);
       font-family: "Noto Serif TC", Noto Sans TC, serif;
       font-weight: 500;
+      white-space: nowrap;
     }
   }
 }

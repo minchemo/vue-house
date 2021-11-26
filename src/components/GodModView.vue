@@ -1,7 +1,7 @@
 <template>
   <div class="GodModView with-mask">
     <div class="view" ref="view">
-      <img ref="viewImg" class="view-img" :src="bgUrl" alt="" />
+      <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
       <img class="view-hand" ref="viewHand" v-lazy :temp="swipeUrl" alt="" />
     </div>
   </div>
@@ -98,7 +98,7 @@ export default {
       const handEl = this.$refs.viewHand;
       const offset = this.autoScrollViewOffset;
 
-      $(imgEl).one("load", () => {
+      $(imgEl).on("load", () => {
         const scrollTarget = this.autoScrollView
           ? (el.scrollWidth - $(window).width()) / 2 + offset
           : false;
@@ -118,7 +118,7 @@ export default {
             if (self.isMobile) return;
             $(handEl).fadeOut();
           });
-        }, 1000);
+        }, 100);
       });
     },
     setViewBgHeight() {

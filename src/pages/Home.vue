@@ -231,19 +231,23 @@ export default {
     this.locomotive.on("scroll", (obj) => {
       $(".is-inview [data-aos]").addClass("aos-animate");
       setTimeout(() => {
-        $(".is-inview .divider").removeClass('showin').addClass("showin");
-        $(".is-inview .hasdivider").removeClass('showin').addClass("showin");
+        $(".is-inview .divider").removeClass("showin").addClass("showin");
+        $(".is-inview .hasdivider").removeClass("showin").addClass("showin");
       }, 2000);
     });
 
-    let imgs = document.images;
+    // let imgs = document.images;
 
-    [].forEach.call(imgs, function (img) {
-      if (img.complete) update_();
-      else img.addEventListener("load", update_, false);
-    });
+    // [].forEach.call(imgs, function (img) {
+    //   if (img.complete) update_();
+    //   else img.addEventListener("load", update_, false);
+    // });
 
     const self = this;
+
+    setInterval(() => {
+      update_();
+    }, 1000);
 
     function update_() {
       self.locomotive.update();
