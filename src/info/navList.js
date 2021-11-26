@@ -67,6 +67,6 @@ export default [{
         svgSrc: "",
         offset: 0,
         mobileOffset: 0,
-        link: "https://www.hiyes.tw/"
+        link: "https://www.facebook.com/hiyes.tw/"
     }
 ];

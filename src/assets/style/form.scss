@@ -60,12 +60,21 @@
 }
 
 .el-checkbox__label {
+
   p,
   h3 {
-    font-size: 12px;
+    font-size: 13px;
     color: $order_check_desc_color;
     font-weight: 300;
   }
+  .Privacy{
+    color: #267f98; 
+    text-decoration:none;
+   }
+   .Privacy:hover{
+    color: #1c5666; 
+    text-decoration:none;
+   }
 
   span {
     color: $order_check_span_color;
@@ -141,7 +150,9 @@
     margin-left: 0;
     width: 100%;
   }
-
+  .el-checkbox__label {
+    font-size: 12px !important;
+  }
   .checkbox {
     margin-top: 0;
     white-space: nowrap;

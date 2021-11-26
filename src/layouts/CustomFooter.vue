@@ -68,7 +68,7 @@
               (三)本公司行銷業務之推廣本案實際內容以現場公布為準
             </div>
             <el-checkbox v-model="form.checked" class="form-check"
-              >本人已知悉以上個人資料蒐集聲明事項</el-checkbox
+              >本人已知悉以上個人資料蒐集聲明事項 <a class="Privacy" href="https://www.hiyes.tw/Policy/Privacy" target="_blank">隱私權說明</a></el-checkbox
             >
           </div>
           <div class="form-cus-btn" @click="send()">立即送出</div>
@@ -123,6 +123,9 @@
         height: 1px;
         background-color: #267f98;
         position: relative;
+      }
+      .Privacy{
+       color: #267f98; 
       }
       .houseInfo {
         .houseInfoItem {
