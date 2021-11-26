@@ -385,7 +385,7 @@ export default {
             : require("@/projects/pjr/s7/1.jpg"),
           caption: "情境示意圖",
           infoHeader: "金屬成型事業",
-          infoContent: "化新精密、新竹勤美<br>蘇州勤美達、蘇州勤堡、天津勤威",
+          infoContent: "化新精密、勤美新竹<br>蘇州勤美達、蘇州勤堡、天津勤威",
           infoLogo: require("@/projects/pjr/s7/1logo.png"),
         },
         {
@@ -411,7 +411,7 @@ export default {
             : require("@/projects/pjr/s7/3.jpg"),
           caption: "勤美誠品綠園道",
           infoHeader: "人文商場",
-          infoContent: "勤美誠品綠園道、金典綠園道",
+          infoContent: "勤美誠品綠園道、金典綠園道商場<br>PARK2草悟廣場",
           infoLogo: require("@/projects/pjr/s7/3logo.png"),
         },
         
@@ -425,7 +425,7 @@ export default {
             : require("@/projects/pjr/s7/5.jpg"),
           caption: "勤美術館",
           infoHeader: "藝術深耕",
-          infoContent: "勤美璞真文化藝術基金會<br>勤美術館、工家美術館、森大青鳥",
+          infoContent: "勤美璞真文化藝術基金會<br>勤美術館、森大青鳥",
           infoLogo: require("@/projects/pjr/s7/5logo.png"),
         },
         {
@@ -438,12 +438,13 @@ export default {
             : require("@/projects/pjr/s7/4.jpg"),
           caption: "勤美學⼭那村",
           infoHeader: "飯店休閒",
-          infoContent: "臺中勤美洲際酒店、全國大飯店<br>台中金典酒店、勤美學",
-          infoLogo: require("@/projects/pjr/s7/4logo.png"),
+          infoContent: "臺中勤美洲際酒店(興建中)<br>金典酒店、全國大飯店、勤美學",
+          infoLogo: require("@/projects/pjr/s7/6logo.png"),
         },
       ],
       swiperOptions: {
         loop: true,
+        speed: 700 ,
         spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",

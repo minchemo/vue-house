@@ -516,6 +516,7 @@ export default {
       swiperOptions1: {
         loop: true,
         spaceBetween: isMobile ? 0 : 30,
+        speed: 700 ,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -531,6 +532,7 @@ export default {
       swiperOptions2: {
         loop: true,
         spaceBetween: isMobile ? 0 : 30,
+        speed: 700 ,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",

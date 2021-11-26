@@ -509,6 +509,7 @@ export default {
       ],
       swiperOptions: {
         loop: true,
+        speed: 700 ,
         spaceBetween: 30,
         autoplay: {
           delay: 4500,

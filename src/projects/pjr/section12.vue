@@ -349,6 +349,7 @@ export default {
       ],
       swiperOptions: {
         loop: true,
+        speed: 700 ,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",

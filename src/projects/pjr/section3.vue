@@ -298,6 +298,7 @@ export default {
       ],
       swiperOptions: {
         spaceBetween: 30,
+        speed: 700 ,
         loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
