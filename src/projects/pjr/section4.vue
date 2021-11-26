@@ -174,9 +174,9 @@
       }
       .divider {
         width: 1px;
-        height: size-m(100);
+        height: size-m(50);
         margin-right: 0;
-        margin: size-m(50) auto size-m(15) auto;
+        margin: size-m(25) auto size-m(15) auto;
       }
       p {
         margin-top: size-m(20);
