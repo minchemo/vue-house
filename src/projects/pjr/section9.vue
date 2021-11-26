@@ -498,7 +498,7 @@ export default {
       slides2: [
         {
           img: require("@/projects/pjr/s9/2010.jpg"),
-          caption: "2016 大安 璞真一一",
+          caption: "2015 大安 璞真一一",
         },
         {
           img: require("@/projects/pjr/s9/2019.jpg"),
