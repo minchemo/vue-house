@@ -2,7 +2,7 @@
   <div class="GodModView with-mask">
     <div class="view" ref="view">
       <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
-      <img class="view-hand" ref="viewHand" v-lazy :temp="swipeUrl" alt="" />
+      <!-- <img class="view-hand" ref="viewHand" v-lazy :temp="swipeUrl" alt="" /> -->
     </div>
   </div>
 </template>
@@ -11,9 +11,10 @@
 @import "@/assets/style/function.scss";
 .GodModView {
   .view {
-    height: size(1080);
+    height: size(816);
     width: 100%;
     overflow: hidden;
+    cursor: ew-resize;
 
     .view-hand {
       position: absolute;
@@ -44,7 +45,7 @@
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
-      height: size-m(667);
+      height: size-m(604);
       overflow: hidden;
       .view-hand {
         position: absolute;
@@ -77,10 +78,10 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/pjr/s6/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: !isMobile
-        ? require("@/projects/pjr/s6/hand.png")
-        : require("@/projects/pjr/s6/hand-mo.png"), //置換圖片路徑即可
+      bgUrl: require("@/projects/cc/s3/bg.jpg"), //置換圖片路徑即可
+      // swipeUrl: !isMobile
+      //   ? require("@/projects/cc/s3/hand.png")
+      //   : require("@/projects/cc/s3/hand-mo.png"), //置換圖片路徑即可
     };
   },
   methods: {

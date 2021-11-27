@@ -137,7 +137,6 @@ export default {
   left: 50%;
   transform: translate(-50%, -100%);
   z-index: 15;
-  border-top: 1px solid #000;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -176,8 +175,7 @@ export default {
   width: 80%;
   min-width: 1000px;
   margin: 0 auto;
-  padding: 30px 0 30px;
-  margin-bottom: -20px;
+  padding: 50px 0;
   z-index: 50;
 
   .fix-bar {
@@ -235,8 +233,7 @@ export default {
 .logo {
   width: $contact_logo_pc_width;
   height: auto;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 0 auto 100px auto;
   z-index: 1;
 }
 .info {
@@ -252,7 +249,7 @@ export default {
   width: 280px;
   height: 60px;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 300;
   margin-bottom: 20px;
   cursor: pointer;
   text-decoration: none;
@@ -309,11 +306,12 @@ export default {
   width: 600px;
   height: 60px;
   font-size: 18px;
-  background: #fff;
-  font-weight: 900;
+  background: #dcdddd;
+  font-weight: 300;
   box-shadow: $contact_btn_border;
   border-radius: $contact_btn_addr_border_radius;
   font-family: $family4;
+  color: #000;
   + .google-btn,
   + .btn {
     border-radius: 0;

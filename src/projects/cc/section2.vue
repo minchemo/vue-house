@@ -1,6 +1,6 @@
 <template>
   <div class="section2">
-    <div class="video-box" uk-parallax="viewport: 0.5;y:100,0;blur: 10,0"></div>
+    <div class="video-box" uk-parallax="viewport:0.3;y:100,0;blur: 50,0"></div>
     <div class="content">
       <h2 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-200,0;x:-200,0">
         國際級CBD到位
@@ -16,9 +16,17 @@
         :temp="require('@/projects/cc/s2/content.png')"
         alt=""
         srcset=""
-        uk-parallax="viewport: 0.5;blur:50,0"
+        uk-parallax="viewport:0.3;blur:50,0"
       />
     </div>
+    <img
+      class="leaf"
+      src="@/projects/cc/s2/leaf.png"
+      alt=""
+      srcset=""
+      uk-parallax="viewport:0.3;blur:50,0"
+    />
+    <div class="bg"></div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -27,15 +35,39 @@
 .section2 {
   position: relative;
   height: auto;
+  padding-top: size(100);
+  padding-bottom: size(20);
+
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0%;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .leaf {
+    width: size(345);
+    position: absolute;
+    right: 0;
+    bottom: size(120);
+  }
 
   .video-box {
-    margin-top: size(100);
     position: relative;
     width: size(1592);
     height: size(727.64);
     left: 50%;
     margin-left: -#{size(796)};
-    background-color: #ff9e32;
+    background: url("~@/projects/cc/s2/play.jpg");
+    background-position: center;
+    background-size: cover;
     z-index: 1;
   }
   .content {
@@ -65,6 +97,62 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section2 {
+    position: relative;
+    height: auto;
+    padding-top: size-m(100);
+    padding-bottom: size-m(20);
+
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      top: 0%;
+      left: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    .leaf {
+      display: none;
+    }
+
+    .video-box {
+      position: relative;
+      width: size(1592);
+      height: size(727.64);
+      left: 50%;
+      margin-left: -#{size(796)};
+      background: url("~@/projects/cc/s2/play.jpg");
+      background-position: center;
+      background-size: cover;
+      z-index: 1;
+    }
+    .content {
+      width: 90%;
+      margin: size-m(100) auto size-m(50) auto;
+
+      h2 {
+        font-size: size-m(19);
+        letter-spacing: size-m(7);
+        margin-bottom: size-m(20);
+        line-height: 1.3;
+      }
+      p {
+        font-size: size-m(15);
+        letter-spacing: size-m(8);
+        line-height: 1.5;
+        margin-bottom: size-m(50);
+      }
+      .textimg {
+        width: size-m(75);
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -91,6 +179,6 @@ export default {
 
   methods: {},
 
-  created() {},
+  created() { },
 };
 </script>

@@ -1,9 +1,5 @@
 <template>
   <div class="order-bg">
-    <!-- <img src="@/projects/fs/order/bg.png" alt="" class="bg-img"> -->
-    <!-- <img src="@/projects/fs/order/bg1.png" alt="" class="bg-img no-mix"> -->
-    <!-- <img src="@/projects/fs/order/bg_m.jpg" alt="" class="bg-img" v-if="isMobile"> -->
-
     <div class="order-top">
       <!-- <div class="title-block">
         <h3 class="title">{{order.title}}</h3>
@@ -13,6 +9,13 @@
       <!-- <div class="order-title-img">
         <img src="~@/assets/img/order-title.png" alt="" srcset="">
       </div> -->
+      <img
+        class="bg-img"
+        src="@/projects/cc/contact.png"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.8;y:200,0;"
+      />
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
@@ -325,41 +328,14 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
-
-.bird {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  z-index: 1;
-  width: 80vw;
-  transform: translate(-50%, 10%) skew(0deg, 0deg) scale(1);
-  animation: fly infinite alternate-reverse 7s;
-
-  @keyframes fly {
-    0% {
-      transform: translate(-50%, 10%) skew(0deg, 0deg) scale(0.9);
-    }
-    100% {
-      transform: translate(-55%, 12%) skew(20deg, 2deg) scale(1.1);
-    }
-  }
-}
+@import "@/assets/style/function.scss";
 
 .bg-img {
-  width: 100vw;
+  width: 110%;
   position: absolute;
   top: 0;
-  left: 0;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  // mix-blend-mode: screen;
-  //background: ("~@/projects/fs/order/bg_m.jpg");
-  &.no-mix {
-    mix-blend-mode: normal;
-    height: 100%;
-  }
-  padding: 0 2vw;
+  right: -2%;
+  pointer-events: none;
 }
 .order-bg {
   //background-color: $order_bg_color;
@@ -386,31 +362,21 @@ export default {
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 600px;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 60%;
-      height: 1px;
-      background-color: #000;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    padding-bottom: 700px;
   }
   .order-title {
     font-family: $family1;
     width: auto;
     padding-top: 20px;
     padding-bottom: 1vw;
-    font-weight: 900;
+    font-weight: 300;
     line-height: 1.3;
-    font-size: 1.5vw;
+    font-size: size(50);
+    letter-spacing: size(30);
     text-align: center;
     color: $order_title_color;
     margin: 0 auto;
-    margin-bottom: 2vw;
-    border-bottom: 1px solid;
+    margin-bottom: size(20);
     display: inline-block;
   }
   .order-title-img {
