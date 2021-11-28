@@ -4,7 +4,11 @@
       class="bg"
       v-bind:class="{ inactive: active.hasOwnProperty('h') }"
       v-lazy
-      :temp="require('@/projects/cc/s5/bg.png')"
+      :temp="
+        isMobile
+          ? require('@/projects/cc/s5/bg-mo.png')
+          : require('@/projects/cc/s5/bg.png')
+      "
       alt=""
       srcset=""
       uk-parallax="viewport:0.3;blur:50,0"
@@ -211,7 +215,7 @@
 
     .bg {
       position: absolute;
-      bottom: 0;
+      bottom: -#{size-m(50)};
       right: 0;
       width: 100%;
       z-index: 0;

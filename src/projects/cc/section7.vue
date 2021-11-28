@@ -325,6 +325,203 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section7 {
+    position: relative;
+    width: size-m(375);
+    height: size-m(1192);
+    padding-top: size-m(100);
+
+    .bg2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../projects/cc/s6/bg2-mo.png");
+      background-position: top;
+      background-size: cover;
+      z-index: 0;
+    }
+
+    .swiper-box {
+      position: relative;
+      display: flex;
+      z-index: 1;
+      flex-direction: column;
+      .left {
+        h2 {
+          font-size: size-m(20);
+          font-weight: 400;
+          letter-spacing: size-m(5);
+          margin-bottom: size-m(15);
+        }
+        h3 {
+          font-size: size-m(16);
+          font-weight: 300;
+          letter-spacing: size-m(5);
+          margin-bottom: size-m(20);
+          white-space: nowrap;
+        }
+        .content {
+          font-size: size-m(15);
+          font-weight: 300;
+          line-height: 1.5;
+          letter-spacing: size-m(7);
+        }
+      }
+
+      .right {
+        .swiper-wrapper {
+          width: size-m(340);
+          height: size-m(207);
+          .slide {
+            background-size: cover;
+          }
+        }
+      }
+      &.swiper-box-1 {
+        align-items: center;
+        justify-content: flex-end;
+        .left {
+          width: 80%;
+          margin-right: 0;
+          text-align: left;
+          z-index: 1;
+          position: relative;
+          .items {
+            margin-top: size-m(20);
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100vw;
+            overflow-x: auto;
+            margin-left: -10vw;
+
+            .item {
+              min-width: size-m(139);
+              height: size-m(36);
+              font-size: size-m(14);
+              text-align: center;
+              line-height: size-m(36);
+              background-size: 100%;
+              background-image: url("../../projects/cc/s7/item-bg-mo.png");
+              transition: all 0.4s;
+              margin-bottom: 0;
+              margin-right: size-m(10);
+              &:hover {
+                cursor: pointer;
+                background-image: url("../../projects/cc/s7/item-bg-selected-mo.png");
+              }
+              &.active {
+                background-image: url("../../projects/cc/s7/item-bg-selected-mo.png");
+              }
+            }
+          }
+        }
+        .right {
+          margin-top: size(250);
+        }
+        &::before {
+          content: unset;
+        }
+        .swiper-nav {
+          display: flex;
+          margin-top: size(15);
+          .next,
+          .prev {
+            width: size(25);
+            margin-right: size(10);
+            cursor: pointer;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      &.swiper-box-2 {
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        margin-top: size(200);
+        .left {
+          h3 {
+            text-align: right;
+          }
+          .content {
+            width: size(570);
+            text-align: left;
+          }
+          .items {
+            margin-top: size(50);
+            .item {
+              width: size(550);
+              height: size(98);
+              font-size: size(36);
+              text-align: center;
+              line-height: size(56);
+              background-size: 100%;
+              transition: all 0.4s;
+              margin-bottom: size(30);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #fff;
+              border-radius: size(40);
+              padding-left: size(75);
+              transition: all 0s;
+              img {
+                object-fit: cover;
+                border-radius: 100px;
+                height: size(75);
+                position: absolute;
+                left: size(10);
+              }
+              span {
+                font-weight: 300;
+                letter-spacing: size(26);
+              }
+              &:hover {
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.4);
+                border-width: 0;
+              }
+              &.active {
+                background: rgba(255, 255, 255, 0.4);
+                border-width: 0;
+              }
+            }
+          }
+        }
+        .right {
+          margin-top: size(250);
+        }
+        &::before {
+          content: unset;
+        }
+        .swiper-nav {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: size(15);
+          .next,
+          .prev {
+            width: size(25);
+            margin-right: size(10);
+            cursor: pointer;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+
+    .bg {
+      position: absolute;
+      right: 0;
+      top: size(50);
+      height: size(1500);
+      z-index: 1;
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
