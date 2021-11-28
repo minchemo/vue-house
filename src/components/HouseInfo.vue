@@ -135,6 +135,10 @@ export default {
     height: auto;
     margin-left: 20px;
     white-space: normal;
+    .label,
+    .desc {
+      font-size: 16px;
+    }
   }
 
   .info {

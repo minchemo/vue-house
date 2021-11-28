@@ -14,9 +14,10 @@
         >
           宏匯廣場、晶冠廣場、家樂福、IKEA‥影城百貨娛樂休閒不打烊。散步到福壽商圈輕取食衣住行機能。
         </div>
-        <div class="items">
+        <div class="items s7-item-1">
           <div
             class="item"
+            :data-key="`s7-1-item-${i}`"
             v-for="(item, i) in slides.caption"
             :key="i"
             :uk-parallax="`viewport:0.2;blur:20,0;x:-${i * 100},0`"
@@ -65,12 +66,13 @@
         >
           塭仔底公園，昌平公園、願景公園、中港綠堤水岸前後簇擁，每一次出門都是一場森態小旅行。
         </div>
-        <div class="items">
+        <div class="items s7-item-2">
           <div
             class="item"
+            :data-key="`s7-2-item-${i}`"
             v-for="(item, i) in slides2.caption"
             :key="i"
-            :uk-parallax="`viewport:0.2;blur:20,0;x:${i * 100},0`"
+            :uk-parallax="`viewport:0.2;blur:0,0;x:${i * 100},0`"
             @click="$refs.swiper2.$swiper.slideTo(i, 1000, false)"
             v-bind:class="{ active: activeIndex2 == i }"
           >
@@ -104,8 +106,17 @@
       </div>
     </div>
     <img
+      v-if="!isMobile"
       class="bg"
       src="@/projects/cc/s7/bg.png"
+      alt=""
+      srcset=""
+      uk-parallax="viewport: 0.3;blur:50,0"
+    />
+    <img
+      v-else
+      class="bg"
+      src="@/projects/cc/s7/bg-mo.png"
       alt=""
       srcset=""
       uk-parallax="viewport: 0.3;blur:50,0"
@@ -346,7 +357,7 @@
     .swiper-box {
       position: relative;
       display: flex;
-      z-index: 1;
+      z-index: 2;
       flex-direction: column;
       .left {
         h2 {
@@ -418,62 +429,61 @@
           }
         }
         .right {
-          margin-top: size(250);
+          margin-top: size-m(20);
         }
         &::before {
           content: unset;
         }
         .swiper-nav {
-          display: flex;
-          margin-top: size(15);
-          .next,
-          .prev {
-            width: size(25);
-            margin-right: size(10);
-            cursor: pointer;
-            &:hover {
-              opacity: 0.7;
-            }
-          }
+          display: none;
         }
       }
       &.swiper-box-2 {
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: row-reverse;
-        margin-top: size(200);
+        flex-direction: column;
+        margin-top: size-m(100);
         .left {
+          width: 80%;
+          margin-left: 0;
+          h2 {
+            text-align: left;
+          }
           h3 {
-            text-align: right;
+            text-align: left;
           }
           .content {
-            width: size(570);
+            width: auto;
             text-align: left;
           }
           .items {
-            margin-top: size(50);
+            margin-top: size-m(20);
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100vw;
+            overflow-x: auto;
+            margin-left: -10vw;
             .item {
-              width: size(550);
-              height: size(98);
-              font-size: size(36);
+              min-width: size-m(163.44);
+              min-height: size-m(43.63);
+              font-size: size-m(14);
               text-align: center;
-              line-height: size(56);
+              line-height: size-m(43.63);
               background-size: 100%;
               transition: all 0.4s;
-              margin-bottom: size(30);
+              margin-bottom: 0;
               display: flex;
               align-items: center;
               justify-content: center;
               border: 1px solid #fff;
-              border-radius: size(40);
-              padding-left: size(75);
+              border-radius: size-m(15);
+              padding-left: size-m(34);
               transition: all 0s;
+              margin-right: size-m(10);
               img {
                 object-fit: cover;
                 border-radius: 100px;
-                height: size(75);
+                height: size-m(34);
                 position: absolute;
-                left: size(10);
+                left: size-m(5);
               }
               span {
                 font-weight: 300;
@@ -492,24 +502,13 @@
           }
         }
         .right {
-          margin-top: size(250);
+          margin-top: size-m(20);
         }
         &::before {
           content: unset;
         }
         .swiper-nav {
-          display: flex;
-          justify-content: flex-end;
-          margin-top: size(15);
-          .next,
-          .prev {
-            width: size(25);
-            margin-right: size(10);
-            cursor: pointer;
-            &:hover {
-              opacity: 0.7;
-            }
-          }
+          display: none;
         }
       }
     }
@@ -517,8 +516,8 @@
     .bg {
       position: absolute;
       right: 0;
-      top: size(50);
-      height: size(1500);
+      top: size-m(0);
+      height: size-m(700);
       z-index: 1;
     }
   }
@@ -538,6 +537,7 @@
 import { isMobile } from "@/utils";
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
+import VueScrollTo from "vue-scrollto";
 
 export default {
   name: "section7",
@@ -594,9 +594,31 @@ export default {
   methods: {
     swiperChange1() {
       this.activeIndex1 = this.$refs.swiper.$swiper.realIndex;
+
+      VueScrollTo.scrollTo(
+        $(`[data-key="s7-1-item-${this.activeIndex1 - 1}"]`)[0],
+        100,
+        {
+          container: '.s7-item-1',
+          offset: 30,
+          x: true,
+          y: false,
+        }
+      );
     },
     swiperChange2() {
       this.activeIndex2 = this.$refs.swiper2.$swiper.realIndex;
+
+      VueScrollTo.scrollTo(
+        $(`[data-key="s7-2-item-${this.activeIndex2 - 1}"]`)[0],
+        100,
+        {
+          container: '.s7-item-2',
+          offset: 60,
+          x: true,
+          y: false,
+        }
+      );
     }
   },
 

@@ -8,6 +8,7 @@
           class="logo"
           :temp="require('@/assets/img/contact-logo.png')"
           :alt="info.caseName"
+          uk-parallax="viewport:0.3;y:100,0"
         />
         <img
           v-if="isMobile"
@@ -15,6 +16,7 @@
           v-lazy
           :temp="require('@/assets/img/contact-logo.png')"
           :alt="info.caseName"
+          uk-parallax="viewport:0.6;y:100,0"
         />
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">

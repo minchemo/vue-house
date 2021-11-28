@@ -1,9 +1,19 @@
 <template>
   <div class="section8">
     <img
+      v-if="!isMobile"
       class="bg"
       v-lazy
       :temp="require('@/projects/cc/s8/bg.png')"
+      alt=""
+      srcset=""
+      uk-parallax="viewport:0.3;blur:50,0"
+    />
+    <img
+      v-else
+      class="bg"
+      v-lazy
+      :temp="require('@/projects/cc/s8/bg-mo.png')"
       alt=""
       srcset=""
       uk-parallax="viewport:0.3;blur:50,0"
@@ -185,6 +195,83 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section8 {
+    position: relative;
+    height: auto;
+    padding-top: size-m(60);
+    z-index: 1;
+
+    .bg {
+      top: -#{size-m(50)};
+      right: 0;
+      width: size-m(137);
+      z-index: 0;
+    }
+    .swiper-box {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .left {
+        width: 80%;
+        height: auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+          font-size: size-m(19);
+          letter-spacing: size-m(8);
+          line-height: 1.5;
+          margin-bottom: size-m(30);
+        }
+        .content {
+          width: 100%;
+          font-size: size-m(15);
+          letter-spacing: size-m(5);
+          margin-bottom: size-m(40);
+        }
+        .textimg {
+          width: size-m(75);
+        }
+        .deer {
+          position: absolute;
+          right: size(20);
+          bottom: 0;
+          height: size(400);
+        }
+      }
+
+      .right {
+        position: relative;
+        margin-top: size-m(40);
+        .swiper-wrapper {
+          width: size-m(375);
+          height: size-m(164.45);
+          padding-bottom: size(80);
+          .slide {
+            position: relative;
+            background-size: cover;
+            .caption {
+              position: absolute;
+              left: size-m(20);
+              bottom: size-m(10);
+              font-size: size-m(15);
+              color: #fff;
+              filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+            }
+          }
+          .swiper-pagination {
+            display: none;
+          }
+        }
+        .swiper-nav {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

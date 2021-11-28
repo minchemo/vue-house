@@ -10,11 +10,20 @@
         <img src="~@/assets/img/order-title.png" alt="" srcset="">
       </div> -->
       <img
+        v-if="!isMobile"
         class="bg-img"
         src="@/projects/cc/contact.png"
         alt=""
         srcset=""
         uk-parallax="viewport:0.8;y:200,0;"
+      />
+      <img
+        v-else
+        class="bg-img"
+        src="@/projects/cc/contact-mo.png"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.8;y:0;"
       />
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">

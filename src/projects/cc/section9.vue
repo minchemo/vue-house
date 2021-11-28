@@ -1,8 +1,17 @@
 <template>
   <div class="section9">
     <img
+      v-if="!isMobile"
       class="bg"
       src="@/projects/cc/s9/bg.png"
+      uk-parallax="viewport: 0.5;blur:50,0;y: 50,0"
+      alt=""
+      srcset=""
+    />
+    <img
+      v-else
+      class="bg"
+      src="@/projects/cc/s9/bg-mo.png"
       uk-parallax="viewport: 0.5;blur:50,0;y: 50,0"
       alt=""
       srcset=""
@@ -107,6 +116,60 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section9 {
+    position: relative;
+    height: auto;
+    padding: size-m(30) 0;
+
+    .bg {
+      position: absolute;
+      width: 100%;
+      right: 0;
+      top: size-m(20);
+    }
+
+    .swiper-box {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      flex-direction: column;
+      .left {
+        width: 80%;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        .textimg {
+          width: size-m(75);
+        }
+        h2 {
+          font-size: size-m(19);
+          line-height: 1.5;
+          letter-spacing: size-m(10);
+          margin-bottom: size-m(20);
+          margin-top: size-m(40);
+        }
+        .content {
+          font-size: size-m(15);
+          font-weight: 300;
+          line-height: 1.5;
+          letter-spacing: size-m(10);
+        }
+      }
+
+      .right {
+        margin-top: size-m(60);
+        margin-right: auto;
+        .swiper-wrapper {
+          width: size-m(334);
+          height: size-m(185.72);
+
+          .slide {
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

@@ -17,7 +17,7 @@
           uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-200,0;x:200,0"
         />
         <h2 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-200,0;x:-200,0">
-          建築外觀<br />後續會補上圖片
+          公設內容<br />後續會補上圖片
         </h2>
         <div
           class="content"
@@ -106,6 +106,57 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .section10 {
+    position: relative;
+    height: auto;
+    padding: size-m(30) 0;
+
+    .bg {
+      display: none;
+    }
+
+    .swiper-box {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      flex-direction: column;
+      .left {
+        width: 80%;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        .textimg {
+          width: size-m(75);
+        }
+        h2 {
+          font-size: size-m(19);
+          line-height: 1.5;
+          letter-spacing: size-m(10);
+          margin-bottom: size-m(20);
+          margin-top: size-m(40);
+        }
+        .content {
+          font-size: size-m(15);
+          font-weight: 300;
+          line-height: 1.5;
+          letter-spacing: size-m(10);
+        }
+      }
+
+      .right {
+        margin-top: size-m(60);
+        margin-left: auto;
+        .swiper-wrapper {
+          width: size-m(334);
+          height: size-m(185.72);
+
+          .slide {
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
