@@ -23,9 +23,9 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section6",
+        section: "section8",
         svgSrc: "",
         offset: 0,
         mobileOffset: 0
-    },
+    }
 ];
