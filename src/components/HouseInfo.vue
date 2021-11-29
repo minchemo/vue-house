@@ -63,7 +63,7 @@
           </div>
           <div data-v-4d6acc36="" class="item">
             <h3 data-v-4d6acc36="" class="label">經紀人</h3>
-            <p data-v-4d6acc36="" class="desc">林建汶</p>
+            <p data-v-4d6acc36="" class="desc">林建汶 107年新北經字003583號</p>
           </div>
           <div data-v-4d6acc36="" class="item">【西門大院－全案彰化銀行信託管理安心保障】</div>
         </div>
