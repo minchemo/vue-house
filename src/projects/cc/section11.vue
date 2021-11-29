@@ -108,6 +108,7 @@
         letter-spacing: size(15);
         margin-bottom: size(50);
         margin-top: size(20);
+        font-family: "Noto Serif TC", serif;
       }
       .content {
         width: size(749);
@@ -115,6 +116,7 @@
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(5);
+        font-family: "Noto Serif TC", serif;
       }
       .textimg {
         width: size(100);
@@ -143,6 +145,7 @@
             font-size: size(36);
             color: #fff;
             filter: drop-shadow(5px 12px 4px rgba(0, 0, 0, 0.9));
+            font-family: "Noto Serif TC", serif;
           }
         }
         .swiper-pagination {

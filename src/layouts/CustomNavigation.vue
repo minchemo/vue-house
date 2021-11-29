@@ -225,7 +225,7 @@ $hamburger-layer-color: #fff;
       padding-left: size(30);
       letter-spacing: size(8);
       color: #bbb29b;
-      font-family: "Noto Sans TC", Noto Sans TC, serif;
+      font-family: "Noto Serif TC",serif;
       &:hover {
         opacity: 0.7;
         cursor: pointer;

@@ -42,7 +42,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
     top: 0%;
     left: 0;
     background: linear-gradient(
@@ -73,18 +73,22 @@
   .content {
     width: size(930);
     margin: size(150) auto size(80) auto;
+    z-index: 1;
 
     h2 {
       font-size: size(50);
       letter-spacing: size(16);
       margin-bottom: size(20);
       line-height: 1.2;
+      font-family: "Noto Serif TC", serif;
+
     }
     p {
       font-size: size(24);
       letter-spacing: size(8);
       line-height: 1.5;
       margin-bottom: size(20);
+      font-family: "Noto Serif TC", serif;
     }
     .textimg {
       width: size(100);

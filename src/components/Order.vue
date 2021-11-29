@@ -387,6 +387,8 @@ export default {
     margin: 0 auto;
     margin-bottom: size(20);
     display: inline-block;
+    font-family: "Noto Serif TC", serif;
+
   }
   .order-title-img {
     width: 30vw;

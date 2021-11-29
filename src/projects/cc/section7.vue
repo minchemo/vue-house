@@ -58,7 +58,7 @@
           公園綠映
         </h2>
         <h3 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-100,0;x:-100,0">
-          4座公園擁抱 五千公頃綠
+          四座公園擁抱 五公頃綠地
         </h3>
         <div
           class="content"
@@ -142,13 +142,13 @@
     background-image: url("../../projects/cc/s6/bg2.png");
     background-position: top;
     background-size: cover;
-    z-index: 0;
+    
   }
 
   .swiper-box {
     position: relative;
     display: flex;
-    z-index: 1;
+    z-index: 2;
     .left {
       width: size(485);
       text-align: left;
@@ -158,6 +158,7 @@
         font-weight: 400;
         letter-spacing: size(15);
         margin-bottom: size(30);
+        font-family: "Noto Serif TC", serif;
       }
       h3 {
         font-size: size(36);
@@ -165,12 +166,14 @@
         letter-spacing: size(15);
         margin-bottom: size(35);
         white-space: nowrap;
+        font-family: "Noto Serif TC", serif;
       }
       .content {
         font-size: size(24);
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(10);
+        font-family: "Noto Serif TC", serif;
       }
     }
 
@@ -200,6 +203,7 @@
             background-image: url("../../projects/cc/s7/item-bg.png");
             transition: all 0.4s;
             margin-bottom: size(10);
+            font-family: "Noto Serif TC", serif;
             &:hover {
               cursor: pointer;
               background-image: url("../../projects/cc/s7/item-bg-selected.png");
@@ -280,6 +284,7 @@
             span {
               font-weight: 300;
               letter-spacing: size(26);
+              font-family: "Noto Serif TC", serif;
             }
             &:hover {
               cursor: pointer;

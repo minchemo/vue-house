@@ -80,12 +80,14 @@
         letter-spacing: size(15);
         margin-bottom: size(60);
         margin-top: size(20);
+        font-family: "Noto Serif TC", serif;
       }
       .content {
         font-size: size(24);
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(10);
+        font-family: "Noto Serif TC", serif;
       }
     }
 

@@ -70,12 +70,14 @@
         line-height: 1.2;
         letter-spacing: size(5);
         margin-bottom: size(100);
+        font-family: "Noto Serif TC", serif;
       }
       .content {
         font-size: size(24);
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(5);
+        font-family: "Noto Serif TC", serif;
       }
     }
 
@@ -95,6 +97,7 @@
     top: 0;
     right: 0;
     width: 100%;
+    z-index: -1;
   }
 }
 /* 平板尺寸 */
