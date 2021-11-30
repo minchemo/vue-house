@@ -2,7 +2,9 @@
   <div class="GodModView with-mask">
     <div class="view" ref="view">
       <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
-      <img class="view-hand" ref="viewHand" v-lazy :temp="swipeUrl" alt="" />
+      <div  class="view-hand" ref="viewHand">
+       <img v-lazy :temp="swipeUrl" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -18,14 +20,18 @@
 
     .view-hand {
       position: absolute;
-      width: size(120);
       z-index: 1;
-      right: size(400);
+      right:0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      background: #0696;
+      img{
+      position: absolute;
       top: size(150);
-      pointer-events: none;
-      transform: translateX(0);
+      width: size(82);
       animation: move 2s alternate-reverse infinite ease-in-out;
-
+      }
       @keyframes move {
         from {
           transform: translateX(0);
@@ -48,13 +54,12 @@
       height: size-m(604);
       overflow: hidden;
       .view-hand {
-        position: absolute;
-        width: size-m(40);
-        z-index: 1;
+      img{
+      position: absolute;
         top: 25%;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        pointer-events: none;
+        width: size-m(40);
+      animation: move 2s alternate-reverse infinite ease-in-out;
+      }
       }
       .view-img {
         height: 100%;
