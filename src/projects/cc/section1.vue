@@ -7,7 +7,7 @@
       :temp="require('@/projects/cc/s1/bg.svg')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;y: 0,-10;x:0,-10"
+      uk-parallax="viewport:0.8;blur:0,10;y: 0,-10;x:0,-10"
     />
     <img
       v-if="isMobile"
@@ -16,7 +16,7 @@
       :temp="require('@/projects/cc/s1/mo-bg.png')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;y: 0,-10;x:0,-10;scale:1,2;opacity:1,0"
+      uk-parallax="viewport:0.8;blur:0,10;y: 0,-10;x:0,-10;scale:1,2;opacity:1,0"
     />
     <img
       v-if="!isMobile"
@@ -25,7 +25,7 @@
       :temp="require('@/projects/cc/s1/leaf.png')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      uk-parallax="viewport:0.8;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
     />
     <img
       class="leaf3"
@@ -35,8 +35,8 @@
       srcset=""
       :uk-parallax="
         isMobile
-          ? 'viewport:0.3;y: 30,0;x:40;rotate:-20'
-          : 'viewport:0.3;blur:10,0;y: -30,0;x:-30,0;rotate:5,0'
+          ? 'viewport:0.8;y: 30,0;x:40;rotate:-20'
+          : 'viewport:0.8;blur:10,0;y: -30,0;x:-30,0;rotate:5,0'
       "
     />
     <img
@@ -45,7 +45,7 @@
       :temp="require('@/projects/cc/s1/deer.gif')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;scale: 1,1.5;x: 0,-50;opacity:1,0"
+      uk-parallax="viewport:0.8;blur:0,10;scale: 1,1.5;x: 0,-50;opacity:1,0"
     />
     <img
       class="logo"
@@ -53,7 +53,7 @@
       :temp="require('@/projects/cc/s1/logo.svg')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;scale: 1,1.5;x: 0,-10;opacity:1,0"
+      uk-parallax="viewport:0.8;blur:0,10;scale: 1,1.5;x: 0,-10;opacity:1,0"
     />
     <div class="falling">
       <!-- <img
@@ -66,7 +66,7 @@
         uk-parallax="viewport:0.3;blur:0,10;y: 0,-30;x:0,-30;rotate:0,5"
       /> -->
     </div>
-    <div class="divider" uk-parallax="viewport:0.3;blur:10,0;scale: 2,1"></div>
+    <div class="divider" uk-parallax="viewport:0.8;blur:10,0;scale: 2,1"></div>
   </div>
 </template>
 <style lang="scss">

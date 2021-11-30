@@ -64,7 +64,7 @@
           class="content"
           uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:200,0;x:-200,0"
         >
-          塭仔底公園，昌平公園、願景公園、中港綠堤水岸前後簇擁，每一次出門都是一場森態小旅行。
+          塭仔底溼地公園
         </div>
         <div class="items s7-item-2">
           <div
@@ -564,7 +564,7 @@ export default {
       slides2:
       {
         img: [require("@/projects/cc/s7/a.jpg"), require("@/projects/cc/s7/b.jpg"), require("@/projects/cc/s7/c.jpg"), require("@/projects/cc/s7/d.jpg")],
-        caption: ['昌平公園', '塭仔底公園', '願景公園', '中港綠堤'],
+        caption: ['昌平公園', '塭仔底溼地公園', '願景公園', '中港綠堤'],
         avatar: [require("@/projects/cc/s7/a-avatar.jpg"), require("@/projects/cc/s7/b-avatar.jpg"), require("@/projects/cc/s7/c-avatar.jpg"), require("@/projects/cc/s7/d-avatar.jpg")]
       },
       swiperOptions: {
