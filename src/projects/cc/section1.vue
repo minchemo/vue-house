@@ -16,7 +16,7 @@
       :temp="require('@/projects/cc/s1/mo-bg.png')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;y: 0,-10;x:0,-10"
+      uk-parallax="viewport:0.3;blur:0,10;y: 0,-10;x:0,-10;scale:1,2;opacity:1,0"
     />
     <img
       v-if="!isMobile"
@@ -45,7 +45,7 @@
       :temp="require('@/projects/cc/s1/deer.gif')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;scale: 1,0.8;x: 0,-50;opacity:1,0"
+      uk-parallax="viewport:0.3;blur:0,10;scale: 1,1.5;x: 0,-50;opacity:1,0"
     />
     <img
       class="logo"
@@ -53,7 +53,7 @@
       :temp="require('@/projects/cc/s1/logo.svg')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;scale: 1,0.8;x: 0,100"
+      uk-parallax="viewport:0.3;blur:0,10;scale: 1,1.5;x: 0,-10;opacity:1,0"
     />
     <div class="falling">
       <!-- <img
@@ -66,7 +66,7 @@
         uk-parallax="viewport:0.3;blur:0,10;y: 0,-30;x:0,-30;rotate:0,5"
       /> -->
     </div>
-    <div class="divider"></div>
+    <div class="divider" uk-parallax="viewport:0.3;blur:10,0;scale: 2,1"></div>
   </div>
 </template>
 <style lang="scss">
@@ -74,15 +74,26 @@
 /* 螢幕尺寸標準 */
 .section1 {
   position: relative;
-  height: size(1130);
+  height:calc(100vh + 2.6vw);
+  min-height: size(950);
+  max-height: size(1130);
   background: #fff;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    background: #FFF;
+  }
 
   .bg {
     position: absolute;
     z-index: 0;
-    right: 0;
-    top: -#{size(80)};
-    height: 100%;
+    right:-5vw;
+    top: calc(50% + (-80 - 540) * 100vw / 1920);
+   width: size(1687);
   }
 
   .falling {
@@ -98,14 +109,14 @@
     position: absolute;
     z-index: 0;
     left: 0;
-    top: size(100);
-    height: size(1082);
+    top: calc(50% + (100 - 540) * 100vw / 1920);
+   width: size(844);
   }
   .leaf2 {
     position: absolute;
     z-index: 0;
     right: size(200);
-    top: size(300);
+    top: calc(50% + (300 - 540) * 100vw / 1920);
     height: size(20);
   }
   .leaf3 {
@@ -120,7 +131,7 @@
     position: absolute;
     z-index: 1;
     left: size(250);
-    top: size(190);
+    top: calc(50% + (190 - 540) * 100vw / 1920);
     height: size(641.2);
   }
 
@@ -128,19 +139,18 @@
     position: absolute;
     z-index: 1;
     right: size(500);
-    top: size(400);
+    top: calc(50% + (300 - 540) * 100vw / 1920);
     width: size(342);
   }
 
   .divider {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: calc(50% - 634 * 50vw / 1920);
     z-index: 1;
     width: size(634);
     height: 1px;
     background-color: #bbb29b;
-    transform: translateX(-50%);
   }
 }
 /* 平板尺寸 */
@@ -151,7 +161,9 @@
 @media only screen and (max-width: 767px) {
   .section1 {
     position: relative;
-    height: size-m(667);
+    height:100vh;
+  min-height:size-m(667);
+  max-height: size-m(812);
     z-index: 1;
     overflow: hidden;
 
@@ -194,14 +206,9 @@
     }
 
     .divider {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      z-index: 1;
+      left: 5%;
       width: 90%;
       height: 1px;
-      background-color: #bbb29b;
-      transform: translateX(-50%);
     }
   }
 }

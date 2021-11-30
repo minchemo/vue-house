@@ -28,13 +28,13 @@
           srcset=""
           uk-parallax="viewport: 0.3;blur:50,0"
         />
-        <h2 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-200,0;x:-200,0">
+        <h2 uk-parallax="viewport: 0.3;blur:40,0;y:-200,0">
           樣品屋內容<br />
           後續會補上圖片
         </h2>
         <div
           class="content"
-          uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:200,0;x:200,0"
+          uk-parallax="viewport: 0.3;blur:40,0;y:200,0"
         >
           後續會補上文案，正對頭前國中永久棟距、都心百米林蔭步道搖曳為鄰，一座被豐盈知識與翠綠大樹關照的家，在『青青』學習如何優雅生活、品味從容日常。
         </div>

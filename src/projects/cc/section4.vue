@@ -2,12 +2,12 @@
   <div class="section4">
     <div class="swiper-box">
       <div class="left">
-        <h2 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-200,0;x:-200,0">
-          20%純住宅用地<br />新名邸特區誕生
+        <h2 uk-parallax="viewport: 0.3;blur:40,0;y:-200,0">
+          <span>20%</span>純住宅用地<br />新名邸特區誕生
         </h2>
         <div
           class="content"
-          uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:200,0;x:200,0"
+          uk-parallax="viewport: 0.3;blur:40,0;y:200,0"
         >
           副都心商業區繁華富域，僅一方稀有20%住宅用地，稀缺價值與一眼難忘的高端住宅區氛圍令各大建築名家爭藏。並進新富選地哲學在北臺灣下一座名邸特區為自己獨占一席，讓回家成為一種優越。
         </div>
@@ -71,6 +71,11 @@
         letter-spacing: size(5);
         margin-bottom: size(100);
         font-family: "Noto Serif TC", serif;
+        span{
+          
+        font-size:1.1em;
+        letter-spacing:0;
+        }
       }
       .content {
         font-size: size(24);
@@ -109,7 +114,7 @@
   .section4 {
     position: relative;
     height: auto;
-    padding: size-m(100) 0 size-m(50) 0;
+    padding: size-m(100) 0 size-m(49) 0;
 
     .swiper-box {
       display: flex;

@@ -138,9 +138,10 @@
     bottom: 0;
     right: 0;
     width: 100%;
-    z-index: 0;
+    z-index:0;
+
     &.inactive {
-      opacity: 0;
+  //    opacity: 0;
     }
   }
 
@@ -152,9 +153,11 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    z-index:1;
+   // z-index: -1;
     opacity: 0;
     transition: opacity 1.5s;
+    pointer-events: none;
 
     &.active {
       opacity: 1;
@@ -171,7 +174,7 @@
     position: relative;
     width: size-m(375);
     height: size-m(667);
-    padding: size-m(50) 0;
+    padding: size-m(50) 0 size-m(100) 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -220,7 +223,7 @@
 
     .bg {
       position: absolute;
-      bottom: -#{size-m(50)};
+      bottom: size-m(0);
       right: 0;
       width: 100%;
       z-index: 0;

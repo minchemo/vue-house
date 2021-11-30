@@ -1,13 +1,13 @@
 <template>
   <div class="section2">
-    <div class="video-box" uk-parallax="viewport:0.3;y:100,0;blur: 50,0"></div>
+    <div class="video-box" uk-parallax="viewport:0.3;y:100,0;blur: 60,0"></div>
     <div class="content">
-      <h2 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-200,0;x:-200,0">
+      <h2 uk-parallax="viewport: 0.3;y:80,0;blur:40,0">
         國際級CBD到位
         <br />
         副都心遠見城市就位
       </h2>
-      <p uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:200,0;x:200,0">
+      <p uk-parallax="viewport: 0.3;y:100,0;blur:40,0">
         全面複製東京新宿副都心規劃，千億建設催生臺灣城市進化奇蹟。比肩信義計劃、看齊新板特區，一座站在巨人肩膀瞭望的國際級商業城市--新莊副都心將驚豔世界。
       </p>
       <img

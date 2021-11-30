@@ -2,7 +2,7 @@
   <div class="GodModView with-mask">
     <div class="view" ref="view">
       <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
-      <!-- <img class="view-hand" ref="viewHand" v-lazy :temp="swipeUrl" alt="" /> -->
+      <img class="view-hand" ref="viewHand" v-lazy :temp="swipeUrl" alt="" />
     </div>
   </div>
 </template>
@@ -11,7 +11,7 @@
 @import "@/assets/style/function.scss";
 .GodModView {
   .view {
-    height: size(816);
+    height: size(817);
     width: 100%;
     overflow: hidden;
     cursor: ew-resize;
@@ -49,7 +49,7 @@
       overflow: hidden;
       .view-hand {
         position: absolute;
-        width: 100px;
+        width: size-m(40);
         z-index: 1;
         top: 25%;
         left: 50%;
@@ -79,9 +79,7 @@ export default {
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
       bgUrl: require("@/projects/cc/s3/bg.jpg"), //置換圖片路徑即可
-      // swipeUrl: !isMobile
-      //   ? require("@/projects/cc/s3/hand.png")
-      //   : require("@/projects/cc/s3/hand-mo.png"), //置換圖片路徑即可
+      swipeUrl: require("@/projects/cc/s3/hand.png")//置換圖片路徑即可
     };
   },
   methods: {

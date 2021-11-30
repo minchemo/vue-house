@@ -2,10 +2,10 @@
   <div class="section7">
     <div class="swiper-box swiper-box-1">
       <div class="left">
-        <h2 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-200,0;x:-200,0">
+        <h2 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-200,0;x:200,0">
           商圈繁錦
         </h2>
-        <h3 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-100,0;x:-100,0">
+        <h3 uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:-100,0;x:100,0">
           雙影城雙百貨 超機能商圈
         </h3>
         <div
@@ -20,7 +20,7 @@
             :data-key="`s7-1-item-${i}`"
             v-for="(item, i) in slides.caption"
             :key="i"
-            :uk-parallax="`viewport:0.2;blur:20,0;x:-${i * 100},0`"
+            :uk-parallax="`viewport:0.2;blur:20,0;x:${i * 100},0`"
             @click="$refs.swiper.$swiper.slideTo(i, 1000, false)"
             v-bind:class="{ active: activeIndex1 == i }"
           >
@@ -62,7 +62,7 @@
         </h3>
         <div
           class="content"
-          uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:200,0;x:200,0"
+          uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:200,0;x:-200,0"
         >
           塭仔底公園，昌平公園、願景公園、中港綠堤水岸前後簇擁，每一次出門都是一場森態小旅行。
         </div>
@@ -72,7 +72,7 @@
             :data-key="`s7-2-item-${i}`"
             v-for="(item, i) in slides2.caption"
             :key="i"
-            :uk-parallax="`viewport:0.2;blur:0,0;x:${i * 100},0`"
+            :uk-parallax="`viewport:0.2;blur:0,0;x:${i * -100},0`"
             @click="$refs.swiper2.$swiper.slideTo(i, 1000, false)"
             v-bind:class="{ active: activeIndex2 == i }"
           >
