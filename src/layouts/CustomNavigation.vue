@@ -11,9 +11,9 @@
       </div>
     </div>
     <div class="custom-navbar" v-if="!isMobile">
-      <div class="link" @click="scrollTo('.custom-footer')">國際CBD</div>
-      <div class="link" @click="scrollTo('.order-now')">新名邸特區</div>
-      <div class="link" @click="scrollTo('.g-map')">校園青建築</div>
+      <div class="link" @click="scrollTo('.section3')">國際CBD</div>
+      <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
+      <div class="link" @click="scrollTo('.section8')">校園青建築</div>
     </div>
     <div
       class="custom-navigation-list"

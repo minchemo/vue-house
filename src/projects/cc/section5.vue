@@ -1,58 +1,60 @@
 <template>
-  <div class="section5">
-    <img
-      class="bg"
-      v-bind:class="{ inactive: active.hasOwnProperty('h') }"
-      v-lazy
-      :temp="
-        isMobile
-          ? require('@/projects/cc/s5/bg-mo.png')
-          : require('@/projects/cc/s5/bg.png')
-      "
-      alt=""
-      srcset=""
-      uk-parallax="viewport:0.3;blur:50,0"
-    />
-    <template v-for="(item, i) in list">
+  <div class="wontchange">
+    <div class="section5">
+      <img
+        class="bg"
+        v-bind:class="{ inactive: active.hasOwnProperty('h') }"
+        v-lazy
+        :temp="
+          isMobile
+            ? require('@/projects/cc/s5/bg-mo.png')
+            : require('@/projects/cc/s5/bg.png')
+        "
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.3;blur:50,0"
+      />
+      <template v-for="(item, i) in list">
+        <div
+          v-if="!isMobile"
+          class="item"
+          v-bind:class="{
+            active: active == item,
+            inactive: active != item && active.hasOwnProperty('h'),
+            last: i == list.length - 1,
+          }"
+          :key="i"
+          @mouseenter="active = item"
+          @mouseleave="active = {}"
+          :uk-parallax="`viewport:0.3;blur:10,0;y:${i * 200},0`"
+        >
+          <img :src="item.t" alt="" srcset="" />
+        </div>
+        <div
+          v-else
+          class="item"
+          v-bind:class="{
+            active: active == item,
+            inactive: active != item && active.hasOwnProperty('h'),
+            last: i == list.length - 1,
+          }"
+          :key="i"
+          @click="active = item"
+        >
+          <img :src="item.t" alt="" srcset="" />
+        </div>
+      </template>
       <div
         v-if="!isMobile"
-        class="item"
-        v-bind:class="{
-          active: active == item,
-          inactive: active != item && active.hasOwnProperty('h'),
-          last: i == list.length - 1,
+        class="hidden"
+        v-bind:class="{ active: active.hasOwnProperty('h') }"
+        v-bind:style="{
+          backgroundImage: `url(${active.h})`,
         }"
-        :key="i"
-        @mouseenter="active = item"
-        @mouseleave="active = {}"
-        :uk-parallax="`viewport:0.3;blur:10,0;y:${i * 200},0`"
-      >
-        <img :src="item.t" alt="" srcset="" />
-      </div>
-      <div
-        v-else
-        class="item"
-        v-bind:class="{
-          active: active == item,
-          inactive: active != item && active.hasOwnProperty('h'),
-          last: i == list.length - 1,
-        }"
-        :key="i"
-        @click="active = item"
-      >
-        <img :src="item.t" alt="" srcset="" />
-      </div>
-    </template>
+      ></div>
+    </div>
     <div
-      v-if="!isMobile"
-      class="hidden"
-      v-bind:class="{ active: active.hasOwnProperty('h') }"
-      v-bind:style="{
-        backgroundImage: `url(${active.h})`,
-      }"
-    ></div>
-    <div
-      v-else
+      v-if="isMobile"
       @click="active = {}"
       class="hidden"
       v-bind:class="{ active: active.hasOwnProperty('h') }"
@@ -65,6 +67,9 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
+.wontchange {
+  will-change: unset;
+}
 .section5 {
   position: relative;
   width: size(1920);
@@ -223,23 +228,23 @@
         opacity: 0;
       }
     }
+  }
 
-    .hidden {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 1.5s;
+  .hidden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1.5s;
 
-      &.active {
-        opacity: 1;
-        z-index: 10;
-      }
+    &.active {
+      opacity: 1;
+      z-index: 1000000;
     }
   }
 }
@@ -264,24 +269,35 @@ export default {
       active: {},
       list: [
         {
-          t: isMobile ? require('@/projects/cc/s5/1-mo.svg') : require('@/projects/cc/s5/1.svg'),
-          h: isMobile ? require('@/projects/cc/s5/1-mo.jpg') : require('@/projects/cc/s5/1.jpg'),
+          t: isMobile
+            ? require("@/projects/cc/s5/1-mo.svg")
+            : require("@/projects/cc/s5/1.svg"),
+          h: isMobile
+            ? require("@/projects/cc/s5/1-mo.jpg")
+            : require("@/projects/cc/s5/1.jpg"),
         },
         {
-          t: isMobile ? require('@/projects/cc/s5/2-mo.svg') : require('@/projects/cc/s5/2.svg'),
-          h: isMobile ? require('@/projects/cc/s5/2-mo.jpg') : require('@/projects/cc/s5/2.jpg'),
+          t: isMobile
+            ? require("@/projects/cc/s5/2-mo.svg")
+            : require("@/projects/cc/s5/2.svg"),
+          h: isMobile
+            ? require("@/projects/cc/s5/2-mo.jpg")
+            : require("@/projects/cc/s5/2.jpg"),
         },
         {
-          t: isMobile ? require('@/projects/cc/s5/3-mo.svg') : require('@/projects/cc/s5/3.svg'),
-          h: isMobile ? require('@/projects/cc/s5/3-mo.jpg') : require('@/projects/cc/s5/3.jpg'),
-        }
-      ]
+          t: isMobile
+            ? require("@/projects/cc/s5/3-mo.svg")
+            : require("@/projects/cc/s5/3.svg"),
+          h: isMobile
+            ? require("@/projects/cc/s5/3-mo.jpg")
+            : require("@/projects/cc/s5/3.jpg"),
+        },
+      ],
     };
   },
 
-  methods: {
-  },
+  methods: {},
 
-  created() { },
+  created() {},
 };
 </script>

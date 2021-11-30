@@ -5,7 +5,7 @@
       <div class="info">
         <div class="item" :key="infos[0]" v-for="infos in houseInfos">
           <h3 class="label">{{ infos[0] }}</h3>
-          <p class="desc" v-html="infos[1]"></p>
+          <a :href="infos[2]" class="desc" target="_blank" v-html="infos[1]" ></a>
         </div>
       </div>
     </div>

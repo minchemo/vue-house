@@ -1,5 +1,5 @@
 <template>
-  <div class="section1">
+  <div class="section1" id="falling-leaves">
     <img
       v-if="!isMobile"
       class="bg"
@@ -26,15 +26,6 @@
       alt=""
       srcset=""
       uk-parallax="viewport:0.3;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
-    />
-    <img
-      v-if="!isMobile"
-      class="leaf2"
-      v-lazy
-      :temp="require('@/projects/cc/s1/leaf2.png')"
-      alt=""
-      srcset=""
-      uk-parallax="viewport:0.3;blur:0,10;y: 0,-30;x:0,-30;rotate:0,5"
     />
     <img
       class="leaf3"
@@ -64,10 +55,21 @@
       srcset=""
       uk-parallax="viewport:0.3;blur:0,10;scale: 1,0.8;x: 0,100"
     />
+    <div class="falling">
+      <!-- <img
+        v-if="!isMobile"
+        class="leaf2"
+        v-lazy
+        :temp="require('@/projects/cc/s1/leaf2.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.3;blur:0,10;y: 0,-30;x:0,-30;rotate:0,5"
+      /> -->
+    </div>
     <div class="divider"></div>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .section1 {
@@ -83,6 +85,15 @@
     height: 100%;
   }
 
+  .falling {
+    width: size(20);
+    height: size(20);
+    position: absolute;
+    background: url("~@/projects/cc/s1/leaf2.png");
+    background-size: 100% 100%;
+    z-index: 0;
+    left: -#{size(20)};
+  }
   .leaf {
     position: absolute;
     z-index: 0;
@@ -90,7 +101,6 @@
     top: size(100);
     height: size(1082);
   }
-
   .leaf2 {
     position: absolute;
     z-index: 0;
@@ -143,6 +153,13 @@
     position: relative;
     height: size-m(667);
     z-index: 1;
+    overflow: hidden;
+
+    .falling {
+      width: size-m(14);
+      height: size-m(14);
+      left: -#{size-m(14)};
+    }
 
     .mo-bg {
       position: absolute;
@@ -213,6 +230,55 @@ export default {
 
   methods: {},
 
-  created() { },
+  mounted() {
+    TweenLite.set("#falling-leaves", { perspective: 600 });
+
+    var total = this.isMobile ? 8 : 15; //落葉數量
+    var container = document.getElementById("falling-leaves"),
+      w = window.innerWidth,
+      h = window.innerHeight;
+
+    for (var i = 0; i < total; i++) {
+      var Div = document.createElement("div");
+      TweenLite.set(Div, {
+        attr: { class: "falling" },
+        x: R(0, w),
+        y: R(-200, -150),
+        z: R(-200, 200),
+      });
+      container.appendChild(Div);
+      animm(Div);
+    }
+
+    function animm(elm) {
+      TweenMax.to(elm, R(6, 15), {
+        y: h + 100,
+        ease: Linear.easeNone,
+        repeat: -1,
+        delay: -15,
+      });
+      TweenMax.to(elm, R(4, 8), {
+        x: "+=100",
+        rotationZ: R(0, 180),
+        repeat: -1,
+        yoyo: true,
+        ease: Sine.easeInOut,
+      });
+      TweenMax.to(elm, R(2, 8), {
+        rotationX: R(0, 360),
+        rotationY: R(0, 360),
+        repeat: -1,
+        yoyo: true,
+        ease: Sine.easeInOut,
+        delay: -5,
+      });
+    }
+
+    function R(min, max) {
+      return min + Math.random() * (max - min);
+    }
+  },
+
+  created() {},
 };
 </script>
