@@ -68,7 +68,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .wontchange {
-  will-change: unset;
+  will-change: unset !important;
 }
 .section5 {
   position: relative;

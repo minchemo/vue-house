@@ -2,8 +2,8 @@
   <div class="GodModView with-mask">
     <div class="view" ref="view">
       <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
-      <div  class="view-hand" ref="viewHand">
-       <img v-lazy :temp="swipeUrl" alt="" />
+      <div class="view-hand" ref="viewHand">
+        <img v-lazy :temp="swipeUrl" alt="" />
       </div>
     </div>
   </div>
@@ -21,16 +21,16 @@
     .view-hand {
       position: absolute;
       z-index: 1;
-      right:0;
-      top:0;
+      right: 0;
+      top: 0;
       width: 100%;
       height: 100%;
       background: #0696;
-      img{
-      position: absolute;
-      top: size(150);
-      width: size(82);
-      animation: move 2s alternate-reverse infinite ease-in-out;
+      img {
+        position: absolute;
+        top: size(150);
+        width: size(82);
+        animation: move 2s alternate-reverse infinite ease-in-out;
       }
       @keyframes move {
         from {
@@ -54,12 +54,12 @@
       height: size-m(604);
       overflow: hidden;
       .view-hand {
-      img{
-      position: absolute;
-        top: 25%;
-        width: size-m(40);
-      animation: move 2s alternate-reverse infinite ease-in-out;
-      }
+        img {
+          position: absolute;
+          top: 25%;
+          width: size-m(40);
+          animation: move 2s alternate-reverse infinite ease-in-out;
+        }
       }
       .view-img {
         height: 100%;
@@ -84,7 +84,7 @@ export default {
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
       bgUrl: require("@/projects/cc/s3/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: require("@/projects/cc/s3/hand.png")//置換圖片路徑即可
+      swipeUrl: require("@/projects/cc/s3/hand.png"), //置換圖片路徑即可
     };
   },
   methods: {
@@ -103,26 +103,29 @@ export default {
       const offset = this.autoScrollViewOffset;
 
       $(imgEl).on("load", () => {
-        const scrollTarget = this.autoScrollView
-          ? (el.scrollWidth - $(window).width()) / 2 + offset
-          : false;
-
         let bs = new BScroll(this.$refs.view, {
+          probeType: 2,
           scrollX: true,
           scrollY: true,
           disableTouch: false,
+            disableMouse: false,
           bindToWrapper: true,
-          eventPassthrough: 'vertical',
+          eventPassthrough: "vertical",
           bounce: false,
         });
         bs.scrollTo(bs.maxScrollX / 2, 500);
-
         setTimeout(() => {
-          $(el).one("scroll", () => {
-            if (self.isMobile) return;
-            $(handEl).fadeOut();
+          bs.on("scroll", () => {
+            $(this.$refs.viewHand).fadeOut();
           });
-        }, 100);
+        }, 1000);
+
+        // setTimeout(() => {
+        //   $(el).one("scroll", () => {
+        //     if (self.isMobile) return;
+        //     $(handEl).fadeOut();
+        //   });
+        // }, 100);
       });
     },
     setViewBgHeight() {
