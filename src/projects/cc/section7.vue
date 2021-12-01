@@ -20,7 +20,7 @@
             :data-key="`s7-1-item-${i}`"
             v-for="(item, i) in slides.caption"
             :key="i"
-            :uk-parallax="`viewport:0.2;blur:20,0;x:${i * 100},0`"
+            :uk-parallax="`viewport:0.1;blur:20,0;x:${i * 100},0`"
             @click="$refs.swiper.$swiper.slideTo(i, 1000, false)"
             v-bind:class="{ active: activeIndex1 == i }"
           >
@@ -142,7 +142,6 @@
     background-image: url("../../projects/cc/s6/bg2.png");
     background-position: top;
     background-size: cover;
-    
   }
 
   .swiper-box {
@@ -262,24 +261,24 @@
             height: size(98);
             font-size: size(36);
             text-align: center;
-            line-height:1.6;
+            line-height: 1.6;
             letter-spacing: 0.2em;
             background-size: 100%;
             transition: all 0.4s;
-            margin-bottom:0.8em;
+            margin-bottom: 0.8em;
             font-weight: 300;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid #fff;
-            border-radius:1.2em;
-            padding-left:2.1em;
+            border-radius: 1.2em;
+            padding-left: 2.1em;
             transition: all 0s;
             cursor: pointer;
             img {
               object-fit: cover;
-              border-radius:50%;
-              height:2em;
+              border-radius: 50%;
+              height: 2em;
               position: absolute;
               left: 0.3em;
             }
@@ -534,6 +533,7 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-nav .next",
@@ -546,6 +546,7 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-nav .next",

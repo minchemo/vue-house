@@ -4,11 +4,9 @@
       <div class="left" uk-parallax="viewport: 0.3;y:100,0;">
         <h2 uk-parallax="viewport: 0.3;blur:40,0;y:-200,0;">
           交通百匯<br />
-          3高3快3捷&nbsp;瞬移速可達</h2>
-        <div
-          class="content"
-          uk-parallax="viewport: 0.3;blur:40,0;y:200,0"
-        >
+          3高3快3捷&nbsp;瞬移速可達
+        </h2>
+        <div class="content" uk-parallax="viewport: 0.3;blur:40,0;y:200,0">
           駕上輕車10分鐘上五股交流道或速接台64、65。<br
             v-if="!isMobile"
           />新北唯一3線捷運環抱行政區，雙北悠遊隨行。
@@ -295,6 +293,7 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-nav .next",

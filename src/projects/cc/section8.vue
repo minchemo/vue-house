@@ -24,10 +24,7 @@
           校園第一排<br />
           被知識景仰的家
         </h2>
-        <div
-          class="content"
-          uk-parallax="viewport: 0.3;blur:40,0;y:200,0;"
-        >
+        <div class="content" uk-parallax="viewport: 0.3;blur:40,0;y:200,0;">
           正對頭前國中永久棟距、都心百米林蔭步道搖曳為鄰，一座被豐盈知識與翠綠大樹關照的家，在『青青』學習如何優雅生活、品味從容日常。
         </div>
         <img
@@ -137,7 +134,8 @@
         padding-bottom: size(80);
         .slide {
           position: relative;
-          background-size: cover;background-position: center;
+          background-size: cover;
+          background-position: center;
           .caption {
             position: absolute;
             left: size(60);
@@ -315,6 +313,7 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-nav .next",
