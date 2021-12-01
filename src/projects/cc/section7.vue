@@ -64,7 +64,7 @@
           class="content"
           uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:200,0;x:-200,0"
         >
-          塭仔底溼地公園
+          塭仔底溼地公園，昌平公園、願景公園、中港綠堤水岸前後簇擁，每一次出門都是一場森態小旅行。
         </div>
         <div class="items s7-item-2">
           <div
@@ -173,7 +173,6 @@
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(10);
-        font-family: "Noto Serif TC", serif;
       }
     }
 
@@ -254,7 +253,7 @@
         }
         .content {
           width: size(570);
-          text-align: left;
+          text-align: justify;
         }
         .items {
           margin-top: size(50);
@@ -263,34 +262,28 @@
             height: size(98);
             font-size: size(36);
             text-align: center;
-            line-height: size(56);
+            line-height:1.6;
+            letter-spacing: 0.2em;
             background-size: 100%;
             transition: all 0.4s;
-            margin-bottom: size(30);
+            margin-bottom:0.8em;
+            font-weight: 300;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid #fff;
-            border-radius: size(40);
-            padding-left: size(75);
+            border-radius:1.2em;
+            padding-left:2.1em;
             transition: all 0s;
+            cursor: pointer;
             img {
               object-fit: cover;
-              border-radius: 100px;
-              height: size(75);
+              border-radius:50%;
+              height:2em;
               position: absolute;
-              left: size(10);
+              left: 0.3em;
             }
-            span {
-              font-weight: 300;
-              letter-spacing: size(26);
-              font-family: "Noto Serif TC", serif;
-            }
-            &:hover {
-              cursor: pointer;
-              background: rgba(255, 255, 255, 0.4);
-              border-width: 0;
-            }
+            &:hover,
             &.active {
               background: rgba(255, 255, 255, 0.4);
               border-width: 0;
@@ -457,7 +450,6 @@
           }
           .content {
             width: auto;
-            text-align: left;
           }
           .items {
             margin-top: size-m(20);
@@ -470,39 +462,8 @@
               min-width: size-m(163.44);
               min-height: size-m(43.63);
               font-size: size-m(14);
-              text-align: center;
-              line-height: size-m(43.63);
-              background-size: 100%;
-              transition: all 0.4s;
               margin-bottom: 0;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border: 1px solid #fff;
-              border-radius: size-m(15);
-              padding-left: size-m(34);
-              transition: all 0s;
               margin-right: size-m(10);
-              img {
-                object-fit: cover;
-                border-radius: 100px;
-                height: size-m(34);
-                position: absolute;
-                left: size-m(5);
-              }
-              span {
-                font-weight: 300;
-                letter-spacing: size(26);
-              }
-              &:hover {
-                cursor: pointer;
-                background: rgba(255, 255, 255, 0.4);
-                border-width: 0;
-              }
-              &.active {
-                background: rgba(255, 255, 255, 0.4);
-                border-width: 0;
-              }
             }
           }
         }

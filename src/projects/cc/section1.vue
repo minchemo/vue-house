@@ -25,7 +25,7 @@
       :temp="require('@/projects/cc/s1/leaf.png')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.8;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
     />
     <img
       class="leaf3"
@@ -45,7 +45,7 @@
       :temp="require('@/projects/cc/s1/deer.gif')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.8;blur:0,10;scale: 1,1.5;x: 0,-50;opacity:1,0"
+      uk-parallax="viewport:1;blur:0,10;scale: 1,1.5;x: 0,-50;opacity:1,0"
     />
     <img
       class="logo"
@@ -53,7 +53,7 @@
       :temp="require('@/projects/cc/s1/logo.svg')"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.8;blur:0,10;scale: 1,1.5;x: 0,-10;opacity:1,0"
+      uk-parallax="viewport:1;blur:0,10;scale: 1,1.5;x: 0,-10;opacity:1,0"
     />
     <div class="falling">
       <!-- <img
@@ -78,6 +78,7 @@
   min-height: size(950);
   max-height: size(1130);
   background: #fff;
+  z-index: 1;
   &::before{
     content: "";
     position: absolute;

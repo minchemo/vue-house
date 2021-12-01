@@ -4,8 +4,7 @@
       <div class="left" uk-parallax="viewport: 0.3;y:100,0;">
         <h2 uk-parallax="viewport: 0.3;blur:40,0;y:-200,0;">
           交通百匯<br />
-          3高3快3捷&nbsp;瞬移速可達
-        </h2>
+          3高3快3捷&nbsp;瞬移速可達</h2>
         <div
           class="content"
           uk-parallax="viewport: 0.3;blur:40,0;y:200,0"
@@ -106,6 +105,7 @@
         margin-bottom: size(50);
         font-family: "Noto Serif TC", serif;
         z-index: 1;
+        white-space: nowrap;
       }
       .content {
         font-size: size(24);
@@ -135,6 +135,7 @@
         .slide {
           position: relative;
           background-size: cover;
+          background-position: center;
           .caption {
             position: absolute;
             left: size(60);
@@ -233,36 +234,22 @@
           width: size-m(375);
           height: size-m(183);
           .slide {
-            position: relative;
-            background-size: cover;
             .caption {
-              position: absolute;
               left: size-m(20);
               bottom: size-m(10);
               font-size: size-m(15);
-              color: #fff;
               filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.9));
             }
           }
         }
         .swiper-nav {
-          position: absolute;
-          width: 100%;
           bottom: size-m(65);
-          left: 0;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
           padding: 0 size-m(10);
           z-index: 10;
           .prev,
           .next {
             width: size-m(31);
             height: size-m(31);
-            cursor: pointer;
-            img {
-              width: 100%;
-            }
           }
         }
       }

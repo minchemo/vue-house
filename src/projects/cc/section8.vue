@@ -137,7 +137,7 @@
         padding-bottom: size(80);
         .slide {
           position: relative;
-          background-size: cover;
+          background-size: cover;background-position: center;
           .caption {
             position: absolute;
             left: size(60);
