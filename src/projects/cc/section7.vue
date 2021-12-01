@@ -524,9 +524,9 @@ export default {
       },
       slides2:
       {
-        img: [require("@/projects/cc/s7/a.jpg"), require("@/projects/cc/s7/b.jpg"), require("@/projects/cc/s7/c.jpg"), require("@/projects/cc/s7/d.jpg")],
+        img: [require("@/projects/cc/s7/a.jpg"), require("@/projects/cc/s7/c.jpg"), require("@/projects/cc/s7/b.jpg"), require("@/projects/cc/s7/d.jpg")],
         caption: ['昌平公園', '塭仔底溼地公園', '願景公園', '中港綠堤'],
-        avatar: [require("@/projects/cc/s7/a-avatar.jpg"), require("@/projects/cc/s7/b-avatar.jpg"), require("@/projects/cc/s7/c-avatar.jpg"), require("@/projects/cc/s7/d-avatar.jpg")]
+        avatar: [require("@/projects/cc/s7/a-avatar.jpg"), require("@/projects/cc/s7/c-avatar.jpg"), require("@/projects/cc/s7/b-avatar.jpg"), require("@/projects/cc/s7/d-avatar.jpg")]
       },
       swiperOptions: {
         loop: false,

@@ -307,7 +307,7 @@ export default {
       slides:
       {
         img: [require("@/projects/cc/s8/1.jpg"), require("@/projects/cc/s8/2.jpg"), require("@/projects/cc/s8/3.jpg"), require("@/projects/cc/s8/4.jpg")],
-        caption: ['頭前國中', '新莊高中', '昌平國小', '吉得堡幼兒園'],
+        caption: ['頭前國中', '新莊高中', '昌平國小', '吉的堡幼兒園'],
       },
       swiperOptions: {
         loop: true,

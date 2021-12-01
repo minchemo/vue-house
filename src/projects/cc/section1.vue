@@ -139,9 +139,9 @@
   .logo {
     position: absolute;
     z-index: 1;
-    right: size(500);
+    right: size(430);
     top: calc(50% + (300 - 540) * 100vw / 1920);
-    width: size(342);
+    width: size(320);
   }
 
   .divider {
@@ -203,7 +203,7 @@
     .logo {
       right: size-m(50);
       top: size-m(180);
-      width: size-m(200);
+      width: size-m(160);
     }
 
     .divider {
