@@ -39,7 +39,7 @@
             data-aos-duration="2000"
             data-aos-delay="600"
           />
-          <div
+          <!--<div
             class="order-btn"
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -50,7 +50,7 @@
               }"
           >
             立即預約
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
