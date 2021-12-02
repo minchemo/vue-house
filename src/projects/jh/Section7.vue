@@ -86,7 +86,7 @@
 
   .menu-title {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     color: #ffe1a6;
     transition: all 0.3s;
@@ -124,7 +124,7 @@
     justify-content: flex-start;
     h3 {
       font-size: 44.5px;
-      font-weight: 600;
+      font-weight: 500;
       text-align: left;
       color: #ffffff;
     }

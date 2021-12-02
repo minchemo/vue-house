@@ -115,8 +115,8 @@
       h2 {
         font-size: size(29);
         margin-bottom: size(30);
-        font-family: "Noto Sans TC", Noto Sans TC, serif;
-        font-weight: 600;
+        
+        font-weight: 500;
       }
       .divider {
         width: 100%;
@@ -129,8 +129,7 @@
           font-size: size(24);
           display: flex;
           margin: size(30) 0;
-          font-family: "Noto Sans TC", Noto Sans TC, serif;
-          font-weight: 600;
+          font-weight: 500;
           .label {
             color: #267f98;
           }
@@ -146,8 +145,7 @@
       h2 {
         font-size: size(29);
         margin-bottom: size(30);
-        font-family: "Noto Sans TC", Noto Sans TC, serif;
-        font-weight: 600;
+        font-weight: 500;
       }
       .el-select {
         margin-left: 0;
@@ -177,7 +175,7 @@
         .form-check {
           transform: scale(1.5);
           transform-origin: left;
-          font-family: "Noto Sans TC";
+      //    font-family: "Noto Sans TC";
           .el-checkbox__input.is-checked + .el-checkbox__label {
             color: #000;
           }
@@ -191,8 +189,8 @@
         line-height: size(53);
         font-size: size(20);
         cursor: pointer;
-        font-family: "Noto Sans TC", Noto Sans TC, serif;
-        font-weight: 600;
+     //   font-family: "Noto Sans TC", Noto Sans TC, serif;
+        font-weight: 500;
 
         &:hover {
           background-color: #146379;
@@ -297,7 +295,7 @@
           .form-check {
             transform: scale(1);
             transform-origin: left;
-            font-family: "Noto Sans TC";
+        //    font-family: "Noto Sans TC";
             .el-checkbox__input.is-checked + .el-checkbox__label {
               color: #000;
             }

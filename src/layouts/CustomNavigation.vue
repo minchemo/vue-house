@@ -37,7 +37,7 @@
         </li>
       </ul>
     </div>
-    <div class="func-btn">
+    <div class="func-btn" v-if="!isMobile">
       <a class="link" href="#" @click="isShowCallDialog = !isShowCallDialog">
         <img src="@/projects/cc/icon1.png" alt="" srcset="" />
       </a>
@@ -278,8 +278,7 @@ $hamburger-layer-color: #fff;
       margin-left: size(30);
       padding-left: size(30);
       letter-spacing: size(8);
-      color: #bbb29b;
-      font-family: "Noto Serif TC", serif;
+      color: #5406;
       &:hover {
         opacity: 0.7;
         cursor: pointer;

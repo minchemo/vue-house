@@ -82,19 +82,17 @@
       }
       h2 {
         font-size: size(50);
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1.3;
         letter-spacing: size(15);
         margin-bottom: size(60);
         margin-top: size(20);
-        font-family: "Noto Serif TC", serif;
       }
       .content {
         font-size: size(24);
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(10);
-        font-family: "Noto Serif TC", serif;
       }
     }
 
@@ -141,17 +139,19 @@
           width: size-m(75);
         }
         h2 {
-          font-size: size-m(19);
+          font-size: size-m(22);
           line-height: 1.5;
           letter-spacing: size-m(10);
           margin-bottom: size-m(20);
           margin-top: size-m(40);
+    letter-spacing: 0.2em;
         }
         .content {
           font-size: size-m(15);
           font-weight: 300;
           line-height: 1.5;
-          letter-spacing: size-m(10);
+    letter-spacing: 0.1em;
+        text-align: justify;
         }
       }
 

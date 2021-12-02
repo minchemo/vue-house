@@ -14,6 +14,7 @@
 html,
 body {
     overflow-x: hidden;
+  //  font-family: $family2;
     *::-webkit-scrollbar {
         // display: none;
     }
@@ -39,10 +40,12 @@ body {
 
 .home {
     background: $bg;
+//    font-family: $family2;
     padding-top: $nav_pc_height;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
+    background-size: auto;
+  //  background-position: top;
+    background-repeat:repeat;
+    background-attachment: fixed;
     overflow: hidden; //試底下多的那塊哪來的
 
     &.no-padding-top {

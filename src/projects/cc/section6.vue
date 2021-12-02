@@ -33,7 +33,7 @@
           :options="swiperOptions"
           ref="swiper"
           class="swiper-wrapper"
-          uk-parallax="viewport:0.3;y:  -100,0"
+          uk-parallax="viewport:0.3;y:-100,0"
         >
           <swiper-slide
             class="slide"
@@ -97,11 +97,10 @@
 
       h2 {
         font-size: size(50);
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1.2;
         letter-spacing: size(15);
         margin-bottom: size(50);
-        font-family: "Noto Serif TC", serif;
         z-index: 1;
         white-space: nowrap;
       }
@@ -111,7 +110,6 @@
         line-height: 2;
         letter-spacing: size(5);
         margin-bottom: size(20);
-        font-family: "Noto Serif TC", serif;
         z-index: 1;
       }
       .textimg {
@@ -141,7 +139,6 @@
             font-size: size(36);
             color: #fff;
             filter: drop-shadow(5px 12px 4px rgba(0, 0, 0, 0.9));
-            font-family: "Noto Serif TC", serif;
           }
         }
       }
@@ -201,19 +198,18 @@
         }
 
         h2 {
-          font-size: size-m(19);
-          font-weight: 300;
-          line-height: 1.2;
-          letter-spacing: size-m(5);
+          font-size: size-m(22);
+          line-height: 1.4;
+          letter-spacing: 0.1em;
           margin-bottom: size-m(20);
         }
         .content {
           font-size: size-m(15);
-          font-weight: 300;
-          line-height: 2;
-          letter-spacing: size-m(5);
+          line-height:1.7;
+          letter-spacing: 0.1em;
           margin-bottom: size-m(20);
           width: 80%;
+        text-align: justify;
         }
         .textimg {
           width: size-m(75);

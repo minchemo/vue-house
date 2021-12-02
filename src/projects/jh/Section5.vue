@@ -61,7 +61,7 @@
 
   .title {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: left;
     color: #312000;
   }
@@ -127,7 +127,7 @@
 
     .title {
       font-size: 27px;
-      font-weight: 600;
+      font-weight: 500;
       text-align: left;
       color: #312000;
     }

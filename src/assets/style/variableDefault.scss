@@ -11,7 +11,7 @@ $logo_phone_width: 90px;
 
 $contact_logo_pc_width: 300px;
 $contact_logo_tablet_width: 280px;
-$contact_logo_mobile_width: 280px;
+$contact_logo_mobile_width: calc(100vw * 250 / 375);
 // for calculate
 $nav_pc_height_number: 60;
 $nav_tablet_height_number: 60;

@@ -59,15 +59,14 @@
     justify-content: flex-end;
     .left {
       width: size(485);
-      text-align: left;
+        text-align: justify;
       margin-right: size(120);
       h2 {
         font-size: size(61);
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1.2;
         letter-spacing: size(5);
         margin-bottom: size(100);
-        font-family: "Noto Serif TC", serif;
         span {
           font-size: 1.1em;
           letter-spacing: 0;
@@ -78,7 +77,6 @@
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(5);
-        font-family: "Noto Serif TC", serif;
       }
     }
 
@@ -108,34 +106,30 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section4 {
-    position: relative;
-    height: auto;
     padding: size-m(100) 0 size-m(49) 0;
 
     .swiper-box {
-      display: flex;
       align-items: flex-end;
       justify-content: center;
       flex-direction: column;
       .left {
         width: size-m(343);
-        text-align: left;
         margin-right: 0;
         margin-bottom: size-m(30);
         h2 {
-          font-size: size-m(19);
-          font-weight: 300;
-          line-height: 1.5;
-          letter-spacing: size(5);
+          font-size: size-m(22);
+          line-height: 1.4;
+          letter-spacing: 0.1em;
           margin-bottom: size-m(40);
           padding-left: size-m(50);
+        text-align: justify;
         }
         .content {
           font-size: size-m(15);
-          font-weight: 300;
-          line-height: 2;
-          letter-spacing: size(5);
+          line-height:1.7;
+          letter-spacing: 0.1em;
           padding-right: size-m(20);
+        text-align: justify;
         }
       }
 
@@ -143,18 +137,8 @@
         .swiper-wrapper {
           width: size-m(343);
           height: size-m(161.56);
-          .slide {
-            background-size: cover;
-          }
         }
       }
-    }
-
-    .bg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
     }
   }
 }

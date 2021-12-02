@@ -241,13 +241,13 @@ export default {
 .section .fp-tableCell {
   will-change: transform, opacity;
 }
-
+/*
 .section {
   background-image: url("../projects/cc/bg.jpg");
   background-position: center;
   background-repeat: repeat;
 }
-
+*/
 .fp-left {
   margin-left: 12px;
 }
@@ -306,8 +306,10 @@ export default {
     left: 0;
     justify-content: space-around;
   }
+  /*
   .section {
     background-image: url("../projects/cc/bg-mo.jpg");
   }
+  */
 }
 </style>

@@ -65,7 +65,7 @@ export default {
   font-size: 32px;
   line-height: 36px;
   margin: 60px 0;
-  font-weight: bold;
+  font-weight: 500;
   color: $house_title_color;
   font-family: $family3;
   width: 80vw;
