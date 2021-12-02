@@ -8,7 +8,6 @@ export default {
     caseName: "青青",
     indigatorLength: 10,
     houseInfos: [
-        ["建案名稱", "青青"],
         ["建物型態", "住宅大樓"],
         ["格局規劃", "16~31坪"],
         ["建設公司", "茂德機構 精業建設"],

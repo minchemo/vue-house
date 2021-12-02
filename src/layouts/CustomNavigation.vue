@@ -14,7 +14,7 @@
       <div class="link" @click="scrollTo('.section1')">
         <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
       </div>
-      <div class="link" @click="scrollTo('.section3')">國際CBD</div>
+      <div class="link" @click="scrollTo('.section2 .content')">國際CBD</div>
       <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
       <div class="link" @click="scrollTo('.section6')">生活新風貌</div>
       <div class="link" @click="scrollTo('.section8')">校園第一排</div>
@@ -25,6 +25,10 @@
       v-bind:class="isOpen ? 'is-active' : ''"
     >
       <ul class="navlist">
+      <li class="link logo" 
+          @click="setActive('青青','', '.section1')">
+        <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
+      </li>
         <li
           :key="item.name"
           v-bind:class="item.name == activeSection ? 'active' : ''"
@@ -225,7 +229,12 @@ $hamburger-layer-color: #fff;
         border-top: 1px solid hsla(0, 0%, 100%, 0.4);
         overflow: hidden;
         position: relative;
-
+&.logo{
+  margin-top:-30px ;
+  border-top: 0;
+  img{
+  width: 100px;
+}}
         &.active {
           background: rgba(0, 0, 0, 0.6);
           color: #fff;

@@ -1,7 +1,7 @@
 <template>
   <div class="section2">
     <div class="video-box" uk-parallax="viewport:0.3;y:100,0;blur: 60,0"></div>
-    <div class="content">
+    <div id="section2-t" class="content section2-t">
       <h2 uk-parallax="viewport: 0.3;y:80,0;blur:40,0">
         國際級CBD到位
         <br />
@@ -72,7 +72,8 @@
   }
   .content {
     width: size(1000);
-    margin: size(150) auto size(80) auto;
+    margin:auto;
+    padding:size(150) 0 size(80) 0;
     z-index: 1;
     letter-spacing: 0.1em;
 
@@ -115,7 +116,8 @@
 
     .content {
       width: 80%;
-      margin: size-m(100) auto size-m(50) auto;
+      margin: size-m(10) auto size-m(50) auto;
+      padding: size-m(90) 0 0 0;
       z-index: 2;
       position: relative;
 

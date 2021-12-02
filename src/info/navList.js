@@ -3,10 +3,10 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section3",
+        section: "section2-t",
         svgSrc: "",
-        offset: 0,
-        mobileOffset: 0
+        offset:-100,
+        mobileOffset:-100
     },
     {
         name: "新名邸特區",
