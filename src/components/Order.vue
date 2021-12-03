@@ -168,7 +168,7 @@
 
     <ContactInfo />
     <GoogleMap />
-    <PolicyDialog :policyVisible="policyVisible" />
+    <PolicyDialog :policyVisible="policyVisible"  @hidePolicyDialog="hidePolicyDialog" />
   </div>
 </template>
 
@@ -231,6 +231,9 @@ export default {
   methods: {
     showPolicyDialog() {
       this.policyVisible = true;
+    },
+    hidePolicyDialog(){
+      this.policyVisible = false;
     },
 
     alertValidate() {
