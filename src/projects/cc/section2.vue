@@ -1,6 +1,6 @@
 <template>
   <div class="section2">
-    <div class="video-box" uk-parallax="viewport:0.3;y:100,0;blur: 60,0"></div>
+  <!--  <div class="video-box" uk-parallax="viewport:0.3;y:100,0;blur: 60,0"></div>  -->
     <div id="section2-t" class="content section2-t">
       <h2 uk-parallax="viewport: 0.3;y:80,0;blur:40,0">
         國際級CBD到位
@@ -35,7 +35,7 @@
 .section2 {
   position: relative;
   height: auto;
-  padding-top: size(100);
+ // padding-top: size(100);
   padding-bottom: size(20);
 
   .bg {
@@ -103,7 +103,7 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section2 {
-    padding-top: size-m(100);
+  //  padding-top: size-m(100);
     padding-bottom: size-m(20);
 
     .bg {

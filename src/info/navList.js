@@ -38,6 +38,7 @@ export default [{
         offset: 0,
         mobileOffset: 0
     },
+    /*
     {
         name: "人文青建築",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
@@ -48,4 +49,6 @@ export default [{
         offset: 0,
         mobileOffset: 0
     }
+
+    */
 ];

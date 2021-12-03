@@ -10,9 +10,9 @@
       <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
       <Section8 class="section" data-scroll />
-      <Section9 class="section" data-scroll />
+   <!--   <Section9 class="section" data-scroll />
       <Section10 class="section" data-scroll />
-      <Section11 class="section" data-scroll />
+      <Section11 class="section" data-scroll />  -->
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />

@@ -18,7 +18,7 @@
       <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
       <div class="link" @click="scrollTo('.section6')">生活新風貌</div>
       <div class="link" @click="scrollTo('.section8')">校園第一排</div>
-      <div class="link" @click="scrollTo('.section9')">人文青建築</div>
+    <!--  <div class="link" @click="scrollTo('.section9')">人文青建築</div>  -->
     </div>
     <div
       class="custom-navigation-list"
