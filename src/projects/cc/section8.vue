@@ -247,8 +247,8 @@
         margin-top: size-m(40);
         .swiper-wrapper {
           width: size-m(375);
-          height: size-m(164.45);
-          padding-bottom: size(80);
+          height: size-m(190);
+          padding-bottom: size(0);
           .slide {
             position: relative;
             background-size: cover;

@@ -116,7 +116,7 @@
 
     .content {
       width: 80%;
-      margin: size-m(10) auto size-m(50) auto;
+      margin: size-m(0) auto size-m(50) auto;
       padding: size-m(90) 0 0 0;
       z-index: 2;
       position: relative;
