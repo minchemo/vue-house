@@ -302,8 +302,18 @@ export default {
       isMobile,
       slides:
       {
-        img: [require("@/projects/cc/s8/1.jpg"), require("@/projects/cc/s8/2.jpg"), require("@/projects/cc/s8/3.jpg"), require("@/projects/cc/s8/4.jpg")],
-        caption: ['頭前國中', '新莊高中', '昌平國小', '吉的堡幼兒園'],
+        img: [
+         require("@/projects/cc/s8/4.jpg"), 
+         require("@/projects/cc/s8/3.jpg"),
+         require("@/projects/cc/s8/1.jpg"), 
+         require("@/projects/cc/s8/2.jpg"), 
+         ],
+        caption: [
+          '吉的堡幼兒園',
+          '昌平國小',
+          '頭前國中',
+          '新莊高中',
+        ],
       },
       swiperOptions: {
         loop: true,

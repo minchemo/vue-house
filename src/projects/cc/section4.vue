@@ -113,7 +113,7 @@
       justify-content: center;
       flex-direction: column;
       .left {
-        width: size-m(343);
+        width: 100%;
         margin-right: 0;
         margin-bottom: size-m(30);
         h2 {
@@ -121,14 +121,14 @@
           line-height: 1.4;
           letter-spacing: 0.1em;
           margin-bottom: size-m(40);
-          padding-left: size-m(50);
-        text-align: justify;
+          padding-right:0;
+        text-align: center;
         }
         .content {
           font-size: size-m(15);
           line-height:1.7;
           letter-spacing: 0.1em;
-          padding-right: size-m(20);
+          padding: 0 2.2em;
         text-align: justify;
         }
       }
