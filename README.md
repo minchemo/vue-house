@@ -1,3 +1,3 @@
-# ** CC 青青 **
+# ** GP 青茵悅 **
 
 - 替換顏色統一在 src/assets/style/variable.scss 新增(從 variableColor.scss 複製)

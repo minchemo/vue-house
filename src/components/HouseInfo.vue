@@ -5,7 +5,12 @@
       <div class="info">
         <div class="item" :key="infos[0]" v-for="infos in houseInfos">
           <h3 class="label">{{ infos[0] }}</h3>
-          <a :href="infos[2]" class="desc" target="_blank" v-html="infos[1]" ></a>
+          <a
+            :href="infos[2]"
+            class="desc"
+            target="_blank"
+            v-html="infos[1]"
+          ></a>
         </div>
       </div>
     </div>
@@ -34,7 +39,7 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  background: url("../assets/img/housebg.jpg");
+  //background: url("../assets/img/housebg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -42,23 +47,13 @@ export default {
   z-index: 1;
 }
 .content {
-  width: 686px;
+  width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 8vh;
-
-  .decor-6 {
-    width: 35vw;
-    bottom: 0;
-    right: 10vw;
-    z-index: -1;
-    img {
-      width: 100%;
-    }
-  }
+  padding-bottom: 50px;
 }
 
 .title {
@@ -81,7 +76,7 @@ export default {
   font-size: 24px;
   margin-bottom: 30px;
   margin-right: 160px;
-  width: 260px;
+  width: 500px;
   height: 30px;
   border-left: 4px solid $house_border_color;
   padding-left: 12px;
@@ -130,7 +125,7 @@ export default {
 
   .item {
     margin-bottom: 20px;
-    margin-right: 0;
+    margin-right: 20px;
     width: 100%;
     height: auto;
     margin-left: 20px;

@@ -8,7 +8,6 @@
           class="logo"
           :temp="require('@/assets/img/contact-logo.png')"
           :alt="info.caseName"
-          uk-parallax="viewport:0.3;y:100,0"
         />
         <img
           v-if="isMobile"
@@ -16,7 +15,6 @@
           v-lazy
           :temp="require('@/assets/img/contact-logo.png')"
           :alt="info.caseName"
-          uk-parallax="viewport:0.6;y:100,0"
         />
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
@@ -137,7 +135,7 @@ export default {
 #contact-info {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -90%);
   z-index: 15;
 }
 .order-bg-draw {
@@ -165,10 +163,10 @@ export default {
 }
 
 .contact-info {
-  //background: $contact_bg;
+  background: $contact_bg;
   // background-image: url('../assets/img/contact_bg.jpg');/
   background-size: cover;
-  //box-shadow: $contact_shadow;
+  box-shadow: $contact_shadow;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -233,9 +231,8 @@ export default {
 }
 
 .logo {
-  width: $contact_logo_pc_width;
-  height: auto;
-  margin: 0 auto 100px auto;
+  height: 200px;
+  margin: 20px auto;
   z-index: 1;
 }
 .info {
@@ -308,7 +305,7 @@ export default {
   width: 600px;
   height: 60px;
   font-size: 18px;
-  background: #dcdddd;
+  background: #fff;
   font-weight: 300;
   box-shadow: $contact_btn_border;
   border-radius: $contact_btn_addr_border_radius;

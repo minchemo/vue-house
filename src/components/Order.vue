@@ -1,5 +1,5 @@
 <template>
-  <div class="order-bg">
+  <div class="order-bg" ref="parallax2">
     <div class="order-top">
       <!-- <div class="title-block">
         <h3 class="title">{{order.title}}</h3>
@@ -9,22 +9,23 @@
       <!-- <div class="order-title-img">
         <img src="~@/assets/img/order-title.png" alt="" srcset="">
       </div> -->
+
       <img
-        v-if="!isMobile"
-        class="bg-img"
-        src="@/projects/cc/contact.png"
+        class="contact1 parallax-item"
+        data-depth="0.2"
+        src="@/projects/gp/contact.png"
         alt=""
         srcset=""
-        uk-parallax="viewport:0.8;y:200,0;"
       />
       <img
-        v-else
-        class="bg-img"
-        src="@/projects/cc/contact-mo.png"
+        class="contact2 parallax-item"
+        data-depth="0.4"
+        src="@/projects/gp/contact-2.png"
         alt=""
         srcset=""
-        uk-parallax="viewport:0.8;y:0;"
       />
+      <img class="wave" src="@/projects/gp/s1/wave.svg" alt="" srcset="" />
+
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
@@ -168,7 +169,10 @@
 
     <ContactInfo />
     <GoogleMap />
-    <PolicyDialog :policyVisible="policyVisible" />
+    <PolicyDialog
+      :policyVisible="policyVisible"
+      @hidePolicyDialog="hidePolicyDialog"
+    />
   </div>
 </template>
 
@@ -228,9 +232,21 @@ export default {
     },
   },
 
+  mounted() {
+
+    const elem = this.$refs.parallax2;
+
+    var parallaxInstance = new Parallax(elem, {
+      relativeInput: true,
+      selector: '.parallax-item'
+    });
+  },
   methods: {
     showPolicyDialog() {
       this.policyVisible = true;
+    },
+    hidePolicyDialog() {
+      this.policyVisible = false;
     },
 
     alertValidate() {
@@ -339,6 +355,35 @@ export default {
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/function.scss";
 
+.contact1 {
+  position: absolute;
+  left: size(200);
+  width: size(756);
+}
+
+.contact2 {
+  position: absolute;
+  right: -#{size(50)};
+  width: size(148);
+}
+.wave {
+  position: absolute;
+  left: 0;
+  top: size(760);
+  height: size(121);
+  z-index: 0;
+  animation: wave 13s infinite alternate-reverse ease-in-out, fadeIn 1.5s;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-75%, 0, 0);
+  }
+}
 .bg-img {
   width: 110%;
   position: absolute;
@@ -355,6 +400,7 @@ export default {
   background-position: top;
   font-family: $family3;
   // padding-top: 10vw;
+  pointer-events: unset !important;
 
   input,
   textarea,
@@ -371,7 +417,7 @@ export default {
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 700px;
+    padding-bottom: 500px;
   }
   .order-title {
     font-family: $family1;
@@ -381,14 +427,15 @@ export default {
     font-weight: 300;
     line-height: 1.3;
     font-size: size(50);
-    letter-spacing: size(30);
+    letter-spacing: size(10);
+    text-indent: size(10);
     text-align: center;
+
     color: $order_title_color;
     margin: 0 auto;
     margin-bottom: size(20);
     display: inline-block;
     font-family: "Noto Serif TC", serif;
-
   }
   .order-title-img {
     width: 30vw;
@@ -529,9 +576,29 @@ export default {
 /* 螢幕尺寸標準 */
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .bird {
-    width: 100vw;
+  .contact1 {
+    left: -#{size-m(80)};
+    width: size-m(410);
+    top: size-m(50);
   }
+
+  .contact2 {
+    right: -#{size-m(15)};
+    width: size-m(64);
+    top: 0;
+  }
+
+  .wave {
+    position: absolute;
+    left: 0;
+    top: unset;
+    bottom: -#{size-m(20)};
+    height: size-m(75);
+    z-index: 0;
+    animation: wave 13s infinite alternate-reverse ease-in-out, fadeIn 1.5s;
+    opacity: 0.5;
+  }
+
   .order-bg {
     //background-color: $order_bg_color;
     background-image: $order_bg_image_m;

@@ -11,9 +11,9 @@
       </div>
     </div>
     <div class="custom-navbar" v-if="!isMobile">
-      <div class="link" @click="scrollTo('.section1')">
+      <!-- <div class="link" @click="scrollTo('.section1')">
         <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
-      </div>
+      </div> -->
       <div class="link" @click="scrollTo('.section3')">國際CBD</div>
       <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
       <div class="link" @click="scrollTo('.section6')">生活新風貌</div>
@@ -37,7 +37,7 @@
         </li>
       </ul>
     </div>
-    <div class="func-btn">
+    <!-- <div class="func-btn">
       <a class="link" href="#" @click="isShowCallDialog = !isShowCallDialog">
         <img src="@/projects/cc/icon1.png" alt="" srcset="" />
       </a>
@@ -51,7 +51,7 @@
       <a class="link" href="#" @click="scrollTo('.contact')">
         <img src="@/projects/cc/icon3.png" alt="" srcset=""
       /></a>
-    </div>
+    </div> -->
 
     <el-dialog
       title

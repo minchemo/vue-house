@@ -1,9 +1,9 @@
 <template>
   <div class="home no-padding-top">
-    <CustomNavigation :scrollInstance="locomotive" />
+    <!-- <CustomNavigation :scrollInstance="locomotive" /> -->
     <div id="locomotive">
       <Section1 class="section" data-scroll />
-      <Section2 class="section" data-scroll />
+      <!-- <Section2 class="section" data-scroll />
       <Section3 class="section" data-scroll />
       <Section4 class="section" data-scroll />
       <Section5 class="section" data-scroll />
@@ -12,7 +12,7 @@
       <Section8 class="section" data-scroll />
       <Section9 class="section" data-scroll />
       <Section10 class="section" data-scroll />
-      <Section11 class="section" data-scroll />
+      <Section11 class="section" data-scroll /> -->
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -36,17 +36,17 @@ import AOS from "@/lib/aos/src/js/aos";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/cc/section1.vue";
-import Section2 from "@/projects/cc/section2.vue";
-import Section3 from "@/projects/cc/section3.vue";
-import Section4 from "@/projects/cc/section4.vue";
-import Section5 from "@/projects/cc/section5.vue";
-import Section6 from "@/projects/cc/section6.vue";
-import Section7 from "@/projects/cc/section7.vue";
-import Section8 from "@/projects/cc/section8.vue";
-import Section9 from "@/projects/cc/section9.vue";
-import Section10 from "@/projects/cc/section10.vue";
-import Section11 from "@/projects/cc/section11.vue";
+import Section1 from "@/projects/gp/section1.vue";
+// import Section2 from "@/projects/gp/section2.vue";
+// import Section3 from "@/projects/gp/section3.vue";
+// import Section4 from "@/projects/gp/section4.vue";
+// import Section5 from "@/projects/gp/section5.vue";
+// import Section6 from "@/projects/gp/section6.vue";
+// import Section7 from "@/projects/gp/section7.vue";
+// import Section8 from "@/projects/gp/section8.vue";
+// import Section9 from "@/projects/gp/section9.vue";
+// import Section10 from "@/projects/gp/section10.vue";
+// import Section11 from "@/projects/gp/section11.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
 import UIkit from 'uikit';
@@ -65,16 +65,16 @@ export default {
     // CustomFooter,
     MobileNav,
     Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
-    Section8,
-    Section9,
-    Section10,
-    Section11
+    // Section2,
+    // Section3,
+    // Section4,
+    // Section5,
+    // Section6,
+    // Section7,
+    // Section8,
+    // Section9,
+    // Section10,
+    // Section11
   },
 
   data() {
@@ -243,8 +243,9 @@ export default {
 }
 
 .section {
-  background-image: url("../projects/cc/bg.jpg");
+  background-image: url("~@/projects/gp/bg.jpg");
   background-position: center;
+  background-size: contain;
   background-repeat: repeat;
 }
 
@@ -307,7 +308,7 @@ export default {
     justify-content: space-around;
   }
   .section {
-    background-image: url("../projects/cc/bg-mo.jpg");
+    background-image: url("~@/projects/gp/bg-mo.jpg");
   }
 }
 </style>
