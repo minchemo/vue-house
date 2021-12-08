@@ -3,7 +3,7 @@
     <div class="swiper-title" data-aos="fade-down" data-aos-duration="1000">
       <span v-if="!isMobile">　</span>新穎暢快<br v-if="isMobile" /><span
         class="db"
-        >高達<span class="large">20</span>項</span
+        >高達<span class="large">15</span>項</span
       >的渡假公設！
     </div>
     <div class="swiper-box" data-aos-duration="1000" data-aos="fade-down">
