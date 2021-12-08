@@ -668,7 +668,7 @@ export default {
           el: "viewer-1",
           img: require("@/projects/aries/s6/viewer/01.jpg"),
           mo_bg: require("@/projects/aries/s6/viewer/01_mo.jpg"),
-          title: "接待中心<br>全景圖",
+          title: "迎賓大廳<br>全景圖",
           titlePos: "rt",
         },
         {
