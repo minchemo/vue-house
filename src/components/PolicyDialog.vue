@@ -4,6 +4,8 @@
     :visible.sync="policyVisible"
     width="600px"
     fullscreen
+    :modal-append-to-body="true"
+    :append-to-body="true"
   >
     <div class="policy-dialog-content">
       <div class="subtitle">

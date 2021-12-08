@@ -52,7 +52,8 @@
       title
       :visible.sync="isShowCallDialog"
       :width="isMobile ? '90%' : '500px'"
-      :modal-append-to-body="false"
+      :modal-append-to-body="true"
+      :append-to-body="true"
     >
       <CallDialog :phone="info.phone" />
     </el-dialog>
@@ -60,7 +61,8 @@
       title
       :visible.sync="isShowMessengerDialog"
       :width="isMobile ? '90%' : '500px'"
-      :modal-append-to-body="false"
+      :modal-append-to-body="true"
+      :append-to-body="true"
     >
       <MessengerDialog :messenger="info.fbMessage" />
     </el-dialog>
@@ -68,7 +70,8 @@
       title
       :visible.sync="isShowMapDialog"
       :width="isMobile ? '90%' : '500px'"
-      :modal-append-to-body="false"
+      :modal-append-to-body="true"
+      :append-to-body="true"
     >
       <MapDialog :link="info.googleLink" :address="info.address" />
     </el-dialog>
@@ -134,7 +137,7 @@ export default {
 @import "@/assets/style/variableDefault.scss";
 #contact-info {
   position: relative;
- /* left: 50%;
+  /* left: 50%;
   transform: translate(-50%, -90%);  */
   z-index: 15;
 }
