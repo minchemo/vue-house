@@ -1,22 +1,16 @@
 /* html, body */
 
-$bg: url("");
+$bg:  url("~@/projects/gp/bg.jpg");
 
 /* font-family */
 
 
 /* 1主要字體  2次要字體  3表單字體  4黑體 */
 
-$family1: "youmin",
-"Noto Serif TC",
-serif;
-$family2: "Noto Serif TC",
-serif;
-$family3: "Noto Serif TC",
-serif;
-$family4: "Noto Serif TC",
-serif,
-sans-serif;
+$family1: "Noto Sans TC",sans-serif;
+$family2: "Noto Sans TC",sans-serif;
+$family3: "Noto Sans TC",sans-serif;
+$family4: "Noto Sans TC",sans-serif;
 $selection_color: grey;
 
 /* navigation */

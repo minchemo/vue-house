@@ -243,10 +243,10 @@ export default {
 }
 
 .section {
-  background-image: url("~@/projects/gp/bg.jpg");
+/*  background-image: url("~@/projects/gp/bg.jpg");
   background-position: center;
   background-size: contain;
-  background-repeat: repeat;
+  background-repeat: repeat;*/
 }
 
 .fp-left {

@@ -412,7 +412,7 @@ export default {
   .order-top {
     //background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
-    background: $order_bg_image no-repeat;
+    //background: $order_bg_image no-repeat;
     background-size: cover;
     background-position: bottom right;
     position: relative;
@@ -424,7 +424,7 @@ export default {
     width: auto;
     padding-top: 20px;
     padding-bottom: 1vw;
-    font-weight: 300;
+    font-weight:700;
     line-height: 1.3;
     font-size: size(50);
     letter-spacing: size(10);

@@ -39,7 +39,8 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  //background: url("../assets/img/housebg.jpg");
+ //background: url("../assets/img/housebg.jpg");
+  background:#FFF;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -73,7 +74,7 @@ export default {
 }
 
 .item {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 30px;
   margin-right: 160px;
   width: 500px;
@@ -89,22 +90,20 @@ export default {
   }
 
   .label {
-    font-size: 24px;
     color: $house_label_color;
     margin-bottom: 0;
     margin-right: 20px;
     white-space: nowrap;
     font-family: $family3;
-    font-weight: 300;
+    font-weight: 700;
   }
 
   .desc {
-    font-size: 24px;
     text-align: left;
     line-height: 1.4;
     color: $house_desc_color;
     font-family: $family3;
-    font-weight: 300;
+    font-weight: 500;
   }
 }
 

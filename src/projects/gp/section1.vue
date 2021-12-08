@@ -4,7 +4,8 @@
       <img src="@/projects/gp/s1/logo.svg" alt="" srcset="" />
     </div>
     <div class="title" data-aos="fade-up" data-aos-delay="500">
-      <img src="@/projects/gp/s1/title.svg" alt="" srcset="" />
+3分鐘A19捷運站<span>＃</span>千坪湖畔莊園<br>
+<b>戶戶邊間迎光建築｜18-36坪｜1-3房</b>
     </div>
     <img class="i1" src="@/projects/gp/s1/1.png" alt="" srcset="" />
     <img
@@ -69,13 +70,9 @@
     />
 
     <div class="title2" data-aos="fade-up" data-aos-delay="500">
-      <img
-        v-if="!isMobile"
-        src="@/projects/gp/s1/title2.svg"
-        alt=""
-        srcset=""
-      />
-      <img v-else src="@/projects/gp/s1/title2_mo.svg" alt="" srcset="" />
+      你聽見了嗎? 青埔最輕鬆的節奏
+      <img 
+        v-if="isMobile" src="@/projects/gp/s1/title2_mo.svg" alt="" srcset="" />
     </div>
 
     <img class="wave" src="@/projects/gp/s1/wave.svg" alt="" srcset="" />
@@ -101,24 +98,45 @@
 
   .title {
     position: absolute;
-    width: size(800);
-    left: 50%;
+    width:100%;
+    left: 0;
     top: size(520);
-    margin-left: -#{size(400)};
-    img {
-      width: 100%;
-    }
+    text-align: center;
+    font-size: size(47);
+    color:#146a32;
+    font-weight:700;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    span{color: #FFF;margin: 0 0.3em;}
+    b{font-size: 0.91em;}
   }
 
   .title2 {
     position: absolute;
-    width: size(700);
+    width: size(900);
     left: 50%;
     bottom: size(300);
-    margin-left: -#{size(350)};
+    margin-left: -#{size(450)};
     z-index: 2;
+    font-size: size(45);
+    line-height: 1.8;
+    letter-spacing: 0.15em;
+    font-weight:700;
+    color: #46a76c;
+    text-shadow:
+     0 0 2px #fff,  
+     0 0 2px #fff,  
+     0 0 2px #fff,  
+     0 0 2px #fff,
+     0 0 2px #fff,
+     0 0 2px #fff,
+     0 0 2px #fff,  
+     -2px -2px 0 #fff, 
+      2px -2px 0 #fff,
+      -2px 2px 0 #fff,
+       2px 2px 0 #fff;
     img {
-      width: 100%;
+      width:size(700);
     }
   }
 

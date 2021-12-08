@@ -133,9 +133,9 @@ export default {
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
 #contact-info {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -90%);
+  position: relative;
+ /* left: 50%;
+  transform: translate(-50%, -90%);  */
   z-index: 15;
 }
 .order-bg-draw {
