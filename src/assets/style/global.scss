@@ -255,12 +255,12 @@ img[lazy='loaded'] {
     }
 
     .home {
-        padding-top: $nav_tablet_height;
+   /*     padding-top: $nav_tablet_height;
         background-color: $order_bg_color;
         background-image: $order_bg_image;
         background-repeat: no-repeat;
         background-size: 100vw auto;
-        background-position: 0% 50%;
+        background-position: 0% 50%;*/
 
         &.no-padding-top {
             padding-top: 0;
@@ -355,6 +355,9 @@ img[lazy='loaded'] {
         // background-size: cover;
         //background-attachment: fixed;
      //   background-position: 0% 50%;
+     background: none;
+&::before{content: "";position: fixed;top: 0;bottom:0;left: 0;right: 0;background: url("~@/projects/gp/bg-mo.jpg");z-index: -1;}
+
 
         &.no-padding-top {
             padding-top: 0;

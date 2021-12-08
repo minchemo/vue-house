@@ -80,7 +80,7 @@ export default {
   width: 500px;
   height: 30px;
   border-left: 4px solid $house_border_color;
-  padding-left: 12px;
+  padding-left:0.45em;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -92,10 +92,12 @@ export default {
   .label {
     color: $house_label_color;
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 0;
     white-space: nowrap;
     font-family: $family3;
     font-weight: 700;
+    width: 4.7em;
+    text-align: left;
   }
 
   .desc {
@@ -129,10 +131,7 @@ export default {
     height: auto;
     margin-left: 20px;
     white-space: normal;
-    .label,
-    .desc {
-      font-size: 16px;
-    }
+      font-size: 14px;
   }
 
   .info {

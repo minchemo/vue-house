@@ -308,7 +308,7 @@ export default {
     justify-content: space-around;
   }
   .section {
-    background-image: url("~@/projects/gp/bg-mo.jpg");
+   // background-image: url("~@/projects/gp/bg-mo.jpg");
   }
 }
 </style>

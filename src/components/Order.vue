@@ -417,7 +417,7 @@ export default {
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 500px;
+   // padding-bottom: 500px;
   }
   .order-title {
     font-family: $family1;
@@ -435,7 +435,7 @@ export default {
     margin: 0 auto;
     margin-bottom: size(20);
     display: inline-block;
-    font-family: "Noto Serif TC", serif;
+ //   font-family: "Noto Serif TC", serif;
   }
   .order-title-img {
     width: 30vw;
@@ -679,7 +679,7 @@ export default {
     .hint {
       width: calc(100vw * 334 / 375);
       font-size: 12px;
-      font-weight: 300;
+      font-weight: 500;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.2;

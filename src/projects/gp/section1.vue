@@ -70,9 +70,7 @@
     />
 
     <div class="title2" data-aos="fade-up" data-aos-delay="500">
-      你聽見了嗎? 青埔最輕鬆的節奏
-      <img 
-        v-if="isMobile" src="@/projects/gp/s1/title2_mo.svg" alt="" srcset="" />
+      你聽見了嗎? <br v-if="isMobile">青埔最輕鬆的節奏
     </div>
 
     <img class="wave" src="@/projects/gp/s1/wave.svg" alt="" srcset="" />
@@ -113,10 +111,9 @@
 
   .title2 {
     position: absolute;
-    width: size(900);
-    left: 50%;
+    width:100%;
+    left:0;
     bottom: size(300);
-    margin-left: -#{size(450)};
     z-index: 2;
     font-size: size(45);
     line-height: 1.8;
@@ -198,6 +195,7 @@
     bottom: size(370);
     width: size(61);
     z-index: 2;
+    transform: translateY(-10%) rotate(-10deg);
   }
 
   .m2 {
@@ -206,6 +204,7 @@
     bottom: size(240);
     width: size(50);
     z-index: 2;
+    transform: translateY(10%) rotate(10deg);
   }
 
   .wave {
@@ -270,15 +269,13 @@
     }
 
     .title {
-      width: size-m(314);
       top: size-m(350);
-      margin-left: -#{size-m(157)};
+    font-size: size-m(19);
     }
 
     .title2 {
-      width: size-m(206);
       bottom: size-m(50);
-      margin-left: -#{size-m(103)};
+    font-size: size-m(24);
     }
 
     .i1 {
@@ -336,7 +333,7 @@
     }
 
     .wave {
-      top: size-m(400);
+      top: size-m(440);
       height: size-m(75);
     }
     .wave2 {
