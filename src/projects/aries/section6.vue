@@ -624,70 +624,42 @@ export default {
         {
           img: require("@/projects/aries/s6/slider_1.jpg"),
           imgMo: require("@/projects/aries/s6/mo/slider_1.jpg"),
-          title: "滑水道<br>泳池",
-          content: !isMobile
-            ? "迴旋360度設計，無比刺激歡樂，<br>更擁有多樣水設施，给予不受拘束的愜意休閒時刻。"
-            : "迴旋360度設計，無比刺激歡樂，更擁有多樣水設施，给予不受拘束的愜意休閒時刻。",
-        },
-        {
-          img: require("@/projects/aries/s6/slider_2.jpg"),
-          imgMo: require("@/projects/aries/s6/mo/slider_2.jpg"),
           title: "六星級<br>冷泉SPA",
           content: !isMobile
             ? "除了義大利外，唯台灣蘇澳獨有的低溫碳酸礦泉冷泉，<br>一年四季溫柔呵護您的每一寸肌膚。"
             : "除了義大利外，唯台灣蘇澳獨有的低溫碳酸礦泉冷泉，一年四季溫柔呵護您的每一寸肌膚。",
         },
         {
+          img: require("@/projects/aries/s6/slider_2.jpg"),
+          imgMo: require("@/projects/aries/s6/mo/slider_2.jpg"),
+          title: "景觀<br>健身房",
+          content: !isMobile
+            ? "選用專業健身器材，為專注體態雕塑的貴賓提供優質的場域及設備。"
+            : "選用專業健身器材，為專注體態雕塑的貴賓提供優質的場域及設備。",
+        },
+        {
           img: require("@/projects/aries/s6/slider_3.jpg"),
           imgMo: require("@/projects/aries/s6/mo/slider_3.jpg"),
-          title: "酒店式<br>豪華遊憩廳",
-          content: "KTV音響設備，氣派輝煌在家宛如置身五星级飯店。",
+          title: "自助<br>洗衣中心",
+          content: !isMobile
+            ? "便利完善渡假機能"
+            : "便利完善渡假機能",
         },
         {
           img: require("@/projects/aries/s6/slider_4.jpg"),
           imgMo: require("@/projects/aries/s6/mo/slider_4.jpg"),
-          title: "極速飛馳<br>F1賽道",
-          content: "全台獨有，300坪卡丁車賽道，享受風馳電掣的樂趣 ",
+          title: "中庭<br>泳池",
+          content: !isMobile
+            ? "擁有多樣設施給予不受拘束愜意的時刻"
+            : "擁有多樣設施給予不受拘束愜意的時刻",
         },
         {
           img: require("@/projects/aries/s6/slider_5.jpg"),
           imgMo: require("@/projects/aries/s6/mo/slider_5.jpg"),
-          title: "大亨小傳<br>豪華酒吧",
-          content: !isMobile
-            ? "在外不敢喝太多？<br>在家有酒吧就不怕！珍藏佳釀，浪漫樂曲，讓夜晚越夜越美麗。"
-            : "在外不敢喝太多？在家有酒吧就不怕！珍藏佳釀，浪漫樂曲，讓夜晚越夜越美麗。",
-        },
-        {
-          img: require("@/projects/aries/s6/slider_6.jpg"),
-          imgMo: require("@/projects/aries/s6/mo/slider_6.jpg"),
-          title: "德州<br>撲克室",
-          content: !isMobile
-            ? "專業賽桌，美式復古裝潢，<br>保證讓各方好手在牌桌上盡興的流連忘返！"
-            : "專業賽桌，美式復古裝潢，保證讓各方好手在牌桌上盡興的流連忘返！",
-        },
-        {
-          img: require("@/projects/aries/s6/slider_7.jpg"),
-          imgMo: require("@/projects/aries/s6/mo/slider_7.jpg"),
           title: "熱帶風格<br>發呆亭",
           content: !isMobile
             ? "想到熱帶島嶼渡假不用飛出國，<br>灣岸villa的發呆亭，讓你躺著就像在國外海邊渡假村。"
             : "想到熱帶島嶼渡假不用飛出國，灣岸villa的發呆亭，讓你躺著就像在國外海邊渡假村。",
-        },
-        {
-          img: require("@/projects/aries/s6/slider_8.jpg"),
-          imgMo: require("@/projects/aries/s6/mo/slider_8.jpg"),
-          title: "歡樂世界<br>電子遊戲室",
-          content: !isMobile
-            ? "超多樣電子遊樂設備，讓人彷彿置身夢想中的遊戲世界，<br>不只好玩，也能訓練孩子的反應力。"
-            : "超多樣電子遊樂設備，讓人彷彿置身夢想中的遊戲世界，不只好玩，也能訓練孩子的反應力。",
-        },
-        {
-          img: require("@/projects/aries/s6/slider_9.jpg"),
-          imgMo: require("@/projects/aries/s6/mo/slider_9.jpg"),
-          title: "優雅<br>麻將間",
-          content: !isMobile
-            ? "好想摸一圈？<br>快到國粹麻將廳，良好隔音、舒適配備，三五好友盡情享受摸兩圈的快感。"
-            : "好想摸一圈？快到國粹麻將廳，良好隔音、舒適配備，三五好友盡情享受摸兩圈的快感。",
         },
       ],
 
@@ -696,7 +668,7 @@ export default {
           el: "viewer-1",
           img: require("@/projects/aries/s6/viewer/01.jpg"),
           mo_bg: require("@/projects/aries/s6/viewer/01_mo.jpg"),
-          title: "卡丁車賽場<br>全景圖",
+          title: "接待中心<br>全景圖",
           titlePos: "rt",
         },
         {
@@ -705,6 +677,13 @@ export default {
           mo_bg: require("@/projects/aries/s6/viewer/02_mo.jpg"),
           title: "中庭全景圖",
           titlePos: "lt",
+        },
+        {
+          el: "viewer-3",
+          img: require("@/projects/aries/s6/viewer/03.jpg"),
+          mo_bg: require("@/projects/aries/s6/viewer/03_mo.jpg"),
+          title: "冷泉會館<br>全景圖",
+          titlePos: "rt",
         },
       ],
     };
