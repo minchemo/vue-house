@@ -6,17 +6,17 @@
       <Section2 class="section" data-scroll />
       <Section3 class="section" data-scroll />
       <Section4 class="section" data-scroll />
-      <!-- <Section5 class="section" data-scroll />
-      <Section6 class="section" data-scroll />
+      <Section5 class="section" data-scroll />
+      <!-- <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
       <Section8 class="section" data-scroll /> -->
-   <!--   <Section9 class="section" data-scroll />
+      <!--   <Section9 class="section" data-scroll />
       <Section10 class="section" data-scroll />
       <Section11 class="section" data-scroll />  -->
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
-    <MobileNav />
+    <!-- <MobileNav /> -->
   </div>
 </template>
 
@@ -40,7 +40,7 @@ import Section1 from "@/projects/cm/s1.vue";
 import Section2 from "@/projects/cm/s2.vue";
 import Section3 from "@/projects/cm/s3.vue";
 import Section4 from "@/projects/cm/s4.vue";
-// import Section5 from "@/projects/cm/s5.vue";
+import Section5 from "@/projects/cm/s5.vue";
 // import Section6 from "@/projects/cm/s6.vue";
 // import Section7 from "@/projects/cm/s7.vue";
 // import Section8 from "@/projects/cm/s8.vue";
@@ -68,7 +68,7 @@ export default {
     Section2,
     Section3,
     Section4,
-    // Section5,
+    Section5,
     // Section6,
     // Section7,
     // Section8,

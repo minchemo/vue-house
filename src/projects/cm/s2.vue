@@ -1,11 +1,28 @@
 <template>
   <div class="s2">
     <div class="view">
-      <img class="large-title" src="~@/projects/cm/s2/large-t.svg" alt="" srcset="" />
+      <img
+        class="large-title"
+        src="~@/projects/cm/s2/large-t.svg"
+        alt=""
+        srcset=""
+      />
       <GodModView />
 
-      <img v-if="!isMobile" class="info" src="~@/projects/cm/s2/info.svg" alt="" srcset="" />
-      <img v-else class="info" src="~@/projects/cm/s2/info_m.svg" alt="" srcset="" />
+      <img
+        v-if="!isMobile"
+        class="info"
+        src="~@/projects/cm/s2/info.svg"
+        alt=""
+        srcset=""
+      />
+      <img
+        v-else
+        class="info"
+        src="~@/projects/cm/s2/info_m.svg"
+        alt=""
+        srcset=""
+      />
     </div>
   </div>
 </template>
@@ -29,11 +46,11 @@
     flex-direction: column;
 
     .large-title {
-        position: absolute;
-        top: -#{size(80)};
-        left: -#{size(180)};
-        width: size(835.54);
-        z-index: 1;
+      position: absolute;
+      top: -#{size(80)};
+      left: -#{size(180)};
+      width: size(835.54);
+      z-index: 1;
     }
 
     .info {
@@ -49,39 +66,39 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-.s2 {
-  position: relative;
-  width: size-m(375);
-  height: size-m(667);
-  background-image: url("~@/projects/cm/bg.png");
-  background-size: 100%;
-  background-position: top;
-  padding-top: size(100);
-  .view {
+  .s2 {
     position: relative;
-    margin-left: auto;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+    width: size-m(375);
+    height: size-m(667);
+    background-image: url("~@/projects/cm/bg_m.png");
+    background-size: 100%;
+    background-position: top;
+    padding-top: size(100);
+    .view {
+      position: relative;
+      margin-left: auto;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
 
-    .large-title {
+      .large-title {
         position: absolute;
         top: -#{size-m(30)};
         left: 50%;
         width: 90%;
         transform: translateX(-50%);
         z-index: 1;
-    }
+      }
 
-    .info {
-      position: relative;
-      margin-top: size-m(50);
-      width: 80%;
-      margin-left:10%;
+      .info {
+        position: relative;
+        margin-top: size-m(50);
+        width: 80%;
+        margin-left: 10%;
+      }
     }
   }
-}
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -111,6 +128,6 @@ export default {
 
   methods: {},
 
-  created() {},
+  created() { },
 };
 </script>

@@ -40,6 +40,7 @@
     </div>
     <div class="title">
       <img
+        v-if="!isMobile"
         class="t2"
         data-aos="fade"
         data-aos-delay="500"
@@ -48,6 +49,16 @@
         srcset=""
       />
       <img
+        v-else
+        class="t2"
+        data-aos="fade"
+        data-aos-delay="500"
+        src="~@/projects/cm/s1/t2_m.svg"
+        alt=""
+        srcset=""
+      />
+      <img
+        v-if="!isMobile"
         class="t1"
         data-aos="fade"
         data-aos-delay="1500"
@@ -55,13 +66,32 @@
         alt=""
         srcset=""
       />
+      <img
+        v-else
+        class="t1"
+        data-aos="fade"
+        data-aos-delay="1500"
+        src="~@/projects/cm/s1/t1_m.svg"
+        alt=""
+        srcset=""
+      />
     </div>
     <div class="subtitle">
       <img
+        v-if="!isMobile"
         class="t1"
         data-aos="fade"
         data-aos-delay="2000"
         src="~@/projects/cm/s1/subtitle.svg"
+        alt=""
+        srcset=""
+      />
+      <img
+        v-else
+        class="t1"
+        data-aos="fade"
+        data-aos-delay="2000"
+        src="~@/projects/cm/s1/subtitle_m.svg"
         alt=""
         srcset=""
       />
@@ -190,7 +220,7 @@
     position: relative;
     width: size-m(375);
     height: size-m(667);
-    background-image: url("~@/projects/cm/bg.png");
+    background-image: url("~@/projects/cm/bg_m.png");
     background-size: 100%;
     background-position: bottom;
     .bg {
@@ -201,7 +231,7 @@
       top: 0;
       left: 0;
       background-image: url("~@/projects/cm/s1/bg.jpeg");
-      background-size: 120%;
+      background-size: 500%;
       background-position: top center;
       mask-image: linear-gradient(
         0deg,
@@ -216,62 +246,65 @@
       img {
         position: absolute;
         &.c1 {
-          width: size(180);
-          height: size(180);
-          left: size(150);
-          top: size(70);
+          width: size-m(90);
+          height: size-m(90);
+          left: size-m(20);
+          top: size-m(20);
         }
         &.c2 {
-          width: size(1000);
-          height: size(1000);
-          right: -#{size(400)};
-          top: -#{size(350)};
+          width: size-m(200);
+          height: size-m(200);
+          right: -#{size-m(100)};
+          top: -#{size-m(60)};
         }
         &.c3 {
-          width: size(600);
-          height: size(600);
-          left: -#{size(300)};
-          top: size(400);
+          width: size-m(200);
+          height: size-m(200);
+          left: -#{size-m(95)};
+          top: size-m(250);
         }
         &.c4 {
-          width: size(180);
-          height: size(180);
-          right: size(20);
-          top: size(650);
+          width: size-m(50);
+          height: size-m(50);
+          right: size-m(20);
+          top: size-m(220);
         }
         &.c5 {
-          width: size(350);
-          height: size(350);
-          right: size(150);
-          bottom: -#{size(250)};
+          width: size-m(90);
+          height: size-m(90);
+          right: size-m(50);
+          bottom: size-m(190);
         }
       }
     }
     .title {
       z-index: 1;
       position: absolute;
-      width: size(1098);
-      height: size(478.9);
+      width: size-m(162.38);
+      height: size-m(385);
       left: 50%;
-      top: 45%;
-      transform: translate(-50%, -50%);
+      top: 40%;
+      transform: translate(-40%, -50%);
       display: flex;
-      flex-direction: column;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      justify-content: space-between;
       .t2 {
         position: relative;
-        width: size(399.84);
-        margin-bottom: size(40);
+        width: size-m(10);
+        margin-bottom: 0;
+        margin-top: size-m(20);
       }
       .t1 {
         position: relative;
-        width: size(1084.6);
+        width: size-m(141);
       }
     }
     .subtitle {
       position: absolute;
-      width: size(1100);
-      height: size(149.6);
-      bottom: size(150);
+      width: size-m(295);
+      height: size-m(67);
+      bottom: size-m(100);
       left: 50%;
       transform: translateX(-50%);
       .t1 {
@@ -279,16 +312,17 @@
       }
       .order {
         position: absolute;
-        left: 0;
-        bottom: -#{size(30)};
-        width: size(630.5);
-        height: size(83.78);
-        background-image: url("~@/projects/cm/s1/order.png");
+        right: 0;
+        left: unset;
+        bottom: 0;
+        width: size-m(93);
+        height: size-m(26);
+        background-image: url("~@/projects/cm/s1/order_m.png");
         background-size: 95%;
         background-repeat: no-repeat;
         background-position: bottom left;
         &:hover {
-          background-image: url("~@/projects/cm/s1/order_h.png");
+          background-image: url("~@/projects/cm/s1/order_m_h.png");
           cursor: pointer;
         }
       }
@@ -320,6 +354,6 @@ export default {
 
   methods: {},
 
-  created() {},
+  created() { },
 };
 </script>

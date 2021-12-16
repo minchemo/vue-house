@@ -96,10 +96,10 @@
     position: relative;
     width: size-m(375);
     height: size-m(667);
-    background-image: url("~@/projects/cm/bg.png");
+    background-image: url("~@/projects/cm/bg_m.png");
     background-size: 100%;
     background-position: top;
-    padding-top: size(100);
+    padding-top: 0;
 
     .swiper-box {
       position: relative;
@@ -203,6 +203,6 @@ export default {
 
   methods: {},
 
-  created() {},
+  created() { },
 };
 </script>

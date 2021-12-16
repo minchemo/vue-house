@@ -1,5 +1,5 @@
 <template>
-  <div class="s4">
+  <div class="s5">
     <div class="swiper-box">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
         <swiper-slide
@@ -13,10 +13,10 @@
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
-      <img class="title" src="~@/projects/cm/s4/title.svg" alt="" srcset="" />
+      <img class="title" src="~@/projects/cm/s5/title.svg" alt="" srcset="" />
       <img
         class="content"
-        src="~@/projects/cm/s4/content.svg"
+        src="~@/projects/cm/s5/content.svg"
         alt=""
         srcset=""
         v-if="!isMobile"
@@ -24,7 +24,7 @@
       <img
         v-else
         class="content"
-        src="~@/projects/cm/s4/content_m.svg"
+        src="~@/projects/cm/s5/content_m.svg"
         alt=""
         srcset=""
       />
@@ -34,7 +34,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
-.s4 {
+.s5 {
   position: relative;
   width: size(1920);
   height: size(1080);
@@ -45,20 +45,20 @@
 
   .swiper-box {
     position: relative;
-    width: size(1345.25);
-    margin: 0 auto;
+    width: size(1630);
+    margin-right: auto;
     .swiper-wrapper {
       .slide {
-        width: size(1345.25);
-        height: size(610.35);
+        width: size(518);
+        height: size(610);
         background-size: cover;
       }
     }
     .swiper-pagination {
       position: absolute;
-      top: 0;
-      left: -#{size(50)};
-      bottom: unset;
+      top: unset;
+      bottom: 0;
+      right: -#{size(50)};
       display: flex;
       flex-direction: column;
       .swiper-pagination-bullet {
@@ -67,22 +67,24 @@
         background-color: #fff;
         opacity: 1;
         border: 1.5px solid #182c80;
-        margin-bottom: size(20);
+        margin-top: size(20);
         &.swiper-pagination-bullet-active {
           background-color: #182c80;
         }
       }
     }
     .title {
-      width: size(77);
+      width: size(582);
       position: absolute;
-      right: -#{size(30)};
-      top: -#{size(40)};
+      right: -#{size(185)};
+      top: -#{size(70)};
       z-index: 1;
     }
     .content {
-      width: 100%;
+      width: size(1389);
       margin-top: size(100);
+      position: absolute;
+      right: 0;
     }
   }
 }
@@ -92,7 +94,7 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .s4 {
+  .s5 {
     position: relative;
     width: size-m(375);
     height: size-m(667);
@@ -164,7 +166,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: "s4",
+  name: "s5",
 
   components: {
     Swiper,
@@ -179,7 +181,8 @@ export default {
       swiperOptions: {
         loop: true,
         speed: 1000,
-        spaceBetween: 0,
+        spaceBetween: 30,
+        slidesPerView: isMobile ? 2 : 3,
         autoplay: {
           delay: 4500,
           disableOnInteraction: false,
@@ -189,14 +192,14 @@ export default {
           prevEl: ".swiper-nav .prev",
         },
         pagination: {
-          el: ".s4 .swiper-pagination",
+          el: ".s5 .swiper-pagination",
           clickable: true,
         },
       },
       imgs: [
-        require("@/projects/cm/s4/1.jpg"),
-        require("@/projects/cm/s4/1.jpg"),
-        require("@/projects/cm/s4/1.jpg"),
+        require("@/projects/cm/s5/1.jpg"),
+        require("@/projects/cm/s5/1.jpg"),
+        require("@/projects/cm/s5/1.jpg"),
       ],
     };
   },
