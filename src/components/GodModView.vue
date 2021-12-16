@@ -2,9 +2,9 @@
   <div class="GodModView with-mask">
     <div class="view" ref="view">
       <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
-      <div class="view-hand" ref="viewHand">
+      <!-- <div class="view-hand" ref="viewHand">
         <img v-lazy :temp="swipeUrl" alt="" />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -13,10 +13,10 @@
 @import "@/assets/style/function.scss";
 .GodModView {
   .view {
-    height: size(817);
+    height: 100%;
     width: 100%;
     overflow: hidden;
-    cursor: ew-resize;
+    // cursor: ew-resize;
 
     .view-hand {
       position: absolute;
@@ -42,8 +42,8 @@
       }
     }
     .view-img {
-      height: 100%;
-      max-width: unset;
+      height: auto;
+      max-width: 100%;
     }
   }
 }
@@ -51,7 +51,7 @@
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
-      height: size-m(604);
+      height: size-m(312);
       overflow: hidden;
       .view-hand {
         img {
@@ -62,6 +62,7 @@
         }
       }
       .view-img {
+        max-width: unset;
         height: 100%;
       }
       //.view-img{height: 100%;}
@@ -82,19 +83,12 @@ export default {
       isMobile,
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
-      viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/cc/s3/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: require("@/projects/cc/s3/hand.png"), //置換圖片路徑即可
+      viewAspectRatioPercentage: isMobile ? "50" : "37.38", // 鳥瞰圖比例 高÷寬×100
+      bgUrl: require("@/projects/cm/s2/view.jpg"), //置換圖片路徑即可
+      swipeUrl: '', //置換圖片路徑即可
     };
   },
   methods: {
-    getScreenHeight() {
-      return "220";
-      const width = $(window).width();
-      const height = $(window).height();
-      const ratio = (height / width) * 100;
-      return ratio;
-    },
     scrollView() {
       const self = this;
       const el = this.$refs.view;

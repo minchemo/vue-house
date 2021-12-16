@@ -1,15 +1,15 @@
 <template>
   <div class="home no-padding-top">
-    <CustomNavigation :scrollInstance="locomotive" />
+    <!-- <CustomNavigation :scrollInstance="locomotive" /> -->
     <div id="locomotive">
       <Section1 class="section" data-scroll />
       <Section2 class="section" data-scroll />
       <Section3 class="section" data-scroll />
       <Section4 class="section" data-scroll />
-      <Section5 class="section" data-scroll />
+      <!-- <Section5 class="section" data-scroll />
       <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
-      <Section8 class="section" data-scroll />
+      <Section8 class="section" data-scroll /> -->
    <!--   <Section9 class="section" data-scroll />
       <Section10 class="section" data-scroll />
       <Section11 class="section" data-scroll />  -->
@@ -36,22 +36,22 @@ import AOS from "@/lib/aos/src/js/aos";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/cc/section1.vue";
-import Section2 from "@/projects/cc/section2.vue";
-import Section3 from "@/projects/cc/section3.vue";
-import Section4 from "@/projects/cc/section4.vue";
-import Section5 from "@/projects/cc/section5.vue";
-import Section6 from "@/projects/cc/section6.vue";
-import Section7 from "@/projects/cc/section7.vue";
-import Section8 from "@/projects/cc/section8.vue";
-import Section9 from "@/projects/cc/section9.vue";
-import Section10 from "@/projects/cc/section10.vue";
-import Section11 from "@/projects/cc/section11.vue";
+import Section1 from "@/projects/cm/s1.vue";
+import Section2 from "@/projects/cm/s2.vue";
+import Section3 from "@/projects/cm/s3.vue";
+import Section4 from "@/projects/cm/s4.vue";
+// import Section5 from "@/projects/cm/s5.vue";
+// import Section6 from "@/projects/cm/s6.vue";
+// import Section7 from "@/projects/cm/s7.vue";
+// import Section8 from "@/projects/cm/s8.vue";
+// import Section9 from "@/projects/cm/s9.vue";
+// import Section10 from "@/projects/cm/s10.vue";
+// import Section11 from "@/projects/cm/s11.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
-UIkit.use(Icons);
+// import UIkit from 'uikit';
+// import Icons from 'uikit/dist/js/uikit-icons';
+// UIkit.use(Icons);
 
 export default {
   name: "home",
@@ -68,13 +68,13 @@ export default {
     Section2,
     Section3,
     Section4,
-    Section5,
-    Section6,
-    Section7,
-    Section8,
-    Section9,
-    Section10,
-    Section11
+    // Section5,
+    // Section6,
+    // Section7,
+    // Section8,
+    // Section9,
+    // Section10,
+    // Section11
   },
 
   data() {
@@ -220,6 +220,7 @@ export default {
 @import "../assets/style/variableColor.scss";
 
 .home {
+  background-color: #333;
   &::before {
     content: " ";
     position: fixed;
@@ -243,7 +244,7 @@ export default {
 }
 /*
 .section {
-  background-image: url("../projects/cc/bg.jpg");
+  background-image: url("../projects/cm/bg.jpg");
   background-position: center;
   background-repeat: repeat;
 }
@@ -308,7 +309,7 @@ export default {
   }
   /*
   .section {
-    background-image: url("../projects/cc/bg-mo.jpg");
+    background-image: url("../projects/cm/bg-mo.jpg");
   }
   */
 }

@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="custom-navbar" v-if="!isMobile">
+    <!-- <div class="custom-navbar" v-if="!isMobile">
       <div class="link" @click="scrollTo('.section1')">
         <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
       </div>
@@ -18,17 +18,16 @@
       <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
       <div class="link" @click="scrollTo('.section6')">生活新風貌</div>
       <div class="link" @click="scrollTo('.section8')">校園第一排</div>
-    <!--  <div class="link" @click="scrollTo('.section9')">人文青建築</div>  -->
-    </div>
+    </div> -->
     <div
       class="custom-navigation-list"
       v-bind:class="isOpen ? 'is-active' : ''"
     >
       <ul class="navlist">
-      <li class="link logo" 
+      <!-- <li class="link logo" 
           @click="setActive('青青','', '.section1')">
         <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
-      </li>
+      </li> -->
         <li
           :key="item.name"
           v-bind:class="item.name == activeSection ? 'active' : ''"
@@ -41,22 +40,6 @@
         </li>
       </ul>
     </div>
-    <div class="func-btn" v-if="!isMobile">
-      <a class="link" href="#" @click="isShowCallDialog = !isShowCallDialog">
-        <img src="@/projects/cc/icon1.png" alt="" srcset="" />
-      </a>
-      <a
-        class="link"
-        href="https://www.facebook.com/%E9%9D%92%E9%9D%92-%E5%89%AF%E9%83%BD%E5%BF%83%E5%90%8D%E9%82%B8%E7%89%B9%E5%8D%802-3%E6%88%BF-105760468592626/"
-        target="_blank"
-      >
-        <img src="@/projects/cc/icon2.png" alt="" srcset=""
-      /></a>
-      <a class="link" href="#" @click="scrollTo('.contact')">
-        <img src="@/projects/cc/icon3.png" alt="" srcset=""
-      /></a>
-    </div>
-
     <el-dialog
       title
       :visible.sync="isShowCallDialog"
