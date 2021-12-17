@@ -110,7 +110,9 @@
 .s1 {
   position: relative;
   width: size(1920);
-  height: size(1080);
+  height: 100vh;
+  min-height: size(900);
+  max-height: size(1080);
   background-image: url("~@/projects/cm/bg.png");
   background-size: 100%;
   background-position: bottom;
@@ -141,40 +143,52 @@
         height: size(180);
         left: size(150);
         top: size(70);
+  animation: circle 4.2s ease-in-out infinite alternate;
       }
       &.c2 {
         width: size(1000);
         height: size(1000);
         right: -#{size(400)};
         top: -#{size(350)};
+  animation: circle 12s ease-in-out infinite alternate;
       }
       &.c3 {
         width: size(600);
         height: size(600);
         left: -#{size(300)};
         top: size(400);
+  animation: circle 9s ease-in-out infinite alternate;
       }
       &.c4 {
         width: size(180);
         height: size(180);
         right: size(20);
         top: size(650);
+  animation: circle 4s ease-in-out infinite alternate;
       }
       &.c5 {
         width: size(350);
         height: size(350);
         right: size(150);
         bottom: -#{size(250)};
+  animation: circle 6s ease-in-out infinite alternate;
       }
     }
   }
+
+@keyframes circle {
+  to {
+    transform: translateY(-20%);
+  }
+}
+
   .title {
     z-index: 1;
     position: absolute;
     width: size(1098);
     height: size(478.9);
     left: 50%;
-    top: 45%;
+    top:calc(50% - 4.8vw);
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
@@ -192,7 +206,7 @@
     position: absolute;
     width: size(1100);
     height: size(149.6);
-    bottom: size(150);
+    top:calc(50% + 10.5vw);
     left: 50%;
     transform: translateX(-50%);
     .t1 {
@@ -225,6 +239,9 @@
     position: relative;
     width: size-m(375);
     height: size-m(667);
+  min-height: 0;
+  max-height:size-m(812);
+
     background-image: url("~@/projects/cm/bg_m.png");
     background-size: 100%;
     background-position: bottom;
@@ -309,6 +326,7 @@
       position: absolute;
       width: size-m(295);
       height: size-m(67);
+      top: auto;
       bottom: size-m(100);
       left: 50%;
       transform: translateX(-50%);

@@ -31,6 +31,7 @@
 }
 .footer-img {
   width: 100%;
+  object-fit: cover;
 }
 .footer {
   width: 100%;
@@ -70,6 +71,9 @@
   .footer {
     margin-bottom: 0;
   }
+.footer-img {
+  height:calc(10000vw / 375);
+}
 }
 </style>
 

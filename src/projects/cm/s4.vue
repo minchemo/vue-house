@@ -10,6 +10,7 @@
             backgroundImage: `url(${slide})`,
           }"
         >
+        <p>情境氛圍示意圖</p>
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -60,6 +61,14 @@
         width: size(1345.25);
         height: size(610.35);
         background-size: cover;
+        p{
+          position: absolute;
+          right: 0.5em;
+          bottom: 0.5em;
+          color: #fff;
+          font-size: size(15);
+          text-shadow:0 0 0.6em #000,0 0 0.2em #000;
+        }
       }
     }
     .swiper-pagination {
@@ -118,6 +127,9 @@
           width: size-m(302);
           height: size-m(292);
           background-size: cover;
+        p{
+          font-size: size-m(12);
+        }
         }
       }
       .swiper-pagination {
@@ -203,8 +215,8 @@ export default {
       },
       imgs: [
         require("@/projects/cm/s4/1.jpg"),
-        require("@/projects/cm/s4/1.jpg"),
-        require("@/projects/cm/s4/1.jpg"),
+        require("@/projects/cm/s4/2.jpg"),
+        require("@/projects/cm/s4/3.jpg"),
       ],
     };
   },

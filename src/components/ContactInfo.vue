@@ -242,7 +242,7 @@ export default {
   width: 280px;
   height: 60px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 20px;
   cursor: pointer;
   text-decoration: none;
@@ -300,7 +300,7 @@ export default {
   height: 60px;
   font-size: 18px;
   background: #dcdddd;
-  font-weight: 300;
+  font-weight: 400;
   box-shadow: $contact_btn_border;
   border-radius: $contact_btn_addr_border_radius;
   font-family: $family4;

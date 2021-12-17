@@ -8,23 +8,14 @@
         srcset=""
       />
       <GodModView />
+<div class="txt">
+<div class="title"
+        data-aos="zoom-in">府城核心未來錢景<br>
+西門大道一脈相連</div>
+<div class="desc"
+        data-aos="zoom-in">市中心北區正西門路，連接三越商圈、小北商圈，匯聚好市多、特力屋，以及南山台南廣場，未來銜接北外環快速道，直達南科園區飆速通勤。府城最有價值的燙金大道，串起市心繁華，見證台南的過去與未來。</div>
+</div>
 
-      <img
-        v-if="!isMobile"
-        class="info"
-        src="~@/projects/cm/s2/info.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
-      <img
-        v-else
-        class="info"
-        src="~@/projects/cm/s2/info_m.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
     </div>
   </div>
 </template>
@@ -65,12 +56,34 @@
         }
       }
     }
-
+/*
     .info {
       position: relative;
       margin-top: size(100);
       width: size(1339.26);
     }
+    */
+  }
+  .txt{
+      margin-top: size(100);
+    font-size: size(23);
+    transform:scaleY(1.1);
+    text-align:justify;
+    line-height: 1.7;
+    width: size(1400);
+      letter-spacing: 0.1em;
+      color:#444;
+    .title{
+      font-size: 1.6em;
+      color:#182C80;
+      float: left;
+      font-weight: 500;
+      letter-spacing: 0.31em;
+      display: block;
+      padding: 0 0.5em 0 0;
+      margin: 0 3em 0 0;
+      border-right: 0.18em solid currentColor;
+     }
   }
 }
 /* 平板尺寸 */
@@ -103,14 +116,29 @@
         transform: translateX(-50%);
         z-index: 1;
       }
-
+/*
       .info {
         position: relative;
         margin-top: size-m(50);
         width: 80%;
         margin-left: 10%;
       }
+      */
     }
+  .txt{
+    font-size: size-m(14);
+    width: 80%;
+    left: 10%;
+    margin: auto;
+    .title{
+      font-size: 1.4em;
+      float:none;
+      text-align: right;
+      padding: 0 0.5em 0 0;
+      margin: size-m(50) 0 .9em 0;
+      border-right: 0.18em solid currentColor;
+     }
+  }
   }
 }
 

@@ -5,7 +5,7 @@
 #$case_code = "jw";特殊案使用
 $src =$_SERVER['SERVER_NAME']; 
 $case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
-$case_code = "cm";
+$case_code = "cang-m";
 
 # PDO DB 連線 Start
     $pdo=new pdo('mysql:host=localhost;dbname=htw_web','htw','748aSgl5Ni');

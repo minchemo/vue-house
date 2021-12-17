@@ -7,10 +7,10 @@ $bg: url("");
 
 /* 1主要字體  2次要字體  3表單字體  4黑體 */
 
-$family1: "Noto Serif TC", serif;
-$family2: "Noto Serif TC", serif;
-$family3: "Noto Serif TC", serif;
-$family4: "Noto Serif TC", serif,sans-serif;
+$family1: "Noto Sans TC", serif;
+$family2: "Noto Sans TC", serif;
+$family3: "Noto Sans TC", serif;
+$family4: "Noto Sans TC", serif,sans-serif;
 $selection_color: grey;
 
 /* navigation */
@@ -57,7 +57,7 @@ $order_input_border: solid 1px #182C80;
 $order_input_focus_border: solid 2px #182C80 !important;
 $order_input_selected_color: solid 1px #fff !important;
 $order_check_desc_color: #000 !important;
-$order_check_span_color: #000 !important;
+$order_check_span_color: #c00 !important;
 $order_submit_bg: #182C80;
 $order_submit_borderradius: 0px;
 $order_submit_color: #fff !important;

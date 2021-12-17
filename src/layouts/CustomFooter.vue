@@ -296,9 +296,6 @@
             transform: scale(1);
             transform-origin: left;
         //    font-family: "Noto Sans TC";
-            .el-checkbox__input.is-checked + .el-checkbox__label {
-              color: #000;
-            }
           }
         }
         .form-cus-btn {

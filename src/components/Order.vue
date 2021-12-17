@@ -467,7 +467,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
-    background: $order_input_bg;
+  //  background: $order_input_bg;
 
     &.house {
       margin-top: 50px;
