@@ -5,10 +5,12 @@
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
-      <h3 class="order-title" v-html="order.title"></h3>
-      <!-- <div class="order-title-img">
-        <img src="~@/assets/img/order-title.png" alt="" srcset="">
-      </div> -->
+      <!-- <h3 class="order-title" v-html="order.title"></h3> -->
+      <div class="order-title-img"
+        data-aos="zoom-in">
+        <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="藏美表參道" srcset="">
+        <img v-else src="~@/projects/cm/order_title_m.svg" alt="藏美表參道" srcset="">
+      </div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
@@ -151,8 +153,11 @@
     </div>
 
     <ContactInfo />
-    <GoogleMap />
-    <PolicyDialog :policyVisible="policyVisible"  @hidePolicyDialog="hidePolicyDialog" />
+    <!-- <GoogleMap /> -->
+    <PolicyDialog
+      :policyVisible="policyVisible"
+      @hidePolicyDialog="hidePolicyDialog"
+    />
   </div>
 </template>
 
@@ -216,7 +221,7 @@ export default {
     showPolicyDialog() {
       this.policyVisible = true;
     },
-    hidePolicyDialog(){
+    hidePolicyDialog() {
       this.policyVisible = false;
     },
 
@@ -335,11 +340,11 @@ export default {
 }
 .order-bg {
   //background-color: $order_bg_color;
-  //background-image: $order_bg_image;
-  background-repeat: no-repeat;
+  background-image: $order_bg_image;
+  background-repeat: repeat-y;
   position: relative;
-  background-size: 110vw auto;
-  background-position: top;
+  background-size: 100%;
+  background-position: top center;
   font-family: $family3;
   // padding-top: 10vw;
 
@@ -351,14 +356,14 @@ export default {
     border-radius: $order_submit_borderradius !important;
   }
   .order-top {
-    //background-color: $order_bg_color;
+    // background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
-  //  background: $order_bg_image no-repeat;
-    background-size: cover;
+    // background: $order_bg_image no-repeat;
+    background-size: 100%;
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 700px;
+    padding-bottom: size(600);
   }
   .order-title {
     font-family: $family1;
@@ -374,7 +379,6 @@ export default {
     margin: 0 auto;
     margin-bottom: size(20);
     display: inline-block;
-
   }
   .order-title-img {
     width: 30vw;
@@ -519,8 +523,7 @@ export default {
     width: 100vw;
   }
   .order-bg {
-    //background-color: $order_bg_color;
-   // background-image: $order_bg_image_m;
+    background-image: $order_bg_image_m;
     background-size: contain;
     padding-top: 0;
     margin: 0;
@@ -548,7 +551,7 @@ export default {
       line-height: 1.5;
     }
     .order-top {
-     // background-image: $order_bg_image_m;
+      // background-image: $order_bg_image_m;
       background-size: contain;
       background-repeat: repeat;
       // top: 10vw;

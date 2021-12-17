@@ -1,9 +1,9 @@
 <template>
   <div class="GodModView with-mask">
     <div class="view" ref="view">
-      <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
+      <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="藏美表參道" />
       <!-- <div class="view-hand" ref="viewHand">
-        <img v-lazy :temp="swipeUrl" alt="" />
+        <img v-lazy :temp="swipeUrl" alt="藏美表參道" />
       </div> -->
     </div>
   </div>

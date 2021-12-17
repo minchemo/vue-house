@@ -1,6 +1,6 @@
 <template>
   <div class="s5">
-    <div class="swiper-box">
+    <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
         <swiper-slide
           class="slide"
@@ -13,20 +13,28 @@
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
-      <img class="title" src="~@/projects/cm/s5/title.svg" alt="" srcset="" />
+      <img
+        class="title"
+        src="~@/projects/cm/s5/title.svg"
+        alt="藏美表參道"
+        srcset=""
+        data-aos="zoom-in"
+      />
       <img
         class="content"
         src="~@/projects/cm/s5/content.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
         v-if="!isMobile"
+        data-aos="zoom-in"
       />
       <img
         v-else
         class="content"
         src="~@/projects/cm/s5/content_m.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
+        data-aos="zoom-in"
       />
     </div>
   </div>
@@ -105,20 +113,21 @@
 
     .swiper-box {
       position: relative;
-      width: size-m(302);
-      margin: 0 auto;
+      width: size-m(336.69);
+      margin-right: auto;
+      margin-left: 0;
       .swiper-wrapper {
         .slide {
-          width: size-m(302);
-          height: size-m(292);
+          width: size-m(162.61);
+          height: size-m(278.57);
           background-size: cover;
+          background-position: bottom;
         }
       }
       .swiper-pagination {
-        position: relative;
-        top: 0;
-        left: 0;
-        bottom: unset;
+        position: absolute;
+        bottom: -#{size-m(20)};
+        right: 0;
         display: flex;
         flex-direction: row;
         .swiper-pagination-bullet {
@@ -136,15 +145,16 @@
         }
       }
       .title {
-        width: size-m(36);
+        width: auto;
+        height: size-m(35);
         position: absolute;
         right: -#{size-m(18)};
-        top: -#{size-m(15)};
+        top: -#{size-m(25)};
         z-index: 1;
       }
       .content {
-        width: 100%;
-        margin-top: size-m(50);
+        width: 90%;
+        margin-top: size-m(80);
       }
     }
   }
@@ -181,8 +191,9 @@ export default {
       swiperOptions: {
         loop: true,
         speed: 1000,
-        spaceBetween: 30,
+        spaceBetween: isMobile ? 5 : 30,
         slidesPerView: isMobile ? 2 : 3,
+        slidesPerGroup: isMobile ? 2 : 3,
         autoplay: {
           delay: 4500,
           disableOnInteraction: false,
@@ -197,15 +208,30 @@ export default {
         },
       },
       imgs: [
-        require("@/projects/cm/s5/1.jpg"),
-        require("@/projects/cm/s5/1.jpg"),
-        require("@/projects/cm/s5/1.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/1_m.jpg")
+          : require("@/projects/cm/s5/1.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/2_m.jpg")
+          : require("@/projects/cm/s5/2.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/3_m.jpg")
+          : require("@/projects/cm/s5/3.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/4_m.jpg")
+          : require("@/projects/cm/s5/4.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/5_m.jpg")
+          : require("@/projects/cm/s5/5.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/6_m.jpg")
+          : require("@/projects/cm/s5/6.jpg"),
       ],
     };
   },
 
   methods: {},
 
-  created() { },
+  created() {},
 };
 </script>

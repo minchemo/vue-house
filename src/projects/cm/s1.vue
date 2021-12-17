@@ -7,35 +7,35 @@
         data-aos="zoom-in"
         data-aos-delay="0"
         src="~@/projects/cm/s1/circle.png"
-        alt=""
+        alt="藏美表參道"
       />
       <img
         class="c2"
         data-aos="zoom-in"
         data-aos-delay="300"
         src="~@/projects/cm/s1/circle.png"
-        alt=""
+        alt="藏美表參道"
       />
       <img
         class="c3"
         data-aos="zoom-in"
         data-aos-delay="600"
         src="~@/projects/cm/s1/circle.png"
-        alt=""
+        alt="藏美表參道"
       />
       <img
         class="c4"
         data-aos="zoom-in"
         data-aos-delay="900"
         src="~@/projects/cm/s1/circle.png"
-        alt=""
+        alt="藏美表參道"
       />
       <img
         class="c5"
         data-aos="zoom-in"
         data-aos-delay="1200"
         src="~@/projects/cm/s1/circle.png"
-        alt=""
+        alt="藏美表參道"
       />
     </div>
     <div class="title">
@@ -45,7 +45,7 @@
         data-aos="fade"
         data-aos-delay="500"
         src="~@/projects/cm/s1/t2.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
       />
       <img
@@ -54,7 +54,7 @@
         data-aos="fade"
         data-aos-delay="500"
         src="~@/projects/cm/s1/t2_m.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
       />
       <img
@@ -63,7 +63,7 @@
         data-aos="fade"
         data-aos-delay="1500"
         src="~@/projects/cm/s1/t1.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
       />
       <img
@@ -72,7 +72,7 @@
         data-aos="fade"
         data-aos-delay="1500"
         src="~@/projects/cm/s1/t1_m.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
       />
     </div>
@@ -83,7 +83,7 @@
         data-aos="fade"
         data-aos-delay="2000"
         src="~@/projects/cm/s1/subtitle.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
       />
       <img
@@ -92,7 +92,7 @@
         data-aos="fade"
         data-aos-delay="2000"
         src="~@/projects/cm/s1/subtitle_m.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
       />
       <div class="order" data-aos="fade" data-aos-delay="2500"></div>

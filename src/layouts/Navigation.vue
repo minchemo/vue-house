@@ -47,13 +47,13 @@
               v-if="isMobile"
               class="d-m-1"
               src="@/projects/ab/mo-nav-1.png"
-              alt=""
+              alt="藏美表參道"
             />
             <img
               v-if="isMobile"
               class="d-m-2"
               src="@/projects/ab/mo-nav-2.png"
-              alt=""
+              alt="藏美表參道"
             /> -->
           </ul>
         </div>

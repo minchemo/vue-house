@@ -1,14 +1,37 @@
 <template>
-  <div class="footer">
-    <a href="https://www.lixin.com.tw/" target="_blank"
-      ><img src="../assets/img/footerLogo.gif" alt="立炘數位"
-    /></a>
-    <a href="https://www.h35.tw/admin/test/login.php" target="_blank"
-      >網頁製作</a
-    >
+  <div class="footer-box">
+    <img
+      class="footer-img"
+      v-if="isMobile"
+      src="@/projects/cm/footer_m.jpg"
+      alt="藏美表參道"
+      srcset=""
+    />
+    <img
+      class="footer-img"
+      v-else
+      src="@/projects/cm/footer.jpg"
+      alt="藏美表參道"
+      srcset=""
+    />
+    <div class="footer">
+      <a href="https://www.lixin.com.tw/" target="_blank"
+        ><img src="../assets/img/footerLogo.gif" alt="立炘數位"
+      /></a>
+      <a href="https://www.h35.tw/admin/test/login.php" target="_blank"
+        >網頁製作</a
+      >
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.footer-img {
+  width: 100%;
+}
 .footer {
   width: 100%;
   height: 40px;
@@ -16,7 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom:0;
+  margin-bottom: 0;
 
   img {
     width: 50px;
@@ -52,9 +75,9 @@
 
 <script>
 export default {
-  name: 'adminFooter',
+  name: "adminFooter",
   components: {},
 
   methods: {},
-}
+};
 </script>

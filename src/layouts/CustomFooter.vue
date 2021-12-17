@@ -7,7 +7,7 @@
             <img
               v-lazy
               :temp="require('@/projects/pjr/footer/logo.svg')"
-              alt=""
+              alt="藏美表參道"
               srcset=""
             />
           </div>

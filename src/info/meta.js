@@ -1,6 +1,6 @@
 exports.info = {
-  title: "青青",
+  title: "藏美表參道",
   description:
-    "青青",
-  keywords: "青青"
+    "藏美表參道",
+  keywords: "藏美表參道"
 };

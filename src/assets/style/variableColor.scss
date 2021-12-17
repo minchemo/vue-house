@@ -45,21 +45,21 @@ $mask_icon_color: #c82514;
 
 // order
 $order_bg_color: #006868;
-$order_bg_image: url("");
-$order_bg_image_m: url("~@/assets/img/order_bg.jpg");
+$order_bg_image: url("~@/projects/cm/bg.png");
+$order_bg_image_m: url("~@/projects/cm/bg_m.png");
 $order_title_color: #000;
 $order_subtitle_color: #000;
-$order_input_label_color: #333333;
-$order_input_color: #000 !important;
+$order_input_label_color: #182C80;
+$order_input_color: #182C80 !important;
 $order_input_placeholder: #999 !important;
 $order_input_bg: #fff !important;
-$order_input_border: solid 0 #fff;
-$order_input_focus_border: solid 1px #fff !important;
+$order_input_border: solid 1px #182C80;
+$order_input_focus_border: solid 2px #182C80 !important;
 $order_input_selected_color: solid 1px #fff !important;
 $order_check_desc_color: #000 !important;
 $order_check_span_color: #000 !important;
-$order_submit_bg: #bbb29b;
-$order_submit_borderradius: 10px;
+$order_submit_bg: #182C80;
+$order_submit_borderradius: 0px;
 $order_submit_color: #fff !important;
 $order_sumbit_disable_bg: #fff;
 // contactInfo
@@ -69,14 +69,14 @@ $contact_shadow: 0 0 80px 0 rgba(0,
 0,
 0,
 0.2);
-$contact_btn_border: inset 0 0 0px 0px #fff;
-$contact_btn_color: #fff;
-$contact_btn_icon: #fff;
-$contact_btn_bg: #bbb29b;
+$contact_btn_border: inset 0 0 1px 1px #182C80;
+$contact_btn_color: #182C80;
+$contact_btn_icon: #182C80;
+$contact_btn_bg: #fff;
 $contact_btn_hover_color: #333333;
 $contact_btn_hover_icon: #333333;
 $contact_btn_hover_bg: #bbb29b;
-$contact_btn_border_radius: 10px;
+$contact_btn_border_radius: 0px;
 $contact_btn_addr_border_radius: 10px 0 0 10px;
 $contact_btn_gbtn_border_radius: 0 10px 10px 0;
 $contact_btn_addr_border_radius_m: 0px 0px 0 0 !important;

@@ -5,8 +5,9 @@
         <img
           v-lazy
           class="logo"
-          :temp="require('@/assets/img/contact-logo.png')"
+          :temp="require('@/projects/cm/contact_logo.svg')"
           :alt="info.caseName"
+        data-aos="zoom-in"
         />
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
@@ -29,14 +30,14 @@
               >
             </span>
           </a>
-          <div class="address flex-c">{{ info.address }}</div>
+          <!-- <div class="address flex-c">{{ info.address }}</div>
           <div class="google-btn flex-c btn" @click="showMapDialog">
             <span class="flex-c">
               <font-awesome-icon icon="map-marker-alt" /><span
                 >導航 Google 地圖</span
               >
             </span>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -223,8 +224,8 @@ export default {
 }
 
 .logo {
-  width: $contact_logo_pc_width;
-  height: auto;
+  // width: $contact_logo_pc_width;
+  height: size(54);
   margin: 0 auto 100px auto;
   z-index: 1;
 }

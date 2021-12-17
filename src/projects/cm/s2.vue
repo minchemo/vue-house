@@ -4,7 +4,7 @@
       <img
         class="large-title"
         src="~@/projects/cm/s2/large-t.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
       />
       <GodModView />
@@ -13,15 +13,17 @@
         v-if="!isMobile"
         class="info"
         src="~@/projects/cm/s2/info.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
+        data-aos="zoom-in"
       />
       <img
         v-else
         class="info"
         src="~@/projects/cm/s2/info_m.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
+        data-aos="zoom-in"
       />
     </div>
   </div>
@@ -51,6 +53,17 @@
       left: -#{size(180)};
       width: size(835.54);
       z-index: 1;
+      animation: fade 3s;
+      opacity: 1;
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     }
 
     .info {
@@ -128,6 +141,6 @@ export default {
 
   methods: {},
 
-  created() { },
+  created() {},
 };
 </script>

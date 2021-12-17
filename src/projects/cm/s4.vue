@@ -1,6 +1,6 @@
 <template>
   <div class="s4">
-    <div class="swiper-box">
+    <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
         <swiper-slide
           class="slide"
@@ -13,20 +13,28 @@
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
-      <img class="title" src="~@/projects/cm/s4/title.svg" alt="" srcset="" />
+      <img
+        class="title"
+        src="~@/projects/cm/s4/title.svg"
+        alt="藏美表參道"
+        srcset=""
+        data-aos="zoom-in"
+      />
       <img
         class="content"
         src="~@/projects/cm/s4/content.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
         v-if="!isMobile"
+        data-aos="zoom-in"
       />
       <img
         v-else
         class="content"
         src="~@/projects/cm/s4/content_m.svg"
-        alt=""
+        alt="藏美表參道"
         srcset=""
+        data-aos="zoom-in"
       />
     </div>
   </div>
@@ -203,6 +211,6 @@ export default {
 
   methods: {},
 
-  created() { },
+  created() {},
 };
 </script>

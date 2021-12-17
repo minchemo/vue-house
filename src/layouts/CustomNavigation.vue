@@ -12,7 +12,7 @@
     </div>
     <!-- <div class="custom-navbar" v-if="!isMobile">
       <div class="link" @click="scrollTo('.section1')">
-        <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
+        <img src="@/projects/cc/nav_logo.png" alt="藏美表參道" srcset="" />
       </div>
       <div class="link" @click="scrollTo('.section2 .content')">國際CBD</div>
       <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
@@ -25,8 +25,8 @@
     >
       <ul class="navlist">
       <!-- <li class="link logo" 
-          @click="setActive('青青','', '.section1')">
-        <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
+          @click="setActive('藏美表參道','', '.section1')">
+        <img src="@/projects/cc/nav_logo.png" alt="藏美表參道" srcset="" />
       </li> -->
         <li
           :key="item.name"

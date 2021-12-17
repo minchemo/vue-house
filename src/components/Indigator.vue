@@ -18,7 +18,7 @@
       :class="`contact-indigator`"
       v-scroll-to="{ element: `#section8` }"
       @click="setIndigator(info.indigatorLength)"
-    ><img src="@/projects/fs/all/contact-indigator.png" alt=""></div> -->
+    ><img src="@/projects/fs/all/contact-indigator.png" alt="藏美表參道"></div> -->
   </div>
 </template>
 
