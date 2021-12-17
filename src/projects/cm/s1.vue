@@ -95,7 +95,12 @@
         alt="藏美表參道"
         srcset=""
       />
-      <div class="order" data-aos="fade" data-aos-delay="2500"></div>
+      <div
+        class="order"
+        @click="scrollTo('#contact')"
+        data-aos="fade"
+        data-aos-delay="2500"
+      ></div>
     </div>
   </div>
 </template>
@@ -345,6 +350,7 @@ import { isMobile } from "@/utils";
 
 export default {
   name: "s1",
+  props: ["scrollInstance"],
 
   data() {
     return {
@@ -352,8 +358,12 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    scrollTo(el) {
+      this.scrollInstance.scrollTo(el);
+    },
+  },
 
-  created() { },
+  created() {},
 };
 </script>
