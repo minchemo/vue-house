@@ -14,28 +14,16 @@
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
       <img
-        class="title"
+        class="large-title"
         src="~@/projects/cm/s3/title.svg"
         alt="藏美表參道"
         srcset=""
         data-aos="zoom-in"
       />
-      <img
-        class="content"
-        src="~@/projects/cm/s3/content.svg"
-        alt="藏美表參道"
-        srcset=""
-        v-if="!isMobile"
-        data-aos="zoom-in"
-      />
-      <img
-        v-else
-        class="content"
-        src="~@/projects/cm/s3/content_m.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
+<div class="txt">
+  <div class="title" data-aos="zoom-in">科技之都未來市<br>台灣矽谷進行式</div>
+  <div class="desc" data-aos="zoom-in">中央領軍，企業跟進！南科 3 期 92 公頃擴建啟動，全球半導體龍頭台積電同步加速投資，推升南科破兆產值，點燃台灣科技經濟能量引擎！正西門路大道，順接北外環快速道路，通勤南科無縫接軌，科技新貴置產首選。</div>
+</div>
     </div>
   </div>
 </template>
@@ -46,9 +34,6 @@
   position: relative;
   width: size(1920);
   height: size(1080);
-  background-image: url("~@/projects/cm/bg.png");
-  background-size: 100%;
-  background-position: top;
   padding-top: size(100);
 
   .swiper-box {
@@ -81,7 +66,7 @@
         }
       }
     }
-    .title {
+    .large-title {
       width: size(77);
       position: absolute;
       right: -#{size(30)};
@@ -92,6 +77,27 @@
       width: 100%;
       margin-top: size(100);
     }
+  }
+  .txt{
+      margin-top: size(100);
+    font-size: size(23);
+    transform:scaleY(1.1);
+    text-align:justify;
+    line-height: 1.7;
+    width: size(1350);
+      letter-spacing: 0.1em;
+      color:#444;
+    .title{
+      font-size: 1.6em;
+      color:#182C80;
+      float: right;
+      font-weight: 500;
+      letter-spacing: 0.31em;
+      display: block;
+      padding: 0 0 0 0.5em;
+      margin: 0 0 0 3em;
+      border-left: 0.18em solid currentColor;
+     }
   }
 }
 /* 平板尺寸 */
@@ -104,9 +110,6 @@
     position: relative;
     width: size-m(375);
     height: size-m(667);
-    background-image: url("~@/projects/cm/bg_m.png");
-    background-size: 100%;
-    background-position: top;
     padding-top: 0;
 
     .swiper-box {
@@ -141,7 +144,7 @@
           }
         }
       }
-      .title {
+      .large-title {
         width: size-m(36);
         position: absolute;
         right: -#{size-m(18)};
@@ -153,6 +156,18 @@
         margin-top: size-m(50);
       }
     }
+  .txt{
+    font-size: size-m(14);
+    width:100%;
+    left: 10%;
+    margin: auto;
+    .title{
+      font-size: 1.4em;
+      float:none;
+      text-align: left;
+      margin: size-m(50) 0 .9em 0;
+     }
+  }
   }
 }
 

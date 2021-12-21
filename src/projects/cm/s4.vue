@@ -15,28 +15,16 @@
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
       <img
-        class="title"
+        class="large-title"
         src="~@/projects/cm/s4/title.svg"
         alt="藏美表參道"
         srcset=""
         data-aos="zoom-in"
       />
-      <img
-        class="content"
-        src="~@/projects/cm/s4/content.svg"
-        alt="藏美表參道"
-        srcset=""
-        v-if="!isMobile"
-        data-aos="zoom-in"
-      />
-      <img
-        v-else
-        class="content"
-        src="~@/projects/cm/s4/content_m.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
+<div class="txt">
+  <div class="title" data-aos="zoom-in">南山廣場開綻在即<br>入境台南表參道</div>
+  <div class="desc" data-aos="zoom-in">南山微風廣場來了！昔日東帝士榮景，預計 2023 年轉生再現，結合影城百貨的複合式商辦大樓，將是西門路上最閃耀時尚新星。宛如東京香榭麗舍大道「表參道」般喜新戀舊，立地城市文化核心，跟隨國際潮流品味。</div>
+</div>
     </div>
   </div>
 </template>
@@ -47,9 +35,6 @@
   position: relative;
   width: size(1920);
   height: size(1080);
-  background-image: url("~@/projects/cm/bg.png");
-  background-size: 100%;
-  background-position: top;
   padding-top: size(100);
 
   .swiper-box {
@@ -90,7 +75,7 @@
         }
       }
     }
-    .title {
+    .large-title {
       width: size(77);
       position: absolute;
       right: -#{size(30)};
@@ -101,6 +86,27 @@
       width: 100%;
       margin-top: size(100);
     }
+  }
+  .txt{
+      margin-top: size(100);
+    font-size: size(23);
+    transform:scaleY(1.1);
+    text-align:justify;
+    line-height: 1.7;
+    width: size(1350);
+      letter-spacing: 0.1em;
+      color:#444;
+    .title{
+      font-size: 1.6em;
+      color:#182C80;
+      float: right;
+      font-weight: 500;
+      letter-spacing: 0.31em;
+      display: block;
+      padding: 0 0 0 0.5em;
+      margin: 0 0 0 3em;
+      border-left: 0.18em solid currentColor;
+     }
   }
 }
 /* 平板尺寸 */
@@ -113,9 +119,6 @@
     position: relative;
     width: size-m(375);
     height: size-m(667);
-    background-image: url("~@/projects/cm/bg_m.png");
-    background-size: 100%;
-    background-position: top;
     padding-top: 0;
 
     .swiper-box {
@@ -153,7 +156,7 @@
           }
         }
       }
-      .title {
+      .large-title {
         width: size-m(36);
         position: absolute;
         right: -#{size-m(18)};
@@ -165,6 +168,18 @@
         margin-top: size-m(50);
       }
     }
+  .txt{
+    font-size: size-m(14);
+    width:100%;
+    left: 10%;
+    margin: auto;
+    .title{
+      font-size: 1.4em;
+      float:none;
+      text-align: left;
+      margin: size-m(50) 0 .9em 0;
+     }
+  }
   }
 }
 

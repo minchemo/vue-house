@@ -43,6 +43,7 @@
     }
     .view-img {
       height: auto;
+      width: 100%;
       max-width: 100%;
     }
   }
@@ -64,6 +65,7 @@
       .view-img {
         max-width: unset;
         height: 100%;
+      width:auto;
       }
       //.view-img{height: 100%;}
     }

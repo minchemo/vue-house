@@ -333,7 +333,7 @@ $hamburger-layer-color: #fff;
           .hamburger-inner:after,
           .hamburger-inner:before {
             width: 100%;
-            background-color: #bbb29b;
+            background-color: #182C80;
             border-radius: 0;
             height: 2px;
           }

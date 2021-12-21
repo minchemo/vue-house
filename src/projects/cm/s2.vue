@@ -9,11 +9,8 @@
       />
       <GodModView />
 <div class="txt">
-<div class="title"
-        data-aos="zoom-in">府城核心未來錢景<br>
-西門大道一脈相連</div>
-<div class="desc"
-        data-aos="zoom-in">市中心北區正西門路，連接三越商圈、小北商圈，匯聚好市多、特力屋，以及南山台南廣場，未來銜接北外環快速道，直達南科園區飆速通勤。府城最有價值的燙金大道，串起市心繁華，見證台南的過去與未來。</div>
+  <div class="title" data-aos="zoom-in">府城核心未來錢景<br>西門大道一脈相連</div>
+  <div class="desc" data-aos="zoom-in">市中心北區正西門路，連接三越商圈、小北商圈，匯聚好市多、特力屋，以及南山台南廣場，未來銜接北外環快速道，直達南科園區飆速通勤。府城最有價值的燙金大道，串起市心繁華，見證台南的過去與未來。</div>
 </div>
 
     </div>
@@ -26,9 +23,6 @@
   position: relative;
   width: size(1920);
   height: size(1080);
-  background-image: url("~@/projects/cm/bg.png");
-  background-size: 100%;
-  background-position: top;
   padding-top: size(100);
   .view {
     position: relative;
@@ -96,9 +90,6 @@
     position: relative;
     width: size-m(375);
     height: size-m(667);
-    background-image: url("~@/projects/cm/bg_m.png");
-    background-size: 100%;
-    background-position: top;
     padding-top: size(100);
     .view {
       position: relative;
@@ -134,9 +125,7 @@
       font-size: 1.4em;
       float:none;
       text-align: right;
-      padding: 0 0.5em 0 0;
       margin: size-m(50) 0 .9em 0;
-      border-right: 0.18em solid currentColor;
      }
   }
   }

@@ -16,7 +16,7 @@
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
-    <!-- <MobileNav /> -->
+    <MobileNav />
   </div>
 </template>
 

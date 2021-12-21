@@ -14,28 +14,16 @@
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
       <img
-        class="title"
+        class="large-title"
         src="~@/projects/cm/s5/title.svg"
         alt="藏美表參道"
         srcset=""
         data-aos="zoom-in"
       />
-      <img
-        class="content"
-        src="~@/projects/cm/s5/content.svg"
-        alt="藏美表參道"
-        srcset=""
-        v-if="!isMobile"
-        data-aos="zoom-in"
-      />
-      <img
-        v-else
-        class="content"
-        src="~@/projects/cm/s5/content_m.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
+<div class="txt">
+  <div class="title" data-aos="zoom-in">新日本建築美學<br>必須匠心，才能藏美</div>
+  <div class="desc" data-aos="zoom-in">藏美建設獨鍾日式美學的怦然細膩，定期赴日取經，轉譯嚴謹的匠心思維，定義「新日本建築美學」基準，以深思熟慮的規劃為經、五感入心的細節為緯，交織生活謐境。堅持庭園靜心、藝術悅心、書香養心，打造富饒的生活層次。</div>
+</div>
     </div>
   </div>
 </template>
@@ -46,9 +34,6 @@
   position: relative;
   width: size(1920);
   height: size(1080);
-  background-image: url("~@/projects/cm/bg.png");
-  background-size: 100%;
-  background-position: top;
   padding-top: size(100);
 
   .swiper-box {
@@ -81,7 +66,7 @@
         }
       }
     }
-    .title {
+    .large-title {
       width: size(582);
       position: absolute;
       right: -#{size(185)};
@@ -95,6 +80,28 @@
       right: 0;
     }
   }
+  .txt{
+      margin: size(100) 0 auto auto ;
+    font-size: size(23);
+    transform:scaleY(1.1);
+    text-align:justify;
+    line-height: 1.7;
+    width: size(1400);
+      letter-spacing: 0.1em;
+      color:#444;
+    .title{
+      font-size: 1.6em;
+      color:#182C80;
+      float: left;
+      text-align: right;
+      font-weight: 500;
+      letter-spacing: 0.31em;
+      display: block;
+      padding: 0 0.5em 0 0;
+      margin: 0 3em 0 0;
+      border-right: 0.18em solid currentColor;
+     }
+  }
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -106,9 +113,6 @@
     position: relative;
     width: size-m(375);
     height: size-m(667);
-    background-image: url("~@/projects/cm/bg_m.png");
-    background-size: 100%;
-    background-position: top;
     padding-top: 0;
 
     .swiper-box {
@@ -144,7 +148,7 @@
           }
         }
       }
-      .title {
+      .large-title {
         width: auto;
         height: size-m(35);
         position: absolute;
@@ -157,6 +161,19 @@
         margin-top: size-m(80);
       }
     }
+  .txt{
+    font-size: size-m(14);
+    width: 90%;
+    margin: auto 0 auto auto;
+    .title{
+      font-size: 1.4em;
+      float:none;
+      text-align: right;
+      padding: 0 0.5em 0 0;
+      margin: size-m(50) 0 .9em 0;
+      border-right: 0.18em solid currentColor;
+     }
+  }
   }
 }
 

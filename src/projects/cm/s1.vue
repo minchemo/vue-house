@@ -113,7 +113,7 @@
   height: 100vh;
   min-height: size(900);
   max-height: size(1080);
-  background-image: url("~@/projects/cm/bg.png");
+  //background-image: url("~@/projects/cm/bg.png");
   background-size: 100%;
   background-position: bottom;
   .bg {
@@ -123,9 +123,9 @@
     height: 120%;
     top: 0;
     left: 0;
-    background-image: url("~@/projects/cm/s1/bg.jpeg");
-    background-size: 120%;
-    background-position: top center;
+      background: url("~@/projects/cm/s1/bg.png") repeat-x;
+      background-size:50vw auto;
+      background-position: top center;
     mask-image: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0) 0%,
@@ -238,13 +238,9 @@
   .s1 {
     position: relative;
     width: size-m(375);
-    height: size-m(667);
+    height: size-m(720);
   min-height: 0;
   max-height:size-m(812);
-
-    background-image: url("~@/projects/cm/bg_m.png");
-    background-size: 100%;
-    background-position: bottom;
     .bg {
       position: absolute;
       z-index: 0;
@@ -252,9 +248,7 @@
       height: 120%;
       top: 0;
       left: 0;
-      background-image: url("~@/projects/cm/s1/bg.jpeg");
-      background-size: 500%;
-      background-position: top center;
+      background-image: url("~@/projects/cm/s1/bg-m.png");
       mask-image: linear-gradient(
         0deg,
         rgba(255, 255, 255, 0) 0%,
@@ -327,7 +321,7 @@
       width: size-m(295);
       height: size-m(67);
       top: auto;
-      bottom: size-m(100);
+      bottom: size-m(150);
       left: 50%;
       transform: translateX(-50%);
       .t1 {
