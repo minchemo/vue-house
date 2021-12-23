@@ -31,6 +31,7 @@
     height: size(610.35);
     display: flex;
     flex-direction: column;
+    //img{width: size(1632.6);}
 
     .large-title {
       position: absolute;
