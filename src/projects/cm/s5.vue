@@ -21,8 +21,8 @@
         data-aos="zoom-in"
       />
 <div class="txt">
-  <div class="title" data-aos="zoom-in">新日本建築美學<br>必須匠心，才能藏美</div>
-  <div class="desc" data-aos="zoom-in">藏美建設獨鍾日式美學的怦然細膩，定期赴日取經，轉譯嚴謹的匠心思維，定義「新日本建築美學」基準，以深思熟慮的規劃為經、五感入心的細節為緯，交織生活謐境。堅持庭園靜心、藝術悅心、書香養心，打造富饒的生活層次。</div>
+  <div class="title" data-aos="zoom-in">新日本美學建築<br>國際視野職人匠心</div>
+  <div class="desc" data-aos="zoom-in">藏美建設獨鍾日式美學的怦然細膩，屢次親赴日本考察指標建築，轉譯嚴謹的匠心思維，定義「新日本建築美學」基準，以深思熟慮的規劃為經、五感入心的細節為緯，交織富饒生活層次。</div>
 </div>
     </div>
   </div>
@@ -50,7 +50,7 @@
     .swiper-pagination {
       position: absolute;
       top: unset;
-      bottom: 0;
+      bottom: 27%;
       right: -#{size(50)};
       display: flex;
       flex-direction: column;
@@ -81,25 +81,28 @@
     }
   }
   .txt{
-      margin: size(100) 0 auto auto ;
+    margin-top: size(100);
     font-size: size(23);
-    transform:scaleY(1.1);
+    transform:scaleY(1);
     text-align:justify;
     line-height: 1.7;
     width: size(1400);
       letter-spacing: 0.1em;
       color:#444;
+      font-family: "Noto Serif TC",sans-serif;
+      font-weight: 600;
+      margin-left: 13%;
     .title{
-      font-size: 1.6em;
+      font-size: 1.5em;
       color:#182C80;
-      float: left;
-      text-align: right;
+      float: right;
       font-weight: 500;
-      letter-spacing: 0.31em;
       display: block;
-      padding: 0 0.5em 0 0;
-      margin: 0 3em 0 0;
-      border-right: 0.18em solid currentColor;
+      padding: 0 0 0 0.5em;
+      margin: 0 0 0 3em;
+      border-left: 0.18em solid currentColor;
+      font-family: "Noto Serif TC",sans-serif;
+      font-weight: 800;
      }
   }
 }
@@ -112,7 +115,7 @@
   .s5 {
     position: relative;
     width: size-m(375);
-    height: size-m(667);
+    height: size-m(600);
     padding-top: 0;
 
     .swiper-box {
@@ -129,9 +132,12 @@
         }
       }
       .swiper-pagination {
-        position: absolute;
-        bottom: -#{size-m(20)};
+        position: relative;
+        top: 0;
         right: 0;
+        left: unset;
+        justify-content: flex-end;
+        bottom: unset;
         display: flex;
         flex-direction: row;
         .swiper-pagination-bullet {
@@ -168,10 +174,9 @@
     .title{
       font-size: 1.4em;
       float:none;
-      text-align: right;
-      padding: 0 0.5em 0 0;
-      margin: size-m(50) 0 .9em 0;
-      border-right: 0.18em solid currentColor;
+      text-align: left;
+      padding: 0 0.5em 0 0.5em;
+      margin: size-m(30) 0 .9em 0;
      }
   }
   }

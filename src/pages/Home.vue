@@ -3,8 +3,9 @@
     <!-- <CustomNavigation :scrollInstance="locomotive" /> -->
     <div id="locomotive">
       <Section1 class="section" data-scroll :scrollInstance="locomotive"/>
-      <Section2 class="section" data-scroll />
+      
       <Section3 class="section" data-scroll />
+      <Section2 class="section" data-scroll />
       <Section4 class="section" data-scroll />
       <Section5 class="section" data-scroll />
       <!-- <Section6 class="section" data-scroll />

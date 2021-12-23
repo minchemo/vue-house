@@ -22,8 +22,8 @@
         data-aos="zoom-in"
       />
 <div class="txt">
-  <div class="title" data-aos="zoom-in">南山廣場開綻在即<br>入境台南表參道</div>
-  <div class="desc" data-aos="zoom-in">南山微風廣場來了！昔日東帝士榮景，預計 2023 年轉生再現，結合影城百貨的複合式商辦大樓，將是西門路上最閃耀時尚新星。宛如東京香榭麗舍大道「表參道」般喜新戀舊，立地城市文化核心，跟隨國際潮流品味。</div>
+  <div class="title" data-aos="zoom-in">南山廣場領銜插旗<br>國際級都心翻轉就位</div>
+  <div class="desc" data-aos="zoom-in">南山台南廣場來了！預計2023年東帝士榮景即將再現。對位北市信義計畫區繁華，影城百貨商辦複合式新地標，將是西門路最閃耀時尚新星，投資建設群聚效應，將翻轉台南都心，躍為新商圈正核心。</div>
 </div>
     </div>
   </div>
@@ -58,9 +58,8 @@
     }
     .swiper-pagination {
       position: absolute;
-      top: 0;
+      bottom: 24%;
       left: -#{size(50)};
-      bottom: unset;
       display: flex;
       flex-direction: column;
       .swiper-pagination-bullet {
@@ -90,22 +89,26 @@
   .txt{
       margin-top: size(100);
     font-size: size(23);
-    transform:scaleY(1.1);
+    transform:scaleY(1);
     text-align:justify;
     line-height: 1.7;
     width: size(1350);
       letter-spacing: 0.1em;
       color:#444;
+      font-family: "Noto Serif TC",sans-serif;
+      font-weight: 600;
     .title{
-      font-size: 1.6em;
+      font-size: 1.5em;
       color:#182C80;
-      float: right;
+      float: left;
       font-weight: 500;
-      letter-spacing: 0.31em;
       display: block;
-      padding: 0 0 0 0.5em;
-      margin: 0 0 0 3em;
-      border-left: 0.18em solid currentColor;
+      padding: 0 0.5em 0 0;
+      margin: 0 3em 0 0;
+      border-right: 0.18em solid currentColor;
+      font-family: "Noto Serif TC",sans-serif;
+      font-weight: 800;
+      text-align: right;
      }
   }
 }
@@ -173,11 +176,12 @@
     width:100%;
     left: 10%;
     margin: auto;
+    
     .title{
       font-size: 1.4em;
       float:none;
-      text-align: left;
-      margin: size-m(50) 0 .9em 0;
+      text-align: right;
+      margin: size-m(30) 0 .9em 0;
      }
   }
   }
@@ -229,9 +233,15 @@ export default {
         },
       },
       imgs: [
-        require("@/projects/cm/s4/1.jpg"),
-        require("@/projects/cm/s4/2.jpg"),
-        require("@/projects/cm/s4/3.jpg"),
+        isMobile
+          ? require("@/projects/cm/s4/1_m.jpg")
+          : require("@/projects/cm/s4/1.jpg"),
+        isMobile
+          ? require("@/projects/cm/s4/2_m.jpg")
+          : require("@/projects/cm/s4/2.jpg"), 
+        isMobile
+          ? require("@/projects/cm/s4/3_m.jpg")
+          : require("@/projects/cm/s4/3.jpg"), 
       ],
     };
   },

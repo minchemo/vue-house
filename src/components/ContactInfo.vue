@@ -226,8 +226,9 @@ export default {
 .logo {
   // width: $contact_logo_pc_width;
   height: size(54);
-  margin: 0 auto 100px auto;
+  margin: 0 auto 70px auto;
   z-index: 1;
+  width: 60%;
 }
 .info {
   width: 880px;

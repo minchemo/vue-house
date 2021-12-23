@@ -363,7 +363,7 @@ export default {
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: size(600);
+    padding-bottom: size(400);
   }
   .order-title {
     font-family: $family1;
@@ -381,13 +381,13 @@ export default {
     display: inline-block;
   }
   .order-title-img {
-    width: 30vw;
+    width: 40vw;
     margin: 3vh auto;
     //margin-bottom: 1vw;
 
     img {
       width: 100%;
-      max-width: 500px;
+      max-width: 750px;
     }
   }
 
@@ -547,7 +547,7 @@ export default {
       font-size: 14px;
       max-width: 80vw;
       margin: 0 auto;
-      margin-bottom: 10vw;
+      margin-bottom: 0vw;
       line-height: 1.5;
     }
     .order-top {

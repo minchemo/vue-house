@@ -39,7 +39,7 @@
       />
     </div>
     <div class="title">
-      <img
+      <!--img
         v-if="!isMobile"
         class="t2"
         data-aos="fade"
@@ -47,8 +47,8 @@
         src="~@/projects/cm/s1/t2.svg"
         alt="藏美表參道"
         srcset=""
-      />
-      <img
+      /-->
+      <!--img
         v-else
         class="t2"
         data-aos="fade"
@@ -56,7 +56,7 @@
         src="~@/projects/cm/s1/t2_m.svg"
         alt="藏美表參道"
         srcset=""
-      />
+      /-->
       <img
         v-if="!isMobile"
         class="t1"
@@ -99,7 +99,7 @@
         class="order"
         @click="scrollTo('#contact')"
         data-aos="fade"
-        data-aos-delay="2500"
+        data-aos-delay="1000"
       ></div>
     </div>
   </div>
@@ -188,7 +188,7 @@
     width: size(1098);
     height: size(478.9);
     left: 50%;
-    top:calc(50% - 4.8vw);
+    top:calc(50% - 0.8vw);
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
@@ -206,7 +206,7 @@
     position: absolute;
     width: size(1100);
     height: size(149.6);
-    top:calc(50% + 10.5vw);
+    top:calc(50% + 8.5vw);
     left: 50%;
     transform: translateX(-50%);
     .t1 {
@@ -214,9 +214,9 @@
     }
     .order {
       position: absolute;
-      left: 0;
-      bottom: -#{size(30)};
-      width: size(630.5);
+      right: 0;
+      bottom: -#{size(25)};
+      width: size(450.5);
       height: size(83.78);
       background-image: url("~@/projects/cm/s1/order.png");
       background-size: 95%;
@@ -288,8 +288,8 @@
         &.c5 {
           width: size-m(90);
           height: size-m(90);
-          right: size-m(50);
-          bottom: size-m(190);
+          right: size-m(20);
+          bottom: size-m(250);
         }
       }
     }
@@ -299,8 +299,8 @@
       width: size-m(162.38);
       height: size-m(385);
       left: 50%;
-      top: 40%;
-      transform: translate(-40%, -50%);
+      top: 35%;
+      transform: translate(-55%, -50%);
       display: flex;
       flex-direction: row-reverse;
       align-items: flex-start;
@@ -318,10 +318,10 @@
     }
     .subtitle {
       position: absolute;
-      width: size-m(295);
-      height: size-m(67);
+      width: size-m(243);
+      height: size-m(121);
       top: auto;
-      bottom: size-m(150);
+      bottom: size-m(120);
       left: 50%;
       transform: translateX(-50%);
       .t1 {
@@ -329,11 +329,10 @@
       }
       .order {
         position: absolute;
-        right: 0;
-        left: unset;
-        bottom: 0;
-        width: size-m(93);
-        height: size-m(26);
+        left: 1.5%;
+        bottom: size-m(-60);
+        width: size-m(245);
+        height: size-m(41);
         background-image: url("~@/projects/cm/s1/order_m.png");
         background-size: 95%;
         background-repeat: no-repeat;

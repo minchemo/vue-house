@@ -21,8 +21,8 @@
         data-aos="zoom-in"
       />
 <div class="txt">
-  <div class="title" data-aos="zoom-in">科技之都未來市<br>台灣矽谷進行式</div>
-  <div class="desc" data-aos="zoom-in">中央領軍，企業跟進！南科 3 期 92 公頃擴建啟動，全球半導體龍頭台積電同步加速投資，推升南科破兆產值，點燃台灣科技經濟能量引擎！正西門路大道，順接北外環快速道路，通勤南科無縫接軌，科技新貴置產首選。</div>
+  <div class="title" data-aos="zoom-in">科技首都台灣新矽谷<br>北外環捷徑近身相接</div>
+  <div class="desc" data-aos="zoom-in">中央領軍，企業到位！南科3期92公頃擴建啟動，全球半導體龍頭台積電同步加速投資，推升破兆產值，點燃台灣科技經濟能量引擎。北外環快速道路已成形，通勤南科近近接軌，打通科技新貴住居版圖新動脈。</div>
 </div>
     </div>
   </div>
@@ -49,9 +49,8 @@
     }
     .swiper-pagination {
       position: absolute;
-      top: 0;
+      bottom: 24%;
       left: -#{size(50)};
-      bottom: unset;
       display: flex;
       flex-direction: column;
       .swiper-pagination-bullet {
@@ -81,22 +80,26 @@
   .txt{
       margin-top: size(100);
     font-size: size(23);
-    transform:scaleY(1.1);
+    transform:scaleY(1);
     text-align:justify;
     line-height: 1.7;
     width: size(1350);
       letter-spacing: 0.1em;
       color:#444;
+      font-family: "Noto Serif TC",sans-serif;
+      font-weight: 600;
     .title{
-      font-size: 1.6em;
+      font-size: 1.5em;
       color:#182C80;
-      float: right;
+      float: left;
       font-weight: 500;
-      letter-spacing: 0.31em;
       display: block;
-      padding: 0 0 0 0.5em;
-      margin: 0 0 0 3em;
-      border-left: 0.18em solid currentColor;
+      padding: 0 0.5em 0 0;
+      margin: 0 3em 0 0;
+      border-right: 0.18em solid currentColor;
+      font-family: "Noto Serif TC",sans-serif;
+      font-weight: 800;
+      text-align: right;
      }
   }
 }
@@ -164,8 +167,8 @@
     .title{
       font-size: 1.4em;
       float:none;
-      text-align: left;
-      margin: size-m(50) 0 .9em 0;
+      text-align: right;
+      margin: size-m(30) 0 .9em 0;
      }
   }
   }
@@ -217,9 +220,15 @@ export default {
         },
       },
       imgs: [
-        require("@/projects/cm/s3/1.jpg"),
-        require("@/projects/cm/s3/1.jpg"),
-        require("@/projects/cm/s3/1.jpg"),
+        isMobile
+          ? require("@/projects/cm/s3/1_m.jpg")
+          : require("@/projects/cm/s3/1.jpg"),
+        isMobile
+          ? require("@/projects/cm/s3/2_m.jpg")
+          : require("@/projects/cm/s3/2.jpg"), 
+        isMobile
+          ? require("@/projects/cm/s3/3_m.jpg")
+          : require("@/projects/cm/s3/3.jpg"),    
       ],
     };
   },
