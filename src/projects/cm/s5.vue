@@ -231,14 +231,15 @@ export default {
       },
       imgs: [
         isMobile
+          ? require("@/projects/cm/s5/3_m.jpg")
+          : require("@/projects/cm/s5/3.jpg"),
+        isMobile
           ? require("@/projects/cm/s5/1_m.jpg")
           : require("@/projects/cm/s5/1.jpg"),
         isMobile
           ? require("@/projects/cm/s5/2_m.jpg")
           : require("@/projects/cm/s5/2.jpg"),
-        isMobile
-          ? require("@/projects/cm/s5/3_m.jpg")
-          : require("@/projects/cm/s5/3.jpg"),
+        
         isMobile
           ? require("@/projects/cm/s5/4_m.jpg")
           : require("@/projects/cm/s5/4.jpg"),
