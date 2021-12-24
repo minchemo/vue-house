@@ -236,7 +236,7 @@ export default {
           clickable: true,
         },
       },
-      captions: ["圖說1", "圖說2", "圖說3"],
+      captions: ["台北南山廣場", "日本表參道商圈情境氛圍示意圖", "商圈情境氛圍示意圖"],
       imgs: [
         isMobile
           ? require("@/projects/cm/s4/1_m.jpg")
