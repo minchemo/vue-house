@@ -10,7 +10,7 @@
             backgroundImage: `url(${slide})`,
           }"
         >
-        <p>情境氛圍示意圖</p>
+          <p>{{ captions[i] }}</p>
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -21,10 +21,14 @@
         srcset=""
         data-aos="zoom-in"
       />
-<div class="txt">
-  <div class="title" data-aos="zoom-in">南山廣場領銜插旗<br>國際級都心翻轉就位</div>
-  <div class="desc" data-aos="zoom-in">南山台南廣場來了！預計2023年東帝士榮景即將再現。對位北市信義計畫區繁華，影城百貨商辦複合式新地標，將是西門路最閃耀時尚新星，投資建設群聚效應，將翻轉台南都心，躍為新商圈正核心。</div>
-</div>
+      <div class="txt">
+        <div class="title" data-aos="zoom-in">
+          南山廣場領銜插旗<br />國際級都心翻轉就位
+        </div>
+        <div class="desc" data-aos="zoom-in">
+          南山台南廣場來了！預計2023年東帝士榮景即將再現。對位北市信義計畫區繁華，影城百貨商辦複合式新地標，將是西門路最閃耀時尚新星，投資建設群聚效應，將翻轉台南都心，躍為新商圈正核心。
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -46,13 +50,13 @@
         width: size(1345.25);
         height: size(610.35);
         background-size: cover;
-        p{
+        p {
           position: absolute;
           right: 0.5em;
           bottom: 0.5em;
           color: #fff;
           font-size: size(15);
-          text-shadow:0 0 0.6em #000,0 0 0.2em #000;
+          text-shadow: 0 0 0.6em #000, 0 0 0.2em #000;
         }
       }
     }
@@ -86,30 +90,30 @@
       margin-top: size(100);
     }
   }
-  .txt{
-      margin-top: size(100);
+  .txt {
+    margin-top: size(100);
     font-size: size(23);
-    transform:scaleY(1);
-    text-align:justify;
+    transform: scaleY(1);
+    text-align: justify;
     line-height: 1.7;
     width: size(1350);
-      letter-spacing: 0.1em;
-      color:#444;
-      font-family: "Noto Serif TC",sans-serif;
-      font-weight: 600;
-    .title{
+    letter-spacing: 0.1em;
+    color: #444;
+    font-family: "Noto Serif TC", sans-serif;
+    font-weight: 600;
+    .title {
       font-size: 1.5em;
-      color:#182C80;
+      color: #182c80;
       float: left;
       font-weight: 500;
       display: block;
       padding: 0 0.5em 0 0;
       margin: 0 3em 0 0;
       border-right: 0.18em solid currentColor;
-      font-family: "Noto Serif TC",sans-serif;
+      font-family: "Noto Serif TC", sans-serif;
       font-weight: 800;
       text-align: right;
-     }
+    }
   }
 }
 /* 平板尺寸 */
@@ -133,9 +137,9 @@
           width: size-m(302);
           height: size-m(292);
           background-size: cover;
-        p{
-          font-size: size-m(12);
-        }
+          p {
+            font-size: size-m(12);
+          }
         }
       }
       .swiper-pagination {
@@ -171,19 +175,19 @@
         margin-top: size-m(50);
       }
     }
-  .txt{
-    font-size: size-m(14);
-    width:100%;
-    left: 10%;
-    margin: auto;
-    
-    .title{
-      font-size: 1.4em;
-      float:none;
-      text-align: right;
-      margin: size-m(30) 0 .9em 0;
-     }
-  }
+    .txt {
+      font-size: size-m(14);
+      width: 100%;
+      left: 10%;
+      margin: auto;
+
+      .title {
+        font-size: 1.4em;
+        float: none;
+        text-align: right;
+        margin: size-m(30) 0 0.9em 0;
+      }
+    }
   }
 }
 
@@ -232,16 +236,17 @@ export default {
           clickable: true,
         },
       },
+      captions: ["圖說1", "圖說2", "圖說3"],
       imgs: [
         isMobile
           ? require("@/projects/cm/s4/1_m.jpg")
           : require("@/projects/cm/s4/1.jpg"),
         isMobile
           ? require("@/projects/cm/s4/2_m.jpg")
-          : require("@/projects/cm/s4/2.jpg"), 
+          : require("@/projects/cm/s4/2.jpg"),
         isMobile
           ? require("@/projects/cm/s4/3_m.jpg")
-          : require("@/projects/cm/s4/3.jpg"), 
+          : require("@/projects/cm/s4/3.jpg"),
       ],
     };
   },
