@@ -1,7 +1,13 @@
 <template>
   <div class="GodModView with-mask">
     <div class="view" ref="view">
-      <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="藏美表參道" />
+      <img
+        ref="viewImg"
+        class="view-img"
+        v-lazy
+        :temp="bgUrl"
+        alt="藏美表參道"
+      />
       <!-- <div class="view-hand" ref="viewHand">
         <img v-lazy :temp="swipeUrl" alt="藏美表參道" />
       </div> -->
@@ -16,7 +22,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    // cursor: ew-resize;
+    cursor: ew-resize;
 
     .view-hand {
       position: absolute;
@@ -26,6 +32,7 @@
       width: 100%;
       height: 100%;
       background: #0696;
+
       img {
         position: absolute;
         top: size(150);
@@ -43,8 +50,6 @@
     }
     .view-img {
       height: auto;
-      width: 100%;
-      max-width: 100%;
     }
   }
 }
@@ -65,7 +70,7 @@
       .view-img {
         max-width: unset;
         height: 100%;
-      width:auto;
+        width: auto;
       }
       //.view-img{height: 100%;}
     }
@@ -104,7 +109,7 @@ export default {
           scrollX: true,
           scrollY: true,
           disableTouch: false,
-            disableMouse: false,
+          disableMouse: false,
           bindToWrapper: true,
           eventPassthrough: "vertical",
           bounce: false,
@@ -122,6 +127,10 @@ export default {
         //     $(handEl).fadeOut();
         //   });
         // }, 100);
+      });
+
+      $(imgEl).on("dragstart", (e) => {
+        e.preventDefault();
       });
     },
     setViewBgHeight() {

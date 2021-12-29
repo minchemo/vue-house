@@ -8,11 +8,14 @@
         srcset=""
       />
       <GodModView />
-<div class="txt">
-  <div class="title" data-aos="zoom-in">鄭子寮翠域×西門路門牌<br>富人爭藏層峰新核心</div>
-  <div class="desc" data-aos="zoom-in">台南首屈一指高級住宅區-鄭子寮，富藏16座公園、文元雙語明星學區，更被商20、商60、兵工廠開發案環繞。府城最具價值的西門路貫穿其中，穿梭百貨、量販商圈與未來南山台南廣場，串起市心繁華的現在與未來。</div>
-</div>
-
+      <div class="txt">
+        <div class="title" data-aos="zoom-in">
+          鄭子寮翠域×西門路門牌<br />富人爭藏層峰新核心
+        </div>
+        <div class="desc" data-aos="zoom-in">
+          台南首屈一指高級住宅區-鄭子寮，富藏16座公園、文元雙語明星學區，更被商20、商60、兵工廠開發案環繞。府城最具價值的西門路貫穿其中，穿梭百貨、量販商圈與未來南山台南廣場，串起市心繁華的現在與未來。
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -28,7 +31,7 @@
     position: relative;
     margin-left: auto;
     width: size(1632.6);
-    height: size(610.35);
+    height: size(413.35);
     display: flex;
     flex-direction: column;
     //img{width: size(1632.6);}
@@ -51,7 +54,7 @@
         }
       }
     }
-/*
+    /*
     .info {
       position: relative;
       margin-top: size(100);
@@ -59,29 +62,29 @@
     }
     */
   }
-  .txt{
-      margin-top: size(100);
+  .txt {
+    margin-top: size(100);
     font-size: size(23);
-    transform:scaleY(1);
-    text-align:justify;
+    transform: scaleY(1);
+    text-align: justify;
     line-height: 1.7;
     width: size(1400);
-      letter-spacing: 0.1em;
-      color:#444;
-      font-family: "Noto Serif TC",sans-serif;
-      font-weight: 600;
-    .title{
+    letter-spacing: 0.1em;
+    color: #444;
+    font-family: "Noto Serif TC", sans-serif;
+    font-weight: 600;
+    .title {
       font-size: 1.5em;
-      color:#182C80;
+      color: #182c80;
       float: right;
       font-weight: 500;
       display: block;
       padding: 0 0 0 0.5em;
       margin: 0 0 0 3em;
       border-left: 0.18em solid currentColor;
-      font-family: "Noto Serif TC",sans-serif;
+      font-family: "Noto Serif TC", sans-serif;
       font-weight: 800;
-     }
+    }
   }
 }
 /* 平板尺寸 */
@@ -111,7 +114,7 @@
         transform: translateX(-50%);
         z-index: 1;
       }
-/*
+      /*
       .info {
         position: relative;
         margin-top: size-m(50);
@@ -120,18 +123,18 @@
       }
       */
     }
-  .txt{
-    font-size: size-m(14);
-    width: 80%;
-    left: 10%;
-    margin: auto;
-    .title{
-      font-size: 1.4em;
-      float:none;
-      text-align: left;
-      margin: size-m(30) 0 .9em 0;
-     }
-  }
+    .txt {
+      font-size: size-m(14);
+      width: 80%;
+      left: 10%;
+      margin: auto;
+      .title {
+        font-size: 1.4em;
+        float: none;
+        text-align: left;
+        margin: size-m(30) 0 0.9em 0;
+      }
+    }
   }
 }
 
@@ -162,6 +165,6 @@ export default {
 
   methods: {},
 
-  created() {},
+  created() { },
 };
 </script>
