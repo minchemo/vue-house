@@ -10,7 +10,7 @@
       <img
         v-if="isMobile"
         class="logo"
-        src="@/assets/img/mo-contact-logo.png"
+        src="@/assets/img/contact-logo.png"
         :alt="info.caseName"
       />
       <div class="info">
@@ -211,7 +211,7 @@ export default {
 }
 
 .logo {
-  width: 80%;
+  width: 29%;
   //height: $contact_logo_pc_width;
   margin: 0 auto;
   margin-bottom: 50px;
@@ -364,7 +364,7 @@ export default {
 
     .logo {
       //width: $contact_logo_mobile_width;
-      width: 80%;
+      width: 60%;
       //margin-left: -2vw;
       margin: 0 auto;
       margin-bottom: 5vh;
