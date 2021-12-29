@@ -181,12 +181,15 @@
       left: 10%;
       margin: auto;
 
-      .title {
-        font-size: 1.4em;
-        float: none;
-        text-align: right;
-        margin: size-m(30) 0 0.9em 0;
-      }
+      .title{
+      font-size: 1.4em;
+      padding: 0 0 0 0.5em;
+      border-left: 0.18em solid currentColor;
+      border-right: 0;
+      float:none;
+      text-align: left;
+      margin: size-m(30) 0 .9em 0;
+     }
     }
   }
 }

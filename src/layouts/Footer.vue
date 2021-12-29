@@ -78,9 +78,16 @@
 </style>
 
 <script>
+import { isMobile } from "@/utils";
 export default {
   name: "adminFooter",
   components: {},
+
+  data() {
+    return {
+      isMobile,
+    };
+  },
 
   methods: {},
 };

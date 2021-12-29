@@ -105,9 +105,9 @@
 
       .large-title {
         position: absolute;
-        top: -#{size-m(30)};
-        left: 50%;
-        width: 90%;
+        top: -#{size-m(20)};
+        left: 40%;
+        width: 65%;
         transform: translateX(-50%);
         z-index: 1;
       }

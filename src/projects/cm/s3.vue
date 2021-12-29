@@ -166,8 +166,11 @@
     margin: auto;
     .title{
       font-size: 1.4em;
+      padding: 0 0 0 0.5em;
+      border-left: 0.18em solid currentColor;
+      border-right: 0;
       float:none;
-      text-align: right;
+      text-align: left;
       margin: size-m(30) 0 .9em 0;
      }
   }

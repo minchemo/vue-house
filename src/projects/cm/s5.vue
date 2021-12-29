@@ -21,8 +21,8 @@
         data-aos="zoom-in"
       />
 <div class="txt">
-  <div class="title" data-aos="zoom-in">新日本美學建築<br>國際視野職人匠心</div>
-  <div class="desc" data-aos="zoom-in">藏美建設獨鍾日式美學的怦然細膩，屢次親赴日本考察指標建築，轉譯嚴謹的匠心思維，定義「新日本建築美學」基準，以深思熟慮的規劃為經、五感入心的細節為緯，交織富饒生活層次。</div>
+  <div class="title" data-aos="zoom-in">新日本建築美學<br>國際視野職人匠心</div>
+  <div class="desc" data-aos="zoom-in">藏美建設獨鍾新日本建築美學的怦然細膩，屢次親赴日本考察指標建築，轉譯嚴謹的匠心思維，定義「新日本建築美學」基準，以深思熟慮的規劃為經、五感入心的細節為緯，交織富饒生活層次。</div>
 </div>
     </div>
   </div>
@@ -69,7 +69,7 @@
     .large-title {
       width: size(582);
       position: absolute;
-      right: -#{size(185)};
+      right: -#{size(140)};
       top: -#{size(70)};
       z-index: 1;
     }
