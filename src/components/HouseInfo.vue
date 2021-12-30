@@ -1,6 +1,6 @@
 <template>
   <div class="house-info" id="house-info">
-    <div class="content" v-show="false">
+    <div class="content">
       <h3 class="title">建案資訊</h3>
       <div class="info">
         <div class="item" :key="infos[0]" v-for="infos in houseInfos">
