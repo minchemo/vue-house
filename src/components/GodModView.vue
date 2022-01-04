@@ -18,6 +18,7 @@
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 .GodModView {
+    height: 100%;
   .view {
     height: 100%;
     width: 100%;
@@ -49,7 +50,7 @@
       }
     }
     .view-img {
-      height: auto;
+      height:100%;
     }
   }
 }

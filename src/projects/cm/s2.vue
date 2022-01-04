@@ -31,7 +31,7 @@
     position: relative;
     margin-left: auto;
     width: size(1632.6);
-    height: size(413.35);
+    height: size(647);
     display: flex;
     flex-direction: column;
     //img{width: size(1632.6);}
