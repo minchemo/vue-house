@@ -2,13 +2,13 @@
   <div>
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <img
+        <!-- <img
           v-lazy
           class="logo"
           :temp="require('@/projects/cm/contact_logo.svg')"
           :alt="info.caseName"
         data-aos="zoom-in"
-        />
+        /> -->
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">

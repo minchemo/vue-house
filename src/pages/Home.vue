@@ -2,12 +2,12 @@
   <div class="home no-padding-top">
     <!-- <CustomNavigation :scrollInstance="locomotive" /> -->
     <div id="locomotive">
-      <Section1 class="section" data-scroll :scrollInstance="locomotive"/>
-      
-      <Section3 class="section" data-scroll />
-      <Section2 class="section" data-scroll />
-      <Section4 class="section" data-scroll />
-      <Section5 class="section" data-scroll />
+      <Section1 class="section"/>
+      <Section2 class="section"/>
+      <Section4 class="section"/>
+      <Section5 class="section"/>
+      <Section6 class="section"/>
+      <Section7 class="section"/>
       <!-- <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
       <Section8 class="section" data-scroll /> -->
@@ -37,17 +37,12 @@ import AOS from "@/lib/aos/src/js/aos";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/cm/s1.vue";
-import Section2 from "@/projects/cm/s2.vue";
-import Section3 from "@/projects/cm/s3.vue";
-import Section4 from "@/projects/cm/s4.vue";
-import Section5 from "@/projects/cm/s5.vue";
-// import Section6 from "@/projects/cm/s6.vue";
-// import Section7 from "@/projects/cm/s7.vue";
-// import Section8 from "@/projects/cm/s8.vue";
-// import Section9 from "@/projects/cm/s9.vue";
-// import Section10 from "@/projects/cm/s10.vue";
-// import Section11 from "@/projects/cm/s11.vue";
+import Section1 from "@/projects/tm/s1.vue";
+import Section2 from "@/projects/tm/s2s3.vue";
+import Section4 from "@/projects/tm/s4.vue";
+import Section5 from "@/projects/tm/s5.vue";
+import Section6 from "@/projects/tm/s6.vue";
+import Section7 from "@/projects/tm/s7.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
 // import UIkit from 'uikit';
@@ -67,15 +62,10 @@ export default {
     MobileNav,
     Section1,
     Section2,
-    Section3,
     Section4,
     Section5,
-    // Section6,
-    // Section7,
-    // Section8,
-    // Section9,
-    // Section10,
-    // Section11
+    Section6,
+    Section7,
   },
 
   data() {
@@ -241,11 +231,11 @@ export default {
 .section,
 .section .fp-slide,
 .section .fp-tableCell {
-  will-change: transform, opacity;
+  // will-change: transform, opacity;
 }
 /*
 .section {
-  background-image: url("../projects/cm/bg.jpg");
+  background-image: url("../projects/tm/bg.jpg");
   background-position: center;
   background-repeat: repeat;
 }
@@ -310,7 +300,7 @@ export default {
   }
   /*
   .section {
-    background-image: url("../projects/cm/bg-mo.jpg");
+    background-image: url("../projects/tm/bg-mo.jpg");
   }
   */
 }

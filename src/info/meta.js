@@ -1,6 +1,6 @@
 exports.info = {
-  title: "藏美表參道",
+  title: "力麒天沐",
   description:
-    "藏美表參道",
-  keywords: "藏美表參道"
+    "力麒天沐",
+  keywords: "力麒天沐"
 };

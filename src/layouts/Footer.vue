@@ -1,19 +1,19 @@
 <template>
   <div class="footer-box">
-    <img
+    <!-- <img
       class="footer-img"
       v-if="isMobile"
       src="@/projects/cm/footer_m.jpg"
-      alt="藏美表參道"
+      alt="力麒天沐"
       srcset=""
-    />
-    <img
+    /> -->
+    <!-- <img
       class="footer-img"
       v-else
       src="@/projects/cm/footer.jpg"
-      alt="藏美表參道"
+      alt="力麒天沐"
       srcset=""
-    />
+    /> -->
     <div class="footer">
       <a href="https://www.lixin.com.tw/" target="_blank"
         ><img src="../assets/img/footerLogo.gif" alt="立炘數位"

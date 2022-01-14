@@ -5,15 +5,10 @@ export default {
     phone: "06-299-2888",
     fbLink: "https://www.facebook.com/",
     fbMessage: "https://m.me//",
-    caseName: "藏美表參道",
+    caseName: "力麒天沐",
     indigatorLength: 10,
     houseInfos: [
         ["建物型態", "住宅大樓"],
-        ["坪數規劃", "16~31坪"],
-        ["建設公司", "茂德機構 精業建設"],
-        ["棟戶規劃", "136戶"],
-        ["企劃銷售", "海沃創意行銷", "https://www.haiwo.com.tw/"],
-        ["基地面積", "487坪"]
     ],
 
     gtmCode: [""], // 可放置多個

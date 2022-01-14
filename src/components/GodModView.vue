@@ -6,10 +6,10 @@
         class="view-img"
         v-lazy
         :temp="bgUrl"
-        alt="藏美表參道"
+        alt="力麒天沐"
       />
       <!-- <div class="view-hand" ref="viewHand">
-        <img v-lazy :temp="swipeUrl" alt="藏美表參道" />
+        <img v-lazy :temp="swipeUrl" alt="力麒天沐" />
       </div> -->
     </div>
   </div>
@@ -20,10 +20,10 @@
 .GodModView {
     height: 100%;
   .view {
-    height: 100%;
-    width: 100%;
+    height: size(900); //依照設計稿調整
+    width: size(1920); //依照設計稿調整
     overflow: hidden;
-    cursor: ew-resize;
+    // cursor: ew-resize;
 
     .view-hand {
       position: absolute;
@@ -81,7 +81,6 @@
 
 <script>
 import { isMobile } from "@/utils";
-import interact from "interactjs";
 import BScroll from "@better-scroll/core";
 
 export default {
@@ -92,17 +91,13 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "50" : "37.38", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/cm/s2/view.jpg"), //置換圖片路徑即可
+      bgUrl: require("@/projects/tm/s5/bg.jpg"), //置換圖片路徑即可
       swipeUrl: '', //置換圖片路徑即可
     };
   },
   methods: {
     scrollView() {
-      const self = this;
-      const el = this.$refs.view;
       const imgEl = this.$refs.viewImg;
-      const handEl = this.$refs.viewHand;
-      const offset = this.autoScrollViewOffset;
 
       $(imgEl).on("load", () => {
         let bs = new BScroll(this.$refs.view, {
@@ -134,32 +129,8 @@ export default {
         e.preventDefault();
       });
     },
-    setViewBgHeight() {
-      const targetHeight = $(".GodModView .view").outerHeight(true);
-      if (isMobile) {
-        $(".GodModView .view .view-img").height(targetHeight);
-      }
-    },
-    onResize() {
-      $(window).on("resize", (e) => {
-        this.setViewBgHeight();
-      });
-    },
-    dragMoveListener(event) {
-      $(".view-hand").hide();
-      var target = event.target;
-      var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
-      var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
-      target.style.transform = "translate(" + x + "px, " + y + "px)";
-
-      target.setAttribute("data-x", x);
-      target.setAttribute("data-y", y);
-    },
   },
   mounted() {
-    //this.getScreenHeight();
-    this.setViewBgHeight();
-    this.onResize();
     this.scrollView();
   },
 };
