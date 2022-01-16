@@ -13,7 +13,20 @@
         獨一無二、無可比擬，作為力麒久違天母的回歸獻禮
       </div>
     </div>
-    <div class="img-box"></div>
+    <div class="img-box">
+      <swiper :options="swiperOptions">
+        <swiper-slide
+          v-for="(img, i) in imgs"
+          :key="i"
+          v-bind:style="{
+            backgroundImage: `url('${img}')`,
+          }"
+        >
+        </swiper-slide>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
+    </div>
   </div>
 </template>
 <style lang="scss">
@@ -61,7 +74,22 @@
   .img-box {
     height: size(548);
     width: 100%;
-    background: red;
+    .swiper-slide {
+      width: size(1920);
+      height: size(548);
+      background-size: cover;
+    }
+    .swiper-button-prev {
+      color: #fff;
+      left: size(100);
+      transform: scale(2);
+    }
+
+    .swiper-button-next {
+      color: #fff;
+      right: size(100);
+      transform: scale(2);
+    }
   }
 }
 /* 平板尺寸 */
@@ -84,12 +112,39 @@
 <script>
 // @ is an alias to /src
 import { isMobile } from "@/utils";
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
 
 export default {
   name: "s7",
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  directives: {
+    swiper: directive,
+  },
   data() {
     return {
       isMobile,
+      swiperOptions: {
+        resistance: true,
+        resistanceRatio: 0,
+        spaceBetween: 0,
+        navigation: {
+          prevEl: ".s7 .img-box .swiper-button-prev",
+          nextEl: ".s7 .img-box .swiper-button-next",
+        },
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      },
+      imgs: [
+        require('@/projects/tm/s7/1.jpg'),
+        require('@/projects/tm/s7/2.jpg'),
+      ]
     };
   },
 };

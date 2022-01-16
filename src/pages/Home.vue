@@ -2,18 +2,14 @@
   <div class="home no-padding-top">
     <!-- <CustomNavigation :scrollInstance="locomotive" /> -->
     <div id="locomotive">
-      <Section1 class="section"/>
-      <Section2 class="section"/>
-      <Section4 class="section"/>
-      <Section5 class="section"/>
-      <Section6 class="section"/>
-      <Section7 class="section"/>
-      <!-- <Section6 class="section" data-scroll />
+      <Section1 class="section" data-scroll />
+      <Section2 class="section" data-scroll />
+      <Section4 class="section" data-scroll />
+      <Section5 class="section" data-scroll />
+      <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
-      <Section8 class="section" data-scroll /> -->
-      <!--   <Section9 class="section" data-scroll />
-      <Section10 class="section" data-scroll />
-      <Section11 class="section" data-scroll />  -->
+      <Section8 class="section" data-scroll />
+      <Section9 class="section" data-scroll />
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -43,6 +39,8 @@ import Section4 from "@/projects/tm/s4.vue";
 import Section5 from "@/projects/tm/s5.vue";
 import Section6 from "@/projects/tm/s6.vue";
 import Section7 from "@/projects/tm/s7.vue";
+import Section8 from "@/projects/tm/s8.vue";
+import Section9 from "@/projects/tm/s9.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
 // import UIkit from 'uikit';
@@ -66,6 +64,8 @@ export default {
     Section5,
     Section6,
     Section7,
+    Section8,
+    Section9,
   },
 
   data() {
