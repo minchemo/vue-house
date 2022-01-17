@@ -2,13 +2,11 @@
   <div>
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <!-- <img
-          v-lazy
+        <img
           class="logo"
-          :temp="require('@/projects/cm/contact_logo.svg')"
+          :src="require('@/projects/tm/contact_logo.svg')"
           :alt="info.caseName"
-        data-aos="zoom-in"
-        /> -->
+        />
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">
@@ -30,14 +28,14 @@
               >
             </span>
           </a>
-          <!-- <div class="address flex-c">{{ info.address }}</div>
+          <div class="address flex-c">{{ info.address }}</div>
           <div class="google-btn flex-c btn" @click="showMapDialog">
             <span class="flex-c">
               <font-awesome-icon icon="map-marker-alt" /><span
                 >導航 Google 地圖</span
               >
             </span>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -156,7 +154,7 @@ export default {
 }
 
 .contact-info {
-  //background: $contact_bg;
+  background: $contact_bg;
   // background-image: url('../assets/img/contact_bg.jpg');/
   background-size: cover;
   //box-shadow: $contact_shadow;
@@ -225,7 +223,7 @@ export default {
 
 .logo {
   // width: $contact_logo_pc_width;
-  height: size(54);
+  height: 150px;
   margin: 0 auto 70px auto;
   z-index: 1;
   width: 60%;
@@ -300,7 +298,7 @@ export default {
   width: 600px;
   height: 60px;
   font-size: 18px;
-  background: #dcdddd;
+  background: #fff;
   font-weight: 400;
   box-shadow: $contact_btn_border;
   border-radius: $contact_btn_addr_border_radius;
@@ -410,7 +408,7 @@ export default {
     position: relative;
     margin: 0 auto 0 auto;
     min-width: unset;
-   //background: $contact_bg_m;
+    //background: $contact_bg_m;
     background-size: contain;
     margin-top: 0;
 

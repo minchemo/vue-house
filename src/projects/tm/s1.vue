@@ -25,7 +25,7 @@
 /* 螢幕尺寸標準 */
 .s1 {
   position: relative;
-  width: size(1920);
+  width: 100%;
   height: size(900);
   background-image: url("~@/projects/tm/s1/bg.jpg");
   background-size: 105%;
@@ -87,6 +87,50 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .s1 {
+    height: size-m(667);
+    background-image: url("~@/projects/tm/s1/bg_m.jpg");
+    background-size: 100%;
+    .sub-vis {
+      font-size: size-m(40);
+      font-weight: 100;
+
+      &.hidden {
+        transform: translate(-50%, -200%);
+        opacity: 0;
+      }
+
+      div {
+        letter-spacing: size-m(1);
+        &.right {
+          margin-left: size-m(5);
+          margin-bottom: size-m(30);
+        }
+        &.left {
+          margin-right: size-m(5);
+          margin-top: size-m(30);
+        }
+      }
+    }
+    .main-vis {
+      position: relative;
+      height: 100%;
+      .logo {
+        position: absolute;
+        width: size-m(234.3);
+        height: size-m(167);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -108,7 +152,7 @@ export default {
   data() {
     return {
       isMobile,
-      visual: ''
+      visual: "",
     };
   },
 
@@ -122,8 +166,8 @@ export default {
   mounted() {
     setTimeout(() => {
       $(".s1 .sub-vis").addClass("hidden");
-      this.visual = 'main'
-    }, 2000);
+      this.visual = "main";
+    }, 4000);
   },
 };
 </script>

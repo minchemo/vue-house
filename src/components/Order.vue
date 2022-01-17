@@ -11,6 +11,7 @@
         <!-- <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="力麒天沐" srcset="">
         <img v-else src="~@/projects/cm/order_title_m.svg" alt="力麒天沐" srcset=""> -->
       </div>
+      <div class="order-title" v-html="order.title"></div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
@@ -153,7 +154,7 @@
     </div>
 
     <ContactInfo />
-    <!-- <GoogleMap /> -->
+    <GoogleMap />
     <PolicyDialog
       :policyVisible="policyVisible"
       @hidePolicyDialog="hidePolicyDialog"
@@ -354,6 +355,7 @@ export default {
     font-family: $family3;
     background: $order_submit_bg;
     border-radius: $order_submit_borderradius !important;
+    border: $order_submit_border;
   }
   .order-top {
     // background-color: $order_bg_color;
@@ -363,7 +365,7 @@ export default {
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: size(400);
+    padding-bottom: 500px;
   }
   .order-title {
     font-family: $family1;

@@ -3,15 +3,21 @@
     <div class="content">
       <div class="img-box"></div>
       <div class="text">
-        <div class="t1">
+        <div class="t1" data-aos="fade">
           <img src="@/projects/tm/s6/entitle.svg" alt="" srcset="" />
         </div>
-        <div class="t2">力麒建設 30年集大成</div>
-        <div class="t3">地標造境，以心打造建築藝術</div>
-        <div class="t4">
+        <div class="t2" data-aos="fade">力麒建設 30年集大成</div>
+        <div class="t3" data-aos="fade-up">地標造境，以心打造建築藝術</div>
+        <div class="t4" v-if="!isMobile" data-aos="fade-up">
           堅持細節30年不變的精神，使得力麒建設口碑卓然不群，<br />
           建築藝術化的眼光與開發意志，讓力麒建設穩居高級住宅首選品牌；<br />
           近年來，更以集團化全方位思考的眼光，與精工卓鑄的執行力，<br />
+          為深情的土地薈萃菁英團隊，不斷創新豪宅里程碑。
+        </div>
+        <div class="t4" v-else data-aos="fade-up">
+          堅持細節30年不變的精神，使得力麒建設口碑卓然不群，
+          建築藝術化的眼光與開發意志，讓力麒建設穩居高級住宅首選品牌；
+          近年來，更以集團化全方位思考的眼光，與精工卓鑄的執行力，
           為深情的土地薈萃菁英團隊，不斷創新豪宅里程碑。
         </div>
       </div>
@@ -22,7 +28,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s6 {
-  width: size(1920);
+  width: 100%;
   height: size(900);
   display: flex;
   align-items: center;
@@ -98,6 +104,62 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .s6 {
+    width: 100%;
+    height: size-m(667);
+    background-image: url("~@/projects/tm/s6/bg_m.jpg");
+  background-attachment: unset;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+      height: 100%;
+      .img-box {
+        width: size-m(375);
+        height: size-m(356);
+        background-image: url("~@/projects/tm/s6/1.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .text {
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: size-m(20);
+        .t1 {
+          position: relative;
+          width: size-m(317);
+          margin-bottom: size-m(15);
+          &:before {
+            content: unset;
+          }
+        }
+        .t2 {
+          font-size: size-m(25);
+          margin-bottom: size-m(45);
+        }
+        .t3 {
+          font-size: size-m(18);
+          margin-bottom: size-m(10);
+          &:before {
+            content: "";
+            width: size-m(400);
+            height: 1px;
+            background: #000;
+            position: absolute;
+            left: -#{size-m(100)};
+            top: -#{size-m(35)};
+          }
+        }
+        .t4 {
+          width: size-m(314);
+          color: #4d4d4d;
+          font-size: size-m(12);
+          line-height: 2;
+        }
+      }
+    }
+  }
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

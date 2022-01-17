@@ -9,7 +9,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s5 {
-  width: size(1920);
+  width: 100%;
   height: size(900);
   display: flex;
   align-items: center;
@@ -25,6 +25,17 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+.s5 {
+  width: 100%;
+  height: size-m(667);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .content {
+    display: flex;
+    align-items: start;
+  }
+}
 }
 
 // 避免內容電腦過渡平板時，設計未考量的調整

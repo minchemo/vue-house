@@ -4,13 +4,12 @@
       <img
         ref="viewImg"
         class="view-img"
-        v-lazy
-        :temp="bgUrl"
+        :src="bgUrl"
         alt="力麒天沐"
       />
-      <!-- <div class="view-hand" ref="viewHand">
-        <img v-lazy :temp="swipeUrl" alt="力麒天沐" />
-      </div> -->
+      <div class="view-hand" ref="viewHand">
+        <img :src="swipeUrl" alt="力麒天沐" />
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +19,7 @@
 .GodModView {
     height: 100%;
   .view {
+    position: relative;
     height: size(900); //依照設計稿調整
     width: size(1920); //依照設計稿調整
     overflow: hidden;
@@ -29,10 +29,11 @@
       position: absolute;
       z-index: 1;
       right: 0;
-      top: 0;
+      bottom: 0;
       width: 100%;
       height: 100%;
       background: #0696;
+      display: none;
 
       img {
         position: absolute;
@@ -58,12 +59,13 @@
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
-      height: size-m(312);
+      height: size-m(667);
       overflow: hidden;
       .view-hand {
         img {
           position: absolute;
-          top: 25%;
+          bottom: 5%;
+          top: unset;
           width: size-m(40);
           animation: move 2s alternate-reverse infinite ease-in-out;
         }
@@ -92,7 +94,7 @@ export default {
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "50" : "37.38", // 鳥瞰圖比例 高÷寬×100
       bgUrl: require("@/projects/tm/s5/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: '', //置換圖片路徑即可
+      swipeUrl: require("@/projects/tm/s5/swipe-here.png"), //置換圖片路徑即可
     };
   },
   methods: {

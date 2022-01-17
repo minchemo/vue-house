@@ -2,7 +2,7 @@
   <div class="contact" id="contact">
     <Order />
     <Footer />
-    <!-- <HouseInfo /> -->
+    <HouseInfo />
   </div>
 </template>
 <style lang="scss" scoped></style>
