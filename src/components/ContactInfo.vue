@@ -15,15 +15,15 @@
               <font-awesome-icon icon="phone" />
               <span>{{ info.phone }}</span>
             </span>
-          </div><!--  @click="showMessengerDialog" -->
-          <div class="btn flex-c">
+          </div><!-- -->
+          <div class="btn flex-c"  @click="showMessengerDialog">
             <span class="flex-c">
               <font-awesome-icon :icon="['fab', 'facebook-messenger']" /><span
                 >FB 諮詢</span
               >
             </span>
-          </div><!--  :href="info.fbLink"  -->
-          <a class="btn flex-c bt_fanpage" target="_blank">
+          </div><!--   -->
+          <a class="btn flex-c bt_fanpage" :href="info.fbLink" target="_blank">
             <span class="flex-c">
               <font-awesome-icon :icon="['fab', 'facebook-f']" /><span
                 >前往粉絲專頁</span
