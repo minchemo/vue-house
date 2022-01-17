@@ -1,7 +1,6 @@
 <template>
   <div class="contact" id="contact">
     <Order />
-    <Footer />
     <HouseInfo />
   </div>
 </template>

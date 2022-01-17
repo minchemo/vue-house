@@ -155,7 +155,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(100%);
+  transform: translateY(200%);
   transition: all 1s;
   .imgg {
     width: 100%;

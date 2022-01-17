@@ -137,13 +137,14 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .s7 {
-    height: size-m(592);
+    height: auto;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
     background-image: url("~@/projects/tm/s7/bg_m.jpg");
     background-size: cover;
+    padding-top: size-m(30);
     .text {
       display: flex;
       align-items: center;
@@ -229,10 +230,12 @@
 
     .img {
       width: 100%;
+      height: 100%;
       overflow-x: scroll;
       overflow-y: hidden;
       img {
-        height: 100%;
+        max-height: 100%;
+        width: auto;
       }
     }
 

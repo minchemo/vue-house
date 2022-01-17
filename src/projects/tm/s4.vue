@@ -136,6 +136,8 @@
   .s4 {
     height: size-m(717);
     background-image: url("~@/projects/tm/s4/bg_m.jpg");
+    background-size: contain;
+    background-position: top;
     .content {
       height: 100%;
       display: flex;
