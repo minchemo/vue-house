@@ -128,6 +128,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -100%);
   z-index: 15;
+  bottom: 11%;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -223,8 +224,8 @@ export default {
 
 .logo {
   // width: $contact_logo_pc_width;
-  height: 150px;
-  margin: 0 auto 70px auto;
+  height: 110px;
+  margin: 0 auto 30px auto;
   z-index: 1;
   width: 60%;
 }

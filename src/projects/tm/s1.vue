@@ -26,9 +26,9 @@
 .s1 {
   position: relative;
   width: 100%;
-  height: size(900);
+  height: 100vh;
   background-image: url("~@/projects/tm/s1/bg.jpg");
-  background-size: 105%;
+  background-size: cover;
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
@@ -86,11 +86,21 @@
 }
 
 /* 手機尺寸 */
+@media only screen and (max-width: 767px) and (max-height: 667px) {
+  .s1 {
+background-size: 100%;
+  }
+}
+@media only screen and (max-width: 767px) and (min-height: 667px) {
+  .s1 {
+background-size: cover;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .s1 {
-    height: size-m(667);
+    height: 100vh;
     background-image: url("~@/projects/tm/s1/bg_m.jpg");
-    background-size: 100%;
     .sub-vis {
       font-size: size-m(40);
       font-weight: 100;

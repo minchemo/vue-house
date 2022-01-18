@@ -557,7 +557,7 @@ export default {
       background-size: contain;
       background-repeat: repeat;
       // top: 10vw;
-      padding-bottom: 0;
+      padding-bottom: 50px;
     }
     .order {
       width: 85% !important;

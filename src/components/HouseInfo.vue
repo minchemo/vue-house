@@ -81,7 +81,7 @@ export default {
   font-size: 24px;
   margin-bottom: 30px;
   margin-right: 160px;
-  width: 260px;
+  width: 240px;
   height: 30px;
   border-left: 4px solid $house_border_color;
   padding-left: 12px;
@@ -94,22 +94,22 @@ export default {
   }
 
   .label {
-    font-size: 24px;
+    font-size: 18px;
     color: $house_label_color;
     margin-bottom: 0;
     margin-right: 20px;
     white-space: nowrap;
     font-family: $family3;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   .desc {
-    font-size: 24px;
+    font-size: 18px;
     text-align: left;
     line-height: 1.4;
     color: $house_desc_color;
     font-family: $family3;
-    font-weight: 300;
+    font-weight: 500;
   }
 }
 

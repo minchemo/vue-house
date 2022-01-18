@@ -62,12 +62,18 @@
 }
 
 @media screen and (max-width: 767px) {
+  .footer-box {
+    margin-bottom: 63px;
+}
   .footer {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (max-width: 767px) {
+  .footer-box {
+    margin-bottom: 63px;
+}
   .footer {
     margin-bottom: 0;
   }
