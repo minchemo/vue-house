@@ -45,6 +45,7 @@
         </div>
       </div>
       <div class="s3">
+        <img src="@/projects/tm/s2s3/tree.png" class="tree" alt="" srcset="" />
         <div class="title">
           <div class="t1" data-aos="fade">陽明山貴冑之地</div>
           <div class="t2" data-aos="fade-up">磺溪豐景第一排</div>
@@ -101,19 +102,30 @@
   background-repeat: no-repeat;
   // background-position: center;
   background-position: bottom;
+
   .s2,
   .s3 {
     position: relative;
     width: 100%;
     height: size(900);
+    
+  }
+  .tree{
+    position: absolute;
+    z-index: 1;
+    top:calc(50% + ( -255 - 1080 * 0.5) * 100vw / 1920);
+    left: -10px;
+    width: 72.5%;
   }
 
   .s2 {
+    position: relative;
     // display: flex;
     display: none;
     align-items: center;
     justify-content: center;
     .title {
+      
       width: size(410);
       margin-right: size(80);
       p {
@@ -178,6 +190,7 @@
     .title {
       text-align: left;
       margin-right: size(50);
+      z-index: 2;
       .t1 {
         font-size: size(71);
         color: #c3a672;

@@ -1,5 +1,5 @@
 export default {
-    address: "台北市⼠林區天⺟東路109號",
+    address: "台北市士林區天⺟東路109號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.51337522257!2d121.53443251561319!3d25.11832894105839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae7ffa20dac9%3A0x7d52e55d904bedfc!2zMTEx5Y-w5YyX5biC5aOr5p6X5Y2A5aSp5q-N5p2x6LevMTA56Jmf!5e0!3m2!1szh-TW!2stw!4v1642581220742!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/rUD7Six2r6v8Adqc9",
     phone: "02-88096688",
@@ -14,7 +14,7 @@ export default {
         ["建築代銷", "海悅開發股份有限公司"],
         ["貴賓專線", "(02)2871-3668"],
         ["基地位置", "台北市北投區天母西路120巷旁"],
-        ["接待中⼼", "台北市⼠林區天⺟東路109號"],
+        ["接待中⼼", "台北市士林區天母東路109號"],
     ],
 
     gtmCode: [""], // 可放置多個
