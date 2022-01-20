@@ -94,11 +94,13 @@
 /* 螢幕尺寸標準 */
 .s2s3 {
   width: 100%;
-  height: size(1800);
+  // height: size(1800);
+  height: size(900);
   background-image: url("~@/projects/tm/s2s3/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  // background-position: center;
+  background-position: bottom;
   .s2,
   .s3 {
     position: relative;
@@ -107,7 +109,8 @@
   }
 
   .s2 {
-    display: flex;
+    // display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     .title {
@@ -286,11 +289,11 @@
 @media only screen and (max-width: 767px) {
   .s2s3 {
     width: 100%;
-    height: size-m(1098);
+    // height: size-m(1098);
+    height: size-m(759);
     background-image: url("~@/projects/tm/s2s3/bg_m.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
     .s2 {
       height: size-m(339);
     }
@@ -299,7 +302,8 @@
     }
 
     .s2 {
-      display: flex;
+      // display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       flex-direction: column-reverse;
