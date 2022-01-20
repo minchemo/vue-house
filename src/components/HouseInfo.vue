@@ -34,7 +34,7 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
- // background: url("../assets/img/housebg.jpg");
+  background: #fff;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
