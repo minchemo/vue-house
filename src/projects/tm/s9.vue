@@ -177,10 +177,10 @@
     position: absolute;
     right: size(10);
     top: size(10);
-    color: #fff;
+    color: #c8c8c8;
     width: size(90);
     height: size(90);
-    border: 1px solid #fff;
+    border: 1px solid #c8c8c8;
     &::after,
     &::before {
       content: "";
@@ -394,11 +394,11 @@ export default {
       },
       imgs: [
         require("@/projects/tm/s9/1.jpg"),
+        require("@/projects/tm/s9/2.jpg"),
+        require("@/projects/tm/s9/3.jpg"),
         require("@/projects/tm/s9/1.jpg"),
-        require("@/projects/tm/s9/1.jpg"),
-        require("@/projects/tm/s9/1.jpg"),
-        require("@/projects/tm/s9/1.jpg"),
-        require("@/projects/tm/s9/1.jpg"),
+        require("@/projects/tm/s9/2.jpg"),
+        require("@/projects/tm/s9/3.jpg"),
       ],
     };
   },

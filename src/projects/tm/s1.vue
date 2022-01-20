@@ -86,21 +86,21 @@
 }
 
 /* 手機尺寸 */
-@media only screen and (max-width: 767px) and (max-height: 667px) {
-  .s1 {
-background-size: 100%;
-  }
-}
-@media only screen and (max-width: 767px) and (min-height: 667px) {
-  .s1 {
-background-size: cover;
-  }
-}
 
 @media only screen and (max-width: 767px) {
   .s1 {
-    height: 100vh;
-    background-image: url("~@/projects/tm/s1/bg_m.jpg");
+    height: calc(100vh - 63px);
+    background: none;
+
+    &::before{content: "";
+    position: fixed;top: 0;left: 0;
+    bottom: 0;right: 0;
+    background: url("~@/projects/tm/s1/bg_m.jpg") center top;
+    background-size: 100% auto;
+    z-index: -1;
+    
+    }
+
     .sub-vis {
       font-size: size-m(40);
       font-weight: 100;
@@ -125,16 +125,22 @@ background-size: cover;
     .main-vis {
       position: relative;
       height: 100%;
+      width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       .logo {
-        position: absolute;
+        position: relative;
         width: size-m(234.3);
         height: size-m(167);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        align-items: center;
+        top: 0;
+        transform: translate(0);
+        left: 0;
+
         img {
           width: 100%;
         }

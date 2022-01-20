@@ -20,7 +20,7 @@
     height: 100%;
   .view {
     position: relative;
-    height: size(900); //依照設計稿調整
+    height: size(1001); //依照設計稿調整
     width: size(1920); //依照設計稿調整
     overflow: hidden;
     // cursor: ew-resize;

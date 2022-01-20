@@ -10,7 +10,7 @@
 /* 螢幕尺寸標準 */
 .s5 {
   width: 100%;
-  height: size(900);
+  height: size(1001);
   display: flex;
   align-items: center;
   justify-content: center;
