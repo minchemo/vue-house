@@ -1,8 +1,16 @@
 <template>
   <div class="s1">
     <div class="sub-vis">
-      <div class="left" data-aos="fade-up" data-aos-delay="200">沐磺溪大景</div>
-      <div class="right" data-aos="fade-down">仰天母森情</div>
+      <div class="left" data-aos="fade-up" data-aos-delay="200">
+        <img
+          src="@/projects/tm/s1/t1.svg"
+        />
+      </div>
+      <div class="right" data-aos="fade-down">
+         <img
+          src="@/projects/tm/s1/t2.svg"
+        />
+      </div>
     </div>
     <div class="main-vis" v-if="visual == 'main'">
       <div class="logo">
@@ -46,6 +54,8 @@
     justify-content: center;
     transition: all 2s;
 
+    
+
     &.hidden {
       transform: translate(-50%, -200%);
       opacity: 0;
@@ -56,10 +66,14 @@
       &.right {
         margin-left: size(10);
         margin-bottom: size(70);
+
+        img{height: 30%;}
       }
       &.left {
         margin-right: size(10);
         margin-top: size(70);
+
+        img{height: 30%;}
       }
     }
   }
@@ -105,20 +119,27 @@
       font-size: size-m(40);
       font-weight: 100;
 
+
+
       &.hidden {
         transform: translate(-50%, -200%);
         opacity: 0;
       }
+      
 
       div {
         letter-spacing: size-m(1);
         &.right {
           margin-left: size-m(5);
           margin-bottom: size-m(30);
+
+          img{height: 40%;}
         }
         &.left {
           margin-right: size-m(5);
           margin-top: size-m(30);
+
+          img{height: 40%;}
         }
       }
     }
