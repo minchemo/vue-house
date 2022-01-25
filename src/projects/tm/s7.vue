@@ -27,8 +27,6 @@
             }"
           >
           </swiper-slide>
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
         </swiper>
         <swiper v-else :options="swiperOptions" @click-slide="clickSlide">
           <swiper-slide
@@ -39,13 +37,13 @@
             }"
           >
             <div class="caption">{{ img.caption }}</div>
-            <img
+            <!-- <img
               v-if="i == 0"
               class="clickshow"
               src="~@/projects/tm/s7/clickshow.png"
               alt=""
               srcset=""
-            />
+            /> -->
           </swiper-slide>
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
@@ -53,7 +51,7 @@
         </swiper>
       </div>
     </div>
-    <div v-if="isMobile" class="s7view" v-bind:class="{ active: showView }">
+    <!-- <div v-if="isMobile" class="s7view" v-bind:class="{ active: showView }">
       <div class="close" @click="showView = false"></div>
       <div class="img">
         <img src="~@/projects/tm/s7/view.jpg" alt="" srcset="" />
@@ -64,7 +62,7 @@
         alt=""
         srcset=""
       />
-    </div>
+    </div> -->
   </div>
 </template>
 <style lang="scss">
@@ -226,7 +224,7 @@
     background-color: #fff;
     z-index: 10000;
     transform: translateY(500%);
-    transition: all .2s;
+    transition: all 0.2s;
 
     .img {
       width: 100%;
@@ -324,10 +322,11 @@ export default {
     },
   },
   mounted() {
-        const view = $(".s7view").find('.img');
-        view.on("scroll", function () {
-          $(".swipe-here").hide();
-        });},
+    const view = $(".s7view").find(".img");
+    view.on("scroll", function () {
+      $(".swipe-here").hide();
+    });
+  },
   data() {
     return {
       isMobile,
@@ -343,15 +342,15 @@ export default {
         pagination: {
           el: ".s7 .swiper-pagination",
         },
-        loop: true,
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
+        loop: !isMobile ? false : true,
+        autoplay: !isMobile
+          ? false
+          : {
+              delay: 4000,
+              disableOnInteraction: false,
+            },
       },
-      imgs: [
-        require("@/projects/tm/s7/2.jpg"),
-      ],
+      imgs: [require("@/projects/tm/s7/2.jpg")],
       imgs_m: [
         {
           url: require("@/projects/tm/s7/2_m.jpg"),
