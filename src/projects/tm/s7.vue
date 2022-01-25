@@ -14,7 +14,7 @@
           獨一無二、無可比擬，作為力麒久違天母的回歸獻禮
         </div>
         <div class="t2" v-else data-aos="fade-up">
-          力麒建設三代定居天母至今40多年﹐這裡﹐是力麒建設家族「心中最美的念想」﹐基於情感﹐因於緣份﹐力麒建設用心整合河畔別墅﹐終以30年功力﹐成就”正面俯瞰公園大片林蔭、磺溪彩虹橋水岸綠堤”的完美基地﹐獨一無二、無可比擬﹐作為力麒久違天母的回歸獻禮
+          力麒建設三代定居天母至今40多年，這裡，是力麒建設家族「心中最美的念想」，基於情感，因於緣份，力麒建設用心整合河畔別墅，終以30年功力，成就”正面俯瞰公園大片林蔭、磺溪彩虹橋水岸綠堤”的完美基地，獨一無二、無可比擬，作為力麒久違天母的回歸獻禮
         </div>
       </div>
       <div class="img-box">
@@ -350,19 +350,15 @@ export default {
               disableOnInteraction: false,
             },
       },
-      imgs: [require("@/projects/tm/s7/2.jpg")],
+      imgs: [require("@/projects/tm/s7/1.jpg")],
       imgs_m: [
         {
+          url: require("@/projects/tm/s7/1_m.jpg"),
+          caption: "",
+        },
+        {
           url: require("@/projects/tm/s7/2_m.jpg"),
-          caption: "磺溪風景",
-        },
-        {
-          url: require("@/projects/tm/s7/3_m.jpg"),
-          caption: "磺溪風景",
-        },
-        {
-          url: require("@/projects/tm/s7/4_m.jpg"),
-          caption: "磺溪風景",
+          caption: "",
         },
       ],
     };

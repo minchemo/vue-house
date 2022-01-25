@@ -17,9 +17,10 @@
           溫柔的營造磺溪畔生活的謐境。
         </div>
         <div class="swipe-title" data-aos="fade-up">
-          <p>特色公設3D</p>
+          <p>特色公設手繪稿</p>
           <div class="line"></div>
         </div>
+        
         <div class="swipe-box">
           <swiper :options="swiperOptions" @click-slide="clickSlide">
             <swiper-slide
@@ -42,7 +43,11 @@
           </swiper>
         </div>
       </div>
-      <div class="img-box" data-aos="fade"></div>
+      <div class="img-box" data-aos="fade">
+        <div class="t4" data-aos="fade-up">
+          外觀及環境3D透視模擬⽰意圖
+        </div>
+      </div>
     </div>
     <div class="img-popup" v-bind:class="{ show: imgPopOpen == true }">
       <img class="imgg" :src="zoomImgUrl" alt="" srcset="" />
@@ -82,6 +87,7 @@
       font-size: size(18);
       line-height: 2.5;
     }
+    
     .swipe-title {
       margin-top: size(30);
       margin-bottom: size(40);
@@ -142,6 +148,17 @@
     background-image: url("~@/projects/tm/s9/a.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .t4 {
+      color: #fff;
+      font-size: size(18);
+      line-height: 2.5;
+      margin-bottom: 5px;
+      margin-right: 20px;
+    }
   }
 }
 
@@ -316,7 +333,14 @@
       background-image: url("~@/projects/tm/s9/a.jpg");
       background-size: cover;
       background-position: center;
+
+      .t4 {
+      color: #fff;
+      font-size: size-m(12);
+      line-height: 2.5;
     }
+    }
+    
   }
   .img-popup {
     z-index: 10000;
