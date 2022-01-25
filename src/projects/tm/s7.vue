@@ -350,14 +350,9 @@ export default {
         },
       },
       imgs: [
-        require("@/projects/tm/s7/1.jpg"),
         require("@/projects/tm/s7/2.jpg"),
       ],
       imgs_m: [
-        {
-          url: require("@/projects/tm/s7/1_m.jpg"),
-          caption: "陽明大屯山",
-        },
         {
           url: require("@/projects/tm/s7/2_m.jpg"),
           caption: "磺溪風景",
