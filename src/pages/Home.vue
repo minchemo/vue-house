@@ -1,15 +1,16 @@
 <template>
   <div class="home no-padding-top">
     <!-- <CustomNavigation :scrollInstance="locomotive" /> -->
+    <Navigation />
     <div id="locomotive">
       <Section1 class="section" data-scroll />
       <Section2 class="section" data-scroll />
-      <Section4 class="section" data-scroll />
+      <!-- <Section4 class="section" data-scroll />
       <Section5 class="section" data-scroll />
       <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
       <Section8 class="section" data-scroll />
-      <Section9 class="section" data-scroll />
+      <Section9 class="section" data-scroll /> -->
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -33,14 +34,14 @@ import AOS from "@/lib/aos/src/js/aos";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/tm/s1.vue";
-import Section2 from "@/projects/tm/s2s3.vue";
-import Section4 from "@/projects/tm/s4.vue";
-import Section5 from "@/projects/tm/s5.vue";
-import Section6 from "@/projects/tm/s6.vue";
-import Section7 from "@/projects/tm/s7.vue";
-import Section8 from "@/projects/tm/s8.vue";
-import Section9 from "@/projects/tm/s9.vue";
+import Section1 from "@/projects/cfyd/s1.vue";
+import Section2 from "@/projects/cfyd/s2.vue";
+// import Section4 from "@/projects/tm/s4.vue";
+// import Section5 from "@/projects/tm/s5.vue";
+// import Section6 from "@/projects/tm/s6.vue";
+// import Section7 from "@/projects/tm/s7.vue";
+// import Section8 from "@/projects/tm/s8.vue";
+// import Section9 from "@/projects/tm/s9.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
 // import UIkit from 'uikit';
@@ -60,12 +61,12 @@ export default {
     MobileNav,
     Section1,
     Section2,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
-    Section8,
-    Section9,
+    // Section4,
+    // Section5,
+    // Section6,
+    // Section7,
+    // Section8,
+    // Section9,
   },
 
   data() {

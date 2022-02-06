@@ -1,13 +1,17 @@
 <template>
   <div class="thanks">
     <a href="/">
-      <img src="~@/assets/img/thank-img.png" alt="力麒天沐" class="img">
-      <img src="~@/assets/img/thank-img-hover.png" alt="力麒天沐" class="img-hover">
+      <img src="~@/assets/img/thank-img.png" alt="春福御邸" class="img" />
+      <img
+        src="~@/assets/img/thank-img-hover.png"
+        alt="春福御邸"
+        class="img-hover"
+      />
     </a>
   </div>
 </template>
 <style lang="scss" scoped>
-@import '@/assets/style/variableColor.scss';
+@import "@/assets/style/variableColor.scss";
 .thanks {
   width: 100vw;
   height: 100vh;
@@ -41,7 +45,8 @@
 @media screen and (max-width: 767px) {
   .thanks {
     a {
-      .img, .img-hover {
+      .img,
+      .img-hover {
         width: 90vw;
       }
     }

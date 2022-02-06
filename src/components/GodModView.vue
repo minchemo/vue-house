@@ -1,14 +1,9 @@
 <template>
   <div class="GodModView with-mask">
     <div class="view" ref="view">
-      <img
-        ref="viewImg"
-        class="view-img"
-        :src="bgUrl"
-        alt="力麒天沐"
-      />
+      <img ref="viewImg" class="view-img" :src="bgUrl" alt="春福御邸" />
       <div class="view-hand" ref="viewHand">
-        <img :src="swipeUrl" alt="力麒天沐" />
+        <img :src="swipeUrl" alt="春福御邸" />
       </div>
     </div>
   </div>
@@ -17,11 +12,11 @@
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 .GodModView {
-    height: 100%;
+  height: 100%;
   .view {
     position: relative;
-    height: size(1001); //依照設計稿調整
-    width: size(1920); //依照設計稿調整
+    height: size(957); //依照設計稿調整
+    width: size(1767); //依照設計稿調整
     overflow: hidden;
     // cursor: ew-resize;
 
@@ -51,7 +46,7 @@
       }
     }
     .view-img {
-      height:100%;
+      height: 100%;
     }
   }
 }
@@ -93,7 +88,7 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "50" : "37.38", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/tm/s5/bg.jpg"), //置換圖片路徑即可
+      bgUrl: require("@/projects/cfyd/s2/view.png"), //置換圖片路徑即可
       swipeUrl: require("@/projects/tm/s5/swipe-here.png"), //置換圖片路徑即可
     };
   },
@@ -108,6 +103,7 @@ export default {
           scrollY: true,
           disableTouch: false,
           disableMouse: false,
+          useTransition: false,
           bindToWrapper: true,
           eventPassthrough: "vertical",
           bounce: false,

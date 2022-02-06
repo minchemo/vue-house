@@ -1,54 +1,61 @@
 export default [{
-        name: "國際CBD",
+        name: "未來門戶",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
         section: "section2-t",
         svgSrc: "",
-        offset:-100,
-        mobileOffset:-100
+        offset: -100,
+        mobileOffset: -100
     },
     {
-        name: "新名邸特區",
+        name: "精采核心",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section4",
+        section: "",
         svgSrc: "",
-        offset: 0,
-        mobileOffset: 0
+        offset: -100,
+        mobileOffset: -100
     },
     {
-        name: "生活新風貌",
+        name: "雋永建築",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section6",
+        section: "",
         svgSrc: "",
-        offset: 0,
-        mobileOffset: 0
+        offset: -100,
+        mobileOffset: -100
     },
     {
-        name: "校園第一排",
+        name: "品味美學",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section8",
+        section: "",
         svgSrc: "",
-        offset: 0,
-        mobileOffset: 0
+        offset: -100,
+        mobileOffset: -100
     },
-    /*
     {
-        name: "人文青建築",
+        name: "春福鉅作",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section9",
+        section: "",
         svgSrc: "",
-        offset: 0,
-        mobileOffset: 0
+        offset: -100,
+        mobileOffset: -100
+    },
+    {
+        name: "大師齊力",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "",
+        svgSrc: "",
+        offset: -100,
+        mobileOffset: -100
     }
-
-    */
 ];

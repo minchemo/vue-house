@@ -5,23 +5,32 @@ $bg_m: url("");
 
 /* font-family */
 
+
 /* 1主要字體  2次要字體  3表單字體  4黑體 */
 
-$family1: "Noto Sans TC", serif;
-$family2: "Noto Sans TC", serif;
-$family3: "Noto Sans TC", serif;
-$family4: "Noto Sans TC", serif, sans-serif;
+$family1: "Noto Sans TC",
+serif;
+$family2: "Noto Sans TC",
+serif;
+$family3: "Noto Sans TC",
+serif;
+$family4: "Noto Sans TC",
+serif,
+sans-serif;
 $selection_color: grey;
 
 /* navigation */
 
-$nav_bg: rgba(255, 255, 255, 0.4);
+$nav_bg: rgba(0,
+0,
+0,
+0.7);
 $nav_btn_color: #000;
 $nav_link_color: #000;
 $nav_link_subtitle_color: #000;
 $nav_link_hover_color: #fff;
 $nav_link_hover_bg: #976a4b;
-$nav_link_border_bg: #000;
+$nav_link_border_bg: #c79f62;
 
 /* loading */
 
@@ -32,7 +41,15 @@ $loading_icon_color: #f7931e #f7931e transparent;
 /* astrictMask */
 
 $mask_bg_color: #fff;
-$mask_bg_image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
+$mask_bg_image: linear-gradient( to top,
+rgba(0,
+0,
+0,
+0.24),
+rgba(156,
+30,
+35,
+0));
 $mask_color: #333;
 $mask_icon_color: #c82514;
 
@@ -52,16 +69,19 @@ $order_input_border: solid 1px #fff;
 $order_input_focus_border: solid 2px #fff !important;
 $order_input_selected_color: solid 1px #fff !important;
 $order_check_desc_color: #fff !important;
-$order_check_span_color: #FFE200 !important;
+$order_check_span_color: #ffe200 !important;
 $order_submit_bg: transparent;
-$order_submit_border: 3px solid #B4904F !important;
+$order_submit_border: 3px solid #b4904f !important;
 $order_submit_borderradius: 0px;
-$order_submit_color: #B4904F !important;
+$order_submit_color: #b4904f !important;
 $order_sumbit_disable_bg: #fff;
 // contactInfo
-$contact_bg: #B4904F;
-$contact_bg_m: #B4904F;
-$contact_shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2);
+$contact_bg: #b4904f;
+$contact_bg_m: #b4904f;
+$contact_shadow: 0 0 80px 0 rgba(0,
+0,
+0,
+0.2);
 $contact_btn_border: inset 0 0 1px 1px #fff;
 $contact_btn_color: #fff;
 $contact_btn_icon: #fff;
@@ -86,20 +106,21 @@ $contact_google_hover_border: inset 0 0 0px 0px #fff;
 $house_bg: url("~@/assets/img/order_bg.jpg");
 $house_title_color: #333333;
 $house_border_color: #949494;
-$house_label_color: #B4904F;
+$house_label_color: #b4904f;
 $house_desc_color: #333333;
 // mobileNav
-$mobile_nav_background: #B4904F;
+$mobile_nav_background: #b4904f;
 $mobile_nav_color: #fff;
 $mobile_nav_border: #fff;
 $mobile_nav_icon: #fff;
 $mobile_dialog_bg: #fff;
-$mobile_dialog_icon: #B4904F;
+$mobile_dialog_icon: #b4904f;
 $mobile_dialog_desc: #000;
-$mobile_dialog_submit_bg: #B4904F;
+$mobile_dialog_submit_bg: #b4904f;
 $mobile_dialog_submit_color: #fff;
 
 /* dialog */
+
 
 /* PhoneThanks.vue */
 

@@ -6,10 +6,9 @@
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
       <!-- <h3 class="order-title" v-html="order.title"></h3> -->
-      <div class="order-title-img"
-        data-aos="zoom-in">
-        <!-- <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="力麒天沐" srcset="">
-        <img v-else src="~@/projects/cm/order_title_m.svg" alt="力麒天沐" srcset=""> -->
+      <div class="order-title-img" data-aos="zoom-in">
+        <!-- <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="春福御邸" srcset="">
+        <img v-else src="~@/projects/cm/order_title_m.svg" alt="春福御邸" srcset=""> -->
       </div>
       <div class="order-title" v-html="order.title"></div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
@@ -469,7 +468,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
-  //  background: $order_input_bg;
+    //  background: $order_input_bg;
 
     &.house {
       margin-top: 50px;

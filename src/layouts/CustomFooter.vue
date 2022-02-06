@@ -7,7 +7,7 @@
             <img
               v-lazy
               :temp="require('@/projects/pjr/footer/logo.svg')"
-              alt="力麒天沐"
+              alt="春福御邸"
               srcset=""
             />
           </div>
@@ -115,7 +115,7 @@
       h2 {
         font-size: size(29);
         margin-bottom: size(30);
-        
+
         font-weight: 500;
       }
       .divider {
@@ -175,7 +175,7 @@
         .form-check {
           transform: scale(1.5);
           transform-origin: left;
-      //    font-family: "Noto Sans TC";
+          //    font-family: "Noto Sans TC";
           .el-checkbox__input.is-checked + .el-checkbox__label {
             color: #000;
           }
@@ -189,7 +189,7 @@
         line-height: size(53);
         font-size: size(20);
         cursor: pointer;
-     //   font-family: "Noto Sans TC", Noto Sans TC, serif;
+        //   font-family: "Noto Sans TC", Noto Sans TC, serif;
         font-weight: 500;
 
         &:hover {
@@ -295,7 +295,7 @@
           .form-check {
             transform: scale(1);
             transform-origin: left;
-        //    font-family: "Noto Sans TC";
+            //    font-family: "Noto Sans TC";
           }
         }
         .form-cus-btn {
@@ -416,9 +416,8 @@ export default {
           },
         }).then((response) => {
           this.isSubmit = false;
-          window.location.href = `formThanks${
-            utmCampaign ? `?utm_campaign=${utmCampaign}` : ""
-          }`;
+          window.location.href = `formThanks${utmCampaign ? `?utm_campaign=${utmCampaign}` : ""
+            }`;
           this.recordPageView(1); // record user behavior
         });
       }
@@ -522,10 +521,10 @@ export default {
     this.generateGUID();
 
     setInterval(() => {
-      this.duration ++;
+      this.duration++;
     }, 1000);
   },
 
-  created() {},
+  created() { },
 };
 </script>

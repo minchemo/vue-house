@@ -3,14 +3,14 @@
     <div class="layout-container-fluid nav-container">
       <div class="layout-container nav-container">
         <div class="nav">
-          <img
+          <!-- <img
             class="logo"
             src="@/assets/img/nav-logo.png"
             alt
             v-scroll-to="{ element: `#app` }"
             data-aos="fade-right"
             data-aos-duration="1500"
-          />
+          /> -->
           <div
             v-show="false"
             @click="toggleSidebar"
@@ -47,13 +47,13 @@
               v-if="isMobile"
               class="d-m-1"
               src="@/projects/ab/mo-nav-1.png"
-              alt="力麒天沐"
+              alt="春福御邸"
             />
             <img
               v-if="isMobile"
               class="d-m-2"
               src="@/projects/ab/mo-nav-2.png"
-              alt="力麒天沐"
+              alt="春福御邸"
             /> -->
           </ul>
         </div>
@@ -237,10 +237,17 @@ export default {
     .title {
       position: relative;
       z-index: 3;
-      font-family: $family2;
+      font-family: "Noto Serif TC";
       text-align: center;
       align-items: center;
       justify-content: center;
+      font-weight: bold;
+      color: #c79f62;
+      transition: all 0.4s;
+
+      &:hover {
+        color: #e95513;
+      }
     }
     .subTitle {
       color: $nav_link_subtitle_color;
@@ -258,7 +265,7 @@ export default {
       height: 3px;
       width: 0;
       bottom: -12px;
-      background-color: #000000;
+      background-color: #e95513;
       transition: all 0.4s;
       opacity: 0;
     }

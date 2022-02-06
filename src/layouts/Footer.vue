@@ -4,14 +4,14 @@
       class="footer-img"
       v-if="isMobile"
       src="@/projects/cm/footer_m.jpg"
-      alt="力麒天沐"
+      alt="春福御邸"
       srcset=""
     /> -->
     <!-- <img
       class="footer-img"
       v-else
       src="@/projects/cm/footer.jpg"
-      alt="力麒天沐"
+      alt="春福御邸"
       srcset=""
     /> -->
     <div class="footer">
@@ -64,7 +64,7 @@
 @media screen and (max-width: 767px) {
   .footer-box {
     margin-bottom: 63px;
-}
+  }
   .footer {
     margin-bottom: 0;
   }
@@ -73,13 +73,13 @@
 @media only screen and (max-width: 767px) {
   .footer-box {
     margin-bottom: 63px;
-}
+  }
   .footer {
     margin-bottom: 0;
   }
-.footer-img {
-  height:calc(10000vw / 375);
-}
+  .footer-img {
+    height: calc(10000vw / 375);
+  }
 }
 </style>
 
