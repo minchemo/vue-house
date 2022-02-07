@@ -1,72 +1,30 @@
 <template>
   <ul id="hexGrid">
-    <li class="hex">
-      <a class="hexIn" href="#">
-        <img
-          src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg"
-          alt=""
-        />
-      </a>
-    </li>
-    <li class="hex">
-      <a class="hexIn" href="#">
-        <img
-          src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg"
-          alt=""
-        />
-      </a>
-    </li>
-    <li class="hex">
-      <a class="hexIn" href="#">
-        <img
-          src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg"
-          alt=""
-        />
-      </a>
-    </li>
-    <li class="hex">
-      <a class="hexIn" href="#">
-        <img
-          src="https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg"
-          alt=""
-        />
-      </a>
-    </li>
-    <li class="hex">
-      <a class="hexIn" href="#">
-        <img
-          src="https://farm7.staticflickr.com/6083/6055581292_d94c2d90e3.jpg"
-          alt=""
-        />
-      </a>
-    </li>
-    <li class="hex">
-      <a class="hexIn" href="#">
-        <img
-          src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg"
-          alt=""
-        />
-      </a>
-    </li>
-    <li class="hex">
-      <a class="hexIn" href="#">
-        <img
-          src="https://farm8.staticflickr.com/7187/6895047173_d4b1a0d798.jpg"
-          alt=""
-        />
-      </a>
+    <li
+      class="hex"
+      v-for="(img, i) in imgs"
+      :key="i"
+      v-bind:class="{ hide: img.hide }"
+    >
+      <div class="hexIn">
+        <div
+          class="bg"
+          v-bind:style="{ backgroundImage: `url(${img.url})`}"
+        ></div>
+        <div class="caption">{{ img.caption }}</div>
+      </div>
     </li>
   </ul>
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/style/function.scss";
 /* Hexagons */
 #hexGrid {
   overflow: hidden;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   padding: 0.866% 0;
-  font-family: "Raleway", sans-serif;
   font-size: 15px;
   transform: rotate(-15deg);
   &:after {
@@ -98,20 +56,29 @@
     color: #fff;
     overflow: hidden;
     transform: skewY(-30deg) rotate(60deg);
+    .caption {
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      transform: translateX(#{size(140)}) rotate(30deg);
+      top: size(20);
+      font-size: size(17);
+    }
+    .bg {
+      width: 100%;
+      height: 100%;
+      background-color: purple;
+    }
   }
 
-  img {
-    left: -100%;
-    right: -100%;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
+  &.hide {
+    opacity: 0;
   }
 }
 
 /*** SPACING AND SIZING *****************************************************************/
 
-@media (min-width: 1201px) {
+@media (min-width: 300px) {
   /* <- 2-3  hexagons per row */
   .hex {
     width: 32.666%;
@@ -139,44 +106,56 @@
     &:nth-child(5n + 6) {
       clear: left;
     }
-  }
-}
-
-@media (max-width: 1200px) {
-  /* <- 1-2  hexagons per row */
-  .hex {
-    width: 49.5%; /* = (100-1) / 2 */
-    padding-bottom: 57.158%; /* =  width / sin(60) */
-    &:nth-child(3n + 1) {
-      transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    &:nth-child(5n + 2) {
+      margin-left: 17.5%;
     }
-    &:nth-child(3n + 2),
-    &:nth-child(3n + 3) {
-      margin-top: -13.423%;
-      margin-bottom: -13.423%;
-    }
-    &:nth-child(3n + 1) {
-      margin-left: 0.5%;
-    }
-    &:nth-child(3n + 3) {
-      margin-left: 1%;
-    }
-    &:nth-child(3n + 2),
-    &:nth-child(3n + 4) {
-      clear: left;
-    }
-  }
-}
-
-@media (max-width: 400px) {
-  #hexGrid {
-    font-size: 13px;
   }
 }
 </style>
 
 <script>
 export default {
-  name: 'honeycomb'
-}
+  name: "honeycomb",
+  data() {
+    return {
+      imgs: [
+        {
+          url: require("@/projects/cfyd/s3/hex/1.png"),
+          caption: "標題",
+          hide: true,
+        },
+        {
+          url: require("@/projects/cfyd/s3/hex/1.png"),
+          caption: "標題",
+          hide: false,
+        },
+        {
+          url: require("@/projects/cfyd/s3/hex/1.png"),
+          caption: "標題",
+          hide: false,
+        },
+        {
+          url: require("@/projects/cfyd/s3/hex/1.png"),
+          caption: "標題",
+          hide: false,
+        },
+        {
+          url: require("@/projects/cfyd/s3/hex/1.png"),
+          caption: "標題",
+          hide: false,
+        },
+        {
+          url: require("@/projects/cfyd/s3/hex/1.png"),
+          caption: "標題",
+          hide: false,
+        },
+        {
+          url: require("@/projects/cfyd/s3/hex/1.png"),
+          caption: "標題",
+          hide: false,
+        },
+      ],
+    };
+  },
+};
 </script>

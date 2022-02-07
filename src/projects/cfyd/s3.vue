@@ -23,7 +23,13 @@
     background-image: url("~@/projects/cfyd/s3/bg.png");
     background-position: center;
     background-size: cover;
-    z-index: 5;
+    z-index: 0;
+  }
+  .hc {
+    position: absolute;
+    right: 0;
+    top: size(130);
+    width: size(900);
   }
 }
 /* 平板尺寸 */
