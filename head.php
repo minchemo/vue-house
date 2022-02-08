@@ -4,7 +4,11 @@
 $case_code = "aries";特殊案使用
 $src =$_SERVER['SERVER_NAME']; 
 $case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
+<<<<<<< HEAD
 
+=======
+$case_code = "ghs";
+>>>>>>> b6b3380b0860c07b8bff136b41f2d795a030b3da
 
 $pdo = new pdo('mysql:host=localhost;dbname=htw_web', 'htw', '748aSgl5Ni');
 $pdo->exec("SET NAMES 'utf8'");
