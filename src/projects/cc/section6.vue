@@ -4,11 +4,9 @@
       <div class="left" uk-parallax="viewport: 0.3;y:100,0;">
         <h2 uk-parallax="viewport: 0.3;blur:40,0;y:-200,0;">
           交通百匯<br />
-          3高3快3捷&nbsp;瞬移速可達</h2>
-        <div
-          class="content"
-          uk-parallax="viewport: 0.3;blur:40,0;y:200,0"
-        >
+          3高3快3捷&nbsp;瞬移速可達
+        </h2>
+        <div class="content" uk-parallax="viewport: 0.3;blur:40,0;y:200,0">
           駕上輕車10分鐘上五股交流道或速接台64、65。<br
             v-if="!isMobile"
           />新北唯一3線捷運環抱行政區，雙北悠遊隨行。
@@ -35,7 +33,7 @@
           :options="swiperOptions"
           ref="swiper"
           class="swiper-wrapper"
-          uk-parallax="viewport:0.3;y:  -100,0"
+          uk-parallax="viewport:0.3;y:-100,0"
         >
           <swiper-slide
             class="slide"
@@ -99,11 +97,10 @@
 
       h2 {
         font-size: size(50);
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1.2;
         letter-spacing: size(15);
         margin-bottom: size(50);
-        font-family: "Noto Serif TC", serif;
         z-index: 1;
         white-space: nowrap;
       }
@@ -113,7 +110,6 @@
         line-height: 2;
         letter-spacing: size(5);
         margin-bottom: size(20);
-        font-family: "Noto Serif TC", serif;
         z-index: 1;
       }
       .textimg {
@@ -143,7 +139,6 @@
             font-size: size(36);
             color: #fff;
             filter: drop-shadow(5px 12px 4px rgba(0, 0, 0, 0.9));
-            font-family: "Noto Serif TC", serif;
           }
         }
       }
@@ -203,19 +198,18 @@
         }
 
         h2 {
-          font-size: size-m(19);
-          font-weight: 300;
-          line-height: 1.2;
-          letter-spacing: size-m(5);
+          font-size: size-m(22);
+          line-height: 1.4;
+          letter-spacing: 0.1em;
           margin-bottom: size-m(20);
         }
         .content {
           font-size: size-m(15);
-          font-weight: 300;
-          line-height: 2;
-          letter-spacing: size-m(5);
+          line-height:1.7;
+          letter-spacing: 0.1em;
           margin-bottom: size-m(20);
           width: 80%;
+        text-align: justify;
         }
         .textimg {
           width: size-m(75);
@@ -295,6 +289,7 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-nav .next",

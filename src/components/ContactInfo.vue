@@ -3,20 +3,10 @@
     <div id="contact-info">
       <div class="contact-info contact-sec">
         <img
-          v-if="!isMobile"
           v-lazy
           class="logo"
           :temp="require('@/assets/img/contact-logo.png')"
           :alt="info.caseName"
-          uk-parallax="viewport:0.3;y:100,0"
-        />
-        <img
-          v-if="isMobile"
-          class="logo"
-          v-lazy
-          :temp="require('@/assets/img/contact-logo.png')"
-          :alt="info.caseName"
-          uk-parallax="viewport:0.6;y:100,0"
         />
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
@@ -416,9 +406,9 @@ export default {
     padding: 40px;
     transform: none;
     position: relative;
-    margin: 10vw auto 0 auto;
+    margin: 0 auto 0 auto;
     min-width: unset;
-    background: $contact_bg_m;
+   //background: $contact_bg_m;
     background-size: contain;
     margin-top: 0;
 

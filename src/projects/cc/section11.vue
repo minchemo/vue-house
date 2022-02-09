@@ -32,10 +32,7 @@
           樣品屋內容<br />
           後續會補上圖片
         </h2>
-        <div
-          class="content"
-          uk-parallax="viewport: 0.3;blur:40,0;y:200,0"
-        >
+        <div class="content" uk-parallax="viewport: 0.3;blur:40,0;y:200,0">
           後續會補上文案，正對頭前國中永久棟距、都心百米林蔭步道搖曳為鄰，一座被豐盈知識與翠綠大樹關照的家，在『青青』學習如何優雅生活、品味從容日常。
         </div>
       </div>
@@ -44,7 +41,7 @@
           :options="swiperOptions"
           ref="swiper"
           class="swiper-wrapper"
-          uk-parallax="viewport:0.3;y:  -100,0"
+          uk-parallax="viewport:0.3;y:-100,0;blur:40,0;opacity:0,1"
         >
           <swiper-slide
             class="slide"
@@ -103,12 +100,11 @@
 
       h2 {
         font-size: size(50);
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1.2;
         letter-spacing: size(15);
         margin-bottom: size(50);
         margin-top: size(20);
-        font-family: "Noto Serif TC", serif;
       }
       .content {
         width: size(749);
@@ -116,7 +112,6 @@
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(5);
-        font-family: "Noto Serif TC", serif;
       }
       .textimg {
         width: size(100);
@@ -145,7 +140,6 @@
             font-size: size(36);
             color: #fff;
             filter: drop-shadow(5px 12px 4px rgba(0, 0, 0, 0.9));
-            font-family: "Noto Serif TC", serif;
           }
         }
         .swiper-pagination {
@@ -224,8 +218,8 @@
         flex-direction: column;
 
         h2 {
-          font-size: size-m(19);
-          letter-spacing: size-m(8);
+          font-size: size-m(22);
+    letter-spacing: 0.1em;
           line-height: 1.5;
           margin-bottom: size-m(30);
           margin-top: size-m(30);
@@ -233,7 +227,8 @@
         .content {
           width: 100%;
           font-size: size-m(15);
-          letter-spacing: size-m(5);
+    letter-spacing: 0.1em;
+        text-align: justify;
           margin-bottom: size-m(40);
         }
         .textimg {
@@ -316,6 +311,7 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-nav .next",

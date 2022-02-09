@@ -1,7 +1,7 @@
 <template>
   <div class="section2">
-    <div class="video-box" uk-parallax="viewport:0.3;y:100,0;blur: 60,0"></div>
-    <div class="content">
+  <!--  <div class="video-box" uk-parallax="viewport:0.3;y:100,0;blur: 60,0"></div>  -->
+    <div id="section2-t" class="content section2-t">
       <h2 uk-parallax="viewport: 0.3;y:80,0;blur:40,0">
         國際級CBD到位
         <br />
@@ -24,7 +24,7 @@
       src="@/projects/cc/s2/leaf.png"
       alt=""
       srcset=""
-      uk-parallax="viewport:0.3;blur:50,0"
+      uk-parallax="viewport:0.3;blur:50,0;opacity:0,0.3"
     />
     <div class="bg"></div>
   </div>
@@ -35,7 +35,7 @@
 .section2 {
   position: relative;
   height: auto;
-  padding-top: size(100);
+ // padding-top: size(100);
   padding-bottom: size(20);
 
   .bg {
@@ -71,24 +71,25 @@
     z-index: 1;
   }
   .content {
-    width: size(930);
-    margin: size(150) auto size(80) auto;
+    width: size(1000);
+    margin:auto;
+    padding:size(150) 0 size(80) 0;
     z-index: 1;
+    letter-spacing: 0.1em;
 
     h2 {
       font-size: size(50);
-      letter-spacing: size(16);
+    letter-spacing: 0.2em;
       margin-bottom: size(20);
-      line-height: 1.2;
-      font-family: "Noto Serif TC", serif;
+      line-height: 1.4;
+      font-weight: 500;
 
     }
     p {
       font-size: size(24);
-      letter-spacing: size(8);
-      line-height: 1.5;
+      line-height: 1.7;
       margin-bottom: size(20);
-      font-family: "Noto Serif TC", serif;
+      font-weight: 300;
     }
     .textimg {
       width: size(100);
@@ -102,55 +103,35 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section2 {
-    position: relative;
-    height: auto;
-    padding-top: size-m(100);
+  //  padding-top: size-m(100);
     padding-bottom: size-m(20);
 
     .bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
       z-index: 0;
-      top: 0%;
-      left: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
     }
 
     .leaf {
       display: none;
     }
 
-    .video-box {
-      position: relative;
-      width: size(1592);
-      height: size(727.64);
-      left: 50%;
-      margin-left: -#{size(796)};
-      background: url("~@/projects/cc/s2/play.jpg");
-      background-position: center;
-      background-size: cover;
-      z-index: 1;
-    }
     .content {
-      width: 90%;
-      margin: size-m(100) auto size-m(50) auto;
+      width: 80%;
+      margin: size-m(0) auto size-m(50) auto;
+      padding: size-m(90) 0 0 0;
+      z-index: 2;
+      position: relative;
 
       h2 {
-        font-size: size-m(19);
-        letter-spacing: size-m(7);
+        font-size: size-m(22);
         margin-bottom: size-m(20);
-        line-height: 1.3;
+        line-height: 1.4;
+    letter-spacing: 0.1em;
       }
       p {
         font-size: size-m(15);
-        letter-spacing: size-m(8);
-        line-height: 1.5;
         margin-bottom: size-m(50);
+        text-align: justify;
+        line-height: 1.7;
       }
       .textimg {
         width: size-m(75);

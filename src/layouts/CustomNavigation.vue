@@ -11,15 +11,24 @@
       </div>
     </div>
     <div class="custom-navbar" v-if="!isMobile">
-      <div class="link" @click="scrollTo('.section3')">國際CBD</div>
+      <div class="link" @click="scrollTo('.section1')">
+        <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
+      </div>
+      <div class="link" @click="scrollTo('.section2 .content')">國際CBD</div>
       <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
-      <div class="link" @click="scrollTo('.section8')">校園青建築</div>
+      <div class="link" @click="scrollTo('.section6')">生活新風貌</div>
+      <div class="link" @click="scrollTo('.section8')">校園第一排</div>
+    <!--  <div class="link" @click="scrollTo('.section9')">人文青建築</div>  -->
     </div>
     <div
       class="custom-navigation-list"
       v-bind:class="isOpen ? 'is-active' : ''"
     >
       <ul class="navlist">
+      <li class="link logo" 
+          @click="setActive('青青','', '.section1')">
+        <img src="@/projects/cc/nav_logo.png" alt="" srcset="" />
+      </li>
         <li
           :key="item.name"
           v-bind:class="item.name == activeSection ? 'active' : ''"
@@ -32,6 +41,30 @@
         </li>
       </ul>
     </div>
+    <div class="func-btn" v-if="!isMobile">
+      <a class="link" href="#" @click="isShowCallDialog = !isShowCallDialog">
+        <img src="@/projects/cc/icon1.png" alt="" srcset="" />
+      </a>
+      <a
+        class="link"
+        href="https://www.facebook.com/%E9%9D%92%E9%9D%92-%E5%89%AF%E9%83%BD%E5%BF%83%E5%90%8D%E9%82%B8%E7%89%B9%E5%8D%802-3%E6%88%BF-105760468592626/"
+        target="_blank"
+      >
+        <img src="@/projects/cc/icon2.png" alt="" srcset=""
+      /></a>
+      <a class="link" href="#" @click="scrollTo('.contact')">
+        <img src="@/projects/cc/icon3.png" alt="" srcset=""
+      /></a>
+    </div>
+
+    <el-dialog
+      title
+      :visible.sync="isShowCallDialog"
+      width="500px"
+      :modal-append-to-body="false"
+    >
+      <CallDialog :phone="info.phone" />
+    </el-dialog>
   </div>
 </template>
 
@@ -39,14 +72,20 @@
 import { isMobile, isTablet } from "@/utils";
 import navList from "@/info/navList";
 import "hamburgers/dist/hamburgers.min.css";
+import CallDialog from "@/components/Dialog/Call";
+import info from "@/info";
 
 export default {
   name: "custom-navigation",
-  components: {},
+  components: {
+    CallDialog
+  },
   props: ["scrollInstance"],
   data() {
     return {
+      info,
       isOpen: false,
+      isShowCallDialog: false,
       navList,
       activeSection: "朗朗城心",
       isMobile,
@@ -107,6 +146,25 @@ $hamburger-layer-color: #fff;
   right: 0;
   top: 0;
   width: 100%;
+
+  .func-btn {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: size(10);
+    bottom: size(50);
+    .link {
+      width: size(40);
+      margin: size(5);
+      &:hover {
+        opacity: 0.8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 
   .custom-navigation-toggler {
     position: absolute;
@@ -171,7 +229,12 @@ $hamburger-layer-color: #fff;
         border-top: 1px solid hsla(0, 0%, 100%, 0.4);
         overflow: hidden;
         position: relative;
-
+&.logo{
+  margin-top:-30px ;
+  border-top: 0;
+  img{
+  width: 100px;
+}}
         &.active {
           background: rgba(0, 0, 0, 0.6);
           color: #fff;
@@ -213,8 +276,8 @@ $hamburger-layer-color: #fff;
     top: 0;
     left: 0;
     width: 100%;
-    height: size(70);
-    background-color: transparent;
+    height: size(95);
+    background-color: rgba(255, 255, 255, 0.75);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,8 +287,7 @@ $hamburger-layer-color: #fff;
       margin-left: size(30);
       padding-left: size(30);
       letter-spacing: size(8);
-      color: #bbb29b;
-      font-family: "Noto Serif TC",serif;
+      color: #5406;
       &:hover {
         opacity: 0.7;
         cursor: pointer;
@@ -233,7 +295,7 @@ $hamburger-layer-color: #fff;
       &::before {
         content: "";
         width: 1px;
-        height: 60%;
+        height: size(15);
         position: absolute;
         left: 0;
         top: 30%;
@@ -244,12 +306,15 @@ $hamburger-layer-color: #fff;
         &::after {
           content: "";
           width: 1px;
-          height: 60%;
+          height: size(15);
           position: absolute;
           right: 0;
           top: 30%;
           background: #9e9d9c;
         }
+      }
+      img {
+        height: size(40);
       }
     }
   }

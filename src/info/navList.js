@@ -3,10 +3,10 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section3",
+        section: "section2-t",
         svgSrc: "",
-        offset: 0,
-        mobileOffset: 0
+        offset:-100,
+        mobileOffset:-100
     },
     {
         name: "新名邸特區",
@@ -19,7 +19,17 @@ export default [{
         mobileOffset: 0
     },
     {
-        name: "校園青建築",
+        name: "生活新風貌",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "section6",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0
+    },
+    {
+        name: "校園第一排",
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
@@ -27,5 +37,18 @@ export default [{
         svgSrc: "",
         offset: 0,
         mobileOffset: 0
+    },
+    /*
+    {
+        name: "人文青建築",
+        //iconSrc:xrequire("@/assets/img/nav/1.png"),
+        imgSrc: "",
+        subTitle: "",
+        section: "section9",
+        svgSrc: "",
+        offset: 0,
+        mobileOffset: 0
     }
+
+    */
 ];

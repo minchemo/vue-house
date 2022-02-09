@@ -147,7 +147,7 @@
 
     .view-subtitle {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.67;
       letter-spacing: 1.8px;
       text-align: center;

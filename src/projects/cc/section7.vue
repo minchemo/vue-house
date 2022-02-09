@@ -10,7 +10,7 @@
         </h3>
         <div
           class="content"
-          uk-parallax="viewport: 0.3;y:50,0;blur:40,0;y:200,0;x:200,0"
+          uk-parallax="viewport: 0.3;blur:40,0;y:200,0;x:200,0"
         >
           宏匯廣場、晶冠廣場、家樂福、IKEA‥影城百貨娛樂休閒不打烊。散步到福壽商圈輕取食衣住行機能。
         </div>
@@ -20,7 +20,7 @@
             :data-key="`s7-1-item-${i}`"
             v-for="(item, i) in slides.caption"
             :key="i"
-            :uk-parallax="`viewport:0.2;blur:20,0;x:${i * 100},0`"
+            :uk-parallax="`viewport:0.1;blur:20,0;x:${i * 100},0`"
             @click="$refs.swiper.$swiper.slideTo(i, 1000, false)"
             v-bind:class="{ active: activeIndex1 == i }"
           >
@@ -142,7 +142,6 @@
     background-image: url("../../projects/cc/s6/bg2.png");
     background-position: top;
     background-size: cover;
-    
   }
 
   .swiper-box {
@@ -150,29 +149,28 @@
     display: flex;
     z-index: 2;
     .left {
-      width: size(485);
+      width: size(685);
       text-align: left;
       color: #fff;
       h2 {
         font-size: size(50);
-        font-weight: 400;
+        font-weight: 500;
         letter-spacing: size(15);
         margin-bottom: size(30);
-        font-family: "Noto Serif TC", serif;
       }
       h3 {
         font-size: size(36);
         font-weight: 300;
-        letter-spacing: size(15);
+        letter-spacing:0.2em;
         margin-bottom: size(35);
         white-space: nowrap;
-        font-family: "Noto Serif TC", serif;
       }
       .content {
         font-size: size(24);
         font-weight: 300;
         line-height: 2;
-        letter-spacing: size(10);
+        letter-spacing:0.1em;
+        
       }
     }
 
@@ -189,9 +187,9 @@
       align-items: center;
       justify-content: flex-end;
       .left {
-        margin-right: size(300);
+        margin-right: size(100);
         .items {
-          margin-top: size(100);
+          margin-top: size(50);
           .item {
             width: size(352);
             height: size(56);
@@ -202,7 +200,6 @@
             background-image: url("../../projects/cc/s7/item-bg.png");
             transition: all 0.4s;
             margin-bottom: size(10);
-            font-family: "Noto Serif TC", serif;
             &:hover {
               cursor: pointer;
               background-image: url("../../projects/cc/s7/item-bg-selected.png");
@@ -252,7 +249,7 @@
           text-align: right;
         }
         .content {
-          width: size(570);
+          width: size(600);
           text-align: justify;
         }
         .items {
@@ -262,24 +259,24 @@
             height: size(98);
             font-size: size(36);
             text-align: center;
-            line-height:1.6;
+            line-height: 1.6;
             letter-spacing: 0.2em;
             background-size: 100%;
             transition: all 0.4s;
-            margin-bottom:0.8em;
+            margin:0 0 0.8em auto;
             font-weight: 300;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid #fff;
-            border-radius:1.2em;
-            padding-left:2.1em;
+            border-radius: 1.2em;
+            padding-left: 2.1em;
             transition: all 0s;
             cursor: pointer;
             img {
               object-fit: cover;
-              border-radius:50%;
-              height:2em;
+              border-radius: 50%;
+              height: 2em;
               position: absolute;
               left: 0.3em;
             }
@@ -359,15 +356,13 @@
       flex-direction: column;
       .left {
         h2 {
-          font-size: size-m(20);
-          font-weight: 400;
-          letter-spacing: size-m(5);
+          font-size: size-m(22);
+    letter-spacing: 0.1em;
           margin-bottom: size-m(15);
         }
         h3 {
-          font-size: size-m(16);
-          font-weight: 300;
-          letter-spacing: size-m(5);
+          font-size: size-m(17);
+    letter-spacing: 0.1em;
           margin-bottom: size-m(20);
           white-space: nowrap;
         }
@@ -375,7 +370,8 @@
           font-size: size-m(15);
           font-weight: 300;
           line-height: 1.5;
-          letter-spacing: size-m(7);
+    letter-spacing: 0.1em;
+        text-align: justify;
         }
       }
 
@@ -534,6 +530,7 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-nav .next",
@@ -546,6 +543,7 @@ export default {
         spaceBetween: 0,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-nav .next",

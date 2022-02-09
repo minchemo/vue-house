@@ -35,8 +35,8 @@
       srcset=""
       :uk-parallax="
         isMobile
-          ? 'viewport:0.8;y: 30,0;x:40;rotate:-20'
-          : 'viewport:0.8;blur:10,0;y: -30,0;x:-30,0;rotate:5,0'
+          ? 'viewport:0.8;y: 30,0;x:40;rotate:-20;opacity:0,.3'
+          : 'viewport:0.8;blur:10,0;y: -30,0;x:-30,0;rotate:5,0;opacity:0,0.3'
       "
     />
     <img
@@ -141,7 +141,7 @@
     z-index: 1;
     right: size(430);
     top: calc(50% + (300 - 540) * 100vw / 1920);
-    width: size(320);
+    width: size(420);
   }
 
   .divider {
@@ -201,9 +201,9 @@
     }
 
     .logo {
-      right: size-m(50);
-      top: size-m(180);
-      width: size-m(160);
+      right: size-m(30);
+      top: size-m(200);
+      width: size-m(220);
     }
 
     .divider {

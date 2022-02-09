@@ -5,10 +5,7 @@
         <h2 uk-parallax="viewport: 0.3;blur:40,0;y:-200,0">
           <span>20%</span>純住宅用地<br />新名邸特區誕生
         </h2>
-        <div
-          class="content"
-          uk-parallax="viewport: 0.3;blur:40,0;y:200,0"
-        >
+        <div class="content" uk-parallax="viewport: 0.3;blur:40,0;y:200,0">
           副都心商業區繁華富域，僅一方稀有20%住宅用地，稀缺價值與一眼難忘的高端住宅區氛圍令各大建築名家爭藏。並進新富選地哲學在北臺灣下一座名邸特區為自己獨占一席，讓回家成為一種優越。
         </div>
       </div>
@@ -62,19 +59,17 @@
     justify-content: flex-end;
     .left {
       width: size(485);
-      text-align: left;
+        text-align: justify;
       margin-right: size(120);
       h2 {
         font-size: size(61);
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1.2;
         letter-spacing: size(5);
         margin-bottom: size(100);
-        font-family: "Noto Serif TC", serif;
-        span{
-          
-        font-size:1.1em;
-        letter-spacing:0;
+        span {
+          font-size: 1.1em;
+          letter-spacing: 0;
         }
       }
       .content {
@@ -82,7 +77,6 @@
         font-weight: 300;
         line-height: 2;
         letter-spacing: size(5);
-        font-family: "Noto Serif TC", serif;
       }
     }
 
@@ -112,34 +106,30 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .section4 {
-    position: relative;
-    height: auto;
     padding: size-m(100) 0 size-m(49) 0;
 
     .swiper-box {
-      display: flex;
       align-items: flex-end;
       justify-content: center;
       flex-direction: column;
       .left {
-        width: size-m(343);
-        text-align: left;
+        width: 100%;
         margin-right: 0;
         margin-bottom: size-m(30);
         h2 {
-          font-size: size-m(19);
-          font-weight: 300;
-          line-height: 1.5;
-          letter-spacing: size(5);
+          font-size: size-m(22);
+          line-height: 1.4;
+          letter-spacing: 0.1em;
           margin-bottom: size-m(40);
-          padding-left: size-m(50);
+          padding-right:0;
+        text-align: center;
         }
         .content {
           font-size: size-m(15);
-          font-weight: 300;
-          line-height: 2;
-          letter-spacing: size(5);
-          padding-right: size-m(20);
+          line-height:1.7;
+          letter-spacing: 0.1em;
+          padding: 0 2.2em;
+        text-align: justify;
         }
       }
 
@@ -147,18 +137,8 @@
         .swiper-wrapper {
           width: size-m(343);
           height: size-m(161.56);
-          .slide {
-            background-size: cover;
-          }
         }
       }
-    }
-
-    .bg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
     }
   }
 }
@@ -201,6 +181,7 @@ export default {
         spaceBetween: 10,
         autoplay: {
           delay: 4500,
+          disableOnInteraction: false,
         },
       },
     };

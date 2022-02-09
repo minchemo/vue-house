@@ -168,7 +168,7 @@
 
     <ContactInfo />
     <GoogleMap />
-    <PolicyDialog :policyVisible="policyVisible" />
+    <PolicyDialog :policyVisible="policyVisible"  @hidePolicyDialog="hidePolicyDialog" />
   </div>
 </template>
 
@@ -231,6 +231,9 @@ export default {
   methods: {
     showPolicyDialog() {
       this.policyVisible = true;
+    },
+    hidePolicyDialog(){
+      this.policyVisible = false;
     },
 
     alertValidate() {
@@ -366,7 +369,7 @@ export default {
   .order-top {
     //background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
-    background: $order_bg_image no-repeat;
+  //  background: $order_bg_image no-repeat;
     background-size: cover;
     background-position: bottom right;
     position: relative;
@@ -378,7 +381,7 @@ export default {
     width: auto;
     padding-top: 20px;
     padding-bottom: 1vw;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.3;
     font-size: size(50);
     letter-spacing: size(30);
@@ -387,7 +390,6 @@ export default {
     margin: 0 auto;
     margin-bottom: size(20);
     display: inline-block;
-    font-family: "Noto Serif TC", serif;
 
   }
   .order-title-img {
@@ -416,7 +418,7 @@ export default {
     margin-bottom: 40px;
     padding-bottom: 18px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .order {
@@ -490,7 +492,7 @@ export default {
     label {
       width: 5vw;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 500;
       opacity: 0.8;
       color: $order_input_label_color;
       text-align: left;
@@ -534,7 +536,7 @@ export default {
   }
   .order-bg {
     //background-color: $order_bg_color;
-    background-image: $order_bg_image_m;
+   // background-image: $order_bg_image_m;
     background-size: contain;
     padding-top: 0;
     margin: 0;
@@ -562,11 +564,11 @@ export default {
       line-height: 1.5;
     }
     .order-top {
-      background-image: $order_bg_image_m;
+     // background-image: $order_bg_image_m;
       background-size: contain;
       background-repeat: repeat;
       // top: 10vw;
-      padding-bottom: 50px;
+      padding-bottom: 0;
     }
     .order {
       width: 85% !important;

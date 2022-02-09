@@ -10,9 +10,9 @@
       <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
       <Section8 class="section" data-scroll />
-      <Section9 class="section" data-scroll />
+   <!--   <Section9 class="section" data-scroll />
       <Section10 class="section" data-scroll />
-      <Section11 class="section" data-scroll />
+      <Section11 class="section" data-scroll />  -->
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -241,13 +241,13 @@ export default {
 .section .fp-tableCell {
   will-change: transform, opacity;
 }
-
+/*
 .section {
   background-image: url("../projects/cc/bg.jpg");
   background-position: center;
   background-repeat: repeat;
 }
-
+*/
 .fp-left {
   margin-left: 12px;
 }
@@ -306,8 +306,10 @@ export default {
     left: 0;
     justify-content: space-around;
   }
+  /*
   .section {
     background-image: url("../projects/cc/bg-mo.jpg");
   }
+  */
 }
 </style>
