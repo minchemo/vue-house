@@ -36,18 +36,17 @@
     text-decoration: none;
   }
 }
-
 @media screen and (max-width: 767px) {
   .footer {
-    margin-bottom: 0;
+    margin-bottom: 63px;
   }
 }
-
+/*
 @media only screen and (max-width: 767px) {
   .footer {
-    margin-bottom: 0;
+    margin-bottom: 63px;
   }
-}
+}*/
 </style>
 
 <script>
