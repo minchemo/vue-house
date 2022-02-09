@@ -1,5 +1,5 @@
 <template>
-  <div class="navigation" ref="navigation">
+  <div class="navigation scrollhide" ref="navigation">
     <div class="layout-container-fluid nav-container">
       <div class="layout-container nav-container">
         <div class="nav">
@@ -94,7 +94,7 @@ export default {
     },
     componentDidMount() {
       // return;
-      // this.prev = window.scrollY;
+      this.prev = 0;
       window.addEventListener("scroll", (e) => this.handleNavigation(e));
     },
     handleNavigation(e) {
@@ -113,14 +113,15 @@ export default {
         const nav = this.$refs.navigation;
 
         if (window.scrollY > 500) {
-          if (this.prev > window.scrollY) {
-            $(nav).removeClass("scrollhide");
-          } else if (this.prev < window.scrollY) {
-            $(nav).addClass("scrollhide");
-          }
-          this.prev = window.scrollY;
-        } else {
+
           $(nav).removeClass("scrollhide");
+          // else if (this.prev < window.scrollY) {
+          //   $(nav).addClass("scrollhide");
+          // }
+          this.prev = window.scrollY;
+        }
+        else {
+          $(nav).addClass("scrollhide");
         }
       }
     },
@@ -131,7 +132,7 @@ export default {
     },
   },
   mounted() {
-    //this.componentDidMount();
+    this.componentDidMount();
   },
 };
 </script>
@@ -233,6 +234,12 @@ export default {
 
     > span {
       z-index: 3;
+    }
+
+    &.active {
+      .title {
+        color: #e95513;
+      }
     }
     .title {
       position: relative;

@@ -364,7 +364,7 @@ export default {
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 500px;
+    padding-bottom: 400px;
   }
   .order-title {
     font-family: $family1;

@@ -5,7 +5,12 @@
       <div class="info">
         <div class="item" :key="infos[0]" v-for="infos in houseInfos">
           <h3 class="label">{{ infos[0] }}</h3>
-          <a :href="infos[2]" class="desc" target="_blank" v-html="infos[1]" ></a>
+          <a
+            :href="infos[2]"
+            class="desc"
+            target="_blank"
+            v-html="infos[1]"
+          ></a>
         </div>
       </div>
     </div>
@@ -32,9 +37,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
+@import "@/assets/style/function.scss";
 .house-info {
   width: 100vw;
-  background: #fff;
+  background: $house_bg;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -62,10 +68,10 @@ export default {
 }
 
 .title {
-  font-size: 32px;
+  font-size: size(42);
   line-height: 36px;
   margin: 60px 0;
-  font-weight: 500;
+  font-weight: bolder;
   color: $house_title_color;
   font-family: $family3;
   width: 80vw;

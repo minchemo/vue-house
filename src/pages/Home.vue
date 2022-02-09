@@ -1,14 +1,15 @@
 <template>
   <div class="home no-padding-top">
-    <!-- <CustomNavigation :scrollInstance="locomotive" /> -->
-    <Navigation />
+    <CustomNavigation :scrollInstance="locomotive" v-if="isMobile" />
+    <Navigation v-else />
     <div id="locomotive">
       <Section1 class="section" data-scroll />
       <Section2 class="section" data-scroll />
-      <Section3 class="section" data-scroll />
+      <Section3 class="section" />
       <Section4 class="section" data-scroll />
       <Section5 class="section" data-scroll />
       <Section6 class="section" data-scroll />
+      <Section7 class="section" data-scroll />
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -38,11 +39,12 @@ import Section3 from "@/projects/cfyd/s3.vue";
 import Section4 from "@/projects/cfyd/s4.vue";
 import Section5 from "@/projects/cfyd/s5.vue";
 import Section6 from "@/projects/cfyd/s6.vue";
+import Section7 from "@/projects/cfyd/s7.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
-// import UIkit from 'uikit';
-// import Icons from 'uikit/dist/js/uikit-icons';
-// UIkit.use(Icons);
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+UIkit.use(Icons);
 
 export default {
   name: "home",
@@ -61,6 +63,7 @@ export default {
     Section4,
     Section5,
     Section6,
+    Section7,
   },
 
   data() {
@@ -138,9 +141,6 @@ export default {
     });
   },
   mounted() {
-    AOS.init({
-      duration: 1000,
-    });
 
     this.locomotive = new LocomotiveScroll({
       el: document.querySelector("#locomotive"),
@@ -158,7 +158,7 @@ export default {
     });
 
     this.locomotive.on("scroll", (obj) => {
-      $(".is-inview [data-aos]").addClass("aos-animate");
+      // $(".is-inview [data-aos]").addClass("aos-animate");
     });
 
     // let imgs = document.images;
@@ -179,6 +179,9 @@ export default {
     }
 
     this.scrolling();
+    AOS.init({
+      duration: 1000,
+    });
   },
   methods: {
     init() {
@@ -206,7 +209,7 @@ export default {
 @import "../assets/style/variableColor.scss";
 
 .home {
-  background-color: #333;
+  background-color: #000;
   &::before {
     content: " ";
     position: fixed;
@@ -267,6 +270,7 @@ export default {
 
 @media only screen and (max-width: 767px) {
   .home {
+    background-color: #000 !important;
     &::before {
       //background-image: url("~@/projects/llcs/s1/bg_mo.jpg");
     }

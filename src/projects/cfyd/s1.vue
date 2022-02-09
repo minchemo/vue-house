@@ -2,6 +2,7 @@
   <div class="s1">
     <div class="title">
       <img
+        v-if="!isMobile"
         class="t1"
         data-aos="flip-up"
         src="@/projects/cfyd/s1/t1.svg"
@@ -9,10 +10,28 @@
         srcset=""
       />
       <img
+        v-else
+        class="t1"
+        data-aos="flip-up"
+        src="@/projects/cfyd/s1/t1_m.svg"
+        alt=""
+        srcset=""
+      />
+      <img
+        v-if="!isMobile"
         class="t2"
         data-aos="flip-up"
         data-aos-delay="400"
         src="@/projects/cfyd/s1/t2.svg"
+        alt=""
+        srcset=""
+      />
+      <img
+        v-else
+        class="t2"
+        data-aos="flip-up"
+        data-aos-delay="400"
+        src="@/projects/cfyd/s1/t2_m.svg"
         alt=""
         srcset=""
       />
@@ -58,6 +77,33 @@
 
 @media only screen and (max-width: 767px) {
   .s1 {
+    position: relative;
+    width: size-m(375);
+    height: size-m(769);
+    background-image: url("~@/projects/cfyd/s1/bg_m.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 12;
+
+    .title {
+      position: absolute;
+      width: size-m(308);
+      height: size-m(249);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      right: 50%;
+      transform: translateX(50%);
+      bottom: size-m(250);
+      .t1 {
+        width: 100%;
+      }
+      .t2 {
+        margin-top: size-m(15);
+        width: 85%;
+      }
+    }
   }
 }
 

@@ -3,7 +3,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "section2-t",
+        section: "s2",
         svgSrc: "",
         offset: -100,
         mobileOffset: -100
@@ -13,7 +13,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "",
+        section: "s3",
         svgSrc: "",
         offset: -100,
         mobileOffset: -100
@@ -23,7 +23,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "",
+        section: "s4",
         svgSrc: "",
         offset: -100,
         mobileOffset: -100
@@ -33,7 +33,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "",
+        section: "s5",
         svgSrc: "",
         offset: -100,
         mobileOffset: -100
@@ -43,7 +43,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "",
+        section: "s6",
         svgSrc: "",
         offset: -100,
         mobileOffset: -100
@@ -53,7 +53,7 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "",
+        section: "s7",
         svgSrc: "",
         offset: -100,
         mobileOffset: -100

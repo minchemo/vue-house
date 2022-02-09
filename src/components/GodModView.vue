@@ -1,7 +1,20 @@
 <template>
   <div class="GodModView with-mask">
     <div class="view" ref="view">
-      <img ref="viewImg" class="view-img" :src="bgUrl" alt="春福御邸" />
+      <img
+        v-if="!isMobile"
+        ref="viewImg"
+        class="view-img"
+        src="@/projects/cfyd/s2/view.png"
+        alt="春福御邸"
+      />
+      <img
+        v-else
+        ref="viewImg"
+        class="view-img"
+        src="@/projects/cfyd/s2/view_m.png"
+        alt="春福御邸"
+      />
       <div class="view-hand" ref="viewHand">
         <img :src="swipeUrl" alt="春福御邸" />
       </div>
@@ -54,7 +67,8 @@
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
-      height: size-m(667);
+      width: size-m(375);
+      height: size-m(889);
       overflow: hidden;
       .view-hand {
         img {
@@ -88,7 +102,7 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "50" : "37.38", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/cfyd/s2/view.png"), //置換圖片路徑即可
+      // bgUrl: require("@/projects/cfyd/s2/view.png"), //置換圖片路徑即可
       swipeUrl: require("@/projects/tm/s5/swipe-here.png"), //置換圖片路徑即可
     };
   },
@@ -108,7 +122,7 @@ export default {
           eventPassthrough: "vertical",
           bounce: false,
         });
-        bs.scrollTo(bs.maxScrollX / 8.5, 500);
+        bs.scrollTo(bs.maxScrollX / 2, 500);
         setTimeout(() => {
           bs.on("scroll", () => {
             $(this.$refs.viewHand).fadeOut();

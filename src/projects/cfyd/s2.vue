@@ -1,11 +1,18 @@
 <template>
   <div class="s2">
-    <div class="text">
+    <div
+      class="text"
+      data-aos="fade-up"
+      data-aos-anchor=".s2"
+      data-aos-anchor-placement="bottom"
+    >
       <div class="t1">
-        <div class="title">THE FUTURE OF ANPING</div>
-        <div class="subtitle">市政五期亮起來 安平商港新門戶</div>
+        <div class="title" data-aos="flip-up">THE FUTURE OF ANPING</div>
+        <div class="subtitle" data-aos="flip-up" data-aos-delay="200">
+          市政五期亮起來 安平商港新門戶
+        </div>
       </div>
-      <div class="t2">
+      <div class="t2" data-aos="flip-up" data-aos-delay="400">
         集結許多公共設施資源，商圈、學校與民間建設，永華特區已發展完整，加上安平商港、海洋之丘與遊艇碼頭，計畫等熱烈進行；安平跨港大橋、北外環道路計畫即將打通繁華動脈，未來精彩矚目，指日可待！
       </div>
     </div>
@@ -23,6 +30,7 @@
   width: size(1920);
   height: size(900);
   background-color: #000;
+  z-index: 11;
   .text {
     position: relative;
     z-index: 6;
@@ -80,6 +88,61 @@
 
 @media only screen and (max-width: 767px) {
   .s2 {
+    position: relative;
+    width: size-m(375);
+    height: size-m(889);
+    background-color: transparent;
+    z-index: 11;
+    margin-top: -#{size-m(280)};
+    padding-top: size-m(230);
+    .text {
+      position: relative;
+      z-index: 6;
+      color: #fff;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      .t1 {
+        text-align: left;
+        border-right: 0px;
+        padding-right: 0;
+        margin-right: auto;
+        margin-top: 0;
+        border-bottom: 1px solid #fff;
+        width: size-m(311);
+        padding-bottom: size-m(15);
+        margin-bottom: size-m(15);
+        margin-left: auto;
+        .title {
+          font-size: size-m(20);
+          font-weight: 1000;
+        }
+        .subtitle {
+          font-size: size-m(20);
+          font-family: "Noto Serif TC";
+          font-weight: bold;
+          margin-top: size-m(10);
+        }
+      }
+      .t2 {
+        font-size: size-m(12);
+        width: 80%;
+        text-align: left;
+        line-height: 2;
+        width: size-m(311);
+        margin: 0 auto;
+      }
+    }
+    .view {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 4;
+    }
+    .bg {
+      display: none;
+    }
   }
 }
 

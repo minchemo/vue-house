@@ -36,7 +36,8 @@
           class="link"
           :data-section="item.section"
         >
-          {{ item.name }}
+          <span v-if="item.name == activeSection">－</span>{{ item.name
+          }}<span v-if="item.name == activeSection">－</span>
         </li>
       </ul>
     </div>
@@ -212,6 +213,7 @@ $hamburger-layer-color: #fff;
         border-top: 1px solid hsla(0, 0%, 100%, 0.4);
         overflow: hidden;
         position: relative;
+        font-family: "Noto serif tc";
         &.logo {
           margin-top: -30px;
           border-top: 0;
@@ -220,16 +222,20 @@ $hamburger-layer-color: #fff;
           }
         }
         &.active {
-          background: rgba(0, 0, 0, 0.6);
-          color: #fff;
+          background: rgba(0, 0, 0, 0);
+          color: #e95513;
+          position: relative;
         }
         &:hover {
-          background: rgba(0, 0, 0, 0.6);
-          color: #fff;
+          background: rgba(0, 0, 0, 0);
+          color: #e95513;
         }
 
+        &:first-child {
+          border-top: 0px;
+        }
         &:last-child {
-          border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
+          // border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
         }
 
         &:before {
@@ -325,16 +331,19 @@ $hamburger-layer-color: #fff;
       align-items: center;
       justify-content: center;
 
+      border: 2px solid #fff;
+      padding: size-m(3) size-m(5);
+
       .hamburger {
         transform: scale(1);
         padding: 0;
         .hamburger-box {
-          width: size-m(34);
+          width: size-m(20);
           .hamburger-inner,
           .hamburger-inner:after,
           .hamburger-inner:before {
             width: 100%;
-            background-color: #182c80;
+            background-color: #fff;
             border-radius: 0;
             height: 2px;
           }
@@ -367,10 +376,12 @@ $hamburger-layer-color: #fff;
         overflow: scroll;
 
         li {
-          font-size: 2.9vh;
+          font-size: size-m(18);
           cursor: pointer;
           width: 100%;
-          padding: 3.2vh 0;
+          padding: size-m(20) 0;
+          color: #c79f62;
+          border-color: #c79f62;
         }
       }
     }
