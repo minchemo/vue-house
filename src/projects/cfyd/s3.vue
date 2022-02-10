@@ -131,7 +131,7 @@
           height: size(30.53);
           left: 0;
           bottom: -#{size(30)};
-          background: url("~@/projects/cfyd/s3/arrow.svg") no-repeat;
+          background: url("~@/projects/cfyd/s3/arrow.png") no-repeat;
           background-size: contain;
           background-position: center;
         }
@@ -279,7 +279,7 @@
             height: size-m(7.5);
             left: 55%;
             bottom: 0;
-            background: url("~@/projects/cfyd/s3/arrow.svg") no-repeat;
+            background: url("~@/projects/cfyd/s3/arrow.png") no-repeat;
             background-size: contain;
             background-position: center bottom;
           }
