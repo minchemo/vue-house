@@ -1,7 +1,11 @@
 <template>
   <div class="s6">
     <div class="content">
-      <div class="img-box"></div>
+      <div class="img-box">
+         <div class="t4" data-aos="fade-up">
+          ⼒麒企業總部
+        </div>
+      </div>
       <div class="text">
         <div class="t1" data-aos="fade">
           <img src="@/projects/tm/s6/entitle.svg" alt="" srcset="" />
@@ -20,6 +24,7 @@
           近年來，更以集團化全方位思考的眼光，與精工卓鑄的執行力，
           為深情的土地薈萃菁英團隊，不斷創新豪宅里程碑。
         </div>
+
       </div>
     </div>
   </div>
@@ -46,6 +51,20 @@
       background-image: url("~@/projects/tm/s6/1.jpg");
       background-size: cover;
       background-position: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+
+      .t4 {
+      color: #fff;
+      font-size: size(18);
+      line-height: 2.5;
+      margin-bottom: 5px;
+      margin-left: 20px;
+      text-shadow: black 0.1em 0.1em 0.2em
+
+
+    }
     }
     .text {
       text-align: left;
@@ -121,6 +140,12 @@
         background-image: url("~@/projects/tm/s6/1.jpg");
         background-size: cover;
         background-position: center;
+
+        .t4 {
+          color: #fff;
+          font-size: size-m(12);
+          line-height: 2.5;
+    }
       }
       .text {
         text-align: left;

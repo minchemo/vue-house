@@ -98,6 +98,8 @@
           right: 10px;
           bottom: 10px;
           font-size: size(18);
+          color: #fff;
+          text-shadow: black 0.1em 0.1em 0.2em
         }
       }
     }

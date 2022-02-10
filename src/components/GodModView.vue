@@ -112,7 +112,7 @@ export default {
           eventPassthrough: "vertical",
           bounce: false,
         });
-        bs.scrollTo(bs.maxScrollX / 8.5, 500);
+        bs.scrollTo(bs.maxScrollX / 3.5, 500);
         setTimeout(() => {
           bs.on("scroll", () => {
             $(this.$refs.viewHand).fadeOut();

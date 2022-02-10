@@ -498,10 +498,6 @@ export default {
       currentImgIndex: 0,
       imgs: [
         {
-          url: require("@/projects/tm/s2s3/1.jpg"),
-          caption: "磺溪風景",
-        },
-        {
           url: require("@/projects/tm/s2s3/2.jpg"),
           caption: "磺溪風景",
         },
