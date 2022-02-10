@@ -7,7 +7,7 @@
       <p>家的幸福 盡在春福</p>
     </div>
 
-    <img
+    <img loading="lazy"
       class="logo_m"
       v-if="isMobile"
       src="@/projects/cfyd/s6/logo.svg"
@@ -35,12 +35,12 @@
           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
         <div class="arrow prev" @click="nextSlide1()">
-          <img src="@/projects/cfyd/s6/arrow.svg" alt="" srcset="" />
+          <img loading="lazy" src="@/projects/cfyd/s6/arrow.svg" alt="" srcset="" />
         </div>
       </div>
 
       <div class="text">
-        <img
+        <img loading="lazy"
           class="logo"
           v-if="!isMobile"
           src="@/projects/cfyd/s6/logo.svg"
@@ -49,7 +49,7 @@
           data-aos="fade"
           data-aos-delay="0"
         />
-        <img
+        <img loading="lazy"
           class="title"
           src="@/projects/cfyd/s6/title.svg"
           alt=""
@@ -109,7 +109,7 @@
           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
         <div class="arrow next" @click="nextSlide2()">
-          <img src="@/projects/cfyd/s6/arrow.svg" alt="" srcset="" />
+          <img loading="lazy" src="@/projects/cfyd/s6/arrow.svg" alt="" srcset="" />
         </div>
       </div>
     </div>

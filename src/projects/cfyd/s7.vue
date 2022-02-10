@@ -27,7 +27,7 @@
           data-aos="flip-up"
           :data-aos-delay="400 + i * 100"
         ></div>
-        <img
+        <img loading="lazy"
           class="
             circle
             animate__animated animate__shakeY animate__slower animate__infinite
@@ -44,7 +44,7 @@
       data-aos="flip-up"
       data-aos-duration="500"
     >
-      <img class="avatar" :src="archi[selectedArchi].avatar" alt="" srcset="" />
+      <img loading="lazy" class="avatar" :src="archi[selectedArchi].avatar" alt="" srcset="" />
       <div class="info">
         <div
           class="t4"

@@ -1,7 +1,7 @@
 <template>
   <div class="s1">
     <div class="title">
-      <img
+      <img loading="lazy"
         v-if="!isMobile"
         class="t1"
         data-aos="flip-up"
@@ -9,7 +9,7 @@
         alt=""
         srcset=""
       />
-      <img
+      <img loading="lazy"
         v-else
         class="t1"
         data-aos="flip-up"
@@ -17,7 +17,7 @@
         alt=""
         srcset=""
       />
-      <img
+      <img loading="lazy"
         v-if="!isMobile"
         class="t2"
         data-aos="flip-up"
@@ -26,7 +26,7 @@
         alt=""
         srcset=""
       />
-      <img
+      <img loading="lazy"
         v-else
         class="t2"
         data-aos="flip-up"
@@ -45,7 +45,7 @@
   position: relative;
   width: size(1920);
   height: size(900);
-  background-image: url("~@/projects/cfyd/s1/bg.png");
+  background-image: url("~@/projects/cfyd/s1/bg.jpg");
   background-position: center;
   background-size: cover;
 
