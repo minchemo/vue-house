@@ -28,8 +28,6 @@
           :data-aos-delay="400 + i * 100"
         ></div>
         <img
-          data-aos="flip-up"
-          :data-aos-delay="600 + i * 100"
           class="
             circle
             animate__animated animate__shakeY animate__slower animate__infinite
@@ -159,6 +157,7 @@
         width: size(152.73);
         display: block;
         margin: 0 auto;
+        animation-duration: 9s;
       }
       &:nth-child(1) {
         max-width: size(444);
@@ -270,10 +269,13 @@
         }
         .swipe-box {
           position: relative;
-          width: size(681);
-          height: size(434);
           padding-top: size(20);
           padding-right: size(20);
+
+          .swiper-container {
+            width: size(681);
+            height: size(434);
+          }
 
           &:after {
             content: "";
@@ -445,13 +447,12 @@
     }
     .popup {
       position: fixed;
-      min-height: size-m(400);
-      height: auto;
-      max-height: 100%;
+      height: 100vh;
+      max-height: 100vh;
       min-width: size-m(375);
       max-width: size-m(375);
       background-color: rgba(0, 0, 0, 0.88);
-      border: 1px solid #946134;
+      border: 0px;
       border-left: 0;
       border-radius: 0;
       z-index: 100000;
@@ -551,13 +552,16 @@
             margin-right: size(100);
           }
           .swipe-box {
-            position: relative;
-            width: size-m(375);
-            height: size-m(239);
+            position: absolute;
             padding-top: 0;
             padding-right: 0;
-            margin-left: -#{size-m(30)};
-            margin-top: size-m(80);
+            left: 0;
+            bottom: 0;
+
+            .swiper-container {
+              width: size-m(375);
+              height: size-m(239);
+            }
 
             &:after {
               display: none;
@@ -664,7 +668,7 @@ export default {
       swiperOptions: {
         resistance: true,
         resistanceRatio: 0,
-        spaceBetween: 50,
+        spaceBetween: 0,
         navigation: {
           prevEl: ".s7 .popup .swipe-box .swiper-button-prev",
           nextEl: ".s7 .popup .swipe-box .swiper-button-next",

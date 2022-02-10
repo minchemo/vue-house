@@ -29,7 +29,7 @@
   position: relative;
   width: size(1920);
   height: size(900);
-  background-color: #000;
+  background-color: transparent;
   z-index: 10;
   .text {
     position: absolute;

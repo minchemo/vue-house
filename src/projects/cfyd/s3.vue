@@ -81,19 +81,19 @@
   position: relative;
   width: size(1920);
   height: size(900);
-  background-color: #000;
-  z-index: 10;
+  background-color: transparent;
+  z-index: 12;
   padding-top: size(70);
   .title {
     position: relative;
     margin: 0 auto;
-    width: size(1095);
+    width: size(1015);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     border-bottom: 1px solid #946134;
     padding-bottom: size(10);
-    transform: translateX(-5%);
+    transform: translateX(-3%) !important;
     z-index: 10;
     h1 {
       font-size: size(92);
@@ -217,9 +217,12 @@
   }
   .hc {
     position: absolute;
-    right: -#{size(50)};
-    top: size(130);
-    width: size(900);
+    right: -1vw;
+    top: 3vw;
+    width: 100%;
+    transform-origin: right top;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 /* 平板尺寸 */

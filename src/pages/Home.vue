@@ -209,7 +209,7 @@ export default {
 @import "../assets/style/variableColor.scss";
 
 .home {
-  background-color: #000;
+  background-color: #000 !important;
   &::before {
     content: " ";
     position: fixed;
