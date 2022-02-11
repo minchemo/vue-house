@@ -24,7 +24,14 @@
           src="@/projects/tm/s1/logo-bottom.svg"
           data-aos="fade-up"
         />
+        
       </div>
+      <img
+          class="logo-bottom-1"
+          src="@/projects/tm/s1/logo-bottom-1.svg"
+          data-aos="fade-up"
+        />
+      
     </div>
   </div>
 </template>
@@ -93,6 +100,16 @@
         width: 100%;
       }
     }
+    .logo-bottom-1{
+      position: absolute;
+      width: size(300);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      bottom: 18%;
+      transform: translate(40%, -50%);
+      left: 3%;
+      }
   }
 }
 /* 平板尺寸 */
@@ -165,6 +182,13 @@
         img {
           width: 100%;
         }
+      }
+        .logo-bottom-1{
+      position: absolute;
+        width: size-m(280);
+        bottom: 5%;
+        transform: translate(0);
+        left: 3%;
       }
     }
   }
