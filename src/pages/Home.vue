@@ -5,7 +5,7 @@
     <div id="locomotive">
       <Section1 class="section" data-scroll />
       <Section2 class="section" data-scroll />
-      <!--Section3 class="section" /-->
+      <Section3 class="section" />
       <Section4 class="section" data-scroll />
       <Section5 class="section" data-scroll />
       <Section6 class="section" data-scroll />
