@@ -6,8 +6,7 @@
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
       <!-- <h3 class="order-title" v-html="order.title"></h3> -->
-      <div class="order-title-img"
-        data-aos="zoom-in">
+      <div class="order-title-img" data-aos="zoom-in">
         <!-- <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="力麒天沐" srcset="">
         <img v-else src="~@/projects/cm/order_title_m.svg" alt="力麒天沐" srcset=""> -->
       </div>
@@ -24,10 +23,23 @@
               <label>手機</label>
               <el-input v-model="form.phone" placeholder></el-input>
             </div>
-            <!-- <div class="row">
+            <div class="row">
+              <label>驗證碼</label>
+              <div class="validate_box">
+                <el-input
+                  class="validate_text"
+                  v-model="form.captcha"
+                  placeholder
+                ></el-input>
+                <el-button class="get_validate_text" @click="getMobileValidCode"
+                  >取得驗證碼</el-button
+                >
+              </div>
+            </div>
+            <div class="row">
               <label>電子郵件</label>
               <el-input v-model="form.email" placeholder></el-input>
-            </div> -->
+            </div>
             <!-- <div class="row">
               <label>喜好房型</label>
               <el-select v-model="form.room" placeholder>
@@ -119,7 +131,7 @@
           </div>
         </div>
         <div class="control">
-          <el-checkbox v-model="checked">
+          <el-checkbox v-model="form.checked">
             <h3>
               本人知悉並同意
               <span @click="showPolicyDialog">「個資告知事項聲明」</span>
@@ -144,7 +156,7 @@
         <el-button
           class="form-submit bt_registration"
           type="primary"
-          :disabled="!checked || !isVerify"
+          :disabled="!form.checked || !isVerify"
           @click="submit"
           :loading="isSubmit"
           >立即預約</el-button
@@ -191,6 +203,7 @@ export default {
       form: {
         name: "",
         phone: "",
+        captcha: "",
         email: "",
         contacttime: "",
         city: "",
@@ -203,6 +216,7 @@ export default {
         msg: "",
         time_start: "",
         time_end: "",
+        checked: false,
       },
       checked: false,
       isSubmit: false,
@@ -226,96 +240,169 @@ export default {
       this.policyVisible = false;
     },
 
-    alertValidate() {
-      const h = this.$createElement;
+    // alertValidate() {
+    //   const h = this.$createElement;
+    //   this.$notify({
+    //     title: "請填寫必填欄位",
+    //     message: h(
+    //       "i",
+    //       { style: "color: #82191d" },
+    //       "「姓名、手機、驗證碼」是必填欄位"
+    //     ),
+    //   });
+    // },
+
+    // alertPhoneValidate() {
+    //   const h = this.$createElement;
+    //   this.$notify({
+    //     title: "格式錯誤",
+    //     message: h("i", { style: "color: #82191d" }, "「手機」需為 10 碼數字"),
+    //   });
+    // },
+
+    showNotify(title, message, type) {
       this.$notify({
-        title: "請填寫必填欄位",
-        message: h(
-          "i",
-          { style: "color: #82191d" },
-          "「姓名、手機」是必填欄位"
-        ),
+        title: title,
+        message: message,
+        duration: 5000,
+        offset: 100,
+        type: type,
       });
     },
-
-    alertPhoneValidate() {
-      const h = this.$createElement;
-      this.$notify({
-        title: "格式錯誤",
-        message: h("i", { style: "color: #82191d" }, "「手機」需為 10 碼數字"),
-      });
-    },
-
     submit() {
-      if (this.isSubmit) return;
-      if (!this.isVerify) return;
-      if (!this.checked) return;
-      this.isSubmit = true;
-      if (
-        !this.form.name ||
-        !this.form.phone
-        // ||
-        // !this.form.time_start ||
-        // !this.form.time_end
-        // ||
-        // !this.form.email ||
-      ) {
-        this.alertValidate();
-        this.isSubmit = false;
+      if (this.form.name == "") {
+        this.showNotify("姓名必須填寫", "", "error");
+      } else if (this.form.phone == "") {
+        this.showNotify("電話必須填寫", "", "error");
+      } else if (!this.form.captcha) {
+        this.showNotify("驗證碼未填寫", "", "error");
+      } else if (this.form.email == "") {
+        this.showNotify("Email 必須填寫", "", "error");
+      } else if (this.form.city == "") {
+        this.showNotify("居住縣市必須填寫", "", "error");
+      } else if (this.form.area == "") {
+        this.showNotify("鄉鎮市區必須填寫", "", "error");
+      } else if (!this.form.checked) {
+        this.showNotify("聲明事項尚未確認", "", "error");
+      } else {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get("utm_source");
+        const utmMedium = urlParams.get("utm_medium");
+        const utmContent = urlParams.get("utm_content");
+        const utmCampaign = urlParams.get("utm_campaign");
+
+        let data = {
+          Name: this.form.name,
+          Email: this.form.email,
+          MobilePhone: this.form.phone,
+          City: this.form.city,
+          Dist: this.form.area,
+          SmsVerifyCode: this.form.captcha,
+          ProjectId: "a0B6F00001m71Pq",
+          utm_source: utmSource,
+          utm_medium: utmMedium,
+          utm_content: utmContent,
+          utm_campaign: utmCampaign,
+        };
+
+        fetch("https://www.hiyes.tw/BuildingCase/Booking", {
+          method: "POST",
+          body: JSON.stringify(data),
+        })
+          .then((response) => {
+            this.isSubmit = false;
+            window.location.href = `formThanks${
+              utmCampaign ? `?utm_campaign=${utmCampaign}` : ""
+            }`;
+            this.recordPageView(1); // record user behavior
+          })
+          .catch((err) => {
+            this.showNotify("預約失敗", err, "error");
+          });
+      }
+    },
+
+    // API串接
+    getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(";");
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0)
+          return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    },
+    setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    },
+    listCookie() {
+      const cookieArray = document.cookie.split(";");
+      for (var i = 0; i < cookieArray.length; i++) {
+        let thisCookie = cookieArray[i].split("=");
+        let cName = unescape(thisCookie[0]);
+        let cValue = unescape(thisCookie[1]);
+        console.log(cName, cValue);
+      }
+    },
+    recordPageView(state) {
+      if (state === 1) {
+        fetch("https://data.hiyes.tw/rec/pv", {
+          method: "POST",
+          body: {
+            guid: this.getCookie("hiyes_uid"),
+            project: "pjavenue",
+            phone: this.form.phone,
+            state,
+          },
+        });
+      } else {
+        fetch("https://data.hiyes.tw/rec/pv", {
+          method: "POST",
+          body: {
+            guid: this.getCookie("hiyes_uid"),
+            project: "pjavenue",
+            state,
+          },
+        });
+      }
+    },
+    generateGUID() {
+      fetch("https://data.hiyes.tw/rec/uuid", {
+        method: "GET",
+      })
+        .then((response) => {
+          return response.text();
+        })
+        .then((guid) => {
+          if (!this.getCookie("hiyes_uid")) {
+            this.setCookie("hiyes_uid", guid, 2);
+          }
+        });
+    },
+    getMobileValidCode() {
+      if (this.form.phone == "") {
+        this.showNotify("請先填寫手機號碼", "", "error");
         return;
       }
-      if (this.form.phone.length != 10) {
-        this.alertPhoneValidate();
-        this.isSubmit = false;
-        return;
-      }
-      const urlParams = new URLSearchParams(window.location.search);
-      const utmSource = urlParams.get("utm_source");
-      const utmMedium = urlParams.get("utm_medium");
-      const utmContent = urlParams.get("utm_content");
-      const utmCampaign = urlParams.get("utm_campaign");
-      const formData = new FormData();
-      formData.append("name", this.form.name);
-      formData.append("phone", this.form.phone);
-      formData.append("email", this.form.email);
-      formData.append("contacttime", this.form.contacttime);
-      formData.append("msg", this.form.msg);
-      formData.append("room", this.form.room);
-      // formData.append('time_start', this.form.time_start)
-      // formData.append('time_end', this.form.time_end)
-      formData.append("city", this.form.city);
-      formData.append("area", this.form.area);
-      formData.append("gender", this.form.area);
-      formData.append("infosource", this.form.area);
-      formData.append("parking", this.form.area);
-      formData.append("houseStyle", this.form.area);
-      formData.append("utm_source", utmSource);
-      formData.append("utm_medium", utmMedium);
-      formData.append("utm_content", utmContent);
-      formData.append("utm_campaign", utmCampaign);
-      const time = new Date();
-      const year = time.getFullYear();
-      const month = time.getMonth() + 1;
-      const day = time.getDate();
-      const hour = time.getHours();
-      const min = time.getMinutes();
-      const sec = time.getSeconds();
-      const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
-      fetch(
-        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}
-      `,
-        {
-          method: "GET",
-        }
-      );
-      fetch("contact-form.php", {
+      const data = {
+        mobilePhone: this.form.phone,
+      };
+      fetch("https://www.hiyes.tw/Auth/SendSmsVerifyCode", {
         method: "POST",
-        body: formData,
+        body: JSON.stringify(data),
+        headers: {
+          "content-type": "application/x-www-form-urlencoded",
+        },
       }).then((response) => {
-        this.isSubmit = false;
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        }
+        console.log(response);
       });
     },
   },
@@ -325,6 +412,43 @@ export default {
 <style lang="scss">
 .el-input {
   border-left: 1px solid #eee !important;
+}
+
+.validate_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 311px;
+  height: 48px;
+  margin-left: 21px;
+  .validate_text {
+    border-left: 0 !important;
+    margin-right: 10px !important;
+    input {
+      width: 100% !important;
+    }
+  }
+
+  .get_validate_text {
+    width: 50%;
+    height: 100% !important;
+    background-color: #b4904f !important;
+    color: #ffffff;
+
+    &:hover {
+      span {
+        color: #000;
+      }
+    }
+  }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+  .validate_box {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 </style>
 
@@ -435,7 +559,7 @@ export default {
   }
 
   .group {
-    height: 300px;
+    height: 330px;
     margin-bottom: 40px;
     align-content: space-between;
     display: flex;
@@ -469,7 +593,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
-  //  background: $order_input_bg;
+    //  background: $order_input_bg;
 
     &.house {
       margin-top: 50px;
