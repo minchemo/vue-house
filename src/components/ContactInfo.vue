@@ -327,6 +327,7 @@ export default {
   color: $contact_google_btn_color;
   background: $contact_google_btn_bg;
   background-position: center !important;
+  border: #fff solid 1px;
 
   box-shadow: $contact_google_border;
   transition: all 0.5s;
