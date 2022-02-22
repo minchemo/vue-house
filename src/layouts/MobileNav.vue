@@ -16,10 +16,10 @@
       <font-awesome-icon :icon="['fab', 'facebook-messenger']" />
       <div class="label">FB諮詢</div>
     </a>
-    <a class="nav-item" @click="showMapDialog">
+    <!--a class="nav-item" @click="showMapDialog">
       <font-awesome-icon icon="map-marker-alt" />
       <div class="label">地圖導航</div>
-    </a>
+    </a-->
     <el-dialog
       title
       :visible.sync="isShowCallDialog"
