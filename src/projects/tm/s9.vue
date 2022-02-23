@@ -45,7 +45,7 @@
       </div>
       <div class="img-box" data-aos="fade">
         <div class="t4" data-aos="fade-up">
-          外觀及環境3D透視模擬⽰意圖
+          外觀及環境3D透視模擬示意圖
         </div>
       </div>
     </div>

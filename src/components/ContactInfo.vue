@@ -8,12 +8,14 @@
           :alt="info.caseName"
         />
         <div class="info">
-          <div class="btn flex-c" @click="showCallDialog">
-            <span class="flex-c">
-              <font-awesome-icon icon="phone" />
-              <span>{{ info.phone }}</span>
-            </span>
-          </div>
+          <a href="tel:0228713668" class="btn-call">
+            <div class="btn flex-c">
+              <span class="flex-c">
+                <font-awesome-icon icon="phone" />
+                <span>{{ info.phone }}</span>
+              </span>
+            </div>
+          </a>
           <div class="btn flex-c" @click="showMessengerDialog">
             <span class="flex-c">
               <font-awesome-icon :icon="['fab', 'facebook-messenger']" /><span
@@ -136,6 +138,11 @@ export default {
   right: 5vw;
   bottom: 2.8vw;
   z-index: 15;
+}
+
+.btn-call {
+  text-decoration: none;
+  margin-bottom: 0 !important;
 }
 
 .forest {
