@@ -5,26 +5,12 @@
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
-      <h3 class="order-title" v-html="order.title"></h3>
-      <!-- <div class="order-title-img">
-        <img src="~@/assets/img/order-title.png" alt="" srcset="">
-      </div> -->
-      <img
-        v-if="!isMobile"
-        class="bg-img"
-        src="@/projects/cc/contact.png"
-        alt=""
-        srcset=""
-        uk-parallax="viewport:0.8;y:200,0;"
-      />
-      <img
-        v-else
-        class="bg-img"
-        src="@/projects/cc/contact-mo.png"
-        alt=""
-        srcset=""
-        uk-parallax="viewport:0.8;y:0;"
-      />
+      <!-- <h3 class="order-title" v-html="order.title"></h3> -->
+      <div class="order-title-img" data-aos="zoom-in">
+        <!-- <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="春福御邸" srcset="">
+        <img v-else src="~@/projects/cm/order_title_m.svg" alt="春福御邸" srcset=""> -->
+      </div>
+      <div class="order-title" v-html="order.title"></div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
@@ -168,7 +154,10 @@
 
     <ContactInfo />
     <GoogleMap />
-    <PolicyDialog :policyVisible="policyVisible"  @hidePolicyDialog="hidePolicyDialog" />
+    <PolicyDialog
+      :policyVisible="policyVisible"
+      @hidePolicyDialog="hidePolicyDialog"
+    />
   </div>
 </template>
 
@@ -232,7 +221,7 @@ export default {
     showPolicyDialog() {
       this.policyVisible = true;
     },
-    hidePolicyDialog(){
+    hidePolicyDialog() {
       this.policyVisible = false;
     },
 
@@ -351,11 +340,11 @@ export default {
 }
 .order-bg {
   //background-color: $order_bg_color;
-  //background-image: $order_bg_image;
-  background-repeat: no-repeat;
+  background-image: $order_bg_image;
+  background-repeat: repeat-y;
   position: relative;
-  background-size: 110vw auto;
-  background-position: top;
+  background-size: 100%;
+  background-position: top center;
   font-family: $family3;
   // padding-top: 10vw;
 
@@ -365,16 +354,17 @@ export default {
     font-family: $family3;
     background: $order_submit_bg;
     border-radius: $order_submit_borderradius !important;
+    border: $order_submit_border;
   }
   .order-top {
-    //background-color: $order_bg_color;
+    // background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
-  //  background: $order_bg_image no-repeat;
-    background-size: cover;
+    // background: $order_bg_image no-repeat;
+    background-size: 100%;
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 700px;
+    padding-bottom: 400px;
   }
   .order-title {
     font-family: $family1;
@@ -390,16 +380,15 @@ export default {
     margin: 0 auto;
     margin-bottom: size(20);
     display: inline-block;
-
   }
   .order-title-img {
-    width: 30vw;
+    width: 40vw;
     margin: 3vh auto;
     //margin-bottom: 1vw;
 
     img {
       width: 100%;
-      max-width: 500px;
+      max-width: 750px;
     }
   }
 
@@ -479,7 +468,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
-    background: $order_input_bg;
+    //  background: $order_input_bg;
 
     &.house {
       margin-top: 50px;
@@ -535,8 +524,7 @@ export default {
     width: 100vw;
   }
   .order-bg {
-    //background-color: $order_bg_color;
-   // background-image: $order_bg_image_m;
+    background-image: $order_bg_image_m;
     background-size: contain;
     padding-top: 0;
     margin: 0;
@@ -560,15 +548,15 @@ export default {
       font-size: 14px;
       max-width: 80vw;
       margin: 0 auto;
-      margin-bottom: 10vw;
+      margin-bottom: 0vw;
       line-height: 1.5;
     }
     .order-top {
-     // background-image: $order_bg_image_m;
+      // background-image: $order_bg_image_m;
       background-size: contain;
       background-repeat: repeat;
       // top: 10vw;
-      padding-bottom: 0;
+      padding-bottom: 50px;
     }
     .order {
       width: 85% !important;
