@@ -5,7 +5,12 @@
       <div class="info">
         <div class="item" :key="infos[0]" v-for="infos in houseInfos">
           <h3 class="label">{{ infos[0] }}</h3>
-          <a :href="infos[2]" class="desc" target="_blank" v-html="infos[1]" ></a>
+          <a
+            :href="infos[2]"
+            class="desc"
+            target="_blank"
+            v-html="infos[1]"
+          ></a>
         </div>
       </div>
     </div>
@@ -32,9 +37,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
+@import "@/assets/style/function.scss";
 .house-info {
   width: 100vw;
-  background: url("../assets/img/housebg.jpg");
+  background: $house_bg;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -62,10 +68,10 @@ export default {
 }
 
 .title {
-  font-size: 32px;
+  font-size: size(42);
   line-height: 36px;
   margin: 60px 0;
-  font-weight: 500;
+  font-weight: bolder;
   color: $house_title_color;
   font-family: $family3;
   width: 80vw;
@@ -81,7 +87,7 @@ export default {
   font-size: 24px;
   margin-bottom: 30px;
   margin-right: 160px;
-  width: 260px;
+  width: 240px;
   height: 30px;
   border-left: 4px solid $house_border_color;
   padding-left: 12px;
@@ -94,22 +100,22 @@ export default {
   }
 
   .label {
-    font-size: 24px;
+    font-size: 18px;
     color: $house_label_color;
     margin-bottom: 0;
     margin-right: 20px;
     white-space: nowrap;
     font-family: $family3;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   .desc {
-    font-size: 24px;
+    font-size: 18px;
     text-align: left;
     line-height: 1.4;
     color: $house_desc_color;
     font-family: $family3;
-    font-weight: 300;
+    font-weight: 500;
   }
 }
 
