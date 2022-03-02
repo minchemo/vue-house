@@ -4,12 +4,6 @@
     <Navigation v-else />
     <div id="locomotive">
       <Section1 class="section" data-scroll />
-      <Section2 class="section" data-scroll />
-      <Section3 class="section" />
-      <Section4 class="section" data-scroll />
-      <Section5 class="section" data-scroll />
-      <Section6 class="section" data-scroll />
-      <Section7 class="section" data-scroll />
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -33,13 +27,7 @@ import AOS from "@/lib/aos/src/js/aos";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/cfyd/s1.vue";
-import Section2 from "@/projects/cfyd/s2.vue";
-import Section3 from "@/projects/cfyd/s3.vue";
-import Section4 from "@/projects/cfyd/s4.vue";
-import Section5 from "@/projects/cfyd/s5.vue";
-import Section6 from "@/projects/cfyd/s6.vue";
-import Section7 from "@/projects/cfyd/s7.vue";
+import Section1 from "@/projects/dh/s1.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
 import UIkit from 'uikit';
@@ -58,12 +46,6 @@ export default {
     // CustomFooter,
     MobileNav,
     Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
   },
 
   data() {
@@ -209,7 +191,7 @@ export default {
 @import "../assets/style/variableColor.scss";
 
 .home {
-  background-color: #000 !important;
+  background-color: #fff !important;
   &::before {
     content: " ";
     position: fixed;

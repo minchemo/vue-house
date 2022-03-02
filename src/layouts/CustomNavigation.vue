@@ -10,15 +10,15 @@
         </div>
       </div>
     </div>
-    <!-- <div class="custom-navbar" v-if="!isMobile">
+    <div class="custom-navbar" v-if="!isMobile">
       <div class="link" @click="scrollTo('.section1')">
-        <img src="@/projects/cc/nav_logo.png" alt="春福御邸" srcset="" />
+        <!-- <img src="@/projects/cc/nav_logo.png" alt="春福御邸" srcset="" /> -->
       </div>
       <div class="link" @click="scrollTo('.section2 .content')">國際CBD</div>
       <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
       <div class="link" @click="scrollTo('.section6')">生活新風貌</div>
       <div class="link" @click="scrollTo('.section8')">校園第一排</div>
-    </div> -->
+    </div>
     <div
       class="custom-navigation-list"
       v-bind:class="isOpen ? 'is-active' : ''"

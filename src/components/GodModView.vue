@@ -15,9 +15,9 @@
         src="@/projects/cfyd/s2/view_m.png"
         alt="春福御邸"
       />
-      <div class="view-hand" ref="viewHand">
+      <!-- <div class="view-hand" ref="viewHand">
         <img :src="swipeUrl" alt="春福御邸" />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -103,7 +103,7 @@ export default {
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "50" : "37.38", // 鳥瞰圖比例 高÷寬×100
       // bgUrl: require("@/projects/cfyd/s2/view.png"), //置換圖片路徑即可
-      swipeUrl: require("@/projects/tm/s5/swipe-here.png"), //置換圖片路徑即可
+      // swipeUrl: require("@/projects/tm/s5/swipe-here.png"), //置換圖片路徑即可
     };
   },
   methods: {

@@ -1,16 +1,16 @@
 <template>
-  <div class="navigation scrollhide" ref="navigation">
+  <div class="navigation" ref="navigation">
     <div class="layout-container-fluid nav-container">
       <div class="layout-container nav-container">
         <div class="nav">
-          <!-- <img
+          <img
             class="logo"
-            src="@/assets/img/nav-logo.png"
+            src="@/projects/dh/logo.svg"
             alt
             v-scroll-to="{ element: `#app` }"
             data-aos="fade-right"
             data-aos-duration="1500"
-          /> -->
+          />
           <div
             v-show="false"
             @click="toggleSidebar"
@@ -113,15 +113,13 @@ export default {
         const nav = this.$refs.navigation;
 
         if (window.scrollY > 500) {
-
-          $(nav).removeClass("scrollhide");
+          // $(nav).removeClass("scrollhide");
           // else if (this.prev < window.scrollY) {
           //   $(nav).addClass("scrollhide");
           // }
           this.prev = window.scrollY;
-        }
-        else {
-          $(nav).addClass("scrollhide");
+        } else {
+          // $(nav).addClass("scrollhide");
         }
       }
     },
@@ -179,7 +177,7 @@ export default {
   }
 }
 .logo {
-  height: 50%;
+  height: size(23);
   // width:auto;
   // height: 100%;
   cursor: pointer;
@@ -215,7 +213,7 @@ export default {
   }
   .link {
     color: $nav_link_color;
-    height: 30%;
+    height: size(24);
     width: auto;
     text-align: center;
     display: block;
@@ -228,9 +226,8 @@ export default {
     position: relative;
     text-align: center;
     white-space: nowrap;
-    border-right: 2px solid $nav_link_border_bg;
-    padding: 0 24px;
-    font-size: 20px;
+    border-right: 1px solid $nav_link_border_bg;
+    padding: 0 size(15);
 
     > span {
       z-index: 3;
@@ -238,7 +235,7 @@ export default {
 
     &.active {
       .title {
-        color: #e95513;
+        color: $nav_link_hover_color;
       }
     }
     .title {
@@ -249,11 +246,11 @@ export default {
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      color: #c79f62;
+      color: $nav_link_color;
       transition: all 0.4s;
-
+      font-size: size(24);
       &:hover {
-        color: #e95513;
+        color: $nav_link_hover_color;
       }
     }
     .subTitle {
@@ -272,7 +269,7 @@ export default {
       height: 3px;
       width: 0;
       bottom: -12px;
-      background-color: #e95513;
+      background-color: $nav_link_border_bg;
       transition: all 0.4s;
       opacity: 0;
     }

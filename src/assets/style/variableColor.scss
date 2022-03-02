@@ -8,29 +8,26 @@ $bg_m: url("");
 
 /* 1主要字體  2次要字體  3表單字體  4黑體 */
 
-$family1: "Noto Sans TC",
+$family1: "Noto Serif TC",
 serif;
-$family2: "Noto Sans TC",
+$family2: "Noto Serif TC",
 serif;
-$family3: "Noto Sans TC",
+$family3: "Noto Serif TC",
 serif;
-$family4: "Noto Sans TC",
+$family4: "Noto Serif TC",
 serif,
 sans-serif;
 $selection_color: grey;
 
 /* navigation */
 
-$nav_bg: rgba(0,
-0,
-0,
-0.7);
+$nav_bg: #1B485B;
 $nav_btn_color: #000;
-$nav_link_color: #000;
+$nav_link_color: #fff;
 $nav_link_subtitle_color: #000;
 $nav_link_hover_color: #fff;
 $nav_link_hover_bg: #976a4b;
-$nav_link_border_bg: #c79f62;
+$nav_link_border_bg: #986B48;
 
 /* loading */
 
