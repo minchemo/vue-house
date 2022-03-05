@@ -143,7 +143,7 @@ export default {
   background-color: $nav_bg;
   background-image: $nav_bg;
   background-size: cover;
-  height: $nav_pc_height;
+  height: size(128);
   z-index: 500;
   position: fixed;
   top: 0;
@@ -177,7 +177,7 @@ export default {
   }
 }
 .logo {
-  height: size(23);
+  height: size(25);
   // width:auto;
   // height: 100%;
   cursor: pointer;
@@ -198,7 +198,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin-right: 5vw;
+  margin-right: 2.5vw;
   li {
     height: 100%;
     letter-spacing: 2px;

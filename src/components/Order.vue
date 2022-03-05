@@ -6,10 +6,10 @@
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
       <!-- <h3 class="order-title" v-html="order.title"></h3> -->
-      <div class="order-title-img" data-aos="zoom-in">
-        <!-- <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="春福御邸" srcset="">
-        <img v-else src="~@/projects/cm/order_title_m.svg" alt="春福御邸" srcset=""> -->
-      </div>
+      <!-- <div class="order-title-img" data-aos="zoom-in">
+        <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="春福御邸" srcset="">
+        <img v-else src="~@/projects/cm/order_title_m.svg" alt="春福御邸" srcset="">
+      </div> -->
       <div class="order-title" v-html="order.title"></div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
@@ -363,23 +363,27 @@ export default {
     background-size: 100%;
     background-position: bottom right;
     position: relative;
-    padding: 5vw 0;
-    padding-bottom: 400px;
+    padding-top: size(160);
+    // padding: 5vw 0;
+    // padding-bottom: 400px;
   }
   .order-title {
     font-family: $family1;
-    width: auto;
-    padding-top: 20px;
-    padding-bottom: 1vw;
-    font-weight: 500;
+    width: size(1550);
+    height: size(95);
+    font-weight: bold;
     line-height: 1.3;
     font-size: size(50);
-    letter-spacing: size(30);
+    letter-spacing: size(5);
     text-align: center;
     color: $order_title_color;
     margin: 0 auto;
-    margin-bottom: size(20);
     display: inline-block;
+    background: url("~@/projects/dh/order-title-bg.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .order-title-img {
     width: 40vw;
@@ -416,7 +420,7 @@ export default {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding-bottom: 3rem;
+    padding-bottom: 0;
     justify-content: space-between;
     z-index: 1;
   }
@@ -535,9 +539,12 @@ export default {
       display: block;
     }
     .order-title {
-      padding-top: 10px;
-      padding-bottom: 5px;
-      font-size: calc(100vw * 30 / 375);
+      width: size-m(378);
+      height: size-m(66);
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: size-m(25);
+      background: url("~@/projects/dh/order-title-bg_m.jpg");
     }
     .order-title-img {
       width: 80vw;
@@ -556,7 +563,7 @@ export default {
       background-size: contain;
       background-repeat: repeat;
       // top: 10vw;
-      padding-bottom: 50px;
+      padding-bottom: 0;
     }
     .order {
       width: 85% !important;

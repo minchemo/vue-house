@@ -2,18 +2,19 @@
   <div>
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <img
+        <div class="divider" data-aos="scaleY"></div>
+        <!-- <img
           v-if="!isMobile"
           class="logo"
-          :src="require('@/projects/cfyd/logo.svg')"
+          :src="require('@/projects/dh/contact-img.png')"
           :alt="info.caseName"
         />
         <img
           v-else
           class="logo"
-          :src="require('@/projects/cfyd/logo_m.svg')"
+          :src="require('@/projects/dh/contact-img.png')"
           :alt="info.caseName"
-        />
+        /> -->
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">
@@ -130,12 +131,14 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
+@import "@/assets/style/function.scss";
 #contact-info {
-  position: absolute;
+  position: relative;
   left: 50%;
-  transform: translate(-50%, -100%);
   z-index: 15;
-  bottom: 5%;
+  width: 100%;
+  margin-left: -50%;
+  margin-bottom: size(70);
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -163,7 +166,7 @@ export default {
 
 .contact-info {
   // background: $contact_bg;
-  background-image: url("~@/projects/cfyd/contact-info-bg.jpg");
+  // background-image: url("~@/projects/cfyd/contact-info-bg.jpg");
   background-size: cover;
   //box-shadow: $contact_shadow;
   display: flex;
@@ -174,7 +177,7 @@ export default {
   width: 80%;
   min-width: 1000px;
   margin: 0 auto;
-  padding: 50px 0;
+  // padding: 50px 0;
   z-index: 50;
 
   .fix-bar {
@@ -231,10 +234,10 @@ export default {
 
 .logo {
   // width: $contact_logo_pc_width;
-  height: 70px;
+  height: 120px;
   margin: 15px auto 60px auto;
   z-index: 1;
-  width: 60%;
+  width: auto;
 }
 .info {
   width: 880px;
@@ -308,7 +311,7 @@ export default {
   font-size: 18px;
   background: #fff;
   font-weight: 400;
-  box-shadow: $contact_btn_border;
+  box-shadow: $contact_btn_addr_border;
   border-radius: $contact_btn_addr_border_radius;
   font-family: $family4;
   color: #000;
@@ -327,7 +330,6 @@ export default {
   color: $contact_google_btn_color;
   background: $contact_google_btn_bg;
   background-position: center !important;
-  border: #fff solid 1px;
 
   box-shadow: $contact_google_border;
   transition: all 0.5s;
@@ -350,6 +352,15 @@ export default {
       color: $contact_google_hover_btn_icon;
     }
   }
+}
+
+.divider {
+  position: relative;
+  width: size(2);
+  height: size(160);
+  background: #c28c65;
+  left: 50%;
+  margin: size(60) 0;
 }
 
 /* 平板尺寸 */
@@ -398,6 +409,7 @@ export default {
     background: transparent;
     transform: unset;
     left: 0;
+    margin-left: 0;
   }
   .order-bg-draw {
     height: 100px;
@@ -420,8 +432,7 @@ export default {
     //background: $contact_bg_m;
     background-size: cover;
     margin-top: 0;
-
-    background-image: url("~@/projects/cfyd/contact-info-bg-m.jpg");
+    padding-top: 0;
 
     .logo {
       width: $contact_logo_mobile_width;
@@ -483,6 +494,15 @@ export default {
     + .btn {
       border-radius: $contact_btn_gbtn_border_radius_m;
     }
+  }
+
+  .divider {
+    position: relative;
+    width: size(2);
+    height: size-m(80);
+    background: #c28c65;
+    left: 50%;
+    margin: size(60) 0;
   }
 }
 

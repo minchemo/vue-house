@@ -74,8 +74,13 @@ export default {
   font-weight: bolder;
   color: $house_title_color;
   font-family: $family3;
-  width: 80vw;
-  padding: 10px 20px;
+  width: size(1550);
+  height: size(95);
+  background: url("~@/projects/dh/order-title-bg.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .info {
@@ -129,9 +134,11 @@ export default {
   }
 
   .title {
-    font-size: 24px;
+    font-size: size-m(25);
     margin: 40px 0 24px;
     width: 100vw;
+    background: url("~@/projects/dh/order-title-bg_m.jpg");
+    height: size-m(55);
   }
 
   .item {
