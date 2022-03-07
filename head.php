@@ -6,7 +6,7 @@ $src =$_SERVER['SERVER_NAME'];
 $case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
 $case_code = "dh";
 
-$pdo = new pdo('mysql:host=localhost;dbname=htw_web', 'htw', '748aSgl5Ni');
+$pdo = new pdo('mysql:host=localhost;dbname=htw12_web', 'htw12', '3hdaiU813Q');
 $pdo->exec("SET NAMES 'utf8'");
 $sql = "SELECT title,description,keyword,p0 FROM susers WHERE email = '" . $case_code . "'";
 $dataList = $pdo->query($sql)->fetchAll();
