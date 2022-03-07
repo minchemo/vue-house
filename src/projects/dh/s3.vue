@@ -1,16 +1,26 @@
 <template>
   <div class="s3">
-    <div class="item" data-aos="fade">
-      <img src="@/projects/dh/s3/a_m.jpg" alt="" srcset="" v-if="isMobile" />
+    <div class="item" data-aos="fade" ref="viewbox">
+      <img
+        ref="view"
+        src="@/projects/dh/s3/a_m.jpg"
+        alt=""
+        srcset=""
+        v-if="isMobile"
+      />
     </div>
     <div class="info">
-      <div class="t1" data-aos="fade-up">千億資金，財團東逐南港</div>
+      <div class="t1" data-aos="fade-up" v-if="!isMobile">
+        千億資金，財團東逐南港
+      </div>
+      <div class="t1" data-aos="fade-up" v-else>千億資金<br />財團東逐南港</div>
       <div class="t2" data-aos="fade-up" data-aos-delay="400">
         中信金控、台灣人壽、富邦人壽、國泰人壽、<br v-if="!isMobile" />
         三商美邦、潤泰建設、國產實業…，<br v-if="!isMobile" />
         財團東逐南港，購物中心、五星飯店、A級商辦、<br v-if="!isMobile" />
         頂級豪宅，千億資金強力啟動南港新未來。
       </div>
+      <div class="mask" v-if="isMobile"></div>
     </div>
     <div class="divider" data-aos="scaleY"></div>
   </div>
@@ -111,6 +121,7 @@
       align-items: center;
       padding: size-m(50) 0;
       pointer-events: none;
+      padding-bottom: size-m(20) !important;
       .t1 {
         font-size: size-m(28.28);
         font-weight: bold;
@@ -128,6 +139,20 @@
         font-weight: 500;
         line-height: 1.5;
         text-align: left;
+        z-index: 1;
+      }
+      .mask {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.519502801120448) 82%,
+          rgba(0, 0, 0, 0.1805497198879552) 100%
+        );
       }
     }
 
@@ -156,7 +181,18 @@ export default {
   data() {
     return {
       isMobile,
+
     };
   },
+  mounted() {
+    const self = this;
+    $(this.$refs.view).one('load', () => {
+      let pos = $(this.$refs.view).width();
+      pos = pos / 3.55
+
+
+      $(self.$refs.viewbox).scrollLeft(pos)
+    })
+  }
 };
 </script>
