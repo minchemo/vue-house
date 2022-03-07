@@ -153,7 +153,7 @@
     </div>
 
     <ContactInfo />
-    <!-- <GoogleMap /> -->
+     <GoogleMap /> 
     <PolicyDialog
       :policyVisible="policyVisible"
       @hidePolicyDialog="hidePolicyDialog"

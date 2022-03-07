@@ -6,35 +6,7 @@
         class="c1"
         data-aos="zoom-in"
         data-aos-delay="0"
-        src="~@/projects/cm/s1/circle.png"
-        alt="藏美表參道"
-      />
-      <img
-        class="c2"
-        data-aos="zoom-in"
-        data-aos-delay="300"
-        src="~@/projects/cm/s1/circle.png"
-        alt="藏美表參道"
-      />
-      <img
-        class="c3"
-        data-aos="zoom-in"
-        data-aos-delay="600"
-        src="~@/projects/cm/s1/circle.png"
-        alt="藏美表參道"
-      />
-      <img
-        class="c4"
-        data-aos="zoom-in"
-        data-aos-delay="900"
-        src="~@/projects/cm/s1/circle.png"
-        alt="藏美表參道"
-      />
-      <img
-        class="c5"
-        data-aos="zoom-in"
-        data-aos-delay="1200"
-        src="~@/projects/cm/s1/circle.png"
+        src="~@/projects/cm/s1/logo.png"
         alt="藏美表參道"
       />
     </div>
@@ -139,11 +111,10 @@
     img {
       position: absolute;
       &.c1 {
-        width: size(180);
-        height: size(180);
+        width: size(580);
+        height: size(639);
         left: size(150);
-        top: size(70);
-  animation: circle 4.2s ease-in-out infinite alternate;
+        top: size(250);
       }
       &.c2 {
         width: size(1000);
@@ -185,9 +156,9 @@
   .title {
     z-index: 1;
     position: absolute;
-    width: size(1098);
+    width: size(815);
     height: size(478.9);
-    left: 50%;
+    left: 65%;
     top:calc(50% - 0.8vw);
     transform: translate(-50%, -50%);
     display: flex;
@@ -199,15 +170,16 @@
     }
     .t1 {
       position: relative;
-      width: size(1084.6);
+      width: size(697);
+      margin: 0px auto;
     }
   }
   .subtitle {
     position: absolute;
-    width: size(1100);
+    width: size(823);
     height: size(149.6);
-    top:calc(50% + 8.5vw);
-    left: 50%;
+    top:calc(50% + 0.5vw);
+    left: 65%;
     transform: translateX(-50%);
     .t1 {
       width: 100%;
@@ -215,11 +187,11 @@
     .order {
       position: absolute;
       right: 0;
-      bottom: -#{size(25)};
-      width: size(450.5);
-      height: size(83.78);
+      bottom: -#{size(210)};
+      width: size(823);
+      height: size(75);
       background-image: url("~@/projects/cm/s1/order.png");
-      background-size: 95%;
+      background-size: 100%;
       background-repeat: no-repeat;
       background-position: bottom left;
       &:hover {
@@ -262,10 +234,10 @@
       img {
         position: absolute;
         &.c1 {
-          width: size-m(90);
-          height: size-m(90);
-          left: size-m(20);
-          top: size-m(20);
+          width: size-m(151);
+          height: size-m(167);
+          left: 30%;
+          top: size-m(60);
         }
         &.c2 {
           width: size-m(200);
@@ -295,12 +267,12 @@
     }
     .title {
       z-index: 1;
-      position: absolute;
-      width: size-m(162.38);
-      height: size-m(385);
+      position: relative;
+      width: size-m(243);
+      height: size-m(62);
       left: 50%;
       top: 35%;
-      transform: translate(-55%, -50%);
+      transform: translateX(-50%);
       display: flex;
       flex-direction: row-reverse;
       align-items: flex-start;
@@ -313,15 +285,16 @@
       }
       .t1 {
         position: relative;
-        width: size-m(141);
+        width: size-m(227);
+        margin: 0px auto;
       }
     }
     .subtitle {
-      position: absolute;
+      position: relative;
       width: size-m(243);
       height: size-m(121);
-      top: auto;
-      bottom: size-m(120);
+      top: 39% !important;
+      bottom: size-m(80);
       left: 50%;
       transform: translateX(-50%);
       .t1 {
@@ -330,7 +303,7 @@
       .order {
         position: absolute;
         left: 1.5%;
-        bottom: size-m(-60);
+        bottom: size-m(-100);
         width: size-m(245);
         height: size-m(41);
         background-image: url("~@/projects/cm/s1/order_m.png");
