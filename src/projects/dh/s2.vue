@@ -539,10 +539,10 @@
       }
       .t2 {
         margin-top: size-m(10);
-        font-size: size-m(11);
+        font-size: size-m(13);
         font-weight: 500;
         line-height: 1.5;
-        width: size-m(210);
+        width: size-m(230);
       }
       .circle {
         position: absolute;

@@ -91,7 +91,7 @@
     position: relative;
     width: size-m(375);
     height: size-m(554);
-    background-image: unset;
+    background-image: none;
 
     .item {
       position: absolute;
@@ -102,6 +102,7 @@
       border: 0;
       overflow-x: scroll;
       overflow-y: hidden;
+      background: #000;
       img {
         height: 100%;
         width: auto;
@@ -119,7 +120,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: size-m(50) 0;
+      padding: size-m(20) 0;
       pointer-events: none;
       padding-bottom: size-m(20) !important;
       .t1 {
@@ -135,7 +136,7 @@
       .t2 {
         max-width: size-m(320);
         margin-top: 0;
-        font-size: size-m(11);
+        font-size: size-m(13);
         font-weight: 500;
         line-height: 1.5;
         text-align: left;
@@ -146,7 +147,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 100px;
+        height: 130px;
         background: linear-gradient(
           0deg,
           rgba(0, 0, 0, 0.8) 0%,

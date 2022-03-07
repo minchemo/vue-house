@@ -114,7 +114,7 @@
       .t2 {
         max-width: size-m(320);
         margin-top: size(0);
-        font-size: size-m(11);
+        font-size: size-m(13);
         font-weight: 500;
         line-height: 1.5;
         text-align: left;
