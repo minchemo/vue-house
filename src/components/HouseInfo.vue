@@ -68,14 +68,15 @@ export default {
 }
 
 .title {
-  font-size: size(42);
+  font-size: size(40);
+  letter-spacing: size(5);
   line-height: 36px;
   margin: 60px 0;
   font-weight: bolder;
   color: $house_title_color;
   font-family: $family3;
   width: size(1550);
-  height: size(95);
+  height: size(80);
   background: url("~@/projects/dh/order-title-bg.png");
   background-size: cover;
   display: flex;

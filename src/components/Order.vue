@@ -370,10 +370,10 @@ export default {
   .order-title {
     font-family: $family1;
     width: size(1550);
-    height: size(95);
+    height: size(80);
     font-weight: bold;
     line-height: 1.3;
-    font-size: size(50);
+    font-size: size(40);
     letter-spacing: size(5);
     text-align: center;
     color: $order_title_color;

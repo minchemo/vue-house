@@ -527,22 +527,22 @@
       color: #fff;
       text-align: left;
       padding-right: 0;
-      top: size-m(20);
+      top: size-m(10);
       left: size-m(20);
       .t1 {
-        font-size: size-m(28);
+        font-size: size-m(26);
         line-height: 1;
         .large {
-          font-size: size-m(36);
+          font-size: size-m(30);
           margin-right: 0;
         }
       }
       .t2 {
-        margin-top: size-m(15);
+        margin-top: size-m(10);
         font-size: size-m(11);
         font-weight: 500;
         line-height: 1.5;
-        width: size-m(160);
+        width: size-m(210);
       }
       .circle {
         position: absolute;

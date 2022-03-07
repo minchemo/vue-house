@@ -143,7 +143,7 @@ export default {
   background-color: $nav_bg;
   background-image: $nav_bg;
   background-size: cover;
-  height: size(128);
+  height: size(80);
   z-index: 500;
   position: fixed;
   top: 0;

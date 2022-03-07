@@ -75,7 +75,7 @@
     align-items: center;
     .t1 {
       font-weight: bold;
-      font-size: size(107);
+      font-size: size(95);
     }
     .t2 {
       margin-top: size(60);
@@ -88,11 +88,14 @@
       height: size(56);
       color: #c28c65;
       border: size(2) solid;
+      font-weight: 600;
+      padding-bottom: 4px;
       font-size: size(31);
       display: flex;
       align-items: center;
       justify-content: center;
       &:hover {
+        transition:0.5s;
         background: #c28c65;
         cursor: pointer;
         color: #fff;
@@ -188,10 +191,12 @@
       .t2 {
         margin-top: 0;
         font-size: size-m(28);
+        font-weight: bold;
       }
       .t3 {
         margin-top: size-m(5);
         font-size: size-m(12);
+        font-weight: bold;
       }
       .order {
         display: none;
