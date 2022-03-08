@@ -189,7 +189,7 @@ export default {
     const self = this;
     $(this.$refs.view).one('load', () => {
       let pos = $(this.$refs.view).width();
-      pos = pos / 3.55
+      pos = pos / 2.55
 
 
       $(self.$refs.viewbox).scrollLeft(pos)
