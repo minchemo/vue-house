@@ -230,7 +230,7 @@
           viewBox="0 0 442.736 427.9"
         >
           <g transform="translate(4380.507 -1561.334)">
-            <g data-aos="fade" data-aos-delay="0" data-aos-offset="2000">
+            <g data-aos="fade" data-aos-delay="0" data-aos-offset="1500">
               <circle
                 cx="70.183"
                 cy="70.183"
@@ -259,7 +259,7 @@
                 <tspan x="-35.161" y="21.452">500億產值</tspan>
               </text>
             </g>
-            <g data-aos="fade" data-aos-delay="200" data-aos-offset="2000">
+            <g data-aos="fade" data-aos-delay="200" data-aos-offset="1500">
               <circle
                 cx="70.183"
                 cy="70.183"
@@ -299,7 +299,7 @@
                 <tspan x="-15" y="0">國家會展中心</tspan>
               </text>
             </g>
-            <g data-aos="fade" data-aos-delay="400" data-aos-offset="2000">
+            <g data-aos="fade" data-aos-delay="400" data-aos-offset="1500">
               <circle
                 cx="70.183"
                 cy="70.183"
@@ -348,7 +348,7 @@
                 <tspan x="-59.406" y="21.452">台北流行音樂中心</tspan>
               </text>
             </g>
-            <g data-aos="fade" data-aos-delay="600" data-aos-offset="2000">
+            <g data-aos="fade" data-aos-delay="600" data-aos-offset="1500">
               <circle
                 cx="70.183"
                 cy="70.183"
@@ -377,7 +377,7 @@
                 <tspan x="-37.129" y="21.452">南港大車站</tspan>
               </text>
             </g>
-            <g data-aos="fade" data-aos-delay="800" data-aos-offset="2000">
+            <g data-aos="fade" data-aos-delay="800" data-aos-offset="1500">
               <circle
                 cx="70.183"
                 cy="70.183"
