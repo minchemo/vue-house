@@ -1,7 +1,7 @@
 export default {
     address: "台北市南港區經貿一路75巷",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.5849309270722!2d121.62011952919258!3d25.05647219899764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x96550f2060d84b44!2zMjXCsDAzJzIzLjMiTiAxMjHCsDM3JzE0LjQiRQ!5e0!3m2!1szh-TW!2stw!4v1646637890564!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/D1XKJmvWvPja1UZj7",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7228.664464831197!2d121.61567463493355!3d25.05672621388963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c111ebbf4112b20!2zMjXCsDAzJzI0LjIiTiAxMjHCsDM3JzEyLjIiRQ!5e0!3m2!1szh-TW!2stw!4v1646731202847!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/h419ePWFHUeYofBS7",
     phone: "02-26538888",
     fbLink: "https://www.facebook.com/DaxinForest/",
     fbMessage: "https://m.me/DaxinForest/",

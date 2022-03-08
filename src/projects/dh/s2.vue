@@ -25,15 +25,15 @@
           <g transform="translate(4380.507 -1561.334)">
             <g data-aos="fade" data-aos-delay="0" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4259 1658.466) rotate(-45)"
                 fill="#fff"
                 opacity="0.45"
               />
               <text
-                transform="translate(-4221 1647.416)"
+                transform="translate(-4214 1647.416)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
@@ -42,9 +42,9 @@
                 <tspan x="0" y="0">生技產業中心</tspan>
               </text>
               <text
-                transform="translate(-4166 1669.518)"
+                transform="translate(-4157 1669.518)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
@@ -54,9 +54,9 @@
             </g>
             <g data-aos="fade" data-aos-delay="200" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4259.125 1658.466) rotate(-45)"
                 fill="none"
                 stroke="#fff"
@@ -64,39 +64,39 @@
                 stroke-width="5"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4128 1756.437) rotate(-45)"
                 fill="#fff"
                 opacity="0.45"
               />
               <text
-                transform="translate(-4035 1767.488)"
+                transform="translate(-4027 1767.488)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
-                <tspan x="-51.98" y="0">港展覽館，全台</tspan>
-                <tspan x="-46.003" y="21.452">最大4571展攤</tspan>
+                <tspan x="-55.98" y="0">南港展覽館，全台</tspan>
+                <tspan x="-46.003" y="21.452">最大5000展攤</tspan>
                 <tspan x="0" y="42.904"></tspan>
               </text>
               <text
-                transform="translate(-4072 1745.386)"
+                transform="translate(-4069 1745.386)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
                 font-weight="700"
               >
-                <tspan x="0" y="0">會展中心</tspan>
+                <tspan x="-15" y="0">國家會展中心</tspan>
               </text>
             </g>
             <g data-aos="fade" data-aos-delay="400" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4128.5 1756.437) rotate(-45)"
                 fill="none"
                 stroke="#fff"
@@ -104,9 +104,9 @@
                 stroke-width="5"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4160.5 1955.815) rotate(-76.717)"
                 fill="none"
                 stroke="#fff"
@@ -114,15 +114,15 @@
                 stroke-width="5"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4161 1955.815) rotate(-76.717)"
                 fill="#fff"
                 opacity="0.45"
               />
               <text
-                transform="translate(-4137 1895.558)"
+                transform="translate(-4131 1895.558)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
@@ -131,9 +131,9 @@
                 <tspan x="0" y="0">文創產業中心</tspan>
               </text>
               <text
-                transform="translate(-4082 1917.661)"
+                transform="translate(-4071 1917.661)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
@@ -143,15 +143,15 @@
             </g>
             <g data-aos="fade" data-aos-delay="600" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="matrix(0.23, -0.973, 0.973, 0.23, -4378, 1805.643)"
                 fill="#fff"
                 opacity="0.45"
               />
               <text
-                transform="translate(-4355 1745.386)"
+                transform="translate(-4348 1745.386)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
@@ -160,21 +160,21 @@
                 <tspan x="0" y="0">交通轉運中心</tspan>
               </text>
               <text
-                transform="translate(-4298 1767.488)"
+                transform="translate(-4292 1767.488)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
-                <tspan x="-14.852" y="0">五鐵</tspan>
+                <tspan x="-28.852" y="0">五鐵共構</tspan>
                 <tspan x="-37.129" y="21.452">南港大車站</tspan>
               </text>
             </g>
             <g data-aos="fade" data-aos-delay="800" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="matrix(0.23, -0.973, 0.973, 0.23, -4377.5, 1805.643)"
                 fill="none"
                 stroke="#fff"
@@ -182,17 +182,17 @@
                 stroke-width="5"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4329 1955.815) rotate(-76.717)"
                 fill="#fff"
                 opacity="0.45"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4329.5 1955.815) rotate(-76.717)"
                 fill="none"
                 stroke="#fff"
@@ -200,7 +200,7 @@
                 stroke-width="5"
               />
               <text
-                transform="translate(-4305 1895.558)"
+                transform="translate(-4300 1895.558)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
@@ -209,9 +209,9 @@
                 <tspan x="0" y="0">軟體產業中心</tspan>
               </text>
               <text
-                transform="translate(-4250 1917.661)"
+                transform="translate(-4241 1917.661)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
@@ -230,17 +230,17 @@
           viewBox="0 0 442.736 427.9"
         >
           <g transform="translate(4380.507 -1561.334)">
-            <g data-aos="fade" data-aos-delay="0" data-aos-offset="0">
+            <g data-aos="fade" data-aos-delay="0" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4259 1658.466) rotate(-45)"
                 fill="#fff"
                 opacity="0.45"
               />
               <text
-                transform="translate(-4221 1647.416)"
+                transform="translate(-4214 1647.416)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
@@ -249,9 +249,9 @@
                 <tspan x="0" y="0">生技產業中心</tspan>
               </text>
               <text
-                transform="translate(-4166 1669.518)"
+                transform="translate(-4157 1669.518)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
@@ -259,11 +259,11 @@
                 <tspan x="-35.161" y="21.452">500億產值</tspan>
               </text>
             </g>
-            <g data-aos="fade" data-aos-delay="200" data-aos-offset="0">
+            <g data-aos="fade" data-aos-delay="200" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4259.125 1658.466) rotate(-45)"
                 fill="none"
                 stroke="#fff"
@@ -271,39 +271,39 @@
                 stroke-width="5"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4128 1756.437) rotate(-45)"
                 fill="#fff"
                 opacity="0.45"
               />
               <text
-                transform="translate(-4035 1767.488)"
+                transform="translate(-4027 1767.488)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
-                <tspan x="-51.98" y="0">港展覽館，全台</tspan>
-                <tspan x="-46.003" y="21.452">最大4571展攤</tspan>
+                <tspan x="-55.98" y="0">南港展覽館，全台</tspan>
+                <tspan x="-46.003" y="21.452">最大5000展攤</tspan>
                 <tspan x="0" y="42.904"></tspan>
               </text>
               <text
-                transform="translate(-4072 1745.386)"
+                transform="translate(-4069 1745.386)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
                 font-weight="700"
               >
-                <tspan x="0" y="0">會展中心</tspan>
+                <tspan x="-15" y="0">國家會展中心</tspan>
               </text>
             </g>
-            <g data-aos="fade" data-aos-delay="400" data-aos-offset="0">
+            <g data-aos="fade" data-aos-delay="400" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4128.5 1756.437) rotate(-45)"
                 fill="none"
                 stroke="#fff"
@@ -311,9 +311,9 @@
                 stroke-width="5"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4160.5 1955.815) rotate(-76.717)"
                 fill="none"
                 stroke="#fff"
@@ -321,15 +321,15 @@
                 stroke-width="5"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4161 1955.815) rotate(-76.717)"
                 fill="#fff"
                 opacity="0.45"
               />
               <text
-                transform="translate(-4137 1895.558)"
+                transform="translate(-4131 1895.558)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
@@ -338,9 +338,9 @@
                 <tspan x="0" y="0">文創產業中心</tspan>
               </text>
               <text
-                transform="translate(-4082 1917.661)"
+                transform="translate(-4071 1917.661)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
@@ -348,17 +348,17 @@
                 <tspan x="-59.406" y="21.452">台北流行音樂中心</tspan>
               </text>
             </g>
-            <g data-aos="fade" data-aos-delay="600" data-aos-offset="0">
+            <g data-aos="fade" data-aos-delay="600" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="matrix(0.23, -0.973, 0.973, 0.23, -4378, 1805.643)"
                 fill="#fff"
                 opacity="0.45"
               />
               <text
-                transform="translate(-4355 1745.386)"
+                transform="translate(-4348 1745.386)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
@@ -367,21 +367,21 @@
                 <tspan x="0" y="0">交通轉運中心</tspan>
               </text>
               <text
-                transform="translate(-4298 1767.488)"
+                transform="translate(-4292 1767.488)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
-                <tspan x="-14.852" y="0">五鐵</tspan>
+                <tspan x="-28.852" y="0">五鐵共構</tspan>
                 <tspan x="-37.129" y="21.452">南港大車站</tspan>
               </text>
             </g>
-            <g data-aos="fade" data-aos-delay="800" data-aos-offset="0">
+            <g data-aos="fade" data-aos-delay="800" data-aos-offset="2000">
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="matrix(0.23, -0.973, 0.973, 0.23, -4377.5, 1805.643)"
                 fill="none"
                 stroke="#fff"
@@ -389,17 +389,17 @@
                 stroke-width="5"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4329 1955.815) rotate(-76.717)"
                 fill="#fff"
                 opacity="0.45"
               />
               <circle
-                cx="66.183"
-                cy="66.183"
-                r="66.183"
+                cx="70.183"
+                cy="70.183"
+                r="70.183"
                 transform="translate(-4329.5 1955.815) rotate(-76.717)"
                 fill="none"
                 stroke="#fff"
@@ -407,7 +407,7 @@
                 stroke-width="5"
               />
               <text
-                transform="translate(-4305 1895.558)"
+                transform="translate(-4300 1895.558)"
                 fill="#1b485b"
                 font-size="18.152"
                 font-family="NotoSerifCJKtc-Bold, Noto Serif CJK TC"
@@ -416,9 +416,9 @@
                 <tspan x="0" y="0">軟體產業中心</tspan>
               </text>
               <text
-                transform="translate(-4250 1917.661)"
+                transform="translate(-4241 1917.661)"
                 fill="#1b485b"
-                font-size="14.852"
+                font-size="13.6"
                 font-family="Noto Serif CJK TC"
                 font-weight="600"
               >
