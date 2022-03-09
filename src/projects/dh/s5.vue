@@ -12,7 +12,7 @@
         雙捷南港展覽館站<br />
         五鐵共構南港車站
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">
+      <div class="t2" data-aos="fade-up" data-aos-delay="100">
         交通決定發展動能，南港潛能無可限量。板南線、<br v-if="!isMobile" />
         文湖線雙捷交會南港展覽館站，牽手南軟、內科。<br v-if="!isMobile" />
         五鐵共構南港車站，高鐵、台鐵、<br v-if="!isMobile" />

@@ -5,7 +5,7 @@
       <div class="t1" data-aos="fade-up">
         三井LaLaport南港<br />漢來皇家鬱金香酒店為鄰
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">
+      <div class="t2" data-aos="fade-up" data-aos-delay="100">
         捷運南港展覽館站步行約3分鐘，<br v-if="!isMobile" />
         漢來飯店與法國羅浮酒店集團合作，<br v-if="!isMobile" />
         漢來皇家鬱金香酒店預計2022年底開幕。<br v-if="!isMobile" />

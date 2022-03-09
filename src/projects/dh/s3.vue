@@ -11,13 +11,13 @@
     </div>
     <div class="info">
       <div class="t1" data-aos="fade-up" v-if="!isMobile">
-        千億資金，財團東逐南港
+        千億資金，東逐南港
       </div>
-      <div class="t1" data-aos="fade-up" v-else>千億資金<br />財團東逐南港</div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">
+      <div class="t1" data-aos="fade-up" v-else>千億資金<br />東逐南港</div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="100">
         中信金控、台灣人壽、富邦人壽、國泰人壽、<br v-if="!isMobile" />
         三商美邦、潤泰建設、國產實業…，<br v-if="!isMobile" />
-        財團東逐南港，購物中心、五星飯店、A級商辦、<br v-if="!isMobile" />
+        東逐南港，購物中心、五星飯店、A級商辦、<br v-if="!isMobile" />
         頂級豪宅，千億資金強力啟動南港新未來。
       </div>
       <div class="mask" v-if="isMobile"></div>

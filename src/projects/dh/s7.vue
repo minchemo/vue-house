@@ -6,7 +6,7 @@
         台灣建築標竿<br />
         半世紀榮耀領導品牌
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">
+      <div class="t2" data-aos="fade-up" data-aos-delay="100">
         1967年創立，迄今55年。<br v-if="!isMobile" />
         達欣企業集團發展史與國家發展同步脈動，<br v-if="!isMobile" />
         IBM大樓揭開台灣科技時代序幕，<br v-if="!isMobile" />

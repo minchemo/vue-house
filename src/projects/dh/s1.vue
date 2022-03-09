@@ -9,25 +9,25 @@
       srcset=""
     />
     <div class="info">
-      <div class="t1" data-aos="fade-up" data-aos-delay="200" v-if="!isMobile">
+      <div class="t1" data-aos="fade-up"  v-if="!isMobile">
         在南港經貿,遇見一座森林
       </div>
-      <div class="t1" data-aos="fade-up" data-aos-delay="200" v-else>
+      <div class="t1" data-aos="fade-up"  v-else>
         在南港經貿<br />遇見一座森林
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="600" v-if="!isMobile">
+      <div class="t2" data-aos="fade-up" data-aos-delay="200" v-if="!isMobile">
         達欣企業集團｜南港新作2653-8888
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="600" v-else>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200" v-else>
         2653-8888
       </div>
-      <div class="t3" data-aos="fade-up" data-aos-delay="600" v-if="isMobile">
+      <div class="t3" data-aos="fade-up" data-aos-delay="200" v-if="isMobile">
         達欣企業集團｜南港新作
       </div>
       <div
         class="order"
         data-aos="fade"
-        data-aos-delay="1000"
+        data-aos-delay="600"
         v-scroll-to="{
           element: `.contact`,
           offset: 0,
@@ -38,7 +38,7 @@
       <img
         class="comp"
         data-aos="fade"
-        data-aos-delay="1400"
+        data-aos-delay="600"
         src="@/projects/dh/s1/comp.svg"
         alt=""
         srcset=""

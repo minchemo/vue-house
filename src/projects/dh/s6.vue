@@ -7,7 +7,7 @@
         【文華苑】<br />
         達欣集團豪宅經典標竿
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">
+      <div class="t2" data-aos="fade-up" data-aos-delay="100">
         1996年台北高峰會，見證信義計劃起飛。<br v-if="!isMobile" />
         2012年敦北巔峰文華苑，<br v-if="!isMobile" />
         篆刻文華東方酒店亞洲首座豪宅里程碑，<br v-if="!isMobile" />

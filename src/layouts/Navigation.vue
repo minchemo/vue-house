@@ -32,7 +32,7 @@
               @click="toggleSidebar"
               data-aos="fade-down"
               data-aos-duration="1500"
-              :data-aos-delay="400 - index * 100"
+              :data-aos-delay="100 - index * 100"
             >
               <span class="link" :data-section="item.section">
                 <img v-if="item.imgSrc" :src="item.imgSrc" alt />
