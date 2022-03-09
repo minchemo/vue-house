@@ -73,6 +73,17 @@
                 ></el-option>
               </el-select>
             </div>
+            <div class="row">
+              <label>需求房型</label>
+              <el-select v-model="form.room" placeholder>
+                <el-option
+                  v-for="room in ['套房', '兩房', '三房', '四房']"
+                  :key="room"
+                  :label="room"
+                  :value="room"
+                ></el-option>
+              </el-select>
+            </div>
             <!-- <div class="row">
               <label>性別</label>
               <el-select v-model="form.gender" placeholder>
