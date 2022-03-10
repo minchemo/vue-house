@@ -30,8 +30,9 @@
         </div>
       </div>
       <div class="swiper-pagination" slot="pagination"></div>
+      <div data-aos="zoom-in" class="large-title"><span>AESTHETICS</span></div>
       <img
-        class="large-title"
+        class="large-title1"
         src="~@/projects/cm/s9/title.svg"
         alt="藏美表參道"
         srcset=""
@@ -57,7 +58,7 @@
 /* 螢幕尺寸標準 */
 .s9 {
   position: relative;
-  width: size(1920);
+  width: 100%;
   height: size(1080);
   padding-top: size(100);
 
@@ -121,7 +122,18 @@
         }
       }
     }
-    .large-title {
+    .large-title{
+      position: absolute;
+      right: size(-50);
+      top: size(-50);
+      z-index: 1;
+      color: #182c80;
+      font-size: size(104);
+      letter-spacing: .17em;
+      font-weight: 500;
+      text-transform:uppercase;
+    }
+    .large-title1 {
       height: size(220);
       position: absolute;
       right: -#{size(150)};
@@ -171,8 +183,6 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .s9 {
-    position: relative;
-    width: size-m(375);
     height: size-m(667);
     padding-top: 0;
 
@@ -244,6 +254,12 @@
         }
       }
       .large-title {
+        right:size-m(-26);
+        top: size-m(-20);
+      font-size: size-m(50);
+        
+      }
+      .large-title1{
         width: 80%;
         height: auto;
         position: absolute;

@@ -30,13 +30,7 @@
         </div>
       </div>
       <div class="swiper-pagination" slot="pagination"></div>
-      <img
-        class="large-title"
-        src="~@/projects/cm/s6/title.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
+      <div data-aos="zoom-in" class="large-title"><span>MASTERPIECE</span></div>
       <div class="txt">
         <div
           class="title"
@@ -57,7 +51,7 @@
 /* 螢幕尺寸標準 */
 .s6 {
   position: relative;
-  width: size(1920);
+  width: 100%;
   height: size(1080);
   padding-top: size(100);
 
@@ -120,12 +114,16 @@
         }
       }
     }
-    .large-title {
-      height: size(220);
+    .large-title{
       position: absolute;
-      left: -#{size(150)};
-      top: -#{size(150)};
+      left: size(-150);
+      top: size(-100);
       z-index: 1;
+      color: #182c80;
+      font-size: size(140);
+      letter-spacing: .17em;
+      font-weight: 500;
+      text-transform:uppercase;
     }
     .content {
       width: 100%;
@@ -165,8 +163,6 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .s6 {
-    position: relative;
-    width: size-m(375);
     height: size-m(667);
     padding-top: 0;
 
@@ -238,12 +234,13 @@
         }
       }
       .large-title {
-        width: 90%;
-        height: auto;
-        position: absolute;
-        left: 5%;
-        top: -6%;
-        z-index: 1;
+        left:0;
+        right: 0;width: 100%;
+        top: size-m(-30);
+        text-align: center;
+      font-size: size-m(50);
+      letter-spacing: 0;
+        
       }
       .content {
         width: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div class="s3">
+  <article class="s3">
     <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
         <swiper-slide
@@ -13,26 +13,20 @@
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
-      <img
-        class="large-title"
-        src="~@/projects/cm/s3/title.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
+      <div data-aos="zoom-in" class="large-title"><span>FUTURE</span></div>
 <div class="txt">
-  <div class="title" data-aos="zoom-in">科技首都台灣新矽谷<br>北外環捷徑近身相接</div>
-  <div class="desc" data-aos="zoom-in">中央領軍，企業到位！南科3期92公頃擴建啟動，全球半導體龍頭台積電同步加速投資，推升破兆產值，點燃台灣科技經濟能量引擎。北外環快速道路已成形，通勤南科近近接軌，打通科技新貴住居版圖新動脈。</div>
+  <h3 class="title" data-aos="zoom-in">科技首都台灣新矽谷<br>北外環捷徑近身相接</h3>
+  <p class="desc" data-aos="zoom-in">中央領軍，企業到位！南科3期92公頃擴建啟動，全球半導體龍頭台積電同步加速投資，推升破兆產值，點燃台灣科技經濟能量引擎。北外環快速道路已成形，通勤南科近近接軌，打通科技新貴住居版圖新動脈。</p>
 </div>
     </div>
-  </div>
+  </article>
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s3 {
   position: relative;
-  width: size(1920);
+  width: 100%;
   height: size(1080);
   padding-top: size(100);
 
@@ -65,12 +59,22 @@
         }
       }
     }
-    .large-title {
-      width: size(77);
+    .large-title{
       position: absolute;
-      right: -#{size(30)};
-      top: -#{size(40)};
+      right: size(-50);
+      top: size(-50);
       z-index: 1;
+      color: #182c80;
+      font-size: size(104);
+      letter-spacing: .17em;
+      font-weight: 500;
+      text-transform:uppercase;
+      span{
+       display: block;
+       position: relative;
+       transform: rotate(90deg)translate(100%,0%);
+       transform-origin: 100% 0;
+      }
     }
     .content {
       width: 100%;
@@ -110,8 +114,6 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .s3 {
-    position: relative;
-    width: size-m(375);
     height: size-m(667);
     padding-top: 0;
 
@@ -148,11 +150,10 @@
         }
       }
       .large-title {
-        width: size-m(36);
-        position: absolute;
-        right: -#{size-m(18)};
-        top: -#{size-m(15)};
-        z-index: 1;
+        right:size-m(-26);
+        top: size-m(-20);
+      font-size: size-m(50);
+        
       }
       .content {
         width: 100%;

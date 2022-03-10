@@ -1,5 +1,5 @@
 <template>
-  <div class="s4">
+  <article class="s4">
     <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
         <swiper-slide
@@ -14,30 +14,24 @@
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
-      <img
-        class="large-title"
-        src="~@/projects/cm/s4/title.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
+      <div data-aos="zoom-in" class="large-title"><span>ESSENCE</span></div>
       <div class="txt">
-        <div class="title" data-aos="zoom-in">
+        <h3 class="title" data-aos="zoom-in">
           南山廣場領銜插旗<br />國際級都心翻轉就位
-        </div>
-        <div class="desc" data-aos="zoom-in">
+        </h3>
+        <p class="desc" data-aos="zoom-in">
           南山台南廣場來了，對位北市信義計畫區繁華，影城百貨商辦複合式新地標，預計2023年完工，化身西門路最閃耀時尚新星，投資建設群聚效應，將翻轉台南都心，躍為新商圈正核心。
-        </div>
+        </p>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s4 {
   position: relative;
-  width: size(1920);
+  width: 100%;
   height: size(1080);
   padding-top: size(100);
 
@@ -78,7 +72,23 @@
         }
       }
     }
-    .large-title {
+    .large-title{
+      position: absolute;
+      right: size(-50);
+      top: size(-50);
+      z-index: 1;
+      color: #182c80;
+      font-size: size(104);
+      letter-spacing: .17em;
+      font-weight: 500;
+      span{
+       display: block;
+       position: relative;
+       transform: rotate(90deg)translate(100%,0%);
+       transform-origin: 100% 0;
+      }
+    }
+    .large-title1 {
       width: size(77);
       position: absolute;
       right: -#{size(30)};
@@ -123,8 +133,6 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .s4 {
-    position: relative;
-    width: size-m(375);
     height: size-m(667);
     padding-top: 0;
 
@@ -164,6 +172,12 @@
         }
       }
       .large-title {
+        right:size-m(-26);
+        top: size-m(-20);
+      font-size: size-m(50);
+        
+      }
+      .large-title1 {
         width: size-m(36);
         position: absolute;
         right: -#{size-m(18)};

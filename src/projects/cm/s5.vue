@@ -1,8 +1,8 @@
 <template>
-  <div class="s5">
+  <article class="s5">
     <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
-        <swiper-slide
+      <!--  <swiper-slide
           class="slide"
           v-for="(slide, i) in imgs"
           v-bind:key="i"
@@ -11,29 +11,23 @@
           }"
         >
           <p>{{ captions[i] }}</p>
-        </swiper-slide>
+        </swiper-slide>  -->
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
-      <img
-        class="large-title"
-        src="~@/projects/cm/s5/title.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
+      <div data-aos="zoom-in" class="large-title"><span>brand</span></div>
 <div class="txt">
-  <div class="title" data-aos="zoom-in">新日本建築美學<br>國際視野職人匠心</div>
-  <div class="desc" data-aos="zoom-in">藏美建設獨鍾新日本建築美學的怦然細膩，屢次親赴日本考察指標建築，轉譯嚴謹的匠心思維，定義「新日本建築美學」基準，以深思熟慮的規劃為經、五感入心的細節為緯，交織富饒生活層次。</div>
+  <h3 class="title" data-aos="zoom-in">新日本建築美學<br>國際視野職人匠心</h3>
+  <p class="desc" data-aos="zoom-in">藏美建設獨鍾新日本建築美學的怦然細膩，屢次親赴日本考察指標建築，轉譯嚴謹的匠心思維，定義「新日本建築美學」基準，以深思熟慮的規劃為經、五感入心的細節為緯，交織富饒生活層次。</p>
 </div>
     </div>
-  </div>
+  </article>
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s5 {
   position: relative;
-  width: size(1920);
+  width: 100%;
   height: size(1080);
   padding-top: size(100);
 
@@ -67,12 +61,16 @@
         }
       }
     }
-    .large-title {
-      width: size(582);
+    .large-title{
       position: absolute;
-      right: -#{size(140)};
-      top: -#{size(70)};
+      right: size(-140);
+      top: size(-95);
       z-index: 1;
+      color: #182c80;
+      font-size: size(142);
+      letter-spacing: .17em;
+      font-weight: 500;
+      text-transform:uppercase;
     }
     .content {
       width: size(1389);
@@ -114,8 +112,6 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .s5 {
-    position: relative;
-    width: size-m(375);
     height: size-m(600);
     padding-top: 0;
 
@@ -156,12 +152,10 @@
         }
       }
       .large-title {
-        width: auto;
-        height: size-m(35);
-        position: absolute;
-        right: -#{size-m(18)};
-        top: -#{size-m(25)};
-        z-index: 1;
+        right:size-m(-26);
+        top: size-m(-35);
+      font-size: size-m(50);
+        
       }
       .content {
         width: 90%;
@@ -240,7 +234,6 @@ export default {
         isMobile
           ? require("@/projects/cm/s5/2_m.jpg")
           : require("@/projects/cm/s5/2.jpg"),
-        
         isMobile
           ? require("@/projects/cm/s5/4_m.jpg")
           : require("@/projects/cm/s5/4.jpg"),

@@ -1,30 +1,25 @@
 <template>
-  <div class="s2">
+  <article class="s2">
     <div class="view">
-      <img
-        class="large-title"
-        src="~@/projects/cm/s2/large-t.svg"
-        alt="藏美表參道"
-        srcset=""
-      />
+      <div data-aos="zoom-in" class="large-title"><span>DISTRICT</span></div>
       <GodModView />
       <div class="txt">
-        <div class="title" data-aos="zoom-in">
+        <h3 class="title" data-aos="zoom-in">
           鄭子寮翠域×西門路門牌<br />富人爭藏層峰新核心
-        </div>
-        <div class="desc" data-aos="zoom-in">
+        </h3>
+        <p class="desc" data-aos="zoom-in">
           台南首屈一指高級住宅區-鄭子寮，富藏16座公園、文元雙語明星學區，更被商20、商60、兵工廠開發案環繞。府城最具價值的西門路貫穿其中，穿梭百貨、量販商圈與未來南山台南廣場，串起市心繁華的現在與未來。
-        </div>
+        </p>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s2 {
   position: relative;
-  width: size(1920);
+  width: 100%;
   height: size(1080);
   padding-top: size(100);
   .view {
@@ -35,8 +30,18 @@
     display: flex;
     flex-direction: column;
     //img{width: size(1632.6);}
+    .large-title{
+      position: absolute;
+      left: size(-62);
+      top: size(-75);
+      z-index: 1;
+      color: #182c80;
+      font-size: size(131);
+      letter-spacing: .15em;
+      font-weight: 500;
+    }
 
-    .large-title {
+    .large-title1 {
       position: absolute;
       top: -#{size(50)};
       left: -#{size(50)};
@@ -94,8 +99,6 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .s2 {
-    position: relative;
-    width: size-m(375);
     height: size-m(667);
     padding-top: size(100);
     .view {
@@ -105,8 +108,14 @@
       height: auto;
       display: flex;
       flex-direction: column;
-
       .large-title {
+        top: size-m(-28);
+        left: size-m(20);
+      font-size: size-m(46.5);
+        
+      }
+
+      .large-title1 {
         position: absolute;
         top: -#{size-m(20)};
         left: 40%;
