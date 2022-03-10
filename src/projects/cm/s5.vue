@@ -10,6 +10,7 @@
             backgroundImage: `url(${slide})`,
           }"
         >
+          <p>{{ captions[i] }}</p>
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
