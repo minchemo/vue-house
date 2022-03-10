@@ -31,13 +31,6 @@
       </div>
       <div class="swiper-pagination" slot="pagination"></div>
       <div data-aos="zoom-in" class="large-title"><span>THE LANDMARK</span></div>
-      <img
-        class="large-title1"
-        src="~@/projects/cm/s8/title.svg"
-        alt="藏美表參道"
-        srcset=""
-        data-aos="zoom-in"
-      />
       <div class="txt">
         <div
           class="title"
@@ -123,21 +116,14 @@
     }
     .large-title{
       position: absolute;
-      right: size(-50);
-      top: size(-50);
+      left: size(-160);
+      top: size(-100);
       z-index: 1;
       color: #182c80;
-      font-size: size(104);
+      font-size: size(140);
       letter-spacing: .17em;
       font-weight: 500;
       text-transform:uppercase;
-    }
-    .large-title1{
-      height: size(220);
-      position: absolute;
-      left: -#{size(150)};
-      top: -#{size(150)};
-      z-index: 1;
     }
     .content {
       width: 100%;
@@ -249,18 +235,14 @@
         }
       }
       .large-title {
-        right:size-m(-26);
-        top: size-m(-20);
-      font-size: size-m(50);
+        right:0;
+        left: 0;
+        top: size-m(-30);
+      font-size: size-m(44);
+      text-align: center;
+      letter-spacing: 0;
+
         
-      }
-      .large-title {
-        width: 90%;
-        height: auto;
-        position: absolute;
-        left: 5%;
-        top: -6%;
-        z-index: 1;
       }
       .content {
         width: 100%;
