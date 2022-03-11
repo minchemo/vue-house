@@ -2,7 +2,7 @@
   <article class="s5">
     <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
-      <!--  <swiper-slide
+     <swiper-slide
           class="slide"
           v-for="(slide, i) in imgs"
           v-bind:key="i"
@@ -11,7 +11,7 @@
           }"
         >
           <p>{{ captions[i] }}</p>
-        </swiper-slide>  -->
+        </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
       <div data-aos="zoom-in" class="large-title"><span>brand</span></div>
@@ -209,6 +209,7 @@ export default {
         loop: true,
         speed: 1000,
         spaceBetween: isMobile ? 5 : 30,
+       
         slidesPerView: isMobile ? 2 : 3,
         slidesPerGroup: isMobile ? 2 : 3,
         autoplay: {
@@ -224,6 +225,7 @@ export default {
           clickable: true,
         },
       },
+      captions: ["", "", ""],
       imgs: [
         isMobile
           ? require("@/projects/cm/s5/3_m.jpg")
