@@ -1,21 +1,16 @@
 <template>
   <div class="s6">
     <div class="swiper-box" data-aos="zoom-in">
-      <swiper
-        @slideChangeTransitionStart="slideChangeTransitionStart"
-        :options="swiperOptions"
-        ref="swiper"
-        class="swiper-wrapper"
-      >
+      <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
         <swiper-slide
           class="slide"
-          v-for="(slide, i) in imgs"
+          v-for="(slide, i) in imgs[imgIdx]"
           v-bind:key="i"
           v-bind:style="{
             backgroundImage: `url(${slide})`,
           }"
         >
-          <p>{{ captions[i] }}</p>
+          <p>{{ captions[imgIdx][i] }}</p>
         </swiper-slide>
       </swiper>
       <div class="buttons">
@@ -114,16 +109,16 @@
         }
       }
     }
-    .large-title{
+    .large-title {
       position: absolute;
       left: size(-150);
       top: size(-100);
       z-index: 1;
       color: #182c80;
       font-size: size(140);
-      letter-spacing: .17em;
+      letter-spacing: 0.17em;
       font-weight: 500;
-      text-transform:uppercase;
+      text-transform: uppercase;
     }
     .content {
       width: 100%;
@@ -234,13 +229,13 @@
         }
       }
       .large-title {
-        left:0;
-        right: 0;width: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
         top: size-m(-30);
         text-align: center;
-      font-size: size-m(50);
-      letter-spacing: 0;
-        
+        font-size: size-m(50);
+        letter-spacing: 0;
       }
       .content {
         width: 100%;
@@ -296,7 +291,7 @@ export default {
     return {
       isMobile,
       swiperOptions: {
-        loop: true,
+        loop: false,
         speed: 1000,
         spaceBetween: 0,
         autoplay: {
@@ -313,30 +308,106 @@ export default {
         },
       },
       captions: [
-        "台北南山廣場",
-        "日本表參道商圈情境氛圍示意圖",
-        "商圈情境氛圍示意圖",
+        //第一組圖 的 圖片說明，有幾張圖放幾個，會自動對上
+        [
+          "營建顧問圖說1", "營建顧問圖說2"],
+        [
+          "建築規劃圖說1",],
+        [
+          "立面美學圖說1",],
+        [
+          "公設設計圖說1",],
+        [
+          "庭園景觀圖說1",],
+        [
+          "結構設計圖說1",],
       ],
       imgIdx: 0,
       imgs: [
-        isMobile
-          ? require("@/projects/cm/s6/1_m.jpg")
-          : require("@/projects/cm/s6/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s6/1_m.jpg")
-          : require("@/projects/cm/s6/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s6/1_m.jpg")
-          : require("@/projects/cm/s6/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s6/1_m.jpg")
-          : require("@/projects/cm/s6/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s6/1_m.jpg")
-          : require("@/projects/cm/s6/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s6/1_m.jpg")
-          : require("@/projects/cm/s6/1.jpg"),
+        [
+          isMobile
+            ? require("@/projects/cm/s6/a/01_m.jpg")
+            : require("@/projects/cm/s6/a/01.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/a/02_m.jpg")
+            : require("@/projects/cm/s6/a/02.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/a/03_m.jpg")
+            : require("@/projects/cm/s6/a/03.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/a/04_m.jpg")
+            : require("@/projects/cm/s6/a/04.jpg")],
+        [
+          isMobile
+            ? require("@/projects/cm/s6/b/01_m.jpg")
+            : require("@/projects/cm/s6/b/01.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/b/02_m.jpg")
+            : require("@/projects/cm/s6/b/02.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/b/03_m.jpg")
+            : require("@/projects/cm/s6/b/03.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/b/04_m.jpg")
+            : require("@/projects/cm/s6/b/04.jpg")],
+        [
+          isMobile
+            ? require("@/projects/cm/s6/c/01_m.jpg")
+            : require("@/projects/cm/s6/c/01.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/c/02_m.jpg")
+            : require("@/projects/cm/s6/c/02.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/c/03_m.jpg")
+            : require("@/projects/cm/s6/c/03.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/c/04_m.jpg")
+            : require("@/projects/cm/s6/c/04.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/c/05_m.jpg")
+            : require("@/projects/cm/s6/c/05.jpg")],
+        [
+          isMobile
+            ? require("@/projects/cm/s6/d/01_m.jpg")
+            : require("@/projects/cm/s6/d/01.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/d/02_m.jpg")
+            : require("@/projects/cm/s6/d/02.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/d/03_m.jpg")
+            : require("@/projects/cm/s6/d/03.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/d/04_m.jpg")
+            : require("@/projects/cm/s6/d/04.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/d/05_m.jpg")
+            : require("@/projects/cm/s6/d/05.jpg")],
+        [
+          isMobile
+            ? require("@/projects/cm/s6/e/01_m.jpg")
+            : require("@/projects/cm/s6/e/01.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/e/02_m.jpg")
+            : require("@/projects/cm/s6/e/02.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/e/03_m.jpg")
+            : require("@/projects/cm/s6/e/03.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/e/04_m.jpg")
+            : require("@/projects/cm/s6/e/04.jpg")],
+        [
+          isMobile
+            ? require("@/projects/cm/s6/f/01_m.jpg")
+            : require("@/projects/cm/s6/f/01.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/f/02_m.jpg")
+            : require("@/projects/cm/s6/f/02.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/f/03_m.jpg")
+            : require("@/projects/cm/s6/f/03.jpg"),
+          isMobile
+            ? require("@/projects/cm/s6/f/04_m.jpg")
+            : require("@/projects/cm/s6/f/04.jpg")],
       ],
       caption: [
         {
@@ -374,15 +445,15 @@ export default {
   },
 
   methods: {
-    slideChangeTransitionStart(idx, idx2) {
-      this.imgIdx = this.$refs.swiper.$swiper.realIndex;
-    },
+    // slideChangeTransitionStart(idx, idx2) {
+    //   this.imgIdx = this.$refs.swiper.$swiper.realIndex;
+    // },
     swipeTo(i) {
       this.$refs.swiper.$swiper.slideTo(i, 500, false);
       this.imgIdx = i;
     },
   },
 
-  created() {},
+  created() { },
 };
 </script>

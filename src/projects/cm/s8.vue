@@ -1,21 +1,16 @@
 <template>
   <div class="s8">
     <div class="swiper-box" data-aos="zoom-in">
-      <swiper
-        @slideChangeTransitionStart="slideChangeTransitionStart"
-        :options="swiperOptions"
-        ref="swiper"
-        class="swiper-wrapper"
-      >
+      <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
         <swiper-slide
           class="slide"
-          v-for="(slide, i) in imgs"
+          v-for="(slide, i) in imgs[imgIdx]"
           v-bind:key="i"
           v-bind:style="{
             backgroundImage: `url(${slide})`,
           }"
         >
-          <p>{{ captions[i] }}</p>
+          <p>{{ captions[imgIdx][i] }}</p>
         </swiper-slide>
       </swiper>
       <div class="buttons">
@@ -30,7 +25,9 @@
         </div>
       </div>
       <div class="swiper-pagination" slot="pagination"></div>
-      <div data-aos="zoom-in" class="large-title"><span>THE LANDMARK</span></div>
+      <div data-aos="zoom-in" class="large-title">
+        <span>THE LANDMARK</span>
+      </div>
       <div class="txt">
         <div
           class="title"
@@ -114,16 +111,16 @@
         }
       }
     }
-    .large-title{
+    .large-title {
       position: absolute;
       left: size(-160);
       top: size(-100);
       z-index: 1;
       color: #182c80;
       font-size: size(140);
-      letter-spacing: .17em;
+      letter-spacing: 0.17em;
       font-weight: 500;
-      text-transform:uppercase;
+      text-transform: uppercase;
     }
     .content {
       width: 100%;
@@ -235,14 +232,12 @@
         }
       }
       .large-title {
-        right:0;
+        right: 0;
         left: 0;
         top: size-m(-30);
-      font-size: size-m(44);
-      text-align: center;
-      letter-spacing: 0;
-
-        
+        font-size: size-m(44);
+        text-align: center;
+        letter-spacing: 0;
       }
       .content {
         width: 100%;
@@ -298,7 +293,7 @@ export default {
     return {
       isMobile,
       swiperOptions: {
-        loop: true,
+        loop: false,
         speed: 1000,
         spaceBetween: 0,
         autoplay: {
@@ -315,18 +310,22 @@ export default {
         },
       },
       captions: [
-        "台北南山廣場",
-        "日本表參道商圈情境氛圍示意圖",
-        "商圈情境氛圍示意圖",
+        //第一組圖 的 圖片說明，有幾張圖放幾個，會自動對上
+        [
+          "立面透視 圖說1"],
+        [
+          "公設透視 圖說1",],
       ],
       imgIdx: 0,
       imgs: [
-        isMobile
-          ? require("@/projects/cm/s8/1_m.jpg")
-          : require("@/projects/cm/s8/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s8/1_m.jpg")
-          : require("@/projects/cm/s8/1.jpg"),
+        [
+          isMobile
+            ? require("@/projects/cm/s8/1_m.jpg")
+            : require("@/projects/cm/s8/1.jpg"),],
+        [
+          isMobile
+            ? require("@/projects/cm/s8/1_m.jpg")
+            : require("@/projects/cm/s8/1.jpg"),]
       ],
       caption: [
         {
@@ -353,6 +352,6 @@ export default {
     },
   },
 
-  created() {},
+  created() { },
 };
 </script>

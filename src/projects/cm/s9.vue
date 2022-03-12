@@ -9,13 +9,13 @@
       >
         <swiper-slide
           class="slide"
-          v-for="(slide, i) in imgs"
+          v-for="(slide, i) in imgs[imgIdx]"
           v-bind:key="i"
           v-bind:style="{
             backgroundImage: `url(${slide})`,
           }"
         >
-          <p>{{ captions[i] }}</p>
+          <p>{{ captions[imgIdx][i] }}</p>
         </swiper-slide>
       </swiper>
       <div class="buttons">
@@ -115,16 +115,16 @@
         }
       }
     }
-    .large-title{
+    .large-title {
       position: absolute;
       right: size(-160);
       top: size(-100);
       z-index: 1;
       color: #182c80;
       font-size: size(140);
-      letter-spacing: .17em;
+      letter-spacing: 0.17em;
       font-weight: 500;
-      text-transform:uppercase;
+      text-transform: uppercase;
     }
     .content {
       width: 100%;
@@ -240,12 +240,11 @@
         }
       }
       .large-title {
-        right:auto;
+        right: auto;
         left: size-m(20);
         top: size-m(-30);
-      font-size: size-m(50);
-      letter-spacing: 0;
-        
+        font-size: size-m(50);
+        letter-spacing: 0;
       }
       .content {
         width: 100%;
@@ -302,7 +301,7 @@ export default {
     return {
       isMobile,
       swiperOptions: {
-        loop: true,
+        loop: false,
         speed: 1000,
         spaceBetween: 0,
         autoplay: {
@@ -319,21 +318,31 @@ export default {
         },
       },
       captions: [
-        "台北南山廣場",
-        "日本表參道商圈情境氛圍示意圖",
-        "商圈情境氛圍示意圖",
+        //第一組圖 的 圖片說明，有幾張圖放幾個，會自動對上
+        [
+          "24坪 / 兩房 圖說1"],
+        [
+          "28坪 / 三房 圖說1",],
+        [
+          "35坪 / 三房 圖說1",],
       ],
       imgIdx: 0,
       imgs: [
-        isMobile
-          ? require("@/projects/cm/s9/1_m.jpg")
-          : require("@/projects/cm/s9/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s9/1_m.jpg")
-          : require("@/projects/cm/s9/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s9/1_m.jpg")
-          : require("@/projects/cm/s9/1.jpg"),
+        [
+          isMobile
+            ? require("@/projects/cm/s9/1_m.jpg")
+            : require("@/projects/cm/s9/1.jpg"),
+        ],
+        [
+          isMobile
+            ? require("@/projects/cm/s9/1_m.jpg")
+            : require("@/projects/cm/s9/1.jpg"),
+        ],
+        [
+          isMobile
+            ? require("@/projects/cm/s9/1_m.jpg")
+            : require("@/projects/cm/s9/1.jpg"),
+        ],
       ],
       caption: [
         {
@@ -365,6 +374,6 @@ export default {
     },
   },
 
-  created() {},
+  created() { },
 };
 </script>
