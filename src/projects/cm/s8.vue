@@ -2,16 +2,31 @@
   <div class="s8">
     <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
-        <swiper-slide
-          class="slide"
-          v-for="(slide, i) in imgs[imgIdx]"
-          v-bind:key="i"
-          v-bind:style="{
-            backgroundImage: `url(${slide})`,
-          }"
-        >
-          <p>{{ captions[imgIdx][i] }}</p>
-        </swiper-slide>
+        <template v-if="!isMobile">
+          <swiper-slide
+            class="slide"
+            v-for="(slide, i) in imgs[imgIdx]['img'].filter(
+              (item, index, array) =>
+                imgs[imgIdx]['mobileOnly'].indexOf(index) == -1
+            )"
+            v-bind:key="i"
+            v-bind:style="{
+              backgroundImage: `url(${slide})`,
+            }"
+          >
+          </swiper-slide>
+        </template>
+        <template v-else>
+          <swiper-slide
+            class="slide"
+            v-for="(slide, i) in imgs[imgIdx]['img']"
+            v-bind:key="i"
+            v-bind:style="{
+              backgroundImage: `url(${slide})`,
+            }"
+          >
+          </swiper-slide>
+        </template>
       </swiper>
       <div class="buttons">
         <div
@@ -311,21 +326,27 @@ export default {
       },
       captions: [
         //第一組圖 的 圖片說明，有幾張圖放幾個，會自動對上
-        [
-          "立面透視 圖說1"],
-        [
-          "公設透視 圖說1",],
+        ["立面透視 圖說1"],
+        ["公設透視 圖說1"],
       ],
       imgIdx: 0,
       imgs: [
-        [
-          isMobile
-            ? require("@/projects/cm/s8/1_m.jpg")
-            : require("@/projects/cm/s8/1.jpg"),],
-        [
-          isMobile
-            ? require("@/projects/cm/s8/1_m.jpg")
-            : require("@/projects/cm/s8/1.jpg"),]
+        {
+          img: [
+            isMobile
+              ? require("@/projects/cm/s8/1_m.jpg")
+              : require("@/projects/cm/s8/1.jpg"),
+          ],
+          mobileOnly: [],
+        },
+        {
+          img: [
+            isMobile
+              ? require("@/projects/cm/s8/1_m.jpg")
+              : require("@/projects/cm/s8/1.jpg"),
+          ],
+          mobileOnly: [],
+        },
       ],
       caption: [
         {
@@ -352,6 +373,6 @@ export default {
     },
   },
 
-  created() { },
+  created() {},
 };
 </script>

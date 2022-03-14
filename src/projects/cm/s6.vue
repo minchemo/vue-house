@@ -2,16 +2,31 @@
   <div class="s6">
     <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
-        <swiper-slide
-          class="slide"
-          v-for="(slide, i) in imgs[imgIdx]"
-          v-bind:key="i"
-          v-bind:style="{
-            backgroundImage: `url(${slide})`,
-          }"
-        >
-          <p>{{ captions[imgIdx][i] }}</p>
-        </swiper-slide>
+        <template v-if="!isMobile">
+          <swiper-slide
+            class="slide"
+            v-for="(slide, i) in imgs[imgIdx]['img'].filter(
+              (item, index, array) =>
+                imgs[imgIdx]['mobileOnly'].indexOf(index) == -1
+            )"
+            v-bind:key="i"
+            v-bind:style="{
+              backgroundImage: `url(${slide})`,
+            }"
+          >
+          </swiper-slide>
+        </template>
+        <template v-else>
+          <swiper-slide
+            class="slide"
+            v-for="(slide, i) in imgs[imgIdx]['img']"
+            v-bind:key="i"
+            v-bind:style="{
+              backgroundImage: `url(${slide})`,
+            }"
+          >
+          </swiper-slide>
+        </template>
       </swiper>
       <div class="buttons">
         <div
@@ -307,107 +322,100 @@ export default {
           clickable: true,
         },
       },
-      captions: [
-        //第一組圖 的 圖片說明，有幾張圖放幾個，會自動對上
-        [
-          "營建顧問圖說1", "營建顧問圖說2"],
-        [
-          "建築規劃圖說1",],
-        [
-          "立面美學圖說1",],
-        [
-          "公設設計圖說1",],
-        [
-          "庭園景觀圖說1",],
-        [
-          "結構設計圖說1",],
-      ],
       imgIdx: 0,
       imgs: [
-        [
-          isMobile
-            ? require("@/projects/cm/s6/a/01_m.jpg")
-            : require("@/projects/cm/s6/a/01.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/a/02_m.jpg")
-            : require("@/projects/cm/s6/a/02.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/a/03_m.jpg")
-            : require("@/projects/cm/s6/a/03.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/a/04_m.jpg")
-            : require("@/projects/cm/s6/a/04.jpg")],
-        [
-          isMobile
-            ? require("@/projects/cm/s6/b/01_m.jpg")
-            : require("@/projects/cm/s6/b/01.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/b/02_m.jpg")
-            : require("@/projects/cm/s6/b/02.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/b/03_m.jpg")
-            : require("@/projects/cm/s6/b/03.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/b/04_m.jpg")
-            : require("@/projects/cm/s6/b/04.jpg")],
-        [
-          isMobile
-            ? require("@/projects/cm/s6/c/01_m.jpg")
-            : require("@/projects/cm/s6/c/01.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/c/02_m.jpg")
-            : require("@/projects/cm/s6/c/02.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/c/03_m.jpg")
-            : require("@/projects/cm/s6/c/03.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/c/04_m.jpg")
-            : require("@/projects/cm/s6/c/04.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/c/05_m.jpg")
-            : require("@/projects/cm/s6/c/05.jpg")],
-        [
-          isMobile
-            ? require("@/projects/cm/s6/d/01_m.jpg")
-            : require("@/projects/cm/s6/d/01.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/d/02_m.jpg")
-            : require("@/projects/cm/s6/d/02.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/d/03_m.jpg")
-            : require("@/projects/cm/s6/d/03.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/d/04_m.jpg")
-            : require("@/projects/cm/s6/d/04.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/d/05_m.jpg")
-            : require("@/projects/cm/s6/d/05.jpg")],
-        [
-          isMobile
-            ? require("@/projects/cm/s6/e/01_m.jpg")
-            : require("@/projects/cm/s6/e/01.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/e/02_m.jpg")
-            : require("@/projects/cm/s6/e/02.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/e/03_m.jpg")
-            : require("@/projects/cm/s6/e/03.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/e/04_m.jpg")
-            : require("@/projects/cm/s6/e/04.jpg")],
-        [
-          isMobile
-            ? require("@/projects/cm/s6/f/01_m.jpg")
-            : require("@/projects/cm/s6/f/01.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/f/02_m.jpg")
-            : require("@/projects/cm/s6/f/02.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/f/03_m.jpg")
-            : require("@/projects/cm/s6/f/03.jpg"),
-          isMobile
-            ? require("@/projects/cm/s6/f/04_m.jpg")
-            : require("@/projects/cm/s6/f/04.jpg")],
+        {
+          img: [
+            isMobile
+              ? require("@/projects/cm/s6/a/01_m.jpg")
+              : require("@/projects/cm/s6/a/01.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/a/02_m.jpg")
+              : require("@/projects/cm/s6/a/02.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/a/03_m.jpg")
+              : require("@/projects/cm/s6/a/03.jpg"),
+            require("@/projects/cm/s6/a/04_m.jpg"),
+          ],
+          mobileOnly: [3],
+        },
+        {
+          img: [
+            isMobile
+              ? require("@/projects/cm/s6/b/01_m.jpg")
+              : require("@/projects/cm/s6/b/01.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/b/02_m.jpg")
+              : require("@/projects/cm/s6/b/02.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/b/03_m.jpg")
+              : require("@/projects/cm/s6/b/03.jpg"),
+            require("@/projects/cm/s6/b/04_m.jpg"),
+          ],
+          mobileOnly: [3],
+        },
+        {
+          img: [
+            isMobile
+              ? require("@/projects/cm/s6/c/01_m.jpg")
+              : require("@/projects/cm/s6/c/01.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/c/02_m.jpg")
+              : require("@/projects/cm/s6/c/02.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/c/03_m.jpg")
+              : require("@/projects/cm/s6/c/03.jpg"),
+            require("@/projects/cm/s6/c/04_m.jpg"),
+            require("@/projects/cm/s6/c/05_m.jpg"),
+          ],
+          mobileOnly: [3,4],
+        },
+        {
+          img: [
+            isMobile
+              ? require("@/projects/cm/s6/d/01_m.jpg")
+              : require("@/projects/cm/s6/d/01.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/d/02_m.jpg")
+              : require("@/projects/cm/s6/d/02.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/d/03_m.jpg")
+              : require("@/projects/cm/s6/d/03.jpg"),
+            require("@/projects/cm/s6/d/04_m.jpg"),
+            require("@/projects/cm/s6/d/05_m.jpg"),
+          ],
+          mobileOnly: [3,4],
+        },
+        {
+          img: [
+            isMobile
+              ? require("@/projects/cm/s6/e/01_m.jpg")
+              : require("@/projects/cm/s6/e/01.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/e/02_m.jpg")
+              : require("@/projects/cm/s6/e/02.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/e/03_m.jpg")
+              : require("@/projects/cm/s6/e/03.jpg"),
+            require("@/projects/cm/s6/e/04_m.jpg"),
+          ],
+          mobileOnly: [3],
+        },
+        {
+          img: [
+            isMobile
+              ? require("@/projects/cm/s6/f/01_m.jpg")
+              : require("@/projects/cm/s6/f/01.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/f/02_m.jpg")
+              : require("@/projects/cm/s6/f/02.jpg"),
+            isMobile
+              ? require("@/projects/cm/s6/f/03_m.jpg")
+              : require("@/projects/cm/s6/f/03.jpg"),
+            require("@/projects/cm/s6/f/04_m.jpg"),
+          ],
+          mobileOnly: [3],
+        },
       ],
       caption: [
         {
@@ -429,6 +437,7 @@ export default {
           btn: "公設設計",
           title: "2CONSTRUCTION<br/>日商台灣大林組",
           desc: "日本綜合建設龍首，創立至今超過130年，超過一世紀的職人精神，精鑄實績遍及全球國際地標、頂級酒店、高級住宅及超高層商辦。",
+          mobileOnly: false,
         },
         {
           btn: "庭園景觀",
@@ -454,6 +463,6 @@ export default {
     },
   },
 
-  created() { },
+  created() {},
 };
 </script>
