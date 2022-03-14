@@ -3,21 +3,21 @@
     <div class="main">
       <div class="content-left">
 
-        <div class="title">太平洋建設</div>
+        <!--div class="title">太平洋建設</div>
         <a class="link" href="https://www.pacific-group.com.tw/" target="_blank">
           <img src="~@/assets/img/pacific-logo.png" alt="" class="pacific" srcset="" />
         </a>
-        <br><br>
+        <br><br-->
         <div class="title">聯碩地產行銷團隊</div>
         <a class="link" href="https://unigiants.com.tw/" target="_blank">
-          <img src="~@/assets/img/house-logo.png" alt="" srcset="" />
+          <img src="~@/assets/img/house-logo.svg" width="197" alt="" srcset="" />
         </a>
         <a
           class="link"
           href="https://www.facebook.com/unigiant/"
           target="_blank"
         >
-          <img src="~@/assets/img/house-logo2.png" alt="" srcset="" />
+          <img src="~@/assets/img/house-logo2.svg" width="222" alt="" srcset="" />
         </a>
       </div>
       <div class="content">
@@ -97,7 +97,7 @@ export default {
         margin: 30px 0;
         
         img {
-          width: 200px;
+          width: 197px;
         }
         &:hover {
           opacity: 0.7;
