@@ -29,96 +29,21 @@
         </template>
       </swiper>
       <div class="buttons">
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
+        <swiper
+          :options="swiperOptions2"
+          ref="swiper2"
+          class="swiper-wrapper"
+          @click-slide="swipeTo"
         >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
-        <div
-          class="btn"
-          v-for="(item, i) in caption"
-          :key="i"
-          v-bind:class="{ active: imgIdx == i }"
-          @click="swipeTo(i)"
-        >
-          {{ item.btn }}
-        </div>
+          <swiper-slide
+            class="btn"
+            v-for="(item, i) in caption"
+            :key="i"
+            v-bind:class="{ active: imgIdx == i }"
+          >
+            {{ item.btn }}
+          </swiper-slide>
+        </swiper>
       </div>
       <div class="swiper-pagination" slot="pagination"></div>
       <div data-aos="zoom-in" class="large-title"><span>MASTERPIECE</span></div>
@@ -184,9 +109,15 @@
       }
     }
     .buttons {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      // display: grid;
+      // grid-template-columns: repeat(6, 1fr);
       background: #fff;
+      .swiper-wrapper {
+        width: 100%;
+      }
+      .swiper-container {
+        width: 100%;
+      }
       .btn {
         font-family: "Noto Serif TC";
         display: flex;
@@ -194,6 +125,7 @@
         justify-content: center;
         height: size(77);
         font-size: size(25);
+        width: auto;
         background: rgba($color: #182c80, $alpha: 0.5);
         color: #fff;
         &.active {
@@ -403,6 +335,23 @@ export default {
           clickable: true,
         },
       },
+      swiperOptions2: {
+        speed: 1000,
+        breakpoints: {
+          300: {
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 3.5,
+            spaceBetween: 0,
+          },
+          1000: {
+            centeredSlides: false,
+            slidesPerView: 6,
+            loop: false,
+            spaceBetween: 0,
+          },
+        },
+      },
       imgIdx: 0,
       imgs: [
         {
@@ -542,9 +491,15 @@ export default {
     // slideChangeTransitionStart(idx, idx2) {
     //   this.imgIdx = this.$refs.swiper.$swiper.realIndex;
     // },
-    swipeTo(i) {
+    swipeTo(index, r_index) {
+      console.log(r_index);
       this.$refs.swiper.$swiper.slideTo(0, 500, false);
-      this.imgIdx = i;
+      this.$refs.swiper2.$swiper.slideTo(index, 500, false);
+      if (r_index) {
+        this.imgIdx = r_index;
+      } else {
+        this.imgIdx = index;
+      }
     },
   },
 

@@ -328,7 +328,7 @@ export default {
       imgIdx: 0,
       imgs: [
         {
-           img: [
+          img: [
             //第1張, index=0
             isMobile
               ? require("@/projects/cm/s7/a/01_m.jpg")
