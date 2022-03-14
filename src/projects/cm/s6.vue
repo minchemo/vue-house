@@ -77,8 +77,8 @@
     margin: 0 auto;
     .swiper-wrapper {
       .slide {
-        width: size(1345.25);
-        height: size(610.35);
+        width: size(1223);
+        height: size(530);
         background-size: cover;
         p {
           position: absolute;

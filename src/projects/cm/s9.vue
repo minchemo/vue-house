@@ -194,12 +194,12 @@
       margin: 0 auto;
       .swiper-wrapper {
         .slide {
-          width: size-m(375);
-          height: size-m(299.6);
+          width: size(1223);
+        height: size(530);
           background-size: cover;
           p {
             font-size: size-m(12);
-          }
+          } 
         }
       }
       .swiper-pagination {
