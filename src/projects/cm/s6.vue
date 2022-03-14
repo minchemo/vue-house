@@ -328,7 +328,7 @@
         left: 0;
         right: 0;
         width: 100%;
-        top: size-m(-30);
+        top: size-m(-40);
         text-align: center;
         font-size: size-m(50);
         letter-spacing: 0;

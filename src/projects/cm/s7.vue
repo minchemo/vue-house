@@ -251,7 +251,7 @@
       }
       .large-title {
         left: size-m(-100);
-        top: size-m(-30);
+        top: size-m(-40);
         font-size: size-m(50);
       }
       .content {

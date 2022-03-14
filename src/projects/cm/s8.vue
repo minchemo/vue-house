@@ -249,7 +249,7 @@
       .large-title {
         right: 0;
         left: 0;
-        top: size-m(-30);
+        top: size-m(-40);
         font-size: size-m(44);
         text-align: center;
         letter-spacing: 0;
