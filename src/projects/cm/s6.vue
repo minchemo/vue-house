@@ -38,6 +38,87 @@
         >
           {{ item.btn }}
         </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
+        <div
+          class="btn"
+          v-for="(item, i) in caption"
+          :key="i"
+          v-bind:class="{ active: imgIdx == i }"
+          @click="swipeTo(i)"
+        >
+          {{ item.btn }}
+        </div>
       </div>
       <div class="swiper-pagination" slot="pagination"></div>
       <div data-aos="zoom-in" class="large-title"><span>MASTERPIECE</span></div>
