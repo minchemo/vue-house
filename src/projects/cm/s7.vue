@@ -309,7 +309,7 @@ export default {
     return {
       isMobile,
       swiperOptions: {
-        loop: false,
+        loop: true,
         speed: 1000,
         spaceBetween: 0,
         autoplay: {
