@@ -182,8 +182,8 @@
       margin: 0 auto;
       .swiper-wrapper {
         .slide {
-          width: size-m(302);
-          height: size-m(292);
+          width: size-m(375);
+          height: size-m(299.6);
           background-size: cover;
           p {
             font-size: size-m(12);
@@ -230,7 +230,7 @@
           justify-content: center;
           height: size-m(36);
           width: size-m(105);
-          font-size: size(25);
+          font-size: size-m(14);
           background: rgba($color: #182c80, $alpha: 0.5);
           flex-shrink: 0;
           color: #fff;
@@ -326,18 +326,22 @@ export default {
       imgs: [
         {
           img: [
+            //第1張, index=0
             isMobile
               ? require("@/projects/cm/s6/a/01_m.jpg")
               : require("@/projects/cm/s6/a/01.jpg"),
+            //第2張, index=1
             isMobile
               ? require("@/projects/cm/s6/a/02_m.jpg")
               : require("@/projects/cm/s6/a/02.jpg"),
+            //第3張, index=2
             isMobile
               ? require("@/projects/cm/s6/a/03_m.jpg")
               : require("@/projects/cm/s6/a/03.jpg"),
+            //第4張，只有手機版有, index=3
             require("@/projects/cm/s6/a/04_m.jpg"),
           ],
-          mobileOnly: [3],
+          mobileOnly: [3], //填入只有手機版有的index就可以
         },
         {
           img: [
@@ -368,7 +372,7 @@ export default {
             require("@/projects/cm/s6/c/04_m.jpg"),
             require("@/projects/cm/s6/c/05_m.jpg"),
           ],
-          mobileOnly: [3,4],
+          mobileOnly: [3, 4],
         },
         {
           img: [
@@ -384,7 +388,7 @@ export default {
             require("@/projects/cm/s6/d/04_m.jpg"),
             require("@/projects/cm/s6/d/05_m.jpg"),
           ],
-          mobileOnly: [3,4],
+          mobileOnly: [3, 4],
         },
         {
           img: [
@@ -458,7 +462,7 @@ export default {
     //   this.imgIdx = this.$refs.swiper.$swiper.realIndex;
     // },
     swipeTo(i) {
-      this.$refs.swiper.$swiper.slideTo(i, 500, false);
+      this.$refs.swiper.$swiper.slideTo(0, 500, false);
       this.imgIdx = i;
     },
   },

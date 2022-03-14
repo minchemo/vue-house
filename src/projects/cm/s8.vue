@@ -184,8 +184,8 @@
       margin: 0 auto;
       .swiper-wrapper {
         .slide {
-          width: size-m(302);
-          height: size-m(292);
+          width: size-m(375);
+          height: size-m(299.6);
           background-size: cover;
           p {
             font-size: size-m(12);
@@ -232,7 +232,7 @@
           justify-content: center;
           height: size-m(36);
           width: size-m(105);
-          font-size: size(25);
+          font-size: size-m(14);
           background: rgba($color: #182c80, $alpha: 0.5);
           flex-shrink: 0;
           flex: 1;
@@ -368,7 +368,7 @@ export default {
       this.imgIdx = this.$refs.swiper.$swiper.realIndex;
     },
     swipeTo(i) {
-      this.$refs.swiper.$swiper.slideTo(i, 500, false);
+      this.$refs.swiper.$swiper.slideTo(0, 500, false);
       this.imgIdx = i;
     },
   },
