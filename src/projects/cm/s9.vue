@@ -160,6 +160,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     .title {
       font-size: 1.5em;
       color: #182c80;
@@ -172,7 +173,7 @@
       border-left: 0.18em solid currentColor;
       font-family: "Noto Serif TC", sans-serif;
       font-weight: 800;
-      text-align: right;
+      text-align: left;
       white-space: nowrap;
     }
   }
@@ -343,24 +344,24 @@ export default {
         {
           img: [
             isMobile
-              ? require("@/projects/cm/s9/1_m.jpg")
-              : require("@/projects/cm/s9/1.jpg"),
+              ? require("@/projects/cm/s9/a/24_m.jpg")
+              : require("@/projects/cm/s9/a/24.jpg"),
           ],
           mobileOnly: [],
         },
         {
           img: [
             isMobile
-              ? require("@/projects/cm/s9/1_m.jpg")
-              : require("@/projects/cm/s9/1.jpg"),
+              ? require("@/projects/cm/s9/b/28_m.jpg")
+              : require("@/projects/cm/s9/b/28.jpg"),
           ],
           mobileOnly: [],
         },
         {
           img: [
             isMobile
-              ? require("@/projects/cm/s9/1_m.jpg")
-              : require("@/projects/cm/s9/1.jpg"),
+              ? require("@/projects/cm/s9/c/35_m.jpg")
+              : require("@/projects/cm/s9/c/35.jpg"),
           ],
           mobileOnly: [],
         },
@@ -372,14 +373,14 @@ export default {
           desc: "●新日式休閒2房，奢擁雙衛浴，客餐廳、雙臥室均有採光通風，靈巧空間五臟俱全，動線流暢絲毫不浪費 ●現代時尚邊間3房，雙面採光，雙衛乾爽開窗，可規劃衣帽間 ●義式精品雙陽台3房，雙面採光，主臥四件式衛浴，開闊客餐廳空間，媲美透天機能享受",
         },
         {
-          btn: "28坪 / 三房",
-          title: "高坪效時尚美學<br/>超規格國際品味",
-          desc: "●新日式休閒2房，奢擁雙衛浴，客餐廳、雙臥室均有採光通風，靈巧空間五臟俱全，動線流暢絲毫不浪費 ●現代時尚邊間3房，雙面採光，雙衛乾爽開窗，可規劃衣帽間 ●義式精品雙陽台3房，雙面採光，主臥四件式衛浴，開闊客餐廳空間，媲美透天機能享受",
+          btn: "29坪 / 三房",
+          title: "房衛開窗雙採光<br/>有感建築超收納",
+          desc: "●邊間兩面採光通風，雙衛浴都開窗。●獨立玄關，落塵防疫區，後疫情時代必須。●客餐廳臥機能完整，收納空間豐富多元。●飯店及進口衛浴設備、主臥電腦馬桶。",
         },
         {
-          btn: "35坪 / 三房",
-          title: "高坪效時尚美學<br/>超規格國際品味",
-          desc: "●新日式休閒2房，奢擁雙衛浴，客餐廳、雙臥室均有採光通風，靈巧空間五臟俱全，動線流暢絲毫不浪費 ●現代時尚邊間3房，雙面採光，雙衛乾爽開窗，可規劃衣帽間 ●義式精品雙陽台3房，雙面採光，主臥四件式衛浴，開闊客餐廳空間，媲美透天機能享受",
+          btn: "36坪 / 三房",
+          title: "敞亮邊間藏風光<br/>超規格舒活闊居",
+          desc: "●邊間兩面採光通風，前後陽台規劃。●獨立玄關，落塵防疫區，後疫情時代必須。●主臥四件式衛浴，飯店級享受。●飯店級進口衛浴設備、主臥電腦馬桶。",
         },
       ],
     };

@@ -333,31 +333,39 @@ export default {
       imgs: [
         {
           img: [
+            //第1張, index=0
             isMobile
-              ? require("@/projects/cm/s8/1_m.jpg")
-              : require("@/projects/cm/s8/1.jpg"),
+              ? require("@/projects/cm/s8/a/01_m.jpg")
+              : require("@/projects/cm/s8/a/01.jpg"),
+            //第4張，只有手機版有, index=3
+            require("@/projects/cm/s8/a/02_m.jpg"),
           ],
-          mobileOnly: [],
+          mobileOnly: [1], //填入只有手機版有的index就可以
         },
         {
           img: [
+            //第1張, index=0
             isMobile
-              ? require("@/projects/cm/s8/1_m.jpg")
-              : require("@/projects/cm/s8/1.jpg"),
+              ? require("@/projects/cm/s8/b/01_m.jpg")
+              : require("@/projects/cm/s8/b/01.jpg"),
+            //第4張，只有手機版有, index=3
+            require("@/projects/cm/s8/b/02_m.jpg"),
+            require("@/projects/cm/s8/b/03_m.jpg"),
+            require("@/projects/cm/s8/b/04_m.jpg"),
           ],
-          mobileOnly: [],
+          mobileOnly: [1, 2, 3], //填入只有手機版有的index就可以
         },
       ],
       caption: [
         {
-          btn: "立面透視",
-          title: "新日本凌空泳池御苑<br/>致敬台南新核心",
+          btn: "建築外觀語彙",
+          title: "新日本凌空泳池御苑<br/>致敬台南新核心心",
           desc: "市中心稀有壯闊領域，方正臨路角地，創造完美大棟距。藏美建設以新日本建築美學精神，集國際團隊於大成，聯手擘劃20層雙塔地標，構築沉穩俐落現代語彙，演繹時尚新核心工藝之美。",
         },
         {
-          btn: "公設透視",
-          title: "新日本凌空泳池御苑<br/>致敬台南新核心",
-          desc: "市中心稀有壯闊領域，方正臨路角地，創造完美大棟距。藏美建設以新日本建築美學精神，集國際團隊於大成，聯手擘劃20層雙塔地標，構築沉穩俐落現代語彙，演繹時尚新核心工藝之美。",
+          btn: "御苑空間規劃",
+          title: "對位表參道 大樹開道<br/>引領主人回到家的殿堂",
+          desc: "坐擁1244坪基地，以不到33%建蔽率，留設廣大景觀綠地，與鄭子寮的翠綠環境，悠然呼應。以「東京表參道」為繆思，大器退縮，讓濃蔭綠樹勾勒返家歸途，敞開森林圖書館的序章，暢泳雲天國度，盡覽水天一色。",
         },
       ],
     };

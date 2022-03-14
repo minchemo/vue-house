@@ -167,7 +167,7 @@
       border-left: 0.18em solid currentColor;
       font-family: "Noto Serif TC", sans-serif;
       font-weight: 800;
-      text-align: right;
+      text-align: left;
       white-space: nowrap;
     }
   }
@@ -328,20 +328,43 @@ export default {
       imgIdx: 0,
       imgs: [
         {
-          img: [
+           img: [
+            //第1張, index=0
             isMobile
-              ? require("@/projects/cm/s7/1_m.jpg")
-              : require("@/projects/cm/s7/1.jpg"),
+              ? require("@/projects/cm/s7/a/01_m.jpg")
+              : require("@/projects/cm/s7/a/01.jpg"),
+            //第2張, index=1
+            isMobile
+              ? require("@/projects/cm/s7/a/02_m.jpg")
+              : require("@/projects/cm/s7/a/02.jpg"),
+            //第3張, index=2
+            isMobile
+              ? require("@/projects/cm/s7/a/03_m.jpg")
+              : require("@/projects/cm/s7/a/03.jpg"),
+            //第4張，只有手機版有, index=3
+            require("@/projects/cm/s7/a/04_m.jpg"),
           ],
-          mobileOnly: [],
+          mobileOnly: [3], //填入只有手機版有的index就可以
         },
         {
           img: [
+            //第1張, index=0
             isMobile
-              ? require("@/projects/cm/s7/1_m.jpg")
-              : require("@/projects/cm/s7/1.jpg"),
+              ? require("@/projects/cm/s7/b/01_m.jpg")
+              : require("@/projects/cm/s7/b/01.jpg"),
+            //第2張, index=1
+            isMobile
+              ? require("@/projects/cm/s7/b/02_m.jpg")
+              : require("@/projects/cm/s7/b/02.jpg"),
+            //第3張, index=2
+            isMobile
+              ? require("@/projects/cm/s7/b/03_m.jpg")
+              : require("@/projects/cm/s7/b/03.jpg"),
+            //第4張，只有手機版有, index=3
+            require("@/projects/cm/s7/b/04_m.jpg"),
+            require("@/projects/cm/s7/b/05_m.jpg"),
           ],
-          mobileOnly: [],
+          mobileOnly: [3, 4], //填入只有手機版有的index就可以
         },
       ],
       caption: [
@@ -352,8 +375,8 @@ export default {
         },
         {
           btn: "物業管理",
-          title: "1CONSTRUCTION<br/>日商台灣大林組",
-          desc: "日本綜合建設龍首，創立至今超過130年，超過一世紀的職人精神，精鑄實績遍及全球國際地標、頂級酒店、高級住宅及超高層商辦。",
+          title: "MANAGEMENT<br/>伯克錸物業管理服務",
+          desc: "有物管服務的家，才匹配您的身份。伯克萊專業團隊進駐，引入星級飯店禮遇，提供無微不至的呵護，實績遍佈全台近200座高級住宅。",
         },
       ],
     };
