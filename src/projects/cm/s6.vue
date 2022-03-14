@@ -117,6 +117,7 @@
       }
       .swiper-container {
         width: 100%;
+        background: rgb(148, 158, 196);
       }
       .btn {
         font-family: "Noto Serif TC";
@@ -126,7 +127,7 @@
         height: size(77);
         font-size: size(25);
         width: auto;
-        background: rgba($color: #182c80, $alpha: 0.5);
+        background: rgb(148, 158, 196);
         color: #fff;
         &.active {
           background: rgba($color: #182c80, $alpha: 1);
@@ -244,7 +245,6 @@
           height: size-m(36);
           width: size-m(105);
           font-size: size-m(14);
-          background: rgba($color: #182c80, $alpha: 0.5);
           flex-shrink: 0;
           color: #fff;
           &.active {
@@ -339,7 +339,7 @@ export default {
         speed: 1000,
         breakpoints: {
           300: {
-            loop: true,
+            loop: false,
             centeredSlides: true,
             slidesPerView: 3.5,
             spaceBetween: 0,
