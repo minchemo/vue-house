@@ -126,9 +126,9 @@ export default {
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
 #contact-info {
-  position: absolute;
+  position: relative;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%);
   z-index: 15;
 }
 .order-bg-draw {
@@ -228,7 +228,7 @@ export default {
   height: size(54);
   margin: 0 auto 70px auto;
   z-index: 1;
-  width: 60%;
+  width: 40%;
 }
 .info {
   width: 880px;
