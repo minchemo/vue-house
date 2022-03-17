@@ -19,6 +19,8 @@
         >
           <img src="~@/assets/img/house-logo2.svg" width="222" alt="" srcset="" />
         </a>
+
+        <img class="bottom pc" src="~@/assets/img/house-logo3.svg"   alt="" srcset="" />
       </div>
       <div class="content">
         <h3 class="title">建案資訊</h3>
@@ -28,6 +30,7 @@
             <p class="desc" v-html="infos[1]"></p>
           </div>
         </div>
+        <img class="bottom mo" src="~@/assets/img/house-logo3.svg"   alt="" srcset="" />
       </div>
     </div>
     <Footer />
@@ -81,7 +84,9 @@ export default {
     width: 70%;
     margin: 0 auto;
     padding: 50px;
+    
     .content-left {
+      position: relative;
       .pacific{
           width: 260px !important;
         }
@@ -90,6 +95,13 @@ export default {
         color: #fff;
         font-family: "Noto Serif TC", sans-serif;
         text-align: left;
+      }
+
+      .bottom{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 28vw;
       }
       .link {
         display: block;
@@ -110,6 +122,11 @@ export default {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      .bottom{
+      display: none;
+      }
+
       .title {
         font-size: 32px;
         margin-bottom: 20px;
@@ -196,6 +213,12 @@ export default {
           font-weight: 600;
           text-align: left;
         }
+        .bottom{
+          display: none;
+         
+       }
+
+        
         .link {
           display: block;
           text-align: left;
@@ -215,6 +238,14 @@ export default {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        .bottom{
+          position: relative;
+          width: 100%;
+          display: block;
+          margin-top: 60px;
+        }
+
         .title {
           font-size: 32px;
           margin-bottom: 20px;
