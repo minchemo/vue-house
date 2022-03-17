@@ -376,7 +376,7 @@ export default {
       this.imgIdx = this.$refs.swiper.$swiper.realIndex;
     },
     swipeTo(i) {
-      this.$refs.swiper.$swiper.slideTo(0, 500, false);
+      this.$refs.swiper.$swiper.slideTo(1, 500, false);
       this.imgIdx = i;
     },
   },

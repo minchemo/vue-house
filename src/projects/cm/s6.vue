@@ -492,8 +492,7 @@ export default {
     //   this.imgIdx = this.$refs.swiper.$swiper.realIndex;
     // },
     swipeTo(index, r_index) {
-      console.log(r_index);
-      this.$refs.swiper.$swiper.slideTo(0, 500, false);
+      this.$refs.swiper.$swiper.slideTo(1, 500, false);
       this.$refs.swiper2.$swiper.slideTo(index, 500, false);
       if (r_index) {
         this.imgIdx = r_index;
