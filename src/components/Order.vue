@@ -234,9 +234,6 @@
         <el-button
           class="form-submit bt_registration"
           type="primary"
-          :disabled="!checked || !isVerify"
-          @click="submit"
-          :loading="isSubmit"
           >立即預約</el-button
         >
         <Loading :loading="isSubmit" :isOpacity="true" />
