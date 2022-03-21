@@ -1,5 +1,5 @@
 <template>
-  <div class="s1">
+  <div class="s1" id="scene">
     <div class="main">
       <div class="left">
         <img
@@ -10,14 +10,18 @@
         />
         <div class="bg">
           <img
-            class="bg1"
-            src="@/projects/renai/s1/mainbg1.svg"
+            data-aos="fade-down"
+            data-depth="0.2"
+            class="bg1 parallax-item"
+            src="@/projects/renai/s1/mainbg1.png"
             alt=""
             srcset=""
           />
           <img
-            class="bg2"
-            src="@/projects/renai/s1/mainbg2.svg"
+            data-aos="fade-up"
+            data-depth="0.6"
+            class="bg2 parallax-item"
+            src="@/projects/renai/s1/mainbg2.png"
             alt=""
             srcset=""
           />
@@ -25,12 +29,13 @@
       </div>
       <div class="right">
         <img
+          data-aos="fade-up"
           class="text"
           src="@/projects/renai/s1/title.svg"
           alt=""
           srcset=""
         />
-        <div class="order-button">立即預約</div>
+        <div data-aos="fade-up" data-aos-delay="500" class="order-button">立即預約</div>
       </div>
     </div>
   </div>
@@ -63,7 +68,17 @@
       justify-content: center;
       .main-text {
         position: absolute;
+        z-index: 1;
         width: size(276.8);
+        animation: blur 2s;
+        @keyframes blur {
+          from {
+            filter: blur(50px)
+          } 
+          to {
+            filter: blur(0)
+          }
+        }
       }
       .bg {
         width: 100%;
@@ -72,8 +87,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        .parallax-item {
+          position: relative !important;
+          &.no-delay {
+            transition: all 0s;
+          }
+        }
         img {
-          width: 100%;
+          width: 100% !important;
         }
       }
     }
@@ -93,6 +114,12 @@
         justify-content: center;
         color: #eb5c20;
         margin: 0 auto;
+        transition: all .5s;
+        &:hover {
+          transform: translateY(-5px);
+          cursor: pointer;
+          filter: drop-shadow(5px 10px 10px rgba(0,0,0,0.3));
+        }
       }
     }
   }
@@ -124,6 +151,7 @@
 <script>
 // @ is an alias to /src
 import { isMobile } from "@/utils";
+import Parallax from "parallax-js";
 
 export default {
   name: "s1",
@@ -139,6 +167,18 @@ export default {
     scrollTo(el) {
       this.scrollInstance.scrollTo(el);
     },
+  },
+
+  mounted() {
+    setTimeout(() => {
+      $(".parallax-item").addClass("no-delay");
+      var scene = document.getElementById("scene");
+      new Parallax(scene, {
+        relativeInput: true,
+        pointerEvents: true,
+        selector: ".parallax-item",
+      });
+    }, 1500);
   },
 
   created() {},
