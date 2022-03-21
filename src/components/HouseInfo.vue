@@ -73,7 +73,7 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  background: url('~@/projects/cm/footer_bg.jpg');
+  background: url('~@/projects/renai/footer_bg.jpg');
   background-size: cover;
   background-color: #000;
   position: relative;

@@ -5,7 +5,7 @@
         <img
           v-lazy
           class="logo"
-          :temp="require('@/projects/cm/contact_logo.svg')"
+          :temp="require('@/projects/renai/contact_logo.svg')"
           :alt="info.caseName"
         data-aos="zoom-in"
         />

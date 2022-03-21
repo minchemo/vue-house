@@ -5,7 +5,7 @@
         <div class="nav">
           <img
             class="logo"
-            src="@/assets/img/nav-logo.png"
+            src="@/projects/renai/logo.svg"
             alt
             v-scroll-to="{ element: `#app` }"
             data-aos="fade-right"
@@ -258,7 +258,7 @@ export default {
       height: 3px;
       width: 0;
       bottom: -12px;
-      background-color: #000000;
+      background-color: $nav_link_border_bg;
       transition: all 0.4s;
       opacity: 0;
     }

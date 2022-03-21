@@ -1,28 +1,26 @@
 /* html, body */
 
-$bg:url("~@/projects/cm/s1/bg.jpg");
-$bg_m:url("~@/projects/cm/s1/bg-m.jpg");
+$bg: transparent;
+$bg_m: transparent;
 
 /* font-family */
-
-
 /* 1主要字體  2次要字體  3表單字體  4黑體 */
 
-$family1: "Noto Sans TC", serif;
-$family2: "Noto Sans TC", serif;
-$family3: "Noto Sans TC", serif;
-$family4: "Noto Sans TC", serif,sans-serif;
+$family1: "Noto Serif TC", serif;
+$family2: "Noto Serif TC", serif;
+$family3: "Noto Serif TC", serif;
+$family4: "Noto Serif TC", serif,sans-serif;
 $selection_color: grey;
 
 /* navigation */
 
-$nav_bg: #64b46b;
-$nav_btn_color: #000;
-$nav_link_color: #000;
-$nav_link_subtitle_color: #000;
+$nav_bg: #fff;
+$nav_btn_color: #EB5C20;
+$nav_link_color: #EB5C20;
+$nav_link_subtitle_color: #EB5C20;
 $nav_link_hover_color: #fff;
-$nav_link_hover_bg: #976a4b;
-$nav_link_border_bg: #000;
+$nav_link_hover_bg: #EB5C20;
+$nav_link_border_bg: #EB5C20;
 
 /* loading */
 

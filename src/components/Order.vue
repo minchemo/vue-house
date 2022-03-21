@@ -8,8 +8,8 @@
       <!-- <h3 class="order-title" v-html="order.title"></h3> -->
       <div class="order-title-img"
         data-aos="zoom-in">
-        <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="藏美表參道" srcset="">
-        <img v-else src="~@/projects/cm/order_title_m.svg" alt="藏美表參道" srcset="">
+        <img v-if="!isMobile" src="~@/projects/renai/order_title.svg" alt="藏美表參道" srcset="">
+        <img v-else src="~@/projects/renai/order_title_m.svg" alt="藏美表參道" srcset="">
       </div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
