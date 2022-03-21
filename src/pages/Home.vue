@@ -4,6 +4,13 @@
     <CustomNavigation v-else :scrollInstance="locomotive" />
     <div id="locomotive">
       <Section1 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section2 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section3 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section4 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section5 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section6 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section7 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section8 class="section" data-scroll :scrollInstance="locomotive" />
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -28,13 +35,13 @@ import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
 import Section1 from "@/projects/renai/s1.vue";
-// import Section2 from "@/projects/renai/s2.vue";
-// import Section3 from "@/projects/renai/s3.vue";
-// import Section4 from "@/projects/renai/s4.vue";
-// import Section5 from "@/projects/renai/s5.vue";
-// import Section6 from "@/projects/renai/s6.vue";
-// import Section7 from "@/projects/renai/s7.vue";
-// import Section8 from "@/projects/renai/s8.vue";
+import Section2 from "@/projects/renai/s2.vue";
+import Section3 from "@/projects/renai/s3.vue";
+import Section4 from "@/projects/renai/s4.vue";
+import Section5 from "@/projects/renai/s5.vue";
+import Section6 from "@/projects/renai/s6.vue";
+import Section7 from "@/projects/renai/s7.vue";
+import Section8 from "@/projects/renai/s8.vue";
 // import Section9 from "@/projects/renai/s9.vue";
 // import Section10 from "@/projects/renai/s10.vue";
 // import Section11 from "@/projects/renai/s11.vue";
@@ -56,13 +63,13 @@ export default {
     // CustomFooter,
     MobileNav,
     Section1,
-    // Section2,
-    // Section3,
-    // Section4,
-    // Section5,
-    // Section6,
-    // Section7,
-    // Section8,
+    Section2,
+    Section3,
+    Section4,
+    Section5,
+    Section6,
+    Section7,
+    Section8,
     // Section9,
     // Section10,
     // Section11
