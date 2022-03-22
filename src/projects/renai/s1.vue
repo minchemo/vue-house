@@ -29,13 +29,31 @@
       </div>
       <div class="right">
         <img
+          v-if="!isMobile"
           data-aos="fade-up"
           class="text"
           src="@/projects/renai/s1/title.svg"
           alt=""
           srcset=""
         />
-        <div data-aos="fade-up" data-aos-delay="500" class="order-button">立即預約</div>
+        <img
+          v-else
+          class="text"
+          src="@/projects/renai/s1/title_m.svg"
+          alt=""
+          srcset=""
+        />
+        <div
+          data-aos="fade-up"
+          data-aos-delay="500"
+          class="order-button"
+          v-scroll-to="{
+            element: `.contact-info`,
+            offset: !isMobile ? 500 : 0,
+          }"
+        >
+          立即預約
+        </div>
       </div>
     </div>
   </div>
@@ -73,10 +91,10 @@
         animation: blur 2s;
         @keyframes blur {
           from {
-            filter: blur(50px)
-          } 
+            filter: blur(50px);
+          }
           to {
-            filter: blur(0)
+            filter: blur(0);
           }
         }
       }
@@ -114,11 +132,11 @@
         justify-content: center;
         color: #eb5c20;
         margin: 0 auto;
-        transition: all .5s;
+        transition: all 0.5s;
         &:hover {
           transform: translateY(-5px);
           cursor: pointer;
-          filter: drop-shadow(5px 10px 10px rgba(0,0,0,0.3));
+          filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.3));
         }
       }
     }
@@ -133,9 +151,69 @@
   .s1 {
     position: relative;
     width: size-m(375);
-    height: size-m(720);
+    height: size-m(623);
     min-height: 0;
     max-height: size-m(812);
+    padding-top: size-m(80);
+
+    .main {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      flex-direction: column;
+      .left {
+        width: size-m(168);
+        height: size-m(215);
+        .main-text {
+          position: absolute;
+          z-index: 1;
+          width: size-m(71.75);
+          animation: blur 2s;
+          @keyframes blur {
+            from {
+              filter: blur(50px);
+            }
+            to {
+              filter: blur(0);
+            }
+          }
+        }
+        .bg {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .parallax-item {
+            position: relative !important;
+            &.no-delay {
+              transition: all 0s;
+            }
+          }
+          img {
+            width: 100% !important;
+          }
+        }
+      }
+      .right {
+        margin-top: size-m(20);
+        .text {
+          width: size-m(207);
+          height: auto;
+        }
+        .order-button {
+          width: size-m(198.67);
+          height: size-m(22.7);
+          font-size: size-m(13);
+          margin-top: size-m(20);
+        }
+      }
+    }
   }
 }
 
@@ -171,6 +249,9 @@ export default {
 
   mounted() {
     setTimeout(() => {
+      if (isMobile) {
+        return
+      }
       $(".parallax-item").addClass("no-delay");
       var scene = document.getElementById("scene");
       new Parallax(scene, {
@@ -181,6 +262,6 @@ export default {
     }, 1500);
   },
 
-  created() {},
+  created() { },
 };
 </script>

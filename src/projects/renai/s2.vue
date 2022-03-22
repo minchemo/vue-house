@@ -3,9 +3,15 @@
     <div class="v-title" data-aos="fade-up">
       <img src="@/projects/renai/s2/v-title.svg" alt="" srcset="" />
     </div>
-    <div class="title" data-aos="fade-up" data-aos-delay="500">
+    <div class="title" data-aos="fade-up" data-aos-delay="500" v-if="!isMobile">
       博愛特區旁歷代菁英搖籃 、台北文藝復興的主舞臺<br />
       濃密綠徑核心十八席 ，切切珍惜輕取仁愛一瞬機緣
+    </div>
+    <div class="title" data-aos="fade-up" data-aos-delay="500" v-else>
+      博愛特區旁歷代菁英搖籃<br />
+      台北文藝復興的主舞臺<br />
+      濃密綠徑核心十八席<br />
+      切切珍惜輕取仁愛一瞬機緣
     </div>
   </div>
 </template>
@@ -52,9 +58,21 @@
   .s2 {
     position: relative;
     width: size-m(375);
-    height: size-m(720);
-    min-height: 0;
-    max-height: size-m(812);
+    height: size-m(623);
+
+    .v-title {
+      width: size-m(62.82);
+      bottom: size-m(311);
+      left: size-m(154);
+    }
+    .title {
+      font-size: size-m(17);
+      width: 100%;
+      left: 50%;
+      margin-left: -50%;
+      bottom: size-m(171);
+      font-weight: normal;
+    }
   }
 }
 

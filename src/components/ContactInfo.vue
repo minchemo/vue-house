@@ -2,27 +2,56 @@
   <div>
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <img
+        <div class="logo-box">
+          <div class="left">
+            <img
+              data-aos="fade"
+              src="@/projects/renai/house-img1.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="right">
+            <img
+              class="t1"
+              src="@/projects/renai/house-img2.svg"
+              alt=""
+              srcset=""
+              data-aos="fade-up"
+            />
+            <img
+              class="t2"
+              src="@/projects/renai/house-img3.svg"
+              alt=""
+              srcset=""
+              data-aos="fade-up"
+              data-aos-delay="500"
+            />
+          </div>
+        </div>
+        <!-- <img
           v-lazy
           class="logo"
           :temp="require('@/projects/renai/contact_logo.svg')"
           :alt="info.caseName"
-        data-aos="zoom-in"
-        />
+          data-aos="zoom-in"
+        /> -->
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">
               <font-awesome-icon icon="phone" />
               <span>{{ info.phone }}</span>
             </span>
-          </div><!-- -->
-          <div class="btn flex-c"  @click="showMessengerDialog">
+          </div>
+          <!-- -->
+          <div class="btn flex-c" @click="showMessengerDialog">
             <span class="flex-c">
               <font-awesome-icon :icon="['fab', 'facebook-messenger']" /><span
                 >FB 諮詢</span
               >
             </span>
-          </div><!--   -->
+          </div>
+          <!--   -->
           <a class="btn flex-c bt_fanpage" :href="info.fbLink" target="_blank">
             <span class="flex-c">
               <font-awesome-icon :icon="['fab', 'facebook-f']" /><span
@@ -125,32 +154,39 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
+@import "@/assets/style/function.scss";
 #contact-info {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   z-index: 15;
 }
-.order-bg-draw {
-  width: calc(30000 / 1920);
-  position: absolute;
-  right: 5vw;
-  bottom: 2.8vw;
-  z-index: 15;
-}
 
-.forest {
-  position: absolute;
-  bottom: -50%;
-  left: 0;
-  width: 100%;
-  transform: scale(1.2) skew(0deg, 0);
-  transform-origin: center;
-  animation: forest 4s infinite alternate-reverse;
-
-  @keyframes forest {
-    100% {
-      transform: scale(1.2) skew(3deg, 0);
+.logo-box {
+  width: size(1313.98);
+  height: size(610.27);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: size(120) auto;
+  .left {
+    img {
+      width: size(431.35);
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: size(810);
+    height: size(377.86);
+    .t1 {
+      width: size(459.85);
+    }
+    .t2 {
+      width: size(810.4);
     }
   }
 }
@@ -165,11 +201,11 @@ export default {
   align-content: center;
   justify-content: space-between;
   position: relative;
-  width: 80%;
-  min-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   padding: 50px 0;
   z-index: 50;
+  background-color: #eb5c20;
 
   .fix-bar {
     background: rgba(231, 149, 14);
@@ -270,6 +306,7 @@ export default {
   &:hover {
     background: $contact_btn_hover_bg;
     color: $contact_btn_hover_color;
+    box-shadow: $contact_btn_hover_border;
 
     svg {
       color: $contact_btn_hover_icon;
@@ -297,15 +334,15 @@ export default {
   }
 }
 .address {
-  width: 600px;
+  width: 580px;
   height: 60px;
   font-size: 18px;
-  background: #dcdddd;
+  background: transparent;
   font-weight: 400;
-  box-shadow: $contact_btn_border;
+  box-shadow: inset 0 0 1px 1px #fff;
   border-radius: $contact_btn_addr_border_radius;
   font-family: $family4;
-  color: #000;
+  color: #fff;
   + .google-btn,
   + .btn {
     border-radius: 0;
@@ -410,7 +447,7 @@ export default {
     position: relative;
     margin: 0 auto 0 auto;
     min-width: unset;
-   //background: $contact_bg_m;
+    //background: $contact_bg_m;
     background-size: contain;
     margin-top: 0;
 

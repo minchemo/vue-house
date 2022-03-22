@@ -12,7 +12,7 @@
     </div>
     <!-- <div class="custom-navbar" v-if="!isMobile">
       <div class="link" @click="scrollTo('.section1')">
-        <img src="@/projects/cc/nav_logo.png" alt="藏美表參道" srcset="" />
+        <img src="@/projects/cc/nav_logo.png" alt="仁愛旭" srcset="" />
       </div>
       <div class="link" @click="scrollTo('.section2 .content')">國際CBD</div>
       <div class="link" @click="scrollTo('.section4')">新名邸特區</div>
@@ -24,9 +24,9 @@
       v-bind:class="isOpen ? 'is-active' : ''"
     >
       <ul class="navlist">
-      <!-- <li class="link logo" 
-          @click="setActive('藏美表參道','', '.section1')">
-        <img src="@/projects/cc/nav_logo.png" alt="藏美表參道" srcset="" />
+        <!-- <li class="link logo" 
+          @click="setActive('仁愛旭','', '.section1')">
+        <img src="@/projects/cc/nav_logo.png" alt="仁愛旭" srcset="" />
       </li> -->
         <li
           :key="item.name"
@@ -212,12 +212,13 @@ $hamburger-layer-color: #fff;
         border-top: 1px solid hsla(0, 0%, 100%, 0.4);
         overflow: hidden;
         position: relative;
-&.logo{
-  margin-top:-30px ;
-  border-top: 0;
-  img{
-  width: 100px;
-}}
+        &.logo {
+          margin-top: -30px;
+          border-top: 0;
+          img {
+            width: 100px;
+          }
+        }
         &.active {
           background: rgba(0, 0, 0, 0.6);
           color: #fff;
@@ -333,7 +334,7 @@ $hamburger-layer-color: #fff;
           .hamburger-inner:after,
           .hamburger-inner:before {
             width: 100%;
-            background-color: #182C80;
+            background-color: #182c80;
             border-radius: 0;
             height: 2px;
           }

@@ -36,9 +36,18 @@
         srcset=""
       />
       <img
+        v-if="!isMobile"
         class="d2"
         data-aos="fade"
         src="@/projects/renai/s7/decor3.svg"
+        alt=""
+        srcset=""
+      />
+      <img
+        v-else
+        class="d2"
+        data-aos="fade"
+        src="@/projects/renai/s7/decor4.svg"
         alt=""
         srcset=""
       />
@@ -167,9 +176,74 @@
   .s7 {
     position: relative;
     width: size-m(375);
-    height: size-m(720);
-    min-height: 0;
-    max-height: size-m(812);
+    height: size-m(613);
+
+    .decor {
+      .d1 {
+        left: -#{size(130)};
+        top: size-m(60);
+        width: size-m(140);
+      }
+      .d2 {
+        position: absolute;
+        right: size-m(10);
+        top: -#{size-m(50)};
+        bottom: unset;
+        width: size-m(140.79);
+      }
+      .title {
+        font-size: size-m(15);
+        top: size-m(72);
+        left: size-m(65);
+      }
+    }
+    .main {
+      width: size-m(288.75);
+      flex-direction: column;
+      .left {
+        .swiper-box {
+          .swiper-container {
+            width: size-m(288.75);
+            height: size-m(275.28);
+            .swiper-slide {
+              background-size: cover;
+            }
+          }
+          .swiper-pagination {
+            right: -#{size-m(10)};
+            .swiper-pagination-bullet {
+              width: size-m(5);
+              height: size-m(5);
+              border: 1px solid #eb5c20;
+              margin-top: size-m(3);
+
+              &.swiper-pagination-bullet-active {
+                background: #eb5c20;
+              }
+            }
+          }
+        }
+        .caption {
+          bottom: -#{size-m(15)};
+          font-size: size-m(12);
+        }
+      }
+      .right {
+        margin-left: 0;
+        margin-top: size-m(41);
+        .t1 {
+          font-size: size-m(20);
+          writing-mode: horizontal-tb;
+          text-align: center;
+          margin-bottom: size-m(20);
+        }
+        .t2 {
+          font-size: 11px;
+          line-height: 1.5;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 
@@ -262,6 +336,9 @@ export default {
 
   mounted() {
     setTimeout(() => {
+      if (isMobile) {
+        return
+      }
       // $(".parallax-item").addClass("no-delay");
       var scene = this.$refs.s7;
       new Parallax(scene, {

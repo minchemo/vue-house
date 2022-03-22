@@ -47,13 +47,13 @@
               v-if="isMobile"
               class="d-m-1"
               src="@/projects/ab/mo-nav-1.png"
-              alt="藏美表參道"
+              alt="仁愛旭"
             />
             <img
               v-if="isMobile"
               class="d-m-2"
               src="@/projects/ab/mo-nav-2.png"
-              alt="藏美表參道"
+              alt="仁愛旭"
             /> -->
           </ul>
         </div>
@@ -510,7 +510,6 @@ export default {
         height: 2px;
         width: 0;
         bottom: -6px;
-        background-color: #000000;
         transition: all 0.4s;
         opacity: 0;
       }

@@ -1,7 +1,6 @@
 <template>
   <div class="home no-padding-top">
-    <Navigation v-if="!isMobile" />
-    <CustomNavigation v-else :scrollInstance="locomotive" />
+    <Navigation />
     <div id="locomotive">
       <Section1 class="section" data-scroll :scrollInstance="locomotive" />
       <Section2 class="section" data-scroll :scrollInstance="locomotive" />

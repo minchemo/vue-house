@@ -1,6 +1,9 @@
 <template>
   <div class="s5" ref="s5">
-    <div class="main" data-aos="fade-up"></div>
+    <div class="main" data-aos="fade-up" v-if="!isMobile"></div>
+    <div class="view" v-else>
+      <GodModView />
+    </div>
     <div class="decor parallax-item" data-depth="0.25">
       <img
         class="d1"
@@ -83,9 +86,34 @@
   .s5 {
     position: relative;
     width: size-m(375);
-    height: size-m(720);
+    height: size-m(631);
     min-height: 0;
     max-height: size-m(812);
+
+    .view {
+      width: size-m(300);
+      height: size-m(469);
+      background: #eee;
+    }
+
+    .decor {
+      .d1 {
+        left: -#{size(130)};
+        top: size-m(60);
+        width: size-m(140);
+      }
+      .d2 {
+        position: absolute;
+        right: size-m(10);
+        bottom: size-m(15);
+        width: size-m(90);
+      }
+      .title {
+        font-size: size-m(15);
+        top: size-m(72);
+        left: size-m(45);
+      }
+    }
   }
 }
 
@@ -104,13 +132,15 @@ import { isMobile } from "@/utils";
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 import Parallax from "parallax-js";
+import GodModView from "@/components/GodModView.vue";
 
 export default {
   name: "s5",
   props: ["scrollInstance"],
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    GodModView
   },
   directives: {
     swiper: directive
@@ -130,6 +160,9 @@ export default {
 
   mounted() {
     setTimeout(() => {
+      if (isMobile) {
+        return
+      }
       // $(".parallax-item").addClass("no-delay");
       var scene = this.$refs.s5;
       new Parallax(scene, {

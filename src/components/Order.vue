@@ -6,10 +6,19 @@
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
       <!-- <h3 class="order-title" v-html="order.title"></h3> -->
-      <div class="order-title-img"
-        data-aos="zoom-in">
-        <img v-if="!isMobile" src="~@/projects/renai/order_title.svg" alt="藏美表參道" srcset="">
-        <img v-else src="~@/projects/renai/order_title_m.svg" alt="藏美表參道" srcset="">
+      <div class="order-title-img" data-aos="zoom-in">
+        <img
+          v-if="!isMobile"
+          src="~@/projects/renai/order_title.svg"
+          alt="仁愛旭"
+          srcset=""
+        />
+        <img
+          v-else
+          src="~@/projects/renai/order_title.svg"
+          alt="仁愛旭"
+          srcset=""
+        />
       </div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
@@ -153,7 +162,7 @@
     </div>
 
     <ContactInfo />
-     <GoogleMap /> 
+    <GoogleMap />
     <PolicyDialog
       :policyVisible="policyVisible"
       @hidePolicyDialog="hidePolicyDialog"
@@ -343,7 +352,7 @@ export default {
   background-image: $order_bg_image;
   background-repeat: repeat-y;
   position: relative;
-  background-size: 100%;
+  background-size: 110%;
   background-position: top center;
   font-family: $family3;
   // padding-top: 10vw;
@@ -362,8 +371,12 @@ export default {
     background-size: 100%;
     background-position: bottom right;
     position: relative;
-    padding: 5vw 0;
-    padding-bottom: 0;
+    padding: 0;
+    height: size(1137);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .order-title {
     font-family: $family1;
@@ -381,7 +394,7 @@ export default {
     display: inline-block;
   }
   .order-title-img {
-    width: 40vw;
+    width: size(297);
     margin: 3vh auto;
     //margin-bottom: 1vw;
 
@@ -467,7 +480,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
-  //  background: $order_input_bg;
+    //  background: $order_input_bg;
 
     &.house {
       margin-top: 50px;
@@ -539,7 +552,7 @@ export default {
       font-size: calc(100vw * 30 / 375);
     }
     .order-title-img {
-      width: 80vw;
+      width: size-m(120);
     }
 
     .order-subtitle {
@@ -552,10 +565,11 @@ export default {
     }
     .order-top {
       // background-image: $order_bg_image_m;
-      background-size: contain;
-      background-repeat: repeat;
+      background-size: 100%;
+      background-repeat: repeat-y;
       // top: 10vw;
       padding-bottom: 0;
+      height: size-m(750);
     }
     .order {
       width: 85% !important;

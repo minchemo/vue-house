@@ -1,8 +1,8 @@
 <template>
-  <div class="indigator" >
+  <div class="indigator">
     <div class="list-indigator">
       <div
-        :class="`dot ${index == indigatorIndex ? 'active' : '' }`"
+        :class="`dot ${index == indigatorIndex ? 'active' : ''}`"
         v-for="index in info.indigatorLength"
         :key="`indigator-${index}`"
         v-scroll-to="{ element: `#section${index}` }"
@@ -18,7 +18,7 @@
       :class="`contact-indigator`"
       v-scroll-to="{ element: `#section8` }"
       @click="setIndigator(info.indigatorLength)"
-    ><img src="@/projects/fs/all/contact-indigator.png" alt="藏美表參道"></div> -->
+    ><img src="@/projects/fs/all/contact-indigator.png" alt="仁愛旭"></div> -->
   </div>
 </template>
 
@@ -37,7 +37,7 @@
   }
 
   .dot {
-    font-size:16px;
+    font-size: 16px;
     width: 1em;
     height: 1em;
     margin-top: 0.9em;
@@ -50,12 +50,12 @@
       background: #fff;
     }
     &:hover {
-    border: 2px solid #fff;
+      border: 2px solid #fff;
     }
   }
 
   .contact-indigator {
-   /* background: rgb(239,204,125);
+    /* background: rgb(239,204,125);
 background: -moz-linear-gradient(-45deg,  rgba(239,204,125,1) 0%, rgba(255,255,255,1) 50%, rgba(239,204,125,1) 100%);
 background: -webkit-linear-gradient(-45deg,  rgba(239,204,125,1) 0%,rgba(255,255,255,1) 50%,rgba(239,204,125,1) 100%);
 background: linear-gradient(135deg,  rgba(239,204,125,1) 0%,rgba(255,255,255,1) 50%,rgba(239,204,125,1) 100%);
@@ -68,40 +68,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efcc7d', end
     line-height: 1.5;
     transition: all 0.3s;
     position: absolute;
-    right:0;
-    top:calc( 50% + 50vh - 1.3em);
+    right: 0;
+    top: calc(50% + 50vh - 1.3em);
     overflow: hidden;
     border-radius: 50%;
-    font-size: 120px;//用來調按鈕大小的
-    width:1em;
-    height:1em;
-    img{
-    position: absolute;
-    bottom: 0;right: 0;
-    width:100%;}
-    &:hover{     
-    color: #000;
+    font-size: 120px; //用來調按鈕大小的
+    width: 1em;
+    height: 1em;
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+    }
+    &:hover {
+      color: #000;
     }
     &::before {
-    content: '';
-    width: 40%;
-    height: 100%;
-    display: block;
-    background: #fff;
-    position: absolute;
-    transform: skewX(-20deg);
-    left: -10%;
-    opacity: 0;
-    top: 0;
-    z-index: 5;
-    transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
-  }
+      content: "";
+      width: 40%;
+      height: 100%;
+      display: block;
+      background: #fff;
+      position: absolute;
+      transform: skewX(-20deg);
+      left: -10%;
+      opacity: 0;
+      top: 0;
+      z-index: 5;
+      transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+    }
 
-  &:hover::before {
-    opacity: 1;
-    width: 90%;
-    left: 140%;
-  }
+    &:hover::before {
+      opacity: 1;
+      width: 90%;
+      left: 140%;
+    }
   }
 }
 
@@ -123,7 +125,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efcc7d', end
 
     .contact-indigator {
       width: 24px;
-      padding: 10px 4px;display: none;
+      padding: 10px 4px;
+      display: none;
     }
   }
 }

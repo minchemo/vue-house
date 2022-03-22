@@ -1,16 +1,10 @@
 <template>
   <div class="GodModView with-mask">
     <div class="view" ref="view">
-      <img
-        ref="viewImg"
-        class="view-img"
-        v-lazy
-        :temp="bgUrl"
-        alt="藏美表參道"
-      />
-      <!-- <div class="view-hand" ref="viewHand">
-        <img v-lazy :temp="swipeUrl" alt="藏美表參道" />
-      </div> -->
+      <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="仁愛旭" />
+      <div class="view-hand" ref="viewHand">
+        <img v-lazy :temp="swipeUrl" alt="仁愛旭" />
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +12,7 @@
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 .GodModView {
-    height: 100%;
+  height: 100%;
   .view {
     height: 100%;
     width: 100%;
@@ -32,7 +26,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: #0696;
+      background: transparent;
 
       img {
         position: absolute;
@@ -50,7 +44,7 @@
       }
     }
     .view-img {
-      height:100%;
+      height: 100%;
     }
   }
 }
@@ -58,7 +52,7 @@
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
-      height: size-m(312);
+      height: 100%;
       overflow: hidden;
       .view-hand {
         img {
@@ -70,7 +64,7 @@
       }
       .view-img {
         max-width: unset;
-        height: 100%;
+        height: 100% !important;
         width: auto;
       }
       //.view-img{height: 100%;}
@@ -92,7 +86,7 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "50" : "37.38", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/renai/s2/view.jpg"), //置換圖片路徑即可
+      bgUrl: require("@/projects/renai/s5/bg.jpg"), //置換圖片路徑即可
       swipeUrl: '', //置換圖片路徑即可
     };
   },
