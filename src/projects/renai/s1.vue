@@ -51,8 +51,8 @@
           data-aos-duration="2000"
           class="order-button"
           v-scroll-to="{
-            element: `.contact-info`,
-            offset: !isMobile ? 500 : 0,
+            element: `.contact`,
+            offset: !isMobile ? 0 : 0,
           }"
         >
           立即預約
@@ -211,9 +211,10 @@
         }
         .order-button {
           width: size-m(198.67);
-          height: size-m(22.7);
+          height: size-m(30);
           font-size: size-m(13);
           margin-top: size-m(20);
+          font-weight: 600;
         }
       }
     }
