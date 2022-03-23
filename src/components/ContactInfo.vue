@@ -2,7 +2,7 @@
   <div>
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <div class="logo-box">
+        <div class="logo-box" v-if="!isMobile">
           <div class="left">
             <img
               data-aos="fade"
@@ -29,13 +29,14 @@
             />
           </div>
         </div>
-        <!-- <img
+        <img
+          v-else
           v-lazy
           class="logo"
-          :temp="require('@/projects/renai/contact_logo.svg')"
+          :temp="require('@/projects/renai/contact_logo_m.png')"
           :alt="info.caseName"
           data-aos="zoom-in"
-        /> -->
+        />
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">
