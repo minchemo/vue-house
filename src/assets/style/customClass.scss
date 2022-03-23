@@ -137,7 +137,8 @@
         right: 0;
         margin: 0 auto;
         overflow: auto;
-        img {}
+        img {
+        }
     }
     .close {
         right: 10px;
@@ -150,9 +151,7 @@
     }
 }
 
-
 /* 螢幕尺寸標準 */
-
 
 /* 平板尺寸 */
 
@@ -219,5 +218,18 @@
     .work-c {
         text-align: center !important;
         margin-bottom: 12px;
+    }
+
+    .parallax-item {
+        animation: floatdd 5s infinite alternate-reverse ease-in-out;
+
+        @keyframes floatdd {
+            from {
+                transform: translateY(0) rotate(-1deg);
+            }
+            to {
+                transform: translateY(-20px) rotate(1deg);
+            }
+        }
     }
 }

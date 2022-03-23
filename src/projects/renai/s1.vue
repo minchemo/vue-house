@@ -19,7 +19,7 @@
           />
           <img
             data-aos="fade-up"
-            data-depth="0.6"
+            data-depth="0.2"
             class="bg2 parallax-item"
             src="@/projects/renai/s1/mainbg2.png"
             alt=""
@@ -42,10 +42,13 @@
           src="@/projects/renai/s1/title_m.svg"
           alt=""
           srcset=""
+          data-aos="fade-up"
+          data-aos-delay="500"
         />
         <div
           data-aos="fade-up"
-          data-aos-delay="500"
+          data-aos-delay="1000"
+          data-aos-duration="2000"
           class="order-button"
           v-scroll-to="{
             element: `.contact-info`,
@@ -65,11 +68,11 @@
 .s1 {
   position: relative;
   width: size(1920);
-  height: size(1372);
+  height: size(1080);
   background-size: 100%;
   background-position: bottom;
   background-color: #eb5c20;
-  padding-top: #{$nav_pc_height + size(138)};
+  padding-top: 80px;
   .main {
     position: relative;
     width: size(1490);
@@ -88,7 +91,7 @@
         position: absolute;
         z-index: 1;
         width: size(276.8);
-        animation: blur 2s;
+        animation: blur 4s;
         @keyframes blur {
           from {
             filter: blur(50px);
