@@ -34,6 +34,7 @@
     left: size(877);
     img {
       width: 100%;
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.7));
     }
   }
   .title {

@@ -5,7 +5,7 @@ export default [{
         subTitle: "",
         section: "contact-info",
         svgSrc: "",
-        offset: 500,
+        offset: 50,
         mobileOffset: 0,
     },
     {
@@ -13,9 +13,9 @@ export default [{
         //iconSrc:xrequire("@/assets/img/nav/1.png"),
         imgSrc: "",
         subTitle: "",
-        section: "contact-info",
+        section: "contact",
         svgSrc: "",
-        offset: 500,
+        offset: 0,
         mobileOffset: 0,
     },
     {
