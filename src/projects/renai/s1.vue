@@ -8,7 +8,7 @@
           alt=""
           srcset=""
         />
-        <div class="bg">
+        <div class="bg" v-if="!isMobile">
           <img
             data-aos="fade-down"
             data-depth="0.2"
@@ -21,6 +21,22 @@
             data-aos="fade-up"
             data-depth="0.2"
             class="bg2 parallax-item"
+            src="@/projects/renai/s1/mainbg2.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="bg" v-else>
+          <img
+            data-aos="fade-down"
+            class="bg1"
+            src="@/projects/renai/s1/mainbg1.png"
+            alt=""
+            srcset=""
+          />
+          <img
+            data-aos="fade-up"
+            class="bg2"
             src="@/projects/renai/s1/mainbg2.png"
             alt=""
             srcset=""

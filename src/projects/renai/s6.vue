@@ -299,11 +299,11 @@ export default {
         },
         {
           img: require("@/projects/renai/s6/2.jpg"),
-          caption: "富貴百代"
+          caption: "南京75"
         },
         {
           img: require("@/projects/renai/s6/3.jpg"),
-          caption: "南京75"
+          caption: "富貴百代"
         },
         {
           img: require("@/projects/renai/s6/4.jpg"),

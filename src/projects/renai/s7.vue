@@ -51,7 +51,7 @@
         alt=""
         srcset=""
       />
-      <div class="title" data-aos="fade" data-aos-delay="300">飽滿學餐</div>
+      <div class="title" data-aos="fade" data-aos-delay="300">飽滿學養</div>
     </div>
   </div>
 </template>
