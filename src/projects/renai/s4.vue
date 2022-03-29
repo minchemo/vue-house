@@ -21,7 +21,12 @@
         <div class="caption">{{ imgs[swiperIndex].caption }}</div>
       </div>
       <div class="right">
-        <div class="t1" data-aos="fade-up">台北城市的品牌<br />最美林蔭道</div>
+        <div class="t1" data-aos="fade-up" v-if="!isMobile">
+          台北城市的品牌<br />最美林蔭道
+        </div>
+        <div class="t1" data-aos="fade-up" v-else>
+          最美林蔭道<br />台北城市的品牌
+        </div>
         <div class="t2" data-aos="fade-up" data-aos-delay="300">
           仁愛路係北市三大林蔭大道之首，初規劃即城市中央十字綠軸，台北現代美學的起點。仁愛路兩端往來「總統府－北市府」兩大最高權力，橫貫城中、東區、信義等一級商圈，大道之上知名豪邸林立，〔仁愛旭〕居鄰富過三代、只進不出的望族濃蔭流域。
         </div>

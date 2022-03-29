@@ -21,7 +21,12 @@
         <div class="caption">{{ imgs[swiperIndex].caption }}</div>
       </div>
       <div class="right">
-        <div class="t1" data-aos="fade-up">只取城市最好<br />中星三十而立</div>
+        <div class="t1" data-aos="fade-up" v-if="!isMobile">
+          只取城市最好<br />中星三十而立
+        </div>
+        <div class="t1" data-aos="fade-up" v-else>
+          中星三十而立<br />只取城市最好
+        </div>
         <div class="t2" data-aos="fade-up" data-aos-delay="300">
           〔中星建設〕創業30週年，一路走來每件作品嚴謹挑選地段，確保建築價值歷久不衰，為居住之人打造保藏珍愛回憶的幸福寓所。<br /><br />
           ｜代表業績｜<br />
@@ -299,11 +304,11 @@ export default {
         },
         {
           img: require("@/projects/renai/s6/2.jpg"),
-          caption: "南京75"
+          caption: "富貴百代"
         },
         {
           img: require("@/projects/renai/s6/3.jpg"),
-          caption: "富貴百代"
+          caption: "南京75"
         },
         {
           img: require("@/projects/renai/s6/4.jpg"),

@@ -21,7 +21,12 @@
         <div class="caption">{{ imgs[swiperIndex].caption }}</div>
       </div>
       <div class="right">
-        <div class="t1" data-aos="fade-up">好學自然而然<br />知識信手拈來</div>
+        <div class="t1" data-aos="fade-up" v-if="!isMobile">
+          好學自然而然<br />知識信手拈來
+        </div>
+        <div class="t1" data-aos="fade-up" v-else>
+          知識信手拈來<br />好學自然而然
+        </div>
         <div class="t2" data-aos="fade-up" data-aos-delay="300">
           中正區為北市文教區代表，由頂尖志願台大醫學院領銜，百年名校比比皆是，學術、醫療資源堪稱全台之冠；除了國家級的博物館、圖書館、文學館環列左右，東門國小、弘道國中、成功高中、北一女中等12年國教優質學區亦在四周齊聚一堂。
         </div>

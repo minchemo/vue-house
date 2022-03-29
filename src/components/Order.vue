@@ -395,7 +395,7 @@ export default {
   }
   .order-title-img {
     width: size(297);
-    margin: 3vh auto;
+    margin: 5vh auto;
     //margin-bottom: 1vw;
 
     img {
@@ -417,7 +417,7 @@ export default {
     text-align: center;
     color: $order_subtitle_color;
     margin-bottom: 40px;
-    padding-bottom: 18px;
+    //padding-bottom: 18px;
     line-height: 1.5;
     font-weight: 500;
   }
@@ -569,7 +569,7 @@ export default {
       background-repeat: repeat-y;
       // top: 10vw;
       padding-bottom: 0;
-      height: size-m(750);
+      height: auto;
     }
     .order {
       width: 85% !important;

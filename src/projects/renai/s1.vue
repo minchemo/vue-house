@@ -189,6 +189,7 @@
         height: size-m(215);
         .main-text {
           position: absolute;
+          left: 41.6%;
           z-index: 1;
           width: size-m(71.75);
           animation: blur 2s;
