@@ -306,7 +306,7 @@ export default {
         },
         {
           img: require("@/projects/renai/s8/4.jpg"),
-          caption: "璞滿滿"
+          caption: "璞滿滿居酒屋"
         },
         {
           img: require("@/projects/renai/s8/5.jpg"),
