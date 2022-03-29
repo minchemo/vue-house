@@ -1,24 +1,25 @@
 /* html, body */
 
-$bg:  url("~@/projects/gp/bg.jpg") 0 ;
+$bg: none;
 
 /* font-family */
 
 
 /* 1主要字體  2次要字體  3表單字體  4黑體 */
 
-$family1: "Noto Sans TC",sans-serif;
-$family2: "Noto Sans TC",sans-serif;
-$family3: "Noto Sans TC",sans-serif;
-$family4: "Noto Sans TC",sans-serif;
+$family1: "Noto Sans TC",
+sans-serif;
+$family2: "Noto Sans TC",
+sans-serif;
+$family3: "Noto Sans TC",
+sans-serif;
+$family4: "Noto Sans TC",
+sans-serif;
 $selection_color: grey;
 
 /* navigation */
 
-$nav_bg: rgba(255,
-255,
-255,
-0.4);
+$nav_bg: rgba(255, 255, 255, 0.4);
 $nav_btn_color: #000;
 $nav_link_color: #000;
 $nav_link_subtitle_color: #000;
@@ -35,9 +36,7 @@ $loading_icon_color: #f7931e #f7931e transparent;
 /* astrictMask */
 
 $mask_bg_color: #fff;
-$mask_bg_image: linear-gradient( to top,
-rgba(0, 0, 0, 0.24),
-rgba(156, 30, 35, 0));
+$mask_bg_image: linear-gradient( to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
 $mask_color: #333;
 $mask_icon_color: #c82514;
 
@@ -45,8 +44,8 @@ $mask_icon_color: #c82514;
 
 // order
 $order_bg_color: #006868;
-$order_bg_image: url("~@/projects/gp/bg.jpg");
-$order_bg_image_m: url("~@/projects/gp/bg-mo.jpg");
+$order_bg_image: url("~@/projects/gp/order-bg.jpg");
+$order_bg_image_m: url("~@/projects/gp/order-bg-m.jpg");
 $order_title_color: #00b1c3;
 $order_subtitle_color: #006934;
 $order_input_label_color: #333333;
@@ -58,32 +57,38 @@ $order_input_focus_border: solid 1px #fff !important;
 $order_input_selected_color: solid 1px #fff !important;
 $order_check_desc_color: #000 !important;
 $order_check_span_color: #000 !important;
-$order_submit_bg: #46a76c;
-$order_submit_borderradius: 0px;
+$order_submit_bg: rgba(0,
+0,
+0,
+0.5);
+$order_submit_borderradius: 15px;
 $order_submit_color: #fff !important;
 $order_sumbit_disable_bg: #fff;
 // contactInfo
-$contact_bg: #46a76c;
-$contact_bg_m: #46a76c;
-$contact_shadow: 10px 10px 0 0 rgba(255,
-255,
-255,
-0.95);
-$contact_btn_border: inset 0 0 2px 2px #fff;
+$contact_bg: transparent;
+$contact_bg_m: transparent;
+$contact_shadow: unset;
+$contact_btn_border: inset 0 0 0px 0px #fff;
 $contact_btn_color: #fff;
 $contact_btn_icon: #fff;
-$contact_btn_bg: #46a76c;
+$contact_btn_bg: rgba(0,
+0,
+0,
+0.5);
 $contact_btn_hover_color: #46a76c;
 $contact_btn_hover_icon: #46a76c;
 $contact_btn_hover_bg: #fff;
-$contact_btn_border_radius: 50px;
-$contact_btn_addr_border_radius: 50px 0 0 50px;
-$contact_btn_gbtn_border_radius: 0 50px 50px 0;
+$contact_btn_border_radius: 15px;
+$contact_btn_addr_border_radius: 0px 0 0 0px;
+$contact_btn_gbtn_border_radius: 0 20px 20px 0;
 $contact_btn_addr_border_radius_m: 20px 20px 0 0 !important;
 $contact_btn_gbtn_border_radius_m: 0 0 20px 20px !important;
-$contact_google_btn_color: #000;
-$contact_google_btn_icon: #000;
-$contact_google_btn_bg: #fff000;
+$contact_google_btn_color: #fff;
+$contact_google_btn_icon: #fff;
+$contact_google_btn_bg: rgba(0,
+0,
+0,
+0.5);
 $contact_google_border: inset 0 0 0px 0px #333;
 $contact_google_hover_btn_color: #46a76c;
 $contact_google_hover_btn_icon: #46a76c;
@@ -91,10 +96,10 @@ $contact_google_hover_btn_bg: #fff;
 $contact_google_hover_border: inset 0 0 0px 0px #fff;
 // houseInfo
 $house_bg: url("~@/assets/img/order_bg.jpg");
-$house_title_color: #00b1c3;
-$house_border_color: #949494;
-$house_label_color: #46a76c;
-$house_desc_color: #4d4d4d;
+$house_title_color: #fff;
+$house_border_color: #fff;
+$house_label_color: #fff;
+$house_desc_color: #fff;
 // mobileNav
 $mobile_nav_background: #46a76c;
 $mobile_nav_color: #fff;

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="374" height="137" viewBox="0 0 374 137">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.125" x2="0.5" y2="0.709" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.085" stop-color="#fff" stop-opacity="0.035"/>
+      <stop offset="0.223" stop-color="#fff" stop-opacity="0.129"/>
+      <stop offset="0.396" stop-color="#fff" stop-opacity="0.282"/>
+      <stop offset="0.598" stop-color="#fff" stop-opacity="0.494"/>
+      <stop offset="0.821" stop-color="#fff" stop-opacity="0.765"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1267" data-name="Group 1267" transform="translate(0 -1334)">
+    <rect id="Rectangle_128" data-name="Rectangle 128" width="374" height="137" transform="translate(374 1471) rotate(180)" fill="url(#linear-gradient)"/>
+    <text id="黃金軸線_搶佔財富密碼" data-name="黃金軸線 搶佔財富密碼" transform="translate(85.229 1375.019)" font-size="20" font-family="NotoSansHant-Bold, Noto Sans T Chinese" font-weight="700"><tspan x="0" y="0">黃金軸線 搶佔財富密碼</tspan></text>
+  </g>
+</svg>

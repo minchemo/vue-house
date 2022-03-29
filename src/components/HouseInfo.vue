@@ -39,8 +39,8 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
- //background: url("../assets/img/housebg.jpg");
-  background:#FFF;
+  //background: url("../assets/img/housebg.jpg");
+  background: #000;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -80,7 +80,7 @@ export default {
   width: 500px;
   height: 30px;
   border-left: 4px solid $house_border_color;
-  padding-left:0.45em;
+  padding-left: 0.45em;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -131,7 +131,7 @@ export default {
     height: auto;
     margin-left: 20px;
     white-space: normal;
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .info {

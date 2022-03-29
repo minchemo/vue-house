@@ -2,7 +2,7 @@
   <div>
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <img
+        <!-- <img
           v-if="!isMobile"
           v-lazy
           class="logo"
@@ -15,7 +15,7 @@
           v-lazy
           :temp="require('@/assets/img/contact-logo.png')"
           :alt="info.caseName"
-        />
+        /> -->
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">
@@ -308,7 +308,7 @@ export default {
   width: 600px;
   height: 60px;
   font-size: 18px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
   font-weight: 500;
   box-shadow: $contact_btn_border;
   border-radius: $contact_btn_addr_border_radius;
@@ -359,7 +359,7 @@ export default {
     display: flex;
     width: 90% !important;
     height: 460px;
-    padding: 60px 0 80px;
+    padding: 0;
     min-width: unset;
 
     .logo {
@@ -413,14 +413,13 @@ export default {
     display: flex;
     width: 100%;
     height: auto;
-    padding: 40px;
+    padding: 0;
     transform: none;
     position: relative;
     margin: 10vw auto 0 auto;
     min-width: unset;
     background: $contact_bg_m;
     background-size: contain;
-    margin-top: 0;
 
     .logo {
       width: $contact_logo_mobile_width;

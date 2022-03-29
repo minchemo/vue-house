@@ -2,7 +2,7 @@
   <div class="GodModView with-mask">
     <div class="view" ref="view">
       <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
-      <div class="view-hand" ref="viewHand">
+      <div class="view-hand" ref="viewHand" v-if="isMobile">
         <img v-lazy :temp="swipeUrl" alt="" />
       </div>
     </div>
@@ -12,8 +12,10 @@
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 .GodModView {
+  height: 100%;
+  width: 100%;
   .view {
-    height: size(817);
+    height: 100%;
     width: 100%;
     overflow: hidden;
     cursor: ew-resize;
@@ -25,7 +27,6 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: #0696;
       img {
         position: absolute;
         top: size(150);
@@ -51,14 +52,17 @@
 @media only screen and (max-width: 767px) {
   .GodModView {
     .view {
-      height: size-m(604);
+      height: 100%;
       overflow: hidden;
       .view-hand {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
         img {
           position: absolute;
-          top: 25%;
-          width: size-m(40);
-          animation: move 2s alternate-reverse infinite ease-in-out;
+          top: 5%;
+          width: size-m(186.75);
+          animation: unset;
         }
       }
       .view-img {
@@ -77,14 +81,17 @@ import BScroll from "@better-scroll/core";
 
 export default {
   name: "GodModView",
+  props: [
+    'bgUrl'
+  ],
   data() {
     return {
       isMobile,
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: require("@/projects/cc/s3/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: require("@/projects/cc/s3/hand.png"), //置換圖片路徑即可
+      // bgUrl: require("@/projects/gp/s2/view.jpg"), //置換圖片路徑即可
+      swipeUrl: require("@/projects/gp/s2/swipe.svg"), //置換圖片路徑即可
     };
   },
   methods: {
@@ -108,7 +115,7 @@ export default {
           scrollX: true,
           scrollY: true,
           disableTouch: false,
-            disableMouse: false,
+          disableMouse: false,
           bindToWrapper: true,
           eventPassthrough: "vertical",
           bounce: false,

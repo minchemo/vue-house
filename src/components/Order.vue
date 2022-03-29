@@ -5,28 +5,11 @@
         <h3 class="title">{{order.title}}</h3>
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
-      <h3 class="order-title" v-html="order.title"></h3>
+      <!-- <h3 class="order-title" v-html="order.title"></h3> -->
       <!-- <div class="order-title-img">
         <img src="~@/assets/img/order-title.png" alt="" srcset="">
       </div> -->
-
-      <img
-        class="contact1 parallax-item"
-        data-depth="0.2"
-        src="@/projects/gp/contact.png"
-        alt=""
-        srcset=""
-      />
-      <img
-        class="contact2 parallax-item"
-        data-depth="0.4"
-        src="@/projects/gp/contact-2.png"
-        alt=""
-        srcset=""
-      />
-      <img class="wave" src="@/projects/gp/s1/wave.svg" alt="" srcset="" />
-
-      <div class="order-subtitle" v-html="order.subTitle"></div>
+      <!-- <div class="order-subtitle" v-html="order.subTitle"></div> -->
       <div class="order">
         <div class="form">
           <div class="group">
@@ -164,10 +147,11 @@
           >立即預約</el-button
         >
         <Loading :loading="isSubmit" :isOpacity="true" />
+
+        <ContactInfo />
       </div>
     </div>
 
-    <ContactInfo />
     <GoogleMap />
     <PolicyDialog
       :policyVisible="policyVisible"
@@ -393,7 +377,6 @@ export default {
 }
 .order-bg {
   //background-color: $order_bg_color;
-  //background-image: $order_bg_image;
   background-repeat: no-repeat;
   position: relative;
   background-size: 110vw auto;
@@ -413,18 +396,19 @@ export default {
     //background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
     //background: $order_bg_image no-repeat;
+    background-image: $order_bg_image;
     background-size: cover;
-    background-position: bottom right;
+    background-position: bottom center;
     position: relative;
-    padding: 5vw 0;
-   // padding-bottom: 500px;
+    // padding: 5vw 0;
+    padding-top: 100px;
   }
   .order-title {
     font-family: $family1;
     width: auto;
     padding-top: 20px;
     padding-bottom: 1vw;
-    font-weight:700;
+    font-weight: 700;
     line-height: 1.3;
     font-size: size(50);
     letter-spacing: size(10);
@@ -435,7 +419,7 @@ export default {
     margin: 0 auto;
     margin-bottom: size(20);
     display: inline-block;
- //   font-family: "Noto Serif TC", serif;
+    //   font-family: "Noto Serif TC", serif;
   }
   .order-title-img {
     width: 30vw;
@@ -472,7 +456,6 @@ export default {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding-bottom: 3rem;
     justify-content: space-between;
     z-index: 1;
   }
