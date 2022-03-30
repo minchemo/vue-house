@@ -55,6 +55,7 @@
       height: 100%;
       overflow: hidden;
       .view-hand {
+        pointer-events: none;
         img {
           position: absolute;
           top: 25%;

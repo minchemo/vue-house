@@ -1,20 +1,28 @@
 <template>
-  <div class="s5" ref="s5">
-    <div class="main" data-aos="fade-up" v-if="!isMobile"></div>
-    <div class="view" v-else>
-      <GodModView />
-    </div>
-    <div class="decor parallax-item" data-depth="0.25">
-      <img
-        class="d1"
-        data-aos="fade"
-        src="@/projects/renai/s5/decor1.svg"
-        alt=""
-        srcset=""
-      />
-      <div class="title" data-aos="fade" data-aos-delay="300">
-        人文地圖<br />仁愛旭
+  <div>
+    <div class="s5" ref="s5">
+      <div class="main" data-aos="fade-up" v-if="!isMobile"></div>
+      <div class="view" v-else @click="viewOpen = !viewOpen">
+        <GodModView />
       </div>
+      <div class="decor parallax-item" data-depth="0.25">
+        <img
+          class="d1"
+          data-aos="fade"
+          src="@/projects/renai/s5/decor1.svg"
+          alt=""
+          srcset=""
+        />
+        <div class="title" data-aos="fade" data-aos-delay="300">
+          人文地圖<br />仁愛旭
+        </div>
+      </div>
+    </div>
+    <div class="s5-view" v-if="isMobile" v-bind:class="{ active: viewOpen }">
+      <div class="close" @click="viewOpen = !viewOpen">
+        <img src="@/projects/renai/s5/close.svg" alt="" srcset="" />
+      </div>
+      <GodModView />
     </div>
   </div>
 </template>
@@ -28,6 +36,7 @@
     transition: all 0s;
   }
 }
+
 .s5 {
   position: relative;
   width: size(1920);
@@ -83,6 +92,32 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
+  .s5-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900000;
+    transform: translateX(-100vw);
+    transition: all 0.3s;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    .close {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      width: 50px;
+      height: 50px;
+      z-index: 1;
+      img {
+        width: 100%;
+      }
+    }
+  }
   .s5 {
     position: relative;
     width: size-m(375);
@@ -149,6 +184,7 @@ export default {
   data() {
     return {
       isMobile,
+      viewOpen: false
     };
   },
 

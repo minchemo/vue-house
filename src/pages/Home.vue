@@ -237,7 +237,7 @@ export default {
 .section,
 .section .fp-slide,
 .section .fp-tableCell {
-  will-change: transform, opacity;
+  // will-change: transform, opacity;
 }
 /*
 .section {
