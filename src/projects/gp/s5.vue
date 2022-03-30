@@ -27,17 +27,17 @@
       data-aos="fade-up"
       data-aos-delay="500"
     />
-    <div
-      class="box"
-      v-for="(img, i) in imgs"
-      :key="i"
-      v-bind:class="`box${i + 1}`"
-      v-bind:style="{ backgroundImage: `url('${img.url}')` }"
-      data-aos="fade"
-      :data-aos-delay="i * 200"
-    >
-      <div class="text" v-if="i == 0">READ LIFE</div>
-      <p>{{ img.caption }}</p>
+    <div data-aos="fade-up" data-aos-delay="1000">
+      <div
+        class="box"
+        v-for="(img, i) in imgs"
+        :key="i"
+        v-bind:class="`box${i + 1}`"
+        v-bind:style="{ backgroundImage: `url('${img.url}')` }"
+      >
+        <div class="text" v-if="i == 0">READ LIFE</div>
+        <p>{{ img.caption }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -59,7 +59,7 @@
     background-color: #eee;
     position: absolute;
     background-size: cover;
-    transition: all 0.4s;
+    transition: all 1s;
     box-shadow: size(5) size(5) 8px rgba(0, 0, 0, 0.6);
     &.box1 {
       width: size(935.52);
@@ -150,7 +150,7 @@
       }
       .text {
         position: absolute;
-        font-size: size(32);
+        font-size: size-m(16);
         left: size(15);
         top: size(15);
         color: #fff;
@@ -158,7 +158,7 @@
       }
       p {
         position: absolute;
-        font-size: size(22);
+        font-size: size-m(12);
         right: size(15);
         bottom: size(15);
         color: #fff;

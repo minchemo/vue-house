@@ -38,13 +38,13 @@
     }
     .t2 {
       font-size: size(48);
-      font-weight: 1000;
-      filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.9));
+      font-weight: 600;
+      filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.9));
     }
     .t3 {
       font-size: size(20);
       font-weight: 500;
-      filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.9));
+      filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.9));
     }
   }
   .caption {

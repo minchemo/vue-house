@@ -9,7 +9,12 @@
       </Splide>
     </div>
     <div class="box">
-      <div class="thumbnail" ref="thumbnail">
+      <div
+        class="thumbnail"
+        ref="thumbnail"
+        data-aos="fade-up"
+        data-aos-delay="0"
+      >
         <div
           class="thumbnail-item"
           :data-index="i"
@@ -17,8 +22,6 @@
           :key="i"
           @click="go(i)"
           v-bind:class="{ active: currentSlideIndex == i }"
-          data-aos="fade"
-          :data-aos-delay="i * 200"
         >
           <div
             class="img"
@@ -27,7 +30,7 @@
           <div class="text">{{ img.caption }}</div>
         </div>
       </div>
-      <div class="info" data-aos="fade" data-aos-delay="1500">
+      <div class="info" data-aos="fade" data-aos-delay="500">
         <h2>緩緩散步什麼都有</h2>
         <p>
           出門3分鐘抵A19正核心，各種美食名店、購物商場林立；綠意休閒出門就有；完整學區近距離就到，青埔最精華，一次擁抱！

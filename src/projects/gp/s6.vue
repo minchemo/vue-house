@@ -28,17 +28,17 @@
       data-aos-delay="500"
     />
 
-    <div
-      class="box"
-      v-for="(img, i) in imgs"
-      :key="i"
-      v-bind:class="`box${i + 1}`"
-      v-bind:style="{ backgroundImage: `url('${img.url}')` }"
-      data-aos="fade"
-      :data-aos-delay="i * 200"
-    >
-      <div class="text" v-if="i == 0">GREEN PARK HOUSE</div>
-      <p>{{ img.caption }}</p>
+    <div data-aos="fade-up" data-aos-delay="1000">
+      <div
+        class="box"
+        v-for="(img, i) in imgs"
+        :key="i"
+        v-bind:class="`box${i + 1}`"
+        v-bind:style="{ backgroundImage: `url('${img.url}')` }"
+      >
+        <div class="text" v-if="i == 0">GREEN PARK HOUSE</div>
+        <p>{{ img.caption }}</p>
+      </div>
     </div>
     <img class="wave" src="@/projects/gp/s6/wave.svg" alt="" srcset="" />
     <img
@@ -89,7 +89,7 @@
     background-color: #eee;
     position: absolute;
     background-size: cover;
-    transition: all 0.4s;
+    transition: all 1s;
     z-index: 2;
     box-shadow: size(5) size(5) 8px rgba(0, 0, 0, 0.6);
     &.box1 {
@@ -112,7 +112,7 @@
     }
     p {
       position: absolute;
-      font-size: size(22);
+      font-size: size-m(12);
       right: size(15);
       bottom: size(15);
       color: #fff;
@@ -120,7 +120,7 @@
     }
     .text {
       position: absolute;
-      font-size: size(32);
+      font-size: size-m(16);
       left: size(15);
       bottom: size(15);
       color: #fff;
@@ -217,12 +217,12 @@
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
       }
     }
-  .wave {
-    position: absolute;
-    left: 0;
-    top: size-m(-127);
-    height: size-m(75);
-  }
+    .wave {
+      position: absolute;
+      left: 0;
+      top: size-m(-127);
+      height: size-m(75);
+    }
   }
 }
 

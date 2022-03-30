@@ -31,7 +31,7 @@
         v-for="i in 7"
         :key="`t${i}`"
       />
-      <template v-if="isMobile">
+      <template v-if="!isMobile">
         <img
           class="hex-img"
           v-bind:class="{ active: selectedHex == i, [`t${i}`]: true }"
@@ -206,10 +206,8 @@
         }
       }
       .hex-img {
-        transform: scale(0);
-        &.active {
-          transform: scale(1);
-        }
+        display: unset;
+        transform: scale(1);
       }
     }
   }

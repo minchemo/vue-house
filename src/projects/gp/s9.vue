@@ -44,7 +44,7 @@
       data-aos="fade-up"
       data-aos-delay="800"
     />
-    <div class="timeline" data-aos="fade-left" :data-aos-delay="i * 200">
+    <div class="timeline" data-aos="fade-left">
       <div
         class="year"
         v-for="(item, i) in timelines"
@@ -59,11 +59,12 @@
       </div>
     </div>
     <div class="slide">
+      <div class="disabled-drag" v-if="activeYear.imgs.length == 1"></div>
       <Splide :options="slideOption" ref="splide">
         <SplideSlide
           class="slide-item"
           v-for="(img, i) in activeYear.imgs"
-          :key="i"
+          :key="`2${i}`"
         >
           <img :src="img.url" alt="" srcset="" />
           <p>{{ img.caption }}</p>
@@ -112,9 +113,7 @@
     position: absolute;
     width: 100%;
     top: size(379);
-    display: flex;
-    justify-content: flex-start;
-    padding-left: size(1077);
+    left: 0;
 
     .year {
       width: size(58.53);
@@ -126,10 +125,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: size(95);
-      transition: all 0.7s linear;
+      transition: all 0.25s linear;
+      position: absolute;
+      &:nth-child(2) {
+        left: size(1077);
+      }
+      &:nth-child(3) {
+        left: size(1234);
+      }
+      &:nth-child(4) {
+        left: size(1392);
+      }
+      &:nth-child(5) {
+        left: size(1549);
+      }
+      &:nth-child(6) {
+        left: size(1703);
+      }
       &.active {
-        position: absolute;
         left: size(128);
         background: #fff;
         border: size(2) solid #000;
@@ -153,7 +166,7 @@
       }
       &:hover {
         cursor: pointer;
-        border: size(2) solid #000;
+        transform: scale(1.1);
       }
     }
 
@@ -174,16 +187,24 @@
     position: absolute;
     width: size(1769);
     height: size(420);
-   // left: size(155);
-   right: 0;
+    // left: size(155);
+    right: 0;
     bottom: size(165);
+    .disabled-drag {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+    }
     .splide__track {
       overflow-y: visible;
       overflow: unset;
       .slide-item {
-     //   width: size(630);
+        //   width: size(630);
         height: size(380);
-       // margin-right: size(36);
+        // margin-right: size(36);
         img {
           width: 100%;
           box-shadow: size(5) size(5) 8px rgba(0, 0, 0, 0.6);
@@ -192,7 +213,8 @@
           display: block;
           font-size: size(30);
           line-height: 1.6;
-          text-align: right;padding: 0 0.5em 0 0;
+          text-align: right;
+          padding: 0 0.5em 0 0;
         }
       }
     }
@@ -246,24 +268,40 @@
       position: absolute;
       width: 100%;
       top: size-m(223);
-      display: flex;
-      justify-content: flex-start;
-      padding-left: size-m(328);
 
       .year {
         width: size-m(30.16);
         height: size-m(30.16);
         background: #488726;
         border-radius: 100%;
-        font-size: size(20);
+        font-size: size-m(12);
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: size-m(30.16);
-        transition: all 0.7s linear;
+        transition: all 0.25s linear;
         position: absolute;
-        right: -100%;
+        &:nth-child(2) {
+          left: size-m(329);
+          z-index: 10;
+        }
+        &:nth-child(3) {
+          left: size-m(329);
+          z-index: 9;
+        }
+        &:nth-child(4) {
+          left: size-m(329);
+          z-index: 8;
+        }
+        &:nth-child(5) {
+          left: size-m(329);
+          z-index: 7;
+        }
+        &:nth-child(6) {
+          left: size-m(329);
+          z-index: 6;
+        }
         &.active {
           position: absolute;
           left: size(128);
@@ -474,16 +512,13 @@ export default {
     setYear(year) {
       this.activeYear = year;
       setTimeout(() => {
-
         this.$refs.splide.splide.refresh()
         this.$refs.splide.splide.go(0)
-
       }, 0);
     },
     resetYear() {
       this.activeYear = this.timelines[0];
       setTimeout(() => {
-
         this.$refs.splide.splide.refresh()
         this.$refs.splide.splide.go(0)
       }, 0);
