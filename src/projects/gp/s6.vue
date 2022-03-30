@@ -64,7 +64,6 @@
 .section6 {
   width: 100%;
   height: size(1080);
-  background-image: url("~@/projects/gp/bg.png");
   background-size: cover;
   background-position: center;
   .banner {
@@ -157,7 +156,6 @@
   .section6 {
     width: 100%;
     height: size-m(599.5);
-    background-image: url("~@/projects/gp/bg.png");
     background-size: cover;
     background-position: center;
     .bar {
@@ -203,22 +201,28 @@
       }
       .text {
         position: absolute;
-        font-size: size(32);
-        left: size(15);
+        font-size: size-m(15);
+        left: size-m(5);
         top: unset;
-        bottom: size(15);
+        bottom: size-m(5);
         color: #fff;
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
       }
       p {
         position: absolute;
-        font-size: size(22);
-        right: size(15);
-        bottom: size(15);
+        font-size: size-m(13);
+        right: size-m(5);
+        bottom: size-m(5);
         color: #fff;
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
       }
     }
+  .wave {
+    position: absolute;
+    left: 0;
+    top: size-m(-127);
+    height: size-m(75);
+  }
   }
 }
 

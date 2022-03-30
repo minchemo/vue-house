@@ -42,7 +42,6 @@
 .section4 {
   width: 100%;
   height: size(1080);
-  background-image: url("~@/projects/gp/bg.png");
   background-size: cover;
   background-position: center;
   .slide {
@@ -133,7 +132,6 @@
   .section4 {
     width: 100%;
     height: size-m(667);
-    background-image: url("~@/projects/gp/bg.png");
     background-size: cover;
     background-position: center;
     .slide {

@@ -27,16 +27,6 @@
       data-aos="fade-up"
       data-aos-delay="500"
     />
-
-    <img
-      class="wave"
-      v-if="isMobile"
-      src="@/projects/gp/s5/wave.svg"
-      alt=""
-      srcset=""
-      data-aos="fade-up"
-      data-aos-delay="500"
-    />
     <div
       class="box"
       v-for="(img, i) in imgs"
@@ -57,7 +47,6 @@
 .section5 {
   width: 100%;
   height: size(1080);
-  background-image: url("~@/projects/gp/bg.png");
   background-size: cover;
   background-position: center;
   .title {
@@ -117,7 +106,6 @@
   .section5 {
     width: 100%;
     height: size-m(599.5);
-    background-image: url("~@/projects/gp/bg.png");
     background-size: cover;
     background-position: center;
     .bar {

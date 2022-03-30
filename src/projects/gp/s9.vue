@@ -86,7 +86,6 @@
 .section9 {
   width: 100%;
   height: size(1170);
-  background: url("~@/projects/gp/bg.png");
 
   .title {
     width: size(462.72);
@@ -175,23 +174,25 @@
     position: absolute;
     width: size(1769);
     height: size(420);
-    left: size(155);
+   // left: size(155);
+   right: 0;
     bottom: size(165);
     .splide__track {
       overflow-y: visible;
       overflow: unset;
       .slide-item {
-        width: size(630);
+     //   width: size(630);
         height: size(380);
-        margin-right: size(36);
+       // margin-right: size(36);
         img {
           width: 100%;
           box-shadow: size(5) size(5) 8px rgba(0, 0, 0, 0.6);
         }
         p {
           display: block;
-          font-size: size(32);
-          text-align: right;
+          font-size: size(30);
+          line-height: 1.6;
+          text-align: right;padding: 0 0.5em 0 0;
         }
       }
     }
@@ -388,6 +389,7 @@ export default {
         pagination: false,
         arrows: false,
         perPage: 3,
+        gap: 30,
         breakpoints: {
           767: {
             perPage: 1,

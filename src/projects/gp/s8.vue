@@ -62,7 +62,6 @@
 .section8 {
   width: 100%;
   height: size(1170);
-  background: url("~@/projects/gp/bg.png");
   .title {
     top: size(83);
     left: 0;
@@ -77,6 +76,7 @@
     width: size(1143.45);
     height: size(489);
     margin-top: size(80);
+    z-index: 3;
     .hex {
       width: 100%;
     }
@@ -135,10 +135,12 @@
       &.t1 {
         bottom: size(265);
         left: -#{size(228)};
+        display: none;
       }
       &.t2 {
         bottom: -#{size(131)};
         left: 0;
+        display: none;
       }
       &.t3 {
         bottom: size(394);
@@ -147,10 +149,12 @@
       &.t4 {
         bottom: size(394);
         left: size(437);
+        display: none;
       }
       &.t5 {
         bottom: -#{size(131)};
         right: 0;
+        display: none;
       }
       &.t6 {
         bottom: size(394);
@@ -175,7 +179,6 @@
   .section8 {
     width: 100%;
     height: size-m(667);
-    background: url("~@/projects/gp/bg.png");
     .title {
       top: size-m(35);
       left: 0;
@@ -186,8 +189,8 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%) rotate(90deg) scale(1.7);
-      margin-top: size-m(30);
+      transform: translate(-50%, -50%) rotate(90deg) scale(2.1);
+      margin-top: size-m(70);
       transform-origin: center center;
       .hex {
         width: 100%;
