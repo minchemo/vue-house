@@ -146,7 +146,8 @@
         font-size: size(44);
         background-color: #fff;
         border-radius: 5px;
-        display: flex;
+        display: block;
+        padding: 2.1% 0;
         align-items: center;
         justify-content: center;
         color: #eb5c20;
@@ -227,11 +228,12 @@
           height: auto;
         }
         .order-button {
-          width: size-m(198.67);
+          width: auto;
           height: size-m(30);
           font-size: size-m(13);
           margin-top: size-m(20);
           font-weight: 600;
+          padding: 4.1% 0;
         }
       }
     }
