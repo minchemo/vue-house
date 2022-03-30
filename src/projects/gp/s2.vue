@@ -82,7 +82,7 @@
       position: absolute;
       z-index: 2;
       width: size-m(314);
-      bottom: size-m(20);
+      bottom: size-m(15);
       left: 50%;
       margin-left: -#{size-m(157)};
       display: flex;
@@ -95,6 +95,7 @@
         font-size: size-m(20);
         font-weight: 500;
         line-height: 1.5;
+        margin-bottom: 5px;
       }
       p {
         text-align: left;
