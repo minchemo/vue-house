@@ -1,0 +1,142 @@
+@import './variableColor.scss';
+
+.el-dialog{
+  font-size:calc(100vw * 18 / 1920);
+}
+.el-dialog__title {
+  font-size:2em !important;
+  line-height:2 !important;
+}
+.el-dialog__body{
+  font-size:1em !important;
+}
+.policy-dialog-content {
+  width:61.25em;
+  min-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  text-align: justify;
+  //overflow-y: scroll;
+  .title {
+    font-size: 1.5em;
+    font-family: 'Noto Sans TC', serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.6;
+    margin-bottom:0.83em;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size:1em;
+    font-family: 'Noto Sans TC', serif;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.6;
+  }
+
+  h3 {
+    color: rgb(47, 171, 209);
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-top: 1.25em;
+    margin-bottom:0.62em;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  li {
+    margin-bottom:0.937em;
+    line-height: 1.6;
+  }
+}
+
+.el-dialog__headerbtn .el-dialog__close {
+  font-size: 40px;
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+ .el-dialog{
+    font-size:calc(100vw * 20 / 375);
+}
+  .policy-dialog-content {
+    min-width: 100%;
+    width: 100% !important;
+    height: 80% !important;
+    padding:0 !important;
+    margin: auto;
+  }
+}
+
+
+.dialog-content {
+  width: auto;
+  height:19em;
+  //border-radius: 5px;
+  //margin: -30px 0;
+  background-color: $mobile_dialog_bg;
+
+  svg {
+    width: 80px !important;
+    color: $mobile_dialog_icon !important;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: block;
+    height: 105px;
+  }
+
+  .callIcon {
+    width: 80px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .messageIcon {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    display: block;
+  }
+
+  .mapIcon {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    display: block;
+  }
+
+  .dialog-desc {
+    font-size: 16px;
+    text-align: center;
+    color: $mobile_dialog_desc;
+    margin-bottom: 15px;
+  }
+
+  .info {
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .cta {
+    display: block;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    background-color: $mobile_dialog_submit_bg;
+    color: $mobile_dialog_submit_color;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+}

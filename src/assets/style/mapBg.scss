@@ -1,0 +1,94 @@
+@import "./function.scss";
+@keyframes swing {
+  0% {
+    transform: translateX(20px);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+.map {
+  position: relative;
+  z-index: 1;
+  .map-bg {
+    width: 100vw;
+    height: auto;
+    position: relative;
+  }
+
+  .hand {
+    display: none;
+  }
+
+  img {
+    display: block;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .map {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100vw;
+    height:100%;
+    .map-bg {
+      width: auto;
+      height:100%;
+    }
+
+    .map-text {
+      width: auto;
+      height:100%;
+    }
+
+    img {
+      width: auto;
+      height: 100vh;
+    }
+
+    .mask {
+      width:250vw;
+      height: 112px;
+      background-color: rgba(29, 0, 72, 0.57);
+      // animation: swing 2.5s ease-in-out 0s infinite;
+      left: 35vw;
+      position: absolute;
+      top: 45%;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.5s;
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .hand {
+      position: absolute;
+      z-index: 2;
+      width: size-m(87) !important;
+      height: auto !important;
+      left: size-m(505);
+      right: 0;
+      margin: 0 auto;
+      top: 50% !important;
+      display: block;
+      animation: swing 2.5s ease-in-out 0s infinite;
+      opacity: 0;
+      transition: opacity 0.5s;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
