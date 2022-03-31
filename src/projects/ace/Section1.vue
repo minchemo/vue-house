@@ -21,9 +21,21 @@
         data-aos="fade-down"
       />
       <img
+        src="./s1/top.gif"
+        :alt="`${info.caseName}_logo`"
+        class="logo screen"
+        data-aos="fade-down"
+      />
+      <img
         src="./s1/bottom.png"
         :alt="`${info.caseName}_title`"
         class="title"
+        data-aos="fade-up"
+      />
+      <img
+        src="./s1/bottom.gif"
+        :alt="`${info.caseName}_title`"
+        class="title screen"
         data-aos="fade-up"
       />
       <div class="overlay"></div>
@@ -145,6 +157,8 @@
   @include img_r_pc(329.4, 240, 792);
   top: calc(50% - 15vw);
   z-index: 5;
+}
+.screen {mix-blend-mode: screen;
 }
 
 .p2 {
