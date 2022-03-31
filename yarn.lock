@@ -6013,6 +6013,7 @@
     "is-gif" "^3.0.0"
 
 "imagemin-webp-webpack-plugin-2@https://github.com/minchemo/imagemin-webp-webpack-plugin":
+  "integrity" "sha512-6JHV1wU+eq4bax6XX/FpRuhEhMTAMBSj+urQiOEX1FFq/WJecGChsbxKmnJWOt+Qldob65QDhb/7hpB+9RgArA=="
   "resolved" "git+ssh://git@github.com/minchemo/imagemin-webp-webpack-plugin.git#802644752f7069795d07f0f8b49a1963cdfe05e6"
   "version" "3.3.6"
   dependencies:

@@ -56,7 +56,7 @@
     .d1 {
       position: absolute;
       left: -#{size(130)};
-      top: size(85);
+      bottom: size(130);
       width: size(557);
     }
     .d2 {
@@ -71,7 +71,7 @@
       writing-mode: vertical-rl;
       color: #fff;
       z-index: 1;
-      top: size(140);
+      bottom: size(200);
       left: size(160);
       text-align: center;
       line-height: 1.5;
