@@ -147,6 +147,7 @@
         font-size: size-m(15);
         top: size-m(72);
         left: size-m(45);
+        bottom: auto;
       }
     }
   }
