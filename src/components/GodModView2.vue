@@ -100,13 +100,16 @@ export default {
       const offset = this.autoScrollViewOffset;
 
       $(imgEl).on("load", () => {
+        if (isMobile) {
+          return
+        }
         let bs = new BScroll(this.$refs.view, {
           probeType: 2,
           scrollX: true,
           scrollY: true,
           disableTouch: false,
           disableMouse: false,
-          bindToWrapper: true,
+          bindToWrapper: false,
           eventPassthrough: "vertical",
           bounce: false,
         });
