@@ -112,7 +112,7 @@
     }
     p {
       position: absolute;
-      font-size: size-m(12);
+      font-size: size(22);
       right: size(15);
       bottom: size(15);
       color: #fff;
@@ -120,7 +120,7 @@
     }
     .text {
       position: absolute;
-      font-size: size-m(16);
+      font-size: size(32);
       left: size(15);
       bottom: size(15);
       color: #fff;
