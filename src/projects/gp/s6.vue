@@ -25,10 +25,10 @@
       alt=""
       srcset=""
       data-aos="fade-up"
-      data-aos-delay="500"
+      data-aos-delay="800"
     />
 
-    <div data-aos="fade-up" data-aos-delay="1000">
+    <div data-aos="fade" data-aos-delay="500">
       <div
         class="box"
         v-for="(img, i) in imgs"
