@@ -22,7 +22,7 @@
       <div class="close" @click="viewOpen = !viewOpen">
         <img src="@/projects/renai/s5/close.svg" alt="" srcset="" />
       </div>
-      <GodModView />
+      <GodModView2 />
     </div>
   </div>
 </template>
@@ -168,6 +168,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 import Parallax from "parallax-js";
 import GodModView from "@/components/GodModView.vue";
+import GodModView2 from "@/components/GodModView2.vue";
 
 export default {
   name: "s5",
@@ -175,7 +176,8 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    GodModView
+    GodModView,
+    GodModView2
   },
   directives: {
     swiper: directive

@@ -53,7 +53,7 @@
   .GodModView {
     .view {
       height: 100%;
-      overflow: hidden;
+      overflow: auto;
       .view-hand {
         pointer-events: none;
         img {
@@ -65,7 +65,7 @@
       }
       .view-img {
         max-width: unset;
-        height: 100% !important;
+        height: 150% !important;
         width: auto;
       }
       //.view-img{height: 100%;}
@@ -87,7 +87,7 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "50" : "37.38", // 鳥瞰圖比例 高÷寬×100
-      bgUrl: isMobile ? require("@/projects/renai/s5/bg_m.jpg"):require("@/projects/renai/s5/bg.jpg"), //置換圖片路徑即可
+      bgUrl: require("@/projects/renai/s5/bg.jpg"), //置換圖片路徑即可
       swipeUrl: '', //置換圖片路徑即可
     };
   },
