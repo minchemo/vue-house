@@ -33,9 +33,10 @@
         v-for="(img, i) in imgs"
         :key="i"
         v-bind:class="`box${i + 1}`"
+        :data-id="i + 1"
         v-bind:style="{ backgroundImage: `url('${img.url}')` }"
       >
-        <div class="text" v-if="i == 0">READ LIFE</div>
+        <div class="text" v-if="i + 1 == round">READ LIFE</div>
         <p>{{ img.caption }}</p>
       </div>
     </div>
@@ -179,45 +180,57 @@
 
 <script>
 // @ is an alias to /src
-import { isMobile } from '@/utils'
+import { isMobile } from "@/utils";
 
 export default {
-  name: 'section5',
-  components: {
-  },
+  name: "section5",
+  components: {},
   data() {
     return {
       isMobile,
+      round: 1,
       imgs: [
         {
-          url: require('@/projects/gp/s5/a.jpg'),
-          caption: '大園高中'
+          url: require("@/projects/gp/s5/a.jpg"),
+          caption: "大園高中",
         },
         {
-          url: require('@/projects/gp/s5/b.jpg'),
-          caption: '芭里國小'
+          url: require("@/projects/gp/s5/b.jpg"),
+          caption: "芭里國小",
         },
         {
-          url: require('@/projects/gp/s5/c.jpg'),
-          caption: '青埔國中'
+          url: require("@/projects/gp/s5/c.jpg"),
+          caption: "青埔國中",
         },
       ],
-    }
+    };
   },
 
-  methods: {
-  },
+  methods: {},
 
-  created() { },
+  created() {},
 
   mounted() {
     setInterval(() => {
-      let old = this.imgs;
+      if (this.round == 1) {
+        $(".section5 .box[data-id=1]").removeClass("box1").addClass("box3");
+        $(".section5 .box[data-id=2]").removeClass("box2").addClass("box1");
+        $(".section5 .box[data-id=3]").removeClass("box3").addClass("box2");
 
-      this.imgs.unshift(old[2])
-      this.imgs.splice(-1)
+        this.round++;
+      } else if (this.round == 2) {
+        $(".section5 .box[data-id=1]").removeClass("box3").addClass("box2");
+        $(".section5 .box[data-id=2]").removeClass("box1").addClass("box3");
+        $(".section5 .box[data-id=3]").removeClass("box2").addClass("box1");
 
+        this.round++;
+      } else if (this.round == 3) {
+        $(".section5 .box[data-id=1]").removeClass("box2").addClass("box1");
+        $(".section5 .box[data-id=2]").removeClass("box3").addClass("box2");
+        $(".section5 .box[data-id=3]").removeClass("box1").addClass("box3");
+        this.round = 1;
+      }
     }, 3000);
-  }
-}
+  },
+};
 </script>
