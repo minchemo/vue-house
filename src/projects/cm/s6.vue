@@ -416,9 +416,8 @@ export default {
               ? require("@/projects/cm/s6/d/03_m.jpg")
               : require("@/projects/cm/s6/d/03.jpg"),
             require("@/projects/cm/s6/d/04_m.jpg"),
-            require("@/projects/cm/s6/d/05_m.jpg"),
           ],
-          mobileOnly: [3, 4],
+          mobileOnly: [3],
         },
         {
           img: [
