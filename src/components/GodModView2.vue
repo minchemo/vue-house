@@ -54,6 +54,7 @@
     .view {
       height: 100%;
       overflow: auto;
+      background: #fef9e3;
       .view-hand {
         pointer-events: none;
         img {
