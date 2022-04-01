@@ -39,8 +39,11 @@
         data-aos="fade-up"
       />
       <div class="overlay"></div>
-      <video preload autoplay muted loop playsinline poster="" id="video">
+      <video preload autoplay muted loop playsinline poster="" id="video" v-if="!isMobile">
         <source src="https://h35.banner.tw/ace/bg_video.mp4" type="video/mp4" />
+      </video>
+      <video preload autoplay muted loop playsinline poster="" id="video" v-if="isMobile">
+        <source src="https://h35.banner.tw/ace/bg_750_1500.mp4" type="video/mp4" />
       </video>
       <!-- <img src="./s1/l.gif" data-aos="fade" :alt="`${info.caseName}_bg`" class="img4"> -->
       <!-- <img
@@ -258,7 +261,7 @@
     width: 100vw;
     min-height: auto;
     height: calc(100vh - 63px);
-    min-height: sizem(604);
+    min-height: sizem(750);
     max-height: sizem(750);
     background-size: cover;
     background-attachment: scroll;
@@ -267,12 +270,13 @@
       height: 20vw;
       z-index: 2;
     }
+    /*
     &::before{
-      top:calc(50% - 67vw);
+      top:calc(50% - 81vw);
     background: linear-gradient(to bottom, rgba(0,0,0,1) 2%,rgba(0,0,0,0) 100%);
     }
     &::after{
-      top:calc(50% + 47vw);
+      top:calc(50% + 61vw);
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
     }
 
@@ -283,8 +287,9 @@
     
     top: 50%;left: 0;
     transform: translateY(-50%);
-    height:sizem(500);
+    height:sizem(604);
     }
+    */
   }
   .img2 {
     width: 109vw;
