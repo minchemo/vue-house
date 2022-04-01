@@ -26,7 +26,7 @@
         "hamburgers": "^1.1.3",
         "hammerjs": "^2.0.8",
         "html-loader": "^0.5.5",
-        "imagemin-webp-webpack-plugin-2": "https://github.com/minchemo/imagemin-webp-webpack-plugin",
+        "imagemin-webp-webpack-plugin-2": "git+https://github.com/minchemo/imagemin-webp-webpack-plugin.git",
         "interactjs": "^1.10.11",
         "is-in-viewport": "^3.0.4",
         "jquery": "^3.5.1",
