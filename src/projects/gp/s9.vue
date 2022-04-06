@@ -44,7 +44,7 @@
       data-aos="fade-up"
       data-aos-delay="800"
     />
-    <div class="timeline" data-aos="fade-left">
+    <div class="timeline" data-aos="fade-left" ref="timeline">
       <div
         class="year"
         v-for="(item, i) in timelines"
@@ -89,6 +89,7 @@
   height: size(1170);
 
   .title {
+    pointer-events: none;
     width: size(462.72);
     position: absolute;
     left: size(157);
@@ -114,6 +115,7 @@
     width: 100%;
     top: size(379);
     left: 0;
+    z-index: 10;
 
     .year {
       width: size(58.53);
@@ -268,6 +270,7 @@
       position: absolute;
       width: 100%;
       top: size-m(223);
+      height: 80px;
 
       .year {
         width: size-m(30.16);
@@ -414,6 +417,7 @@
 import { isMobile } from '@/utils'
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
+import Hammer from "hammerjs";
 
 export default {
   name: 'section9',
@@ -438,6 +442,7 @@ export default {
         }
       },
       activeYear: 0,
+      currentYeadIdx: 0,
       timelines: [
         {
           year: 2012,
@@ -527,6 +532,31 @@ export default {
   created() {
     this.activeYear = this.timelines[0];
   },
-  mounted() { }
+  mounted() {
+    const self = this;
+    const stage = this.$refs.timeline;
+    var mc = new Hammer.Manager(stage);
+    var Swipe = new Hammer.Swipe();
+    mc.add(Swipe);
+
+    mc.on('swipeleft', function (e) {
+      if (self.currentYeadIdx >= 4) {
+        self.currentYeadIdx = 5;
+      } else {
+
+        self.currentYeadIdx += 1;
+      }
+      self.setYear(self.timelines[self.currentYeadIdx])
+    });
+
+    mc.on('swiperight', function (e) {
+      if (self.currentYeadIdx <= 1) {
+        self.currentYeadIdx = 0
+      } else {
+        self.currentYeadIdx -= 1;
+      }
+      self.setYear(self.timelines[self.currentYeadIdx])
+    });
+  }
 }
 </script>

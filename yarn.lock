@@ -929,9 +929,9 @@
   resolved "https://registry.npmjs.org/@splidejs/splide/-/splide-2.4.21.tgz"
   integrity sha512-LdIwSnmNsGybCCnA3QG2dOeRv/rQl46jf7FflXxMGX0ADYWyL6UJHWJbMZvHBi5I67uRJY1ga/W+CvJ39nH26A==
 
-"@splidejs/vue-splide@0.3.5":
+"@splidejs/vue-splide@^0.3.5":
   version "0.3.5"
-  resolved "https://registry.npmjs.org/@splidejs/vue-splide/-/vue-splide-0.3.5.tgz"
+  resolved "https://registry.yarnpkg.com/@splidejs/vue-splide/-/vue-splide-0.3.5.tgz#375d3c615fd88c612f46b8029b4ad2007ad6991b"
   integrity sha512-eI4Kl2v+yAGKMVa9MtfIIPPZtplTfKPx4rCJlZqfethl3tCOGQwL9MxSyLk6bUhl31aOuClxmXQv8O5ubU8fNQ==
   dependencies:
     "@splidejs/splide" "^2.4.13"
@@ -5353,7 +5353,7 @@ hamburgers@^1.1.3:
 
 hammerjs@^2.0.8:
   version "2.0.8"
-  resolved "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
   integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
 
 handle-thing@^2.0.0:
