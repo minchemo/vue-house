@@ -199,7 +199,7 @@
     display: inline-block;
     padding: 0.8em 0.2em;
     color: #fff;
-    z-index: 1;
+    z-index: 10;
     background: #c39f6d;
     border-radius: 0.5em;
     position: relative;
