@@ -23,8 +23,7 @@
       /> -->
       <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329.4 456.2"
         :alt="`${info.caseName}_logo`"
-        class="logo"
-        data-aos="fade-down"
+        class="logo op"
         loading="lazy" >
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-23.138" y1="350.0665" x2="358.862" y2="60.0665">
 	<stop  offset="0" style="stop-color:#DCB33B"/>
@@ -155,16 +154,14 @@
       <img
         src="./s1/top.gif"
         :alt="`${info.caseName}_logo`"
-        class="logo screen"
-        data-aos="fade-down"
+        class="logo screen op"
         loading="lazy"
       />
 
       
 <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.4 114"
 :alt="`${info.caseName}_title`"
- class="title"
- data-aos="fade-down"
+ class="title op"
  loading="lazy"
 >
 <rect x="0.3" y="78.2" class="st3" width="129.2" height="34.9"/>
@@ -250,8 +247,7 @@
       <img
         src="./s1/bottom.gif"
         :alt="`${info.caseName}_title`"
-        class="title screen"
-        data-aos="fade-down"
+        class="title screen op"
         loading="lazy"
       />
       <div class="overlay"></div>
