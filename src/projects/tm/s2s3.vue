@@ -95,8 +95,8 @@
 /* 螢幕尺寸標準 */
 .s2s3 {
   width: 100%;
-  // height: size(1800);
-  height: size(900);
+  height: size(1800);
+  // height: size(900);
   background-image: url("~@/projects/tm/s2s3/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,24 +108,22 @@
     position: relative;
     width: 100%;
     height: size(900);
-    
   }
-  .tree{
+  .tree {
     position: absolute;
     z-index: 1;
-    top:calc(50% + ( -255 - 1080 * 0.5) * 100vw / 1920);
+    top: calc(50% + (-255 - 1080 * 0.5) * 100vw / 1920);
     left: -10px;
     width: 72.5%;
   }
 
   .s2 {
     position: relative;
-    // display: flex;
-    display: none;
+    display: flex;
+    // display: none;
     align-items: center;
     justify-content: center;
     .title {
-      
       width: size(410);
       margin-right: size(80);
       p {
@@ -302,8 +300,8 @@
 @media only screen and (max-width: 767px) {
   .s2s3 {
     width: 100%;
-    // height: size-m(1098);
-    height: size-m(759);
+    height: size-m(1098);
+    // height: size-m(759);
     background-image: url("~@/projects/tm/s2s3/bg_m.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -315,8 +313,8 @@
     }
 
     .s2 {
-      // display: flex;
-      display: none;
+      display: flex;
+      // display: none;
       align-items: center;
       justify-content: center;
       flex-direction: column-reverse;
@@ -481,19 +479,19 @@ export default {
       videos: [
         {
           title: "生活機能示意影片標題",
-          embed: embedParams("https://www.youtube.com/embed/gSsuHdi15mI"),
+          embed: embedParams("https://www.youtube.com/embed/kqz_8-ik4qE"),
           bg: require("@/projects/tm/s2s3/videobg.jpg"),
         },
-        {
-          title: "樣品屋示意影片標題",
-          embed: embedParams("https://www.youtube.com/embed/svQOxQde0bg"),
-          bg: require("@/projects/tm/s2s3/videobg.jpg"),
-        },
-        {
-          title: "建設介紹示意影片標題",
-          embed: embedParams("https://www.youtube.com/embed/8JJ101D3knE"),
-          bg: require("@/projects/tm/s2s3/videobg.jpg"),
-        },
+        // {
+        //   title: "樣品屋示意影片標題",
+        //   embed: embedParams(""),
+        //   bg: require("@/projects/tm/s2s3/videobg.jpg"),
+        // },
+        // {
+        //   title: "建設介紹示意影片標題",
+        //   embed: embedParams("https://www.youtube.com/embed/kqz_8-ik4qE"),
+        //   bg: require("@/projects/tm/s2s3/videobg.jpg"),
+        // },
       ],
       currentImgIndex: 0,
       imgs: [
