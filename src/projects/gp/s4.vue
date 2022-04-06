@@ -14,6 +14,7 @@
         ref="thumbnail"
         data-aos="fade-up"
         data-aos-delay="0"
+        id="thumbnail-box"
       >
         <div
           class="thumbnail-item"
@@ -229,13 +230,13 @@
 
 <script>
 // @ is an alias to /src
-import { isMobile } from '@/utils'
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
-import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
+import { isMobile } from "@/utils";
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
 import scrollIntoView from "scroll-into-view";
 
 export default {
-  name: 'section4',
+  name: "section4",
   components: {
     Splide,
     SplideSlide,
@@ -244,6 +245,7 @@ export default {
     return {
       isMobile,
       slideOption: {
+        type: "loop",
         rewind: true,
         autoWidth: true,
         autoHeight: true,
@@ -252,63 +254,76 @@ export default {
         autoplay: true,
         interval: 3000,
         perPage: 1,
-        autoWidth: true
+        autoWidth: true,
       },
       imgs: [
         {
-          url: !isMobile ? require("@/projects/gp/s4/1.jpg") : require("@/projects/gp/s4/1_m.jpg"),
-          caption: 'XPARK'
+          url: !isMobile
+            ? require("@/projects/gp/s4/1.jpg")
+            : require("@/projects/gp/s4/1_m.jpg"),
+          caption: "XPARK",
         },
         {
-          url: !isMobile ? require("@/projects/gp/s4/2.jpg") : require("@/projects/gp/s4/2_m.jpg"),
-          caption: '桃園國際棒球場'
+          url: !isMobile
+            ? require("@/projects/gp/s4/2.jpg")
+            : require("@/projects/gp/s4/2_m.jpg"),
+          caption: "桃園國際棒球場",
         },
         {
-          url: !isMobile ? require("@/projects/gp/s4/3.jpg") : require("@/projects/gp/s4/3_m.jpg"),
-          caption: '華泰名品城'
+          url: !isMobile
+            ? require("@/projects/gp/s4/3.jpg")
+            : require("@/projects/gp/s4/3_m.jpg"),
+          caption: "華泰名品城",
         },
         {
-          url: !isMobile ? require("@/projects/gp/s4/4.jpg") : require("@/projects/gp/s4/4_m.jpg"),
-          caption: '環球購物中心'
+          url: !isMobile
+            ? require("@/projects/gp/s4/4.jpg")
+            : require("@/projects/gp/s4/4_m.jpg"),
+          caption: "環球購物中心",
         },
         {
-          url: !isMobile ? require("@/projects/gp/s4/5.jpg") : require("@/projects/gp/s4/5_m.jpg"),
-          caption: 'IKEA'
+          url: !isMobile
+            ? require("@/projects/gp/s4/5.jpg")
+            : require("@/projects/gp/s4/5_m.jpg"),
+          caption: "IKEA",
         },
         {
-          url: !isMobile ? require("@/projects/gp/s4/6.jpg") : require("@/projects/gp/s4/6_m.jpg"),
-          caption: '星巴克'
+          url: !isMobile
+            ? require("@/projects/gp/s4/6.jpg")
+            : require("@/projects/gp/s4/6_m.jpg"),
+          caption: "星巴克",
         },
         {
-          url: !isMobile ? require("@/projects/gp/s4/7.jpg") : require("@/projects/gp/s4/7_m.jpg"),
-          caption: '新光影城'
+          url: !isMobile
+            ? require("@/projects/gp/s4/7.jpg")
+            : require("@/projects/gp/s4/7_m.jpg"),
+          caption: "新光影城",
         },
       ],
-      currentSlideIndex: 0
-    }
+      currentSlideIndex: 0,
+    };
   },
 
   methods: {
     go(i) {
-      this.$refs.slide.go(i)
+      this.$refs.slide.go(i);
     },
     onSplideMove(splide, realIndex) {
+      const self = this;
       this.currentSlideIndex = realIndex;
 
       setTimeout(() => {
-
-        $('.section4 .thumbnail').animate({ scrollLeft: $(`.section4 .thumbnail-item[data-index=${realIndex}]`).position().left }, 100);
-
-        // scrollIntoView($(`.section4 .thumbnail-item[data-index=${realIndex}]`)[0])
-
-        // .scrollIntoView({ behavior: "smooth", inline: "nearest" });
+        self.$scrollTo(
+          $(`.section4 .thumbnail-item[data-index=${realIndex}]`)[0],
+          100,
+          { container: "#thumbnail-box", force: true, y: false, x: true }
+        );
       }, 100);
-    }
+    },
   },
 
-  created() { },
+  created() {},
 
-  mounted() {
-  }
-}
+  mounted() {},
+};
 </script>

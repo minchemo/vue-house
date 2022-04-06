@@ -5723,9 +5723,9 @@ imagemin-gif2webp@^3.0.0:
     gif2webp-bin "^3.0.0"
     is-gif "^3.0.0"
 
-"imagemin-webp-webpack-plugin-2@https://github.com/minchemo/imagemin-webp-webpack-plugin":
+"imagemin-webp-webpack-plugin-2@git+https://github.com/minchemo/imagemin-webp-webpack-plugin.git":
   version "3.3.6"
-  resolved "git+ssh://git@github.com/minchemo/imagemin-webp-webpack-plugin.git#802644752f7069795d07f0f8b49a1963cdfe05e6"
+  resolved "git+https://github.com/minchemo/imagemin-webp-webpack-plugin.git#802644752f7069795d07f0f8b49a1963cdfe05e6"
   dependencies:
     imagemin "^7.0.1"
     imagemin-gif2webp "^3.0.0"

@@ -250,30 +250,31 @@
 </style>
 
 <script>
-
 // @ is an alias to /src
-import { isMobile } from '@/utils'
+import { isMobile } from "@/utils";
 
 export default {
-  name: 'section1',
+  name: "section1",
 
   data() {
     return {
-      isMobile
-    }
+      isMobile,
+    };
   },
 
   methods: {},
 
-  created() { },
+  created() {},
 
   mounted() {
     const elem = this.$refs.parallax;
 
-    var parallaxInstance = new Parallax(elem, {
-      relativeInput: true,
-      selector: '.parallax-item'
-    });
-  }
-}
+    if (!isMobile) {
+      var parallaxInstance = new Parallax(elem, {
+        relativeInput: true,
+        selector: ".parallax-item",
+      });
+    }
+  },
+};
 </script>

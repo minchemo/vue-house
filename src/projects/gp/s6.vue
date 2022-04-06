@@ -25,18 +25,19 @@
       alt=""
       srcset=""
       data-aos="fade-up"
-      data-aos-delay="500"
+      data-aos-delay="800"
     />
 
-    <div data-aos="fade-up" data-aos-delay="1000">
+    <div data-aos="fade" data-aos-delay="500">
       <div
         class="box"
         v-for="(img, i) in imgs"
         :key="i"
         v-bind:class="`box${i + 1}`"
+        :data-id="i + 1"
         v-bind:style="{ backgroundImage: `url('${img.url}')` }"
       >
-        <div class="text" v-if="i == 0">GREEN PARK HOUSE</div>
+        <div class="text" v-if="i + round == 4 || i == 0 && round == 1">GREEN PARK HOUSE</div>
         <p>{{ img.caption }}</p>
       </div>
     </div>
@@ -95,13 +96,13 @@
     &.box1 {
       width: size(877.44);
       height: size(523.68);
-      bottom: size(120);
+      top: size(437);
       left: size(581);
     }
     &.box2 {
       width: size(364.32);
       height: size(223.68);
-      bottom: size(420);
+      top: size(438);
       left: size(200);
     }
     &.box3 {
@@ -112,7 +113,7 @@
     }
     p {
       position: absolute;
-      font-size: size-m(12);
+      font-size: size(22);
       right: size(15);
       bottom: size(15);
       color: #fff;
@@ -120,7 +121,7 @@
     }
     .text {
       position: absolute;
-      font-size: size-m(16);
+      font-size: size(32);
       left: size(15);
       bottom: size(15);
       color: #fff;
@@ -237,45 +238,57 @@
 
 <script>
 // @ is an alias to /src
-import { isMobile } from '@/utils'
+import { isMobile } from "@/utils";
 
 export default {
-  name: 'section6',
-  components: {
-  },
+  name: "section6",
+  components: {},
   data() {
     return {
       isMobile,
+      round: 1,
       imgs: [
         {
-          url: require('@/projects/gp/s6/a.jpg'),
-          caption: '青塘園'
+          url: require("@/projects/gp/s6/a.jpg"),
+          caption: "青塘園",
         },
         {
-          url: require('@/projects/gp/s6/b.jpg'),
-          caption: '青埔足球場'
+          url: require("@/projects/gp/s6/b.jpg"),
+          caption: "青埔足球場",
         },
         {
-          url: require('@/projects/gp/s6/c.jpg'),
-          caption: '橫山書法公園'
+          url: require("@/projects/gp/s6/c.jpg"),
+          caption: "橫山書法公園",
         },
       ],
-    }
+    };
   },
 
-  methods: {
-  },
+  methods: {},
 
-  created() { },
+  created() {},
 
   mounted() {
     setInterval(() => {
-      let old = this.imgs;
+      if (this.round == 1) {
+        $(".section6 .box[data-id=1]").addClass("box2").removeClass("box1");
+        $(".section6 .box[data-id=2]").addClass("box3").removeClass("box2");
+        $(".section6 .box[data-id=3]").addClass("box1").removeClass("box3");
 
-      this.imgs.unshift(old[2])
-      this.imgs.splice(-1)
+        this.round++;
+      } else if (this.round == 2) {
+        $(".section6 .box[data-id=1]").addClass("box3").removeClass("box2");
+        $(".section6 .box[data-id=2]").addClass("box1").removeClass("box3");
+        $(".section6 .box[data-id=3]").addClass("box2").removeClass("box1");
 
+        this.round++;
+      } else if (this.round == 3) {
+        $(".section6 .box[data-id=1]").addClass("box1").removeClass("box3");
+        $(".section6 .box[data-id=2]").addClass("box2").removeClass("box1");
+        $(".section6 .box[data-id=3]").addClass("box3").removeClass("box2");
+        this.round = 1;
+      }
     }, 3000);
-  }
-}
+  },
+};
 </script>

@@ -208,6 +208,14 @@
       .hex-img {
         display: unset;
         transform: scale(1);
+        &.t6 {
+          bottom: size(394);
+          right: 0;
+        }
+        &.t7 {
+          bottom: -#{size(130)};
+          right: 0;
+        }
       }
     }
   }
@@ -224,21 +232,19 @@
 
 <script>
 // @ is an alias to /src
-import { isMobile } from '@/utils'
+import { isMobile } from "@/utils";
 
 export default {
-  name: 'section8',
-  components: {
-  },
+  name: "section8",
+  components: {},
   data() {
     return {
       isMobile,
-      selectedHex: 0
-    }
+      selectedHex: 0,
+    };
   },
-  methods: {
-  },
-  created() { },
-  mounted() { }
-}
+  methods: {},
+  created() {},
+  mounted() {},
+};
 </script>
