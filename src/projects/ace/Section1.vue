@@ -17,33 +17,37 @@
       <img
         src="./s1/top.png"
         :alt="`${info.caseName}_logo`"
-        class="logo op"
+        class="logo"
+        data-aos="fade-down"
         loading="lazy"
       />
       <img
         src="./s1/top.gif"
         :alt="`${info.caseName}_logo`"
-        class="logo screen op"
+        class="logo screen"
+        data-aos="fade-down"
         loading="lazy"
       />
       <img
         src="./s1/bottom.png"
         :alt="`${info.caseName}_title`"
-        class="title op"
+        class="title"
+        data-aos="fade-down"
         loading="lazy"
       />
       <img
         src="./s1/bottom.gif"
         :alt="`${info.caseName}_title`"
-        class="title screen op"
+        class="title screen"
+        data-aos="fade-down"
         loading="lazy"
       />
       <div class="overlay"></div>
       <video loading="lazy" preload autoplay muted loop playsinline poster="" id="video" v-if="!isMobile">
         <source src="https://h35.banner.tw/ace/EgIQDkt.mp4" type="video/mp4" />
       </video>
-      <video loading="lazy" preload autoplay muted loop playsinline poster="" id="video" v-if="isMobile">
-        <source src="https://h35.banner.tw/ace/EgIQDkt.mp4" type="video/mp4" />
+      <video preload autoplay muted loop playsinline poster="" id="video" v-if="isMobile">
+        <source src="https://h35.banner.tw/ace/bg_750_1500.mp4" type="video/mp4" />
       </video>
       <!-- <img src="./s1/l.gif" data-aos="fade" :alt="`${info.caseName}_bg`" class="img4"> -->
       <!-- <img
