@@ -1,9 +1,9 @@
 <template>
   <div class="section3">
-    <img src="./s3/bg.png" :alt="`${info.caseName}_雙和買房`" class="bg" v-if="isPC">
+    <img loading="lazy" src="./s3/bg.png" :alt="`${info.caseName}_雙和買房`" class="bg" v-if="isPC">
     <!--<img src="./mo/b.png" :alt="`${info.caseName}_bg`" class="bg" v-if="isMobile"> -->
     <div class="bg" v-if="isMobile"></div>
-    <img src="./s3/img_r.png" :alt="`${info.caseName}_雙和買房`" class="img_r" data-aos="fade-down" data-aos-delay="100" @click="showDialog">
+    <img loading="lazy" src="./s3/img_r.png" :alt="`${info.caseName}_雙和買房`" class="img_r" data-aos="fade-down" data-aos-delay="100" @click="showDialog">
     <div class="icon" @click="showDialog"></div>
     <div class="txt">
     <div class="title" data-aos="fade-down" data-aos-delay="100">
@@ -15,12 +15,12 @@
     <div class="desc flex-c" data-aos="fade-down" data-aos-delay="300">
       富貴線正中心 一高二捷三快五商圈六大橋
     </div>
-    <img src="./s3/img_l.jpg" :alt="`${info.caseName}_img_l`" class="img_l" data-aos="fade-down" data-aos-delay="400">
+    <img loading="lazy" src="./s3/img_l.jpg" :alt="`${info.caseName}_img_l`" class="img_l" data-aos="fade-down" data-aos-delay="400">
     </div>
     <transition name="swipe-fade" mode="out-in">
       <div class="dialog" v-if="isDialog">
-        <img class="close" @click="isDialog = false" src="./all/close.png" alt="close">
-        <img src="./s3/img_r.png" :alt="`${info.caseName}_img_r`" class="dialog-map" data-aos="fade-down" data-aos-delay="100">
+        <img loading="lazy" class="close" @click="isDialog = false" src="./all/close.png" alt="close">
+        <img loading="lazy" src="./s3/img_r.png" :alt="`${info.caseName}_img_r`" class="dialog-map" data-aos="fade-down" data-aos-delay="100">
       </div>
     </transition>
   </div>

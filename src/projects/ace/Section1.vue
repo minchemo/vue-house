@@ -17,32 +17,32 @@
       <img
         src="./s1/top.png"
         :alt="`${info.caseName}_logo`"
-        class="logo"
-        data-aos="fade-down"
+        class="logo op"
+        loading="lazy"
       />
       <img
         src="./s1/top.gif"
         :alt="`${info.caseName}_logo`"
-        class="logo screen"
-        data-aos="fade-down"
+        class="logo screen op"
+        loading="lazy"
       />
       <img
         src="./s1/bottom.png"
         :alt="`${info.caseName}_title`"
-        class="title"
-        data-aos="fade-up"
+        class="title op"
+        loading="lazy"
       />
       <img
         src="./s1/bottom.gif"
         :alt="`${info.caseName}_title`"
-        class="title screen"
-        data-aos="fade-up"
+        class="title screen op"
+        loading="lazy"
       />
       <div class="overlay"></div>
-      <video preload autoplay muted loop playsinline poster="" id="video" v-if="!isMobile">
+      <video loading="lazy" preload autoplay muted loop playsinline poster="" id="video" v-if="!isMobile">
         <source src="https://h35.banner.tw/ace/bg_video.mp4" type="video/mp4" />
       </video>
-      <video preload autoplay muted loop playsinline poster="" id="video" v-if="isMobile">
+      <video loading="lazy" preload autoplay muted loop playsinline poster="" id="video" v-if="isMobile">
         <source src="https://h35.banner.tw/ace/bg_750_1500.mp4" type="video/mp4" />
       </video>
       <!-- <img src="./s1/l.gif" data-aos="fade" :alt="`${info.caseName}_bg`" class="img4"> -->
@@ -156,10 +156,18 @@
     transform: scale(1.05, 1.2) rotate(4deg);
   }
 }
+.op{
+  animation: op 1s .2s forwards;opacity:0;
+}
 
+
+@keyframes op {
+  to {opacity:1;transform: translate(0,0);
+  }
+}
 .logo {
   @include img_r_pc(329.4, 240, 792);
-  top: calc(50% - 15vw);
+  top: calc(50% - 15vw);transform: translateY(-10%);
   z-index: 5;
 }
 .screen {mix-blend-mode: screen;
@@ -240,7 +248,7 @@
   text-align: center;
   color: #685335;
   white-space: nowrap;
-  z-index: 5;
+  z-index: 5;transform: translateY(10%);
 }
 
 @media only screen and (max-width: 1440px) {

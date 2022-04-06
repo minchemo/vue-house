@@ -1,6 +1,6 @@
 <template>
   <div class="section7">
-    <img src="./s7/bg.png" :alt="`${info.caseName}_bgimg`" class="bg-img" v-if="isPC">
+    <img loading="lazy" src="./s7/bg.png" :alt="`${info.caseName}_bgimg`" class="bg-img" v-if="isPC">
     <!-- <img src="./mo/w2.png" :alt="`${info.caseName}_bgimg`" class="bg" v-if="isMobile"> -->
     <div class="bg" v-if="isMobile"></div>
     <div class="txt1" v-if="isPC">
@@ -8,23 +8,23 @@
       <svg version="1.1" id="svgbg1" class="svgbg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 963 704">
 <path fill="#BC926249" d="M926.9,703.9H141.1c-19.5,0-35.3-15.8-35.3-35.3L0.5,35.4c0-19.5,15.8-35.3,35.3-35.3h891.4 c19.5,0,35.3,15.8,35.3,35.3v633.2C962.5,688.1,946.4,703.9,926.9,703.9z"/>
 </svg>
-      <img src="./s7/1.png" :alt="`${info.caseName}_img1`" class="img1" data-aos="fade" data-aos-delay="100">
-      <img src="./s7/2.png" :alt="`${info.caseName}_img2`" class="img2" data-aos="fade" data-aos-delay="300">
-      <img src="./s7/3.png" :alt="`${info.caseName}_img3`" class="img3" data-aos="fade" data-aos-delay="500">
+      <img loading="lazy" src="./s7/1.png" :alt="`${info.caseName}_img1`" class="img1" data-aos="fade" data-aos-delay="100">
+      <img loading="lazy" src="./s7/2.png" :alt="`${info.caseName}_img2`" class="img2" data-aos="fade" data-aos-delay="300">
+      <img loading="lazy" src="./s7/3.png" :alt="`${info.caseName}_img3`" class="img3" data-aos="fade" data-aos-delay="500">
       <div data-aos="fade" data-aos-delay="700" class="img4">
-      <img src="./s7/4.png" :alt="`${info.caseName}_img4`"></div>
-      <img src="./s7/5.png" :alt="`${info.caseName}_img5`" class="img5" data-aos="fade" data-aos-delay="900">
+      <img loading="lazy" src="./s7/4.png" :alt="`${info.caseName}_img4`"></div>
+      <img loading="lazy" src="./s7/5.png" :alt="`${info.caseName}_img5`" class="img5" data-aos="fade" data-aos-delay="900">
     </div>
     <div class="txt1" v-if="isMobile">
       <h3 class="title">全棟鋼骨結構</h3>
-      <img src="./s7/1m.png" :alt="`${info.caseName}_img1`" class="img1" data-aos="fade" data-aos-delay="100">
+      <img loading="lazy" src="./s7/1m.png" :alt="`${info.caseName}_img1`" class="img1" data-aos="fade" data-aos-delay="100">
     </div>
     <div class="txt2">
       <h3 class="title">內外柱灌漿</h3>
       <svg v-if="isPC" version="1.1" id="svgbg2" class="svgbg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 599 704">
 <path fill="#BC926249" d="M467.5,703.9H35.8c-19.5,0-35.3-15.8-35.3-35.3V35.4c0-19.5,15.8-35.3,35.3-35.3h527.4 c19.5,0,35.3,15.8,35.3,35.3l-95.7,633.2C502.8,688.1,487,703.9,467.5,703.9z"/>
 </svg>
-      <img src="./s7/6.png" :alt="`${info.caseName}_img6`" class="img6" data-aos="fade" data-aos-delay="1100">
+      <img loading="lazy" src="./s7/6.png" :alt="`${info.caseName}_img6`" class="img6" data-aos="fade" data-aos-delay="1100">
     </div>
   </div>
 </template>

@@ -10,7 +10,7 @@
         漾團隊
       </h3>
       <div class="item-container flex-ac flex-jb wrap">
-        <img class="item-img" :src="item[0]" alt="" v-for="item in item_list" :key="item[0]">
+        <img loading="lazy" class="item-img" :src="item[0]" alt="" v-for="item in item_list" :key="item[0]">
       </div>
     </div>
   </div>

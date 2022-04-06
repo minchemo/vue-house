@@ -1,7 +1,7 @@
 <template>
   <div class="section4">
-    <img src="./s4/bg.jpg" :alt="`${info.caseName}_bgimg`" class="bg-img" v-if="isPC">
-    <img src="./s4/bg.png" :alt="`${info.caseName}_bgimg`" class="bg-img" v-if="isPC">
+    <img loading="lazy" src="./s4/bg.jpg" :alt="`${info.caseName}_bgimg`" class="bg-img" v-if="isPC">
+    <img loading="lazy" src="./s4/bg.png" :alt="`${info.caseName}_bgimg`" class="bg-img" v-if="isPC">
     <div v-else>
       <Map :bgSrc="require('./s4/bg.jpg')" :bgText="require('./s4/bg.png')" :hand="require('./mo/4/小手.png')">
       </Map>

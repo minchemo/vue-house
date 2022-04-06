@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="section92">
-      <img src="./s9/透天_t.jpg" alt="" class="bg-img" v-if="isPC">
-      <img src="./mo/9/透天_t.jpg" alt="" class="bg-img" v-if="isMobile">
+      <img loading="lazy" src="./s9/透天_t.jpg" alt="" class="bg-img" v-if="isPC">
+      <img loading="lazy" src="./mo/9/透天_t.jpg" alt="" class="bg-img" v-if="isMobile">
     </div>
   </div>
 </template>

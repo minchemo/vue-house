@@ -1,6 +1,6 @@
 <template>
   <div class="section5">
-    <img src="./s5/bg.png" :alt="`${info.caseName}_bgimg`" class="bg" v-if="isPC">
+    <img loading="lazy" src="./s5/bg.png" :alt="`${info.caseName}_bgimg`" class="bg" v-if="isPC">
     <!-- <img src="./mo/w2.png" :alt="`${info.caseName}_bgimg`" class="bg" v-if="isMobile"> -->
     <div class="bg" v-if="isMobile"></div>
     <div class="txt">
@@ -24,7 +24,7 @@
       <div @click="showDialog(3)" data-aos="fade-down" data-aos-delay="700"><img src="./s5/4.jpg" :alt="`${info.caseName}_img4`"></div>
     </div>
     <div :class="`dialog ${isDialog ? 'active' : ''}`">
-      <img src="./all/close.png" :alt="`${info.caseName}_close`" class="dialog-close" @click="isDialog = false">
+      <img loading="lazy" src="./all/close.png" :alt="`${info.caseName}_close`" class="dialog-close" @click="isDialog = false">
       <div class="dialog-content">
         <div class="dialog-toptitle" v-html="dialogData.toptitle"></div>
         <h2 class="dialog-title" v-html="dialogData.title"></h2>
@@ -33,22 +33,22 @@
         <div class="dialog-desc" v-html="dialogData.desc"></div>
         <div class="dialog-work" v-html="dialogData.work"></div>
         <div class="dialog-imgs" v-if="isPC">
-          <div><img :src="dialogData.imgs[0].img" :alt="`${info.caseName}_img`">
+          <div><img loading="lazy" :src="dialogData.imgs[0].img" :alt="`${info.caseName}_img`">
             <div class="dialog-name" v-html="dialogData.imgs[0].name"></div>
           </div>
-          <div><img :src="dialogData.imgs[1].img" :alt="`${info.caseName}_img`">
+          <div><img loading="lazy" :src="dialogData.imgs[1].img" :alt="`${info.caseName}_img`">
             <div class="dialog-name" v-html="dialogData.imgs[1].name"></div>
           </div>
 
         </div>
         <div class="dialog-imgs" v-if="isMobile">
           <div class="img-item">
-            <img :src="dialogData.imgs[0].img" :alt="`${info.caseName}_img`">
+            <img loading="lazy" :src="dialogData.imgs[0].img" :alt="`${info.caseName}_img`">
             <div class="dialog-name" v-html="dialogData.imgs[0].name"></div>
           </div>
 
           <div class="img-item">
-            <img :src="dialogData.imgs[1].img" :alt="`${info.caseName}_img`">
+            <img loading="lazy" :src="dialogData.imgs[1].img" :alt="`${info.caseName}_img`">
             <div class="dialog-name" v-html="dialogData.imgs[1].name"></div>
           </div>
         </div>

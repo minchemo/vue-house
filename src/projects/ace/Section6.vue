@@ -1,9 +1,9 @@
 <template>
   <div class="section6">
-    <img src="./s6/bg.png" :alt="`${info.caseName}_bgimg`" class="bg-img" v-if="isPC">
+    <img loading="lazy" src="./s6/bg.png" :alt="`${info.caseName}_bgimg`" class="bg-img" v-if="isPC">
     <!-- <img src="./mo/b.png" :alt="`${info.caseName}_bgimg`" class="bg" v-if="isMobile"> -->
     <div class="bg" v-if="isMobile"></div>
-    <img src="./s6/img.jpg" :alt="`${info.caseName}_img`" class="img">
+    <img loading="lazy" src="./s6/img.jpg" :alt="`${info.caseName}_img`" class="img">
     <div class="txt">
     <div class="title" data-aos="fade-down" data-aos-delay="100">
       結構王牌
@@ -18,7 +18,7 @@
       <li data-aos="fade-down" data-aos-delay="600">業界領導品牌加持 101同級萬磅混凝土</li>
       <li data-aos="fade-down" data-aos-delay="700">地基深扎岩盤 達到最佳耐震力</li>
     </ul>
-    <img src="./s6/logoall.png" :alt="`${info.caseName}_logoall`" class="logoall" data-aos="fade-down" data-aos-delay="800">
+    <img loading="lazy" src="./s6/logoall.png" :alt="`${info.caseName}_logoall`" class="logoall" data-aos="fade-down" data-aos-delay="800">
     </div>
   </div>
 </template>

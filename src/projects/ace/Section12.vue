@@ -12,7 +12,7 @@
     ></iframe> -->
     <div class="video_box">
       <div v-if="!isMobile" :id="`youtube-player-${randomId}`" ref="player" class="video-ifame"></div>
-      <video muted loop autoplay playsinline class="video" v-else>
+      <video loading="lazy" muted loop autoplay playsinline class="video" v-else>
         <source :src="videoUrl" type="video/mp4">
         <!-- <source src="movie.ogg" type="video/ogg"> -->
         Your browser does not support the video tag.
@@ -289,8 +289,8 @@ export default {
     videoUrl() {
       const index = Math.floor(Math.random() * 2)
       const mobileLinks = [
-        'https://i.imgur.com/L2Jyobm.mp4',
-        'https://i.imgur.com/EgIQDkt.mp4',
+        'https://h35.banner.tw/ace/L2Jyobm.mp4',
+        'https://h35.banner.tw/ace/EgIQDkt.mp4',
       ]
       return mobileLinks[index]
     },
