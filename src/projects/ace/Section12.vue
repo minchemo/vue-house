@@ -289,8 +289,8 @@ export default {
     videoUrl() {
       const index = Math.floor(Math.random() * 2)
       const mobileLinks = [
-        'https://h35.banner.tw/ace/L2Jyobm.mp4',
-        'https://h35.banner.tw/ace/EgIQDkt.mp4',
+        'https://i.imgur.com/L2Jyobm.mp4',
+        'https://i.imgur.com/EgIQDkt.mp4',
       ]
       return mobileLinks[index]
     },
