@@ -40,10 +40,10 @@
       />
       <div class="overlay"></div>
       <video loading="lazy" preload autoplay muted loop playsinline poster="" id="video" v-if="!isMobile">
-        <source src="https://h35.banner.tw/ace/bg_video.mp4" type="video/mp4" />
+        <source src="https://h35.banner.tw/ace/EgIQDkt.mp4" type="video/mp4" />
       </video>
       <video loading="lazy" preload autoplay muted loop playsinline poster="" id="video" v-if="isMobile">
-        <source src="https://h35.banner.tw/ace/bg_750_1500.mp4" type="video/mp4" />
+        <source src="https://h35.banner.tw/ace/EgIQDkt.mp4" type="video/mp4" />
       </video>
       <!-- <img src="./s1/l.gif" data-aos="fade" :alt="`${info.caseName}_bg`" class="img4"> -->
       <!-- <img
