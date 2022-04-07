@@ -522,6 +522,7 @@ export default {
       }, 0);
     },
     resetYear() {
+      this.currentYeadIdx = 0;
       this.activeYear = this.timelines[0];
       setTimeout(() => {
         this.$refs.splide.splide.refresh()
