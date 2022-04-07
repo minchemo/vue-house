@@ -8,8 +8,8 @@
             :key="i"
             @click="currentVideoIndex = i"
             v-bind:class="{ active: currentVideoIndex == i }"
+            v-html=" item.title"
           >
-            {{ item.title }}
           </p>
         </div>
         <div v-else class="title" data-aos="fade-up">
@@ -18,9 +18,11 @@
             alt=""
             srcset=""
             @click="prevVideo"
+            
           />
-          <p>
-            {{ videos[currentVideoIndex].title }}
+          <p
+          v-html=" videos[currentVideoIndex].title"
+          >
           </p>
           <img
             src="~@/projects/tm/s2s3/next.svg"
@@ -124,16 +126,17 @@
     align-items: center;
     justify-content: center;
     .title {
-      width: size(410);
+      width: size(480);
       margin-right: size(80);
       p {
         width: 100%;
-        font-size: size(40);
-        font-weight: 300;
+        font-size: size(30);
+        font-weight: 400 !important;
         color: #fff;
         border-bottom: 1px solid #c3a672;
         padding: size(40) 0;
         transform: all 0.5s;
+        line-height: 1.5em;
 
         &:last-child {
           border: 0;
@@ -326,7 +329,7 @@
         margin-top: size-m(20);
         padding: 0 size-m(15);
         p {
-          font-size: size-m(20);
+          font-size: size-m(14);
           padding: 0;
           border: 0;
         }
@@ -478,20 +481,20 @@ export default {
       currentVideoIndex: 0,
       videos: [
         {
-          title: "力麒天沐力麒建設董事長郭淑珍｜土地的共鳴，油然而生的天母使命感",
+          title: "【力麒天沐】<br>力麒建設董事長 郭淑珍<br>土地的共鳴，油然而生的天母使命感",
           embed: embedParams("https://www.youtube.com/embed/kqz_8-ik4qE"),
           bg: require("@/projects/tm/s2s3/videobg.jpg"),
         },
-        // {
-        //   title: "樣品屋示意影片標題",
-        //   embed: embedParams(""),
-        //   bg: require("@/projects/tm/s2s3/videobg.jpg"),
-        // },
-        // {
-        //   title: "建設介紹示意影片標題",
-        //   embed: embedParams("https://www.youtube.com/embed/kqz_8-ik4qE"),
-        //   bg: require("@/projects/tm/s2s3/videobg.jpg"),
-        // },
+        //{
+        //  title: "樣品屋示意影片標題",
+        //  embed: embedParams(""),
+        //  bg: require("@/projects/tm/s2s3/videobg.jpg"),
+        //},
+         //{
+         //  title: "建設介紹示意影片標題",
+         // embed: embedParams("https://www.youtube.com/embed/kqz_8-ik4qE"),
+         // bg: require("@/projects/tm/s2s3/videobg.jpg"),
+         //},
       ],
       currentImgIndex: 0,
       imgs: [
