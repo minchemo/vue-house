@@ -478,7 +478,7 @@ export default {
       currentVideoIndex: 0,
       videos: [
         {
-          title: "生活機能示意影片標題",
+          title: "力麒天沐力麒建設董事長郭淑珍｜土地的共鳴，油然而生的天母使命感",
           embed: embedParams("https://www.youtube.com/embed/kqz_8-ik4qE"),
           bg: require("@/projects/tm/s2s3/videobg.jpg"),
         },
