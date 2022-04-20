@@ -344,8 +344,14 @@ export default {
         {
           img: [
             isMobile
-              ? require("@/projects/cm/s9/a/24_m.jpg")
-              : require("@/projects/cm/s9/a/24.jpg"),
+              ? require("@/projects/cm/s9/a/24-1m.jpg")
+              : require("@/projects/cm/s9/a/24-1.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/a/24-2m.jpg")
+              : require("@/projects/cm/s9/a/24-2.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/a/24-3m.jpg")
+              : require("@/projects/cm/s9/a/24-3.jpg"),
           ],
           mobileOnly: [],
         },
