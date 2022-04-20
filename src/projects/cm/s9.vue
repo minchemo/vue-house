@@ -352,22 +352,61 @@ export default {
               isMobile
               ? require("@/projects/cm/s9/a/24-3m.jpg")
               : require("@/projects/cm/s9/a/24-3.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/a/24-4m.jpg")
+              : require("@/projects/cm/s9/a/24-4.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/a/24-5m.jpg")
+              : require("@/projects/cm/s9/a/24-5.jpg"),
           ],
           mobileOnly: [],
         },
         {
           img: [
             isMobile
-              ? require("@/projects/cm/s9/b/28_m.jpg")
-              : require("@/projects/cm/s9/b/28.jpg"),
+              ? require("@/projects/cm/s9/b/29-1m.jpg")
+              : require("@/projects/cm/s9/b/29-1.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/b/29-2m.jpg")
+              : require("@/projects/cm/s9/b/29-2.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/b/29-3m.jpg")
+              : require("@/projects/cm/s9/b/29-3.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/b/29-4m.jpg")
+              : require("@/projects/cm/s9/b/29-4.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/b/29-5m.jpg")
+              : require("@/projects/cm/s9/b/29-5.jpg"),
+              isMobile
+              ? require("@/projects/cm/s9/b/29-6m.jpg")
+              : require("@/projects/cm/s9/b/29-6.jpg"),
           ],
           mobileOnly: [],
         },
         {
           img: [
             isMobile
-              ? require("@/projects/cm/s9/c/35_m.jpg")
-              : require("@/projects/cm/s9/c/35.jpg"),
+              ? require("@/projects/cm/s9/c/36-1m.jpg")
+              : require("@/projects/cm/s9/c/36-1.jpg"),
+            isMobile
+              ? require("@/projects/cm/s9/c/36-2m.jpg")
+              : require("@/projects/cm/s9/c/36-2.jpg"),  
+            isMobile
+              ? require("@/projects/cm/s9/c/36-3m.jpg")
+              : require("@/projects/cm/s9/c/36-3.jpg"),
+            isMobile
+              ? require("@/projects/cm/s9/c/36-4m.jpg")
+              : require("@/projects/cm/s9/c/36-4.jpg"),
+            isMobile
+              ? require("@/projects/cm/s9/c/36-5m.jpg")
+              : require("@/projects/cm/s9/c/36-5.jpg"),
+            isMobile
+              ? require("@/projects/cm/s9/c/36-6m.jpg")
+              : require("@/projects/cm/s9/c/36-6.jpg"),
+            isMobile
+              ? require("@/projects/cm/s9/c/36-7m.jpg")
+              : require("@/projects/cm/s9/c/36-7.jpg"),          
           ],
           mobileOnly: [],
         },
@@ -394,7 +433,7 @@ export default {
 
   methods: {
     slideChangeTransitionStart(idx, idx2) {
-      this.imgIdx = this.$refs.swiper.$swiper.realIndex;
+     // this.imgIdx = this.$refs.swiper.$swiper.realIndex;
     },
     swipeTo(i) {
       this.$refs.swiper.$swiper.slideTo(1, 500, false);
