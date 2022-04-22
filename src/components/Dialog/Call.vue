@@ -3,22 +3,20 @@
     <font-awesome-icon icon="phone" />
     <div class="dialog-desc">賞屋專線</div>
     <div class="info">{{ phone }}</div>
-    <div v-if="isMobile" class="cta bt_contact" @click="redirectToPhoneThanks">撥打電話</div>
+    <div class="cta bt_contact" v-if="isMobile" @click="redirectToPhoneThanks">撥打電話</div>
   </div>
 </template>
 
 <script>
-import { isMobile } from "@/utils";
+import { isMobile } from '@/utils'
 export default {
   name: "CallDialog",
   components: {},
   props: ["phone"],
+
   data() {
     return {
-      isMobile,
-    };
-  },
-
+      isMobile,}},
   methods: {
     redirectToPhoneThanks(e) {
       e.preventDefault();
