@@ -14,6 +14,9 @@ export default {
   components: {},
   props: ["phone"],
 
+  data() {
+    return {
+      isMobile,}},
   methods: {
     redirectToPhoneThanks(e) {
       e.preventDefault();
