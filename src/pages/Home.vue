@@ -8,9 +8,6 @@
       <S4 class="section" data-scroll />
       <S5 class="section" data-scroll />
       <S6 class="section" data-scroll />
-      <S7 class="section" data-scroll />
-      <S8 class="section" data-scroll />
-      <S9 class="section" data-scroll />
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -34,15 +31,12 @@ import AOS from "@/lib/aos/src/js/aos";
 
 // import Indigator from '@/components/Indigator.vue'
 
-import S1 from "@/projects/gp/s1.vue";
-import S2 from "@/projects/gp/s2.vue";
-import S3 from "@/projects/gp/s3.vue";
-import S4 from "@/projects/gp/s4.vue";
-import S5 from "@/projects/gp/s5.vue";
-import S6 from "@/projects/gp/s6.vue";
-import S7 from "@/projects/gp/s7.vue";
-import S8 from "@/projects/gp/s8.vue";
-import S9 from "@/projects/gp/s9.vue";
+import S1 from "@/projects/ruo/s1.vue";
+import S2 from "@/projects/ruo/s2.vue";
+import S3 from "@/projects/ruo/s3.vue";
+import S4 from "@/projects/ruo/s4.vue";
+import S5 from "@/projects/ruo/s5.vue";
+import S6 from "@/projects/ruo/s6.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
 import UIkit from 'uikit';
@@ -65,10 +59,7 @@ export default {
     S3,
     S4,
     S5,
-    S6,
-    S7,
-    S8,
-    S9
+    S6
   },
 
   data() {

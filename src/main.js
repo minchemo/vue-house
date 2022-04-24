@@ -18,6 +18,7 @@ import VueLazyComponent from "@xunlei/vue-lazy-component";
 import Vue2TouchEvents from "vue2-touch-events";
 import VueRellax from "vue-rellax";
 import VueSplide from "@splidejs/vue-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -25,7 +26,7 @@ import {
     faTimes,
     faPhone,
     faPen,
-    faMapMarkerAlt,
+    faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 //import AOS from "@/lib/aos/src/js/aos";
@@ -33,7 +34,7 @@ import "aos/dist/aos.css";
 
 import {
     faFacebookMessenger,
-    faFacebookF,
+    faFacebookF
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueSvgIcon from "vue-svgicon";
@@ -52,7 +53,7 @@ library.add(faMapMarkerAlt);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.use(VueSvgIcon, {
-    tagName: "icon",
+    tagName: "icon"
 });
 
 Vue.use(VueFullPage);
@@ -63,7 +64,7 @@ Vue.use(VueLazyload, {
     filter: {
         progressive(listener, options) {
             listener.src = $(listener.el).attr("temp");
-        },
+        }
     },
 
     webp(listener, options) {
@@ -79,7 +80,7 @@ Vue.use(VueLazyload, {
         ) {
             listener.src += ".webp";
         }
-    },
+    }
 });
 Vue.use(VueLazyComponent);
 Vue.use(VueRellax);
@@ -101,5 +102,5 @@ new Vue({
     created() {
         //AOS.init();
     },
-    render: (h) => h(App),
+    render: h => h(App)
 }).$mount("#app");

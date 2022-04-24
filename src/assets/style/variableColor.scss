@@ -1,6 +1,6 @@
 /* html, body */
 
-$bg:url("~@/projects/gp/bg1.png");
+$bg: url("");
 
 /* font-family */
 
@@ -19,7 +19,10 @@ $selection_color: grey;
 
 /* navigation */
 
-$nav_bg: rgba(255, 255, 255, 0.4);
+$nav_bg: rgba(255,
+255,
+255,
+0.4);
 $nav_btn_color: #000;
 $nav_link_color: #000;
 $nav_link_subtitle_color: #000;
@@ -36,7 +39,9 @@ $loading_icon_color: #f7931e #f7931e transparent;
 /* astrictMask */
 
 $mask_bg_color: #fff;
-$mask_bg_image: linear-gradient( to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
+$mask_bg_image: linear-gradient( to top,
+rgba(0, 0, 0, 0.24),
+rgba(156, 30, 35, 0));
 $mask_color: #333;
 $mask_icon_color: #c82514;
 
@@ -44,8 +49,8 @@ $mask_icon_color: #c82514;
 
 // order
 $order_bg_color: #006868;
-$order_bg_image: url("~@/projects/gp/order-bg.jpg");
-$order_bg_image_m: url("~@/projects/gp/order-bg-m.jpg");
+$order_bg_image: url("");
+$order_bg_image_m: url("");
 $order_title_color: #00b1c3;
 $order_subtitle_color: #006934;
 $order_input_label_color: #333333;
