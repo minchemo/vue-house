@@ -21,15 +21,10 @@
               <label>電子郵件</label>
               <el-input v-model="form.email" placeholder></el-input>
             </div> -->
-            <div class="row">
-              <label>需求房型</label>
-              <el-select v-model="form.room" placeholder>
-                <el-option
-                  v-for="room in ['2房', '3房']"
-                  :key="room"
-                  :label="room"
-                  :value="room"
-                ></el-option>
+            <div class="row" data-aos="fade-down" data-aos-delay="300">
+              <label>需求房型<span>*</span></label>
+              <el-select v-model="form.room_type" placeholder>
+                <el-option v-for="city in ['2房', '3房']" :key="city" :label="city" :value="city" no-data-text=""></el-option>
               </el-select>
             </div>
             <!-- <div class="row">
@@ -193,7 +188,7 @@ export default {
         infosource: "",
         parking: "",
         houseStyle: "",
-        room: "",
+        room_type: '',
         msg: "",
         time_start: "",
         time_end: "",
@@ -257,6 +252,7 @@ export default {
       if (
         !this.form.name ||
         !this.form.phone
+        // || !this.form.room_type
         // ||
         // !this.form.time_start ||
         // !this.form.time_end
@@ -283,7 +279,7 @@ export default {
       formData.append("email", this.form.email);
       formData.append("contacttime", this.form.contacttime);
       formData.append("msg", this.form.msg);
-      formData.append("room", this.form.room);
+      formData.append('room_type', this.form.room_type)
       // formData.append('time_start', this.form.time_start)
       // formData.append('time_end', this.form.time_end)
       formData.append("city", this.form.city);
@@ -392,6 +388,7 @@ export default {
     //background-color: $order_bg_color;
     //background-image: url("~@/assets/img/contact_bg.jpg");
     //background: $order_bg_image no-repeat;
+    background-color: $order_bg_color;
     background-image: $order_bg_image;
     background-size: cover;
     background-position: top center;
