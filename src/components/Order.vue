@@ -1,15 +1,11 @@
 <template>
   <div class="order-bg" ref="parallax2">
     <div class="order-top">
-      <!-- <div class="title-block">
-        <h3 class="title">{{order.title}}</h3>
-        <div class="subtitle">{{order.subTitle}}</div>
-      </div> -->
-      <!-- <h3 class="order-title" v-html="order.title"></h3> -->
+      <h3 class="order-title" v-html="order.title"></h3>
       <!-- <div class="order-title-img">
         <img src="~@/assets/img/order-title.png" alt="" srcset="">
       </div> -->
-      <!-- <div class="order-subtitle" v-html="order.subTitle"></div> -->
+      <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
         <div class="form">
           <div class="group">
@@ -25,8 +21,8 @@
               <label>電子郵件</label>
               <el-input v-model="form.email" placeholder></el-input>
             </div> -->
-            <!-- <div class="row">
-              <label>喜好房型</label>
+            <div class="row">
+              <label>需求房型</label>
               <el-select v-model="form.room" placeholder>
                 <el-option
                   v-for="room in ['2房', '3房']"
@@ -35,7 +31,7 @@
                   :value="room"
                 ></el-option>
               </el-select>
-            </div> -->
+            </div>
             <!-- <div class="row">
               <label>方便接聽<br />電話時間</label>
               <el-select v-model="form.contacttime" placeholder>
@@ -398,23 +394,21 @@ export default {
     //background: $order_bg_image no-repeat;
     background-image: $order_bg_image;
     background-size: cover;
-    background-position: bottom center;
+    background-position: top center;
     position: relative;
     // padding: 5vw 0;
-    padding-top: 100px;
+    padding-top: 80px;
   }
   .order-title {
     font-family: $family1;
     width: auto;
-    padding-top: 20px;
     padding-bottom: 1vw;
     font-weight: 700;
     line-height: 1.3;
-    font-size: size(50);
+    font-size: size(70);
     letter-spacing: size(10);
     text-indent: size(10);
     text-align: center;
-
     color: $order_title_color;
     margin: 0 auto;
     margin-bottom: size(20);
@@ -441,7 +435,7 @@ export default {
 
   .order-subtitle {
     width: 100vw;
-    font-size: 20px;
+    font-size: size(18);
     text-align: center;
     color: $order_subtitle_color;
     margin-bottom: 40px;
@@ -457,7 +451,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 10;
   }
 
   .form {
@@ -616,7 +610,8 @@ export default {
       background-size: contain;
       background-repeat: repeat;
       // top: 10vw;
-      padding-bottom: 50px;
+      padding-bottom: 0;
+      padding-top: 30px;
     }
     .order {
       width: 85% !important;

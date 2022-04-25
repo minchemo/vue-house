@@ -12,6 +12,7 @@
     </div>
     <Loading :loading="load" data-scroll />
     <MobileNav />
+    <SideNav />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import $ from "jquery";
 import Navigation from "@/layouts/Navigation.vue";
 import { isMobile } from "@/utils";
 import SideNavigation from "@/layouts/SideNavigation.vue";
+import SideNav from "@/components/sideNav.vue";
 import ContactSection from "@/layouts/ContactSection.vue";
 import CustomNavigation from "@/layouts/CustomNavigation.vue";
 import MobileNav from "@/layouts/MobileNav.vue";
@@ -50,6 +52,7 @@ export default {
     // Indigator,
     Navigation,
     //SideNavigation,
+    SideNav,
     CustomNavigation,
     ContactSection,
     // CustomFooter,

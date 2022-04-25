@@ -1,5 +1,5 @@
 exports.info = {
-    title: "青茵悅",
-    description: "青茵悅",
-    keywords: "青茵悅"
+    title: "若水岸",
+    description: "若水岸",
+    keywords: "若水岸"
 };
