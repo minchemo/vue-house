@@ -12,32 +12,22 @@
     <img
       v-else
       class="title"
-      src="@/projects/ruo/s4/title_m.svg"
+      src="@/projects/ruo/s4/title_m.png"
       alt=""
       srcset=""
       data-aos="fade"
       data-aos-delay="200"
     />
-    <div class="swiper-box">
+    <div class="swiper-box" v-animate-onscroll="'animated fadeInUp'">
       <Splide :has-track="false" :options="swipeOpt" ref="slide">
-        <SplideSlide
-          v-for="(img, i) in imgs"
-          :key="i"
-          data-aos="zoom-in"
-          :data-aos-delay="i * 100"
-        >
+        <SplideSlide v-for="(img, i) in imgs" :key="i">
           <img :src="img" alt="" srcset="" />
         </SplideSlide>
       </Splide>
     </div>
-    <div class="swiper-box2">
+    <div class="swiper-box2" v-animate-onscroll="'animated fadeInUp'">
       <Splide :has-track="false" :options="swipeOpt2">
-        <SplideSlide
-          v-for="(img, i) in imgs2"
-          :key="i"
-          data-aos="zoom-in"
-          :data-aos-delay="i * 100"
-        >
+        <SplideSlide v-for="(img, i) in imgs2" :key="i">
           <img :src="img" alt="" srcset="" />
         </SplideSlide>
       </Splide>
@@ -187,7 +177,7 @@
           background-color: transparent;
           border: 1px solid #fff;
           &.is-active {
-            background-color: transparent;
+            background-color: #fff;
           }
         }
       }
@@ -238,6 +228,8 @@ export default {
         pagination: false,
         arrows: false,
         perPage: 9,
+        autoplay: true,
+        interval: 3000,
         breakpoints: {
           640: {
             type: "loop",
@@ -250,6 +242,8 @@ export default {
       },
       swipeOpt2: {
         rewind: true,
+        autoplay: true,
+        interval: 3000,
         breakpoints: {
           640: {
             type: "loop",
@@ -284,6 +278,6 @@ export default {
       self.slideInstance.go(e.index);
     });
   },
-  created() {},
+  created() { },
 };
 </script>

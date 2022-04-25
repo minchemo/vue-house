@@ -21,10 +21,16 @@
               <label>電子郵件</label>
               <el-input v-model="form.email" placeholder></el-input>
             </div> -->
-            <div class="row" data-aos="fade-down" data-aos-delay="300">
+            <div class="row">
               <label>需求房型<span>*</span></label>
               <el-select v-model="form.room_type" placeholder>
-                <el-option v-for="city in ['2房', '3房']" :key="city" :label="city" :value="city" no-data-text=""></el-option>
+                <el-option
+                  v-for="city in ['2房', '3房']"
+                  :key="city"
+                  :label="city"
+                  :value="city"
+                  no-data-text=""
+                ></el-option>
               </el-select>
             </div>
             <!-- <div class="row">

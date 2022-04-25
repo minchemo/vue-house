@@ -12,7 +12,7 @@
     <img
       v-else
       class="large"
-      src="@/projects/ruo/s3/large_m.svg"
+      src="@/projects/ruo/s3/large_m.png"
       alt=""
       srcset=""
       data-aos="fade"
@@ -192,7 +192,7 @@
   .s3 {
     position: relative;
     width: size-m(375);
-    height: size-m(568);
+    height: size-m(600);
 
     .title {
       position: absolute;
@@ -202,7 +202,7 @@
     }
     .large {
       width: size-m(298);
-      bottom: size-m(253);
+      bottom: size-m(295);
       right: auto;
       left: size-m(30);
     }
@@ -227,6 +227,11 @@
       top: unset;
       bottom: 0;
       .splide {
+        .splide__track {
+          p {
+            font-size: size-m(12);
+          }
+        }
         .splide__arrows {
           .splide__arrow {
             width: size-m(31);
@@ -288,7 +293,7 @@ export default {
       this.scrollInstance.scrollTo(el);
     },
   },
-  mounted() {},
-  created() {},
+  mounted() { },
+  created() { },
 };
 </script>

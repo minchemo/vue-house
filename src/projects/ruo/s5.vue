@@ -85,7 +85,7 @@
     <img
       v-else
       class="large"
-      src="@/projects/ruo/s5/large_m.svg"
+      src="@/projects/ruo/s5/large_m.png"
       alt=""
       srcset=""
     />
@@ -233,7 +233,7 @@ export default {
       this.scrollInstance.scrollTo(el);
     },
   },
-  mounted() {},
-  created() {},
+  mounted() { },
+  created() { },
 };
 </script>

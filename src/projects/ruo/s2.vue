@@ -12,7 +12,7 @@
       v-else
       class="title"
       data-aos="fade-up"
-      src="@/projects/ruo/s2/title_m.svg"
+      src="@/projects/ruo/s2/title_m.png"
       alt=""
       srcset=""
     />
@@ -88,7 +88,7 @@ export default {
       this.scrollInstance.scrollTo(el);
     },
   },
-  mounted() {},
-  created() {},
+  mounted() { },
+  created() { },
 };
 </script>
