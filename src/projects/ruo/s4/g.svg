@@ -71,8 +71,8 @@
         </g>
       </g>
     </g>
-    <text id="_12mins" data-name="12mins" transform="translate(1243.263 3057.345)" fill="#3f96e2" font-size="34.929" font-family="NotoSansHant-Regular, Noto Sans T Chinese"><tspan x="0" y="0">12</tspan><tspan y="0" font-size="24.714">mins</tspan></text>
-    <text id="宏匯廣場" transform="translate(1286.521 3086.558)" font-size="17.186" font-family="NotoSansHant-Regular, Noto Sans T Chinese"><tspan x="-34.372" y="0">宏匯廣場</tspan></text>
+    <text id="_12mins" data-name="12mins" transform="translate(1243.263 3057.345)" fill="#3f96e2" font-size="34.929" font-family="Arial"><tspan x="0" y="0">12</tspan><tspan y="0" font-size="24.714">mins</tspan></text>
+    <text id="宏匯廣場" transform="translate(1286.521 3086.558)" font-size="17.186" font-family="Arial"><tspan x="-34.372" y="0">宏匯廣場</tspan></text>
     <circle id="Ellipse_34" data-name="Ellipse 34" cx="72.906" cy="72.906" r="72.906" transform="translate(1200.438 3146.67) rotate(-81.449)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
   </g>
 </svg>

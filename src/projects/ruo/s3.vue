@@ -201,10 +201,9 @@
       right: size-m(29);
     }
     .large {
-      position: absolute;
       width: size-m(298);
-      bottom: size-m(273);
-      right: unset;
+      bottom: size-m(253);
+      right: auto;
       left: size-m(30);
     }
     .splash {

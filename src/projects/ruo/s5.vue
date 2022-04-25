@@ -2,7 +2,16 @@
   <div class="s5" id="scene">
     <img
       v-if="!isMobile"
-      class="bg"
+      class="bg2"
+      src="@/projects/ruo/s5/bg.jpg"
+      alt=""
+      srcset=""
+      data-aos="zoom-in"
+      data-aos-delay="200"
+    />
+    <img
+      v-if="!isMobile"
+      class="bg1"
       src="@/projects/ruo/s5/bg.png"
       alt=""
       srcset=""
@@ -106,11 +115,19 @@
     right: 0;
     top: 0;
   }
-  .bg {
+  .bg2 {
     position: absolute;
-    left: 0;
+    left: size(480);
     bottom: 0;
-    width: size(1557.4997);
+    width: size(1100);
+    z-index: 0;
+    transform-origin: 50% 100%;
+  }
+  .bg1 {
+    position: absolute;
+    left: size(20);
+    bottom: 0;
+    width: size(545);
     z-index: 2;
   }
   .circle {
