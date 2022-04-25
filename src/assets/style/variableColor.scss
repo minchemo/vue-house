@@ -7,10 +7,15 @@ $bg: url("~@/projects/cc/bg.jpg");
 
 /* 1主要字體  2次要字體  3表單字體  4黑體 */
 
-$family1: "Noto Serif TC", serif;
-$family2: "Noto Serif TC", serif;
-$family3: "Noto Serif TC", serif;
-$family4: "Noto Serif TC", serif,sans-serif;
+$family1: "Noto Serif TC",
+serif;
+$family2: "Noto Serif TC",
+serif;
+$family3: "Noto Serif TC",
+serif;
+$family4: "Noto Serif TC",
+serif,
+sans-serif;
 $selection_color: grey;
 
 /* navigation */
@@ -59,6 +64,7 @@ $order_input_selected_color: solid 1px #fff !important;
 $order_check_desc_color: #000 !important;
 $order_check_span_color: #000 !important;
 $order_submit_bg: #bbb29b;
+$order_submit_border: 1px solid;
 $order_submit_borderradius: 10px;
 $order_submit_color: #fff !important;
 $order_sumbit_disable_bg: #fff;
@@ -90,7 +96,8 @@ $contact_google_hover_btn_icon: #333333;
 $contact_google_hover_btn_bg: #bbb29b;
 $contact_google_hover_border: inset 0 0 0px 0px #fff;
 // houseInfo
-$house_bg: url("~@/assets/img/order_bg.jpg");
+$order_bg_image: url("~@/projects/cc/bg.jpg");
+$house_bg: url("~@/assets/img/housebg.jpg");
 $house_title_color: #fff;
 $house_border_color: #fff;
 $house_label_color: #fff;

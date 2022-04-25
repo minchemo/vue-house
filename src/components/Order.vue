@@ -7,8 +7,13 @@
       </div> -->
       <!-- <h3 class="order-title" v-html="order.title"></h3> -->
       <div class="order-title-img" data-aos="zoom-in">
-        <!-- <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="春福御邸" srcset="">
-        <img v-else src="~@/projects/cm/order_title_m.svg" alt="春福御邸" srcset=""> -->
+        <img
+          v-if="!isMobile"
+          src="~@/projects/cc/logo.png"
+          alt="青青"
+          srcset=""
+        />
+        <img v-else src="~@/projects/cc/logo.png" alt="青青" srcset="" />
       </div>
       <div class="order-title" v-html="order.title"></div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
@@ -364,7 +369,7 @@ export default {
     background-position: bottom right;
     position: relative;
     padding: 5vw 0;
-    padding-bottom: 400px;
+    padding-bottom: 220px;
   }
   .order-title {
     font-family: $family1;
@@ -382,7 +387,7 @@ export default {
     display: inline-block;
   }
   .order-title-img {
-    width: 40vw;
+    width: size(308);
     margin: 3vh auto;
     //margin-bottom: 1vw;
 

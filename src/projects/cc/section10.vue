@@ -17,10 +17,10 @@
           uk-parallax="viewport: 0.3;blur:40,0;y:-200,0"
         />
         <h2 uk-parallax="viewport: 0.3;blur:40,0;y:-200,0">
-          公設內容<br />後續會補上圖片
+          六星飯店規格<br />都會型奢享空間
         </h2>
         <div class="content" uk-parallax="viewport: 0.3;blur:40,0;y:200,0">
-          後續會補上文案，正對頭前國中永久棟距、都心百米林蔭步道搖曳為鄰，一座被豐盈知識與翠綠大樹關照的家，在『青青』學習如何優雅生活、品味從容日常。
+          水景花園、閱讀區、健身房、遊戲室..，德國iF設計獎團隊以新居住思維規劃符合都會型態的多元休閒設施，回家即是奢華享受開始。
         </div>
       </div>
       <div class="right">
@@ -38,6 +38,7 @@
               backgroundImage: `url(${slide})`,
             }"
           >
+            <p>{{ slides["caption"][i] }}</p>
           </swiper-slide>
         </swiper>
       </div>
@@ -92,6 +93,14 @@
         height: size(568);
         .slide {
           background-size: cover;
+          p {
+            font-size: size(15);
+            position: absolute;
+            right: size(20);
+            bottom: size(16);
+            color: #fff;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+          }
         }
       }
     }
@@ -128,7 +137,7 @@
         h2 {
           font-size: size-m(22);
           line-height: 1.5;
-    letter-spacing: 0.1em;
+          letter-spacing: 0.1em;
           margin-bottom: size-m(20);
           margin-top: size-m(40);
         }
@@ -136,8 +145,8 @@
           font-size: size-m(15);
           font-weight: 300;
           line-height: 1.5;
-    letter-spacing: 0.1em;
-        text-align: justify;
+          letter-spacing: 0.1em;
+          text-align: justify;
         }
       }
 
@@ -150,6 +159,11 @@
 
           .slide {
             background-size: cover;
+            p {
+              font-size: size-m(15);
+              right: size-m(8);
+              bottom: size-m(8);
+            }
           }
         }
       }
@@ -186,8 +200,14 @@ export default {
       isMobile,
       slides:
       {
-        img: [require("@/projects/cc/s10/1.jpg")],
-        caption: [],
+        img: [require("@/projects/cc/s10/1.jpg"), require("@/projects/cc/s10/2.jpg"), require("@/projects/cc/s10/3.jpg"), require("@/projects/cc/s10/4.jpg"), require("@/projects/cc/s10/5.jpg")],
+        caption: [
+          '大廳3D示意',
+          '公設3D示意',
+          '健身房3D示意',
+          '遊戲室3D示意',
+          '水景花園3D示意',
+        ],
       },
       swiperOptions: {
         loop: false,
