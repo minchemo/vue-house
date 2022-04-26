@@ -10,9 +10,10 @@
       <Section6 class="section" data-scroll />
       <Section7 class="section" data-scroll />
       <Section8 class="section" data-scroll />
-   <!--   <Section9 class="section" data-scroll />
+      <Section9 class="section" data-scroll />
       <Section10 class="section" data-scroll />
-      <Section11 class="section" data-scroll />  -->
+      <!-- <Section11 class="section" data-scroll /> -->
+      <Section12 class="section" data-scroll />
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -47,6 +48,7 @@ import Section8 from "@/projects/cc/section8.vue";
 import Section9 from "@/projects/cc/section9.vue";
 import Section10 from "@/projects/cc/section10.vue";
 import Section11 from "@/projects/cc/section11.vue";
+import Section12 from "@/projects/cc/section12.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
 import UIkit from 'uikit';
@@ -74,7 +76,8 @@ export default {
     Section8,
     Section9,
     Section10,
-    Section11
+    Section11,
+    Section12
   },
 
   data() {

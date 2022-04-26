@@ -2,12 +2,12 @@
   <div>
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <img
+        <!-- <img
           v-lazy
           class="logo"
           :temp="require('@/assets/img/contact-logo.png')"
           :alt="info.caseName"
-        />
+        /> -->
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">
@@ -408,7 +408,7 @@ export default {
     position: relative;
     margin: 0 auto 0 auto;
     min-width: unset;
-   //background: $contact_bg_m;
+    //background: $contact_bg_m;
     background-size: contain;
     margin-top: 0;
 

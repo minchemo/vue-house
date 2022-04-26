@@ -59,7 +59,7 @@
     justify-content: flex-end;
     .left {
       width: size(485);
-        text-align: justify;
+      text-align: justify;
       margin-right: size(120);
       h2 {
         font-size: size(61);
@@ -121,15 +121,15 @@
           line-height: 1.4;
           letter-spacing: 0.1em;
           margin-bottom: size-m(40);
-          padding-right:0;
-        text-align: center;
+          padding-right: 0;
+          text-align: center;
         }
         .content {
           font-size: size-m(15);
-          line-height:1.7;
+          line-height: 1.7;
           letter-spacing: 0.1em;
           padding: 0 2.2em;
-        text-align: justify;
+          text-align: justify;
         }
       }
 
@@ -172,7 +172,7 @@ export default {
       isMobile,
       slides:
       {
-        img: [require("@/projects/cc/s4/1.jpg")],
+        img: [require("@/projects/cc/s4/1.jpg"), require("@/projects/cc/s4/2.jpg")],
         caption: [],
       },
       swiperOptions: {

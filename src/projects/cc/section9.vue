@@ -26,10 +26,10 @@
           uk-parallax="viewport: 0.3;blur:40,0;y:-200,0"
         />
         <h2 uk-parallax="viewport: 0.3;blur:40,0;y:-200,0">
-          建築外觀<br />後續會補上圖片
+          會呼吸的<br />濃綠系青建築
         </h2>
         <div class="content" uk-parallax="viewport: 0.3;blur:40,0;y:200,0">
-          後續會補上文案，正對頭前國中永久棟距、都心百米林蔭步道搖曳為鄰，一座被豐盈知識與翠綠大樹關照的家，在『青青』學習如何優雅生活、品味從容日常。
+          順著天空滑落的有機曲面呼應校園與純住宅區軟性氛圍。建築引進日光、風動、水景，空間流轉中消弭了內外分界，居住心境在此獲得全然舒展。
         </div>
       </div>
       <div class="right">
@@ -47,6 +47,7 @@
               backgroundImage: `url(${slide})`,
             }"
           >
+            <p>建築外觀3D情境示意</p>
           </swiper-slide>
         </swiper>
       </div>
@@ -102,6 +103,14 @@
         height: size(568);
         .slide {
           background-size: cover;
+          p {
+            font-size: size(15);
+            position: absolute;
+            right: size(20);
+            bottom: size(16);
+            color: #fff;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+          }
         }
       }
     }
@@ -144,14 +153,14 @@
           letter-spacing: size-m(10);
           margin-bottom: size-m(20);
           margin-top: size-m(40);
-    letter-spacing: 0.2em;
+          letter-spacing: 0.2em;
         }
         .content {
           font-size: size-m(15);
           font-weight: 300;
           line-height: 1.5;
-    letter-spacing: 0.1em;
-        text-align: justify;
+          letter-spacing: 0.1em;
+          text-align: justify;
         }
       }
 
@@ -164,6 +173,12 @@
 
           .slide {
             background-size: cover;
+            p {
+              font-size: size-m(15);
+              right: unset;
+              left: size-m(8);
+              bottom: size-m(8);
+            }
           }
         }
       }
