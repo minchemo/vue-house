@@ -172,7 +172,7 @@ export default {
       isMobile,
       slides:
       {
-        img: [require("@/projects/cc/s4/1.jpg"), require("@/projects/cc/s4/2.jpg")],
+        img: [require("@/projects/cc/s4/2.jpg"), require("@/projects/cc/s4/1.jpg")],
         caption: [],
       },
       swiperOptions: {

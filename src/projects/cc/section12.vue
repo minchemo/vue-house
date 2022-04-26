@@ -55,7 +55,7 @@
     color: #fff;
     text-align: left;
     position: absolute;
-    top: size(220);
+    top: size(140);
     left: size(163);
     font-size: size(50);
     letter-spacing: size(20);

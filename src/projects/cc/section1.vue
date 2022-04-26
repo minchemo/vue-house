@@ -202,7 +202,7 @@
 
     .logo {
       right: size-m(30);
-      top: size-m(200);
+      top: size-m(150);
       width: size-m(220);
     }
 
