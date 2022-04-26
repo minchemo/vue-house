@@ -24,14 +24,14 @@ import Footer from "@/layouts/Footer.vue";
 export default {
   name: "houseInfo",
   components: {
-    Footer
+    Footer,
   },
   data() {
     return {
-      houseInfos: info.houseInfos
+      houseInfos: info.houseInfos,
     };
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -39,8 +39,7 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   width: 100vw;
-  //background: url("../assets/img/housebg.jpg");
-  background: #000;
+  background: $house_bg;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -60,12 +59,22 @@ export default {
 .title {
   font-size: 32px;
   line-height: 36px;
-  margin: 60px 0;
+  margin: 30px 0;
   font-weight: bold;
   color: $house_title_color;
   font-family: $family3;
   width: 80vw;
   padding: 10px 20px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: -10vw;
+    bottom: 0;
+  }
 }
 
 .info {
@@ -120,8 +129,17 @@ export default {
 
   .title {
     font-size: 24px;
-    margin: 40px 0 24px;
+    margin: 20px 0 24px;
     width: 100vw;
+    &::after {
+      content: "";
+      width: 100vw;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
   }
 
   .item {

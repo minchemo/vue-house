@@ -1,21 +1,40 @@
 <template>
   <div class="s4" id="scene">
-    <img class="title" src="@/projects/ruo/s4/title.svg" alt="" srcset="" />
-    <div class="swiper-box">
-      <Splide :has-track="false" :options="swipeOpt">
+    <img
+      v-if="!isMobile"
+      class="title"
+      src="@/projects/ruo/s4/title.svg"
+      alt=""
+      srcset=""
+      data-aos="fade"
+      data-aos-delay="200"
+    />
+    <img
+      v-else
+      class="title"
+      src="@/projects/ruo/s4/title_m.png"
+      alt=""
+      srcset=""
+      data-aos="fade"
+      data-aos-delay="200"
+    />
+    <div class="swiper-box" v-animate-onscroll="'animated fadeInUp'">
+      <Splide :has-track="false" :options="swipeOpt" ref="slide">
         <SplideSlide v-for="(img, i) in imgs" :key="i">
           <img :src="img" alt="" srcset="" />
         </SplideSlide>
       </Splide>
     </div>
-    <div class="swiper-box2">
+    <div class="swiper-box2" v-animate-onscroll="'animated fadeInUp'">
       <Splide :has-track="false" :options="swipeOpt2">
         <SplideSlide v-for="(img, i) in imgs2" :key="i">
           <img :src="img" alt="" srcset="" />
         </SplideSlide>
       </Splide>
     </div>
-    <div class="subtitle">全方位豐沛商圈，購食育行一次滿足</div>
+    <div class="subtitle" data-aos="fade" data-aos-delay="500">
+      全方位豐沛商圈，購食育行一次滿足
+    </div>
   </div>
 </template>
 <style lang="scss">
@@ -100,10 +119,74 @@
   .s4 {
     position: relative;
     width: size-m(375);
-    height: size-m(623);
-    min-height: 0;
-    max-height: size-m(812);
-    padding-top: size-m(80);
+    height: size-m(667);
+    .title {
+      position: absolute;
+      width: size-m(311);
+      top: size-m(71);
+      left: size-m(34);
+    }
+    .swiper-box {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 0;
+      top: size-m(165);
+      .splide__list {
+        padding: 10px 0 !important;
+      }
+      .splide__slide {
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.is-active {
+          opacity: 1;
+          img {
+            width: 110% !important;
+          }
+        }
+        img {
+          width: 90% !important;
+        }
+      }
+    }
+    .swiper-box2 {
+      width: 100%;
+      height: size-m(266.11);
+      left: 0;
+      bottom: size-m(58);
+      &::before {
+        content: "";
+        display: none;
+      }
+      &::after {
+        content: "";
+        display: none;
+      }
+      .splide__arrows {
+        .splide__arrow {
+          width: size-m(31);
+          height: size-m(31);
+        }
+      }
+      .splide__pagination {
+        bottom: -10%;
+        .splide__pagination__page {
+          transform: scale(1) !important;
+          background-color: transparent;
+          border: 1px solid #fff;
+          &.is-active {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .subtitle {
+      font-size: size-m(20);
+      top: size-m(298);
+      left: size-m(23);
+    }
   }
 }
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -124,36 +207,65 @@ export default {
     return {
       isMobile,
       imgs: [
-        require('@/projects/ruo/s4/a.svg'),
-        require('@/projects/ruo/s4/b.svg'),
-        require('@/projects/ruo/s4/c.svg'),
-        require('@/projects/ruo/s4/d.svg'),
-        require('@/projects/ruo/s4/e.svg'),
-        require('@/projects/ruo/s4/f.svg'),
-        require('@/projects/ruo/s4/g.svg'),
-        require('@/projects/ruo/s4/h.svg'),
-        require('@/projects/ruo/s4/i.svg'),
+        require("@/projects/ruo/s4/a.svg"),
+        require("@/projects/ruo/s4/b.svg"),
+        require("@/projects/ruo/s4/c.svg"),
+        require("@/projects/ruo/s4/d.svg"),
+        require("@/projects/ruo/s4/e.svg"),
+        require("@/projects/ruo/s4/f.svg"),
+        require("@/projects/ruo/s4/g.svg"),
+        require("@/projects/ruo/s4/h.svg"),
+        require("@/projects/ruo/s4/i.svg"),
       ],
       imgs2: [
-        require('@/projects/ruo/s4/1.jpg'),
-        require('@/projects/ruo/s4/2.jpg'),
-        require('@/projects/ruo/s4/3.jpg'),
-        require('@/projects/ruo/s4/4.jpg'),
+        require("@/projects/ruo/s4/1.jpg"),
+        require("@/projects/ruo/s4/2.jpg"),
+        require("@/projects/ruo/s4/3.jpg"),
+        require("@/projects/ruo/s4/4.jpg"),
       ],
       swipeOpt: {
         rewind: true,
         pagination: false,
         arrows: false,
         perPage: 9,
+        autoplay: true,
+        interval: 3000,
+        breakpoints: {
+          640: {
+            type: "loop",
+            perPage: 1,
+            padding: "37%",
+            focus: "center",
+            gap: 0,
+          },
+        },
       },
       swipeOpt2: {
         rewind: true,
-        pagination: false,
-        arrows: false,
-        perPage: 4,
-        gap: 20
-      }
+        autoplay: true,
+        interval: 3000,
+        breakpoints: {
+          640: {
+            type: "loop",
+            perPage: 1,
+            gap: 0,
+            pagination: true,
+            arrows: true,
+          },
+          3000: {
+            pagination: false,
+            arrows: false,
+            perPage: 4,
+            gap: 20,
+          },
+        },
+      },
     };
+  },
+  computed: {
+    slideInstance() {
+      return this.$refs.slide.splide;
+    },
   },
   methods: {
     scrollTo(el) {
@@ -161,6 +273,10 @@ export default {
     },
   },
   mounted() {
+    const self = this;
+    this.slideInstance.on("click", (e) => {
+      self.slideInstance.go(e.index);
+    });
   },
   created() { },
 };

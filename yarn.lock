@@ -951,10 +951,10 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/json-schema@^7.0.5":
-  "integrity" "sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw=="
-  "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.6.tgz"
-  "version" "7.0.6"
+"@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8":
+  "integrity" "sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ=="
+  "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.11.tgz"
+  "version" "7.0.11"
 
 "@types/json5@^0.0.29":
   "integrity" "sha1-7ihweulOEdK4J7y+UnC86n8+ce4="
@@ -1504,7 +1504,7 @@
     "fast-json-stable-stringify" "^2.0.0"
     "json-schema-traverse" "^0.3.0"
 
-"ajv@^6.1.0", "ajv@^6.10.2", "ajv@^6.12.3", "ajv@^6.12.4", "ajv@^6.9.1", "ajv@>=5.0.0":
+"ajv@^6.1.0", "ajv@^6.10.2", "ajv@^6.12.3", "ajv@^6.12.4", "ajv@^6.12.5", "ajv@^6.9.1", "ajv@>=5.0.0":
   "integrity" "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g=="
   "resolved" "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz"
   "version" "6.12.6"
@@ -1518,6 +1518,11 @@
   "integrity" "sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM="
   "resolved" "https://registry.npmjs.org/alphanum-sort/-/alphanum-sort-1.0.2.tgz"
   "version" "1.0.2"
+
+"animate.css@3.5.2":
+  "integrity" "sha1-keZo3AaagI5eSZUUhnuXquAWbDY="
+  "resolved" "https://registry.npmjs.org/animate.css/-/animate.css-3.5.2.tgz"
+  "version" "3.5.2"
 
 "animate@^1.0.0":
   "integrity" "sha1-Rh+Hr+pLyF257s/euu5E1beKGGw="
@@ -5842,6 +5847,7 @@
     "is-gif" "^3.0.0"
 
 "imagemin-webp-webpack-plugin-2@git+https://github.com/minchemo/imagemin-webp-webpack-plugin.git":
+  "integrity" "sha512-6JHV1wU+eq4bax6XX/FpRuhEhMTAMBSj+urQiOEX1FFq/WJecGChsbxKmnJWOt+Qldob65QDhb/7hpB+9RgArA=="
   "resolved" "git+ssh://git@github.com/minchemo/imagemin-webp-webpack-plugin.git#802644752f7069795d07f0f8b49a1963cdfe05e6"
   "version" "3.3.6"
   dependencies:
@@ -6777,6 +6783,15 @@
     "big.js" "^5.2.2"
     "emojis-list" "^3.0.0"
     "json5" "^1.0.1"
+
+"loader-utils@^2.0.0":
+  "integrity" "sha512-TM57VeHptv569d/GKh6TAYdzKblwDNiumOdkFnejjD0XwTH87K90w3O7AiJRqdQoXygvi1VQTJTLGhJl7WqA7A=="
+  "resolved" "https://registry.npmjs.org/loader-utils/-/loader-utils-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "big.js" "^5.2.2"
+    "emojis-list" "^3.0.0"
+    "json5" "^2.1.2"
 
 "locate-path@^2.0.0":
   "integrity" "sha1-K1aLJl7slExtnA3pw9u7ygNUzY4="
@@ -9304,6 +9319,15 @@
     "ajv" "^6.12.4"
     "ajv-keywords" "^3.5.2"
 
+"schema-utils@^3.0.0":
+  "integrity" "sha512-Y5PQxS4ITlC+EahLuXaY86TXfR7Dc5lw294alXOq86JAHCihAIZfqv8nNCWvaEJvaC51uN9hbLGeV0cFBdH+Fw=="
+  "resolved" "https://registry.npmjs.org/schema-utils/-/schema-utils-3.1.1.tgz"
+  "version" "3.1.1"
+  dependencies:
+    "@types/json-schema" "^7.0.8"
+    "ajv" "^6.12.5"
+    "ajv-keywords" "^3.5.2"
+
 "scroll-into-view@^1.16.0":
   "integrity" "sha512-N8T/4mKzQXMorcbMzNm+rOfy0lPmga3zl7SmUSHDryA6cqGVlzG9pePQCqHA/UPaJtC2KOJP/r93pHm9df+5/A=="
   "resolved" "https://registry.npmjs.org/scroll-into-view/-/scroll-into-view-1.16.0.tgz"
@@ -10075,7 +10099,7 @@
   dependencies:
     "svgo" "^1.1.1"
 
-"svgo@^1.0.0", "svgo@^1.1.1", "svgo@^1.2.0":
+"svgo@^1.0.0", "svgo@^1.1.1", "svgo@^1.2.0", "svgo@^1.3.2":
   "integrity" "sha512-yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw=="
   "resolved" "https://registry.npmjs.org/svgo/-/svgo-1.3.2.tgz"
   "version" "1.3.2"
@@ -10684,6 +10708,11 @@
   "resolved" "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
   "version" "1.1.2"
 
+"vue-animate-onscroll@^1.0.8":
+  "integrity" "sha512-uyb/lTudNmWaxT8W0UQIk75EyzX7wYM64hm7gsMCVhGICQkb5j/ynIZ/ZnSApsqvruUg4t3UxT1MUhN4sDU11Q=="
+  "resolved" "https://registry.npmjs.org/vue-animate-onscroll/-/vue-animate-onscroll-1.0.8.tgz"
+  "version" "1.0.8"
+
 "vue-awesome-swiper@^4.1.1":
   "integrity" "sha512-50um10t6N+lJaORkpwSi1wWuMmBI1sgFc9Znsi5oUykw2cO5DzLaBHcO2JNX21R+Ue4TGoIJDhhxjBHtkFrTEQ=="
   "resolved" "https://registry.npmjs.org/vue-awesome-swiper/-/vue-awesome-swiper-4.1.1.tgz"
@@ -10821,6 +10850,15 @@
   dependencies:
     "hash-sum" "^1.0.2"
     "loader-utils" "^1.0.2"
+
+"vue-svg-inline-loader@^2.1.3":
+  "integrity" "sha512-2tYl1BVwjozD+MWxzHLH/vBhmmZIcqla6KIBpMKMDCZV/+Q7NZ+oLBH3qZ/57l5TiDUzLkrmN6BcaKWrBT4nsQ=="
+  "resolved" "https://registry.npmjs.org/vue-svg-inline-loader/-/vue-svg-inline-loader-2.1.3.tgz"
+  "version" "2.1.3"
+  dependencies:
+    "loader-utils" "^2.0.0"
+    "schema-utils" "^3.0.0"
+    "svgo" "^1.3.2"
 
 "vue-svg-loader@^0.12.0":
   "integrity" "sha512-pg8H6iKCj+DAC7FZuxdfGJMHiFpJPv/YyoN1M7Iqlf+Hu4eU6Q/W/sEFx978syQA+aOx0NXrp+uQUAajqQvXbQ=="

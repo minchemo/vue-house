@@ -8,6 +8,7 @@
       srcset=""
     />
     <img
+      v-if="!isMobile"
       class="subtitle"
       src="@/projects/ruo/s1/subtitle.svg"
       alt=""
@@ -15,7 +16,29 @@
       data-aos="zoom-in"
       data-aos-delay="500"
     />
-    <img class="circle" src="@/projects/ruo/s1/circle.png" alt="" srcset="" />
+    <img
+      v-else
+      class="subtitle"
+      src="@/projects/ruo/s1/subtitle_m.svg"
+      alt=""
+      srcset=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+    />
+    <img
+      v-if="!isMobile"
+      class="circle"
+      src="@/projects/ruo/s1/circle.png"
+      alt=""
+      srcset=""
+    />
+    <img
+      v-else
+      class="circle"
+      src="@/projects/ruo/s1/circle_m.png"
+      alt=""
+      srcset=""
+    />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -69,10 +92,46 @@
   .s1 {
     position: relative;
     width: size-m(375);
-    height: size-m(623);
-    min-height: 0;
-    max-height: size-m(812);
-    padding-top: size-m(80);
+    height: size-m(667);
+    background-image: url("~@/projects/ruo/s1/bg_m.svg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+
+    .title {
+      position: absolute;
+      width: size_m(318.78);
+      top: unset;
+      left: unset;
+      z-index: 10;
+    }
+    .subtitle {
+      position: absolute;
+      width: size-m(317);
+      bottom: size-m(122);
+      left: size-m(35);
+      z-index: 10;
+    }
+    .circle {
+      position: absolute;
+      width: 98%;
+      height: auto;
+      bottom: 0;
+      top: unset;
+      right: 0;
+      animation: float 5s alternate-reverse infinite ease-in-out;
+
+      @keyframes float {
+        from {
+          transform: translateY(0) skew(1deg);
+        }
+        to {
+          transform: translateY(40px) skew(0deg);
+        }
+      }
+    }
   }
 }
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -99,8 +158,7 @@ export default {
       this.scrollInstance.scrollTo(el);
     },
   },
-  mounted() {
-  },
-  created() { },
+  mounted() {},
+  created() {},
 };
 </script>

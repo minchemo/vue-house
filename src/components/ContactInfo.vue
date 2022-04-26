@@ -2,20 +2,20 @@
   <div>
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <!-- <img
+        <img
           v-if="!isMobile"
           v-lazy
           class="logo"
-          :temp="require('@/assets/img/contact-logo.png')"
+          :temp="require('@/projects/ruo/logo.png')"
           :alt="info.caseName"
         />
         <img
           v-if="isMobile"
           class="logo"
           v-lazy
-          :temp="require('@/assets/img/contact-logo.png')"
+          :temp="require('@/projects/ruo/logo.png')"
           :alt="info.caseName"
-        /> -->
+        />
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">
@@ -166,20 +166,25 @@ export default {
 }
 
 .contact-info {
-  background: $contact_bg;
-  // background-image: url('../assets/img/contact_bg.jpg');/
-  background-size: cover;
+  background-color: #faed00;
+  background-image: $contact_bg;
+  background-size: contain;
+  background-repeat: no-repeat;
   box-shadow: $contact_shadow;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: space-between;
   position: relative;
-  width: 80%;
-  min-width: 1000px;
+  width: 90%;
+  min-width: 1100px;
   margin: 0 auto;
-  padding: 50px 0;
+  margin-top: 50px;
+  margin-bottom: -20px;
+  padding: 20px 0;
   z-index: 50;
+    left: 50%;
+    transform: translateX(-50%);
 
   .fix-bar {
     background: rgba(231, 149, 14);
@@ -234,7 +239,7 @@ export default {
 }
 
 .logo {
-  height: 200px;
+  height: 120px;
   margin: 20px auto;
   z-index: 1;
 }
@@ -308,7 +313,7 @@ export default {
   width: 600px;
   height: 60px;
   font-size: 18px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
   font-weight: 500;
   box-shadow: $contact_btn_border;
   border-radius: $contact_btn_addr_border_radius;
@@ -396,9 +401,10 @@ export default {
   }
   #contact-info {
     position: relative;
-    background: transparent;
+    background: #FAED00;
     transform: unset;
-    left: 0;
+    left: -8vw;
+    width: 101vw;
   }
   .order-bg-draw {
     height: 100px;
@@ -419,7 +425,10 @@ export default {
     margin: 10vw auto 0 auto;
     min-width: unset;
     background: $contact_bg_m;
-    background-size: contain;
+    background-size: cover;
+    background-position: top right;
+    left: 0;
+    padding: 80px 0;
 
     .logo {
       width: $contact_logo_mobile_width;

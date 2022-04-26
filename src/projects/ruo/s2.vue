@@ -6,7 +6,19 @@
       src="@/projects/ruo/s2/title.svg"
       alt=""
       srcset=""
+      v-if="!isMobile"
     />
+    <img
+      v-else
+      class="title"
+      data-aos="fade-up"
+      src="@/projects/ruo/s2/title_m.png"
+      alt=""
+      srcset=""
+    />
+    <template v-if="isMobile">
+      <GodModView :bgUrl="require('@/projects/ruo/s2/bg.jpg')" />
+    </template>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -37,10 +49,15 @@
   .s2 {
     position: relative;
     width: size-m(375);
-    height: size-m(623);
-    min-height: 0;
-    max-height: size-m(812);
-    padding-top: size-m(80);
+    height: size-m(667);
+    background: unset;
+    .title {
+      position: absolute;
+      width: size-m(313.27);
+      top: size-m(52);
+      left: size-m(33);
+      z-index: 1;
+    }
   }
 }
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -54,9 +71,13 @@
 <script>
 // @ is an alias to /src
 import { isMobile } from "@/utils";
+import GodModView from "@/components/GodModView.vue";
 export default {
   name: "s2",
   props: ["scrollInstance"],
+  components: {
+    GodModView,
+  },
   data() {
     return {
       isMobile,
@@ -67,8 +88,7 @@ export default {
       this.scrollInstance.scrollTo(el);
     },
   },
-  mounted() {
-  },
+  mounted() { },
   created() { },
 };
 </script>

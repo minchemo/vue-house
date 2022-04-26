@@ -60,8 +60,9 @@
         align-items: flex-start;
         img {
           position: absolute;
-          top: 5%;
-          width: size-m(186.75);
+          bottom: 5%;
+          top: unset;
+          width: size-m(226.56);
           animation: unset;
         }
       }
@@ -90,18 +91,11 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
-      // bgUrl: require("@/projects/gp/s2/view.jpg"), //置換圖片路徑即可
-      swipeUrl: require("@/projects/gp/s2/swipe.svg"), //置換圖片路徑即可
+      // bgUrl: require("@/projects/ruo/s2/bg.jpg"), //置換圖片路徑即可
+      swipeUrl: require("@/projects/ruo/s2/swipe-hand.svg"), //置換圖片路徑即可
     };
   },
   methods: {
-    getScreenHeight() {
-      return "220";
-      const width = $(window).width();
-      const height = $(window).height();
-      const ratio = (height / width) * 100;
-      return ratio;
-    },
     scrollView() {
       const self = this;
       const el = this.$refs.view;

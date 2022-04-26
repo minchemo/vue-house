@@ -1,11 +1,94 @@
 <template>
   <div class="s5" id="scene">
-    <img class="bg" src="@/projects/ruo/s5/bg.png" alt="" srcset="" />
-    <img class="img1" src="@/projects/ruo/s5/1.jpg" alt="" srcset="" />
-    <img class="title" src="@/projects/ruo/s5/title.svg" alt="" srcset="" />
-    <img class="circle" src="@/projects/ruo/s5/circle.svg" alt="" srcset="" />
-    <img class="circle2" src="@/projects/ruo/s5/circle2.svg" alt="" srcset="" />
-    <img class="large" src="@/projects/ruo/s5/large.svg" alt="" srcset="" />
+    <img
+      v-if="!isMobile"
+      class="bg2"
+      src="@/projects/ruo/s5/bg.jpg"
+      alt=""
+      srcset=""
+      data-aos="zoom-in"
+      data-aos-delay="200"
+    />
+    <img
+      v-if="!isMobile"
+      class="bg1"
+      src="@/projects/ruo/s5/bg.png"
+      alt=""
+      srcset=""
+      data-aos="zoom-in"
+      data-aos-delay="200"
+    />
+    <img
+      v-else
+      class="bg"
+      src="@/projects/ruo/s5/bg_m.png"
+      alt=""
+      srcset=""
+      data-aos="zoom-in"
+      data-aos-delay="200"
+    />
+    <img
+      v-if="!isMobile"
+      class="img1"
+      src="@/projects/ruo/s5/1.jpg"
+      alt=""
+      srcset=""
+      data-aos="fade-up"
+      data-aos-delay="200"
+    />
+    <img
+      v-if="!isMobile"
+      class="title"
+      src="@/projects/ruo/s5/title.svg"
+      alt=""
+      srcset=""
+      data-aos="fade-up"
+      data-aos-delay="200"
+    />
+    <img
+      v-else
+      class="title"
+      src="@/projects/ruo/s5/title_m.svg"
+      alt=""
+      srcset=""
+      data-aos="fade-up"
+      data-aos-delay="200"
+    />
+    <img
+      v-if="!isMobile"
+      class="circle"
+      src="@/projects/ruo/s5/circle.svg"
+      alt=""
+      srcset=""
+    />
+    <img
+      v-else
+      class="circle"
+      src="@/projects/ruo/s5/circle_m.png"
+      alt=""
+      srcset=""
+    />
+    <img
+      v-if="!isMobile"
+      class="circle2"
+      src="@/projects/ruo/s5/circle2.svg"
+      alt=""
+      srcset=""
+    />
+    <img
+      v-if="!isMobile"
+      class="large"
+      src="@/projects/ruo/s5/large.svg"
+      alt=""
+      srcset=""
+    />
+    <img
+      v-else
+      class="large"
+      src="@/projects/ruo/s5/large_m.png"
+      alt=""
+      srcset=""
+    />
   </div>
 </template>
 <style lang="scss">
@@ -32,11 +115,19 @@
     right: 0;
     top: 0;
   }
-  .bg {
+  .bg2 {
     position: absolute;
-    left: 0;
+    left: size(480);
     bottom: 0;
-    width: size(1557.4997);
+    width: size(1100);
+    z-index: 0;
+    transform-origin: 50% 100%;
+  }
+  .bg1 {
+    position: absolute;
+    left: size(20);
+    bottom: 0;
+    width: size(545);
     z-index: 2;
   }
   .circle {
@@ -79,10 +170,43 @@
   .s5 {
     position: relative;
     width: size-m(375);
-    height: size-m(623);
-    min-height: 0;
-    max-height: size-m(812);
-    padding-top: size-m(80);
+    height: size-m(667);
+
+    .title {
+      position: absolute;
+      z-index: 2;
+      left: size-m(30);
+      top: size-m(40);
+      width: size-m(313.27);
+    }
+    .bg {
+      position: absolute;
+      left: size-m(43);
+      bottom: 0;
+      width: size-m(271.31);
+      z-index: 2;
+    }
+    .circle {
+      width: size-m(484.74);
+      top: -#{size-m(79)};
+      left: -#{size-m(48)};
+    }
+    .large {
+      position: absolute;
+      z-index: 2;
+      right: size-m(31);
+      bottom: unset;
+      top: size-m(212);
+      width: size-m(312);
+    }
+    @keyframes float {
+      from {
+        transform: translateY(0) skew(1deg);
+      }
+      to {
+        transform: translateY(-40px) skew(0deg);
+      }
+    }
   }
 }
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -109,8 +233,7 @@ export default {
       this.scrollInstance.scrollTo(el);
     },
   },
-  mounted() {
-  },
+  mounted() { },
   created() { },
 };
 </script>

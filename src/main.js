@@ -20,6 +20,8 @@ import VueRellax from "vue-rellax";
 import VueSplide from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
+import VueAnimateOnScroll from "vue-animate-onscroll";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
     faBars,
@@ -31,6 +33,7 @@ import {
 
 //import AOS from "@/lib/aos/src/js/aos";
 import "aos/dist/aos.css";
+import "animate.css";
 
 import {
     faFacebookMessenger,
@@ -86,6 +89,7 @@ Vue.use(VueLazyComponent);
 Vue.use(VueRellax);
 Vue.use(Vue2TouchEvents);
 Vue.use(VueSplide);
+Vue.use(VueAnimateOnScroll);
 
 Vue.prototype.$locomotive = "aa";
 
