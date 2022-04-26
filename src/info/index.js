@@ -1,11 +1,11 @@
 import { isMobile } from "../utils/index";
 export default {
     address: "新莊區中環路一段6號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14460.94809535815!2d121.43376814201174!3d25.026029084137875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7e3aa5004b5%3A0x66731f84dbfea864!2zMjQy5paw5YyX5biC5paw6I6K5Y2A5Lit55Kw6Lev5LiA5q61NuiZnw!5e0!3m2!1szh-TW!2stw!4v1650873090604!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/hb9XAwTMvwiLzFe96",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.8102271099735!2d121.44219682924644!3d25.025897214195936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x20363b4000ab1fc6!2zMjXCsDAxJzMzLjIiTiAxMjHCsDI2JzMzLjkiRQ!5e0!3m2!1szh-TW!2stw!4v1650958713012!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/kTWEMcijPyWJFpLR9",
     phone: "02-22045228",
-    fbLink: "",
-    fbMessage: "",
+    fbLink: "https://facebook.com/111571768201050",
+    fbMessage: "https://m.me/111571768201050/",
     caseName: "若水岸",
     indigatorLength: 10,
     houseInfos: [
