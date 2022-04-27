@@ -356,9 +356,10 @@ export default {
 .bg-img {
   width: 110%;
   position: absolute;
-  top: 0;
+  top: -10%;
   right: -2%;
   pointer-events: none;
+  z-index: 0;
 }
 .order-bg {
   //background-color: $order_bg_color;
@@ -407,6 +408,9 @@ export default {
     width: size(308);
     margin: 3vh auto;
     //margin-bottom: 1vw;
+    z-index: 10;
+    position: relative;
+    
 
     img {
       width: 100%;
@@ -490,7 +494,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
-    //  background: $order_input_bg;
+      background: $order_input_bg;
 
     &.house {
       margin-top: 50px;
@@ -545,6 +549,9 @@ export default {
   .bird {
     width: 100vw;
   }
+  .bg-img {
+  top: 0%;
+}
   .order-bg {
     background-image: $order_bg_image_m;
     background-size: contain;
@@ -562,7 +569,7 @@ export default {
       font-size: calc(100vw * 30 / 375);
     }
     .order-title-img {
-      width: 80vw;
+      width: 50vw;
     }
 
     .order-subtitle {
