@@ -122,6 +122,7 @@
       uk-parallax="viewport: 0.3;blur:50,0"
     />
     <div class="bg2"></div>
+    <div class="bg-point"></div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -142,7 +143,9 @@
     background-image: url("../../projects/cc/s6/bg2.png");
     background-position: top;
     background-size: cover;
+    z-index: -1;
   }
+  
 
   .swiper-box {
     position: relative;
