@@ -37,7 +37,27 @@
       </swiper>
       <div class="swiper-pagi"></div>
     </div>
+    <div class="bg2"></div>
+    <div class="bg-point"></div>
+
+    <img
+      class="leaf"
+      src="@/projects/cc/s12/leaf.png"
+      alt=""
+      srcset=""
+      uk-parallax="viewport: 0.3;blur:50,0"
+    />
+    <img
+      class="leaf2"
+      src="@/projects/cc/s12/sty1.png"
+      alt=""
+      srcset=""
+      uk-parallax="viewport: 0.3;blur:50,0"
+    />
+
   </div>
+
+  
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
@@ -45,12 +65,48 @@
 .section12 {
   position: relative;
   height: auto;
-  background-image: url("~@/projects/cc/s12/bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
   height: size(1200);
-  z-index: 1;
+
+.leaf {
+    position: absolute;
+    right: 0;
+    top: size(50);
+    height: size(500);
+    z-index: -1;
+  }  
+.leaf2 {
+    position: absolute;
+    left: 0;
+    top: size(50);
+    height: size(300);
+    z-index: -1;
+  }  
+
+.bg2{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("~@/projects/cc/s12/bg.svg");
+    background-position: top;
+    background-size: cover;
+    z-index: -2;
+}
+
+.bg-point{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../projects/cc/bg.jpg");
+    background-position: top;
+    background-repeat: repeat;
+    z-index: -1;
+    mix-blend-mode: multiply;
+  }
+
   h1 {
     color: #fff;
     text-align: left;
@@ -191,8 +247,35 @@
   .section12 {
     position: relative;
     height: size-m(709);
-    z-index: 1;
-    background-image: url("~@/projects/cc/s12/bg_m.png");
+
+  .leaf {
+    position: absolute;
+    right: 0;
+    top: size-m(50);
+    height: size-m(200);
+    z-index: -1;
+  }  
+.leaf2 {
+    position: absolute;
+    left: 0;
+    top: size-m(20);
+    height: size-m(100);
+    z-index: -1;
+  }  
+    
+
+    .bg2{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("~@/projects/cc/s12/bg_m.svg");
+    background-position: top;
+    background-size: cover;
+    z-index: -1;
+    }
+
     h1 {
       text-align: center;
       top: size-m(37);

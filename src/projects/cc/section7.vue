@@ -140,10 +140,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../../projects/cc/s6/bg2.png");
+    background-image: url("../../projects/cc/s6/bg2.svg");
     background-position: top;
     background-size: cover;
     z-index: -1;
+  }
+
+  .bg-point{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../projects/cc/bg.jpg");
+    background-position: top;
+    background-repeat: repeat;
+    z-index: -1;
+    mix-blend-mode: multiply;
   }
   
 
@@ -346,11 +359,23 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url("../../projects/cc/s6/bg2-mo.png");
+      background-image: url("../../projects/cc/s6/bg2-mo.svg");
       background-position: top;
       background-size: cover;
-      z-index: 0;
+      z-index: -1;
     }
+    .bg-point{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../projects/cc/bg.jpg");
+    background-position: top;
+    background-repeat: repeat;
+    z-index: 0;
+    mix-blend-mode: multiply;
+  }
 
     .swiper-box {
       position: relative;

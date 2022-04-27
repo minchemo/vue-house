@@ -57,7 +57,8 @@
     position: absolute;
     width: size(1920);
     right: 0;
-    bottom: -#{size(50)};
+    bottom: -#{size(0)};
+    z-index: 1;
   }
 
   .swiper-box {
