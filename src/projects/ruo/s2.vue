@@ -17,7 +17,7 @@
       srcset=""
     />
     <div class="subtitle1" data-aos="fade" data-aos-delay="500">
-      現場實景圖
+      現場實景修飾圖
     </div>
     <template v-if="isMobile">
       <GodModView :bgUrl="require('@/projects/ruo/s2/bg.jpg')" />
