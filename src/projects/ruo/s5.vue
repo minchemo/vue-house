@@ -89,6 +89,9 @@
       alt=""
       srcset=""
     />
+    <div class="subtitle1" data-aos="fade" data-aos-delay="500" v-if="isMobile">
+      建築外觀實景圖
+    </div>
   </div>
 </template>
 <style lang="scss">
@@ -186,6 +189,14 @@
       width: size-m(271.31);
       z-index: 2;
     }
+    .subtitle1 {
+          position: absolute;
+          font-size: size-m(12);
+          color: #000;
+          left: 10px;
+          bottom: 10px;
+          z-index: 10;
+        }
     .circle {
       width: size-m(484.74);
       top: -#{size-m(79)};

@@ -14,7 +14,7 @@
           v-bind:class="{ active: selectedPing == 'p36' }"
           @click="selectedPing = 'p36'"
         >
-          <span>36</span>坪 團員居
+          <span>36</span>坪 團圓居
         </div>
       </div>
       <div class="t2" data-aos="fade-up" data-aos-delay="400">戶戶邊間 三面採光</div>
@@ -342,7 +342,7 @@ export default {
         p26: {
           imgs: [
             require("@/projects/ruo/s6/1-1.jpg"),
-            require("@/projects/ruo/s6/1-2.jpg"),
+            isMobile?require("@/projects/ruo/s6/1-2_m.jpg"):require("@/projects/ruo/s6/1-2.jpg"),
           ],
           selectTitle: "28坪  心富居",
           title: "高坪效  大二房",
@@ -351,9 +351,9 @@ export default {
         p36: {
           imgs: [
             require("@/projects/ruo/s6/2-1.jpg"),
-            require("@/projects/ruo/s6/2-2.jpg"),
+            isMobile?require("@/projects/ruo/s6/2-2_m.jpg"):require("@/projects/ruo/s6/2-2.jpg"),
           ],
-          selectTitle: "36坪  團員居",
+          selectTitle: "36坪  團圓居",
           title: "超實在  正三房",
           text: "豪宅格局規劃，3米8從容大客廳，方正格局戶戶景觀，雙衛浴開窗，開放式大廚房，隨時歡迎親友來訪，購屋一次到位。",
         },

@@ -153,7 +153,7 @@
     }
     .swiper-box2 {
       width: 100%;
-      height: size-m(266.11);
+      height: auto;
       left: 0;
       bottom: size-m(58);
       &::before {

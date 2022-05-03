@@ -16,9 +16,13 @@
       alt=""
       srcset=""
     />
+    <div class="subtitle1" data-aos="fade" data-aos-delay="500">
+      建築外觀實景圖
+    </div>
     <template v-if="isMobile">
       <GodModView :bgUrl="require('@/projects/ruo/s2/bg.jpg')" />
     </template>
+    
   </div>
 </template>
 <style lang="scss" scoped>
@@ -40,6 +44,14 @@
     top: size(155);
     left: size(156);
   }
+  .subtitle1 {
+          position: absolute;
+          font-size: size(12);
+          color: #000;
+          right: 30px;
+          bottom: 10px;
+          z-index: 20;
+        }
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -58,7 +70,17 @@
       left: size-m(33);
       z-index: 1;
     }
+
+    .subtitle1 {
+          position: absolute;
+          font-size: size-m(12);
+          color: #fff;
+          right: 10px;
+          bottom: 10px;
+          z-index: 10;
+        }
   }
+  
 }
 // 避免內容電腦過渡平板時，設計未考量的調整
 @media only screen and (min-width: 1025px) and (max-width: 1199.98px) {
