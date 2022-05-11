@@ -1,12 +1,15 @@
 <template>
   <div class="section1">
+      <img class="bg" v-if="!isMobile" src="./s1/bg.png" alt="" srcset="" />
+      <img class="bg" v-if="isMobile" src="./s1/bgm.png" alt="" srcset="" />
     <div class="main">
       <div class="title">
-        <img data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" class="logo" src="~@/projects/llcs/s1/logoan.svg" alt="" srcset="" />
-        <img data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" data-aos-delay="200" class="t1" src="~@/projects/llcs/s1/t1.png" alt="" srcset="" />
-        <img data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" data-aos-delay="500" class="t2" src="~@/projects/llcs/s1/t2.png" alt="" srcset="" />
-      </div>
-      <img class="draw" src="~@/projects/llcs/s1/draw.png" alt="" srcset="" />
+        <img data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" class="logo" src="./s1/logoan.svg" alt="" srcset="" />
+        <img data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" data-aos-delay="200" class="t1" src="./s1/t01.png" alt="" srcset="" />
+        <img v-if="isMobile" data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" data-aos-delay="500" class="t2" src="./s1/t02.png" alt="" srcset="" />
+        
+      </div><img v-if="!isMobile" data-aos="fade" data-aos-offset="-300" data-aos-duration="1000" data-aos-delay="500" class="t2" src="./s1/t02.png" alt="" srcset="" />
+      <img class="img" src="./s1/img.png" alt="" srcset="" />
 
       <div class="ad">萬騰廣告</div>
     </div>
@@ -19,6 +22,10 @@
   height: 100vh;
   max-height:calc(108000vw / 1920);
   min-height:calc(90000vw / 1920);
+  background:#e3007f;
+  .bg1{width: 100%;left: 0;top: 50%;transform: translateY(-50%);position: absolute;opacity: 0.5;}
+  .bg{width: 91.2%;right: 0;top:calc(62% - 37vw);position: absolute;}
+  .img{width: calc(547 * 100vw / 1920);left: -0.7vw;bottom:0;position: absolute;}
 
   .main {
     width: 100%;
@@ -27,25 +34,26 @@
     z-index: 1;
 
     .title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      left: 17%;
+      top: 36%;
+      transform: translateY(-50%);
+      width: 76.5%;
       .logo {
-        width: 20vw;
+        width: 30vw; float: left;
       }
       .t1 {
-        margin: 2.5vw auto 1.2vw;
-        width: 25vw;
-      }
-      .t2 {
-        width: 25vw;
+        margin: 4.5vw auto 0vw;
+        width: 43.7vw; float: right;
       }
     }
 
+      .t2 {
+      position: absolute;
+      left: 30%;
+      bottom: calc(22.5% - 8vw);
+        width: 55%;
+      }
     .draw {
       position: absolute;
       right: 0;
@@ -55,8 +63,8 @@
 
     .ad {
       position: absolute;
-      left: 7vw;
-      bottom: 1.5vw;
+      right: 1.5em;
+      bottom:1.5em;
       color: #fff;
       font-size: 1vw;
     }
@@ -82,18 +90,41 @@
     height: calc(100vh - 63px);
   max-height:calc(81200vw / 375 - 63px);
   min-height:calc(66700vw / 375 - 63px);
+  .bg{width: auto;
+  width: 100%;
+  right: 0;
+  left:0;top:auto;bottom:calc(23% - 10vw);position: absolute;}
+  .img{width: calc(280 * 100vw / 375);left:17%;}
+  
+
     .main {
       .title {
-        transform: translate(-50%, -70%);
+      left: 50%;
+      top:0;
+        transform: translate(-50%, 0);
+      width: 100%;
+      height:100%;
         .logo {
-          width: 60vw;
+          position: relative;
+          top:calc(45% + 100vw * (25 - 604 * .45) /375);
+          width: 64vw;
+          float:none;
+          margin: 0 auto 0;
         }
         .t1 {
-          width: 90vw;
-        margin: 9vw auto 5vw;
-        }
+          position: relative;
+          width: 72vw;
+          top:calc(60% + 100vw * (31 - 604 * .60) /375);
+          margin: auto;
+          float:none;}
         .t2 {
-          width: 90vw;
+          position: relative;
+          top:calc(70% + 100vw * (38 - 604 * .70) /375);
+          width: 72vw;
+          margin: auto;
+      left:auto;
+      bottom:auto;
+          float:none;
         }
       }
 
@@ -102,10 +133,6 @@
       }
 
       .ad {
-        position: absolute;
-        left: 40px;
-        bottom: 25px;
-        color: #fff;
         font-size: 16px;
       }
     }
