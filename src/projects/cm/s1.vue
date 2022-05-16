@@ -2,7 +2,7 @@
   <div class="s1">
     <div class="bg"></div>
     <div class="circle">
-      <img
+      <img loading="lazy"
         class="c1"
         data-aos="zoom-in"
         data-aos-delay="0"
@@ -29,7 +29,7 @@
         alt="藏美表參道"
         srcset=""
       /-->
-      <img
+      <img loading="lazy"
         v-if="!isMobile"
         class="t1"
         data-aos="fade"
@@ -38,7 +38,7 @@
         alt="藏美表參道"
         srcset=""
       />
-      <img
+      <img loading="lazy"
         v-else
         class="t1"
         data-aos="fade"
@@ -49,7 +49,7 @@
       />
     </div>
     <div class="subtitle">
-      <img
+      <img loading="lazy"
         v-if="!isMobile"
         class="t1"
         data-aos="fade"
@@ -58,7 +58,7 @@
         alt="藏美表參道"
         srcset=""
       />
-      <img
+      <img loading="lazy"
         v-else
         class="t1"
         data-aos="fade"
