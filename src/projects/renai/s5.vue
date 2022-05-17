@@ -6,7 +6,7 @@
         <GodModView />
       </div>
       <div class="decor parallax-item" data-depth="0.25">
-        <img
+        <img loading="lazy"
           class="d1"
           data-aos="fade"
           src="@/projects/renai/s5/decor1.svg"
@@ -20,7 +20,7 @@
     </div>
     <div class="s5-view" v-if="isMobile" v-bind:class="{ active: viewOpen }">
       <div class="close" @click="viewOpen = !viewOpen">
-        <img src="@/projects/renai/s5/close.svg" alt="" srcset="" />
+        <img loading="lazy" src="@/projects/renai/s5/close.svg" alt="" srcset="" />
       </div>
       <GodModView2 />
     </div>

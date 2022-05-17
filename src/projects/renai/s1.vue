@@ -2,14 +2,14 @@
   <div class="s1" id="scene">
     <div class="main">
       <div class="left">
-        <img
+        <img loading="lazy"
           class="main-text"
           src="@/projects/renai/s1/main.svg"
           alt=""
           srcset=""
         />
         <div class="bg" v-if="!isMobile">
-          <img
+          <img loading="lazy"
             data-aos="fade-down"
             data-depth="0.2"
             class="bg1 parallax-item"
@@ -17,7 +17,7 @@
             alt=""
             srcset=""
           />
-          <img
+          <img loading="lazy"
             data-aos="fade-up"
             data-depth="0.2"
             class="bg2 parallax-item"
@@ -27,14 +27,14 @@
           />
         </div>
         <div class="bg" v-else>
-          <img
+          <img loading="lazy"
             data-aos="fade-down"
             class="bg1"
             src="@/projects/renai/s1/mainbg1.png"
             alt=""
             srcset=""
           />
-          <img
+          <img loading="lazy"
             data-aos="fade-up"
             class="bg2"
             src="@/projects/renai/s1/mainbg2.png"
@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="right">
-        <img
+        <img loading="lazy"
           v-if="!isMobile"
           data-aos="fade-up"
           class="text"
@@ -52,7 +52,7 @@
           alt=""
           srcset=""
         />
-        <img
+        <img loading="lazy"
           v-else
           class="text"
           src="@/projects/renai/s1/title_m.svg"

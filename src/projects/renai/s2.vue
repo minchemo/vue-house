@@ -1,7 +1,7 @@
 <template>
   <div class="s2">
     <div class="v-title" data-aos="fade-up">
-      <img src="@/projects/renai/s2/v-title.svg" alt="" srcset="" />
+      <img loading="lazy" src="@/projects/renai/s2/v-title.svg" alt="" srcset="" />
     </div>
     <div class="title" data-aos="fade-up" data-aos-delay="500" v-if="!isMobile">
       博愛特區旁歷代菁英搖籃 、台北文藝復興的主舞臺<br />

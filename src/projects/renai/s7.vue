@@ -33,14 +33,14 @@
       </div>
     </div>
     <div class="decor parallax-item" data-depth="0.25">
-      <img
+      <img loading="lazy"
         class="d1"
         data-aos="fade"
         src="@/projects/renai/s7/decor1.svg"
         alt=""
         srcset=""
       />
-      <img
+      <img loading="lazy"
         v-if="!isMobile"
         class="d2"
         data-aos="fade"
@@ -48,7 +48,7 @@
         alt=""
         srcset=""
       />
-      <img
+      <img loading="lazy"
         v-else
         class="d2"
         data-aos="fade"
