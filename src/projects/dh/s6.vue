@@ -26,7 +26,7 @@
   position: relative;
   width: size(1920);
   height: size(1080);
-  background-image: url("~@/projects/dh/bg.png");
+  background-image: url("~@/projects/dh/bg.jpg");
   background-size: cover;
   display: flex;
   align-items: center;

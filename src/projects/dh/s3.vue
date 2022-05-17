@@ -1,7 +1,7 @@
 <template>
   <div class="s3">
     <div class="item" data-aos="fade" ref="viewbox">
-      <img
+      <img loading="lazy"
         ref="view"
         src="@/projects/dh/s3/a_m.jpg"
         alt=""
@@ -32,8 +32,7 @@
   position: relative;
   width: size(1920);
   height: size(1080);
-  background-image: url("~@/projects/dh/bg.png");
-  background-size: cover;
+  background-image: url("~@/projects/dh/bg.jpg");
   display: flex;
   align-items: center;
   justify-content: space-between;

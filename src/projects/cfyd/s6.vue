@@ -129,7 +129,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url("~@/projects/cfyd/s6/bg.png");
+    background-image: url("~@/projects/cfyd/s6/bg.jpg");
     background-position: center;
     background-size: cover;
     z-index: 0;

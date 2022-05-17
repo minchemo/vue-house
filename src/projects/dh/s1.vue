@@ -1,6 +1,6 @@
 <template>
   <div class="s1">
-    <img
+    <img loading="lazy"
       data-aos="fade"
       data-aos-delay="0"
       class="butterfly"
@@ -35,7 +35,7 @@
       >
         立即預約
       </div>
-      <img
+      <img loading="lazy"
         class="comp"
         data-aos="fade"
         data-aos-delay="600"
@@ -55,7 +55,7 @@
   position: relative;
   width: size(1920);
   height: size(1080);
-  background-image: url("~@/projects/dh/bg.png");
+  background-image: url("~@/projects/dh/bg.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
