@@ -2,9 +2,9 @@
 #下3段式抓 為案件編號 $case_code
 #$case_code_test 是用來判斷是否為1的測試頁
 #$case_code = "jw";特殊案使用
-$src =$_SERVER['SERVER_NAME']; 
-$case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
-$case_code = "ruo";
+$src = $_SERVER['SERVER_NAME'];
+$case_code_test = substr(substr($src, 0, strpos($src, '.')), -1);
+$case_code = "wv";
 
 $pdo = new pdo('mysql:host=localhost;dbname=htw12_web', 'htw12', '3hdaiU813Q');
 $pdo->exec("SET NAMES 'utf8'");
@@ -15,9 +15,9 @@ $siteName = $dataList[0]['title'];
 $docDesc = $dataList[0]['description'];
 $keyWords = $dataList[0]['keyword'];
 if ($dataList[0]['p0']) {
-$p0 = "<meta name='facebook-domain-verification' content='". $dataList[0]['p0'] ."' />";
-}else{
-$p0 = "";
+    $p0 = "<meta name='facebook-domain-verification' content='" . $dataList[0]['p0'] . "' />";
+} else {
+    $p0 = "";
 }
 $ogType = 'website';
 ?>

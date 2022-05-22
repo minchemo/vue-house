@@ -1,5 +1,5 @@
 exports.info = {
-    title: "若水岸",
-    description: "若水岸",
-    keywords: "若水岸"
+    title: "伴月灣",
+    description: "伴月灣",
+    keywords: "伴月灣"
 };
