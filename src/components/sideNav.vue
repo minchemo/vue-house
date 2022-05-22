@@ -1,11 +1,11 @@
 <template>
   <div class="sidenav">
     <div class="toggle" @click="isOpen = true">
-      <img src="@/projects/ruo/menu_icon.svg" alt="" srcset="" />
+      <!-- <img src="@/projects/ruo/menu_icon.svg" alt="" srcset="" /> -->
     </div>
     <div class="menu" v-bind:class="{ active: isOpen }">
       <div class="close" @click="isOpen = false">
-        <img src="@/projects/ruo/menu_icon_close.svg" alt="" srcset="" />
+        <!-- <img src="@/projects/ruo/menu_icon_close.svg" alt="" srcset="" /> -->
       </div>
       <ul :class="`navlist ${isOpen ? 'open' : ''}`">
         <li

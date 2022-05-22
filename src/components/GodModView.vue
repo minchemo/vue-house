@@ -60,9 +60,9 @@
         align-items: flex-start;
         img {
           position: absolute;
-          bottom: 5%;
+          bottom: 20%;
           top: unset;
-          width: size-m(226.56);
+          width: size-m(80);
           animation: unset;
         }
       }
@@ -92,7 +92,7 @@ export default {
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
       // bgUrl: require("@/projects/ruo/s2/bg.jpg"), //置換圖片路徑即可
-      swipeUrl: require("@/projects/ruo/s2/swipe-hand.svg"), //置換圖片路徑即可
+      swipeUrl: require("@/projects/wv/s3/swipe.svg"), //置換圖片路徑即可
     };
   },
   methods: {
@@ -114,7 +114,12 @@ export default {
           eventPassthrough: "vertical",
           bounce: false,
         });
-        bs.scrollTo(bs.maxScrollX / 1.7, 500);
+
+        if (!isMobile) {
+
+          bs.scrollTo(bs.maxScrollX / 1.7, 500);
+        }
+
         setTimeout(() => {
           bs.on("scroll", () => {
             $(this.$refs.viewHand).fadeOut();

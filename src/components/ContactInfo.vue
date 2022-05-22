@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="contact-info-box">
     <div id="contact-info">
       <div class="contact-info contact-sec">
-        <img
+        <!-- <img
           v-if="!isMobile"
           v-lazy
           class="logo"
@@ -15,7 +15,7 @@
           v-lazy
           :temp="require('@/projects/ruo/logo.png')"
           :alt="info.caseName"
-        />
+        /> -->
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
             <span class="flex-c">
@@ -135,6 +135,10 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
+.contact-info-box {
+  position: absolute;
+  bottom: 0;
+}
 #contact-info {
   position: relative;
   /* left: 50%;
@@ -166,8 +170,8 @@ export default {
 }
 
 .contact-info {
-  background-color: #faed00;
-  background-image: $contact_bg;
+  background-color: #4e1830;
+  // background-image: $contact_bg;
   background-size: contain;
   background-repeat: no-repeat;
   box-shadow: $contact_shadow;
@@ -177,14 +181,13 @@ export default {
   justify-content: space-between;
   position: relative;
   width: 90%;
-  min-width: 1100px;
+  // min-width: 1100px;
+  min-width: 100vw;
   margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: -20px;
-  padding: 20px 0;
+  padding: 40px 0;
   z-index: 50;
-    left: 50%;
-    transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%);
 
   .fix-bar {
     background: rgba(231, 149, 14);
@@ -334,6 +337,7 @@ export default {
   color: $contact_google_btn_color;
   background: $contact_google_btn_bg;
   background-position: center !important;
+  margin-bottom: 0;
 
   box-shadow: $contact_google_border;
   transition: all 0.5s;
@@ -401,10 +405,10 @@ export default {
   }
   #contact-info {
     position: relative;
-    background: #FAED00;
+    background: rgba(78, 24, 48, 1);
     transform: unset;
-    left: -8vw;
-    width: 101vw;
+    left: 0;
+    width: 100%;
   }
   .order-bg-draw {
     height: 100px;
@@ -422,9 +426,9 @@ export default {
     padding: 0;
     transform: none;
     position: relative;
-    margin: 10vw auto 0 auto;
+    margin: 0;
     min-width: unset;
-    background: $contact_bg_m;
+    // background: $contact_bg_m;
     background-size: cover;
     background-position: top right;
     left: 0;

@@ -66,15 +66,15 @@ export default {
   width: 80vw;
   padding: 10px 20px;
   position: relative;
-  &::after {
-    content: "";
-    width: 100vw;
-    height: 1px;
-    background: #fff;
-    position: absolute;
-    left: -10vw;
-    bottom: 0;
-  }
+  // &::after {
+  //   content: "";
+  //   width: 100vw;
+  //   height: 1px;
+  //   background: #fff;
+  //   position: absolute;
+  //   left: -10vw;
+  //   bottom: 0;
+  // }
 }
 
 .info {
@@ -131,15 +131,6 @@ export default {
     font-size: 24px;
     margin: 20px 0 24px;
     width: 100vw;
-    &::after {
-      content: "";
-      width: 100vw;
-      height: 1px;
-      background: #fff;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
   }
 
   .item {
