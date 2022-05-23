@@ -295,7 +295,9 @@ export default {
       imgs: [
         require('@/projects/wv/s8/1.jpg'),
         require('@/projects/wv/s8/2.jpg'),
-        require('@/projects/wv/s8/3.jpg')
+        require('@/projects/wv/s8/3.jpg'),
+        require('@/projects/wv/s8/4.jpg'),
+        require('@/projects/wv/s8/5.jpg')
       ],
       info: [
         {
