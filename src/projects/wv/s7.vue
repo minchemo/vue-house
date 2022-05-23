@@ -337,9 +337,9 @@ export default {
       },
       activeIndex: 0,
       imgs: [
-        require('@/projects/wv/s7/1.jpg'),
-        require('@/projects/wv/s7/2.jpg'),
-        require('@/projects/wv/s7/3.jpg')
+        isMobile ? require('@/projects/wv/s7/1_m.jpg') : require('@/projects/wv/s7/1.jpg'),
+        isMobile ? require('@/projects/wv/s7/2_m.jpg') : require('@/projects/wv/s7/2.jpg'),
+        isMobile ? require('@/projects/wv/s7/3_m.jpg') : require('@/projects/wv/s7/3.jpg')
       ],
       captions: [
         '3D外觀合成圖',
@@ -361,6 +361,9 @@ export default {
       self.activeIndex = e;
       splide.refresh();
     })
+    setInterval(() => {
+      splide.go('>');
+    }, 4000);
   },
   created() {
   },

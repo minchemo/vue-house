@@ -1,16 +1,13 @@
 <template>
   <div class="s4" id="scene">
+    <div class="title" v-if="!isMobile">
+      <div class="a">3高4捷4特快 雙北自在暢遊</div>
+      <div class="b">
+        新蘆線捷運蘆洲站5分鐘，五泰輕軌F06站散步6分鐘，串聯環狀線、機場線雙軸線。出門直上台64快速道路，快接國道1號、五楊高、汐五高，藉由新北環快、台65往來雙北也暢行無礙。
+      </div>
+    </div>
     <img
-      v-if="!isMobile"
-      class="t1"
-      src="@/projects/wv/s4/t1.svg"
-      alt=""
-      srcset=""
-      data-aos="zoom-in"
-      data-aos-delay="200"
-    />
-    <img
-      v-else
+      v-if="isMobile"
       class="t1"
       src="@/projects/wv/s4/t1m.svg"
       alt=""
@@ -20,16 +17,7 @@
     />
 
     <img
-      v-if="!isMobile"
-      class="t2"
-      src="@/projects/wv/s4/t2.svg"
-      alt=""
-      srcset=""
-      data-aos="zoom-in"
-      data-aos-delay="400"
-    />
-    <img
-      v-else
+      v-if="isMobile"
       class="t2"
       src="@/projects/wv/s4/t2m.svg"
       alt=""
@@ -76,6 +64,47 @@
   width: size(1920);
   height: size(1080);
   background-color: #4e1830;
+
+  .title {
+    padding-top: size(90);
+    text-align: center;
+    .a {
+      position: relative;
+      display: inline-block;
+      color: rgba(255, 170, 42, 1);
+      font-size: size(40);
+      font-weight: 800;
+      margin-bottom: size(50);
+      &:before {
+        content: "";
+        width: size(300);
+        height: size(1);
+        background-color: rgba(255, 170, 42, 1);
+        position: absolute;
+        top: 50%;
+        left: -#{size(380)};
+      }
+      &:after {
+        content: "";
+        width: size(300);
+        height: size(1);
+        background-color: rgba(255, 170, 42, 1);
+        position: absolute;
+        top: 50%;
+        right: -#{size(380)};
+      }
+    }
+    .b {
+      display: block;
+      margin: 0 auto;
+      width: size(760);
+      font-family: "Noto Sans TC";
+      line-height: 1.5;
+      letter-spacing: 0.2em;
+      font-size: size(20);
+      color: #fff;
+    }
+  }
   .t1 {
     display: block;
     padding-top: size(92);
@@ -92,15 +121,18 @@
     margin-top: size(80);
     .splide__list {
       align-items: center;
+      padding: size(40) 0 !important;
     }
     .slide {
       width: size(900);
       height: size(600);
       background-size: cover;
       filter: blur(5px);
+      transition: all 0.3s;
       &.is-active {
-        width: size(950);
-        height: size(650);
+        // width: size(950);
+        // height: size(650);
+        transform: scale(1.05);
         filter: blur(0px);
       }
       &:hover {
@@ -162,6 +194,7 @@
         &.is-active {
           width: size-m(304.65);
           height: size-m(210);
+          transform: scale(1);
           filter: blur(0px);
         }
         &:hover {
@@ -218,7 +251,7 @@ export default {
         pagination: false,
         focus: 'center',
         type: 'loop',
-        gap: isMobile ? 10 : 30,
+        gap: isMobile ? 10 : 50,
         autoWidth: true,
       },
       imgs: [
@@ -241,9 +274,9 @@ export default {
       const idx = e.index;
       splide.go(idx);
     })
-    splide.on('moved', (e) => {
-      splide.refresh();
-    })
+    setInterval(() => {
+      splide.go('>');
+    }, 4000);
   },
   created() {
   },

@@ -1,14 +1,16 @@
 <template>
   <div class="s9" id="scene">
-    <div class="title">
-      <div class="divider"></div>
-      <div class="t1">{{ info[activeIndex].t1 }}</div>
-      <div class="t2" v-html="info[activeIndex].t2"></div>
-      <div class="t3">{{ info[activeIndex].t3 }}</div>
-      <div class="work-title">代表作品</div>
-      <div class="t4">{{ info[activeIndex].t4 }}</div>
-      <div class="divider"></div>
-    </div>
+    <template v-for="(item, i) in info">
+      <div :key="i" v-if="activeIndex == i" data-aos="fade" class="title">
+        <div class="divider"></div>
+        <div class="t1">{{ item.t1 }}</div>
+        <div class="t2" v-html="item.t2"></div>
+        <div class="t3">{{ item.t3 }}</div>
+        <div class="work-title">代表作品</div>
+        <div class="t4">{{ item.t4 }}</div>
+        <div class="divider"></div>
+      </div>
+    </template>
     <div class="person">
       <div
         class="item"

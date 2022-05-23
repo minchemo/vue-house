@@ -26,15 +26,13 @@
       />
     </div>
 
-    <div v-if="!isMobile">
+    <div class="title" v-if="!isMobile">
       <template v-for="(item, i) in info">
         <div
-          class="title"
           :key="i"
           v-if="activeIndex == i"
           data-aos="fade"
           data-aos-duration="1000"
-          data-aos-delay="300"
         >
           <div class="t1">{{ item.t1 }}</div>
           <div class="t2">{{ item.t2 }}</div>
@@ -42,9 +40,10 @@
         </div>
       </template>
     </div>
-    <div v-else>
+
+    <div class="title" v-else>
       <template v-for="(item, i) in info">
-        <div class="title" :key="i" v-if="activeIndex == i">
+        <div :key="i" v-if="activeIndex == i">
           <div class="t1">{{ item.t1 }}</div>
           <div class="t2">{{ item.t2 }}</div>
           <div class="t3">{{ item.t3 }}</div>
@@ -153,6 +152,7 @@
       line-height: 1.5;
       letter-spacing: 0.2em;
       max-width: size(370);
+      margin: 0 auto;
     }
   }
 }
@@ -341,6 +341,9 @@ export default {
       self.activeIndex = e;
       splide.refresh();
     })
+    setInterval(() => {
+      splide.go('>');
+    }, 4000);
   },
   created() {
   },

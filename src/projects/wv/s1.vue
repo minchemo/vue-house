@@ -12,20 +12,12 @@
         />
       </div>
       <div class="right">
-        <img
-          class="t2"
-          src="@/projects/wv/s1/t2.svg"
-          alt=""
-          srcset=""
-          data-aos="zoom-in"
-        />
-        <img
-          class="t3"
-          src="@/projects/wv/s1/t3.svg"
-          alt=""
-          srcset=""
-          data-aos="zoom-in"
-        />
+        <div class="t1">
+          蘆洲捷運站5分鐘│水岸豪景2-3房｜總價998萬元起<span>須另購車位</span>
+        </div>
+        <div class="t2">
+          在大台北，只有一種美，始終不負期待，那是直面雙河，270°水天相連的豪景氣魄，是收藏新北大都會公園424公頃綠帶壯闊胸懷，是捷運蘆洲站5分鐘，F06站散步到的優雅節奏，是以最輕盈的心情，成就身心開闊的優沃姿態。在大台北，有一種實現你所有嚮往的水岸生活，叫做『伴月灣』
+        </div>
       </div>
     </div>
     <div class="titlem" v-else>
@@ -99,7 +91,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    width: size(1503);
+    width: size(1520);
     height: size(300);
     position: absolute;
     bottom: size(240);
@@ -116,12 +108,22 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      .t2 {
-        width: size(769);
-        margin-bottom: size(34);
+      color: #fff;
+      text-align: left;
+      margin-left: size(130);
+      .t1 {
+        font-size: size(30);
+        font-weight: 700;
+        margin-bottom: size(38);
+        span {
+          font-size: size(16);
+        }
       }
-      .t3 {
-        width: size(820);
+      .t2 {
+        font-size: size(20);
+        font-family: "Noto Sans TC";
+        line-height: 1.5;
+        letter-spacing: 0.2em;
       }
     }
   }

@@ -354,6 +354,9 @@ export default {
       self.activeIndex = e;
       splide.refresh();
     })
+    setInterval(() => {
+      splide.go('>');
+    }, 4000);
   },
   created() {
   },

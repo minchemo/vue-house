@@ -9,17 +9,19 @@
         "
       />
     </div>
+
+    <div class="t" v-if="!isMobile">
+      <div class="left">
+        <img src="@/projects/wv/s3/title.svg" alt="" srcset="" />
+      </div>
+      <div class="right">
+        <p>
+          機場線、環狀線已一一兌現，接續而來的五泰輕軌將串聯起大台北運輸網絡，交通樞紐已然成形，引領新一波軌道經濟。銀河灣計畫啟動，隨蘆北登鼎大台北水岸商業娛樂核心王座，蛋黃蛋白區重新洗牌，一水相鄰的新蘆特區，即將成為蛋黃中的金蛋黃。
+        </p>
+      </div>
+    </div>
     <img
-      v-if="!isMobile"
-      class="title"
-      src="@/projects/wv/s3/title.svg"
-      alt=""
-      srcset=""
-      data-aos="zoom-in"
-      data-aos-delay="200"
-    />
-    <img
-      v-else
+      v-if="isMobile"
       class="title"
       src="@/projects/wv/s3/title_m.svg"
       alt=""
@@ -41,12 +43,40 @@
     width: 100%;
     height: 100%;
   }
-  .title {
-    position: absolute;
+  .t {
     width: size(1630);
-    top: size(43);
-    left: size(140);
-    z-index: 1;
+    height: size(200);
+    position: absolute;
+    top: size(45);
+    left: size(145);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: size(40) size(100);
+    .left {
+      img {
+        width: size(654);
+      }
+    }
+    .right {
+      width: size(680);
+      p {
+        font-family: "Noto Sans TC";
+        line-height: 1.5;
+        letter-spacing: 0.2em;
+        font-size: size(20);
+      }
+    }
+    &::before {
+      content: "";
+      height: size(100);
+      width: 1px;
+      background: #000;
+      position: absolute;
+      left: 50%;
+    }
   }
 }
 /* 平板尺寸 */
