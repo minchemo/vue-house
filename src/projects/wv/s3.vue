@@ -9,7 +9,9 @@
         "
       />
     </div>
-
+    <div class="vtitle" v-if="!isMobile" data-aos="zoom-in" data-aos-delay="200">
+      <img src="@/projects/wv/s3/view_t.png" alt="" srcset="" />
+    </div>
     <div class="t" v-if="!isMobile">
       <div class="left">
         <img src="@/projects/wv/s3/title.svg" alt="" srcset="" />
@@ -42,6 +44,14 @@
     position: relative;
     width: 100%;
     height: 100%;
+  }
+  .vtitle{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   .t {
     width: size(1630);

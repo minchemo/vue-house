@@ -143,7 +143,7 @@
     position: absolute;
     left: -#{size(400)};
     top: 0;
-    background-image: url("~@/projects/wv/s1/cloud.png");
+    background-image: url("~@/projects/wv/s1/cloud.jpg");
     background-size: cover;
     z-index: 0;
     animation: move 60s alternate-reverse infinite linear;

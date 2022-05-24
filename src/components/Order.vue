@@ -25,7 +25,7 @@
               <label>需求房型<span>*</span></label>
               <el-select v-model="form.room_type" placeholder>
                 <el-option
-                  v-for="city in ['2房', '3房']"
+                  v-for="city in ['兩房', '三房', '透天']"
                   :key="city"
                   :label="city"
                   :value="city"
