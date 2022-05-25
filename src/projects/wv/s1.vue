@@ -1,5 +1,8 @@
 <template>
   <div class="s1" id="scene">
+    <div class="cloud"></div>
+    <div class="bg"></div>
+    <div class="cloud2"></div>
     <p class="caption" data-aos="fade">3D外觀合成圖</p>
     <div class="title" v-if="!isMobile">
       <div class="left">
@@ -12,10 +15,10 @@
         />
       </div>
       <div class="right">
-        <div class="t1">
+        <div class="t1" data-aos="zoom-in" data-aos-offset="150">
           蘆洲捷運站5分鐘│水岸豪景2-3房｜總價998萬元起<span>須另購車位</span>
         </div>
-        <div class="t2">
+        <div class="t2" data-aos="zoom-in" data-aos-delay="300">
           在大台北，只有一種美，始終不負期待，那是直面雙河，270°水天相連的豪景氣魄，是收藏新北大都會公園424公頃綠帶壯闊胸懷，是捷運蘆洲站5分鐘，F06站散步到的優雅節奏，是以最輕盈的心情，成就身心開闊的優沃姿態。在大台北，有一種實現你所有嚮往的水岸生活，叫做『伴月灣』
         </div>
       </div>
@@ -55,8 +58,6 @@
         叫做『伴月灣』
       </div>
     </div>
-    <div class="bg"></div>
-    <div class="cloud"></div>
     <img
       class="arrow"
       v-if="!isMobile"
@@ -71,8 +72,11 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s1 {
-  width: size(1920);
-  height: size(1080);
+  width: 100%;
+  height:100vh;
+  min-height: size(900);
+  max-height: size(1080);
+  background: linear-gradient(to bottom, rgba(50,146,218,1) 0%,rgba(218,239,255,1) 50%,rgba(218,239,255,1) 100%);
   .arrow {
     position: absolute;
     z-index: 10;
@@ -124,6 +128,7 @@
         font-family: "Noto Sans TC";
         line-height: 1.5;
         letter-spacing: 0.2em;
+        font-weight:300;
       }
     }
   }
@@ -133,30 +138,62 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: url("~@/projects/wv/s1/bg.png");
     background-size: cover;
-    z-index: 1;
-  }
-  .cloud {
-    width: size(4096);
-    height: size(586);
-    position: absolute;
-    left: -#{size(400)};
-    top: 0;
-    background-image: url("~@/projects/wv/s1/cloud.jpg");
+    &::after,
+    &::before{
+      content: "";
+      display: block;
+    width: 100%;
+    height: 50%;
     background-size: cover;
-    z-index: 0;
-    animation: move 60s alternate-reverse infinite linear;
 
-    @keyframes move {
-      from {
-        transform: translateX(0%);
-      }
-      to {
-        transform: translateX(-20%);
-      }
+    }
+    &::before{
+    background-image: url("~@/projects/wv/s1/bg_01.png");
+    background-position: 50% 100%;}
+    &::after{
+    background-image: url("~@/projects/wv/s1/bg_02.jpg");
+    background-position: 50% 0%;}
+
+  }
+  .cloud,
+  .cloud2{
+    width:size(2250);
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("~@/projects/wv/s1/cloud.png");
+    background-position: 50% 100%;
+    background-size: 100% auto;
+    animation:move 20s linear infinite;
+
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    background-image: url("~@/projects/wv/s1/cloud.png");
+    background-position: 50% 100%;
+      left: 100%;top: 0;
     }
   }
+  .cloud2 {
+    background-image: url("~@/projects/wv/s1/cloud2.png");
+    background-position: 50% 0%;
+    top: 55%;
+
+    &::after{
+    background-image: url("~@/projects/wv/s1/cloud2.png");
+    background-position: 50% 0%;
+    }
+  }
+    @keyframes move {
+      to {
+        transform: translateX(-100%);
+      }
+    }
 }
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
