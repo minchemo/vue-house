@@ -210,7 +210,7 @@
       .slide {
         width: size-m(375);
         height: size-m(250);
-        background-size: 185%;
+        background-size: cover;
         background-position: center;
         .caption {
           position: absolute;
