@@ -114,7 +114,7 @@
 
       .video {
         position: relative;
-        padding-bottom: 50%;
+        padding-bottom: 52%;
         /* 16:9 */
         padding-top: 25px;
         width: 300%;
