@@ -17,6 +17,7 @@ Email: " . $_POST["email"] . "
 居住地區: " . $_POST["area"] . "",
 );
 
+//從 https://notify-bot.line.me/oauth/token 取得 TOKEN
 $token = 'uoVOguDbquuQyDfjNqxZhhKT1douIpsNSddap5rL8ne';
 
 $options = array(
@@ -30,4 +31,4 @@ $options = array(
 $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
 
-echo $result;
+// echo $result;
