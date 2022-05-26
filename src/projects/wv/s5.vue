@@ -1,5 +1,5 @@
 <template>
-  <div class="s5" id="scene">
+  <div class="s5" id="scene5">
     <div class="divider"></div>
     <Splide :options="opt" class="slideBox" ref="splide">
       <SplideSlide
@@ -73,7 +73,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s5 {
-  width: size(1920);
+  width:100%;
   height: size(1080);
   background-color: #4e1830;
   .divider {

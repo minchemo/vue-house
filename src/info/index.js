@@ -8,6 +8,9 @@ export default {
     fbMessage: "https://m.me/103573018971658/",
     caseName: "伴月灣",
     indigatorLength: 10,
+    caseId: 'wv',
+    login: 'https://www.h35.tw/admin/test/login',
+
     houseInfos: [
         ["建案名稱", "伴月灣"],
         ["營造公司", "紹華營造"],
@@ -19,10 +22,13 @@ export default {
     ],
     gtmCode: ["5ZQ95PD"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
+// 主1  6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz
+// 主2  6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "立即預約",
-        subTitle: ""
+        subTitle: "",
+        room_type: ['兩房', '三房', '透天'],//房型
     }
 };

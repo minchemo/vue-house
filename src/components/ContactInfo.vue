@@ -136,8 +136,8 @@ export default {
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
 .contact-info-box {
-  position: absolute;
-  bottom: 0;
+ // position: absolute;
+ // bottom: 0;
 }
 #contact-info {
   position: relative;

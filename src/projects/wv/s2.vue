@@ -1,211 +1,291 @@
 <template>
-  <div class="s2" id="scene">
-    <div class="video-wrapper">
-      <div class="video">
-        <!-- <iframe
-          src="https://www.youtube.com/embed/YqpsA2Sa2vE?controls=0"
-          frameborder="0"
-          id="existing-iframe-example"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe> -->
-        <div id="player"></div>
-      </div>
+  <div class="s2" id="scene2">
+    <!-- https://codepen.io/ciprian/pen/WqLwvE -->
+    <!-- https://codepen.io/dudleystorey/pen/PZyMrd -->
+    <!-- <iframe
+      v-if="!isMobile"
+      ref
+      class="video-bg"
+      src="https://www.youtube.com/embed/eflYegCFh4M?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=eflYegCFh4M"
+      frameborder="0"
+      allowfullscreen
+    ></iframe> -->
+    <div class="video_box">
+      <div v-if="!isMobile" :id="`youtube-player-${id}`" ref="player" class="video-ifame"></div>
     </div>
-
-    <img class="play" @click="playVideo()" src="@/projects/wv/s2/play.svg" alt="" srcset=""
-      v-bind:class="{ hide: isLoading || isPlaying }" />
-    <p class="loading" v-if="isLoading">Loading...</p>
-    <div class="bg" v-bind:class="{ hide: isPlaying }"></div>
+    <img
+      src="./s2/play.svg"
+      alt=""
+      class="play-btn"
+      v-if="isMobile"
+      @click="isDialog = true"
+    >
+    <div class="video" v-if="isDialog && isMobile">
+      <div class="video_box">
+        <iframe title="youtube" src="https://www.youtube.com/embed/YqpsA2Sa2vE
+        " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <img class="close" @click="isDialog = false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAhUExURUdwTP////Pw8PLx8fLw8PLw8PPx8fHx8fLy8vLw8PXr6/Zeio0AAAALdFJOUwADRMS156s3KfgaAiHMOAAAAXtJREFUSMeFlr9qwzAQxnVZajoVLRLZTEMfoBAadywIt11t/AAGETqGhOzGoS/g0r20D1qRxLYsS/oy5Y/uk+/ud/eFnRoWecmcfTzdhX+n/Tf763bhAyJ7Z4l+DErQfdkw+izS0AGutiZY6JeABK2q8/XHMo0JhCXooUqvb/wSXNfXwIVXwjxBOmj5JLiqhzCh5+WkQzVG0bGYlVOscytIvG0cCWq/JjGn7md6YJlNQ5LsefKZfjsHA+cL6QQwdpvZidDevZKx1uZCZJtZ3okauaBVOQeRDmM5uco9tR+b2nPgSgxcjG1023uRGDiYA3KRCAn0EkGBXkKoOjgHC8OFna6nFsVOrvPILBou2tgoGkw6TxemXHTRdWA4iB+AV6CHNGk2UkXS5DqPFgqWGjULthsBA5GzoS19tUDYSzA4Zpzjo7dEw4vGX4IFYjiIryC0xHxr8MbGHy1SuIo5WObQDjgwFApZEnF9tiRkatAWobFCa4bmDv4evP4DsmNwZSA8CfQAAAAASUVORK5CYII=" />
+    </div>
+    <!-- div class="line-bg" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAQAAADYv8WvAAAADUlEQVQIHWNkSGOAAAADRABoDg6qmwAAAABJRU5ErkJggg=="></div -->
   </div>
 </template>
 <style lang="scss">
-@import "@/assets/style/variableDefault.scss";
-@import "@/assets/style/function.scss";
-
-/* 螢幕尺寸標準 */
+@import '@/assets/style/function.scss';
+.video-ifame {
+  width: 100.5%;
+  height:100.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
+<style lang="scss" scoped>
+@import '@/assets/style/function.scss';
 .s2 {
-  width: size(1920);
-  height: size(1080);
-
-  .video-wrapper {
-    overflow: hidden;
-    max-width: 100%;
-
-    .video {
-      position: relative;
-      padding-bottom: 56.25%;
-      /* 16:9 */
-      padding-top: 25px;
-      width: 300%;
-      /* enlarge beyond browser width */
-      left: -100%;
-
-      /* center */
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-
-  .bg {
+  // height: 100vh;
+  // position: relative;
+  position: relative;
+  height:100vh;
+  min-height: size(900);
+  max-height: size(1080);
+  background: #000 url('./s2/v.jpg') no-repeat center;
+  background-size: contain;
+  margin: 0;
+  &::after {
+    content: '';
+    display: block;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
-    background-image: url("~@/projects/wv/s2/bg.jpg");
-    background-size: cover;
     z-index: 1;
-    opacity: 1;
-    transition: 0.3s all;
-
-    &.hide {
-      opacity: 0;
-      z-index: -1;
-    }
-  }
-
-  .play {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: size(94);
-    height: size(116);
-    cursor: pointer;
-    z-index: 2;
-    opacity: 1;
-    transition: 0.3s all;
-
-    &:hover {
-      opacity: 0.5;
-    }
-
-    &.hide {
-      opacity: 0;
-      z-index: -1;
-    }
-  }
-
-  .loading {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    font-family: "Noto Sans TC";
-    color: #fff;
   }
 }
+.video_box {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top:50%;
+  transform: translateY(-50%);
+  left: 0;
+  overflow: hidden;
+  height:100%;
+  opacity: 0;
+  animation: op 1s 3s ease-out forwards;
+}
+@keyframes op {
+  to {
+    opacity: 1;
+  }
+}
+.video-bg {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  //z-index: 3;
+}
 
+.line-bg {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAQAAADYv8WvAAAADUlEQVQIHWNkSGOAAAADRABoDg6qmwAAAABJRU5ErkJggg==');
+}
+
+.logo {
+  width: size(318);
+  left: size(58);
+  top: size(64);
+  z-index: 1;
+}
+
+.txt {
+  width: size(525);
+  top: size(396);
+  right: size(113);
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1440px) {
+  .bg-img {
+  }
+}
+@media only screen and (max-width: 1280px) and (min-width: 1025px) {
+}
+
+/* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
 
-/* 手機尺寸 */
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .s2 {
-    .video-wrapper {
-      overflow: hidden;
-      max-width: 100%;
+    margin: 0 0 0 0;
+   // overflow: hidden;
+    width: 100vw;
+    height: size-m(236);
+    min-height:0px;
+    max-height: size-m(250);
+   // margin-top: sizem(-60);
+  }
 
-      .video {
-        position: relative;
-        padding-bottom: 52%;
-        /* 16:9 */
-        padding-top: 25px;
-        width: 300%;
-        left: -100%;
+  .video_box {
+    width: 100%;
+    position: absolute;
+    height:100%;
+    // top: 50%;
+    // transform: translateY(-50%);
+    // left: 0;
+    // overflow: hidden;
+    // height: size(910);
+    opacity: 1;
+    // animation: op 1s 3s ease-out forwards;
+  }
+  .video-bg {
+    width: size-m(1190);
+    height: size-m(667);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: center;
+  }
 
-        /* center */
-        iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-      }
+  .logo {
+    width: size-m(154);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: size-m(240);
+  }
+
+  .txt {
+    width: size-m(157);
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: size-m(47);
+  }
+
+  .play-btn {
+    position: absolute;
+    width: size-m(32);
+    top:calc(50% - #{size-m(32 * .5)});
+    left:calc(50% - #{size-m(32 * .5)});
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .video {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: size-m(0);
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 200;
+    transition: opacity 0.5s;
+
+    iframe {
+      width: 100vw;
+      height: size-m(260);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      // top: 50%;
+      // transform: translateY(-50%);
+      position: absolute;
+      background-color: #fff;
     }
 
-    .play {
-      width: size-m(50);
-      height: auto;
+    .close {
+      position: absolute;
+      cursor: pointer;
+      right: 15px;
+      top: 50px;
+      width: size-m(30);
     }
   }
 }
-
-// 避免內容電腦過渡平板時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1199.98px) {}
-
-// 避免過度到 1280 x 720 時，設計未考量的調整
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {}
 </style>
-
 <script>
 // @ is an alias to /src
-import { isMobile } from "@/utils";
+import { isMobile } from '@/utils'
+
 export default {
-  name: "s2",
-  props: ["scrollInstance"],
+  name: 's2',
   data() {
     return {
       isMobile,
-      player: null,
-      isPlaying: false,
-      isLoading: false,
-    };
-  },
-  methods: {
-    scrollTo(el) {
-      this.scrollInstance.scrollTo(el);
-    },
-    playVideo() {
-      this.player.playVideo();
-    },
-    onPlayerStateChange(event) {
-      if (event.data == 2 || event.data == 0) {
-        this.isLoading = false;
-        this.isPlaying = false;
-      } else if (event.data == 1) {
-        this.isLoading = false;
-        this.isPlaying = true;
-      } else {
-        this.isLoading = true;
-        this.isPlaying = false;
-      }
-    },
-    stopVideo() {
-      this.player.stopVideo();
+      player: '',
+      id: 'YqpsA2Sa2vE',
+      isDialog: false,
     }
   },
-  mounted() {
-    YT.ready(() => {
 
-      const self = this;
-      this.player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: 'YqpsA2Sa2vE',
+  methods: {
+    onPlayerReady(event) {
+      console.log('load')
+      event.target.playVideo()
+    },
+    loadVideo() {
+      this.player = new window.YT.Player(`youtube-player-${this.id}`, {
+        videoId: this.id,
+        width: '1920',
+        height: '1080',
         playerVars: {
-          'autoplay': false,
-          'controls': 0,
-          'enablejsapi': 1,
-          'origin': 'localhost'
+          autoplay: 1,
+          loop: 1,
+          controls: 0,
+          showinfo: 0,
+          autohide: 1,
+          modestbranding: 1,
+          mute: 1,
+          suggestedQuality: 'default',
+          iv_load_policy: 3,
         },
         events: {
-          'onReady': self.onPlayerReady,
-          'onStateChange': self.onPlayerStateChange
-        }
-      });
-    })
+          onReady: this.onPlayerReady,
+          onStateChange: this.onPlayerStateChange,
+        },
+      })
+    },
 
-
+    onPlayerStateChange(e) {
+      if (e.data === window.YT.PlayerState.ENDED) {
+        this.player.loadVideoById(this.id)
+      }
+    },
   },
+
   created() {
+    const tag = document.createElement('script')
+    tag.src = 'https://www.youtube.com/iframe_api'
+    const firstScriptTag = document.getElementsByTagName('script')[0]
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
   },
-};
+
+  mounted() {
+    setTimeout(() => {
+      if (!this.isMobile) {
+        if (!window.YT) {
+          window.onYouTubeIframeAPIReady = this.loadVideo
+        } else {
+          this.loadVideo()
+        }
+      }
+    }, 2500)
+  },
+
+  computed: {},
+}
 </script>

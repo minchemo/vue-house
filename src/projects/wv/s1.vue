@@ -1,5 +1,5 @@
 <template>
-  <div class="s1" id="scene">
+  <div class="s1" id="scene1">
     <div class="cloud"></div>
     <div class="bg"></div>
     <div class="cloud2"></div>
@@ -31,7 +31,7 @@
         srcset=""
         data-aos="zoom-in"
       />
-      <div class="divider" data-aos="fade-up"></div>
+      <div class="divider" data-aos="flip-up"></div>
       <div class="t2">
         <p data-aos="zoom-in" data-aos-offset="150">蘆洲捷運站5分鐘</p>
         <p data-aos="zoom-in" data-aos-delay="100" data-aos-offset="150">
@@ -62,6 +62,7 @@
       class="arrow"
       v-if="!isMobile"
       src="@/projects/wv/s1/arrow.svg"
+       v-scroll-to="{ element: `#scene2` }"
       alt=""
       srcset=""
     />
@@ -82,6 +83,8 @@
     z-index: 10;
     width: size(25);
     bottom: size(50);
+    animation:move 1s ease-in-out infinite alternate;
+    transform: translateY(50%);
   }
   .caption {
     position: absolute;
@@ -99,6 +102,7 @@
     height: size(300);
     position: absolute;
     bottom: size(240);
+    bottom:calc(50% + (240 - 1080 *.5) * 100vw / 1920);
     left: 50%;
     transform: translate(-50%);
     z-index: 10;
@@ -113,7 +117,7 @@
       flex-direction: column;
       align-items: flex-start;
       color: #fff;
-      text-align: left;
+      text-align: justify;
       margin-left: size(130);
       .t1 {
         font-size: size(30);
@@ -129,6 +133,7 @@
         line-height: 1.5;
         letter-spacing: 0.2em;
         font-weight:300;
+
       }
     }
   }
@@ -146,6 +151,7 @@
     width: 100%;
     height: 50%;
     background-size: cover;
+    background-repeat: no-repeat;
 
     }
     &::before{
@@ -166,7 +172,8 @@
     background-image: url("~@/projects/wv/s1/cloud.png");
     background-position: 50% 100%;
     background-size: 100% auto;
-    animation:move 20s linear infinite;
+    animation:move 50s linear infinite;
+    transform: translateX(-100%);
 
     &::after{
       content: "";
@@ -176,6 +183,7 @@
       height: 100%;
     background-image: url("~@/projects/wv/s1/cloud.png");
     background-position: 50% 100%;
+    background-size: 100% auto;
       left: 100%;top: 0;
     }
   }
@@ -189,12 +197,12 @@
     background-position: 50% 0%;
     }
   }
+}
     @keyframes move {
       to {
-        transform: translateX(-100%);
+        transform: translateX(0);
       }
     }
-}
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
@@ -203,6 +211,8 @@
   .s1 {
     width: size-m(375);
     height: size-m(1244);
+  min-height: size-m(1244);
+  max-height: size-m(1244);
     .caption {
       right: size-m(24);
       bottom: unset;
@@ -226,9 +236,11 @@
         background-color: #fff;
         margin-top: size-m(20);
         margin-bottom: size-m(35);
+        transform-origin: 0 0;
       }
       .t2 {
         color: #fff;
+        font-weight: 700;
         font-size: size-m(25);
         line-height: 1.6;
         p {
@@ -240,29 +252,36 @@
       .t3 {
         margin-top: size-m(20);
         font-size: size-m(14);
+        font-family: "Noto Sans TC";
         line-height: 2;
         font-weight: 600;
         color: #fff;
+        font-weight:300;
       }
     }
     .bg {
-      background-image: url("~@/projects/wv/s1/bg_m.png");
-    }
-    .cloud {
-      height: size-m(300);
-      position: absolute;
-      left: -#{size(400)};
-      animation: move 30s alternate-reverse infinite linear;
+    &::after,
+    &::before{
+    background-size: 100% auto;
 
-      @keyframes move {
-        from {
-          transform: translateX(0%);
-        }
-        to {
-          transform: translateX(-40%);
-        }
-      }
     }
+    &::before{
+    background-image: url("~@/projects/wv/s1/bg_m_01.png");
+    height: 25%;
+    }
+    &::after{
+    background-image: url("~@/projects/wv/s1/bg_m_02.jpg");
+    background-color: #004b6a;
+    height: 75%;
+    }
+    }
+  .cloud,
+  .cloud2{
+    width:348vw;
+    height: 25%;
+    }
+  .cloud2 {
+    top: 26%;}
   }
 }
 // 避免內容電腦過渡平板時，設計未考量的調整

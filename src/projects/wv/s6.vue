@@ -1,5 +1,5 @@
 <template>
-  <div class="s6" id="scene">
+  <div class="s6" id="scene6">
     <Splide :options="opt" class="slideBox" ref="splide">
       <SplideSlide
         v-for="(img, i) in imgs"
@@ -54,7 +54,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s6 {
-  width: size(1920);
+  width:100%;
   height: size(1080);
   background-color: #04323f;
   position: relative;

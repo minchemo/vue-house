@@ -1,8 +1,8 @@
 <template>
-  <div class="s4" id="scene">
+  <div class="s4" id="scene4">
     <div class="title" v-if="!isMobile">
-      <div class="a">3高4捷4特快 雙北自在暢遊</div>
-      <div class="b">
+      <div class="a" data-aos="zoom-in">3高4捷4特快 雙北自在暢遊</div>
+      <div class="b" data-aos="zoom-in" data-aos-delay="200">
         新蘆線捷運蘆洲站5分鐘，五泰輕軌F06站散步6分鐘，串聯環狀線、機場線雙軸線。出門直上台64快速道路，快接國道1號、五楊高、汐五高，藉由新北環快、台65往來雙北也暢行無礙。
       </div>
     </div>
@@ -61,7 +61,7 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s4 {
-  width: size(1920);
+  width:100%;
   height: size(1080);
   background-color: #4e1830;
 

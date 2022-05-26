@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
      <a href="https://www.lixin.com.tw/" target="_blank"><img src="../assets/img/footerLogo.gif" alt="立炘數位" /></a>
-     <a href="https://www.h35.tw/admin/test/login.php" target="_blank">網頁製作</a>
+     <a :href="info.login" target="_blank">網頁製作</a>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -35,9 +35,15 @@
 </style>
 
 <script>
+import info from '@/info'
 export default {
   name: 'adminFooter',
   components: {},
+  data() {
+    return {
+      info,
+    }
+  },
 
   methods: {},
 }

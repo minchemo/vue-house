@@ -1,5 +1,5 @@
 <template>
-  <div class="s3" id="scene">
+  <div class="s3" id="scene3">
     <div class="viewbox">
       <GodModView :bgUrl="
         !isMobile
@@ -7,15 +7,17 @@
           : require('@/projects/wv/s3/view_m.jpg')
       " />
     </div>
-    <div class="vtitle" v-if="!isMobile" data-aos="zoom-in" data-aos-delay="200">
+    <div class="vtitle" v-if="!isMobile" data-aos="fade" data-aos-delay="200">
       <img src="@/projects/wv/s3/view_t.png" alt="" srcset="" />
     </div>
     <div class="t" v-if="!isMobile">
       <div class="left">
-        <img src="@/projects/wv/s3/title.svg" alt="" srcset="" />
+        <img 
+          data-aos="zoom-in" src="@/projects/wv/s3/title.svg" alt="" srcset="" />
       </div>
       <div class="right">
-        <p>
+        <p
+          data-aos="zoom-in">
           機場線、環狀線已一一兌現，接續而來的五泰輕軌將串聯起大台北運輸網絡，交通樞紐已然成形，引領新一波軌道經濟。銀河灣計畫啟動，隨蘆北登鼎大台北水岸商業娛樂核心王座，蛋黃蛋白區重新洗牌，一水相鄰的新蘆特區，即將成為蛋黃中的金蛋黃。
         </p>
       </div>
@@ -32,7 +34,7 @@
 
 /* 螢幕尺寸標準 */
 .s3 {
-  width: size(1920);
+  width:100%;
   height: size(1080);
 
   .viewbox {

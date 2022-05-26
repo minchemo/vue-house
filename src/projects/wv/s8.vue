@@ -1,5 +1,5 @@
 <template>
-  <div class="s8" id="scene">
+  <div class="s8" id="scene8">
     <Splide :options="opt" class="slideBox" ref="splide">
       <SplideSlide
         v-for="(img, i) in imgs"
@@ -62,17 +62,27 @@
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
 .s8 {
-  width: size(1920);
-  height: size(1080);
+  width:100%;
+  height:100vh;
+  min-height: size(900);
+  max-height: size(1080);
   background-color: #04323f;
   position: relative;
   .slideBox {
+      width:100%;
+      height:100%;
+    .splide__track{
+      width:100%;
+      height:100%;
+    }
     .splide__list {
+      width:100%;
+      height:100%;
       align-items: center;
     }
     .slide {
-      width: size(1920);
-      height: size(1080);
+      width:100%;
+      height:100%;
       background-size: cover;
     }
   }
@@ -84,7 +94,7 @@
     position: relative;
     z-index: 5;
     position: absolute;
-    top: size(581);
+    top:calc(50% + (581 - 1080 * .5) *100vw / 1920);
     left: size(100);
     z-index: 10;
 
@@ -109,10 +119,12 @@
     justify-content: center;
     width: size(850);
     height: size(300);
-    background-color: rgba(4, 50, 63, 0.3);
+    background-color: #04323f4d;
     backdrop-filter: blur(5px);
     text-align: center;
     z-index: 2;
+      font-size: size(30);
+    text-shadow: 0 0 1em #002731cc,0 0 0.3em #002530cc;
     .t1 {
       color: #bc976c;
       font-size: size(40);
@@ -140,7 +152,6 @@
 
     .t2 {
       color: #bc976c;
-      font-size: size(30);
       font-weight: 700;
       margin: size(35) 0;
     }
@@ -151,7 +162,7 @@
       color: #fff;
       line-height: 1.5;
       letter-spacing: 0.2em;
-      max-width: size(370);
+      max-width: size(510);
       margin: 0 auto;
     }
   }
@@ -164,6 +175,8 @@
   .s8 {
     width: size-m(375);
     height: size-m(489);
+  min-height: size(0);
+  max-height: size-m(489);
     background-color: #04323f;
     position: relative;
     .slideBox {

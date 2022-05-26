@@ -1,5 +1,5 @@
 <template>
-  <div class="s9" id="scene">
+  <div class="s9" id="scene9">
     <template v-for="(item, i) in info">
       <div :key="i" v-if="activeIndex == i" data-aos="fade" class="title">
         <div class="divider"></div>
@@ -24,7 +24,7 @@
 
 /* 螢幕尺寸標準 */
 .s9 {
-  width: size(1920);
+  width:100%;
   height: size(1080);
   background-color: #4e1830;
   position: relative;
