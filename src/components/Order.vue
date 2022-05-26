@@ -174,7 +174,7 @@ export default {
     ContactInfo,
     PolicyDialog,
     Loading,
-    VueRecaptcha,
+    VueRecaptcha
   },
 
   data() {
@@ -194,32 +194,31 @@ export default {
         infosource: "",
         parking: "",
         houseStyle: "",
-        room_type: '',
+        room_type: "",
         msg: "",
         time_start: "",
-        time_end: "",
+        time_end: ""
       },
       checked: false,
       isSubmit: false,
       isVerify: false, // google 機器人驗證
       policyVisible: false,
-      showValidateDialog: false,
+      showValidateDialog: false
     };
   },
 
   computed: {
     areaList() {
       return renderAreaList(this.form.city);
-    },
+    }
   },
 
   mounted() {
-
     const elem = this.$refs.parallax2;
 
     var parallaxInstance = new Parallax(elem, {
       relativeInput: true,
-      selector: '.parallax-item'
+      selector: ".parallax-item"
     });
   },
   methods: {
@@ -234,11 +233,7 @@ export default {
       const h = this.$createElement;
       this.$notify({
         title: "請填寫必填欄位",
-        message: h(
-          "i",
-          { style: "color: #82191d" },
-          "「姓名、手機」是必填欄位"
-        ),
+        message: h("i", { style: "color: #82191d" }, "「姓名、手機」是必填欄位")
       });
     },
 
@@ -246,11 +241,12 @@ export default {
       const h = this.$createElement;
       this.$notify({
         title: "格式錯誤",
-        message: h("i", { style: "color: #82191d" }, "「手機」需為 10 碼數字"),
+        message: h("i", { style: "color: #82191d" }, "「手機」需為 10 碼數字")
       });
     },
 
     submit() {
+      const self = this;
       if (this.isSubmit) return;
       if (!this.isVerify) return;
       if (!this.checked) return;
@@ -285,7 +281,7 @@ export default {
       formData.append("email", this.form.email);
       formData.append("contacttime", this.form.contacttime);
       formData.append("msg", this.form.msg);
-      formData.append('room_type', this.form.room_type)
+      formData.append("room_type", this.form.room_type);
       // formData.append('time_start', this.form.time_start)
       // formData.append('time_end', this.form.time_end)
       formData.append("city", this.form.city);
@@ -306,24 +302,49 @@ export default {
       const min = time.getMinutes();
       const sec = time.getSeconds();
       const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+
+      const notifyData = {
+        name: this.form.name,
+        phone: this.form.phone,
+        email: this.form.email,
+        contacttime: this.form.contacttime,
+        msg: this.form.msg,
+        room_type: this.form.room_type,
+        city: this.form.city,
+        area: this.form.area,
+        gender: this.form.gender,
+        infosource: this.form.infosource,
+        parking: this.form.parking,
+        houseStyle: this.form.houseStyle
+      };
+
       fetch(
         `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}
       `,
         {
-          method: "GET",
+          method: "GET"
         }
       );
+
+      self.sendNotify(notifyData);
+
       fetch("contact-form.php", {
         method: "POST",
-        body: formData,
-      }).then((response) => {
+        body: formData
+      }).then(response => {
         this.isSubmit = false;
         if (response.status === 200) {
           window.location.href = "formThanks";
         }
       });
     },
-  },
+    sendNotify(data) {
+      fetch("notify.php", {
+        method: "POST",
+        body: JSON.stringify(data)
+      }).then(response => {});
+    }
+  }
 };
 </script>
 
