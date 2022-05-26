@@ -62,7 +62,7 @@
       class="arrow"
       v-if="!isMobile"
       src="@/projects/wv/s1/arrow.svg"
-       v-scroll-to="{ element: `#scene2` }"
+      v-scroll-to="{ element: `#scene2` }"
       alt=""
       srcset=""
     />
@@ -74,16 +74,21 @@
 /* 螢幕尺寸標準 */
 .s1 {
   width: 100%;
-  height:100vh;
+  height: 100vh;
   min-height: size(900);
   max-height: size(1080);
-  background: linear-gradient(to bottom, rgba(50,146,218,1) 0%,rgba(218,239,255,1) 50%,rgba(218,239,255,1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(50, 146, 218, 1) 0%,
+    rgba(218, 239, 255, 1) 50%,
+    rgba(218, 239, 255, 1) 100%
+  );
   .arrow {
     position: absolute;
     z-index: 10;
     width: size(25);
     bottom: size(50);
-    animation:move 1s ease-in-out infinite alternate;
+    animation: move 1s ease-in-out infinite alternate;
     transform: translateY(50%);
   }
   .caption {
@@ -102,7 +107,7 @@
     height: size(300);
     position: absolute;
     bottom: size(240);
-    bottom:calc(50% + (240 - 1080 *.5) * 100vw / 1920);
+    bottom: calc(50% + (240 - 1080 * 0.5) * 100vw / 1920);
     left: 50%;
     transform: translate(-50%);
     z-index: 10;
@@ -132,8 +137,7 @@
         font-family: "Noto Sans TC";
         line-height: 1.5;
         letter-spacing: 0.2em;
-        font-weight:300;
-
+        font-weight: 300;
       }
     }
   }
@@ -145,26 +149,26 @@
     bottom: 0;
     background-size: cover;
     &::after,
-    &::before{
+    &::before {
       content: "";
       display: block;
-    width: 100%;
-    height: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-
+      width: 100%;
+      height: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
-    &::before{
-    background-image: url("~@/projects/wv/s1/bg_01.png");
-    background-position: 50% 100%;}
-    &::after{
-    background-image: url("~@/projects/wv/s1/bg_02.jpg");
-    background-position: 50% 0%;}
-
+    &::before {
+      background-image: url("~@/projects/wv/s1/bg_01.png");
+      background-position: 50% 100%;
+    }
+    &::after {
+      background-image: url("~@/projects/wv/s1/bg_02.jpg");
+      background-position: 50% 0%;
+    }
   }
   .cloud,
-  .cloud2{
-    width:size(2250);
+  .cloud2 {
+    width: size(2250);
     height: 50%;
     position: absolute;
     left: 0;
@@ -172,19 +176,20 @@
     background-image: url("~@/projects/wv/s1/cloud.png");
     background-position: 50% 100%;
     background-size: 100% auto;
-    animation:move 50s linear infinite;
+    animation: move 50s linear infinite;
     transform: translateX(-100%);
 
-    &::after{
+    &::after {
       content: "";
       display: block;
       position: absolute;
       width: 100%;
       height: 100%;
-    background-image: url("~@/projects/wv/s1/cloud.png");
-    background-position: 50% 100%;
-    background-size: 100% auto;
-      left: 100%;top: 0;
+      background-image: url("~@/projects/wv/s1/cloud.png");
+      background-position: 50% 100%;
+      background-size: 100% auto;
+      left: 100%;
+      top: 0;
     }
   }
   .cloud2 {
@@ -192,17 +197,17 @@
     background-position: 50% 0%;
     top: 55%;
 
-    &::after{
-    background-image: url("~@/projects/wv/s1/cloud2.png");
-    background-position: 50% 0%;
+    &::after {
+      background-image: url("~@/projects/wv/s1/cloud2.png");
+      background-position: 50% 0%;
     }
   }
 }
-    @keyframes move {
-      to {
-        transform: translateX(0);
-      }
-    }
+@keyframes move {
+  to {
+    transform: translateX(0);
+  }
+}
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
@@ -211,8 +216,8 @@
   .s1 {
     width: size-m(375);
     height: size-m(1244);
-  min-height: size-m(1244);
-  max-height: size-m(1244);
+    min-height: size-m(1244);
+    max-height: size-m(1244);
     .caption {
       right: size-m(24);
       bottom: unset;
@@ -256,32 +261,32 @@
         line-height: 2;
         font-weight: 600;
         color: #fff;
-        font-weight:300;
+        font-weight: 300;
       }
     }
     .bg {
-    &::after,
-    &::before{
-    background-size: 100% auto;
-
+      &::after,
+      &::before {
+        background-size: 100% auto;
+      }
+      &::before {
+        background-image: url("~@/projects/wv/s1/bg_m_01.png");
+        height: 25%;
+      }
+      &::after {
+        background-image: url("~@/projects/wv/s1/bg_m_02.jpg");
+        background-color: #004b6a;
+        height: 75%;
+      }
     }
-    &::before{
-    background-image: url("~@/projects/wv/s1/bg_m_01.png");
-    height: 25%;
+    .cloud,
+    .cloud2 {
+      width: 348vw;
+      height: 25%;
     }
-    &::after{
-    background-image: url("~@/projects/wv/s1/bg_m_02.jpg");
-    background-color: #004b6a;
-    height: 75%;
+    .cloud2 {
+      top: 26%;
     }
-    }
-  .cloud,
-  .cloud2{
-    width:348vw;
-    height: 25%;
-    }
-  .cloud2 {
-    top: 26%;}
   }
 }
 // 避免內容電腦過渡平板時，設計未考量的調整
@@ -300,15 +305,15 @@ export default {
   props: ["scrollInstance"],
   data() {
     return {
-      isMobile,
+      isMobile
     };
   },
   methods: {
     scrollTo(el) {
       this.scrollInstance.scrollTo(el);
-    },
+    }
   },
-  mounted() { },
-  created() { },
+  mounted() {},
+  created() {}
 };
 </script>

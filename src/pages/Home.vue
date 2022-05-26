@@ -47,8 +47,8 @@ import S8 from "@/projects/wv/s8.vue";
 import S9 from "@/projects/wv/s9.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
+import UIkit from "uikit";
+import Icons from "uikit/dist/js/uikit-icons";
 UIkit.use(Icons);
 
 export default {
@@ -79,7 +79,7 @@ export default {
       isMobile,
       isSide: false,
       load: true,
-      locomotive: null,
+      locomotive: null
       // viewIndex: 0,
       // action: {
       //   moveTo: () => {},
@@ -143,15 +143,17 @@ export default {
           allImagesLoaded();
         }
       };
-      $("img").each(function (idx, img) {
-        $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+      $("img").each(function(idx, img) {
+        $("<img>")
+          .on("load", imageLoaded)
+          .attr("src", $(img).attr("src"));
       });
     });
   },
   mounted() {
     AOS.init({
       once: true,
-      duration: 1000,
+      duration: 1000
     });
 
     this.locomotive = new LocomotiveScroll({
@@ -161,15 +163,15 @@ export default {
       offset: ["45%", "45%"],
       tablet: {
         smooth: false,
-        breakpoint: 250,
+        breakpoint: 250
       },
       smartphone: {
-        smooth: false,
+        smooth: false
       },
-      lerp: 0.05,
+      lerp: 0.05
     });
 
-    this.locomotive.on("scroll", (obj) => {
+    this.locomotive.on("scroll", obj => {
       $(".is-inview [data-aos]").addClass("aos-animate");
     });
 
@@ -198,7 +200,7 @@ export default {
     },
     scrolling() {
       let lastScrollTop = 0;
-      $(window).on("scroll", function () {
+      $(window).on("scroll", function() {
         let st = $(this).scrollTop();
         const el = $(".floating");
         if (st < lastScrollTop) {
@@ -209,8 +211,8 @@ export default {
 
         lastScrollTop = st;
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
