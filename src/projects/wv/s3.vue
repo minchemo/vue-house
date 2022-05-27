@@ -9,9 +9,10 @@
         "
       />
     </div>
+    <!--
     <div class="vtitle" v-if="!isMobile" data-aos="fade" data-aos-delay="200">
       <img src="@/projects/wv/s3/view_t.png" alt="" srcset="" />
-    </div>
+    </div> -->
     <div class="t" v-if="!isMobile">
       <div class="left">
         <img

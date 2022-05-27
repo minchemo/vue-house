@@ -2,6 +2,7 @@
   <div class="GodModView with-mask">
     <div class="view" ref="view">
       <img ref="viewImg" class="view-img" v-lazy :temp="bgUrl" alt="" />
+      <img ref="viewImg" class="view-img2" v-lazy :temp="bgUrl2" alt="" v-if="!isMobile" />
       <div class="view-hand" ref="viewHand" v-if="isMobile">
         <img v-lazy :temp="swipeUrl" alt="" />
       </div>
@@ -19,6 +20,7 @@
     width: 100%;
     overflow: hidden;
     cursor: ew-resize;
+    position: relative;
 
     .view-hand {
       position: absolute;
@@ -45,6 +47,11 @@
     .view-img {
       height: 100%;
       max-width: unset;
+    }
+    .view-img2{position: absolute;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+    object-fit: cover;
     }
   }
 }
@@ -91,7 +98,7 @@ export default {
       autoScrollView: true, //是否自動調整鳥瞰圖至建案位置 (手機板)
       autoScrollViewOffset: 150, //自動調整偏移微調
       viewAspectRatioPercentage: isMobile ? "150" : "46.82", // 鳥瞰圖比例 高÷寬×100
-      // bgUrl: require("@/projects/ruo/s2/bg.jpg"), //置換圖片路徑即可
+      bgUrl2: require('@/projects/wv/s3/view_t.png'), //置換圖片路徑即可
       swipeUrl: require("@/projects/wv/s3/swipe.svg"), //置換圖片路徑即可
     };
   },

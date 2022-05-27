@@ -102,9 +102,10 @@
       .caption {
         position: absolute;
         font-size: size(14);
-        right: size(18);
-        bottom: size(12);
+        right: 1.28em;
+        bottom:0.86em;
         color: #fff;
+        text-shadow: 0 0 0.2em #000;
       }
     }
   }
@@ -213,11 +214,7 @@
         background-size: cover;
         background-position: center;
         .caption {
-          position: absolute;
           font-size: size-m(14);
-          right: size-m(18);
-          bottom: size-m(12);
-          color: #fff;
         }
       }
     }
@@ -343,8 +340,8 @@ export default {
       ],
       captions: [
         '3D外觀合成圖',
-        '空中花園示意圖',
         '中庭示意圖',
+        '空中花園示意圖',
       ]
     };
   },

@@ -142,8 +142,10 @@
       .caption {
         position: absolute;
         font-size: size(14);
-        right: size(12);
-        bottom: size(12);
+        right: 0.86em;
+        bottom:0.86em;
+        color: #fff;
+        text-shadow: 0 0 0.2em #000;
       }
     }
   }
@@ -202,11 +204,7 @@
           cursor: pointer;
         }
         .caption {
-          position: absolute;
           font-size: size-m(14);
-          right: size-m(12);
-          bottom: size-m(12);
-          color: #fff;
         }
       }
     }
@@ -261,7 +259,7 @@ export default {
       ],
       captions: [
         '副都心站',
-        '蘆洲站',
+        '副都心站',
         '蘆洲站'
       ]
     };

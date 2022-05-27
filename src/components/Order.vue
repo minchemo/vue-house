@@ -149,7 +149,6 @@
       </div>
       <img
         class="orderlogo"
-        v-if="!isMobile"
         src="@/projects/wv/logo.svg"
         alt=""
         srcset=""
@@ -651,6 +650,15 @@ img{position: absolute;animation: op 2s ease-in-out infinite alternate;opacity: 
     bottom: 1000px;
     transform: scale(1.5);
   }
+.orderlogo {
+  position: relative;
+  width: size-m(230);
+ //bottom: 940px;
+ // left: 50%;
+  //margin-left: size(-165);
+  margin: 0 auto 110vw;
+  z-index: 11;
+}
 
   .contact1 {
     left: -#{size-m(80)};
@@ -706,9 +714,6 @@ img{position: absolute;animation: op 2s ease-in-out infinite alternate;opacity: 
     }
     .order-top {
       background-image: $order_bg_image_m;
-      background-size: contain;
-    //  background-position: top;
-      background-repeat: repeat;
     background-position: 0 calc(100% - 508px );
       // top: 10vw;
       padding-bottom: 0;
@@ -718,7 +723,7 @@ img{position: absolute;animation: op 2s ease-in-out infinite alternate;opacity: 
     .order {
       width: 85% !important;
       padding: 0;
-    margin: 0 auto 150vw;
+    margin: 0 auto 20vw;
     }
 
     .form {
