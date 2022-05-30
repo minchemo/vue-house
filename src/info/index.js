@@ -1,6 +1,6 @@
 import { isMobile } from "../utils/index";
 export default {
-    address: "新北市五股區成素路三段356號旁",
+    address: "新北市五股區成泰路三段356號旁",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1074.1772914032156!2d121.45088133297523!3d25.098904823101353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af213b157e05%3A0x7725924cb26159c7!2z5Ly05pyI54Gj5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1653236981921!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/o4YFy1cTGjGUUeCb8",
     phone: "02-82922333",

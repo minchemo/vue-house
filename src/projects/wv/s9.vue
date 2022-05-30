@@ -13,7 +13,7 @@
     </template>
     <div class="person">
       <div class="item" v-for="(img, i) in imgs" :key="i" v-bind:style="{ backgroundImage: `url(${img})` }"
-        v-bind:class="{ active: activeIndex == i }" @click="activeIndex = i"></div>
+        v-bind:class="{ active: activeIndex == i }" @mouseover="activeIndex = i"></div>
     </div>
     <img class="star" src="@/projects/wv/s6/star.png" alt="" srcset="" />
   </div>
