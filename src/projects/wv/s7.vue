@@ -152,7 +152,7 @@
     }
 
     .t2 {
-      color: #fff;
+      color: #fffd;
       font-size: size(20);
       font-weight: 400;
       font-family: "Noto Sans TC";

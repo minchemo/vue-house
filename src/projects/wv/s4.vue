@@ -1,30 +1,11 @@
 <template>
   <div class="s4" id="scene4">
-    <div class="title" v-if="!isMobile">
+    <div class="title">
       <div class="a" data-aos="zoom-in">3高4捷4特快 雙北自在暢遊</div>
       <div class="b" data-aos="zoom-in" data-aos-delay="200">
         新蘆線捷運蘆洲站5分鐘，五泰輕軌F06站散步6分鐘，串聯環狀線、機場線雙軸線。出門直上台64快速道路，快接國道1號、五楊高、汐五高，藉由新北環快、台65往來雙北也暢行無礙。
       </div>
     </div>
-    <img
-      v-if="isMobile"
-      class="t1"
-      src="@/projects/wv/s4/t1m.svg"
-      alt=""
-      srcset=""
-      data-aos="zoom-in"
-      data-aos-delay="200"
-    />
-
-    <img
-      v-if="isMobile"
-      class="t2"
-      src="@/projects/wv/s4/t2m.svg"
-      alt=""
-      srcset=""
-      data-aos="zoom-in"
-      data-aos-delay="400"
-    />
 
     <Splide :options="opt" class="slideBox" ref="splide">
       <SplideSlide
@@ -74,11 +55,11 @@
       color: rgba(255, 170, 42, 1);
       font-size: size(40);
       font-weight: 800;
-      margin-bottom: size(50);
+      margin-bottom:1.25em;
       &:before {
         content: "";
         width: size(300);
-        height: size(1);
+        height: 1px;
         background-color: rgba(255, 170, 42, 1);
         position: absolute;
         top: 50%;
@@ -87,7 +68,7 @@
       &:after {
         content: "";
         width: size(300);
-        height: size(1);
+        height: 1px;
         background-color: rgba(255, 170, 42, 1);
         position: absolute;
         top: 50%;
@@ -102,7 +83,7 @@
       line-height: 1.5;
       letter-spacing: 0.2em;
       font-size: size(20);
-      color: #fff;
+      color: #fffd;
     }
   }
   .t1 {
@@ -172,16 +153,18 @@
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .s4 {
-    width: size-m(375);
+    width:100%;
     height: size-m(526);
-    .t1 {
-      display: block;
-      padding-top: size-m(64);
-      margin-bottom: size-m(15) !important;
-      width: 100%;
-    }
-    .t2 {
-      width: 90%;
+    .title {
+      padding-top: size-m(60);
+      .a {
+         font-size:size-m(25);
+         margin-bottom:.8em;
+      }
+      .b {
+        width: size-m(320);
+        font-size: size-m(15);
+      }
     }
     .slideBox {
       margin-top: size-m(55);

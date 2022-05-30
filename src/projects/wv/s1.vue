@@ -16,7 +16,7 @@
       </div>
       <div class="right">
         <div class="t1" data-aos="zoom-in" data-aos-offset="150">
-          蘆洲捷運站5分鐘│水岸豪景2-3房｜總價998萬元起<span>須另購車位</span>
+          蘆洲捷運站5分鐘│水岸豪景2-3房｜總價998萬元起 <span>須另購車位</span>
         </div>
         <div class="t2" data-aos="zoom-in" data-aos-delay="300">
           在大台北，只有一種美，始終不負期待，那是直面雙河，270°水天相連的豪景氣魄，是收藏新北大都會公園424公頃綠帶壯闊胸懷，是捷運蘆洲站5分鐘，F06站散步到的優雅節奏，是以最輕盈的心情，成就身心開闊的優沃姿態。在大台北，有一種實現你所有嚮往的水岸生活，叫做『伴月灣』
@@ -130,6 +130,7 @@
         margin-bottom: size(38);
         span {
           font-size: size(16);
+
         }
       }
       .t2 {

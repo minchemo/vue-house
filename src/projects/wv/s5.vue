@@ -157,7 +157,7 @@
     }
 
     .t2 {
-      color: #fff;
+      color: #fffd;
       font-size: size(20);
       font-weight: 400;
       font-family: "Noto Sans TC";
@@ -274,7 +274,7 @@
         width: 100%;
         line-height: size-m(24);
         letter-spacing: 1px;
-        font-family: "Noto serif TC";
+      // font-family: "Noto serif TC";
       }
     }
     .moon {
