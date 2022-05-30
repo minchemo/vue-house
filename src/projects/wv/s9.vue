@@ -1,7 +1,7 @@
 <template>
   <div class="s9" id="scene9">
     <template v-for="(item, i) in info">
-      <div :key="i" v-if="activeIndex == i" data-aos="fade" class="title">
+      <div :key="i" v-if="activeIndex == i" data-aos="fade" :class="`title title${i}`">
         <div class="divider"></div>
         <div class="t1">{{ item.t1 }}</div>
         <div class="t2" v-html="item.t2"></div>
@@ -15,7 +15,7 @@
       <div class="item" v-for="(img, i) in imgs" :key="i" v-bind:style="{ backgroundImage: `url(${img})` }"
         v-bind:class="{ active: activeIndex == i }" @mouseover="activeIndex = i"></div>
     </div>
-    <img class="star" src="@/projects/wv/s6/star.png" alt="" srcset="" />
+    <img v-if="isMobile" class="star" src="@/projects/wv/s6/star.png" alt="" srcset="" />
   </div>
 </template>
 <style lang="scss">
@@ -34,23 +34,25 @@
     position: absolute;
     right: 0;
     top: size(89);
+    overflow: hidden;
 
     .item {
+      position: relative;
       width: size(275);
       height: size(903);
       background-size: cover;
       background-position: center;
       transition: all 0.3s;
-      filter: grayscale(100%);
-
+      filter: grayscale(100%) blur(.15vw);
+      transform: scale(1.02);
+      cursor: pointer;
       &.active {
         width: size(493);
-        filter: grayscale(0%);
-      }
-
-      &:hover {
-        filter: grayscale(0%);
-        cursor: pointer;
+        filter: grayscale(0%) blur(0);
+        margin: 0 0 0 size(870);
+        box-shadow: 0.5vw 0 1vw #0009;
+        z-index: 2;
+      transform: scale(1);
       }
     }
   }
@@ -65,6 +67,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    &.title0{
+    left: 0;}
+    &.title1{
+    left: size(275);}
+    &.title2{
+    left: size(550);}
 
     .t1 {
       font-size: size(40);
@@ -81,11 +89,11 @@
     .t3 {
       font-size: size(20);
       font-weight: 400;
-      color: #fff;
+      color: #fffd;
       line-height: 1.5;
       letter-spacing: 0.2em;
       font-family: "Noto Sans TC";
-      max-width: size(520);
+      max-width: size(590);
     }
 
     .work-title {
@@ -148,24 +156,19 @@
       bottom: 0;
       width: size-m(375);
       height: size-m(320);
-
       .item {
         width: size-m(100);
         height: size-m(320);
-        background-size: cover;
-        background-position: center;
-        transition: all 0.3s;
-        filter: grayscale(100%);
+      filter: grayscale(100%) blur(.3vw);
+
 
         &.active {
           width: size-m(173);
-          filter: grayscale(0%);
+        filter: grayscale(0%) blur(0);
+        box-shadow: 0 0 3vw #000;
+        margin:0;
         }
 
-        &:hover {
-          filter: grayscale(0%);
-          cursor: pointer;
-        }
       }
     }
 
@@ -180,6 +183,11 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 size-m(35);
+    &.title0,
+    &.title1,
+    &.title2{
+    left: 0;}
+
 
       .t1 {
         font-size: size-m(25);
@@ -192,8 +200,7 @@
 
       .t3 {
         font-size: size-m(15);
-        letter-spacing: 1px;
-        font-family: "Noto Serif TC";
+        letter-spacing: 0.06em;
         max-width: 100%;
       }
 

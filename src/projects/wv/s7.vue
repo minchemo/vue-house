@@ -157,7 +157,7 @@
       font-weight: 400;
       font-family: "Noto Sans TC";
       width: size(513);
-      text-align: left;
+      text-align: justify;
       line-height: size(30);
       letter-spacing: 0.2em;
     }
@@ -263,12 +263,9 @@
       }
 
       .t2 {
-        color: #fff;
         font-size: size-m(15);
         font-weight: 400;
-        font-family: "Noto Serif TC";
         width: 100%;
-        text-align: left;
         line-height: size-m(24);
         letter-spacing: 1px;
       }

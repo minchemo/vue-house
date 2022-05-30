@@ -159,7 +159,7 @@
     .t3 {
       font-family: "Noto Sans TC";
       font-size: size(20);
-      color: #fff;
+      color: #fffd;
       line-height: 1.5;
       letter-spacing: 0.2em;
       max-width: size(510);
@@ -174,9 +174,9 @@
 @media only screen and (max-width: 767px) {
   .s8 {
     width: size-m(375);
-    height: size-m(489);
+    height: size-m(487);
   min-height: size(0);
-  max-height: size-m(489);
+  max-height:size-m(600);
     background-color: #04323f;
     position: relative;
     .slideBox {
@@ -221,7 +221,7 @@
       justify-content: center;
       width: size-m(375);
       height: size-m(260);
-      background-color: rgba(4, 50, 63, 0.7);
+      background-color: rgba(2, 40, 51, 0.7);
       backdrop-filter: blur(5px);
       text-align: center;
       .t1 {
@@ -252,11 +252,9 @@
       }
 
       .t3 {
-        font-family: "Noto Serif TC";
         font-size: size-m(15);
-        color: #fff;
         line-height: 1.5;
-        letter-spacing: 1px;
+        letter-spacing: 0.06em;
         max-width: 90%;
       }
     }
