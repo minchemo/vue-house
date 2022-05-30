@@ -243,6 +243,7 @@ export default {
 }
 
 .section {
+  position: relative;
 }
 
 .fp-left {
