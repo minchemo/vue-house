@@ -43,7 +43,7 @@
         新蘆特區完熟生活機能 <br v-if="isMobile" />雙商圈左擁右抱
       </div>
       <div class="t2" data-aos="zoom-in" data-aos-delay="400">
-        成州市場、成泰路商圈散步到，全聯、傳統市場採買超便利；過成蘆橋就到蘆洲總站商圈、長榮路商圈，機能完整應有盡有。
+        成州市場、成泰路商圈、凌雲路商圈散步到，全聯、傳統市場採買超便利；過成蘆橋就到蘆洲總站商圈、長榮路商圈，機能完整應有盡有。
       </div>
     </div>
     <img
@@ -343,13 +343,17 @@ export default {
       activeIndex: 0,
       imgs: [
         isMobile ? require('@/projects/wv/s5/1_m.jpg') : require('@/projects/wv/s5/1.jpg'),
+        isMobile ? require('@/projects/wv/s5/4_m.jpg') : require('@/projects/wv/s5/4.jpg'),
         isMobile ? require('@/projects/wv/s5/2_m.jpg') : require('@/projects/wv/s5/2.jpg'),
-        isMobile ? require('@/projects/wv/s5/3_m.jpg') : require('@/projects/wv/s5/3.jpg')
+        isMobile ? require('@/projects/wv/s5/5_m.jpg') : require('@/projects/wv/s5/5.jpg'),
+     //   isMobile ? require('@/projects/wv/s5/3_m.jpg') : require('@/projects/wv/s5/3.jpg')
       ],
       captions: [
         '成州國小',
+        '鷺江國中',
         '全聯福利中心',
-        '徐匯中學商圈',
+        '國民運動中心',
+      //  '徐匯中學商圈',
       ]
     };
   },

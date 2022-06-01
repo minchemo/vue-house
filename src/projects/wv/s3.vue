@@ -49,6 +49,7 @@
 .s3 {
   width: 100%;
   height: size(1080);
+  background-color: #1b92f6;
 
   .viewbox {
     position: relative;

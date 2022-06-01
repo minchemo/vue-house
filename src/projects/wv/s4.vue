@@ -3,7 +3,7 @@
     <div class="title">
       <div class="a" data-aos="zoom-in">3高4捷4特快 雙北自在暢遊</div>
       <div class="b" data-aos="zoom-in" data-aos-delay="200">
-        新蘆線捷運蘆洲站5分鐘，五泰輕軌F06站散步6分鐘，串聯環狀線、機場線雙軸線。出門直上台64快速道路，快接國道1號、五楊高、汐五高，藉由新北環快、台65往來雙北也暢行無礙。
+        新蘆線捷運蘆洲站5分鐘，五泰輕軌F06站散步6分鐘，台北車站10分鐘，串聯環狀線、機場線雙軸線。出門直上台64、台65、台一線、新北環快，快接國道1號、五楊高、汐五高，往來雙北也暢行無礙。
       </div>
     </div>
 
@@ -236,12 +236,12 @@ export default {
         autoWidth: true,
       },
       imgs: [
-        require('@/projects/wv/s4/1.jpg'),
+      //  require('@/projects/wv/s4/1.jpg'),
         require('@/projects/wv/s4/2.jpg'),
         require('@/projects/wv/s4/3.jpg')
       ],
       captions: [
-        '副都心站',
+    //    '副都心站',
         '副都心站',
         '蘆洲站'
       ]
