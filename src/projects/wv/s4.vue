@@ -238,12 +238,14 @@ export default {
       imgs: [
       //  require('@/projects/wv/s4/1.jpg'),
         require('@/projects/wv/s4/2.jpg'),
-        require('@/projects/wv/s4/3.jpg')
+        require('@/projects/wv/s4/3.jpg'),
+        require('@/projects/wv/s4/4.jpg'),
       ],
       captions: [
     //    '副都心站',
         '副都心站',
-        '蘆洲站'
+        '蘆洲站',
+        '五泰輕軌示意圖',
       ]
     };
   },
