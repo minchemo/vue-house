@@ -1,17 +1,24 @@
 <template>
   <div class="s2">
     <div class="v-title" data-aos="fade-up">
-      <img loading="lazy" src="@/projects/renai/s2/v-title.svg" alt="" srcset="" />
+      <img
+        loading="lazy"
+        src="@/projects/renai/s2/title.svg"
+        alt=""
+        srcset=""
+      />
     </div>
     <div class="title" data-aos="fade-up" data-aos-delay="500" v-if="!isMobile">
-      博愛特區旁歷代菁英搖籃 、台北文藝復興的主舞臺<br />
-      濃密綠徑核心十八席 ，切切珍惜輕取仁愛一瞬機緣
+      國之門面仁愛大道 仕紳貴冑聚居之地<br />
+      一世幾回相逢京畿富域稀罕釋出<br />
+      難得一遇〔仁愛旭〕2房精巧規劃<br />
+      輕盈步伐與億萬豪邸同享豐饒家境
     </div>
     <div class="title" data-aos="fade-up" data-aos-delay="500" v-else>
-      博愛特區旁歷代菁英搖籃<br />
-      台北文藝復興的主舞臺<br />
-      濃密綠徑核心十八席<br />
-      切切珍惜輕取仁愛一瞬機緣
+      國之門面仁愛大道 仕紳貴冑聚居之地<br />
+      一世幾回相逢京畿富域稀罕釋出<br />
+      難得一遇〔仁愛旭〕2房精巧規劃<br />
+      輕盈步伐與億萬豪邸同享豐饒家境
     </div>
   </div>
 </template>
@@ -30,7 +37,7 @@
   .v-title {
     position: absolute;
     width: size(166);
-    bottom: size(512);
+    bottom: size(604);
     left: size(877);
     img {
       width: 100%;
@@ -40,13 +47,13 @@
   .title {
     position: absolute;
     font-size: size(44);
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.5;
     width: size(980);
     left: 50%;
     margin-left: -#{size(490)};
     color: #fff;
-    bottom: size(291);
+    bottom: size(257);
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8));
   }
 }
@@ -106,9 +113,8 @@ export default {
     },
   },
 
-  mounted() {
-  },
+  mounted() {},
 
-  created() { },
+  created() {},
 };
 </script>

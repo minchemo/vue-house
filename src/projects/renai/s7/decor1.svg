@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="557" height="328.059" viewBox="0 0 557 328.059">
-  <defs>
-    <linearGradient id="linear-gradient" x1="2.708" y1="0.311" x2="3.984" y2="0.311" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#e4aa38" stop-opacity="0.698"/>
-      <stop offset="0.503" stop-color="#e2a135" stop-opacity="0.898"/>
-      <stop offset="0.776" stop-color="#d76b23"/>
-    </linearGradient>
-  </defs>
-  <path id="Path_139826" data-name="Path 139826" d="M6942.971,2682.377A163.5,163.5,0,0,0,6827.22,2730.2c-43.145,37.6-84.752,38.193-117.416,21.248a108.151,108.151,0,1,0,.741,189.577l0,0c45-19.278,84.819-6.2,116.165,21.092a164.026,164.026,0,1,0,116.257-279.733Z" transform="translate(-6550 -2682.377)" fill="url(#linear-gradient)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 557 328.06"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:url(#未命名漸層_51);}</style><clipPath id="clip-path" transform="translate(120 -4.38)"><rect class="cls-1" width="449" height="343"/></clipPath><linearGradient id="未命名漸層_51" x1="1388.19" y1="106.41" x2="2099.22" y2="106.41" gradientTransform="translate(-1540 61.99)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3a938" stop-opacity="0.7"/><stop offset="0.5" stop-color="#e1a035" stop-opacity="0.9"/><stop offset="0.78" stop-color="#d66b23"/></linearGradient></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_1-2" data-name="圖層 1"><g class="cls-2"><path class="cls-3" d="M273,4.38A163.5,163.5,0,0,0,157.22,52.2C114.07,89.79,72.47,90.39,39.8,73.44A107.17,107.17,0,0,0-11.84,60.27,108.16,108.16,0,0,0-120,168.43,108.19,108.19,0,0,0-11.84,276.59,107.37,107.37,0,0,0,40.55,263h0c45-19.28,84.82-6.2,116.16,21.09A164,164,0,1,0,273,4.38Z" transform="translate(120 -4.38)"/></g></g></g></svg>

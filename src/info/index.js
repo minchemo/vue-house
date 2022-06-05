@@ -9,16 +9,15 @@ export default {
     indigatorLength: 10,
     houseInfos: [
         ["投資興建", "中星建設股份有限公司"],
-        ["營造公司", "松禾營造股份有限公司（甲級營造廠）"],
         ["建築設計", "黃明智建築師事務所"],
         ["公設設計", "源質室內裝修設計工程有限公司"],
         ["建築代銷", "聯碩地產股份有限公司"],
         ["建案位置", "台北市中正區紹興南街22號"],
         ["建照號碼", "110建字第0299號"],
-        ["不動產經紀人", "徐福龍(91)北市經證字第00848號"],
+        ["110建字第0299號", "徐福龍(91)北市經證字第00848號"],
     ],
 
-    gtmCode: ["WFTQQ9G","MMKBJ8C"], // 可放置多個
+    gtmCode: ["WFTQQ9G", "MMKBJ8C"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",

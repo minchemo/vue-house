@@ -22,28 +22,34 @@
       </div>
       <div class="right">
         <div class="t1" data-aos="fade-up" v-if="!isMobile">
-          美好生活永不落幕<br />繁華寧靜輕而易舉
+          只取城市最好<br />中星三十而立
         </div>
         <div class="t1" data-aos="fade-up" v-else>
-          繁華寧靜輕而易舉<br />美好生活永不落幕
+          中星三十而立<br />只取城市最好
         </div>
-        <div class="t2" data-aos="fade-up" data-aos-delay="300" v-if="!isMobile">
-          紹興南街銜接華山藝文公園、國家兩廳院園區，前後串連北市三條最有價值的東西向大道：忠孝東路、仁愛路、信義路。<br>從〔仁愛旭〕出發，散步3分鐘市長官邸藝文沙龍、6分鐘中正紀念堂園區、8分鐘捷運板南線、10分鐘台灣文學基地，市中心的休閒與便捷近在咫尺。
-        </div>
-        <div class="t2" data-aos="fade-up" data-aos-delay="300" v-else>
-          紹興南街銜接華山藝文公園、國家兩廳院園區，前後串連北市三條最有價值的東西向大道：忠孝東路、仁愛路、信義路。從〔仁愛旭〕出發，散步3分鐘市長官邸藝文沙龍、6分鐘中正紀念堂園區、8分鐘捷運板南線、10分鐘台灣文學基地，市中心的休閒與便捷近在咫尺。
+        <div class="t2" data-aos="fade-up" data-aos-delay="300">
+          〔中星建設〕創業30週年，一路走來每件作品嚴謹挑選地段，確保建築價值歷久不衰，為居住之人打造保藏珍愛回憶的幸福寓所。<br /><br />
+          ｜代表業績｜<br />
+          <span>中山世紀</span> / 官道首排單層單戶<br />
+          <span>富貴百代・富利百代</span> / 南西商圈巍峨雙璧<br />
+          <span>大直明水</span> / 大直重劃明水富郁<br />
+          <span>師大居藝</span> / 和平靜巷學府氣息<br />
+          <span>南京75</span> / 松江南京金融核心<br />
+          <span>青山通</span> / 繁華都心微奢精品
         </div>
       </div>
     </div>
     <div class="decor parallax-item" data-depth="0.25">
-      <img loading="lazy"
+      <img
+        loading="lazy"
         class="d1"
         data-aos="fade"
         src="@/projects/renai/s8/decor4.svg"
         alt=""
         srcset=""
       />
-      <img loading="lazy"
+      <img
+        loading="lazy"
         v-if="isMobile"
         class="d2"
         data-aos="fade"
@@ -51,7 +57,7 @@
         alt=""
         srcset=""
       />
-      <div class="title" data-aos="fade" data-aos-delay="300">藝文捷境</div>
+      <div class="title" data-aos="fade" data-aos-delay="300">中星選地</div>
     </div>
   </div>
 </template>
@@ -271,10 +277,10 @@ export default {
   props: ["scrollInstance"],
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   },
   directives: {
-    swiper: directive
+    swiper: directive,
   },
 
   data() {
@@ -294,44 +300,29 @@ export default {
           clickable: true,
         },
       },
+
       imgs: [
         {
           img: require("@/projects/renai/s8/1.jpg"),
-          caption: "國家兩廳院"
+          caption: "中山世紀",
         },
         {
           img: require("@/projects/renai/s8/2.jpg"),
-          caption: "市長官邸藝文沙龍"
+          caption: "富貴百代",
         },
         {
           img: require("@/projects/renai/s8/3.jpg"),
-          caption: "市長官邸藝文沙龍"
+          caption: "富利百代",
         },
         {
           img: require("@/projects/renai/s8/4.jpg"),
-          caption: "璞滿滿居酒屋"
+          caption: "南京75",
         },
         {
-          img: require("@/projects/renai/s8/5.jpg"),
-          caption: "華山1914文化創意產業園區"
+          img: require("@/projects/renai/s8/4.jpg"),
+          caption: "青山通",
         },
-        {
-          img: require("@/projects/renai/s8/6.jpg"),
-          caption: "台灣文學基地"
-        },
-        {
-          img: require("@/projects/renai/s8/7.jpg"),
-          caption: "捷運板南線善導寺站"
-        },
-        {
-          img: require("@/projects/renai/s8/8.jpg"),
-          caption: "東和禪寺鐘樓"
-        },
-        {
-          img: require("@/projects/renai/s8/9.jpg"),
-          caption: "台北市青少年發展處攀岩場"
-        },
-      ]
+      ],
     };
   },
 
@@ -342,13 +333,13 @@ export default {
     slideChangeTransitionStart() {
       const idx = this.$refs.swiper.$swiper.realIndex;
       this.swiperIndex = idx;
-    }
+    },
   },
 
   mounted() {
     setTimeout(() => {
       if (isMobile) {
-        return
+        return;
       }
       // $(".parallax-item").addClass("no-delay");
       var scene = this.$refs.s8;
@@ -359,6 +350,6 @@ export default {
     }, 1500);
   },
 
-  created() { },
+  created() {},
 };
 </script>

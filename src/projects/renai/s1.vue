@@ -2,14 +2,16 @@
   <div class="s1" id="scene">
     <div class="main">
       <div class="left">
-        <img loading="lazy"
+        <img
+          loading="lazy"
           class="main-text"
           src="@/projects/renai/s1/main.svg"
           alt=""
           srcset=""
         />
         <div class="bg" v-if="!isMobile">
-          <img loading="lazy"
+          <img
+            loading="lazy"
             data-aos="fade-down"
             data-depth="0.2"
             class="bg1 parallax-item"
@@ -17,7 +19,8 @@
             alt=""
             srcset=""
           />
-          <img loading="lazy"
+          <img
+            loading="lazy"
             data-aos="fade-up"
             data-depth="0.2"
             class="bg2 parallax-item"
@@ -27,14 +30,16 @@
           />
         </div>
         <div class="bg" v-else>
-          <img loading="lazy"
+          <img
+            loading="lazy"
             data-aos="fade-down"
             class="bg1"
             src="@/projects/renai/s1/mainbg1.png"
             alt=""
             srcset=""
           />
-          <img loading="lazy"
+          <img
+            loading="lazy"
             data-aos="fade-up"
             class="bg2"
             src="@/projects/renai/s1/mainbg2.png"
@@ -44,7 +49,8 @@
         </div>
       </div>
       <div class="right">
-        <img loading="lazy"
+        <img
+          loading="lazy"
           v-if="!isMobile"
           data-aos="fade-up"
           class="text"
@@ -52,7 +58,8 @@
           alt=""
           srcset=""
         />
-        <img loading="lazy"
+        <img
+          loading="lazy"
           v-else
           class="text"
           src="@/projects/renai/s1/title_m.svg"
@@ -136,23 +143,28 @@
       }
     }
     .right {
+      position: relative;
       .text {
         width: size(709.92);
         height: size(495.48);
       }
       .order-button {
-        width: size(674);
-        height: size(77);
+        width: size(166);
+        height: size(133);
         font-size: size(44);
         background-color: #fff;
         border-radius: 5px;
         display: block;
-        padding: 2.1% 0;
+        padding: size(18) size(38);
         align-items: center;
         justify-content: center;
         color: #eb5c20;
         margin: 0 auto;
         transition: all 0.5s;
+        position: absolute;
+        line-height: 1.1;
+        right: size(30);
+        bottom: size(100);
         &:hover {
           transform: translateY(-5px);
           cursor: pointer;
@@ -228,6 +240,7 @@
           height: auto;
         }
         .order-button {
+          position: relative;
           width: auto;
           height: size-m(30);
           font-size: size-m(13);
@@ -273,7 +286,7 @@ export default {
   mounted() {
     setTimeout(() => {
       if (isMobile) {
-        return
+        return;
       }
       $(".parallax-item").addClass("no-delay");
       var scene = document.getElementById("scene");
@@ -285,6 +298,6 @@ export default {
     }, 1500);
   },
 
-  created() { },
+  created() {},
 };
 </script>

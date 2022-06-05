@@ -22,25 +22,35 @@
       </div>
       <div class="right">
         <div class="t1" data-aos="fade-up" v-if="!isMobile">
-          好學自然而然<br />知識信手拈來
+          美好生活永不落幕<br />繁華寧靜輕而易舉
         </div>
         <div class="t1" data-aos="fade-up" v-else>
-          知識信手拈來<br />好學自然而然
+          繁華寧靜輕而易舉<br />美好生活永不落幕
         </div>
-        <div class="t2" data-aos="fade-up" data-aos-delay="300">
-          中正區為北市文教區代表，由頂尖志願台大醫學院領銜，百年名校比比皆是，學術、醫療資源堪稱全台之冠；除了國家級的博物館、圖書館、文學館環列左右，東門國小、弘道國中、成功高中、北一女中等12年國教優質學區亦在四周齊聚一堂。
+        <div
+          class="t2"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          v-if="!isMobile"
+        >
+          紹興南街銜接華山藝文公園、國家兩廳院園區，前後串連北市三條最有價值的東西向大道：忠孝東路、仁愛路、信義路。<br />從〔仁愛旭〕出發，散步3分鐘市長官邸藝文沙龍、6分鐘中正紀念堂園區、8分鐘捷運板南線、10分鐘台灣文學基地，市中心的休閒與便捷近在咫尺。
+        </div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="300" v-else>
+          紹興南街銜接華山藝文公園、國家兩廳院園區，前後串連北市三條最有價值的東西向大道：忠孝東路、仁愛路、信義路。從〔仁愛旭〕出發，散步3分鐘市長官邸藝文沙龍、6分鐘中正紀念堂園區、8分鐘捷運板南線、10分鐘台灣文學基地，市中心的休閒與便捷近在咫尺。
         </div>
       </div>
     </div>
     <div class="decor parallax-item" data-depth="0.25">
-      <img loading="lazy"
+      <img
+        loading="lazy"
         class="d1"
         data-aos="fade"
         src="@/projects/renai/s7/decor1.svg"
         alt=""
         srcset=""
       />
-      <img loading="lazy"
+      <img
+        loading="lazy"
         v-if="!isMobile"
         class="d2"
         data-aos="fade"
@@ -48,7 +58,8 @@
         alt=""
         srcset=""
       />
-      <img loading="lazy"
+      <img
+        loading="lazy"
         v-else
         class="d2"
         data-aos="fade"
@@ -56,7 +67,7 @@
         alt=""
         srcset=""
       />
-      <div class="title" data-aos="fade" data-aos-delay="300">飽滿學養</div>
+      <div class="title" data-aos="fade" data-aos-delay="300">藝文捷境</div>
     </div>
   </div>
 </template>
@@ -273,10 +284,10 @@ export default {
   props: ["scrollInstance"],
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   },
   directives: {
-    swiper: directive
+    swiper: directive,
   },
 
   data() {
@@ -299,33 +310,41 @@ export default {
       imgs: [
         {
           img: require("@/projects/renai/s7/1.jpg"),
-          caption: "台大醫學院"
+          caption: "國家兩廳院",
         },
         {
           img: require("@/projects/renai/s7/2.jpg"),
-          caption: "東門國小"
+          caption: "市長官邸藝文沙龍",
         },
         {
           img: require("@/projects/renai/s7/3.jpg"),
-          caption: "弘道國中"
-        },
-        {
-          img: require("@/projects/renai/s7/4.jpg"),
-          caption: "北一女中"
-        },
-        {
-          img: require("@/projects/renai/s7/5.jpg"),
-          caption: "成功高中"
+          caption: "市長官邸藝文沙龍",
         },
         {
           img: require("@/projects/renai/s7/6.jpg"),
-          caption: "國家圖書館"
+          caption: "台灣文學基地",
+        },
+        {
+          img: require("@/projects/renai/s7/4.jpg"),
+          caption: "璞滿滿居酒屋",
+        },
+        {
+          img: require("@/projects/renai/s7/8.jpg"),
+          caption: "東和禪寺鐘樓",
         },
         {
           img: require("@/projects/renai/s7/7.jpg"),
-          caption: "台灣博物館"
+          caption: "捷運板南線善導寺站",
         },
-      ]
+        {
+          img: require("@/projects/renai/s7/5.jpg"),
+          caption: "華山1914文化創意產業園區",
+        },
+        {
+          img: require("@/projects/renai/s7/9.jpg"),
+          caption: "台北市青少年發展處攀岩場",
+        },
+      ],
     };
   },
 
@@ -336,13 +355,13 @@ export default {
     slideChangeTransitionStart() {
       const idx = this.$refs.swiper.$swiper.realIndex;
       this.swiperIndex = idx;
-    }
+    },
   },
 
   mounted() {
     setTimeout(() => {
       if (isMobile) {
-        return
+        return;
       }
       // $(".parallax-item").addClass("no-delay");
       var scene = this.$refs.s7;
@@ -353,6 +372,6 @@ export default {
     }, 1500);
   },
 
-  created() { },
+  created() {},
 };
 </script>

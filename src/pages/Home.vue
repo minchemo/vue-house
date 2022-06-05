@@ -10,6 +10,10 @@
       <Section6 class="section" data-scroll :scrollInstance="locomotive" />
       <Section7 class="section" data-scroll :scrollInstance="locomotive" />
       <Section8 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section9 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section10 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section11 class="section" data-scroll :scrollInstance="locomotive" />
+      <Section12 class="section" data-scroll :scrollInstance="locomotive" />
       <ContactSection />
     </div>
     <Loading :loading="load" data-scroll />
@@ -41,9 +45,10 @@ import Section5 from "@/projects/renai/s5.vue";
 import Section6 from "@/projects/renai/s6.vue";
 import Section7 from "@/projects/renai/s7.vue";
 import Section8 from "@/projects/renai/s8.vue";
-// import Section9 from "@/projects/renai/s9.vue";
-// import Section10 from "@/projects/renai/s10.vue";
-// import Section11 from "@/projects/renai/s11.vue";
+import Section9 from "@/projects/renai/s9.vue";
+import Section10 from "@/projects/renai/s10.vue";
+import Section11 from "@/projects/renai/s11.vue";
+import Section12 from "@/projects/renai/s12.vue";
 import LocomotiveScroll from "locomotive-scroll";
 
 // import UIkit from 'uikit';
@@ -69,9 +74,10 @@ export default {
     Section6,
     Section7,
     Section8,
-    // Section9,
-    // Section10,
-    // Section11
+    Section9,
+    Section10,
+    Section11,
+    Section12,
   },
 
   data() {

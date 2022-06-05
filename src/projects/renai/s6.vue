@@ -22,39 +22,34 @@
       </div>
       <div class="right">
         <div class="t1" data-aos="fade-up" v-if="!isMobile">
-          只取城市最好<br />中星三十而立
+          好學自然而然<br />知識信手拈來
         </div>
         <div class="t1" data-aos="fade-up" v-else>
-          中星三十而立<br />只取城市最好
+          知識信手拈來<br />好學自然而然
         </div>
         <div class="t2" data-aos="fade-up" data-aos-delay="300">
-          〔中星建設〕創業30週年，一路走來每件作品嚴謹挑選地段，確保建築價值歷久不衰，為居住之人打造保藏珍愛回憶的幸福寓所。<br /><br />
-          ｜代表業績｜<br />
-          <span>中山世紀</span> / 官道首排單層單戶<br />
-          <span>富貴百代・富利百代</span> / 南西商圈巍峨雙璧<br />
-          <span>大直明水</span> / 大直重劃明水富郁<br />
-          <span>師大居藝</span> / 和平靜巷學府氣息<br />
-          <span>南京75</span> / 松江南京金融核心<br />
-          <span>青山通</span> / 繁華都心微奢精品
+          中正區為北市文教區代表，由頂尖志願台大醫學院領銜，百年名校比比皆是，學術、醫療資源堪稱全台之冠；除了國家級的博物館、圖書館、文學館環列左右，東門國小、弘道國中、成功高中、北一女中等12年國教優質學區亦在四周齊聚一堂。
         </div>
       </div>
     </div>
     <div class="decor parallax-item" data-depth="0.25">
-      <img loading="lazy"
+      <img
+        loading="lazy"
         class="d1"
         data-aos="fade"
         src="@/projects/renai/s6/decor4.svg"
         alt=""
         srcset=""
       />
-      <img loading="lazy"
+      <img
+        loading="lazy"
         class="d2"
         data-aos="fade"
         src="@/projects/renai/s6/decor2.svg"
         alt=""
         srcset=""
       />
-      <div class="title" data-aos="fade" data-aos-delay="300">中星選地</div>
+      <div class="title" data-aos="fade" data-aos-delay="300">飽滿學養</div>
     </div>
   </div>
 </template>
@@ -274,10 +269,10 @@ export default {
   props: ["scrollInstance"],
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   },
   directives: {
-    swiper: directive
+    swiper: directive,
   },
 
   data() {
@@ -300,21 +295,33 @@ export default {
       imgs: [
         {
           img: require("@/projects/renai/s6/1.jpg"),
-          caption: "中山世紀"
+          caption: "台大醫學院",
         },
         {
           img: require("@/projects/renai/s6/2.jpg"),
-          caption: "富貴百代"
+          caption: "東門國小",
         },
         {
           img: require("@/projects/renai/s6/3.jpg"),
-          caption: "南京75"
+          caption: "弘道國中",
         },
         {
           img: require("@/projects/renai/s6/4.jpg"),
-          caption: "青山通"
+          caption: "北一女中",
         },
-      ]
+        {
+          img: require("@/projects/renai/s6/5.jpg"),
+          caption: "成功高中",
+        },
+        {
+          img: require("@/projects/renai/s6/6.jpg"),
+          caption: "國家圖書館",
+        },
+        {
+          img: require("@/projects/renai/s6/7.jpg"),
+          caption: "台灣博物館",
+        },
+      ],
     };
   },
 
@@ -325,13 +332,13 @@ export default {
     slideChangeTransitionStart() {
       const idx = this.$refs.swiper.$swiper.realIndex;
       this.swiperIndex = idx;
-    }
+    },
   },
 
   mounted() {
     setTimeout(() => {
       if (isMobile) {
-        return
+        return;
       }
       // $(".parallax-item").addClass("no-delay");
       var scene = this.$refs.s6;
@@ -342,6 +349,6 @@ export default {
     }, 1500);
   },
 
-  created() { },
+  created() {},
 };
 </script>

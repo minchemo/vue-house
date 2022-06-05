@@ -19,14 +19,6 @@
               srcset=""
               data-aos="fade-up"
             />
-            <img
-              class="t2"
-              src="@/projects/renai/house-img3.svg"
-              alt=""
-              srcset=""
-              data-aos="fade-up"
-              data-aos-delay="500"
-            />
           </div>
         </div>
         <img
@@ -182,12 +174,8 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
     width: size(810);
-    height: size(377.86);
     .t1 {
-      width: size(459.85);
-    }
-    .t2 {
-      width: size(810.4);
+      width: size(804.6);
     }
   }
 }
