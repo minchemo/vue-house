@@ -161,7 +161,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: size(120) auto;
+  margin: size(60) auto;
   .left {
     img {
       width: size(431.35);
