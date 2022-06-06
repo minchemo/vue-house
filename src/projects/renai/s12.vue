@@ -312,7 +312,7 @@ export default {
         },
         {
           img: require("@/projects/renai/s12/4.jpg"),
-          caption: "〔仁愛旭〕樣品屋裝潢風格情境參考示意圖，實際格局依合約書為準5",
+          caption: "〔仁愛旭〕樣品屋裝潢風格情境參考示意圖，實際格局依合約書為準",
         },
         {
           img: require("@/projects/renai/s12/5.jpg"),
