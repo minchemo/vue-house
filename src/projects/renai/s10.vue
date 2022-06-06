@@ -190,8 +190,8 @@
 
     .decor {
       .d1 {
-        right: -#{size(130)};
-        top: size-m(60);
+        right: -#{size(180)};
+        top: size-m(50);
         width: size-m(140);
       }
       .d2 {
@@ -202,8 +202,8 @@
       }
       .title {
         font-size: size-m(15);
-        top: size-m(72);
-        right: size-m(65);
+        top: size-m(62);
+        right: size-m(55);
       }
     }
     .main {
@@ -307,23 +307,19 @@ export default {
       imgs: [
         {
           img: require("@/projects/renai/s10/1.jpg"),
-          caption: "中山世紀",
+          caption: "源質設計主持 林大鈞",
         },
         {
           img: require("@/projects/renai/s10/2.jpg"),
-          caption: "富貴百代",
+          caption: "中正國璽",
         },
         {
           img: require("@/projects/renai/s10/3.jpg"),
-          caption: "富利百代",
+          caption: "敦南御所",
         },
         {
           img: require("@/projects/renai/s10/4.jpg"),
-          caption: "南京75",
-        },
-        {
-          img: require("@/projects/renai/s10/4.jpg"),
-          caption: "青山通",
+          caption: "大直銘家",
         },
       ],
     };

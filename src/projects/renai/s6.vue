@@ -182,20 +182,20 @@
 
     .decor {
       .d1 {
-        right: -#{size(130)};
-        top: size-m(40);
+        right: -#{size(180)};
+        top: size-m(100);
         width: size-m(140);
       }
       .d2 {
         position: absolute;
         left: -#{size-m(10)};
-        top: size-m(330);
+        top: size-m(400);
         width: size-m(82);
       }
       .title {
         font-size: size-m(15);
-        top: size-m(52);
-        right: size-m(65);
+        top: size-m(112);
+        right: size-m(55);
       }
     }
     .main {

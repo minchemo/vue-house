@@ -194,21 +194,21 @@
 
     .decor {
       .d1 {
-        left: -#{size(130)};
-        top: size-m(60);
+        left: -#{size(180)};
+        top: size-m(80);
         width: size-m(140);
       }
       .d2 {
         position: absolute;
-        right: size-m(10);
-        top: -#{size-m(50)};
+        right: size-m(-20);
+        top: -#{size-m(30)};
         bottom: unset;
-        width: size-m(140.79);
+        width: size-m(100);
       }
       .title {
         font-size: size-m(15);
-        top: size-m(72);
-        left: size-m(65);
+        top: size-m(92);
+        left: size-m(55);
       }
     }
     .main {
@@ -238,13 +238,13 @@
           }
         }
         .caption {
-          bottom: -#{size-m(15)};
+          bottom: -#{size-m(30)};
           font-size: size-m(12);
         }
       }
       .right {
         margin-left: 0;
-        margin-top: size-m(41);
+        margin-top: size-m(50);
         .t1 {
           font-size: size-m(20);
           writing-mode: horizontal-tb;
@@ -308,7 +308,11 @@ export default {
       imgs: [
         {
           img: require("@/projects/renai/s11/1.jpg"),
-          caption: "國家兩廳院",
+          caption: "〔仁愛旭〕建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現",
+        },
+        {
+          img: require("@/projects/renai/s11/2.jpg"),
+          caption: "〔仁愛旭〕建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現",
         },
       ],
     };

@@ -69,9 +69,10 @@
     height: size-m(623);
 
     .v-title {
-      width: size-m(62.82);
+      width: size-m(80);
       bottom: size-m(311);
       left: size-m(154);
+      height: auto;
     }
     .title {
       font-size: size-m(17);

@@ -25,7 +25,7 @@
           仁愛富域剛剛好的家<br />難得不浮誇珍稀２房
         </div>
         <div class="t1" data-aos="fade-up" v-else>
-          仁愛富域剛剛好的家<br />難得不浮誇珍稀２房
+          難得不浮誇珍稀２房<br />仁愛富域剛剛好的家
         </div>
         <div class="t2" data-aos="fade-up" data-aos-delay="300">
           仁愛路上大坪數豪邸林立，置產門檻動輒億萬之譜；〔仁愛旭〕仁愛流域稀有實住兩房規劃，全區零店純住、家家雙面採光，高水準宜居質感比肩仁愛大戶人家，輕取仁愛正是現在。
@@ -186,8 +186,8 @@
 
     .decor {
       .d1 {
-        right: -#{size(130)};
-        top: size-m(60);
+        right: -#{size(180)};
+        top: size-m(90);
         width: size-m(140);
       }
       .d2 {
@@ -198,8 +198,8 @@
       }
       .title {
         font-size: size-m(15);
-        top: size-m(72);
-        right: size-m(65);
+        top: size-m(102);
+        right: size-m(55);
       }
     }
     .main {
@@ -229,13 +229,13 @@
           }
         }
         .caption {
-          bottom: -#{size-m(15)};
+          bottom: -#{size-m(30)};
           font-size: size-m(12);
         }
       }
       .right {
         margin-right: 0;
-        margin-top: size-m(41);
+        margin-top: size-m(50);
         .t1 {
           font-size: size-m(20);
           writing-mode: horizontal-tb;
@@ -300,23 +300,23 @@ export default {
       imgs: [
         {
           img: require("@/projects/renai/s12/1.jpg"),
-          caption: "中山世紀",
+          caption: "〔仁愛旭〕樣品屋裝潢風格情境參考示意圖，實際格局依合約書為準",
         },
         {
           img: require("@/projects/renai/s12/2.jpg"),
-          caption: "富貴百代",
+          caption: "〔仁愛旭〕樣品屋裝潢風格情境參考示意圖，實際格局依合約書為準",
         },
         {
           img: require("@/projects/renai/s12/3.jpg"),
-          caption: "富利百代",
+          caption: "〔仁愛旭〕樣品屋裝潢風格情境參考示意圖，實際格局依合約書為準",
         },
         {
           img: require("@/projects/renai/s12/4.jpg"),
-          caption: "南京75",
+          caption: "〔仁愛旭〕樣品屋裝潢風格情境參考示意圖，實際格局依合約書為準5",
         },
         {
-          img: require("@/projects/renai/s12/4.jpg"),
-          caption: "青山通",
+          img: require("@/projects/renai/s12/5.jpg"),
+          caption: "〔仁愛旭〕樣品屋裝潢風格情境參考示意圖，實際格局依合約書為準",
         },
       ],
     };

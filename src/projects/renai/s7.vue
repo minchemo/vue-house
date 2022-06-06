@@ -105,8 +105,8 @@
     }
     .d2 {
       position: absolute;
-      right: size(124);
-      top: size(240);
+      right: size(0);
+      top: size(0);
       width: size(298);
     }
     .title {
@@ -196,8 +196,8 @@
 
     .decor {
       .d1 {
-        left: -#{size(130)};
-        top: size-m(60);
+        left: -#{size(180)};
+        top: size-m(70);
         width: size-m(140);
       }
       .d2 {
@@ -209,8 +209,8 @@
       }
       .title {
         font-size: size-m(15);
-        top: size-m(72);
-        left: size-m(65);
+        top: size-m(82);
+        left: size-m(55);
       }
     }
     .main {
@@ -333,12 +333,12 @@ export default {
           caption: "東和禪寺鐘樓",
         },
         {
-          img: require("@/projects/renai/s7/7.jpg"),
-          caption: "捷運板南線善導寺站",
-        },
-        {
           img: require("@/projects/renai/s7/5.jpg"),
           caption: "華山1914文化創意產業園區",
+        },
+        {
+          img: require("@/projects/renai/s7/7.jpg"),
+          caption: "捷運板南線善導寺站",
         },
         {
           img: require("@/projects/renai/s7/9.jpg"),

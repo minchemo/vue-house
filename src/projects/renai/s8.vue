@@ -190,8 +190,8 @@
 
     .decor {
       .d1 {
-        right: -#{size(130)};
-        top: size-m(60);
+        right: -#{size(180)};
+        top: size-m(30);
         width: size-m(140);
       }
       .d2 {
@@ -202,8 +202,8 @@
       }
       .title {
         font-size: size-m(15);
-        top: size-m(72);
-        right: size-m(65);
+        top: size-m(42);
+        right: size-m(60);
       }
     }
     .main {
@@ -319,7 +319,7 @@ export default {
           caption: "南京75",
         },
         {
-          img: require("@/projects/renai/s8/4.jpg"),
+          img: require("@/projects/renai/s8/5.jpg"),
           caption: "青山通",
         },
       ],

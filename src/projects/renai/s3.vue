@@ -176,8 +176,8 @@
 
     .decor {
       .d1 {
-        left: -#{size(130)};
-        top: size-m(60);
+        left: -#{size(180)};
+        top: size-m(80);
         width: size-m(140);
       }
       .d2 {
@@ -188,8 +188,8 @@
       }
       .title {
         font-size: size-m(15);
-        top: size-m(72);
-        left: size-m(65);
+        top: size-m(92);
+        left: size-m(58);
       }
     }
     .main {

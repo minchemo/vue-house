@@ -101,8 +101,8 @@
     }
     .d2 {
       position: absolute;
-      right: size(124);
-      top: size(240);
+      right: size(0);
+      top: size(0);
       width: size(298);
     }
     .title {
@@ -198,21 +198,21 @@
 
     .decor {
       .d1 {
-        left: -#{size(130)};
+        left: -#{size(180)};
         top: size-m(60);
         width: size-m(140);
       }
       .d2 {
         position: absolute;
-        right: size-m(10);
-        top: -#{size-m(50)};
+        right: size-m(-20);
+        top: -#{size-m(30)};
         bottom: unset;
-        width: size-m(140.79);
+        width: size-m(100);
       }
       .title {
         font-size: size-m(15);
         top: size-m(72);
-        left: size-m(65);
+        left: size-m(55);
       }
     }
     .main {
@@ -315,7 +315,19 @@ export default {
       imgs: [
         {
           img: require("@/projects/renai/s9/1.jpg"),
-          caption: "國家兩廳院",
+          caption: "城市美學推手 黃明智",
+        },
+        {
+          img: require("@/projects/renai/s9/2.jpg"),
+          caption: "友座臻璽",
+        },
+        {
+          img: require("@/projects/renai/s9/3.jpg"),
+          caption: "南京六福居",
+        },
+        {
+          img: require("@/projects/renai/s9/4.jpg"),
+          caption: "白玉別苑",
         },
       ],
     };
