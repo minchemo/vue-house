@@ -234,7 +234,7 @@
         }
       }
       .right {
-        margin-top: size-m(20);
+        margin-top: size-m(10);
         .text {
           width: size-m(207);
           height: auto;
@@ -244,9 +244,10 @@
           width: auto;
           height: size-m(30);
           font-size: size-m(13);
-          margin-top: size-m(20);
+          margin-top: size-m(30);
           font-weight: 600;
           padding: 4.1% 0;
+          right: auto;
         }
       }
     }
