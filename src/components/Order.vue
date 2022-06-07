@@ -575,6 +575,7 @@ export default {
       width: 85% !important;
       margin: 0 auto;
       padding: 0;
+      margin-bottom: 30px;
     }
 
     .form {

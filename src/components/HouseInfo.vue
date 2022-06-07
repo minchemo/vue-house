@@ -70,13 +70,15 @@ export default {
 .info {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
 }
 
 .item {
   font-size: 20px;
   margin-bottom: 30px;
-  margin-right: 160px;
-  width: 500px;
+  //margin-right: 160px;
+  width: 326px;
   height: 30px;
   border-left: 4px solid $house_border_color;
   padding-left: 0.45em;
@@ -84,9 +86,9 @@ export default {
   align-items: center;
   white-space: nowrap;
 
-  &:nth-of-type(even) {
-    margin-right: 0;
-  }
+  //&:nth-of-type(even) {
+  //  margin-right: 0;
+  //}
 
   .label {
     color: $house_label_color;
