@@ -30,8 +30,8 @@
         <div class="t2" data-aos="fade-up" data-aos-delay="300">
           奉行共好的建築理念，期盼以正確的設計成就友善環境、結構安全、裨益施工的正向循環，讓建築承載眾人生活長長久久。<br /><br />
           ｜業績作品｜<br />
-          中山區｜<span>南京六福居</span><br />
           大安區｜<span>友座臻璽</span> <br />
+          中山區｜<span>南京六福居</span><br />
           士林區｜<span>白玉別苑</span>
         </div>
       </div>
@@ -95,7 +95,7 @@
     z-index: 100;
     .d1 {
       position: absolute;
-      left: -#{size(130)};
+      left: -#{size(170)};
       top: size(85);
       width: size(557);
     }
@@ -112,7 +112,7 @@
       color: #fff;
       z-index: 1;
       top: size(140);
-      left: size(240);
+      left: size(200);
     }
   }
   .main {
@@ -319,11 +319,11 @@ export default {
         },
         {
           img: require("@/projects/renai/s9/3.jpg"),
-          caption: "南京六福居",
+          caption: "友座臻璽",
         },
         {
           img: require("@/projects/renai/s9/2.jpg"),
-          caption: "友座臻璽",
+          caption: "南京六福居",
         },
         {
           img: require("@/projects/renai/s9/4.jpg"),

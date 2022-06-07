@@ -99,7 +99,7 @@
     z-index: 100;
     .d1 {
       position: absolute;
-      left: -#{size(130)};
+      left: -#{size(170)};
       top: size(85);
       width: size(557);
     }
@@ -116,7 +116,7 @@
       color: #fff;
       z-index: 1;
       top: size(140);
-      left: size(240);
+      left: size(200);
     }
   }
   .main {
