@@ -302,7 +302,7 @@ export default {
         },
         {
           img: require("@/projects/renai/s4/4.jpg"),
-          caption: "徐州街林蔭"
+          caption: "徐州路林蔭"
         },
         {
           img: require("@/projects/renai/s4/5.jpg"),
