@@ -279,8 +279,8 @@ export default {
     randomId() {
       const index = Math.floor(Math.random() * 2)
       const ids = [
-        'irs0m1qWkl8',
-        'e43e1I7kPY8',
+        'DmuwVtk30Sg',
+        'DmuwVtk30Sg',
       ]
       console.log(index, ids[index])
       return ids[index]
@@ -289,8 +289,8 @@ export default {
     videoUrl() {
       const index = Math.floor(Math.random() * 2)
       const mobileLinks = [
-        'https://i.imgur.com/L2Jyobm.mp4',
-        'https://i.imgur.com/EgIQDkt.mp4',
+        'https://i.imgur.com/25aTKL3.mp4',
+        'https://i.imgur.com/25aTKL3.mp4',
       ]
       return mobileLinks[index]
     },
