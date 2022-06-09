@@ -16,17 +16,17 @@
         <div class="form">
           <div class="group">
             <div class="row">
-              <label>姓名</label>
+              <label>姓名<span>*</span></label>
               <el-input v-model="form.name" placeholder></el-input>
             </div>
             <div class="row">
-              <label>手機</label>
+              <label>手機<span>*</span></label>
               <el-input v-model="form.phone" placeholder></el-input>
             </div>
-            <!-- <div class="row">
+            <div class="row">
               <label>電子郵件</label>
               <el-input v-model="form.email" placeholder></el-input>
-            </div> -->
+            </div>
             <!-- <div class="row">
               <label>喜好房型</label>
               <el-select v-model="form.room" placeholder>
@@ -301,8 +301,7 @@ export default {
       const sec = time.getSeconds();
       const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
       fetch(
-        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}
-      `,
+        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}`,
         {
           method: "GET",
         }
@@ -487,6 +486,7 @@ export default {
       padding-left: 15px;
       white-space: nowrap;
       line-height: 1.2;
+      span{color: #c00;}
     }
   }
 

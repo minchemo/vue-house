@@ -114,7 +114,7 @@
         width: size(580);
         height: size(639);
         left: size(150);
-        top: size(250);
+        top:calc(50% + (230 - 540) * 100vw / 1920);
       }
       &.c2 {
         width: size(1000);
@@ -159,7 +159,7 @@
     width: size(815);
     height: size(478.9);
     left: 65%;
-    top:calc(50% - 0.8vw);
+    top:calc(50% - 1.6vw);
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
@@ -178,7 +178,7 @@
     position: absolute;
     width: size(823);
     height: size(149.6);
-    top:calc(50% + 0.5vw);
+    top:calc(50% + -0.3vw);
     left: 65%;
     transform: translateX(-50%);
     .t1 {

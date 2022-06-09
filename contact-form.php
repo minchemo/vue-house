@@ -255,7 +255,7 @@ $case_name = $dataList[0]['casename'];
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：".$name."<BR>手機：".$phone."<BR>居住城市：".$city."<BR>居住地區：".$area."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：".$name."<BR>手機：".$phone."<BR>電子郵件：".$user_email."<BR>居住城市：".$city."<BR>居住地區：".$area."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
