@@ -7,7 +7,7 @@
           class="logo"
           :temp="require('@/projects/cm/contact_logo.svg')"
           :alt="info.caseName"
-        data-aos="zoom-in"
+          data-aos="zoom-in"
         />
         <div class="info">
           <div class="btn flex-c" @click="showCallDialog">
@@ -15,14 +15,16 @@
               <font-awesome-icon icon="phone" />
               <span>{{ info.phone }}</span>
             </span>
-          </div><!-- -->
-          <div class="btn flex-c"  @click="showMessengerDialog">
+          </div>
+          <!-- -->
+          <div class="btn flex-c" @click="showMessengerDialog">
             <span class="flex-c">
               <font-awesome-icon :icon="['fab', 'facebook-messenger']" /><span
                 >FB 諮詢</span
               >
             </span>
-          </div><!--   -->
+          </div>
+          <!--   -->
           <a class="btn flex-c bt_fanpage" :href="info.fbLink" target="_blank">
             <span class="flex-c">
               <font-awesome-icon :icon="['fab', 'facebook-f']" /><span
@@ -99,10 +101,33 @@ export default {
     showCallDialog() {
       // if (!this.isMobile) return
       this.isShowCallDialog = true;
+
+      window.appier_q = window.appier_q || [];
+      window.appier_q.push(
+        { t: "register", content: { id: "840d", site: "cang-m.omdsd.tw" } },
+        {
+          t: "type_process",
+          content: "submit",
+          action_id: "Process_925b",
+          track_id: "d7273b41e80c414",
+          opts: { unique_key: "true" },
+        }
+      );
     },
     showMessengerDialog() {
       // if (!this.isMobile) return
       this.isShowMessengerDialog = true;
+      window.appier_q = window.appier_q || [];
+      window.appier_q.push(
+        { t: "register", content: { id: "840d", site: "cang-m.omdsd.tw" } },
+        {
+          t: "type_process",
+          content: "submit",
+          action_id: "Process_bad0",
+          track_id: "d7273b41e80c414",
+          opts: { unique_key: "true" },
+        }
+      );
     },
 
     showMapDialog() {
@@ -410,7 +435,7 @@ export default {
     position: relative;
     margin: 0 auto 0 auto;
     min-width: unset;
-   //background: $contact_bg_m;
+    //background: $contact_bg_m;
     background-size: contain;
     margin-top: 0;
 
