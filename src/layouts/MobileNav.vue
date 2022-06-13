@@ -59,7 +59,7 @@ export default {
   components: {
     CallDialog,
     MessengerDialog,
-    MapDialog
+    MapDialog,
   },
   data() {
     return {
@@ -70,7 +70,7 @@ export default {
       isBottom: false,
       isShowCallDialog: false,
       isShowMessengerDialog: false,
-      isShowMapDialog: false
+      isShowMapDialog: false,
     };
   },
   computed: {
@@ -84,20 +84,42 @@ export default {
       }
 
       return 0;
-    }
+    },
   },
   methods: {
     showCallDialog() {
+      window.appier_q = window.appier_q || [];
+      window.appier_q.push(
+        { t: "register", content: { id: "840d", site: "cang-m.omdsd.tw" } },
+        {
+          t: "type_process",
+          content: "submit",
+          action_id: "Process_925b",
+          track_id: "d7273b41e80c414",
+          opts: { unique_key: "true" },
+        }
+      );
       this.isShowCallDialog = true;
     },
     showMessengerDialog() {
+      window.appier_q = window.appier_q || [];
+      window.appier_q.push(
+        { t: "register", content: { id: "840d", site: "cang-m.omdsd.tw" } },
+        {
+          t: "type_process",
+          content: "submit",
+          action_id: "Process_bad0",
+          track_id: "d7273b41e80c414",
+          opts: { unique_key: "true" },
+        }
+      );
       this.isShowMessengerDialog = true;
     },
 
     showMapDialog() {
       this.isShowMapDialog = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
