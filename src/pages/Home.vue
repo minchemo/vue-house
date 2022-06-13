@@ -2,8 +2,8 @@
   <div class="home no-padding-top">
     <!-- <CustomNavigation :scrollInstance="locomotive" /> -->
     <div id="locomotive">
-      <Section1 class="section" data-scroll :scrollInstance="locomotive"/>
-      
+      <Section1 class="section" data-scroll :scrollInstance="locomotive" />
+
       <Section3 class="section" data-scroll />
       <Section2 class="section" data-scroll />
       <Section4 class="section" data-scroll />
@@ -151,6 +151,16 @@ export default {
     });
   },
   mounted() {
+    window.appier_q = window.appier_q || [];
+    window.appier_q.push(
+      { t: "register", content: { id: "840d", site: "cang-m.omdsd.tw" } },
+      {
+        t: "type_landing",
+        action_id: "ViewLanding_ceb0",
+        track_id: "d7273b41e80c414",
+        opts: { unique_key: "true" },
+      }
+    );
     AOS.init({
       duration: 1000,
     });

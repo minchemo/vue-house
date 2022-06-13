@@ -6,10 +6,19 @@
         <div class="subtitle">{{order.subTitle}}</div>
       </div> -->
       <!-- <h3 class="order-title" v-html="order.title"></h3> -->
-      <div class="order-title-img"
-        data-aos="zoom-in">
-        <img v-if="!isMobile" src="~@/projects/cm/order_title.svg" alt="藏美表參道" srcset="">
-        <img v-else src="~@/projects/cm/order_title_m.svg" alt="藏美表參道" srcset="">
+      <div class="order-title-img" data-aos="zoom-in">
+        <img
+          v-if="!isMobile"
+          src="~@/projects/cm/order_title.svg"
+          alt="藏美表參道"
+          srcset=""
+        />
+        <img
+          v-else
+          src="~@/projects/cm/order_title_m.svg"
+          alt="藏美表參道"
+          srcset=""
+        />
       </div>
       <div class="order-subtitle" v-html="order.subTitle"></div>
       <div class="order">
@@ -153,7 +162,7 @@
     </div>
 
     <ContactInfo />
-     <GoogleMap /> 
+    <GoogleMap />
     <PolicyDialog
       :policyVisible="policyVisible"
       @hidePolicyDialog="hidePolicyDialog"
@@ -300,6 +309,17 @@ export default {
       const min = time.getMinutes();
       const sec = time.getSeconds();
       const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+      window.appier_q = window.appier_q || [];
+      window.appier_q.push(
+        { t: "register", content: { id: "840d", site: "cang-m.omdsd.tw" } },
+        {
+          t: "type_conversion",
+          content: "submit",
+          action_id: "Conversion_1215",
+          track_id: "d7273b41e80c414",
+          opts: { unique_key: "true" },
+        }
+      );
       fetch(
         `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}`,
         {
@@ -466,7 +486,7 @@ export default {
     align-content: space-between;
     justify-content: space-between;
     //margin-bottom: 15px;
-  //  background: $order_input_bg;
+    //  background: $order_input_bg;
 
     &.house {
       margin-top: 50px;
@@ -486,7 +506,9 @@ export default {
       padding-left: 15px;
       white-space: nowrap;
       line-height: 1.2;
-      span{color: #c00;}
+      span {
+        color: #c00;
+      }
     }
   }
 
