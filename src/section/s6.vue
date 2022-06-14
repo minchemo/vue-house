@@ -1,14 +1,16 @@
 <template>
-  <div class="s3 relative">
-    <div class="info absolute z-10 flex flex-col justify-end">
-      <div class="flex items-end justify-center">
-        <p class="title">
-          雲科大文教特區<br />
-          媲美東京文京區
+  <div class="s6 relative bg-white">
+    <div
+      class="info absolute bg-[#FFEC2E] flex flex-col items-center justify-start"
+    >
+      <div class="flex items-end">
+        <p class="title text-center">
+          人本・自然・永續<br />
+          人地共好的建築信仰
         </p>
       </div>
       <div class="content">
-        輕車十分近，擁抱國際賽事常勝軍「雲林科大」、重視藝術教育的「斗六國小」、以及升學前段班「斗六高中」等七座學府，名校齊聚，像極了東京文教之都「文京區」。
+        姮興開發，淬鍊30年房產實力，以人的五感為健康標準，視自然為舒適基因、永續為傳世奧義，精準控制日照、通風、溫度、濕度、空氣等五大元素，用建築為下一代守護地球。
       </div>
       <div class="absolute bar"></div>
     </div>
@@ -34,8 +36,8 @@
     </Splide>
 
     <img
-      class="absolute newstart z-10"
-      src="@/section/s3/newstart.png"
+      class="absolute newstart"
+      src="@/section/s6/newstart.png"
       alt=""
       srcset=""
     />
@@ -45,30 +47,18 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s3 {
+.s6 {
   width: 100%;
   height: size(854);
   border-radius: size(180);
-  &::after {
-    content: "";
-    width: size(1650);
-    height: size(687);
-    background-color: #bbe35b;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 0;
-    border-radius: size(190);
-    transform: translate(-50%, -50%);
-  }
 
   .info {
     width: size(910);
     height: size(674);
     border-radius: size(190);
-    left: size(900);
-    top: size(97);
-    padding: size(150) size(110);
+    left: size(136);
+    top: size(99);
+    padding: size(210) size(153) 0 size(100);
 
     .title {
       font-weight: 500;
@@ -77,7 +67,7 @@
     }
 
     .content {
-      margin-top: size(20);
+      margin-top: size(24);
       font-weight: 400;
       font-size: size(26);
       line-height: size(46.8);
@@ -98,7 +88,7 @@
     width: size(790);
     height: size(548.69);
     top: size(57);
-    left: size(129);
+    left: size(999);
 
     .splide__track {
       z-index: 10;
@@ -124,20 +114,21 @@
 
     &::after {
       content: "";
-      width: size(873);
+      width: size(863);
       height: size(503);
-      background-image: url("@/section/s3/bubble.png");
+      background-image: url("@/section/s6/bubble.png");
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       position: absolute;
       bottom: -#{size(30)};
-      left: size(10);
+      left: -#{size(100)};
       z-index: 0;
     }
 
     .splide__pagination {
       position: absolute;
-      left: -#{size(35)};
+      right: -#{size(35)};
       bottom: size(120);
       flex-direction: column;
 
@@ -148,11 +139,11 @@
         .splide__pagination__page {
           width: size(20);
           height: size(20);
-          border: size(4) solid #bbe35b;
+          border: size(4) solid #ffec2e;
           border-radius: 100%;
 
           &.is-active {
-            border-color: #7fa523;
+            border-color: #ff9900;
           }
         }
       }
@@ -161,7 +152,7 @@
 
   .newstart {
     width: size(709);
-    left: size(241);
+    left: size(1064);
     top: size(668);
   }
 }
@@ -172,20 +163,16 @@ import { ref } from "vue"
 
 const imgs = ref([
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
-    caption: "雲林科技大學",
+    img: new URL("../section/s6/1.jpg", import.meta.url).href,
+    caption: "業績：光禾墅",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
-    caption: "環球科技大學",
+    img: new URL("../section/s6/2.jpg", import.meta.url).href,
+    caption: "業績：斗六恆星 德安恆星 ",
   },
   {
-    img: new URL("../section/s3/3.jpg", import.meta.url).href,
-    caption: "來來幼稚園",
-  },
-  {
-    img: new URL("../section/s3/4.jpg", import.meta.url).href,
-    caption: "維多利亞實中",
+    img: new URL("../section/s6/3.jpg", import.meta.url).href,
+    caption: "業績：台北內湖  輕山敘",
   },
 ])
 </script>

@@ -1,10 +1,25 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './assets/style/tailwind.css'
-import router from './router.js';
+import { createApp } from "vue"
+import App from "./App.vue"
+import "./assets/style/tailwind.css"
+import router from "./router.js"
 
-import Vue3MobileDetection from "vue3-mobile-detection";
-import VueSplide from '@splidejs/vue-splide';
-import '@splidejs/vue-splide/css/core';
+import VueMobileDetection from "vue-mobile-detection"
 
-createApp(App).use(Vue3MobileDetection).use(VueSplide).use(router).mount('#app')
+import VueSplide from "@splidejs/vue-splide"
+import "@splidejs/vue-splide/css/core"
+
+import Toast from "vue-toastification"
+// Import the CSS or use your own!
+import "vue-toastification/dist/index.css"
+const toastOptions = {
+    transition: "Vue-Toastification__fade",
+    maxToasts: 5,
+    newestOnTop: true,
+}
+
+createApp(App)
+    .use(Toast, toastOptions)
+    .use(VueMobileDetection)
+    .use(VueSplide)
+    .use(router)
+    .mount("#app")

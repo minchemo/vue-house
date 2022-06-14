@@ -1,16 +1,20 @@
 <template>
-  <div class="s3 relative">
-    <div class="info absolute z-10 flex flex-col justify-end">
+  <div class="s5 relative bg-[#BBE35B]">
+    <div class="info absolute z-10 flex flex-col justify-center items-center">
       <div class="flex items-end justify-center">
+        <img class="girl" src="@/section/s5/i.png" alt="" srcset="" />
         <p class="title">
-          雲科大文教特區<br />
-          媲美東京文京區
+          輕隱市心<br />
+          風景首馥
         </p>
       </div>
-      <div class="content">
-        輕車十分近，擁抱國際賽事常勝軍「雲林科大」、重視藝術教育的「斗六國小」、以及升學前段班「斗六高中」等七座學府，名校齊聚，像極了東京文教之都「文京區」。
+      <div class="content text-center">
+        選對環境，每一席都是舒適首選，<br />
+        戶戶邊間，節氣流轉，<br />
+        每一刻呼吸都享高純度氧；<br />
+        環境採低密度開發、四方無垠，<br />
+        層層有景，稻浪浮雲，盡收吾境。
       </div>
-      <div class="absolute bar"></div>
     </div>
 
     <Splide
@@ -35,7 +39,7 @@
 
     <img
       class="absolute newstart z-10"
-      src="@/section/s3/newstart.png"
+      src="@/section/s5/newstart.png"
       alt=""
       srcset=""
     />
@@ -45,15 +49,15 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s3 {
+.s5 {
   width: 100%;
-  height: size(854);
+  height: size(1006);
   border-radius: size(180);
   &::after {
     content: "";
-    width: size(1650);
-    height: size(687);
-    background-color: #bbe35b;
+    width: size(1696);
+    height: size(860);
+    background-color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -67,8 +71,12 @@
     height: size(674);
     border-radius: size(190);
     left: size(900);
-    top: size(97);
-    padding: size(150) size(110);
+    top: size(180);
+    padding: 0 size(110);
+    .girl {
+      height: size(151);
+      margin-right: size(20);
+    }
 
     .title {
       font-weight: 500;
@@ -97,8 +105,8 @@
   .slide-box {
     width: size(790);
     height: size(548.69);
-    top: size(57);
-    left: size(129);
+    top: size(228);
+    left: size(160);
 
     .splide__track {
       z-index: 10;
@@ -124,21 +132,21 @@
 
     &::after {
       content: "";
-      width: size(873);
-      height: size(503);
-      background-image: url("@/section/s3/bubble.png");
+      width: size(813);
+      height: size(463);
+      background-image: url("@/section/s5/bubble.png");
       background-size: cover;
       background-position: center;
       position: absolute;
-      bottom: -#{size(30)};
-      left: size(10);
+      bottom: -#{size(40)};
+      right: -#{size(100)};
       z-index: 0;
     }
 
     .splide__pagination {
       position: absolute;
-      left: -#{size(35)};
-      bottom: size(120);
+      left: -#{size(90)};
+      bottom: size(200);
       flex-direction: column;
 
       li {
@@ -148,7 +156,7 @@
         .splide__pagination__page {
           width: size(20);
           height: size(20);
-          border: size(4) solid #bbe35b;
+          border: size(4) solid #fff;
           border-radius: 100%;
 
           &.is-active {
@@ -161,8 +169,8 @@
 
   .newstart {
     width: size(709);
-    left: size(241);
-    top: size(668);
+    left: size(1068);
+    top: size(830);
   }
 }
 </style>
@@ -172,20 +180,16 @@ import { ref } from "vue"
 
 const imgs = ref([
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
+    img: new URL("../section/s5/1.jpg", import.meta.url).href,
     caption: "雲林科技大學",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
-    caption: "環球科技大學",
+    img: new URL("../section/s5/1.jpg", import.meta.url).href,
+    caption: "雲林科技大學",
   },
   {
-    img: new URL("../section/s3/3.jpg", import.meta.url).href,
-    caption: "來來幼稚園",
-  },
-  {
-    img: new URL("../section/s3/4.jpg", import.meta.url).href,
-    caption: "維多利亞實中",
+    img: new URL("../section/s5/1.jpg", import.meta.url).href,
+    caption: "雲林科技大學",
   },
 ])
 </script>

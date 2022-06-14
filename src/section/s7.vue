@@ -1,16 +1,19 @@
 <template>
-  <div class="s3 relative">
-    <div class="info absolute z-10 flex flex-col justify-end">
+  <div class="s7 relative bg-[#8EF0E2]">
+    <div
+      class="info bg-white absolute z-10 flex flex-col justify-center items-center"
+    >
       <div class="flex items-end justify-center">
+        <img class="girl" src="@/section/s7/i.png" alt="" srcset="" />
         <p class="title">
-          雲科大文教特區<br />
-          媲美東京文京區
+          豪宅團隊心藝<br />
+          有世界觀的家
         </p>
       </div>
-      <div class="content">
-        輕車十分近，擁抱國際賽事常勝軍「雲林科大」、重視藝術教育的「斗六國小」、以及升學前段班「斗六高中」等七座學府，名校齊聚，像極了東京文教之都「文京區」。
+      <div class="name text-center">{{ data[currentIdx].name }}</div>
+      <div class="content text-center">
+        {{ data[currentIdx].text }}
       </div>
-      <div class="absolute bar"></div>
     </div>
 
     <Splide
@@ -22,6 +25,7 @@
         autoplay: true,
         interval: 4000,
       }"
+      @splide:move="move"
       class="slide-box absolute z-10"
     >
       <SplideSlide
@@ -35,7 +39,7 @@
 
     <img
       class="absolute newstart z-10"
-      src="@/section/s3/newstart.png"
+      src="@/section/s7/newstart.png"
       alt=""
       srcset=""
     />
@@ -45,30 +49,22 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s3 {
+.s7 {
   width: 100%;
   height: size(854);
   border-radius: size(180);
-  &::after {
-    content: "";
-    width: size(1650);
-    height: size(687);
-    background-color: #bbe35b;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 0;
-    border-radius: size(190);
-    transform: translate(-50%, -50%);
-  }
 
   .info {
-    width: size(910);
-    height: size(674);
+    width: size(967);
+    height: size(687);
     border-radius: size(190);
-    left: size(900);
-    top: size(97);
-    padding: size(150) size(110);
+    left: size(800);
+    top: size(78);
+    padding: 0 size(110);
+    .girl {
+      height: size(197);
+      margin-right: size(20);
+    }
 
     .title {
       font-weight: 500;
@@ -76,6 +72,16 @@
       line-height: size(65.45);
     }
 
+    .name {
+      width: size(400);
+      border-top: size(2) solid;
+      border-bottom: size(2) solid;
+      border-color: #000000;
+      margin-top: size(20);
+      font-weight: 700;
+      font-size: size(26);
+      line-height: size(46.8);
+    }
     .content {
       margin-top: size(20);
       font-weight: 400;
@@ -97,8 +103,8 @@
   .slide-box {
     width: size(790);
     height: size(548.69);
-    top: size(57);
-    left: size(129);
+    top: size(56);
+    left: size(135);
 
     .splide__track {
       z-index: 10;
@@ -124,21 +130,21 @@
 
     &::after {
       content: "";
-      width: size(873);
-      height: size(503);
-      background-image: url("@/section/s3/bubble.png");
+      width: size(813);
+      height: size(463);
+      background-image: url("@/section/s7/bubble.png");
       background-size: cover;
       background-position: center;
       position: absolute;
-      bottom: -#{size(30)};
-      left: size(10);
+      bottom: -#{size(20)};
+      right: -#{size(80)};
       z-index: 0;
     }
 
     .splide__pagination {
       position: absolute;
-      left: -#{size(35)};
-      bottom: size(120);
+      left: -#{size(40)};
+      bottom: size(200);
       flex-direction: column;
 
       li {
@@ -148,11 +154,11 @@
         .splide__pagination__page {
           width: size(20);
           height: size(20);
-          border: size(4) solid #bbe35b;
+          border: size(4) solid #fff;
           border-radius: 100%;
 
           &.is-active {
-            border-color: #7fa523;
+            border-color: #00cbd1;
           }
         }
       }
@@ -160,9 +166,9 @@
   }
 
   .newstart {
-    width: size(709);
-    left: size(241);
-    top: size(668);
+    width: size(683);
+    left: size(135);
+    top: size(664);
   }
 }
 </style>
@@ -170,22 +176,31 @@
 <script setup>
 import { ref } from "vue"
 
+const currentIdx = ref(0)
+
 const imgs = ref([
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
-    caption: "雲林科技大學",
+    img: new URL("../section/s7/1.jpg", import.meta.url).href,
+    caption: "張國章 建築師",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
-    caption: "環球科技大學",
-  },
-  {
-    img: new URL("../section/s3/3.jpg", import.meta.url).href,
-    caption: "來來幼稚園",
-  },
-  {
-    img: new URL("../section/s3/4.jpg", import.meta.url).href,
-    caption: "維多利亞實中",
+    img: new URL("../section/s7/2.jpg", import.meta.url).href,
+    caption: "陳福松 結構技師",
   },
 ])
+
+const data = ref([
+  {
+    name: "張國章 建築師",
+    text: "「人需與環境共生，建築需與環境共舞」",
+  },
+  {
+    name: "超偉工程顧問",
+    text: "北流音樂中心 南軟園區 國家級工程結構顧問",
+  },
+])
+
+const move = (newIdx, prevIdx, destIdx) => {
+  currentIdx.value = prevIdx
+}
 </script>

@@ -12,8 +12,10 @@ specifiers:
   vite: ^2.9.9
   vite-plugin-imagemin: ^0.6.1
   vue: ^3.2.25
+  vue-mobile-detection: ^2.0.1
+  vue-recaptcha: ^2.0.2
   vue-router: ^4.0.13
-  vue3-mobile-detection: ^1.0.5
+  vue-toastification: 2.0.0-rc.5
   webpack: ^5.73.0
   webpack-cli: ^4.10.0
 
@@ -23,8 +25,10 @@ dependencies:
   path: 0.12.7
   sass: 1.52.3
   vue: 3.2.37
+  vue-mobile-detection: 2.0.1
+  vue-recaptcha: 2.0.2_vue@3.2.37
   vue-router: 4.0.13_vue@3.2.37
-  vue3-mobile-detection: 1.0.5
+  vue-toastification: 2.0.0-rc.5_vue@3.2.37
   webpack: 5.73.0_webpack-cli@4.10.0
 
 devDependencies:
@@ -2006,10 +2010,6 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /is-mobile/2.2.2:
-    resolution: {integrity: sha512-wW/SXnYJkTjs++tVK5b6kVITZpAZPtUrt9SF80vvxGiF/Oywal+COk1jlRkiVq15RFNEQKQY31TkV24/1T5cVg==}
-    dev: false
-
   /is-natural-number/4.0.1:
     resolution: {integrity: sha512-Y4LTamMe0DDQIIAlaer9eKebAlDSV6huy+TWhJVPlzZh2o4tRP5SQWFlLn5N0To4mDD22/qdOq+veo1cSISLgQ==}
     dev: true
@@ -3391,12 +3391,54 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /vue-demi/0.12.5_vue@3.2.37:
+    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.37
+    dev: false
+
+  /vue-mobile-detection/2.0.1:
+    resolution: {integrity: sha512-ziB0Rp8Snp08+p7E+WCRzeYYYp0ddPaqHlFxWN0kpLAddB5D/PRwgIv18P08hkhwNFRgBQ71T19jNIbttR7P0g==}
+    dependencies:
+      vue: 3.2.37
+    dev: false
+
+  /vue-recaptcha/2.0.2_vue@3.2.37:
+    resolution: {integrity: sha512-bE5WMz9jyiiY1PlaBOSUvsgTZ/ONoRV7Oq4Fn4JVz//ul+DJ0LHIJERfoF0NNEIDWXv6GjhwGLveGhoq0sEerg==}
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-beta.1
+      vue: ^2.0.0 || ^3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.37
+      vue-demi: 0.12.5_vue@3.2.37
+    dev: false
+
   /vue-router/4.0.13_vue@3.2.37:
     resolution: {integrity: sha512-LmXrC+BkDRLak+d5xTMgUYraT3Nj0H/vCbP+7usGvIl9Viqd1UP6AsP0i69pSbn9O0dXK/xCdp4yPw21HqV9Jw==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@vue/devtools-api': 6.1.4
+      vue: 3.2.37
+    dev: false
+
+  /vue-toastification/2.0.0-rc.5_vue@3.2.37:
+    resolution: {integrity: sha512-q73e5jy6gucEO/U+P48hqX+/qyXDozAGmaGgLFm5tXX4wJBcVsnGp4e/iJqlm9xzHETYOilUuwOUje2Qg1JdwA==}
+    peerDependencies:
+      vue: ^3.0.2
+    dependencies:
       vue: 3.2.37
     dev: false
 
@@ -3408,13 +3450,6 @@ packages:
       '@vue/runtime-dom': 3.2.37
       '@vue/server-renderer': 3.2.37_vue@3.2.37
       '@vue/shared': 3.2.37
-
-  /vue3-mobile-detection/1.0.5:
-    resolution: {integrity: sha512-Zbr7lvmqYNfO5dnnwYedQSxfOnCK1oakPGWkZtBaLz3uqcF3aREl1PL1iEkqf9tOuogsJ9iCX91igQKjv06aFg==}
-    dependencies:
-      is-mobile: 2.2.2
-      vue: 3.2.37
-    dev: false
 
   /watchpack/2.4.0:
     resolution: {integrity: sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==}

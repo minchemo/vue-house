@@ -1,14 +1,15 @@
 <template>
-  <div class="s3 relative">
-    <div class="info absolute z-10 flex flex-col justify-end">
-      <div class="flex items-end justify-center">
+  <div class="s4 relative bg-[#FFEC2E]">
+    <div class="info absolute bg-white">
+      <div class="flex items-end">
+        <img class="girl" src="@/section/s4/i.png" alt="" srcset="" />
         <p class="title">
-          雲科大文教特區<br />
-          媲美東京文京區
+          十分鐘 靜速之間<br />
+          悠遊 心的自由式
         </p>
       </div>
       <div class="content">
-        輕車十分近，擁抱國際賽事常勝軍「雲林科大」、重視藝術教育的「斗六國小」、以及升學前段班「斗六高中」等七座學府，名校齊聚，像極了東京文教之都「文京區」。
+        想一飽口福，有人文夜市、莊敬夜市日日饗宴，想奔放一下，便能在膨鼠森林公園、中山紀念公園找回赤子心；更有市政中心、成大醫院、星巴克…機能滿席！
       </div>
       <div class="absolute bar"></div>
     </div>
@@ -34,8 +35,8 @@
     </Splide>
 
     <img
-      class="absolute newstart z-10"
-      src="@/section/s3/newstart.png"
+      class="absolute newstart"
+      src="@/section/s4/newstart.png"
       alt=""
       srcset=""
     />
@@ -45,30 +46,23 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s3 {
+.s4 {
   width: 100%;
   height: size(854);
   border-radius: size(180);
-  &::after {
-    content: "";
-    width: size(1650);
-    height: size(687);
-    background-color: #bbe35b;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 0;
-    border-radius: size(190);
-    transform: translate(-50%, -50%);
-  }
 
   .info {
     width: size(910);
     height: size(674);
     border-radius: size(190);
-    left: size(900);
-    top: size(97);
-    padding: size(150) size(110);
+    left: size(136);
+    top: size(99);
+    padding: size(127) size(170) size(166) size(90);
+    color: #555555;
+
+    .girl {
+      height: size(160);
+    }
 
     .title {
       font-weight: 500;
@@ -77,7 +71,7 @@
     }
 
     .content {
-      margin-top: size(20);
+      margin-top: size(54);
       font-weight: 400;
       font-size: size(26);
       line-height: size(46.8);
@@ -98,7 +92,7 @@
     width: size(790);
     height: size(548.69);
     top: size(57);
-    left: size(129);
+    left: size(999);
 
     .splide__track {
       z-index: 10;
@@ -124,20 +118,20 @@
 
     &::after {
       content: "";
-      width: size(873);
+      width: size(863);
       height: size(503);
-      background-image: url("@/section/s3/bubble.png");
+      background-image: url("@/section/s4/bubble.png");
       background-size: cover;
       background-position: center;
       position: absolute;
       bottom: -#{size(30)};
-      left: size(10);
+      left: -#{size(100)};
       z-index: 0;
     }
 
     .splide__pagination {
       position: absolute;
-      left: -#{size(35)};
+      right: -#{size(35)};
       bottom: size(120);
       flex-direction: column;
 
@@ -148,11 +142,11 @@
         .splide__pagination__page {
           width: size(20);
           height: size(20);
-          border: size(4) solid #bbe35b;
+          border: size(4) solid #fff;
           border-radius: 100%;
 
           &.is-active {
-            border-color: #7fa523;
+            border-color: #ff9900;
           }
         }
       }
@@ -161,7 +155,7 @@
 
   .newstart {
     width: size(709);
-    left: size(241);
+    left: size(1064);
     top: size(668);
   }
 }
@@ -172,20 +166,20 @@ import { ref } from "vue"
 
 const imgs = ref([
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
-    caption: "雲林科技大學",
+    img: new URL("../section/s4/1.jpg", import.meta.url).href,
+    caption: "太平老街",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
-    caption: "環球科技大學",
+    img: new URL("../section/s4/2.jpg", import.meta.url).href,
+    caption: "人文夜市",
   },
   {
-    img: new URL("../section/s3/3.jpg", import.meta.url).href,
-    caption: "來來幼稚園",
+    img: new URL("../section/s4/3.jpg", import.meta.url).href,
+    caption: "環保運動公園",
   },
   {
-    img: new URL("../section/s3/4.jpg", import.meta.url).href,
-    caption: "維多利亞實中",
+    img: new URL("../section/s4/3.jpg", import.meta.url).href,
+    caption: "星巴克",
   },
 ])
 </script>
