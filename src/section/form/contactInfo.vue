@@ -65,7 +65,8 @@
       }
 
       img {
-        width: size(27);
+        max-width: size(27);
+        height: auto;
         max-height: size(27);
       }
       &.address {
