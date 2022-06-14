@@ -8,7 +8,6 @@
 
 <style lang="scss">
 
-
 .fixed {
   position: fixed;
   top: 0;
