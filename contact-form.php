@@ -5,10 +5,10 @@
 #$case_code = "jw";特殊案使用
 $src =$_SERVER['SERVER_NAME']; 
 $case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
-$case_code = "cang-m";
+$case_code = "renai";
 
 # PDO DB 連線 Start
-    $pdo=new pdo('mysql:host=localhost;dbname=htw_web','htw','748aSgl5Ni');
+    $pdo=new pdo('mysql:host=localhost;dbname=unigiant_htw','unigiant_htw','unigiant_htw');
     $pdo->exec("SET NAMES 'utf8'");
 # PDO DB 連線 End
 
@@ -100,7 +100,7 @@ $case_name = $dataList[0]['casename'];
         $msg = '無留言';
     }
 
-    if ($_COOKIE['msg'] != null) {
+    if ((isset($_COOKIE['msg'])) && ($_COOKIE['msg'] != null)) {
         $sCheckMsg = $_COOKIE['msg'];
     }
     setcookie ("msg", $msg, time()+36400);
@@ -209,28 +209,28 @@ $case_name = $dataList[0]['casename'];
 
     # 老版本讀取 Start
     $db_host = 'localhost';
-    $db_user = 'htw';
-    $db_pass = '748aSgl5Ni';
-    $db_name = 'htw_web';
+    $db_user = 'unigiant_htw';
+    $db_pass = 'unigiant_htw';
+    $db_name = 'unigiant_htw';
 
-    $con = mysql_connect($db_host, $db_user, $db_pass);
-    mysql_query("SET NAMES UTF8");
-    mysql_select_db($db_name, $con);
+    $con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    // mysqli_query("SET NAMES UTF8");
+    // mysqli_select_db($db_name, $con);
 
     $query = "SELECT tomail FROM susers WHERE email = '".$case_code."'";
-    $result = mysql_query($query, $con);
-    $row = mysql_fetch_row($result);
+    $result = mysqli_query($con, $query);
+    $row = mysqli_fetch_row($result);
 
-    if (mysql_num_rows($result))
+    if (mysqli_num_rows($result))
     {
         $tomail = $row[0];
     }
 
     $query_admin = "SELECT admin_email FROM admin WHERE email = 'admin'";
-    $result_admin = mysql_query($query_admin, $con);
-    $row_admin = mysql_fetch_row($result_admin);
+    $result_admin = mysqli_query($con, $query_admin);
+    $row_admin = mysqli_fetch_row($result_admin);
 
-    if (mysql_num_rows($result_admin))
+    if (mysqli_num_rows($result_admin))
     {
         $tomail_admin = $row_admin[0];
     }
@@ -244,18 +244,19 @@ $case_name = $dataList[0]['casename'];
     $mail= new PHPMailer(); //建立新物件
     $mail->IsSMTP(); //設定使用SMTP方式寄信
     $mail->SMTPAuth = true; //設定SMTP需要驗證
-    $mail->Host = "cp31.g-dns.com"; //設定SMTP主機
+    $mail->SMTPAutoTLS = false;
+    $mail->Host = "cp39.g-dns.com"; //設定SMTP主機
     $mail->Port = 25; //設定SMTP埠位，預設為25埠。
     $mail->CharSet = "utf-8"; //設定郵件編碼
 
     $mail->Username = $mailName; //設定驗證帳號
     $mail->Password = $mailPwd; //設定驗證密碼
 
-    $mail->From = "noreply@h35.tw"; //設定寄件者信箱
+    $mail->From = "service@unigiants.com.tw"; //設定寄件者信箱
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：".$name."<BR>手機：".$phone."<BR>居住城市：".$city."<BR>居住地區：".$area."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：".$name."<BR>手機：".$phone."<BR>居住城市：".$city."<BR>居住地區：".$area."<BR>需求房型：".$room."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
@@ -266,9 +267,10 @@ $case_name = $dataList[0]['casename'];
     $tomail_admin_arr = explode(",",$tomail_admin);
 
     //檢查沒問題才寄出信件
+    $bCheck=true;
     if ($bCheck == true) { //if start
 
-	    # 添加到 Googlde 資料DB Start
+      # 添加到 Googlde 資料DB Start
         try {
             $url = "http://104.155.235.216/send.php";
             $url .= "?token=".$token;
@@ -277,7 +279,7 @@ $case_name = $dataList[0]['casename'];
             $url .= "&email=".$user_email;
             $url .= "&city=".$city;
             $url .= "&area=".$area;
-            $url .= "&message="."留言：".$msg;
+            $url .= "&message="."需求房型：".$room.";留言：".$msg;
             $url .= "&utm_source=".$utm_source;
             $url .= "&utm_medium=".$utm_medium;
             $url .= "&utm_content=".$utm_content;
@@ -333,7 +335,7 @@ document.location.replace('formThanks');
 </html>
 <?php
     # PDO DB 連線 Start
-    $pdo=new pdo('mysql:host=localhost;dbname=htw_web','htw','748aSgl5Ni');
+    $pdo=new pdo('mysql:host=localhost;dbname=unigiant_htw','unigiant_htw','unigiant_htw');
     $pdo->exec("SET NAMES 'utf8'");
     # PDO DB 連線 End
 
@@ -458,28 +460,28 @@ document.location.replace('formThanks');
     # 檢查IP End
 
     $db_host = 'localhost';
-    $db_user = 'htw';
-    $db_pass = '748aSgl5Ni';
-    $db_name = 'htw_web';
+    $db_user = 'unigiant_htw';
+    $db_pass = 'unigiant_htw';
+    $db_name = 'unigiant_htw';
 
-    $con = mysql_connect($db_host, $db_user, $db_pass);
-    mysql_query("SET NAMES UTF8");
-    mysql_select_db($db_name, $con);
+    $con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    // mysqli_query("SET NAMES UTF8");
+    // mysqli_select_db($db_name, $con);
 
     $query = "SELECT tomail FROM susers WHERE email = '".$case_code."'";
-    $result = mysql_query($query, $con);
-    $row = mysql_fetch_row($result);
+    $result = mysqli_query($con, $query);
+    $row = mysqli_fetch_row($result);
 
-    if (mysql_num_rows($result))
+    if (mysqli_num_rows($result))
     {
         $tomail = $row[0];
     }
 
     $query_admin = "SELECT admin_email FROM admin WHERE email = 'admin'";
-    $result_admin = mysql_query($query_admin, $con);
-    $row_admin = mysql_fetch_row($result_admin);
+    $result_admin = mysqli_query($con, $query_admin);
+    $row_admin = mysqli_fetch_row($result_admin);
 
-    if (mysql_num_rows($result_admin))
+    if (mysqli_num_rows($result_admin))
     {
         $tomail_admin = $row_admin[0];
     }
@@ -490,4 +492,3 @@ document.location.replace('formThanks');
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 <body>
-    
