@@ -8,7 +8,7 @@ $case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
 $case_code = "dh";
 
 # PDO DB 連線 Start
-    $pdo=new pdo('mysql:host=localhost;dbname=htw12_web','htw12','3hdaiU813Q');
+    $pdo=new pdo('mysql:host=localhost;dbname=unigiant_htw','unigiant_htw','unigiant_htw');
     $pdo->exec("SET NAMES 'utf8'");
 # PDO DB 連線 End
 
@@ -209,9 +209,9 @@ $case_name = $dataList[0]['casename'];
 
     # 老版本讀取 Start
     $db_host = 'localhost';
-    $db_user = 'htw12';
-    $db_pass = '3hdaiU813Q';
-    $db_name = 'htw12_web';
+    $db_user = 'unigiant_htw';
+    $db_pass = 'unigiant_htw';
+    $db_name = 'unigiant_htw';
 
     $con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
     // mysqli_query("SET NAMES UTF8");
@@ -244,14 +244,15 @@ $case_name = $dataList[0]['casename'];
     $mail= new PHPMailer(); //建立新物件
     $mail->IsSMTP(); //設定使用SMTP方式寄信
     $mail->SMTPAuth = true; //設定SMTP需要驗證
-    $mail->Host = "cp31.g-dns.com"; //設定SMTP主機
+    $mail->SMTPAutoTLS = false;
+    $mail->Host = "cp39.g-dns.com"; //設定SMTP主機
     $mail->Port = 25; //設定SMTP埠位，預設為25埠。
     $mail->CharSet = "utf-8"; //設定郵件編碼
 
     $mail->Username = $mailName; //設定驗證帳號
     $mail->Password = $mailPwd; //設定驗證密碼
 
-    $mail->From = "noreply@h65.tw"; //設定寄件者信箱
+    $mail->From = "service@unigiants.com.tw"; //設定寄件者信箱
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
@@ -266,6 +267,7 @@ $case_name = $dataList[0]['casename'];
     $tomail_admin_arr = explode(",",$tomail_admin);
 
     //檢查沒問題才寄出信件
+    $bCheck=true;
     if ($bCheck == true) { //if start
 
       # 添加到 Googlde 資料DB Start
@@ -333,7 +335,7 @@ document.location.replace('formThanks');
 </html>
 <?php
     # PDO DB 連線 Start
-    $pdo=new pdo('mysql:host=localhost;dbname=htw12_web','htw12','3hdaiU813Q');
+    $pdo=new pdo('mysql:host=localhost;dbname=unigiant_htw','unigiant_htw','unigiant_htw');
     $pdo->exec("SET NAMES 'utf8'");
     # PDO DB 連線 End
 
@@ -458,9 +460,9 @@ document.location.replace('formThanks');
     # 檢查IP End
 
     $db_host = 'localhost';
-    $db_user = 'htw12';
-    $db_pass = '3hdaiU813Q';
-    $db_name = 'htw12_web';
+    $db_user = 'unigiant_htw';
+    $db_pass = 'unigiant_htw';
+    $db_name = 'unigiant_htw';
 
     $con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
     // mysqli_query("SET NAMES UTF8");
@@ -490,4 +492,3 @@ document.location.replace('formThanks');
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 <body>
-    

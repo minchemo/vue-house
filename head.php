@@ -6,7 +6,7 @@ $src =$_SERVER['SERVER_NAME'];
 $case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
 $case_code = "dh";
 
-$pdo = new pdo('mysql:host=localhost;dbname=htw12_web', 'htw12', '3hdaiU813Q');
+$pdo = new pdo('mysql:host=localhost;dbname=unigiant_htw', 'unigiant_htw', 'unigiant_htw');
 $pdo->exec("SET NAMES 'utf8'");
 $sql = "SELECT title,description,keyword,p0 FROM susers WHERE email = '" . $case_code . "'";
 $dataList = $pdo->query($sql)->fetchAll();
@@ -14,6 +14,7 @@ $docTitle = $dataList[0]['title'];
 $siteName = $dataList[0]['title'];
 $docDesc = $dataList[0]['description'];
 $keyWords = $dataList[0]['keyword'];
+$p0 = '';
 if ($dataList[0]['p0']) {
 $p0 = "<meta name='facebook-domain-verification' content='". $dataList[0]['p0'] ."' />";
 }
