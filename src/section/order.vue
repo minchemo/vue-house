@@ -1,9 +1,9 @@
 <template>
   <div class="order relative bg-[#FFEA00] text-center">
-    <!-- TITLE -->
+    <!-- Title -->
     <div class="order-title text-center">{{ info.order.title }}</div>
 
-    <!-- FORM -->
+    <!-- Form -->
     <div class="form mx-auto relative flex items-start justify-center">
       <div class="left h-full flex flex-col justify-between items-center">
         <input
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <!-- POLICY -->
+    <!-- Policy -->
     <div class="flex gap-2 items-center justify-center">
       <input
         type="checkbox"
@@ -66,7 +66,7 @@
     </div>
     <Policy />
 
-    <!-- RECAPTCHA -->
+    <!-- Recaptcha -->
     <vue-recaptcha
       class="flex justify-center mt-8"
       ref="recaptcha"
@@ -75,7 +75,7 @@
       @expired="onRecaptchaUnVerify"
     />
 
-    <!-- SEND -->
+    <!-- Send -->
     <div
       class="send mt-8 mx-auto rounded-full hover:scale-90 btn cursor-pointer"
       @click="send()"
@@ -83,8 +83,14 @@
       送出表單
     </div>
 
-    <!-- CONTACT INFO -->
+    <!-- Contact Info -->
     <ContactInfo />
+
+    <!-- Map -->
+    <Map />
+
+    <!-- HouseInfo -->
+    <HouseInfo />
   </div>
 </template>
 
@@ -125,6 +131,7 @@
   .send {
     font-size: size(22);
     letter-spacing: size(20);
+  text-indent:  size(20);
     color: #fff;
     background-color: #3e3a39;
     width: size(318);
@@ -137,9 +144,13 @@
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
+import Map from "@/section/form/map.vue"
+import HouseInfo from "@/section/form/houseInfo.vue"
+
 import info from "@/info"
+
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, watchEffect } from "vue"
+import { ref, reactive, watch } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"

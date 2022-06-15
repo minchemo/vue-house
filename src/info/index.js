@@ -14,12 +14,12 @@ export default {
     fbMessage: "https://m.me/cangm.omdsd/",
     caseName: caseName,
     houseInfos: [
-        ["建物型態", "住宅大樓"],
-        ["坪數規劃", "16~31坪"],
-        ["建設公司", "茂德機構 精業建設"],
-        ["棟戶規劃", "136戶"],
-        ["企劃銷售", "海沃創意行銷", "https://www.haiwo.com.tw/"],
-        ["基地面積", "487坪"],
+        ["投資興建", "姮興開發股份有限公司"],
+        ["結構設計", "超偉結構工程顧問"],
+        ["建築設計", "台北國際聯合建築師事務所"],
+        ["建照號碼", "(111)(雲)營建字第00012號"],
+        ["廣告銷售", "天廈廣告事業股份有限公司"],
+        ["企劃執行", "原力創意行銷"],
     ],
     gtmCode: ["KLM3QRV"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
