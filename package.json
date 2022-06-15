@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "output": "vite build && node head.js",
     "preview": "vite preview"
   },
   "dependencies": {
     "@splidejs/vue-splide": "^0.6.7",
     "daisyui": "^2.15.3",
+    "fs": "0.0.1-security",
+    "html-minifier": "^4.0.0",
     "path": "^0.12.7",
     "sass": "^1.52.3",
     "vue": "^3.2.25",
