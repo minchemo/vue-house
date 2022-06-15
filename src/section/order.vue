@@ -269,8 +269,4 @@ const send = () => {
     // toast.success(`表單已送出，感謝您的填寫`)
   }
 }
-
-onMounted(() => {
-  console.log('mounted');
-})
 </script>

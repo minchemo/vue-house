@@ -363,7 +363,6 @@ const imgs = ref([
 ])
 
 const move = (newIdx, prevIdx, destIdx) => {
-  console.log(prevIdx);
   currentIdx.value = prevIdx
 }
 </script>
