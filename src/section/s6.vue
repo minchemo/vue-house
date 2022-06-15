@@ -1,8 +1,6 @@
 <template>
   <div class="s6 relative bg-white">
-    <div
-      class="info absolute bg-[#FFEC2E] flex flex-col items-center justify-start"
-    >
+    <div class="info absolute bg-[#FFEC2E] flex flex-col items-center justify-start">
       <div class="flex items-end">
         <p class="title text-center">
           人本・自然・永續<br />
@@ -15,32 +13,26 @@
       <div class="absolute bar"></div>
     </div>
 
-    <Splide
-      :options="{
-        rewind: true,
-        autoWidth: true,
-        arrows: false,
-        type: 'fade',
-        autoplay: true,
-        interval: 4000,
-      }"
-      class="slide-box absolute z-10"
-    >
-      <SplideSlide
-        class="slide"
-        v-for="img in imgs"
-        v-bind:style="{ backgroundImage: `url('${img.img}')` }"
-      >
+    <Splide :options="{
+      rewind: true,
+      autoWidth: true,
+      arrows: false,
+      type: 'fade',
+      autoplay: true,
+      interval: 4000,
+    }" class="slide-box absolute z-10">
+      <SplideSlide class="slide" v-for="img in imgs" v-bind:style="{ backgroundImage: `url('${img.img}')` }">
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
     </Splide>
 
-    <img
-      class="absolute newstart"
-      src="@/section/s6/newstart.png"
-      alt=""
-      srcset=""
-    />
+
+    <lazy-component>
+
+
+      <img class="absolute newstart" src="@/section/s6/newstart.png" alt="" srcset="" />
+    </lazy-component>
+
   </div>
 </template>
 

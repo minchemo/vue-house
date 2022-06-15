@@ -2,7 +2,9 @@
   <div class="s4 relative bg-[#FFEC2E]">
     <div class="info absolute bg-white">
       <div class="flex items-end">
+        <lazy-component>
         <img class="girl" src="@/section/s4/i.png" alt="" srcset="" />
+        </lazy-component>
         <p class="title">
           十分鐘 靜速之間<br />
           悠遊 心的自由式
@@ -33,13 +35,14 @@
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
     </Splide>
-
+    
+        <lazy-component>
     <img
       class="absolute newstart"
       src="@/section/s4/newstart.png"
       alt=""
       srcset=""
-    />
+    /></lazy-component>
   </div>
 </template>
 

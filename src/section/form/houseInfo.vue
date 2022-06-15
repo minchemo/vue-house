@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center justify-between">
-        <div class="map"></div>
+            <div class="map"></div>
         <div class="flex-1 items-center justify-center">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title">建案資訊</div>
@@ -47,6 +47,7 @@
 
     .info-items {
         row-gap: size(20);
+
         .item {
             line-height: size(17);
             font-size: size(17);

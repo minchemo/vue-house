@@ -3,7 +3,9 @@
 
         <div class="info absolute bg-white">
             <div class="flex items-end">
-                <img class="girl" src="@/section/s2/i.png" alt="" srcset="">
+                <lazy-component>
+                    <img class="girl" src="@/section/s2/i.png" alt="" srcset="">
+                </lazy-component>
                 <p class="title">5分鐘社口特區<br>
                     水岸藝術園區</p>
             </div>
@@ -20,7 +22,10 @@
             </SplideSlide>
         </Splide>
 
-        <img class="absolute newstart" src="@/section/s2/newstart.png" alt="" srcset="">
+
+        <lazy-component>
+            <img class="absolute newstart" src="@/section/s2/newstart.png" alt="" srcset="">
+        </lazy-component>
     </div>
 </template>
 

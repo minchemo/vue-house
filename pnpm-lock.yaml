@@ -14,6 +14,7 @@ specifiers:
   vite: ^2.9.9
   vite-plugin-imagemin: ^0.6.1
   vue: ^3.2.25
+  vue-lazyload: 3.0.0-rc.2
   vue-mobile-detection: ^2.0.1
   vue-recaptcha: ^2.0.2
   vue-router: ^4.0.13
@@ -29,6 +30,7 @@ dependencies:
   path: 0.12.7
   sass: 1.52.3
   vue: 3.2.37
+  vue-lazyload: 3.0.0-rc.2
   vue-mobile-detection: 2.0.1
   vue-recaptcha: 2.0.2_vue@3.2.37
   vue-router: 4.0.13_vue@3.2.37
@@ -3476,6 +3478,10 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
+    dev: false
+
+  /vue-lazyload/3.0.0-rc.2:
+    resolution: {integrity: sha512-Cg7Gqb7jAoiImMPH3EMfAwJ8gZuFoBJCEtA7+TGRljrtktDtV7JAHIyKvuTgQR8DFAd7MhKi1Ys8QHdSrnGdZQ==}
     dev: false
 
   /vue-mobile-detection/2.0.1:

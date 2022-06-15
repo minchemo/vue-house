@@ -1,19 +1,15 @@
 <template>
   <div class="s8 relative bg-[#FFEA00]">
-    <img class="absolute girl z-20" src="@/section/s8/i.png" alt="" srcset="" />
-    <img
-      class="absolute girl2 z-20"
-      src="@/section/s8/i2.png"
-      alt=""
-      srcset=""
-    />
-    <img
-      class="absolute newstart"
-      src="@/section/s8/newstart.png"
-      alt=""
-      srcset=""
-    />
-    <img class="absolute info" src="@/section/s8/info.png" alt="" srcset="" />
+
+    <lazy-component>
+
+
+      <img class="absolute girl z-20" src="@/section/s8/i.png" alt="" srcset="" />
+      <img class="absolute girl2 z-20" src="@/section/s8/i2.png" alt="" srcset="" />
+      <img class="absolute newstart" src="@/section/s8/newstart.png" alt="" srcset="" />
+      <img class="absolute info" src="@/section/s8/info.png" alt="" srcset="" />
+    </lazy-component>
+
     <div class="bubble absolute z-10"></div>
   </div>
 </template>
@@ -43,13 +39,16 @@
     top: size(354);
     animation: wave 0.8s alternate-reverse infinite ease-in-out;
     transform-origin: bottom;
+
     @keyframes wave {
       0% {
         transform: rotate(0deg);
       }
+
       50% {
         transform: rotate(0deg);
       }
+
       100% {
         transform: rotate(10deg);
       }

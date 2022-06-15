@@ -2,7 +2,10 @@
   <div class="s5 relative bg-[#BBE35B]">
     <div class="info absolute z-10 flex flex-col justify-center items-center">
       <div class="flex items-end justify-center">
-        <img class="girl" src="@/section/s5/i.png" alt="" srcset="" />
+
+        <lazy-component>
+          <img class="girl" src="@/section/s5/i.png" alt="" srcset="" />
+        </lazy-component>
         <p class="title">
           輕隱市心<br />
           風景首馥
@@ -17,32 +20,24 @@
       </div>
     </div>
 
-    <Splide
-      :options="{
-        rewind: true,
-        autoWidth: true,
-        arrows: false,
-        type: 'fade',
-        autoplay: true,
-        interval: 4000,
-      }"
-      class="slide-box absolute z-10"
-    >
-      <SplideSlide
-        class="slide"
-        v-for="img in imgs"
-        v-bind:style="{ backgroundImage: `url('${img.img}')` }"
-      >
+    <Splide :options="{
+      rewind: true,
+      autoWidth: true,
+      arrows: false,
+      type: 'fade',
+      autoplay: true,
+      interval: 4000,
+    }" class="slide-box absolute z-10">
+      <SplideSlide class="slide" v-for="img in imgs" v-bind:style="{ backgroundImage: `url('${img.img}')` }">
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
     </Splide>
 
-    <img
-      class="absolute newstart z-10"
-      src="@/section/s5/newstart.png"
-      alt=""
-      srcset=""
-    />
+    <lazy-component>
+      <img class="absolute newstart z-10" src="@/section/s5/newstart.png" alt="" srcset="" />
+
+    </lazy-component>
+
   </div>
 </template>
 
@@ -53,6 +48,7 @@
   width: 100%;
   height: size(1006);
   border-radius: size(180);
+
   &::after {
     content: "";
     width: size(1696);
@@ -73,6 +69,7 @@
     left: size(900);
     top: size(180);
     padding: 0 size(110);
+
     .girl {
       height: size(151);
       margin-right: size(20);

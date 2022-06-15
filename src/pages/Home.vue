@@ -1,6 +1,7 @@
 <template>
   <Nav />
   <div class="bg-white overflow-hidden font-['Noto_Sans_TC']">
+
     <S1 />
     <S2 />
     <S3 />

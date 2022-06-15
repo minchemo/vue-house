@@ -13,32 +13,22 @@
       <div class="absolute bar"></div>
     </div>
 
-    <Splide
-      :options="{
-        rewind: true,
-        autoWidth: true,
-        arrows: false,
-        type: 'fade',
-        autoplay: true,
-        interval: 4000,
-      }"
-      class="slide-box absolute z-10"
-    >
-      <SplideSlide
-        class="slide"
-        v-for="img in imgs"
-        v-bind:style="{ backgroundImage: `url('${img.img}')` }"
-      >
+    <Splide :options="{
+      rewind: true,
+      autoWidth: true,
+      arrows: false,
+      type: 'fade',
+      autoplay: true,
+      interval: 4000,
+    }" class="slide-box absolute z-10">
+      <SplideSlide class="slide" v-for="img in imgs" v-bind:style="{ backgroundImage: `url('${img.img}')` }">
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
     </Splide>
 
-    <img
-      class="absolute newstart z-10"
-      src="@/section/s3/newstart.png"
-      alt=""
-      srcset=""
-    />
+    <lazy-component>
+      <img class="absolute newstart z-10" src="@/section/s3/newstart.png" alt="" srcset="" />
+    </lazy-component>
   </div>
 </template>
 
@@ -49,6 +39,7 @@
   width: 100%;
   height: size(854);
   border-radius: size(180);
+
   &::after {
     content: "";
     width: size(1650);

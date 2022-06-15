@@ -12,6 +12,8 @@ import Toast from "vue-toastification"
 import "vue-toastification/dist/index.css"
 
 
+import VueLazyload from 'vue-lazyload'
+
 const toastOptions = {
     transition: "Vue-Toastification__fade",
     maxToasts: 5,
@@ -23,4 +25,9 @@ createApp(App)
     .use(VueMobileDetection)
     .use(VueSplide)
     .use(router)
+    .use(VueLazyload, {
+        preLoad: 1.5,
+        lazyComponent: true,
+        attempt: 1
+    })
     .mount("#app")

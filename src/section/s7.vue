@@ -1,10 +1,11 @@
 <template>
   <div class="s7 relative bg-[#8EF0E2]">
-    <div
-      class="info bg-white absolute z-10 flex flex-col justify-center items-center"
-    >
+    <div class="info bg-white absolute z-10 flex flex-col justify-center items-center">
       <div class="flex items-end justify-center">
-        <img class="girl" src="@/section/s7/i.png" alt="" srcset="" />
+        <lazy-component>
+          <img class="girl" src="@/section/s7/i.png" alt="" srcset="" />
+
+        </lazy-component>
         <p class="title">
           豪宅團隊心藝<br />
           有世界觀的家
@@ -16,33 +17,26 @@
       </div>
     </div>
 
-    <Splide
-      :options="{
-        rewind: true,
-        autoWidth: true,
-        arrows: false,
-        type: 'fade',
-        autoplay: true,
-        interval: 4000,
-      }"
-      @splide:move="move"
-      class="slide-box absolute z-10"
-    >
-      <SplideSlide
-        class="slide"
-        v-for="img in imgs"
-        v-bind:style="{ backgroundImage: `url('${img.img}')` }"
-      >
+    <Splide :options="{
+      rewind: true,
+      autoWidth: true,
+      arrows: false,
+      type: 'fade',
+      autoplay: true,
+      interval: 4000,
+    }" @splide:move="move" class="slide-box absolute z-10">
+      <SplideSlide class="slide" v-for="img in imgs" v-bind:style="{ backgroundImage: `url('${img.img}')` }">
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
     </Splide>
 
-    <img
-      class="absolute newstart z-10"
-      src="@/section/s7/newstart.png"
-      alt=""
-      srcset=""
-    />
+
+    <lazy-component>
+
+
+      <img class="absolute newstart z-10" src="@/section/s7/newstart.png" alt="" srcset="" />
+    </lazy-component>
+
   </div>
 </template>
 
@@ -61,6 +55,7 @@
     left: size(800);
     top: size(78);
     padding: 0 size(110);
+
     .girl {
       height: size(197);
       margin-right: size(20);
@@ -82,6 +77,7 @@
       font-size: size(26);
       line-height: size(46.8);
     }
+
     .content {
       margin-top: size(20);
       font-weight: 400;

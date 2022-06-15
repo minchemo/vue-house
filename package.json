@@ -16,6 +16,7 @@
     "path": "^0.12.7",
     "sass": "^1.52.3",
     "vue": "^3.2.25",
+    "vue-lazyload": "3.0.0-rc.2",
     "vue-mobile-detection": "^2.0.1",
     "vue-recaptcha": "^2.0.2",
     "vue-router": "^4.0.13",

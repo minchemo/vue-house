@@ -125,7 +125,7 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch } from "vue"
+import { ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
@@ -208,4 +208,8 @@ const send = () => {
     toast.success(`表單已送出，感謝您的填寫`)
   }
 }
+
+onMounted(()=>{
+  console.log('mounted');
+})
 </script>
