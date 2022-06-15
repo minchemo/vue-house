@@ -21,7 +21,7 @@
       autoplay: true,
       interval: 4000,
     }" class="slide-box absolute z-10">
-      <SplideSlide class="slide" v-for="img in imgs" v-bind:style="{ backgroundImage: `url('${img.img}')` }">
+      <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
     </Splide>

@@ -30,7 +30,7 @@
       <SplideSlide
         class="slide"
         v-for="img in imgs"
-        v-bind:style="{ backgroundImage: `url('${img.img}')` }"
+        v-lazy:background-image="img.img"
       >
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
