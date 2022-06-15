@@ -56,6 +56,11 @@
 }
 
 @media screen and (max-width:768px) {
+    .footer {
+        margin-bottom: size-m(63);
+
+    }
+
     .map {
         width: size-m(375);
         height: size-m(324);

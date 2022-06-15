@@ -1,18 +1,20 @@
 <template>
     <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-50 bg-white w-full"
         v-bind:class="{ 'r16-9': higherScreen }">
-        <div class="logo z-10" v-bind:class="{ 'open': menuOpen }"></div>
+        <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
             <p class="uppercase text-color2 z-10">menu</p>
             <div class="bar z-10"></div>
         </div>
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <div class="menu-item font-bold cursor-pointer text-white hover:text-color1"
-                v-for="item, i in info.navList">
+            <div class="menu-item font-bold cursor-pointer text-white hover:text-color1" v-for="item, i in info.navList"
+                @click="scrollTo(item.target)">
                 <span class="mr-3">0{{ i + 1 }}</span><span>{{ item.name }}</span>
             </div>
         </div>
+    </div>
+    <div class="gotop fixed z-40 cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
     </div>
 </template>
 
@@ -176,8 +178,31 @@
     }
 }
 
+.gotop {
+    width: size(49.4);
+    height: size(49.4);
+    right: size(20);
+    bottom: size(50);
+    background-image: url('@/assets/top.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(200%);
+    transition: all .5s;
+
+    &.show {
+        transform: translateY(0%);
+    }
+}
 
 @media screen and (max-width:768px) {
+
+    .gotop {
+        width: size-m(34.24);
+        height: size-m(34.24);
+        right: size-m(20);
+        bottom: size-m(80);
+    }
 
     .nav {
         width: size-m(350);
@@ -313,7 +338,7 @@
 </style>
 
 <script setup>
-import { getCurrentInstance, onMounted, ref } from 'vue';
+import { inject, getCurrentInstance, onMounted, ref } from 'vue';
 import info from "@/info"
 
 const menuOpen = ref(false)
@@ -321,11 +346,26 @@ const menuOpen = ref(false)
 const globals = getCurrentInstance().appContext.config.globalProperties
 const higherScreen = ref(false)
 
+const scrollPos = ref(0)
+
 onMounted(() => {
     const ratio = window.innerHeight / window.innerWidth
 
     if (!globals.$isMobile() && ratio > 0.46875) {
         higherScreen.value = true
     }
+
+    window.addEventListener('scroll', (event) => {
+        let scroll = window.pageYOffset || document.documentElement.scrollTop;
+        scrollPos.value = scroll
+    });
 })
+
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+    smoothScroll({
+        scrollTo: document.querySelector(el)
+    })
+}
 </script>

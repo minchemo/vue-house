@@ -11,8 +11,9 @@ import "@splidejs/vue-splide/css/core"
 import Toast from "vue-toastification"
 import "vue-toastification/dist/index.css"
 
+import VueLazyload from "vue-lazyload"
 
-import VueLazyload from 'vue-lazyload'
+import VueSmoothScroll from "vue3-smooth-scroll"
 
 const toastOptions = {
     transition: "Vue-Toastification__fade",
@@ -23,11 +24,12 @@ const toastOptions = {
 createApp(App)
     .use(Toast, toastOptions)
     .use(VueMobileDetection)
+    .use(VueSmoothScroll)
     .use(VueSplide)
     .use(router)
     .use(VueLazyload, {
         preLoad: 1.5,
         lazyComponent: true,
-        attempt: 1
+        attempt: 1,
     })
     .mount("#app")

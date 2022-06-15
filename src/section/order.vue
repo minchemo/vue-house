@@ -187,7 +187,7 @@ const formData = reactive({
   area: "",
   note: "",
   policyChecked: false,
-  r_verify: false,
+  r_verify: true,
 })
 
 //非必填
@@ -223,6 +223,7 @@ const onRecaptchaUnVerify = () => {
 }
 
 const send = () => {
+  const presend = new FormData();
   let pass = true
   let unfill = []
   let idx = 0
@@ -235,6 +236,8 @@ const send = () => {
       }
       idx++
     }
+
+    presend.append(key, value);
   }
 
   //有未填寫
@@ -253,7 +256,17 @@ const send = () => {
   }
 
   if (pass) {
-    toast.success(`表單已送出，感謝您的填寫`)
+    fetch("contact-form.php", {
+      method: "POST",
+      body: presend,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+    });
+
+
+    // toast.success(`表單已送出，感謝您的填寫`)
   }
 }
 

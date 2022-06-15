@@ -28,6 +28,29 @@
     </div>
   </div>
 
+  <!-- Mobile contact info -->
+  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'phone'">
+      <img src="@/section/form/phone.svg" alt="" srcset="" />
+      <div>撥打電話</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'fb'">
+      <img src="@/section/form/messenger.svg" alt="" srcset="" />
+      <div>FB 諮詢</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+      <img src="@/section/form/pen.svg" alt="" srcset="" />
+      <div>預約賞屋</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'gmap'">
+      <img src="@/section/form/gmap.svg" alt="" srcset="" />
+      <div>地圖導航</div>
+    </div>
+  </div>
+
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
   <div class="modal -mt-20 md:-mt-72">
@@ -137,6 +160,33 @@
 }
 
 @media screen and (max-width:768px) {
+  .mo-contact-info {
+    z-index: 49;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: size-m(375);
+    height: size-m(63);
+    gap: size-m(1);
+
+    .contact-item {
+      height: 100%;
+      background-color: theme('colors.color2');
+      font-size: size-m(16);
+      font-weight: 400;
+      color: #fff;
+
+      img {
+        margin-bottom: size-m(5);
+        max-width: size-m(16.5);
+        height: auto;
+        max-height: size-m(16.5);
+        filter: brightness(0) invert(1);
+      }
+
+    }
+  }
+
   .contact-info {
     width: size-m(341);
     height: auto;
@@ -221,7 +271,7 @@
 
 <script setup>
 import info from "@/info"
-import { ref } from "vue";
+import { inject, ref } from "vue";
 const modalOpen = ref(false);
 const modalType = ref('');
 
@@ -241,6 +291,14 @@ const go = () => {
 
 const open = () => {
   window.open(info.fbLink);
+}
+
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
 }
 
 </script>

@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <Splide @splide:move="move" :options="{
+    <Splide ref="splide" @splide:move="move" :options="{
       rewind: true,
       autoWidth: true,
       arrows: false,
@@ -41,6 +41,14 @@
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
     </Splide>
+    <div v-if="$isMobile()" class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
+      <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
+        <img src="@/assets/prev.svg" alt="" srcset="">
+      </button>
+      <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
+        <img src="@/assets/next.svg" alt="" srcset="">
+      </button>
+    </div>
 
     <lazy-component>
       <img class="absolute newstart z-10" src="@/section/s5/newstart.png" alt="" srcset="" />
@@ -331,6 +339,7 @@
 
 <script setup>
 import { ref } from "vue"
+const splide = ref();
 
 const currentIdx = ref(0)
 

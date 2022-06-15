@@ -19,6 +19,7 @@ specifiers:
   vue-recaptcha: ^2.0.2
   vue-router: ^4.0.13
   vue-toastification: 2.0.0-rc.5
+  vue3-smooth-scroll: ^0.8.1
   webpack: ^5.73.0
   webpack-cli: ^4.10.0
 
@@ -35,6 +36,7 @@ dependencies:
   vue-recaptcha: 2.0.2_vue@3.2.37
   vue-router: 4.0.13_vue@3.2.37
   vue-toastification: 2.0.0-rc.5_vue@3.2.37
+  vue3-smooth-scroll: 0.8.1
   webpack: 5.73.0_webpack-cli@4.10.0
 
 devDependencies:
@@ -3528,6 +3530,10 @@ packages:
       '@vue/runtime-dom': 3.2.37
       '@vue/server-renderer': 3.2.37_vue@3.2.37
       '@vue/shared': 3.2.37
+
+  /vue3-smooth-scroll/0.8.1:
+    resolution: {integrity: sha512-9EN1aiBT2RtkIe1MoGiyGjUoLmqmlJ96R9/QVCylaiurHQ7oGu1SPzEoGJyxdhCa1q3qyMcX/pne1oTAn1UaoQ==}
+    dev: false
 
   /watchpack/2.4.0:
     resolution: {integrity: sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==}
