@@ -15,7 +15,6 @@
     "html-minifier": "^4.0.0",
     "path": "^0.12.7",
     "sass": "^1.52.3",
-    "vite-plugin-singlefile": "0.10.0-beta",
     "vue": "^3.2.25",
     "vue-mobile-detection": "^2.0.1",
     "vue-recaptcha": "^2.0.2",

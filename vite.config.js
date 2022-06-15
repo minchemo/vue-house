@@ -3,7 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 import { resolve } from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
-import { viteSingleFile } from "vite-plugin-singlefile"
 
 export default defineConfig({
   resolve: {
@@ -45,7 +44,5 @@ export default defineConfig({
         ],
       },
     }),
-
-    viteSingleFile({useRecommendedBuildConfig: false }),
   ],
 })
