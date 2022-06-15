@@ -46,6 +46,6 @@ export default defineConfig({
       },
     }),
 
-    viteSingleFile(),
+    viteSingleFile({useRecommendedBuildConfig: false }),
   ],
 })
