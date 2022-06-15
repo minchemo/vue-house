@@ -1,7 +1,7 @@
 <template>
-    <div class="nav fixed flex items-center justify-between top-0 left-0 w-100 z-50 bg-white w-full"
+    <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-50 bg-white w-full"
         v-bind:class="{ 'r16-9': higherScreen }">
-        <div class="logo"></div>
+        <div class="logo z-10" v-bind:class="{ 'open': menuOpen }"></div>
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
             <p class="uppercase text-color2 z-10">menu</p>
@@ -173,6 +173,141 @@
             }
         }
 
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    .nav {
+        width: size-m(350);
+        left: size-m(12.5);
+        top: size-m(12.5);
+        padding: 0 size-m(24);
+        height: size-m(35);
+        border-radius: 9999px;
+
+        .logo {
+            width: size-m(101.83);
+            height: size-m(16);
+            transition: all .2s;
+
+            &.open {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .menu-btn {
+            p {
+                font-size: size-m(14);
+                font-weight: 100;
+            }
+
+            .bar {
+                width: size-m(17);
+
+                &::after {
+                    bottom: -#{size-m(5)};
+                }
+
+                &::before {
+                    top: -#{size-m(5)};
+                }
+            }
+
+            &.open {
+                p {
+                    color: #fff;
+                }
+
+                .bar {
+                    height: 0;
+
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        bottom: 50%;
+                        margin-bottom: -1px;
+                        position: absolute;
+                        background-color: #fff;
+                        transition: all .5s;
+                        transform: rotate(135deg);
+                    }
+
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        margin-top: -1px;
+                        position: absolute;
+                        background-color: #fff;
+                        transition: all .5s;
+                        transform: rotate(-135deg);
+                    }
+                }
+            }
+        }
+
+        .menu {
+            position: fixed;
+            top: 1.5vh;
+            right: size-m(12.5);
+            background-color: theme('colors.color2');
+            width: size-m(350);
+            height: 97vh;
+            z-index: 0;
+            transform: translateX(150%);
+            transition: all .5s;
+            border-radius: size-m(10);
+            padding: 0;
+            gap: size-m(45);
+
+            .menu-item {
+                font-size: size-m(21);
+            }
+
+            &.open {
+                transform: translateX(0);
+            }
+        }
+
+        &.r16-9 {
+            background-color: transparent;
+
+            .menu-btn {
+                &::after {
+                    content: '';
+                    width: 160%;
+                    height: 170%;
+                    background-color: #fff;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: size(20);
+                    transition: all .5s;
+                }
+
+                &:hover {
+                    &::after {
+                        box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
+                    }
+                }
+
+                &.open {
+                    &::after {
+                        content: '';
+                        background-color: transparent;
+                        box-shadow: unset;
+
+                    }
+
+                }
+            }
+
+        }
     }
 }
 </style>

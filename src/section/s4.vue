@@ -3,7 +3,7 @@
     <div class="info absolute bg-white">
       <div class="flex items-end">
         <lazy-component>
-        <img class="girl" src="@/section/s4/i.png" alt="" srcset="" />
+          <img class="girl" src="@/section/s4/i.png" alt="" srcset="" />
         </lazy-component>
         <p class="title">
           十分鐘 靜速之間<br />
@@ -16,33 +16,22 @@
       <div class="absolute bar"></div>
     </div>
 
-    <Splide
-      :options="{
-        rewind: true,
-        autoWidth: true,
-        arrows: false,
-        type: 'fade',
-        autoplay: true,
-        interval: 4000,
-      }"
-      class="slide-box absolute z-10"
-    >
-      <SplideSlide
-        class="slide"
-        v-for="img in imgs"
-        v-lazy:background-image="img.img"
-      >
+    <Splide :options="{
+      rewind: true,
+      autoWidth: true,
+      arrows: false,
+      type: 'fade',
+      autoplay: true,
+      interval: 4000,
+    }" class="slide-box absolute z-10">
+      <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
         <div class="caption absolute">{{ img.caption }}</div>
       </SplideSlide>
     </Splide>
-    
-        <lazy-component>
-    <img
-      class="absolute newstart"
-      src="@/section/s4/newstart.png"
-      alt=""
-      srcset=""
-    /></lazy-component>
+
+    <lazy-component>
+      <img class="absolute newstart" src="@/section/s4/newstart.png" alt="" srcset="" />
+    </lazy-component>
   </div>
 </template>
 
@@ -160,6 +149,92 @@
     width: size(709);
     left: size(1064);
     top: size(668);
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .s4 {
+    width: size-m(375);
+    height: size-m(576);
+    border-radius: size-m(68);
+
+    .info {
+      width: size-m(326);
+      height: size-m(531);
+      border-radius: size-m(64);
+      left: size-m(24);
+      top: size-m(20);
+      padding: size-m(290) size-m(18) size-m(55) size-m(18);
+      color: #555555;
+
+      .girl {
+        height: size-m(65);
+        margin-right: size-m(10);
+      }
+
+      .title {
+        font-size: size-m(23);
+        line-height: size-m(27.37);
+      }
+
+      .content {
+        margin-top: size-m(20);
+        font-weight: 400;
+        font-size: size-m(15);
+        line-height: size-m(24);
+      }
+
+      .bar {
+        bottom: unset;
+        top: 100%;
+        left: 50%;
+        margin-left: -#{size-m(30)};
+        width: size-m(66);
+        height: size-m(5);
+        border-radius: 0px 0px 5px 5px;
+        background-color: #7C716D;
+      }
+    }
+
+    .slide-box {
+      width: size-m(300);
+      height: size-m(208);
+      top: size-m(51);
+      left: size-m(43);
+
+      .slide {
+        width: size-m(300);
+        height: size-m(208);
+        border-radius: size-m(50);
+
+        .caption {
+          font-size: size-m(12);
+          line-height: size-m(20);
+          color: #fff;
+          border-radius: size-m(6) size-m(6) 0 0;
+          padding: 0 size-m(8) 0 size-m(8);
+          bottom: 0;
+          left: size-m(50);
+        }
+      }
+
+      &::after {
+        width: size-m(284);
+        height: size-m(230);
+        background-image: url('@/section/s2/bubble_m.png');
+        bottom: -#{size-m(40)};
+        left: -#{size-m(10)};
+      }
+
+      .splide__pagination {
+        display: none;
+      }
+    }
+
+    .newstart {
+      display: none;
+    }
   }
 }
 </style>

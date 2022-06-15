@@ -1,5 +1,7 @@
 <template>
   <div class="contact-info mx-auto bg-white flex flex-col items-center justify-between">
+    <img v-if="!$isMobile()" class="girls" src="@/section/form/girls.png" alt="">
+    <img v-else class="girls" src="@/section/form/girls_m.png" alt="">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
@@ -28,7 +30,7 @@
 
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
-  <div class="modal -mt-72">
+  <div class="modal -mt-20 md:-mt-72">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
@@ -63,6 +65,14 @@
   border-radius: size(115);
   padding: size(115) size(168) size(55) size(168);
   margin-top: size(60);
+  position: relative;
+
+  .girls {
+    position: absolute;
+    bottom: 110%;
+    pointer-events: none;
+    width: size(1104);
+  }
 
   .logo {
     width: size(434);
@@ -122,6 +132,88 @@
 
     &.no-gap {
       gap: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .contact-info {
+    width: size-m(341);
+    height: auto;
+    border-radius: size-m(68);
+    padding: size-m(50) size-m(15);
+    margin-top: size-m(120);
+    position: relative;
+    justify-content: flex-start;
+
+    .girls {
+      position: absolute;
+      bottom: 102%;
+      pointer-events: none;
+      width: size-m(360);
+    }
+
+    .logo {
+      width: size-m(276);
+      height: size-m(75);
+      background-image: url("@/section/form/logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: size-m(40);
+    }
+
+    .contact-item-box {
+      position: relative;
+      margin-top: size-m(0);
+      gap: size-m(20);
+      flex-direction: column;
+
+      .contact-item {
+        width: 100%;
+        padding: size-m(15) size-m(65);
+        background-color: theme('colors.color1');
+        border-radius: 9999px;
+        font-size: size-m(16);
+        letter-spacing: size-m(1);
+        max-width: 100%;
+        z-index: 1;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: theme('colors.color2');
+        }
+
+        img {
+          max-width: size-m(27);
+          height: auto;
+          max-height: size-m(27);
+        }
+
+        &.address {
+          z-index: 0;
+          background-color: #eeeeee;
+          position: relative;
+          padding: size-m(15) 0;
+          border-radius: size-m(30) size-m(30) 0 0;
+          max-width: 9999px;
+          justify-content: center;
+          margin-top: size-m(20);
+
+          &::after {
+            display: none;
+          }
+        }
+
+        &.address+div {
+          border-radius: 0 0 size-m(30) size-m(30);
+        }
+      }
+
+      &.no-gap {
+        gap: 0 !important;
+      }
     }
   }
 }

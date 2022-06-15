@@ -1,39 +1,11 @@
 <template>
-  <div
-    class="s1 relative bg-[#FFEA00]"
-    v-bind:class="{ 'r16-9': higherScreen }"
-  >
-    <img
-      class="absolute girl z-20"
-      src="@/section/s1/girl.png"
-      alt=""
-      srcset=""
-    />
-    <img
-      class="absolute music z-30"
-      src="@/section/s1/music.png"
-      alt=""
-      srcset=""
-    />
-    <img
-      class="absolute flower z-20"
-      src="@/section/s1/f.png"
-      alt=""
-      srcset=""
-    />
-    <img
-      class="absolute hsclogo z-10"
-      src="@/section/s1/hsclogo.png"
-      alt=""
-      srcset=""
-    />
+  <div class="s1 relative bg-[#FFEA00]" v-bind:class="{ 'r16-9': higherScreen }">
+    <img class="absolute girl z-20" src="@/section/s1/girl.png" alt="" srcset="" />
+    <img class="absolute music z-30" src="@/section/s1/music.png" alt="" srcset="" />
+    <img class="absolute flower z-20" src="@/section/s1/f.png" alt="" srcset="" />
+    <img class="absolute hsclogo z-10" src="@/section/s1/hsclogo.png" alt="" srcset="" />
     <div class="absolute bubble z-10"></div>
-    <img
-      class="absolute newstart z-0"
-      src="@/section/s1/newstart.png"
-      alt=""
-      srcset=""
-    />
+    <img class="absolute newstart z-0" src="@/section/s1/newstart.png" alt="" srcset="" />
   </div>
 </template>
 
@@ -157,6 +129,76 @@
       bottom: unset;
       top: size(722);
       width: size(1234);
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .s1 {
+    width: size-m(375);
+    height: size-m(750);
+
+    .girl {
+      width: size-m(199.5);
+      height: size-m(318);
+      left: size-m(11);
+      top: size-m(261);
+    }
+
+    .music {
+      width: size-m(45.98);
+      height: size-m(65.28);
+      left: size-m(146.02);
+      top: size-m(392.22);
+      animation: float 4s alternate-reverse infinite ease-in-out;
+
+      @keyframes float {
+        0% {
+          transform: translate(10px, 0px) rotate(-5deg) skew(2deg, 2deg);
+        }
+
+        100% {
+          transform: translate(20px, -20px) rotate(10deg) skew(-6deg, -6deg);
+        }
+      }
+    }
+
+    .flower {
+      width: size-m(23.5);
+      height: size-m(38.5);
+      left: size-m(135);
+      top: size-m(524);
+      animation: wave 2s alternate-reverse infinite ease-in-out;
+      transform-origin: bottom;
+
+      @keyframes wave {
+        from {
+          transform: rotate(5deg);
+        }
+
+        to {
+          transform: rotate(-5deg);
+        }
+      }
+    }
+
+    .hsclogo {
+      display: none;
+    }
+
+    .bubble {
+      width: size-m(241.3);
+      height: size-m(237.5);
+      left: size-m(114);
+      top: size-m(143);
+      background-image: url("@/section/s1/bubble_mo.png");
+    }
+
+    .newstart {
+      left: 0;
+      bottom: unset;
+      top: size-m(55);
+      width: 100%;
     }
   }
 }

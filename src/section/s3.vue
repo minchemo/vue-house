@@ -156,6 +156,93 @@
     top: size(668);
   }
 }
+
+
+@media screen and (max-width:768px) {
+  .s3 {
+    width: size-m(375);
+    height: size-m(551);
+
+    &::after {
+      content: "";
+      width: size-m(326);
+      height: size-m(511);
+      border-radius: size-m(64);
+    }
+
+    .info {
+      width: size-m(326);
+      height: size-m(511);
+      border-radius: size-m(64);
+      left: size-m(24);
+      top: size-m(20);
+      padding: 0 size-m(18) size-m(58) size-m(18);
+      color: #555555;
+
+      .title {
+        font-size: size-m(23);
+        line-height: size-m(27.37);
+      }
+
+      .content {
+        margin-top: size-m(20);
+        font-weight: 400;
+        font-size: size-m(15);
+        line-height: size-m(24);
+      }
+
+      .bar {
+        bottom: unset;
+        top: 100%;
+        left: 50%;
+        margin-left: -#{size-m(30)};
+        width: size-m(66);
+        height: size-m(5);
+        border-radius: 0px 0px 5px 5px;
+        background-color: #7C716D;
+      }
+    }
+
+    .slide-box {
+      width: size-m(300);
+      height: size-m(208);
+      top: size-m(30);
+      left: size-m(43);
+
+      .slide {
+        width: size-m(300);
+        height: size-m(208);
+        border-radius: size-m(50);
+
+        .caption {
+          font-size: size-m(12);
+          line-height: size-m(20);
+          color: #fff;
+          border-radius: size-m(6) size-m(6) 0 0;
+          padding: 0 size-m(8) 0 size-m(8);
+          bottom: 0;
+          left: size-m(50);
+        }
+      }
+
+      &::after {
+        width: size-m(284);
+        height: size-m(230);
+        background-image: url('@/section/s2/bubble_m.png');
+        bottom: -#{size-m(40)};
+        left: -#{size-m(10)};
+      }
+
+      .splide__pagination {
+        display: none;
+      }
+    }
+
+    .newstart {
+      display: none;
+    }
+  }
+}
 </style>
 
 <script setup>

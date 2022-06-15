@@ -2,8 +2,6 @@
   <div class="s8 relative bg-[#FFEA00]">
 
     <lazy-component>
-
-
       <img class="absolute girl z-20" src="@/section/s8/i.png" alt="" srcset="" />
       <img class="absolute girl2 z-20" src="@/section/s8/i2.png" alt="" srcset="" />
       <img class="absolute newstart" src="@/section/s8/newstart.png" alt="" srcset="" />
@@ -73,6 +71,45 @@
     width: 100%;
     left: 0;
     top: 0;
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .s8 {
+    width: size-m(375);
+    height: size-m(604);
+    margin-top: size-m(20);
+
+    .bubble {
+      width: size-m(270);
+      height: size-m(274);
+      left: size-m(87);
+      top: size-m(158);
+      background-image: url("@/section/s8/bubble_m.png");
+    }
+
+    .girl {
+      width: size-m(139);
+      height: size-m(145);
+      left: size-m(18);
+      top: size-m(336);
+    }
+
+    .girl2 {
+      width: size-m(79);
+      height: size-m(78);
+      left: size-m(280);
+      top: size-m(128);
+    }
+
+    .info {
+      display: none;
+    }
+
+    .newstart {
+      top: size-m(40);
+    }
   }
 }
 </style>

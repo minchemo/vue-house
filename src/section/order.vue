@@ -51,7 +51,7 @@
 
     <!-- Send -->
     <div class="send mt-8 mx-auto rounded-full hover:scale-90 btn cursor-pointer" @click="send()">
-      送出表單
+      立即預約
     </div>
 
     <!-- Contact Info -->
@@ -109,9 +109,57 @@
     text-indent: size(20);
     color: #fff;
     background-color: #3e3a39;
-    width: size(318);
+    width: size(250);
     height: size(72);
     line-height: size(72);
+  }
+}
+
+@media screen and (max-width:768px) {
+  .order {
+    width: 100%;
+    border-radius: size-m(68) size-m(68) 0 0;
+    padding-top: size-m(30);
+    margin-top: size-m(40);
+
+    .order-title {
+      font-size: size-m(29);
+      font-weight: 500;
+      margin-bottom: size-m(20);
+    }
+
+    .form {
+      width: size-m(310);
+      height: auto;
+      gap: size-m(15);
+      margin-bottom: size-m(20);
+      flex-direction: column;
+
+      .left {
+        width: 100%;
+        gap: size-m(15);
+      }
+
+      .right {
+        width: 100%;
+        height: size-m(100);
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .send {
+      font-size: size-m(21);
+      letter-spacing: size-m(20);
+      text-indent: size-m(20);
+      color: #fff;
+      background-color: #3e3a39;
+      width: size-m(318);
+      height: size-m(72);
+      line-height: size-m(72);
+    }
   }
 }
 </style>
@@ -209,7 +257,7 @@ const send = () => {
   }
 }
 
-onMounted(()=>{
+onMounted(() => {
   console.log('mounted');
 })
 </script>
