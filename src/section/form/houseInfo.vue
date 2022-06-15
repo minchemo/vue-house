@@ -2,9 +2,9 @@
     <div class="flex items-center justify-between">
         <div class="map"></div>
         <div class="flex-1 items-center justify-center">
-            <div class="info-box mx-auto flex flex-col items-center justify-center">
+            <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title">建案資訊</div>
-                <div class="info-items mt-4 w-full grid grid-cols-2 gap-x-2 gap-y-4">
+                <div class="info-items mt-4 w-full grid grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
                         <p class="mr-2 border-l-2 border-black pl-2">{{ item[0] }}</p>
@@ -46,6 +46,7 @@
     }
 
     .info-items {
+        row-gap: size(20);
         .item {
             line-height: size(17);
             font-size: size(17);

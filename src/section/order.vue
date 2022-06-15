@@ -6,20 +6,10 @@
     <!-- Form -->
     <div class="form mx-auto relative flex items-start justify-center">
       <div class="left h-full flex flex-col justify-between items-center">
-        <input
-          type="text"
-          placeholder="姓名"
-          class="input w-full rounded-full"
-          :value="formData.name"
-          @input="(event) => (formData.name = event.target.value)"
-        />
-        <input
-          type="text"
-          placeholder="手機"
-          class="input w-full rounded-full"
-          :value="formData.phone"
-          @input="(event) => (formData.phone = event.target.value)"
-        />
+        <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
+          @input="(event) => (formData.name = event.target.value)" />
+        <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
+          @input="(event) => (formData.phone = event.target.value)" />
         <select class="select w-full rounded-full" v-model="formData.room">
           <option value="" selected disabled>需求房型</option>
           <option value="2房">2 房</option>
@@ -39,47 +29,28 @@
         </select>
       </div>
       <div class="right h-full">
-        <textarea
-          :value="formData.note"
-          @input="(event) => (formData.note = event.target.value)"
-          class="textarea w-full h-full rounded-3xl"
-          placeholder="備註訊息"
-        ></textarea>
+        <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
+          class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
       </div>
     </div>
 
     <!-- Policy -->
     <div class="flex gap-2 items-center justify-center">
-      <input
-        type="checkbox"
-        v-model="formData.policyChecked"
-        :checked="formData.policyChecked"
-        class="checkbox bg-white rounded-md"
-      />
+      <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+        class="checkbox bg-white rounded-md" />
       <p>
-        本人知悉並同意<label
-          for="policy-modal"
-          class="modal-button text-red-700 font-bold cursor-pointer hover:opacity-70"
-          >「個資告知事項聲明」</label
-        >內容
+        本人知悉並同意<label for="policy-modal"
+          class="modal-button text-red-700 font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
       </p>
     </div>
     <Policy />
 
     <!-- Recaptcha -->
-    <vue-recaptcha
-      class="flex justify-center mt-8"
-      ref="recaptcha"
-      :sitekey="info.recaptcha_site_key_v2"
-      @verify="onRecaptchaVerify"
-      @expired="onRecaptchaUnVerify"
-    />
+    <vue-recaptcha class="flex justify-center mt-8" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+      @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
     <!-- Send -->
-    <div
-      class="send mt-8 mx-auto rounded-full hover:scale-90 btn cursor-pointer"
-      @click="send()"
-    >
+    <div class="send mt-8 mx-auto rounded-full hover:scale-90 btn cursor-pointer" @click="send()">
       送出表單
     </div>
 
@@ -108,17 +79,21 @@
     font-weight: 500;
     margin-bottom: size(50);
   }
+
   .form {
     width: size(920);
     height: 300px;
     gap: size(80);
     margin-bottom: size(50);
+
     .left {
       width: size(419);
     }
+
     .right {
       width: size(419);
     }
+
     &::after {
       content: "";
       width: size(1);
@@ -131,7 +106,7 @@
   .send {
     font-size: size(22);
     letter-spacing: size(20);
-  text-indent:  size(20);
+    text-indent: size(20);
     color: #fff;
     background-color: #3e3a39;
     width: size(318);

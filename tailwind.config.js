@@ -4,7 +4,12 @@ module.exports = {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        color1: '#FFEC2E', //更換主色
+        color2: '#00CBD1' //更換副色
+      }
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {

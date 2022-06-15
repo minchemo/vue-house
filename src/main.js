@@ -9,8 +9,9 @@ import VueSplide from "@splidejs/vue-splide"
 import "@splidejs/vue-splide/css/core"
 
 import Toast from "vue-toastification"
-// Import the CSS or use your own!
 import "vue-toastification/dist/index.css"
+
+
 const toastOptions = {
     transition: "Vue-Toastification__fade",
     maxToasts: 5,

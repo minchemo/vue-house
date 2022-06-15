@@ -1,4 +1,5 @@
 <template>
+  <Nav />
   <div class="bg-white overflow-hidden font-['Noto_Sans_TC']">
     <S1 />
     <S2 />
@@ -22,6 +23,8 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import Order from "@/section/order.vue"
+import Nav from "@/layout/navbar.vue"
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

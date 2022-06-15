@@ -1,4 +1,4 @@
-const caseName = "藏美表參道"
+const caseName = "興世代"
 
 export default {
     meta: {
@@ -24,11 +24,47 @@ export default {
     gtmCode: ["KLM3QRV"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
-
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋",
         subTitle: "",
     },
+    navList: [
+        {
+            name: '社口特區',
+            target: '',
+            offset: ''
+        },
+        {
+            name: '文教特區',
+            target: '',
+            offset: ''
+        },
+        {
+            name: '恣遊市心',
+            target: '',
+            offset: ''
+        },
+        {
+            name: '蒔尚住宅',
+            target: '',
+            offset: ''
+        },
+        {
+            name: '姮興開發',
+            target: '',
+            offset: ''
+        },
+        {
+            name: '豪宅團隊',
+            target: '',
+            offset: ''
+        },
+        {
+            name: '預約賞屋',
+            target: '',
+            offset: ''
+        },
+    ]
 }

@@ -1,18 +1,16 @@
 <template>
-  <div
-    class="contact-info mx-auto bg-white flex flex-col items-center justify-between"
-  >
+  <div class="contact-info mx-auto bg-white flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center">
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center">
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center">
+      <div class="flex contact-item justify-between items-center" @click="open()">
         <img src="@/section/form/fb.svg" alt="" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
@@ -21,21 +19,51 @@
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center">
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
+  <div class="modal -mt-72">
+    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
+      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+      <!-- icon -->
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="" srcset="" />
+      <!-- title -->
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
+          '接待會館'
+      }}</div>
+      <!-- content -->
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+          `接待中心：${info.address}`
+      }}</div>
+      <!-- btn -->
+      <div class="btn btn-lg bg-color1 border-0 text-black mt-12 hover:bg-color2" @click="go()"
+        v-bind:class="{ 'hidden': modalType == 'phone' && !$isMobile() }">
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+            '開啟導航'
+        }}</div>
+    </div>
+  </div>
+
+
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
 .contact-info {
   width: size(1200);
   border-radius: size(115);
   padding: size(115) size(168) size(55) size(168);
   margin-top: size(60);
+
   .logo {
     width: size(434);
     height: size(118);
@@ -50,18 +78,21 @@
     position: relative;
     margin-top: size(20);
     gap: size(20);
+
     .contact-item {
       width: 100%;
       padding: size(15) size(55);
-      background-color: #ffea00;
+      background-color: theme('colors.color1');
       border-radius: 9999px;
       font-size: size(16);
       letter-spacing: size(1);
       max-width: size(280);
       z-index: 1;
+      transition: all .3s;
       cursor: pointer;
+
       &:hover {
-        filter: hue-rotate(95deg);
+        background-color: theme('colors.color2');
       }
 
       img {
@@ -69,6 +100,7 @@
         height: auto;
         max-height: size(27);
       }
+
       &.address {
         z-index: 0;
         background-color: #eeeeee;
@@ -76,6 +108,7 @@
         border-radius: 999px 0 0 999px;
         max-width: 9999px;
         justify-content: center;
+
         &::after {
           content: "";
           position: absolute;
@@ -86,6 +119,7 @@
         }
       }
     }
+
     &.no-gap {
       gap: 0 !important;
     }
@@ -95,4 +129,26 @@
 
 <script setup>
 import info from "@/info"
+import { ref } from "vue";
+const modalOpen = ref(false);
+const modalType = ref('');
+
+const go = () => {
+  if (modalType.value == 'phone') {
+    window.location.href = `tel:${info.phone.replace("-", "")}`;
+    setTimeout(() => {
+      window.location.href = "phoneThanks";
+    }, 1000);
+  } else if (modalType.value == 'fb') {
+    window.open(info.fbMessage);
+  } else if (modalType.value == 'gmap') {
+    window.open(info.googleLink);
+
+  }
+}
+
+const open = () => {
+  window.open(info.fbLink);
+}
+
 </script>
