@@ -35,7 +35,7 @@
     </div>
 
     <!-- Policy -->
-    <div class="flex gap-2 items-center justify-center">
+    <div class="flex gap-2 items-center justify-center control">
       <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
         class="checkbox bg-white rounded-md" />
       <p>
@@ -128,6 +128,7 @@
       margin-bottom: size-m(20);
     }
 
+      .control{font-size:  size-m(13);}
     .form {
       width: size-m(310);
       height: auto;

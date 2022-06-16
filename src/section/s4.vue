@@ -265,9 +265,5 @@ const imgs = ref([
     img: new URL("../section/s4/3.jpg", import.meta.url).href,
     caption: "環保運動公園",
   },
-  {
-    img: new URL("../section/s4/3.jpg", import.meta.url).href,
-    caption: "星巴克",
-  },
 ])
 </script>
