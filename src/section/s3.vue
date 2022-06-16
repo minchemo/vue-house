@@ -35,7 +35,7 @@
     </div>
 
     <lazy-component>
-      <img class="absolute newstart z-10" src="@/section/s3/newstart.png" alt="" srcset="" />
+      <img class="absolute newstart z-10" src="./s1/newstart.svg" alt="" srcset="" />
     </lazy-component>
   </div>
 </template>
@@ -125,12 +125,12 @@
       content: "";
       width: size(873);
       height: size(503);
-      background-image: url("@/section/s3/bubble.png");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300000022' viewBox='0 0 863 503'%3E%3Cpath d='M167.3,0l473.2,0c152.9,3.3,200.4,142.5,219.8,188.6c5.9,18,2.4,27.4-13.3,11c-9.6-10.1-56.3-26-56.3,1.3v148.4 c0,93.1-59.8,153.6-151.8,153.6H167.3C75.3,503,0,426.8,0,333.7l0-164.5C0,76.1,75.3,0,167.3,0z'/%3E%3C/svg%3E%0A");
       background-size: cover;
       background-position: center;
       position: absolute;
-      bottom: -#{size(30)};
-      left: size(10);
+      bottom: size(-30);
+      left: size(20);
       z-index: 0;
     }
 
@@ -162,6 +162,7 @@
     width: size(709);
     left: size(241);
     top: size(668);
+    opacity: 0.75;
   }
 }
 
@@ -236,7 +237,7 @@
       &::after {
         width: size-m(284);
         height: size-m(230);
-        background-image: url('@/section/s2/bubble_m.png');
+        background-image: url("data:image/svg+xml,%3Csvg fill='%230002' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 550'%3E%3Cpath d='M511.5,0h-343C75.8,0,0,75.8,0,168.4v163C0,424,60.3,484.3,153,484.3c0,0,326.6,0,327,0 c27.1,0,11.3,39.9,1.2,49.6c-18,17.5-8,24.7,41.1,0.1C570,510.1,680,447.1,680,315.9V168.4C680,75.8,604.2,0,511.5,0z'/%3E%3C/svg%3E");
         bottom: -#{size-m(40)};
         left: -#{size-m(10)};
       }

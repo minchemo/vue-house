@@ -1,11 +1,11 @@
 <template>
-  <div class="s1 relative bg-[#FFEA00]" v-bind:class="{ 'r16-9': higherScreen }">
-    <img class="absolute girl z-20" src="@/section/s1/girl.png" alt="" srcset="" />
-    <img class="absolute music z-30" src="@/section/s1/music.png" alt="" srcset="" />
-    <img class="absolute flower z-20" src="@/section/s1/f.png" alt="" srcset="" />
-    <img class="absolute hsclogo z-10" src="@/section/s1/hsclogo.png" alt="" srcset="" />
+  <div class="s1 relative bg-[#FFEA00]">
+    <img class="absolute girl z-20" src="./s1/girl.png" alt="" srcset="" />
+    <img class="absolute music z-30" src="./s1/music.png" alt="" srcset="" />
+    <img class="absolute flower z-20" src="./s1/f.png" alt="" srcset="" />
+    <img class="absolute hsclogo z-10" src="./s1/hsclogo.png" alt="" srcset="" />
     <div class="absolute bubble z-10"></div>
-    <img class="absolute newstart z-0" src="@/section/s1/newstart.png" alt="" srcset="" />
+    <img class="absolute newstart z-0" src="./s1/newstart.svg" alt="" srcset="" />
   </div>
 </template>
 
@@ -14,30 +14,28 @@
 
 .s1 {
   width: 100%;
-  height: size(900);
+  height: 100vh;
+  min-height: size(900);
+  max-height: size(1080);
   padding-top: size(80);
 
   .girl {
-    width: size(468.07);
-    height: size(746.09);
+    width: size(468.0);
+    height: size(746.0);
     left: size(218);
-    top: size(147.91);
+    top: calc(50% + (148 - 900 * .5) * 100vw / 1920);
   }
 
   .music {
     width: size(107.88);
     height: size(153.17);
     left: size(534.79);
-    top: size(455.77);
-    animation: float 4s alternate-reverse infinite ease-in-out;
-
+    top:calc(50% + (456 - 900 * .5) * 100vw / 1920);
+    animation: float 4s alternate infinite ease-in-out;
+    transform: translate(5%, 0px) rotate(-5deg) skew(5deg,5deg);
     @keyframes float {
-      0% {
-        transform: translate(10px, 0px) rotate(-5deg) skew(2deg, 2deg);
-      }
-
-      100% {
-        transform: translate(20px, -20px) rotate(10deg) skew(-6deg, -6deg);
+      to {
+        transform: translate(10%, -10%) rotate(10deg) skew(-3deg,-3deg);
       }
     }
   }
@@ -46,15 +44,12 @@
     width: size(66);
     height: size(108);
     left: size(530);
-    top: size(746);
-    animation: wave 2s alternate-reverse infinite ease-in-out;
+    top:calc(50% + (746 - 900 * .5) * 100vw / 1920);
+    animation: wave 2s alternate infinite ease-in-out;
     transform-origin: bottom;
+    transform: skewX(-6deg) rotate(2deg);
 
     @keyframes wave {
-      from {
-        transform: skewX(-6deg) rotate(2deg);
-      }
-
       to {
         transform: skewX(9deg) rotate(-2deg);
       }
@@ -72,22 +67,41 @@
     width: size(1074.04);
     height: size(506.02);
     left: size(667);
-    top: size(146);
+    top:calc(50% + (146 - 900 * .5) * 100vw / 1920);
     background-image: url("@/section/s1/bubble_md.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transform-origin: 0 70%;
+    transform: scale(0.3);
+    opacity: 0;
+    animation: bubble 6s infinite ease-in-out;
+    @keyframes bubble {
+      15% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      85% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      90% {
+        transform: scale(1.1);
+        opacity: 0;
+      }
+    }
   }
 
   .newstart {
     left: 0;
-    bottom: 0;
+    bottom: -.5vw;
     width: size(1920);
   }
 
+/*
   //高螢幕
   &.r16-9 {
-    height: size(1080);
+  //  height: size(1080);
     padding-top: 0;
 
     .girl {
@@ -131,55 +145,34 @@
       width: size(1234);
     }
   }
+  */
 }
 
 @media screen and (max-width:768px) {
   .s1 {
-    width: size-m(375);
-    height: size-m(750);
+    height: calc(100vh - 63px);
+    min-height: size-m(604);
+    max-height: size-m(700);
 
     .girl {
       width: size-m(199.5);
       height: size-m(318);
       left: size-m(11);
-      top: size-m(261);
+      top: calc(60% + (261 - 604 * .6) * 100vw / 375);
     }
 
     .music {
       width: size-m(45.98);
       height: size-m(65.28);
       left: size-m(146.02);
-      top: size-m(392.22);
-      animation: float 4s alternate-reverse infinite ease-in-out;
-
-      @keyframes float {
-        0% {
-          transform: translate(10px, 0px) rotate(-5deg) skew(2deg, 2deg);
-        }
-
-        100% {
-          transform: translate(20px, -20px) rotate(10deg) skew(-6deg, -6deg);
-        }
-      }
+      top: calc(60% + (392 - 604 * .6) * 100vw / 375);
     }
 
     .flower {
       width: size-m(23.5);
       height: size-m(38.5);
       left: size-m(135);
-      top: size-m(524);
-      animation: wave 2s alternate-reverse infinite ease-in-out;
-      transform-origin: bottom;
-
-      @keyframes wave {
-        from {
-          transform: rotate(5deg);
-        }
-
-        to {
-          transform: rotate(-5deg);
-        }
-      }
+      top: calc(60% + (524 - 604 * .6) * 100vw / 375);
     }
 
     .hsclogo {
@@ -190,14 +183,15 @@
       width: size-m(241.3);
       height: size-m(237.5);
       left: size-m(114);
-      top: size-m(143);
+      top: calc(50% + (143 - 604 * .5) * 100vw / 375);
       background-image: url("@/section/s1/bubble_mo.png");
+      transform-origin: 25% 95%;
     }
 
     .newstart {
       left: 0;
       bottom: unset;
-      top: size-m(55);
+      top: calc(10% + (55 - 604 * .1) * 100vw / 375);
       width: 100%;
     }
   }

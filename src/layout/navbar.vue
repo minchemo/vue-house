@@ -1,6 +1,5 @@
 <template>
-    <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-50 bg-white w-full"
-        v-bind:class="{ 'r16-9': higherScreen }">
+    <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-50 bg-white w-full">
         <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
@@ -239,6 +238,14 @@
                     top: -#{size-m(5)};
                 }
             }
+            &:hover {
+                .bar {
+                    &::after,
+                    &::before {
+                        transform: translateX(0%);
+                    }
+                }
+            }
 
             &.open {
                 p {
@@ -297,7 +304,7 @@
                 transform: translateX(0);
             }
         }
-
+/*
         &.r16-9 {
             background-color: transparent;
 
@@ -333,6 +340,8 @@
             }
 
         }
+
+        */
     }
 }
 </style>
