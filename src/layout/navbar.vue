@@ -129,10 +129,15 @@
         transition: all .5s;
         border-radius: size(20);
         padding: size(100) 0;
-        gap: size(20);
+        gap: size(22);
 
         .menu-item {
             font-size: size(25);
+            transition: color .5s,transform .5s .1s;
+            &:hover{
+            transform: scale(1.1);
+
+            }
         }
 
         &.open {
@@ -290,16 +295,17 @@
             right: size-m(12.5);
             background-color: theme('colors.color2');
             width: size-m(350);
-            height: 97vh;
+            height: calc(100vh - 63px - 6vw);
             z-index: 0;
             transform: translateX(150%);
             transition: all .5s;
             border-radius: size-m(10);
-            padding: 0;
-            gap: size-m(45);
+            padding: size-m(100) 0 size-m(50) 0;
+           // gap: size-m(45);
 
             .menu-item {
                 font-size: size-m(21);
+                flex: 1;
             }
 
             &.open {

@@ -13,7 +13,7 @@
           class="input w-full rounded-full" :value="formData.phone"
           @input="(event) => (formData.phone = event.target.value)" />
         <select data-aos="fade-right" data-aos-once="true" data-aos-delay="200" class="select w-full rounded-full"
-          v-model="formData.room">
+          v-model="formData.room_type">
           <option value="" selected disabled>需求房型</option>
           <option value="2房">2 房</option>
           <option value="3房">3 房</option>
@@ -191,7 +191,7 @@ const toast = useToast()
 const formData = reactive({
   name: "",
   phone: "",
-  room: "",
+  room_type: "",
   city: "",
   area: "",
   note: "",
@@ -206,7 +206,7 @@ const bypass = ["note"]
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
-  "房型", //room
+  "房型", //room_type
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //note
