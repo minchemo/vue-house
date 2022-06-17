@@ -11,7 +11,7 @@
 .thanks {
     width: 100vw;
     height: 100vh;
-    background: #fff;
+    background: url('@/assets/thank_bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
