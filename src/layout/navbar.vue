@@ -238,8 +238,10 @@
                     top: -#{size-m(5)};
                 }
             }
+
             &:hover {
                 .bar {
+
                     &::after,
                     &::before {
                         transform: translateX(0%);
@@ -304,7 +306,8 @@
                 transform: translateX(0);
             }
         }
-/*
+
+        /*
         &.r16-9 {
             background-color: transparent;
 
@@ -367,6 +370,7 @@ onMounted(() => {
     window.addEventListener('scroll', (event) => {
         let scroll = window.pageYOffset || document.documentElement.scrollTop;
         scrollPos.value = scroll
+        menuOpen.value = false
     });
 })
 

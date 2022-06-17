@@ -1,6 +1,6 @@
 <template>
   <div class="s1 relative bg-[#FFEA00]">
-    <img class="absolute girl z-20" src="./s1/girl.png" alt="" srcset="" />
+    <img class="absolute girl z-20" data-aos-duration="1000" data-aos="zoom-in" src="./s1/girl.png" alt="" srcset="" />
     <img class="absolute music z-30" src="./s1/music.png" alt="" srcset="" />
     <img class="absolute flower z-20" src="./s1/f.png" alt="" srcset="" />
     <img class="absolute hsclogo z-10" src="./s1/hsclogo.png" alt="" srcset="" />

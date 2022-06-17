@@ -1,7 +1,7 @@
 <template>
   <div class="s4 relative bg-[#FFEC2E]">
     <div class="info absolute bg-white">
-      <div class="flex items-end">
+      <div data-aos="fade" class="flex items-end">
         <lazy-component>
           <img class="girl" src="@/section/s4/i.png" alt="" srcset="" />
         </lazy-component>
@@ -10,13 +10,13 @@
           悠遊 心的自由式
         </p>
       </div>
-      <div class="content">
+      <div data-aos="fade" data-aos-delay="200" class="content">
         想一飽口福，有人文夜市、莊敬夜市日日饗宴，想奔放一下，便能在膨鼠森林公園、中山紀念公園找回赤子心；更有市政中心、成大醫院、星巴克…機能滿席！
       </div>
       <div class="absolute bar"></div>
     </div>
 
-    <Splide ref="splide" :options="{
+    <Splide ref="splide"  data-aos="zoom-in" :options="{
       rewind: true,
       autoWidth: true,
       arrows: false,

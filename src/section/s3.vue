@@ -1,19 +1,19 @@
 <template>
   <div class="s3 relative">
     <div class="info absolute z-10 flex flex-col justify-end">
-      <div class="flex items-end justify-center">
+      <div data-aos="fade" class="flex items-end justify-center">
         <p class="title">
           雲科大文教特區<br />
           媲美東京文京區
         </p>
       </div>
-      <div class="content">
+      <div data-aos="fade" data-aos-delay="200" class="content">
         輕車十分近，擁抱國際賽事常勝軍「雲林科大」、重視藝術教育的「斗六國小」、以及升學前段班「斗六高中」等七座學府，名校齊聚，像極了東京文教之都「文京區」。
       </div>
       <div class="absolute bar"></div>
     </div>
 
-    <Splide ref="splide" :options="{
+    <Splide ref="splide"  data-aos="zoom-in" :options="{
       rewind: true,
       autoWidth: true,
       arrows: false,

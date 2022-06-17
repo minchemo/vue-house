@@ -5,10 +5,10 @@
       <img class="absolute girl z-20" src="@/section/s8/i.png" alt="" srcset="" />
       <img class="absolute girl2 z-20" src="@/section/s8/i2.png" alt="" srcset="" />
       <img class="absolute newstart" src="./s1/newstart.svg" alt="" srcset="" />
-      <img class="absolute info" src="@/section/s8/info.png" alt="" srcset="" />
+      <img class="absolute info" data-aos="fade" src="@/section/s8/info.png" alt="" srcset="" />
     </lazy-component>
 
-    <div class="bubble absolute z-10"></div>
+    <div  data-aos="zoom-in" class="bubble absolute z-10"></div>
   </div>
 </template>
 

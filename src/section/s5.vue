@@ -1,7 +1,7 @@
 <template>
   <div class="s5 relative bg-[#BBE35B]" v-bind:class="{ reverse: currentIdx >= 2 }">
     <div class="info absolute z-10 flex flex-col justify-center items-center">
-      <div class="flex items-end justify-center" v-if="currentIdx < 2">
+      <div data-aos="fade" class="flex items-end justify-center" v-if="currentIdx < 2">
         <lazy-component>
           <img class="girl" src="@/section/s5/i.png" alt="" srcset="" />
         </lazy-component>
@@ -10,26 +10,26 @@
           風景首馥
         </p>
       </div>
-      <div class="flex items-end justify-center" v-else>
+      <div data-aos="fade" class="flex items-end justify-center" v-else>
         <p class="title">
           戶戶邊間 層層有景 有氧御邸
         </p>
       </div>
-      <div class="content text-center" v-if="currentIdx < 2">
+      <div data-aos="fade" data-aos-delay="200" class="content text-center" v-if="currentIdx < 2">
         選對環境，每一席都是舒適首選，<br />
         戶戶邊間，節氣流轉，<br />
         每一刻呼吸都享高純度氧；<br />
         環境採低密度開發、四方無垠，<br />
         層層有景，稻浪浮雲，盡收吾境。
       </div>
-      <div class="content text-center" v-else>
+      <div data-aos="fade" data-aos-delay="200" class="content text-center" v-else>
         盈光明廳，馥郁室界，開朗好風水；<br />
         雙面開窗，節氣流轉，零暗房設計；<br />
         觀景陽台，盡收眼下，回家即度假！
       </div>
     </div>
 
-    <Splide ref="splide" @splide:move="move" :options="{
+    <Splide  data-aos="zoom-in" ref="splide" @splide:move="move" :options="{
       rewind: true,
       autoWidth: true,
       arrows: false,

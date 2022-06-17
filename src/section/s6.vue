@@ -1,19 +1,19 @@
 <template>
   <div class="s6 relative bg-white">
     <div class="info absolute bg-[#FFEC2E] flex flex-col items-center justify-start">
-      <div class="flex items-end">
+      <div data-aos="fade" class="flex items-end">
         <p class="title text-center">
           人本・自然・永續<br />
           人地共好的建築信仰
         </p>
       </div>
-      <div class="content">
+      <div data-aos="fade" data-aos-delay="200" class="content">
         姮興開發，淬鍊30年房產實力，以人的五感為健康標準，視自然為舒適基因、永續為傳世奧義，精準控制日照、通風、溫度、濕度、空氣等五大元素，用建築為下一代守護地球。
       </div>
       <div class="absolute bar"></div>
     </div>
 
-    <Splide ref="splide" :options="{
+    <Splide ref="splide"  data-aos="zoom-in" :options="{
       rewind: true,
       autoWidth: true,
       arrows: false,

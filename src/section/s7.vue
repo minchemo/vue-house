@@ -1,7 +1,7 @@
 <template>
   <div class="s7 relative bg-[#8EF0E2]">
     <div class="info bg-white absolute z-10 flex flex-col justify-center items-center">
-      <div class="flex items-end justify-center">
+      <div data-aos="fade" class="flex items-end justify-center">
         <lazy-component>
           <img class="girl" src="@/section/s7/i.png" alt="" srcset="" />
 
@@ -11,14 +11,14 @@
           有世界觀的家
         </p>
       </div>
-      <div class="name text-center">{{ data[currentIdx].name }}</div>
-      <div class="content text-center">
+      <div data-aos="fade" data-aos-delay="100" class="name text-center">{{ data[currentIdx].name }}</div>
+      <div data-aos="fade" data-aos-delay="200" class="content text-center">
         {{ data[currentIdx].text }}
       </div>
       <div v-if="$isMobile()" class="absolute bar"></div>
     </div>
 
-    <Splide ref="splide" :options="{
+    <Splide ref="splide"  data-aos="zoom-in" :options="{
       rewind: true,
       autoWidth: true,
       arrows: false,

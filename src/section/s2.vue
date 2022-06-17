@@ -1,19 +1,19 @@
 <template>
     <div class="s2 relative bg-[#8EF0E2]">
         <div class="info absolute bg-white">
-            <div class="flex justify-center md:justify-start items-end ">
+            <div data-aos="fade" class="flex justify-center md:justify-start items-end ">
                 <lazy-component>
                     <img class="girl" src="@/section/s2/i.png" alt="" srcset="">
                 </lazy-component>
                 <p class="title">5分鐘社口特區<br>
                     水岸藝術園區</p>
             </div>
-            <div class="content">近鄰「社口重劃區」星巴克、UNIQLO商圈，奔放2.6公頃，「水岸藝術園區」，5分鐘悠遊之距，「興世代」房價僅約5折價，繁華共榮、休閒同享，省下來的預算，給家人更餘裕的享受
+            <div data-aos="fade" data-aos-delay="200" class="content">近鄰「社口重劃區」星巴克、UNIQLO商圈，奔放2.6公頃，「水岸藝術園區」，5分鐘悠遊之距，「興世代」房價僅約5折價，繁華共榮、休閒同享，省下來的預算，給家人更餘裕的享受
             </div>
             <div class="absolute bar"></div>
         </div>
 
-        <Splide ref="splide"
+        <Splide ref="splide" data-aos="zoom-in"
             :options="{ rewind: true, autoWidth: true, arrows: false, type: 'fade', autoplay: true, interval: 4000 }"
             class="slide-box absolute z-10">
             <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
