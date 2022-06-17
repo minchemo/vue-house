@@ -28,10 +28,7 @@ export default defineConfig({
       mozjpeg: {
         quality: 80,
       },
-      pngquant: {
-        quality: [0.8, 0.9],
-        speed: 4,
-      },
+      pngquant: false,
       svgo: {
         plugins: [
           {
