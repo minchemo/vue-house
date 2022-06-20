@@ -62,9 +62,12 @@
     }
 
     .map {
-        width: size-m(375);
-        height: size-m(324);
-        background-image: url('@/section/form/map_m.png');
+        width:100%;
+        height: size-m(350);
+      //  background-image: url('@/section/form/map_m.png');
+      background-size: cover;
+      background-position: 85% 0;
+      
     }
 
     .info-box {

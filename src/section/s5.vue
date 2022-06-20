@@ -346,19 +346,19 @@ const currentIdx = ref(0)
 const imgs = ref([
   {
     img: new URL("../section/s5/1.jpg", import.meta.url).href,
-    caption: "雲林科技大學",
+    caption: "外觀3D示意圖 （建構中）",
   },
   {
     img: new URL("../section/s5/2.jpg", import.meta.url).href,
-    caption: "雲林科技大學",
+    caption: "外觀3D示意圖 （建構中）",
   },
   {
     img: new URL("../section/s5/3.png", import.meta.url).href,
-    caption: "雲林科技大學",
+    caption: "",
   },
   {
     img: new URL("../section/s5/4.png", import.meta.url).href,
-    caption: "雲林科技大學",
+    caption: "",
   },
 ])
 

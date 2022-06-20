@@ -4,7 +4,7 @@
     <img class="absolute music z-30" src="./s1/music.png" alt="" srcset="" />
     <img class="absolute flower z-20" src="./s1/f.png" alt="" srcset="" />
     <img class="absolute hsclogo z-10" src="./s1/hsclogo.png" alt="" srcset="" />
-    <div class="absolute bubble z-10"></div>
+    <div class="absolute bubble z-10"><img class="absolute logoicon" src="./s1/logoicon.png" alt="" srcset="" /></div>
     <img class="absolute newstart z-0" src="./s1/newstart.svg" alt="" srcset="" />
   </div>
 </template>
@@ -68,12 +68,13 @@
     height: size(506.02);
     left: size(667);
     top:calc(50% + (146 - 900 * .5) * 100vw / 1920);
-    background-image: url("@/section/s1/bubble_md.png");
+    background-image: url("@/section/s1/bubble_md.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     transform-origin: 0 70%;
     transform: scale(0.3);
+    filter: drop-shadow(.4vw .6vw .4vw rgba(99, 36, 0, 0.3));
     opacity: 0;
     animation: bubble 6s infinite ease-in-out;
     @keyframes bubble {
@@ -89,6 +90,21 @@
         transform: scale(1.1);
         opacity: 0;
       }
+    }
+    .logoicon{
+    width: size(103);
+    left: size(304);
+    top: size(94);
+    }
+    &::before{
+      content: "";
+      position: absolute;
+    width: size(254);
+    height: size(44);
+    left: size(232);
+    top: size(190);
+    opacity: 0.7;
+    background: radial-gradient(51.05% 56.45% at 48.83% 52.79%, rgba(0, 0, 0, 0.51) 0%, rgba(0, 0, 0, 0.39) 9.38%, rgba(0, 0, 0, 0.21) 26.25%, rgba(0, 0, 0, 0.1) 45%, rgba(0, 0, 0, 0.04) 62.5%, rgba(0, 0, 0, 0) 100%);
     }
   }
 
@@ -184,8 +200,20 @@
       height: size-m(237.5);
       left: size-m(114);
       top: calc(50% + (143 - 604 * .5) * 100vw / 375);
-      background-image: url("@/section/s1/bubble_mo.png");
+      background-image: url("@/section/s1/bubble_mo.svg");
       transform-origin: 25% 95%;
+      filter: drop-shadow(.8vw 1.2vw .8vw rgba(99, 36, 0, 0.3));
+      .logoicon{
+        width: size-m(41);
+        left: size-m(102);
+        top: size-m(20);
+      }
+      &::before{
+      width: size-m(98);
+      height: size-m(17);
+      left: size-m(74);
+      top: size-m(62);
+      }
     }
 
     .newstart {

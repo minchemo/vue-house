@@ -5,7 +5,8 @@
       <img class="absolute girl z-20" src="@/section/s8/i.png" alt="" srcset="" />
       <img class="absolute girl2 z-20" src="@/section/s8/i2.png" alt="" srcset="" />
       <img class="absolute newstart" src="./s1/newstart.svg" alt="" srcset="" />
-      <img class="absolute info" data-aos="fade" src="@/section/s8/info.png" alt="" srcset="" />
+      <img class="absolute info" data-aos="fade" src="@/section/s8/info.png" alt="" srcset=""  @click="scrollTo('.contact-info')" />
+      <img class="absolute info_m" data-aos="fade" src="@/section/s8/info_m.png" alt="" srcset=""  @click="scrollTo('.contact-info')" />
     </lazy-component>
 
     <div  data-aos="zoom-in" class="bubble absolute z-10"></div>
@@ -27,7 +28,7 @@
     height: size(552.67);
     left: size(578);
     top: calc(60% + (154 - 900 * .6) * 100vw / 1920);
-    background-image: url("@/section/s8/bubble.png");
+    background-image: url("@/section/s8/bubble.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -65,9 +66,11 @@
 
   .info {
     width: size(762);
-    height: size(72);
     left: size(748);
     top: calc(80% + (745 - 900 * .8) * 100vw / 1920);
+  }
+  .info_m{
+    display: none;
   }
 
   .newstart {
@@ -89,30 +92,35 @@
       width: size-m(270);
       height: size-m(274);
       left: size-m(87);
-      top: calc(50% + (208 - 604 * .5) * 100vw / 375);
-      background-image: url("@/section/s8/bubble_m.png");
+      top: calc(50% + (188 - 604 * .5) * 100vw / 375);
+      background-image: url("@/section/s8/bubble_m.svg");
     }
 
     .girl {
       width: size-m(139);
       height: size-m(145);
       left: size-m(18);
-      top: calc(70% + (386 - 604 * .7) * 100vw / 375);
+      top: calc(70% + (366 - 604 * .7) * 100vw / 375);
     }
 
     .girl2 {
       width: size-m(79);
       height: size-m(78);
       left: size-m(280);
-      top: calc(40% + (178 - 604 * .4) * 100vw / 375);
+      top: calc(40% + (158 - 604 * .4) * 100vw / 375);
     }
 
     .info {
       display: none;
     }
+  .info_m{
+    display: block;
+    width: size-m(169);
+    left: size-m(168);
+    bottom: calc(10% + (80 - 604 * .1) * 100vw / 375);
+  }
 
     .newstart {
-      top: size-m(40);
       top: calc(10% + (60 - 604 * .1) * 100vw / 375);
     }
   }
