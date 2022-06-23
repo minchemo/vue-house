@@ -145,6 +145,7 @@
     justify-content: space-between;
     width: size(500);
     height: size(200);
+    line-height: 1.5;
     .t1 {
       color: #bc976c;
       font-size: size(40);
@@ -158,7 +159,6 @@
       font-family: "Noto Sans TC";
       width: size(513);
       text-align: justify;
-      line-height: size(30);
       letter-spacing: 0.2em;
     }
   }
@@ -246,28 +246,22 @@
     }
 
     .title {
-      position: absolute;
-      left: size-m(32);
+      left: size-m(28);
       top: size-m(70);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
       width: size-m(325);
-      height: size-m(200);
+      height: auto;
+      text-align: center;
       .t1 {
-        color: #bc976c;
         font-size: size-m(25);
-        text-align: left;
-        line-height: 1.5;
+        width: 100%;
+        margin-bottom: 0.5em;
       }
 
       .t2 {
         font-size: size-m(15);
-        font-weight: 400;
         width: 100%;
-        line-height: size-m(24);
-        letter-spacing: 1px;
+      text-align: justify;
+      line-height:2; letter-spacing:0em;
       }
     }
     .moon {

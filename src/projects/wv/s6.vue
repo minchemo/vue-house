@@ -139,6 +139,9 @@
     justify-content: space-between;
     width: size(600);
     height: size(250);
+    z-index: 10;
+    text-align: justify;
+    line-height: 1.5;
     .t1 {
       color: #bc976c;
       font-size: size(40);
@@ -151,8 +154,6 @@
       font-weight: 400;
       font-family: "Noto Sans TC";
       width: size(596);
-      text-align: justify;
-      line-height: size(30);
       letter-spacing: 0.2em;
     }
   }
@@ -180,7 +181,7 @@
 @media only screen and (max-width: 767px) {
   .s6 {
     width: size-m(375);
-    height: size-m(751);
+    height: size-m(760);
     .slideBox {
       margin-right: auto;
       margin-left: auto;
@@ -244,28 +245,21 @@
       }
     }
     .title {
-      position: absolute;
-      left: size-m(32);
-      top: size-m(70);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
+      left: size-m(28);
+      top: size-m(55);
       width: size-m(325);
-      height: size-m(230);
+      height:auto;
+      line-height: 1.5;
+      text-align: center;
       .t1 {
-        color: #bc976c;
         font-size: size-m(25);
-        text-align: left;
-        line-height: 1.5;
+        width: 100%;
+        margin-bottom: 0.5em;
       }
-
       .t2 {
         font-size: size-m(15);
-        font-weight: 400;
         width: 100%;
-        line-height: size-m(24);
-        letter-spacing: 1px;
+      line-height: 2; letter-spacing:0em;text-align: justify;
       }
     }
     .star {

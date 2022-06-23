@@ -253,9 +253,8 @@
 
       .t3 {
         font-size: size-m(15);
-        line-height: 1.5;
-        letter-spacing: 0.06em;
-        max-width: 90%;
+        line-height:2;
+        max-width: 90%; letter-spacing:0em;
       }
     }
     .title-blur {

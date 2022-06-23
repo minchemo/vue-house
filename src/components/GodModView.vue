@@ -46,6 +46,7 @@
     }
     .view-img {
       height: 100%;
+    width: 100%;
       max-width: unset;
     }
     .view-img2{position: absolute;
@@ -75,6 +76,8 @@
       }
       .view-img {
         height: 100%;
+        width: auto;
+      max-width: unset;
       }
       //.view-img{height: 100%;}
     }

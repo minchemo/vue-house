@@ -3,11 +3,13 @@
     <template v-for="(item, i) in info">
       <div :key="i" v-if="activeIndex == i" data-aos="fade" :class="`title title${i}`">
         <div class="divider"></div>
-        <div class="t1">{{ item.t1 }}</div>
+     <div>
+      <div class="t1">{{ item.t1 }}</div>
         <div class="t2" v-html="item.t2"></div>
         <div class="t3">{{ item.t3 }}</div>
         <div class="work-title">代表作品</div>
         <div class="t4" v-html="item.t4"></div>
+        </div>
         <div class="divider"></div>
       </div>
     </template>
@@ -59,7 +61,7 @@
 
   .title {
     width: size(870);
-    height: size(452);
+    height: size(500);
     top: size(332);
     position: absolute;
     left: 0;
@@ -67,6 +69,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
+    z-index: 10;
+    line-height: 1.5;
     &.title0{
     left: 0;}
     &.title1{
@@ -78,12 +83,14 @@
       font-size: size(40);
       font-weight: 800;
       color: #ffaa2a;
+      margin-bottom: 0.2em;
     }
 
     .t2 {
       font-size: size(30);
       font-weight: 700;
       color: #fff;
+      margin-bottom: 0.5em;
     }
 
     .t3 {
@@ -94,12 +101,14 @@
       letter-spacing: 0.2em;
       font-family: "Noto Sans TC";
       max-width: size(590);
+      margin-bottom:1.5em;
     }
 
     .work-title {
       font-size: size(30);
       font-weight: 700;
       color: #ffaa2a;
+      margin-bottom: 0.2em;
     }
 
     .t4 {
@@ -107,10 +116,10 @@
       font-size: size(20);
       font-weight: 400;
       color: #ffaa2a;
-      max-width: size(520);
       word-break: keep-all;
       line-height: 1.5;
       letter-spacing: 0.2em;
+        width: 100%;
     }
 
     .divider {
@@ -176,12 +185,6 @@
       width: size-m(375);
       height: size-m(423);
       top: size-m(35);
-      position: absolute;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
       padding: 0 size-m(35);
     &.title0,
     &.title1,
@@ -195,13 +198,13 @@
 
       .t2 {
         font-size: size-m(19);
-        line-height: 1.5;
       }
 
       .t3 {
         font-size: size-m(15);
-        letter-spacing: 0.06em;
+        letter-spacing: 0;
         max-width: 100%;
+        line-height: 2;
       }
 
       .work-title {
@@ -209,12 +212,11 @@
       }
 
       .t4 {
-        font-family: "Noto Serif TC";
         font-size: size-m(15);
         max-width: 100%;
         word-break: all;
-        width: 100%;
-        letter-spacing: 1px;
+        letter-spacing: 0;
+        line-height: 2;
       }
 
       .divider {

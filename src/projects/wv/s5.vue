@@ -149,7 +149,8 @@
     align-items: flex-end;
     justify-content: space-between;
     width: size(690);
-    height: size(170);
+    height: size(150);
+    z-index: 10;
     .t1 {
       color: #ffaa2b;
       font-size: size(40);
@@ -161,8 +162,8 @@
       font-size: size(20);
       font-weight: 400;
       font-family: "Noto Sans TC";
-      width: size(468);
-      text-align: left;
+     // width: size(468);
+      text-align: justify;
       line-height: size(30);
       letter-spacing: 0.2em;
     }
@@ -257,23 +258,27 @@
     .title {
       position: absolute;
       right: unset;
-      left: size-m(37.5);
-      bottom: size-m(267);
-      align-items: flex-start;
-      width: size-m(310);
-      height: size-m(168);
+      left: size-m(23);
+      bottom: size-m(250);
+      align-items:center;
+      width: size-m(330);
+      height:auto;
       .t1 {
         line-height: 1.5;
         font-size: size-m(25);
-        text-align: left;
-        color: #ffaa2b;
+        text-align: center;
+        width: 100%;
       }
 
       .t2 {
         font-size: size-m(15);
         width: 100%;
         line-height: size-m(24);
-        letter-spacing: 1px;
+     //   text-align: justify;
+        text-align: center;
+        letter-spacing: 0;
+        margin: 1em;
+        line-height: 2;
       // font-family: "Noto serif TC";
       }
     }

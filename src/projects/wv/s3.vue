@@ -23,7 +23,7 @@
         />
  --> 
         <b>新蘆水岸金磚區成形</b>
-        重劃x水岸x捷運x公園x商圈 新蘆特區城市共榮</h3>
+        重劃×水岸×捷運×公園×商圈 新蘆特區城市共榮</h3>
       </div>
       <div class="right">
         <p data-aos="zoom-in">
@@ -34,7 +34,7 @@
     <div class="t" v-else>
       <h3 class="t1">
         <b>新蘆水岸金磚區成形</b>
-        重劃x水岸x捷運x公園x商圈 新蘆特區城市共榮</h3>
+        重劃×水岸×捷運×公園×商圈 新蘆特區城市共榮</h3>
       <p class="t2">
         機場線、環狀線已一一兌現，接續而來的五泰輕軌將串聯起大台北運輸網絡，交通樞紐已然成形，引領新一波軌道經濟。銀河灣計畫啟動，隨蘆北登鼎大台北水岸商業娛樂核心王座，蛋黃蛋白區重新洗牌，一水相鄰的新蘆特區，即將成為蛋黃中的金蛋黃。
       </p>
@@ -72,12 +72,14 @@
     position: absolute;
     top: size(45);
     left: size(145);
-    background: rgba(255, 255, 255, 0.4);
-    border: 1px solid #000;
+   // background: rgba(255, 255, 255, 0.4);
+   // border: 1px solid #000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: size(40) size(100);
+    color: #FFF;
+    text-shadow: 0 0 1vw #006dc7;
 
     .left {
         width: size(654);
@@ -90,10 +92,10 @@
     //  color: #927755;
       margin: -.2em auto auto;
       position: relative;
-      background-color: #694c25;
-    background-clip: text;
-    color: transparent;
-    text-shadow: rgba(255,255,255,0.35) .05em .06em .05em;
+   //   background-color: #694c25;
+  //  background-clip: text;
+  //  color: transparent;
+  //  text-shadow: rgba(255,255,255,0.35) .05em .06em .05em;
       b{display: block;
          font-weight: 800;
       font-size:1.33em;}}
@@ -111,11 +113,11 @@
 
     &::before {
       content: "";
-      height: size(100);
+      height: size(120);
       width: 1px;
-      background: #000;
+      background: currentColor;
       position: absolute;
-      left: 50%;
+      left: 48.5%;
     }
   }
 }
@@ -132,25 +134,26 @@
 
     .t{
       left: size-m(22.5);
-      top: size-m(35);
+      top: size-m(25);
       z-index: 10;
       width: size-m(330);
-      height: size-m(360);
-      background-color: rgba(255, 255, 255, 0.3);
-      padding: size-m(50) size-m(35);
+      height:auto;
+      padding: size-m(50) size-m(20);
     display: block;
+    text-shadow: 0 0 4vw #006dc7;
 
       .t1 {
       font-size: size-m(20);
-      line-height: 1.3;
+      line-height: 1.6;
+      text-align: center;
 
       }
       .t2 {
         margin-top: size-m(10);
         font-size: size-m(15);
-        line-height: 1.6;
+        line-height:2;
         font-weight: 400;
-        text-align: left;
+      text-align: justify;
         font-family: "Noto Sans TC";
       }
     &::before {

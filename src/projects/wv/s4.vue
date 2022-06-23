@@ -154,7 +154,7 @@
 @media only screen and (max-width: 767px) {
   .s4 {
     width:100%;
-    height: size-m(526);
+    height: auto;
     .title {
       padding-top: size-m(60);
       .a {
@@ -164,10 +164,13 @@
       .b {
         width: size-m(320);
         font-size: size-m(15);
+      line-height:2;
+      letter-spacing: 0em;
+      text-align: justify;
       }
     }
     .slideBox {
-      margin-top: size-m(55);
+      margin-top: size-m(30);
       .splide__list {
         align-items: center;
       }
@@ -194,7 +197,7 @@
     .arrows {
       position: absolute;
       width: size-m(375);
-      bottom: size-m(130);
+      bottom: size-m(100);
       left: 0;
       z-index: 10;
       img {
