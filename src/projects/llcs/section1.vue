@@ -50,9 +50,9 @@
 
       .t2 {
       position: absolute;
-      left: 30%;
+      left: 28%;
       bottom: calc(22.5% - 8vw);
-        width: 55%;
+        width: 60%;
       }
     .draw {
       position: absolute;
