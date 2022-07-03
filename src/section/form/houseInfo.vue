@@ -1,14 +1,14 @@
 <template>
     <div class="flex flex-col md:flex-row items-center justify-between">
-        <div class="map"></div>
-        <div class="flex-1 items-center justify-center">
+        <!-- <div class="map"></div> -->
+        <div class="flex-1 items-center justify-center py-20">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-4 md:mr-2 border-l-4 md:border-l-2 border-black pl-2">{{ item[0] }}</p>
-                        <p>{{ item[1] }}</p>
+                        <p class="mr-2 md:mr-8 border-l-4 md:border-l-2 border-black pl-2 ">{{ item[0] }}</p>
+                        <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
                     </div>
                 </div>
             </div>
@@ -24,29 +24,29 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.map {
-    width: size(772);
-    height: size(642);
-    background-color: #75E3D5;
-    background-image: url('@/section/form/map.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+// .map {
+//     width: size(772);
+//     height: size(642);
+//     background-color: #75E3D5;
+//     background-image: url('@/section/form/map.png');
+//     background-size: contain;
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
 
 .info-box {
-    width: size(676);
+    width: size(680);
 
     .title {
         width: 100%;
-        font-size: size(43);
+        font-size: size(36);
         font-weight: 700;
-        border-top: size(1) solid;
-        border-bottom: size(1) solid;
+        margin-bottom: size(36);
     }
 
     .info-items {
         row-gap: size(20);
+        column-gap: size(20);
 
         .item {
             line-height: size(17);

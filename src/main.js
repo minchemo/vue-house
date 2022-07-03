@@ -13,6 +13,8 @@ import "vue-toastification/dist/index.css"
 
 import VueLazyload from "vue-lazyload"
 
+import "aos/dist/aos.css"
+
 import VueSmoothScroll from "vue3-smooth-scroll"
 
 const toastOptions = {

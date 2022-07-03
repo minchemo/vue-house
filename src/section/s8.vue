@@ -1,14 +1,30 @@
 <template>
-  <div class="s8 relative bg-[#FFEA00]">
-
-    <lazy-component>
-      <img class="absolute girl z-20" src="@/section/s8/i.png" alt="" srcset="" />
-      <img class="absolute girl2 z-20" src="@/section/s8/i2.png" alt="" srcset="" />
-      <img class="absolute newstart" src="@/section/s8/newstart.png" alt="" srcset="" />
-      <img class="absolute info" src="@/section/s8/info.png" alt="" srcset="" />
-    </lazy-component>
-
-    <div class="bubble absolute z-10"></div>
+  <div class="s8 relative bg-black">
+    <Splide ref="splide" :options="{
+      rewind: true,
+      autoWidth: true,
+      arrows: false,
+      type: 'fade',
+      autoplay: true,
+      interval: 4000,
+    }" @splide:move="move" class="slide-box absolute z-10">
+      <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
+        <div class="caption z-10">{{ img.caption }}</div>
+      </SplideSlide>
+    </Splide>
+    <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
+      <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
+        <img src="@/assets/prev.svg" alt="" srcset="">
+      </button>
+      <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
+        <img src="@/assets/next.svg" alt="" srcset="">
+      </button>
+    </div>
+    <div class="info z-20">
+      <div class="t1 font-['Noto_serif_tc']">樂活水岸</div>
+      <div class="t2 font-['Noto_serif_tc']">一家人專屬的幸福流域</div>
+      <div class="t3">晨間，呼吸著新鮮空氣，沿溪畔步道自在慢跑；日暮時分，悠閒漫步堤岸，夕照中遠眺大屯山群峰，享受都市中少有、與自然零距離的舒心日常。</div>
+    </div>
   </div>
 </template>
 
@@ -17,60 +33,122 @@
 
 .s8 {
   width: 100%;
-  height: size(900);
+  height: size(1080);
+  background-color: #EC9700;
 
-  .bubble {
-    width: size(1073.08);
-    height: size(552.67);
-    left: size(578);
-    top: size(154);
-    background-image: url("@/section/s8/bubble.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  .slide-box {
+    position: absolute;
+    top: size(260);
+    width: size(1920);
+    height: size(700);
 
-  .girl {
-    width: size(347);
-    height: size(358);
-    left: size(210);
-    top: size(354);
-    animation: wave 0.8s alternate-reverse infinite ease-in-out;
-    transform-origin: bottom;
+    .splide__track {
+      z-index: 10;
+    }
 
-    @keyframes wave {
-      0% {
-        transform: rotate(0deg);
+    .slide {
+      width: size(1920);
+      height: size(700);
+      background-size: cover;
+      position: relative;
+
+      .caption {
+        position: absolute;
+        font-size: size(12);
+        font-weight: 350;
+        color: #fff;
+        bottom: size(10);
+        right: size(20);
       }
+    }
 
-      50% {
-        transform: rotate(0deg);
-      }
+    .splide__pagination {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: size(20);
+      z-index: 20;
+      gap: size(7.5);
 
-      100% {
-        transform: rotate(10deg);
+      li {
+        height: size(20);
+        margin-bottom: size(10);
+
+        .splide__pagination__page {
+          width: size(15);
+          height: size(15);
+          border-radius: 100%;
+          background: rgba($color: #fff, $alpha: 0.5);
+
+          &.is-active {
+            background: rgba($color: #fff, $alpha: 1);
+          }
+        }
       }
     }
   }
 
-  .girl2 {
-    width: size(203.58);
-    height: size(201);
-    left: size(1510);
-    top: size(120);
+  .splide__arrows {
+    left: 50%;
+    top: size(610);
+    transform: translateX(-50%);
+    width: size(1900);
   }
 
   .info {
-    width: size(762);
-    height: size(72);
-    left: size(748);
-    top: size(745);
-  }
+    position: absolute;
+    width: size(800);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    top: size(50);
+    pointer-events: none;
 
-  .newstart {
-    width: 100%;
-    left: 0;
-    top: 0;
+    .t1 {
+      font-weight: 800;
+      font-size: size(40);
+      line-height: 70%;
+      color: #fff;
+      margin-bottom: size(25);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .t2 {
+      font-weight: 700;
+      font-size: size(30);
+      line-height: 70%;
+      color: #fff;
+      margin-bottom: size(50);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .t3 {
+      font-weight: 400;
+      font-size: size(20);
+      line-height: 150%;
+      letter-spacing: 0.2em;
+      color: #000;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: size(150);
+      height: 1px;
+      background-color: #000;
+      left: 0;
+      top: size(20);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: size(150);
+      height: 1px;
+      background-color: #000;
+      right: 0;
+      top: size(20);
+    }
   }
 }
 
@@ -78,70 +156,33 @@
 @media screen and (max-width:768px) {
   .s8 {
     width: size-m(375);
-    height: size-m(604);
-    margin-top: size-m(20);
-
-    .bubble {
-      width: size-m(270);
-      height: size-m(274);
-      left: size-m(87);
-      top: size-m(158);
-      background-image: url("@/section/s8/bubble_m.png");
-    }
-
-    .girl {
-      width: size-m(139);
-      height: size-m(145);
-      left: size-m(18);
-      top: size-m(336);
-    }
-
-    .girl2 {
-      width: size-m(79);
-      height: size-m(78);
-      left: size-m(280);
-      top: size-m(128);
-    }
-
-    .info {
-      display: none;
-    }
-
-    .newstart {
-      top: size-m(40);
-    }
+    height: size-m(600);
   }
 }
 </style>
 
 <script setup>
 import { ref } from "vue"
+const splide = ref();
 
 const currentIdx = ref(0)
-
-const imgs = ref([
-  {
-    img: new URL("../section/s8/1.jpg", import.meta.url).href,
-    caption: "張國章 建築師",
-  },
-  {
-    img: new URL("../section/s8/2.jpg", import.meta.url).href,
-    caption: "陳福松 結構技師",
-  },
-])
-
-const data = ref([
-  {
-    name: "張國章 建築師",
-    text: "「人需與環境共生，建築需與環境共舞」",
-  },
-  {
-    name: "超偉工程顧問",
-    text: "北流音樂中心 南軟園區 國家級工程結構顧問",
-  },
-])
 
 const move = (newIdx, prevIdx, destIdx) => {
   currentIdx.value = prevIdx
 }
+
+const imgs = ref([
+  {
+    img: new URL("../section/s8/1.jpg", import.meta.url).href,
+    caption: '雙溪河濱公園'
+  },
+  {
+    img: new URL("../section/s8/2.jpg", import.meta.url).href,
+    caption: '21號河濱公園'
+  },
+  {
+    img: new URL("../section/s8/3.jpg", import.meta.url).href,
+    caption: '情境示意圖'
+  },
+])
 </script>

@@ -1,7 +1,12 @@
 <template>
-  <div class="order relative bg-[#FFEA00] text-center">
+  <div class="order relative bg-[#EC9700] text-center">
     <!-- Title -->
-    <div class="order-title text-center">{{ info.order.title }}</div>
+    <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
+    <!-- Title Image -->
+    <img class="order-title-img" src="@/section/form/titleImg.svg" alt="" srcset="">
+    <!-- Decor -->
+    <img class="order-title-decor" src="@/section/form/decor.svg" alt="" srcset="">
+
 
     <!-- Form -->
     <div class="form mx-auto relative flex items-start justify-center">
@@ -50,7 +55,7 @@
       @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
     <!-- Send -->
-    <div class="send mt-8 mx-auto rounded-full hover:scale-90 btn cursor-pointer" @click="send()">
+    <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
       立即預約
     </div>
 
@@ -70,14 +75,27 @@
 
 .order {
   width: 100%;
-  border-radius: size(220) size(220) 0 0;
-  padding-top: size(100);
-  margin-top: size(20);
+  padding-top: size(150);
 
   .order-title {
     font-size: size(43);
     font-weight: 500;
     margin-bottom: size(50);
+  }
+
+  .order-title-img {
+    display: block;
+    width: size(926);
+    margin: 0 auto;
+    margin-bottom: size(150);
+  }
+
+  .order-title-decor {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: size(150);
   }
 
   .form {
@@ -108,10 +126,12 @@
     letter-spacing: size(20);
     text-indent: size(20);
     color: #fff;
-    background-color: #3e3a39;
+    background-color: #C14D33;
     width: size(250);
     height: size(72);
     line-height: size(72);
+    border: 0;
+    border-radius: 0;
   }
 }
 

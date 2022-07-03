@@ -1,8 +1,6 @@
 <template>
-  <div class="contact-info mx-auto bg-white flex flex-col items-center justify-between">
-    <img v-if="!$isMobile()" class="girls" src="@/section/form/girls.png" alt="">
-    <img v-else class="girls" src="@/section/form/girls_m.png" alt="">
-    <div class="logo"></div>
+  <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
+    <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="" srcset="" />
@@ -90,13 +88,6 @@
   margin-top: size(60);
   position: relative;
 
-  .girls {
-    position: absolute;
-    bottom: 110%;
-    pointer-events: none;
-    width: size(1104);
-  }
-
   .logo {
     width: size(434);
     height: size(118);
@@ -113,10 +104,11 @@
     gap: size(20);
 
     .contact-item {
+      background-color: theme('colors.color1');
+      color: #fff;
       width: 100%;
       padding: size(15) size(55);
-      background-color: theme('colors.color1');
-      border-radius: 9999px;
+      // border-radius: 9999px;
       font-size: size(16);
       letter-spacing: size(1);
       max-width: size(280);
@@ -132,13 +124,15 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
+        filter: brightness(0) invert(1); // to white
       }
 
       &.address {
+        background-color: #fff;
+        color: #000;
         z-index: 0;
-        background-color: #eeeeee;
         position: relative;
-        border-radius: 999px 0 0 999px;
+        // border-radius: 999px 0 0 999px;
         max-width: 9999px;
         justify-content: center;
 
@@ -147,7 +141,7 @@
           position: absolute;
           width: 50px;
           height: 100%;
-          background-color: #eeeeee;
+          background-color: #fff;
           left: 100%;
         }
       }
@@ -195,13 +189,6 @@
     margin-top: size-m(120);
     position: relative;
     justify-content: flex-start;
-
-    .girls {
-      position: absolute;
-      bottom: 102%;
-      pointer-events: none;
-      width: size-m(360);
-    }
 
     .logo {
       width: size-m(276);

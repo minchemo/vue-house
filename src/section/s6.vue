@@ -1,46 +1,46 @@
 <template>
   <div class="s6 relative bg-white">
-    <div class="info absolute bg-[#FFEC2E] flex flex-col items-center justify-start">
-      <div class="flex items-end">
-        <p class="title text-center">
-          人本・自然・永續<br />
-          人地共好的建築信仰
-        </p>
+    <div class="content">
+      <div class="t1 font-['Noto_Serif_TC']">遇見 跨世代的生活風貌</div>
+      <div class="t2 font-['Noto_Serif_TC']">智慧健康x生技醫療x數位科技</div>
+      <div class="t3">北投士林科技園區，串聯南軟、內科，是台北科技走廊上的矚目新星。融匯產業創新動能與人文環境底蘊，生產、生活、生態各面向兼具，實踐宜居永續的城市發展願景。
       </div>
-      <div class="content">
-        姮興開發，淬鍊30年房產實力，以人的五感為健康標準，視自然為舒適基因、永續為傳世奧義，精準控制日照、通風、溫度、濕度、空氣等五大元素，用建築為下一代守護地球。
+    </div>
+    <div class="w-full h-full absolute radar">
+      <div data-aos="zoom-in" data-aos-delay="0" class="item">
+        <div class="t1">士林北投</div>
+        <div class="t2">科技園區計畫</div>
+        <div class="t3">Beitou Shilin Technology</div>
+        <div class="t4">
+          研發設計/智慧生態<br>
+          數位應用/創新產業<br>
+          健康生活/共享經濟</div>
       </div>
-      <div class="absolute bar"></div>
+      <div data-aos="zoom-in" data-aos-delay="300" class="item">
+        <div class="t1">圓山</div>
+        <div class="t2">新創聚落</div>
+        <div class="t3">Expo Taipei</div>
+        <div class="t4">
+          新創產業/會展<br>
+          流行時尚/自造者</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="700" class="item">
+        <div class="t1">內科</div>
+        <div class="t2">2.0計畫</div>
+        <div class="t3">Neihu Technology Park Version 2.0</div>
+        <div class="t4">
+          資通訊/生計<br>
+          新創跨域產業</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="1000" class="item">
+        <div class="t1">南港生技聚落</div>
+        <div class="t2">東區門戶計畫</div>
+        <div class="t3">Taipei East Gateway Explanatary Plan</div>
+        <div class="t4">
+          生計/流行/音樂<br>
+          新創/軟體/會展產業</div>
+      </div>
     </div>
-
-    <Splide ref="splide" :options="{
-      rewind: true,
-      autoWidth: true,
-      arrows: false,
-      type: 'fade',
-      autoplay: true,
-      interval: 4000,
-    }" class="slide-box absolute z-10">
-      <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
-        <div class="caption absolute">{{ img.caption }}</div>
-      </SplideSlide>
-    </Splide>
-    <div v-if="$isMobile()" class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
-      <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-        <img src="@/assets/prev.svg" alt="" srcset="">
-      </button>
-      <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-        <img src="@/assets/next.svg" alt="" srcset="">
-      </button>
-    </div>
-
-
-    <lazy-component>
-
-
-      <img class="absolute newstart" src="@/section/s6/newstart.png" alt="" srcset="" />
-    </lazy-component>
-
   </div>
 </template>
 
@@ -49,111 +49,114 @@
 
 .s6 {
   width: 100%;
-  height: size(854);
-  border-radius: size(180);
+  height: size(1080);
+  background-image: url('@/section/s6/map.svg');
+  background-size: cover;
 
-  .info {
-    width: size(910);
-    height: size(674);
-    border-radius: size(190);
-    left: size(136);
-    top: size(99);
-    padding: size(210) size(153) 0 size(100);
+  .content {
+    position: absolute;
+    right: size(192);
+    top: size(143);
+    width: size(424);
 
-    .title {
-      font-weight: 500;
-      font-size: size(55);
-      line-height: size(65.45);
+    .t1 {
+      font-weight: 800;
+      font-size: size(40);
+      line-height: 70%;
+      color: #D47300;
+      margin-bottom: size(20);
     }
 
-    .content {
-      margin-top: size(24);
+    .t2 {
+      font-weight: 700;
+      font-size: size(30);
+      line-height: 100%;
+      color: #000;
+      margin-bottom: size(60);
+    }
+
+    .t3 {
       font-weight: 400;
-      font-size: size(26);
-      line-height: size(46.8);
-    }
-
-    .bar {
-      bottom: 0;
-      left: 50%;
-      margin-left: -#{size(60)};
-      width: size(120);
-      height: size(10);
-      border-radius: size(10) size(10) 0 0;
-      background-color: #7c716d;
+      font-size: size(20);
+      line-height: 100%;
+      line-height: 150%;
+      text-align: justify;
+      letter-spacing: 0.2em;
+      color: #000;
     }
   }
 
-  .slide-box {
-    width: size(790);
-    height: size(548.69);
-    top: size(57);
-    left: size(999);
-
-    .splide__track {
-      z-index: 10;
-    }
-
-    .slide {
-      width: size(790);
-      height: size(548.69);
-      background-size: cover;
-      border-radius: size(150);
-
-      .caption {
-        background: rgba($color: #000000, $alpha: 0.5);
-        font-size: size(15);
-        line-height: size(24);
-        color: #fff;
-        border-radius: size(6) size(6) 0 0;
-        padding: 0 size(8) 0 size(8);
-        bottom: 0;
-        left: size(150);
-      }
-    }
-
-    &::after {
-      content: "";
-      width: size(863);
-      height: size(503);
-      background-image: url("@/section/s6/bubble.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+  .radar {
+    .item {
       position: absolute;
-      bottom: -#{size(30)};
-      left: -#{size(100)};
-      z-index: 0;
-    }
-
-    .splide__pagination {
-      position: absolute;
-      right: -#{size(35)};
-      bottom: size(120);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(235, 151, 0, 0) 36.98%, rgba(235, 151, 0, 0.2) 100%);
+      backdrop-filter: blur(10px);
+      border-radius: 100%;
 
-      li {
-        height: size(20);
-        margin-bottom: size(10);
-
-        .splide__pagination__page {
-          width: size(20);
-          height: size(20);
-          border: size(4) solid #ffec2e;
-          border-radius: 100%;
-
-          &.is-active {
-            border-color: #ff9900;
-          }
-        }
+      .t1 {
+        font-family: 'Noto Serif TC';
+        font-weight: 700;
+        font-size: size(30);
+        line-height: 100%;
+        margin-bottom: size(5);
       }
-    }
-  }
 
-  .newstart {
-    width: size(709);
-    left: size(1064);
-    top: size(668);
+      .t2 {
+        font-family: 'Noto Serif TC';
+        font-weight: 700;
+        font-size: size(20);
+        line-height: 150%;
+        letter-spacing: 0.2em;
+      }
+
+      .t3 {
+        font-family: 'Noto Serif TC';
+        font-weight: 700;
+        font-size: size(15);
+        margin: size(20) 0;
+      }
+
+      .t4 {
+        font-weight: 400;
+        font-size: size(20);
+        line-height: 200%;
+        letter-spacing: 0.2em;
+        text-align: center;
+      }
+
+      &:nth-child(1) {
+        left: size(177);
+        top: size(60);
+        width: size(458);
+        height: size(458);
+      }
+
+      &:nth-child(2) {
+        left: size(300);
+        top: size(569);
+        width: size(400);
+        height: size(400);
+      }
+
+      &:nth-child(3) {
+        left: size(1076);
+        top: size(515);
+        width: size(400);
+        height: size(400);
+      }
+
+      &:nth-child(4) {
+        left: size(1480);
+        top: size(646);
+        width: size(400);
+        height: size(400);
+      }
+
+    }
   }
 }
 
@@ -162,84 +165,6 @@
   .s6 {
     width: size-m(375);
     height: size-m(580);
-    border-radius: size-m(68);
-
-    .info {
-      width: size-m(326);
-      height: size-m(535);
-      border-radius: size-m(64);
-      left: size-m(24);
-      top: size-m(20);
-      padding: size-m(290) size-m(18) size-m(55) size-m(18);
-      color: #555555;
-
-      .girl {
-        height: size-m(74);
-        margin-right: size-m(10);
-      }
-
-      .title {
-        font-size: size-m(23);
-        line-height: size-m(27.37);
-      }
-
-      .content {
-        margin-top: size-m(20);
-        font-weight: 400;
-        font-size: size-m(15);
-        line-height: size-m(24);
-      }
-
-      .bar {
-        bottom: unset;
-        top: 100%;
-        left: 50%;
-        margin-left: -#{size-m(30)};
-        width: size-m(66);
-        height: size-m(5);
-        border-radius: 0px 0px 5px 5px;
-        background-color: #7C716D;
-      }
-    }
-
-    .slide-box {
-      width: size-m(300);
-      height: size-m(208);
-      top: size-m(51);
-      left: size-m(43);
-
-      .slide {
-        width: size-m(300);
-        height: size-m(208);
-        border-radius: size-m(50);
-
-        .caption {
-          font-size: size-m(12);
-          line-height: size-m(20);
-          color: #fff;
-          border-radius: size-m(6) size-m(6) 0 0;
-          padding: 0 size-m(8) 0 size-m(8);
-          bottom: 0;
-          left: size-m(50);
-        }
-      }
-
-      &::after {
-        width: size-m(284);
-        height: size-m(230);
-        background-image: url('@/section/s2/bubble_m.png');
-        bottom: -#{size-m(40)};
-        left: -#{size-m(10)};
-      }
-
-      .splide__pagination {
-        display: none;
-      }
-    }
-
-    .newstart {
-      display: none;
-    }
   }
 }
 </style>
