@@ -205,6 +205,7 @@
         letter-spacing: 0;
         max-width: 100%;
         line-height: 2;
+        text-align: left;
       }
 
       .work-title {
@@ -217,6 +218,7 @@
         word-break: all;
         letter-spacing: 0;
         line-height: 2;
+        text-align: left;
       }
 
       .divider {

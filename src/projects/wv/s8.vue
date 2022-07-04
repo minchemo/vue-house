@@ -249,12 +249,14 @@
       .t2 {
         font-size: size-m(19);
         margin: size-m(20) 0;
+        
       }
 
       .t3 {
         font-size: size-m(15);
         line-height:2;
         max-width: 90%; letter-spacing:0em;
+        text-align: left;
       }
     }
     .title-blur {

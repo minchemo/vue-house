@@ -275,7 +275,7 @@
         width: 100%;
         line-height: size-m(24);
      //   text-align: justify;
-        text-align: center;
+        text-align: left;
         letter-spacing: 0;
         margin: 1em;
         line-height: 2;

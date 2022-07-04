@@ -85,7 +85,7 @@
         width: size(654);
     }
     .t1{
-      font-size: size(30);
+      font-size: size(29);
       line-height: 1.9;
       text-align: justify;
          font-weight: 800;
