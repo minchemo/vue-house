@@ -1,12 +1,15 @@
-<template>
+  <template>
   <div class="order relative bg-[#EC9700] text-center">
     <!-- Title -->
     <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
     <!-- Title Image -->
-    <img class="order-title-img" src="@/section/form/titleImg.svg" alt="" srcset="">
+    <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="心仝聚" srcset=""
+      data-aos="fade" data-aos-duration="1000">
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="心仝聚" srcset="" data-aos="fade"
+      data-aos-duration="1000">
     <!-- Decor -->
-    <img class="order-title-decor" src="@/section/form/decor.svg" alt="" srcset="">
-
+    <img v-if="$isMobile()" class="order-title-decor" src="@/section/form/decor_m.svg" alt="心仝聚" srcset="">
+    <img v-else class="order-title-decor" src="@/section/form/decor.svg" alt="心仝聚" srcset="">
 
     <!-- Form -->
     <div class="form mx-auto relative flex items-start justify-center">
@@ -15,7 +18,7 @@
           @input="(event) => (formData.name = event.target.value)" />
         <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
           @input="(event) => (formData.phone = event.target.value)" />
-        <select class="select w-full rounded-full" v-model="formData.room">
+        <select class="select w-full rounded-full" v-model="formData.room_type">
           <option value="" selected disabled>需求房型</option>
           <option value="2房">2 房</option>
           <option value="3房">3 房</option>
@@ -138,15 +141,29 @@
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
-    border-radius: size-m(68) size-m(68) 0 0;
-    padding-top: size-m(30);
-    margin-top: size-m(40);
+    // border-radius: size-m(68) size-m(68) 0 0;
+    padding-top: size-m(140);
+    margin-top: size-m(0);
 
     .order-title {
       font-size: size-m(29);
       font-weight: 500;
       margin-bottom: size-m(20);
     }
+
+    .order-title-img {
+      width: size-m(296);
+      margin-bottom: size-m(50);
+    }
+
+    .order-title-decor {
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+
 
     .form {
       width: size-m(310);
@@ -175,7 +192,6 @@
       letter-spacing: size-m(20);
       text-indent: size-m(20);
       color: #fff;
-      background-color: #3e3a39;
       width: size-m(318);
       height: size-m(72);
       line-height: size-m(72);
@@ -202,7 +218,7 @@ const toast = useToast()
 const formData = reactive({
   name: "",
   phone: "",
-  room: "",
+  room_type: "",
   city: "",
   area: "",
   note: "",
@@ -217,7 +233,7 @@ const bypass = ["note"]
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
-  "房型", //room
+  "房型", //room_type
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //note

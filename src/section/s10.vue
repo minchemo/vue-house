@@ -14,16 +14,16 @@
     </Splide>
     <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
       <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-        <img src="@/assets/prev.svg" alt="" srcset="">
+        <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
       </button>
       <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-        <img src="@/assets/next.svg" alt="" srcset="">
+        <img src="@/assets/next.svg" alt="心仝聚" srcset="">
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_serif_tc']">打破空間界線的友好設計</div>
-      <div class="t2 font-['Noto_serif_tc']">錯層、退縮，讓家與自然、與鄰里仝聚共生</div>
-      <div class="t3">
+      <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">打破空間界線的友好設計</div>
+      <div class="t2 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="200">錯層、退縮，讓家與自然、與鄰里仝聚共生</div>
+      <div class="t3" data-aos="fade" data-aos-delay="400">
         曲線優雅的錯層陽台，打破封閉的垂直框架，為建築立面賦予豐富神情，也讓戶與戶之間的距離更緊密而溫暖。家，與鄰里相依，多了幾分暖意；人與人之間的距離，以設計的語彙重新定義，保留恰如其分的餘裕，更加舒心。</div>
     </div>
   </div>
@@ -139,15 +139,87 @@
 
 
 @media screen and (max-width:768px) {
+
   .s10 {
-    width: size-m(375);
-    height: size-m(600);
+    width: 100%;
+    height: size-m(667);
+
+    .slide-box {
+      position: absolute;
+      width: size-m(375);
+      height: size-m(360);
+      bottom: 0;
+      left: 0;
+
+      .splide__track {
+        z-index: 10;
+      }
+
+      .slide {
+        width: size-m(375);
+        height: size-m(360);
+
+        .caption {
+          font-size: size-m(12);
+          bottom: size-m(10);
+          left: size-m(20);
+        }
+      }
+
+      .splide__pagination {
+        display: none;
+      }
+    }
+
+    .splide__arrows {
+      left: 50%;
+      top: 75%;
+      transform: translate(-50%, -50%);
+      width: size(1900);
+    }
+
+    .info {
+      position: absolute;
+      width: size-m(375);
+      height: size-m(307);
+      right: 0;
+      top: 0;
+      bottom: unset;
+      text-align: center;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 size-m(35);
+      background-color: #192d4e;
+
+      .t1 {
+        font-weight: 800;
+        font-size: size-m(25);
+        line-height: 160%;
+        margin-bottom: size-m(0);
+      }
+
+      .t2 {
+        font-size: size-m(16);
+        line-height: 160%;
+        margin-bottom: size-m(20);
+      }
+
+      .t3 {
+        width: 100%;
+        font-size: size-m(15);
+        line-height: 160%;
+        letter-spacing: 0;
+      }
+    }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { ref, getCurrentInstance } from "vue"
 const splide = ref();
 
 const currentIdx = ref(0)
@@ -155,18 +227,19 @@ const currentIdx = ref(0)
 const move = (newIdx, prevIdx, destIdx) => {
   currentIdx.value = prevIdx
 }
+const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const imgs = ref([
   {
-    img: new URL("../section/s10/1.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/1.jpg", import.meta.url).href,
     caption: '外觀3D圖'
   },
   {
-    img: new URL("../section/s10/2.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
     caption: '外觀3D圖'
   },
   {
-    img: new URL("../section/s10/3.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/3.jpg", import.meta.url).href,
     caption: '外觀3D圖'
   },
 ])

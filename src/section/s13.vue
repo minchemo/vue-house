@@ -5,14 +5,15 @@
       autoWidth: true,
       pagination: false,
       arrows: false,
-      type: 'slide',
+      type: 'loop',
       perPage: $isMobile() ? 1 : 4,
       autoplay: true,
       interval: 4000,
+      focus: $isMobile() ? 'center' : 0,
     }" @splide:move="move" class="slide-box absolute z-10">
       <SplideSlide @mouseover="activeIdx = i" class="slide" :class="{ active: activeIdx == i }" v-for="img, i in imgs">
         <div class="person" v-lazy:background-image="img.img"></div>
-        <img class="icon absolute z-10" :src="img.icon" alt="" srcset="">
+        <img class="icon absolute z-10" :src="img.icon" alt="心仝聚" srcset="">
         <div class="info absolute">
           <div class="t1 font-['Noto_serif_tc']">{{ img.t1 }}</div>
           <div class="t2">{{ img.t2 }}</div>
@@ -21,10 +22,10 @@
     </Splide>
     <div v-if="$isMobile()" class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
       <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-        <img src="@/assets/prev.svg" alt="" srcset="">
+        <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
       </button>
       <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-        <img src="@/assets/next.svg" alt="" srcset="">
+        <img src="@/assets/next.svg" alt="心仝聚" srcset="">
       </button>
     </div>
   </div>
@@ -183,17 +184,141 @@
 
 
 @media screen and (max-width:768px) {
+
   .s13 {
-    width: size-m(375);
-    height: size-m(600);
+    width: 100%;
+    height: size-m(667);
+
+    .slide-box {
+      position: absolute;
+      width: size-m(375);
+      height: size-m(667);
+
+      .splide__track {
+        z-index: 10;
+      }
+
+      .slide {
+        width: size-m(296);
+        height: size-m(666);
+        position: relative;
+
+        .person {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          filter: brightness(30%);
+          transition: all .2s;
+        }
+
+        .icon {
+          width: size-m(93);
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: size-m(180);
+          transition: all .2s;
+        }
+
+        .info {
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 0;
+          padding-bottom: size-m(80);
+          transition: all .2s;
+          text-align: center;
+          opacity: 0;
+
+          .t1 {
+            font-weight: 800;
+            font-size: size-m(25);
+            margin-bottom: size-m(10);
+          }
+
+          .t2 {
+            font-size: size-m(15);
+            line-height: 160%;
+            letter-spacing: 0;
+          }
+
+          &::after {
+            content: '';
+            width: size-m(61.32);
+            height: 1px;
+            background-color: #D47300;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: size-m(110);
+          }
+
+          &::before {
+            content: '';
+            width: 100%;
+            height: size-m(375);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 68.75%);
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 95%;
+          height: 97%;
+          border: 0;
+        }
+
+        &.active {
+          .person {
+            filter: brightness(100%);
+          }
+
+          .icon {
+            opacity: 1;
+          }
+
+          &::after {
+            border: 3px solid #D47300;
+          }
+
+          .info {
+            opacity: 1;
+          }
+        }
+
+      }
+
+      .splide__pagination {
+        display: none;
+      }
+    }
+
+    .splide__arrows {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: size-m(375);
+    }
+
   }
 }
 </style>
 
 <script setup>
 import { ref } from "vue"
-
+const splide = ref();
 const activeIdx = ref(0);
+
+const move = (newIdx, prevIdx, destIdx) => {
+  activeIdx.value = prevIdx
+}
+
 
 const imgs = ref([
   {

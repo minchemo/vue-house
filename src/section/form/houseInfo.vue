@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col md:flex-row items-center justify-between">
         <!-- <div class="map"></div> -->
-        <div class="flex-1 items-center justify-center py-20">
+        <div class="flex-1 items-center justify-center py-4 md:py-20">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
@@ -16,7 +16,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="心仝聚" srcset=""></a>
         <p class="text-white text-xs">網頁製作</p>
     </div>
 </template>
@@ -58,13 +58,6 @@
 @media screen and (max-width:768px) {
     .footer {
         margin-bottom: size-m(63);
-
-    }
-
-    .map {
-        width: size-m(375);
-        height: size-m(324);
-        background-image: url('@/section/form/map_m.png');
     }
 
     .info-box {
@@ -73,8 +66,6 @@
 
         .title {
             font-size: size-m(29);
-            border-top: size-m(1) solid;
-            border-bottom: size-m(1) solid;
         }
 
         .info-items {

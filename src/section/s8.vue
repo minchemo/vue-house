@@ -14,16 +14,17 @@
     </Splide>
     <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
       <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-        <img src="@/assets/prev.svg" alt="" srcset="">
+        <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
       </button>
       <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-        <img src="@/assets/next.svg" alt="" srcset="">
+        <img src="@/assets/next.svg" alt="心仝聚" srcset="">
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_serif_tc']">樂活水岸</div>
-      <div class="t2 font-['Noto_serif_tc']">一家人專屬的幸福流域</div>
-      <div class="t3">晨間，呼吸著新鮮空氣，沿溪畔步道自在慢跑；日暮時分，悠閒漫步堤岸，夕照中遠眺大屯山群峰，享受都市中少有、與自然零距離的舒心日常。</div>
+      <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">樂活水岸</div>
+      <div class="t2 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="200">一家人專屬的幸福流域</div>
+      <div class="t3" data-aos="fade" data-aos-delay="400">
+        晨間，呼吸著新鮮空氣，沿溪畔步道自在慢跑；日暮時分，悠閒漫步堤岸，夕照中遠眺大屯山群峰，享受都市中少有、與自然零距離的舒心日常。</div>
     </div>
   </div>
 </template>
@@ -154,15 +155,105 @@
 
 
 @media screen and (max-width:768px) {
+
   .s8 {
-    width: size-m(375);
-    height: size-m(600);
+    width: 100%;
+    height: size-m(570);
+    background-color: #EC9700;
+
+    .slide-box {
+      position: absolute;
+      top: size-m(270);
+      width: size-m(375);
+      height: size-m(250);
+
+      .splide__track {
+        z-index: 10;
+      }
+
+      .slide {
+        width: size-m(375);
+        height: size-m(250);
+
+        .caption {
+          font-size: size-m(12);
+          bottom: size-m(10);
+          left: size-m(20);
+        }
+      }
+
+      .splide__pagination {
+        display: none;
+      }
+    }
+
+    .splide__arrows {
+      left: 50%;
+      top: size-m(400);
+      transform: translateX(-50%);
+      width: size-m(375);
+    }
+
+    .info {
+      position: absolute;
+      width: size-m(375);
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      top: size-m(60);
+      pointer-events: none;
+      padding: 0 size-m(20);
+
+      .t1 {
+        font-weight: 800;
+        font-size: size-m(25);
+        line-height: 160%;
+        margin-bottom: size-m(0);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .t2 {
+        font-weight: 700;
+        font-size: size-m(19);
+        line-height: 160%;
+        margin-bottom: size-m(10);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .t3 {
+        font-weight: 400;
+        font-size: size-m(15);
+        line-height: 160%;
+        letter-spacing: 0;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: size-m(90);
+        height: 1px;
+        background-color: #000;
+        left: size-m(20);
+        top: size-m(20);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: size-m(90);
+        height: 1px;
+        background-color: #000;
+        right: size-m(20);
+        top: size-m(20);
+      }
+    }
   }
+
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { ref, getCurrentInstance } from "vue"
 const splide = ref();
 
 const currentIdx = ref(0)
@@ -170,18 +261,19 @@ const currentIdx = ref(0)
 const move = (newIdx, prevIdx, destIdx) => {
   currentIdx.value = prevIdx
 }
+const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const imgs = ref([
   {
-    img: new URL("../section/s8/1.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s8/1_m.jpg", import.meta.url).href : new URL("../section/s8/1.jpg", import.meta.url).href,
     caption: '雙溪河濱公園'
   },
   {
-    img: new URL("../section/s8/2.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s8/2_m.jpg", import.meta.url).href : new URL("../section/s8/2.jpg", import.meta.url).href,
     caption: '21號河濱公園'
   },
   {
-    img: new URL("../section/s8/3.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s8/3_m.jpg", import.meta.url).href : new URL("../section/s8/3.jpg", import.meta.url).href,
     caption: '情境示意圖'
   },
 ])

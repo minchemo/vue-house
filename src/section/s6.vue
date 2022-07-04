@@ -1,12 +1,13 @@
 <template>
   <div class="s6 relative bg-white">
     <div class="content">
-      <div class="t1 font-['Noto_Serif_TC']">遇見 跨世代的生活風貌</div>
-      <div class="t2 font-['Noto_Serif_TC']">智慧健康x生技醫療x數位科技</div>
-      <div class="t3">北投士林科技園區，串聯南軟、內科，是台北科技走廊上的矚目新星。融匯產業創新動能與人文環境底蘊，生產、生活、生態各面向兼具，實踐宜居永續的城市發展願景。
+      <div class="t1 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="0">遇見 跨世代的生活風貌</div>
+      <div class="t2 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="200">智慧健康x生技醫療x數位科技</div>
+      <div class="t3" data-aos="fade" data-aos-delay="400">
+        北投士林科技園區，串聯南軟、內科，是台北科技走廊上的矚目新星。融匯產業創新動能與人文環境底蘊，生產、生活、生態各面向兼具，實踐宜居永續的城市發展願景。
       </div>
     </div>
-    <div class="w-full h-full absolute radar">
+    <div class="w-full h-full absolute radar" v-if="!$isMobile()">
       <div data-aos="zoom-in" data-aos-delay="0" class="item">
         <div class="t1">士林北投</div>
         <div class="t2">科技園區計畫</div>
@@ -41,7 +42,15 @@
           新創/軟體/會展產業</div>
       </div>
     </div>
+    <div class="touch-zoom" v-if="$isMobile()" @click="mapOpened = !mapOpened">
+      <img src="@/section/s6/zoom.png" alt="心仝聚" srcset="">
+    </div>
   </div>
+  <div class="view-box" v-if="$isMobile()" v-bind:class="{ 'open': mapOpened }">
+    <img src="@/section/s6/map.jpg" alt="心仝聚" srcset="">
+  </div>
+  <div class="close" data-aos="fade-up" data-aos-delay="500" v-if="mapOpened && $isMobile()"
+    @click="mapOpened = !mapOpened">返回</div>
 </template>
 
 <style lang="scss">
@@ -78,7 +87,6 @@
     .t3 {
       font-weight: 400;
       font-size: size(20);
-      line-height: 100%;
       line-height: 150%;
       text-align: justify;
       letter-spacing: 0.2em;
@@ -160,12 +168,101 @@
   }
 }
 
-
 @media screen and (max-width:768px) {
+
   .s6 {
-    width: size-m(375);
-    height: size-m(580);
+    width: 100%;
+    height: size-m(605);
+    background-image: url('@/section/s6/bg.svg');
+    background-size: cover;
+
+    .content {
+      position: absolute;
+      right: 50%;
+      top: size-m(50);
+      width: size-m(310);
+      transform: translateX(50%);
+      text-align: center;
+
+      .t1 {
+        font-size: size-m(25);
+        line-height: 160%;
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+
+      .t2 {
+        font-size: size-m(19);
+        line-height: 160%;
+        margin-bottom: size-m(10);
+      }
+
+      .t3 {
+        font-size: size-m(15);
+        line-height: 160%;
+        letter-spacing: 0;
+      }
+    }
+
+    .touch-zoom {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10%;
+      width: size-m(269);
+      height: size-m(258);
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(2px);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: size-m(71.3);
+      }
+    }
   }
+
+  .view-box {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #000;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    top: 0;
+    left: 0;
+    transform: translateY(200%);
+    transition: all .5s;
+
+    img {
+      height: 100%;
+      width: auto !important;
+      max-width: unset;
+    }
+
+    &.open {
+      transform: translateY(0%);
+    }
+  }
+
+  .close {
+    position: fixed;
+    width: size-m(100);
+    height: size-m(30);
+    bottom: size-m(30);
+    left: 50%;
+    margin-left: -#{size-m(50)};
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1000px;
+    color: #fff;
+    text-align: center;
+    line-height: size-m(30);
+    z-index: 1000;
+  }
+
 }
 </style>
 
@@ -173,6 +270,7 @@
 import { ref } from "vue"
 const splide = ref();
 
+const mapOpened = ref(false);
 const imgs = ref([
   {
     img: new URL("../section/s6/1.jpg", import.meta.url).href,

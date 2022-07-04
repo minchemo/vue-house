@@ -2,27 +2,28 @@
   <div class="s9 relative bg-black">
     <lazy-component class="bubbles">
       <img :class="{ 'active': activeImg == 1, 'prev': activeImg == 2, 'next': activeImg == 3 }"
-        src="@/section/s9/1.png" alt="">
+        src="@/section/s9/1.png" alt="心仝聚">
       <img :class="{ 'active': activeImg == 2, 'prev': activeImg == 3, 'next': activeImg == 1 }"
-        src="@/section/s9/2.png" alt="">
+        src="@/section/s9/2.png" alt="心仝聚">
       <img :class="{ 'active': activeImg == 3, 'prev': activeImg == 1, 'next': activeImg == 2 }"
-        src="@/section/s9/3.png" alt="">
+        src="@/section/s9/3.png" alt="心仝聚">
     </lazy-component>
 
-    <img class="line" src="@/section/s9/line.png" alt="" srcset="">
+    <img v-if="$isMobile()" class="line" src="@/section/s9/line_m.png" alt="心仝聚" srcset="">
+    <img v-else class="line" src="@/section/s9/line.png" alt="心仝聚" srcset="">
 
     <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
-      <button class="splide__arrow splide__arrow--prev" @click="prev()">
-        <img src="@/assets/prev.svg" alt="" srcset="">
+      <button class="splide__arrow splide__arrow--prev" @click="$isMobile() ? next() : prev()">
+        <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
       </button>
-      <button class="splide__arrow splide__arrow--next" @click="next()">
-        <img src="@/assets/next.svg" alt="" srcset="">
+      <button class="splide__arrow splide__arrow--next" @click="$isMobile() ? prev() : next()">
+        <img src="@/assets/next.svg" alt="心仝聚" srcset="">
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_serif_tc']">心靈 感官的雙重盛宴</div>
-      <div class="t2 font-['Noto_serif_tc']">住進藝術薰陶的美感家園</div>
-      <div class="t3">住進藝文繁盛的日常，悠遊當代時尚潮流與歷史古韻之美，讓藝術打開心靈的視野、啟發五感，享受真正豐盈的美好生活。</div>
+      <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">心靈 感官的雙重盛宴</div>
+      <div class="t2 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="200">住進藝術薰陶的美感家園</div>
+      <div class="t3" data-aos="fade" data-aos-delay="400">住進藝文繁盛的日常，悠遊當代時尚潮流與歷史古韻之美，讓藝術打開心靈的視野、啟發五感，享受真正豐盈的美好生活。</div>
     </div>
   </div>
 </template>
@@ -119,17 +120,91 @@
 
 
 @media screen and (max-width:768px) {
+
   .s9 {
-    width: size-m(375);
-    height: size-m(600);
+    overflow: hidden;
+    width: 100%;
+    height: size-m(664);
+    background-color: #EC9700;
+
+    .splide__arrows {
+      left: 50%;
+      top: 55%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 100%;
+    }
+
+    .info {
+      position: absolute;
+      width: size-m(310);
+      left: size-m(35);
+      top: size-m(165);
+      text-align: left;
+      pointer-events: none;
+
+      .t1 {
+        font-size: size-m(25);
+        line-height: 160%;
+        margin-bottom: size-m(0);
+      }
+
+      .t2 {
+        font-size: size-m(19);
+        line-height: 160%;
+        margin-bottom: size-m(15);
+      }
+
+      .t3 {
+        font-size: size-m(15);
+        line-height: 160%;
+        letter-spacing: 0;
+      }
+    }
+
+
+    .line {
+      position: absolute;
+      width: size-m(375);
+      left: 0;
+      bottom: 0;
+    }
+
+    .bubbles {
+      position: relative;
+      z-index: 1;
+
+      img {
+        position: absolute;
+        transition: all .8s;
+
+        &.active {
+          width: size-m(375);
+          left: size-m(57);
+          top: size-m(353);
+        }
+
+        &.next {
+          width: size-m(122);
+          left: size-m(224);
+          top: size-m(17);
+        }
+
+        &.prev {
+          width: size-m(102);
+          left: -#{size-m(56)};
+          top: size-m(547);
+        }
+      }
+    }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { ref, getCurrentInstance } from "vue"
 
 const activeImg = ref(1);
+const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const next = () => {
   if (activeImg.value - 1 == 0) {
@@ -147,6 +222,9 @@ const prev = () => {
 }
 
 setInterval(() => {
-  next()
+
+  if (globals.$isMobile()) prev()
+  else next()
+
 }, 4000);
 </script>

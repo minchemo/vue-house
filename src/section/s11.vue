@@ -1,5 +1,5 @@
 <template>
-  <div class="s11 relative bg-black">
+  <div class="s11 relative bg-black" v-show="false">
     <div class="flex h-full w-full">
       <div class="left relative">
         <Splide ref="splide" :options="{
@@ -16,15 +16,15 @@
         </Splide>
         <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
           <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-            <img src="@/assets/prev.svg" alt="" srcset="">
+            <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
           </button>
           <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-            <img src="@/assets/next.svg" alt="" srcset="">
+            <img src="@/assets/next.svg" alt="心仝聚" srcset="">
           </button>
         </div>
         <div class="info z-20">
-          <div class="t1 font-['Noto_serif_tc']">優質日系營造</div>
-          <div class="t3">
+          <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">優質日系營造</div>
+          <div class="t3" data-aos="fade" data-aos-delay="200">
             文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認(150字)
           </div>
         </div>

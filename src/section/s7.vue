@@ -15,16 +15,16 @@
     </Splide>
     <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
       <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-        <img src="@/assets/prev.svg" alt="" srcset="">
+        <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
       </button>
       <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-        <img src="@/assets/next.svg" alt="" srcset="">
+        <img src="@/assets/next.svg" alt="心仝聚" srcset="">
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_serif_tc']">雙捷運便利生活圈</div>
-      <div class="t2 font-['Noto_serif_tc']">心之所嚮 即刻抵達</div>
-      <div class="t3">鄰近芝山生活圈，散步9分即抵明德站、芝山站。乘捷運紅線，17分直達台北車站，26分直抵信義計畫區。</div>
+      <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">雙捷運便利生活圈</div>
+      <div class="t2 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="200">心之所嚮 即刻抵達</div>
+      <div class="t3" data-aos="fade" data-aos-delay="400">鄰近芝山生活圈，散步9分即抵明德站、芝山站。乘捷運紅線，17分直達台北車站，26分直抵信義計畫區。</div>
     </div>
   </div>
 </template>
@@ -164,14 +164,114 @@
 
 @media screen and (max-width:768px) {
   .s7 {
-    width: size-m(375);
-    height: size-m(600);
+    width: 100%;
+    height: size-m(519);
+    background-color: #EC9700;
+
+    .slide-box {
+      position: absolute;
+      width: size-m(375);
+      height: size-m(250);
+      bottom: 0;
+      left: 0;
+
+      .splide__track {
+        z-index: 10;
+      }
+
+      .slide {
+        width: size-m(375);
+        height: size-m(250);
+        background-size: cover;
+        position: relative;
+
+        .caption {
+          font-size: size-m(12);
+          bottom: size-m(10);
+          left: size-m(20);
+        }
+
+        .mask {
+          display: none;
+        }
+      }
+
+      .splide__pagination {
+        display: none;
+      }
+    }
+
+    .splide__arrows {
+      left: 50%;
+      top: 80%;
+      transform: translate(-50%, -50%);
+      width: size-m(375);
+    }
+
+    .info {
+      position: absolute;
+      width: 100%;
+      height: size-m(270);
+      right: 0;
+      text-align: center;
+      top: 0;
+      transform: translateY(0%);
+      pointer-events: none;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.24) 0%, #362210 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 size-m(30);
+
+      .t1 {
+        font-size: size-m(25);
+        line-height: 160%;
+        margin-bottom: size-m(0);
+      }
+
+      .t2 {
+        font-size: size-m(19);
+        line-height: 160%;
+        margin-bottom: size-m(15);
+      }
+
+      .t3 {
+        font-size: size-m(15);
+        line-height: 160%;
+        letter-spacing: 0;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: size-m(150);
+        background-color: #fff;
+        left: 5%;
+        transform: translateX(0);
+        top: size-m(60);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: size-m(150);
+        background-color: #fff;
+        right: 5%;
+        left: unset;
+        transform: translateX(0);
+        top: size-m(60);
+      }
+    }
   }
+
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { ref, getCurrentInstance } from "vue"
 const splide = ref();
 
 const currentIdx = ref(0)
@@ -179,22 +279,23 @@ const currentIdx = ref(0)
 const move = (newIdx, prevIdx, destIdx) => {
   currentIdx.value = prevIdx
 }
+const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const imgs = ref([
   {
-    img: new URL("../section/s7/1.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s7/1_m.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
     caption: '天母SOGO'
   },
   {
-    img: new URL("../section/s7/2.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s7/2_m.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
     caption: '石牌商圈'
   },
   {
-    img: new URL("../section/s7/3.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s7/3_m.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
     caption: '捷運明德站'
   },
   {
-    img: new URL("../section/s7/4.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s7/4_m.jpg", import.meta.url).href : new URL("../section/s7/4.jpg", import.meta.url).href,
     caption: '捷運芝山站'
   },
 ])
