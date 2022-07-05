@@ -107,14 +107,16 @@
       background-color: theme('colors.color1');
       color: #fff;
       width: 100%;
-      padding: size(15) size(55);
+      padding: 0 size(55);
       // border-radius: 9999px;
       font-size: size(16);
-      letter-spacing: size(1);
+      line-height: 3.8;
+      letter-spacing:0.06em;
       max-width: size(280);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
+      border-radius: 1.9em;
 
       &:hover {
         background-color: theme('colors.color2');
@@ -128,7 +130,7 @@
       }
 
       &.address {
-        background-color: #fff;
+          background-color: #eee;
         color: #000;
         z-index: 0;
         position: relative;
@@ -136,13 +138,14 @@
         max-width: 9999px;
         justify-content: center;
 
-        &::after {
+        &::before {
           content: "";
           position: absolute;
-          width: 50px;
+          width: 8em;
           height: 100%;
-          background-color: #fff;
-          left: 100%;
+          background-color: #eee;
+          left: calc(100% - 4em);
+          z-index: -1;
         }
       }
     }
@@ -194,9 +197,6 @@
       width: size-m(276);
       height: size-m(75);
       background-image: url("@/section/form/logo.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
       margin-bottom: size-m(40);
     }
 
@@ -207,20 +207,10 @@
       flex-direction: column;
 
       .contact-item {
-        width: 100%;
-        padding: size-m(15) size-m(65);
-        background-color: theme('colors.color1');
-        border-radius: 9999px;
+        padding:0 size-m(65);
         font-size: size-m(16);
-        letter-spacing: size-m(1);
         max-width: 100%;
-        z-index: 1;
-        transition: all .3s;
-        cursor: pointer;
 
-        &:hover {
-          background-color: theme('colors.color2');
-        }
 
         img {
           max-width: size-m(27);
@@ -229,17 +219,14 @@
         }
 
         &.address {
-          z-index: 0;
-          background-color: #eeeeee;
-          position: relative;
-          padding: size-m(15) 0;
-          border-radius: size-m(30) size-m(30) 0 0;
-          max-width: 9999px;
-          justify-content: center;
+          padding: 0 0;
           margin-top: size-m(20);
 
-          &::after {
-            display: none;
+          &::before {
+          width: 100%;
+          height:100%;
+          bottom:-50%;
+          left:0;
           }
         }
 

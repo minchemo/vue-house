@@ -8,18 +8,18 @@
       <div class="info">
         <div class="info-box flex flex-col items-center justify-center">
           <div class="t1 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="0">仝</div>
-          <div class="t2 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="200">
+          <div class="t2 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="100">
             中文讀音同「同」<br><br v-if="!$isMobile()">
             台語讀音「kâng」
           </div>
-          <div class="t3" data-aos="fade" data-aos-delay="400">仝，是凝聚、溫情、信任，也是人與人、與屋、與地的美好關係。<br><br
+          <div class="t3" data-aos="fade" data-aos-delay="200">仝，是凝聚、溫情、信任，也是人與人、與屋、與地的美好關係。<br><br
               v-if="$isMobile()" />
             仝，是&，是+，是1+1>2的共好共榮。
           </div>
-          <img class="logo" src="@/section/s4/logo.png" alt="心仝聚" srcset="" data-aos="fade" data-aos-delay="600">
-          <div class="t4" data-aos="fade" data-aos-delay="800">隆遠相信，不論科技通訊的如何變化，關係與溫度的重要性超越物質，是我們之所以感到快樂的真正核心。
+          <img class="logo" src="@/section/s4/logo.png" alt="心仝聚" srcset="" data-aos="fade" data-aos-delay="300">
+          <div class="t4" data-aos="fade" data-aos-delay="400">隆遠相信，不論科技通訊的如何變化，關係與溫度的重要性超越物質，是我們之所以感到快樂的真正核心。
           </div>
-          <div class="t5" data-aos="fade" data-aos-delay="1000">
+          <div class="t5" data-aos="fade" data-aos-delay="500">
             讓我，成為我們；<br />
             讓家，成為家園。
           </div>
@@ -34,16 +34,19 @@
 
 .s4 {
   width: 100%;
-  height: size(1080);
+  height:100vh;
+  min-height: size(900);
+  max-height: size(1080);
 
   .img {
     flex-basis: size(800);
+    img{object-fit: cover;}
   }
 
   .info {
     flex-basis: size(1120);
-    height: size(1080);
-    padding: size(77) size(99);
+    height:100%;
+    padding: 4% size(99);
 
     .info-box {
       width: 100%;
@@ -55,6 +58,7 @@
         font-size: size(96);
         font-weight: 800;
         margin-bottom: size(56);
+        margin-top: -2vw;
       }
 
       .t2 {
@@ -109,6 +113,8 @@
   .s4 {
     width: 100%;
     height: size-m(1050);
+  min-height:size-m(1050);
+  max-height: size-m(1050);
 
     .img {
       flex-basis: size-m(346);

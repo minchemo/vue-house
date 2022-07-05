@@ -43,7 +43,7 @@
     </div>
 
     <!-- Policy -->
-    <div class="flex gap-2 items-center justify-center">
+    <div class="flex gap-2 items-center justify-center control">
       <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
         class="checkbox bg-white rounded-md" />
       <p>
@@ -126,15 +126,19 @@
 
   .send {
     font-size: size(22);
-    letter-spacing: size(20);
-    text-indent: size(20);
+    letter-spacing:0.9em;
+    text-indent:0.9em;
     color: #fff;
     background-color: #C14D33;
-    width: size(250);
-    height: size(72);
-    line-height: size(72);
+    width: size(350);
+    height:3.3em;
+    line-height: 3.3;
     border: 0;
-    border-radius: 0;
+    border-radius:1.6em;
+  }
+  .control{
+    font-size: size(16);
+    color: #000;
   }
 }
 
@@ -189,12 +193,10 @@
 
     .send {
       font-size: size-m(21);
-      letter-spacing: size-m(20);
-      text-indent: size-m(20);
-      color: #fff;
       width: size-m(318);
-      height: size-m(72);
-      line-height: size-m(72);
+    }
+    .control{
+      font-size: size-m(14.6);
     }
   }
 }

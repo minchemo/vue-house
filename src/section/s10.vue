@@ -108,6 +108,7 @@
     justify-content: center;
     flex-direction: column;
     padding: size(30) 0;
+      color: #fff;
 
     .t1 {
       font-weight: 800;
@@ -122,7 +123,6 @@
       font-weight: 700;
       font-size: size(30);
       line-height: 70%;
-      color: #fff;
       margin-bottom: size(70);
     }
 
@@ -132,7 +132,7 @@
       font-size: size(20);
       line-height: 150%;
       letter-spacing: 0.2em;
-      color: #fff;
+      text-align: justify;
     }
   }
 }
@@ -235,11 +235,11 @@ const imgs = ref([
     caption: '外觀3D圖'
   },
   {
-    img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s10/2_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
     caption: '外觀3D圖'
   },
   {
-    img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/3.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s10/3_m.jpg", import.meta.url).href : new URL("../section/s10/3.jpg", import.meta.url).href,
     caption: '外觀3D圖'
   },
 ])

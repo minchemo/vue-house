@@ -14,7 +14,9 @@
 
 .s3 {
   width: 100%;
-  height: size(1080);
+  height:100vh;
+  min-height: size(900);
+  max-height: size(1080);
   background-image: url('@/section/s3/bg.jpg');
   background-size: cover;
   background-position: center;
@@ -27,8 +29,10 @@
 
   .content {
     width: size(500);
-    top: size(535);
+    top: 50%;
     left: size(200);
+    text-align: justify;
+      text-shadow:0 0.1em 0.3em #000;
 
     h2 {
       font-size: size(40);
@@ -36,7 +40,7 @@
     }
 
     p {
-      font-weight: 400;
+      font-weight: 300;
       font-size: size(20);
       line-height: size(30);
       letter-spacing: 0.2em;
@@ -49,6 +53,8 @@
 
   .s3 {
     height: size-m(667);
+  min-height:size-m(667);
+  max-height: size-m(667);
     background-image: url('@/section/s3/bg_m.jpg');
 
     .caption {

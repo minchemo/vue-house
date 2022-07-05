@@ -99,6 +99,7 @@
         line-height: 150%;
         letter-spacing: 0.2em;
         margin-bottom: size(140);
+        text-align: justify;
       }
 
       .t4 {
@@ -240,6 +241,7 @@
         width: size-m(375);
         height: 100%;
         background-color: rgba($color: #000000, $alpha: 0.2);
+        background-color:#0000;
         backdrop-filter: blur(0px);
         padding: size-m(35) size-m(35);
 

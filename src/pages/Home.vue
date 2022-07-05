@@ -11,7 +11,7 @@
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <S1 />
-    <S2 />
+   <!-- <S2 /> -->
     <S3 />
     <S4 />
     <S5 />
@@ -30,7 +30,7 @@
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
+// import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"

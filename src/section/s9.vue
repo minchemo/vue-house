@@ -2,11 +2,11 @@
   <div class="s9 relative bg-black">
     <lazy-component class="bubbles">
       <img :class="{ 'active': activeImg == 1, 'prev': activeImg == 2, 'next': activeImg == 3 }"
-        src="@/section/s9/1.png" alt="心仝聚">
+        src="@/section/s9/1.jpg" alt="心仝聚">
       <img :class="{ 'active': activeImg == 2, 'prev': activeImg == 3, 'next': activeImg == 1 }"
-        src="@/section/s9/2.png" alt="心仝聚">
+        src="@/section/s9/2.jpg" alt="心仝聚">
       <img :class="{ 'active': activeImg == 3, 'prev': activeImg == 1, 'next': activeImg == 2 }"
-        src="@/section/s9/3.png" alt="心仝聚">
+        src="@/section/s9/3.jpg" alt="心仝聚">
     </lazy-component>
 
     <img v-if="$isMobile()" class="line" src="@/section/s9/line_m.png" alt="心仝聚" srcset="">
@@ -94,6 +94,7 @@
     img {
       position: absolute;
       transition: all .8s;
+      border-radius: 50%;
 
       &.active {
         width: size(1330);

@@ -3,11 +3,11 @@
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-20">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
-                <div class="title">建案資訊</div>
+                <div class="title font-['Noto_Serif_TC']">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-2 md:mr-8 border-l-4 md:border-l-2 border-black pl-2 ">{{ item[0] }}</p>
+                        <p class="mr-5 border-l-2  border-black pl-2 ">{{ item[0] }}</p>
                         <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
                     </div>
                 </div>
@@ -51,6 +51,10 @@
         .item {
             line-height: size(17);
             font-size: size(17);
+            align-items:flex-start;
+            line-height: 1.5;
+            text-align: left;
+            p:first-child{width: 4.5em;}
         }
     }
 }
@@ -72,7 +76,6 @@
             row-gap: size-m(20);
 
             .item {
-                line-height: size-m(15);
                 font-size: size-m(15);
             }
         }
