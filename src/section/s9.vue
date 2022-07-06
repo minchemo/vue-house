@@ -1,5 +1,5 @@
 <template>
-  <div class="s9 relative bg-black">
+  <div class="s9 relative bg-black" v-touch:swipe="swipeHandler">
     <lazy-component class="bubbles">
       <img :class="{ 'active': activeImg == 1, 'prev': activeImg == 2, 'next': activeImg == 3 }"
         src="@/section/s9/1.jpg" alt="心仝聚">
@@ -206,6 +206,14 @@ import { ref, getCurrentInstance } from "vue"
 
 const activeImg = ref(1);
 const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const swipeHandler = (e) => {
+  if (e == 'right') {
+    prev()
+  } else {
+    next()
+  }
+}
 
 const next = () => {
   if (activeImg.value - 1 == 0) {

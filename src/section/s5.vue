@@ -11,13 +11,13 @@
             復古中藏有新穎，鄰里間互助相親，情感真摯敦厚，自幼生長於大稻埕的莊子華董事長，盼將這樣藝文薰陶、生意盎然、暖意環繞的生活氛圍，透過建築，忠實再現。
           </div>
           <div class="t4 flex flex-col items-center justify-center" data-aos="fade" data-aos-delay="400">
-            <span :class="{ selected: currentIdx == 0 }" data-aos="fade" data-aos-delay="0">2021 光里蘊</span>
-            <span :class="{ selected: currentIdx == 1 }" data-aos="fade" data-aos-delay="50">2021 山沺藏</span>
-            <span :class="{ selected: currentIdx == 2 }" data-aos="fade" data-aos-delay="100">2017 富樂恬</span>
-            <span :class="{ selected: currentIdx == 3 }" data-aos="fade" data-aos-delay="150">2017 森沺藏</span>
-            <span :class="{ selected: currentIdx == 4 }" data-aos="fade" data-aos-delay="200">2016 花沺藏</span>
-            <span :class="{ selected: currentIdx == 5 }" data-aos="fade" data-aos-delay="250">2014 景上河</span>
-            <span :class="{ selected: currentIdx == 6 }" data-aos="fade" data-aos-delay="300">2012 索蘭朵</span>
+            <span v-bind:class="{ selected: currentIdx == 0 }">2021 光里蘊</span>
+            <span v-bind:class="{ selected: currentIdx == 1 }">2021 山沺藏</span>
+            <span v-bind:class="{ selected: currentIdx == 2 }">2017 富樂恬</span>
+            <span v-bind:class="{ selected: currentIdx == 3 }">2017 森沺藏</span>
+            <span v-bind:class="{ selected: currentIdx == 4 }">2016 花沺藏</span>
+            <span v-bind:class="{ selected: currentIdx == 5 }">2014 景上河</span>
+            <span v-bind:class="{ selected: currentIdx == 6 }">2012 索蘭朵</span>
           </div>
           <img class="absolute icon" data-aos="fade" data-aos-delay="400" src="@/section/s5/icon.png" alt="心仝聚"
             srcset="">
@@ -241,7 +241,7 @@
         width: size-m(375);
         height: 100%;
         background-color: rgba($color: #000000, $alpha: 0.2);
-        background-color:#0000;
+        background-color: #0000;
         backdrop-filter: blur(0px);
         padding: size-m(35) size-m(35);
 
@@ -362,12 +362,17 @@
 
 <script setup>
 import { ref, getCurrentInstance } from "vue"
+import AOS from 'aos';
+
 const splide = ref();
 
 const currentIdx = ref(0)
 
 const move = (newIdx, prevIdx, destIdx) => {
   currentIdx.value = prevIdx
+  AOS.refresh();
+
+
 }
 
 

@@ -17,6 +17,9 @@ import "aos/dist/aos.css"
 
 import VueSmoothScroll from "vue3-smooth-scroll"
 
+import Vue3TouchEvents from "vue3-touch-events";
+
+
 const toastOptions = {
     transition: "Vue-Toastification__fade",
     maxToasts: 5,
@@ -29,6 +32,7 @@ createApp(App)
     .use(VueSmoothScroll)
     .use(VueSplide)
     .use(router)
+    .use(Vue3TouchEvents)
     .use(VueLazyload, {
         preLoad: 1.5,
         lazyComponent: true,
