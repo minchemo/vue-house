@@ -10,8 +10,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1074.1208194112244!2d121.51588148497574!3d25.10533467160406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad37c45734e3%3A0xb4e838c6893d1db5!2z5b-D5Lud6IGa!5e0!3m2!1szh-TW!2stw!4v1656865081145!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/Xu64EqVYJTcD715U6",
     phone: "02-28271688",
-    fbLink: "",
-    fbMessage: "",
+    fbLink: "https://www.facebook.com/100936009224362/",
+    fbMessage: "https://m.me/100936009224362/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "隆雲股份有限公司"],
