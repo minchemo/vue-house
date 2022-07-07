@@ -18,11 +18,11 @@ export default {
         ["基地面積", "524.8坪"],
         ["結構設計", "Alfa Safe耐震工法 戴雲發結構設計師事務所"],
         ["公設比", "約31%"],
-        ["建築設計", "黃炯祥建築師事務所"],
+        ["建築設計", "黃烱祥建築師事務所"],
         ["戶數規劃", "76戶"],
         ["公設規劃", "元澤設計"],
     ],
-    gtmCode: ["KLM3QRV"], // 可放置多個
+    gtmCode: ["PRS6QJS"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3

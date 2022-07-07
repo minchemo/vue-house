@@ -20,7 +20,7 @@
           <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">守護家人和珍貴事物的安全</div>
           <div class="t2 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="200">並乘載著幸福的重量</div>
           <div class="t3" data-aos="fade" data-aos-delay="400">
-            與結構職人戴雲發合作，採「Alfa Safe柱中柱」鋼筋專利工法，將自動化、標準化、一體化系統，牆轉角處集中處增設補強鋼筋，一體成型的形式讓耐震韌性提升100%。
+            與結構職人戴雲發合作，採「Alfa Safe柱中柱」鋼筋專利工法，將自動化、標準化、一體化系統導入工法，以及在牆轉角處增設補強鋼筋，一體成型的形式讓耐震韌性提升100%。
           </div>
         </div>
       <!--  <div class="info" v-if="currentIdx == 0">

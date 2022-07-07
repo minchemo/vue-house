@@ -9,13 +9,13 @@
     </div>
     <div class="w-full h-full absolute radar" v-if="!$isMobile()">
       <div data-aos="zoom-in" data-aos-delay="0" class="item">
-        <div class="t1">士林北投</div>
-        <div class="t2">科技園區計畫</div>
-        <div class="t3">Beitou Shilin Technology</div>
-        <div class="t4">
+        <div class="t2-o">北士科計畫</div>
+        <div class="t3-o">Beitou Shilin Technology Park</div>
+        <div class="t4-o">
           研發設計/智慧生態<br>
           數位應用/創新產業<br>
           健康生活/共享經濟</div>
+          <div class="tlogo"><img src="@/section/s6/logo1.png" alt="心仝聚" srcset=""></div>
       </div>
       <div data-aos="zoom-in" data-aos-delay="300" class="item">
         <div class="t1">圓山</div>
@@ -26,8 +26,7 @@
           流行時尚/自造者</div>
       </div>
       <div data-aos="zoom-in" data-aos-delay="700" class="item">
-        <div class="t1">內科</div>
-        <div class="t2">2.0計畫</div>
+        <div class="t2">內科2.0計畫</div>
         <div class="t3">Neihu Technology Park Version 2.0</div>
         <div class="t4">
           資通訊/生計<br>
@@ -101,14 +100,40 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(235, 151, 0, 0) 36.98%, rgba(235, 151, 0, 0.2) 100%);
-      backdrop-filter: blur(10px);
+      
+      
       border-radius: 100%;
+
+      .t2-o{
+        font-family: 'Noto Serif TC';
+        font-weight: 700;
+        font-size: size(28);
+        margin-right: 130px;
+        margin-top: 30px;
+        }
+      .t3-o{
+        font-family: 'Noto Serif TC';
+        font-weight: 700;
+        font-size: size(12);
+        margin-right: 130px;
+        -webkit-transform: scale(0.8);
+        text-align: center;
+        } 
+      .t4-o{
+        font-weight: 700;
+        font-size: size(13);
+        line-height: 150%;
+        letter-spacing: 0.2em;
+        text-align: center;
+        margin-right: 130px;
+        margin-top: 10px;
+        }  
+
 
       .t1 {
         font-family: 'Noto Serif TC';
         font-weight: 700;
-        font-size: size(30);
+        font-size: size(22);
         line-height: 100%;
         margin-bottom: size(5);
       }
@@ -116,52 +141,68 @@
       .t2 {
         font-family: 'Noto Serif TC';
         font-weight: 700;
-        font-size: size(20);
-        line-height: 150%;
+        font-size: size(22);
+        line-height: 100%;
         letter-spacing: 0.2em;
       }
 
       .t3 {
         font-family: 'Noto Serif TC';
         font-weight: 700;
-        font-size: size(15);
-        margin: size(20) 0;
+        font-size: size(12);
+        margin: size(10) 0;
+        -webkit-transform: scale(0.8);
       }
 
       .t4 {
-        font-weight: 400;
-        font-size: size(20);
-        line-height: 200%;
+        font-weight: 700;
+        font-size: size(13);
+        line-height: 150%;
         letter-spacing: 0.2em;
         text-align: center;
       }
 
+      .tlogo {
+        left: size(234);
+        top: size(93);
+        width: size(56);
+        height: size(177);
+        position: absolute;
+      }
+
       &:nth-child(1) {
-        left: size(177);
-        top: size(60);
-        width: size(458);
-        height: size(458);
+        left: size(246);
+        top: size(198);
+        width: size(399);
+        height: size(399);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(235, 151, 0, 0.2) 36.98%, rgba(235, 151, 0, 0.8) 100%);
       }
 
       &:nth-child(2) {
-        left: size(300);
-        top: size(569);
-        width: size(400);
-        height: size(400);
+        left: size(602);
+        top: size(632);
+        width: size(237);
+        height: size(237);
+        backdrop-filter: blur(5px);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(223, 223, 223, 0.1) 36.98%, rgba(223, 223, 223, 1) 100%);
       }
 
       &:nth-child(3) {
-        left: size(1076);
-        top: size(515);
-        width: size(400);
-        height: size(400);
+        left: size(1116);
+        top: size(438);
+        width: size(281);
+        height: size(281);
+        backdrop-filter: blur(5px);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(223, 223, 223, 0.1) 36.98%, rgba(223, 223, 223, 1) 100%);
       }
 
       &:nth-child(4) {
-        left: size(1480);
-        top: size(646);
-        width: size(400);
-        height: size(400);
+        left: size(1417);
+        top: size(506);
+        width: size(366);
+        height: size(366);
+        backdrop-filter: blur(5px);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(223, 223, 223, 0.1) 36.98%, rgba(223, 223, 223, 1) 100%);
       }
 
     }
