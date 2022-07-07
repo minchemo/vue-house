@@ -16,7 +16,7 @@
         <div class="person" v-lazy:background-image="img.img"></div>
         <img class="icon absolute z-10" :src="img.icon" alt="心仝聚" srcset="">
         <div class="info absolute">
-          <div class="t1 font-['Noto_serif_tc']">{{ img.t1 }}</div>
+          <div class="t1 font-['Noto_Serif_JP']">{{ img.t1 }}</div>
           <div class="t2">{{ img.t2 }}</div>
         </div>
       </SplideSlide>

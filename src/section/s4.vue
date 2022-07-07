@@ -7,8 +7,8 @@
       </lazy-component>
       <div class="info">
         <div class="info-box flex flex-col items-center justify-center">
-          <div class="t1 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="0">仝</div>
-          <div class="t2 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="100">
+          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">仝</div>
+          <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="100">
             中文讀音同「同」<br><br v-if="!$isMobile()">
             台語讀音「kâng」
           </div>

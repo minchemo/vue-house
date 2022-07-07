@@ -22,8 +22,8 @@
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">雙捷運便利生活圈</div>
-      <div class="t2 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="200">心之所嚮 即刻抵達</div>
+      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">雙捷運便利生活圈</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">心之所嚮 即刻抵達</div>
       <div class="t3" data-aos="fade" data-aos-delay="400">鄰近芝山生活圈，散步9分即抵明德站、芝山站。乘捷運紅線，17分直達台北車站，26分直抵信義計畫區。</div>
     </div>
   </div>

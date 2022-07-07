@@ -21,8 +21,8 @@
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">打破空間界線的友好設計</div>
-      <div class="t2 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="200">錯層、退縮，讓家與自然、與鄰里仝聚共生</div>
+      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">打破空間界線的友好設計</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">錯層、退縮，讓家與自然、與鄰里仝聚共生</div>
       <div class="t3" data-aos="fade" data-aos-delay="400">
         曲線優雅的錯層陽台，打破封閉的垂直框架，為建築立面賦予豐富神情，也讓戶與戶之間的距離更緊密而溫暖。家，與鄰里相依，多了幾分暖意；人與人之間的距離，以設計的語彙重新定義，保留恰如其分的餘裕，更加舒心。</div>
     </div>

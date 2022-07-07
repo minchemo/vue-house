@@ -5,7 +5,7 @@
     <img data-aos="zoom-in" data-aos-delay="200" class="absolute logo" src="@/section/s1/logo.svg"
       alt="心仝聚" srcset="">
     <div data-aos="fade"
-      class="mo-text absolute font-['Noto_serif_tc'] font-medium">
+      class="mo-text absolute font-['Noto_Serif_JP'] font-medium">
       北士科首排•百年大稻埕家族誠獻
     </div>
     <img v-if="$isMobile()" class="arrow-down" src="@/section/s1/arrow_down.png" alt="心仝聚" srcset=""  @click="scrollTo('#s3')">

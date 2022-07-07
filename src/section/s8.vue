@@ -21,8 +21,8 @@
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">樂活水岸</div>
-      <div class="t2 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="200">一家人專屬的幸福流域</div>
+      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">樂活水岸</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">一家人專屬的幸福流域</div>
       <div class="t3" data-aos="fade" data-aos-delay="400">
         晨間，呼吸著新鮮空氣，沿溪畔步道自在慢跑；日暮時分，悠閒漫步堤岸，夕照中遠眺大屯山群峰，享受都市中少有、與自然零距離的舒心日常。</div>
     </div>

@@ -9,7 +9,7 @@
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
-  <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
+  <div class="home bg-white overflow-hidden font-['Noto_Serif_JP']">
     <S1 />
    <!-- <S2 /> -->
     <S3 />

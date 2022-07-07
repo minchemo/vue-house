@@ -23,7 +23,7 @@
           </button>
         </div>
         <div class="info z-20">
-          <div class="t1 font-['Noto_serif_tc']" data-aos="fade" data-aos-delay="0">優質日系營造</div>
+          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">優質日系營造</div>
           <div class="t3" data-aos="fade" data-aos-delay="200">
             文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認(150字)
           </div>

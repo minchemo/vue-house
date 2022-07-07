@@ -5,19 +5,19 @@
         <img v-if="$isMobile()" class="absolute bottom-0 w-full" src="@/section/s5/man_m.jpg" alt="心仝聚" srcset="" />
         <img v-else class="w-full h-full" src="@/section/s5/man.jpg" alt="心仝聚" srcset="" />
         <div class="img-info flex flex-col items-center justify-start md:justify-center">
-          <div class="t1 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="0">從心 從家 從城</div>
-          <div class="t2 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="200">揚起一陣藝文的家風</div>
+          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">從心 從家 從城</div>
+          <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">揚起一陣藝文的家風</div>
           <div class="t3" data-aos="fade" data-aos-delay="400">大稻埕，承載百年歷史風華，不同族群、產業、文化共存，擁有深厚人文藝術底蘊，是隆遠品牌的發跡之地。<br><br>
             復古中藏有新穎，鄰里間互助相親，情感真摯敦厚，自幼生長於大稻埕的莊子華董事長，盼將這樣藝文薰陶、生意盎然、暖意環繞的生活氛圍，透過建築，忠實再現。
           </div>
           <div class="t4 flex flex-col items-center justify-center" data-aos="fade" data-aos-delay="400">
-            <span v-bind:class="{ selected: currentIdx == 0 }">2021 光里蘊</span>
-            <span v-bind:class="{ selected: currentIdx == 1 }">2021 山沺藏</span>
-            <span v-bind:class="{ selected: currentIdx == 2 }">2017 富樂恬</span>
-            <span v-bind:class="{ selected: currentIdx == 3 }">2017 森沺藏</span>
-            <span v-bind:class="{ selected: currentIdx == 4 }">2016 花沺藏</span>
-            <span v-bind:class="{ selected: currentIdx == 5 }">2014 景上河</span>
-            <span v-bind:class="{ selected: currentIdx == 6 }">2012 索蘭朵</span>
+            <span v-bind:class="{ selected: currentIdx == 1 }">2021 光里蘊</span>
+            <span v-bind:class="{ selected: currentIdx == 2 }">2021 山沺藏</span>
+            <span>2017 富樂恬</span>
+            <span>2017 森沺藏</span>
+            <span v-bind:class="{ selected: currentIdx == 3 }">2016 花沺藏</span>
+            <span>2014 景上河</span>
+            <span>2012 索蘭朵</span>
           </div>
           <img class="absolute icon" data-aos="fade" data-aos-delay="400" src="@/section/s5/icon.png" alt="心仝聚"
             srcset="">
