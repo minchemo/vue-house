@@ -29,7 +29,7 @@
         <div class="t2">內科2.0計畫</div>
         <div class="t3">Neihu Technology Park Version 2.0</div>
         <div class="t4">
-          資通訊/生計<br>
+          資通訊/生技<br>
           新創跨域產業</div>
       </div>
       <div data-aos="zoom-in" data-aos-delay="1000" class="item">
@@ -37,7 +37,7 @@
         <div class="t2">東區門戶計畫</div>
         <div class="t3">Taipei East Gateway Explanatary Plan</div>
         <div class="t4">
-          生計/流行/音樂<br>
+          生技/流行/音樂<br>
           新創/軟體/會展產業</div>
       </div>
     </div>

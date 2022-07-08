@@ -127,6 +127,7 @@
     width: 100%;
     height: size-m(664);
     background-color: #EC9700;
+    
 
     .splide__arrows {
       left: 50%;
@@ -159,6 +160,7 @@
         font-size: size-m(15);
         line-height: 160%;
         letter-spacing: 0;
+        
       }
     }
 
