@@ -139,6 +139,7 @@
   .control{
     font-size: size(16);
     color: #000;
+    position: relative;
   }
 }
 
