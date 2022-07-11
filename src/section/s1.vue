@@ -6,7 +6,7 @@
       alt="心仝聚" srcset="">
     <div data-aos="fade"
       class="mo-text absolute font-['Noto_Serif_JP'] font-medium">
-      北士科首排•百年大稻埕家族誠獻
+      北士科首排 百年大稻埕家族誠獻
     </div>
     <img v-if="$isMobile()" class="arrow-down" src="@/section/s1/arrow_down.png" alt="心仝聚" srcset=""  @click="scrollTo('#s3')">
   </div>
