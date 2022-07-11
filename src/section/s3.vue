@@ -1,10 +1,12 @@
 <template>
   <div class="s3 relative">
-    <div class="absolute caption text-white">情境示意圖</div>
-    <div class="absolute content">
-      <h2 data-aos="fade" data-aos-delay="0" class="font-['Noto_Serif_JP'] text-[#D47300]">時代變，很多事情不變</h2>
-      <p data-aos="fade" data-aos-delay="500" class="text-white">
-        現代網路社群的蓬勃，鄰里間的親切寒暄、熟悉的笑容與善意，更加映照出人們內心對情感歸屬不變的渴望與追求。優良的建築設計，舒心的居住環境，若能再加上情感的連結，家，就少了幾分遺憾、多了幾分溫暖。</p>
+    <lazy-component>
+      <img class="bg" src="@/section/s3/1.png" alt="" srcset="">
+      <img class="title z-10" src="@/section/s3/title.svg" alt="" srcset="">
+    </lazy-component>
+    <div class="info">
+      <div class="t1">慢悠閒/快繁華 輕鬆到位！</div>
+      <div class="t2">要住，就住最好的！「公園漾」掌握三蘆生活所有動靜皆宜，<br>出門的便利、回家的寧靜，滿足都會菁英心靈的居住渴望。</div>
     </div>
   </div>
 </template>
@@ -14,36 +16,34 @@
 
 .s3 {
   width: 100%;
-  height:100vh;
-  min-height: size(900);
-  max-height: size(1080);
-  background-image: url('@/section/s3/bg.jpg');
-  background-size: cover;
-  background-position: center;
+  height: size(1080);
+  background-color: #fff;
 
-  .caption {
-    font-size: size(12);
-    right: size(15);
-    bottom: size(15);
+  .bg {
+    width: 100%;
   }
 
-  .content {
-    width: size(500);
-    top: 50%;
-    left: size(200);
-    text-align: justify;
-      text-shadow:0 0.1em 0.3em #000;
+  .title {
+    position: absolute;
+    width: size(805.12);
+    left: size(1025);
+    top: -#{size(11)};
+  }
 
-    h2 {
+  .info {
+    text-align: center;
+
+    .t1 {
       font-size: size(40);
-      margin-bottom: size(60);
+      font-weight: 700;
+      margin-top: size(20);
+      margin-bottom: size(10);
+      letter-spacing: 0.07em;
     }
 
-    p {
-      font-weight: 300;
+    .t2 {
       font-size: size(20);
-      line-height: size(30);
-      letter-spacing: 0.2em;
+      line-height: 158%;
     }
   }
 }
@@ -51,38 +51,8 @@
 
 @media screen and (max-width:768px) {
 
-  .s3 {
-    height: size-m(667);
-  min-height:size-m(667);
-  max-height: size-m(667);
-    background-image: url('@/section/s3/bg_m.jpg');
+  .s3 {}
 
-    .caption {
-      font-size: size(12);
-      right: unset;
-      left: size-m(10);
-      bottom: size-m(10);
-    }
-
-    .content {
-      width: size-m(310);
-      top: size-m(60);
-      left: size-m(32);
-
-      h2 {
-        font-size: size-m(25);
-        font-weight: 800;
-        margin-bottom: size-m(10);
-      }
-
-      p {
-        font-weight: 400;
-        font-size: size-m(15);
-        line-height: 160%;
-        letter-spacing: unset;
-      }
-    }
-  }
 }
 </style>
 

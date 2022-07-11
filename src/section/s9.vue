@@ -1,30 +1,23 @@
 <template>
-  <div class="s9 relative bg-black" v-touch:swipe="swipeHandler">
-    <lazy-component class="bubbles">
-      <img :class="{ 'active': activeImg == 1, 'prev': activeImg == 2, 'next': activeImg == 3 }"
-        src="@/section/s9/1.jpg" alt="心仝聚">
-      <img :class="{ 'active': activeImg == 2, 'prev': activeImg == 3, 'next': activeImg == 1 }"
-        src="@/section/s9/2.jpg" alt="心仝聚">
-      <img :class="{ 'active': activeImg == 3, 'prev': activeImg == 1, 'next': activeImg == 2 }"
-        src="@/section/s9/3.jpg" alt="心仝聚">
+  <div class="s9 relative bg-white">
+    <div class="info">
+      <div>
+        <div class="t1">名品建材 用心呵護最愛的家人</div>
+        <div class="t2">網羅知名品牌建材，為您打造最舒適的家居感受，<br>
+          並提供客製化木地板顏色挑選，讓您在自己的國度做主！</div>
+      </div>
+      <div class="brands">
+        <img src="@/section/s9/1.png" alt="" srcset="">
+        <img src="@/section/s9/2.png" alt="" srcset="">
+        <img src="@/section/s9/3.png" alt="" srcset="">
+        <img src="@/section/s9/4.png" alt="" srcset="">
+        <img src="@/section/s9/5.png" alt="" srcset="">
+        <img src="@/section/s9/6.png" alt="" srcset="">
+      </div>
+    </div>
+    <lazy-component>
+      <img class="bg" src="@/section/s9/bg.png" alt="" srcset="">
     </lazy-component>
-
-    <img v-if="$isMobile()" class="line" src="@/section/s9/line_m.png" alt="心仝聚" srcset="">
-    <img v-else class="line" src="@/section/s9/line.png" alt="心仝聚" srcset="">
-
-    <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
-      <button class="splide__arrow splide__arrow--prev" @click="$isMobile() ? next() : prev()">
-        <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
-      </button>
-      <button class="splide__arrow splide__arrow--next" @click="$isMobile() ? prev() : next()">
-        <img src="@/assets/next.svg" alt="心仝聚" srcset="">
-      </button>
-    </div>
-    <div class="info z-20">
-      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">心靈 感官的雙重盛宴</div>
-      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">住進藝術薰陶的美感家園</div>
-      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">住進藝文繁盛的日常，悠遊當代時尚潮流與歷史古韻之美，讓藝術打開心靈的視野、啟發五感，享受真正豐盈的美好生活。</div>
-    </div>
   </div>
 </template>
 
@@ -35,87 +28,43 @@
   overflow: hidden;
   width: 100%;
   height: size(1080);
-  background-color: #EC9700;
-
-  .splide__arrows {
-    left: 50%;
-    top: size(658);
-    transform: translateX(-50%);
-    width: size(1900);
-  }
 
   .info {
-    position: absolute;
-    width: size(468);
-    left: size(225);
-    top: size(370);
-    text-align: left;
-    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: size(67);
 
     .t1 {
-      font-weight: 800;
+      font-weight: 700;
       font-size: size(40);
-      line-height: 70%;
-      color: #fff;
-      margin-bottom: size(25);
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+      line-height: size(58);
+      letter-spacing: 0.07em;
+      margin-bottom: size(30);
     }
 
     .t2 {
-      font-weight: 700;
-      font-size: size(30);
-      line-height: 70%;
-      color: #fff;
-      margin-bottom: size(50);
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .t3 {
       font-weight: 400;
       font-size: size(20);
-      line-height: 150%;
-      letter-spacing: 0.2em;
-      color: #000;
+      line-height: 158%;
+    }
+
+    .brands {
+      margin-left: size(105);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: size(60);
+      row-gap: size(30);
+
     }
   }
 
 
-  .line {
+  .bg {
     position: absolute;
-    width: size(1663);
+    width: size(1534);
     left: 0;
     bottom: 0;
-  }
-
-  .bubbles {
-    position: relative;
-    z-index: 1;
-
-    img {
-      position: absolute;
-      transition: all .8s;
-      border-radius: 50%;
-
-      &.active {
-        width: size(1330);
-        left: size(840);
-        top: 0;
-      }
-
-      &.next {
-        width: size(700);
-        filter: grayscale(100%);
-        left: 0;
-        top: size(728);
-      }
-
-      &.prev {
-        width: size(330);
-        filter: grayscale(100%);
-        left: 0;
-        top: 0;
-      }
-    }
   }
 }
 
@@ -124,81 +73,6 @@
 
   .s9 {
     overflow: hidden;
-    width: 100%;
-    height: size-m(664);
-    background-color: #EC9700;
-    
-
-    .splide__arrows {
-      left: 50%;
-      top: 55%;
-      transform: translateX(-50%) translateY(-50%);
-      width: 100%;
-    }
-
-    .info {
-      position: absolute;
-      width: size-m(310);
-      left: size-m(35);
-      top: size-m(165);
-      text-align: left;
-      pointer-events: none;
-
-      .t1 {
-        font-size: size-m(25);
-        line-height: 160%;
-        margin-bottom: size-m(0);
-      }
-
-      .t2 {
-        font-size: size-m(19);
-        line-height: 160%;
-        margin-bottom: size-m(15);
-      }
-
-      .t3 {
-        font-size: size-m(15);
-        line-height: 160%;
-        letter-spacing: 0;
-        
-      }
-    }
-
-
-    .line {
-      position: absolute;
-      width: size-m(375);
-      left: 0;
-      bottom: 0;
-    }
-
-    .bubbles {
-      position: relative;
-      z-index: 1;
-
-      img {
-        position: absolute;
-        transition: all .8s;
-
-        &.active {
-          width: size-m(375);
-          left: size-m(57);
-          top: size-m(353);
-        }
-
-        &.next {
-          width: size-m(122);
-          left: size-m(224);
-          top: size-m(17);
-        }
-
-        &.prev {
-          width: size-m(102);
-          left: -#{size-m(56)};
-          top: size-m(547);
-        }
-      }
-    }
   }
 }
 </style>

@@ -1,31 +1,27 @@
 <template>
-  <div class="s8 relative bg-black">
-    <Splide ref="splide" :options="{
-      rewind: true,
-      autoWidth: true,
-      arrows: false,
-      type: 'fade',
-      autoplay: true,
-      interval: 4000,
-    }" @splide:move="move" class="slide-box absolute z-10">
-      <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
-        <div class="caption z-10">{{ img.caption }}</div>
-      </SplideSlide>
-    </Splide>
-    <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
-      <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-        <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
-      </button>
-      <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-        <img src="@/assets/next.svg" alt="心仝聚" srcset="">
-      </button>
+  <div class="s8 relative">
+    <div class="flex items-end h-full z-10 relative">
+
+      <lazy-component>
+        <img class="plan" src="@/section/s8/plan.png" alt="" srcset="">
+      </lazy-component>
+
+      <div class="info">
+        <div class="t1">高坪效格局 幸福的極致展演</div>
+        <div class="t2">單層三併、戶戶客廳面寬均3米、臥室採光無暗房，<br>
+          皆可放得下雙人床與衣櫥書桌，結合陽台空間，<br>
+          保持室內清新乾爽，同時完美區分公私領域，<br>
+          不僅提升空間機能使用性，更放大生活享受！</div>
+        <div class="vr">
+          <p>A3 樣品屋<br>
+            VR 720 實境觀看</p>
+        </div>
+      </div>
     </div>
-    <div class="info z-20">
-      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">樂活水岸</div>
-      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">一家人專屬的幸福流域</div>
-      <div class="t3" data-aos="fade" data-aos-delay="400">
-        晨間，呼吸著新鮮空氣，沿溪畔步道自在慢跑；日暮時分，悠閒漫步堤岸，夕照中遠眺大屯山群峰，享受都市中少有、與自然零距離的舒心日常。</div>
-    </div>
+    <lazy-component>
+
+      <img class="cloud" src="@/section/s8/cloud.png" alt="" srcset="">
+    </lazy-component>
   </div>
 </template>
 
@@ -35,120 +31,78 @@
 .s8 {
   width: 100%;
   height: size(1080);
-  background-color: #EC9700;
+  background: linear-gradient(90deg, #E0E0E0 0%, #FFFFFF 50.21%, #E0E0E0 99.37%);
+  padding: 0 size(165);
+  padding-bottom: size(113);
 
-  .slide-box {
+  .cloud {
     position: absolute;
-    top: size(260);
-    width: size(1920);
-    height: size(700);
+    width: size(1026.85);
+    left: -#{size(31)};
+    top: -#{size(112)};
 
-    .splide__track {
-      z-index: 10;
-    }
-
-    .slide {
-      width: size(1920);
-      height: size(700);
-      background-size: cover;
-      position: relative;
-
-      .caption {
-        position: absolute;
-        font-size: size(12);
-        font-weight: 350;
-        color: #fff;
-        bottom: size(10);
-        right: size(20);
-      }
-    }
-
-    .splide__pagination {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: size(20);
-      z-index: 20;
-      gap: size(7.5);
-
-      li {
-        height: size(20);
-        margin-bottom: size(10);
-
-        .splide__pagination__page {
-          width: size(15);
-          height: size(15);
-          border-radius: 100%;
-          background: rgba($color: #fff, $alpha: 0.5);
-
-          &.is-active {
-            background: rgba($color: #fff, $alpha: 1);
-          }
-        }
-      }
-    }
   }
 
-  .splide__arrows {
-    left: 50%;
-    top: size(610);
-    transform: translateX(-50%);
-    width: size(1900);
+  .plan {
+    width: size(930);
+    margin-right: size(100);
   }
 
   .info {
-    position: absolute;
-    width: size(800);
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    top: size(50);
-    pointer-events: none;
-
     .t1 {
-      font-weight: 800;
       font-size: size(40);
-      line-height: 70%;
-      color: #fff;
-      margin-bottom: size(25);
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      margin-bottom: size(35);
     }
 
     .t2 {
-      font-weight: 700;
-      font-size: size(30);
-      line-height: 70%;
-      color: #fff;
-      margin-bottom: size(50);
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .t3 {
-      font-weight: 400;
       font-size: size(20);
-      line-height: 150%;
-      letter-spacing: 0.2em;
-      color: #000;
+      font-weight: 400;
+      line-height: 158%;
+      margin-bottom: size(75);
+
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      width: size(150);
-      height: 1px;
-      background-color: #000;
-      left: 0;
-      top: size(20);
-    }
+    .vr {
+      position: relative;
+      width: size(547);
+      height: size(460);
+      background-image: url('@/section/s8/vr-preview.jpg');
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
 
-    &::after {
-      content: '';
-      position: absolute;
-      width: size(150);
-      height: 1px;
-      background-color: #000;
-      right: 0;
-      top: size(20);
+      p {
+        font-weight: 700;
+        font-size: size(40);
+        line-height: size(58);
+        text-align: center;
+        letter-spacing: 0.07em;
+        color: #fff;
+        z-index: 1;
+        position: relative;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background-color: rgba($color: #000000, $alpha: .5);
+        transition: all .5s;
+      }
+
+      &:hover {
+
+        &::after {
+          background-color: rgba($color: #000000, $alpha: .2);
+        }
+      }
     }
   }
 }
@@ -158,95 +112,7 @@
 
   .s8 {
     width: 100%;
-    height: size-m(570);
-    background-color: #EC9700;
 
-    .slide-box {
-      position: absolute;
-      top: size-m(270);
-      width: size-m(375);
-      height: size-m(250);
-
-      .splide__track {
-        z-index: 10;
-      }
-
-      .slide {
-        width: size-m(375);
-        height: size-m(250);
-
-        .caption {
-          font-size: size-m(12);
-          bottom: size-m(10);
-          left: size-m(20);
-        }
-      }
-
-      .splide__pagination {
-        display: none;
-      }
-    }
-
-    .splide__arrows {
-      left: 50%;
-      top: size-m(400);
-      transform: translateX(-50%);
-      width: size-m(375);
-    }
-
-    .info {
-      position: absolute;
-      width: size-m(375);
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      top: size-m(60);
-      pointer-events: none;
-      padding: 0 size-m(20);
-
-      .t1 {
-        font-weight: 800;
-        font-size: size-m(25);
-        line-height: 160%;
-        margin-bottom: size-m(0);
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-      }
-
-      .t2 {
-        font-weight: 700;
-        font-size: size-m(19);
-        line-height: 160%;
-        margin-bottom: size-m(10);
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-      }
-
-      .t3 {
-        font-weight: 400;
-        font-size: size-m(15);
-        line-height: 160%;
-        letter-spacing: 0;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: size-m(90);
-        height: 1px;
-        background-color: #000;
-        left: size-m(20);
-        top: size-m(20);
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        width: size-m(90);
-        height: 1px;
-        background-color: #000;
-        right: size-m(20);
-        top: size-m(20);
-      }
-    }
   }
 
 }
@@ -254,27 +120,4 @@
 
 <script setup>
 import { ref, getCurrentInstance } from "vue"
-const splide = ref();
-
-const currentIdx = ref(0)
-
-const move = (newIdx, prevIdx, destIdx) => {
-  currentIdx.value = prevIdx
-}
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const imgs = ref([
-  {
-    img: globals.$isMobile() ? new URL("../section/s8/1_m.jpg", import.meta.url).href : new URL("../section/s8/1.jpg", import.meta.url).href,
-    caption: '雙溪河濱公園'
-  },
-  {
-    img: globals.$isMobile() ? new URL("../section/s8/2_m.jpg", import.meta.url).href : new URL("../section/s8/2.jpg", import.meta.url).href,
-    caption: '21號河濱公園'
-  },
-  {
-    img: globals.$isMobile() ? new URL("../section/s8/3_m.jpg", import.meta.url).href : new URL("../section/s8/3.jpg", import.meta.url).href,
-    caption: '情境示意圖'
-  },
-])
 </script>

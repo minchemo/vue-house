@@ -1,30 +1,37 @@
 <template>
-  <div class="s4 relative bg-black">
-    <div class="flex flex-col-reverse md:flex-row justify-between h-full">
-      <lazy-component class="img" data-aos="fade" data-aos-delay="500">
-        <img v-if="!$isMobile()" class="w-full h-full" src="@/section/s4/bg.jpg" alt="心仝聚" srcset="" />
-        <img v-else class="w-full h-full" src="@/section/s4/bg_m.jpg" alt="心仝聚" srcset="" />
-      </lazy-component>
-      <div class="info">
-        <div class="info-box flex flex-col items-center justify-center">
-          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">仝</div>
-          <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="100">
-            中文讀音同「同」<br><br v-if="!$isMobile()">
-            台語讀音「kâng」
-          </div>
-          <div class="t3" data-aos="fade" data-aos-delay="200">仝，是凝聚、溫情、信任，也是人與人、與屋、與地的美好關係。<br><br
-              v-if="$isMobile()" />
-            仝，是&，是+，是1+1>2的共好共榮。
-          </div>
-          <img class="logo" src="@/section/s4/logo.png" alt="心仝聚" srcset="" data-aos="fade" data-aos-delay="300">
-          <div class="t4" data-aos="fade" data-aos-delay="400">隆遠相信，不論科技通訊的如何變化，關係與溫度的重要性超越物質，是我們之所以感到快樂的真正核心。
-          </div>
-          <div class="t5" data-aos="fade" data-aos-delay="500">
-            讓我，成為我們；<br />
-            讓家，成為家園。
-          </div>
-        </div>
+  <div class="s4 relative bg-white">
+    <div class="flex flex-col md:flex-row items-end justify-between h-full">
+      <Splide ref="splide" :options="{
+        rewind: true,
+        autoWidth: true,
+        arrows: false,
+        type: 'fade',
+        autoplay: true,
+        interval: 4000,
+      }" @splide:move="move" class="slide-box absolute z-10">
+        <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
+          <div class="caption">{{ img.caption }}</div>
+        </SplideSlide>
+      </Splide>
+      <div v-if="$isMobile()" class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
+        <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
+          <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
+        </button>
+        <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
+          <img src="@/assets/next.svg" alt="心仝聚" srcset="">
+        </button>
       </div>
+      <lazy-component class="info">
+        <img class="title" src="@/section/s4/title.svg" alt="" srcset="">
+        <div class="info-box">
+          <div class="t1">大台北與國際間 輕盈穿梭</div>
+          <div class="t2">「公園漾」約550米三和國中站、約650米徐匯中學站<br>
+            環狀線Y21站預計2029年完工<br>
+            四站就到台北與機場捷運A3站<br>
+            完美串聯大台北與國際生活版圖！</div>
+        </div>
+        <img class="route" src="@/section/s4/route.png" alt="" srcset="">
+      </lazy-component>
     </div>
   </div>
 </template>
@@ -34,75 +41,67 @@
 
 .s4 {
   width: 100%;
-  height:100vh;
-  min-height: size(900);
-  max-height: size(1080);
+  height: size(1080);
 
-  .img {
-    flex-basis: size(800);
-    img{object-fit: cover;}
+  .slide-box {
+    flex-basis: size(1158);
+    height: size(921);
+
+    .splide__track {
+      z-index: 10;
+    }
+
+    .slide {
+      width: size(1158);
+      height: size(921);
+      background-size: cover;
+
+      .caption {
+        position: absolute;
+        font-size: size(20);
+        color: #231815;
+        bottom: size(25);
+        left: size(50);
+      }
+    }
+
   }
 
   .info {
-    flex-basis: size(1120);
-    height:100%;
-    padding: 4% size(99);
+    flex-basis: size(762);
+
+    .title {
+      width: size(463.01);
+      margin-bottom: -#{size(100)};
+      margin-left: size(80);
+    }
 
     .info-box {
       width: 100%;
-      height: 100%;
-      border: 1px solid #D47300;
+      height: size(352.27);
+      background-color: #E1E5E2;
+      padding: size(100) size(70);
+      color: #231815;
 
       .t1 {
-        color: #D47300;
-        font-size: size(96);
-        font-weight: 800;
-        margin-bottom: size(56);
-        margin-top: -2vw;
+        font-weight: 700;
+        font-size: size(40);
+        margin-bottom: size(15);
+
+        letter-spacing: 0.07em;
       }
 
       .t2 {
-        color: #D47300;
-        font-size: size(40);
-        font-weight: 800;
-        line-height: size(28);
-        margin-bottom: size(51);
-      }
-
-      .t3 {
-        color: #fff;
-        font-size: size(20);
         font-weight: 400;
-        line-height: size(30);
-        text-align: center;
-        letter-spacing: 0.2em;
-        margin-bottom: size(83);
-      }
-
-      .logo {
-        width: size(150);
-        margin-bottom: size(38);
-      }
-
-      .t4 {
-        color: #fff;
         font-size: size(20);
-        font-weight: 400;
-        line-height: size(30);
-        text-align: left;
-        letter-spacing: 0.2em;
-        width: size(594);
-        margin-bottom: size(56);
+        line-height: 158%;
       }
+    }
 
-      .t5 {
-        color: #fff;
-        font-size: size(20);
-        font-weight: 400;
-        line-height: size(30);
-        text-align: center;
-        letter-spacing: 0.2em;
-      }
+    .route {
+      margin-top: size(45);
+      margin-bottom: size(247);
+      width: size(612);
     }
   }
 }
@@ -112,72 +111,59 @@
 
   .s4 {
     width: 100%;
-    height: size-m(1050);
-  min-height:size-m(1050);
-  max-height: size-m(1050);
+    height: size-m(1037);
 
-    .img {
-      flex-basis: size-m(346);
-    }
-
-    .info {
-      flex-basis: size-m(704);
+    .slide-box {
+      flex-basis: size-m(310);
       height: auto;
-      padding: size-m(40) size-m(15);
+      width: 100%;
 
-      .info-box {
-        width: 100%;
-        height: 100%;
-        border: 1px solid #D47300;
-        padding: 0 size-m(20);
+      .splide__track {
+        z-index: 10;
+      }
 
-        .t1 {
-          color: #D47300;
-          font-size: size-m(50);
-          margin-bottom: size-m(10);
-        }
-
-        .t2 {
-          font-size: size-m(25);
-          font-weight: 800;
-          line-height: 160%;
-          margin-bottom: size-m(10);
-        }
-
-        .t3 {
-          font-size: size-m(15);
-          font-weight: 400;
-          line-height: 160%;
-          text-align: center;
-          letter-spacing: unset;
-          margin-bottom: size-m(50);
-        }
-
-        .logo {
-          width: size-m(110);
-          margin-bottom: size-m(25);
-        }
-
-        .t4 {
-          font-size: size-m(15);
-          line-height: 160%;
-          text-align: center;
-          letter-spacing: unset;
-          width: 100%;
-          margin-bottom: size-m(30);
-        }
-
-        .t5 {
-          font-size: size-m(15);
-          line-height: 160%;
-          text-align: center;
-          letter-spacing: unset;
-        }
+      .slide {
+        width: size-m(375);
+        height: size-m(310);
       }
     }
+
+    .splide__arrows {
+      left: unset;
+      right: 0;
+      top: 85%;
+      transform: translateY(-50%);
+      width: size-m(375);
+    }
   }
+
 }
 </style>
 
 <script setup>
+import { ref, getCurrentInstance } from "vue"
+import AOS from 'aos';
+
+const splide = ref();
+
+const currentIdx = ref(0)
+
+const move = (newIdx, prevIdx, destIdx) => {
+  currentIdx.value = prevIdx
+  AOS.refresh();
+}
+
+
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const imgs = ref([
+  {
+    img: globals.$isMobile() ? new URL("../section/s4/1_m.jpg", import.meta.url).href : new URL("../section/s4/1.jpg", import.meta.url).href,
+    caption: '三和國中站實景圖'
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s4/2_m.jpg", import.meta.url).href : new URL("../section/s4/2.jpg", import.meta.url).href,
+    caption: '三和國中站'
+  },
+])
 </script>
