@@ -12,7 +12,7 @@
     height: 100vh;
     min-height: size(1080);
     position: fixed;
-    z-index: 10000;
+    z-index: 100;
     top: 0;
     left: 0;
     pointer-events: none;
