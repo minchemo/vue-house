@@ -263,6 +263,7 @@
       letter-spacing: 0.25em;
       line-height: 15px;
       text-align: center;
+      white-space: nowrap;
 
       span {
         writing-mode: horizontal-tb;
