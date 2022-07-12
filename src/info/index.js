@@ -1,4 +1,4 @@
-const caseName = "心仝聚"
+const caseName = "公園漾"
 
 export default {
     meta: {
@@ -6,21 +6,19 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "台北市北投區文林北路&75巷口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1074.1208194112244!2d121.51588148497574!3d25.10533467160406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad37c45734e3%3A0xb4e838c6893d1db5!2z5b-D5Lud6IGa!5e0!3m2!1szh-TW!2stw!4v1656865081145!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/Xu64EqVYJTcD715U6",
-    phone: "02-28271688",
-    fbLink: "https://www.facebook.com/100936009224362/",
-    fbMessage: "https://m.me/100936009224362/",
+    address: "新北市蘆洲區中山一路101號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.3534413295138!2d121.47463241509755!3d25.081294483950224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8cf01bf4cc1%3A0xaa4b3d06773384df!2zMjQ35paw5YyX5biC6JiG5rSy5Y2A5Lit5bGx5LiA6LevMTAx6Jmf!5e1!3m2!1szh-TW!2stw!4v1657607129886!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/BJMYJJocDjnAtXBF7",
+    phone: "02-22850528",
+    fbLink: "",
+    fbMessage: "",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "隆雲股份有限公司"],
-        ["基地面積", "524.8坪"],
-        ["結構設計", "Alfa Safe耐震工法 戴雲發結構設計師事務所"],
-        ["公設比", "約31%"],
-        ["建築設計", "黃烱祥建築師事務所"],
-        ["戶數規劃", "76戶"],
-        ["公設規劃", "元澤設計"],
+        ["投資興建", "鋒勳建設股份有限公司"],
+        ["建築設計", "大序建築師事務所"],
+        ["建照號碼", "111重建字第00019號"],
+        ["企劃行銷", "鈞驛行銷團隊"],
+        ["經  紀  人", "林倩汝(104)桃市經字第001484號"],
     ],
     gtmCode: ["PRS6QJS"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",

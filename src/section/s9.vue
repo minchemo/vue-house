@@ -3,20 +3,21 @@
     <div class="info">
       <div>
         <div class="t1">名品建材 用心呵護最愛的家人</div>
-        <div class="t2">網羅知名品牌建材，為您打造最舒適的家居感受，<br>
+        <div class="t2">網羅知名品牌建材，為您打造最舒適的家居感受，<br v-if="!$isMobile()">
           並提供客製化木地板顏色挑選，讓您在自己的國度做主！</div>
       </div>
-      <div class="brands">
-        <img src="@/section/s9/1.png" alt="" srcset="">
-        <img src="@/section/s9/2.png" alt="" srcset="">
-        <img src="@/section/s9/3.png" alt="" srcset="">
-        <img src="@/section/s9/4.png" alt="" srcset="">
-        <img src="@/section/s9/5.png" alt="" srcset="">
-        <img src="@/section/s9/6.png" alt="" srcset="">
+      <div class="brands" data-aos="zoom-in" data-aos-delay="0">
+        <img src="@/section/s9/1.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="0">
+        <img src="@/section/s9/2.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="100">
+        <img src="@/section/s9/3.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
+        <img src="@/section/s9/4.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="300">
+        <img src="@/section/s9/5.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="400">
+        <img src="@/section/s9/6.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="500">
       </div>
     </div>
     <lazy-component>
-      <img class="bg" src="@/section/s9/bg.png" alt="" srcset="">
+      <img v-if="!$isMobile()" class="bg" src="@/section/s9/bg.png" alt="" srcset="">
+      <img v-else class="bg" src="@/section/s9/bg_m.png" alt="" srcset="">
     </lazy-component>
   </div>
 </template>
@@ -56,6 +57,10 @@
       column-gap: size(60);
       row-gap: size(30);
 
+      img {
+        width: size(263);
+      }
+
     }
   }
 
@@ -73,43 +78,43 @@
 
   .s9 {
     overflow: hidden;
+    width: 100%;
+    height: size-m(667);
+
+    .info {
+      flex-direction: column;
+      margin-top: size-m(35);
+      padding: 0 size-m(35);
+
+      .t1 {
+        font-size: size-m(20);
+        margin-bottom: size-m(25);
+      }
+
+      .t2 {
+        font-size: size-m(14);
+      }
+
+      .brands {
+        margin-top: size-m(30);
+        margin-left: unset;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: size-m(30);
+        row-gap: size-m(27);
+
+        img {
+          width: size-m(140);
+        }
+
+      }
+    }
+
+
+    .bg {
+      width: 100%;
+    }
   }
 }
 </style>
 
-<script setup>
-import { ref, getCurrentInstance } from "vue"
-
-const activeImg = ref(1);
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const swipeHandler = (e) => {
-  if (e == 'right') {
-    prev()
-  } else {
-    next()
-  }
-}
-
-const next = () => {
-  if (activeImg.value - 1 == 0) {
-    activeImg.value = 3
-  } else {
-    activeImg.value--
-  }
-}
-const prev = () => {
-  if (activeImg.value + 1 == 4) {
-    activeImg.value = 1
-  } else {
-    activeImg.value++
-  }
-}
-
-setInterval(() => {
-
-  if (globals.$isMobile()) prev()
-  else next()
-
-}, 4000);
-</script>
+<script setup></script>

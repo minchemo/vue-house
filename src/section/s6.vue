@@ -1,12 +1,13 @@
 <template>
   <div class="s6 relative bg-white">
-    <div class="flex flex-col md:flex-row-reverse items-end justify-between h-full">
+    <div class="flex flex-col md:flex-row-reverse items-center md:items-end justify-center md:justify-between h-full">
       <lazy-component class="info">
-        <img class="title" src="@/section/s6/title.svg" alt="" srcset="">
-        <div class="info-box">
+        <img v-if="!$isMobile()" class="relative z-10 title" src="@/section/s6/title.svg" alt="" srcset="">
+        <img v-else class="title relative z-10" src="@/section/s6/title_m.svg" alt="" srcset="">
+        <div class="info-box" data-aos="zoom-in" data-aos-delay="0">
           <div class="t1">全能生活無可挑剔 便利滿分</div>
-          <div class="t2">幸福商圈、徐匯中學商圈、蘆洲中山路商圈就近擁抱<br>
-            永福派出所24H安心守護<br>
+          <div class="t2">幸福商圈、徐匯中學商圈、蘆洲中山路商圈就近擁抱<br v-if="!$isMobile()">
+            永福派出所24H安心守護<br v-if="!$isMobile()">
             「公園漾」坐擁三蘆最好的中心點，食衣住行與居安全滿足！</div>
         </div>
       </lazy-component>
@@ -24,10 +25,10 @@
       </Splide>
       <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
         <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-          <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
+          <img src="@/assets/prev.svg" alt="公園漾" srcset="">
         </button>
         <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-          <img src="@/assets/next.svg" alt="心仝聚" srcset="">
+          <img src="@/assets/next.svg" alt="公園漾" srcset="">
         </button>
       </div>
     </div>
@@ -138,29 +139,67 @@
 
   .s6 {
     width: 100%;
-    height: size-m(1037);
+    height: size-m(667);
+    padding-bottom: 0;
 
     .slide-box {
-      flex-basis: size-m(310);
-      height: auto;
-      width: 100%;
-
-      .splide__track {
-        z-index: 10;
-      }
+      flex-basis: size-m(375);
+      height: size-m(336);
+      margin-right: 0;
 
       .slide {
         width: size-m(375);
-        height: size-m(310);
+        height: size-m(336);
+
+        .caption {
+          font-size: size-m(12);
+          bottom: size-m(10);
+          right: size-m(20);
+        }
+      }
+
+      .splide__pagination {
+        display: none;
       }
     }
 
     .splide__arrows {
+      right: size-m(16);
+      top: size-m(466);
       left: unset;
-      right: 0;
-      top: 85%;
-      transform: translateY(-50%);
-      width: size-m(375);
+      width: size-m(344);
+    }
+
+    .info {
+      flex-basis: auto;
+
+      .title {
+        width: size-m(241);
+        margin-bottom: -#{size-m(35)};
+        margin-left: size-m(20);
+      }
+
+      .info-box {
+        width: size-m(357);
+        height: size-m(183);
+        background-color: #E1E5E2;
+        padding-left: size-m(30);
+        padding-right: size-m(30);
+        padding-top: size-m(38);
+        margin-bottom: size-m(15);
+        color: #231815;
+
+        .t1 {
+          font-size: size-m(20);
+          margin-bottom: size-m(15);
+        }
+
+        .t2 {
+          font-size: size-m(14);
+          line-height: 158%;
+        }
+      }
+
     }
   }
 

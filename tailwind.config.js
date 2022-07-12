@@ -4,8 +4,8 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                color1: "#D47300", //更換主色
-                color2: "#C14D33", //更換副色
+                color1: "#A3B7AF", //更換主色
+                color2: "#3E3A39", //更換副色
             },
         },
     },

@@ -1,15 +1,12 @@
   <template>
-  <div class="order relative bg-[#EC9700] text-center">
+  <div class="order relative bg-[#469B6D] text-center">
     <!-- Title -->
     <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
     <!-- Title Image -->
-    <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="心仝聚" srcset=""
+    <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="公園漾" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="心仝聚" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="公園漾" srcset="" data-aos="fade"
       data-aos-duration="1000">
-    <!-- Decor -->
-    <img v-if="$isMobile()" class="order-title-decor" src="@/section/form/decor_m.svg" alt="心仝聚" srcset="">
-    <img v-else class="order-title-decor" src="@/section/form/decor.svg" alt="心仝聚" srcset="">
 
     <!-- Form -->
     <div class="form mx-auto relative flex items-start justify-center">
@@ -78,7 +75,7 @@
 
 .order {
   width: 100%;
-  padding-top: size(150);
+  padding-top: size(50);
 
   .order-title {
     font-size: size(43);
@@ -88,17 +85,9 @@
 
   .order-title-img {
     display: block;
-    width: size(926);
+    width: size(859);
     margin: 0 auto;
-    margin-bottom: size(150);
-  }
-
-  .order-title-decor {
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    top: size(150);
+    margin-bottom: size(40);
   }
 
   .form {
@@ -128,13 +117,15 @@
     font-size: size(22);
     letter-spacing:0.9em;
     text-indent:0.9em;
-    color: #fff;
-    background-color: #C14D33;
+    color: #231815;
+    background-color: #fff;
     width: size(350);
     height:3.3em;
     line-height: 3.3;
     border: 0;
     border-radius:1.6em;
+    z-index: 10;
+    position: relative;
   }
   .control{
     font-size: size(16);
@@ -147,7 +138,7 @@
   .order {
     width: 100%;
     // border-radius: size-m(68) size-m(68) 0 0;
-    padding-top: size-m(140);
+    padding-top: size-m(40);
     margin-top: size-m(0);
 
     .order-title {
@@ -157,18 +148,9 @@
     }
 
     .order-title-img {
-      width: size-m(296);
-      margin-bottom: size-m(50);
+      width: size-m(208);
+      margin-bottom: size-m(20);
     }
-
-    .order-title-decor {
-      position: absolute;
-      width: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-    }
-
 
     .form {
       width: size-m(310);

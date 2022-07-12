@@ -1,14 +1,15 @@
 <template>
   <div class="s5 relative bg-white">
-    <div class="flex flex-col md:flex-row items-end justify-between h-full">
-      <lazy-component class="info">
-        <img class="title" src="@/section/s5/title.svg" alt="" srcset="">
-        <div class="info-box">
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-center md:justify-between h-full">
+      <div class="info">
+        <img v-if="!$isMobile()" class="title relative z-10" src="@/section/s5/title.svg" alt="" srcset="">
+        <img v-else class="title relative z-10" src="@/section/s5/title_m.svg" alt="" srcset="">
+        <div class="info-box" data-aos="zoom-in" data-aos-delay="0">
           <div class="t1">9年國教一次到位 親子雙贏</div>
-          <div class="t2">永福托兒所為鄰，永福國小、三和中學、徐匯中學漫步上學<br>
+          <div class="t2">永福托兒所為鄰，永福國小、三和中學、徐匯中學漫步上學<br v-if="!$isMobile()">
             學齡前教育&9年國教無縫接軌，陪伴孩子成長，幸福零距離！</div>
         </div>
-      </lazy-component>
+      </div>
       <Splide ref="splide" :options="{
         rewind: true,
         autoWidth: true,
@@ -23,10 +24,10 @@
       </Splide>
       <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
         <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-          <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
+          <img src="@/assets/prev.svg" alt="公園漾" srcset="">
         </button>
         <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-          <img src="@/assets/next.svg" alt="心仝聚" srcset="">
+          <img src="@/assets/next.svg" alt="公園漾" srcset="">
         </button>
       </div>
     </div>
@@ -43,9 +44,26 @@
   padding-bottom: size(70);
 
   .slide-box {
+    position: relative;
     flex-basis: size(1028);
     height: size(920);
     margin-right: size(30);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: size(1028);
+      height: size(920);
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-image: url('@/section/other.gif');
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
 
     .splide__track {
       z-index: 10;
@@ -146,29 +164,72 @@
 
   .s5 {
     width: 100%;
-    height: size-m(1037);
+    height: size-m(667);
+    padding-bottom: 0;
 
     .slide-box {
-      flex-basis: size-m(310);
-      height: auto;
-      width: 100%;
+      flex-basis: size-m(375);
+      height: size-m(336);
+      margin-right: 0;
 
-      .splide__track {
-        z-index: 10;
+      &::after {
+        width: size-m(375);
+        height: size-m(336);
       }
 
       .slide {
         width: size-m(375);
-        height: size-m(310);
+        height: size-m(336);
+
+        .caption {
+          font-size: size-m(12);
+          bottom: size-m(10);
+          right: size-m(20);
+        }
+      }
+
+      .splide__pagination {
+        display: none;
       }
     }
 
     .splide__arrows {
+      right: size-m(16);
+      top: size-m(466);
       left: unset;
-      right: 0;
-      top: 85%;
-      transform: translateY(-50%);
-      width: size-m(375);
+      width: size-m(344);
+    }
+
+    .info {
+      flex-basis: auto;
+
+      .title {
+        width: size-m(241);
+        margin-bottom: -#{size-m(65)};
+        margin-left: size-m(20);
+      }
+
+      .info-box {
+        width: 100%;
+        height: size-m(183);
+        background-color: #E1E5E2;
+        padding-left: size-m(30);
+        padding-right: size-m(30);
+        padding-top: size-m(38);
+        margin-bottom: size-m(27);
+        color: #231815;
+
+        .t1 {
+          font-size: size-m(20);
+          margin-bottom: size-m(15);
+        }
+
+        .t2 {
+          font-size: size-m(14);
+          line-height: 158%;
+        }
+      }
+
     }
   }
 

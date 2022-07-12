@@ -1,5 +1,5 @@
 <template>
-    <div class="gmap">
+    <div class="gmap relative z-10">
         <iframe :src="info.googleSrc" frameborder="0"></iframe>
     </div>
 </template>
@@ -21,7 +21,7 @@
 @media screen and (max-width:768px) {
     .gmap {
         height: size-m(354);
-        margin-top: size-m(50);
+        margin-top: 0;
     }
 }
 </style>

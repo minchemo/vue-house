@@ -1,6 +1,6 @@
 <template>
   <div class="s4 relative bg-white">
-    <div class="flex flex-col md:flex-row items-end justify-between h-full">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-between h-full">
       <Splide ref="splide" :options="{
         rewind: true,
         autoWidth: true,
@@ -13,24 +13,24 @@
           <div class="caption">{{ img.caption }}</div>
         </SplideSlide>
       </Splide>
-      <div v-if="$isMobile()" class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
+      <!-- <div v-if="$isMobile()" class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
         <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-          <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
+          <img src="@/assets/prev.svg" alt="公園漾" srcset="">
         </button>
         <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-          <img src="@/assets/next.svg" alt="心仝聚" srcset="">
+          <img src="@/assets/next.svg" alt="公園漾" srcset="">
         </button>
-      </div>
+      </div> -->
       <lazy-component class="info">
-        <img class="title" src="@/section/s4/title.svg" alt="" srcset="">
-        <div class="info-box">
+        <img class="title z-20 relative" src="@/section/s4/title.svg" alt="" srcset="">
+        <div class="info-box z-0" data-aos="zoom-in" data-aos-delay="0">
           <div class="t1">大台北與國際間 輕盈穿梭</div>
-          <div class="t2">「公園漾」約550米三和國中站、約650米徐匯中學站<br>
-            環狀線Y21站預計2029年完工<br>
-            四站就到台北與機場捷運A3站<br>
+          <div class="t2">「公園漾」約550米三和國中站、約650米徐匯中學站<br v-if="!$isMobile()">
+            環狀線Y21站預計2029年完工<br v-if="!$isMobile()">
+            四站就到台北與機場捷運A3站<br v-if="!$isMobile()">
             完美串聯大台北與國際生活版圖！</div>
         </div>
-        <img class="route" src="@/section/s4/route.png" alt="" srcset="">
+        <img class="route" data-aos="zoom-in" data-aos-delay="400" src="@/section/s4/route.png" alt="" srcset="">
       </lazy-component>
     </div>
   </div>
@@ -111,29 +111,66 @@
 
   .s4 {
     width: 100%;
-    height: size-m(1037);
+    height: size-m(667);
 
     .slide-box {
-      flex-basis: size-m(310);
-      height: auto;
-      width: 100%;
+      flex-basis: 100%;
+      height: size-m(300);
 
-      .splide__track {
-        z-index: 10;
-      }
 
       .slide {
         width: size-m(375);
-        height: size-m(310);
+        height: size-m(300);
+
+        .caption {
+          font-size: size-m(12);
+          bottom: size-m(10);
+          right: size-m(15);
+          left: unset;
+        }
       }
+
     }
 
-    .splide__arrows {
-      left: unset;
-      right: 0;
-      top: 85%;
-      transform: translateY(-50%);
-      width: size-m(375);
+    .info {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-left: auto;
+
+      .title {
+        width: size-m(207);
+        margin-bottom: -#{size-m(45)};
+        margin-left: 0;
+      }
+
+      .info-box {
+        width: size-m(357);
+        height: size-m(184);
+        background-color: #E1E5E2;
+        padding: auto;
+        padding-top: size-m(38);
+        padding-left: size-m(25);
+        padding-right: size-m(31);
+        color: #231815;
+        margin-right: 0;
+        margin-left: auto;
+
+        .t1 {
+          font-size: size-m(20);
+          margin-bottom: size-m(15);
+        }
+
+        .t2 {
+          font-size: size-m(14);
+        }
+      }
+
+      .route {
+        margin-top: size-m(20);
+        margin-bottom: 0;
+        margin-left: size-m(33);
+        width: size-m(310);
+      }
     }
   }
 
