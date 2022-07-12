@@ -417,35 +417,36 @@ import { ref, getCurrentInstance, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const imgs = ref([
   {
+    img: globals.$isMobile() ? new URL("../section/s7/6_m.jpg", import.meta.url).href : new URL("../section/s7/6.jpg", import.meta.url).href,
+    caption: '力行停車場公園實景圖',
+    parallax: 200
+  },
+  {
     img: globals.$isMobile() ? new URL("../section/s7/1_m.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
-    caption: '永福公園實景圖',
+    caption: '永豐公園實景圖',
     parallax: 350
   },
   {
     img: globals.$isMobile() ? new URL("../section/s7/2_m.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
-    caption: '力行停車場公園實景圖',
+    caption: '永盛公園實景圖',
     parallax: 250
   },
   {
     img: globals.$isMobile() ? new URL("../section/s7/3_m.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
-    caption: 'caption3',
+    caption: '力行停車場公園實景圖',
     parallax: 40
   },
   {
     img: globals.$isMobile() ? new URL("../section/s7/4_m.jpg", import.meta.url).href : new URL("../section/s7/4.jpg", import.meta.url).href,
-    caption: 'caption4',
+    caption: '永福公園實景圖',
     parallax: 200
   },
   {
     img: globals.$isMobile() ? new URL("../section/s7/5_m.jpg", import.meta.url).href : new URL("../section/s7/5.jpg", import.meta.url).href,
-    caption: 'caption5',
+    caption: '永福公園實景圖',
     parallax: 100
   },
-  {
-    img: globals.$isMobile() ? new URL("../section/s7/6_m.jpg", import.meta.url).href : new URL("../section/s7/6.jpg", import.meta.url).href,
-    caption: 'caption6',
-    parallax: 200
-  },
+  
 ])
 
 onMounted(() => {

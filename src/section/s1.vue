@@ -9,13 +9,13 @@
       <img v-else class="t3" data-aos="zoom-in" data-aos-delay="400" src="@/section/s1/t3_m.svg" alt="" srcset="">
     </div>
     <div class="leaf">
-      <img v-if="!$isMobile()" class="r" src="@/section/s1/leaf_r.png" alt="" srcset="">
-      <img v-else class="r" src="@/section/s1/leaf_r_m.png" alt="" srcset="">
-      <img v-if="!$isMobile()" class="l" src="@/section/s1/leaf_l.png" alt="" srcset="">
-      <img v-else class="l" src="@/section/s1/leaf_l_m.png" alt="" srcset="">
+      <img v-if="!$isMobile()" class="r" src="@/section/s1/leaf_r.jpg" alt="" srcset="">
+      <img v-else class="r" src="@/section/s1/leaf_r_m.jpg" alt="" srcset="">
+      <img v-if="!$isMobile()" class="l" src="@/section/s1/leaf_l.jpg" alt="" srcset="">
+      <img v-else class="l" src="@/section/s1/leaf_l_m.jpg" alt="" srcset="">
     </div>
     <div class="warn" data-aos="fade" >（冷氣僅贈與室內室外機，不含安裝及管路操作）</div>
-    <img v-if="$isMobile()" @click="scrollTo('.s2')" class="arrow" src="@/section/s1/arrow.png" alt="">
+    <img v-if="$isMobile()" @click="scrollTo('.s2')" class="arrow" src="@/section/s1/arrow.svg" alt="">
   </div>
 </template>
 
@@ -110,6 +110,7 @@
 
       .t1 {
         width: size-m(241);
+        z-index: 3;
       }
 
       .t2 {
