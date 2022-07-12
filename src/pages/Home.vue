@@ -22,10 +22,12 @@
     <S10 />
     <Order />
   </div>
+  <LeafFlow />
 </template>
 
 <script setup>
 import info from "@/info"
+import LeafFlow from "@/section/LeafFlow.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"

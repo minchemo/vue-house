@@ -8,6 +8,8 @@ specifiers:
   daisyui: ^2.15.3
   fs: 0.0.1-security
   html-minifier: ^4.0.0
+  jquery: ^3.6.0
+  jquery.transit: ^0.9.12
   path: ^0.12.7
   postcss: ^8.4.14
   sass: ^1.52.3
@@ -32,6 +34,8 @@ dependencies:
   daisyui: 2.15.3_ugi4xkrfysqkt4c4y6hkyfj344
   fs: 0.0.1-security
   html-minifier: 4.0.0
+  jquery: 3.6.0
+  jquery.transit: 0.9.12_jquery@3.6.0
   path: 0.12.7
   sass: 1.52.3
   swiper: 8.3.0
@@ -2180,6 +2184,18 @@ packages:
       bin-build: 3.0.0
       bin-wrapper: 4.1.0
     dev: true
+
+  /jquery.transit/0.9.12_jquery@3.6.0:
+    resolution: {integrity: sha512-wn2kHOZWBOJOc8ozEPvBPTNF6tCJTAQfRFLfm0H2p3cM7pdbzkKZYGzqmGeYka7yLmQ27ckiddyVzq+/jfbwcA==}
+    peerDependencies:
+      jquery: '*'
+    dependencies:
+      jquery: 3.6.0
+    dev: false
+
+  /jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
+    dev: false
 
   /json-buffer/3.0.0:
     resolution: {integrity: sha512-CuUqjv0FUZIdXkHPI8MezCnFCdaTAacej1TZYulLoAg1h/PhwkdXFN4V/gzY4g+fMBCOV2xF+rp7t2XD2ns/NQ==}

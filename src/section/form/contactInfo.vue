@@ -260,6 +260,7 @@
         padding: 0 size-m(65);
         font-size: size-m(16);
         max-width: 100%;
+        justify-content: space-around;
 
 
         img {

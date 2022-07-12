@@ -7,7 +7,7 @@
         arrows: false,
         type: 'fade',
         autoplay: true,
-        interval: 4000,
+        interval: 2000,
       }" @splide:move="move" class="slide-box absolute z-10">
         <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
           <div class="caption">{{ img.caption }}</div>

@@ -7,7 +7,7 @@ export default {
         keywords: caseName,
     },
     address: "新北市蘆洲區中山一路101號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.3534413295138!2d121.47463241509755!3d25.081294483950224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8cf01bf4cc1%3A0xaa4b3d06773384df!2zMjQ35paw5YyX5biC6JiG5rSy5Y2A5Lit5bGx5LiA6LevMTAx6Jmf!5e1!3m2!1szh-TW!2stw!4v1657607129886!5m2!1szh-TW!2stw",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.6073403782243!2d121.47463241509755!3d25.081294483950224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8cf01bf4cc1%3A0xaa4b3d06773384df!2zMjQ35paw5YyX5biC6JiG5rSy5Y2A5Lit5bGx5LiA6LevMTAx6Jmf!5e0!3m2!1szh-TW!2stw!4v1657617692315!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/BJMYJJocDjnAtXBF7",
     phone: "02-22850528",
     fbLink: "https://www.facebook.com/100952822679571/",

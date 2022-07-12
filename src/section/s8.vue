@@ -29,10 +29,15 @@
       <img v-else class="cloud" src="@/section/s8/cloud_m.png" alt="" srcset="">
     </lazy-component>
   </div>
-  <div class="vr-box" v-bind:class="{ show: vrOpen }">
-    <div class="close" @click="vrOpen = !vrOpen">關閉</div>
-    <iframe src="https://www.eyehouse.co/live?c=c9975336095" frameborder="0"></iframe>
-  </div>
+
+
+  <lazy-component>
+    <div class="vr-box" v-bind:class="{ show: vrOpen }">
+      <div class="close" @click="vrOpen = !vrOpen">關閉</div>
+      <p class="loading">讀取中，請稍候...</p>
+      <iframe src="https://www.eyehouse.co/live?c=c9975336095" frameborder="0"></iframe>
+    </div>
+  </lazy-component>
 </template>
 
 <style lang="scss">
@@ -54,6 +59,13 @@
   justify-content: center;
   padding-bottom: size(100);
 
+  .loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
   &.show {
     transform: translateY(0%);
   }
@@ -62,6 +74,7 @@
     width: 90%;
     height: 85%;
     border-radius: 10px;
+    z-index: 1;
   }
 
   .close {

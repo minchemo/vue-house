@@ -446,7 +446,7 @@ const imgs = ref([
     caption: '永福公園實景圖',
     parallax: 100
   },
-  
+
 ])
 
 onMounted(() => {
@@ -455,6 +455,9 @@ onMounted(() => {
     spaceBetween: 15,
     parallax: true,
     loop: true,
+    autoplay: {
+      delay: 3000,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
