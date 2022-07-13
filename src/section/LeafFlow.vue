@@ -50,7 +50,7 @@ export default {
                 var $flakeContainer = $('#leaf-bg')
                 // 随机六张图
                 function getImagesName() {
-                    return snowflakeURl[[Math.floor(Math.random() * 8)]]
+                    return snowflakeURl[[Math.floor(Math.random() * 20)]]
                 }
                 // 创建一个雪花元素
                 function createSnowBox() {

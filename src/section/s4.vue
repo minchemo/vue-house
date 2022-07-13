@@ -59,9 +59,11 @@
       .caption {
         position: absolute;
         font-size: size(20);
-        color: #231815;
+        color: #fff;
         bottom: size(25);
         left: size(50);
+        text-shadow: 0.1em 0.1em 0.2em black
+
       }
     }
 
@@ -200,7 +202,7 @@ const imgs = ref([
   },
   {
     img: globals.$isMobile() ? new URL("../section/s4/2_m.jpg", import.meta.url).href : new URL("../section/s4/2.jpg", import.meta.url).href,
-    caption: '三和國中站'
+    caption: '徐匯中學站實景圖'
   },
 ])
 </script>
