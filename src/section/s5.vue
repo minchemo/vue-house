@@ -4,9 +4,9 @@
       <div class="info">
         <img v-if="!$isMobile()" class="title relative z-10" src="@/section/s5/title.svg" alt="" srcset="">
         <img v-else class="title relative z-10" src="@/section/s5/title_m.svg" alt="" srcset="">
-        <div class="info-box" data-aos="zoom-in" data-aos-delay="0">
+        <div class="info-box" data-aos="fade-up" data-aos-delay="0">
           <div class="t1">9年國教一次到位 親子雙贏</div>
-          <div class="t2">永福托兒所為鄰，永福國小、三和中學、徐匯中學漫步上學<br v-if="!$isMobile()">
+          <div class="t2">永福托兒所為鄰，永福國小、三和中學、徐匯中學漫步上學<font v-if="!$isMobile()"><br></font> <font v-else>，</font>
             學齡前教育&9年國教無縫接軌，陪伴孩子成長，幸福零距離！</div>
         </div>
       </div>

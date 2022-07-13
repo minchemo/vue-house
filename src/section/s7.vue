@@ -3,9 +3,9 @@
     <div class="t1">
       <img v-if="!$isMobile()" src="@/section/s7/title.svg" alt="" srcset="">
       <img v-else src="@/section/s7/title_m.svg" alt="" srcset="">
-      <div data-aos="zoom-in" data-aos-delay="0">
+      <div data-aos="fade-up" data-aos-delay="0">
         <div class="t2">開窗就是青翠風景 吐納呼吸</div>
-        <div class="t3">永福公園首排、力行停車場公園、永盛公園、永豐公園<br v-if="!$isMobile()">
+        <div class="t3">永福公園首排、力行停車場公園、永盛公園、永豐公園<font v-if="!$isMobile()"><br></font> <font v-else>，</font>
           近2公頃綠意擁簇純正公園宅， 極致收藏，都會的難能可貴！</div>
       </div>
     </div>
@@ -22,7 +22,7 @@
     </div>
 
     <lazy-component>
-      <div class="info" data-aos="zoom-in">
+      <div class="info" data-aos="fade-up">
         <div class="t1">與綠共鳴<br v-if="$isMobile()"> 譜一曲城市中的建築旋律</div>
         <div class="t2">灰白棕沉穩簡約配色，結合石材、玻璃、金屬隔柵，化繁為簡，<br v-if="!$isMobile()">
           並注入當代時尚元素，跳脫周邊建築表情，詮釋鋒勳獨一無二的精品美學，唯您獨有。</div>

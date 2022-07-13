@@ -23,14 +23,14 @@
       </div> -->
       <lazy-component class="info">
         <img class="title z-20 relative" src="@/section/s4/title.svg" alt="" srcset="">
-        <div class="info-box z-0" data-aos="zoom-in" data-aos-delay="0">
+        <div class="info-box z-0" data-aos="fade-up" data-aos-delay="0">
           <div class="t1">大台北與國際間 輕盈穿梭</div>
-          <div class="t2">「公園漾」約550米三和國中站、約650米徐匯中學站<br v-if="!$isMobile()">
-            環狀線Y21站預計2029年完工<br v-if="!$isMobile()">
-            四站就到台北與機場捷運A3站<br v-if="!$isMobile()">
+          <div class="t2">「公園漾」約550米三和國中站、約650米徐匯中學站<font v-if="!$isMobile()"><br></font> <font v-else>，</font>
+            環狀線Y21站預計2029年完工<font v-if="!$isMobile()"><br></font> <font v-else>，</font>
+            四站就到台北與機場捷運A3站<font v-if="!$isMobile()"><br></font> <font v-else>，</font>
             完美串聯大台北與國際生活版圖！</div>
         </div>
-        <img class="route" data-aos="zoom-in" data-aos-delay="400" src="@/section/s4/route.png" alt="" srcset="">
+        <img class="route" data-aos="fade-up" data-aos-delay="400" src="@/section/s4/route.png" alt="" srcset="">
       </lazy-component>
     </div>
   </div>

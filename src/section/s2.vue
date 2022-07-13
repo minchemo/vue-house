@@ -2,7 +2,7 @@
     <div class="s2 relative ">
         <div class="t1 z-10">三重最漾＊<br v-if="$isMobile()">下樓就是千坪公園綠</div>
         <lazy-component>
-            <img class="z-10 absolute logo" data-aos="zoom-in" data-aos-delay="0" src="@/section/s2/logo.svg" alt="" srcset="">
+            <img class="z-10 absolute logo" data-aos="fade-up" data-aos-delay="0" src="@/section/s2/logo.svg" alt="" srcset="">
             <img class="z-10 absolute en" src="@/section/s2/en.png" alt="" srcset="">
             <img class="z-10 absolute logo2" src="@/section/s2/logo_2.png" alt="" srcset="">
         </lazy-component>

@@ -1,8 +1,8 @@
 <template>
   <div class="s10 relative bg-white">
     <div class="info">
-      <div class="t1" data-aos="zoom-in" data-aos-delay="0">正公園宅．17-26坪 精品2房</div>
-      <div class="t2" data-aos="zoom-in" data-aos-delay="200">
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">好漾生活 先卡位享優惠</div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
         貴賓專線：<span>02-2285-0528</span><br>
         接待會館：新北市蘆洲區中山一路101號
       </div>

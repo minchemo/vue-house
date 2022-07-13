@@ -6,13 +6,13 @@
         <div class="t2">網羅知名品牌建材，為您打造最舒適的家居感受，<br v-if="!$isMobile()">
           並提供客製化木地板顏色挑選，讓您在自己的國度做主！</div>
       </div>
-      <div class="brands" data-aos="zoom-in" data-aos-delay="0">
-        <img src="@/section/s9/1.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="0">
-        <img src="@/section/s9/2.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="100">
-        <img src="@/section/s9/3.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
-        <img src="@/section/s9/4.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="300">
-        <img src="@/section/s9/5.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="400">
-        <img src="@/section/s9/6.png" alt="" srcset="" data-aos="zoom-in" data-aos-delay="500">
+      <div class="brands" data-aos="fade-up" data-aos-delay="0">
+        <img src="@/section/s9/1.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
+        <img src="@/section/s9/2.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="100">
+        <img src="@/section/s9/3.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="200">
+        <img src="@/section/s9/4.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="300">
+        <img src="@/section/s9/5.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="400">
+        <img src="@/section/s9/6.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="500">
       </div>
     </div>
     <lazy-component>

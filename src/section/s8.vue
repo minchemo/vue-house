@@ -10,7 +10,7 @@
       <div class="caption">A3傢俱配置參考圖</div>
 
       <div class="info">
-        <div class="t1" data-aos="zoom-in" data-aos-delay="0">高坪效格局 幸福的極致展演</div>
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">高坪效格局 幸福的極致展演</div>
         <div class="t2">單層三併、戶戶客廳面寬均3米、臥室採光無暗房，<br v-if="!$isMobile()">
           皆可放得下雙人床與衣櫥書桌，結合陽台空間，<br v-if="!$isMobile()">
           保持室內清新乾爽，同時完美區分公私領域，<br v-if="!$isMobile()">

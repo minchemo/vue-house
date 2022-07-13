@@ -1,12 +1,12 @@
 <template>
   <div class="s3 relative">
     <lazy-component v-if="$isMobile()">
-      <img class="bg" data-aos="zoom-in" data-aos-delay="0" src="@/section/s3/1_m.png" alt="" srcset="">
+      <img class="bg" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/1_m.png" alt="" srcset="">
       <img class="title z-10" src="@/section/s3/title_m.svg" alt="" srcset="">
     </lazy-component>
 
     <lazy-component v-else> 
-      <img class="bg" data-aos="zoom-in" data-aos-delay="0" src="@/section/s3/1.png" alt="" srcset="">
+      <img class="bg" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/1.png" alt="" srcset="">
       <img class="title z-10" src="@/section/s3/title.svg" alt="" srcset="">
     </lazy-component>
     <div class="info">

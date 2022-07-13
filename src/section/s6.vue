@@ -4,10 +4,10 @@
       <lazy-component class="info">
         <img v-if="!$isMobile()" class="relative z-10 title" src="@/section/s6/title.svg" alt="" srcset="">
         <img v-else class="title relative z-10" src="@/section/s6/title_m.svg" alt="" srcset="">
-        <div class="info-box" data-aos="zoom-in" data-aos-delay="0">
+        <div class="info-box" data-aos="fade-up" data-aos-delay="0">
           <div class="t1">全能生活無可挑剔 便利滿分</div>
-          <div class="t2">幸福商圈、徐匯中學商圈、蘆洲中山路商圈就近擁抱<br v-if="!$isMobile()">
-            永福派出所24H安心守護<br v-if="!$isMobile()">
+          <div class="t2">幸福商圈、徐匯中學商圈、蘆洲中山路商圈就近擁抱<font v-if="!$isMobile()"><br></font> <font v-else>，</font>
+            永福派出所24H安心守護<font v-if="!$isMobile()"><br></font> <font v-else>，</font>
             「公園漾」坐擁三蘆最好的中心點，食衣住行與居安全滿足！</div>
         </div>
       </lazy-component>
