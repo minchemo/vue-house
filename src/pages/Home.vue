@@ -1,4 +1,5 @@
 <template>
+  <div ref="gtmNoScript" />
   <!--loading-->
   <div v-bind:class="{
     'opacity-0': !isLoading,
@@ -45,6 +46,7 @@ import { onMounted, ref } from "vue"
 import AOS from 'aos';
 
 const isLoading = ref(true)
+const gtmNoScript = ref('')
 const config = ref({
   showNav: false
 })
@@ -54,5 +56,6 @@ onMounted(() => {
     isLoading.value = false
     AOS.init();
   };
+
 })
 </script>

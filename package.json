@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gtm-support/vue-gtm": "^1.6.0",
     "@splidejs/vue-splide": "^0.6.7",
     "aos": "^2.3.4",
     "daisyui": "^2.15.3",

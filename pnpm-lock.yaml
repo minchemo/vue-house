@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@gtm-support/vue-gtm': ^1.6.0
   '@splidejs/vue-splide': ^0.6.7
   '@vitejs/plugin-vue': ^2.3.3
   aos: ^2.3.4
@@ -29,6 +30,7 @@ specifiers:
   webpack-cli: ^4.10.0
 
 dependencies:
+  '@gtm-support/vue-gtm': 1.6.0_vue@3.2.37
   '@splidejs/vue-splide': 0.6.7
   aos: 2.3.4
   daisyui: 2.15.3_ugi4xkrfysqkt4c4y6hkyfj344
@@ -81,6 +83,24 @@ packages:
   /@discoveryjs/json-ext/0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
+
+  /@gtm-support/core/1.4.0:
+    resolution: {integrity: sha512-eiAiEdW7DdzDs45pdi+MF/6+OThMZAwwQeMQNcbE0wEGHvbIB/mZ1PiBq4qK7IYDscBKDT/PdnAacY7P/zHIjw==}
+    dev: false
+
+  /@gtm-support/vue-gtm/1.6.0_vue@3.2.37:
+    resolution: {integrity: sha512-Mp814G5hM/KrwiSRl5VJEljGcjyn5I/Wv78RsFpJUKp0W4F8cGh+SmbBAauUOBWmrhIA2OVgsKh7PwTplaf0Dw==}
+    peerDependencies:
+      vue: ^3.0.0
+    peerDependenciesMeta:
+      vue-router:
+        optional: true
+    dependencies:
+      '@gtm-support/core': 1.4.0
+      vue: 3.2.37
+    optionalDependencies:
+      vue-router: 4.0.13_vue@3.2.37
+    dev: false
 
   /@jridgewell/gen-mapping/0.3.1:
     resolution: {integrity: sha512-GcHwniMlA2z+WFPWuY8lp3fsza0I8xPFMWL5+n8LYyP6PSvPrXf4+n8stDHZY2DM0zy9sVkRDy1jDI4XGzYVqg==}
