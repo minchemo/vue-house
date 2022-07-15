@@ -1,17 +1,17 @@
 <template>
   <div class="s3 relative">
     <lazy-component v-if="$isMobile()">
-      <img class="bg" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/1_m.png" alt="" srcset="">
-      <img class="title z-10" src="@/section/s3/title_m.svg" alt="" srcset="">
+      <img class="bg" data-aos="flip-up" data-aos-delay="0" src="@/section/s3/1_m.png" alt="" srcset="">
+      <img class="title z-10" data-aos="zoom-in" src="@/section/s3/title_m.svg" alt="" srcset="">
     </lazy-component>
 
     <lazy-component v-else> 
-      <img class="bg" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/1.png" alt="" srcset="">
-      <img class="title z-10" src="@/section/s3/title.svg" alt="" srcset="">
+      <img class="bg" data-aos="flip-up" data-aos-delay="0" src="@/section/s3/1.png" alt="" srcset="">
+      <img class="title z-10" data-aos="zoom-in" src="@/section/s3/title.svg" alt="" srcset="">
     </lazy-component>
     <div class="info">
-      <div class="t1">慢悠閒/快繁華 輕鬆到位！</div>
-      <div class="t2">要住，就住最好的！「公園漾」掌握三蘆生活所有動靜皆宜，<br v-if="!$isMobile()">出門的便利、回家的寧靜，滿足都會菁英心靈的居住渴望。</div>
+      <div class="t1" data-aos="zoom-in">慢悠閒/快繁華 輕鬆到位！</div>
+      <div class="t2" data-aos="zoom-in" data-aos-delay="200">要住，就住最好的！「公園漾」掌握三蘆生活所有動靜皆宜，<br v-if="!$isMobile()">出門的便利、回家的寧靜，滿足都會菁英心靈的居住渴望。</div>
     </div>
   </div>
 </template>
@@ -26,6 +26,7 @@
 
   .bg {
     width: 100%;
+    transform-origin: 50% 0;
   }
 
   .title {

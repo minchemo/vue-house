@@ -1,15 +1,15 @@
 <template>
   <div class="s1 relative flex flex-col md:flex-row justify-center items-center z-10">
     <div class="text">
-      <img v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="0" class="t1" src="@/section/s1/t1.svg" alt=""
+      <img v-if="!$isMobile()" data-aos="zoom-in" data-aos-delay="0" class="t1" src="@/section/s1/t1.svg" alt=""
         srcset="">
-      <img v-else class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/t1_m.svg" alt="" srcset="">
-      <img v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="200" class="t2" src="@/section/s1/t2.svg" alt=""
+      <img v-else class="t1" data-aos="zoom-in" data-aos-delay="0" src="@/section/s1/t1_m.svg" alt="" srcset="">
+      <img v-if="!$isMobile()" data-aos="zoom-in" data-aos-delay="200" class="t2" src="@/section/s1/t2.svg" alt=""
         srcset="">
-      <img v-else class="t2" data-aos="fade-up" data-aos-delay="200" src="@/section/s1/t2_m.svg" alt="" srcset="">
-      <img v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="400" class="t3" src="@/section/s1/t3.svg" alt=""
+      <img v-else class="t2" data-aos="zoom-in" data-aos-delay="200" src="@/section/s1/t2_m.svg" alt="" srcset="">
+      <img v-if="!$isMobile()" data-aos="zoom-in" data-aos-delay="400" class="t3" src="@/section/s1/t3.svg" alt=""
         srcset="">
-      <img v-else class="t3" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t3_m.svg" alt="" srcset="">
+      <img v-else class="t3" data-aos="zoom-in" data-aos-delay="400" src="@/section/s1/t3_m.svg" alt="" srcset="">
     </div>
     <div class="leaf">
       <img v-if="!$isMobile()" class="r" src="@/section/s1/leaf_r.jpg" alt="" srcset="">
