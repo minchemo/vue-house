@@ -36,7 +36,7 @@
 
 .info-box {
 
-    width: size(680);
+    width: size(900);
 
     .title {
         width: 100%;

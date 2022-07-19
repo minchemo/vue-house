@@ -55,7 +55,7 @@
       @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
     <!-- Send -->
-    <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+    <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration" @click="send()">
       立即預約
     </div>
 

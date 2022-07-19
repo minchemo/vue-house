@@ -71,7 +71,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2 " @click="go()"
         v-bind:class="{ 'hidden': modalType == 'phone' && !$isMobile() }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
             '開啟導航'
