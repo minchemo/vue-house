@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@better-scroll/core': ^2.4.2
   '@gtm-support/vue-gtm': ^1.6.0
   '@splidejs/vue-splide': ^0.6.7
   '@vitejs/plugin-vue': ^2.3.3
@@ -30,6 +31,7 @@ specifiers:
   webpack-cli: ^4.10.0
 
 dependencies:
+  '@better-scroll/core': 2.4.2
   '@gtm-support/vue-gtm': 1.6.0_vue@3.2.37
   '@splidejs/vue-splide': 0.6.7
   aos: 2.3.4
@@ -79,6 +81,16 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
+
+  /@better-scroll/core/2.4.2:
+    resolution: {integrity: sha512-IqVZLnh04YpaEAy9wJDxtFK/stxVQjB9A9Wcr3Uwkj7Av1TtFpin+t/TObl53diNDG5ZJ+vck/OAthphpuugLA==}
+    dependencies:
+      '@better-scroll/shared-utils': 2.4.2
+    dev: false
+
+  /@better-scroll/shared-utils/2.4.2:
+    resolution: {integrity: sha512-Gy/Jfbpu+hq0u+PcjkTqyXGqAf+0dexTzEZ5IDXEVwJVLmd3cx8A73oTcAZ8QZgk4wSHvlMjXecSaptkhnNPEw==}
+    dev: false
 
   /@discoveryjs/json-ext/0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}

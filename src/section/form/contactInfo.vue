@@ -24,9 +24,6 @@
         <div>導航 GoogleMap</div>
       </div>
     </div>
-    <!-- LEAF -->
-    <img v-if="!$isMobile()" class="leaf" src="@/section/form/leaf.png" alt="" srcset="">
-    <img v-else class="leaf" src="@/section/form/leaf_m.png" alt="" srcset="">
 
   </div>
 
@@ -91,26 +88,6 @@
   padding: size(55) size(168) size(55) size(168);
   margin-top: size(60);
   position: relative;
-
-
-  .leaf {
-    position: absolute;
-    left: -#{size(400)};
-    bottom: -#{size(60)};
-    width: size(541);
-    animation: ani2 5s infinite alternate-reverse ease-in-out;
-    transform-origin: bottom left;
-
-    @keyframes ani {
-      from {
-        transform: skewX(5deg);
-      }
-
-      to {
-        transform: skewX(0deg);
-      }
-    }
-  }
 
   .logo {
     width: size(311.13);
@@ -223,25 +200,6 @@
     margin-top: size-m(60);
     position: relative;
     justify-content: flex-start;
-
-    .leaf {
-      position: absolute;
-      left: -#{size-m(20)};
-      bottom:100%;
-      width: size-m(216);
-      animation: ani2 5s infinite alternate-reverse ease-in-out;
-      transform-origin: bottom left;
-
-      @keyframes ani {
-        from {
-          transform: skewX(5deg);
-        }
-
-        to {
-          transform: skewX(0deg);
-        }
-      }
-    }
 
     .logo {
       width: size-m(288);
