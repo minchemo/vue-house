@@ -81,7 +81,7 @@
             row-gap: size-m(20);
 
             .item {
-                font-size: size-m(15);
+                font-size: size-m(14);
             }
         }
     }
