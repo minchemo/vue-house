@@ -10,7 +10,7 @@
         <img src="@/section/form/messenger.svg" alt="公園漾" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="open()">
+      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="公園漾" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
@@ -71,8 +71,12 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2 " @click="go()"
-        v-bind:class="{ 'hidden': modalType == 'phone' && !$isMobile() }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btcontac': modalType == 'phone'
+      }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
             '開啟導航'
         }}</div>
@@ -227,7 +231,7 @@
     .leaf {
       position: absolute;
       left: -#{size-m(20)};
-      bottom:100%;
+      bottom: 100%;
       width: size-m(216);
       animation: ani2 5s infinite alternate-reverse ease-in-out;
       transform-origin: bottom left;
