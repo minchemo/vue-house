@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-white">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-[#FFEA00]">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
@@ -17,7 +17,8 @@
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="@/section/form/footerlogo.png" alt="公園漾" srcset=""></a>
-        <p class="text-white text-xs">網頁製作</p>
+
+        <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
 </template>
 
@@ -43,7 +44,7 @@
         font-size: size(36);
         font-weight: 700;
         margin-bottom: size(36);
-        color: #469B6D;
+        color: #000;
     }
 
     .info-items {

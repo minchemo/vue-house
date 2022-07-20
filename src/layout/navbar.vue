@@ -1,16 +1,17 @@
 <template>
-    <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-50 bg-white w-full"
+    <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-[100] bg-white w-full"
         v-bind:class="{ 'r16-9': higherScreen }">
-        <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
+        <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
-            <p class="uppercase text-color2 z-10">menu</p>
+            <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar z-10"></div>
         </div>
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <div class="menu-item font-bold cursor-pointer text-white hover:text-color1" v-for="item, i in info.navList"
-                @click="scrollTo(item.target)">
-                <span class="mr-3">0{{ i + 1 }}</span><span>{{ item.name }}</span>
+            <div class="menu-item font-bold cursor-pointer text-white hover:text-black font-['noto_serif_tc']"
+                v-for="item, i in info.navList" @click="scrollTo(item.target)">
+                <!-- <span class="mr-3">0{{ i + 1 }}</span> -->
+                <span>{{ item.name }}</span>
             </div>
         </div>
     </div>
@@ -23,8 +24,8 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    padding: 0 size(50);
-    height: size(80);
+    padding: 0 size(20);
+    height: size(100);
 
     .logo {
         width: size(190);
@@ -47,7 +48,7 @@
         .bar {
             width: size(30);
             height: 2px;
-            background-color: theme('colors.color2');
+            background-color: #000;
             position: relative;
             transform: all .5s;
 
@@ -57,7 +58,7 @@
                 height: 2px;
                 bottom: -#{size(10)};
                 position: absolute;
-                background-color: theme('colors.color2');
+                background-color: #000;
                 transition: all .5s;
             }
 
@@ -67,7 +68,7 @@
                 height: 2px;
                 top: -#{size(10)};
                 position: absolute;
-                background-color: theme('colors.color2');
+                background-color: #000;
                 transition: all .5s;
             }
         }
@@ -122,15 +123,17 @@
     .menu {
         position: fixed;
         top: size(10);
-        right: size(10);
-        background-color: theme('colors.color2');
+        left: size(10);
+        background-color: rgba($color: #46B258, $alpha: .95);
         width: size(330);
+        height: 98%;
         z-index: 0;
-        transform: translateX(150%);
+        transform: translateX(-150%);
         transition: all .5s;
         border-radius: size(20);
         padding: size(100) 0;
         gap: size(20);
+        backdrop-filter: blur(2px);
 
         .menu-item {
             font-size: size(25);
@@ -145,18 +148,24 @@
         background-color: transparent;
 
         .menu-btn {
-            &::after {
-                content: '';
-                width: 160%;
-                height: 170%;
-                background-color: #fff;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                border-radius: size(20);
-                transition: all .5s;
-            }
+            // &::after {
+            //     content: '';
+            //     width: 160%;
+            //     height: 170%;
+            //     background-color: #fff;
+            //     position: absolute;
+            //     left: 50%;
+            //     top: 50%;
+            //     transform: translate(-50%, -50%);
+            //     border-radius: size(20);
+            //     transition: all .5s;
+            // }
+            background-color: #fff;
+            height: size(62);
+            width: size(62);
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover {
                 &::after {
@@ -165,6 +174,8 @@
             }
 
             &.open {
+                background-color: transparent;
+
                 &::after {
                     content: '';
                     background-color: transparent;
@@ -208,9 +219,10 @@
         width: size-m(350);
         left: size-m(12.5);
         top: size-m(12.5);
-        padding: 0 size-m(24);
+        padding: 0 size-m(8);
         height: size-m(35);
         border-radius: 9999px;
+        justify-content: flex-end;
 
         .logo {
             width: size-m(101.83);
@@ -279,7 +291,6 @@
             position: fixed;
             top: 1.5vh;
             right: size-m(12.5);
-            background-color: theme('colors.color2');
             width: size-m(350);
             height: 97vh;
             z-index: 0;
@@ -295,6 +306,7 @@
 
             &.open {
                 transform: translateX(0);
+                left: unset;
             }
         }
 
@@ -302,6 +314,9 @@
             background-color: transparent;
 
             .menu-btn {
+                width: size-m(20);
+                height: size-m(20);
+
                 &::after {
                     content: '';
                     width: 160%;
@@ -344,16 +359,16 @@ import info from "@/info"
 const menuOpen = ref(false)
 
 const globals = getCurrentInstance().appContext.config.globalProperties
-const higherScreen = ref(false)
+const higherScreen = ref(true)
 
 const scrollPos = ref(0)
 
 onMounted(() => {
     const ratio = window.innerHeight / window.innerWidth
 
-    if (!globals.$isMobile() && ratio > 0.46875) {
-        higherScreen.value = true
-    }
+    // if (!globals.$isMobile() && ratio > 0.46875) {
+    //     higherScreen.value = true
+    // }
 
     window.addEventListener('scroll', (event) => {
         let scroll = window.pageYOffset || document.documentElement.scrollTop;

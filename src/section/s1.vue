@@ -1,13 +1,10 @@
 <template>
-  <article class="s1 font-['noto_serif_tc']">
+  <article class="s1 font-['noto_serif_tc','serif']">
     <div class="img">
       <img src="./s1/img.jpg" class="imgv" alt="img" v-if="!isMobile">
       <img src="./s1/img_m.jpg" class="imgv" alt="img" v-else>
-      <div class="rabbit">
-        <img src="./s1/rabbit.gif" alt="rabbit" v-if="!isMobile">
-        <img src="./s1/rabbit_m.gif" alt="rabbit" v-else>
-        <img src="./s1/rabbit.png" alt="rabbit">
-      </div>
+
+      <Rabbit class="rabbit" />
       <div class="txt" data-aos="zoom-in-right">上學只要<span><b>1</b>分鐘</span></div>
       <div class="txt2" v-if="isMobile">日進月步にっしんげっぽ</div>
     </div>
@@ -68,11 +65,6 @@
     top: size(-420);
     left: size(210);
     width: size(455);
-
-    img {
-      width: 100%;
-      vertical-align: bottom;
-    }
   }
 
   .txt {
@@ -313,6 +305,7 @@
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
+import Rabbit from './rabbit.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());

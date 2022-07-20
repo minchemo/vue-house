@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-info mx-auto bg-[#E1E5E2] flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto bg-[#FFEF00] flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
@@ -10,7 +10,7 @@
         <img src="@/section/form/messenger.svg" alt="公園漾" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="open()">
+      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="公園漾" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
@@ -26,6 +26,7 @@
     </div>
 
   </div>
+
 
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
@@ -68,8 +69,12 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
-        v-bind:class="{ 'hidden': modalType == 'phone' && !$isMobile() }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btcontac': modalType == 'phone'
+      }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
             '開啟導航'
         }}</div>
@@ -88,15 +93,17 @@
   padding: size(55) size(168) size(55) size(168);
   margin-top: size(60);
   position: relative;
+  z-index: 50;
+  margin-bottom: -#{size(30)};
 
   .logo {
-    width: size(311.13);
-    height: size(137.53);
+    width: size(556);
+    height: size(193);
     background-image: url("@/section/form/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: size(40);
+    margin-bottom: size(10);
   }
 
   .contact-item-box {
@@ -106,7 +113,7 @@
 
     .contact-item {
       background-color: theme('colors.color1');
-      color: theme('colors.color2');
+      color: #fff;
       width: 100%;
       padding: 0 size(55);
       // border-radius: 9999px;
@@ -117,14 +124,12 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      border: 1px solid #658578;
 
       &:hover {
         background-color: theme('colors.color2');
         color: #fff;
 
         img {
-
           filter: brightness(0) invert(1);
         }
       }
@@ -133,7 +138,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
       }
 
@@ -166,7 +171,7 @@
 
 @media screen and (max-width:768px) {
   .mo-contact-info {
-    z-index: 49;
+    z-index: 99;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -176,7 +181,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #34684C;
+      background-color: #46B258;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -194,10 +199,10 @@
 
   .contact-info {
     width: size-m(375);
-    height: auto;
+    height: size-m(650);
     // border-radius: size-m(68);
     padding: size-m(50) size-m(15);
-    margin-top: size-m(60);
+    margin-top: size-m(255);
     position: relative;
     justify-content: flex-start;
 

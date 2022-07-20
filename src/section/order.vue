@@ -1,66 +1,76 @@
   <template>
-  <div class="order relative bg-[#469B6D] text-center">
-    <!-- Title -->
-    <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
-    <!-- Title Image -->
-    <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="公園漾" srcset=""
+  <div class="order relative bg-[#DFDDC8] text-center">
+    <div class="order-section font-['noto_sans_tc']">
+      <!-- Title -->
+      <div class="order-title text-center">{{ info.order.title }}</div>
+
+      <!-- Title Image -->
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="公園漾" srcset=""
       data-aos="fade" data-aos-duration="1000">
     <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="公園漾" srcset="" data-aos="fade"
-      data-aos-duration="1000">
+      data-aos-duration="1000"> -->
 
-    <!-- Form -->
-    <div class="form mx-auto relative flex items-start justify-center">
-      <div class="left h-full flex flex-col justify-between items-center">
-        <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
-          @input="(event) => (formData.name = event.target.value)" />
-        <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
-          @input="(event) => (formData.phone = event.target.value)" />
-    <!--     <select class="select w-full rounded-full" v-model="formData.room_type">
-          <option value="" selected disabled>需求房型</option>
-          <option value="2房">2 房</option>
-          <option value="3房">3 房</option>
-        </select> -->
-        <select class="select w-full rounded-full" v-model="formData.city">
-          <option value="" selected disabled>居住縣市</option>
-          <option v-for="city in cityList" :value="city.value">
-            {{ city.label }}
-          </option>
-        </select>
-        <select class="select w-full rounded-full" v-model="formData.area">
-          <option value="" selected disabled>居住地區</option>
-          <option v-for="area in areaList" :value="area.value">
-            {{ area.label }}
-          </option>
-        </select>
+      <!-- Custom Image -->
+      <img v-if="!$isMobile()" class="bg-image" src="@/section/form/bg.png" alt="" srcset="">
+      <img v-else class="bg-image" src="@/section/form/bg_m.png" alt="" srcset="">
+      <Cat class="cat" />
+      <Rabbit class="rabbit" />
+
+      <!-- Form -->
+      <div class="form mx-auto relative flex items-start justify-center">
+        <div class="left h-full flex flex-col justify-between items-center">
+          <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
+            @input="(event) => (formData.name = event.target.value)" />
+          <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
+            @input="(event) => (formData.phone = event.target.value)" />
+          <select class="select w-full rounded-full" v-model="formData.room_type">
+            <option value="" selected disabled>需求房型</option>
+            <option value="2房">2 房</option>
+            <option value="3房">3 房</option>
+          </select>
+          <select class="select w-full rounded-full" v-model="formData.city">
+            <option value="" selected disabled>居住縣市</option>
+            <option v-for="city in cityList" :value="city.value">
+              {{ city.label }}
+            </option>
+          </select>
+          <select class="select w-full rounded-full" v-model="formData.area">
+            <option value="" selected disabled>居住地區</option>
+            <option v-for="area in areaList" :value="area.value">
+              {{ area.label }}
+            </option>
+          </select>
+        </div>
+        <div class="right h-full">
+          <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
+            class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
+        </div>
       </div>
-      <div class="right h-full">
-        <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
-          class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
+
+      <!-- Policy -->
+      <div class="flex gap-2 items-center justify-center control">
+        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md" />
+        <p>
+          本人知悉並同意<label for="policy-modal"
+            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        </p>
       </div>
+      <Policy />
+
+      <!-- Recaptcha -->
+      <vue-recaptcha class="flex justify-center mt-8" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+
+      <!-- Send -->
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+        送出表單
+      </div>
+
+      <!-- Contact Info -->
+      <ContactInfo />
     </div>
 
-    <!-- Policy -->
-    <div class="flex gap-2 items-center justify-center control">
-      <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-        class="checkbox bg-white rounded-md" />
-      <p>
-        本人知悉並同意<label for="policy-modal"
-          class="modal-button text-[#AFF0E9] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
-      </p>
-    </div>
-    <Policy />
-
-    <!-- Recaptcha -->
-    <vue-recaptcha class="flex justify-center mt-8" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-      @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
-
-    <!-- Send -->
-    <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-      立即預約
-    </div>
-
-    <!-- Contact Info -->
-    <ContactInfo />
 
     <!-- Map -->
     <Map />
@@ -72,6 +82,47 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
+.order-section {
+  padding-bottom: size(52);
+  position: relative;
+
+  .cat {
+    position: absolute;
+    width: size(600);
+    z-index: 1;
+    pointer-events: none;
+    bottom: -#{size(130)};
+    left: 0;
+  }
+
+  .rabbit {
+    position: absolute;
+    width: size(550);
+    z-index: 1;
+    pointer-events: none;
+    bottom: size(20);
+    right: 0;
+  }
+
+  .bg-image {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: size(50);
+    vertical-align: middle;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: size(50);
+    background-color: #514118;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
 
 .order {
   width: 100%;
@@ -95,6 +146,7 @@
     height: 300px;
     gap: size(80);
     margin-bottom: size(50);
+    z-index: 50;
 
     .left {
       width: size(419);
@@ -115,19 +167,20 @@
 
   .send {
     font-size: size(22);
-    letter-spacing:0.9em;
-    text-indent:0.9em;
-    color: #231815;
-    background-color: #fff;
+    letter-spacing: 0.9em;
+    text-indent: 0.9em;
+    color: #fff;
+    background-color: #3E3A39;
     width: size(350);
-    height:3.3em;
+    height: 3.3em;
     line-height: 3.3;
     border: 0;
-    border-radius:1.6em;
+    border-radius: 1.6em;
     z-index: 10;
     position: relative;
   }
-  .control{
+
+  .control {
     font-size: size(16);
     color: #000;
     position: relative;
@@ -135,6 +188,46 @@
 }
 
 @media screen and (max-width:768px) {
+  .order-section {
+    padding-bottom: 0;
+    position: relative;
+
+    .cat {
+      position: absolute;
+      width: size-m(220);
+      z-index: 1;
+      pointer-events: none;
+      bottom: size-m(520);
+      left: -#{size-m(40)};
+    }
+
+    .rabbit {
+      position: absolute;
+      width: size-m(170);
+      z-index: 1;
+      pointer-events: none;
+      bottom: size-m(600);
+      right: -#{size-m(30)};
+    }
+
+    .bg-image {
+      position: absolute;
+      width: 100%;
+      left: -#{size-m(30)};
+      bottom: size-m(590);
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: size(50);
+      background-color: #514118;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
   .order {
     width: 100%;
     // border-radius: size-m(68) size-m(68) 0 0;
@@ -178,7 +271,8 @@
       font-size: size-m(21);
       width: size-m(318);
     }
-    .control{
+
+    .control {
       font-size: size-m(14.6);
     }
   }
@@ -198,6 +292,8 @@ import { ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
+import Cat from "./cat.vue"
+import Rabbit from "./rabbit.vue"
 const toast = useToast()
 
 const formData = reactive({
@@ -212,7 +308,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["note","room_type"]
+const bypass = ["note",]
 
 //中文對照
 const formDataRef = ref([
