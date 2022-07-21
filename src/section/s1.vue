@@ -6,7 +6,7 @@
 
       <Rabbit class="rabbit" />
       <div class="txt" data-aos="zoom-in-right">上學只要<span><b>1</b>分鐘</span></div>
-      <div class="txt2" v-if="isMobile">日進月步にっしんげっぽ</div>
+      <!--div class="txt2" v-if="isMobile">日進月步にっしんげっぽ</div-->
     </div>
     <img src="./s1/leaf6.png" v-if="!isMobile" class="leaf6" alt="leaf">
 
@@ -19,8 +19,8 @@
       <img src="./s1/book1.png" v-if="!isMobile" data-aos="fade-down" class="book1" alt="book">
       <img src="./s1/book2.png" v-if="!isMobile" data-aos="fade-down" data-aos-delay="300" class="book2" alt="book">
 
-      <img src="./s1/logo.png" class="logo" alt="logo" v-if="!isMobile" data-aos="zoom-in">
-      <img src="./s1/logom.png" class="logo" alt="logo" v-else data-aos="zoom-in">
+      <img src="./s1/logo.svg" class="logo" alt="logo" v-if="!isMobile" data-aos="zoom-in">
+      <img src="./s1/logom.svg" class="logo" alt="logo" v-else data-aos="zoom-in">
       <h3 class="txt" v-if="!isMobile">
         <div class="t1" data-aos="zoom-in" data-aos-delay="200"><span class="">成州國小正對面</span><span>戶戶邊間正3房</span></div>
         <div class="t2" data-aos="zoom-in" data-aos-delay="400">23-29坪<span>｜</span>02-8295-3311</div>
