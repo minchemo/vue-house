@@ -220,16 +220,16 @@
       flex-direction: column;
 
       .contact-item {
-        padding: 0 size-m(65);
+        padding: 0 size-m(80);
         font-size: size-m(16);
         max-width: 100%;
-        justify-content: space-around;
-
+        white-space: nowrap;
 
         img {
           max-width: size-m(27);
           height: auto;
           max-height: size-m(27);
+          margin: unset;
         }
 
         &.address {

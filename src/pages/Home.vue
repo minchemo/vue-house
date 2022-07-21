@@ -59,7 +59,7 @@ onMounted(() => {
   window.onload = function () {
     isLoading.value = false
     AOS.init({
-      offset: 200,
+      offset: 0,
       duration: 800
     });
   };

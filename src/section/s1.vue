@@ -22,12 +22,12 @@
       <img src="./s1/logo.png" class="logo" alt="logo" v-if="!isMobile" data-aos="zoom-in">
       <img src="./s1/logom.png" class="logo" alt="logo" v-else data-aos="zoom-in">
       <h3 class="txt" v-if="!isMobile">
-        <span class="t1" data-aos="zoom-in" data-aos-delay="200">成州國小正對面<b>｜</b>均質3房</span>
-        <span class="t2" data-aos="zoom-in" data-aos-delay="400">｜書香水岸第一排 8295 3311｜</span>
+        <div class="t1" data-aos="zoom-in" data-aos-delay="200"><span class="">成州國小正對面</span><span>戶戶邊間正3房</span></div>
+        <div class="t2" data-aos="zoom-in" data-aos-delay="400">23-29坪<span>｜</span>02-8295-3311</div>
       </h3>
       <h3 class="txt" v-else>
-        <span class="t1" data-aos="zoom-in" data-aos-delay="200">成州國小正對面</span>
-        <span class="t2" data-aos="zoom-in" data-aos-delay="400"><i>書香水岸第一排</i>均值3房<b>｜</b>8295 3311</span>
+        <div class="t1" data-aos="zoom-in" data-aos-delay="200"><span class="">成州國小正對面</span><span>戶戶邊間正3房</span></div>
+        <div class="t2" data-aos="zoom-in" data-aos-delay="400">23-29坪<span>｜</span>02-8295-3311</div>
       </h3>
     </div>
   </article>
@@ -190,28 +190,37 @@
   .txt {
     //@include img_c_pc(1200, 140);
     //@extendtop:size(58); //calc(50% + (150 - 540) * 100vw / 1920);
-    font-size: size(53);
-    line-height: 1.6;
+
+    line-height: 1.2;
     letter-spacing: 0em;
     text-align: center;
     z-index: 3;
     color: #000;
     margin: 1.4em 0 0 0;
+
   }
 
   .t1 {
-    font-size: 1.14em;
-    display: block;
+    display: flex;
     font-weight: 700;
+    font-size: size(50);
+    align-items: center;
+    justify-content: center;
+    gap: size(12);
 
-    b {
-      color: #00B451;
+    span:nth-child(1) {
+      color: #46B258;
     }
   }
 
   .t2 {
     display: inline-block;
     font-weight: 600;
+    font-size: size(48);
+
+    span {
+      color: #46B258;
+    }
   }
 }
 
@@ -226,8 +235,8 @@
     min-height: size-m(667);
     max-height: size-m(750);
     overflow: hidden;
-    // background: url('./s1/mo.jpg') center;
-    // background-size: contain;
+    background: url('./s1/mobg.jpg') center;
+    background-size: contain;
   }
 
   .img {
@@ -281,21 +290,23 @@
     }
 
     .t1 {
-      font-size: 1.3em;
-      display: block;
-      color: #00B451;
-      margin: 0 0 0.5em 0;
+      font-size: size-m(30);
+      flex-direction: column;
+      gap: size-m(2);
+
+      span:nth-child(1) {
+        color: #46B258;
+      }
     }
 
     .t2 {
-      i {
-        display: block;
-        font-style: normal;
-        font-size: 1.31em;
-      }
+      display: block;
+      font-weight: 600;
+      font-size: size-m(20);
+      margin-top: size-m(12);
 
-      b {
-        color: #00B451;
+      span {
+        color: #46B258;
       }
     }
 

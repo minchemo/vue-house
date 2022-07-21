@@ -1,6 +1,10 @@
 <template>
     <div class="s3 relative">
         <div class="section1">
+            <img class="leaf leaf1" data-aos-duration="1000" data-aos="leafIn" src="@/section/s3/leaf1.png" alt="">
+            <img class="leaf leaf2" data-aos-duration="1000" data-aos="leafIn" src="@/section/s3/leaf2.png" alt="">
+            <img class="leaf leaf3" data-aos-duration="1000" data-aos="leafIn" src="@/section/s3/leaf3.png" alt="">
+            <img class="leaf leaf4" data-aos-duration="1000" data-aos="leafIn" src="@/section/s3/leaf4.png" alt="">
             <div class="text">
                 <div class="t1" data-aos="flip-left" data-aos-delay="0">百年校園當鄰居 <br v-if="$isMobile()" />吃飽睡好上學沒煩惱</div>
                 <div class="t2 font-['Noto_sans_tc']" data-aos="flip-left" data-aos-delay="200">
@@ -52,11 +56,27 @@
                         <img src="@/assets/next.png" alt="" srcset=""></button>
                 </div>
             </Splide>
-            <div class="bubbles">
+            <div class="bubbles" v-if="!$isMobile()">
                 <div class="bubble font-['noto_sans_tc']" :class="`bubble-${i}`" @click="splide.splide.go(i)"
                     v-bind:class="{ 'active': currentIdx == i }" v-for="bubble, i in bubbles" v-html="bubble.content">
                 </div>
             </div>
+            <Splide v-else ref="splideBubbles" :options="{
+                rewind: true,
+                autoWidth: true,
+                arrows: false,
+                pagination: false,
+                type: 'loop',
+                autoplay: false,
+                interval: 2000,
+                gap: 12,
+                isNavigation: true,
+                focus: 'center'
+            }" @splide:move="moveBubble" class="slide-bubbles-box z-10">
+                <SplideSlide class="slide-bubble" v-for="bubble in bubbles">
+                    <div class="font-['Noto_sans_tc']" v-html="bubble.content"></div>
+                </SplideSlide>
+            </Splide>
             <img data-aos="zoom-in" class="book" src="@/section/s3/book.png" alt="" srcset="">
         </div>
     </div>
@@ -78,6 +98,35 @@
         gap: size(118);
         padding-top: size(134);
         height: size(830);
+
+        .leaf {
+            position: absolute;
+            pointer-events: none;
+
+            &.leaf1 {
+                width: size(100);
+                top: size(29.8);
+                left: size(119);
+            }
+
+            &.leaf2 {
+                width: size(100);
+                top: size(135.3);
+                left: size(467);
+            }
+
+            &.leaf3 {
+                width: size(116);
+                top: size(570);
+                left: size(495.52);
+            }
+
+            &.leaf4 {
+                width: size(113);
+                top: size(943);
+                left: size(1324.92);
+            }
+        }
 
         .text {
             width: size(685);
@@ -304,6 +353,32 @@
             padding-top: size-m(30);
             height: size-m(588);
 
+
+            .leaf {
+                position: absolute;
+                pointer-events: none;
+
+                &.leaf1 {
+                    width: size-m(55.72);
+                    top: size-m(7);
+                    left: size-m(249);
+                }
+                &.leaf2 {
+                    width: size-m(65.9);
+                    top: size-m(591.14);
+                    left: size-m(57.29);
+                }
+                &.leaf3 {
+                    width: size-m(60);
+                    top: size-m(675);
+                    left: size-m(275.4);
+                }
+
+                &.leaf4 {
+                    display: none;
+                }
+            }
+
             .text {
                 width: 84%;
 
@@ -489,6 +564,27 @@
                     }
                 }
             }
+
+            .slide-bubbles-box {
+                margin-top: size-m(35);
+
+                .slide-bubble {
+                    width: size-m(78);
+                    height: size-m(78);
+                    border: size-m(2) solid #46B258;
+                    border-radius: 9999px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    color: #46B258;
+
+                    &.is-active {
+
+                        background-color: #FFEF00;
+                    }
+                }
+            }
         }
     }
 
@@ -499,22 +595,32 @@
 import { ref, inject, getCurrentInstance } from "vue"
 import AOS from 'aos';
 import Cat from "./cat.vue";
+const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const splide = ref();
+const splideBubbles = ref();
 const currentIdx = ref(0)
+
 const move = (newIdx, prevIdx, destIdx) => {
     currentIdx.value = prevIdx
     AOS.refresh();
 
 
-    document.querySelector('.bubbles').scroll({
-        left: document.querySelector(`.bubble-${currentIdx.value}`).offsetLeft - window.screen.width / 2.21,
-        behavior: 'smooth'
-    })
-
-
+    if (!globals.$isMobile()) {
+        document.querySelector('.bubbles').scroll({
+            left: document.querySelector(`.bubble-${currentIdx.value}`).offsetLeft - window.screen.width / 2.21,
+            behavior: 'smooth'
+        })
+    } else {
+        splideBubbles.value.splide.go(currentIdx.value)
+    }
 }
-const globals = getCurrentInstance().appContext.config.globalProperties;
+
+
+const moveBubble = (newIdx, prevIdx, destIdx) => {
+    splide.value.splide.go(prevIdx)
+}
+
 const imgs1 = ref([
     {
         img: globals.$isMobile() ? new URL("../section/s3/s1-1_m.jpg", import.meta.url).href : new URL("../section/s3/s1-1.jpg", import.meta.url).href,

@@ -1,6 +1,8 @@
 <template>
     <div class="s5 relative">
         <div class="text">
+            <img class="leaf leaf1" data-aos-duration="1000" data-aos="leafIn" src="@/section/s5/leaf01.png" alt="">
+            <img class="leaf leaf2" data-aos-duration="1000" data-aos="leafIn" src="@/section/s5/leaf02.png" alt="">
             <div class="t1" data-aos="flip-left" data-aos-delay="0">水岸活氧 大都會公園<br />
                 下樓就是家庭運動場</div>
             <div class="t2 font-['Noto_sans_tc']" data-aos="flip-left" data-aos-delay="200">
@@ -44,6 +46,23 @@
     justify-content: flex-end;
     padding-right: size(81);
     gap: size(137);
+
+    .leaf {
+        position: absolute;
+        pointer-events: none;
+
+        &.leaf1 {
+            width: size(100);
+            top: size(150);
+            left: size(464);
+        }
+
+        &.leaf2 {
+            width: size(113);
+            top: size(337);
+            left: size(618);
+        }
+    }
 
     .text {
         .t1 {
@@ -154,6 +173,20 @@
         flex-direction: column;
         padding-right: 0;
         gap: size-m(35);
+
+        .leaf {
+
+            &.leaf1 {
+                width: size-m(51.6);
+                top: size-m(56);
+                left: size-m(132);
+            }
+            &.leaf2 {
+                width: size-m(60);
+                top: size-m(129);
+                left: size-m(282.9);
+            }
+        }
 
         .text {
             width: 85%;
