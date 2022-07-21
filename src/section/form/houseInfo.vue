@@ -37,7 +37,7 @@
 
 .info-box {
 
-    width: size(680);
+    width: size(800);
 
     .title {
         width: 100%;
@@ -82,7 +82,7 @@
             row-gap: size-m(20);
 
             .item {
-                font-size: size-m(15);
+                font-size: size-m(14);
             }
         }
     }
