@@ -18,7 +18,7 @@
                 pagination: false,
                 type: 'fade',
                 autoplay: true,
-                interval: 2000,
+                interval: 4000,
             }" @splide:move="move" class="slide-box z-10">
                 <SplideSlide class="slide" v-for="img in imgs1" v-lazy:background-image="img.img">
                     <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
@@ -42,7 +42,7 @@
                 pagination: true,
                 type: 'fade',
                 autoplay: true,
-                interval: 2000,
+                interval: 4000,
             }" @splide:move="move" class="slide-box z-10">
                 <SplideSlide class="slide" v-for="img in imgs2" v-lazy:background-image="img.img">
                     <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
@@ -68,7 +68,7 @@
                 pagination: false,
                 type: 'loop',
                 autoplay: false,
-                interval: 2000,
+                interval: 4000,
                 gap: 12,
                 isNavigation: true,
                 focus: 'center'
