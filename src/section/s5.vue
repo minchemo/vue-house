@@ -1,7 +1,7 @@
 <template>
-  <div class="s5 relative bg-[#BBE35B]" v-bind:class="{ reverse: currentIdx >= 2 }">
+  <div class="s5 relative bg-[#BBE35B]" v-bind:class="{ reverse: currentIdx >= 1 }">
     <div class="info absolute z-10 flex flex-col justify-center items-center">
-      <div data-aos="fade" class="flex items-end justify-center" v-if="currentIdx < 2">
+      <div data-aos="fade" class="flex items-end justify-center" v-if="currentIdx < 1">
         <lazy-component>
           <img class="girl" src="@/section/s5/i.png" alt="" srcset="" />
         </lazy-component>
@@ -15,7 +15,7 @@
           戶戶邊間 層層有景 有氧御邸
         </p>
       </div>
-      <div data-aos="fade" data-aos-delay="200" class="content text-center" v-if="currentIdx < 2">
+      <div data-aos="fade" data-aos-delay="200" class="content text-center" v-if="currentIdx < 1">
         選對環境，每一席都是舒適首選，<br />
         戶戶邊間，節氣流轉，<br />
         每一刻呼吸都享高純度氧；<br />
@@ -346,12 +346,13 @@ const currentIdx = ref(0)
 const imgs = ref([
   {
     img: new URL("../section/s5/1.jpg", import.meta.url).href,
-    caption: "外觀3D示意圖 （建構中）",
+    caption: "外觀3D示意圖",
   },
+  /*
   {
     img: new URL("../section/s5/2.jpg", import.meta.url).href,
     caption: "外觀3D示意圖 （建構中）",
-  },
+  },*/
   {
     img: new URL("../section/s5/3.png", import.meta.url).href,
     caption: "",
