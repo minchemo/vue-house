@@ -192,6 +192,7 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  email: "",
   city: "",
   area: "",
   note: "",
