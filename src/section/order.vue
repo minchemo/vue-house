@@ -18,7 +18,7 @@
           @input="(event) => (formData.name = event.target.value)" />
         <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
           @input="(event) => (formData.phone = event.target.value)" />
-    <!--     <select class="select w-full rounded-full" v-model="formData.room_type">
+        <!--     <select class="select w-full rounded-full" v-model="formData.room_type">
           <option value="" selected disabled>需求房型</option>
           <option value="2房">2 房</option>
           <option value="3房">3 房</option>
@@ -126,17 +126,18 @@
 
   .send {
     font-size: size(22);
-    letter-spacing:0.9em;
-    text-indent:0.9em;
+    letter-spacing: 0.9em;
+    text-indent: 0.9em;
     color: #fff;
     background-color: #C14D33;
     width: size(350);
-    height:3.3em;
+    height: 3.3em;
     line-height: 3.3;
     border: 0;
-    border-radius:1.6em;
+    border-radius: 1.6em;
   }
-  .control{
+
+  .control {
     font-size: size(16);
     color: #000;
     position: relative;
@@ -196,7 +197,8 @@
       font-size: size-m(21);
       width: size-m(318);
     }
-    .control{
+
+    .control {
       font-size: size-m(14.6);
     }
   }
@@ -222,6 +224,7 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  email: "",
   city: "",
   area: "",
   note: "",
@@ -230,13 +233,14 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["note","room_type"]
+const bypass = ["note", "room_type", "email"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "信箱", //email
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //note
@@ -273,8 +277,8 @@ const send = () => {
       if (value == "" || value == false) {
         unfill.push(formDataRef.value[idx])
       }
-      idx++
     }
+    idx++
 
     presend.append(key, value);
   }
@@ -295,13 +299,45 @@ const send = () => {
   }
 
   if (pass) {
-    fetch("contact-form.php", {
-      method: "POST",
-      body: presend,
-    }).then((response) => {
-      if (response.status === 200) {
-        window.location.href = "formThanks";
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmSource = urlParams.get("utm_source");
+    const utmMedium = urlParams.get("utm_medium");
+    const utmContent = urlParams.get("utm_content");
+    const utmCampaign = urlParams.get("utm_campaign");
+    const time = new Date();
+    const year = time.getFullYear();
+    const month = time.getMonth() + 1;
+    const day = time.getDate();
+    const hour = time.getHours();
+    const min = time.getMinutes();
+    const sec = time.getSeconds();
+    const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+
+    fetch(
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      &phone=${formData.phone}
+      &room_type=${formData.room_type}
+      &email=${formData.email}
+      &cityarea=${formData.city}${formData.area}
+      &msg=${formData.msg}
+      &utm_source=${utmSource}
+      &utm_medium=${utmMedium}
+      &utm_content=${utmContent}
+      &utm_campaign=${utmCampaign}
+      &date=${date}
+      &campaign_name=${info.caseName}`,
+      {
+        method: "GET"
       }
+    ).then(() => {
+      fetch("contact-form.php", {
+        method: "POST",
+        body: presend,
+      }).then((response) => {
+        if (response.status === 200) {
+          window.location.href = "formThanks";
+        }
+      });
     });
 
 
