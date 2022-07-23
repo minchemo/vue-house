@@ -253,6 +253,20 @@ const onRecaptchaUnVerify = () => {
 }
 
 const send = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmSource = urlParams.get("utm_source");
+  const utmMedium = urlParams.get("utm_medium");
+  const utmContent = urlParams.get("utm_content");
+  const utmCampaign = urlParams.get("utm_campaign");
+  const time = new Date();
+  const year = time.getFullYear();
+  const month = time.getMonth() + 1;
+  const day = time.getDate();
+  const hour = time.getHours();
+  const min = time.getMinutes();
+  const sec = time.getSeconds();
+  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+
   const presend = new FormData();
   let pass = true
   let unfill = []
@@ -269,6 +283,11 @@ const send = () => {
 
     presend.append(key, value);
   }
+
+  presend.append("utm_source", utmSource);
+  presend.append("utm_medium", utmMedium);
+  presend.append("utm_content", utmContent);
+  presend.append("utm_campaign", utmCampaign);
 
   //有未填寫
   if (unfill.length > 0) {
@@ -288,19 +307,6 @@ const send = () => {
   if (pass) {
 
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const utmSource = urlParams.get("utm_source");
-    const utmMedium = urlParams.get("utm_medium");
-    const utmContent = urlParams.get("utm_content");
-    const utmCampaign = urlParams.get("utm_campaign");
-    const time = new Date();
-    const year = time.getFullYear();
-    const month = time.getMonth() + 1;
-    const day = time.getDate();
-    const hour = time.getHours();
-    const min = time.getMinutes();
-    const sec = time.getSeconds();
-    const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
