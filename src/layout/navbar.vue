@@ -2,10 +2,16 @@
     <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-[100] bg-white w-full"
         v-bind:class="{ 'r16-9': higherScreen }">
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
+        <div v-if="$isMobile()" class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar z-10"></div>
+        </div>
+        <div class="top-nav" v-else>
+            <div class="top-nav-item font-['noto_serif_tc']" v-for="item, i in info.navList"
+                @click="scrollTo(item.target)">
+                {{ item.name }}
+            </div>
         </div>
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
             <div class="menu-item font-bold cursor-pointer text-white hover:text-black font-['noto_serif_tc']"
@@ -26,6 +32,43 @@
 .nav {
     padding: 0 size(20);
     height: size(100);
+    backdrop-filter: blur(10px);
+
+    .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: size(30);
+
+        .top-nav-item {
+            position: relative;
+            font-weight: 700;
+            font-size: size(24);
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                width: 100%;
+                bottom: -#{size(5)};
+                height: size(5);
+                border-radius: 99px;
+                background-color: #B64F31;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) scaleX(0);
+                transition: all .5s;
+                transform-origin: center;
+
+            }
+
+            &:hover {
+                &::after {
+                    transform: translateX(-50%) scaleX(1);
+                }
+            }
+        }
+    }
 
     .logo {
         width: size(190);

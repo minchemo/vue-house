@@ -34,23 +34,53 @@ export default {
         subTitle: "",
     },
     navList: [{
+            name: "里藏富貴",
+            target: "",
+            offset: "",
+        },
+        {
+            name: "富貴人生",
+            target: "",
+            offset: "",
+        },
+        {
+            name: "縱橫核心",
+            target: "",
+            offset: "",
+        },
+        {
+            name: "長耀建築",
+            target: "",
+            offset: "",
+        },
+        {
+            name: "森林之王",
+            target: "",
+            offset: "",
+        },
+        {
+            name: "豪宅團隊",
+            target: "",
+            offset: "",
+        },
+        {
+            name: "幸福社區",
+            target: "",
+            offset: "",
+        },
+        {
+            name: "結構工法",
+            target: "",
+            offset: "",
+        },
+        {
+            name: "美學空間",
+            target: "",
+            offset: "",
+        },
+        {
             name: "立即預約",
             target: ".order",
-            offset: "",
-        },
-        {
-            name: "地圖導航",
-            target: ".contact-info",
-            offset: "",
-        },
-        {
-            name: "粉絲專頁",
-            target: ".contact-info",
-            offset: "",
-        },
-        {
-            name: "立即撥打",
-            target: ".contact-info",
             offset: "",
         },
     ],

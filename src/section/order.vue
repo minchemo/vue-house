@@ -10,12 +10,6 @@
     <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
-      <!-- Custom Image -->
-      <img v-if="!$isMobile()" class="bg-image" src="@/section/form/bg.png" alt="" srcset="">
-      <img v-else class="bg-image" src="@/section/form/bg_m.png" alt="" srcset="">
-      <Cat class="cat" />
-      <Rabbit class="rabbit" />
-
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
@@ -297,8 +291,6 @@ import { ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
-import Cat from "./cat.vue"
-import Rabbit from "./rabbit.vue"
 const toast = useToast()
 
 const formData = reactive({
