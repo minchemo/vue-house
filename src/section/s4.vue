@@ -1,15 +1,36 @@
 <template>
     <div class="s4 relative">
-        <div class="title" data-aos="zoom-in" data-aos-delay="0">
-            <div class="t1">重新定義<span>15</span>分鐘的價值<br>雙北輕移民首選</div>
-            <div class="line"></div>
-            <div class="t2 font-['noto_sans_tc']">
-                自駕族夢寐以求的通勤優勢，洲子洋交通樞紐，瞬接台64、國道一號、汐五高架、五楊高架，南來北往桃園國際機場、內湖科學園區咫尺可達。家門口就是公車站，11條路線綜橫雙北，串連新莊、蘆洲軌道建設。<br />
-                洲子洋最成熟路網，15分鐘恣意串聯大台北精華地區。</div>
+        <div class="title">
+            <div class="t1">縱橫核心疆域 縱享繁華之最</div>
+            <div class="t2 font-['Noto_sans_tc']">
+                以森林之王巡視疆土的氣韻，自「長耀里」信步閑庭穿越富貴公園
+                2000坪自家森林，黃金軸線文化三路近在眼前；回過頭，中山路商圈繁華燈火橫臥市心，運動中心舉步就到，明星雙語學區、美食採買、休閒活動盡在掌中，一種自然而然的崇高感由此而生。10
+                分鐘悠然漫步，就能得到一切，是王的特權。
+
+            </div>
         </div>
-        <div class="caption font-['noto_sans_tc']">
-            洲子洋空拍夜景
-        </div>
+        <Splide ref="splide" :options="{
+            rewind: true,
+            autoWidth: true,
+            arrows: true,
+            pagination: false,
+            type: 'fade',
+            autoplay: true,
+            interval: 4000,
+        }" @splide:move="move" class="slide-box">
+            <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
+                <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
+            </SplideSlide>
+
+            <div class="arrows splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                    <img src="@/assets/prev.svg" alt="" srcset="">
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                    <img src="@/assets/next.svg" alt="" srcset=""></button>
+            </div>
+        </Splide>
+        <img class="time" src="@/section/s4/time.svg" alt="" srcset="">
     </div>
 </template>
 
@@ -19,112 +40,119 @@
 .s4 {
     width: 100%;
     height: size(1080);
-    background-image: url('@/section/s4/bg.jpg');
-    background-size: cover;
 
     .title {
         color: #fff;
-        display: flex;
-        align-items: flex-end;
-        gap: size(27);
         position: absolute;
-        top: size(154);
-        left: size(220);
+        z-index: 1;
+        left: size(327);
+        top: size(102);
 
         .t1 {
             font-weight: 700;
-            font-size: size(42);
-            line-height: size(60);
-            text-align: right;
+            font-size: size(40);
+            margin-bottom: size(30);
+            color: #F5EAD4;
 
             span {
-                font-size: size(64);
-                font-weight: 600;
-                color: #FFEF00;
+
+                color: #F27C5A;
             }
         }
 
         .t2 {
             font-weight: 400;
             font-size: size(20);
-            line-height: size(40);
-            flex-basis: size(943);
-        }
-
-        .line {
-            width: size(3);
-            height: size(109);
-            background-color: #46B258;
+            line-height: 150%;
+            width: size(726);
         }
     }
 
-    .caption {
+    .slide-box {
+        .slide {
+            width: size(1920);
+            height: size(1080);
+            background-size: cover;
+
+            .caption {
+                position: absolute;
+                right: size(30);
+                bottom: size(10);
+                font-weight: 500;
+                font-size: size(12);
+                color: #fff;
+            }
+        }
+
+        .arrows {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 97%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 10;
+
+            img {
+                width: size(17.75);
+            }
+        }
+    }
+
+    .time {
         position: absolute;
-        font-weight: 500;
-        font-size: size(13);
-        left: size(30);
-        bottom: size(15);
-        color: #fff;
+        z-index: 1;
+        width: size(1314);
+        left: 50%;
+        bottom: size(43);
+        transform: translateX(-50%);
     }
 }
 
 @media screen and (max-width:768px) {
 
     .s4 {
-        width: 100%;
         height: size-m(667);
-        background-image: url('@/section/s4/bg_m.jpg');
 
-        .title {
-            color: #fff;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: size-m(25);
-            position: relative;
-            top: unset;
-            left: unset;
-            width: 85%;
-            margin: 0 auto;
-            padding-top: size-m(35);
-
-            .t1 {
-                font-weight: 700;
-                font-size: size-m(25);
-                line-height: size-m(36);
-                text-align: left;
-
-                span {
-                    font-size: size-m(40);
-                    margin: 0 size-m(5);
-                }
-            }
-
-            .t2 {
-                font-weight: 400;
-                font-size: size-m(14);
-                line-height: size-m(25);
-                flex-basis: unset;
-                text-align: justify;
-            }
-
-            .line {
-                width: 100%;
-                height: size-m(1);
-                background-color: #46B258;
-            }
-        }
-
-        .caption {
-            position: absolute;
-            font-weight: 500;
-            font-size: size-m(13);
-            left: size-m(10);
-            bottom: size-m(10);
-            color: #fff;
-        }
     }
+
 }
 </style>
 
 <script setup>
+import { ref, getCurrentInstance } from "vue"
+import AOS from 'aos';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const splide = ref();
+const currentIdx = ref(0)
+
+const move = (newIdx, prevIdx, destIdx) => {
+    currentIdx.value = prevIdx
+    AOS.refresh();
+}
+
+const imgs = ref([
+    {
+        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/1.jpg", import.meta.url).href,
+        caption: '國道一號'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/2.jpg", import.meta.url).href,
+        caption: '新北影視城'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/3.jpg", import.meta.url).href,
+        caption: 'A9捷運站'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/4.jpg", import.meta.url).href,
+        caption: '文化三路&忠孝二路'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/5.jpg", import.meta.url).href,
+        caption: '三井OUTLET'
+    },
+])
 </script>
