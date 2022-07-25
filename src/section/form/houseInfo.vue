@@ -16,7 +16,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="公園漾" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="長耀里" srcset=""></a>
 
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
