@@ -1,6 +1,6 @@
 <template>
-  <div class="contact-info mx-auto bg-[#FFEF00] flex flex-col items-center justify-between">
-    <div class="logo"></div>
+  <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
+    <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="長耀里" srcset="" />
@@ -69,7 +69,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-black border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -112,7 +112,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: theme('colors.color1');
+      background-color: #000;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -126,7 +126,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: theme('colors.color2');
+        background-color: rgb(73, 73, 73);
         color: #fff;
 
         img {
@@ -181,7 +181,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #46B258;
+      background-color: #969083;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -202,7 +202,7 @@
     height: size-m(650);
     // border-radius: size-m(68);
     padding: size-m(50) size-m(15);
-    margin-top: size-m(255);
+    margin-top: size-m(25);
     position: relative;
     justify-content: flex-start;
 

@@ -1,33 +1,40 @@
 <template>
     <div class="s6 relative">
-        <div class="text">
-            <div class="t1" data-aos="flip-left" data-aos-delay="0">精緻建築 戶戶邊間<br />
-                小家庭共築的幸福天地</div>
-            <div class="t2 font-['Noto_sans_tc']" data-aos="flip-left" data-aos-delay="200">
-                洲子洋領頭建商茂德建設，特選「日進學」首發日系建築，外觀採黃金比例分割及飾板，公設由職人操刀典雅和風，嚴選日系精品建材，前兩年免管理費，貼心為客戶圓夢成家。
+        <div class="title">
+            <div class="t1" data-aos="fade" data-aos-delay="0">長耀建築 <span>永恆價值</span><br />
+                林口黃金軸線上的凌雲壯志</div>
+            <div class="t2" data-aos="fade" data-aos-delay="200">
+                豪宅的定義不在價格，而在於追求的價值。
+            </div>
+            <div class="t3 font-['Noto_sans_tc']" data-aos="fade" data-aos-delay="400">
+                在林口，只有長耀真正懂得土地與建築的價值，延請台北市豪宅團隊擘劃，名師大匠精心琢磨，因地制宜，攬景入境，完美發揮森林第一排價值，26
+                層雄壯身姿，擎起富貴公園森林之王不凡氣勢，一席大師鉅作，尊貴不必言表，風華傳世珍藏。
             </div>
         </div>
         <Splide ref="splide" :options="{
             rewind: true,
             autoWidth: true,
             arrows: true,
-            pagination: true,
+            pagination: false,
             type: 'fade',
             autoplay: true,
             interval: 4000,
-        }" @splide:move="move" class="slide-box z-10">
+        }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
                 <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
             </SplideSlide>
 
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.png" alt="" srcset="">
+                    <img src="@/assets/prev.svg" alt="" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.png" alt="" srcset=""></button>
+                    <img src="@/assets/next.svg" alt="" srcset=""></button>
             </div>
         </Splide>
+        <lazy-component>
+            <img class="time" src="@/section/s6/time.svg" alt="" srcset="">
+        </lazy-component>
     </div>
 </template>
 
@@ -36,209 +43,145 @@
 
 .s6 {
     width: 100%;
-    height: size(900);
-    background-image: url('@/section/s6/bg.jpg');
-    background-size: cover;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: flex-end;
-    padding-left: size(83);
-    gap: size(137);
+    height: size(1080);
 
-    .text {
-        margin-top: -#{size(250)};
+    .title {
+        color: #fff;
+        position: absolute;
+        z-index: 1;
+        left: size(80);
+        top: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
 
         .t1 {
-            font-weight: 600;
-            font-size: size(42);
-            margin-bottom: size(20);
+            font-weight: 700;
+            font-size: size(40);
+            margin-bottom: size(40);
+            color: #fff;
+
+            span {
+                color: #F5EAD4;
+            }
+
+            text-shadow: 0px size(4) size(4) rgba(0, 0, 0, 0.25);
         }
 
         .t2 {
+            font-weight: 700;
+            font-size: size(24);
+            line-height: size(34);
+            margin-bottom: size(30);
+        }
+
+        .t3 {
             font-weight: 400;
             font-size: size(20);
-            line-height: size(40);
-            width: size(588);
+            line-height: 150%;
+            letter-spacing: size(.05);
+            width: size(416);
         }
     }
 
     .slide-box {
-        flex-basis: size(901);
-        height: size(615);
-
-        .splide__track {
-            overflow: visible;
-        }
-
         .slide {
-            width: size(901);
-            height: size(615);
+            width: size(1920);
+            height: size(1080);
             background-size: cover;
 
             .caption {
                 position: absolute;
-                font-size: size(13);
+                left: 50%;
+                bottom: size(10);
+                transform: translateX(-50%);
+                font-weight: 500;
+                font-size: size(12);
                 color: #fff;
-                bottom: size(12.5);
-                right: size(25);
-                text-shadow: 0.1em 0.1em 0.2em black
             }
         }
 
         .arrows {
             position: absolute;
-            width: size(949.34);
-            display: flex;
-            justify-content: space-between;
-            top: 50%;
+            top: 95%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 5;
+            width: 97%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 10;
 
             img {
-                width: size(55)
+                width: size(17.75);
             }
         }
+    }
 
-        .splide__pagination {
-            gap: size(21);
-            justify-content: flex-end;
-            margin-top: size(25);
-            margin-right: size(355);
-
-            li {
-                button {
-
-                    width: size(20);
-                    height: size(20);
-                    background-color: #BEC9A4;
-                    border-radius: 999px;
-
-                    &.is-active {
-                        background-color: #46B258;
-                    }
-                }
-            }
-        }
-
-        &::before {
-            content: '';
-            width: size(415);
-            height: size(445);
-            border-right: size(3) solid #9CBA52;
-            border-top: size(3) solid #9CBA52;
-            position: absolute;
-            right: -#{size(35)};
-            top: -#{size(35)};
-        }
-
-        &::after {
-            content: '';
-            width: size(539);
-            height: 1px;
-            border-bottom: size(3) solid #9CBA52;
-            position: absolute;
-            left: -#{size(83)};
-            bottom: -#{size(35)};
-        }
+    .time {
+        position: absolute;
+        z-index: 1;
+        width: size(1314);
+        left: 50%;
+        bottom: size(43);
+        transform: translateX(-50%);
     }
 }
 
 @media screen and (max-width:768px) {
 
     .s6 {
-        width: 100%;
-        height: size-m(565);
-        background-image: unset;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding-left: 0;
-        gap: size-m(35);
+        height: size-m(933);
 
-        .text {
-            width: 85%;
-            margin-top: size-m(30);
+        .title {
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            height: size-m(300);
+            width: 100%;
+            padding: size-m(33);
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
 
             .t1 {
-                font-size: size-m(25);
-                line-height: size-m(36);
-                margin-bottom: size-m(10);
+                font-size: size-m(24.5);
+                margin-bottom: size-m(11);
             }
 
             .t2 {
                 font-size: size-m(14);
-                line-height: size-m(25);
-                text-align: justify;
-                width: unset;
+                line-height: size-m(20);
+                margin-bottom: size-m(13);
+            }
+
+            .t3 {
+                font-size: size-m(12);
+                line-height: 180%;
+                letter-spacing: size-m(.02);
+                width: 100%;
             }
         }
 
         .slide-box {
-            flex-basis: size-m(270);
-            height: size-m(254.97);
-            margin-bottom: size-m(35);
-
-            .splide__track {
-                overflow: visible;
-            }
-
             .slide {
-                width: size-m(375);
-                height: size-m(254.97);
+                width: 100%;
+                height: size-m(933);
+                background-size: 100% auto;
+                background-position: bottom;
 
                 .caption {
-                    right: unset;
-                    left: size-m(5);
-                    font-size: size-m(13);
+                    bottom: size-m(10);
+                    font-size: size-m(12);
                 }
             }
 
             .arrows {
-                width: size-m(352);
+                top: 70%;
 
                 img {
-                    width: size-m(30.24)
+                    width: size-m(17.75);
                 }
-            }
-
-            .splide__pagination {
-                gap: size-m(12);
-                justify-content: flex-start;
-                margin-top: size-m(10);
-                margin-left: size-m(30);
-
-                li {
-                    button {
-                        width: size-m(12);
-                        height: size-m(12);
-                    }
-                }
-            }
-
-            &::before {
-                content: '';
-                width: size-m(196);
-                height: 0;
-                border-left: 0;
-                border-top: size-m(3) solid #9CBA52;
-                position: absolute;
-                left: 0;
-                top: -#{size-m(15)};
-            }
-
-            &::after {
-                content: '';
-                width: size-m(196);
-                height: 1px;
-                border-bottom: size-m(3) solid #9CBA52;
-                position: absolute;
-                right: 0;
-                left: unset;
-                bottom: 0;
             }
         }
     }
@@ -249,21 +192,36 @@
 <script setup>
 import { ref, getCurrentInstance } from "vue"
 import AOS from 'aos';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
 const splide = ref();
 const currentIdx = ref(0)
+
 const move = (newIdx, prevIdx, destIdx) => {
     currentIdx.value = prevIdx
     AOS.refresh();
 }
-const globals = getCurrentInstance().appContext.config.globalProperties;
+
 const imgs = ref([
     {
         img: globals.$isMobile() ? new URL("../section/s6/1_m.jpg", import.meta.url).href : new URL("../section/s6/1.jpg", import.meta.url).href,
-        caption: '建築外觀3D示意圖'
+        caption: '3D建築外觀示意圖'
     },
     {
         img: globals.$isMobile() ? new URL("../section/s6/2_m.jpg", import.meta.url).href : new URL("../section/s6/2.jpg", import.meta.url).href,
-        caption: ''
+        caption: '3D建築外觀示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s6/3_m.jpg", import.meta.url).href : new URL("../section/s6/3.jpg", import.meta.url).href,
+        caption: '3D建築外觀示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s6/4_m.jpg", import.meta.url).href : new URL("../section/s6/4.jpg", import.meta.url).href,
+        caption: '3D建築一樓外觀示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s6/5_m.jpg", import.meta.url).href : new URL("../section/s6/5.jpg", import.meta.url).href,
+        caption: '3D建築外觀夜景示意圖'
     },
 ])
 </script>

@@ -1,18 +1,22 @@
 <template>
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
     <div class="title flex flex-col items-center justify-center">
-      <div class="t1">長耀里藏富貴 26層森林之王</div>
-      <div class="t2 font-['noto_sans_tc']">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身 2000 坪公園森林，<br>
+      <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層森林之王</div>
+      <div class="t2 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="200">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身
+        2000 坪公園森林，<br v-if="!$isMobile()">
         這是林口第 18 個里，唯一住在富貴公園裡的里，這個里，屬於長耀，屬於你。<br>
         家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</div>
-      <div class="t3 font-['noto_sans_tc']">新國際豪宅生活式樣| 18-29坪 富貴公園首席</div>
-      <img class="logo" src="@/section/s1/logo.png" alt="" srcset="">
+      <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
+          v-else>| </span>18-29坪 富貴公園首席</div>
+      <img class="logo" src="@/section/s1/logo.png" alt="" srcset="" data-aos="fade" data-aos-delay="600">
     </div>
-    <img class="leaf" src="@/section/s1/leaf.png" alt="" srcset="">
-    <img class="circle" src="@/section/s1/circle.png" alt="" srcset="">
-    <img class="circle2" src="@/section/s1/circle2.png" alt="" srcset="">
-    <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
-    <img class="buck-e" src="@/section/s1/buck-e.gif" alt="" srcset="">
+    <lazy-component>
+      <img class="leaf" src="@/section/s1/leaf.png" alt="" srcset="">
+      <img class="circle" src="@/section/s1/circle.png" alt="" srcset="">
+      <img class="circle2" src="@/section/s1/circle2.png" alt="" srcset="">
+      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
+      <img class="buck-e" src="@/section/s1/buck-e.gif" alt="" srcset="">
+    </lazy-component>
 
   </article>
 </template>
@@ -146,11 +150,103 @@
 }
 
 @media screen and (max-width: 767px) {
+
   .s1 {
-    min-height: size-m(667);
-    max-height: size-m(750);
-    overflow: hidden;
-    background-size: contain;
+    height: size-m(667);
+    padding-bottom: size-m(100);
+
+    .title {
+      .t1 {
+        font-size: size-m(24.5);
+        text-shadow: 0px 0px size-m(10) rgba(0, 0, 0, 0.1);
+        border-bottom: size-m(1) solid;
+        padding-bottom: size-m(6);
+        margin-bottom: size-m(18);
+      }
+
+      .t2 {
+        font-size: size-m(12);
+        line-height: 180%;
+        letter-spacing: size-m(0.02);
+        width: size-m(305);
+      }
+
+      .t3 {
+        font-size: size-m(16);
+        line-height: size-m(23);
+        text-align: center;
+        margin: size-m(29) 0;
+
+        &::after {
+          width: size-m(59);
+        }
+
+        &::before {
+          width: size-m(59);
+        }
+      }
+
+      .logo {
+        width: size-m(122.5);
+      }
+    }
+
+    .leaf {
+      width: 105%;
+      bottom: -#{size-m(20)};
+      left: -2.5%;
+      animation: move 3s alternate-reverse infinite ease-in-out;
+
+      @keyframes move {
+        from {
+          transform: skewX(-1deg);
+        }
+
+        to {
+          transform: skewX(1deg);
+        }
+      }
+    }
+
+    .circle {
+      left: size-m(220);
+      bottom: 0;
+      width: size-m(261);
+    }
+
+    .circle2 {
+      left: -#{size-m(13)};
+      top: size-m(326);
+      width: size-m(158);
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(10%);
+      }
+    }
+
+    .buck {
+      position: absolute;
+      right: unset;
+      left: -#{size-m(8)};
+      bottom: 0;
+      width: size-m(168);
+      z-index: 4;
+    }
+
+    .buck-e {
+      position: absolute;
+      right: unset;
+      left: -#{size-m(8)};
+      bottom: 0;
+      width: size-m(168);
+      z-index: 3;
+    }
   }
 }
 </style>

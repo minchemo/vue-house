@@ -1,35 +1,81 @@
 <template>
     <div class="s5 relative">
-        <div class="text">
-            <img class="leaf leaf1" data-aos-duration="1000" data-aos="leafIn" src="@/section/s5/leaf01.png" alt="">
-            <img class="leaf leaf2" data-aos-duration="1000" data-aos="leafIn" src="@/section/s5/leaf02.png" alt="">
-            <div class="t1" data-aos="flip-left" data-aos-delay="0">水岸活氧 大都會公園<br />
-                下樓就是家庭運動場</div>
-            <div class="t2 font-['Noto_sans_tc']" data-aos="flip-left" data-aos-delay="200">
-                「日進學·日和」立地條件極佳，緊鄰五股國民運動中心及千坪公園，旁有新北大都會公園424頃的遼闊綠地，超過百座各式球場及全齡設施。近擁觀音山風景區，多條完善登山步道，飽覽首都街景。週末休閒育樂、親子踏青，下樓隨時出發。
-            </div>
-        </div>
-        <Splide ref="splide" :options="{
-            rewind: true,
-            autoWidth: true,
-            arrows: true,
-            pagination: true,
-            type: 'fade',
-            autoplay: true,
-            interval: 4000,
-        }" @splide:move="move" class="slide-box z-10">
-            <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
-                <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
-            </SplideSlide>
+        <div class="title">
+            <div class="t1" data-aos="fade" data-aos-delay="0">不做<span>平凡</span> 只做<span>地標</span></div>
+            <div class="t2" data-aos="fade" data-aos-delay="200">在林口的天際線上，沒有人比長耀更具企圖心。</div>
+            <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">
+                長耀建設只願取精華中的精華，蓋地標中的地標，自富人聚居的扶輪公園、繁華的三井商圈、國際影視特區到富貴森林公園，一出手，必在精華區段樹立經典鉅作。<br /><br />
 
-            <div class="arrows splide__arrows">
-                <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.png" alt="" srcset="">
-                </button>
-                <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.png" alt="" srcset=""></button>
-            </div>
-        </Splide>
+                「長耀Park」以29層凌空視野，打開林口天際全新景觀；「長耀初」用27層傲人身段，再現市心擎天建築美學；「長耀里」26層森林之王的姿態立足富貴公園裡。一次又一次的新高度，圓滿所有層峰視野的期望。<br />
+                仰之彌高，才是地標，而長耀建設，不做平凡，只做地標。 </div>
+        </div>
+        <div class="works">
+            <Splide ref="splide" :options="{
+                rewind: true,
+                arrows: false,
+                pagination: $isMobile() ? true : false,
+                type: $isMobile() ? 'loop' : 'slide',
+                autoWidth: true,
+                autoplay: $isMobile() ? true : false,
+                interval: 4000,
+                // perPage: $isMobile() ? 6 : timelines.length,
+                focus: 'center',
+                gap: 0,
+                start: $isMobile() ? 2 : 20,
+                drag: $isMobile() ? true : false,
+                snap: $isMobile() ? true : false
+            }" @splide:moved="moved" class="slide-box" data-aos="fade" data-aos-delay="200">
+                <SplideSlide class="slide" @mouseover="selectImg = i" @mouseleave="selectImg = ''"
+                    v-for="img, i in imgs" v-lazy:background-image="img.img">
+                    <div class="caption font-['noto_serif_jp']">{{ img.content }}</div>
+                </SplideSlide>
+            </Splide>
+        </div>
+
+        <div class="timelines" data-aos="fade" data-aos-delay="200">
+            <Splide ref="splide" :options="{
+                rewind: true,
+                arrows: false,
+                pagination: false,
+                type: $isMobile() ? 'loop' : 'slide',
+                autoWidth: true,
+                autoplay: false,
+                interval: 4000,
+                perPage: $isMobile() ? 6 : timelines.length,
+                padding: $isMobile() ? 0 : 0,
+                focus: 'center',
+                gap: 0,
+                start: $isMobile() ? 0 : 20,
+                drag: $isMobile() ? 'free' : false,
+                snap: $isMobile() ? true : false
+            }" @splide:move="move" class="slide-box">
+                <SplideSlide class="slide" v-bind:class="{ 'selected': selectImg == timeline.targetImg }"
+                    v-for="timeline, i in timelines">
+                    <div class="box">
+                        <div class="year font-['noto_serif_tc']" v-html="timeline.year"></div>
+                        <div class="dot"></div>
+                        <div class="txt">
+                            <div class="name">{{ timeline.name }}</div>
+                        </div>
+                    </div>
+                    <div class="content font-['noto_sans_tc']">
+                        <div v-for="content, i in timeline.content">
+                            {{ content }}
+                        </div>
+                    </div>
+                </SplideSlide>
+            </Splide>
+        </div>
+
+        <lazy-component>
+            <img class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.png" alt="" srcset="">
+            <img v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.png" alt=""
+                srcset="">
+            <img v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.png" alt="" srcset="">
+            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.png" alt=""
+                srcset="">
+            <img v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.png" alt="" srcset="">
+        </lazy-component>
     </div>
 </template>
 
@@ -38,268 +84,686 @@
 
 .s5 {
     width: 100%;
-    height: size(900);
-    background-image: url('@/section/s5/bg.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: size(81);
-    gap: size(137);
+    height: size(1230);
+    background-color: #E5DBC2;
 
-    .leaf {
+    .title {
         position: absolute;
-        pointer-events: none;
+        top: size(115);
+        left: size(218);
+        z-index: 5;
 
-        &.leaf1 {
-            width: size(100);
-            top: size(150);
-            left: size(464);
-        }
-
-        &.leaf2 {
-            width: size(113);
-            top: size(337);
-            left: size(618);
-        }
-    }
-
-    .text {
         .t1 {
-            font-weight: 600;
-            font-size: size(42);
-            margin-bottom: size(20);
-        }
+            font-weight: 700;
+            font-size: size(40);
+            line-height: 150%;
 
-        .t2 {
-            font-weight: 400;
-            font-size: size(20);
-            line-height: size(40);
-            width: size(588);
-        }
-    }
+            span {
+                &:nth-child(1) {
+                    color: #466C4A;
+                }
 
-    .slide-box {
-        flex-basis: size(901);
-        height: size(615);
-
-        .splide__track {
-            overflow: visible;
-        }
-
-        .slide {
-            width: size(901);
-            height: size(615);
-            background-size: cover;
-
-            .caption {
-                position: absolute;
-                font-size: size(13);
-                color: #fff;
-                bottom: size(12.5);
-                right: size(25);
-                text-shadow: 0.1em 0.1em 0.2em black
-            }
-        }
-
-        .arrows {
-            position: absolute;
-            width: size(949.34);
-            display: flex;
-            justify-content: space-between;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 5;
-
-            img {
-                width: size(55)
-            }
-        }
-
-        .splide__pagination {
-            gap: size(21);
-            justify-content: flex-start;
-            margin-top: size(20);
-
-            li {
-                button {
-
-                    width: size(20);
-                    height: size(20);
-                    background-color: #BEC9A4;
-                    border-radius: 999px;
-
-                    &.is-active {
-                        background-color: #46B258;
-                    }
+                &:nth-child(2) {
+                    color: #B64F31;
                 }
             }
         }
 
-        &::before {
-            content: '';
-            width: size(415);
-            height: size(445);
-            border-left: size(3) solid #9CBA52;
-            border-top: size(3) solid #9CBA52;
-            position: absolute;
-            left: -#{size(35)};
-            top: -#{size(35)};
+        .t2 {
+            font-weight: 700;
+            font-size: size(24);
+            line-height: size(34);
+            margin-bottom: size(45);
+        }
+
+        .t3 {
+            font-weight: 400;
+            font-size: size(20);
+            line-height: 150%;
+            letter-spacing: size(.05);
+            width: size(1035);
+        }
+    }
+
+    .works {
+        width: 100%;
+        position: absolute;
+        top: size(380);
+        left: 0;
+        z-index: 50;
+
+        .slide-box {
+            .splide__list {
+                justify-content: center;
+            }
+
+            .splide__track {
+                padding: size(80);
+            }
+
+            .slide {
+                width: size(341);
+                height: size(371);
+                background-size: cover;
+                margin: 0 size(20);
+                transition: all .5s;
+
+                .caption {
+                    width: 100%;
+                    position: absolute;
+                    top: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 700;
+                    font-size: size(24);
+                    background-color: #fff;
+                    opacity: 0;
+
+                    &::after {
+                        content: '';
+                        height: size(1);
+                        width: size(41.5);
+                        right: 15%;
+                        background-color: #000;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &::before {
+                        content: '';
+                        height: size(1);
+                        width: size(41.5);
+                        left: 15%;
+                        background-color: #000;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &:hover {
+                    filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.6));
+
+                    .caption {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .timelines {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: size(224);
+        background-color: #BF9959;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .slide-box {
+            position: relative;
+            width: 100%;
+            z-index: 2;
+
+            .splide__list {
+                justify-content: center;
+            }
+
+            .slide {
+                width: auto;
+                height: size(224);
+                color: #fff;
+                display: flex;
+                padding: 0 size(11);
+                margin: 0 size(5);
+                padding-top: size(25);
+
+                .box {
+                    display: flex;
+                    flex-direction: column;
+                    width: auto;
+                    height: 100%;
+                    gap: size(15);
+
+                    .year {
+                        font-size: size(14);
+                        font-family: 'Noto Serif TC';
+                        writing-mode: vertical-rl;
+                        height: size(35);
+                    }
+
+                    .dot {
+                        width: size(7) !important;
+                        height: size(7) !important;
+                        border-radius: 100%;
+                        margin: 0 auto;
+                        background-color: #000;
+                        z-index: 1;
+                    }
+
+                    .txt {
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: row;
+
+                        .name {
+                            font-size: size(14);
+                            writing-mode: vertical-rl;
+                            font-weight: 500;
+                            letter-spacing: size(1);
+                            text-transform: uppercase;
+                        }
+                    }
+
+                }
+
+                .content {
+                    writing-mode: vertical-rl;
+                    padding-top: size(72);
+                    font-size: size(13);
+                    font-weight: 300;
+                }
+
+                &::after {
+                    content: '';
+                    width: 130%;
+                    height: size(1);
+                    position: absolute;
+                    left: 0;
+                    top: size(78);
+                    background-color: #fff;
+                    z-index: 0;
+                }
+
+                &.selected {
+                    background-color: #B48A45;
+
+                    .box {
+                        .dot {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
         }
 
         &::after {
             content: '';
-            width: size(500);
-            height: 1px;
-            border-bottom: size(3) solid #9CBA52;
+            width: 130%;
+            height: size(1);
             position: absolute;
-            right: 0;
-            bottom: -#{size(35)};
+            left: 0;
+            top: size(78);
+            background-color: #fff;
+            z-index: 0;
+        }
+    }
+
+
+    .rb_leaf {
+        position: absolute;
+        right: 0;
+        bottom: size(224);
+        width: size(843);
+        transform-origin: right bottom;
+        animation: rb 2s alternate-reverse infinite ease-in-out;
+
+        @keyframes rb {
+            from {
+                transform: skewX(0);
+            }
+
+            to {
+                transform: skewX(-5deg);
+            }
+        }
+    }
+
+    .rt_leaf {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: size(398);
+        transform-origin: right top;
+        animation: rt 2s alternate-reverse infinite ease-in-out;
+
+        @keyframes rt {
+            from {
+                transform: skewX(0);
+            }
+
+            to {
+                transform: skewX(5deg);
+            }
+        }
+    }
+
+    .lt_leaf {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: size(378);
+        transform-origin: left top;
+        animation: lt 2s alternate-reverse infinite ease-in-out;
+
+        @keyframes lt {
+            from {
+                transform: skewX(0);
+            }
+
+            to {
+                transform: skewX(-5deg);
+            }
         }
     }
 }
 
+
 @media screen and (max-width:768px) {
-
     .s5 {
-        width: 100%;
-        height: size-m(667);
-        background-image: url('@/section/s5/bg_m.jpg');
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: column;
-        padding-right: 0;
-        gap: size-m(35);
+        height: size-m(1047);
 
-        .leaf {
-
-            &.leaf1 {
-                width: size-m(51.6);
-                top: size-m(56);
-                left: size-m(132);
-            }
-            &.leaf2 {
-                width: size-m(60);
-                top: size-m(129);
-                left: size-m(282.9);
-            }
-        }
-
-        .text {
-            width: 85%;
-            margin-top: size-m(120);
+        .title {
+            top: size-m(83);
+            left: 0;
+            width: 100%;
+            padding: size-m(30);
 
             .t1 {
-                font-size: size-m(25);
-                line-height: size-m(36);
-                margin-bottom: size-m(10);
+                font-size: size-m(24.5);
+                color: #B64F31;
             }
 
             .t2 {
                 font-size: size-m(14);
-                line-height: size-m(25);
-                text-align: justify;
-                width: unset;
+                line-height: size-m(20);
+                margin-bottom: size-m(23);
+            }
+
+            .t3 {
+                font-size: size-m(12);
+                line-height: 180%;
+                letter-spacing: size-m(.01);
+                width: 100%;
             }
         }
 
-        .slide-box {
-            flex-basis: size-m(290);
-            height: size-m(255.97);
-            margin-bottom: size-m(35);
+        .works {
+            top: size-m(388);
 
-            .splide__track {
-                overflow: visible;
-            }
-
-            .slide {
-                width: size-m(375);
-                height: size-m(255.97);
-
-                .caption {
-                    font-size: size-m(13);
+            .slide-box {
+                .splide__list {
+                    justify-content: unset;
                 }
-            }
 
-            .arrows {
-                width: size-m(352);
-
-                img {
-                    width: size-m(30.24)
+                .splide__track {
+                    padding: size-m(50);
+                    margin-top: -#{size-m(45)};
                 }
-            }
 
-            .splide__pagination {
-                gap: size-m(12);
-                justify-content: flex-end;
-                margin-top: size-m(10);
-                margin-right: size-m(30);
+                .slide {
+                    width: size-m(375);
+                    height: size-m(381);
+                    margin: 0;
+                    background-size: size-m(314);
+                    background-repeat: no-repeat;
+                    background-position: center;
 
-                li {
+                    .caption {
+                        font-size: size-m(20);
+                        width: size-m(314);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: unset;
+                        bottom: 0;
+                        transition: all .5s;
+                        opacity: 1;
+
+                        &::after {
+                            width: size-m(41.5);
+                            right: 20%;
+                        }
+
+                        &::before {
+                            width: size-m(41.5);
+                            left: 20%;
+                        }
+                    }
+
+                    &:hover {
+                        filter: drop-shadow(0px size-m(4) size-m(30) rgba(0, 0, 0, 0.6));
+
+
+                        .caption {
+                            opacity: 1;
+                        }
+                    }
+
+                    &.is-active {
+                        filter: drop-shadow(0px size-m(4) size-m(30) rgba(0, 0, 0, 0.6));
+                    }
+                }
+
+                .splide__pagination {
+                    gap: size-m(7);
+                    position: absolute;
+                    bottom: size-m(20);
+                    width: 100%;
+
                     button {
-                        width: size-m(12);
-                        height: size-m(12);
+                        width: 8px;
+                        height: 8px;
+                        border: 1px solid #fff;
+                        border-radius: 100%;
+
+                        &.is-active {
+                            background-color: #fff;
+                        }
                     }
                 }
             }
+        }
 
-            &::before {
-                content: '';
-                width: size-m(196);
-                height: 0;
-                border-left: 0;
-                border-top: size-m(3) solid #9CBA52;
-                position: absolute;
-                left: unset;
-                right: 0;
-                top: -#{size-m(15)};
+        .timelines {
+            height: size-m(224);
+
+            .slide-box {
+                .slide {
+                    height: size-m(224);
+                    padding: 0 size-m(11);
+                    margin: 0 size-m(5);
+                    padding-top: size-m(35);
+
+                    .box {
+                        gap: size-m(15);
+
+                        .year {
+                            font-size: size-m(14);
+                            height: size-m(30);
+                        }
+
+                        .dot {
+                            width: size-m(7) !important;
+                            height: size-m(7) !important;
+                        }
+
+                        .txt {
+                            .name {
+                                font-size: size-m(14);
+                                letter-spacing: size-m(1);
+                            }
+                        }
+
+                    }
+
+                    .content {
+                        padding-top: size-m(67);
+                        font-size: size-m(13);
+                    }
+
+                    &::after {
+                        top: size-m(83);
+                    }
+
+                    &.selected {
+                        background-color: #B48A45;
+
+                        .box {
+                            .dot {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+
+                }
+
             }
 
             &::after {
-                content: '';
-                width: size-m(196);
-                height: 1px;
-                border-bottom: size-m(3) solid #9CBA52;
-                position: absolute;
-                right: unset;
-                left: 0;
-                bottom: 0;
+                top: size-m(83);
             }
         }
-    }
 
+
+        .rb_leaf {
+            bottom: size-m(224);
+            width: size-m(532);
+
+        }
+
+        .rt_leaf {
+            width: size-m(94);
+        }
+
+        .lt_leaf {
+            width: size-m(148);
+        }
+    }
 }
 </style>
 
 <script setup>
-import { ref, getCurrentInstance } from "vue"
+import { ref, inject, getCurrentInstance, onMounted } from "vue"
 import AOS from 'aos';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
 const splide = ref();
 const currentIdx = ref(0)
+const selectImg = ref('0')
+
+const moved = (newIdx, prevIdx, destIdx) => {
+    currentIdx.value = prevIdx
+    selectImg.value = prevIdx
+    AOS.refresh();
+
+    const slideIdx = timelines.value.findIndex(item => item.targetImg == selectImg.value)
+
+    if (slideIdx != -1) {
+        splide.value.splide.go(slideIdx)
+    }
+}
 const move = (newIdx, prevIdx, destIdx) => {
     currentIdx.value = prevIdx
     AOS.refresh();
 }
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const imgs = ref([
+
+const timelines = ref([
     {
-        img: globals.$isMobile() ? new URL("../section/s5/1_m.jpg", import.meta.url).href : new URL("../section/s5/1.jpg", import.meta.url).href,
-        caption: '大台北都會公園'
+        targetImg: '99',
+        year: '2002',
+        name: '明湖青庭',
+        content: []
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s5/2_m.jpg", import.meta.url).href : new URL("../section/s5/2.jpg", import.meta.url).href,
-        caption: '大台北都會公園'
+        targetImg: '99',
+        year: '2003',
+        name: '寬庭',
+        content: []
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s5/3_m.jpg", import.meta.url).href : new URL("../section/s5/3.jpg", import.meta.url).href,
-        caption: '五股運動中心旁公園'
+        targetImg: '99',
+        year: '2004',
+        name: '長耀哲里',
+        content: []
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s5/4_m.jpg", import.meta.url).href : new URL("../section/s5/4.jpg", import.meta.url).href,
-        caption: '五股運動中心旁公園'
+        targetImg: '99',
+        year: '2005',
+        name: '長耀Glory',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2006',
+        name: '長耀緻上',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2007',
+        name: '長耀V-house',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2008',
+        name: '湖砌',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2009',
+        name: '合砌',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2010',
+        name: 'MORE123',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2011',
+        name: '涵玉',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2012',
+        name: '巷上',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2013',
+        name: 'THE ONE',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2014',
+        name: '豁達達仁',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2015',
+        name: '豁達達謙',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2016',
+        name: '長耀里仁',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2017',
+        name: '長耀朗朗',
+        content: []
+    },
+    {
+        targetImg: '0',
+        year: '2018',
+        name: '長耀挹品',
+        content: []
+    },
+    {
+        targetImg: '2',
+        year: '2019',
+        name: '長耀PARK',
+        content: []
+    },
+    {
+        targetImg: '3',
+        year: '2020',
+        name: '長耀双丰双卉',
+        content: []
+    },
+    {
+        targetImg: '1',
+        year: '2021',
+        name: '長耀初',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '2022',
+        name: '長耀里',
+        content: []
+    },
+    {
+        targetImg: '99',
+        year: '未來',
+        name: '林口',
+        content: ['長耀新林國小案', '長耀力行段', '長耀建林段']
+    },
+    {
+        targetImg: '99',
+        year: '',
+        name: '北投',
+        content: ['三合段案', '大業段案']
+    },
+    {
+        targetImg: '99',
+        year: '',
+        name: '內湖',
+        content: ['東湖六小都更案']
+    },
+    {
+        targetImg: '99',
+        year: '',
+        name: '大直',
+        content: ['金泰段商辦案']
+    },
+    {
+        targetImg: '99',
+        year: '',
+        name: '士林',
+        content: ['中山北路', '士林官邸案']
+    },
+    {
+        targetImg: '99',
+        year: '',
+        name: '淡水',
+        content: ['新市鎮案']
     },
 ])
+
+const imgs = ref([
+    {
+        img: new URL("../section/s5/1.jpg", import.meta.url).href,
+        content: '長耀挹品'
+    },
+    {
+        img: new URL("../section/s5/2.jpg", import.meta.url).href,
+        content: '長耀初'
+    },
+    {
+        img: new URL("../section/s5/3.jpg", import.meta.url).href,
+        content: '長耀PARK'
+    },
+    {
+        img: new URL("../section/s5/4.jpg", import.meta.url).href,
+        content: '双丰双卉'
+    },
+])
+
+onMounted(() => {
+    const slideIdx = timelines.value.findIndex(item => item.targetImg == selectImg.value)
+
+    if (slideIdx != -1) {
+        splide.value.splide.go(slideIdx)
+    }
+})
+
+
 </script>

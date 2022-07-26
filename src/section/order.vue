@@ -1,14 +1,23 @@
   <template>
-  <div class="order relative bg-[#DFDDC8] text-center">
+  <div class="order relative bg-[#E5DBC2] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
+      <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="長耀里" srcset=""
-      data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset="" data-aos="fade"
-      data-aos-duration="1000"> -->
+      <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset=""
+        data-aos="fade" data-aos-duration="1000">
+      <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset="" data-aos="fade"
+        data-aos-duration="1000">
+
+      <!-- Custom Image -->
+      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.png" alt="" srcset="">
+      <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.png" alt="" srcset="">
+      <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.png" alt="" srcset="">
+      <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.png" alt="" srcset="">
+      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
+      <img class="buck-e" src="@/section/s1/buck-e.gif" alt="" srcset="">
+
 
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
@@ -47,7 +56,7 @@
           class="checkbox bg-white rounded-md" />
         <p>
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-black font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -63,6 +72,8 @@
 
       <!-- Contact Info -->
       <ContactInfo />
+
+
     </div>
 
 
@@ -78,30 +89,12 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  padding-bottom: size(52);
+  padding-bottom: size(200);
   position: relative;
-
-  .cat {
-    position: absolute;
-    width: size(600);
-    z-index: 1;
-    pointer-events: none;
-    bottom: -#{size(130)};
-    left: 0;
-  }
 
   .z-10 {
     z-index: 10;
     position: relative;
-  }
-
-  .rabbit {
-    position: absolute;
-    width: size(550);
-    z-index: 1;
-    pointer-events: none;
-    bottom: size(20);
-    right: 0;
   }
 
   .bg-image {
@@ -112,20 +105,67 @@
     vertical-align: middle;
   }
 
-  &::after {
-    content: '';
-    width: 100%;
-    height: size(50);
-    background-color: #514118;
+
+  .rb_leaf {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: size(480);
+    transform-origin: right bottom;
+    animation: rb 2s alternate-reverse infinite ease-in-out;
+    z-index: 5;
+
+    @keyframes rb {
+      from {
+        transform: skewX(0);
+      }
+
+      to {
+        transform: skewX(-5deg);
+      }
+    }
+  }
+
+  .lb_leaf {
     position: absolute;
     left: 0;
     bottom: 0;
+    width: size(1623);
+    transform-origin: left bottom;
+    animation: lb 2s alternate-reverse infinite ease-in-out;
+    z-index: 5;
+
+    @keyframes lb {
+      from {
+        transform: skewX(0);
+      }
+
+      to {
+        transform: skewX(5deg);
+      }
+    }
+  }
+
+  .buck {
+    position: absolute;
+    right: -#{size(22)};
+    bottom: -#{size(29)};
+    width: size(523);
+    z-index: 4;
+  }
+
+  .buck-e {
+    position: absolute;
+    right: -#{size(22)};
+    bottom: -#{size(29)};
+    width: size(523);
+    z-index: 3;
   }
 }
 
 .order {
   width: 100%;
-  padding-top: size(50);
+  padding-top: size(100);
 
   .order-title {
     font-size: size(43);
@@ -135,9 +175,9 @@
 
   .order-title-img {
     display: block;
-    width: size(859);
+    width: size(520);
     margin: 0 auto;
-    margin-bottom: size(40);
+    margin-bottom: size(80);
   }
 
   .form {
@@ -168,8 +208,8 @@
     font-size: size(22);
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    background-color: #3E3A39;
+    color: #000;
+    background-color: #fff;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
@@ -188,26 +228,8 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    padding-bottom: 0;
+    padding-bottom: size-m(70);
     position: relative;
-
-    .cat {
-      position: absolute;
-      width: size-m(220);
-      z-index: 1;
-      pointer-events: none;
-      bottom: size-m(520);
-      left: -#{size-m(40)};
-    }
-
-    .rabbit {
-      position: absolute;
-      width: size-m(170);
-      z-index: 1;
-      pointer-events: none;
-      bottom: size-m(600);
-      right: -#{size-m(30)};
-    }
 
     .bg-image {
       position: absolute;
@@ -216,15 +238,28 @@
       bottom: size-m(590);
     }
 
-    &::after {
-      content: '';
-      width: 100%;
-      height: size(50);
-      background-color: #514118;
-      position: absolute;
-      left: 0;
-      bottom: 0;
+    .rb_leaf {
+      width: size-m(187);
     }
+
+    .lb_leaf {
+      width: 100%;
+    }
+
+    .buck {
+      right: unset;
+      left: size-m(15);
+      bottom: size-m(5);
+      width: size-m(183);
+    }
+
+    .buck-e {
+      right: unset;
+      left: size-m(15);
+      bottom: size-m(5);
+      width: size-m(183);
+    }
+
   }
 
   .order {

@@ -9,7 +9,7 @@
             autoWidth: true,
             autoplay: true,
             interval: 4000,
-            perPage: 9,
+            perPage: $isMobile() ? 3 : 9,
             padding: '5%',
             focus: 'center',
             gap: 0,
@@ -23,13 +23,16 @@
             </SplideSlide>
         </Splide>
         <div class="info flex flex-col items-center justify-center">
-            <div class="t1">富貴人生 <span>十全十美</span></div>
-            <div class="t2" v-html="imgs[currentIdx].content"></div>
+            <div class="t1" data-aos="fade">富貴人生 <span>十全十美</span></div>
+            <div class="t2" data-aos="fade" data-aos-delay="200" v-html="imgs[currentIdx].content"></div>
         </div>
-        <img class="rb_leaf" src="@/section/s3/rb_leaf.png" alt="" srcset="">
-        <img class="lb_leaf" src="@/section/s3/lb_leaf.png" alt="" srcset="">
-        <img class="rt_leaf" src="@/section/s3/rt_leaf.png" alt="" srcset="">
-        <img class="lt_leaf" src="@/section/s3/lt_leaf.png" alt="" srcset="">
+        <lazy-component>
+
+            <img class="rb_leaf" src="@/section/s3/rb_leaf.png" alt="" srcset="">
+            <img class="lb_leaf" src="@/section/s3/lb_leaf.png" alt="" srcset="">
+            <img class="rt_leaf" src="@/section/s3/rt_leaf.png" alt="" srcset="">
+            <img class="lt_leaf" src="@/section/s3/lt_leaf.png" alt="" srcset="">
+        </lazy-component>
     </div>
 </template>
 
@@ -230,10 +233,87 @@
 
 
 @media screen and (max-width:768px) {
-    .s3 {
-        height: size-m(1462);
-    }
 
+    .s3 {
+        width: 100%;
+        height: size-m(667);
+        background-color: #E5DBC2;
+
+        .slide-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .slide {
+                width: size-m(142.5);
+                height: size-m(200);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .icon {
+                    width: size-m(108);
+                    height: size-m(108);
+                    border: size-m(1) solid #000;
+                }
+
+                &.is-active {
+                    .icon {
+                        width: size-m(130);
+                        height: size-m(130);
+                    }
+                }
+
+            }
+        }
+
+        .number {
+            font-size: size-m(150);
+            top: size-m(70);
+            line-height: size-m(150);
+        }
+
+        .info {
+            top: size-m(424);
+            width: 100%;
+
+            .t1 {
+                font-size: size-m(24.5);
+                margin-bottom: size-m(15);
+
+                &::after {
+                    width: size-m(42.57);
+                }
+
+                &::before {
+                    width: size-m(42.57);
+                }
+            }
+
+            .t2 {
+                font-size: size-m(16);
+                line-height: size-m(23);
+                text-align: center;
+            }
+        }
+
+        .rb_leaf {
+            width: size-m(397);
+        }
+
+        .lb_leaf {
+            width: size-m(210);
+        }
+
+        .rt_leaf {
+            width: size-m(142);
+        }
+
+        .lt_leaf {
+            width: size-m(147);
+        }
+    }
 }
 </style>
 

@@ -1,8 +1,8 @@
 <template>
-    <div class="s8 relative">
+    <div class="s10 relative">
         <div class="title">
-            <div class="t1" data-aos="fade" data-aos-delay="0">長耀幸福社區 百坪豪宅也難得的眼界</div>
-            <div class="t2 font-['Noto_sans_tc']" data-aos="fade" data-aos-delay="200">
+            <div class="t1">長耀幸福社區 百坪豪宅也難得的眼界</div>
+            <div class="t2 font-['Noto_sans_tc']">
                 地段核心、明星學校、公園環繞、捷運交通…在「長耀里」都是標準配備。<br />
                 建築如何訴說傳世價值？居所如何讓人一眼感動？從長耀的休閒會館和社區總體營造就能找到答案。<br /><br />
                 從林口唯一室內籃球場、落羽松花園、配備國際賽道規格泳池等創舉，不僅體現同步國際的品味及視野，量身規劃的休閒場域，讓長耀建築成為林口最有價值的等待，也是獻給所有住戶最真摯體貼的情意。
@@ -36,7 +36,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s8 {
+.s10 {
     width: 100%;
     height: size(1080);
     background-color: #000;
@@ -127,61 +127,9 @@
 
 @media screen and (max-width:768px) {
 
-    .s8 {
+    .s10 {
         height: size-m(667);
 
-        .title {
-            color: #fff;
-            position: relative;
-            z-index: 1;
-            left: unset;
-            top: unset;
-            width: 100%;
-            padding: size-m(30);
-
-            .t1 {
-                font-size: size-m(24.5);
-                margin-bottom: size-m(17);
-            }
-
-            .t2 {
-                font-size: size-m(12);
-                line-height: 180%;
-                width: 100%;
-            }
-        }
-
-        .slide-box {
-            position: absolute;
-            top: unset;
-            bottom: 0;
-
-            .slide {
-                width: size-m(375);
-                height: size-m(310);
-                background-size: cover;
-
-                .caption {
-                    bottom: size-m(10);
-                    font-size: size-m(12);
-                }
-            }
-
-            .arrows {
-
-                img {
-                    width: size-m(17.75);
-                }
-            }
-        }
-
-        &::after {
-            display: none;
-        }
-
-        &::before {
-            display: none;
-        }
     }
 
 }
@@ -202,11 +150,11 @@ const move = (newIdx, prevIdx, destIdx) => {
 
 const imgs = ref([
     {
-        img: globals.$isMobile() ? new URL("../section/s8/1_m.jpg", import.meta.url).href : new URL("../section/s8/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s10/1.jpg", import.meta.url).href : new URL("../section/s10/1.jpg", import.meta.url).href,
         caption: '長耀里迎賓大廳3D示意圖'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s8/2_m.jpg", import.meta.url).href : new URL("../section/s8/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s10/1.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
         caption: '長耀里迎賓大廳3D示意圖'
     },
 ])

@@ -1,14 +1,21 @@
 <template>
     <div class="s2 relative">
         <div class="title">
-            <div class="t1">先到公園再到家 住進<span>富貴森林公園裡</span></div>
-            <div class="t2 font-['Noto_sans_tc']">
+            <div class="t1" data-aos="fade" data-aos-delay="0">先到公園再到家 <br v-if="$isMobile()" />住進<span>富貴森林公園裡</span>
+            </div>
+            <div class="t2 font-['Noto_sans_tc']" v-if="!$isMobile()" data-aos="fade" data-aos-delay="200">
                 把家種植在一座公園森藏不露，是生活的優渥，更是視野的闊綽。<br />
                 研究顯示：想要健康長壽，25%靠基因，75%靠環境。<br />
                 「長耀里」用一座富貴公園當健康的靠山，不是公園第一排，<br />
                 而是直接住進公園裡，將文化三路鬧中取靜的優渥、玉帶環腰的富裕風水、億級國際建設輕擁入懷。<br />
                 紐約中央公園、倫敦海德公園…國際豪宅都在公園畔，全球永不貶值的強勢貨幣，<br />
                 比起富可敵國，真正的富人更想綠可敵國。
+            </div>
+            <div class="t2 font-['Noto_sans_tc']" v-else data-aos="fade" data-aos-delay="200">
+                把家種植在一座公園森藏不露，是生活的優渥，更是視野的闊綽。<br />
+                研究顯示：想要健康長壽，25%靠基因，75%靠環境。<br />
+                「長耀里」用一座富貴公園當健康的靠山，不是公園第一排，而是直接住進公園裡，將文化三路鬧中取靜的優渥、玉帶環腰的富裕風水、億級國際建設輕擁入懷。<br />
+                紐約中央公園、倫敦海德公園…國際豪宅都在公園畔，全球永不貶值的強勢貨幣，比起富可敵國，真正的富人更想綠可敵國。
             </div>
         </div>
         <Splide ref="splide" :options="{
@@ -102,9 +109,54 @@
 
 @media screen and (max-width:768px) {
 
-    .s2 {
-        height: size-m(667);
 
+    .s2 {
+        width: 100%;
+        height: size-m(667);
+        background-color: #000;
+
+        .title {
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            padding: size-m(30);
+
+            .t1 {
+                font-size: size-m(24.5);
+                margin-bottom: size-m(15);
+            }
+
+            .t2 {
+                font-size: size-m(12);
+                line-height: 180%;
+            }
+        }
+
+        .slide-box {
+            position: absolute;
+            width: 100%;
+            height: size-m(315);
+            bottom: 0;
+
+            .slide {
+                width: 100%;
+                height: size-m(315);
+
+                .caption {
+                    right: size-m(30);
+                    bottom: size-m(10);
+                    font-size: size-m(12);
+                }
+            }
+
+            .arrows {
+                img {
+                    width: size-m(17.75);
+                }
+            }
+        }
     }
 
 }
@@ -125,23 +177,23 @@ const move = (newIdx, prevIdx, destIdx) => {
 
 const imgs = ref([
     {
-        img: globals.$isMobile() ? new URL("../section/s2/1.jpg", import.meta.url).href : new URL("../section/s2/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s2/1_m.jpg", import.meta.url).href : new URL("../section/s2/1.jpg", import.meta.url).href,
         caption: '富貴森林公園'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s2/1.jpg", import.meta.url).href : new URL("../section/s2/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s2/2_m.jpg", import.meta.url).href : new URL("../section/s2/2.jpg", import.meta.url).href,
         caption: '富貴森林公園'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s2/1.jpg", import.meta.url).href : new URL("../section/s2/3.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s2/3_m.jpg", import.meta.url).href : new URL("../section/s2/3.jpg", import.meta.url).href,
         caption: '富貴森林公園'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s2/1.jpg", import.meta.url).href : new URL("../section/s2/4.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s2/4_m.jpg", import.meta.url).href : new URL("../section/s2/4.jpg", import.meta.url).href,
         caption: '富貴森林公園'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s2/1.jpg", import.meta.url).href : new URL("../section/s2/5.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s2/5_m.jpg", import.meta.url).href : new URL("../section/s2/5.jpg", import.meta.url).href,
         caption: '富貴森林公園'
     },
 ])

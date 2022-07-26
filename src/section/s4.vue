@@ -1,14 +1,16 @@
 <template>
     <div class="s4 relative">
         <div class="title">
-            <div class="t1">縱橫核心疆域 縱享繁華之最</div>
-            <div class="t2 font-['Noto_sans_tc']">
+            <div class="t1" data-aos="fade" data-aos-delay="0">縱橫核心疆域 縱享繁華之最</div>
+            <div class="t2 font-['Noto_sans_tc']" data-aos="fade" data-aos-delay="200">
                 以森林之王巡視疆土的氣韻，自「長耀里」信步閑庭穿越富貴公園
                 2000坪自家森林，黃金軸線文化三路近在眼前；回過頭，中山路商圈繁華燈火橫臥市心，運動中心舉步就到，明星雙語學區、美食採買、休閒活動盡在掌中，一種自然而然的崇高感由此而生。10
                 分鐘悠然漫步，就能得到一切，是王的特權。
-
             </div>
         </div>
+        <lazy-component>
+            <img v-if="$isMobile()" class="time" src="@/section/s4/time_m.svg" alt="" srcset="">
+        </lazy-component>
         <Splide ref="splide" :options="{
             rewind: true,
             autoWidth: true,
@@ -30,7 +32,10 @@
                     <img src="@/assets/next.svg" alt="" srcset=""></button>
             </div>
         </Splide>
-        <img class="time" src="@/section/s4/time.svg" alt="" srcset="">
+
+        <lazy-component>
+            <img v-if="!$isMobile()" class="time" src="@/section/s4/time.svg" alt="" srcset="">
+        </lazy-component>
     </div>
 </template>
 
@@ -112,9 +117,70 @@
 
 @media screen and (max-width:768px) {
 
-    .s4 {
-        height: size-m(667);
 
+    .s4 {
+        height: size-m(968);
+        background-color: #000;
+
+        .title {
+            position: relative;
+            left: unset;
+            top: unset;
+            padding: size-m(30);
+
+            .t1 {
+                font-size: size-m(24.5);
+                margin-bottom: size-m(14);
+            }
+
+            .t2 {
+                font-size: size-m(12);
+                line-height: 180%;
+                width: size-m(315);
+            }
+        }
+
+        .slide-box {
+            position: absolute;
+            width: 100%;
+            height: size-m(438);
+            bottom: 0;
+
+            .slide {
+                width: 100%;
+                height: size-m(438);
+                background-size: cover;
+
+                .caption {
+                    right: size-m(20);
+                    bottom: size-m(10);
+                    font-size: size-m(12);
+                }
+            }
+
+            .arrows {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 97%;
+                display: flex;
+                justify-content: space-between;
+                z-index: 10;
+
+                img {
+                    width: size-m(17.75);
+                }
+            }
+        }
+
+        .time {
+            position: relative;
+            width: size-m(315);
+            left: 50%;
+            bottom: unset;
+            transform: translateX(-50%);
+        }
     }
 
 }
@@ -135,23 +201,23 @@ const move = (newIdx, prevIdx, destIdx) => {
 
 const imgs = ref([
     {
-        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/1_m.jpg", import.meta.url).href : new URL("../section/s4/1.jpg", import.meta.url).href,
         caption: '國道一號'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/2_m.jpg", import.meta.url).href : new URL("../section/s4/2.jpg", import.meta.url).href,
         caption: '新北影視城'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/3.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/3_m.jpg", import.meta.url).href : new URL("../section/s4/3.jpg", import.meta.url).href,
         caption: 'A9捷運站'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/4.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/4_m.jpg", import.meta.url).href : new URL("../section/s4/4.jpg", import.meta.url).href,
         caption: '文化三路&忠孝二路'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s4/1.jpg", import.meta.url).href : new URL("../section/s4/5.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/5_m.jpg", import.meta.url).href : new URL("../section/s4/5.jpg", import.meta.url).href,
         caption: '三井OUTLET'
     },
 ])

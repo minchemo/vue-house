@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <div class="menu-item font-bold cursor-pointer text-white hover:text-black font-['noto_serif_tc']"
+            <div class="menu-item font-bold cursor-pointer text-white hover:text-gray-400 font-['noto_serif_tc']"
                 v-for="item, i in info.navList" @click="scrollTo(item.target)">
                 <!-- <span class="mr-3">0{{ i + 1 }}</span> -->
                 <span>{{ item.name }}</span>
@@ -266,6 +266,7 @@
         height: size-m(35);
         border-radius: 9999px;
         justify-content: flex-end;
+        backdrop-filter: blur(0);
 
         .logo {
             width: size-m(101.83);
@@ -296,6 +297,7 @@
             }
 
             &.open {
+
                 p {
                     color: #fff;
                 }
@@ -341,7 +343,8 @@
             transition: all .5s;
             border-radius: size-m(10);
             padding: 0;
-            gap: size-m(45);
+            gap: size-m(25);
+            background-color: rgba($color: #000000, $alpha: .85);
 
             .menu-item {
                 font-size: size-m(21);
@@ -350,6 +353,9 @@
             &.open {
                 transform: translateX(0);
                 left: unset;
+                right: 0;
+                top: 0;
+                backdrop-filter: blur(10px);
             }
         }
 
@@ -425,5 +431,6 @@ const scrollTo = (el) => {
     smoothScroll({
         scrollTo: document.querySelector(el)
     })
+    menuOpen.value = false
 }
 </script>
