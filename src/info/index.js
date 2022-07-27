@@ -36,49 +36,49 @@ export default {
     },
     navList: [{
             name: "里藏富貴",
-            target: ".s1",
-            offset: "",
-        },
-        {
-            name: "富貴人生",
             target: ".s2",
             offset: "",
         },
         {
-            name: "縱橫核心",
+            name: "富貴人生",
             target: ".s3",
             offset: "",
         },
         {
-            name: "長耀建築",
+            name: "縱橫核心",
             target: ".s4",
             offset: "",
         },
         {
-            name: "森林之王",
+            name: "長耀建築",
             target: ".s5",
             offset: "",
         },
         {
-            name: "豪宅團隊",
+            name: "森林之王",
             target: ".s6",
             offset: "",
         },
         {
-            name: "幸福社區",
+            name: "豪宅團隊",
             target: ".s7",
             offset: "",
         },
         {
-            name: "結構工法",
+            name: "幸福社區",
             target: ".s8",
             offset: "",
         },
         {
-            name: "美學空間",
+            name: "結構工法",
             target: ".s9",
             offset: "",
         },
+        //{
+        //    name: "美學空間",
+        //    target: ".s9",
+        //    offset: "",
+        //},
         {
             name: "立即預約",
             target: ".order",
