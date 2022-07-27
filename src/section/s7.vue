@@ -20,7 +20,7 @@
                 <SplideSlide class="slide" v-for="img, i in imgs" @mouseover="selectImg = i"
                     :class="{ 'active': selectImg == i }">
                     <div class="avatar" v-lazy:background-image="img.img"></div>
-                    <div class="t1">{{ img.t1 }}</div>
+                    <div class="t1 font-['noto_sans_tc']">{{ img.t1 }}</div>
                     <div class="name">
                         <div class="t2">{{ img.t2 }}</div>
                         <div class="t3 font-['noto_sans_tc']">{{ img.t3 }}</div>
@@ -131,8 +131,9 @@
                 .t5 {
                     font-weight: 400;
                     font-size: size(16);
-                    line-height: 150%;
+                    line-height: 160%;
                     letter-spacing: size(0.05);
+                    text-align: justify;
                 }
 
                 &:before {

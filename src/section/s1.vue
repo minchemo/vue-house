@@ -37,7 +37,6 @@
       font-size: size(56);
       line-height: 150%;
       color: #B74F32;
-      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       border-bottom: 1px solid;
       padding-bottom: size(10);
       margin-bottom: size(10);

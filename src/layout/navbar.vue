@@ -31,8 +31,9 @@
 
 .nav {
     padding: 0 size(20);
-    height: size(100);
+    height: size(60);
     backdrop-filter: blur(10px);
+    background-color: rgba($color: #fff, $alpha: .3) !important;
 
     .top-nav {
         display: flex;
@@ -267,6 +268,7 @@
         border-radius: 9999px;
         justify-content: flex-end;
         backdrop-filter: blur(0);
+        background-color: rgba(255, 255, 255, 0) !important;
 
         .logo {
             width: size-m(101.83);
@@ -344,7 +346,7 @@
             border-radius: size-m(10);
             padding: 0;
             gap: size-m(25);
-            background-color: rgba($color: #000000, $alpha: .85);
+            background-color: rgba($color: #000000, $alpha: .75);
 
             .menu-item {
                 font-size: size-m(21);

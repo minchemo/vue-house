@@ -1,4 +1,4 @@
-const caseName = "日進學"
+const caseName = "長耀里"
 
 export default {
     meta: {
@@ -6,12 +6,12 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "ＸＸ市ＸＸ區ＸＸ段ＸＸ號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.81813508623154!2d121.45115994583927!3d25.098809128684035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b6a68c61de4e78f%3A0xbf75a4b4b3810a1!2z5pel6YCy5a24LeaXpeWSjOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1658335985900!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/e439Udotf4Z8nbdW9",
+    address: "新北市林口區仁愛路一段",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14454.764237868012!2d121.3727072!3d25.0784582!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c3296170aabd0bb!2z6ZW36ICA6YeM5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1658887295643!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/xNrWLhD8wH7ZbrJk8",
     phone: "02-26092000",
-    fbLink: "https://www.facebook.com/106187212124087/",
-    fbMessage: "https://m.me/106187212124087/",
+    fbLink: "",
+    fbMessage: "",
     caseName: caseName,
     houseInfos: [
         ["建設公司", "長耀建設"],

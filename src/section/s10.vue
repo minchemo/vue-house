@@ -1,7 +1,7 @@
 <template>
     <div class="s10 relative">
         <div class="title">
-            <div class="t1">長耀幸福社區 百坪豪宅也難得的眼界</div>
+            <div class="t1">長耀幸福社區<br v-if="$isMobile()" />百坪豪宅也難得的眼界</div>
             <div class="t2 font-['Noto_sans_tc']">
                 地段核心、明星學校、公園環繞、捷運交通…在「長耀里」都是標準配備。<br />
                 建築如何訴說傳世價值？居所如何讓人一眼感動？從長耀的休閒會館和社區總體營造就能找到答案。<br /><br />

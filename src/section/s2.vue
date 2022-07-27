@@ -68,7 +68,7 @@
         }
 
         .t2 {
-            font-weight: 400;
+            font-weight: 300;
             font-size: size(20);
             line-height: 150%;
         }

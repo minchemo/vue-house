@@ -117,6 +117,7 @@
       width: 100%;
       padding: 0 size(55);
       // border-radius: 9999px;
+      border-radius: 10px;
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.06em;

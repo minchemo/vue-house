@@ -333,43 +333,43 @@ const move = (newIdx, prevIdx, destIdx) => {
 const imgs = ref([
     {
         img: new URL("../section/s3/2.svg", import.meta.url).href,
-        content: '2000 坪富貴公園綠海環繞，<br/>歲時寧謐涵氧青春不老'
+        content: '26 層森林之王，<br/>以地標姿態傲立富貴公園裡唯一席'
     },
     {
         img: new URL("../section/s3/3.svg", import.meta.url).href,
-        content: '永久棟距，風光巨幕，<br/>無疆視野，王者眼界誰能比'
+        content: '2000 坪富貴公園綠海環繞<br/>歲時寧謐涵氧青春不老'
     },
     {
         img: new URL("../section/s3/4.svg", import.meta.url).href,
-        content: '五星森合隱逸會所，<br/>節氣滋養禪意洗滌，尊榮獨享'
+        content: '永久棟距，風光巨幕，<br/>無疆視野，王者眼界誰能比'
     },
     {
         img: new URL("../section/s3/5.svg", import.meta.url).href,
-        content: '擁三井時尚核心，<br/>3 大百貨 2 大影城同步國際潮流'
+        content: '五星森合隱逸會所，<br/>節氣滋養禪意洗滌，尊榮獨享'
     },
     {
         img: new URL("../section/s3/6.svg", import.meta.url).href,
-        content: '東森+三立國際媒體園區旁，<br/>迎接台灣坎城大未來'
+        content: '擁三井時尚核心，<br/>3 大百貨 2 大影城同步國際潮流'
     },
     {
         img: new URL("../section/s3/7.svg", import.meta.url).href,
-        content: 'A9 捷運核心樞紐，<br/>機捷國道雙交流，城際自由跨界'
+        content: '東森+三立國際媒體園區旁，<br/>迎接台灣坎城大未來'
     },
     {
         img: new URL("../section/s3/8.svg", import.meta.url).href,
-        content: '國際學區 AAIA、康橋、<br/>馬禮遜美國學校更勝天母'
+        content: 'A9 捷運核心樞紐，<br/>機捷國道雙交流，城際自由跨界'
     },
     {
         img: new URL("../section/s3/9.svg", import.meta.url).href,
-        content: '全齡健康照護長庚醫療園區，<br/>遠程監護、全時御守'
+        content: '國際學區 AAIA、康橋、<br/>馬禮遜美國學校更勝天母'
     },
     {
         img: new URL("../section/s3/10.svg", import.meta.url).href,
-        content: '長耀深耕林口，<br/>以種樹哲學深掘土地價值專鑄精工'
+        content: '全齡健康照護長庚醫療園區，<br/>遠程監護、全時御守'
     },
     {
         img: new URL("../section/s3/1.svg", import.meta.url).href,
-        content: '26 層森林之王，<br/>以地標姿態傲立富貴公園裡唯一席'
+        content: '長耀深耕林口，<br/>以種樹哲學深掘土地價值專鑄精工'
     },
 ])
 

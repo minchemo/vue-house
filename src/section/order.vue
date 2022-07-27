@@ -22,22 +22,22 @@
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
+          <input type="text" placeholder="姓名" class="input w-full" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
+          <input type="text" placeholder="手機" class="input w-full" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
-          <select class="select w-full rounded-full" v-model="formData.room_type">
+          <select class="select w-full" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
-            <option value="3房1衛">3房1衛</option>
-            <option value="3房2衛">3房2衛</option>
+            <option value="2房">2房</option>
+            <option value="3房">3房</option>
           </select>
-          <select class="select w-full rounded-full" v-model="formData.city">
+          <select class="select w-full" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full rounded-full" v-model="formData.area">
+          <select class="select w-full" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
@@ -46,7 +46,7 @@
         </div>
         <div class="right h-full">
           <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
-            class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
+            class="textarea w-full h-full" placeholder="備註訊息"></textarea>
         </div>
       </div>
 

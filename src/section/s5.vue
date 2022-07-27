@@ -122,6 +122,8 @@
             line-height: 150%;
             letter-spacing: size(.05);
             width: size(1035);
+            color: #000;
+            
         }
     }
 

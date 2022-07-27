@@ -78,11 +78,13 @@
         }
 
         .t3 {
-            font-weight: 400;
+            font-weight: 300;
             font-size: size(20);
             line-height: 150%;
             letter-spacing: size(.05);
             width: size(416);
+            text-align: justify;
+
         }
     }
 
