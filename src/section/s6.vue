@@ -32,9 +32,6 @@
                     <img src="@/assets/next.svg" alt="" srcset=""></button>
             </div>
         </Splide>
-        <lazy-component>
-            <img class="time" src="@/section/s6/time.svg" alt="" srcset="">
-        </lazy-component>
     </div>
 </template>
 
