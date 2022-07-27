@@ -178,10 +178,12 @@
 
         &::after {
           width: size-m(59);
+          height: 1px;
         }
 
         &::before {
           width: size-m(59);
+          height: 1px;
         }
       }
 

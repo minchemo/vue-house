@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="gotop fixed z-40 cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
+    <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
     </div>
 </template>
 
@@ -336,13 +336,14 @@
 
         .menu {
             position: fixed;
-            top: 1.5vh;
-            right: size-m(12.5);
+            top: 5px;
+            left: 50%;
+            margin-left: -#{size-m(175)};
             width: size-m(350);
-            height: 97vh;
+            height: size-m(640);
             z-index: 0;
-            transform: translateX(150%);
-            transition: all .5s;
+            transform: translateX(-150%);
+            transition: all .4s;
             border-radius: size-m(10);
             padding: 0;
             gap: size-m(25);
@@ -353,10 +354,7 @@
             }
 
             &.open {
-                transform: translateX(0);
-                left: unset;
-                right: 0;
-                top: 0;
+                transform: translateX(0%);
                 backdrop-filter: blur(10px);
             }
         }

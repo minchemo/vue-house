@@ -2,19 +2,18 @@
     <div class="s3 relative">
         <div class="number font-['noto_sans_tc']">{{ currentIdx + 1 }}</div>
         <Splide ref="splide" :options="{
-            rewind: true,
             arrows: false,
             pagination: false,
             type: 'loop',
-            autoWidth: true,
             autoplay: true,
             interval: 4000,
-            perPage: $isMobile() ? 3 : 9,
-            padding: '5%',
+            perPage: $isMobile() ? 2 : 7,
+            padding: '10%',
             focus: 'center',
-            gap: 0,
+            gap: $isMobile() ? 0 : 0,
             isNavigation: true,
-            wheel: true
+            wheel: true,
+            updateOnMove: true
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img, i in imgs">
                 <div class="icon">
@@ -49,9 +48,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
 
         .slide {
-            width: size(200);
+            // width: size(200);
             height: size(240);
             display: flex;
             align-items: center;
@@ -68,7 +68,7 @@
                 justify-items: center;
 
                 img {
-                    width: 50%;
+                    max-width: 50%;
                     max-height: 50%;
                 }
             }

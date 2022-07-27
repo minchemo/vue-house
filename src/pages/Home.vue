@@ -51,6 +51,8 @@ import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
 
+// import Eruda from "eruda";
+
 const isLoading = ref(true)
 const gtmNoScript = ref('')
 const config = ref({
@@ -65,6 +67,8 @@ onMounted(() => {
       duration: 800
     });
   };
+
+  // Eruda.init()
 
 })
 </script>

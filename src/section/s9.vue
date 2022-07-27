@@ -4,6 +4,7 @@
             <div class="imgbox">
                 <p class="font-['Noto_sans_tc']">結構工法</p>
             </div>
+            <img v-if="$isMobile()" class="mask" src="@/section/s9/mask.png" alt="" srcset="">
         </lazy-component>
 
         <div class="title">
@@ -136,6 +137,13 @@
             p {
                 display: none;
             }
+        }
+
+        .mask {
+            width: 100%;
+            position: absolute;
+            bottom: size-m(60);
+            left: 0;
         }
 
         .title {

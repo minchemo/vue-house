@@ -55,7 +55,7 @@
                         <div class="year font-['noto_serif_tc']" v-html="timeline.year"></div>
                         <div class="dot"></div>
                         <div class="txt">
-                            <div class="name">{{ timeline.name }}</div>
+                            <div class="name font-['noto_serif_jp']">{{ timeline.name }}</div>
                         </div>
                     </div>
                     <div class="content font-['noto_sans_tc']">
@@ -123,14 +123,14 @@
             letter-spacing: size(.05);
             width: size(1035);
             color: #000;
-            
+
         }
     }
 
     .works {
         width: 100%;
         position: absolute;
-        top: size(380);
+        top: size(320);
         left: 0;
         z-index: 50;
 
@@ -140,7 +140,7 @@
             }
 
             .splide__track {
-                padding: size(80);
+                padding: size(150);
             }
 
             .slide {
@@ -476,7 +476,10 @@
             height: size-m(224);
 
             .slide-box {
+                position: relative;
+
                 .slide {
+                    position: relative;
                     height: size-m(224);
                     padding: 0 size-m(11);
                     margin: 0 size-m(5);
@@ -511,6 +514,7 @@
 
                     &::after {
                         top: size-m(83);
+                        height: 1px;
                     }
 
                     &.selected {
@@ -529,6 +533,7 @@
 
             &::after {
                 top: size-m(83);
+                height: 1px;
             }
         }
 
