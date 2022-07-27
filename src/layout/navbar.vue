@@ -340,17 +340,17 @@
             left: 50%;
             margin-left: -#{size-m(175)};
             width: size-m(350);
-            height: size-m(640);
+            height: 95vh;
             z-index: 0;
             transform: translateX(-150%);
             transition: all .4s;
             border-radius: size-m(10);
             padding: 0;
-            gap: size-m(25);
+            gap: size-m(20);
             background-color: rgba($color: #000000, $alpha: .75);
 
             .menu-item {
-                font-size: size-m(21);
+                font-size: size-m(18);
             }
 
             &.open {
