@@ -1,72 +1,103 @@
 <template>
-  <div class="section1" id="falling-leaves">
+  <div class="section1">
     <img
-      v-if="!isMobile"
-      class="bg"
+      class="logo"
       v-lazy
-      :temp="require('@/projects/cc/s1/bg.svg')"
+      :temp="require('./s1/logo.svg')"
       alt=""
       srcset=""
       uk-parallax="viewport:0.8;blur:0,10;y: 0,-10;x:0,-10"
     />
-    <img
-      v-if="isMobile"
-      class="mo-bg"
-      v-lazy
-      :temp="require('@/projects/cc/s1/mo-bg.png')"
-      alt=""
-      srcset=""
-      uk-parallax="viewport:0.8;blur:0,10;y: 0,-10;x:0,-10;scale:1,2;opacity:1,0"
-    />
-    <img
-      v-if="!isMobile"
-      class="leaf"
-      v-lazy
-      :temp="require('@/projects/cc/s1/leaf.png')"
-      alt=""
-      srcset=""
-      uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
-    />
-    <img
-      class="leaf3"
-      v-lazy
-      :temp="require('@/projects/cc/s1/leaf3.png')"
-      alt=""
-      srcset=""
-      :uk-parallax="
-        isMobile
-          ? 'viewport:0.8;y: 30,0;x:40;rotate:-20;opacity:0,.3'
-          : 'viewport:0.8;blur:10,0;y: -30,0;x:-30,0;rotate:5,0;opacity:0,0.3'
-      "
-    />
-    <img
-      class="deer"
-      v-lazy
-      :temp="require('@/projects/cc/s1/deer.gif')"
-      alt=""
-      srcset=""
-      uk-parallax="viewport:1;blur:0,10;scale: 1,1.5;x: 0,-50;opacity:1,0"
-    />
-    <img
-      class="logo"
-      v-lazy
-      :temp="require('@/projects/cc/s1/logo.svg')"
-      alt=""
-      srcset=""
-      uk-parallax="viewport:1;blur:0,10;scale: 1,1.5;x: 0,-10;opacity:1,0"
-    />
-    <div class="falling">
-      <!-- <img
-        v-if="!isMobile"
-        class="leaf2"
+    <div class="img" data-aos="fade">
+      <img
+        class="img11"
         v-lazy
-        :temp="require('@/projects/cc/s1/leaf2.png')"
+        :temp="require('./s1/11.png')"
         alt=""
         srcset=""
-        uk-parallax="viewport:0.3;blur:0,10;y: 0,-30;x:0,-30;rotate:0,5"
-      /> -->
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img10"
+        v-lazy
+        :temp="require('./s1/10.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img9"
+        v-lazy
+        :temp="require('./s1/9.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img8"
+        v-lazy
+        :temp="require('./s1/8.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img7"
+        v-lazy
+        :temp="require('./s1/7.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img6"
+        v-lazy
+        :temp="require('./s1/6.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img5"
+        v-lazy
+        :temp="require('./s1/5.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img4"
+        v-lazy
+        :temp="require('./s1/4.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img3"
+        v-lazy
+        :temp="require('./s1/3.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img2" v-if="!isMobile"
+        v-lazy
+        :temp="require('./s1/2.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
+      <img
+        class="img1" v-if="!isMobile"
+        v-lazy
+        :temp="require('./s1/1.png')"
+        alt=""
+        srcset=""
+        uk-parallax="viewport:0.5;blur:0,10;y: 0,-100;x:0,-100;rotate:0,5"
+      />
     </div>
-    <div class="divider" uk-parallax="viewport:0.8;blur:10,0;scale: 2,1"></div>
   </div>
 </template>
 <style lang="scss">
@@ -77,81 +108,92 @@
   height:calc(100vh + 2.6vw);
   min-height: size(950);
   max-height: size(1130);
-  background: #fff;
+  background: #fff362;
   z-index: 1;
-  &::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0;
-    background: #FFF;
-  }
-
-  .bg {
-    position: absolute;
-    z-index: 0;
-    right:-5vw;
-    top: calc(50% + (-80 - 540) * 100vw / 1920);
-   width: size(1687);
-  }
-
-  .falling {
-    width: size(20);
-    height: size(20);
-    position: absolute;
-    background: url("~@/projects/cc/s1/leaf2.png");
-    background-size: 100% 100%;
-    z-index: 0;
-    left: -#{size(20)};
-  }
-  .leaf {
-    position: absolute;
-    z-index: 0;
-    left: 0;
-    top: calc(50% + (100 - 540) * 100vw / 1920);
-   width: size(844);
-  }
-  .leaf2 {
-    position: absolute;
-    z-index: 0;
-    right: size(200);
-    top: calc(50% + (300 - 540) * 100vw / 1920);
-    height: size(20);
-  }
-  .leaf3 {
-    position: absolute;
-    z-index: 0;
-    right: size(0);
-    bottom: size(0);
-    height: size(97.4);
-  }
-
-  .deer {
-    position: absolute;
-    z-index: 1;
-    left: size(250);
-    top: calc(50% + (190 - 540) * 100vw / 1920);
-    height: size(641.2);
-  }
-
+ // background: url("./s1/pc.jpg") center;
+  background-size: cover;
   .logo {
     position: absolute;
     z-index: 1;
-    right: size(430);
-    top: calc(50% + (300 - 540) * 100vw / 1920);
-    width: size(420);
+    left: size(320);
+    top: calc(50% + (225 - 540) * 100vw / 1920);
+    width: size(559);
   }
-
-  .divider {
+  .img{
     position: absolute;
-    bottom: 0;
-    left: calc(50% - 634 * 50vw / 1920);
-    z-index: 1;
-    width: size(634);
-    height: 1px;
-    background-color: #bbb29b;
+    top: 50%;
+    left: 50%;
+    width:  size(300);
+    height: size(300);
+    img{position: absolute;
+    transition:transform 1s 1s;}
+    .img1{
+    top: 70%;
+    left: -347%;
+      width: calc(242 / 300 * 100%);
+      transform: translate(10%,-10%);
+    }
+    .img2{
+    top: -78%;
+    left: -320%;
+      width: calc(187 / 300 * 100%);
+      transform: translate(-10%,-10%)scale(0.8)
+    }
+    .img3{
+    top: -127%;
+    left: 22%;
+      width: calc(633 / 300 * 100%);
+      transform: translate(10%,10%)scale(0.8);
+      }
+    .img4{
+    top: 33%;
+    left: 12%;
+      width: calc(552 / 300 * 100%);
+      transform: translate(10%,-10%)scale(0.8);
+      }
+    .img5{
+    top: -112%;
+    left: 132%;
+      width: calc(390 / 300 * 100%);
+      transform: translate(-10%,10%)scale(0.8);
+      }
+    .img6{
+    top: -12%;
+    left: 146%;
+      width: calc(340 / 300 * 100%);
+      transform: translate(-10%,-10%)scale(0.8);
+      }
+    .img7{
+    top: -34%;
+    left: 144%;
+      width: calc(369 / 300 * 100%);
+      transform: scale(0.8);
+      }
+    .img8{
+    top: -24%;
+    left: 149%;
+      width: calc(212 / 300 * 100%);
+      transform: translate(-10%,-10%);
+      transform: scale(0.8);
+      }
+    .img9{
+    top: 14%;
+    left: 162%;
+      width: calc(280 / 300 * 100%);
+      transform: scale(0.8);
+      }
+    .img10{
+    top: -36%;
+    left: 150%;
+      width: calc(303 / 300 * 100%);
+      transform: scale(0.8);
+      }
+    .img11{
+    top: -6%;
+    left: 216%;
+      width: calc(184 / 300 * 100%);
+      transform: scale(0.8);
+      }
   }
 }
 /* 平板尺寸 */
@@ -168,49 +210,21 @@
     z-index: 1;
     overflow: hidden;
 
-    .falling {
-      width: size-m(14);
-      height: size-m(14);
-      left: -#{size-m(14)};
-    }
-
-    .mo-bg {
-      position: absolute;
-      z-index: 0;
-      right: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .deer {
-      position: absolute;
-      z-index: 1;
-      left: -#{size-m(70)};
-      top: unset;
-      bottom: size-m(100);
-      height: size-m(250);
-    }
-
-    .leaf3 {
-      position: absolute;
-      z-index: 0;
-      right: 0;
-      bottom: -#{size-m(50)};
-      height: size-m(51.3);
-    }
 
     .logo {
       right: size-m(30);
-      top: size-m(150);
-      width: size-m(220);
+      top: calc(30% + (60 - 667 * .3) * 100vw / 375);
+      width: size-m(255);
     }
 
-    .divider {
-      left: 5%;
-      width: 90%;
-      height: 1px;
+  .img{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    width: size-m(130);
+    height: size-m(130);
     }
+
   }
 }
 
@@ -239,7 +253,7 @@ export default {
   methods: {},
 
   mounted() {
-    TweenLite.set("#falling-leaves", { perspective: 600 });
+   /* TweenLite.set("#falling-leaves", { perspective: 600 });
 
     var total = this.isMobile ? 8 : 15; //落葉數量
     var container = document.getElementById("falling-leaves"),
@@ -284,7 +298,7 @@ export default {
 
     function R(min, max) {
       return min + Math.random() * (max - min);
-    }
+    }*/
   },
 
   created() {},
