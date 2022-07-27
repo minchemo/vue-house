@@ -363,7 +363,7 @@ export default {
 }
 .order-bg {
   //background-color: $order_bg_color;
-  background-image: $order_bg_image;
+  // background-image: $order_bg_image;
   background-repeat: repeat-y;
   position: relative;
   background-size: 100%;
@@ -553,7 +553,7 @@ export default {
   top: 0%;
 }
   .order-bg {
-    background-image: $order_bg_image_m;
+    // background-image: $order_bg_image_m;
     background-size: contain;
     padding-top: 0;
     margin: 0;

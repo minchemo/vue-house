@@ -58,7 +58,7 @@
     right: 0;
     bottom: size(120);
   }
-
+/*
   .video-box {
     position: relative;
     width: size(1592);
@@ -69,7 +69,7 @@
     background-position: center;
     background-size: cover;
     z-index: 1;
-  }
+  } */
   .content {
     width: size(1000);
     margin:auto;
