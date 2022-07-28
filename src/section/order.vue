@@ -59,7 +59,7 @@
 
     <!-- Send -->
     <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-      立即預約
+      {{ sending ? '發送中..' : '立即預約' }}
     </div>
 
     <!-- Contact Info -->
@@ -232,6 +232,8 @@ const formData = reactive({
   r_verify: true,
 })
 
+const sending = ref(false)
+
 //非必填
 const bypass = ["msg", "room_type", "email"]
 
@@ -312,7 +314,9 @@ const send = () => {
     return
   }
 
-  if (pass) {
+  if (pass && !sending.value) {
+    sending.value = true
+
     presend.append("utm_source", utmSource);
     presend.append("utm_medium", utmMedium);
     presend.append("utm_content", utmContent);
@@ -342,9 +346,10 @@ const send = () => {
         if (response.status === 200) {
           window.location.href = "formThanks";
         }
+        sending.value = false
+
       });
     });
-
 
     // toast.success(`表單已送出，感謝您的填寫`)
   }
