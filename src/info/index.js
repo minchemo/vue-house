@@ -6,12 +6,12 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "新北市林口區仁愛路一段",
+    address: "新北市林口區文化三路二段與仁愛路二段口",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14454.764237868012!2d121.3727072!3d25.0784582!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c3296170aabd0bb!2z6ZW36ICA6YeM5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1658887295643!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/xNrWLhD8wH7ZbrJk8",
-    phone: "02-26092000",
-    fbLink: "",
-    fbMessage: "",
+    phone: "02-2609-2000",
+    fbLink: "https://www.facebook.com/TWINTOWERNO.1/",
+    fbMessage: "https://m.me/TWINTOWERNO.1/",
     caseName: caseName,
     houseInfos: [
         ["建設公司", "長耀建設"],
@@ -25,7 +25,7 @@ export default {
         ["外觀特色", "新古典美學"],
         ["戶數規劃", "201戶"],
     ],
-    gtmCode: ["GTM-TRR3X37"], // 可放置多個
+    gtmCode: [""], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
