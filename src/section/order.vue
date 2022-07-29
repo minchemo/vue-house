@@ -42,7 +42,7 @@
           </select>
         </div>
         <div class="right h-full">
-          <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
+          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
             class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
         </div>
       </div>
@@ -64,7 +64,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        送出表單
+        {{ sending ? '發送中..' : '立即預約' }}
       </div>
 
       <!-- Contact Info -->
@@ -301,6 +301,8 @@ import Cat from "./cat.vue"
 import Rabbit from "./rabbit.vue"
 const toast = useToast()
 
+const sending = ref(false)
+
 const formData = reactive({
   name: "",
   phone: "",
@@ -308,13 +310,13 @@ const formData = reactive({
   email: "",
   city: "",
   area: "",
-  note: "",
+  msg: "",
   policyChecked: false,
   r_verify: true,
 })
 
 //非必填
-const bypass = ["note", "email"]
+const bypass = ["msg", "email"]
 
 //中文對照
 const formDataRef = ref([
@@ -324,7 +326,7 @@ const formDataRef = ref([
   "信箱", //email
   "居住縣市", //city
   "居住地區", //area
-  "備註訊息", //note
+  "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
   "機器人驗證", //r_verify
 ])
@@ -400,7 +402,8 @@ const send = () => {
     return
   }
 
-  if (pass) {
+  if (pass && !sending.value) {
+    sending.value = true
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -425,6 +428,7 @@ const send = () => {
         if (response.status === 200) {
           window.location.href = "formThanks";
         }
+        sending.value = false
       });
     });
 
