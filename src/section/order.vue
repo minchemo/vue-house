@@ -56,7 +56,7 @@
 
     <!-- Send -->
     <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration" @click="send()">
-      立即預約
+      {{ sending ? '發送中..' : '立即預約' }}
     </div>
 
     <!-- Contact Info -->
@@ -206,6 +206,8 @@ import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
+const sending = ref(false)
+
 
 const formData = reactive({
   name: "",
@@ -304,8 +306,8 @@ const send = () => {
     return
   }
 
-  if (pass) {
-
+  if (pass && !sending.value) {
+    sending.value = true
 
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
@@ -331,6 +333,7 @@ const send = () => {
         if (response.status === 200) {
           window.location.href = "formThanks";
         }
+        sending.value = false
       });
     });
 
