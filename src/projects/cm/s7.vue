@@ -349,9 +349,6 @@ export default {
         {
           img: [
             //第1張, index=0
-            isMobile
-              ? require("@/projects/cm/s7/b/01_m.jpg")
-              : require("@/projects/cm/s7/b/01.jpg"),
             //第2張, index=1
             isMobile
               ? require("@/projects/cm/s7/b/02_m.jpg")
@@ -364,7 +361,7 @@ export default {
             require("@/projects/cm/s7/b/04_m.jpg"),
             require("@/projects/cm/s7/b/05_m.jpg"),
           ],
-          mobileOnly: [3, 4], //填入只有手機版有的index就可以
+          mobileOnly: [2, 3], //填入只有手機版有的index就可以
         },
       ],
       caption: [

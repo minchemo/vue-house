@@ -7,7 +7,7 @@
 
     <a
       class="nav-item bt_registration"
-      v-scroll-to="{ element: `#contact`, offset: 0 , duration: 0}"
+      v-scroll-to="{ element: `#contact`, offset:0 , duration: 0 }"
     >
       <font-awesome-icon icon="pen" />
       <div class="label">預約賞屋</div>
