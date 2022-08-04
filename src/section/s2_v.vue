@@ -1,0 +1,156 @@
+<template>
+    <div class="s2 relative">
+        <img class="play" src="@/section/s2/play.png" alt="" srcset="" @click="videoOpened = !videoOpened">
+        <div class="player" v-bind:class="{ 'open': videoOpened }">
+            <div class="video-box aspect-video">
+                <iframe src="https://www.youtube.com/embed/2QfsSyifQc8" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="close shadow-xl font-['noto_sans_tc'] font-bold" @click="videoOpened = !videoOpened">
+                返回
+            </div>
+        </div>
+    </div>
+</template>
+
+<style lang="scss">
+@import "@/assets/style/function.scss";
+
+.s2 {
+    width: 100%;
+    height: size(1080);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('@/section/s2/videobg.jpg');
+    background-size: cover;
+
+    .play {
+        width: size(142);
+        cursor: pointer;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    .player {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        backdrop-filter: blur(10px);
+        gap: size(50);
+        transition: all .5s;
+        transform: translateY(200%);
+
+        &.open {
+            transform: translateY(0%);
+        }
+
+        .video-box {
+            height: 80%;
+            background-color: #000;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .close {
+            background-color: #fff;
+            padding: size(10) size(25);
+            font-size: size(24);
+            border-radius: 9999px;
+            transition: all .2s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .s2 {
+        width: 100%;
+        height: size-m(667);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('@/section/s2/videobg_m.jpg');
+
+        .play {
+            width: size-m(84);
+        }
+
+        .player {
+            backdrop-filter: blur(15px);
+            gap: size-m(50);
+
+            .video-box {
+                height: auto;
+                width: 100%;
+            }
+
+            .close {
+                background-color: #fff;
+                padding: size-m(10) size-m(25);
+                font-size: size-m(24);
+                border-radius: 9999px;
+                transition: all .2s;
+            }
+
+        }
+    }
+}
+</style>
+
+<script setup>
+import { ref, getCurrentInstance } from "vue"
+import AOS from 'aos';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const splide = ref();
+const currentIdx = ref(0)
+const videoOpened = ref(false)
+
+const move = (newIdx, prevIdx, destIdx) => {
+    currentIdx.value = prevIdx
+    AOS.refresh();
+}
+
+const imgs = ref([
+    {
+        img: globals.$isMobile() ? new URL("../section/s2/1_m.jpg", import.meta.url).href : new URL("../section/s2/1.jpg", import.meta.url).href,
+        caption: '富貴森林公園'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s2/2_m.jpg", import.meta.url).href : new URL("../section/s2/2.jpg", import.meta.url).href,
+        caption: '富貴森林公園'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s2/3_m.jpg", import.meta.url).href : new URL("../section/s2/3.jpg", import.meta.url).href,
+        caption: '富貴森林公園'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s2/4_m.jpg", import.meta.url).href : new URL("../section/s2/4.jpg", import.meta.url).href,
+        caption: '富貴森林公園'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s2/5_m.jpg", import.meta.url).href : new URL("../section/s2/5.jpg", import.meta.url).href,
+        caption: '富貴森林公園'
+    },
+])
+</script>

@@ -28,7 +28,8 @@
             interval: 4000,
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
-                <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
+                <div v-if="img.isVideo"></div>
+                <div v-else class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
             </SplideSlide>
 
             <div class="arrows splide__arrows">
