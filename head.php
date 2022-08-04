@@ -32,3 +32,4 @@ $ogType = 'website';
 <meta itemprop="name" content="<?php echo $docTitle; ?>">
 <meta itemprop="description" content="<?php echo $docDesc ?>">
 <?php echo $p0 ?>
+
