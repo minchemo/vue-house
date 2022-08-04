@@ -23,7 +23,7 @@
     <div class="info z-20">
       <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">心靈 感官的雙重盛宴</div>
       <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">住進藝術薰陶的美感家園</div>
-      <div class="t3" data-aos="fade" data-aos-delay="400">住進藝文繁盛的日常，悠遊當代時尚潮流與歷史古韻之美，讓藝術打開心靈的視野、啟發五感，享受真正豐盈的美好生活。</div>
+      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">住進藝文繁盛的日常，悠遊當代時尚潮流與歷史古韻之美，讓藝術打開心靈的視野、啟發五感，享受真正豐盈的美好生活。</div>
     </div>
   </div>
 </template>
@@ -127,6 +127,7 @@
     width: 100%;
     height: size-m(664);
     background-color: #EC9700;
+    
 
     .splide__arrows {
       left: 50%;
@@ -159,6 +160,7 @@
         font-size: size-m(15);
         line-height: 160%;
         letter-spacing: 0;
+        
       }
     }
 
