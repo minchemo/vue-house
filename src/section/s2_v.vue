@@ -50,6 +50,7 @@
         gap: size(50);
         transition: all .5s;
         transform: translateY(200%);
+        background-color: rgba(0,0,0,.8);
 
         &.open {
             transform: translateY(0%);
@@ -107,7 +108,7 @@
             .close {
                 background-color: #fff;
                 padding: size-m(10) size-m(25);
-                font-size: size-m(24);
+                font-size: size-m(15);
                 border-radius: 9999px;
                 transition: all .2s;
             }
