@@ -22,7 +22,7 @@ export default {
         ["戶數規劃", "76戶"],
         ["公設規劃", "元澤設計"],
     ],
-    gtmCode: ["PRS6QJS"], // 可放置多個
+    gtmCode: ["GTM-NWVS3CL"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
