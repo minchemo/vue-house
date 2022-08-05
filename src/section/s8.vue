@@ -21,10 +21,10 @@
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">樂活水岸</div>
-      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">一家人專屬的幸福流域</div>
+      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">和孩子仝探索 璀璨未來</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">名校雲集x公園童趣時光</div>
       <div class="t3" data-aos="fade" data-aos-delay="400">
-        晨間，呼吸著新鮮空氣，沿溪畔步道自在慢跑；日暮時分，悠閒漫步堤岸，夕照中遠眺大屯山群峰，享受都市中少有、與自然零距離的舒心日常。</div>
+        漫步2分鐘文林國小、中正高中優質學區，與薇閣、奎山、美日歐明星學校為鄰，孩子沐浴在良好教育學風中成長。步行5分鐘至軟橋公園、6分鐘建民公園賞水岸、8分鐘福星公園訪恐龍，五感遊樂創造都市兒童非凡回憶。</div>
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@
 
   .slide-box {
     position: absolute;
-    top: size(260);
+    top: size(300);
     width: size(1920);
     height: size(700);
 
@@ -163,7 +163,7 @@
 
     .slide-box {
       position: absolute;
-      top: size-m(270);
+      top: size-m(300);
       width: size-m(375);
       height: size-m(250);
 
@@ -230,7 +230,7 @@
       &::before {
         content: '';
         position: absolute;
-        width: size-m(90);
+        width: size-m(30);
         height: 1px;
         background-color: #000;
         left: size-m(20);
@@ -240,7 +240,7 @@
       &::after {
         content: '';
         position: absolute;
-        width: size-m(90);
+        width: size-m(30);
         height: 1px;
         background-color: #000;
         right: size-m(20);
