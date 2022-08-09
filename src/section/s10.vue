@@ -15,7 +15,7 @@
                     精品美式 經典詮釋
                 </div>
             </div>
-            <div v-if="!$isMobile()" class="t2 font-['Noto_sans_tc']" data-aos="fade" data-aos-delay="200">
+            <div class="t2 font-['Noto_sans_tc']" data-aos="fade" data-aos-delay="200">
                 <div v-if="slideType == '25'">
                     <ul>
                         <li>
@@ -153,6 +153,7 @@
                 li {
                     white-space: nowrap;
                     list-style-type: disc;
+                    margin: 11px 0px;
                 }
             }
 
@@ -172,9 +173,11 @@
             flex-direction: column;
             align-items: flex-start;
             z-index: 10;
+            
 
             img {
-                width: size(17.75);
+                width: size(30);
+                margin: 15px 0px;
             }
         }
     }
@@ -198,7 +201,7 @@
 
     .s10 {
         width: 100%;
-        height: size-m(667);
+        height: size-m(950);
         display: flex;
         align-items: center;
         background-color: #000;
@@ -262,10 +265,34 @@
                     height: size-m(1);
                     background-color: #ACA883;
                     position: absolute;
-                    bottom: -#{size-m(20)};
+                    bottom: -#{size-m(270)};
                     left: size-m(30);
                 }
             }
+
+            .t2 {
+            font-weight: 400;
+            width: 90%;
+            font-size: size-m(12);
+            line-height: 150%;
+            letter-spacing: size-m(.05);
+            margin-bottom: size-m(80);
+            margin-left: size-m(15);
+
+            ul {
+                padding-left: size-m(30);
+
+                li {
+                    white-space: normal;
+                    list-style-type: disc;
+                    margin: 5px 0px;
+
+                }
+            }
+            &::before {
+                display: none;
+            }
+        }
 
             .arrows {
                 flex-direction: row;

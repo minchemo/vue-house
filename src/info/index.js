@@ -74,11 +74,11 @@ export default {
             target: ".s9",
             offset: "",
         },
-        //{
-        //    name: "美學空間",
-        //    target: ".s9",
-        //    offset: "",
-        //},
+        {
+            name: "美學空間",
+            target: ".s10",
+            offset: "",
+        },
         {
             name: "立即預約",
             target: ".order",
