@@ -200,7 +200,7 @@
 
   .contact-info {
     width: size-m(375);
-    height: size-m(650);
+    height: auto;
     // border-radius: size-m(68);
     padding: size-m(50) size-m(15);
     margin-top: size-m(25);

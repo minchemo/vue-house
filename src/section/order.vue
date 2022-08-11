@@ -163,7 +163,7 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    padding-bottom: size-m(70);
+    padding-bottom: size-m(0);
     position: relative;
 
     .bg-image {
@@ -171,28 +171,6 @@
       width: 100%;
       left: -#{size-m(30)};
       bottom: size-m(590);
-    }
-
-    .rb_leaf {
-      width: size-m(187);
-    }
-
-    .lb_leaf {
-      width: 100%;
-    }
-
-    .buck {
-      right: unset;
-      left: size-m(15);
-      bottom: size-m(5);
-      width: size-m(183);
-    }
-
-    .buck-e {
-      right: unset;
-      left: size-m(15);
-      bottom: size-m(5);
-      width: size-m(183);
     }
 
   }
