@@ -2,26 +2,26 @@
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="長耀里" srcset="" />
-        <div>{{ info.phone }}</div>
+        <div class="whitespace-nowrap">{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="長耀里" srcset="" />
-        <div>Facebook 諮詢</div>
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center" @click="modalOpen = true; modalType = 'fb'">
+        <img src="@/section/form/info.svg" alt="長耀里" srcset="" />
+        <div class="whitespace-nowrap">瞭解更多</div>
       </div>
-      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="長耀里" srcset="" />
-        <div>前往粉絲專頁</div>
+        <div class="whitespace-nowrap">前往粉絲專頁</div>
       </div>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap">
-      <div class="flex contact-item justify-between items-center address">
-        <div>{{ info.address }}</div>
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center address">
+        <div class="whitespace-nowrap">{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="長耀里" srcset="" />
-        <div>導航 GoogleMap</div>
+        <div class="whitespace-nowrap">導航 Google 地圖</div>
       </div>
     </div>
 
@@ -37,8 +37,8 @@
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="長耀里" srcset="" />
-      <div>FB 諮詢</div>
+      <img src="@/section/form/info.svg" alt="長耀里" srcset="" />
+      <div>瞭解更多</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="@/section/form/pen.svg" alt="長耀里" srcset="" />
@@ -58,14 +58,14 @@
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="長耀里" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="長耀里" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/info.svg" alt="長耀里" srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="長耀里" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? '暸解更多' :
           '接待會館'
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '' :
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
@@ -75,7 +75,7 @@
         'btsearch': modalType == 'gmap',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '前往暸解' :
             '開啟導航'
         }}</div>
     </div>
@@ -121,7 +121,7 @@
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.06em;
-      max-width: size(280);
+      max-width: size(300);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;

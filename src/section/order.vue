@@ -1,43 +1,35 @@
   <template>
-  <div class="order relative bg-[#E5DBC2] text-center">
+  <div class="order relative bg-[#fff] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
+      <div class="order-title text-center">{{ info.order.title }}</div>
 
       <!-- Title Image -->
-      <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset=""
         data-aos="fade" data-aos-duration="1000">
       <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset="" data-aos="fade"
-        data-aos-duration="1000">
+        data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
-      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.png" alt="" srcset="">
-      <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.png" alt="" srcset="">
-      <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.png" alt="" srcset="">
-      <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.png" alt="" srcset="">
-      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
-      <img class="buck-e" src="@/section/s1/buck-e.gif" alt="" srcset="">
-
-
-      <!-- Form -->
+            <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full" :value="formData.name"
+          <input type="text" placeholder="姓名" class="input w-full border border-black" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full" :value="formData.phone"
+          <input type="text" placeholder="手機" class="input w-full border border-black" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
-          <select class="select w-full" v-model="formData.room_type">
+          <select class="select w-full border border-black" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
-            <option value="2房">2房</option>
-            <option value="3房">3房</option>
+            <option value="73坪">73坪</option>
+            <option value="150坪">150坪</option>
           </select>
-          <select class="select w-full" v-model="formData.city">
+          <select class="select w-full border border-black" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full" v-model="formData.area">
+          <select class="select w-full border border-black" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
@@ -46,7 +38,7 @@
         </div>
         <div class="right h-full">
           <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
-            class="textarea w-full h-full" placeholder="備註訊息"></textarea>
+            class="textarea w-full h-full border border-black" placeholder="備註訊息"></textarea>
         </div>
       </div>
 
@@ -89,7 +81,7 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  padding-bottom: size(200);
+  padding-bottom: size(100);
   position: relative;
 
   .z-10 {
@@ -103,63 +95,6 @@
     left: 0;
     bottom: size(50);
     vertical-align: middle;
-  }
-
-
-  .rb_leaf {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: size(480);
-    transform-origin: right bottom;
-    animation: rb 2s alternate-reverse infinite ease-in-out;
-    z-index: 5;
-
-    @keyframes rb {
-      from {
-        transform: skewX(0);
-      }
-
-      to {
-        transform: skewX(-5deg);
-      }
-    }
-  }
-
-  .lb_leaf {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: size(1623);
-    transform-origin: left bottom;
-    animation: lb 2s alternate-reverse infinite ease-in-out;
-    z-index: 5;
-
-    @keyframes lb {
-      from {
-        transform: skewX(0);
-      }
-
-      to {
-        transform: skewX(5deg);
-      }
-    }
-  }
-
-  .buck {
-    position: absolute;
-    right: -#{size(22)};
-    bottom: -#{size(29)};
-    width: size(523);
-    z-index: 4;
-  }
-
-  .buck-e {
-    position: absolute;
-    right: -#{size(22)};
-    bottom: -#{size(29)};
-    width: size(523);
-    z-index: 3;
   }
 }
 
@@ -199,7 +134,7 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #fff;
+      background-color: #000;
       position: absolute;
     }
   }
@@ -208,13 +143,13 @@
     font-size: size(22);
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
     border: 0;
-    border-radius: 1.6em;
+    border-radius: .8em;
     z-index: 10;
     position: relative;
   }

@@ -8,3 +8,14 @@
     opacity: 1;
   }
 }
+
+[data-aos="scaleIn"] {
+  transform-origin: top;
+  will-change: transform;
+  transform: scaleY(.5);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    transform: scaleY(1);
+  }
+}

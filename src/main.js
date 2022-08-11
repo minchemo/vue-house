@@ -40,7 +40,7 @@ createApp(App)
     .use(router)
     .use(Vue3TouchEvents)
     .use(VueLazyload, {
-        preLoad: 2,
+        preLoad: 1.5,
         lazyComponent: true,
         attempt: 1,
     }).use(

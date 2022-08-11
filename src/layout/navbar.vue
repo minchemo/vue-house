@@ -1,18 +1,19 @@
 <template>
     <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-[100] bg-white w-full"
         v-bind:class="{ 'r16-9': higherScreen }">
+        <div></div>
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-        <div v-if="$isMobile()" class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
+        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar z-10"></div>
         </div>
-        <div class="top-nav" v-else>
+        <!-- <div class="top-nav" v-else>
             <div class="top-nav-item font-['noto_serif_tc']" v-for="item, i in info.navList"
                 @click="scrollTo(item.target)">
                 {{ item.name }}
             </div>
-        </div>
+        </div> -->
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
             <div class="menu-item font-bold cursor-pointer text-white hover:text-gray-400 font-['noto_serif_tc']"
                 v-for="item, i in info.navList" @click="scrollTo(item.target)">
@@ -30,10 +31,12 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    padding: 0 size(20);
+    padding: 0 size(99);
     height: size(60);
-    backdrop-filter: blur(10px);
-    background-color: rgba($color: #fff, $alpha: .3) !important;
+    margin-top: size(141);
+
+    // backdrop-filter: blur(10px);
+    // background-color: rgba($color: #fff, $alpha: .3) !important;
 
     .top-nav {
         display: flex;
@@ -83,6 +86,8 @@
     .menu-btn {
         position: relative;
         z-index: 1;
+        border: size(1) solid #000;
+        padding: size(5);
 
         p {
             transition: all .5s;
@@ -90,19 +95,20 @@
         }
 
         .bar {
-            width: size(30);
+            width: size(80);
             height: 2px;
-            background-color: #000;
+            background-color: #7F4F21;
             position: relative;
             transform: all .5s;
+        
 
             &::after {
                 content: '';
                 width: 100%;
                 height: 2px;
-                bottom: -#{size(10)};
+                bottom: -#{size(20)};
                 position: absolute;
-                background-color: #000;
+                background-color: #7F4F21;
                 transition: all .5s;
             }
 
@@ -110,9 +116,9 @@
                 content: '';
                 width: 100%;
                 height: 2px;
-                top: -#{size(10)};
+                top: -#{size(20)};
                 position: absolute;
-                background-color: #000;
+                background-color: #7F4F21;
                 transition: all .5s;
             }
         }
