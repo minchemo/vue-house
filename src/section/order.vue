@@ -5,13 +5,13 @@
       <div class="order-title text-center">{{ info.order.title }}</div>
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg.svg" alt="吉美富徠" srcset=""
         data-aos="fade" data-aos-duration="1000">
-      <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset="" data-aos="fade"
+      <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="吉美富徠" srcset="" data-aos="fade"
         data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
-            <!-- Form -->
+      <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
           <input type="text" placeholder="姓名" class="input w-full border border-black" :value="formData.name"

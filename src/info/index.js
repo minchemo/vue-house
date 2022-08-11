@@ -1,4 +1,4 @@
-const caseName = "長耀里"
+const caseName = "吉美富徠"
 
 export default {
     meta: {
@@ -6,24 +6,22 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "新北市林口區文化三路二段與仁愛路二段口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14454.764237868012!2d121.3727072!3d25.0784582!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c3296170aabd0bb!2z6ZW36ICA6YeM5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1658887295643!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/xNrWLhD8wH7ZbrJk8",
-    phone: "02-2609-2000",
-    fbLink: "https://www.facebook.com/TWINTOWERNO.1/",
-    fbMessage: "https://m.me/TWINTOWERNO.1/",
+    address: "台北市大安區敦化南路二段126號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2316518626135!2d121.54612431551799!3d25.02621144475648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2d8acae359%3A0x411953834a745656!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5pWm5YyW5Y2X6Lev5LqM5q61MTI26Jmf!5e0!3m2!1szh-TW!2stw!4v1660223601424!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/E5u52wZRwb2Hpi7Y7",
+    phone: "02-27008589",
+    fbLink: "",
+    fbMessage: "",
     caseName: caseName,
     houseInfos: [
-        ["建設公司", "長耀建設"],
-        ["行銷團隊", "君翊行銷"],
-        ["營造單位", "森城營造"],
-        ["基地坪數", "477坪"],
-        ["空間設計", "元佑設計"],
-        ["坪數規劃", "18、25、29坪"],
-        ["結構設計", "凱巨工程"],
-        ["房型規劃", "2-3房"],
-        ["外觀特色", "新古典美學"],
-        ["戶數規劃", "201戶"],
+        ["投資興建", "吉美建設/富徠建設"],
+        ["外觀設計", "香港P&T集團"],
+        ["結構設計", "永興結構"],
+        ["公設規劃", "築內設計"],
+        ["景觀設計", "老圃造園工程"],
+        ["燈光計畫", "袁宗南照明設計"],
+        ["建築代銷", "美學生活置業股份有限公司"],
+        ["建案位置", "台北市大安區瑞安街149巷"],
     ],
     gtmCode: [], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
@@ -35,53 +33,28 @@ export default {
         subTitle: "",
     },
     navList: [{
-            name: "里藏富貴",
-            target: ".s2",
-            offset: "",
-        },
-        {
-            name: "富貴人生",
-            target: ".s3",
-            offset: "",
-        },
-        {
-            name: "縱橫核心",
-            target: ".s4",
-            offset: "",
-        },
-        {
-            name: "長耀建築",
-            target: ".s5",
-            offset: "",
-        },
-        {
-            name: "森林之王",
-            target: ".s6",
-            offset: "",
-        },
-        {
-            name: "豪宅團隊",
-            target: ".s7",
-            offset: "",
-        },
-        {
-            name: "幸福社區",
-            target: ".s8",
-            offset: "",
-        },
-        {
-            name: "結構工法",
-            target: ".s9",
-            offset: "",
-        },
-        {
-            name: "美學空間",
-            target: ".s10",
-            offset: "",
-        },
-        {
-            name: "立即預約",
+            name: "預約賞屋",
             target: ".order",
+            offset: "",
+        },
+        {
+            name: "撥打電話",
+            target: ".contact-info",
+            offset: "",
+        },
+        {
+            name: "導航地圖",
+            target: ".gmap",
+            offset: "",
+        },
+        {
+            name: "粉絲專頁",
+            target: ".contact-info",
+            offset: "",
+        },
+        {
+            name: "瞭解更多",
+            target: ".contact-info",
             offset: "",
         },
     ],

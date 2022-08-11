@@ -1,8 +1,8 @@
 <template>
   <div class="s1">
-    <div class="title">
-      <img src="@/section/s1/logo.svg" alt="" srcset="">
-      <p data-aos="fade-up"><span>吉美富徠</span>｜瑞安街最高名宅｜73-150坪｜577坪 大局致大安</p>
+    <div class="title" data-aos="fade-up">
+      <img src="@/section/s1/logo.svg" alt="吉美富徠" srcset="">
+      <p><span>吉美富徠</span>｜瑞安街最高名宅｜73-150坪｜577坪 大局致大安</p>
     </div>
     <lazy-component class="b1">
       <div class="t" data-aos="fade-up" v-if="!$isMobile()">
@@ -17,11 +17,11 @@
         靜，全世界洗耳恭聽<br />
         靜巷，自成氣候
       </div>
-      <img data-aos="scaleIn" src="@/section/s1/01.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/01.jpg" alt="吉美富徠" srcset="">
 
     </lazy-component>
     <lazy-component class="b2">
-      <img data-aos="scaleIn" src="@/section/s1/02.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/02.jpg" alt="吉美富徠" srcset="">
       <div class="t" data-aos="fade-up" v-if="$isMobile()">
         街角咖啡館，輕吻淺烘培<br />
         早午餐雙蛋黃，閒情拌日光
@@ -40,24 +40,24 @@
         水牛書店一冊鉛字<br />
         與青春不期而遇
       </div>
-      <img data-aos="scaleIn" src="@/section/s1/03.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/03.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b4">
-      <img data-aos="scaleIn" src="@/section/s1/04.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/04.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b5">
-      <img data-aos="scaleIn" src="@/section/s1/05.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/05.jpg" alt="吉美富徠" srcset="">
       <div>
-        <img data-aos="scaleIn" src="@/section/s1/06.jpg" alt="" srcset="">
-        <img data-aos="scaleIn" src="@/section/s1/07.jpg" alt="" srcset="">
+        <img data-aos="scaleIn" src="@/section/s1/06.jpg" alt="吉美富徠" srcset="">
+        <img data-aos="scaleIn" src="@/section/s1/07.jpg" alt="吉美富徠" srcset="">
       </div>
     </lazy-component>
     <lazy-component class="b6">
-      <img v-if="!$isMobile()" data-aos="scaleIn" src="@/section/s1/08.jpg" alt="" srcset="">
-      <img v-else data-aos="scaleIn" src="@/section/s1/08_m.jpg" alt="" srcset="">
+      <img v-if="!$isMobile()" data-aos="scaleIn" src="@/section/s1/08.jpg" alt="吉美富徠" srcset="">
+      <img v-else data-aos="scaleIn" src="@/section/s1/08_m.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b7">
-      <img data-aos="fade-up" src="@/section/s1/mansion.svg" alt="" srcset="">
+      <img data-aos="fade-up" src="@/section/s1/mansion.svg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b8">
       <div v-if="!$isMobile()" class="t" data-aos="fade-up">
@@ -72,7 +72,7 @@
         公園畔陽台，共舞芬多精<br />
         窗前凝視，樹梢與歲月靜好
       </div>
-      <img data-aos="scaleIn" src="@/section/s1/09.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/09.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b9">
       <div v-if="!$isMobile()" class="t" data-aos="fade-up">
@@ -87,10 +87,10 @@
         瑞安靜巷，自成一格四季<br />
         瑞安和平，大局致大安
       </div>
-      <img data-aos="scaleIn" src="@/section/s1/10.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/10.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b10">
-      <img data-aos="scaleIn" src="@/section/s1/11.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/11.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b11">
       <div class="t" data-aos="fade-up">
@@ -99,7 +99,7 @@
         預排文字預排文字<br />
         預排文字預排文字
       </div>
-      <img data-aos="scaleIn" src="@/section/s1/12.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/12.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b12">
       <div v-if="!$isMobile()" class="t" data-aos="fade-up">
@@ -114,10 +114,10 @@
         鍾情一窗維瓦第、四季演色<br />
         心有知音、世界為您安靜<br />
       </div>
-      <img data-aos="scaleIn" src="@/section/s1/13.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/13.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b13">
-      <img data-aos="scaleIn" src="@/section/s1/14.jpg" alt="" srcset="">
+      <img data-aos="scaleIn" src="@/section/s1/14.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b14" v-if="false">
       <div v-if="!$isMobile()" class="t" data-aos="fade-up">

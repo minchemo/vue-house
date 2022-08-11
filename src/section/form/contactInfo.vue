@@ -2,16 +2,18 @@
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between md:justify-center gap-2 items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="長耀里" srcset="" />
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center"
+        @click="modalOpen = true; modalType = 'phone'">
+        <img src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between md:justify-center gap-2 items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/info.svg" alt="長耀里" srcset="" />
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center"
+        @click="modalOpen = true; modalType = 'fb'">
+        <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">瞭解更多</div>
       </div>
       <div class="flex contact-item justify-between md:justify-center gap-2 items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="長耀里" srcset="" />
+        <img src="@/section/form/fb.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">前往粉絲專頁</div>
       </div>
     </div>
@@ -19,8 +21,9 @@
       <div class="flex contact-item justify-between md:justify-center gap-2 items-center address">
         <div class="whitespace-nowrap">{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between md:justify-center gap-2 items-center" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="長耀里" srcset="" />
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center"
+        @click="modalOpen = true; modalType = 'gmap'">
+        <img src="@/section/form/gmap.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">導航 Google 地圖</div>
       </div>
     </div>
@@ -32,21 +35,21 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="長耀里" srcset="" />
+      <img src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/info.svg" alt="長耀里" srcset="" />
+      <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
       <div>瞭解更多</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="長耀里" srcset="" />
+      <img src="@/section/form/pen.svg" alt="吉美富徠" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="長耀里" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="吉美富徠" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -57,9 +60,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="長耀里" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/info.svg" alt="長耀里" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="長耀里" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="吉美富徠" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? '暸解更多' :
           '接待會館'

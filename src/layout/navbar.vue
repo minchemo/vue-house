@@ -87,7 +87,7 @@
         position: relative;
         z-index: 1;
         border: size(1) solid #000;
-        padding: size(5);
+        padding: size(10);
 
         p {
             transition: all .5s;
@@ -99,8 +99,8 @@
             height: 2px;
             background-color: #7F4F21;
             position: relative;
-            transform: all .5s;
-        
+            transition: all .5s;
+
 
             &::after {
                 content: '';
@@ -136,6 +136,8 @@
         }
 
         &.open {
+            border: size(1) solid #fff;
+
             p {
                 color: #fff;
             }
@@ -173,14 +175,14 @@
     .menu {
         position: fixed;
         top: size(10);
-        left: size(10);
-        background-color: rgba($color: #46B258, $alpha: .95);
+        right: size(10);
+        background-color: rgba($color: #000, $alpha: .8);
         width: size(330);
         height: 98%;
         z-index: 0;
-        transform: translateX(-150%);
+        transform: translateX(150%);
         transition: all .5s;
-        border-radius: size(20);
+        border-radius: size(0);
         padding: size(100) 0;
         gap: size(20);
         backdrop-filter: blur(2px);
@@ -211,8 +213,8 @@
             //     transition: all .5s;
             // }
             background-color: #fff;
-            height: size(62);
-            width: size(62);
+            height: size(80);
+            width: size(80);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -225,6 +227,7 @@
 
             &.open {
                 background-color: transparent;
+                gap: 0;
 
                 &::after {
                     content: '';
@@ -342,7 +345,7 @@
 
         .menu {
             position: fixed;
-            top: 5px;
+            top: -#{size-m(12.5)};
             left: 50%;
             margin-left: -#{size-m(175)};
             width: size-m(350);
@@ -350,7 +353,7 @@
             z-index: 0;
             transform: translateX(-150%);
             transition: all .4s;
-            border-radius: size-m(10);
+            border-radius: size-m(0);
             padding: 0;
             gap: size-m(20);
             background-color: rgba($color: #000000, $alpha: .75);
@@ -381,8 +384,9 @@
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
-                    border-radius: size(20);
+                    border-radius: size-m(0);
                     transition: all .5s;
+                    border: 1px solid #000;
                 }
 
                 &:hover {
@@ -392,11 +396,13 @@
                 }
 
                 &.open {
+                    border: 0;
+
                     &::after {
                         content: '';
                         background-color: transparent;
                         box-shadow: unset;
-
+                        border: 0;
                     }
 
                 }
