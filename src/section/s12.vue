@@ -16,19 +16,18 @@
         </Splide>
       </div>
       <div class="right flex flex-col justify-center items-center">
-        <div class="info decor">
+        <!--<div class="info decor">
           <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">守護家人和珍貴事物的安全</div>
           <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">並乘載著幸福的重量</div>
           <div class="t3" data-aos="fade" data-aos-delay="400">
             與結構職人戴雲發合作，採「Alfa Safe柱中柱」鋼筋專利工法，將自動化、標準化、一體化系統導入工法，以及在牆轉角處增設補強鋼筋，一體成型的形式讓耐震韌性提升100%。
           </div>
-        </div>
-      <!--  <div class="info" v-if="currentIdx == 0">
-          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">日本住友GRAST制震壁系統</div>
+        </div>-->
+        <div class="info" v-if="currentIdx == 0">
+          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">住友GRAST黏彈性制震壁</div>
           <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">以維護古蹟的品質 守護恆久流傳的家屋</div>
           <div class="t3" data-aos="fade" data-aos-delay="400">
-            日本住友GRAST制震壁系統，通過日本建築總合試驗所、台灣國家地震中心效能認證，更獲2013至2020年日經建築雜誌制震系統冠軍，經全球橋樑廣泛採用。著名實績包含日本京都東本願寺、熊本城，台北冠德羅斯福。<br><br>
-            高阻尼橡膠與鋼板緊密接合、構成的制震壁，具備卓越消能性與剛性，使用壽命可達六十年以上，加裝於既有建築結構中，能有效降低震動波，確實守護家屋安全。用修繕國寶級古蹟的制震規格，為家奠定穩固根基，讓生命中的幸福，於此綿延茁壯。
+            住友GRAST黏彈性制震壁，通過日本建築綜合試驗所、台灣國家地震中心認證，並運用在京都東本願寺、熊本城等古蹟修繕上。以簡潔無間隙的結構，讓高阻尼橡膠更有效降低震動波。用修繕古蹟的制震規格，來守護家屋的安全。
           </div>
         </div> 
         <div class="info decor" v-else-if="currentIdx == 1">
@@ -46,7 +45,7 @@
             <img src="@/assets/next.svg" alt="心仝聚" srcset="">
           </button>
         </div>
-        -->
+        
       </div>
     </div>
   </div>
@@ -236,9 +235,9 @@ const move = (newIdx, prevIdx, destIdx) => {
 }
 
 const imgs = ref([
- /* {
+ /*  */{
     img: new URL("../section/s12/1.jpg", import.meta.url).href,
-  }, */
+  },
   {
     img: new URL("../section/s12/2.jpg", import.meta.url).href,
   },

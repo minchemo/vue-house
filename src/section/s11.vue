@@ -1,5 +1,5 @@
 <template>
-  <div class="s11 relative bg-black" v-show="false">
+  <div class="s11 relative bg-black">
     <div class="flex h-full w-full">
       <div class="left relative">
         <Splide ref="splide" :options="{
@@ -14,7 +14,7 @@
             <div class="caption z-10">{{ img.caption }}</div>
           </SplideSlide>
         </Splide>
-        <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0">
+        <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0" v-show="false">
           <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
             <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
           </button>
@@ -69,6 +69,9 @@
           bottom: size(10);
           left: size(20);
         }
+      }
+      .splide__pagination__page{
+        display: none;
       }
 
       .splide__pagination {
@@ -159,10 +162,6 @@ const imgs = ref([
   {
     img: new URL("../section/s11/1.jpg", import.meta.url).href,
     caption: '保護文字'
-  },
-  {
-    img: new URL("../section/s11/2.jpg", import.meta.url).href,
-    caption: '保護文字'
-  },
+  }
 ])
 </script>

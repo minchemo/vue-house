@@ -175,7 +175,7 @@
         top: size(198);
         width: size(399);
         height: size(399);
-        background: radial-gradient(50% 50% at 50% 50%, rgba(235, 151, 0, 0.2) 36.98%, rgba(235, 151, 0, 0.8) 100%);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(206, 123, 95, 0.5) 36.98%, rgba(206, 123, 95, 0.8) 100%);
       }
 
       &:nth-child(2) {

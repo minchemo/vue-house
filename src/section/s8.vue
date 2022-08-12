@@ -266,15 +266,19 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const imgs = ref([
   {
     img: globals.$isMobile() ? new URL("../section/s8/1_m.jpg", import.meta.url).href : new URL("../section/s8/1.jpg", import.meta.url).href,
-    caption: '雙溪河濱公園'
+    caption: '中正高中'
   },
   {
     img: globals.$isMobile() ? new URL("../section/s8/2_m.jpg", import.meta.url).href : new URL("../section/s8/2.jpg", import.meta.url).href,
-    caption: '21號河濱公園'
+    caption: '福星公園'
   },
   {
     img: globals.$isMobile() ? new URL("../section/s8/3_m.jpg", import.meta.url).href : new URL("../section/s8/3.jpg", import.meta.url).href,
-    caption: '情境示意圖'
+    caption: '歐洲學校'
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s8/4_m.jpg", import.meta.url).href : new URL("../section/s8/4.jpg", import.meta.url).href,
+    caption: '薇閣中學'
   },
 ])
 </script>
