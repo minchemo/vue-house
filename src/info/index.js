@@ -51,11 +51,13 @@ export default {
             name: "粉絲專頁",
             target: ".contact-info",
             offset: "",
+            url: "https://www.facebook.com/Forest-Park-103187918130158",
         },
         {
             name: "瞭解更多",
             target: ".contact-info",
             offset: "",
+            url: "https://a-life.com.tw/2018new/product_main_29.html",
         },
     ],
 }

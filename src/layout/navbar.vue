@@ -16,7 +16,7 @@
         </div> -->
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
             <div class="menu-item font-bold cursor-pointer text-white hover:text-gray-400 font-['noto_serif_tc']"
-                v-for="item, i in info.navList" @click="scrollTo(item.target)">
+                v-for="item, i in info.navList" @click="afterClick(item.target, item, item.url ? true : false)">
                 <!-- <span class="mr-3">0{{ i + 1 }}</span> -->
                 <span>{{ item.name }}</span>
             </div>
@@ -444,5 +444,18 @@ const scrollTo = (el) => {
         scrollTo: document.querySelector(el)
     })
     menuOpen.value = false
+}
+
+
+const afterClick = (el, data, link) => {
+    if (link) {
+        // console.log(data.url);
+        window.open(data.url)
+    } else {
+        smoothScroll({
+            scrollTo: document.querySelector(el)
+        })
+        menuOpen.value = false
+    }
 }
 </script>

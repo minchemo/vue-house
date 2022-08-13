@@ -7,11 +7,16 @@
         <img src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between md:justify-center gap-2 items-center"
+      <!-- <div class="flex contact-item justify-between md:justify-center gap-2 items-center"
         @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">瞭解更多</div>
-      </div>
+      </div> -->
+      <a class="flex contact-item justify-between md:justify-center gap-2 items-center"
+        href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
+        <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
+        <div class="whitespace-nowrap">瞭解更多</div>
+      </a>
       <div class="flex contact-item justify-between md:justify-center gap-2 items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">前往粉絲專頁</div>

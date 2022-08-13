@@ -72,6 +72,7 @@
         公園畔陽台，共舞芬多精<br />
         窗前凝視，樹梢與歲月靜好
       </div>
+      <div class="caption" v-if="$isMobile()">建築模型環境合成示意圖</div>
       <img data-aos="scaleIn" src="@/section/s1/09.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b9">
@@ -87,12 +88,14 @@
         瑞安靜巷，自成一格四季<br />
         瑞安和平，大局致大安
       </div>
+      <div class="caption">建築模型環境合成示意圖</div>
       <img data-aos="scaleIn" src="@/section/s1/10.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b10">
+      <div class="caption">建築模型環境合成示意圖</div>
       <img data-aos="scaleIn" src="@/section/s1/11.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
-    <lazy-component class="b11">
+    <lazy-component class="b11" v-if="false">
       <div class="t" data-aos="fade-up">
         預排文字預排文字<br />
         預排文字預排文字<br />
@@ -114,9 +117,12 @@
         鍾情一窗維瓦第、四季演色<br />
         心有知音、世界為您安靜<br />
       </div>
-      <img data-aos="scaleIn" src="@/section/s1/13.jpg" alt="吉美富徠" srcset="">
+      <video autoplay loop muted playsinline class="video-background ">
+        <source src="https://h35.banner.tw/jmfl/12.mp4" type="video/mp4">
+      </video>
+      <!-- <img data-aos="scaleIn" src="@/section/s1/13.jpg" alt="吉美富徠" srcset=""> -->
     </lazy-component>
-    <lazy-component class="b13">
+    <lazy-component class="b13" v-if="false">
       <img data-aos="scaleIn" src="@/section/s1/14.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b14" v-if="false">
@@ -280,7 +286,7 @@
 
   .b7 {
     margin-top: size(80);
-    padding-left: size(100);
+    padding-left: size(85);
 
     img {
       width: size(552);
@@ -307,6 +313,7 @@
   }
 
   .b9 {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -321,6 +328,15 @@
       line-height: size(64);
     }
 
+    .caption {
+      position: absolute;
+      left: 10px;
+      bottom: 5px;
+      color: #fff;
+      z-index: 1;
+      font-size: size(12);
+    }
+
     img {
       width: size(1336);
     }
@@ -328,6 +344,16 @@
 
   .b10 {
     margin-top: size(78);
+    position: relative;
+
+    .caption {
+      position: absolute;
+      left: 10px;
+      bottom: 5px;
+      color: #fff;
+      z-index: 1;
+      font-size: size(12);
+    }
 
     img {
       width: 100%;
@@ -375,7 +401,7 @@
       }
     }
 
-    img {
+    video {
       width: size(1354);
     }
   }
@@ -428,7 +454,7 @@
       top: size(100);
       z-index: 1;
       writing-mode: vertical-lr;
-      font-size: size(32);
+      font-size: size(24);
       font-weight: 600;
       line-height: size(64);
       color: #fff;
@@ -524,6 +550,7 @@
         writing-mode: horizontal-tb;
         font-size: size-m(14);
         line-height: size-m(25);
+        text-align: right;
       }
 
       img {
@@ -577,6 +604,7 @@
     }
 
     .b8 {
+      position: relative;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -590,6 +618,15 @@
         line-height: size-m(25);
         text-align: right;
         margin-right: -#{size-m(120)};
+      }
+
+      .caption {
+        position: absolute;
+        left: 10px;
+        bottom: 5px;
+        color: #fff;
+        z-index: 1;
+        font-size: size-m(10);
       }
 
       img {
@@ -613,6 +650,15 @@
         margin-left: -#{size-m(140)};
       }
 
+      .caption {
+        position: absolute;
+        left: 10px;
+        bottom: 5px;
+        color: #fff;
+        z-index: 1;
+        font-size: size-m(10);
+      }
+
       img {
         width: 100%;
       }
@@ -620,6 +666,11 @@
 
     .b10 {
       margin-top: size-m(40);
+
+
+      .caption {
+        font-size: size-m(10);
+      }
 
       img {
         width: 100%;
@@ -671,7 +722,7 @@
         }
       }
 
-      img {
+      video {
         width: 100%;
       }
     }
