@@ -1,30 +1,12 @@
 <template>
   <div class="s11 relative bg-black">
-    <div class="flex h-full w-full">
+    <div class="flex h-full w-full md:flex-row flex-col">
       <div class="left relative">
-        <Splide ref="splide" :options="{
-          rewind: true,
-          autoWidth: true,
-          arrows: false,
-          type: 'loop',
-          autoplay: true,
-          interval: 4000,
-        }" @splide:move="move" class="slide-box absolute z-10">
-          <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
-            <div class="caption z-10">{{ img.caption }}</div>
-          </SplideSlide>
-        </Splide>
-        <div class="splide__arrows absolute z-20 w-full px-2 flex justify-between top-1/4 left-0" v-show="false">
-          <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-            <img src="@/assets/prev.svg" alt="心仝聚" srcset="">
-          </button>
-          <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-            <img src="@/assets/next.svg" alt="心仝聚" srcset="">
-          </button>
-        </div>
+        <img src="@/section/s11/1.jpg" alt="">
+
         <div class="info z-20">
           <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">優質日系營造</div>
-          <div class="t3" data-aos="fade" data-aos-delay="200">
+          <div class="t3 font-['Noto_Sans_TC']" data-aos="fade" data-aos-delay="200">
             文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認(150字)
           </div>
         </div>
@@ -50,61 +32,8 @@
     justify-content: center;
     gap: size(65);
 
-    .slide-box {
-      position: relative;
+    img {
       width: size(660);
-      height: size(450);
-
-      .slide {
-        width: size(660);
-        height: size(450);
-        background-size: cover;
-        position: relative;
-
-        .caption {
-          position: absolute;
-          font-size: size(12);
-          font-weight: 350;
-          color: #fff;
-          bottom: size(10);
-          left: size(20);
-        }
-      }
-      .splide__pagination__page{
-        display: none;
-      }
-
-      .splide__pagination {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: size(20);
-        z-index: 20;
-        gap: size(7.5);
-
-        li {
-          height: size(20);
-          margin-bottom: size(10);
-
-          .splide__pagination__page {
-            width: size(15);
-            height: size(15);
-            border-radius: 100%;
-            background: rgba($color: #fff, $alpha: 0.5);
-
-            &.is-active {
-              background: rgba($color: #fff, $alpha: 1);
-            }
-          }
-        }
-      }
-    }
-
-    .splide__arrows {
-      left: 50%;
-      top: 35%;
-      transform: translate(-50%, -50%);
-      width: size(820);
     }
 
     .info {
@@ -141,10 +70,50 @@
 
 
 @media screen and (max-width:768px) {
+
   .s11 {
-    width: size-m(375);
-    height: size-m(600);
+    width: 100%;
+    height: auto;
+    padding-top: size-m(50);
+
+    .left {
+      flex-basis: 100%;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      gap: size-m(35);
+      margin-bottom: size-m(38);
+
+      img {
+        width: 100%;
+      }
+
+      .info {
+        width: 100%;
+        padding: 0 size-m(32);
+
+        .t1 {
+          font-size: size-m(25);
+          margin-bottom: size-m(20);
+          text-align: center;
+        }
+
+        .t3 {
+          width: 100%;
+          font-size: size-m(15);
+        }
+      }
+    }
+
+    .right {
+      flex-basis: size-m(375);
+      height: size-m(372);
+      background-image: url('@/section/s11/large.jpg');
+      background-size: cover;
+      background-position: center;
+    }
   }
+
 }
 </style>
 
