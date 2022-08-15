@@ -5,7 +5,7 @@
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center font-['Noto_Serif_TC']">
                 <div class="title">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
-                    <div class="item font-bold flex items-center w-full whitespace-nowrap"
+                    <div class="item flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
                         <p class="mr-5 border-r-2 border-white pr-2">{{ item[0] }}</p>
                         <p class="whitespace-pre-line text-left">{{ item[1] }}</p>
@@ -42,7 +42,7 @@
     .title {
         width: 100%;
         font-size: size(36);
-        font-weight: 700;
+        font-weight: 500;
         margin-bottom: size(36);
         color: #fff;
     }
@@ -75,9 +75,11 @@
     .info-box {
         width: size-m(313);
         padding: size-m(30) 0;
+            
 
         .title {
             font-size: size-m(29);
+            text-align: left;
         }
 
         .info-items {

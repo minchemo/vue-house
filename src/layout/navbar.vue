@@ -33,7 +33,7 @@
 .nav {
     padding: 0 size(99);
     height: size(60);
-    margin-top: size(141);
+    margin-top: size(50);
 
     // backdrop-filter: blur(10px);
     // background-color: rgba($color: #fff, $alpha: .3) !important;
@@ -213,8 +213,8 @@
             //     transition: all .5s;
             // }
             background-color: #fff;
-            height: size(80);
-            width: size(80);
+            height: size(70);
+            width: size(70);
             display: flex;
             align-items: center;
             justify-content: center;

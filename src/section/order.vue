@@ -2,7 +2,7 @@
   <div class="order relative bg-[#fff] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-title text-center font-['Noto_Serif_TC',serif]">{{ info.order.title }}</div>
 
       <!-- Title Image -->
       <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg.svg" alt="吉美富徠" srcset=""
@@ -104,7 +104,7 @@
 
   .order-title {
     font-size: size(43);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: size(50);
   }
 
