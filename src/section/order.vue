@@ -59,7 +59,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        送出表單
+        {{ sending ? '發送中..' : '送出表單' }}
       </div>
 
       <!-- Contact Info -->
@@ -286,6 +286,8 @@ const onRecaptchaUnVerify = () => {
   formData.r_verify = false
 }
 
+const sending = ref(false)
+
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const utmSource = urlParams.get("utm_source");
@@ -341,6 +343,7 @@ const send = () => {
   }
 
   if (pass) {
+    sending.value = true
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -362,6 +365,8 @@ const send = () => {
         method: "POST",
         body: presend,
       }).then((response) => {
+
+        sending.value = false
         if (response.status === 200) {
           window.location.href = "formThanks";
         }
