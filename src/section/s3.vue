@@ -231,7 +231,7 @@
             position: absolute;
             width: size(626);
             left: size(1133);
-            bottom: -#{size(86)};
+            bottom: size(100);
             z-index: 5;
         }
 
@@ -474,7 +474,7 @@
                 position: absolute;
                 width: size-m(240);
                 left: size-m(70);
-                bottom: -#{size-m(120)};
+                bottom: size-m(-50);
                 z-index: 5;
                 pointer-events: none;
             }

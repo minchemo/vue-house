@@ -92,7 +92,7 @@
     width: size(600);
     z-index: 1;
     pointer-events: none;
-    bottom: -#{size(130)};
+    bottom: size(40);
     left: 0;
   }
 
@@ -199,10 +199,10 @@
 
     .cat {
       position: absolute;
-      width: size-m(220);
+      width: size-m(210);
       z-index: 1;
       pointer-events: none;
-      bottom: size-m(520);
+      bottom: size-m(590);
       left: -#{size-m(40)};
     }
 
