@@ -55,7 +55,7 @@
         position: absolute;
         font-size: size(12);
         font-weight: 350;
-        color: #fff;
+        color: #000;
         bottom: size(10);
         left: size(20);
       }
@@ -234,7 +234,7 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const imgs = ref([
   {
     img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/1.jpg", import.meta.url).href,
-    caption: '外觀3D圖'
+    caption: '建築外觀手稿示意圖'
   },
 ])
 </script>
