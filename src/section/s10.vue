@@ -92,6 +92,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: size(1900);
+    display: none;
   }
 
   .info {
@@ -114,7 +115,7 @@
       font-weight: 800;
       font-size: size(40);
       line-height: 70%;
-      color: #EC9700;
+      color: #F6B39A;
       margin-bottom: size(25);
       text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
     }
@@ -176,6 +177,7 @@
       top: 75%;
       transform: translate(-50%, -50%);
       width: size(1900);
+      display: none;
     }
 
     .info {
@@ -192,7 +194,7 @@
       justify-content: center;
       flex-direction: column;
       padding: 0 size-m(35);
-      background-color: #192d4e;
+      background-color: #ababab;
 
       .t1 {
         font-weight: 800;
@@ -232,14 +234,6 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const imgs = ref([
   {
     img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/1.jpg", import.meta.url).href,
-    caption: '外觀3D圖'
-  },
-  {
-    img: globals.$isMobile() ? new URL("../section/s10/2_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
-    caption: '外觀3D圖'
-  },
-  {
-    img: globals.$isMobile() ? new URL("../section/s10/3_m.jpg", import.meta.url).href : new URL("../section/s10/3.jpg", import.meta.url).href,
     caption: '外觀3D圖'
   },
 ])

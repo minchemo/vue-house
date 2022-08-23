@@ -73,11 +73,11 @@
         position: absolute;
         width: size(500);
         height: size(1040);
-        border: 1px solid #D47300;
+        border: 1px solid #B36649;
       }
 
       .t1 {
-        color: #D47300;
+        color: #F6B39A;
         font-size: size(40);
         font-weight: 800;
         line-height: 70%;
@@ -250,7 +250,7 @@
           position: absolute;
           width: size-m(340);
           height: size-m(652);
-          border: 1px solid #D47300;
+          border: 1px solid #B36649;
         }
 
         &::after {

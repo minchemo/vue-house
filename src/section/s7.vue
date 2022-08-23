@@ -117,7 +117,7 @@
       font-weight: 800;
       font-size: size(40);
       line-height: 70%;
-      color: #EC9700;
+      color: #F6B39A;
       margin-bottom: size(25);
     }
 
@@ -166,7 +166,7 @@
   .s7 {
     width: 100%;
     height: size-m(519);
-    background-color: #EC9700;
+    background-color: #B36649;
 
     .slide-box {
       position: absolute;

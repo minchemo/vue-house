@@ -5,9 +5,9 @@
         <img src="@/section/s11/1.jpg" alt="">
 
         <div class="info z-20">
-          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">優質日系營造</div>
+          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">嚴謹查證建築工程的重要節點<br>方能回應住戶對安全的信任與期待</div>
           <div class="t3 font-['Noto_Sans_TC']" data-aos="fade" data-aos-delay="200">
-            文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認文案待確認(150字)
+            成立於1878年的SGS集團為國際第三方檢驗機構，以中立且公正的立場為大眾把關。SGS查證服務藉由嚴謹查證和檢測，監督工程和建物的安全性、穩固性，堅守最佳品質。
           </div>
         </div>
       </div>
@@ -42,10 +42,11 @@
       .t1 {
         font-weight: 800;
         font-size: size(40);
-        line-height: 70%;
+        line-height: 130%;
         color: #fff;
         margin-bottom: size(45);
         text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+
       }
 
       .t3 {
@@ -93,9 +94,10 @@
         padding: 0 size-m(32);
 
         .t1 {
-          font-size: size-m(25);
+          font-size: size-m(20);
           margin-bottom: size-m(20);
           text-align: center;
+          line-height: 130%;
         }
 
         .t3 {

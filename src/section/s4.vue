@@ -51,10 +51,10 @@
     .info-box {
       width: 100%;
       height: 100%;
-      border: 1px solid #D47300;
+      border: 1px solid #B36649;
 
       .t1 {
-        color: #D47300;
+        color: #F6B39A;
         font-size: size(96);
         font-weight: 800;
         margin-bottom: size(56);
@@ -62,7 +62,7 @@
       }
 
       .t2 {
-        color: #D47300;
+        color: #F6B39A;
         font-size: size(40);
         font-weight: 800;
         line-height: size(28);
@@ -128,11 +128,11 @@
       .info-box {
         width: 100%;
         height: 100%;
-        border: 1px solid #D47300;
+        border: 1px solid #B36649;
         padding: 0 size-m(20);
 
         .t1 {
-          color: #D47300;
+          color: #F6B39A;
           font-size: size-m(50);
           margin-bottom: size-m(10);
         }

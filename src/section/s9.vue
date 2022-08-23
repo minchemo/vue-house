@@ -35,7 +35,7 @@
   overflow: hidden;
   width: 100%;
   height: size(1080);
-  background-color: #EC9700;
+  background-color: #B36649;
 
   .splide__arrows {
     left: 50%;
@@ -126,7 +126,7 @@
     overflow: hidden;
     width: 100%;
     height: size-m(664);
-    background-color: #EC9700;
+    background-color: #B36649;
     
 
     .splide__arrows {

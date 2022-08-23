@@ -82,7 +82,7 @@
         .t1 {
           position: relative;
           font-size: size(40);
-          color: #D47300;
+          color: #F6B39A;
           z-index: 1;
         }
 
@@ -99,7 +99,7 @@
           content: '';
           width: size(100);
           height: 1px;
-          background-color: #D47300;
+          background-color: #F6B39A;
           left: 50%;
           transform: translateX(-50%);
           position: absolute;
@@ -125,7 +125,7 @@
         transform: translate(-50%, -50%);
         width: 95%;
         height: 97%;
-        border: 1px solid #D47300;
+        border: 1px solid #B36649;
       }
 
       &.active {
@@ -138,7 +138,7 @@
         }
 
         &::after {
-          border: 3 px solid #D47300;
+          border: 3 px solid #B36649;
         }
 
         .info {
@@ -246,7 +246,7 @@
             content: '';
             width: size-m(61.32);
             height: 1px;
-            background-color: #D47300;
+            background-color: #B36649;
             left: 50%;
             transform: translateX(-50%);
             position: absolute;
@@ -285,7 +285,7 @@
           }
 
           &::after {
-            border: 3px solid #D47300;
+            border: 3px solid #B36649;
           }
 
           .info {

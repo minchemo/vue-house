@@ -100,7 +100,7 @@
     .t1 {
       font-weight: 800;
       font-size: size(40);
-      color: #EC9700;
+      color: #F6B39A;
     }
 
     .t2 {
@@ -159,7 +159,8 @@
     }
 
     .right {
-      flex-basis: size(1120);
+      flex-basis: size-m(300);
+      margin-bottom: size-m(50);
     }
 
     .slide-box {
@@ -183,7 +184,7 @@
 
     .splide__arrows {
       width: size-m(140);
-      margin-top: size-m(30);
+      margin-top: size-m(-120);
       margin-bottom: size-m(30);
     }
 
@@ -198,7 +199,7 @@
       }
 
       .t2 {
-        font-size: size-m(17.5);
+        font-size: size-m(15);
         margin-bottom: size-m(20);
       }
 

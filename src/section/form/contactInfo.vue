@@ -104,7 +104,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: theme('colors.color1');
+      background-color: #804630;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -119,7 +119,7 @@
       border-radius: 1.9em;
 
       &:hover {
-        background-color: theme('colors.color2');
+        background-color: #5f3322;
       }
 
       img {

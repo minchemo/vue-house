@@ -2,7 +2,7 @@
   <div class="s3 relative">
     <div class="absolute caption text-white">情境示意圖</div>
     <div class="absolute content">
-      <h2 data-aos="fade" data-aos-delay="0" class="font-['Noto_Serif_JP'] text-[#D47300]">時代變，很多事情不變</h2>
+      <h2 data-aos="fade" data-aos-delay="0" class="font-['Noto_Serif_JP'] text-[#F6B39A]">時代變，很多事情不變</h2>
       <p data-aos="fade" data-aos-delay="500" class="text-white">
         現代網路社群的蓬勃，鄰里間的親切寒暄、熟悉的笑容與善意，更加映照出人們內心對情感歸屬不變的渴望與追求。優良的建築設計，舒心的居住環境，若能再加上情感的連結，家，就少了幾分遺憾、多了幾分溫暖。</p>
     </div>

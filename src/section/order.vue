@@ -1,5 +1,5 @@
   <template>
-  <div class="order relative bg-[#EC9700] text-center">
+  <div class="order relative bg-[#B36649] text-center">
     <!-- Title -->
     <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
     <!-- Title Image -->
@@ -129,7 +129,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #C14D33;
+    background-color: #8A311D;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;

@@ -71,7 +71,7 @@
       font-weight: 800;
       font-size: size(40);
       line-height: 70%;
-      color: #D47300;
+      color: #B36649;
       margin-bottom: size(20);
     }
 
