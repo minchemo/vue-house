@@ -54,7 +54,7 @@
 
     .mo-text {
       left: 6.7em;
-      color: #000;
+      color: #FFF;
       bottom:3.5em;
       font-size: size(40);
       text-align: left;

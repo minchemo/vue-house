@@ -4,6 +4,7 @@
       <lazy-component class="img" data-aos="fade" data-aos-delay="500">
         <img v-if="!$isMobile()" class="w-full h-full" src="@/section/s4/bg.jpg" alt="心仝聚" srcset="" />
         <img v-else class="w-full h-full" src="@/section/s4/bg_m.jpg" alt="心仝聚" srcset="" />
+        <div class="absolute caption text-white">情境示意圖</div>
       </lazy-component>
       <div class="info">
         <div class="info-box flex flex-col items-center justify-center">
@@ -37,6 +38,13 @@
   height:100vh;
   min-height: size(900);
   max-height: size(1080);
+
+  .caption {
+    font-size: size(12);
+    left: size(15);
+    bottom: size(15);
+    text-shadow: 0.1em 0.1em 0.2em black;
+  }
 
   .img {
     flex-basis: size(800);
@@ -115,6 +123,16 @@
     height: size-m(1050);
   min-height:size-m(1050);
   max-height: size-m(1050);
+
+
+  .caption {
+      font-size: size(12);
+      right: unset;
+      left: size-m(10);
+      bottom: size-m(10);
+      text-shadow: 0.1em 0.1em 0.2em black;
+      z-index: 99;
+    }
 
     .img {
       flex-basis: size-m(346);
