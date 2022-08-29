@@ -1,37 +1,19 @@
 <template>
     <div class="s8 relative">
-        <div class="text">
-            <div class="t1" data-aos="flip-left" data-aos-delay="0">{{ imgs[currentIdx].title }}</div>
-            <div class="t2 font-['Noto_sans_tc']" data-aos="flip-left" data-aos-delay="200">
-                汲取崗石材質色彩與紋理質感，營造簡約洗鍊的日系人文空間。大面落地窗迎接陽光與自然綠意，結合經典建築語彙與人文藝術涵養，打造出國際精品休閒飯店式的美學氛圍與質感時光
-                。每一處空間質材的分割、比例、色調，都有最用心的思考。
-            </div>
-            <div class="btns">
-                <div class="text-btn" @click="splide.splide.go(i)" v-bind:class="{ 'active': currentIdx == i }"
-                    v-for="btn, i in imgs" v-html="btn.btn"></div>
-            </div>
+        <div class="o">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <Splide ref="splide" :options="{
-            rewind: true,
-            autoWidth: true,
-            arrows: true,
-            pagination: true,
-            type: 'fade',
-            autoplay: true,
-            interval: 4000,
-        }" @splide:move="move" class="slide-box z-10">
-            <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
-                <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
-            </SplideSlide>
+        <img src="./s8/1.png" class="img1" data-aos="zoom-in" data-aos-delay="0"  />
+        <img src="./s8/2.png" class="img2" data-aos="zoom-in-right" data-aos-delay="300" />
+        <div class="txt">
+            <img src="./s8/t1.png" data-aos="zoom-in" data-aos-delay="0" class="t1" v-if="!globals.$isMobile()" />
+            <img src="./s8/t1m.png" data-aos="zoom-in" data-aos-delay="0" class="t1" v-else />
+            <img src="./s8/t2.png" data-aos="zoom-in" data-aos-delay="200" class="t2" />
+            <img src="./s8/t3.png" data-aos="zoom-in" data-aos-delay="400" class="t3" />
+        </div>
 
-            <div class="arrows splide__arrows">
-                <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.png" alt="" srcset="">
-                </button>
-                <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.png" alt="" srcset=""></button>
-            </div>
-        </Splide>
     </div>
 </template>
 
@@ -39,251 +21,103 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-    width: 100%;
-    height: size(900);
-    background-size: cover;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-left: size(83);
-    gap: size(120);
-    padding-bottom: size(100);
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  min-height: size(900);
+  max-height: size(1080);
+  position: relative;
+ // background: linear-gradient(to bottom, #e4b02a 0%,#f9ec38 100%);
+    background:  linear-gradient(to bottom, #f9ec38 0%,#e4b02a 100%);
 
-    .text {
-        position: relative;
-
-        .t1 {
-            font-weight: 600;
-            font-size: size(42);
-            margin-bottom: size(60);
-        }
-
-        .t2 {
-            font-weight: 400;
-            font-size: size(20);
-            line-height: size(40);
-            width: size(476);
-        }
-
-        &::after {
-            content: '';
-            width: size(686);
-            height: size(4);
-            background-color: #B3CD66;
-            position: absolute;
-            top: size(70);
-            left: 0
-        }
-
-        .btns {
-            margin-top: size(173);
-            display: flex;
-            gap: size(57);
-
-            .text-btn {
-                font-weight: 700;
-                font-size: size(24);
-                border-bottom: size(3) solid #BEC9A4;
-                color: #727171;
-                cursor: pointer;
-
-                span {
-                    font-size: size(32);
-                }
-
-                &.active {
-                    border-bottom: size(3) solid #46B258;
-                    color: #251D1B;
-                }
-
-                &:hover {
-                    border-bottom: size(3) solid #46B258;
-                    color: #251D1B;
-                }
-            }
+    .img1{position: absolute;
+        top: calc(50% + (240 - 540) * 100vw / 1920);
+        left: size(110);width:size(630);}
+    .img2{position: absolute;
+        top: calc(50% + (460 - 540) * 100vw / 1920);
+        left: size(670);width:size(240);}
+    .o{
+        position: absolute;
+        top: calc(50% + (220 - 540) * 100vw / 1920);
+        left:  size(320);
+        $o_size:size(650);
+        width:$o_size;
+        height:$o_size;
+        div{
+        position: absolute; top: 0;left: 0;
+            background:linear-gradient(to right, #F9EC3811 0%,#fcf59b80 50%,#fff 100%);
+            width:100%;height:100%;
+            border-radius: 50%;
+            &:first-child{left:-30.8%;}
+            &:last-child{left:30.8%;}
         }
     }
-
-    .slide-box {
-        flex-basis: size(1032);
-        height: size(718);
-
-        .splide__track {
-            overflow: visible;
+    .txt{width:size(850);position: absolute;right: size(100);
+        top: calc(50% + (327 - 540) * 100vw / 1920);
+        text-align: center;
+        .t1{
+            width:size(610);
         }
-
-        .slide {
-            width: size(1032);
-            height: size(718);
-            background-size: cover;
-
-            .caption {
-                position: absolute;
-                font-size: size(13);
-                color: #fff;
-                bottom: size(12.5);
-                right: size(25);
-                text-shadow: 0.1em 0.1em 0.2em black
-            }
+        .t2{
+            width:size(760);
+            margin: 3.7vw auto 4.3vw auto;
         }
-
-        .arrows {
-            position: absolute;
-            width: size(1088.34);
-            display: flex;
-            justify-content: space-between;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 5;
-
-            img {
-                width: size(55)
-            }
+        .t3{
+            width:size(750);
         }
-
-        .splide__pagination {
-            gap: size(21);
-            justify-content: flex-end;
-            margin-top: size(25);
-
-            li {
-                button {
-
-                    width: size(20);
-                    height: size(20);
-                    background-color: #BEC9A4;
-                    border-radius: 999px;
-
-                    &.is-active {
-                        background-color: #46B258;
-                    }
-                }
-            }
-        }
-
+        
+    
     }
 }
 
 @media screen and (max-width:768px) {
 
     .s8 {
-        width: 100%;
-        height: size-m(712);
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        padding-left: 0;
-        gap: size-m(40);
-        padding-bottom: 0;
-        padding-top: size-m(120);
+    min-height: size-m(667);
+    max-height: size-m(750);
+    overflow: hidden;
+    
+    .img1{ top: calc(50% + (210 - 375) * 100vw / 375);
+        left:size-m(37.5);width:size-m(300);opacity: .5;
+    }
+    .img2{position: absolute;
+        top: calc(50% + (460 - 540) * 100vw / 1920);
+        top: size-m(496);
+        left: size-m(250);width:size-m(80);}
 
-        .text {
-            width: 85%;
-            position: relative;
+    .o{
+        position: absolute;
+        top: size-m(150);
+        left:size-m(57.5);
+        $o_size:size-m(260);
+        width:$o_size;
+        height:$o_size;
 
-            .t1 {
-                font-weight: 700;
-                font-size: size-m(25);
-                line-height: size-m(36);
-                text-align: left;
-                margin-bottom: size-m(58);
-            }
+        div{
+            background:linear-gradient(to top, #F9EC3811 0%,#fcf59b80 50%,#fff 100%);
 
-            .t2 {
-                font-weight: 400;
-                font-size: size-m(14);
-                line-height: size-m(25);
-                flex-basis: unset;
-                text-align: justify;
-                width: unset;
-            }
-
-            &::after {
-                width: size-m(315);
-                height: 1px;
-                top: size-m(60);
-                left: 0
-            }
-
-            .btns {
-                position: absolute;
-                margin-top: 0;
-                display: flex;
-                gap: size-m(32);
-                top: -#{size-m(70)};
-
-                .text-btn {
-                    font-weight: 700;
-                    font-size: size-m(16);
-                    border-bottom: size-m(3) solid #BEC9A4;
-                    color: #727171;
-                    cursor: pointer;
-
-                    span {
-                        font-size: size-m(20);
-                    }
-
-                    &.active {
-                        border-bottom: size-m(3) solid #46B258;
-                        color: #251D1B;
-                    }
-
-                    &:hover {
-                        border-bottom: size-m(3) solid #46B258;
-                        color: #251D1B;
-                    }
-                }
-            }
-        }
-
-        .slide-box {
-            flex-basis: size-m(375);
-            height: size-m(260.9);
-
-            .splide__track {
-                overflow: visible;
-            }
-
-            .slide {
-                width: size-m(375);
-                height: size-m(260.9);
-                background-size: cover;
-
-                .caption {
-                    font-size: size-m(13);
-                }
-            }
-
-            .arrows {
-                width: size-m(352);
-
-                img {
-                    width: size-m(30.24)
-                }
-            }
-
-
-            .splide__pagination {
-                gap: size-m(12);
-                justify-content: center;
-                margin-top: size-m(10);
-
-                li {
-                    button {
-                        width: size-m(12);
-                        height: size-m(12);
-
-                    }
-                }
-            }
-
+            &:first-child{left:0;
+            top: -31%;}
+            &:last-child{left:0;
+            top:31%;}
         }
     }
+    .txt{right: 0;width: 100%;
+        top: size-m(65);
+        .t1{
+            width: size-m(18);
+        }
+        .t2{
+            width: size-m(270);display: block;
+            margin:80vw auto 6vw auto;
+        }
+        .t3{
+            width: size-m(270);
+        }
+    
+    }
 
+    }
 
 }
 </style>
