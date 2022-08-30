@@ -7,12 +7,14 @@
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-5 border-l-2 border-black pl-2 ">{{ item[0] }}</p>
-                        <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
+                        <p class="mr-5 border-l-2 border-black pl-2"  v-html="item[0]"></p>
+                        <p class="whitespace-pre-line leading-normal text-left" v-html="item[1]"></p>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
