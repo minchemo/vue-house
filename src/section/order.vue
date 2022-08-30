@@ -23,10 +23,19 @@
             @input="(event) => (formData.name = event.target.value)" />
           <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
+
           <select class="select w-full rounded-full" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="3房1衛">3房1衛</option>
             <option value="3房2衛">3房2衛</option>
+          </select>
+
+
+
+          <select class="select w-full rounded-full" v-model="formData.project">
+            <option value="" selected disabled>選擇建案</option>
+            <option value="日和">日和</option>
+            <option value="日進學">日進學</option>
           </select>
           <select class="select w-full rounded-full" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
@@ -148,7 +157,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 350px;
     gap: size(80);
     margin-bottom: size(50);
     z-index: 50;
@@ -307,6 +316,7 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  project: "",
   email: "",
   city: "",
   area: "",
@@ -323,6 +333,7 @@ const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "建案", //project
   "信箱", //email
   "居住縣市", //city
   "居住地區", //area
@@ -408,6 +419,7 @@ const send = () => {
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
+      &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
       &msg=${formData.msg}
