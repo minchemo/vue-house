@@ -8,12 +8,8 @@
         <div class="whitespace-nowrap">{{ info.phone }}</div>
       </div>
       
-      <a class="flex contact-item justify-center md:justify-center gap-2 items-center"
-        href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
-        <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
-        <div class="whitespace-nowrap">瞭解更多</div>
-      </a>
-      <div class="flex contact-item justify-between md:justify-center gap-2 items-center"
+      
+      <div class="flex contact-item justify-center md:justify-center gap-2 items-center"
         @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">線上諮詢</div>
@@ -22,6 +18,11 @@
         <img src="@/section/form/fb.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">前往粉絲專頁</div>
       </div>
+      <a class="flex contact-item justify-center md:justify-center gap-2 items-center"
+        href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
+        <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
+        <div class="whitespace-nowrap">瞭解更多</div>
+      </a>
     </div>
     <div class="flex justify-center w-full contact-item-box no-gap">
       <div class="flex contact-item justify-between md:justify-center gap-2 items-center address">
@@ -44,11 +45,11 @@
       <img src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
       <div>撥打電話</div>
     </div>
-    <a class="flex flex-1 flex-col contact-item justify-center items-center"
+    <!-- <a class="flex flex-1 flex-col contact-item justify-center items-center"
         href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
         <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
         <div>瞭解更多</div>
-      </a>
+      </a>-->
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
       <img src="@/section/form/messenger.svg" alt="吉美富徠" srcset="" />
@@ -235,7 +236,6 @@
       flex-direction: column;
 
       .contact-item {
-        padding: 0 121px;
         font-size: size-m(16);
         max-width: 100%;
         white-space: nowrap;
