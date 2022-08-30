@@ -7,16 +7,17 @@
         <img src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">{{ info.phone }}</div>
       </div>
-      <!-- <div class="flex contact-item justify-between md:justify-center gap-2 items-center"
-        @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
-        <div class="whitespace-nowrap">瞭解更多</div>
-      </div> -->
+      
       <a class="flex contact-item justify-center md:justify-center gap-2 items-center"
         href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
         <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">瞭解更多</div>
       </a>
+      <div class="flex contact-item justify-between md:justify-center gap-2 items-center"
+        @click="modalOpen = true; modalType = 'fb'">
+        <img src="@/section/form/messenger.svg" alt="吉美富徠" srcset="" />
+        <div class="whitespace-nowrap">線上諮詢</div>
+      </div> 
       <div class="flex contact-item justify-center md:justify-center gap-2 items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">前往粉絲專頁</div>
@@ -48,6 +49,11 @@
         <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
         <div>瞭解更多</div>
       </a>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'fb'">
+      <img src="@/section/form/messenger.svg" alt="吉美富徠" srcset="" />
+      <div>線上諮詢</div>
+    </div>  
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="@/section/form/pen.svg" alt="吉美富徠" srcset="" />
       <div>預約賞屋</div>
@@ -66,10 +72,10 @@
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="吉美富徠" srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="吉美富徠" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? '暸解更多' :
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? '線上諮詢' :
           '接待會館'
       }}</div>
       <!-- content -->
@@ -129,7 +135,7 @@
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.06em;
-      max-width: size(300);
+      max-width: size(200);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
@@ -229,7 +235,7 @@
       flex-direction: column;
 
       .contact-item {
-        padding: 0 size-m(80);
+        padding: 0 121px;
         font-size: size-m(16);
         max-width: 100%;
         white-space: nowrap;
