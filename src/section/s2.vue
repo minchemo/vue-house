@@ -1,17 +1,17 @@
 <template>
     <div class="s2 relative ">
         <div class="t1 z-10" data-aos="zoom-in">三重最漾＊<br v-if="$isMobile()">下樓就是千坪公園綠</div>
-        <lazy-component>
+        <div>
             <img class="z-10 absolute logo" data-aos="zoom-in" data-aos-delay="0" src="@/section/s2/logo.svg" alt="" srcset="">
-            <img class="z-10 absolute en" data-aos="zoom-in" data-aos-delay="100" src="@/section/s2/en.png" alt="" srcset="">
+            <img class="z-10 absolute en" data-aos="zoom-in"  src="@/section/s2/en.png" alt="" srcset="">
             <img class="z-10 absolute logo2" src="@/section/s2/logo_2.png" alt="" srcset="">
-        </lazy-component>
-        <lazy-component class="leaf">
+        </div>
+        <div class="leaf">
             <img v-if="!$isMobile()" class="r" src="@/section/s2/leaf_r.png" alt="" srcset="">
             <img v-else class="r" src="@/section/s2/leaf_r_m.png" alt="" srcset="">
             <img v-if="!$isMobile()" class="l" src="@/section/s2/leaf_l.png" alt="" srcset="">
             <img v-else class="l" src="@/section/s2/leaf_l_m.png" alt="" srcset="">
-        </lazy-component>
+        </div>
     </div>
 </template>
 
