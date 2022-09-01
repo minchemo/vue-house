@@ -2,19 +2,17 @@
   <div class="order relative bg-[#DFDDC8] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-title text-center font-['noto_serif_tc'] text-[#055F76]">{{ info.order.title }}</div>
+      <div class="cus-divider"></div>
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="公園漾" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="佳鋐首邑" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="公園漾" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="佳鋐首邑" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
-      <img v-if="!$isMobile()" class="bg-image" src="@/section/form/bg.png" alt="" srcset="">
-      <img v-else class="bg-image" src="@/section/form/bg_m.png" alt="" srcset="">
-      <Cat class="cat" />
-      <Rabbit class="rabbit" />
+      <img class="decor" src="@/section/form/decor.png" alt="" srcset="">
 
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
@@ -32,10 +30,10 @@
 
 
 
-          <select class="select w-full rounded-full" v-model="formData.project">
+          <select class="select w-full rounded-full" v-model="formData.project" v-if="false">
             <option value="" selected disabled>選擇建案</option>
-            <option value="日和">日和</option>
-            <option value="日進學（早鳥優惠開跑）">日進學（早鳥優惠開跑）</option>
+            <option value=""></option>
+            <option value=""></option>
           </select>
           <select class="select w-full rounded-full" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
@@ -93,30 +91,18 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  padding-bottom: size(52);
+  background-image: url('@/section/form/bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: size(0);
   position: relative;
-
-  .cat {
-    position: absolute;
-    width: size(600);
-    z-index: 1;
-    pointer-events: none;
-    bottom: size(40);
-    left: 0;
-  }
+  height: size(1477);
+  padding-top: size(90);
 
   .z-10 {
     z-index: 10;
     position: relative;
-  }
-
-  .rabbit {
-    position: absolute;
-    width: size(550);
-    z-index: 1;
-    pointer-events: none;
-    bottom: size(20);
-    right: 0;
   }
 
   .bg-image {
@@ -126,26 +112,24 @@
     bottom: size(50);
     vertical-align: middle;
   }
-
-  &::after {
-    content: '';
-    width: 100%;
-    height: size(50);
-    background-color: #514118;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
 }
 
 .order {
   width: 100%;
-  padding-top: size(50);
+  padding-top: size(0);
 
   .order-title {
     font-size: size(43);
-    font-weight: 500;
+    font-weight: 700;
+    margin-bottom: size(0);
+  }
+
+  .cus-divider {
+    margin: 0 auto;
+    width: size(300);
+    height: size(2);
     margin-bottom: size(50);
+    background-color: #055F76;
   }
 
   .order-title-img {
@@ -203,26 +187,11 @@
 
 @media screen and (max-width:768px) {
   .order-section {
+    background-image: url('@/section/form/bg_m.png');
+    height: size-m(1452);
     padding-bottom: 0;
     position: relative;
-
-    .cat {
-      position: absolute;
-      width: size-m(210);
-      z-index: 1;
-      pointer-events: none;
-      bottom: size-m(590);
-      left: -#{size-m(40)};
-    }
-
-    .rabbit {
-      position: absolute;
-      width: size-m(170);
-      z-index: 1;
-      pointer-events: none;
-      bottom: size-m(600);
-      right: -#{size-m(30)};
-    }
+    overflow: hidden;
 
     .bg-image {
       position: absolute;
@@ -231,27 +200,33 @@
       bottom: size-m(590);
     }
 
-    &::after {
-      content: '';
-      width: 100%;
-      height: size(50);
-      background-color: #514118;
+    .decor {
       position: absolute;
-      left: 0;
-      bottom: 0;
+      width: size-m(148);
+      top: -#{size-m(50)};
+      right: -#{size-m(35)};
     }
   }
 
   .order {
     width: 100%;
     // border-radius: size-m(68) size-m(68) 0 0;
-    padding-top: size-m(40);
+    padding-top: size-m(0);
     margin-top: size-m(0);
+
+
+    .cus-divider {
+      margin: 0 auto;
+      width: size-m(117);
+      height: size-m(2);
+      margin-bottom: size-m(25);
+      background-color: #055F76;
+    }
 
     .order-title {
       font-size: size-m(29);
-      font-weight: 500;
-      margin-bottom: size-m(20);
+      font-weight: 700;
+      margin-bottom: size-m(10);
     }
 
     .order-title-img {
@@ -306,8 +281,6 @@ import { ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
-import Cat from "./cat.vue"
-import Rabbit from "./rabbit.vue"
 const toast = useToast()
 
 const sending = ref(false)
@@ -326,7 +299,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["msg", "email"]
+const bypass = ["project", "msg", "email"]
 
 //中文對照
 const formDataRef = ref([

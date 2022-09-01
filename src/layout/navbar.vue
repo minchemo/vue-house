@@ -1,18 +1,22 @@
 <template>
-    <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-[100] bg-white w-full"
+    <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-[100] w-full"
         v-bind:class="{ 'r16-9': higherScreen }">
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
-            <div class="bar z-10"></div>
+            <div class="bar"></div>
         </div>
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <div class="menu-item font-bold cursor-pointer text-white hover:text-black font-['noto_serif_tc']"
+            <div class="menu-item font-bold cursor-pointer text-white font-['noto_serif_tc']"
                 v-for="item, i in info.navList" @click="scrollTo(item.target)">
-                <!-- <span class="mr-3">0{{ i + 1 }}</span> -->
+                <img src="@/assets/menu_icon.png" alt="" srcset="">
                 <span>{{ item.name }}</span>
             </div>
+            <div class="close" @click="menuOpen = !menuOpen">
+                <img src="@/assets/close.png" alt="" srcset="">
+            </div>
+            <img class="decor" src="@/section/s3/decor.png" alt="" srcset="">
         </div>
     </div>
     <div class="gotop fixed z-40 cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
@@ -37,6 +41,12 @@
     }
 
     .menu-btn {
+        background-color: #C9A063;
+        height: size(62);
+        width: size(62);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         z-index: 1;
 
@@ -48,7 +58,7 @@
         .bar {
             width: size(30);
             height: 2px;
-            background-color: #000;
+            background-color: #fff;
             position: relative;
             transform: all .5s;
 
@@ -58,7 +68,7 @@
                 height: 2px;
                 bottom: -#{size(10)};
                 position: absolute;
-                background-color: #000;
+                background-color: #fff;
                 transition: all .5s;
             }
 
@@ -68,15 +78,20 @@
                 height: 2px;
                 top: -#{size(10)};
                 position: absolute;
-                background-color: #000;
+                background-color: #fff;
                 transition: all .5s;
             }
         }
 
         &:hover {
+            &::after {
+                box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
+            }
+
             .bar {
                 &::after {
                     transform: translateX(10%);
+                    box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
                 }
 
                 &::before {
@@ -86,103 +101,100 @@
         }
 
         &.open {
-            p {
-                color: #fff;
+            background-color: transparent;
+
+            &::after {
+                content: '';
+                background-color: transparent;
+                box-shadow: unset;
+
             }
 
-            .bar {
-                height: 0;
-
-                &::after {
-                    content: '';
-                    width: 100%;
-                    height: 2px;
-                    bottom: 50%;
-                    margin-bottom: -1px;
-                    position: absolute;
-                    background-color: #fff;
-                    transition: all .5s;
-                    transform: rotate(135deg);
-                }
-
-                &::before {
-                    content: '';
-                    width: 100%;
-                    height: 2px;
-                    top: 50%;
-                    margin-top: -1px;
-                    position: absolute;
-                    background-color: #fff;
-                    transition: all .5s;
-                    transform: rotate(-135deg);
-                }
+            p {
+                color: #fff;
             }
         }
     }
 
     .menu {
         position: fixed;
-        top: size(10);
-        left: size(10);
-        background-color: rgba($color: #46B258, $alpha: .95);
-        width: size(330);
-        height: 98%;
-        z-index: 0;
+        top: 0;
+        left: 0;
+        background: rgba(5, 95, 118, 0.8);
+        width: size(374);
+        height: 100%;
+        z-index: 5;
         transform: translateX(-150%);
         transition: all .5s;
-        border-radius: size(20);
+        border-radius: 0;
         padding: size(100) 0;
-        gap: size(20);
+        gap: size(50);
         backdrop-filter: blur(2px);
 
         .menu-item {
-            font-size: size(25);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: size(33.25);
+            gap: size(10);
+
+            img {
+                width: size(43);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                width: 0%;
+                height: size(3);
+                background-color: #E7BA65;
+                transition: all .35s;
+            }
+
+            &:hover {
+
+                &:after {
+                    width: 100%;
+                }
+            }
+
         }
 
         &.open {
             transform: translateX(0);
         }
-    }
 
-    &.r16-9 {
-        background-color: transparent;
+        .close {
+            position: absolute;
+            bottom: size(77);
+            left: size(95);
+            width: size(44);
+            height: size(44);
+            cursor: pointer;
 
-        .menu-btn {
-            // &::after {
-            //     content: '';
-            //     width: 160%;
-            //     height: 170%;
-            //     background-color: #fff;
-            //     position: absolute;
-            //     left: 50%;
-            //     top: 50%;
-            //     transform: translate(-50%, -50%);
-            //     border-radius: size(20);
-            //     transition: all .5s;
-            // }
-            background-color: #fff;
-            height: size(62);
-            width: size(62);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            &:hover {
-                &::after {
-                    box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
-                }
+            img {
+                width: 100%;
             }
+        }
 
-            &.open {
-                background-color: transparent;
+        .decor {
+            position: absolute;
+            width: size(330);
+            top: -#{size(170)};
+            left: size(22);
+            z-index: 1;
+            animation: rotate 10s infinite linear;
 
-                &::after {
-                    content: '';
-                    background-color: transparent;
-                    box-shadow: unset;
-
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
                 }
 
+                to {
+                    transform: rotate(360deg);
+                }
             }
         }
 
@@ -222,7 +234,6 @@
         padding: 0 size-m(8);
         height: size-m(35);
         border-radius: 9999px;
-        justify-content: flex-end;
 
         .logo {
             width: size-m(101.83);
@@ -235,6 +246,10 @@
         }
 
         .menu-btn {
+            width: size-m(20);
+            height: size-m(20);
+            padding: size-m(5);
+
             p {
                 font-size: size-m(14);
                 font-weight: 100;
@@ -289,64 +304,53 @@
 
         .menu {
             position: fixed;
-            top: 1.5vh;
-            right: size-m(12.5);
-            width: size-m(350);
-            height: 97vh;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
             z-index: 0;
             transform: translateX(150%);
             transition: all .5s;
-            border-radius: size-m(10);
+            border-radius: 0;
             padding: 0;
             gap: size-m(45);
+            justify-content: flex-end;
 
             .menu-item {
                 font-size: size-m(21);
+                gap: size-m(5);
+
+                img {
+                    width: size-m(30);
+                }
+
             }
 
             &.open {
                 transform: translateX(0);
                 left: unset;
             }
-        }
 
-        &.r16-9 {
-            background-color: transparent;
-
-            .menu-btn {
-                width: size-m(20);
-                height: size-m(20);
-
-                &::after {
-                    content: '';
-                    width: 160%;
-                    height: 170%;
-                    background-color: #fff;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    border-radius: size(20);
-                    transition: all .5s;
-                }
-
-                &:hover {
-                    &::after {
-                        box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
-                    }
-                }
-
-                &.open {
-                    &::after {
-                        content: '';
-                        background-color: transparent;
-                        box-shadow: unset;
-
-                    }
-
-                }
+            .decor {
+                width: size-m(260);
+                left: size-m(57.5);
+                top: -#{size-m(130)}
             }
 
+            .close {
+                position: relative;
+                left: unset;
+                bottom: unset;
+                width: size-m(44);
+                height: size-m(44);
+                cursor: pointer;
+                margin-top: size-m(50);
+                margin-bottom: size-m(50);
+
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -382,5 +386,6 @@ const scrollTo = (el) => {
     smoothScroll({
         scrollTo: document.querySelector(el)
     })
+    menuOpen.value = !menuOpen.value;
 }
 </script>
