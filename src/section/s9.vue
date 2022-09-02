@@ -7,10 +7,10 @@
                     {{ img.label }}
                 </div>
             </div>
-            <div class="title text-center" data-aos="fade-up" data-aos-delay="0"><span class="font-bold">公設大標</span><br>
-                公設大標文字</div>
+            <div class="title text-center" data-aos="fade-up" data-aos-delay="0"><span class="font-bold">雍容星寓邸</span><br>
+                都心生活盛宴</div>
             <div class="desc font-['Noto_sans_tc']" data-aos="fade-up" data-aos-delay="0">
-                內文假字內文假字內文假字，內文假字內文假字內文假字內文假字，內文假字內文假字內文假字內文假字。</div>
+                步入迎賓大廳，返家即享無上尊榮感；匯聚風雅交誼廳，情感交流會所；健身房盡情揮汗律動身心，在閱覽室陪孩子遨遊知識書海，以空間質感成就生活品味。</div>
             <div class="selection" v-if="!$isMobile()">
                 <div class="item font-['Noto_sans_tc']" :class="{ active: currentSlide == i }" v-for="img, i in imgs"
                     @click="slideTo(i)">
@@ -123,11 +123,16 @@
 
     .s9 {
         width: 100%;
-        height: size-m(575);
+        height: size-m(600);
         background: #065B71;
         flex-direction: column-reverse;
         justify-content: flex-end;
         gap: size(108);
+
+
+        .decor{
+            display: none;
+        }
 
         .text {
             position: relative;

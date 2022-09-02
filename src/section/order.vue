@@ -24,17 +24,11 @@
 
           <select class="select w-full rounded-full" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
-            <option value="3房1衛">3房1衛</option>
-            <option value="3房2衛">3房2衛</option>
+            <option value="2房">2房</option>
+            <option value="3房">3房</option>
+            <option value="4房">4房</option>
           </select>
 
-
-
-          <select class="select w-full rounded-full" v-model="formData.project" v-if="false">
-            <option value="" selected disabled>選擇建案</option>
-            <option value=""></option>
-            <option value=""></option>
-          </select>
           <select class="select w-full rounded-full" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
@@ -70,7 +64,7 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer font-['noto_serif_tc']" @click="send()">
         {{ sending ? '發送中..' : '立即預約' }}
       </div>
 
@@ -168,12 +162,12 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #3E3A39;
+    background-color: #055F76;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
     border: 0;
-    border-radius: 1.6em;
+    border-radius: 0em;
     z-index: 10;
     position: relative;
   }

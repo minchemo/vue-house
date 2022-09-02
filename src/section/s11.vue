@@ -76,7 +76,7 @@
             border-top: size(2) solid #fff;
             margin-top: size(40);
             padding-top: size(35);
-            font-weight: 400;
+            font-weight: 300;
             font-size: size(20);
             line-height: size(35);
             text-align: justify;
@@ -201,27 +201,27 @@ const splide = ref(null);
 const imgs = [
     {
         img: isMobile ? new URL("../section/s11/1_m.jpg", import.meta.url).href : new URL("../section/s11/1.jpg", import.meta.url).href,
-        caption: '3D公設情境示意圖',
+        caption: '佳鋐中山匯',
         label: '大廳'
     },
     {
         img: isMobile ? new URL("../section/s11/2_m.jpg", import.meta.url).href : new URL("../section/s11/2.jpg", import.meta.url).href,
-        caption: '3D公設情境示意圖',
+        caption: '佳鋐峰華苑',
         label: '交誼廳'
     },
     {
         img: isMobile ? new URL("../section/s11/3_m.jpg", import.meta.url).href : new URL("../section/s11/3.jpg", import.meta.url).href,
-        caption: '3D公設情境示意圖',
+        caption: '佳鋐晴灣',
         label: '健身房'
     },
     {
         img: isMobile ? new URL("../section/s11/4_m.jpg", import.meta.url).href : new URL("../section/s11/4.jpg", import.meta.url).href,
-        caption: '3D公設情境示意圖',
+        caption: '佳鋐樂河郡',
         label: '閱讀區'
     },
     {
         img: isMobile ? new URL("../section/s11/5_m.jpg", import.meta.url).href : new URL("../section/s11/5.jpg", import.meta.url).href,
-        caption: '3D公設情境示意圖',
+        caption: '佳鋐樂灣',
         label: '閱讀區'
     },
 ]

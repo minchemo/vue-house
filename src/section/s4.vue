@@ -60,7 +60,7 @@
               border-top: size(2) solid #fff;
               margin-top: size(40);
               padding-top: size(35);
-              font-weight: 400;
+              font-weight: 300;
               font-size: size(20);
               line-height: size(35);
               text-align: justify;
@@ -97,7 +97,7 @@
           width: size(2000);
           top: -#{size(28)};
           left: size(268.47);
-          z-index: 1;
+          z-index: -1;
       }
   }
   

@@ -70,8 +70,8 @@
               line-height: size(35);
               font-size: size(20);
               font-weight: 400;
-              border-top: size(2) solid #055F76;
-              border-bottom: size(2) solid #055F76;
+              border-top: size(1) solid #055F76;
+              border-bottom: size(1) solid #055F76;
               padding: size(8) size(20);
           }
       }
@@ -115,8 +115,8 @@
                   width: size-m(315);
                   line-height: 1.5;
                   font-size: size-m(15);
-                  border-top: size-m(2) solid #055F76;
-                  border-bottom: size-m(2) solid #055F76;
+                  border-top: size-m(1) solid #055F76;
+                  border-bottom: size-m(1) solid #055F76;
                   padding: size-m(15) 0;
                   font-weight: 300;
                   letter-spacing: 0.03em;

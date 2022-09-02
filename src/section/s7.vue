@@ -197,7 +197,7 @@
               white-space: nowrap;
               color: #fff;
               font-size: size(26);
-              font-weight: 400;
+              font-weight: 300;
               letter-spacing: 0.62em;
           }
   

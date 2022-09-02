@@ -127,7 +127,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: gray;
+        background-color: #055F76;
         color: #fff;
 
         img {

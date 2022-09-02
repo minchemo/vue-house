@@ -7,11 +7,11 @@ export default {
         keywords: caseName,
     },
     address: "台南市東區崇明路．崇明24街口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d918.3878325316296!2d120.22457883586935!3d22.966745230856976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3a9437aae9f47d4!2zMjLCsDU4JzAwLjMiTiAxMjDCsDEzJzMyLjUiRQ!5e0!3m2!1szh-TW!2stw!4v1662051330569!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/qNCsbGnh3ve59dHs6",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3673.530604191847!2d120.2252971!3d22.967508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e755c921c364d%3A0x400ca84b2724f3d2!2z5L2z6YuQ6aaW6YKRIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1662086149653!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/UP7Jty2p1owxZLKu6",
     phone: "06-289-5555",
-    fbLink: "",
-    fbMessage: "",
+    fbLink: "https://www.facebook.com/100083001978691/",
+    fbMessage: "https://m.me/100083001978691/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "佳鋐建設股份有限公司"],
@@ -23,7 +23,7 @@ export default {
         ["樓層規劃", "地上10層 地下3層"],
         ["企劃銷售", "新富利廣告有限公司"],
     ],
-    gtmCode: ["GTM-TRR3X37"], // 可放置多個
+    gtmCode: ["GTM-PHHZ9PQ"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3

@@ -49,9 +49,9 @@
               width: size(648);
               line-height: size(35);
               font-size: size(20);
-              font-weight: 400;
-              border-top: size(2) solid #fff;
-              border-bottom: size(2) solid #fff;
+              font-weight: 300;
+              border-top: size(1) solid #fff;
+              border-bottom: size(1) solid #fff;
               padding: size(25) 0;
               color: #fff;
           }
