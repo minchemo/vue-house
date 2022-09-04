@@ -91,6 +91,12 @@
             width: size(390.84);
             height: size(600);
             background-size: cover;
+
+            .caption {
+                right: unset;
+                left: size(15);
+                bottom: size(10);
+            }
         }
     }
 
@@ -147,6 +153,9 @@
             .slide {
                 width: size-m(255);
                 height: size-m(289.1);
+                .caption {
+                    display: none;
+                }
             }
         }
 
@@ -200,27 +209,27 @@ const splide = ref(null);
 
 const imgs = [
     {
-        img: isMobile ? new URL("../section/s11/1_m.jpg", import.meta.url).href : new URL("../section/s11/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s11/1_m.jpg", import.meta.url).href : new URL("../section/s11/1.jpg", import.meta.url).href,
         caption: '佳鋐中山匯',
         label: '大廳'
     },
     {
-        img: isMobile ? new URL("../section/s11/2_m.jpg", import.meta.url).href : new URL("../section/s11/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s11/2_m.jpg", import.meta.url).href : new URL("../section/s11/2.jpg", import.meta.url).href,
         caption: '佳鋐峰華苑',
         label: '交誼廳'
     },
     {
-        img: isMobile ? new URL("../section/s11/3_m.jpg", import.meta.url).href : new URL("../section/s11/3.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s11/3_m.jpg", import.meta.url).href : new URL("../section/s11/3.jpg", import.meta.url).href,
         caption: '佳鋐晴灣',
         label: '健身房'
     },
     {
-        img: isMobile ? new URL("../section/s11/4_m.jpg", import.meta.url).href : new URL("../section/s11/4.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s11/4_m.jpg", import.meta.url).href : new URL("../section/s11/4.jpg", import.meta.url).href,
         caption: '佳鋐樂河郡',
         label: '閱讀區'
     },
     {
-        img: isMobile ? new URL("../section/s11/5_m.jpg", import.meta.url).href : new URL("../section/s11/5.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s11/5_m.jpg", import.meta.url).href : new URL("../section/s11/5.jpg", import.meta.url).href,
         caption: '佳鋐樂灣',
         label: '閱讀區'
     },

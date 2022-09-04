@@ -136,15 +136,15 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
 const imgs = [
     {
-        img: isMobile ? new URL("../section/s6/1_m.jpg", import.meta.url).href : new URL("../section/s6/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s6/1_m.jpg", import.meta.url).href : new URL("../section/s6/1.jpg", import.meta.url).href,
         caption: '南紡夢時代'
     },
     {
-        img: isMobile ? new URL("../section/s6/2_m.jpg", import.meta.url).href : new URL("../section/s6/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s6/2_m.jpg", import.meta.url).href : new URL("../section/s6/2.jpg", import.meta.url).href,
         caption: '家樂福仁德店'
     },
     {
-        img: isMobile ? new URL("../section/s6/3_m.jpg", import.meta.url).href : new URL("../section/s6/3.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s6/3_m.jpg", import.meta.url).href : new URL("../section/s6/3.jpg", import.meta.url).href,
         caption: '崇德路商圈'
     },
 ]

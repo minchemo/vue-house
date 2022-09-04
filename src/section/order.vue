@@ -93,6 +93,7 @@
   position: relative;
   height: size(1477);
   padding-top: size(90);
+  overflow: hidden;
 
   .z-10 {
     z-index: 10;
@@ -105,6 +106,24 @@
     left: 0;
     bottom: size(50);
     vertical-align: middle;
+  }
+
+  .decor {
+    position: absolute;
+    width: size(700);
+    top: -#{size(310)};
+    right: -#{size(250)};
+    animation: rotate 10s infinite linear;
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
 }
 

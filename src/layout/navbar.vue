@@ -19,7 +19,7 @@
             <img class="decor" src="@/section/s3/decor.png" alt="" srcset="">
         </div>
     </div>
-    <div class="gotop fixed z-40 cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
+    <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
     </div>
 </template>
 
@@ -246,8 +246,8 @@
         }
 
         .menu-btn {
-            width: size-m(20);
-            height: size-m(20);
+            width: size-m(30);
+            height: size-m(30);
             padding: size-m(5);
 
             p {
@@ -268,6 +268,7 @@
             }
 
             &.open {
+                display: none;
                 p {
                     color: #fff;
                 }
@@ -313,7 +314,7 @@
             transition: all .5s;
             border-radius: 0;
             padding: 0;
-            gap: size-m(45);
+            gap: size-m(35);
             justify-content: flex-end;
 
             .menu-item {
@@ -332,9 +333,11 @@
             }
 
             .decor {
-                width: size-m(260);
-                left: size-m(57.5);
-                top: -#{size-m(130)}
+                width: 30vh;
+                left: 50%;
+                margin-left: -15vh;
+                top: -15vh;
+                animation: rotate 10s infinite linear;
             }
 
             .close {
@@ -344,7 +347,7 @@
                 width: size-m(44);
                 height: size-m(44);
                 cursor: pointer;
-                margin-top: size-m(50);
+                margin-top: size-m(30);
                 margin-bottom: size-m(50);
 
                 img {

@@ -80,12 +80,13 @@ import { onMounted, ref, getCurrentInstance } from 'vue';
 
 const props = defineProps(['imgs', 'w', 'w_m', 'h', 'h_m', 'dot', 'dot_color', 'dot_size', 'dot_bottom', 'dot_bottom_m', 'align', 'align_m'])
 const options = {
-    rewind: true,
+    rewind: false,
     arrows: false,
     pagination: props.dot ?? false,
     autoplay: true,
     interval: 4000,
-    gap: 5
+    gap: 5,
+    type:'loop'
 }
 
 const width = ref(0);

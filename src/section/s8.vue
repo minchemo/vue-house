@@ -1,7 +1,12 @@
 <template>
     <article class="s8">
-        <img class="main-img" v-if="!$isMobile()" src="@/section/s8/1.jpg" alt="">
-        <img class="main-img" v-else src="@/section/s8/1_m.jpg" alt="">
+        <div class="main-img" v-if="!$isMobile()">
+            <img class="main-img" src="@/section/s8/1.jpg" alt="">
+            <p class="caption" v-if="!$isMobile()">3D外觀情境示意圖</p>
+        </div>
+        <div v-else>
+            <img class="main-img" src="@/section/s8/1_m.jpg" alt="">
+        </div>
         <div class="text" data-aos="fade-up" data-aos-delay="0">
             <div class="title">
                 <span class="font-bold">精研工藝</span><br>
@@ -30,7 +35,17 @@
       gap: size(50);
   
       .main-img {
+          position: relative;
           width: size(1657);
+  
+          .caption {
+              position: absolute;
+              color: #fff;
+              font-size: size(14);
+              right: size(45);
+              bottom: size(25);
+              filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8))
+          }
       }
   
       .text {

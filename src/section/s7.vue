@@ -51,7 +51,7 @@
                     <span class="block font-bold">{{ selectedBlock.t2 }}</span>
                     {{ selectedBlock.t3 }}
                 </div>
-                <div class="close" @click="selectedBlock = null"></div>
+                <div class="close" v-if="$isMobile()" @click="selectedBlock = null"></div>
             </div>
         </div>
     </transition>
@@ -537,42 +537,42 @@ const selectedBlock = ref();
 
 const blocks = [
     {
-        cover: isMobile ? new URL("../section/s7/1c.jpg", import.meta.url).href : new URL("../section/s7/1c.jpg", import.meta.url).href,
+        cover: globals.$isMobile() ? new URL("../section/s7/1c.jpg", import.meta.url).href : new URL("../section/s7/1c.jpg", import.meta.url).href,
         t1: '第一重',
         t2: 'VAF正負壓活氧系統',
         t3: '空氣清新好放心',
         isBlue: true,
         closeBlue: true,
-        img: isMobile ? new URL("../section/s7/1.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/1.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
     },
     {
-        cover: isMobile ? new URL("../section/s7/2c.jpg", import.meta.url).href : new URL("../section/s7/2c.jpg", import.meta.url).href,
+        cover: globals.$isMobile() ? new URL("../section/s7/2c.jpg", import.meta.url).href : new URL("../section/s7/2c.jpg", import.meta.url).href,
         t1: '第二重',
         t2: '全棟式軟淨水系統',
         t3: '安全用水免擔心',
         isBlue: true,
-        img: isMobile ? new URL("../section/s7/2.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/2.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
     },
     {
-        cover: isMobile ? new URL("../section/s7/3c.jpg", import.meta.url).href : new URL("../section/s7/3c.jpg", import.meta.url).href,
+        cover: globals.$isMobile() ? new URL("../section/s7/3c.jpg", import.meta.url).href : new URL("../section/s7/3c.jpg", import.meta.url).href,
         t1: '第三重',
         t2: '3M淨水器',
         t3: '喝水好安心',
-        img: isMobile ? new URL("../section/s7/3.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/3.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
     },
     {
-        cover: isMobile ? new URL("../section/s7/4c.jpg", import.meta.url).href : new URL("../section/s7/4c.jpg", import.meta.url).href,
+        cover: globals.$isMobile() ? new URL("../section/s7/4c.jpg", import.meta.url).href : new URL("../section/s7/4c.jpg", import.meta.url).href,
         t1: '第四重',
         t2: 'FloPlast防疫吸氣閥',
         t3: '管道無疫免煩惱',
-        img: isMobile ? new URL("../section/s7/4.jpg", import.meta.url).href : new URL("../section/s7/4.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/4.jpg", import.meta.url).href : new URL("../section/s7/4.jpg", import.meta.url).href,
     },
     {
-        cover: isMobile ? new URL("../section/s7/5c.jpg", import.meta.url).href : new URL("../section/s7/5c.jpg", import.meta.url).href,
+        cover: globals.$isMobile() ? new URL("../section/s7/5c.jpg", import.meta.url).href : new URL("../section/s7/5c.jpg", import.meta.url).href,
         t1: '第五重',
         t2: 'SHARP防疫電梯',
         t3: '無毒電梯好安全',
-        img: isMobile ? new URL("../section/s7/5.jpg", import.meta.url).href : new URL("../section/s7/5.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/5.jpg", import.meta.url).href : new URL("../section/s7/5.jpg", import.meta.url).href,
     },
 ]
 </script>

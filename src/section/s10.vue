@@ -199,12 +199,12 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
 const imgs = [
     {
-        img: isMobile ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/1.jpg", import.meta.url).href,
         caption: '',
         label: '內極珍稀/ 50坪內/4房3衛雙主臥'
     },
     {
-        img: isMobile ? new URL("../section/s10/2_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s10/2_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
         caption: '',
         label: '台南人最愛/27坪/2房2衛浴'
     },

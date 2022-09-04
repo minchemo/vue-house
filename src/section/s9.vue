@@ -200,22 +200,22 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
 const imgs = [
     {
-        img: isMobile ? new URL("../section/s9/1_m.jpg", import.meta.url).href : new URL("../section/s9/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s9/1_m.jpg", import.meta.url).href : new URL("../section/s9/1.jpg", import.meta.url).href,
         caption: '3D公設情境示意圖',
         label: '大廳'
     },
     {
-        img: isMobile ? new URL("../section/s9/2_m.jpg", import.meta.url).href : new URL("../section/s9/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s9/2_m.jpg", import.meta.url).href : new URL("../section/s9/2.jpg", import.meta.url).href,
         caption: '3D公設情境示意圖',
         label: '交誼廳'
     },
     {
-        img: isMobile ? new URL("../section/s9/3_m.jpg", import.meta.url).href : new URL("../section/s9/3.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s9/3_m.jpg", import.meta.url).href : new URL("../section/s9/3.jpg", import.meta.url).href,
         caption: '3D公設情境示意圖',
         label: '健身房'
     },
     {
-        img: isMobile ? new URL("../section/s9/4_m.jpg", import.meta.url).href : new URL("../section/s9/4.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s9/4_m.jpg", import.meta.url).href : new URL("../section/s9/4.jpg", import.meta.url).href,
         caption: '3D公設情境示意圖',
         label: '閱讀區'
     },
