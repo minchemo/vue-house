@@ -314,11 +314,11 @@
             transition: all .5s;
             border-radius: 0;
             padding: 0;
-            gap: size-m(35);
+            gap: size-m(25);
             justify-content: flex-end;
 
             .menu-item {
-                font-size: size-m(21);
+                font-size: size-m(15);
                 gap: size-m(5);
 
                 img {
@@ -348,7 +348,7 @@
                 height: size-m(44);
                 cursor: pointer;
                 margin-top: size-m(30);
-                margin-bottom: size-m(50);
+                margin-bottom: size-m(40);
 
                 img {
                     width: 100%;
