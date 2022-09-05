@@ -20,7 +20,7 @@
   .s5 {
       width: 100%;
       height: size(1080);
-      background: url('@/section/s5/bg.jpg');
+      //background: url('@/section/s5/bg.jpg');
       background-size: cover;
       overflow: hidden;
       position: relative;
