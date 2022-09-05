@@ -117,7 +117,7 @@
         鍾情一窗維瓦第、四季演色<br />
         心有知音、世界為您安靜<br />
       </div>
-      <video autoplay loop muted playsinline class="video-background ">
+      <video loading="lazy" autoplay loop muted playsinline class="video-background ">
         <source src="https://h35.banner.tw/jmfl/12.mp4" type="video/mp4">
       </video>
       <!-- <img data-aos="fade-in" src="@/section/s1/13.jpg" alt="吉美富徠" srcset=""> -->
@@ -139,7 +139,7 @@
         預排文字預排文字預排文字預排文字<br />
 
       </div>
-      <video autoplay loop muted playsinline class="video-background ">
+      <video loading="lazy" autoplay loop muted playsinline class="video-background ">
         <source src="https://h35.banner.tw/jmfl/13.mp4" type="video/mp4">
       </video>
     </lazy-component>
@@ -156,12 +156,12 @@
         樹冠邂逅泳池，Urban Resort的避世默契<br />
         你我相遇，恰如大千山水的兩朵雲
       </div>
-      <video autoplay loop muted playsinline class="video-background ">
+      <video loading="lazy" autoplay loop muted playsinline class="video-background ">
         <source src="https://h35.banner.tw/jmfl/13.mp4" type="video/mp4">
       </video>
     </lazy-component>
     <lazy-component class="b16">
-      <video autoplay loop muted playsinline class="video-background ">
+      <video loading="lazy" autoplay loop muted playsinline class="video-background ">
         <source src="https://h35.banner.tw/jmfl/14.mp4" type="video/mp4">
       </video>
     </lazy-component>
