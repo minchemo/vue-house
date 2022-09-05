@@ -21,7 +21,7 @@
   .s6 {
       width: 100%;
       height: size(1080);
-      background: url('@/section/s6/bg.png');
+      //background: url('@/section/s6/bg.png');
       background-size: cover;
       background-position: top;
       position: relative;
