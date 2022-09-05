@@ -11,7 +11,7 @@
             :h_m="246.9" :dot="true" :dot_size="11" :dot_color="$isMobile() ? '#C9A063' : '#055F76'" :dot_bottom="-35"
             :dot_bottom_m="-20" />
 
-        <img class="bottom-decor" src="@/section/s6/bottom.png" alt="">
+        <!--img class="bottom-decor" src="@/section/s6/bottom.png" alt=""-->
     </article>
 </template>
   
