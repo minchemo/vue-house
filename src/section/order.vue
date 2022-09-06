@@ -1,5 +1,5 @@
   <template>
-  <div class="order relative bg-[#DFDDC8] text-center">
+  <div id="order" class="order relative bg-[#DFDDC8] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
       <div class="order-title text-center font-['noto_serif_tc'] text-[#055F76]">{{ info.order.title }}</div>

@@ -6,7 +6,7 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "台南市東區崇明路．崇明24街口",
+    address: "接待中心：台南市東區崇明路．崇明24街口",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3673.530604191847!2d120.2252971!3d22.967508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e755c921c364d%3A0x400ca84b2724f3d2!2z5L2z6YuQ6aaW6YKRIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1662086149653!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/UP7Jty2p1owxZLKu6",
     phone: "06-289-5555",
@@ -22,6 +22,8 @@ export default {
         ["坪數規劃", "2房27-31坪/3房36-40坪/4房45-48坪"],
         ["樓層規劃", "地上10層 地下3層"],
         ["企劃銷售", "新富利廣告有限公司"],
+        ["基地位置", "台南市東區文化三街．文化一街"],
+        ["接待中心", "台南市東區崇明路．崇明24街口"],
     ],
     gtmCode: ["GTM-MB9MMXK"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
