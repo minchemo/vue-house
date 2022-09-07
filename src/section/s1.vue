@@ -5,7 +5,10 @@
     <img class="title" v-if="!$isMobile()" src="@/section/s1/title.png" alt="" data-aos="fade-up" data-aos-delay="200">
     <img class="title" v-else src="@/section/s1/title_m.png" alt="" data-aos="fade-up" data-aos-delay="200">
     <img class="light" v-if="!$isMobile()" src="@/section/s1/light.png" alt="" srcset="">
+    <div class="other">
+    <div class="t-new" data-aos="fade-up" data-aos-delay="200">接待中心：崇明路．崇明24街口</div>
     <a href="#order" class="order font-['noto_serif_tc']"  data-aos="fade-up" data-aos-delay="300">立即預約</a>
+    </div>
   </article>
 </template>
 
@@ -25,27 +28,41 @@
   flex-direction: column;
   gap: size(30);
 
-  .order{
-    width: size(400);
-    height: size(80);
-    font-size: size(30);
-    background: #C9A063;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-radius: 30px;
-    font-weight: 600;
-    letter-spacing: 0.3em;
-    border: 2px solid #C9A063;
-    transition: 0.5s;
 
-    &:hover{
-    background: #a1804d; 
-    transition: 0.5s;
-    border: 2px solid #fff;
-    }
+.other{
+display: flex;
+justify-content: space-between;
+align-items: center;
+ width: size(800);
+
+  .t-new{
+  font-size: size(30);
+  color: #fff;
+  font-weight: 600;
   }
+  .order{
+      width: size(300);
+      height: size(80);
+      font-size: size(30);
+      background: #C9A063;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border-radius: 30px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      border: 2px solid #C9A063;
+      transition: 0.5s;
+
+      &:hover{
+      background: #a1804d; 
+      transition: 0.5s;
+      border: 2px solid #fff;
+      }
+    }
+}
+  
 
   .light {
     position: absolute;
@@ -86,6 +103,23 @@
     background: url('@/section/s1/bg_m.jpg');
     background-size: cover;
     gap: size-m(35);
+
+    .other{
+    display: block;
+    width: size-m(300);
+    text-align: center;
+    margin-top: -16px;
+
+      .t-new{
+        font-size: size-m(20);
+      }
+      .order{
+        width: size-m(250);
+        height: size-m(60);
+        font-size: size-m(25);
+        margin: 20px auto 0px auto;
+      }
+    }
 
 
     .logo {
