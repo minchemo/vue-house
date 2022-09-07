@@ -4,6 +4,11 @@
       <img src="@/section/s1/logo.svg" alt="吉美富徠" srcset="">
       <p><span>吉美富徠</span>｜瑞安街最高名宅｜73-150坪｜577坪 大局致大安</p>
     </div>
+
+    <lazy-component class="b0">
+    <img data-aos="fade-in" src="@/section/s1/01.jpg" alt="吉美富徠" srcset=""> 
+    </lazy-component>
+
     <lazy-component class="b1">
       <div class="t" data-aos="fade-up" v-if="!$isMobile()">
         靜巷，自成氣候<br>
@@ -197,6 +202,12 @@
     img {
       width: size(413);
     }
+  }
+
+  .b0{
+    display: flex;
+    justify-content: center;
+    margin-top: size(179);
   }
 
   .b1 {
