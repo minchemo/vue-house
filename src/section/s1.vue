@@ -33,7 +33,7 @@
 display: flex;
 justify-content: space-between;
 align-items: center;
- width: size(800);
+ width: size(750);
 
   .t-new{
   font-size: size(30);
