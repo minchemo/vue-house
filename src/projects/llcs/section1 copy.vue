@@ -1,8 +1,8 @@
 <template>
   <div class="section1">
-      <img class="bg" data-aos="fade-down" src="./s1/bg.png" alt="" srcset="" />
-      <img class="l" data-aos="zoom-in" src="./s1/1.png" alt="" v-if="!isMobile" srcset="" />
-      <img class="l" data-aos="zoom-in" src="./s1/1m.png" alt="" v-else srcset="" />
+      <img class="bg" src="./s1/bg.png" alt="" srcset="" />
+      <img class="l" src="./s1/1.png" alt="" v-if="!isMobile" srcset="" />
+      <img class="l" src="./s1/1m.png" alt="" v-else srcset="" />
      <!-- <img class="bg" v-if="!isMobile" src="./s1/bg.png" alt="" srcset="" />
       <img class="bg" v-if="isMobile" src="./s1/bgm.png" alt="" srcset="" />
     <div class="main">
@@ -27,21 +27,10 @@
   max-height:calc(108000vw / 1920);
   min-height:calc(90000vw / 1920);
   background:#009FA3;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 6vw;
-  .bg{width:100%;right: 0;bottom: calc(-7 * 100vw / 1920);position: absolute;}
-  .l{width: calc(1200 * 100vw / 1920);position: relative;z-index: 2;}
-    .ad {
-      position: absolute;
-      right: 1.5em;
-      bottom:1.5em;
-      color: #fff;
-      font-size: 1vw;
-    }
-/*
+  .bg1{width: 100%;left: 0;top: 50%;transform: translateY(-50%);position: absolute;opacity: 0.5;}
+  .bg{width: 91.2%;right: 0;top:calc(62% - 37vw);position: absolute;}
+  .img{width: calc(547 * 100vw / 1920);left: -0.7vw;bottom:0;position: absolute;}
+
   .main {
     width: 100%;
     height: 100%;
@@ -76,8 +65,14 @@
       width: 50vw;
     }
 
+    .ad {
+      position: absolute;
+      right: 1.5em;
+      bottom:1.5em;
+      color: #fff;
+      font-size: 1vw;
+    }
   }
-  */
   /*.bg {
     width: 100%;
     height: 100%;
@@ -99,16 +94,11 @@
     height: calc(100vh - 63px);
   max-height:calc(81200vw / 375 - 63px);
   min-height:calc(66700vw / 375 - 63px);
-  padding: 0 0 6vw;
-  .bg{width:120%;}
-      .ad {
-        font-size: 16px;
-      bottom:3.5em;
-      right: 4.5em;
-      }
-      .l{width: calc(280 * 100vw / 375);}
-  /*
-  .img{width: calc(280 * 100vw / 375);}
+  .bg{width: auto;
+  width: 100%;
+  right: 0;
+  left:0;top:auto;bottom:calc(23% - 10vw);position: absolute;}
+  .img{width: calc(280 * 100vw / 375);left:17%;}
   
 
     .main {
@@ -146,8 +136,10 @@
         width: 100%;
       }
 
+      .ad {
+        font-size: 16px;
+      }
     }
-    */
   /*  .bg {
       width: 100%;
       height: 100%;
