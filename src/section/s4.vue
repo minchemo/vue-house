@@ -126,7 +126,7 @@
 
 
   .caption {
-      font-size: size(12);
+      font-size: size-m(14);
       right: unset;
       left: size-m(10);
       bottom: size-m(10);

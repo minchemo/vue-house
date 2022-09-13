@@ -23,7 +23,13 @@
     <div class="info z-20">
       <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">心靈 感官的雙重盛宴</div>
       <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">住進藝術薰陶的美感家園</div>
-      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">住進藝文繁盛的日常，悠遊當代時尚潮流與歷史古韻之美，讓藝術打開心靈的視野、啟發五感，享受真正豐盈的美好生活。</div>
+      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
+        住進藝文繁盛的日常，悠遊當代時尚潮流與歷史古韻之美，讓藝術打開心靈的視野、啟發五感，享受真正豐盈的美好生活。</div>
+    </div>
+    <div class="caption">
+      <div data-aos="fade" data-aos-duration="1500" v-if="activeImg == 1">北美館</div>
+      <div data-aos="fade" data-aos-duration="1500" v-if="activeImg == 2">台灣戲曲中心</div>
+      <div data-aos="fade" data-aos-duration="1500" v-if="activeImg == 3">北藝中心</div>
     </div>
   </div>
 </template>
@@ -117,6 +123,16 @@
       }
     }
   }
+
+  .caption {
+    position: absolute;
+    right: size(20);
+    bottom: size(15);
+    z-index: 5;
+    font-size: size(20);
+    color: #fff;
+    letter-spacing: size(2);
+  }
 }
 
 
@@ -127,7 +143,7 @@
     width: 100%;
     height: size-m(664);
     background-color: #B36649;
-    
+
 
     .splide__arrows {
       left: 50%;
@@ -160,7 +176,7 @@
         font-size: size-m(15);
         line-height: 160%;
         letter-spacing: 0;
-        
+
       }
     }
 
@@ -198,6 +214,13 @@
           top: size-m(547);
         }
       }
+    }
+
+    .caption {
+      right: size-m(15);
+      bottom: size-m(8);
+      font-size: size-m(14);
+      letter-spacing: size-m(1);
     }
   }
 }
