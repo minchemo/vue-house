@@ -27,9 +27,9 @@
         住進藝文繁盛的日常，悠遊當代時尚潮流與歷史古韻之美，讓藝術打開心靈的視野、啟發五感，享受真正豐盈的美好生活。</div>
     </div>
     <div class="caption">
-      <div data-aos="fade" data-aos-duration="1500" v-if="activeImg == 1">北美館</div>
+      <div data-aos="fade" data-aos-duration="1500" v-if="activeImg == 1">台北市立美術館</div>
       <div data-aos="fade" data-aos-duration="1500" v-if="activeImg == 2">台灣戲曲中心</div>
-      <div data-aos="fade" data-aos-duration="1500" v-if="activeImg == 3">北藝中心</div>
+      <div data-aos="fade" data-aos-duration="1500" v-if="activeImg == 3">台北表演藝術中心</div>
     </div>
   </div>
 </template>
