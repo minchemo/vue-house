@@ -3,7 +3,7 @@
     <div class="content">
       <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">遇見 跨世代的生活風貌</div>
       <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">智慧健康x生技醫療x數位科技</div>
-      <div class="t3" data-aos="fade" data-aos-delay="400">
+      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
         北投士林科技園區，串聯南軟、內科，是台北科技走廊上的矚目新星。融匯產業創新動能與人文環境底蘊，生產、生活、生態各面向兼具，實踐宜居永續的城市發展願景。
       </div>
     </div>
@@ -84,7 +84,7 @@
     }
 
     .t3 {
-      font-weight: 400;
+      font-weight: 500;
       font-size: size(20);
       line-height: 150%;
       text-align: justify;

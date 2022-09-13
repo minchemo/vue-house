@@ -71,7 +71,7 @@
     }
 
     .t3 {
-      font-weight: 400;
+      font-weight: 500;
       font-size: size(20);
       line-height: 150%;
       letter-spacing: 0.2em;
