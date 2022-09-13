@@ -15,7 +15,7 @@
           研發設計/智慧生態<br>
           數位應用/創新產業<br>
           健康生活/共享經濟</div>
-          <div class="tlogo"><img src="@/section/s6/logo1.png" alt="心仝聚" srcset=""></div>
+          <div class="tlogo"><img src="@/section/s6/logo1.svg" alt="心仝聚" srcset=""></div>
       </div>
       <div data-aos="zoom-in" data-aos-delay="300" class="item">
         <div class="t1">圓山</div>

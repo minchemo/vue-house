@@ -4,7 +4,7 @@
         <div class="flex-1 items-center justify-center py-4 md:py-20">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title font-['Noto_Serif_JP']">建案資訊</div>
-                <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
+                <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 font-['Noto_Sans_TC']">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
                         <p class="mr-5 border-l-2   pl-2"  v-html="item[0]"></p>
@@ -48,6 +48,7 @@
     .info-items {
         row-gap: size(20);
         column-gap: size(20);
+
 
         .item {
             line-height: size(17);

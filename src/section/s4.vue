@@ -18,7 +18,7 @@
             仝，是&，是+，是1+1>2的共好共榮。
           </div>
           <img class="logo" src="@/section/s4/logo.png" alt="心仝聚" srcset="" data-aos="fade" data-aos-delay="300">
-          <div class="t4" data-aos="fade" data-aos-delay="400">隆遠相信，不論科技通訊的如何變化，關係與溫度的重要性超越物質，是我們之所以感到快樂的真正核心。
+          <div class="t4 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">隆遠相信，不論科技通訊的如何變化，關係與溫度的重要性超越物質，是我們之所以感到快樂的真正核心。
           </div>
           <div class="t5" data-aos="fade" data-aos-delay="500">
             讓我，成為我們；<br />

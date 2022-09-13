@@ -7,7 +7,7 @@
         <div class="img-info flex flex-col items-center justify-start md:justify-center">
           <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">從心 從家 從城</div>
           <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">揚起一陣藝文的家風</div>
-          <div class="t3" data-aos="fade" data-aos-delay="400">大稻埕，承載百年歷史風華，不同族群、產業、文化共存，擁有深厚人文藝術底蘊，是隆遠品牌的發跡之地。<br><br>
+          <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">大稻埕，承載百年歷史風華，不同族群、產業、文化共存，擁有深厚人文藝術底蘊，是隆遠品牌的發跡之地。<br><br>
             復古中藏有新穎，鄰里間互助相親，情感真摯敦厚，自幼生長於大稻埕的莊子華董事長，盼將這樣藝文薰陶、生意盎然、暖意環繞的生活氛圍，透過建築，忠實再現。
           </div>
           <div class="t4 flex flex-col items-center justify-center" data-aos="fade" data-aos-delay="400">
