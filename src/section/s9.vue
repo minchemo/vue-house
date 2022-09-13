@@ -129,9 +129,10 @@
     right: size(20);
     bottom: size(15);
     z-index: 5;
-    font-size: size(20);
+    font-size: size(12);
     color: #fff;
     letter-spacing: size(2);
+    text-shadow: 0.1em 0.1em 0.2em black;
   }
 }
 

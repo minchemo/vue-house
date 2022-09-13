@@ -60,6 +60,7 @@
         color: #fff;
         bottom: size(10);
         right: size(20);
+        text-shadow: 0.1em 0.1em 0.2em black;
       }
     }
 
