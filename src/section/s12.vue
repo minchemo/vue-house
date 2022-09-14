@@ -30,7 +30,7 @@
           <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">住友GRAST黏彈性制震壁</div>
           <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">以維護古蹟的品質 守護恆久流傳的家屋</div>
           <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
-            住友GRAST黏彈性制震壁，通過日本建築綜合試驗所、台灣國家地震中心認證，以簡潔無間隙的結構，讓高阻尼橡膠更有效降低震動波，來守護家屋的安全。
+            住友GRAST黏彈性制震壁，通過日本建築綜合試驗所、台灣國家地震中心認證，以簡潔無間隙的結構，讓高阻尼橡膠更有效降低震動波，守護家屋的安全。
           </div>
           </div>
 

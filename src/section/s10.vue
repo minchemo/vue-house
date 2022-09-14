@@ -24,7 +24,7 @@
       <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">打破空間界線的友好設計</div>
       <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">錯層大陽台，讓家與自然、與鄰里仝聚共生</div>
       <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
-        曲線優雅的錯層陽台，打破封閉的垂直框架，為建築立面賦予豐富神情，也讓戶與戶之間的距離更緊密而溫暖。家，與鄰里相依，多了幾分暖意；「無論小家庭、大家族，或是與友比鄰而居」，保留恰如其分的餘裕，更加舒心。</div>
+        曲線優雅的錯層陽台，打破封閉的垂直框架，為建築立面賦予豐富神情，也讓戶與戶之間的距離更緊密而溫暖。家，與鄰里相依，多了幾分暖意；無論小家庭、大家族，或是與友比鄰而居，保留恰如其分的餘裕，更加舒心。</div>
     </div>
   </div>
 </template>
@@ -237,6 +237,10 @@ const imgs = ref([
   },
   {
     img: globals.$isMobile() ? new URL("../section/s10/2_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
+    caption: '本平面圖僅供參考，實際以合約書內容為主。'
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s10/3_m.jpg", import.meta.url).href : new URL("../section/s10/3.jpg", import.meta.url).href,
     caption: '本平面圖僅供參考，實際以合約書內容為主。'
   },
 ])

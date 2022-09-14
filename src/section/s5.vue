@@ -17,7 +17,7 @@
             <span>2017 森沺藏</span>
             <span v-bind:class="{ selected: currentIdx == 3 }">2016 花沺藏</span>
             <span>2014 景上河</span>
-            <span>2012 索蘭朵</span>
+            <span>2011 索蘭朵</span>
           </div>
           <img class="absolute icon" data-aos="fade" data-aos-delay="400" src="@/section/s5/icon.png" alt="心仝聚"
             srcset="">
