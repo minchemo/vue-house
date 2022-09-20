@@ -1,10 +1,10 @@
 <template>
     <div class="s6 relative">
         <div class="text">
-            <div class="t1" data-aos="flip-left" data-aos-delay="0">精緻建築 戶戶邊間<br />
-                小家庭共築的幸福天地</div>
+            <div class="t1" data-aos="flip-left" data-aos-delay="0">洲子洋絕版千坪基地<br />
+                前校園後水岸雙首排</div>
             <div class="t2 font-['Noto_sans_tc']" data-aos="flip-left" data-aos-delay="200">
-                洲子洋領頭建商茂德建設，特選「日進學」首發日系建築，外觀採黃金比例分割及飾板，公設由職人操刀典雅和風，嚴選日系精品建材，前兩年免管理費，貼心為客戶圓夢成家。
+                洲子洋領頭建商茂德建設，特選「日進學」首發日系建築外觀，外觀採黃金比例分割，公設由職人操刀，嚴選日系精品建材，貼心為客戶圓夢成家。
             </div>
         </div>
         <Splide ref="splide" :options="{

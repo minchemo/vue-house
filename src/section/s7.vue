@@ -1,12 +1,12 @@
 <template>
     <div class="s7 relative">
         <div class="text">
-            <div class="t1" data-aos="flip-left" data-aos-delay="0">精品飯店美學<br>
-                崗石藝術迎賓門廳</div>
+            <div class="t1" data-aos="flip-left" data-aos-delay="0">日式庭院<br>
+                16項全齡公設</div>
+            <div class="t12" data-aos="flip-left" data-aos-delay="0">蔦屋書店進駐選書<br>和風書香 日進月步</div>    
             <div class="line"></div>
             <div class="t2 font-['Noto_sans_tc']" data-aos="flip-left" data-aos-delay="200">
-                汲取崗石材質色彩與紋理質感，營造簡約洗鍊的日系人文空間。大面落地窗迎接陽光與自然綠意，結合經典建築語彙與人文藝術涵養，打造出國際精品休閒飯店式的美學氛圍與質感時光
-                。每一處空間質材的分割、比例、色調，都有最用心的思考。
+                日進學不只享有第一排學區書香，更堅持打造日式生活風格，特別聘請有日本最美書店之稱的蔦屋書店進駐選書，打造專屬的日系精品閱讀空間，讓孩子回家也能沉浸在優質書香，學習成長日進月步！十六項全齡公設，滿足獨自休閒、親友歡聚、的各種需求，為每一位家庭成員量身打造動靜皆宜的生活饗宴。
             </div>
         </div>
         <Splide ref="splide" :options="{
@@ -54,6 +54,10 @@
             font-weight: 600;
             font-size: size(42);
         }
+        .t12{
+            font-weight: 400;
+            font-size: size(25);
+        }
 
         .line {
             width: 100%;
@@ -63,7 +67,7 @@
 
         .t2 {
             font-weight: 400;
-            font-size: size(20);
+            font-size: size(18);
             line-height: size(40);
             text-align: justify;
         }
@@ -143,7 +147,7 @@
 
         .text {
             width: 100%;
-            height: size-m(299);
+            height: size-m(400);
             top: 0;
             left: 0;
             gap: size-m(20);
@@ -154,6 +158,11 @@
                 font-size: size-m(25);
                 line-height: size-m(36);
                 margin-bottom: size-m(0);
+            }
+
+            .t12 {
+                font-size: size-m(18);
+                line-height: size-m(25);
             }
 
             .line {
@@ -192,14 +201,14 @@
                 position: absolute;
                 bottom: size-m(10);
                 padding-left: size-m(10);
-                gap: size-m(12);
+                gap: size-m(8);
                 justify-content: flex-start;
                 width: 100%;
 
                 li {
                     button {
-                        width: size-m(12);
-                        height: size-m(12);
+                        width: size-m(8);
+                        height: size-m(8);
                     }
                 }
             }
@@ -222,11 +231,43 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const imgs = ref([
     {
         img: globals.$isMobile() ? new URL("../section/s7/1_m.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
-        caption: '閱覽室3D示意圖'
+        caption: '挑高7米5迎賓大廳3D示意圖'
     },
     {
         img: globals.$isMobile() ? new URL("../section/s7/2_m.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
-        caption: '迎賓大廳及宅配室3D示意圖'
+        caption: '蔦屋選書閱讀區3D示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s7/3_m.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
+        caption: '健身房3D示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s7/4_m.jpg", import.meta.url).href : new URL("../section/s7/4.jpg", import.meta.url).href,
+        caption: '高爾夫模擬室3D示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s7/5_m.jpg", import.meta.url).href : new URL("../section/s7/5.jpg", import.meta.url).href,
+        caption: '瑜珈教室3D示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s7/6_m.jpg", import.meta.url).href : new URL("../section/s7/6.jpg", import.meta.url).href,
+        caption: '兒童遊戲室3D示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s7/7_m.jpg", import.meta.url).href : new URL("../section/s7/7.jpg", import.meta.url).href,
+        caption: '開放家教區3D示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s7/8_m.jpg", import.meta.url).href : new URL("../section/s7/8.jpg", import.meta.url).href,
+        caption: '媽媽教室3D示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s7/9_m.jpg", import.meta.url).href : new URL("../section/s7/9.jpg", import.meta.url).href,
+        caption: '宴會廳3D示意圖'
+    },
+    {
+        img: globals.$isMobile() ? new URL("../section/s7/10_m.jpg", import.meta.url).href : new URL("../section/s7/10.jpg", import.meta.url).href,
+        caption: '娛樂室3D示意圖'
     },
 ])
 </script>
