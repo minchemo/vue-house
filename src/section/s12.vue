@@ -19,7 +19,7 @@
         <div v-if="currentIdx == 0">
 
           <div class="info decor">
-          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">守護家人和珍貴事物的安全</div>
+          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">堅實乘載幸福的重量</div>
           <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">並乘載著幸福的重量</div>
           <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
             與結構職人戴雲發合作，採「Alfa Safe柱中柱」鋼筋專利工法，將自動化、標準化、一體化系統，牆轉角處集中處增設補強鋼筋，一體成型的形式讓耐震韌性提升100%。
@@ -39,7 +39,7 @@
 
 
         <div class="info decor text-center" v-else-if="currentIdx == 1">
-          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">國際品牌建材同聚</div>
+          <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">朗朗厚土人文之光</div>
           <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">頂級設備營造優雅質感生活</div>
           <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
             心仝聚為家人匯聚了國際品牌建材，選用德國BWT淨水器與防霾紗窗、英國Studor吸氣閥、義大利Cesar廚具、日本TOTO衛浴與DAIKIN室外機、台灣台玻Low-E玻璃等，營造安全、舒適的優雅質感生活。

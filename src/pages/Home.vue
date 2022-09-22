@@ -16,9 +16,10 @@
     <S4 />
     <S5 />
     <S6 />
+    <S14 />
     <S7 />
     <S8 />
-    <S9 />
+   <!--<S9 />-->
     <S10 />
     <S11 />
     <S12 />
@@ -35,6 +36,7 @@ import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
+import S14 from "@/section/s14.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"

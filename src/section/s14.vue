@@ -1,12 +1,13 @@
 <template>
-  <div class="s3 relative">
-    <div class="absolute caption text-white">情境示意圖</div>
+  <div class="s14 relative">
+    <div class="absolute caption text-white">建築立面外觀</div>
     <div class="absolute content">
-      <h2 data-aos="fade" data-aos-delay="0" class="font-['Noto_Serif_JP'] text-[#F6B39A]">時代變，很多事情不變</h2>
-      <p data-aos="fade" data-aos-delay="500" class="text-white  font-['Noto_Serif_TC']">
+      <h2 data-aos="fade" v-if="!$isMobile()" data-aos-delay="0" class="font-['Noto_Serif_JP'] text-[#F6B39A]">北士科前瞻首排，為家培植新百年計畫</h2>
+      <h2 data-aos="fade" v-if="$isMobile()" data-aos-delay="0" class="font-['Noto_Serif_JP'] text-[#F6B39A]">北士科前瞻首排<br>為家培植新百年計畫</h2>
+      <!--p data-aos="fade" data-aos-delay="500" class="text-white  font-['Noto_Serif_TC']">
         網路社群蓬勃，映出人們對情感的渴望。現代都會社區取代傳統家族，成為家庭的新聚合體，卻缺少家與家之間的親切和溫度。<br>
         隆遠集團盼以「心」，重聚鄰里間的寒暄與笑容，讓社區成為家族的延伸，找回無可取代的歸屬感。
-        </p>
+        </p-->
     </div>
   </div>
 </template>
@@ -14,12 +15,12 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s3 {
+.s14 {
   width: 100%;
   height:100vh;
   min-height: size(900);
   max-height: size(1080);
-  background-image: url('@/section/s3/bg.jpg');
+  background-image: url('@/section/s14/bg.jpg');
   background-size: cover;
   background-position: center;
 
@@ -27,18 +28,23 @@
     font-size: size(12);
     right: size(15);
     bottom: size(15);
+    text-shadow:0 0.1em 0.8em #000;
   }
 
   .content {
-    width: size(500);
-    top: 50%;
-    left: size(200);
+    display: flex;
+    width: size(1920);
+    top: 6%;
+    justify-content: center;
     text-align: justify;
-      text-shadow:0 0.1em 0.3em #000;
+    text-shadow:0 0.1em 0.8em #000;
 
     h2 {
       font-size: size(40);
       margin-bottom: size(60);
+      letter-spacing: 0.1em;
+      text-align: center;
+      color:#fff;
     }
 
     p {
@@ -53,11 +59,11 @@
 
 @media screen and (max-width:768px) {
 
-  .s3 {
+  .s14 {
     height: size-m(667);
   min-height:size-m(667);
   max-height: size-m(667);
-    background-image: url('@/section/s3/bg_m.jpg');
+    background-image: url('@/section/s14/bg_m.jpg');
 
     .caption {
       font-size: size(12);
@@ -68,7 +74,7 @@
 
     .content {
       width: size-m(310);
-      top: size-m(60);
+      top: size-m(45);
       left: size-m(32);
 
       h2 {

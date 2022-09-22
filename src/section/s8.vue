@@ -21,8 +21,8 @@
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">和孩子仝探索 璀璨未來</div>
-      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">名校雲集 x 公園童趣時光</div>
+      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">朗朗厚土人文之光</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">台美日歐名校 x 台北戲曲中心 x 五感共融公園</div>
       <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
         漫步2分鐘文林國小、中正高中優質學區，與薇閣、奎山、美日歐明星學校為鄰，孩子沐浴在良好教育學風中成長。步行5分鐘至軟橋公園、6分鐘建民公園賞水岸、8分鐘福星公園訪恐龍，五感遊樂創造都市兒童非凡回憶。</div>
     </div>
@@ -34,12 +34,13 @@
 
 .s8 {
   width: 100%;
-  height: size(1080);
+  height: size(1000);
   background-color: #B36649;
 
   .slide-box {
     position: absolute;
-    top: size(300);
+    bottom:0;
+    //top: size(300);
     width: size(1920);
     height: size(700);
 
@@ -159,12 +160,13 @@
 
   .s8 {
     width: 100%;
-    height: size-m(570);
+    height: size-m(540);
     background-color: #B36649;
 
     .slide-box {
       position: absolute;
-      top: size-m(300);
+      bottom:0;
+      //top: size-m(300);
       width: size-m(375);
       height: size-m(250);
 
@@ -201,7 +203,7 @@
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
-      top: size-m(60);
+      top: size-m(50);
       pointer-events: none;
       padding: 0 size-m(20);
 
@@ -215,7 +217,7 @@
 
       .t2 {
         font-weight: 700;
-        font-size: size-m(19);
+        font-size: size-m(16);
         line-height: 160%;
         margin-bottom: size-m(10);
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);

@@ -1,10 +1,10 @@
 <template>
   <div class="s6 relative bg-white">
     <div class="content">
-      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">遇見 跨世代的生活風貌</div>
-      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">智慧健康x生技醫療x數位科技</div>
+      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">北市壓軸，<br> 點燃產業引擎的下一個火光</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">智慧 x 生技 x 科技</div>
       <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
-        北投士林科技園區，串聯南軟、內科，是台北科技走廊上的矚目新星。融匯產業創新動能與人文環境底蘊，生產、生活、生態各面向兼具，實踐宜居永續的城市發展願景。
+        台北市心中最後一塊科技產業園區，北士科占地94.38公頃，以「智慧健康醫療」及「數位技術服務」規劃兩大方向，作為先進技術展示櫥窗。串聯南港軟體園區、內湖科技園區，年產值上看208億元，成為科技產業鏈。
       </div>
     </div>
     <div class="w-full h-full absolute radar" v-if="!$isMobile()">
@@ -64,13 +64,13 @@
   .content {
     position: absolute;
     right: size(192);
-    top: size(143);
-    width: size(424);
+    top: size(60);
+    width: size(500);
 
     .t1 {
       font-weight: 800;
       font-size: size(40);
-      line-height: 70%;
+      line-height: 130%;
       color: #B36649;
       margin-bottom: size(20);
     }
@@ -80,7 +80,7 @@
       font-size: size(30);
       line-height: 100%;
       color: #000;
-      margin-bottom: size(60);
+      margin-bottom: size(30);
     }
 
     .t3 {
@@ -213,14 +213,14 @@
 
   .s6 {
     width: 100%;
-    height: size-m(605);
+    height: size-m(630);
     background-image: url('@/section/s6/bg.svg');
     background-size: cover;
 
     .content {
       position: absolute;
       right: 50%;
-      top: size-m(50);
+      top: size-m(30);
       width: size-m(310);
       transform: translateX(50%);
       text-align: center;

@@ -22,9 +22,9 @@
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">雙捷運便利生活圈</div>
-      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">心之所嚮 即刻抵達</div>
-      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">鄰近芝山生活圈，散步9分即抵明德站、芝山站。乘捷運紅線，17分直達台北車站，26分直抵信義計畫區。</div>
+      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">以熟成豐蘊前瞻</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">雙捷、雙生活圈富饒同聚</div>
+      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">散步9分鐘即達捷運明德、芝山站，鄰近天母、士林生活圈，擘劃家的富域版圖。</div>
     </div>
   </div>
 </template>
@@ -106,7 +106,7 @@
 
   .info {
     position: absolute;
-    width: size(320);
+    width: size(350);
     right: size(200);
     text-align: center;
     top: 50%;
@@ -126,7 +126,7 @@
       font-size: size(30);
       line-height: 70%;
       color: #fff;
-      margin-bottom: size(70);
+      margin-bottom: size(50);
     }
 
     .t3 {
@@ -165,7 +165,7 @@
 @media screen and (max-width:768px) {
   .s7 {
     width: 100%;
-    height: size-m(519);
+    height: size-m(479);
     background-color: #B36649;
 
     .slide-box {
@@ -211,7 +211,7 @@
     .info {
       position: absolute;
       width: 100%;
-      height: size-m(270);
+      height: size-m(230);
       right: 0;
       text-align: center;
       top: 0;
@@ -246,7 +246,7 @@
         content: '';
         position: absolute;
         width: 1px;
-        height: size-m(150);
+        height: size-m(130);
         background-color: #fff;
         left: 5%;
         transform: translateX(0);
@@ -257,7 +257,7 @@
         content: '';
         position: absolute;
         width: 1px;
-        height: size-m(150);
+        height: size-m(130);
         background-color: #fff;
         right: 5%;
         left: unset;
@@ -285,10 +285,6 @@ const imgs = ref([
   {
     img: globals.$isMobile() ? new URL("../section/s7/1_m.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
     caption: '天母SOGO'
-  },
-  {
-    img: globals.$isMobile() ? new URL("../section/s7/2_m.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
-    caption: '石牌商圈'
   },
   {
     img: globals.$isMobile() ? new URL("../section/s7/3_m.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
