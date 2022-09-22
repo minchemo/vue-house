@@ -5,8 +5,9 @@
       <p><span>吉美富徠</span>｜瑞安街最高名宅｜73-150坪｜577坪 大局致大安</p>
     </div>
 
-    <lazy-component class="b0">
-    <img data-aos="fade-in" src="@/section/s1/01.jpg" alt="吉美富徠" srcset=""> 
+    <lazy-component class="b0 top_img">
+    <img data-aos="fade-in" v-if="!$isMobile()" src="@/section/s1/pc_top.jpg" alt="吉美富徠" srcset=""> 
+    <img data-aos="fade-in" v-if="$isMobile()" src="@/section/s1/m_top.jpg" alt="吉美富徠" srcset=""> 
     </lazy-component>
 
     <lazy-component class="b1">
@@ -208,6 +209,10 @@
     display: flex;
     justify-content: center;
     margin-top: size(179);
+  }
+  .top_img{
+    img{max-width: 89.5%;}
+    
   }
 
   .b1 {
@@ -495,6 +500,8 @@
   }
 }
 
+
+
 @media screen and (max-width: 767px) {
 
   .s1 {
@@ -515,10 +522,18 @@
       }
     }
 
+    .b0 {
+      margin-top: size-m(80);
+    }
+    .top_img{
+    img{max-width: 100%;}
+    
+  }
+
     .b1 {
       flex-direction: column;
       gap: size-m(40);
-      margin-top: size-m(88);
+      margin-top: size-m(50);
       margin-right: 0;
 
       .t {
