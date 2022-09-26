@@ -1,129 +1,116 @@
 <template>
-    <article class="s8">
-        <div class="main-img" v-if="!$isMobile()">
-            <img class="main-img" src="@/section/s8/1.jpg" alt="">
-            <p class="caption" v-if="!$isMobile()">3D外觀情境示意圖</p>
-        </div>
-        <div v-else>
-            <img class="main-img" src="@/section/s8/1_m.jpg" alt="">
-        </div>
-        <div class="text" data-aos="fade-up" data-aos-delay="0">
-            <div class="title">
-                <span class="font-bold">精研工藝</span><br>
-                最美大器建築
-            </div>
-            <div class="desc font-['noto_sans_tc','serif']">
-                運用沉穩的黑白基調，雕刻出簡單不繁複的建築外觀，演繹輝煌東區的新地標，與鄰近公園綠意豐景相輝映，刻劃城市中最美的建築。</div>
-        </div>
-    </article>
+  <article class="s8 font-['noto_sans_tc']">
+    <div class="title text-center  text-white" data-aos="fade-up" data-aos-delay="0">
+      建築能量 拓開眼界
+    </div>
+    <img class="ring1" src="@/section/ring2.svg" alt="">
+    <div class="title text-center text-[#595757]" data-aos="fade-up" data-aos-delay="200">
+      簡練色系 鋪敘大器
+    </div>
+    <div class="subtitle" data-aos="fade-up" data-aos-delay="400">
+      以白色框架，敘說沉穩的建築個性，<br />
+      利用黑白框架與高低配置，<br />
+      豐富了建築天際線。
+    </div>
+    <div class="line"></div>
+  </article>
 </template>
-  
-  <style lang="scss" scoped>
-  @import '@/assets/style/function.scss';
-  
-  .s8 {
-      width: 100%;
-      height: size(1080);
-      background: url('@/section/s8/bg.jpg');
-      background-size: cover;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: size(50);
-  
-      .main-img {
-          position: relative;
-          width: size(1657);
-  
-          .caption {
-              position: absolute;
-              color: #fff;
-              font-size: size(14);
-              right: size(45);
-              bottom: size(25);
-              filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8))
-          }
-      }
-  
-      .text {
-          display: flex;
-          align-items: center;
-          gap: size(30);
-  
-          .title {
-              font-size: size(60);
-              font-weight: 400;
-              line-height: size(70);
-              color: #E7BA65;
-          }
-  
-          .desc {
-              width: size(648);
-              line-height: size(35);
-              font-size: size(20);
-              font-weight: 300;
-              border-top: size(1) solid #fff;
-              border-bottom: size(1) solid #fff;
-              padding: size(25) 0;
-              color: #fff;
-          }
-      }
-  }
-  
-  /* 螢幕尺寸標準 */
-  /* 平板尺寸 */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-  
-  @media screen and (max-width: 767px) {
-      .s8 {
-          width: 100%;
-          height: size-m(667);
-          background: url('@/section/s8/bg_m.jpg');
-          background-size: cover;
-          overflow: hidden;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          gap: size-m(20);
-  
-          .main-img {
-              width: 100%;
-          }
-  
-          .text {
-              flex-direction: column;
-              align-items: flex-start;
-              gap: size-m(15);
-              margin: 0 auto;
-  
-              .title {
-                  font-size: size-m(30);
-                  line-height: 1.5;
-              }
-  
-              .desc {
-                  width: size-m(315);
-                  line-height: 2;
-                  font-size: size-m(15);
-                  border-top: size-m(1) solid #fff;
-                  border-bottom: size-m(1) solid #fff;
-                  padding: size-m(15) 0;
-                  letter-spacing: 0.03em;
-                  font-weight: 300;
-              }
-          }
-      }
-  }
-  </style>
-  <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
+<style lang="scss" scoped>
+@import '@/assets/style/function.scss';
+
+.s8 {
+  position: relative;
+  width: 100%;
+  height: size(1184);
+  background-color: #7BA9D3;
+  background-image: url('@/section/s8/bg.png');
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .title {
+    font-weight: 700;
+    font-size: size(40);
+    line-height: size(58);
+    letter-spacing: 0.07em;
+  }
+
+  .ring1 {
+    width: size(48);
+    margin-top: size(20);
+    margin-bottom: size(30);
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-size: size(20);
+    line-height: size(29);
+    text-align: center;
+    letter-spacing: 0.07em;
+    color: #fff;
+    margin-top: size(30);
+  }
+
+  .line {
+    margin-top: size(27);
+    background-color: #fff;
+    height: size(110);
+    width: size(1.5);
+  }
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+@media screen and (max-width: 767px) {
+
+  .s8 {
+    position: relative;
+    width: 100%;
+    height: size-m(530);
+    background-image: url('@/section/s8/bg_m.png');
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: size-m(50);
+
+    .title {
+      font-size: size-m(20);
+      line-height: 1;
+    }
+
+    .ring1 {
+      width: size-m(18);
+      margin-top: size-m(15);
+      margin-bottom: size-m(20);
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: size-m(12);
+      line-height:2;
+      text-align: center;
+      letter-spacing: 0.07em;
+      margin-top: size-m(10);
+    }
+
+    .line {
+      margin-top: size-m(15);
+      height: size-m(38);
+      width: size-m(1.5);
+    }
+  }
+
+}
+</style>
+<script setup>
 </script>
-  

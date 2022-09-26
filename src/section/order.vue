@@ -1,18 +1,18 @@
   <template>
-  <div id="order" class="order relative bg-[#DFDDC8] text-center">
+  <div id="order" class="order relative bg-[#DCDCDD] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center font-['noto_serif_tc'] text-[#055F76]">{{ info.order.title }}</div>
-      <div class="cus-divider"></div>
+      <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
+      <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="佳鋐首邑" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="泰嘉拓真" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="佳鋐首邑" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="泰嘉拓真" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
-      <img class="decor" src="@/section/form/decor.png" alt="" srcset="">
+      <!-- <img class="decor" src="@/section/form/decor.png" alt="" srcset=""> -->
 
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
@@ -64,7 +64,7 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer font-['noto_serif_tc']" @click="send()">
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
         {{ sending ? '發送中..' : '立即預約' }}
       </div>
 
@@ -85,13 +85,13 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  background-image: url('@/section/form/bg.png');
+  // background-image: url('@/section/form/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: size(0);
   position: relative;
-  height: size(1477);
+  height: auto;
   padding-top: size(90);
   overflow: hidden;
 
@@ -134,7 +134,7 @@
   .order-title {
     font-size: size(43);
     font-weight: 700;
-    margin-bottom: size(0);
+    margin-bottom: size(50);
   }
 
   .cus-divider {
@@ -181,7 +181,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #055F76;
+    background-color: #595757;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
@@ -200,8 +200,8 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    background-image: url('@/section/form/bg_m.png');
-    height: size-m(1452);
+    // background-image: url('@/section/form/bg_m.png');
+    height: auto;
     padding-bottom: 0;
     position: relative;
     overflow: hidden;

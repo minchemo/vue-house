@@ -1,13 +1,23 @@
 <template>
   <article class="s1">
-    <img class="logo" v-if="!$isMobile()" src="@/section/s1/logo.png" alt="" data-aos="fade-up">
-    <img class="logo" v-else src="@/section/s1/logo_m.png" alt="" data-aos="fade-up">
-    <img class="title" v-if="!$isMobile()" src="@/section/s1/title.png" alt="" data-aos="fade-up" data-aos-delay="200">
-    <img class="title" v-else src="@/section/s1/title_m.png" alt="" data-aos="fade-up" data-aos-delay="200">
-    <img class="light" v-if="!$isMobile()" src="@/section/s1/light.png" alt="" srcset="">
-    <div class="other">
-    <div class="t-new" data-aos="fade-up" data-aos-delay="200">接待中心：崇明路．崇明24街口</div>
-    <a href="#order" class="order font-['noto_serif_tc']"  data-aos="fade-up" data-aos-delay="300">立即預約</a>
+    <div class="title absolute">
+      <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
+      <div class="t1"  data-aos="fade-up" data-aos-delay="200">泰嘉 又回楠梓 <br v-if="$isMobile()"/>準備好了嗎？</div>
+    </div>
+    <div class="tip absolute text-white">TIMELESS TIME</div>
+    <div class="home-openning absolute font-['Noto_Sans_TC']">
+      <div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div>
+      <div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div>
+      <div class="line">
+        <span></span>
+      </div>
+    </div>
+    <!--wave-->
+    <div class="w">
+      <div class="w4"><img src="https://i.imgur.com/qStzKed.png" /><img src="https://i.imgur.com/qStzKed.png" /></div>
+      <div class="w3"><img src="https://i.imgur.com/4CQrKVN.png" /><img src="https://i.imgur.com/4CQrKVN.png" /></div>
+      <div class="w2"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
+      <div class="w1"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
     </div>
   </article>
 </template>
@@ -22,73 +32,166 @@
   max-height: size(1080);
   background: url('@/section/s1/bg.jpg');
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: size(30);
-
-
-.other{
-display: flex;
-justify-content: space-between;
-align-items: center;
- width: size(750);
-
-  .t-new{
-  font-size: size(30);
-  color: #fff;
-  font-weight: 600;
-  }
-  .order{
-      width: size(300);
-      height: size(80);
-      font-size: size(30);
-      background: #C9A063;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      border-radius: 30px;
-      font-weight: 600;
-      letter-spacing: 0.3em;
-      border: 2px solid #C9A063;
-      transition: 0.5s;
-
-      &:hover{
-      background: #a1804d; 
-      transition: 0.5s;
-      border: 2px solid #fff;
-      }
-    }
-}
-  
-
-  .light {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: size(1200);
-    animation: flash .8s alternate-reverse infinite;
-
-    @keyframes flash {
-      from {
-        opacity: 50%;
-      }
-
-      to {
-        opacity: 100%;
-      }
-    }
-  }
-
-  .logo {
-    width: size(550);
-  }
 
   .title {
-    width: size(909);
+    left: size(1037);
+    top: size(355);
+
+    .logo {
+      width: size(369);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .t1 {
+      font-size: size(40);
+      letter-spacing: 0.07em;
+      font-weight: 700;
+      margin-top: size(50);
+    }
   }
+
+  .tip {
+    left: size(26);
+    bottom: size(33);
+    font-weight: 600;
+    font-size: size(30);
+    writing-mode: vertical-lr;
+    letter-spacing: 0.21em;
+  }
+
+  .home-openning {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-49.3%);
+    gap: size(20);
+
+    .t1 {
+      font-size: size(25);
+      font-weight: 400;
+      letter-spacing: 0.07em;
+      line-height: size(36);
+    }
+
+    .t2 {
+      font-size: size(20);
+      font-weight: 400;
+      letter-spacing: 0.07em;
+      line-height: size(29);
+    }
+
+    .line {
+      background-color: #fff;
+      width: size(2);
+      height: size(144.6);
+      position: relative;
+
+      span {
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        height: size(10);
+        width: size(10);
+        border-radius: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        animation: move 3s infinite;
+
+        @keyframes move {
+          from {
+            top: 0;
+          }
+
+          to {
+            top: 100%;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .w {
+    width: 100%;
+    overflow: hidden;
+    height: 40vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    .w1 {
+      position: absolute;
+      top: 5vw;
+      left: 0;
+      transform: rotate(3deg);
+      white-space: nowrap;
+
+      img {
+        width: 100%;
+        transform: translateX(-100%);
+        animation: light1 6s linear infinite;
+      }
+    }
+
+    .w2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+      transform: rotate(-3deg) scaleX(-1);
+      white-space: nowrap;
+
+      img {
+        width: 100%;
+        transform: translateX(-100%);
+        animation: light1 8s linear infinite reverse;
+      }
+    }
+
+    .w3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-10deg);
+      white-space: nowrap;
+
+      img {
+        width: 100%;
+        transform: translateX(-100%);
+        animation: light1 7s linear infinite;
+      }
+    }
+
+    .w4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-10deg);
+      white-space: nowrap;
+
+      img {
+        width: 100%;
+        transform: translateX(-100%);
+        animation: light1 9s linear infinite;
+      }
+    }
+
+    @keyframes light1 {
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+
+
 }
 
 /* 螢幕尺寸標準 */
@@ -102,33 +205,67 @@ align-items: center;
     max-height: size-m(750);
     background: url('@/section/s1/bg_m.jpg');
     background-size: cover;
-    gap: size-m(35);
-
-    .other{
-    display: block;
-    width: size-m(300);
-    text-align: center;
-    margin-top: -16px;
-
-      .t-new{
-        font-size: size-m(20);
-      }
-      .order{
-        width: size-m(250);
-        height: size-m(60);
-        font-size: size-m(25);
-        margin: 20px auto 0px auto;
-      }
-    }
-
-
-    .logo {
-      width: size-m(279);
-    }
+    position: relative;
 
     .title {
-      width: size-m(315);
+      left: size-m(110);
+      top: size-m(79);
+
+      .logo {
+        width: size-m(155);
+      }
+
+      .t1 {
+        font-size: size-m(22);
+        margin-top: size-m(15);
+      }
     }
+
+    .tip {
+      left: size-m(4);
+      bottom: size-m(93);
+      font-size: size-m(18);
+    }
+
+    .home-openning {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 0;
+
+      .t1 {
+        font-size: size-m(12);
+        line-height: size-m(18);
+        margin-bottom: size-m(54);
+      }
+
+      .t2 {
+        font-size: size-m(7);
+        margin-bottom: size-m(10);
+      }
+
+      .line {
+        width: size-m(1);
+        height: size-m(102);
+        position: relative;
+
+        span {
+          height: size-m(5);
+          width: size-m(5);
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .w {
+      height: 20vh;
+      position: absolute;
+    }
+
   }
 }
 </style>

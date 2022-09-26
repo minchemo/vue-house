@@ -1,119 +1,121 @@
 <template>
-    <article class="s10">
-        <div class="text z-[3]">
-            <div class="selection" v-if="$isMobile()">
-                <div class="item font-['Noto_sans_tc']" :class="{ active: currentSlide == i }" v-for="img, i in imgs"
-                    @click="slideTo(i)">
-                    {{ img.label }}
-                </div>
-            </div>
-            <div class="title" data-aos="fade-up" data-aos-delay="0"><span class="font-bold">府城星規格</span><br>
-                成家勝利組</div>
-            <div class="desc font-['Noto_sans_tc']" data-aos="fade-up" data-aos-delay="0">
-                品味卓然典雅格局，區域內不容錯過的珍稀房型，2-4房滿足多元家庭型態，在空間使用需求的最適尺度。
-            </div>
-            <div class="selection" v-if="!$isMobile()">
-                <div class="item font-['Noto_sans_tc']" :class="{ active: currentSlide == i }" v-for="img, i in imgs"
-                    @click="slideTo(i)">
-                    {{ img.label }}
-                </div>
-            </div>
+  <article class="s10 font-['noto_sans_tc']">
+    <div class="box">
+      <div class="title" data-aos="fade-up" data-aos-delay="0">拓境精品 暖心設備</div>
+      <div class="subtitle" data-aos="fade-up" data-aos-delay="200">集結世界優質品牌 細膩匠作</div>
+      <div class="items">
+        <div class="item" v-for="item in items1" :class="{'darkbg': item.darkBg}">
+          <img :src="item.icon" alt="" srcset="">
+          <p v-html="item.content" data-aos="fade-up" data-aos-delay="0"></p>
         </div>
-        <Slide ref="slider" class="z-[2]" :imgs="imgs" :w="1166" :h="820" :w_m="375" :h_m="263.72" :dot="true"
-            :dot_size="11" :dot_color="'#fff'" :dot_bottom="-35" :dot_bottom_m="10" :align_m="'flex-start'"
-            @slideIndex="slideChanged" />
-
-        <img class="decor" v-if="!$isMobile()" src="@/section/s10/decor.png" alt="" srcset="">
-    </article>
+      </div>
+    </div>
+    <div class="box box2">
+      <div class="title" data-aos="fade-up" data-aos-delay="0">拓造承諾 領先業界<br>
+        超越標準 主動延長保固</div>
+      <div class="subtitle" data-aos="fade-up" data-aos-delay="200">付諸實際行動 給嘉人最堅實守護</div>
+      <div class="items">
+        <div class="item onlyText" v-for="item in items2" :class="{'darkbg': item.darkBg}">
+          <p v-html="item.content" data-aos="fade-up" data-aos-delay="0"></p>
+        </div>
+      </div>
+    </div>
+    <img class="mo-decor" src="@/section/s10/bg_m.png" alt="" srcset="" v-if="$isMobile()">
+  </article>
 </template>
-  
+
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
 .s10 {
-    width: 100%;
-    height: size(1080);
-    background: url('@/section/s10/bg.jpg');
-    background-size: cover;
-    background-position: top;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    z-index: 1;
-    gap: size(108);
+  position: relative;
+  width: 100%;
+  height: size(1060);
+  background-color: #7BA9D3;
+  background-image: url('@/section/s10/bg.png');
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: size(105);
 
-    .text {
-        position: relative;
-        width: size(382);
-        font-weight: 500;
-        color: #fff;
+  .box {
+
+    .title {
+      font-weight: 700;
+      font-size: size(40);
+      letter-spacing: 0.07em;
+      text-align: center;
+      color: #fff;
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: size(20);
+      letter-spacing: 0.07em;
+      text-align: center;
+      color: #fff;
+    }
+
+    .items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: size(8);
+      margin-top: size(65);
+
+      .item {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
+        width: size(174);
+        height: size(174);
+        padding: size(20);
+        border: size(1) solid #fff;
 
-        .title {
-            font-size: size(60);
-            line-height: size(70);
-            text-align: center;
-            margin-left: -#{size(90)};
+        img {
+          width: 100%;
+          max-width: size(110);
+          max-height: size(40);
+          margin-top: size(10);
         }
 
-        .desc {
-            border-top: size(2) solid #fff;
-            margin-top: size(40);
-            padding-top: size(35);
-            font-weight: 400;
+        p {
+          margin-top: auto;
+          margin-bottom: 0;
+          font-weight: 400;
+          font-size: size(15);
+          line-height: size(22);
+          text-align: center;
+          letter-spacing: 0.07em;
+          color: #fff;
+        }
+
+        &.darkbg {
+          background-color: #595757;
+          border: size(1.5) solid #595757;
+        }
+
+        &.onlyText {
+
+          p {
+            margin-bottom: auto;
+            line-height: size(30);
             font-size: size(20);
-            line-height: size(35);
-            text-align: justify;
-            letter-spacing: 0.03em;
-        }
+            padding-top: size(20);
 
-        .selection {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: size(6);
-            margin-top: size(58);
-
-            .item {
-                text-align: center;
-                font-size: size(20);
-                font-weight: 700;
-                border: size(1.5) solid #C9A063;
-
-                &.active {
-                    background-color: #C9A063;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                    background-color: #C9A063;
-
-                }
+            span {
+              font-weight: 500;
+              font-size: size(63);
             }
+          }
         }
+      }
     }
-
-    .decor {
-        position: absolute;
-        width: size(519);
-        top: size(768);
-        right: -#{size(150)};
-        z-index: 0;
-        animation: rotate 10s infinite linear;
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    }
+  }
 
 }
 
@@ -123,102 +125,151 @@
 
 @media screen and (max-width: 767px) {
 
-    .s10 {
-        width: 100%;
-        height: size-m(616);
-        background: #065B71;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        gap: size(108);
+  .s10 {
+    height: auto;
+    background-image: url('@/section/s10/bg_m.png');
+    gap: size-m(105);
+    padding-top: size-m(50);
+    padding-bottom: size-m(45);
 
-        .text {
-            position: relative;
-            padding: size-m(0) size-m(30);
+    .box {
+      .title {
+        font-size: size-m(20);
+      }
+
+      .subtitle {
+        font-size: size-m(12);
+      }
+
+      &.box2 {
+        .items {
+          grid-template-columns: repeat(4, 1fr);
+
+          .item {
+            width: size-m(75);
+            height: size-m(75);
+          }
+        }
+      }
+
+      .items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: size-m(5);
+        margin-top: size-m(28);
+
+        .item {
+          width: size-m(108);
+          height: size-m(108);
+          padding: size-m(8);
+          border: size-m(1) solid #fff;
+
+          img {
             width: 100%;
+            max-width: size-m(65);
+            max-height: size-m(40);
+            margin-top: size-m(8);
+          }
 
-            .title {
-                margin-top: size-m(20);
-                font-size: size-m(30);
-                line-height: 1.5;
-                letter-spacing: 0.07em;
+          p {
+            font-size: size-m(12);
+            line-height: 1.3;
+            letter-spacing: 1;
+            white-space: nowrap;
+          }
+
+          &.darkbg {
+            background-color: #595757;
+            border: size(1.5) solid #595757;
+          }
+
+          &.onlyText {
+
+            p {
+              margin-bottom: auto;
+              line-height: 1.3;
+              font-size: size-m(12);
+              padding-top: 0;
+
+              span {
+                font-size: size-m(43);
+              }
             }
-
-            .desc {
-                border-top: size-m(1) solid #fff;
-                margin-top: size-m(20);
-                padding-top: size-m(20);
-                line-height: 1.5;
-                font-size: size-m(15);
-                text-align: justify;
-                font-weight: 300;
-            }
-
-            .selection {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: size-m(5);
-                margin-top: size-m(0);
-
-                .item {
-                    padding: size-m(5) 0;
-                    font-size: size-m(15);
-                    border: size-m(1.5) solid #C9A063;
-
-                    &.active {
-                        background-color: #C9A063;
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                        background-color: #C9A063;
-
-                    }
-                }
-            }
+          }
         }
-
-        .decor {
-            width: size-m(167);
-            top: unset;
-            right: unset;
-            left: -#{size-m(27)};
-            bottom: -#{size-m(134)};
-        }
-
+      }
     }
 
+    .mo-decor {
+      position: absolute;
+      left: 0;
+      bottom: size-m(151);
+      width: 100%;
+    }
+
+  }
 }
 </style>
-  <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
-import Slide from '../components/slide.vue';
-
-const currentSlide = ref(0);
-
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
-const imgs = [
-    {
-        img: globals.$isMobile() ? new URL("../section/s10/1_m.jpg", import.meta.url).href : new URL("../section/s10/1.jpg", import.meta.url).href,
-        caption: '',
-        label: '內極珍稀/ 50坪內/4房3衛雙主臥'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s10/2_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
-        caption: '',
-        label: '台南人最愛/27坪/2房2衛浴'
-    },
-]
-
-const slider = ref(null);
-
-const slideTo = (idx) => {
-    currentSlide.value = idx;
-    slider.value.go(idx)
-}
-
-const slideChanged = (idx) => {
-    currentSlide.value = idx;
-}
+<script setup>
+const items1 = [
+  {
+    icon: new URL("../section/s10/1.svg", import.meta.url).href,
+    content: '德國國寶品牌<br/>浴室面盆、龍頭',
+    darkBg: true,
+  },
+  {
+    icon: new URL("../section/s10/2.svg", import.meta.url).href,
+    content: '日系時尚美學<br/>主浴免治馬桶<br/>主浴冷暖風機<br/>系統櫥櫃',
+  },
+  {
+    icon: new URL("../section/s10/3.svg", import.meta.url).href,
+    content: '日本精品工藝<br/>次浴馬桶',
+    darkBg: true,
+  },
+  {
+    icon: new URL("../section/s10/4.svg", import.meta.url).href,
+    content: '歐洲原廠設計<br/>耐磨環保地壁磚',
+  },
+  {
+    icon: new URL("../section/s10/5.svg", import.meta.url).href,
+    content: '日本第一品牌<br/>瓦斯雙口爐<br/>落地型烘碗機<br/>隱藏式排油煙機',
+    darkBg: true,
+  },
+  {
+    icon: new URL("../section/s10/6.svg", import.meta.url).href,
+    content: '德國原裝進口<br/>全棟淨軟水系統',
+  },
+  {
+    icon: new URL("../section/s10/7.svg", import.meta.url).href,
+    content: '獨家設計訂製<br/>堅固耐熱<br/>全實木大門',
+    darkBg: true,
+  },
+  {
+    icon: new URL("../section/s10/8.svg", import.meta.url).href,
+    content: '領先國際科技<br/>智慧門鎖',
+  },
+  {
+    icon: new URL("../section/s10/9.svg", import.meta.url).href,
+    content: '氣密/水密/隔音/<br/>抗風壓氣密窗',
+    darkBg: true,
+  },
+];
+const items2 = [
+  {
+    content: '<span>1</span>年<br/>電器保固',
+    darkBg: true,
+  },
+  {
+    content: '<span>3</span>年<br/>地壁磚保固',
+    darkBg: false,
+  },
+  {
+    content: '<span>5</span>年<br/>防水保固',
+    darkBg: true,
+  },
+  {
+    content: '<span>15</span>年<br/>結構保固',
+    darkBg: false,
+  },
+];
 </script>
-  

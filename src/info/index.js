@@ -1,4 +1,4 @@
-const caseName = "佳鋐首邑"
+const caseName = "泰嘉拓真"
 
 export default {
     meta: {
@@ -6,24 +6,20 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "接待中心：台南市東區崇明路．崇明24街口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3673.530604191847!2d120.2252971!3d22.967508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e755c921c364d%3A0x400ca84b2724f3d2!2z5L2z6YuQ6aaW6YKRIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1662086149653!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/UP7Jty2p1owxZLKu6",
-    phone: "06-289-5555",
+    address: "高雄市楠梓區援中路398號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.065606983645!2d120.29150001596308!3d22.725802733054845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f0adfdea7fd%3A0x5b8c9204a68cf69d!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A5o-05Lit6LevMzk46Jmf!5e0!3m2!1szh-TW!2stw!4v1664175946489!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/W5fEeHVwCfJSyp5b6",
+    phone: "07-360-0033",
     fbLink: "https://www.facebook.com/100083001978691/",
     fbMessage: "https://m.me/100083001978691/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "佳鋐建設股份有限公司"],
-        ["工程營造", "協侑營造"],
-        ["建築結構", "曾聰憲建築師事務所"],
-        ["工程結構", "RC"],
-        ["規劃戶數", "88戶/90車位"],
-        ["坪數規劃", "2房27-31坪/3房36-40坪/4房45-48坪"],
-        ["樓層規劃", "地上10層 地下3層"],
-        ["企劃銷售", "新富利廣告有限公司"],
-        ["基地位置", "台南市東區文化三街．文化一街"],
-        ["接待中心", "台南市東區崇明路．崇明24街口"],
+        ["投資興建", "北基國際開發實業股份有限公司"],
+        ["坪數規劃", "23~46坪"],
+        ["房型規劃", "2房、3房"],
+        ["聯絡電話", "07-360-0033"],
+        ["代銷團隊", "悅揚國際實業有限公司<br/>上嘉行銷股份有限公司"],
+        ["接待中心", "高雄市楠梓區援中路398號"],
     ],
     gtmCode: ["GTM-MB9MMXK"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
