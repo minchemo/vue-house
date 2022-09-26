@@ -5,10 +5,10 @@
       <p><span>吉美富徠</span>｜瑞安街最高名宅｜73-150坪｜577坪 大局致大安</p>
     </div>
 
-    <lazy-component class="b0 top_img">
+    <!--lazy-component class="b0 top_img">
     <img data-aos="fade-in" v-if="!$isMobile()" src="@/section/s1/pc_top.jpg" alt="吉美富徠" srcset=""> 
     <img data-aos="fade-in" v-if="$isMobile()" src="@/section/s1/m_top.jpg" alt="吉美富徠" srcset=""> 
-    </lazy-component>
+    </lazy-component-->
 
     <lazy-component class="b1">
       <div class="t" data-aos="fade-up" v-if="!$isMobile()">
