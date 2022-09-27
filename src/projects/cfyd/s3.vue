@@ -7,23 +7,23 @@
     </div>
     <div class="times" data-aos="fade-right" data-aos-delay="400">
       <div class="__item" data-aos="flip-up" data-aos-delay="400">
-        <!--p class="__time">1mins</p-->
-        <p class="__time">近</p>
+        <p class="__time">1mins</p>
+        <!--p class="__time">近</p-->
         <p class="__name">市政商圈</p>
       </div>
       <div class="__item" data-aos="flip-up" data-aos-delay="700">
-        <!--p class="__time">5mins</p-->
-        <p class="__time">接</p>
+        <p class="__time">5mins</p>
+        <!--p class="__time">接</p-->
         <p class="__name">新光三越</p>
       </div>
       <div class="__item" data-aos="flip-up" data-aos-delay="1000">
-        <!--p class="__time">5mins</p-->
-        <p class="__time">連</p>
+        <p class="__time">5mins</p>
+        <!--p class="__time">連</p-->
         <p class="__name">遊艇碼頭</p>
       </div>
       <div class="__item" data-aos="flip-up" data-aos-delay="1300">
-        <!--p class="__time">5mins</p-->
-        <p class="__time">通</p>
+        <p class="__time">5mins</p>
+        <!--p class="__time">通</p-->
         <p class="__name">海洋之丘</p>
       </div>
     </div>
@@ -32,7 +32,7 @@
       <div class="__item" data-aos="flip-up" data-aos-delay="0">
         <div class="__title">時尚</div>
         <div class="__text" v-if="!isMobile">
-          轉身速接新光三越、小西門、藍晒圖文創
+          10分鐘內速接新光三越、小西門、藍晒圖文創
         </div>
         <div class="__text" v-else>
           轉身速接新光三越、小西門、藍晒圖文創
@@ -41,14 +41,14 @@
       <div class="__item" data-aos="flip-up" data-aos-delay="200">
         <div class="__title">商圈</div>
         <div class="__text" v-if="!isMobile">
-          坐擁繁華國華商圈、新光商圈與海安路商圈
+          坐擁繁華國華商圈、新光商圈及海安路商圈
         </div>
-        <div class="__text" v-else>坐擁繁華國華商圈、新光商圈與海安路商圈</div>
+        <div class="__text" v-else>坐擁繁華國華商圈、新光商圈及海安路商圈</div>
       </div>
       <div class="__item" data-aos="flip-up" data-aos-delay="400">
         <div class="__title">機能</div>
         <div class="__text" v-if="!isMobile">
-          直驅抵家樂福、全聯，永華路上採買一次到位
+          5分鐘抵家樂福、全聯，永華路上採買一次到位
         </div>
         <div class="__text" v-else>
           直驅抵家樂福、全聯，永華路上採買一次到位
@@ -66,7 +66,7 @@
       <div class="__item" data-aos="flip-up" data-aos-delay="800">
         <div class="__title">公園</div>
         <div class="__text" v-if="!isMobile">
-          公園第一排，散步到萬坪府平公園，住進健康裡
+          公園第一排，3分鐘達萬坪府平公園，住進健康裡
         </div>
         <div class="__text" v-else>
           公園第一排，散步到萬坪府平公園，住進健康裡
@@ -128,9 +128,8 @@
         &::first-letter {
           //font-size: size(70) !important;
           font-size: size(50) !important;
-          color: #946134;
-          font-weight: 500;
-          font-family: "Noto serif TC";
+          color: #fff;
+          font-weight: 200;
         }
         &::after {
           content: "";

@@ -16,7 +16,6 @@
         集結許多公共設施資源，商圈、學校與民間建設，永華特區已發展完整，加上安平商港、海洋之丘與遊艇碼頭，計畫等熱烈進行；安平跨港大橋、北外環道路計畫即將打通繁華動脈，未來精彩矚目，指日可待！
       </div>
     </div>
-    <div class="bg"></div>
     <div class="view">
       <GodModView />
     </div>
@@ -28,8 +27,8 @@
 .s2 {
   position: relative;
   width: size(1920);
-  height: size(900);
-  background-color: #000;
+  height: size(1080);
+  background-color: #0e79dc;
   z-index: 11;
   .text {
     position: relative;
@@ -90,12 +89,11 @@
   .s2 {
     position: relative;
     width: size-m(375);
-    height: size-m(889);
+    height: size-m(667);
     background-color: transparent;
     z-index: 11;
-    margin-top: -#{size-m(280)};
-    padding-top: size-m(230);
     .text {
+      padding-top: size-m(50);
       position: relative;
       z-index: 6;
       color: #fff;

@@ -4,10 +4,18 @@
       <img
         v-if="!isMobile"
         ref="viewImg"
-        class="view-img"
-        src="@/projects/cfyd/s2/view.png"
+        class="view-img text"
+        src="@/projects/cfyd/s2/text.png"
         alt="春福御邸"
       />
+      <img
+        v-if="!isMobile"
+        ref="viewImg"
+        class="view-img"
+        src="@/projects/cfyd/s2/view.jpg"
+        alt="春福御邸"
+      />
+      
       <img
         v-else
         ref="viewImg"
@@ -28,14 +36,19 @@
   height: 100%;
   .view {
     position: relative;
-    height: size(957); //依照設計稿調整
-    width: size(1767); //依照設計稿調整
+    height: size(1080); //依照設計稿調整
+    width: size(1920); //依照設計稿調整
     overflow: hidden;
     // cursor: ew-resize;
 
+    .text{
+    position: absolute;
+    z-index: 1;
+    }
+
     .view-hand {
       position: absolute;
-      z-index: 1;
+      z-index: 2;
       right: 0;
       bottom: 0;
       width: 100%;
@@ -68,7 +81,7 @@
   .GodModView {
     .view {
       width: size-m(375);
-      height: size-m(889);
+      height: size-m(667);
       overflow: hidden;
       .view-hand {
         img {

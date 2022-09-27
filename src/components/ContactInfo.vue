@@ -135,7 +135,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -100%);
   z-index: 15;
-  bottom: 5%;
+  bottom: 0%;
 }
 .order-bg-draw {
   width: calc(30000 / 1920);
@@ -162,8 +162,7 @@ export default {
 }
 
 .contact-info {
-  // background: $contact_bg;
-  background-image: url("~@/projects/cfyd/contact-info-bg.jpg");
+   background: $contact_bg;
   background-size: cover;
   //box-shadow: $contact_shadow;
   display: flex;
@@ -231,7 +230,7 @@ export default {
 
 .logo {
   // width: $contact_logo_pc_width;
-  height: 70px;
+  height: 150px;
   margin: 15px auto 60px auto;
   z-index: 1;
   width: 60%;
@@ -417,11 +416,10 @@ export default {
     position: relative;
     margin: 0 auto 0 auto;
     min-width: unset;
-    //background: $contact_bg_m;
+    background: $contact_bg_m;
     background-size: cover;
     margin-top: 0;
 
-    background-image: url("~@/projects/cfyd/contact-info-bg-m.jpg");
 
     .logo {
       width: $contact_logo_mobile_width;
