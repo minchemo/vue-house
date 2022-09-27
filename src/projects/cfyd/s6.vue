@@ -122,7 +122,7 @@
   position: relative;
   width: size(1920);
   height: size(900);
-  background-color: #000;
+  background-color: #151433;
   .bg {
     position: absolute;
     left: 0;

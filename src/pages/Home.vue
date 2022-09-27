@@ -209,7 +209,7 @@ export default {
 @import "../assets/style/variableColor.scss";
 
 .home {
-  background-color: #000 !important;
+  background-color: #151433 !important;
   &::before {
     content: " ";
     position: fixed;
@@ -270,7 +270,7 @@ export default {
 
 @media only screen and (max-width: 767px) {
   .home {
-    background-color: #000 !important;
+    background-color: #151433 !important;
     &::before {
       //background-image: url("~@/projects/llcs/s1/bg_mo.jpg");
     }
