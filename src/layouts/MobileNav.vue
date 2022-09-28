@@ -20,6 +20,10 @@
       <font-awesome-icon icon="map-marker-alt" />
       <div class="label">地圖導航</div>
     </a>
+    <a class="nav-item new" href="https://lin.ee/qDnQsMg" target="_blank">
+      <img src="@/assets/img/line.svg" alt="">
+      <div class="label">LINE官方</div>
+    </a>
     <el-dialog
       title
       :visible.sync="isShowCallDialog"
@@ -109,6 +113,11 @@ export default {
   height: 63px;
   background: $mobile_nav_background;
 
+  .new{
+   border-left: 1px solid #fff; 
+   border-right:0 !important;
+  }
+
   display: flex;
   position: fixed;
   bottom: 0;
@@ -120,12 +129,13 @@ export default {
   .nav-item {
     flex: 1;
     color: $mobile_nav_color;
-    font-size: 1rem;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-right: 1px solid $mobile_nav_border;
+    text-decoration:none;
 
     &:nth-child(4) {
       border-right: none;
@@ -133,13 +143,18 @@ export default {
   }
 
   svg {
-    width: 20px !important;
-    height: 25px;
+    width: 30px !important;
+    height: 30px;
     color: $mobile_nav_icon;
+  }
+  img {
+    width: 25px !important;
+    height: 30px;
   }
 
   .label {
     text-align: center;
+    text-decoration:none;
   }
 }
 

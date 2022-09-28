@@ -42,6 +42,9 @@
       </ul>
     </div>
     <div class="func-btn" v-if="!isMobile">
+      <a class="link" href="https://lin.ee/qDnQsMg" target="_blank">
+        <img src="@/projects/cc/icon4.png" alt="" srcset=""
+      /></a>
       <a class="link" href="#" @click="isShowCallDialog = !isShowCallDialog">
         <img src="@/projects/cc/icon1.png" alt="" srcset="" />
       </a>
