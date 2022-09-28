@@ -7,11 +7,11 @@ export default {
         keywords: caseName,
     },
     address: "高雄市楠梓區援中路398號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.065606983645!2d120.29150001596308!3d22.725802733054845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f0adfdea7fd%3A0x5b8c9204a68cf69d!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A5o-05Lit6LevMzk46Jmf!5e0!3m2!1szh-TW!2stw!4v1664175946489!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/W5fEeHVwCfJSyp5b6",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d920.0161961702736!2d120.29352779999998!3d22.725833299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c686e939d7e2c3d!2zMjLCsDQzJzMzLjAiTiAxMjDCsDE3JzM2LjciRQ!5e0!3m2!1szh-TW!2stw!4v1664345826395!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/bdTPb1sFWtW9MaoZA",
     phone: "07-360-0033",
-    fbLink: "https://www.facebook.com/100083001978691/",
-    fbMessage: "https://m.me/100083001978691/",
+    fbLink: "",
+    fbMessage: "",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "北基國際開發實業股份有限公司"],
@@ -21,7 +21,7 @@ export default {
         ["代銷團隊", "悅揚國際實業有限公司<br/>上嘉行銷股份有限公司"],
         ["接待中心", "高雄市楠梓區援中路398號"],
     ],
-    gtmCode: ["GTM-MB9MMXK"], // 可放置多個
+    gtmCode: ["GTM-M87MK5M","GTM-55PLPZQ"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3

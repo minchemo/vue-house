@@ -2,7 +2,7 @@
   <article class="s9 font-['noto_sans_tc']">
     <div class="text-box">
       <div class="title text-white" data-aos="fade-up" data-aos-delay="0">
-        台積流域 高大領域 價值守恆
+        建築精銳大師共聚
       </div>
       <div class="subtitle text-white" data-aos="fade-up" data-aos-delay="200">
         聯名共手創作
@@ -50,6 +50,7 @@
       font-size: size(40);
       line-height: size(58);
       letter-spacing: 0.07em;
+      
     }
 
     .subtitle {
@@ -64,6 +65,8 @@
       width: size(48);
       margin-top: size(20);
       margin-bottom: size(20);
+      transform:scaleX(-1);
+
     }
 
     .content {
@@ -145,6 +148,7 @@
     top: size(455);
     left: size(65);
     width: size(485);
+    opacity: 0.5;
     filter: invert(87%) sepia(0%) saturate(547%) hue-rotate(289deg) brightness(83%) contrast(92%);
   }
 }
