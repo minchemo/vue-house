@@ -1,23 +1,14 @@
 <template>
   <article class="s1">
-    <div class="title absolute">
-      <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
-      <div class="t1"  data-aos="fade-up" data-aos-delay="200">泰嘉 又回楠梓 <br v-if="$isMobile()"/>準備好了嗎？</div>
+    <div class="main">
+      <img src="@/section/s1/logo.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
+      <p data-aos="fade-up" data-aos-delay="100">以尖端禮遇尖端</p>
+      <div class="title2" v-if="$isMobile()"  data-aos="fade-up" data-aos-delay="100">中路司法特區<br />24層純百坪景觀宅</div>
     </div>
-    <div class="tip absolute text-white">TIMELESS TIME</div>
-    <div class="home-openning absolute font-['Noto_Sans_TC']">
-      <div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div>
-      <div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div>
-      <div class="line">
-        <span></span>
-      </div>
-    </div>
-    <!--wave-->
-    <div class="w">
-      <div class="w4"><img src="https://i.imgur.com/qStzKed.png" /><img src="https://i.imgur.com/qStzKed.png" /></div>
-      <div class="w3"><img src="https://i.imgur.com/4CQrKVN.png" /><img src="https://i.imgur.com/4CQrKVN.png" /></div>
-      <div class="w2"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
-      <div class="w1"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
+    <div class="subtitle" >
+      <p v-if="!$isMobile()"  data-aos="fade-up" data-aos-delay="0">中路司法特區‧24層純百坪景觀宅</p>
+      <img v-if="!$isMobile()" src="@/section/s1/subtitle.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="100">
+      <img v-else src="@/section/s1/subtitle_m.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="100">
     </div>
   </article>
 </template>
@@ -30,168 +21,50 @@
   height: 100vh;
   min-height: size(900);
   max-height: size(1080);
-  background: url('@/section/s1/bg.jpg');
+  position: relative;
+  background-image: url('@/section/s1/bg.jpg');
   background-size: cover;
 
-  .title {
-    left: size(1037);
-    top: size(355);
-
-    .logo {
-      width: size(369);
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .t1 {
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      font-weight: 700;
-      margin-top: size(50);
-    }
-  }
-
-  .tip {
-    left: size(26);
-    bottom: size(33);
-    font-weight: 600;
-    font-size: size(30);
-    writing-mode: vertical-lr;
-    letter-spacing: 0.21em;
-  }
-
-  .home-openning {
-    z-index: 1;
+  .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-49.3%);
-    gap: size(20);
+    justify-content: center;
+    height: 100%;
+    gap: size(32);
 
-    .t1 {
-      font-size: size(25);
-      font-weight: 400;
-      letter-spacing: 0.07em;
-      line-height: size(36);
+    img {
+      width: size(472);
     }
 
-    .t2 {
-      font-size: size(20);
-      font-weight: 400;
-      letter-spacing: 0.07em;
-      line-height: size(29);
-    }
-
-    .line {
-      background-color: #fff;
-      width: size(2);
-      height: size(144.6);
-      position: relative;
-
-      span {
-        position: absolute;
-        display: block;
-        background-color: #fff;
-        height: size(10);
-        width: size(10);
-        border-radius: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
-        animation: move 3s infinite;
-
-        @keyframes move {
-          from {
-            top: 0;
-          }
-
-          to {
-            top: 100%;
-            opacity: 0;
-          }
-        }
-      }
+    p {
+      font-weight: 700;
+      font-size: size(38);
+      letter-spacing: 0.28em;
     }
   }
 
-  .w {
-    width: 100%;
-    overflow: hidden;
-    height: 40vh;
+  .subtitle {
     position: absolute;
+    bottom: size(53);
     left: 0;
-    bottom: 0;
-    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: size(25);
+    width: 100%;
 
-    .w1 {
-      position: absolute;
-      top: 5vw;
-      left: 0;
-      transform: rotate(3deg);
-      white-space: nowrap;
-
-      img {
-        width: 100%;
-        transform: translateX(-100%);
-        animation: light1 6s linear infinite;
-      }
+    p {
+      font-weight: 400;
+      font-size: size(32);
+      letter-spacing: 0.74em;
     }
 
-    .w2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.7;
-      transform: rotate(-3deg) scaleX(-1);
-      white-space: nowrap;
-
-      img {
-        width: 100%;
-        transform: translateX(-100%);
-        animation: light1 8s linear infinite reverse;
-      }
-    }
-
-    .w3 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(-10deg);
-      white-space: nowrap;
-
-      img {
-        width: 100%;
-        transform: translateX(-100%);
-        animation: light1 7s linear infinite;
-      }
-    }
-
-    .w4 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(-10deg);
-      white-space: nowrap;
-
-      img {
-        width: 100%;
-        transform: translateX(-100%);
-        animation: light1 9s linear infinite;
-      }
-    }
-
-    @keyframes light1 {
-      to {
-        transform: translateX(0);
-      }
+    img {
+      width: size(1255);
     }
   }
-
-
 }
 
 /* 螢幕尺寸標準 */
@@ -203,67 +76,36 @@
   .s1 {
     min-height: size-m(667);
     max-height: size-m(750);
-    background: url('@/section/s1/bg_m.jpg');
-    background-size: cover;
-    position: relative;
+    background-image: url('@/section/s1/bg_m.jpg');
 
-    .title {
-      left: size-m(110);
-      top: size-m(79);
+    .main {
+      gap: size-m(26);
 
-      .logo {
-        width: size-m(155);
+      img {
+        width: size-m(196);
       }
 
-      .t1 {
-        font-size: size-m(22);
-        margin-top: size-m(15);
+      p {
+        font-size: size-m(25);
+      }
+
+      .title2 {
+        font-weight: 400;
+        font-size: size-m(18);
+        line-height: 172%;
+        text-align: center;
+        letter-spacing: 0.74em;
+        padding-left:0.74em;
       }
     }
 
-    .tip {
-      left: size-m(4);
-      bottom: size-m(93);
-      font-size: size-m(18);
-    }
-
-    .home-openning {
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+    .subtitle {
+      bottom: size-m(16);
       gap: 0;
-
-      .t1 {
-        font-size: size-m(12);
-        line-height: size-m(18);
-        margin-bottom: size-m(54);
+      width: 100%;
+      img {
+        width: size-m(227);
       }
-
-      .t2 {
-        font-size: size-m(7);
-        margin-bottom: size-m(10);
-      }
-
-      .line {
-        width: size-m(1);
-        height: size-m(102);
-        position: relative;
-
-        span {
-          height: size-m(5);
-          width: size-m(5);
-          transform: translateX(-50%);
-        }
-      }
-    }
-
-    .w {
-      height: 20vh;
-      position: absolute;
     }
 
   }

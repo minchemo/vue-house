@@ -1,14 +1,15 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-[#fff]">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-[#fff] bg">
         <!-- <div class="map"></div> -->
-        <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_Sans_TC']">
+        <div class="flex-1 items-center justify-center py-4 md:py-10 font-['noto_sans_sc']">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title text-[#595757]">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-5 border-l-4 border-[#7BA9D3] pl-2 text-[#595757]" v-html="item[0]"></p>
-                        <p class="whitespace-pre-line leading-normal text-left text-[#595757] font-normal" v-html="item[1]">
+                        <p class="mr-5 border-r-4 border-[#666666] pr-2 text-[#595757]" v-html="item[0]"></p>
+                        <p class="whitespace-pre-line leading-normal text-left text-[#595757] font-normal"
+                            v-html="item[1]">
                         </p>
                     </div>
                 </div>
@@ -19,7 +20,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="泰嘉拓真" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="中悦耑悦" srcset=""></a>
 
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
@@ -38,8 +39,13 @@
 //     background-repeat: no-repeat;
 // }
 
-.info-box {
 
+.bg {
+    background-size: cover;
+    background-image: url('@/section/form/housebg.jpg');
+}
+
+.info-box {
     width: size(800);
 
     .title {

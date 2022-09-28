@@ -1,64 +1,140 @@
 <template>
   <article class="s7">
-    <div class="item" v-for="item in images" v-if="!$isMobile()">
-      <div class="t1" v-html="item.t1" data-aos="fade-up" data-aos-delay="0"></div>
-      <div class="t2" v-html="item.t2" data-aos="fade-up" data-aos-delay="200"></div>
-      <img :src="item.image" alt="" srcset="">
-    </div>
-    <div class="item" v-for="item in images" v-else>
-      <div>
-        <div class="t1" v-html="item.t1" data-aos="fade-up" data-aos-delay="0"></div>
-        <div class="t2" v-html="item.t2" data-aos="fade-up" data-aos-delay="200"></div>
+    <div class="main">
+      <Splide ref="splide" :options="{
+        rewind: true,
+        autoWidth: true,
+        arrows: false,
+        type: 'fade',
+        autoplay: true,
+        pagination: $isMobile() ? false : true,
+        interval: 4000,
+      }" @splide:move="move" class="slide-box absolute z-10">
+        <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
+          <div class="caption">{{img.caption}}</div>
+        </SplideSlide>
+        <div v-if="$isMobile()" class="mo-arrows">
+          <img @click="splide.splide.go('<')" src="@/section/prev_m.png" alt="">
+          <img @click="splide.splide.go('>')" src="@/section/next_m.png" alt="">
+        </div>
+      </Splide>
+      <div class="text-box">
+        <div class="t2" v-html="imgs[currentIdx].t2"  data-aos="fade-left" data-aos-delay="0"> </div>
+        <div class="t1" v-html="imgs[currentIdx].t1"  data-aos="fade-left" data-aos-delay="100"></div>
+        <div class="c-divider"></div>
+        <div class="t3" v-html="imgs[currentIdx].t3"  data-aos="fade-left" data-aos-delay="200"></div>
       </div>
-      <img :src="item.image" alt="" srcset="">
     </div>
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/style/function.scss';
 
 .s7 {
-  position: relative;
   width: 100%;
-  height: size(874);
+  height: size(1080);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #7BA9D3;
-  gap: size(23);
 
-  .item {
-    width: size(524);
-    height: size(663);
-    padding: size(32) size(28.9);
-    color: #fff;
-    font-family: 'Noto Sans TC';
+  .main {
     display: flex;
-    flex-direction: column;
-    gap: size(30);
-    border: size(1) solid #fff;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-image: url('@/section/s7/bg.jpg');
+    width: size(1794);
+    height: size(908);
+    gap: size(70);
 
-    .t1 {
-      font-weight: 700;
-      font-size: size(30);
-      line-height: size(43);
-      text-align: center;
+    .slide-box {
+      position: relative;
+      width: size(1262.5);
+      height: size(908);
+
+
+      .slide {
+        width: size(1262.5);
+        height: size(908);
+        background-size: cover;
+
+        .caption {
+          position: absolute;
+          right: size(17);
+          top: size(17);
+          font-weight: 400;
+          font-size: size(15);
+          color: #FFFFFF;
+          text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .prev {
+        z-index: 1;
+        position: absolute;
+        width: size(30);
+        left: size(33);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .splide__pagination {
+        width: size(1794);
+        margin-top: size(30);
+        gap: size(8);
+
+        li {
+          line-height: 0;
+
+          button {
+            width: size(11);
+            height: size(11);
+            background-color: #D9D9D9;
+
+            &.is-active {
+              background-color: #727171;
+            }
+          }
+        }
+      }
     }
 
-    .t2 {
-      font-weight: 400;
-      font-size: size(20);
-      line-height: size(35);
-      letter-spacing: 0.07em;
-    }
+    .text-box {
 
-    img {
-      margin-bottom: 0;
-      margin-top: auto;
-      width: 100%;
+      .t1 {
+        font-style: normal;
+        font-weight: 100;
+        font-size: size(34);
+        letter-spacing: 0.05em;
+      }
+
+      .t2 {
+        font-weight: 500;
+        font-size: size(64);
+        line-height: 125%;
+        letter-spacing: 0.03em;
+      }
+
+      .c-divider {
+        width: 150%;
+        height: size(2);
+        background-color: #fff;
+        margin: size(25) 0;
+      }
+
+      .t3 {
+        font-family: 'Noto Serif SC';
+        font-weight: 400;
+        font-size: size(18);
+        line-height: 178%;
+        max-width: size(420);
+      }
+
     }
   }
+
 }
 
 /* 螢幕尺寸標準 */
@@ -69,82 +145,123 @@
 
   .s7 {
     height: auto;
-    flex-direction: column;
-    gap: size-m(10);
-    padding: size-m(10) 0;
+    margin-bottom: size-m(30);
+    .main {
+      flex-direction: column;
+      background-position: bottom;
+      background-size: 100%;
+      background-image: url('@/section/s7/bg_m.jpg');
+      height: size-m(577);
+      gap: size-m(30);
+      width: 100%;
 
-    .item {
-      width: size-m(316);
-      height: auto;
-      padding: size-m(10) 0;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      gap: size-m(8);
-      border: size-m(1) solid #fff;
+      .slide-box {
+        position: relative;
+        width: 100%;
+        height: size-m(267);
 
-      .t1 {
-        font-weight: 500;
-        font-size: size-m(16);
-        line-height: size-m(23.17);
-        text-align: left;
-        padding-left: size-m(10);
-        letter-spacing: 0;
+
+        .slide {
+          width: 100%;
+          height: size-m(267);
+
+          .caption {
+            right: size-m(10);
+            top: size-m(10);
+            font-size: size-m(15);
+          }
+        }
+
+        .mo-arrows {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 size-m(15);
+
+          img {
+            margin: unset;
+            width: size-m(16);
+          }
+        }
       }
 
-      .t2 {
-        font-size: size-m(12);
-        line-height: size-m(17);
-        padding-left: size-m(10);
-        letter-spacing: 0;
-        margin-top: size-m(5);
-      }
-
-      img {
-        margin-bottom: 0;
-        margin-top: 0;
-        width: size-m(120);
-      }
-
-      &:nth-child(2) {
-        flex-direction: row-reverse;
+      .text-box {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 1;
+        width: size-m(315);
 
         .t1 {
-          padding-right: size-m(10);
-          padding-left: 0;
-          white-space: nowrap;
+          font-size: size-m(16);
         }
 
         .t2 {
-          padding-right: size-m(10);
-          padding-left: 0;
+          font-size: size-m(25);
+          line-height: 148%;
+        }
+
+        .c-divider {
+          width: size-m(315);
+          height: size-m(2);
+          margin: size-m(15) 0;
+        }
+
+        .t3 {
+          font-size: size-m(14);
+          max-width: 100%;
+          text-align: left;
+          line-height: 2;
+
         }
       }
     }
-  }
 
+  }
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { getCurrentInstance, ref } from 'vue';
+import AOS from 'aos';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
-const images = [
+const splide = ref();
+const currentIdx = ref(0)
+const move = (newIdx, prevIdx, destIdx) => {
+  currentIdx.value = prevIdx
+  AOS.refresh();
+}
+
+const imgs = [
   {
-    image: isMobile ? new URL("../section/s7/1_m.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
-    t1: '新台17線打通北高雄<br/>10分鐘到美術館、農16',
-    t2: '新台17線拍板執行！有助紓解楠梓至左營段車流量，從高大特區往南僅需10分鐘，就能連結大美術館園區！'
+    img: globals.$isMobile() ? new URL("../section/s7/1_m.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
+    caption: '大廳3D示意圖',
+    t1: '',
+    t2: globals.$isMobile() ? '迎賓門廳 大器天成' : '迎賓門廳<br/>大器天成',
+    t3: '若您走進中悦建築裡，<br/>會深刻感受到走進美學的細節裡。<br/>舉凡大廳藝術作品、燈飾、桌椅陳列角度，<br/>蘊含著黃金比例的藝術巧思。'
   },
   {
-    image: isMobile ? new URL("../section/s7/2_m.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
-    t1: '後勁溪、左營海景雙風光<br/>水岸對望 拓境美感視界',
-    t2: '前有眺望無遮擋的左營軍港海岸景觀，後倚後勁溪美景，左擁右抱雙倍水岸生活！'
+    img: globals.$isMobile() ? new URL("../section/s7/2_m.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
+    caption: '泳池3D示意圖',
+    t1: '頂級銅銀離子抗菌設備',
+    t2: globals.$isMobile() ? '超豪邸 藝術游池' : '超豪邸<br/>藝術游池',
+    t3: globals.$isMobile() ? '中悦建設引進現代最新活水系統--銅銀離子抗菌系統，以最先進的殺菌系統淨化水質，無氯胺、無化學藥劑，提供自然、無味、軟性、不刺激皮膚的水質。讓您縱身一躍，快樂如魚得水！' : '中悦建設引進現代最新活水系統--銅銀離子抗菌系統，以最先進的殺菌系統淨化水質，無氯胺、無化學藥劑，提供自然、無味、軟性、不刺激皮膚的水質。<br/>讓您縱身一躍，快樂如魚得水！'
   },
   {
-    image: isMobile ? new URL("../section/s7/3_m.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
-    t1: '高雄大學 萬坪森林環擁<br/>學風靜地 孵育高質生活',
-    t2: '高雄大學是台灣少數沒有圍牆的森林大學之一，校園佔地82公頃，沿途環繞綠樹、湖泊、綠意環境，宛如城市裡的大公園。'
+    img: globals.$isMobile() ? new URL("../section/s7/3_m.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
+    caption: '交誼廳 3D 示意圖',
+    t1: '',
+    t2: globals.$isMobile() ? '層峰相見的 閒敘時刻' : '層峰相見的<br/>閒敘時刻',
+    t3: '中悦精心佈置的頂尖社交場域，<br/>以沉穩基調石材色澤，重現輝煌時代的風光聚首。<br/>質感雅緻、舒適溫潤、距離有度的交誼廳，<br/>讓您在此鞏固親友情誼、商場友誼。'
   },
-];
+]
 </script>

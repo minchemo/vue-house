@@ -1,14 +1,14 @@
-  <template>
+<template>
   <div id="order" class="order relative bg-[#DCDCDD] text-center">
-    <div class="order-section font-['noto_sans_tc']">
+    <div class="order-section font-['noto_sans_sc']">
       <!-- Title -->
       <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="泰嘉拓真" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="中悦耑悦" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="泰嘉拓真" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="中悦耑悦" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
@@ -68,6 +68,12 @@
         {{ sending ? '發送中..' : '立即預約' }}
       </div>
 
+      <div class="decor">
+
+        <img v-if="!$isMobile(0)" src="@/section/form/decor.svg" alt="" srcset="">
+        <img v-else src="@/section/form/decor_m.svg" alt="" srcset="">
+      </div>
+
       <!-- Contact Info -->
       <ContactInfo />
     </div>
@@ -85,7 +91,7 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  // background-image: url('@/section/form/bg.png');
+  background-image: url('@/section/form/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,23 +114,6 @@
     vertical-align: middle;
   }
 
-  .decor {
-    position: absolute;
-    width: size(700);
-    top: -#{size(310)};
-    right: -#{size(250)};
-    animation: rotate 10s infinite linear;
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-  }
 }
 
 .order {
@@ -150,6 +139,15 @@
     width: size(859);
     margin: 0 auto;
     margin-bottom: size(40);
+  }
+
+  .decor {
+    width: size(872);
+    margin: size(92) auto;
+
+    img {
+      width: 100%;
+    }
   }
 
   .form {
@@ -186,7 +184,7 @@
     height: 3.3em;
     line-height: 3.3;
     border: 0;
-    border-radius: 0em;
+    border-radius: .5em;
     z-index: 10;
     position: relative;
   }
@@ -200,7 +198,7 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    // background-image: url('@/section/form/bg_m.png');
+    background-image: url('@/section/form/bg_m.png');
     height: auto;
     padding-bottom: 0;
     position: relative;
@@ -212,13 +210,6 @@
       left: -#{size-m(30)};
       bottom: size-m(590);
     }
-
-    .decor {
-      position: absolute;
-      width: size-m(148);
-      top: -#{size-m(50)};
-      right: -#{size-m(35)};
-    }
   }
 
   .order {
@@ -226,6 +217,16 @@
     // border-radius: size-m(68) size-m(68) 0 0;
     padding-top: size-m(0);
     margin-top: size-m(0);
+
+
+    .decor {
+      width: size-m(315);
+      margin: size-m(54) auto;
+
+      img {
+        width: 100%;
+      }
+    }
 
 
     .cus-divider {

@@ -1,36 +1,22 @@
 <template>
   <article class="s3">
-    <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">坐在泰嘉的肩上 引以為傲</div>
-      <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">放眼台灣，泰嘉以絕藏獨到細節<br />
-        茁長出六大創新服務行囊<br />
-        楠梓將又一次<br />
-        無可超越的，河海韻律日常<br />
-        無以複製的，泰嘉生活美學<br />
-        總比需求出現前走快了一步<br />
-        讓日後得以放慢腳步、提煉生活深度<br />
-        住進泰嘉拓真，成為永恆驕傲
+    <div class="main">
+      <div class="caption" v-if="!$isMobile()">空拍實景</div>
+      <div class="text-box">
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">60米大興西路X 30米正光路</div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="100">交通正十字軸心 光速暢遊</div>
+        <div class="c-divider"></div>
+        <div class="t3" data-aos="fade-up" data-aos-delay="200">交通繁榮城市，速度創造價值!<br />
+          十字軸心串聯南桃園交流道銜接國道一、國道三號!<br />
+          國道二號直抵機場捷運快速道，世界環遊；桃園車站10分鐘，捷運G013站咫尺距離，<br />
+          隨心所欲移動效率，縱橫天地的一派輕鬆。</div>
       </div>
-    </div>
-    <!-- round-->
-    <div class="o">
-      <div></div>
-    </div>
+      <img v-if="!$isMobile()" class="large" src="@/section/s3/large.svg" alt="" srcset="" data-aos="fade-right" data-aos-delay="400">
+      <img v-else class="large" src="@/section/s3/large_m.svg" alt="" srcset="" data-aos="fade-right" data-aos-delay="400">
+      <div class="fullview" v-if="$isMobile()">
 
-    <!--wave-->
-    <div class="w wave1">
-      <div class="w4"><img src="@/section/s3/wave4.svg" /><img src="@/section/s3/wave4.svg" /></div>
-      <div class="w3"><img src="@/section/s3/wave3.svg" /><img src="@/section/s3/wave3.svg" /></div>
-      <div class="w2"><img src="@/section/s3/wave2.svg" /><img src="@/section/s3/wave2.svg" /></div>
-      <div class="w1"><img src="@/section/s3/wave1.svg" /><img src="@/section/s3/wave1.svg" /></div>
-    </div>
-    <!--wave2-->
-    <div class="w wave2" v-if="!$isMobile()">
-      <div class="w4"><img src="@/section/s3/wave4.svg" /><img src="@/section/s3/wave4.svg" /></div>
-      <div class="w3"><img src="@/section/s3/wave3.svg" /><img src="@/section/s3/wave3.svg" /></div>
-      <div class="w2"><img src="@/section/s3/wave2.svg" /><img src="@/section/s3/wave2.svg" /></div>
-      <div class="w1"><img src="@/section/s3/wave1.svg" /><img src="@/section/s3/wave1.svg" /></div>
+        <Fullview />
+      </div>
     </div>
   </article>
 </template>
@@ -39,154 +25,78 @@
 @import '@/assets/style/function.scss';
 
 .s3 {
-  position: relative;
   width: 100%;
   height: size(1080);
-  background-color: #DCDCDD;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .item {
-    font-family: 'Noto Sans TC';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: size(30);
-    z-index: 1;
+  .main {
+    position: relative;
+    width: size(1789);
+    height: size(908);
+    background-size: cover;
+    background-image: url('@/section/s3/bg.jpg');
+    padding-top: size(100);
 
-    .t1 {
-      font-weight: 700;
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      color: #699DC4;
+    .large {
+      position: absolute;
+      width: size(34);
+      left: -#{size(17)};
+      top: 0;
+      z-index: 1;
     }
 
-    img {
-      width: size(48);
-    }
-
-    .t2 {
+    .caption {
+      position: absolute;
+      right: size(60);
+      bottom: size(25);
       font-weight: 400;
-      font-size: size(20);
-      line-height: 1.8;
-      letter-spacing: 0.07em;
-    }
-  }
-
-  .w {
-    width: 100%;
-    overflow: hidden;
-    height: size(228);
-    position: absolute;
-    left: 0;
-    pointer-events: none;
-
-    &.wave1 {
-      bottom: 0;
+      font-size: size(15);
+      color: #FFFFFF;
+      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     }
 
-    &.wave2 {
-      top: 0;
-    }
+    .text-box {
+      margin: 0 auto;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-    .w1 {
-      position: absolute;
-      top: 5vw;
-      left: 0;
-      // transform: rotate(3deg);
-      white-space: nowrap;
-
-      img {
-        width: 200%;
-        transform: translateX(-100%);
-        animation: light1 6s linear infinite;
+      .t1 {
+        font-style: normal;
+        font-weight: 100;
+        font-size: size(34);
+        letter-spacing: 0.05em;
       }
-    }
 
-    .w2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.7;
-      // transform: rotate(-3deg) scaleX(-1);
-      white-space: nowrap;
-
-      img {
-        width: 200%;
-        transform: translateX(-100%);
-        animation: light1 8s linear infinite reverse;
+      .t2 {
+        font-weight: 500;
+        font-size: size(64);
+        line-height: 125%;
+        letter-spacing: 0.03em;
       }
-    }
 
-    .w3 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      // transform: rotate(-10deg);
-      white-space: nowrap;
-
-      img {
-        width: 200%;
-        transform: translateX(-100%);
-        animation: light1 7s linear infinite;
+      .c-divider {
+        width: size(510);
+        height: size(2);
+        background-color: #fff;
+        margin: size(25) 0;
       }
-    }
 
-    .w4 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      // transform: rotate(-10deg);
-      white-space: nowrap;
-
-      img {
-        width: 200%;
-        transform: translateX(-100%);
-        animation: light1 9s linear infinite;
-      }
-    }
-
-    @keyframes light1 {
-      to {
-        transform: translateX(0);
+      .t3 {
+        font-family: 'Noto Serif SC';
+        font-weight: 400;
+        font-size: size(18);
+        line-height: 178%;
+        letter-spacing: 0.05em;
       }
     }
   }
-
-  .o {
-    border: 1px solid #fff;
-    width: size(416);
-    height: size(416);
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -#{size(208)};
-    margin-top: -#{size(208)};
-    transform: rotate(30deg) scaleX(.8);
-
-    div {
-      width: 10px;
-      height: 10px;
-      background: #fff;
-      border-radius: 50%;
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 5px);
-      animation: light1 10s linear infinite;
-      transform-origin: 50% size(211);
-    }
-  }
-
-  @keyframes light1 {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
 }
 
 /* 螢幕尺寸標準 */
@@ -195,35 +105,71 @@
 
 @media screen and (max-width: 767px) {
 
+
   .s3 {
-    height: size-m(464);
+    width: 100%;
+    height: size-m(667);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-    .item {
-      gap: size-m(20);
-      .t1 {
-        font-size: size-m(20);
+    .main {
+      width: 100%;
+      height: 100%;
+      background-image: unset;
+      padding-top: 0;
+
+      .fullview {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 0;
       }
 
-      img {
-        width: size-m(18);
+      .large {
+        width: size-m(21.46);
+        left: size-m(8.27);
+        top: size-m(20);
+        pointer-events: none;
       }
 
-      .t2 {
-        font-size: size-m(12);
-      }
-    }
+      .text-box {
+        position: relative;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        padding-top: size-m(34);
+        
 
-    .w {
-      height: size-m(60);
-    }
+        .t1 {
+          font-size: size-m(16);
+        }
 
-    .o {
-      width: size-m(300);
-      height: size-m(300);
-      margin-left: -#{size-m(150)};
-      margin-top: -#{size-m(150)};
-      div {
-        transform-origin: 50% size-m(154);
+        .t2 {
+          font-size: size-m(25);
+          line-height: 148%;
+        }
+
+        .c-divider {
+          width: size-m(315);
+          height: size-m(2);
+          margin: size-m(15) 0;
+        }
+
+        .t3 {
+          font-size: size-m(14);
+          max-width: size-m(315);
+          letter-spacing: -0.01em;
+        }
       }
     }
   }
@@ -231,6 +177,7 @@
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
+import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());

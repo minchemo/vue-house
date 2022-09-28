@@ -1,21 +1,38 @@
 <template>
   <article class="s4">
-    <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">六大創新 拓展建築 美的造極</div>
-      <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">高雄的好朋友泰嘉，踏行楠梓高雄大學特區，<br />
-        首創六大創新服務，開拓南台灣建築大道上的典範。
+    <Splide ref="splide" :options="{
+      rewind: true,
+      autoWidth: true,
+      arrows: false,
+      type: 'fade',
+      autoplay: true,
+      interval: 4000,
+    }" @splide:move="move" class="slide-box absolute z-10">
+      <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
+        <div class="caption">{{img.caption}}</div>
+      </SplideSlide>
+      <img v-if="!$isMobile()" class="prev cursor-pointer" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="">
+      <div v-if="$isMobile()" class="mo-arrows">
+        <img @click="splide.splide.go('<')" src="@/section/prev_m.png" alt="">
+        <img @click="splide.splide.go('>')" src="@/section/next_m.png" alt="">
       </div>
-    </div>
-    <div class="images grid grid-cols-3 font-['Noto_Sans_TC']">
-      <div class="image" v-for="image in images">
-        <div class="img" :style="{backgroundImage: `url('${image.image}')`}"></div>
-        <div class="flex items-center justify-center md:justify-between w-full">
-          <p v-html="image.text" data-aos="fade-up" data-aos-delay="400"></p>
-          <img v-if="!$isMobile()" class="ml-auto mr-0" :src="image.icon" alt="" srcset="">
-        </div>
+    </Splide>
+    <div class="text-box">
+      <div class="t1" data-aos="fade-left" data-aos-delay="0">蘊藏生命力的森態 </div>
+      <div class="t2" data-aos="fade-left" data-aos-delay="100">20公頃<br />
+        綠金樹海特區<br v-if="!$isMobile()"/>
+        奢藏</div>
+      <div class="c-divider"></div>
+      <div class="t3" data-aos="fade-left" data-aos-delay="200">萬坪風禾公園、2座千坪向陽公園、水秀公園、6座兒童公園…..走進中路特區約20公頃綠海，<br v-if="!$isMobile()" />
+        500公尺內隨心親近自然，城市綠鑽難得可貴</div>
+      <div class="thumbnails" v-if="!$isMobile()">
+        <template v-for="img, i in imgs">
+          <div data-aos="fade" class="item" @click="splide.splide.go(i)" v-if="i != currentIdx"
+            :style="{backgroundImage: `url('${img.img}')`}">
+            <div class="caption">{{img.caption}}</div>
+          </div>
+        </template>
       </div>
-
     </div>
   </article>
 </template>
@@ -24,87 +41,114 @@
 @import '@/assets/style/function.scss';
 
 .s4 {
-  position: relative;
   width: 100%;
   height: size(1080);
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: size(180);
+  justify-content: flex-start;
+  gap: size(70);
+  background-size: cover;
+  background-image: url('@/section/s4/bg.jpg');
 
-  .item {
-    font-family: 'Noto Sans TC';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: size(30);
+
+  .large {
+    position: absolute;
+    width: size(34);
+    left: -#{size(17)};
+    top: 0;
     z-index: 1;
+  }
 
-    .t1 {
-      font-weight: 700;
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      color: #699DC4;
+  .slide-box {
+    position: relative;
+    width: size(1337);
+    height: size(820);
+
+
+    .slide {
+      width: size(1337);
+      height: size(820);
+      background-size: cover;
+
+      .caption {
+        position: absolute;
+        right: size(17);
+        top: size(17);
+        font-weight: 400;
+        font-size: size(15);
+        color: #FFFFFF;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+      }
     }
 
-    img {
-      width: size(48);
+    .prev {
+      z-index: 1;
+      position: absolute;
+      width: size(30);
+      left: size(33);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .text-box {
+    padding-right: size(68);
+
+    .t1 {
+      font-style: normal;
+      font-weight: 100;
+      font-size: size(34);
+      letter-spacing: 0.05em;
     }
 
     .t2 {
-      font-weight: 400;
-      font-size: size(20);
-      line-height: 1.8;
-      letter-spacing: 0.07em;
+      font-weight: 500;
+      font-size: size(64);
+      line-height: 125%;
+      letter-spacing: 0.03em;
     }
-  }
 
+    .c-divider {
+      width: 150%;
+      height: size(2);
+      background-color: #fff;
+      margin: size(25) 0;
+    }
 
-  .images {
-    position: relative;
-    column-gap: size(31.8);
-    row-gap: size(53);
+    .t3 {
+      font-family: 'Noto Serif SC';
+      font-weight: 400;
+      font-size: size(18);
+      line-height: 178%;
+      text-align: justify;
+      max-width: size(457);
+    }
 
-    .image {
-      position: relative;
-      width: size(280.32);
-      height: auto;
+    .thumbnails {
+      display: flex;
+      align-items: center;
+      gap: size(4);
+      margin-top: size(27);
 
-      .img {
-        position: relative;
-        width: size(268.64);
-        height: size(192.72);
+      .item {
+        width: size(226.16);
+        height: size(150.6);
         background-size: cover;
-        transform-style: preserve-3d;
-        margin-bottom: size(20);
+        position: relative;
+        color: #fff;
+        cursor: pointer;
 
-        &::after {
-          content: '';
+        .caption {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          right: -#{size(11.68)};
-          bottom: -#{size(11.68)};
-          background-color: #699DC4;
-          transform: translateZ(-1px);
+          right: size(10);
+          bottom: size(5);
+          font-weight: 400;
+          font-size: size(15);
         }
       }
-
-      p {
-        padding-left: size(9);
-        font-weight: 400;
-        font-size: size(20);
-      }
-
-      img {
-        height: size(45);
-        max-width: size(70);
-      }
     }
   }
-
 }
 
 /* 螢幕尺寸標準 */
@@ -114,101 +158,101 @@
 @media screen and (max-width: 767px) {
 
   .s4 {
+    height: size-m(556);
     flex-direction: column;
-    height: size-m(522);
-    gap: size-m(28);
+    align-items: center;
+    justify-content: flex-start;
+    gap: size-m(20);
+    background-image: url('@/section/s4/bg_m.jpg');
+    padding-top: size-m(36);
 
-    .item {
-      gap: size-m(10);
-      z-index: 1;
 
-      .t1 {
-        font-size: size-m(20);
+    .slide-box {
+      position: relative;
+      width: 100%;
+      height: size-m(230);
+
+      .slide {
+        width: 100%;
+        height: size-m(230);
+
+        .caption {
+          right: size-m(10);
+          top: size-m(10);
+          font-size: size-m(15);
+        }
       }
 
-      img {
-        width: size-m(18);
+      .mo-arrows {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 size-m(15);
+        img {
+          margin: unset;
+          width: size-m(16);
+        }
+      }
+    }
+
+    .text-box {
+      padding-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: size-m(5);
+
+      .t1 {
+        font-size: size-m(16);
       }
 
       .t2 {
-        margin-top: size-m(10);
-        font-size: size-m(12);
+        font-size: size-m(25);
+        line-height: 148%;
+      }
+
+      .c-divider {
+        width: size-m(315);
+        height: size-m(2);
+        margin: size-m(10) 0;
+      }
+
+      .t3 {
+        font-size: size-m(14);
+        max-width: size-m(315);
       }
     }
-
-
-    .images {
-      column-gap: size-m(26);
-      row-gap: size-m(24);
-
-      .image {
-        width: size-m(96);
-
-        .img {
-          width: size-m(92);
-          height: size-m(66);
-          margin-bottom: size-m(10);
-
-          &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            right: -#{size-m(5)};
-            bottom: -#{size-m(5)};
-            background-color: #699DC4;
-            transform: translateZ(-1px);
-          }
-        }
-
-        p {
-          text-align: center;
-          padding-left: 0;
-          white-space: nowrap;
-          font-size: size-m(12);
-        }
-      }
-    }
-
   }
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
+const splide = ref();
+const currentIdx = ref(0)
+const move = (newIdx, prevIdx, destIdx) => {
+  currentIdx.value = prevIdx
+}
 
-const images = [
+const imgs = ref([
   {
-    image: new URL("../section/s4/1.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i1.svg", import.meta.url).href,
-    text: '好住先於快銷<br/>LIVING 宜居比例'
+    img: globals.$isMobile() ? new URL("../section/s4/1_m.jpg", import.meta.url).href : new URL("../section/s4/1.jpg", import.meta.url).href,
+    caption: '風禾公園'
   },
   {
-    image: new URL("../section/s4/2.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i2.svg", import.meta.url).href,
-    text: '本土先於世界<br/>VIEW跨界眼界'
+    img: globals.$isMobile() ? new URL("../section/s4/2_m.jpg", import.meta.url).href : new URL("../section/s4/2.jpg", import.meta.url).href,
+    caption: '水秀公園'
   },
   {
-    image: new URL("../section/s4/3.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i3.svg", import.meta.url).href,
-    text: '專業先於廣告<br/>SGS檢測證'
+    img: globals.$isMobile() ? new URL("../section/s4/3_m.jpg", import.meta.url).href : new URL("../section/s4/3.jpg", import.meta.url).href,
+    caption: '向陽公園'
   },
-  {
-    image: new URL("../section/s4/4.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i4.svg", import.meta.url).href,
-    text: '關心先於官網<br/>CARE雲端APP'
-  },
-  {
-    image: new URL("../section/s4/5.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i5.svg", import.meta.url).href,
-    text: '主動先於客訴<br/>PROACTIVE社區健檢'
-  },
-  {
-    image: new URL("../section/s4/6.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i6.svg", import.meta.url).href,
-    text: '客服先於售價<br/>SERVICE董座親轄'
-  },
-];
+])
 </script>
