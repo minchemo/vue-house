@@ -70,8 +70,8 @@
 
       <div class="decor">
 
-        <img v-if="!$isMobile(0)" src="@/section/form/decor.svg" alt="" srcset="">
-        <img v-else src="@/section/form/decor_m.svg" alt="" srcset="">
+        <!--img v-if="!$isMobile(0)" src="@/section/form/decor.svg" alt="" srcset="">
+        <img v-else src="@/section/form/decor_m.svg" alt="" srcset=""-->
       </div>
 
       <!-- Contact Info -->

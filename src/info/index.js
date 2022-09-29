@@ -51,7 +51,7 @@ export default {
             offset: "",
         },
         {
-            name: "家風永興",
+            name: "百坪層峰",
             target: ".s6",
             offset: "",
         },
