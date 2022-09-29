@@ -27,31 +27,37 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: size(46);
+    gap: size(35);
 
     .nav-item {
         position: relative;
         font-weight: 400;
-        font-size: size(14);
+        font-size: size(15);
         letter-spacing: 0.08em;
         color: #969696;
+        transition:0.5s;
+        padding: 0px 15px;
+
+         &:hover{
+            background: #fff;
+        }
 
         &::before {
             content: '';
-            width: size(1.5);
+            width: size(1);
             height: 105%;
             background-color: #969696;
             position: absolute;
-            left: -10%;
+            left: 0%;
         }
 
         &::after {
             content: '';
-            width: size(1.5);
+            width: size(1);
             height: 105%;
             background-color: #969696;
             position: absolute;
-            right: -10%;
+            right: 0%;
         }
 
         &:hover {
@@ -107,6 +113,10 @@
         .nav-item {
             font-size: size-m(18);
             color: #fff;
+
+            &:hover{
+            color: rgb(85, 85, 85);
+        }
 
             &::before {
                 content: '';

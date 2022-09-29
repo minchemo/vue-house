@@ -22,12 +22,12 @@
           <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-full" v-model="formData.room_type">
+          <!--select class="select w-full rounded-full" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="2房">2房</option>
             <option value="3房">3房</option>
             <option value="4房">4房</option>
-          </select>
+          </select-->
 
           <select class="select w-full rounded-full" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>

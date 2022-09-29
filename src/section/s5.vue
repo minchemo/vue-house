@@ -164,10 +164,10 @@
 
         .caption {
           position: absolute;
-          right: size(20);
-          bottom: size(17);
+          right: size-m(20);
+          bottom: size-m(17);
           font-weight: 400;
-          font-size: size(15);
+          font-size: size-m(15);
           color: #FFFFFF;
           text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
         }
