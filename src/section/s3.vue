@@ -333,7 +333,7 @@ const move = (newIdx, prevIdx, destIdx) => {
 const imgs = ref([
     {
         img: new URL("../section/s3/2.svg", import.meta.url).href,
-        content: '26 層森林之王，<br/>以地標姿態傲立富貴公園裡唯一席'
+        content: '26 層雲頂地標，<br/>以地標姿態傲立富貴公園裡唯一席'
     },
     {
         img: new URL("../section/s3/3.svg", import.meta.url).href,

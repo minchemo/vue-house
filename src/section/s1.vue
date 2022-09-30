@@ -1,7 +1,7 @@
 <template>
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
     <div class="title flex flex-col items-center justify-center">
-      <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層森林之王</div>
+      <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層雲頂地標</div>
       <div class="t2 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="200">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身
         2000 坪公園森林，<br v-if="!$isMobile()">
         這是林口第 18 個里，唯一住在富貴公園裡的里，這個里，屬於長耀，屬於你。<br>
