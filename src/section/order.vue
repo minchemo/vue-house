@@ -4,8 +4,8 @@
     <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
     <!-- Title Image -->
     <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="心仝聚" srcset=""
-      data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="心仝聚" srcset="" data-aos="fade"
+       data-aos-duration="1000">
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="心仝聚" srcset=""
       data-aos-duration="1000">
     <!-- Decor -->
     <img v-if="$isMobile()" class="order-title-decor" src="@/section/form/decor_m.svg" alt="心仝聚" srcset="">

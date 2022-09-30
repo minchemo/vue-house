@@ -2,8 +2,8 @@
   <div class="s3 relative">
     <div class="absolute caption text-white">情境示意圖</div>
     <div class="absolute content">
-      <h2 data-aos="fade" data-aos-delay="0" class="font-['Noto_Serif_JP'] text-[#F6B39A]">時代變，很多事情不變</h2>
-      <p data-aos="fade" data-aos-delay="500" class="text-white  font-['Noto_Serif_TC']">
+      <h2  data-aos-delay="0" class="font-['Noto_Serif_JP'] text-[#F6B39A]">時代變，很多事情不變</h2>
+      <p  data-aos-delay="500" class="text-white  font-['Noto_Serif_TC']">
         網路社群蓬勃，映出人們對情感的渴望。現代都會社區取代傳統家族，成為家庭的新聚合體，卻缺少家與家之間的親切和溫度。<br>
         隆遠集團盼以「心」，重聚鄰里間的寒暄與笑容，讓社區成為家族的延伸，找回無可取代的歸屬感。
         </p>

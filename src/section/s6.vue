@@ -1,9 +1,9 @@
 <template>
   <div class="s6 relative bg-white">
     <div class="content">
-      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">北市壓軸，<br> 點燃產業引擎的下一個火光</div>
-      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">智慧 x 生技 x 科技</div>
-      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">
+      <div class="t1 font-['Noto_Serif_JP']" data-aos-delay="0">北市壓軸，<br> 點燃產業引擎的下一個火光</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos-delay="200">智慧 x 生技 x 科技</div>
+      <div class="t3 font-['Noto_Serif_TC']" data-aos-delay="400">
         台北市心中最後一塊科技產業園區，北士科占地94.38公頃，以「智慧健康醫療」及「數位技術服務」規劃兩大方向，作為先進技術展示櫥窗。串聯南港軟體園區、內湖科技園區，年產值上看208億元，成為科技產業鏈。
       </div>
     </div>

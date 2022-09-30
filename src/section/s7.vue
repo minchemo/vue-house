@@ -22,9 +22,9 @@
       </button>
     </div>
     <div class="info z-20">
-      <div class="t1 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="0">以熟成豐蘊前瞻</div>
-      <div class="t2 font-['Noto_Serif_JP']" data-aos="fade" data-aos-delay="200">雙捷、雙生活圈富饒同聚</div>
-      <div class="t3 font-['Noto_Serif_TC']" data-aos="fade" data-aos-delay="400">散步9分鐘即達捷運明德、芝山站，鄰近天母、士林生活圈，擘劃家的富域版圖。</div>
+      <div class="t1 font-['Noto_Serif_JP']" data-aos-delay="0">以熟成豐蘊前瞻</div>
+      <div class="t2 font-['Noto_Serif_JP']" data-aos-delay="200">雙捷、雙生活圈富饒同聚</div>
+      <div class="t3 font-['Noto_Serif_TC']" data-aos-delay="400">散步9分鐘即達捷運明德、芝山站，鄰近天母、士林生活圈，擘劃家的富域版圖。</div>
     </div>
   </div>
 </template>
