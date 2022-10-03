@@ -2,9 +2,8 @@
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
     <div class="title flex flex-col items-center justify-center">
       <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層雲頂地標</div>
-      <div class="t2 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="200">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身
-        2000 坪公園森林，<br v-if="!$isMobile()">
-        這是林口第 18 個里，唯一住在富貴公園裡的里，這個里，屬於長耀，屬於你。<br>
+      <div class="t2 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="200">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
+        這是林口第 18 個里，唯一住在公園的里，這個里，屬於長耀，屬於你。<br>
         家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</div>
       <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
           v-else>| </span>18-29坪 富貴公園首席</div>
