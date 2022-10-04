@@ -18,7 +18,7 @@
       <a href="https://www.lixin.com.tw/" target="_blank"
         ><img src="../assets/img/footerLogo.gif" alt="立炘數位"
       /></a>
-      <a href="https://www.h35.tw/admin/test/login.php" target="_blank"
+      <a href="https://www.h65.tw/admin/test/login.php" target="_blank"
         >網頁製作</a
       >
     </div>
