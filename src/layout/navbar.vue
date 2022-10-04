@@ -16,7 +16,6 @@
             <div class="close" @click="menuOpen = !menuOpen">
                 <img src="@/assets/close.png" alt="" srcset="">
             </div>
-            <img class="decor" src="@/section/s3/decor.png" alt="" srcset="">
         </div>
     </div>
     <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
