@@ -1,4 +1,4 @@
-  <template>
+<template>
   <div class="order relative bg-[#E5DBC2] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
@@ -393,6 +393,13 @@ const send = () => {
   let pass = true
   let unfill = []
   let idx = 0
+
+
+  //UTMwindow.appier_q = window.appier_q || [];
+  window.appier_q.push(
+    { "t": "register", "content": { "id": "6d56", "site": "cyl.changyaoli.tw" } },
+    { "t": "type_conversion", "content": "submit", "action_id": "Conversion_7d50", "track_id": "49b66888a57aa59", "opts": { "unique_key": "true" } })
+
 
   //驗證
   for (const [key, value] of Object.entries(formData)) {

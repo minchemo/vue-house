@@ -72,6 +72,12 @@ onMounted(() => {
     });
   };
 
+
+  window.appier_q = window.appier_q || [];
+  window.appier_q.push(
+    { "t": "register", "content": { "id": "6d56", "site": "cyl.changyaoli.tw" } },
+    { "t": "type_landing", "action_id": "ViewLanding_1e7d", "track_id": "49b66888a57aa59", "opts": { "unique_key": "true" } })
+
   // Eruda.init()
 
 })

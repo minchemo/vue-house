@@ -2,15 +2,17 @@
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-between items-center"
+        @click="modalOpen = true; modalType = 'phone'; callEvent()">
         <img src="@/section/form/phone.svg" alt="長耀里" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-between items-center"
+        @click="modalOpen = true; modalType = 'fb'; msgEvent()">
         <img src="@/section/form/messenger.svg" alt="長耀里" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-between items-center btfanpage" @click="open(); fbEvent();">
         <img src="@/section/form/fb.svg" alt="長耀里" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
@@ -31,12 +33,12 @@
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'phone'">
+      @click="modalOpen = true; modalType = 'phone'; callEvent()">
       <img src="@/section/form/phone.svg" alt="長耀里" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'">
+      @click="modalOpen = true; modalType = 'fb'; msgEvent()">
       <img src="@/section/form/messenger.svg" alt="長耀里" srcset="" />
       <div>FB 諮詢</div>
     </div>
@@ -62,11 +64,11 @@
       <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="長耀里" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-          '接待會館'
+      '接待會館'
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+      `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-black border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
@@ -76,7 +78,7 @@
         'btcontac': modalType == 'phone'
       }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-            '開啟導航'
+        '開啟導航'
         }}</div>
     </div>
   </div>
@@ -280,6 +282,28 @@ const go = () => {
 
 const open = () => {
   window.open(info.fbLink);
+}
+
+const callEvent = () => {
+  window.appier_q = window.appier_q || [];
+  window.appier_q.push(
+    { "t": "register", "content": { "id": "6d56", "site": "cyl.changyaoli.tw" } },
+    { "t": "type_conversion", "content": "submit", "action_id": "Conversion_13cd", "track_id": "49b66888a57aa59", "opts": { "unique_key": "true" } })
+}
+
+const msgEvent = () => {
+  window.appier_q = window.appier_q || [];
+  window.appier_q.push(
+    { "t": "register", "content": { "id": "6d56", "site": "cyl.changyaoli.tw" } },
+    { "t": "type_conversion", "content": "submit", "action_id": "Conversion_dac6", "track_id": "49b66888a57aa59", "opts": { "unique_key": "true" } })
+}
+
+const fbEvent = () => {
+  window.appier_q = window.appier_q || [];
+  window.appier_q.push(
+    { "t": "register", "content": { "id": "6d56", "site": "cyl.changyaoli.tw" } },
+    { "t": "type_conversion", "content": "submit", "action_id": "Conversion_4cbb", "track_id": "49b66888a57aa59", "opts": { "unique_key": "true" } })
+
 }
 
 

@@ -432,5 +432,13 @@ const scrollTo = (el) => {
         scrollTo: document.querySelector(el)
     })
     menuOpen.value = false
+
+    if (el == '.order') {
+        window.appier_q = window.appier_q || [];
+        window.appier_q.push(
+            { "t": "register", "content": { "id": "6d56", "site": "cyl.changyaoli.tw" } },
+            { "t": "type_conversion", "content": "submit", "action_id": "Conversion_37bb", "track_id": "49b66888a57aa59", "opts": { "unique_key": "true" } })
+
+    }
 }
 </script>
