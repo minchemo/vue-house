@@ -1,9 +1,9 @@
 <template>
   <div class="thanks">
     <a href="/">
-      <img src="~@/assets/img/thank-img.png" alt="春福御邸" class="img" />
+      <img src="~@/assets/img/thank-img-phone.png" alt="春福御邸" class="img" />
       <img
-        src="~@/assets/img/thank-img-hover.png"
+        src="~@/assets/img/thank-img-phone-h.png"
         alt="春福御邸"
         class="img-hover"
       />
