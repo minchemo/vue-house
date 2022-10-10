@@ -1,14 +1,18 @@
 <template>
   <article class="s1">
-    <img class="logo" v-if="!$isMobile()" src="@/section/s1/logo.png" alt="" data-aos="fade-up">
-    <img class="logo" v-else src="@/section/s1/logo_m.png" alt="" data-aos="fade-up">
-    <img class="title" v-if="!$isMobile()" src="@/section/s1/title.png" alt="" data-aos="fade-up" data-aos-delay="200">
-    <img class="title" v-else src="@/section/s1/title_m.png" alt="" data-aos="fade-up" data-aos-delay="200">
-    <img class="light" v-if="!$isMobile()" src="@/section/s1/light.png" alt="" srcset="">
-    <div class="other">
-    <div class="t-new" data-aos="fade-up" data-aos-delay="200">接待中心：崇明路．崇明24街口</div>
-    <a href="#order" class="order font-['noto_serif_tc']"  data-aos="fade-up" data-aos-delay="300">立即預約</a>
+    <div class="title">
+      <img v-if="!$isMobile()" class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/t1.png" alt=""
+        srcset="">
+      <img v-else class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/t1_m.png" alt="" srcset="">
+      <img v-if="!$isMobile()" class="t2" data-aos="fade-up" data-aos-delay="200" src="@/section/s1/t2.png" alt=""
+        srcset="">
+      <img v-else class="t2" data-aos="fade-up" data-aos-delay="200" src="@/section/s1/t2_m.png" alt="" srcset="">
+      <img v-if="!$isMobile()" class="t3" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t3.png" alt=""
+        srcset="">
+      <img v-else class="t3" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t3_m.png" alt="" srcset="">
     </div>
+    <img class="sun" src="@/section/s1/sun.png" alt="" srcset="">
+    <img class="boat" src="@/section/s1/boat.png" alt="" srcset="">
   </article>
 </template>
 
@@ -16,79 +20,61 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-  width: 100%;
-  height: 100vh;
+  @apply relative w-full h-screen overflow-hidden;
   min-height: size(900);
   max-height: size(1080);
-  background: url('@/section/s1/bg.jpg');
+  background: url('@/section/s1/bg.png');
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: size(30);
+  .sun {
+    @apply absolute mix-blend-screen pointer-events-none;
+    z-index: 3;
+    width: size(1100);
+    top: size(200);
+    left: -#{size(200)};
+    transform: scale(1.5)rotate(-45deg);
+    transform-origin: 35% 45%;
+    animation: rotate 6s alternate infinite linear;
 
-
-.other{
-display: flex;
-justify-content: space-between;
-align-items: center;
- width: size(750);
-
-  .t-new{
-  font-size: size(30);
-  color: #fff;
-  font-weight: 600;
-  }
-  .order{
-      width: size(300);
-      height: size(80);
-      font-size: size(30);
-      background: #C9A063;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      border-radius: 30px;
-      font-weight: 600;
-      letter-spacing: 0.3em;
-      border: 2px solid #C9A063;
-      transition: 0.5s;
-
-      &:hover{
-      background: #a1804d; 
-      transition: 0.5s;
-      border: 2px solid #fff;
+    @keyframes rotate {
+      to{
+        transform: skewX(0deg);
       }
     }
-}
-  
+  }
 
-  .light {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: size(1200);
-    animation: flash .8s alternate-reverse infinite;
+  .boat {
+    @apply absolute right-0 pointer-events-none;
+    top: size(574);
+    width: size(1083);
+    height: size(764);
+    z-index: 2;
+    transform: translateX(100%);
+    animation: boatIn 2s forwards ease-in-out;
 
-    @keyframes flash {
-      from {
-        opacity: 50%;
-      }
-
+    @keyframes boatIn {
       to {
-        opacity: 100%;
+        transform: translateX(0%);
       }
     }
   }
 
-  .logo {
-    width: size(550);
-  }
 
   .title {
-    width: size(909);
+    @apply left-1/2 -translate-x-[50%] absolute flex flex-col items-center justify-center;
+    z-index: 5;
+    top: size(112);
+    gap: size(36);
+    .t1 {
+      width: size(984);
+    }
+    .t2 {
+      width: size(984);
+    }
+    .t3 {
+      width: size(694);
+    }
   }
+
 }
 
 /* 螢幕尺寸標準 */
@@ -103,32 +89,47 @@ align-items: center;
     background: url('@/section/s1/bg_m.jpg');
     background-size: cover;
     gap: size-m(35);
+  .sun {
+    z-index: 3;
+    width: size-m(200);
+    top: unset;
+    bottom: -#{size-m(0)};
+    left: -#{size-m(100)};
+    transform: scale(1.5)rotate(-45deg);
+    transform-origin: 35% 45%;
+    animation: rotate 6s alternate infinite linear;
 
-    .other{
-    display: block;
-    width: size-m(300);
-    text-align: center;
-    margin-top: -16px;
-
-      .t-new{
-        font-size: size-m(20);
-      }
-      .order{
-        width: size-m(250);
-        height: size-m(60);
-        font-size: size-m(25);
-        margin: 20px auto 0px auto;
+    @keyframes rotate {
+      to{
+        transform: skewX(0deg);
       }
     }
+  }
+
+  .boat {
+    top: unset;
+    bottom: -#{size-m(70)};
+    width: size-m(306);
+    height: size-m(216);
+  }
 
 
-    .logo {
-      width: size-m(279);
+  .title {
+    top: size-m(80);
+    gap: 0;
+    .t1 {
+      width: size-m(158);
     }
-
-    .title {
-      width: size-m(315);
+    .t2 {
+      width: size-m(239);
+      margin-top: size-m(50);
+      margin-bottom: size-m(23);
     }
+    .t3 {
+      width: size-m(139);
+    }
+  }
+
   }
 }
 </style>
