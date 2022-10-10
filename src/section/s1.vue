@@ -13,6 +13,7 @@
     </div>
     <img class="sun" src="@/section/s1/sun.png" alt="" srcset="">
     <img class="boat" src="@/section/s1/boat.png" alt="" srcset="">
+    <img class="light" v-if="$isMobile" src="@/section/s1/light.png" alt="">
   </article>
 </template>
 
@@ -89,6 +90,22 @@
     background: url('@/section/s1/bg_m.jpg');
     background-size: cover;
     gap: size-m(35);
+
+    .light {
+      @apply  mix-blend-screen pointer-events-none absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      animation: light .5s alternate-reverse infinite;
+      @keyframes light {
+        from {
+          opacity: 50%;
+        }
+        to {
+          opacity: 100%;
+        }
+      }
+    }
   .sun {
     z-index: 3;
     width: size-m(200);
