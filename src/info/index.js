@@ -1,4 +1,4 @@
-const caseName = "海揚"
+const caseName = "海揚V1"
 
 export default {
     meta: {
@@ -14,7 +14,7 @@ export default {
     fbMessage: "",
     caseName: caseName,
     houseInfos: [],
-    gtmCode: ["GTM-MB9MMXK"], // 可放置多個
+    gtmCode: ["GTM-TS73DPL"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3

@@ -1,5 +1,8 @@
 <template>
   <article class="s1">
+    <div class="seawave">
+     <img  src="@/section/s1/gif4.gif" alt="" srcset=""> 
+    </div>
     <div class="title">
       <img v-if="!$isMobile()" class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/t1.png" alt=""
         srcset="">
@@ -12,8 +15,11 @@
       <img v-else class="t3" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t3_m.png" alt="" srcset="">
     </div>
     <img class="sun" src="@/section/s1/sun.png" alt="" srcset="">
+    <div class="boatin" data-aos="fade-left" data-aos-delay="500">
     <img class="boat" src="@/section/s1/boat.png" alt="" srcset="">
-    <img class="light" v-if="$isMobile" src="@/section/s1/light.png" alt="">
+    </div>
+    <img class="light" v-if="$isMobile()" src="@/section/s1/light.png" alt="">
+    
   </article>
 </template>
 
@@ -26,13 +32,28 @@
   max-height: size(1080);
   background: url('@/section/s1/bg.png');
   background-size: cover;
+
+  .seawave {
+   @apply relative w-full h-screen overflow-hidden;
+   width: size(1500);
+   height: 12vh;
+   bottom: 0;
+   position: absolute;
+    img{
+      width: 100%;
+      mix-blend-mode: overlay;
+      opacity: .3;
+    }
+  }
+  
+
   .sun {
     @apply absolute mix-blend-screen pointer-events-none;
     z-index: 3;
-    width: size(1100);
-    top: size(200);
-    left: -#{size(200)};
-    transform: scale(1.5)rotate(-45deg);
+    width: size(800);
+    top: size(370);
+    left: -#{size(100)};
+    transform: scale(1.2)rotate(-30deg);
     transform-origin: 35% 45%;
     animation: rotate 6s alternate infinite linear;
 
@@ -49,12 +70,13 @@
     width: size(1083);
     height: size(764);
     z-index: 2;
-    transform: translateX(100%);
-    animation: boatIn 2s forwards ease-in-out;
+    animation: boatwave 2s infinite alternate ease-in-out;
+    transform: translateY(3%);
 
-    @keyframes boatIn {
+
+    @keyframes boatwave {
       to {
-        transform: translateX(0%);
+        transform: translateY(0%);
       }
     }
   }
@@ -85,11 +107,18 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
+    height: 100vh;
     min-height: size-m(667);
     max-height: size-m(750);
     background: url('@/section/s1/bg_m.jpg');
     background-size: cover;
     gap: size-m(35);
+
+    .seawave {
+      width: size-m(375);
+      height: 5vh;
+
+    }
 
     .light {
       @apply  mix-blend-screen pointer-events-none absolute;
@@ -123,12 +152,24 @@
     }
   }
 
-  .boat {
+  .boatin{
+    height: 100vh;
+    min-height: size-m(667);
+    max-height: size-m(750);
+    position: relative;
+    z-index: 99;
+
+
+    .boat {
     top: unset;
     bottom: -#{size-m(70)};
     width: size-m(306);
     height: size-m(216);
   }
+
+  }
+
+
 
 
   .title {

@@ -138,7 +138,7 @@
   color:#fff;
   padding-top: size(300);
   .text {
-    font-weight: 400;
+    font-weight: 200;
     font-size: size(20);
     line-height: 2;
     text-align: center;
@@ -148,7 +148,7 @@
     width: size(148);
     height: size(1);
     background-color: #9DEDFF;
-    margin: size(50) auto;
+    margin: size(100) auto;
   }
 
   .t2 {
