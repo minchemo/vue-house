@@ -31,7 +31,7 @@
 
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
       <div>撥打電話</div>
@@ -70,7 +70,17 @@
       `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btcontac': modalType == 'phone'
+      }">
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        '開啟導航'
+        }}</div>
+      <!-- btn phone -->
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -282,9 +292,9 @@ const modalType = ref('');
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;
-    setTimeout(() => {
-      window.location.href = "phoneThanks";
-    }, 1000);
+    // setTimeout(() => {
+    //   window.location.href = "phoneThanks";
+    // }, 1000);
   } else if (modalType.value == 'fb') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
