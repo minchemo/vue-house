@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-info mx-auto bg-[#7BA9D3] flex flex-col items-center justify-between">
+  <!--div class="contact-info mx-auto bg-[#7BA9D3] flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
@@ -26,11 +26,11 @@
       </div>
     </div>
 
-  </div>
+  </div-->
 
 
   <!-- Mobile contact info -->
-  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <!--div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
@@ -50,7 +50,7 @@
       <img src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
       <div>地圖導航</div>
     </div>
-  </div>
+  </div-->
 
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
@@ -106,6 +106,7 @@
   position: relative;
   z-index: 50;
   margin-bottom: 0;
+  display: none;
 
   .logo {
     width: size(556);

@@ -2,23 +2,15 @@
   <article class="s1">
     <div class="title absolute">
       <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
-      <div class="t1"  data-aos="fade-up" data-aos-delay="200">泰嘉 又回楠梓 <br v-if="$isMobile()"/>準備好了嗎？</div>
     </div>
-    <div class="tip absolute text-white">TIMELESS TIME</div>
-    <div class="home-openning absolute font-['Noto_Sans_TC']">
-      <div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div>
-      <div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div>
-      <div class="line">
-        <span></span>
-      </div>
-    </div>
-    <!--wave-->
-    <div class="w">
-      <div class="w4"><img src="https://i.imgur.com/qStzKed.png" /><img src="https://i.imgur.com/qStzKed.png" /></div>
-      <div class="w3"><img src="https://i.imgur.com/4CQrKVN.png" /><img src="https://i.imgur.com/4CQrKVN.png" /></div>
-      <div class="w2"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
-      <div class="w1"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
-    </div>
+    <img  class="t1 absolute" v-if="!$isMobile()" src="@/section/s1/title.svg" alt="">
+    <img  class="t1 absolute" v-if="$isMobile()" src="@/section/s1/title_m.svg" alt="">
+    <img class="bird absolute" src="@/section/s1/bird.svg" alt="">
+    <img class="line absolute" src="@/section/s1/line.svg" alt="">
+    <img class="stitle absolute" src="@/section/s1/stitle.svg" alt="">
+
+    <!--div class="t1"  data-aos="fade-up" data-aos-delay="200">回「嘉」 即刻預約 <br/>高大特區 泰嘉建築經典再現</div-->
+
   </article>
 </template>
 
@@ -34,24 +26,40 @@
   background-size: cover;
 
   .title {
-    left: size(1037);
-    top: size(355);
+    right: size(210);
+    top: size(130);
 
     .logo {
-      width: size(369);
+      width: size(430);
 
       img {
         width: 100%;
       }
     }
 
-    .t1 {
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      font-weight: 700;
-      margin-top: size(50);
-    }
+    
   }
+  .t1 {
+      width: size(1200);
+      bottom: size(105);
+      left: size(225);
+    }
+
+  .bird {
+      width: size(200);
+      bottom: size(300);
+      left: size(205);
+    }
+   .line {
+      width: size(428);
+      bottom: size(248);
+      left: size(697);
+    } 
+    .stitle {
+      width: size(100);
+      bottom: size(10);
+      right: size(20);
+    } 
 
   .tip {
     left: size(26);
@@ -202,24 +210,44 @@
 
   .s1 {
     min-height: size-m(667);
-    max-height: size-m(750);
+    max-height: size-m(820);
+    //max-height: size-m(750);
     background: url('@/section/s1/bg_m.jpg');
     background-size: cover;
     position: relative;
 
     .title {
-      left: size-m(110);
-      top: size-m(79);
+      left: size-m(40);
+      top: size-m(59);
+      
 
       .logo {
-        width: size-m(155);
+        width: size-m(190);
+        margin: 0px auto;
       }
 
-      .t1 {
-        font-size: size-m(22);
-        margin-top: size-m(15);
-      }
+      
     }
+    .t1 {
+        width: size-m(190);
+        left: size-m(92);
+        bottom: size-m(79);
+      }
+    .bird {
+      width: size-m(90);
+      bottom: size-m(262);
+      left: size-m(240);
+    }
+     .line {
+      width: size-m(160);
+      left: size-m(110);
+      bottom: size-m(255);
+    } 
+    .stitle {
+      width: size-m(100);
+      bottom: size-m(10);
+      right:size-m(10);
+    }   
 
     .tip {
       left: size-m(4);

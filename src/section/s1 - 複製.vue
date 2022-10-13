@@ -2,7 +2,7 @@
   <article class="s1">
     <div class="title absolute">
       <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
-      <div class="t1"  data-aos="fade-up" data-aos-delay="200">泰嘉 又回楠梓 <br v-if="$isMobile()"/>準備好了嗎？</div>
+      <div class="t1"  data-aos="fade-up" data-aos-delay="200">回「嘉」 即刻預約 <br/>高大特區 泰嘉建築經典再現</div>
     </div>
     <div class="tip absolute text-white">TIMELESS TIME</div>
     <div class="home-openning absolute font-['Noto_Sans_TC']">
@@ -35,7 +35,7 @@
 
   .title {
     left: size(1037);
-    top: size(355);
+    top: size(330);
 
     .logo {
       width: size(369);
@@ -49,7 +49,7 @@
       font-size: size(40);
       letter-spacing: 0.07em;
       font-weight: 700;
-      margin-top: size(50);
+      margin-top: size(40);
     }
   }
 
@@ -208,16 +208,19 @@
     position: relative;
 
     .title {
-      left: size-m(110);
+      left: size-m(60);
       top: size-m(79);
+      
 
       .logo {
         width: size-m(155);
+        margin: 0px auto;
       }
 
       .t1 {
-        font-size: size-m(22);
+        font-size: size-m(20);
         margin-top: size-m(15);
+        text-align: center;
       }
     }
 

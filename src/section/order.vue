@@ -89,11 +89,12 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: size(0);
+  padding-bottom: size(90);
   position: relative;
   height: auto;
   padding-top: size(90);
   overflow: hidden;
+  
 
   .z-10 {
     z-index: 10;
@@ -202,7 +203,7 @@
   .order-section {
     // background-image: url('@/section/form/bg_m.png');
     height: auto;
-    padding-bottom: 0;
+    padding-bottom: size-m(80);
     position: relative;
     overflow: hidden;
 

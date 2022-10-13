@@ -1,4 +1,5 @@
 <template>
+    <div class="displaynone">
     <div class="flex flex-col md:flex-row items-center justify-between bg-[#fff]">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_Sans_TC']">
@@ -16,6 +17,7 @@
         </div>
 
 
+    </div>
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
@@ -37,8 +39,9 @@
 //     background-position: center;
 //     background-repeat: no-repeat;
 // }
-
+.displaynone{display: none;}
 .info-box {
+    
 
     width: size(800);
 
@@ -69,7 +72,8 @@
 
 @media screen and (max-width:768px) {
     .footer {
-        margin-bottom: size-m(63);
+        margin-bottom: size-m(0);
+        //margin-bottom: size-m(63);
     }
 
     .info-box {
