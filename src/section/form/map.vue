@@ -10,6 +10,7 @@
 .gmap {
     width: 100%;
     height: size(500);
+    display: none;
 
     iframe {
         width: 100%;
