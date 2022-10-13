@@ -119,7 +119,7 @@
     <!-- <Map /> -->
 
     <!-- HouseInfo -->
-    <!-- <HouseInfo /> -->
+    <HouseInfo />
   </div>
 </template>
 
