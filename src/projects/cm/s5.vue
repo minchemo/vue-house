@@ -127,6 +127,11 @@
           height: size-m(278.57);
           background-size: cover;
           background-position: bottom;
+
+          &:nth-child(11),&:nth-child(12),&:nth-child(13){
+            display: none;
+          }
+          
         }
       }
       .swiper-pagination {
@@ -149,6 +154,9 @@
           margin-right: size-m(8);
           &.swiper-pagination-bullet-active {
             background-color: #182c80;
+          }
+          &:nth-child(5){
+            display: none;
           }
         }
       }
@@ -234,14 +242,14 @@ export default {
       captions: ["", "", ""],
       imgs: [
         isMobile
-          ? require("@/projects/cm/s5/new/01_m.jpg")
-          : require("@/projects/cm/s5/new/01.jpg"),
+          ? require("@/projects/cm/s5/3_m.jpg")
+          : require("@/projects/cm/s5/3.jpg"),
         isMobile
-          ? require("@/projects/cm/s5/new/02_m.jpg")
-          : require("@/projects/cm/s5/new/02.jpg"),
+          ? require("@/projects/cm/s5/2_m.jpg")
+          : require("@/projects/cm/s5/2.jpg"),
         isMobile
-          ? require("@/projects/cm/s5/new/03.jpg")
-          : require("@/projects/cm/s5/new/03.jpg"),
+          ? require("@/projects/cm/s5/1_m.jpg")
+          : require("@/projects/cm/s5/1.jpg"),
         isMobile
           ? require("@/projects/cm/s5/4_m.jpg")
           : require("@/projects/cm/s5/4.jpg"),
@@ -251,13 +259,25 @@ export default {
         isMobile
           ? require("@/projects/cm/s5/6_m.jpg")
           : require("@/projects/cm/s5/6.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/new/01_m.jpg")
+          : require("@/projects/cm/s5/new/01.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/new/02_m.jpg")
+          : require("@/projects/cm/s5/new/02.jpg"),
+        isMobile
+          ? require("@/projects/cm/s5/new/03.jpg")
+          : require("@/projects/cm/s5/new/03.jpg"),  
       ],
       links: [
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
         'https://www.xin-city.com/tokyo/',
         'https://ropponi.creator-taiwan.com',
-        '',
-        '',
-        '',
         ''
       ]
     };
