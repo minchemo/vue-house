@@ -1,5 +1,5 @@
 <template>
-    <div class="displaynone">
+    <div>
     <div class="flex flex-col md:flex-row items-center justify-between bg-[#fff]">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_Sans_TC']">

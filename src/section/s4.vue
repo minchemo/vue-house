@@ -3,7 +3,8 @@
     <div class="item">
       <div class="t1" data-aos="fade-up" data-aos-delay="0">六大創新 拓展建築 美的造極</div>
       <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">高雄的好朋友泰嘉，踏行楠梓高雄大學特區，<br />
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
+        高雄的好朋友泰嘉，踏行高雄大學特區，<br />
         首創六大創新服務，開拓南台灣建築大道上的典範。
       </div>
     </div>
@@ -193,7 +194,7 @@ const images = [
   {
     image: new URL("../section/s4/3.jpg", import.meta.url).href,
     icon: new URL("../section/s4/i3.svg", import.meta.url).href,
-    text: '專業先於廣告<br/>SGS檢測證'
+    text: '專業先於廣告<br/>SGS檢測認證<br/>(水電、機電、消防)'
   },
   {
     image: new URL("../section/s4/4.jpg", import.meta.url).href,

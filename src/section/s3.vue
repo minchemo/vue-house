@@ -3,13 +3,14 @@
     <div class="item">
       <div class="t1" data-aos="fade-up" data-aos-delay="0">坐在泰嘉的肩上 引以為傲</div>
       <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">放眼台灣，泰嘉以絕藏獨到細節<br />
-        茁長出六大創新服務行囊<br />
-        楠梓將又一次<br />
-        無可超越的，河海韻律日常<br />
-        無以複製的，泰嘉生活美學<br />
-        總比需求出現前走快了一步<br />
-        讓日後得以放慢腳步、提煉生活深度<br />
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
+        放眼台灣，泰嘉以絕藏獨到細節<br>
+        茁長出六大創新服務行囊<br>
+        楠梓將又一次<br>
+        無可超越的，河海韻律日常<br>
+        無以複製的，泰嘉生活美學<br>
+        總比需求出現前走快了一步<br>
+        讓日後得以放慢腳步、提煉生活深度<br>
         住進泰嘉拓真，成為永恆驕傲
       </div>
     </div>
