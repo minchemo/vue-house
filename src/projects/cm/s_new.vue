@@ -6,7 +6,7 @@
           <img class="cover" :src="slide.img" alt="" srcset="">
           <div class="text">
             <div class="t1">{{slide.title}}</div>
-            <div class="t2"><a :href="slide.link" target="_blank">MORE</a> <span>#{{slide.tag}}</span></div>
+            <div class="t2"><a class="link" :href="slide.link" target="_blank">MORE</a> <span>#{{slide.tag}}</span></div>
           </div>
         </swiper-slide>
       </swiper>
@@ -19,6 +19,7 @@
 @import "@/assets/style/function.scss";
 
 /* 螢幕尺寸標準 */
+
 .news {
   position: relative;
   width: 100%;
@@ -34,6 +35,7 @@
     .swiper-wrapper {
       .slide {
         height: auto;
+
 
         .cover {
           width: auto;
@@ -57,12 +59,15 @@
           .t2 {
             font-size: size(25);
             margin-top: size(30);
+            
 
             a {
               text-decoration: none;
               color: #182C80;
               letter-spacing: size(10);
               margin-right: size(10);
+
+              
 
               &:hover {
                 opacity: 0.5;
@@ -303,6 +308,12 @@ export default {
         }
       },
       imgs: [
+        {
+          title: '低自備、輕鬆付、成家基金78萬起 三大圓夢方案實施中',
+          tag: '限定戶型 #限量名額 #請洽案場',
+          link: '',
+          img: require("@/projects/cm/news/7.jpg")
+        },
         {
           title: '【影音】南山台南廣場、北外環加持隱富新核心成形',
           tag: '蘋果新聞網',
