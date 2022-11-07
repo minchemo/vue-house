@@ -1,7 +1,7 @@
 <template>
   <article class="s3">
     <div class="main">
-      <div class="caption" v-if="!$isMobile()">空拍實景</div>
+      <div class="caption">空拍實景</div>
       <div class="text-box">
         <div class="t1" data-aos="fade-up" data-aos-delay="0">60米大興西路X 30米正光路</div>
         <div class="t2" data-aos="fade-up" data-aos-delay="100">交通正十字軸心 光速暢遊</div>
@@ -50,12 +50,12 @@
 
     .caption {
       position: absolute;
-      right: size(60);
-      bottom: size(25);
-      font-weight: 400;
-      font-size: size(15);
-      color: #FFFFFF;
-      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+        right: size(12);
+        bottom: size(16);
+        font-weight: 400;
+        font-size: size(18);
+        color: #FFFFFF;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
     }
 
     .text-box {
@@ -136,6 +136,13 @@
         top: size-m(20);
         pointer-events: none;
       }
+
+      .caption {
+          right: size-m(8);
+          bottom: size-m(5);
+          font-size: size-m(17);
+          z-index: 5;
+        }
 
       .text-box {
         position: relative;

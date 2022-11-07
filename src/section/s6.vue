@@ -1,7 +1,7 @@
 <template>
   <article class="s6">
     <div class="main">
-      <div v-if="!$isMobile()" class="caption">外觀3D示意圖</div>
+      <div  class="caption">外觀3D示意圖</div>
       <div class="text-box">
         <div class="t2" data-aos="fade-up" data-aos-delay="0">純正百坪大戶 榮耀世族</div>
         <div class="c-divider"></div>
@@ -39,14 +39,14 @@
 
 
     .caption {
-      position: absolute;
-      right: size(30);
-      top: size(25);
-      font-weight: 400;
-      font-size: size(15);
-      color: #FFFFFF;
-      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-    }
+        position: absolute;
+        right: size(12);
+        bottom: size(16);
+        font-weight: 400;
+        font-size: size(18);
+        color: #FFFFFF;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+      }
 
     .text-box {
       margin-left: -#{size(850)};
@@ -109,6 +109,12 @@
       height: size-m(631);
       background-image: url('@/section/s6/bg_m.jpg');
       padding-top: size-m(50);
+
+      .caption {
+          right: size-m(8);
+          bottom: size-m(5);
+          font-size: size-m(16);
+        }
 
       .text-box {
         margin-left: auto;

@@ -61,14 +61,14 @@
         background-size: cover;
 
         .caption {
-          position: absolute;
-          right: size(17);
-          top: size(17);
-          font-weight: 400;
-          font-size: size(15);
-          color: #FFFFFF;
-          text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-        }
+        position: absolute;
+        right: size(12);
+        bottom: size(16);
+        font-weight: 400;
+        font-size: size(18);
+        color: #FFFFFF;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+      }
       }
 
       .prev {
@@ -166,10 +166,10 @@
           height: size-m(267);
 
           .caption {
-            right: size-m(10);
-            top: size-m(10);
-            font-size: size-m(15);
-          }
+          right: size-m(8);
+          bottom: size-m(5);
+          font-size: size-m(16);
+        }
         }
 
         .mo-arrows {
