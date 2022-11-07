@@ -6,7 +6,7 @@
           <img class="cover" :src="slide.img" alt="" srcset="">
           <div class="text">
             <div class="t1">{{slide.title}}</div>
-            <div class="t2"><a class="link" :href="slide.link" target="_blank">MORE</a> <span>#{{slide.tag}}</span></div>
+            <div class="t2"><a class="link" :href="slide.link" v-if="slide.link" target="_blank">MORE</a> <span>#{{slide.tag}}</span></div>
           </div>
         </swiper-slide>
       </swiper>
