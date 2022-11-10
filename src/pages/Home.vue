@@ -11,6 +11,7 @@
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Serif_TC',serif]">
+    <h1 style="display:none;">長耀里</h1>
     <S1 />
     <!-- <S2 /> -->
     <S2V />
