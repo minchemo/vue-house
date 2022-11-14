@@ -35,7 +35,7 @@
           <select class="select w-full rounded-full" v-model="formData.project">
             <option value="" selected disabled>選擇建案</option>
             <option value="日和">日和</option>
-            <option value="日進學（早鳥優惠開跑）">日進學（早鳥優惠開跑）</option>
+            <option value="日進學">日進學</option>
           </select>
           <select class="select w-full rounded-full" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
