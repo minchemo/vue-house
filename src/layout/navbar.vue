@@ -234,10 +234,11 @@
 }
 
 .gotop {
-    width: size(49.4);
-    height: size(49.4);
-    right: size(20);
-    bottom: size(50);
+    font-size:size(20);
+    width:2.47em;
+    height: 2.47em;
+    right:1em;
+    bottom:2.5em;
     background-image: url('@/assets/top.png');
     background-size: contain;
     background-position: center;
@@ -253,10 +254,8 @@
 @media screen and (max-width:768px) {
 
     .gotop {
-        width: size-m(34.24);
-        height: size-m(34.24);
-        right: size-m(20);
-        bottom: size-m(80);
+    font-size:16px;
+    bottom: 75px;
     }
 
     .nav {

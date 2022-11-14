@@ -138,9 +138,7 @@
       }
 
       img {
-        max-width: size(27);
-        height: auto;
-        max-height: size(27);
+        height: 1.56em;
         filter: brightness(0) invert(1);
         transition: all .5s;
       }
@@ -178,23 +176,29 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width: size-m(375);
-    height: size-m(63);
+    width:100%;
+    height: 63px;
     gap: size-m(1);
 
     .contact-item {
       height: 100%;
       background-color: #969083;
-      font-size: size-m(16);
+      font-size:16px;
       font-weight: 400;
       color: #fff;
-
+/*
       img {
         margin-bottom: size-m(5);
         max-width: size-m(16.5);
         height: auto;
         max-height: size-m(16.5);
         filter: brightness(0) invert(1);
+      }
+      */
+      img {
+        height: 1.56em;
+        filter: brightness(0) invert(1);
+        transition: all .5s;
       }
 
     }
