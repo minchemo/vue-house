@@ -1,33 +1,44 @@
 <template>
   <article class="s2">
-    <div class="logo" data-aos="fade-up" data-aos-delay="0">
-      <img src="@/section/s2/logo.svg" alt="">
+    <div class="arrows">
+      <img v-if="$isMobile()" @click="splideRef.splide.go('<')" class="prev clickable" src="@/section/s2/prev_m.png" alt="" srcset="">
+      <img v-else @click="splideRef.splide.go('<')" class="prev clickable" src="@/section/s2/prev.png" alt="" srcset="">
+
+      <img v-if="$isMobile()" @click="splideRef.splide.go('>')" class="next clickable" src="@/section/s2/next_m.png" alt="" srcset="">
+      <img v-else @click="splideRef.splide.go('>')" class="next clickable" src="@/section/s2/next.png" alt="" srcset="">
     </div>
-    <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="200">好住 是讓建築言之有物</div>
-      <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">
-        董事長常說，住的好，最要緊<br />
-        高難度的好住，是藏在魔鬼細節裡的精工<br />
-        30年的累積，手腳並到做建築<br />
-        親手畫尺寸、配管線、藏樑柱<br />
-        不說大話，做的更勝圖紙畫的<br />
-        讓一筆一線，轉化成毫釐不差的實踐<br />
-        用一步一腳印，建築城市一世紀風景</div>
+
+    <div class="content" v-if="$isMobile()">
+      <img class="title" src="@/section/s2/title.png" alt="" srcset="">
+      <p>從在地人的起家厝、維冠大樓重建工程，到台南首座青年公宅，宗大自1991年起扎根台南，一路以來沉著內斂，默默實踐「實在」的價值所在。以「建築」為起點，佈局「營造、製造、飯店」，建構完整的「生活產業生態系」，讓實在，無所不在。
+      </p>
     </div>
-    <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="200">南台灣先驅 開創國際眼界</div>
-      <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">
-        泰嘉洞見世界之大的寬遠<br />
-        於是墊高成本腳步、仰起品味肩頭<br />
-        向國際頂尖取經，挖掘大師奇想<br />
-        收進泰嘉腦袋，揉進靈魂DNA<br />
-        國際舞台上的風格技術<br />
-        搖身一變成了藝術本領<br />
-        泰嘉挾帶新觀點，更上不止一層樓
-      </div>
+
+    <img v-if="$isMobile()" class="en" src="@/section/s2/en_m.png" alt="" srcset="">
+    <Splide @splide:visible="onVisible" ref="splideRef" :options="{
+      type: 'loop',
+      perPage: $isMobile() ? 1 : 3,
+      focus: 'center',
+      arrows: false,
+      autoplay: true, pauseOnHover: false,
+      interval: 3000,
+      start: 1
+      // width: $isMobile() ? size_m(295) : null
+    }" class="slide-section">
+      <SplideSlide v-for="img, i in imgs" class="slide-item">
+        <img class="clickable cursor-pointer" @click="splideRef.splide.go(i)" :src="img.img" alt="" srcset="" >
+        <div class="text">
+          <div class="t1">{{ img.label1 }}</div>
+          <div class="t2">{{ img.label2 }}</div>
+        </div>
+      </SplideSlide>
+    </Splide>
+    <div class="content" v-if="!$isMobile()" data-aos="fade-up"  data-aos-duration="800">
+      <img class="title" src="@/section/s2/title.png" alt="" srcset="">
+      <p>從在地人的起家厝、維冠大樓重建工程，到台南首座青年公宅，宗大自1991年起扎根台南，一路以來沉著內斂，默默實踐「實在」的價值所在。以「建築」為起點，佈局「營造、製造、飯店」，建構完整的「生活產業生態系」，讓實在，無所不在。
+      </p>
     </div>
+    <img data-aos="fade-up"  data-aos-duration="800" v-if="!$isMobile()" class="en" src="@/section/s2/en.png" alt="" srcset="">
   </article>
 </template>
 
@@ -35,105 +46,271 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
+  @apply relative;
   width: 100%;
-  height: size(1080);
-  background-image: url('@/section/s2/bg.svg');
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: size(480);
-  position: relative;
+  height: 100vh;
+  padding-top: size(160);
+  background-color: #fff;
 
-  .logo {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: size(152.6);
+  .slide-section {
+    //  padding-top: size(160);
+    .slide-item {
+      @apply flex flex-col items-center transition-all;
+      opacity: 0.35;
+      img {
+        height: size(388);
+      }
+      .text {
+        @apply relative w-full flex items-center justify-center;
+        gap: size(21);
+        font-weight: 600;
+        letter-spacing: 0.09em;
+        padding-top: size(20);
+        margin-top: size(100);
+        .t1 {
+          font-size: size(28);
+          color: #AA8D30;
+        }
+        .t2 {
+          font-size: size(20);
+        }
 
-    img {
-      display: block;
-      width: size(393);
-      margin: 0 auto;
+        &::after {
+          @apply w-full absolute transition-all;
+          content: '';
+          height: size(1.5);
+          background-color: grey;
+          left: 0;
+          bottom: size(60);
+        }
+        
+      }
+      &.is-active {
+      opacity: 1;
+        .text {
+          &::after {
+            background-color: #C6A93E;
+            height: size(3);
+          }
+        }
+      }
     }
   }
 
-  .item {
-    font-family: 'Noto Sans TC';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: size(30);
-
-    .t1 {
-      font-weight: 700;
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      color: #699DC4;
-    }
-
+  .arrows {
+    @apply absolute flex items-center justify-between z-20;
+    bottom: size(340);
+    height: size(83);
+    width: 95%;
+    margin-left: 2.5% ;
+    
     img {
-      width: size(48);
+      @apply h-full;
+      margin: unset;
+      opacity: 0;
+      transition: all .5s;
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .content {
+    @apply flex items-center justify-center;
+    margin-top: size(95);
+    gap: size(176);
+    .title {
+      margin: unset;
+      width: size(376.17);
     }
 
-    .t2 {
-      font-weight: 400;
-      font-size: size(20);
-      line-height: 1.8;
-      letter-spacing: 0.07em;
+    p {
+      @apply font-['Noto_sans_tc'];
+font-weight: 400;
+font-size: size(20);
+line-height: size(45);
+letter-spacing: 0.05em;
+width: size(1010);
+
     }
+  }
+
+  .en {
+    @apply absolute z-10;
+    width: size(345);
+    top: size(101);
+    right: size(131);
   }
 }
 
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
 @media screen and (max-width: 767px) {
-
-
   .s2 {
-    height: size-m(740);
-    background-image: url('@/section/s2/bg_m.svg');
-    background-size: 97% auto;
-    background-position-y: 80%;
-    gap: size-m(100);
-    flex-direction: column;
-
-    .logo {
-      top: size-m(58);
-
+  height: size-m(1039);
+  padding-top: size-m(111);
+    
+  .slide-section {
+     padding-top: size-m(53);
+    .slide-item {
+      @apply flex flex-col items-center transition-all;
+      width: size-m(295) !important;
       img {
-        width: size-m(131);
+        max-width: size-m(295);
+        height: size-m(232.67);
+      }
+      .text {
+        @apply relative w-full flex items-center justify-center;
+        gap: size-m(21);
+        font-weight: 600;
+        letter-spacing: 0.09em;
+        padding-top: 0;
+        margin-top: size-m(51);
+        .t1 {
+          font-size: size-m(20);
+        }
+        .t2 {
+          font-size: size-m(15);
+        }
+
+        &::after {
+          height: size-m(1.5);
+          bottom: size-m(50);
+        }
+        
+      }
+      &.is-active {
+        .text {
+          &::after {
+            height: size-m(2);
+          }
+        }
       }
     }
+  }
 
-    .item {
-      gap: size-m(10);
-
-      .t1 {
-        font-size: size-m(20);
-      }
-
-      img {
-        width: size-m(18);
-        margin-bottom: size-m(10);
-      }
-
-      .t2 {
-        font-size: size-m(12);
-      }
+  .arrows {
+    @apply absolute flex items-center justify-between z-20;
+    bottom: size-m(105);
+    height: size-m(25);
+    width: 95%;
+    margin-left: 2.5%;
+    img {
+      opacity: 1
     }
+  }
+  
+  .content {
+    @apply flex-col;
+    margin-top: unset;
+    gap: size-m(57);
+    .title {
+      width: size-m(260.69);
+    }
+
+    p {
+      font-size: size-m(14);
+      line-height: size-m(37);
+      letter-spacing: 0.05em;
+      width: size-m(295);
+    }
+  }
+
+  .en {
+    @apply relative;
+    width: size-m(275);
+    top: unset;
+    right: unset;
+    margin-top: size-m(99);
+    margin-left: size-m(50);
+  }
   }
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
+import { onMounted, ref } from 'vue';
+import { size_m } from '@/utils/size'
 
-const isMobile = computed(() => globals.$isMobile());
+const splideRef = ref(null);
+
+const imgs = [
+  {
+    img: new URL(`../section/s2/logo.png`, import.meta.url).href,
+    label1: '1991',
+    label2: '「宗大建設」成立'
+  },
+  {
+    img: new URL(`../section/s2/1.png`, import.meta.url).href,
+    label1: '1996',
+    label2: '東方紐約'
+  },
+  {
+    img: new URL(`../section/s2/2.png`, import.meta.url).href,
+    label1: '1999',
+    label2: '雙橡園'
+  },
+  {
+    img: new URL(`../section/s2/3.png`, import.meta.url).href,
+    label1: '2003',
+    label2: '歐薇花園'
+  },
+  {
+    img: new URL(`../section/s2/4.png`, import.meta.url).href,
+    label1: '2011',
+    label2: '湖美霞觀'
+  },
+  {
+    img: new URL(`../section/s2/5.png`, import.meta.url).href,
+    label1: '2012',
+    label2: '陽光靚巷'
+  },
+  {
+    img: new URL(`../section/s2/6.png`, import.meta.url).href,
+    label1: '2013',
+    label2: '崇德青硯'
+  },
+  {
+    img: new URL(`../section/s2/7.png`, import.meta.url).href,
+    label1: '2017',
+    label2: '陶裡原'
+  },
+  {
+    img: new URL(`../section/s2/8.png`, import.meta.url).href,
+    label1: '2018',
+    label2: '凌波揚'
+  },
+  {
+    img: new URL(`../section/s2/9.png`, import.meta.url).href,
+    label1: '2019',
+    label2: '台南國際城'
+  },
+  {
+    img: new URL(`../section/s2/10.png`, import.meta.url).href,
+    label1: '2020',
+    label2: '天下南隅'
+  },
+  {
+    img: new URL(`../section/s2/11.png`, import.meta.url).href,
+    label1: '2022',
+    label2: '出雲居'
+  },
+  {
+    img: new URL(`../section/s2/12.png`, import.meta.url).href,
+    label1: 'Processing',
+    label2: '遇州南'
+  },
+  {
+    img: new URL(`../section/s2/13.png`, import.meta.url).href,
+    label1: 'Processing',
+    label2: '小陶砌'
+  },
+  {
+    img: new URL(`../section/s2/14.png`, import.meta.url).href,
+    label1: 'Processing',
+    label2: '小日子'
+  },
+]
+
+const onVisible = () => {
+  console.log('visible');
+}
 </script>

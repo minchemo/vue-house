@@ -1,27 +1,28 @@
 <template>
-  <div class="contact-info mx-auto bg-[#7BA9D3] flex flex-col items-center justify-between">
-    <div class="logo"></div>
+  <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between font-['noto_sans_tc'] section9">
+    <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/phone.svg" alt="宗大敘山" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="宗大敘山" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/fb.svg" alt="宗大敘山" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap">
       <div class="flex contact-item justify-between items-center address">
+        <div class="mo-only" v-if="$isMobile()">接待中心</div>
         <div>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-between items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="宗大敘山" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -30,25 +31,25 @@
 
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
-      @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
-      <div>撥打電話</div>
+  <div v-if="$isMobile()"
+    class="bg-[#C6A93E] font-['noto_sans_tc'] mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.s1')">
+      <img src="@/section/form/home1.png" alt="宗大敘山" srcset="" />
+      <div>home</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
-      <div>FB 諮詢</div>
+      v-bind:class="{ active: modalType == 'fb' }" @click="modalOpen = true; modalType = 'fb'">
+      <img src="@/section/form/facebook1.png" alt="宗大敘山" srcset="" />
+      <div>facebook</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="泰嘉拓真" srcset="" />
-      <div>預約賞屋</div>
+      <img src="@/section/form/contactus1.png" alt="宗大敘山" srcset="" />
+      <div>contact us</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
-      <div>地圖導航</div>
+      v-bind:class="{ active: modalType == 'gmap' }" @click="modalOpen = true; modalType = 'gmap'">
+      <img src="@/section/form/location1.png" alt="宗大敘山" srcset="" />
+      <div>location</div>
     </div>
   </div>
 
@@ -56,38 +57,40 @@
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
   <div class="modal -mt-20 md:-mt-72">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
-      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4" @click="modalType = ''">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="宗大敘山" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="宗大敘山" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="宗大敘山" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-      '接待會館'
+          '接待會館'
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-      `接待中心：${info.address}`
+          `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
+        v-if="modalType != 'phone'" v-bind:class="{
+          'hidden': modalType == 'phone' && !$isMobile(),
+          'btlead': modalType == 'fb',
+          'btsearch': modalType == 'gmap',
+          'btcontac': modalType == 'phone'
+        }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+            '開啟導航'
         }}</div>
       <!-- btn phone -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else
+        v-bind:class="{
+          'hidden': modalType == 'phone' && !$isMobile(),
+          'btlead': modalType == 'fb',
+          'btsearch': modalType == 'gmap',
+          'btcontac': modalType == 'phone'
+        }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+    '開啟導航'
         }}</div>
     </div>
   </div>
@@ -101,8 +104,8 @@
 .contact-info {
   width: size(1200);
   // border-radius: size(115);
-  padding: size(55) size(168) size(55) size(168);
-  margin-top: size-m(20);
+  padding: size(80) size(168);
+  // margin-top: size-m(20);
   position: relative;
   z-index: 50;
   margin-bottom: 0;
@@ -128,6 +131,7 @@
       width: 100%;
       padding: 0 size(55);
       // border-radius: 9999px;
+      border: 2px solid #C6A93E;
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.06em;
@@ -137,7 +141,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #055F76;
+        background-color: #C6A93E;
         color: #fff;
 
         img {
@@ -149,25 +153,26 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: invert(89%) sepia(63%) saturate(808%) hue-rotate(326deg) brightness(86%) contrast(78%); // 選顏色 https://codepen.io/sosuke/pen/Pjoqqp
         transition: all .5s;
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
         // border-radius: 999px 0 0 999px;
         max-width: 9999px;
         justify-content: center;
+        border: 0;
 
         &::before {
           content: "";
           position: absolute;
           width: 8em;
           height: 100%;
-          background-color: #eee;
+          background-color: #fff;
           left: calc(100% - 4em);
           z-index: -1;
         }
@@ -175,7 +180,7 @@
 
 
       &.googlemap {
-        background-color: #666;
+        background-color: #C6A93E;
         color: #fff;
 
         img {
@@ -183,8 +188,12 @@
         }
 
         &:hover {
-          background-color: gray;
-          color: #fff;
+          background-color: #fff;
+          color: #C6A93E;
+          img {
+            filter: invert(89%) sepia(63%) saturate(808%) hue-rotate(326deg) brightness(86%) contrast(78%); // 選顏色 https://codepen.io/sosuke/pen/Pjoqqp
+
+          }
         }
       }
     }
@@ -202,33 +211,39 @@
     bottom: 0;
     left: 0;
     width: size-m(375);
-    height: size-m(63);
-    gap: size-m(1);
+    height: size-m(83);
+    gap: 1px;
 
     .contact-item {
       height: 100%;
-      background-color: #595757;
-      font-size: size-m(16);
+      background-color: #304637;
+      font-size: size-m(10);
       font-weight: 400;
       color: #fff;
+      letter-spacing: size-m(1);
 
       img {
         margin-bottom: size-m(5);
-        max-width: size-m(16.5);
+        max-width: size-m(30);
         height: auto;
-        max-height: size-m(16.5);
-        filter: brightness(0) invert(1);
+        max-height: size-m(30);
       }
-
+      &:hover {
+        background-color: #C6A93E;
+      }
+      &.active {
+        background-color: #C6A93E;
+      }
     }
   }
 
   .contact-info {
     width: size-m(375);
-    height: size-m(590);
+    height: size-m(500);
     // border-radius: size-m(68);
     padding: size-m(50) size-m(15);
-    margin-top: size-m(60);
+    margin-top: size-m(30);
+    margin-bottom: size-m(30);
     position: relative;
     justify-content: space-between;
 
@@ -261,6 +276,15 @@
         &.address {
           padding: 0 0;
           margin-top: size-m(20);
+          flex-wrap: wrap;
+      border: 2px solid #C6A93E;
+
+          .mo-only {
+            flex: 100%;
+            font-size: size-m(12);
+            color: #C6A93E;
+            margin-bottom: -#{size-m(30)};
+          }
 
           &::before {
             width: 100%;

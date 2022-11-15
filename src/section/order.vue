@@ -1,14 +1,14 @@
-  <template>
-  <div id="order" class="order relative bg-[#DCDCDD] text-center">
-    <div class="order-section font-['noto_sans_tc']">
+<template>
+  <div id="order" class="order relative bg-[#CFCFCF] text-center">
+    <div class="section7 order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
+      <div class="order-title text-center text-[#fff] font-['noto_serif_tc']">{{ info.order.title }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="泰嘉拓真" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="宗大敘山" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="泰嘉拓真" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="宗大敘山" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
@@ -17,25 +17,25 @@
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
-            @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" />
+          <input type="text" placeholder="姓名" class="input w-full rounded-none border border-[#C6A93E]"
+            :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
+          <input type="text" placeholder="手機" class="input w-full rounded-none border border-[#C6A93E]"
+            :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-full" v-model="formData.room_type">
+          <select class="select w-full rounded-none border border-[#C6A93E]" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="2房">2房</option>
             <option value="3房">3房</option>
             <option value="店面">店面</option>
           </select>
 
-          <select class="select w-full rounded-full" v-model="formData.city">
+          <select class="select w-full rounded-none border border-[#C6A93E]" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full rounded-full" v-model="formData.area">
+          <select class="select w-full rounded-none border border-[#C6A93E]" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
@@ -44,7 +44,7 @@
         </div>
         <div class="right h-full">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
+            class="textarea w-full h-full rounded-none border border-[#C6A93E]" placeholder="備註訊息"></textarea>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
           class="checkbox bg-white rounded-md" />
         <p>
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -64,17 +64,17 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer bg-[#C6A93E] hover:bg-[#bd9a1c]" @click="send()">
         {{ sending ? '發送中..' : '立即預約' }}
       </div>
-
-      <!-- Contact Info -->
-      <ContactInfo />
     </div>
 
 
     <!-- Map -->
     <Map />
+
+    <!-- Contact Info -->
+    <ContactInfo />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -86,6 +86,7 @@
 
 .order-section {
   // background-image: url('@/section/form/bg.png');
+  @apply bg-white;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,9 +134,13 @@
   padding-top: size(0);
 
   .order-title {
-    font-size: size(43);
-    font-weight: 700;
-    margin-bottom: size(50);
+    @apply mx-auto;
+    font-size: size(38);
+    font-weight: 600;
+    padding: size(15) 0;
+    margin-bottom: size(100);
+    background-color: #304730;
+    width: size(1563);
   }
 
   .cus-divider {
@@ -182,7 +187,6 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #595757;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
@@ -226,7 +230,7 @@
     width: 100%;
     // border-radius: size-m(68) size-m(68) 0 0;
     padding-top: size-m(0);
-    margin-top: size-m(0);
+    margin-top: size-m(70);
 
 
     .cus-divider {
@@ -238,9 +242,11 @@
     }
 
     .order-title {
-      font-size: size-m(29);
+      font-size: size-m(20);
       font-weight: 700;
-      margin-bottom: size-m(10);
+      margin-bottom: size-m(40);
+      padding: size-m(10) 0;
+      width: 100%;
     }
 
     .order-title-img {
@@ -374,7 +380,7 @@ const send = () => {
       }
 
     }
-
+    send
     idx++;
 
     presend.append(key, value);

@@ -1,4 +1,4 @@
-const caseName = "泰嘉拓真"
+const caseName = "宗大敘山"
 
 export default {
     meta: {
@@ -6,22 +6,25 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "高雄市楠梓區援中路398號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d920.0161961702736!2d120.29352779999998!3d22.725833299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c686e939d7e2c3d!2zMjLCsDQzJzMzLjAiTiAxMjDCsDE3JzM2LjciRQ!5e0!3m2!1szh-TW!2stw!4v1664345826395!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/bdTPb1sFWtW9MaoZA",
-    phone: "07-360-0033",
-    fbLink: "https://www.facebook.com/taijia5228777/",
-    fbMessage: "https://m.me/taijia5228777/",
+    address: "接待中心｜台南市新市區民權路/信義街口",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917.6341261202176!2d120.28932582926856!3d23.077448232841792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5f05c1e9784fe0c2!2zMjPCsDA0JzM4LjgiTiAxMjDCsDE3JzIzLjUiRQ!5e0!3m2!1szh-TW!2stw!4v1668493065669!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/TbJFT1C1ND8svV3W8",
+    phone: "06 637 5888",
+    fbLink: "https://www.facebook.com/",
+    fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "北基國際開發實業股份有限公司"],
-        ["坪數規劃", "23~46坪"],
-        ["房型規劃", "2房、3房"],
-        ["聯絡電話", "07-360-0033"],
-        ["代銷團隊", "悅揚國際實業有限公司<br/>上嘉行銷股份有限公司"],
-        ["接待中心", "高雄市楠梓區援中路398號"],
+        ["投資興建", "宗大建設"],
+        ["營建施工", "合新營造"],
+        ["建築規劃", "朱文明建築師事務所"],
+        ["公設景觀", "品田建築設計"],
+        ["書苑合作", "臺灣蔦屋選書"],
+        ["建築代銷", "聯碩地產行銷團隊"],
+        ["接待會館", "台南市新市區民權路 / 信義街口"],
+        ["建照號碼", ""],
+        ["經 紀 人", ""],
     ],
-    gtmCode: ["GTM-M87MK5M","GTM-55PLPZQ"], // 可放置多個
+    gtmCode: ["GTM-M87MK5M", "GTM-55PLPZQ"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
