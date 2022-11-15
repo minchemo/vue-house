@@ -311,17 +311,11 @@ const facebook = () => {
 }
 
 const contactus = () => {
-  scrollTo(`.section9`)
-  scrolling = false;
-  clearTimeout(scrollingTimeout);
-  currentSection.value = 9
+  document.querySelector('.contact-phone-btn').click();
 }
 
 const location = () => {
-  scrollTo(`.section8`)
-  scrolling = false;
-  clearTimeout(scrollingTimeout);
-  currentSection.value = 8
+  document.querySelector('.contact-map-btn').click();
 }
 
 const book = () => {
@@ -329,7 +323,6 @@ const book = () => {
   scrolling = false;
   clearTimeout(scrollingTimeout);
   currentSection.value = 7
-
 }
 
 
@@ -389,7 +382,7 @@ const scrollEffect = () => {
         show(currentSection.value, lastZIndex)
       } else if (currentSection.value == maxSection) {
         //go home
-        goHome()
+        // goHome()
       }
     } else {
       if (currentSection.value - 1 >= 1) {

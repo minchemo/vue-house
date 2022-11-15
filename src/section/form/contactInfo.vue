@@ -2,7 +2,7 @@
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between font-['noto_sans_tc'] section9">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-between items-center contact-phone-btn" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="宗大敘山" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
@@ -20,7 +20,7 @@
         <div class="mo-only" v-if="$isMobile()">接待中心</div>
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center googlemap"
+      <div class="flex contact-item justify-between items-center googlemap contact-map-btn"
         @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="宗大敘山" srcset="" />
         <div>導航 GoogleMap</div>
@@ -38,11 +38,11 @@
       <div>home</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      v-bind:class="{ active: modalType == 'fb' }" @click="modalOpen = true; modalType = 'fb'">
+      v-bind:class="{ active: modalType == 'fb' }" @click="open()">
       <img src="@/section/form/facebook1.svg" alt="宗大敘山" srcset="" />
       <div>facebook</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/contactus1.svg" alt="宗大敘山" srcset="" />
       <div>contact us</div>
     </div>
@@ -230,6 +230,9 @@
       }
       &:hover {
         background-color: #C6A93E;
+        img {
+          filter: invert(21%) sepia(2%) saturate(4836%) hue-rotate(119deg) brightness(35%) contrast(81%);
+        }
       }
       &.active {
         background-color: #C6A93E;

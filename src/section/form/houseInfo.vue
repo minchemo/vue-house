@@ -33,7 +33,7 @@
 
 .house-info {
     gap: size(254);
-    padding: size(235) 0;
+    height: size(950);
 }
 
 .house-logo {
@@ -74,6 +74,7 @@
 .house-info {
     gap: size-m(66);
     padding: size-m(100) 0 size-m(50) 0;
+    height: auto;
 }
 
 .house-logo {

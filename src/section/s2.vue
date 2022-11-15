@@ -1,11 +1,15 @@
 <template>
   <article class="s2">
     <div class="arrows">
-      <img v-if="$isMobile()" @click="splideRef.splide.go('<')" class="prev clickable" src="@/section/s2/prev_m.png" alt="" srcset="">
-      <img v-else @click="splideRef.splide.go('<')" class="prev clickable" src="@/section/s2/prev.png" alt="" srcset="">
+      <img v-if="$isMobile()" @click="splideRef.splide.go('<')" class="prev clickable" src="@/section/s2/prev_m.png"
+        alt="" srcset="">
+      <img v-else @click="splideRef.splide.go('<')" class="prev clickable" v-bind:class="{ 'hover': isHover }"
+        src="@/section/s2/prev.png" alt="" srcset="">
 
-      <img v-if="$isMobile()" @click="splideRef.splide.go('>')" class="next clickable" src="@/section/s2/next_m.png" alt="" srcset="">
-      <img v-else @click="splideRef.splide.go('>')" class="next clickable" src="@/section/s2/next.png" alt="" srcset="">
+      <img v-if="$isMobile()" @click="splideRef.splide.go('>')" class="next clickable" src="@/section/s2/next_m.png"
+        alt="" srcset="">
+      <img v-else @click="splideRef.splide.go('>')" class="next clickable" v-bind:class="{ 'hover': isHover }"
+        src="@/section/s2/next.png" alt="" srcset="">
     </div>
 
     <div class="content" v-if="$isMobile()">
@@ -15,30 +19,35 @@
     </div>
 
     <img v-if="$isMobile()" class="en" src="@/section/s2/en_m.png" alt="" srcset="">
-    <Splide @splide:visible="onVisible" ref="splideRef" :options="{
+    <Splide ref="splideRef" :options="{
       type: 'loop',
       perPage: $isMobile() ? 1 : 3,
       focus: 'center',
       arrows: false,
-      autoplay: true, pauseOnHover: false,
+      autoplay: false, pauseOnHover: false,
       interval: 3000,
       start: 1
       // width: $isMobile() ? size_m(295) : null
     }" class="slide-section">
       <SplideSlide v-for="img, i in imgs" class="slide-item">
-        <img class="clickable cursor-pointer" @click="splideRef.splide.go(i)" :src="img.img" alt="" srcset="" >
+        <img class="clickable cursor-pointer" @click="splideRef.splide.go(i)" :src="img.img" alt="" srcset="">
         <div class="text">
           <div class="t1">{{ img.label1 }}</div>
           <div class="t2">{{ img.label2 }}</div>
         </div>
       </SplideSlide>
     </Splide>
-    <div class="content" v-if="!$isMobile()" data-aos="fade-up"  data-aos-duration="800">
+    <div class="content" v-if="!$isMobile()" data-aos="fade-up" data-aos-duration="800">
       <img class="title" src="@/section/s2/title.png" alt="" srcset="">
       <p>從在地人的起家厝、維冠大樓重建工程，到台南首座青年公宅，宗大自1991年起扎根台南，一路以來沉著內斂，默默實踐「實在」的價值所在。以「建築」為起點，佈局「營造、製造、飯店」，建構完整的「生活產業生態系」，讓實在，無所不在。
       </p>
     </div>
-    <img data-aos="fade-up"  data-aos-duration="800" v-if="!$isMobile()" class="en" src="@/section/s2/en.png" alt="" srcset="">
+    <img data-aos="fade-up" data-aos-duration="800" v-if="!$isMobile()" class="en" src="@/section/s2/en.png" alt=""
+      srcset="">
+    <div v-if="!$isMobile()" class="hover-area">
+      <div class="left"  @click="splideRef.splide.go('<')" @mouseover="isHover = true" @mouseleave="isHover = false"></div>
+      <div class="right" @click="splideRef.splide.go('>')" @mouseover="isHover = true" @mouseleave="isHover = false"></div>
+    </div>
   </article>
 </template>
 
@@ -51,6 +60,16 @@
   height: 100vh;
   padding-top: size(160);
   background-color: #fff;
+
+  .hover-area {
+    @apply absolute w-full h-full left-0 top-0 flex items-center justify-between;
+    background-color: transparent;
+    div {
+      @apply h-[70%] cursor-pointer;  
+      width: 20%;
+      
+    }
+  }
 
   .slide-section {
     //  padding-top: size(160);
@@ -110,6 +129,10 @@
       opacity: 0;
       transition: all .5s;
       &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+      &.hover {
         opacity: 1;
         cursor: pointer;
       }
@@ -231,6 +254,7 @@ import { onMounted, ref } from 'vue';
 import { size_m } from '@/utils/size'
 
 const splideRef = ref(null);
+const isHover = ref(false);
 
 const imgs = [
   {
@@ -310,7 +334,7 @@ const imgs = [
   },
 ]
 
-const onVisible = () => {
-  console.log('visible');
+const onHover = () => {
+  isHover.value = true
 }
 </script>

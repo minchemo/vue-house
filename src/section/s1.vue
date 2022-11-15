@@ -4,7 +4,7 @@
       <div class="line"></div>
       <p class="clickable">SCROLL</p>
     </div>
-    <video muted autoplay loop id="s1-video" class="video effect-zoom"></video>
+    <video muted autoplay loop playsinline id="s1-video" class="video effect-zoom"></video>
   </article>
 </template>
 

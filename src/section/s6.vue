@@ -1,5 +1,5 @@
 <template>
-  <article class="s6">
+  <article class="s6 pointer-events-none">
     <img  data-aos="fade-up" data-aos-duration="800" v-if="$isMobile()" class="bg" src="@/section/s6/bg_m.svg" alt="" srcset="">
     <img  data-aos="fade-up" data-aos-duration="800" v-else class="bg" src="@/section/s6/bg.svg" alt="" srcset="">
   </article>
