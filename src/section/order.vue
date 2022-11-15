@@ -22,12 +22,12 @@
           <input type="text" placeholder="手機" class="input w-full rounded-none border border-[#C6A93E]"
             :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-none border border-[#C6A93E]" v-model="formData.room_type">
+          <!--select class="select w-full rounded-none border border-[#C6A93E]" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="2房">2房</option>
             <option value="3房">3房</option>
             <option value="店面">店面</option>
-          </select>
+          </select-->
 
           <select class="select w-full rounded-none border border-[#C6A93E]" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
@@ -41,6 +41,8 @@
               {{ area.label }}
             </option>
           </select>
+          <input type="text" placeholder="電子信箱" class="input w-full rounded-none border border-[#C6A93E]"
+            :value="formData.email" @input="(event) => (formData.email = event.target.value)" />
         </div>
         <div class="right h-full">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -409,19 +411,7 @@ const send = () => {
   if (pass && !sending.value) {
     sending.value = true
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
-      &phone=${formData.phone}
-      &room_type=${formData.room_type}
-      &project=${formData.project}
-      &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
-      &utm_source=${utmSource}
-      &utm_medium=${utmMedium}
-      &utm_content=${utmContent}
-      &utm_campaign=${utmCampaign}
-      &date=${date}
-      &campaign_name=${info.caseName}`,
+      ``,
       {
         method: "GET"
       }

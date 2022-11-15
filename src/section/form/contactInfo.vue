@@ -34,21 +34,21 @@
   <div v-if="$isMobile()"
     class="bg-[#C6A93E] font-['noto_sans_tc'] mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.s1')">
-      <img src="@/section/form/home1.png" alt="宗大敘山" srcset="" />
+      <img src="@/section/form/home1.svg" alt="宗大敘山" srcset="" />
       <div>home</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       v-bind:class="{ active: modalType == 'fb' }" @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/facebook1.png" alt="宗大敘山" srcset="" />
+      <img src="@/section/form/facebook1.svg" alt="宗大敘山" srcset="" />
       <div>facebook</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/contactus1.png" alt="宗大敘山" srcset="" />
+      <img src="@/section/form/contactus1.svg" alt="宗大敘山" srcset="" />
       <div>contact us</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       v-bind:class="{ active: modalType == 'gmap' }" @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/location1.png" alt="宗大敘山" srcset="" />
+      <img src="@/section/form/location1.svg" alt="宗大敘山" srcset="" />
       <div>location</div>
     </div>
   </div>

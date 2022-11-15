@@ -36,7 +36,7 @@ onMounted(() => {
   top: 50%;
   left: 50%;
   margin: -15px 0 0 -15px;
-  background: #0079c3;
+  background: #BAA43C;
   opacity: 0.8;
   border-radius: 80%;
   backface-visibility: hidden;

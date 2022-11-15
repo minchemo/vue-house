@@ -105,6 +105,7 @@
     </div>
   </div>
   <div class="home relative bg-white overflow-hidden font-['Noto_Serif_TC',serif]">
+    <h1 style="display:none;">宗大敘山</h1>
     <div class="section1 effect-section" style="display:none">
       <S1 />
     </div>
@@ -180,20 +181,20 @@
             &.book {
                 border: 3px solid #C6A93E;
                 box-sizing: border-box;
-                background: rgba(255, 255, 255,0.17);
+                background: rgba(198, 169, 62, 0.6);
                 h3 {
                     font-size: size(16.5);
                     letter-spacing: size(3);
                         color: #fff;
                 }
                 p {
-                        color: #E7C763;
+                        color: #ffe69b;
                     font-style: italic;
                 }
                 &:hover {
-                    background: rgba(230, 200, 100,0.3);
+                    background: rgba(230, 200, 100,0.8);
                     h3 {
-                    color: #E6C864;
+                    color: #fff;
                     }
                     p {
                     color: #fff;
@@ -256,7 +257,7 @@ img {
                 }           
             }
             &.book {
-                border: 3px solid #C6A93E;
+                border: 2px solid #C6A93E;
                 h3 {
                     font-size: size-m(10);
                     letter-spacing: size-m(1);

@@ -99,7 +99,7 @@
 
   .arrows {
     @apply absolute flex items-center justify-between z-20;
-    bottom: size(340);
+    bottom: calc(50% + ( 400 - 1080 * 0.5) * 100vw / 1920);
     height: size(83);
     width: 95%;
     margin-left: 2.5% ;
@@ -138,8 +138,8 @@ width: size(1010);
 
   .en {
     @apply absolute z-10;
-    width: size(345);
-    top: size(101);
+    width: size(250);
+    top: size(50);
     right: size(131);
   }
 }
