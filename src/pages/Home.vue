@@ -6,7 +6,7 @@
     'pointer-events-none': !globalStore.loading
   }"
     class="transition-all duration-500 flex-col flex items-center justify-center fixed w-screen  h-screen top-0 left-0 bg-white z-[10000]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="宗大敘山" srcset="">
+    <img class="w-32" src="@/assets/loading_yama.svg" alt="宗大敘山" srcset="">
   </div>
   <!--loading end-->
   <!-- <Nav v-if="config.showNav" /> -->
@@ -132,6 +132,14 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+.w-32{
+  width: 320px !important;
+
+  @media screen and (max-width:768px) {
+    width: 200px !important;
+  }
+}
+
 .new-nav {
     @apply fixed left-0 top-0;
     z-index: 9999;
