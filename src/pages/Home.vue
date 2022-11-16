@@ -109,19 +109,19 @@
     <div class="section1 effect-section pointer-events-none">
       <S1 />
     </div>
-    <div class="section2 effect-section">
+    <div class="section2 effect-section" style="display: none;">
       <S2 />
     </div>
-    <div class="section3 effect-section">
+    <div class="section3 effect-section" style="display: none;">
       <S3 />
     </div>
-    <div class="section4 effect-section">
+    <div class="section4 effect-section" style="display: none;">
       <S4 />
     </div>
-    <div class="section5 effect-section">
+    <div class="section5 effect-section" style="display: none;">
       <S5 />
     </div>
-    <div class="section6 effect-section pointer-events-none">
+    <div class="section6 effect-section pointer-events-none" style="display: none;">
       <S6 />
     </div>
     <Order />
