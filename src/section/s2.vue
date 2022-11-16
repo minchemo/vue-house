@@ -26,7 +26,7 @@
       arrows: false,
       autoplay: false, pauseOnHover: false,
       interval: 3000,
-      start: 1
+      start: 0
       // width: $isMobile() ? size_m(295) : null
     }" class="slide-section">
       <SplideSlide v-for="img, i in imgs" class="slide-item">
@@ -45,8 +45,10 @@
     <img data-aos="fade-up" data-aos-duration="800" v-if="!$isMobile()" class="en" src="@/section/s2/en.png" alt=""
       srcset="">
     <div v-if="!$isMobile()" class="hover-area">
-      <div class="left"  @click="splideRef.splide.go('<')" @mouseover="isHover = true" @mouseleave="isHover = false"></div>
-      <div class="right" @click="splideRef.splide.go('>')" @mouseover="isHover = true" @mouseleave="isHover = false"></div>
+      <div class="left" @click="splideRef.splide.go('<')" @mouseover="isHover = true" @mouseleave="isHover = false">
+      </div>
+      <div class="right" @click="splideRef.splide.go('>')" @mouseover="isHover = true" @mouseleave="isHover = false">
+      </div>
     </div>
   </article>
 </template>
@@ -251,7 +253,7 @@ width: size(1010);
 </style>
 <script setup>
 import { onMounted, ref } from 'vue';
-import { size_m } from '@/utils/size'
+import inView from 'in-view';
 
 const splideRef = ref(null);
 const isHover = ref(false);
@@ -337,4 +339,13 @@ const imgs = [
 const onHover = () => {
   isHover.value = true
 }
+
+onMounted(() => {
+  inView('.s2')
+    .on('enter', () => {
+      splideRef.value.splide.refresh();
+    })
+    .on('exit', () => {
+    });
+})
 </script>

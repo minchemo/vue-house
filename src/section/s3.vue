@@ -1,8 +1,9 @@
 <template>
   <article class="s3">
-    <img v-if="!$isMobile()" data-aos="fade-up"  data-aos-duration="800" class="title" src="@/section/s3/title.png" alt="" srcset="">
+    <img v-if="!$isMobile()" data-aos="fade-up" data-aos-duration="800" class="title" src="@/section/s3/title.png"
+      alt="" srcset="">
     <img v-else class="title" src="@/section/s3/title_m.png" alt="" srcset="">
-    <div class="items" data-aos="fade-up"  data-aos-duration="800">
+    <div class="items" data-aos="fade-up" data-aos-duration="800">
       <div class="item" v-for="img, i in imgs" v-bind:class="{ active: i == activeIndex }">
         <img class="clickable" :src="img.btnImg" @click="activeIndex = i">
       </div>
@@ -12,7 +13,7 @@
       classes: {
         page: 'splide__pagination__page clickable',
       },
-    }" class="slide-section" data-aos="fade-up"  data-aos-duration="800">
+    }" class="slide-section" data-aos="fade-up" data-aos-duration="800">
 
       <div class="slide-wrapper">
         <SplideTrack>
@@ -218,8 +219,9 @@ margin-top: size-m(45);
 </style>
 
 <script setup>
-import { ref, getCurrentInstance } from 'vue';
+import { ref, getCurrentInstance, onMounted } from 'vue';
 import { SplideTrack } from '@splidejs/vue-splide';
+import inView from 'in-view';
 
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
@@ -296,5 +298,17 @@ const imgs = [
     content: '為實踐多角化經營，宗大董事長林漢清開設鐵鋁罐品牌「吉源控股」，設廠福建、湖北、安徽、廣東，主力客戶為泰山、雀巢咖啡、加多寶、銀鷺、達利等知名食品飲料大廠，年產能共超越30億罐，2016年在台上市，股票代號：吉源-KY，8488。'
   },
 ]
+
+onMounted(() => {
+  inView('.s3')
+    .on('enter', () => {
+      setTimeout(() => {
+
+        splideRef.value.splide.refresh();
+      }, 1200);
+    })
+    .on('exit', () => {
+    });
+})
 
 </script>

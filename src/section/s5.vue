@@ -124,7 +124,8 @@
 }
 </style>
 <script setup>
-import { ref } from 'vue';
+import { ref ,onMounted} from 'vue';
+import inView from 'in-view';
 
 const splideRef = ref(null);
 
@@ -150,4 +151,12 @@ const imgs = [
     content: '南科台南科學園區佔地1,043公頃，隨南科特定計畫區開發，總就業人口估計將可達12.3萬人。產業帶來就業機會，人才帶來住居需求，科技新貴帶來的剛性需求，指日可待。'
   },
 ]
+onMounted(() => {
+  inView('.s5')
+    .on('enter', () => {
+      splideRef.value.splide.refresh();
+    })
+    .on('exit', () => {
+    });
+})
 </script>

@@ -106,22 +106,22 @@
   </div>
   <div class="home relative bg-white overflow-hidden font-['Noto_Serif_TC',serif]">
     <h1 style="display:none;">宗大敘山</h1>
-    <div class="section1 effect-section" style="display:none">
+    <div class="section1 effect-section pointer-events-none">
       <S1 />
     </div>
-    <div class="section2 effect-section" style="display:none">
+    <div class="section2 effect-section">
       <S2 />
     </div>
-    <div class="section3 effect-section" style="display:none">
+    <div class="section3 effect-section">
       <S3 />
     </div>
-    <div class="section4 effect-section" style="display:none">
+    <div class="section4 effect-section">
       <S4 />
     </div>
-    <div class="section5 effect-section" style="display:none">
+    <div class="section5 effect-section">
       <S5 />
     </div>
-    <div class="section6 effect-section" style="display:none">
+    <div class="section6 effect-section pointer-events-none">
       <S6 />
     </div>
     <Order />
@@ -304,6 +304,7 @@ const goHome = () => {
   currentSection.value = 1;
   lastZIndex += 3;
   show(currentSection.value, lastZIndex)
+  document.querySelector('.order').style.zIndex = lastZIndex + 4
 }
 
 const facebook = () => {
@@ -323,6 +324,7 @@ const book = () => {
   scrolling = false;
   clearTimeout(scrollingTimeout);
   currentSection.value = 7
+  document.querySelector('.order').style.zIndex = lastZIndex + 4
 }
 
 
@@ -402,6 +404,8 @@ const scrollEffect = () => {
         show(currentSection.value, lastZIndex)
       }
     }
+    document.querySelector('.order').style.zIndex = lastZIndex + 4
+
   }, { passive: false });
 
 
@@ -504,10 +508,13 @@ onMounted(() => {
   };
 
   if (!globals.$isMobile()) {
-    scrollTo('.home')
-    show(1, 10)
+    setTimeout(() => {
 
-    scrollEffect()
+      scrollTo('.s1')
+      show(1, 10)
+
+      scrollEffect()
+    }, 100);
   }
 })
 
