@@ -11,7 +11,7 @@
           </h2>
           <p class="v"
         data-aos="fade" data-aos-delay="100">
-            開車約30秒上「基隆中和交流道」速遊八方，約2分鐘抵「復興商圈」豐美隨享，6分鐘達基隆市區，約15鐘串聯北市各精華商圈。一樣通勤時間，聰明選擇房價大不同。
+            開車約30秒上「基隆中和路交流道」速遊八方，約2分鐘抵「復興商圈」豐美隨享，6分鐘達基隆市區，約15鐘串聯北市各精華商圈。一樣通勤時間，聰明選擇房價大不同。
           </p>
         </div>
         <div
@@ -75,7 +75,7 @@
         <img loading="lazy"
           v-else
           class="box2"
-          src="@/projects/js/s4/box2-mo.png"
+          src="@/projects/js/s4/box2-mo1.png"
           alt=""
           srcset=""
         />
@@ -594,7 +594,7 @@
             margin-top: 0;
             position: absolute;
             right: 0;
-            bottom: -10vh;
+            bottom: -15vw;
           }
           .draw4 {
             height: 200px;
@@ -750,7 +750,7 @@ export default {
         },
         {
           img:isMobile?require("@/projects/js/s4/swipe1/m/4.jpg"):require("@/projects/js/s4/swipe1/4.jpg"),
-          caption: "基隆中和交流道",
+          caption: "基隆中和路交流道",
         },
         {
           img:isMobile?require("@/projects/js/s4/swipe1/m/5.jpg"):require("@/projects/js/s4/swipe1/5.jpg"),
