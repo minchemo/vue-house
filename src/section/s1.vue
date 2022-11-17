@@ -87,7 +87,7 @@ const globalStore = useGlobalStore();
 
 const videoLoader = () => {
   var video = document.getElementById('s1-video');
-  video.src = 'https://h35.banner.tw/zongda/456.mp4';
+  video.src = globals.$isMobile() ? 'https://h35.banner.tw/zongda/yama_m.mp4' : 'https://h35.banner.tw/zongda/yama_pc.mp4';
   video.load();
 
   video.addEventListener('loadeddata', function () {
