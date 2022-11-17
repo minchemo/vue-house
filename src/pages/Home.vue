@@ -360,60 +360,75 @@ const scrollTo = (el) => {
 }
 
 const scrollEffect = () => {
+  const isTouchPad = (e) => {
+    let isTouchPad = e.wheelDeltaY ? e.wheelDeltaY === -3 * e.deltaY : e.deltaMode === 0
+    return isTouchPad;
+  }
+
   window.addEventListener("wheel", e => {
-    e.preventDefault();
-    if (scrolling) {
+    let modal = document.querySelector('.policy-modal');
+    let getComputed = window.getComputedStyle(modal);
+    let opacity = getComputed.getPropertyValue('opacity');
+    
+    if (opacity == 0) {
+
+      e.preventDefault();
+
+let deltaY = Math.abs(e.deltaY);
+
+if (scrolling || deltaY < 80) {
+  return
+}
+
+// 避免重複捲動
+clearTimeout(scrollingTimeout);
+scrolling = true;
+
+scrollingTimeout = setTimeout(() => {
+  scrolling = false;
+}, isTouchPad(e) ? duration * 1000 * 1.2 : duration * 1000);
+
+if (e.deltaY   > 0) {
+  if (currentSection.value + 1 <= maxSection) {
+    if (currentSection.value >= effectSection) {
+      scrollTo(`.section${currentSection.value + 1}`)
+      clearTimeout(scrollingTimeout);
+      scrollingTimeout = setTimeout(() => {
+        scrolling = false;
+      }, isTouchPad(e) ? 800 : 300);
+      currentSection.value++
+
       return
     }
-
-    // 避免重複捲動
-    clearTimeout(scrollingTimeout);
-    scrolling = true;
-
-    scrollingTimeout = setTimeout(() => {
-      scrolling = false;
-    }, duration * 1000);
-
-    if (e.deltaY > 0) {
-      if (currentSection.value + 1 <= maxSection) {
-        if (currentSection.value >= effectSection) {
-          scrollTo(`.section${currentSection.value + 1}`)
-          clearTimeout(scrollingTimeout);
-          scrollingTimeout = setTimeout(() => {
-            scrolling = false;
-          }, 300);
-          currentSection.value++
-
-          return
-        }
-        hide(currentSection.value);
-        currentSection.value++
-        lastZIndex += 3;
-        show(currentSection.value, lastZIndex)
-      } else if (currentSection.value == maxSection) {
-        //go home
-        // goHome()
-      }
-    } else {
-      if (currentSection.value - 1 >= 1) {
-        if (currentSection.value >= effectSection) {
-          scrollTo(`.section${currentSection.value - 1}`)
-          clearTimeout(scrollingTimeout);
-          scrollingTimeout = setTimeout(() => {
-            scrolling = false;
-          }, 300);
-          currentSection.value--
-          return
-        }
-        scrollTo('.home')
-        hide(currentSection.value);
-        currentSection.value--;
-        lastZIndex += 3;
-        show(currentSection.value, lastZIndex)
-      }
+    hide(currentSection.value);
+    currentSection.value++
+    lastZIndex += 3;
+    show(currentSection.value, lastZIndex)
+  } else if (currentSection.value == maxSection) {
+    //go home
+    // goHome()
+  }
+} else {
+  if (currentSection.value - 1 >= 1) {
+    if (currentSection.value >= effectSection) {
+      scrollTo(`.section${currentSection.value - 1}`)
+      clearTimeout(scrollingTimeout);
+      scrollingTimeout = setTimeout(() => {
+        scrolling = false;
+      }, isTouchPad(e) ? 800 : 300);
+      currentSection.value--
+      return
     }
-    document.querySelector('.order').style.zIndex = lastZIndex + 4
+    scrollTo('.home')
+    hide(currentSection.value);
+    currentSection.value--;
+    lastZIndex += 3;
+    show(currentSection.value, lastZIndex)
+  }
+}
+document.querySelector('.order').style.zIndex = lastZIndex + 4
 
+    }
   }, { passive: false });
 
 

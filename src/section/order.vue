@@ -52,7 +52,7 @@
 
       <!-- Policy -->
       <div class="flex gap-2 items-center justify-center control">
-        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+        <input type="checkbox" id="open-policy" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
         <p>
           本人知悉並同意<label for="policy-modal"
