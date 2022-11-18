@@ -95,6 +95,7 @@
             right: size(20);
             bottom: size(10);
             letter-spacing: 0.06em;
+            
           }
         }
     }
@@ -128,6 +129,7 @@
         line-height: size(50);
         letter-spacing: 0.06em;
         color: #FFFFFF;
+        text-align: justify;
       }
     }
 }

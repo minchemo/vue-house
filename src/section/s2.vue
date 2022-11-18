@@ -157,6 +157,8 @@ font-size: size(20);
 line-height: size(45);
 letter-spacing: 0.05em;
 width: size(1010);
+text-align: justify;
+
 
     }
   }
