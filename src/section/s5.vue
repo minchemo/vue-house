@@ -53,15 +53,16 @@
       }
       .text {
         @apply flex items-center justify-start;
-          gap: size(102);
           margin-top: size(64);
+          justify-content:space-between;
         .title {
           @apply m-0;
           height: size(45);
         }
         .content {
           font-family: 'Noto Sans TC';
-          width: size(781);
+          width: size(780);
+          text-align: justify;
         }
       }
     }

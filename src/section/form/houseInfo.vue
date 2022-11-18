@@ -56,7 +56,7 @@
 
         .item {
             line-height: size(17);
-            font-size: size(23);
+            font-size: size(21);
             align-items: flex-start;
             justify-self: center;
             line-height: 1.5;
