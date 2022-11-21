@@ -1,6 +1,51 @@
 <template>
   <div class="section1">
-    <div v-if="!isMobile" class="title-box">
+    <div class="draw">
+      <!--右下人物-->
+      <img class="draw1" src="@/projects/js/s1/draw1.png" alt="" srcset="" />
+      <img loading="lazy"
+        class="draw1-cattail"
+        src="@/projects/js/s1/draw1-cattail.png"
+        alt=""
+        srcset=""
+      />
+
+      <!--左上樹葉-->
+      <img loading="lazy" class="draw2" src="@/projects/js/s1/draw2.png" alt="" srcset="" />
+      <img loading="lazy"
+        class="draw2-bird"
+        src="@/projects/js/s1/draw2-bird.png"
+        alt=""
+        srcset=""
+      />
+      <img loading="lazy"
+        class="draw2-leaf1"
+        src="@/projects/js/s1/draw2-leaf1.png"
+        alt=""
+        srcset=""
+      />
+      <img loading="lazy"
+        class="draw2-leaf2"
+        src="@/projects/js/s1/draw2-leaf2.png"
+        alt=""
+        srcset=""
+      />
+
+      <div class="fall-container">
+        <img loading="lazy" src="@/projects/js/s1/fall-leaf/1.png" />
+        <img loading="lazy" class="leaf1" src="@/projects/js/s1/fall-leaf/1.png" />
+        <img loading="lazy" class="leaf2" src="@/projects/js/s1/fall-leaf/2.png" />
+        <img loading="lazy" class="leaf3" src="@/projects/js/s1/fall-leaf/3.png" />
+        <img loading="lazy" class="leaf4" src="@/projects/js/s1/fall-leaf/4.png" />
+        <img loading="lazy" class="leaf5" src="@/projects/js/s1/fall-leaf/5.png" />
+        <img loading="lazy" class="leaf6" src="@/projects/js/s1/fall-leaf/6.png" />
+        <img loading="lazy" class="leaf7" src="@/projects/js/s1/fall-leaf/7.png" />
+        <img loading="lazy" class="leaf8" src="@/projects/js/s1/fall-leaf/8.png" />
+        <img loading="lazy" class="leaf9" src="@/projects/js/s1/fall-leaf/9.png" />
+        <img loading="lazy" class="leaf10" src="@/projects/js/s1/fall-leaf/10.png" />
+      </div>
+    </div>
+    <div class="title-box">
       <img loading="lazy"
         class="title-logo"
         data-aos="fade" data-aos-delay="0"
@@ -8,15 +53,25 @@
         alt=""
         srcset=""
       />
-    </div>
-    <div v-if="isMobile" class="title-box">
       <img loading="lazy"
-        class="title-logo"
+        class="logo-cattail"
         data-aos="fade" data-aos-delay="0"
-        src="@/projects/js/s1/logo_m.png"
+        src="@/projects/js/s1/logo-cattail.png"
         alt=""
         srcset=""
       />
+      <div class="order"
+        data-aos="fade" data-aos-delay="200" data-aos-offset="-300" v-scroll-to="{ element: `#contact`, offset: 0 }">
+        <img loading="lazy"
+          class="order-leaf"
+          src="@/projects/js/s1/order-leaf.png"
+          alt=""
+          srcset="" 
+        />
+        <p>搶先<br />預約</p>
+      </div>
+      <div class="subtitle"
+        data-aos="fade" data-aos-delay="100">首席校園宅<span>2-3</span>房<span v-if="!isMobile">，</span><br v-if="isMobile" /><span>40</span>米大棟距</div>
     </div>
   </div>
 </template>
@@ -27,7 +82,7 @@
   height: calc(100vh - 60px);
   max-height: calc(108000vw / 1920 - 60px);
   min-height: calc(90000vw / 1920 - 60px);
-  background-color: #26b7bc;
+  background-color: #fdd93f;
   overflow: hidden;
   position: relative;
   .title-box {
@@ -35,9 +90,9 @@
     z-index: 1;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
     .title-logo {
-      width: size(1688);
+      width: 400px;
     }
     .logo-cattail {
       position: absolute;
@@ -311,7 +366,8 @@
   margin-top: 60px;
   height: calc(100vh - 123px);
   max-height: calc(81200vw / 375 - 123px);
-  min-height: calc(75700vw / 375 - 123px);
+  min-height: calc(66700vw / 375 - 123px);
+  background-color: #fdd93f;
   overflow: hidden;
   position: relative;
   
@@ -319,9 +375,7 @@
  //   margin-top:calc(3000vw / 375);
  margin-top:calc(-1000vw / 375);
     .title-logo {
-      width:calc(46000vw / 375);
-      margin-left: calc(1000vw / 375);
-      margin-top: calc(3000vw / 375);
+      width:calc(20400vw / 375);
     }
     .logo-cattail {
       width:calc(1200vw / 375);
