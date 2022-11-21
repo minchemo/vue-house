@@ -37,7 +37,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     .title-logo {
-      width: size(1688);
+      width:calc(160000vw / 1920);
     }
     .logo-cattail {
       position: absolute;
