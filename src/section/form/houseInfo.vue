@@ -67,6 +67,9 @@
             p:first-child {
                 width: 4.5em;
             }
+            span{
+             font-size: size(16);   
+            }
         }
     }
 }
@@ -101,6 +104,10 @@
             .item {
                 font-size: size-m(14);
             max-width: size-m(295);
+
+            span{
+             font-size: size-m(13);   
+            }
             }
         }
     }

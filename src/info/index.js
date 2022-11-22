@@ -14,15 +14,12 @@ export default {
     fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "宗大建設"],
-        ["營建施工", "合新營造"],
+        ["投資興建", "宗大建設<br><span>(吉源控股關係企業，股票代號8488)</span>"],
+        ["營建施工", "合新營造 <span>(甲級營造廠)</span>"],
         ["建築規劃", "朱文明建築師事務所"],
         ["公設景觀", "品田建築設計"],
-        ["書苑合作", "臺灣蔦屋選書"],
-        ["建築代銷", "聯碩地產行銷團隊"],
+        ["建築代銷", "聯碩行銷股份有限公司"],
         ["接待會館", "台南市新市區民權路 / 信義街口"],
-        ["建照號碼", ""],
-        ["經 紀 人", ""],
     ],
     gtmCode: ["GTM-57QZM7G","GTM-WFN4M6M"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
