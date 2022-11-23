@@ -2,19 +2,21 @@
   <div class="s6" id="scene">
     <div class="select-section">
       <div class="selection" data-aos="fade" data-aos-delay="200">
-        <div
-          class="item"
-          v-bind:class="{ active: selectedPing == 'p26' }"
-          @click="selectedPing = 'p26'"
-        >
-          <span>28</span>坪 心富居
-        </div>
+        
         <div
           class="item"
           v-bind:class="{ active: selectedPing == 'p36' }"
           @click="selectedPing = 'p36'"
         >
           <span>36</span>坪 團圓居
+        </div>
+
+        <div
+          class="item"
+          v-bind:class="{ active: selectedPing == 'p26' }"
+          @click="selectedPing = 'p26'"
+        >
+          <span>28</span>坪 心富居
         </div>
       </div>
       <div class="t2" data-aos="fade-up" data-aos-delay="400">戶戶邊間 三面採光</div>
@@ -337,7 +339,7 @@ export default {
   data() {
     return {
       isMobile,
-      selectedPing: "p26",
+      selectedPing: "p36",
       pings: {
         p26: {
           imgs: [
