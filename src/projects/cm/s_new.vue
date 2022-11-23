@@ -309,6 +309,12 @@ export default {
       },
       imgs: [
         {
+          title: '日商台灣大林組台南處女作！插旗「藏美表參道」雙塔建築',
+          tag: '工商時報',
+          link: 'https://ctee.com.tw/livenews/aj/ctee/A03602002022101811164468',
+          img: require("@/projects/cm/news/8.jpg")
+        },
+        {
           title: '低自備、輕鬆付、成家基金78萬起 三大圓夢方案實施中',
           tag: '限定戶型 #限量名額 #請洽案場',
           link: '',
