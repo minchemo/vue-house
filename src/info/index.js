@@ -21,7 +21,7 @@ export default {
         ["建築代銷", "聯碩行銷股份有限公司"],
         ["接待會館", "台南市新市區民權路 / 信義街口"],
     ],
-    gtmCode: ["GTM-57QZM7G","GTM-WFN4M6M"], // 可放置多個
+    gtmCode: ["GTM-WFN4M6M"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
