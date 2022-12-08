@@ -1,5 +1,13 @@
 <template>
   <article class="s1">
+    <img src="./s1/pc.jpg" class="t0" />
+    <img src="./s1/1.png" data-aos="fade-down" data-aos-delay="0" class="img1" />
+    <img src="./s1/2.png" data-aos="fade" data-aos-delay="200"  class="img2" />
+    <img src="./s1/3.png" data-aos="fade" data-aos-delay="400" class="img3" />
+    <img src="./s1/line.svg" class="line" />
+
+
+
     <div class="seawave">
      <img  src="@/section/s1/gif4.gif" alt="" srcset=""> 
     </div>
@@ -14,24 +22,23 @@
         srcset="">
       <img v-else class="t3" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t3_m.png" alt="" srcset="">
     </div>
-    <img class="sun" src="@/section/s1/sun.png" alt="" srcset="">
-    <div class="boatin" data-aos="fade-left" data-aos-delay="500">
-    <img class="boat" src="@/section/s1/boat.png" alt="" srcset="">
-    </div>
-    <img class="light" v-if="$isMobile()" src="@/section/s1/light.png" alt="">
     
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-
+.t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5}
 .s1 {
   @apply relative w-full h-screen overflow-hidden;
   min-height: size(900);
   max-height: size(1080);
   background: url('@/section/s1/bg.png');
   background-size: cover;
+  .img1{position: absolute;top: 0;left: 0;width:size(159);}
+  .img2{position: absolute;top: 0;left: 0;width:size(1321);transform: scale(1.2);}
+  .img3{position: absolute;bottom: 0;right: 0;width:size(445);transform: scale(.5);transform-origin: 100% 100%;}
+  .line{position: absolute;top: size(-122);left:size(-37);width:size(760);}
 
   .seawave {
    @apply relative w-full h-screen overflow-hidden;
