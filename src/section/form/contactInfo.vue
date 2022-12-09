@@ -1,21 +1,21 @@
 <template>
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
-    <!-- <div class="logo"></div> -->
+    <div class="logo"></div>
     <div class="flex justify-center w-full contact-item-box">
-      <!-- <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="@/section/form/phone.svg" alt="海揚" srcset="" />
         <div>{{ info.phone }}</div>
-      </div> -->
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+      </div>
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'" v-if="info.fbMessage">
         <img src="@/section/form/messenger.svg" alt="海揚" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="海揚" srcset="" />
+        <img src="@/section/form/fb.svg" alt="海揚" srcset="" v-if="info.fbLink" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <!-- <div class="flex justify-between w-full contact-item-box no-gap">
+    <div class="flex justify-between w-full contact-item-box no-gap"  v-if="info.address">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
@@ -24,13 +24,12 @@
         <img src="@/section/form/gmap.svg" alt="海揚" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
-    </div> -->
-
+    </div>
   </div>
 
 
   <!-- Mobile contact info -->
-  <!-- <div v-if="$isMobile()"  class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+  <div v-if="$isMobile()"  class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/phone.svg" alt="海揚" srcset="" />
@@ -50,7 +49,7 @@
       <img src="@/section/form/gmap.svg" alt="海揚" srcset="" />
       <div>地圖導航</div>
     </div>
-  </div> -->
+  </div>
 
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
@@ -95,12 +94,15 @@
   margin-top: size(60);
   position: relative;
   z-index: 50;
-  margin-bottom: size(50);
+  margin-bottom: size(0);
+
+  background: url("@/section/s1/bg.jpg") center center;
+
 
   .logo {
     width: size(556);
     height: size(193);
-    background-image: url("@/section/form/logo.png");
+    background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -113,8 +115,8 @@
     gap: size(20);
 
     .contact-item {
-      background-color: transparent;
-      border: size(2) solid #fff;
+      background-color: #E89213;
+     // border: size(2) solid #fff;
       color: #000;
       width: 100%;
       padding: 0 size(55);
@@ -129,7 +131,7 @@
       color: #fff;
 
       &:hover {
-        background-color: #C9A063;
+      background-color: #D00;
         color: #fff;
 
         img {
@@ -167,7 +169,7 @@
 
 
       &.googlemap {
-        background-color: #666;
+      background-color: #E89213;
         color: #fff;
 
         img {
@@ -175,7 +177,7 @@
         }
 
         &:hover {
-          background-color: gray;
+          background-color: #D00;
           color: #fff;
         }
       }
@@ -199,7 +201,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #C9A063;
+      background-color: #E89213;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -217,9 +219,9 @@
 
   .contact-info {
     width: size-m(375);
-    height: size-m(650);
+    height: size-m(630);
     // border-radius: size-m(68);
-    padding: size-m(50) size-m(15);
+    padding: size-m(50) size-m(33);
     margin-top: size-m(0);
     position: relative;
     justify-content: flex-start;
@@ -227,7 +229,6 @@
     .logo {
       width: size-m(288);
       height: size-m(127);
-      background-image: url("@/section/form/logo.png");
       margin-bottom: size-m(20);
     }
 
@@ -238,7 +239,7 @@
       flex-direction: column;
 
       .contact-item {
-        padding: 0 size-m(80);
+        padding: 0 size-m(80) 0 size-m(60);
         font-size: size-m(16);
         max-width: 100%;
         white-space: nowrap;

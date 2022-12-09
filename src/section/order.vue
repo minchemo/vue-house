@@ -1,48 +1,8 @@
 <template>
-  <div id="order" class="order relative bg-[#DFDDC8] text-center">
-    <div class="order-section font-['noto_sans_tc']">
-      <!-- particle -->
-      <div id="particle"></div>
-
-      <!-- Order content text -->
-      <div class="order-content">
-        <div class="text" data-aos="fade-up">放眼世界的壯闊格局<br />
-          以亞洲新灣區為願景<br />
-          展現海洋城市朗闊氣度<br />
-          基隆港市合一再生計畫<br />
-          西岸輕軌、四鐵城際轉運中心<br />
-          海洋廣場、國門廣場、郵輪碼頭啟用<br />
-          北台灣新藍色經濟政策基地<br />
-          世界級山河海灣大景<br />
-          共敬基隆江山的美好
-        </div>
-        <div class="divi"></div>
-        <div class="text" data-aos="fade-up">一面海，一面城<br />
-          一邊享受港灣城市的全新盛景<br />
-          一邊收納無垠海洋的壯闊療癒<br />
-          全世界國際港灣，都有世界級豪宅地標<br />
-          以海洋都心的環宇氣勢，立足站前四鐵特區<br />
-          對坐國門廣場海景首排，站上世界層峰舞台
-        </div>
-        <div class="divi"></div>
-        <div class="text" data-aos="fade-up">
-          曾經走過、也許路過<br />
-          唯獨這片港灣好景不容錯過<br />
-          基隆站前四鐵特區海景首席<br />
-          敬邀您在海洋新國門發展起飛的關鍵時刻<br />
-          用國際的前瞻眼光<br />
-          見證亞灣都心最擲地有聲的一次
-        </div>
-        <div class="t2"  data-aos="fade-up">
-          站前四鐵特區 國門廣場對坐<br />
-          首席海景殿廈 即將定址現身
-        </div>
-        <img v-if="!$isMobile()"  data-aos="fade-up" class="comingsoon" src="@/section/form/comingsoon.png" alt="" srcset="">
-        <img v-else class="comingsoon"  data-aos="fade-up" src="@/section/form/comingsoon_m.png" alt="" srcset="">
-      </div>
-
-      <img v-if="!$isMobile()"  data-aos="fade-up" class="bubbles" src="@/section/form/bubbles.png" alt="">
-      <img v-else class="bubbles"  data-aos="fade-up" src="@/section/form/bubbles_m.png" alt="">
+  <div id="order" class="order relative text-center">
+    <div class="order-section font-['noto_Serif_tc']">
+<img v-if="!$isMobile()" src="@/section/form/img.png" class="img" />
+<img v-else src="@/section/form/img_m.png" class="img" />
 
       <!-- Title -->
       <div class="order-title text-center  text-white">{{ info.order.title }}</div>
@@ -52,32 +12,33 @@
       <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="海揚" srcset=""
       data-aos="fade" data-aos-duration="1000">
     <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="海揚" srcset="" data-aos="fade"
-      data-aos-duration="1000"> -->
-
+      data-aos-duration="1000">rounded-full -->
+      
       <!-- Custom Image -->
 
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
+          <input type="text" placeholder="姓名" class="input w-full" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
+          <input type="text" placeholder="手機" class="input w-full" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-full" v-model="formData.room_type">
+          <select class="select w-full" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
-            <option value="2房">2房</option>
-            <option value="3房">3房</option>
-            <option value="4房">4房</option>
+            <option value="50坪以下">50坪以下</option>
+            <option value="50~60坪">50~60坪</option>
+            <option value="60~70坪">60~70坪</option>
+            <option value="70坪以上">70坪以上</option>
           </select>
 
-          <select class="select w-full rounded-full" v-model="formData.city">
+          <select class="select w-full" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full rounded-full" v-model="formData.area">
+          <select class="select w-full" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
@@ -86,7 +47,7 @@
         </div>
         <div class="right h-full">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
+            class="textarea w-full h-full" placeholder="備註訊息"></textarea>
         </div>
       </div>
 
@@ -116,7 +77,7 @@
 
 
     <!-- Map -->
-    <!-- <Map /> -->
+     <Map v-if="info.googleSrc" /> 
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -126,84 +87,20 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-#particle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.order-content {
-  color:#fff;
-  padding-top: size(300);
-  .text {
-    font-weight: 200;
-    font-size: size(20);
-    line-height: 2;
-    text-align: center;
-    letter-spacing: 0.1em;
-  }
-  .divi {
-    width: size(148);
-    height: size(1);
-    background-color: #9DEDFF;
-    margin: size(100) auto;
-  }
-
-  .t2 {
-    font-weight: 700;
-    font-size: size(40);
-    line-height: size(58);
-    margin-top: size(183);
-    margin-bottom: size(43);
-  }
-  .comingsoon {
-    width: size(500);
-    margin-bottom: size(211);
-  }
-}
-
-.bubbles {
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  animation: float 10s alternate-reverse infinite linear;
-
-  @keyframes float {
-    from {
-      transform: translateY(0) skew(-2deg);
-    }
-    to {
-      transform: translateY(5%) skew(2deg);
-    }
-  }
-}
 
 .order-section {
-  background-image: url('@/section/form/bg.png');
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url('@/section/form/bg2.jpg') 0 0;
+  background-size: size(1019) auto;
   padding-bottom: size(0);
   position: relative;
-  min-height: size(3110);
+ // min-height: size(3110);
   padding-top: size(90);
   overflow: hidden;
 
+  .img{position: absolute;bottom: 0;left: 0;width: 100%;}
   .z-10 {
     z-index: 10;
     position: relative;
-  }
-
-  .bg-image {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: size(50);
-    vertical-align: middle;
   }
 
   .decor {
@@ -231,8 +128,9 @@
 
   .order-title {
     font-size: size(43);
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: size(40);
+    color: #000;
   }
 
   .cus-divider {
@@ -252,7 +150,7 @@
 
   .form {
     width: size(920);
-    height: 350px;
+    height:  size(300);
     gap: size(80);
     margin-bottom: size(50);
     z-index: 50;
@@ -279,7 +177,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #C9A063;
+    background-color: #3E3A39;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
@@ -298,49 +196,10 @@
 
 @media screen and (max-width:768px) {
 
-
-.bubbles {
-  width: 90%;
-  left: 5%;
-  top: 1%;
-}
-
-  .order-content {
-  padding-top: size-m(152);
-  .text {
-    font-size: size-m(14);
-  }
-  .divi {
-    width: size-m(115);
-    height: size-m(1);
-    margin: size-m(75) auto;
-  }
-
-  .t2 {
-    font-size: size-m(20);
-    line-height: size-m(36);
-    margin-top: size-m(118);
-    margin-bottom: size-m(29);
-  }
-  .comingsoon {
-    width: size-m(250);
-    margin-bottom: size-m(129);
-  }
-}
-
   .order-section {
-    background-image: url('@/section/form/bg_m.png');
-    height: size-m(2529);
-    padding-bottom: 0;
-    position: relative;
-    overflow: hidden;
+  background-size: size-m(596) auto;
 
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{size-m(30)};
-      bottom: size-m(590);
-    }
+.img{bottom: size-m(160);}
 
     .decor {
       position: absolute;
@@ -369,6 +228,7 @@
       font-size: size-m(29);
       font-weight: 700;
       margin-bottom: size-m(10);
+    padding-top: size-m(20);
     }
 
     .order-title-img {
@@ -401,6 +261,7 @@
     .send {
       font-size: size-m(21);
       width: size-m(318);
+      margin: 1.5em auto 3.5em;
     }
 
     .control {
@@ -565,13 +426,4 @@ const send = () => {
     // toast.success(`表單已送出，感謝您的填寫`)
   }
 }
-
-onMounted(() => {
-  setTimeout(() => {
-    
-  particlesJS.load('particle', './nasa.json', function () {
-    console.log('callback - particles-js config loaded');
-  });
-  }, 100);
-})
 </script>
