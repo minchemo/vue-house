@@ -236,11 +236,7 @@ const imgs = ref([
     caption: '建築外觀手稿示意圖'
   },
   {
-    img: globals.$isMobile() ? new URL("../section/s10/2_m.jpg", import.meta.url).href : new URL("../section/s10/2.jpg", import.meta.url).href,
-    caption: '本平面圖僅供參考，實際以合約書內容為主。'
-  },
-  {
-    img: globals.$isMobile() ? new URL("../section/s10/3_m.jpg", import.meta.url).href : new URL("../section/s10/3.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s10/4_m.jpg", import.meta.url).href : new URL("../section/s10/4.jpg", import.meta.url).href,
     caption: '本平面圖僅供參考，實際以合約書內容為主。'
   },
 ])
