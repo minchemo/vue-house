@@ -337,7 +337,7 @@ const imgs = ref([
     },
     {
         img: new URL("../section/s3/3.svg", import.meta.url).href,
-        content: '2000 坪富貴公園綠海環繞<br/>歲時寧謐涵氧青春不老'
+        content: '千坪富貴公園綠海環繞<br/>歲時寧謐涵氧青春不老'
     },
     {
         img: new URL("../section/s3/4.svg", import.meta.url).href,
@@ -365,7 +365,7 @@ const imgs = ref([
     },
     {
         img: new URL("../section/s3/10.svg", import.meta.url).href,
-        content: '全齡健康照護長庚醫療園區，<br/>遠程監護、全時御守'
+        content: '全齡健康照護長庚醫療園區'
     },
     {
         img: new URL("../section/s3/1.svg", import.meta.url).href,

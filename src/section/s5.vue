@@ -711,7 +711,7 @@ const timelines = ref([
         targetImg: '99',
         year: '未來',
         name: '林口',
-        content: ['長耀新林國小案', '長耀力行段', '長耀建林段']
+        content: ['長耀加', '長耀PARKII', '中山大道案', '新林國小案']
     },
     {
         targetImg: '99',
