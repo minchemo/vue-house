@@ -1,13 +1,28 @@
 <template>
   <div id="order" class="order relative text-center">
-    <div class="order-section font-['noto_Serif_tc']">
+    <div class="order-section font-['noto_Serif_tc']"> 
+    <div class="wave">
+    <div class="shadow1"><img src="./s1/1.png" srcset="" /><img src="./s1/1.png" srcset="" />
+    </div>
+    <div class="shadow2"><img src="./s1/2.png" srcset="" /><img src="./s1/2.png" srcset="" /></div>
+    <div class="shadow3"><img src="./s1/2.png" srcset="" /><img src="./s1/2.png" srcset="" /></div>
+    <div class="l1"><img src="./s1/l1.svg" srcset="" /><img src="./s1/l1.svg" srcset="" /><img src="./s1/l1.svg" srcset="" /></div>
+    <div class="l2"><img src="./s1/l1.svg" srcset="" /><img src="./s1/l1.svg" srcset="" /><img src="./s1/l1.svg" srcset="" /></div>
+    <div class="l3"><img src="./s1/l2.svg" srcset="" /><img src="./s1/l2.svg" srcset="" /><img src="./s1/l2.svg" srcset="" /></div>
+    <img src="./s1/light.png" class="light1" srcset="" />
+  </div>
+      <!--
 <img v-if="!$isMobile()" src="@/section/form/img.png" class="img" />
 <img v-else src="@/section/form/img_m.png" class="img" />
 
-      <!-- Title -->
-      <div class="order-title text-center  text-white">{{ info.order.title }}</div>
-      <!-- <div class="cus-divider"></div> -->
+    -->
 
+      <!-- Title
+      <div class="order-title text-center  text-white">{{ info.order.title }}</div>
+      --> <!-- <div class="cus-divider"></div> -->
+
+      <img src="@/section/form/title.svg" class="order-title" />
+      
       <!-- Title Image -->
       <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="海揚" srcset=""
       data-aos="fade" data-aos-duration="1000">
@@ -19,39 +34,39 @@
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full" :value="formData.name"
+          
+      <img src="@/section/form/img.svg" />
+        </div>
+        <div class="right h-full">
+          <input type="text" placeholder="姓名" class="input w-full form-i" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full" :value="formData.phone"
+          <input type="text" placeholder="手機" class="input w-full form-i" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full" v-model="formData.room_type">
+             <!--
+          <select class="select w-full form-i" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="50坪以下">50坪以下</option>
             <option value="50~60坪">50~60坪</option>
             <option value="60~70坪">60~70坪</option>
             <option value="70坪以上">70坪以上</option>
-          </select>
+          </select> -->
 
-          <select class="select w-full" v-model="formData.city">
+          <select class="select w-full form-i" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full" v-model="formData.area">
+          <select class="select w-full form-i" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
             </option>
           </select>
-        </div>
-        <div class="right h-full">
-          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="textarea w-full h-full" placeholder="備註訊息"></textarea>
-        </div>
-      </div>
-
-      <!-- Policy -->
+          <textarea rows="5" :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
+            class="textarea w-full h-full form-i" placeholder="備註訊息"></textarea>
+             <!-- Policy -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
@@ -68,8 +83,11 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending ? '發送中..' : '送出表單' }}
+        {{ sending ? '發送中..' : '立即預約' }}
+      </div> </div>
       </div>
+
+
 
       <!-- Contact Info -->
       <ContactInfo />
@@ -89,12 +107,12 @@
 
 
 .order-section {
-  background: url('@/section/form/bg2.jpg') 0 0;
-  background-size: size(1019) auto;
+ // background: url('@/section/form/bg2.jpg') 0 0;
+ // background-size: size(1019) auto;
   padding-bottom: size(0);
   position: relative;
  // min-height: size(3110);
-  padding-top: size(90);
+  padding-top: size(250);
   overflow: hidden;
 
   .img{position: absolute;bottom: 0;left: 0;width: 100%;}
@@ -121,6 +139,74 @@
     }
   }
 }
+$mar:0;
+  .wave{
+    position: absolute;bottom:$mar;left:$mar;right:$mar;top:$mar;
+.shadow1{
+  white-space: nowrap;
+    position: absolute;
+    left: 0;
+    bottom:  size(-100);
+    transform: rotate(5deg);
+
+  img{height: size(390);
+  animation: wave 9s linear infinite;transform:translateX(-100%);}
+}
+
+.shadow2{
+  white-space: nowrap;
+    position: absolute;
+    left: 0;
+    bottom:  size(260);
+    transform: rotate(-3deg);
+img{height: size(161);
+  animation: wave 7s linear infinite reverse;transform:translateX(-100%);}
+}
+
+.shadow3{
+  white-space: nowrap;
+    position: absolute;
+    left: 0;
+    bottom:  size(250);
+    transform: rotate(3deg);
+img{height: size(161);
+  animation: wave 5s linear infinite;transform:translateX(-100%);}
+}
+.l1{
+  white-space: nowrap;
+    position: absolute;
+    left: 0;
+    bottom:  size(160);
+    transform: rotate(3deg);
+img{height: size(161);
+  animation: wave 6s linear infinite reverse;transform:translateX(-100%);}
+}
+.l2{
+  white-space: nowrap;
+    position: absolute;
+    left: 0;
+    bottom:  size(270);
+    transform: rotate(-3deg);
+img{height: size(161);
+  animation: wave 8s linear infinite;transform:translateX(-100%);}
+}
+.l3{
+  white-space: nowrap;
+    position: absolute;
+    left: 0;
+    bottom:  size(100);
+    transform: rotate(1deg);
+img{height: size(233);
+  animation: wave 10s linear infinite reverse;transform:translateX(-100%);}
+}
+@keyframes wave{
+  to {transform:translateX(0%);}
+}
+.light1{position: absolute;
+  width:size(2296);opacity: .7;
+left: size(0);
+bottom:size(100);}
+}
 
 .order {
   width: 100%;
@@ -129,8 +215,9 @@
   .order-title {
     font-size: size(43);
     font-weight: 600;
-    margin-bottom: size(40);
+    margin-bottom: size(80);
     color: #000;
+    height:size(50);
   }
 
   .cus-divider {
@@ -149,26 +236,39 @@
   }
 
   .form {
-    width: size(920);
-    height:  size(300);
+    width:  size(1100);
+   // height:  size(300);
     gap: size(80);
     margin-bottom: size(50);
     z-index: 50;
 
     .left {
-      width: size(419);
+      width: 50%;
+      img{
+        width: size(510);
+      }
     }
 
     .right {
-      width: size(419);
+      width: 50%;
     }
 
     &::after {
       content: "";
-      width: size(1);
+      width: 1px;
       height: 100%;
       background-color: #fff;
       position: absolute;
+    }
+    .form-i{
+      background: transparent;
+      border:0px;
+      border-bottom: 1px solid #fff;
+      border-radius: 0;color: #fff;
+      font-size: size(17);
+      line-height: 1.6;
+      margin-bottom:.8em ;
+      option{color: #000;background: #fff;}
     }
   }
 
@@ -177,12 +277,12 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #3E3A39;
-    width: size(350);
+    background-color: #733111;
+    width:100%;
     height: 3.3em;
     line-height: 3.3;
     border: 0;
-    border-radius: 0em;
+    border-radius: 1em;
     z-index: 10;
     position: relative;
   }
@@ -198,6 +298,7 @@
 
   .order-section {
   background-size: size-m(596) auto;
+  padding-top: size-m(80);
 
 .img{bottom: size-m(160);}
 
@@ -209,6 +310,41 @@
     }
   }
 
+
+  .wave{
+    bottom:  size-m(410);
+.shadow1{
+    bottom:  size-m(-140);
+  img{height: size-m(182);}
+}
+
+.shadow2{
+    bottom:  size-m(28);
+img{height: size-m(75);}
+}
+
+.shadow3{
+    bottom:  size-m(23);
+img{height: size-m(75);}
+}
+.l1{
+    bottom:  size-m(-19);
+img{height: size-m(75);}
+}
+.l2{
+    bottom:  size-m(33);
+img{height: size-m(75);}
+}
+.l3{
+    bottom:  size-m(-47);
+img{height: size-m(109);}
+}
+
+.light1{
+  width:size-m(1071);
+bottom:size-m(-47);}
+}
+
   .order {
     width: 100%;
     // border-radius: size-m(68) size-m(68) 0 0;
@@ -216,19 +352,19 @@
     margin-top: size-m(0);
 
 
+    .order-title {
+      font-size: size-m(29);
+      margin-bottom: size-m(10);
+   // padding-top: size-m(20);
+    height:size-m(18);
+    }
+
     .cus-divider {
       margin: 0 auto;
       width: size-m(117);
       height: size-m(2);
       margin-bottom: size-m(25);
       background-color: #055F76;
-    }
-
-    .order-title {
-      font-size: size-m(29);
-      font-weight: 700;
-      margin-bottom: size-m(10);
-    padding-top: size-m(20);
     }
 
     .order-title-img {
@@ -246,16 +382,23 @@
       .left {
         width: 100%;
         gap: size-m(15);
+      img{
+        width: size-m(230);
+      }
       }
 
       .right {
         width: 100%;
-        height: size-m(100);
+       // height: size-m(100);
+       margin-top:  size-m(50);
       }
 
       &::after {
         display: none;
       }
+    .form-i{
+      font-size: size-m(15);
+    }
     }
 
     .send {

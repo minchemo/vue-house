@@ -1,6 +1,6 @@
 <template>
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
-    <div class="logo"></div>
+ <!--   <div class="logo"></div>  -->
     <div class="flex justify-center w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="@/section/form/phone.svg" alt="海揚" srcset="" />
@@ -90,13 +90,13 @@
 .contact-info {
   width: size(1200);
   // border-radius: size(115);
-  padding: size(55) size(168) size(55) size(168);
+  padding: size(55) size(60);
   margin-top: size(60);
   position: relative;
   z-index: 50;
   margin-bottom: size(0);
 
-  background: url("@/section/s1/bg.jpg") center center;
+//  background: url("@/section/s1/bg.jpg") center center;
 
 
   .logo {
@@ -121,14 +121,15 @@
       width: 100%;
       padding: 0 size(55);
       // border-radius: 9999px;
-      font-size: size(16);
-      line-height: 3.8;
+      font-size: size(18);
+      line-height: 1.8;
       letter-spacing: 0.06em;
-      max-width: size(280);
+      max-width: size(347);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
       color: #fff;
+      padding: 1.2em 0;
 
       &:hover {
       background-color: #D00;
@@ -145,6 +146,11 @@
         max-height: size(27);
         filter: brightness(1) invert(1);
         transition: all .5s;
+        margin: 0 .5em 0 3em;
+      }
+      > div{
+        width: 12em;
+        margin: 0 2em 0 0;
       }
 
       &.address {
@@ -155,6 +161,10 @@
         // border-radius: 999px 0 0 999px;
         max-width: 9999px;
         justify-content: center;
+      > div{
+        width: auto;
+        margin: 0 0 0 0;
+      }
 
         &::before {
           content: "";
@@ -219,7 +229,7 @@
 
   .contact-info {
     width: size-m(375);
-    height: size-m(630);
+   // height: size-m(630);
     // border-radius: size-m(68);
     padding: size-m(50) size-m(33);
     margin-top: size-m(0);
@@ -239,20 +249,19 @@
       flex-direction: column;
 
       .contact-item {
-        padding: 0 size-m(80) 0 size-m(60);
+       // padding: 0 size-m(80) 0 size-m(60);
         font-size: size-m(16);
         max-width: 100%;
         white-space: nowrap;
+      padding: .9em 0;
 
         img {
           max-width: size-m(27);
-          height: auto;
           max-height: size-m(27);
-          margin: unset;
         }
 
         &.address {
-          padding: 0 0;
+        //  padding: 0 0;
           margin-top: size-m(20);
 
           &::before {

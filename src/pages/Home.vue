@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
   <!-- <Nav v-if="config.showNav" /> -->
-  <div class="home bg-white overflow-hidden font-['Noto_Serif_TC',serif]">
+  <div class="home bg-[#40210F] overflow-hidden font-['Noto_Serif_TC',serif]">
     <S1 />
     <Order />
   </div>
