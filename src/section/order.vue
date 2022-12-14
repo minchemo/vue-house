@@ -24,9 +24,9 @@
       <img src="@/section/form/title.svg" class="order-title" />
       
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="海揚" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="豐郡京硯" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="海揚" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="豐郡京硯" srcset="" data-aos="fade"
       data-aos-duration="1000">rounded-full -->
       
       <!-- Custom Image -->
