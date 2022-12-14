@@ -72,7 +72,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFFF00] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />

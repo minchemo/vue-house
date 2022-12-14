@@ -115,7 +115,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #E89213;
+      background-color: #C79E63;
      // border: size(2) solid #fff;
       color: #000;
       width: 100%;
@@ -161,6 +161,7 @@
         // border-radius: 999px 0 0 999px;
         max-width: 9999px;
         justify-content: center;
+        white-space: normal;
       > div{
         width: auto;
         margin: 0 0 0 0;
@@ -179,7 +180,7 @@
 
 
       &.googlemap {
-      background-color: #E89213;
+      background-color: #C79E63;
         color: #fff;
 
         img {
@@ -211,7 +212,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #E89213;
+      background-color: #733111;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -263,6 +264,7 @@
         &.address {
         //  padding: 0 0;
           margin-top: size-m(20);
+        font-size: size-m(14);
 
           &::before {
             width: 100%;
