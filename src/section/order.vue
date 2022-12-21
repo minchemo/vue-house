@@ -447,7 +447,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email"]
+const bypass = ["room_type","city","project","area", "msg", "email"]
 
 //中文對照
 const formDataRef = ref([
