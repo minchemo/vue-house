@@ -138,7 +138,7 @@ const imgs = [
   },
   {
     title: new URL(`../section/s5/t2.png`, import.meta.url).href,
-    img: new URL(`../section/s5/2.jpg`, import.meta.url).href,
+    img: new URL(`../section/s5/5.jpg`, import.meta.url).href,
     content: '新市的完整成熟機能，放眼大南科無可匹敵。金融、休閒、日常採買全到位，隨著南科特定計畫開發，串起完整校園、生態保護區、藝文展演等生活服務，成就新時代新貴生活圈。'
   },
   {
