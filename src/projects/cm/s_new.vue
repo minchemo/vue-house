@@ -315,12 +315,6 @@ export default {
           img: require("@/projects/cm/news/8.jpg")
         },
         {
-          title: '低自備、輕鬆付、成家基金78萬起 三大圓夢方案實施中',
-          tag: '限定戶型 #限量名額 #請洽案場',
-          link: '',
-          img: require("@/projects/cm/news/7.jpg")
-        },
-        {
           title: '【影音】南山台南廣場、北外環加持隱富新核心成形',
           tag: '蘋果新聞網',
           link: 'https://www.appledaily.com.tw/property/20220708/D095D57182BB59E87E0B0C066F',
