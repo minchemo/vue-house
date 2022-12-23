@@ -1,8 +1,8 @@
 <template>
   <article class="s1">
  <!-- 
-   <img src="./s1/mo.jpg" class="t0" />
   --> 
+   <img src="./s1/pc.jpg" class="t0" />
 
    <div class="wave">
     <div class="shadow1"><img src="./s1/1.png" srcset="" /><img src="./s1/1.png" srcset="" />
