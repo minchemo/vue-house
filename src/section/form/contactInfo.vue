@@ -211,7 +211,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #733111;
+      background-color: #80581f;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;

@@ -108,6 +108,7 @@
       margin:size(26) auto size(105);
       display: flex;
       justify-content:space-between;
+      align-items:center;
     }
   .logo{
       width:size(149);
