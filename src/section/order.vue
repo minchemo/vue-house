@@ -2,8 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <div class="top">
-<img v-if="!$isMobile()" src="@/section/form/logo.svg" class="logo" />
-<img v-if="!$isMobile()" src="@/section/form/txt.svg" class="txt" />
+<img src="@/section/form/logo.svg" class="logo" />
+<img src="@/section/form/txt.svg" class="txt" />
 </div>
        <!-- 
 <img v-if="!$isMobile()" src="@/section/form/img.png" class="img" />
@@ -218,16 +218,21 @@
 @media screen and (max-width:768px) {
 
   .order-section {
-  background-size: size-m(596) auto;
+  background-size: size-m(600) auto;
 
-.img{bottom: size-m(160);}
+.top{
+    width:100%;
+    margin:size-m(51) auto size-m(70);
+    flex-direction:column;
+    gap:size-m(35);
+  }
+.logo{
+    width:size-m(96);
+  }
+.txt{
+    width:size-m(309);
+  }
 
-    .decor {
-      position: absolute;
-      width: size-m(148);
-      top: -#{size-m(50)};
-      right: -#{size-m(35)};
-    }
   }
 
   .order {
@@ -247,7 +252,6 @@
 
     .order-title {
       font-size: size-m(29);
-      font-weight: 700;
       margin-bottom: size-m(10);
     padding-top: size-m(20);
     }
