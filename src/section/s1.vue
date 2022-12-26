@@ -1,7 +1,7 @@
 <template>
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
     <div class="title flex flex-col items-center justify-center">
-      <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層雲頂地標</div>
+      <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層新古典頂級地標</div>
       <div class="t2 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="200">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
         這是林口第 18 個里，唯一住在公園的里，這個里，屬於長耀，屬於你。<br>
         家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</div>
@@ -155,7 +155,7 @@
 
     .title {
       .t1 {
-        font-size: size-m(24.5);
+        font-size: size-m(22);
         text-shadow: 0px 0px size-m(10) rgba(0, 0, 0, 0.1);
         border-bottom: size-m(1) solid;
         padding-bottom: size-m(6);

@@ -130,7 +130,7 @@
         .imgbox {
             width: size-m(375);
             height: size-m(487);
-            background-image: url('@/section/s9/1_m.jpg');
+            background-image: url('@/section/s9/1.jpg');
             background-size: cover;
             background-repeat: no-repeat;
 
@@ -142,7 +142,7 @@
         .mask {
             width: 100%;
             position: absolute;
-            bottom: size-m(60);
+            bottom: size-m(30);
             left: 0;
         }
 
