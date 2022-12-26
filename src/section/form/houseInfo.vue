@@ -4,7 +4,7 @@
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title text-[#40210F]">建案資訊</div>
-                <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 font-['noto_Serif_tc']">
+                <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
                         <p class="mr-5 border-l-2 border-[#BB9259] pl-2 text-[#BB9259]" v-html="item[0]"></p>
@@ -17,7 +17,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="豐郡京硯" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="鼎禾琢壹" srcset=""></a>
 
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
