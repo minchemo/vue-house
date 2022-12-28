@@ -215,6 +215,10 @@ const imgs = ref([
         caption: '3D建築外觀示意圖'
     },
     {
+        img: globals.$isMobile() ? new URL("../section/s6/6_m.jpg", import.meta.url).href : new URL("../section/s6/6.jpg", import.meta.url).href,
+        caption: '3D建築外觀示意圖'
+    },
+    {
         img: globals.$isMobile() ? new URL("../section/s6/4_m.jpg", import.meta.url).href : new URL("../section/s6/4.jpg", import.meta.url).href,
         caption: '3D建築一樓外觀示意圖'
     },
@@ -222,5 +226,6 @@ const imgs = ref([
         img: globals.$isMobile() ? new URL("../section/s6/5_m.jpg", import.meta.url).href : new URL("../section/s6/5.jpg", import.meta.url).href,
         caption: '3D建築外觀夜景示意圖'
     },
+    
 ])
 </script>
