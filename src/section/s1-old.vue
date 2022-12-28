@@ -1,19 +1,20 @@
 <template>
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
     <div class="title flex flex-col items-center justify-center">
-      <img class="logo" src="@/section/s1/logo_n.svg" alt="" srcset="" data-aos="fade" data-aos-delay="600">
       <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層新古典頂級地標</div>
       <div class="t2 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="200">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
         這是林口第 18 個里，唯一住在公園的里，這個里，屬於長耀，屬於你。<br>
         家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</div>
       <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
-          v-else>｜</span>18-29坪 入主富貴公園</div>
+          v-else>| </span>18-29坪 富貴公園首席</div>
+      <img class="logo" src="@/section/s1/logo.png" alt="" srcset="" data-aos="fade" data-aos-delay="600">
     </div>
-      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
-      <div class="linestyle"></div>
     <lazy-component>
+      <img class="leaf" src="@/section/s1/leaf.png" alt="" srcset="">
       <img class="circle" src="@/section/s1/circle.png" alt="" srcset="">
       <img class="circle2" src="@/section/s1/circle2.png" alt="" srcset="">
+      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
+      <img class="buck-e" src="@/section/s1/buck-e.gif" alt="" srcset="">
     </lazy-component>
 
   </article>
@@ -27,14 +28,14 @@
   width: 100%;
   height: size(1080);
   position: relative;
-  background-color: #3a574c;
+  background-color: #E5DBC2;
 
   .title {
     .t1 {
       font-weight: 700;
       font-size: size(56);
       line-height: 150%;
-      color: #fff;
+      color: #B74F32;
       border-bottom: 1px solid;
       padding-bottom: size(10);
       margin-bottom: size(10);
@@ -45,7 +46,6 @@
       font-size: size(16);
       line-height: 200%;
       letter-spacing: size(0.5);
-      color: #fff;
     }
 
     .t3 {
@@ -55,14 +55,13 @@
       line-height: size(29);
       text-align: center;
       margin: size(30) 0;
-      color: #fff;
 
       &::after {
         content: '';
         height: size(1);
         width: size(140);
         right: 105%;
-        background-color: #fff;
+        background-color: #000;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -73,7 +72,7 @@
         height: size(1);
         width: size(140);
         left: 105%;
-        background-color: #fff;
+        background-color: #000;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -81,8 +80,7 @@
     }
 
     .logo {
-      width: size(450);
-      margin-bottom: size(50);
+      width: size(160);
     }
   }
 
@@ -112,7 +110,6 @@
     bottom: 0;
     width: size(785.78);
     animation: float 4s alternate-reverse infinite ease-in-out;
-    opacity: .2;
   }
 
   .circle2 {
@@ -121,7 +118,6 @@
     top: size(112);
     width: size(378);
     animation: float 3s alternate-reverse infinite ease-in-out;
-    opacity: .2;
   }
 
   @keyframes float {
@@ -136,21 +132,10 @@
 
   .buck {
     position: absolute;
-    right: size(900);
-    bottom: size(29);
-    width: size(150);
+    right: -#{size(22)};
+    bottom: -#{size(29)};
+    width: size(523);
     z-index: 4;
-  }
-  .linestyle{
-    position: absolute;
-    width: size(1820);
-    height: size(930);
-    top: size(100);
-    bottom: size(50);
-    left: size(50);
-    right: size(50);
-    border-radius: size(30);
-    border: #fff 1px solid;
   }
 
   .buck-e {
@@ -170,7 +155,7 @@
 
     .title {
       .t1 {
-        font-size: size-m(20);
+        font-size: size-m(22);
         text-shadow: 0px 0px size-m(10) rgba(0, 0, 0, 0.1);
         border-bottom: size-m(1) solid;
         padding-bottom: size-m(6);
@@ -202,8 +187,7 @@
       }
 
       .logo {
-        width: size-m(150);
-        margin-bottom: size-m(20);
+        width: size-m(122.5);
       }
     }
 
@@ -249,23 +233,11 @@
     .buck {
       position: absolute;
       right: unset;
-      left: size-m(120);
-      bottom: size-m(40);
-      width: size-m(120);
+      left: -#{size-m(8)};
+      bottom: 0;
+      width: size-m(168);
       z-index: 4;
     }
-
-    .linestyle{
-    position: absolute;
-    width: size-m(355);
-    height: size-m(627);
-    top: size-m(20);
-    bottom: size-m(20);
-    left: size-m(10);
-    right: size-m(10);
-    border-radius: size(30);
-    border: #fff 1px solid;
-  }
 
     .buck-e {
       position: absolute;

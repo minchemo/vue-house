@@ -55,7 +55,7 @@ export default {
             offset: "",
         },
         {
-            name: "雲頂地標",
+            name: "頂級地標",
             target: ".s6",
             offset: "",
         },
