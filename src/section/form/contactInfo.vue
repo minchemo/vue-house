@@ -114,7 +114,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #000;
+      background-color: #ad4d31;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -129,7 +129,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: rgb(73, 73, 73);
+        background-color: #8d391f;
         color: #fff;
 
         img {

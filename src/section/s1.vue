@@ -10,6 +10,7 @@
           v-else>｜</span>18-29坪 入主富貴公園</div>
     </div>
       <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
+      <div class="buckbbg" v-if="!$isMobile()"></div>
       <div class="linestyle"></div>
     <lazy-component>
       <img class="circle" src="@/section/s1/circle.png" alt="" srcset="">
@@ -151,6 +152,16 @@
     right: size(50);
     border-radius: size(30);
     border: #fff 1px solid;
+  }
+  .buckbbg{
+    position: absolute;
+    width: size(100);
+    height:size(80);
+    bottom: size(30);
+    right: size(902);
+    background: #3a574c;
+    z-index: 3;
+
   }
 
   .buck-e {

@@ -85,7 +85,7 @@
 .s5 {
     width: 100%;
     height: size(1230);
-    background-color: #E5DBC2;
+    background-color: #3a574c;
 
     .title {
         position: absolute;
@@ -97,14 +97,15 @@
             font-weight: 700;
             font-size: size(40);
             line-height: 150%;
+            color: #fff;
 
             span {
                 &:nth-child(1) {
-                    color: #466C4A;
+                    color: #74a894;
                 }
 
                 &:nth-child(2) {
-                    color: #B64F31;
+                    color: #ff8667;
                 }
             }
         }
@@ -114,6 +115,7 @@
             font-size: size(24);
             line-height: size(34);
             margin-bottom: size(45);
+            color: #fff;
         }
 
         .t3 {
@@ -122,7 +124,7 @@
             line-height: 150%;
             letter-spacing: size(.05);
             width: size(1035);
-            color: #000;
+            color: #fff;
 
         }
     }
@@ -379,7 +381,7 @@
 
             .t1 {
                 font-size: size-m(24.5);
-                color: #B64F31;
+                color: #fff;
             }
 
             .t2 {
@@ -723,31 +725,31 @@ const timelines = ref([
         targetImg: '99',
         year: '',
         name: '北投',
-        content: ['三合段案', '大業段案']
+        content: ['北投捷運站案', '奇岩捷運站案']
     },
     {
         targetImg: '99',
         year: '',
         name: '內湖',
-        content: ['東湖六小都更案']
+        content: ['葫洲捷運站案']
     },
     {
         targetImg: '99',
         year: '',
         name: '大直',
-        content: ['金泰段商辦案']
+        content: ['大直美麗華案']
     },
     {
         targetImg: '99',
         year: '',
         name: '士林',
-        content: ['中山北路', '士林官邸案']
+        content: ['士林官邸案']
     },
     {
         targetImg: '99',
         year: '',
         name: '淡水',
-        content: ['新市鎮案']
+        content: ['海景住宅案']
     },
 ])
 
