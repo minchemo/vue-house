@@ -352,7 +352,7 @@ const imgs = ref([
     },
     {
         img: globals.$isMobile() ? new URL("../section/s7/3_m.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
-        t1: '營造之王',
+        t1: '營造權威',
         t2: '森城營造',
         t3: '52年甲級營造團隊 ',
         t4: '安全來自 0.1 的堅持',
