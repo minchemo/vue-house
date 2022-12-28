@@ -1,17 +1,17 @@
 <template>
-  <div class="contact-info mx-auto bg-[#7BA9D3] flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/phone.svg" alt="景上汀" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="景上汀" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/fb.svg" alt="景上汀" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -21,7 +21,7 @@
       </div>
       <div class="flex contact-item justify-between items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="景上汀" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -33,21 +33,21 @@
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
+      <img src="@/section/form/phone.svg" alt="景上汀" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="景上汀" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="泰嘉拓真" srcset="" />
+      <img src="@/section/form/pen.svg" alt="景上汀" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="景上汀" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -58,9 +58,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="景上汀" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="景上汀" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="景上汀" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
       '接待會館'
@@ -102,14 +102,14 @@
   width: size(1200);
   // border-radius: size(115);
   padding: size(55) size(168) size(55) size(168);
-  margin-top: size-m(20);
+  margin-top: sizem(10);
   position: relative;
   z-index: 50;
   margin-bottom: 0;
 
   .logo {
-    width: size(556);
-    height: size(193);
+    width: size(367);
+    height: size(172);
     background-image: url("@/section/form/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -201,22 +201,22 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width: size-m(375);
-    height: size-m(63);
-    gap: size-m(1);
+    width: sizem(375);
+    height: sizem(63);
+    gap: sizem(1);
 
     .contact-item {
       height: 100%;
       background-color: #595757;
-      font-size: size-m(16);
+      font-size: sizem(16);
       font-weight: 400;
       color: #fff;
 
       img {
-        margin-bottom: size-m(5);
-        max-width: size-m(16.5);
+        margin-bottom: sizem(5);
+        max-width: sizem(16.5);
         height: auto;
-        max-height: size-m(16.5);
+        max-height: sizem(16.5);
         filter: brightness(0) invert(1);
       }
 
@@ -224,43 +224,45 @@
   }
 
   .contact-info {
-    width: size-m(375);
-    height: size-m(590);
-    // border-radius: size-m(68);
-    padding: size-m(50) size-m(15);
-    margin-top: size-m(60);
+    width: sizem(375);
+    height: sizem(590);
+    // border-radius: sizem(68);
+    padding: sizem(50) sizem(15);
+    margin-top: sizem(60);
     position: relative;
     justify-content: space-between;
 
     .logo {
-      width: size-m(209);
-      height: size-m(98);
+      width: sizem(257);
+      height: sizem(89);
       background-image: url("@/section/form/logo.png");
-      margin-bottom: size-m(30);
+      margin-bottom: sizem(47);
     }
 
     .contact-item-box {
       position: relative;
-      margin-top: size-m(0);
-      gap: size-m(20);
+      margin-top: sizem(0);
+      gap: sizem(20);
       flex-direction: column;
 
       .contact-item {
-        padding: 0 size-m(80);
-        font-size: size-m(16);
+        padding: 0 sizem(80);
+        font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
+          border-radius: sizem(10);
 
         img {
-          max-width: size-m(27);
+          max-width: sizem(27);
           height: auto;
-          max-height: size-m(27);
+          max-height: sizem(27);
           margin: unset;
         }
 
         &.address {
+          border-radius: sizem(10) sizem(10) 0 0;
           padding: 0 0;
-          margin-top: size-m(20);
+          margin-top: sizem(20);
 
           &::before {
             width: 100%;
@@ -271,7 +273,7 @@
         }
 
         &.address+div {
-          // border-radius: 0 0 size-m(30) size-m(30);
+          border-radius: 0 0 sizem(10) sizem(10);
         }
       }
 

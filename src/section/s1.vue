@@ -1,26 +1,20 @@
 <template>
   <article class="s1">
-    <div class="title absolute">
-      <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
-      <!--div class="t1"  data-aos="fade-up" data-aos-delay="200">回「嘉」 即刻預約 <br/>高大特區 泰嘉建築經典再現</div-->
-      <img class="title1" src="@/section/s1/title1.svg" data-aos="fade-up"/><br>
-      <img v-if="!isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
+
+    <img src="./s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0" />
+
+    <img src="./s1/gif4.gif" class="gif" data-aos="fade" data-aos-delay="0" />
+    <div class="img">
+      <img src="./s1/1.png" class="img1 tree" />
+      <img src="./s1/2.png" class="img2 tree" />
+      <img src="./s1/2.png" class="img3 tree" />
+      <img src="./s1/3.png" class="img4 tree" />
+      <img src="./s1/boat.png" class="boat" />
     </div>
-    <div class="tip absolute text-white">TIMELESS TIME</div>
-    <div class="home-openning absolute font-['Noto_Sans_TC']">
-      <!--div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div-->
-      <img v-if="isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
-      <div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div>
-      <div class="line">
-        <span></span>
-      </div>
-    </div>
-    <!--wave-->
-    <div class="w">
-      <div class="w4"><img src="https://i.imgur.com/qStzKed.png" /><img src="https://i.imgur.com/qStzKed.png" /></div>
-      <div class="w3"><img src="https://i.imgur.com/4CQrKVN.png" /><img src="https://i.imgur.com/4CQrKVN.png" /></div>
-      <div class="w2"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
-      <div class="w1"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
+    <div class="txt">
+      <img class="logo" src="./s1/logo.png" alt="" srcset="">
+      <div class="t1">重新定義河岸第一排</div>
+      <div class="t2">竹圍站50米｜11-25坪景觀宅</div>
     </div>
   </article>
 </template>
@@ -33,180 +27,123 @@
   height: 100vh;
   min-height: size(900);
   max-height: size(1080);
-  background: url('@/section/s1/bg.jpg');
-  background-size: cover;
-
-  .title {
-    left: size(1037);
-    top: size(300);
-
-    .logo {
-      width: size(369);
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .title1{
-      width: size(369);
-      margin-top: size(30);
-    }
-
-    .title2{
-      width: size(280);
-      margin-top: size(40);
-    }
-
-    .t1 {
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      font-weight: 700;
-      margin-top: size(40);
-    }
-  }
-
-  .tip {
-    left: size(26);
-    bottom: size(33);
-    font-weight: 600;
-    font-size: size(30);
-    writing-mode: vertical-lr;
-    letter-spacing: 0.21em;
-  }
-
-  .home-openning {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-49.3%);
-    gap: size(20);
-
-    .t1 {
-      font-size: size(25);
-      font-weight: 400;
-      letter-spacing: 0.07em;
-      line-height: size(36);
-    }
-
-    .t2 {
-      font-size: size(20);
-      font-weight: 400;
-      letter-spacing: 0.07em;
-      line-height: size(29);
-    }
-
-    .line {
-      background-color: #fff;
-      width: size(2);
-      height: size(144.6);
-      position: relative;
-
-      span {
-        position: absolute;
-        display: block;
-        background-color: #fff;
-        height: size(10);
-        width: size(10);
-        border-radius: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
-        animation: move 3s infinite;
-
-        @keyframes move {
-          from {
-            top: 0;
-          }
-
-          to {
-            top: 100%;
-            opacity: 0;
-          }
-        }
-      }
-    }
-  }
-
-  .w {
-    width: 100%;
-    overflow: hidden;
-    height: 40vh;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    pointer-events: none;
-
-    .w1 {
-      position: absolute;
-      top: 5vw;
-      left: 0;
-      transform: rotate(3deg);
-      white-space: nowrap;
-
-      img {
-        width: 100%;
-        transform: translateX(-100%);
-        animation: light1 6s linear infinite;
-      }
-    }
-
-    .w2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.7;
-      transform: rotate(-3deg) scaleX(-1);
-      white-space: nowrap;
-
-      img {
-        width: 100%;
-        transform: translateX(-100%);
-        animation: light1 8s linear infinite reverse;
-      }
-    }
-
-    .w3 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(-10deg);
-      white-space: nowrap;
-
-      img {
-        width: 100%;
-        transform: translateX(-100%);
-        animation: light1 7s linear infinite;
-      }
-    }
-
-    .w4 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(-10deg);
-      white-space: nowrap;
-
-      img {
-        width: 100%;
-        transform: translateX(-100%);
-        animation: light1 9s linear infinite;
-      }
-    }
-
-    @keyframes light1 {
-      to {
-        transform: translateX(0);
-      }
-    }
-  }
-
-
+  position: relative;
+  overflow: hidden;
 }
+.t0{
+  position: absolute;
+  width: 100%;height:auto;
+  top:0;
+  left:0;object-fit: cover;
+  opacity: .5;
+  }
+.bg{
+  position: absolute;
+  width: 100%;height:auto;
+  top: calc(50% + (0 - 535) * 100vw / 1920);
+  left:0;object-fit: cover;
+  }
+  .gif{
+    position: absolute;
+    width:100%;
+    height: size(360);
+    // top: size(718);
+    top: calc(50% + (718 - 535) * 100vw / 1920);
+    opacity: .5;
+    left: 0;mix-blend-mode: soft-light;filter: blur(0.05vw);
+  }
+  
+  .img1{
+    position: absolute;
+    width: size(400);
+    // top: size(495);
+    top: calc(50% + (495 - 535) * 100vw / 1920);
+    left: size(140);
+    transform-origin: 50% 100%;
+  }
+  .img2{
+    position: absolute;
+    width: size(237);
+    // top: size(800);
+    top: calc(50% + (800 - 535) * 100vw / 1920);
+    left: size(470);
+    transform-origin: 50% 100%;
+  }
+  .img3{
+    position: absolute;
+    width: size(250);
+    // top: size(445);
+    top: calc(50% + (450 - 535) * 100vw / 1920);
+    right: size(175);
+    transform-origin: 50% 100%;
+  }
+  .img4{
+    position: absolute;
+    width: size(170);
+    // top: size(530);
+    top: calc(50% + (535 - 535) * 100vw / 1920);
+    right: size(425);
+    transform-origin: 50% 100%;
+  }
+  .tree {
+    animation: wave 2s alternate-reverse infinite ease-in-out;
+    @keyframes wave {
+      from {
+        transform: skewX(-2deg);
+      }
+      to {
+        transform: skewX(2deg);
+      }
+    }
+  }
+  .boat {
+    position: absolute;
+    width: size(280);
+    right: size(586);
+    bottom: size(130);
+    animation: wave2 3s alternate-reverse infinite ease-in-out;
+    @keyframes wave2 {
+      from {
+        transform: translate(-4%, -1%) skewX(2deg);
+      }
+      to {
 
+        transform: translate(4%, 1%) skewX(-2deg);
+      }
+    }
+  }
+  .txt {
+    position:absolute;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translate(-50%);
+    left: 50%;
+    top: size(197);
+    .logo{
+      width: size(440.64);
+    }
+    .t1{
+font-weight: 700;
+font-size: size(70);
+line-height: 124.2%;
+letter-spacing: 0.145em;
+
+color: #000000;
+margin-top: size(33);
+margin-bottom: size(11);
+    }
+    .t2{
+font-weight: 500;
+font-size: size(40);
+line-height: 124.2%;
+letter-spacing: 0.065em;
+color: #C9A063;
+
+    }
+  }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -214,88 +151,70 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
-    min-height: size-m(667);
-    max-height: size-m(750);
-    background: url('@/section/s1/bg_m.jpg');
-    background-size: cover;
-    position: relative;
+    min-height: sizem(667);
+    max-height: sizem(812);
+    overflow: hidden;
+    margin: 0;
+  }
+.bg{
+  height:100%;
+  top:0;
+  }
+  .gif{
+    width:200%;
+    height: sizem(280);
+    top: calc(70% + (435 - 667 * .7) * 100vw / 375);
+    left: -50%;
+  }
+  .img1{
+    width: sizem(200);
+    top: calc(70% + (260 - 667 * .7) * 100vw / 375);
+    left: sizem(-90);
+  }
+  .img2{
+    width: sizem(120);
+    top: calc(90% + (540 - 667 * .90) * 100vw / 375);
+    left: sizem(5);
+  }
+  .img3{
+    width: sizem(80);
+    top: calc(64% + (355 - 667 * .64) * 100vw / 375);
+    right: sizem(5);
+  }
+  .img4{
+    width: sizem(55);
+    top: calc(64% + (380 - 667 * .64) * 100vw / 375);
+    right: sizem(80);
 
-    .title {
-      left: size-m(99);
-      top: size-m(79);
-      
-
-      .logo {
-        width: size-m(175);
-        margin: 0px auto;
-      }
-
-      .title1{
-      width: size-m(175);
-      margin-top: size-m(30);
+ 
+}
+  .txt {
+    position:absolute;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translate(-50%);
+    left: 50%;
+    top: sizem(91);
+    width: 100%;
+    .logo{
+      width: sizem(208);
     }
-
-    
-
-      .t1 {
-        font-size: size-m(20);
-        margin-top: size-m(15);
-        text-align: center;
-      }
+    .t1 {
+      font-size: sizem(25);
+      margin-top: sizem(16);
+      margin-bottom: sizem(8);
     }
-
-    .tip {
-      left: size-m(4);
-      bottom: size-m(93);
-      font-size: size-m(18);
+    .t2{
+      font-size: sizem(16);
     }
-
-    .home-openning {
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      gap: 0;
-
-      .title2{
-      width: size-m(175);
-      position: absolute;
-      bottom: size-m(200);
-      top: auto;
-    }
-
-      .t1 {
-        font-size: size-m(12);
-        line-height: size-m(18);
-        margin-bottom: size-m(54);
-      }
-
-      .t2 {
-        font-size: size-m(10);
-        margin-bottom: size-m(10);
-      }
-
-      .line {
-        width: size-m(1);
-        height: size-m(102);
-        position: relative;
-
-        span {
-          height: size-m(5);
-          width: size-m(5);
-          transform: translateX(-50%);
-        }
-      }
-    }
-
-    .w {
-      height: 20vh;
-      position: absolute;
-    }
-
+  }
+  .boat {
+    width: sizem(115.7);
+    right: sizem(89.3);
+    bottom: sizem(140);
   }
 }
 </style>

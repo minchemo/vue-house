@@ -19,7 +19,7 @@
 
 @media screen and (max-width:768px) {
     .gmap {
-        height: size-m(354);
+        height: sizem(354);
         margin-top: 0;
     }
 }

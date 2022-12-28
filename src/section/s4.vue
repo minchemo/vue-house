@@ -1,215 +1,162 @@
 <template>
   <article class="s4">
-    <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">六大創新 拓展建築 美的造極</div>
-      <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">
-        高雄的好朋友泰嘉，踏行高雄大學特區，<br />
-        首創六大創新服務，開拓南台灣建築大道上的典範。
+    <img class="en" data-aos="fade-down" src="./s4/GRAND RIVERSIDE.png" alt="" srcset="">
+    <div class="main">
+      <div class="box"></div>
+      <img class="tree" src="./s4/tree.png" alt="" srcset="">
+      <div class="t1" data-aos="fade-left">
+        水岸經典至美<br>
+        天際最美建築
       </div>
-    </div>
-    <div class="images grid grid-cols-3 font-['Noto_Sans_TC']">
-      <div class="image" v-for="image in images">
-        <div class="img" :style="{backgroundImage: `url('${image.image}')`}"></div>
-        <div class="flex items-center justify-center md:justify-between w-full">
-          <p v-html="image.text" data-aos="fade-up" data-aos-delay="400"></p>
-          <img v-if="!$isMobile()" class="ml-auto mr-0" :src="image.icon" alt="" srcset="">
-        </div>
+      <div class="t2" data-aos="fade-left">
+        外觀運用黑白交錯的現代建築語彙，垂直立面手法，輔以幾何韻律的方形格柵，體現與藍天白雲為襯、山河海為景的均衡之美，蓋一棟讓心靈沉澱的水岸景觀建築！
       </div>
-
+      <div class="t3" data-aos="fade-left">3D外觀示意僅供參考，實際依現場施工為主</div>
     </div>
   </article>
 </template>
-
+  
 <style lang="scss" scoped>
-@import '@/assets/style/function.scss';
-
-.s4 {
-  position: relative;
-  width: 100%;
-  height: size(1080);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: size(180);
-
-  .item {
-    font-family: 'Noto Sans TC';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: size(30);
-    z-index: 1;
-
-    .t1 {
-      font-weight: 700;
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      color: #699DC4;
-    }
-
-    img {
-      width: size(48);
-    }
-
-    .t2 {
-      font-weight: 400;
-      font-size: size(20);
-      line-height: 1.8;
-      letter-spacing: 0.07em;
-    }
-  }
-
-
-  .images {
-    position: relative;
-    column-gap: size(31.8);
-    row-gap: size(53);
-
-    .image {
-      position: relative;
-      width: size(280.32);
-      height: auto;
-
-      .img {
-        position: relative;
-        width: size(268.64);
-        height: size(192.72);
-        background-size: cover;
-        transform-style: preserve-3d;
-        margin-bottom: size(20);
-
-        &::after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          right: -#{size(11.68)};
-          bottom: -#{size(11.68)};
-          background-color: #699DC4;
-          transform: translateZ(-1px);
-        }
-      }
-
-      p {
-        padding-left: size(9);
-        font-weight: 400;
-        font-size: size(20);
-      }
-
-      img {
-        height: size(45);
-        max-width: size(70);
-      }
-    }
-  }
-
-}
-
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-@media screen and (max-width: 767px) {
-
+  @import '@/assets/style/function.scss';
+  
   .s4 {
-    flex-direction: column;
-    height: size-m(522);
-    gap: size-m(28);
-
-    .item {
-      gap: size-m(10);
-      z-index: 1;
-
-      .t1 {
-        font-size: size-m(20);
-      }
-
-      img {
-        width: size-m(18);
-      }
-
-      .t2 {
-        margin-top: size-m(10);
-        font-size: size-m(12);
-      }
+    @apply relative;
+    height: size(1080);
+    background: #013755;
+    background-image: url('./s4/bg.jpg');
+    background-size: cover;
+    padding-top: size(59);
+    .en {
+      @apply absolute;
+      width: size(736.15);
+      left: size(112.44);
+      top: size(85.28);
     }
-
-
-    .images {
-      column-gap: size-m(26);
-      row-gap: size-m(24);
-
-      .image {
-        width: size-m(96);
-
-        .img {
-          width: size-m(92);
-          height: size-m(66);
-          margin-bottom: size-m(10);
-
-          &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            right: -#{size-m(5)};
-            bottom: -#{size-m(5)};
-            background-color: #699DC4;
-            transform: translateZ(-1px);
+    .main {
+      @apply absolute;
+      top: size(106);
+      right: size(115);
+      width: size(354);
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      .box {
+        width: size(352);
+        height: size(463);
+        border-right: size(3) solid #C9A063; 
+        border-top: size(3) solid #C9A063; 
+      }
+      .tree {
+        @apply absolute;
+        width: size(346);
+        height: size(340);
+        top: size(123);
+        left: size(75);
+        animation: wave 3s alternate-reverse infinite ease-in-out;
+        transform-origin: bottom center;
+        @keyframes wave {
+          from {
+            transform: skewX(-1deg);
+          }
+          to {
+            transform: skewX(1deg);
           }
         }
-
-        p {
-          text-align: center;
-          padding-left: 0;
-          white-space: nowrap;
-          font-size: size-m(12);
-        }
+      }
+      .t1 {
+        font-weight: 700;
+        font-size: size(55);
+        line-height: 133.2%;
+        text-align: right;
+        letter-spacing: 0.085em;
+        white-space: nowrap;
+        margin-top: size(39);
+      }
+      .t2 {
+        font-weight: 400;
+        font-size: size(18);
+        line-height: 180.7%;
+        text-align: justify;
+        letter-spacing: 0.165em;
+        color: #FFFFFF;
+        margin-top: size(34);
+        margin-bottom: size(10);
+      }
+      .t3 {
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: size(16);
+        line-height: 236.7%;
+        letter-spacing: 0.145em;
+        color: rgba(255, 255, 255, 0.4);
       }
     }
-
   }
-}
-</style>
+  
+  /* 螢幕尺寸標準 */
+  /* 平板尺寸 */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+  
+  @media screen and (max-width: 767px) {
+
+    .s4 {
+    height: sizem(667);
+    background-image: url('./s4/bgm.jpg');
+    padding-top: sizem(41) !important;
+    padding: 0 sizem(30);
+    .en {
+      width: sizem(315);
+      left: sizem(30);
+      bottom: sizem(20);
+      top: unset;
+    }
+    .main {
+      @apply relative;
+      top: unset;
+      right: unset;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      padding-top: sizem(33);
+      .box {
+        @apply absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: sizem(253);
+        border-right: sizem(2) solid #C9A063; 
+        border-top: sizem(2) solid #C9A063; 
+      }
+      .tree {
+        @apply absolute;
+        width: sizem(140);
+        height: sizem(137.57);
+        top: -#{sizem(27)};
+        left: unset;
+        right: -#{sizem(14)};
+      }
+      .t1 {
+        font-size: sizem(25);
+        line-height: 122.7%;
+        text-align: left;
+        letter-spacing: 0.025em;
+        margin-top: 0;
+      }
+      .t2 {
+        font-size: sizem(13);
+        margin-top: sizem(12);
+        margin-bottom: sizem(12);
+        padding-right: sizem(25);
+      }
+      .t3 {
+        font-size: sizem(12);
+      }
+    }
+  }
+  }
+  </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const isMobile = computed(() => globals.$isMobile());
-
-const images = [
-  {
-    image: new URL("../section/s4/1.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i1.svg", import.meta.url).href,
-    text: '好住先於快銷<br/>LIVING 宜居比例'
-  },
-  {
-    image: new URL("../section/s4/2.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i2.svg", import.meta.url).href,
-    text: '本土先於世界<br/>VIEW跨界眼界'
-  },
-  {
-    image: new URL("../section/s4/3.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i3.svg", import.meta.url).href,
-    text: '專業先於廣告<br/>SGS檢測認證<br/>(水電、機電、消防)'
-  },
-  {
-    image: new URL("../section/s4/4.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i4.svg", import.meta.url).href,
-    text: '關心先於官網<br/>CARE雲端APP'
-  },
-  {
-    image: new URL("../section/s4/5.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i5.svg", import.meta.url).href,
-    text: '主動先於客訴<br/>PROACTIVE社區健檢'
-  },
-  {
-    image: new URL("../section/s4/6.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i6.svg", import.meta.url).href,
-    text: '客服先於售價<br/>SERVICE董座親轄'
-  },
-];
+import { ref } from 'vue';
 </script>
+  

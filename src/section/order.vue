@@ -1,18 +1,19 @@
-  <template>
+<template>
   <div id="order" class="order relative bg-[#DCDCDD] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
+      <div class="order-title text-center">{{ info.order.title }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="泰嘉拓真" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="景上汀" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="泰嘉拓真" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="景上汀" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
-      <!-- <img class="decor" src="@/section/form/decor.png" alt="" srcset=""> -->
+      <img src="@/section/form/tree.png" class="tree" alt="" srcset="">
+      <img v-if="!$isMobile()" src="@/section/form/ship.png" class="ship" alt="" srcset="">
 
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
@@ -52,7 +53,7 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p>
+        <p class="text-white">
           本人知悉並同意<label for="policy-modal"
             class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
@@ -84,17 +85,53 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+
 .order-section {
-  // background-image: url('@/section/form/bg.png');
-  background-position: bottom;
+  background-image: url('@/section/form/bg.png');
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: size(90);
+  // padding-bottom: size(90);
   position: relative;
-  height: auto;
-  padding-top: size(90);
-  overflow: hidden;
+  min-height: size(1465);
+  padding-top: size(250);
+  // overflow: hidden;
   
+.tree {
+      @apply absolute;
+        width: size(623);
+        top: -#{size(455)};
+        left: size(74);
+        animation: wave 3s alternate-reverse infinite ease-in-out;
+        transform-origin: bottom center;
+        @keyframes wave {
+          from {
+            transform: skewX(-1deg);
+          }
+          to {
+            transform: skewX(1deg);
+          }
+        }
+}
+
+.ship {
+    position: absolute;
+    width: size(280);
+    height: size(242);
+    right: size(505);
+    top: size(23);
+    animation: wave2 3s alternate-reverse infinite ease-in-out;
+    z-index: 1;
+    @keyframes wave2 {
+      from {
+        transform: translate(-4%, -1%) skewX(2deg);
+      }
+      to {
+
+        transform: translate(4%, 1%) skewX(-2deg);
+      }
+    }
+}
 
   .z-10 {
     z-index: 10;
@@ -133,9 +170,13 @@
   padding-top: size(0);
 
   .order-title {
-    font-size: size(43);
+    font-size: size(40);
     font-weight: 700;
-    margin-bottom: size(50);
+    color: #fff;
+    border-bottom: size(2) solid #C9A063;
+    width: size(172);
+    margin: 0 auto;
+    margin-bottom: size(50) !important; 
   }
 
   .cus-divider {
@@ -182,12 +223,12 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #595757;
-    width: size(350);
-    height: 3.3em;
+    background-color: #C9A063;
+    width: size(318);
+    height: size(72.75);
     line-height: 3.3;
     border: 0;
-    border-radius: 0em;
+    border-radius: .2em;
     z-index: 10;
     position: relative;
   }
@@ -201,68 +242,71 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    // background-image: url('@/section/form/bg_m.png');
-    height: auto;
-    padding-bottom: size-m(80);
+    background-image: url('@/section/form/bgm.png');
+    min-height: sizem(1450);
+    padding-bottom: sizem(0);
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
+    padding-top: sizem(50);
 
     .bg-image {
       position: absolute;
       width: 100%;
-      left: -#{size-m(30)};
-      bottom: size-m(590);
+      left: -#{sizem(30)};
+      bottom: sizem(590);
     }
 
-    .decor {
-      position: absolute;
-      width: size-m(148);
-      top: -#{size-m(50)};
-      right: -#{size-m(35)};
-    }
+    .tree {
+      @apply absolute;
+        width: sizem(182.76);
+        top: -#{sizem(128)};
+        left: -#{sizem(22.76)};
+}
   }
 
   .order {
     width: 100%;
-    // border-radius: size-m(68) size-m(68) 0 0;
-    padding-top: size-m(0);
-    margin-top: size-m(0);
+    // border-radius: sizem(68) sizem(68) 0 0;
+    padding-top: sizem(0);
+    margin-top: sizem(0);
+    padding-bottom: sizem(60);
 
 
     .cus-divider {
       margin: 0 auto;
-      width: size-m(117);
-      height: size-m(2);
-      margin-bottom: size-m(25);
+      width: sizem(117);
+      height: sizem(2);
+      margin-bottom: sizem(25);
       background-color: #055F76;
     }
 
     .order-title {
-      font-size: size-m(29);
+      width: sizem(118);
+      font-size: sizem(29);
       font-weight: 700;
-      margin-bottom: size-m(10);
+      margin-bottom: sizem(35) !important;
     }
 
     .order-title-img {
-      width: size-m(208);
-      margin-bottom: size-m(20);
+      width: sizem(208);
+      margin-bottom: sizem(20);
     }
 
     .form {
-      width: size-m(310);
+      width: sizem(310);
       height: auto;
-      gap: size-m(15);
-      margin-bottom: size-m(20);
+      gap: sizem(15);
+      margin-bottom: sizem(20);
       flex-direction: column;
 
       .left {
         width: 100%;
-        gap: size-m(15);
+        gap: sizem(15);
       }
 
       .right {
         width: 100%;
-        height: size-m(100);
+        height: sizem(100);
       }
 
       &::after {
@@ -271,12 +315,13 @@
     }
 
     .send {
-      font-size: size-m(21);
-      width: size-m(318);
+      font-size: sizem(21);
+      width: sizem(318);
+      height: sizem(72);
     }
 
     .control {
-      font-size: size-m(14.6);
+      font-size: sizem(14.6);
     }
   }
 }

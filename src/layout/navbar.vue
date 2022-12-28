@@ -1,5 +1,5 @@
 <template>
-    <div class="nav fixed flex items-center justify-between top-0 left-0 md:w-100 z-[100] w-full"
+    <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
@@ -7,10 +7,10 @@
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
         </div>
-        <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <div class="menu-item font-bold cursor-pointer text-white font-['noto_serif_tc']"
+        <div class="menu flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
+            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc']"
                 v-for="item, i in info.navList" @click="scrollTo(item.target)">
-                <img src="@/assets/menu_icon.png" alt="" srcset="">
+                <!-- <img src="@/assets/menu_icon.png" alt="" srcset=""> -->
                 <span>{{ item.name }}</span>
             </div>
             <div class="close" @click="menuOpen = !menuOpen">
@@ -27,9 +27,8 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    padding: 0 size(20);
-    height: size(100);
-
+    right: size(114);
+    top: size(51);
     .logo {
         width: size(190);
         height: size(30);
@@ -41,8 +40,8 @@
 
     .menu-btn {
         background-color: #C9A063;
-        height: size(62);
-        width: size(62);
+        height: size(32);
+        width: size(32);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -55,7 +54,7 @@
         }
 
         .bar {
-            width: size(30);
+            width: size(23);
             height: 2px;
             background-color: #fff;
             position: relative;
@@ -118,25 +117,30 @@
     .menu {
         position: fixed;
         top: 0;
-        left: 0;
-        background: rgba(5, 95, 118, 0.8);
-        width: size(374);
+        right: 0;
+        // background: rgba(5, 95, 118, 0.8);
+        background-image: url('@/section/menubg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        width: size(351);
         height: 100%;
         z-index: 5;
-        transform: translateX(-150%);
+        transform: translateX(150%);
         transition: all .5s;
         border-radius: 0;
         padding: size(100) 0;
         gap: size(50);
-        backdrop-filter: blur(2px);
+        // backdrop-filter: blur(2px);
 
         .menu-item {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: size(33.25);
-            gap: size(10);
+            font-size: size(28);
+            // gap: size(10);
+            font-weight: 500;
 
             img {
                 width: size(43);
@@ -167,8 +171,9 @@
 
         .close {
             position: absolute;
-            bottom: size(77);
-            left: size(95);
+            top: size(77);
+            left: 50%;
+            transform: translateX(-50%);
             width: size(44);
             height: size(44);
             cursor: pointer;
@@ -220,23 +225,23 @@
 @media screen and (max-width:768px) {
 
     .gotop {
-        width: size-m(34.24);
-        height: size-m(34.24);
-        right: size-m(20);
-        bottom: size-m(80);
+        width: sizem(34.24);
+        height: sizem(34.24);
+        right: sizem(20);
+        bottom: sizem(80);
     }
 
     .nav {
-        width: size-m(350);
-        left: size-m(12.5);
-        top: size-m(12.5);
-        padding: 0 size-m(8);
-        height: size-m(35);
+        // width: sizem(350);
+        right: sizem(32);
+        top: sizem(25);
+        // padding: 0 sizem(8);
+        height: sizem(30);
         border-radius: 9999px;
 
         .logo {
-            width: size-m(101.83);
-            height: size-m(16);
+            width: sizem(101.83);
+            height: sizem(16);
             transition: all .2s;
 
             &.open {
@@ -245,24 +250,25 @@
         }
 
         .menu-btn {
-            width: size-m(30);
-            height: size-m(30);
-            padding: size-m(5);
+            width: sizem(30);
+            height: sizem(30);
+            padding: sizem(2.5);
+            font-size: sizem(20);
 
             p {
-                font-size: size-m(14);
+                font-size: sizem(14);
                 font-weight: 100;
             }
 
             .bar {
-                width: size-m(17);
+                width: sizem(21);
 
                 &::after {
-                    bottom: -#{size-m(5)};
+                    bottom: -#{sizem(5)};
                 }
 
                 &::before {
-                    top: -#{size-m(5)};
+                    top: -#{sizem(5)};
                 }
             }
 
@@ -313,15 +319,17 @@
             transition: all .5s;
             border-radius: 0;
             padding: 0;
-            gap: size-m(25);
-            justify-content: flex-end;
+            gap: sizem(25);
+            justify-content: center;
+            background-image: url('@/section/menubgm.png');
 
             .menu-item {
-                font-size: size-m(15);
-                gap: size-m(5);
+                font-size: sizem(20);
+                gap: sizem(5);
+                font-weight: 500;
 
                 img {
-                    width: size-m(30);
+                    width: sizem(30);
                 }
 
             }
@@ -343,11 +351,13 @@
                 position: relative;
                 left: unset;
                 bottom: unset;
-                width: size-m(44);
-                height: size-m(44);
+                transform: translateX(0);
+                top: unset;
+                width: sizem(44);
+                height: sizem(44);
                 cursor: pointer;
-                margin-top: size-m(30);
-                margin-bottom: size-m(40);
+                margin-top: sizem(30);
+                margin-bottom: sizem(40);
 
                 img {
                     width: 100%;

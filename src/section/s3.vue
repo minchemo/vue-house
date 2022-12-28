@@ -1,238 +1,251 @@
 <template>
   <article class="s3">
-    <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">坐在泰嘉的肩上 引以為傲</div>
-      <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">
-        放眼台灣，泰嘉以絕藏獨到細節<br>
-        茁長出六大創新服務行囊<br>
-        楠梓將又一次<br>
-        無可超越的，河海韻律日常<br>
-        無以複製的，泰嘉生活美學<br>
-        總比需求出現前走快了一步<br>
-        讓日後得以放慢腳步、提煉生活深度<br>
-        住進泰嘉拓真，成為永恆驕傲
+    <div class="header">
+      <img class="en" src="./s3/LIFE FUNCTION.png" alt="" srcset="">
+      <div class="selection" v-bind:class="{ 'selected': selected == 0 }" @click="change(0)">快捷交通</div>
+      <div class="selection" v-bind:class="{ 'selected': selected == 1 }" @click="change(1)">完善機能</div>
+    </div>
+    <div class="main">
+      <div class="left" data-aos="fade-right">
+        <div class="t1">到站就到家，<br />
+          一線速抵北市核心</div>
+        <div class="t2">步行50米竹圍捷運站，信義淡水一線直抵士林科學園區、中山南西百貨商圈、大安核心、信義101商圈，不用轉車，即刻擁抱全市心！</div>
+      </div>
+      <div class="right">
+        <Splide :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }"
+          ref="splide">
+          <SplideSlide class="slide" v-for="slide in slides[selected]">
+            <img :src="slide">
+          </SplideSlide>
+        </Splide>
       </div>
     </div>
-    <!-- round-->
-    <div class="o">
-      <div></div>
-    </div>
-
-    <!--wave-->
-    <div class="w wave1">
-      <div class="w4"><img src="@/section/s3/wave4.svg" /><img src="@/section/s3/wave4.svg" /></div>
-      <div class="w3"><img src="@/section/s3/wave3.svg" /><img src="@/section/s3/wave3.svg" /></div>
-      <div class="w2"><img src="@/section/s3/wave2.svg" /><img src="@/section/s3/wave2.svg" /></div>
-      <div class="w1"><img src="@/section/s3/wave1.svg" /><img src="@/section/s3/wave1.svg" /></div>
-    </div>
-    <!--wave2-->
-    <div class="w wave2" v-if="!$isMobile()">
-      <div class="w4"><img src="@/section/s3/wave4.svg" /><img src="@/section/s3/wave4.svg" /></div>
-      <div class="w3"><img src="@/section/s3/wave3.svg" /><img src="@/section/s3/wave3.svg" /></div>
-      <div class="w2"><img src="@/section/s3/wave2.svg" /><img src="@/section/s3/wave2.svg" /></div>
-      <div class="w1"><img src="@/section/s3/wave1.svg" /><img src="@/section/s3/wave1.svg" /></div>
-    </div>
+    <img src="./s3/ship.png" class="ship" alt="" srcset="">
+    <img v-if="!$isMobile()" src="./s3/tree.png" class="tree" alt="" srcset="">
   </article>
 </template>
-
-<style lang="scss" scoped>
-@import '@/assets/style/function.scss';
-
-.s3 {
-  position: relative;
-  width: 100%;
-  height: size(1080);
-  background-color: #DCDCDD;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .item {
-    font-family: 'Noto Sans TC';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: size(30);
-    z-index: 1;
-
-    .t1 {
-      font-weight: 700;
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      color: #699DC4;
-    }
-
-    img {
-      width: size(48);
-    }
-
-    .t2 {
-      font-weight: 400;
-      font-size: size(20);
-      line-height: 1.8;
-      letter-spacing: 0.07em;
-    }
-  }
-
-  .w {
-    width: 100%;
-    overflow: hidden;
-    height: size(228);
-    position: absolute;
-    left: 0;
-    pointer-events: none;
-
-    &.wave1 {
-      bottom: 0;
-    }
-
-    &.wave2 {
-      top: 0;
-    }
-
-    .w1 {
-      position: absolute;
-      top: 5vw;
-      left: 0;
-      // transform: rotate(3deg);
-      white-space: nowrap;
-
-      img {
-        width: 200%;
-        transform: translateX(-100%);
-        animation: light1 6s linear infinite;
+  
+<style lang="scss" >
+  @import '@/assets/style/function.scss';
+  
+  .s3 {
+      @apply relative;
+    height: size(1080);
+    background: #013755;
+    background-image: url('./s3/bg.jpg');
+    background-size: cover;
+    padding-top: size(59);
+    .header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      
+      gap: size(25);
+      .en {
+        width: size(736.16);
+        margin: unset;
+        margin-right: size(41.17);
+      }
+      .selection {
+      width: size(440);
+      height: size(42);
+      text-align: right;
+      font-size: size(22);
+      background-size: cover;
+      background-image: url('./s3/unselect.png');
+      padding-right: size(29);
+      color:#C9A063;
+      &.selected {
+        color:#fff;
+        background-image: url('./s3/selected.png');
+      }
+      &:hover {
+        cursor: pointer;
+        color:#fff;
+        background-image: url('./s3/selected.png');
+      }
       }
     }
-
-    .w2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.7;
-      // transform: rotate(-3deg) scaleX(-1);
-      white-space: nowrap;
-
-      img {
-        width: 200%;
-        transform: translateX(-100%);
-        animation: light1 8s linear infinite reverse;
-      }
-    }
-
-    .w3 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      // transform: rotate(-10deg);
-      white-space: nowrap;
-
-      img {
-        width: 200%;
-        transform: translateX(-100%);
-        animation: light1 7s linear infinite;
-      }
-    }
-
-    .w4 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      // transform: rotate(-10deg);
-      white-space: nowrap;
-
-      img {
-        width: 200%;
-        transform: translateX(-100%);
-        animation: light1 9s linear infinite;
-      }
-    }
-
-    @keyframes light1 {
-      to {
-        transform: translateX(0);
-      }
-    }
-  }
-
-  .o {
-    border: 1px solid #fff;
-    width: size(416);
-    height: size(416);
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -#{size(208)};
-    margin-top: -#{size(208)};
-    transform: rotate(30deg) scaleX(.8);
-
-    div {
-      width: 10px;
-      height: 10px;
-      background: #fff;
-      border-radius: 50%;
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 5px);
-      animation: light1 10s linear infinite;
-      transform-origin: 50% size(211);
-    }
-  }
-
-  @keyframes light1 {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
+    
+.tree {
+  
+  position: absolute;
+    width: size(392);
+    right: 0;
+    bottom: size(1006);
 }
 
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+  .ship {
+    position: absolute;
+    width: size(286);
+    left: size(423);
+    bottom: size(101);
+    animation: wave2 3s alternate-reverse infinite ease-in-out;
+    @keyframes wave2 {
+      from {
+        transform: translate(-4%, -1%) skewX(2deg);
+      }
+      to {
 
-@media screen and (max-width: 767px) {
+        transform: translate(4%, 1%) skewX(-2deg);
+      }
+    }
+  }
+
+  .main {
+    @apply relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: size(112);
+    margin-top: size(69);
+    z-index: 1;
+    .left{
+        color: #FFFFFF;
+        padding-bottom: size(145);
+      .t1 {
+        font-weight: 700;
+        font-size: size(55);
+        line-height: 122.7%;
+        letter-spacing: 0.025em;
+        margin-bottom: size(25);
+      }
+      .t2 {
+        font-weight: 400;
+        font-size: size(18);
+        line-height: 180.7%;
+        text-align: justify;
+        letter-spacing: 0.165em;
+        width: size(394);
+      }
+    }
+    .right {
+      width: size(1252);
+      height: size(823);
+      .slide {
+        width: size(1252);
+        img {
+          width: 100%;
+        }
+      }
+      .splide__pagination {
+        gap: size(16);
+        margin-top: size(25);
+        button {
+          height: size(14);
+          width: size(14);
+          background: rgba(217, 217, 217, 0.54);
+          &.is-active {
+            background: #C9A063;
+          }
+        }
+      }
+    }
+  }
+  }
+  
+  /* 螢幕尺寸標準 */
+  /* 平板尺寸 */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+  
+  @media screen and (max-width: 767px) {
 
   .s3 {
-    height: size-m(464);
+    height: sizem(667);
+    background-image: url('./s3/bg_m.jpg');
+    padding-top: sizem(28) !important;
+    padding: 0 sizem(30);
+    .header {      
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: size(25);
+      .en {
+        width: 100%;
+        margin: unset;
+        margin-right: 0;
+        margin-bottom: sizem(24);
+      }
+      .selection {
+        line-height: sizem(35.29);
+        width: sizem(144);
+        height: sizem(35.29);
+        text-align: center;
+        font-size: sizem(16);
+        padding-right: 0;
+        background-image: url('./s3/unselect_m.png');
+        background-position: right bottom;
+        &.selected {
+          background-image: url('./s3/selected_m.png');
+        }
+        &:hover {
+          background-image: url('./s3/selected_m.png');
+        }
+        }
+    }
+    
+  .ship {
+    width: sizem(173.11);
+    left: sizem(195);
+    bottom: size(16);
+  }
 
-    .item {
-      gap: size-m(20);
+  .main {
+    flex-direction: column-reverse;
+    gap: sizem(23);
+    margin-top: sizem(44);
+    .left{
+        color: #FFFFFF;
+        padding-bottom: size(145);
       .t1 {
-        font-size: size-m(20);
+        font-size: sizem(25);
+        margin-bottom: sizem(12);
       }
-
-      img {
-        width: size-m(18);
-      }
-
       .t2 {
-        font-size: size-m(12);
+        font-size: sizem(13);
+        width: 100%;
       }
     }
-
-    .w {
-      height: size-m(60);
-    }
-
-    .o {
-      width: size-m(300);
-      height: size-m(300);
-      margin-left: -#{size-m(150)};
-      margin-top: -#{size-m(150)};
-      div {
-        transform-origin: 50% size-m(154);
+    .right {
+      width: sizem(315);
+      height: auto;
+      .slide {
+        width: 100%;
+      }
+      .splide__pagination {
+        gap: sizem(10);
+        margin-top: sizem(6);
+        button {
+          height: sizem(8);
+          width: sizem(8);
+        }
       }
     }
   }
-}
-</style>
+  }
+  
+  }
+  </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const selected = ref(0);
+const splide = ref(null);
+const change = (target) => {
+  selected.value = target;
+  splide.value.splide.go(0)
+};
 
-const isMobile = computed(() => globals.$isMobile());
+let suffix = globals.$isMobile() ? 'm': '';
+
+const slides = [
+  [
+    new URL(`./s3/a1${suffix}.jpg`, import.meta.url).href,
+    new URL(`./s3/a2${suffix}.jpg`, import.meta.url).href
+  ],
+  [
+    new URL(`./s3/b1${suffix}.jpg`, import.meta.url).href,
+    new URL(`./s3/b2${suffix}.jpg`, import.meta.url).href,
+    new URL(`./s3/b3${suffix}.jpg`, import.meta.url).href]
+]
 </script>
+  
