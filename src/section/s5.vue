@@ -20,15 +20,15 @@
             </SplideSlide>
           </Splide>
           <div v-if="$isMobile()" class="arrows">
-            <img @click="splide.splide.go('<')" class="prev" src="./s5/prev.png" alt="" srcset="">
-            <img @click="splide.splide.go('>')" class="next" src="./s5/next.png" alt="" srcset="">
+            <img @click="splide.splide.go('<')" class="prev" src="@/section/s5/prev.png" alt="" srcset="">
+            <img @click="splide.splide.go('>')" class="next" src="@/section/s5/next.png" alt="" srcset="">
           </div>
         </div>
         <div class="en-box">
-          <img data-aos="fade-up" src="./s5/BUILDING MATERIALS.png" alt="" srcset="">
+          <img data-aos="fade-up" src="@/section/s5/BUILDING MATERIALS.png" alt="" srcset="">
           <div v-if="!$isMobile()" class="line"></div>
         </div>
-        <img v-if="!$isMobile()" class="arrow" @click="splide.splide.go('>')" src="./s5/arrow.png" alt="" srcset="">
+        <img v-if="!$isMobile()" class="arrow" @click="splide.splide.go('>')" src="@/section/s5/arrow.png" alt="" srcset="">
       </div>
     </div>
   </article>
@@ -40,7 +40,7 @@
   .s5 {
     @apply relative;
     height: size(900);
-    background-image: url('./s5/bg.jpg');
+    background-image: url('@/section/s5/bg.jpg');
     background-size: cover;
     .main {
       display: flex;
@@ -160,7 +160,7 @@
 
   .s5 {
     height: sizem(667);
-    background-image: url('./s5/bgm.jpg');
+    background-image: url('@/section/s5/bgm.jpg');
     .main {
       display: flex;
       align-items: center;

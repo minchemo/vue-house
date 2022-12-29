@@ -2,7 +2,7 @@
   <article class="s7">
     <div class="t1">11-25坪景觀宅</div>
     <div class="t2">竹圍站50米｜挑高3米6</div>
-    <img class="tree" src="./s7/tree.png" alt="" srcset="">
+    <img class="tree" src="@/section/s7/tree.png" alt="" srcset="">
   </article>
 </template>
   
@@ -12,7 +12,7 @@
   .s7 {
     @apply relative;
     height: size(700);
-    background-image: url('./s7/bg.jpg');
+    background-image: url('@/section/s7/bg.jpg');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
   @media screen and (max-width: 767px) {
   .s7 {
     height: sizem(280);
-    background-image: url('./s7/bgm.jpg');
+    background-image: url('@/section/s7/bgm.jpg');
     padding-top: sizem(50);
     .t1{
       font-size: sizem(28);

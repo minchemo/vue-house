@@ -1,18 +1,18 @@
 <template>
   <article class="s1">
 
-    <img src="./s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0" />
+    <img src="@/section/s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0" />
 
-    <img src="./s1/gif4.gif" class="gif" data-aos="fade" data-aos-delay="0" />
+    <img src="@/section/s1/gif4.gif" class="gif" data-aos="fade" data-aos-delay="0" />
     <div class="img">
-      <img src="./s1/1.png" class="img1 tree" />
-      <img src="./s1/2.png" class="img2 tree" />
-      <img src="./s1/2.png" class="img3 tree" />
-      <img src="./s1/3.png" class="img4 tree" />
-      <img src="./s1/boat.png" class="boat" />
+      <img src="@/section/s1/1.png" class="img1 tree" />
+      <img src="@/section/s1/2.png" class="img2 tree" />
+      <img src="@/section/s1/2.png" class="img3 tree" />
+      <img src="@/section/s1/3.png" class="img4 tree" />
+      <img src="@/section/s1/boat.png" class="boat" />
     </div>
     <div class="txt">
-      <img class="logo" data-aos="fade-up" src="./s1/logo.png" alt="" srcset="">
+      <img class="logo" data-aos="fade-up" src="@/section/s1/logo.png" alt="" srcset="">
       <div class="t1" data-aos="fade-up" data-aos-delay="200">重新定義河岸第一排</div>
       <div class="t2" data-aos="fade-up" data-aos-delay="400">竹圍站50米｜11-25坪景觀宅</div>
     </div>

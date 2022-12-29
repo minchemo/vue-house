@@ -1,9 +1,9 @@
 <template>
   <article class="s4">
-    <img class="en" data-aos="fade-down" src="./s4/GRAND RIVERSIDE.png" alt="" srcset="">
+    <img class="en" data-aos="fade-down" src="@/section/s4/GRAND RIVERSIDE.png" alt="" srcset="">
     <div class="main">
       <div class="box"></div>
-      <img class="tree" src="./s4/tree.png" alt="" srcset="">
+      <img class="tree" src="@/section/s4/tree.png" alt="" srcset="">
       <div class="t1" data-aos="fade-left">
         水岸經典至美<br>
         天際最美建築
@@ -23,7 +23,7 @@
     @apply relative;
     height: size(1080);
     background: #013755;
-    background-image: url('./s4/bg.jpg');
+    background-image: url('@/section/s4/bg.jpg');
     background-size: cover;
     padding-top: size(59);
     .en {
@@ -101,7 +101,7 @@
 
     .s4 {
     height: sizem(667);
-    background-image: url('./s4/bgm.jpg');
+    background-image: url('@/section/s4/bgm.jpg');
     padding-top: sizem(41) !important;
     padding: 0 sizem(30);
     .en {

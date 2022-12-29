@@ -1,10 +1,10 @@
 <template>
   <article class="s6">
-    <img v-if="$isMobile()" class="top-tree" src="./s6/lil_tree.png" alt="" srcset="">
-    <img v-else class="top-tree" src="./s6/tree.png" alt="" srcset="">
+    <img v-if="$isMobile()" class="top-tree" src="@/section/s6/lil_tree.png" alt="" srcset="">
+    <img v-else class="top-tree" src="@/section/s6/tree.png" alt="" srcset="">
     <div class="header">
       <div class="t1" data-aos="fade-down">戶戶挑高 陽光美寓</div>
-      <img class="en" data-aos="fade-down" data-aos-delay="200" src="./s6/FLOOR PLANS.png" alt="" srcset="">
+      <img class="en" data-aos="fade-down" data-aos-delay="200" src="@/section/s6/FLOOR PLANS.png" alt="" srcset="">
       <div class="selection-bar" v-bind:class="{ pos0: selected == '25', pos1: selected == '10' }"></div>
       <div class="selection" data-aos="fade-down" data-aos-delay="400" v-bind:class="{ selected: selected == '25' }"
         @click="change('25')">
@@ -23,14 +23,14 @@
           </SplideSlide>
         </Splide>
         <div class="arrows">
-          <img @click="splide.splide.go('<')" src="./s6/prev.png" alt="" srcset="">
-          <img @click="splide.splide.go('>')" src="./s6/next.png" alt="" srcset="">
+          <img @click="splide.splide.go('<')" src="@/section/s6/prev.png" alt="" srcset="">
+          <img @click="splide.splide.go('>')" src="@/section/s6/next.png" alt="" srcset="">
         </div>
       </div>
       <div class="txt" >
         <div class="t1" :key="selected" data-aos="fade-left">{{ imgs[selected].t1 }}</div>
         <div class="t2" :key="selected" data-aos="fade-left">{{ imgs[selected].t2 }}</div>
-        <img v-if="!$isMobile()" class="tree" src="./s6/lil_tree.png" alt="" srcset="">
+        <img v-if="!$isMobile()" class="tree" src="@/section/s6/lil_tree.png" alt="" srcset="">
         <div class="plan" v-bind:class="{ a: selected == '25', b: selected == '10' }">
           <div class="marker pos1" v-bind:class="{ selected: currentIndex + 1 == 1 }" @click="splide.splide.go(0)">
           </div>
@@ -223,11 +223,11 @@
           
 
           &.a {
-            background-image: url('./s6/a_plan.png');
+            background-image: url('@/section/s6/a_plan.png');
           }
 
           &.b {
-            background-image: url('./s6/b_plan.png');
+            background-image: url('@/section/s6/b_plan.png');
             background-repeat: no-repeat;
             background-position-x: 50%;
           }
@@ -278,15 +278,15 @@
             @apply absolute;
             width: size(35);
             height: size(51);
-            background-image: url('./s6/marker.png');
+            background-image: url('@/section/s6/marker.png');
             background-size: contain;
             cursor: pointer;
             transition: all .25s;
             &:hover {
-              background-image: url('./s6/marker_selected.png');
+              background-image: url('@/section/s6/marker_selected.png');
             }
             &.selected {
-              background-image: url('./s6/marker_selected.png');
+              background-image: url('@/section/s6/marker_selected.png');
             }
           }
         }

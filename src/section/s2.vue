@@ -1,10 +1,10 @@
 <template>
   <article class="s2">
     <div class="main-img">
-      <img data-aos="fade-down" class="content" src="./s2/GRAND RIVERSIDE.png" alt="" srcset="">
+      <img data-aos="fade-down" class="content" src="@/section/s2/GRAND RIVERSIDE.png" alt="" srcset="">
       <div class="caption">環景現場空拍合成修飾</div>
     </div>
-    <img class="tree" v-if="$isMobile()" src="./s2/tree.png" alt="" srcset="">
+    <img class="tree" v-if="$isMobile()" src="@/section/s2/tree.png" alt="" srcset="">
     <div class="bottom">
       <div class="left">
         <div class="t1" data-aos="fade-right">沁心自在人生</div>
@@ -24,28 +24,28 @@
       <div class="right">
         <div v-if="!$isMobile()" data-aos="fade-up" class="imgs">
           <div class="img-box">
-            <img src="./s2/a.jpg" alt="" srcset="">
+            <img src="@/section/s2/a.jpg" alt="" srcset="">
             <div class="caption">八里河岸合成修飾</div>
           </div>
           <div class="img-box">
-            <img src="./s2/b.jpg" alt="" srcset="">
+            <img src="@/section/s2/b.jpg" alt="" srcset="">
             <div class="caption">金色水岸自行車道</div>
           </div>
         </div>
         <div v-else>
           <Splide :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }" ref="splide">
             <SplideSlide class="slide">
-              <img src="./s2/a.jpg" alt="" srcset="">
+              <img src="@/section/s2/a.jpg" alt="" srcset="">
               <div class="caption">八里河岸合成修飾</div>
             </SplideSlide>
             <SplideSlide class="slide">
-              <img src="./s2/b.jpg" alt="" srcset="">
+              <img src="@/section/s2/b.jpg" alt="" srcset="">
               <div class="caption">金色水岸自行車道</div>
             </SplideSlide>
           </Splide>
         </div>
-        <img data-aos="fade-up" class="en" src="./s2/RIVERSIDE SEENERY.png" alt="" srcset="">
-        <img data-aos="fade-up" v-if="$isMobile()" @click="splide.splide.go('>')" src="./s2/next.png" class="next"
+        <img data-aos="fade-up" class="en" src="@/section/s2/RIVERSIDE SEENERY.png" alt="" srcset="">
+        <img data-aos="fade-up" v-if="$isMobile()" @click="splide.splide.go('>')" src="@/section/s2/next.png" class="next"
           alt="" srcset="">
       </div>
     </div>
@@ -64,7 +64,7 @@
     @apply mx-auto relative bg-cover;
     width: size(1707);
     height: size(1000);
-    background-image: url('./s2/1.jpg');
+    background-image: url('@/section/s2/1.jpg');
     .content {
       @apply mx-auto block relative;
       top: size(263.8);

@@ -1,7 +1,7 @@
 <template>
   <article class="s3">
     <div class="header">
-      <img class="en" src="./s3/LIFE FUNCTION.png" alt="" srcset="">
+      <img class="en" src="@/section/s3/LIFE FUNCTION.png" alt="" srcset="">
       <div class="selection" data-aos="fade-down" v-bind:class="{ 'selected': selected == 0 }" @click="change(0)">快捷交通
       </div>
       <div class="selection" data-aos="fade-down" data-aos-delay="200" v-bind:class="{ 'selected': selected == 1 }"
@@ -22,8 +22,8 @@
         </Splide>
       </div>
     </div>
-    <img src="./s3/ship.png" class="ship" alt="" srcset="">
-    <img v-if="!$isMobile()" src="./s3/tree.png" class="tree" alt="" srcset="">
+    <img src="@/section/s3/ship.png" class="ship" alt="" srcset="">
+    <img v-if="!$isMobile()" src="@/section/s3/tree.png" class="tree" alt="" srcset="">
   </article>
 </template>
   
@@ -34,7 +34,7 @@
       @apply relative;
     height: size(1080);
     background: #013755;
-    background-image: url('./s3/bg.jpg');
+    background-image: url('@/section/s3/bg.jpg');
     background-size: cover;
     padding-top: size(59);
     .header {
@@ -54,17 +54,17 @@
       text-align: right;
       font-size: size(22);
       background-size: cover;
-      background-image: url('./s3/unselect.png');
+      background-image: url('@/section/s3/unselect.png');
       padding-right: size(29);
       color:#C9A063;
       &.selected {
         color:#fff;
-        background-image: url('./s3/selected.png');
+        background-image: url('@/section/s3/selected.png');
       }
       &:hover {
         cursor: pointer;
         color:#fff;
-        background-image: url('./s3/selected.png');
+        background-image: url('@/section/s3/selected.png');
         transition: .5s;
       }
       }
@@ -176,7 +176,7 @@
 
   .s3 {
     height: sizem(667);
-    background-image: url('./s3/bg_m.jpg');
+    background-image: url('@/section/s3/bg_m.jpg');
     padding-top: sizem(28) !important;
     padding: 0 sizem(30);
     .header {      
@@ -196,13 +196,13 @@
         text-align: center;
         font-size: sizem(16);
         padding-right: 0;
-        background-image: url('./s3/unselect_m.png');
+        background-image: url('@/section/s3/unselect_m.png');
         background-position: right bottom;
         &.selected {
-          background-image: url('./s3/selected_m.png');
+          background-image: url('@/section/s3/selected_m.png');
         }
         &:hover {
-          background-image: url('./s3/selected_m.png');
+          background-image: url('@/section/s3/selected_m.png');
         }
         }
     }
