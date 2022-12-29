@@ -14,8 +14,8 @@
         <div class="t2">步行50米竹圍捷運站，信義淡水一線直抵士林科學園區、中山南西百貨商圈、大安核心、信義101商圈，不用轉車，即刻擁抱全市心！</div>
       </div>
       <div class="right">
-        <Splide :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }" ref="splide">
-          <SplideSlide class="slide" v-for="slide, i in slides[selected]">
+        <Splide :key="selected" :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }" ref="splide">
+          <SplideSlide data-aos="fade" class="slide" v-for="slide, i in slides[selected]">
             <img :src="slide">
             <div class="caption">{{ captions[selected][i] }}</div>
           </SplideSlide>

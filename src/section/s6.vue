@@ -15,9 +15,9 @@
     </div>
     <div class="main">
       <div class="swiper">
-        <Splide @splide:move="onMove"
+        <Splide :key="selected" @splide:move="onMove"
           :options="{ type: 'loop', arrows: false, gap: 50, autoplay: true, interval: 4000, }" ref="splide">
-          <SplideSlide class="slide" v-for="img, i in imgs[selected].img1">
+          <SplideSlide data-aos="fade" class="slide" v-for="img, i in imgs[selected].img1">
             <img :src="img">
             <div class="caption">{{ captions[selected][i] }}</div>
           </SplideSlide>
@@ -27,9 +27,9 @@
           <img @click="splide.splide.go('>')" src="./s6/next.png" alt="" srcset="">
         </div>
       </div>
-      <div class="txt">
-        <div class="t1" data-aos="fade-left">{{ imgs[selected].t1 }}</div>
-        <div class="t2" data-aos="fade-left">{{ imgs[selected].t2 }}</div>
+      <div class="txt" >
+        <div class="t1" :key="selected" data-aos="fade-left">{{ imgs[selected].t1 }}</div>
+        <div class="t2" :key="selected" data-aos="fade-left">{{ imgs[selected].t2 }}</div>
         <img v-if="!$isMobile()" class="tree" src="./s6/lil_tree.png" alt="" srcset="">
         <div class="plan" v-bind:class="{ a: selected == '25', b: selected == '10' }">
           <div class="marker pos1" v-bind:class="{ selected: currentIndex + 1 == 1 }" @click="splide.splide.go(0)">
