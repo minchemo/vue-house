@@ -21,7 +21,7 @@ export default {
         ["建築代銷", "君頤廣告股份有限公司"],
         ["樓層規劃", "12F/B1F"],
     ],
-    gtmCode: ["GTM-M87MK5M","GTM-55PLPZQ"], // 可放置多個
+    gtmCode: ["GTM-MKGNRHW"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
@@ -36,17 +36,17 @@ export default {
             offset: "",
         },
         {
-            name: "快捷交通",
+            name: "轉瞬繁華",
             target: ".s3",
             offset: "",
         },
         {
-            name: "完善機能",
+            name: "水岸至美",
             target: ".s4",
             offset: "",
         },
         {
-            name: "水岸至美",
+            name: "建築品牌",
             target: ".s5",
             offset: "",
         },
@@ -55,10 +55,6 @@ export default {
             target: ".s6",
             offset: "",
         },
-        {
-            name: "建築品牌",
-            target: ".s7",
-            offset: "",
-        },
+        
     ],
 }

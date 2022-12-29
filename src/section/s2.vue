@@ -29,10 +29,10 @@
           <Splide :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }"
             ref="splide">
             <SplideSlide class="slide">
-              <img src="./s2/a_m.jpg" alt="" srcset="">
+              <img src="./s2/a.jpg" alt="" srcset="">
             </SplideSlide>
             <SplideSlide class="slide">
-              <img src="./s2/b_m.jpg" alt="" srcset="">
+              <img src="./s2/b.jpg" alt="" srcset="">
             </SplideSlide>
           </Splide>
         </div>
@@ -89,7 +89,7 @@ margin-bottom: size(20);
 
       }
       .t2 {
-font-weight: 400;
+font-weight: 300;
 font-size: size(18);
 line-height: 202.2%;
 letter-spacing: 0.165em;
@@ -123,8 +123,8 @@ color: #FFFFFF;
         }
       }
       .en {
-        width: 100%;
-        margin-top: size(40);
+        width: size(750);
+        margin-top: size(20);
       }
     }
   }
@@ -143,7 +143,6 @@ color: #FFFFFF;
     @apply mx-auto relative bg-cover;
     width: 100%;
     height: sizem(219.68);
-    background-image: url('./s2/1_m.jpg');
     .content {
       top: size-m(47);
       width: sizem(310);
@@ -161,7 +160,20 @@ color: #FFFFFF;
     top: sizem(311);
     right: -#{sizem(28)};
     width: sizem(198.55);
+    transform-origin: 50% 100%;
   }
+  .tree {
+    animation: wave 2s alternate-reverse infinite ease-in-out;
+    @keyframes wave {
+      from {
+        transform: skewX(-3deg);
+      }
+      to {
+        transform: skewX(3deg);
+      }
+    }
+  }
+  
   .bottom {
     margin-top: sizem(20);
     align-items: flex-start;

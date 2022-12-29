@@ -63,6 +63,7 @@
         cursor: pointer;
         color:#fff;
         background-image: url('./s3/selected.png');
+        transition: .5s;
       }
       }
     }
@@ -73,7 +74,19 @@
     width: size(392);
     right: 0;
     bottom: size(1006);
+    transform-origin: 50% 100%;
 }
+.tree {
+    animation: wave 2s alternate-reverse infinite ease-in-out;
+    @keyframes wave {
+      from {
+        transform: skewX(-3deg);
+      }
+      to {
+        transform: skewX(3deg);
+      }
+    }
+  }
 
   .ship {
     position: absolute;
@@ -111,7 +124,7 @@
         margin-bottom: size(25);
       }
       .t2 {
-        font-weight: 400;
+        font-weight: 300;
         font-size: size(18);
         line-height: 180.7%;
         text-align: justify;
@@ -235,17 +248,19 @@ const change = (target) => {
   splide.value.splide.go(0)
 };
 
-let suffix = globals.$isMobile() ? 'm': '';
+//let suffix = globals.$isMobile() ? 'm': '';
 
 const slides = [
   [
-    new URL(`./s3/a1${suffix}.jpg`, import.meta.url).href,
-    new URL(`./s3/a2${suffix}.jpg`, import.meta.url).href
+    new URL(`./s3/a1.jpg`, import.meta.url).href,
+    new URL(`./s3/a2.jpg`, import.meta.url).href
   ],
   [
-    new URL(`./s3/b1${suffix}.jpg`, import.meta.url).href,
-    new URL(`./s3/b2${suffix}.jpg`, import.meta.url).href,
-    new URL(`./s3/b3${suffix}.jpg`, import.meta.url).href]
+    new URL(`./s3/b1.jpg`, import.meta.url).href,
+    new URL(`./s3/b2.jpg`, import.meta.url).href,
+    new URL(`./s3/b3.jpg`, import.meta.url).href,
+    new URL(`./s3/b4.jpg`, import.meta.url).href]
+    
 ]
 </script>
   

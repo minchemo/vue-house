@@ -73,7 +73,7 @@
         margin-top: size(39);
       }
       .t2 {
-        font-weight: 400;
+        font-weight: 300;
         font-size: size(18);
         line-height: 180.7%;
         text-align: justify;

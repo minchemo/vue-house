@@ -25,9 +25,8 @@
 
           <select class="select w-full rounded-full" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
-            <option value="2房">2房</option>
-            <option value="3房">3房</option>
-            <option value="店面">店面</option>
+            <option value="一房">一房</option>
+            <option value="二房">二房</option>
           </select>
 
           <select class="select w-full rounded-full" v-model="formData.city">
@@ -358,7 +357,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email"]
+const bypass = ["project", "msg", "email", "room_type", "city", "area"]
 
 //中文對照
 const formDataRef = ref([

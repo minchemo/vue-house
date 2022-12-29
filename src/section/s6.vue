@@ -58,8 +58,8 @@
     gap: size(50);
     .top-tree{
       @apply absolute;
-        width: size(404);
-        top: -#{size(311)};
+        width: size(360);
+        top: -#{size(280)};
         left: -#{size(1)};
         animation: wave 3s alternate-reverse infinite ease-in-out;
         transform-origin: bottom center;
@@ -171,7 +171,19 @@
           width: size(241);
           left: size(272);
           top: -#{size(142)};
+          transform-origin: 50% 100%;
         }
+        .tree {
+            animation: wave 2s alternate-reverse infinite ease-in-out;
+            @keyframes wave {
+              from {
+                transform: skewX(-3deg);
+              }
+              to {
+                transform: skewX(3deg);
+              }
+            }
+          }
         .t1 {
           font-weight: 700;
           font-size: size(36);
@@ -196,6 +208,7 @@
           right: 0;
           bottom: 0;
           background-size: contain;
+          
 
           &.a {
             background-image: url('./s6/a_plan.png');
@@ -203,6 +216,8 @@
 
           &.b {
             background-image: url('./s6/b_plan.png');
+            background-repeat: no-repeat;
+            background-position-x: 50%;
           }
 
           &.a {
@@ -229,19 +244,19 @@
           &.b {
             .marker {
               &.pos1 {
-                right: 44%;
+                right: 30%;
                 bottom: 20%;
               }
               &.pos2 {
-                right: 39%;
+                right: 25%;
                 bottom: 60%;
               }
               &.pos3 {
-                right: 66%;
+                right: 48%;
                 bottom: 78%;
               }
               &.pos4 {
-                right: 68%;
+                right: 52%;
                 bottom: 39%;
               }
             }
@@ -283,8 +298,8 @@
     padding: 0 sizem(30); 
     .top-tree{
       @apply absolute;
-        width: sizem(162.38);
-        top: -#{sizem(64)};
+        width: sizem(160);
+        top: -#{sizem(55)};
         left: sizem(241);
     }
     .header {
@@ -407,19 +422,19 @@
           &.b {
             .marker {
               &.pos1 {
-                right: 44%;
+                right: 30%;
                 bottom: 20%;
               }
               &.pos2 {
-                right: 39%;
+                right: 23%;
                 bottom: 60%;
               }
               &.pos3 {
-                right: 66%;
+                right: 50%;
                 bottom: 78%;
               }
               &.pos4 {
-                right: 68%;
+                right: 52%;
                 bottom: 39%;
               }
             }
@@ -453,18 +468,18 @@ const onMove = (i, i1, i2) => {
   currentIndex.value = i1;
 }
 
-let suffix = globals.$isMobile() ? 'm' : '';
+//let suffix = globals.$isMobile() ? 'm' : '';
 const currentIndex = ref(0);
 const imgs = {
   '10': {
     t1: '輕奢貴族 大套房',
     t2: '超實在方正格局規劃，室內無虛坪，乾溼分離浴室，挑高設計，靈活規劃收納空間，打造適合頂客、菁英族群，居住兼辦公的景觀套房',
-    img1: [new URL(`./s6/b1${suffix}.jpg`, import.meta.url).href, new URL(`./s6/b2${suffix}.jpg`, import.meta.url).href, new URL(`./s6/b3${suffix}.jpg`, import.meta.url).href, new URL(`./s6/b4${suffix}.jpg`, import.meta.url).href,],
+    img1: [new URL(`./s6/b1.jpg`, import.meta.url).href, new URL(`./s6/b2.jpg`, import.meta.url).href, new URL(`./s6/b3.jpg`, import.meta.url).href, new URL(`./s6/b4.jpg`, import.meta.url).href,],
   },
   '25': {
     t1: '完美家庭 正兩房',
     t2: '豪宅格局規劃，開放式客餐廳規劃，雙衛浴從容超美學，戶戶邊間、挑高3米6，將山、河、海風景帶入生活，構築家的好窗景',
-    img1: [new URL(`./s6/a1${suffix}.jpg`, import.meta.url).href, new URL(`./s6/a2${suffix}.jpg`, import.meta.url).href, new URL(`./s6/a3${suffix}.jpg`, import.meta.url).href, new URL(`./s6/a4${suffix}.jpg`, import.meta.url).href,],
+    img1: [new URL(`./s6/a1.jpg`, import.meta.url).href, new URL(`./s6/a2.jpg`, import.meta.url).href, new URL(`./s6/a3.jpg`, import.meta.url).href, new URL(`./s6/a4.jpg`, import.meta.url).href,],
   },
 }
 </script>

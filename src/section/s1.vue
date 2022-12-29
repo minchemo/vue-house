@@ -12,9 +12,9 @@
       <img src="./s1/boat.png" class="boat" />
     </div>
     <div class="txt">
-      <img class="logo" src="./s1/logo.png" alt="" srcset="">
-      <div class="t1">重新定義河岸第一排</div>
-      <div class="t2">竹圍站50米｜11-25坪景觀宅</div>
+      <img class="logo" data-aos="fade-up" src="./s1/logo.png" alt="" srcset="">
+      <div class="t1" data-aos="fade-up" data-aos-delay="200">重新定義河岸第一排</div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="400">竹圍站50米｜11-25坪景觀宅</div>
     </div>
   </article>
 </template>
@@ -136,7 +136,7 @@ margin-top: size(33);
 margin-bottom: size(11);
     }
     .t2{
-font-weight: 500;
+font-weight: 400;
 font-size: size(40);
 line-height: 124.2%;
 letter-spacing: 0.065em;
