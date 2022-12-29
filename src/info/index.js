@@ -21,7 +21,7 @@ export default {
         ['建築代銷', '自建自售'],
         ['行銷企劃', '天彤廣告'],
     ],
-    gtmCode: ["GTM-W2ZGSV8"], // 可放置多個
+    gtmCode: ["GTM-P77JPG3"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //(主)1
     // recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //(主)2
