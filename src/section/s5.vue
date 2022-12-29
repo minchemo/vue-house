@@ -1,10 +1,11 @@
 <template>
   <article class="s5">
     <div class="main">
-      <div class="txt" >
+      <div class="txt">
         <div class="t1" data-aos="fade-right">專業職人建築<br v-if="!$isMobile()">
           構築美好生活</div>
-        <div class="t2" data-aos="fade-right">三十年甲級營造－鐵冠建設、昌譽營造，抱持誠懇、用心的專業服務原則，以卓越施工品質、工程實力，認真看待看得見與看不見的細節，打造適合人居的完美建築。</div>
+        <div class="t2" data-aos="fade-right">三十年甲級營造－鐵冠建設、昌譽營造，抱持誠懇、用心的專業服務原則，以卓越施工品質、工程實力，認真看待看得見與看不見的細節，打造適合人居的完美建築。
+        </div>
         <div class="badge1" data-aos="fade-right">業績</div>
         <div class="t3" data-aos="fade-right">Hi台北、中山直美、翠松園、墨清院、漫活時代</div>
       </div>
@@ -13,8 +14,9 @@
           <Splide
             :options="{ type: 'loop', arrows: false, gap: 10, perPage: $isMobile() ? 1 : 3, autoplay: true, interval: 4000, focus: 'center' }"
             ref="splide">
-            <SplideSlide class="slide" v-for="slide in slides">
+            <SplideSlide class="slide" v-for="slide, i in slides">
               <img :src="slide">
+              <div class="caption">{{ captions[i] }}</div>
             </SplideSlide>
           </Splide>
           <div v-if="$isMobile()" class="arrows">
@@ -22,7 +24,7 @@
             <img @click="splide.splide.go('>')" class="next" src="./s5/next.png" alt="" srcset="">
           </div>
         </div>
-        <div class="en-box" >
+        <div class="en-box">
           <img data-aos="fade-up" src="./s5/BUILDING MATERIALS.png" alt="" srcset="">
           <div v-if="!$isMobile()" class="line"></div>
         </div>
@@ -103,6 +105,15 @@
             img {
               width: size(413);
             }
+        .caption {
+          
+      @apply absolute;
+      right: size(10);
+      bottom: size(5);
+      font-weight: 400;
+      font-size: size(16);
+      color: #FFFFFF;
+        }
           }
         }
         .en-box{
@@ -200,6 +211,11 @@
             img {
               width: sizem(256.12);
             }
+      .caption {
+        right: sizem(10);
+        bottom: sizem(5);
+        font-size: sizem(12);
+      }
           }
 
           .arrows {
@@ -266,5 +282,7 @@ const slides =
     new URL(`./s5/4.jpg`, import.meta.url).href,
     new URL(`./s5/5.jpg`, import.meta.url).href,
   ];
+
+const captions = ["Hi台北", "中山直美", "翠松園", "墨清院", "漫活時代"]
 </script>
   

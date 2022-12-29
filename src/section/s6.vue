@@ -6,17 +6,20 @@
       <div class="t1" data-aos="fade-down">戶戶挑高 陽光美寓</div>
       <img class="en" data-aos="fade-down" data-aos-delay="200" src="./s6/FLOOR PLANS.png" alt="" srcset="">
       <div class="selection-bar" v-bind:class="{ pos0: selected == '25', pos1: selected == '10' }"></div>
-      <div class="selection" v-bind:class="{ selected: selected == '25' }" @click="change('25')">
+      <div class="selection" data-aos="fade-down" data-aos-delay="400" v-bind:class="{ selected: selected == '25' }"
+        @click="change('25')">
         約<span>25</span>坪<b class="bold">溫馨居</b></div>
-      <div class="selection" v-bind:class="{ selected: selected == '10' }" @click="change('10')">
+      <div class="selection" data-aos="fade-down" data-aos-delay="600" v-bind:class="{ selected: selected == '10' }"
+        @click="change('10')">
         約<span>10</span>坪<b class="bold">時尚居</b></div>
     </div>
     <div class="main">
       <div class="swiper">
         <Splide @splide:move="onMove"
           :options="{ type: 'loop', arrows: false, gap: 50, autoplay: true, interval: 4000, }" ref="splide">
-          <SplideSlide class="slide" v-for="img in imgs[selected].img1">
+          <SplideSlide class="slide" v-for="img, i in imgs[selected].img1">
             <img :src="img">
+            <div class="caption">{{ captions[selected][i] }}</div>
           </SplideSlide>
         </Splide>
         <div class="arrows">
@@ -144,6 +147,15 @@
             width: size(1150);
             height: size(784);
           }
+        .caption {
+          
+      @apply absolute;
+      left: size(10);
+      bottom: size(5);
+      font-weight: 400;
+      font-size: size(16);
+      color: #FFFFFF;
+        }
         }
         .arrows {
           position: absolute;
@@ -370,6 +382,11 @@
             width: 100%;
             height: 100%;
           }
+      .caption {
+        left: sizem(10);
+        bottom: sizem(5);
+        font-size: sizem(12);
+      }
         }
         .arrows {
           padding: 0 sizem(16);
@@ -451,17 +468,20 @@
   }
   </style>
 <script setup>
-import { getCurrentInstance, ref } from 'vue';
+import AOS from 'aos';
+import { getCurrentInstance, ref, nextTick } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const selected = ref('25');
 const splide = ref(null);
 
-const change = (target) => {
+const change = async (target) => {
   selected.value = target;
   splide.value.splide.go(0)
   currentIndex.value = 0;
-  splide.value.splide.refresh()
+  splide.value.splide.refresh();
+  await nextTick()
+  AOS.refreshHard();
 };
 
 const onMove = (i, i1, i2) => {
@@ -481,6 +501,11 @@ const imgs = {
     t2: '豪宅格局規劃，開放式客餐廳規劃，雙衛浴從容超美學，戶戶邊間、挑高3米6，將山、河、海風景帶入生活，構築家的好窗景',
     img1: [new URL(`./s6/a1.jpg`, import.meta.url).href, new URL(`./s6/a2.jpg`, import.meta.url).href, new URL(`./s6/a3.jpg`, import.meta.url).href, new URL(`./s6/a4.jpg`, import.meta.url).href,],
   },
+}
+
+const captions = {
+  '10': ["3D樣品屋示意圖", "3D樣品屋示意圖", "3D樣品屋示意圖", "3D樣品屋示意圖"],
+  '25': ["3D樣品屋示意圖", "3D樣品屋示意圖", "3D樣品屋示意圖", "3D樣品屋示意圖"]
 }
 </script>
   

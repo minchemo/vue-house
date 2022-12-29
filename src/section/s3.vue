@@ -2,8 +2,10 @@
   <article class="s3">
     <div class="header">
       <img class="en" src="./s3/LIFE FUNCTION.png" alt="" srcset="">
-      <div class="selection" v-bind:class="{ 'selected': selected == 0 }" @click="change(0)">快捷交通</div>
-      <div class="selection" v-bind:class="{ 'selected': selected == 1 }" @click="change(1)">完善機能</div>
+      <div class="selection" data-aos="fade-down" v-bind:class="{ 'selected': selected == 0 }" @click="change(0)">快捷交通
+      </div>
+      <div class="selection" data-aos="fade-down" data-aos-delay="200" v-bind:class="{ 'selected': selected == 1 }"
+        @click="change(1)">完善機能</div>
     </div>
     <div class="main">
       <div class="left" data-aos="fade-right">
@@ -12,10 +14,10 @@
         <div class="t2">步行50米竹圍捷運站，信義淡水一線直抵士林科學園區、中山南西百貨商圈、大安核心、信義101商圈，不用轉車，即刻擁抱全市心！</div>
       </div>
       <div class="right">
-        <Splide :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }"
-          ref="splide">
-          <SplideSlide class="slide" v-for="slide in slides[selected]">
+        <Splide :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }" ref="splide">
+          <SplideSlide class="slide" v-for="slide, i in slides[selected]">
             <img :src="slide">
+            <div class="caption">{{ captions[selected][i] }}</div>
           </SplideSlide>
         </Splide>
       </div>
@@ -140,6 +142,15 @@
         img {
           width: 100%;
         }
+        .caption {
+          
+      @apply absolute;
+      left: size(10);
+      bottom: size(5);
+      font-weight: 400;
+      font-size: size(16);
+      color: #FFFFFF;
+        }
       }
       .splide__pagination {
         gap: size(16);
@@ -223,6 +234,11 @@
       height: auto;
       .slide {
         width: 100%;
+      .caption {
+        left: sizem(10);
+        bottom: sizem(5);
+        font-size: sizem(12);
+      }
       }
       .splide__pagination {
         gap: sizem(10);
@@ -239,13 +255,16 @@
   }
   </style>
 <script setup>
-import { getCurrentInstance, ref } from 'vue';
+import AOS from 'aos';
+import { getCurrentInstance, ref, nextTick } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const selected = ref(0);
 const splide = ref(null);
-const change = (target) => {
+const change = async (target) => {
   selected.value = target;
   splide.value.splide.go(0)
+  await nextTick()
+  AOS.refreshHard();
 };
 
 //let suffix = globals.$isMobile() ? 'm': '';
@@ -260,7 +279,11 @@ const slides = [
     new URL(`./s3/b2.jpg`, import.meta.url).href,
     new URL(`./s3/b3.jpg`, import.meta.url).href,
     new URL(`./s3/b4.jpg`, import.meta.url).href]
-    
+]
+
+const captions = [
+  ["竹圍捷運站實景修飾", "竹圍捷運站實景修飾"],
+  ["竹圍機能實景修飾", "家樂福實景修飾", "情境示意圖", "情境示意圖"]
 ]
 </script>
   
