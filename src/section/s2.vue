@@ -1,7 +1,7 @@
 <template>
   <article class="s2">
     <div class="main-img">
-      <img data-aos="fade-down" class="content" src="@/section/s2/GRAND RIVERSIDE.png" alt="" srcset="">
+      <img data-aos="fade-down" class="content" src="@/section/s2/en.png" alt="" srcset="">
       <div class="caption">環景現場空拍合成修飾</div>
     </div>
     <img class="tree" v-if="$isMobile()" src="@/section/s2/tree.png" alt="" srcset="">
@@ -44,7 +44,7 @@
             </SplideSlide>
           </Splide>
         </div>
-        <img data-aos="fade-up" class="en" src="@/section/s2/RIVERSIDE SEENERY.png" alt="" srcset="">
+        <img data-aos="fade-up" class="en" src="@/section/s2/en2.png" alt="" srcset="">
         <img data-aos="fade-up" v-if="$isMobile()" @click="splide.splide.go('>')" src="@/section/s2/next.png" class="next"
           alt="" srcset="">
       </div>

@@ -4,7 +4,7 @@
     <img v-else class="top-tree" src="@/section/s6/tree.png" alt="" srcset="">
     <div class="header">
       <div class="t1" data-aos="fade-down">戶戶挑高 陽光美寓</div>
-      <img class="en" data-aos="fade-down" data-aos-delay="200" src="@/section/s6/FLOOR PLANS.png" alt="" srcset="">
+      <img class="en" data-aos="fade-down" data-aos-delay="200" src="@/section/s6/en.png" alt="" srcset="">
       <div class="selection-bar" v-bind:class="{ pos0: selected == '25', pos1: selected == '10' }"></div>
       <div class="selection" data-aos="fade-down" data-aos-delay="400" v-bind:class="{ selected: selected == '25' }"
         @click="change('25')">

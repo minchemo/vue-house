@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="en-box">
-          <img data-aos="fade-up" src="@/section/s5/BUILDING MATERIALS.png" alt="" srcset="">
+          <img data-aos="fade-up" src="@/section/s5/en.png" alt="" srcset="">
           <div v-if="!$isMobile()" class="line"></div>
         </div>
         <img v-if="!$isMobile()" class="arrow" @click="splide.splide.go('>')" src="@/section/s5/arrow.png" alt="" srcset="">

@@ -1,7 +1,7 @@
 <template>
   <article class="s3">
     <div class="header">
-      <img class="en" src="@/section/s3/LIFE FUNCTION.png" alt="" srcset="">
+      <img class="en" src="@/section/s3/en.png" alt="" srcset="">
       <div class="selection" data-aos="fade-down" v-bind:class="{ 'selected': selected == 0 }" @click="change(0)">快捷交通
       </div>
       <div class="selection" data-aos="fade-down" data-aos-delay="200" v-bind:class="{ 'selected': selected == 1 }"

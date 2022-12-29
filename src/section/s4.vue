@@ -1,6 +1,6 @@
 <template>
   <article class="s4">
-    <img class="en" data-aos="fade-down" src="@/section/s4/GRAND RIVERSIDE.png" alt="" srcset="">
+    <img class="en" data-aos="fade-down" src="@/section/s4/en.png" alt="" srcset="">
     <div class="main">
       <div class="box"></div>
       <img class="tree" src="@/section/s4/tree.png" alt="" srcset="">
