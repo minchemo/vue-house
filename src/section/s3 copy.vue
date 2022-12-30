@@ -9,8 +9,9 @@
     </div>
     <div class="main">
       <div class="left" data-aos="fade-right">
-        <div class="t1" v-html="imgs[selected].t1"></div>
-        <div class="t2" v-html="imgs[selected].t2"></div>
+        <div class="t1">到站就到家，<br />
+          一線速抵北市核心</div>
+        <div class="t2">步行50米竹圍捷運站，信義淡水一線直抵士林科學園區、中山南西百貨商圈、大安核心、信義101商圈，不用轉車，即刻擁抱全市心！</div>
       </div>
       <div class="right">
         <Splide :key="selected" :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }" ref="splide">
@@ -110,11 +111,9 @@
     @apply relative;
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
-    gap: size(100);
+    justify-content: flex-end;
+    gap: size(112);
     margin-top: size(69);
-    margin-left: size(69);
-    margin-right: size(0);
     z-index: 1;
     .left{
         color: #FFFFFF;
@@ -259,21 +258,17 @@
 import AOS from 'aos';
 import { getCurrentInstance, ref, nextTick } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const selected = ref(0);
 const splide = ref(null);
-
 const change = async (target) => {
   selected.value = target;
   splide.value.splide.go(0)
-  currentIndex.value = 0;
-  splide.value.splide.refresh();
   await nextTick()
   AOS.refreshHard();
 };
 
 //let suffix = globals.$isMobile() ? 'm': '';
-const currentIndex = ref(0);
+
 const slides = [
   [
     new URL(`./s3/a1.jpg`, import.meta.url).href,
@@ -284,17 +279,6 @@ const slides = [
     new URL(`./s3/b2.jpg`, import.meta.url).href,
     new URL(`./s3/b3.jpg`, import.meta.url).href,
     new URL(`./s3/b4.jpg`, import.meta.url).href]
-]
-
-const imgs = [
-  {
-    t1: '到站就到家，<br />一線速抵北市核心',
-    t2: '步行50米竹圍捷運站，信義淡水一線直抵士林科學園區、中山南西百貨商圈、大安核心、信義101商圈，不用轉車，即刻擁抱全市心！',
-  },
-  {
-    t1: '繁華全機能，<br />鄰近百貨商圈',
-    t2: '傳統市集、餐飲店家、全聯、頂好超市、寶雅等連鎖美妝，轉個彎到「竹圍商圈」，採買日常無比便利，將有知名商場進駐，舉步即享商圈繁華！',
-  }
 ]
 
 const captions = [
