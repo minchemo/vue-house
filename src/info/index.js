@@ -1,8 +1,8 @@
 export default {
-  address: "新北市八里區中山路一段268巷2號",
+  address: "新北市八里區中山路一段306巷基地內",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.2767471571537!2d121.41221181532607!3d25.16013163937691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a511017c41c7%3A0xdad17e0bb5c067fe!2zMjQ55paw5YyX5biC5YWr6YeM5Y2A5Lit5bGx6Lev5LiA5q61MjY45be3MuiZnw!5e0!3m2!1szh-TW!2stw!4v1616292366871!5m2!1szh-TW!2stw",
-  googleLink: "https://goo.gl/maps/hLN3izUudxHarCY97",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d536.823512047139!2d121.41318982621395!3d25.1592200336074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a53fe99ba411%3A0xf91d72552183104a!2z5bem5bK4546r55Gw!5e0!3m2!1szh-TW!2stw!4v1672389487646!5m2!1szh-TW!2stw",
+  googleLink: "https://goo.gl/maps/QJehUJ9R5kwwiGm567",
   phone: "02-8630-5938",
   fbLink:
     "https://www.facebook.com/%E5%B7%A6%E5%B2%B8%E7%8E%AB%E7%91%B0-103086948079450",
