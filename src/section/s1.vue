@@ -40,6 +40,8 @@
 .bg{
   position: absolute;
   width: 100%;height:auto;
+  min-height: size(1080);
+  max-height: size(1080);
   top: calc(50% + (0 - 535) * 100vw / 1920);
   left:0;object-fit: cover;
   }
@@ -159,6 +161,8 @@ color: #C9A063;
 .bg{
   height:100%;
   top:0;
+  min-height: sizem(667);
+  max-height: sizem(812);
   }
   .gif{
     width:200%;
