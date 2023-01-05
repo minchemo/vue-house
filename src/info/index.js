@@ -6,7 +6,7 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "接待中心｜台南市新市區民權路/信義街口",
+    address: "台南市新市區民權路/信義街口",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1835.2671663313604!2d120.2900556!3d23.0775278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xad6fd049b7aebbc7!2zMjPCsDA0JzM5LjEiTiAxMjDCsDE3JzI0LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1668665398255!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/RC5eNqdT5nFLnh2s7",
     phone: "06 637 5888",

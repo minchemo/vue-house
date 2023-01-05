@@ -2,25 +2,25 @@
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between font-['noto_sans_tc'] section9">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center contact-phone-btn" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-center items-center contact-phone-btn" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="宗大敘山" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="宗大敘山" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="宗大敘山" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap">
-      <div class="flex contact-item justify-between items-center address">
+      <div class="flex contact-item justify-center items-center address">
         <div class="mo-only" v-if="$isMobile()">接待中心</div>
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center googlemap contact-map-btn"
+      <div class="flex contact-item justify-center items-center googlemap contact-map-btn"
         @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="宗大敘山" srcset="" />
         <div>導航 GoogleMap</div>
@@ -68,7 +68,7 @@
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+          `${info.address}`
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
@@ -129,7 +129,7 @@
       background-color: #fff;
       color: #000;
       width: 100%;
-      padding: 0 size(55);
+      padding: 0;
       // border-radius: 9999px;
       border: 2px solid #C6A93E;
       font-size: size(16);
@@ -139,6 +139,7 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
+      gap:size(20);
 
       &:hover {
         background-color: #C6A93E;
@@ -155,6 +156,7 @@
         max-height: size(27);
         filter: invert(89%) sepia(63%) saturate(808%) hue-rotate(326deg) brightness(86%) contrast(78%); // 選顏色 https://codepen.io/sosuke/pen/Pjoqqp
         transition: all .5s;
+        margin: 0;
       }
 
       &.address {

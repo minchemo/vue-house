@@ -125,30 +125,33 @@
 }
 </style>
 <script setup>
-import { ref ,onMounted} from 'vue';
+import { ref, getCurrentInstance, onMounted } from 'vue';
+import { SplideTrack } from '@splidejs/vue-splide';
 import inView from 'in-view';
 
-const splideRef = ref(null);
 
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const splideRef = ref(null);
+const activeIndex = ref(0);
 const imgs = [
   {
-    title: new URL(`../section/s5/t1.png`, import.meta.url).href,
-    img: new URL(`../section/s5/1.jpg`, import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s5/t1.png", import.meta.url).href : new URL("../section/s5/t1.png", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s5/1.jpg", import.meta.url).href : new URL("../section/s5/1.jpg", import.meta.url).href,
     content: '借鏡美國與竹科模式，加上半導體產業鏈進軍助攻，南科成為世界科技指標研發重鎮。南科2021年產值破兆元，半導體、光電、5G定位發展明確，產業群落效應顯著，科技核心城市成形。'
   },
   {
-    title: new URL(`../section/s5/t2.png`, import.meta.url).href,
-    img: new URL(`../section/s5/5.jpg`, import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s5/t2.png", import.meta.url).href : new URL("../section/s5/t2.png", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s5/5_m.jpg", import.meta.url).href : new URL("../section/s5/5.jpg", import.meta.url).href,
     content: '新市的完整成熟機能，放眼大南科無可匹敵。金融、休閒、日常採買全到位，隨著南科特定計畫開發，串起完整校園、生態保護區、藝文展演等生活服務，成就新時代新貴生活圈。'
   },
   {
-    title: new URL(`../section/s5/t3.png`, import.meta.url).href,
-    img: new URL(`../section/s5/3.jpg`, import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s5/t3.png", import.meta.url).href : new URL("../section/s5/t3.png", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s5/3.jpg", import.meta.url).href : new URL("../section/s5/3.jpg", import.meta.url).href,
     content: '南科三區之中，新市是唯一「北外環快速道」涵蓋之行政區，聯外效率凌駕安定與善化，飆速串連台南市中心。匯聚國道一、八號、台1線、南135縣道，貴為南科交通門戶。'
   },
   {
-    title: new URL(`../section/s5/t4.png`, import.meta.url).href,
-    img: new URL(`../section/s5/4.jpg`, import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s5/t4.png", import.meta.url).href : new URL("../section/s5/t4.png", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s5/4.jpg", import.meta.url).href : new URL("../section/s5/4.jpg", import.meta.url).href,
     content: '南科台南科學園區佔地1,043公頃，隨南科特定計畫區開發，總就業人口估計將可達12.3萬人。產業帶來就業機會，人才帶來住居需求，科技新貴帶來的剛性需求，指日可待。'
   },
 ]
