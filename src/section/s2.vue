@@ -128,7 +128,7 @@
     img {
       @apply h-full;
       margin: unset;
-      opacity: 0;
+      opacity: 1;
       transition: all .5s;
       &:hover {
         opacity: 1;
@@ -312,18 +312,8 @@ const imgs = [
     label2: '台南國際城'
   },
   {
-    img: new URL(`../section/s2/10.png`, import.meta.url).href,
-    label1: '2020',
-    label2: '天下南隅'
-  },
-  {
-    img: new URL(`../section/s2/11.png`, import.meta.url).href,
-    label1: '2022',
-    label2: '出雲居'
-  },
-  {
     img: new URL(`../section/s2/12.png`, import.meta.url).href,
-    label1: 'Processing',
+    label1: '2022',
     label2: '遇州南'
   },
   {
