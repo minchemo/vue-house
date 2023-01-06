@@ -136,7 +136,7 @@
 
 @media screen and (max-width: 767px) {
 .s3 {
-  height: size-m(1615);
+  height: size-m(1200);
   padding-top: size-m(89);
 
   .title {
@@ -148,21 +148,23 @@
   }
 
   .items {
-    margin-top: size-m(80);
+    margin: size-m(80) auto size-m(0);
+    width: size-m(360);
     @apply flex-row;
     .item {
-      @apply flex items-center;
-      height: size-m(104);
-      width: size-m(233);
-      border-bottom: size-m(1) solid #C6A93E;
-      border-right: 0;
+      @apply flex items-center justify-center; 
+      
+      height: size-m(60);
+      width: size-m(200);
+      
+      border-right: size-m(1) solid #C6A93E;
 
       img {
-        height: size-m(42.87);
+        height: size-m(55);
       }
 
       &:last-child {
-        border-bottom: 0;
+        border-right: 0;
       }
       
     }
@@ -171,7 +173,7 @@
     .slide-section{
       @apply flex-col;
     gap: 0;
-    margin-top: size-m(60);
+    margin-top: size-m(40);
 
     .slide-wrapper {
         flex-basis: size-m(320);
@@ -232,12 +234,12 @@ const activeIndex = ref(0);
 
 const imgs = [
   {
-    btnImg: new URL(`../section/s3/01/title.png`, import.meta.url).href,
+    btnImg: globals.$isMobile() ? new URL("../section/s3/01/title_m.png", import.meta.url).href : new URL("../section/s3/01/title.png", import.meta.url).href,
     titleImg: globals.$isMobile() ? new URL(`../section/s3/01/list_title_m.png`, import.meta.url).href : new URL(`../section/s3/01/list_title.png`, import.meta.url).href,
     imgs: [
       {
         
-        url: globals.$isMobile() ? new URL("../section/s3/01/1.png", import.meta.url).href : new URL("../section/s3/01/1.png", import.meta.url).href,
+        url: globals.$isMobile() ? new URL("../section/s3/01/1_m.jpg", import.meta.url).href : new URL("../section/s3/01/1.png", import.meta.url).href,
         caption: '建築業績｜霞飛3'
       },
       {
@@ -252,26 +254,27 @@ const imgs = [
     content: '宗大以建設起家，從1991年創立至今已超越半甲子。以「連結你我，發現生活」為理念，擘建逾50件建築作品，超過3000戶客戶幸福成家。通過ISO 9002國際品質認證，從透天、大樓，到大型造鎮，台南的繁榮發展處處皆可見到宗大建設蹤跡。'
   },
   {
-    btnImg: new URL(`../section/s3/02/title.png`, import.meta.url).href,
+    btnImg: globals.$isMobile() ? new URL("../section/s3/02/title_m.png", import.meta.url).href : new URL("../section/s3/02/title.png", import.meta.url).href,
     titleImg: globals.$isMobile() ? new URL(`../section/s3/02/list_title_m.png`, import.meta.url).href : new URL(`../section/s3/02/list_title.png`, import.meta.url).href,
     imgs: [
       {
-        url: globals.$isMobile() ? new URL("../section/s3/02/1.png", import.meta.url).href : new URL("../section/s3/02/1.png", import.meta.url).href,
-        caption: '建築業績｜青硯'
+        url: globals.$isMobile() ? new URL("../section/s3/02/3.png", import.meta.url).href : new URL("../section/s3/02/3.png", import.meta.url).href,
+        caption: '小東路公宅基地實景'
+      },
+      {
+        url: globals.$isMobile() ? new URL("../section/s3/02/4_m.jpg", import.meta.url).href : new URL("../section/s3/02/4.jpg", import.meta.url).href,
+        caption: '小東路青年公宅'
       },
       {
         url: globals.$isMobile() ? new URL("../section/s3/02/2_m.jpg", import.meta.url).href : new URL("../section/s3/02/2.png", import.meta.url).href,
         caption: '建築業績｜出雲居'
       },
-      {
-        url: globals.$isMobile() ? new URL("../section/s3/02/3.png", import.meta.url).href : new URL("../section/s3/02/3.png", import.meta.url).href,
-        caption: '小東路公宅基地實景'
-      },
+      
     ],
-    content: '宗大深知，建築品質的關鍵在「營造」。為了加速溝通，精準落實施工，以自有營造廠「合新營造」專責宗大旗下建案。南臺灣知名甲級營造廠之一，承攬公共工程、校園新建等，更挺身主責維冠重建工程「出雲居」，以及「小東路青年公宅」，實踐精工品質好生活。'
+    content: '宗大深知，建築品質的關鍵在「營造」。為了加速溝通，精準落實施工，以自有營造廠「合新營造」專責宗大旗下建案。南臺灣知名甲級營造廠之一，承攬公共工程、校園新建等，更投入維冠重建工程「出雲居」，以及「小東路青年公宅」，實踐精工品質好生活。'
   },
   {
-    btnImg: new URL(`../section/s3/03/title.png`, import.meta.url).href,
+    btnImg: globals.$isMobile() ? new URL("../section/s3/03/title_m.png", import.meta.url).href : new URL("../section/s3/03/title.png", import.meta.url).href,
     titleImg: globals.$isMobile() ? new URL(`../section/s3/03/list_title_m.png`, import.meta.url).href : new URL(`../section/s3/03/list_title.png`, import.meta.url).href,
     imgs: [
       {
@@ -290,10 +293,10 @@ const imgs = [
     content: '「天下南隅」以首排之姿，靜鄰赤崁樓。前身為達官顯貴短居台南首選的「天下大飯店」，積累超過半甲子時光後全面翻新，將府城人文底蘊化作設計養分，以時髦比例與層次，轉譯台南生活中最熟悉的元素，邀請旅人，以新潮的五感體驗，感受台南古今歲月。'
   },
   {
-    btnImg: new URL(`../section/s3/04/title.png`, import.meta.url).href,
+    btnImg: globals.$isMobile() ? new URL("../section/s3/04/title_m.png", import.meta.url).href : new URL("../section/s3/04/title.png", import.meta.url).href,
     titleImg: globals.$isMobile() ? new URL(`../section/s3/04/list_title_m.png`, import.meta.url).href : new URL(`../section/s3/04/list_title.png`, import.meta.url).href,
     imgs: [
-      {
+      {                                                                  
         url: globals.$isMobile() ? new URL("../section/s3/04/3.jpg", import.meta.url).href : new URL("../section/s3/04/3.jpg", import.meta.url).href,
         caption: '吉源控股廣東廠'
       },
