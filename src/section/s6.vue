@@ -1,511 +1,159 @@
 <template>
   <article class="s6">
-    <img v-if="$isMobile()" class="top-tree" src="@/section/s6/lil_tree.png" alt="" srcset="">
-    <img v-else class="top-tree" src="@/section/s6/tree.png" alt="" srcset="">
-    <div class="header">
-      <div class="t1" data-aos="fade-down">戶戶挑高 陽光美寓</div>
-      <img class="en" data-aos="fade-down" data-aos-delay="200" src="@/section/s6/en.png" alt="" srcset="">
-      <div class="selection-bar" v-bind:class="{ pos0: selected == '25', pos1: selected == '10' }"></div>
-      <div class="selection" data-aos="fade-down" data-aos-delay="400" v-bind:class="{ selected: selected == '25' }"
-        @click="change('25')">
-        約<span>25</span>坪<b class="bold">溫馨居</b></div>
-      <div class="selection" data-aos="fade-down" data-aos-delay="600" v-bind:class="{ selected: selected == '10' }"
-        @click="change('10')">
-        約<span>10</span>坪<b class="bold">時尚居</b></div>
-    </div>
     <div class="main">
-      <div class="swiper">
-        <Splide :key="selected" @splide:move="onMove"
-          :options="{ type: 'loop', arrows: false, gap: 50, autoplay: true, interval: 4000, }" ref="splide">
-          <SplideSlide data-aos="fade" class="slide" v-for="img, i in imgs[selected].img1">
-            <img :src="img">
-            <div class="caption">{{ captions[selected][i] }}</div>
-          </SplideSlide>
-        </Splide>
-        <div class="arrows">
-          <img @click="splide.splide.go('<')" src="@/section/s6/prev.png" alt="" srcset="">
-          <img @click="splide.splide.go('>')" src="@/section/s6/next.png" alt="" srcset="">
-        </div>
-      </div>
-      <div class="txt" >
-        <div class="t1" :key="selected" data-aos="fade-left">{{ imgs[selected].t1 }}</div>
-        <div class="t2" :key="selected" data-aos="fade-left">{{ imgs[selected].t2 }}</div>
-        <img v-if="!$isMobile()" class="tree" src="@/section/s6/lil_tree.png" alt="" srcset="">
-        <div class="plan" v-bind:class="{ a: selected == '25', b: selected == '10' }">
-          <div class="marker pos1" v-bind:class="{ selected: currentIndex + 1 == 1 }" @click="splide.splide.go(0)">
-          </div>
-          <div class="marker pos2" v-bind:class="{ selected: currentIndex + 1 == 2 }" @click="splide.splide.go(1)">
-          </div>
-          <div class="marker pos3" v-bind:class="{ selected: currentIndex + 1 == 3 }" @click="splide.splide.go(2)">
-          </div>
-          <div class="marker pos4" v-bind:class="{ selected: currentIndex + 1 == 4 }" @click="splide.splide.go(3)">
-          </div>
-        </div>
-        <!-- <img class="plan" :src="imgs[selected].img2[currentIndex]" alt="" srcset=""> -->
-      </div>
+      <img class="t1" src="@/section/s6/sumitomo.svg" alt="" srcset="">
+      <img v-if="!$isMobile()" class="t2" src="@/section/s6/case.png" alt="" srcset="">
+      <img v-else class="t2" src="@/section/s6/case_m.png" alt="" srcset="">
+      <img class="t3" src="@/section/s6/safetyhouse.svg" alt="" srcset="">
+      <div class="t4">小港首座 世界級の制震宅</div>
+      <div class="t5">日本國寶唯一指定級「住友橡膠GRAST制震」<br />
+        台日豪宅大樓級頂尖規劃，減震、抗風力第一等<br />
+        森林公園唯一制震地標景觀，清景麟捨得給您最好</div>
     </div>
+    <img v-if="!$isMobile()" class="cloud" src="@/section/s6/cloud.png" alt="" srcset="">
+    <img v-else class="cloud" src="@/section/s6/cloud_m.png" alt="" srcset="">
+    <img v-if="!$isMobile()" class="building" src="@/section/s6/building.png" alt="" srcset="">
+    <img v-else class="building" src="@/section/s6/building_m.png" alt="" srcset="">
   </article>
 </template>
-  
-<style lang="scss">
-  @import '@/assets/style/function.scss';
-  
-  .s6 {
-    @apply relative;
-    height: size(1080);
-    background-color: #E9E6E2;
+
+<style lang="scss" scoped>
+@import '@/assets/style/function.scss';
+
+.s6 {
+  @apply relative overflow-hidden w-full;
+  height: size(900);
+  background-image: url('@/section/s6/bg.jpg');
+  background-size: cover;
+  .main {
+    @apply relative h-full z-10;
+    top: 0;
+    left: 0;
+    width: size(1168);
+    background: linear-gradient(90deg, #99B9DA 0%, #9EC3E1 56.77%, rgba(158, 195, 225, 0.94984) 70.55%, rgba(159, 196, 226, 0.87042) 75.68%, rgba(160, 197, 226, 0.626506) 82.71%, rgba(163, 201, 229, 0) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: size(50);
-    .top-tree{
-      @apply absolute;
-        width: size(360);
-        top: -#{size(280)};
-        left: -#{size(1)};
-        animation: wave 3s alternate-reverse infinite ease-in-out;
-        transform-origin: bottom center;
-        @keyframes wave {
-          from {
-            transform: skewX(-1deg);
-          }
-          to {
-            transform: skewX(1deg);
-          }
-        }
+    padding-right: size(150);
+    color: #fff;
+    
+    .t1 {
+      width: size(331.97);
+      margin-bottom: size(19.62);
     }
-    .header {
-      @apply relative;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      border-bottom: size(2) solid #013755;
-      padding-bottom: size(5);
-      .t1 {
-        font-weight: 700;
-        font-size: size(55);
-        letter-spacing: -0.005em;
-        color: #013755;
-        margin-right: size(50);
-      }
-      .en {
-        width: size(645);
-        margin: unset;
-        margin-right: size(98.86);
-      }
-      .selection {
-        font-weight: 500;
-        font-size: size(24.35);
-        line-height: 100%;
-        letter-spacing: 0.03em;
-        color: #C1C1C1;
-        margin-right: size(90);
-        cursor: pointer;
-        span{
-          font-weight: 700;
-          font-size: size(48);
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-        &.selected {
-          color: #C9A063;
-        }
-        &:hover {
-          color: #C9A063;
-        }
-      }
-      .selection-bar {
-        @apply absolute;
-        width: size(183);
-        height: size(9);
-        background-color: #013755;
-        bottom: -#{size(5)};
-        right: 0;
-        transition: all .5s;
-        &.pos0{
-          transform: translateX(-#{size(272)});
-        }
-        &.pos1{
-          transform: translateX(0);
-        }
-      }
+    .t2 {
+      width: size(599.02);
+      margin-bottom: size(43.91);
     }
-    .main {
-      gap: size(98);
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      .swiper {
-        @apply relative;
-        width: size(1150);
-        height: size(784);
-        background-color: grey;
-        .slide {
-          img {
-            width: size(1150);
-            height: size(784);
-          }
-        .caption {
-          
-      @apply absolute;
-      left: size(10);
-      bottom: size(5);
+    .t3 {
+      width: size(623.73);
+      margin-bottom: size(41.18);
+    }
+    .t4 {
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size(42);
+      text-align: center;
+      margin-bottom: size(21);
+    }
+    .t5 {
       font-weight: 400;
-      font-size: size(16);
-      color: #FFFFFF;
+      font-size: size(18);
+      line-height: 170%;
+      text-align: center;
+    }
+  
+  }
+  .cloud {
+    @apply absolute;
+    height: 100%;
+    left: size(240);
+    top: 0;
+    animation: move 20s ease-in-out alternate-reverse infinite;
+    @keyframes move {
+        from {
+          transform: translateX(0%);
         }
+        to {
+          transform: translateX(10%);
         }
-        .arrows {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 size(16);
-          
-          img {
-            width: size(12);
-            height: size(30);
-            margin: unset;
-            cursor: pointer;
-          }
-        }
-      }
-      .txt{
-        @apply relative;
-        padding-bottom: size(480);
-        .tree {
-          @apply absolute;
-          width: size(241);
-          left: size(272);
-          top: -#{size(142)};
-          transform-origin: 50% 100%;
-        }
-        .tree {
-            animation: wave 2s alternate-reverse infinite ease-in-out;
-            @keyframes wave {
-              from {
-                transform: skewX(-3deg);
-              }
-              to {
-                transform: skewX(3deg);
-              }
-            }
-          }
-        .t1 {
-          font-weight: 700;
-          font-size: size(36);
-          line-height: 122.7%;
-          letter-spacing: 0.01em;
-          color: #013755;
-          margin-bottom: size(20);
-        }
-        .t2 {
-          font-weight: 400;
-          font-size: size(18);
-          line-height: 180.7%;
-          text-align: justify;
-          letter-spacing: 0.165em;
-          color: #013755;
-          width: size(445);
-        }
-        .plan {
-          @apply absolute;
-          width: size(457);
-          height: size(452);
-          right: 0;
-          bottom: 0;
-          background-size: contain;
-          
-
-          &.a {
-            background-image: url('@/section/s6/a_plan.png');
-          }
-
-          &.b {
-            background-image: url('@/section/s6/b_plan.png');
-            background-repeat: no-repeat;
-            background-position-x: 50%;
-          }
-
-          &.a {
-            .marker {
-              &.pos1 {
-              right: 30%;
-              bottom: 28%;
-              }
-              &.pos2 {
-                right: 57%;
-                bottom: 50%;
-              }
-              &.pos3 {
-                right: 77%;
-                bottom: 62%;
-              }
-              &.pos4 {
-                right: 27%;
-                bottom: 51%;
-              }
-            }
-          }
-
-          &.b {
-            .marker {
-              &.pos1 {
-                right: 30%;
-                bottom: 20%;
-              }
-              &.pos2 {
-                right: 25%;
-                bottom: 60%;
-              }
-              &.pos3 {
-                right: 48%;
-                bottom: 78%;
-              }
-              &.pos4 {
-                right: 52%;
-                bottom: 39%;
-              }
-            }
-          }
-
-          .marker {
-            @apply absolute;
-            width: size(35);
-            height: size(51);
-            background-image: url('@/section/s6/marker.png');
-            background-size: contain;
-            cursor: pointer;
-            transition: all .25s;
-            &:hover {
-              background-image: url('@/section/s6/marker_selected.png');
-            }
-            &.selected {
-              background-image: url('@/section/s6/marker_selected.png');
-            }
-          }
-        }
-      }
     }
   }
+  .building {
+    @apply absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+}
   
-  /* 螢幕尺寸標準 */
-  /* 平板尺寸 */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-  
-  @media screen and (max-width: 767px) {
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+@media screen and (max-width: 767px) {
 
   .s6 {
-    height: sizem(759);
-    display: flex;
-    align-items: center;
+  height: sizem(584);
+  background-image: url('@/section/s6/bg_m.jpg');
+  .main {
+    @apply relative h-full z-10;
+    width: 100%;
+    background: none;
     justify-content: flex-start;
-    gap: size(0);
-    padding-top: sizem(34) !important;
-    padding: 0 sizem(30); 
-    .top-tree{
-      @apply absolute;
-        width: sizem(160);
-        top: -#{sizem(55)};
-        left: sizem(241);
+    padding-right: 0;
+    padding-top: sizem(48);
+    
+    .t1 {
+      width: sizem(171.8);
+      margin-bottom: sizem(10.15);
     }
-    .header {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      border-bottom: sizem(1) solid #013755;
-      padding-bottom: sizem(10);
-      .t1 {
-        font-size: sizem(25);
-        letter-spacing: 0.025em;
-        margin-right: 0;
-        margin-bottom: sizem(11);
-        flex-basis: 100%;
-      }
-      .en {
-        flex-basis: 100%;
-        width: 100%;
-        margin: unset;
-        margin-right: 0;
-        margin-bottom: sizem(18);
-      }
-      .selection {
-        font-size: sizem(13);
-        margin-right: size(0);
-        padding: 0 sizem(25);
-        span{
-          font-size: sizem(20);
-        }
-        &.selected {
-          color: #C9A063;
-        }
-        &:hover {
-          color: #C9A063;
-        }
-        .bold{
-          margin-left: sizem(5);
-          font-size: sizem(16)
-        }
-      }
-      .selection-bar {
-        @apply absolute;
-        width: sizem(126.14);
-        height: sizem(3);
-        bottom: -#{sizem(1.5)};
-        &.pos0{
-          transform: translateX(-#{sizem(173)});
-        }
-        &.pos1{
-          transform: translateX(-#{sizem(15)});
-        }
-      }
+    .t2 {
+      width: sizem(310);
+      margin-bottom: sizem(9.63);
     }
-    .main {
-      width: 100%;
-      gap: 0;
-      flex-direction: column-reverse;
-      align-items: flex-start;
-      padding-top: sizem(30);
-      .swiper {
-        @apply absolute;
-        bottom: 0;
-        left: 0;
-        width: sizem(375);
-        height: sizem(255.65);
-        background-color: grey;
-        .slide {
-          img {
-            width: 100%;
-            height: 100%;
-          }
-      .caption {
-        left: sizem(10);
-        bottom: sizem(5);
-        font-size: sizem(12);
-      }
+    .t3 {
+      width: sizem(227.8);
+      margin-bottom: sizem(19.5);
+    }
+    .t4 { 
+      font-size: sizem(19);
+      margin-bottom: sizem(5);
+    }
+    .t5 {
+      font-size: sizem(12);
+    }
+  
+  }
+  .cloud {
+    @apply absolute;
+    height: sizem(277.68);
+    left:unset;
+    right: 0;
+    bottom: 0;
+    top: unset;
+    animation: move 12s ease-in-out alternate-reverse infinite;
+    @keyframes move {
+        from {
+          transform: translateX(5%);
         }
-        .arrows {
-          padding: 0 sizem(16);
-          
-          img {
-            width: sizem(8);
-            height: sizem(20);
-          }
+        to {
+          transform: translateX(15%);
         }
-      }
-      .txt{
-        @apply relative;
-        padding-bottom: 0;
-        .t1 {
-          font-size: sizem(20);
-          margin-bottom: sizem(7);
-        }
-        .t2 {
-          font-size: sizem(13);
-          width: 100%;
-        }
-
-        .plan {
-          @apply relative;
-          width: sizem(224);
-          height: sizem(221);
-          margin: 0 auto;
-        
-          &.a {
-            .marker {
-              &.pos1 {
-              right: 30%;
-              bottom: 28%;
-              }
-              &.pos2 {
-                right: 57%;
-                bottom: 50%;
-              }
-              &.pos3 {
-                right: 77%;
-                bottom: 62%;
-              }
-              &.pos4 {
-                right: 27%;
-                bottom: 51%;
-              }
-            }
-          }
-
-          &.b {
-            .marker {
-              &.pos1 {
-                right: 30%;
-                bottom: 20%;
-              }
-              &.pos2 {
-                right: 23%;
-                bottom: 60%;
-              }
-              &.pos3 {
-                right: 50%;
-                bottom: 78%;
-              }
-              &.pos4 {
-                right: 52%;
-                bottom: 39%;
-              }
-            }
-          }
-
-          .marker {
-            width: sizem(16.78);
-            height: sizem(24.45);
-          }
-        }
-      }
     }
   }
+  .building {
+    top: unset;
+    bottom: 0;
+    height: sizem(342.55);
   }
-  </style>
+  }
+}
+</style>
 <script setup>
-import AOS from 'aos';
-import { getCurrentInstance, ref, nextTick } from 'vue';
+import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const selected = ref('25');
-const splide = ref(null);
-
-const change = async (target) => {
-  selected.value = target;
-  splide.value.splide.go(0)
-  currentIndex.value = 0;
-  splide.value.splide.refresh();
-  await nextTick()
-  AOS.refreshHard();
-};
-
-const onMove = (i, i1, i2) => {
-  currentIndex.value = i1;
-}
-
-//let suffix = globals.$isMobile() ? 'm' : '';
-const currentIndex = ref(0);
-const imgs = {
-  '10': {
-    t1: '輕奢貴族 大套房',
-    t2: '超實在方正格局規劃，室內無虛坪，乾溼分離浴室，挑高設計，靈活規劃收納空間，打造適合頂客、菁英族群，居住兼辦公的景觀套房',
-    img1: [new URL(`./s6/b1.jpg`, import.meta.url).href, new URL(`./s6/b2.jpg`, import.meta.url).href, new URL(`./s6/b3.jpg`, import.meta.url).href, new URL(`./s6/b4.jpg`, import.meta.url).href,],
-  },
-  '25': {
-    t1: '完美家庭 正兩房',
-    t2: '豪宅格局規劃，開放式客餐廳規劃，雙衛浴從容超美學，戶戶邊間、挑高3米6，將山、河、海風景帶入生活，構築家的好窗景',
-    img1: [new URL(`./s6/a1.jpg`, import.meta.url).href, new URL(`./s6/a2.jpg`, import.meta.url).href, new URL(`./s6/a3.jpg`, import.meta.url).href, new URL(`./s6/a4.jpg`, import.meta.url).href,],
-  },
-}
-
-const captions = {
-  '10': ["3D樣品屋示意圖", "3D樣品屋示意圖", "3D樣品屋示意圖", "3D樣品屋示意圖"],
-  '25': ["3D樣品屋示意圖", "3D樣品屋示意圖", "3D樣品屋示意圖", "3D樣品屋示意圖"]
-}
+const isMobile = computed(() => globals.$isMobile());
 </script>
-  

@@ -1,305 +1,190 @@
 <template>
   <article class="s3">
-    <div class="header">
-      <img class="en" src="@/section/s3/en.png" alt="" srcset="">
-      <div class="selection" data-aos="fade-down" v-bind:class="{ 'selected': selected == 0 }" @click="change(0)">快捷交通
-      </div>
-      <div class="selection" data-aos="fade-down" data-aos-delay="200" v-bind:class="{ 'selected': selected == 1 }"
-        @click="change(1)">完善機能</div>
+    <div class="left">
+      <div class="t1">小港不1樣 國際航空城</div>
+      <img class="en" src="@/section/s3/en.svg" alt="" srcset="">
+      <div class="caption">以上皆小港機場3D示意圖(圖／民航局提供)</div>
     </div>
-    <div class="main">
-      <div class="left" data-aos="fade-right">
-        <div class="t1" v-html="imgs[selected].t1"></div>
-        <div class="t2" v-html="imgs[selected].t2"></div>
-      </div>
-      <div class="right">
-        <Splide :key="selected" :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }" ref="splide">
-          <SplideSlide data-aos="fade" class="slide" v-for="slide, i in slides[selected]">
-            <img :src="slide">
-            <div class="caption">{{ captions[selected][i] }}</div>
-          </SplideSlide>
-        </Splide>
+    <div class="right">
+      <div class="t1">百億計畫 國際航空城</div>
+      <div class="t2">「小港國際機場」將由國家挹注700多億改建整合<br />
+        將以全新中央智慧處理式航廈大樓，造就高雄新國門<br />
+        航空、觀光、商業、旅宿，未來，將與世界更靠近</div>
+      <div class="boxes">
+        <div class="box">
+          <img src="@/section/s3/1.jpg" alt="" srcset="">
+          <p>歷經10年整合、環評通過！「國道7號」願景啟動，總長約23公里，增設7個交流道，其中即包括小港，未來通聯國道約5min即刻上線，城際移動無往不利</p>
+        </div>
+        <div class="box">
+          <img src="@/section/s3/2.jpg" alt="" srcset="">
+          <p>捷運紅線南向延伸「小港林園線」核定興建中，鄰近捷運R3小港站再增優勢、軌道經濟再提升，未來預計採高架捷運，7座車站，串聯高屏更便捷</p>
+        </div>
       </div>
     </div>
-    <img src="@/section/s3/ship.png" class="ship" alt="" srcset="">
-    <img v-if="!$isMobile()" src="@/section/s3/tree.png" class="tree" alt="" srcset="">
   </article>
 </template>
-  
-<style lang="scss" >
-  @import '@/assets/style/function.scss';
-  
-  .s3 {
-      @apply relative;
-    height: size(1080);
-    background: #013755;
-    background-image: url('@/section/s3/bg.jpg');
+
+<style lang="scss" scoped>
+@import '@/assets/style/function.scss';
+
+.s3 {
+  @apply relative overflow-hidden w-full bg-[#E7E7E7];
+  height: size(900);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: size(116.97);
+
+  .left {
+    @apply h-full relative; 
+    flex-basis: size(1140);
+    background-image: url('@/section/s3/main.jpg');
     background-size: cover;
-    padding-top: size(59);
-    .header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      
-      gap: size(25);
-      .en {
-        width: size(736.16);
-        margin: unset;
-        margin-right: size(41.17);
-      }
-      .selection {
-      width: size(440);
-      height: size(42);
-      text-align: right;
-      font-size: size(22);
-      background-size: cover;
-      background-image: url('@/section/s3/unselect.png');
-      padding-right: size(29);
-      color:#C9A063;
-      &.selected {
-        color:#fff;
-        background-image: url('@/section/s3/selected.png');
-      }
-      &:hover {
-        cursor: pointer;
-        color:#fff;
-        background-image: url('@/section/s3/selected.png');
-        transition: .5s;
-      }
+
+    .t1 {
+      @apply absolute;
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size(30);
+      line-height: 150%;
+      color: #fff;
+      left: size(48.58);
+      top: size(520);
+    }
+    .en {
+      @apply absolute;
+      width: size(795.42);
+      left: size(47);
+      bottom: size(163.94);
+    }
+    .caption {
+      @apply absolute;
+      right: size(26);
+      bottom: size(10);
+      font-weight: 400;
+      font-size: size(12);
+      color: #fff
+    }
+  }
+  .right{
+    @apply h-full;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #595758;
+    .t1 {
+      @apply w-full;
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size(42);
+      line-height: 150%;
+      margin-bottom: size(15)
+    }
+    .t2 {
+      @apply w-full;
+      font-weight: 400;
+      font-size: size(18);
+      line-height: 170%;
+    }
+
+    .boxes {
+      @apply flex; 
+      gap: size(17.5);
+      margin-top: size(56.7);
+      .box {
+        width: size(264.22);
+        img {
+          @apply w-full;
+          margin-bottom: size(8)
+        }
+        p {
+          font-weight: 400;
+          font-size: size(18);
+          line-height: 170%;
+          text-align: justify;
+        }
       }
     }
     
-.tree {
-  
-  position: absolute;
-    width: size(392);
-    right: 0;
-    bottom: size(1006);
-    transform-origin: 50% 100%;
+  }
 }
-.tree {
-    animation: wave 2s alternate-reverse infinite ease-in-out;
-    @keyframes wave {
-      from {
-        transform: skewX(-3deg);
-      }
-      to {
-        transform: skewX(3deg);
-      }
-    }
-  }
-
-  .ship {
-    position: absolute;
-    width: size(286);
-    left: size(423);
-    bottom: size(101);
-    animation: wave2 3s alternate-reverse infinite ease-in-out;
-    @keyframes wave2 {
-      from {
-        transform: translate(-4%, -1%) skewX(2deg);
-      }
-      to {
-
-        transform: translate(4%, 1%) skewX(-2deg);
-      }
-    }
-  }
-
-  .main {
-    @apply relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: size(100);
-    margin-top: size(69);
-    margin-left: size(69);
-    margin-right: size(0);
-    z-index: 1;
-    .left{
-        color: #FFFFFF;
-        padding-bottom: size(145);
-      .t1 {
-        font-weight: 700;
-        font-size: size(55);
-        line-height: 122.7%;
-        letter-spacing: 0.025em;
-        margin-bottom: size(25);
-      }
-      .t2 {
-        font-weight: 300;
-        font-size: size(18);
-        line-height: 180.7%;
-        text-align: justify;
-        letter-spacing: 0.165em;
-        width: size(394);
-      }
-    }
-    .right {
-      width: size(1252);
-      height: size(823);
-      .slide {
-        width: size(1252);
-        img {
-          width: 100%;
-        }
-        .caption {
-          
-      @apply absolute;
-      left: size(10);
-      bottom: size(5);
-      font-weight: 400;
-      font-size: size(16);
-      color: #FFFFFF;
-        }
-      }
-      .splide__pagination {
-        gap: size(16);
-        margin-top: size(25);
-        button {
-          height: size(14);
-          width: size(14);
-          background: rgba(217, 217, 217, 0.54);
-          &.is-active {
-            background: #C9A063;
-          }
-        }
-      }
-    }
-  }
-  }
   
-  /* 螢幕尺寸標準 */
-  /* 平板尺寸 */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-  
-  @media screen and (max-width: 767px) {
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+@media screen and (max-width: 767px) {
 
   .s3 {
-    height: sizem(667);
-    background-image: url('@/section/s3/bg_m.jpg');
-    padding-top: sizem(28) !important;
-    padding: 0 sizem(30);
-    .header {      
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: size(25);
-      .en {
-        width: 100%;
-        margin: unset;
-        margin-right: 0;
-        margin-bottom: sizem(24);
+  height: sizem(730);
+  flex-direction: column;
+  gap: sizem(40);
+
+  .left {
+    flex-basis: sizem(297);
+    width: 100%;
+    height: sizem(297);
+    background-image: url('@/section/s3/main.png');
+    background-size: cover;
+
+    .t1 {
+      font-size: sizem(12);
+      line-height: 150%;
+      left: sizem(18);
+      top: sizem(170.5);
+    }
+    .en {
+      @apply absolute;
+      width: sizem(262);
+      left: sizem(16);
+      bottom: sizem(54);
+    }
+    .caption {
+      right: sizem(11.8);
+      bottom: unset;
+      top: 100%;
+      font-size: sizem(12);
+      color: #595758
+    }
+  }
+  .right{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #595758;
+    padding: 0 sizem(32.5);
+    .t1 {
+      font-size: sizem(19);
+      margin-bottom: sizem(5)
+    }
+    .t2 {
+      font-size: sizem(12);
+    }
+
+    .boxes {
+      @apply flex; 
+      gap: sizem(10);
+      margin-top: sizem(35);
+      .box {
+        width: sizem(310);
+        img {
+          margin-bottom: sizem(5)
+        }
+        p {
+          font-size: sizem(12);
+        }
       }
-      .selection {
-        line-height: sizem(35.29);
-        width: sizem(144);
-        height: sizem(35.29);
-        text-align: center;
-        font-size: sizem(16);
-        padding-right: 0;
-        background-image: url('@/section/s3/unselect_m.png');
-        background-position: right bottom;
-        &.selected {
-          background-image: url('@/section/s3/selected_m.png');
-        }
-        &:hover {
-          background-image: url('@/section/s3/selected_m.png');
-        }
-        }
     }
     
-  .ship {
-    width: sizem(173.11);
-    left: sizem(195);
-    bottom: size(16);
-  }
-
-  .main {
-    flex-direction: column-reverse;
-    gap: sizem(23);
-    margin-top: sizem(44);
-    .left{
-        color: #FFFFFF;
-        padding-bottom: size(145);
-      .t1 {
-        font-size: sizem(25);
-        margin-bottom: sizem(12);
-      }
-      .t2 {
-        font-size: sizem(13);
-        width: 100%;
-      }
-    }
-    .right {
-      width: sizem(315);
-      height: auto;
-      .slide {
-        width: 100%;
-      .caption {
-        left: sizem(10);
-        bottom: sizem(5);
-        font-size: sizem(12);
-      }
-      }
-      .splide__pagination {
-        gap: sizem(10);
-        margin-top: sizem(6);
-        button {
-          height: sizem(8);
-          width: sizem(8);
-        }
-      }
-    }
   }
   }
-  
-  }
-  </style>
+}
+</style>
 <script setup>
-import AOS from 'aos';
-import { getCurrentInstance, ref, nextTick } from 'vue';
+import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const selected = ref(0);
-const splide = ref(null);
-
-const change = async (target) => {
-  selected.value = target;
-  splide.value.splide.go(0)
-  currentIndex.value = 0;
-  splide.value.splide.refresh();
-  await nextTick()
-  AOS.refreshHard();
-};
-
-//let suffix = globals.$isMobile() ? 'm': '';
-const currentIndex = ref(0);
-const slides = [
-  [
-    new URL(`./s3/a1.jpg`, import.meta.url).href,
-    new URL(`./s3/a2.jpg`, import.meta.url).href
-  ],
-  [
-    new URL(`./s3/b1.jpg`, import.meta.url).href,
-    new URL(`./s3/b2.jpg`, import.meta.url).href,
-    new URL(`./s3/b3.jpg`, import.meta.url).href,
-    new URL(`./s3/b4.jpg`, import.meta.url).href]
-]
-
-const imgs = [
-  {
-    t1: '到站就到家，<br />一線速抵北市核心',
-    t2: '步行50米竹圍捷運站，信義淡水一線直抵士林科學園區、中山南西百貨商圈、大安核心、信義101商圈，不用轉車，即刻擁抱全市心！',
-  },
-  {
-    t1: '繁華全機能，<br />鄰近百貨商圈',
-    t2: '傳統市集、餐飲店家、全聯、頂好超市、寶雅等連鎖美妝，轉個彎到「竹圍商圈」，採買日常無比便利，將有知名商場進駐，舉步即享商圈繁華！',
-  }
-]
-
-const captions = [
-  ["竹圍捷運站實景修飾", "竹圍捷運站實景修飾"],
-  ["竹圍機能實景修飾", "家樂福實景修飾", "情境示意圖", "情境示意圖"]
-]
+const isMobile = computed(() => globals.$isMobile());
 </script>
-  

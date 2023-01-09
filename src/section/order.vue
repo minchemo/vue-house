@@ -1,50 +1,46 @@
 <template>
-  <div id="order" class="order relative bg-[#DCDCDD] text-center">
+  <div id="order" class="order relative bg-[#F1E6D6] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
+      <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="景上汀" srcset=""
-      data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="景上汀" srcset="" data-aos="fade"
-      data-aos-duration="1000"> -->
+      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
 
       <!-- Custom Image -->
-      <img src="@/section/form/tree.png" class="tree" alt="" srcset="">
-      <img v-if="!$isMobile()" src="@/section/form/ship.png" class="ship" alt="" srcset="">
+      <img class="bird" src="@/section/form/bird.png" alt="" srcset="">
 
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
+          <input type="text" placeholder="姓名" class="input w-full rounded-full bg-white/80" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
+          <input type="text" placeholder="手機" class="input w-full rounded-full bg-white/80" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-full" v-model="formData.room_type">
+          <select class="select w-full rounded-full bg-white/80" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="一房">一房</option>
             <option value="二房">二房</option>
           </select>
 
-          <select class="select w-full rounded-full" v-model="formData.city">
+          <select class="select w-full rounded-full bg-white/80" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full rounded-full" v-model="formData.area">
+          <select class="select w-full rounded-full bg-white/80" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
             </option>
           </select>
         </div>
-        <div class="right h-full">
+        <div class="right h-full ">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
+            class="textarea w-full h-full rounded-3xl bg-white/80" placeholder="備註訊息"></textarea>
         </div>
       </div>
 
@@ -65,7 +61,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending ? '發送中..' : '立即預約' }}
+        {{ sending? '發送中..': '立即預約' }}
       </div>
 
       <!-- Contact Info -->
@@ -86,57 +82,16 @@
 
 
 .order-section {
-  background-image: url('@/section/form/bg.png');
+  background-image: url('@/section/form/bg.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   // padding-bottom: size(90);
   position: relative;
-  min-height: size(1465);
-  padding-top: size(250);
+  min-height: size(1924);
+  padding-top: size(406);
   // overflow: hidden;
   
-.tree {
-      @apply absolute;
-        width: size(623);
-        top: -#{size(455)};
-        left: size(74);
-        animation: wave 3s alternate-reverse infinite ease-in-out;
-        transform-origin: bottom center;
-        @keyframes wave {
-          from {
-            transform: skewX(-1deg);
-          }
-          to {
-            transform: skewX(1deg);
-          }
-        }
-}
-
-.ship {
-    position: absolute;
-    width: size(280);
-    height: size(242);
-    right: size(505);
-    top: size(23);
-    animation: wave2 3s alternate-reverse infinite ease-in-out;
-    z-index: 1;
-    @keyframes wave2 {
-      from {
-        transform: translate(-4%, -1%) skewX(2deg);
-      }
-      to {
-
-        transform: translate(4%, 1%) skewX(-2deg);
-      }
-    }
-}
-
-  .z-10 {
-    z-index: 10;
-    position: relative;
-  }
-
   .bg-image {
     position: absolute;
     width: 100%;
@@ -145,29 +100,29 @@
     vertical-align: middle;
   }
 
-  .decor {
-    position: absolute;
-    width: size(700);
-    top: -#{size(310)};
-    right: -#{size(250)};
-    animation: rotate 10s infinite linear;
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-  }
 }
 
 .order {
   width: 100%;
   padding-top: size(0);
 
+  .bird{
+  @apply absolute;
+  width: size(155);
+  top: size(420);
+  right: size(450);
+  animation: fly 6s ease-in-out infinite alternate-reverse;
+
+@keyframes fly {
+  from {
+    transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
+  }
+  to {
+    transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
+
+  }
+}
+}
   .order-title {
     font-size: size(40);
     font-weight: 700;
@@ -177,6 +132,10 @@
     margin: 0 auto;
     margin-bottom: size(50) !important; 
   }
+  .order-title-img {
+    width: size(1008);
+    margin-bottom: size(155);
+  }
 
   .cus-divider {
     margin: 0 auto;
@@ -184,13 +143,6 @@
     height: size(2);
     margin-bottom: size(50);
     background-color: #055F76;
-  }
-
-  .order-title-img {
-    display: block;
-    width: size(859);
-    margin: 0 auto;
-    margin-bottom: size(40);
   }
 
   .form {
@@ -242,11 +194,11 @@
 @media screen and (max-width:768px) {
   .order-section {
     background-image: url('@/section/form/bgm.png');
-    min-height: sizem(1450);
+    min-height: sizem(1564);
     padding-bottom: sizem(0);
     position: relative;
     // overflow: hidden;
-    padding-top: sizem(50);
+    padding-top: sizem(200);
 
     .bg-image {
       position: absolute;
@@ -255,12 +207,6 @@
       bottom: sizem(590);
     }
 
-    .tree {
-      @apply absolute;
-        width: sizem(182.76);
-        top: -#{sizem(128)};
-        left: -#{sizem(22.76)};
-}
   }
 
   .order {
@@ -270,6 +216,16 @@
     margin-top: sizem(0);
     padding-bottom: sizem(60);
 
+    .order-title-img {
+    width: sizem(315);
+    margin-bottom: sizem(22);
+  }
+.bird{
+  @apply absolute;
+  width: sizem(48.8);
+  top: sizem(205);
+  right: sizem(40);
+}
 
     .cus-divider {
       margin: 0 auto;
@@ -286,10 +242,6 @@
       margin-bottom: sizem(35) !important;
     }
 
-    .order-title-img {
-      width: sizem(208);
-      margin-bottom: sizem(20);
-    }
 
     .form {
       width: sizem(310);

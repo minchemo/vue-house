@@ -1,4 +1,4 @@
-const caseName = "景上汀"
+const caseName = "國家公園"
 
 export default {
     meta: {
@@ -6,20 +6,22 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "新北市淡水區民權路12-3號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.9297995876846!2d121.45880770000001!3d25.1380641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442afb2cd7b33dd%3A0x5a9e8981de99bbbd!2z5pmv5LiK5rGA!5e0!3m2!1szh-TW!2stw!4v1672245997356!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/PoAxz7jz61RDY1rs7",
-    phone: "02-88092345",
-    fbLink: "https://www.facebook.com/junyijst",
-    fbMessage: "https://m.me/junyijst",
+    address: "高雄市小港區高松路99號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3684.169379283246!2d120.3695737!3d22.5727675!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1ce91aa1fd53%3A0x83cf196d40691da9!2zODEy6auY6ZuE5biC5bCP5riv5Y2A6auY5p2-6LevOTnomZ8!5e0!3m2!1szh-TW!2stw!4v1673292846156!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/PY57vKgt72k726ng7",
+    phone: "07-360-0033",
+    fbLink: "",
+    fbMessage: "",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "鐵冠建設股份有限公司"],
-        ["建築設計", "吳昆達建築師事務所Ｘ仲間設計"],
-        ["工程營建", "昌譽營造股份有限公司"],
-        ["建照號碼", "111淡建字第00273號"],
-        ["建築代銷", "君頤廣告股份有限公司"],
-        ["樓層規劃", "12F/B1F"],
+        ["投資興建", "清景麟資產有限公司"],
+        ["工程營造", "力洋營造"],
+        ["建築設計", "大磊建築師事務所"],
+        ["燈光設計", "旭川光禾照明設計"],
+        ["公設設計", "盼達創意事業"],
+        ["基地面積", "約2180坪"],
+        ["房型規劃", "2-3房"],
+        ["企劃銷售", `<img class="w-full" src="${new URL(`../section/form/comp.png`, import.meta.url).href}">`],
     ],
     gtmCode: ["GTM-MKGNRHW"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",

@@ -1,288 +1,209 @@
 <template>
   <article class="s5">
     <div class="main">
-      <div class="txt">
-        <div class="t1" data-aos="fade-right">專業職人建築<br v-if="!$isMobile()">
-          構築美好生活</div>
-        <div class="t2" data-aos="fade-right">三十年甲級營造－鐵冠建設、昌譽營造，抱持誠懇、用心的專業服務原則，以卓越施工品質、工程實力，認真看待看得見與看不見的細節，打造適合人居的完美建築。
-        </div>
-        <div class="badge1" data-aos="fade-right">業績</div>
-        <div class="t3" data-aos="fade-right">Hi台北、中山直美、翠松園、墨清院、漫活時代</div>
-      </div>
-      <div class="work">
-        <div class="slider">
-          <Splide
-            :options="{ type: 'loop', arrows: false, gap: 10, perPage: $isMobile() ? 1 : 3, autoplay: true, interval: 4000, focus: 'center' }"
-            ref="splide">
-            <SplideSlide class="slide" v-for="slide, i in slides">
-              <img :src="slide">
-              <div class="caption">{{ captions[i] }}</div>
-            </SplideSlide>
-          </Splide>
-          <div v-if="$isMobile()" class="arrows">
-            <img @click="splide.splide.go('<')" class="prev" src="@/section/s5/prev.png" alt="" srcset="">
-            <img @click="splide.splide.go('>')" class="next" src="@/section/s5/next.png" alt="" srcset="">
-          </div>
-        </div>
-        <div class="en-box">
-          <img data-aos="fade-up" src="@/section/s5/en.png" alt="" srcset="">
-          <div v-if="!$isMobile()" class="line"></div>
-        </div>
-        <img v-if="!$isMobile()" class="arrow" @click="splide.splide.go('>')" src="@/section/s5/arrow.png" alt="" srcset="">
-      </div>
+      <div class="t1">生活機能</div>
+      <img src="@/section/s5/elitelocation.svg" class="t2" alt="" srcset="">
+      <img src="@/section/s5/forestpark.svg" class="t3" alt="" srcset="">
+      <div class="t4">實體拍攝</div>
+      <div class="t5">小港森林公園</div>
+      <div class="t6">情境圖</div>
+      <div class="t7">SKM PARK OUTLETS</div>
+    </div>
+    <div class="txt">
+      <div class="t1">建設更新 小港最核心</div>
+      <div class="t2">咫尺新光SKM PARK OUTLET、高餐大學城<br/>
+        桂林、漢民、小港路商圈，採買、美食最便利<br/>
+        捷運小港林園延伸線核定、國道7號通過環評<br/>
+        預見未來交通利多，串聯生活圈、再造精華圈</div>
+      <img src="@/section/s5/route.png" class="route" alt="" srcset="">
     </div>
   </article>
 </template>
-  
-<style lang="scss">
-  @import '@/assets/style/function.scss';
-  
-  .s5 {
-    @apply relative;
-    height: size(900);
-    background-image: url('@/section/s5/bg.jpg');
+
+<style lang="scss" scoped>
+@import '@/assets/style/function.scss';
+
+.s5 {
+  @apply relative overflow-hidden w-full bg-[#E7E7E7];
+  height: size(900);
+  display: flex;
+
+  .main {
+    @apply relative h-full;
+    flex-basis: size(1140);
+    background-image: url('@/section/s5/main.jpg');
     background-size: cover;
-    .main {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      width: 100%;
-      height: 100%;
-      gap: size(104);
-      .txt {
-        padding-bottom: size(50);
-        .t1 {
-          font-weight: 700;
-          font-size: size(55);
-          line-height: 122.7%;
-          letter-spacing: 0.025em;
-          color: #013755;
-          margin-bottom: size(42);
-        }
-        .t2 {
-          width: size(394);
-          font-weight: 400;
-          font-size: size(18);
-          line-height: 180.7%;                  
-          text-align: justify;
-          letter-spacing: 0.16em;
-          color: #666666;
-          margin-bottom: size(17);
-        }
-        .t3 {
-          font-weight: 700;
-          font-size: size(18);
-          line-height: 151.7%;
-          text-align: justify;
-          letter-spacing: 0.035em;
-          color: #666666;
-          
-        }
-        .badge1 {
-          width: size(60);
-          height: size(33);
-          font-size: size(18);
-          text-align: center;
-          line-height: size(33);
-          color: #fff;
-          background-color: #666666;
-          margin-bottom: size(3);
-        }
-      }
-      .work {
-        @apply relative;
-        width: size(1267);
-        height: size(572.39);
-        margin-right: size(50);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .slider {
-          width: 100%;
-          height: size(516);
-          
-          .slide {
-            img {
-              width: size(413);
-            }
-        .caption {
-          
+    color: #FFFFFF;
+    .t1{
       @apply absolute;
-      right: size(10);
-      bottom: size(5);
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size(30);
+      line-height: 150%;
+      left: size(45.6);
+      top: size(559.48);
+    }
+    .t2 {
+      @apply absolute;
+      top: size(630);
+      left: size(45.75);
+      width: size(767.52);
+    }
+    .t3 {
+      @apply absolute;
+      top: size(503.24);
+      left: size(635.99);
+      width: size(424.95);
+    }
+    .t4{
+      @apply absolute;
       font-weight: 400;
-      font-size: size(16);
-      color: #FFFFFF;
-        }
-          }
-        }
-        .en-box{
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          img {
-            width: size(889.56);
-            margin: unset;
-          }
-          .line {
-            width: size(353);
-            height: size(2);
-            background-color: #C9A063;
-          }
-        }
-        &::after {
-          @apply absolute;
-          width: size(13);
-          height: size(277);
-          background-color: #C9A063;
-          top: size(51);
-          left: -#{size(6.5)};
-          content: '';
-        }
-        .arrow {
-          position: absolute;
-          width: size(12);
-          right: -#{size(20)};
-          top: 50%;
-          transform: translateY(-50%);
-          cursor: pointer;
-        }
-      }
+      font-size: size(12);
+      right: size(15);
+      top: size(671.71);
+    }
+    .t5{
+      @apply absolute;
+      font-weight: 400;
+      font-size: size(12);
+      left: size(8);
+      bottom: size(6);
+    }
+    .t6{
+      @apply absolute;
+      font-weight: 400;
+      font-size: size(12);
+      left: size(466.79);
+      bottom: size(6);
+    }
+    .t7{
+      @apply absolute;
+      font-weight: 400;
+      font-size: size(12);
+      left: size(706.79);
+      bottom: size(6);
     }
   }
+
+  .txt {
+    @apply grow relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #595758;
+    text-align: center;
+    .t1 {
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size(42);
+      line-height: 150%;
+    }
+    .t2 {
+      @apply relative;
+      width: size(365);
+      margin-top: size(18.5);
+      margin-bottom: size(82.5);
+      font-weight: 400;
+      font-size: size(18);
+      line-height: 170%;
+      &:after {
+        @apply absolute pointer-events-none;
+        content: '';
+        width: size(102.73);
+        height: size(83.8);
+        background-image: url('@/section/s5/bird.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        bottom: 5.5%;
+        left: 98%;
+      }
+    }
+    .route {
+      @apply pointer-events-none;
+      width: size(629.98);
+    }
+  }
+}
   
-  /* 螢幕尺寸標準 */
-  /* 平板尺寸 */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-  
-  @media screen and (max-width: 767px) {
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+@media screen and (max-width: 767px) {
 
   .s5 {
-    height: sizem(667);
-    background-image: url('@/section/s5/bgm.jpg');
-    .main {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      gap: sizem(25);
-      padding-top: sizem(52) !important;
-      padding: 0 sizem(30);
-      .txt {
-        padding-bottom: size(50);
-        .t1 {
-          font-size: sizem(25);
-          margin-bottom: sizem(12);
-        }
-        .t2 {
-          width: 100%;
-          font-size: sizem(13);
-          margin-bottom: sizem(12);
-          padding-right: sizem(20);
-        }
-        .t3 {
-          font-size: sizem(12);
-        }
-        .badge1 {
-          width: sizem(47);
-          height: sizem(23);
-          font-size: sizem(12);
-          line-height: sizem(23);
-          margin-bottom: sizem(5);
-        }
-      }
-      .work {
-        @apply relative;
-        width: sizem(315);
-        height: sizem(320);
-        margin-right: size(0);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .slider {
-          margin: 0 auto;
-          width: sizem(256.12);
-          height: sizem(320);
-          
-          .slide {
-            img {
-              width: sizem(256.12);
-            }
-      .caption {
-        right: sizem(10);
-        bottom: sizem(5);
-        font-size: sizem(12);
-      }
-          }
+    @apply flex-col;
+    height: sizem(645);
 
-          .arrows {
-            @apply absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            transform: translateY(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .prev{
+  .main {
+    @apply h-auto;
+    flex-basis: sizem(379);
+    background-image: url('@/section/s5/main_m.png');
+    background-size: cover;
+    color: #FFFFFF;
+    .t1{
+      font-size: sizem(12);
+      left: sizem(15);
+      top: sizem(249.5);
+    }
+    .t2 {
+      top: sizem(271.5);
+      left: sizem(14.5);
+      width: sizem(252.47);
+    }
+    .t3 {
+      top: sizem(231);
+      left: sizem(209.2);
+      width: sizem(139.79);
+    }
+    .t4{
+      font-size: sizem(12);
+      right: sizem(7.3);
+      top: sizem(272.71);
+    }
+    .t5{
+      font-size: sizem(12);
+      left: sizem(5);
+      bottom: sizem(3);
+    }
+    .t6{
+      font-size: sizem(12);
+      left: sizem(154);
+      bottom: sizem(3);
+    }
+    .t7{
+      font-size: sizem(12);
+      left: sizem(234);
+      bottom: sizem(3);
+    }
+  }
 
-            }
-            .next{
-
-            }
-            img {
-              margin: unset;
-            }
-          }
-        }
-        .en-box{
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-top: sizem(21);
-          img {
-            width: 100%;
-            margin: unset;
-          }
-        }
-        &::after {
-          @apply absolute;
-          width: sizem(170);
-          height: sizem(5);
-          top: -#{sizem(2.5)};
-          left: sizem(30);
-          content: '';
-        }
-        .arrow {
-          position: absolute;
-          width: size(12);
-          right: -#{size(20)};
-          top: 50%;
-          transform: translateY(-50%);
-          cursor: pointer;
-        }
+  .txt {
+    .t1 {
+      font-size: sizem(19);
+    }
+    .t2 {
+      width: auto;
+      margin-top: sizem(5);
+      margin-bottom: sizem(25);
+      font-size: sizem(12);
+      &:after {
+        width: sizem(65.54);
+        height: sizem(53.39);
+        background-image: url('@/section/s5/bird_m.png');
       }
+    }
+    .route {
+      width: sizem(358.46);
     }
   }
   }
-  </style>
+}
+</style>
 <script setup>
+import { computed, getCurrentInstance, ref } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
 
-import { ref } from 'vue';
-const splide = ref(null);
-const slides =
-  [
-    new URL(`./s5/1.jpg`, import.meta.url).href,
-    new URL(`./s5/2.jpg`, import.meta.url).href,
-    new URL(`./s5/3.jpg`, import.meta.url).href,
-    new URL(`./s5/4.jpg`, import.meta.url).href,
-    new URL(`./s5/5.jpg`, import.meta.url).href,
-  ];
-
-const captions = ["Hi台北", "中山直美", "翠松園", "墨清院", "漫活時代"]
+const isMobile = computed(() => globals.$isMobile());
 </script>
-  

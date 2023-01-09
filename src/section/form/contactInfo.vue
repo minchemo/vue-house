@@ -1,6 +1,6 @@
 <template>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo"></div>
+    <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="景上汀" srcset="" />
@@ -123,8 +123,8 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #fff;
-      color: #000;
+      background-color: rgba(255,255,255,0.2);
+      color: #fff;
       width: 100%;
       padding: 0 size(55);
       // border-radius: 9999px;
@@ -135,9 +135,10 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
+      border: 2px solid #C29267;
 
       &:hover {
-        background-color: #055F76;
+        background-color: #C29267;
         color: #fff;
 
         img {
@@ -149,12 +150,12 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -167,7 +168,7 @@
           position: absolute;
           width: 8em;
           height: 100%;
-          background-color: #eee;
+          background-color: transparent;
           left: calc(100% - 4em);
           z-index: -1;
         }
@@ -175,7 +176,8 @@
 
 
       &.googlemap {
-        background-color: #666;
+      background-color: rgba(255,255,255,0.2);
+      border-left-width: 0;
         color: #fff;
 
         img {
@@ -183,7 +185,7 @@
         }
 
         &:hover {
-          background-color: gray;
+        background-color: #C29267;
           color: #fff;
         }
       }
@@ -225,7 +227,7 @@
 
   .contact-info {
     width: sizem(375);
-    height: sizem(590);
+    height: sizem(400);
     // border-radius: sizem(68);
     padding: sizem(50) sizem(15);
     margin-top: sizem(60);
@@ -250,7 +252,7 @@
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
-          border-radius: sizem(10);
+          border-radius: sizem(0);
 
         img {
           max-width: sizem(27);
@@ -260,7 +262,7 @@
         }
 
         &.address {
-          border-radius: sizem(10) sizem(10) 0 0;
+          border-radius: sizem(0) sizem(0) 0 0;
           padding: 0 0;
           margin-top: sizem(20);
 
@@ -273,8 +275,12 @@
         }
 
         &.address+div {
-          border-radius: 0 0 sizem(10) sizem(10);
+          border-radius: 0 0 sizem(0) sizem(0);
         }
+      &.googlemap {
+        border-top-width: 0;
+      border-left-width: 2px;
+      }
       }
 
       &.no-gap {
