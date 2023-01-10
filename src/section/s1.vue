@@ -1,6 +1,6 @@
 <template>
   <article class="s1">
-    <img class="logo" src="@/section/s1/logo.svg" alt="" srcset="">
+    <img class="logo" data-aos="zoom-in" src="@/section/s1/logo.svg" alt="" srcset="">
     <img class="t1" src="@/section/s1/t1.svg" alt="" srcset="">
     <img v-if="!$isMobile()" class="bird" src="@/section/s1/bird.png" alt="" srcset="">
     <img v-else class="bird" src="@/section/s1/bird_m.png" alt="" srcset="">

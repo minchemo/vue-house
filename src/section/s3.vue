@@ -1,23 +1,23 @@
 <template>
   <article class="s3">
-    <div class="left">
-      <div class="t1">小港不1樣 國際航空城</div>
-      <img class="en" src="@/section/s3/en.svg" alt="" srcset="">
+    <div class="left" data-aos="fade">
+      <div class="t1" data-aos="fade-down" >小港不1樣 國際航空城</div>
+      <img class="en" data-aos="fade-down" data-aos-delay="200" src="@/section/s3/en.svg" alt="" srcset="">
       <div class="caption">以上皆小港機場3D示意圖(圖／民航局提供)</div>
     </div>
     <div class="right">
-      <div class="t1">百億計畫 國際航空城</div>
-      <div class="t2">「小港國際機場」將由國家挹注700多億改建整合<br />
+      <div class="t1" data-aos="fade-down" data-aos-delay="0">百億計畫 國際航空城</div>
+      <div class="t2" data-aos="fade-down" data-aos-delay="200">「小港國際機場」將由國家挹注700多億改建整合<br />
         將以全新中央智慧處理式航廈大樓，造就高雄新國門<br />
         航空、觀光、商業、旅宿，未來，將與世界更靠近</div>
       <div class="boxes">
         <div class="box">
-          <img src="@/section/s3/1.jpg" alt="" srcset="">
-          <p>歷經10年整合、環評通過！「國道7號」願景啟動，總長約23公里，增設7個交流道，其中即包括小港，未來通聯國道約5min即刻上線，城際移動無往不利</p>
+          <img  data-aos="fade" data-aos-delay="300" src="@/section/s3/1.jpg" alt="" srcset="">
+          <p data-aos="fade-down" data-aos-delay="400">歷經10年整合、環評通過！「國道7號」願景啟動，總長約23公里，增設7個交流道，其中即包括小港，未來通聯國道約5min即刻上線，城際移動無往不利</p>
         </div>
         <div class="box">
-          <img src="@/section/s3/2.jpg" alt="" srcset="">
-          <p>捷運紅線南向延伸「小港林園線」核定興建中，鄰近捷運R3小港站再增優勢、軌道經濟再提升，未來預計採高架捷運，7座車站，串聯高屏更便捷</p>
+          <img  data-aos="fade"  data-aos-delay="500" src="@/section/s3/2.jpg" alt="" srcset="">
+          <p data-aos="fade-down" data-aos-delay="600">捷運紅線南向延伸「小港林園線」核定興建中，鄰近捷運R3小港站再增優勢、軌道經濟再提升，未來預計採高架捷運，7座車站，串聯高屏更便捷</p>
         </div>
       </div>
     </div>

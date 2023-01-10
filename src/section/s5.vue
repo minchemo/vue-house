@@ -1,21 +1,21 @@
 <template>
   <article class="s5">
-    <div class="main">
-      <div class="t1">生活機能</div>
-      <img src="@/section/s5/elitelocation.svg" class="t2" alt="" srcset="">
-      <img src="@/section/s5/forestpark.svg" class="t3" alt="" srcset="">
+    <div class="main" data-aos="fade">
+      <div class="t1" data-aos="fade-down" data-aos-delay="200">生活機能</div>
+      <img data-aos="fade-down" data-aos-delay="400" src="@/section/s5/elitelocation.svg" class="t2" alt="" srcset="">
+      <img data-aos="fade-down" data-aos-delay="600" src="@/section/s5/forestpark.svg" class="t3" alt="" srcset="">
       <div class="t4">實體拍攝</div>
       <div class="t5">小港森林公園</div>
       <div class="t6">情境圖</div>
       <div class="t7">SKM PARK OUTLETS</div>
     </div>
     <div class="txt">
-      <div class="t1">建設更新 小港最核心</div>
-      <div class="t2">咫尺新光SKM PARK OUTLET、高餐大學城<br/>
+      <div class="t1" data-aos="fade-down" data-aos-delay="200">建設更新 小港最核心</div>
+      <div class="t2 whitespace-nowrap" data-aos="fade-down" data-aos-delay="400">咫尺新光SKM PARK OUTLET、高餐大學城<br/>
         桂林、漢民、小港路商圈，採買、美食最便利<br/>
         捷運小港林園延伸線核定、國道7號通過環評<br/>
         預見未來交通利多，串聯生活圈、再造精華圈</div>
-      <img src="@/section/s5/route.png" class="route" alt="" srcset="">
+      <img data-aos="fade" data-aos-delay="600" src="@/section/s5/route.png" class="route" alt="" srcset="">
     </div>
   </article>
 </template>

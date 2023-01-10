@@ -1,22 +1,22 @@
 <template>
   <article class="s4">
-    <div class="main">
-      <div class="t1">世界級森林公園特區</div>
-      <img class="t2" src="@/section/s4/internationalpark.svg" alt="" srcset="">
-      <img class="t3" src="@/section/s4/centralpark.svg" alt="" srcset="">
+    <div class="main" data-aos="fade">
+      <div class="t1" data-aos="fade-down" data-aos-delay="200">世界級森林公園特區</div>
+      <img class="t2" data-aos="fade-down" data-aos-delay="400" src="@/section/s4/internationalpark.svg" alt="" srcset="">
+      <img class="t3" data-aos="fade-down" data-aos-delay="600" src="@/section/s4/centralpark.svg" alt="" srcset="">
     </div>
     <div class="bottom">
       <div>
-        <div class="t1">開窗 世界級公園視野</div>
-        <div class="t2">一次同步紐約、倫敦、巴黎、東京、台北…<br v-if="$isMobile()"/>都會公園自成高端聚落，綠地不敗、<br />
+        <div class="t1" data-aos="fade-down" data-aos-delay="200" >開窗 世界級公園視野</div>
+        <div class="t2" data-aos="fade-down" data-aos-delay="400">一次同步紐約、倫敦、巴黎、東京、台北…<br v-if="$isMobile()"/>都會公園自成高端聚落，綠地不敗、<br />
           抬漲未來，小港首選正3萬坪森林公園第一排，入手趁現在
         </div>
       </div>
       <div class="imgs">
-        <img src="@/section/s4/1.jpg" alt="" srcset="">
-        <img src="@/section/s4/2.jpg" alt="" srcset="">
-        <img src="@/section/s4/3.jpg" alt="" srcset="">
-        <img src="@/section/s4/4.jpg" alt="" srcset="">
+        <img  data-aos="fade" data-aos-delay="200" src="@/section/s4/1.jpg" alt="" srcset="">
+        <img  data-aos="fade" data-aos-delay="400" src="@/section/s4/2.jpg" alt="" srcset="">
+        <img  data-aos="fade" data-aos-delay="600" src="@/section/s4/3.jpg" alt="" srcset="">
+        <img  data-aos="fade" data-aos-delay="800" src="@/section/s4/4.jpg" alt="" srcset="">
       </div>
     </div>
   </article>

@@ -1,20 +1,20 @@
 <template>
   <article class="s10">
     <div class="main">
-      <img v-if="!$isMobile()" class="en" src="@/section/s10/en.svg" alt="" srcset="">
+      <img v-if="!$isMobile()" class="en" data-aos="fade-down" data-aos-delay="200" src="@/section/s10/en.svg" alt="" srcset="">
       <div class="caption">示意圖</div>
     </div>
     <div class="txt">
       <div class="text">
-        <div class="t1">誠意保固 嚮往的「家」</div>
-        <div class="t2">無論購屋、換屋族群，都是品質、價值，高CP值<br>
+        <div class="t1" data-aos="fade-down" data-aos-delay="200">誠意保固 嚮往的「家」</div>
+        <div class="t2" data-aos="fade-down" data-aos-delay="400">無論購屋、換屋族群，都是品質、價值，高CP值<br>
           買房首選「清景麟建築團隊」，就要成就您嚮往的家</div>
-        <img v-if="$isMobile()" class="en" src="@/section/s10/enm.png" alt="" srcset="">
+        <img v-if="$isMobile()" class="en" data-aos="fade-down" data-aos-delay="600"  src="@/section/s10/enm.png" alt="" srcset="">
       </div>
-      <img v-if="!$isMobile()" src="@/section/s10/tip.png" class="tip" alt="" srcset="">
-      <img v-else src="@/section/s10/tipm.png" class="tip" alt="" srcset="">
-      <img v-if="!$isMobile()" src="@/section/s10/set.png" class="set" alt="" srcset="">
-      <img v-else src="@/section/s10/setm.png" class="set" alt="" srcset="">
+      <img data-aos="fade" data-aos-delay="400" v-if="!$isMobile()" src="@/section/s10/tip.png" class="tip" alt="" srcset="">
+      <img data-aos="fade" data-aos-delay="400" v-else src="@/section/s10/tipm.png" class="tip" alt="" srcset="">
+      <img data-aos="fade" data-aos-delay="600" v-if="!$isMobile()" src="@/section/s10/set.png" class="set" alt="" srcset="">
+      <img data-aos="fade" data-aos-delay="600" v-else src="@/section/s10/setm.png" class="set" alt="" srcset="">
     </div>
   </article>
 </template>

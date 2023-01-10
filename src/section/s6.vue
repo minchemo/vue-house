@@ -1,19 +1,19 @@
 <template>
   <article class="s6">
     <div class="main">
-      <img class="t1" src="@/section/s6/sumitomo.svg" alt="" srcset="">
-      <img v-if="!$isMobile()" class="t2" src="@/section/s6/case.png" alt="" srcset="">
-      <img v-else class="t2" src="@/section/s6/case_m.png" alt="" srcset="">
-      <img class="t3" src="@/section/s6/safetyhouse.svg" alt="" srcset="">
-      <div class="t4">小港首座 世界級の制震宅</div>
-      <div class="t5">日本國寶唯一指定級「住友橡膠GRAST制震」<br />
+      <img class="t1" data-aos="fade" data-aos-delay="0" src="@/section/s6/sumitomo.svg" alt="" srcset="">
+      <img v-if="!$isMobile()" data-aos="fade" data-aos-delay="200" class="t2" src="@/section/s6/case.png" alt="" srcset="">
+      <img v-else class="t2" data-aos="fade" data-aos-delay="200" src="@/section/s6/case_m.png" alt="" srcset="">
+      <img class="t3" data-aos="fade-down" data-aos-delay="400" src="@/section/s6/safetyhouse.svg" alt="" srcset="">
+      <div class="t4" data-aos="fade-down" data-aos-delay="600">小港首座 世界級の制震宅</div>
+      <div class="t5" data-aos="fade-down" data-aos-delay="800">日本國寶唯一指定級「住友橡膠GRAST制震」<br />
         台日豪宅大樓級頂尖規劃，減震、抗風力第一等<br />
         森林公園唯一制震地標景觀，清景麟捨得給您最好</div>
     </div>
     <img v-if="!$isMobile()" class="cloud" src="@/section/s6/cloud.png" alt="" srcset="">
     <img v-else class="cloud" src="@/section/s6/cloud_m.png" alt="" srcset="">
-    <img v-if="!$isMobile()" class="building" src="@/section/s6/building.png" alt="" srcset="">
-    <img v-else class="building" src="@/section/s6/building_m.png" alt="" srcset="">
+    <img v-if="!$isMobile()" data-aos="fade" data-aos-delay="200" class="building" src="@/section/s6/building.png" alt="" srcset="">
+    <img v-else class="building" data-aos="fade" data-aos-delay="200" src="@/section/s6/building_m.png" alt="" srcset="">
   </article>
 </template>
 

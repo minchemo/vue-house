@@ -1,17 +1,17 @@
 <template>
   <article class="s7">
-    <div class="main">
-      <img src="@/section/s7/en.svg" class="en" alt="" srcset="">
+    <div class="main" data-aos="fade" data-aos-delay="200">
+      <img data-aos="fade-down" data-aos-delay="400" src="@/section/s7/en.svg" class="en" alt="" srcset="">
       <div class="caption">景觀3D示意圖</div>
     </div>
     <div class="txt">
-      <div class="t1">物超所值 花園泳池會館</div>
-      <div class="t2">【清景麟‧國家公園】，由外而內，化身頂尖聚樂部<br />
+      <div class="t1" data-aos="fade-down" data-aos-delay="200">物超所值 花園泳池會館</div>
+      <div class="t2" data-aos="fade-down" data-aos-delay="400">【清景麟‧國家公園】，由外而內，化身頂尖聚樂部<br />
         設有運動吧、花園泳池SPA，與法式鐵板燒等獨家設施<br />
         重金禮聘旅美國際大師蘇點忠，演繹出飯店級新奢空間品味
       </div>
     </div>
-    <img class="man" src="@/section/s7/man.png" alt="" srcset="">
+    <img class="man" data-aos="fade" data-aos-delay="600" src="@/section/s7/man.png" alt="" srcset="">
   </article>
 </template>
 

@@ -1,12 +1,12 @@
 <template>
   <article class="s2">
     <div class="txt">
-      <div class="t1">綠海擁恆 國家唯1</div>
-      <div class="t2">第<span class="t-one">1</span>排 <span class="t-three">3</span>萬坪森林公園首排<br />
+      <div class="t1" data-aos="fade-down">綠海擁恆 國家唯1</div>
+      <div class="t2" data-aos="fade-down" data-aos-delay="200">第<span class="t-one">1</span>排 <span class="t-three">3</span>萬坪森林公園首排<br />
         第<span class="t-one">1</span>等 國際級建材豪規配置<br />
         不<span class="t-one">1</span>樣 品牌結盟新生活型態</div>
     </div>
-    <img src="@/section/s2/logo.png" class="logo" alt="" srcset="">
+    <img data-aos="fade-down" data-aos-delay="200" src="@/section/s2/logo.png" class="logo" alt="" srcset="">
     <img v-if="!$isMobile()" src="@/section/s2/1.png" class="one" alt="" srcset="">
     <img v-else src="@/section/s2/1_m.png" class="one" alt="" srcset="">
   </article>

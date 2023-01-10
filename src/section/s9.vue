@@ -1,16 +1,16 @@
 <template>
   <article class="s9">
     <div class="txt">
-      <img class="t1" src="@/section/s9/selectedby.svg" alt="" srcset="">
-      <div class="t2">社區公設選書合作</div>
-      <div class="t3">小港第一次！日系書店<br />
+      <img class="t1" data-aos="fade" data-aos-delay="200" src="@/section/s9/selectedby.svg" alt="" srcset="">
+      <div class="t2" data-aos="fade-down" data-aos-delay="400">社區公設選書合作</div>
+      <div class="t3" data-aos="fade-down" data-aos-delay="600">小港第一次！日系書店<br />
         「TSUTAYA BOOKSTORE」延伸公設品味<br />
         以專業選書、定期更換生活主題成列，<br />
         讓閱讀的美好，更倍感豐富
       </div>
     </div>
-    <img class="girl" src="@/section/s9/girl.png" alt="" srcset="">
-    <img class="en" src="@/section/s9/en.svg" alt="" srcset="">
+    <img class="girl" data-aos="fade" data-aos-delay="200" src="@/section/s9/girl.png" alt="" srcset="">
+    <img class="en" data-aos="fade-down" data-aos-delay="400" src="@/section/s9/en.svg" alt="" srcset="">
   </article>
 </template>
 
