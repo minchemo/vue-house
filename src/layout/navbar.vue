@@ -39,9 +39,9 @@
     }
 
     .menu-btn {
-        background-color: #C9A063;
-        height: size(32);
-        width: size(32);
+        background-color: transparent;
+        height: size(17);
+        width: size(41.43);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -54,30 +54,32 @@
         }
 
         .bar {
-            width: size(23);
-            height: 2px;
+            width: size(41.43);
+            height: 1px;
             background-color: #fff;
             position: relative;
-            transform: all .5s;
+            transition: all .5s;
 
             &::after {
                 content: '';
                 width: 100%;
-                height: 2px;
+                height: 1px;
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: #fff;
                 transition: all .5s;
+                transform: translateX(-10%);
             }
 
             &::before {
                 content: '';
                 width: 100%;
-                height: 2px;
+                height: 1px;
                 top: -#{size(10)};
                 position: absolute;
                 background-color: #fff;
                 transition: all .5s;
+                transform: translateX(-10%);
             }
         }
 
@@ -88,24 +90,26 @@
 
             .bar {
                 &::after {
-                    transform: translateX(10%);
+                    transform: translateX(0%);
                     box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
                 }
 
                 &::before {
-                    transform: translateX(-10%);
+                    transform: translateX(0%);
                 }
             }
         }
 
         &.open {
+            transition: all .5s;
             background-color: transparent;
+            width: 0;
 
             &::after {
                 content: '';
                 background-color: transparent;
                 box-shadow: unset;
-
+                width: 0%;
             }
 
             p {
@@ -117,8 +121,7 @@
     .menu {
         position: fixed;
         top: 0;
-        right: 0;
-        // background: rgba(5, 95, 118, 0.8);
+        right: 0;background: rgba(0, 17, 5, 0.7);
         background-image: url('@/section/menubg.png');
         background-size: cover;
         background-repeat: no-repeat;
@@ -130,7 +133,7 @@
         transition: all .5s;
         border-radius: 0;
         padding: size(100) 0;
-        gap: size(50);
+        gap: size(30);
         // backdrop-filter: blur(2px);
 
         .menu-item {

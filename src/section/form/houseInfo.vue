@@ -44,8 +44,6 @@
     height: size(379);
 }
 .info-box {
-    
-
     width: size(800);
 
     .title {
@@ -53,7 +51,7 @@
         font-weight: 700;
         color: #595757;
         border-bottom: size(0) solid #366758;
-        width: size(172);
+        min-width: size(172);
         margin: 0 auto;
         margin-bottom: size(50) !important; 
     }
@@ -70,7 +68,7 @@
             text-align: left;
 
             p:first-child {
-                width: 4.5em;
+                // min-width: 4.5em;
             }
         }
     }

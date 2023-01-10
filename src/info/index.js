@@ -33,30 +33,41 @@ export default {
         subTitle: "",
     },
     navList: [{
-            name: "沁心丰景",
+            name: "重大建設",
             target: ".s2",
             offset: "",
-        },
-        {
-            name: "轉瞬繁華",
+        },{
+            name: "公園特區",
             target: ".s3",
             offset: "",
-        },
-        {
-            name: "水岸至美",
+        },{
+            name: "生活機能",
             target: ".s4",
             offset: "",
-        },
-        {
-            name: "建築品牌",
+        },{
+            name: "制震地標",
             target: ".s5",
             offset: "",
-        },
-        {
-            name: "格局規劃",
+        },{
+            name: "會館公設",
             target: ".s6",
             offset: "",
+        },{
+            name: "加值服務",
+            target: ".s7",
+            offset: "",
+        },{
+            name: "選書合作",
+            target: ".s8",
+            offset: "",
+        },{
+            name: "誠意保固",
+            target: ".s9",
+            offset: "",
+        },{
+            name: "國際建材",
+            target: ".s10",
+            offset: "",
         },
-        
     ],
 }
