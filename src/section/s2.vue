@@ -19,8 +19,8 @@
   @apply relative overflow-hidden w-full bg-[#2B4D39];
   height: size(1080);
   background-image: url('@/section/s2/bg.jpg');
-  background-size: contain;
-  background-position: left bottom ;
+  background-size: cover;
+  background-position: left top ;
   .txt {
     @apply absolute;
     z-index: 1;
@@ -35,7 +35,7 @@
       letter-spacing: 0.1em;
     }
     .t2 {
-      font-weight: 500;
+      font-weight: 400;
       font-size: size(24);
       line-height: 150%;
       letter-spacing: 0.1em;

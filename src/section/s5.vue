@@ -139,7 +139,7 @@
   .main {
     @apply h-auto;
     flex-basis: sizem(379);
-    background-image: url('@/section/s5/main_m.png');
+    background-image: url('@/section/s5/main_m.jpg');
     background-size: cover;
     color: #FFFFFF;
     .t1{

@@ -12,35 +12,35 @@
       <img class="bird" src="@/section/form/bird.png" alt="" srcset="">
 
       <!-- Form -->
-      <div class="form mx-auto relative flex items-start justify-center">
+      <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full rounded-full bg-white/80" :value="formData.name"
+          <input type="text" placeholder="姓名" class="input w-full rounded-none bg-white/80" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full rounded-full bg-white/80" :value="formData.phone"
+          <input type="text" placeholder="手機" class="input w-full rounded-none bg-white/80" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-full bg-white/80" v-model="formData.room_type">
+          <select class="select w-full rounded-none bg-white/80" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
-            <option value="一房">一房</option>
             <option value="二房">二房</option>
+            <option value="三房">三房</option>
           </select>
 
-          <select class="select w-full rounded-full bg-white/80" v-model="formData.city">
+          <select class="select w-full rounded-none bg-white/80" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full rounded-full bg-white/80" v-model="formData.area">
+          <select class="select w-full rounded-none bg-white/80" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
             </option>
           </select>
         </div>
-        <div class="right h-full ">
+        <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="textarea w-full h-full rounded-3xl bg-white/80" placeholder="備註訊息"></textarea>
+            class="textarea w-full h-full rounded-none bg-white/80" placeholder="備註訊息"></textarea>
         </div>
       </div>
 
@@ -147,17 +147,23 @@
 
   .form {
     width: size(920);
-    height: 350px;
+    min-width: 680px;
+  //  height: 350px;
     gap: size(80);
     margin-bottom: size(50);
     z-index: 50;
+    align-items:stretch;
 
     .left {
-      width: size(419);
+      flex: 1;
+    gap: size(20);
+   //   width: size(419);
     }
 
     .right {
-      width: size(419);
+      flex: 1;
+    height: auto;
+    //  width: size(419);
     }
 
     &::after {
@@ -174,13 +180,14 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #C9A063;
+    background-color: #C29267;
     width: size(318);
     height: size(72.75);
     line-height: 3.3;
     border: 0;
-    border-radius: .2em;
+    border-radius: 0;
     z-index: 10;
+    font-weight:400;
     position: relative;
   }
 
@@ -245,6 +252,7 @@
 
     .form {
       width: sizem(310);
+    min-width:0;
       height: auto;
       gap: sizem(15);
       margin-bottom: sizem(20);

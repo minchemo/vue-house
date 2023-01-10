@@ -2,7 +2,7 @@
     <div class="house">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
             <!-- <div class="map"></div> -->
-            <div class="flex-1 items-center justify-center md:py-10 font-['Noto_Sans_TC']">
+            <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
                     <div class="title ">建案資訊</div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
@@ -41,7 +41,7 @@
 .displaynone{display: none;}
 .house {
     background:#fff;
-    height: size(379);
+    height: auto;
 }
 .info-box {
     width: size(800);
@@ -77,7 +77,7 @@
 @media screen and (max-width:768px) {
 .house {
     background:#fff;
-    height: sizem(400);
+  //  height: sizem(400);
 }
     .footer {
         margin-bottom: sizem(0);

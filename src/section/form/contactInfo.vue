@@ -2,24 +2,24 @@
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="景上汀" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="景上汀" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="景上汀" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap">
-      <div class="flex contact-item justify-between items-center address">
+      <div class="flex contact-item justify-center items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center googlemap"
+      <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="景上汀" srcset="" />
         <div>導航 GoogleMap</div>
@@ -99,9 +99,12 @@
 @import "@/assets/style/function.scss";
 
 .contact-info {
-  width: size(1200);
+ // width: size(1200);
   // border-radius: size(115);
-  padding: size(55) size(168) size(55) size(168);
+  padding: size(55) size(0) size(55) size(0);
+    width: size(920);
+    min-width: 680px;
+ // padding: size(55) size(168) size(55) size(168);
   margin-top: sizem(10);
   position: relative;
   z-index: 50;
@@ -126,16 +129,18 @@
       background-color: rgba(255,255,255,0.2);
       color: #fff;
       width: 100%;
-      padding: 0 size(55);
+      flex: 1;
+      padding: 1.1em 0;
       // border-radius: 9999px;
       font-size: size(16);
-      line-height: 3.8;
+      line-height: 1.6;//3.8
       letter-spacing: 0.06em;
-      max-width: size(280);
+     // max-width: size(280);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      border: 2px solid #C29267;
+      border: 1px solid #C29267;
+      gap: 1em;
 
       &:hover {
         background-color: #C29267;
@@ -152,6 +157,7 @@
         max-height: size(27);
         filter: brightness(0) invert(1);
         transition: all .5s;
+        margin: 0;
       }
 
       &.address {
@@ -159,8 +165,9 @@
         color: #000;
         z-index: 0;
         position: relative;
+        flex:2.17;
         // border-radius: 999px 0 0 999px;
-        max-width: 9999px;
+      //  max-width: 9999px;
         justify-content: center;
 
         &::before {
@@ -176,6 +183,7 @@
 
 
       &.googlemap {
+        flex:1;
       background-color: rgba(255,255,255,0.2);
       border-left-width: 0;
         color: #fff;
@@ -226,10 +234,11 @@
   }
 
   .contact-info {
-    width: sizem(375);
+      width: sizem(310);
+    min-width:0;
     height: sizem(400);
     // border-radius: sizem(68);
-    padding: sizem(50) sizem(15);
+    padding: sizem(50) sizem(0);
     margin-top: sizem(60);
     position: relative;
     justify-content: space-between;
@@ -248,7 +257,7 @@
       flex-direction: column;
 
       .contact-item {
-        padding: 0 sizem(80);
+        padding: 1.1em sizem(80);
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
@@ -263,7 +272,7 @@
 
         &.address {
           border-radius: sizem(0) sizem(0) 0 0;
-          padding: 0 0;
+          padding: 1.1em 0;
           margin-top: sizem(20);
 
           &::before {

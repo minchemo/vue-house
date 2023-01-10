@@ -40,7 +40,7 @@
 
     .menu-btn {
         background-color: transparent;
-        height: size(17);
+        height: size(40);
         width: size(41.43);
         display: flex;
         align-items: center;
@@ -134,6 +134,7 @@
         border-radius: 0;
         padding: size(100) 0;
         gap: size(30);
+  backdrop-filter: blur(2px);
         // backdrop-filter: blur(2px);
 
         .menu-item {
@@ -141,9 +142,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: size(28);
+            font-size: size(24);
             // gap: size(10);
-            font-weight: 500;
+            font-weight: 300;
+            letter-spacing: 0.1em;
 
             img {
                 width: size(43);
@@ -236,8 +238,8 @@
 
     .nav {
         // width: sizem(350);
-        right: sizem(32);
-        top: sizem(25);
+        right: sizem(25);
+        top: sizem(20);
         // padding: 0 sizem(8);
         height: sizem(30);
         border-radius: 9999px;
@@ -253,8 +255,8 @@
         }
 
         .menu-btn {
-            width: sizem(30);
-            height: sizem(30);
+            width: sizem(40);
+            height: sizem(40);
             padding: sizem(2.5);
             font-size: sizem(20);
 
@@ -264,14 +266,14 @@
             }
 
             .bar {
-                width: sizem(21);
+                width: sizem(32);
 
                 &::after {
-                    bottom: -#{sizem(5)};
+                    bottom: -#{sizem(10)};
                 }
 
                 &::before {
-                    top: -#{sizem(5)};
+                    top: -#{sizem(10)};
                 }
             }
 
@@ -322,14 +324,12 @@
             transition: all .5s;
             border-radius: 0;
             padding: 0;
-            gap: sizem(25);
+            gap: sizem(23);
             justify-content: center;
             background-image: url('@/section/menubgm.png');
 
             .menu-item {
                 font-size: sizem(20);
-                gap: sizem(5);
-                font-weight: 500;
 
                 img {
                     width: sizem(30);
@@ -359,8 +359,8 @@
                 width: sizem(44);
                 height: sizem(44);
                 cursor: pointer;
-                margin-top: sizem(30);
-                margin-bottom: sizem(40);
+                margin-top: sizem(10);
+                margin-bottom: sizem(0);
 
                 img {
                     width: 100%;

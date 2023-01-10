@@ -8,8 +8,8 @@
     <div class="bottom">
       <div>
         <div class="t1" data-aos="fade-down" data-aos-delay="200" >開窗 世界級公園視野</div>
-        <div class="t2" data-aos="fade-down" data-aos-delay="400">一次同步紐約、倫敦、巴黎、東京、台北…<br v-if="$isMobile()"/>都會公園自成高端聚落，綠地不敗、<br />
-          抬漲未來，小港首選正3萬坪森林公園第一排，入手趁現在
+        <div class="t2" data-aos="fade-down" data-aos-delay="400">一次同步紐約、倫敦、巴黎、東京、台北…<br v-if="$isMobile()"/>都會公園自成高端聚落，綠地不敗、<br v-if="!$isMobile()" />
+          抬漲未來<br v-if="$isMobile()"/><span v-else>，</span>小港首選正3萬坪森林公園第一排，入手趁現在
         </div>
       </div>
       <div class="imgs">
@@ -18,6 +18,7 @@
         <img  data-aos="fade" data-aos-delay="600" src="@/section/s4/3.jpg" alt="" srcset="">
         <img  data-aos="fade" data-aos-delay="800" src="@/section/s4/4.jpg" alt="" srcset="">
       </div>
+      <div class="caption">以上皆示意圖</div>
     </div>
   </article>
 </template>
@@ -63,7 +64,7 @@
   .bottom {
     @apply flex items-center justify-between w-full;
     padding-left: size(43);
-    padding-right: size(64.74);
+    padding-right: size(64);
     margin-top: size(44);
     color: #595758;
 
@@ -85,6 +86,14 @@
       img {
         width: size(270.22);
       }
+    }
+    .caption {
+      @apply absolute;
+      right: size(64);
+      bottom: size(20);
+      font-weight: 400;
+      font-size: size(12);
+      color: #595758
     }
   }
 }
@@ -144,6 +153,11 @@
       img {
         width: sizem(153);
       }
+    }
+    .caption {
+      right: sizem(32.5);
+      bottom: sizem(40);
+      font-size: sizem(12);
     }
   }
   }

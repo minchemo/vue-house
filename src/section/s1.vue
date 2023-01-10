@@ -1,7 +1,7 @@
 <template>
   <article class="s1">
-    <img class="logo" data-aos="zoom-in" src="@/section/s1/logo.svg" alt="" srcset="">
-    <img class="t1" src="@/section/s1/t1.svg" alt="" srcset="">
+    <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
+    <img class="t1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800" src="@/section/s1/t1.svg" alt="" srcset="">
     <img v-if="!$isMobile()" class="bird" src="@/section/s1/bird.png" alt="" srcset="">
     <img v-else class="bird" src="@/section/s1/bird_m.png" alt="" srcset="">
     <img v-if="!$isMobile()" class="tree" src="@/section/s1/tree.png" alt="" srcset="">
@@ -33,14 +33,12 @@
     width: size(505.45);
     left: size(813.36);
     bottom: size(191.55);
-    animation: fly 10s ease-in-out infinite alternate-reverse;
+    animation: fly 5s linear infinite alternate-reverse;  
+    transform: rotate(0);
 
     @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
       to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
+        transform:translateY(-20%)scale(1.2)rotate(-10deg);
 
       }
     }
