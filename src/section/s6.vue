@@ -13,7 +13,7 @@
     <img v-if="!$isMobile()" class="cloud" src="@/section/s6/cloud.png" alt="" srcset="">
     <img v-else class="cloud" src="@/section/s6/cloud_m.png" alt="" srcset="">
     <img v-if="!$isMobile()" data-aos="fade" data-aos-delay="200" class="building" src="@/section/s6/building.png" alt="" srcset="">
-    <img v-else class="building" data-aos="fade" data-aos-delay="200" src="@/section/s6/building_m.png" alt="" srcset="">
+    <img v-else data-aos="fade" data-aos-delay="200" class="building" src="@/section/s6/building_m.png" alt="" srcset="">
   </article>
 </template>
 
@@ -23,8 +23,7 @@
 .s6 {
   @apply relative overflow-hidden w-full;
   height: size(900);
-  background-image: url('@/section/s6/bg.jpg');
-  background-size: cover;
+  background:  #91c4e4 ;
   .main {
     @apply relative h-full z-10;
     top: 0;
@@ -96,7 +95,6 @@
 
   .s6 {
   height: sizem(584);
-  background-image: url('@/section/s6/bg_m.jpg');
   .main {
     @apply relative h-full z-10;
     width: 100%;

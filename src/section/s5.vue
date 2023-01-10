@@ -191,7 +191,6 @@
       &:after {
         width: sizem(65.54);
         height: sizem(53.39);
-        background-image: url('@/section/s5/bird_m.png');
       }
     }
     .route {

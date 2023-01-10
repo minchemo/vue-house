@@ -200,7 +200,7 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    background-image: url('@/section/form/bgm.png');
+    background-image: url('@/section/form/bgm.jpg');
     min-height: sizem(1564);
     padding-bottom: sizem(0);
     position: relative;

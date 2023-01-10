@@ -6,12 +6,9 @@
       <div class="t3" data-aos="fade-down" data-aos-delay="600">史上最強品牌結盟！「台南晶英酒店」跨界尊榮加值服務：<br>
         運動、共學、私廚、花藝或活動…結合多功空間生活饗宴</div>
       <div class="imgs">
-        <img data-aos="fade" data-aos-delay="800" v-if="!$isMobile()" src="@/section/s8/1.png" alt="" srcset="">
-        <img data-aos="fade" data-aos-delay="800" v-else src="@/section/s8/1m.png" alt="" srcset="">
-        <img data-aos="fade" data-aos-delay="1000" v-if="!$isMobile()" src="@/section/s8/2.png" alt="" srcset="">
-        <img data-aos="fade" data-aos-delay="1000" v-else src="@/section/s8/2m.png" alt="" srcset="">
-        <img data-aos="fade" data-aos-delay="1200" v-if="!$isMobile()" src="@/section/s8/3.png" alt="" srcset="">
-        <img data-aos="fade" data-aos-delay="1200" v-else src="@/section/s8/3m.png" alt="" srcset="">
+        <img data-aos="fade" data-aos-delay="800" src="@/section/s8/1.png" alt="" srcset="">
+        <img data-aos="fade" data-aos-delay="1000" src="@/section/s8/2.png" alt="" srcset="">
+        <img data-aos="fade" data-aos-delay="1200" src="@/section/s8/3.png" alt="" srcset="">
       </div>
     </div>
     <div class="right" data-aos="fade" data-aos-delay="200">

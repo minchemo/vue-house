@@ -122,7 +122,7 @@
         position: fixed;
         top: 0;
         right: 0;background: rgba(0, 17, 5, 0.7);
-        background-image: url('@/section/menubg.png');
+      //  background-image: url('@/section/menubg.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom left;
@@ -326,7 +326,7 @@
             padding: 0;
             gap: sizem(23);
             justify-content: center;
-            background-image: url('@/section/menubgm.png');
+          //  background-image: url('@/section/menubgm.png');
 
             .menu-item {
                 font-size: sizem(20);

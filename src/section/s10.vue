@@ -11,8 +11,7 @@
           買房首選「清景麟建築團隊」，就要成就您嚮往的家</div>
         <img v-if="$isMobile()" class="en" data-aos="fade-down" data-aos-delay="600"  src="@/section/s10/enm.png" alt="" srcset="">
       </div>
-      <img data-aos="fade" data-aos-delay="400" v-if="!$isMobile()" src="@/section/s10/tip.png" class="tip" alt="" srcset="">
-      <img data-aos="fade" data-aos-delay="400" v-else src="@/section/s10/tipm.png" class="tip" alt="" srcset="">
+      <img data-aos="fade" data-aos-delay="400" src="@/section/s10/tip.png" class="tip" alt="" srcset="">
       <img data-aos="fade" data-aos-delay="600" v-if="!$isMobile()" src="@/section/s10/set.png" class="set" alt="" srcset="">
       <img data-aos="fade" data-aos-delay="600" v-else src="@/section/s10/setm.png" class="set" alt="" srcset="">
     </div>
@@ -28,7 +27,7 @@
   .main {
     @apply relative w-full;
     height: size(660);
-    background-image: url('@/section/s10/main.png');
+    background-image: url('@/section/s10/main.jpg');
     background-size: cover;
     .en {
       @apply absolute;

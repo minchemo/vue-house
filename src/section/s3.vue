@@ -124,7 +124,7 @@
     flex-basis: sizem(297);
     width: 100%;
     height: sizem(297);
-    background-image: url('@/section/s3/main.png');
+    background-image: url('@/section/s3/main.jpg');
     background-size: cover;
 
     .t1 {

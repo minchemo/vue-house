@@ -68,7 +68,7 @@
     bottom: 0;
     right: size(162);
     width: size(429);
-    mix-blend-mode: multiply;
+   // mix-blend-mode: multiply;
   }
 }
   
