@@ -401,6 +401,6 @@ const scrollTo = (el) => {
     smoothScroll({
         scrollTo: document.querySelector(el)
     })
-    menuOpen.value = !menuOpen.value;
+    menuOpen.value = false;
 }
 </script>
