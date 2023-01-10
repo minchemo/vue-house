@@ -312,10 +312,7 @@ const imgs = [
 onMounted(() => {
   inView('.s3')
     .on('enter', () => {
-      setTimeout(() => {
-
-        splideRef.value.splide.refresh();
-      }, 1200);
+      splideRef.value.splide.go(0)
     })
     .on('exit', () => {
     });

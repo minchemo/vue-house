@@ -335,7 +335,7 @@ const onHover = () => {
 onMounted(() => {
   inView('.s2')
     .on('enter', () => {
-      splideRef.value.splide.refresh();
+      splideRef.value.splide.go(0)
     })
     .on('exit', () => {
     });
