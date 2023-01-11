@@ -37,10 +37,9 @@
       <img src="@/section/form/home1.svg" alt="宗大敘山" srcset="" />
       <div>home</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      v-bind:class="{ active: modalType == 'fb' }" @click="open()">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
       <img src="@/section/form/facebook1.svg" alt="宗大敘山" srcset="" />
-      <div>facebook</div>
+      <div>messenger</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/contactus1.svg" alt="宗大敘山" srcset="" />
