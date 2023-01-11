@@ -79,11 +79,10 @@
       </div>
       <div v-if="!$isMobile()" class="item clickable cursor-pointer" @click="contactus()"
         v-bind:class="{ hide: !menuOpen }">
-        <svg class="clickable" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M30.5096 22.06C28.5796 22.06 26.6896 21.76 24.8896 21.16C24.0096 20.86 22.9296 21.14 22.3896 21.69L18.8495 24.37C14.7395 22.18 12.2096 19.65 10.0396 15.57L12.6396 12.12C13.3096 11.45 13.5595 10.46 13.2695 9.54C12.6695 7.74 12.3695 5.84 12.3695 3.91C12.3695 2.52 11.2395 1.38 9.83954 1.38H4.04953C2.65953 1.38 1.51953 2.51 1.51953 3.91C1.51953 19.89 14.5196 32.9 30.5096 32.9C31.8996 32.9 33.0395 31.77 33.0395 30.37V24.6C33.0395 23.21 31.9096 22.07 30.5096 22.07V22.06Z"
-            stroke="currentColor" stroke-width="1.49" stroke-miterlimit="10" />
-        </svg>
+        <svg class="clickable phone" viewBox="0 0 42.66 41.88" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path stroke="currentColor" stroke-width="1.49" stroke-miterlimit="10" d="M38.82,27.32c-2.55,0-5.05-.39-7.43-1.17-1.16-.39-2.59-.03-3.3,.69l-4.68,3.48c-5.43-2.84-8.78-6.12-11.64-11.41l3.44-4.47c.89-.87,1.22-2.15,.83-3.35-.79-2.33-1.19-4.8-1.19-7.3,0-1.8-1.49-3.28-3.34-3.28H3.84C2.01,.5,.5,1.97,.5,3.78,.5,24.51,17.68,41.38,38.82,41.38c1.84,0,3.34-1.47,3.34-3.28v-7.48c0-1.8-1.49-3.28-3.34-3.28h0Z" />
+    
+         </svg>
         <p class="clickable">contact us</p>
       </div>
       <div v-if="!$isMobile()" class="item clickable cursor-pointer" @click="location()"
@@ -152,6 +151,10 @@
             background-color: #304637;
             img {
                 height: size(42);
+            }
+            .phone{
+                height: size(38);
+                margin-bottom: size(4);
             }
             svg {
                 height: size(42);
