@@ -316,7 +316,7 @@ const goHome = () => {
 }
 
 const facebook = () => {
-  window.open('https://facebook.com')
+  window.open('https://www.facebook.com/zongda.yama/')
 }
 
 const contactus = () => {
