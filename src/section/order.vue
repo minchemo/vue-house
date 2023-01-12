@@ -91,7 +91,7 @@
   min-height: size(1924);
   padding-top: size(406);
   // overflow: hidden;
-  
+
   .bg-image {
     position: absolute;
     width: 100%;
@@ -106,23 +106,25 @@
   width: 100%;
   padding-top: size(0);
 
-  .bird{
-  @apply absolute;
-  width: size(155);
-  top: size(420);
-  right: size(450);
-  animation: fly 6s ease-in-out infinite alternate-reverse;
+  .bird {
+    @apply absolute;
+    width: size(155);
+    top: size(420);
+    right: size(450);
+    animation: fly 6s ease-in-out infinite alternate-reverse;
 
-@keyframes fly {
-  from {
-    transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-  }
-  to {
-    transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
+    @keyframes fly {
+      from {
+        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
+      }
 
+      to {
+        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
+
+      }
+    }
   }
-}
-}
+
   .order-title {
     font-size: size(40);
     font-weight: 700;
@@ -130,8 +132,9 @@
     border-bottom: size(2) solid #C9A063;
     width: size(172);
     margin: 0 auto;
-    margin-bottom: size(50) !important; 
+    margin-bottom: size(50) !important;
   }
+
   .order-title-img {
     width: size(1008);
     margin-bottom: size(155);
@@ -148,22 +151,22 @@
   .form {
     width: size(920);
     min-width: 680px;
-  //  height: 350px;
+    //  height: 350px;
     gap: size(80);
     margin-bottom: size(50);
     z-index: 50;
-    align-items:stretch;
+    align-items: stretch;
 
     .left {
       flex: 1;
-    gap: size(20);
-   //   width: size(419);
+      gap: size(20);
+      //   width: size(419);
     }
 
     .right {
       flex: 1;
-    height: auto;
-    //  width: size(419);
+      height: auto;
+      //  width: size(419);
     }
 
     &::after {
@@ -187,7 +190,7 @@
     border: 0;
     border-radius: 0;
     z-index: 10;
-    font-weight:400;
+    font-weight: 400;
     position: relative;
   }
 
@@ -224,15 +227,16 @@
     padding-bottom: sizem(60);
 
     .order-title-img {
-    width: sizem(315);
-    margin-bottom: sizem(22);
-  }
-.bird{
-  @apply absolute;
-  width: sizem(48.8);
-  top: sizem(205);
-  right: sizem(40);
-}
+      width: sizem(315);
+      margin-bottom: sizem(22);
+    }
+
+    .bird {
+      @apply absolute;
+      width: sizem(48.8);
+      top: sizem(205);
+      right: sizem(40);
+    }
 
     .cus-divider {
       margin: 0 auto;
@@ -252,7 +256,7 @@
 
     .form {
       width: sizem(310);
-    min-width:0;
+      min-width: 0;
       height: auto;
       gap: sizem(15);
       margin-bottom: sizem(20);
@@ -423,16 +427,16 @@ const send = () => {
       {
         method: "GET"
       }
-    ).then(() => {
-      fetch("contact-form.php", {
-        method: "POST",
-        body: presend,
-      }).then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        }
-        sending.value = false
-      });
+    );
+
+    fetch("contact-form.php", {
+      method: "POST",
+      body: presend,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+      sending.value = false
     });
 
 
