@@ -4,7 +4,7 @@
       <img class="t1" data-aos="fade-down" data-aos-delay="200" src="@/section/s8/logo.svg" alt="" srcset="">
       <div class="t2" data-aos="fade-down" data-aos-delay="400">飯店尊榮加值服務</div>
       <div class="t3" data-aos="fade-down" data-aos-delay="600">史上最強品牌結盟！「台南晶英酒店」跨界尊榮加值服務：<br>
-        運動、共學、私廚、花藝或活動…結合多功空間生活饗宴</div>
+        運動、共學、私廚、花藝或活動…結合多功能空間生活饗宴</div>
       <div class="imgs">
         <img data-aos="fade" data-aos-delay="800" src="@/section/s8/1.png" alt="" srcset="">
         <img data-aos="fade" data-aos-delay="1000" src="@/section/s8/2.png" alt="" srcset="">
