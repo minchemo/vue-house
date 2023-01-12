@@ -342,12 +342,13 @@ const send = () => {
     return
   }
 
-  if (pass) {
+  if (pass && !sending.value) {
     sending.value = true
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
+      &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
       &msg=${formData.msg}
@@ -360,17 +361,16 @@ const send = () => {
       {
         method: "GET"
       }
-    ).then(() => {
-      fetch("contact-form.php", {
-        method: "POST",
-        body: presend,
-      }).then((response) => {
+    );
 
-        sending.value = false
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        }
-      });
+    fetch("contact-form.php", {
+      method: "POST",
+      body: presend,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+      sending.value = false
     });
 
 
