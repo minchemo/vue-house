@@ -463,16 +463,16 @@ const send = () => {
       {
         method: "GET"
       }
-    ).then(() => {
-      fetch("contact-form.php", {
-        method: "POST",
-        body: presend,
-      }).then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        }
-        sending.value = false
-      });
+    );
+
+    fetch("contact-form.php", {
+      method: "POST",
+      body: presend,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+      sending.value = false
     });
 
 
