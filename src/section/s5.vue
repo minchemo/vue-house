@@ -4,7 +4,7 @@
       <div class="t1" data-aos="fade-down" data-aos-delay="200">生活機能</div>
       <img data-aos="fade-down" data-aos-delay="400" src="@/section/s5/elitelocation.svg" class="t2" alt="" srcset="">
       <img data-aos="fade-down" data-aos-delay="600" src="@/section/s5/forestpark.svg" class="t3" alt="" srcset="">
-      <div class="t4">實體拍攝</div>
+      <div class="t4">實景拍攝</div>
       <div class="t5">小港森林公園</div>
       <div class="t6">情境圖</div>
       <div class="t7">SKM PARK OUTLETS</div>
