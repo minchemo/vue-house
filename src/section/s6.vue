@@ -14,6 +14,7 @@
     <img v-else class="cloud" src="@/section/s6/cloud_m.png" alt="" srcset="">
     <img v-if="!$isMobile()" data-aos="fade" data-aos-delay="200" class="building" src="@/section/s6/building.png" alt="" srcset="">
     <img v-else data-aos="fade" data-aos-delay="200" class="building" src="@/section/s6/building_m.png" alt="" srcset="">
+      <div class="caption">建築外觀3D示意圖</div>
   </article>
 </template>
 
@@ -64,6 +65,14 @@
     }
   
   }
+    .caption {
+      @apply absolute;
+      right: 1.5em;
+      bottom: 1em;
+      font-weight: 400;
+      font-size: size(12);
+      color: #FFF;
+    }
   .cloud {
     @apply absolute;
     height: 100%;
@@ -124,6 +133,9 @@
     }
   
   }
+    .caption {
+      font-size: sizem(12);
+    }
   .cloud {
     @apply absolute;
     height: sizem(277.68);

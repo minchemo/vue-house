@@ -18,7 +18,7 @@
         <img  data-aos="fade" data-aos-delay="600" src="@/section/s4/3.jpg" alt="" srcset="">
         <img  data-aos="fade" data-aos-delay="800" src="@/section/s4/4.jpg" alt="" srcset="">
       </div>
-      <div class="caption">以上皆示意圖</div>
+      <div class="caption">以上皆實景示意圖</div>
     </div>
   </article>
 </template>
