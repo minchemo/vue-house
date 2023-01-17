@@ -95,6 +95,7 @@
             right: size(20);
             bottom: size(10);
             letter-spacing: 0.06em;
+            text-shadow: black 0.1em 0.1em 0.2em
             
           }
         }
@@ -297,12 +298,16 @@ const imgs = [
     titleImg: globals.$isMobile() ? new URL(`../section/s3/04/list_title_m.png`, import.meta.url).href : new URL(`../section/s3/04/list_title.png`, import.meta.url).href,
     imgs: [
       {                                                                  
-        url: globals.$isMobile() ? new URL("../section/s3/04/3.jpg", import.meta.url).href : new URL("../section/s3/04/3.jpg", import.meta.url).href,
+        url: globals.$isMobile() ? new URL("../section/s3/04/1_m.jpg", import.meta.url).href : new URL("../section/s3/04/1.jpg", import.meta.url).href,
         caption: '吉源控股廣東廠'
       },
       {
-        url: globals.$isMobile() ? new URL("../section/s3/04/2.jpg", import.meta.url).href : new URL("../section/s3/04/2.jpg", import.meta.url).href,
+        url: globals.$isMobile() ? new URL("../section/s3/04/2_m.jpg", import.meta.url).href : new URL("../section/s3/04/2.jpg", import.meta.url).href,
         caption: '吉源控股廈門廠'
+      },
+      {
+        url: globals.$isMobile() ? new URL("../section/s3/04/3_m.jpg", import.meta.url).href : new URL("../section/s3/04/3.jpg", import.meta.url).href,
+        caption: '吉源控股廠房實景'
       },
     ],
     content: '為實踐多角化經營，宗大董事長林漢清開設鐵鋁罐品牌「吉源控股」，設廠福建、湖北、安徽、廣東，主力客戶為泰山、雀巢咖啡、加多寶、銀鷺、達利等知名食品飲料大廠，年產能共超越30億罐，2016年在台上市，股票代號：吉源-KY，8488。'
