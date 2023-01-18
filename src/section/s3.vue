@@ -239,17 +239,17 @@ const imgs = [
     titleImg: globals.$isMobile() ? new URL(`../section/s3/01/list_title_m.png`, import.meta.url).href : new URL(`../section/s3/01/list_title.png`, import.meta.url).href,
     imgs: [
       {
-        
-        url: globals.$isMobile() ? new URL("../section/s3/01/1_m.jpg", import.meta.url).href : new URL("../section/s3/01/1.png", import.meta.url).href,
-        caption: '建築業績｜霞飛3'
-      },
-      {
         url: globals.$isMobile() ? new URL("../section/s3/01/2.png", import.meta.url).href : new URL("../section/s3/01/2.png", import.meta.url).href,
         caption: '建築業績｜凌波揚+霞飛'
       },
       {
         url: globals.$isMobile() ? new URL("../section/s3/01/3.png", import.meta.url).href : new URL("../section/s3/01/3.png", import.meta.url).href,
         caption: '建築業績｜陶裡原'
+      },
+      {
+        
+        url: globals.$isMobile() ? new URL("../section/s3/01/1_m.jpg", import.meta.url).href : new URL("../section/s3/01/1.png", import.meta.url).href,
+        caption: '建築業績｜霞飛3'
       },
     ],
     content: '宗大以建設起家，從1991年創立至今已超越半甲子。以「連結你我，發現生活」為理念，擘建逾50件建築作品，超過3000戶客戶幸福成家。通過ISO 9002國際品質認證，從透天、大樓，到大型造鎮，台南的繁榮發展處處皆可見到宗大建設蹤跡。'
@@ -310,7 +310,7 @@ const imgs = [
         caption: '吉源控股廠房實景'
       },
     ],
-    content: '為實踐多角化經營，宗大董事長林漢清開設鐵鋁罐品牌「吉源控股」，設廠福建、湖北、安徽、廣東，主力客戶為泰山、雀巢咖啡、加多寶、銀鷺、達利等知名食品飲料大廠，年產能共超越30億罐，2016年在台上市，股票代號：吉源-KY，8488。'
+    content: '為實踐多角化經營，宗大集團亦投入鐵鋁罐金屬包裝事業，「吉源控股」於廈門、湖北、安徽、廣東等地設廠，主要客戶包含雀巢、銀鷺、椰樹、加多寶、麒麟啤酒等知名食品飲料大廠，年產能達30億罐，2016年在台上市，股票代號：吉源-KY，8488。'
   },
 ]
 
