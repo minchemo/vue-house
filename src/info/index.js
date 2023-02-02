@@ -21,7 +21,7 @@ export default {
         ["投資興建", "中德建設"]
     ],
     gtmCode: ["5ZQ95PD"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
 // 主1  6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz
 // 主2  6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
