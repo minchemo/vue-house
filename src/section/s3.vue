@@ -9,7 +9,7 @@
       </div>
     </div>
     <Splide :hasTrack="false" :key="activeIndex" ref="splideRef" :options="{
-      type: 'loop', perPage: 1, arrows: false, autoplay: true, pauseOnHover: false, interval: 3000,
+      type: 'loop', perPage: 1, arrows: false, pauseOnHover: false,
       classes: {
         page: 'splide__pagination__page clickable',
       },
@@ -247,7 +247,7 @@ const imgs = [
         caption: '建築業績｜陶裡原'
       },
       {
-        
+
         url: globals.$isMobile() ? new URL("../section/s3/01/1_m.jpg", import.meta.url).href : new URL("../section/s3/01/1.png", import.meta.url).href,
         caption: '建築業績｜霞飛3'
       },
@@ -270,7 +270,7 @@ const imgs = [
         url: globals.$isMobile() ? new URL("../section/s3/02/2_m.jpg", import.meta.url).href : new URL("../section/s3/02/2.png", import.meta.url).href,
         caption: '建築業績｜出雲居'
       },
-      
+
     ],
     content: '宗大深知，建築品質的關鍵在「營造」。為了加速溝通，精準落實施工，以自有營造廠「合新營造」專責宗大旗下建案。南臺灣知名甲級營造廠之一，承攬公共工程、校園新建等，更投入維冠重建工程「出雲居」，以及「小東路青年公宅」，實踐精工品質好生活。'
   },
@@ -297,7 +297,7 @@ const imgs = [
     btnImg: globals.$isMobile() ? new URL("../section/s3/04/title_m.png", import.meta.url).href : new URL("../section/s3/04/title.png", import.meta.url).href,
     titleImg: globals.$isMobile() ? new URL(`../section/s3/04/list_title_m.png`, import.meta.url).href : new URL(`../section/s3/04/list_title.png`, import.meta.url).href,
     imgs: [
-      {                                                                  
+      {
         url: globals.$isMobile() ? new URL("../section/s3/04/1_m.jpg", import.meta.url).href : new URL("../section/s3/04/1.jpg", import.meta.url).href,
         caption: '吉源控股廣東廠'
       },
@@ -314,12 +314,20 @@ const imgs = [
   },
 ]
 
+
+
+let playInterval;
+
 onMounted(() => {
   inView('.s3')
     .on('enter', () => {
-      splideRef.value.splide.go(0)
+      playInterval = setInterval(() => {
+        splideRef.value.splide.go('>')
+      }, 3000);
     })
     .on('exit', () => {
+      clearInterval(playInterval)
+      splideRef.value.splide.go(0);
     });
 })
 
