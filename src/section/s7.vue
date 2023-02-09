@@ -25,7 +25,7 @@
   .main {
     @apply h-full relative;
     flex-basis: size(1140);
-    background-image: url('@/section/s7/bg.jpg');
+    background-image: url('@/section/s7/0.jpg');
     background-size: cover;
     .en {
       @apply absolute;
@@ -83,7 +83,7 @@
   
   .main {
     flex-basis: sizem(280);
-    background-image: url('@/section/s7/bgm.jpg');
+   // background-image: url('@/section/s7/bgm.jpg');
     .en {
       left: sizem(20);
         top: sizem(24);
