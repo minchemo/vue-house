@@ -11,11 +11,11 @@
         data-aos-duration="1000">
 
       <!-- Custom Image -->
-      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.png" alt="" srcset="">
-      <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.png" alt="" srcset="">
-      <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.png" alt="" srcset="">
-      <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.png" alt="" srcset="">
-      <img class="buck" src="@/section/form/buck.png" alt="" srcset="">
+      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.webp" alt="" srcset="">
+      <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.webp" alt="" srcset="">
+      <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.webp" alt="" srcset="">
+      <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.webp" alt="" srcset="">
+      <img class="buck" src="@/section/form/buck.webp" alt="" srcset="">
 
 
       <!-- Form -->

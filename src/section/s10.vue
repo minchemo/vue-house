@@ -59,7 +59,7 @@
             interval: 4000,
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img in imgs[slideType]['img']">
-                <img loading="lazy" v-if="$isMobile()" class="decor" src="@/section/s10/decor.png" alt="" srcset="">
+                <img loading="lazy" v-if="$isMobile()" class="decor" src="@/section/s10/decor.webp" alt="" srcset="">
                 <img loading="lazy" class="img" :src="img.img" alt="" srcset="">
             </SplideSlide>
         </Splide>
@@ -356,29 +356,29 @@ const imgs = ref(
         '29': {
             'img': [
                 {
-                    img: globals.$isMobile() ? new URL("../section/s10/29_1_m.jpg", import.meta.url).href : new URL("../section/s10/29_1.png", import.meta.url).href,
+                    img: globals.$isMobile() ? new URL("../section/s10/29_1_m.webp", import.meta.url).href : new URL("../section/s10/29_1.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/29_2.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/29_2.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/29_3.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/29_3.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/29_4.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/29_4.webp", import.meta.url).href,
                 },
             ]
         },
         '25': {
             'img': [
                 {
-                    img: globals.$isMobile() ? new URL("../section/s10/25_0_m.jpg", import.meta.url).href : new URL("../section/s10/25_0.png", import.meta.url).href,
+                    img: globals.$isMobile() ? new URL("../section/s10/25_0_m.webp", import.meta.url).href : new URL("../section/s10/25_0.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/25_1.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/25_1.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/25_2.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/25_2.webp", import.meta.url).href,
                 },]
         }
     },

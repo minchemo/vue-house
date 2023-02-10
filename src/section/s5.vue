@@ -68,13 +68,13 @@
         </div>
 
         <lazy-component>
-            <img loading="lazy" class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.png" alt="" srcset="">
-            <img loading="lazy" v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.png" alt=""
+            <img loading="lazy" class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.webp" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.webp" alt=""
                 srcset="">
-            <img loading="lazy" v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.png" alt="" srcset="">
-            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.png" alt=""
+            <img loading="lazy" v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.webp" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.webp" alt=""
                 srcset="">
-            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.png" alt="" srcset="">
+            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.webp" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -755,19 +755,19 @@ const timelines = ref([
 
 const imgs = ref([
     {
-        img: new URL("../section/s5/1.jpg", import.meta.url).href,
+        img: new URL("../section/s5/1.webp", import.meta.url).href,
         content: '長耀挹品'
     },
     {
-        img: new URL("../section/s5/2.jpg", import.meta.url).href,
+        img: new URL("../section/s5/2.webp", import.meta.url).href,
         content: '長耀初'
     },
     {
-        img: new URL("../section/s5/3.jpg", import.meta.url).href,
+        img: new URL("../section/s5/3.webp", import.meta.url).href,
         content: '長耀PARK'
     },
     {
-        img: new URL("../section/s5/4.jpg", import.meta.url).href,
+        img: new URL("../section/s5/4.webp", import.meta.url).href,
         content: '双丰双卉'
     },
 ])

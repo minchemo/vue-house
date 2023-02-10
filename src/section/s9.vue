@@ -4,7 +4,7 @@
             <div class="imgbox">
                 <p class="font-['Noto_sans_tc']">結構工法</p>
             </div>
-            <img loading="lazy" v-if="$isMobile()" class="mask" src="@/section/s9/mask.png" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="mask" src="@/section/s9/mask.webp" alt="" srcset="">
         </lazy-component>
 
         <div class="title">
@@ -16,8 +16,8 @@
             </div>
         </div>
         <lazy-component>
-            <img loading="lazy" v-if="$isMobile()" class="rb_leaf pointer-events-none" src="@/section/s9/leaf_m.png" alt="" srcset="">
-            <img loading="lazy" v-else class="rb_leaf pointer-events-none" src="@/section/s9/leaf.png" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="rb_leaf pointer-events-none" src="@/section/s9/leaf_m.webp" alt="" srcset="">
+            <img loading="lazy" v-else class="rb_leaf pointer-events-none" src="@/section/s9/leaf.webp" alt="" srcset="">
         </lazy-component>
 
     </div>
@@ -38,7 +38,7 @@
     .imgbox {
         width: size(770);
         height: size(1000);
-        background-image: url('@/section/s9/1.jpg');
+        background-image: url('@/section/s9/1.webp');
         background-size: cover;
         position: relative;
 
@@ -130,7 +130,7 @@
         .imgbox {
             width: size-m(375);
             height: size-m(487);
-            background-image: url('@/section/s9/1.jpg');
+            background-image: url('@/section/s9/1.webp');
             background-size: cover;
             background-repeat: no-repeat;
 

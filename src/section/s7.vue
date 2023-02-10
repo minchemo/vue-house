@@ -27,8 +27,8 @@
             </SplideSlide>
         </Splide>
         <lazy-component>
-            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.png" alt="" srcset="">
-            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.png" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.webp" alt="" srcset="">
+            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.webp" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -335,7 +335,7 @@ const move = (newIdx, prevIdx, destIdx) => {
 
 const imgs = ref([
     {
-        img: globals.$isMobile() ? new URL("../section/s7/1_m.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/1_m.webp", import.meta.url).href : new URL("../section/s7/1.webp", import.meta.url).href,
         t1: '建築巨擎',
         t2: '簡俊卿',
         t3: '北市豪宅御用建築師',
@@ -343,7 +343,7 @@ const imgs = ref([
         t5: globals.$isMobile() ? '建築師決定了建築的視野、品味及高度。國家建築金質首獎金石首獎常勝大將、信義豪宅「松德長虹」、天母豪宅「華固天鑄」簡俊卿引領豪宅級建築團隊，精鑄 26 層富貴雲頂地標「長耀里」王者風範。<br/><br/>經典業績：<br/>松德長虹、華固天鑄、冠德中研、宏盛新世界' : '建築師決定了建築的視野、品味及高度。國家建築金質首獎金石首獎常勝大將、信義豪宅「松德長虹」、天母豪宅「華固天鑄」簡俊卿引領豪宅級建築團隊，精鑄 26 層富貴雲頂地標「長耀里」王者風範。<br/><br/><br/>經典業績：<br/>松德長虹、華固天鑄、冠德中研<br>宏盛新世界、台北之星',
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s7/2_m.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/2_m.webp", import.meta.url).href : new URL("../section/s7/2.webp", import.meta.url).href,
         t1: '空間藝術',
         t2: '李志成',
         t3: '元佑公設空間設計師',
@@ -351,7 +351,7 @@ const imgs = ref([
         t5: globals.$isMobile() ? '生活的美術館，輕奢調帶點東方味，推開門，一座大師手筆藝廊門廳貴重迎賓，來自「富富話合」、「映東騰」等名宅空間設計師李志成，走遍世界星級飯店，帶您以閱讀世界的眼界，享受與國際同步的空間訂製美學。<br/><br/>經典業績：<br/>映東騰、富富話合、國泰禾、實德璞園的家' : '生活的美術館，輕奢調帶點東方味，推開門，一座大師手筆藝廊門廳貴重迎賓，來自「富富話合」、「映東騰」等名宅空間設計師李志成，走遍世界星級飯店，帶您以閱讀世界的眼界，享受與國際同步的空間訂製美學。<br/><br/><br/>經典業績：<br/>映東騰、富富話合、國泰禾<br>實德璞園的家',
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s7/3_m.jpg", import.meta.url).href : new URL("../section/s7/3.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/3_m.webp", import.meta.url).href : new URL("../section/s7/3.webp", import.meta.url).href,
         t1: '營造權威',
         t2: '森城營造',
         t3: '52年甲級營造團隊 ',
@@ -359,7 +359,7 @@ const imgs = ref([
         t5: globals.$isMobile() ? '營造是建築骨幹，精微細節寸寸計較，容不下 0.1 公分的誤差。榮獲國家建築金質獎的森城營造以 52 年信譽背書、ISO 國際專業認證，堅持為住戶打造最安穩、安全、安心的居住品質，成就長住久安的期待。<br/><br/>經典業績：<br/>天母紘琚、遠雄九五、元利畫世紀、華固松疆' : '營造是建築骨幹，精微細節寸寸計較，容不下 0.1 公分的誤差。榮獲國家建築金質獎的森城營造以 52 年信譽背書、ISO 國際專業認證，堅持為住戶打造最安穩、安全、安心的居住品質，成就長住久安的期待。<br/><br/><br/>經典業績：<br/>吉美一品花園、森城大院、基泰信義大樓<br>鉑金苑',
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s7/4_m.jpg", import.meta.url).href : new URL("../section/s7/4.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s7/4_m.webp", import.meta.url).href : new URL("../section/s7/4.webp", import.meta.url).href,
         t1: '結構至上',
         t2: '陳村林',
         t3: '30年資歷結構技師',
