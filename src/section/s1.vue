@@ -9,12 +9,12 @@
       <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
           v-else>｜</span>18-29坪 入主富貴公園</div>
     </div>
-      <img loading="lazy" class="buck" src="@/section/s1/buck.png" alt="" srcset="">
+      <img loading="lazy" class="buck" src="@/section/s1/buck.webp" alt="" srcset="">
       <div class="buckbbg" v-if="!$isMobile()"></div>
       <div class="linestyle"></div>
     <lazy-component>
-      <img loading="lazy" class="circle" src="@/section/s1/circle.png" alt="" srcset="">
-      <img loading="lazy" class="circle2" src="@/section/s1/circle2.png" alt="" srcset="">
+      <img loading="lazy" class="circle" src="@/section/s1/circle.webp" alt="" srcset="">
+      <img loading="lazy" class="circle2" src="@/section/s1/circle2.webp" alt="" srcset="">
     </lazy-component>
 
   </article>

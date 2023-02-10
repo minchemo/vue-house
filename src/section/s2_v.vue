@@ -1,6 +1,6 @@
 <template>
     <div class="s2 relative">
-        <img loading="lazy" class="play" src="@/section/s2/play.png" alt="" srcset="" @click="videoOpened = !videoOpened">
+        <img loading="lazy" class="play" src="@/section/s2/play.webp" alt="" srcset="" @click="videoOpened = !videoOpened">
         <div class="player" v-bind:class="{ 'open': videoOpened }">
             <div class="video-box aspect-video">
                 <iframe src="https://www.youtube.com/embed/-EEVOmxNSaM" title="YouTube video player" frameborder="0"
@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('@/section/s2/videobg.jpg');
+    background-image: url('@/section/s2/videobg.webp');
     background-size: cover;
 
     .play {
@@ -90,7 +90,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url('@/section/s2/videobg_m.jpg');
+        background-image: url('@/section/s2/videobg_m.webp');
 
         .play {
             width: size-m(84);
