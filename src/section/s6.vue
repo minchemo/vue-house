@@ -26,10 +26,10 @@
 
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.svg" alt="" srcset="">
+                    <img loading="lazy" src="@/assets/prev.svg" alt="" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.svg" alt="" srcset=""></button>
+                    <img loading="lazy" src="@/assets/next.svg" alt="" srcset=""></button>
             </div>
         </Splide>
     </div>

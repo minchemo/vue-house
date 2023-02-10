@@ -15,7 +15,7 @@
       <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.png" alt="" srcset="">
       <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.png" alt="" srcset="">
       <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.png" alt="" srcset="">
-      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
+      <img class="buck" src="@/section/form/buck.png" alt="" srcset="">
 
 
       <!-- Form -->

@@ -17,7 +17,7 @@
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img, i in imgs">
                 <div class="icon">
-                    <img :src="img.img" alt="" srcset="">
+                    <img loading="lazy" :src="img.img" alt="" srcset="">
                 </div>
             </SplideSlide>
         </Splide>
@@ -27,10 +27,10 @@
         </div>
         <lazy-component>
 
-            <img class="rb_leaf" src="@/section/s3/rb_leaf.png" alt="" srcset="">
-            <img class="lb_leaf" src="@/section/s3/lb_leaf.png" alt="" srcset="">
-            <img class="rt_leaf" src="@/section/s3/rt_leaf.png" alt="" srcset="">
-            <img class="lt_leaf" src="@/section/s3/lt_leaf.png" alt="" srcset="">
+            <img loading="lazy" class="rb_leaf" src="@/section/s3/rb_leaf.png" alt="" srcset="">
+            <img loading="lazy" class="lb_leaf" src="@/section/s3/lb_leaf.png" alt="" srcset="">
+            <img loading="lazy" class="rt_leaf" src="@/section/s3/rt_leaf.png" alt="" srcset="">
+            <img loading="lazy" class="lt_leaf" src="@/section/s3/lt_leaf.png" alt="" srcset="">
         </lazy-component>
     </div>
 </template>

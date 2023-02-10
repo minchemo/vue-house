@@ -27,8 +27,8 @@
             </SplideSlide>
         </Splide>
         <lazy-component>
-            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.png" alt="" srcset="">
-            <img v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.png" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.png" alt="" srcset="">
+            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.png" alt="" srcset="">
         </lazy-component>
     </div>
 </template>

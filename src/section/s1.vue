@@ -1,7 +1,7 @@
 <template>
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
     <div class="title flex flex-col items-center justify-center">
-      <img class="logo" src="@/section/s1/logo_n.svg" alt="" srcset="" data-aos="fade" data-aos-delay="600">
+      <img loading="lazy" class="logo" src="@/section/s1/logo_n.svg" alt="" srcset="" data-aos="fade" data-aos-delay="600">
       <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層新古典頂級地標</div>
       <div class="t2 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="200">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
         這是林口第 18 個里，唯一住在公園的里，這個里，屬於長耀，屬於你。<br>
@@ -9,12 +9,12 @@
       <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
           v-else>｜</span>18-29坪 入主富貴公園</div>
     </div>
-      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
+      <img loading="lazy" class="buck" src="@/section/s1/buck.png" alt="" srcset="">
       <div class="buckbbg" v-if="!$isMobile()"></div>
       <div class="linestyle"></div>
     <lazy-component>
-      <img class="circle" src="@/section/s1/circle.png" alt="" srcset="">
-      <img class="circle2" src="@/section/s1/circle2.png" alt="" srcset="">
+      <img loading="lazy" class="circle" src="@/section/s1/circle.png" alt="" srcset="">
+      <img loading="lazy" class="circle2" src="@/section/s1/circle2.png" alt="" srcset="">
     </lazy-component>
 
   </article>

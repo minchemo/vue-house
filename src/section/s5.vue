@@ -68,13 +68,13 @@
         </div>
 
         <lazy-component>
-            <img class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.png" alt="" srcset="">
-            <img v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.png" alt=""
+            <img loading="lazy" class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.png" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.png" alt=""
                 srcset="">
-            <img v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.png" alt="" srcset="">
-            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.png" alt=""
+            <img loading="lazy" v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.png" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.png" alt=""
                 srcset="">
-            <img v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.png" alt="" srcset="">
+            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.png" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
