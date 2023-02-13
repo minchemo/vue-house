@@ -4,11 +4,11 @@
             <!-- <div class="map"></div> -->
             <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
-                    <div class="title ">建案資訊</div>
+                    <div class="title font-['noto_Serif_tc']">建案資訊</div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos">
-                            <p class="mr-5 border-r-2 border-[#366758] pr-2 text-[#366758]" v-html="item[0]"></p>
+                            <p class="mr-5 border-l-2 border-[#9B1E44] pl-2 text-[#9B1E44]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#000] font-normal"
                                 v-html="item[1]">
                             </p>
@@ -49,11 +49,8 @@
     .title {
         font-size: size(40);
         font-weight: 700;
-        color: #595757;
-        border-bottom: size(0) solid #366758;
-        min-width: size(172);
-        margin: 0 auto;
-        margin-bottom: size(50) !important; 
+        color: #9B1E44;
+        margin: 0 auto 1em auto;
     }
 
     .info-items {
@@ -62,7 +59,7 @@
 
         .item {
             line-height: size(17);
-            font-size: size(17);
+            font-size: size(16);
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;

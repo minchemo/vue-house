@@ -68,7 +68,7 @@ margin-bottom:size(165);
   &.list2{
     flex-direction:row-reverse;}
   }
-  .img{width: size(856);
+  .img{width: 53.5em;
   img{width: 100% ;}
   }
   .txt{
@@ -91,14 +91,28 @@ letter-spacing: 0.1em;}
   .desc{
 line-height: 200%;}
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1470px) {
 .s3 {
-font-size:14px;
-  .txt{
+font-size:15px;
+.txt{
     width: 30em;
     padding: 6em size(80);
   }
-
+}
+}
+@media screen and (max-width: 1230px) {
+.s3 {
+font-size:14px;
+}
+}
+@media screen and (max-width: 1300px) {
+.s3 {
+//font-size:14px;
+ /* .txt{
+    width: 30em;
+    padding: 6em size(80);
+  }
+*/
 }
 }
   

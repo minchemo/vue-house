@@ -20,8 +20,9 @@
 font-size: 16px;
 padding: size(98) 0;
   .img{@apply relative  overflow-hidden bg-[#000];
-    width:calc(100% - (20% - 11.4em) - 37em + 10em);
-    height:size(764);
+    width: 80.625em;
+   // width:calc(100% - (20% - 11.4em) - 37em + 10em);
+    height:47.75em;
     background: url("./s2/1.jpg") center;
     background-size: cover;
   }
@@ -43,16 +44,35 @@ color: #9B1E44;}
   .desc{
 line-height: 2;}
 }
+@media screen and (max-width: 1730px) {
+.s2 {
+  .img{
+    width:size(1350);
+  }
+}
+}
+@media screen and (max-width: 1730px) {
+.s2 {
+font-size: 15px;
+  .txt{
+    width: 35em;
+    padding: 6em size(60);
+margin: auto -1.2em auto size(-180);
+  }
+}
+}
 @media screen and (max-width: 1360px) {
 .s2 {
 font-size:14px;
   .txt{
     width: 30em;
-    padding: 6em size(80);
+    padding: 6em size(60);
 margin: auto -1.2em auto size(-180);
   }
 
 }
+}
+@media screen and (max-width: 767px) {
 }
   
 /* 螢幕尺寸標準 */

@@ -1,8 +1,8 @@
 <template>
   <article class="s1">
     <div class="txt">
-      <img class="logo" v-if="!$isMobile()" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
-      <img class="logo" v-else data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo_m.svg" alt="" srcset="">
+      <img class="logo" v-if="!$isMobile()" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset="">
+      <img class="logo" v-else data-aos="zoom-in" data-aos-duration="800" src="./s1/logo_m.svg" alt="" srcset="">
       <div class="t1 font-['Noto_serif_TC',serif]">天之驕址 繁華匯聚</div>
       <div class="img">
         <div class="leaf leaf1"><img src="./s1/leaf.png" alt="leaf" /></div>
