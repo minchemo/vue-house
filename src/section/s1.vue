@@ -3,7 +3,7 @@
     <div class="txt">
       <img class="logo" v-if="!$isMobile()" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset="">
       <img class="logo" v-else data-aos="zoom-in" data-aos-duration="800" src="./s1/logo_m.svg" alt="" srcset="">
-      <div class="t1 font-['Noto_serif_TC',serif]">天之驕址 繁華匯聚</div>
+      <div class="t1 font-['Noto_serif_TC',serif]" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800" >天之驕址 繁華匯聚</div>
       <div class="img">
         <div class="leaf leaf1"><img src="./s1/leaf.png" alt="leaf" /></div>
         <div class="leaf leafmo1" v-if="$isMobile()"><img src="./s1/leaf.png" alt="leaf" /></div>
@@ -90,6 +90,7 @@
   // background: url("./s1/1.jpg");
   // background-size: cover;
   background: url("./s1/bg.jpg");
+  background-size: size(900) auto;
   .txt{
     margin: auto;
     width: size(304);
@@ -464,6 +465,7 @@ top: size(190);
   .s1 {
     min-height: sizem(604);
     max-height: sizem(812);
+  background-size: sizem(450) auto;
   .txt{
     width: sizem(130);
     font-size:sizem(12);

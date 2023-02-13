@@ -470,6 +470,7 @@ left: sizem(-57);top: 0;
     width: sizem(375);
     height: sizem(63);
     gap: sizem(1);
+    box-shadow: 0 0 sizem(50) #360010cc;
 
     .contact-item {
       height: 100%;
@@ -498,6 +499,7 @@ left: sizem(-57);top: 0;
     margin-top: sizem(60);
     position: relative;
     justify-content: space-between;
+  background-size: sizem(450) auto;
 
     .logo {
       width: sizem(257);

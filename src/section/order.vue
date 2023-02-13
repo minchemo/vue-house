@@ -214,10 +214,10 @@
 
   .order {
     width: 100%;
+    padding-bottom: sizem(63);
     // border-radius: sizem(68) sizem(68) 0 0;
    /* padding-top: sizem(0);
     margin-top: sizem(0);
-    padding-bottom: sizem(60);
 
     .order-title-img {
       width: sizem(315);
