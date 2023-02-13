@@ -1,6 +1,6 @@
 <template>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <!-- <div class="logo"></div> -->
+    <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="景上汀" srcset="" />
@@ -217,7 +217,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #C9A063;
+      background-color: #9B1E44;
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;

@@ -1,37 +1,36 @@
 <template>
-  <div id="order" class="order relative bg-[#F1E6D6] text-center">
+  <div id="order" class="order relative bg-[#9B1E44] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
+      <div class="order-title text-center font-['noto_Serif_tc']">{{ info.order.title }}</div>
       <!-- <div class="cus-divider"></div> -->
 
-      <!-- Title Image -->
+      <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
-
+ -->
       <!-- Custom Image -->
-      <img class="bird" src="@/section/form/bird.png" alt="" srcset="">
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full rounded-none bg-white/80" :value="formData.name"
+          <input type="text" placeholder="姓名" class="input w-full rounded-none bg-white" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full rounded-none bg-white/80" :value="formData.phone"
+          <input type="text" placeholder="手機" class="input w-full rounded-none bg-white" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-none bg-white/80" v-model="formData.room_type">
+          <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="二房">二房</option>
             <option value="三房">三房</option>
           </select>
 
-          <select class="select w-full rounded-none bg-white/80" v-model="formData.city">
+          <select class="select w-full rounded-none bg-white" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full rounded-none bg-white/80" v-model="formData.area">
+          <select class="select w-full rounded-none bg-white" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
@@ -40,7 +39,7 @@
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="textarea w-full h-full rounded-none bg-white/80" placeholder="備註訊息"></textarea>
+            class="textarea w-full h-full rounded-none bg-white" placeholder="備註訊息"></textarea>
         </div>
       </div>
 
@@ -50,7 +49,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFFF00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -82,15 +81,9 @@
 
 
 .order-section {
-  background-image: url('@/section/form/bg.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // padding-bottom: size(90);
   position: relative;
-  min-height: size(1924);
-  padding-top: size(406);
-  // overflow: hidden;
+ // padding-top: size(406);
+   overflow: hidden;
 
   .bg-image {
     position: absolute;
@@ -129,10 +122,10 @@
     font-size: size(40);
     font-weight: 700;
     color: #fff;
-    border-bottom: size(2) solid #C9A063;
+  //  border-bottom: size(2) solid #C9A063;
     width: size(172);
-    margin: 0 auto;
-    margin-bottom: size(50) !important;
+    margin:  1.5em auto  1.1em auto;
+  //  margin-bottom: size(50) !important;
   }
 
   .order-title-img {
@@ -179,13 +172,13 @@
   }
 
   .send {
-    font-size: size(22);
+    font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    background-color: #C29267;
-    width: size(318);
-    height: size(72.75);
+    color: #9B1E44;
+    background-color: #FFF;
+    width: 308px;
+    height:3.3em;
     line-height: 3.3;
     border: 0;
     border-radius: 0;
@@ -203,7 +196,6 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    background-image: url('@/section/form/bgm.jpg');
     min-height: sizem(1564);
     padding-bottom: sizem(0);
     position: relative;
