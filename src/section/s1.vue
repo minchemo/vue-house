@@ -4,10 +4,11 @@
     <img data-aos="fade" class="absolute decor" src="@/section/s1/decor.svg" alt="心仝聚" srcset="">
     <img data-aos="zoom-in" data-aos-delay="200" class="absolute logo" src="@/section/s1/logo.svg"
       alt="心仝聚" srcset="">
-    <div data-aos="fade"
+    <!--div data-aos="fade"
       class="mo-text absolute font-['Noto_Serif_JP'] font-medium">
       北士科首排 百年大稻埕家族誠獻
-    </div>
+    </div-->
+    <img data-aos="fade" class="titleimg absolute" src="@/section/s1/title.svg" alt="心仝聚" srcset="">
     <img v-if="$isMobile()" class="arrow-down" src="@/section/s1/arrow_down.png" alt="心仝聚" srcset=""  @click="scrollTo('#s3')">
   </div>
 </template>
@@ -60,6 +61,11 @@
       text-align: left;
       z-index: 2;
     }
+    .titleimg{
+      width: size(550);
+      left: size(270);
+      bottom: size(120);
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -100,6 +106,13 @@
       font-size: size-m(20);
       text-align: center;
       top:calc(50% + (440 - 604 * .5) * 100vw / 375);
+    }
+
+    .titleimg{
+      width: size-m(230);
+      left: 50%;
+      margin-left: -#{size-m(148)};
+      bottom: size-m(200);
     }
 
     .arrow-down {

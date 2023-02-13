@@ -18,6 +18,9 @@
             <span v-bind:class="{ selected: currentIdx == 3 }">2016 花沺藏</span>
             <span>2014 景上河</span>
             <span>2011 索蘭朵</span>
+            <span>2011 索蘭朵</span>
+            <span>2011 索蘭朵</span>
+            <span>2011 索蘭朵</span>
           </div>
           <img class="absolute icon" data-aos-delay="400" src="@/section/s5/icon.png" alt="心仝聚"
             srcset="">
@@ -98,7 +101,7 @@
         font-weight: 400;
         line-height: 150%;
         letter-spacing: 0.2em;
-        margin-bottom: size(140);
+        margin-bottom: size(100);
         text-align: justify;
       }
 
@@ -110,7 +113,7 @@
           letter-spacing: 0.2em;
           display: inline-block;
           color: #fff;
-          margin-bottom: size(20);
+          margin-bottom: size(15);
 
           &.selected {
             &::after {
@@ -155,8 +158,8 @@
       }
 
       .icon {
-        width: size(120);
-        bottom: size(450);
+        width: size(100);
+        bottom: size(520);
         right: size(70);
       }
     }
@@ -321,9 +324,9 @@
         }
 
         .icon {
-          width: size-m(90);
-          bottom: size-m(270);
-          right: size-m(60);
+          width: size-m(70);
+          bottom: size-m(320);
+          right: size-m(170);
         }
       }
     }
@@ -390,6 +393,15 @@ const imgs = ref([
   },
   {
     img: globals.$isMobile() ? new URL("../section/s5/4_m.jpg", import.meta.url).href : new URL("../section/s5/4.jpg", import.meta.url).href,
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s5/5_m.jpg", import.meta.url).href : new URL("../section/s5/5.jpg", import.meta.url).href,
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s5/6_m.jpg", import.meta.url).href : new URL("../section/s5/6.jpg", import.meta.url).href,
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s5/7_m.jpg", import.meta.url).href : new URL("../section/s5/7.jpg", import.meta.url).href,
   },
 ])
 </script>
