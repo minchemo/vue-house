@@ -49,7 +49,7 @@
     }
 
     .slide {
-      width: size(480);
+      width: size(381);
       height: size(1080);
       position: relative;
 
@@ -81,14 +81,14 @@
 
         .t1 {
           position: relative;
-          font-size: size(40);
+          font-size: size(30);
           color: #F6B39A;
           z-index: 1;
         }
 
         .t2 {
           position: relative;
-          font-size: size(20);
+          font-size: size(16);
           color: #fff;
           line-height: 150%;
           letter-spacing: 0.2em;
@@ -323,28 +323,34 @@ const move = (newIdx, prevIdx, destIdx) => {
 
 const imgs = ref([
   {
-    img: new URL("../section/s13/1.jpg", import.meta.url).href,
+    img: new URL("../section/s13/1n.jpg", import.meta.url).href,
     icon: new URL("../section/s13/1i.png", import.meta.url).href,
     t1: '黃烱祥建築師',
     t2: '於建築設計中 凝鍊生活之美'
   },
   {
-    img: new URL("../section/s13/2.jpg", import.meta.url).href,
+    img: new URL("../section/s13/2n.jpg", import.meta.url).href,
     icon: new URL("../section/s13/2i.png", import.meta.url).href,
     t1: '景觀鄭如珊設計師',
     t2: '綠影扶疏 雍容大度的城市花園'
   },
   {
-    img: new URL("../section/s13/3.jpg", import.meta.url).href,
+    img: new URL("../section/s13/3n.jpg", import.meta.url).href,
     icon: new URL("../section/s13/3i.png", import.meta.url).href,
     t1: '公設張祐銓設計師',
     t2: '打破框架 融匯建築與設計的精湛技藝'
   },
   {
-    img: new URL("../section/s13/4.jpg", import.meta.url).href,
+    img: new URL("../section/s13/4n.jpg", import.meta.url).href,
     icon: new URL("../section/s13/4i.png", import.meta.url).href,
     t1: '燈光羅伊真設計師',
     t2: '光影雕塑家 以流光襯映建築之美'
+  },
+  {
+    img: new URL("../section/s13/5n.jpg", import.meta.url).href,
+    icon: new URL("../section/s13/5i.png", import.meta.url).href,
+    t1: '營造 建國工程',
+    t2: '國家公共建設同級高標 打造穩固家苑'
   },
 ])
 </script>

@@ -10,7 +10,7 @@
           <div class="t3 font-['Noto_Serif_TC']" data-aos-delay="400">大稻埕，承載百年歷史風華，不同族群、產業、文化共存，擁有深厚人文藝術底蘊，是隆遠品牌的發跡之地。<br><br>
             復古中藏有新穎，鄰里間互助相親，情感真摯敦厚，自幼生長於大稻埕的莊子華董事長，盼將這樣藝文薰陶、生意盎然、暖意環繞的生活氛圍，透過建築，忠實再現。
           </div>
-          <div class="t4 flex flex-col items-center justify-center" data-aos-delay="400">
+          <div class="t4 flex flex-col items-start justify-center" data-aos-delay="400">
             <span v-bind:class="{ selected: currentIdx == 1 }">2021 光里蘊</span>
             <span v-bind:class="{ selected: currentIdx == 2 }">2021 山沺藏</span>
             <span>2017 富樂恬</span>
@@ -18,9 +18,9 @@
             <span v-bind:class="{ selected: currentIdx == 3 }">2016 花沺藏</span>
             <span>2014 景上河</span>
             <span>2011 索蘭朵</span>
-            <span>2011 索蘭朵</span>
-            <span>2011 索蘭朵</span>
-            <span>2011 索蘭朵</span>
+            <span v-bind:class="{ selected: currentIdx == 4 }">2011 芯談美辦公大樓</span>
+            <span v-bind:class="{ selected: currentIdx == 5 }">2011 文德段住宅</span>
+            <span v-bind:class="{ selected: currentIdx == 6 }">2011 隆遠集團企業總部</span>
           </div>
           <img class="absolute icon" data-aos-delay="400" src="@/section/s5/icon.png" alt="心仝聚"
             srcset="">
@@ -288,15 +288,15 @@
 
         .t4 {
           position: absolute;
-          bottom: size-m(70);
-          right: size-m(70);
+          bottom: size-m(50);
+          right: size-m(40);
 
           span {
             position: relative;
-            font-size: size-m(15);
+            font-size: size-m(14);
             letter-spacing: 0;
             display: inline-block;
-            margin-bottom: size-m(5);
+            margin-bottom: size-m(8);
 
             &.selected {
               &::after {
@@ -327,6 +327,7 @@
           width: size-m(70);
           bottom: size-m(320);
           right: size-m(170);
+          display: none;
         }
       }
     }
