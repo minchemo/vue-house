@@ -148,7 +148,7 @@ img{width: 100%;}
 .leaf1{
 width: size(742);
 right:size(455);
-top: size(-242);
+top: calc(10% + (-242 - 1080 * .1) * 100vw / 1920);
 transform: skewX(-3deg);
 transform-origin: 50% -20%;
 img{
@@ -157,7 +157,7 @@ transform: rotate(2.35deg);}
     .leaf2{
 width:size(1174);
 left: size(-480);
-bottom: size(115);
+bottom: calc(20% + (115 - 1080 * .2) * 100vw / 1920);
 transform: skewX(-5deg)rotate(-3deg);
 transform-origin: 50% 57%;
 img{transform: rotate(-165deg);}
@@ -165,7 +165,7 @@ img{transform: rotate(-165deg);}
     .leaf3{
 width:size(1266);
 right: size(-550);
-top:size(-165);
+top: calc(50% + (-165 - 1080 * .5) * 100vw / 1920);
 transform: skewX(4deg)rotate(3deg);
 transform-origin: 40% 60%;
 img{transform: rotate(-165deg);}
@@ -173,7 +173,7 @@ img{transform: rotate(-165deg);}
     .leaf4{
 width:size(1777);
 left: size(-370);
-bottom: size(-690);
+bottom: calc(30% + (-690 - 1080 * .3) * 100vw / 1920);
 transform: skewX(3deg)rotate(-2deg);
 transform-origin: 50% 80%;
 img{transform: rotate(-180deg);}
@@ -181,7 +181,7 @@ img{transform: rotate(-180deg);}
     .leaf5{
 width: size(1528);
 right: size(-1078);
-bottom: size(-80);
+bottom: calc(40% + (-80 - 1080 * .4) * 100vw / 1920);
 transform: skewY(3deg);
 transform-origin: 60% 50%;
 img{
@@ -191,13 +191,13 @@ transform: rotate(2.35deg);}
     @apply absolute;
 width: size(272);
 left: size(30);
-bottom:0;
+bottom: calc(20% + (0 - 1080 * .2) * 100vw / 1920);
 }
     .tree2{
     @apply absolute;
 width: size(315);
 right: size(50);
-top: size(190);
+top: calc(50% + (190 - 1080 * .5) * 100vw / 1920);
 }
 
 
@@ -206,7 +206,7 @@ top: size(190);
   }
 .parrot {
   position: absolute;
-  bottom: size(355);
+  bottom: calc(20% + (355 - 1080 * .2) * 100vw / 1920);
   left: size(170);
   width: size(70);
   .img21 {
@@ -224,7 +224,6 @@ top: size(190);
     transform-origin: 50% 10%;
     animation: an2 2s alternate ease-in-out infinite;
   }
-
   .body {
     position: absolute;
     top: 0;
@@ -303,7 +302,7 @@ top: size(190);
 }
 .parrot2 {
   position: absolute;
-  top:size(200);
+  top: calc(50% + (200 - 1080 * .5) * 100vw / 1920);
   right: size(180);
   width:size(135);
   .body {
@@ -437,20 +436,20 @@ top: size(190);
 }
 .butterfly01 {
   position: absolute;
-  bottom: size(580);
+  bottom: calc(20% + (580 - 1080 * .2) * 100vw / 1920);
   left: size(480);
     transform: scaleX(-1)rotate(36deg);
   width:size(60);}
 .butterfly02 {
   position: absolute;
-  top: size(200);
+  top: calc(20% + (200 - 1080 * .2) * 100vw / 1920);
   right: size(690);
     transform: scaleX(-1)rotate(50deg);
   width:size(40);
 }
 .butterfly03 {
   position: absolute;
-  bottom: size(20);
+  bottom: calc(30% + (20 - 1080 * .3) * 100vw / 1920);
   right: size(780);
   transform:rotate(55deg);
   width:size(100);
