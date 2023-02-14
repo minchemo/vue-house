@@ -1,4 +1,4 @@
-const caseName = "國家公園"
+const caseName = "天匯"
 
 export default {
     meta: {
@@ -6,12 +6,14 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "000",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1676267204564!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/zRKnGvVQGw5gjjz46",
+    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
+    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
+    address: "台北市北投區石牌路一段78號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.6525793724454!2d121.50936295112116!3d25.113619241168976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aef2864a6435%3A0x52dfa1a2bbe043c6!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A55-z54mM6Lev5LiA5q61NzjomZ8!5e0!3m2!1szh-TW!2stw!4v1676339156687!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/CFH3GM7NMu3tEhaq9",
     phone: "02-2992 9888",
-    fbLink: "https://www.facebook.com//",
-    fbMessage: "https://m.me//",
+    fbLink: "https://www.facebook.com/100089072507974/",
+    fbMessage: "https://m.me/100089072507974/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "建泰工藝"],
@@ -23,9 +25,10 @@ export default {
         ["證照號碼", "(112)雲縣地字000229號"],
         ["經紀人", "廖哲志"],
     ],
-    gtmCode: ["GTM-MQRTZPS","GTM-M87MK5M"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
-    // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
+    gtmCode: ["GTM-TXVTMLB"], // 可放置多個
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
