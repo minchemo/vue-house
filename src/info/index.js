@@ -9,7 +9,7 @@ export default {
     address: "桃園市中壢區青埔路二段與致遠一路 路口",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14463.127327604336!2d121.20687127012069!3d25.007528214378308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x878c938fe3fbdf64!2zMjXCsDAwJzI3LjEiTiAxMjHCsDEyJzU2LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1670996719762!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/VpkNuDJwAXiaDPkj6",
-    phone: "03-381-0499",
+    phone: "03-352-6888",
     fbLink: "https://www.facebook.com/100088405815922",
     fbMessage: "https://m.me/100088405815922",
     caseName: caseName,
