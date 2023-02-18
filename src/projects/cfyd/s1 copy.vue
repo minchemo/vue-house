@@ -1,11 +1,12 @@
 <template>
   <div class="s1">
 
-<div data-aos="fade">
-<img src="./s1/bg.jpg" class="bg-img" alt="" loading="lazy">
+<div  data-aos="fade">
+<img src="./s1/bg.png" v-if="!isMobile" class="bg-img" alt="" loading="lazy">
+<img src="./s1/bgm.png" v-else class="bg-img" alt="" loading="lazy">
 </div>
-<!-- <img src="./s1/en.png" class="en" alt="" loading="lazy"> -->
-<img src="./s1/style2.png" data-aos="fade-right" class="style1" alt="" loading="lazy">
+<img src="./s1/en.png" class="en" alt="" loading="lazy">
+<img src="./s1/style1.png" class="style1" alt="" loading="lazy">
 <img src="./s1/synlogo.png" class="synlogo" alt="" loading="lazy">
 
     <div class="title">
@@ -13,7 +14,7 @@
         v-if="!isMobile"
         class="t1"
         data-aos="flip-up"
-        src="@/projects/cfyd/s1/t3.svg"
+        src="@/projects/cfyd/s1/t1.svg"
         alt=""
         srcset=""
       />
@@ -21,7 +22,7 @@
         v-else
         class="t1"
         data-aos="flip-up"
-        src="@/projects/cfyd/s1/t3_m.svg"
+        src="@/projects/cfyd/s1/t1_m.svg"
         alt=""
         srcset=""
       />
@@ -36,33 +37,31 @@
   position: relative;
   width: size(1920);
   height: size(1080);
-  background:#210104;// url("./s1/2.jpg");
-  // background-size: cover;
-  overflow: hidden;
+  background:linear-gradient(to right, #0e79dc, #0e79dc);
   
 
       .bg-img{
       position: absolute;
-      width:size(2280);
+      width:size(1920);
       height:auto;
-      left:size(-180);
-      bottom:size(0);
+      left:size(0);
+      bottom:0;
       z-index: 0;
-      transform:skewX(7deg);
-      transform-origin: 100% 26%;
-      animation: anx 3s linear infinite alternate;
+      transform:skewY(3deg);
+      transform-origin: 50% 100%;
+      animation: anx 3s ease-in-out infinite alternate;
     }
     @keyframes anx{
       to {
-        transform:skewX(-3deg);
+        transform:skewY(-3deg);
       }
     }
 
   .style1{
     position: absolute;
-    width:size(655);
-    bottom:size(-18);
-    right: size(-100);
+    width:size(1200);
+    bottom:0;
+    right: size(-200);
   }  
 
   .en{
@@ -75,7 +74,7 @@
 
 .synlogo{
   position: absolute;
-  width: size(200);
+  width: size(350);
   filter: drop-shadow(0em 0em 0.2em rgba(25, 40, 127, 1));
   left: size(30);
   top: size(30);
@@ -92,9 +91,9 @@
 
 
     .t1 {
-    width: 55%;
+    width: 65%;
+    -webkit-filter: drop-shadow(0em 0em 0.2em rgba(9, 20, 58, 0.6));
     filter: drop-shadow(0em 0em 0.8em rgba(9, 20, 58, 0.6));
-    margin: 0 auto 5% auto;
     }
 
     .t2 {
@@ -117,15 +116,11 @@
     z-index: 12;
 
     .bg-img{
-      bottom:size-m(0);
-      left:size-m(-500);
-    width: size-m(1060);
-      transform-origin: 100% 0%;
+      bottom:size-m(27);
     }
     .style1{
-      width: size-m(269);
-      right:size-m(-45);
-      bottom:size-m(-67);
+      width: size-m(650);
+      right:size-m(-330);
     }
      
     .en{
@@ -134,7 +129,7 @@
     right:size-m(27);
     }
     .synlogo{
-    width: size-m(150);
+    width: size-m(250);
     left:size-m(27);
     top:size-m(27);
     }
@@ -152,8 +147,7 @@
       transform: translateX(50%);
       bottom: size-m(250);
       .t1 {
-        width:86%;
-    margin: 0 auto 30% auto;
+        width: 80%;
       }
       .t2 {
         margin-top: size-m(15);
