@@ -18,9 +18,9 @@
             <span v-bind:class="{ selected: currentIdx == 3 }">2016 花沺藏</span>
             <span>2014 景上河</span>
             <span>2011 索蘭朵</span>
-            <span v-bind:class="{ selected: currentIdx == 4 }">2011 芯談美辦公大樓</span>
+            <!--span v-bind:class="{ selected: currentIdx == 4 }">2011 芯談美辦公大樓</span>
             <span v-bind:class="{ selected: currentIdx == 5 }">2011 文德段住宅</span>
-            <span v-bind:class="{ selected: currentIdx == 6 }">2011 隆遠集團企業總部</span>
+            <span v-bind:class="{ selected: currentIdx == 6 }">2011 隆遠集團企業總部</span-->
           </div>
           <img class="absolute icon" data-aos-delay="400" src="@/section/s5/icon.png" alt="心仝聚"
             srcset="">
@@ -161,6 +161,7 @@
         width: size(100);
         bottom: size(520);
         right: size(70);
+        display: none;
       }
     }
   }
