@@ -1,5 +1,6 @@
 <template>
   <article class="s1">
+    <img class="i0" src="./s1/pc.jpg" alt="">
     <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
     <img class="t1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800" src="@/section/s1/t1.svg" alt="" srcset="">
     <img v-if="!$isMobile()" class="bird" src="@/section/s1/bird.png" alt="" srcset="">
@@ -13,12 +14,15 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-  @apply relative overflow-hidden w-full h-screen bg-[#2B4D39];
+  @apply relative overflow-hidden w-full h-screen bg-[#CFD9D0];
   min-height: size(900);
   max-height: size(1080);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  .i0{position: absolute;top: 0;left: 0;width: 100%;
+  opacity: .5;
+  }
 
   .logo {
     width: size(563.58);
