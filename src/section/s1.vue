@@ -1,12 +1,15 @@
 <template>
   <article class="s1">
     <img class="i0" src="./s1/pc.jpg" alt="">
+    <div class="txt">
     <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
-    <img class="t1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800" src="@/section/s1/t1.svg" alt="" srcset="">
-    <img v-if="!$isMobile()" class="bird" src="@/section/s1/bird.png" alt="" srcset="">
-    <img v-else class="bird" src="@/section/s1/bird_m.png" alt="" srcset="">
-    <img v-if="!$isMobile()" class="tree" src="@/section/s1/tree.png" alt="" srcset="">
-    <img v-else class="tree" src="@/section/s1/tree_m.png" alt="" srcset="">
+    <div class="t1">十足天地  十足人生
+</div>
+    <div class="t2">｜5MINS梅花湖｜60-65坪｜太陽能電梯別墅｜</div>
+    <div class="t3">搶先預約</div>
+</div>
+
+
   </article>
 </template>
 
@@ -23,14 +26,40 @@
   .i0{position: absolute;top: 0;left: 0;width: 100%;
   opacity: .5;
   }
+  .txt {
+    @apply absolute;
+    right:size(110);
+    top: size(480);
+font-weight: 700;
+font-size:size(26);
+text-align: center;
+  }
 
   .logo {
-    width: size(563.58);
-    margin-bottom: size(91.92)
+    width: size(229);
+    margin-bottom: .7em;
   }
   .t1 {
-    width: size(421.95);
-    margin-bottom: size(134.82)
+color: #4B6730;
+font-weight: 900;
+font-size:2em;
+letter-spacing: 0.165em;
+  }
+  .t3 {
+color: #4B6730;
+font-size:1.85em;
+font-weight: 500;
+letter-spacing: 0.66em;
+    margin-top: 1.5em;
+    &::after,&::before{
+      content: "";
+      width: 2em;
+      height: 2px;
+      margin: 0 0.33em 0 -0.33em;
+      background: currentColor;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
   .bird {
     @apply absolute;
