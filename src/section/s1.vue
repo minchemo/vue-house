@@ -1,12 +1,13 @@
 <template>
   <article class="s1">
-    <img class="i0" src="./s1/pc.jpg" alt="">
+    <!-- 
+    <img class="i0" src="./s1/mo.jpg" alt=""> -->
+    <img class="chunfulogo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600" src="./s1/chunfulogo.svg" alt="" srcset="">
+    <img class="img" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600" src="./s1/img.png" alt="" srcset="">
     <div class="txt">
-    <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
-    <div class="t1">十足天地  十足人生
-</div>
-    <div class="t2">｜5MINS梅花湖｜60-65坪｜太陽能電梯別墅｜</div>
-    <div class="t3">搶先預約</div>
+    <img class="logo" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0" src="./s1/opening.svg" alt="" srcset=""><br />
+    <img class="t1" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200" src="./s1/t1.svg" alt="" srcset="">
+    <div class="t2" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400" >永康國際雙語特區｜<span>2-3</span>房</div>
 </div>
 
 
@@ -17,67 +18,51 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-  @apply relative overflow-hidden w-full h-screen bg-[#CFD9D0];
+  @apply relative w-full h-screen ;
   min-height: size(900);
   max-height: size(1080);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   .i0{position: absolute;top: 0;left: 0;width: 100%;
-  opacity: .5;
+  opacity: .5;z-index: 2
+  }
+  .chunfulogo {
+    @apply absolute;
+    top: size(20);
+    left: size(20);
+    height: size(50);
+  }
+  .img {
+    @apply absolute;
+    bottom: size(15);
+    right: 0;
+    height: size(229);
+    transform-origin: 100% 100%
   }
   .txt {
-    @apply absolute;
-    right:size(110);
-    top: size(480);
-font-weight: 700;
-font-size:size(26);
+    @apply relative;
+font-weight: 400;
+font-size:size(37);
 text-align: center;
+color: #FFF;
+margin-bottom: 1.8em;
+line-height: 1.6;
   }
 
   .logo {
-    width: size(229);
-    margin-bottom: .7em;
+    width: size(434);margin-left: 1em;
   }
   .t1 {
-color: #4B6730;
-font-weight: 900;
-font-size:2em;
-letter-spacing: 0.165em;
+    width: size(712);
+    margin: -.5em auto 1em auto;
   }
-  .t3 {
-color: #4B6730;
-font-size:1.85em;
-font-weight: 500;
-letter-spacing: 0.66em;
-    margin-top: 1.5em;
-    &::after,&::before{
-      content: "";
-      width: 2em;
-      height: 2px;
-      margin: 0 0.33em 0 -0.33em;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
+  .t2 {
+    span{
+      
+font-weight: 700;
+font-size:1.1em;
     }
-  }
-  .bird {
-    @apply absolute;
-    width: size(505.45);
-    left: size(813.36);
-    bottom: size(191.55);
-    animation: fly 5s linear infinite alternate-reverse;  
-    transform: rotate(0);
-
-    @keyframes fly {
-      to {
-        transform:translateY(-20%)scale(1.2)rotate(-10deg);
-
-      }
-    }
-  }
-  .tree {
-    width: size(1013.92);
   }
 }
   
@@ -88,27 +73,32 @@ letter-spacing: 0.66em;
 @media screen and (max-width: 767px) {
 
   .s1 {
-    min-height: sizem(604);
-    max-height: sizem(604);
+    min-height: sizem(667);
+    max-height: sizem(812);
+  .chunfulogo {
+    top: sizem(20);
+    left: sizem(20);
+    height: sizem(25);
+  }
+  .img {
+    bottom: sizem(75);
+    right:sizem(-25);
+    height: sizem(69);
+  }
+  .txt {
+font-size:sizem(21);
+margin-bottom: 2.8em;
+}
 
   .logo {
-    width: sizem(207.78);
-    margin-bottom: sizem(37.08)
+    width: sizem(188);
   }
   .t1 {
-    width: sizem(155.56);
-    margin-bottom: sizem(97.23)
-  }
-  .bird {
-    @apply absolute;
-    width: sizem(320.22);
-    left: sizem(31.28);
-    bottom: sizem(122.5);
-  }
-  .tree {
-    width: 100%;
+    width: sizem(310);
+    margin: -.3em auto 1.1em auto;
   }
   }
+  
 }
 </style>
 <script setup>

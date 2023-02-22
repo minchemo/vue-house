@@ -1,16 +1,17 @@
 <template>
-  <div id="order" class="order relative bg-[#F1E6D6] text-center">
-    <div class="order-section font-['noto_sans_tc']">
+  <div id="order" class="order relative text-center">
+    <div class="order-section">
       <!-- Title -->
-      <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
+      <div class="order-title text-center font-['noto_serif_tc']" v-html="info.order.title"></div>
+      <!--  -->
       <!-- <div class="cus-divider"></div> -->
 
-      <!-- Title Image -->
+      <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
-
-      <!-- Custom Image -->
+ -->
+      <!-- Custom Image
       <img class="bird" src="@/section/form/bird.png" alt="" srcset="">
-
+ -->
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
@@ -50,7 +51,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFFF00] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -70,7 +71,7 @@
 
 
     <!-- Map -->
-    <Map />
+    <Map v-if="info.address" />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -82,14 +83,14 @@
 
 
 .order-section {
-  background-image: url('@/section/form/bg.jpg');
+ // background-image: url('@/section/form/bg.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   // padding-bottom: size(90);
   position: relative;
-  min-height: size(1924);
-  padding-top: size(406);
+  min-height: size(900);
+ // padding-top: size(406);
   // overflow: hidden;
 
   .bg-image {
@@ -105,39 +106,12 @@
 .order {
   width: 100%;
   padding-top: size(0);
-
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
-
   .order-title {
     font-size: size(40);
     font-weight: 700;
     color: #fff;
-    border-bottom: size(2) solid #C9A063;
-    width: size(172);
-    margin: 0 auto;
-    margin-bottom: size(50) !important;
-  }
-
-  .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
+    margin: 2em auto 1em auto;
+   // border-bottom: size(2) solid #C9A063;
   }
 
   .cus-divider {
@@ -182,13 +156,13 @@
     font-size: size(22);
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    background-color: #C29267;
+    color: #000;
+    background-color: #BBAD90;
     width: size(318);
     height: size(72.75);
     line-height: 3.3;
     border: 0;
-    border-radius: 0;
+    border-radius: .5em;
     z-index: 10;
     font-weight: 400;
     position: relative;
@@ -203,12 +177,12 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    background-image: url('@/section/form/bgm.jpg');
-    min-height: sizem(1564);
+   // background-image: url('@/section/form/bgm.jpg');
+    min-height: sizem(900);
     padding-bottom: sizem(0);
     position: relative;
     // overflow: hidden;
-    padding-top: sizem(200);
+    // padding-top: sizem(200);
 
     .bg-image {
       position: absolute;
@@ -229,13 +203,6 @@
     .order-title-img {
       width: sizem(315);
       margin-bottom: sizem(22);
-    }
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
     }
 
     .cus-divider {

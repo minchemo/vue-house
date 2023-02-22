@@ -3,25 +3,25 @@
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="蒔築" srcset="" />
+        <img src="@/section/form/phone.svg" alt="春福開緒" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="蒔築" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="春福開緒" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="蒔築" srcset="" />
+        <img src="@/section/form/fb.svg" alt="春福開緒" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="flex justify-between w-full contact-item-box no-gap">
+    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
         <div>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="蒔築" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="春福開緒" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -33,21 +33,21 @@
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="蒔築" srcset="" />
+      <img src="@/section/form/phone.svg" alt="春福開緒" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="蒔築" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="春福開緒" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="蒔築" srcset="" />
+      <img src="@/section/form/pen.svg" alt="春福開緒" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="蒔築" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="春福開緒" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -58,9 +58,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="蒔築" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="蒔築" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="蒔築" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="春福開緒" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="春福開緒" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="春福開緒" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
       '接待會館'
@@ -100,15 +100,16 @@
 
 .contact-info {
  // width: size(1200);
-  // border-radius: size(115);
+   border-radius: size(30);
   padding: size(55) size(0) size(55) size(0);
-    width: size(920);
+    width: size(1220);
     min-width: 680px;
- // padding: size(55) size(168) size(55) size(168);
+  padding: size(55) size(150) size(55) size(150);
   margin-top: sizem(10);
   position: relative;
   z-index: 50;
-  margin-bottom: 0;
+  margin-bottom: size(30);
+    background-color: #0002;
 
   .logo {
     width: size(367);
@@ -126,8 +127,9 @@
     gap: size(20);
 
     .contact-item {
-      background-color: rgba(255,255,255,0.2);
-      color: #fff;
+    background-color: #BBAD90;
+    border-radius: .7em;
+      color: #000;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -139,15 +141,15 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      border: 1px solid #C29267;
+      // border: 1px solid #968A75;
       gap: 1em;
 
       &:hover {
-        background-color: #C29267;
-        color: #fff;
+        background-color: #968A75;
+       // color: #fff;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
       }
 
@@ -155,7 +157,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
         transition: all .5s;
         margin: 0;
       }
@@ -166,6 +168,7 @@
         z-index: 0;
         position: relative;
         flex:2.17;
+        margin:0 -1em 0 0;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
@@ -184,17 +187,16 @@
 
       &.googlemap {
         flex:1;
-      background-color: rgba(255,255,255,0.2);
+      background-color:#BBAD90;
       border-left-width: 0;
-        color: #fff;
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
 
         &:hover {
-        background-color: #C29267;
-          color: #fff;
+        background-color: #968A75;
         }
       }
     }
@@ -217,28 +219,29 @@
 
     .contact-item {
       height: 100%;
-      background-color: #C9A063;
+      background-color: #BBAD90;
       font-size: sizem(16);
       font-weight: 400;
-      color: #fff;
+      color: #000;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
       }
 
     }
   }
 
   .contact-info {
-      width: sizem(310);
+    //  width: sizem(310);
+    width: 100%;
     min-width:0;
-    height: sizem(400);
+   // height: sizem(400);
     // border-radius: sizem(68);
-    padding: sizem(50) sizem(0);
+    padding: sizem(50) sizem(32);
     margin-top: sizem(60);
     position: relative;
     justify-content: space-between;
@@ -261,7 +264,7 @@
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
-          border-radius: sizem(0);
+      //    border-radius: sizem(0);
 
         img {
           max-width: sizem(27);
@@ -271,9 +274,9 @@
         }
 
         &.address {
-          border-radius: sizem(0) sizem(0) 0 0;
-          padding: 1.1em 0;
-          margin-top: sizem(20);
+        //  border-radius: sizem(0) sizem(0) 0 0;
+          padding: 1.1em 0 1.9em 0;
+        margin:sizem(20) 0 -1em 0;
 
           &::before {
             width: 100%;
@@ -284,11 +287,11 @@
         }
 
         &.address+div {
-          border-radius: 0 0 sizem(0) sizem(0);
+      //    border-radius: 0 0 sizem(0) sizem(0);
         }
       &.googlemap {
         border-top-width: 0;
-      border-left-width: 2px;
+    //  border-left-width: 2px;
       }
       }
 
