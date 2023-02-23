@@ -22,6 +22,7 @@ if (count($dataList) > 0) :
     <meta property="og:title" content="<?php echo $docTitle; ?>" />
     <meta property="og:description" content="<?php echo $docDesc ?>" />
     <meta property="og:site_name" content="<?php echo $siteName; ?>" />
+    <meta property="og:image" content="https://<?php echo $_SERVER['SERVER_NAME']; ?>/og.jpg" />
     <meta name="twitter:description" content="<?php echo $docDesc ?>" />
     <meta name="twitter:title" content="<?php echo $docTitle; ?>" />
     <meta itemprop="name" content="<?php echo $docTitle; ?>" />
@@ -30,3 +31,4 @@ if (count($dataList) > 0) :
         <meta name='facebook-domain-verification' content="<?php echo $fbDomain ?>" />
     <?php endif; ?>
 <?php endif; ?>
+
