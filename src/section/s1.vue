@@ -1,8 +1,15 @@
 <template>
   <article class="s1">
-    <img class="i0" src="./s1/pc.jpg" alt="">
+    <!--  --><img class="i0" src="./s1/pc.jpg" alt="">
+    <div class="sakura">
+    <div class="sakura3">
+    <img src="./s1/sakura3.png" alt="">
+</div>
+    <img class="sakura2" src="./s1/sakura2.png" alt="">
+    <img class="sakura1" src="./s1/sakura1.png" alt="">
+</div>
     <div class="txt">
-    <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
+      <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
     <div class="t1">十足天地  十足人生
 </div>
     <div class="t2">｜5MINS梅花湖｜60-65坪｜太陽能電梯別墅｜</div>
@@ -13,18 +20,81 @@
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped>  
 @import '@/assets/style/function.scss';
 
 .s1 {
-  @apply relative overflow-hidden w-full h-screen bg-[#CFD9D0];
+  @apply relative w-full h-screen bg-[#CFD9D0];
   min-height: size(900);
   max-height: size(1080);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-image:url("./s1/bg.png");
+  background-size: cover;
+  background-position: 50% 50%;
   .i0{position: absolute;top: 0;left: 0;width: 100%;
-  opacity: .5;
+  opacity: .5;z-index: 3;
+  }
+  @keyframes sakura {
+      to {
+        transform:translateY(0);
+
+      }
+    }
+  .sakura {
+    @apply absolute;
+    top: 0;
+    right: 0;
+    width: size(605);
+    .sakura1{
+    @apply relative;
+    width:100%;
+    right: 37%;
+    top: 0%;
+    transform:skewX(-6deg);
+    transform-origin: 50% 0;
+    animation: sakura 2s ease-in-out infinite alternate; 
+  }
+    .sakura2{
+    @apply absolute;
+    width: 48%;
+    right: 0%;
+    top: 30%;
+    transform:rotate(3deg)skewY(3deg);
+    transform-origin: 100% 100%;
+    animation: sakura 2s ease-in-out infinite alternate-reverse; 
+  }
+    .sakura3{
+    @apply absolute;
+    width: 0%;
+    height: auto;
+    right: 9.5%;
+    top: 120%;
+    border-radius: 0 0 0 100%;
+    animation: sakura3 8s  infinite; 
+        opacity: 1;
+    overflow: hidden;
+    img{float: right;
+    width: size(417);}
+  }
+  @keyframes sakura3 {
+      75% {
+    width: 100%;
+    border-radius: 0 0 0 0%;
+        opacity: 1;
+
+      }
+      80% {
+    width: 100%;
+        opacity: 0;
+    border-radius: 0 100% 0 0%;}
+      100% {
+    width: 100%;
+        opacity: 0;
+    border-radius: 0 100% 0 0%;
+      }
+    }
   }
   .txt {
     @apply absolute;

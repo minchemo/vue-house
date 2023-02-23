@@ -1,14 +1,15 @@
 <template>
   <article class="s2">
-    <div class="txt">
-      <div class="t1" data-aos="fade-down">綠海擁恆 國家唯1</div>
-      <div class="t2" data-aos="fade-down" data-aos-delay="200">第<span class="t-one">1</span>排 <span class="t-three">3</span>萬坪森林公園首排<br />
-        第<span class="t-one">1</span>等 國際級建材豪規配置<br />
-        不<span class="t-one">1</span>樣 品牌結盟新生活型態</div>
+    <div class="bg">
+      <img data-aos="fade-down" data-aos-delay="200" src="./s2/bg.jpg" alt="" srcset="" />
     </div>
-    <img data-aos="fade-down" data-aos-delay="200" src="@/section/s2/logo.png" class="logo" alt="" srcset="">
-    <img v-if="!$isMobile()" src="@/section/s2/1.png" class="one" alt="" srcset="">
-    <img v-else src="@/section/s2/1_m.png" class="one" alt="" srcset="">
+    
+    <div class="txt">    
+      <div class="t1" data-aos="fade-down">如果 可以選擇</div>
+      <div class="l" data-aos="fade-down" data-aos-delay="200"></div>
+      <div class="t2" data-aos="fade-down" data-aos-delay="400">The Best Choice ‧ New Second Life</div>
+      <div class="t3" data-aos="fade-down" data-aos-delay="600">晴耕雨讀 田園詩夢</div>
+    </div>
   </article>
 </template>
 
@@ -17,49 +18,36 @@
 
 .s2 {
   @apply relative overflow-hidden w-full bg-[#2B4D39];
-  height: size(1080);
-  background-image: url('@/section/s2/bg.jpg');
+ height: size(2000);
   background-size: cover;
   background-position: left top ;
+  .bg{ @apply absolute;
+    height: 100%;
+    img{@apply absolute;bottom: 0;left: 0;}
+  }
   .txt {
-    @apply absolute;
-    z-index: 1;
+  @apply relative;z-index: 2;
+    text-align: center;
     color: #fff;
-    left: size(865.46);
-    bottom: size(238.36);
+      line-height: 1.5;
+      font-size: size(32);
+      font-weight: 400;
+letter-spacing: 0.1em;
+text-indent: 0.1em;
     .t1 {
-      font-family: 'Noto Serif TC';
-      font-weight: 700;
-      font-size: size(42);
+      font-size:2em;
       line-height: size(60);
-      letter-spacing: 0.1em;
     }
+    .l{width: 1px; height: 2em;background: currentColor;margin: auto;}
     .t2 {
       font-weight: 400;
-      font-size: size(24);
-      line-height: 150%;
-      letter-spacing: 0.1em;
-      .t-one{
-        font-size: size(36);
-        line-height: size(54);
-      }
-      .t-three{
-        font-size: size(28);
-        line-height: size(42);
-      }
+letter-spacing: 0.71em;
+      color: #DFDDC8;
+text-indent: 0.71em;
     }
-  }
-  .logo {
-    @apply absolute;
-    width: size(150);
-    top: size(50);
-    left: size(53);
-  }
-  .one {
-    @apply absolute;
-    width: size(871.57);
-    top: 0;
-    left: size(331.05);
+    .t3 {
+      font-size:1.56em;
+    }
   }
 }
   
