@@ -2,15 +2,15 @@
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="長耀加" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="長耀加" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="長耀加" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
@@ -19,7 +19,7 @@
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item justify-center items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="長耀加" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -229,7 +229,7 @@
     width: sizem(375);
     height: auto;
     // border-radius: sizem(68);
-    padding: sizem(50) sizem(15);
+    padding: sizem(50) sizem(30);
     margin-top: sizem(60);
     position: relative;
     justify-content: flex-start;
@@ -249,7 +249,7 @@
 
       .contact-item {
         padding: 0 sizem(80);
-        font-size: sizem(16);
+        font-size: sizem(14);
         max-width: 100%;
         white-space: nowrap;
           border-radius: sizem(10);
@@ -259,12 +259,14 @@
           height: auto;
           max-height: sizem(27);
           margin: unset;
+          margin-right:sizem(10);
         }
 
         &.address {
           border-radius: sizem(10) sizem(10) 0 0;
           padding: 0 0;
           margin-top: sizem(20);
+          font-size: sizem(13);
 
           &::before {
             width: 100%;

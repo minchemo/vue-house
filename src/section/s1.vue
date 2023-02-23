@@ -1,10 +1,10 @@
 <template>
   <article class="s1">
-    <img class="leaf l" v-if="!$isMobile()" src="@/section/s1/leaf_l.png" alt="" srcset="">
-    <img class="leaf r" v-if="!$isMobile()" src="@/section/s1/leaf_r.png" alt="" srcset="">
-    <img class="leaf mb" v-if="$isMobile()" src="@/section/s1/leaf_mb.png" alt="" srcset="">
-    <img class="leaf b" v-if="!$isMobile()" src="@/section/s1/leaf_b.png" alt="" srcset="">
-    <img class="leaf b" v-else src="@/section/s1/leaf_b_m.png" alt="" srcset="">
+    <img class="leaf l" v-if="!$isMobile()" src="@/section/s1/leaf_l.webp" alt="" srcset="">
+    <img class="leaf r" v-if="!$isMobile()" src="@/section/s1/leaf_r.webp" alt="" srcset="">
+    <img class="leaf mb" v-if="$isMobile()" src="@/section/s1/leaf_mb.webp" alt="" srcset="">
+    <img class="leaf b" v-if="!$isMobile()" src="@/section/s1/leaf_b.webp" alt="" srcset="">
+    <img class="leaf b" v-else src="@/section/s1/leaf_b_m.webp" alt="" srcset="">
     <div class="main">
       <img data-aos="fade-up" src="@/section/s1/logo.svg" class="logo" alt="" srcset="">
       <p data-aos="fade-up" data-aos-delay="200" class="t1">轉身繁華 衷於回家</p>
@@ -15,8 +15,8 @@
         <img src="@/section/s1/line.svg" alt="" srcset="">
       </div>
       <img data-aos="fade-up" data-aos-delay="800" v-if="!$isMobile()" class="order-btn" src="@/section/s1/order-btn.svg" alt="" srcset="" @click="scrollTo('.order')">
-      <img data-aos="fade-up" data-aos-delay="1000" class="logo2" src="@/section/s1/logo2.png" alt="" srcset="">
-      <img data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.png" alt=""
+      <img data-aos="fade-up" data-aos-delay="1000" class="logo2" src="@/section/s1/logo2.webp" alt="" srcset="">
+      <img data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.webp" alt=""
         srcset="">
     </div>
   </article>
@@ -33,7 +33,7 @@
   position: relative;
   overflow: hidden;
   background-size: cover;
-  background-image: url('@/section/s1/bg.jpg');
+  background-image: url('@/section/s1/bg.webp');
 
   .leaf {
     @apply select-none pointer-events-none absolute z-10;
@@ -60,6 +60,7 @@
       margin-left: -55%;
       animation: wave2 3s alternate-reverse infinite ease-in-out;
       transform-origin: bottom center;
+      mix-blend-mode: normal;
     }
 
     @keyframes wave {
@@ -77,6 +78,7 @@
   .main {
     @apply absolute w-full flex flex-col items-center text-white;
     bottom: size(155);
+    z-index: 99;
     .leaf-small {
       @apply absolute;
       width: size(69.54);
@@ -104,7 +106,7 @@
         width: size(184.71);
         height: size(76.92);
         background-size: contain;
-        background-image: url('@/section/s1/style.png');
+        background-image: url('@/section/s1/style.webp');
         transform: translateZ(-1px);
         animation: fadeIn 1s forwards;
         animation-delay: 1400ms;
@@ -167,7 +169,7 @@
     min-height: sizem(667);
     max-height: sizem(812);
     overflow: hidden;
-    background-image: url('@/section/s1/bg_mb.jpg');
+    background-image: url('@/section/s1/bg_mb.webp');
     
 
     .leaf {

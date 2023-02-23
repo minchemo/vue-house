@@ -121,6 +121,7 @@
     .t3 {
       font-size: sizem(14);
       line-height: sizem(24);
+      text-align:justify;
 
     }
     }

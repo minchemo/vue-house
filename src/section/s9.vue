@@ -53,6 +53,7 @@
       letter-spacing: 0.05em;
       color: #fff;
       width: size(506);
+      
     }
     }
   }
@@ -109,6 +110,7 @@
       font-size: sizem(14);
       line-height: 170%;
       width: sizem(310);
+      text-align:justify;
     }
     }
   }

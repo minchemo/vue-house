@@ -87,7 +87,7 @@
     background-size:101%;
     background-position: center;
     background-repeat: no-repeat;
-    height: sizem(400);
+    height: sizem(480);
 }
     .footer {
         margin-bottom: sizem(0);
@@ -96,7 +96,6 @@
 
     .info-box {
         width: sizem(313);
-        padding: 0;
 
         .title {
             font-size: sizem(29);
