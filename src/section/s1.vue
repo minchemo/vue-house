@@ -1,20 +1,23 @@
 <template>
   <article class="s1">
-
-    <img src="@/section/s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0" />
-
-    <img src="@/section/s1/gif4.gif" class="gif" data-aos="fade" data-aos-delay="0" />
-    <div class="img">
-      <img src="@/section/s1/1.png" class="img1 tree" />
-      <img src="@/section/s1/2.png" class="img2 tree" />
-      <img src="@/section/s1/2.png" class="img3 tree" />
-      <img src="@/section/s1/3.png" class="img4 tree" />
-      <img src="@/section/s1/boat.png" class="boat" />
-    </div>
-    <div class="txt">
-      <img class="logo" data-aos="fade-up" src="@/section/s1/logo.png" alt="" srcset="">
-      <div class="t1" data-aos="fade-up" data-aos-delay="200">重新定義河岸第一排</div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">竹圍站50米｜11-25坪景觀宅</div>
+    <img class="leaf l" v-if="!$isMobile()" src="@/section/s1/leaf_l.png" alt="" srcset="">
+    <img class="leaf r" v-if="!$isMobile()" src="@/section/s1/leaf_r.png" alt="" srcset="">
+    <img class="leaf mb" v-if="$isMobile()" src="@/section/s1/leaf_mb.png" alt="" srcset="">
+    <img class="leaf b" v-if="!$isMobile()" src="@/section/s1/leaf_b.png" alt="" srcset="">
+    <img class="leaf b" v-else src="@/section/s1/leaf_b_m.png" alt="" srcset="">
+    <div class="main">
+      <img data-aos="fade-up" src="@/section/s1/logo.svg" class="logo" alt="" srcset="">
+      <p data-aos="fade-up" data-aos-delay="200" class="t1">轉身繁華 衷於回家</p>
+      <p data-aos="fade-up" data-aos-delay="400" class="t2">四座公園<span>｜</span>眾樹之靜<span>｜</span>28-47坪</p>
+      <div data-aos="fade-up" data-aos-delay="600" class="t3">
+        <img src="@/section/s1/line.svg" alt="" srcset="">
+        <p>02-2552-8888</p>
+        <img src="@/section/s1/line.svg" alt="" srcset="">
+      </div>
+      <img data-aos="fade-up" data-aos-delay="800" v-if="!$isMobile()" class="order-btn" src="@/section/s1/order-btn.svg" alt="" srcset="">
+      <img data-aos="fade-up" data-aos-delay="1000" class="logo2" src="@/section/s1/logo2.png" alt="" srcset="">
+      <img data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.png" alt=""
+        srcset="">
     </div>
   </article>
 </template>
@@ -29,123 +32,131 @@
   max-height: size(1080);
   position: relative;
   overflow: hidden;
-}
-.t0{
-  position: absolute;
-  width: 100%;height:auto;
-  top:0;
-  left:0;object-fit: cover;
-  opacity: .5;
-  }
-.bg{
-  position: absolute;
-  width: 100%;height:auto;
-  min-height: size(1080);
-  max-height: size(1080);
-  top: calc(50% + (0 - 535) * 100vw / 1920);
-  left:0;object-fit: cover;
-  }
-  .gif{
-    position: absolute;
-    width:100%;
-    height: size(360);
-    // top: size(718);
-    top: calc(50% + (718 - 535) * 100vw / 1920);
-    opacity: .5;
-    left: 0;mix-blend-mode: soft-light;filter: blur(0.05vw);
-  }
-  
-  .img1{
-    position: absolute;
-    width: size(400);
-    // top: size(495);
-    top: calc(50% + (495 - 535) * 100vw / 1920);
-    left: size(140);
-    transform-origin: 50% 100%;
-  }
-  .img2{
-    position: absolute;
-    width: size(237);
-    // top: size(800);
-    top: calc(50% + (800 - 535) * 100vw / 1920);
-    left: size(470);
-    transform-origin: 50% 100%;
-  }
-  .img3{
-    position: absolute;
-    width: size(250);
-    // top: size(445);
-    top: calc(50% + (450 - 535) * 100vw / 1920);
-    right: size(175);
-    transform-origin: 50% 100%;
-  }
-  .img4{
-    position: absolute;
-    width: size(170);
-    // top: size(530);
-    top: calc(50% + (535 - 535) * 100vw / 1920);
-    right: size(425);
-    transform-origin: 50% 100%;
-  }
-  .tree {
-    animation: wave 2s alternate-reverse infinite ease-in-out;
+  background-size: cover;
+  background-image: url('@/section/s1/bg.jpg');
+
+  .leaf {
+    @apply select-none pointer-events-none absolute z-10;
+    &.l {
+      @apply mix-blend-multiply;
+      width: size(423);
+      top: -#{size(78)};
+      left: -#{size(18)};
+      animation: wave 3s alternate-reverse infinite ease-in-out;
+      transform-origin: top left;
+    }
+    &.r {
+      @apply mix-blend-multiply;
+      width: size(423);
+      top: -#{size(78)};
+      right: -#{size(18)};
+      animation: wave 3s alternate-reverse infinite ease-in-out;
+      transform-origin: top right;
+    }
+    &.b {
+      width: 110%;
+      bottom: 0;
+      left: 50%;
+      margin-left: -55%;
+      animation: wave2 3s alternate-reverse infinite ease-in-out;
+      transform-origin: bottom center;
+    }
+
     @keyframes wave {
-      from {
-        transform: skewX(-2deg);
-      }
       to {
-        transform: skewX(2deg);
+        transform: skew(5deg, 1deg) rotate(-2deg)
       }
     }
-  }
-  .boat {
-    position: absolute;
-    width: size(280);
-    right: size(586);
-    bottom: size(130);
-    animation: wave2 3s alternate-reverse infinite ease-in-out;
     @keyframes wave2 {
-      from {
-        transform: translate(-4%, -1%) skewX(2deg);
-      }
       to {
-
-        transform: translate(4%, 1%) skewX(-2deg);
+        transform: skew(10deg, 0deg) rotate(0deg)
       }
     }
-  }
-  .txt {
-    position:absolute;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transform: translate(-50%);
-    left: 50%;
-    top: size(197);
-    .logo{
-      width: size(440.64);
-    }
-    .t1{
-font-weight: 700;
-font-size: size(70);
-line-height: 124.2%;
-letter-spacing: 0.145em;
 
-color: #000000;
-margin-top: size(33);
-margin-bottom: size(11);
+  }
+  .main {
+    @apply absolute w-full flex flex-col items-center text-white;
+    bottom: size(155);
+    .leaf-small {
+      @apply absolute;
+      width: size(69.54);
+      right: size(627.03);
+      top: size(149.91);
     }
-    .t2{
-font-weight: 400;
-font-size: size(40);
-line-height: 124.2%;
-letter-spacing: 0.065em;
-color: #C9A063;
+    .logo {
+      width: size(563.74);
+    }
+    .t1 {
+      @apply relative;
+      font-family: 'Noto Sans TC';
+      font-weight: 700;
+      font-size: size(37);
+      letter-spacing: 0.79em;
+      margin-right: -0.79em;
+      margin-top: size(26.82);
+      transform-style: preserve-3d;
 
+      &::after {
+        content: '';
+        position: absolute;
+        right: 7%;
+        bottom: 0;
+        width: size(184.71);
+        height: size(76.92);
+        background-size: contain;
+        background-image: url('@/section/s1/style.png');
+        transform: translateZ(-1px);
+        animation: fadeIn 1s forwards;
+        animation-delay: 1400ms;
+        opacity: 0;
+
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+          }
+        } 
+      }
+    }
+    .t2 {
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size(61);
+      letter-spacing: 0.05em;
+      margin-right: -0.05em;
+      margin-top: size(55);
+      span {
+        color: #EAD690;
+      }
+    }
+    .t3 {
+      @apply flex justify-center items-center;
+      gap: size(20);
+      margin-top: size(29);
+      p {
+        font-family: 'Noto Serif TC';
+        font-weight: 700;
+        font-size: size(50);
+        letter-spacing: 0.05em;
+        background: linear-gradient(90deg, #F3EC88 0%, #D19E33 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      img {
+        width: size(241);
+      }
+    }
+    .order-btn {
+      @apply hover:opacity-60 cursor-pointer;
+      width: size(268.97);
+      margin-top: size(21.5);
+    }
+    .logo2 {
+      margin-top: size(66.34);
+      width: size(194);
     }
   }
+}
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -156,69 +167,63 @@ color: #C9A063;
     min-height: sizem(667);
     max-height: sizem(812);
     overflow: hidden;
-    margin: 0;
-  }
-.bg{
-  height:100%;
-  top:0;
-  min-height: sizem(667);
-  max-height: sizem(812);
-  }
-  .gif{
-    width:200%;
-    height: sizem(280);
-    top: calc(70% + (435 - 667 * .7) * 100vw / 375);
-    left: -50%;
-  }
-  .img1{
-    width: sizem(200);
-    top: calc(70% + (260 - 667 * .7) * 100vw / 375);
-    left: sizem(-90);
-  }
-  .img2{
-    width: sizem(120);
-    top: calc(90% + (540 - 667 * .90) * 100vw / 375);
-    left: sizem(5);
-  }
-  .img3{
-    width: sizem(80);
-    top: calc(64% + (355 - 667 * .64) * 100vw / 375);
-    right: sizem(5);
-  }
-  .img4{
-    width: sizem(55);
-    top: calc(64% + (380 - 667 * .64) * 100vw / 375);
-    right: sizem(80);
+    background-image: url('@/section/s1/bg_mb.jpg');
+    
 
- 
-}
-  .txt {
-    position:absolute;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transform: translate(-50%);
-    left: 50%;
-    top: sizem(91);
-    width: 100%;
-    .logo{
-      width: sizem(208);
+    .leaf {
+      &.mb {
+        @apply mix-blend-multiply w-full top-0 left-0;
+      }
+      &.b {
+        width: sizem(536.64);
+        bottom: -#{sizem(135.58)};
+        left: -#{sizem(64.61)};
+        margin-left: 0;
+        animation: wave2 3s alternate-reverse infinite ease-in-out;
+        transform-origin: bottom center;
+      }
+  }
+  .main {
+    @apply absolute w-full flex flex-col items-center text-white;
+    bottom: sizem(169);
+    .leaf-small {
+      @apply absolute;
+      width: sizem(27.84);
+      right: sizem(62.4);
+      top: sizem(49.2);
+    }
+    .logo {
+      width: sizem(225.69);
     }
     .t1 {
-      font-size: sizem(25);
-      margin-top: sizem(16);
-      margin-bottom: sizem(8);
+      font-size: sizem(15);
+      margin-top: sizem(10);
+
+      &::after {
+        width: sizem(73.95);
+        height: sizem(30.79);
+      }
     }
-    .t2{
-      font-size: sizem(16);
+    .t2 {
+      font-size: sizem(19);
+      margin-top: sizem(36.67);
+    }
+    .t3 {
+      gap: sizem(4.49);
+      margin-top: sizem(18.89);
+      p {
+        font-size: sizem(20);
+      }
+      img {
+        width: sizem(60);
+        height: sizem(1);
+      }
+    }
+    .logo2 {
+      margin-top: sizem(57.56);
+      width: sizem(119.17);
     }
   }
-  .boat {
-    width: sizem(115.7);
-    right: sizem(89.3);
-    bottom: sizem(140);
   }
 }
 </style>

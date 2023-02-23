@@ -8,8 +8,8 @@
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos">
-                            <p class="mr-5 border-r-2 border-[#C9A063] pr-2 text-[#C9A063]" v-html="item[0]"></p>
-                            <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal"
+                            <p class="mr-5 border-l-4 border-[#397968] pl-2 text-[#397968]" v-html="item[0]"></p>
+                            <p class="whitespace-pre-line leading-normal text-left text-[#000] font-normal"
                                 v-html="item[1]">
                             </p>
                         </div>
@@ -20,7 +20,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="景上汀" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="長耀加" srcset=""></a>
 
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
@@ -40,7 +40,8 @@
 // }
 .displaynone{display: none;}
 .house {
-    background-image: url('@/section/form/housebg.jpg');
+    // background-image: url('@/section/form/housebg.jpg');
+    background-color: #fff;
     background-size:101%;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,10 +53,11 @@
     width: size(800);
 
     .title {
+        @apply font-['Noto_Serif_TC'];
         font-size: size(40);
         font-weight: 700;
-        color: #fff;
-        border-bottom: size(2) solid #C9A063;
+        color: #397968;
+        // border-bottom: size(2) solid #C9A063;
         width: size(172);
         margin: 0 auto;
         margin-bottom: size(50) !important; 
@@ -81,7 +83,7 @@
 
 @media screen and (max-width:768px) {
 .house {
-    background-image: url('@/section/form/housebgm.jpg');
+    // background-image: url('@/section/form/housebgm.jpg');
     background-size:101%;
     background-position: center;
     background-repeat: no-repeat;

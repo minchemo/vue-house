@@ -1,305 +1,94 @@
 <template>
   <article class="s3">
-    <div class="header">
-      <img class="en" src="@/section/s3/en.png" alt="" srcset="">
-      <div class="selection" data-aos="fade-down" v-bind:class="{ 'selected': selected == 0 }" @click="change(0)">快捷交通
-      </div>
-      <div class="selection" data-aos="fade-down" data-aos-delay="200" v-bind:class="{ 'selected': selected == 1 }"
-        @click="change(1)">完善機能</div>
+    <img class="t1" data-aos="fade-up" src="@/section/s3/t1.png" alt="" srcset="">
+    <div class="t2 decor" data-aos="fade-up">長耀愛林口 攜手向前走</div>
+    <div class="t3">
+      換屋，是追求空間換新，更是環境的升級，為此，長耀前瞻開發、精選良地，建築之外更替城市留下一片樸實綠景。今日工一園區、影視園區、國際媒體園區、三井Outlet二期等千億投資，再再預告了昔日的衛星新市鎮，向未來城市進化中，因此長耀為「愛」而愛，告別內湖前行林口，一同踏上林口的進步軌跡，看見未來顛覆你我想像的城市淘金史！
     </div>
-    <div class="main">
-      <div class="left" data-aos="fade-right">
-        <div class="t1" v-html="imgs[selected].t1"></div>
-        <div class="t2" v-html="imgs[selected].t2"></div>
-      </div>
-      <div class="right">
-        <Splide :key="selected" :options="{ arrows: false, gap: 50, autoplay: true, interval: 4000, type: 'loop' }" ref="splide">
-          <SplideSlide data-aos="fade" class="slide" v-for="slide, i in slides[selected]">
-            <img :src="slide">
-            <div class="caption">{{ captions[selected][i] }}</div>
-          </SplideSlide>
-        </Splide>
-      </div>
-    </div>
-    <img src="@/section/s3/ship.png" class="ship" alt="" srcset="">
-    <img v-if="!$isMobile()" src="@/section/s3/tree.png" class="tree" alt="" srcset="">
   </article>
 </template>
-  
-<style lang="scss" >
-  @import '@/assets/style/function.scss';
-  
-  .s3 {
-      @apply relative;
-    height: size(1080);
-    background: #013755;
-    background-image: url('@/section/s3/bg.jpg');
-    background-size: cover;
-    padding-top: size(59);
-    .header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      
-      gap: size(25);
-      .en {
-        width: size(736.16);
-        margin: unset;
-        margin-right: size(41.17);
-      }
-      .selection {
-      width: size(440);
-      height: size(42);
-      text-align: right;
-      font-size: size(22);
-      background-size: cover;
-      background-image: url('@/section/s3/unselect.png');
-      padding-right: size(29);
-      color:#C9A063;
-      &.selected {
-        color:#fff;
-        background-image: url('@/section/s3/selected.png');
-      }
-      &:hover {
-        cursor: pointer;
-        color:#fff;
-        background-image: url('@/section/s3/selected.png');
-        transition: .5s;
-      }
-      }
-    }
-    
-.tree {
-  
-  position: absolute;
-    width: size(392);
-    right: 0;
-    bottom: size(1006);
-    transform-origin: 50% 100%;
-}
-.tree {
-    animation: wave 2s alternate-reverse infinite ease-in-out;
-    @keyframes wave {
-      from {
-        transform: skewX(-3deg);
-      }
-      to {
-        transform: skewX(3deg);
-      }
-    }
+
+<style lang="scss" scoped>
+@import '@/assets/style/function.scss';
+
+.s3 {
+  @apply relative overflow-hidden flex flex-col items-center justify-center text-white;
+  width: 100%;
+  height: size(1080);
+  background-color: #293217;
+  font-family: 'Noto Serif TC';
+  .t1{
+    width: size(1035.78);
   }
-
-  .ship {
-    position: absolute;
-    width: size(286);
-    left: size(423);
-    bottom: size(101);
-    animation: wave2 3s alternate-reverse infinite ease-in-out;
-    @keyframes wave2 {
-      from {
-        transform: translate(-4%, -1%) skewX(2deg);
-      }
-      to {
-
-        transform: translate(4%, 1%) skewX(-2deg);
-      }
-    }
-  }
-
-  .main {
+  .t2 {
     @apply relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: size(100);
-    margin-top: size(69);
-    margin-left: size(69);
-    margin-right: size(0);
-    z-index: 1;
-    .left{
-        color: #FFFFFF;
-        padding-bottom: size(145);
-      .t1 {
-        font-weight: 700;
-        font-size: size(55);
-        line-height: 122.7%;
-        letter-spacing: 0.025em;
-        margin-bottom: size(25);
-      }
-      .t2 {
-        font-weight: 300;
-        font-size: size(18);
-        line-height: 180.7%;
-        text-align: justify;
-        letter-spacing: 0.165em;
-        width: size(394);
-      }
+    margin-top: size(168.3);
+    margin-bottom: size(41);
+    font-weight: 700;
+    font-size: size(61);
+    letter-spacing: 0.05em;
+    &::before {
+      width: size(57.44);
+      height: size(23.92);
+      right: 2%;
+      bottom: 0;
     }
-    .right {
-      width: size(1252);
-      height: size(823);
-      .slide {
-        width: size(1252);
-        img {
-          width: 100%;
-        }
-        .caption {
-          
-      @apply absolute;
-      left: size(10);
-      bottom: size(5);
-      font-weight: 400;
-      font-size: size(16);
-      color: #FFFFFF;
-        }
-      }
-      .splide__pagination {
-        gap: size(16);
-        margin-top: size(25);
-        button {
-          height: size(14);
-          width: size(14);
-          background: rgba(217, 217, 217, 0.54);
-          &.is-active {
-            background: #C9A063;
-          }
-        }
-      }
+    &::after {
+      width: size(19.02);
+      height: size(21.62);
+      right: -2%;
+      bottom: 15%;
     }
   }
+  .t3 {
+    width: size(940);
+    font-weight: 600;
+    font-size: size(20);
+    line-height: 170%;
+    text-align: center;
+    letter-spacing: 0.05em;
   }
-  
-  /* 螢幕尺寸標準 */
-  /* 平板尺寸 */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-  
-  @media screen and (max-width: 767px) {
+}
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+@media screen and (max-width: 767px) {
 
   .s3 {
     height: sizem(667);
-    background-image: url('@/section/s3/bg_m.jpg');
-    padding-top: sizem(28) !important;
-    padding: 0 sizem(30);
-    .header {      
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: size(25);
-      .en {
-        width: 100%;
-        margin: unset;
-        margin-right: 0;
-        margin-bottom: sizem(24);
-      }
-      .selection {
-        line-height: sizem(35.29);
-        width: sizem(144);
-        height: sizem(35.29);
-        text-align: center;
-        font-size: sizem(16);
-        padding-right: 0;
-        background-image: url('@/section/s3/unselect_m.png');
-        background-position: right bottom;
-        &.selected {
-          background-image: url('@/section/s3/selected_m.png');
-        }
-        &:hover {
-          background-image: url('@/section/s3/selected_m.png');
-        }
-        }
-    }
-    
-  .ship {
-    width: sizem(173.11);
-    left: sizem(195);
-    bottom: size(16);
+  .t1{
+    width: sizem(310);
   }
-
-  .main {
-    flex-direction: column-reverse;
-    gap: sizem(23);
-    margin-top: sizem(44);
-    .left{
-        color: #FFFFFF;
-        padding-bottom: size(145);
-      .t1 {
-        font-size: sizem(25);
-        margin-bottom: sizem(12);
-      }
-      .t2 {
-        font-size: sizem(13);
-        width: 100%;
-      }
+  .t2 {
+    @apply relative;
+    margin-top: sizem(62.13);
+    margin-bottom: sizem(24);
+    font-size: sizem(25);
+    &::before {
+      width: sizem(43.72);
+      height: sizem(18.21);
+      right: -7%;
+      bottom: -20%;
     }
-    .right {
-      width: sizem(315);
-      height: auto;
-      .slide {
-        width: 100%;
-      .caption {
-        left: sizem(10);
-        bottom: sizem(5);
-        font-size: sizem(12);
-      }
-      }
-      .splide__pagination {
-        gap: sizem(10);
-        margin-top: sizem(6);
-        button {
-          height: sizem(8);
-          width: sizem(8);
-        }
-      }
+    &::after {
+      width: sizem(14.48);
+      height: sizem(16.45);
+      right: -5%;
+      bottom: 0%;
     }
   }
+  .t3 {
+    width: sizem(310);
+    font-size: sizem(14);
   }
-  
   }
-  </style>
+}
+</style>
 <script setup>
-import AOS from 'aos';
-import { getCurrentInstance, ref, nextTick } from 'vue';
+import { computed, getCurrentInstance, ref } from 'vue';
+import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const selected = ref(0);
-const splide = ref(null);
-
-const change = async (target) => {
-  selected.value = target;
-  splide.value.splide.go(0)
-  currentIndex.value = 0;
-  splide.value.splide.refresh();
-  await nextTick()
-  AOS.refreshHard();
-};
-
-//let suffix = globals.$isMobile() ? 'm': '';
-const currentIndex = ref(0);
-const slides = [
-  [
-    new URL(`./s3/a1.jpg`, import.meta.url).href,
-    new URL(`./s3/a2.jpg`, import.meta.url).href
-  ],
-  [
-    new URL(`./s3/b1.jpg`, import.meta.url).href,
-    new URL(`./s3/b2.jpg`, import.meta.url).href,
-    new URL(`./s3/b3.jpg`, import.meta.url).href,
-    new URL(`./s3/b4.jpg`, import.meta.url).href]
-]
-
-const imgs = [
-  {
-    t1: '到站就到家，<br />一線速抵北市核心',
-    t2: '步行50米竹圍捷運站，信義淡水一線直抵士林科學園區、中山南西百貨商圈、大安核心、信義101商圈，不用轉車，即刻擁抱全市心！',
-  },
-  {
-    t1: '繁華全機能，<br />鄰近百貨商圈',
-    t2: '傳統市集、餐飲店家、全聯、頂好超市、寶雅等連鎖美妝，轉個彎到「竹圍商圈」，採買日常無比便利，將有知名商場進駐，舉步即享商圈繁華！',
-  }
-]
-
-const captions = [
-  ["竹圍捷運站實景修飾", "竹圍捷運站實景修飾"],
-  ["竹圍機能實景修飾", "家樂福實景修飾", "情境示意圖", "情境示意圖"]
-]
+const isMobile = computed(() => globals.$isMobile());
 </script>
-  

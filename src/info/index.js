@@ -1,4 +1,4 @@
-const caseName = "景上汀"
+const caseName = "長耀加"
 
 export default {
     meta: {
@@ -6,20 +6,22 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "新北市淡水區民權路12-3號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.9297995876846!2d121.45880770000001!3d25.1380641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442afb2cd7b33dd%3A0x5a9e8981de99bbbd!2z5pmv5LiK5rGA!5e0!3m2!1szh-TW!2stw!4v1672245997356!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/PoAxz7jz61RDY1rs7",
-    phone: "02-88092345",
-    fbLink: "https://www.facebook.com/junyijst",
-    fbMessage: "https://m.me/junyijst",
+    address: "接待會館：新北市林口區文化三路一段249巷口",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.8912267470987!2d121.363447!3d25.0716756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a743f48d6f79%3A0xa23d972e83824bc7!2z6ZW36ICA5Yqg5o6l5b6F5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1677137826393!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/suUCYxysq8TXC8S5A",
+    phone: "02-2552-8888",
+    fbLink: "https://www.facebook.com/Queen26006622",
+    fbMessage: "https://m.me/Queen26006622/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "鐵冠建設股份有限公司"],
-        ["建築設計", "吳昆達建築師事務所Ｘ仲間設計"],
-        ["工程營建", "昌譽營造股份有限公司"],
-        ["建照號碼", "111淡建字第00273號"],
-        ["建築代銷", "君頤廣告股份有限公司"],
-        ["樓層規劃", "12F/B1F"],
+        ["投資興建", "長耀國際興業有限公司"],
+        ["建築規劃", "簡俊卿建築師事務所"],
+        ["公設設計", "元佑設計"],
+        ["結構設計", "凱巨工程"],
+        ["建築營造", "森城營造"],
+        ["企劃行銷", "君翊行銷-君漾廣告"],
+        ["建照號碼", "111林建字第00308號"],
+        ["經紀人", "黃雅惠(102)北市經證字第02035號"],
     ],
     gtmCode: ["GTM-MKGNRHW"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",

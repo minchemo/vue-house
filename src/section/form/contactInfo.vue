@@ -1,17 +1,17 @@
 <template>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo"></div>
+    <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="景上汀" srcset="" />
+        <img src="@/section/form/phone.svg" alt="長耀加" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="景上汀" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="長耀加" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="景上汀" srcset="" />
+        <img src="@/section/form/fb.svg" alt="長耀加" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -19,9 +19,8 @@
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center googlemap"
-        @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="景上汀" srcset="" />
+      <div class="flex contact-item justify-between items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
+        <img src="@/section/form/gmap.svg" alt="長耀加" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -30,24 +29,24 @@
 
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="景上汀" srcset="" />
+      <img src="@/section/form/phone.svg" alt="長耀加" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="景上汀" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="長耀加" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="景上汀" srcset="" />
+      <img src="@/section/form/pen.svg" alt="長耀加" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="景上汀" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="長耀加" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -58,41 +57,41 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="景上汀" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="景上汀" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="景上汀" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="長耀加" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="長耀加" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="長耀加" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-      '接待會館'
+        '接待會館'
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-      `接待中心：${info.address}`
+        `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
+        v-if="modalType != 'phone'" v-bind:class="{
+          'hidden': modalType == 'phone' && !$isMobile(),
+          'btlead': modalType == 'fb',
+          'btsearch': modalType == 'gmap',
+          'btcontac': modalType == 'phone'
+        }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+          '開啟導航'
         }}</div>
       <!-- btn phone -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else
+        v-bind:class="{
+          'hidden': modalType == 'phone' && !$isMobile(),
+          'btlead': modalType == 'fb',
+          'btsearch': modalType == 'gmap',
+          'btcontac': modalType == 'phone'
+        }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+          '開啟導航'
         }}</div>
     </div>
   </div>
-
-
 </template>
 
 <style lang="scss">
@@ -123,8 +122,8 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #fff;
-      color: #000;
+      background: linear-gradient(94.59deg, #C5A260 25.56%, #E7A721 81.27%);
+      color: #fff;
       width: 100%;
       padding: 0 size(55);
       // border-radius: 9999px;
@@ -136,25 +135,25 @@
       transition: all .3s;
       cursor: pointer;
 
-      &:hover {
-        background-color: #055F76;
-        color: #fff;
-
-        img {
-          filter: brightness(0) invert(1);
-        }
-      }
-
       img {
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(1) invert(1);
         transition: all .5s;
       }
+      &:hover {
+        background-color: #055F76;
+        color: #000;
+
+        img {
+          filter: brightness(0) invert(0);
+        }
+      }
+
 
       &.address {
-        background-color: #eee;
+        background: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -167,7 +166,7 @@
           position: absolute;
           width: 8em;
           height: 100%;
-          background-color: #eee;
+          background-color: #fff;
           left: calc(100% - 4em);
           z-index: -1;
         }
@@ -179,12 +178,15 @@
         color: #fff;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(1) invert(1);
         }
 
         &:hover {
           background-color: gray;
-          color: #fff;
+          color: #000;
+        img {
+          filter: brightness(0) invert(0);
+        }
         }
       }
     }
@@ -207,7 +209,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #C9A063;
+      background: linear-gradient(180deg, #EBD68C 0%, #BB9441 100%);
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
@@ -225,12 +227,12 @@
 
   .contact-info {
     width: sizem(375);
-    height: sizem(590);
+    height: auto;
     // border-radius: sizem(68);
     padding: sizem(50) sizem(15);
     margin-top: sizem(60);
     position: relative;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     .logo {
       width: sizem(257);

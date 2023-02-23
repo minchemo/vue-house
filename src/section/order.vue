@@ -2,18 +2,35 @@
   <div id="order" class="order relative bg-[#DCDCDD] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
+      <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="景上汀" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="長耀加" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="景上汀" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀加" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
+      <!-- Custom title -->
+
+      <div class="main">
+        <img data-aos="fade-up" src="@/section/s1/logo.svg" class="logo" alt="" srcset="">
+        <p data-aos="fade-up" data-aos-delay="200" class="t1">轉身繁華 衷於回家</p>
+        <p data-aos="fade-up" data-aos-delay="400" class="t2"><span>20</span> 層建築與眾樹的巷遇</p>
+        <img class="custitle" data-aos="fade-up" data-aos-delay="600" src="@/section/form/custitle.png" alt="" srcset="">
+        <img class="custitle2" v-if="!$isMobile()" src="@/section/form/title.svg" alt="" srcset="">
+        <img class="custitle2" v-else src="@/section/form/title_m.svg" alt="" srcset="">
+        <img data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.png" alt=""
+          srcset="">
+      </div>
+
       <!-- Custom Image -->
-      <img src="@/section/form/tree.png" class="tree" alt="" srcset="">
-      <img v-if="!$isMobile()" src="@/section/form/ship.png" class="ship" alt="" srcset="">
+      <img class="leaf l" v-if="!$isMobile()" src="@/section/s1/leaf_l.png" alt="" srcset="">
+      <img class="leaf r" v-if="!$isMobile()" src="@/section/s1/leaf_r.png" alt="" srcset="">
+      <img class="leaf mb" v-if="$isMobile()" src="@/section/s1/leaf_mb.png" alt="" srcset="">
+      <img class="leaf b" v-if="!$isMobile()" src="@/section/s1/leaf_b.png" alt="" srcset="">
+      <img class="leaf b" v-else src="@/section/s1/leaf_b_m.png" alt="" srcset="">
+
 
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center">
@@ -54,7 +71,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFFF00] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -92,50 +109,118 @@
   background-size: cover;
   // padding-bottom: size(90);
   position: relative;
-  min-height: size(1465);
-  padding-top: size(250);
-  // overflow: hidden;
+  min-height: size(1797);
+  padding-top: size(138);
+  overflow: hidden;
   
-.tree {
-      @apply absolute;
-        width: size(623);
-        top: -#{size(455)};
-        left: size(74);
-        animation: wave 3s alternate-reverse infinite ease-in-out;
-        transform-origin: bottom center;
-        @keyframes wave {
-          from {
-            transform: skewX(-1deg);
-          }
-          to {
-            transform: skewX(1deg);
-          }
-        }
-}
 
-.ship {
-    position: absolute;
-    width: size(280);
-    height: size(242);
-    right: size(505);
-    top: size(23);
-    animation: wave2 3s alternate-reverse infinite ease-in-out;
-    z-index: 1;
-    @keyframes wave2 {
-      from {
-        transform: translate(-4%, -1%) skewX(2deg);
-      }
+  .leaf {
+    @apply select-none pointer-events-none absolute z-10;
+    &.l {
+      @apply mix-blend-multiply;
+      width: size(423);
+      top: -#{size(78)};
+      left: -#{size(18)};
+      animation: wave 3s alternate-reverse infinite ease-in-out;
+      transform-origin: top left;
+    }
+    &.r {
+      @apply mix-blend-multiply;
+      width: size(423);
+      top: -#{size(78)};
+      right: -#{size(18)};
+      animation: wave 3s alternate-reverse infinite ease-in-out;
+      transform-origin: top right;
+    }
+    &.b {
+      width: 110%;
+      bottom: 0;
+      left: 50%;
+      margin-left: -55%;
+      animation: wave2 3s alternate-reverse infinite ease-in-out;
+      transform-origin: bottom center;
+    }
+
+    @keyframes wave {
       to {
-
-        transform: translate(4%, 1%) skewX(-2deg);
+        transform: skew(5deg, 1deg) rotate(-2deg)
       }
     }
-}
+    @keyframes wave2 {
+      to {
+        transform: skew(10deg, 0deg) rotate(0deg)
+      }
+    }
 
-  .z-10 {
-    z-index: 10;
-    position: relative;
   }
+  .main {
+    @apply relative w-full flex flex-col items-center text-white;
+    .leaf-small {
+      @apply absolute;
+      width: size(69.54);
+      right: size(607.03);
+      top: size(210.91);
+    }
+    .logo {
+      width: size(563.74);
+    }
+    .t1 {
+      @apply relative;
+      font-family: 'Noto Sans TC';
+      font-weight: 700;
+      font-size: size(37);
+      letter-spacing: 0.79em;
+      margin-right: -0.79em;
+      margin-top: size(26.82);
+      transform-style: preserve-3d;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 3%;
+        bottom: -65%;
+        width: size(184.71);
+        height: size(76.92);
+        background-size: contain;
+        background-image: url('@/section/s1/style.png');
+        transform: translateZ(-1px);
+        animation: fadeIn 1s forwards;
+        animation-delay: 1400ms;
+        opacity: 0;
+
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+          }
+        } 
+      }
+    }
+    .t2 {
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size(45);
+      letter-spacing: 0.05em;
+      margin-right: -0.05em;
+      margin-top: size(55);
+      display: flex;
+      align-items: center;
+      gap: size(10);
+        letter-spacing: 0.15em;
+      span {
+        font-size: size(52);
+      }
+    }
+    .custitle {
+      width: size(657.73);
+      margin-top: size(62);
+      margin-bottom: size(94);
+    }
+    .custitle2 {
+      width: size(875.79);
+      margin-bottom: size(30);
+    }
+  }
+
 
   .bg-image {
     position: absolute;
@@ -221,15 +306,17 @@
     font-size: size(22);
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    background-color: #C9A063;
+    color: #397968;
+    background-color: #fff;
     width: size(318);
     height: size(72.75);
     line-height: 3.3;
     border: 0;
-    border-radius: .2em;
+    border-radius: 9999px;
     z-index: 10;
     position: relative;
+    font-weight: 700;
+    font-family: 'Noto Serif TC';
   }
 
   .control {
@@ -242,25 +329,64 @@
 @media screen and (max-width:768px) {
   .order-section {
     background-image: url('@/section/form/bgm.png');
-    min-height: sizem(1450);
+    min-height: sizem(1774);
     padding-bottom: sizem(0);
     position: relative;
-    // overflow: hidden;
-    padding-top: sizem(50);
+    padding-top: sizem(182);
 
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
-    }
-
-    .tree {
+    .leaf {
+      &.mb {
+        @apply mix-blend-multiply w-full left-0;
+        top: -#{sizem(35)};
+      }
+      &.b {
+        width: sizem(536.64);
+        bottom: -#{sizem(135.58)};
+        left: -#{sizem(64.61)};
+        margin-left: 0;
+        animation: wave2 3s alternate-reverse infinite ease-in-out;
+        transform-origin: bottom center;
+      }
+  }
+  .main {
+    @apply relative w-full flex flex-col items-center text-white;
+    bottom: 0;
+    .leaf-small {
       @apply absolute;
-        width: sizem(182.76);
-        top: -#{sizem(128)};
-        left: -#{sizem(22.76)};
-}
+      width: sizem(27.84);
+      right: sizem(28.4);
+      top: sizem(110.2);
+    }
+    .logo {
+      width: sizem(275.69);
+    }
+    .t1 {
+      font-size: sizem(17);
+      margin-top: sizem(10);
+
+      &::after {
+        width: sizem(73.95);
+        height: sizem(30.79);
+        right: 6.5%;
+      }
+    }
+    .t2 {
+      font-size: sizem(21);
+      margin-top: sizem(39);
+      span{
+        font-size: sizem(24);
+      }
+    }
+    .custitle {
+      width: sizem(278);
+      margin-top: sizem(49);
+      margin-bottom: sizem(119);
+    }
+    .custitle2 {
+      width: sizem(315);
+      margin-bottom: sizem(15);
+    }
+  }
   }
 
   .order {
