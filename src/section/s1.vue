@@ -14,7 +14,7 @@
         <p>02-2552-8888</p>
         <img src="@/section/s1/line.svg" alt="" srcset="">
       </div>
-      <img data-aos="fade-up" data-aos-delay="800" v-if="!$isMobile()" class="order-btn" src="@/section/s1/order-btn.svg" alt="" srcset="">
+      <img data-aos="fade-up" data-aos-delay="800" v-if="!$isMobile()" class="order-btn" src="@/section/s1/order-btn.svg" alt="" srcset="" @click="scrollTo('.order')">
       <img data-aos="fade-up" data-aos-delay="1000" class="logo2" src="@/section/s1/logo2.png" alt="" srcset="">
       <img data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.png" alt=""
         srcset="">
@@ -228,8 +228,17 @@
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { inject, computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+    smoothScroll({
+        scrollTo: document.querySelector(el)
+    })
+    menuOpen.value = !menuOpen.value;
+}
 </script>
