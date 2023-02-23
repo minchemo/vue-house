@@ -3,7 +3,6 @@
     <div class="bg">
       <img data-aos="fade-down" data-aos-delay="200" src="./s2/bg.jpg" alt="" srcset="" />
     </div>
-    
     <div class="txt">    
       <div class="t1" data-aos="fade-down">如果 可以選擇</div>
       <div class="l" data-aos="fade-down" data-aos-delay="200"></div>
@@ -17,16 +16,18 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden w-full bg-[#2B4D39];
+  @apply relative overflow-hidden w-full;
  height: size(2000);
   background-size: cover;
   background-position: left top ;
   .bg{ @apply absolute;
-    height: 100%;
+    height: 100%;top: 0;left: 0;width: 100%;
+background: linear-gradient(to bottom,  rgba(18,112,205,1) 0%,rgba(18,167,229,1) 22%,rgba(19,203,235,1) 35%,rgba(161,221,235,1) 43%,rgba(188,219,230,1) 50%);
     img{@apply absolute;bottom: 0;left: 0;}
   }
   .txt {
-  @apply relative;z-index: 2;
+  @apply relative;
+  z-index: 2;
     text-align: center;
     color: #fff;
       line-height: 1.5;
@@ -34,11 +35,12 @@
       font-weight: 400;
 letter-spacing: 0.1em;
 text-indent: 0.1em;
+margin:size(330) auto auto;
     .t1 {
-      font-size:2em;
+      font-size:2.1em;
       line-height: size(60);
     }
-    .l{width: 1px; height: 2em;background: currentColor;margin: auto;}
+    .l{width: 1px; height: 2.2em;background: currentColor;margin:.8em auto .2em auto;}
     .t2 {
       font-weight: 400;
 letter-spacing: 0.71em;
@@ -46,7 +48,7 @@ letter-spacing: 0.71em;
 text-indent: 0.71em;
     }
     .t3 {
-      font-size:1.56em;
+      font-size:1.56em;margin:.05em auto auto auto;
     }
   }
 }
