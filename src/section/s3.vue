@@ -1,25 +1,12 @@
 <template>
   <article class="s3">
-    <div class="left" data-aos="fade">
-      <div class="t1" data-aos="fade-down" >小港不1樣 國際航空城</div>
-      <img class="en" data-aos="fade-down" data-aos-delay="200" src="@/section/s3/en.svg" alt="" srcset="">
-      <div class="caption">以上皆小港機場3D示意圖(圖／民航局提供)</div>
+    <div class="img">
+    <img  data-aos="fade" data-aos-delay="300" src="./s3/img.png" alt="" srcset="" class="img1">
+    <img  data-aos="fade" data-aos-delay="300" src="./s3/logo_w.svg" alt="" srcset="" class="logo">
     </div>
-    <div class="right">
-      <div class="t1" data-aos="fade-down" data-aos-delay="0">百億計畫 國際航空城</div>
-      <div class="t2" data-aos="fade-down" data-aos-delay="200">「小港國際機場」將由國家挹注700多億改建整合<br />
-        將以全新中央智慧處理式航廈大樓，造就高雄新國門<br />
-        航空、觀光、商業、旅宿，未來，將與世界更靠近</div>
-      <div class="boxes">
-        <div class="box">
-          <img  data-aos="fade" data-aos-delay="300" src="@/section/s3/1.jpg" alt="" srcset="">
-          <p data-aos="fade-down" data-aos-delay="400">歷經10年整合、環評通過！「國道7號」願景啟動，總長約23公里，增設7個交流道，其中即包括小港，未來通聯國道約5min即刻上線，城際移動無往不利</p>
-        </div>
-        <div class="box">
-          <img  data-aos="fade"  data-aos-delay="500" src="@/section/s3/2.jpg" alt="" srcset="">
-          <p data-aos="fade-down" data-aos-delay="600">捷運紅線南向延伸「小港林園線」核定興建中，鄰近捷運R3小港站再增優勢、軌道經濟再提升，未來預計採高架捷運，7座車站，串聯高屏更便捷</p>
-        </div>
-      </div>
+    <div class="txt" data-aos="fade">
+      <div class="t1" data-aos="fade-down" >｜即｜將｜公｜開｜</div>
+      <div class="t2" data-aos="fade-down" >COMING SOON</div>
     </div>
   </article>
 </template>
@@ -28,86 +15,42 @@
 @import '@/assets/style/function.scss';
 
 .s3 {
-  @apply relative overflow-hidden w-full bg-[#E7E7E7];
-  height: size(900);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: size(116.97);
-
-  .left {
-    @apply h-full relative; 
-    flex-basis: size(1140);
-    background-image: url('@/section/s3/main.jpg');
-    background-size: cover;
-
-    .t1 {
-      @apply absolute;
-      font-family: 'Noto Serif TC';
-      font-weight: 700;
-      font-size: size(30);
-      line-height: 150%;
-      color: #fff;
-      left: size(48.58);
-      top: size(520);
-    }
-    .en {
-      @apply absolute;
-      width: size(795.42);
-      left: size(47);
-      bottom: size(163.94);
-    }
-    .caption {
-      @apply absolute;
-      right: size(26);
-      bottom: size(10);
-      font-weight: 400;
-      font-size: size(12);
-      color: #fff
-    }
-  }
-  .right{
-    @apply h-full;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #595758;
-    .t1 {
-      @apply w-full;
-      font-family: 'Noto Serif TC';
-      font-weight: 700;
-      font-size: size(42);
-      line-height: 150%;
-      margin-bottom: size(15)
-    }
-    .t2 {
-      @apply w-full;
-      font-weight: 400;
-      font-size: size(18);
-      line-height: 170%;
-    }
-
-    .boxes {
-      @apply flex; 
-      gap: size(17.5);
-      margin-top: size(56.7);
-      .box {
-        width: size(264.22);
-        img {
-          @apply w-full;
-          margin-bottom: size(8)
-        }
-        p {
-          font-weight: 400;
-          font-size: size(18);
-          line-height: 170%;
-          text-align: justify;
-        }
-      }
-    }
-    
-  }
+  @apply relative w-full;
+  height: size(580);
 }
+.img{
+    @apply absolute;
+    top:size(250);
+    right: 0;
+    width:size(875);
+    .img1{width: 100%;}
+    .logo{
+    @apply absolute;
+    width: 20.2%;
+    right: 20.1%;
+    top: -18.5%;}
+  
+  }
+  .txt {
+    @apply absolute;
+    left:size(100);
+    top: size(140);
+font-size:size(48);
+text-align: center;
+color: #FFF;
+font-weight: 400;
+line-height: 1.6;
+.t1{
+font-size:1.35em;
+font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.t2{
+  color: #F8A933;
+  letter-spacing: 1.22em;
+text-indent: 1.22em;
+}
+  }
   
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */

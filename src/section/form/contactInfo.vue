@@ -126,8 +126,8 @@
     gap: size(20);
 
     .contact-item {
-      background-color: rgba(255,255,255,0.2);
-      color: #fff;
+      background-color:#DCDFE6;
+      color: #4B6730;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -139,11 +139,11 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      border: 1px solid #C29267;
+     // border: 1px solid #C29267;
       gap: 1em;
 
       &:hover {
-        background-color: #C29267;
+        background-color:#7EAA46;
         color: #fff;
 
         img {
@@ -155,7 +155,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+      //  filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }

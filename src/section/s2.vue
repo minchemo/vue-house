@@ -1,7 +1,8 @@
 <template>
   <article class="s2">
-    <div class="bg">
-      <img data-aos="fade-down" data-aos-delay="200" src="./s2/bg.jpg" alt="" srcset="" />
+    <div class="bg" data-aos="fade-up" data-aos-delay="200">
+    <div class="cloud"></div>
+      <img src="./s2/bg.jpg" alt="" srcset="" />
     </div>
     <div class="txt">    
       <div class="t1" data-aos="fade-down">如果 可以選擇</div>
@@ -23,7 +24,24 @@
   .bg{ @apply absolute;
     height: 100%;top: 0;left: 0;width: 100%;
 background: linear-gradient(to bottom,  rgba(18,112,205,1) 0%,rgba(18,167,229,1) 22%,rgba(19,203,235,1) 35%,rgba(161,221,235,1) 43%,rgba(188,219,230,1) 50%);
-    img{@apply absolute;bottom: 0;left: 0;}
+   
+  @keyframes cloud {
+      to {
+        transform:translateY(0);
+
+      }
+    }
+.cloud{@apply relative;
+  z-index: 1;
+  width: 200%;
+ height: size(700);
+ margin-top: size(495);
+  background-image: url("./s2/cloud.png");
+    transform:translateX(-50%);
+    transform-origin: 50% 0;
+    animation: cloud 20s linear infinite ; 
+background-size: 50% auto;}
+img{@apply absolute;bottom: 0;left: 0;}
   }
   .txt {
   @apply relative;

@@ -1,16 +1,17 @@
 <template>
-  <div id="order" class="order relative bg-[#F1E6D6] text-center">
+  <div id="order" class="order relative text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
+      <div class="order-title text-center">{{ info.order.title }}</div>
+      <!--  -->
       <!-- <div class="cus-divider"></div> -->
 
-      <!-- Title Image -->
+      <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
-
-      <!-- Custom Image -->
+ -->
+      <!-- Custom Image
       <img class="bird" src="@/section/form/bird.png" alt="" srcset="">
-
+ -->
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
@@ -61,7 +62,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending? '發送中..': '送出表單' }}
       </div>
 
       <!-- Contact Info -->
@@ -82,14 +83,14 @@
 
 
 .order-section {
-  background-image: url('@/section/form/bg.jpg');
+/* background-image: url('@/section/form/bg.jpg');
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   // padding-bottom: size(90);
   position: relative;
   min-height: size(1924);
-  padding-top: size(406);
+  // padding-top: size(406);
   // overflow: hidden;
 
   .bg-image {
@@ -106,33 +107,16 @@
   width: 100%;
   padding-top: size(0);
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
 
   .order-title {
     font-size: size(40);
-    font-weight: 700;
+    font-weight: 500;
     color: #fff;
-    border-bottom: size(2) solid #C9A063;
-    width: size(172);
+    // border-bottom: size(2) solid #C9A063;
+    width:size(920);
     margin: 0 auto;
     margin-bottom: size(50) !important;
+    background: #364724;
   }
 
   .order-title-img {
@@ -183,12 +167,12 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #C29267;
+    background-color: #7EAA46;
     width: size(318);
     height: size(72.75);
     line-height: 3.3;
     border: 0;
-    border-radius: 0;
+    border-radius: 1.7em;
     z-index: 10;
     font-weight: 400;
     position: relative;
