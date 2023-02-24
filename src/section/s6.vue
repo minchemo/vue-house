@@ -145,8 +145,8 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`${path}.webp`, import.meta.url).href;
-  return new URL(`${path}_m.webp`, import.meta.url).href
+  if (!globals.$isMobile()) return new URL(`./${path}.webp`, import.meta.url).href;
+  return new URL(`./${path}_m.webp`, import.meta.url).href
 }
 
 const splide = ref();
@@ -169,32 +169,32 @@ const options = {
 
 const imgs = [
   {
-    img: getImg('./s6/1'),
+    img: getImg('s6/1'),
     t1: '大樹公園',
     t2: '家不遠，散步間，坐擁第二運動公園、立德公園、扶輪公園、力行公園4座<br class="hidden md:block"/>生機勃勃的大樹之境，蟲鳥和鳴，放空歸林，找回心沉的平靜。'
   },
   {
-    img: getImg('./s6/2'),
+    img: getImg('s6/2'),
     t1: '豐盈生活',
     t2: '文化三路上的三井Outlet、昕境廣場商圈，以及周圍的運動中心、超市、<br class="hidden md:block"/>影城等豐饒的場域，更為長耀加的生活取得平衡一線間。'
   },
   {
-    img: getImg('./s6/3'),
+    img: getImg('s6/3'),
     t1: '豐盈生活',
     t2: '文化三路上的三井Outlet、昕境廣場商圈，以及周圍的運動中心、超市、<br class="hidden md:block"/>影城等豐饒的場域，更為長耀加的生活取得平衡一線間。'
   },
   {
-    img: getImg('./s6/4'),
+    img: getImg('s6/4'),
     t1: '出類拔萃',
     t2: '聚地理、生態、未來發展等優勢的林口，吸引眾多歸國華僑、台商、機師、外籍人士擇居於此，「馬禮遜美國學校」、<br class="hidden md:block"/>「新北美國學校」、「康橋國際學校」等異國菁英院校因應而生，形塑出林口高質感、高資產的生活風範。'
   },
   {
-    img: getImg('./s6/5'),
+    img: getImg('s6/5'),
     t1: '出類拔萃',
     t2: '聚地理、生態、未來發展等優勢的林口，吸引眾多歸國華僑、台商、機師、外籍人士擇居於此，「馬禮遜美國學校」、<br class="hidden md:block"/>「新北美國學校」、「康橋國際學校」等異國菁英院校因應而生，形塑出林口高質感、高資產的生活風範。'
   },
   {
-    img: getImg('./s6/6'),
+    img: getImg('s6/6'),
     t1: '出類拔萃',
     t2: '聚地理、生態、未來發展等優勢的林口，吸引眾多歸國華僑、台商、機師、外籍人士擇居於此，「馬禮遜美國學校」、<br class="hidden md:block"/>「新北美國學校」、「康橋國際學校」等異國菁英院校因應而生，形塑出林口高質感、高資產的生活風範。'
   },

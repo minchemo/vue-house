@@ -166,8 +166,8 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`${path}.webp`, import.meta.url).href;
-  return new URL(`${path}_m.webp`, import.meta.url).href
+  if (!globals.$isMobile()) return new URL(`./${path}.webp`, import.meta.url).href;
+  return new URL(`./${path}_m.webp`, import.meta.url).href
 }
 
 const splide = ref();
@@ -190,42 +190,42 @@ const options = {
 
 const imgs = [
   {
-    img: getImg('./s10/1'),
+    img: getImg('s10/1'),
     t1: '質樸之森',
     t2: '約<span>28</span>坪',
     t3: '日系溫雅的表現中，人文與藝術的呈現，質樸而內斂的溫潤感受,巧而雅的氛圍。',
     caption: '本圖為實景拍攝圖'
   },
   {
-    img: getImg('./s10/2'),
+    img: getImg('s10/2'),
     t1: '質樸之森',
     t2: '約<span>28</span>坪',
     t3: '日系溫雅的表現中，人文與藝術的呈現，質樸而內斂的溫潤感受,巧而雅的氛圍。',
     caption: '本圖為實景拍攝圖'
   },
   {
-    img: getImg('./s10/3'),
+    img: getImg('s10/3'),
     t1: '靜謐之所',
     t2: '約<span>36</span>坪',
     t3: '深淺線條中，直與橫的交錯，深淺線條的跳躍，平行空間里，呈現義系生活的精<br class="hidden md:block"/>緻與簡約。',
     caption: '本圖為實景拍攝圖'
   },
   {
-    img: getImg('./s10/4'),
+    img: getImg('s10/4'),
     t1: '靜謐之所',
     t2: '約<span>36</span>坪',
     t3: '深淺線條中，直與橫的交錯，深淺線條的跳躍，平行空間里，呈現義系生活的精<br class="hidden md:block"/>緻與簡約。',
     caption: '本圖為實景拍攝圖'
   },
   {
-    img: getImg('./s10/5'),
+    img: getImg('s10/5'),
     t1: '琢麗之家',
     t2: '約<span>47</span>坪',
     t3: '沉穩的法式線條，勾勒生活的優雅，雅致的空，呈現三房的空表現，體現大坪數<br class="hidden md:block"/>里精品住宅的生活風采。',
     caption: '本圖為實景拍攝圖'
   },
   {
-    img: getImg('./s10/6'),
+    img: getImg('s10/6'),
     t1: '質樸之森',
     t2: '約<span>28</span>坪',
     t3: '日系溫雅的表現中，人文與藝術的呈現，質樸而內斂的溫潤感受,巧而雅的氛圍。',

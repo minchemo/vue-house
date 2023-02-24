@@ -156,8 +156,8 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`${path}.webp`, import.meta.url).href;
-  return new URL(`${path}_m.webp`, import.meta.url).href
+  if (!globals.$isMobile()) return new URL(`./${path}.webp`, import.meta.url).href;
+  return new URL(`./${path}_m.webp`, import.meta.url).href
 }
 
 const splide = ref();
@@ -180,19 +180,19 @@ const options = {
 
 const imgs = [
   {
-    img: getImg('./s4/1'),
+    img: getImg('s4/1'),
     caption: "內湖 豁達達禮"
   },
   {
-    img: getImg('./s4/2'),
+    img: getImg('s4/2'),
     caption: "林口 長耀PARK"
   },
   {
-    img: getImg('./s4/3'),
+    img: getImg('s4/3'),
     caption: "林口 長耀初"
   },
   {
-    img: getImg('./s4/4'),
+    img: getImg('s4/4'),
     caption: "林口 長耀里"
   },
 ]

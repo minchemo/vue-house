@@ -137,8 +137,8 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`${path}.webp`, import.meta.url).href;
-  return new URL(`${path}_m.webp`, import.meta.url).href
+  if (!globals.$isMobile()) return new URL(`./${path}.webp`, import.meta.url).href;
+  return new URL(`./${path}_m.webp`, import.meta.url).href
 }
 
 const splide = ref();
@@ -161,19 +161,19 @@ const options = {
 
 const imgs = [
   {
-    img: getImg('./s8/1'),
+    img: getImg('s8/1'),
     t1: '庭院，茄苳，<br>歡迎回家',
     t2: '風，穿過了落羽松與光臘樹梢；楓香與台灣木的葉在地上交相覆合。長耀以「原鄉」為題，特別植棵帶有家鄉之感的「茄樹」作為門面，期盼北漂異鄉打拼的遊子在此成家之時，能想起自己最根本的家。',
     caption: '本圖為3D模擬示意圖'
   },
   {
-    img: getImg('./s8/1'),
+    img: getImg('s8/1'),
     t1: '庭院，茄苳，<br>歡迎回家2',
     t2: '2風，穿過了落羽松與光臘樹梢；楓香與台灣木的葉在地上交相覆合。長耀以「原鄉」為題，特別植棵帶有家鄉之感的「茄樹」作為門面，期盼北漂異鄉打拼的遊子在此成家之時，能想起自己最根本的家。',
     caption: '本圖為3D模擬示意圖'
   },
   {
-    img: getImg('./s8/1'),
+    img: getImg('s8/1'),
     t1: '庭院，茄苳，<br>歡迎回家3',
     t2: '3風，穿過了落羽松與光臘樹梢；楓香與台灣木的葉在地上交相覆合。長耀以「原鄉」為題，特別植棵帶有家鄉之感的「茄樹」作為門面，期盼北漂異鄉打拼的遊子在此成家之時，能想起自己最根本的家。',
     caption: '本圖為3D模擬示意圖'

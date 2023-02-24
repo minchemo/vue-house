@@ -96,7 +96,7 @@
     @apply flex-col;
   height: sizem(640);
   padding: sizem(10);
-  background-image: url('@/section/s7/bgm.wpbp');
+  background-image: url('@/section/s7/bgm.webp');
 
   .main {
   .txt {
@@ -148,8 +148,8 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`${path}.webp`, import.meta.url).href;
-  return new URL(`${path}_m.webp`, import.meta.url).href
+  if (!globals.$isMobile()) return new URL(`./${path}.webp`, import.meta.url).href;
+  return new URL(`./${path}_m.webp`, import.meta.url).href
 }
 
 const splide = ref();
@@ -172,11 +172,11 @@ const options = {
 
 const imgs = [
   {
-    img: getImg('./s7/1'),
+    img: getImg('s7/1'),
     caption: "本圖為3D模擬示意圖"
   },
   {
-    img: getImg('./s7/2'),
+    img: getImg('s7/2'),
     caption: "本圖為3D模擬示意圖"
   },
 ]

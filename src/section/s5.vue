@@ -165,8 +165,8 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`${path}.webp`, import.meta.url).href;
-  return new URL(`${path}_m.webp`, import.meta.url).href
+  if (!globals.$isMobile()) return new URL(`./${path}.webp`, import.meta.url).href;
+  return new URL(`./${path}_m.webp`, import.meta.url).href
 }
 
 const splide = ref();
@@ -189,32 +189,32 @@ const options = {
 
 const imgs = [
   {
-    img: getImg('./s5/1'),
-    avatar: getImg('./s5/a'),
+    img: getImg('s5/1'),
+    avatar: getImg('s5/a'),
     t1: '國家建築金質首獎主',
     t2: '建築規劃 簡俊卿',
     t3: '簡俊卿建築師事務所',
     t4: '信義｜松德長虹<br/>天母｜華固天鑄<br/>松山｜國美新美館<br/>大安｜敦南之森<br/>忠孝｜Dimond Tower'
   },
   {
-    img: getImg('./s5/2'),
-    avatar: getImg('./s5/b'),
+    img: getImg('s5/2'),
+    avatar: getImg('s5/b'),
     t1: '國際設計大獎常勝軍',
     t2: '公設設計 李志成',
     t3: 'YUANYOU DESIGN',
     t4: '信義｜聯合大於大哲<br/>士林｜東騰天母<br/>南港｜映東騰<br/>內湖｜東騰自在<br/>中山｜富富話合'
   },
   {
-    img: getImg('./s5/3'),
-    avatar: getImg('./s5/c'),
+    img: getImg('s5/3'),
+    avatar: getImg('s5/c'),
     t1: '國家級結構安全巨擘',
     t2: '結構設計 陳村林',
     t3: '凱巨工程顧問',
     t4: '大直｜躍大直<br/>天母｜聯上天母<br/>松山｜華固敦品<br/>內湖｜長虹天璽<br/>新莊｜遠雄九五'
   },
   {
-    img: getImg('./s5/4'),
-    avatar: getImg('./s5/d'),
+    img: getImg('s5/4'),
+    avatar: getImg('s5/d'),
     t1: '國家建築金質獎肯定',
     t2: '營造工程 鄒開鑄',
     t3: '森城營造',
