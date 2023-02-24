@@ -41,7 +41,7 @@
       .t1 {
       font-family: 'Noto Serif TC';
       font-weight: 700;
-      font-size: size(61);
+      font-size: size(56);
       letter-spacing: 0.05em;
       color: #1E1B1B;
     }
@@ -49,12 +49,12 @@
       width: size(1);
       height: size(64);
       background-color: #C5A260;
-      margin: 0 size(67);
+      margin: 0 size(40);
     }
     .t2 {
       font-family: 'Noto Serif TC';
       font-weight: 700;
-      font-size: size(49);
+      font-size: size(44);
       letter-spacing: 0.05em;
       color: #1E1B1B;
       margin-right: size(37);
