@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto  flex flex-col items-center justify-between"> 
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
@@ -110,6 +110,8 @@
   z-index: 50;
   margin-bottom: 0;
 
+
+
   .logo {
     width: size(367);
     height: size(172);
@@ -131,7 +133,7 @@
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-      // border-radius: 9999px;
+    border-radius: 1.9em;
       font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0.06em;
@@ -147,7 +149,7 @@
         color: #fff;
 
         img {
-          filter: brightness(0) invert(1);
+          filter:brightness(0) invert(1);
         }
       }
 
@@ -169,6 +171,8 @@
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
+        margin-right: -4em;
+        padding-right: 4em;
 
         &::before {
           content: "";
@@ -184,7 +188,7 @@
 
       &.googlemap {
         flex:1;
-      background-color: rgba(255,255,255,0.2);
+      background-color: #969696;
       border-left-width: 0;
         color: #fff;
 
@@ -193,7 +197,7 @@
         }
 
         &:hover {
-        background-color: #C29267;
+        background-color: #7EAA46;
           color: #fff;
         }
       }
@@ -238,8 +242,8 @@
     min-width:0;
     height: sizem(400);
     // border-radius: sizem(68);
-    padding: sizem(50) sizem(0);
-    margin-top: sizem(60);
+    padding: 0 0 sizem(50) 0;
+    margin-top: sizem(200);
     position: relative;
     justify-content: space-between;
 
@@ -261,7 +265,6 @@
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
-          border-radius: sizem(0);
 
         img {
           max-width: sizem(27);
@@ -271,9 +274,12 @@
         }
 
         &.address {
-          border-radius: sizem(0) sizem(0) 0 0;
-          padding: 1.1em 0;
-          margin-top: sizem(20);
+      //    border-radius: sizem(0) sizem(0) 0 0;
+
+          padding: 1.1em 0 1.1em 0;
+          margin: sizem(20) auto 0;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
 
           &::before {
             width: 100%;
@@ -284,11 +290,13 @@
         }
 
         &.address+div {
-          border-radius: 0 0 sizem(0) sizem(0);
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        //  border-radius: 0 0 sizem(0) sizem(0);
         }
       &.googlemap {
         border-top-width: 0;
-      border-left-width: 2px;
+    //  border-left-width: 2px;
       }
       }
 

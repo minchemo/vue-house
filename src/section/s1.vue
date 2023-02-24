@@ -1,6 +1,6 @@
 <template>
   <article class="s1">
-    <!--  --><img class="i0" src="./s1/pc.jpg" alt="">
+    <!-- <img class="i0" src="./s1/mo.jpg" alt=""> -->
     <div class="sakura">
     <div class="sakura3">
     <img src="./s1/sakura3.png" alt="">
@@ -13,7 +13,7 @@
     <div class="t1">十足天地  十足人生
 </div>
     <div class="t2">｜5MINS梅花湖｜60-65坪｜太陽能電梯別墅｜</div>
-    <div class="t3">搶先預約</div>
+    <div class="t3" @click="scrollTo('.order')">搶先預約</div>
 </div>
 
 
@@ -36,17 +36,13 @@
   .i0{position: absolute;top: 0;left: 0;width: 100%;
   opacity: .5;z-index: 3;
   }
-  @keyframes sakura {
-      to {
-        transform:translateY(0);
-
-      }
-    }
   .sakura {
+    // 動態寫在 order.vue 裡了
     @apply absolute;
     top: 0;
     right: 0;
     width: size(605);
+    height: 100%;
     .sakura1{
     @apply relative;
     width:100%;
@@ -60,7 +56,7 @@
     @apply absolute;
     width: 48%;
     right: 0%;
-    top: 30%;
+    top:calc(40% + (80 - 1080 * .4) * 100vw / 1920 );
     transform:rotate(3deg)skewY(3deg);
     transform-origin: 100% 100%;
     animation: sakura 2s ease-in-out infinite alternate-reverse; 
@@ -70,7 +66,7 @@
     width: 0%;
     height: auto;
     right: 9.5%;
-    top: 120%;
+    top:calc(50% + (180 - 1080 * .5) * 100vw / 1920 );
     border-radius: 0 0 0 100%;
     animation: sakura3 8s  infinite; 
         opacity: 1;
@@ -78,28 +74,11 @@
     img{float: right;
     width: size(417);}
   }
-  @keyframes sakura3 {
-      75% {
-    width: 100%;
-    border-radius: 0 0 0 0%;
-        opacity: 1;
-
-      }
-      80% {
-    width: 100%;
-        opacity: 0;
-    border-radius: 0 100% 0 0%;}
-      100% {
-    width: 100%;
-        opacity: 0;
-    border-radius: 0 100% 0 0%;
-      }
-    }
   }
   .txt {
     @apply absolute;
-    right:size(110);
-    top: size(480);
+    right:size(100);
+    top:calc(70% + (480 - 1080 * .7) * 100vw / 1920 );
 font-weight: 700;
 font-size:size(26);
 text-align: center;
@@ -121,6 +100,9 @@ font-size:1.85em;
 font-weight: 500;
 letter-spacing: 0.66em;
     margin-top: 1.5em;
+      margin-right: -.66em;
+      cursor: pointer;
+      transition: all .5s;
     &::after,&::before{
       content: "";
       width: 2em;
@@ -130,25 +112,23 @@ letter-spacing: 0.66em;
       display: inline-block;
       vertical-align: middle;
     }
-  }
-  .bird {
-    @apply absolute;
-    width: size(505.45);
-    left: size(813.36);
-    bottom: size(191.55);
-    animation: fly 5s linear infinite alternate-reverse;  
-    transform: rotate(0);
+    &:hover{
+color: #294211;
 
-    @keyframes fly {
+transform:scale(1.2);
+   // opacity: 1;
+   // transform-origin: 50% 50%;
+   // animation: hover 1s linear infinite ; 
+
+    }
+  } 
+   @keyframes hover {
       to {
-        transform:translateY(-20%)scale(1.2)rotate(-10deg);
+    transform:scaleY(2);
+    opacity: 0;filter: blur(5px);
 
       }
     }
-  }
-  .tree {
-    width: size(1013.92);
-  }
 }
   
 /* 螢幕尺寸標準 */
@@ -158,32 +138,65 @@ letter-spacing: 0.66em;
 @media screen and (max-width: 767px) {
 
   .s1 {
-    min-height: sizem(604);
-    max-height: sizem(604);
+    min-height: sizem(692);
+    max-height: sizem(812);
+  background-image:url("./s1/bgm.png");
+  background-size: 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  .sakura {
+    width: sizem(275);
+    height: 100%;
+    .sakura2{
+    top: calc(20% - #{sizem(150)});
+  }
+    .sakura3{
+    top: calc(30% - #{sizem(150)});
+    right: 10%;
+    img{
+    width: sizem(220);}
+  }
+  }
+  .txt {
+    @apply relative;
+    right:0;
+    top:0;
+    margin: auto;
+font-size:sizem(15);
+  }
 
   .logo {
-    width: sizem(207.78);
-    margin-bottom: sizem(37.08)
+    width: sizem(160);
+    margin-bottom: 1.9em;
+    margin-top: 1.1em;
   }
   .t1 {
-    width: sizem(155.56);
-    margin-bottom: sizem(97.23)
+font-size:2.1em;
   }
-  .bird {
-    @apply absolute;
-    width: sizem(320.22);
-    left: sizem(31.28);
-    bottom: sizem(122.5);
-  }
-  .tree {
-    width: 100%;
+  .t3 {
+font-size:1.5em;text-align: right;
+letter-spacing: 0.5em;
+      margin-right: -.3em;
+    margin-top: 1.7em;
+    &::after,&::before{
+      width: 1.3em;
+      margin: 0 .5em 0 0em;
+    }
   }
   }
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { inject, computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
 </script>

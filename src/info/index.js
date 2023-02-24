@@ -14,18 +14,19 @@ export default {
     fbMessage: "https://m.me/107608068785783/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "清景麟資產有限公司"],
-        ["工程營造", "力洋營造"],
-        ["建築設計", "大磊建築師事務所"],
-        ["燈光設計", "旭川光禾照明設計"],
-        ["公設設計", "盼達創意事業"],
-        ["基地面積", "約2180坪"],
-        ["房型規劃", "2-3房"],
-        ["企劃銷售", `<img class="w-full" src="${new URL(`../section/form/comp.png`, import.meta.url).href}">`],
+        ["投資興建", "長勝國際建設有限公司"],
+        ["格局規劃", "60-65坪‧雙主臥‧四套房"],
+        ["建築設計", "張宗祺建築師事務所 / <br>陳宜宏設計工作室"],
+        ["超級優勢", "太陽能綠電‧電梯別墅‧社區公園"],
+        ["工程營造", "宜錦營造有限公司"],
+        ["建照號碼", "(112)(1)(3)建管建字第0004~00056號"],
+      //  ["房型規劃", "2-3房"],
+      //  ["企劃銷售", `<img class="w-full" src="${new URL(`../section/form/comp.png`, import.meta.url).href}">`],
     ],
     gtmCode: ["GTM-MQRTZPS","GTM-M87MK5M"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
-    // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
+    // 6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz  主1
+    // 6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC 主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {

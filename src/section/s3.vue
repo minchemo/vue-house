@@ -59,69 +59,25 @@ text-indent: 1.22em;
 @media screen and (max-width: 767px) {
 
   .s3 {
-  height: sizem(730);
-  flex-direction: column;
-  gap: sizem(40);
-
-  .left {
-    flex-basis: sizem(297);
-    width: 100%;
-    height: sizem(297);
-    background-image: url('@/section/s3/main.jpg');
-    background-size: cover;
-
-    .t1 {
-      font-size: sizem(12);
-      line-height: 150%;
-      left: sizem(18);
-      top: sizem(170.5);
-    }
-    .en {
-      @apply absolute;
-      width: sizem(262);
-      left: sizem(16);
-      bottom: sizem(54);
-    }
-    .caption {
-      right: sizem(11.8);
-      bottom: unset;
-      top: 100%;
-      font-size: sizem(12);
-      color: #595758
-    }
+  height: sizem(500);
   }
-  .right{
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #595758;
-    padding: 0 sizem(32.5);
-    .t1 {
-      font-size: sizem(19);
-      margin-bottom: sizem(5)
-    }
-    .t2 {
-      font-size: sizem(12);
-    }
-
-    .boxes {
-      @apply flex; 
-      gap: sizem(10);
-      margin-top: sizem(35);
-      .box {
-        width: sizem(310);
-        img {
-          margin-bottom: sizem(5)
-        }
-        p {
-          font-size: sizem(12);
-        }
-      }
-    }
-    
+.img{
+    top:sizem(220);
+    width:sizem(370);
+    .logo{
+    width: 23%;
+    right: 14%;
+    top: -23.5%;}
+  
   }
+  .txt {
+    left:0;right: 0;
+    margin: auto;
+    top: sizem(50);
+font-size:sizem(14);
+.t1{
+font-size:1.8em;
+}
   }
 }
 </style>

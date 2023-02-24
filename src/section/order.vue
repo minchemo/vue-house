@@ -51,9 +51,17 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFFF00] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
+
+      
+     <div class="sakura">
+    <div class="sakura3">
+    <img src="@/section/s1/sakura3.png" alt="">
+</div>
+    <img class="sakura2" src="@/section/s1/sakura2.png" alt="">
+</div>
       <Policy />
 
       <!-- Recaptcha -->
@@ -82,6 +90,33 @@
 @import "@/assets/style/function.scss";
 
 
+@keyframes sakura {
+      to {
+        transform:translateY(0);
+
+      }
+    }
+.sakura {
+  @keyframes sakura3 {
+      75% {
+    width: 100%;
+    border-radius: 0 0 0 0%;
+        opacity: 1;
+      }
+      80% {
+    width: 100%;
+        opacity: 0;
+    border-radius: 0 100% 0 0%;}
+      100% {
+    width: 100%;
+        opacity: 0;
+    border-radius: 0 100% 0 0%;
+      }
+    }
+  }
+
+
+
 .order-section {
 /* background-image: url('@/section/form/bg.jpg');
   background-position: top;
@@ -89,10 +124,38 @@
   background-size: cover; */
   // padding-bottom: size(90);
   position: relative;
-  min-height: size(1924);
+  min-height: size(800);
   // padding-top: size(406);
   // overflow: hidden;
 
+  .sakura {
+    @apply absolute;
+    bottom: size(250);
+    left: 0;
+    width: size(800);
+    transform: scaleX(-1);
+    .sakura2{
+    @apply relative;
+    width: 48%;
+    float: right;
+    transform:rotate(3deg)skewY(3deg);
+    transform-origin: 100% 100%;
+    animation: sakura 2s ease-in-out infinite alternate-reverse; 
+  }
+  .sakura3{
+    @apply absolute;
+    width: 0%;
+    height: auto;
+    right: 9.5%;
+    top: 50%;
+    border-radius: 0 0 0 100%;
+    animation: sakura3 8s  infinite; 
+        opacity: 1;
+    overflow: hidden;
+    img{float: right;
+    width: size(417);}
+  }
+  }
   .bg-image {
     position: absolute;
     width: 100%;
@@ -186,14 +249,27 @@
 }
 
 @media screen and (max-width:768px) {
-  .order-section {
-    background-image: url('@/section/form/bgm.jpg');
-    min-height: sizem(1564);
-    padding-bottom: sizem(0);
-    position: relative;
-    // overflow: hidden;
-    padding-top: sizem(200);
 
+
+
+
+  .order-section {
+  //  background-image: url('@/section/form/bgm.jpg');
+    min-height: sizem(800);
+ //   padding-bottom: sizem(0);
+   // position: relative;
+    // overflow: hidden;
+  //  padding-top: sizem(200);
+
+
+  .sakura {
+    bottom: sizem(420);
+    width: sizem(400);
+    .sakura3{
+    img{
+    width: sizem(250);}
+  }
+  }
     .bg-image {
       position: absolute;
       width: 100%;
@@ -204,22 +280,22 @@
   }
 
   .order {
-    width: 100%;
+   
     // border-radius: sizem(68) sizem(68) 0 0;
-    padding-top: sizem(0);
-    margin-top: sizem(0);
-    padding-bottom: sizem(60);
+    padding-top:0;
+    margin-top:0;
+    padding-bottom: 0;
+
+    .order-title {
+      width: sizem(310);
+      font-size: sizem(29);
+      font-weight: 700;
+      margin-bottom: sizem(35) !important;
+    }
 
     .order-title-img {
       width: sizem(315);
       margin-bottom: sizem(22);
-    }
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
     }
 
     .cus-divider {
@@ -230,12 +306,6 @@
       background-color: #055F76;
     }
 
-    .order-title {
-      width: sizem(118);
-      font-size: sizem(29);
-      font-weight: 700;
-      margin-bottom: sizem(35) !important;
-    }
 
 
     .form {

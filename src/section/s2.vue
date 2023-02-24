@@ -41,7 +41,15 @@ background: linear-gradient(to bottom,  rgba(18,112,205,1) 0%,rgba(18,167,229,1)
     transform-origin: 50% 0;
     animation: cloud 20s linear infinite ; 
 background-size: 50% auto;}
-img{@apply absolute;bottom: 0;left: 0;}
+img{@apply absolute;bottom: 0;left: 0;width: 100%;}
+
+&::after{@apply absolute;
+  bottom: 0;left: 0;content: "";
+  display: block;
+  width: 100%;
+ height: size(700);
+ background: linear-gradient(to bottom, rgba(75,103,48,0) 0%,rgba(75,103,48,1) 100%);
+}
   }
   .txt {
   @apply relative;
@@ -78,36 +86,33 @@ text-indent: 0.71em;
 @media screen and (max-width: 767px) {
 
   .s2 {
-  height: sizem(604);
-  background-image: url('@/section/s2/bg_m.jpg');
+  height: sizem(610);
+  .bg{
+    background: linear-gradient(to bottom,  rgb(13, 107, 202) 0%,rgba(18,167,229,1) 28%,rgba(19,203,235,1) 40%,rgba(161,221,235,1) 50%,rgba(188,219,230,1) 70%);
+.cloud{
+  width: 200%;
+ height: sizem(140);
+ margin-top: sizem(240);}
+img{
+  left: -25%;width: 140%;
+}
+&::after{
+ height: sizem(60);
+}
+}
   .txt {
-    left: sizem(170.66);
-    bottom: sizem(160.3);
-    .t1 {
-      font-size: sizem(20);
-      line-height: sizem(29);
-    }
-    .t2 {
       font-size: sizem(12);
-      .t-one{
-        font-size: sizem(18);
-        line-height: sizem(27);
-      }
-      .t-three{
-        font-size: sizem(14);
-        line-height: sizem(21);
-      }
+margin:sizem(85) auto auto;
+    .t1 {
     }
-  }
-  .logo {
-    width: sizem(107.89);
-    top: sizem(50);
-    left: sizem(24);
-  }
-  .one {
-    width: sizem(335);
-    top: sizem(14.38);
-    left: 0;
+    .l{height: 4.2em;margin:2.8em auto 1.7em auto;}
+    .t2 {
+letter-spacing: 0.3em;
+text-indent: 0.3em;
+    }
+    .t3 {
+      font-size:1.7em;margin:.4em auto auto auto;
+    }
   }
   }
 }
