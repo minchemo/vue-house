@@ -42,9 +42,9 @@
 
           <select class="select w-full rounded-full" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
-            <option value="28">28坪</option>
-            <option value="36">36坪</option>
-            <option value="47">47坪</option>
+            <option value="28坪">28坪</option>
+            <option value="36坪">36坪</option>
+            <option value="47坪">47坪</option>
           </select>
 
           <select class="select w-full rounded-full" v-model="formData.city">
