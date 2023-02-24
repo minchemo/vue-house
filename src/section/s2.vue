@@ -1,6 +1,6 @@
 <template>
   <article class="s2">
-    <div class="bg" data-aos="fade-up" data-aos-delay="200">
+    <div class="bg" uk-parallax="viewport:.9;y:0,-16%,-16%;" >
     <div class="cloud"></div>
       <img src="./s2/bg.jpg" alt="" srcset="" />
     </div>
@@ -118,7 +118,9 @@ text-indent: 0.3em;
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+import {  computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
