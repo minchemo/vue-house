@@ -6,12 +6,12 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "高雄市小港區高松路99號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1842.0860368320316!2d120.36925000000001!3d22.572666700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x56bbb594d965c250!2zMjLCsDM0JzIxLjYiTiAxMjDCsDIyJzA5LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1673336378815!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/WZGwT3xyTRfk61To6",
-    phone: "0800-363-888",
-    fbLink: "https://www.facebook.com/107608068785783/",
-    fbMessage: "https://m.me/107608068785783/",
+    address: "宜蘭縣羅東鎮XX路X段XXX號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14501.198079217196!2d121.7651883397181!3d24.68222844352941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e5d5af835387%3A0x7842ee7fc5ee1e7f!2zMjY15a6c6Jit57ij576F5p2x6Y6u576F5p2x!5e0!3m2!1szh-TW!2stw!4v1677227225869!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/79TBu7ss1NTnDg4j6",
+    phone: "0900-799-888",
+    fbLink: "https://www.facebook.com//",
+    fbMessage: "https://m.me//",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "長勝國際建設有限公司"],
@@ -23,7 +23,7 @@ export default {
       //  ["房型規劃", "2-3房"],
       //  ["企劃銷售", `<img class="w-full" src="${new URL(`../section/form/comp.png`, import.meta.url).href}">`],
     ],
-    gtmCode: ["GTM-MQRTZPS","GTM-M87MK5M"], // 可放置多個
+    gtmCode: ["GTM-MQRTZPS"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // 6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz  主1
     // 6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC 主2

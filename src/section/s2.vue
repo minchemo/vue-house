@@ -1,14 +1,14 @@
 <template>
   <article class="s2">
-    <div class="bg" uk-parallax="viewport:.9;y:0,-16%,-16%;" >
+    <div class="bg" uk-parallax="viewport:.7;y:0,-30%,-30%; easing: 1" >
     <div class="cloud"></div>
       <img src="./s2/bg.jpg" alt="" srcset="" />
     </div>
-    <div class="txt">    
-      <div class="t1" data-aos="fade-down">如果 可以選擇</div>
-      <div class="l" data-aos="fade-down" data-aos-delay="200"></div>
-      <div class="t2" data-aos="fade-down" data-aos-delay="400">The Best Choice ‧ New Second Life</div>
-      <div class="t3" data-aos="fade-down" data-aos-delay="600">晴耕雨讀 田園詩夢</div>
+    <div class="txt" uk-parallax="viewport:.6;y:80%,60%,50%,30%">
+      <div class="t1" data-aos="zoom-in" data-aos-duration="0" >如果 可以選擇</div>
+      <div class="l" data-aos="zoom-in" data-aos-duration="200" ></div>
+      <div class="t2" data-aos="zoom-in" data-aos-duration="400" >The Best Choice ‧ New Second Life</div>
+      <div class="t3" data-aos="zoom-in" data-aos-duration="800" >晴耕雨讀 田園詩夢</div>
     </div>
   </article>
 </template>
@@ -18,11 +18,19 @@
 
 .s2 {
   @apply relative overflow-hidden w-full;
- height: size(2000);
+  height: size(1400);
   background-size: cover;
   background-position: left top ;
-  .bg{ @apply absolute;
-    height: 100%;top: 0;left: 0;width: 100%;
+
+&::after{
+  @apply absolute;
+  bottom: 0;left: 0;content: "";
+  display: block;
+  width: 100%;
+ height: size(300);
+ background: linear-gradient(to bottom, rgba(75,103,48,0) 0%,rgba(75,103,48,1) 100%);
+}
+  .bg{ @apply absolute;top: 0;left: 0;width: 100%; height: size(2000);
 background: linear-gradient(to bottom,  rgba(18,112,205,1) 0%,rgba(18,167,229,1) 22%,rgba(19,203,235,1) 35%,rgba(161,221,235,1) 43%,rgba(188,219,230,1) 50%);
    
   @keyframes cloud {
@@ -39,17 +47,9 @@ background: linear-gradient(to bottom,  rgba(18,112,205,1) 0%,rgba(18,167,229,1)
   background-image: url("./s2/cloud.png");
     transform:translateX(-50%);
     transform-origin: 50% 0;
-    animation: cloud 20s linear infinite ; 
+    animation: cloud 130s linear infinite ; 
 background-size: 50% auto;}
 img{@apply absolute;bottom: 0;left: 0;width: 100%;}
-
-&::after{@apply absolute;
-  bottom: 0;left: 0;content: "";
-  display: block;
-  width: 100%;
- height: size(700);
- background: linear-gradient(to bottom, rgba(75,103,48,0) 0%,rgba(75,103,48,1) 100%);
-}
   }
   .txt {
   @apply relative;
@@ -61,7 +61,7 @@ img{@apply absolute;bottom: 0;left: 0;width: 100%;}
       font-weight: 400;
 letter-spacing: 0.1em;
 text-indent: 0.1em;
-margin:size(330) auto auto;
+margin:size(0) auto auto;
     .t1 {
       font-size:2.1em;
       line-height: size(60);
@@ -86,23 +86,24 @@ text-indent: 0.71em;
 @media screen and (max-width: 767px) {
 
   .s2 {
-  height: sizem(610);
+  height: sizem(550);
+&::after{
+ height: sizem(60);
+}
   .bg{
-    background: linear-gradient(to bottom,  rgb(13, 107, 202) 0%,rgba(18,167,229,1) 28%,rgba(19,203,235,1) 40%,rgba(161,221,235,1) 50%,rgba(188,219,230,1) 70%);
+  height: sizem(790);
+    background: linear-gradient(to bottom,  rgb(13, 107, 202) 0%,rgba(18,167,229,1) 43%,rgba(19,203,235,1) 55%,rgba(161,221,235,1) 61%,rgba(188,219,230,1) 66%);
 .cloud{
   width: 200%;
  height: sizem(140);
- margin-top: sizem(240);}
+ margin-top: sizem(420);}
 img{
   left: -25%;width: 140%;
-}
-&::after{
- height: sizem(60);
 }
 }
   .txt {
       font-size: sizem(12);
-margin:sizem(85) auto auto;
+margin:sizem(5) auto auto;
     .t1 {
     }
     .l{height: 4.2em;margin:2.8em auto 1.7em auto;}

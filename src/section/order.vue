@@ -176,7 +176,8 @@
     font-weight: 500;
     color: #fff;
     // border-bottom: size(2) solid #C9A063;
-    width:size(920);
+    width: size(920);
+    min-width: 680px;
     margin: 0 auto;
     margin-bottom: size(50) !important;
     background: #364724;
@@ -256,7 +257,7 @@
   .order-section {
   //  background-image: url('@/section/form/bgm.jpg');
     min-height: sizem(800);
- //   padding-bottom: sizem(0);
+    // padding-bottom: sizem(63);
    // position: relative;
     // overflow: hidden;
   //  padding-top: sizem(200);
@@ -284,10 +285,11 @@
     // border-radius: sizem(68) sizem(68) 0 0;
     padding-top:0;
     margin-top:0;
-    padding-bottom: 0;
+    padding-bottom: 16.8vw;
 
     .order-title {
       width: sizem(310);
+    min-width: 0;
       font-size: sizem(29);
       font-weight: 700;
       margin-bottom: sizem(35) !important;
