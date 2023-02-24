@@ -30,7 +30,7 @@
   height: size(1080);
   padding: size(32) size(30) size(36);
   background-size: cover;
-  background-image: url('@/section/bg.jpg');
+  background-image: url('@/section/bg.webp');
 
   .main {
     @apply grow flex items-center justify-center text-[#1E1B1B];
@@ -97,7 +97,7 @@
   @apply flex-col;
     height: sizem(605);
     padding: sizem(10) sizem(10) sizem(10);
-    background-image: url('@/section/bgm.jpg');
+    background-image: url('@/section/bgm.webp');
 
   .main {
     .caption {

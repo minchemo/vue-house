@@ -39,7 +39,7 @@
   height: size(1080);
   padding: size(16);
   background-size: cover;
-  background-image: url('@/section/bg.jpg');
+  background-image: url('@/section/bg.webp');
 
   .main {
     @apply grow flex items-center justify-center text-[#1E1B1B] w-full;
@@ -109,7 +109,7 @@
 
   .s10 {
     height: sizem(667);
-    background-image: url('@/section/bgm.jpg');
+    background-image: url('@/section/bgm.webp');
     padding: sizem(89) sizem(8);
 
     
@@ -166,8 +166,8 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`${path}.jpg`, import.meta.url).href;
-  return new URL(`${path}_m.jpg`, import.meta.url).href
+  if (!globals.$isMobile()) return new URL(`${path}.webp`, import.meta.url).href;
+  return new URL(`${path}_m.webp`, import.meta.url).href
 }
 
 const splide = ref();

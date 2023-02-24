@@ -20,16 +20,16 @@
         <img class="custitle" data-aos="fade-up" data-aos-delay="600" src="@/section/form/custitle.png" alt="" srcset="">
         <img class="custitle2" v-if="!$isMobile()" src="@/section/form/title.svg" alt="" srcset="">
         <img class="custitle2" v-else src="@/section/form/title_m.svg" alt="" srcset="">
-        <img data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.png" alt=""
+        <img data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.webp" alt=""
           srcset="">
       </div>
 
       <!-- Custom Image -->
-      <img class="leaf l" v-if="!$isMobile()" src="@/section/s1/leaf_l.png" alt="" srcset="">
-      <img class="leaf r" v-if="!$isMobile()" src="@/section/s1/leaf_r.png" alt="" srcset="">
-      <img class="leaf mb" v-if="$isMobile()" src="@/section/s1/leaf_mb.png" alt="" srcset="">
-      <img class="leaf b" v-if="!$isMobile()" src="@/section/s1/leaf_b.png" alt="" srcset="">
-      <img class="leaf b" v-else src="@/section/s1/leaf_b_m.png" alt="" srcset="">
+      <img class="leaf l" v-if="!$isMobile()" src="@/section/s1/leaf_l.webp" alt="" srcset="">
+      <img class="leaf r" v-if="!$isMobile()" src="@/section/s1/leaf_r.webp" alt="" srcset="">
+      <img class="leaf mb" v-if="$isMobile()" src="@/section/s1/leaf_mb.webp" alt="" srcset="">
+      <img class="leaf b" v-if="!$isMobile()" src="@/section/s1/leaf_b.webp" alt="" srcset="">
+      <img class="leaf b" v-else src="@/section/s1/leaf_b_m.webp" alt="" srcset="">
 
 
       <!-- Form -->
@@ -104,7 +104,7 @@
 
 
 .order-section {
-  background-image: url('@/section/form/bg.png');
+  background-image: url('@/section/form/bg.webp');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -329,7 +329,7 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    background-image: url('@/section/form/bgm.png');
+    background-image: url('@/section/form/bgm.webp');
     min-height: sizem(1774);
     padding-bottom: sizem(0);
     position: relative;
