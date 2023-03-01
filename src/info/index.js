@@ -23,7 +23,7 @@ export default {
       //  ["房型規劃", "2-3房"],
       //  ["企劃銷售", `<img class="w-full" src="${new URL(`../section/form/comp.png`, import.meta.url).href}">`],
     ],
-    gtmCode: ["GTM-MQRTZPS"], // 可放置多個
+    gtmCode: ["GTM-565Q52X"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // 6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz  主1
     // 6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC 主2
