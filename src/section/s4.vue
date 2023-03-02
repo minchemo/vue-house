@@ -5,21 +5,19 @@
       <img class="t2" data-aos="fade-down" data-aos-delay="400" src="@/section/s4/internationalpark.svg" alt="" srcset="">
       <img class="t3" data-aos="fade-down" data-aos-delay="600" src="@/section/s4/centralpark.svg" alt="" srcset="">
     </div>
-    <div class="bottom">
-      <div>
-        <div class="t1" data-aos="fade-down" data-aos-delay="200" >開窗 世界級公園視野</div>
-        <div class="t2" data-aos="fade-down" data-aos-delay="400">一次同步紐約、倫敦、巴黎、東京、台北…<br v-if="$isMobile()"/>都會公園自成高端聚落，綠地不敗、<br v-if="!$isMobile()" />
-          抬漲未來<br v-if="$isMobile()"/><span v-else>，</span>小港首選正3萬坪森林公園第一排，入手趁現在
+    <div class="swiper">
+    <swiper :navigation="true" :options="swiperOption" ref="mySwiper" data-aos="flip-up" data-aos-delay="200" class="item-list flex-jb flex-as">
+      <swiper-slide v-for="(slide, index) in slideList" :index="index" :key="slide.img" :class="`item`">
+        <img :src="slide.img" alt>
+        <div class="slide-name absolute" v-html="slide.name"></div>
+      </swiper-slide>
+    </swiper>
+        <div class="swipe-btns absolute flex-ac flex-jb">
+          <div class="prev-btn" slot="button-prev" v-if="isMobile"></div>
+          <div class="next-btn" slot="button-next" v-if="isMobile"></div>
         </div>
-      </div>
-      <div class="imgs">
-        <img  data-aos="fade" data-aos-delay="200" src="@/section/s4/1.jpg" alt="" srcset="">
-        <img  data-aos="fade" data-aos-delay="400" src="@/section/s4/2.jpg" alt="" srcset="">
-        <img  data-aos="fade" data-aos-delay="600" src="@/section/s4/3.jpg" alt="" srcset="">
-        <img  data-aos="fade" data-aos-delay="800" src="@/section/s4/4.jpg" alt="" srcset="">
-      </div>
-      <div class="caption">以上皆實景示意圖</div>
-    </div>
+        </div>
+
   </article>
 </template>
 
@@ -164,8 +162,88 @@
 }
 </style>
 <script setup>
+import 'swiper/dist/css/swiper.css';
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import { computed, getCurrentInstance, ref } from 'vue';
+export default {
+
+  components: {
+    swiper,
+    swiperSlide,
+  },
+
+  data() {
+    return {
+      info,
+      isPC,
+      isMobile,
+      isTablet,
+      isAnimateBg: true,
+      swiperOption: {
+        slidesPerView: isMobile ? 1 : 3,
+        spaceBetween: 0,
+        allowSlidePrev: isMobile ? true : true,
+        allowSlideNext: isMobile ? true : true,
+        loop: isMobile ? true : false,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction:isMobile ? false : true,
+        },
+         /*
+        slidesPerColumn: isMobile ? 1 : 1,
+       centeredSlides: isMobile ? true : false,
+
+        slideToClickedSlide: isMobile ? true : false,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        effect: 'fade',
+        */
+        navigation: {
+          prevEl: '.prev-btn',
+          nextEl: '.next-btn',
+        },
+      },
+      slideList: [
+        {
+          img: require("./s4/1.jpg"),
+          name: "中部科學園區 實景拍攝",
+        },
+        {
+          img: require("./s4/2.jpg"),
+          name: "台中精密園區 實景拍攝",
+        },
+        {
+          img: require("./s4/3.jpg"),
+          name: "台中工業區 實景拍攝",
+        },
+      ],
+    }
+  },
+
+  methods: {
+  },
+
+  mounted() {
+    if (this.isMobile) {
+      this.toggleTimer = false
+    }
+  },
+
+  created() {},
+
+  computed: {
+    // isCurrent() {
+    //   return this.slideIndex
+    // },
+  },
+};
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
+
+
 </script>

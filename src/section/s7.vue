@@ -6,7 +6,7 @@
     </div>
     <div class="txt">
       <div class="t1" data-aos="fade-down" data-aos-delay="200">物超所值 花園泳池會館</div>
-      <div class="t2" data-aos="fade-down" data-aos-delay="400">【清景麟‧蒔築】，由外而內，化身頂尖聚樂部<br />
+      <div class="t2" data-aos="fade-down" data-aos-delay="400">【清景麟‧巴克禮ONEPARK】，由外而內，化身頂尖聚樂部<br />
         設有運動吧、花園泳池SPA，與法式鐵板燒等獨家設施<br />
         重金禮聘旅美國際大師蘇點忠，演繹出飯店級新奢空間品味
       </div>
