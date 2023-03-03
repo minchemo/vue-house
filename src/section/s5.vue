@@ -7,7 +7,7 @@
         <div class="t2" data-aos="fade-right">三十年甲級營造－鐵冠建設、昌譽營造，抱持誠懇、用心的專業服務原則，以卓越施工品質、工程實力，認真看待看得見與看不見的細節，打造適合人居的完美建築。
         </div>
         <div class="badge1" data-aos="fade-right">業績</div>
-        <div class="t3" data-aos="fade-right">Hi台北、中山直美、翠松園、墨清院、漫活時代</div>
+        <div class="t3" data-aos="fade-right">Hi台北、中山直美、翠松園、墨濤院、漫活時代</div>
       </div>
       <div class="work">
         <div class="slider">
@@ -283,6 +283,6 @@ const slides =
     new URL(`./s5/5.jpg`, import.meta.url).href,
   ];
 
-const captions = ["Hi台北", "中山直美", "翠松園", "墨清院", "漫活時代"]
+const captions = ["Hi台北", "中山直美", "翠松園", "墨濤院", "漫活時代"]
 </script>
   

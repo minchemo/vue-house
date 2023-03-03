@@ -103,14 +103,11 @@
     width: size(280);
     right: size(586);
     bottom: size(130);
-    animation: wave2 3s alternate-reverse infinite ease-in-out;
+    transform:translateX(-15%);
+    animation: wave2 3s alternate infinite ease-in-out;
     @keyframes wave2 {
-      from {
-        transform: translate(-4%, -1%) skewX(2deg);
-      }
       to {
-
-        transform: translate(4%, 1%) skewX(-2deg);
+        transform:translateX(0);
       }
     }
   }
