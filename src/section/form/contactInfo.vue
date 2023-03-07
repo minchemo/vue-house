@@ -15,7 +15,7 @@
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="flex justify-between w-full contact-item-box no-gap">
+    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
         <div>{{ info.address }}</div>
       </div>
@@ -46,7 +46,7 @@
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'gmap'">
+      @click="modalOpen = true; modalType = 'gmap'" v-if="info.address">
       <img src="@/section/form/gmap.svg" alt="蒔築" srcset="" />
       <div>地圖導航</div>
     </div>

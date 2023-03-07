@@ -6,7 +6,7 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "宜蘭縣羅東鎮XX路X段XXX號",
+    // address: "宜蘭縣羅東鎮XX路X段XXX號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14501.198079217196!2d121.7651883397181!3d24.68222844352941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e5d5af835387%3A0x7842ee7fc5ee1e7f!2zMjY15a6c6Jit57ij576F5p2x6Y6u576F5p2x!5e0!3m2!1szh-TW!2stw!4v1677227225869!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/79TBu7ss1NTnDg4j6",
     phone: "0900-799-888",

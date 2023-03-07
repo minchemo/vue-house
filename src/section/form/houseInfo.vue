@@ -44,19 +44,21 @@
     height: auto;
 }
 .info-box {
-    width: size(800);
 
     .title {
         font-size: size(40);
         font-weight: 700;
         color: #FFF;
         border-bottom: size(0) solid #366758;
-        min-width: size(172);
+    width: size(920);
+    min-width: 680px;
         margin: 0 auto;
         margin-bottom: size(50) !important; 
+    background: #364724;
     }
 
     .info-items {
+    width: size(800);
         row-gap: size(20);
         column-gap: size(20);
 
@@ -85,15 +87,17 @@
     }
 
     .info-box {
-        width: sizem(313);
+        width: sizem(315);
         padding: 0;
 
         .title {
             font-size: sizem(29);
-            width: auto;
+      width: 100%;
+    min-width: 0;
         }
 
         .info-items {
+      width: 100%;
             row-gap: sizem(20);
 
             .item {

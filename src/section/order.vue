@@ -20,11 +20,11 @@
           <input type="text" placeholder="手機" class="input w-full rounded-none bg-white/80" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-none bg-white/80" v-model="formData.room_type">
+       <!--    <select class="select w-full rounded-none bg-white/80" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="二房">二房</option>
             <option value="三房">三房</option>
-          </select>
+          </select> -->
 
           <select class="select w-full rounded-none bg-white/80" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
@@ -79,7 +79,7 @@
 
 
     <!-- Map -->
-    <Map />
+    <Map v-if="info.address" />
 
     <!-- HouseInfo -->
     <HouseInfo />
