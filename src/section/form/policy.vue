@@ -85,9 +85,37 @@
         <label for="policy-modal" class="btn">關閉</label>
       </div>
     </div>
+        <label for="policy-modal" class="close relative"></label>
   </div>
 </template>
+<style lang="scss">
+.close{
+  color: #fff;
+  font-size: 1em;
+  width: 2em;
+  height: 2em;
+  align-self: flex-start;
+    margin: 1.1em 0 0 -2em;
 
+  &:after,
+  &:before {
+    position: absolute;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    &:before {
+      transform: rotate(45deg);
+      }
+}
+</style>
 <script setup>
 import info from "@/info"
 </script>

@@ -46,7 +46,7 @@
       </div>
 
       <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control">
+      <div class="flex gap-2 items-center justify-center control z-10">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
