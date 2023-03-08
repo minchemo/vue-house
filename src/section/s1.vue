@@ -6,7 +6,7 @@
       <img class="title1" src="@/section/s1/title1.svg" data-aos="fade-up"/><br>
       <img v-if="!isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
     </div>
-    <div class="tip absolute text-white">TIMELESS TIME</div>
+    <!--div class="tip absolute text-white">TIMELESS TIME</div-->
     <div class="home-openning absolute font-['Noto_Sans_TC']">
       <!--div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div-->
       <img v-if="isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
@@ -38,7 +38,7 @@
 
   .title {
     left: size(1037);
-    top: size(300);
+    top: size(240);
 
     .logo {
       width: size(369);
@@ -97,6 +97,7 @@
       font-weight: 400;
       letter-spacing: 0.07em;
       line-height: size(29);
+      color: #fff;
     }
 
     .line {
@@ -134,10 +135,11 @@
   .w {
     width: 100%;
     overflow: hidden;
-    height: 40vh;
+    height: 50vh;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: size(-250);
+    bottom: size(550);
+    transform: rotate(160deg);
     pointer-events: none;
 
     .w1 {
@@ -223,6 +225,7 @@
     .title {
       left: size-m(99);
       top: size-m(79);
+      z-index: 99;
       
 
       .logo {
@@ -233,6 +236,7 @@
       .title1{
       width: size-m(175);
       margin-top: size-m(30);
+
     }
 
     
@@ -292,7 +296,10 @@
     }
 
     .w {
-      height: 20vh;
+      height: 30vh;
+      width: size-m(500);
+      left: size-m(-50);
+    bottom: size-m(240);
       position: absolute;
     }
 
