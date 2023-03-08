@@ -4,20 +4,22 @@
       <img src="@/section/s2/logo.svg" alt="">
     </div>
     <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="200">好住 是最高難度的精工</div>
+      <div class="t1" data-aos="fade-up" data-aos-delay="200">好住 是讓建築言之有物</div>
       <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">董事長常說，住的好，最要緊<br />
-        高難度的精工，就藏在魔鬼細節裡<br />
+      <div class="t2" data-aos="fade-up" data-aos-delay="400">
+        董事長常說，住的好，最要緊<br />
+        高難度的好住，是藏在魔鬼細節裡的精工<br />
         30年的累積，手腳並到做建築<br />
-        親手畫分寸、配管線、藏梁柱<br />
-        不說大話，但做的，還比畫的好<br />
-        落地實踐，好住又實住<br />
-        不只有高顏值，更有好體質</div>
+        親手畫尺寸、配管線、藏樑柱<br />
+        不說大話，做的更勝圖紙畫的<br />
+        讓一筆一線，轉化成毫釐不差的實踐<br />
+        用一步一腳印，建築城市一世紀風景</div>
     </div>
     <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="200">泰嘉引進國際 回到在地</div>
+      <div class="t1" data-aos="fade-up" data-aos-delay="200">南台灣先驅 開創國際眼界</div>
       <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="400">泰嘉洞見世界之大的寬遠<br />
+      <div class="t2" data-aos="fade-up" data-aos-delay="400">
+        泰嘉洞見世界之大的寬遠<br />
         於是墊高成本腳步、仰起品味肩頭<br />
         向國際頂尖取經，挖掘大師奇想<br />
         收進泰嘉腦袋，揉進靈魂DNA<br />

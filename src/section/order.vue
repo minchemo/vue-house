@@ -26,7 +26,7 @@
             <option value="" selected disabled>需求房型</option>
             <option value="2房">2房</option>
             <option value="3房">3房</option>
-            <option value="4房">4房</option>
+            <option value="店面">店面</option>
           </select>
 
           <select class="select w-full rounded-full" v-model="formData.city">
@@ -89,11 +89,12 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: size(0);
+  padding-bottom: size(90);
   position: relative;
   height: auto;
   padding-top: size(90);
   overflow: hidden;
+  
 
   .z-10 {
     z-index: 10;
@@ -202,7 +203,7 @@
   .order-section {
     // background-image: url('@/section/form/bg_m.png');
     height: auto;
-    padding-bottom: 0;
+    padding-bottom: size-m(80);
     position: relative;
     overflow: hidden;
 
@@ -418,16 +419,16 @@ const send = () => {
       {
         method: "GET"
       }
-    ).then(() => {
-      fetch("contact-form.php", {
-        method: "POST",
-        body: presend,
-      }).then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        }
-        sending.value = false
-      });
+    );
+
+    fetch("contact-form.php", {
+      method: "POST",
+      body: presend,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+      sending.value = false
     });
 
 

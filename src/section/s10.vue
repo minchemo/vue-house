@@ -4,7 +4,8 @@
       <div class="title" data-aos="fade-up" data-aos-delay="0">拓境精品 暖心設備</div>
       <div class="subtitle" data-aos="fade-up" data-aos-delay="200">集結世界優質品牌 細膩匠作</div>
       <div class="items">
-        <div class="item" v-for="item in items1" :class="{'darkbg': item.darkBg}">
+       <!-- <div class="item" v-for="item in items1" :class="{'darkbg': item.darkBg}"  :alt="`${info.caseName}_ogimg`"> -->
+        <div v-for="item in items1"  :class="`item ${item.class}`">
           <img :src="item.icon" alt="" srcset="">
           <p v-html="item.content" data-aos="fade-up" data-aos-delay="0"></p>
         </div>
@@ -23,7 +24,6 @@
     <img class="mo-decor" src="@/section/s10/bg_m.png" alt="" srcset="" v-if="$isMobile()">
   </article>
 </template>
-
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
@@ -73,7 +73,7 @@
         justify-content: center;
         width: size(174);
         height: size(174);
-        padding: size(20);
+        padding: size(15);
         border: size(1) solid #fff;
 
         img {
@@ -87,16 +87,22 @@
           margin-top: auto;
           margin-bottom: 0;
           font-weight: 400;
-          font-size: size(15);
-          line-height: size(22);
+          font-size: size(14);
+          line-height: size(20);
           text-align: center;
           letter-spacing: 0.07em;
           color: #fff;
         }
-
+/*
         &.darkbg {
           background-color: #595757;
           border: size(1.5) solid #595757;
+        }*/
+        &.darkbg {
+          background-color: #595757;
+          border: size(1.5) solid #595757;
+        }
+        &.w100 {display: none;
         }
 
         &.onlyText {
@@ -153,10 +159,14 @@
       }
 
       .items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: size-m(5);
+        //display: grid;
+        //grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        gap: size-m(10);
         margin-top: size-m(28);
+        width: size-m(375);
+        
 
         .item {
           width: size-m(108);
@@ -182,6 +192,12 @@
             background-color: #595757;
             border: size(1.5) solid #595757;
           }
+        &.w100 {width: 100%;
+        height: size(0);
+        border: 0 solid #fff;
+        display: block;
+        padding: 0;
+        }
 
           &.onlyText {
 
@@ -215,43 +231,38 @@ const items1 = [
   {
     icon: new URL("../section/s10/1.svg", import.meta.url).href,
     content: '德國國寶品牌<br/>浴室面盆、龍頭',
-    darkBg: true,
+    class: "darkbg",
   },
   {
     icon: new URL("../section/s10/2.svg", import.meta.url).href,
-    content: '日系時尚美學<br/>主浴免治馬桶<br/>主浴冷暖風機<br/>系統櫥櫃',
+    content: '日系時尚美學<br/>主浴免治馬桶<br/>主浴冷暖風機<br/>系統廚具',
+  },
+  {class: "w100",
   },
   {
     icon: new URL("../section/s10/3.svg", import.meta.url).href,
     content: '日本精品工藝<br/>次浴馬桶',
-    darkBg: true,
-  },
-  {
-    icon: new URL("../section/s10/4.svg", import.meta.url).href,
-    content: '歐洲原廠設計<br/>耐磨環保地壁磚',
-  },
-  {
-    icon: new URL("../section/s10/5.svg", import.meta.url).href,
-    content: '日本第一品牌<br/>瓦斯雙口爐<br/>落地型烘碗機<br/>隱藏式排油煙機',
-    darkBg: true,
+    class: "darkbg",
   },
   {
     icon: new URL("../section/s10/6.svg", import.meta.url).href,
-    content: '德國原裝進口<br/>全棟淨軟水系統',
-  },
-  {
-    icon: new URL("../section/s10/7.svg", import.meta.url).href,
-    content: '獨家設計訂製<br/>堅固耐熱<br/>全實木大門',
-    darkBg: true,
+    content: '德國原裝進口<br/>全棟淨軟水系統<br/>2道式濾淨<br/>可達生飲等級',
   },
   {
     icon: new URL("../section/s10/8.svg", import.meta.url).href,
     content: '領先國際科技<br/>智慧門鎖',
+    class: "darkbg",
+  },
+  {class: "w100",
   },
   {
-    icon: new URL("../section/s10/9.svg", import.meta.url).href,
-    content: '氣密/水密/隔音/<br/>抗風壓氣密窗',
-    darkBg: true,
+    icon: new URL("../section/s10/5.svg", import.meta.url).href,
+    content: '日本第一品牌<br/>瓦斯雙口爐<br/>落地型烘碗機<br/>隱藏式排油煙機',
+  },
+  {
+    icon: new URL("../section/s10/10.svg", import.meta.url).href,
+    content: '日本AICA<br/>艾克抗菌壁板',
+    class: "darkbg",
   },
 ];
 const items2 = [

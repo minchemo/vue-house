@@ -2,11 +2,14 @@
   <article class="s1">
     <div class="title absolute">
       <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
-      <div class="t1"  data-aos="fade-up" data-aos-delay="200">泰嘉 又回楠梓 <br v-if="$isMobile()"/>準備好了嗎？</div>
+      <!--div class="t1"  data-aos="fade-up" data-aos-delay="200">回「嘉」 即刻預約 <br/>高大特區 泰嘉建築經典再現</div-->
+      <img class="title1" src="@/section/s1/title1.svg" data-aos="fade-up"/><br>
+      <img v-if="!isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
     </div>
-    <div class="tip absolute text-white">TIMELESS TIME</div>
+    <!--div class="tip absolute text-white">TIMELESS TIME</div-->
     <div class="home-openning absolute font-['Noto_Sans_TC']">
-      <div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div>
+      <!--div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div-->
+      <img v-if="isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
       <div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div>
       <div class="line">
         <span></span>
@@ -35,7 +38,7 @@
 
   .title {
     left: size(1037);
-    top: size(355);
+    top: size(240);
 
     .logo {
       width: size(369);
@@ -45,11 +48,21 @@
       }
     }
 
+    .title1{
+      width: size(369);
+      margin-top: size(30);
+    }
+
+    .title2{
+      width: size(280);
+      margin-top: size(40);
+    }
+
     .t1 {
       font-size: size(40);
       letter-spacing: 0.07em;
       font-weight: 700;
-      margin-top: size(50);
+      margin-top: size(40);
     }
   }
 
@@ -84,6 +97,7 @@
       font-weight: 400;
       letter-spacing: 0.07em;
       line-height: size(29);
+      color: #fff;
     }
 
     .line {
@@ -121,10 +135,11 @@
   .w {
     width: 100%;
     overflow: hidden;
-    height: 40vh;
+    height: 50vh;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: size(-250);
+    bottom: size(550);
+    transform: rotate(160deg);
     pointer-events: none;
 
     .w1 {
@@ -208,16 +223,28 @@
     position: relative;
 
     .title {
-      left: size-m(110);
+      left: size-m(99);
       top: size-m(79);
+      z-index: 99;
+      
 
       .logo {
-        width: size-m(155);
+        width: size-m(175);
+        margin: 0px auto;
       }
 
+      .title1{
+      width: size-m(175);
+      margin-top: size-m(30);
+
+    }
+
+    
+
       .t1 {
-        font-size: size-m(22);
+        font-size: size-m(20);
         margin-top: size-m(15);
+        text-align: center;
       }
     }
 
@@ -237,6 +264,13 @@
       transform: translateX(-50%);
       gap: 0;
 
+      .title2{
+      width: size-m(175);
+      position: absolute;
+      bottom: size-m(200);
+      top: auto;
+    }
+
       .t1 {
         font-size: size-m(12);
         line-height: size-m(18);
@@ -244,7 +278,7 @@
       }
 
       .t2 {
-        font-size: size-m(7);
+        font-size: size-m(10);
         margin-bottom: size-m(10);
       }
 
@@ -262,7 +296,10 @@
     }
 
     .w {
-      height: 20vh;
+      height: 30vh;
+      width: size-m(500);
+      left: size-m(-50);
+    bottom: size-m(240);
       position: absolute;
     }
 

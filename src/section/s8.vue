@@ -24,7 +24,7 @@
   width: 100%;
   height: size(1184);
   background-color: #7BA9D3;
-  background-image: url('@/section/s8/bg.png');
+  background-image: url('@/section/s8/bg.jpg');
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
