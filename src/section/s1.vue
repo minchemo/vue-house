@@ -1,5 +1,5 @@
 <template>
-  <article class="s1">
+  <article class="s1 relative">
     <div class="title absolute">
       <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
       <!--div class="t1"  data-aos="fade-up" data-aos-delay="200">回「嘉」 即刻預約 <br/>高大特區 泰嘉建築經典再現</div-->
