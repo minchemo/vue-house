@@ -12,7 +12,8 @@
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Serif_TC',serif]">
     <S1 />
-    <S2 />
+    <imgall />
+ <!--  <S2 />
     <S12 />
     <S3 />
     <S4 />
@@ -23,6 +24,7 @@
     <S9 />
     <S10 />
     <S11 />
+    -->
     <Order />
   </div>
 </template>
@@ -40,7 +42,8 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
+import imgall from "@/section/imgall.vue"
+/* import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
@@ -50,7 +53,7 @@ import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
 import S11 from "@/section/s11.vue"
-import S12 from "@/section/s12.vue"
+import S12 from "@/section/s12.vue"  */
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
