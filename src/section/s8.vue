@@ -92,7 +92,7 @@
     @apply flex-col-reverse justify-end;
     height: sizem(609);
     padding: sizem(10);
-    background-image: url('@/section/bgm.webp');
+    background-image: url('@/section/bgm.jpg');
 
   .main {
     @apply relative flex items-center justify-center text-[#1E1B1B];
@@ -141,8 +141,8 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.webp`, import.meta.url).href;
-  return new URL(`./${path}_m.webp`, import.meta.url).href
+  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
+  return new URL(`./${path}_m.jpg`, import.meta.url).href
 }
 
 const splide = ref();

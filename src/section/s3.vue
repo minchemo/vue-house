@@ -1,6 +1,6 @@
 <template>
   <article class="s3">
-    <img class="t1" data-aos="fade-up" src="@/section/s3/t1.webp" alt="" srcset="">
+    <img class="t1" data-aos="fade-up" src="@/section/s3/t1.png" alt="" srcset="">
     <div class="t2 decor" data-aos="fade-up">長耀愛林口 攜手向前走</div>
     <div class="t3">
       換屋，是追求空間換新，更是環境的升級，為此，長耀前瞻開發、精選良地，建築之外更替城市留下一片樸實綠景。今日工一園區、影視園區、國際媒體園區、三井Outlet二期等千億投資，再再預告了昔日的衛星新市鎮，向未來城市進化中，因此長耀為「愛」而愛，告別內湖前行林口，一同踏上林口的進步軌跡，看見未來顛覆你我想像的城市淘金史！
