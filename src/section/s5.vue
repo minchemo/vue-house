@@ -189,32 +189,32 @@ const options = {
 
 const imgs = [
   {
-    img: globals.$isMobile() ? new URL("./s5/1_m.jpg", import.meta.url).href : new URL("./s5/1.jpg", import.meta.url).href,
-    avatar: globals.$isMobile() ? new URL("./s5/a_m.jpg", import.meta.url).href : new URL("./s5/a.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("./s5/1_m.webp", import.meta.url).href : new URL("./s5/1.webp", import.meta.url).href,
+    avatar: globals.$isMobile() ? new URL("./s5/a_m.webp", import.meta.url).href : new URL("./s5/a.webp", import.meta.url).href,
     t1: '國家建築金質首獎主',
     t2: '建築規劃 簡俊卿',
     t3: '簡俊卿建築師事務所',
     t4: '信義｜松德長虹<br/>天母｜華固天鑄<br/>松山｜國美新美館<br/>大安｜敦南之森<br/>忠孝｜Dimond Tower'
   },
   {
-    img: globals.$isMobile() ? new URL("./s5/2_m.jpg", import.meta.url).href : new URL("./s5/2.jpg", import.meta.url).href,
-    avatar: globals.$isMobile() ? new URL("./s5/b_m.jpg", import.meta.url).href : new URL("./s5/b.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("./s5/2_m.webp", import.meta.url).href : new URL("./s5/2.webp", import.meta.url).href,
+    avatar: globals.$isMobile() ? new URL("./s5/b_m.webp", import.meta.url).href : new URL("./s5/b.webp", import.meta.url).href,
     t1: '國際設計大獎常勝軍',
     t2: '公設設計 李志成',
     t3: 'YUANYOU DESIGN',
     t4: '信義｜聯合大於大哲<br/>士林｜東騰天母<br/>南港｜映東騰<br/>內湖｜東騰自在<br/>中山｜富富話合'
   },
   {
-    img: globals.$isMobile() ? new URL("./s5/3_m.jpg", import.meta.url).href : new URL("./s5/3.jpg", import.meta.url).href,
-    avatar: globals.$isMobile() ? new URL("./s5/c_m.jpg", import.meta.url).href : new URL("./s5/c.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("./s5/3_m.webp", import.meta.url).href : new URL("./s5/3.webp", import.meta.url).href,
+    avatar: globals.$isMobile() ? new URL("./s5/c_m.webp", import.meta.url).href : new URL("./s5/c.webp", import.meta.url).href,
     t1: '國家級結構安全巨擘',
     t2: '結構設計 陳村林',
     t3: '凱巨工程顧問',
     t4: '大直｜躍大直<br/>天母｜聯上天母<br/>松山｜華固敦品<br/>內湖｜長虹天璽<br/>新莊｜遠雄九五'
   },
   {
-    img: globals.$isMobile() ? new URL("./s5/4_m.jpg", import.meta.url).href : new URL("./s5/4.jpg", import.meta.url).href,
-    avatar: globals.$isMobile() ? new URL("./s5/d_m.jpg", import.meta.url).href : new URL("./s5/d.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("./s5/4_m.webp", import.meta.url).href : new URL("./s5/4.webp", import.meta.url).href,
+    avatar: globals.$isMobile() ? new URL("./s5/a_m.webp", import.meta.url).href : new URL("./s5/d.webp", import.meta.url).href,
     t1: '國家建築金質獎肯定',
     t2: '營造工程 鄒開鑄',
     t3: '森城營造',

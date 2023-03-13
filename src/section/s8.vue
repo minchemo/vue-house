@@ -166,7 +166,7 @@ const options = {
 const imgs = [
   {
     // img: getImg('s8/1'),
-    img: globals.$isMobile() ? new URL("./s8/1_m.jpg", import.meta.url).href : new URL("./s8/1.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("./s8/1_m.webp", import.meta.url).href : new URL("./s8/1.webp", import.meta.url).href,
     t1: '庭院，茄苳，<br>歡迎回家',
     t2: '風，穿過了落羽松與光臘樹梢；楓香與台灣木的葉在地上交相覆合。長耀以「原鄉」為題，特別植棵帶有家鄉之感的「茄樹」作為門面，期盼北漂異鄉打拼的遊子在此成家之時，能想起自己最根本的家。',
     caption: '本圖為3D模擬示意圖'

@@ -139,7 +139,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(1) invert(1);
+        filter: brightness(0) invert(1);
         transition: all .5s;
       }
       &:hover {
@@ -178,7 +178,7 @@
         color: #fff;
 
         img {
-          filter: brightness(1) invert(1);
+        filter: brightness(0) invert(1);
         }
 
         &:hover {
