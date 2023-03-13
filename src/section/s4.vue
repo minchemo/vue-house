@@ -180,6 +180,25 @@ const options = {
 
 const imgs = [
   {
+    img: globals.$isMobile() ? new URL("./s4/1_m.jpg", import.meta.url).href : new URL("./s4/1.jpg", import.meta.url).href,
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s4/2_m.jpg", import.meta.url).href : new URL("./s4/2.jpg", import.meta.url).href,
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s4/3_m.jpg", import.meta.url).href : new URL("./s4/3.jpg", import.meta.url).href,
+    caption: "林口 長耀初"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s4/4_m.jpg", import.meta.url).href : new URL("./s4/4.jpg", import.meta.url).href,
+    caption: "林口 長耀里"
+  },
+]
+/*
+const imgs = [
+  {
     img: getImg('s4/1'),
     caption: "內湖 豁達達禮"
   },
@@ -196,5 +215,5 @@ const imgs = [
     caption: "林口 長耀里"
   },
 ]
-
+*/
 </script>
