@@ -169,7 +169,7 @@ const options = {
 const imgs = [
   {
     // img: getImg('s9/1'),
-    img: globals.$isMobile() ? new URL("./s9/1_m.jpg", import.meta.url).href : new URL("./s9/1.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("./s9/1_m.webp", import.meta.url).href : new URL("./s9/1.webp", import.meta.url).href,
     t1: '內斂高雅，<br>溫暖富麗居所',
     t2: '大廳，是客人初見的第一印象，也是主人回家的第一感受。以沈穩內斂的色調佈局空間，搭配精心挑選的藝術元素與配件，創造出奢華與低調兼容並蓄的溫馨氛圍，使步入空間時，瞬時感受抽離塵囂的愉悅與沉靜，達到身心安頓的境界。',
     caption: '本圖為3D模擬示意圖'

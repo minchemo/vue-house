@@ -232,9 +232,9 @@ const imgs = [
   {
     // img: getImg('s10/6'),
     img: globals.$isMobile() ? new URL("./s10/6_m.jpg", import.meta.url).href : new URL("./s10/6.jpg", import.meta.url).href,
-    t1: '質樸之森',
-    t2: '約<span>28</span>坪',
-    t3: '日系溫雅的表現中，人文與藝術的呈現，質樸而內斂的溫潤感受,巧而雅的氛圍。',
+    t1: '琢麗之家',
+    t2: '約<span>47</span>坪',
+    t3: '沉穩的法式線條，勾勒生活的優雅，雅致的空，呈現三房的空表現，體現大坪數<br class="hidden md:block"/>里精品住宅的生活風采。',
     caption: '本圖為實景拍攝圖'
   },
 ]
