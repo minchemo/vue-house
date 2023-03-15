@@ -169,6 +169,39 @@ const options = {
 
 const imgs = [
   {
+    img: globals.$isMobile() ? new URL("./s6/1_m.webp", import.meta.url).href : new URL("./s6/1.webp", import.meta.url).href,
+    t1: '大樹公園',
+    t2: '家不遠，散步間，坐擁第二運動公園、立德公園、扶輪公園、力行公園4座<br class="hidden md:block"/>生機勃勃的大樹之境，蟲鳥和鳴，放空歸林，找回心沉的平靜。'
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s6/2_m.webp", import.meta.url).href : new URL("./s6/2.webp", import.meta.url).href,
+    t1: '豐盈生活',
+    t2: '文化三路上的三井Outlet、昕境廣場商圈，以及周圍的運動中心、超市、<br class="hidden md:block"/>影城等豐饒的場域，更為長耀加的生活取得平衡一線間。'
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s6/3_m.webp", import.meta.url).href : new URL("./s6/3.webp", import.meta.url).href,
+    t1: '豐盈生活',
+    t2: '文化三路上的三井Outlet、昕境廣場商圈，以及周圍的運動中心、超市、<br class="hidden md:block"/>影城等豐饒的場域，更為長耀加的生活取得平衡一線間。'
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s6/4_m.webp", import.meta.url).href : new URL("./s6/4.webp", import.meta.url).href,
+    t1: '出類拔萃',
+    t2: '聚地理、生態、未來發展等優勢的林口，吸引眾多歸國華僑、台商、機師、外籍人士擇居於此，「馬禮遜美國學校」、<br class="hidden md:block"/>「新北美國學校」、「康橋國際學校」等異國菁英院校因應而生，形塑出林口高質感、高資產的生活風範。'
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s6/5_m.webp", import.meta.url).href : new URL("./s6/5.webp", import.meta.url).href,
+    t1: '出類拔萃',
+    t2: '聚地理、生態、未來發展等優勢的林口，吸引眾多歸國華僑、台商、機師、外籍人士擇居於此，「馬禮遜美國學校」、<br class="hidden md:block"/>「新北美國學校」、「康橋國際學校」等異國菁英院校因應而生，形塑出林口高質感、高資產的生活風範。'
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s6/6_m.webp", import.meta.url).href : new URL("./s6/6.webp", import.meta.url).href,
+    t1: '出類拔萃',
+    t2: '聚地理、生態、未來發展等優勢的林口，吸引眾多歸國華僑、台商、機師、外籍人士擇居於此，「馬禮遜美國學校」、<br class="hidden md:block"/>「新北美國學校」、「康橋國際學校」等異國菁英院校因應而生，形塑出林口高質感、高資產的生活風範。'
+  },
+]
+/*
+const imgs = [
+  {
     img: getImg('s6/1'),
     t1: '大樹公園',
     t2: '家不遠，散步間，坐擁第二運動公園、立德公園、扶輪公園、力行公園4座<br class="hidden md:block"/>生機勃勃的大樹之境，蟲鳥和鳴，放空歸林，找回心沉的平靜。'
@@ -199,5 +232,5 @@ const imgs = [
     t2: '聚地理、生態、未來發展等優勢的林口，吸引眾多歸國華僑、台商、機師、外籍人士擇居於此，「馬禮遜美國學校」、<br class="hidden md:block"/>「新北美國學校」、「康橋國際學校」等異國菁英院校因應而生，形塑出林口高質感、高資產的生活風範。'
   },
 ]
-
+*/
 </script>

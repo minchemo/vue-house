@@ -172,6 +172,17 @@ const options = {
 
 const imgs = [
   {
+    img: globals.$isMobile() ? new URL("./s7/1_m.webp", import.meta.url).href : new URL("./s7/1.webp", import.meta.url).href,
+    caption: "本圖為3D模擬示意圖"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s7/2_m.webp", import.meta.url).href : new URL("./s7/2.webp", import.meta.url).href,
+    caption: "本圖為3D模擬示意圖"
+  },
+]
+/*
+const imgs = [
+  {
     img: getImg('s7/1'),
     caption: "本圖為3D模擬示意圖"
   },
@@ -180,5 +191,5 @@ const imgs = [
     caption: "本圖為3D模擬示意圖"
   },
 ]
-
+*/
 </script>
