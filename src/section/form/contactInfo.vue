@@ -136,7 +136,7 @@
 
     .contact-item {
       background-color: #E6C57C;
-      color: #000;
+      color: #004239;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -164,7 +164,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(.8) invert(0);
         transition: all .5s;
         margin: 0;
       }
@@ -188,6 +188,11 @@
           left: calc(100% - 4em);
           z-index: -1;
         }
+        div{
+          text-indent:0em;
+          white-space: normal;
+          padding: 0 1em;
+        }
       }
 
 
@@ -195,10 +200,10 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #000;
+        color: #004239;
 
         img {
-          filter: brightness(0) invert(0);
+          filter: brightness(.8) invert(0);
         }
 
         &:hover {
@@ -220,24 +225,6 @@
 @media screen and (max-width:768px) {
 
   .contact-info-img{
-.leaf{
-width: sizem(280);
-left:sizem(-127);
-top: sizem(-110);
-}
-.parrot {
-  top: sizem(-31);
-  left: sizem(6);
-  width: sizem(37);
-}
-.tree{position: absolute;z-index:2;
-width: sizem(128);
-left: sizem(-57);top: 0;
-}
-
-
-
-
 }
 
   .mo-contact-info {
@@ -248,14 +235,15 @@ left: sizem(-57);top: 0;
     width: sizem(375);
     height: sizem(63);
     gap: sizem(1);
-    box-shadow: 0 0 sizem(50) #360010cc;
+    box-shadow: 0 0 sizem(50) #000c;
+    background:linear-gradient(to right, rgba(230,197,124,1) 0%,rgba(223,189,124,1) 50%,rgba(209,164,80,1) 100%);
 
     .contact-item {
-      height: 100%;
-      background-color: #9B1E44;
+      height: 100%;      
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
+      border-left:1px solid #fff7;
 
       img {
         margin-bottom: sizem(5);
@@ -271,10 +259,11 @@ left: sizem(-57);top: 0;
   .contact-info {
     width: 100%;
     min-width:0;
-   // height: sizem(400);
+    // height: sizem(400);
     // border-radius: sizem(68);
-    padding: sizem(50) sizem(0);
-    margin-top: sizem(60);
+    //padding: sizem(0) sizem(0);
+    padding-bottom: sizem(50);
+    margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
   background-size: sizem(450) auto;
@@ -314,9 +303,11 @@ left: sizem(-57);top: 0;
         }
 
         &.address {
+          font-size: sizem(15);
           border-radius: sizem(0) sizem(0) 0 0;
           padding: 1.1em 0;
           margin-top: sizem(20);
+          //font-size: .9em;
 
           &::before {
             width: 100%;
@@ -331,7 +322,7 @@ left: sizem(-57);top: 0;
         }
       &.googlemap {
         border-top-width: 0;
-      border-left-width: 2px;
+      border-left-width:0;
       }
       }
 

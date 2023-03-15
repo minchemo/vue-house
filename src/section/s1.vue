@@ -51,8 +51,8 @@
     width: size(636);
     right: size(-176);
     bottom: size(0);
-     animation: an 5s linear infinite alternate;  
-     transform: skewX(5deg);
+     animation: an 5s  infinite alternate;  
+     transform: skewX(2deg)translateX(-3%);
      transform-origin: 100% 100%;
 
   }
@@ -72,8 +72,8 @@
 
   .s1 {
     height: calc(100vh - 63px);
-    min-height: sizem(0);
-    max-height: sizem(812);
+    min-height: sizem(500);
+    max-height: sizem(760);
   // background-size: sizem(450) auto;
   
   .sylogo{top:sizem(5);left:sizem(5);width: sizem(100);}
@@ -89,9 +89,10 @@
     margin: 0em auto 10.3em auto
   }
   .horse {
-    width: sizem(200);
-    right: sizem(-36);
-    bottom: sizem(-40);
+    width: auto;
+    height:calc(39% + 20vw);
+    right:-10%;
+    bottom: sizem(-57);
   }
 
 

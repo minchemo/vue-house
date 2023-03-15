@@ -1,7 +1,7 @@
 <template>
-    <div class="house">
+    <!-- <div class="house">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
-            <!-- <div class="map"></div> -->
+            
             <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
                     <div class="title font-['noto_Serif_tc']">建案資訊</div>
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="@/section/form/footerlogo.gif" alt="立炘數位" srcset=""></a>

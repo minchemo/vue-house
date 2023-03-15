@@ -84,6 +84,7 @@
   position: relative;
  // padding-top: size(406);
    overflow: hidden;
+    min-height: size(500);
 
   .bg-image {
     position: absolute;
@@ -175,8 +176,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #9B1E44;
-    background-color: #FFF;
+    color: #004239;
+    background-color: #E6C57C;
     width: 308px;
     height:3.3em;
     line-height: 3.3;
@@ -197,8 +198,7 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    min-height: sizem(1564);
-   // padding-bottom: sizem(0);
+    min-height: sizem(800);
     position: relative;
     // overflow: hidden;
    // padding-top: sizem(200);
