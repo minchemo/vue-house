@@ -194,6 +194,7 @@ export default {
     background-color: #000;
     position: relative;
     z-index: 1;
+    margin-bottom: 63px;
     .main {
       display: flex;
       justify-content: space-between;

@@ -14,6 +14,7 @@
 .footer-box {
   display: flex;
   flex-direction: column;
+  
 }
 .footer-img {
   width: 100%;
@@ -27,6 +28,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
+  display: none;
 
   img {
     width: 50px;
