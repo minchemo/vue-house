@@ -2,8 +2,8 @@
   <article class="s1">
       <img class="sylogo" src="./s1/sylogo.svg" alt="" srcset="">
     <div class="txt">
-      <img class="logo" src="./s1/logo.svg" alt="" srcset="">
-      <div class="t1 font-['Noto_sans_TC',sans-serif]">雙會館 森態莊園電梯別墅</div>
+      <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset="">
+      <div class="t1 font-['Noto_sans_TC',sans-serif]" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">雙會館 森態莊園電梯別墅</div>
 
     <!--  <div class="img" data-aos="zoom-in" data-aos-duration="800">
       </div>
