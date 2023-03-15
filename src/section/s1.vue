@@ -47,7 +47,6 @@
   }
   .horse {
     @apply absolute;
-
     width: size(636);
     right: size(-176);
     bottom: size(0);
