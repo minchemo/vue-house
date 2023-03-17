@@ -1,7 +1,7 @@
 <template>
   <article class="s6">
     <div class="main">
-      <div  class="caption">外觀3D示意圖</div>
+      <div  class="caption">建築外觀實景</div>
       <div class="text-box">
         <div class="t2" data-aos="fade-up" data-aos-delay="0">純正百坪大戶 榮耀世族</div>
         <div class="c-divider"></div>
