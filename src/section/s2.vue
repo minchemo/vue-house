@@ -2,7 +2,7 @@
   <article class="s2">
     <div class="main">
       <div class="img-box">
-        <div class="caption">司法公園示意圖 圖片來源：桃園市政府網站</div>
+        <div class="caption">桃園地方法院現場實景</div>
       </div>
       <div class="text-box" >
         <div class="t1" data-aos="fade-left" data-aos-delay="0">中路正核心‧繁榮一森青</div>

@@ -4,11 +4,9 @@
       rewind: true,
       autoWidth: true,
       arrows: false,
-      autoplay: false,
+      type: 'fade',
+      autoplay: true,
       interval: 4000,
-      type: $isMobile() ? 'fade': 'slide',
-      drag: $isMobile() ? true: false,
-      perPage: $isMobile() ? 1: 2
     }" @splide:move="move" class="slide-box absolute z-10">
       <SplideSlide class="slide" v-for="img in imgs" v-lazy:background-image="img.img">
         <div class="caption">{{img.caption}}</div>
@@ -55,7 +53,7 @@
     height: size(819);
 
     .slide {
-      width: size(675);
+      width: size(1350);
       height: size(819);
       background-size: cover;
 
@@ -147,7 +145,7 @@
 @media screen and (max-width: 767px) {
 
   .s5 {
-    height: size-m(667);
+    height: size-m(467);
     flex-direction: column;
     justify-content: flex-start;
     gap: size-m(20);
@@ -156,11 +154,11 @@
     .slide-box {
       position: relative;
       width: 100%;
-      height: size-m(464);
+      height: size-m(228);
 
       .slide {
         width: 100%;
-        height: size-m(464);
+        height: size-m(228);
 
         .caption {
           right: size-m(8);
@@ -231,11 +229,11 @@ const move = (newIdx, prevIdx, destIdx) => {
 const imgs = ref([
   {
     img: new URL("../section/s5/1.jpg", import.meta.url).href,
-    caption: '外觀3D示意圖'
+    caption: '建築外觀實景'
   },
   {
     img: new URL("../section/s5/2.jpg", import.meta.url).href,
-    caption: '外觀3D示意圖'
+    caption: '建築外觀實景'
   },
 ])
 </script>
