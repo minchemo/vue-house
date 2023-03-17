@@ -231,11 +231,11 @@ const move = (newIdx, prevIdx, destIdx) => {
 const imgs = ref([
   {
     img: new URL("../section/s5/1.jpg", import.meta.url).href,
-    caption: '外觀3D示意圖'
+    caption: '建築外觀實景'
   },
   {
     img: new URL("../section/s5/2.jpg", import.meta.url).href,
-    caption: '外觀3D示意圖'
+    caption: '建築外觀實景'
   },
 ])
 </script>
