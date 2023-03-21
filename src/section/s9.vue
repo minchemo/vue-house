@@ -7,8 +7,7 @@
       <div class="subtitle text-white" data-aos="fade-up" data-aos-delay="200">
         聯名共手創作
       </div>
-      <img class="ring1" src="@/section/ring2.svg" alt="">
-
+      <img class="ring1" src="@/section/ring.svg" alt="">
       <div class="content" data-aos="fade-up" data-aos-delay="400">
         泰嘉把建築的思考理路拉長<br />
         從原始圖面到落地執行，不斷磨圖優化<br />
@@ -16,17 +15,30 @@
         讓完美成為泰嘉的建築基因
       </div>
     </div>
-    <div class="guys">
-      <div class="guy" v-for="guy in $isMobile() ? images_m : images" :class="{'large': guy.large}">
-        <div class="avatar" :style="{backgroundImage: `url('${guy.image}')`}"></div>
+    <div class="guys" v-if="$isMobile()">
+      <div class="guy" v-for="guy in images_m">
+        <div class="avatar" :style="{ backgroundImage: `url('${guy.image}')` }"></div>
         <div class="text">
-          <div class="t1" data-aos="fade-up" data-aos-delay="0">{{guy.t1}}</div>
-          <div class="t2" data-aos="fade-up" data-aos-delay="200">{{guy.t2}}</div>
+          <div class="t2" data-aos="fade-up" data-aos-delay="200">{{ guy.t2 }}</div>
+          <div class="t1" data-aos="fade-up" data-aos-delay="0">{{ guy.t1 }}</div>
           <div class="t3" v-html="guy.t3" data-aos="fade-up" data-aos-delay="400"></div>
         </div>
       </div>
     </div>
-    <img class="decor" src="@/section/s9/decor.png" alt="" srcset="">
+    <div class="guys" v-else>
+      <div class="guy" v-for="guy in images">
+        <div class="avatar" :style="{ backgroundImage: `url('${guy.image}')` }"></div>
+        <div class="text">
+          <div class="t1" data-aos="fade-up" data-aos-delay="0">{{ guy.t1 }}</div>
+          <div class="t2" data-aos="fade-up" data-aos-delay="200">{{ guy.t2 }}</div>
+          <div class="t3" v-html="guy.t3" data-aos="fade-up" data-aos-delay="400"></div>
+        </div>
+      </div>
+    </div>
+    <div class="work">
+      <img src="@/section/s9/work.jpg" alt="" srcset="">
+      <p>泰嘉近兩年完工業績 成屋實景</p>
+    </div>
   </article>
 </template>
 
@@ -36,13 +48,15 @@
 .s9 {
   position: relative;
   width: 100%;
-  height: size(1000);
-  background-color: #7BA9D3;
+  height: size(1080);
+  background-image: url('@/section/s9/bg.jpg');
+  background-size: cover;
+  background-position: bottom;
 
   .text-box {
     position: absolute;
-    top: size(76);
-    left: size(151);
+    top: size(157);
+    left: size(136);
     text-align: left;
 
     .title {
@@ -66,7 +80,6 @@
       margin-top: size(20);
       margin-bottom: size(20);
       transform:scaleX(-1);
-
     }
 
     .content {
@@ -80,11 +93,11 @@
 
   .guys {
     position: absolute;
-    top: size(245);
-    left: size(613);
+    top: size(557);
+    left: size(136);
     display: flex;
     align-items: flex-end;
-    gap: size(7.5);
+    gap: size(9.75);
 
     .guy {
       position: relative;
@@ -92,24 +105,24 @@
       flex-direction: column;
       color: #fff;
 
-      &.large {
+      .avatar {
+        width: size(200.25);
+        height: size(270.92);
+        background-size: cover;
+        margin-bottom: size(20);
 
-        .avatar {
-          width: size(448);
-          height: size(578);
+        &:after {
+          content: '';
+          width: size(2);
+          height: size(34);
+          background-color: #FF0000;
+          position: absolute;
+          left: size(12);
+          bottom: -#{size(19)};
         }
       }
 
-      .avatar {
-        width: size(229.12);
-        height: size(347.63);
-        background-size: cover;
-        margin-bottom: size(30);
-      }
-
       .text {
-        padding-left: size(20);
-
         .t1 {
           font-weight: 500;
           font-size: size(30);
@@ -130,26 +143,28 @@
           margin-top: size(5);
         }
       }
-
-      &:after {
-        content: '';
-        width: size(1.5);
-        height: size(76);
-        background-color: #fff;
-        position: absolute;
-        left: size(10);
-        bottom: size(42);
-      }
     }
   }
 
-  .decor {
-    position: absolute;
-    top: size(455);
-    left: size(65);
-    width: size(485);
-    opacity: 0.5;
-    filter: invert(87%) sepia(0%) saturate(547%) hue-rotate(289deg) brightness(83%) contrast(92%);
+  .work {
+    @apply absolute;
+    width: size(839);
+    height: size(692);
+    right: 0;
+    bottom: size(181);
+    img {
+      width: 100%;
+    }
+    p {
+      font-weight: 400;
+      font-size: size(15);
+      line-height: size(22);
+      text-align: right;
+      letter-spacing: 0.07em;
+      color: #6C6C6C;
+      padding-right: size(10);
+      margin-top: size(5);
+    }
   }
 }
 
@@ -160,8 +175,9 @@
 @media screen and (max-width: 767px) {
 
   .s9 {
-    height: auto;
+    height: size-m(795);
     padding: size-m(30) 0;
+  background-image: url('@/section/s9/bgm.jpg');
 
     .text-box {
       position: relative;
@@ -186,7 +202,7 @@
       .ring1 {
         width: size-m(18);
         margin-top: size-m(15);
-        margin-bottom: size-m(20);
+        margin-bottom: size-m(10);
       }
 
       .content {
@@ -196,46 +212,36 @@
     }
 
     .guys {
-      position: relative;
-      top: auto;
-      left: auto;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: auto;
-      z-index: 1;
-
+      @apply relative grid grid-cols-2 top-0 left-0 items-start justify-center;
+      row-gap: size-m(5);
+      gap: size-m(5);
+      width: size-m(304);
+      margin: 0 auto;
       .guy {
+        width: size-m(146);
         position: relative;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: flex-end;
         color: #fff;
 
-        &.large {
-
-          .avatar {
-            width: size-m(375);
-            height: size-m(178);
-            margin-bottom: size-m(20);
-          }
-
-          .text {
-            position: absolute;
-            right: size-m(26);
-            top: size-m(63);
-          }
-        }
-
         .avatar {
-          width: size-m(122.3);
-          height: size-m(185.5);
-          margin-bottom: size-m(10);
+          flex-basis: size-m(68);
+          height: size-m(92);
+          margin-bottom: 0;
+          background-position: center;
+
+          &:after {
+            width: size-m(20);
+            height: size-m(2);
+            left: size-m(63);
+            bottom: size-m(82)
+          }
         }
 
         .text {
-          padding-left: size-m(10);
+          @apply flex flex-col;
+          padding-left: size-m(6);
 
           .t1 {
             font-size: size-m(16);
@@ -254,25 +260,46 @@
         }
 
         &:after {
-          content: '';
-          width: size-m(1);
-          height: size-m(40);
-          left: size-m(5);
-          bottom: size-m(42);
+          @apply hidden;
+          content: none;
+          
         }
       }
     }
-
-    .decor {
-      top: size-m(100);
-      left: size-m(145);
-      width: size-m(252);
+  .work {
+    @apply relative;
+    width: size-m(340);
+    height: size-m(270);
+    right: 0;
+    bottom:0;
+    margin:  0 auto;
+    margin-top: size-m(58.98);
+    
+    p {
+      font-size: size-m(10);
+      line-height: size-m(14);
+      padding-right: 0;
+      margin-top: size-m(5);
     }
+  }
+
   }
 }
 </style>
 <script setup>
 const images = [
+  {
+    image: new URL("../section/s9/4.jpg", import.meta.url).href,
+    t1: '呂金發',
+    t2: '董事長',
+    t3: '打造理想建築'
+  },
+  {
+    image: new URL("../section/s9/3.jpg", import.meta.url).href,
+    t1: '王東奎',
+    t2: '建築外觀',
+    t3: '名宅風格 豪邸巨匠'
+  },
   {
     image: new URL("../section/s9/1.jpg", import.meta.url).href,
     t1: '許富居',
@@ -285,27 +312,20 @@ const images = [
     t2: '公設設計',
     t3: '美學首席 指揮空間層次'
   },
-  {
-    image: new URL("../section/s9/3.jpg", import.meta.url).href,
-    t1: '王東奎',
-    t2: '建築外觀',
-    t3: '名宅風格 豪邸巨匠'
-  },
-  {
-    image: new URL("../section/s9/4.jpg", import.meta.url).href,
-    t1: '呂金發',
-    t2: '董事長',
-    t3: '理想建築實踐家',
-    large: true
-  },
 ];
 
 const images_m = [
   {
+    image: new URL("../section/s9/3_m.jpg", import.meta.url).href,
+    t1: '王東奎',
+    t2: '建築外觀',
+    t3: '名宅風格<br/>豪邸巨匠'
+  },
+  {
     image: new URL("../section/s9/4_m.jpg", import.meta.url).href,
     t1: '呂金發',
     t2: '董事長',
-    t3: '理想建築實踐家',
+    t3: '打造理想建築',
     large: true
   },
   {
@@ -319,12 +339,6 @@ const images_m = [
     t1: '唐忠漢',
     t2: '公設設計',
     t3: '美學首席<br/>指揮空間層次'
-  },
-  {
-    image: new URL("../section/s9/3_m.jpg", import.meta.url).href,
-    t1: '王東奎',
-    t2: '建築外觀',
-    t3: '名宅風格<br/>豪邸巨匠'
   },
 ];
 </script>
