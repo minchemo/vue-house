@@ -120,7 +120,7 @@
         .t2 {
           padding-left: size(16);
           font-weight: 400;
-          font-size: size(20);
+          font-size: size(18);
           line-height: size(29);
         }
         &::after {

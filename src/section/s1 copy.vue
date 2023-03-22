@@ -37,12 +37,11 @@
   background-size: cover;
 
   .title {
-    left: 0;right: 0;margin: auto;
+    left: size(1037);
     top: size(240);
-    text-align: center;z-index:3;
 
     .logo {
-      width: size(369);margin: auto;
+      width: size(369);
 
       img {
         width: 100%;
