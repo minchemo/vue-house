@@ -250,7 +250,7 @@ white-space: nowrap;
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
+// const isMobile = computed(() => globals.$isMobile());
 
 const images = [
   {
@@ -281,12 +281,12 @@ const images = [
   {
     image: new URL("../section/s6_/6.jpg", import.meta.url).href,
     t1: '台北 呂建勳',
-    t2: isMobile ? '呂建勳<br>建築師事務所<br>哈佛建築大師' : '呂建勳建築師事務所<br>哈佛建築大師',
+    t2: globals.$isMobile() ? '呂建勳<br>建築師事務所<br>哈佛建築大師' : '呂建勳建築師事務所<br>哈佛建築大師',
   },
   {
     image: new URL("../section/s6_/7.jpg", import.meta.url).href,
     t1: '高雄 羅耕甫',
-    t2: isMobile ? '橙田建築<br>室研所<br>地景藝術大師' : '橙田建築│室研所<br>地景藝術大師',
+    t2: globals.$isMobile() ? '橙田建築<br>室研所<br>地景藝術大師' : '橙田建築│室研所<br>地景藝術大師',
   },
 ];
 </script>
