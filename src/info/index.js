@@ -9,7 +9,7 @@ export default {
     address: "高雄市小港區高松路99號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1842.0860368320316!2d120.36925000000001!3d22.572666700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x56bbb594d965c250!2zMjLCsDM0JzIxLjYiTiAxMjDCsDIyJzA5LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1673336378815!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/WZGwT3xyTRfk61To6",
-    phone: "0800-363-888",
+    phone: "07-801-8000",
     fbLink: "https://www.facebook.com/107608068785783/",
     fbMessage: "https://m.me/107608068785783/",
     caseName: caseName,
