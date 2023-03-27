@@ -2,8 +2,8 @@
   <article class="s5">
     <div class="slider">
       <div class="arrows">
-        <img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-        <img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+        <img loading="lazy"  class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+        <img loading="lazy"  class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img" :style="{ 'background-image': 'url(' + img.img + ')' }">
@@ -18,7 +18,7 @@
             <div class="t2" data-aos="fade-up">{{ imgs[currentSlideIndex].t2 }}</div>
             <div class="t3" data-aos="fade-up">{{ imgs[currentSlideIndex].t3 }}</div>
           </div>
-          <img :src="imgs[currentSlideIndex].avatar" alt="" srcset="">
+          <img loading="lazy"  :src="imgs[currentSlideIndex].avatar" alt="" srcset="">
         </div>
         <div class="works" v-html="imgs[currentSlideIndex].t4"></div>
       </div>

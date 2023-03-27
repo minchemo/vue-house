@@ -2,8 +2,8 @@
   <article class="s6">
     <div class="slider">
       <div class="arrows">
-        <img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-        <img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+        <img loading="lazy"  class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+        <img loading="lazy"  class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">

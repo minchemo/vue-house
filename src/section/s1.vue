@@ -1,22 +1,22 @@
 <template>
   <article class="s1">
-    <img class="leaf l" v-if="!$isMobile()" src="@/section/s1/leaf_l.webp" alt="" srcset="">
-    <img class="leaf r" v-if="!$isMobile()" src="@/section/s1/leaf_r.webp" alt="" srcset="">
-    <img class="leaf mb" v-if="$isMobile()" src="@/section/s1/leaf_mb.webp" alt="" srcset="">
-    <img class="leaf b" v-if="!$isMobile()" src="@/section/s1/leaf_b.webp" alt="" srcset="">
-    <img class="leaf b" v-else src="@/section/s1/leaf_b_m.webp" alt="" srcset="">
+    <img loading="lazy"  class="leaf l" v-if="!$isMobile()" src="@/section/s1/leaf_l.webp" alt="" srcset="">
+    <img loading="lazy"  class="leaf r" v-if="!$isMobile()" src="@/section/s1/leaf_r.webp" alt="" srcset="">
+    <img loading="lazy"  class="leaf mb" v-if="$isMobile()" src="@/section/s1/leaf_mb.webp" alt="" srcset="">
+    <img loading="lazy"  class="leaf b" v-if="!$isMobile()" src="@/section/s1/leaf_b.webp" alt="" srcset="">
+    <img loading="lazy"  class="leaf b" v-else src="@/section/s1/leaf_b_m.webp" alt="" srcset="">
     <div class="main">
-      <img data-aos="fade-up" src="@/section/s1/logo.svg" class="logo" alt="" srcset="">
+      <img loading="lazy"  data-aos="fade-up" src="@/section/s1/logo.svg" class="logo" alt="" srcset="">
       <p data-aos="fade-up" data-aos-delay="200" class="t1">轉身繁華 衷於回家</p>
       <p data-aos="fade-up" data-aos-delay="400" class="t2">四座公園<span>｜</span>眾樹之靜<span>｜</span>28-47坪</p>
       <div data-aos="fade-up" data-aos-delay="600" class="t3">
-        <img src="@/section/s1/line.svg" alt="" srcset="">
+        <img loading="lazy"  src="@/section/s1/line.svg" alt="" srcset="">
         <p>02-2552-8888</p>
-        <img src="@/section/s1/line.svg" alt="" srcset="">
+        <img loading="lazy"  src="@/section/s1/line.svg" alt="" srcset="">
       </div>
-      <img data-aos="fade-up" data-aos-delay="800" v-if="!$isMobile()" class="order-btn" src="@/section/s1/order-btn.svg" alt="" srcset="" @click="scrollTo('.order')">
-      <img data-aos="fade-up" data-aos-delay="1000" class="logo2" src="@/section/s1/logo2.webp" alt="" srcset="">
-      <img data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.webp" alt=""
+      <img loading="lazy"  data-aos="fade-up" data-aos-delay="800" v-if="!$isMobile()" class="order-btn" src="@/section/s1/order-btn.svg" alt="" srcset="" @click="scrollTo('.order')">
+      <img loading="lazy"  data-aos="fade-up" data-aos-delay="1000" class="logo2" src="@/section/s1/logo2.webp" alt="" srcset="">
+      <img loading="lazy"  data-aos-delay="1700" data-aos="fade-right" class="leaf-small" src="@/section/s1/leaf_small.webp" alt=""
         srcset="">
     </div>
   </article>
