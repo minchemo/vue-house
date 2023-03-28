@@ -224,7 +224,6 @@
     position: relative;
 
     .title {
-      left: size-m(99);
       top: size-m(79);
       z-index: 99;
       
