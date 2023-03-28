@@ -220,23 +220,23 @@
 @media screen and (max-width:768px) {
 
     .gotop {
-        width: size-m(34.24);
-        height: size-m(34.24);
-        right: size-m(20);
-        bottom: size-m(80);
+        width: sizem(34.24);
+        height: sizem(34.24);
+        right: sizem(20);
+        bottom: sizem(80);
     }
 
     .nav {
-        width: size-m(350);
-        left: size-m(12.5);
-        top: size-m(12.5);
-        padding: 0 size-m(8);
-        height: size-m(35);
+        width: sizem(350);
+        left: sizem(12.5);
+        top: sizem(12.5);
+        padding: 0 sizem(8);
+        height: sizem(35);
         border-radius: 9999px;
 
         .logo {
-            width: size-m(101.83);
-            height: size-m(16);
+            width: sizem(101.83);
+            height: sizem(16);
             transition: all .2s;
 
             &.open {
@@ -245,24 +245,24 @@
         }
 
         .menu-btn {
-            width: size-m(30);
-            height: size-m(30);
-            padding: size-m(5);
+            width: sizem(30);
+            height: sizem(30);
+            padding: sizem(5);
 
             p {
-                font-size: size-m(14);
+                font-size: sizem(14);
                 font-weight: 100;
             }
 
             .bar {
-                width: size-m(17);
+                width: sizem(17);
 
                 &::after {
-                    bottom: -#{size-m(5)};
+                    bottom: -#{sizem(5)};
                 }
 
                 &::before {
-                    top: -#{size-m(5)};
+                    top: -#{sizem(5)};
                 }
             }
 
@@ -313,15 +313,15 @@
             transition: all .5s;
             border-radius: 0;
             padding: 0;
-            gap: size-m(25);
+            gap: sizem(25);
             justify-content: flex-end;
 
             .menu-item {
-                font-size: size-m(15);
-                gap: size-m(5);
+                font-size: sizem(15);
+                gap: sizem(5);
 
                 img {
-                    width: size-m(30);
+                    width: sizem(30);
                 }
 
             }
@@ -343,11 +343,11 @@
                 position: relative;
                 left: unset;
                 bottom: unset;
-                width: size-m(44);
-                height: size-m(44);
+                width: sizem(44);
+                height: sizem(44);
                 cursor: pointer;
-                margin-top: size-m(30);
-                margin-bottom: size-m(40);
+                margin-top: sizem(30);
+                margin-bottom: sizem(40);
 
                 img {
                     width: 100%;

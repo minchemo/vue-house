@@ -1,171 +1,101 @@
 <template>
-  <article class="s9 font-['noto_sans_tc']">
-    <div class="text-box">
-      <div class="title text-white" data-aos="fade-up" data-aos-delay="0">
-        建築精銳大師共聚
-      </div>
-      <div class="subtitle text-white" data-aos="fade-up" data-aos-delay="200">
-        聯名共手創作
-      </div>
-      <img class="ring1" src="@/section/ring.svg" alt="">
-      <div class="content" data-aos="fade-up" data-aos-delay="400">
-        泰嘉把建築的思考理路拉長<br />
-        從原始圖面到落地執行，不斷磨圖優化<br />
-        堅持慢磨細工，對細節吹毛求疵<br />
-        讓完美成為泰嘉的建築基因
-      </div>
-    </div>
-    <div class="guys" v-if="$isMobile()">
-      <div class="guy" v-for="guy in images_m">
-        <div class="avatar" :style="{ backgroundImage: `url('${guy.image}')` }"></div>
-        <div class="text">
-          <div class="t2" data-aos="fade-up" data-aos-delay="200">{{ guy.t2 }}</div>
-          <div class="t1" data-aos="fade-up" data-aos-delay="0">{{ guy.t1 }}</div>
-          <div class="t3" v-html="guy.t3" data-aos="fade-up" data-aos-delay="400"></div>
-        </div>
-      </div>
-    </div>
-    <div class="guys" v-else>
-      <div class="guy" v-for="guy in images">
-        <div class="avatar" :style="{ backgroundImage: `url('${guy.image}')` }"></div>
-        <div class="text">
-          <div class="t1" data-aos="fade-up" data-aos-delay="0">{{ guy.t1 }}</div>
-          <div class="t2" data-aos="fade-up" data-aos-delay="200">{{ guy.t2 }}</div>
-          <div class="t3" v-html="guy.t3" data-aos="fade-up" data-aos-delay="400"></div>
-        </div>
-      </div>
-    </div>
-    <div class="work">
-      <img src="@/section/s9/work.jpg" alt="" srcset="">
-      <p>泰嘉近兩年完工業績 成屋實景</p>
-    </div>
-  </article>
+	<article class="s9 relative" ref="s9" :class="dayClass[currentDay]">
+		<div class="text">
+			<img src="@/section/s9/mark.png" alt="" data-aos="fade-down" data-aos-delay="0">
+			<div class="t1" data-aos="fade-down" data-aos-delay="200">品生活之淳<br v-if="!$isMobile()" />賞人文之萃</div>
+			<div class="t2" data-aos="fade-down" data-aos-delay="400">洗鍊優雅有機曲面禮讚白派大師建築美學<br />
+				Twin Towers純白輕盈量體以輕透格局<br />
+				讓建築擁抱自然光景<br />
+				構築深具療癒力空間場域<br />
+				如實演繹國際樣式生活之美</div>
+		</div>
+		<div class="caption">{{ currentDay == 0 ? '建築外觀日景3D情境示意' : '建築外觀夜景3D情境示意' }}</div>
+		<div class="tip"  data-aos="fade" data-aos-delay="200" data-aos-duration="1000" :key="currentDay">白派美學</div>
+	</article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
 .s9 {
-  position: relative;
-  width: 100%;
-  height: size(1080);
-  background-image: url('@/section/s9/bg.jpg');
-  background-size: cover;
-  background-position: bottom;
+	@apply transition-all duration-1000;
+	width: 100%;
+	height: size(1020);
+	background-size: cover;
 
-  .text-box {
-    position: absolute;
-    top: size(157);
-    left: size(136);
-    text-align: left;
+	.text {
+		@apply absolute flex flex-col items-center;
+		gap: size(25);
+		top: size(126.67);
+		left: size(1258);
+		img {
+			width: size(201);
+		}
+		.t1 {
+			@apply transition-all duration-1000;
+			font-weight: 700;
+			font-size: size(50);
+			line-height: 160%;
+			text-align: center;
+		}
+		.t2 {
+			@apply transition-all duration-1000;
+			font-weight: 400; 
+			font-size: size(25);
+			line-height: 200%;
+			text-align: center;
+		}
+	}
 
-    .title {
-      font-weight: 700;
-      font-size: size(40);
-      line-height: size(58);
-      letter-spacing: 0.07em;
-      
-    }
+	.caption {
+		@apply absolute;
+		right: size(10);
+		bottom: size(10);
+		font-weight: 700;
+		font-size: size(25);
+		color: #FFFFFF;
+		text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
+	}
+	.tip {
+		@apply absolute;
+		font-weight: 700;
+		font-size: size(50);
+		letter-spacing: 0.5rem;
+		color: #FFFFFF;
+		writing-mode: vertical-rl;
+	}
+	
+	&.day {
+		background-image: url(@/section/s9/1.jpg);
+		.text{
+			.t1 {
+				color: #DD0615;
+			}
+			.t2 {
+				color: #000000;
+			}
+		}
+		.tip {
+			top: size(188.5);
+			left: size(322);
+		}
+	}
 
-    .subtitle {
-      font-weight: 300;
-      font-size: size(40);
-      line-height: size(58);
-      letter-spacing: 0.07em;
-      margin-top: size(10);
-    }
-
-    .ring1 {
-      width: size(48);
-      margin-top: size(20);
-      margin-bottom: size(20);
-      transform:scaleX(-1);
-    }
-
-    .content {
-      font-weight: 400;
-      font-size: size(20);
-      line-height: size(38);
-      letter-spacing: 0.07em;
-      color: #fff;
-    }
-  }
-
-  .guys {
-    position: absolute;
-    top: size(557);
-    left: size(136);
-    display: flex;
-    align-items: flex-end;
-    gap: size(9.75);
-
-    .guy {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      color: #fff;
-
-      .avatar {
-        width: size(200.25);
-        height: size(270.92);
-        background-size: cover;
-        margin-bottom: size(20);
-
-        &:after {
-          content: '';
-          width: size(2);
-          height: size(34);
-          background-color: #FF0000;
-          position: absolute;
-          left: size(12);
-          bottom: -#{size(19)};
-        }
-      }
-
-      .text {
-        .t1 {
-          font-weight: 500;
-          font-size: size(30);
-          letter-spacing: 0.07em;
-          display: inline-block;
-          margin-right: size(10);
-        }
-
-        .t2 {
-          font-weight: 400;
-          font-size: size(20);
-          display: inline-block;
-        }
-
-        .t3 {
-          font-weight: 400;
-          font-size: size(20);
-          margin-top: size(5);
-        }
-      }
-    }
-  }
-
-  .work {
-    @apply absolute;
-    width: size(839);
-    height: size(692);
-    right: 0;
-    bottom: size(181);
-    img {
-      width: 100%;
-    }
-    p {
-      font-weight: 400;
-      font-size: size(15);
-      line-height: size(22);
-      text-align: right;
-      letter-spacing: 0.07em;
-      color: #6C6C6C;
-      padding-right: size(10);
-      margin-top: size(5);
-    }
-  }
+	&.night {
+		background-image: url(@/section/s9/2.jpg);
+		.text{
+			.t1 {
+				color: #fff;
+			}
+			.t2 {
+				color: #fff;
+			}
+		}
+		.tip {
+			top: size(420);
+			left: size(366);
+		}
+	}
 }
 
 /* 螢幕尺寸標準 */
@@ -175,170 +105,87 @@
 @media screen and (max-width: 767px) {
 
   .s9 {
-    height: size-m(795);
-    padding: size-m(30) 0;
-  background-image: url('@/section/s9/bgm.jpg');
+	height: sizem(667);
 
-    .text-box {
-      position: relative;
-      top: auto;
-      left: auto;
-      text-align: center;
-      margin-bottom: size-m(37);
-      z-index: 1;
+	.text {
+		@apply absolute flex flex-col items-center;
+		gap: sizem(12);
+		top: sizem(37);
+		left: 0;
+		width: 100%;
+		img {
+			width: sizem(92.64);
+		}
+		.t1 {
+			font-size: sizem(25);
+		}
+		.t2 {
+			font-size: sizem(13);
+			line-height: 187%;
+		}
+	}
 
-      .title {
-        font-size: size-m(20);
-        line-height: 1;
-        letter-spacing: 0.07em;
-      }
+	.caption {
+		right: sizem(10);
+		bottom: sizem(10);
+		font-size: sizem(12);
+		text-shadow: 0px sizem(2) sizem(2) rgba(0, 0, 0, 0.8);
+	}
+	.tip {
+		font-size: sizem(16);
+	}
+	
+	&.day {
+		background-image: url(@/section/s9/1_m.jpg);
+		.text{
+			.t1 {
+				color: #DD0615;
+			}
+			.t2 {
+				color: #000000;
+			}
+		}
+		.tip {
+			top: sizem(353);
+			left: sizem(20);
+		}
+	}
 
-      .subtitle {
-        font-size: size-m(20);
-        line-height: 1;
-        margin-top: size-m(5);
-      }
-
-      .ring1 {
-        width: size-m(18);
-        margin-top: size-m(15);
-        margin-bottom: size-m(10);
-      }
-
-      .content {
-        font-size: size-m(12);
-        line-height: 2;
-      }
-    }
-
-    .guys {
-      @apply relative grid grid-cols-2 top-0 left-0 items-start justify-center;
-      row-gap: size-m(5);
-      gap: size-m(5);
-      width: size-m(304);
-      margin: 0 auto;
-      .guy {
-        width: size-m(146);
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        color: #fff;
-
-        .avatar {
-          flex-basis: size-m(68);
-          height: size-m(92);
-          margin-bottom: 0;
-          background-position: center;
-
-          &:after {
-            width: size-m(20);
-            height: size-m(2);
-            left: size-m(63);
-            bottom: size-m(82)
-          }
-        }
-
-        .text {
-          @apply flex flex-col;
-          padding-left: size-m(6);
-
-          .t1 {
-            font-size: size-m(16);
-            margin-right: size-m(5);
-          }
-
-          .t2 {
-            font-size: size-m(12);
-          }
-
-          .t3 {
-            font-weight: 400;
-            font-size: size-m(12);
-            margin-top: size-m(0);
-          }
-        }
-
-        &:after {
-          @apply hidden;
-          content: none;
-          
-        }
-      }
-    }
-  .work {
-    @apply relative;
-    width: size-m(340);
-    height: size-m(270);
-    right: 0;
-    bottom:0;
-    margin:  0 auto;
-    margin-top: size-m(58.98);
-    
-    p {
-      font-size: size-m(10);
-      line-height: size-m(14);
-      padding-right: 0;
-      margin-top: size-m(5);
-    }
-  }
-
+	&.night {
+		background-image: url(@/section/s9/2_m.jpg);
+		.text{
+			.t1 {
+				color: #fff;
+			}
+			.t2 {
+				color: #fff;
+			}
+		}
+		.tip {
+			top: sizem(414);
+			left: sizem(42);
+		}
+	}
   }
 }
+
 </style>
 <script setup>
-const images = [
-  {
-    image: new URL("../section/s9/4.jpg", import.meta.url).href,
-    t1: '呂金發',
-    t2: '董事長',
-    t3: '打造理想建築'
-  },
-  {
-    image: new URL("../section/s9/3.jpg", import.meta.url).href,
-    t1: '王東奎',
-    t2: '建築外觀',
-    t3: '名宅風格 豪邸巨匠'
-  },
-  {
-    image: new URL("../section/s9/1.jpg", import.meta.url).href,
-    t1: '許富居',
-    t2: '景觀設計',
-    t3: '豪宅指定 景觀權威'
-  },
-  {
-    image: new URL("../section/s9/2.jpg", import.meta.url).href,
-    t1: '唐忠漢',
-    t2: '公設設計',
-    t3: '美學首席 指揮空間層次'
-  },
-];
+import { onMounted, ref } from 'vue';
 
-const images_m = [
-  {
-    image: new URL("../section/s9/3_m.jpg", import.meta.url).href,
-    t1: '王東奎',
-    t2: '建築外觀',
-    t3: '名宅風格<br/>豪邸巨匠'
-  },
-  {
-    image: new URL("../section/s9/4_m.jpg", import.meta.url).href,
-    t1: '呂金發',
-    t2: '董事長',
-    t3: '打造理想建築',
-    large: true
-  },
-  {
-    image: new URL("../section/s9/1_m.jpg", import.meta.url).href,
-    t1: '許富居',
-    t2: '景觀設計',
-    t3: '豪宅指定<br/>景觀權威'
-  },
-  {
-    image: new URL("../section/s9/2_m.jpg", import.meta.url).href,
-    t1: '唐忠漢',
-    t2: '公設設計',
-    t3: '美學首席<br/>指揮空間層次'
-  },
-];
+const s9 = ref();
+const dayTimer = 5; // 日夜交替時間, 秒
+const dayClass = ['day', 'night']
+const currentDay = ref(0); // 預設為白天或黑夜, 預設白天
+
+onMounted(() => {
+	setInterval(() => {
+		if (currentDay.value === 0) {
+			currentDay.value = 1;
+		} else {
+			currentDay.value = 0;
+		}
+
+	}, dayTimer * 1000);
+})
 </script>

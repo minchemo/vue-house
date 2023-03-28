@@ -1,4 +1,4 @@
-const caseName = "泰嘉拓真"
+const caseName = "雙橡園"
 
 export default {
     meta: {
@@ -6,20 +6,20 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "高雄市楠梓區援中路398號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d920.0161961702736!2d120.29352779999998!3d22.725833299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c686e939d7e2c3d!2zMjLCsDQzJzMzLjAiTiAxMjDCsDE3JzM2LjciRQ!5e0!3m2!1szh-TW!2stw!4v1664345826395!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/bdTPb1sFWtW9MaoZA",
-    phone: "07-360-0033",
-    fbLink: "https://www.facebook.com/105397995820212/",
-    fbMessage: "https://m.me/105397995820212/",
+    address: "接待中心：新北市新莊區中原路101號對面",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d903.5998810237637!2d121.45594439999999!3d25.0544444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE2LjAiTiAxMjHCsDI3JzIxLjQiRQ!5e0!3m2!1szh-TW!2stw!4v1680016898394!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/yMczBu3XZbYLn2XC9",
+    phone: "02-2279-1188",
+    fbLink: "https://www.facebook.com/gtcip.debang",
+    fbMessage: "https://m.me/gtcip.debang",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "北基國際開發實業股份有限公司"],
-        ["坪數規劃", "23~46坪"],
-        ["房型規劃", "2房、3房"],
-        ["聯絡電話", "07-360-0033"],
-        ["代銷團隊", "悅揚國際實業有限公司<br/>上嘉行銷股份有限公司"],
-        ["接待中心", "高雄市楠梓區援中路398號"],
+        ["建物型態", "住宅大樓"],
+        ["坪數規劃", "29~31坪"],
+        ["建設公司", "茂德機構 精業建設"],
+        ["房型規劃", "2-3房"],
+        ["企劃銷售", "得邦廣告"],
+        ["基地面積", "487坪"],
     ],
     gtmCode: ["GTM-M87MK5M","GTM-55PLPZQ"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",

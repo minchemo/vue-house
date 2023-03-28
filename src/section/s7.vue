@@ -1,64 +1,108 @@
 <template>
-  <article class="s7">
-    <div class="item" v-for="item in images" v-if="!$isMobile()">
-      <div class="t1" v-html="item.t1" data-aos="fade-up" data-aos-delay="0"></div>
-      <div class="t2" v-html="item.t2" data-aos="fade-up" data-aos-delay="200"></div>
-      <img :src="item.image" alt="" srcset="">
-    </div>
-    <div class="item" v-for="item in images" v-else>
-      <div>
-        <div class="t1" v-html="item.t1" data-aos="fade-up" data-aos-delay="0"></div>
-        <div class="t2" v-html="item.t2" data-aos="fade-up" data-aos-delay="200"></div>
-      </div>
-      <img :src="item.image" alt="" srcset="">
-    </div>
-  </article>
+	<article class="s7 relative">
+		<div class="text">
+			<div class="t1" data-aos="fade-down" data-aos-delay="0">雙捷核心 環狀線╳機場線<br>
+				2站台北 一線國門 幸福隨行</div>
+			<div class="t2" data-aos="fade-down" data-aos-delay="200">
+				微距機場捷運線「新北產業園區站」環狀線「幸福站」、皆僅600米<br v-if="!$isMobile()">
+				1站轉乘中和新蘆線，2站直達台北車站<br v-if="!$isMobile()">
+				一線連結桃園機場，，加上鄰近台64、65號快速道路連接國道<br v-if="!$isMobile()">
+				縱橫雙北與國際從容以閱
+			</div>
+			<ul class="pagin" v-if="!$isMobile()">
+				<li v-for="img, i in imgs" v-bind:class="{ active: currentSlideIndex == i }" @click="splide.splide.go(i)">
+				</li>
+			</ul>
+		</div>
+		<div class="slider" data-aos="fade" data-aos-delay="0">
+			<div class="arrows" v-if="$isMobile()">
+				<img loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+				<img loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+			</div>
+			<Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+				<SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+					<p>{{ img.caption }}</p>
+				</SplideSlide>
+			</Splide>
+		</div>
+		<img class="mark" data-aos="fade" data-aos-delay="0" v-if="!$isMobile()" src="@/section/s7/mark.png" alt="" srcset="">
+		<img class="mark" data-aos="fade" data-aos-delay="0" v-else src="@/section/s7/mark_m.png" alt="" srcset="">
+	</article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
 .s7 {
-  position: relative;
-  width: 100%;
-  height: size(874);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #7BA9D3;
-  gap: size(23);
+	width: 100%;
+	height: size(876);
+	gap: size(0);
+	@apply flex justify-center items-center;
 
-  .item {
-    width: size(524);
-    height: size(663);
-    padding: size(32) size(28.9);
-    color: #fff;
-    font-family: 'Noto Sans TC';
-    display: flex;
-    flex-direction: column;
-    gap: size(30);
-    border: size(1) solid #fff;
-
-    .t1 {
-      font-weight: 700;
-      font-size: size(30);
-      line-height: size(43);
-      text-align: center;
-    }
-
-    .t2 {
-      font-weight: 400;
-      font-size: size(20);
-      line-height: size(30);
-      letter-spacing: 0.07em;
-    }
-
-    img {
-      margin-bottom: 0;
-      margin-top: auto;
-      width: 100%;
-    }
-  }
+	.text {
+		@apply relative flex flex-col items-start justify-center;
+		width: size(952);
+		height: size(732);
+		background-color: #EEEEEE;
+		padding-left: size(114.07);
+		.t1 {
+			font-weight: 700;
+			font-size: size(50);
+			line-height: 160%;
+			color: #00437D;
+		}
+		.t2 {
+			margin-top: size(30);
+			font-weight: 400;
+			font-size: size(25);
+			line-height: 200%;
+			color: #000;
+		}
+		.pagin {
+			@apply absolute flex items-center justify-start;
+			gap: size(10.22);
+			margin-top: size(62);
+			left: size(770);
+			bottom: size(30.36);
+			li {
+				@apply cursor-pointer;
+				width: size(36.78);
+				height: size(3.86);
+				background-color: #BB9259;
+				&.active {
+					height: size(11.47);
+				}
+			}
+		}
+	}
+	.slider {
+		@apply relative bg-white;
+		right: 0;
+		bottom: 0;
+		width: size(789);
+		height: size(732);
+		filter: drop-shadow(0 size(5) size(20) rgba(0, 0, 0, 0.3));
+		.slide-item {
+			width: size(789);
+			height: size(732);
+			background-size: cover;
+			p {
+				@apply absolute;
+				right: size(10);
+				bottom: size(10);
+				font-weight: 700;
+				font-size: size(25);
+				color: #FFFFFF;
+				text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
+			}
+		}
+	}
+	.mark {
+		@apply absolute;
+		width: size(258.03);
+		left: size(849.03);
+		top: 0;
+	}
 }
 
 /* 螢幕尺寸標準 */
@@ -68,83 +112,104 @@
 @media screen and (max-width: 767px) {
 
   .s7 {
-    height: auto;
-    flex-direction: column;
-    gap: size-m(10);
-    padding: size-m(10) 0;
+	width: 100%;
+	height: auto;
+	gap: 0;
+	padding-top: sizem(31);
+	@apply flex flex-col justify-center items-center;
 
-    .item {
-      width: size-m(316);
-      height: auto;
-      padding: size-m(10) 0;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      gap: size-m(8);
-      border: size-m(1) solid #fff;
+	.text {
+		width: sizem(351);
+		height: auto;
+		padding: sizem(45.7) sizem(19) sizem(35) sizem(19);
+		.t1 { 
+			font-size: sizem(20);
+			line-height: 163%;
+			color: #00437D;
+		}
+		.t2 {
+			width: 100%;
+			margin-top: sizem(10);
+			font-size: sizem(13);
+			line-height: 187%;
+			color: #000;
+		}
+	}
+	.slider {
+		@apply relative bg-white;
+		right: 0;
+		bottom: 0;
+		width: sizem(351);
+		height: sizem(314);
+		box-shadow: sizem(5) sizem(5) sizem(10) rgba(0, 0, 0, 0.5);
+		filter: none;
+		.slide-item {
+			width: sizem(351);
+			height: sizem(314);
+			p {
+				right: sizem(10);
+				bottom: sizem(10);
+				font-size: sizem(12);
+				text-shadow: 0px sizem(2) sizem(2) rgba(0, 0, 0, 0.8);
+			}
+		}
 
-      .t1 {
-        font-weight: 500;
-        font-size: size-m(16);
-        line-height: size-m(23.17);
-        text-align: left;
-        padding-left: size-m(10);
-        letter-spacing: 0;
-      }
+		
+		.arrows {
+			@apply absolute z-10 flex items-center justify-between;
+			width: 100%;
+			padding: 0 sizem(5);
+			bottom: 50%;
+			transform: translateY(50%);
+			img {
+				margin: unset;
+			}
+		}
+	}
+	.mark {
+		width: sizem(91.4);
+		height: auto;
+		left: sizem(269);
+		bottom: unset;
+		top: sizem(15.6);
+	}
 
-      .t2 {
-        font-size: size-m(12);
-        line-height: size-m(17);
-        padding-left: size-m(10);
-        letter-spacing: 0;
-        margin-top: size-m(5);
-      }
-
-      img {
-        margin-bottom: 0;
-        margin-top: 0;
-        width: size-m(120);
-      }
-
-      &:nth-child(2) {
-        flex-direction: row-reverse;
-
-        .t1 {
-          padding-right: size-m(10);
-          padding-left: 0;
-          white-space: nowrap;
-        }
-
-        .t2 {
-          padding-right: size-m(10);
-          padding-left: 0;
-        }
-      }
-    }
   }
-
 }
+
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
-const images = [
-  {
-    image: isMobile ? new URL("../section/s7/1.jpg", import.meta.url).href : new URL("../section/s7/1_m.jpg", import.meta.url).href,
-    t1: '新台17線打通北高雄<br/>15分鐘到美術館、農16',
-    t2: '新台17線拍板執行！有助紓解楠梓至左營段車流量，從高大特區往南僅需15分鐘，就能連結大美術館園區！'
-  },
-  {
-    image: isMobile ? new URL("../section/s7/2.jpg", import.meta.url).href : new URL("../section/s7/2_m.jpg", import.meta.url).href,
-    t1: '後勁溪、左營海景雙風光<br/>水岸對望 拓境美感視界',
-    t2: '前有眺望無遮擋的左營軍港海岸景觀，後倚後勁溪美景，左擁右抱雙倍水岸生活！'
-  },
-  {
-    image: isMobile ? new URL("../section/s7/3.jpg", import.meta.url).href : new URL("../section/s7/3_m.jpg", import.meta.url).href,
-    t1: '高雄大學 萬坪森林環擁<br/>學風靜地 孵育高質生活',
-    t2: '高雄大學是台灣少數無圍牆的森林大學之一，校園佔地82公頃，沿途環繞綠樹、湖泊、綠意環境，宛如城市裡的大公園。'
-  },
-];
+const getImg = (path) => {
+	if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
+	return new URL(`./${path}_m.jpg`, import.meta.url).href
+}
+const splide = ref();
+const currentSlideIndex = ref(0);
+const moved = (newIdx, prevIdx, destIdx) => {
+	currentSlideIndex.value = prevIdx
+}
+
+const options = {
+	rewind: true,
+	arrows: false,
+	pagination: false,
+	autoplay: true,
+	interval: 4000,
+	gap: 0,
+	type: 'fade'
+}
+
+const imgs = [
+	{
+		img: getImg('s7/1'),
+		caption: "機捷新北產業園區站"
+	},
+	{
+		img: getImg('s7/2'),
+		caption: "環狀線幸福站"
+	},
+]
 </script>

@@ -1,111 +1,132 @@
 <template>
-  <article class="s4">
-    <div class="item">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">六大創新 拓展建築 美的造極</div>
-      <img src="@/section/ring.svg" alt="" srcset="">
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">
-        高雄的好朋友泰嘉，踏行高雄大學特區，<br />
-        首創六大創新服務，開拓南台灣建築大道上的典範。
-      </div>
-    </div>
-    <div class="images grid grid-cols-3 font-['Noto_Sans_TC']">
-      <div class="image" v-for="image in images">
-        <div class="img" :style="{backgroundImage: `url('${image.image}')`}"></div>
-        <div class="flex items-center justify-center md:justify-between w-full">
-          <p v-html="image.text" data-aos="fade-up" data-aos-delay="400"></p>
-          <img v-if="!$isMobile()" class="ml-auto mr-0" :src="image.icon" alt="" srcset="">
-        </div>
-      </div>
-
-    </div>
-  </article>
+	<article class="s4 relative">
+		<div class="left">
+			<div class="t1" data-aos="fade-down" data-aos-delay="0">20%純住宅內限量1%<br />
+				稀貴價值造就高感品質</div>
+			<div class="t2" data-aos="fade-down" data-aos-delay="200">猶如皇冠上的寶石，副都心商業區繁華富域<br />
+				純住宅區比例僅占20％<br />
+				其中座擁雙校園、雙公園、雙捷運、雙商圈<br v-if="$isMobile()" />的土地更僅有1%<br />
+				珍稀，是價值唯一真諦</div>
+			<div class="t3" data-aos="fade" data-aos-delay="0" @click="viewerOpened = true">
+				<p>點圖看詳細生機圖</p>
+			</div>
+		</div>
+		<div class="right" data-aos="fade" data-aos-delay="0">
+			<p v-if="!$isMobile()">點圖看詳細生機圖</p>
+		</div>
+		<img class="i1" src="@/section/s4/flag.png" alt="" srcset="">
+	</article>
+	<div class="viewer" :class="{ active: viewerOpened }">
+		<img src="@/section/s4/map-l.jpg" alt="" srcset="">
+		<div class="close" :key="viewerOpened" @click="viewerOpened = false">關閉</div>
+	</div>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
 .s4 {
-  position: relative;
-  width: 100%;
-  height: size(1080);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: size(180);
+	width: 100%;
+	height: size(1215);
+	@apply flex items-end justify-end;
+	gap: size(46);
+	padding-bottom: size(92);
+	.left {
+		.t1 {
+			font-weight: 700;
+			font-size: size(50);
+			line-height: 160%;
+			color: #FFCE88;
+			padding-left: size(140);
+		}
+		.t2 {
+			font-weight: 400;
+			font-size: size(25);
+			line-height: 200%;
+			color: #FFFFFF;
+			margin-top: size(30);
+			padding-left: size(140);
+		}
+		.t3 {
+			@apply flex items-center justify-center cursor-pointer transition-all;
+			font-weight: 700;
+			font-size: size(25);
+			color: #00437D;
+			width: size(984);
+			height: size(485);
+			background-image:url(@/section/s4/map.jpg);
+			background-size: cover;
+			margin-top: size(72);
+			filter: drop-shadow(0px size(5) size(20) rgba(0, 0, 0, 0.3));
+			&:hover {
+				font-size: size(32);
+			}
+		}
+	}
+	.right{
+			@apply flex items-end justify-end ;
+			padding: size(10);
+			width: size(803);
+			height: size(1123);
+			background-image:url(@/section/s4/1.jpg);
+			background-size: cover;
+			font-weight: 700;
+			font-size: size(25);
+			line-height: size(36);
+			text-align: right;
+			color: #FFFFFF;
+			text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
+			
+		
+	}
+	.i1 {
+		@apply absolute;
+		bottom: size(979.32);
+		left: -#{size(44)};
+		width: size(520.92);
+	}
+}
 
-  .item {
-    font-family: 'Noto Sans TC';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: size(30);
-    z-index: 1;
+.viewer {
+	@apply transition-all duration-100 backdrop-blur-lg text-center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.9);
+	left: 0;
+	top: 0;
+	display: none;
 
-    .t1 {
-      font-weight: 700;
-      font-size: size(40);
-      letter-spacing: 0.07em;
-      color: #699DC4;
-    }
+	&.active {
+		display: block;
+		z-index: 999999;
+	}
 
-    img {
-      width: size(48);
-    }
+	img {
+		@apply relative;
+		max-width: 100%;
+		max-height: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 
-    .t2 {
-      font-weight: 400;
-      font-size: size(20);
-      line-height: 1.8;
-      letter-spacing: 0.07em;
-    }
-  }
-
-
-  .images {
-    position: relative;
-    column-gap: size(31.8);
-    row-gap: size(53);
-
-    .image {
-      position: relative;
-      width: size(280.32);
-      height: auto;
-
-      .img {
-        position: relative;
-        width: size(268.64);
-        height: size(192.72);
-        background-size: cover;
-        transform-style: preserve-3d;
-        margin-bottom: size(20);
-
-        &::after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          right: -#{size(11.68)};
-          bottom: -#{size(11.68)};
-          background-color: #699DC4;
-          transform: translateZ(-1px);
-        }
-      }
-
-      p {
-        padding-left: size(9);
-        font-weight: 400;
-        font-size: size(20);
-      }
-
-      img {
-        height: size(45);
-        max-width: size(70);
-      }
-    }
-  }
-
+	.close {
+		position: absolute;
+		z-index: 9999;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 18px;
+		width: 80px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 50px;
+		padding: 5px 10px;
+		@apply cursor-pointer;
+		&:hover {
+			background-color: rgba(0,0,0,0.9);
+		}
+	}
 }
 
 /* 螢幕尺寸標準 */
@@ -115,64 +136,79 @@
 @media screen and (max-width: 767px) {
 
   .s4 {
-    flex-direction: column;
-    height: size-m(522);
-    gap: size-m(28);
-
-    .item {
-      gap: size-m(10);
-      z-index: 1;
-
-      .t1 {
-        font-size: size-m(20);
-      }
-
-      img {
-        width: size-m(18);
-      }
-
-      .t2 {
-        margin-top: size-m(10);
-        font-size: size-m(12);
-      }
-    }
-
-
-    .images {
-      column-gap: size-m(26);
-      row-gap: size-m(24);
-
-      .image {
-        width: size-m(96);
-
-        .img {
-          width: size-m(92);
-          height: size-m(66);
-          margin-bottom: size-m(10);
-
-          &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            right: -#{size-m(5)};
-            bottom: -#{size-m(5)};
-            background-color: #699DC4;
-            transform: translateZ(-1px);
-          }
-        }
-
-        p {
-          text-align: center;
-          padding-left: 0;
-          white-space: nowrap;
-          font-size: size-m(12);
-        }
-      }
-    }
+	height: sizem(578);
+	@apply flex items-end justify-center;
+	gap: 0;
+	padding-bottom: sizem(15);
+	.left {
+		@apply relative z-10;
+		padding-bottom: sizem(0);
+		.t1 {
+			font-size: sizem(20);
+			line-height: 163%;
+			padding-left: sizem(20);
+		}
+		.t2 {
+			font-size: sizem(13);
+			line-height: 187%;
+			margin-top: sizem(12);
+			padding-left: sizem(20);
+		}
+		.t3 {
+			font-size: sizem(25);
+			width: sizem(349);
+			height: sizem(270);
+			background-image:url(@/section/s4/map_m.jpg);
+			margin-top: sizem(40);
+			filter: drop-shadow(0px sizem(3) sizem(15) rgba(0, 0, 0, 0.3));
+		}
+	}
+	.right{
+		@apply absolute;
+		right: 0;
+		top: 0;
+			padding: 0;
+			width: sizem(63);
+			height: sizem(577);
+			background-image:url(@/section/s4/1_m.jpg);
+		
+	}
+	.i1 {
+		@apply absolute z-10;
+		bottom: -#{sizem(26)};
+		left: -#{sizem(30)};
+		width: sizem(178);
+	}
 
   }
+
+.viewer {
+	@apply overflow-x-scroll overflow-y-hidden;
+	img {
+		max-width: unset;
+		width: auto;
+		height: 100%;
+	}
+	.close {
+		position: sticky;
+		z-index: 9999;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 18px;
+		width: 80px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 50px;
+		padding: 5px 10px;
+		@apply cursor-pointer;
+		&:hover {
+			background-color: rgba(0,0,0,0.9);
+		}
+	}
 }
+}
+
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
@@ -180,36 +216,5 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
 
-const images = [
-  {
-    image: new URL("../section/s4/1.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i1.svg", import.meta.url).href,
-    text: '好住先於快銷<br/>LIVING 宜居比例'
-  },
-  {
-    image: new URL("../section/s4/2.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i2.svg", import.meta.url).href,
-    text: '本土先於世界<br/>VIEW跨界眼界'
-  },
-  {
-    image: new URL("../section/s4/3.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i3.svg", import.meta.url).href,
-    text: '專業先於廣告<br/>SGS檢測認證<br/>(水電、機電、消防)'
-  },
-  {
-    image: new URL("../section/s4/4.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i4.svg", import.meta.url).href,
-    text: '關心先於官網<br/>CARE雲端APP'
-  },
-  {
-    image: new URL("../section/s4/5.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i5.svg", import.meta.url).href,
-    text: '主動先於客訴<br/>PROACTIVE社區健檢'
-  },
-  {
-    image: new URL("../section/s4/6.jpg", import.meta.url).href,
-    icon: new URL("../section/s4/i6.svg", import.meta.url).href,
-    text: '客服先於售價<br/>SERVICE董座親轄'
-  },
-];
+const viewerOpened = ref(false);
 </script>

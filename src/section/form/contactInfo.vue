@@ -1,6 +1,6 @@
 <template>
-  <div class="contact-info mx-auto bg-[#7BA9D3] flex flex-col items-center justify-between">
-    <div class="logo"></div>
+  <div class="contact-info mx-auto bg-[transparent] flex flex-col items-center justify-between">
+    <div class="logo" data-aos="zoom-in"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
@@ -101,15 +101,15 @@
 .contact-info {
   width: size(1200);
   // border-radius: size(115);
-  padding: size(55) size(168) size(55) size(168);
-  margin-top: size-m(20);
+  padding: size(0) size(168) size(55) size(168);
+  margin-top: size(80);
   position: relative;
   z-index: 50;
   margin-bottom: 0;
 
   .logo {
-    width: size(556);
-    height: size(193);
+    width: size(380.7);
+    height: size(308.78);
     background-image: url("@/section/form/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -123,11 +123,11 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #fff;
-      color: #000;
+      background-color: #C79E63;
+      color: #fff;
       width: 100%;
       padding: 0 size(55);
-      // border-radius: 9999px;
+      border-radius: size(20);
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.06em;
@@ -137,7 +137,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #055F76;
+        background-color: #79531e;
         color: #fff;
 
         img {
@@ -149,12 +149,12 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -167,7 +167,7 @@
           position: absolute;
           width: 8em;
           height: 100%;
-          background-color: #eee;
+          background-color: #fff;
           left: calc(100% - 4em);
           z-index: -1;
         }
@@ -175,7 +175,7 @@
 
 
       &.googlemap {
-        background-color: #666;
+        background-color: #C79E63;
         color: #fff;
 
         img {
@@ -183,7 +183,7 @@
         }
 
         &:hover {
-          background-color: gray;
+          background-color: #79531e;
           color: #fff;
         }
       }
@@ -201,22 +201,22 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width: size-m(375);
-    height: size-m(63);
-    gap: size-m(1);
+    width: sizem(375);
+    height: sizem(63);
+    gap: sizem(1);
 
     .contact-item {
       height: 100%;
-      background-color: #595757;
-      font-size: size-m(16);
+      background-color: #004488;
+      font-size: sizem(16);
       font-weight: 400;
       color: #fff;
 
       img {
-        margin-bottom: size-m(5);
-        max-width: size-m(16.5);
+        margin-bottom: sizem(5);
+        max-width: sizem(16.5);
         height: auto;
-        max-height: size-m(16.5);
+        max-height: sizem(16.5);
         filter: brightness(0) invert(1);
       }
 
@@ -224,43 +224,44 @@
   }
 
   .contact-info {
-    width: size-m(375);
-    height: size-m(590);
-    // border-radius: size-m(68);
-    padding: size-m(50) size-m(15);
-    margin-top: size-m(60);
+    width: sizem(375);
+    height: auto;
+    // border-radius: sizem(68);
+    padding: sizem(40) sizem(15);
+    margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
 
     .logo {
-      width: size-m(209);
-      height: size-m(98);
+      width: sizem(177);
+      height: sizem(138.51);
       background-image: url("@/section/form/logo.png");
-      margin-bottom: size-m(30);
+      margin-bottom: sizem(30);
     }
 
     .contact-item-box {
       position: relative;
-      margin-top: size-m(0);
-      gap: size-m(20);
+      margin-top: sizem(0);
+      gap: sizem(20);
       flex-direction: column;
 
       .contact-item {
-        padding: 0 size-m(80);
-        font-size: size-m(16);
+        padding: 0 sizem(80);
+        font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
+        border-radius: sizem(10);
 
         img {
-          max-width: size-m(27);
+          max-width: sizem(27);
           height: auto;
-          max-height: size-m(27);
+          max-height: sizem(27);
           margin: unset;
         }
 
         &.address {
           padding: 0 0;
-          margin-top: size-m(20);
+          margin-top: sizem(20);
 
           &::before {
             width: 100%;
@@ -271,7 +272,7 @@
         }
 
         &.address+div {
-          // border-radius: 0 0 size-m(30) size-m(30);
+          // border-radius: 0 0 sizem(30) sizem(30);
         }
       }
 

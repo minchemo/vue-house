@@ -1,8 +1,8 @@
-  <template>
-  <div id="order" class="order relative bg-[#DCDCDD] text-center">
+<template>
+  <div id="order" class="order relative bg-[#DD0615] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
+      <div class="order-title text-center text-[#fff]">{{ info.order.title }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
@@ -12,10 +12,10 @@
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
-      <!-- <img class="decor" src="@/section/form/decor.png" alt="" srcset=""> -->
+      <img class="decor" v-if="!$isMobile()" data-aos="fade" src="@/section/form/decor.png" alt="" srcset="">
 
       <!-- Form -->
-      <div class="form mx-auto relative flex items-start justify-center">
+      <div class="form mx-auto relative flex items-start justify-center" data-aos="zoom-in">
         <div class="left h-full flex flex-col justify-between items-center">
           <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
@@ -49,12 +49,12 @@
       </div>
 
       <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control">
+      <div class="flex gap-2 items-center justify-center control relative z-10">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p>
+        <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFFF00] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -89,11 +89,21 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: size(90);
+  padding-bottom: size(0);
   position: relative;
   height: auto;
-  padding-top: size(90);
+  padding-top: size(170);
   overflow: hidden;
+  &::after {
+    content: '';
+    width: size(1700);
+    height: 92%;
+    background-color: #860009;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
   
 
   .z-10 {
@@ -111,20 +121,11 @@
 
   .decor {
     position: absolute;
-    width: size(700);
-    top: -#{size(310)};
-    right: -#{size(250)};
-    animation: rotate 10s infinite linear;
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
+    width: size(316);
+    top: size(67);
+    right: 0;
+    z-index: 10;
+    transform: scale(2.5) translate(-50%,-50%) rotate(12deg);
   }
 }
 
@@ -133,9 +134,27 @@
   padding-top: size(0);
 
   .order-title {
+    @apply relative z-10;
     font-size: size(43);
     font-weight: 700;
-    margin-bottom: size(50);
+    margin-bottom: size(60);
+    width: size(292);
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: size(20);
+
+    &::after {
+      content: '';
+      width: 150%;
+      height: 110%;
+      background-image: url('@/section/form/title_decor.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: -25%;
+      top: 0;
+    }
   }
 
   .cus-divider {
@@ -155,7 +174,7 @@
 
   .form {
     width: size(920);
-    height: 350px;
+    height: 300px;
     gap: size(80);
     margin-bottom: size(50);
     z-index: 50;
@@ -181,8 +200,8 @@
     font-size: size(22);
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    background-color: #595757;
+    color: #000;
+    background-color: #fff;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
@@ -203,66 +222,71 @@
   .order-section {
     // background-image: url('@/section/form/bg_m.png');
     height: auto;
-    padding-bottom: size-m(80);
+    padding-bottom: sizem(0);
     position: relative;
     overflow: hidden;
+  &::after {
+    width: 100%;
+    height: 100%;
+  }
 
     .bg-image {
       position: absolute;
       width: 100%;
-      left: -#{size-m(30)};
-      bottom: size-m(590);
+      left: -#{sizem(30)};
+      bottom: sizem(590);
     }
 
     .decor {
       position: absolute;
-      width: size-m(148);
-      top: -#{size-m(50)};
-      right: -#{size-m(35)};
+      width: sizem(148);
+      top: -#{sizem(50)};
+      right: -#{sizem(35)};
     }
   }
 
   .order {
     width: 100%;
-    // border-radius: size-m(68) size-m(68) 0 0;
-    padding-top: size-m(0);
-    margin-top: size-m(0);
+    // border-radius: sizem(68) sizem(68) 0 0;
+    padding-top: sizem(0);
+    margin-top: sizem(0);
 
 
     .cus-divider {
       margin: 0 auto;
-      width: size-m(117);
-      height: size-m(2);
-      margin-bottom: size-m(25);
+      width: sizem(117);
+      height: sizem(2);
+      margin-bottom: sizem(25);
       background-color: #055F76;
     }
 
     .order-title {
-      font-size: size-m(29);
+      font-size: sizem(29);
       font-weight: 700;
-      margin-bottom: size-m(10);
+      margin-bottom: sizem(30);
+      width: 100%;
     }
 
     .order-title-img {
-      width: size-m(208);
-      margin-bottom: size-m(20);
+      width: sizem(208);
+      margin-bottom: sizem(20);
     }
 
     .form {
-      width: size-m(310);
+      width: sizem(310);
       height: auto;
-      gap: size-m(15);
-      margin-bottom: size-m(20);
+      gap: sizem(15);
+      margin-bottom: sizem(20);
       flex-direction: column;
 
       .left {
         width: 100%;
-        gap: size-m(15);
+        gap: sizem(15);
       }
 
       .right {
         width: 100%;
-        height: size-m(100);
+        height: sizem(100);
       }
 
       &::after {
@@ -271,12 +295,15 @@
     }
 
     .send {
-      font-size: size-m(21);
-      width: size-m(318);
+      font-size: sizem(21);
+      width: sizem(318);
+      border-radius: sizem(10);
+        background-color: #C79E63;
+        color: #fff;
     }
 
     .control {
-      font-size: size-m(14.6);
+      font-size: sizem(14.6);
     }
   }
 }
