@@ -37,11 +37,11 @@
   background-size: cover;
 
   .title {
-    left: size(1037);
+    left: 0;right: 0;text-align: center;
     top: size(240);
 
     .logo {
-      width: size(369);
+      width: size(369);margin: auto;
 
       img {
         width: 100%;
@@ -223,14 +223,14 @@
     position: relative;
 
     .title {
-      left: size-m(99);
+      // left: size-m(99);
       top: size-m(79);
       z-index: 99;
       
 
       .logo {
         width: size-m(175);
-        margin: 0px auto;
+     //  margin: 0px auto;
       }
 
       .title1{
