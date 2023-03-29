@@ -130,6 +130,7 @@
 			margin-top: sizem(10);
 			font-size: sizem(13);
 			line-height: 187%;
+			text-align: justify;
 		}
 	}
 	.slider {
