@@ -53,7 +53,7 @@
 			font-size: size(25);
 			color: #00437D;
 			width: size(984);
-			height: size(485);
+			height: size(408);
 			background-image:url(@/section/s4/map.jpg);
 			background-size: cover;
 			margin-top: size(72);

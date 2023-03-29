@@ -1,6 +1,13 @@
 <template>
     <div class="viewbox" ref="viewbox">
+        
+        <div v-if="!$isMobile()">
+        <img class="text" ref="viewImg" src="@/section/s3/text.png" alt="" srcset="">
         <img ref="viewImg" src="@/section/s3/view.jpg" alt="" srcset="">
+        </div>
+
+        <img ref="viewImg" src="@/section/s3/view_m.jpg" alt="" srcset="" v-if="$isMobile()">
+        
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.svg" alt="" srcset="">
         </div>
@@ -15,6 +22,15 @@
     width: 100%;
     height: 100%;
     background: #eee;
+
+    .text{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right:0;
+        height: 100%;
+    }
 
     img {
         height: 100%;
