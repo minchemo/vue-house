@@ -3,13 +3,20 @@
 		<div class="text">
 			<div class="t1" data-aos="fade-down" data-aos-delay="0">出家門進雙校門<br>
 				副都心唯一文教雙語學區 </div>
-			<div class="t2" data-aos="fade-down" data-aos-delay="200">
+			<div class="t2" data-aos="fade-down" data-aos-delay="200" v-if="!$isMobile()">
 				父母心中最優質的生活環境，頭前國中正對面<br>
 				步行1分鐘昌平國小副都心首屈一指雙語學校，社區公托中心<br>
 				步行3分鐘吉的堡幼兒園，鄰近新莊高中、輔仁大學<br>
 				16年完全教育學區，純翠的環境、濃郁的學習氛圍<br>
 				在放手之前，給孩子一個好環境<br>
 				讓他贏得自己的未來，培養與世界同行的眼界與自信
+			</div>
+			<div class="t2" data-aos="fade-down" data-aos-delay="200" v-if="$isMobile()">
+				父母心中最優質的生活環境，頭前國中正對面<br>
+				步行1分鐘昌平國小副都心首屈一指雙語學校，社區公托中心，步行3分鐘吉的堡幼兒園，鄰近新莊高中、輔仁大學。<br>
+				16年完全教育學區，純翠的環境、濃郁的學習氛圍<br>
+				在放手之前，給孩子一個好環境。<br>
+				讓他贏得自己的未來，培養與世界同行的眼界與自信。<br>
 			</div>
 		</div>
 		<ul class="pagin" v-if="!$isMobile()">
@@ -88,9 +95,9 @@
 			p {
 				@apply absolute;
 				right: size(10);
-				bottom: size(10);
-				font-weight: 700;
-				font-size: size(25);
+				bottom: size(5);
+				font-weight: 400;
+				font-size: size(18);
 				color: #FFFFFF;
 				text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
 			}
@@ -116,7 +123,7 @@
 		height: auto;
 		background: #EEEEEE;
 		box-shadow: sizem(5) sizem(5) sizem(10) rgba(0, 0, 0, 0.5);
-		padding: sizem(45.7) sizem(19) sizem(20) sizem(19);
+		padding: sizem(45.7) sizem(13) sizem(20) sizem(13);
 		.t1 { 
 			font-size: sizem(20);
 			line-height: 163%;
@@ -126,6 +133,7 @@
 			margin-top: sizem(10);
 			font-size: sizem(13);
 			line-height: 187%;
+			text-align: justify;
 		}
 	}
 

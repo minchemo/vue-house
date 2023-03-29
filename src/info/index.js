@@ -7,8 +7,8 @@ export default {
         keywords: caseName,
     },
     address: "接待中心：新北市新莊區中原路101號對面",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d903.5998810237637!2d121.45594439999999!3d25.0544444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE2LjAiTiAxMjHCsDI3JzIxLjQiRQ!5e0!3m2!1szh-TW!2stw!4v1680016898394!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/yMczBu3XZbYLn2XC9",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.5998810237637!2d121.45594439999999!3d25.0544444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a99b99f91153%3A0x27819cc683163bc3!2z6ZuZ5qmh5ZyS5o6l5b6F5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1680052813401!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/2Q4c2x26k3fZyxcY9",
     phone: "02-2279-1188",
     fbLink: "https://www.facebook.com/gtcip.debang",
     fbMessage: "https://m.me/gtcip.debang",
@@ -21,8 +21,8 @@ export default {
         ["企劃銷售", "得邦廣告"],
         ["基地面積", "487坪"],
     ],
-    gtmCode: ["GTM-M87MK5M","GTM-55PLPZQ"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
+    gtmCode: ["GTM-5C8RWW7"], // 可放置多個
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",

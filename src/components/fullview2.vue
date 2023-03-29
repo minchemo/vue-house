@@ -2,7 +2,7 @@
     <div class="viewbox" ref="viewbox">
         <img ref="viewImg" src="@/section/s12/view.jpg" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
-            <img src="@/components/fullview/finger.png" alt="" srcset="">
+            <img src="@/components/fullview/finger.svg" alt="" srcset="">
         </div>
     </div>
 </template>

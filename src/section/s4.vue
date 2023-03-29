@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class="right" data-aos="fade" data-aos-delay="0">
-			<p v-if="!$isMobile()">點圖看詳細生機圖</p>
+			<p v-if="!$isMobile()">基地周邊林蔭步道實景</p>
 		</div>
 		<img class="i1" src="@/section/s4/flag.png" alt="" srcset="">
 	</article>
@@ -70,9 +70,9 @@
 			height: size(1123);
 			background-image:url(@/section/s4/1.jpg);
 			background-size: cover;
-			font-weight: 700;
-			font-size: size(25);
-			line-height: size(36);
+			font-weight: 400;
+			font-size: size(18);
+			line-height: size(20);
 			text-align: right;
 			color: #FFFFFF;
 			text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
@@ -187,7 +187,9 @@
 	img {
 		max-width: unset;
 		width: auto;
-		height: 100%;
+		height: 90%;
+		transform: translateY(0%);
+		top:0;
 	}
 	.close {
 		position: sticky;
@@ -201,6 +203,7 @@
 		color: #fff;
 		border-radius: 50px;
 		padding: 5px 10px;
+		margin-top: 10px;
 		@apply cursor-pointer;
 		&:hover {
 			background-color: rgba(0,0,0,0.9);

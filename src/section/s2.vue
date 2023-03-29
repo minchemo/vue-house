@@ -51,7 +51,7 @@
 			font-size: size(35);
 			line-height: 200%;
 			color: #CE0615;
-			padding: size(16) size(41);
+			padding: size(0) size(41);
 			border: size(1) solid #B18A2D;
 			display: inline;		
 			margin-top: size(17);	

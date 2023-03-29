@@ -50,9 +50,9 @@
 	.caption {
 		@apply absolute;
 		right: size(10);
-		bottom: size(10);
-		font-weight: 700;
-		font-size: size(25);
+		bottom: size(5);
+		font-weight: 400;
+		font-size: size(18);
 		color: #FFFFFF;
 		text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
 	}

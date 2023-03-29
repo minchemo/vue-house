@@ -2,7 +2,13 @@
 	<article class="s6 relative">
 		<div class="text">
 			<div class="t1" data-aos="fade-down" data-aos-delay="0">青春綠皮書<br>穠翠綠洲氧森養生</div>
-			<div class="t2" data-aos="fade-down" data-aos-delay="200">
+			<div class="t2" data-aos="fade-down" data-aos-delay="200" v-if="!$isMobile()">
+				全國四座低碳綠能示範城市，新莊副都心新北唯一示範特區<br>
+				斥資30億中港大排美化工程，打造新北清溪川<br>
+				5分鐘1.4公頃塭仔底濕地公園、昌平公園、願景公園環聚<br>
+				慢活城森養好人生
+			</div>
+			<div class="t2" data-aos="fade-down" data-aos-delay="200" v-if="$isMobile()">
 				全國四座低碳綠能示範城市，新莊副都心新北唯一示範特區<br>
 				斥資30億中港大排美化工程，打造新北清溪川<br>
 				5分鐘1.4公頃塭仔底濕地公園、昌平公園、願景公園環聚<br>
@@ -83,9 +89,9 @@
 			p {
 				@apply absolute;
 				right: size(10);
-				bottom: size(10);
-				font-weight: 700;
-				font-size: size(25);
+				bottom: size(5);
+				font-weight: 400;
+				font-size: size(18);
 				color: #FFFFFF;
 				text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
 			}
@@ -114,7 +120,7 @@
 	@apply flex flex-col justify-center items-center;
 
 	.text {
-		width: sizem(351);
+		width: sizem(367);
 		height: auto;
 		padding: 0 sizem(10);
 		white-space: nowrap;

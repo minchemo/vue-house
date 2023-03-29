@@ -403,17 +403,24 @@ margin: 0 auto;
     height: size(79);
     font-weight: 700;
 font-size: size(35);
-line-height: size(79);
+line-height: size(70);
 color: #fff;
 text-align: center;
 margin: 0 auto;
-border: size(1) solid rgba(255,255,255,0.3);
+border: size(2) solid rgba(255,255,255,0.3);
 border-radius: size(50);
 margin-top: size(29);
+transition:500ms;
+	transition-delay:0s !important;
+
 
 &:hover {
+	transition:500ms;
+	transition-delay:0s !important;
 	@apply cursor-pointer;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(221, 152, 54, 1);
+	border: size(2) solid rgba(221, 152, 54, 1);
+	
 
 }
   }

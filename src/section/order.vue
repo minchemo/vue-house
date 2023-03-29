@@ -22,12 +22,12 @@
           <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-full" v-model="formData.room_type">
+          <!--select class="select w-full rounded-full" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="2房">2房</option>
             <option value="3房">3房</option>
             <option value="店面">店面</option>
-          </select>
+          </select-->
 
           <select class="select w-full rounded-full" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
@@ -141,7 +141,7 @@
     width: size(292);
     text-align: center;
     margin: 0 auto;
-    margin-bottom: size(20);
+    margin-bottom: size(40);
 
     &::after {
       content: '';
@@ -174,7 +174,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 250px;
     gap: size(80);
     margin-bottom: size(50);
     z-index: 50;
