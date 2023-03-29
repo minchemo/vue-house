@@ -29,7 +29,7 @@
 				</SplideSlide>
 			</Splide>
 		</div>
-		<img class="flag" data-aos="fade" data-aos-delay="0" src="@/section/s8/horse.png" alt="" srcset="">
+		<img loading="lazy" class="flag" data-aos="fade" data-aos-delay="0" src="@/section/s8/horse.png" alt="" srcset="">
 	</article>
 </template>
 
@@ -205,7 +205,7 @@ const imgs = [
 	},
 	{
 		img: globals.$isMobile() ? new URL("s8/2_m.jpg", import.meta.url).href : new URL("s8/2.jpg", import.meta.url).href,
-		caption: "京冠廣場(情境示意圖)"
+		caption: "晶冠廣場(情境示意圖)"
 	},
 ]
 </script>

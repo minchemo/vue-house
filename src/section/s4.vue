@@ -14,10 +14,10 @@
 		<div class="right" data-aos="fade" data-aos-delay="0">
 			<p v-if="!$isMobile()">基地周邊林蔭步道實景</p>
 		</div>
-		<img class="i1" src="@/section/s4/flag.png" alt="" srcset="">
+		<img loading="lazy" class="i1" src="@/section/s4/flag.png" alt="" srcset="">
 	</article>
 	<div class="viewer" :class="{ active: viewerOpened }">
-		<img src="@/section/s4/map-l.jpg" alt="" srcset="">
+		<img loading="lazy" src="@/section/s4/map-l.jpg" alt="" srcset="">
 		<div class="close" :key="viewerOpened" @click="viewerOpened = false">關閉</div>
 	</div>
 </template>

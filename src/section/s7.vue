@@ -31,8 +31,8 @@
 				</SplideSlide>
 			</Splide>
 		</div>
-		<img class="mark" data-aos="fade" data-aos-delay="0" v-if="!$isMobile()" src="@/section/s7/mark.png" alt="" srcset="">
-		<img class="mark" data-aos="fade" data-aos-delay="0" v-else src="@/section/s7/mark_m.png" alt="" srcset="">
+		<img loading="lazy" class="mark" data-aos="fade" data-aos-delay="0" v-if="!$isMobile()" src="@/section/s7/mark.png" alt="" srcset="">
+		<img loading="lazy" class="mark" data-aos="fade" data-aos-delay="0" v-else src="@/section/s7/mark_m.png" alt="" srcset="">
 	</article>
 </template>
 

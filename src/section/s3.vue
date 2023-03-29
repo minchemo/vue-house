@@ -4,7 +4,7 @@
 			<Fullview />
 		</div>
 		<div class="text">
-			<img class="logo" data-aos="fade" data-aos-delay="0" src="@/section/s3/mark.png" alt="" srcset="">
+			<img loading="lazy" class="logo" data-aos="fade" data-aos-delay="0" src="@/section/s3/mark.png" alt="" srcset="">
 			<div class="t1"  data-aos="fade-down" data-aos-delay="0">新莊副都心10年熟成<br />
 				國家級CBD共享其成</div>
 			<div class="t2"></div>
@@ -14,7 +14,7 @@
 				10年開發熟成，國家級CBD已然形城<br />
 				點燃能量引擎共享其成</div>
 		</div>
-		<img class="i1" data-aos="fade" data-aos-delay="0" src="@/section/s3/horse.png" alt="" srcset="">
+		<img loading="lazy" class="i1" data-aos="fade" data-aos-delay="0" src="@/section/s3/horse.png" alt="" srcset="">
 	</article>
 </template>
 

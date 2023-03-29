@@ -1,7 +1,7 @@
 <template>
 	<article class="s9 relative" ref="s9" :class="dayClass[currentDay]">
 		<div class="text">
-			<img src="@/section/s9/mark.png" alt="" data-aos="fade-down" data-aos-delay="0">
+			<img loading="lazy" src="@/section/s9/mark.png" alt="" data-aos="fade-down" data-aos-delay="0">
 			<div class="t1" data-aos="fade-down" data-aos-delay="200">品生活之淳<br v-if="!$isMobile()" />賞人文之萃</div>
 			<div class="t2" data-aos="fade-down" data-aos-delay="400">洗鍊優雅有機曲面禮讚白派大師建築美學<br />
 				Twin Towers純白輕盈量體以輕透格局<br />

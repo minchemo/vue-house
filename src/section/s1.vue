@@ -1,7 +1,7 @@
 <template>
 	<article class="s1 relative">
-		<img src="@/section/s1/img1.png" class="img1" data-aos="fade" data-aos-delay="200" />
-		<img src="@/section/s1/img2.png" class="img2" data-aos="fade" data-aos-delay="0" />
+		<img loading="lazy" src="@/section/s1/img1.png" class="img1" data-aos="fade" data-aos-delay="200" />
+		<img loading="lazy" src="@/section/s1/img2.png" class="img2" data-aos="fade" data-aos-delay="0" />
 		<div class="txt">
 			<svg class="logo" data-aos="zoom-in" data-aos-delay="0" xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 504 435">

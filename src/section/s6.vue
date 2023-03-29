@@ -27,7 +27,7 @@
 				</SplideSlide>
 			</Splide>
 		</div>
-		<img class="flag" data-aos="fade" data-aos-delay="0" src="@/section/s6/flag.png" alt="" srcset="">
+		<img loading="lazy" class="flag" data-aos="fade" data-aos-delay="0" src="@/section/s6/flag.png" alt="" srcset="">
 	</article>
 </template>
 

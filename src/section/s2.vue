@@ -4,7 +4,7 @@
 			<div class="t1" data-aos="fade-down" data-aos-delay="0">家門就是校門 開窗就像開卷</div>
 			<div class="t2" data-aos="fade-down" data-aos-delay="200">雙校園 X 雙公園 X 雙捷運 X 雙商圈</div>
 			<div class="t3" data-aos="fade-down" data-aos-delay="400">
-				<img src="@/section/s2/t3.png" alt="" srcset="">
+				<img loading="lazy" src="@/section/s2/t3.png" alt="" srcset="">
 			</div>
 			<div class="t4" data-aos="fade-down" data-aos-delay="600">30坪美式大三房</div>
 			<div class="t5" data-aos="fade-down" data-aos-delay="800">開門 即校門<br />
@@ -18,11 +18,11 @@
 				動靜之間 繁華與寧靜<br />
 				價值與品質 資優雙修</div>
 		</div>
-		<img class="i i1" data-aos="fade" data-aos-delay="0" src="@/section/s2/logo.png" alt="" srcset="">
-		<img class="i i2" data-aos="fade" data-aos-delay="0" src="@/section/s2/1.png" alt="" srcset="">
-		<img class="i i3" data-aos="fade" data-aos-delay="0" src="@/section/s2/2.png" alt="" srcset="">
-		<img class="i i4" data-aos="fade" data-aos-delay="0" src="@/section/s2/3.png" alt="" srcset="">
-		<img class="i i5" v-if="!$isMobile()" src="@/section/s2/flag.png" alt="" srcset="">
+		<img loading="lazy" class="i i1" data-aos="fade" data-aos-delay="0" src="@/section/s2/logo.png" alt="" srcset="">
+		<img loading="lazy" class="i i2" data-aos="fade" data-aos-delay="0" src="@/section/s2/1.png" alt="" srcset="">
+		<img loading="lazy" class="i i3" data-aos="fade" data-aos-delay="0" src="@/section/s2/2.png" alt="" srcset="">
+		<img loading="lazy" class="i i4" data-aos="fade" data-aos-delay="0" src="@/section/s2/3.png" alt="" srcset="">
+		<img loading="lazy" class="i i5" v-if="!$isMobile()" src="@/section/s2/flag.png" alt="" srcset="">
 	</article>
 </template>
 
