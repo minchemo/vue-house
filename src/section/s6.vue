@@ -9,10 +9,7 @@
 				慢活城森養好人生
 			</div>
 			<div class="t2" data-aos="fade-down" data-aos-delay="200" v-if="$isMobile()">
-				全國四座低碳綠能示範城市，新莊副都心新北唯一示範特區<br>
-				斥資30億中港大排美化工程，打造新北清溪川<br>
-				5分鐘1.4公頃塭仔底濕地公園、昌平公園、願景公園環聚<br>
-				慢活城森養好人生
+				全國四座低碳綠能示範城市，新莊副都心新北唯一示範特區，斥資30億中港大排美化工程，打造新北清溪川，5分鐘1.4公頃塭仔底濕地公園、昌平公園、願景公園環聚，慢活城森養好人生。
 			</div>
 			<ul class="pagin" v-if="!$isMobile()">
 				<li v-for="img, i in imgs" v-bind:class="{ active: currentSlideIndex == i }" @click="splide.splide.go(i)">
@@ -122,8 +119,8 @@
 	.text {
 		width: sizem(367);
 		height: auto;
-		padding: 0 sizem(10);
-		white-space: nowrap;
+		padding: 0 sizem(18);
+		//white-space: nowrap;
 		.t1 { 
 			font-size: sizem(20);
 			line-height: 163%;
@@ -204,19 +201,19 @@ const options = {
 
 const imgs = [
 	{
-		img: getImg('s6/1'),
+		img: globals.$isMobile() ? new URL("s6/1_m.jpg", import.meta.url).href : new URL("s6/1.jpg", import.meta.url).href,
 		caption: "昌平公園"
 	},
 	{
-		img: getImg('s6/2'),
+		img: globals.$isMobile() ? new URL("s6/2_m.jpg", import.meta.url).href : new URL("s6/2.jpg", import.meta.url).href,
 		caption: "塭仔圳溼地公園"
 	},
 	{
-		img: getImg('s6/3'),
+		img: globals.$isMobile() ? new URL("s6/3_m.jpg", import.meta.url).href : new URL("s6/3.jpg", import.meta.url).href,
 		caption: "願景公園"
 	},
 	{
-		img: getImg('s6/4'),
+		img: globals.$isMobile() ? new URL("s6/4_m.jpg", import.meta.url).href : new URL("s6/4.jpg", import.meta.url).href,
 		caption: "中港綠堤"
 	},
 ]

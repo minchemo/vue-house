@@ -3,11 +3,17 @@
 		<div class="text">
 			<div class="t1" data-aos="fade-down" data-aos-delay="0">雙捷核心 環狀線╳機場線<br>
 				2站台北 一線國門 幸福隨行</div>
-			<div class="t2" data-aos="fade-down" data-aos-delay="200">
-				微距機場捷運線「新北產業園區站」環狀線「幸福站」、皆僅600米<br v-if="!$isMobile()">
-				1站轉乘中和新蘆線，2站直達台北車站<br v-if="!$isMobile()">
-				一線連結桃園機場，，加上鄰近台64、65號快速道路連接國道<br v-if="!$isMobile()">
+			<div class="t2" data-aos="fade-down" data-aos-delay="200" v-if="!$isMobile()">
+				微距機場捷運線「新北產業園區站」環狀線「幸福站」、皆僅600米<br>
+				1站轉乘中和新蘆線，2站直達台北車站<br>
+				一線連結桃園機場，加上鄰近台64、65號快速道路連接國道<br>
 				縱橫雙北與國際從容以閱
+			</div>
+			<div class="t2" data-aos="fade-down" data-aos-delay="200" v-if="$isMobile()">
+				微距機場捷運線「新北產業園區站」環狀線「幸福站」、皆僅600米，
+				1站轉乘中和新蘆線，2站直達台北車站，
+				一線連結桃園機場，加上鄰近台64、65號快速道路連接國道，
+				縱橫雙北與國際從容以閱。
 			</div>
 			<ul class="pagin" v-if="!$isMobile()">
 				<li v-for="img, i in imgs" v-bind:class="{ active: currentSlideIndex == i }" @click="splide.splide.go(i)">
@@ -88,6 +94,7 @@
 			background-size: cover;
 			p {
 				@apply absolute;
+				
 				right: size(10);
 				bottom: size(5);
 				font-weight: 400;
@@ -128,6 +135,7 @@
 			color: #00437D;
 		}
 		.t2 {
+			text-align: justify;
 			width: 100%;
 			margin-top: sizem(10);
 			font-size: sizem(13);
@@ -147,6 +155,7 @@
 			width: sizem(351);
 			height: sizem(314);
 			p {
+				
 				right: sizem(10);
 				bottom: sizem(10);
 				font-size: sizem(12);
@@ -204,11 +213,11 @@ const options = {
 
 const imgs = [
 	{
-		img: getImg('s7/1'),
+		img: globals.$isMobile() ? new URL("s7/1_m.jpg", import.meta.url).href : new URL("s7/1.jpg", import.meta.url).href,
 		caption: "機捷新北產業園區站"
 	},
 	{
-		img: getImg('s7/2'),
+		img: globals.$isMobile() ? new URL("s7/2_m.jpg", import.meta.url).href : new URL("s7/2.jpg", import.meta.url).href,
 		caption: "環狀線幸福站"
 	},
 ]

@@ -13,10 +13,9 @@
 			</div>
 			<div class="t2" data-aos="fade-down" data-aos-delay="200" v-if="$isMobile()">
 				父母心中最優質的生活環境，頭前國中正對面<br>
-				步行1分鐘昌平國小副都心首屈一指雙語學校，社區公托中心，步行3分鐘吉的堡幼兒園，鄰近新莊高中、輔仁大學。<br>
-				16年完全教育學區，純翠的環境、濃郁的學習氛圍<br>
-				在放手之前，給孩子一個好環境。<br>
-				讓他贏得自己的未來，培養與世界同行的眼界與自信。<br>
+				步行1分鐘昌平國小副都心首屈一指雙語學校，社區公托中心，步行3分鐘吉的堡幼兒園，鄰近新莊高中、輔仁大學。
+				16年完全教育學區，純翠的環境、濃郁的學習氛圍，在放手之前，給孩子一個好環境。
+				讓他贏得自己的未來，培養與世界同行的眼界與自信。
 			</div>
 		</div>
 		<ul class="pagin" v-if="!$isMobile()">
@@ -123,7 +122,7 @@
 		height: auto;
 		background: #EEEEEE;
 		box-shadow: sizem(5) sizem(5) sizem(10) rgba(0, 0, 0, 0.5);
-		padding: sizem(45.7) sizem(13) sizem(20) sizem(13);
+		padding: sizem(45.7) sizem(18) sizem(20) sizem(18);
 		.t1 { 
 			font-size: sizem(20);
 			line-height: 163%;
@@ -199,20 +198,20 @@ const options = {
 }
 
 const imgs = [
-	{
-		img: globals.$isMobile() ? new URL("s5/1.jpg", import.meta.url).href : new URL("s5/1_m.jpg", import.meta.url).href,
+	{	
+		img: globals.$isMobile() ? new URL("s5/1_m.jpg", import.meta.url).href : new URL("s5/1.jpg", import.meta.url).href,
 		caption: "吉的堡幼兒園"
 	},
 	{
-		img: globals.$isMobile() ? new URL("s5/2.jpg", import.meta.url).href : new URL("s5/2_m.jpg", import.meta.url).href,
+		img: globals.$isMobile() ? new URL("s5/2_m.jpg", import.meta.url).href : new URL("s5/2.jpg", import.meta.url).href,
 		caption: "昌平國小"
 	},
 	{
-		img: globals.$isMobile() ? new URL("s5/3.jpg", import.meta.url).href : new URL("s5/3_m.jpg", import.meta.url).href,
+		img: globals.$isMobile() ? new URL("s5/3_m.jpg", import.meta.url).href : new URL("s5/3.jpg", import.meta.url).href,
 		caption: "頭前國中"
 	},
 	{
-		img: globals.$isMobile() ? new URL("s5/4.jpg", import.meta.url).href : new URL("s5/4_m.jpg", import.meta.url).href,
+		img: globals.$isMobile() ? new URL("s5/4_m.jpg", import.meta.url).href : new URL("s5/4.jpg", import.meta.url).href,
 		caption: "新莊高中"
 	},
 ]

@@ -2,11 +2,17 @@
 	<article class="s8 relative">
 		<div class="text">
 			<div class="t1" data-aos="fade-down" data-aos-delay="0">雙商圈雙百貨<br>3分鐘微距宏匯廣場</div>
-			<div class="t2" data-aos="fade-down" data-aos-delay="200">
+			<div class="t2" data-aos="fade-down" data-aos-delay="200"  v-if="!$isMobile()">
 				時尚熱點宏匯廣場、晶冠廣場超過400個品牌入駐<br>
-				美麗新影城、VR虛擬實境樂園、SONY Zepp表演展<br v-if="$isMobile()">館、家樂福、IKEA⋯<br>
+				美麗新影城、VR虛擬實境樂園、SONY Zepp表演展<br>
+				館、家樂福、IKEA⋯<br>
 				散步3分鐘中原商圈食衣住行市場採買機能全到位
 			</div>
+
+			<div class="t2" data-aos="fade-down" data-aos-delay="200"  v-if="$isMobile()">
+				時尚熱點宏匯廣場、晶冠廣場超過400個品牌入駐，美麗新影城、VR虛擬實境樂園、SONY Zepp表演展館、家樂福、IKEA⋯，散步3分鐘中原商圈食衣住行市場採買機能全到位。
+			</div>
+			
 			<ul class="pagin" v-if="!$isMobile()">
 				<li v-for="img, i in imgs" v-bind:class="{ active: currentSlideIndex == i }" @click="splide.splide.go(i)">
 				</li>
@@ -158,11 +164,11 @@
 		}
 	}
 	.flag {
-		width: sizem(144);
+		width: sizem(134);
 		height: auto;
-		left: sizem(284);
+		left: sizem(294);
 		bottom: unset;
-		top: sizem(7);
+		top: sizem(10);
 	}
   }
 }
@@ -194,11 +200,11 @@ const options = {
 
 const imgs = [
 	{
-		img: getImg('s8/1'),
+		img: globals.$isMobile() ? new URL("s8/1_m.jpg", import.meta.url).href : new URL("s8/1.jpg", import.meta.url).href,
 		caption: "宏匯廣場"
 	},
 	{
-		img: getImg('s8/2'),
+		img: globals.$isMobile() ? new URL("s8/2_m.jpg", import.meta.url).href : new URL("s8/2.jpg", import.meta.url).href,
 		caption: "京冠廣場(情境示意圖)"
 	},
 ]
