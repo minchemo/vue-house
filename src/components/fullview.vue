@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        
+
         <div v-if="!$isMobile()">
         <img class="text" ref="viewImg" src="@/section/s3/text.png" alt="" srcset="">
         <img ref="viewImg" src="@/section/s3/view.jpg" alt="" srcset="">
@@ -30,11 +30,14 @@
         bottom: 0;
         right:0;
         height: 100%;
+        width: auto;
     }
 
     img {
         height: 100%;
+        width: auto;
         max-width: unset;
+        width: 100%;
     }
 
 }
@@ -46,6 +49,7 @@
 
         img {
             height: 100%;
+            width: auto;
         }
 
         .mask {
