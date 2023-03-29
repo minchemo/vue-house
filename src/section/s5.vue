@@ -200,19 +200,19 @@ const options = {
 
 const imgs = [
 	{
-		img: getImg('s5/1'),
+		img: globals.$isMobile() ? new URL("s5/1.jpg", import.meta.url).href : new URL("s5/1_m.jpg", import.meta.url).href,
 		caption: "吉的堡幼兒園"
 	},
 	{
-		img: getImg('s5/2'),
+		img: globals.$isMobile() ? new URL("s5/2.jpg", import.meta.url).href : new URL("s5/2_m.jpg", import.meta.url).href,
 		caption: "昌平國小"
 	},
 	{
-		img: getImg('s5/3'),
+		img: globals.$isMobile() ? new URL("s5/3.jpg", import.meta.url).href : new URL("s5/3_m.jpg", import.meta.url).href,
 		caption: "頭前國中"
 	},
 	{
-		img: getImg('s5/4'),
+		img: globals.$isMobile() ? new URL("s5/4.jpg", import.meta.url).href : new URL("s5/4_m.jpg", import.meta.url).href,
 		caption: "新莊高中"
 	},
 ]
