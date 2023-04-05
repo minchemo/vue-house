@@ -14,8 +14,8 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
     <script>
-        if (window.location.href.search("anchor=section8") > 0) {
-            window.location.href = "https://rjs.rihe.tw/#section8";
+        if (window.location.href.search("anchor=section10") > 0) {
+            window.location.href = "https://rjs.rihe.tw/#section10";
         }
     </script>
 </body>

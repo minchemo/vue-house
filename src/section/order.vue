@@ -1,6 +1,6 @@
 <template>
   <div id="order" class="order relative bg-[#CFCFCF] text-center">
-    <div class="section7 order-section font-['noto_sans_tc']">
+    <div class="section9 order-section font-['noto_sans_tc']">
       <!-- Title -->
       <div class="order-title text-center text-[#fff] font-['noto_serif_tc']">{{ info.order.title }}</div>
       <!-- <div class="cus-divider"></div> -->

@@ -314,8 +314,6 @@ const imgs = [
   },
 ]
 
-
-
 let playInterval;
 
 onMounted(() => {

@@ -5,7 +5,7 @@
       <div class="line"></div>
       <img @click="splideRef.splide.go('>')" class="clickable" src="@/section/s5/next.png" alt="">
     </div>
-    <Splide ref="splideRef" :options="{ type: 'loop', arrows: false, autoplay: true, interval: 3000 }"
+    <Splide ref="splideRef" :options="{ type: 'loop', arrows: false}"
       class="slide-section">
       <SplideSlide v-for="img, i in imgs" class="slide-item" >
         <img v-if="$isMobile()" class="title" :src="img.title" alt="" srcset="">
@@ -155,12 +155,21 @@ const imgs = [
     content: '南科台南科學園區佔地1,043公頃，隨南科特定計畫區開發，總就業人口估計將可達12.3萬人。產業帶來就業機會，人才帶來住居需求，科技新貴帶來的剛性需求，指日可待。'
   },
 ]
+
+let playInterval;
+
+
 onMounted(() => {
   inView('.s5')
     .on('enter', () => {
       splideRef.value.splide.go(0);
+      playInterval = setInterval(() => {
+        splideRef.value.splide.go('>')
+      }, 3000);
     })
     .on('exit', () => {
+      clearInterval(playInterval)
+      splideRef.value.splide.go(0);
     });
 })
 </script>
