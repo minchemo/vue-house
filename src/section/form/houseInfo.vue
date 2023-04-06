@@ -1,5 +1,5 @@
 <template>
-    <div class="section10">
+    <div class="section11">
         <div class="house-info flex flex-col md:flex-row items-center justify-center bg-[#304730]">
             <img class="house-logo m-0" src="@/section/form/house_logo.png" alt="" srcset="">
             <div class="items-center justify-center">

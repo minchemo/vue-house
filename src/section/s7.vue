@@ -36,11 +36,13 @@
           <img class="slash" v-if="i < imgs.length - 1" src="@/section/s7/slash.png" alt="" srcset="">
         </div>
       </div>
-      <Splide ref="splideRef" @splide:move="onMove"
-        :options="{ type: 'loop', arrows: false, rewind:true, pagination: false, autoPlay:false, perPage:1 }"
+      <Splide ref="splideRef" data-aos="fade-up" data-aos-duration="800" @splide:move="onMove"
+        :key="isInView"
+        :options="{ type: 'loop', arrows: false, rewind: true, pagination: false, autoplay: true, interval: 3000, pauseOnHover: true, perPage: 1 }"
         class="slide-section">
-        <SplideSlide v-for="img, i in imgs[activeTitle].imgs" class="slide-item">
-          <img class="cover" data-aos="fade-up" data-aos-duration="800" :src="img.url" :alt=img.caption srcset="">
+        <SplideSlide v-for="img, i in imgs[activeTitle].imgs" class="slide-item" data-aos="fade-up"
+          data-aos-duration="800">
+          <img class="cover" :src="img.url" :alt=img.caption srcset="">
         </SplideSlide>
       </Splide>
       <div class="tab-section" v-if="$isMobile()">
@@ -491,6 +493,7 @@ const next = () => {
     activeTitle.value = 0
   }
   activeIndex.value = 0
+  splideRef.value.splide.go(0);
 }
 
 const prev = () => {
@@ -501,27 +504,24 @@ const prev = () => {
   }
 
   activeIndex.value = 0
+  splideRef.value.splide.go(0);
 }
 
-let playInterval ;
+let playInterval;
+const isInView = ref(false);
 
 onMounted(() => {
   inView('.s7')
     .on('enter', () => {
       setTimeout(() => {
-        splideRef.value.splide.go(0);
-      }, 1000);
-      activeIndex.value = 0
-      activeTitle.value = 0
-      playInterval = setInterval(() => {
-        splideRef.value.splide.go('>')
-      }, 3000);
-      
+        isInView.value = true;
+      }, 200);
     })
     .on('exit', () => {
+      isInView.value = false;
+      activeIndex.value = 0
+      activeTitle.value = 0
       clearInterval(playInterval)
-      splideRef.value.splide.go(0);
-      
     });
 })
 </script>

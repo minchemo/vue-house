@@ -6,7 +6,8 @@
         <p>＊此為廣告效果示意，為單一建物電腦 3D 透視表現，周遭環 境係電腦合成，建設公司保有建物外觀修正之權利。</p>
       </div>
       <Splide ref="splideRef"
-        :options="{ type: 'loop', arrows: false, autoplay: true, pagination: false, interval: 3000 }"
+        :key="isInView"
+        :options="{ type: 'loop', arrows: false, autoplay: true, pagination: false, interval: 3000, pauseOnHover: true, }"
         class="slide-section">
         <SplideSlide v-for="img, i in imgs" class="slide-item">
           <img class="cover" data-aos="fade-up" data-aos-duration="800" :src="img.img" alt="" srcset="">
@@ -207,19 +208,18 @@ const imgs = [
 
 let playInterval;
 
+const isInView = ref(false);
+
 onMounted(() => {
   inView('.s8')
     .on('enter', () => {
       setTimeout(() => {
-        splideRef.value.splide.go(0);
-      }, 1000);
-      playInterval = setInterval(() => {
-        splideRef.value.splide.go('>')
-      }, 3000);
+        isInView.value = true;
+      }, 100);
     })
     .on('exit', () => {
+      isInView.value = false;
       clearInterval(playInterval)
-      splideRef.value.splide.go(0);
     });
 })
 </script>

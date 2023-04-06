@@ -60,8 +60,7 @@
 
         <p class="clickable">{{ menuOpen ? 'close' : 'menu' }}</p>
       </div>
-      <div v-if="!$isMobile()" class="item clickable cursor-pointer" @click="goHome()"
-        v-bind:class="{ hide: !menuOpen }">
+      <div v-if="!$isMobile()" class="item clickable cursor-pointer" @click="goHome()" v-bind:class="{ hide: !menuOpen }">
         <svg class="clickable" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M48.5591 13.72L24.8391 1.75L1.11914 13.72V44.31H19.5191V34.8C19.5191 31.86 21.8991 29.48 24.8391 29.48C27.7791 29.48 30.1591 31.86 30.1591 34.8V44.31H48.5591V13.72V13.72Z"
@@ -72,17 +71,19 @@
       <div v-if="!$isMobile()" class="item clickable cursor-pointer" @click="facebook()"
         v-bind:class="{ hide: !menuOpen }">
         <svg class="clickable" viewBox="0 0 50 50.39" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path stroke="currentColor" stroke-width="1.49" stroke-miterlimit="10" d="M24.94,.5C11.41,.54,.47,10.86,.5,23.56c.02,7.55,3.91,14.24,9.91,18.42l-.65,7.56,8-4.06c2.31,.67,4.76,1.03,7.3,1.02,13.53-.03,24.47-10.36,24.44-23.06S38.47,.47,24.94,.5Zm13.59,18.63c-3.67,3.91-7.34,7.82-11,11.74-.22,.24-.32,.16-.5-.02-1.66-1.73-3.34-3.45-5-5.18-.22-.23-.37-.25-.65-.1-3.19,1.79-6.39,3.57-9.58,5.34-.14,.08-.26,.2-.5,.19,.29-.31,.55-.59,.8-.86,3.46-3.69,6.92-7.38,10.38-11.08,.21-.23,.33-.26,.56-.02,1.64,1.72,3.3,3.41,4.94,5.13,.25,.27,.42,.3,.75,.12,3.2-1.8,6.41-3.58,9.62-5.37,.1-.06,.21-.11,.36-.12-.06,.08-.11,.16-.17,.23Z" />
-    
-          </svg>
+          <path stroke="currentColor" stroke-width="1.49" stroke-miterlimit="10"
+            d="M24.94,.5C11.41,.54,.47,10.86,.5,23.56c.02,7.55,3.91,14.24,9.91,18.42l-.65,7.56,8-4.06c2.31,.67,4.76,1.03,7.3,1.02,13.53-.03,24.47-10.36,24.44-23.06S38.47,.47,24.94,.5Zm13.59,18.63c-3.67,3.91-7.34,7.82-11,11.74-.22,.24-.32,.16-.5-.02-1.66-1.73-3.34-3.45-5-5.18-.22-.23-.37-.25-.65-.1-3.19,1.79-6.39,3.57-9.58,5.34-.14,.08-.26,.2-.5,.19,.29-.31,.55-.59,.8-.86,3.46-3.69,6.92-7.38,10.38-11.08,.21-.23,.33-.26,.56-.02,1.64,1.72,3.3,3.41,4.94,5.13,.25,.27,.42,.3,.75,.12,3.2-1.8,6.41-3.58,9.62-5.37,.1-.06,.21-.11,.36-.12-.06,.08-.11,.16-.17,.23Z" />
+
+        </svg>
         <p class="clickable">messenger</p>
       </div>
       <div v-if="!$isMobile()" class="item clickable cursor-pointer" @click="contactus()"
         v-bind:class="{ hide: !menuOpen }">
         <svg class="clickable phone" viewBox="0 0 42.66 41.88" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <path stroke="currentColor" stroke-width="1.49" stroke-miterlimit="10" d="M38.82,27.32c-2.55,0-5.05-.39-7.43-1.17-1.16-.39-2.59-.03-3.3,.69l-4.68,3.48c-5.43-2.84-8.78-6.12-11.64-11.41l3.44-4.47c.89-.87,1.22-2.15,.83-3.35-.79-2.33-1.19-4.8-1.19-7.3,0-1.8-1.49-3.28-3.34-3.28H3.84C2.01,.5,.5,1.97,.5,3.78,.5,24.51,17.68,41.38,38.82,41.38c1.84,0,3.34-1.47,3.34-3.28v-7.48c0-1.8-1.49-3.28-3.34-3.28h0Z" />
-    
-         </svg>
+          <path stroke="currentColor" stroke-width="1.49" stroke-miterlimit="10"
+            d="M38.82,27.32c-2.55,0-5.05-.39-7.43-1.17-1.16-.39-2.59-.03-3.3,.69l-4.68,3.48c-5.43-2.84-8.78-6.12-11.64-11.41l3.44-4.47c.89-.87,1.22-2.15,.83-3.35-.79-2.33-1.19-4.8-1.19-7.3,0-1.8-1.49-3.28-3.34-3.28H3.84C2.01,.5,.5,1.97,.5,3.78,.5,24.51,17.68,41.38,38.82,41.38c1.84,0,3.34-1.47,3.34-3.28v-7.48c0-1.8-1.49-3.28-3.34-3.28h0Z" />
+
+        </svg>
         <p class="clickable">contact us</p>
       </div>
       <div v-if="!$isMobile()" class="item clickable cursor-pointer" @click="location()"
@@ -339,7 +340,7 @@ const book = () => {
   scrollTo(`.section9`)
   scrolling = false;
   clearTimeout(scrollingTimeout);
-  currentSection.value = 7
+  currentSection.value = 9
   document.querySelector('.order').style.zIndex = lastZIndex + 4
 }
 
@@ -349,7 +350,7 @@ const book = () => {
  * 
  */
 
-const maxSection = 12; // section 總數
+const maxSection = 11; // section 總數
 const effectSection = 8; // 有特效的畫面
 const currentSection = ref(1); // 目前所在 section
 const duration = 1
@@ -377,64 +378,65 @@ const scrollEffect = () => {
     let modal = document.querySelector('.policy-modal');
     let getComputed = window.getComputedStyle(modal);
     let opacity = getComputed.getPropertyValue('opacity');
-    
+
     if (opacity == 0) {
 
       e.preventDefault();
 
-let deltaY = Math.abs(e.deltaY);
+      let deltaY = Math.abs(e.deltaY);
 
-if (scrolling || deltaY < 80) {
-  return
-}
+      if (scrolling || deltaY < 80) {
+        return
+      }
 
-// 避免重複捲動
-clearTimeout(scrollingTimeout);
-scrolling = true;
-
-scrollingTimeout = setTimeout(() => {
-  scrolling = false;
-}, isTouchPad(e) ? duration * 1000 * 1.2 : duration * 1000);
-
-if (e.deltaY   > 0) {
-  if (currentSection.value + 1 <= maxSection) {
-    if (currentSection.value >= effectSection) {
-      scrollTo(`.section${currentSection.value + 1}`)
+      // 避免重複捲動
       clearTimeout(scrollingTimeout);
+      scrolling = true;
+
       scrollingTimeout = setTimeout(() => {
         scrolling = false;
-      }, isTouchPad(e) ? 800 : 300);
-      currentSection.value++
+      }, isTouchPad(e) ? duration * 1000 * 1.2 : duration * 1000);
 
-      return
-    }
-    hide(currentSection.value);
-    currentSection.value++
-    lastZIndex += 3;
-    show(currentSection.value, lastZIndex)
-  } else if (currentSection.value == maxSection) {
-    //go home
-    // goHome()
-  }
-} else {
-  if (currentSection.value - 1 >= 1) {
-    if (currentSection.value >= effectSection) {
-      scrollTo(`.section${currentSection.value - 1}`)
-      clearTimeout(scrollingTimeout);
-      scrollingTimeout = setTimeout(() => {
-        scrolling = false;
-      }, isTouchPad(e) ? 800 : 300);
-      currentSection.value--
-      return
-    }
-    scrollTo('.home')
-    hide(currentSection.value);
-    currentSection.value--;
-    lastZIndex += 3;
-    show(currentSection.value, lastZIndex)
-  }
-}
-document.querySelector('.order').style.zIndex = lastZIndex + 4
+      if (e.deltaY > 0) {
+        if (currentSection.value + 1 <= maxSection) {
+          if (currentSection.value >= effectSection) {
+            scrollTo(`.section${currentSection.value + 1}`)
+            clearTimeout(scrollingTimeout);
+            scrollingTimeout = setTimeout(() => {
+              scrolling = false;
+            }, isTouchPad(e) ? 800 : 300);
+            currentSection.value++
+
+            return
+          }
+          hide(currentSection.value);
+          currentSection.value++
+          lastZIndex += 3;
+          show(currentSection.value, lastZIndex)
+        } else if (currentSection.value == maxSection) {
+          //go home
+          // goHome()
+        }
+      } else {
+        if (currentSection.value - 1 >= 1) {
+          if (currentSection.value > effectSection) {
+            scrollTo(`.section${currentSection.value - 1}`)
+            clearTimeout(scrollingTimeout);
+            scrollingTimeout = setTimeout(() => {
+              scrolling = false;
+            }, isTouchPad(e) ? 800 : 300);
+            currentSection.value--
+            return
+          }
+          scrollTo('.home')
+          hide(currentSection.value);
+          currentSection.value--;
+          lastZIndex += 3;
+          show(currentSection.value, lastZIndex)
+            console.log(currentSection.value);
+        }
+      }
+      document.querySelector('.order').style.zIndex = lastZIndex + 4
 
     }
   }, { passive: false });
