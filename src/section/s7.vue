@@ -310,6 +310,15 @@
       gap: 0;
       .tab-item {
         @apply items-center justify-center;
+        border-left: #fff 0.3px solid;
+        border-bottom: #fff 0.3px solid;
+
+        &:nth-child(4),&:nth-child(5),&:nth-child(06)
+        {border-bottom:none;}
+
+        &:nth-child(1),&:nth-child(4)
+        {border-left:none;}
+        
         gap: 0;
         height: size-m(47);
         .title {
@@ -358,8 +367,8 @@ const activeIndex = ref(0);
 const activeTitle = ref(0);
 const imgs = [
   {
-    title: globals.$isMobile() ? new URL("../section/s7/1/t_m.png", import.meta.url).href : new URL("../section/s7/1/t.png", import.meta.url).href,
-    t1: globals.$isMobile() ? new URL("../section/s7/1/t1_m.png", import.meta.url).href : new URL("../section/s7/1/t1.png", import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s7/1/t_m.svg", import.meta.url).href : new URL("../section/s7/1/t.svg", import.meta.url).href,
+    t1: globals.$isMobile() ? new URL("../section/s7/1/t1_m.svg", import.meta.url).href : new URL("../section/s7/1/t1.svg", import.meta.url).href,
     t2: '國立成功大學建築研究所碩士，志在實踐建築理想性，視環境為生活本質，爬梳土地紋理，再極大化基地優勢，淬鍊透天層疊通透概念，帶入宗大敘山的四季與晝夜，體現永續建築的時空觀。榮獲高雄厝綠建築大獎、建築園冶獎常勝軍。',
     work: '超美大地松露、敦王臻品、萬吉森粼、合心若樸、頂記園丰景、可寧衛企業總部',
     imgs: [
@@ -378,8 +387,8 @@ const imgs = [
     ]
   },
   {
-    title: globals.$isMobile() ? new URL("../section/s7/2/t_m.png", import.meta.url).href : new URL("../section/s7/2/t.png", import.meta.url).href,
-    t1: globals.$isMobile() ? new URL("../section/s7/2/t1_m.png", import.meta.url).href : new URL("../section/s7/2/t1.png", import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s7/2/t_m.svg", import.meta.url).href : new URL("../section/s7/2/t.svg", import.meta.url).href,
+    t1: globals.$isMobile() ? new URL("../section/s7/2/t1_m.svg", import.meta.url).href : new URL("../section/s7/2/t1.svg", import.meta.url).href,
     t2: '倡議擘劃「素顏即是美」的自然節氣建築，精琢空間的規劃巧思，主張「師法自然、順其自然、自然而然」，汲取高雄厝的通透哲學，納入宗大敘山公共空間，讓仰望天空成為日常。作品屢次榮獲高雄建築園冶獎肯定。',
     work: '頂記園丰景、居富植見築、合心若樸、日大雍禾、可寧衛企業總部',
     imgs: [
@@ -398,8 +407,8 @@ const imgs = [
     ]
   },
   {
-    title: globals.$isMobile() ? new URL("../section/s7/3/t_m.png", import.meta.url).href : new URL("../section/s7/3/t.png", import.meta.url).href,
-    t1: globals.$isMobile() ? new URL("../section/s7/3/t1_m.png", import.meta.url).href : new URL("../section/s7/3/t1.png", import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s7/3/t_m.svg", import.meta.url).href : new URL("../section/s7/3/t.svg", import.meta.url).href,
+    t1: globals.$isMobile() ? new URL("../section/s7/3/t1_m.svg", import.meta.url).href : new URL("../section/s7/3/t1.svg", import.meta.url).href,
     t2: '美國耶魯大學建築研究所環境設計碩士。秉持實用、平衡、協調的「減法設計」規劃原則，譜寫夜色中的建築詩句，曾獲德國iF Design Award全球住宅建築獎、英國IPA亞太最佳住宅建築獎、2020台灣光環境獎。',
     work: '台南河樂廣場、磐鈺雲華',
     imgs: [
@@ -414,8 +423,8 @@ const imgs = [
     ]
   },
   {
-    title: globals.$isMobile() ? new URL("../section/s7/4/t_m.png", import.meta.url).href : new URL("../section/s7/4/t.png", import.meta.url).href,
-    t1: globals.$isMobile() ? new URL("../section/s7/4/t1_m.png", import.meta.url).href : new URL("../section/s7/4/t1.png", import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s7/4/t_m.svg", import.meta.url).href : new URL("../section/s7/4/t.svg", import.meta.url).href,
+    t1: globals.$isMobile() ? new URL("../section/s7/4/t1_m.svg", import.meta.url).href : new URL("../section/s7/4/t1.svg", import.meta.url).href,
     t2: '於1995年創立南台灣最具規模土木及結構技師聯合事務所，集結台大、成大土木工程碩士菁英，結合專業學理與使用者體驗設計，從超高層豪宅、道路橋樑公共工程，到科技廠房，為建築找到最安心的結構設計方案。',
     work: '日月光半導體廠房、高雄大立精品百貨、華友聯集團總部',
     imgs: [
@@ -434,8 +443,8 @@ const imgs = [
     ]
   },
   {
-    title: globals.$isMobile() ? new URL("../section/s7/5/t_m.png", import.meta.url).href : new URL("../section/s7/5/t.png", import.meta.url).href,
-    t1: globals.$isMobile() ? new URL("../section/s7/5/t1_m.png", import.meta.url).href : new URL("../section/s7/5/t1.png", import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s7/5/t_m.svg", import.meta.url).href : new URL("../section/s7/5/t.svg", import.meta.url).href,
+    t1: globals.$isMobile() ? new URL("../section/s7/5/t1_m.svg", import.meta.url).href : new URL("../section/s7/5/t1.svg", import.meta.url).href,
     t2: '亞洲第一間雜誌圖書館，收藏超過6萬本建築、設計、時尚、音樂、藝術、生活風格的國內、外雜誌。專屬社區選書服務，客製選冊，定期更新，創造靈感的場所，將閱讀融入日常，讓知識成為生活繆思，是家，也是Boven微型分館。',
     work: '',
     imgs: [
@@ -450,8 +459,8 @@ const imgs = [
     ]
   },
   {
-    title: globals.$isMobile() ? new URL("../section/s7/6/t_m.png", import.meta.url).href : new URL("../section/s7/6/t.png", import.meta.url).href,
-    t1: globals.$isMobile() ? new URL("../section/s7/6/t1_m.png", import.meta.url).href : new URL("../section/s7/6/t1.png", import.meta.url).href,
+    title: globals.$isMobile() ? new URL("../section/s7/6/t_m.svg", import.meta.url).href : new URL("../section/s7/6/t.svg", import.meta.url).href,
+    t1: globals.$isMobile() ? new URL("../section/s7/6/t1_m.svg", import.meta.url).href : new URL("../section/s7/6/t1.svg", import.meta.url).href,
     t2: '社區導入台南指標飯店「台南晶英酒店」獨創新興雲端管家，為社區量身訂製年度體驗課程、提供豐富的生活選物提案，將飯店頂級服務延伸到府，鐫刻有別以往的精緻生活，為日常生活創造心靈層次的品味價值。',
     work: '',
     imgs: [
