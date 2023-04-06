@@ -118,14 +118,14 @@
     <div class="section5 effect-section" style="display: none;">
       <S5 />
     </div>
-    <div class="section6 effect-section pointer-events-none" style="display: none;">
-      <S6 />
-    </div>
-    <div class="section7 effect-section" style="display: none;">
+    <div class="section6 effect-section" style="display: none;">
       <S7 />
     </div>
-    <div class="section8 effect-section" style="display: none;">
+    <div class="section7 effect-section" style="display: none;">
       <S8 />
+    </div>
+    <div class="section8 effect-section pointer-events-none" style="display: none;">
+      <S6 />
     </div>
     <Order />
   </div>
