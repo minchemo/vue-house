@@ -20,12 +20,15 @@
 				</div>
 			</div>
 			<div class="right">
+				<div class="t1" data-aos="fade-up" data-aos-delay="200" v-html="items[activeSlide].t1"></div>
+				<div class="t3" data-aos="fade-up" data-aos-delay="400" v-html="items[activeSlide].t3"></div>
+				<!-- 
 				<div class="t1" data-aos="fade-up" data-aos-delay="200">鹽行繁榮風華<br>
 					生活人文圖畫</div>
 				<div class="t3" data-aos="fade-up" data-aos-delay="400">■ 5min 「台南應用科技大學」半徑完整生活圈<br />
 					■ 5min 鹽行聚落核心 三村國小、夜市商圈<br />
 					■ 6min 愛買&家樂福 休閒購物美食好方便<br />
-					■ 校園公園景觀一覽無遺，近取鹽水溪河堤綠廊</div>
+					■ 校園公園景觀一覽無遺，近取鹽水溪河堤綠廊</div> -->
 			</div>
 		</div>
 		<img class="slash" src="@/section/slash.svg" alt="" srcset="">
@@ -210,7 +213,9 @@ const items = [
 				caption: '奇美醫院實景圖',
 				img: new URL("../section/s6/1-3.jpg", import.meta.url).href
 			},
-		]
+		],
+		t1: '鹽行繁榮風華<br>生活人文圖畫',
+		t3: '■ 5min 「台南應用科技大學」半徑完整生活圈<br />■ 5min 鹽行聚落核心 三村國小、夜市商圈<br />■ 6min 愛買&家樂福 休閒購物美食好方便<br />■ 校園公園景觀一覽無遺，近取鹽水溪河堤綠廊',
 	},
 	{
 		title: '聚焦永康文教新聚落',
@@ -235,8 +240,9 @@ const items = [
 				caption: '三村國小實景圖',
 				img: new URL("../section/s6/2-5.jpg", import.meta.url).href
 			},
-		]
-
+		],
+		t1: '國際教育專區<br>博館運動場域<br>聚焦永康文教新聚落',
+		t3: '■ 明星學區：國際雙語教育鹽行國中、三村國小<br>■ 「台南應用科技大學」完整生活圈<br>■ 文化&運動：國立台灣歷史博物館、台南總圖、<br> 台南國際棒球場',
 	}
 ]
 </script>

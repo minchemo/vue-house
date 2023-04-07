@@ -10,30 +10,18 @@
 			<img src="@/section/s9/0.png" class="award" alt="" srcset="" v-if="$isMobile()">
 		</div>
 		<div class="right">
-			<label class="pic"><input type="radio" name="pics">
 			<div class="imgs">
 				<div class="img" v-for="item, i in itemsA">
 					<img :src="item.img" alt="" srcset="">
 					<p>{{ item.caption }}</p>
 				</div>
-				<div class="img" v-if="$isMobile()" v-for="item, i in itemsA">
-					<img :src="item.img" alt="" srcset="">
-					<p>{{ item.caption }}</p>
-				</div>
 			</div>
-		</label>
-			<label class="pic"><input type="radio" name="pics">
 			<div class="imgs">
 				<div class="img" v-for="item, i in itemsB">
 					<img :src="item.img" alt="" srcset="">
 					<p>{{ item.caption }}</p>
 				</div>
-				<div class="img" v-if="$isMobile()" v-for="item, i in itemsB">
-					<img :src="item.img" alt="" srcset="">
-					<p>{{ item.caption }}</p>
-				</div>
 			</div>
-		</label>
 		</div>
 		<div class="line"></div>
 		<div class="line2" v-if="$isMobile()"></div>
@@ -92,22 +80,6 @@
 				}
 			}
 		}
-
-		.pic {
-			//控制停止的按鈕 顯示後就會看的到
-			input {
-				display: none;
-			}
-			input:checked + .imgs:hover {
-				animation-play-state: paused;
-			}
-		}
-@keyframes an {
-  to {
-    transform: translateX(0);
-  }
-}
-
 	}
 	.line {
 		@apply absolute z-10;
@@ -173,20 +145,12 @@
 		gap: sizem(45.88);
 		width: 100%;
 		.imgs {
-			//width: 100%;
-			//gap: sizem(8.5);
-			//padding: 0 sizem(9);
-  width: auto;
-  display: inline-flex;
-  position: relative;
-  white-space: nowrap;
-  transform: translateX(-50%);
-  animation: an 20s linear infinite reverse;
+			@apply flex justify-between overflow-x-scroll;
+			width: 100%;
+			gap: sizem(8.5);
+			padding: 0 sizem(9);
 			
 			.img {
-				position: relative;
-				display: inline-block;
-				margin: 0 sizem(8) 0 0;
 				img {
 					height: sizem(155);
 				}
