@@ -227,7 +227,7 @@ onMounted(() => {
     .on('enter', () => {
       setTimeout(() => {
         isInView.value = true;
-      }, 100);
+      }, 200);
     })
     .on('exit', () => {
       isInView.value = false;
