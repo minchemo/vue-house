@@ -10,7 +10,7 @@
         :options="{ type: 'loop', arrows: false, autoplay: true, pagination: false, interval: 3000, pauseOnHover: true, }"
         class="slide-section">
         <SplideSlide v-for="img, i in imgs" class="slide-item">
-          <img class="cover" data-aos="fade-up" data-aos-duration="800" :src="img.img" alt="" srcset="">
+          <img class="cover" :src="img.img" alt="" srcset="">
         </SplideSlide>
       </Splide>
       <div class="title" v-if="$isMobile()" data-aos="fade-up">
@@ -202,7 +202,19 @@ const imgs = [
     img: globals.$isMobile() ? new URL("../section/s8/1_m.jpg", import.meta.url).href : new URL("../section/s8/1.jpg", import.meta.url).href,
   },
   {
-    img: globals.$isMobile() ? new URL("../section/s8/1_m.jpg", import.meta.url).href : new URL("../section/s8/1.jpg", import.meta.url).href,
+    img: globals.$isMobile() ? new URL("../section/s8/2_m.jpg", import.meta.url).href : new URL("../section/s8/2.jpg", import.meta.url).href,
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s8/3_m.jpg", import.meta.url).href : new URL("../section/s8/3.jpg", import.meta.url).href,
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s8/4_m.jpg", import.meta.url).href : new URL("../section/s8/4.jpg", import.meta.url).href,
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s8/5_m.jpg", import.meta.url).href : new URL("../section/s8/5.jpg", import.meta.url).href,
+  },
+  {
+    img: globals.$isMobile() ? new URL("../section/s8/6_m.jpg", import.meta.url).href : new URL("../section/s8/6.jpg", import.meta.url).href,
   },
 ]
 

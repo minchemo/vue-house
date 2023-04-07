@@ -36,12 +36,11 @@
           <img class="slash" v-if="i < imgs.length - 1" src="@/section/s7/slash.png" alt="" srcset="">
         </div>
       </div>
-      <Splide ref="splideRef" data-aos="fade-up" data-aos-duration="800" @splide:move="onMove"
+      <Splide ref="splideRef" data-aos="fade-in" data-aos-duration="800" @splide:move="onMove"
         :key="isInView"
         :options="{ type: 'loop', arrows: false, rewind: true, pagination: false, autoplay: true, interval: 3000, pauseOnHover: true, perPage: 1 }"
         class="slide-section">
-        <SplideSlide v-for="img, i in imgs[activeTitle].imgs" class="slide-item" data-aos="fade-up"
-          data-aos-duration="800">
+        <SplideSlide v-for="img, i in imgs[activeTitle].imgs" class="slide-item">
           <img class="cover" :src="img.url" :alt=img.caption srcset="">
         </SplideSlide>
       </Splide>
