@@ -4,8 +4,8 @@
 			<div class="left">
 			<div class="slide-box">
 				<div class="arrows">
-					<img loading="lazy" class="prev" @click="activeSlide = i; splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-					<img loading="lazy" class="next" @click="activeSlide = i; splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+					<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+					<img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
 				</div>
 				<Splide ref="splide" :options="{
 					arrows: false,
