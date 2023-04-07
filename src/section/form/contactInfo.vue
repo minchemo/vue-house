@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between font-['noto_sans_tc'] section9">
+  <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between font-['noto_sans_tc'] section11">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center contact-phone-btn" @click="modalOpen = true; modalType = 'phone'">

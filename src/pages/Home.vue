@@ -350,7 +350,7 @@ const book = () => {
  * 
  */
 
-const maxSection = 11; // section 總數
+const maxSection = 12; // section 總數
 const effectSection = 8; // 有特效的畫面
 const currentSection = ref(1); // 目前所在 section
 const duration = 1
@@ -393,9 +393,11 @@ const scrollEffect = () => {
       clearTimeout(scrollingTimeout);
       scrolling = true;
 
+      const scrollThreshold = isTouchPad(e) ? duration * 1000 * 1.2 : duration * 600; // 滾動鎖定時間間隔，數字越小可滾動至下個區塊的時間越短
+
       scrollingTimeout = setTimeout(() => {
         scrolling = false;
-      }, isTouchPad(e) ? duration * 1000 * 1.2 : duration * 1000);
+      }, scrollThreshold);
 
       if (e.deltaY > 0) {
         if (currentSection.value + 1 <= maxSection) {
