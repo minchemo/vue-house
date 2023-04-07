@@ -7,11 +7,11 @@ export default {
         keywords: caseName,
     },
     address: "接待中心：台南市永康區永安路與平道18街口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3671.3238458289366!2d120.24099660100491!3d23.04858592975493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDAyJzU0LjkiTiAxMjDCsDE0JzMyLjMiRQ!5e0!3m2!1szh-TW!2stw!4v1680843379667!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/2dFhZLxa2i6HZCLa7",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7342.642566972415!2d120.23684815579165!3d23.048679915351435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77bbdb57719d%3A0xf2ba93fb6b3ac38c!2z5pil56aP5qmf5qeL!5e0!3m2!1szh-TW!2stw!4v1680856784279!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/4q3C75upJH6jF98n8",
     phone: "06-253-6000",
-    fbLink: "https://www.facebook.com/gtcip.debang",
-    fbMessage: "https://m.me/gtcip.debang",
+    fbLink: "https://www.facebook.com/101228776238472/",
+    fbMessage: "https://m.me/101228776238472/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "春上建設"],
@@ -22,7 +22,7 @@ export default {
         ["建照號碼", "（111）南工造字第02158號"],
         ["坪數規劃", "27-42坪"],
     ],
-    gtmCode: ["GTM-M87MK5M","GTM-55PLPZQ"], // 可放置多個
+    gtmCode: ["GTM-N9L7LGJ"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3

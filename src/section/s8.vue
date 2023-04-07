@@ -1,7 +1,12 @@
 <template>
 	<article class="s8 relative font-['Noto_Serif_TC']">
 		<div class="main">
-			<Splide class="slide-box" ref="splide" :options="{
+			<div class="slide-box">
+			<div class="arrows">
+				<img loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+				<img loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+			</div>
+			<Splide ref="splide" :options="{
 				arrows: false,
 				pagination: false,
 				type: 'loop',
@@ -13,6 +18,7 @@
 					<p>{{ img.caption }}</p>
 				</SplideSlide>
 			</Splide>
+			</div>
 			<div class="right"  data-aos="fade-up" data-aos-delay="200">
 				<div class="t1">豪宅式氛圍 禮遇級品味</div>
 				<div class="t2">
@@ -38,6 +44,7 @@
 
 	.main {
 		.slide-box {
+			@apply relative;
 			width: 100%;
 			height: 100%;
 			.slide {
@@ -56,6 +63,16 @@
 					text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
 				}
 			}
+		.arrows {
+			@apply absolute z-20 flex items-center justify-between;
+			width: 100%;
+			padding: 0;
+			bottom: 50%;
+			transform: translateY(50%);
+			img {
+				margin: unset;
+			}
+		}
 		}
 		.right {
 			@apply pointer-events-none absolute z-10;

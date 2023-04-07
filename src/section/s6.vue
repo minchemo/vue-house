@@ -2,7 +2,12 @@
 	<article class="s6 relative font-['Noto_Serif_TC']">
 		<div class="main">
 			<div class="left">
-				<Splide class="slide-box" ref="splide" :options="{
+			<div class="slide-box">
+				<div class="arrows">
+					<img loading="lazy" class="prev" @click="activeSlide = i; splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+					<img loading="lazy" class="next" @click="activeSlide = i; splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+				</div>
+				<Splide ref="splide" :options="{
 					arrows: false,
 					pagination: false,
 					type: 'loop',
@@ -13,7 +18,7 @@
 						<img :src="img.img" alt="" srcset="">
 						<p>{{ img.caption }}</p>
 					</SplideSlide>
-				</Splide>
+				</Splide></div>
 				<div class="btns">
 					<div class="item" v-for="item, i in items" :class="{ active: i == activeSlide }" @click="activeSlide = i; splide.splide.go(0)">
 						{{ item.title }}</div>
@@ -70,6 +75,7 @@
 				}
 			}
 			.slide-box {
+			@apply relative;
 			margin: unset;
 			width: size(1236);
 			.slide {
@@ -88,6 +94,16 @@
 					text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
 				}
 			}
+		.arrows {
+			@apply absolute z-20 flex items-center justify-between;
+			width: 100%;
+			padding: 0;
+			bottom: 50%;
+			transform: translateY(50%);
+			img {
+				margin: unset;
+			}
+		}
 			}
 		}
 		.right {

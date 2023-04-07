@@ -10,7 +10,7 @@
 			<img src="@/section/s9/0.png" class="award" alt="" srcset="" v-if="$isMobile()">
 		</div>
 		<div class="right">
-			<label class="pic"><input type="radio" name="pics">
+			<label class="pic"><input type="checkbox" v-model="isChecked1" @click="handleCheckboxClick(1)">
 			<div class="imgs">
 				<div class="img" v-for="item, i in itemsA">
 					<img :src="item.img" alt="" srcset="">
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		</label>
-			<label class="pic"><input type="radio" name="pics">
+			<label class="pic"><input type="checkbox" v-model="isChecked2" @click="handleCheckboxClick(2)">
 			<div class="imgs">
 				<div class="img" v-for="item, i in itemsB">
 					<img :src="item.img" alt="" srcset="">
@@ -267,5 +267,16 @@ const itemsB = [
 		caption: '春福學學 台南市安南區',
 		img: new URL("../section/s9/9.jpg", import.meta.url).href
 	},
-]
+];
+const isChecked1 = ref(false)
+const isChecked2 = ref(false)
+
+function handleCheckboxClick(checkboxNum) {
+  if (checkboxNum === 1) {
+    isChecked2.value = false
+  } else if (checkboxNum === 2) {
+    isChecked1.value = false
+  }
+}
+
 </script>

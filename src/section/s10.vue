@@ -92,19 +92,24 @@
 			<ul class="case">
 				<li v-for="item in items[activeItem - 1].works">{{ item.caption }}</li>
 			</ul>
-
-			<Splide class="slide-box" ref="splide" :key="activeItem" :options="{
-				arrows: false,
-				pagination: false,
-				type: 'loop',
-				autoplay: true,
-				interval: 4000,
-			}" @splide:move="move">
-				<SplideSlide class="slide" v-for="img, i in items[activeItem - 1].works">
-					<img :src="img.img" alt="" srcset="">
-					<p>{{ img.caption }}</p>
-				</SplideSlide>
-			</Splide>
+			<div class="slide-box">
+				<div class="arrows">
+					<img loading="lazy" class="prev" @click="hoverItem = i; $refs.splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+					<img loading="lazy" class="next" @click="hoverItem = i; $refs.splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+				</div>
+				<Splide ref="splide" :key="activeItem" :options="{
+					arrows: false,
+					pagination: false,
+					type: 'loop',
+					autoplay: true,
+					interval: 4000,
+				}" @splide:move="move">
+					<SplideSlide class="slide" v-for="img, i in items[activeItem - 1].works">
+						<img :src="img.img" alt="" srcset="">
+						<p>{{ img.caption }}</p>
+					</SplideSlide>
+				</Splide>
+			</div>
 		</div>
 	</div>
 </template>
@@ -211,6 +216,16 @@
 					text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
 				}
 			}
+		.arrows {
+			@apply absolute z-20 flex items-center justify-between;
+			width: 100%;
+			padding: 0;
+			bottom: 50%;
+			transform: translateY(50%);
+			img {
+				margin: unset;
+			}
+		}
 		}
 	}
 }
