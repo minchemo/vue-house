@@ -1,30 +1,34 @@
 <template>
-	<article class="s6 relative">
-		<div class="text">
-			<div class="t1" data-aos="fade-down" data-aos-delay="0">青春綠皮書<br>穠翠綠洲氧森養生</div>
-			<div class="t2" data-aos="fade-down" data-aos-delay="200">
-				全國四座低碳綠能示範城市，新莊副都心新北唯一示範特區<br>
-				斥資30億中港大排美化工程，打造新北清溪川<br>
-				5分鐘1.4公頃塭仔底濕地公園、昌平公園、願景公園環聚<br>
-				慢活城森養好人生
+	<article class="s6 relative font-['Noto_Serif_TC']">
+		<div class="main">
+			<div class="left">
+				<Splide class="slide-box" ref="splide" :options="{
+					arrows: false,
+					pagination: false,
+					type: 'loop',
+					autoplay: true,
+					interval: 4000,
+				}" @splide:move="move">
+					<SplideSlide class="slide" v-for="img, i in items[activeSlide].imgs">
+						<img :src="img.img" alt="" srcset="">
+						<p>{{ img.caption }}</p>
+					</SplideSlide>
+				</Splide>
+				<div class="btns">
+					<div class="item" v-for="item, i in items" :class="{ active: i == activeSlide }" @click="activeSlide = i; splide.splide.go(0)">
+						{{ item.title }}</div>
+				</div>
 			</div>
-			<ul class="pagin" v-if="!$isMobile()">
-				<li v-for="img, i in imgs" v-bind:class="{ active: currentSlideIndex == i }" @click="splide.splide.go(i)">
-				</li>
-			</ul>
-		</div>
-		<div class="slider" data-aos="fade" data-aos-delay="0">
-			<div class="arrows" v-if="$isMobile()">
-				<img loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-				<img loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+			<div class="right">
+				<div class="t1" data-aos="fade-up" data-aos-delay="200">鹽行繁榮風華<br>
+					生活人文圖畫</div>
+				<div class="t3" data-aos="fade-up" data-aos-delay="400">■ 5min 「台南應用科技大學」半徑完整生活圈<br />
+					■ 5min 鹽行聚落核心 三村國小、夜市商圈<br />
+					■ 6min 愛買&家樂福 休閒購物美食好方便<br />
+					■ 校園公園景觀一覽無遺，近取鹽水溪河堤綠廊</div>
 			</div>
-			<Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-				<SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-					<p>{{ img.caption }}</p>
-				</SplideSlide>
-			</Splide>
 		</div>
-		<img class="flag" data-aos="fade" data-aos-delay="0" src="@/section/s6/flag.png" alt="" srcset="">
+		<img class="slash" src="@/section/slash.svg" alt="" srcset="">
 	</article>
 </template>
 
@@ -33,70 +37,83 @@
 
 .s6 {
 	width: 100%;
-	height: size(720);
-	gap: size(88);
-	@apply flex flex-row-reverse justify-end items-end;
+	height: size(1010);
+	background-image: url(@/section/s3/bg.jpg);
+	background-size: cover;
+	padding-top: size(96);
+	padding-left: size(104.3);
 
-	.text {
-		width: auto;
-		height: auto;
-		.t1 {
-			font-weight: 700;
-			font-size: size(50);
-			line-height: 160%;
-			color: #FFCE88;
-		}
-		.t2 {
-			margin-top: size(30);
-			font-weight: 400;
-			font-size: size(25);
-			line-height: 200%;
-			color: #fff;
-		}
-		.pagin {
-			@apply relative flex items-center justify-start;
-			gap: size(10.22);
-			margin-top: size(62);
-			li {
-				@apply cursor-pointer;
-				width: size(36.78);
-				height: size(3.86);
-				background-color: #DFD9CD;
-				&.active {
-					height: size(11.47);
+	.main {
+		@apply flex flex-row items-center justify-start;
+		gap: size(55.66);
+		.left {
+			.btns {
+				@apply flex items-center;
+				.item {
+					@apply flex-1 cursor-pointer;
+					background-color: #B08D8D;
+					color: #fff;
+					font-weight: 700;
+					font-size: size(30);
+					padding: size(10) 0;
+					text-align: center;
+					&.active {
+						background-color: #803031;
+					}
+					&:hover {
+						background-color: #803031;
+
+					}
 				}
 			}
+			.slide-box {
+			margin: unset;
+			width: size(1236);
+			.slide {
+				@apply relative;
+				img {
+					width: size(1236);
+				}
+				p {
+					@apply absolute;
+					right: size(10);
+					bottom: size(10);
+					font-weight: 400;
+					font-size: size(15);
+					line-height: 160%;
+					color: #FFFFFF;
+					text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
+				}
+			}
+			}
 		}
-	}
-	.slider {
-		@apply relative bg-white;
-		right: 0;
-		bottom: 0;
-		width: size(1041);
-		height: size(566);
-		filter: drop-shadow(0 size(5) size(20) rgba(0, 0, 0, 0.3));
-		.slide-item {
-				// @apply relative;
-			width: size(1041);
-			height: size(566);
-			background-size: cover;
-			p {
-				@apply absolute;
-				right: size(10);
-				bottom: size(10);
+		.right {
+			padding-bottom: size(120);
+			.t1 {
+				margin-top: size(101.40);
+				padding-left: -#{size(13)};
 				font-weight: 700;
-				font-size: size(25);
-				color: #FFFFFF;
-				text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
+				font-size: size(37);
+				line-height: 140%;
+				color: #803031;
+			}
+			.t3 {
+				margin-top: size(30);
+				padding-left: -#{size(13)};
+				width: size(445.47);
+				font-weight: 400;
+				font-size: size(20);
+				line-height: 150%;
+				color: #000000;
 			}
 		}
 	}
-	.flag {
-		@apply absolute;
-		width: size(680.05);
-		height: size(495.67);
-		left: size(1317.45);
-		bottom: size(467.33);
+
+	.slash {
+		@apply absolute z-10;
+		top: size(331.69);
+		left: size(1653.08);
+		width: size(176.77);
 	}
 }
 
@@ -106,112 +123,120 @@
 
 @media screen and (max-width: 767px) {
 
-  .s6 {
-	width: 100%;
-	height: auto;
-	gap: sizem(27.2);
-	padding-top: sizem(20);
-	@apply flex flex-col justify-center items-center;
+.s6 {
+	height: sizem(576);
+	padding-top: 0;
+	padding-left: 0;
 
-	.text {
-		width: sizem(351);
-		height: auto;
-		padding: 0 sizem(10);
-		white-space: nowrap;
-		.t1 { 
-			font-size: sizem(20);
-			line-height: 163%;
-			color: #FFCE88;
-		}
-		.t2 {
-			margin-top: sizem(10);
-			font-size: sizem(13);
-			line-height: 187%;
-		}
-	}
-	.slider {
-		@apply relative bg-white;
-		right: 0;
-		bottom: 0;
-		width: sizem(351);
-		height: sizem(314);
-		box-shadow: sizem(5) sizem(5) sizem(10) rgba(0, 0, 0, 0.5);
-		filter: none;
-		.slide-item {
-			width: sizem(351);
-			height: sizem(314);
-			p {
-				right: sizem(10);
-				bottom: sizem(10);
-				font-size: sizem(12);
-				text-shadow: 0px sizem(2) sizem(2) rgba(0, 0, 0, 0.8);
+	.main {
+		@apply flex-col;
+		gap: sizem(63);
+		.left {
+			.btns {
+				@apply flex items-center;
+				.item {
+					font-size: sizem(14);
+					padding: sizem(17) 0;
+				}
 			}
-		}
-
-		
-		.arrows {
-			@apply absolute z-10 flex items-center justify-between;
+			.slide-box {
 			width: 100%;
-			padding: 0 sizem(5);
-			bottom: 50%;
-			transform: translateY(50%);
-			img {
-				margin: unset;
+			.slide {
+				img {
+					width: 100%;
+				}
+				p {
+					right: sizem(10);
+					bottom: sizem(5);
+					font-size: sizem(12);
+					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
+				}
+			}
+			}
+		}
+		.right {
+			padding-bottom: 0;
+			.t1 {
+				margin-top: 0;
+				padding-left:0;
+				font-size: sizem(23);
+			}
+			.t3 {
+				margin-top: sizem(15);
+				padding-left: 0;
+				width: auto;
+				font-size: sizem(14);
 			}
 		}
 	}
-	.flag {
-		width: sizem(222);
-		height: auto;
-		left: sizem(148.5);
-		bottom: unset;
-		top: -#{sizem(100)};
-	}
 
-  }
+	.slash {
+		@apply absolute z-10;
+		top: sizem(325.68);
+		left: sizem(181);
+		width: sizem(118);
+	}
+}
+
 }
 
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { computed, getCurrentInstance, ref, } from 'vue';
+
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
-const getImg = (path) => {
-	if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-	return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
 const splide = ref();
-const currentSlideIndex = ref(0);
-const moved = (newIdx, prevIdx, destIdx) => {
-	currentSlideIndex.value = prevIdx
+const currentIdx = ref(0)
+const move = (newIdx, prevIdx, destIdx) => {
+	currentIdx.value = prevIdx
 }
+const activeSlide = ref(0)
 
-const options = {
-	rewind: true,
-	arrows: false,
-	pagination: false,
-	autoplay: true,
-	interval: 4000,
-	gap: 0,
-	type: 'fade'
-}
+const items = [
+	{
+		title: '散步南應大熟成機能',
+		imgs: [
+			{
+				caption: '購物情境圖',
+				img: new URL("../section/s6/1-1.jpg", import.meta.url).href
+			},
+			{
+				caption: '公園情境圖',
+				img: new URL("../section/s6/1-2.jpg", import.meta.url).href
+			},
+			{
+				caption: '奇美醫院實景圖',
+				img: new URL("../section/s6/1-3.jpg", import.meta.url).href
+			},
+		]
+	},
+	{
+		title: '聚焦永康文教新聚落',
+		imgs: [
+			{
+				caption: '臺南市立鹽行國民中學',
+				img: new URL("../section/s6/2-1.jpg", import.meta.url).href
+			},
+			{
+				caption: '台灣歷史博物館實景圖',
+				img: new URL("../section/s6/2-2.jpg", import.meta.url).href
+			},
+			{
+				caption: '台南南台科技大學實景圖',
+				img: new URL("../section/s6/2-3.jpg", import.meta.url).href
+			},
+			{
+				caption: '台南市新圖書總館實景圖',
+				img: new URL("../section/s6/2-4.jpg", import.meta.url).href
+			},
+			{
+				caption: '三村國小實景圖',
+				img: new URL("../section/s6/2-5.jpg", import.meta.url).href
+			},
+		]
 
-const imgs = [
-	{
-		img: getImg('s6/1'),
-		caption: "昌平公園"
-	},
-	{
-		img: getImg('s6/2'),
-		caption: "塭仔圳溼地公園"
-	},
-	{
-		img: getImg('s6/3'),
-		caption: "願景公園"
-	},
-	{
-		img: getImg('s6/4'),
-		caption: "中港綠堤"
-	},
+	}
 ]
 </script>

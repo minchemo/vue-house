@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order relative bg-[#DD0615] text-center">
+  <div id="order" class="order relative bg-[#fff] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
       <div class="order-title text-center text-[#fff]">{{ info.order.title }}</div>
@@ -12,7 +12,7 @@
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
-      <img class="decor" v-if="!$isMobile()" data-aos="fade" src="@/section/form/decor.png" alt="" srcset="">
+      <!-- <img class="decor" v-if="!$isMobile()" data-aos="fade" src="@/section/form/decor.png" alt="" srcset=""> -->
 
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center" data-aos="zoom-in">
@@ -85,26 +85,15 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  // background-image: url('@/section/form/bg.png');
+  background-image: url('@/section/form/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: size(0);
   position: relative;
   height: auto;
-  padding-top: size(170);
+  padding-top: size(70);
   overflow: hidden;
-  &::after {
-    content: '';
-    width: size(1700);
-    height: 92%;
-    background-color: #860009;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-  }
-  
 
   .z-10 {
     z-index: 10;
@@ -134,7 +123,7 @@
   padding-top: size(0);
 
   .order-title {
-    @apply relative z-10;
+    @apply relative z-10 font-['noto_serif_tc'];
     font-size: size(43);
     font-weight: 700;
     margin-bottom: size(60);
@@ -143,18 +132,18 @@
     margin: 0 auto;
     margin-bottom: size(20);
 
-    &::after {
-      content: '';
-      width: 150%;
-      height: 110%;
-      background-image: url('@/section/form/title_decor.png');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: absolute;
-      left: -25%;
-      top: 0;
-    }
+    // &::after {
+    //   content: '';
+    //   width: 150%;
+    //   height: 110%;
+    //   background-image: url('@/section/form/title_decor.png');
+    //   background-size: contain;
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   position: absolute;
+    //   left: -25%;
+    //   top: 0;
+    // }
   }
 
   .cus-divider {
@@ -201,12 +190,12 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #000;
-    background-color: #fff;
+    background-color: #BBAD90;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
     border: 0;
-    border-radius: 0em;
+    border-radius: 10px;
     z-index: 10;
     position: relative;
   }
@@ -296,10 +285,8 @@
 
     .send {
       font-size: sizem(21);
-      width: sizem(318);
+      width: 92%;
       border-radius: sizem(10);
-        background-color: #C79E63;
-        color: #fff;
     }
 
     .control {

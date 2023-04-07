@@ -1,29 +1,28 @@
 <template>
-	<article class="s8 relative">
-		<div class="text">
-			<div class="t1" data-aos="fade-down" data-aos-delay="0">雙商圈雙百貨<br>3分鐘微距宏匯廣場</div>
-			<div class="t2" data-aos="fade-down" data-aos-delay="200">
-				時尚熱點宏匯廣場、晶冠廣場超過400個品牌入駐<br>
-				美麗新影城、VR虛擬實境樂園、SONY Zepp表演展<br v-if="$isMobile()">館、家樂福、IKEA⋯<br>
-				散步3分鐘中原商圈食衣住行市場採買機能全到位
-			</div>
-			<ul class="pagin" v-if="!$isMobile()">
-				<li v-for="img, i in imgs" v-bind:class="{ active: currentSlideIndex == i }" @click="splide.splide.go(i)">
-				</li>
-			</ul>
-		</div>
-		<div class="slider" data-aos="fade" data-aos-delay="0">
-			<div class="arrows" v-if="$isMobile()">
-				<img loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-				<img loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
-			</div>
-			<Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-				<SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+	<article class="s8 relative font-['Noto_Serif_TC']">
+		<div class="main">
+			<Splide class="slide-box" ref="splide" :options="{
+				arrows: false,
+				pagination: false,
+				type: 'loop',
+				autoplay: true,
+				interval: 4000,
+			}" @splide:move="move">
+				<SplideSlide class="slide" v-for="img, i in items">
+					<img :src="img.img" alt="" srcset="">
 					<p>{{ img.caption }}</p>
 				</SplideSlide>
 			</Splide>
+			<div class="right"  data-aos="fade-up" data-aos-delay="200">
+				<div class="t1">豪宅式氛圍 禮遇級品味</div>
+				<div class="t2">
+					注入豪宅或飯店質感的同時，同步全齡化的設計思考<br>
+					讓公設空間不僅承襲既有「煙波DNA」美學與氛圍<br>
+					同時引導服務者的從容禮遇，為居住者的日常時光，皆是品味
+				</div>
+			</div>
+			<img v-if="$isMobile()" class="fakeSlide" :src="items[currentIdx].img" alt="" srcset="">
 		</div>
-		<img class="flag" data-aos="fade" data-aos-delay="0" src="@/section/s8/horse.png" alt="" srcset="">
 	</article>
 </template>
 
@@ -32,70 +31,53 @@
 
 .s8 {
 	width: 100%;
-	height: size(1076);
-	gap: size(88);
-	padding-bottom: size(172);
-	@apply flex flex-row-reverse justify-center items-end;
+	height: auto;
+	background-image: url(@/section/s3/bg.jpg);
+	background-size: cover;
+	padding-top: size(42.78);
 
-	.text {
-		width: auto;
-		height: auto;
-		.t1 {
-			font-weight: 700;
-			font-size: size(50);
-			line-height: 160%;
-			color: #FFCE88;
-		}
-		.t2 {
-			margin-top: size(30);
-			font-weight: 400;
-			font-size: size(25);
-			line-height: 200%;
-			color: #fff;
-		}
-		.pagin {
-			@apply relative flex items-center justify-start;
-			gap: size(10.22);
-			margin-top: size(62);
-			li {
-				@apply cursor-pointer;
-				width: size(36.78);
-				height: size(3.86);
-				background-color: #DFD9CD;
-				&.active {
-					height: size(11.47);
+	.main {
+		.slide-box {
+			width: 100%;
+			height: 100%;
+			.slide {
+				@apply relative;
+				img {
+					width: 100%;
+				}
+				p {
+					@apply absolute;
+					right: size(10);
+					bottom: size(10);
+					font-weight: 400;
+					font-size: size(15);
+					line-height: 160%;
+					color: #FFFFFF;
+					text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
 				}
 			}
 		}
-	}
-	.slider {
-		@apply relative bg-white;
-		right: 0;
-		bottom: 0;
-		width: size(789);
-		height: size(732);
-		filter: drop-shadow(0 size(5) size(20) rgba(0, 0, 0, 0.3));
-		.slide-item {
-			width: size(789);
-			height: size(732);
-			background-size: cover;
-			p {
-				@apply absolute;
-				right: size(10);
-				bottom: size(10);
+		.right {
+			@apply pointer-events-none absolute z-10;
+			bottom: size(102.15);
+			right: 0;
+			padding: size(19.25) size(32);
+			background-color: #803031c7;
+			color: #fff;
+			.t1 {
 				font-weight: 700;
-				font-size: size(25);
-				color: #FFFFFF;
-				text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
+				font-size: size(37);
+				line-height: 140%;
+			}
+			.t2 {
+				margin-top: size(25);
+				font-weight: 400;
+				font-size: size(20);
+				line-height: 150%;
 			}
 		}
 	}
-	.flag {
-		@apply absolute;
-		width: size(637.21);
-		left: size(1542);
-		bottom: size(484.87);
-	}
+
 }
 
 /* 螢幕尺寸標準 */
@@ -104,102 +86,84 @@
 
 @media screen and (max-width: 767px) {
 
-  .s8 {
-	width: 100%;
+	.s8 {
 	height: auto;
-	gap: sizem(27.2);
-	padding-top: sizem(53.7);
-	@apply flex flex-col justify-center items-center;
+	padding-top: 0;
 
-	.text {
-		width: sizem(351);
-		height: auto;
-		padding: 0 sizem(10);
-		.t1 { 
-			font-size: sizem(20);
-			line-height: 163%;
-			color: #FFCE88;
-		}
-		.t2 {
-			margin-top: sizem(10);
-			font-size: sizem(13);
-			line-height: 187%;
-		}
-	}
-	.slider {
-		@apply relative bg-white;
-		right: 0;
-		bottom: 0;
-		width: sizem(351);
-		height: sizem(314);
-		box-shadow: sizem(5) sizem(5) sizem(10) rgba(0, 0, 0, 0.5);
-		filter: none;
-		.slide-item {
-			width: sizem(351);
-			height: sizem(314);
-			p {
-				right: sizem(10);
-				bottom: sizem(10);
-				font-size: sizem(12);
-				text-shadow: 0px sizem(2) sizem(2) rgba(0, 0, 0, 0.8);
+	.main {
+		.slide-box {
+			@apply relative z-10;
+			.slide {
+				p {
+					right: sizem(10);
+					bottom: sizem(5);
+					font-size: sizem(12);
+					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
+				}
 			}
 		}
-
-		
-		.arrows {
-			@apply absolute z-10 flex items-center justify-between;
-			width: 100%;
-			padding: 0 sizem(5);
-			bottom: 50%;
-			transform: translateY(50%);
-			img {
-				margin: unset;
+		.right {
+			@apply relative z-10;
+			bottom: 0;
+			right: 0;
+			padding: sizem(60) sizem(32.5);
+			backdrop-filter: blur(5px);
+			.t1 {
+				font-size: sizem(23);
+			}
+			.t2 {
+				margin-top: sizem(14);
+				font-size: sizem(13);
 			}
 		}
+		.fakeSlide {
+			@apply absolute z-[1];
+			width: 120%;
+			bottom: 0;
+			left: 0;
+		}
 	}
-	.flag {
-		width: sizem(144);
-		height: auto;
-		left: sizem(284);
-		bottom: unset;
-		top: sizem(7);
-	}
-  }
+
+}
 }
 
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { computed, getCurrentInstance, ref, } from 'vue';
+
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
-const getImg = (path) => {
-	if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-	return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
 const splide = ref();
-const currentSlideIndex = ref(0);
-const moved = (newIdx, prevIdx, destIdx) => {
-	currentSlideIndex.value = prevIdx
+const currentIdx = ref(0)
+const move = (newIdx, prevIdx, destIdx) => {
+	currentIdx.value = prevIdx
 }
 
-const options = {
-	rewind: true,
-	arrows: false,
-	pagination: false,
-	autoplay: true,
-	interval: 4000,
-	gap: 0,
-	type: 'fade'
-}
-
-const imgs = [
+const items = [
 	{
-		img: getImg('s8/1'),
-		caption: "宏匯廣場"
+		caption: '公設示意圖',
+		img: new URL("../section/s8/1.jpg", import.meta.url).href
 	},
 	{
-		img: getImg('s8/2'),
-		caption: "京冠廣場(情境示意圖)"
+		caption: '公設示意圖',
+		img: new URL("../section/s8/2.jpg", import.meta.url).href
+	},
+	{
+		caption: '公設示意圖',
+		img: new URL("../section/s8/3.jpg", import.meta.url).href
+	},
+	{
+		caption: '公設示意圖',
+		img: new URL("../section/s8/4.jpg", import.meta.url).href
+	},
+	{
+		caption: '公設示意圖',
+		img: new URL("../section/s8/5.jpg", import.meta.url).href
+	},
+	{
+		caption: '公設示意圖',
+		img: new URL("../section/s8/6.jpg", import.meta.url).href
 	},
 ]
 </script>

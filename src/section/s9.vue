@@ -1,16 +1,31 @@
 <template>
-	<article class="s9 relative" ref="s9" :class="dayClass[currentDay]">
-		<div class="text">
-			<img src="@/section/s9/mark.png" alt="" data-aos="fade-down" data-aos-delay="0">
-			<div class="t1" data-aos="fade-down" data-aos-delay="200">品生活之淳<br v-if="!$isMobile()" />賞人文之萃</div>
-			<div class="t2" data-aos="fade-down" data-aos-delay="400">洗鍊優雅有機曲面禮讚白派大師建築美學<br />
-				Twin Towers純白輕盈量體以輕透格局<br />
-				讓建築擁抱自然光景<br />
-				構築深具療癒力空間場域<br />
-				如實演繹國際樣式生活之美</div>
+	<article class="s9 relative font-['Noto_Serif_TC']">
+		<div class="left">
+			<img src="@/section/s9/0.png" class="award" alt="" srcset="" v-if="!$isMobile()">
+			<div class="t1" data-aos="fade-up" data-aos-delay="200" >三心建築 美好生活<br />
+				春福機構×煙波大飯店</div>
+			<div class="t2" data-aos="fade-up" data-aos-delay="400">「春福機構」傳承40年品牌，橫跨建築、飯店與商場<br />
+				觸角與實績遍布全台，更橫跨馬來西亞，放眼國際高度<br />
+				同時深化經營「三心建築」，成就每位居住者的安心支柱</div>
+			<img src="@/section/s9/0.png" class="award" alt="" srcset="" v-if="$isMobile()">
 		</div>
-		<div class="caption">{{ currentDay == 0 ? '建築外觀日景3D情境示意' : '建築外觀夜景3D情境示意' }}</div>
-		<div class="tip"  data-aos="fade" data-aos-delay="200" data-aos-duration="1000" :key="currentDay">白派美學</div>
+		<div class="right">
+			<div class="imgs">
+				<div class="img" v-for="item, i in itemsA">
+					<img :src="item.img" alt="" srcset="">
+					<p>{{ item.caption }}</p>
+				</div>
+			</div>
+			<div class="imgs">
+				<div class="img" v-for="item, i in itemsB">
+					<img :src="item.img" alt="" srcset="">
+					<p>{{ item.caption }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="line"></div>
+		<div class="line2" v-if="$isMobile()"></div>
+		<p class="awards">AWARDS</p>
 	</article>
 </template>
 
@@ -18,83 +33,76 @@
 @import '@/assets/style/function.scss';
 
 .s9 {
-	@apply transition-all duration-1000;
+	@apply flex items-center justify-end;
 	width: 100%;
-	height: size(1020);
+	height: size(1080);
+	background-image: url(@/section/s3/bg.jpg);
 	background-size: cover;
-
-	.text {
-		@apply absolute flex flex-col items-center;
-		gap: size(25);
-		top: size(126.67);
-		left: size(1258);
-		img {
-			width: size(201);
+	gap: size(47.88);
+	padding-right: size(47.25);
+	padding-bottom: size(10);
+	.left {
+		padding-top: size(50);
+		.award {
+			width: size(554);
 		}
-		.t1 {
-			@apply transition-all duration-1000;
+		.t1{
 			font-weight: 700;
-			font-size: size(50);
-			line-height: 160%;
-			text-align: center;
+			font-size: size(37);
+			line-height: 140%;
+			color: #803031;
+			margin-top: -#{size(25)};
 		}
-		.t2 {
-			@apply transition-all duration-1000;
-			font-weight: 400; 
-			font-size: size(25);
-			line-height: 200%;
-			text-align: center;
+		.t2{
+			font-weight: 400;
+			font-size: size(20);
+			line-height: 150%;
+			color: #000000;
+			margin-top: size(25)
 		}
 	}
-
-	.caption {
+	.right {
+		@apply flex flex-col;
+		gap: size(69.88);
+		.imgs {
+			@apply flex justify-between;
+			width: size(1150.75);
+			.img {
+				img {
+					height: size(245);
+				}
+				p{
+					font-weight: 700;
+					font-size: size(15);
+					line-height: 160%;
+					color: #000000;
+					margin-top: size(5);
+				}
+			}
+		}
+	}
+	.line {
+		@apply absolute z-10;
+		right: 0;
+		top: size(517.29);
+		width: size(1810.25);
+		height: size(2);
+		background-color: #803031;
+	}
+	.awards {
 		@apply absolute;
-		right: size(10);
-		bottom: size(10);
-		font-weight: 700;
-		font-size: size(25);
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		font-family: 'Tiro Devanagari Hindi';
+		font-style: normal;
+		font-weight: 400;
+		font-size: size(150);
+		line-height: 69%;
+		text-align: center;
+		letter-spacing: 0.1em;
 		color: #FFFFFF;
-		text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
-	}
-	.tip {
-		@apply absolute;
-		font-weight: 700;
-		font-size: size(50);
-		letter-spacing: 0.5rem;
-		color: #FFFFFF;
-		writing-mode: vertical-rl;
-	}
-	
-	&.day {
-		background-image: url(@/section/s9/1.jpg);
-		.text{
-			.t1 {
-				color: #DD0615;
-			}
-			.t2 {
-				color: #000000;
-			}
-		}
-		.tip {
-			top: size(188.5);
-			left: size(322);
-		}
-	}
 
-	&.night {
-		background-image: url(@/section/s9/2.jpg);
-		.text{
-			.t1 {
-				color: #fff;
-			}
-			.t2 {
-				color: #fff;
-			}
-		}
-		.tip {
-			top: size(420);
-			left: size(366);
-		}
 	}
 }
 
@@ -104,88 +112,124 @@
 
 @media screen and (max-width: 767px) {
 
-  .s9 {
-	height: sizem(667);
-
-	.text {
-		@apply absolute flex flex-col items-center;
-		gap: sizem(12);
-		top: sizem(37);
-		left: 0;
+	.s9 {
+	@apply flex-col justify-start;
+	width: 100%;
+	height: sizem(920);
+	gap:0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-top: sizem(60) !important;
+	.left {
 		width: 100%;
-		img {
-			width: sizem(92.64);
+		padding-top: 0;
+		padding-left: sizem(32.5);
+		padding-right: sizem(16);
+		.award {
+			width: 100%;
+			margin-left: -#{sizem(15)};
+			margin-bottom: -#{sizem(15)};
 		}
-		.t1 {
-			font-size: sizem(25);
+		.t1{
+			font-size: sizem(23);
+			margin-top:0;
 		}
-		.t2 {
+		.t2{
 			font-size: sizem(13);
-			line-height: 187%;
+			margin-top: sizem(15);
+			margin-bottom: sizem(20)
 		}
 	}
-
-	.caption {
-		right: sizem(10);
-		bottom: sizem(10);
-		font-size: sizem(12);
-		text-shadow: 0px sizem(2) sizem(2) rgba(0, 0, 0, 0.8);
-	}
-	.tip {
-		font-size: sizem(16);
-	}
-	
-	&.day {
-		background-image: url(@/section/s9/1_m.jpg);
-		.text{
-			.t1 {
-				color: #DD0615;
-			}
-			.t2 {
-				color: #000000;
-			}
-		}
-		.tip {
-			top: sizem(353);
-			left: sizem(20);
-		}
-	}
-
-	&.night {
-		background-image: url(@/section/s9/2_m.jpg);
-		.text{
-			.t1 {
-				color: #fff;
-			}
-			.t2 {
-				color: #fff;
+	.right {
+		@apply flex flex-col;
+		gap: sizem(45.88);
+		width: 100%;
+		.imgs {
+			@apply flex justify-between overflow-x-scroll;
+			width: 100%;
+			gap: sizem(8.5);
+			padding: 0 sizem(9);
+			
+			.img {
+				img {
+					height: sizem(155);
+				}
+				p{
+					font-size: sizem(12);
+					margin-top: sizem(5);
+				}
 			}
 		}
-		.tip {
-			top: sizem(414);
-			left: sizem(42);
-		}
 	}
-  }
+	.line {
+		@apply absolute z-10;
+		right: 0;
+		top: sizem(359.29);
+		width: 100%;
+		height: sizem(2);
+		background-color: #803031;
+	}
+	.line2 {
+		@apply absolute z-10;
+		right: 0;
+		top: sizem(585.29);
+		width: 100%;
+		height: sizem(2);
+		background-color: #803031;
+	}
+	.awards {
+		font-size: sizem(70);
+		line-height: 69%;
+	}
+}
 }
 
 </style>
 <script setup>
-import { onMounted, ref } from 'vue';
+import { computed, getCurrentInstance, ref, } from 'vue';
 
-const s9 = ref();
-const dayTimer = 5; // 日夜交替時間, 秒
-const dayClass = ['day', 'night']
-const currentDay = ref(0); // 預設為白天或黑夜, 預設白天
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
-onMounted(() => {
-	setInterval(() => {
-		if (currentDay.value === 0) {
-			currentDay.value = 1;
-		} else {
-			currentDay.value = 0;
-		}
+const itemsA = [
+	{
+		caption: '雲端 新竹縣竹北市',
+		img: new URL("../section/s9/1.jpg", import.meta.url).href
+	},
+	{
+		caption: '大觀自若 新竹縣竹北市',
+		img: new URL("../section/s9/2.jpg", import.meta.url).href
+	},
+	{
+		caption: '若隱 新竹市東區',
+		img: new URL("../section/s9/3.jpg", import.meta.url).href
+	},
+	{
+		caption: '大觀無極 新竹縣竹北市',
+		img: new URL("../section/s9/4.jpg", import.meta.url).href
+	},
+	{
+		caption: '水容 新竹縣竹北市',
+		img: new URL("../section/s9/5.jpg", import.meta.url).href
+	},
+]
 
-	}, dayTimer * 1000);
-})
+const itemsB = [
+	{
+		caption: '漾煙波 台南市永康區',
+		img: new URL("../section/s9/6.jpg", import.meta.url).href
+	},
+	{
+		caption: '春上春福 台南市永康區',
+		img: new URL("../section/s9/7.jpg", import.meta.url).href
+	},
+	{
+		caption: '春福好好 台南市安南區',
+		img: new URL("../section/s9/8.jpg", import.meta.url).href
+	},
+	{
+		caption: '春福學學 台南市安南區',
+		img: new URL("../section/s9/9.jpg", import.meta.url).href
+	},
+]
 </script>

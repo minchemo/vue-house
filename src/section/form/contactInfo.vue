@@ -1,6 +1,6 @@
 <template>
   <div class="contact-info mx-auto bg-[transparent] flex flex-col items-center justify-between">
-    <div class="logo" data-aos="zoom-in"></div>
+    <!-- <div class="logo" data-aos="zoom-in"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
@@ -102,7 +102,7 @@
   width: size(1200);
   // border-radius: size(115);
   padding: size(0) size(168) size(55) size(168);
-  margin-top: size(80);
+  margin-top: size(160);
   position: relative;
   z-index: 50;
   margin-bottom: 0;
@@ -123,11 +123,11 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #C79E63;
-      color: #fff;
+      background-color: #BBAD90;
+      color: #000;
       width: 100%;
       padding: 0 size(55);
-      border-radius: size(20);
+      border-radius: size(10);
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.06em;
@@ -149,7 +149,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: brightness(1) invert(0);
         transition: all .5s;
       }
 
@@ -175,16 +175,19 @@
 
 
       &.googlemap {
-        background-color: #C79E63;
-        color: #fff;
+      background-color: #BBAD90;
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
 
         &:hover {
           background-color: #79531e;
           color: #fff;
+        img {
+          filter: brightness(0) invert(1);
+        }
         }
       }
     }
@@ -207,17 +210,17 @@
 
     .contact-item {
       height: 100%;
-      background-color: #004488;
+      background-color: #BBAD90;
       font-size: sizem(16);
       font-weight: 400;
-      color: #fff;
+      color: #000;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
       }
 
     }
@@ -228,7 +231,7 @@
     height: auto;
     // border-radius: sizem(68);
     padding: sizem(40) sizem(15);
-    margin-top: sizem(0);
+    margin-top: sizem(50);
     position: relative;
     justify-content: space-between;
 

@@ -1,32 +1,33 @@
 <template>
-	<article class="s7 relative">
-		<div class="text">
-			<div class="t1" data-aos="fade-down" data-aos-delay="0">雙捷核心 環狀線╳機場線<br>
-				2站台北 一線國門 幸福隨行</div>
-			<div class="t2" data-aos="fade-down" data-aos-delay="200">
-				微距機場捷運線「新北產業園區站」環狀線「幸福站」、皆僅600米<br v-if="!$isMobile()">
-				1站轉乘中和新蘆線，2站直達台北車站<br v-if="!$isMobile()">
-				一線連結桃園機場，，加上鄰近台64、65號快速道路連接國道<br v-if="!$isMobile()">
-				縱橫雙北與國際從容以閱
-			</div>
-			<ul class="pagin" v-if="!$isMobile()">
-				<li v-for="img, i in imgs" v-bind:class="{ active: currentSlideIndex == i }" @click="splide.splide.go(i)">
-				</li>
-			</ul>
-		</div>
-		<div class="slider" data-aos="fade" data-aos-delay="0">
-			<div class="arrows" v-if="$isMobile()">
-				<img loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-				<img loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
-			</div>
-			<Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-				<SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+	<article class="s7 relative font-['Noto_Serif_TC']">
+		<div class="main">
+			<Splide class="slide-box" ref="splide" :options="{
+				arrows: false,
+				pagination: false,
+				type: 'loop',
+				autoplay: true,
+				interval: 4000,
+			}" @splide:move="move">
+				<SplideSlide class="slide" v-for="img, i in items">
+					<img :src="img.img" alt="" srcset="">
 					<p>{{ img.caption }}</p>
 				</SplideSlide>
 			</Splide>
+			<div class="right">
+				<div class="t1" data-aos="fade-up" data-aos-delay="200">天開地闊 萬美就緒<br>
+					春福深植品味 雙塔恆永視野</div>
+				<div class="t2" data-aos="fade-up" data-aos-delay="400">
+					近鄰鹽行繁華商圈，俯瞰國際雙語教育特區<br>
+					春福敬獻飯店質感宅，再現台南不一樣的地標風景！<br><br>
+
+					始終經典簡約，造就美感不簡單<br>
+					用方框、序列的雙塔景致，宛若一扇開敞大門<br>
+					喜迎每一位，對家與生活、對城市發展有盼望的人<br>
+					既仰望，也收藏。深蘊品味，生活的故事更耐人尋味…
+
+				</div>
+			</div>
 		</div>
-		<img class="mark" data-aos="fade" data-aos-delay="0" v-if="!$isMobile()" src="@/section/s7/mark.png" alt="" srcset="">
-		<img class="mark" data-aos="fade" data-aos-delay="0" v-else src="@/section/s7/mark_m.png" alt="" srcset="">
 	</article>
 </template>
 
@@ -35,74 +36,57 @@
 
 .s7 {
 	width: 100%;
-	height: size(876);
-	gap: size(0);
-	@apply flex justify-center items-center;
+	height: size(1138);
+	background-image: url(@/section/s3/bg.jpg);
+	background-size: cover;
+	padding-top: size(42.78);
 
-	.text {
-		@apply relative flex flex-col items-start justify-center;
-		width: size(952);
-		height: size(732);
-		background-color: #EEEEEE;
-		padding-left: size(114.07);
-		.t1 {
-			font-weight: 700;
-			font-size: size(50);
-			line-height: 160%;
-			color: #00437D;
-		}
-		.t2 {
-			margin-top: size(30);
-			font-weight: 400;
-			font-size: size(25);
-			line-height: 200%;
-			color: #000;
-		}
-		.pagin {
-			@apply absolute flex items-center justify-start;
-			gap: size(10.22);
-			margin-top: size(62);
-			left: size(770);
-			bottom: size(30.36);
-			li {
-				@apply cursor-pointer;
-				width: size(36.78);
-				height: size(3.86);
-				background-color: #BB9259;
-				&.active {
-					height: size(11.47);
+	.main {
+		@apply flex flex-row-reverse items-center justify-start;
+		gap: size(0);
+		.slide-box {
+			width: size(1300);
+			.slide {
+				@apply relative;
+				img {
+					width: size(1300);
+				}
+				p {
+					@apply absolute;
+					right: size(10);
+					bottom: size(10);
+					font-weight: 400;
+					font-size: size(15);
+					line-height: 160%;
+					color: #FFFFFF;
+					text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
 				}
 			}
 		}
-	}
-	.slider {
-		@apply relative bg-white;
-		right: 0;
-		bottom: 0;
-		width: size(789);
-		height: size(732);
-		filter: drop-shadow(0 size(5) size(20) rgba(0, 0, 0, 0.3));
-		.slide-item {
-			width: size(789);
-			height: size(732);
-			background-size: cover;
-			p {
-				@apply absolute;
-				right: size(10);
-				bottom: size(10);
+		.right {
+			@apply relative z-10;
+			margin-right: -#{size(14)};
+			padding-bottom: size(120);
+			.t1 {
+				padding-left: -#{size(13)};
 				font-weight: 700;
-				font-size: size(25);
-				color: #FFFFFF;
-				text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
+				font-size: size(37);
+				line-height: 140%;
+				color: #fff;
+				padding: size(19.25) size(53);
+				background-color: #803031d2;
+			}
+			.t2 {
+				margin-top: size(70.52);
+				padding-left: size(35);
+				font-weight: 400;
+				font-size: size(20);
+				line-height: 150%;
+				color: #000000;
 			}
 		}
 	}
-	.mark {
-		@apply absolute;
-		width: size(258.03);
-		left: size(849.03);
-		top: 0;
-	}
+
 }
 
 /* 螢幕尺寸標準 */
@@ -111,105 +95,68 @@
 
 @media screen and (max-width: 767px) {
 
-  .s7 {
-	width: 100%;
-	height: auto;
-	gap: 0;
-	padding-top: sizem(31);
-	@apply flex flex-col justify-center items-center;
+	.s7 {
+	height: sizem(644);
+	padding-top: 0;
 
-	.text {
-		width: sizem(351);
-		height: auto;
-		padding: sizem(45.7) sizem(19) sizem(35) sizem(19);
-		.t1 { 
-			font-size: sizem(20);
-			line-height: 163%;
-			color: #00437D;
-		}
-		.t2 {
+	.main {
+		@apply flex-col;
+		gap: sizem(30);
+		.slide-box {
 			width: 100%;
-			margin-top: sizem(10);
-			font-size: sizem(13);
-			line-height: 187%;
-			color: #000;
-		}
-	}
-	.slider {
-		@apply relative bg-white;
-		right: 0;
-		bottom: 0;
-		width: sizem(351);
-		height: sizem(314);
-		box-shadow: sizem(5) sizem(5) sizem(10) rgba(0, 0, 0, 0.5);
-		filter: none;
-		.slide-item {
-			width: sizem(351);
-			height: sizem(314);
-			p {
-				right: sizem(10);
-				bottom: sizem(10);
-				font-size: sizem(12);
-				text-shadow: 0px sizem(2) sizem(2) rgba(0, 0, 0, 0.8);
+			.slide {
+				img {
+					width: 100%;
+				}
+				p {
+					right: sizem(10);
+					bottom: sizem(5);
+					font-size: sizem(12);
+					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
+				}
 			}
 		}
-
-		
-		.arrows {
-			@apply absolute z-10 flex items-center justify-between;
-			width: 100%;
-			padding: 0 sizem(5);
-			bottom: 50%;
-			transform: translateY(50%);
-			img {
-				margin: unset;
+		.right {
+			margin-right: 0;
+			padding-bottom: 0;
+				width: 100%;
+			.t1 {
+				padding-left: 0;
+				font-size: sizem(23);
+				padding: sizem(17) sizem(33);
+			}
+			.t2 {
+				margin-top: sizem(20);
+				padding-left: sizem(32.5);
+				font-size: sizem(14);
 			}
 		}
 	}
-	.mark {
-		width: sizem(91.4);
-		height: auto;
-		left: sizem(269);
-		bottom: unset;
-		top: sizem(15.6);
-	}
 
-  }
+}
 }
 
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { computed, getCurrentInstance, ref, } from 'vue';
+
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
-const getImg = (path) => {
-	if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-	return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
 const splide = ref();
-const currentSlideIndex = ref(0);
-const moved = (newIdx, prevIdx, destIdx) => {
-	currentSlideIndex.value = prevIdx
+const currentIdx = ref(0)
+const move = (newIdx, prevIdx, destIdx) => {
+	currentIdx.value = prevIdx
 }
 
-const options = {
-	rewind: true,
-	arrows: false,
-	pagination: false,
-	autoplay: true,
-	interval: 4000,
-	gap: 0,
-	type: 'fade'
-}
-
-const imgs = [
+const items = [
 	{
-		img: getImg('s7/1'),
-		caption: "機捷新北產業園區站"
+		caption: '日景外觀鳥瞰透視圖示意，僅供參考',
+		img: new URL("../section/s7/1.jpg", import.meta.url).href
 	},
 	{
-		img: getImg('s7/2'),
-		caption: "環狀線幸福站"
+		caption: '夜景外觀鳥瞰透視圖示意，僅供參考',
+		img: new URL("../section/s7/2.jpg", import.meta.url).href
 	},
 ]
 </script>
