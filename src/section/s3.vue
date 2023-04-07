@@ -180,7 +180,7 @@
 	height: sizem(604);
 
     .slide-box {
-		top: 40%;
+		top: sizem(280);
         .slide {
             height: sizem(200);
             .icon {

@@ -1,7 +1,11 @@
 <template>
 	<article class="s5 relative font-['Noto_Serif_TC']">
 		<div class="main">
+			
+			<div class="imgbox">
 			<img class="left" src="@/section/s5/1.jpg" alt="" srcset="">
+			<div class="caption">永康交流道航拍實景圖</div>
+			</div>
 			<div class="right">
 				<div class="t1" data-aos="fade-up" data-aos-delay="200">國道上線即刻<br>
 					下班湯還溫熱</div>
@@ -31,9 +35,24 @@
 	.main {
 		@apply flex flex-row-reverse items-center justify-start;
 		gap: size(74.97);
-		.left {
+		.imgbox{
+			position: relative;
+
+			.left {
 			margin: unset;
 			width: size(1094);
+			}
+
+			.caption{
+					position: absolute;
+					right: size(10);
+						bottom: size(10);
+						font-weight: 400;
+						font-size: size(15);
+						line-height: 160%;
+						color: #FFFFFF;
+						text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
+				}
 		}
 		.right {
 			.t1 {
@@ -87,10 +106,23 @@
 	.main {
 		@apply flex-col;
 		gap: sizem(58);
-		.left {
-			margin: unset;
-			width: 100%;
+		
+
+			.imgbox{
+
+				.left {
+				margin: unset;
+				width: 100%;
+				}
+
+			.caption{
+					right: sizem(10);
+					bottom: sizem(5);
+					font-size: sizem(12);
+					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
+				}
 		}
+		
 		.right {
 			.t1 {
 				margin-top: 0;

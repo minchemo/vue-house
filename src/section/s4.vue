@@ -1,10 +1,16 @@
 <template>
 	<article class="s4 relative font-['Noto_Serif_TC']">
 		<div class="main">
+			<div class="imgbox">
 			<img class="left" src="@/section/s4/1.jpg" alt="" srcset="">
+			<div class="caption">台南科學園區實景圖</div>
+			</div>
 			<div class="right">
-				<img v-if="!$isMobile()" class="img" src="@/section/s4/2.jpg" alt="" srcset="">
-				<img v-else class="img" src="@/section/s4/2m.jpg" alt="" srcset="">
+				<div class="imgbox">
+				<img class="img" src="@/section/s4/2.jpg" alt="" srcset="">
+				<!--img v-else class="img" src="@/section/s4/2m.jpg" alt="" srcset=""-->
+				<div class="caption img2">情境示意圖</div>
+				</div>
 				<div class="t1" data-aos="fade-up" data-aos-delay="200">得重劃得天下<br>
 					永康鹽行就緒</div>
 				<div class="t2" data-aos="fade-up" data-aos-delay="400">上選永康國際雙語特區</div>
@@ -137,11 +143,30 @@
 	}
 
 	.main {
+
+		.imgbox{
+			position: relative;
+
+			.caption{
+					position: absolute;
+					right: size(10);
+						bottom: size(10);
+						font-weight: 400;
+						font-size: size(15);
+						line-height: 160%;
+						color: #FFFFFF;
+						text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
+				}
+		}
+		
+
 		@apply flex items-start justify-start z-10 relative;
 		gap: size(121.8);
 		.left {
 			margin: unset;
 			width: size(1094);
+
+			
 		}
 		.right {
 			.img {
@@ -195,13 +220,29 @@
 			margin: unset;
 			width: 100%;
 		}
+
+		.imgbox{
+
+			.caption{
+					right: sizem(10);
+					bottom: sizem(5);
+					font-size: sizem(12);
+					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
+				}
+		}
 		.right {
 			padding-left: sizem(32.5);
+
+			.img2{
+				bottom: sizem(-58);
+				right:sizem(-85);
+			}
+			
 			.img {
 				@apply absolute;
 				width: sizem(160);
-				right: 0;
-				top: sizem(407);
+				top: sizem(-45);
+				left: sizem(175);
 			}
 			.t1 {
 				margin-top: 0;
