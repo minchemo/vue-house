@@ -308,7 +308,7 @@ const items = [
 		img: new URL("../section/s3/9.svg", import.meta.url).href
 	},
 	{
-		t1: '保固承諾',
+		t1: '深耕台南',
 		t2: '春福就愛台南人情味，2019 年起改變市區<br/>如今延續永康，只會更好',
 		img: new URL("../section/s3/10.svg", import.meta.url).href
 	},
