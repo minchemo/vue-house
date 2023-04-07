@@ -9,7 +9,7 @@
 			pagination: false,
 			type: 'loop',
 			autoplay: true,
-			interval: 4000,
+			interval: 7000,
 			perPage: $isMobile() ? 3 : 7,
 			padding: '10%',
 			focus: 'center',
@@ -57,6 +57,7 @@
             align-items: center;
             justify-content: center;
             .icon {
+				position: relative;
                 width: size(147.8);
                 height: size(147.8);
                 border-radius: 999px;
@@ -67,6 +68,7 @@
                 background: #A19C9C;
                 img {
                     max-width: 100%;
+					// width: 100%;
                     max-height: 100%;
 					filter: invert(23%) sepia(74%) saturate(770%) hue-rotate(300deg) brightness(46%) contrast(92%);
                 }
@@ -79,8 +81,7 @@
                     background: #803031;
 					img {
                     	max-width: 150%;
-                    	max-height: 150%;
-						width: 150%;
+						// width: 150%;
 						filter: unset;
 					}
                 }
