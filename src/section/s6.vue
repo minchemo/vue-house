@@ -3,10 +3,10 @@
 		<div class="main">
 			<div class="left">
 			<div class="slide-box">
-				<div class="arrows">
+				<!-- <div class="arrows">
 					<img loading="lazy" class="prev" @click="activeSlide = i; splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
 					<img loading="lazy" class="next" @click="activeSlide = i; splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
-				</div>
+				</div>  -->
 				<Splide ref="splide" :options="{
 					arrows: false,
 					pagination: false,
