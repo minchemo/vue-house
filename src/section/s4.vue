@@ -8,7 +8,7 @@
             </div>
         </div>
         <lazy-component>
-            <img v-if="$isMobile()" class="time" src="@/section/s4/time_m.svg" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="time" src="@/section/s4/time_m.svg" alt="" srcset="">
         </lazy-component>
         <Splide ref="splide" :options="{
             rewind: true,
@@ -25,15 +25,15 @@
 
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.svg" alt="" srcset="">
+                    <img loading="lazy" src="@/assets/prev.svg" alt="" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.svg" alt="" srcset=""></button>
+                    <img loading="lazy" src="@/assets/next.svg" alt="" srcset=""></button>
             </div>
         </Splide>
 
         <lazy-component>
-            <img v-if="!$isMobile()" class="time" src="@/section/s4/time.svg" alt="" srcset="">
+            <img loading="lazy" v-if="!$isMobile()" class="time" src="@/section/s4/time.svg" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -201,23 +201,23 @@ const move = (newIdx, prevIdx, destIdx) => {
 
 const imgs = ref([
     {
-        img: globals.$isMobile() ? new URL("../section/s4/1_m.jpg", import.meta.url).href : new URL("../section/s4/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/1_m.webp", import.meta.url).href : new URL("../section/s4/1.webp", import.meta.url).href,
         caption: '國道一號'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s4/2_m.jpg", import.meta.url).href : new URL("../section/s4/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/2_m.webp", import.meta.url).href : new URL("../section/s4/2.webp", import.meta.url).href,
         caption: '新北影視城'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s4/3_m.jpg", import.meta.url).href : new URL("../section/s4/3.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/3_m.webp", import.meta.url).href : new URL("../section/s4/3.webp", import.meta.url).href,
         caption: 'A9捷運站'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s4/4_m.jpg", import.meta.url).href : new URL("../section/s4/4.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/4_m.webp", import.meta.url).href : new URL("../section/s4/4.webp", import.meta.url).href,
         caption: '文化三路&忠孝二路'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s4/5_m.jpg", import.meta.url).href : new URL("../section/s4/5.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s4/5_m.webp", import.meta.url).href : new URL("../section/s4/5.webp", import.meta.url).href,
         caption: '三井OUTLET'
     },
 ])

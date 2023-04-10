@@ -25,7 +25,7 @@ export default {
         ["外觀特色", "新古典美學"],
         ["戶數規劃", "201戶"],
     ],
-    gtmCode: ["GTM-K6NLTZF"], // 可放置多個
+    gtmCode: ["GTM-K6NLTZF","GTM-5W9TW48"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
@@ -55,7 +55,7 @@ export default {
             offset: "",
         },
         {
-            name: "雲頂地標",
+            name: "頂級地標",
             target: ".s6",
             offset: "",
         },

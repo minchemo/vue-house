@@ -1,22 +1,21 @@
 <template>
-  <div class="order relative bg-[#E5DBC2] text-center">
+  <div class="order relative bg-[#3a574c] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
       <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
 
       <!-- Title Image -->
-      <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset=""
+      <img v-if="$isMobile()" class="order-title-img" src="@/section/form/logo_n.svg" alt="長耀里" srcset=""
         data-aos="fade" data-aos-duration="1000">
-      <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="長耀里" srcset="" data-aos="fade"
+      <img v-else class="order-title-img" src="@/section/form/logo_n.svg" alt="長耀里" srcset="" data-aos="fade"
         data-aos-duration="1000">
 
       <!-- Custom Image -->
-      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.png" alt="" srcset="">
-      <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.png" alt="" srcset="">
-      <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.png" alt="" srcset="">
-      <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.png" alt="" srcset="">
-      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
-      <img class="buck-e" src="@/section/s1/buck-e.gif" alt="" srcset="">
+      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.webp" alt="" srcset="">
+      <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.webp" alt="" srcset="">
+      <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.webp" alt="" srcset="">
+      <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.webp" alt="" srcset="">
+      <img class="buck" src="@/section/form/buck.webp" alt="" srcset="">
 
 
       <!-- Form -->
@@ -56,7 +55,7 @@
           class="checkbox bg-white rounded-md" />
         <p>
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-black font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button  font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -221,7 +220,7 @@
 
   .control {
     font-size: size(16);
-    color: #000;
+    color: #fff;
     position: relative;
   }
 }

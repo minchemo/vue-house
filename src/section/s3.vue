@@ -17,7 +17,7 @@
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img, i in imgs">
                 <div class="icon">
-                    <img :src="img.img" alt="" srcset="">
+                    <img loading="lazy" :src="img.img" alt="" srcset="">
                 </div>
             </SplideSlide>
         </Splide>
@@ -27,10 +27,10 @@
         </div>
         <lazy-component>
 
-            <img class="rb_leaf" src="@/section/s3/rb_leaf.png" alt="" srcset="">
-            <img class="lb_leaf" src="@/section/s3/lb_leaf.png" alt="" srcset="">
-            <img class="rt_leaf" src="@/section/s3/rt_leaf.png" alt="" srcset="">
-            <img class="lt_leaf" src="@/section/s3/lt_leaf.png" alt="" srcset="">
+            <img loading="lazy" class="rb_leaf" src="@/section/s3/rb_leaf.webp" alt="" srcset="">
+            <img loading="lazy" class="lb_leaf" src="@/section/s3/lb_leaf.webp" alt="" srcset="">
+            <img loading="lazy" class="rt_leaf" src="@/section/s3/rt_leaf.webp" alt="" srcset="">
+            <img loading="lazy" class="lt_leaf" src="@/section/s3/lt_leaf.webp" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -41,7 +41,7 @@
 .s3 {
     width: 100%;
     height: size(1080);
-    background-color: #E5DBC2;
+    background-color: #3a574c;
 
     .slide-box {
         position: absolute;
@@ -61,7 +61,7 @@
                 width: size(150);
                 height: size(150);
                 border-radius: 999px;
-                border: 1px solid #000;
+                border: 1px solid #527a6b;
                 display: flex;
                 align-items: center;
                 transition: all .3s;
@@ -77,17 +77,17 @@
                 .icon {
                     width: size(180);
                     height: size(180);
-                    background: #F9EED8;
+                    background: #527a6b;
                     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
-                    border-color: #F9EED8;
+                    border-color: #527a6b;
                 }
             }
 
             &:hover {
                 .icon {
-                    background: #F9EED8;
+                    background: #527a6b;
                     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.1);
-                    border-color: #F9EED8;
+                    border-color: #527a6b;
                     cursor: pointer;
                 }
 
@@ -99,7 +99,7 @@
     .number {
         font-weight: 700;
         font-size: size(400);
-        color: #F5EAD4;
+        color: #527a6b;
         position: absolute;
         top: size(30);
         line-height: size(400);
@@ -118,9 +118,10 @@
             font-weight: 700;
             font-size: size(40);
             margin-bottom: size(10);
+            color: #fff;
 
             span {
-                color: #B64F31;
+                color: #ff8667;
             }
 
             &::after {
@@ -128,7 +129,7 @@
                 height: size(1);
                 width: size(75);
                 right: 108%;
-                background-color: #000;
+                background-color: #fff;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
@@ -139,7 +140,7 @@
                 height: size(1);
                 width: size(75);
                 left: 108%;
-                background-color: #000;
+                background-color: #fff;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
@@ -151,6 +152,7 @@
             font-weight: 700;
             font-size: size(24);
             line-height: size(34);
+            color: #fff;
         }
     }
 
@@ -237,7 +239,7 @@
     .s3 {
         width: 100%;
         height: size-m(667);
-        background-color: #E5DBC2;
+        background-color: #3a574c;
 
         .slide-box {
             position: absolute;
@@ -333,11 +335,11 @@ const move = (newIdx, prevIdx, destIdx) => {
 const imgs = ref([
     {
         img: new URL("../section/s3/2.svg", import.meta.url).href,
-        content: '26 層雲頂地標，<br/>以地標姿態傲立富貴公園裡唯一席'
+        content: '26 層新古典頂級地標，<br/>以地標姿態傲立富貴公園裡唯一席'
     },
     {
         img: new URL("../section/s3/3.svg", import.meta.url).href,
-        content: '2000 坪富貴公園綠海環繞<br/>歲時寧謐涵氧青春不老'
+        content: '千坪富貴公園綠海環繞<br/>歲時寧謐涵氧青春不老'
     },
     {
         img: new URL("../section/s3/4.svg", import.meta.url).href,
@@ -365,7 +367,7 @@ const imgs = ref([
     },
     {
         img: new URL("../section/s3/10.svg", import.meta.url).href,
-        content: '全齡健康照護長庚醫療園區，<br/>遠程監護、全時御守'
+        content: '全齡健康照護長庚醫療園區'
     },
     {
         img: new URL("../section/s3/1.svg", import.meta.url).href,

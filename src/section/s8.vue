@@ -24,10 +24,10 @@
 
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.svg" alt="" srcset="">
+                    <img loading="lazy" src="@/assets/prev.svg" alt="" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.svg" alt="" srcset=""></button>
+                    <img loading="lazy" src="@/assets/next.svg" alt="" srcset=""></button>
             </div>
         </Splide>
     </div>
@@ -202,11 +202,11 @@ const move = (newIdx, prevIdx, destIdx) => {
 
 const imgs = ref([
     {
-        img: globals.$isMobile() ? new URL("../section/s8/1_m.jpg", import.meta.url).href : new URL("../section/s8/1.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s8/1_m.webp", import.meta.url).href : new URL("../section/s8/1.webp", import.meta.url).href,
         caption: '長耀里迎賓大廳3D示意圖'
     },
     {
-        img: globals.$isMobile() ? new URL("../section/s8/2_m.jpg", import.meta.url).href : new URL("../section/s8/2.jpg", import.meta.url).href,
+        img: globals.$isMobile() ? new URL("../section/s8/2_m.webp", import.meta.url).href : new URL("../section/s8/2.webp", import.meta.url).href,
         caption: '長耀里迎賓大廳3D示意圖'
     },
 ])

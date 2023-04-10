@@ -68,13 +68,13 @@
         </div>
 
         <lazy-component>
-            <img class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.png" alt="" srcset="">
-            <img v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.png" alt=""
+            <img loading="lazy" class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.webp" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.webp" alt=""
                 srcset="">
-            <img v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.png" alt="" srcset="">
-            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.png" alt=""
+            <img loading="lazy" v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.webp" alt="" srcset="">
+            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.webp" alt=""
                 srcset="">
-            <img v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.png" alt="" srcset="">
+            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.webp" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -85,7 +85,7 @@
 .s5 {
     width: 100%;
     height: size(1230);
-    background-color: #E5DBC2;
+    background-color: #3a574c;
 
     .title {
         position: absolute;
@@ -97,14 +97,15 @@
             font-weight: 700;
             font-size: size(40);
             line-height: 150%;
+            color: #fff;
 
             span {
                 &:nth-child(1) {
-                    color: #466C4A;
+                    color: #74a894;
                 }
 
                 &:nth-child(2) {
-                    color: #B64F31;
+                    color: #ff8667;
                 }
             }
         }
@@ -114,6 +115,7 @@
             font-size: size(24);
             line-height: size(34);
             margin-bottom: size(45);
+            color: #fff;
         }
 
         .t3 {
@@ -122,7 +124,7 @@
             line-height: 150%;
             letter-spacing: size(.05);
             width: size(1035);
-            color: #000;
+            color: #fff;
 
         }
     }
@@ -379,7 +381,7 @@
 
             .t1 {
                 font-size: size-m(24.5);
-                color: #B64F31;
+                color: #fff;
             }
 
             .t2 {
@@ -709,57 +711,63 @@ const timelines = ref([
     },
     {
         targetImg: '99',
+        year: '2023',
+        name: '長耀加',
+        content: []
+    },
+    {
+        targetImg: '99',
         year: '未來',
         name: '林口',
-        content: ['長耀新林國小案', '長耀力行段', '長耀建林段']
+        content: ['建林段案', '新林國小案', '中山大道案', '長耀PARKII']
     },
     {
         targetImg: '99',
         year: '',
         name: '北投',
-        content: ['三合段案', '大業段案']
+        content: ['北投捷運站案', '奇岩捷運站案']
     },
     {
         targetImg: '99',
         year: '',
         name: '內湖',
-        content: ['東湖六小都更案']
+        content: ['葫洲捷運站案']
     },
     {
         targetImg: '99',
         year: '',
         name: '大直',
-        content: ['金泰段商辦案']
+        content: ['大直美麗華案']
     },
     {
         targetImg: '99',
         year: '',
         name: '士林',
-        content: ['中山北路', '士林官邸案']
+        content: ['士林官邸案']
     },
     {
         targetImg: '99',
         year: '',
         name: '淡水',
-        content: ['新市鎮案']
+        content: ['海景住宅案']
     },
 ])
 
 const imgs = ref([
     {
-        img: new URL("../section/s5/1.jpg", import.meta.url).href,
+        img: new URL("../section/s5/1.webp", import.meta.url).href,
         content: '長耀挹品'
     },
     {
-        img: new URL("../section/s5/2.jpg", import.meta.url).href,
+        img: new URL("../section/s5/2.webp", import.meta.url).href,
         content: '長耀初'
     },
     {
-        img: new URL("../section/s5/3.jpg", import.meta.url).href,
+        img: new URL("../section/s5/3.webp", import.meta.url).href,
         content: '長耀PARK'
     },
     {
-        img: new URL("../section/s5/4.jpg", import.meta.url).href,
+        img: new URL("../section/s5/4.webp", import.meta.url).href,
         content: '双丰双卉'
     },
 ])

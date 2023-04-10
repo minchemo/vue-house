@@ -24,7 +24,7 @@
                         <li>公私領域區分明，互不干擾的空間既保有隱私性，也增添層次意趣</li>
                         <li>公用空間開放式設計、客廳、餐廳、廚房動線一氣呵成，遼闊大氣</li>
                         <li>電視櫃、電器櫃及廚具、收納櫃於同一動線整合，收納俐落使用順暢</li>
-                        <li>三房皆大面開窗大採光無暗房，格局方正，梁柱外推床頭無壓樑</li>
+                        <li>大面開窗採光，格局方正，梁柱外推無壓樑</li>
                         <li>主臥以精品飯店元素雕琢，規劃獨立衣帽間，盡顯優雅收納美學</li>
                     </ul>
                 </div>
@@ -43,10 +43,10 @@
             </div>
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-                    <img src="@/section/s10/prev.svg" alt="" srcset="">
+                    <img loading="lazy" src="@/section/s10/prev.svg" alt="" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-                    <img src="@/section/s10/next.svg" alt="" srcset=""></button>
+                    <img loading="lazy" src="@/section/s10/next.svg" alt="" srcset=""></button>
             </div>
         </div>
         <Splide ref="splide" :options="{
@@ -59,8 +59,8 @@
             interval: 4000,
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img in imgs[slideType]['img']">
-                <img v-if="$isMobile()" class="decor" src="@/section/s10/decor.png" alt="" srcset="">
-                <img class="img" :src="img.img" alt="" srcset="">
+                <img loading="lazy" v-if="$isMobile()" class="decor" src="@/section/s10/decor.webp" alt="" srcset="">
+                <img loading="lazy" class="img" :src="img.img" alt="" srcset="">
             </SplideSlide>
         </Splide>
     </div>
@@ -356,29 +356,29 @@ const imgs = ref(
         '29': {
             'img': [
                 {
-                    img: globals.$isMobile() ? new URL("../section/s10/29_1_m.jpg", import.meta.url).href : new URL("../section/s10/29_1.png", import.meta.url).href,
+                    img: globals.$isMobile() ? new URL("../section/s10/29_1_m.webp", import.meta.url).href : new URL("../section/s10/29_1.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/29_2.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/29_2.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/29_3.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/29_3.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/29_4.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/29_4.webp", import.meta.url).href,
                 },
             ]
         },
         '25': {
             'img': [
                 {
-                    img: globals.$isMobile() ? new URL("../section/s10/25_0_m.jpg", import.meta.url).href : new URL("../section/s10/25_0.png", import.meta.url).href,
+                    img: globals.$isMobile() ? new URL("../section/s10/25_0_m.webp", import.meta.url).href : new URL("../section/s10/25_0.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/25_1.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/25_1.webp", import.meta.url).href,
                 },
                 {
-                    img: new URL("../section/s10/25_2.jpg", import.meta.url).href,
+                    img: new URL("../section/s10/25_2.webp", import.meta.url).href,
                 },]
         }
     },
