@@ -214,7 +214,7 @@ const imgs = [
   },
   {
     img: globals.$isMobile() ? new URL("./s5/4_m.webp", import.meta.url).href : new URL("./s5/4.webp", import.meta.url).href,
-    avatar: globals.$isMobile() ? new URL("./s5/a_m.webp", import.meta.url).href : new URL("./s5/d.webp", import.meta.url).href,
+    avatar: globals.$isMobile() ? new URL("./s5/d_m.webp", import.meta.url).href : new URL("./s5/d.webp", import.meta.url).href,
     t1: '國家建築金質獎肯定',
     t2: '營造工程 鄒開鑄',
     t3: '森城營造',
