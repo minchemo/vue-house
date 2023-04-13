@@ -18,6 +18,10 @@
             </div>
         </div>
     </div> -->
+    <div class="house bg-[#CEAA6C] flex items-center justify-center">
+            <p class="">廣告銷售：</p>
+            <p class=""><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
+    </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="@/section/form/footerlogo.gif" alt="立炘數位" srcset=""></a>
@@ -40,8 +44,11 @@
 // }
 .displaynone{display: none;}
 .house {
-    background:#fff;
-    height: auto;
+   // height: auto;
+    color: #FFF;
+    font-size: size(22);
+    height:4em;
+    img{height: 1.3em;vertical-align: middle;}
 }
 .info-box {
     width: size(800);
@@ -73,8 +80,9 @@
 
 @media screen and (max-width:768px) {
 .house {
-    background:#fff;
+    // background:#fff;
   //  height: sizem(400);
+    font-size: sizem(14);
 }
     .footer {
         margin-bottom: sizem(0);

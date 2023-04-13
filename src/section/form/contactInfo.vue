@@ -3,28 +3,28 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo"></div>
+    <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="美地莊園" srcset="" />
+        <img src="@/section/form/phone.svg" alt="高大Σ計畫" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="美地莊園" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="高大Σ計畫" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="美地莊園" srcset="" />
+        <img src="@/section/form/fb.svg" alt="高大Σ計畫" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="flex justify-between w-full contact-item-box no-gap">
+    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
         <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="美地莊園" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="高大Σ計畫" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -36,21 +36,21 @@
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="美地莊園" srcset="" />
+      <img src="@/section/form/phone.svg" alt="高大Σ計畫" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="美地莊園" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="高大Σ計畫" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="美地莊園" srcset="" />
+      <img src="@/section/form/pen.svg" alt="高大Σ計畫" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="美地莊園" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="高大Σ計畫" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -61,9 +61,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="美地莊園" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="美地莊園" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="美地莊園" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="高大Σ計畫" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="高大Σ計畫" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="高大Σ計畫" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
       `${info.address2?info.address2:'導航地址'}`
@@ -115,7 +115,7 @@
     min-width: 680px;
   position: relative;
   z-index: 50;
-  background: #045147;
+  // background: #045147;
 
   .logo {
     width: size(367);
@@ -135,8 +135,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #E6C57C;
-      color: #004239;
+      background-color: #CEAA6C;
+      color: #FFF;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -164,7 +164,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(.8) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
@@ -200,10 +200,10 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #004239;
+        color: #FFF;
 
         img {
-          filter: brightness(.8) invert(0);
+          filter: brightness(0) invert(1);
         }
 
         &:hover {
@@ -262,7 +262,7 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding-bottom: sizem(50);
+    padding: sizem(80) 0 sizem(80) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;

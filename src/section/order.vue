@@ -1,8 +1,9 @@
 <template>
-  <div id="order" class="order relative bg-[#004239] text-center">
+  <div id="order" class="order relative text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
       <div class="order-title text-center font-['noto_Serif_tc']">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center font-['noto_Serif_tc']">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -13,33 +14,36 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full rounded-none bg-white" :value="formData.name"
-            @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full rounded-none bg-white" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" />
+          <label class="row"><span>姓名<span>*</span></span>
+          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+            @input="(event) => (formData.name = event.target.value)" /></label>
+            <label class="row"><span>手機<span>*</span></span>
+              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+            @input="(event) => (formData.phone = event.target.value)" /></label>
 <!--
           <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="二房">二房</option>
             <option value="三房">三房</option>
           </select>  -->
-
-          <select class="select w-full rounded-none bg-white" v-model="formData.city">
-            <option value="" selected disabled>居住縣市</option>
+          <label class="row"><span>居住縣市</span>
+          <select class="select w-full rounded-none" v-model="formData.city">
+            <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
-          </select>
-          <select class="select w-full rounded-none bg-white" v-model="formData.area">
-            <option value="" selected disabled>居住地區</option>
+          </select></label>
+          <label class="row"><span>居住地區</span>
+          <select class="select w-full rounded-none" v-model="formData.area">
+            <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
             </option>
-          </select>
+          </select></label>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="textarea w-full h-full rounded-none bg-white" placeholder="備註訊息"></textarea>
+            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
         </div>
       </div>
 
@@ -60,7 +64,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending? '發送中..': '送出表單' }}
       </div>
 
       <!-- Contact Info -->
@@ -69,7 +73,7 @@
 
 
     <!-- Map -->
-    <Map />
+    <Map v-if="info.address" />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -98,7 +102,8 @@
 
 .order {
   width: 100%;
-  padding-top: size(0);
+  padding-top: 0;
+  background: linear-gradient(180deg, #000E29 0%, #012A60 100%);
 
   .bird {
     @apply absolute;
@@ -123,17 +128,19 @@
     font-size: size(40);
     font-weight: 700;
     color: #fff;
-  //  border-bottom: size(2) solid #C9A063;
- //   width: size(172);
-    margin:  1.5em auto  1.1em auto;
-  //  margin-bottom: size(50) !important;
+    padding-top:1.5em;
   }
 
   .order-title-img {
     width: size(1008);
     margin-bottom: size(155);
   }
-
+  .order-subTitle{
+    font-size: size(20);
+    color: #fff;
+    padding-top:.8em;
+    letter-spacing: .1em;
+  }
   .cus-divider {
     margin: 0 auto;
     width: size(300);
@@ -147,6 +154,7 @@
     min-width: 680px;
     //  height: 350px;
     gap: size(80);
+    margin-top: size(45);
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
@@ -170,23 +178,41 @@
       background-color: #fff;
       position: absolute;
     }
+    .row{background: #0000;border: 1px solid #FFF;color: #FFF;
+      display: flex;width: 100%;
+    align-items:center;
+      > span{
+        width: 5.5em;
+        text-align: left;padding-left:1em ;
+        > span{color: #FF0;}
+      }
+      input,select{background: inherit;flex: 1;}
+      option{color: #666;}
+      select{background: url("@/assets/select.svg") no-repeat calc(100% - .5em) 100%;
+      background-size:auto 200%;
+      transition: background .3s;
+      &:focus{
+        background-position:calc(100% - .5em) 0%;
+      }
+      }
+    }
   }
 
   .send {
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #004239;
-    background-color: #E6C57C;
+    color: #FFF;
+    background-color: #FFF2;
+    border: 1px solid #FFF9;
     width: 308px;
     height:3.3em;
     line-height: 3.3;
-    border: 0;
     border-radius: 0;
     z-index: 10;
     font-weight: 400;
     position: relative;
-    margin-bottom:4.5em;
+    //margin-bottom:4.5em;
   }
 
   .control {
@@ -240,10 +266,12 @@
     }
 
     .order-title {
-    //  width: sizem(118);
-      font-size: sizem(29);
-      font-weight: 700;
-    //  margin-bottom: sizem(35) !important;
+      font-size: sizem(25);
+      padding-top:1.5em;
+    }
+    .order-subTitle{
+      font-size: sizem(13);
+      padding-top:0;
     }
 
 
@@ -254,6 +282,7 @@
       gap: sizem(15);
       margin-bottom: sizem(20);
       flex-direction: column;
+      margin-top: sizem(20);
 
       .left {
         width: 100%;
@@ -263,6 +292,9 @@
       .right {
         width: 100%;
         height: sizem(100);
+        .row{
+          height: 7em;
+        }
       }
 
       &::after {

@@ -1,4 +1,4 @@
-const caseName = "美地莊園"
+const caseName = "高大Σ計畫"
 
 export default {
     meta: {
@@ -8,12 +8,12 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台南安南區環館路358巷2號",
+    // address: "台南安南區環館路358巷2號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.9111053270494!2d120.23648879999999!3d23.063720399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e79e383620657%3A0x8ec65259688f8870!2zNzA55Y-w5Y2X5biC5a6J5Y2X5Y2A55Kw6aSo6LevMzU45be3MuiZnw!5e0!3m2!1szh-TW!2stw!4v1678852820290!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/8a7aaQvSZ2ufAUvc7",
-    phone: "  06-396-6565",
-    fbLink: "https://www.facebook.com/jadeforestvilla/",
-    fbMessage: "https://m.me/jadeforestvilla/",
+    phone: "07-3648088",
+    fbLink: "https://www.facebook.com/112358748493530/",
+    fbMessage: "https://m.me/112358748493530/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "建泰工藝"],
@@ -25,15 +25,15 @@ export default {
         ["證照號碼", "(112)雲縣地字000229號"],
         ["經紀人", "廖哲志"], 
     ],
-    gtmCode: ["GTM-TMLQQSF","GTM-M87MK5M"], // 可放置多個
+    gtmCode: ["GTM-M8N6GNQ"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約賞屋",
-        subTitle: "",
+        title: "我想了解",
+        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     navList: [{
             name: "重大建設",
