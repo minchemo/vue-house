@@ -59,8 +59,14 @@
 					<path class="l an5" style="clip-path:url(#SVGID_c0);" d="M301.1,3.4c-4.5,5.1-4.9,11.5-4.9,11.5" />
 				</g>
 			</svg-->
-
-			<img class="t1" src="@/section/s1/logo.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
+			<div class="t1">
+				<img class="t01" src="@/section/s1/t01.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
+				<img class="t02" src="@/section/s1/t02.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="400">
+				<img class="t03" src="@/section/s1/t03.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="600">
+				<img class="t04" src="@/section/s1/t04.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="800">
+				<img class="t05" src="@/section/s1/t05.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="800">
+			</div>
+			
 			<div class="t2" data-aos="zoom-in" data-aos-delay="400">美好依序 一切就緒｜2-3房 <br v-if="$isMobile()"> <span>253-6000</span></div>
 		</div>
 	</article>
@@ -81,7 +87,7 @@
 		@apply absolute;
 		left: size(20);
 		top: size(20);
-		width: size(200);
+		width: size(170);
 		z-index: 99;
 	}
 
@@ -91,8 +97,6 @@
 		width: size(200);
 		z-index: 99;
 	}
-
-	.t01{}
 
 
 	.mt {
@@ -157,13 +161,44 @@
 					}
 		}
 		.t1 {
-			width: size(715.2);
+			position: relative;
+			height: size(229);
+			width: size(712);
+			display: inline;
 			margin-bottom: size(45.31);
+			-webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    		filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5))
 		}
+
+		.t01{
+			width: size(120);
+			margin-right: size(67);
+		}
+
+		.t02{
+			width: size(120);
+			margin-right: size(67);
+		}
+
+		.t03{
+			width: size(120);
+			margin-right: size(67);
+		}
+
+		.t04{
+			width: size(120);
+			
+		}
+		.t05{
+			width: size(619);
+			margin-left: size(38);
+			margin-top: size(30);
+		}
+		
 		.t2 {
 			font-weight: 600;
 			font-size: size(50);
-			line-height: 160%;
+			line-height: 250%;
 			text-align: center;
 			color: #FFFFFF;
 
@@ -198,7 +233,7 @@
 
 	.mt {
 		width: sizem(352);
-		bottom: sizem(11.12);
+		bottom: sizem(0);
 	}
 
 	.title {
@@ -209,13 +244,48 @@
 			margin-bottom: -#{sizem(8)};
 	
 		}
+
 		.t1 {
-			width: sizem(310);
-			margin-bottom: sizem(29);
+			position: relative;
+			height: sizem(97);
+			width: sizem(300);
+			display: inline;
+			margin-bottom: size(45.31);
+			-webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    		filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5))
 		}
+
+		.t01{
+			width: sizem(50);
+			margin-right: sizem(30);
+		}
+
+		.t02{
+			width: sizem(50);
+			margin-right: sizem(30);
+		}
+
+		.t03{
+			width: sizem(50);
+			margin-right: sizem(30);
+		}
+
+		.t04{
+			width: sizem(50);
+			
+		}
+		.t05{
+			width: sizem(260);
+			margin-left: sizem(18);
+			margin-top: sizem(12);
+		}
+		
+		
+
 		.t2 {
 			font-size: sizem(25);
 			line-height: sizem(45);
+			margin-top: sizem(25);
 
 			span{
 				font-size: sizem(40);

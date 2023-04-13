@@ -1,21 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 119 177">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-        filter: url(#drop-shadow-1);
-      }
-    </style>
-    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
-      <feOffset dx="5" dy="5"/>
-      <feGaussianBlur result="blur" stdDeviation="2"/>
-      <feFlood flood-color="#040000" flood-opacity=".2"/>
-      <feComposite in2="blur" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="_圖層_1-2" data-name="圖層 1">
-    <path class="cls-1" d="m1.17,1.81h12.44v8.29h21.43V3.89h11.75v60.13h-11.75v-8.99H13.62v106.44H1.17V1.81Zm33.87,14.51H13.62v12.44h21.43v-12.44Zm-21.43,19.35v12.44h21.43v-12.44H13.62Zm73.96,38.01v7.6h-13.13v22.81h17.28v7.6h-17.28v44.93h-11.75v-44.93h-16.59c-.93,12.9-8.76,27.19-23.5,42.85h-5.53c12.44-11.98,18.42-26.26,17.97-42.85h-17.28v-7.6h17.28v-22.81h-13.82v-7.6h66.35Zm-24.88,7.6h-15.9v22.81h15.9v-22.81ZM94.48,1.12h12.44v145.15c.92,7.83-5.99,14.28-20.74,19.35-1.85-1.85-3.69-2.31-5.53-1.38l-4.84.69v-1.38c13.36-5.53,19.81-11.06,19.35-16.59V55.03h-21.43v8.99h-11.75V3.19h11.75v6.91h20.74V1.12Zm-.69,15.21h-20.04v12.44h20.04v-12.44Zm-20.04,19.35v12.44h20.74v-12.44h-20.74Z"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="_圖層_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 119 177" style="enable-background:new 0 0 119 177;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M6.2,6.9h12.4v8.3H40V9h11.7v60.1H40v-9H18.6v106.4H6.2V6.9z M40,21.5H18.6v12.4H40V21.5z M18.6,40.8v12.4H40
+	V40.8H18.6z M92.6,78.8v7.6H79.4v22.8h17.3v7.6H79.4v44.9H67.7v-44.9H51.1c-0.9,12.9-8.8,27.2-23.5,42.9h-5.5
+	c12.4-12,18.4-26.3,18-42.9H22.8v-7.6H40V86.4H26.2v-7.6H92.6z M67.7,86.4H51.8v22.8h15.9V86.4z M99.5,6.3h12.4v145.1
+	c0.9,7.8-6,14.3-20.7,19.4c-1.8-1.8-3.7-2.3-5.5-1.4l-4.8,0.7v-1.4c13.4-5.5,19.8-11.1,19.4-16.6V60.2H78.7v9H67V8.3h11.7v6.9h20.7
+	V6.3z M98.8,21.5h-20v12.4h20V21.5z M78.7,40.8v12.4h20.7V40.8H78.7z"/>
 </svg>
