@@ -1,7 +1,7 @@
 <template>
   <article class="s1">
     
-    <!--   --><img class="t0" src="./s1/mobile.jpg" alt="" srcset="">
+    <!-- <img class="t0" src="./s1/mobile.jpg" alt="" srcset="">  -->
     <div class="light">
       <div class="light1"><img src="./s1/light1.jpg" alt="" srcset=""></div>
       <div class="light1"><img src="./s1/light1.jpg" alt="" srcset=""></div>
@@ -38,7 +38,7 @@
   // background-size: cover;
   background: url("./s1/bg.jpg") center;
   background-size: cover;
-  .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .0;z-index: 2;}
+  // .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .0;z-index: 2;}
   .light{position: absolute;bottom: 0;right:size(-210);width:auto;display: flex;
   .light1{position: relative;width:size(410);display: block;
     margin:0 -20%;
