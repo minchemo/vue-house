@@ -1,9 +1,9 @@
 <template>
 	<article class="s1 relative">
-		<img class="cf-logo" src="@/section/s1/chunfulogo.svg" data-aos="zoom-in" data-aos-delay="200" alt="" srcset="">
-		<img class="mt" src="@/section/s1/img.png" data-aos="zoom-in" data-aos-delay="200" alt="" srcset="">
+		<img class="cf-logo" src="@/section/s1/t3.svg" data-aos="zoom-in" data-aos-delay="200" alt="" srcset="">
+		<img class="mt" src="@/section/s1/img.jpg" data-aos="zoom-in" data-aos-delay="200" alt="" srcset="">
 		<div class="title">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			<!--svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 				viewBox="0 0 435 139" xml:space="preserve" class="logo">
 				<g id="a">
 					<defs>
@@ -58,10 +58,10 @@
 						d="M426.5,38.4c-14.3-1.6-46.8,39.1-40.1,53.1c4.3,8.9,36.4-20,43.6-52c-4.4,29.3-25.4,134.1-61.1,77.1" />
 					<path class="l an5" style="clip-path:url(#SVGID_c0);" d="M301.1,3.4c-4.5,5.1-4.9,11.5-4.9,11.5" />
 				</g>
-			</svg>
+			</svg-->
 
-			<img class="t1" src="@/section/s1/t1.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
-			<div class="t2" data-aos="zoom-in" data-aos-delay="400">重劃新就緒 南科綠核心｜煙波美學2-3房</div>
+			<img class="t1" src="@/section/s1/logo.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
+			<div class="t2" data-aos="zoom-in" data-aos-delay="400">美好依序 一切就緒｜2-3房 <br v-if="$isMobile()"> <span>253-6000</span></div>
 		</div>
 	</article>
 </template>
@@ -74,21 +74,33 @@
 	height: 100vh;
 	max-height: size(1080);
 	min-height: size(900);
-	background-image: url(@/section/s1/bg.jpg);
+	background: #BB432B;
+	//background-image: url(@/section/s1/bg.jpg);
 	background-size: cover;
 	.cf-logo {
 		@apply absolute;
 		left: size(20);
 		top: size(20);
-		width: size(376.15);
+		width: size(200);
+		z-index: 99;
 	}
+
+	.t11 {
+		@apply absolute;
+		top: size(20);
+		width: size(200);
+		z-index: 99;
+	}
+
+	.t01{}
+
 
 	.mt {
 		@apply absolute;
-		width: size(1268);
-		right: 0;
-		bottom: size(20);
-		transform-origin: right bottom;
+		width: size(1080);
+		left: 0;
+		bottom: size(0);
+		transform-origin: left bottom;
 	}
 
 	.title {
@@ -149,11 +161,17 @@
 			margin-bottom: size(45.31);
 		}
 		.t2 {
-			font-weight: 400;
-			font-size: 36px;
+			font-weight: 600;
+			font-size: size(50);
 			line-height: 160%;
 			text-align: center;
 			color: #FFFFFF;
+
+			span{
+			font-size: size(90);
+			font-weight: 400;
+			margin-left: size(15);	
+			}
 		}
 	}
 }
@@ -169,12 +187,13 @@
 	height: 100vh;
     min-height: sizem(667);
     max-height: sizem(750);
-	background-image: url(@/section/s1/bgm.jpg);
+	background: #BB432B;
+	//background-image: url(@/section/s1/bgm.jpg);
 	.cf-logo {
 		@apply absolute;
 		left: sizem(20);
 		top: sizem(20);
-		width: sizem(188.08);
+		width: sizem(100);
 	}
 
 	.mt {
@@ -195,7 +214,13 @@
 			margin-bottom: sizem(29);
 		}
 		.t2 {
-			font-size: sizem(17);
+			font-size: sizem(25);
+			line-height: sizem(45);
+
+			span{
+				font-size: sizem(40);
+				margin-left: 0;
+			}
 		}
 	}
 }

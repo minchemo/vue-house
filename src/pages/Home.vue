@@ -21,7 +21,6 @@
     <S8 />
     <S9 />
     <S10 />
-    <S11 />
     <Order />
   </div>
 </template>
@@ -48,7 +47,6 @@ import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
-import S11 from "@/section/s11.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

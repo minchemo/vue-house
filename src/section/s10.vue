@@ -233,7 +233,8 @@
 .s10 {
 	width: 100%;
 	height: size(1052.23);
-	background-image: url(@/section/s3/bg.jpg);
+	background: #fff;
+	//background-image: url(@/section/s3/bg.jpg);
 	background-size: cover;
 
 	.bg {

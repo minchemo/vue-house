@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 133 184">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        filter: url(#drop-shadow-1);
+      }
+    </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5"/>
+      <feGaussianBlur result="blur" stdDeviation="2"/>
+      <feFlood flood-color="#040000" flood-opacity=".2"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <path class="cls-1" d="m1.33,103.58c11.98-16.59,20.27-34.1,24.88-52.53H2.71v-6.91h24.88l.69-8.29h14.51c-1.85,11.06-5.3,22.12-10.37,33.18v4.15c5.98,4.61,11.29,8.29,15.9,11.06h13.82v6.91h41.47v-6.91h13.82v88.47h-13.82v-9.68h-41.47v9.68h-13.82v-85.71c-1.38,4.15-3.69,7.84-6.91,11.06-3.69-6.45-6.91-12.89-9.68-19.35v94h-13.82v-85.71c-3.23,5.08-7.6,10.61-13.13,16.59H1.33ZM37.27,16.49c-.93,5.53-2.76,10.61-5.53,15.21-6.46-7.36-11.52-17.5-15.21-30.41h.69c9.21,6.46,15.9,11.53,20.04,15.21Zm84.32-8.29v6.91H44.18v-6.91h77.41ZM53.85,77.31V28.93h13.82v5.53h30.41v-5.53h13.82v48.38h-13.82v-6.91h-30.41v6.91h-13.82Zm8.29,20.74v24.19h13.82v-24.19h-13.82Zm0,31.1v26.96h13.82v-26.96h-13.82Zm5.53-65.66h30.41v-22.12h-30.41v22.12Zm22.12,58.75h13.82v-24.19h-13.82v24.19Zm0,33.87h13.82v-26.96h-13.82v26.96Z"/>
+  </g>
+</svg>
