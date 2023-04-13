@@ -8,8 +8,8 @@
     </div>
     <div class="txtall">
       <div class="t1"><span data-aos="fade-right">尋找</span></div>
-      <img class="logo" loading="lazy" src="./s1/logo.svg" alt="" srcset="">
-      <!-- <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset=""> -->
+      <img class="logo" data-aos="fade" src="./s1/logo.svg" alt="" loading="lazy">
+      <!--   <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset=""> -->
       <div class="txt">
         <div class="t2"><img data-aos="fade-up" data-aos-delay="300" src="./s1/t2.svg" alt="" srcset=""></div>
         <div class="t3"><span data-aos="fade-up" data-aos-delay="600">打造高大極地理想國</span></div>
@@ -36,7 +36,7 @@
   justify-content: flex-end;
   // background: url("./s1/1.jpg");
   // background-size: cover;
-  background: url("./s1/bg.jpg") center;
+  background: url("./s1/bg.jpg") center 100%;
   background-size: cover;
   // .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .0;z-index: 2;}
   .light{position: absolute;bottom: 0;right:size(-210);width:auto;display: flex;
@@ -157,4 +157,5 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
 </script>
