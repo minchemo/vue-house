@@ -467,15 +467,11 @@ const imgs = [
     imgs: [
       {
         url: globals.$isMobile() ? new URL("../section/s7/6/1_m.jpg", import.meta.url).href : new URL("../section/s7/6/1.jpg", import.meta.url).href,
-        caption: '雲端管家｜台南晶英酒店'
+        caption: '台南晶英酒店'
       },
       {
         url: globals.$isMobile() ? new URL("../section/s7/6/2_m.jpg", import.meta.url).href : new URL("../section/s7/6/2.jpg", import.meta.url).href,
-        caption: '業績｜台南晶英酒店'
-      },
-      {
-        url: globals.$isMobile() ? new URL("../section/s7/6/3_m.jpg", import.meta.url).href : new URL("../section/s7/6/3.jpg", import.meta.url).href,
-        caption: '業績｜台南晶英酒店'
+        caption: '台南晶英酒店'
       },
     ]
   },
