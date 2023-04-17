@@ -8,13 +8,14 @@
 <stop offset="0" stop-color="#FFF"/>
 <stop offset="1" stop-color="#CEAA6D"/>
 </linearGradient>
-<linearGradient id="alter3" x1="-500" y1="1" x2="0" y2="5" gradientUnits="userSpaceOnUse" style="transform: rotate(45deg);">
+<linearGradient id="alter3" x1="-6500" y1="1" x2="-6000" y2="5" gradientUnits="userSpaceOnUse" style="transform: rotate(45deg);">
 <stop offset="0" stop-color="#FFF0"/>
 <stop offset="0.5" stop-color="#FFF"/>
 <stop offset="1" stop-color="#FFF0"/>
-	<animate attributeName="x1" from="-500" to="1000" dur="1s" begin="line049.end" />
-	<animate attributeName="x2" from="0" to="1500" dur="1s" begin="line049.end" />
+	<animate attributeName="x1" from="-6500" to="1000" dur="5s" repeatCount="indefinite" begin="a8.end" />
+	<animate attributeName="x2" from="-6000" to="1500" dur="5s" repeatCount="indefinite" begin="a8.end" />
 </linearGradient>
+
 
 <!-- 第四畫 -->
 <g fill="#FFF6">
@@ -214,32 +215,29 @@
 	<animate begin="line021.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
 	</rect>
 </g>
-
 <!-- 第一畫 -->
-<rect width="0" x="429" height="92" fill="#FFF6" opacity="1">
-	<animate begin="play.end - .1s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line01" />
-	<animate begin="play.end - .1s" attributeName="x" from="429" to="0" dur=".2s" fill="freeze" />
+<rect width="0" height="92" fill="#FFF6" opacity="1">
+	<animate begin="line0.end - 1.2s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line01" />
+	<animate begin="line0.end - 1.2s" attributeName="x" from="429" to="0" dur=".2s" fill="freeze" />
 	<animate begin="line01.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
 </rect>
-<rect width="0" x="429" height="92" fill="url(#alter1)">
-	<animate begin="play.end" attributeName="width" from="0" to="429" dur=".3s" fill="freeze" />
-	<animate begin="play.end" attributeName="x" from="429" to="0" dur=".3s" fill="freeze" />
+<rect width="0" height="92" fill="url(#alter1)">
+	<animate begin="line0.end - 1s" attributeName="width" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="line0.end - 1s" attributeName="x" from="429" to="0" dur=".3s" fill="freeze" />
 	<animate begin="line01.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
 </rect>
 
 <!-- 邊框畫線 -->
-<path fill="#FFFFFF11" stroke="#00CCFF99" opacity="1" stroke-width="1"
- stroke-dasharray="13131"
- stroke-dashoffset="13131" d="M0,91.4V0h428.5v91.9H127.3l181.2,181.3l-3.1,3L121.1,91.9h-11l189.8,189.9l-3.1,3L103.9,91.9h-11l198.4,198.5l-3.2,3.1L86.5,91.9h-11L282.7,299l-3.2,3.1L69.3,91.9h-11l215.8,215.7l-3.1,3.1L52.1,91.9h-11l224.4,224.3l-3.2,3.1L34.9,91.9h-11l233,232.9l-3.2,3.1l-236-236h-11l241.6,241.5L113.1,468.2h315.4v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.7h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.7h427.9v4.4H0.6v-89.6l188.1-188.1L0,91.4">
-	<animate begin="2s;svgend.end" attributeName="stroke-dashoffset" from="13131" to="0" dur="7s" fill="freeze" id="play"/>
-	<!--<animate begin="2s;svgend.end" attributeName="stroke-dasharray" from="0" to="13131" dur="5s" fill="freeze"/>  -->
-	<animate begin="2s;svgend.end" attributeName="stroke-width" from="1" to="1" dur="0s" fill="freeze"/>
-	<animate begin="play.end" attributeName="stroke-width" from="1" to="0" dur="2s" fill="freeze"/>
+<path fill="none" stroke="#CEAA6D99" opacity="1" stroke-width="2"
+ stroke-dasharray="2902"
+ stroke-dashoffset="2902" d="M0.6,0H429v91.9H127.3l181.2,181.3l-195.4,195H429v89.6H0.6v-89.6l188.1-188.1L0.6,90.8V0">
+	<animate begin="1s;svgend.end" id="line0" attributeName="stroke-dashoffset" from="2902" to="0" dur="2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to="0" dur="1s" fill="freeze" begin="line021.end" />
+	<animate begin="1s;svgend.end" attributeName="opacity" from="1" to="1" dur="0" fill="freeze" />
  </path>
- <!-- 沒細畫板 長2902 d="M0.6,0H429v91.9H127.3l181.2,181.3l-195.4,195H429v89.6H0.6v-89.6l188.1-188.1L0.6,90.8V0  -->
 
 <!-- 亮亮 -->
-<path fill="url(#alter3)" d="M0,91.4V0h428.5v91.9H127.3l181.2,181.3l-3.1,3L121.1,91.9h-11l189.8,189.9l-3.1,3L103.9,91.9h-11l198.4,198.5l-3.2,3.1L86.5,91.9h-11L282.7,299l-3.2,3.1L69.3,91.9h-11l215.8,215.7l-3.1,3.1L52.1,91.9h-11l224.4,224.3l-3.2,3.1L34.9,91.9h-11l233,232.9l-3.2,3.1l-236-236h-11l241.6,241.5L113.1,468.2h315.4v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.7h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.7h427.9v4.4H0.6v-89.6l188.1-188.1L0,91.4">
+<path fill="url(#alter3)" d="M0.6,480.4h427.9v4.4H0.6V480.4z M0.6,497h427.9v-4.4H0.6V497z M0.6,509.1h427.9v-4.4H0.6V509.1z M0.6,521.3h427.9v-4.4H0.6V521.3z M0.6,533.5h427.9v-4.4H0.6V533.5z M0.6,545.7h427.9v-4.4H0.6V545.7z M0.6,557.8h427.9v-4.4H0.6V557.8z M0,91.4l188.7,188.7L0.6,468.2v4.4h427.9v-4.4H113.1l135.2-134.8L6.7,91.9h11l236,236l3.2-3.1L23.9,91.9h11l227.4,227.4l3.2-3.1L41.1,91.9h11L271,310.7l3.1-3.1L58.3,91.9h11l210.2,210.2l3.2-3.1L75.5,91.9h11l201.6,201.6l3.2-3.1L92.9,91.9h11l192.9,192.9l3.1-3L110.1,91.9h11l184.3,184.3l3.1-3L127.3,91.9h301.2V0H0V91.4z">
  </path>
 
  <!-- 白色字ALL -->

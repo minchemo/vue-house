@@ -49,7 +49,7 @@
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'gmap'">
+      @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
       <img src="@/section/form/gmap.svg" alt="高大Σ計畫" srcset="" />
       <div>地圖導航</div>
     </div>
@@ -236,7 +236,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:linear-gradient(to right, rgba(230,197,124,1) 0%,rgba(223,189,124,1) 50%,rgba(209,164,80,1) 100%);
+    background:#036;
 
     .contact-item {
       height: 100%;      

@@ -8,238 +8,182 @@
 <stop offset="0" stop-color="#FFF"/>
 <stop offset="1" stop-color="#CEAA6D"/>
 </linearGradient>
-<linearGradient id="alter3" x1="-500" y1="1" x2="0" y2="5" gradientUnits="userSpaceOnUse" style="transform: rotate(45deg);">
+<linearGradient id="alter3" x1="-6500" y1="1" x2="-6000" y2="5" gradientUnits="userSpaceOnUse" style="transform: rotate(45deg);">
 <stop offset="0" stop-color="#FFF0"/>
 <stop offset="0.5" stop-color="#FFF"/>
 <stop offset="1" stop-color="#FFF0"/>
-	<animate attributeName="x1" from="-500" to="1000" dur="1s" begin="line049.end" />
-	<animate attributeName="x2" from="0" to="1500" dur="1s" begin="line049.end" />
+	<animate attributeName="x1" from="-6500" to="1000" dur="5s" repeatCount="indefinite" begin="a8.end" />
+	<animate attributeName="x2" from="-6000" to="1500" dur="5s" repeatCount="indefinite" begin="a8.end" />
 </linearGradient>
 
 <!-- 第四畫 -->
 <g fill="#FFF6">
 	<rect y="552" width="0" height="4.4" opacity="1">
-	<animate begin="line031.end + .7s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line048" />
-	<animate attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" begin="line048.end" />
+	<animate begin="4.9s" id="a18" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a18.end" />
 	</rect>
 	<rect y="540" width="0" height="4.4" opacity="1">
-	<animate begin="line031.end + .6s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line047" />
-	<animate attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" begin="line047.end" />
+	<animate begin="4.8s" id="a17" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a17.end" />
 	</rect>
 	<rect y="528" width="0" height="4.4" opacity="1">
-	<animate begin="line031.end + .5s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line046" />
-	<animate attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" begin="line046.end" />
+	<animate begin="4.7s" id="a16" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a16.end" />
 	</rect>
 	<rect y="516" width="0" height="4.4" opacity="1">
-	<animate begin="line031.end + .4s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line045" />
-	<animate attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" begin="line045.end" />
+	<animate begin="4.6s" id="a15" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a15.end" />
 	</rect>
 	<rect y="504" width="0" height="4.4" opacity="1">
-	<animate begin="line031.end + .3s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line044" />
-	<animate attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" begin="line044.end" />
+	<animate begin="4.5s" id="a14" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a14.end" />
 	</rect>
 	<rect y="492" width="0" height="4.4" opacity="1">
-	<animate begin="line031.end + .2s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line043" />
-	<animate attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" begin="line043.end" />
+	<animate begin="4.4s" id="a13" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a13.end" />
 	</rect>
 	<rect y="480" width="0" height="4.4" opacity="1">
-	<animate begin="line031.end + .1s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line042" />
-	<animate attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" begin="line042.end" />
+	<animate begin="4.3s" id="a12" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a12.end" />
 	</rect>
 	<rect y="468" width="0" height="4.4" opacity="1">
-	<animate begin="line031.end" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line041" />
-	<animate attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" begin="line041.end" />
+	<animate begin="4.2s" id="a11" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a11.end" />
 	</rect>
 </g>
 <g fill="url(#alter2)">
 	<rect y="552" width="0" height="4.4">
-	<animate begin="line031.end + .9s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
-	<animate begin="line031.end + .9s" attributeName="x" from="0" to="0" dur=".8s" fill="freeze" id="line049" />
-	<animate begin="line048.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" id="svgend" />
-	<animate begin="line048.end + 8s" attributeName="x" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="5.1s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
 	</rect>
 	<rect y="540" width="0" height="4.4">
-	<animate begin="line031.end + .8s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
-	<animate begin="line031.end + .8s" attributeName="x" from="0" to="0" dur=".8s" fill="freeze" />
-	<animate begin="line047.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line047.end + 8s" attributeName="x" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="5s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
 	</rect>
 	<rect y="528" width="0" height="4.4">
-	<animate begin="line031.end + .7s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
-	<animate begin="line031.end + .7s" attributeName="x" from="0" to="0" dur=".8s" fill="freeze" />
-	<animate begin="line046.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line046.end + 8s" attributeName="x" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="4.9s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
 	</rect>
 	<rect y="516" width="0" height="4.4">
-	<animate begin="line031.end + .6s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
-	<animate begin="line031.end + .6s" attributeName="x" from="0" to="0" dur=".8s" fill="freeze" />
-	<animate begin="line045.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line045.end + 8s" attributeName="x" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="4.8s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
 	</rect>
 	<rect y="504" width="0" height="4.4">
-	<animate begin="line031.end + .5s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
-	<animate begin="line031.end + .5s" attributeName="x" from="0" to="0" dur=".8s" fill="freeze" />
-	<animate begin="line044.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line044.end + 8s" attributeName="x" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="4.7s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
 	</rect>
 	<rect y="492" width="0" height="4.4">
-	<animate begin="line031.end + .4s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
-	<animate begin="line031.end + .4s" attributeName="x" from="0" to="0" dur=".8s" fill="freeze" />
-	<animate begin="line043.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line043.end + 8s" attributeName="x" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="4.6s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
 	</rect>
 	<rect y="480" width="0" height="4.4">
-	<animate begin="line031.end + .3s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
-	<animate begin="line031.end + .3s" attributeName="x" from="0" to="0" dur=".8s" fill="freeze" />
-	<animate begin="line042.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line042.end + 8s" attributeName="x" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="4.5s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
 	</rect>
 	<rect y="468" width="0" height="4.4">
-	<animate begin="line031.end + .2s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
-	<animate begin="line031.end + .2s" attributeName="x" from="0" to="0" dur=".8s" fill="freeze" />
-	<animate begin="line041.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line041.end + 8s" attributeName="x" from="0" to="429" dur=".3s" fill="freeze" />
+	<animate begin="4.4s" attributeName="width" from="0" to="429" dur=".8s" fill="freeze" />
 	</rect>
 </g>
 
 <!-- 第三畫 -->
 <defs>
 	<rect id="svg661" style="transform: rotate(135deg);" x="64" y="-410.8" width="0" height="79.6">
-	<animate begin="line028.end" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line031" />
+	<animate begin="3.7s" id="a10" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
 	</rect>
 </defs>
 <clipPath id="svg662">
 	<use xlink:href="#svg661"  style="overflow:visible;"/>
 </clipPath>
 <rect y="270" style="clip-path:url(#svg662);" width="429" height="200" fill="#FFF6" opacity="1">
-	<animate begin="line031.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a10.end" />
 </rect>
 <defs>
 	<rect id="svg1" style="transform: rotate(135deg);" x="64" y="-410.8" width="0" height="79.6">
-<animate begin="line027.end + .2s" attributeName="width" from="0" to="267" dur=".3s" fill="freeze" id="shade1" />
-	<animate begin="line027.end + .2s" attributeName="x" from="64" to="64" dur=".3s" fill="freeze" />
-	<animate begin="line031.end + 8s" attributeName="width" from="267" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line031.end + 8s" attributeName="x" from="64" to="331" dur=".3s" fill="freeze" />
+<animate begin="3.9s" id="shade1" attributeName="width" from="0" to="267" dur=".3s" fill="freeze" />
 	</rect>
 	</defs>
 	<clipPath id="svg2">
 		<use xlink:href="#svg1"  style="overflow:visible;"/>
 	</clipPath>
 <rect fill="url(#alter2)" x="0" y="270" style="clip-path:url(#svg2);" width="429" height="200"/>
-
+<!--
+<path fill="url(#alter2)" d="M113.1,468.2l131.9-131.8l-55.9-56.8L0.6,468.2H113.1z" opacity="0">
+<set attributeName="opacity" to="1" begin="shade1.end" />
+</path>  -->
 
 <!-- 第二畫 -->
 <g style="transform: rotate(45deg);" fill="#FFF6">
 	<rect x="65" y="60" width="0" height="4.4" opacity="1">
-	<animate begin="line01.end + 1.4s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line028" />
-	<animate begin="line028.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate begin="3.4s" id="a9" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a9.end" />
 	</rect>
 	<rect x="65" y="48" width="0" height="4.4" opacity="1">
-	<animate begin="line01.end + 1.2s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line027" />
-	<animate begin="line027.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate begin="3.2s" id="a8" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a8.end" />
 	</rect>
 	<rect x="65" y="36" width="0" height="4.4" opacity="1">
-	<animate begin="line01.end + 1s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line026" />
-	<animate begin="line026.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate begin="3s" id="a7" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a7.end" />
 	</rect>
 	<rect x="65" y="24" width="0" height="4.4" opacity="1">
-	<animate begin="line01.end + .8s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line025" />
-	<animate begin="line025.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate begin="2.8s" id="a6" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a6.end" />
 	</rect>
 	<rect x="65" y="12" width="0" height="4.4" opacity="1">
-	<animate begin="line01.end + .6s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line024" />
-	<animate begin="line024.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate begin="2.6s" id="a5" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a5.end" />
 	</rect>
 	<rect x="65" y="0" width="0" height="4.4" opacity="1">
-	<animate begin="line01.end + .4s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line023" />
-	<animate begin="line023.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate begin="2.4s" id="a4" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a4.end" />
 	</rect>
 	<rect x="65" y="-12" width="0" height="4.4" opacity="1">
-	<animate begin="line01.end + .2s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line022" />
-	<animate begin="line022.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate begin="2.2s" id="a3" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a3.end" />
 	</rect>
 	<rect x="65" y="-24" width="0" height="4.4" opacity="1">
-	<animate begin="line01.end" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" id="line021" />
-	<animate begin="line021.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+	<animate begin="2s" id="a2" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a2.end" />
 	</rect>
 </g>
 <g style="transform: rotate(45deg);" fill="url(#alter1)">
 	<rect x="65" y="60" width="0" height="4.4">
-	<animate begin="line01.end + 1.6s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
-	<animate begin="line01.end + 1.6s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line028.end + 8s" attributeName="width" from="346" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line028.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
+	<animate begin="3.6s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
 	</rect>
 	<rect x="65" y="48" width="0" height="4.4">
-	<animate begin="line01.end + 1.4s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
-	<animate begin="line01.end + 1.4s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line01.end + .8s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line027.end + 8s" attributeName="width" from="346" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line027.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
+	<animate begin="3.4s" attributeName="width" from="0" to="346" dur=".2s" fill="freeze" />
 	</rect>
 	<rect x="65" y="36" width="0" height="4.4">
-	<animate begin="line01.end + 1.2s" attributeName="width" from="0" to="346" dur=".3s" fill="freeze" />
-	<animate begin="line01.end + 1.2s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line026.end + 8s" attributeName="width" from="346" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line026.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
+	<animate begin="3.2s" attributeName="width" from="0" to="346" dur=".3s" fill="freeze" />
 	</rect>
 	<rect x="65" y="24" width="0" height="4.4">
-	<animate begin="line01.end + 1s" attributeName="width" from="0" to="346" dur=".4s" fill="freeze" />
-	<animate begin="line01.end + 1s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line025.end + 8s" attributeName="width" from="346" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line025.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
+	<animate begin="3s" attributeName="width" from="0" to="346" dur=".4s" fill="freeze" />
 	</rect>
 	<rect x="65" y="12" width="0" height="4.4">
-	<animate begin="line01.end + .8s" attributeName="width" from="0" to="346" dur=".5s" fill="freeze" />
-	<animate begin="line01.end + .8s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line024.end + 8s" attributeName="width" from="346" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line024.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
+	<animate begin="2.8s" attributeName="width" from="0" to="346" dur=".5s" fill="freeze" />
 	</rect>
 	<rect x="65" y="0" width="0" height="4.4">
-	<animate begin="line01.end + .6s" attributeName="width" from="0" to="346" dur=".6s" fill="freeze" />
-	<animate begin="line01.end + .6s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line023.end + 8s" attributeName="width" from="346" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line023.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
+	<animate begin="2.6s" attributeName="width" from="0" to="346" dur=".6s" fill="freeze" />
 	</rect>
 	<rect x="65" y="-12" width="0" height="4.4">
-	<animate begin="line01.end + .4s" attributeName="width" from="0" to="346" dur=".7s" fill="freeze" />
-	<animate begin="line01.end + .4s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line022.end + 8s" attributeName="width" from="346" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line022.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
+	<animate begin="2.4s" attributeName="width" from="0" to="346" dur=".7s" fill="freeze" />
 	</rect>
 	<rect x="65" y="-24" width="0" height="4.4">
-	<animate begin="line01.end + .2s" attributeName="width" from="0" to="346" dur=".8s" fill="freeze" />
-	<animate begin="line01.end + .2s" attributeName="x" from="65" to="65" dur=".8s" fill="freeze" />
-	<animate begin="line021.end + 8s" attributeName="width" from="346" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line021.end + 8s" attributeName="x" from="65" to="411" dur=".3s" fill="freeze" />
+	<animate begin="2.2s" attributeName="width" from="0" to="346" dur=".8s" fill="freeze" />
 	</rect>
 </g>
-
 <!-- 第一畫 -->
-<rect width="0" x="429" height="92" fill="#FFF6" opacity="1">
-	<animate begin="play.end - .1s" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" id="line01" />
-	<animate begin="play.end - .1s" attributeName="x" from="429" to="0" dur=".2s" fill="freeze" />
-	<animate begin="line01.end" attributeName="opacity" from="1" to="0" dur=".4s" fill="freeze" />
+<rect width="0" height="92" fill="#FFF6" opacity="1">
+	<animate begin="1.8s" id="a1" attributeName="width" from="0" to="429" dur=".2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to=".5" dur=".2s" fill="freeze" begin="a1.end" />
 </rect>
-<rect width="0" x="429" height="92" fill="url(#alter1)">
-	<animate begin="play.end" attributeName="width" from="0" to="429" dur=".3s" fill="freeze" />
-	<animate begin="play.end" attributeName="x" from="429" to="0" dur=".3s" fill="freeze" />
-	<animate begin="line01.end + 8s" attributeName="width" from="429" to="0" dur=".3s" fill="freeze" />
+<rect width="0" height="92" fill="url(#alter1)">
+	<animate begin="2s" attributeName="width" from="0" to="429" dur=".3s" fill="freeze" />
 </rect>
 
 <!-- 邊框畫線 -->
-<path fill="#FFFFFF11" stroke="#00CCFF99" opacity="1" stroke-width="1"
- stroke-dasharray="13131"
- stroke-dashoffset="13131" d="M0,91.4V0h428.5v91.9H127.3l181.2,181.3l-3.1,3L121.1,91.9h-11l189.8,189.9l-3.1,3L103.9,91.9h-11l198.4,198.5l-3.2,3.1L86.5,91.9h-11L282.7,299l-3.2,3.1L69.3,91.9h-11l215.8,215.7l-3.1,3.1L52.1,91.9h-11l224.4,224.3l-3.2,3.1L34.9,91.9h-11l233,232.9l-3.2,3.1l-236-236h-11l241.6,241.5L113.1,468.2h315.4v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.7h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.7h427.9v4.4H0.6v-89.6l188.1-188.1L0,91.4">
-	<animate begin="2s;svgend.end" attributeName="stroke-dashoffset" from="13131" to="0" dur="7s" fill="freeze" id="play"/>
-	<!--<animate begin="2s;svgend.end" attributeName="stroke-dasharray" from="0" to="13131" dur="5s" fill="freeze"/>  -->
-	<animate begin="2s;svgend.end" attributeName="stroke-width" from="1" to="1" dur="0s" fill="freeze"/>
-	<animate begin="play.end" attributeName="stroke-width" from="1" to="0" dur="2s" fill="freeze"/>
+<path fill="none" stroke="#CEAA6D99" opacity="1" stroke-width="2"
+ stroke-dasharray="2902"
+ stroke-dashoffset="2902" d="M0.6,0H429v91.9H127.3l181.2,181.3l-195.4,195H429v89.6H0.6v-89.6l188.1-188.1L0.6,90.8V0">
+	<animate begin="1s" attributeName="stroke-dashoffset" from="2902" to="0" dur="2s" fill="freeze" />
+	<animate attributeName="opacity" from="1" to="0" dur="1s" fill="freeze" begin="a11.end" />
  </path>
- <!-- 沒細畫板 長2902 d="M0.6,0H429v91.9H127.3l181.2,181.3l-195.4,195H429v89.6H0.6v-89.6l188.1-188.1L0.6,90.8V0  -->
 
 <!-- 亮亮 -->
-<path fill="url(#alter3)" d="M0,91.4V0h428.5v91.9H127.3l181.2,181.3l-3.1,3L121.1,91.9h-11l189.8,189.9l-3.1,3L103.9,91.9h-11l198.4,198.5l-3.2,3.1L86.5,91.9h-11L282.7,299l-3.2,3.1L69.3,91.9h-11l215.8,215.7l-3.1,3.1L52.1,91.9h-11l224.4,224.3l-3.2,3.1L34.9,91.9h-11l233,232.9l-3.2,3.1l-236-236h-11l241.6,241.5L113.1,468.2h315.4v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.7h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.8h427.9v4.4H0.6v7.7h427.9v4.4H0.6v-89.6l188.1-188.1L0,91.4">
+<path fill="url(#alter3)" d="M0.6,480.4h427.9v4.4H0.6V480.4z M0.6,497h427.9v-4.4H0.6V497z M0.6,509.1h427.9v-4.4H0.6V509.1z M0.6,521.3h427.9v-4.4H0.6V521.3z M0.6,533.5h427.9v-4.4H0.6V533.5z M0.6,545.7h427.9v-4.4H0.6V545.7z M0.6,557.8h427.9v-4.4H0.6V557.8z M0,91.4l188.7,188.7L0.6,468.2v4.4h427.9v-4.4H113.1l135.2-134.8L6.7,91.9h11l236,236l3.2-3.1L23.9,91.9h11l227.4,227.4l3.2-3.1L41.1,91.9h11L271,310.7l3.1-3.1L58.3,91.9h11l210.2,210.2l3.2-3.1L75.5,91.9h11l201.6,201.6l3.2-3.1L92.9,91.9h11l192.9,192.9l3.1-3L110.1,91.9h11l184.3,184.3l3.1-3L127.3,91.9h301.2V0H0V91.4z">
  </path>
 
  <!-- 白色字ALL -->

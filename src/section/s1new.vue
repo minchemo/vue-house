@@ -1,6 +1,5 @@
 <template>
   <article class="s1">
-    <img class="bg" src="./s1/bg.jpg" alt="" data-aos="fade" data-aos-delay="3000" data-aos-duration="1500" >
     
     <!-- <img class="t0" src="./s1/mobile.jpg" alt="" srcset="">  -->
     <div class="light">
@@ -8,15 +7,15 @@
       <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""></div>
     </div>
     <div class="txtall">
-      <div class="t1"><span data-aos="fade-right" data-aos-delay="3100">尋找</span></div>
-      <img class="logo" data-aos="fade" data-aos-delay="300" src="./s1/logo_l.svg" alt="" loading="lazy">
+      <div class="t1"><span data-aos="fade-right">尋找</span></div>
+      <img class="logo" data-aos="fade" data-aos-delay="300" src="./s1/logo.svg" alt="" loading="lazy">
       <!--   <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset=""> -->
-      <div class="txt" data-aos="fade" data-aos-delay="3500">
-        <div class="t2"><img data-aos="fade-up" data-aos-delay="3300" src="./s1/t2.svg" alt="" srcset=""></div>
-        <div class="t3"><span data-aos="fade-up" data-aos-delay="3600">打造高大極地理想國</span></div>
-        <div class="t4" data-aos="fade" data-aos-delay="3900"><span data-aos="fade-up" data-aos-delay="1000">高雄之極．茂德聚極</span></div>
-        <div class="t5"><span data-aos="fade-up" data-aos-delay="4200">台灣十大建商 前進高雄代表作</span></div>
-        <div class="t6"><img data-aos="fade-up" data-aos-delay="4500" src="./s1/t6.svg" alt="" srcset=""></div>     
+      <div class="txt">
+        <div class="t2"><img data-aos="fade-up" data-aos-delay="300" src="./s1/t2.svg" alt="" srcset=""></div>
+        <div class="t3"><span data-aos="fade-up" data-aos-delay="600">打造高大極地理想國</span></div>
+        <div class="t4" data-aos="fade" data-aos-delay="900"><span data-aos="fade-up" data-aos-delay="1000">高雄之極．茂德聚極</span></div>
+        <div class="t5"><span data-aos="fade-up" data-aos-delay="1200">台灣十大建商 前進高雄代表作</span></div>
+        <div class="t6"><img data-aos="fade-up" data-aos-delay="1500" src="./s1/t6.svg" alt="" srcset=""></div>     
       </div>
     </div>
       
@@ -37,13 +36,9 @@
   justify-content: flex-end;
   // background: url("./s1/1.jpg");
   // background-size: cover;
-background: #000E29;
-  /*
   background: url("./s1/bg.jpg") center 100%;
-  background-size: cover;*/
+  background-size: cover;
   // .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .0;z-index: 2;}
-
-  .bg{position: absolute;bottom: 0;left: 0;width: 100%;height: auto;}
   .light{position: absolute;bottom: 0;right:size(-210);width:auto;display: flex;
   .light1{position: relative;width:size(410);display: block;
     margin:0 -20%;
@@ -181,6 +176,5 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
-
 
 </script>
