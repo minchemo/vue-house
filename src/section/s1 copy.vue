@@ -5,9 +5,8 @@
     <!--  data-aos="fade" data-aos-delay="3000" data-aos-duration="1500" >  -->
     <!-- <img class="t0" src="./s1/mobile.jpg" alt="" srcset="">  -->
     <div class="light">
-      <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""></div>
-      <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""></div>
-      <span></span>
+      <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""><span></span></div>
+      <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""><span></span></div>
     </div>
     <img class="bg1" v-if="!$isMobile()" src="./s1/bg.png" alt="">
     <img class="bg1" v-else src="./s1/bgm.png" alt="">
@@ -50,15 +49,28 @@ background: #000E29;
   .bg{position: absolute;bottom: 0;left: 0;width: 100%;height: auto;}
   .bg1{position: absolute;bottom: 0;right:24.3%;width: size(114);height: auto;z-index: 2;opacity: .8;}
   .light{position: absolute;bottom: 0;right:size(-210);width:auto;display: flex;
+  .light1{position: relative;width:size(410);display: block;
+    margin:0 -20%;
+    img{width:100%;mix-blend-mode: color-dodge;filter: blur(5px);
+     transform-origin: 50% 93%;
+     transform:scale(1,.3);
+     animation: an 6s linear infinite ;}
+
+    &::before{content:"";position: absolute;width: 100%;height:size(150);left: 0;bottom: 0;mix-blend-mode: color-dodge;
+    background: radial-gradient(50% 50% at 50% 50%, #fff9 0%,#fff0 50%);opacity: 1;}
+    
+    &::after{content:"";position: absolute;width: 100%;height:size(150);left: 0;bottom: 0;z-index:2;
+    background: radial-gradient(50% 50% at 50% 50%, #6ff9 3%, #6ff2 40%, #6ff0 100%);opacity: 0.6;
+     animation: an2 6s linear infinite ;}
     span{position: absolute;
       display: block;
-      height:100%;width:25%;
+      height:100%;width:25%;background: radial-gradient(50% 50% at 50% 50%, #09fe 3%, #09f4 40%, #09f0 100%);
       bottom: 0;
-      left:-3%;
-     animation: an_s 2s linear infinite ;
+      left:calc(50% - 25% * .5);
+     animation: an_s 6s linear infinite ;
      &::after,&::before{
       content:"";position: absolute;
-      display: block;width:60%;background: radial-gradient(50% 50% at 50% 50%, #6Cfe 3%, #6Cf4 40%, #6Cf0 100%);opacity: .8;
+      display: block;width:80%;background: radial-gradient(50% 50% at 50% 50%, #09fe 3%, #09f4 40%, #09f0 100%);opacity: .6;
     }
      &::after{
       height:60%;
@@ -73,33 +85,36 @@ background: #000E29;
      animation: an_s2 1.5s linear infinite ;
     }
   }
-  .light1{position: relative;width:size(410);display: block;
-    margin:0 -20%;
-    img{width:100%;mix-blend-mode: color-dodge;filter: blur(5px);
-     transform-origin: 50% 93%;
-     transform:scale(1,.3);
-     animation: an 3s linear both;}
-
-    &::before{content:"";position: absolute;width: 100%;height:size(150);left: 0;bottom: 0;mix-blend-mode: color-dodge;
-    background: radial-gradient(50% 50% at 50% 50%, #fff9 0%,#fff0 50%);opacity: 1;}
-    
-    &::after{content:"";position: absolute;width: 100%;height:size(150);left: 0;bottom: 0;z-index:2;
-    background: radial-gradient(50% 50% at 50% 50%, #6ff9 3%, #6ff2 40%, #6ff0 100%);opacity: 0.6;
-     animation: an2 6s linear both ;}
   }
 }
 @keyframes an_s {
-  00% {
+  0% {
+     transform:translateY(0);
+     opacity: 0;
+  }
+  30% {
      transform:translateY(0);
      opacity: 0;
   }
   40% {
-     transform:translateY(-50%);
-     opacity: 1;
+     transform:translateY(-60%);
+     opacity: .5;
+  }
+  59.9% {
+     transform:translateY(-120%);
+     opacity: 0;
   }
   60% {
-     transform:translateY(-70%);
+     transform:translateY(0);
+     opacity: 0;
+  }
+  70% {
+     transform:translateY(-60%);
      opacity: 1;
+  }
+  80% {
+     transform:translateY(-120%);
+     opacity: 0;
   }
   100% {
      transform:translateY(-120%);
@@ -109,15 +124,12 @@ background: #000E29;
 @keyframes an_s2 {
   0% {
      transform:translateY(0);
-     opacity: 0;
   }
   50% {
      transform:translateY(-60%);
-     opacity: 1;
   }
   100% {
      transform:translateY(-120%);
-     opacity: 0;
   }
 }
 @keyframes an2 {
@@ -140,8 +152,8 @@ background: #000E29;
      opacity: 0;
   }
   100% {
-     transform:scale(.5,0.4);
-     opacity: 1;
+     transform:scale(4.5,.3);
+     opacity: 0;
   }
 }
 @keyframes an {
@@ -149,15 +161,23 @@ background: #000E29;
      transform:scale(0,0);
      opacity: 0;filter: blur(15px);
   }
-  40%{
+  30%{
      transform:scale(1.5,0.5);
      opacity: 1;filter: blur(5px);
   }
   //40  1
   //60  1.5
-  100%{
-     transform:scale(1.5,3);
+  70%{
+     transform:scale(1.5,5);
      opacity: 1;filter: blur(5px);
+  }
+  90% {
+     transform:scale(1.3,5.5);
+     opacity: 0;filter: blur(15px);
+  }
+  100% {
+     transform:scale(1.3,5.5);
+     opacity: 0;filter: blur(15px);
   }
 }
   .txtall{
@@ -220,10 +240,10 @@ width: 100%;
     max-height: sizem(812);
   // background-image: url("./s1/bgm.jpg");
   // background-size: sizem(450) auto;
-  &::after{content: "";display: block;position: absolute;width: 100%;height:18vw;background: #000E29;left: 0;bottom: 0;transform:skewY(10deg);transform-origin: 0 0;z-index: 3;}
+  &::after{content: "";display: block;position: absolute;width: 100%;height:18vw;background: #000E29;left: 0;bottom: 0;transform:skewY(10deg);transform-origin: 0 0;}
   .bg1{right:0;width: 100%;opacity:1;}
-  .light{right:sizem(-350);bottom:sizem(0);
-  .light1{width:sizem(300);
+  .light{right:sizem(-140);bottom:sizem(65);
+  .light1{width:sizem(180);
     &::before{height:sizem(75);}
     &::after{height:sizem(75);}
   }
