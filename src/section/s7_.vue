@@ -15,8 +15,8 @@
 
     <div class="b"></div>
     <div class="c">
-      <img v-if="!$isMobile()" src="@/section/s7_/map.png" alt="" srcset="">
-      <img v-else src="@/section/s7_/mapm.png" alt="" srcset="">
+      <img v-if="!$isMobile()" src="@/section/s7_/map.svg" alt="" srcset="">
+      <img v-else src="@/section/s7_/mapm.svg" alt="" srcset="">
     </div>
   </article>
 </template>
