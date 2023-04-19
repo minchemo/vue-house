@@ -76,6 +76,8 @@
           letter-spacing: 0.07em;}
         .ring1 {
           width: size(48);
+          margin: auto;
+          align-self:center;
         }
       }
       .team {
