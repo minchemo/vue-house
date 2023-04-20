@@ -146,7 +146,7 @@ top: 101%;
     margin-top: size-m(78);
     img {
       width: size-m(328);
-      height: size-m(79);
+      height: auto;
     }
   }
   }
