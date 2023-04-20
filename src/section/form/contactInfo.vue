@@ -278,7 +278,7 @@
     .contact-item-box {
       position: relative;
       margin-top: sizem(0);
-      gap: sizem(20);
+      //gap: sizem(20);
       flex-direction: column;
     width: sizem(310);
 
@@ -287,7 +287,8 @@
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
-          border-radius: sizem(0);
+        border-radius: sizem(0);
+        margin: 10px 0px;
 
         img {
           max-width: sizem(27);
