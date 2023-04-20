@@ -288,9 +288,9 @@
         max-width: 100%;
         white-space: nowrap;
         border-radius: sizem(0);
-        margin: 10px 0px;
+        margin: 5px 0px;
 
-        img {
+        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
           max-width: sizem(27);
           height: auto;
           max-height: sizem(27);

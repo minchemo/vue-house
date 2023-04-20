@@ -304,7 +304,7 @@
 
     .send {
       font-size: sizem(21);
-      width: sizem(318);
+      width: sizem(310);
       height: sizem(72);
     }
 
