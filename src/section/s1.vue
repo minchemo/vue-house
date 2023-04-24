@@ -3,10 +3,10 @@
     <div class="main">
       <img src="@/section/s1/logo.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
       <p data-aos="fade-up" data-aos-delay="100">以尖端禮遇尖端</p>
-      <div class="title2" v-if="$isMobile()"  data-aos="fade-up" data-aos-delay="100">中路司法特區<br />24層純百坪景觀宅</div>
+      <div class="title2" v-if="$isMobile()"  data-aos="fade-up" data-aos-delay="100">中路司法公園<br />24層純百坪景觀宅</div>
     </div>
     <div class="subtitle" >
-      <p v-if="!$isMobile()"  data-aos="fade-up" data-aos-delay="0">中路司法特區‧24層純百坪景觀宅</p>
+      <p v-if="!$isMobile()"  data-aos="fade-up" data-aos-delay="0">中路司法公園‧24層純百坪景觀宅</p>
       <!--img v-if="!$isMobile()" src="@/section/s1/subtitle.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="100"-->
       <!--img v-else src="@/section/s1/subtitle_m.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="100"-->
     </div>

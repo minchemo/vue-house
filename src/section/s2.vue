@@ -6,10 +6,10 @@
       </div>
       <div class="text-box" >
         <div class="t1" data-aos="fade-left" data-aos-delay="0">中路正核心‧繁榮一森青</div>
-        <div class="t2" data-aos="fade-left" data-aos-delay="100">中路司法特區<br />
+        <div class="t2" data-aos="fade-left" data-aos-delay="100">中路司法公園<br />
           獨有榮華氣韻</div>
         <div class="c-divider"></div>
-        <div class="t3" data-aos="fade-left" data-aos-delay="200">桃園中路司法特區，完整國際街廓與綠海文教氣息，鄰近藝文特區、市府特區，左右逢源的高素質住宅區。<br />
+        <div class="t3" data-aos="fade-left" data-aos-delay="200">桃園中路司法公園，完整國際街廓與綠海文教氣息，鄰近藝文特區、市府特區，左右逢源的高素質住宅區。<br />
           環境自成榮華氣韻，醇釀成雍容富足的生活氛圍，「耑悦」繁華藏靜，名門首選！</div>
       </div>
       <img v-if="!$isMobile()" class="large" src="@/section/s2/large.svg" alt="" srcset="" data-aos="fade-right" data-aos-delay="400">
