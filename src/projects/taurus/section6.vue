@@ -162,6 +162,7 @@
     rgba(226, 226, 226, 1) 56%,
     rgba(255, 255, 255, 1) 100%
   );
+  padding: 6vw 0 0 0;
 
   .style1_1 {
     position: absolute;
@@ -340,6 +341,7 @@
 @media only screen and (max-width: 767px) {
   .section6 {
     position: relative;
+  padding: 30vw 0 0 0;
 
     .style1_1 {
       width: 50vw;
