@@ -7,7 +7,7 @@ export default {
   fbLink:
     "https://www.facebook.com/The-ARIES-牡羊座-冷泉渡假行館-111516394449508/",
   fbMessage: "https://m.me/111516394449508/",
-  caseName: "牡羊座",
+  caseName: "金牛座",
   indigatorLength: 10,
   houseInfos: [
     ["投資興建", "青山興業股份有限公司"],

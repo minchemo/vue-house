@@ -1,6 +1,6 @@
 exports.info = {
-  title: "牡羊座",
+  title: "金牛座",
   description:
-    "牡羊座",
-  keywords: "牡羊座"
+    "金牛座",
+  keywords: "金牛座"
 };

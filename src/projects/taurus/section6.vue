@@ -1,6 +1,6 @@
 <template>
   <div class="section6 f-p-section">
-    <div class="swiper-title" data-aos="fade-down" data-aos-duration="1000">
+ <!--- <div class="swiper-title" data-aos="fade-down" data-aos-duration="1000">
       <span v-if="!isMobile">　</span>新穎暢快<br v-if="isMobile" /><span
         class="db"
         >高達<span class="large">15</span>項</span
@@ -34,7 +34,7 @@
         srcset=""
         v-show="!showingFullBox"
       />
-    </div>
+    </div>-->
     <div v-if="isMobile" class="full-box" v-show="showingFullBox">
       <img
         v-if="isMobile"
@@ -619,7 +619,7 @@ export default {
       showingFullBox: false,
       showingFullBoxImg: false,
       fullBoxImg: "",
-
+/*
       imgList1: [
         {
           img: require("./s6/slider_1.jpg"),
@@ -662,7 +662,7 @@ export default {
             : "想到熱帶島嶼渡假不用飛出國，灣岸villa的發呆亭，讓你躺著就像在國外海邊渡假村。",
         },
       ],
-
+*/
       viewerList: [
         {
           el: "viewer-1",
