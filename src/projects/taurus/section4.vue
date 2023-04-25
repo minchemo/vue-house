@@ -119,14 +119,13 @@
 
   .building {
     position: absolute;
-    z-index: 5;
-    top: 5vw;
+    top: 8vw;
     left: 8vw;
     width: 60vw;
-    height: 40.37vw;
+    height: 38vw;
     background-image: url("./s4/img.jpg");
     border-radius: 50vw 40vw 50vw 40vw;
-    background-size: 122%;
+    background-size: 120% auto;
     background-position: center bottom;
     animation: border-radius 3s ease-in-out 2s infinite alternate;
     border-radius: 60% 40% 60% 40%;
@@ -140,12 +139,13 @@
     &::before {
       content: "";
       background-image: url("./s4/img2.png");
-      background-size: 122%;
+      background-size:  120% auto;
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 115%;
       left: 0;
-      background-position: center bottom;
+      bottom: 0;
+      background-position: center bottom;z-index: 7;
     }
   }
 
@@ -332,38 +332,11 @@
     }
 
     .building {
-      position: absolute;
-      z-index: 5;
-      top: 60vw;
+      top: 63vw;
       left: 50%;
-      width: 110vw;
-      height: 74.02vw;
-      margin-left: -55vw;
-      background-image: url("./s4/img.jpg");
-      border-radius: 50vw 40vw 50vw 40vw;
-      background-size: 122%;
-      background-position: center bottom;
-      animation: border-radius 3s ease 2s infinite alternate;
-
-      @keyframes border-radius {
-        0% {
-          border-radius: 50vw 40vw 50vw 40vw;
-        }
-        100% {
-          border-radius: 40vw 50vw 40vw 50vw;
-        }
-      }
-
-      &::before {
-        content: "";
-        background-image: url("./s4/img2.png");
-        background-size: 122%;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        background-position: center bottom;
-      }
+      width: 100vw;
+      height: 65vw;
+      margin-left: -50vw;
     }
 
     .building-title {

@@ -17,12 +17,12 @@
       </div>
     </div>
     <div class="after-intro">
-      <img
+     <!--  <img
         class="yellow-style"
         src="./s1/yellow_style.png"
         alt=""
         srcset=""
-      />
+      />  -->
       <img class="ppl" src="./s1/ppl.png" alt="" srcset="" />
       <div class="title">
         <img
@@ -31,7 +31,7 @@
           alt=""
           srcset=""
         />
-        <p>16-85坪｜冷泉 · 泳池<br />全台唯一 冷泉渡假行館</p>
+        <p>全台唯一｜冷熱雙泉渡假會館｜17~51坪</p>
       </div>
       <img
         class="w1 floating"
@@ -155,8 +155,8 @@
     z-index: 0;
     transition: all 2s;
     opacity: 1;
-    background: url("./s1/bg.jpg");
-    background-size: cover;
+    background: url("./s1/bg.jpg") center;
+    background-size:cover;
     clip-path: polygon(0% 0%, 
     0% calc(100% - 4vw), 
     10%  calc(100% - 4.2vw),
@@ -190,10 +190,12 @@
     }
     .ppl {
       position: absolute;
-      right: 10%;
+      left:0;
       bottom: 0;
       z-index: 2;
-      width: 27vw;
+      width:100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .title {
@@ -204,14 +206,16 @@
       transform: translate(-50%, -100%);
       .logo {
         width: 20vw;
+        filter: drop-shadow(0 0 10px rgba(18, 92, 147, 0.3));
+
       }
       p {
         margin-top: 40px;
-        text-shadow: 0 0 10px rgba(18, 92, 147, 0.8);
+        text-shadow: 0 0 10px rgba(18, 92, 147, 0.3);
         font-size: 1.48vw;
         line-height: 1.42;
         text-align: center;
-        color: #ffdc00;
+        color: #fff;
         font-weight: bold;
       }
     }
@@ -322,12 +326,10 @@
         transform: translate(57%, 78%);
       }
       .ppl {
-        width: auto;
-        height: 65%;
-        position: absolute;
-        right: 5%;
-        bottom: -20%;
         z-index: 8;
+    right: -52%;
+    left: auto;
+    width: auto;
       }
 
       .title {

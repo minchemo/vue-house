@@ -65,10 +65,10 @@
         height: 100%;
         background: rgb(255, 255, 255);
         background: linear-gradient(
-          -90deg,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.3) 95%,
-          rgba(255, 255, 255, 0.6) 100%
+          -50deg,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 0.3) 75%,
+          rgba(255, 255, 255, .7) 100%
         );
       }
       .caption {
@@ -79,25 +79,25 @@
         text-align: left;
 
         .main-title {
-          color: #bd802f;
+          color: #ad6f1e;
           font-size: 2vw;
           font-weight: bold;
           line-height: 2.4vw;
           margin-bottom: 1vw;
-          text-shadow:0px 0px 10px #fff,0px 0px 3px #fff;
+          text-shadow:0px 0px 15px #fff,0px 0px 3px #fff;
         }
         .title {
           display: inline;
           margin-right: 0.7vw;
           font-size: 1.2vw;
-          color: #666666;
-          text-shadow:0px 0px 10px #fff,0px 0px 3px #fff;
+          color: #333;
+          text-shadow:0px 0px 15px #fff,0px 0px 3px #fff;
         }
         .content {
           display: inline;
           font-size: 1.2vw;
-          color: #666666;
-          text-shadow:0px 0px 10px #fff,0px 0px 3px #fff;
+          color: #333;
+          text-shadow:0px 0px 15px #fff,0px 0px 3px #fff;
         }
       }
       .tip-title {
@@ -291,19 +291,39 @@ export default {
         },
         {
           img: require("./s5/slider_2.jpg"),
-          title: "禮賓接待櫃檯",
-          content: "尊榮高貴飯店式管理",
+          title: "KTV",
+          content: "XXXXXXXXX",
         },
         {
           img: require("./s5/slider_3.jpg"),
+          title: "溫泉",
+          content: "XXXXXXXXX",
+        },
+        {
+          img: require("./s5/slider_4.jpg"),
+          title: "棋藝室",
+          content: "XXXXXXXXX",
+        },
+        {
+          img: require("./s5/slider_5.jpg"),
           title: "景觀健身房",
           content: "盡覽風光愜意運動",
         },
         {
+          img: require("./s5/slider_6.jpg"),
+          title: "溫泉湯屋",
+          content: "XXXXXXXXX",
+        },
+        {
+          img: require("./s5/slider_7.jpg"),
+          title: "溫泉湯屋",
+          content: "XXXXXXXXX",
+        },
+      /* {
           img: isMobile? require("./s5/slider_4_full.jpg") : require("./s5/slider_4.jpg") ,
           title: "自助洗衣中心",
           content: "便利完善渡假機能",
-        },
+        },*/
       ],
     };
   },

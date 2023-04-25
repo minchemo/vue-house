@@ -55,7 +55,7 @@
 }
 
 .with-mask {
-  // mask: url("~@/projects/aries/s1/section_mask.svg");
+  // mask: url("~@/projects/taurus/s1/section_mask.svg");
   mask-size: cover;
 }
 
@@ -155,13 +155,13 @@ import Loading from "@/components/Loading.vue";
 import AOS from "@/lib/aos/src/js/aos";
 // import Indigator from '@/components/Indigator.vue'
 
-import Section1 from "@/projects/aries/section1.vue";
-import Section2 from "@/projects/aries/section2.vue";
-import Section3 from "@/projects/aries/section3.vue";
-import Section4 from "@/projects/aries/section4.vue";
-import Section5 from "@/projects/aries/section5.vue";
-import Section6 from "@/projects/aries/section6.vue";
-import Section7 from "@/projects/aries/section7.vue";
+import Section1 from "@/projects/taurus/section1.vue";
+import Section2 from "@/projects/taurus/section2.vue";
+import Section3 from "@/projects/taurus/section3.vue";
+import Section4 from "@/projects/taurus/section4.vue";
+import Section5 from "@/projects/taurus/section5.vue";
+import Section6 from "@/projects/taurus/section6.vue";
+import Section7 from "@/projects/taurus/section7.vue";
 
 export default {
   name: "home",

@@ -25,6 +25,11 @@
         alt=""
       />
       <img
+        class="logo"
+        src="@/projects/taurus/s1/logo.svg"
+        :alt="info.caseName"
+      />
+      <!-- <img
         v-if="!isMobile"
         class="logo"
         src="@/assets/img/contact-logo.svg"
@@ -35,7 +40,7 @@
         class="logo"
         src="@/assets/img/contact-logo.svg"
         :alt="info.caseName"
-      />
+      /> -->
       <div class="info">
         <div class="btn flex-c" @click="showCallDialog">
           <span class="flex-c">
@@ -441,7 +446,7 @@ export default {
       //width: $contact_logo_mobile_width;
       width: 65vw;
       //margin-left: -2vw;
-      margin: 0;
+      margin: 0 auto;
     }
   }
 
