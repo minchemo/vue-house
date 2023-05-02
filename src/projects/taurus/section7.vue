@@ -27,7 +27,7 @@
         data-aos-delay="400"
       >
         買房最好的時機，相較頭城、礁溪房價高點，<br />
-        『The Aries 牡羊座』精質坪數換超星級豐富休閒渡假設施，<br v-if="!isMobile"/>
+        『The Taurus 金牛座』精質坪數換超星級豐富休閒渡假設施，<br v-if="!isMobile"/>
         全台唯一親子冷泉渡假宅，為心愛的家人購置第二個家！
       </p>
     </div>
