@@ -10,13 +10,13 @@
   </div>
   <!--loading end-->
    <!-- <Nav v-if="config.showNav" /> -->
-  <div class="home bg-[#000E29] overflow-hidden font-['Noto_Sans_TC',serif]">
+  <div class="home bg-[#EDEDEC] overflow-hidden font-['Noto_Sans_TC',serif]">
     <S1 />
+  <S2 />
   <!--    <S1new />
     <S1new2 />
-  <S2 />
-    <S3 /> -->
-    <Order />
+    <S3 />
+    <Order /> -->
   </div>
 </template>
 
@@ -33,12 +33,13 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
 /* import S1new from "@/section/s1new.vue"
 /* import S1new2 from "@/section/s1new2.vue"
-/* import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue" */
+/* 
+import S3 from "@/section/s3.vue"
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
+import Nav from "@/layout/navbar.vue" */
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';

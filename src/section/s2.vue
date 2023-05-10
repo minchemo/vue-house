@@ -1,10 +1,28 @@
 <template>
   <article class="s2">
-    <div class="img">
+    <div class="box box1">
+      <h2 class="title font-['noto_Serif_tc']">一、基本資料</h2>
+      <div class="list" v-for="item in list1">
+        <span class="t1" v-html="item[0]"></span>
+        <span class="t2" v-html="item[1]"></span>
+      </div>
+
     </div>
-    <div class="txt">
-      <h3 class="title">石牌站前 全勝置產</h3>
-      <p class="desc">跟著捷運置產，穩居不敗之地。「高大Σ計畫」近距石牌捷運站350米，石牌路商圈一路繁華，生活所需一應俱全，還有石牌中小學優質學區，高知識殿堂培育孩子成長，四座綠蔭公園環繞，河濱公園健康有氧，是城市最難得的樂活環境。</p>
+    <div class="box box2">
+      <h2 class="title font-['noto_Serif_tc']">二、辦理歷程</h2>
+      <section class="list ti" v-if="!$isMobile()">
+        <span class="t1">執行情形</span>
+        <span class="t2">時間</span>
+        <h3 class="t3">內容</h3>
+       <!--  <span class="t4">相關檔案</span> -->
+      </section>
+      <section class="list" v-for="item in list2">
+        <a :href="item.link" target="_blank" class="link" v-if="item.link"></a>
+        <span :class="['t1', item.t1[0]]" v-html="item.t1[1]"></span>
+        <span class="t2" v-html="item.t2"></span>
+        <h3 class="t3">{{item.t3}}<span class="t4_a" v-if="item.link&$isMobile()"></span><span class="t4" v-if="item.link">下載</span></h3>
+        
+      </section>
     </div>
   </article>
 </template>
@@ -13,110 +31,127 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden w-full bg-[#55001A];
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-font-size: 16px;
-padding: size(98) 0;
-  .img{@apply relative  overflow-hidden bg-[#000];
-    width: 80.625em;
-   // width:calc(100% - (20% - 11.4em) - 37em + 10em);
-    height:47.75em;
-    background: url("./s2/1.jpg") center;
-    background-size: cover;
-  }
-  .txt{
-    @apply relative bg-[#E5E5E5];
-    width: 37em;
-    padding: 6em 3.5em;
-    text-align: justify;
-letter-spacing: 0.08em;
-margin: auto -1.2em auto -10em;
-  }
-  .title{
-font-size: 2em;
-font-weight: 600;
-letter-spacing: 0.1em;
-line-height: 1.5;
-
-color: #9B1E44;}
-  .desc{
-line-height: 2;}
-}
-@media screen and (max-width: 1730px) {
-.s2 {
-  .img{
-    width:size(1350);
-  }
-}
-}
-@media screen and (max-width: 1730px) {
-.s2 {
+  @apply relative overflow-hidden w-full;
 font-size: 15px;
-  .txt{
-    width: 35em;
-    padding: 6em size(60);
-margin: auto -1.2em auto size(-180);
+line-height: 1.5;
+padding: size(98) 0;
+}
+.box{margin: auto;max-width:900px;width: 85%;
+display: flex;
+flex-direction: column;text-align: justify;
+align-items: center;}
+.title{
+font-size: 2.8em;
+font-weight: 900;
+letter-spacing: 0.1em;
+margin: auto auto .5em auto;
+width: 100%;
+color: #9B1E44;}
+.list{
+display: flex;
+flex-direction: row;
+align-items: baseline;
+width: 100%;}
+.box1{border-top:1px solid #0003;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em;
+  .t1{
+  font-weight: 700;flex: 0 0 8em;
+  color: #9B1E44;
+  &::before{content: "";width:.6em;height: .6em;border-radius: 50%;background: currentColor;display: inline-block;margin: 0 0.8em 0.1em 0;}
   }
 }
-}
-@media screen and (max-width: 1360px) {
-.s2 {
-font-size:14px;
-  .txt{
-    width: 30em;
-    padding: 6em size(60);
-margin: auto -1.2em auto size(-180);
+.box2{
+  margin:5em auto;
+  .list{border-bottom: 1px solid #CCC;padding: 0.67em 0;gap:0.67em;position: relative;
+  &.ti{background:#BCBCBC;color: #fff;
+  .t1,.t4{background: none;font-weight: 500;}}}
+  .link{position: absolute;top: 0;left: 0;width: 100%;z-index: 2;height: 100%;
+    transition:background .2s;
+    &:hover{background: #0001;}
   }
+  .t1{flex: 0 0 6em;font-weight: 700;background: #fff;border-radius:0.2em;text-align: center;
+    &.v1{color: #470;}
+    &.v2{color: #d90;}
+
+  }
+  .t2{flex: 0 0 6em;}
+  .t3{flex: 1;display:flex;justify-content:space-between; align-items:flex-start;gap: .5em;}
+  .t4_a{width: 5em;display: inline-block;}
+  .t4{background: #9B1E44;color: #fff;border-radius:0.2em;text-align: center;display: inline-block;min-width: 5em;flex: 0 5em;}
+
 
 }
-}
-@media screen and (max-width: 767px) {
-}
-  
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 // @media screen and (max-width: 767px) { 平常我們手機的設定
-@media screen and (max-width:1024px) {
-
-  .s2 {
-  flex-direction: column;
-font-size:16px;
-padding: sizem(35) 0;
-
-  .img{
-    width:sizem(315);
-    height:sizem(313);
-    background-image: url("./s2/1m.jpg");
-  }
-  .txt{
-    width:sizem(315);
-    padding:sizem(39) sizem(29);
-margin: auto;
-  }
-  .title{
-    margin-bottom: .6em;
-font-size: 1.54em;
-  }
-
-
-
-
-  }
-}
 @media screen and (max-width: 767px) {
   .s2 {
 font-size:13px;
+padding: sizem(90) 0;
 
-}
+.title{
+font-size: 2em;}
+.box2{
+.list{
+  flex-wrap: wrap;
  }
+ .t2{flex: 0 1 70%;}
+  .t4{position: absolute;right: 0;bottom: .6em;}
+ }}
+}
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
+const list1 = [
+        ["實施者", "建泰工藝"],
+        ["投資興建", "中德建設股份有限公司"],
+        ["基地位置", "更新單元位於臺南市北區北門路二段以東、前鋒路以西、東豐路以南、小東路以北所圍地區，非屬完整街廓"],
+        ["更新地區", "99年6月28日「變更臺南市北區都市計畫(細部計畫)通盤檢討案」劃定台南二中東側更新地區"],
+        ["基地面積(㎡)", "6,158.00"],
+        ["使用分區", "第七種住宅區"],
+        ["實施方式", "權利變換(公開評選實施者)"],
+        ["更新規劃", "丹棠開發股份有限公司"],
+        ["建築設計", "陳朝雄建築師事務所"],
+        ["鑑價機構", "宇豐不動產估價師聯合事務所<br>長興不動產估價師聯合事務所<br>友宏不動產估價師聯合事務所"],
+    ];
+const list2 = [
+  {
+    t1: ["v1", "已完成"],
+    t2: "2022/02/25",
+    t3: "中德建設成為最優申請人",
+    link:"",
+  },
+  {
+    t1: ["v1", "已完成"],
+    t2: "2022/05/03",
+    t3: "臺南市政府與中德建設簽訂實施契約",
+    link:"",
+  },
+  {
+    t1: ["v1", "已完成"],
+    t2: "2022/08/03",
+    t3: "辦理第一次權利人說明會",
+    link:"",
+  },
+  {
+    t1: ["v1", "已完成"],
+    t2: "2022/09/20",
+    t3: "辦理第二次權利人說明會",
+    link:"",
+  },
+  {
+    t1: ["v1", "已完成"],
+    t2: "2022/10/21",
+    t3: "提送事業計畫及權利變換計畫(草案)",
+    link:"",
+  },
+  {
+    t1: ["v2", "作業中"],
+    t2: "",
+    t3: "自辦公聽會",
+    link:"",
+  },
+];
 </script>
