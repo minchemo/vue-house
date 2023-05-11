@@ -105,8 +105,7 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
 
 const list1 = [
-        ["實施者", "建泰工藝"],
-        ["投資興建", "中德建設股份有限公司"],
+        ["實施者", "中德建設股份有限公司"],
         ["基地位置", "更新單元位於臺南市北區北門路二段以東、前鋒路以西、東豐路以南、小東路以北所圍地區，非屬完整街廓"],
         ["更新地區", "99年6月28日「變更臺南市北區都市計畫(細部計畫)通盤檢討案」劃定台南二中東側更新地區"],
         ["基地面積(㎡)", "6,158.00"],
