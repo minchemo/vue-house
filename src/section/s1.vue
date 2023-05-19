@@ -87,15 +87,15 @@ mix-blend-mode: screen;background: radial-gradient(80% 80% at 100% 108.75%, #713
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { computed, getCurrentInstance, ref ,inject} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
 
-const scrollTo = (elementId) => {
-  const element = document.getElementById(elementId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
 </script>
