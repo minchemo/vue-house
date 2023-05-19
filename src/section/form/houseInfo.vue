@@ -18,7 +18,7 @@
             </div>
         </div>
     </div> -->
-    <div class="house bg-[#CEAA6C] flex items-center justify-center">
+    <div class="house bg-[#FF3EA1] flex items-center justify-center">
             <!--p class="">廣告銷售：</p-->
             <p class=""><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
     </div>

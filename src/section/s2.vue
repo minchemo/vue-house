@@ -1,11 +1,13 @@
 <template>
-  <article class="s2">
-    <div class="img">
+  <article class="s2" id="s2">
+      <h3 class="title" data-aos="zoom-out"><span class="t1">蘆洲下一站<br />萬坪公園城</span><span class="t2">新蘆特區寓言 全家人的樂園</span></h3>
+      <div class="box">
+        <div class="txt" data-aos="zoom-out" data-aos-delay="300"><img src="./s2/txt.svg" alt="" /></div>
+    <div class="img" data-aos="fade-up" data-aos-delay="600"> 
+      <img src="./s2/img1.png" class="img1" alt="" />
+      <img src="./s2/img2.png" class="img2" alt="" />
     </div>
-    <div class="txt">
-      <h3 class="title">石牌站前 全勝置產</h3>
-      <p class="desc">跟著捷運置產，穩居不敗之地。「高大Σ計畫」近距石牌捷運站350米，石牌路商圈一路繁華，生活所需一應俱全，還有石牌中小學優質學區，高知識殿堂培育孩子成長，四座綠蔭公園環繞，河濱公園健康有氧，是城市最難得的樂活環境。</p>
-    </div>
+  </div>
   </article>
 </template>
 
@@ -13,106 +15,94 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden w-full bg-[#55001A];
+  @apply relative overflow-hidden w-full bg-[#FF3EA1];//
+  height: size(950);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-font-size: 16px;
-padding: size(98) 0;
-  .img{@apply relative  overflow-hidden bg-[#000];
-    width: 80.625em;
-   // width:calc(100% - (20% - 11.4em) - 37em + 10em);
-    height:47.75em;
-    background: url("./s2/1.jpg") center;
-    background-size: cover;
-  }
-  .txt{
-    @apply relative bg-[#E5E5E5];
-    width: 37em;
-    padding: 6em 3.5em;
-    text-align: justify;
-letter-spacing: 0.08em;
-margin: auto -1.2em auto -10em;
-  }
+  justify-content:center;
+  font-size:size(25);
+  padding: size(98) 0;
+  gap:size(85);
   .title{
-font-size: 2em;
-font-weight: 600;
-letter-spacing: 0.1em;
-line-height: 1.5;
-
-color: #9B1E44;}
-  .desc{
-line-height: 2;}
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.45em;
+    line-height: 1.5;
+    color: #FFF;
+    margin: 0 0 0 .5em;
+    .t1{
+      display: block;
+      font-size:3.6em;
+      font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 0em;
+    margin-bottom: .25em;
+    }
+    .t2{
+    text-indent: 0.3em;
+      display: block;}
+  }
+.box{position: relative;
+  width:size(605);
+  display: flex;
+    flex-direction:column;
+  align-items: center;
+  justify-content:center;
+  .txt{margin:3em 0 -2.4em 0;flex: 0 size(457);position: relative;
+  width:size(457);height: size(457);
+  display: flex;
+    flex-direction:column;
+  align-items: center;
+  justify-content:center;
+  &::before{content: "";display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;border-radius: 50%;background: #FFF;}
+img{position: relative;z-index: 2;width: 65%;}  
 }
-@media screen and (max-width: 1730px) {
-.s2 {
-  .img{
-    width:size(1350);
+.img{position: relative;margin-bottom: -2.5em;
+.img1{position: absolute;top: 0;left: 0;
+     animation: an_s 1.5s linear infinite ;}
+}
+@keyframes an_s {
+  0%{
+     transform:scale(.5)translateY(0%);
+     opacity: 0;
+    }
+  50%{
+     transform:scale(.95)translateY(-30%);
+     opacity: 1;
+    }
+  100%{
+     transform:scale(1.5)translateY(-40%);
+     opacity: 0;
+    }
+}
   }
 }
-}
-@media screen and (max-width: 1730px) {
-.s2 {
-font-size: 15px;
-  .txt{
-    width: 35em;
-    padding: 6em size(60);
-margin: auto -1.2em auto size(-180);
-  }
-}
-}
-@media screen and (max-width: 1360px) {
-.s2 {
-font-size:14px;
-  .txt{
-    width: 30em;
-    padding: 6em size(60);
-margin: auto -1.2em auto size(-180);
-  }
-
-}
-}
-@media screen and (max-width: 767px) {
-}
-  
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 // @media screen and (max-width: 767px) { 平常我們手機的設定
-@media screen and (max-width:1024px) {
 
-  .s2 {
-  flex-direction: column;
-font-size:16px;
-padding: sizem(35) 0;
-
-  .img{
-    width:sizem(315);
-    height:sizem(313);
-    background-image: url("./s2/1m.jpg");
-  }
-  .txt{
-    width:sizem(315);
-    padding:sizem(39) sizem(29);
-margin: auto;
-  }
-  .title{
-    margin-bottom: .6em;
-font-size: 1.54em;
-  }
-
-
-
-
-  }
-}
 @media screen and (max-width: 767px) {
   .s2 {
-font-size:13px;
+font-size:sizem(14);
+  height: sizem(770);
+  flex-direction: column;
+  gap:0;
+  padding: 0;
+  .title{
+    margin: 3em 0 0 .5em;
+    .t1{
+    margin-bottom: .0em;
+    }}
+.box{
+  width:sizem(340);
+  .txt{margin:2em 0 -2.4em 0;flex: 0 sizem(330);
+  width:sizem(330);height: sizem(330);
+}
+  }
 
 }
- }
+}
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';

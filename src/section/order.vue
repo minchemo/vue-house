@@ -2,8 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center font-['noto_Serif_tc']">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center font-['noto_Serif_tc']">{{ info.order.subTitle }}</div>
+      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -53,7 +53,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFFF00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF3EA1] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -64,7 +64,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '送出表單' }}
+        {{ sending? '發送中..': '立即預約' }}
       </div>
 
       <!-- Contact Info -->
@@ -103,7 +103,6 @@
 .order {
   width: 100%;
   padding-top: 0;
-  background: linear-gradient(180deg, #000E29 0%, #012A60 100%);
 
   .bird {
     @apply absolute;
@@ -126,7 +125,7 @@
 
   .order-title {
     font-size: size(40);
-    font-weight: 700;
+    font-weight: 500;
     color: #fff;
     padding-top:1.5em;
   }
@@ -136,8 +135,8 @@
     margin-bottom: size(155);
   }
   .order-subTitle{
-    font-size: size(20);
-    color: #fff;
+    font-size: size(17);
+    color: #fffC;
     padding-top:.8em;
     letter-spacing: .1em;
   }
@@ -203,16 +202,15 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #FFF2;
-    border: 1px solid #FFF9;
+    background-color: #FF3EA1;
+    //border: 1px solid #FFF9;
+    border-radius: .5em;
     width: 308px;
     height:3.3em;
     line-height: 3.3;
-    border-radius: 0;
     z-index: 10;
     font-weight: 400;
     position: relative;
-    //margin-bottom:4.5em;
   }
 
   .control {
