@@ -1,8 +1,8 @@
 import { isMobile } from "../utils/index";
 export default {
-    address: "新北市五股區新城八路336號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1074.1772914032156!2d121.45088133297523!3d25.098904823101353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af213b157e05%3A0x7725924cb26159c7!2z5Ly05pyI54Gj5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1653236981921!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/o4YFy1cTGjGUUeCb8",
+    address: '新北市五股區新城六路159號',
+    googleSrc: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7226.616800755305!2d121.4409764!3d25.0914197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8aa1b8531e3%3A0xa9a4897f5a8af782!2zMjQ45paw5YyX5biC5LqU6IKh5Y2A5paw5Z-O5YWt6LevMTU56Jmf!5e0!3m2!1szh-TW!2stw!4v1684718968669!5m2!1szh-TW!2stw',
+    googleLink: 'https://goo.gl/maps/wvbTBjapoEN21LTJ8',
     phone: "02-82922333",
     fbLink: "https://www.facebook.com/103573018971658/",
     fbMessage: "https://m.me/103573018971658/",
