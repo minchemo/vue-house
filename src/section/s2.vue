@@ -5,7 +5,10 @@
         <div class="txt" data-aos="zoom-out" data-aos-delay="300"><img src="./s2/txt.svg" alt="" /></div>
     <div class="img" data-aos="fade-up" data-aos-delay="600"> 
       <img src="./s2/img1.png" class="img1" alt="" />
-      <img src="./s2/img2.png" class="img2" alt="" />
+      <div class="img2" data-aos="fade-up" data-aos-delay="600">
+      <img src="./s2/img20.png" alt="" />
+      <img src="./s2/img21.png" alt="" />
+      <img src="./s2/img22.png" alt="" /></div>
     </div>
   </div>
   </article>
@@ -43,7 +46,7 @@
       display: block;}
   }
 .box{position: relative;
-  width:size(605);
+  width:size(605);//644
   display: flex;
     flex-direction:column;
   align-items: center;
@@ -60,6 +63,24 @@ img{position: relative;z-index: 2;width: 65%;}
 .img{position: relative;margin-bottom: -2.5em;
 .img1{position: absolute;top: 0;left: 0;
      animation: an_s 1.5s linear infinite ;}
+.img2{position: relative;width: 100%;
+  img{position: relative;width: 100%;
+    &:nth-child(2){position: absolute;
+    top: 13.8%;
+    left: 24.4%;
+    width: 8.2%;
+    transform-origin: 80% 90%;
+     transform:rotate(10deg);
+     animation: an1 1.5s ease-in-out infinite alternate;}
+    &:nth-child(3){position: absolute;
+    top: 15.85%;
+    left: 65.7%;
+    width: 8.2%;
+    transform-origin: 10% 90%;
+     transform:rotate(-10deg);
+     animation: an1 1.5s ease-in-out infinite alternate;}
+  }
+}
 }
 @keyframes an_s {
   0%{
@@ -73,6 +94,11 @@ img{position: relative;z-index: 2;width: 65%;}
   100%{
      transform:scale(1.5)translateY(-40%);
      opacity: 0;
+    }
+}
+@keyframes an1 {
+  to{
+     transform:rotate(0deg);
     }
 }
   }
