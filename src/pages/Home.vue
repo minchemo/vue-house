@@ -44,16 +44,15 @@
   position: absolute;top: 0;right: 0;width:calc(1500 * 100vw / 1920); 
   height:65%;filter: blur(2px);
      animation: an 3s ease-in-out infinite alternate ;
-     transform:skewX(-5deg);
-     transform-origin: 0 0;
+     transform:skewX(5deg);
+     transform-origin: 100% 0;
 }
 .bg2{
   position: absolute;bottom: 0;left: 0;width:calc(640 * 100vw / 1920);
   height:25%;filter: blur(2px);
-     transform:skewX(10deg);
      animation: an 3s ease-in-out infinite alternate-reverse;
-     transform-origin: 100% 100%;
-     transform:skewX(-10deg);
+     transform-origin: 0 100%;
+     transform:skewX(10deg);
 }
 @keyframes an {
   to {
@@ -85,10 +84,10 @@
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
 /* import S1new from "@/section/s1new.vue"
 /* import S1new2 from "@/section/s1new2.vue"
 /* 
+import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
