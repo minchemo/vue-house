@@ -12,14 +12,17 @@
    <!-- <Nav v-if="config.showNav" /> -->
   <div class="home bg-[#ccc] overflow-hidden font-['Noto_Sans_TC',serif]">
     <div class="bg">
+    </div>
+    <S1 />
+  <!--    
+    <div class="bg">
       <img src="@/section/s1/bg.jpg" />
       <img src="@/section/s1/bg.jpg" />
       <img src="@/section/s1/bg.jpg" />
     </div>
-    <S1 />
-  <S2 />
-  <!--    <S1new />
+    <S1new />
     <S1new2 />
+  <S2 />
     <S3 /> -->
     <Order />
   </div>
@@ -34,24 +37,12 @@
   margin: 0 auto;
 } */
 .bg{width: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
-img{width: 100%;position:absolute;left: 0;
-  animation: an 2s linear infinite alternate;
-&:first-child{top:50%;transform: translateY(-50%);animation: none;}
-&:nth-child(2){top:0;}
-&:last-child{bottom:0;animation-delay: 2s;}
-}
-@keyframes an {
-  to{opacity: 0;}
-}
+  background-image: url("@/section/s1/bg.jpg");background-size: 100% 100%;
 }
 
 @media screen and (max-width: 767px) {
   .bg{
-img{width: auto;height: 230vw;max-width:900%;left: auto;top:0;
-&:first-child{top:auto;left:50%;transform: translate(-50%,0%);animation: none;}
-&:nth-child(2){top:auto;left:0;}
-&:last-child{bottom:auto;right:0;animation-delay: 2s;}
-}
+  background-image: url("@/section/s1/bgm.jpg");
 }
 }
 </style>

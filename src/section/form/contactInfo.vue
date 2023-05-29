@@ -101,8 +101,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #FF3EA1;}
-.hover\:bg-color2:hover{background-color:#eb0079;}
+.bg-color1{background-color: #AB0;}
+.hover\:bg-color2:hover{background-color:#6A0;}
 
 
 .contact-info-img{
@@ -135,12 +135,12 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #FF3EA1;
+      background-color: #AB0;
       color: #FFF;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-    border-radius: .5em;
+  //  border-radius: .5em;
       font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0.06em;
@@ -152,7 +152,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #eb0079;
+        background-color: #6A0;
         color: #fff;
 
         img {
@@ -236,7 +236,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#FF3EA1;
+    background:#AB0;
 
     .contact-item {
       height: 100%;      

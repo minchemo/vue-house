@@ -53,7 +53,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF3EA1] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -177,13 +177,13 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #0000;border: 1px solid #FFF;color: #FFF;
+    .row{background: #FFF;border: 1px solid #CCC;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #FF0;}
+        > span{color: #F00;}
       }
       input,select{background: inherit;flex: 1;}
       option{color: #666;}
@@ -202,9 +202,11 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #FF3EA1;
+    background-color: #AB0;
     //border: 1px solid #FFF9;
+    border:0;
     border-radius: .5em;
+
     width: 308px;
     height:3.3em;
     line-height: 3.3;
