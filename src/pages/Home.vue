@@ -12,6 +12,8 @@
    <!-- <Nav v-if="config.showNav" /> -->
   <div class="home bg-[#ccc] overflow-hidden font-['Noto_Sans_TC',serif]">
     <div class="bg">
+      <img src="@/section/s1/bg1.png" class="bg1" />
+      <img src="@/section/s1/bg2.png" class="bg2" />
     </div>
     <S1 />
   <!--    
@@ -37,12 +39,45 @@
   margin: 0 auto;
 } */
 .bg{width: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
-  background-image: url("@/section/s1/bg.jpg");background-size: 100% 100%;
+  background-image: url("@/section/s1/bg.jpg");background-size:calc(600 * 100vw / 1920) auto;
+  .bg1{
+  position: absolute;top: 0;right: 0;width:calc(1500 * 100vw / 1920); 
+  height:65%;filter: blur(2px);
+     animation: an 3s ease-in-out infinite alternate ;
+     transform:skewX(-5deg);
+     transform-origin: 0 0;
+}
+.bg2{
+  position: absolute;bottom: 0;left: 0;width:calc(640 * 100vw / 1920);
+  height:25%;filter: blur(2px);
+     transform:skewX(10deg);
+     animation: an 3s ease-in-out infinite alternate-reverse;
+     transform-origin: 100% 100%;
+     transform:skewX(-10deg);
+}
+@keyframes an {
+  to {
+     transform:skewX(0);
+  }
+}
+
 }
 
 @media screen and (max-width: 767px) {
   .bg{
-  background-image: url("@/section/s1/bgm.jpg");
+  background-size:calc(400 * 100vw / 375) auto;
+ // background-image: url("@/section/s1/bgm.jpg");
+ // background-size:100% auto;
+ .bg1{
+    width: 100%;
+    height: 40%;
+    right: -6%;filter: blur(1px);
+}
+.bg2{
+    width: 60%;
+    height: 19%;
+    bottom: 63px;filter: blur(1px);
+}
 }
 }
 </style>

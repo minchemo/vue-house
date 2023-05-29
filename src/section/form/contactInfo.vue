@@ -143,7 +143,7 @@
   //  border-radius: .5em;
       font-size: size(16);
       line-height: 1.6;//3.8
-      letter-spacing: 0.06em;
+      letter-spacing: 0em;
      // max-width: size(280);
       z-index: 1;
       transition: all .3s;
