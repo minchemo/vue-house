@@ -23,6 +23,7 @@
         <h3 class="t3">{{item.t3}}<span class="t4_a" v-if="item.link&$isMobile()"></span><span class="t4" v-if="item.link">下載</span></h3>
         
       </section>
+      <a class="download" href="https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link" target="_blank">公開資料下載</a>
     </div>
   </article>
 </template>
@@ -77,7 +78,14 @@ width: 100%;}
   .t3{flex: 1;display:flex;justify-content:space-between; align-items:flex-start;gap: .5em;}
   .t4_a{width: 5em;display: inline-block;}
   .t4{background: #9B1E44;color: #fff;border-radius:0.2em;text-align: center;display: inline-block;min-width: 5em;flex: 0 5em;}
-
+.download{display: block;background: #9B1E44;
+  color: #fff;width: 10em;padding: .5em 0;
+  text-align: center;margin: 1em auto;border-radius: .5em;
+  letter-spacing: 0.06em;transition:transform .5s,background 1s;
+&:hover{
+background: #790024;transform: scale(1.2);
+}
+}
 
 }
 
