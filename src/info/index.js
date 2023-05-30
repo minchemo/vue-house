@@ -1,4 +1,4 @@
-const caseName = "高大Σ計畫"
+const caseName = "艾美綠河"
 
 export default {
     meta: {
@@ -11,7 +11,7 @@ export default {
     // address: "高雄市三民區博愛一路218號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14728.68466696281!2d120.2933703140734!3d22.647405930223364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04f0a93c64a9%3A0x5df6f456aa9d2987!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A5Y2a5oSb5LiA6LevMjE46Jmf!5e0!3m2!1szh-TW!2stw!4v1685326637556!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/ZPxzNsXB4AuxLE918",
-    phone: "07-3112233",
+    // phone: "07-3112233",
     fbLink: "https://www.facebook.com/100090655188296",
     fbMessage: "https://m.me/100090655188296",
     caseName: caseName,
