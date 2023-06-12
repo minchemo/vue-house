@@ -103,10 +103,10 @@
       .tip-title {
         position: absolute;
         color: #fff;
-        right: 15vw;
-        bottom: 2vw;
+        right: 1.5em;
+        bottom:1.5em;
         z-index: 1;
-        font-size: 1.2vw;
+        font-size:15px;text-shadow: 0 1px 5px #0009;
       }
     }
   }
@@ -157,23 +157,20 @@
           }
           .title {
             display: inline;
-            margin-right: 5vw;
+            margin-right:0;
             font-size: 5.2vw;
-            color: #666666;
+            color: #666666;text-align: center;
+            line-height: 1.5;
           }
           .content {
-            display: inline;
-            font-size: 5.2vw;
+            display: block;
+            font-size: 5.2vw;text-align: center;
             color: #666666;
+            line-height: 1.5;
           }
         }
         .tip-title {
-          position: absolute;
-          color: #fff;
-          right: 5vw;
-          bottom: 5vw;
-          z-index: 1;
-          font-size: 4.5vw;
+          font-size:13px;
         }
       }
 
@@ -287,37 +284,47 @@ export default {
         {
           img: require("./s5/slider_1.jpg"),
           title: "大氣迎賓大廳",
-          content: "奢華震撼挑高7米4",
+          content: "豪華震撼挑高7米2",
         },
         {
           img: require("./s5/slider_2.jpg"),
-          title: "KTV",
-          content: "XXXXXXXXX",
+          title: "豪華寬敞交誼廳",
+          content: "讓您有最舒適的放鬆空間",
         },
         {
           img: require("./s5/slider_3.jpg"),
-          title: "溫泉",
-          content: "XXXXXXXXX",
+          title: "德州撲克室",
+          content: "朋友聚會怡情",
         },
         {
           img: require("./s5/slider_4.jpg"),
-          title: "棋藝室",
-          content: "XXXXXXXXX",
+          title: "歡唱KTV室",
+          content: "盡情抒發釋放壓力",
         },
         {
           img: require("./s5/slider_5.jpg"),
-          title: "景觀健身房",
-          content: "盡覽風光愜意運動",
+          title: "全台唯一冷泉溫泉度假住宅",
+          content: "星級設施呵護您的家人",
         },
         {
           img: require("./s5/slider_6.jpg"),
-          title: "溫泉湯屋",
-          content: "XXXXXXXXX",
+          title: "棋藝室",
+          content: "發揚國粹精華促進情感",
         },
         {
           img: require("./s5/slider_7.jpg"),
-          title: "溫泉湯屋",
-          content: "XXXXXXXXX",
+          title: "豪華健身房",
+          content: "愜意揮灑汗水",
+        },
+        {
+          img: require("./s5/slider_8.jpg"),
+          title: "個人冷泉溫泉湯屋",
+          content: "放鬆療癒您的身心",
+        },
+        {
+          img: require("./s5/slider_9.jpg"),
+          title: "日式溫泉湯屋造景區",
+          content: "讓您回家就像置身國外",
         },
       /* {
           img: isMobile? require("./s5/slider_4_full.jpg") : require("./s5/slider_4.jpg") ,

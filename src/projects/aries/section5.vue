@@ -103,10 +103,10 @@
       .tip-title {
         position: absolute;
         color: #fff;
-        right: 15vw;
-        bottom: 2vw;
+        right: 1.5em;
+        bottom:1.5em;
         z-index: 1;
-        font-size: 1.2vw;
+        font-size:size(15);
       }
     }
   }
