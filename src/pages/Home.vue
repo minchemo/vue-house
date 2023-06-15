@@ -12,6 +12,7 @@
   <Nav v-if="config.showNav" />
   <div class="home bg-[#F1E6D6] overflow-hidden font-['Noto_Sans_TC',serif]">
     <S1 />
+    <S2V />
     <S2 />
     <S3 />
     <S4 />
@@ -38,6 +39,7 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2V from "@/section/s2_v.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
