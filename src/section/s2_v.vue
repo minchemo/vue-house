@@ -92,7 +92,7 @@
 
     .s2 {
         width: 100%;
-        height: sizem(500);
+        height: sizem(330);
         display: flex;
         align-items: center;
         justify-content: center;
