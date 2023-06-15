@@ -93,7 +93,7 @@
   .s10 {
   height: sizem(766);
   background-color: transparent;
-  margin-bottom: -#{sizem(70)};
+  // margin-bottom: -#{sizem(70)};
   z-index: 10;
   .main {
     height: sizem(281);

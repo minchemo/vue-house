@@ -12,7 +12,6 @@
   <Nav v-if="config.showNav" />
   <div class="home bg-[#F1E6D6] overflow-hidden font-['Noto_Sans_TC',serif]">
     <S1 />
-    <S2V />
     <S2 />
     <S3 />
     <S4 />
@@ -22,6 +21,7 @@
     <S8 />
     <S9 />
     <S10 />
+    <S2V />
     <Order />
   </div>
 </template>

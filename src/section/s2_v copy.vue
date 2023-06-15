@@ -1,37 +1,31 @@
 <template>
     <div class="s2 relative">
-      <img loading="lazy" class="play" src="./s2/play.webp" alt="" srcset="" @click="toggleVideo">
-      <div class="player" v-bind:class="{ 'player': true, 'open': videoOpened }">
-        <div class="video-box aspect-video">
-          <iframe
-            v-if="videoOpened"
-            src="https://www.youtube.com/embed/091Ow00vsWk?autoplay=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <img loading="lazy" class="play" src="./s2/play.webp" alt="" srcset="" @click="videoOpened = !videoOpened">
+        <div class="player" v-bind:class="{ 'open': videoOpened }">
+            <div class="video-box aspect-video">
+                <iframe src="https://www.youtube.com/embed/091Ow00vsWk?autoplay=1" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="close shadow-xl font-['noto_sans_tc'] font-bold" @click="videoOpened = !videoOpened">
+                返回
+            </div>
         </div>
-        <div class="close shadow-xl font-['noto_sans_tc'] font-bold" @click="stopVideo">
-          返回
-        </div>
-      </div>
     </div>
-  </template>
+</template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
 .s2 {
-    width: 95%;
-    height: size(800);
+    width: 100%;
+    height: size(1080);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-position: center;
-    background-image: url('@/section/s2/videobg.jpg');
+    background-image: url('@/section/s2/videobg.webp');
     background-size: cover;
-    margin: auto;
+
     .play {
         width: size(142);
         cursor: pointer;
@@ -92,11 +86,11 @@
 
     .s2 {
         width: 100%;
-        height: sizem(500);
+        height: sizem(667);
         display: flex;
         align-items: center;
         justify-content: center;
-        // background-image: url('@/section/s2/videobg_m.webp');
+        background-image: url('@/section/s2/videobg_m.webp');
 
         .play {
             width: sizem(84);
@@ -125,17 +119,16 @@
 </style>
 
 <script setup>
-import { ref, getCurrentInstance } from "vue";
-import AOS from "aos";
+import { ref, getCurrentInstance } from "vue"
+import AOS from 'aos';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const videoOpened = ref(false);
+const splide = ref();
+const currentIdx = ref(0)
+const videoOpened = ref(false)
 
-const toggleVideo = () => {
-  videoOpened.value = !videoOpened.value;
-};
-
-const stopVideo = () => {
-  videoOpened.value = false;
-};
+const move = (newIdx, prevIdx, destIdx) => {
+    currentIdx.value = prevIdx
+    AOS.refresh();
+}
 </script>
