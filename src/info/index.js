@@ -8,10 +8,10 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    // address: "高雄市三民區博愛一路218號",
+    address: "高雄市三民區博愛一路218號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14728.68466696281!2d120.2933703140734!3d22.647405930223364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04f0a93c64a9%3A0x5df6f456aa9d2987!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A5Y2a5oSb5LiA6LevMjE46Jmf!5e0!3m2!1szh-TW!2stw!4v1685326637556!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/ZPxzNsXB4AuxLE918",
-    // phone: "07-3112233",
+    phone: "07-0000",
     fbLink: "https://www.facebook.com/100090655188296",
     fbMessage: "https://m.me/100090655188296",
     caseName: caseName,
@@ -25,7 +25,7 @@ export default {
         ["證照號碼", "(112)雲縣地字000229號"],
         ["經紀人", "廖哲志"], 
     ],
-    gtmCode: ["GTM-WD38SWD"], // 可放置多個
+    gtmCode: ["GTM-W7ZGRNJ"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
