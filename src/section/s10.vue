@@ -7,7 +7,7 @@
                 <div class="item" v-bind:class="{ 'active': slideType == '29' }"
                     @click="slideType = '29'; splide.splide.go(0);">29坪</div>
             </div>
-            <div class="t1" data-aos="fade" data-aos-delay="0">
+            <div class="t1">
                 <div v-if="slideType == '25'">
                     沉穩雅致 雍容綻放
                 </div>
@@ -15,7 +15,7 @@
                     精品美式 經典詮釋
                 </div>
             </div>
-            <div class="t2 font-['Noto_sans_tc']" data-aos="fade" data-aos-delay="200">
+            <div class="t2 font-['Noto_sans_tc']">
                 <div v-if="slideType == '25'">
                     <ul>
                         <li>

@@ -1,8 +1,8 @@
 <template>
     <div class="s4 relative">
         <div class="title">
-            <div class="t1" data-aos="fade" data-aos-delay="0">縱橫核心疆域 縱享繁華之最</div>
-            <div class="t2 font-['Noto_sans_tc']" data-aos="fade" data-aos-delay="200">
+            <div class="t1">縱橫核心疆域 縱享繁華之最</div>
+            <div class="t2 font-['Noto_sans_tc']">
                 自「長耀里」信步閑庭穿越富貴森林公園，黃金軸線文化三路近在眼前；回過頭，中山路商圈繁華燈火橫臥市心，運動中心舉步就到，明星雙語學區、美食採買、休閒活動盡在掌中，一種自然而然的崇高感由此而生。10
                 分鐘悠然漫步，就能得到一切。
             </div>

@@ -1,18 +1,23 @@
 <template>
     <div class="s2 relative">
-        <img class="play" src="@/section/s2/play.webp" alt="" srcset="" @click="videoOpened = !videoOpened">
-        <div class="player" v-bind:class="{ 'open': videoOpened }">
-            <div class="video-box aspect-video">
-                <iframe src="https://www.youtube.com/embed/-EEVOmxNSaM" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="close shadow-xl font-['noto_sans_tc'] font-bold" @click="videoOpened = !videoOpened">
-                返回
-            </div>
+      <img loading="lazy" class="play" src="./s2/play.webp" alt="" srcset="" @click="toggleVideo">
+      <div class="player" v-bind:class="{ 'player': true, 'open': videoOpened }">
+        <div class="video-box aspect-video">
+          <iframe
+            v-if="videoOpened"
+            src="https://www.youtube.com/embed/-EEVOmxNSaM?autoplay=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
+        <div class="close shadow-xl font-['noto_sans_tc'] font-bold" @click="stopVideo">
+          返回
+        </div>
+      </div>
     </div>
-</template>
+  </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
@@ -72,9 +77,9 @@
             font-size: size(24);
             border-radius: 9999px;
             transition: all .2s;
+            cursor: pointer;
 
             &:hover {
-                cursor: pointer;
                 transform: scale(1.05);
             }
         }
@@ -85,11 +90,7 @@
 @media screen and (max-width:768px) {
 
     .s2 {
-        width: 100%;
         height: size-m(667);
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background-image: url('@/section/s2/videobg_m.webp');
 
         .play {
@@ -106,11 +107,8 @@
             }
 
             .close {
-                background-color: #fff;
                 padding: size-m(10) size-m(25);
                 font-size: size-m(15);
-                border-radius: 9999px;
-                transition: all .2s;
             }
 
         }
@@ -119,39 +117,16 @@
 </style>
 
 <script setup>
-import { ref, getCurrentInstance } from "vue"
-import AOS from 'aos';
+import { ref, getCurrentInstance } from "vue";
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const splide = ref();
-const currentIdx = ref(0)
-const videoOpened = ref(false)
+const videoOpened = ref(false);
 
-const move = (newIdx, prevIdx, destIdx) => {
-    currentIdx.value = prevIdx
-    AOS.refresh();
-}
+const toggleVideo = () => {
+  videoOpened.value = !videoOpened.value;
+};
 
-const imgs = ref([
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/1_m.jpg", import.meta.url).href : new URL("../section/s2/1.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/2_m.jpg", import.meta.url).href : new URL("../section/s2/2.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/3_m.jpg", import.meta.url).href : new URL("../section/s2/3.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/4_m.jpg", import.meta.url).href : new URL("../section/s2/4.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/5_m.jpg", import.meta.url).href : new URL("../section/s2/5.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-])
+const stopVideo = () => {
+  videoOpened.value = false;
+};
 </script>

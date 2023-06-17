@@ -1,9 +1,9 @@
 <template>
     <div class="s2 relative">
         <div class="title">
-            <div class="t1" data-aos="fade" data-aos-delay="0">先到公園再到家 <br v-if="$isMobile()" />住進<span>富貴森林公園裡</span>
+            <div class="t1">先到公園再到家 <br v-if="$isMobile()" />住進<span>富貴森林公園裡</span>
             </div>
-            <div class="t2 font-['Noto_sans_tc']" v-if="!$isMobile()" data-aos="fade" data-aos-delay="200">
+            <div class="t2 font-['Noto_sans_tc']" v-if="!$isMobile()">
                 把家種植在一座公園森藏不露，是生活的優渥，更是視野的闊綽。<br />
                 研究顯示：想要健康長壽，25%靠基因，75%靠環境。<br />
                 「長耀里」用一座富貴公園當健康的靠山，不是公園第一排，<br />
@@ -11,7 +11,7 @@
                 紐約中央公園、倫敦海德公園…國際豪宅都在公園畔，全球永不貶值的強勢貨幣，<br />
                 比起富可敵國，真正的富人更想綠可敵國。
             </div>
-            <div class="t2 font-['Noto_sans_tc']" v-else data-aos="fade" data-aos-delay="200">
+            <div class="t2 font-['Noto_sans_tc']" v-else>
                 把家種植在一座公園森藏不露，是生活的優渥，更是視野的闊綽。<br />
                 研究顯示：想要健康長壽，25%靠基因，75%靠環境。<br />
                 「長耀里」用一座富貴公園當健康的靠山，不是公園第一排，而是直接住進公園裡，將文化三路鬧中取靜的優渥、玉帶環腰的富裕風水、億級國際建設輕擁入懷。<br />

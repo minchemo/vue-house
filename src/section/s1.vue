@@ -1,20 +1,20 @@
 <template>
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
     <div class="title flex flex-col items-center justify-center">
-      <img loading="lazy" class="logo" src="@/section/s1/logo_n.svg" alt="" srcset="" data-aos="fade" data-aos-delay="600">
-      <div class="t1" data-aos="fade" data-aos-delay="0">長耀里藏富貴 26層新古典頂級地標</div>
-      <div class="t2 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="200">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
+      <img class="logo" src="@/section/s1/logo_n.svg" alt="" srcset="">
+      <div class="t1">長耀里藏富貴 26層新古典頂級地標</div>
+      <div class="t2 font-['noto_sans_tc']">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
         這是林口第 18 個里，唯一住在公園的里，這個里，屬於長耀，屬於你。<br>
         家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</div>
-      <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
+      <div class="t3 font-['noto_sans_tc']">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
           v-else>｜</span>18-29坪 入主富貴公園</div>
     </div>
-      <img loading="lazy" class="buck" src="@/section/s1/buck.webp" alt="" srcset="">
+      <img class="buck" src="@/section/s1/buck.webp" alt="" srcset="">
       <div class="buckbbg" v-if="!$isMobile()"></div>
       <div class="linestyle"></div>
     <lazy-component>
-      <img loading="lazy" class="circle" src="@/section/s1/circle.webp" alt="" srcset="">
-      <img loading="lazy" class="circle2" src="@/section/s1/circle2.webp" alt="" srcset="">
+      <img class="circle" src="@/section/s1/circle.webp" alt="" srcset="">
+      <img class="circle2" src="@/section/s1/circle2.webp" alt="" srcset="">
     </lazy-component>
 
   </article>
@@ -45,7 +45,9 @@
     .t2 {
       font-size: size(16);
       line-height: 200%;
-      letter-spacing: size(0.5);
+      letter-spacing: 0.03em;
+      
+      text-align:justify;
     }
 
     .t3 {
@@ -54,17 +56,17 @@
       line-height: size(29);
       text-align: center;
       margin: size(30) 0;
+      display: flex;
+      align-items:center;
+      gap: .5em;
 
 
       &::after,
       &::before {
         content: '';
-        height: size(1);
+        height: 1px;
         width: size(140);
         background-color: #fff;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 .5em;
       }
     }
 
@@ -148,8 +150,6 @@
     .title {
       .t1 {
         font-size: size-m(20);
-        text-shadow: 0px 0px size-m(10) rgba(0, 0, 0, 0.1);
-        border-bottom: size-m(1) solid;
         padding-bottom: size-m(6);
         margin-bottom: size-m(18);
       }
@@ -157,7 +157,7 @@
       .t2 {
         font-size: size-m(12);
         line-height: 180%;
-        letter-spacing: size-m(0.02);
+        letter-spacing:0;
         width: size-m(305);
       }
 
@@ -166,16 +166,9 @@
         line-height: size-m(23);
         text-align: center;
         margin: size-m(29) 0;
-
-        &::after {
-          width: size-m(59);
-          height: 1px;
-        }
-
+        &::after,
         &::before {
-          width: size-m(59);
-          height: 1px;
-        }
+          width: size-m(59);}
       }
 
       .logo {
@@ -184,26 +177,9 @@
       }
     }
 
-    .leaf {
-      width: 105%;
-      bottom: -#{size-m(20)};
-      left: -2.5%;
-      animation: move 3s alternate-reverse infinite ease-in-out;
-
-      @keyframes move {
-        from {
-          transform: skewX(-1deg);
-        }
-
-        to {
-          transform: skewX(1deg);
-        }
-      }
-    }
 
     .circle {
       left: size-m(220);
-      bottom: 0;
       width: size-m(261);
     }
 
@@ -212,28 +188,14 @@
       top: size-m(326);
       width: size-m(158);
     }
-
-    @keyframes float {
-      from {
-        transform: translateY(0);
-      }
-
-      to {
-        transform: translateY(10%);
-      }
-    }
-
     .buck {
-      position: absolute;
       right: unset;
       left: size-m(120);
       bottom: size-m(40);
       width: size-m(120);
-      z-index: 4;
     }
 
     .linestyle{
-    position: absolute;
     width: size-m(355);
     height: size-m(627);
     top: size-m(20);
@@ -241,7 +203,6 @@
     left: size-m(10);
     right: size-m(10);
     border-radius: size(30);
-    border: #fff 1px solid;
   }
 
     .buck-e {

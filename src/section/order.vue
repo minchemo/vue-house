@@ -6,9 +6,8 @@
 
       <!-- Title Image -->
       <img v-if="$isMobile()" class="order-title-img" src="@/section/form/logo_n.svg" alt="長耀里" srcset=""
-        data-aos="fade" data-aos-duration="1000">
-      <img v-else class="order-title-img" src="@/section/form/logo_n.svg" alt="長耀里" srcset="" data-aos="fade"
-        data-aos-duration="1000">
+      >
+      <img v-else class="order-title-img" src="@/section/form/logo_n.svg" alt="長耀里" srcset="">
 
       <!-- Custom Image -->
       <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.webp" alt="" srcset="">

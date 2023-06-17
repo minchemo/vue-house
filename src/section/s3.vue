@@ -22,8 +22,8 @@
             </SplideSlide>
         </Splide>
         <div class="info flex flex-col items-center justify-center">
-            <div class="t1" data-aos="fade">富貴人生 <span>十全十美</span></div>
-            <div class="t2" data-aos="fade" data-aos-delay="200" v-html="imgs[currentIdx].content"></div>
+            <div class="t1">富貴人生 <span>十全十美</span></div>
+            <div class="t2" v-html="imgs[currentIdx].content"></div>
         </div>
         <lazy-component>
 

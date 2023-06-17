@@ -1,9 +1,9 @@
 <template>
     <div class="s5 relative">
         <div class="title">
-            <div class="t1" data-aos="fade" data-aos-delay="0">不做<span>平凡</span> 只做<span>地標</span></div>
-            <div class="t2" data-aos="fade" data-aos-delay="200">在林口的天際線上，沒有人比長耀更具企圖心。</div>
-            <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">
+            <div class="t1">不做<span>平凡</span> 只做<span>地標</span></div>
+            <div class="t2">在林口的天際線上，沒有人比長耀更具企圖心。</div>
+            <div class="t3 font-['noto_sans_tc']">
                 長耀建設只願取精華中的精華，蓋地標中的地標，自富人聚居的扶輪公園、繁華的三井商圈、國際影視特區到富貴森林公園，一出手，必在精華區段樹立經典鉅作。<br /><br />
 
                 「長耀Park」以29層凌空視野，打開林口天際全新景觀；「長耀初」用27層傲人身段，再現市心擎天建築美學；<br>「長耀里」26層雲頂地標的姿態立足富貴公園裡。一次又一次的新高度，圓滿所有層峰視野的期望。<br />
@@ -24,7 +24,7 @@
                 start: $isMobile() ? 2 : 20,
                 drag: $isMobile() ? true : false,
                 snap: $isMobile() ? true : false
-            }" @splide:moved="moved" class="slide-box" data-aos="fade" data-aos-delay="200">
+            }" @splide:moved="moved" class="slide-box">
                 <SplideSlide class="slide" @mouseover="selectImg = i" @mouseleave="selectImg = ''"
                     v-for="img, i in imgs" v-lazy:background-image="img.img">
                     <div class="caption font-['noto_serif_jp']">{{ img.content }}</div>
@@ -32,7 +32,7 @@
             </Splide>
         </div>
 
-        <div class="timelines" data-aos="fade" data-aos-delay="200">
+        <div class="timelines">
             <Splide ref="splide" :options="{
                 rewind: true,
                 arrows: false,

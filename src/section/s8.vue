@@ -1,8 +1,8 @@
 <template>
     <div class="s8 relative">
         <div class="title">
-            <div class="t1" data-aos="fade" data-aos-delay="0">長耀幸福社區 <br v-if="$isMobile()" />百坪豪宅也難得的眼界</div>
-            <div class="t2 font-['Noto_sans_tc']" data-aos="fade" data-aos-delay="200">
+            <div class="t1">長耀幸福社區 <br v-if="$isMobile()" />百坪豪宅也難得的眼界</div>
+            <div class="t2 font-['Noto_sans_tc']">
                 地段核心、明星學校、公園環繞、捷運交通…在「長耀里」都是標準配備。<br />
                 建築如何訴說傳世價值？居所如何讓人一眼感動？從長耀的休閒會館和社區總體營造就能找到答案。<br /><br />
                 從林口唯一室內籃球場、落羽松花園、配備國際賽道規格泳池等創舉，不僅體現同步國際的品味及視野，量身規劃的休閒場域，讓長耀建築成為林口最有價值的等待，也是獻給所有住戶最真摯體貼的情意。
