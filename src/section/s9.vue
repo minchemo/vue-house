@@ -4,7 +4,7 @@
             <div class="imgbox">
                 <p class="font-['Noto_sans_tc']">結構工法</p>
             </div>
-            <img loading="lazy" v-if="$isMobile()" class="mask" src="@/section/s9/mask.webp" alt="" srcset="">
+            <img v-if="$isMobile()" class="mask" src="@/section/s9/mask.webp" alt="" srcset="">
         </lazy-component>
 
         <div class="title">
@@ -16,8 +16,8 @@
             </div>
         </div>
         <lazy-component>
-            <img loading="lazy" v-if="$isMobile()" class="rb_leaf pointer-events-none" src="@/section/s9/leaf_m.webp" alt="" srcset="">
-            <img loading="lazy" v-else class="rb_leaf pointer-events-none" src="@/section/s9/leaf.webp" alt="" srcset="">
+            <img v-if="$isMobile()" class="rb_leaf pointer-events-none" src="@/section/s9/leaf_m.webp" alt="" srcset="">
+            <img v-else class="rb_leaf pointer-events-none" src="@/section/s9/leaf.webp" alt="" srcset="">
         </lazy-component>
 
     </div>
@@ -102,6 +102,7 @@
         right: 0;
         bottom: size(0);
         width: size(843);
+        /*
         transform-origin: right bottom;
         animation: rb 2s alternate-reverse infinite ease-in-out;
 
@@ -114,6 +115,7 @@
                 transform: skewX(-5deg);
             }
         }
+        */
     }
 }
 

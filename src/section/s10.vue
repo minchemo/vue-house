@@ -43,10 +43,10 @@
             </div>
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-                    <img loading="lazy" src="@/section/s10/prev.svg" alt="" srcset="">
+                    <img src="@/section/s10/prev.svg" alt="" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-                    <img loading="lazy" src="@/section/s10/next.svg" alt="" srcset=""></button>
+                    <img src="@/section/s10/next.svg" alt="" srcset=""></button>
             </div>
         </div>
         <Splide ref="splide" :options="{
@@ -59,8 +59,8 @@
             interval: 4000,
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img in imgs[slideType]['img']">
-                <img loading="lazy" v-if="$isMobile()" class="decor" src="@/section/s10/decor.webp" alt="" srcset="">
-                <img loading="lazy" class="img" :src="img.img" alt="" srcset="">
+                <img v-if="$isMobile()" class="decor" src="@/section/s10/decor.webp" alt="" srcset="">
+                <img class="img" :src="img.img" alt="" srcset="">
             </SplideSlide>
         </Splide>
     </div>

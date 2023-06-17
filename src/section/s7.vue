@@ -27,8 +27,8 @@
             </SplideSlide>
         </Splide>
         <lazy-component>
-            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.webp" alt="" srcset="">
-            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.webp" alt="" srcset="">
+            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.webp" alt="" srcset="">
+            <img v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.webp" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -164,9 +164,10 @@
         left: 0;
         top: 0;
         width: size(162);
+        z-index: 1;
+        /*
         transform-origin: left top;
         animation: lt 2s alternate-reverse infinite ease-in-out;
-        z-index: 1;
 
         @keyframes lt {
             from {
@@ -176,7 +177,7 @@
             to {
                 transform: skewX(-5deg);
             }
-        }
+        }*/
     }
 
     &::after {

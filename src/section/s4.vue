@@ -8,7 +8,7 @@
             </div>
         </div>
         <lazy-component>
-            <img loading="lazy" v-if="$isMobile()" class="time" src="@/section/s4/time_m.svg" alt="" srcset="">
+            <img v-if="$isMobile()" class="time" src="@/section/s4/time_m.svg" alt="" srcset="">
         </lazy-component>
         <Splide ref="splide" :options="{
             rewind: true,
@@ -25,15 +25,15 @@
 
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">
-                    <img loading="lazy" src="@/assets/prev.svg" alt="" srcset="">
+                    <img src="@/assets/prev.svg" alt="" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next">
-                    <img loading="lazy" src="@/assets/next.svg" alt="" srcset=""></button>
+                    <img src="@/assets/next.svg" alt="" srcset=""></button>
             </div>
         </Splide>
 
         <lazy-component>
-            <img loading="lazy" v-if="!$isMobile()" class="time" src="@/section/s4/time.svg" alt="" srcset="">
+            <img v-if="!$isMobile()" class="time" src="@/section/s4/time.svg" alt="" srcset="">
         </lazy-component>
     </div>
 </template>

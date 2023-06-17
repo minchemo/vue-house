@@ -17,7 +17,7 @@
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img, i in imgs">
                 <div class="icon">
-                    <img loading="lazy" :src="img.img" alt="" srcset="">
+                    <img :src="img.img" alt="" srcset="">
                 </div>
             </SplideSlide>
         </Splide>
@@ -27,10 +27,10 @@
         </div>
         <lazy-component>
 
-            <img loading="lazy" class="rb_leaf" src="@/section/s3/rb_leaf.webp" alt="" srcset="">
-            <img loading="lazy" class="lb_leaf" src="@/section/s3/lb_leaf.webp" alt="" srcset="">
-            <img loading="lazy" class="rt_leaf" src="@/section/s3/rt_leaf.webp" alt="" srcset="">
-            <img loading="lazy" class="lt_leaf" src="@/section/s3/lt_leaf.webp" alt="" srcset="">
+            <img class="rb_leaf" src="@/section/s3/rb_leaf.webp" alt="" srcset="">
+            <img class="lb_leaf" src="@/section/s3/lb_leaf.webp" alt="" srcset="">
+            <img class="rt_leaf" src="@/section/s3/rt_leaf.webp" alt="" srcset="">
+            <img class="lt_leaf" src="@/section/s3/lt_leaf.webp" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -162,7 +162,7 @@
         bottom: 0;
         width: size(917);
         transform-origin: right bottom;
-        animation: rb 2s alternate-reverse infinite ease-in-out;
+      /*  animation: rb 2s alternate-reverse infinite ease-in-out;
 
         @keyframes rb {
             from {
@@ -172,7 +172,7 @@
             to {
                 transform: skewX(-5deg);
             }
-        }
+        }*/
     }
 
     .lb_leaf {
@@ -181,7 +181,7 @@
         bottom: 0;
         width: size(476);
         transform-origin: left bottom;
-        animation: lb 2s alternate-reverse infinite ease-in-out;
+       /*  animation: lb 2s alternate-reverse infinite ease-in-out;
 
         @keyframes lb {
             from {
@@ -192,6 +192,7 @@
                 transform: skewX(5deg);
             }
         }
+        */
     }
 
     .rt_leaf {
@@ -200,7 +201,7 @@
         top: 0;
         width: size(331);
         transform-origin: right top;
-        animation: rt 2s alternate-reverse infinite ease-in-out;
+       /* animation: rt 2s alternate-reverse infinite ease-in-out;
 
         @keyframes rt {
             from {
@@ -210,7 +211,7 @@
             to {
                 transform: skewX(5deg);
             }
-        }
+        }*/
     }
 
     .lt_leaf {
@@ -221,7 +222,7 @@
         transform-origin: left top;
         animation: lt 2s alternate-reverse infinite ease-in-out;
 
-        @keyframes lt {
+      /*  @keyframes lt {
             from {
                 transform: skewX(0);
             }
@@ -230,6 +231,7 @@
                 transform: skewX(-5deg);
             }
         }
+        */
     }
 }
 

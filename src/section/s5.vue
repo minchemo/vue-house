@@ -68,13 +68,13 @@
         </div>
 
         <lazy-component>
-            <img loading="lazy" class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.webp" alt="" srcset="">
-            <img loading="lazy" v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.webp" alt=""
+            <img class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.webp" alt="" srcset="">
+            <img v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.webp" alt=""
                 srcset="">
-            <img loading="lazy" v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.webp" alt="" srcset="">
-            <img loading="lazy" v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.webp" alt=""
+            <img v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.webp" alt="" srcset="">
+            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.webp" alt=""
                 srcset="">
-            <img loading="lazy" v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.webp" alt="" srcset="">
+            <img v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.webp" alt="" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -315,6 +315,7 @@
         right: 0;
         bottom: size(224);
         width: size(843);
+        /*
         transform-origin: right bottom;
         animation: rb 2s alternate-reverse infinite ease-in-out;
 
@@ -326,7 +327,7 @@
             to {
                 transform: skewX(-5deg);
             }
-        }
+        }*/
     }
 
     .rt_leaf {
@@ -334,6 +335,7 @@
         right: 0;
         top: 0;
         width: size(398);
+        /*
         transform-origin: right top;
         animation: rt 2s alternate-reverse infinite ease-in-out;
 
@@ -345,7 +347,7 @@
             to {
                 transform: skewX(5deg);
             }
-        }
+        }*/
     }
 
     .lt_leaf {
@@ -353,6 +355,7 @@
         left: 0;
         top: 0;
         width: size(378);
+        /*
         transform-origin: left top;
         animation: lt 2s alternate-reverse infinite ease-in-out;
 
@@ -365,6 +368,7 @@
                 transform: skewX(-5deg);
             }
         }
+        */
     }
 }
 

@@ -1,9 +1,9 @@
 <template>
     <div class="s2 relative">
-        <img class="play" src="@/section/s2/play.webp" alt="" srcset="" @click="videoOpened = !videoOpened">
+        <img class="play" src="./s2/play.webp" alt="" srcset="" @click="videoOpened = !videoOpened">
         <div class="player" v-bind:class="{ 'open': videoOpened }">
             <div class="video-box aspect-video">
-                <iframe src="https://www.youtube.com/embed/-EEVOmxNSaM" title="YouTube video player" frameborder="0"
+                <iframe src="https://www.youtube.com/embed/091Ow00vsWk?autoplay=1" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
@@ -86,19 +86,19 @@
 
     .s2 {
         width: 100%;
-        height: size-m(667);
+        height: sizem(667);
         display: flex;
         align-items: center;
         justify-content: center;
         background-image: url('@/section/s2/videobg_m.webp');
 
         .play {
-            width: size-m(84);
+            width: sizem(84);
         }
 
         .player {
             backdrop-filter: blur(15px);
-            gap: size-m(50);
+            gap: sizem(50);
 
             .video-box {
                 height: auto;
@@ -107,8 +107,8 @@
 
             .close {
                 background-color: #fff;
-                padding: size-m(10) size-m(25);
-                font-size: size-m(15);
+                padding: sizem(10) sizem(25);
+                font-size: sizem(15);
                 border-radius: 9999px;
                 transition: all .2s;
             }
@@ -131,27 +131,4 @@ const move = (newIdx, prevIdx, destIdx) => {
     currentIdx.value = prevIdx
     AOS.refresh();
 }
-
-const imgs = ref([
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/1_m.jpg", import.meta.url).href : new URL("../section/s2/1.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/2_m.jpg", import.meta.url).href : new URL("../section/s2/2.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/3_m.jpg", import.meta.url).href : new URL("../section/s2/3.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/4_m.jpg", import.meta.url).href : new URL("../section/s2/4.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-    {
-        img: globals.$isMobile() ? new URL("../section/s2/5_m.jpg", import.meta.url).href : new URL("../section/s2/5.jpg", import.meta.url).href,
-        caption: '富貴森林公園'
-    },
-])
 </script>

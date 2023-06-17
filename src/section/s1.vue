@@ -29,55 +29,42 @@
   height: size(1080);
   position: relative;
   background-color: #3a574c;
+      color: #fff;
+      font-weight: 400;
 
   .title {
     .t1 {
       font-weight: 700;
       font-size: size(56);
       line-height: 150%;
-      color: #fff;
       border-bottom: 1px solid;
       padding-bottom: size(10);
       margin-bottom: size(10);
     }
 
     .t2 {
-      font-weight: 400;
       font-size: size(16);
       line-height: 200%;
       letter-spacing: size(0.5);
-      color: #fff;
     }
 
     .t3 {
       position: relative;
-      font-weight: 400;
       font-size: size(20);
       line-height: size(29);
       text-align: center;
       margin: size(30) 0;
-      color: #fff;
 
-      &::after {
-        content: '';
-        height: size(1);
-        width: size(140);
-        right: 105%;
-        background-color: #fff;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
 
+      &::after,
       &::before {
         content: '';
         height: size(1);
         width: size(140);
-        left: 105%;
         background-color: #fff;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 .5em;
       }
     }
 
@@ -86,52 +73,31 @@
       margin-bottom: size(50);
     }
   }
-
-  .leaf {
+  .circle,
+  .circle2 {
     position: absolute;
-    width: size(1983);
-    bottom: -#{size(112)};
-    left: -#{size(41)};
-    animation: move 3s alternate-reverse infinite ease-in-out;
-    transform-origin: bottom;
-    z-index: 5;
-
-    @keyframes move {
-      from {
-        transform: skewX(0deg);
-      }
-
-      to {
-        transform: skewX(5deg);
-      }
-    }
+    animation: float 4s alternate-reverse infinite ease-in-out;
+      transform: translateY(10%);
+    opacity: .2;
   }
 
+
   .circle {
-    position: absolute;
-    left: -#{size(288)};
+    left: size(-288);
     bottom: 0;
-    width: size(785.78);
-    animation: float 4s alternate-reverse infinite ease-in-out;
-    opacity: .2;
+    width: size(786);
   }
 
   .circle2 {
-    position: absolute;
     left: size(1461);
     top: size(112);
     width: size(378);
-    animation: float 3s alternate-reverse infinite ease-in-out;
-    opacity: .2;
+    animation-delay: 2s;
   }
 
   @keyframes float {
     from {
       transform: translateY(0);
-    }
-
-    to {
-      transform: translateY(10%);
     }
   }
 
