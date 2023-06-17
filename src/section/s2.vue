@@ -119,8 +119,8 @@ text-indent: 0.3em;
 }
 </style>
 <script setup>
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
+//import UIkit from 'uikit';
+//import Icons from 'uikit/dist/js/uikit-icons';
 import {  computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
