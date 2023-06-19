@@ -17,20 +17,20 @@
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img, i in imgs">
                 <div class="icon">
-                    <img :src="img.img" alt="" srcset="">
+                    <img :src="img.img" alt="長耀里" srcset="">
                 </div>
             </SplideSlide>
         </Splide>
         <div class="info flex flex-col items-center justify-center">
-            <div class="t1">富貴人生 <span>十全十美</span></div>
-            <div class="t2" v-html="imgs[currentIdx].content"></div>
+            <h2 class="t1">富貴人生 <span>十全十美</span></h2>
+            <p class="t2" v-html="imgs[currentIdx].content"></p>
         </div>
         <lazy-component>
 
-            <img class="rb_leaf" src="@/section/s3/rb_leaf.webp" alt="" srcset="">
-            <img class="lb_leaf" src="@/section/s3/lb_leaf.webp" alt="" srcset="">
-            <img class="rt_leaf" src="@/section/s3/rt_leaf.webp" alt="" srcset="">
-            <img class="lt_leaf" src="@/section/s3/lt_leaf.webp" alt="" srcset="">
+            <img class="rb_leaf" src="@/section/s3/rb_leaf.webp" alt="長耀里" srcset="">
+            <img class="lb_leaf" src="@/section/s3/lb_leaf.webp" alt="長耀里" srcset="">
+            <img class="rt_leaf" src="@/section/s3/rt_leaf.webp" alt="長耀里" srcset="">
+            <img class="lt_leaf" src="@/section/s3/lt_leaf.webp" alt="長耀里" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -180,8 +180,8 @@
         left: 0;
         bottom: 0;
         width: size(476);
-        transform-origin: left bottom;
-       /*  animation: lb 2s alternate-reverse infinite ease-in-out;
+       /* transform-origin: left bottom;
+         animation: lb 2s alternate-reverse infinite ease-in-out;
 
         @keyframes lb {
             from {
@@ -200,8 +200,8 @@
         right: 0;
         top: 0;
         width: size(331);
-        transform-origin: right top;
-       /* animation: rt 2s alternate-reverse infinite ease-in-out;
+       /* transform-origin: right top;
+        animation: rt 2s alternate-reverse infinite ease-in-out;
 
         @keyframes rt {
             from {
@@ -219,10 +219,10 @@
         left: 0;
         top: 0;
         width: size(373);
-        transform-origin: left top;
+       /* transform-origin: left top;
         animation: lt 2s alternate-reverse infinite ease-in-out;
 
-      /*  @keyframes lt {
+        @keyframes lt {
             from {
                 transform: skewX(0);
             }

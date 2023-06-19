@@ -1,8 +1,8 @@
 <template>
     <div class="s2 relative">
         <div class="title">
-            <div class="t1">先到公園再到家 <br v-if="$isMobile()" />住進<span>富貴森林公園裡</span>
-            </div>
+            <h3 class="t1">先到公園再到家 <br v-if="$isMobile()" />住進<span>富貴森林公園裡</span>
+            </h3>
             <div class="t2 font-['Noto_sans_tc']" v-if="!$isMobile()">
                 把家種植在一座公園森藏不露，是生活的優渥，更是視野的闊綽。<br />
                 研究顯示：想要健康長壽，25%靠基因，75%靠環境。<br />
@@ -34,10 +34,10 @@
 
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.svg" alt="" srcset="">
+                    <img src="@/assets/prev.svg" alt="長耀里" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.svg" alt="" srcset=""></button>
+                    <img src="@/assets/next.svg" alt="長耀里" srcset=""></button>
             </div>
         </Splide>
     </div>

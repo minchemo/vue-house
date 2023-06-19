@@ -10,11 +10,11 @@
       <img v-else class="order-title-img" src="@/section/form/logo_n.svg" alt="長耀里" srcset="">
 
       <!-- Custom Image -->
-      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.webp" alt="" srcset="">
-      <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.webp" alt="" srcset="">
-      <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.webp" alt="" srcset="">
-      <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.webp" alt="" srcset="">
-      <img class="buck" src="@/section/form/buck.webp" alt="" srcset="">
+      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.webp" alt="長耀里" srcset="">
+      <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.webp" alt="長耀里" srcset="">
+      <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.webp" alt="長耀里" srcset="">
+      <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.webp" alt="長耀里" srcset="">
+      <img class="buck" src="@/section/form/buck.webp" alt="長耀里" srcset="">
 
 
       <!-- Form -->

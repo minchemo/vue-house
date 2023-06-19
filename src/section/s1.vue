@@ -1,20 +1,20 @@
 <template>
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
-    <div class="title flex flex-col items-center justify-center">
-      <img class="logo" src="@/section/s1/logo_n.svg" alt="" srcset="">
-      <div class="t1">長耀里藏富貴 26層新古典頂級地標</div>
-      <div class="t2 font-['noto_sans_tc']">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
-        這是林口第 18 個里，唯一住在公園的里，這個里，屬於長耀，屬於你。<br>
-        家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</div>
-      <div class="t3 font-['noto_sans_tc']">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
-          v-else>｜</span>18-29坪 入主富貴公園</div>
-    </div>
-      <img class="buck" src="@/section/s1/buck.webp" alt="" srcset="">
-      <div class="buckbbg" v-if="!$isMobile()"></div>
       <div class="linestyle"></div>
+    <div class="title flex flex-col items-center justify-center">
+      <img class="logo" src="@/section/s1/logo_n.svg" alt="長耀里" srcset="">
+      <h2 class="t1">長耀里藏富貴 26層新古典頂級地標</h2>
+      <p class="t2 font-['noto_sans_tc']">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
+        這是林口第 18 個里，唯一住在公園的里，這個里，屬於長耀，屬於你。<br>
+        家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</p>
+      <h3 class="t3 font-['noto_sans_tc']">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
+          v-else>｜</span>18-29坪 入主富貴公園</h3>
+    </div>
+      <img class="buck" src="@/section/s1/buck.webp" alt="長耀里" srcset="">
+      <div class="buckbbg" v-if="!$isMobile()"></div>
     <lazy-component>
-      <img class="circle" src="@/section/s1/circle.webp" alt="" srcset="">
-      <img class="circle2" src="@/section/s1/circle2.webp" alt="" srcset="">
+      <img class="circle" src="@/section/s1/circle.webp" alt="長耀里" srcset="">
+      <img class="circle2" src="@/section/s1/circle2.webp" alt="長耀里" srcset="">
     </lazy-component>
 
   </article>
@@ -208,7 +208,7 @@
     .buck-e {
       position: absolute;
       right: unset;
-      left: -#{size-m(8)};
+      left: size-m(-8);
       bottom: 0;
       width: size-m(168);
       z-index: 3;

@@ -4,20 +4,20 @@
             <div class="imgbox">
                 <p class="font-['Noto_sans_tc']">結構工法</p>
             </div>
-            <img v-if="$isMobile()" class="mask" src="@/section/s9/mask.webp" alt="" srcset="">
+            <img v-if="$isMobile()" class="mask" src="@/section/s9/mask.webp" alt="長耀里" srcset="">
         </lazy-component>
 
         <div class="title">
 
-            <div class="t1">全面房護 家倍安心 </div>
-            <div class="t2 font-['Noto_sans_tc']">
+            <h2 class="t1">全面房護 家倍安心 </h2>
+            <p class="t2 font-['Noto_sans_tc']">
                 採用筏式基礎工法全面開挖，排樁深入地表 25 公尺，地下四周採用厚 60公分擋土牆發揮擋土與隔水功能，同時於水箱層筏基以及地上 8~10F 將水泥磅數提高到 5000psi、地下 B6 到地上 7F 更加強到
                 6000psi，整棟大樓結構磐石穩固，屹立不搖。
-            </div>
+            </p>
         </div>
         <lazy-component>
-            <img v-if="$isMobile()" class="rb_leaf pointer-events-none" src="@/section/s9/leaf_m.webp" alt="" srcset="">
-            <img v-else class="rb_leaf pointer-events-none" src="@/section/s9/leaf.webp" alt="" srcset="">
+            <img v-if="$isMobile()" class="rb_leaf pointer-events-none" src="@/section/s9/leaf_m.webp" alt="長耀里" srcset="">
+            <img v-else class="rb_leaf pointer-events-none" src="@/section/s9/leaf.webp" alt="長耀里" srcset="">
         </lazy-component>
 
     </div>

@@ -1,15 +1,15 @@
 <template>
     <div class="s6 relative">
         <div class="title">
-            <div class="t1">長耀建築 <span>永恆價值</span><br />
-                林口黃金軸線上的凌雲壯志</div>
-            <div class="t2">
+            <h2 class="t1">長耀建築 <span>永恆價值</span><br />
+                林口黃金軸線上的凌雲壯志</h2>
+            <h3 class="t2">
                 豪宅的定義不在價格，而在於追求的價值。
-            </div>
-            <div class="t3 font-['Noto_sans_tc']">
+            </h3>
+            <p class="t3 font-['Noto_sans_tc']">
                 在林口，只有長耀真正懂得土地與建築的價值，延請台北市豪宅團隊擘劃，名師大匠精心琢磨，因地制宜，攬景入境，完美發揮森林第一排價值，26
                 層雄壯身姿，擎起富貴公園新古典頂級地標不凡氣勢，一席大師鉅作，尊貴不必言表，風華傳世珍藏。
-            </div>
+            </p>
         </div>
         <Splide ref="splide" :options="{
             rewind: true,
@@ -26,10 +26,10 @@
 
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.svg" alt="" srcset="">
+                    <img src="@/assets/prev.svg" alt="長耀里" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.svg" alt="" srcset=""></button>
+                    <img src="@/assets/next.svg" alt="長耀里" srcset=""></button>
             </div>
         </Splide>
     </div>
@@ -53,12 +53,12 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        line-height: 1.5;
+        font-weight: 700;
 
         .t1 {
-            font-weight: 700;
             font-size: size(40);
             margin-bottom: size(40);
-            color: #fff;
 
             span {
                 color: #F5EAD4;
@@ -68,16 +68,13 @@
         }
 
         .t2 {
-            font-weight: 700;
             font-size: size(24);
-            line-height: size(34);
             margin-bottom: size(30);
         }
 
         .t3 {
             font-weight: 300;
             font-size: size(20);
-            line-height: 150%;
             letter-spacing: size(.05);
             width: size(416);
             text-align: justify;

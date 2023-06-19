@@ -1,6 +1,6 @@
 <template>
     <div class="s2 relative">
-      <img loading="lazy" class="play" src="./s2/play.webp" alt="" srcset="" @click="toggleVideo">
+      <img loading="lazy" class="play" src="./s2/play.webp" alt="長耀里" srcset="" @click="toggleVideo">
       <div class="player" v-bind:class="{ 'player': true, 'open': videoOpened }">
         <div class="video-box aspect-video">
           <iframe

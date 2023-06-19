@@ -1,13 +1,13 @@
 <template>
     <div class="s5 relative">
         <div class="title">
-            <div class="t1">不做<span>平凡</span> 只做<span>地標</span></div>
-            <div class="t2">在林口的天際線上，沒有人比長耀更具企圖心。</div>
-            <div class="t3 font-['noto_sans_tc']">
+            <h2 class="t1">不做<span>平凡</span> 只做<span>地標</span></h2>
+            <h3 class="t2">在林口的天際線上，沒有人比長耀更具企圖心。</h3>
+            <p class="t3 font-['noto_sans_tc']">
                 長耀建設只願取精華中的精華，蓋地標中的地標，自富人聚居的扶輪公園、繁華的三井商圈、國際影視特區到富貴森林公園，一出手，必在精華區段樹立經典鉅作。<br /><br />
 
                 「長耀Park」以29層凌空視野，打開林口天際全新景觀；「長耀初」用27層傲人身段，再現市心擎天建築美學；<br>「長耀里」26層雲頂地標的姿態立足富貴公園裡。一次又一次的新高度，圓滿所有層峰視野的期望。<br />
-                仰之彌高，才是地標，而長耀建設，不做平凡，只做地標。 </div>
+                仰之彌高，才是地標，而長耀建設，不做平凡，只做地標。 </p>
         </div>
         <div class="works">
             <Splide ref="splide" :options="{
@@ -68,13 +68,13 @@
         </div>
 
         <lazy-component>
-            <img class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.webp" alt="" srcset="">
-            <img v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.webp" alt=""
+            <img class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.webp" alt="長耀里" srcset="">
+            <img v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.webp" alt="長耀里"
                 srcset="">
-            <img v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.webp" alt="" srcset="">
-            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.webp" alt=""
+            <img v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.webp" alt="長耀里" srcset="">
+            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.webp" alt="長耀里"
                 srcset="">
-            <img v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.webp" alt="" srcset="">
+            <img v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.webp" alt="長耀里" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -92,13 +92,12 @@
         top: size(115);
         left: size(218);
         z-index: 5;
+        color: #fff;
+        font-weight: 700;
+        line-height: 1.5;
 
         .t1 {
-            font-weight: 700;
             font-size: size(40);
-            line-height: 150%;
-            color: #fff;
-
             span {
                 &:nth-child(1) {
                     color: #74a894;
@@ -109,22 +108,15 @@
                 }
             }
         }
-
         .t2 {
-            font-weight: 700;
             font-size: size(24);
-            line-height: size(34);
             margin-bottom: size(45);
-            color: #fff;
         }
 
         .t3 {
             font-weight: 400;
             font-size: size(20);
-            line-height: 150%;
-            letter-spacing: size(.05);
             width: size(1035);
-            color: #fff;
 
         }
     }

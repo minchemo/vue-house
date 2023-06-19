@@ -1,14 +1,14 @@
 <template>
     <div class="s4 relative">
         <div class="title">
-            <div class="t1">縱橫核心疆域 縱享繁華之最</div>
-            <div class="t2 font-['Noto_sans_tc']">
+            <h2 class="t1">縱橫核心疆域 縱享繁華之最</h2>
+            <p class="t2 font-['Noto_sans_tc']">
                 自「長耀里」信步閑庭穿越富貴森林公園，黃金軸線文化三路近在眼前；回過頭，中山路商圈繁華燈火橫臥市心，運動中心舉步就到，明星雙語學區、美食採買、休閒活動盡在掌中，一種自然而然的崇高感由此而生。10
                 分鐘悠然漫步，就能得到一切。
-            </div>
+            </p>
         </div>
         <lazy-component>
-            <img v-if="$isMobile()" class="time" src="@/section/s4/time_m.svg" alt="" srcset="">
+            <img v-if="$isMobile()" class="time" src="@/section/s4/time_m.svg" alt="長耀里" srcset="">
         </lazy-component>
         <Splide ref="splide" :options="{
             rewind: true,
@@ -25,15 +25,15 @@
 
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">
-                    <img src="@/assets/prev.svg" alt="" srcset="">
+                    <img src="@/assets/prev.svg" alt="長耀里" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next">
-                    <img src="@/assets/next.svg" alt="" srcset=""></button>
+                    <img src="@/assets/next.svg" alt="長耀里" srcset=""></button>
             </div>
         </Splide>
 
         <lazy-component>
-            <img v-if="!$isMobile()" class="time" src="@/section/s4/time.svg" alt="" srcset="">
+            <img v-if="!$isMobile()" class="time" src="@/section/s4/time.svg" alt="長耀里" srcset="">
         </lazy-component>
     </div>
 </template>

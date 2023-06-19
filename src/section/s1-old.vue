@@ -7,14 +7,14 @@
         家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</div>
       <div class="t3 font-['noto_sans_tc']" data-aos="fade" data-aos-delay="400">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
           v-else>| </span>18-29坪 富貴公園首席</div>
-      <img class="logo" src="@/section/s1/logo.png" alt="" srcset="" data-aos="fade" data-aos-delay="600">
+      <img class="logo" src="@/section/s1/logo.png" alt="長耀里" srcset="" data-aos="fade" data-aos-delay="600">
     </div>
     <lazy-component>
-      <img class="leaf" src="@/section/s1/leaf.png" alt="" srcset="">
-      <img class="circle" src="@/section/s1/circle.png" alt="" srcset="">
-      <img class="circle2" src="@/section/s1/circle2.png" alt="" srcset="">
-      <img class="buck" src="@/section/s1/buck.png" alt="" srcset="">
-      <img class="buck-e" src="@/section/s1/buck-e.gif" alt="" srcset="">
+      <img class="leaf" src="@/section/s1/leaf.png" alt="長耀里" srcset="">
+      <img class="circle" src="@/section/s1/circle.png" alt="長耀里" srcset="">
+      <img class="circle2" src="@/section/s1/circle2.png" alt="長耀里" srcset="">
+      <img class="buck" src="@/section/s1/buck.png" alt="長耀里" srcset="">
+      <img class="buck-e" src="@/section/s1/buck-e.gif" alt="長耀里" srcset="">
     </lazy-component>
 
   </article>

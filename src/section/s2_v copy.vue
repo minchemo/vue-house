@@ -1,6 +1,6 @@
 <template>
     <div class="s2 relative">
-        <img class="play" src="./s2/play.webp" alt="" srcset="" @click="videoOpened = !videoOpened">
+        <img class="play" src="./s2/play.webp" alt="長耀里" srcset="" @click="videoOpened = !videoOpened">
         <div class="player" v-bind:class="{ 'open': videoOpened }">
             <div class="video-box aspect-video">
                 <iframe src="https://www.youtube.com/embed/091Ow00vsWk?autoplay=1" title="YouTube video player" frameborder="0"

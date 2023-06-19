@@ -2,18 +2,18 @@
     <div class="s10 relative">
         <div class="title">
             <div class="btns">
-                <div class="item" v-bind:class="{ 'active': slideType == '25' }"
-                    @click="slideType = '25'; splide.splide.go(0);">25坪</div>
-                <div class="item" v-bind:class="{ 'active': slideType == '29' }"
-                    @click="slideType = '29'; splide.splide.go(0);">29坪</div>
+                <h2 class="item" v-bind:class="{ 'active': slideType == '25' }"
+                    @click="slideType = '25'; splide.splide.go(0);">25坪</h2>
+                <h2 class="item" v-bind:class="{ 'active': slideType == '29' }"
+                    @click="slideType = '29'; splide.splide.go(0);">29坪</h2>
             </div>
             <div class="t1">
-                <div v-if="slideType == '25'">
+                <h3 v-if="slideType == '25'">
                     沉穩雅致 雍容綻放
-                </div>
-                <div v-else>
+                </h3>
+                <h3 v-else>
                     精品美式 經典詮釋
-                </div>
+                </h3>
             </div>
             <div class="t2 font-['Noto_sans_tc']">
                 <div v-if="slideType == '25'">
@@ -43,10 +43,10 @@
             </div>
             <div class="arrows splide__arrows">
                 <button class="splide__arrow splide__arrow--prev" @click="splide.splide.go('<')">
-                    <img src="@/section/s10/prev.svg" alt="" srcset="">
+                    <img src="@/section/s10/prev.svg" alt="長耀里" srcset="">
                 </button>
                 <button class="splide__arrow splide__arrow--next" @click="splide.splide.go('>')">
-                    <img src="@/section/s10/next.svg" alt="" srcset=""></button>
+                    <img src="@/section/s10/next.svg" alt="長耀里" srcset=""></button>
             </div>
         </div>
         <Splide ref="splide" :options="{
@@ -59,8 +59,8 @@
             interval: 4000,
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img in imgs[slideType]['img']">
-                <img v-if="$isMobile()" class="decor" src="@/section/s10/decor.webp" alt="" srcset="">
-                <img class="img" :src="img.img" alt="" srcset="">
+                <img v-if="$isMobile()" class="decor" src="@/section/s10/decor.webp" alt="長耀里" srcset="">
+                <img class="img" :src="img.img" alt="長耀里" srcset="">
             </SplideSlide>
         </Splide>
     </div>

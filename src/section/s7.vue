@@ -27,8 +27,8 @@
             </SplideSlide>
         </Splide>
         <lazy-component>
-            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.webp" alt="" srcset="">
-            <img v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.webp" alt="" srcset="">
+            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.webp" alt="長耀里" srcset="">
+            <img v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.webp" alt="長耀里" srcset="">
         </lazy-component>
     </div>
 </template>
@@ -61,10 +61,10 @@
             width: size(400);
             height: size(886);
             margin: 0 size(20);
-            background: #000000;
+            background: #000;
             border: size(1) solid #5F6142;
             border-radius: size(40);
-            color: #FFFFFF;
+            color: #FFF;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -72,6 +72,8 @@
             padding: size(100) size(20);
             filter: blur(4px);
             will-change: transform;
+            line-height: 1.5;
+            font-weight: 700;
 
             .avatar {
                 position: absolute;
@@ -84,10 +86,7 @@
             }
 
             .t1 {
-                font-weight: 700;
                 font-size: size(20);
-                line-height: 150%;
-                letter-spacing: size(0.05);
                 margin-bottom: size(4);
                 z-index: 1;
                 text-shadow: 0px size(4) size(10) rgba(0, 0, 0, 0.8);
@@ -102,15 +101,12 @@
                 text-shadow: 0px size(4) size(10) rgba(0, 0, 0, 0.8);
 
                 .t2 {
-                    font-weight: 700;
                     font-size: size(40);
-                    line-height: 150%;
                 }
 
                 .t3 {
-                    font-weight: 700;
                     font-size: size(20);
-                    line-height: 200%;
+                    line-height:2;
                     letter-spacing: size(0.05);
                 }
 

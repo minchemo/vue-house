@@ -1,13 +1,13 @@
 <template>
   <input type="checkbox" id="policy-modal" class="modal-toggle" />
-  <div class="modal">
+  <article class="modal">
     <div class="modal-box w-11/12 max-w-5xl text-left">
       <div class="text-3xl font-bold">個資告知事項聲明</div>
-      <h3 class="text-lg py-4">
+      <h2 class="text-lg py-4">
         非常歡迎您光臨「{{
           info.caseName
         }}網站」（以下簡稱本網站），為了讓您能夠安心使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
-      </h3>
+      </h2>
       <div class="py-4">
         <h3 class="font-bold">一、隱私權保護政策的適用範圍</h3>
         <p>
@@ -85,7 +85,7 @@
         <label for="policy-modal" class="btn">關閉</label>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script setup>
