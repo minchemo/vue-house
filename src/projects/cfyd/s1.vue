@@ -2,10 +2,11 @@
   <div class="s1">
 
 <div data-aos="fade">
-<img src="./s1/bg.jpg" class="bg-img" alt="" loading="lazy">
+<img src="./s1/bg.jpg" class="bg-img" alt="" loading="lazy" v-if="!isMobile">
+<img src="./s1/bg_m.jpg" class="bg-img" alt="" loading="lazy" v-if="isMobile">
 </div>
 <!-- <img src="./s1/en.png" class="en" alt="" loading="lazy"> -->
-<img src="./s1/style2.png" data-aos="fade-right" class="style1" alt="" loading="lazy">
+<!--img src="./s1/style2.png" data-aos="fade-right" class="style1" alt="" loading="lazy"-->
 <img src="./s1/synlogo.png" class="synlogo" alt="" loading="lazy">
 
     <div class="title">
@@ -48,9 +49,9 @@
       left:size(-180);
       bottom:size(0);
       z-index: 0;
-      transform:skewX(7deg);
-      transform-origin: 100% 26%;
-      animation: anx 3s linear infinite alternate;
+      //transform:skewX(7deg);
+      //transform-origin: 100% 26%;
+      //animation: anx 3s linear infinite alternate;
     }
     @keyframes anx{
       to {
@@ -113,13 +114,14 @@
   .s1 {
     position: relative;
     width: size-m(375);
-    height: size-m(667);
+    height: size-m(610);
     z-index: 12;
 
     .bg-img{
-      bottom:size-m(0);
-      left:size-m(-500);
-    width: size-m(1060);
+      top:size-m(0);
+      left:size-m(0);
+      width: size-m(375);
+      height: size-m(610);
       transform-origin: 100% 0%;
     }
     .style1{
@@ -153,7 +155,9 @@
       bottom: size-m(250);
       .t1 {
         width:86%;
-    margin: 0 auto 30% auto;
+    margin: 53% auto 0% auto;
+    filter: drop-shadow(0em 0em 0.8em rgba(9, 20, 58, 0.6));
+    
       }
       .t2 {
         margin-top: size-m(15);
