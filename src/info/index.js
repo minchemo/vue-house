@@ -1,8 +1,8 @@
 import { isMobile } from "../utils/index";
 export default {
-    address: '新北市五股區新城六路159號',
-    googleSrc: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7226.616800755305!2d121.4409764!3d25.0914197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8aa1b8531e3%3A0xa9a4897f5a8af782!2zMjQ45paw5YyX5biC5LqU6IKh5Y2A5paw5Z-O5YWt6LevMTU56Jmf!5e0!3m2!1szh-TW!2stw!4v1684718968669!5m2!1szh-TW!2stw',
-    googleLink: 'https://goo.gl/maps/wvbTBjapoEN21LTJ8',
+    address: '新北市五股區成泰路三段580號',
+    googleSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57806.504097274774!2d121.37842134863278!3d25.105026000000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af3ce52d7e1f%3A0xfc36e6280758b4a5!2z5Ly05pyI54Gj!5e0!3m2!1szh-TW!2stw!4v1688086827059!5m2!1szh-TW!2stw',
+    googleLink: 'https://goo.gl/maps/WFLug6HCPioVuGYKA',
     phone: "02-82922333",
     fbLink: "https://www.facebook.com/103573018971658/",
     fbMessage: "https://m.me/103573018971658/",
