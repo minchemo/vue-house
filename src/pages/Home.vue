@@ -10,14 +10,17 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#ccc] overflow-hidden font-['Noto_Sans_TC',serif]">
+  <div class="home bg-[#F1EDD0] overflow-hidden font-['Noto_Sans_TC',serif]">
      <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-  <S2 />
+    <S2 />
     <S3 />
+    <S4 />
+    <S5 />
+    <S6 />
   <!--    
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -86,8 +89,9 @@ import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
-/* import S1new from "@/section/s1new.vue"
-/* import S1new2 from "@/section/s1new2.vue"
+import S4 from "@/section/s4.vue"
+import S5 from "@/section/s5.vue"
+import S6 from "@/section/s6.vue"
 /* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */

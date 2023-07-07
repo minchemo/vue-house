@@ -1,103 +1,93 @@
 <template>
   <article class="s4">
-    <div class="main" data-aos="fade">
-      <div class="t1" data-aos="fade-down" data-aos-delay="200">世界級森林公園特區</div>
-      <img class="t2" data-aos="fade-down" data-aos-delay="400" src="@/section/s4/internationalpark.svg" alt="" srcset="">
-      <img class="t3" data-aos="fade-down" data-aos-delay="600" src="@/section/s4/centralpark.svg" alt="" srcset="">
-    </div>
-    <div class="bottom">
-      <div>
-        <div class="t1" data-aos="fade-down" data-aos-delay="200" >開窗 世界級公園視野</div>
-        <div class="t2" data-aos="fade-down" data-aos-delay="400">一次同步紐約、倫敦、巴黎、東京、台北…<br v-if="$isMobile()"/>都會公園自成高端聚落，綠地不敗、<br v-if="!$isMobile()" />
-          抬漲未來<br v-if="$isMobile()"/><span v-else>，</span>小港首選正3萬坪森林公園第一排，入手趁現在
-        </div>
+    <div class="slider">
+      <div class="arrows">
+        <img loading="lazy"  class="prev" @click="splide.splide.go('<')" src="@/section/form/prev.png" alt="" srcset="">
+        <img loading="lazy"  class="next" @click="splide.splide.go('>')" src="@/section/form/next.png" alt="" srcset="">
       </div>
-      <div class="imgs">
-        <img  data-aos="fade" data-aos-delay="200" src="@/section/s4/1.jpg" alt="" srcset="">
-        <img  data-aos="fade" data-aos-delay="400" src="@/section/s4/2.jpg" alt="" srcset="">
-        <img  data-aos="fade" data-aos-delay="600" src="@/section/s4/3.jpg" alt="" srcset="">
-        <img  data-aos="fade" data-aos-delay="800" src="@/section/s4/4.jpg" alt="" srcset="">
-      </div>
-      <div class="caption">以上皆實景示意圖</div>
+      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+        </SplideSlide>
+      </Splide>
     </div>
+    <div class="main">
+      <div class="txt">
+    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-out">VILLA LIFESTYLE</h4>
+    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-out">徜徉大墅人生<br />看見家的無限可能</h3>
+        <p class="t2">近0%低公設比買下超高坪效電梯透天，單純52戶規劃，戶戶臨路並擁有私家庭院、四大主臥套房、室內車位，自在漫遊歐式大墅生活。</p>
+      </div>
+      <div class="caption">{{ imgs[currentSlideIndex].caption }}</div>
+    </div>
+
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/style/function.scss';
 
 .s4 {
-  @apply relative overflow-hidden w-full bg-[#E7E7E7];
-  height: size(900);
-  padding-top: size(24);
+  @apply relative overflow-hidden flex items-center justify-center text-white;
+  width: 100%;
+  height: size(1080);
+  padding: size(32) size(30) size(36);
+  background-size: cover;
+  background-image: url('@/section/bg.jpg');
 
   .main {
-    @apply relative w-full;
-    height: size(612);
-    background-image: url('@/section/s4/main.jpg');
-    background-size: cover;
-    .t1 {
-      @apply absolute;
-      color: #fff;
-      font-family: 'Noto Serif TC';
-      font-weight: 700;
-      font-size: size(30);
-      left: size(42);
-      bottom: size(94.5);
-    }
-
-    .t2 {
-      @apply absolute;
-      width: size(961.96);
-      left: size(42.86);
-      bottom: 0;
-    }
-    .t3 {
-      @apply absolute;
-      width: size(203.83);
-      right: size(73.6);
-      bottom: size(24.88);
-
-    }
-  }
-
-  .bottom {
-    @apply flex items-center justify-between w-full;
-    padding-left: size(43);
-    padding-right: size(64);
-    margin-top: size(44);
-    color: #595758;
-
-    .t1 {
-      font-family: 'Noto Serif TC';
-      font-weight: 700;
-      font-size: size(42);
-      line-height: 150%;
-    }
-    .t2 {
-      font-weight: 400;
-      font-size: size(18);
-      line-height: 170%;
-    }
-
-    .imgs {
-      @apply flex;
-      gap: size(7);
-      img {
-        width: size(270.22);
-      }
-    }
+    @apply grow flex items-center justify-center text-[#1E1B1B];
     .caption {
       @apply absolute;
-      right: size(64);
-      bottom: size(20);
-      font-weight: 400;
-      font-size: size(12);
-      color: #595758
+      left: size(580);
+      bottom: size(36);
+      font-family: 'Noto Sans TC';
+      font-weight: 500;
+      font-size: size(16);
+      letter-spacing: 0.05em;
+      padding-bottom: size(16);
+      border-bottom: size(1) solid #000;
+    }
+  .txt {
+    .t1 {
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size(61);
+      letter-spacing: 0.05em;
+      &::before {
+        width: size(161);
+        height: size(67.04);
+        right: 5%;
+        bottom: -11%;
+      }
+      &::after {
+        width: size(56.72);
+        height: size(64.45);
+        right: -9%;
+        bottom: 50%;
+      }
+    }
+    .t2{
+      font-family: 'Noto Serif TC';
+      font-weight: 600;
+      width: size(509);
+      font-size: size(20);
+      line-height: 170%;
+      letter-spacing: 0.05em;
+      margin-top: size(34);
     }
   }
 }
-  
+
+  .slider {
+    flex-basis: size(1000);
+    height: 100%;
+    .slide-item {
+      @apply bg-cover;
+      width: size(1000);
+      height: size(1012);
+      
+    }
+  }
+}
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -105,59 +95,58 @@
 @media screen and (max-width: 767px) {
 
   .s4 {
-    @apply bg-white;
-  height: sizem(629);
-  padding-top: 0;
+  @apply flex-col;
+    height: sizem(605);
+    padding: sizem(10) sizem(10) sizem(10);
+    background-image: url('@/section/bgm.jpg');
 
   .main {
-    height: sizem(215);
-    background-image: url('@/section/s4/main_m.jpg');
-    .t1 {
+    .caption {
       @apply absolute;
-      font-size: sizem(12);
-      left: sizem(16);
-      bottom: sizem(27.8);
+      left: 0;
+      bottom: sizem(322.37);
+      font-family: 'Noto Sans TC';
+      font-size: sizem(13);      
+      padding: sizem(10);
+      border-bottom: 0;
+      z-index: 10;
+      background-color: #111;
+      color: #fff;
     }
-
-    .t2 {
-      width: sizem(319.2);
-      left: sizem(16.29);
-      bottom: 0;
+  .txt {
+    .t1 {
+      font-size: sizem(25);
+      &::before {
+        width: sizem(64.35);
+        height: sizem(26.8);
+        right: 18%;
+        bottom: -11%;
+      }
+      &::after {
+        width: sizem(22.67);
+        height: sizem(25.76);
+        right: 9%;
+        bottom: 50%;  
+          }
     }
-    .t3 {
-      width: sizem(61.3);
-      right: sizem(17);
-      bottom: sizem(72.25);
-
+    .t2{
+      width: sizem(310);
+      font-size: sizem(14);
+      margin-top: sizem(15);
+      text-align:justify;
     }
   }
+}
 
-  .bottom {
-    @apply flex-col text-center;
-    padding-left: sizem(32.5);
-    padding-right: sizem(32.5);
-    margin-top: sizem(36.12);
-
-    .t1 {
-      font-size: sizem(19);
-      margin-bottom: sizem(5);
-    }
-    .t2 {
-      font-size: sizem(12);
-      margin-bottom: sizem(23);
-    }
-
-    .imgs {
-      @apply flex-wrap;
-      gap: sizem(4);
-      img {
-        width: sizem(153);
-      }
-    }
-    .caption {
-      right: sizem(32.5);
-      bottom: sizem(40);
-      font-size: sizem(12);
+  .slider {
+    flex-basis: sizem(359);
+    height: auto;
+    width: 100%;
+    .slide-item {
+      @apply bg-cover;
+      width: 100%;
+      height: sizem(359);
+      
     }
   }
   }
@@ -167,5 +156,65 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
+const getImg = (path) => {
+  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
+  return new URL(`./${path}_m.jpg`, import.meta.url).href
+}
+
+const splide = ref();
+
+const currentSlideIndex = ref(0);
+
+const moved = (newIdx, prevIdx, destIdx) => {
+  currentSlideIndex.value = prevIdx
+}
+
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: true,
+  autoplay: true,
+  interval: 4000,
+  gap: 0,
+  type: 'loop'
+}
+
+const imgs = [
+  {
+    img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s4/2_m.webp", import.meta.url).href : new URL("./s4/2.webp", import.meta.url).href,
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s4/3_m.webp", import.meta.url).href : new URL("./s4/3.webp", import.meta.url).href,
+    caption: "林口 長耀初"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s4/4_m.webp", import.meta.url).href : new URL("./s4/4.webp", import.meta.url).href,
+    caption: "林口 長耀里"
+  },
+]
+/*
+const imgs = [
+  {
+    img: getImg('s4/1'),
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: getImg('s4/2'),
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: getImg('s4/3'),
+    caption: "林口 長耀初"
+  },
+  {
+    img: getImg('s4/4'),
+    caption: "林口 長耀里"
+  },
+]
+*/
 </script>
