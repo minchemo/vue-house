@@ -36,41 +36,44 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     navList: [{
-            name: "重大建設",
+            name: "微笑歐洲",
+            target: ".s1",
+            offset: "",
+        },{
+            name: "10大看點",
             target: ".s3",
             offset: "",
         },{
-            name: "公園特區",
+            name: "大墅人生",
             target: ".s4",
             offset: "",
         },{
-            name: "生活機能",
-            target: ".s5",
-            offset: "",
-        },{
-            name: "制震地標",
+            name: "機能在手",
             target: ".s6",
             offset: "",
         },{
-            name: "會館公設",
+            name: "港灣錢潮",
             target: ".s7",
             offset: "",
         },{
-            name: "加值服務",
-            target: ".s8",
-            offset: "",
-        },{
-            name: "選書合作",
+            name: "麗寶承諾",
             target: ".s9",
             offset: "",
         },{
-            name: "誠意保固",
-            target: ".s10",
+            name: "立即來電",
+            target: ".contact-info",
             offset: "",
+            type: 'btn'
         },{
-            name: "國際建材",
-            target: ".s10",
+            name: "地圖導航",
+            target: ".google-map",
             offset: "",
+            type: 'btn'
+        },{
+            name: "立即預約",
+            target: ".contact",
+            offset: "",
+            type: 'btn'
         },
     ],
 }

@@ -2,18 +2,18 @@
     <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
+        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
             v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
         </div>
-        <div class="menu flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc']"
+        <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
+            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
                 v-for="item, i in info.navList" @click="scrollTo(item.target)">
                 <!-- <img src="@/assets/menu_icon.png" alt="" srcset=""> -->
                 <span>{{ item.name }}</span>
             </div>
-            <div class="close" @click="menuOpen = !menuOpen">
+            <div class="close" @click="menuOpen = !menuOpen"  v-if="$isMobile()">
                 <img src="@/assets/close.png" alt="" srcset="">
             </div>
         </div>
@@ -120,21 +120,24 @@
 
     .menu {
         position: fixed;
+        flex-direction: row;
         top: 0;
-        right: 0;background: rgba(0, 17, 5, 0.7);
+        right: 0;
+        background: #002B69;
       //  background-image: url('@/section/menubg.png');
-        background-size: cover;
+     /*   background-size: cover;
         background-repeat: no-repeat;
-        background-position: bottom left;
-        width: size(351);
-        height: 100%;
+        background-position: bottom left; */
+        width:100%;
+        height: size(60);
         z-index: 5;
-        transform: translateX(150%);
-        transition: all .5s;
-        border-radius: 0;
-        padding: size(100) 0;
-        gap: size(30);
-  backdrop-filter: blur(2px);
+        // transform: translateX(150%);
+        // transition: all .5s;
+        padding: 0;
+        font-size: size(16);
+        gap: 2em;
+        font-weight: 300;
+ // backdrop-filter: blur(2px);
         // backdrop-filter: blur(2px);
 
         .menu-item {
@@ -142,9 +145,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: size(24);
             // gap: size(10);
-            font-weight: 300;
             letter-spacing: 0.1em;
 
             img {
@@ -165,6 +166,19 @@
 
                 &:after {
                     width: 100%;
+                }
+            }
+            &.btn2{
+                background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);
+                border-radius: 2em;
+                margin-right:-1em;
+                padding:.5em 1em;
+
+                &:hover {
+                    background:linear-gradient(180deg, #E48726 0%, #eb7f20 10.00%, #f19832 41.00%, #f06b37 72.00%, #9e3410 100%);
+                    &:after {
+                        width:0;
+                    }
                 }
             }
 
@@ -314,26 +328,25 @@
         }
 
         .menu {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 100%;
             height: 100%;
-            z-index: 0;
+          //  z-index: 0;
             transform: translateX(150%);
             transition: all .5s;
-            border-radius: 0;
-            padding: 0;
+           // padding: 0;
+           font-size: sizem(18);
             gap: sizem(23);
             justify-content: center;
+            flex-direction: column;
           //  background-image: url('@/section/menubgm.png');
 
             .menu-item {
-                font-size: sizem(20);
 
                 img {
                     width: sizem(30);
                 }
+            &.btn2{
+                margin:0 auto -.5em auto;
+            }
 
             }
 
@@ -351,11 +364,11 @@
             }
 
             .close {
-                position: relative;
+                position: absolute;
                 left: unset;
-                bottom: unset;
+                bottom: 0;
                 transform: translateX(0);
-                top: unset;
+                top: 0;
                 width: sizem(44);
                 height: sizem(44);
                 cursor: pointer;
@@ -372,12 +385,14 @@
 </style>
 
 <script setup>
-import { inject, getCurrentInstance, onMounted, ref } from 'vue';
+import { inject,computed, getCurrentInstance, onMounted, ref } from 'vue';
 import info from "@/info"
 
 const menuOpen = ref(false)
 
 const globals = getCurrentInstance().appContext.config.globalProperties
+const isMobile = computed(() => globals.$isMobile())
+
 const higherScreen = ref(true)
 
 const scrollPos = ref(0)

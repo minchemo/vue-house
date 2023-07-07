@@ -9,13 +9,15 @@
     <img class="w-32" src="@/assets/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-   <!-- <Nav v-if="config.showNav" /> -->
+   <Nav v-if="config.showNav" />
   <div class="home bg-[#ccc] overflow-hidden font-['Noto_Sans_TC',serif]">
-    <div class="bg">
+     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
-    </div>
+    </div> -->
     <S1 />
+  <S2 />
+    <S3 />
   <!--    
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -23,9 +25,7 @@
       <img src="@/section/s1/bg.jpg" />
     </div>
     <S1new />
-    <S1new2 />
-  <S2 />
-    <S3 /> -->
+    <S1new2 /> -->
     <Order />
   </div>
 </template>
@@ -37,7 +37,7 @@
   max-width: unset;
   height: unset;
   margin: 0 auto;
-} */
+}
 .bg{width: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
   background-image: url("@/section/s1/bg.jpg");background-size:calc(600 * 100vw / 1920) auto;
   .bg1{
@@ -61,9 +61,9 @@
 }
 
 }
-
+ */
 @media screen and (max-width: 767px) {
-  .bg{
+ /* .bg{
   background-size:calc(400 * 100vw / 375) auto;
  // background-image: url("@/section/s1/bgm.jpg");
  // background-size:100% auto;
@@ -77,13 +77,15 @@
     height: 19%;
     bottom: 63px;filter: blur(1px);
 }
-}
+} */
 }
 </style>
 
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
 /* import S1new from "@/section/s1new.vue"
 /* import S1new2 from "@/section/s1new2.vue"
 /* 

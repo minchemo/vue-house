@@ -1,12 +1,15 @@
 <template>
   <article class="s1" id="s1">
+    <img class="t0" src="./s1/pc.jpg" alt="" srcset="">
     <!-- 
-    <img class="t0" src="./s1/mo.jpg" alt="" srcset="">
     <img src="./s1/t.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="!$isMobile()"/>
     <img src="./s1/tm.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="$isMobile()"/> -->
        <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
-       <div class="txt font-['noto_serif_tc']" data-aos="zoom-out" data-aos-duration="1000"><span class="t1">高鐵<br  v-if="$isMobile()"/>台積宅</span><span class="t2">2</span><span class="t3">字頭</span><span class="t4">THE GREEN ROAD</span></div>
+    <img class="bg" src="./s1/bg.jpg" alt="" srcset="">
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+       <div class="txt" data-aos="zoom-out" data-aos-duration="1000">
+        <span class="t1">實坪電梯別墅｜樂享花園會館</span><span class="t2">64-74坪｜全新落成｜正式公開</span>
+      </div>
 
   </article>
 </template>
@@ -19,29 +22,30 @@
   min-height: size(900);
   max-height: size(1080);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items:center;
   font-size:size(25);
 
-   .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .2;z-index: 2;}
-   .t12{width: size(1223);position: absolute;top:15.5%;left: 0;right: 0;margin: auto;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));}
-   .txt{font-weight: 900;
+   .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .3;z-index: 2;}
+   .bg{position: absolute;top:calc(50% + (100vw * -540 / 1920));left: 0;width: 100%;}
+   .txt{
     text-align: center;
-    line-height:1.1;
+    line-height:1.5;
    position: relative;
    left: -.5em;
     color: #FFF;
-    margin: 0 auto 5.3em auto;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
-    .t1{font-size: 7.2em;display: inline-block;transform: scaleX(.96);
-    text-align: left;letter-spacing: .05em;}
-    .t2{font-size: 14.4em;position: relative;top: .03em;left: -.04em;margin: auto -0.01em;    color: #FFF000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+    margin: 0 10em 1.8em 2em;font-size:1.28em;
+    .t1{font-size:1.1em;display: inline-block;transform: scaleX(.96);font-weight: 700;margin: 0;
+    text-align: left;letter-spacing: .05em;  color: #171C60;}
+    .t2{font-size: 1em;position: relative;top: .03em;left: -.04em;margin: auto -0.01em;  background: linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);padding: 0.3em;
     }
-    .t3{font-size: 3.84em;display: inline-block;width: 1em;line-height: 1;position: relative;top: .1em;}
-  .t4{display:block;margin: .6em auto 0 auto;letter-spacing:1.61em;text-indent: 2.7em;font-weight:700;
   }
-  }
-  .logo{width: size(420);filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));margin: 0 auto 3.5em auto;}
+  .logo{width: size(503);margin: 2em 0 0 0;}
 
 }
 

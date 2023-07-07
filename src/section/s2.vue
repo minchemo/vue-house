@@ -18,7 +18,7 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden w-full bg-[#FF3EA1];//
+  @apply relative overflow-hidden w-full bg-[#F27200];//
   height: size(950);
   display: flex;
   align-items: center;
