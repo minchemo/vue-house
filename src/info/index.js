@@ -63,13 +63,13 @@ export default {
         },
         {
               name: "地圖導航",
-              target: ".google-map",
+              target: ".gmap",
               offset: "",
               type: "btn",
         }
         ,{
             name: "立即預約",
-            target: ".contact",
+            target: ".order",
             offset: "",
             type: 'btn'
         },
