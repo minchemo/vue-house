@@ -101,39 +101,6 @@ img {
     }
   }
 }
-
-.decor.aos-animate {
-  @apply relative;
-  &::before {
-    @apply absolute bg-contain bg-no-repeat;
-    content: '';
-    background-image: url('@/section/text-decor.png');
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 500ms;
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-  }
-  &::after {
-    @apply absolute bg-contain bg-no-repeat;
-    content: '';
-    background-image: url('@/section/text-leaf.png');
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: fadeIn 1s forwards;
-    animation-delay: 1000ms;
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateX(0%);
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 767px) {
 
 .slider {
