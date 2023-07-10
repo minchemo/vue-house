@@ -101,8 +101,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #AB0;}
-.hover\:bg-color2:hover{background-color:#6A0;}
+.bg-color1{background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);;}
+.hover\:bg-color2:hover{background-color:linear-gradient(180deg, #E48726 0%, #eb7f20 10.00%, #f19832 41.00%, #f06b37 72.00%, #9e3410 100%);}
 
 
 .contact-info-img{
@@ -135,7 +135,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #AB0;
+      background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -170,7 +170,7 @@
       }
 
       &.address {
-        background-color: #fff;
+        background: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -236,7 +236,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#AB0;
+    background:#002B69;
 
     .contact-item {
       height: 100%;      

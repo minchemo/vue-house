@@ -21,6 +21,9 @@
     <S4 />
     <S5 />
     <S6 />
+    <S7 />
+    <S8 />
+    <S9 />
   <!--    
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -35,53 +38,130 @@
 
 
 <style lang="scss">
-/* img {
+@import '@/assets/style/function.scss';
+
+img {
   display: inline;
   max-width: unset;
   height: unset;
   margin: 0 auto;
 }
-.bg{width: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
-  background-image: url("@/section/s1/bg.jpg");background-size:calc(600 * 100vw / 1920) auto;
-  .bg1{
-  position: absolute;top: 0;right: 0;width:calc(1500 * 100vw / 1920); 
-  height:65%;filter: blur(2px);
-     animation: an 3s ease-in-out infinite alternate ;
-     transform:skewX(5deg);
-     transform-origin: 100% 0;
-}
-.bg2{
-  position: absolute;bottom: 0;left: 0;width:calc(640 * 100vw / 1920);
-  height:25%;filter: blur(2px);
-     animation: an 3s ease-in-out infinite alternate-reverse;
-     transform-origin: 0 100%;
-     transform:skewX(10deg);
-}
-@keyframes an {
-  to {
-     transform:skewX(0);
+
+.slider {
+  @apply relative;
+  .caption{
+      @apply absolute;
+      right:1em;
+      bottom: 1em;
+      font-weight: 500;
+      font-size: size(15);
+      color: #FFF;
+      text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);}
+  .arrows{
+    @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
+    padding: 0; 
+    height: 100%;
+    pointer-events: none;
+    .prev,
+    .next{
+      width:5%;
+      display: flex;
+      pointer-events: stroke;
+      cursor: pointer;
+      
+  justify-content: center;
+  align-items:center;
+    background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+    background-size: 50% auto;
+    transition:background-color .5s ;
+    &:hover{background-color: #0003;}
+    }
+    .prev{transform: scaleX(-1);
+    }
+    img {
+      margin: unset;
+      @apply cursor-pointer hover:opacity-50;
+    }
+  }
+  .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    bottom: size(19);
+    gap: size(6.9);
+    li {
+      button {
+        @apply rounded-full  hover:opacity-50;
+        width: size(62.84);
+        height: size(9.4);
+        border: size(1) solid #fff;
+
+        &.is-active{
+          @apply bg-white;
+      }
+      }
+    }
   }
 }
 
+.decor.aos-animate {
+  @apply relative;
+  &::before {
+    @apply absolute bg-contain bg-no-repeat;
+    content: '';
+    background-image: url('@/section/text-decor.png');
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 500ms;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  &::after {
+    @apply absolute bg-contain bg-no-repeat;
+    content: '';
+    background-image: url('@/section/text-leaf.png');
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: fadeIn 1s forwards;
+    animation-delay: 1000ms;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+  }
 }
- */
+
 @media screen and (max-width: 767px) {
- /* .bg{
-  background-size:calc(400 * 100vw / 375) auto;
- // background-image: url("@/section/s1/bgm.jpg");
- // background-size:100% auto;
- .bg1{
-    width: 100%;
-    height: 40%;
-    right: -6%;filter: blur(1px);
-}
-.bg2{
-    width: 60%;
-    height: 19%;
-    bottom: 63px;filter: blur(1px);
-}
-} */
-}
+
+.slider {
+  @apply relative;
+  .arrows{
+    .prev,
+    .next{
+      width: 8%;
+    }
+  }
+  .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    bottom: sizem(6.7);
+    gap: sizem(2.5);
+    li {
+      button {
+        @apply rounded-full  hover:opacity-50;
+        width: sizem(22.3);
+        height: sizem(3.34);
+        border: sizem(1) solid #fff;
+
+        &.is-active{
+          @apply bg-white;
+      }
+      }
+    }
+  }
+}}
 </style>
 
 <script setup>
@@ -92,6 +172,9 @@ import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
+import S7 from "@/section/s7.vue"
+import S8 from "@/section/s8.vue"
+import S9 from "@/section/s9.vue"
 /* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */

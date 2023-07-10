@@ -8,13 +8,13 @@
             <div class="bar"></div>
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
+            <template v-for="item, i in info.navList">
             <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
-                v-for="item, i in info.navList" @click="scrollTo(item.target)">
-                <!-- <img src="@/assets/menu_icon.png" alt="" srcset=""> -->
+                @click="scrollTo(item.target)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
                 <span>{{ item.name }}</span>
             </div>
+            </template>
             <div class="close" @click="menuOpen = !menuOpen"  v-if="$isMobile()">
-                <img src="@/assets/close.png" alt="" srcset="">
             </div>
         </div>
     </div>
@@ -55,31 +55,33 @@
 
         .bar {
             width: size(41.43);
-            height: 1px;
-            background-color: #fff;
+            height: 2px;
+            background-color: currentColor;
             position: relative;
             transition: all .5s;
+            color: #002B69;
+            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
 
             &::after {
                 content: '';
                 width: 100%;
-                height: 1px;
+                height: 2px;
                 bottom: -#{size(10)};
                 position: absolute;
-                background-color: #fff;
-                transition: all .5s;
-                transform: translateX(-10%);
+                background-color: currentColor;
+            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
+                //transform: translateX(-10%);
             }
 
             &::before {
                 content: '';
                 width: 100%;
-                height: 1px;
+                height: 2px;
                 top: -#{size(10)};
                 position: absolute;
-                background-color: #fff;
-                transition: all .5s;
-                transform: translateX(-10%);
+                background-color: currentColor;
+            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
+                //transform: translateX(-10%);
             }
         }
 
@@ -252,10 +254,10 @@
 
     .nav {
         // width: sizem(350);
-        right: sizem(25);
-        top: sizem(20);
+        right:0;
+        top:0;
         // padding: 0 sizem(8);
-        height: sizem(30);
+        height:auto;
         border-radius: 9999px;
 
         .logo {
@@ -271,8 +273,9 @@
         .menu-btn {
             width: sizem(40);
             height: sizem(40);
-            padding: sizem(2.5);
+            padding:0;
             font-size: sizem(20);
+            margin: sizem(10);
 
             p {
                 font-size: sizem(14);
@@ -368,16 +371,18 @@
                 left: unset;
                 bottom: 0;
                 transform: translateX(0);
-                top: 0;
+                top: sizem(10);right: sizem(10);
                 width: sizem(44);
                 height: sizem(44);
                 cursor: pointer;
-                margin-top: sizem(10);
-                margin-bottom: sizem(0);
-
-                img {
-                    width: 100%;
-                }
+                margin:0;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items:center;
+                &::before,&::after{content:"";background: #FFF;height: 2px;width: 100%;display: block;}
+                &::before{transform: rotate(45deg);margin-bottom:-2px;}
+                &::after{transform: rotate(-45deg);}
             }
         }
     }

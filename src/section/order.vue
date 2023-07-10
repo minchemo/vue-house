@@ -3,7 +3,7 @@
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
       <div class="order-title text-center font-['noto_serif_tc']">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center font-['noto_serif_tc']">{{ info.order.subTitle }}</div>
+      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -51,9 +51,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-white">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -126,8 +126,8 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #fff;
-    padding-top:1.5em;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    color: #A3191F;
+    padding-top:5em;
   }
 
   .order-title-img {
@@ -136,10 +136,10 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #fffE;
+    color: #A3191F;
     padding-top:.8em;
-    letter-spacing: .1em;
-    font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    letter-spacing: 0em;
+    font-weight: 500;
   }
   .cus-divider {
     margin: 0 auto;
@@ -203,10 +203,10 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #AB0;
+    background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: .5em;
+    border-radius: 0em;
 
     width: 308px;
     height:3.3em;
@@ -268,7 +268,7 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1.5em;
+      padding-top:4.5em;
     }
     .order-subTitle{
       font-size: sizem(13);

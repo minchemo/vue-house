@@ -3,7 +3,7 @@
     <img class="bg1" src="./s3/img.jpg" alt="" srcset="">
     <img class="bg2" src="./s3/bg2.png" alt="" srcset="">
     <div class="txt">
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-out">10大看點微笑成家</h3></div>
+    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in">10大看點微笑成家</h3></div>
   </article>
 </template>
 
@@ -51,18 +51,18 @@
 // @media screen and (max-width: 767px) { 平常我們手機的設定
 
 @media screen and (max-width: 767px) {
-  .s2 {
+  .s3 {
 font-size:sizem(15);
-  height: sizem(667);
+  height: sizem(400);
   flex-direction: column;
   gap:0;
   padding: 0;
-   .bg1{position: absolute;top:0;
-    left: -30%;
-    width: 240%;max-width: 900%;}
-   .bg2{position: absolute;bottom:0;left: -10%;width: 230%;max-width: 900%;}
+   .bg1{position: absolute;top:12%;
+    left: -20%;
+    width: 140%;}
+   .bg2{position: absolute;bottom:0;left: -10%;width: 230%;}
    .txt{
-    margin: 3em auto 0;
+    margin: 1em auto 0;
    }
 
 }

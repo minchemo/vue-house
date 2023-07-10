@@ -3,8 +3,8 @@
     <img class="bg1" src="./s2/bg.jpg" alt="" srcset="">
     <img class="bg2" src="./s2/bg2.png" alt="" srcset="">
     <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-out">SMILE EUROPE</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-out">邂逅歐式別墅心生活</h3></div>
+    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in">SMILE EUROPE</h4>
+    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in" data-aos-delay="300">邂逅歐式別墅心生活</h3></div>
     <div class="caption">情境示意圖</div>
   </article>
 </template>
@@ -66,6 +66,11 @@ font-size:sizem(15);
    .txt{
     margin: 3em auto 0;
    }
+    .caption {
+      right:1em;
+      bottom: 13em;
+      font-size: sizem(12);
+    }
 
 }
 }
