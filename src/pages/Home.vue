@@ -12,8 +12,6 @@
    <!-- <Nav v-if="config.showNav" /> -->
   <div class="home bg-[#ccc] overflow-hidden font-['Noto_Sans_TC',serif]">
     <div class="bg">
-      <img src="@/section/s1/bg1.png" class="bg1" />
-      <img src="@/section/s1/bg2.png" class="bg2" />
     </div>
     <S1 />
   <!--    
@@ -39,7 +37,8 @@
   margin: 0 auto;
 } */
 .bg{width: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
-  background-image: url("@/section/s1/bg.jpg");background-size:calc(600 * 100vw / 1920) auto;
+  //background-image: url("@/section/s1/bg.jpg");background-size:calc(600 * 100vw / 1920) auto;
+  background:#1C96D4;
   .bg1{
   position: absolute;top: 0;right: 0;width:calc(1500 * 100vw / 1920); 
   height:65%;filter: blur(2px);
