@@ -2,8 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center font-['noto_serif_tc']">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center font-['noto_serif_tc']">{{ info.order.subTitle }}</div>
+      <div class="order-title text-center font-['noto_sans_tc']">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center font-['noto_sans_tc']">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -125,9 +125,9 @@
 
   .order-title {
     font-size: size(40);
-    font-weight: 700;
+    font-weight: 00;
     color: #fff;
-    padding-top:1.5em;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    padding-top:1.5em;//filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
   .order-title-img {
@@ -139,7 +139,7 @@
     color: #fffE;
     padding-top:.8em;
     letter-spacing: .1em;
-    font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    font-weight: 500;//filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
     margin: 0 auto;
@@ -203,7 +203,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #AB0;
+    background-color: #D71718;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;

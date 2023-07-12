@@ -5,10 +5,13 @@
         <div class="txt" data-aos="zoom-out" data-aos-delay="300"><img src="./s2/txt.svg" alt="" /></div>
     <div class="img" data-aos="fade-up" data-aos-delay="600"> 
       <img src="./s2/img1.png" class="img1" alt="" />
+      
       <div class="img2" data-aos="fade-up" data-aos-delay="600">
       <img src="./s2/img20.png" alt="" />
       <img src="./s2/img21.png" alt="" />
-      <img src="./s2/img22.png" alt="" /></div>
+      <img src="./s2/img22.png" alt="" />
+      </div>
+
     </div>
   </div>
   </article>
@@ -23,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content:center;
-  font-size:size(25);
+  font-size:size(25); 
   padding: size(98) 0;
   gap:size(85);
   .title{
