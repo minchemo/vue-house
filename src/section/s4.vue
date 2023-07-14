@@ -84,8 +84,9 @@
 
   .main {
     padding: 0 sizem(32.5);
-    .caption {
-    }
+
+    
+    
   .txt {
   .title{
     font-size: 1.8em;
@@ -99,6 +100,12 @@
   .slider {
     height: auto;
     width: 100%;
+
+    .caption {
+    font-size:sizem(12); 
+    right:sizem(5);
+    bottom:sizem(5); 
+    }
     .slide-item {
       @apply bg-cover;
       width: 100%;

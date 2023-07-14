@@ -104,8 +104,6 @@
    .bg2{position: absolute;bottom:0;left: -90%;width: 230%;max-width: 900%;pointer-events: none;z-index:5;}
   .main {
     padding: 0 sizem(32.5);
-    .caption {
-    }
   .txt {
   .title{
     font-size: 1.8em;
@@ -119,6 +117,12 @@
   .slider {
     height: auto;
     width: 100%;
+
+    .caption {
+    font-size:sizem(12);
+    right:sizem(5);
+    bottom:sizem(5);
+    }
     .slide-item {
       @apply bg-cover;
       width: 100%;

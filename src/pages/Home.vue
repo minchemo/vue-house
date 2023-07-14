@@ -118,7 +118,7 @@ img {
     li {
       button {
         @apply rounded-full  hover:opacity-50;
-        width: sizem(22.3);
+        width: sizem(10.3);
         height: sizem(3.34);
         border: sizem(1) solid #fff;
 

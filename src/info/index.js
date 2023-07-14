@@ -1,4 +1,4 @@
-const caseName = "艾美綠河"
+const caseName = "微笑歐洲"
 
 export default {
     meta: {
@@ -9,11 +9,11 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市梧棲區建國北街31巷158號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14728.68466696281!2d120.2933703140734!3d22.647405930223364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04f0a93c64a9%3A0x5df6f456aa9d2987!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A5Y2a5oSb5LiA6LevMjE46Jmf!5e0!3m2!1szh-TW!2stw!4v1685326637556!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/ZPxzNsXB4AuxLE918",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.800898233423!2d120.5306116!3d24.2487415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691569a3de9af9%3A0x83cfbf71cb2093bb!2z6bqX55ubLeW-rueskeatkOa0sg!5e0!3m2!1szh-TW!2stw!4v1689321806178!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/wkjqMvf9LVWwjuF99",
     phone: "04-26562089",
-    fbLink: "https://www.facebook.com/100090655188296",
-    fbMessage: "https://m.me/100090655188296",
+    fbLink: "https://www.facebook.com/lihshingsmileeurope",
+    fbMessage: "https://m.me/lihshingsmileeurope",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "麗寶集團-麗盛建設"],

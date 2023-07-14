@@ -11,7 +11,7 @@
 @import '@/assets/style/function.scss';
 
 .s3 {
-  @apply relative overflow-hidden w-full bg-[#171C60];
+  @apply relative overflow-hidden w-full bg-[#1a1d4c];
   height: size(960);
   display: flex;
   align-items: center;

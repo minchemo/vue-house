@@ -65,6 +65,15 @@
     margin: 0 0 .2em;
     line-height: 1.4;
   }
+
+  .caption{
+      @apply absolute;
+      right:1em;
+      bottom: 1em;
+      font-weight: 500;
+      font-size: size(15);
+      color: #FFF;
+      text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);}
   .subtitle{
     font-size: 1.2em;
     margin: 0 0 .6em;
@@ -76,6 +85,8 @@
     margin: 0;
     flex-basis: size(840);
       height: size(560);
+
+     
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
@@ -103,8 +114,6 @@
     width: 217%;max-width: 900%;pointer-events: none;}
   .main {
     padding: 0 sizem(32.5);
-    .caption {
-    }
   .txt {
   .title{
     font-size: 1.8em;
@@ -118,6 +127,12 @@
   .slider {
     height: auto;
     width: 100%;
+
+     .caption {
+    font-size:sizem(12);  
+    right:sizem(5);
+    bottom:sizem(5);
+    }
     .slide-item {
       @apply bg-cover;
       width: 100%;
