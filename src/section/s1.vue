@@ -6,14 +6,14 @@
     <img src="./s1/tm.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="$isMobile()"/> -->
        <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
        <!--div class="txt font-['noto_serif_tc']" data-aos="zoom-out" data-aos-duration="1000"><span class="t1">高鐵<br  v-if="$isMobile()"/>台積宅</span><span class="t2">2</span><span class="t3">字頭</span><span class="t4">THE GREEN ROAD</span></div-->
-    <img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/love.png" class="love" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/love1.png" v-if="!$isMobile()" class="love1" alt="">
-    <img src="./s1/love2.png" v-if="!$isMobile()" class="love2" alt="">
+    <div class="love"><img src="./s1/love.png" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/></div>
+    <div class="love1" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div>
+    <div class="love2" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div>
     <img src="./s1/bg1.png" v-if="!$isMobile()" class="bg1" alt=""/>
     <img src="./s1/bg2.png" v-if="!$isMobile()" class="bg2" alt=""/>
     <img src="./s1/bg_m.png" v-if="$isMobile()" class="bg1" alt=""/>
+    <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+    <img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
   </article>
 </template>
 
@@ -31,34 +31,33 @@
   align-items:center;
   font-size:size(25);
 
+    img{width:100%;}
     .love{
     z-index: 1;
     position: absolute;  
     width: size(850);
     left: size(105);
-    top: size(115);
+    top: calc(50% + #{size(115 - 540)});
     }
-
     .love1{
     z-index: 1;
     position: absolute;  
-    width: size(315);
-    right: size(605);
-    bottom: size(55); 
+    width: size(280);
+    right: size(620);
+    bottom: size(70); 
     animation: an 3s ease-in-out infinite alternate-reverse;
-     transform-origin: 0 100%;
-     transform:translate(20px, 50px);
+     transform:translate(10%, 20%);
+     img{transform: scaleX(-1)rotate(-7deg);}
     }
-
     .love2{
     z-index: 1;
     position: absolute;  
-    width: size(139);
+    width: size(125);
     right: size(285);
-    top: size(105); 
+    top: size(95); 
     animation: an 3s ease-in-out infinite alternate-reverse;
-     transform-origin: 0 100%;
-     transform:translate(20px, -20px);
+     transform:translate(20%, -20%);
+     img{transform: rotate(-7deg);}
     }
 
     @keyframes an {
@@ -79,17 +78,18 @@
     bottom:size(0);
     }
    .txt{
+    z-index: 2;
     width: size(698);
     position: absolute;
     right: size(115);
-    top: size(285);
+    top: calc(50% + #{size(285 - 540)});
   }
   .logo{
     position: absolute;
     width: size(627);
     z-index: 2;
     left: size(215);
-    top: size(385);
+    top: calc(50% + #{size(385 - 540)});
     }
 
   
