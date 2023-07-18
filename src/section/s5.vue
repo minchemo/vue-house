@@ -1,10 +1,11 @@
 <template>
   <article class="s5">
+    <img class="bg1" src="./s1/img.png" alt="" srcset="">
     <div class="main">
       <div class="txt">
     <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">FOUR SEASON GARDEN</h4>
     <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200">私家花園會館<br />尊榮級度假享受</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400">在微笑歐洲，別墅也能享有收發信件、垃圾收取等飯店式物業管理。社區環抱私家公園及VIP休閒會館，隨時與親友歡樂相聚，在家即可自在體驗度假VILLA享受。</p>
+        <p data-aos="zoom-in-right" data-aos-delay="400">微笑歐洲享近0%公設比高坪效，依然享有同新大樓的飯店式物業管理，收發包裏、垃圾代收等服務。並擁有私家公園及獨棟休閒會館，隨時與親友歡樂相聚，在家自在體驗度假VILLA享受。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -26,7 +27,7 @@
 @import '@/assets/style/function.scss';
 
 .s5 {
-  @apply relative overflow-hidden flex items-center justify-center text-white;
+  @apply relative flex items-center justify-center text-white;
   width: 100%;
   height: size(800);
   padding:0;
@@ -34,6 +35,7 @@
   gap:3em;
   margin-bottom:8em;
 
+  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
   .main {
     @apply flex text-[#555];
     margin: 0;
@@ -81,6 +83,7 @@
     height: sizem(500);
     padding: 0;
   font-size:sizem(14);
+  .bg1{top:-1em;left:auto;width:sizem(160);right:sizem(-40);}
 
   .main {
     padding: 0 sizem(32.5);

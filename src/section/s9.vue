@@ -185,10 +185,6 @@ const imgs = [
     img:new URL("./s9/3.jpg", import.meta.url).href ,
     caption: "淡水福容大飯店-淡水漁人碼頭"
   },
-  {
-    img:new URL("./s9/4.jpg", import.meta.url).href ,
-    caption: "麗寶集團信賴保固"
-  },
 ]
 /*
 const imgs = [

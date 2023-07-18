@@ -1,5 +1,5 @@
 <template>
-  <article class="s4">
+  <article class="s2">
     <div class="main">
       <div class="txt">
     <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">VILLA LIFESTYLE</h4>
@@ -25,14 +25,14 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s4 {
-  @apply relative overflow-hidden flex items-center justify-center text-white;
+.s2 {
+  @apply relative overflow-hidden flex items-center justify-center text-white bg-[#F27200];
   width: 100%;
   height: size(800);
   padding:0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
+  flex-direction: column;
 
   .main {
     @apply flex text-[#555];
@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s4 {
+  .s2 {
   @apply flex-col;
     height: sizem(605);
     padding: 0;

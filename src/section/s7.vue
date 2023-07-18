@@ -1,8 +1,11 @@
 <template>
   <article class="s7">
-    <div class="title font-['noto_serif_tc']" data-aos="zoom-in">台中港2.0 計劃 雙港特區就位</div>
+      <div class="txt">
+    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in" data-aos-delay="200">台中港2.0 計劃 雙港特區就位</h3>
+        <p data-aos="zoom-in" data-aos-delay="400">全臺最大國際港灣 捲起千億建設海嘯</p>
+      </div>
     <Fullview />
-    <div class="caption">空拍示意圖</div>
+    <div class="caption">空拍合成示意圖</div>
   </article>
 </template>
 
@@ -12,13 +15,27 @@
 .s7 {
   @apply relative overflow-hidden bg-[#008DD5];
   width: 100%;
-  height: size(1380);
-  padding-top: size(300);
-  .title {
+  height: size(1080);
+  padding-top:size(100);
+  font-size:size(18);
+  .txt {
     @apply absolute z-10;
-    font-size:3em;
+    top: 14em;
     left:0;right: 0;text-align: center;
-    color: #FFF;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.7;
+    color: #fff;
+    text-shadow: 0 0 5px #0075af, 0 0 10px #008DD5,0 0 15px #008DD5, 0 0 20px #008DD5;
+  .title{
+    font-size: 2.5em;
+    margin: 0 0 .2em;
+    line-height: 1.4;
+  }
+  .subtitle{
+    font-size: 1.2em;
+    margin: 0 0 .6em;
+  }
   }
   .caption{
       @apply absolute;
@@ -27,7 +44,7 @@
       font-weight: 500;
       font-size: size(15);
       color: #FFF;
-      text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);}
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -37,14 +54,17 @@
 
   .s7 {
     height: sizem(667);
-      font-size: size(14);
-  .title {
-    font-size: sizem(25);
-    top: 3.5em;
+  font-size:sizem(14);
+  .txt {
+    top: 8em;
+  .title{
+    font-size: 1.8em;
+  }
+  .subtitle{
+    font-size: 1.07em;
+  }
   }
   .caption {
-    left: sizem(305);
-    bottom: sizem(10);
     font-size: sizem(12);
   }
   }

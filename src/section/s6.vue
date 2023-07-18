@@ -2,6 +2,7 @@
   <article class="s6">
     <img class="bg1" src="./s6/bg1.png" alt="" srcset="">
     <img class="bg2" src="./s6/bg2.png" alt="" srcset="">
+    <img class="img" src="./s1/img.png" alt="" srcset="" v-if="!$isMobile()">
     <div class="main">
       <div class="txt">
     <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">PLAY AROUND</h4>
@@ -49,6 +50,7 @@
     left: 0;
     width: 100%;
     transform: translateY(85%);z-index: 2;}
+  .img{position: absolute;top:4em;right:size(-76);width:size(429);opacity: .8;}
 
   .main {
     @apply flex text-[#fff];

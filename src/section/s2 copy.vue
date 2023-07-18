@@ -1,27 +1,29 @@
 <template>
-  <article class="s3" id="s3">
-    <img class="bg1" src="./s3/img.jpg" alt="" srcset="" v-if="!$isMobile()">
-    <img class="bg1" src="./s3/img_m.jpg" alt="" srcset="" v-else>
-    <img class="bg2" src="./s3/bg2.png" alt="" srcset="">
+  <article class="s2" id="s2">
+    <img class="bg1" src="./s2/bg.jpg" alt="" srcset="">
+    <img class="bg2" src="./s2/bg2.png" alt="" srcset="">
     <div class="txt">
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in">微笑生活的10種方式</h3></div>
+    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in">SMILE EUROPE</h4>
+    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in" data-aos-delay="300">邂逅歐式別墅心生活</h3>
+  <p data-aos="zoom-in" data-aos-delay="600">有天有地、有大樹有鳥語，夢享人生現在開始</p></div>
+    <div class="caption">情境示意圖</div>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s3 {
+.s2 {
   @apply relative overflow-hidden w-full bg-[#F27200];
-  height: size(960);
+  height: size(1236);
   display: flex;
   align-items: center;
   justify-content:flex-start;
   flex-direction: column;
   font-size:size(25);
-  padding:0 0 size(98) 0;
+  padding: size(98) 0;
   gap:size(10);
-   .bg1{position: absolute;top:-4em;left: 0;width: 100%;}
+   .bg1{position: absolute;top:-5vw;left: 0;width: 100%;}
    .bg2{position: absolute;bottom:0;left: 0;width: 100%;}
    .txt{
     position: relative;
@@ -52,19 +54,24 @@
 // @media screen and (max-width: 767px) { 平常我們手機的設定
 
 @media screen and (max-width: 767px) {
-  .s3 {
+  .s2 {
 font-size:sizem(15);
-  height: sizem(550);
+  height: sizem(667);
   flex-direction: column;
   gap:0;
   padding: 0;
-   .bg1{position: absolute;top:15%;
-    left: 0%;
-    width: 100%;}
-   .bg2{position: absolute;bottom:0;left: -10%;width: 230%;}
+   .bg1{position: absolute;top:0;
+    left: -30%;
+    width: 240%;max-width: 900%;}
+   .bg2{position: absolute;bottom:0;left: -10%;width: 230%;max-width: 900%;}
    .txt{
     margin: 3em auto 0;
    }
+    .caption {
+      right:1em;
+      bottom: 13em;
+      font-size: sizem(12);
+    }
 
 }
 }
