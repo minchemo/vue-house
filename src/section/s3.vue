@@ -13,7 +13,7 @@
 
 .s3 {
   @apply relative overflow-hidden w-full bg-[#F27200];
-  height: size(960);
+  height: size(760);
   display: flex;
   align-items: center;
   justify-content:flex-start;
@@ -21,7 +21,7 @@
   font-size:size(25);
   padding:0 0 size(98) 0;
   gap:size(10);
-   .bg1{position: absolute;top:-4em;left: 0;width: 100%;}
+   .bg1{position: absolute;top:-7em;left: 0;width: 100%;}
    .bg2{position: absolute;bottom:0;left: 0;width: 100%;}
    .txt{
     position: relative;

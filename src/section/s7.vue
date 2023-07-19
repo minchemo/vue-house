@@ -2,7 +2,7 @@
   <article class="s7">
       <div class="txt">
     <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in" data-aos-delay="200">台中港2.0 計劃 雙港特區就位</h3>
-        <p data-aos="zoom-in" data-aos-delay="400">全臺最大國際港灣 捲起千億建設海嘯</p>
+        <p class="desc" data-aos="zoom-in" data-aos-delay="400">全臺最大國際港灣 捲起千億建設海嘯</p>
       </div>
     <Fullview />
     <div class="caption">空拍合成示意圖</div>
@@ -32,9 +32,9 @@
     margin: 0 0 .2em;
     line-height: 1.4;
   }
-  .subtitle{
-    font-size: 1.2em;
-    margin: 0 0 .6em;
+  .desc{
+    font-size: 1.5em;
+    letter-spacing: .1em;
   }
   }
   .caption{
@@ -60,8 +60,9 @@
   .title{
     font-size: 1.8em;
   }
-  .subtitle{
-    font-size: 1.07em;
+  .desc{
+    font-size: 1.1em;
+    letter-spacing: .1em;
   }
   }
   .caption {

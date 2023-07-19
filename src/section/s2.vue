@@ -41,7 +41,7 @@
     .slide-item {
       @apply bg-cover;
     flex-basis: 100%;
-      height: size(980);
+      height: size(1180);
       background-position: 50% 100%;
   &::before,
   &::after{
@@ -165,7 +165,7 @@ const imgs = [
   {
     img:new URL("./s2/2.jpg", import.meta.url).href ,
     title:"恣意徜徉私家花園",
-    desc:"中庭花園時光， 大墅人生",
+    desc:"聽風和樹低語、閱讀四季表情，微笑領略新幸福",
     caption: "情境示意圖",
   },
 ]
