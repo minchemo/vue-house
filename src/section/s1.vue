@@ -41,7 +41,8 @@
   justify-content: center;
   align-items:center;
     margin: 0 10em 4.8em 2em;font-size:1.28em;
-    .t1{font-size:1.1em;display: inline-block;transform: scaleX(.96);font-weight: 700;margin: 0;
+    .t1{font-size:1.1em;display: inline-block;transform: scaleX(.96);
+      font-weight: 700;margin: 0;
     text-align: left;letter-spacing: .05em;  color: #171C60;}
     .t2{font-size: 1em;position: relative;top: .03em;left: -.04em;margin: auto -0.01em;  background: linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);padding: 0.3em;
     }

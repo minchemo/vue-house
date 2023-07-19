@@ -1,7 +1,7 @@
 <template>
   <article class="s3" id="s3">
-    <img class="bg1" src="./s3/img.jpg" alt="" srcset="" v-if="!$isMobile()">
-    <img class="bg1" src="./s3/img_m.jpg" alt="" srcset="" v-else>
+    <img class="bg1" src="./s3/img.png" alt="" srcset="" v-if="!$isMobile()">
+    <img class="bg1" src="./s3/img_m.png" alt="" srcset="" v-else>
     <img class="bg2" src="./s3/bg2.png" alt="" srcset="">
     <div class="txt">
     <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in">微笑生活的10種方式</h3></div>
