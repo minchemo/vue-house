@@ -156,7 +156,7 @@ const imgs = [
   },
   {
     img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    caption: "情境示意圖"
   },
   {
     img:new URL("./s5/4.jpg", import.meta.url).href ,

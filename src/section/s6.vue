@@ -43,13 +43,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    transform: translateY(-80%);}
+    transform: translateY(-80%);pointer-events: none;}
   .bg2{
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    transform: translateY(85%);z-index: 2;}
+    transform: translateY(85%);z-index: 2;pointer-events: none;}
   .img{position: absolute;top:4em;right:size(-76);width:size(429);opacity: .8;}
 
   .main {
