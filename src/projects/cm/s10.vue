@@ -15,7 +15,7 @@
       <div class="swiper-pagination" slot="pagination"></div>
       <div data-aos="zoom-in" class="large-title"><span>NEW<br>RECORD</span></div>
 <div class="txt">
-  <h3 class="title" data-aos="zoom-in">科技首都台灣新矽谷<br>核心地段、優越規劃</h3>
+  <h3 class="title" data-aos="zoom-in">核心地段、優越規劃<br>鄭子寮超人氣指標</h3>
   <p class="desc" data-aos="zoom-in">讓數字說話，實價登錄證明暢銷！「藏美表參道」集絕版條件於一身，西門大道罕見千坪角地，台南市中心稀有資產，極緻軟、硬體規劃，超過200戶慧眼菁英一致看好，創市場熱烈迴響！</p>
 </div>
     </div>
