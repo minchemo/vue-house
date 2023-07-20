@@ -8,7 +8,7 @@
     <img class="bg" src="./s1/bg.jpg" alt="" srcset="">
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000"/>
        <div class="txt" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
-        <span class="t1">實坪電梯別墅｜樂享花園會館</span><span class="t2">64-74坪｜全新落成｜正式公開</span>
+        <span class="t1">實坪電梯別墅｜樂享花園會館</span><span class="t2">64-74坪｜大器落成｜正式公開</span>
       </div>
 
   </article>

@@ -5,7 +5,7 @@
       <div class="txt">
     <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">FOUR SEASON GARDEN</h4>
     <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200">私家花園會館<br />尊榮級度假享受</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400">微笑歐洲享近0%公設比高坪效，依然享有同新大樓的飯店式物業管理，收發包裏、垃圾代收等服務。並擁有私家公園及獨棟休閒會館，隨時與親友歡樂相聚，在家自在體驗度假VILLA享受。</p>
+        <p data-aos="zoom-in-right" data-aos-delay="400">微笑歐洲享近0%公設比高坪效，依然享有大樓飯店式物業管理，收發包裏等服務。並擁有私家公園及獨棟休閒會館，隨時與親友歡樂相聚，在家自在體驗度假VILLA享受。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
