@@ -5,37 +5,18 @@
       <img loading="lazy" class="c1" data-aos="zoom-in" data-aos-delay="0" src="~@/projects/cm/s1/logo.png"
         alt="藏美表參道" />
     </div>
-    <div class="title">
-      <!--img
-        v-if="!isMobile"
-        class="t2"
-        data-aos="fade"
-        data-aos-delay="500"
-        src="~@/projects/cm/s1/t2.svg"
-        alt="藏美表參道"
-        srcset=""
-      /-->
-      <!--img
-        v-else
-        class="t2"
-        data-aos="fade"
-        data-aos-delay="500"
-        src="~@/projects/cm/s1/t2_m.svg"
-        alt="藏美表參道"
-        srcset=""
-      /-->
-      <img loading="lazy" v-if="!isMobile" class="t1" data-aos="fade" data-aos-delay="1500"
+
+    <img loading="lazy" v-if="!isMobile" class="t1" data-aos="fade" data-aos-delay="500"
         src="~@/projects/cm/s1/t1.svg" alt="藏美表參道" srcset="" />
       <img loading="lazy" v-else class="t1" data-aos="fade" data-aos-delay="1500" src="~@/projects/cm/s1/t1_m.svg"
         alt="藏美表參道" srcset="" />
-    </div>
-    <div class="subtitle">
-      <img loading="lazy" v-if="!isMobile" class="t1" data-aos="fade" data-aos-delay="2000"
-        src="~@/projects/cm/s1/subtitle.svg" alt="藏美表參道" srcset="" />
-      <img loading="lazy" v-else class="t1" data-aos="fade" data-aos-delay="2000" src="~@/projects/cm/s1/subtitle_m.svg"
-        alt="藏美表參道" srcset="" />
-      <div class="order" @click="scrollTo('#contact')" data-aos="fade" data-aos-delay="1000"></div>
-    </div>
+        <div class="order" @click="scrollTo('#contact')" data-aos="fade" data-aos-delay="800"></div>
+
+    <img loading="lazy" v-if="!isMobile" class="t2" data-aos="fade" data-aos-delay="1200"
+        src="~@/projects/cm/s1/t2.svg" alt="藏美表參道" srcset="" />
+      <img loading="lazy" v-else class="t2" data-aos="fade" data-aos-delay="1500" src="~@/projects/cm/s1/t2_m.svg"
+        alt="藏美表參道" srcset="" />    
+      
   </div>
 </template>
 <style lang="scss" scoped>
@@ -60,7 +41,7 @@
     top: 0;
     left: 0;
     background: url("~@/projects/cm/s1/bg.png") repeat-x;
-    background-size: 50vw auto;
+    background-size: 100vw auto;
     background-position: top center;
     mask-image: linear-gradient(0deg,
         rgba(255, 255, 255, 0) 0%,
@@ -75,10 +56,10 @@
       position: absolute;
 
       &.c1 {
-        width: size(600);
-        height: size(667);
-        left: size(150);
-        top: calc(50% + (230 - 540) * 100vw / 1920);
+        width: size(510);
+        height: size(558);
+        left: size(730);
+        top: calc(50% + (160 - 540) * 100vw / 1920);
       }
 
       &.c2 {
@@ -121,59 +102,37 @@
     }
   }
 
-  .title {
-    z-index: 1;
-    position: absolute;
-    width: size(815);
-    height: size(478.9);
-    left: 65%;
-    top: calc(50% - 1.6vw);
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-
-    .t2 {
-      position: relative;
-      width: size(399.84);
-      margin-bottom: size(40);
-    }
-
     .t1 {
-      position: relative;
-      width: size(697);
-      margin: 0px auto;
-    }
-  }
-
-  .subtitle {
-    position: absolute;
-    width: size(800);
-    height: size(149.6);
-    top: calc(50% + -0.3vw);
-    left: 65%;
-    transform: translateX(-50%);
-
-    .t1 {
-      width: 100%;
+      position: absolute;
+      width: size(897);
+      left: size(232);
+      bottom: size(150);
     }
 
     .order {
       position: absolute;
-      right: 0;
-      bottom: -#{size(240)};
-      width: size(800);
+      right: size(232);
+      bottom: size(185);
+      width: size(515);
       height: size(75);
-      background-image: url("~@/projects/cm/s1/order.png");
+      background-image: url("~@/projects/cm/s1/btn.svg");
       background-size: 100%;
       background-repeat: no-repeat;
       background-position: bottom left;
 
       &:hover {
-        background-image: url("~@/projects/cm/s1/order_h.png");
+        background-image: url("~@/projects/cm/s1/btn_h.svg");
         cursor: pointer;
       }
     }
-  }
+    .t2 {
+      position: absolute;
+      width: size(513);
+      right: size(232);
+      bottom: size(150);
+    }
+
+
 }
 
 /* 平板尺寸 */
@@ -209,10 +168,10 @@
         position: absolute;
 
         &.c1 {
-          width: size-m(151);
-          height: size-m(167);
-          left: 30%;
-          top: size-m(60);
+          width: size-m(231);
+          height: size-m(253);
+          left: size-m(70);
+          top: size-m(80);
         }
 
         &.c2 {
@@ -245,63 +204,38 @@
       }
     }
 
-    .title {
-      z-index: 1;
-      position: relative;
-      width: size-m(243);
-      height: size-m(62);
-      left: 50%;
-      top: 35%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: flex-start;
-      justify-content: space-between;
-
-      .t2 {
-        position: relative;
-        width: size-m(10);
-        margin-bottom: 0;
-        margin-top: size-m(20);
+    .t2 {
+        position: absolute;
+        width: size-m(245);
+        bottom: size-m(120);
+        left: size-m(65);
       }
 
       .t1 {
-        position: relative;
-        width: size-m(227);
-        margin: 0px auto;
-      }
-    }
-
-    .subtitle {
-      position: relative;
-      width: size-m(243);
-      height: size-m(121);
-      top: 39% !important;
-      bottom: size-m(80);
-      left: 50%;
-      transform: translateX(-50%);
-
-      .t1 {
-        width: 100%;
+        position: absolute;
+        width: size-m(231);
+        left: size-m(70);
+        bottom: size-m(190);
       }
 
       .order {
         position: absolute;
-        left: 1.5%;
-        bottom: size-m(-100);
+        left: size-m(70);
+        bottom: size-m(145);
         width: size-m(245);
-        height: size-m(41);
-        background-image: url("~@/projects/cm/s1/order_m.png");
+        height: size-m(36);
+        background-image: url("~@/projects/cm/s1/btn.svg");
         background-size: 95%;
         background-repeat: no-repeat;
         background-position: bottom left;
 
         &:hover {
-          background-image: url("~@/projects/cm/s1/order_m_h.png");
+          background-image: url("~@/projects/cm/s1/btn_h.svg");
           cursor: pointer;
         }
       }
-    }
+
+
   }
 }
 

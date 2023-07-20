@@ -44,7 +44,7 @@
 
         .text {
           font-family: 'Noto Serif TC';
-          border-left: size(5) solid #182C80;
+          border-left: size(5) solid #E65625;
           padding-left: size(24);
           margin-top: size(58);
           text-align: left;
@@ -52,7 +52,7 @@
           .t1 {
             font-size: size(35);
             line-height: size(50);
-            color: #182C80;
+            color: #E65625;
             font-weight: bold;
           }
 
@@ -63,7 +63,7 @@
 
             a {
               text-decoration: none;
-              color: #182C80;
+              color: #BF0E44;
               letter-spacing: size(10);
               margin-right: size(10);
 
@@ -94,11 +94,11 @@
         height: size(20.5);
         background-color: #fff;
         opacity: 1;
-        border: 1.5px solid #182c80;
+        border: 1.5px solid #BF0E44;
         margin-bottom: size(20);
 
         &.swiper-pagination-bullet-active {
-          background-color: #182c80;
+          background-color: #BF0E44;
         }
       }
     }
@@ -108,7 +108,7 @@
       left: size(-50);
       top: size(-80);
       z-index: 1;
-      color: #182c80;
+      color: #BF0E44;
       font-size: size(104);
       letter-spacing: .17em;
       font-weight: 500;
@@ -141,7 +141,7 @@
 
     .title {
       font-size: 1.5em;
-      color: #182C80;
+      color: #E65625;
       float: left;
       font-weight: 500;
       display: block;
@@ -176,7 +176,7 @@
           }
 
           .text {
-            border-left: size-m(3) solid #182C80;
+            border-left: size-m(3) solid #E65625;
             padding-left: size-m(14);
             margin-top: size-m(27);
 
@@ -214,13 +214,13 @@
           height: size-m(9);
           background-color: #fff;
           opacity: 1;
-          border: 1.5px solid #182c80;
+          border: 1.5px solid #BF0E44;
           margin-bottom: 0;
           margin-top: size-m(10);
           margin-right: size-m(8);
 
           &.swiper-pagination-bullet-active {
-            background-color: #182c80;
+            background-color: #BF0E44;
           }
         }
       }

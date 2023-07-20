@@ -97,10 +97,10 @@
         height: size(20.5);
         background-color: #fff;
         opacity: 1;
-        border: 1.5px solid #182c80;
+        border: 1.5px solid #BF0E44;
         margin-bottom: size(20);
         &.swiper-pagination-bullet-active {
-          background-color: #182c80;
+          background-color: #BF0E44;
         }
       }
     }
@@ -115,13 +115,13 @@
         justify-content: center;
         height: size(77);
         font-size: size(25);
-        background: rgba($color: #182c80, $alpha: 0.5);
+        background: #E65625;
         color: #fff;
         &.active {
-          background: rgba($color: #182c80, $alpha: 1);
+          background: #BF0E44;
         }
         &:hover {
-          background: rgba($color: #182c80, $alpha: 1);
+          background: #BF0E44;
           cursor: pointer;
         }
       }
@@ -131,7 +131,7 @@
       left: size(-160);
       top: size(-100);
       z-index: 1;
-      color: #182c80;
+      color: #BF0E44;
       font-size: size(140);
       letter-spacing: 0.17em;
       font-weight: 500;
@@ -155,7 +155,7 @@
     font-weight: 600;
     .title {
       font-size: 1.5em;
-      color: #182c80;
+      color: #E65625;
       float: left;
       font-weight: 500;
       display: block;
@@ -207,12 +207,12 @@
           height: size-m(9);
           background-color: #fff;
           opacity: 1;
-          border: 1.5px solid #182c80;
+          border: 1.5px solid #BF0E44;
           margin-bottom: 0;
           margin-top: size-m(10);
           margin-right: size-m(8);
           &.swiper-pagination-bullet-active {
-            background-color: #182c80;
+            background-color: #BF0E44;
           }
         }
       }
@@ -233,15 +233,15 @@
           height: size-m(36);
           width: size-m(105);
           font-size: size-m(14);
-          background: rgba($color: #182c80, $alpha: 0.5);
+          background: #E65625;
           flex-shrink: 0;
           flex: 1;
           color: #fff;
           &.active {
-            background: rgba($color: #182c80, $alpha: 1);
+            background: #BF0E44;
           }
           &:hover {
-            background: rgba($color: #182c80, $alpha: 1);
+            background: #BF0E44;
             cursor: pointer;
           }
         }

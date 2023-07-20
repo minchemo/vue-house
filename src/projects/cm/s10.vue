@@ -1,5 +1,5 @@
 <template>
-  <article class="s3">
+  <article class="s10">
     <div class="swiper-box" data-aos="zoom-in">
       <swiper :options="swiperOptions" ref="swiper" class="swiper-wrapper">
         <swiper-slide
@@ -13,10 +13,10 @@
         </swiper-slide>
       </swiper>
       <div class="swiper-pagination" slot="pagination"></div>
-      <div data-aos="zoom-in" class="large-title"><span>FUTURE</span></div>
+      <div data-aos="zoom-in" class="large-title"><span>NEW<br>RECORD</span></div>
 <div class="txt">
-  <h3 class="title" data-aos="zoom-in">科技首都台灣新矽谷<br>北外環捷徑近身相接</h3>
-  <p class="desc" data-aos="zoom-in">中央領軍，企業到位！南科3期92公頃擴建啟動，全球半導體龍頭台積電同步加速投資，推升破兆產值，點燃台灣科技經濟能量引擎。北外環快速道路已成形，通勤南科近近接軌，打通科技新貴住居版圖新動脈。</p>
+  <h3 class="title" data-aos="zoom-in">科技首都台灣新矽谷<br>核心地段、優越規劃</h3>
+  <p class="desc" data-aos="zoom-in">讓數字說話，實價登錄證明暢銷！「藏美表參道」集絕版條件於一身，西門大道罕見千坪角地，台南市中心稀有資產，極緻軟、硬體規劃，超過200戶慧眼菁英一致看好，創市場熱烈迴響！</p>
 </div>
     </div>
   </article>
@@ -24,7 +24,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 /* 螢幕尺寸標準 */
-.s3 {
+.s10 {
   position: relative;
   width: 100%;
   height: size(1080);
@@ -45,21 +45,23 @@
       position: absolute;
       bottom: 24%;
       left: -#{size(50)};
-      display: flex;
+      //display: flex;
+      display: none;
       flex-direction: column;
       .swiper-pagination-bullet {
         width: size(20.5);
         height: size(20.5);
         background-color: #fff;
         opacity: 1;
-        border: 1.5px solid #BF0E44;
+        border: 1.5px solid #E65625;
         margin-bottom: size(20);
         &.swiper-pagination-bullet-active {
-          background-color: #BF0E44;
+          background-color: #E65625;
         }
       }
     }
     .large-title{
+      text-align: left;
       position: absolute;
       right: size(-50);
       top: size(-50);
@@ -113,7 +115,7 @@
 
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
-  .s3 {
+  .s10 {
     height: size-m(667);
     padding-top: 0;
 
@@ -133,19 +135,20 @@
         top: 0;
         left: 0;
         bottom: unset;
-        display: flex;
+        //display: flex;
+        display: none;
         flex-direction: row;
         .swiper-pagination-bullet {
           width: size-m(9);
           height: size-m(9);
           background-color: #fff;
           opacity: 1;
-          border: 1.5px solid #BF0E44;
+          border: 1.5px solid #182c80;
           margin-bottom: 0;
           margin-top: size-m(10);
           margin-right: size-m(8);
           &.swiper-pagination-bullet-active {
-            background-color: #BF0E44;
+            background-color: #182c80;
           }
         }
       }
@@ -194,7 +197,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: "s3",
+  name: "s10",
 
   components: {
     Swiper,
@@ -210,29 +213,19 @@ export default {
         loop: true,
         speed: 1000,
         spaceBetween: 0,
-        autoplay: {
-          delay: 4500,
-          disableOnInteraction: false,
-        },
         navigation: {
           nextEl: ".swiper-nav .next",
           prevEl: ".swiper-nav .prev",
         },
         pagination: {
-          el: ".s3 .swiper-pagination",
+          el: ".s10 .swiper-pagination",
           clickable: true,
         },
       },
       imgs: [
         isMobile
-          ? require("@/projects/cm/s3/1_m.jpg")
-          : require("@/projects/cm/s3/1.jpg"),
-        isMobile
-          ? require("@/projects/cm/s3/2_m.jpg")
-          : require("@/projects/cm/s3/2.jpg"), 
-        isMobile
-          ? require("@/projects/cm/s3/3_m.jpg")
-          : require("@/projects/cm/s3/3.jpg"),    
+          ? require("@/projects/cm/s10/1_m.jpg")
+          : require("@/projects/cm/s10/1.jpg"),   
       ],
     };
   },

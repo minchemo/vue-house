@@ -324,7 +324,7 @@ export default {
   width: 600px;
   height: 60px;
   font-size: 18px;
-  background: #dcdddd;
+  background: #fff;
   font-weight: 400;
   box-shadow: $contact_btn_border;
   border-radius: $contact_btn_addr_border_radius;

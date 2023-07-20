@@ -35,7 +35,7 @@
       left: size(-62);
       top: size(-75);
       z-index: 1;
-      color: #182c80;
+      color: #BF0E44;
       font-size: size(131);
       letter-spacing: .15em;
       font-weight: 500;
@@ -80,7 +80,7 @@
     font-weight: 600;
     .title {
       font-size: 1.5em;
-      color: #182c80;
+      color: #E65625;
       float: right;
       font-weight: 500;
       display: block;

@@ -65,10 +65,10 @@
         height: size(20.5);
         background-color: #fff;
         opacity: 1;
-        border: 1.5px solid #182c80;
+        border: 1.5px solid #BF0E44;
         margin-bottom: size(20);
         &.swiper-pagination-bullet-active {
-          background-color: #182c80;
+          background-color: #BF0E44;
         }
       }
     }
@@ -77,7 +77,7 @@
       right: size(-50);
       top: size(-50);
       z-index: 1;
-      color: #182c80;
+      color: #BF0E44;
       font-size: size(104);
       letter-spacing: .17em;
       font-weight: 500;
@@ -113,7 +113,7 @@
     font-weight: 600;
     .title {
       font-size: 1.5em;
-      color: #182c80;
+      color: #E65625;
       float: left;
       font-weight: 500;
       display: block;
@@ -162,12 +162,12 @@
           height: size-m(9);
           background-color: #fff;
           opacity: 1;
-          border: 1.5px solid #182c80;
+          border: 1.5px solid #BF0E44;
           margin-bottom: 0;
           margin-top: size-m(10);
           margin-right: size-m(8);
           &.swiper-pagination-bullet-active {
-            background-color: #182c80;
+            background-color: #BF0E44;
           }
         }
       }

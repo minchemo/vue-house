@@ -95,10 +95,10 @@
         height: size(20.5);
         background-color: #fff;
         opacity: 1;
-        border: 1.5px solid #182c80;
+        border: 1.5px solid #BF0E44;
         margin-bottom: size(20);
         &.swiper-pagination-bullet-active {
-          background-color: #182c80;
+          background-color: #BF0E44;
         }
       }
     }
@@ -114,13 +114,13 @@
         justify-content: center;
         height: size(77);
         font-size: size(25);
-        background: rgba($color: #182c80, $alpha: 0.5);
+        background: #E65625;
         color: #fff;
         &.active {
-          background: rgba($color: #182c80, $alpha: 1);
+          background: #BF0E44;
         }
         &:hover {
-          background: rgba($color: #182c80, $alpha: 1);
+          background: #BF0E44;
           cursor: pointer;
         }
       }
@@ -130,7 +130,7 @@
       right: size(-160);
       top: size(-100);
       z-index: 1;
-      color: #182c80;
+      color: #BF0E44;
       font-size: size(140);
       letter-spacing: 0.17em;
       font-weight: 500;
@@ -157,7 +157,7 @@
     justify-content: space-between;
     .title {
       font-size: 1.5em;
-      color: #182c80;
+      color: #E65625;
       float: left;
       font-weight: 500;
       display: block;
@@ -211,12 +211,12 @@
           height: size-m(9);
           background-color: #fff;
           opacity: 1;
-          border: 1.5px solid #182c80;
+          border: 1.5px solid #BF0E44;
           margin-bottom: 0;
           margin-top: size-m(10);
           margin-right: size-m(8);
           &.swiper-pagination-bullet-active {
-            background-color: #182c80;
+            background-color: #BF0E44;
           }
         }
       }
@@ -237,14 +237,14 @@
           height: size-m(36);
           width: 100%;
           font-size: size-m(14);
-          background: rgba($color: #182c80, $alpha: 0.5);
+          background: #E65625;
           flex-shrink: 0;
           color: #fff;
           &.active {
-            background: rgba($color: #182c80, $alpha: 1);
+            background: #BF0E44;
           }
           &:hover {
-            background: rgba($color: #182c80, $alpha: 1);
+            background: #BF0E44;
             cursor: pointer;
           }
         }
@@ -366,9 +366,9 @@ export default {
       ],
       caption: [
         {
-          btn: "飯店生活服務",
+          btn: "雲端管家",
           title: "LIFESTYLE<br/>台南晶英酒店",
-          desc: "「藏美表參道」特邀台南晶英酒店，導入新興雲端管家服務、規劃品味體驗社區活動，形塑五星級生活美學，引領社區成為台南品味標竿。",
+          desc: "「藏美表參道」導入台南晶英酒店「雲端管家」，透過住戶專屬平台，將星級飯店服務延伸到府，形塑極緻生活美學，引領社區成為台南品味標竿。",
         },
         {
           btn: "物業管理",

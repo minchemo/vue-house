@@ -5,13 +5,16 @@
       <Section1 class="section" data-scroll :scrollInstance="locomotive" />
       <div class="offset-fix">
         <lazy-component>
+          <Section10 class="section" data-scroll />
+        </lazy-component>
+        <lazy-component>
           <S_new class="section" data-scroll />
         </lazy-component>
         <lazy-component>
-          <Section3 class="section" data-scroll />
+          <Section2 class="section" data-scroll />
         </lazy-component>
         <lazy-component>
-          <Section2 class="section" data-scroll />
+          <Section3 class="section" data-scroll />
         </lazy-component>
         <Section4 class="section" data-scroll />
         <lazy-component>
@@ -63,6 +66,7 @@ import Section7 from "@/projects/cm/s7.vue";
 import Section8 from "@/projects/cm/s8.vue";
 import Section9 from "@/projects/cm/s9.vue";
 import S_new from "../projects/cm/s_new.vue";
+import Section10 from "@/projects/cm/s10.vue";
 
 // import Section10 from "@/projects/cm/s10.vue";
 // import Section11 from "@/projects/cm/s11.vue";
@@ -92,6 +96,7 @@ export default {
     Section7,
     Section8,
     Section9,
+    Section10,
     S_new
 },
 

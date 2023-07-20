@@ -101,10 +101,10 @@
         height: size(20.5);
         background-color: #fff;
         opacity: 1;
-        border: 1.5px solid #182c80;
+        border: 1.5px solid #BF0E44;
         margin-bottom: size(20);
         &.swiper-pagination-bullet-active {
-          background-color: #182c80;
+          background-color: #BF0E44;
         }
       }
     }
@@ -117,7 +117,7 @@
       }
       .swiper-container {
         width: 100%;
-        background: rgb(148, 158, 196);
+        background: #E65625;
       }
       .btn {
         font-family: "Noto Serif TC";
@@ -127,13 +127,13 @@
         height: size(77);
         font-size: size(25);
         width: auto;
-        background: rgb(148, 158, 196);
+        background: #E65625;
         color: #fff;
         &.active {
-          background: rgba($color: #182c80, $alpha: 1);
+          background: rgba($color: #BF0E44, $alpha: 1);
         }
         &:hover {
-          background: rgba($color: #182c80, $alpha: 1);
+          background: rgba($color: #BF0E44, $alpha: 1);
           cursor: pointer;
         }
       }
@@ -143,7 +143,7 @@
       left: size(-150);
       top: size(-100);
       z-index: 1;
-      color: #182c80;
+      color: #BF0E44;
       font-size: size(140);
       letter-spacing: 0.17em;
       font-weight: 500;
@@ -167,7 +167,7 @@
     font-weight: 600;
     .title {
       font-size: 1.5em;
-      color: #182c80;
+      color: #E65625;
       float: left;
       font-weight: 500;
       display: block;
@@ -219,12 +219,12 @@
           height: size-m(9);
           background-color: #fff;
           opacity: 1;
-          border: 1.5px solid #182c80;
+          border: 1.5px solid #BF0E44;
           margin-bottom: 0;
           margin-top: size-m(10);
           margin-right: size-m(8);
           &.swiper-pagination-bullet-active {
-            background-color: #182c80;
+            background-color: #BF0E44;
           }
         }
       }
@@ -248,10 +248,10 @@
           flex-shrink: 0;
           color: #fff;
           &.active {
-            background: rgba($color: #182c80, $alpha: 1);
+            background: rgba($color: #BF0E44, $alpha: 1);
           }
           &:hover {
-            background: rgba($color: #182c80, $alpha: 1);
+            background: rgba($color: #BF0E44, $alpha: 1);
             cursor: pointer;
           }
         }
