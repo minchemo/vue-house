@@ -60,5 +60,13 @@ export default {
     components: {},
     methods: {},
 }
-fbq('track', 'Lead');
+
+</script>
+
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    fbq('track', 'Lead');
+});
 </script>
