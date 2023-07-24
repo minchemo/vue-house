@@ -6,7 +6,7 @@
           <img class="cover" :src="slide.img" alt="" srcset="">
           <div class="text">
             <div class="t1">{{slide.title}}</div>
-            <div class="t2"><a class="link" :href="slide.link" v-if="slide.link" target="_blank">MORE</a> <span>#{{slide.tag}}</span></div>
+            <div class="t2"><a class="link" :href="slide.link" v-if="slide.link" target="_blank">MORE</a> <span>{{slide.tag}}</span></div>
           </div>
         </swiper-slide>
       </swiper>
@@ -310,19 +310,19 @@ export default {
       imgs: [
         {
           title: '日商台灣大林組台南處女作！插旗「藏美表參道」雙塔建築',
-          tag: '工商時報',
+          tag: '#工商時報',
           link: 'https://ctee.com.tw/livenews/aj/ctee/A03602002022101811164468',
           img: require("@/projects/cm/news/8.jpg")
         },
         {
           title: '【影音】南山台南廣場、北外環加持隱富新核心成形',
-          tag: '蘋果新聞網',
-          link: 'https://www.appledaily.com.tw/property/20220708/D095D57182BB59E87E0B0C066F',
+          tag: '',
+          link: '',
           img: require("@/projects/cm/news/1.jpg")
         },
         {
           title: '台南指標時尚！台南晶英酒店聯手藏美建設推出高端住宅「藏美表參道」',
-          tag: '經濟日報',
+          tag: '#經濟日報',
           link: 'https://money.udn.com/money/story/5638/6480501',
           img: require("@/projects/cm/news/2.jpg")
         },
@@ -334,19 +334,19 @@ export default {
         },
         {
           title: '《台南房市新風向》北外環掀北區置產潮？南科新貴鎖定新商圈：市心資產才保值',
-          tag: '商周.com',
+          tag: '#商周.com',
           link: 'https://www.businessweekly.com.tw/business/indep/1002421',
           img: require("@/projects/cm/news/4.jpg")
         },
         {
           title: '「不失敗百貨」明年進駐 台南北區房價直衝5字頭',
-          tag: 'ETtoday房產雲',
+          tag: '#ETtoday房產雲',
           link: 'https://house.ettoday.net/news/2274938',
           img: require("@/projects/cm/news/5.jpg")
         },
         {
           title: '【台南】鄭子寮富豪區當紅 都會新貴爭搶高質感輕豪宅',
-          tag: '自由時報地產天下',
+          tag: '#自由時報地產天下',
           link: 'https://estate.ltn.com.tw/article/14547',
           img: require("@/projects/cm/news/6.jpg")
         },
