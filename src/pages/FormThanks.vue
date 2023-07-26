@@ -62,11 +62,3 @@ export default {
 }
 
 </script>
-
-<script setup>
-import { onMounted } from 'vue';
-
-onMounted(() => {
-    window.fbq('track', 'Lead');
-});
-</script>
