@@ -67,6 +67,6 @@ export default {
 import { onMounted } from 'vue';
 
 onMounted(() => {
-    fbq('track', 'Lead');
+    window.fbq('track', 'Lead');
 });
 </script>
