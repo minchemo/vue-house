@@ -8,14 +8,13 @@
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
     <img class="w-32" src="@/assets/loading_w.gif" alt="loading" srcset="">
   </div>
-  <!--loading end-->
-   <Nav v-if="config.showNav" />
-  <div class="home bg-[#F1EDD0] overflow-hidden font-['Noto_Sans_TC',serif]">
-     <!--   <div class="bg">
-      <img src="@/section/s1/bg1.png" class="bg1" />
-      <img src="@/section/s1/bg2.png" class="bg2" />
-    </div> -->
+  <!-- loading end
+   <Nav v-if="config.showNav" /> -->
+  <div class="home bg-[#BB511F] overflow-hidden font-['Noto_Sans_TC',serif]">
+     <div class="bg">
+    </div>
     <S1 />
+  <!--
     <S2 />
     <S3 />
     <S4 />
@@ -24,12 +23,6 @@
     <S7 />
     <S8 />
     <S9 />
-  <!--    
-    <div class="bg">
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-    </div>
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -39,14 +32,20 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
-
+.home{
+  background-image:url("@/section/s1/bg.png");
+  background-size: size(170) auto;
+  &::before{content: "";display: block;left: 0;top: 0;width: 100%;height: 100%;position: fixed;
+  background: linear-gradient(to bottom,#BB511F 0%,#BB511F00 50%,#BB511F 100%);  
+}
+}
 img {
   display: inline;
   max-width: unset;
   height: unset;
   margin: 0 auto;
 }
-
+/*
 .slider {
   @apply relative;
   .caption{
@@ -101,8 +100,12 @@ img {
     }
   }
 }
+*/
 @media screen and (max-width: 767px) {
-
+.home{
+  background-size: sizem(85) auto;
+}
+/*
 .slider {
   @apply relative;
   .arrows{
@@ -128,12 +131,15 @@ img {
       }
     }
   }
-}}
+}
+*/
+}
 </style>
 
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+/* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
@@ -142,20 +148,14 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
-/* 
-import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue" */
+import Nav from "@/layout/navbar.vue" */
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
-const config = ref({
-  showNav: true
-})
 
 onMounted(() => {
   window.onload = function () {

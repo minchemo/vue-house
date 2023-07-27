@@ -9,11 +9,12 @@
         <img src="@/section/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'">
         <img src="@/section/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+      <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
         <img src="@/section/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
@@ -40,9 +41,14 @@
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'">
+      @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
       <img src="@/section/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink&&!info.address||!info.phone">
+      <img src="@/section/form/fb.svg" alt="FB 諮詢" srcset="" />
+      <div>粉絲專頁</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="@/section/form/pen.svg" alt="預約賞屋" srcset="" />
@@ -62,34 +68,37 @@
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'messenger'" src="@/section/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/fb.svg" alt="fb" srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'messenger' ? 'Facebook Messenger' : modalType == 'fb' ? 'Facebook 粉絲專頁' :
       `${info.address2?info.address2:'導航地址'}`
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'messenger' ? '線上諮詢' : modalType == 'fb' ? '' :
       `${info.address}`
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
+        'btlead': modalType == 'messenger',
+        'btfanpage': modalType == 'fb',
         'btsearch': modalType == 'gmap',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' : modalType == 'fb' ? '前往粉絲專頁' :
         '開啟導航'
         }}</div>
       <!-- btn phone -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
+        'btlead': modalType == 'messenger',
+        'btfanpage': modalType == 'fb',
         'btsearch': modalType == 'gmap',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' : modalType == 'fb' ? '前往粉絲專頁' :
         '開啟導航'
         }}</div>
     </div>
@@ -101,8 +110,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);;}
-.hover\:bg-color2:hover{background-color:linear-gradient(180deg, #E48726 0%, #eb7f20 10.00%, #f19832 41.00%, #f06b37 72.00%, #9e3410 100%);}
+.bg-color1{background:linear-gradient(180deg, #ebc97d 0%, #ce9a2b 100%);}
+.hover\:bg-color2:hover{background-color:linear-gradient(180deg,#ebc97d 0%, #c47c10 100%);}
 
 
 .contact-info-img{
@@ -135,7 +144,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);
+      background:linear-gradient(180deg, #ebc97d 0%, #ce9a2b 100%);
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -152,7 +161,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #6A0;
+        background:linear-gradient(180deg,#ebc97d 0%, #c47c10 100%);
         color: #fff;
 
         img {
@@ -236,7 +245,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#002B69;
+    background:#ce9a2b;
 
     .contact-item {
       height: 100%;      
@@ -345,16 +354,14 @@ const go = () => {
     // setTimeout(() => {
     //   window.location.href = "phoneThanks";
     // }, 1000);
-  } else if (modalType.value == 'fb') {
+  } else if (modalType.value == 'messenger') {
     window.open(info.fbMessage);
+  } else if (modalType.value == 'fb') {
+    window.open(info.fbLink);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
 
   }
-}
-
-const open = () => {
-  window.open(info.fbLink);
 }
 
 
