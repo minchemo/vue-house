@@ -1,23 +1,23 @@
 <template>
   <article class="s1 font-['Noto_sans_tc','serif']">
     <div class="img">
-      <img src="./s1/00.png" class="cat" alt="cat" data-aos="zoom-in">
-      <img src="./s1/t4.svg" class="imgt" alt="t4" data-aos="zoom-in-right">
+      <img src="./s1/00.png" class="cat" alt="cat" data-aos="zoom-in" v-if="!isMobile">
+      <img src="./s1/00m.png" class="cat" alt="cat" data-aos="zoom-in" v-else>
+      <!--img src="./s1/t4.svg" class="imgt" alt="t4" data-aos="zoom-in-right"-->
       <!--div class="txt2" v-if="isMobile">日進月步にっしんげっぽ</div-->
     </div>
       <div class="txt">
         <div class="t1" data-aos="zoom-in" data-aos-delay="0">
           <img src="./s1/t1.svg" class="" alt="logo">
-          <img src="./s1/t2.svg" class="" alt="logo">
         </div>
-        <div class="t2" data-aos="zoom-in" data-aos-delay="100">
+        <!--div class="t2" data-aos="zoom-in" data-aos-delay="100">
           <img src="./s1/t3.svg" class="" alt="logo" v-if="!isMobile">
           <img src="./s1/t3m.svg" class="" alt="logo" v-else>
-        </div>
-        <div class="t3" data-aos="zoom-in" data-aos-delay="200">
+        </div-->
+        <!--div class="t3" data-aos="zoom-in" data-aos-delay="200">
           <img src="./s1/logo.svg" class="" alt="logo">
           <img src="./s1/t5.svg" class="" alt="logo">
-        </div>
+        </div-->
       </div>
     <img src="./s1/slogo.svg" alt="slogo" class="slogo absolute" />
   </article>
@@ -29,8 +29,8 @@
 .s1 {
   background: url('./s1/bg.jpg') center bottom no-repeat;
   background-size: contain;
-  width: 100%;
-  height: 100vh;
+  width: size(1920);
+  height: size(1080);
   min-height: size(900);
   max-height: size(1080);
   position: relative;
@@ -51,9 +51,9 @@
 
   .cat {
     position: absolute;
-    top: size(-360);
-    left: size(113);
-    width: size(430);
+    top: size(-400);
+    left: size(-00);
+    width: size(944);
   }
   .imgt{    
     position: absolute;
@@ -85,7 +85,7 @@
   }
 
   .t1 {
-    img{height: size(157); margin: 0 0.05em 0 0.15em;}
+    img{height: size(561); margin: 0 0em 1em 2em;}
   }
 
   .t2 {
@@ -106,7 +106,8 @@
   .s1 {
     min-height: size-m(667);
     max-height: size-m(950);
-    height: size-m(750);
+    height: size-m(667);
+    width: size-m(375);
     overflow: hidden;
     background-image: url('./s1/bgm.jpg');
     background-size: contain;
@@ -123,9 +124,9 @@
     bottom: 0;
   .cat {
     position: absolute;
-    top: size-m(-258);
-    left: size-m(115);
-    width: size-m(167);
+    top: size-m(-378);
+    left: size-m(-70);
+    width: size-m(604);
   }
   .imgt{    
     position: absolute;
@@ -140,16 +141,13 @@
       width: 100%;
       font-size: size-m(26.2);
       font-weight: 600;
-      margin: .7em 0 0 0;
+      margin: -.5em 0 0 0;
       line-height: 1.3;
     padding: 0 0 9.6em;
     }
 
     .t1 {
-    img{height: size-m(62); margin: 0;
-    &:first-child{
-      height: size-m(80);margin: 0 0 1.2em 0;
-    }
+    img{height: size-m(226); margin: 0;
     
     }
     }
