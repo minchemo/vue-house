@@ -114,7 +114,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #ad4d31;
+      background-color: #000000d2;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -206,7 +206,7 @@
 
   .contact-info {
     width: size-m(375);
-    height: size-m(650);
+    height: size-m(480);
     // border-radius: size-m(68);
     padding: size-m(50) size-m(15);
     margin-top: size-m(25);
@@ -218,6 +218,7 @@
       height: size-m(127);
       background-image: url("@/section/form/logo.png");
       margin-bottom: size-m(60);
+      
     }
 
     .contact-item-box {
@@ -246,7 +247,7 @@
           &::before {
             width: 100%;
             height: 100%;
-            bottom: -50%;
+            bottom: -0%;
             left: 0;
           }
         }

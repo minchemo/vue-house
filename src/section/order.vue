@@ -5,16 +5,16 @@
       <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
 
       <!-- Title Image -->
-      <img v-if="$isMobile()" class="order-title-img" src="@/section/form/logo_n.svg" alt="長耀里" srcset=""
+      <img v-if="$isMobile()" class="order-title-img" src="@/section/form/logo_m.png" alt="長耀里" srcset=""
       >
-      <img v-else class="order-title-img" src="@/section/form/logo_n.svg" alt="長耀里" srcset="">
+      <img v-else class="order-title-img" src="@/section/form/logo.png" alt="長耀里" srcset="">
 
       <!-- Custom Image -->
-      <img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.webp" alt="長耀里" srcset="">
+      <!--img v-if="!$isMobile()" class="lb_leaf" src="@/section/form/leaf_l.webp" alt="長耀里" srcset="">
       <img v-else class="lb_leaf" src="@/section/form/leaf_l_m.webp" alt="長耀里" srcset="">
       <img v-if="!$isMobile()" class="rb_leaf" src="@/section/form/leaf_r.webp" alt="長耀里" srcset="">
       <img v-else class="rb_leaf" src="@/section/form/leaf_r_m.webp" alt="長耀里" srcset="">
-      <img class="buck" src="@/section/form/buck.webp" alt="長耀里" srcset="">
+      <img class="buck" src="@/section/form/buck.webp" alt="長耀里" srcset=""-->
 
 
       <!-- Form -->
@@ -87,7 +87,7 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  padding-bottom: size(200);
+  padding-bottom: size(100);
   position: relative;
 
   .z-10 {
@@ -164,6 +164,8 @@
 .order {
   width: 100%;
   padding-top: size(100);
+  background-image: url('@/section/form/order-bg.jpg');
+  background-size:100%;
 
   .order-title {
     font-size: size(43);
@@ -226,7 +228,7 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    padding-bottom: size-m(70);
+    padding-bottom: size-m(30);
     position: relative;
 
     .bg-image {
@@ -265,6 +267,8 @@
     // border-radius: size-m(68) size-m(68) 0 0;
     padding-top: size-m(40);
     margin-top: size-m(0);
+    background-image: url('@/section/form/order-bg_m.jpg');
+    background-size:100%;
 
     .order-title {
       font-size: size-m(29);
@@ -275,6 +279,7 @@
     .order-title-img {
       width: size-m(208);
       margin-bottom: size-m(20);
+      margin-right: size-m(70);
     }
 
     .form {
