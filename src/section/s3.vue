@@ -27,10 +27,10 @@
         </div>
         <lazy-component>
 
-            <img class="rb_leaf" src="@/section/s3/rb_leaf.webp" alt="長耀里" srcset="">
+            <!--img class="rb_leaf" src="@/section/s3/rb_leaf.webp" alt="長耀里" srcset="">
             <img class="lb_leaf" src="@/section/s3/lb_leaf.webp" alt="長耀里" srcset="">
             <img class="rt_leaf" src="@/section/s3/rt_leaf.webp" alt="長耀里" srcset="">
-            <img class="lt_leaf" src="@/section/s3/lt_leaf.webp" alt="長耀里" srcset="">
+            <img class="lt_leaf" src="@/section/s3/lt_leaf.webp" alt="長耀里" srcset=""-->
         </lazy-component>
     </div>
 </template>
@@ -41,7 +41,15 @@
 .s3 {
     width: 100%;
     height: size(1080);
-    background-color: #3a574c;
+    background-image: url('@/section/s1/bg.jpg');
+
+    &::before{
+    content: "";
+    background-color: #000000be;
+    width: size(1920);
+    height: size(1080);
+    position: absolute;
+    }
 
     .slide-box {
         position: absolute;
@@ -241,7 +249,15 @@
     .s3 {
         width: 100%;
         height: size-m(667);
-        background-color: #3a574c;
+        background-image: url('@/section/s1/bg_m.jpg');
+
+            &::before{
+            content: "";
+            background-color: #000000be;
+            width: size-m(375);
+            height: size-m(667);
+            position: absolute;
+            }
 
         .slide-box {
             position: absolute;
