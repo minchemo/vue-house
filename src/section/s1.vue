@@ -9,11 +9,16 @@
       <h2 class="t3" v-if="!$isMobile()">2609-2000</h2>
       <h2 class="t1" v-if="$isMobile()">爭藏！林口國際級公園景觀名宅生活</h2>
       <p class="t2" v-if="$isMobile()">
-        「市中心＋公園景觀」，是鍍金地段的增值保證，<br>更是都會豪宅的靈魂所在！<br>【長耀里2】長耀建設深耕林口代表之作<br>坐落在中心商業帶的黃金軸線<br>
-        入主富貴公園千坪綠馥，130米綠海棟距，800米直達科技大廠ASML預定地榮耀新北國際AI智慧園區。<br>
-        富人名流爭相藏匿這份獨特奢華<br>一期深受肯定，二期矚目而生！<br>
+        【長耀里2】長耀建設深耕林口代表之作<br>
+        坐落中心商業帶黃金軸線<br>
+        入主富貴公園千坪綠馥<br>
+        坐落在中心商業帶的黃金軸線<br>
+        800米直達科技大廠ＡＳＭＬ預定地<br>
+        榮耀新北國際ＡＩ智慧園區<br><br>
+        富人名流爭相收藏<br>
+        一期深受肯定，二期矚目而生！
         </p>
-      <h3 class="t4" v-if="$isMobile()">26層新古典最美地標<br>18-29坪精質入主｜130米永恆棟距</h3>
+      <h3 class="t4" v-if="$isMobile()">18-29坪精質入主｜130米永恆棟距<br>26層新古典最美地標</h3>
     </div>
     <img class="logoicon" v-if="$isMobile()" src="@/section/s1/logoicon.svg" alt="長耀里" srcset="">
       <!--img class="buck" src="@/section/s1/buck.webp" alt="長耀里" srcset="">
@@ -179,7 +184,7 @@
       }
 
       .t2 {
-        font-size: size-m(12);
+        font-size: size-m(13);
         line-height: 180%;
         letter-spacing:0;
         width: size-m(330);
