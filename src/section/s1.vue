@@ -4,13 +4,13 @@
       <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
       <!--div class="t1"  data-aos="fade-up" data-aos-delay="200">回「嘉」 即刻預約 <br/>高大特區 泰嘉建築經典再現</div-->
       <img class="title1" src="@/section/s1/title1.svg" data-aos="fade-up"/><br>
-      <img v-if="!isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
+      <img class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
     </div>
     <!--div class="tip absolute text-white">TIMELESS TIME</div-->
     <div class="home-openning absolute font-['Noto_Sans_TC']">
       <!--div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div-->
-      <img v-if="isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
-      <div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div>
+      <!-- <img v-if="isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
+       div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div -->
       <div class="line">
         <span></span>
       </div>
@@ -22,6 +22,8 @@
       <div class="w2"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
       <div class="w1"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
     </div>
+    <img src="@/section/s1/bg.png" class="bg" v-if="!isMobile" />
+    <img src="@/section/s1/bg_m.png" class="bg" v-else />
   </article>
 </template>
 
@@ -33,12 +35,13 @@
   height: 100vh;
   min-height: size(900);
   max-height: size(1080);
-  background: url('@/section/s1/bg.jpg');
+  background:#005da8;
   background-size: cover;
+  .bg{position: absolute;top:calc(50% + 14.3vw);left: 0;width: 100%;}
 
   .title {
     left: 0;right: 0;margin: auto;
-    top: size(240);
+    top: calc(50% + #{size(170 - 540)});
     text-align: center;z-index:3;
 
     .logo {
@@ -51,12 +54,12 @@
 
     .title1{
       width: size(369);
-      margin-top: size(30);
+      margin-top: size(60);
     }
 
     .title2{
       width: size(280);
-      margin-top: size(40);
+      margin-top: size(80);
     }
 
     .t1 {
@@ -104,7 +107,7 @@
     .line {
       background-color: #fff;
       width: size(2);
-      height: size(144.6);
+      height: size(200);
       position: relative;
 
       span {
@@ -134,13 +137,13 @@
   }
 
   .w {
-    width: 100%;
+    width: 120%;
     overflow: hidden;
-    height: 50vh;
+    height: 50vw;
     position: absolute;
-    left: size(-250);
-    bottom: size(550);
-    transform: rotate(160deg);
+    left: -13vw;
+    bottom: -8vw;
+    transform: rotate(30deg);
     pointer-events: none;
 
     .w1 {
@@ -217,14 +220,15 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
-    min-height: size-m(667);
+    height: calc(100vh - 63px);
+    min-height: size-m(604);
     max-height: size-m(750);
-    background: url('@/section/s1/bg_m.jpg');
-    background-size: cover;
     position: relative;
+  .bg{top:auto;bottom:calc(10% + (0 - (750 * .1)) * 100vw / 375);height: size-m(94);}
 
     .title {
       top: size-m(79);
+    top: calc(50% + #{size-m(110 - 604 * .5)});
       z-index: 99;
       
 
@@ -235,8 +239,12 @@
 
       .title1{
       width: size-m(175);
-      margin-top: size-m(30);
+      margin-top: size-m(40);
 
+    }
+      .title2{
+      width: size-m(175);
+      margin-top: size-m(50);
     }
 
     
@@ -264,12 +272,6 @@
       transform: translateX(-50%);
       gap: 0;
 
-      .title2{
-      width: size-m(175);
-      position: absolute;
-      bottom: size-m(200);
-      top: auto;
-    }
 
       .t1 {
         font-size: size-m(12);
@@ -296,10 +298,10 @@
     }
 
     .w {
-      height: 30vh;
-      width: size-m(500);
-      left: size-m(-50);
-    bottom: size-m(240);
+      height: 100%;
+      width: size-m(1000);
+      left: size-m(-550);
+    bottom: size-m(-100);
       position: absolute;
     }
 
