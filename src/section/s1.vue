@@ -7,7 +7,7 @@
       <img class="logo" v-else src="@/section/s1/logo_m.png" alt="長耀里" srcset="">
       <img class="t1-img" v-if="!$isMobile()" src="@/section/s1/t1.svg" alt="長耀里" srcset="">
       <h2 class="t3" v-if="!$isMobile()">2609-2000</h2>
-      <div class="order-btn" href="#" v-if="!$isMobile()">立即預約</div>
+      <div class="order-btn" href="#" v-if="!$isMobile()" @click="scrollTo('.order')">立即預約</div>
       <h2 class="t1" v-if="$isMobile()">爭藏！林口國際級公園景觀名宅生活</h2>
       <p class="t2" v-if="$isMobile()">
         【長耀里2】長耀建設深耕林口代表之作<br>
@@ -120,6 +120,7 @@
       top: size(870);
       background: #00000079;
       transition: all 0.5s;
+      cursor: pointer; 
 
 
       &:hover{
@@ -286,5 +287,17 @@
 }
 </style>
 <script setup>
-import { ref } from 'vue';
+import { inject, computed, getCurrentInstance, ref } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
+
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+    smoothScroll({
+        scrollTo: document.querySelector(el)
+    })
+    menuOpen.value = !menuOpen.value;
+}
 </script>
