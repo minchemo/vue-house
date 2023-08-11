@@ -53,7 +53,7 @@
             font-weight: 700;
             font-size: size(40);
             margin-bottom: size(30);
-            color: #ACA883;
+            color: #DCC35F;
         }
 
         .t2 {
@@ -141,7 +141,7 @@
             .t1 {
                 font-size: size-m(24.5);
                 margin-bottom: size-m(17);
-                color: #F5EAD4;
+                color: #DCC35F;
             }
 
             .t2 {

@@ -16,8 +16,8 @@
             </p>
         </div>
         <lazy-component>
-            <img v-if="$isMobile()" class="rb_leaf pointer-events-none" src="@/section/s9/leaf_m.webp" alt="長耀里" srcset="">
-            <img v-else class="rb_leaf pointer-events-none" src="@/section/s9/leaf.webp" alt="長耀里" srcset="">
+            <!--img v-if="$isMobile()" class="rb_leaf pointer-events-none" src="@/section/s9/leaf_m.webp" alt="長耀里" srcset="">
+            <img v-else class="rb_leaf pointer-events-none" src="@/section/s9/leaf.webp" alt="長耀里" srcset=""-->
         </lazy-component>
 
     </div>
@@ -62,7 +62,7 @@
             font-weight: 700;
             font-size: size(40);
             margin-bottom: size(30);
-            color: #ACA883;
+            color: #DCC35F;
         }
 
         .t2 {

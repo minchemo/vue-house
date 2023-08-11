@@ -27,8 +27,8 @@
             </SplideSlide>
         </Splide>
         <lazy-component>
-            <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.webp" alt="長耀里" srcset="">
-            <img v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.webp" alt="長耀里" srcset="">
+            <!--img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s7/leaf.webp" alt="長耀里" srcset="">
+            <img v-else class="lt_leaf pointer-events-none" src="@/section/s7/leaf_m.webp" alt="長耀里" srcset=""-->
         </lazy-component>
     </div>
 </template>

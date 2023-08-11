@@ -56,7 +56,7 @@
             font-weight: 700;
             font-size: size(40);
             margin-bottom: size(30);
-            color: #F5EAD4;
+            color: #DCC35F;
 
             span {
 

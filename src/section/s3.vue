@@ -129,7 +129,7 @@
             color: #fff;
 
             span {
-                color: #ff8667;
+                color: #DCC35F;
             }
 
             &::after {
@@ -275,7 +275,7 @@
                 .icon {
                     width: size-m(108);
                     height: size-m(108);
-                    border: size-m(1) solid #000;
+                    border: size-m(1) solid #527a6b;
                 }
 
                 &.is-active {

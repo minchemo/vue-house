@@ -68,13 +68,13 @@
         </div>
 
         <lazy-component>
-            <img class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.webp" alt="長耀里" srcset="">
+            <!--img class="rb_leaf pointer-events-none" src="@/section/s5/rb_leaf.webp" alt="長耀里" srcset="">
             <img v-if="$isMobile()" class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf_m.webp" alt="長耀里"
                 srcset="">
             <img v-else class="rt_leaf pointer-events-none" src="@/section/s5/rt_leaf.webp" alt="長耀里" srcset="">
             <img v-if="$isMobile()" class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf_m.webp" alt="長耀里"
                 srcset="">
-            <img v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.webp" alt="長耀里" srcset="">
+            <img v-else class="lt_leaf pointer-events-none" src="@/section/s5/lt_leaf.webp" alt="長耀里" srcset=""-->
         </lazy-component>
     </div>
 </template>
@@ -85,7 +85,15 @@
 .s5 {
     width: 100%;
     height: size(1230);
-    background-color: #3a574c;
+    background-image: url('@/section/s1/bg_m.jpg');
+
+            &::before{
+            content: "";
+            background-color: #000000be;
+            width: size-m(375);
+            height: size-m(667);
+            position: absolute;
+            }
 
     .title {
         position: absolute;
@@ -104,7 +112,7 @@
                 }
 
                 &:nth-child(2) {
-                    color: #ff8667;
+                    color: #DCC35F;
                 }
             }
         }
@@ -368,9 +376,19 @@
 @media screen and (max-width:768px) {
     .s5 {
         height: size-m(1047);
+        background-image: url('@/section/s1/bg_m.jpg');
+        background-size: cover;
+
+            &::before{
+            content: "";
+            background-color: #000000be;
+            width: size-m(375);
+            height: size-m(1047);
+            position: absolute;
+            }
 
         .title {
-            top: size-m(83);
+            top: size-m(30);
             left: 0;
             width: 100%;
             padding: size-m(30);
@@ -395,7 +413,7 @@
         }
 
         .works {
-            top: size-m(388);
+            top: size-m(358);
 
             .slide-box {
                 .splide__list {
