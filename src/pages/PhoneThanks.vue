@@ -10,7 +10,7 @@
 .thanks {
     width: 100vw;
     height: 100vh;
-    background: url('@/assets/thank_bg.png');
+    background: url('//h65.tw/img/thank_bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
