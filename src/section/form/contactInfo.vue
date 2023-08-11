@@ -110,7 +110,7 @@
   .logo {
     width: size(556);
     height: size(193);
-    background-image: url("//h65.tw/img/form/logo.png");
+    background-image: url("@/section/form/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -192,6 +192,11 @@
     &.no-gap {
       gap: 0 !important;
     }
+  }
+}
+.modal-box{
+  img{filter:invert(75%) sepia(9%) saturate(1927%) hue-rotate(175deg) brightness(83%) contrast(87%);
+  //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
 
