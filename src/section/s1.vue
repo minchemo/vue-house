@@ -1,7 +1,8 @@
 <template>
 	<article class="s1 relative">
-		<img class="cf-logo" src="@/section/s1/t3.svg" data-aos="zoom-in" data-aos-delay="200" alt="" srcset="">
-		<img class="mt" src="@/section/s1/img.jpg" data-aos="zoom-in" data-aos-delay="200" alt="" srcset="">
+		<img class="cf-logo" src="@/section/s1/t4.svg" data-aos="zoom-in" data-aos-delay="200" alt="" srcset="">
+		<img class="mt" src="@/section/s1/img.jpg" alt="" srcset="" v-if="!$isMobile()">
+		<img class="mt" src="@/section/s1/imgm.jpg" alt="" srcset="" v-else>
 		<div class="title">
 			<!--svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 				viewBox="0 0 435 139" xml:space="preserve" class="logo">
@@ -59,15 +60,9 @@
 					<path class="l an5" style="clip-path:url(#SVGID_c0);" d="M301.1,3.4c-4.5,5.1-4.9,11.5-4.9,11.5" />
 				</g>
 			</svg-->
-			<div class="t1">
-				<img class="t01" src="@/section/s1/t01.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
-				<img class="t02" src="@/section/s1/t02.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="400">
-				<img class="t03" src="@/section/s1/t03.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="600">
-				<img class="t04" src="@/section/s1/t04.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="800">
-				<img class="t05" src="@/section/s1/t05.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="800">
-			</div>
-			
-			<div class="t2" data-aos="zoom-in" data-aos-delay="400">美好依序 一切就緒｜2-3房 <br v-if="$isMobile()"> <span>253-6000</span></div>
+			<img class="t1" src="@/section/s1/logo.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
+			<img class="t3" src="@/section/s1/t3.svg" alt="" srcset="" data-aos="zoom-in" data-aos-delay="200">
+			<!--div class="t2" data-aos="zoom-in" data-aos-delay="400">美好依序 一切就緒｜2-3房 <br v-if="$isMobile()"> <span>253-6000</span></div-->
 		</div>
 	</article>
 </template>
@@ -80,7 +75,7 @@
 	height: 100vh;
 	max-height: size(1080);
 	min-height: size(900);
-	background: #BB432B;
+	background: #E5B03D;
 	//background-image: url(@/section/s1/bg.jpg);
 	background-size: cover;
 	.cf-logo {
@@ -101,15 +96,15 @@
 
 	.mt {
 		@apply absolute;
-		width: size(1080);
-		left: 0;
+		width: size(1920);
+		right: size(0);
 		bottom: size(0);
-		transform-origin: left bottom;
+		mix-blend-mode: multiply;
 	}
 
 	.title {
 		@apply relative flex flex-col items-center justify-center; 
-		top: size(338);
+		top: size(278);
 		.logo {
 			width: size(434.15);
 			margin-right: -#{size(30)};
@@ -166,33 +161,6 @@
 			width: size(712);
 			display: inline;
 			margin-bottom: size(45.31);
-			-webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
-    		filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5))
-		}
-
-		.t01{
-			width: size(120);
-			margin-right: size(67);
-		}
-
-		.t02{
-			width: size(120);
-			margin-right: size(67);
-		}
-
-		.t03{
-			width: size(120);
-			margin-right: size(67);
-		}
-
-		.t04{
-			width: size(120);
-			
-		}
-		.t05{
-			width: size(619);
-			margin-left: size(38);
-			margin-top: size(30);
 		}
 		
 		.t2 {
@@ -208,6 +176,13 @@
 			margin-left: size(15);	
 			}
 		}
+
+		.t3{
+			position: relative;
+			width: size(1078);
+			display: inline;
+			margin-bottom: size(45.31);	
+		}
 	}
 }
 
@@ -222,7 +197,7 @@
 	height: 100vh;
     min-height: sizem(667);
     max-height: sizem(750);
-	background: #BB432B;
+	background: #E5B03D;
 	//background-image: url(@/section/s1/bgm.jpg);
 	.cf-logo {
 		@apply absolute;
@@ -232,7 +207,7 @@
 	}
 
 	.mt {
-		width: sizem(352);
+		width: sizem(375);
 		bottom: sizem(0);
 	}
 
@@ -251,8 +226,6 @@
 			width: sizem(300);
 			display: inline;
 			margin-bottom: size(45.31);
-			-webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
-    		filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5))
 		}
 
 		.t01{
@@ -280,8 +253,11 @@
 			margin-top: sizem(12);
 		}
 		
+		.t3{
+			width: sizem(300);
+		}
 		
-
+		
 		.t2 {
 			font-size: sizem(25);
 			line-height: sizem(45);
