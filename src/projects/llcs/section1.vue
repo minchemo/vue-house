@@ -1,8 +1,9 @@
 <template>
   <div class="section1">
       <img class="bg" data-aos="fade-down" src="./s1/bg.png" alt="" srcset="" />
-      <img class="l" data-aos="zoom-in" src="./s1/1.png" alt="" v-if="!isMobile" srcset="" />
-      <img class="l" data-aos="zoom-in" src="./s1/1m.png" alt="" v-else srcset="" />
+      <img class="l" data-aos="zoom-in" src="./s1/1.png" alt="" srcset="" />
+      <img class="l2" data-aos="zoom-in" src="./s1/2.png" alt="" v-if="!isMobile" srcset="" />
+      <img class="l2" data-aos="zoom-in" src="./s1/2_m.png" alt="" v-else srcset="" />
      <!-- <img class="bg" v-if="!isMobile" src="./s1/bg.png" alt="" srcset="" />
       <img class="bg" v-if="isMobile" src="./s1/bgm.png" alt="" srcset="" />
     <div class="main">
@@ -32,8 +33,13 @@
   align-items: center;
   justify-content: center;
   padding: 0 0 6vw;
-  .bg{width:100%;right: 0;bottom: calc(-7 * 100vw / 1920);position: absolute;}
-  .l{width: calc(1200 * 100vw / 1920);position: relative;z-index: 2;}
+  .bg{
+  width:calc(1403 * 100vw / 1920);;
+  left: 0;
+  bottom: calc(-10 * 100vw / 1920);
+  position: absolute;
+  }
+  .l{width: calc(855 * 100vw / 1920);position: relative;z-index: 2;}
     .ad {
       position: absolute;
       right: 1.5em;
@@ -41,6 +47,8 @@
       color: #fff;
       font-size: 1vw;
     }
+
+   .l2{width: calc(1740 * 100vw / 1920);position: absolute;z-index: 1;} 
 /*
   .main {
     width: 100%;
@@ -100,13 +108,14 @@
   max-height:calc(81200vw / 375 - 63px);
   min-height:calc(66700vw / 375 - 63px);
   padding: 0 0 6vw;
-  .bg{width:120%;}
+  .bg{width:120%; bottom:0em;}
       .ad {
-        font-size: 16px;
-      bottom:3.5em;
-      right: 4.5em;
+      font-size: 16px;
+      bottom:1em;
+      right: 1em;
       }
       .l{width: calc(280 * 100vw / 375);}
+      .l2{width: calc(350 * 100vw / 375);} 
   /*
   .img{width: calc(280 * 100vw / 375);}
   
