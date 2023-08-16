@@ -10,7 +10,7 @@
   </div>
   <!-- loading end
    <Nav v-if="config.showNav" /> -->
-  <div class="home bg-[#BB511F] overflow-hidden font-['Noto_Sans_TC',serif]">
+  <div class="home bg-[#E97290] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
      <div class="bg">
     </div>
     <S1 />
@@ -33,11 +33,12 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 .home{
+  /*
   background-image:url("@/section/s1/bg.png");
   background-size: size(170) auto;
   &::before{content: "";display: block;left: 0;top: 0;width: 100%;height: 100%;position: fixed;
-  background: linear-gradient(to bottom,#BB511F 0%,#BB511F00 50%,#BB511F 100%);  
-}
+  background: linear-gradient(to bottom,#BB511F 0%,#BB511F00 50%,#BB511F 100%);
+}  */
 }
 img {
   display: inline;

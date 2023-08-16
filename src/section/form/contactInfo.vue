@@ -21,7 +21,7 @@
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
-        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
+        <div><span v-if="info.address1">{{ info.address1 }}：<br v-if="$isMobile()"></span>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
@@ -110,8 +110,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:linear-gradient(180deg, #ebc97d 0%, #ce9a2b 100%);}
-.hover\:bg-color2:hover{background-color:linear-gradient(180deg,#ebc97d 0%, #c47c10 100%);}
+.bg-color1{background:#A92D41;}
+.hover\:bg-color2:hover{background-color:#861427;}
 
 
 .contact-info-img{
@@ -144,9 +144,10 @@
     // min-width: 680px;
 
     .contact-item {
-      background:linear-gradient(180deg, #ebc97d 0%, #ce9a2b 100%);
+      background:#A92D41;
       color: #FFF;
       width: 100%;
+    font-weight: 700;
       flex: 1;
       padding: 1.1em 0;
   //  border-radius: .5em;
@@ -161,7 +162,7 @@
       gap: 1em;
 
       &:hover {
-        background:linear-gradient(180deg,#ebc97d 0%, #c47c10 100%);
+      background:#861427;
         color: #fff;
 
         img {
@@ -206,6 +207,7 @@
 
 
       &.googlemap {
+        margin: 0;
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
@@ -231,7 +233,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(51%) sepia(100%) saturate(313%) hue-rotate(3deg) brightness(99%) contrast(99%);
+  img{filter: invert(23%) sepia(27%) saturate(4297%) hue-rotate(324deg) brightness(96%) contrast(92%);
   //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
@@ -250,14 +252,14 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#ce9a2b;
+    background:#A92D41;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(16);
       color: #fff;
       border-left:1px solid #fff7;
-
+    font-weight: 700;
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
@@ -319,7 +321,7 @@
           font-size: sizem(15);
           border-radius: sizem(0) sizem(0) 0 0;
           padding: 1.1em 0;
-          margin-top: sizem(20);
+          margin: sizem(20) 0px 0px 0px;
           //font-size: .9em;
 
           &::before {
