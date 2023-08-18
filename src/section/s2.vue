@@ -14,7 +14,7 @@
         <span class="t1">執行情形</span>
         <span class="t2">時間</span>
         <h3 class="t3">內容</h3>
-       <!--  <span class="t4">相關檔案</span> -->
+        <span class="t4">相關檔案</span>
       </section>
       <section class="list" v-for="item in list2">
         <a :href="item.link" target="_blank" class="link" v-if="item.link"></a>
@@ -23,7 +23,7 @@
         <h3 class="t3">{{item.t3}}<span class="t4_a" v-if="item.link&$isMobile()"></span><span class="t4" v-if="item.link">下載</span></h3>
         
       </section>
-      <a class="download" href="https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link" target="_blank">公開資料下載</a>
+      <!-- <a class="download" href="https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link" target="_blank">公開資料下載</a> -->
     </div>
   </article>
 </template>
@@ -155,9 +155,21 @@ const list2 = [
     link:"",
   },
   {
-    t1: ["v2", "作業中"],
-    t2: "",
+    t1: ["v1", "已完成"],
+    t2: "2022/06/08",
     t3: "自辦公聽會",
+    link:"https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link",
+  },
+  {
+    t1: ["v1", "已完成"],
+    t2: "2022/08/18",
+    t3: "申請事業及權變計畫報核",
+    link:"",
+  },
+  {
+    t1: ["v2", "作業中"],
+    t2: " ",
+    t3: "主管機關書面審查中",
     link:"",
   },
 ];
