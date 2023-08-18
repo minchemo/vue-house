@@ -31,7 +31,10 @@ $utm_campaign = isset($_POST['utm_campaign']) ? $_POST['utm_campaign'] : '';
 $datetime     = date ("Y-m-d H:i:s" , mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y'))) ;
     
 # 鳳翔 fs 客製資料：房型
-$room_type        = isset($_POST['room_type']) ? $_POST['room_type'] : '';
+$room_type    = isset($_POST['room_type']) ? $_POST['room_type'] : '';
+
+# 勝興興站 fs 客製資料：專員
+$people       = isset($_POST['people']) ? $_POST['people'] : '';
     
 # 好站 hj 客製資料：可聯絡時間
 $time_start        = isset($_POST['time_start']) ? $_POST['time_start'] : '';
@@ -249,7 +252,7 @@ if ($name == '') {
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>服務專員：".$people."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
@@ -272,7 +275,7 @@ if ($name == '') {
             $url .= "&city=".$city;
             $url .= "&area=".$area;
             $url .= "&room_type=" . $room_type;
-            $url .= "&message=".$msg;
+            $url .= "&message="."服務專員：".$people.";留言：".$msg;
             $url .= "&utm_source=".$utm_source;
             $url .= "&utm_medium=".$utm_medium;
             $url .= "&utm_content=".$utm_content;
