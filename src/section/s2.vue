@@ -101,7 +101,7 @@ font-size: 2em;}
 .list{
   flex-wrap: wrap;
  }
- .t2{flex: 0 1 70%;}
+ .t2{flex: 0 1 calc(100% - 7em);}
   .t4{position: absolute;right: 0;bottom: .6em;}
  }}
 }
