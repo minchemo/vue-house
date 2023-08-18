@@ -1,19 +1,5 @@
 <template>
   <div id="order" class="order relative text-center">
-    <div class="star">
-      <div class="star01" data-aos="zoom-in" data-aos-delay="800"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star02" data-aos="zoom-in" data-aos-delay="300"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star03" data-aos="zoom-in" data-aos-delay="1100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star04" data-aos="zoom-in" data-aos-delay="100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star05" data-aos="zoom-in" data-aos-delay="200"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star06" data-aos="zoom-in" data-aos-delay="400"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star07" data-aos="zoom-in" data-aos-delay="700"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star08" data-aos="zoom-in" data-aos-delay="1000"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star09" data-aos="zoom-in" data-aos-delay="0"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star10" data-aos="zoom-in" data-aos-delay="500"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star11" data-aos="zoom-in" data-aos-delay="600"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star12" data-aos="zoom-in" data-aos-delay="900"><img src="./s1/star1.png" alt="star"></div>
-    </div>
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
@@ -75,9 +61,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#333]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -107,47 +93,6 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
-.star{position: absolute;left: 0;top: 0;width: 100%;height:20vw;
-> div {position: absolute;
-img{width: 100%;}}
-  .star01{width: size(395);top: 164%;left: 7%;
-    img{opacity:0.1;transform: rotate(16deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star02{width: size(556);top: 104%;left: 48%;
-    img{opacity: 0.1;transform: rotate(37deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star03{width: size(360);top: 175%;left: -3%;
-    img{opacity: 0.1;transform: rotate(16deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star04{width: size(556);top: -8%;left: 72%;
-    img{opacity: 0.1;transform: rotate(-39deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star05{width: size(484);top: 57%;left: 63%;
-    img{opacity: 0.3;transform: rotate(170deg);}
-  }
-  .star06{width: size(268);top:163%;left: 53%;
-    img{opacity: 0.3;transform: rotate(-94deg);}
-  }
-  .star07{width: size(147);top: 195%;left: 30%;
-    img{opacity: 0.3;transform: rotate(-5deg);}
-  }
-  .star08{width: size(308);top: 127%;left: 3.5%;
-    img{opacity: 0.3;transform: rotate(17deg);}
-  }
-  .star09{width: size(566);top: 51%;left: 78%;
-    img{opacity: 0.3;transform: rotate(97deg);}
-  }
-  .star10{width: size(137);top: 175%;left: 65%;
-    img{opacity: 0.3;transform: rotate(-32deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-  .star11{width: size(137);top: 195%;left: 42.5%;
-    img{opacity: 0.3;transform: rotate(40deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-  .star12{width: size(137);top: 160%;left: 17%;
-    img{opacity: 0.52;transform: rotate(27deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-}
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -168,7 +113,7 @@ img{width: 100%;}}
   position: relative;
   width: 100%;
   padding-top: 0;
-  
+  background: url("./s3/bg.jpg");
 
   .bird {
     @apply absolute;
@@ -191,8 +136,8 @@ img{width: 100%;}}
 
   .order-title {
     font-size: size(40);
-    font-weight: 700;
-    color: #fff;
+    font-weight: 900;
+    color: #003F28;
     padding-top:2em;
   }
 
@@ -202,7 +147,7 @@ img{width: 100%;}}
   }
   .order-subTitle{
     font-size: size(17);
-    color: #fff;
+    color: #555;
     padding-top:.8em;
     letter-spacing: 0em;
     font-weight: 500;
@@ -244,7 +189,7 @@ img{width: 100%;}}
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+    .row{background: #FFF;border: 1px solid #003F28;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -270,7 +215,7 @@ img{width: 100%;}}
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#A92D41;
+    background:linear-gradient(180deg, #E8DBB8 0%, #BBA468 51.56%, #9A813E 54.69%, #DFC888 100%);
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;

@@ -1,10 +1,11 @@
 <template>
-  <article class="s3">
+  <article class="s5">
+    <img class="bg1" src="./s1/img.png" alt="" srcset="">
     <div class="main">
       <div class="txt">
-    <!-- <h4 class="subtitle" data-aos="zoom-in-right">VILLA LIFESTYLE</h4> -->
-    <h3 class="title" data-aos="zoom-in-right" data-aos-delay="200" >北外環第一站 大南科生活圈</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400" >科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
+    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">FOUR SEASON GARDEN</h4>
+    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200">私家花園會館<br />尊榮級度假享受</h3>
+        <p data-aos="zoom-in-right" data-aos-delay="400">微笑歐洲享近0%公設比高坪效，依然享有大樓飯店式物業管理，收發包裏等服務。並擁有私家公園及獨棟休閒會館，隨時與親友歡樂相聚，在家自在體驗度假VILLA享受。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -25,17 +26,16 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s3 {
-  @apply relative overflow-hidden flex items-center justify-center text-white;
+.s5 {
+  @apply relative flex items-center justify-center text-white;
   width: 100%;
   height: size(800);
   padding:0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
-  background: url("./s3/bg.jpg");
+  margin-bottom:8em;
 
-
+  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
   .main {
     @apply flex text-[#555];
     margin: 0;
@@ -48,11 +48,10 @@
     letter-spacing: 0;
     line-height: 1.7;
   .title{
-    font-size: 2.28em;
-    color: #003F28;
+    font-size: 2.5em;
+    color: #A3191F;
     margin: 0 0 .2em;
     line-height: 1.4;
-    font-weight: 900;
   }
   .subtitle{
     font-size: 1.2em;
@@ -79,17 +78,15 @@
 
 @media screen and (max-width: 767px) {
 
-  .s3 {
+  .s5 {
   @apply flex-col;
-    height: sizem(605);
+    height: sizem(500);
     padding: 0;
   font-size:sizem(14);
+  .bg1{top:-1em;left:auto;width:sizem(160);right:sizem(-40);}
 
   .main {
     padding: 0 sizem(32.5);
-
-    
-    
   .txt {
   .title{
     font-size: 1.8em;
@@ -105,9 +102,9 @@
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -149,27 +146,47 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s3/1_m.webp", import.meta.url).href : new URL("./s3/1.webp", import.meta.url).href,
+    img:new URL("./s5/1.jpg", import.meta.url).href ,
+    //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
+    caption: "現場實景"
+  },
+  {
+    img:new URL("./s5/2.jpg", import.meta.url).href ,
+    caption: "現場實景"
+  },
+  {
+    img:new URL("./s5/3.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s5/4.jpg", import.meta.url).href ,
+    caption: "現場實景"
+  },
+  {
+    img:new URL("./s5/5.jpg", import.meta.url).href ,
+    caption: "現場實景"
+  },
+  {
+    img:new URL("./s5/6.jpg", import.meta.url).href ,
     caption: "現場實景"
   },
 ]
 /*
 const imgs = [
   {
-    img: getImg('s3/1'),
+    img: getImg('s4/1'),
     caption: "內湖 豁達達禮"
   },
   {
-    img: getImg('s3/2'),
+    img: getImg('s4/2'),
     caption: "林口 長耀PARK"
   },
   {
-    img: getImg('s3/3'),
+    img: getImg('s4/3'),
     caption: "林口 長耀初"
   },
   {
-    img: getImg('s3/4'),
+    img: getImg('s4/4'),
     caption: "林口 長耀里"
   },
 ]

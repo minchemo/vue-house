@@ -1,6 +1,6 @@
 <template>
   <article class="s2">
-   <!-- <div class="slider" data-aos="fade">
+    <div class="slider" data-aos="fade">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -17,13 +17,7 @@
       </Splide>
     </div>
     <img class="bg2" src="./s2/bg2.png" alt="" srcset="">
--->
-<div class="txt">
-    <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >根植新化 繁華核心</h2>
-    <img src="./s2/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
-    <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">南科園區｜繁華市心｜高鐵願景</h4>
- </div>
-    <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="600">
+
   </article>
 </template>
 
@@ -33,42 +27,12 @@
 .s2 {
   @apply relative overflow-hidden flex items-center justify-center text-white bg-[#F27200];
   width: 100%;
-  min-height: size(800);
-  max-height: size(1080);
-  height: 100vh;
+  height: auto;
   padding:0;
   font-size:size(18);
   gap:3em;
   flex-direction: column;
    .bg2{position: absolute;bottom:0;left: 0;width: 100%;pointer-events: none;}
-  .txt {
-    @apply absolute flex text-[#fff];
-  z-index: 5;
-    margin: 0;top: 5em;left: 0;right: 0;
-  flex-direction: column;
-  text-align: center;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-  .title{
-    font-size: 3.5em;
-    margin: 0 0 .2em;
-    line-height: 1.4;
-    font-weight: 900;color: #F3DEB9;
-  text-align: center;
-  }
-  .en{
-    height: 4.1em;
-  }
-  .subtitle{
-    font-size: 2.28em;
-    margin: 1.5em 0 .6em;
-    font-weight: 700;
-  }
-  }
-  .bottom{position: absolute;
-    width: size(330);
-    margin: 0 auto;bottom:3em;left: 0;right: 0;}
   .slider {
     margin: 0 0 size(150);
     width: 100%;
@@ -91,6 +55,25 @@
       
     }
     
+  .txt {
+    @apply absolute flex text-[#fff];
+  z-index: 5;
+    margin: 0;top: 0;left: 0;right: 0;
+  flex-direction: column;
+  text-align: center;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.7;
+  .title{
+    font-size: 2.5em;
+    margin: 0 0 .2em;
+    line-height: 1.4;
+  }
+  .subtitle{
+    font-size: 1.2em;
+    margin: 1em 0 .6em;
+  }
+  }
     .caption {z-index: 5;}
   .arrows{
     .prev,

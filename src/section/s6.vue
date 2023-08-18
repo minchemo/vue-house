@@ -1,14 +1,12 @@
 <template>
   <article class="s6">
-    <img class="bg1" src="./s6/bg1.png" alt="" srcset="">
-    <img class="bg2" src="./s6/bg2.png" alt="" srcset="">
-    <img class="img" src="./s1/img.png" alt="" srcset="" v-if="!$isMobile()">
+    <img class="bg1" src="./s1/img.png" alt="" srcset="">
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">PLAY AROUND</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200">日子隨心所欲<br />
-這樣樂活 那樣享受</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400">5分鐘食衣住行圈，三井OUTLET、梧棲商圈、全聯超市、港區運動公園、童綜合醫院，出門轉個彎，臺灣大道與台61線快速道暢行大台中。</p>
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >回歸<span></span>自然</h2>
+    <img src="./s6/en.png" class="en" data-aos="zoom-in" data-aos-delay="200">
+    <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">汲光之居，建築原生種</h4>
+        <p data-aos="zoom-in-right" data-aos-delay="400">科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -36,22 +34,9 @@
   padding:0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
-  background: #F27200;
-  .bg1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(-80%);pointer-events: none;}
-  .bg2{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(85%);z-index: 2;pointer-events: none;}
-  .img{position: absolute;top:4em;right:size(-76);width:size(429);opacity: .8;}
+  margin-bottom:8em;
 
+  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
   .main {
     @apply flex text-[#fff];
     margin: 0;
@@ -64,16 +49,24 @@
     letter-spacing: 0;
     line-height: 1.7;
   .title{
-    font-size: 2.5em;
-    //color: #A3191F;
+    font-size: 3.5em;
     margin: 0 0 .2em;
     line-height: 1.4;
+    font-weight: 900;color: #F3DEB9;
+    span{display: inline-block;width: 3em;height: 2px; background: currentColor;vertical-align: middle;margin: 0 .2em 0.1em;}
+  }
+  .en{
+    height:11.8em;
   }
   .subtitle{
-    font-size: 1.2em;
-    margin: 0 0 .6em;
+    font-size: 2.28em;
+    margin: 1.5em 0 .6em;
+    font-weight: 700;
   }
   }
+  .bottom{position: absolute;
+    width: size(330);
+    margin: 0 auto;bottom:3em;left: 0;right: 0;}
 }
 
   .slider {
@@ -96,14 +89,11 @@
 
   .s6 {
   @apply flex-col;
-    height: sizem(605);
+    height: sizem(500);
     padding: 0;
   font-size:sizem(14);
+  .bg1{top:-1em;left:auto;width:sizem(160);right:sizem(-40);}
 
-  .bg1{position: absolute;top:0;
-    left: -70%;transform: translateY(-80%);
-    width: 240%;max-width: 900%;pointer-events: none;}
-   .bg2{position: absolute;bottom:0;left: -90%;width: 230%;max-width: 900%;pointer-events: none;z-index:5;}
   .main {
     padding: 0 sizem(32.5);
   .txt {
@@ -121,7 +111,7 @@
     width: 100%;
 
     .caption {
-    font-size:sizem(12);
+    font-size:sizem(12);  
     right:sizem(5);
     bottom:sizem(5);
     }
@@ -167,23 +157,27 @@ const imgs = [
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "港區運動公園"
+    caption: "現場實景"
   },
   {
     img:new URL("./s6/2.jpg", import.meta.url).href ,
-    caption: "台中港"
+    caption: "現場實景"
   },
   {
     img:new URL("./s6/3.jpg", import.meta.url).href ,
-    caption: "三井outlet情境示意圖"
+    caption: "情境示意圖"
   },
   {
     img:new URL("./s6/4.jpg", import.meta.url).href ,
-    caption: "沙鹿火車站"
+    caption: "現場實景"
   },
   {
     img:new URL("./s6/5.jpg", import.meta.url).href ,
-    caption: "全聯超市情境示意圖"
+    caption: "現場實景"
+  },
+  {
+    img:new URL("./s6/6.jpg", import.meta.url).href ,
+    caption: "現場實景"
   },
 ]
 /*

@@ -12,15 +12,16 @@
    <Nav v-if="config.showNav" /> -->
   <div class="home bg-[#E97290] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
      <div class="bg">
+      <img src="@/section/s1/bg2.jpg" alt="">
     </div>
     <S1 />
-  <!--
     <S2 />
     <S3 />
     <S4 />
     <S5 />
     <S6 />
     <S7 />
+  <!--
     <S8 />
     <S9 />
     <S1new />
@@ -44,6 +45,8 @@
   position: fixed;
   top: 0;left: 0;width: 100%;height: 100%;
   background: url("@/section/s1/bg1.png");
+  background-size:2.5vw auto;
+  img{width: 102%;height: 102%;filter: blur(2px);mix-blend-mode: multiply;position: relative;top: -1%;left: -1%;}
 }
 }
 img {
@@ -53,12 +56,13 @@ img {
   margin: 0 auto;
 }
 /*
+*/
 .slider {
   @apply relative;
   .caption{
       @apply absolute;
       right:1em;
-      bottom: 1em;
+      bottom: .5em;
       font-weight: 500;
       font-size: size(15);
       color: #FFF;
@@ -107,12 +111,12 @@ img {
     }
   }
 }
-*/
 @media screen and (max-width: 767px) {
 .home{
   background-size: sizem(85) auto;
 }
 /*
+*/
 .slider {
   @apply relative;
   .arrows{
@@ -139,20 +143,19 @@ img {
     }
   }
 }
-*/
 }
 </style>
 
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-/* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
+/* 
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import Nav from "@/layout/navbar.vue" */

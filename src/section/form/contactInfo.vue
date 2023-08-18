@@ -110,7 +110,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#A92D41;}
+.bg-color1{background:linear-gradient(180deg, #E8DBB8 0%, #BBA468 51.56%, #9A813E 54.69%, #DFC888 100%);}
 .hover\:bg-color2:hover{background-color:#861427;}
 
 
@@ -144,7 +144,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#A92D41;
+      background:linear-gradient(180deg, #E8DBB8 0%, #BBA468 51.56%, #9A813E 54.69%, #DFC888 100%);
       color: #FFF;
       width: 100%;
     font-weight: 700;
@@ -162,7 +162,7 @@
       gap: 1em;
 
       &:hover {
-      background:#861427;
+      background:linear-gradient(180deg, #d6c79e 0%, #aa9358 51.56%, #7c6527 54.69%, #b39b59 100%);
         color: #fff;
 
         img {
