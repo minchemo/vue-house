@@ -1,29 +1,5 @@
 <template>
   <article class="s1" id="s1">
-    <div class="star">
-      <div class="star01" data-aos="zoom-in" data-aos-delay="1800"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star02" data-aos="zoom-in" data-aos-delay="1300"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star03" data-aos="zoom-in" data-aos-delay="2100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star04" data-aos="zoom-in" data-aos-delay="1100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star05" data-aos="zoom-in" data-aos-delay="1200"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star06" data-aos="zoom-in" data-aos-delay="1400"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star07" data-aos="zoom-in" data-aos-delay="1700"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star08" data-aos="zoom-in" data-aos-delay="2000"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star09" data-aos="zoom-in" data-aos-delay="1000"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star10" data-aos="zoom-in" data-aos-delay="1500"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star11" data-aos="zoom-in" data-aos-delay="1600"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star12" data-aos="zoom-in" data-aos-delay="1900"><img src="./s1/star1.png" alt="star"></div>
-    </div>
-      <div class="boy" data-aos="fade-up" data-aos-delay="0"><img src="./s1/boy.svg" alt="boy">
-      <div class="star13" data-aos="fade-up" data-aos-delay="800"><img src="./s1/star.svg" alt="star"></div>
-      <div class="star14" data-aos="fade-up" data-aos-delay="600"><img src="./s1/star.svg" alt="star"></div>
-      <div class="star15" data-aos="fade-up" data-aos-delay="400"><img src="./s1/star.svg" alt="star"></div>
-      <div class="star16" data-aos="fade-up" data-aos-delay="200"><img src="./s1/star.svg" alt="star"></div></div>
-    <div class="txt">
-      <span class="t1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000"><span>勝興</span>沙鹿新站 希望綻放</span>
-      <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000"/>
-      <span class="t2" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">2-4<span>房</span> 04-2665-5577</span>
-    </div>
 
   </article>
 </template>

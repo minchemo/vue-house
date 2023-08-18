@@ -33,12 +33,18 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 .home{
+  background: linear-gradient(to right,#ccc 0%,#fff 100%);
   /*
   background-image:url("@/section/s1/bg.png");
   background-size: size(170) auto;
   &::before{content: "";display: block;left: 0;top: 0;width: 100%;height: 100%;position: fixed;
   background: linear-gradient(to bottom,#BB511F 0%,#BB511F00 50%,#BB511F 100%);
 }  */
+.bg{
+  position: fixed;
+  top: 0;left: 0;width: 100%;height: 100%;
+  background: url("@/section/s1/bg1.png");
+}
 }
 img {
   display: inline;

@@ -39,7 +39,7 @@
             <option value="" selected disabled>需求房型</option>
             <option value="二房">二房</option>
             <option value="三房">三房</option>
-          </select>  -->
+          </select>
           <label class="row"><span>服務專員</span>
           <select class="select w-full rounded-none bg-white" v-model="formData.people">
             <option value="" selected disabled>選擇專員</option>
@@ -49,6 +49,7 @@
             <option value="專員D">專員D</option>
             <option value="專員E">專員E</option>
           </select></label>
+          -->
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
