@@ -1,6 +1,6 @@
 <template>
   <article class="s1" id="s1">
-
+<img src="@/assets/top.png" class="top" @click="scrollTo('.s1')">
   </article>
 </template>
 
@@ -16,10 +16,14 @@
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  font-size:size(40);
+  font-size:size(18);
   color: #FFF;
   line-height: 1.3;
   font-weight: 700;
+  .top{position: fixed;right: 1em;bottom: 1em;z-index: 2;cursor: pointer;
+    transition: opacity 0.5s;
+  &:hover{opacity: .8;}
+  }
   // background: url("./s1/pc.jpg") center;
   // background-size: cover;
   /*
