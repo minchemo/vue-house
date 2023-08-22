@@ -127,7 +127,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #055F76;
+        background-color: #c53e00;
         color: #fff;
 
         img {
@@ -197,7 +197,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #C9A063;
+      background-color: #c53e00;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;

@@ -1,6 +1,6 @@
 <template>
     <article class="s7">
-        <img class="bg-top" v-if="!$isMobile()" src="@/section/s7/bg-top.png" alt="" srcset="">
+        <!--img class="bg-top" v-if="!$isMobile()" src="@/section/s7/bg-top.png" alt="" srcset=""-->
         <img class="peaceofmind" src="@/section/s7/peaceofmind.png" alt="">
         <img class="decor" src="@/section/s7/decor.png" alt="">
         <div class="title" data-aos="fade-up" data-aos-delay="0">
@@ -63,9 +63,10 @@
   .s7 {
       width: 100%;
       height: size(1080);
-      background: url('@/section/s7/bg.jpg');
-      background-size: cover;
-      background-position: top;
+      background:#c53e00;
+      //background: url('@/section/s7/bg.jpg');
+      //background-size: cover;
+      //background-position: top;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -85,8 +86,9 @@
           position: absolute;
           width: size(368);
           top: size(114);
-          right: -#{size(122)};
+          right: -#{size(150)};
           z-index: 0;
+          opacity: .3;
           animation: rotate 10s infinite linear;
   
           @keyframes rotate {
@@ -150,7 +152,7 @@
                   line-height: size(30);
   
                   &.isBlue {
-                      color: #055F76;
+                      color: #c53e00;
                   }
               }
   
@@ -161,7 +163,7 @@
                   line-height: size(30);
   
                   &.isBlue {
-                      color: #055F76;
+                      color: #c53e00;
                   }
               }
   
@@ -169,7 +171,7 @@
                   content: '';
                   width: 100%;
                   height: 100%;
-                  background: rgba(5, 95, 118, 0.4);
+                  background: rgba(255, 113, 47, 0.4);
                   position: absolute;
                   left: 0;
                   top: 0;
@@ -306,11 +308,11 @@
   
           &.blue {
               &::after {
-                  background-color: #055F76;
+                  background-color: #c53e00;
               }
   
               &::before {
-                  background-color: #055F76;
+                  background-color: #c53e00;
               }
           }
       }
@@ -325,8 +327,8 @@
       .s7 {
           height: size-m(781);
           margin-top: -#{size-m(114)};
-          background: url('@/section/s7/bg_m.png');
-          background-size: cover;
+          //background: url('@/section/s7/bg_m.png');
+          //background-size: cover;
           background-position: top;
           position: relative;
           display: flex;

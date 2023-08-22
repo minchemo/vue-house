@@ -24,8 +24,9 @@
   .s8 {
       width: 100%;
       height: size(1080);
-      background: url('@/section/s8/bg.jpg');
-      background-size: cover;
+      background:#c53e00;
+      //background: url('@/section/s8/bg.jpg');
+      //background-size: cover;
       overflow: hidden;
       position: relative;
       display: flex;
@@ -81,8 +82,9 @@
       .s8 {
           width: 100%;
           height: size-m(667);
-          background: url('@/section/s8/bg_m.jpg');
-          background-size: cover;
+          background:#c53e00;
+          //background: url('@/section/s8/bg_m.jpg');
+          //background-size: cover;
           overflow: hidden;
           position: relative;
           display: flex;

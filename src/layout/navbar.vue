@@ -120,7 +120,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background: rgba(5, 95, 118, 0.8);
+        background: rgba(126, 51, 2, 0.8);
         width: size(374);
         height: 100%;
         z-index: 5;

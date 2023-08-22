@@ -7,12 +7,12 @@
                 仁和、文化、和平、崇善、文良五大公園為鄰，輕鬆享受綠意生活，悠享台南城市之肺，擁抱無價的健康能量，近萬坪文藝「巴克禮公園」，榮獲全國10大優良公園。</div>
         </div>
         <Slide :class="{ 'z-[10]': $isMobile(), 'z-[2]': $isMobile() }" :imgs="imgs" :w="1250" :h="823" :w_m="375"
-            :h_m="246.9" :dot="true" :dot_size="11" :dot_color="$isMobile() ? '#C9A063' : '#055F76'" :dot_bottom="-35"
+            :h_m="246.9" :dot="true" :dot_size="11" :dot_color="$isMobile() ? '#C9A063' : '#c53e00'" :dot_bottom="-35"
             :dot_bottom_m="-20" />
 
-        <img class="decor1" data-aos-duration="1000" data-aos="leafIn" src="@/section/s4/decor1.png" alt="">
+        <!--img class="decor1" data-aos-duration="1000" data-aos="leafIn" src="@/section/s4/decor1.png" alt="">
         <img class="decor2" data-aos-duration="1000" data-aos="leafIn" src="@/section/s4/decor2.png" alt="">
-        <img class="decor3" data-aos-duration="1000" data-aos="leafIn" src="@/section/s4/decor3.png" alt="">
+        <img class="decor3" data-aos-duration="1000" data-aos="leafIn" src="@/section/s4/decor3.png" alt=""-->
         <img class="bottom-decor" src="@/section/s4/bottom.png" alt="">
     </article>
 </template>
@@ -35,7 +35,7 @@
   
       .text {
           position: relative;
-          background-color: #055F76;
+          background-color: #c53e00;
           width: size(494);
           height: size(522);
           font-weight: 500;
@@ -45,7 +45,7 @@
           flex-direction: column;
           justify-content: flex-end;
           margin-right: -#{size(85)};
-          background-image: url('@/section/s4/textBg.png');
+          //background-image: url('@/section/s4/textBg.png');
           background-position: bottom left;
           background-repeat: no-repeat;
           background-size: 100%;
@@ -110,7 +110,7 @@
       .s4 {
           width: 100%;
           height: size-m(667);
-          background: url('@/section/s4/bg_m.jpg');
+          //background: url('@/section/s4/bg_m.jpg');
           background-position: bottom;
           background-size: cover;
           flex-direction: column-reverse;
@@ -126,7 +126,7 @@
               flex-direction: column;
               justify-content: flex-end;
               margin-right: 0;
-              background-image: url('@/section/s4/textBg_m.png');
+              //background-image: url('@/section/s4/textBg_m.png');
   
               .title {
                   font-size: size-m(30);

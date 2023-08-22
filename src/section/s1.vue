@@ -4,7 +4,7 @@
     <img class="logo" v-else src="@/section/s1/logo_m.png" alt="" data-aos="fade-up">
     <img class="title" v-if="!$isMobile()" src="@/section/s1/title.png" alt="" data-aos="fade-up" data-aos-delay="200">
     <img class="title" v-else src="@/section/s1/title_m.png" alt="" data-aos="fade-up" data-aos-delay="200">
-    <img class="light" v-if="!$isMobile()" src="@/section/s1/light.png" alt="" srcset="">
+    <img class="light" src="@/section/s1/light.png" alt="" srcset="">
     <div class="other">
     <div class="t-new" data-aos="fade-up" data-aos-delay="200">接待中心：崇明路．崇明24街口</div>
     <a href="#order" class="order font-['noto_serif_tc']"  data-aos="fade-up" data-aos-delay="300">立即預約</a>
@@ -44,7 +44,7 @@ align-items: center;
       width: size(300);
       height: size(80);
       font-size: size(30);
-      background: #C9A063;
+      background: #ff7214;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,13 +52,14 @@ align-items: center;
       border-radius: 30px;
       font-weight: 600;
       letter-spacing: 0.3em;
-      border: 2px solid #C9A063;
+      border: 2px solid rgb(238, 188, 24);
       transition: 0.5s;
 
       &:hover{
-      background: #a1804d; 
+      background: #ffffff; 
       transition: 0.5s;
       border: 2px solid #fff;
+      color: #ff7214;
       }
     }
 }
@@ -67,17 +68,18 @@ align-items: center;
   .light {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: size(1200);
+    right: 0;
+    width: size(675);
+    mix-blend-mode: soft-light;
     animation: flash .8s alternate-reverse infinite;
 
     @keyframes flash {
       from {
-        opacity: 50%;
+        opacity: 30%;
       }
 
       to {
-        opacity: 100%;
+        opacity: 60%;
       }
     }
   }
@@ -88,6 +90,7 @@ align-items: center;
 
   .title {
     width: size(909);
+    margin-right: size(475);
   }
 }
 
@@ -99,7 +102,7 @@ align-items: center;
 
   .s1 {
     min-height: size-m(667);
-    max-height: size-m(750);
+    max-height: size-m(667);
     background: url('@/section/s1/bg_m.jpg');
     background-size: cover;
     gap: size-m(35);
@@ -121,6 +124,22 @@ align-items: center;
       }
     }
 
+    .light {
+    width: size-m(230);
+    bottom: size-m(-30);
+    animation: flash .8s alternate-reverse infinite;
+
+    @keyframes flash {
+      from {
+        opacity: 30%;
+      }
+
+      to {
+        opacity: 80%;
+      }
+    }
+  }
+
 
     .logo {
       width: size-m(279);
@@ -128,6 +147,9 @@ align-items: center;
 
     .title {
       width: size-m(315);
+      margin-right: size-m(16);
+      margin-top: size-m(-15);
+      margin-bottom: size-m(10);
     }
   }
 }

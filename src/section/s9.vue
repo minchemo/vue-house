@@ -32,8 +32,9 @@
 .s9 {
     width: 100%;
     height: size(1080);
-    background: url('@/section/s9/bg.jpg');
-    background-size: cover;
+    background:#c53e00;
+    //background: url('@/section/s9/bg.jpg');
+    //background-size: cover;
     background-position: top;
     position: relative;
     display: flex;
@@ -124,7 +125,7 @@
     .s9 {
         width: 100%;
         height: size-m(600);
-        background: #065B71;
+        background:#c53e00;
         flex-direction: column-reverse;
         justify-content: flex-end;
         gap: size(108);

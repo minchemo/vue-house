@@ -2,7 +2,7 @@
   <div id="order" class="order relative bg-[#DFDDC8] text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center font-['noto_serif_tc'] text-[#055F76]">{{ info.order.title }}</div>
+      <div class="order-title text-center font-['noto_serif_tc'] text-[#ffffff]">{{ info.order.title }}</div>
       <div class="cus-divider"></div>
 
       <!-- Title Image -->
@@ -85,7 +85,7 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  background-image: url('@/section/form/bg.png');
+  background-image: url('@/section/form/bg.jpg');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,6 +113,7 @@
     width: size(700);
     top: -#{size(310)};
     right: -#{size(250)};
+    opacity: .3;
     animation: rotate 10s infinite linear;
 
     @keyframes rotate {
@@ -142,7 +143,7 @@
     width: size(300);
     height: size(2);
     margin-bottom: size(50);
-    background-color: #055F76;
+    background-color: #ffffff;
   }
 
   .order-title-img {
@@ -181,7 +182,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #055F76;
+    background-color: #c53e00;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
@@ -200,7 +201,7 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    background-image: url('@/section/form/bg_m.png');
+    background-image: url('@/section/form/bg_m.jpg');
     height: size-m(1452);
     padding-bottom: 0;
     position: relative;
@@ -218,6 +219,7 @@
       width: size-m(148);
       top: -#{size-m(50)};
       right: -#{size-m(35)};
+      
     }
   }
 
@@ -233,7 +235,7 @@
       width: size-m(117);
       height: size-m(2);
       margin-bottom: size-m(25);
-      background-color: #055F76;
+      background-color: #fff;
     }
 
     .order-title {

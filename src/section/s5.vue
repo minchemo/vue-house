@@ -62,7 +62,7 @@
               font-size: size(60);
               font-weight: 500;
               line-height: size(70);
-              color: #055F76;
+              color: #c53e00;
           }
   
           .desc {
@@ -70,8 +70,8 @@
               line-height: size(35);
               font-size: size(20);
               font-weight: 400;
-              border-top: size(1) solid #055F76;
-              border-bottom: size(1) solid #055F76;
+              border-top: size(1) solid #c53e00;
+              border-bottom: size(1) solid #c53e00;
               padding: size(8) size(20);
           }
       }
@@ -127,8 +127,8 @@
                   width: size-m(315);
                   line-height: 1.5;
                   font-size: size-m(15);
-                  border-top: size-m(1) solid #055F76;
-                  border-bottom: size-m(1) solid #055F76;
+                  border-top: size-m(1) solid #c53e00;
+                  border-bottom: size-m(1) solid #c53e00;
                   padding: size-m(15) 0;
               }
           }

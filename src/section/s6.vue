@@ -8,7 +8,7 @@
                 國賓影城時尚生活圈，所有需求一次擁有。</div>
         </div>
         <Slide :class="{ 'z-[10]': $isMobile(), 'z-[2]': $isMobile() }" :imgs="imgs" :w="1250" :h="823" :w_m="375"
-            :h_m="246.9" :dot="true" :dot_size="11" :dot_color="$isMobile() ? '#C9A063' : '#055F76'" :dot_bottom="-35"
+            :h_m="246.9" :dot="true" :dot_size="11" :dot_color="$isMobile() ? '#C9A063' : '#c53e00'" :dot_bottom="-35"
             :dot_bottom_m="-20" />
 
         <!--img class="bottom-decor" src="@/section/s6/bottom.png" alt=""-->
@@ -34,7 +34,7 @@
   
       .text {
           position: relative;
-          background-color: #055F76;
+          background-color: #c53e00;
           width: size(494);
           height: size(522);
           font-weight: 500;
@@ -44,7 +44,7 @@
           flex-direction: column;
           justify-content: flex-end;
           margin-left: -#{size(85)};
-          background-image: url('@/section/s4/textBg.png');
+          //background-image: url('@/section/s4/textBg.png');
           background-position: bottom left;
           background-repeat: no-repeat;
           background-size: 100%;
@@ -83,7 +83,8 @@
   @media screen and (max-width: 767px) {
       .s6 {
           height: size-m(667);
-          background: url('@/section/s6/bg_m.jpg');
+          background:#c53e00;
+          //background: url('@/section/s6/bg_m.jpg');
           background-position: bottom;
           background-size: cover;
           flex-direction: column-reverse;
@@ -99,7 +100,7 @@
               flex-direction: column;
               justify-content: flex-end;
               margin-left: 0;
-              background-image: url('@/section/s4/textBg_m.png');
+              //background-image: url('@/section/s4/textBg_m.png');
   
               .title {
                   font-size: size-m(30);
