@@ -70,34 +70,6 @@
   .bottom{position: absolute;
     width: size(330);
     margin: 0 auto;bottom:3em;left: 0;right: 0;}
-  .slider {
-    margin: 0 0 size(150);
-    width: 100%;
-    flex-basis: 100%;
-    //  height: size(00);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: 100%;
-      height: size(1180);
-      background-position: 50% 100%;
-  &::before,
-  &::after{
-    content: "";
-    background: linear-gradient(to top, #F27200 0%,#F2720000 100%);
-    position: absolute;
-    bottom: 0;left: 0;width: 100%;height:30%;z-index: 4;display: block;
-  }
-  &::before{top: 0;
-    background: linear-gradient(to bottom, #F27200 0%,#F2720099 50%,#F2720000 100%);height:50%;}
-      
-    }
-    
-    .caption {z-index: 5;}
-  .arrows{
-    .prev,
-    .next{width: 2.3%;}
-  }
-  }
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -126,24 +98,6 @@
   .bottom{
     width: sizem(160);}
 
-  .slider {
-    height: auto;
-    width: 100%;
-    margin: 0 0 sizem(30);
-
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(550);
-      
-    }
-  }
   }
 }
 </style>
@@ -173,39 +127,4 @@ const options = {
   gap: 0,
   type: 'loop'
 }
-
-const imgs = [
-  {
-    img:new URL("./s2/1.jpg", import.meta.url).href ,
-    title:"邂逅歐式別墅心生活",
-    desc:"有天有地、有大樹有鳥語，夢享人生現在開始",
-    caption: "情境示意圖",
-  },
-  {
-    img:new URL("./s2/2.jpg", import.meta.url).href ,
-    title:"恣意徜徉私家花園",
-    desc:"聽風和樹低語、閱讀四季表情，微笑領略新幸福",
-    caption: "情境示意圖",
-  },
-]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>

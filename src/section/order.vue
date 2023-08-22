@@ -1,6 +1,6 @@
 <template>
   <div id="order" class="order relative text-center">
-    <div class="order-section">
+    <div class="order-section" >
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
       <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
@@ -78,7 +78,7 @@
       </div>
 
       <!-- Contact Info -->
-      <ContactInfo  id="contact-info" />
+      <ContactInfo  class="s10" />
     </div>
 
 
@@ -88,10 +88,14 @@
     <!-- HouseInfo -->
     <HouseInfo />
   </div>
+  <div class="s10"></div>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+#contact{
+  position: relative;
+}
 
 .order-section {
   position: relative;

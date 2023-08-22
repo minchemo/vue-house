@@ -1,6 +1,7 @@
 <template>
     <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
+        <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
             v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
@@ -9,78 +10,17 @@
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
             <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
             <template v-for="item, i in info.navList">
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] "
-                @click="scrollTo(item.target, !$isMobile()?item.offset:item.offsetmo)">
+            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
+                @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
                 <span>{{ item.name }}</span>
             </div>
             </template>
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] btn2" v-if="info.phone"
-            @click="scrollTo('.contact-info')">
-                <span>立即來電</span>
-            </div>
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] btn2" v-if="info.address"
-            @click="scrollTo('.gmap')">
-                <span>地圖導航</span>
-            </div>
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] btn2"
-                @click="scrollTo('#order')">
-                <span>立即預約</span>
-            </div>
-
-            <!-- <template v-for="item, i in info.navList">
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
-                @click="scrollTo(item.target, item.offset, item.offsetmo)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
-                <span>{{ item.name }}</span>
-            </div>
-            </template>  -->
             <div class="close" @click="menuOpen = !menuOpen"  v-if="$isMobile()">
             </div>
         </div>
     </div>
     <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
     </div>
-      <!-- Modal -->
-  <input type="checkbox" v-model="modalOpen1" id="contact-modal" class="modal-toggle" />
-  <div class="modal -mt-20 md:-mt-72">
-    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
-      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
-      <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h65.tw/img/form/fb.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
-      <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'messenger' ? 'Facebook Messenger' : modalType == 'fb' ? 'Facebook 粉絲專頁' :
-      `${info.address2?info.address2:'導航地址'}`
-      }}</div>
-      <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'messenger' ? '線上諮詢' : modalType == 'fb' ? '' :
-      `${info.address}`
-      }}</div>
-      <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'messenger',
-        'btfanpage': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' : modalType == 'fb' ? '前往粉絲專頁' :
-        '開啟導航'
-        }}</div>
-      <!-- btn phone -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'messenger',
-        'btfanpage': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' : modalType == 'fb' ? '前往粉絲專頁' :
-        '開啟導航'
-        }}</div>
-    </div>
-  </div>
 </template>
 
 
@@ -201,7 +141,7 @@
         padding: 0;
         font-size: size(16);
         gap: 2em;
-        padding: 0 0 0 20em;
+        padding: 0 0 0 40em;
         font-weight: 700;
  // backdrop-filter: blur(2px);
         // backdrop-filter: blur(2px);
@@ -239,9 +179,10 @@
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
+                text-shadow:0 0 7px #7c6527d0;
 
                 &:hover {
-                    background-color:linear-gradient(180deg, #d6c79e 0%, #aa9358 51.56%, #7c6527 54.69%, #b39b59 100%);
+                    background-image:linear-gradient(180deg, #d6c79e 0%, #aa9358 51.56%, #7c6527 54.69%, #b39b59 100%);
                     &:after {
                         width:0;
                     }
@@ -416,6 +357,7 @@
                 }
             &.btn2{
                 margin:0 auto -.5em auto;
+                padding: 0.4em 4em;
             }
 
             }
@@ -487,10 +429,13 @@ const smoothScroll = inject('smoothScroll')
 const scrollTo = (el, offset) => {
     const targetElement = document.querySelector(el);
     if (targetElement) {
-        const numericOffset = parseInt(offset)?parseInt(offset):0;
+        const numericOffset = parseInt(offset) ? parseInt(offset) : 0;
+        const elementRect = targetElement.getBoundingClientRect();
+        const topPosition = window.pageYOffset + elementRect.top + numericOffset;
+
         smoothScroll({
-            scrollTo:targetElement.offsetTop + numericOffset
-        })        
+            scrollTo: topPosition
+        });
     }
     menuOpen.value = false;
 }

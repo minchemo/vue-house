@@ -96,17 +96,18 @@ img {
   }
   .splide__pagination {
     @apply absolute flex justify-center w-full;
-    bottom: size(19);
-    gap: size(6.9);
+    bottom: 0;
+    gap: .5em;
+    color: #fff;
     li {
       button {
         @apply rounded-full  hover:opacity-50;
-        width: size(62.84);
-        height: size(9.4);
-        border: size(1) solid #fff;
+        width: 1em;
+        height: 1em;
+        border: 2px solid currentColor;
 
         &.is-active{
-          @apply bg-white;
+          background:currentColor;
       }
       }
     }

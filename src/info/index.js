@@ -1,4 +1,4 @@
-const caseName = "勝興興站"
+const caseName = "聽心苑"
 
 export default {
     meta: {
@@ -8,12 +8,12 @@ export default {
     },
     address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
     address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "xxx",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3638.173294574602!2d120.55402!3d24.235717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE0JzA4LjYiTiAxMjDCsDMzJzE0LjUiRQ!5e0!3m2!1szh-TW!2stw!4v1692164201995!5m2!1szh-TW!2stw",
+    address: "台南市新化區民治路118號旁",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3671.7359694178344!2d120.3042367!3d23.0334647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e71549d115cbd%3A0x6df379363589201b!2z6IG95b-D6IuR!5e0!3m2!1szh-TW!2stw!4v1692685565026!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/zhyCYWhL7pLf4zQ96",
-    phone: "xxx",
-    fbLink: "https://www.facebook.com/100095472765730",
-    fbMessage: "https://m.me/100095472765730",
+    phone: "06-5902882",
+    fbLink: "https://www.facebook.com/100064188570295",
+    fbMessage: "https://m.me/100064188570295",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "仁邦建設開發股份有限公司"],
@@ -55,13 +55,12 @@ export default {
             target: ".s6",
             offset: "-60",
             offsetmo: "0",
-        },
-        /*{
+        },{
             name: "立即來電",
             target: ".contact-info",
-            offset: "-60",
+            offset: "0",
             offsetmo: "1",
-            type: 'btn'
+            type: "btn",
         },
         {
               name: "地圖導航",
@@ -76,7 +75,8 @@ export default {
             offset: "-70",
             offsetmo: "1",
             type: 'btn'
-        },*/
+        },
+        /**/
     ],
     
 }

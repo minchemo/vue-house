@@ -79,6 +79,11 @@
       height: size(560);
       
     }
+    .splide__pagination{
+      left:auto;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -163,47 +168,11 @@ const imgs = [
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "現場實景"
+    caption: "聽心苑2外觀3D示意圖"
   },
   {
-    img:new URL("./s6/2.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s6/3.jpg", import.meta.url).href ,
-    caption: "情境示意圖"
-  },
-  {
-    img:new URL("./s6/4.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s6/5.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s6/6.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    img:new URL("./s6/1.jpg", import.meta.url).href ,
+    caption: "聽心苑2外觀3D示意圖"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>

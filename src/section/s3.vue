@@ -3,8 +3,8 @@
     <div class="main">
       <div class="txt">
     <!-- <h4 class="subtitle" data-aos="zoom-in-right">VILLA LIFESTYLE</h4> -->
-    <h3 class="title" data-aos="zoom-in-right" data-aos-delay="200" >北外環第一站 大南科生活圈</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400" >科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
+    <h3 class="title" data-aos="zoom-in" data-aos-delay="200" >北外環第一站 大南科生活圈</h3>
+        <p data-aos="zoom-in" data-aos-delay="400" >科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -71,6 +71,11 @@
     flex-basis: size(840);
       height: size(560);
       
+    }
+    .splide__pagination{
+      left: calc(100% + 3em);
+      justify-content: flex-start;
+    color: #003F28; 
     }
   }
 }
@@ -154,27 +159,11 @@ const imgs = [
   {
     img:new URL("./s3/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s3/1_m.webp", import.meta.url).href : new URL("./s3/1.webp", import.meta.url).href,
-    caption: "現場實景"
+    caption: "國道實景拍攝"
+  },
+  {
+    img:new URL("./s3/1.jpg", import.meta.url).href ,
+    caption: "國道實景拍攝"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s3/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s3/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s3/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s3/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>

@@ -77,6 +77,10 @@
       height: size(560);
       
     }
+    .splide__pagination{
+      left: calc(100% + 3em);
+      justify-content: flex-start;
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -166,40 +170,8 @@ const imgs = [
     caption: "港區運動公園"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "台中港"
-  },
-  {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "三井outlet情境示意圖"
-  },
-  {
-    img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "沙鹿火車站"
-  },
-  {
-    img:new URL("./s5/5.jpg", import.meta.url).href ,
-    caption: "全聯超市情境示意圖"
+    img:new URL("./s5/1.jpg", import.meta.url).href ,
+    caption: "港區運動公園"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>

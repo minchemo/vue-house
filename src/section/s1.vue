@@ -1,5 +1,17 @@
 <template>
   <article class="s1" id="s1">
+<div class="txt">
+  
+  <h2 class="title1" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000">建築原生種  </h2>
+    <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000"/>
+  
+  <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+<div class="button" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000"><img src="./s1/button.svg" @click="scrollTo('.order')" >
+</div>
+    <h2 class="title" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="1000">新化正核心｜限量純三房<br>
+一層<span>2</span>戶｜戶戶平車</h2>
+    <img src="./s7/changji_logo.svg" class="changji_logo" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="1000" alt="長磯建設">
+ </div>
   </article>
 </template>
 
@@ -19,109 +31,54 @@
   color: #fff;
   line-height: 1.3;
   font-weight: 700;
-  // background: url("./s1/pc.jpg") center;
+  // background: url("./s1/01.png") center;
   // background-size: cover;
-  /*
-@keyframes light1 {
-   0%{     
-    transform: scale(0,1);opacity: 1;
-   }
-   80% {
-     transform: scale(1);opacity: 1;
-   }
-   100% {
-    transform: scale(5,2);opacity: 0;
-   }
-}
-*/
-@keyframes light1 {
-   to {
-    transform:translateY(0);
-   }
-}
-.txt{
-  display: flex;
+  .txt {
+    @apply relative flex text-[#fff];
+  z-index: 5;
+    margin:3em 0 0 0;
   flex-direction: column;
-  justify-content: center;
-  align-items:center;
-  margin: 5.3em 0 0 14.5em;
-    .t1{font-size:1em;color: #FCEE21;
-      span{font-size:2.2em;letter-spacing: .4em;margin: 0 .2em 0 .5em;transform: scaleX(.9);display: inline-block;}
-    }
-    .logo{width:15em;margin: .9em auto .8em;}
-    .t2{font-size: 1.8em;
-      letter-spacing: .03em;
-      span{font-size: .85em;}
-    }
+  text-align: center;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.7;
+  .title1{
+    font-size: 7.2em;
+    font-weight: 900;
+  letter-spacing: 0.04em;
+    line-height: 1.35;
 }
-
-.star{position: absolute;left: 0;top: 0;width: 100%;height: 100%;
-> div {position: absolute;
-img{width: 100%;}}
-  .star01{width: size(395);top: -16%;left: 73%;
-    img{opacity:0.1;transform: rotate(-20deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star02{width: size(556);top: -5%;left: 25%;
-    img{opacity: 0.1;transform: rotate(143deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star03{width: size(360);top: -15%;left: 83%;
-    img{opacity: 0.1;transform: rotate(-20deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star04{width: size(556);top: 39%;left: 0%;
-    img{opacity: 0.1;transform: rotate(141deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star05{width: size(484);top: 24%;left: 14.5%;
-    img{opacity: 0.3;transform: rotate(135deg);}
-  }
-  .star06{width: size(268);top: 2%;left: 33%;
-    img{opacity: 0.3;transform: rotate(-130deg);}
-  }
-  .star07{width: size(147);top: -2%;left: 63.5%;
-    img{opacity: 0.3;transform: rotate(30deg);}
-  }
-  .star08{width: size(308);top: 9%;left: 80.5%;
-    img{opacity: 0.3;transform: rotate(-19deg);}
-  }
-  .star09{width: size(566);top: 57%;left: 4%;
-    img{opacity: 0.3;transform: rotate(132deg);}
-  }
-  .star10{width: size(137);top: 8.5%;left: 29%;
-    img{opacity: 0.3;transform: rotate(0deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-  .star11{width: size(137);top: 0%;left: 51.5%;
-    img{opacity: 0.3;transform: rotate(0deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-  .star12{width: size(137);top: 14%;left: 76%;
-    img{opacity: 0.52;transform: rotate(-15deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
+.t1{
+  margin: 1em auto 3.7em;
+  height: 1.7em;
 }
-.boy{position: absolute;top:54.8%;left: 17.7%;width:size(154);
-> div {position: absolute;}
-img{width: 100%;}
-
-.star13{width:30%;top: -61%;left: 39%;
-    img{filter: invert(55%) sepia(100%) saturate(2649%) hue-rotate(84deg) brightness(118%) contrast(126%);
-      animation: light1 5s 1s ease-in-out infinite alternate; 
-    transform:translateY(-30%);}
+  .logo{
+    height: 8.1em;
+    margin: 0em 0 3em;
   }
-.star14{width:26.5%;top: -22%;left: 5%;
-    img{filter: invert(22%) sepia(71%) saturate(7110%) hue-rotate(351deg) brightness(89%) contrast(121%);
-      animation: light1 5s 1.5s ease-in-out infinite alternate; 
-    transform:translateY(-70%);}
-  }
-.star15{width:74.5%;top: -38%;left: 71%;
-    img{filter: invert(82%) sepia(89%) saturate(467%) hue-rotate(348deg) brightness(100%) contrast(98%);
-      animation: light1 5s ease-in-out infinite alternate; 
-    transform:translateY(-30%);}
-  }
-.star16{width: 34.5%;top:21%;left: 108%;
-    img{filter: invert(19%) sepia(87%) saturate(2026%) hue-rotate(201deg) brightness(89%) contrast(104%);
-      animation: light1 5s .5s ease-in-out infinite alternate; 
-    transform:translateY(-50%);}
-  }
-
-
+  .button{
+  margin: 0 auto 2.2em;
+  height: 4.5em;
+  cursor: pointer;
+  img{width: 100%;
+    transition:transform 2s;
+&:hover{
+  transform: scale(1.2);
+  transform-origin: center;}}
 }
+  .title{
+    font-size: 3em;
+    line-height: 1.2;
+    font-weight: 700;color: #F3DEB9;
+  text-align: center;
+  span{font-size: 1.25em;display: inline-block;margin: 0 .1em 0 .1em;position: relative;top: .06em;}
+  }
+  .changji_logo{
+    height: 1.8em;
+    margin: 1.8em 0 0em;
+  }
+  }
+
 }
 
   
@@ -133,51 +90,39 @@ img{width: 100%;}
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(660);
-    max-height: sizem(770);
-    font-size:sizem(14);
-    // background: url("./s1/mo.jpg") center;
-    // background-size: cover;
-    .txt{
-      margin: 0em auto 7em;
-    }
-    .boy{
-      top:74%;left:39%;width:sizem(60);
-    }
-    .star{
-  .star01{width:sizem(118);top: -1%;left: 57%;
-  }
-  .star02{width:sizem(162);top:19%;left: -4%;
-    img{transform: rotate(121deg);}
-  }
-  .star03{width:sizem(108);top: 0%;left: 73%;
-  }
-  .star04{width:sizem(167);top:62%;left: 18%;
-    img{transform: rotate(152deg);}
-  }
-  .star05{width:sizem(149);top: 55%;left: 1%;
-    img{transform: rotate(162deg);}
-  }
-  .star06{width:sizem(86);top: 22%;left: 0%;
-    img{transform: rotate(34deg);}
-  }
-  .star07{width:sizem(43);top: 6%;left: 33%;
-  }
-  .star08{width:sizem(91);top: 10%;left: 69.5%;
-  }
-  .star09{width:sizem(178);top: 69%;left: 10%;
-    img{transform: rotate(164deg);}
-  }
-  .star10{width:sizem(43);top: 23%;left: 15%;
-    img{transform: rotate(-107deg);}
-  }
-  .star11{width:sizem(43);top: 14%;left: 23%;
-    img{transform: rotate(-68deg);}
-  }
-  .star12{width:sizem(45);top: 12%;left: 62%;
-  }
+    min-height: sizem(604);
+    max-height: sizem(750);
+    font-size:sizem(13);
+    
+   // background: url("./s1/01m.png") center;
+   background-size: cover;
 
-    }
+.txt {
+  .title1{
+    font-size: 4.3em;}
+.t1{
+  margin: .7em auto 3.5em;
+  height: 1em;
+}
+.logo{
+  height: 5em;
+    margin: 0em 0 2.7em;
+}
+  .button{
+  height: 4em;
+  margin: 0 auto 2.4em;
+  }
+.title{
+  font-size: 1.9em;
+}
+.changji_logo{
+  height: 1.2em;
+  margin: 1.2em 0 3.5em;
+}
+.en{
+  height: 2.3em;
+}
+}
   }
 }
 </style>
@@ -189,8 +134,11 @@ const isMobile = computed(() => globals.$isMobile());
 
 const smoothScroll = inject('smoothScroll')
 const scrollTo = (el) => {
+    const targetElement = document.querySelector(el);
+    if (targetElement) {
   smoothScroll({
-    scrollTo: document.querySelector(el)
+    scrollTo: targetElement.offsetTop + (isMobile ? 0 : -60)
   })
+    }
 }
 </script>
