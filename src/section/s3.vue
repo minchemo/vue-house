@@ -33,7 +33,8 @@
   font-size:size(18);
   gap:3em;
   flex-direction: row-reverse;
-  background: url("./s3/bg.jpg");
+  background: url("./s3/bg.jpg") center;
+  background-size: cover;
 
 
   .main {
@@ -52,7 +53,7 @@
     color: #003F28;
     margin: 0 0 .2em;
     line-height: 1.4;
-    font-weight: 900;
+    font-weight: 700;
   }
   .subtitle{
     font-size: 1.2em;
@@ -80,10 +81,12 @@
 @media screen and (max-width: 767px) {
 
   .s3 {
-  @apply flex-col;
-    height: sizem(605);
-    padding: 0;
-  font-size:sizem(14);
+    height: auto;
+    padding:2em 0 3em 0;
+  font-size:sizem(13);
+    flex-direction: column-reverse;
+  gap:2em;
+  background-image:url("./s3/bg_m.jpg");
 
   .main {
     padding: 0 sizem(32.5);
@@ -102,7 +105,7 @@
 
   .slider {
     height: auto;
-    width: 100%;
+    width: sizem(335); 
 
     .caption {
     font-size:sizem(12); 

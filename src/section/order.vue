@@ -78,7 +78,7 @@
       </div>
 
       <!-- Contact Info -->
-      <ContactInfo />
+      <ContactInfo  id="contact-info" />
     </div>
 
 
@@ -189,7 +189,7 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #003F28;color: #000;
+    .row{background: #FFF;border: 1px solid #376;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -219,13 +219,13 @@
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
-
     width: 308px;
     height:3.3em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 700;
     position: relative;
+    margin: 0 0 5em;
   }
 
   .control {
@@ -295,6 +295,9 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+  background: url("./s3/bg_m.jpg");
+  background-size: 100% auto;
+  
     // border-radius: sizem(68) sizem(68) 0 0;
    /* padding-top: sizem(0);
     margin-top: sizem(0);

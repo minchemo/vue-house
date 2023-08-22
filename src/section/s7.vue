@@ -1,5 +1,5 @@
 <template>
-  <article class="s2">
+  <article class="s7">
    <!-- <div class="slider" data-aos="fade">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -16,22 +16,24 @@
         </SplideSlide>
       </Splide>
     </div>
-    <img class="bg2" src="./s2/bg2.png" alt="" srcset="">
+    <img class="bg2" src="./s7/bg2.png" alt="" srcset="">
 -->
 <div class="txt">
-    <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >根植新化 繁華核心</h2>
-    <img src="./s2/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
-    <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">南科園區｜繁華市心｜高鐵願景</h4>
+  
+  <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="200">
+    <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >新化正核心｜純質大三房<br>
+一層<span>2</span>戶｜戶戶平車</h2>
+    <img src="./s7/changji_logo.svg" class="changji_logo" data-aos="zoom-in" data-aos-delay="200" alt="長磯建設">
+    <img src="./s7/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200" alt="en">
  </div>
-    <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="600">
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s2 {
-  @apply relative overflow-hidden flex items-center justify-center text-white bg-[#F27200];
+.s7 {
+  @apply relative overflow-hidden flex items-center justify-center text-white;
   width: 100%;
   min-height: size(800);
   max-height: size(1080);
@@ -40,35 +42,34 @@
   font-size:size(18);
   gap:3em;
   flex-direction: column;
-   .bg2{position: absolute;bottom:0;left: 0;width: 100%;pointer-events: none;}
   .txt {
-    @apply absolute flex text-[#fff];
+    @apply relative flex text-[#fff];
   z-index: 5;
-    margin: 0;top: 5em;left: 0;right: 0;
+    margin: 0 ;
   flex-direction: column;
   text-align: center;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
+  .logo{
+    height: 7.55em;
+    margin: .3em 0 5.1em;
+  }
   .title{
     font-size: 3.5em;
-    margin: 0 0 .2em;
-    line-height: 1.4;
-    font-weight: 900;color: #F3DEB9;
+    line-height: 1.2;
+    font-weight: 700;color: #F3DEB9;
   text-align: center;
+  span{font-size: 1.25em;display: inline-block;margin: 0 .1em 0 .1em;position: relative;top: .06em;}
+  }
+  .changji_logo{
+    height: 2em;
+    margin: 1.8em 0 5.7em;
   }
   .en{
     height: 4.1em;
   }
-  .subtitle{
-    font-size: 2.28em;
-    margin: 1.5em 0 .6em;
-    font-weight: 700;
   }
-  }
-  .bottom{position: absolute;
-    width: size(330);
-    margin: 0 auto;bottom:3em;left: 0;right: 0;}
   .slider {
     margin: 0 0 size(150);
     width: 100%;
@@ -104,25 +105,30 @@
 
 @media screen and (max-width: 767px) {
 
-  .s2 {
+  .s7 {
   @apply flex-col;
     padding: 0;
+  min-height: sizem(0);
+  max-height: sizem(1080);
+  height: sizem(500);
   font-size:sizem(14);
 
-  .main {
-    padding: 0 sizem(32.5);
-
-    
-    
   .txt {
+  .logo{
+    height: 5em;
+    margin: .3em 0 3.5em;
+  }
   .title{
-    font-size: 1.8em;
+    font-size: 1.9em;
   }
-  .subtitle{
-    font-size: 1.07em;
+  .changji_logo{
+    height: 1.2em;
+    margin: 1.2em 0 4em;
+  }
+  .en{
+    height: 2.3em;
   }
   }
-}
 
   .slider {
     height: auto;

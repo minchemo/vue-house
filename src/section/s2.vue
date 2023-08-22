@@ -23,7 +23,7 @@
     <img src="./s2/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
     <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">南科園區｜繁華市心｜高鐵願景</h4>
  </div>
-    <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="600">
+    <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="0">
   </article>
 </template>
 
@@ -31,17 +31,17 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden flex items-center justify-center text-white bg-[#F27200];
+  @apply relative overflow-hidden flex items-center justify-center text-white;
   width: 100%;
   min-height: size(800);
-  max-height: size(1080);
-  height: 100vh;
+  max-height: size(1020);
+  height: calc(100vh - 3.125vw);
   padding:0;
   font-size:size(18);
   gap:3em;
   flex-direction: column;
   background: url("./s2/bg2.jpg") 50% 70%;
-   .bg2{position: absolute;bottom:0;left: 0;width: 100%;pointer-events: none;}
+  background-size: cover;
   .txt {
     @apply absolute flex text-[#fff];
   z-index: 5;
@@ -53,9 +53,9 @@
     line-height: 1.7;
   .title{
     font-size: 3.5em;
-    margin: 0 0 .2em;
+    margin: 0 0 .6em;
     line-height: 1.4;
-    font-weight: 900;color: #F3DEB9;
+    font-weight: 700;color: #F3DEB9;
   text-align: center;
   }
   .en{
@@ -107,23 +107,24 @@
 
   .s2 {
   @apply flex-col;
-    padding: 0;
-  font-size:sizem(14);
-
-  .main {
-    padding: 0 sizem(32.5);
-
-    
-    
+  min-height: sizem(0);
+  max-height: sizem(1080);
+  height: sizem(500);
+  font-size:sizem(13);
   .txt {
+    top: 4em;
   .title{
-    font-size: 1.8em;
+    font-size: 1.9em;
+  }
+  .en{
+    height: 2.4em;
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.3em;
   }
   }
-}
+  .bottom{
+    width: sizem(160);}
 
   .slider {
     height: auto;

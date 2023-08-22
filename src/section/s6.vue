@@ -6,7 +6,7 @@
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >回歸<span></span>自然</h2>
     <img src="./s6/en.png" class="en" data-aos="zoom-in" data-aos-delay="200">
     <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">汲光之居，建築原生種</h4>
-        <p data-aos="zoom-in-right" data-aos-delay="400">科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
+        <p data-aos="zoom-in" data-aos-delay="400">科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -50,9 +50,9 @@
     line-height: 1.7;
   .title{
     font-size: 3.5em;
-    margin: 0 0 .2em;
+    margin: 0 0 .4em;
     line-height: 1.4;
-    font-weight: 900;color: #F3DEB9;
+    font-weight: 700;color: #F3DEB9;
     span{display: inline-block;width: 3em;height: 2px; background: currentColor;vertical-align: middle;margin: 0 .2em 0.1em;}
   }
   .en{
@@ -60,7 +60,7 @@
   }
   .subtitle{
     font-size: 2.28em;
-    margin: 1.5em 0 .6em;
+    margin: .5em 0 .3em;
     font-weight: 700;
   }
   }
@@ -89,19 +89,25 @@
 
   .s6 {
   @apply flex-col;
-    height: sizem(500);
-    padding: 0;
-  font-size:sizem(14);
-  .bg1{top:-1em;left:auto;width:sizem(160);right:sizem(-40);}
+    height:auto;
+    padding:3em 0 0;
+    margin: 0;
+  font-size:sizem(13);
 
-  .main {
+.main {
     padding: 0 sizem(32.5);
+    text-align: center;
   .txt {
   .title{
-    font-size: 1.8em;
+    font-size: 1.9em;
+    margin: 0 0 .6em;
+  }
+  .en{
+    height: 10.8em;
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.3em;
+    margin: 2em 0 .3em;
   }
   }
 }

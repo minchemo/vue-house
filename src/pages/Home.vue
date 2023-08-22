@@ -9,10 +9,11 @@
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!-- loading end -->
-  <Nav v-if="config.showNav" ></Nav>
+  <Nav></Nav>
   <div class="home bg-[#E97290] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
      <div class="bg">
-      <img src="@/section/s1/bg2.jpg" alt="">
+      <img src="@/section/s1/bg2.jpg" alt="" v-if="!$isMobile()">
+      <img src="@/section/s1/bg2_m.jpg" alt="" v-else>
     </div>
     <S1 />
     <S2 />
@@ -43,7 +44,7 @@
 }  */
 .bg{
   position: fixed;
-  top: 0;left: 0;width: 100%;height: 100%;
+  top: 0;left: 0;right: 0;bottom: 0;
   background: url("@/section/s1/bg1.png");
   background-size:2.5vw auto;
   img{width: 102%;height: 102%;filter: blur(2px);mix-blend-mode: multiply;position: relative;top: -1%;left: -1%;}
@@ -114,6 +115,10 @@ img {
 @media screen and (max-width: 767px) {
 .home{
   background-size: sizem(85) auto;
+.bg{
+  
+  background-size:7.1vw auto;
+}
 }
 /*
 */
@@ -127,6 +132,7 @@ img {
   }
   .splide__pagination {
     @apply absolute flex justify-center w-full;
+    display: none;
     bottom: sizem(6.7);
     gap: sizem(2.5);
     li {
@@ -160,12 +166,14 @@ import Nav from "@/layout/navbar.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue" */
 import Order from "@/section/order.vue"
-import { onMounted, ref } from "vue"
+import { onMounted, ref, computed, getCurrentInstance } from "vue"
 
 import AOS from 'aos';
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 onMounted(() => {
   window.onload = function () {

@@ -3,7 +3,8 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <!-- <div class="logo"></div> -->
+    <!--  -->
+    <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -111,7 +112,7 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1{background:linear-gradient(180deg, #E8DBB8 0%, #BBA468 51.56%, #9A813E 54.69%, #DFC888 100%);}
-.hover\:bg-color2:hover{background-color:#861427;}
+.hover\:bg-color2:hover{background-color:linear-gradient(180deg, #d6c79e 0%, #aa9358 51.56%, #7c6527 54.69%, #b39b59 100%);}
 
 
 .contact-info-img{
@@ -120,16 +121,19 @@
 }
 .contact-info {
   padding: size(55) size(0) size(55) size(0);
-    width: size(1440);
+  margin: 0 auto 3em;
+    width: size(1400);
     min-width: 680px;
   position: relative;
+  background: url("@/section/form/bg.jpg");
+  background-size: cover;
   z-index: 50;
   // background: #045147;
 
   .logo {
     width: size(367);
     height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
+    background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -233,7 +237,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(23%) sepia(27%) saturate(4297%) hue-rotate(324deg) brightness(96%) contrast(92%);
+  img{filter: invert(20%) sepia(15%) saturate(3396%) hue-rotate(116deg) brightness(90%) contrast(103%);
   //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
@@ -252,7 +256,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#A92D41;
+    background:#003F28;
 
     .contact-item {
       height: 100%;      
@@ -277,16 +281,17 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(80) 0;
-    margin-top: sizem(0);
+    padding: sizem(80) 0 sizem(40) 0;
+  margin: 0 auto 0;
     position: relative;
     justify-content: space-between;
-  background-size: sizem(450) auto;
+  background-image: url("@/section/form/bg_m.jpg");
+  background-position: 0 80%;
 
     .logo {
-      width: sizem(257);
+      width: sizem(310);
       height: sizem(140);
-    margin: sizem(70) auto sizem(30) auto;
+    margin: sizem(10) auto sizem(40) auto;
      // margin-bottom: sizem(47);
     }
 

@@ -1,14 +1,11 @@
 <template>
   <article class="s5">
-    <img class="bg1" src="./s5/bg1.png" alt="" srcset="">
-    <img class="bg2" src="./s5/bg2.png" alt="" srcset="">
-    <img class="img" src="./s1/img.png" alt="" srcset="" v-if="!$isMobile()">
     <div class="main">
       <div class="txt">
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >眼界升級 對位國際</h2>
     <img src="./s5/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
     <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">大師聯手 深植美學</h4>
-        <p data-aos="zoom-in-right" data-aos-delay="400">科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
+        <p data-aos="zoom-in" data-aos-delay="400">科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
       </div>
     <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="600">
     </div>
@@ -38,22 +35,9 @@
   font-size:size(18);
   gap:3em;
   flex-direction: row-reverse;
-  .bg1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(-80%);pointer-events: none;}
-  .bg2{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(85%);z-index: 2;pointer-events: none;}
-  .img{position: absolute;top:4em;right:size(-76);width:size(429);opacity: .8;}
 
   .main {
-    @apply flex text-[#fff];
+    @apply relative flex text-[#fff];
     margin: 0;
     flex-basis: size(590);
   flex-direction: column;
@@ -65,22 +49,22 @@
     line-height: 1.7;
   .title{
     font-size: 3.5em;
-    margin: 0 0 .2em;
+    margin: 0 0 .4em;
     line-height: 1.4;
-    font-weight: 900;color: #F3DEB9;
+    font-weight: 700;color: #F3DEB9;
   }
   .en{
     height:  3.66em;
   }
   .subtitle{
     font-size: 2.28em;
-    margin: 1.5em 0 .6em;
+    margin: .5em 0 .3em;
     font-weight: 700;
   }
   }
   .bottom{position: absolute;
     width: size(330);
-    margin: 0 auto;bottom:3em;left: 0;right: 0;}
+    margin: 0 auto;bottom:-5.5em;right: 0;}
 }
 
   .slider {
@@ -103,24 +87,29 @@
 
   .s5 {
   @apply flex-col;
-    height: sizem(605);
-    padding: 0;
-  font-size:sizem(14);
+    height: auto;
+    padding:3em 0 7em;
+  font-size:sizem(13);
 
-  .bg1{position: absolute;top:0;
-    left: -70%;transform: translateY(-80%);
-    width: 240%;max-width: 900%;pointer-events: none;}
-   .bg2{position: absolute;bottom:0;left: -90%;width: 230%;max-width: 900%;pointer-events: none;z-index:5;}
-  .main {
+    .main {
     padding: 0 sizem(32.5);
+    text-align: center;
   .txt {
   .title{
-    font-size: 1.8em;
+    font-size: 1.9em;
+    margin: 0 0 .6em;
+  }
+  .en{
+    height:  2.6em;
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.3em;
+    margin: 2em 0 .3em;
   }
   }
+  .bottom{position: absolute;
+    width: sizem(160);
+    margin: 0 auto;bottom:-25.5em;right: 0;left: 0;}
 }
 
   .slider {
