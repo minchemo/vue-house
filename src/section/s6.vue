@@ -1,6 +1,5 @@
 <template>
   <article class="s6">
-    <img class="bg1" src="./s1/img.png" alt="" srcset="">
     <div class="main">
       <div class="txt">
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >回歸<span></span>自然</h2>

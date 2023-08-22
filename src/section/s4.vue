@@ -1,23 +1,5 @@
 <template>
   <article class="s4">
-   <!-- <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in">SMILE EUROPE</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in" data-aos-delay="200" v-html="img.title"></h3>
-        <p data-aos="zoom-in" data-aos-delay="400" v-html="img.desc"></p>
-      </div>
-      <span class="caption" v-html="img.caption"></span>
-        </SplideSlide>
-      </Splide>
-    </div>
-    <img class="bg2" src="./s2/bg2.png" alt="" srcset="">
--->
 <div class="txt">
     <img src="./s4/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0">
     <h2 class="title1" data-aos="zoom-in" data-aos-delay="100" >築居新化 國際視野</h2>

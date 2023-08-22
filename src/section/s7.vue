@@ -38,7 +38,7 @@
   }
   .changji_logo{
     height: 2em;
-    margin: 1.8em 0 5.7em;
+    margin: 1.8em auto 5.7em;
   }
   .en{
     height: 4.1em;
@@ -63,7 +63,7 @@
   }
   .changji_logo{
     height: 1.2em;
-    margin: 1.2em 0 3.5em;
+    margin: 1.2em auto 3.5em;
   }
   .en{
     height: 2.3em;
