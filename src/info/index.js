@@ -14,6 +14,7 @@ export default {
     fbMessage: "https://m.me/joyesthegardenofart/",
     caseName: caseName,
     houseInfos: [
+        ["建設公司", "悅萊建設股份有限公司"],
         ["建築設計", "劉建曄建築師事務所"],
         ["坪數規劃 ", "116~122坪"],
         ["基地位置", "大興西路、正光路口"],
