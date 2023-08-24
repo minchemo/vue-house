@@ -1,27 +1,28 @@
 <template>
   <article class="s1">
-    <img class="bg" v-if="!$isMobile()" src="./s1/bg.jpg" alt="">
+    <!-- 
+    <img class="t0" src="./s1/pc.jpg" alt="" srcset="">  -->
+    <!--  <img class="bg" v-if="!$isMobile()" src="./s1/bg.jpg" alt="">
     <img class="bg" v-else src="./s1/bgm.jpg" alt="">
-    <!--  data-aos="fade" data-aos-delay="3000" data-aos-duration="1500" >  -->
-    <!-- <img class="t0" src="./s1/mobile.jpg" alt="" srcset="">  -->
+    data-aos="fade" data-aos-delay="3000" data-aos-duration="1500" >
     <div class="light">
       <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""></div>
       <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""></div>
       <span></span>
     </div>
     <img class="bg1" v-if="!$isMobile()" src="./s1/bg.png" alt="">
-    <img class="bg1" v-else src="./s1/bgm.png" alt="">
+    <img class="bg1" v-else src="./s1/bgm.png" alt="">  -->
     <div class="txtall">
       <div class="t1"><span data-aos="fade-right" data-aos-delay="3100">尋找</span></div>
       <img class="logo" data-aos="fade" data-aos-delay="300" src="./s1/logo0417.svg" alt="" loading="lazy">
-      <!--   <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset=""> -->
+      <!--   <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset="">
       <div class="txt" data-aos="fade" data-aos-delay="3500">
         <div class="t2"><img data-aos="fade-up" data-aos-delay="3300" src="./s1/t2.svg" alt="" srcset=""></div>
         <div class="t3"><span data-aos="fade-up" data-aos-delay="3600">打造高大極地理想國</span></div>
         <div class="t4" data-aos="fade" data-aos-delay="3900"><span data-aos="fade-up" data-aos-delay="1000">高雄之極．茂德聚極</span></div>
         <div class="t5"><span data-aos="fade-up" data-aos-delay="4200">台灣十大建商 前進高雄代表作</span></div>
         <div class="t6"><img data-aos="fade-up" data-aos-delay="4500" src="./s1/t6.svg" alt="" srcset=""></div>     
-      </div>
+      </div> -->
     </div>
       
   </article>
@@ -45,7 +46,7 @@ background: #000E29;
   /*
   background: url("./s1/bg.jpg") center 100%;
   background-size: cover;*/
-  // .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .0;z-index: 2;}
+  .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;z-index: 2;}
 
   .bg{position: absolute;bottom: 0;left: 0;width: 100%;height: auto;}
   .bg1{position: absolute;bottom: 0;right:24.3%;width: size(114);height: auto;z-index: 2;opacity: .8;}
