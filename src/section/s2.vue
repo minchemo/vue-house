@@ -17,8 +17,8 @@
     </div>
     <div class="img">
       <div class="t1"><img data-aos="fade-up" data-aos-delay="0" src="./s2/logo.svg" alt="" srcset=""></div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="0">台灣十大建商 前進高雄代表作</div>
-      <div class="t3"><img data-aos="fade-up" data-aos-delay="0" src="./s2/t3.svg" alt="" srcset=""></div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="0" v-if="!$isMobile()">台灣十大建商 前進高雄代表作</div>
+      <div class="t3" v-if="!$isMobile()"><img data-aos="fade-up" data-aos-delay="0" src="./s2/t3.svg" alt="" srcset=""></div>
       <div class="t4" data-aos="fade-up" data-aos-delay="0">即｜將｜公｜開</div>
       <div class="t5" data-aos="fade-up" data-aos-delay="0"><span>Σ</span>超遠見專線</div>  
       <div class="t6"><img data-aos="fade-up" data-aos-delay="0" src="./s2/t6.svg" alt="" srcset=""></div>
@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-font-size:  size(30);
+font-size:size(30);
 padding: size(230) 0;
 gap: .8em;
 color: #fff;
@@ -74,61 +74,31 @@ margin: auto 0 auto 2em;transform: scaleX(0.9);transform-origin: 100% 0;}
   .desc{
 line-height: 1.9;}
 }
-@media screen and (max-width: 1730px) {
-.s2 {
-  .img{
-    width:size(1350);
-  }
-}
-}
-@media screen and (max-width: 1730px) {
-.s2 {
-font-size: 15px;
-  .txt{
-    width: 35em;
-    padding: 6em size(60);
-margin: auto -1.2em auto size(-180);
-  }
-}
-}
-@media screen and (max-width: 1360px) {
-.s2 {
-font-size:14px;
-  .txt{
-    width: 30em;
-    padding: 6em size(60);
-margin: auto -1.2em auto size(-180);
-  }
-
-}
-}
-@media screen and (max-width: 767px) {
-}
   
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
-// @media screen and (max-width: 767px) { 平常我們手機的設定
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 767px) {
 
   .s2 {
   flex-direction: column;
-font-size:16px;
-padding: sizem(35) 0;
-
+font-size:sizem(15);
+padding:0.5em 0 5em 0;
+gap: 2.2em;
   .img{
-    width:sizem(315);
-    height:sizem(313);
+    
+  .t1{width: sizem(147)}
+  .t4{font-size: 1.2em;}
+  .t5{font-size: 1.2em;width: sizem(210);}
+  .t6{width: sizem(210);}
   }
+
   .txt{
-    width:sizem(315);
-    padding:sizem(39) sizem(29);
+    padding:0;
 margin: auto;
-  }
-  .title{
-    margin-bottom: .6em;
-font-size: 1.54em;
+    text-align: center;width: auto;
+    transform-origin: 50% 0;
   }
 
 
@@ -136,12 +106,6 @@ font-size: 1.54em;
 
   }
 }
-@media screen and (max-width: 767px) {
-  .s2 {
-font-size:13px;
-
-}
- }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
