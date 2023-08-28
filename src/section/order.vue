@@ -103,7 +103,7 @@
 .order {
   width: 100%;
   padding-top: 0;
-  background: linear-gradient(180deg, #000E29 0%, #012A60 100%);
+  background: linear-gradient(180deg, #000E29 0%, #004094 100%);
 
   .bird {
     @apply absolute;

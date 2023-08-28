@@ -3,13 +3,13 @@
     <!-- 
     <img class="t0" src="./s1/mo.jpg" alt="" srcset="">  -->
     <div class="txtall">
-      <div class="logot"><span data-aos="fade-right" data-aos-delay="3100">尋找</span></div>
-      <img class="logo" data-aos="fade" data-aos-delay="300" src="./s1/logo0417.svg" alt="" loading="lazy">
-      <div class="txt" data-aos="fade" v-if="$isMobile()">
-      <div class="t1"><img data-aos="fade-up" data-aos-delay="0" src="./s2/logo.svg" alt="" srcset=""></div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="0">台灣十大建商 前進高雄代表作</div>
-      <div class="t3"><img data-aos="fade-up" data-aos-delay="0" src="./s2/t3.svg" alt="" srcset=""></div>
-      <div class="t4">SLIDE</div>
+      <div class="logot"><span data-aos="fade-right" data-aos-delay="1100" data-aos-duration="1000">尋找</span></div>
+      <img class="logo" data-aos="fade" data-aos-delay="0" src="./s1/logo0417.svg" alt="" loading="lazy">
+      <div class="txt" v-if="$isMobile()">
+        <div class="t1"><img data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" src="./s2/logo.svg" alt="" srcset=""></div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">台灣十大建商 前進高雄代表作</div>
+        <div class="t3"><img data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000" src="./s2/t3.svg" alt="" srcset=""></div>
+        <div class="t4" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">SLIDE</div>
     </div>
     </div>
       
@@ -30,7 +30,6 @@
   justify-content: flex-end;
   // background: url("./s1/1.jpg");
   // background-size: cover;
-background: #000E29;
   /*
   background: url("./s1/bg.jpg") center 100%;
   background-size: cover;*/
@@ -60,6 +59,7 @@ background: #000E29;
     width:1em;
     font-size:size(320);line-height: 1;
     margin: -0.15em 0 0 0;overflow: hidden;
+    padding: .05em 0;
   }
   .logo {
     width: size(428);

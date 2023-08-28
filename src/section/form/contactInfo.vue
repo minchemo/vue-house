@@ -283,7 +283,7 @@
     .contact-item-box {
       position: relative;
       margin-top: sizem(0);
-      //gap: sizem(20);
+      gap: sizem(15);
       flex-direction: column;
     width: sizem(310);
 
@@ -293,7 +293,7 @@
         max-width: 100%;
         white-space: nowrap;
         border-radius: sizem(0);
-        margin: 5px 0px;
+        margin: 0;
 
         img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
           max-width: sizem(27);
@@ -312,7 +312,7 @@
           font-size: sizem(15);
           border-radius: sizem(0) sizem(0) 0 0;
           padding: 1.1em 0;
-          margin-top: sizem(20);
+          margin-top: sizem(15);
           //font-size: .9em;
 
           &::before {

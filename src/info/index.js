@@ -6,11 +6,11 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
-    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    // address: "台南安南區環館路358巷2號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.9111053270494!2d120.23648879999999!3d23.063720399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e79e383620657%3A0x8ec65259688f8870!2zNzA55Y-w5Y2X5biC5a6J5Y2X5Y2A55Kw6aSo6LevMzU45be3MuiZnw!5e0!3m2!1szh-TW!2stw!4v1678852820290!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/8a7aaQvSZ2ufAUvc7",
+    address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
+    address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
+    address: "高雄市楠梓區益群路84號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29440.596544183438!2d120.27617843319531!3d22.72546962734862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f0aa2c235c3%3A0xb579987bad84c25e!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A55uK576k6LevODTomZ8!5e0!3m2!1szh-TW!2stw!4v1693205622858!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/i182Dtgt68MYaAbz7",
     phone: "07-3648088",
     fbLink: "https://www.facebook.com/112358748493530/",
     fbMessage: "https://m.me/112358748493530/",
@@ -35,6 +35,7 @@ export default {
         title: "我想了解",
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
+    /*
     navList: [{
             name: "重大建設",
             target: ".s3",
@@ -73,4 +74,5 @@ export default {
             offset: "",
         },
     ],
+    */
 }

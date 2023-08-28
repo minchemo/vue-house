@@ -1,27 +1,27 @@
 <template>
   <article class="s2">
     <div class="txt">
-      <p class="desc">從世界回台灣，從台北回高雄<br />
-高大Σ計畫－打造科技極地理想國<br />
-邀請你一起看見高雄的世界級<br /><br />
-
-台積電拍板先進製程園區設廠<br />
-高雄大學城串聯Σ科技城市最進化<br />
-雙捷運海景第一排全能建築<br />
-人脈X金脈讓高雄再次偉大<br /><br />
-
-台灣十大建商超遠見<br />
-大台北重劃推手之王<br />
-高大特區最華麗的一極<br />
-即將與您相見</p>
+<ul class="desc">
+  <li data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">從世界回台灣，從台北回高雄</li>
+  <li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">高大Σ計畫－打造科技極地理想國</li>
+  <li data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">邀請你一起看見高雄的世界級<br />　</li>
+  <li data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">台積電拍板先進製程園區設廠</li>
+  <li data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">高雄大學城串聯Σ科技城市最進化</li>
+  <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">雙捷運海景第一排全能建築</li>
+  <li data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">人脈X金脈讓高雄再次偉大<br />　</li>
+  <li data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">台灣十大建商超遠見</li>
+  <li data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">大台北重劃推手之王</li>
+  <li data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">高大特區最華麗的一極</li>
+  <li data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">即將與您相見</li>
+</ul>
     </div>
     <div class="img">
-      <div class="t1"><img data-aos="fade-up" data-aos-delay="0" src="./s2/logo.svg" alt="" srcset=""></div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="0" v-if="!$isMobile()">台灣十大建商 前進高雄代表作</div>
-      <div class="t3" v-if="!$isMobile()"><img data-aos="fade-up" data-aos-delay="0" src="./s2/t3.svg" alt="" srcset=""></div>
-      <div class="t4" data-aos="fade-up" data-aos-delay="0">即｜將｜公｜開</div>
-      <div class="t5" data-aos="fade-up" data-aos-delay="0"><span>Σ</span>超遠見專線</div>  
-      <div class="t6"><img data-aos="fade-up" data-aos-delay="0" src="./s2/t6.svg" alt="" srcset=""></div>
+      <div class="t1"><img data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" src="./s2/logo.svg" alt="" srcset=""></div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" v-if="!$isMobile()">台灣十大建商 前進高雄代表作</div>
+      <div class="t3" v-if="!$isMobile()"><img data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" src="./s2/t3.svg" alt="" srcset=""></div>
+      <div class="t4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">即｜將｜公｜開</div>
+      <div class="t5" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"><span>Σ</span>超遠見專線</div>  
+      <div class="t6"><img data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" src="./s2/t6.svg" alt="" srcset=""></div>
     </div>
   </article>
 </template>
@@ -72,7 +72,8 @@ color: #fff;
 letter-spacing: 0.1em;
 margin: auto 0 auto 2em;transform: scaleX(0.9);transform-origin: 100% 0;}
   .desc{
-line-height: 1.9;}
+line-height: 1.9;
+}
 }
   
 /* 螢幕尺寸標準 */
