@@ -2,8 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section font-['noto_sans_tc']">
       <!-- Title -->
-      <div class="order-title text-center font-['noto_Serif_tc']">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center font-['noto_Serif_tc']">{{ info.order.subTitle }}</div>
+      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image

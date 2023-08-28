@@ -120,7 +120,7 @@
   .logo {
     width: size(367);
     height: size(172);
-    background-image: url("@/section/s1/logo.svg");
+    // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
