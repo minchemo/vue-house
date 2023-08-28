@@ -43,11 +43,12 @@
           <label class="row"><span>服務專員</span>
           <select class="select w-full rounded-none bg-white" v-model="formData.people">
             <option value="" selected disabled>選擇專員</option>
-            <option value="專員A">專員A</option>
-            <option value="專員B">專員B</option>
-            <option value="專員C">專員C</option>
-            <option value="專員D">專員D</option>
-            <option value="專員E">專員E</option>
+            <option value="陳睿珩">陳睿珩</option>
+            <option value="曾依琇">曾依琇</option>
+            <option value="柯智鈞">柯智鈞</option>
+            <option value="陳振皓">陳振皓</option>
+            <option value="紀宥榕">紀宥榕</option>
+            <option value="翁雅如">翁雅如</option>
           </select></label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
