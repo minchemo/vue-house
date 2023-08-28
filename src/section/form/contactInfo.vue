@@ -194,20 +194,21 @@
     width: size-m(375);
     height: size-m(63);
     gap: size-m(1);
+    background: #000;
 
     .contact-item {
       height: 100%;
-      background-color: #c53e00;
+      background-color: #f4e92b;
       font-size: size-m(16);
       font-weight: 400;
-      color: #fff;
+      color: #000;
 
       img {
         margin-bottom: size-m(5);
         max-width: size-m(16.5);
         height: auto;
         max-height: size-m(16.5);
-        filter: brightness(0) invert(1);
+        //filter: brightness(0) invert(1);
       }
 
     }

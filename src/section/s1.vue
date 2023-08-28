@@ -44,11 +44,11 @@ align-items: center;
       width: size(300);
       height: size(80);
       font-size: size(30);
-      background: #ff7214;
+      background: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #fff;
+      color: #ff7214;
       border-radius: 30px;
       font-weight: 600;
       letter-spacing: 0.3em;
@@ -56,10 +56,10 @@ align-items: center;
       transition: 0.5s;
 
       &:hover{
-      background: #ffffff; 
+      background: #c75000; 
       transition: 0.5s;
       border: 2px solid #fff;
-      color: #ff7214;
+      color: #ffffff;
       }
     }
 }
