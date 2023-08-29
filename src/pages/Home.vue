@@ -22,9 +22,21 @@
     </div>
     <div class="bg3">
     <div class="aurora">
-      <img src="@/section/s1/aurora.svg" />
+      <div>
+      <img src="@/section/s1/aurora.png" alt="" />
+      <img src="@/section/s1/aurora.png" alt="" />
+      </div>
     </div>
-  </div>
+    </div>
+
+
+   <!-- <div class="bg3">
+    <div class="aurora">
+      <div>
+        <img src="@/section/s1/aurora.svg" />
+      </div>
+    </div>
+  </div> -->
     <S1 />
   <S2 />
   <!--    <S1new />
@@ -49,23 +61,48 @@ img{width: 100%;position:absolute;left: 0;
 }
 @keyframes hue {
    to {
-      filter: hue-rotate(80deg);
+      filter: hue-rotate(-30deg);// 變色
    }
+}
+@keyframes aurora {
+  0%{transform: translateX(0);}
+  50%{transform:translateX(-50%)scaleY(.8);}
+  100%{transform:translateX(-100%);}
 }
 .bg2{position:absolute;overflow: hidden;width: 100%;top: 0%;left: 0%;
   opacity: .8;mix-blend-mode: screen;
   img{position: relative;width:120%;filter: blur(1px);margin: -5px;max-width: 120%;}
 }
+.bg3{position:absolute;left: 0;top: 0;width:100%;overflow: hidden;
+   animation: hue 1.5s linear infinite alternate;filter: hue-rotate(50deg);
+.aurora{width:250vw;height:400vw;position:relative;overflow: hidden;
+   transform: rotate(-16deg)translate(-35%,-40%);
+  transform-origin: 0 0; 
+div{white-space: nowrap;width:100%;height: 100%;
+ transform: perspective(50px)rotateX(3deg);
+  transform-origin: 50% 50%;
+img{display: inline-block;width:100%;height: 70%;animation: aurora 20s linear infinite reverse;filter:blur(1vw);}
+}
+}
+}
+/*
 .bg3{position:absolute;left: 0;top: 0;width:100%;overflow: hidden;}
 .aurora{position:relative;left: 0;width:130vw;height:130vw;top:0;
-  transform: rotate(-20deg)translate(-24%,-23%);
-  transform-origin: 0 0;
-  img{width: 100%;height:100%;
+  transform: rotate(-15deg)translate(-25%,-20%);
+  transform-origin: 0 0; filter: hue-rotate(0deg);
    animation: hue 1.5s linear infinite alternate;
-  filter: hue-rotate(0deg);
-  transform: perspective(1.6em)rotateX(1deg);
+ div{width: 100%;height:100%;
+ transform: perspective(40px)rotateX(3deg);
+  transform: perspective(1.3em)rotateX(1deg);
+  transform-origin: 50% 50%;
+}
+  img{width: 100%;height:100%;
+    filter:blur(.8vw);
+  transform:scaleY(8);
+  transform-origin: 50% 0;
 }
 }
+*/
 @media screen and (max-width: 767px) {
   
 .bg{
@@ -80,11 +117,14 @@ img{width: 100%;position:absolute;left: 0;
 &:last-child{bottom: auto;right: 0;}
 }
 }
-
-.bg3{height:400vw;}
-.aurora{width:420vw;height:200vw;
-  transform: rotate(-95deg)translate(-100%,-45%);
+.bg3{height:400vw;
+.aurora{width:420vw;height:400vw;
+  transform: rotate(-100deg)translate(-100%, -35%);
+  img{ filter:blur(3vw);}
 }
+}
+/*
+*/
 }
 </style>
 

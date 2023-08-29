@@ -10,6 +10,7 @@
         <div class="t2" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">台灣十大建商 前進高雄代表作</div>
         <div class="t3"><img data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000" src="./s2/t3.svg" alt="" srcset=""></div>
         <div class="t4" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">SLIDE</div>
+        
     </div>
     </div>
       

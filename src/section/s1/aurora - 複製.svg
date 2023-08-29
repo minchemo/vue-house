@@ -1,0 +1,81 @@
+<svg width="100%" height="100%" viewBox="0 0 1838 2701" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+
+<style type="text/css">
+@keyframes an {
+   from {
+      transform: translateX(0%);
+   }
+
+   to {
+      transform: translateX(-50%);
+   }
+}
+.svgt1 .path{transform:scaleY(.05)translateY(-10%);}
+.svgt1 text{transform:scale(1,16);}
+.svgt1 textPath{fill:#0ff;}
+.svgt2 .path{transform:scaleY(.1)translateY(8%);}
+.svgt2 text{transform:scale(1,8);}
+.svgt2 textPath{fill:#0fcc;}
+.svgt3 .path{transform:scaleY(.2)translateY(16%);}
+.svgt3 text{transform:scale(1,4);}
+.svgt3 textPath{fill:#0f99;}
+
+
+</style>
+
+  <g class="svgt1">
+  <defs>
+  <path id="MyPath1" class="path">
+      <animate id="a1" begin="0s;a2.end" attributeName="d" dur="3s" 
+from="M2416,1264c-260,634-905,815-985,794s-89-320-240-330s-133,150-250,132C762,1826,920,2311,733,2311c-321,0,28-550-347-779C140,1385-50-101-120-734" 
+to="M2349,1956c-261,630-740-70-828-88s-59-350-210-320s-83,800-200,780C932,2286,1010,1801,820,1801c-320,0-165,290-537.3,60C40,1710-83-101-130-734" />
+      <animate id="a2" begin="a1.end" attributeName="d" dur="3s" 
+from="M2349,1956c-261,630-740-70-828-88s-59-350-210-320s-83,800-200,780C932,2286,1010,1801,820,1801c-320,0-165,290-537.3,60C40,1710-83-101-130-734"  
+to="M2416,1264c-260,634-905,815-985,794s-89-320-240-330s-133,150-250,132C762,1826,920,2311,733,2311c-321,0,28-550-347-779C140,1385-50-101-120-734" />
+    </path>
+  </defs>
+  <use xlink:href="#MyPath1" fill="none" stroke="none" /> <text font-family="Verdana" font-size="42.5">
+    <textPath xlink:href="#MyPath1" >高大特區最華麗的一極，即將與您相見！SIGMA=Σ(捷運+商圈+水岸+公園+校園...)從世界回台灣，從台北回高雄，高大Σ計畫－打造科技極地理想國，邀請你一起看見高雄的世界級，台積電拍板先進製程園區設廠，高雄大學城串聯Σ科技城市最進化，雙捷運海景第一排全能建築，人脈X金脈讓高雄再次偉大，台灣十大建商超遠見，大台北重劃推手之王，高大特區最華麗的一極，即將與您相見！SIGMA=Σ(捷運+商圈+水岸+公園+校園...)從世界回台灣，從台北回高雄，高大Σ計畫
+      <animate attributeName="startOffset" from="0" to="-6680" begin="0s" dur="100s" repeatCount="indefinite" />
+    </textPath>
+  </text>
+</g>
+  <g  class="svgt2">
+  <defs>
+    <path id="MyPath2" class="path">
+      <animate begin="0s;a2.end" attributeName="d" dur="3s" 
+from="M2416,1264c-260,634-905,815-985,794s-89-320-240-330s-133,150-250,132C762,1826,920,2311,733,2311c-321,0,28-550-347-779C140,1385-50-101-120-734" 
+to="M2349,1956c-261,630-740-70-828-88s-59-350-210-320s-83,800-200,780C932,2286,1010,1801,820,1801c-320,0-165,290-537.3,60C40,1710-83-101-130-734" />
+      <animate begin="a1.end" attributeName="d" dur="3s" 
+from="M2349,1956c-261,630-740-70-828-88s-59-350-210-320s-83,800-200,780C932,2286,1010,1801,820,1801c-320,0-165,290-537.3,60C40,1710-83-101-130-734"  
+to="M2416,1264c-260,634-905,815-985,794s-89-320-240-330s-133,150-250,132C762,1826,920,2311,733,2311c-321,0,28-550-347-779C140,1385-50-101-120-734" />
+    </path>
+  </defs>
+  <use xlink:href="#MyPath2" fill="none" stroke="none" /> <text font-family="Verdana" font-size="42.5">
+    <textPath xlink:href="#MyPath2">高大特區最華麗的一極，即將與您相見！SIGMA=Σ(捷運+商圈+水岸+公園+校園...)從世界回台灣，從台北回高雄，高大Σ計畫－打造科技極地理想國，邀請你一起看見高雄的世界級，台積電拍板先進製程園區設廠，高雄大學城串聯Σ科技城市最進化，雙捷運海景第一排全能建築，人脈X金脈讓高雄再次偉大，台灣十大建商超遠見，大台北重劃推手之王，高大特區最華麗的一極，即將與您相見！SIGMA=Σ(捷運+商圈+水岸+公園+校園...)從世界回台灣，從台北回高雄，高大Σ計畫
+      <animate attributeName="startOffset" from="0" to="-6680" begin="0s" dur="100s" repeatCount="indefinite" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="13" />
+    </textPath>
+  </text>
+
+</g>
+  <g  class="svgt3">
+  <defs>
+    <path id="MyPath3" class="path">
+      <animate begin="0s;a2.end" attributeName="d" dur="3s" 
+from="M2416,1264c-260,634-905,815-985,794s-89-320-240-330s-133,150-250,132C762,1826,920,2311,733,2311c-321,0,28-550-347-779C140,1385-50-101-120-734" 
+to="M2349,1956c-261,630-740-70-828-88s-59-350-210-320s-83,800-200,780C932,2286,1010,1801,820,1801c-320,0-165,290-537.3,60C40,1710-83-101-130-734" />
+      <animate begin="a1.end" attributeName="d" dur="3s" 
+from="M2349,1956c-261,630-740-70-828-88s-59-350-210-320s-83,800-200,780C932,2286,1010,1801,820,1801c-320,0-165,290-537.3,60C40,1710-83-101-130-734"  
+to="M2416,1264c-260,634-905,815-985,794s-89-320-240-330s-133,150-250,132C762,1826,920,2311,733,2311c-321,0,28-550-347-779C140,1385-50-101-120-734" />
+    </path>
+  </defs>
+  <use xlink:href="#MyPath3" fill="none" stroke="none" /> <text font-family="Verdana" font-size="42.5">
+    <textPath xlink:href="#MyPath3">高大特區最華麗的一極，即將與您相見！SIGMA=Σ(捷運+商圈+水岸+公園+校園...)從世界回台灣，從台北回高雄，高大Σ計畫－打造科技極地理想國，邀請你一起看見高雄的世界級，台積電拍板先進製程園區設廠，高雄大學城串聯Σ科技城市最進化，雙捷運海景第一排全能建築，人脈X金脈讓高雄再次偉大，台灣十大建商超遠見，大台北重劃推手之王，高大特區最華麗的一極，即將與您相見！SIGMA=Σ(捷運+商圈+水岸+公園+校園...)從世界回台灣，從台北回高雄，高大Σ計畫
+      <animate attributeName="startOffset" from="0" to="-6680" begin="0s" dur="100s" repeatCount="indefinite" />
+      
+    </textPath>
+  </text>
+
+</g>
+</svg>
