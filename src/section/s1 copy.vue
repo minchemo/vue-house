@@ -1,26 +1,17 @@
 <template>
   <article class="s1">
-    <img class="bg" v-if="!$isMobile()" src="./s1/bg.jpg" alt="">
-    <img class="bg" v-else src="./s1/bgm.jpg" alt="">
-    <!--  data-aos="fade" data-aos-delay="3000" data-aos-duration="1500" >  -->
-    <!-- <img class="t0" src="./s1/mobile.jpg" alt="" srcset="">  -->
-    <div class="light">
-      <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""><span></span></div>
-      <div class="light1"><img src="./s1/light.jpg" alt="" srcset=""><span></span></div>
-    </div>
-    <img class="bg1" v-if="!$isMobile()" src="./s1/bg.png" alt="">
-    <img class="bg1" v-else src="./s1/bgm.png" alt="">
+    <!-- 
+    <img class="t0" src="./s1/mo.jpg" alt="" srcset="">  -->
     <div class="txtall">
-      <div class="t1"><span data-aos="fade-right" data-aos-delay="3100">尋找</span></div>
-      <img class="logo" data-aos="fade" data-aos-delay="300" src="./s1/logo0417.svg" alt="" loading="lazy">
-      <!--   <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="./s1/logo.svg" alt="" srcset=""> -->
-      <div class="txt" data-aos="fade" data-aos-delay="3500">
-        <div class="t2"><img data-aos="fade-up" data-aos-delay="3300" src="./s1/t2.svg" alt="" srcset=""></div>
-        <div class="t3"><span data-aos="fade-up" data-aos-delay="3600">打造高大極地理想國</span></div>
-        <div class="t4" data-aos="fade" data-aos-delay="3900"><span data-aos="fade-up" data-aos-delay="1000">高雄之極．茂德聚極</span></div>
-        <div class="t5"><span data-aos="fade-up" data-aos-delay="4200">台灣十大建商 前進高雄代表作</span></div>
-        <div class="t6"><img data-aos="fade-up" data-aos-delay="4500" src="./s1/t6.svg" alt="" srcset=""></div>     
-      </div>
+      <div class="logot"><span data-aos="fade-right" data-aos-delay="1100" data-aos-duration="1000">尋找</span></div>
+      <img class="logo" data-aos="fade" data-aos-delay="0" src="./s1/logo0417.svg" alt="" loading="lazy">
+      <div class="txt" v-if="$isMobile()">
+        <div class="t1"><img data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" src="./s2/logo.svg" alt="" srcset=""></div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">台灣十大建商 前進高雄代表作</div>
+        <div class="t3"><img data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000" src="./s2/t3.svg" alt="" srcset=""></div>
+        <div class="t4" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">SLIDE</div>
+        
+    </div>
     </div>
       
   </article>
@@ -40,144 +31,14 @@
   justify-content: flex-end;
   // background: url("./s1/1.jpg");
   // background-size: cover;
-background: #000E29;
   /*
   background: url("./s1/bg.jpg") center 100%;
   background-size: cover;*/
-  // .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .0;z-index: 2;}
+  .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;z-index: 2;}
 
-  .bg{position: absolute;bottom: 0;left: 0;width: 100%;height: auto;}
-  .bg1{position: absolute;bottom: 0;right:24.3%;width: size(114);height: auto;z-index: 2;opacity: .8;}
-  .light{position: absolute;bottom: 0;right:size(-210);width:auto;display: flex;
-  .light1{position: relative;width:size(410);display: block;
-    margin:0 -20%;
-    img{width:100%;mix-blend-mode: color-dodge;filter: blur(5px);
-     transform-origin: 50% 93%;
-     transform:scale(1,.3);
-     animation: an 6s linear infinite ;}
-
-    &::before{content:"";position: absolute;width: 100%;height:size(150);left: 0;bottom: 0;mix-blend-mode: color-dodge;
-    background: radial-gradient(50% 50% at 50% 50%, #fff9 0%,#fff0 50%);opacity: 1;}
-    
-    &::after{content:"";position: absolute;width: 100%;height:size(150);left: 0;bottom: 0;z-index:2;
-    background: radial-gradient(50% 50% at 50% 50%, #6ff9 3%, #6ff2 40%, #6ff0 100%);opacity: 0.6;
-     animation: an2 6s linear infinite ;}
-    span{position: absolute;
-      display: block;
-      height:100%;width:25%;background: radial-gradient(50% 50% at 50% 50%, #09fe 3%, #09f4 40%, #09f0 100%);
-      bottom: 0;
-      left:calc(50% - 25% * .5);
-     animation: an_s 6s linear infinite ;
-     &::after,&::before{
-      content:"";position: absolute;
-      display: block;width:80%;background: radial-gradient(50% 50% at 50% 50%, #09fe 3%, #09f4 40%, #09f0 100%);opacity: .6;
-    }
-     &::after{
-      height:60%;
-      bottom: 0;
-      left:0;
-     animation: an_s2 2s linear infinite ;
-    }
-     &::before{
-      height:70%;
-      bottom: 0;
-      right:0;
-     animation: an_s2 1.5s linear infinite ;
-    }
-  }
-  }
-}
-@keyframes an_s {
-  0% {
-     transform:translateY(0);
-     opacity: 0;
-  }
-  30% {
-     transform:translateY(0);
-     opacity: 0;
-  }
-  40% {
-     transform:translateY(-60%);
-     opacity: .5;
-  }
-  59.9% {
-     transform:translateY(-120%);
-     opacity: 0;
-  }
-  60% {
-     transform:translateY(0);
-     opacity: 0;
-  }
-  70% {
-     transform:translateY(-60%);
-     opacity: 1;
-  }
-  80% {
-     transform:translateY(-120%);
-     opacity: 0;
-  }
-  100% {
-     transform:translateY(-120%);
-     opacity: 0;
-  }
-}
-@keyframes an_s2 {
-  0% {
-     transform:translateY(0);
-  }
-  50% {
-     transform:translateY(-60%);
-  }
-  100% {
-     transform:translateY(-120%);
-  }
-}
-@keyframes an2 {
-  0% {
-     transform:scale(0,0);
-     opacity: 0;
-  }
-  60%{
-     transform:scale(.5,0.4);
-     opacity: 1;
-  }
-  //40  1
-  //60  1.5
-  70%{
-     transform:scale(4,0.3);
-     opacity: 1;
-  }
-  80% {
-     transform:scale(4.5,.3);
-     opacity: 0;
-  }
-  100% {
-     transform:scale(4.5,.3);
-     opacity: 0;
-  }
-}
 @keyframes an {
-  0% {
-     transform:scale(0,0);
-     opacity: 0;filter: blur(15px);
-  }
-  30%{
-     transform:scale(1.5,0.5);
-     opacity: 1;filter: blur(5px);
-  }
-  //40  1
-  //60  1.5
-  70%{
-     transform:scale(1.5,5);
-     opacity: 1;filter: blur(5px);
-  }
-  90% {
-     transform:scale(1.3,5.5);
-     opacity: 0;filter: blur(15px);
-  }
-  100% {
-     transform:scale(1.3,5.5);
-     opacity: 0;filter: blur(15px);
+ to{
+     transform:translateY(-40%)rotate(45deg);
   }
 }
   .txtall{
@@ -195,35 +56,14 @@ background: #000E29;
     padding: 0 0 2.5em;z-index: 2;
     span{position: relative;display: block;}
   }
-  .t1 {
+  .logot {
     width:1em;
     font-size:size(320);line-height: 1;
     margin: -0.15em 0 0 0;overflow: hidden;
+    padding: .05em 0;
   }
   .logo {
     width: size(428);
-  }
-  .txt {
-    width: size(700);margin: -0.1em -1.5em 0 0;
-    display: flex;
-    flex-direction:column;
-    .t2,.t6{width: size(615);overflow: hidden;margin: auto auto .3em auto;
-  img{width:100%;}
-  
-  }
-    .t3{font-size:1.67em;font-weight: 300;width: 110%;transform: scaleX(.97);margin: auto -5%;overflow: hidden;}
-    .t4{margin:1em auto;letter-spacing: 0.7em;color: #CEAA6D;text-indent: .7em;line-height: 2.7;position: relative;overflow: hidden;
-width: 100%;
-    &::after,&::before{content: "";position: absolute;left: calc(50% - (4em / 2));
-    display: block;width: 4em;height: 1px;background: #FFF;margin: auto;}
-    &::after{bottom:0;
-    }
-    &::before{top:0;
-
-    }
-  }
-    .t5{font-size: 1.17em;letter-spacing: -0.03em;transform: scaleX(.98);text-indent:-.06em;line-height: 2;overflow: hidden;}
-
   }
 }
 
@@ -235,37 +75,46 @@ width: 100%;
 @media screen and (max-width: 767px) {
 
   .s1 {
-    height: sizem(812);
+    height: sizem(750);
     min-height: sizem(0);
     max-height: sizem(812);
-  // background-image: url("./s1/bgm.jpg");
-  // background-size: sizem(450) auto;
-  &::after{content: "";display: block;position: absolute;width: 100%;height:18vw;background: #000E29;left: 0;bottom: 0;transform:skewY(10deg);transform-origin: 0 0;}
   .bg1{right:0;width: 100%;opacity:1;}
-  .light{right:sizem(-140);bottom:sizem(65);
-  .light1{width:sizem(180);
+  .light{right:sizem(-350);bottom:sizem(0);
+  .light1{width:sizem(300);
     &::before{height:sizem(75);}
     &::after{height:sizem(75);}
   }
 }
   .txtall{
-    font-size:sizem(15);
+    font-size:sizem(13);
     flex-direction:column;
-    padding: 0 0 11em;
+    padding: 0 0 0em;
 
-    .t1 {
+    .logot {
     width:auto;
-    font-size:sizem(25);line-height: 1;
+    font-size:sizem(32);line-height: 1;
     margin: auto;
-    position: absolute;left:calc(50% - 4.1em);top: 5em;
+    position: absolute;left:calc(50% - 4em);top: 4.8em;
   }
   .logo {
-    width: sizem(210);
+    width: sizem(260);
     margin: auto auto 2.3em auto;}
   .txt{
-    width: sizem(210);width:auto;margin:auto;
-    .t2,.t6{
-    width: sizem(210);}
+    width: sizem(260);margin:auto;
+  text-align: center;
+    img{width: 100%;margin:auto;}
+  .t1{width: sizem(230);margin:auto;}
+    .t2{margin: 1.4em auto 0.2em;letter-spacing: 0.3em;font-weight:600;text-indent: 0.2em;}
+  .t3{width: sizem(230);margin:auto;}
+    .t4{font-weight: 300;letter-spacing: 0.15em;font-size: 1.1em;
+    &::before{
+      content: "";display: block;width: 2em;height: 2em;
+      border: 0 solid currentColor;border-width: 0 1px 1px 0;
+      transform:translateY(0%)rotate(45deg);
+      margin:1em auto .5em;animation:an 1.5s ease-out alternate infinite;
+    }
+    }
+
   }
 
   }
