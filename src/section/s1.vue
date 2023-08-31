@@ -6,10 +6,9 @@
 <script setup>
 import { computed, getCurrentInstance, onMounted, ref } from 'vue';
 import { useGlobalStore } from "../store/global"
-
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
+
 const globalStore = useGlobalStore();
 
 const videoLoader = () => {
