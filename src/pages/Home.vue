@@ -11,7 +11,7 @@
   <!--loading end-->
    <!-- <Nav v-if="config.showNav" /> -->
   <div class="home bg-[#000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <div class="bg">
+  <!--   <div class="bg">
       <img src="@/section/s1/bg.jpg" />
       <img src="@/section/s1/bg.jpg" />
       <img src="@/section/s1/bg.jpg" />
@@ -20,7 +20,7 @@
       <img v-if="!$isMobile()" src="@/section/s1/bg2.jpg" alt="" />
       <img v-else src="@/section/s1/bg3m.jpg" alt="" />
     </div>
-   <!--  <div class="bg3">
+    <div class="bg3">
     <div class="aurora">
       <div>
       <img src="@/section/s1/gif2.gif" alt="" />
@@ -58,7 +58,8 @@
 
 
 <style lang="scss">
-.bg{width: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+
+/*.bg{width: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
 img{width: 100%;position:absolute;left: 0;
   animation: an 2s linear infinite alternate;
 &:first-child{top:50%;transform: translateY(-50%);animation: none;}
@@ -83,7 +84,6 @@ img{width: 100%;position:absolute;left: 0;
   opacity: .8;mix-blend-mode: screen;
   img{position: relative;width:120%;filter: blur(1px);margin: -5px;max-width: 120%;}
 }
-/*
 .bg3{position:absolute;left: 0;top: 0;width:100%;height: 140vw;
   overflow: hidden;mix-blend-mode: screen;
    animation: hue 1.5s linear infinite alternate;filter: hue-rotate(50deg);
