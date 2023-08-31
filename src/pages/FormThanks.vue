@@ -54,10 +54,19 @@
 }
 </style>
 
-<script>
-export default {
-    name: 'formThanks',
-    components: {},
-    methods: {},
+<script setup>
+
+import { onMounted, } from "vue"
+
+const conversion = () => {
+    _lt('send', 'cv', {
+        type: 'Conversion'
+    }, ['8386d752-7432-4b12-8b1c-b1256b980705']);
 }
+
+
+onMounted(() => {
+
+    conversion()
+})
 </script>
