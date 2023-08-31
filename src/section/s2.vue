@@ -85,7 +85,7 @@ line-height: 1.9;
   .s2 {
   flex-direction: column;
 font-size:sizem(15);
-padding:0.5em 0 5em 0;
+padding:5.5em 0 5em 0;
 gap: 2.2em;
   .img{
     

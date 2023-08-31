@@ -5,14 +5,15 @@
     <img class="t0" src="./s1/mo.jpg" alt="" srcset="">  -->
     <video class="video-bg" src="https://h35.banner.tw/sigma/01.mp4" playsinline autoplay muted loop></video>
     <div class="txtall">
-      <div class="logot"><span data-aos="fade-right" data-aos-delay="1100" data-aos-duration="1000">尋找</span></div>
-      <img class="logo" data-aos="fade" data-aos-delay="0" src="./s1/logo0417.svg" alt="" loading="lazy">
+      <div class="logo">
+        <div class="logot"><span data-aos="fade-right" data-aos-delay="1100" data-aos-duration="1000">尋找</span></div>
+        <img data-aos="fade" data-aos-delay="0" src="./s1/logo0417.svg" alt="" loading="lazy">
+      </div>
       <div class="txt" v-if="$isMobile()">
         <div class="t1"><img data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" src="./s2/logo.svg" alt="" srcset=""></div>
         <div class="t2" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">台灣十大建商 前進高雄代表作</div>
         <div class="t3"><img data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000" src="./s2/t3.svg" alt="" srcset=""></div>
-        <div class="t4" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">SLIDE</div>
-        
+        <div class="t4" @click="scrollTo('.order')" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">SLIDE</div>
     </div>
     </div>
       
@@ -31,18 +32,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  // background: url("./s1/1.jpg");
-  // background-size: cover;
-  /*
-  background: url("./s1/bg.jpg") center 100%;
-  background-size: cover;*/
-  .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;z-index: 2;}
-.video-bg{position: fixed;top: 0;left: 0;width: 110%;filter:blur(.1vw); max-width: 1000%;}
-@keyframes an {
- to{
-     transform:translateY(-40%)rotate(45deg);
-  }
-}
+// .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;z-index: 2;}
+.video-bg{position: fixed;top: 0;left: 0;width: 110%;filter:blur(.1vw)contrast(1.3); max-width: 1000%;}
+
   .txtall{
     position: relative;
     width:auto;
@@ -60,12 +52,15 @@
   }
   .logot {
     width:1em;
-    font-size:size(320);line-height: 1;
+    font-size:7.6em;line-height: 1;
     margin: -0.15em 0 0 0;overflow: hidden;
     padding: .05em 0;
   }
   .logo {
-    width: size(428);
+    position: relative;
+    display: flex;
+    gap:.5em;
+    img{ width: 10.2em;}
   }
 }
 
@@ -77,15 +72,9 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
-    height: sizem(750);
-    min-height: sizem(0);
+    height:calc(100vh - 63px);
+    min-height: sizem(604);
     max-height: sizem(812);
-  .light{right:sizem(-350);bottom:sizem(0);
-  .light1{width:sizem(300);
-    &::before{height:sizem(75);}
-    &::after{height:sizem(75);}
-  }
-}
 .video-bg{position: fixed;top: 0;left:50%;filter:blur(.2vw); width: auto;max-width: 1000%;
   //height:sizem(750);
   background-size: cover;
@@ -94,25 +83,32 @@
   .txtall{
     font-size:sizem(13);
     flex-direction:column;
-    padding: 0 0 0em;
+  justify-content:center;
+  align-items:center;
+    padding: 2em 0 0em;
+    height: 100%;
+    gap: 3em;
 
     .logot {
     width:auto;
-    font-size:sizem(32);line-height: 1;
+    font-size:1.23em;line-height: 1;
     margin: auto;
     position: absolute;left:calc(50% - 4em);top: 4.8em;
   }
-  .logo {
-    width: sizem(260);
-    margin: auto auto 2.3em auto;}
+  .logo {font-size:sizem(23);
+    margin: 0 auto 0 auto;
+    flex-direction:column;
+  
+    img{ width: 10em;}
+  }
   .txt{
-    width: sizem(260);margin:auto;
+    width: sizem(260);margin:0 auto;
   text-align: center;
     img{width: 100%;margin:auto;}
-  .t1{width: sizem(230);margin:auto;}
-    .t2{margin: 1.4em auto 0.2em;letter-spacing: 0.3em;font-weight:600;text-indent: 0.2em;}
-  .t3{width: sizem(230);margin:auto;}
-    .t4{font-weight: 300;letter-spacing: 0.15em;font-size: 1.1em;
+  .t1{width: sizem(210);margin:auto;}
+    .t2{font-size:sizem(12);margin: 1.4em auto 0.5em;letter-spacing: 0.3em;font-weight:600;text-indent: 0.2em;}
+  .t3{width: sizem(210);margin:auto;}
+    .t4{font-weight: 300;letter-spacing: 0.15em;font-size: 1em;
     &::before{
       content: "";display: block;width: 2em;height: 2em;
       border: 0 solid currentColor;border-width: 0 1px 1px 0;
@@ -131,10 +127,18 @@
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { computed, getCurrentInstance, inject, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
 
 
 </script>
