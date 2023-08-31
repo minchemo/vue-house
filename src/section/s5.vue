@@ -5,7 +5,7 @@
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >眼界升級 對位國際</h2>
     <img src="./s5/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
     <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">大師聯手 深植美學</h4>
-        <p data-aos="zoom-in" data-aos-delay="400">科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
+        <p data-aos="zoom-in" data-aos-delay="400">來自紐約、英國、台灣三地的頂尖設計團隊，首次攜手共同合作，<br v-if="!globals.$isMobile()">誕生出獨一無二的自然系寓所，我們的野心，<br v-if="!globals.$isMobile()">是以美學改寫一座城市的風貌，這一次，看見新化，更國際化。</p>
       </div>
     <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="600">
     </div>
@@ -167,11 +167,15 @@ const imgs = [
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "港區運動公園"
+    caption: "白本建築設計 業績"
   },
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "港區運動公園"
+    img:new URL("./s5/2.jpg", import.meta.url).href ,
+    caption: "太研規劃設計 業績"
+  },
+  {
+    img:new URL("./s5/3.jpg", import.meta.url).href ,
+    caption: "偶得燈光設計 業績"
   },
 ]
 </script>

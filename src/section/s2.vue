@@ -21,7 +21,7 @@
 <div class="txt">
     <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >根植新化 繁華核心</h2>
     <img src="./s2/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
-    <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">南科園區｜繁華市心｜高鐵願景</h4>
+    <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">北外環起點｜新化圓環商圈</h4>
  </div>
     <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="0">
   </article>

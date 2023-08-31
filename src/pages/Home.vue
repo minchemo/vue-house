@@ -34,6 +34,15 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 .home{
   background: linear-gradient(to right,#ccc 0%,#fff 100%);
   /*

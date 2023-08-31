@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows">
+      <div class="arrows" v-if="imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -152,26 +152,21 @@ const currentSlideIndex = ref(0);
 const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
-
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
 const imgs = [
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
     caption: "聽心苑2外觀3D示意圖"
   },
-  {
-    img:new URL("./s6/1.jpg", import.meta.url).href ,
-    caption: "聽心苑2外觀3D示意圖"
-  },
 ]
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination:  imgs.length > 1 ? true : false,
+  autoplay: true,
+  interval: 4000,
+  gap: 0,
+  type: 'loop'
+}
+
 </script>
