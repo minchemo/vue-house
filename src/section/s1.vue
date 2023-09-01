@@ -3,7 +3,7 @@
   <article class="s1">
     <!-- 
     <img class="t0" src="./s1/mo.jpg" alt="" srcset="">  -->
-    <video class="video-bg" src="https://h35.banner.tw/sigma/01.mp4" playsinline autoplay muted loop></video>
+    <video class="video-bg" src="https://h35.banner.tw/sigma/01.mov" playsinline autoplay muted loop></video>
     <div class="txtall">
       <div class="logot"><span data-aos="fade-right" data-aos-delay="1100" data-aos-duration="1000">尋找</span></div>
       <img class="logo" data-aos="fade" data-aos-delay="0" src="./s1/logo0417.svg" alt="" loading="lazy">
@@ -37,7 +37,7 @@
   background: url("./s1/bg.jpg") center 100%;
   background-size: cover;*/
   .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;z-index: 2;}
-.video-bg{position: fixed;top: 0;left: 0;width: 110%;filter:blur(.1vw); max-width: 1000%;}
+.video-bg{position: fixed;top: 0;left: 0;width: 110%; max-width: 1000%;filter: contrast(1.4);}
 @keyframes an {
  to{
      transform:translateY(-40%)rotate(45deg);
@@ -86,7 +86,8 @@
     &::after{height:sizem(75);}
   }
 }
-.video-bg{position: fixed;top: 0;left:50%;filter:blur(.2vw); width: auto;max-width: 1000%;
+.video-bg{position: fixed;top: 0;left:50%; width: auto;max-width: 1000%;
+
   //height:sizem(750);
   background-size: cover;
     height:calc(100% + 14vw);transform: translateX(-50%);
@@ -95,23 +96,25 @@
     font-size:sizem(13);
     flex-direction:column;
     padding: 0 0 0em;
+    gap: 0;
+    margin-top: sizem(60);
 
     .logot {
     width:auto;
-    font-size:sizem(32);line-height: 1;
+    font-size:sizem(28);line-height: 1;
     margin: auto;
-    position: absolute;left:calc(50% - 4em);top: 4.8em;
+    position: absolute;left:calc(50% - 3.5em);top: 4.1em;
   }
   .logo {
-    width: sizem(260);
+    width: sizem(200);
     margin: auto auto 2.3em auto;}
   .txt{
-    width: sizem(260);margin:auto;
+    width: sizem(220);margin:auto;
   text-align: center;
     img{width: 100%;margin:auto;}
-  .t1{width: sizem(230);margin:auto;}
-    .t2{margin: 1.4em auto 0.2em;letter-spacing: 0.3em;font-weight:600;text-indent: 0.2em;}
-  .t3{width: sizem(230);margin:auto;}
+  .t1{width: sizem(200);margin:auto;}
+    .t2{margin: 1em auto 0.4em;letter-spacing: 0.3em;font-weight:600;text-indent: 0.2em;font-size: sizem(12);}
+  .t3{width: sizem(210);margin:auto;}
     .t4{font-weight: 300;letter-spacing: 0.15em;font-size: 1.1em;
     &::before{
       content: "";display: block;width: 2em;height: 2em;
