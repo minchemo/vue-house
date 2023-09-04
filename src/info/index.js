@@ -1,4 +1,4 @@
-const caseName = "高大Σ計畫"
+const caseName = "理享城"
 
 export default {
     meta: {
@@ -8,9 +8,9 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    // address: "台南安南區環館路358巷2號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.9111053270494!2d120.23648879999999!3d23.063720399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e79e383620657%3A0x8ec65259688f8870!2zNzA55Y-w5Y2X5biC5a6J5Y2X5Y2A55Kw6aSo6LevMzU45be3MuiZnw!5e0!3m2!1szh-TW!2stw!4v1678852820290!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/8a7aaQvSZ2ufAUvc7",
+    address: "新北市五股區成泰路三段356號旁",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.81769105734568!2d121.45092367303369!3d25.09904964689767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af9c08905843%3A0x71c9a16c3c2f019a!2z5b-r5qiC546L5ZyLIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1687227637131!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/uh16saNVu76jxhU47",
     phone: "02-8292-3777",
     fbLink: "https://www.facebook.com/wl2.debang/",
     fbMessage: "https://m.me/wl2.debang/",
