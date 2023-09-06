@@ -7,7 +7,7 @@
   <li data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">邀請你一起看見高雄的世界級<br />　</li>
   <li data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">台積電拍板先進製程園區設廠</li>
   <li data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">高雄大學城串聯Σ科技城市最進化</li>
-  <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">雙捷運海景第一排全能建築</li>
+  <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">捷運海景第一排全能建築</li>
   <li data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">人脈X金脈讓高雄再次偉大<br />　</li>
   <li data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">台灣十大建商超遠見</li>
   <li data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">大台北重劃推手之王</li>

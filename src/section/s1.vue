@@ -3,7 +3,7 @@
   <article class="s1">
     <!-- 
     <img class="t0" src="./s1/mo.jpg" alt="" srcset="">  -->
-    <video class="video-bg" src="https://h35.banner.tw/sigma/01.mp4" playsinline autoplay muted loop></video>
+    <video class="video-bg" src="https://h35.banner.tw/sigma/01.mov" playsinline autoplay muted loop></video>
     <div class="txtall">
       <div class="logo">
         <div class="logot"><span data-aos="fade-right" data-aos-delay="1100" data-aos-duration="1000">尋找</span></div>
@@ -32,9 +32,18 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-// .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;z-index: 2;}
-.video-bg{position: fixed;top: 0;left: 0;width: 110%;filter:blur(.1vw)contrast(1.3); max-width: 1000%;}
-
+  // background: url("./s1/1.jpg");
+  // background-size: cover;
+  /*
+  background: url("./s1/bg.jpg") center 100%;
+  background-size: cover;*/
+  .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;z-index: 2;}
+.video-bg{position: fixed;top: 0;left: 0;width: 110%; max-width: 1000%;filter: contrast(1.4);}
+@keyframes an {
+ to{
+     transform:translateY(-40%)rotate(45deg);
+  }
+}
   .txtall{
     position: relative;
     width:auto;
@@ -75,7 +84,8 @@
     height:calc(100vh - 63px);
     min-height: sizem(604);
     max-height: sizem(812);
-.video-bg{position: fixed;top: 0;left:50%;filter:blur(.2vw); width: auto;max-width: 1000%;
+.video-bg{position: fixed;top: 0;left:50%; width: auto;max-width: 1000%;
+
   //height:sizem(750);
   background-size: cover;
     height:calc(100% + 14vw);transform: translateX(-50%);
@@ -83,32 +93,29 @@
   .txtall{
     font-size:sizem(13);
     flex-direction:column;
-  justify-content:center;
-  align-items:center;
-    padding: 2em 0 0em;
-    height: 100%;
-    gap: 3em;
+    padding: 0 0 0em;
+    gap: 0;
+    margin-top: sizem(60);
 
     .logot {
     width:auto;
-    font-size:1.23em;line-height: 1;
+    font-size:sizem(28);line-height: 1;
     margin: auto;
-    position: absolute;left:calc(50% - 4em);top: 4.8em;
+    position: absolute;left:calc(50% - 3.5em);top: 4.1em;
   }
-  .logo {font-size:sizem(23);
-    margin: 0 auto 0 auto;
-    flex-direction:column;
-  
-    img{ width: 10em;}
+  .logo {
+    width: sizem(200);
+    margin: auto auto 2.3em auto;
+  img{width: 100%;}
   }
   .txt{
-    width: sizem(260);margin:0 auto;
+    width: sizem(220);margin:auto;
   text-align: center;
     img{width: 100%;margin:auto;}
-  .t1{width: sizem(210);margin:auto;}
-    .t2{font-size:sizem(12);margin: 1.4em auto 0.5em;letter-spacing: 0.3em;font-weight:600;text-indent: 0.2em;}
+  .t1{width: sizem(200);margin:auto;}
+    .t2{margin: 1em auto 0.4em;letter-spacing: 0.3em;font-weight:600;text-indent: 0.2em;font-size: sizem(12);}
   .t3{width: sizem(210);margin:auto;}
-    .t4{font-weight: 300;letter-spacing: 0.15em;font-size: 1em;
+    .t4{font-weight: 300;letter-spacing: 0.15em;font-size: 1.1em;
     &::before{
       content: "";display: block;width: 2em;height: 2em;
       border: 0 solid currentColor;border-width: 0 1px 1px 0;
@@ -116,13 +123,8 @@
       margin:1em auto .5em;animation:an 1.5s ease-out alternate infinite;
     }
     }
-
   }
-
   }
-
-
-
   }
 }
 </style>
