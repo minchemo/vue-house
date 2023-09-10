@@ -1,6 +1,6 @@
 <template>
 	<article class="s1 relative">
-		<div class="bubble">
+		<div class="bubble" ref="bubbleRef">
 			<div class="bubble-1 z-[10]"></div>
 			<div class="bubble-2"></div>
 			<div class="bubble-3"></div>
@@ -14,6 +14,10 @@
 				<img class="t2" src="@/section/s1/t2.png" alt="" srcset="">
 				<img class="arrow" src="@/section/s1/arrow.png" alt="" srcset="">
 			</div>
+
+			<img class="train absolute" src="@/section/s1/train.png" alt="" srcset="">
+			<img class="leaf absolute" src="@/section/s1/leaf.png" alt="" srcset="">
+			<img class="leaf2 absolute" src="@/section/s1/leaf2.png" alt="" srcset="">
 		</div>
 	</article>
 </template>
@@ -22,7 +26,7 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-	@apply w-full h-screen;
+	@apply w-full h-screen overflow-visible relative z-10;
 	max-height: size(1080);
 	min-height: size(900);
   	background: linear-gradient(
@@ -32,11 +36,12 @@
   	);
 
 	.bubble {
-		@apply absolute w-full h-full inset-0;
+		@apply absolute w-full h-full inset-0 overflow-hidden;
 		> div {
 			@apply absolute;
 			background-color: #ff3ea1;
 			border-radius: 50%;
+
 			&.bubble-3 {
 			  width: size(809);
 			  height: size(809);
@@ -95,6 +100,38 @@
 				margin-top: size(17);
 			}
 		}
+		.train {
+			left: size(124);
+			top: size(323);
+			width: size(979);
+			z-index: 1;
+		}
+		.leaf {
+			width: size(739.22);
+			left: size(69);
+			top: size(131);
+			animation: an_s 1.5s linear infinite ;
+
+			@keyframes an_s {
+			  0%{
+			     transform: scale(.5)translateY(0%);
+			     opacity: 0;
+			    }
+			  50%{
+			     transform: scale(.95)translateY(-30%);
+			     opacity: 1;
+			    }
+			  100%{
+			     transform: scale(1.5)translateY(-40%);
+			     opacity: 0;
+			    }
+			}
+		}
+		.leaf2 {
+			top: size(491);
+			right: size(352.44);
+			width: size(190.56);
+		}
 	}
 }
 
@@ -115,8 +152,11 @@
   }
 
 </style>
+
 <script setup>
-import { computed, getCurrentInstance, ref, inject } from 'vue';
+import anime from 'animejs/lib/anime.es.js';
+
+import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const smoothScroll = inject('smoothScroll')
@@ -128,4 +168,34 @@ const scrollTo = (target) => {
 		scrollTo: el
 	})
 }
+
+
+const bubbleRef = ref(null);
+
+function r(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+const animeBubble = () => {
+	const bubbles = bubbleRef.value.children;
+	for (const child of bubbles) {
+		anime({
+			targets: child,
+			translateX: r(-100, 100),
+			translateY: r(-100, 100),
+			round: r(1, 10),
+			delay: r(0, 1000),
+			duration: r(5000, 8000),
+			direction: 'alternate',
+			easing: 'easeInOutSine',
+			loop: true,
+		});
+	}
+}
+
+
+onMounted(() => {
+	animeBubble();
+})
+
 </script>

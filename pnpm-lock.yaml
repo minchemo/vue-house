@@ -5,6 +5,7 @@ specifiers:
   '@gtm-support/vue-gtm': ^1.6.0
   '@splidejs/vue-splide': ^0.6.7
   '@vitejs/plugin-vue': ^2.3.3
+  animejs: ^3.2.1
   aos: ^2.3.4
   autoprefixer: ^10.4.7
   daisyui: ^2.15.3
@@ -35,6 +36,7 @@ dependencies:
   '@better-scroll/core': 2.4.2
   '@gtm-support/vue-gtm': 1.6.0_vue@3.2.37
   '@splidejs/vue-splide': 0.6.7
+  animejs: 3.2.1
   aos: 2.3.4
   daisyui: 2.15.3_ugi4xkrfysqkt4c4y6hkyfj344
   fs: 0.0.1-security
@@ -533,6 +535,10 @@ packages:
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
+
+  /animejs/3.2.1:
+    resolution: {integrity: sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==}
+    dev: false
 
   /ansi-regex/2.1.1:
     resolution: {integrity: sha512-TIGnTpdo+E3+pCyAluZvtED5p5wCqLdezCyhPZzKPcxvFplEt4i+W7OONCKgeZFT3+y5NZZfOOS/Bdcanm1MYA==}
