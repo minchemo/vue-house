@@ -12,7 +12,7 @@
   <Nav v-if="config.showNav" />
   <div class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC'] pb-[64px] md:pb-0">
     <S1 />
-    <S2 />
+    <!-- <S2 />
     <S3 />
     <S4 />
     <S5 />
@@ -20,7 +20,7 @@
     <S7 />
     <S8 />
     <S9 />
-    <S10 />
+    <S10 /> -->
     <Order />
   </div>
 </template>
@@ -31,7 +31,7 @@ img {
   display: inline;
   max-width: unset;
   height: unset;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 </style>
 
