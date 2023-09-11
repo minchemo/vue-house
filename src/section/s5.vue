@@ -133,7 +133,7 @@
 				width: size(226);
 				height: size(226);
 				border: #FF3EA1 1px solid;
-				border-radius: 100px;
+				border-radius: 100%;
 				color: #FF3EA1;
 
 				.t1 {

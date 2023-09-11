@@ -79,6 +79,7 @@
 				left: size(824);
 				top: size(868);
 				box-shadow: -9px 0px 6px 0px rgba(0, 0, 0, 0.25);
+				background: linear-gradient(180deg, #FF3EA1 0%, rgba(255, 62, 161, 0) 100%); box-shadow: -9px 0px 6px rgba(0, 0, 0, 0.25) !important; 
 			}
 		}
 	}
@@ -289,8 +290,8 @@ const animeBubble = () => {
 	for (const child of bubbles) {
 		anime({
 			targets: child,
-			translateX: isMobile ? r(-10, 10) : r(-100, 100),
-			translateY: isMobile ? r(-10, 10) : r(-100, 100),
+			translateX: isMobile.value ? r(-10, 10) : r(-100, 100),
+			translateY: isMobile.value ? r(-10, 10) : r(-100, 100),
 			round: r(1, 10),
 			delay: r(0, 1000),
 			duration: r(5000, 8000),

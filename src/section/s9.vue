@@ -20,8 +20,7 @@
 
 .s9 {
 	@apply w-full h-screen overflow-visible relative z-10;
-	max-height: size(1080);
-	min-height: size(900);
+	height: size(1308);
 	background: linear-gradient(175deg, #FF3EA1 3.87%, #8E135E 96.09%);
 
 	.bubble {
@@ -29,15 +28,15 @@
 
 		>div {
 			@apply absolute;
-			background-color: #ff3ea1;
 			border-radius: 50%;
 
 			&.bubble-3 {
 				width: size(809);
 				height: size(809);
-				left: size(65);
-				top: size(150);
-				box-shadow: 12px 5px 14px 0px rgba(85, 8, 45, 0.25);
+				left: -#{size(335)};
+				top: size(50);
+				box-shadow: size(12) size(5) size(14) rgba(85, 8.15, 45.04, 0.25);
+				background: rgba(255, 62, 161, 0.05);
 			}
 
 			&.bubble-5 {
@@ -45,7 +44,8 @@
 				height: size(745);
 				left: size(1625);
 				top: size(94);
-				box-shadow: -9px -8px 9px 0px rgba(114, 18, 75, 0.25);
+				box-shadow: -#{size(9)} -#{size(8)} size(9) rgba(113.69, 17.53, 75.22, 0.25);
+				background: linear-gradient(157deg, rgba(255, 62, 161, 0.20) 0%, rgba(255, 62, 161, 0) 100%); box-shadow: -9px -8px 9px rgba(113.69, 17.53, 75.22, 0.25);
 			}
 
 			&.bubble-4 {
@@ -53,7 +53,8 @@
 				height: size(560);
 				left: -#{size(328)};
 				top: size(423);
-				box-shadow: 8px -9px 11px 0px rgba(128, 20, 97, 0.25);
+				box-shadow: size(8) -#{size(9)} size(11) 0px rgba(128, 20, 97, 0.25);
+				background: linear-gradient(185deg, rgba(255, 62, 161, 0.36) 0%, rgba(255, 62, 161, 0) 100%); 
 			}
 
 			&.bubble-1 {
@@ -61,7 +62,8 @@
 				height: size(1080);
 				left: size(1162);
 				top: -#{size(788)};
-				box-shadow: 11px 6px 20px 0px rgba(0, 0, 0, 0.25);
+				box-shadow: size(11) size(6) size(20) 0px rgba(0, 0, 0, 0.25);
+				background: #FF3EA1;
 			}
 
 			&.bubble-2 {
@@ -69,7 +71,8 @@
 				height: size(640);
 				left: size(824);
 				top: size(868);
-				box-shadow: -9px 0px 6px 0px rgba(0, 0, 0, 0.25);
+				box-shadow: -#{size(9)} 0px size(6) 0px rgba(0, 0, 0, 0.25);
+				background: linear-gradient(193deg, rgba(255, 62, 161, 0.31) 0%, rgba(255, 62, 161, 0) 100%); box-shadow: -9px 0px 6px rgba(0, 0, 0, 0.25);
 			}
 		}
 	}
@@ -156,7 +159,7 @@
 
 			>div {
 				@apply absolute;
-				background-color: #ff3ea1;
+				background-color: transparent;
 				border-radius: 50%;
 
 				&.bubble-3 {
@@ -275,13 +278,15 @@ function r(min, max) {
 	return Math.random() * (max - min) + min;
 }
 
+
+
 const animeBubble = () => {
 	const bubbles = bubbleRef.value.children;
 	for (const child of bubbles) {
 		anime({
 			targets: child,
-			translateX: isMobile ? r(-10, 10) : r(-100, 100),
-			translateY: isMobile ? r(-10, 10) : r(-100, 100),
+			translateX: isMobile.value ? r(-10, 10) : r(-100, 100),
+			translateY: isMobile.value ? r(-10, 10) : r(-100, 100),
 			round: r(1, 10),
 			delay: r(0, 1000),
 			duration: r(5000, 8000),
