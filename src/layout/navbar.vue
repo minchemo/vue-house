@@ -8,14 +8,17 @@
             <div class="bar"></div>
         </div>
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <div class="menu-item font-bold cursor-pointer text-white font-['noto_serif_tc']"
-                v-for="item, i in info.navList" @click="scrollTo(item.target)">
-                <!-- <img src="@/assets/menu_icon.png" alt="" srcset=""> -->
-                <span>{{ item.name }}</span>
+            <div class="menu-item-wrapper">
+                <div class="menu-item font-bold cursor-pointer font-['noto_serif_tc']" v-for="item, i in info.navList"
+                    :class="{ active: activeMenuIdx === i }" @click="scrollTo(item.target, i)">
+                    <!-- <img src="@/assets/menu_icon.png" alt="" srcset=""> -->
+                    <span>{{ item.name }}</span>
+                </div>
             </div>
             <div class="close" @click="menuOpen = !menuOpen">
                 <img src="@/section/close.png" alt="" srcset="">
             </div>
+            <img class="navlogo" src="@/section/navlogo.png" alt="" srcset="">
         </div>
     </div>
     <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
@@ -30,6 +33,10 @@
     padding: 0 size(20);
     height: size(100);
 
+    .navlogo {
+        width: size(287);
+    }
+
     .logo {
         width: size(190);
         height: size(30);
@@ -40,7 +47,7 @@
     }
 
     .menu-btn {
-        background: rgba(128, 48, 49, 0.8);
+        // background: rgba(128, 48, 49, 0.8);
         height: size(62);
         width: size(62);
         display: flex;
@@ -48,7 +55,7 @@
         justify-content: center;
         position: relative;
         z-index: 1;
-        border: 1px solid #fff;
+        // border: 1px solid #fff;
 
         p {
             transition: all .5s;
@@ -120,7 +127,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        background: #803031;
+        background: rgba(0, 0, 0, 0.49);
         width: size(374);
         height: 100%;
         z-index: 5;
@@ -128,8 +135,25 @@
         transition: all .5s;
         border-radius: 0;
         padding: size(100) 0;
-        gap: size(40);
         backdrop-filter: blur(2px);
+
+        .menu-item-wrapper {
+            @apply flex flex-col relative;
+            gap: size(50);
+            padding-right: size(40);
+            margin-bottom: 15%;
+            padding-top: 5%;
+
+            &::after {
+                content: '';
+                width: 1px;
+                height: 120%;
+                background-color: #FF3EA1;
+                position: absolute;
+                right: 5%;
+                top: 0;
+            }
+        }
 
         .menu-item {
             position: relative;
@@ -140,6 +164,7 @@
             gap: size(10);
             font-family: 'Noto Sans TC';
             font-weight: 500;
+            color: #FF3EA1;
 
             img {
                 width: size(43);
@@ -156,9 +181,26 @@
             }
 
             &:hover {
-
+                color :#fff;
                 &:after {
-                    width: 100%;
+                    // width: 100%;
+                }
+            }
+
+            &.active {
+                
+                color :#fff;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: size(20);
+                    height: size(20);
+                    background-color: #FF3EA1;
+                    border-radius: 100%;
+                    left: 125%;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
             }
 
@@ -171,8 +213,8 @@
         .close {
             position: absolute;
             bottom: unset;
-            top: size(30);
-            right: size(30);
+            top: size(60);
+            right: size(60);
             width: size(44);
             height: size(44);
             cursor: pointer;
@@ -228,6 +270,10 @@
         height: sizem(34.24);
         right: sizem(20);
         bottom: sizem(80);
+    }
+
+    .navlogo {
+        width: sizem(185) !important;
     }
 
     .nav {
@@ -320,13 +366,32 @@
             gap: sizem(40);
             justify-content: flex-start;
             padding-top: sizem(100);
+            background: rgba(77.75, 0, 41.98, 0.81);
+
+            .menu-item-wrapper {
+                @apply flex flex-col relative;
+                gap: sizem(38);
+                padding-right: 0;
+                margin-bottom: sizem(10);
+                padding-top: 0;
+
+                &::after {
+                @apply hidden;
+                    }
+            }
 
             .menu-item {
-                font-size: sizem(24);
+                font-size: sizem(18);
                 gap: sizem(5);
 
                 img {
                     width: sizem(30);
+                }
+
+                &.active {
+                    &::before {
+                        @apply hidden;
+                    }
                 }
 
             }
@@ -389,12 +454,14 @@ onMounted(() => {
     });
 })
 
+const activeMenuIdx = ref(0)
 
 const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
+const scrollTo = (el, index) => {
     smoothScroll({
         scrollTo: document.querySelector(el)
     })
+    activeMenuIdx.value = index;
     menuOpen.value = !menuOpen.value;
 }
 </script>

@@ -4,12 +4,16 @@
 			<div class="bubble-1 z-[10]"></div>
 			<div class="bubble-2"></div>
 			<div class="bubble-3"></div>
-			<div class="bubble-4" v-if="!isMobile"></div>
-			<div class="bubble-5" v-if="!isMobile"></div>
+			<div class="bubble-4"></div>
+			<div class="bubble-5"></div>
 		</div>
 		<div class="content">
 			<div class="intro">
-				
+				<S9mix class="s9mix" />
+				<img class="t1" src="@/section/s9/t1.png" data-aos="fade-up" data-aos-delay="0" alt="" />
+				<img class="t2" src="@/section/s9/t2.png" data-aos="fade-up" data-aos-delay="200" alt="" />
+				<div class="line"></div>
+				<img class="logo" data-aos="fade-in" data-aos-delay="200" src="@/section/s9/logo.png" alt="" />
 			</div>
 		</div>
 	</article>
@@ -22,6 +26,7 @@
 	@apply w-full h-screen overflow-visible relative z-10;
 	height: size(1308);
 	background: linear-gradient(175deg, #FF3EA1 3.87%, #8E135E 96.09%);
+	padding-top: size(228);
 
 	.bubble {
 		@apply absolute w-full h-full inset-0 overflow-hidden;
@@ -79,66 +84,28 @@
 
 	.content {
 		.intro {
-			@apply absolute flex flex-col items-end;
-			gap: size(27);
-			width: size(457);
-			top: size(317);
-			left: size(960);
-
-			img {
-				width: 100%;
+			@apply flex flex-col items-center justify-center z-10 relative;
+			.s9mix {
+				width: size(1079);
 			}
-
+			.t1 {
+				width: size(888);
+				margin-bottom: size(33);
+			}
 			.t2 {
-				width: size(293);
+				width: size(888);
 			}
-
-			.arrow {
-				width: size(75.31);
+			.line {
+				margin: size(19) 0;
+				background-color: #fff;
+				width: 1px;
+				height: size(63);
 			}
-
-			.arrow {
-				margin-right: size(107);
-				margin-top: size(17);
-			}
-		}
-
-		.train {
-			left: size(124);
-			top: size(323);
-			width: size(979);
-			z-index: 1;
-		}
-
-		.leaf {
-			width: size(739.22);
-			left: size(69);
-			top: size(131);
-			animation: an_s 1.5s linear infinite;
-
-			@keyframes an_s {
-				0% {
-					transform: scale(.5)translateY(0%);
-					opacity: 0;
-				}
-
-				50% {
-					transform: scale(.95)translateY(-30%);
-					opacity: 1;
-				}
-
-				100% {
-					transform: scale(1.5)translateY(-40%);
-					opacity: 0;
-				}
+			.logo {
+				width: size(388);
 			}
 		}
 
-		.leaf2 {
-			top: size(491);
-			right: size(352.44);
-			width: size(190.56);
-		}
 	}
 }
 
@@ -149,115 +116,99 @@
 @media screen and (max-width: 767px) {
 
 
-	.s1 {
-		height: 100vh;
-		min-height: sizem(667);
-		max-height: sizem(750);
+	.s9 {
+	@apply w-full h-screen overflow-visible relative z-10;
+	height: sizem(664);
+	background: linear-gradient(175deg, #FF3EA1 3.87%, #8E135E 96.09%);
+	padding-top: sizem(125);
 
+	.bubble {
+		@apply absolute w-full h-full inset-0 overflow-hidden;
 
-		.bubble {
+		>div {
+			@apply absolute;
+			border-radius: 50%;
 
-			>div {
-				@apply absolute;
-				background-color: transparent;
-				border-radius: 50%;
+			&.bubble-3 {
+				width: sizem(224.3);
+				height: sizem(224.3);
+				left: -#{sizem(125)};
+				top: sizem(156);
+				box-shadow: sizem(12) sizem(5) sizem(14) rgba(85, 8.15, 45.04, 0.25);
+				background: rgba(255, 62, 161, 0.05);
+			}
 
-				&.bubble-3 {
-					width: sizem(263);
-					height: sizem(263);
-					left: -#{sizem(113)};
-					top:-#{sizem(68)};
-					box-shadow: sizem(11) sizem(6) sizem(20) 0px rgba(0, 0, 0, 0.25);
-				}
+			&.bubble-5 {
+				width: sizem(206.5);
+				height: sizem(206.5);
+				left: sizem(350.22);
+				top: sizem(170.68);
+				box-shadow: -#{sizem(9)} -#{sizem(8)} sizem(9) rgba(113.69, 17.53, 75.22, 0.25);
+				background: linear-gradient(157deg, rgba(255, 62, 161, 0.20) 0%, rgba(255, 62, 161, 0) 100%); box-shadow: -9px -8px 9px rgba(113.69, 17.53, 75.22, 0.25);
+			}
 
+			&.bubble-4 {
+				width: sizem(155.26);
+				height: sizem(155.26);
+				left: -#{sizem(122)};
+				top: sizem(332);
+				box-shadow: sizem(8) -#{sizem(9)} sizem(11) 0px rgba(128, 20, 97, 0.25);
+				background: linear-gradient(185deg, rgba(255, 62, 161, 0.36) 0%, rgba(255, 62, 161, 0) 100%); 
+			}
 
-				&.bubble-1 {
-					width: sizem(311);
-					height: sizem(311);
-					left: sizem(299);
-					top: sizem(46);
-					box-shadow: -#{sizem(9)} -#{sizem(8)} -#{sizem(9)} 0px rgba(114, 18, 75, 0.25);
-				}
+			&.bubble-1 {
+				width: sizem(299.43);
+				height: sizem(299.43);
+				left: sizem(213.53);
+				top: -#{sizem(158)};
+				box-shadow: sizem(11) sizem(6) sizem(20) 0px rgba(0, 0, 0, 0.25);
+				background: #FF3EA1;
+			}
 
-				&.bubble-2 {
-					width: size(640);
-					height: size(640);
-					left: size(824);
-					top: size(868);
-					box-shadow: sizem(12) sizem(5) sizem(14) 0px rgba(85, 8, 45, 0.25);
-				}
+			&.bubble-2 {
+				width: sizem(177.44);
+				height: sizem(177.44);
+				left: sizem(235.99);
+				top: sizem(372.24);
+				box-shadow: -#{sizem(9)} 0px sizem(6) 0px rgba(0, 0, 0, 0.25);
+				background: linear-gradient(193deg, rgba(255, 62, 161, 0.31) 0%, rgba(255, 62, 161, 0) 100%); box-shadow: -9px 0px 6px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+
+	.content {
+		.intro {
+			@apply flex flex-col items-center justify-center z-10 relative;
+			.s9mix {
+				@apply flex justify-center;
+				width: 100%;
+			}
+			.t1 {
+				width: sizem(318.64);
+				margin-bottom: sizem(10);
+			}
+			.t2 {
+				width: sizem(318.64);
+			}
+			.line {
+				margin: sizem(10) 0;
+				background-color: #fff;
+				width: 1px;
+				height: sizem(63);
+			}
+			.logo {
+				width: sizem(238.78);
 			}
 		}
 
-		.content {
-			.intro {
-				@apply absolute flex flex-col items-end;
-				gap: size(27);
-				width: size(457);
-				top: size(317);
-				left: size(960);
-
-				img {
-					width: 100%;
-				}
-
-				.t2 {
-					width: size(293);
-				}
-
-				.arrow {
-					width: size(75.31);
-				}
-
-				.arrow {
-					margin-right: size(107);
-					margin-top: size(17);
-				}
-			}
-
-			.train {
-				left: size(124);
-				top: size(323);
-				width: size(979);
-				z-index: 1;
-			}
-
-			.leaf {
-				width: size(739.22);
-				left: size(69);
-				top: size(131);
-				animation: an_s 1.5s linear infinite;
-
-				@keyframes an_s {
-					0% {
-						transform: scale(.5)translateY(0%);
-						opacity: 0;
-					}
-
-					50% {
-						transform: scale(.95)translateY(-30%);
-						opacity: 1;
-					}
-
-					100% {
-						transform: scale(1.5)translateY(-40%);
-						opacity: 0;
-					}
-				}
-			}
-
-			.leaf2 {
-				top: size(491);
-				right: size(352.44);
-				width: size(190.56);
-			}
-		}
+	}
 	}
 }
 </style>
 
 <script setup>
 import anime from 'animejs/lib/anime.es.js';
+import S9mix from '@/section/s9mix.vue';
 
 import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;

@@ -18,7 +18,7 @@
     <S5 />
     <S6 />
     <S7 />
-    <S8 />
+    <S8 v-if="false" />
     <S9 />
     <Order />
   </div>

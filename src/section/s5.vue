@@ -1,11 +1,11 @@
 <template>
 	<article class="s5 relative">
-		<div class="sep-text">
+		<div class="sep-text" data-aos="flip-left" data-aos-delay="0">
 			GREEN SPACES OF CITY
 		</div>
 		<div class="intro">
 			<div class="l">
-				<div class="t1">
+				<div class="t1" data-aos="fade-up" data-aos-delay="0">
 					萬坪公園城 水岸生活宅
 					<svg class="group-1" width="82" height="38" viewBox="0 0 82 38" fill="none"
 						xmlns="http://www.w3.org/2000/svg">
@@ -13,8 +13,8 @@
 							stroke-width="2" />
 					</svg>
 				</div>
-				<div class="t2">升等樹海第一排 住進三座公園裡</div>
-				<div class="t3">
+				<div class="t2" data-aos="fade-up" data-aos-delay="100">升等樹海第一排 住進三座公園裡</div>
+				<div class="t3" data-aos="fade-up" data-aos-delay="200">
 					「理享城」基地前迎約7600坪體健公園和1200坪成德公園，左擁右抱424公頃相當於16座大安森林公園的新北大都會公園，大台北沒有一區比這裡更活躍。不汲汲營營基地面積最大使用率，把60%的土地留給大樹和園藝綠化，三大公園環繞享重劃區最高綠覆，以及斥資1.2億打造的10公里樂活水岸綠廊自行車道，「理享城」把住宅融入健康生態，以「公園綠軸，親水藍軸」交融周邊環境打造萬坪生態社區，創造四季更舒適宜居微氣候住宅環境。
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 	</article>
 </template>
 
-<style lang="scss" scoped >
+<style lang="scss" >
 @import '@/assets/style/function.scss';
 
 .s5 {
@@ -272,11 +272,201 @@
 
 @media screen and (max-width: 767px) {
 
+	.s5 {
+	width: 100%;
+	height: sizem(1076);
+	padding: 0;
+	z-index: 10;
 
-	.s4 {
-		width: 100%;
-		height: sizem(860);
+	.sep-text {
+		@apply relative;
+		font-size: sizem(13);
+		font-family: 'Noto Serif TC';
+		letter-spacing: sizem(9.16);
+		margin: sizem(30) 0;
+		margin-bottom: sizem(30);
+		text-align: center
 	}
+
+	.bike {
+		@apply hidden;
+	}
+
+	.intro {
+		@apply flex flex-col items-start;
+		gap: sizem(33.59);
+		margin-bottom: size(50);
+		width: 100%;
+		padding: 0 sizem(30);
+
+		.l {
+			.t1 {
+				@apply relative;
+				color: #C3398D;
+				font-size: sizem(25);
+				line-height: sizem(31);
+
+				svg {
+					@apply absolute left-auto right-0;
+					width: sizem(50.2);
+					bottom:0;
+				}
+			}
+
+			.t2 {
+				margin-top: sizem(33);
+				font-size: sizem(15);
+				letter-spacing: sizem(0.38);
+			}
+
+			.t3 {
+				margin-top: sizem(11);
+				width: 100%;
+				color: black;
+				font-size: sizem(13);
+				font-weight: 400;
+				line-height: sizem(24.7);
+				text-align: justify;
+			}
+		}
+
+		.r {
+			@apply flex items-center;
+			gap: sizem(9.74);
+			padding-bottom: sizem(30);
+
+			.b {
+				width: sizem(98.2);
+				height: sizem(98.2);
+
+				.t1 {
+					font-size: sizem(22.53);
+
+					span {
+						font-size: sizem(15.83);
+					}
+				}
+
+				.t2 {
+					font-size: sizem(13);
+					letter-spacing: 0.13px;
+					margin-top: sizem(2);
+					max-width: 80%;
+					text-align: center;
+				}
+
+				.arrow {
+					@apply absolute;
+					width: sizem(30);
+					bottom: -#{sizem(25)};
+					left: 50%;
+					transform: translateX(-50%);
+
+					img {
+						width: 100%;
+					}
+				}
+
+				&.active {
+					background-color: #FF3EA1;
+					color: #fff;
+					.t1 {
+						border-color: #fff;
+					}
+				}
+
+				&:hover {
+					background-color: #FF3EA1;
+					color: #fff;
+					cursor: pointer;
+					.t1 {
+						border-color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	.splide__track{
+		overflow: visible;
+	}
+	.slider-box {
+		@apply relative;
+		width: 100%;
+		height: sizem(378);
+
+		.slide {
+			@apply relative overflow-visible;
+			
+			img {
+				width: 100%;
+				height: sizem(378);
+				object-fit: cover;
+				object-position: center
+			}
+
+			p {
+					@apply absolute;
+					bottom: sizem(5);
+					font-weight: 400;
+					font-size: sizem(12);
+					color: #FFFFFF;
+					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
+
+					&.left {
+						left: sizem(10);
+					}
+					&.right {
+						right: sizem(10);
+					}
+				}
+
+			.des {
+				@apply absolute;
+				right: 0;
+				top: 110%;
+				color: #000;
+				font-size: sizem(12);
+				font-weight: 400;
+				line-height: 190%;
+				width: 100%;
+				padding: 0 sizem(30);
+			}
+		}
+
+		.arrows {
+				@apply absolute z-20 flex items-center justify-between;
+				width: 100%;
+				padding: 0 sizem(10);
+				bottom: 50%;
+				transform: translateY(50%);
+				img {
+					@apply cursor-pointer;
+					margin: unset;
+					width: sizem(8.6);
+				}
+			}
+
+			.pagi {
+				@apply absolute flex w-full justify-center;
+				gap: sizem(6);
+				bottom: -#{sizem(20)};
+				left:0;
+				.item {
+					@apply cursor-pointer hover:opacity-100;
+					border-radius: 100%;
+					width: sizem(6.67);
+					height: sizem(6.67);
+					background-color: #B81B70;
+					opacity: 0.5;
+					
+					&.active {
+						opacity: 1;
+					}
+				}
+			}
+	}
+}
 }
 </style>
 <script setup>
@@ -299,7 +489,7 @@ const items = [
 		b2: '體健公園',
 		img_des: '7600坪大綠覆場域，是全五股最大最豐富共融主題公園，彩虹澑滑梯、花海、籃球場等設施打造自在舒適的全齡化休閒環境',
 		caption: '情境示意圖',
-		img: new URL("../section/s5/1.jpg", import.meta.url).href
+		img: isMobile.value ?  new URL("../section/s5/1m.jpg", import.meta.url).href : new URL("../section/s5/1.jpg", import.meta.url).href
 	},
 	{
 		b1: '1200',
@@ -307,7 +497,7 @@ const items = [
 		b2: '成德公園',
 		img_des: '佔地1200坪，具溜滑梯、蹺蹺板等多項兒童遊戲設施，是大人小孩一齊同樂的最佳所在',
 		caption: '情境示意圖',
-		img: new URL("../section/s5/2.jpg", import.meta.url).href
+		img: isMobile.value ?  new URL("../section/s5/2m.jpg", import.meta.url).href :  new URL("../section/s5/2.jpg", import.meta.url).href
 	},
 	{
 		b1: '424',
@@ -315,7 +505,7 @@ const items = [
 		b2: '新北大都會公園',
 		img_des: '424公頃水岸綠帶，是全台最大的河濱公園，7公里長的濱水自行車道，相當於16座大安森林公園的豪闊綠海，是大台北最珍貴的都會綠洲',
 		caption: '情境示意圖',
-		img: new URL("../section/s5/3.jpg", import.meta.url).href
+		img: isMobile.value ?  new URL("../section/s5/3m.jpg", import.meta.url).href :  new URL("../section/s5/3.jpg", import.meta.url).href
 	},
 ]
 

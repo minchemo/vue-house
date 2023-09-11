@@ -9,48 +9,48 @@
 			<img class="spotD" src="@/section/s6/3.png" alt="" srcset="">
 		</div>
 		<div class="intro">
-			<div class="sep-text">
+			<div class="sep-text" data-aos="flip-left" data-aos-delay="100">
 				GOOD PUBLIC TRANSPORT
 			</div>
-			<div class="t1">
+			<div class="t1" data-aos="fade-up" data-aos-delay="0">
 				蘆洲下一站 到站就到家
 				<svg class="group-1" width="82" height="38" viewBox="0 0 82 38" fill="none"
 					xmlns="http://www.w3.org/2000/svg">
 					<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#FF3EA1" stroke-width="2" />
 				</svg>
 			</div>
-			<div class="t2">新北重磅軌道建設，五泰輕軌增值列車啟動</div>
-			<div class="t3">
+			<div class="t2" data-aos="fade-up" data-aos-delay="100">新北重磅軌道建設，五泰輕軌增值列車啟動</div>
+			<div class="t3" data-aos="fade-up" data-aos-delay="200">
 				買房跟著捷運走，財富一定有！洲子洋將迎來連貫新北市最重要的交通骨幹五泰輕軌，今年4月已正式拍板核定，預計6年內完工通車，未來不僅銜接含金量最高的板南線，打造交通燙金區，同時串聯捷運中和新蘆線、捷運北環段、機場捷運線。「理享城」散步3分鐘就到捷運F06站，5分鐘蘆洲捷運一站到家，不管出國門或是連結松江南京、士林石牌、台北車站，都能快速悠遊。
 			</div>
 		</div>
 		<div class="slider-box">
-			<!-- <div class="arrows">
+			<div class="arrows" v-if="$isMobile()">
 				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
 				<img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
-			</div> -->
+			</div>
 			<Splide ref="splide" :options="{
 				arrows: false,
 				pagination: false,
-				// type: 'loop',
-				drag: false,
-				autoplay: false,
+				type: $isMobile() ? 'loop' : null,
+				drag: $isMobile() ? true : false,
+				autoplay: $isMobile() ? true : false,
 				interval: 4000,
-				perPage: 3,
+				perPage: $isMobile() ? 1 : 3,
 				gap: 0
 			}" @splide:move="move">
-				<SplideSlide class="slide" v-for="img, i in items">
+				<SplideSlide class="slide" v-for="img, i in items" data-aos="fade" :data-aos-delay="(i * 100) + 200">
 					<img :src="img.img" alt="" srcset="">
 					<p class="right">{{ img.caption }}</p>
 					<div class="des">{{ img.img_des }}</div>
 				</SplideSlide>
 			</Splide>
-			<!-- <div class="pagi">
+			<div class="pagi" v-if="$isMobile()">
 				<div class="item" @click="splide.splide.go(i)" v-for="img, i in items" :class="{ active: i == currentIdx }">
 				</div>
-			</div> -->
+			</div>
 		</div>
-		<div class="tip">
+		<div class="tip" data-aos="fade-up" data-aos-delay="200">
 			<div class="t1">3國道╳4特快，全台移動輕鬆縱橫</div>
 			<div class="t2">
 				沿著成泰路，出門轉個彎直上台64快速道路，瞬接國道1號、汐五高、五楊高，配合台65、新北環快，台1甲快速道路，來北往東西行都暢快無比，新北最便利兩條快速道路左右候駕，高效往來大台北各區，通行全台無往不利。</div>
@@ -203,6 +203,40 @@
 			}
 
 		}
+
+.arrows {
+	@apply absolute z-20 flex items-center justify-between;
+	width: 100%;
+	padding: 0 size(30);
+	bottom: 50%;
+	transform: translateY(50%);
+
+	img {
+		@apply cursor-pointer;
+		margin: unset;
+	}
+}
+
+.pagi {
+	@apply absolute flex justify-center;
+	gap: size(13);
+	bottom: -#{size(30)};
+	left: 0;
+	width: 100%;
+
+	.item {
+		@apply cursor-pointer hover:opacity-100;
+		border-radius: 100%;
+		width: size(13);
+		height: size(13);
+		background-color: #B81B70;
+		opacity: 0.5;
+
+		&.active {
+			opacity: 1;
+		}
+	}
+}
 	}
 
 	.tip {
@@ -244,8 +278,204 @@
 
 
 	.s6 {
+	width: 100%;
+	height: sizem(1336);
+	padding: 0 sizem(30);
+	padding-top: 0;
+
+	.map {
+		@apply absolute; 
+		left: 0;
+		top: sizem(350);
+
+		img {
+			@apply absolute;
+		}
+
+		.train {
+			width: sizem(400);
+			left: -#{sizem(230)};
+			top: sizem(102.7);
+		}
+
+		.rings {
+			top: 0;
+			left: -#{sizem(150)};
+			width: sizem(481);
+		}
+
+		.spotA {
+			top: sizem(20);
+			left: sizem(120);
+			width: sizem(94);
+		}
+
+		.spotB {
+			top: sizem(110);
+			left: sizem(210);
+			width: sizem(110);
+		}
+
+		.spotC {
+			top: sizem(220);
+			left: sizem(250);
+			width: sizem(94);
+		}
+
+		.spotD {
+			top: sizem(305);
+			left: sizem(240);
+			width: sizem(94);
+		}
+	}
+
+	.intro {
+		@apply flex flex-col items-start;
+
+		.t1 {
+				@apply relative;
+				color: #C3398D;
+				font-size: sizem(25);
+				line-height: sizem(31);
+				width: 100%;
+
+				svg {
+					@apply absolute left-auto right-0;
+					width: sizem(50.2);
+					bottom:0;
+				}
+			}
+
+		.t2 {
+				margin-top: sizem(25);
+				font-size: sizem(15);
+				letter-spacing: sizem(0.38);
+		}
+
+		.t3 {
+				margin-top: sizem(11);
+				width: 100%;
+				color: black;
+				font-size: sizem(13);
+				font-weight: 400;
+				line-height: sizem(24.7);
+				text-align: justify;
+		}
+
+		.sep-text {
+			@apply relative;
+			font-size: sizem(13);
+			font-family: 'Noto Serif TC';
+			letter-spacing: sizem(7.1);
+			margin: sizem(30) 0;
+			margin-bottom: sizem(30);
+			text-align: center;
+			white-space: nowrap;
+			margin-left: -#{sizem(30)};
+			width: sizem(375);
+		}
+	}
+
+	.slider-box {
+		@apply relative;
 		width: 100%;
-		height: sizem(860);
+		height: sizem(203.4);
+		margin-top: sizem(450);
+
+		.slide {
+			@apply relative overflow-hidden;
+			padding: 0 size(12);
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+
+			p {
+					@apply absolute;
+					bottom: sizem(5);
+					font-weight: 400;
+					font-size: sizem(12);
+					color: #FFFFFF;
+					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
+
+					&.left {
+						left: sizem(10);
+					}
+					&.right {
+						right: sizem(10);
+					}
+				}
+
+		}
+		.arrows {
+				@apply absolute z-20 flex items-center justify-between;
+				width: 100%;
+				padding: 0 sizem(10);
+				bottom: 50%;
+				transform: translateY(50%);
+				img {
+					@apply cursor-pointer;
+					margin: unset;
+					width: sizem(8.6);
+				}
+			}
+
+			.pagi {
+				@apply absolute flex w-full justify-center;
+				gap: sizem(6);
+				bottom: -#{sizem(20)};
+				left:0;
+				.item {
+					@apply cursor-pointer hover:opacity-100;
+					border-radius: 100%;
+					width: sizem(6.67);
+					height: sizem(6.67);
+					background-color: #B81B70;
+					opacity: 0.5;
+					
+					&.active {
+						opacity: 1;
+					}
+				}
+			}
+	}
+
+	.tip {
+		@apply flex flex-col items-center justify-center;
+		margin-top: sizem(56);
+		background-color: #B81B70;
+		width: 100%;
+
+		.t1 {
+			padding: sizem(8) 0;
+			font-size: sizem(15);
+			font-weight: 700;
+			letter-spacing: size(0.75);
+			flex-basis: auto;
+			white-space: nowrap;
+			text-align: center;
+		}
+
+		.t2 {
+			flex: 1;
+			color: #000;
+			font-size: size(13);
+			font-weight: 400;
+			line-height: sizem(24.7);
+			border: 1px solid #B81B70;
+			padding: sizem(10) sizem(16);
+			background-color: #fff;
+		}
+	}
 	}
 }
 </style>
@@ -265,15 +495,15 @@ const move = (newIdx, prevIdx, destIdx) => {
 const items = [
 	{
 		caption: '捷運站實景',
-		img: new URL("../section/s6/1.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s6/1m.jpg", import.meta.url).href : new URL("../section/s6/1.jpg", import.meta.url).href
 	},
 	{
 		caption: '五泰輕軌',
-		img: new URL("../section/s6/2.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s6/2m.jpg", import.meta.url).href : new URL("../section/s6/2.jpg", import.meta.url).href
 	},
 	{
 		caption: '國道一號',
-		img: new URL("../section/s6/3.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s6/3m.jpg", import.meta.url).href : new URL("../section/s6/3.jpg", import.meta.url).href
 	},
 ]
 

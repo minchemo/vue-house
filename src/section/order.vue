@@ -1,6 +1,6 @@
 <template>
   <div id="order" class="order relative bg-[#fff] text-center">
-    <div class="order-section font-['noto_sans_tc']">
+    <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center text-[#fff]">{{ info.order.title }}</div>
       <!-- <div class="cus-divider"></div> -->
@@ -17,25 +17,25 @@
       <!-- Form -->
       <div class="form mx-auto relative flex items-start justify-center" data-aos="zoom-in">
         <div class="left h-full flex flex-col justify-between items-center">
-          <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
+          <input type="text" placeholder="姓名" class="input w-full input-style" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" />
-          <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
+          <input type="text" placeholder="手機" class="input w-full input-style" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full rounded-full" v-model="formData.room_type">
+          <select class="select w-full input-style select-style" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="2房">2房</option>
             <option value="3房">3房</option>
             <option value="店面">店面</option>
           </select>
 
-          <select class="select w-full rounded-full" v-model="formData.city">
+          <select class="select w-full input-style select-style" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select>
-          <select class="select w-full rounded-full" v-model="formData.area">
+          <select class="select w-full input-style select-style" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
@@ -44,7 +44,7 @@
         </div>
         <div class="right h-full">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
+            class="textarea w-full h-full input-style" placeholder="備註訊息"></textarea>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFFF00] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF3EA1] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -92,7 +92,7 @@
   padding-bottom: size(0);
   position: relative;
   height: auto;
-  padding-top: size(70);
+  padding-top: size(100);
   overflow: hidden;
 
   .z-10 {
@@ -123,9 +123,9 @@
   padding-top: size(0);
 
   .order-title {
-    @apply relative z-10 font-['noto_serif_tc'];
+    @apply relative z-10 font-['noto_sans_tc'];
     font-size: size(43);
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: size(60);
     width: size(292);
     text-align: center;
@@ -168,6 +168,24 @@
     margin-bottom: size(50);
     z-index: 50;
 
+    .input-style {
+      border-radius: 0;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid #fff;
+      color:#fff;
+
+      &::placeholder {
+        color: #fff !important;
+      }
+
+    }
+
+    .select-style {
+      option {
+        background-color: #000;
+      }
+    }
+
     .left {
       width: size(419);
     }
@@ -189,8 +207,8 @@
     font-size: size(22);
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
-    background-color: #BBAD90;
+    color: #fff;
+    background-color: #FF3EA1;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
@@ -209,9 +227,10 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    // background-image: url('@/section/form/bg_m.png');
+    background-image: url('@/section/form/bg_m.png');
     height: auto;
     padding-bottom: sizem(0);
+    padding-top: sizem(120);
     position: relative;
     overflow: hidden;
   &::after {

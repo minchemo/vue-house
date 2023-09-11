@@ -23,24 +23,14 @@
 
 }
 
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
 @media screen and (max-width: 767px) {
-
-
 	.s2 {
 	width: 100%;
-	height: sizem(750);
+	height: sizem(667);
 	.view {
 		width: 100%;
 		height: 100%;
-		
-		.viewB{
-			@apply absolute bottom-0;
-			height: 85%;
-		}
+		border-radius: sizem(50);
 
 	}
 

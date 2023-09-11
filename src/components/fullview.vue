@@ -1,9 +1,9 @@
 <template>
     <div class="viewbox" ref="viewbox">
         <img ref="viewImg" src="@/section/s2/view.jpg" alt="" srcset="">
-        <!-- <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
+        <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
-        </div> -->
+        </div>
     </div>
 </template>
 
@@ -46,11 +46,14 @@
             pointer-events: none;
             opacity: 1;
             transition: all 1s;
-            background-color: rgba($color: #903434, $alpha: 0.5);
+            background: rgba(255, 62, 161, 0.46);
 
             img {
-                height: 62px;
+                height: auto;
+                min-width: auto;
+                width: 80%;
             }
+
 
             &.hide {
                 opacity: 0;

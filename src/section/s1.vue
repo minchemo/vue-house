@@ -9,15 +9,17 @@
 		</div>
 		<div class="content">
 			<div class="intro">
-				<img class="logo" src="@/section/s1/logo.png" alt="" srcset="">
-				<img class="t1" src="@/section/s1/t1.png" alt="" srcset="">
-				<img class="t2" src="@/section/s1/t2.png" alt="" srcset="">
+				<img class="logo" src="@/section/s1/logo.png" alt="" srcset="" v-if="!$isMobile()" data-aos="fade-up">
+				<img class="logo" src="@/section/s1/logo_m.png" alt="" srcset="" v-else  data-aos="fade-up">
+				<img class="t1" src="@/section/s1/t1.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="200">
+				<img class="t2" src="@/section/s1/t2.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="300">
 				<img class="arrow" src="@/section/s1/arrow.png" alt="" srcset="">
 			</div>
 
 			<img class="train absolute" src="@/section/s1/train.png" alt="" srcset="">
-			<img class="leaf absolute" src="@/section/s1/leaf.png" alt="" srcset="">
-			<img class="leaf2 absolute" src="@/section/s1/leaf2.png" alt="" srcset="">
+			<img class="leaf absolute" src="@/section/s1/leaf.png" alt="" srcset="" v-if="!$isMobile()">
+			<img class="leaf absolute" src="@/section/s1/leaf_m.png" alt="" srcset="" v-else>
+			<img class="leaf2 absolute" src="@/section/s1/leaf2.png" alt="" srcset="" v-if="!$isMobile()">
 		</div>
 	</article>
 </template>
@@ -26,7 +28,7 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-	@apply w-full h-screen overflow-visible relative z-10;
+	@apply w-full h-screen overflow-visible relative z-20;
 	max-height: size(1080);
 	min-height: size(900);
 	background: linear-gradient(180deg,
@@ -157,10 +159,8 @@
 
 
 	.s1 {
-		height: 100vh;
-		min-height: sizem(667);
-		max-height: sizem(750);
-
+		height: sizem(667);
+		max-height: unset;
 
 		.bubble {
 
@@ -177,62 +177,68 @@
 					box-shadow: sizem(11) sizem(6) sizem(20) 0px rgba(0, 0, 0, 0.25);
 				}
 
-
 				&.bubble-1 {
 					width: sizem(311);
 					height: sizem(311);
 					left: sizem(299);
 					top: sizem(46);
-					box-shadow: -#{sizem(9)} -#{sizem(8)} -#{sizem(9)} 0px rgba(114, 18, 75, 0.25);
-				}
+					box-shadow: -#{sizem(9)} -#{sizem(8)} sizem(9) rgba(113.69, 17.53, 75.22, 0.25);
+								}
 
 				&.bubble-2 {
-					width: size(640);
-					height: size(640);
-					left: size(824);
-					top: size(868);
-					box-shadow: sizem(12) sizem(5) sizem(14) 0px rgba(85, 8, 45, 0.25);
+					width: sizem(319);
+					height: sizem(319);
+					left: -#{sizem(108)};
+					top: sizem(321);
+					box-shadow: sizem(12) sizem(5) sizem(14) 0px rgba(85, 8, 45, 0.25) !important;
 				}
 			}
 		}
 
 		.content {
 			.intro {
-				@apply absolute flex flex-col items-end;
+				@apply absolute flex flex-col items-center z-10;
 				gap: size(27);
-				width: size(457);
-				top: size(317);
-				left: size(960);
+				width: 100%;
+				top: sizem(63);
+				left: 50%;
+				transform: translateX(-50%);
 
 				img {
 					width: 100%;
 				}
 
+				.logo {
+					width: sizem(247);
+				}
+				.t1 {
+					width: sizem(281);
+					margin-top: sizem(26.66);
+				}
+
 				.t2 {
-					width: size(293);
+					width: sizem(180.55);
+					margin-top: sizem(18.23);
 				}
 
 				.arrow {
-					width: size(75.31);
-				}
-
-				.arrow {
-					margin-right: size(107);
-					margin-top: size(17);
+					width: sizem(39);
+					margin-right:0;
+					margin-top: sizem(21.99);
 				}
 			}
 
 			.train {
-				left: size(124);
-				top: size(323);
-				width: size(979);
+				left: -#{sizem(13)};
+				top: sizem(356);
+				width: sizem(412);
 				z-index: 1;
 			}
 
 			.leaf {
-				width: size(739.22);
-				left: size(69);
-				top: size(131);
+				width: sizem(338.04);
+				left: sizem(10);
+				top: sizem(306.41);
 				animation: an_s 1.5s linear infinite;
 
 				@keyframes an_s {
@@ -253,11 +259,6 @@
 				}
 			}
 
-			.leaf2 {
-				top: size(491);
-				right: size(352.44);
-				width: size(190.56);
-			}
 		}
 	}
 }

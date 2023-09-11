@@ -1,7 +1,7 @@
 <template>
 	<article class="s8 relative">
 		<div>
-			<div class="sep-text">
+			<div class="sep-text" data-aos="flip-left" data-aos-delay="0">
 				INTERIOR DESIGN
 			</div>
 			<div class="section">
@@ -253,6 +253,7 @@ const move = (newIdx, prevIdx, destIdx) => {
 	movePosition(currentIdx.value)
 }
 
+// 移動這塊有點問題，待處理
 const movePosition = (index) => {
 	let baseHeight = document.querySelector('.s8 .title .t2 .item').clientHeight;
 	let lineHeight = document.querySelector('.s8 .line').clientHeight;

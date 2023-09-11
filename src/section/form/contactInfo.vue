@@ -19,8 +19,7 @@
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center googlemap"
-        @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item justify-between items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -30,8 +29,8 @@
 
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
       <div>撥打電話</div>
@@ -63,36 +62,36 @@
       <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-      '接待會館'
+        '接待會館'
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-      `接待中心：${info.address}`
+        `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
+        v-if="modalType != 'phone'" v-bind:class="{
+          'hidden': modalType == 'phone' && !$isMobile(),
+          'btlead': modalType == 'fb',
+          'btsearch': modalType == 'gmap',
+          'btcontac': modalType == 'phone'
+        }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+          '開啟導航'
         }}</div>
       <!-- btn phone -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else
+        v-bind:class="{
+              'hidden': modalType == 'phone' && !$isMobile(),
+              'btlead': modalType == 'fb',
+              'btsearch': modalType == 'gmap',
+              'btcontac': modalType == 'phone'
+            }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+          '開啟導航'
         }}</div>
     </div>
   </div>
-
-
 </template>
 
 <style lang="scss">
@@ -123,8 +122,8 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #BBAD90;
-      color: #000;
+      background-color: #FF3EA1;
+      color: #fff;
       width: 100%;
       padding: 0 size(55);
       border-radius: size(10);
@@ -137,11 +136,11 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #79531e;
+        background-color: #FF3EA1;
         color: #fff;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(1) invert(0);
         }
       }
 
@@ -149,7 +148,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(1) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
       }
 
@@ -175,18 +174,18 @@
 
 
       &.googlemap {
-      background-color: #BBAD90;
-        color: #000;
+      background-color: #FF3EA1;
+        color: #fff;
 
         img {
-          filter: brightness(0) invert(0);
+          filter: brightness(0) invert(1);
         }
 
         &:hover {
-          background-color: #79531e;
+          background-color: #FF3EA1;
           color: #fff;
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(1) invert(0);
         }
         }
       }
@@ -210,17 +209,17 @@
 
     .contact-item {
       height: 100%;
-      background-color: #BBAD90;
+      background-color: #FF3EA1;
       font-size: sizem(16);
       font-weight: 400;
-      color: #000;
+      color: #fff;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
       }
 
     }
