@@ -1,109 +1,140 @@
 <template>
-	<article class="s7 relative font-['Noto_Serif_TC']">
-		<div class="main">
-			<div class="slide-box">
+	<article class="s7 relative">
+		<div class="intro">
+			<div class="t1">
+				力挺小資<br>快樂當家
+				<svg class="group-1" width="82" height="38" viewBox="0 0 82 38" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#FF3EA1" stroke-width="2" />
+				</svg>
+			</div>
+			<div class="t2">星級夢幻主題休閒會館</div>
+			<div class="t3">
+				尊榮優雅品味，高訂名宅風範，還有全齡化休閒會館設施，宛如藝廊挑高迎賓廳，凝鍊奢華，盡顯雍容氣韻，感受的是空間尺度流洩的從容。從森林大道穿過迴廊，轉入大廳或閱覽室、交誼廳，與前庭後院共譜應和的空間流轉，在風與光之間，靜靜捕捉生活的情節，為建築與城市之間，留出一個會呼吸的慢活空間。
+			</div>
+		</div>
+		<div class="slider-box">
 			<div class="arrows">
-				<img loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-				<img loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+				<img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
 			</div>
 			<Splide ref="splide" :options="{
 				arrows: false,
 				pagination: false,
 				type: 'loop',
-				autoplay: true,
+				drag: false,
+				autoplay: false,
 				interval: 4000,
+				gap: 0
 			}" @splide:move="move">
 				<SplideSlide class="slide" v-for="img, i in items">
 					<img :src="img.img" alt="" srcset="">
-					<p>{{ img.caption }}</p>
+					<p class="right">{{ img.caption }}</p>
+					<div class="des">{{ img.img_des }}</div>
 				</SplideSlide>
 			</Splide>
-			</div>
-			<div class="right">
-				<div class="t1" data-aos="fade-up" data-aos-delay="200">天開地闊 萬美就緒<br>
-					春福深植品味 雙塔恆永視野</div>
-				<div class="t2" data-aos="fade-up" data-aos-delay="400">
-					近鄰鹽行繁華商圈，俯瞰國際雙語教育特區<br>
-					春福敬獻飯店質感宅，再現台南不一樣的地標風景！<br><br>
-
-					始終經典簡約，造就美感不簡單<br>
-					用方框、序列的雙塔景致，宛若一扇開敞大門<br>
-					喜迎每一位，對家與生活、對城市發展有盼望的人<br>
-					既仰望，也收藏。深蘊品味，生活的故事更耐人尋味…
-
-				</div>
-			</div>
 		</div>
 	</article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped >
 @import '@/assets/style/function.scss';
 
 .s7 {
 	width: 100%;
-	height: size(1138);
-	background-image: url(@/section/s3/bg.jpg);
-	background-size: cover;
-	padding-top: size(42.78);
+	height: size(1080);
+	background-color: #eee;
 
-	.main {
-		@apply flex flex-row-reverse items-center justify-start;
-		gap: size(0);
-		.slide-box {
-			@apply relative;
-			width: size(1300);
-			.slide {
-				@apply relative;
-				img {
-					width: size(1300);
-				}
-				p {
-					@apply absolute;
-					right: size(10);
-					bottom: size(10);
-					font-weight: 400;
-					font-size: size(15);
-					line-height: 160%;
-					color: #FFFFFF;
-					text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
-				}
-			}
-		.arrows {
-			@apply absolute z-20 flex items-center justify-between;
-			width: 100%;
-			padding: 0;
-			bottom: 50%;
-			transform: translateY(50%);
-			img {
-				margin: unset;
+
+	.intro {
+		@apply flex flex-col items-center justify-center absolute z-10;
+		width: size(344);
+		height: 100%;
+		right: size(161);
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.66) 0%, rgba(0, 0, 0, 0.00) 100%);
+		padding: 0 size(19);
+
+
+		.t1 {
+			@apply relative ;
+			color: #fff;
+			font-size: size(55);
+			font-weight: 700;
+			line-height: size(70);
+
+			svg {
+				@apply absolute left-1/2 -translate-x-1/2;
+				width: size(82);
+				bottom: -#{size(80)};
 			}
 		}
+
+		.t2 {
+			@apply whitespace-nowrap;
+			margin-top: size(100);
+			color: #FFFFFF;
+			font-size: size(30);
+			font-weight: 500;
+			letter-spacing: size(0.75);
 		}
-		.right {
-			@apply relative z-10;
-			margin-right: -#{size(14)};
-			padding-bottom: size(120);
-			.t1 {
-				padding-left: -#{size(13)};
-				font-weight: 700;
-				font-size: size(37);
-				line-height: 140%;
-				color: #fff;
-				padding: size(19.25) size(53);
-				background-color: #803031d2;
-			}
-			.t2 {
-				margin-top: size(70.52);
-				padding-left: size(35);
-				font-weight: 400;
-				font-size: size(20);
-				line-height: 150%;
-				color: #000000;
-			}
+
+		.t3 {
+			margin-top: size(10);
+			color: #fff;
+			font-size: size(16);
+			font-weight: 400;
+			line-height: size(30.40);
+			text-align: justify;
 		}
+
 	}
 
+	.slider-box {
+		@apply absolute inset-0;
+		width: 100%;
+		height: size(1080);
+
+		.arrows {
+			@apply absolute z-20 flex items-center justify-between left-1/2 -translate-x-1/2;
+			width: size(221);
+			bottom: size(43.36);
+
+			img {
+				@apply cursor-pointer;
+				margin: unset;
+				width: size(18);
+			}
+		}
+
+
+		.slide {
+			@apply relative overflow-hidden bg-cover;
+
+			img {
+				width: 100%;
+				height: size(1080);
+			}
+
+			p {
+				@apply absolute;
+				bottom: size(22);
+				font-weight: 400;
+				font-size: size(14);
+				color: #FFFFFF;
+				text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
+
+				&.left {
+					left: size(38);
+				}
+
+				&.right {
+					right: size(38);
+
+				}
+			}
+
+		}
+	}
 }
 
 /* 螢幕尺寸標準 */
@@ -112,50 +143,16 @@
 
 @media screen and (max-width: 767px) {
 
-	.s7 {
-	height: sizem(644);
-	padding-top: 0;
 
-	.main {
-		@apply flex-col;
-		gap: sizem(30);
-		.slide-box {
-			width: 100%;
-			.slide {
-				img {
-					width: 100%;
-				}
-				p {
-					right: sizem(10);
-					bottom: sizem(5);
-					font-size: sizem(12);
-					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
-				}
-			}
-		}
-		.right {
-			margin-right: 0;
-			padding-bottom: 0;
-				width: 100%;
-			.t1 {
-				padding-left: 0;
-				font-size: sizem(23);
-				padding: sizem(17) sizem(33);
-			}
-			.t2 {
-				margin-top: sizem(20);
-				padding-left: sizem(32.5);
-				font-size: sizem(14);
-			}
-		}
+	.s6 {
+		width: 100%;
+		height: sizem(860);
 	}
-
 }
-}
-
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref, } from 'vue';
+import { computed, getCurrentInstance, onMounted, ref, } from 'vue';
+import inView from 'in-view';
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
@@ -168,12 +165,16 @@ const move = (newIdx, prevIdx, destIdx) => {
 
 const items = [
 	{
-		caption: '日景外觀鳥瞰透視圖示意，僅供參考',
+		caption: '大廳3D示意圖',
 		img: new URL("../section/s7/1.jpg", import.meta.url).href
 	},
 	{
-		caption: '夜景外觀鳥瞰透視圖示意，僅供參考',
+		caption: '大廳3D示意圖',
 		img: new URL("../section/s7/2.jpg", import.meta.url).href
 	},
 ]
+
+onMounted(() => {
+
+})
 </script>

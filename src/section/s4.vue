@@ -167,6 +167,7 @@
 			svg {
 					@apply absolute left-0;
 					bottom: -#{size(60)};
+					width: size(82);
 				}
 		}
 		&:nth-child(2 of .section) {

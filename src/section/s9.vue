@@ -1,43 +1,17 @@
 <template>
-	<article class="s9 relative font-['Noto_Serif_TC']">
-		<div class="left">
-			<img src="@/section/s9/0.png" class="award" alt="" srcset="" v-if="!$isMobile()">
-			<div class="t1" data-aos="fade-up" data-aos-delay="200" >三心建築 美好生活<br />
-				春福機構×煙波大飯店</div>
-			<div class="t2" data-aos="fade-up" data-aos-delay="400">「春福機構」傳承40年品牌，橫跨建築、飯店與商場<br />
-				觸角與實績遍布全台，更橫跨馬來西亞，放眼國際高度<br />
-				同時深化經營「三心建築」，成就每位居住者的安心支柱</div>
-			<img src="@/section/s9/0.png" class="award" alt="" srcset="" v-if="$isMobile()">
+	<article class="s9 relative">
+		<div class="bubble" ref="bubbleRef">
+			<div class="bubble-1 z-[10]"></div>
+			<div class="bubble-2"></div>
+			<div class="bubble-3"></div>
+			<div class="bubble-4" v-if="!isMobile"></div>
+			<div class="bubble-5" v-if="!isMobile"></div>
 		</div>
-		<div class="right">
-			<label class="pic"><input type="checkbox" v-model="isChecked1" @click="handleCheckboxClick(1)">
-			<div class="imgs">
-				<div class="img" v-for="item, i in itemsA">
-					<img :src="item.img" alt="" srcset="">
-					<p>{{ item.caption }}</p>
-				</div>
-				<div class="img" v-if="$isMobile()" v-for="item, i in itemsA">
-					<img :src="item.img" alt="" srcset="">
-					<p>{{ item.caption }}</p>
-				</div>
+		<div class="content">
+			<div class="intro">
+				
 			</div>
-		</label>
-			<label class="pic"><input type="checkbox" v-model="isChecked2" @click="handleCheckboxClick(2)">
-			<div class="imgs">
-				<div class="img" v-for="item, i in itemsB">
-					<img :src="item.img" alt="" srcset="">
-					<p>{{ item.caption }}</p>
-				</div>
-				<div class="img" v-if="$isMobile()" v-for="item, i in itemsB">
-					<img :src="item.img" alt="" srcset="">
-					<p>{{ item.caption }}</p>
-				</div>
-			</div>
-		</label>
 		</div>
-		<div class="line"></div>
-		<div class="line2" v-if="$isMobile()"></div>
-		<p class="awards">AWARDS</p>
 	</article>
 </template>
 
@@ -45,92 +19,123 @@
 @import '@/assets/style/function.scss';
 
 .s9 {
-	@apply flex items-center justify-end;
-	width: 100%;
-	height: size(1080);
-	background-image: url(@/section/s3/bg.jpg);
-	background-size: cover;
-	gap: size(47.88);
-	padding-right: size(47.25);
-	padding-bottom: size(10);
-	.left {
-		padding-top: size(50);
-		.award {
-			width: size(554);
-		}
-		.t1{
-			font-weight: 700;
-			font-size: size(37);
-			line-height: 140%;
-			color: #803031;
-			margin-top: -#{size(25)};
-		}
-		.t2{
-			font-weight: 400;
-			font-size: size(20);
-			line-height: 150%;
-			color: #000000;
-			margin-top: size(25)
+	@apply w-full h-screen overflow-visible relative z-10;
+	max-height: size(1080);
+	min-height: size(900);
+	background: linear-gradient(175deg, #FF3EA1 3.87%, #8E135E 96.09%);
+
+	.bubble {
+		@apply absolute w-full h-full inset-0 overflow-hidden;
+
+		>div {
+			@apply absolute;
+			background-color: #ff3ea1;
+			border-radius: 50%;
+
+			&.bubble-3 {
+				width: size(809);
+				height: size(809);
+				left: size(65);
+				top: size(150);
+				box-shadow: 12px 5px 14px 0px rgba(85, 8, 45, 0.25);
+			}
+
+			&.bubble-5 {
+				width: size(745);
+				height: size(745);
+				left: size(1625);
+				top: size(94);
+				box-shadow: -9px -8px 9px 0px rgba(114, 18, 75, 0.25);
+			}
+
+			&.bubble-4 {
+				width: size(560);
+				height: size(560);
+				left: -#{size(328)};
+				top: size(423);
+				box-shadow: 8px -9px 11px 0px rgba(128, 20, 97, 0.25);
+			}
+
+			&.bubble-1 {
+				width: size(1080);
+				height: size(1080);
+				left: size(1162);
+				top: -#{size(788)};
+				box-shadow: 11px 6px 20px 0px rgba(0, 0, 0, 0.25);
+			}
+
+			&.bubble-2 {
+				width: size(640);
+				height: size(640);
+				left: size(824);
+				top: size(868);
+				box-shadow: -9px 0px 6px 0px rgba(0, 0, 0, 0.25);
+			}
 		}
 	}
-	.right {
-		@apply flex flex-col;
-		gap: size(69.88);
-		.imgs {
-			@apply flex justify-between;
-			width: size(1150.75);
-			.img {
-				img {
-					height: size(245);
+
+	.content {
+		.intro {
+			@apply absolute flex flex-col items-end;
+			gap: size(27);
+			width: size(457);
+			top: size(317);
+			left: size(960);
+
+			img {
+				width: 100%;
+			}
+
+			.t2 {
+				width: size(293);
+			}
+
+			.arrow {
+				width: size(75.31);
+			}
+
+			.arrow {
+				margin-right: size(107);
+				margin-top: size(17);
+			}
+		}
+
+		.train {
+			left: size(124);
+			top: size(323);
+			width: size(979);
+			z-index: 1;
+		}
+
+		.leaf {
+			width: size(739.22);
+			left: size(69);
+			top: size(131);
+			animation: an_s 1.5s linear infinite;
+
+			@keyframes an_s {
+				0% {
+					transform: scale(.5)translateY(0%);
+					opacity: 0;
 				}
-				p{
-					font-weight: 700;
-					font-size: size(15);
-					line-height: 160%;
-					color: #000000;
-					margin-top: size(5);
+
+				50% {
+					transform: scale(.95)translateY(-30%);
+					opacity: 1;
+				}
+
+				100% {
+					transform: scale(1.5)translateY(-40%);
+					opacity: 0;
 				}
 			}
 		}
 
-		.pic {
-			//控制停止的按鈕 顯示後就會看的到
-			input {
-				display: none;
-			}
-			input:checked + .imgs:hover {
-				animation-play-state: paused;
-			}
+		.leaf2 {
+			top: size(491);
+			right: size(352.44);
+			width: size(190.56);
 		}
-@keyframes an {
-  to {
-    transform: translateX(0);
-  }
-}
-
-	}
-	.line {
-		@apply absolute z-10;
-		right: 0;
-		top: size(517.29);
-		width: size(1810.25);
-		height: size(2);
-		background-color: #803031;
-	}
-	.awards {
-		@apply absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		font-family: 'Tiro Devanagari Hindi';
-		font-style: normal;
-		font-weight: 400;
-		font-size: size(150);
-		line-height: 69%;
-		text-align: center;
-		letter-spacing: 0.1em;
-		color: #FFFFFF;
-
 	}
 }
 
@@ -140,143 +145,156 @@
 
 @media screen and (max-width: 767px) {
 
-	.s9 {
-	@apply flex-col justify-start;
-	width: 100%;
-	height: sizem(920);
-	gap:0;
-	padding-right: 0;
-	padding-bottom: 0;
-	padding-top: sizem(60) !important;
-	.left {
-		width: 100%;
-		padding-top: 0;
-		padding-left: sizem(32.5);
-		padding-right: sizem(16);
-		.award {
-			width: 100%;
-			margin-left: -#{sizem(15)};
-			margin-bottom: -#{sizem(15)};
-		}
-		.t1{
-			font-size: sizem(23);
-			margin-top:0;
-		}
-		.t2{
-			font-size: sizem(13);
-			margin-top: sizem(15);
-			margin-bottom: sizem(20)
-		}
-	}
-	.right {
-		@apply flex flex-col;
-		gap: sizem(45.88);
-		width: 100%;
-		.imgs {
-			//width: 100%;
-			//gap: sizem(8.5);
-			//padding: 0 sizem(9);
-  width: auto;
-  display: inline-flex;
-  position: relative;
-  white-space: nowrap;
-  transform: translateX(-50%);
-  animation: an 20s linear infinite reverse;
-			
-			.img {
-				position: relative;
-				display: inline-block;
-				margin: 0 sizem(8) 0 0;
-				img {
-					height: sizem(155);
+
+	.s1 {
+		height: 100vh;
+		min-height: sizem(667);
+		max-height: sizem(750);
+
+
+		.bubble {
+
+			>div {
+				@apply absolute;
+				background-color: #ff3ea1;
+				border-radius: 50%;
+
+				&.bubble-3 {
+					width: sizem(263);
+					height: sizem(263);
+					left: -#{sizem(113)};
+					top:-#{sizem(68)};
+					box-shadow: sizem(11) sizem(6) sizem(20) 0px rgba(0, 0, 0, 0.25);
 				}
-				p{
-					font-size: sizem(12);
-					margin-top: sizem(5);
+
+
+				&.bubble-1 {
+					width: sizem(311);
+					height: sizem(311);
+					left: sizem(299);
+					top: sizem(46);
+					box-shadow: -#{sizem(9)} -#{sizem(8)} -#{sizem(9)} 0px rgba(114, 18, 75, 0.25);
+				}
+
+				&.bubble-2 {
+					width: size(640);
+					height: size(640);
+					left: size(824);
+					top: size(868);
+					box-shadow: sizem(12) sizem(5) sizem(14) 0px rgba(85, 8, 45, 0.25);
 				}
 			}
 		}
-	}
-	.line {
-		@apply absolute z-10;
-		right: 0;
-		top: sizem(359.29);
-		width: 100%;
-		height: sizem(2);
-		background-color: #803031;
-	}
-	.line2 {
-		@apply absolute z-10;
-		right: 0;
-		top: sizem(585.29);
-		width: 100%;
-		height: sizem(2);
-		background-color: #803031;
-	}
-	.awards {
-		font-size: sizem(70);
-		line-height: 69%;
-	}
-}
-}
 
+		.content {
+			.intro {
+				@apply absolute flex flex-col items-end;
+				gap: size(27);
+				width: size(457);
+				top: size(317);
+				left: size(960);
+
+				img {
+					width: 100%;
+				}
+
+				.t2 {
+					width: size(293);
+				}
+
+				.arrow {
+					width: size(75.31);
+				}
+
+				.arrow {
+					margin-right: size(107);
+					margin-top: size(17);
+				}
+			}
+
+			.train {
+				left: size(124);
+				top: size(323);
+				width: size(979);
+				z-index: 1;
+			}
+
+			.leaf {
+				width: size(739.22);
+				left: size(69);
+				top: size(131);
+				animation: an_s 1.5s linear infinite;
+
+				@keyframes an_s {
+					0% {
+						transform: scale(.5)translateY(0%);
+						opacity: 0;
+					}
+
+					50% {
+						transform: scale(.95)translateY(-30%);
+						opacity: 1;
+					}
+
+					100% {
+						transform: scale(1.5)translateY(-40%);
+						opacity: 0;
+					}
+				}
+			}
+
+			.leaf2 {
+				top: size(491);
+				right: size(352.44);
+				width: size(190.56);
+			}
+		}
+	}
+}
 </style>
-<script setup>
-import { computed, getCurrentInstance, ref, } from 'vue';
 
+<script setup>
+import anime from 'animejs/lib/anime.es.js';
+
+import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const smoothScroll = inject('smoothScroll')
 const isMobile = computed(() => globals.$isMobile());
 
-const itemsA = [
-	{
-		caption: '雲端 新竹縣竹北市',
-		img: new URL("../section/s9/1.jpg", import.meta.url).href
-	},
-	{
-		caption: '大觀自若 新竹縣竹北市',
-		img: new URL("../section/s9/2.jpg", import.meta.url).href
-	},
-	{
-		caption: '若隱 新竹市東區',
-		img: new URL("../section/s9/3.jpg", import.meta.url).href
-	},
-	{
-		caption: '大觀無極 新竹縣竹北市',
-		img: new URL("../section/s9/4.jpg", import.meta.url).href
-	},
-	{
-		caption: '水容 新竹縣竹北市',
-		img: new URL("../section/s9/5.jpg", import.meta.url).href
-	},
-]
-
-const itemsB = [
-	{
-		caption: '漾煙波 台南市永康區',
-		img: new URL("../section/s9/6.jpg", import.meta.url).href
-	},
-	{
-		caption: '春上春福 台南市永康區',
-		img: new URL("../section/s9/7.jpg", import.meta.url).href
-	},
-	{
-		caption: '春福好好 台南市安南區',
-		img: new URL("../section/s9/8.jpg", import.meta.url).href
-	},
-	{
-		caption: '春福學學 台南市安南區',
-		img: new URL("../section/s9/9.jpg", import.meta.url).href
-	},
-];
-const isChecked1 = ref(false)
-const isChecked2 = ref(false)
-
-function handleCheckboxClick(checkboxNum) {
-  if (checkboxNum === 1) {
-    isChecked2.value = false
-  } else if (checkboxNum === 2) {
-    isChecked1.value = false
-  }
+const scrollTo = (target) => {
+	let el = document.getElementById(target);
+	smoothScroll({
+		scrollTo: el
+	})
 }
+
+const bubbleRef = ref(null);
+
+function r(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+const animeBubble = () => {
+	const bubbles = bubbleRef.value.children;
+	for (const child of bubbles) {
+		anime({
+			targets: child,
+			translateX: isMobile ? r(-10, 10) : r(-100, 100),
+			translateY: isMobile ? r(-10, 10) : r(-100, 100),
+			round: r(1, 10),
+			delay: r(0, 1000),
+			duration: r(5000, 8000),
+			direction: 'alternate',
+			easing: 'easeInOutSine',
+			loop: true,
+		});
+	}
+}
+
+
+onMounted(() => {
+	animeBubble();
+})
 
 </script>

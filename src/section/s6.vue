@@ -1,138 +1,238 @@
 <template>
-	<article class="s6 relative font-['Noto_Serif_TC']">
-		<div class="main">
-			<div class="left">
-			<div class="slide-box">
-				<div class="arrows">
-					<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-					<img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
-				</div>
-				<Splide ref="splide" :options="{
-					arrows: false,
-					pagination: false,
-					type: 'loop',
-					autoplay: true,
-					interval: 4000,
-				}" @splide:move="move">
-					<SplideSlide class="slide" v-for="img, i in items[activeSlide].imgs">
-						<img :src="img.img" alt="" srcset="">
-						<p>{{ img.caption }}</p>
-					</SplideSlide>
-				</Splide></div>
-				<div class="btns">
-					<div class="item" v-for="item, i in items" :class="{ active: i == activeSlide }" @click="activeSlide = i; splide.splide.go(0)">
-						{{ item.title }}</div>
-				</div>
+	<article class="s6 relative">
+		<div class="map">
+			<img class="train" src="@/section/s6/mrt.png" alt="" srcset="">
+			<img class="rings" src="@/section/s6/ring.png" alt="" srcset="">
+			<img class="spotA" src="@/section/s6/1.png" alt="" srcset="">
+			<img class="spotB" src="@/section/s6/logo.png" alt="" srcset="">
+			<img class="spotC" src="@/section/s6/2.png" alt="" srcset="">
+			<img class="spotD" src="@/section/s6/3.png" alt="" srcset="">
+		</div>
+		<div class="intro">
+			<div class="sep-text">
+				GOOD PUBLIC TRANSPORT
 			</div>
-			<div class="right">
-				<div class="t1" data-aos="fade-up" data-aos-delay="200" v-html="items[activeSlide].t1"></div>
-				<div class="t3" data-aos="fade-up" data-aos-delay="400" v-html="items[activeSlide].t3"></div>
-				<!-- 
-				<div class="t1" data-aos="fade-up" data-aos-delay="200">鹽行繁榮風華<br>
-					生活人文圖畫</div>
-				<div class="t3" data-aos="fade-up" data-aos-delay="400">■ 5min 「台南應用科技大學」半徑完整生活圈<br />
-					■ 5min 鹽行聚落核心 三村國小、夜市商圈<br />
-					■ 6min 愛買&家樂福 休閒購物美食好方便<br />
-					■ 校園公園景觀一覽無遺，近取鹽水溪河堤綠廊</div> -->
+			<div class="t1">
+				蘆洲下一站 到站就到家
+				<svg class="group-1" width="82" height="38" viewBox="0 0 82 38" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#FF3EA1" stroke-width="2" />
+				</svg>
+			</div>
+			<div class="t2">新北重磅軌道建設，五泰輕軌增值列車啟動</div>
+			<div class="t3">
+				買房跟著捷運走，財富一定有！洲子洋將迎來連貫新北市最重要的交通骨幹五泰輕軌，今年4月已正式拍板核定，預計6年內完工通車，未來不僅銜接含金量最高的板南線，打造交通燙金區，同時串聯捷運中和新蘆線、捷運北環段、機場捷運線。「理享城」散步3分鐘就到捷運F06站，5分鐘蘆洲捷運一站到家，不管出國門或是連結松江南京、士林石牌、台北車站，都能快速悠遊。
 			</div>
 		</div>
-		<img class="slash" src="@/section/slash.svg" alt="" srcset="">
+		<div class="slider-box">
+			<!-- <div class="arrows">
+				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
+				<img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+			</div> -->
+			<Splide ref="splide" :options="{
+				arrows: false,
+				pagination: false,
+				// type: 'loop',
+				drag: false,
+				autoplay: false,
+				interval: 4000,
+				perPage: 3,
+				gap: 0
+			}" @splide:move="move">
+				<SplideSlide class="slide" v-for="img, i in items">
+					<img :src="img.img" alt="" srcset="">
+					<p class="right">{{ img.caption }}</p>
+					<div class="des">{{ img.img_des }}</div>
+				</SplideSlide>
+			</Splide>
+			<!-- <div class="pagi">
+				<div class="item" @click="splide.splide.go(i)" v-for="img, i in items" :class="{ active: i == currentIdx }">
+				</div>
+			</div> -->
+		</div>
+		<div class="tip">
+			<div class="t1">3國道╳4特快，全台移動輕鬆縱橫</div>
+			<div class="t2">
+				沿著成泰路，出門轉個彎直上台64快速道路，瞬接國道1號、汐五高、五楊高，配合台65、新北環快，台1甲快速道路，來北往東西行都暢快無比，新北最便利兩條快速道路左右候駕，高效往來大台北各區，通行全台無往不利。</div>
+		</div>
 	</article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped >
 @import '@/assets/style/function.scss';
 
 .s6 {
 	width: 100%;
-	height: size(1010);
-	background-image: url(@/section/s3/bg.jpg);
-	background-size: cover;
-	padding-top: size(96);
-	padding-left: size(104.3);
+	height: size(1334);
+	padding: 0 size(219);
+	padding-top: size(145);
 
-	.main {
-		@apply flex flex-row items-center justify-start;
-		gap: size(55.66);
-		.left {
-			.btns {
-				@apply flex items-center;
-				.item {
-					@apply flex-1 cursor-pointer;
-					background-color: #B08D8D;
-					color: #fff;
-					font-weight: 700;
-					font-size: size(30);
-					padding: size(10) 0;
-					text-align: center;
-					&.active {
-						background-color: #803031;
-					}
-					&:hover {
-						background-color: #803031;
+	.map {
+		@apply absolute;
+		left: 0;
+		top: 0;
 
-					}
-				}
-			}
-			.slide-box {
-			@apply relative;
-			margin: unset;
-			width: size(1236);
-			.slide {
-				@apply relative;
-				img {
-					width: size(1236);
-				}
-				p {
-					@apply absolute;
-					right: size(10);
-					bottom: size(10);
-					font-weight: 400;
-					font-size: size(15);
-					line-height: 160%;
-					color: #FFFFFF;
-					text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
-				}
-			}
-		.arrows {
-			@apply absolute z-20 flex items-center justify-between;
-			width: 100%;
-			padding: 0;
-			bottom: 50%;
-			transform: translateY(50%);
-			img {
-				margin: unset;
-			}
+		img {
+			@apply absolute;
 		}
-			}
+
+		.train {
+			width: size(858);
+			left: -#{size(273)};
+			top: size(162.43);
 		}
-		.right {
-			padding-bottom: size(120);
-			.t1 {
-				margin-top: size(101.40);
-				padding-left: -#{size(13)};
-				font-weight: 700;
-				font-size: size(37);
-				line-height: 140%;
-				color: #803031;
-			}
-			.t3 {
-				margin-top: size(30);
-				padding-left: -#{size(13)};
-				width: size(445.47);
-				font-weight: 400;
-				font-size: size(20);
-				line-height: 150%;
-				color: #000000;
-			}
+
+		.rings {
+			top: size(18);
+			left: size(111.5);
+			width: size(848);
+		}
+
+		.spotA {
+			top: size(53.39);
+			left: size(571.56);
+			width: size(120.5);
+		}
+
+		.spotB {
+			top: size(220.77);
+			left: size(747.55);
+			width: size(157.8);
+		}
+
+		.spotC {
+			top: size(409.2);
+			left: size(809.72);
+			width: size(120.5);
+		}
+
+		.spotD {
+			top: size(560.332);
+			left: size(800.16);
+			width: size(120.5);
 		}
 	}
 
-	.slash {
-		@apply absolute z-10;
-		top: size(331.69);
-		left: size(1653.08);
-		width: size(176.77);
+	.intro {
+		@apply flex flex-col items-end;
+
+		.t1 {
+			@apply relative;
+			color: #C3398D;
+			font-size: size(55);
+			font-weight: 700;
+			line-height: size(70);
+
+			svg {
+				@apply absolute left-0;
+				width: size(82);
+				bottom: -#{size(80)};
+			}
+		}
+
+		.t2 {
+			margin-top: size(100);
+			color: black;
+			font-size: size(30);
+			font-weight: 500;
+			letter-spacing: size(0.75);
+			margin-right: -#{size(20)};
+		}
+
+		.t3 {
+			margin-top: size(19);
+			width: size(563);
+			color: black;
+			font-size: size(16);
+			font-weight: 400;
+			line-height: size(30.40);
+			text-align: justify;
+		}
+
+		.sep-text {
+			@apply relative;
+			color: #FF3EA1;
+			font-size: size(27);
+			font-family: 'Noto Serif TC';
+			font-weight: 700;
+			letter-spacing: size(27.675);
+			margin-right: -#{size(20)};
+			margin-bottom: size(30)
+		}
+	}
+
+	.slider-box {
+		@apply relative;
+		width: 100%;
+		height: size(314.71);
+		margin-top: size(60);
+
+		.slide {
+			@apply relative overflow-hidden;
+			padding: 0 size(12);
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			img {
+				width: size(487.23);
+				height: size(314.71);
+			}
+
+			p {
+				@apply absolute;
+				bottom: size(7);
+				font-weight: 400;
+				font-size: size(14);
+				color: #FFFFFF;
+				text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
+
+				&.left {
+					left: size(10);
+				}
+
+				&.right {
+					right: size(20);
+
+				}
+			}
+
+		}
+	}
+
+	.tip {
+		@apply flex items-center;
+		margin-top: size(37);
+		background-color: #B81B70;
+		width: 100%;
+
+		.t1 {
+			padding: size(19) size(56);
+			background: #B81B70;
+			color: #fff;
+			font-size: size(30);
+			font-weight: 700;
+			letter-spacing: size(0.75);
+			flex-basis: size(579);
+			white-space: nowrap;
+			text-align: center;
+		}
+
+		.t2 {
+			flex: 1;
+			color: #000;
+			font-size: size(16);
+			font-weight: 400;
+			line-height: 190%;
+			border: 1px solid #B81B70;
+			padding: size(16) size(18);
+			background-color: #fff;
+		}
 	}
 }
 
@@ -142,66 +242,16 @@
 
 @media screen and (max-width: 767px) {
 
-.s6 {
-	height: sizem(576);
-	padding-top: 0;
-	padding-left: 0;
 
-	.main {
-		@apply flex-col;
-		gap: sizem(63);
-		.left {
-			.btns {
-				@apply flex items-center;
-				.item {
-					font-size: sizem(14);
-					padding: sizem(17) 0;
-				}
-			}
-			.slide-box {
-			width: 100%;
-			.slide {
-				img {
-					width: 100%;
-				}
-				p {
-					right: sizem(10);
-					bottom: sizem(5);
-					font-size: sizem(12);
-					text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
-				}
-			}
-			}
-		}
-		.right {
-			padding-bottom: 0;
-			.t1 {
-				margin-top: 0;
-				padding-left:0;
-				font-size: sizem(23);
-			}
-			.t3 {
-				margin-top: sizem(15);
-				padding-left: 0;
-				width: auto;
-				font-size: sizem(14);
-			}
-		}
-	}
-
-	.slash {
-		@apply absolute z-10;
-		top: sizem(325.68);
-		left: sizem(181);
-		width: sizem(118);
+	.s6 {
+		width: 100%;
+		height: sizem(860);
 	}
 }
-
-}
-
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref, } from 'vue';
+import { computed, getCurrentInstance, onMounted, ref, } from 'vue';
+import inView from 'in-view';
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
@@ -211,54 +261,23 @@ const currentIdx = ref(0)
 const move = (newIdx, prevIdx, destIdx) => {
 	currentIdx.value = prevIdx
 }
-const activeSlide = ref(0)
 
 const items = [
 	{
-		title: '散步南應大熟成機能',
-		imgs: [
-			{
-				caption: '購物情境圖',
-				img: new URL("../section/s6/1-1.jpg", import.meta.url).href
-			},
-			{
-				caption: '公園情境圖',
-				img: new URL("../section/s6/1-2.jpg", import.meta.url).href
-			},
-			{
-				caption: '奇美醫院實景圖',
-				img: new URL("../section/s6/1-3.jpg", import.meta.url).href
-			},
-		],
-		t1: '鹽行繁榮風華<br>生活人文圖畫',
-		t3: '■ 5min 「台南應用科技大學」半徑完整生活圈<br />■ 5min 鹽行聚落核心 三村國小、夜市商圈<br />■ 6min 愛買&家樂福 休閒購物美食好方便<br />■ 校園公園景觀一覽無遺，近取鹽水溪河堤綠廊',
+		caption: '捷運站實景',
+		img: new URL("../section/s6/1.jpg", import.meta.url).href
 	},
 	{
-		title: '聚焦永康文教新聚落',
-		imgs: [
-			{
-				caption: '臺南市立鹽行國民中學',
-				img: new URL("../section/s6/2-1.jpg", import.meta.url).href
-			},
-			{
-				caption: '台灣歷史博物館實景圖',
-				img: new URL("../section/s6/2-2.jpg", import.meta.url).href
-			},
-			{
-				caption: '台南南台科技大學實景圖',
-				img: new URL("../section/s6/2-3.jpg", import.meta.url).href
-			},
-			{
-				caption: '台南市新圖書總館實景圖',
-				img: new URL("../section/s6/2-4.jpg", import.meta.url).href
-			},
-			{
-				caption: '三村國小實景圖',
-				img: new URL("../section/s6/2-5.jpg", import.meta.url).href
-			},
-		],
-		t1: '國際教育專區<br>博館運動場域<br>聚焦永康文教新聚落',
-		t3: '■ 明星學區：國際雙語教育鹽行國中、三村國小<br>■ 「台南應用科技大學」完整生活圈<br>■ 文化&運動：國立台灣歷史博物館、台南總圖、<br> 台南國際棒球場',
-	}
+		caption: '五泰輕軌',
+		img: new URL("../section/s6/2.jpg", import.meta.url).href
+	},
+	{
+		caption: '國道一號',
+		img: new URL("../section/s6/3.jpg", import.meta.url).href
+	},
 ]
+
+onMounted(() => {
+
+})
 </script>
