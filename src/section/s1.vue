@@ -101,11 +101,11 @@
     width:auto;
     font-size:sizem(28);line-height: 1;
     margin: auto;
-    position: absolute;left:calc(50% - 3.5em);top: 4.1em;
+    position: absolute;left:calc(50% - 3.5em);top:calc(50% - .9em);
   }
   .logo {
     width: sizem(200);
-    margin: auto auto 2.3em auto;
+    margin: auto auto 8vw auto;
   img{width: 100%;}
   }
   .txt{
