@@ -39,7 +39,7 @@
         left: 0%;
         transform: rotate(-5deg);
         transform-origin: 80% 5%;
-        animation: an 2s ease-in-out infinite alternate;
+     //   animation: an 2s ease-in-out infinite alternate;
     }
 
     .img2 {
@@ -54,7 +54,7 @@
         left: 8.5%;
         transform: rotate(5deg);
         transform-origin: 80% 95%;
-        animation: an 2s ease-in-out infinite alternate;
+     //   animation: an 2s ease-in-out infinite alternate;
     }
 
     .img4 {
@@ -63,7 +63,7 @@
         left: 40.8%;
         transform: rotate(4deg);
         transform-origin: 20% 5%;
-        animation: an 2s ease-in-out infinite alternate;
+       // animation: an 2s ease-in-out infinite alternate;
     }
 
     .img5 {
@@ -72,7 +72,7 @@
         left: 42.3%;
         transform: rotate(-5deg);
         transform-origin: 8% 97%;
-        animation: an 2s ease-in-out infinite alternate;
+        //animation: an 2s ease-in-out infinite alternate;
     }
 }
 </style>
