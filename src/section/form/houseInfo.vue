@@ -40,7 +40,7 @@
 //     background-repeat: no-repeat;
 // }
 .house {
-  background-image: url('@/section/form/bg.png');
+  background-image: url('@/section/form/bg.webp');
   background-size: 100%;
 }
 .displaynone{display: none;}
@@ -76,7 +76,7 @@
 
 @media screen and (max-width:768px) {
 .house {
-  background-image: url('@/section/form/bg_m.png');
+  background-image: url('@/section/form/bg_m.webp');
 }
     .footer {
         margin-bottom: sizem(0);

@@ -1,10 +1,10 @@
 <template>
     <div class="img imgc">
-        <img class="box" src="@/section/anim/box.png">
-        <img class="img1" src="@/section/anim/03/01.png">
-        <img class="img2" src="@/section/anim/03/03.png">
-        <img class="img3" src="@/section/anim/03/02.png">
-        <img class="img4" src="@/section/anim/03/04.png">
+        <img class="box" src="@/section/anim/box.webp">
+        <img class="img1" src="@/section/anim/03/01.webp">
+        <img class="img2" src="@/section/anim/03/03.webp">
+        <img class="img3" src="@/section/anim/03/02.webp">
+        <img class="img4" src="@/section/anim/03/04.webp">
     </div>
 </template>
 

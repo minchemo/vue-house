@@ -1,7 +1,7 @@
 <template>
 	<article class="s3 relative z-20">
-		<img class="cloud" src="@/section/s3/cloud.png" alt="" srcset="" v-if="!$isMobile()">
-		<img class="cloud" src="@/section/s3/cloud_m.png" alt="" srcset="" v-else>
+		<img class="cloud" src="@/section/s3/cloud.webp" alt="" srcset="" v-if="!$isMobile()">
+		<img class="cloud" src="@/section/s3/cloud_m.webp" alt="" srcset="" v-else>
 		<div class="sep-text" data-aos="flip-left" data-aos-delay="100">
 			THE WONDERLAND
 		</div>
@@ -32,7 +32,7 @@
 					實現與自然萬物共處的建築理想
 				</div>
 				<div class="divi" v-if="$isMobile()"></div>
-				<img class="logos"   src="@/section/s3/logos.png" alt="" srcset="">
+				<img class="logos"   src="@/section/s3/logos.webp" alt="" srcset="">
 			</div>
 			<div class="divi" v-if="!$isMobile()"></div>
 			<div class="r" v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="0">「快樂王國」夢享城與理享城<br />
@@ -54,7 +54,7 @@
 .s3 {
 	width: 100%;
 	height: size(1553);
-	background-image: url(@/section/s3/bg.jpg);
+	background-image: url(@/section/s3/bg.webp);
 	background-size: cover;
 
 	.per {
@@ -163,7 +163,7 @@
   .s3 {
 	width: 100%;
 	height: sizem(932);
-	background-image: url(@/section/s3/bg_m.jpg);
+	background-image: url(@/section/s3/bg_m.webp);
 	background-size: cover;
 	padding: 0 sizem(30);
 

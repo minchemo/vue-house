@@ -1,12 +1,12 @@
 <template>
 	<article class="s6 relative">
 		<div class="map">
-			<img    class="train" src="@/section/s6/mrt.png" alt="" srcset="">
-			<img    class="rings" src="@/section/s6/ring.png" alt="" srcset="">
-			<img    class="spotA" src="@/section/s6/1.png" alt="" srcset="">
-			<img    class="spotB" src="@/section/s6/logo.png" alt="" srcset="">
-			<img    class="spotC" src="@/section/s6/2.png" alt="" srcset="">
-			<img    class="spotD" src="@/section/s6/3.png" alt="" srcset="">
+			<img    class="train" src="@/section/s6/mrt/mrt.webp" alt="" srcset="">
+			<img    class="rings" src="@/section/s6/mrt/ring.webp" alt="" srcset="">
+			<img    class="spotA" src="@/section/s6/mrt/1.webp" alt="" srcset="">
+			<img    class="spotB" src="@/section/s6/mrt/logo.webp" alt="" srcset="">
+			<img    class="spotC" src="@/section/s6/mrt/2.webp" alt="" srcset="">
+			<img    class="spotD" src="@/section/s6/mrt/3.webp" alt="" srcset="">
 		</div>
 		<div class="intro">
 			<div class="sep-text" data-aos="flip-left" data-aos-delay="100">
@@ -496,15 +496,15 @@ const move = (newIdx, prevIdx, destIdx) => {
 const items = [
 	{
 		caption: '捷運站實景',
-		img: isMobile.value ? new URL("../section/s6/1m.jpg", import.meta.url).href : new URL("../section/s6/1.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s6/1m.webp", import.meta.url).href : new URL("../section/s6/1.webp", import.meta.url).href
 	},
 	{
 		caption: '五泰輕軌',
-		img: isMobile.value ? new URL("../section/s6/2m.jpg", import.meta.url).href : new URL("../section/s6/2.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s6/2m.webp", import.meta.url).href : new URL("../section/s6/2.webp", import.meta.url).href
 	},
 	{
 		caption: '國道一號',
-		img: isMobile.value ? new URL("../section/s6/3m.jpg", import.meta.url).href : new URL("../section/s6/3.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s6/3m.webp", import.meta.url).href : new URL("../section/s6/3.webp", import.meta.url).href
 	},
 ]
 

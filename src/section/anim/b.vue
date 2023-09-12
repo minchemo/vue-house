@@ -1,9 +1,9 @@
 <template>
     <div class="img imgb">
-        <img class="box" src="@/section/anim/box.png">
-        <img class="img1" src="@/section/anim/02/02.png">
-        <img class="img2" src="@/section/anim/02/02.png">
-        <img class="img3" src="@/section/anim/02/01.png">
+        <img class="box" src="@/section/anim/box.webp">
+        <img class="img1" src="@/section/anim/02/02.webp">
+        <img class="img2" src="@/section/anim/02/02.webp">
+        <img class="img3" src="@/section/anim/02/01.webp">
     </div>
 </template>
 

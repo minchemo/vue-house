@@ -86,7 +86,7 @@
 .s4 {
 	width: 100%;
 	height: size(1884);
-	background-image: url(@/section/s4/bg.jpg);
+	background-image: url(@/section/s4/bg.webp);
 	background-size: cover;
 	padding-top: size(162);
 
@@ -245,7 +245,7 @@
  
 .s4 {
 	height: sizem(1254);
-	background-image: url(@/section/s4/bg_m.jpg);
+	background-image: url(@/section/s4/bg_m.webp);
 	padding-top: sizem(48) !important;
 	padding: 0 sizem(30);
 
@@ -415,29 +415,29 @@ const items = [
 	[
 		{
 			caption: '水岸公園實景',
-			img: new URL("../section/s4/a1.jpg", import.meta.url).href
+			img: new URL("../section/s4/a1.webp", import.meta.url).href
 		},
 	],
 	[
 		{
 			caption: '成洲國小實景',
-			img: new URL("../section/s4/b1.jpg", import.meta.url).href
+			img: new URL("../section/s4/b1.webp", import.meta.url).href
 		},
 		{
 			caption: '宏匯廣場實景',
-			img: new URL("../section/s4/b2.jpg", import.meta.url).href
+			img: new URL("../section/s4/b2.webp", import.meta.url).href
 		},
 		{
 			caption: '家樂福實景',
-			img: new URL("../section/s4/b3.jpg", import.meta.url).href
+			img: new URL("../section/s4/b3.webp", import.meta.url).href
 		},
 		{
 			caption: '徐匯廣場實景',
-			img: new URL("../section/s4/b4.jpg", import.meta.url).href
+			img: new URL("../section/s4/b4.webp", import.meta.url).href
 		},
 		{
 			caption: '全聯福利中心實景',
-			img: new URL("../section/s4/b5.jpg", import.meta.url).href
+			img: new URL("../section/s4/b5.webp", import.meta.url).href
 		},]
 ]
 

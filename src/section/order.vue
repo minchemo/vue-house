@@ -78,7 +78,7 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  background-image: url('@/section/form/bg.png');
+  background-image: url('@/section/form/bg.webp');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -225,7 +225,7 @@
 }
 @media screen and (max-width:768px) {
   .order-section {
-    background-image: url('@/section/form/bg_m.png');
+    background-image: url('@/section/form/bg_m.webp');
     height: auto;
     padding-bottom: sizem(0);
     padding-top: sizem(120);

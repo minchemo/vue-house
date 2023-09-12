@@ -18,7 +18,7 @@
             <div class="close" @click="menuOpen = !menuOpen">
                 <img src="@/section/close.svg" alt="" srcset="">
             </div>
-            <img class="navlogo" src="@/section/navlogo.png" alt="" srcset="">
+            <img class="navlogo" src="@/section/navlogo.webp" alt="" srcset="">
         </div>
     </div>
     <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
@@ -40,7 +40,7 @@
     .logo {
         width: size(190);
         height: size(30);
-        background-image: url('@/assets/navlogo.png');
+        background-image: url('@/assets/navlogo.webp');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;

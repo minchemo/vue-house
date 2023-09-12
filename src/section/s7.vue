@@ -292,16 +292,16 @@ const setPreviewImageSrc = (idx) => {
 const items = [
 	{
 		caption: '大廳3D示意圖',
-		img: isMobile.value ? new URL("../section/s7/1m.jpg", import.meta.url).href : new URL("../section/s7/1.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s7/1m.webp", import.meta.url).href : new URL("../section/s7/1.webp", import.meta.url).href
 	},
 	{
 		caption: '大廳3D示意圖',
-		img: isMobile.value ? new URL("../section/s7/2m.jpg", import.meta.url).href : new URL("../section/s7/2.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s7/2m.webp", import.meta.url).href : new URL("../section/s7/2.webp", import.meta.url).href
 	},
 ]
 
 const prevs = [
-	new URL("../section/s7/1.jpg", import.meta.url).href, new URL("../section/s7/2.jpg", import.meta.url).href
+	new URL("../section/s7/1.webp", import.meta.url).href, new URL("../section/s7/2.webp", import.meta.url).href
 ]
 
 onMounted(() => {
