@@ -17,7 +17,7 @@
 			</div>
 
 			 <!--img class="train absolute" src="@/section/s1/train.png" alt="" srcset="" data-aos="fade-left" data-aos-delay="200"-->
-			<A class="train" />
+			<A class="train" data-aos="fade-left" data-aos-delay="300" />
 
 			<img class="leaf absolute"  src="@/section/s1/leaf.webp" alt="" srcset="" v-if="!$isMobile()">
 			<img class="leaf absolute"  src="@/section/s1/leaf_m.webp" alt="" srcset="" v-else>
