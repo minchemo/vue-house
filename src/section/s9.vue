@@ -10,10 +10,10 @@
 		<div class="content">
 			<div class="intro">
 				<S9mix class="s9mix" />
-				<img  loading="lazy" class="t1" src="@/section/s9/t1.svg" data-aos="fade-up" data-aos-delay="0" alt="" />
-				<img  loading="lazy" class="t2" src="@/section/s9/t2.svg" data-aos="fade-up" data-aos-delay="200" alt="" />
+				<img    class="t1" src="@/section/s9/t1.svg" data-aos="fade-up" data-aos-delay="0" alt="" />
+				<img    class="t2" src="@/section/s9/t2.svg" data-aos="fade-up" data-aos-delay="200" alt="" />
 				<div class="line"></div>
-				<img  loading="lazy" class="logo" data-aos="fade-in" data-aos-delay="200" src="@/section/s9/logo.svg" alt="" />
+				<img    class="logo" data-aos="fade-in" data-aos-delay="200" src="@/section/s9/logo.svg" alt="" />
 			</div>
 		</div>
 	</article>

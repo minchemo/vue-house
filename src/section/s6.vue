@@ -1,12 +1,12 @@
 <template>
 	<article class="s6 relative">
 		<div class="map">
-			<img  loading="lazy" class="train" src="@/section/s6/mrt.png" alt="" srcset="">
-			<img  loading="lazy" class="rings" src="@/section/s6/ring.png" alt="" srcset="">
-			<img  loading="lazy" class="spotA" src="@/section/s6/1.png" alt="" srcset="">
-			<img  loading="lazy" class="spotB" src="@/section/s6/logo.png" alt="" srcset="">
-			<img  loading="lazy" class="spotC" src="@/section/s6/2.png" alt="" srcset="">
-			<img  loading="lazy" class="spotD" src="@/section/s6/3.png" alt="" srcset="">
+			<img    class="train" src="@/section/s6/mrt.png" alt="" srcset="">
+			<img    class="rings" src="@/section/s6/ring.png" alt="" srcset="">
+			<img    class="spotA" src="@/section/s6/1.png" alt="" srcset="">
+			<img    class="spotB" src="@/section/s6/logo.png" alt="" srcset="">
+			<img    class="spotC" src="@/section/s6/2.png" alt="" srcset="">
+			<img    class="spotD" src="@/section/s6/3.png" alt="" srcset="">
 		</div>
 		<div class="intro">
 			<div class="sep-text" data-aos="flip-left" data-aos-delay="100">
@@ -26,8 +26,8 @@
 		</div>
 		<div class="slider-box">
 			<div class="arrows" v-if="$isMobile()">
-				<img  loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
-				<img  loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
+				<img    class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
+				<img    class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
 			</div>
 			<Splide ref="splide" :options="{
 				arrows: false,
@@ -40,7 +40,7 @@
 				gap: 0
 			}" @splide:move="move">
 				<SplideSlide class="slide" v-for="img, i in items" data-aos="fade" :data-aos-delay="(i * 100) + 200">
-					<img  loading="lazy" :src="img.img" alt="" srcset="">
+					<img    :src="img.img" alt="" srcset="">
 					<p class="right">{{ img.caption }}</p>
 					<div class="des">{{ img.img_des }}</div>
 				</SplideSlide>
