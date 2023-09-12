@@ -352,7 +352,7 @@
 					bottom: 300%;
 					.b {
 						@apply absolute inset-0;
-						width: sizem(292);
+						width: sizem(262);
 					}
 				}
 				.t2 {
