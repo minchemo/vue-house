@@ -499,7 +499,7 @@ const items = [
 		b1_unit: '坪',
 		b2: '體健公園',
 		img_des: '7600坪大綠覆場域，是全五股最大最豐富共融主題公園，彩虹澑滑梯、花海、籃球場等設施打造自在舒適的全齡化休閒環境',
-		caption: '情境示意圖',
+		caption: '體健公園',
 		img: isMobile.value ? new URL("../section/s5/1m.jpg", import.meta.url).href : new URL("../section/s5/1.jpg", import.meta.url).href
 	},
 	{
@@ -507,7 +507,7 @@ const items = [
 		b1_unit: '坪',
 		b2: '成德公園',
 		img_des: '佔地1200坪，具溜滑梯、蹺蹺板等多項兒童遊戲設施，是大人小孩一齊同樂的最佳所在',
-		caption: '情境示意圖',
+		caption: '成德公園',
 		img: isMobile.value ? new URL("../section/s5/2m.jpg", import.meta.url).href : new URL("../section/s5/2.jpg", import.meta.url).href
 	},
 	{
@@ -515,7 +515,7 @@ const items = [
 		b1_unit: '公頃',
 		b2: '新北大都會公園',
 		img_des: '424公頃水岸綠帶，是全台最大的河濱公園，7公里長的濱水自行車道，相當於16座大安森林公園的豪闊綠海，是大台北最珍貴的都會綠洲',
-		caption: '情境示意圖',
+		caption: '新北大都會公園',
 		img: isMobile.value ? new URL("../section/s5/3m.jpg", import.meta.url).href : new URL("../section/s5/3.jpg", import.meta.url).href
 	},
 ]
