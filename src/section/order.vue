@@ -22,13 +22,6 @@
           <input type="text" placeholder="手機" class="input w-full input-style" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
-          <select class="select w-full input-style select-style" v-model="formData.room_type">
-            <option value="" selected disabled>需求房型</option>
-            <option value="2房">2房</option>
-            <option value="3房">3房</option>
-            <option value="店面">店面</option>
-          </select>
-
           <select class="select w-full input-style select-style" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
