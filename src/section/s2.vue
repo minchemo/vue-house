@@ -54,10 +54,10 @@
   }
   }
   .st{position: absolute;
-    width: size(60);bottom:3em;right: 0;
+    display: flex;align-items: center;justify-content: center;
+    width: size(60);height:size(740);bottom:calc(50% - 16vw);right:size(120);
     background-image: linear-gradient(180deg, #fff0 0%, #FFF 50%, #fff0 100%);
-;
-  img{ width: size(30);}
+  img{ width: 50%;margin: 0 0 2vw;}
 }
 }
 /* 螢幕尺寸標準 */
@@ -70,22 +70,17 @@
   @apply flex-col;
   min-height: sizem(0);
   max-height: sizem(1080);
-  height: sizem(500);
+  height: sizem(667);
   font-size:sizem(13);
+  background:#1691CF url("./s2/bgm.jpg") 50% 100% no-repeat;
+  background-size: 100% auto;
   .txt {
-    top: 4em;
+    margin:4em auto auto auto;
   .title{
     font-size: 1.9em;
   }
-  .en{
-    height: 2.4em;
   }
-  .subtitle{
-    font-size: 1.3em;
-  }
-  }
-  .bottom{
-    width: sizem(160);}
+  .st{width: sizem(20);height:sizem(220);bottom:sizem(50);right:sizem(30);}
 
   }
 }
