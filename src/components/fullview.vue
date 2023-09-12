@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s2/view.jpg" alt="" srcset="">
+        <img class="view1" ref="viewImg" src="@/section/s2/view1.png" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -15,6 +15,15 @@
     width: 100%;
     height: 100%;
 	// background-color: #0F2F58;
+
+    
+        .view1{
+        position: absolute; 
+        left: 0;
+        top: 0;   
+        background-image: url(@/section/s2/view.jpg);
+	    background-size: cover;
+        }
 
     img {
         height: 100%;
@@ -32,6 +41,7 @@
         img {
             height: 100%;
         }
+        
 
         .mask {
             position: absolute;

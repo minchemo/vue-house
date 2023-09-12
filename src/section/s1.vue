@@ -9,11 +9,11 @@
 		</div>
 		<div class="content">
 			<div class="intro">
-				<img class="logo" src="@/section/s1/logo.png" alt="" srcset="" v-if="!$isMobile()" data-aos="fade-up">
-				<img class="logo" src="@/section/s1/logo_m.png" alt="" srcset="" v-else data-aos="fade-up">
-				<img class="t1" src="@/section/s1/t1.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="200">
-				<img class="t2" src="@/section/s1/t2.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="300">
-				<img class="arrow" src="@/section/s1/arrow.png" alt="" srcset="">
+				<img class="logo" src="@/section/s1/logo.svg" alt="" srcset="" v-if="!$isMobile()" data-aos="fade-up">
+				<img class="logo" src="@/section/s1/logo_m.svg" alt="" srcset="" v-else data-aos="fade-up">
+				<img class="t1" src="@/section/s1/t1.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="200">
+				<img class="t2" src="@/section/s1/t2.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="300">
+				<img class="arrow" src="@/section/s1/arrow.svg" alt="" srcset="">
 			</div>
 
 			<!-- <img class="train absolute" src="@/section/s1/train.png" alt="" srcset=""> -->

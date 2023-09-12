@@ -26,8 +26,8 @@
 		</div>
 		<div class="slider-box">
 			<div class="arrows" v-if="$isMobile()">
-				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-				<img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
+				<img class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
 			</div>
 			<Splide ref="splide" :options="{
 				arrows: false,
@@ -214,6 +214,7 @@
 	img {
 		@apply cursor-pointer;
 		margin: unset;
+		width: size(21);
 	}
 }
 

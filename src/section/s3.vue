@@ -43,7 +43,7 @@
 				實現與自然萬物共處的建築理想
 			</div>
 		</div>
-		<C class="per" />
+		<C class="per" v-if="!$isMobile()" />
 		<!-- <img class="per" src="@/section/s3/p.png" alt="" srcset=""> -->
 	</article>
 </template>
@@ -61,8 +61,8 @@
 	.per {
 		@apply absolute;
 		width: size(626);
-		right: size(163);
-		bottom: -#{size(210)};
+		right: size(93);
+		bottom: -#{size(250)};
 	}
 
 	.cloud {

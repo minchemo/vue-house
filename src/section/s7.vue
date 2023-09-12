@@ -15,8 +15,8 @@
 		</div>
 		<div class="slider-box">
 			<div class="arrows">
-				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-				<img class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
+				<img class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
 			</div>
 			<Splide ref="splide" :options="{
 				arrows: false,
@@ -31,7 +31,7 @@
 					<img :src="img.img" alt="" srcset="">
 					<p class="right">{{ img.caption }}</p>
 					<div class="des">{{ img.img_des }}</div>
-					<img src="@/section/s7/tip.png" class="tip" alt="" srcset="" v-if="$isMobile()">
+					<img src="@/section/s7/tip.svg" class="tip" alt="" srcset="" v-if="$isMobile()">
 				</SplideSlide>
 			</Splide>
 		</div>
@@ -40,7 +40,7 @@
 	<div class="preview" v-if="previewImageSrc && $isMobile()">
 		<img class="p" :src="previewImageSrc" alt="" srcset="">
 	</div>
-	<img class="preview-c" v-if="previewImageSrc && $isMobile()" src="@/section/close.png" @click="previewImageSrc = null" alt=""
+	<img class="preview-c" v-if="previewImageSrc && $isMobile()" src="@/section/close.svg" @click="previewImageSrc = null" alt=""
 		srcset="">
 </template>
 

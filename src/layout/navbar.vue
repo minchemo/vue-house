@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="close" @click="menuOpen = !menuOpen">
-                <img src="@/section/close.png" alt="" srcset="">
+                <img src="@/section/close.svg" alt="" srcset="">
             </div>
             <img class="navlogo" src="@/section/navlogo.png" alt="" srcset="">
         </div>
