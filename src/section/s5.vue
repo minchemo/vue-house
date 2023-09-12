@@ -52,7 +52,8 @@
 				</div>
 			</div>
 		</div>
-		<img class="bike" src="@/section/s5/bike.png" alt="" srcset="">
+		<Anim class="bike" />
+		<!-- <img class="bike" src="@/section/s5/bike.png" alt="" srcset=""> -->
 	</article>
 </template>
 
@@ -79,8 +80,8 @@
 
 	.bike {
 		@apply absolute;
-		width: size(690);
-		right: size(155);
+		width: size(550);
+		right: size(175);
 		top: -#{size(180)};
 	}
 
@@ -169,6 +170,7 @@
 				&.active {
 					background-color: #FF3EA1;
 					color: #fff;
+
 					.t1 {
 						border-color: #fff;
 					}
@@ -178,6 +180,7 @@
 					background-color: #FF3EA1;
 					color: #fff;
 					cursor: pointer;
+
 					.t1 {
 						border-color: #fff;
 					}
@@ -273,139 +276,142 @@
 @media screen and (max-width: 767px) {
 
 	.s5 {
-	width: 100%;
-	height: sizem(1076);
-	padding: 0;
-	z-index: 10;
-
-	.sep-text {
-		@apply relative;
-		font-size: sizem(13);
-		font-family: 'Noto Serif TC';
-		letter-spacing: sizem(9.16);
-		margin: sizem(30) 0;
-		margin-bottom: sizem(30);
-		text-align: center
-	}
-
-	.bike {
-		@apply hidden;
-	}
-
-	.intro {
-		@apply flex flex-col items-start;
-		gap: sizem(33.59);
-		margin-bottom: size(50);
 		width: 100%;
-		padding: 0 sizem(30);
+		height: sizem(1076);
+		padding: 0;
+		z-index: 10;
 
-		.l {
-			.t1 {
-				@apply relative;
-				color: #C3398D;
-				font-size: sizem(25);
-				line-height: sizem(31);
-
-				svg {
-					@apply absolute left-auto right-0;
-					width: sizem(50.2);
-					bottom:0;
-				}
-			}
-
-			.t2 {
-				margin-top: sizem(33);
-				font-size: sizem(15);
-				letter-spacing: sizem(0.38);
-			}
-
-			.t3 {
-				margin-top: sizem(11);
-				width: 100%;
-				color: black;
-				font-size: sizem(13);
-				font-weight: 400;
-				line-height: sizem(24.7);
-				text-align: justify;
-			}
+		.sep-text {
+			@apply relative;
+			font-size: sizem(13);
+			font-family: 'Noto Serif TC';
+			letter-spacing: sizem(9.16);
+			margin: sizem(30) 0;
+			margin-bottom: sizem(30);
+			text-align: center
 		}
 
-		.r {
-			@apply flex items-center;
-			gap: sizem(9.74);
-			padding-bottom: sizem(30);
+		.bike {
+			@apply hidden;
+		}
 
-			.b {
-				width: sizem(98.2);
-				height: sizem(98.2);
+		.intro {
+			@apply flex flex-col items-start;
+			gap: sizem(33.59);
+			margin-bottom: size(50);
+			width: 100%;
+			padding: 0 sizem(30);
 
+			.l {
 				.t1 {
-					font-size: sizem(22.53);
+					@apply relative;
+					color: #C3398D;
+					font-size: sizem(25);
+					line-height: sizem(31);
 
-					span {
-						font-size: sizem(15.83);
+					svg {
+						@apply absolute left-auto right-0;
+						width: sizem(50.2);
+						bottom: 0;
 					}
 				}
 
 				.t2 {
+					margin-top: sizem(33);
+					font-size: sizem(15);
+					letter-spacing: sizem(0.38);
+				}
+
+				.t3 {
+					margin-top: sizem(11);
+					width: 100%;
+					color: black;
 					font-size: sizem(13);
-					letter-spacing: 0.13px;
-					margin-top: sizem(2);
-					max-width: 80%;
-					text-align: center;
+					font-weight: 400;
+					line-height: sizem(24.7);
+					text-align: justify;
 				}
+			}
 
-				.arrow {
-					@apply absolute;
-					width: sizem(30);
-					bottom: -#{sizem(25)};
-					left: 50%;
-					transform: translateX(-50%);
+			.r {
+				@apply flex items-center;
+				gap: sizem(9.74);
+				padding-bottom: sizem(30);
 
-					img {
-						width: 100%;
-					}
-				}
+				.b {
+					width: sizem(98.2);
+					height: sizem(98.2);
 
-				&.active {
-					background-color: #FF3EA1;
-					color: #fff;
 					.t1 {
-						border-color: #fff;
-					}
-				}
+						font-size: sizem(22.53);
 
-				&:hover {
-					background-color: #FF3EA1;
-					color: #fff;
-					cursor: pointer;
-					.t1 {
-						border-color: #fff;
+						span {
+							font-size: sizem(15.83);
+						}
+					}
+
+					.t2 {
+						font-size: sizem(13);
+						letter-spacing: 0.13px;
+						margin-top: sizem(2);
+						max-width: 80%;
+						text-align: center;
+					}
+
+					.arrow {
+						@apply absolute;
+						width: sizem(30);
+						bottom: -#{sizem(25)};
+						left: 50%;
+						transform: translateX(-50%);
+
+						img {
+							width: 100%;
+						}
+					}
+
+					&.active {
+						background-color: #FF3EA1;
+						color: #fff;
+
+						.t1 {
+							border-color: #fff;
+						}
+					}
+
+					&:hover {
+						background-color: #FF3EA1;
+						color: #fff;
+						cursor: pointer;
+
+						.t1 {
+							border-color: #fff;
+						}
 					}
 				}
 			}
 		}
-	}
 
-	.splide__track{
-		overflow: visible;
-	}
-	.slider-box {
-		@apply relative;
-		width: 100%;
-		height: sizem(378);
+		.splide__track {
+			overflow: visible;
+		}
 
-		.slide {
-			@apply relative overflow-visible;
-			
-			img {
-				width: 100%;
-				height: sizem(378);
-				object-fit: cover;
-				object-position: center
-			}
+		.slider-box {
+			@apply relative;
+			width: 100%;
+			height: sizem(378);
 
-			p {
+			.slide {
+				@apply relative overflow-visible;
+
+				img {
+					width: 100%;
+					height: sizem(378);
+					object-fit: cover;
+					object-position: center
+				}
+
+				p {
 					@apply absolute;
 					bottom: sizem(5);
 					font-weight: 400;
@@ -416,30 +422,32 @@
 					&.left {
 						left: sizem(10);
 					}
+
 					&.right {
 						right: sizem(10);
 					}
 				}
 
-			.des {
-				@apply absolute;
-				right: 0;
-				top: 110%;
-				color: #000;
-				font-size: sizem(12);
-				font-weight: 400;
-				line-height: 190%;
-				width: 100%;
-				padding: 0 sizem(30);
+				.des {
+					@apply absolute;
+					right: 0;
+					top: 110%;
+					color: #000;
+					font-size: sizem(12);
+					font-weight: 400;
+					line-height: 190%;
+					width: 100%;
+					padding: 0 sizem(30);
+				}
 			}
-		}
 
-		.arrows {
+			.arrows {
 				@apply absolute z-20 flex items-center justify-between;
 				width: 100%;
 				padding: 0 sizem(10);
 				bottom: 50%;
 				transform: translateY(50%);
+
 				img {
 					@apply cursor-pointer;
 					margin: unset;
@@ -451,7 +459,8 @@
 				@apply absolute flex w-full justify-center;
 				gap: sizem(6);
 				bottom: -#{sizem(20)};
-				left:0;
+				left: 0;
+
 				.item {
 					@apply cursor-pointer hover:opacity-100;
 					border-radius: 100%;
@@ -459,19 +468,20 @@
 					height: sizem(6.67);
 					background-color: #B81B70;
 					opacity: 0.5;
-					
+
 					&.active {
 						opacity: 1;
 					}
 				}
 			}
+		}
 	}
-}
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, onMounted, ref, } from 'vue';
 import inView from 'in-view';
+import Anim from '@/section/anim/b.vue';
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
@@ -489,7 +499,7 @@ const items = [
 		b2: '體健公園',
 		img_des: '7600坪大綠覆場域，是全五股最大最豐富共融主題公園，彩虹澑滑梯、花海、籃球場等設施打造自在舒適的全齡化休閒環境',
 		caption: '情境示意圖',
-		img: isMobile.value ?  new URL("../section/s5/1m.jpg", import.meta.url).href : new URL("../section/s5/1.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s5/1m.jpg", import.meta.url).href : new URL("../section/s5/1.jpg", import.meta.url).href
 	},
 	{
 		b1: '1200',
@@ -497,7 +507,7 @@ const items = [
 		b2: '成德公園',
 		img_des: '佔地1200坪，具溜滑梯、蹺蹺板等多項兒童遊戲設施，是大人小孩一齊同樂的最佳所在',
 		caption: '情境示意圖',
-		img: isMobile.value ?  new URL("../section/s5/2m.jpg", import.meta.url).href :  new URL("../section/s5/2.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s5/2m.jpg", import.meta.url).href : new URL("../section/s5/2.jpg", import.meta.url).href
 	},
 	{
 		b1: '424',
@@ -505,7 +515,7 @@ const items = [
 		b2: '新北大都會公園',
 		img_des: '424公頃水岸綠帶，是全台最大的河濱公園，7公里長的濱水自行車道，相當於16座大安森林公園的豪闊綠海，是大台北最珍貴的都會綠洲',
 		caption: '情境示意圖',
-		img: isMobile.value ?  new URL("../section/s5/3m.jpg", import.meta.url).href :  new URL("../section/s5/3.jpg", import.meta.url).href
+		img: isMobile.value ? new URL("../section/s5/3m.jpg", import.meta.url).href : new URL("../section/s5/3.jpg", import.meta.url).href
 	},
 ]
 

@@ -44,7 +44,8 @@
 		<div class="section">
 			<div class="title">
 				<div class="t1" data-aos="fade-up" data-aos-delay="0">
-					<img class="b" src="@/section/s4/b.png" alt="" srcset="">
+					<B class="b" />
+					<!-- <img class="b" src="@/section/s4/b.png" alt="" srcset=""> -->
 				</div>
 				<div class="t2" data-aos="fade-up" data-aos-delay="100">新蘆特區黃金半徑<br />
 					雙學區╳3商圈</div>
@@ -396,6 +397,7 @@
 <script setup>
 import { computed, getCurrentInstance, onMounted, ref, } from 'vue';
 import inView from 'in-view';
+import B from '@/section/anim/d.vue';
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());

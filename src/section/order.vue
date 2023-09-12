@@ -218,6 +218,11 @@
   }
 }
 
+@media screen and (max-width:1300px) {
+  .order-section {
+    padding-top: size(200)
+  }
+}
 @media screen and (max-width:768px) {
   .order-section {
     background-image: url('@/section/form/bg_m.png');

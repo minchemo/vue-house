@@ -10,13 +10,15 @@
 		<div class="content">
 			<div class="intro">
 				<img class="logo" src="@/section/s1/logo.png" alt="" srcset="" v-if="!$isMobile()" data-aos="fade-up">
-				<img class="logo" src="@/section/s1/logo_m.png" alt="" srcset="" v-else  data-aos="fade-up">
-				<img class="t1" src="@/section/s1/t1.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="200">
+				<img class="logo" src="@/section/s1/logo_m.png" alt="" srcset="" v-else data-aos="fade-up">
+				<img class="t1" src="@/section/s1/t1.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="200">
 				<img class="t2" src="@/section/s1/t2.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="300">
 				<img class="arrow" src="@/section/s1/arrow.png" alt="" srcset="">
 			</div>
 
-			<img class="train absolute" src="@/section/s1/train.png" alt="" srcset="">
+			<!-- <img class="train absolute" src="@/section/s1/train.png" alt="" srcset=""> -->
+			<A class="train" />
+
 			<img class="leaf absolute" src="@/section/s1/leaf.png" alt="" srcset="" v-if="!$isMobile()">
 			<img class="leaf absolute" src="@/section/s1/leaf_m.png" alt="" srcset="" v-else>
 			<img class="leaf2 absolute" src="@/section/s1/leaf2.png" alt="" srcset="" v-if="!$isMobile()">
@@ -81,7 +83,8 @@
 				left: size(824);
 				top: size(868);
 				box-shadow: -9px 0px 6px 0px rgba(0, 0, 0, 0.25);
-				background: linear-gradient(180deg, #FF3EA1 0%, rgba(255, 62, 161, 0) 100%); box-shadow: -9px 0px 6px rgba(0, 0, 0, 0.25) !important; 
+				background: linear-gradient(180deg, #FF3EA1 0%, rgba(255, 62, 161, 0) 100%);
+				box-shadow: -9px 0px 6px rgba(0, 0, 0, 0.25) !important;
 			}
 		}
 	}
@@ -183,7 +186,7 @@
 					left: sizem(299);
 					top: sizem(46);
 					box-shadow: -#{sizem(9)} -#{sizem(8)} sizem(9) rgba(113.69, 17.53, 75.22, 0.25);
-								}
+				}
 
 				&.bubble-2 {
 					width: sizem(319);
@@ -211,6 +214,7 @@
 				.logo {
 					width: sizem(247);
 				}
+
 				.t1 {
 					width: sizem(281);
 					margin-top: sizem(26.66);
@@ -223,7 +227,7 @@
 
 				.arrow {
 					width: sizem(39);
-					margin-right:0;
+					margin-right: 0;
 					margin-top: sizem(21.99);
 				}
 			}
@@ -266,6 +270,7 @@
 
 <script setup>
 import anime from 'animejs/lib/anime.es.js';
+import A from '@/section/anim/a.vue';
 
 import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;

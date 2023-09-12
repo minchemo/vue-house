@@ -459,7 +459,7 @@
 			padding: sizem(8) 0;
 			font-size: sizem(15);
 			font-weight: 700;
-			letter-spacing: size(0.75);
+			letter-spacing: sizem(0.75);
 			flex-basis: auto;
 			white-space: nowrap;
 			text-align: center;
@@ -468,7 +468,7 @@
 		.t2 {
 			flex: 1;
 			color: #000;
-			font-size: size(13);
+			font-size: sizem(13);
 			font-weight: 400;
 			line-height: sizem(24.7);
 			border: 1px solid #B81B70;

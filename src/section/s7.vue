@@ -37,10 +37,10 @@
 		</div>
 	</article>
 
-	<div class="preview" v-if="previewImageSrc">
+	<div class="preview" v-if="previewImageSrc && $isMobile()">
 		<img class="p" :src="previewImageSrc" alt="" srcset="">
 	</div>
-	<img class="preview-c" v-if="previewImageSrc" src="@/section/close.png" @click="previewImageSrc = null" alt=""
+	<img class="preview-c" v-if="previewImageSrc && $isMobile()" src="@/section/close.png" @click="previewImageSrc = null" alt=""
 		srcset="">
 </template>
 
@@ -250,18 +250,18 @@
 
 			p {
 				@apply absolute;
-				bottom: size(22);
+				bottom: sizem(18);
 				font-weight: 400;
-				font-size: size(14);
+				font-size: sizem(14);
 				color: #FFFFFF;
-				text-shadow: 0px size(2) size(4) rgba(0, 0, 0, 0.8);
+				text-shadow: 0px sizem(2) sizem(4) rgba(0, 0, 0, 0.8);
 
 				&.left {
-					left: size(38);
+					left: sizem(20);
 				}
 
 				&.right {
-					right: size(38);
+					right: sizem(20);
 
 				}
 			}

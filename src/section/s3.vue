@@ -19,7 +19,6 @@
 				，共譜蘆洲下一站世紀建築傳奇。
 			</div>
 		</div>
-
 		<div class="content">
 			<div class="l">
 				<div class="t1"> 洲子洋最大萬坪公園造鎮計畫</div>
@@ -42,9 +41,10 @@
 				澳洲雪梨設計獎、美國MUSE設計獎四大殊榮肯定<br />
 				不凡品味並肩國際視野與創新設計<br />
 				實現與自然萬物共處的建築理想
-
 			</div>
 		</div>
+		<C class="per" />
+		<!-- <img class="per" src="@/section/s3/p.png" alt="" srcset=""> -->
 	</article>
 </template>
 
@@ -58,6 +58,12 @@
 	background-image: url(@/section/s3/bg.jpg);
 	background-size: cover;
 
+	.per {
+		@apply absolute;
+		width: size(626);
+		right: size(163);
+		bottom: -#{size(210)};
+	}
 
 	.cloud {
 		@apply absolute;
@@ -251,6 +257,7 @@
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref, } from 'vue';
+import C from '@/section/anim/c.vue';
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
