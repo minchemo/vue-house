@@ -1,11 +1,11 @@
 <template>
     <div class="img imga">
-        <img class="box" src="@/section/anim/box.png">
-        <img class="img1" src="@/section/anim/01/05.png">
-        <img class="img2" src="@/section/anim/01/02.png">
-        <img class="img3" src="@/section/anim/01/03.png">
-        <img class="img4" src="@/section/anim/01/04.png">
-        <img class="img5" src="@/section/anim/01/06.png">
+        <img class="box" src="@/section/anim/box.webp">
+        <img class="img1" src="@/section/anim/01/05.webp">
+        <img class="img2" src="@/section/anim/01/02.webp">
+        <img class="img3" src="@/section/anim/01/03.webp">
+        <img class="img4" src="@/section/anim/01/04.webp">
+        <img class="img5" src="@/section/anim/01/06.webp">
     </div>
 </template>
 
@@ -39,7 +39,7 @@
         left: 0%;
         transform: rotate(-5deg);
         transform-origin: 80% 5%;
-     //   animation: an 2s ease-in-out infinite alternate;
+        animation: an 2s ease-in-out infinite alternate;
     }
 
     .img2 {
@@ -54,7 +54,7 @@
         left: 8.5%;
         transform: rotate(5deg);
         transform-origin: 80% 95%;
-     //   animation: an 2s ease-in-out infinite alternate;
+        animation: an 2s ease-in-out infinite alternate;
     }
 
     .img4 {
@@ -63,7 +63,7 @@
         left: 40.8%;
         transform: rotate(4deg);
         transform-origin: 20% 5%;
-       // animation: an 2s ease-in-out infinite alternate;
+        animation: an 2s ease-in-out infinite alternate;
     }
 
     .img5 {
@@ -72,7 +72,7 @@
         left: 42.3%;
         transform: rotate(-5deg);
         transform-origin: 8% 97%;
-        //animation: an 2s ease-in-out infinite alternate;
+        animation: an 2s ease-in-out infinite alternate;
     }
 }
 </style>
