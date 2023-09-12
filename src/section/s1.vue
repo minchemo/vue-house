@@ -130,7 +130,7 @@
 			width: size(739.22);
 			left: size(29);
 			top: size(191);
-			animation: an_s 1.5s linear infinite;
+			//animation: an_s 1.5s linear infinite;
 
 			@keyframes an_s {
 				0% {
