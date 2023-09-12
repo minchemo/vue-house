@@ -1,23 +1,23 @@
 <template>
   <article class="s2">
-    <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
       <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in">SMILE EUROPE</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in" data-aos-delay="200" v-html="img.title"></h3>
-        <p data-aos="zoom-in" data-aos-delay="400" v-html="img.desc"></p>
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >一座為愛而生的建築</h2>
+        <p data-aos="zoom-in" data-aos-delay="400">萬企有愛，成家無礙<br>
+與家人<br>
+散步到河邊賞河景觀夕照<br>
+給孩子<br>
+多睡5分鐘的雙優質學區<br>
+和朋友<br>
+相約逛老街吃阿給探人文<br>
+陪媽媽<br>
+迺菜市逛超市<br>
+豐饒的商業機能，人文豐厚的街廓<br>
+濃厚雋雅的書香，蒼翠樹幔的公園<br>
+萬企懂您深心所愛<br>
+萃釀豐情<br>
+轉角遇見愛，全都是天菜</p>
       </div>
-      <span class="caption" v-html="img.caption"></span>
-        </SplideSlide>
-      </Splide>
-    </div>
-    <img class="bg2" src="./s2/bg2.png" alt="" srcset="">
-
+      <div class="st"><img src="./s2/t.svg" alt=""></div>
   </article>
 </template>
 
@@ -25,61 +25,40 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden flex items-center justify-center text-white bg-[#F27200];
+  @apply relative overflow-hidden flex items-center justify-center text-white;
   width: 100%;
-  height: auto;
+  min-height: size(800);
+  max-height: size(1020);
+  height: calc(100vh - 3.125vw);
   padding:0;
   font-size:size(18);
   gap:3em;
   flex-direction: column;
-   .bg2{position: absolute;bottom:0;left: 0;width: 100%;pointer-events: none;}
-  .slider {
-    margin: 0 0 size(150);
-    width: 100%;
-    flex-basis: 100%;
-    //  height: size(00);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: 100%;
-      height: size(1180);
-      background-position: 50% 100%;
-  &::before,
-  &::after{
-    content: "";
-    background: linear-gradient(to top, #F27200 0%,#F2720000 100%);
-    position: absolute;
-    bottom: 0;left: 0;width: 100%;height:30%;z-index: 4;display: block;
-  }
-  &::before{top: 0;
-    background: linear-gradient(to bottom, #F27200 0%,#F2720099 50%,#F2720000 100%);height:50%;}
-      
-    }
-    
+  background: url("./s2/bg.jpg") 50% 50%;
+  background-size: cover;
   .txt {
-    @apply absolute flex text-[#fff];
+    @apply flex text-[#fff];
   z-index: 5;
-    margin: 0;top: 0;left: 0;right: 0;
+    margin:auto auto auto size(350);
   flex-direction: column;
   text-align: center;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
   .title{
-    font-size: 2.5em;
-    margin: 0 0 .2em;
+    font-size: 2em;
+    margin: 0 0 .6em;
     line-height: 1.4;
-  }
-  .subtitle{
-    font-size: 1.2em;
-    margin: 1em 0 .6em;
+    font-weight: 700;color: #fff;
+  text-align: center;
   }
   }
-    .caption {z-index: 5;}
-  .arrows{
-    .prev,
-    .next{width: 2.3%;}
-  }
-  }
+  .st{position: absolute;
+    width: size(60);bottom:3em;right: 0;
+    background-image: linear-gradient(180deg, #fff0 0%, #FFF 50%, #fff0 100%);
+;
+  img{ width: size(30);}
+}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -89,42 +68,25 @@
 
   .s2 {
   @apply flex-col;
-    padding: 0;
-  font-size:sizem(14);
-
-  .main {
-    padding: 0 sizem(32.5);
-
-    
-    
+  min-height: sizem(0);
+  max-height: sizem(1080);
+  height: sizem(500);
+  font-size:sizem(13);
   .txt {
+    top: 4em;
   .title{
-    font-size: 1.8em;
+    font-size: 1.9em;
+  }
+  .en{
+    height: 2.4em;
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.3em;
   }
   }
-}
+  .bottom{
+    width: sizem(160);}
 
-  .slider {
-    height: auto;
-    width: 100%;
-    margin: 0 0 sizem(30);
-
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(550);
-      
-    }
-  }
   }
 }
 </style>
@@ -154,39 +116,4 @@ const options = {
   gap: 0,
   type: 'loop'
 }
-
-const imgs = [
-  {
-    img:new URL("./s2/1.jpg", import.meta.url).href ,
-    title:"邂逅歐式別墅心生活",
-    desc:"有天有地、有大樹有鳥語，夢享人生現在開始",
-    caption: "情境示意圖",
-  },
-  {
-    img:new URL("./s2/2.jpg", import.meta.url).href ,
-    title:"恣意徜徉私家花園",
-    desc:"聽風和樹低語、閱讀四季表情，微笑領略新幸福",
-    caption: "情境示意圖",
-  },
-]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>

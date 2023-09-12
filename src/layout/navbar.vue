@@ -8,9 +8,10 @@
             <div class="bar"></div>
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
+            <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
             <template v-for="item, i in info.navList">
             <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
-                @click="scrollTo(item.target)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
+                @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
                 <span>{{ item.name }}</span>
             </div>
             </template>
@@ -30,12 +31,14 @@
     right: size(114);
     top: size(51);
     .logo {
-        width: size(190);
-        height: size(30);
-        background-image: url('@/assets/navlogo.png');
+        width: size(145);
+        height: size(50);
+        background-image: url('@/section/s1/logo.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        position: absolute;
+        left:1em;
     }
 
     .menu-btn {
@@ -55,17 +58,17 @@
 
         .bar {
             width: size(41.43);
-            height: 2px;
+            height: 3px;
             background-color: currentColor;
             position: relative;
             transition: all .5s;
-            color: #002B69;
+            color: #003F28;
             box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
 
             &::after {
                 content: '';
                 width: 100%;
-                height: 2px;
+                height: 3px;
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
@@ -76,7 +79,7 @@
             &::before {
                 content: '';
                 width: 100%;
-                height: 2px;
+                height: 3px;
                 top: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
@@ -125,22 +128,16 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #002B69;
-      //  background-image: url('@/section/menubg.png');
-     /*   background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom left; */
+        background: #005783CC;
         width:100%;
         height: size(60);
         z-index: 5;
-        // transform: translateX(150%);
-        // transition: all .5s;
         padding: 0;
         font-size: size(16);
         gap: 2em;
-        font-weight: 300;
- // backdrop-filter: blur(2px);
-        // backdrop-filter: blur(2px);
+        padding: 0 0 0 40em;
+        font-weight: 700;
+        backdrop-filter: blur(2px);
 
         .menu-item {
             position: relative;
@@ -159,8 +156,8 @@
                 position: absolute;
                 bottom: -5px;
                 width: 0%;
-                height: size(3);
-                background-color: #E7BA65;
+                height: size(2);
+                background-color: #fff;
                 transition: all .35s;
             }
 
@@ -171,13 +168,13 @@
                 }
             }
             &.btn2{
-                background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);
+                background:#D20001;
                 border-radius: 2em;
                 margin-right:-1em;
-                padding:.5em 1em;
+                padding:.7em 1.5em;
 
                 &:hover {
-                    background:linear-gradient(180deg, #E48726 0%, #eb7f20 10.00%, #f19832 41.00%, #f06b37 72.00%, #9e3410 100%);
+                    background:#a00909;
                     &:after {
                         width:0;
                     }
@@ -261,12 +258,14 @@
         border-radius: 9999px;
 
         .logo {
-            width: sizem(101.83);
-            height: sizem(16);
+            width: sizem(120);
+            height: sizem(42);
             transition: all .2s;
+            top: sizem(13);
+            left:sizem(10);
 
             &.open {
-                filter: brightness(0) invert(1);
+              //  filter: brightness(0) invert(1);
             }
         }
 
@@ -340,6 +339,7 @@
             gap: sizem(23);
             justify-content: center;
             flex-direction: column;
+        padding: 0;
           //  background-image: url('@/section/menubgm.png');
 
             .menu-item {
@@ -349,6 +349,7 @@
                 }
             &.btn2{
                 margin:0 auto -.5em auto;
+                padding: 0.4em 4em;
             }
 
             }
@@ -417,10 +418,17 @@ onMounted(() => {
 
 
 const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-    smoothScroll({
-        scrollTo: document.querySelector(el)
-    })
+const scrollTo = (el, offset) => {
+    const targetElement = document.querySelector(el);
+    if (targetElement) {
+        const numericOffset = parseInt(offset) ? parseInt(offset) : 0;
+        const elementRect = targetElement.getBoundingClientRect();
+        const topPosition = window.pageYOffset + elementRect.top + numericOffset;
+
+        smoothScroll({
+            scrollTo: topPosition
+        });
+    }
     menuOpen.value = false;
 }
 </script>

@@ -36,27 +36,35 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     navList: [{
-            name: "微笑歐洲",
-            target: ".s1",
+            name: "三冠王",
+            target: ".s2",
             offset: "",
         },{
-            name: "10大看點",
+            name: "四聚頭",
             target: ".s3",
             offset: "",
         },{
-            name: "大墅人生",
+            name: "雙首選",
             target: ".s4",
             offset: "",
         },{
-            name: "機能在手",
+            name: "森活味",
             target: ".s6",
             offset: "",
         },{
-            name: "港灣錢潮",
+            name: "雙快速",
             target: ".s7",
             offset: "",
         },{
-            name: "麗寶承諾",
+            name: "小旅行",
+            target: ".s9",
+            offset: "",
+        },{
+            name: "飯店宅",
+            target: ".s9",
+            offset: "",
+        },{
+            name: "精品味",
             target: ".s9",
             offset: "",
         },{

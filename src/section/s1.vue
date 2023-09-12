@@ -1,7 +1,7 @@
 <template>
   <article class="s1" id="s1">
     <!-- 
-    <img class="t0" src="./s1/mo.jpg" alt="" srcset="">
+    <img class="t0" src="./s1/01.jpg" alt="" srcset="">
     <img src="./s1/t.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="!$isMobile()"/>
     <img src="./s1/tm.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="$isMobile()"/> -->
        <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
@@ -30,21 +30,22 @@
   justify-content: center;
   align-items:center;
   font-size:size(25);
+  background: #1C96D4;
 
     img{width:100%;}
     .love{
     z-index: 1;
     position: absolute;  
-    width: size(850);
-    left: size(105);
-    top: calc(50% + #{size(115 - 540)});
+    width: size(695);
+    left: size(320);
+    top: calc(50% + #{size(235 - 540)});
     }
     .love1{
     z-index: 1;
     position: absolute;  
-    width: size(280);
-    right: size(620);
-    bottom: size(70); 
+    width: size(230);
+    right: size(660);
+    bottom: size(110); 
     animation: an 3s ease-in-out infinite alternate-reverse;
      transform:translate(10%, 20%);
      img{transform: scaleX(-1)rotate(-7deg);}
@@ -52,9 +53,9 @@
     .love2{
     z-index: 1;
     position: absolute;  
-    width: size(125);
-    right: size(285);
-    top: size(95); 
+    width: size(110);
+    right: size(385);
+    top: size(195); 
     animation: an 3s ease-in-out infinite alternate-reverse;
      transform:translate(20%, -20%);
      img{transform: rotate(-7deg);}
@@ -79,17 +80,17 @@
     }
    .txt{
     z-index: 2;
-    width: size(698);
+    width: size(535);
     position: absolute;
-    right: size(115);
-    top: calc(50% + #{size(285 - 540)});
+    right: size(330);
+    top: calc(50% + #{size(380 - 540)});
   }
   .logo{
     position: absolute;
-    width: size(627);
+    width: size(585);
     z-index: 2;
-    left: size(215);
-    top: calc(50% + #{size(385 - 540)});
+    left: size(380);
+    top: calc(50% + #{size(435 - 540)});
     }
 
   
