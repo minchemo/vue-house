@@ -16,8 +16,8 @@
 				<img class="arrow" loading="lazy" src="@/section/s1/arrow.svg" alt="" srcset="">
 			</div>
 
-			<!-- <img class="train absolute" src="@/section/s1/train.png" alt="" srcset=""> -->
-			<A class="train" />
+			 <img class="train absolute" src="@/section/s1/train.png" alt="" srcset="" data-aos="fade-left" data-aos-delay="200">
+			<!--A class="train" /-->
 
 			<img class="leaf absolute" loading="lazy" src="@/section/s1/leaf.png" alt="" srcset="" v-if="!$isMobile()">
 			<img class="leaf absolute" loading="lazy" src="@/section/s1/leaf_m.png" alt="" srcset="" v-else>
@@ -128,8 +128,8 @@
 
 		.leaf {
 			width: size(739.22);
-			left: size(69);
-			top: size(131);
+			left: size(29);
+			top: size(191);
 			animation: an_s 1.5s linear infinite;
 
 			@keyframes an_s {
