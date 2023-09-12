@@ -16,7 +16,7 @@
 					autoplay: false,
 				}">
 					<SplideSlide class="slide" v-for="img, i in items[0]">
-						<img :src="img.img" alt="" srcset="">
+						<img loading="lazy" :src="img.img" alt="" srcset="">
 						<p class="left">{{ img.caption }}</p>
 					</SplideSlide>
 				</Splide>
@@ -45,7 +45,7 @@
 			<div class="title">
 				<div class="t1" data-aos="fade-up" data-aos-delay="0">
 					<B class="b" />
-					<!-- <img class="b" src="@/section/s4/b.png" alt="" srcset=""> -->
+					<!-- <img  loading="lazy" class="b" src="@/section/s4/b.png" alt="" srcset=""> -->
 				</div>
 				<div class="t2" data-aos="fade-up" data-aos-delay="100">新蘆特區黃金半徑<br />
 					雙學區╳3商圈</div>
@@ -55,8 +55,8 @@
 			</div>
 			<div class="slider-box">
 				<div class="arrows">
-					<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
-					<img class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
+					<img  loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
+					<img  loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
 				</div>
 				<Splide ref="splide" :options="{
 					arrows: false,
@@ -67,7 +67,7 @@
 					gap: 50
 				}" @splide:move="move">
 					<SplideSlide class="slide" v-for="img, i in items[1]">
-						<img :src="img.img" alt="" srcset="">
+						<img  loading="lazy" :src="img.img" alt="" srcset="">
 						<p class="right">{{ img.caption }}</p>
 					</SplideSlide>
 				</Splide>

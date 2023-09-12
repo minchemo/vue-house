@@ -2,11 +2,11 @@
     <article class="s9mix">
         <div class="box">
             <div class="img" data-aos="fade-up" data-aos-delay="600">
-                <img src="@/section/s9mix/img1.png" class="img1" alt="" />
+                <img  loading="lazy" src="@/section/s9mix/img1.png" class="img1" alt="" />
                 <div class="img2" data-aos="fade-up" data-aos-delay="600">
-                    <img src="@/section/s9mix/img20.png" alt="" />
-                    <img src="@/section/s9mix/img21.png" alt="" />
-                    <img src="@/section/s9mix/img22.png" alt="" />
+                    <img  loading="lazy" src="@/section/s9mix/img20.png" alt="" />
+                    <img  loading="lazy" src="@/section/s9mix/img21.png" alt="" />
+                    <img  loading="lazy" src="@/section/s9mix/img22.png" alt="" />
                 </div>
             </div>
         </div>

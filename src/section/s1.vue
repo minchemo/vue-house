@@ -9,19 +9,19 @@
 		</div>
 		<div class="content">
 			<div class="intro">
-				<img class="logo" src="@/section/s1/logo.svg" alt="" srcset="" v-if="!$isMobile()" data-aos="fade-up">
-				<img class="logo" src="@/section/s1/logo_m.svg" alt="" srcset="" v-else data-aos="fade-up">
-				<img class="t1" src="@/section/s1/t1.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="200">
-				<img class="t2" src="@/section/s1/t2.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="300">
-				<img class="arrow" src="@/section/s1/arrow.svg" alt="" srcset="">
+				<img class="logo" loading="lazy" src="@/section/s1/logo.svg" alt="" srcset="" v-if="!$isMobile()" data-aos="fade-up">
+				<img class="logo" loading="lazy" src="@/section/s1/logo_m.svg" alt="" srcset="" v-else data-aos="fade-up">
+				<img class="t1" loading="lazy" src="@/section/s1/t1.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="200">
+				<img class="t2" loading="lazy" src="@/section/s1/t2.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="300">
+				<img class="arrow" loading="lazy" src="@/section/s1/arrow.svg" alt="" srcset="">
 			</div>
 
 			<!-- <img class="train absolute" src="@/section/s1/train.png" alt="" srcset=""> -->
 			<A class="train" />
 
-			<img class="leaf absolute" src="@/section/s1/leaf.png" alt="" srcset="" v-if="!$isMobile()">
-			<img class="leaf absolute" src="@/section/s1/leaf_m.png" alt="" srcset="" v-else>
-			<img class="leaf2 absolute" src="@/section/s1/leaf2.png" alt="" srcset="" v-if="!$isMobile()">
+			<img class="leaf absolute" loading="lazy" src="@/section/s1/leaf.png" alt="" srcset="" v-if="!$isMobile()">
+			<img class="leaf absolute" loading="lazy" src="@/section/s1/leaf_m.png" alt="" srcset="" v-else>
+			<img class="leaf2 absolute" loading="lazy" src="@/section/s1/leaf2.png" alt="" srcset="" v-if="!$isMobile()">
 		</div>
 	</article>
 </template>
@@ -38,6 +38,7 @@
 			rgba(217, 48, 138, 1) 100%);
 
 	.bubble {
+		z-index: 0;
 		@apply absolute w-full h-full inset-0 overflow-hidden;
 
 		>div {
@@ -96,6 +97,7 @@
 			width: size(457);
 			top: size(317);
 			left: size(960);
+			top:calc(50% + #{size(307 - 540)});//size(303);
 
 			img {
 				width: 100%;
@@ -116,9 +118,11 @@
 		}
 
 		.train {
-			left: size(124);
-			top: size(323);
-			width: size(979);
+			
+			position: absolute;
+			left: size(104);
+			top:calc(50% + #{size(323 - 540)});//size(303);
+			width: size(909);
 			z-index: 1;
 		}
 

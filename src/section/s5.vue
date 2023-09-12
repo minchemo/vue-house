@@ -23,15 +23,15 @@
 					<div class="t1">{{ item.b1 }}<span>{{ item.b1_unit }}</span></div>
 					<div class="t2">{{ item.b2 }}</div>
 					<div class="arrow" v-if="i == currentIdx">
-						<img src="@/section/s5/arrow.png" alt="" srcset="">
+						<img  loading="lazy" src="@/section/s5/arrow.png" alt="" srcset="">
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="slider-box">
 			<div class="arrows">
-				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
-				<img class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
+				<img  loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
+				<img  loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
 			</div>
 			<Splide ref="splide" :options="{
 				arrows: false,
@@ -42,7 +42,7 @@
 				gap: 50
 			}" @splide:move="move">
 				<SplideSlide class="slide" v-for="img, i in items">
-					<img :src="img.img" alt="" srcset="">
+					<img  loading="lazy" :src="img.img" alt="" srcset="">
 					<p class="right">{{ img.caption }}</p>
 					<div class="des">{{ img.img_des }}</div>
 				</SplideSlide>

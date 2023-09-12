@@ -23,8 +23,8 @@
 				</div>
 				<div class="slider-box">
 					<div class="arrows">
-						<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
-						<img class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
+						<img  loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
+						<img  loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
 					</div>
 					<Splide ref="splide" :options="{
 						arrows: false,
@@ -35,7 +35,7 @@
 						gap: 50
 					}" @splide:move="move">
 						<SplideSlide class="slide" v-for="img, i in items">
-							<img :src="img.img" alt="" srcset="">
+							<img  loading="lazy" :src="img.img" alt="" srcset="">
 							<p class="right">{{ img.caption }}</p>
 						</SplideSlide>
 					</Splide>

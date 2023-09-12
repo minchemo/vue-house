@@ -15,8 +15,8 @@
 		</div>
 		<div class="slider-box">
 			<div class="arrows">
-				<img class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
-				<img class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
+				<img  loading="lazy" class="prev" @click="splide.splide.go('<')" src="@/section/prev.svg" alt="" srcset="">
+				<img  loading="lazy" class="next" @click="splide.splide.go('>')" src="@/section/next.svg" alt="" srcset="">
 			</div>
 			<Splide ref="splide" :options="{
 				arrows: false,
@@ -28,19 +28,19 @@
 				gap: 0
 			}" @splide:move="move">
 				<SplideSlide class="slide" v-for="img, i in items" @click="setPreviewImageSrc(i)">
-					<img :src="img.img" alt="" srcset="">
+					<img  loading="lazy" :src="img.img" alt="" srcset="">
 					<p class="right">{{ img.caption }}</p>
 					<div class="des">{{ img.img_des }}</div>
-					<img src="@/section/s7/tip.svg" class="tip" alt="" srcset="" v-if="$isMobile()">
+					<img  loading="lazy" src="@/section/s7/tip.svg" class="tip" alt="" srcset="" v-if="$isMobile()">
 				</SplideSlide>
 			</Splide>
 		</div>
 	</article>
 
 	<div class="preview" v-if="previewImageSrc && $isMobile()">
-		<img class="p" :src="previewImageSrc" alt="" srcset="">
+		<img  loading="lazy" class="p" :src="previewImageSrc" alt="" srcset="">
 	</div>
-	<img class="preview-c" v-if="previewImageSrc && $isMobile()" src="@/section/close.svg" @click="previewImageSrc = null" alt=""
+	<img  loading="lazy" class="preview-c" v-if="previewImageSrc && $isMobile()" src="@/section/close.svg" @click="previewImageSrc = null" alt=""
 		srcset="">
 </template>
 

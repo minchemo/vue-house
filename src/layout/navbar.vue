@@ -47,7 +47,7 @@
     }
 
     .menu-btn {
-        // background: rgba(128, 48, 49, 0.8);
+         background: #c41e84;
         height: size(62);
         width: size(62);
         display: flex;
