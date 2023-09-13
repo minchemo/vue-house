@@ -57,9 +57,17 @@ const config = ref({
   showNav: true
 })
 
-onMounted(() => {
-  window.onload = function () {
+
+
+onMounted(async () => {
+
+
+  preloadImages(preloadList, function () {
+    console.log('all images loaded');
     isLoading.value = false
+  });
+
+  window.onload = function () {
     AOS.init({
       offset: 0,
       duration: 800
@@ -67,6 +75,48 @@ onMounted(() => {
   };
 
 })
+
+
+/**
+ * 預載圖片，直接帶入路徑，由上而下依序加載，完成後才會關閉loading畫面
+ */
+const preloadList = [
+  new URL("../section/anim/01/02.webp", import.meta.url).href,
+  new URL("../section/anim/01/03.webp", import.meta.url).href,
+  new URL("../section/anim/01/04.webp", import.meta.url).href,
+  new URL("../section/anim/01/05.webp", import.meta.url).href,
+  new URL("../section/anim/01/06.webp", import.meta.url).href,
+  new URL("../section/anim/02/01.webp", import.meta.url).href,
+  new URL("../section/anim/02/02.webp", import.meta.url).href,
+  new URL("../section/anim/03/01.webp", import.meta.url).href,
+  new URL("../section/anim/03/02.webp", import.meta.url).href,
+  new URL("../section/anim/03/03.webp", import.meta.url).href,
+  new URL("../section/anim/03/04.webp", import.meta.url).href,
+  new URL("../section/anim/04/01.webp", import.meta.url).href,
+  new URL("../section/anim/04/02.webp", import.meta.url).href,
+  new URL("../section/anim/04/03.webp", import.meta.url).href,
+]
+
+function preloadImages(urls, allImagesLoadedCallback) {
+  var loadedCounter = 0;
+  var toBeLoadedNumber = urls.length;
+  urls.forEach(function (url) {
+    preloadImage(url, function () {
+      loadedCounter++;
+
+      console.log('loaded ' + loadedCounter + ' of ' + toBeLoadedNumber);
+      if (loadedCounter == toBeLoadedNumber) {
+        allImagesLoadedCallback();
+      }
+    });
+  });
+  function preloadImage(url, anImageLoadedCallback) {
+    var img = new Image();
+    img.onload = anImageLoadedCallback;
+    img.src = url;
+  }
+}
+
 
 
 </script>
