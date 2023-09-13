@@ -1,10 +1,10 @@
 <template>
-  <article class="s3" id="s3">
-    <img class="bg1" src="./s3/img.png" alt="" srcset="" v-if="!$isMobile()">
-    <img class="bg1" src="./s3/img_m.png" alt="" srcset="" v-else>
-    <img class="bg2" src="./s3/bg2.png" alt="" srcset="">
-    <div class="txt">
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in">微笑生活的10種方式</h3></div>
+  <article class="s3">
+      <div class="txt">
+    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">淡水正核心 贏接市中心</h3>
+      </div>
+    <Fullview />
+    <div class="caption">空拍合成示意圖</div>
   </article>
 </template>
 
@@ -12,65 +12,81 @@
 @import '@/assets/style/function.scss';
 
 .s3 {
-  @apply relative overflow-hidden w-full bg-[#F27200];
-  height: size(760);
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
-  flex-direction: column;
-  font-size:size(25);
-  padding:0 0 size(98) 0;
-  gap:size(10);
-   .bg1{position: absolute;top:-7em;left: 0;width: 100%;}
-   .bg2{position: absolute;bottom:0;left: 0;width: 100%;}
-   .txt{
-    position: relative;
-    text-align: center;
+  @apply relative overflow-hidden bg-[#008DD5];
+  width: 100%;
+  height: size(1032);
+  padding-top:0;
+  font-size:size(18);
+  .txt {
+    @apply absolute z-10;
+    top: 4em;
+    left:0;right: 0;text-align: center;
     font-weight: 500;
     letter-spacing: 0;
-    line-height: 1.8;
-    color: #FFF;}
+    line-height: 1.7;
+    color: #fff;
+    //text-shadow: 0 0 5px
   .title{
-    font-size: 1.7em;
+    font-size: 2em;
+    margin: 0 0 .2em;
+    line-height: 1.4;
+    font-weight: 700;
+    &::after,
+    &::before{
+      content: "";
+      width: 11.3em;
+      height: 1px;
+      background: currentColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto .5em;
+    }
   }
-  .subtitle{
-    font-size: .9em;
+  .desc{
+    font-size: 1.5em;
+    letter-spacing: .1em;
   }
-    .caption {
+  }
+  .caption{
       @apply absolute;
-      right:3em;
-      bottom: 5em;
+      right:1em;
+      bottom: 1em;
       font-weight: 500;
       font-size: size(15);
-      color: #FFFFFF;
-      text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);
-    }
+      color: #FFF;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-
-// @media screen and (max-width: 767px) { 平常我們手機的設定
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-  .s3 {
-font-size:sizem(15);
-  height: sizem(550);
-  flex-direction: column;
-  gap:0;
-  padding: 0;
-   .bg1{position: absolute;top:15%;
-    left: 0%;
-    width: 100%;}
-   .bg2{position: absolute;bottom:0;left: -10%;width: 230%;}
-   .txt{
-    margin: 3em auto 0;
-   }
 
-}
+  .s3 {
+    height: sizem(667);
+  font-size:sizem(14);
+  .txt {
+    top: 4em;
+  .title{
+    font-size: 1.8em;
+    &::after,
+    &::before{
+      width: 1em;}
+  }
+  .desc{
+    font-size: 1.1em;
+    letter-spacing: .1em;
+  }
+  }
+  .caption {
+    font-size: sizem(12);
+  }
+  }
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
+import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());

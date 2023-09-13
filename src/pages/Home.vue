@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#F1EDD0] overflow-hidden font-['Noto_Sans_TC',serif]">
+  <div class="home bg-[#F2F2F2] overflow-hidden font-['Noto_Sans_TC',serif]">
      <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />

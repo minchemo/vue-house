@@ -1,10 +1,22 @@
 <template>
   <article class="s4">
+  <div class="txt">
+    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">內行人鍾愛</h3>
+  </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">VILLA LIFESTYLE</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200" >徜徉大墅人生<br />看見家的無限可能</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400" >住進微笑歐洲，有天有地的電梯別墅生活就此展開。單純52戶規劃，戶戶臨路並擁有私家庭院、四大主臥套房、室內車位，自在漫遊歐式大墅生活。</p>
+    <h4 class="subtitle" data-aos="zoom-in-right">榮獲「三冠王」最高榮耀標章，<br />
+萬企一出場，盡是口碑場</h4>
+        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400"><b>厚實力，厚工學</b><br />
+深耕淡水半世紀，曾榮獲「國家建築金獎」最高榮譽<br />
+金象獎、金獅獎、誠信建商，三冠王之企業標竿<br />
+累計超過百棟建築、20000戶幸福家庭口碑見證<br />
+萬企對建築細節與品質的堅持，一磚一瓦，近乎苛求<br />
+本著父母心，從源頭貫徹，把建材用料加碼再加碼<br />
+關於「居住安全」，萬企「永不妥協」<br /><br />
+
+<b>經典作品</b><br />
+萬企大業 晶站 和韻 海天境 圓閣 景闊</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -26,37 +38,60 @@
 @import '@/assets/style/function.scss';
 
 .s4 {
-  @apply relative overflow-hidden flex items-center justify-center text-white;
+  @apply relative flex items-center justify-center text-[#555];
   width: 100%;
   height: size(800);
   padding:0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
+  margin-bottom:8em;
+  flex-wrap: wrap;
 
+  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
   .main {
-    @apply flex text-[#555];
+    @apply flex;
     margin: 0;
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+}
   .txt {
     position: relative;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
+    width: 100%;
   .title{
-    font-size: 2.5em;
-    color: #A3191F;
-    margin: 0 0 .2em;
+    font-size: 2.2em;
+    margin: 1.6em 0 0em;
     line-height: 1.4;
+    font-weight: 700;
+    color:#B78E63;
+    text-align: center;
+    &::after,
+    &::before{
+      content: "";
+      width: 15.7em;
+      height: 1px;
+      background: currentColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto .5em;
+    }
   }
   .subtitle{
-    font-size: 1.2em;
-    margin: 0 0 .6em;
+    font-size: 1.65em;
+    font-weight: 700;
+    margin: 0 0 .8em;
+    color:#B78E63;
+    line-height: 1.5;
+  }
+  .desc{
+    margin: 0 0 1em;
+    b{
+    color:#B78E63;}
   }
   }
-}
 
   .slider {
     margin: 0;
@@ -78,33 +113,34 @@
 
   .s4 {
   @apply flex-col;
-    height: sizem(605);
+    height: sizem(500);
     padding: 0;
   font-size:sizem(14);
+  .bg1{top:-1em;left:auto;width:sizem(160);right:sizem(-40);}
 
   .main {
     padding: 0 sizem(32.5);
+}
 
-    
-    
   .txt {
   .title{
     font-size: 1.8em;
+    &::after,
+    &::before{
+      width: 1em;}
   }
   .subtitle{
     font-size: 1.07em;
   }
   }
-}
-
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -156,7 +192,7 @@ const imgs = [
   },
   {
     img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    caption: "情境示意圖"
   },
   {
     img:new URL("./s4/4.jpg", import.meta.url).href ,
@@ -164,10 +200,6 @@ const imgs = [
   },
   {
     img:new URL("./s4/5.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s4/6.jpg", import.meta.url).href ,
     caption: "現場實景"
   },
 ]
@@ -192,3 +224,4 @@ const imgs = [
 ]
 */
 </script>
+

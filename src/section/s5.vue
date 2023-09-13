@@ -1,11 +1,19 @@
+
+
 <template>
   <article class="s5">
-    <img class="bg1" src="./s1/img.png" alt="" srcset="">
+  <div class="txt">
+    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">全家人都愛</h3>
+        <p class="desc text-center" data-aos="zoom-in" data-aos-delay="400">中山北，蛋黃圈，四大商圈繁華相伴，汲食行樂</p>
+  </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">FOUR SEASON GARDEN</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200">私家花園會館<br />尊榮級度假享受</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400">微笑歐洲享近0%公設比高坪效，依然享有大樓飯店式物業管理，收發包裏等服務。並擁有私家公園及獨棟休閒會館，隨時與親友歡樂相聚，在家自在體驗度假VILLA享受。</p>
+<transition name="fade" mode="out-in">
+          <h4 class="subtitle" :key="currentImg.subtitle" v-html="currentImg.subtitle"></h4>
+        </transition>
+        <transition name="fade" mode="out-in">
+        <p :key="currentImg.desc" v-html="currentImg.desc"></p>
+        </transition>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -14,8 +22,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -27,38 +35,59 @@
 @import '@/assets/style/function.scss';
 
 .s5 {
-  @apply relative flex items-center justify-center text-white;
+  @apply relative overflow-hidden flex items-center justify-center text-[#555];
   width: 100%;
   height: size(800);
   padding:0;
   font-size:size(18);
   gap:3em;
-  margin-bottom:8em;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
 
-  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
   .main {
-    @apply flex text-[#555];
+    @apply flex;
     margin: 0;
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+}
   .txt {
     position: relative;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
+    width: 100%;
   .title{
-    font-size: 2.5em;
-    color: #A3191F;
-    margin: 0 0 .2em;
+    font-size: 2.2em;
+    margin: 1.6em 0 0em;
     line-height: 1.4;
+    font-weight: 700;
+    color:#B78E63;
+    text-align: center;
+    &::after,
+    &::before{
+      content: "";
+      width: 15.7em;
+      height: 1px;
+      background: currentColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto .5em;
+    }
   }
   .subtitle{
-    font-size: 1.2em;
-    margin: 0 0 .6em;
+    font-size: 1.65em;
+    font-weight: 700;
+    margin: 0 0 .8em;
+    color:#B78E63;
+    line-height: 1.5;
+  }
+  .desc{
+    margin: 0 0 1em;
+    b{
+    color:#B78E63;}
   }
   }
-}
 
   .slider {
     margin: 0;
@@ -80,13 +109,15 @@
 
   .s5 {
   @apply flex-col;
-    height: sizem(500);
+    height: sizem(605);
     padding: 0;
   font-size:sizem(14);
-  .bg1{top:-1em;left:auto;width:sizem(160);right:sizem(-40);}
 
   .main {
     padding: 0 sizem(32.5);
+
+    
+    
   .txt {
   .title{
     font-size: 1.8em;
@@ -102,9 +133,9 @@
     width: 100%;
 
     .caption {
-    font-size:sizem(12);  
+    font-size:sizem(12); 
     right:sizem(5);
-    bottom:sizem(5);
+    bottom:sizem(5); 
     }
     .slide-item {
       @apply bg-cover;
@@ -147,48 +178,31 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "現場實景"
-  },
+    //img: globals.$isMobile() ? new URL("./s5/1_m.webp", import.meta.url).href : new URL("./s5/1.webp", import.meta.url).href,
+    caption: "現場實景",
+    subtitle: "淡水最火熱的中山北路水碓商圈",
+    desc: "中山北路核心商圈，淡水人最愛全能生活超強機能<br>傳統市場，連鎖餐飲，電信公司，銀行，所有民生必需，走路就可到<br>還有8-10線公車，到哪都方便",
+    // desc:globals.$isMobile() ?"2026年南科3期將完成擴建，預估創造390億年產值，看見台南共榮生活圈。僅約15分鐘車程，就能連結南科園區，讓南科新貴從繁忙的步調中，找回靜謐的棲身之所。":"2026年南科3期將完成擴建，預估創造390億年產值，<br>看見台南共榮生活圈。僅約15分鐘車程，就能連結南科園區，<br>讓南科新貴從繁忙的步調中，找回靜謐的棲身之所。",
+ },
   {
     img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "情境示意圖"
+    caption: "現場實景",
+    subtitle: "老街人文商圈",
+    desc: "伴著河岸風情、品嚐美食小吃<br>阿給、魚丸湯、鐵蛋、魚酥、蝦捲、酸梅汁⋯<br>米店、餅舖、雜貨店、布行，散發濃濃古早味<br>服飾、玩具、紀念品小棧、伴手禮專賣店，吸睛又有趣",
   },
   {
     img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    caption: "現場實景",
+    subtitle: "家樂福商圈行政中心",
+    desc: "家樂福、全聯、麥當勞、星巴克、燦坤、寶雅<br>便利商店、連鎖餐飲林立<br>還有行政中心、運動中心、雙語國小",
   },
   {
-    img:new URL("./s5/5.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s5/6.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    img:new URL("./s5/4.jpg", import.meta.url).href ,
+    caption: "現場實景",
+    subtitle: "真理大學文教圈",
+    desc: "以新民街、新生街為中心的生活圈，店家林立、生活機能健全<br>鄰近紅毛城、小白宮、滬尾砲台、雲門等人文勝地<br>文化藝術氣息濃厚，還有淡江高中、淡水國小、文化國小",
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
+
