@@ -2,12 +2,12 @@
 	<article class="s3 relative z-20">
 		<img class="cloud" src="@/section/s3/cloud.webp" alt="" srcset="" v-if="!$isMobile()">
 		<img class="cloud" src="@/section/s3/cloud_m.webp" alt="" srcset="" v-else>
-		<div class="sep-text" data-aos="flip-left" data-aos-delay="100">
+		<div class="sep-text" >
 			THE WONDERLAND
 		</div>
 
 		<div class="intro">
-			<div class="t1" data-aos="fade-up" data-aos-delay="0">蘆洲下一站 萬坪公園城</div>
+			<div class="t1" >蘆洲下一站 萬坪公園城</div>
 			<div class="t2" data-aos="fade-up" data-aos-delay="100">年度鉅獻 敬邀珍藏 夢想與理想一次到位</div>
 			<div class="t3" data-aos="fade-up" data-aos-delay="200">一期夢想實現，二期理想啟城</div>
 			<div class="t4" v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="200">「快樂王國」NO.1夢享城熱銷，信手拈來公園水岸捷運美好總和<br />

@@ -86,8 +86,8 @@ const preloadList = [
   new URL("../section/anim/01/04.webp", import.meta.url).href,
   new URL("../section/anim/01/05.webp", import.meta.url).href,
   new URL("../section/anim/01/06.webp", import.meta.url).href,
-  new URL("../section/s3/bg.webp", import.meta.url).href,
-  new URL("../section/s3/bg_m.webp", import.meta.url).href,
+  new URL("../section/s3/cloud.webp", import.meta.url).href,
+  new URL("../section/s3/cloud_m.webp", import.meta.url).href,
 ]
 
 function preloadImages(urls, allImagesLoadedCallback) {
