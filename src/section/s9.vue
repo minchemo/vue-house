@@ -1,12 +1,19 @@
+
+
 <template>
   <article class="s9">
-    <img class="bg1" src="./s9/bg1.png" alt="" srcset="">
-    <img class="bg2" src="./s9/bg2.png" alt="" srcset="">
+  <div class="txt">
+    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">沒有人不愛</h3>
+  </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">HAPPINESS LIHPAO</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200" >麗寶集團40年<br />安心購屋學</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400" >麗寶集團逾40年企業版圖，橫跨連鎖飯店、主題樂園、商場百貨、不動產、生技產業等。永續經營信賴品質，買的放心、住的安心。</p>
+    <h4 class="subtitle" data-aos="zoom-in-right">賞河景、觀夕照、遊老街、探人文⋯<br />
+在家，就能小旅行</h4>
+        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">閒看觀音山巒疊翠、大屯連峰<br />
+沈浸淡水河靜謐流淌、江帆船影<br />
+騎單車、坐渡輪、賞河景、觀夕照<br />
+遊老街、探人文、享美食<br />
+山水和風月，日常的美好，在家，就能小旅行</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -15,8 +22,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -28,65 +35,61 @@
 @import '@/assets/style/function.scss';
 
 .s9 {
-  @apply relative flex items-center justify-center text-white;
+  @apply relative overflow-hidden flex items-center justify-center text-[#fff] bg-[#1691CF];
   width: 100%;
   height: size(800);
   padding:0;
   font-size:size(18);
   gap:3em;
-  background: #F27200;
-  .bg1{
-    position: absolute;pointer-events: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(-80%);}
-  .bg2{
-    position: absolute;pointer-events: none;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(82%);}
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
 
   .main {
-    @apply flex text-[#fff];
+    @apply flex;
     margin: 0;
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+}
   .txt {
     position: relative;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
+    width: 100%;
   .title{
-    font-size: 2.5em;
-    //color: #A3191F;
-    margin: 0 0 .2em;
+    font-size: 2.2em;
+    margin: 1.6em 0 0em;
     line-height: 1.4;
+    font-weight: 700;
+    text-align: center;
+    &::after,
+    &::before{
+      content: "";
+      width: 15.7em;
+      height: 1px;
+      background: currentColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto .5em;
+    }
   }
-
-  .caption{
-      @apply absolute;
-      right:1em;
-      bottom: 1em;
-      font-weight: 500;
-      font-size: size(15);
-      color: #FFF;
-      text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);}
   .subtitle{
-    font-size: 1.2em;
-    margin: 0 0 .6em;
+    font-size: 1.65em;
+    font-weight: 700;
+    margin: 0 0 .8em;
+    line-height: 1.5;
+  }
+  .desc{
+    margin: 0 0 1em;
+    b{}
   }
   }
-}
 
   .slider {
     margin: 0;
     flex-basis: size(840);
       height: size(560);
-
-     
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
@@ -103,35 +106,38 @@
 
   .s9 {
   @apply flex-col;
-    height: sizem(605);
+    height: auto;
     padding: 0;
-  font-size:sizem(14);
-  .bg1{position: absolute;top:0;
-    left: -50%;transform: translateY(-80%);
-    width: 240%;max-width: 900%;pointer-events: none;}
-   .bg2{position: absolute;bottom:0;
-    left: -9%;
-    width: 217%;max-width: 900%;pointer-events: none;}
+  font-size:sizem(12);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+
   .main {
-    padding: 0 sizem(32.5);
-  .txt {
+    padding: 0 sizem(30);
+    width: 100%;
+}
+
+
+.txt {
   .title{
     font-size: 1.8em;
+    &::after,
+    &::before{
+      width: 4.2em;}
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.4em;
   }
   }
-}
 
   .slider {
     height: auto;
     width: 100%;
 
-     .caption {
-    font-size:sizem(12);  
+    .caption {
+    font-size:sizem(12); 
     right:sizem(5);
-    bottom:sizem(5);
+    bottom:sizem(5); 
     }
     .slide-item {
       @apply bg-cover;
@@ -174,36 +180,25 @@ const options = {
 const imgs = [
   {
     img:new URL("./s9/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "麗寶樂園"
-  },
+    //img: globals.$isMobile() ? new URL("./s9/1_m.webp", import.meta.url).href : new URL("./s9/1.webp", import.meta.url).href,
+    caption: "現場實景",
+ },
   {
     img:new URL("./s9/2.jpg", import.meta.url).href ,
-    caption: "福容大飯店-淡水漁人碼頭"
+    caption: "現場實景",
   },
   {
     img:new URL("./s9/3.jpg", import.meta.url).href ,
-    caption: "淡水福容大飯店-淡水漁人碼頭"
+    caption: "現場實景",
+  },
+  {
+    img:new URL("./s9/4.jpg", import.meta.url).href ,
+    caption: "現場實景",
+  },
+  {
+    img:new URL("./s9/5.jpg", import.meta.url).href ,
+    caption: "現場實景",
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>
+

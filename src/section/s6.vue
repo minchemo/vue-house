@@ -1,14 +1,16 @@
 <template>
   <article class="s6">
-    <img class="bg1" src="./s6/bg1.png" alt="" srcset="">
-    <img class="bg2" src="./s6/bg2.png" alt="" srcset="">
-    <img class="img" src="./s1/img.png" alt="" srcset="" v-if="!$isMobile()">
+  <div class="txt">
+    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">爸媽也超愛</h3>
+  </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">PLAY AROUND</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200">日子隨心所欲<br />
-這樣樂活 那樣享受</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400">5分鐘食衣住行圈，三井OUTLET、梧棲商圈、全聯超市、港區運動公園、童綜合醫院，出門轉個彎，臺灣大道與台61線快速道暢行大台中。</p>
+    <h4 class="subtitle" data-aos="zoom-in-right">校園首席，園園不絕，<br />
+16年完全學區文教聚落</h4>
+        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">
+新興國小、正德國中雙學區散步就到<br />
+孩子免接送爸媽最省心<br />
+還有淡水國小國中、淡水中學、真理大學 16年完全教育學區，資優學府濃濃的教育豐澤，早在幼苗養成的路上</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -30,51 +32,57 @@
 @import '@/assets/style/function.scss';
 
 .s6 {
-  @apply relative flex items-center justify-center text-white;
+  @apply relative flex items-center justify-center text-[#fff] bg-[#1691CF];
   width: 100%;
   height: size(800);
   padding:0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
-  background: #F27200;
-  .bg1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(-80%);pointer-events: none;}
-  .bg2{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(85%);z-index: 2;pointer-events: none;}
-  .img{position: absolute;top:4em;right:size(-76);width:size(429);opacity: .8;}
+  margin-bottom:8em;
+  flex-wrap: wrap;
 
+  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
   .main {
-    @apply flex text-[#fff];
+    @apply flex;
     margin: 0;
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+}
   .txt {
     position: relative;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
+    width: 100%;
   .title{
-    font-size: 2.5em;
-    //color: #A3191F;
-    margin: 0 0 .2em;
+    font-size: 2.2em;
+    margin: 1.6em 0 0em;
     line-height: 1.4;
+    font-weight: 700;
+    text-align: center;
+    &::after,
+    &::before{
+      content: "";
+      width: 15.7em;
+      height: 1px;
+      background: currentColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto .5em;
+    }
   }
   .subtitle{
-    font-size: 1.2em;
-    margin: 0 0 .6em;
+    font-size: 1.65em;
+    font-weight: 700;
+    margin: 0 0 .8em;
+    line-height: 1.5;
+  }
+  .desc{
+    margin: 0 0 1em;
+    b{}
   }
   }
-}
 
   .slider {
     margin: 0;
@@ -96,32 +104,34 @@
 
   .s6 {
   @apply flex-col;
-    height: sizem(605);
+    height: auto;
     padding: 0;
-  font-size:sizem(14);
+  font-size:sizem(12);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
 
-  .bg1{position: absolute;top:0;
-    left: -70%;transform: translateY(-80%);
-    width: 240%;max-width: 900%;pointer-events: none;}
-   .bg2{position: absolute;bottom:0;left: -90%;width: 230%;max-width: 900%;pointer-events: none;z-index:5;}
   .main {
     padding: 0 sizem(32.5);
+    width: 100%;
+}
+
   .txt {
   .title{
     font-size: 1.8em;
+    &::after,
+    &::before{
+      width: 4.2em;}
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.4em;
   }
   }
-}
-
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12);
+    font-size:sizem(12);  
     right:sizem(5);
     bottom:sizem(5);
     }
@@ -166,44 +176,41 @@ const options = {
 const imgs = [
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "港區運動公園"
+    //img: globals.$isMobile() ? new URL("./s6/1_m.webp", import.meta.url).href : new URL("./s6/1.webp", import.meta.url).href,
+    caption: "現場實景"
   },
   {
     img:new URL("./s6/2.jpg", import.meta.url).href ,
-    caption: "台中港"
+    caption: "現場實景"
   },
   {
     img:new URL("./s6/3.jpg", import.meta.url).href ,
-    caption: "三井outlet情境示意圖"
+    caption: "情境示意圖"
   },
   {
     img:new URL("./s6/4.jpg", import.meta.url).href ,
-    caption: "沙鹿火車站"
-  },
-  {
-    img:new URL("./s6/5.jpg", import.meta.url).href ,
-    caption: "全聯超市情境示意圖"
+    caption: "現場實景"
   },
 ]
 /*
 const imgs = [
   {
-    img: getImg('s4/1'),
+    img: getImg('s6/1'),
     caption: "內湖 豁達達禮"
   },
   {
-    img: getImg('s4/2'),
+    img: getImg('s6/2'),
     caption: "林口 長耀PARK"
   },
   {
-    img: getImg('s4/3'),
+    img: getImg('s6/3'),
     caption: "林口 長耀初"
   },
   {
-    img: getImg('s4/4'),
+    img: getImg('s6/4'),
     caption: "林口 長耀里"
   },
 ]
 */
 </script>
+

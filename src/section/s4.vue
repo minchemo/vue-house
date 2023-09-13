@@ -113,13 +113,15 @@
 
   .s4 {
   @apply flex-col;
-    height: sizem(500);
+    height: auto;
     padding: 0;
-  font-size:sizem(14);
-  .bg1{top:-1em;left:auto;width:sizem(160);right:sizem(-40);}
+  font-size:sizem(12);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
 
   .main {
     padding: 0 sizem(32.5);
+    width: 100%;
 }
 
   .txt {
@@ -127,10 +129,10 @@
     font-size: 1.8em;
     &::after,
     &::before{
-      width: 1em;}
+      width: 4.2em;}
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.4em;
   }
   }
   .slider {

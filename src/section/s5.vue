@@ -109,24 +109,29 @@
 
   .s5 {
   @apply flex-col;
-    height: sizem(605);
+    height: auto;
     padding: 0;
-  font-size:sizem(14);
+  font-size:sizem(12);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: 0 sizem(30);
+    width: 100%;
+}
 
-    
-    
-  .txt {
+
+.txt {
   .title{
     font-size: 1.8em;
+    &::after,
+    &::before{
+      width: 4.2em;}
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.4em;
   }
   }
-}
 
   .slider {
     height: auto;
@@ -181,7 +186,7 @@ const imgs = [
     //img: globals.$isMobile() ? new URL("./s5/1_m.webp", import.meta.url).href : new URL("./s5/1.webp", import.meta.url).href,
     caption: "現場實景",
     subtitle: "淡水最火熱的中山北路水碓商圈",
-    desc: "中山北路核心商圈，淡水人最愛全能生活超強機能<br>傳統市場，連鎖餐飲，電信公司，銀行，所有民生必需，走路就可到<br>還有8-10線公車，到哪都方便",
+    desc: "中山北路核心商圈，淡水人最愛全能生活超強機能<br>傳統市場，連鎖餐飲，電信公司，銀行，<br>所有民生必需，走路就可到<br>還有8-10線公車，到哪都方便",
     // desc:globals.$isMobile() ?"2026年南科3期將完成擴建，預估創造390億年產值，看見台南共榮生活圈。僅約15分鐘車程，就能連結南科園區，讓南科新貴從繁忙的步調中，找回靜謐的棲身之所。":"2026年南科3期將完成擴建，預估創造390億年產值，<br>看見台南共榮生活圈。僅約15分鐘車程，就能連結南科園區，<br>讓南科新貴從繁忙的步調中，找回靜謐的棲身之所。",
  },
   {
@@ -194,13 +199,13 @@ const imgs = [
     img:new URL("./s5/4.jpg", import.meta.url).href ,
     caption: "現場實景",
     subtitle: "家樂福商圈行政中心",
-    desc: "家樂福、全聯、麥當勞、星巴克、燦坤、寶雅<br>便利商店、連鎖餐飲林立<br>還有行政中心、運動中心、雙語國小",
+    desc: "家樂福、全聯、麥當勞、星巴克、燦坤、寶雅<br>便利商店、連鎖餐飲林立<br>還有行政中心、運動中心、雙語國小<br>　",
   },
   {
     img:new URL("./s5/4.jpg", import.meta.url).href ,
     caption: "現場實景",
     subtitle: "真理大學文教圈",
-    desc: "以新民街、新生街為中心的生活圈，店家林立、生活機能健全<br>鄰近紅毛城、小白宮、滬尾砲台、雲門等人文勝地<br>文化藝術氣息濃厚，還有淡江高中、淡水國小、文化國小",
+    desc: "以新民街、新生街為中心的生活圈，<br>店家林立、生活機能健全<br>鄰近紅毛城、小白宮、滬尾砲台、雲門等人文勝地<br>文化藝術氣息濃厚，還有淡江高中、淡水國小、文化國小",
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

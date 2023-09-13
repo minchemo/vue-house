@@ -24,6 +24,8 @@
     <S7 />
     <S8 />
     <S9 />
+    <S10 />
+    <S11 />
   <!--    
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -40,6 +42,15 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+
 img {
   display: inline;
   max-width: unset;
@@ -52,7 +63,7 @@ img {
   .caption{
       @apply absolute;
       right:1em;
-      bottom: 1em;
+      bottom: .5em;
       font-weight: 500;
       font-size: size(15);
       color: #FFF;
@@ -85,17 +96,18 @@ img {
   }
   .splide__pagination {
     @apply absolute flex justify-center w-full;
-    bottom: size(19);
-    gap: size(6.9);
+    bottom: 0;
+    gap: .5em;
+    color: #fff;
     li {
       button {
         @apply rounded-full  hover:opacity-50;
-        width: size(62.84);
-        height: size(9.4);
-        border: size(1) solid #fff;
+        width: 1em;
+        height: 1em;
+        border: 2px solid currentColor;
 
         &.is-active{
-          @apply bg-white;
+          background:currentColor;
       }
       }
     }
@@ -113,6 +125,7 @@ img {
   }
   .splide__pagination {
     @apply absolute flex justify-center w-full;
+    display: none;
     bottom: sizem(6.7);
     gap: sizem(2.5);
     li {
@@ -128,7 +141,8 @@ img {
       }
     }
   }
-}}
+}
+}
 </style>
 
 <script setup>
@@ -142,6 +156,8 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
+import S10 from "@/section/s10.vue"
+import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */

@@ -1,18 +1,18 @@
-
-
 <template>
-  <article class="s7">
+  <article class="s11">
   <div class="txt">
-    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">森活族最愛</h3>
+    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">懂生活，肯定愛</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="zoom-in-right">都心綠肺，青潤濃抹，<br />公園第一排，景觀頭等艙</h4>
-        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">碧波盈盈，無疆視野，喧囂自外<br />
-窗映時序，風光巨幕，森籟共鳴<br />
-坐落市心難得2800坪公園預定地樹海首排<br />
-不僅吸附落塵，降低PM2.5的危害<br />
-運動/散步/溜溜孩子與毛小孩，健康樂活你的植感生活</p>
+    <h4 class="subtitle" data-aos="zoom-in-right">富而不奢的國際精品味，<br />新富生活質感對位</h4>
+        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">
+          日系精工與德國極致工藝<br />
+讓療癒廚房與衛浴，解放超載疲累的身心<br />
+降噪地板與隔音氣密窗，日藏每個舒適又靜好時光<br />
+完善的淨水系統，讓每一滴水都乾淨又純粹<br />
+嚴格精選，專鑄細節，用心呈現美好您的日常
+        </p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -21,8 +21,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+      <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -33,16 +33,17 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s7 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#555];
+.s11 {
+  @apply relative flex items-center justify-center text-[#555];
   width: 100%;
   height: size(800);
   padding:0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
+  margin-bottom:8em;
   flex-wrap: wrap;
 
+  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
   .main {
     @apply flex;
     margin: 0;
@@ -106,7 +107,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s7 {
+  .s11 {
   @apply flex-col;
     height: auto;
     padding: 0;
@@ -115,31 +116,29 @@
   margin-bottom:0em;
 
   .main {
-    padding: 0 sizem(30);
+    padding: 0 sizem(32.5);
     width: 100%;
 }
 
-
-.txt {
+  .txt {
   .title{
     font-size: 1.8em;
     &::after,
     &::before{
-      width: 4.2em;}
+      width: 3.3em;}
   }
   .subtitle{
     font-size: 1.4em;
   }
   }
-
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -181,14 +180,46 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s7/1_m.webp", import.meta.url).href : new URL("./s7/1.webp", import.meta.url).href,
-    caption: "現場實景",
- },
+    img:new URL("./s11/1.jpg", import.meta.url).href ,
+    //img: globals.$isMobile() ? new URL("./s11/1_m.webp", import.meta.url).href : new URL("./s11/1.webp", import.meta.url).href,
+    caption: "現場實景"
+  },
   {
-    img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    img:new URL("./s11/2.jpg", import.meta.url).href ,
+    caption: "現場實景"
+  },
+  {
+    img:new URL("./s11/3.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s11/4.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s11/5.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
   },
 ]
+/*
+const imgs = [
+  {
+    img: getImg('s11/1'),
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: getImg('s11/2'),
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: getImg('s11/3'),
+    caption: "林口 長耀初"
+  },
+  {
+    img: getImg('s11/4'),
+    caption: "林口 長耀里"
+  },
+]
+*/
 </script>
 

@@ -1,18 +1,15 @@
-
-
 <template>
-  <article class="s7">
+  <article class="s10">
   <div class="txt">
-    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">森活族最愛</h3>
+    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">休旅者深愛</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="zoom-in-right">都心綠肺，青潤濃抹，<br />公園第一排，景觀頭等艙</h4>
-        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">碧波盈盈，無疆視野，喧囂自外<br />
-窗映時序，風光巨幕，森籟共鳴<br />
-坐落市心難得2800坪公園預定地樹海首排<br />
-不僅吸附落塵，降低PM2.5的危害<br />
-運動/散步/溜溜孩子與毛小孩，健康樂活你的植感生活</p>
+    <h4 class="subtitle" data-aos="zoom-in-right">飯店俬旅，奢享一座藝術飯店沙龍的家</h4>
+        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">
+          大尺度挑高門廳、交誼廳熱情迎賓、人文沙龍閱覽空間、健身房、韻律教室、兒童遊戲室…<br />
+從社交到藝文，十多項全齡樂活公設，不只藝術，而且生活，美學實用兼容並蓄<br />
+收納美感的堂奧，是盛裝嶄新故事、富享一生的家</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -21,8 +18,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+      <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -33,22 +30,21 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s7 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#555];
+.s10 {
+  @apply relative flex flex-col items-center justify-center text-[#555];
   width: 100%;
-  height: size(800);
+  // height: size(800);
   padding:0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-
+  margin-bottom:8em;
+  flex-wrap:nowrap;
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
+    width: 100%;
 }
   .txt {
     position: relative;
@@ -91,11 +87,13 @@
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+      height: size(844);
+    width: size(1500);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+      width: 100%;
+    flex-basis: size(1500);
+      height: size(844);
       
     }
   }
@@ -106,7 +104,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s7 {
+  .s10 {
   @apply flex-col;
     height: auto;
     padding: 0;
@@ -115,12 +113,11 @@
   margin-bottom:0em;
 
   .main {
-    padding: 0 sizem(30);
+    padding: 0 sizem(32.5);
     width: 100%;
 }
 
-
-.txt {
+  .txt {
   .title{
     font-size: 1.8em;
     &::after,
@@ -131,15 +128,14 @@
     font-size: 1.4em;
   }
   }
-
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -181,14 +177,38 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s7/1_m.webp", import.meta.url).href : new URL("./s7/1.webp", import.meta.url).href,
-    caption: "現場實景",
- },
+    img:new URL("./s10/1.jpg", import.meta.url).href ,
+    //img: globals.$isMobile() ? new URL("./s10/1_m.webp", import.meta.url).href : new URL("./s10/1.webp", import.meta.url).href,
+    caption: "現場實景"
+  },
   {
-    img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    img:new URL("./s10/2.jpg", import.meta.url).href ,
+    caption: "現場實景"
+  },
+  {
+    img:new URL("./s10/3.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
   },
 ]
+/*
+const imgs = [
+  {
+    img: getImg('s10/1'),
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: getImg('s10/2'),
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: getImg('s10/3'),
+    caption: "林口 長耀初"
+  },
+  {
+    img: getImg('s10/4'),
+    caption: "林口 長耀里"
+  },
+]
+*/
 </script>
 
