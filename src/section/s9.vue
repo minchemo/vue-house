@@ -3,13 +3,13 @@
 <template>
   <article class="s9">
   <div class="txt">
-    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">沒有人不愛</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">沒有人不愛</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="zoom-in-right">賞河景、觀夕照、遊老街、探人文⋯<br />
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">賞河景、觀夕照、遊老街、探人文⋯<br />
 在家，就能小旅行</h4>
-        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">閒看觀音山巒疊翠、大屯連峰<br />
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">閒看觀音山巒疊翠、大屯連峰<br />
 沈浸淡水河靜謐流淌、江帆船影<br />
 騎單車、坐渡輪、賞河景、觀夕照<br />
 遊老街、探人文、享美食<br />
@@ -37,8 +37,8 @@
 .s9 {
   @apply relative overflow-hidden flex items-center justify-center text-[#fff] bg-[#1691CF];
   width: 100%;
-  height: size(800);
-  padding:0;
+  height: auto;
+  padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
   flex-direction: row-reverse;
@@ -59,7 +59,7 @@
     width: 100%;
   .title{
     font-size: 2.2em;
-    margin: 1.6em 0 0em;
+    margin: 2em 0 0em;
     line-height: 1.4;
     font-weight: 700;
     text-align: center;
@@ -96,6 +96,11 @@
       height: size(560);
       
     }
+    .splide__pagination{
+      left: calc(100% + 3em);
+      justify-content: flex-start;
+    color: #fff; 
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -111,6 +116,7 @@
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
+  gap:2em;
 
   .main {
     padding: 0 sizem(30);
@@ -181,23 +187,23 @@ const imgs = [
   {
     img:new URL("./s9/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s9/1_m.webp", import.meta.url).href : new URL("./s9/1.webp", import.meta.url).href,
-    caption: "現場實景",
+    caption: "老街河岸 實景拍攝",
  },
   {
     img:new URL("./s9/2.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    caption: "金色水岸 實景拍攝",
   },
   {
     img:new URL("./s9/3.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    caption: "淡水老街 實景拍攝",
   },
   {
     img:new URL("./s9/4.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    caption: "漁人碼頭 實景拍攝",
   },
   {
     img:new URL("./s9/5.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    caption: "淡水老街小巷 實景拍攝",
   },
 ]
 </script>

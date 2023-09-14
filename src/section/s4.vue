@@ -1,13 +1,14 @@
 <template>
   <article class="s4">
+    <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s4/img.png" /></div>
   <div class="txt">
-    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">內行人鍾愛</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">內行人鍾愛</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="zoom-in-right">榮獲「三冠王」最高榮耀標章，<br />
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">榮獲「三冠王」最高榮耀標章，<br />
 萬企一出場，盡是口碑場</h4>
-        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400"><b>厚實力，厚工學</b><br />
+        <p class="desc" data-aos="fade-up" data-aos-delay="400"><b>厚實力，厚工學</b><br />
 深耕淡水半世紀，曾榮獲「國家建築金獎」最高榮譽<br />
 金象獎、金獅獎、誠信建商，三冠王之企業標竿<br />
 累計超過百棟建築、20000戶幸福家庭口碑見證<br />
@@ -40,14 +41,18 @@
 .s4 {
   @apply relative flex items-center justify-center text-[#555];
   width: 100%;
-  height: size(800);
-  padding:0;
+  height:auto;
+  padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
-  margin-bottom:8em;
   flex-wrap: wrap;
 
-  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -63,7 +68,7 @@
     width: 100%;
   .title{
     font-size: 2.2em;
-    margin: 1.6em 0 0em;
+    margin: 2em 0 0em;
     line-height: 1.4;
     font-weight: 700;
     color:#B78E63;
@@ -103,6 +108,14 @@
       height: size(560);
       
     }
+    .splide__pagination{
+      right: calc(100% + 3em);
+      justify-content: flex-end;
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #B78E63;
+    }
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -118,6 +131,9 @@
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
+  gap:2em;
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
@@ -186,44 +202,24 @@ const imgs = [
   {
     img:new URL("./s4/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "現場實景"
+    caption: "萬企建設 萬企大業 3D情境示意圖"
   },
   {
     img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    caption: "萬企建設 海天境 實景拍攝"
   },
   {
     img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "情境示意圖"
+    caption: "萬企建設 淡大君品 實景拍攝"
   },
   {
     img:new URL("./s4/4.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    caption: "和合開發 合韻 外觀合成示意圖"
   },
   {
     img:new URL("./s4/5.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    caption: "和合開發 晶站 外觀合成示意圖"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>
 

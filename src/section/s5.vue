@@ -2,12 +2,13 @@
 
 <template>
   <article class="s5">
+    <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s5/img.png" /></div>
   <div class="txt">
-    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">全家人都愛</h3>
-        <p class="desc text-center" data-aos="zoom-in" data-aos-delay="400">中山北，蛋黃圈，四大商圈繁華相伴，汲食行樂</p>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">全家人都愛</h3>
+        <p class="desc text-center" data-aos="fade-up" data-aos-delay="200">中山北，蛋黃圈，四大商圈繁華相伴，汲食行樂</p>
   </div>
     <div class="main">
-      <div class="txt">
+      <div class="txt" data-aos="fade-up" data-aos-delay="300">
 <transition name="fade" mode="out-in">
           <h4 class="subtitle" :key="currentImg.subtitle" v-html="currentImg.subtitle"></h4>
         </transition>
@@ -37,12 +38,15 @@
 .s5 {
   @apply relative overflow-hidden flex items-center justify-center text-[#555];
   width: 100%;
-  height: size(800);
-  padding:0;
+  height:auto;
+  padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
+
+.img{position: absolute;bottom:0;right:size(50);width:size(795);
+img{width: 100%;position: relative;}}
 
   .main {
     @apply flex;
@@ -59,7 +63,7 @@
     width: 100%;
   .title{
     font-size: 2.2em;
-    margin: 1.6em 0 0em;
+    margin: 2em 0 0em;
     line-height: 1.4;
     font-weight: 700;
     color:#B78E63;
@@ -99,6 +103,14 @@
       height: size(560);
       
     }
+    .splide__pagination{
+      left: calc(100% + 3em);
+      justify-content: flex-start;
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #B78E63;
+    }
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -114,6 +126,9 @@
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
+  gap:2em;
+
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
 
   .main {
     padding: 0 sizem(30);
@@ -183,27 +198,25 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s5/1_m.webp", import.meta.url).href : new URL("./s5/1.webp", import.meta.url).href,
-    caption: "現場實景",
+    caption: "中山北水碓商圈實景拍攝",
     subtitle: "淡水最火熱的中山北路水碓商圈",
     desc: "中山北路核心商圈，淡水人最愛全能生活超強機能<br>傳統市場，連鎖餐飲，電信公司，銀行，<br>所有民生必需，走路就可到<br>還有8-10線公車，到哪都方便",
-    // desc:globals.$isMobile() ?"2026年南科3期將完成擴建，預估創造390億年產值，看見台南共榮生活圈。僅約15分鐘車程，就能連結南科園區，讓南科新貴從繁忙的步調中，找回靜謐的棲身之所。":"2026年南科3期將完成擴建，預估創造390億年產值，<br>看見台南共榮生活圈。僅約15分鐘車程，就能連結南科園區，<br>讓南科新貴從繁忙的步調中，找回靜謐的棲身之所。",
  },
   {
     img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    caption: "老街人文商圈實景拍攝",
     subtitle: "老街人文商圈",
     desc: "伴著河岸風情、品嚐美食小吃<br>阿給、魚丸湯、鐵蛋、魚酥、蝦捲、酸梅汁⋯<br>米店、餅舖、雜貨店、布行，散發濃濃古早味<br>服飾、玩具、紀念品小棧、伴手禮專賣店，吸睛又有趣",
   },
   {
-    img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    img:new URL("./s5/3.jpg", import.meta.url).href ,
+    caption: "圖說",
     subtitle: "家樂福商圈行政中心",
     desc: "家樂福、全聯、麥當勞、星巴克、燦坤、寶雅<br>便利商店、連鎖餐飲林立<br>還有行政中心、運動中心、雙語國小<br>　",
   },
   {
     img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "現場實景",
+    caption: "真理街學區實景拍攝",
     subtitle: "真理大學文教圈",
     desc: "以新民街、新生街為中心的生活圈，<br>店家林立、生活機能健全<br>鄰近紅毛城、小白宮、滬尾砲台、雲門等人文勝地<br>文化藝術氣息濃厚，還有淡江高中、淡水國小、文化國小",
   },

@@ -6,14 +6,14 @@
     <img src="./s1/tm.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="$isMobile()"/> -->
        <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
        <!--div class="txt font-['noto_serif_tc']" data-aos="zoom-out" data-aos-duration="1000"><span class="t1">高鐵<br  v-if="$isMobile()"/>台積宅</span><span class="t2">2</span><span class="t3">字頭</span><span class="t4">THE GREEN ROAD</span></div-->
-    <div class="love"><img src="./s1/love.png" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/></div>
+    <div class="love"><img src="./s1/love.png" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/></div>
     <div class="love1" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div>
     <div class="love2" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div>
     <img src="./s1/bg1.png" v-if="!$isMobile()" class="bg1" alt=""/>
     <img src="./s1/bg2.png" v-if="!$isMobile()" class="bg2" alt=""/>
     <img src="./s1/bg_m.png" v-if="$isMobile()" class="bg1" alt=""/>
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+    <img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="600" data-aos-duration="1000"/>
   </article>
 </template>
 
@@ -60,12 +60,6 @@
      transform:translate(20%, -20%);
      img{transform: rotate(-7deg);}
     }
-
-    @keyframes an {
-  to {
-     transform:translate(0px);
-  }
-}
 
     .bg1{
      z-index: 0;

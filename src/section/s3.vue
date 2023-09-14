@@ -1,7 +1,7 @@
 <template>
   <article class="s3">
       <div class="txt">
-    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">淡水正核心 贏接市中心</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">淡水正核心 贏接市中心</h3>
       </div>
     <Fullview />
     <div class="caption">空拍合成示意圖</div>

@@ -42,6 +42,11 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+@keyframes an {
+  to {
+     transform:translate(0px);
+  }
+}
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
@@ -58,8 +63,6 @@ img {
   margin: 0 auto;
 }
 
-.slider {
-  @apply relative;
   .caption{
       @apply absolute;
       right:1em;
@@ -67,7 +70,9 @@ img {
       font-weight: 500;
       font-size: size(15);
       color: #FFF;
-      text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);}
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
+.slider {
+  @apply relative;
   .arrows{
     @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
     padding: 0; 
@@ -114,6 +119,8 @@ img {
   }
 }
 @media screen and (max-width: 767px) {
+  .caption{
+      font-size: sizem(12);}
 
 .slider {
   @apply relative;

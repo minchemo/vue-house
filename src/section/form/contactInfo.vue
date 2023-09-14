@@ -3,18 +3,21 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <!-- <div class="logo"></div> -->
+    <div class="logo">
+      <img src="@/section/s1/love.png" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
+      <img src="@/section/s1/logo.svg" class="logot" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+    </div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-        <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
+        <img src="@/section/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="//h65.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
-        <img src="//h65.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
+        <img src="@/section/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -24,7 +27,7 @@
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="//h65.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -36,21 +39,21 @@
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-      <img src="//h65.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
+      <img src="@/section/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="//h65.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h65.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
+      <img src="@/section/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
-      <img src="//h65.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -61,9 +64,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h65.tw/img/form/messenger.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
       `${info.address2?info.address2:'導航地址'}`
@@ -101,8 +104,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);;}
-.hover\:bg-color2:hover{background-color:linear-gradient(180deg, #E48726 0%, #eb7f20 10.00%, #f19832 41.00%, #f06b37 72.00%, #9e3410 100%);}
+.bg-color1{background-color: #003C95;}
+.hover\:bg-color2:hover{background-color:#00255e;}
 
 
 .contact-info-img{
@@ -117,14 +120,16 @@
   z-index: 50;
   // background: #045147;
 
-  .logo {
+  .logo {position: relative;
     width: size(367);
-    height: size(172);
+   // height: size(172);
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(30) auto;
+    margin: size(30) auto 0;
+    img{width: 100%;}
+    .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
   }
 
   .contact-item-box {
@@ -135,7 +140,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);
+      background-color: #003C95;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -152,7 +157,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #6A0;
+        background-color: #00255e;
         color: #fff;
 
         img {
@@ -170,7 +175,7 @@
       }
 
       &.address {
-        background: #fff;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -221,11 +226,6 @@
     }
   }
 }
-.modal-box{
-  img{filter: invert(11%) sepia(81%) saturate(4885%) hue-rotate(350deg) brightness(90%) contrast(90%);
-  //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
-  }
-}
 
 @media screen and (max-width:768px) {
 
@@ -240,12 +240,13 @@
     width: sizem(375);
     height: sizem(63);
     gap: sizem(1);
-    box-shadow: 0 0 sizem(50) #000c;
-    background:#002B69;
+    box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
+    background:#003C95;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(16);
+      font-weight: 400;
       color: #fff;
       border-left:1px solid #fff7;
 
@@ -274,8 +275,7 @@
 
     .logo {
       width: sizem(257);
-      height: sizem(140);
-    margin: sizem(70) auto sizem(30) auto;
+    margin: sizem(40) auto sizem(30) auto;
      // margin-bottom: sizem(47);
     }
 

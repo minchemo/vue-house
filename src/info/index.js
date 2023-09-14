@@ -16,6 +16,7 @@ export default {
     fbMessage: "https://m.me/100089552726620",
     caseName: caseName,
     houseInfos: [
+        /*
         ["投資興建", "建泰工藝"],
         ["建築設計", "三門聯合建築師事務所 "],
         ["結構設計", "織本結構株式會社"],
@@ -24,6 +25,7 @@ export default {
         ["建照號碼", "110建字第0357號"],
         ["證照號碼", "(112)雲縣地字000229號"],
         ["經紀人", "廖哲志"], 
+        */
     ],
     gtmCode: ["GTM-WJBN353"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
@@ -37,36 +39,36 @@ export default {
     },
     navList: [{
             name: "三冠王",
-            target: ".s2",
-            offset: "",
+            target: ".s4",
+            offset: "-60",
         },{
             name: "四聚頭",
-            target: ".s3",
-            offset: "",
+            target: ".s5",
+            offset: "-60",
         },{
             name: "雙首選",
-            target: ".s4",
-            offset: "",
+            target: ".s6",
+            offset: "-60",
         },{
             name: "森活味",
-            target: ".s6",
-            offset: "",
+            target: ".s7",
+            offset: "-60",
         },{
             name: "雙快速",
-            target: ".s7",
-            offset: "",
+            target: ".s8",
+            offset: "-60",
         },{
             name: "小旅行",
             target: ".s9",
-            offset: "",
+            offset: "-60",
         },{
             name: "飯店宅",
-            target: ".s9",
-            offset: "",
+            target: ".s10",
+            offset: "-60",
         },{
             name: "精品味",
-            target: ".s9",
-            offset: "",
+            target: ".s11",
+            offset: "-60",
         },{
             name: "立即來電",
             target: ".contact-info",

@@ -62,8 +62,8 @@
             background-color: currentColor;
             position: relative;
             transition: all .5s;
-            color: #003F28;
-            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
+            color: #fff;
+            box-shadow: 0 3px 0 #1C96D4;
 
             &::after {
                 content: '';
@@ -72,7 +72,7 @@
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
+            box-shadow: 0 3px 0 #1C96D4;
                 //transform: translateX(-10%);
             }
 
@@ -83,7 +83,7 @@
                 top: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
+            box-shadow: 0 3px 0 #1C96D4;
                 //transform: translateX(-10%);
             }
         }

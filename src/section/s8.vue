@@ -1,12 +1,13 @@
 <template>
   <article class="s8">
+    <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s4/img.png" /></div>
   <div class="txt">
-    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">通勤族酷愛</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">通勤族酷愛</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="zoom-in-right">一捷╳雙快速道，風馳電掣，翻轉未來</h4>
-        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">打通淡水任督二脈的二大交通建設<br />
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">一捷╳雙快速道，風馳電掣，翻轉未來</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">打通淡水任督二脈的二大交通建設<br />
 淡江大橋╳淡水北側快速道<br />
 其中預計2025年完工的淡江大橋，不僅是全世界最大的跨距斜張橋<br />
 更是媲美雪梨港灣大橋的景觀地標<br />
@@ -40,14 +41,13 @@
 .s8 {
   @apply relative flex items-center justify-center text-[#555];
   width: 100%;
-  height: size(800);
-  padding:0;
+  height:auto;
+  padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
-  margin-bottom:8em;
   flex-wrap: wrap;
-
-  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
+  .img{position: absolute;bottom:0;left:size(-270);width:size(660);
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -63,7 +63,7 @@
     width: 100%;
   .title{
     font-size: 2.2em;
-    margin: 1.6em 0 0em;
+    margin: 2em 0 0em;
     line-height: 1.4;
     font-weight: 700;
     color:#B78E63;
@@ -103,6 +103,14 @@
       height: size(560);
       
     }
+    .splide__pagination{
+      right: calc(100% + 3em);
+      justify-content: flex-end;
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #B78E63;
+    }
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -118,6 +126,9 @@
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
+  gap:2em;
+  .img{position: absolute;top:sizem(350);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
@@ -186,36 +197,16 @@ const imgs = [
   {
     img:new URL("./s8/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s8/1_m.webp", import.meta.url).href : new URL("./s8/1.webp", import.meta.url).href,
-    caption: "現場實景"
+    caption: "淡水捷運站 實景拍攝"
   },
   {
     img:new URL("./s8/2.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    caption: "捷運 實景拍攝"
   },
   {
     img:new URL("./s8/3.jpg", import.meta.url).href ,
-    caption: "情境示意圖"
+    caption: "淡水捷運站 實景拍攝"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s8/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s8/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s8/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s8/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>
 

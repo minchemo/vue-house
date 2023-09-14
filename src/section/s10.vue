@@ -1,12 +1,12 @@
 <template>
   <article class="s10">
   <div class="txt">
-    <h3 class="title" data-aos="zoom-in" data-aos-delay="200">休旅者深愛</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">休旅者深愛</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="zoom-in-right">飯店俬旅，奢享一座藝術飯店沙龍的家</h4>
-        <p class="desc" data-aos="zoom-in-right" data-aos-delay="400">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">飯店俬旅，奢享一座藝術飯店沙龍的家</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
           大尺度挑高門廳、交誼廳熱情迎賓、人文沙龍閱覽空間、健身房、韻律教室、兒童遊戲室…<br />
 從社交到藝文，十多項全齡樂活公設，不只藝術，而且生活，美學實用兼容並蓄<br />
 收納美感的堂奧，是盛裝嶄新故事、富享一生的家</p>
@@ -34,10 +34,9 @@
   @apply relative flex flex-col items-center justify-center text-[#555];
   width: 100%;
   // height: size(800);
-  padding:0;
+  padding:0 0 7em 0;
   font-size:size(18);
-  gap:3em;
-  margin-bottom:8em;
+  gap:1.5em;
   flex-wrap:nowrap;
   .main {
     @apply flex;
@@ -54,7 +53,7 @@
     width: 100%;
   .title{
     font-size: 2.2em;
-    margin: 1.6em 0 0em;
+    margin: 2em 0 0em;
     line-height: 1.4;
     font-weight: 700;
     color:#B78E63;
@@ -96,6 +95,13 @@
       height: size(844);
       
     }
+    .arrows .prev, .arrows .next{
+      width:3%;
+    }
+
+    .splide__pagination{
+      bottom: .5em;
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -111,6 +117,7 @@
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
+  gap:2em;
 
   .main {
     padding: 0 sizem(32.5);
@@ -143,6 +150,9 @@
     flex-basis: auto;
       height: sizem(250);
       
+    }
+    .arrows .prev, .arrows .next{
+      width:8%;
     }
   }
   }
@@ -179,15 +189,19 @@ const imgs = [
   {
     img:new URL("./s10/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s10/1_m.webp", import.meta.url).href : new URL("./s10/1.webp", import.meta.url).href,
-    caption: "現場實景"
+    caption: "門廳 3D情境示意圖"
   },
   {
     img:new URL("./s10/2.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    caption: "閱覽空間 3D情境示意圖"
   },
   {
     img:new URL("./s10/3.jpg", import.meta.url).href ,
-    caption: "情境示意圖"
+    caption: "交誼廳 3D情境示意圖"
+  },
+  {
+    img:new URL("./s10/4.jpg", import.meta.url).href ,
+    caption: "健身房 3D情境示意圖"
   },
 ]
 /*

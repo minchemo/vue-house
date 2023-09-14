@@ -1,9 +1,10 @@
 <template>
-  <div id="order" class="order relative text-center">
-    <div class="order-section font-['noto_sans_tc']">
+  <div id="order" class="order relative text-center bg-[#1691CF]">
+    <div class="bg"><img src="./s4/bg.png" v-if="!$isMobile()" alt=""><img src="./s1/bg_m.png" v-else alt=""></div>
+    <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center font-['noto_sans_tc']">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center font-['noto_sans_tc']">{{ info.order.subTitle }}</div>
+      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -84,6 +85,12 @@
 @import "@/assets/style/function.scss";
 
 
+.bg{
+     z-index: 0;
+    position: absolute;
+    top:0;width: 100%;left: 0;
+    img{width: 100%;transform: scaleY(-1);opacity: .2;}
+    }
 .order-section {
   position: relative;
  // padding-top: size(406);
