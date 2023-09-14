@@ -133,7 +133,7 @@ onMounted(() => {
     playerVars: {
       autoplay: 1, // 启用自动播放
       loop: 1, // 启用循环播放
-      controls: 0,
+      controls: 1,
       showinfo: 0,
       autohide: 1,
       modestbranding: 1,
