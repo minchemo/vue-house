@@ -182,7 +182,7 @@ const imgs = [
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s6/1_m.webp", import.meta.url).href : new URL("./s6/1.webp", import.meta.url).href,
-    caption: "興新國小 實景拍攝"
+    caption: "新興國小 實景拍攝"
   },
   {
     img:new URL("./s6/2.jpg", import.meta.url).href ,

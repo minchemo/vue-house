@@ -210,7 +210,7 @@ const imgs = [
   },
   {
     img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "圖說",
+    caption: "情境示意圖",
     subtitle: "家樂福商圈行政中心",
     desc: "家樂福、全聯、麥當勞、星巴克、燦坤、寶雅<br>便利商店、連鎖餐飲林立<br>還有行政中心、運動中心、雙語國小<br>　",
   },

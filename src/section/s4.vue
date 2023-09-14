@@ -1,5 +1,5 @@
 <template>
-  <article class="s4">
+  <article class="s4" ref="s4">
     <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s4/img.png" /></div>
   <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">內行人鍾愛</h3>
@@ -192,7 +192,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: true,
+  autoplay: false,
   interval: 4000,
   gap: 0,
   type: 'loop'

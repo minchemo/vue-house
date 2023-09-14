@@ -16,8 +16,8 @@
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-    <S2 />
     <S2v />
+    <S2 />
     <S3 />
     <S4 />
     <S5 />
