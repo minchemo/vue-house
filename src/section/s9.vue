@@ -2,6 +2,14 @@
 
 <template>
   <article class="s9">
+    <div class="img">
+  <img class="box" src="https://i.imgur.com/tEgarks.png">
+  <img class="img1" src="./s9/img1.png">
+  <img class="img2" src="./s9/img2.png">
+  <img class="img3" src="./s9/img2.png">
+  <img class="img4" src="./s9/img4.png">
+  <img class="img5" src="./s9/img5.png">
+</div>
   <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">沒有人不愛</h3>
   </div>
@@ -43,6 +51,64 @@
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
+
+  .img {
+  //尺寸位子只需要調這邊
+  position: absolute;
+  width:size(462);
+  right: 0;
+  bottom: size(-150);
+  //底下都不用動
+  @keyframes an {
+    to {
+      transform: rotate(0);
+    }
+  }
+  img {
+    position: absolute;
+    &.box {
+      width: 100%;
+      position: relative;
+    }
+  }
+  .img1 {
+    width: 19.7%;
+    top: 0%;
+    left: 50%;
+    transform: rotate(10deg);
+    transform-origin: 7% 30%;
+    animation: an 1.5s ease-in-out infinite alternate;
+   
+  }
+  .img2 {
+    width: 22.6%;
+    top: 33.4%;
+    left: 14.0%;
+    transform: rotate(90deg);
+    transform-origin:50% 50%;
+    animation: an 2s linear infinite;}
+  .img3 {
+    width: 22.6%;
+    top: 34%;
+    left: 56%;
+    transform: rotate(90deg);
+    transform-origin:50% 50%;
+    animation: an 2s linear infinite;}
+  .img4 {
+    width: 20.6%;
+    top: 11.8%;
+    left: 13.9%;
+    transform: rotate(5deg);
+    transform-origin: 55% 80%;
+    animation: an 1.5s ease-in-out infinite alternate;
+  }
+  .img5 {
+    width: 100%;
+    top:0;
+    left: 0;
+  }
+}
+
 
   .main {
     @apply flex;
@@ -117,6 +183,13 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
+  .img {
+  //尺寸位子只需要調這邊
+  width:sizem(150);
+  right: sizem(-10);
+  top: sizem(150);
+  bottom: auto;
+}
 
   .main {
     padding: 0 sizem(30);
