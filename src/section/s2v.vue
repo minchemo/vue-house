@@ -18,6 +18,8 @@ iframe {
     width: size(1400);
     height: size(790);
     margin: size(60) auto;
+    background: url('@/section/s2/v.jpg') center;
+    background-size: cover;
 }
 
 @media screen and (max-width:768px) {
@@ -25,8 +27,6 @@ iframe {
     .video {
         width: 95%;
         height: sizem(330);
-    background: url('@/section/s2/v.jpg') center;
-    background-size: cover;
     margin: sizem(10) auto;
         .play {
             width: 100%;
