@@ -1,7 +1,7 @@
 <template>
     <div class="s2v relative bg-[#000]">
       <div class="video" >
-       <iframe data-aos="fade-up" src="https://www.youtube.com/embed/-GF_23Huuk8?autoplay=1&mute=1&mute=1&loop=1&playlist=-GF_23Huuk8" title="YouTube video player" frameborder="0"
+       <iframe data-aos="fade-up" src="https://www.youtube.com/embed/0Y43DRbvRaM?autoplay=1&mute=1&mute=1&loop=1&playlist=0Y43DRbvRaM" title="YouTube video player" frameborder="0"
     allowfullscreen></iframe>
       </div>
     </div>
