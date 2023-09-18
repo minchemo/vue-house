@@ -28,60 +28,6 @@ iframe {
         width: 95%;
         height: sizem(330);
     margin: sizem(10) auto;
-        .play {
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-            img{
-            width: sizem(60);}
-        
-        &:hover {
-            opacity: .7;
-        }
-        }
-
-        .player {            
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-        transition: all .5s;
-        transform: translateY(200%);
-        background-color: rgba(0,0,0,.8);
-            backdrop-filter: blur(15px);
-            gap: sizem(50);
-        &.open {
-            transform: translateY(0%);
-        }
-
-            .video-box {
-                height: auto;
-                width: 100%;
-            background-color: #000;
-            }
-
-            .close {
-                background-color: #fff;
-                padding: sizem(10) sizem(25);
-                font-size: sizem(15);
-                border-radius: 9999px;
-                transition: all .2s;
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.05);
-            }
-            }
-
-        }
     }
 }
 </style>
