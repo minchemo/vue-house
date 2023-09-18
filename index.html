@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <script>
         window.appier_q = window.appier_q || [];
         window.appier_q.push({
@@ -31,6 +33,32 @@
         })
     </script>
     <script src="//jscdn.appier.net/aa.js?id=cyl.changyaoli.tw" async></script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                console.log(arguments)
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '351688960464963');
+        fbq('track', 'PageView');
+
+        var add = window.location.toString();
+        if (add.indexOf("formThanks") != -1) {
+            fbq('track', "Lead");
+        }
+
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=351688960464963&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
 </head>
 
@@ -38,5 +66,6 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
 </body>
+
 
 </html>

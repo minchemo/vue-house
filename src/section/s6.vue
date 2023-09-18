@@ -61,7 +61,7 @@
             margin-bottom: size(40);
 
             span {
-                color: #F5EAD4;
+                color: #DCC35F;
             }
 
             text-shadow: 0px size(4) size(4) rgba(0, 0, 0, 0.25);

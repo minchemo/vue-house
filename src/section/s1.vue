@@ -2,19 +2,31 @@
   <article class="s1 overflow-hidden flex flex-col items-center justify-center">
       <div class="linestyle"></div>
     <div class="title flex flex-col items-center justify-center">
-      <img class="logo" src="@/section/s1/logo_n.svg" alt="長耀里" srcset="">
-      <h2 class="t1">長耀里藏富貴 26層新古典頂級地標</h2>
-      <p class="t2 font-['noto_sans_tc']">起因富貴，師出有名，懷藏因地適宜的森情，與不退而求其次的雄心，溫柔隱身富貴森林公園，<br v-if="!$isMobile()">
-        這是林口第 18 個里，唯一住在公園的里，這個里，屬於長耀，屬於你。<br>
-        家的理想樣貌，一座種在公園裡的建築，將於以里為名的綠金疆土上完美實現。</p>
-      <h3 class="t3 font-['noto_sans_tc']">新國際豪宅生活式樣<br v-if="$isMobile()" /><span
-          v-else>｜</span>18-29坪 入主富貴公園</h3>
+      <img class="logo-light" src="@/section/s1/light.png" alt="長耀里" srcset="">
+      <img class="logo" v-if="!$isMobile()" src="@/section/s1/logo.png" alt="長耀里" srcset="">
+      <img class="logo" v-else src="@/section/s1/logo_m.png" alt="長耀里" srcset="">
+      <img class="t1-img" v-if="!$isMobile()" src="@/section/s1/t1.svg" alt="長耀里" srcset="">
+      <h2 class="t3" v-if="!$isMobile()">2609-2000</h2>
+      <div class="order-btn" href="#" v-if="!$isMobile()" @click="scrollTo('.order')">立即預約</div>
+      <h2 class="t1" v-if="$isMobile()">爭藏！林口國際級公園景觀名宅生活</h2>
+      <p class="t2" v-if="$isMobile()">
+        【長耀里2】長耀建設深耕林口代表之作<br>
+        坐落中心商業帶黃金軸線<br>
+        入主富貴公園千坪綠馥<br>
+        坐落在中心商業帶的黃金軸線<br>
+        800米直達科技大廠ＡＳＭＬ預定地<br>
+        榮耀新北國際ＡＩ智慧園區<br><br>
+        富人名流爭相收藏<br>
+        一期深受肯定，二期矚目而生！
+        </p>
+      <h3 class="t4" v-if="$isMobile()">18-29坪精質入主｜130米永恆棟距<br>26層新古典最美地標</h3>
     </div>
-      <img class="buck" src="@/section/s1/buck.webp" alt="長耀里" srcset="">
-      <div class="buckbbg" v-if="!$isMobile()"></div>
+    <img class="logoicon" v-if="$isMobile()" src="@/section/s1/logoicon.svg" alt="長耀里" srcset="">
+      <!--img class="buck" src="@/section/s1/buck.webp" alt="長耀里" srcset="">
+      <div class="buckbbg" v-if="!$isMobile()"></div-->
     <lazy-component>
-      <img class="circle" src="@/section/s1/circle.webp" alt="長耀里" srcset="">
-      <img class="circle2" src="@/section/s1/circle2.webp" alt="長耀里" srcset="">
+      <!--img class="circle" src="@/section/s1/circle.webp" alt="長耀里" srcset="">
+      <img class="circle2" src="@/section/s1/circle2.webp" alt="長耀里" srcset=""-->
     </lazy-component>
 
   </article>
@@ -24,7 +36,8 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-  background-size: contain;
+  background-image: url('@/section/s1/bg.jpg');
+  background-size: cover;
   width: 100%;
   height: size(1080);
   position: relative;
@@ -51,30 +64,75 @@
     }
 
     .t3 {
-      position: relative;
-      font-size: size(20);
+      position: absolute;
+      top:size(750);
+      font-weight: 600;
+      font-size: size(45);
       line-height: size(29);
       text-align: center;
       margin: size(30) 0;
       display: flex;
       align-items:center;
       gap: .5em;
+      color: #DCC35F;
 
 
       &::after,
       &::before {
         content: '';
         height: 1px;
-        width: size(140);
-        background-color: #fff;
+        width: size(350);
+        background-color: #DCC35F;
       }
+    }
+    .logo-light{
+      position: absolute;
+      width: size(244);
+      left: size(380);
+      top: size(70);
+      mix-blend-mode: plus-lighter;
+      z-index: 2;
     }
 
     .logo {
-      width: size(450);
-      margin-bottom: size(50);
+      position: absolute;
+      width: size(900);
+      top: size(160);
+      margin-right: size(50);
+    }
+    .t1-img {
+      position: absolute;
+      width: size(684);
+      top: size(500);
+    }
+
+    .order-btn{
+      position: absolute;
+      width: size(350);
+      height: size(70);
+      color: #DCC35F;
+      font-size: size(35);
+      border: 1px solid #DCC35F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      top: size(870);
+      background: #00000079;
+      transition: all 0.5s;
+      cursor: pointer; 
+
+
+      &:hover{
+      background: #000000de;
+      color: #fff;  
+      transition: all 0.5s;
+      }
     }
   }
+
+  
+
   .circle,
   .circle2 {
     position: absolute;
@@ -110,17 +168,6 @@
     width: size(150);
     z-index: 4;
   }
-  .linestyle{
-    position: absolute;
-    width: size(1820);
-    height: size(930);
-    top: size(100);
-    bottom: size(50);
-    left: size(50);
-    right: size(50);
-    border-radius: size(30);
-    border: #fff 1px solid;
-  }
   .buckbbg{
     position: absolute;
     width: size(100);
@@ -144,21 +191,30 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
+    background-image: url('@/section/s1/bg_m.jpg');
+    background-size: cover;
     height: size-m(667);
     padding-bottom: size-m(100);
 
     .title {
+      
+
       .t1 {
         font-size: size-m(20);
         padding-bottom: size-m(6);
         margin-bottom: size-m(18);
+        margin-top: size-m(250);
+        color: #DCC35F;
+        text-shadow: black 0.1em 0.1em 0.2em
       }
 
       .t2 {
-        font-size: size-m(12);
+        font-size: size-m(13);
         line-height: 180%;
         letter-spacing:0;
-        width: size-m(305);
+        width: size-m(330);
+        text-align: center;
+        text-shadow: black 0.1em 0.1em 0.2em
       }
 
       .t3 {
@@ -171,11 +227,35 @@
           width: size-m(59);}
       }
 
-      .logo {
-        width: size-m(150);
-        margin-bottom: size-m(20);
+      .t4 {
+        font-size: size-m(20);
+        text-align: center;
+        margin-top: size-m(30);
+        color: #fff;
+        text-shadow: black 0.1em 0.1em 0.2em
       }
+
+      
+
+      .logo {
+        width: size-m(220);
+        margin-bottom: size-m(20);
+        margin-right: size-m(-30);
+        top:size-m(50);
+      }
+
+      .logo-light{
+      width: size-m(71);
+      left: size-m(125);
+      top: size-m(30);
     }
+    }
+
+    .logoicon{
+    width: size-m(57);
+    position: absolute;
+    bottom:size-m(20);
+  }
 
 
     .circle {
@@ -195,16 +275,6 @@
       width: size-m(120);
     }
 
-    .linestyle{
-    width: size-m(355);
-    height: size-m(627);
-    top: size-m(20);
-    bottom: size-m(20);
-    left: size-m(10);
-    right: size-m(10);
-    border-radius: size(30);
-  }
-
     .buck-e {
       position: absolute;
       right: unset;
@@ -217,5 +287,17 @@
 }
 </style>
 <script setup>
-import { ref } from 'vue';
+import { inject, computed, getCurrentInstance, ref } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
+
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+    smoothScroll({
+        scrollTo: document.querySelector(el)
+    })
+    menuOpen.value = !menuOpen.value;
+}
 </script>

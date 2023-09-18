@@ -59,7 +59,6 @@
             interval: 4000,
         }" @splide:move="move" class="slide-box">
             <SplideSlide class="slide" v-for="img in imgs[slideType]['img']">
-                <img v-if="$isMobile()" class="decor" src="@/section/s10/decor.webp" alt="長耀里" srcset="">
                 <img class="img" :src="img.img" alt="長耀里" srcset="">
             </SplideSlide>
         </Splide>
@@ -95,23 +94,23 @@
         font-size: size(40);
         line-height: 150%;
         letter-spacing: size(.05);
-        color: #ACA883;
+        color: #DCC35F;
         gap: size(25);
         margin-bottom: size(57);
 
         .item {
-            border: size(1) solid #ACA883;
+            border: size(1) solid #DCC35F;
             padding: size(5) size(15);
 
             &:hover {
 
-                background-color: #ACA883;
+                background-color: #DCC35F;
                 color: #000;
                 cursor: pointer;
             }
 
             &.active {
-                background-color: #ACA883;
+                background-color: #DCC35F;
                 color: #000;
             }
         }
@@ -127,7 +126,7 @@
             font-size: size(40);
             margin-bottom: size(10);
             letter-spacing: size(.05);
-            color: #ACA883;
+            color: #DCC35F;
 
             &::after {
                 content: '';
@@ -221,18 +220,18 @@
             margin-top: size-m(47);
 
             .item {
-                border: size-m(1) solid #ACA883;
+                border: size-m(1) solid #DCC35F;
                 padding: size-m(3) size-m(15);
 
                 &:hover {
 
-                    background-color: #ACA883;
+                    background-color: #DCC35F;
                     color: #000;
                     cursor: pointer;
                 }
 
                 &.active {
-                    background-color: #ACA883;
+                    background-color: #DCC35F;
                     color: #000;
                 }
             }
@@ -246,7 +245,7 @@
                 font-weight: 700;
                 font-size: size-m(24.5);
                 margin-bottom: 0;
-                color: #F5EAD4;
+                color: #DCC35F;
                 padding-left: size-m(30);
 
                 &::after {
