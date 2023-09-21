@@ -130,7 +130,7 @@
 
   .logo {
     width: size(367);
-    height: size(172);
+    height:auto;
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -293,7 +293,7 @@
 
     .logo {
       width: sizem(220);
-      height: sizem(140);
+      height:auto;
     margin: sizem(0) auto sizem(20) auto;
      // margin-bottom: sizem(47);
     }
