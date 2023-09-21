@@ -3,6 +3,7 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+    <img src="@/section/s1/logo.svg" class="logo" alt="" />
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
@@ -110,7 +111,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#A92D41;}
+.bg-color1{
+    background:linear-gradient(40deg, #F6AD48 3.5%, #E96087 25%, #3551A1 46%, #49BBBC 90.5%);}
 .hover\:bg-color2:hover{background-color:#861427;}
 
 
@@ -144,7 +146,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#A92D41;
+      position: relative;
+    background:linear-gradient(40deg, #F6AD48 3.5%, #E96087 25%, #3551A1 46%, #49BBBC 90.5%);
       color: #FFF;
       width: 100%;
     font-weight: 700;
@@ -160,11 +163,14 @@
       cursor: pointer;
       //border: 1px solid #C29267;
       gap: 1em;
-
+      &::after{content: "";
+      position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+      background: #0009;transition:transform .5s ;
+      transform: scaleX(0);transform-origin: 0 0;
+      mix-blend-mode: soft-light;
+    }
       &:hover {
-      background:#861427;
-        color: #fff;
-
+        &:after{transform: scaleX(1);}
         img {
           filter: brightness(0) invert(1);
         }
@@ -252,13 +258,13 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#A92D41;
+    background:#41167C;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(16);
       color: #fff;
-      border-left:1px solid #fff7;
+      border-left:1px solid #fff6;
     font-weight: 700;
       img {
         margin-bottom: sizem(5);
@@ -267,6 +273,8 @@
         max-height: sizem(16.5);
         filter: brightness(0) invert(1);
       }
+      &:first-child{
+      border-left:0px;}
 
     }
   }
@@ -284,9 +292,9 @@
   background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(257);
+      width: sizem(220);
       height: sizem(140);
-    margin: sizem(70) auto sizem(30) auto;
+    margin: sizem(0) auto sizem(20) auto;
      // margin-bottom: sizem(47);
     }
 

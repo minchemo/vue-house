@@ -1,4 +1,4 @@
-const caseName = "勝興興站"
+const caseName = "佳瓚大賀"
 
 export default {
     meta: {
@@ -6,14 +6,14 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
-    address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市沙鹿區永寧路、新站一路口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3638.173294574602!2d120.55402!3d24.235717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE0JzA4LjYiTiAxMjDCsDMzJzE0LjUiRQ!5e0!3m2!1szh-TW!2stw!4v1692164201995!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/ZPZofPbe1gUT6R9F9",
-    phone: "04-2665-5577",
-    fbLink: "https://www.facebook.com/100095472765730",
-    fbMessage: "https://m.me/100095472765730",
+    // address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
+    // address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
+    address: "台中市梧棲區四維中路・四維西路口",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14549.766282686254!2d120.5253988091313!3d24.261302693629446!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346914b67268ebd7%3A0x228c0d49a75733dd!2zNDM16Ie65Lit5biC5qKn5qOy5Y2A5Zub57at6KW_6LevICYg5Zub57at5Lit6Lev!5e0!3m2!1szh-TW!2stw!4v1695282916118!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/co8cjYkNHdmvheYF9",
+    phone: "04-2656-3111",
+    fbLink: "https://www.facebook.com/",
+    fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
        /* ["投資興建", ""],
@@ -25,7 +25,7 @@ export default {
         ["基地面積", ""],
         ["格局規劃", ""],*/
     ],
-    gtmCode: ["GTM-PQ8LQ84S"], // 可放置多個
+    gtmCode: ["GTM-WBVL46WZ"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -33,8 +33,9 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        // subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
+    /*
     navList: [{
             name: "微笑歐洲",
             target: ".s1",
@@ -78,5 +79,5 @@ export default {
             type: 'btn'
         },
     ],
-    
+    */
 }

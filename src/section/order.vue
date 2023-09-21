@@ -1,24 +1,11 @@
 <template>
   <div id="order" class="order relative text-center">
-    <div class="star">
-      <div class="star01" data-aos="zoom-in" data-aos-delay="800"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star02" data-aos="zoom-in" data-aos-delay="300"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star03" data-aos="zoom-in" data-aos-delay="1100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star04" data-aos="zoom-in" data-aos-delay="100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star05" data-aos="zoom-in" data-aos-delay="200"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star06" data-aos="zoom-in" data-aos-delay="400"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star07" data-aos="zoom-in" data-aos-delay="700"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star08" data-aos="zoom-in" data-aos-delay="1000"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star09" data-aos="zoom-in" data-aos-delay="0"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star10" data-aos="zoom-in" data-aos-delay="500"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star11" data-aos="zoom-in" data-aos-delay="600"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star12" data-aos="zoom-in" data-aos-delay="900"><img src="./s1/star1.png" alt="star"></div>
-    </div>
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
-      <!-- <div class="cus-divider"></div> -->
+      <div class="order-titleen text-center font-['Noto_Serif_TC']">CONTACT US</div>
+      <div class="order-title text-center" v-html="info.order.title"></div>
+      <!-- <div class="order-subTitle text-center">歡迎預約，將有專人與您聯絡<span>(*為必填項目)</span></div>
+      <div class="cus-divider"></div> -->
 
       <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
@@ -27,6 +14,7 @@
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
+<div class="mand"><span>*</span>為必填</div>
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
@@ -39,7 +27,7 @@
             <option value="" selected disabled>需求房型</option>
             <option value="二房">二房</option>
             <option value="三房">三房</option>
-          </select>  -->
+          </select>
           <label class="row"><span>服務專員</span>
           <select class="select w-full rounded-none bg-white" v-model="formData.people">
             <option value="" selected disabled>選擇專員</option>
@@ -48,7 +36,7 @@
             <option value="專員C">專員C</option>
             <option value="專員D">專員D</option>
             <option value="專員E">專員E</option>
-          </select></label>
+          </select></label>  -->
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -74,9 +62,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#f00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -105,48 +93,6 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
-
-.star{position: absolute;left: 0;top: 0;width: 100%;height:20vw;
-> div {position: absolute;
-img{width: 100%;}}
-  .star01{width: size(395);top: 164%;left: 7%;
-    img{opacity:0.1;transform: rotate(16deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star02{width: size(556);top: 104%;left: 48%;
-    img{opacity: 0.1;transform: rotate(37deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star03{width: size(360);top: 175%;left: -3%;
-    img{opacity: 0.1;transform: rotate(16deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star04{width: size(556);top: -8%;left: 72%;
-    img{opacity: 0.1;transform: rotate(-39deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star05{width: size(484);top: 57%;left: 63%;
-    img{opacity: 0.3;transform: rotate(170deg);}
-  }
-  .star06{width: size(268);top:163%;left: 53%;
-    img{opacity: 0.3;transform: rotate(-94deg);}
-  }
-  .star07{width: size(147);top: 195%;left: 30%;
-    img{opacity: 0.3;transform: rotate(-5deg);}
-  }
-  .star08{width: size(308);top: 127%;left: 3.5%;
-    img{opacity: 0.3;transform: rotate(17deg);}
-  }
-  .star09{width: size(566);top: 51%;left: 78%;
-    img{opacity: 0.3;transform: rotate(97deg);}
-  }
-  .star10{width: size(137);top: 175%;left: 65%;
-    img{opacity: 0.3;transform: rotate(-32deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-  .star11{width: size(137);top: 195%;left: 42.5%;
-    img{opacity: 0.3;transform: rotate(40deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-  .star12{width: size(137);top: 160%;left: 17%;
-    img{opacity: 0.52;transform: rotate(27deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-}
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -188,11 +134,18 @@ img{width: 100%;}}
     }
   }
 
-  .order-title {
-    font-size: size(40);
+  .order-titleen {
+    font-size: size(50);
     font-weight: 700;
-    color: #fff;
+    color: #42167B;
     padding-top:2em;
+  }
+
+  .order-title {
+    font-size: size(20);
+    font-weight: 700;
+    color: #42167B;
+    padding-bottom:1em;
   }
 
   .order-title-img {
@@ -201,10 +154,11 @@ img{width: 100%;}}
   }
   .order-subTitle{
     font-size: size(17);
-    color: #fff;
+    color: #000;
     padding-top:.8em;
     letter-spacing: 0em;
     font-weight: 500;
+    > span{color: #F00;}
   }
   .cus-divider {
     margin: 0 auto;
@@ -218,12 +172,16 @@ img{width: 100%;}}
     width: size(920);
     min-width: 680px;
     //  height: 350px;
-    gap: size(80);
-    margin-top: size(45);
+    gap:0 size(80);
+    margin-top: size(20);
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
-
+    flex-wrap: wrap;
+.mand{width: 100%;display: block;margin: 0 0 0.5em;
+  text-align: left; font-size: size(14);
+span{color: #F00;}
+}
     .left {
       flex: 1;
       gap: size(20);
@@ -239,9 +197,9 @@ img{width: 100%;}}
     &::after {
       content: "";
       width: size(1);
-      height: 100%;
+      height: calc(100% - 1.6em);
       background-color: #fff;
-      position: absolute;
+      position: absolute;bottom: 0;
     }
     .row{background: #FFF;border: 1px solid #CCC;color: #000;
       display: flex;width: 100%;
@@ -269,7 +227,7 @@ img{width: 100%;}}
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#A92D41;
+    background:linear-gradient(40deg, #F6AD48 3.5%, #E96087 25%, #3551A1 46%, #49BBBC 90.5%);
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -290,47 +248,6 @@ img{width: 100%;}}
 }
 
 @media screen and (max-width:768px) {
-.star{
-  height:sizem(604);
-
-  .star01{width:sizem(118);top: -1%;left: 57%;
-    img{transform: rotate(-20deg);}
-  }
-  .star02{width:sizem(162);top:19%;left: -4%;
-    img{transform: rotate(121deg);}
-  }
-  .star03{width:sizem(108);top: 0%;left: 73%;
-    img{transform: rotate(-20deg);}
-  }
-  .star04{width:sizem(167);top:122%;left: 18%;
-    img{transform: rotate(152deg);}
-  }
-  .star05{width:sizem(149);top: 115%;left: 1%;
-    img{transform: rotate(162deg);}
-  }
-  .star06{width:sizem(86);top: 122%;left: 76%;
-    img{transform: rotate(34deg);}
-  }
-  .star07{width:sizem(43);top: 0%;left: 25%;
-    img{transform: rotate(30deg);}
-  }
-  .star08{width:sizem(91);top: 10%;left: 69.5%;
-    img{transform: rotate(-19deg);}
-  }
-  .star09{width:sizem(178);top: 129%;left: 10%;
-    img{transform: rotate(164deg);}
-  }
-  .star10{width:sizem(43);top: 123%;left: 70%;
-    img{transform: rotate(-107deg);}
-  }
-  .star11{width:sizem(43);top: 14%;left: 0%;
-    img{transform: rotate(-68deg);}
-  }
-  .star12{width:sizem(45);top: 5%;left: 62%;
-    img{transform: rotate(-15deg);}
-  }
-
-}
   .order-section {
     min-height: sizem(800);
     position: relative;
@@ -373,8 +290,12 @@ img{width: 100%;}}
       background-color: #055F76;
     }
 
+    .order-titleen {
+      font-size: sizem(30);
+      // padding-top:4.5em;
+    }
     .order-title {
-      font-size: sizem(25);
+      font-size: sizem(15);
       // padding-top:4.5em;
     }
     .order-subTitle{
@@ -391,6 +312,7 @@ img{width: 100%;}}
       margin-bottom: sizem(20);
       flex-direction: column;
       margin-top: sizem(20);
+      .mand{margin:0 0 -.5em; font-size: sizem(14);}
 
       .left {
         width: 100%;

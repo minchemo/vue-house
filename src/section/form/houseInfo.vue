@@ -1,6 +1,5 @@
 <template>
-    <!-- 
-    <div class="house">
+    <div class="house" v-if="info.houseInfos.length > 0">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
             <div class="flex-1 items-center justify-center py-10">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
@@ -18,7 +17,6 @@
             </div>
         </div>
     </div>
-     -->
     <!--
     <div class="house bg-[#FF3EA1] flex items-center justify-center">
             <p class=""><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
