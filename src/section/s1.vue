@@ -4,15 +4,15 @@
      <img  src="@/section/s1/gif4.gif" alt="" srcset=""> 
     </div>
     <div class="title">
-      <img v-if="!$isMobile()" class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/t1.png" alt=""
+      <img class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo.svg" alt=""
         srcset="">
-      <img v-else class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/t1_m.png" alt="" srcset="">
       <img v-if="!$isMobile()" class="t2" data-aos="fade-up" data-aos-delay="200" src="@/section/s1/t2.png" alt=""
         srcset="">
-      <img v-else class="t2" data-aos="fade-up" data-aos-delay="200" src="@/section/s1/t2_m.png" alt="" srcset="">
-      <img v-if="!$isMobile()" class="t3" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t3.png" alt=""
-        srcset="">
-      <img v-else class="t3" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t3_m.png" alt="" srcset="">
+      <img v-else class="t2" data-aos="fade-up" data-aos-delay="200" src="@/section/s1/t2_m.svg" alt="" srcset="">
+      <div class="t3 font-['noto_sans_tc']" data-aos="fade-up" data-aos-delay="300">海洋新國門｜站前四鐵特區｜首開世界豪門</div>
+
+      <img v-if="!$isMobile()" class="t4" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t4.svg" alt="" srcset="">
+      <img v-else class="t4" data-aos="fade-up" data-aos-delay="400" src="@/section/s1/t4_m.svg" alt="" srcset="">
     </div>
     <img class="sun" src="@/section/s1/sun.png" alt="" srcset="">
     <div class="boatin" data-aos="fade-left" data-aos-delay="500">
@@ -85,16 +85,21 @@
   .title {
     @apply left-1/2 -translate-x-[50%] absolute flex flex-col items-center justify-center;
     z-index: 5;
-    top: size(112);
-    gap: size(36);
+    top: size(70);
+    gap: size(26);
     .t1 {
-      width: size(984);
+      width: size(300);
     }
     .t2 {
       width: size(984);
     }
     .t3 {
-      width: size(694);
+      color: #fff;
+      font-size: size(35);
+      font: 400;
+    }
+    .t4 {
+      width: size(594);
     }
   }
 
@@ -122,8 +127,8 @@
 
     .light {
       @apply  mix-blend-screen pointer-events-none absolute;
-      width: 100%;
-      left: 0;
+      width: 85%;
+      left: size-m(28);
       bottom: 0;
       animation: light .5s alternate-reverse infinite;
       @keyframes light {
@@ -176,15 +181,19 @@
     top: size-m(80);
     gap: 0;
     .t1 {
-      width: size-m(158);
+      width: size-m(209);
     }
     .t2 {
-      width: size-m(239);
-      margin-top: size-m(50);
-      margin-bottom: size-m(23);
+      width: size-m(209);
+      margin-top: size-m(20);
+      margin-bottom: size-m(15);
     }
     .t3 {
-      width: size-m(139);
+      font-size: size-m(11);
+      margin-bottom: size-m(15);
+    }
+    .t4{
+      width: size-m(209);
     }
   }
 
