@@ -135,7 +135,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #D71718;
+      background-color: #000;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -152,7 +152,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #a00909;
+        background-color: #500a0a;
         color: #fff;
 
         img {
@@ -236,7 +236,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background:#D71718;
+    background:#000;
 
     .contact-item {
       height: 100%;      

@@ -7,13 +7,7 @@
        <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
        <!--div class="txt font-['noto_serif_tc']" data-aos="zoom-out" data-aos-duration="1000"><span class="t1">高鐵<br  v-if="$isMobile()"/>台積宅</span><span class="t2">2</span><span class="t3">字頭</span><span class="t4">THE GREEN ROAD</span></div-->
     <img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/love.png" class="love" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/love1.png" v-if="!$isMobile()" class="love1" alt="">
-    <img src="./s1/love2.png" v-if="!$isMobile()" class="love2" alt="">
-    <img src="./s1/bg1.png" v-if="!$isMobile()" class="bg1" alt=""/>
-    <img src="./s1/bg2.png" v-if="!$isMobile()" class="bg2" alt=""/>
-    <img src="./s1/bg_m.png" v-if="$isMobile()" class="bg1" alt=""/>
+    <img src="./s1/woman.webp" class="love" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
   </article>
 </template>
 
@@ -30,13 +24,14 @@
   justify-content: center;
   align-items:center;
   font-size:size(25);
+  overflow: hidden;
 
     .love{
-    z-index: 1;
+    //z-index: 1;
     position: absolute;  
-    width: size(850);
-    left: size(105);
-    top: size(115);
+    width: size(786);
+    left: size(-0);
+    bottom: size(0);
     }
 
     .love1{
@@ -67,22 +62,12 @@
   }
 }
 
-    .bg1{
-     z-index: 0;
-    position: absolute;
-    bottom:size(0);
-    }
-
-    .bg2{
-    z-index: 2;
-    position: absolute;
-    bottom:size(0);
-    }
+ 
    .txt{
     width: size(698);
     position: absolute;
-    right: size(115);
-    top: size(285);
+    right: size(205);
+    top: size(235);
   }
   .logo{
     position: absolute;
@@ -109,27 +94,22 @@
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(766);
-    max-height: sizem(766);
+    min-height: sizem(667);
+    max-height: sizem(667);
     font-size:sizem(12);
 
    .txt{
-    width: sizem(324);
+    width: sizem(250);
     position: absolute;
-    right: sizem(25);
-    bottom: sizem(185);
-    top:auto;
+    right: sizem(62);
+    bottom: auto;
+    top:sizem(45);
   }
-  .logo{
-    width: sizem(302);
-    left: sizem(36.2);
-    top: sizem(153);
-    }
 
   .love{ 
-    width: sizem(350);
-    left: sizem(12);
-    top: sizem(59);
+    width: sizem(315);
+    left: sizem(52);
+    bottom: sizem(-60);
     }
 
   .bg1{

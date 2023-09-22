@@ -1,9 +1,9 @@
 <template>
   <div id="order" class="order relative text-center">
-    <div class="order-section font-['noto_sans_tc']">
+    <div class="order-section font-['noto_serif_tc']">
       <!-- Title -->
-      <div class="order-title text-center font-['noto_sans_tc']">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center font-['noto_sans_tc']">{{ info.order.subTitle }}</div>
+      <div class="order-title text-center font-['noto_serif_tc']">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center font-['noto_serif_tc']">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -20,12 +20,13 @@
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-<!--
-          <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>需求房型</option>
+
+          <label class="row"><span>需求房型</span>
+          <select class="select w-full rounded-none" v-model="formData.room_type">
+            <option value="" selected disabled>請選擇房型</option>
             <option value="二房">二房</option>
             <option value="三房">三房</option>
-          </select>  -->
+          </select></label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -63,7 +64,7 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer font-['noto_serif_tc']" @click="send()">
         {{ sending? '發送中..': '立即預約' }}
       </div>
 
@@ -203,7 +204,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #D71718;
+    background-color: #000;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
