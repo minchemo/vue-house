@@ -9,8 +9,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市泰山區莊田路62號旁",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d902.6985236410554!2d121.4377642696526!3d25.176429512310555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5c6ecb65785%3A0x1945836ec1535297!2z6JCs5LyB5ZCb5ZOB5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1689059072363!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/xaf4sYQFGJNJ7LB26",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3614.7386475651856!2d121.441041!3d25.042942000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAyJzM0LjYiTiAxMjHCsDI2JzI3LjgiRQ!5e0!3m2!1szh-TW!2stw!4v1695353147927!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/raHZPvF8D7Jj17La7",
     phone: "02-2296-7799",
     fbLink: "https://www.facebook.com/100094458446747",
     fbMessage: "https://m.me/100094458446747",
