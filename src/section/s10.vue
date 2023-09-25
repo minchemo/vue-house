@@ -7,7 +7,7 @@
       <div class="txt">
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">飯店俬旅，奢享一座藝術飯店沙龍的家</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          大尺度挑高門廳、交誼廳熱情迎賓、人文沙龍閱覽空間、健身房、韻律教室、兒童遊戲室…<br />
+          挑高門廳、交誼廳熱情迎賓、人文沙龍閱覽空間、健身房、韻律教室、兒童遊戲室…<br />
 從社交到藝文，十多項全齡樂活公設，不只藝術，而且生活，美學實用兼容並蓄<br />
 收納美感的堂奧，是盛裝嶄新故事、富享一生的家</p>
       </div>
@@ -187,21 +187,21 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s10/1.jpg", import.meta.url).href ,
+    img:new URL("./s10/01.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s10/1_m.webp", import.meta.url).href : new URL("./s10/1.webp", import.meta.url).href,
-    caption: "門廳 3D情境示意圖"
+    caption: "公設3D示意圖 家具擺飾實際由建設公司點交為主"
   },
   {
-    img:new URL("./s10/2.jpg", import.meta.url).href ,
-    caption: "閱覽空間 3D情境示意圖"
+    img:new URL("./s10/02.jpg", import.meta.url).href ,
+    caption: "公設3D示意圖 家具擺飾實際由建設公司點交為主"
   },
   {
-    img:new URL("./s10/3.jpg", import.meta.url).href ,
-    caption: "交誼廳 3D情境示意圖"
+    img:new URL("./s10/03.jpg", import.meta.url).href ,
+    caption: "公設3D示意圖 家具擺飾實際由建設公司點交為主"
   },
   {
-    img:new URL("./s10/4.jpg", import.meta.url).href ,
-    caption: "健身房 3D情境示意圖"
+    img:new URL("./s10/04.jpg", import.meta.url).href ,
+    caption: "公設3D示意圖 家具擺飾實際由建設公司點交為主"
   },
 ]
 /*
