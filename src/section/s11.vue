@@ -215,14 +215,22 @@ const imgs = [
   {
     img:new URL("./s11/3.jpg", import.meta.url).href ,
     caption: "衛浴情境示意圖"
-  },
+  },/*
   {
     img:new URL("./s11/4.jpg", import.meta.url).href ,
     caption: "衛浴情境示意圖"
-  },
+  },*/
   {
     img:new URL("./s11/5.jpg", import.meta.url).href ,
     caption: "電梯情境示意圖"
+  },
+  {
+    img:new URL("./s11/6.jpg", import.meta.url).href ,
+    caption: "木地板情境示意圖"
+  },
+  {
+    img:new URL("./s11/7.jpg", import.meta.url).href ,
+    caption: "電子鎖情境示意圖"
   },
 ]
 /*
