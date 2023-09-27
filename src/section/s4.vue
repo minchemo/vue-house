@@ -6,7 +6,8 @@
     <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="200">
     <h2 class="title2" data-aos="zoom-in" data-aos-delay="300" >生活重回 自然原野</h2>
     <h4 class="subtitle" data-aos="zoom-in">一座試圖改寫新化美學的建築</h4>
-    <p class="desc" data-aos="zoom-in" >科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
+    <p class="desc" data-aos="zoom-in" >「建築除了提供住戶優質的生活，更是對城市景觀的責任。」<br>
+投身台南建築超過30年，長磯建設一路堅持追求完美，只為成為一座城市進步的推手，而且永不停歇，讓美的種子，在新化盛開。</p>
  </div>
   </article>
 </template>

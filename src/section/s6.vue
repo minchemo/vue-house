@@ -158,6 +158,16 @@ const imgs = [
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
     caption: "聽心苑2外觀3D示意圖"
   },
+  {
+    img:new URL("./s6/2.jpg", import.meta.url).href ,
+    //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
+    caption: "聽心苑2外觀3D示意圖"
+  },
+  {
+    img:new URL("./s6/3.jpg", import.meta.url).href ,
+    //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
+    caption: "聽心苑2外觀3D示意圖"
+  },
 ]
 const options = {
   rewind: false,
