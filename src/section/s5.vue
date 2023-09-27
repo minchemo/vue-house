@@ -1,11 +1,14 @@
 <template>
-  <article class="s6">
+  <article class="s5">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >回歸<span></span>自然</h2>
-    <img src="./s6/en.png" class="en" data-aos="zoom-in" data-aos-delay="200">
-    <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">汲光之居，建築原生種</h4>
-        <p data-aos="zoom-in" data-aos-delay="400">科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >3分鐘文化商圈<br>
+速度滿足一切</h2>
+<ul class="desc">
+  <li>3分鐘直達文化商圈，近距沙鹿家樂福商圈、沙鹿火車站商圈及清水商圈。</li>
+  <li>7分鐘悠遊三井OUTLET、蔦屋書店、台中海洋生態館、高美濕地、梧棲漁港。</li>
+<li>收攬梧棲名校特區、童綜合醫院、光田醫院向上分院照護身心健康。</li>
+</ul>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -26,12 +29,12 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s6 {
-  @apply relative flex items-center justify-center text-white;
+.s5 {
+  @apply relative flex items-center justify-center bg-[#E7D5E8];
   width: 100%;
   height: size(800);
   padding:0;
-  font-size:size(18);
+  font-size:size(20);
   gap:3em;
   margin-bottom:8em;
 
@@ -47,25 +50,26 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
+    color: #42167B;
   .title{
-    font-size: 3.5em;
-    margin: 0 0 .4em;
+    font-size: 2em;
+    margin: 0 auto .2em;
     line-height: 1.4;
-    font-weight: 700;color: #F3DEB9;
-    span{display: inline-block;width: 3em;height: 2px; background: currentColor;vertical-align: middle;margin: 0 .2em 0.1em;}
+    font-weight: 900;
+	  border: 4px solid transparent;
+    border-image: linear-gradient(70deg, #F6AD48 0%, #E96087 25%, #3551A1 50%, #49BBBC 100%);
+	  border-image-slice: 1;
+    width: 10em;
+    padding: .1em 0;
+    text-align: center;
+
   }
-  .en{
-    height:11.8em;
-  }
-  .subtitle{
-    font-size: 2.28em;
-    margin: .5em 0 .3em;
-    font-weight: 700;
+  .desc{
+    padding-left:1.5em ;
+    list-style:disc;
+    li{color: #000;}
   }
   }
-  .bottom{position: absolute;
-    width: size(330);
-    margin: 0 auto;bottom:3em;left: 0;right: 0;}
 }
 
   .slider {
@@ -91,7 +95,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s6 {
+  .s5 {
   @apply flex-col;
     height:auto;
     padding:3em 0 0;
@@ -154,7 +158,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 }
 const imgs = [
   {
-    img:new URL("./s6/1.jpg", import.meta.url).href ,
+    img:new URL("./s5/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
     caption: "聽心苑2外觀3D示意圖"
   },

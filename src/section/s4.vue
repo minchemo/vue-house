@@ -1,13 +1,13 @@
 <template>
-  <article class="s5">
+  <article class="s4">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >眼界升級 對位國際</h2>
-    <img src="./s5/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
-    <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">大師聯手 深植美學</h4>
-        <p data-aos="zoom-in" data-aos-delay="400">來自紐約、英國、台灣三地的頂尖設計團隊，首次攜手共同合作，<br v-if="!globals.$isMobile()">誕生出獨一無二的自然系寓所，我們的野心，<br v-if="!globals.$isMobile()">是以美學改寫一座城市的風貌，這一次，看見新化，更國際化。</p>
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >創造台灣影響力<br>
+就業大聚落</h2>
+        <p data-aos="zoom-in" data-aos-delay="400">臨海產業鏈+中部科技走廊<br>
+創造2022年2兆產值，近20萬就業人口</p>
+    <img src="./s4/img.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
       </div>
-    <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="600">
     </div>
     <div class="slider" data-aos="fade">
       <div class="arrows">
@@ -27,12 +27,12 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s5 {
-  @apply relative flex items-center justify-center text-white;
+.s4 {
+  @apply relative flex items-center justify-center bg-[#BBDCF4];
   width: 100%;
   height: size(800);
   padding:0;
-  font-size:size(18);
+  font-size:size(20);
   gap:3em;
   flex-direction: row-reverse;
 
@@ -47,11 +47,20 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
+    color: #004EA2;
   .title{
-    font-size: 3.5em;
-    margin: 0 0 .4em;
+    font-size: 2em;
+    margin: 0 auto .2em;
     line-height: 1.4;
-    font-weight: 700;color: #F3DEB9;
+    font-weight: 900;
+	  border: 4px solid transparent;
+    border-image: linear-gradient(70deg, #F6AD48 0%, #E96087 25%, #3551A1 50%, #49BBBC 100%);
+	  border-image-slice: 1;
+    width: 10em;
+    padding: .1em 0;
+    text-align: center;
+    color: #42167B;
+
   }
   .en{
     height:  3.66em;
@@ -89,7 +98,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s5 {
+  .s4 {
   @apply flex-col;
     height: auto;
     padding:3em 0 7em;
@@ -165,16 +174,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
+    img:new URL("./s4/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
     caption: "白本建築設計 業績"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
+    img:new URL("./s4/2.jpg", import.meta.url).href ,
     caption: "太研規劃設計 業績"
   },
   {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
+    img:new URL("./s4/3.jpg", import.meta.url).href ,
     caption: "偶得燈光設計 業績"
   },
 ]

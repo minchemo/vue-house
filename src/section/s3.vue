@@ -11,17 +11,6 @@
     <img src="./s3/img.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
       </div>
     </div>
-    <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="imgs.length > 1">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
 
   </article>
 </template>
@@ -30,7 +19,7 @@
 @import '@/assets/style/function.scss';
 
 .s3 {
-  @apply relative flex items-center justify-center text-white;
+  @apply relative flex items-center justify-center bg-[#E7D5E8];
   width: 100%;
   height: size(800);
   padding:0;
@@ -65,29 +54,14 @@
 
   }
   .desc{
-    padding-left:1.5em ;
+    padding-left:1.5em;
     list-style:disc;
-    li{color: #000;}
+    li{color: #000;
+    &::marker{color: #42167B;}
+    }
   }
   }
 }
-
-  .slider {
-    margin: 0;
-    flex-basis: size(840);
-      height: size(560);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
-      
-    }
-    .splide__pagination{
-      left:auto;
-      right: calc(100% + 3em);
-      justify-content: flex-end;
-    }
-  }
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -120,23 +94,6 @@
   }
 }
 
-  .slider {
-    height: auto;
-    width: 100%;
-
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
-    }
-  }
   }
 }
 </style>
