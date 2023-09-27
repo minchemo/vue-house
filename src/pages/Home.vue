@@ -32,13 +32,18 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 .home{
-  /*
-  background-image:url("@/section/s1/bg.png");
-  background-size: size(170) auto;
-  &::before{content: "";display: block;left: 0;top: 0;width: 100%;height: 100%;position: fixed;
-  background: linear-gradient(to bottom,#BB511F 0%,#BB511F00 50%,#BB511F 100%);
-}  */
+  background: linear-gradient(to right,#ccc 0%,#fff 100%);
+
 }
 img {
   display: inline;
@@ -46,12 +51,14 @@ img {
   height: unset;
   margin: 0 auto;
 }
+/*
+*/
 .slider {
   @apply relative;
   .caption{
       @apply absolute;
       right:1em;
-      bottom: 1em;
+      bottom: .5em;
       font-weight: 500;
       font-size: size(15);
       color: #FFF;
@@ -84,17 +91,18 @@ img {
   }
   .splide__pagination {
     @apply absolute flex justify-center w-full;
-    bottom: size(19);
-    gap: size(6.9);
+    bottom: 0;
+    gap: .5em;
+    color: #fff;
     li {
       button {
         @apply rounded-full  hover:opacity-50;
-        width: size(62.84);
-        height: size(9.4);
-        border: size(1) solid #fff;
+        width: 1em;
+        height: 1em;
+        border: 2px solid currentColor;
 
         &.is-active{
-          @apply bg-white;
+          background:currentColor;
       }
       }
     }
@@ -103,7 +111,13 @@ img {
 @media screen and (max-width: 767px) {
 .home{
   background-size: sizem(85) auto;
+.bg{
+  
+  background-size:7.1vw auto;
 }
+}
+/*
+*/
 .slider {
   @apply relative;
   .arrows{
@@ -114,6 +128,7 @@ img {
   }
   .splide__pagination {
     @apply absolute flex justify-center w-full;
+    display: none;
     bottom: sizem(6.7);
     gap: sizem(2.5);
     li {

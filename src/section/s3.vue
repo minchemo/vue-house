@@ -1,5 +1,6 @@
 <template>
   <article class="s3">
+    <img src="./s3/03.jpg" class="t0">
     <div class="main">
       <div class="txt">
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >左擁新市鎮特區<br>
@@ -21,13 +22,16 @@
 .s3 {
   @apply relative flex items-center justify-center bg-[#E7D5E8];
   width: 100%;
-  height: size(800);
   padding:0;
   font-size:size(20);
+  height:size(960);
   gap:3em;
-  margin-bottom:8em;
+ // margin-bottom:8em;
+  background: url("./s3/bg.jpg") no-repeat 100% 50%;
+  background-size: auto 100%;
 
-  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
+
+  .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;}
   .main {
     @apply flex text-[#fff];
     margin: 0;
