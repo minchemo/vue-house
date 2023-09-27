@@ -97,6 +97,7 @@
       color: #fff;
       font-size: size(35);
       font: 400;
+      white-space: nowrap;
     }
     .t4 {
       width: size(594);
