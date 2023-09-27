@@ -30,7 +30,7 @@
   @apply relative w-full h-screen overflow-hidden;
   min-height: size(900);
   max-height: size(1080);
-  background: url('@/section/s1/bg.png');
+  background: url('@/section/s1/bg.jpg');
   background-size: cover;
 
   .seawave {
