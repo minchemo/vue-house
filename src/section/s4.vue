@@ -1,11 +1,13 @@
 <template>
-  <article class="s4">
+  <article class="s5">
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in-right">VILLA LIFESTYLE</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in-right" data-aos-delay="200" >徜徉大墅人生<br />看見家的無限可能</h3>
-        <p data-aos="zoom-in-right" data-aos-delay="400" >住進微笑歐洲，有天有地的電梯別墅生活就此展開。單純52戶規劃，戶戶臨路並擁有私家庭院、四大主臥套房、室內車位，自在漫遊歐式大墅生活。</p>
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >眼界升級 對位國際</h2>
+    <img src="./s5/en.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
+    <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">大師聯手 深植美學</h4>
+        <p data-aos="zoom-in" data-aos-delay="400">來自紐約、英國、台灣三地的頂尖設計團隊，首次攜手共同合作，<br v-if="!globals.$isMobile()">誕生出獨一無二的自然系寓所，我們的野心，<br v-if="!globals.$isMobile()">是以美學改寫一座城市的風貌，這一次，看見新化，更國際化。</p>
       </div>
+    <img src="./s2/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="600">
     </div>
     <div class="slider" data-aos="fade">
       <div class="arrows">
@@ -25,8 +27,8 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s4 {
-  @apply relative overflow-hidden flex items-center justify-center text-white;
+.s5 {
+  @apply relative flex items-center justify-center text-white;
   width: 100%;
   height: size(800);
   padding:0;
@@ -35,7 +37,7 @@
   flex-direction: row-reverse;
 
   .main {
-    @apply flex text-[#555];
+    @apply relative flex text-[#fff];
     margin: 0;
     flex-basis: size(590);
   flex-direction: column;
@@ -46,16 +48,23 @@
     letter-spacing: 0;
     line-height: 1.7;
   .title{
-    font-size: 2.5em;
-    color: #A3191F;
-    margin: 0 0 .2em;
+    font-size: 3.5em;
+    margin: 0 0 .4em;
     line-height: 1.4;
+    font-weight: 700;color: #F3DEB9;
+  }
+  .en{
+    height:  3.66em;
   }
   .subtitle{
-    font-size: 1.2em;
-    margin: 0 0 .6em;
+    font-size: 2.28em;
+    margin: .5em 0 .3em;
+    font-weight: 700;
   }
   }
+  .bottom{position: absolute;
+    width: size(330);
+    margin: 0 auto;bottom:-5.5em;right: 0;}
 }
 
   .slider {
@@ -68,6 +77,10 @@
       height: size(560);
       
     }
+    .splide__pagination{
+      left: calc(100% + 3em);
+      justify-content: flex-start;
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -76,25 +89,31 @@
 
 @media screen and (max-width: 767px) {
 
-  .s4 {
+  .s5 {
   @apply flex-col;
-    height: sizem(605);
-    padding: 0;
-  font-size:sizem(14);
+    height: auto;
+    padding:3em 0 7em;
+  font-size:sizem(13);
 
-  .main {
+    .main {
     padding: 0 sizem(32.5);
-
-    
-    
+    text-align: center;
   .txt {
   .title{
-    font-size: 1.8em;
+    font-size: 1.9em;
+    margin: 0 0 .6em;
+  }
+  .en{
+    height:  2.6em;
   }
   .subtitle{
-    font-size: 1.07em;
+    font-size: 1.3em;
+    margin: 2em 0 .3em;
   }
   }
+  .bottom{position: absolute;
+    width: sizem(160);
+    margin: 0 auto;bottom:-25.5em;right: 0;left: 0;}
 }
 
   .slider {
@@ -102,9 +121,9 @@
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -146,49 +165,17 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.jpg", import.meta.url).href ,
+    img:new URL("./s5/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "現場實景"
+    caption: "白本建築設計 業績"
   },
   {
-    img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    img:new URL("./s5/2.jpg", import.meta.url).href ,
+    caption: "太研規劃設計 業績"
   },
   {
-    img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s4/4.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s4/5.jpg", import.meta.url).href ,
-    caption: "現場實景"
-  },
-  {
-    img:new URL("./s4/6.jpg", import.meta.url).href ,
-    caption: "現場實景"
+    img:new URL("./s5/3.jpg", import.meta.url).href ,
+    caption: "偶得燈光設計 業績"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>

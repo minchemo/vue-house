@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s7/view.png" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s2/map.png" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -14,12 +14,12 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #eee;
+   // background: #eee;
 
     > img {
-        height: 100%;
+      width: 100%;
         max-width: unset;
-        background:url("@/section/s7/view.jpg") 50%;
+        background:url("@/section/s2/map.jpg") 50%;
         background-size: 100% auto;
     }
 
@@ -27,13 +27,14 @@
 
 @media screen and (max-width: 767px) {
     .viewbox {
-        height: 100%;
+        height: sizem(667);
         overflow: hidden;
 
-        img {
-            height: 100%;
-        }
-
+> img {
+  width: auto;
+    height: 100%;
+    max-width: unset;
+}
         .mask {
             position: absolute;
             width: 100%;
@@ -47,7 +48,7 @@
             pointer-events: none;
             opacity: 1;
             transition: all 1s;
-            background-color: rgba($color: #008DD5, $alpha: 0.5);
+            background-color: rgba($color: #0d4f96, $alpha: 0.5);
 
             img {
                 height: 47px;
@@ -67,7 +68,7 @@ import { onMounted, ref, computed, getCurrentInstance } from 'vue';
 const viewbox = ref();
 const viewImg = ref();
 const swiped = ref(false);
-const offsetRatio = 1.075; 
+const offsetRatio = 2.55; 
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
