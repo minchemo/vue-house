@@ -5,7 +5,7 @@
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >回歸<span></span>自然</h2>
     <img src="./s6/en.png" class="en" data-aos="zoom-in" data-aos-delay="200">
     <h4 class="subtitle" data-aos="zoom-in" data-aos-delay="400">汲光之居，建築原生種</h4>
-        <p data-aos="zoom-in" data-aos-delay="400">科技未來全到位!南科門戶—北外環，連結市區與南部科學園區，基地位於雙匝道口間，分鐘輕達海安路匝道口直上北外環，科技新貴通勤負擔。</p>
+        <p data-aos="zoom-in" data-aos-delay="400">由英國白本建築設計，與台中技聯組工程顧問聯手合作，在建築設計上，融合國際前瞻視野，透過曲面弧度與玻璃帷幕設計，汲光入室，並突破既定、傳統的風格，種下建築的原生種。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -60,7 +60,7 @@
   .subtitle{
     font-size: 2.28em;
     margin: .5em 0 .3em;
-    font-weight: 700;
+    font-weight: 700;color: #F3DEB9;
   }
   }
   .bottom{position: absolute;
