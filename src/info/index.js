@@ -35,29 +35,32 @@ export default {
         title: "預約賞屋",
         // subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
-    /*
     navList: [{
-            name: "微笑歐洲",
-            target: ".s1",
+            name: "區域空拍",
+            target: ".s2",
             offset: "",
         },{
-            name: "10大看點",
+            name: "市心商圈",
             target: ".s3",
             offset: "",
         },{
-            name: "大墅人生",
+            name: "就業聚落",
             target: ".s4",
             offset: "",
         },{
-            name: "機能在手",
+            name: "文化商圈",
             target: ".s6",
             offset: "",
         },{
-            name: "港灣錢潮",
+            name: "公園首排",
             target: ".s7",
             offset: "",
         },{
-            name: "麗寶承諾",
+            name: "建材規格",
+            target: ".s8",
+            offset: "",
+        },{
+            name: "房型規劃",
             target: ".s9",
             offset: "",
         },{
@@ -79,5 +82,6 @@ export default {
             type: 'btn'
         },
     ],
-    */
+   
+    /* */
 }

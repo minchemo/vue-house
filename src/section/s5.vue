@@ -5,9 +5,9 @@
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >3分鐘文化商圈<br>
 速度滿足一切</h2>
 <ul class="desc">
-  <li>3分鐘直達文化商圈，近距沙鹿家樂福商圈、沙鹿火車站商圈及清水商圈。</li>
-  <li>7分鐘悠遊三井OUTLET、蔦屋書店、台中海洋生態館、高美濕地、梧棲漁港。</li>
-<li>收攬梧棲名校特區、童綜合醫院、光田醫院向上分院照護身心健康。</li>
+  <li data-aos="zoom-in" data-aos-delay="100">3分鐘直達文化商圈，近距沙鹿家樂福商圈、沙鹿火車站商圈及清水商圈。</li>
+  <li data-aos="zoom-in" data-aos-delay="200">7分鐘悠遊三井OUTLET、蔦屋書店、台中海洋生態館、高美濕地、梧棲漁港。</li>
+<li data-aos="zoom-in" data-aos-delay="300">收攬梧棲名校特區、童綜合醫院、光田醫院向上分院照護身心健康。</li>
 </ul>
       </div>
     </div>
@@ -36,9 +36,7 @@
   padding:0;
   font-size:size(20);
   gap:3em;
-  margin-bottom:8em;
-
-  .bg1{position: absolute;top:-4em;left:size(-69);width:size(429);opacity: .6;}
+  // margin-bottom:8em;
   .main {
     @apply flex text-[#fff];
     margin: 0;
@@ -51,23 +49,29 @@
     letter-spacing: 0;
     line-height: 1.7;
     color: #42167B;
+    margin: 0 0 4em;
   .title{
     font-size: 2em;
-    margin: 0 auto .2em;
+    margin: 0 auto 1.2em 0;
     line-height: 1.4;
     font-weight: 900;
 	  border: 4px solid transparent;
     border-image: linear-gradient(70deg, #F6AD48 0%, #E96087 25%, #3551A1 50%, #49BBBC 100%);
 	  border-image-slice: 1;
-    width: 10em;
+    width:100%;
     padding: .1em 0;
     text-align: center;
 
   }
   .desc{
-    padding-left:1.5em ;
+    width: 23em;
+    margin:auto;
+    padding-left:1.5em;
     list-style:disc;
-    li{color: #000;}
+    margin-bottom: 3em;
+    li{color: #000;margin-bottom:.5em ;
+    &::marker{color: #42167B;}
+    }
   }
   }
 }
@@ -98,17 +102,18 @@
   .s5 {
   @apply flex-col;
     height:auto;
-    padding:3em 0 0;
+    padding:5.5em 0 0;
     margin: 0;
   font-size:sizem(13);
 
 .main {
     padding: 0 sizem(32.5);
-    text-align: center;
+    text-align: justify;
   .txt {
+    margin: 0 0 0em;
   .title{
-    font-size: 1.9em;
-    margin: 0 0 .6em;
+    font-size: 2.2em;
+    padding: .3em 0;
   }
   .en{
     height: 10.8em;
@@ -116,6 +121,9 @@
   .subtitle{
     font-size: 1.3em;
     margin: 2em 0 .3em;
+  }
+  .desc {
+    margin-bottom: 0;
   }
   }
 }
@@ -160,7 +168,19 @@ const imgs = [
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "聽心苑2外觀3D示意圖"
+    caption: "文化商圈"
+  },
+  {
+    img:new URL("./s5/2.jpg", import.meta.url).href ,
+    caption: "三井OUTLET"
+  },
+  {
+    img:new URL("./s5/3.jpg", import.meta.url).href ,
+    caption: "蔦屋書店示意圖"
+  },
+  {
+    img:new URL("./s5/4.jpg", import.meta.url).href ,
+    caption: "梧棲國小"
   },
 ]
 const options = {

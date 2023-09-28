@@ -8,8 +8,8 @@
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
-  <!-- loading end
-   <Nav v-if="config.showNav" /> -->
+  <!-- loading end -->
+   <Nav />
   <div class="home bg-[#ddd] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
      <div class="bg">
     </div>
@@ -18,11 +18,11 @@
     <S3 />
     <S4 />
     <S5 />
-  <!--
     <S6 />
     <S7 />
     <S8 />
     <S9 />
+  <!--
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -42,7 +42,6 @@
 }
 
 .home{
-  background: linear-gradient(to right,#ccc 0%,#fff 100%);
 
 }
 img {
@@ -93,7 +92,7 @@ img {
     @apply absolute flex justify-center w-full;
     bottom: 0;
     gap: .5em;
-    color: #fff;
+    color: #42167B;
     li {
       button {
         @apply rounded-full  hover:opacity-50;
@@ -155,12 +154,12 @@ import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
-/* 
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
-import Nav from "@/layout/navbar.vue" */
+import Nav from "@/layout/navbar.vue"
+/* " */
 import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 

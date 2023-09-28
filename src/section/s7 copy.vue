@@ -1,10 +1,9 @@
 <template>
-  <article class="s8">
-    <h2 class="title" data-aos="fade-down" data-aos-delay="0" >難得2房2衛<br>規劃當區最優</h2>
-    
-    <img src="./s8/1.png" alt="" v-if="!$isMobile()">
-    <img src="./s8/1m.png" alt="" v-else>
-    
+  <article class="s7">
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >建材規格一步升級<br>七期名宅標準</h2>
+    <div class="main">
+
+    </div>
 
   </article>
 </template>
@@ -12,14 +11,15 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s8 {
-  @apply relative flex items-center justify-center;
+.s7 {
+  @apply relative flex items-start justify-center;
   width: 100%;
-  padding:0 0 5em;
+  height: size(960);
+  padding:0;
   font-size:size(20);
-  gap:3em;
+  background: url("./s7/bg.jpg") no-repeat 100% 50%;
+  background-size: 100% auto;
   flex-wrap: wrap;
-  // margin-bottom:8em;
   .title{
     color: #FFF;
     font-size: 2em;
@@ -32,13 +32,42 @@
     text-align: center;
 
   }
-  img{width: size(1043);}
   .main {
     @apply flex text-[#fff];
     margin: 0;
-    flex-basis: size(590);
+    flex-basis: 100%;
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
+  .txt {
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.7;
+    margin: 4em 0 0;
+  .title{
+    font-size: 2em;
+    margin: 0 auto .5em auto;
+    line-height: 1.4;
+    font-weight: 900;
+	  border: 4px solid transparent;
+    border-image: linear-gradient(70deg, #F6AD48 0%, #E96087 25%, #3551A1 50%, #49BBBC 100%);
+	  border-image-slice: 1;
+    width:10em;
+    padding: .1em 0;
+    text-align: center;
+
+  }
+  .desc{
+  //  width: 23em;
+    margin:auto;
+    padding-left:1.5em;
+    list-style:disc;
+    margin-bottom: 3em;
+    li{color: #000;margin-bottom:.5em ;
+    &::marker{color: #42167B;}
+    }
+  }
+  }
 }
 
   .slider {
@@ -64,21 +93,31 @@
 
 @media screen and (max-width: 767px) {
 
-  .s8 {
+  .s7 {
   @apply flex-col;
     height:auto;
-    padding: 0 0 4.5em;
+    padding:0em 0 25em;
     margin: 0;
   font-size:sizem(13);
-  .title{
-    font-size: 2.2em;
+  background: #03448e  url("./s7/bgm.jpg") no-repeat 50% 100%;
+  background-size: 100% auto;
 
-  }
-
-  img{width: sizem(320);}
 .main {
     padding: 0 sizem(32.5);
-    text-align: justify;
+    text-align: center;
+  .txt {
+  .title{
+    font-size: 2.2em;
+    padding: .3em 0;
+  }
+  .en{
+    height: 10.8em;
+  }
+  .subtitle{
+    font-size: 1.3em;
+    margin: 2em 0 .3em;
+  }
+  }
 }
 
   .slider {
@@ -105,5 +144,6 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
+
+
 </script>

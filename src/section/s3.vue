@@ -1,18 +1,19 @@
 <template>
   <article class="s3">
-    <img src="./s3/03.jpg" class="t0">
+ <!--   <img src="./s3/03.jpg" class="t0">  -->
     <div class="main">
       <div class="txt">
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >左擁新市鎮特區<br>
 右享梧棲市心商圈</h2>
 <ul class="desc">
-  <li>交通、產業、醫療、娛樂、休閒、運動，國際性的十大建設翻轉海線。</li>
-<li>重量級建商、國際集團共同打造領海新市鎮。</li>
+  <li data-aos="zoom-in" data-aos-delay="100">交通、產業、醫療、娛樂、休閒、運動，國際性的十大建設翻轉海線。</li>
+<li data-aos="zoom-in" data-aos-delay="200">重量級建商、國際集團共同打造領海新市鎮。</li>
 </ul>
-    <img src="./s3/img.svg" class="en" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./s3/img.svg" class="img" data-aos="zoom-in" data-aos-delay="300">
       </div>
     </div>
-
+    <div class="t1" data-aos="zoom-in" data-aos-delay="0">市鎮<br>特區</div>
+    <div class="t2" data-aos="zoom-in" data-aos-delay="0">文化<br>商圈</div>
   </article>
 </template>
 
@@ -20,21 +21,21 @@
 @import '@/assets/style/function.scss';
 
 .s3 {
-  @apply relative flex items-center justify-center bg-[#E7D5E8];
+  @apply relative flex items-center justify-center;
   width: 100%;
   padding:0;
   font-size:size(20);
   height:size(960);
   gap:3em;
  // margin-bottom:8em;
-  background: url("./s3/bg.jpg") no-repeat 100% 50%;
+  background:#E7D5E8 url("./s3/bg.jpg") no-repeat 100% 50%;
   background-size: auto 100%;
 
 
   .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .5;}
   .main {
     @apply flex text-[#fff];
-    margin: 0;
+    margin: 0 auto 0 size(190);
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
@@ -42,11 +43,11 @@
     position: relative;
     font-weight: 500;
     letter-spacing: 0;
-    line-height: 1.7;
+    line-height: 1.5;
     color: #42167B;
   .title{
     font-size: 2em;
-    margin: 0 auto .2em;
+    margin: 0 auto 1.2em 0;
     line-height: 1.4;
     font-weight: 900;
 	  border: 4px solid transparent;
@@ -60,12 +61,22 @@
   .desc{
     padding-left:1.5em;
     list-style:disc;
-    li{color: #000;
+    margin-bottom: 3em;
+    li{color: #000;margin-bottom:.5em ;
     &::marker{color: #42167B;}
     }
   }
   }
 }
+  .t1,
+  .t2{color: #FFF;position: absolute;top: calc(50% - 6.5vw);right:size(885);
+  font-size:1.26em;
+  line-height: 1.2;font-weight: 700;
+    background: url("./s3/o.svg");
+  background-size: 100% 100%;padding: 1em;}
+  
+  .t2{right:size(113);}
+  .img{width:size(655);}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -76,27 +87,33 @@
   .s3 {
   @apply flex-col;
     height:auto;
-    padding:3em 0 0;
+    padding:5.5em 0 22em;
     margin: 0;
-  font-size:sizem(13);
+  font-size:sizem(14);
+  background-image: url("./s3/bgm.jpg");
+  background-position: 50% 100%;
+  background-size: 100% auto;
 
 .main {
-    padding: 0 sizem(32.5);
-    text-align: center;
+    padding: 0 sizem(32.5);margin: auto;
+    // text-align: center;
   .txt {
   .title{
-    font-size: 1.9em;
-    margin: 0 0 .6em;
+    font-size: 2.2em;
+    padding: .3em 0;
   }
-  .en{
-    height: 10.8em;
-  }
-  .subtitle{
-    font-size: 1.3em;
-    margin: 2em 0 .3em;
+  .img{
+    width:sizem(310);
+   // height: 10.8em;
   }
   }
 }
+
+.t1,
+  .t2{top:auto;right:sizem(282);bottom:43.5vw;
+  font-size:1em;}
+  
+  .t2{right:sizem(27);}
 
   }
 }

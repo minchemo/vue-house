@@ -72,6 +72,7 @@
     margin: auto auto -3em auto;
   .title{
     font-size: 2.2em;
+    padding: .3em 0;
   }
   .desc{
     font-size: 1.36em;
