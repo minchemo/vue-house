@@ -2,10 +2,10 @@
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-center w-full contact-item-box">
-      <!-- <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="海揚" srcset="" />
         <div>{{ info.phone }}</div>
-      </div> -->
+      </div> 
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="海揚" srcset="" />
         <div>Facebook 諮詢</div>
@@ -15,7 +15,7 @@
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <!-- <div class="flex justify-between w-full contact-item-box no-gap">
+     <div class="flex justify-between w-full contact-item-box no-gap">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
@@ -24,13 +24,13 @@
         <img src="@/section/form/gmap.svg" alt="海揚" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
-    </div> -->
+    </div>
 
   </div>
 
 
   <!-- Mobile contact info -->
-  <!-- <div v-if="$isMobile()"  class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+   <div v-if="$isMobile()"  class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/phone.svg" alt="海揚" srcset="" />
@@ -50,7 +50,7 @@
       <img src="@/section/form/gmap.svg" alt="海揚" srcset="" />
       <div>地圖導航</div>
     </div>
-  </div> -->
+  </div>
 
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />

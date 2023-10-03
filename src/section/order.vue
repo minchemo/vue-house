@@ -116,7 +116,7 @@
 
 
     <!-- Map -->
-    <!-- <Map /> -->
+     <Map />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -330,7 +330,7 @@
 
   .order-section {
     background-image: url('@/section/form/bg_m.png');
-    height: size-m(2529);
+    height: size-m(2700);
     padding-bottom: 0;
     position: relative;
     overflow: hidden;
