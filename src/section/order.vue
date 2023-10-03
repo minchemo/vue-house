@@ -21,26 +21,15 @@
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-          <label class="row"><span>需求房型</span>
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
-            <option value="一房">一房</option>
-            <option value="兩房">兩房</option>
-            <option value="三房">三房</option>
-            <option value="四房">四房</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
           </select></label>
-          <label class="row"><span>購屋預算</span>
+          <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇預算</option>
-            <option value="1000萬以下">1000萬以下</option>
-            <option value="1000~1500萬">1000~1500萬</option>
-            <option value="1500~2000萬">1500~2000萬</option>
-            <option value="1000~1500萬">2000~2500萬</option>
-            <option value="2500~3000萬">2500~3000萬</option>
-            <option value="3000~3500萬">3000~3500萬</option>
-            <option value="3500~4000萬">3500~4000萬</option>
-            <option value="4000~4500萬">4000~4500萬</option>
-            <option value="4500~5000萬">4500~5000萬</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
         </label>
           <label class="row"><span>居住縣市</span>
