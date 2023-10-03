@@ -28,12 +28,13 @@
 
 
 <style lang="scss">
-/* img {
+img {
   display: inline;
   max-width: unset;
   height: unset;
   margin: 0 auto;
-} */
+}
+/*  */
 .bg{width: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
   // background-image: url("@/section/s1/bg.jpg");background-size:calc(600 * 100vw / 1920) auto;
  /* .bg1{

@@ -101,7 +101,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #AB0;}
+.bg-color1{background-color: #EC6D34;}
 .hover\:bg-color2:hover{background-color:#6A0;}
 
 
@@ -135,7 +135,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #AB0;
+      background-color: #EC6D34;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -152,7 +152,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #6A0;
+        background-color: #d65012;
         color: #fff;
 
         img {
@@ -236,7 +236,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#AB0;
+    background:#EC6D34;
 
     .contact-item {
       height: 100%;      

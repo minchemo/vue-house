@@ -1,11 +1,12 @@
 <template>
   <article class="s1" id="s1">
+    <img class="bg" src="./s1/bg.png" alt="" srcset="">
     <!-- 
     <img class="t0" src="./s1/mo.jpg" alt="" srcset="">
     <img src="./s1/t.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="!$isMobile()"/>
     <img src="./s1/tm.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="$isMobile()"/> -->
        <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
-       <div class="txt font-['noto_serif_tc']" data-aos="zoom-out" data-aos-duration="1000">測試用</div>
+       <div class="txt" data-aos="zoom-out" data-aos-duration="1000">展示頁</div>
 
   </article>
 </template>
@@ -15,20 +16,22 @@
 
 .s1 {
   @apply relative w-full h-screen;
-height: size(300);
+height: 100vh;
+max-height:size(1080);
+min-height:size(900);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
   font-size:size(25);
-
+.bg{width: 100%;position: fixed;top: 0;left: 0;opacity: .8;pointer-events: none;}
    .txt{font-weight: 900;
     text-align: center;
     line-height:1.1;
    position: relative;
    left: -.5em;
     color: #000;
-    margin: auto;
+    margin: auto;pointer-events: none;
   }
 
 }
@@ -42,8 +45,10 @@ height: size(300);
 
   .s1 {
     height:calc(100vh - 63px);
-    height: sizem(100);
-    font-size:sizem(12);
+max-height:sizem(812);
+min-height:sizem(604);
+    font-size:sizem(20);
+.bg{width:auto;left:50%;height:sizem(812);transform: translateX(-50%);}
    .txt{
     line-height:1.1;
    }
