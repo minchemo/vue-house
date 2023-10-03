@@ -14,7 +14,7 @@ export default {
     fbMessage: "https://m.me/100087899256156/",
     caseName: caseName,
     houseInfos: [],
-    gtmCode: ["GTM-TS73DPL"], // 可放置多個
+    gtmCode: ["GTM-M365SZ8L"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
