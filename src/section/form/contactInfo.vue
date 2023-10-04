@@ -112,8 +112,8 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1{
-    background:linear-gradient(40deg, #F6AD48 3.5%, #E96087 25%, #3551A1 46%, #49BBBC 90.5%);}
-.hover\:bg-color2:hover{background-color:#861427;}
+    background:#308BA2}
+.hover\:bg-color2:hover{background-color: #094348;}
 
 
 .contact-info-img{
@@ -147,7 +147,7 @@
 
     .contact-item {
       position: relative;
-    background:linear-gradient(40deg, #F6AD48 3.5%, #E96087 25%, #3551A1 46%, #49BBBC 90.5%);
+    background:#308BA2;
       color: #FFF;
       width: 100%;
     font-weight: 700;
@@ -239,7 +239,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(23%) sepia(27%) saturate(4297%) hue-rotate(324deg) brightness(96%) contrast(92%);
+  img{filter: invert(74%) sepia(60%) saturate(342%) hue-rotate(333deg) brightness(85%) contrast(83%);
   //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
@@ -258,7 +258,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#41167C;
+    background:#CA9D76;
 
     .contact-item {
       height: 100%;      
@@ -292,7 +292,7 @@
   background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(220);
+      width: sizem(300);
       height:auto;
     margin: sizem(0) auto sizem(20) auto;
      // margin-bottom: sizem(47);

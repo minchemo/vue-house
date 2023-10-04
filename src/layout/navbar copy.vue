@@ -2,7 +2,7 @@
     <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen" 
+        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
             v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
@@ -15,7 +15,7 @@
                 <span>{{ item.name }}</span>
             </div>
             </template>
-            <div class="close" @click="menuOpen = !menuOpen"  >
+            <div class="close" @click="menuOpen = !menuOpen"  v-if="$isMobile()">
             </div>
         </div>
     </div>
@@ -28,8 +28,8 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    right: size(50);
-    top: size(20);
+    right: size(114);
+    top: size(51);
     .logo {
         width: size(145);
         height: size(50);
@@ -39,14 +39,13 @@
         background-position: center;
         position: absolute;
         left:1em;
-        top: 1em;
-        //filter: invert(1) brightness(2);
+        filter: invert(1) brightness(2);
     }
 
     .menu-btn {
         background-color: transparent;
         height: size(40);
-        width: size(40);
+        width: size(41.43);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -64,8 +63,8 @@
             background-color: currentColor;
             position: relative;
             transition: all .5s;
-            color: #FFF;
-            box-shadow: 0 0 2px #000, 0 0 8px #000;
+            color: #42167B;
+            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
 
             &::after {
                 content: '';
@@ -74,7 +73,7 @@
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 0 2px #000, 0 0 8px #000;
+            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
                 //transform: translateX(-10%);
             }
 
@@ -85,18 +84,20 @@
                 top: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 0 2px #000, 0 0 8px #000;
+            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
                 //transform: translateX(-10%);
             }
         }
 
         &:hover {
             &::after {
+                box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
             }
 
             .bar {
                 &::after {
                     transform: translateX(0%);
+                    box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .1);
                 }
 
                 &::before {
@@ -128,19 +129,23 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #181D23CC;
-        width: size(375);
-        height: 100%;
+        background: #42167BCC;
+      //  background-image: url('@/section/menubg.png');
+     /*   background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom left; */
+        width:100%;
+        height: size(60);
         z-index: 5;
+        // transform: translateX(150%);
+        // transition: all .5s;
         padding: 0;
         font-size: size(16);
         gap: 2em;
-        padding: 0;
+        padding: 0 0 0 40em;
         font-weight: 700;
-            flex-direction: column;
-            justify-content: center;
-            transform: translateX(150%);
-            transition: all .5s;
+ // backdrop-filter: blur(2px);
+        // backdrop-filter: blur(2px);
 
         .menu-item {
             position: relative;
@@ -160,7 +165,7 @@
                 bottom: -5px;
                 width: 0%;
                 height: size(3);
-                background-color: #CA9D76;
+                background-color: #E7BA65;
                 transition: all .35s;
             }
 
@@ -171,14 +176,14 @@
                 }
             }
             &.btn2{
-                background: #CA9D76;
+                background:linear-gradient(40deg, #F6AD48 3.5%, #E96087 25%, #3551A1 46%, #49BBBC 90.5%);
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
                 text-shadow:0 0 7px #7c6527d0;
 
                 &:hover {
-                    background: #a87a51;
+                    background:linear-gradient(40deg, #ffa526 3.5%, #e64c78 25%, #2144a3 46%, #1ba1a3 90.5%);
                     &:after {
                         width:0;
                     }
@@ -192,22 +197,17 @@
         }
 
         .close {
-                position: absolute;
-                left: unset;
-                bottom: 0;
-                transform: translateX(0);
-                top: size(10);right: size(10);
-                width: size(44);
-                height: size(44);
-                cursor: pointer;
-                margin:0;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items:center;
-                &::before,&::after{content:"";background: #FFF;height: 2px;width: 100%;display: block;}
-                &::before{transform: rotate(45deg);margin-bottom:-2px;}
-                &::after{transform: rotate(-45deg);}
+            position: absolute;
+            top: size(77);
+            left: 50%;
+            transform: translateX(-50%);
+            width: size(44);
+            height: size(44);
+            cursor: pointer;
+
+            img {
+                width: 100%;
+            }
         }
 
         .decor {
@@ -339,10 +339,16 @@
         }
 
         .menu {
-        width:100%;
             height: 100%;
+          //  z-index: 0;
+            transform: translateX(150%);
+            transition: all .5s;
+           // padding: 0;
            font-size: sizem(18);
             gap: sizem(23);
+            justify-content: center;
+            flex-direction: column;
+        padding: 0;
           //  background-image: url('@/section/menubgm.png');
 
             .menu-item {

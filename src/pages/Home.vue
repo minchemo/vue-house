@@ -10,7 +10,7 @@
   </div>
   <!-- loading end -->
    <Nav />
-  <div class="home bg-[#ddd] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+  <div class="home bg-[#181D23] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
      <div class="bg">
     </div>
     <S1 />
@@ -88,6 +88,7 @@ img {
       @apply cursor-pointer hover:opacity-50;
     }
   }
+  .slide,.slide div{height: 100%;width: 100%}
   .splide__pagination {
     @apply absolute flex justify-center w-full;
     bottom: 0;

@@ -1,11 +1,11 @@
 <template>
   <div id="order" class="order relative text-center">
+    <img src="./form/t.svg" data-aos="zoom-in" class="t">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-titleen text-center font-['Noto_Serif_TC']">CONTACT US</div>
-      <div class="order-title text-center" v-html="info.order.title"></div>
-      <!-- <div class="order-subTitle text-center">歡迎預約，將有專人與您聯絡<span>(*為必填項目)</span></div>
-      <div class="cus-divider"></div> -->
+      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
+      <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
@@ -14,29 +14,25 @@
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
-<div class="mand"><span>*</span>為必填</div>
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span>*</span></span>
+          <label class="row"><span>姓名<span>(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>*</span></span>
+            <label class="row"><span>手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-<!--
-          <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>需求房型</option>
-            <option value="二房">二房</option>
-            <option value="三房">三房</option>
+
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
+            <option value="" selected disabled>請選擇房型</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+          </select></label>
+          <label class="row" v-if="info.budget"><span>購屋預算</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇預算</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
-          <label class="row"><span>服務專員</span>
-          <select class="select w-full rounded-none bg-white" v-model="formData.people">
-            <option value="" selected disabled>選擇專員</option>
-            <option value="專員A">專員A</option>
-            <option value="專員B">專員B</option>
-            <option value="專員C">專員C</option>
-            <option value="專員D">專員D</option>
-            <option value="專員E">專員E</option>
-          </select></label>  -->
+        </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -62,9 +58,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#FFF]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#f00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -93,6 +89,8 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
+
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -110,11 +108,9 @@
 }
 
 .order {
-  position: relative;
   width: 100%;
   padding-top: 0;
-  
-
+.t{width: size(1330); margin:size(100) auto 0; }
   .bird {
     @apply absolute;
     width: size(155);
@@ -134,18 +130,12 @@
     }
   }
 
-  .order-titleen {
-    font-size: size(50);
-    font-weight: 700;
-    color: #42167B;
-    padding-top:2em;
-  }
-
   .order-title {
-    font-size: size(20);
+    font-size: size(40);
     font-weight: 700;
-    color: #42167B;
-    padding-bottom:1em;
+    color: #FFF;
+    padding-top:1.5em;
+    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
   .order-title-img {
@@ -154,11 +144,10 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #000;
+    color: #aaa;
     padding-top:.8em;
-    letter-spacing: 0em;
-    font-weight: 500;
-    > span{color: #F00;}
+    letter-spacing: .1em;
+    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
     margin: 0 auto;
@@ -172,16 +161,12 @@
     width: size(920);
     min-width: 680px;
     //  height: 350px;
-    gap:0 size(80);
-    margin-top: size(20);
+    gap: size(80);
+    margin-top: size(45);
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
-    flex-wrap: wrap;
-.mand{width: 100%;display: block;margin: 0 0 0.5em;
-  text-align: left; font-size: size(14);
-span{color: #F00;}
-}
+
     .left {
       flex: 1;
       gap: size(20);
@@ -197,22 +182,21 @@ span{color: #F00;}
     &::after {
       content: "";
       width: size(1);
-      height: calc(100% - 1.6em);
+      height: 100%;
       background-color: #fff;
-      position: absolute;bottom: 0;
+      position: absolute;
     }
     .row{background: #FFF;border: 1px solid #CCC;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
         width: 5.5em;
-        text-align: left;padding-left:1em;
-        font-weight: 700;
-        > span{color: #F00;}
+        text-align: left;padding-left:1em ;
+        > span{color: #F00;font-size: 12px;}
       }
       input,select{background: inherit;flex: 1;}
       option{color: #666;}
-      select{background: url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
+      select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
       &:focus{
@@ -227,7 +211,7 @@ span{color: #F00;}
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:linear-gradient(40deg, #F6AD48 3.5%, #E96087 25%, #3551A1 46%, #49BBBC 90.5%);
+    background-color: #CA9D76;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -236,7 +220,7 @@ span{color: #F00;}
     height:3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 700;
+    font-weight: 400;
     position: relative;
   }
 
@@ -275,6 +259,7 @@ span{color: #F00;}
       margin-bottom: sizem(22);
     } */
 
+    .t{width: sizem(300); margin:sizem(60) auto 0; }
     .bird {
       @apply absolute;
       width: sizem(48.8);
@@ -290,13 +275,9 @@ span{color: #F00;}
       background-color: #055F76;
     }
 
-    .order-titleen {
-      font-size: sizem(30);
-      // padding-top:4.5em;
-    }
     .order-title {
-      font-size: sizem(15);
-      // padding-top:4.5em;
+      font-size: sizem(25);
+      padding-top:1.5em;
     }
     .order-subTitle{
       font-size: sizem(13);
@@ -312,7 +293,6 @@ span{color: #F00;}
       margin-bottom: sizem(20);
       flex-direction: column;
       margin-top: sizem(20);
-      .mand{margin:0 0 -.5em; font-size: sizem(14);}
 
       .left {
         width: 100%;
@@ -366,8 +346,8 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  budget: "",
   project: "",
-  people: "",
   email: "",
   city: "",
   area: "",
@@ -377,15 +357,15 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "people", "email", "room_type", "city", "area"]
+const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "預算", //budget
   "建案", //project
-  "服務專員", //people
   "信箱", //email
   "居住縣市", //city
   "居住地區", //area
@@ -471,7 +451,7 @@ const send = () => {
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
-      &people=${formData.people}
+      &budget=${formData.budget}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}

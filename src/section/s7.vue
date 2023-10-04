@@ -1,11 +1,7 @@
 <template>
   <article class="s7">
-    <h2 class="title" data-aos="fade-down" data-aos-delay="0" >建材規格一步升級<br>七期名宅標準</h2>
-    
-    <div class="main">
-      <img src="./s7/txt.svg" alt="建材規格" v-if="!$isMobile()">
-      <img src="./s7/txtm.svg" alt="建材規格" v-else>
-    </div>
+
+    <img src="./s7/t.svg" data-aos="zoom-in" class="t">
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -17,6 +13,7 @@
         </SplideSlide>
       </Splide>
     </div>
+    <img src="./s7/3.jpg" data-aos="zoom-in" class="img">
 
   </article>
 </template>
@@ -27,48 +24,30 @@
 .s7 {
   @apply relative flex items-center justify-center;
   width: 100%;
-  padding:0 0 4em;
+  padding:size(120) 0;
+  margin: 0;
   font-size:size(20);
   gap:3em;
   flex-wrap: wrap;
   // margin-bottom:8em;
-  .title{
-    color: #FFF;
-    font-size: 2em;
-    margin: 0 auto .5em auto;
-    line-height: 1.4;
-    font-weight: 900;
-    background: linear-gradient(70deg, #F6AD48 0%, #E96087 25%, #3551A1 50%, #49BBBC 100%);
-    width:100%;
-    padding: .6em 0;
-    text-align: center;
-
-  }
-  .main {
-    @apply flex text-[#fff];
-    margin: 0;
-    flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
-  img{width: size(579);}
-}
+  .t{width:size(1340);margin:size(60) auto auto;}
 
   .slider {
     margin: 0;
-    flex-basis: size(840);
-      height: size(560);
+    width: size(1500);
+      height: size(995);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+      height: 100%;
       
     }
     .splide__pagination{
       left:auto;
-      right: calc(100% + 3em);
+     // right: calc(100% + 3em);
       justify-content: flex-end;
     }
   }
+  .img{width:size(1500);}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -79,38 +58,15 @@
   .s7 {
   @apply flex-col;
     height:auto;
-    padding:0 0 0;
-    margin: 0;
   font-size:sizem(14);
-  .title{
-    font-size: 2.2em;
-
-  }
-
-.main {
-    padding: 0 sizem(32.5);
-    text-align: justify;
-  img{width:sizem(300);}
-}
+  padding:sizem(30) 0;
+  .t{width:85%;margin:sizem(30) auto auto;}
 
   .slider {
-    width:  sizem(300);
-
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(-18);
-    color: #666;
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-    height: sizem(122);
-    margin: 0 0 1.5em;
-      
-    }
+    width:  sizem(310);
+    height: sizem(206);
   }
+  .img{width:sizem(310);}
   }
 }
 </style>
@@ -133,15 +89,21 @@ const moved = (newIdx, prevIdx, destIdx) => {
 }
 const imgs = [
   {
-    //img:new URL("./s7/1.jpg", import.meta.url).href ,
-    img: globals.$isMobile() ? new URL("./s7/1m.jpg", import.meta.url).href : new URL("./s7/1.jpg", import.meta.url).href,
-    caption: "情境示意圖"
+    img:new URL("./s7/1.jpg", import.meta.url).href ,
+    //img: globals.$isMobile() ? new URL("./s7/1m.jpg", import.meta.url).href : new URL("./s7/1.jpg", import.meta.url).href,
+    caption: "樣品屋實景拍攝"
+  },
+  {
+    img:new URL("./s7/2.jpg", import.meta.url).href ,
+    //img: globals.$isMobile() ? new URL("./s7/1m.jpg", import.meta.url).href : new URL("./s7/1.jpg", import.meta.url).href,
+    caption: "樣品屋實景拍攝"
   },
 ]
 const options = {
   rewind: false,
   arrows: false,
-  pagination:  imgs.length > 1 ? true : false,
+  pagination: false,
+  // pagination:  imgs.length > 1 ? true : false,
   autoplay: true,
   interval: 4000,
   gap: 0,

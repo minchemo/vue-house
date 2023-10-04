@@ -1,81 +1,49 @@
 <template>
-  <article class="s9">
-    <h2 class="title" data-aos="zoom-in" data-aos-delay="0" >
-      <img src="./s9/txt.svg" alt=""></h2>
+  <article class="s1" id="s1">
+    <img src="./s9/t1.svg" data-aos="zoom-in" class="t1">
+    <img src="./s9/t2.svg" data-aos="zoom-in" class="t2">
+    <img src="./s9/bg.png" class="bg">
+
 
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>  
 @import '@/assets/style/function.scss';
 
-.s9 {
-  @apply relative flex items-center justify-center;
-  width: 100%;
-  padding:3.5em 0;
-  font-size:size(20);
-  gap:3em;
-  background: linear-gradient(70deg, #F6AD48 0%, #E96087 25%, #3551A1 50%, #49BBBC 100%);
-  
-  // margin-bottom:8em;
-  .title{
-
-    img{width:size(672);}
-
-  }
+.s1 {
+  @apply relative w-full ;
+  overflow: hidden;
+  background: linear-gradient(0deg, #308BA2 13%, #1C6E7E 39%, #094348 70%, #002F36 100%);;
+  .bg{width: 100%;}
+  .t1{width:size(750);margin:size(240) auto size(20);display: block;}
+  .t2{width:size(450);margin:0 auto size(40);display: block;}
 }
+
+  
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
 
-  .s9 {
-    height:auto;
-  padding:3em 0;
-    margin: 0;
-  font-size:sizem(14);
-  .title{
-
-    img{width:sizem(300);}
-
-  }
-
-
-  }
+  .s1 {
+    .bg{width: 100%;height:sizem(70);object-fit: cover;}
+  .t1{width:sizem(300);margin:sizem(80) auto sizem(10);display: block;}
+  .t2{width:sizem(300);margin:0 auto sizem(20);display: block;}
+}
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { computed, getCurrentInstance, ref ,inject} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-  return new URL(`./${path}_m.jpg`, import.meta.url).href
+const isMobile = computed(() => globals.$isMobile());
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
 }
-
-const splide = ref();
-
-const currentSlideIndex = ref(0);
-
-const moved = (newIdx, prevIdx, destIdx) => {
-  currentSlideIndex.value = prevIdx
-}
-const imgs = [
-  {
-    img:new URL("./s9/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "聽心苑2外觀3D示意圖"
-  },
-]
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination:  imgs.length > 1 ? true : false,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
 </script>
