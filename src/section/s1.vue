@@ -5,7 +5,7 @@
     
       
     <div class="txt"><img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000"/>
-      <div class="t1 font-[Arial,'Noto_Sans_TC',sans-serif]" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">絕版<span>2</span>字頭</div>
+      <div class="t1 font-[Arial,'Noto_Sans_TC',sans-serif]" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">稀有<span>2</span>字頭</div>
       
       <div class="t2" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">錨定台中港特定區</div>
       <div class="hr" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000"></div>
