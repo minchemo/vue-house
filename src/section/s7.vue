@@ -4,7 +4,7 @@
       <span></span>
       <span></span>
       <span></span>
-      <span></span>
+      <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
     <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">安心品牌</h3>
@@ -116,6 +116,25 @@
   gap:2em;
   .img{position: absolute;top:sizem(300);left: auto;
     right:sizem(-155);width:sizem(260);bottom: auto;}
+.bg{
+    span{
+      &:nth-child(1){
+        top: 0vw;
+        left: 0vw;
+        font-size: 15vw;
+      }
+      &:nth-child(2){
+        top: 10vw;
+        left: 15vw;
+        font-size: 5vw;
+      }
+      &:nth-child(3){
+        top: 20vw;
+        left: 77vw;
+        font-size: 5vw;
+      }
+    }
+  }
 
   .main {
     padding: 0 sizem(32.5);

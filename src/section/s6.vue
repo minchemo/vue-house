@@ -5,6 +5,7 @@
     <div class="bg">
       <span></span>
       <span></span>
+      <span v-if="$isMobile()"></span>
     </div>
   <div class="txt">
     <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">菁英學區</h3>
@@ -103,6 +104,28 @@ img{width: 100%;position: relative;}}
   gap:2em;
 
 .img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+  .bg{
+    span{
+      &:nth-child(1){
+    top: 50vw;
+    left: 86vw;
+    font-size: 9vw;
+}
+      &:nth-child(2){
+    top: 8vw;
+    left: 7vw;
+    font-size: 7vw;
+}
+      &:nth-child(3){
+        top: 45vw;
+        left: -10vw;
+        font-size:36vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+    }
+  }
 
   .main {
     padding: 0 sizem(30);

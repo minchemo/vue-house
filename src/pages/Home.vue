@@ -49,7 +49,7 @@
      transform:scale(1);opacity: 1;
   }
 }
-  .bg{position: relative;width: 100%;height: 0;
+  .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
     span{
       position: absolute;
       display: block;width: 1em;height: 1em;
@@ -71,7 +71,6 @@
 
 .home > .bgh{position: fixed;width: 100%;
   top: 0;left: 0;
-
 }
 img {
   display: inline;
@@ -174,15 +173,20 @@ img {
   }
 }
 @media screen and (max-width: 767px) {
+  
+
+.home > .bgh{width: 250%;
+  top: 0;left: 0;
+}
   .caption{
       font-size: sizem(12);}
 
       .txt {
   .title{
-    font-size: 1.8em;
+    font-size: 2.3em;
     &::after,
     &::before{
-      width: 4.2em;}
+      width: 2.6em;}
   }
   .subtitle{
     font-size: 1.4em;

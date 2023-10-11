@@ -3,8 +3,8 @@
     <div class="bg">
       <span></span>
       <span></span>
-      <span></span>
-      <span></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
     <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">水岸生活</h3>
@@ -118,6 +118,20 @@
   gap:2em;
   .img{position: absolute;top:sizem(300);left: auto;
     right:sizem(-155);width:sizem(260);bottom: auto;}
+  .bg{
+    span{
+      &:nth-child(1){
+    top: 3vw;
+    left: 86vw;
+    font-size: 8vw;
+}
+      &:nth-child(2){
+    top: 20vw;
+    left: 12vw;
+    font-size: 3vw;
+}
+    }
+  }
 
   .main {
     padding: 0 sizem(32.5);

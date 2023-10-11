@@ -1,6 +1,6 @@
 <template>
   <article class="s3" ref="s3">
-    <div class="bg">
+    <div class="bg" v-if="!$isMobile()">
       <span></span>
       <span></span>
       <span></span>
@@ -72,6 +72,16 @@
   text-align: justify;
 }
 
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 15.3em;
+    }
+  }
+}
+
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -114,6 +124,16 @@
     width: 100%;
 }
 
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 2em;
+    }
+  }
+}
+
+
   .slider {
     height: auto;
     width: 100%;
@@ -138,6 +158,7 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -155,7 +176,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: false,
+  autoplay: true,
   interval: 4000,
   gap: 0,
   type: 'loop'

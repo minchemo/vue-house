@@ -6,9 +6,9 @@
       <span></span>
       <span></span>
       <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
     <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">交通中軸</h3>
@@ -59,28 +59,28 @@
         font-size: 2vw;
       }
       &:nth-child(3){
-        top: 5vw;
-        left: 26vw;
-        font-size: 1.5vw;
-      }
-      &:nth-child(4){
-        top: 12vw;
-        right: 33vw;
-        font-size: 4.5vw;
-      }
-      &:nth-child(5){
-        top: 12vw;
-        right: 1vw;
-        font-size: 2.5vw;
-        animation-delay: 1.5s;
-      }
-      &:nth-child(6){
         top: 3vw;
         left: 7vw;
         font-size: 9vw;
         transform: scale(.8);
         background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
         animation-delay: 1.8s;
+      }
+      &:nth-child(4){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(6){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
       }
     }
   }
@@ -130,6 +130,25 @@
   gap:2em;
 
 .img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+.bg{
+    span{
+      &:nth-child(1){
+        top: 4vw;
+        left: 82vw;
+        font-size: 6vw;
+      }
+      &:nth-child(2){
+        top: 57vw;
+        left: 2vw;
+        font-size: 8vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 77vw;
+        font-size: 23vw;
+      }
+    }
+  }
 
   .main {
     padding: 0 sizem(30);
@@ -161,6 +180,7 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;

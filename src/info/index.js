@@ -1,4 +1,4 @@
-const caseName = "萬企君品"
+const caseName = "如邑"
 
 export default {
     meta: {
@@ -9,11 +9,11 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台南市安平區府前四街147號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d902.6985236410554!2d121.4377642696526!3d25.176429512310555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5c6ecb65785%3A0x1945836ec1535297!2z6JCs5LyB5ZCb5ZOB5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1689059072363!5m2!1szh-TW!2stw",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14690.95655649574!2d120.17752453876997!3d22.996618100000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e766da5fe1d57%3A0xa37aaa6022272fe0!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5bqc5YmN5Zub6KGXMTQ36Jmf!5e0!3m2!1szh-TW!2stw!4v1697006507610!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/xaf4sYQFGJNJ7LB26",
     phone: "06-293-2799",
-    fbLink: "https://www.facebook.com/100089552726620",
-    fbMessage: "https://m.me/100089552726620",
+    fbLink: "https://www.facebook.com/thebestruyi2",
+    fbMessage: "https://m.me/thebestruyi2",
     caseName: caseName,
     houseInfos: [
         /*
