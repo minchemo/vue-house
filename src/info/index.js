@@ -38,7 +38,7 @@ export default {
     room_type: ["兩房","三房","四房","店面"],
     //budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000~2500萬","2500~3000萬","3000~5000萬","5000萬以上"],
     navList: [{
-            name: "區域空拍",
+     /*       name: "區域空拍",
             target: ".s2",
             offset: "0",
             offsetmo: "0",
@@ -62,7 +62,7 @@ export default {
             target: ".s8",
             offset: "0",
             offsetmo: "0",
-        },{
+        },{ */
             name: "立即來電",
             target: ".contact-info",
             offset: "",
