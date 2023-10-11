@@ -1,24 +1,23 @@
 <template>
   <article class="s1" id="s1">
-    <!-- 
-    <img class="t0" src="./s1/01.jpg" alt="" srcset="">
-    <img src="./s1/t.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="!$isMobile()"/>
-    <img src="./s1/tm.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="$isMobile()"/> -->
-       <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
-       <!--div class="txt font-['noto_serif_tc']" data-aos="zoom-out" data-aos-duration="1000"><span class="t1">高鐵<br  v-if="$isMobile()"/>台積宅</span><span class="t2">2</span><span class="t3">字頭</span><span class="t4">THE GREEN ROAD</span></div-->
-    <div class="love"><img src="./s1/love.png" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/></div>
-    <div class="love1" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div>
-    <div class="love2" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div>
-    <img src="./s1/bg1.png" v-if="!$isMobile()" class="bg1" alt=""/>
-    <img src="./s1/bg2.png" v-if="!$isMobile()" class="bg2" alt=""/>
-    <img src="./s1/bg_m.png" v-if="$isMobile()" class="bg1" alt=""/>
-    <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="600" data-aos-duration="1000"/>
+   <!--  <img class="t0" src="./s1/pc.jpg" alt="" srcset="">  -->
+    <div class="bg"></div>
+    <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
+    <img src="./s1/t1.svg" class="t1" alt="" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
+    <div class="t2" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000"><span v-if="$isMobile()">絕版 電梯 店墅</span><span v-else>絕版 電梯 店墅 / </span><span>市政×星鑽
+</span></div>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
+
+@keyframes op {
+  50% {
+     opacity: 0;
+  }
+}
+
 
 .s1 {
   
@@ -31,60 +30,31 @@
   align-items:center;
   font-size:size(25);
   background: #1C96D4;
-
-    img{width:100%;}
-    .love{
-    z-index: 1;
-    position: absolute;  
-    width: size(695);
-    left: size(320);
-    top: calc(50% + #{size(235 - 540)});
-    }
-    .love1{
-    z-index: 1;
-    position: absolute;  
-    width: size(230);
-    right: size(660);
-    bottom: size(110); 
-    animation: an 3s ease-in-out infinite alternate-reverse;
-     transform:translate(10%, 20%);
-     img{transform: scaleX(-1)rotate(-7deg);}
-    }
-    .love2{
-    z-index: 1;
-    position: absolute;  
-    width: size(110);
-    right: size(385);
-    top: size(195); 
-    animation: an 3s ease-in-out infinite alternate-reverse;
-     transform:translate(20%, -20%);
-     img{transform: rotate(-7deg);}
-    }
-
-    .bg1{
-     z-index: 0;
-    position: absolute;
-    bottom:size(0);
-    }
-
-    .bg2{
-    z-index: 2;
-    position: absolute;
-    bottom:size(0);
-    }
-   .txt{
-    z-index: 2;
-    width: size(535);
-    position: absolute;
-    right: size(330);
-    top: calc(50% + #{size(380 - 540)});
+  .t0{position: absolute;top: -92px;left: 0;width: 100%;opacity: .5;z-index: 10;}
+  .bg{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+  background: url("./s1/bg1.jpg") 50% 50%;
+  background-size: auto 100%;
+  &::before,&::after{content: "";display: block;
+    position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+  background: url("./s1/bg1.jpg");
+  background-size: auto 100%;
+  animation: op 5s linear infinite alternate;
+  }
+  &::before{background-position: -20vw 50%;}
+  &::after{background-position: 20vw 50%; animation-delay: 2.5s;}
   }
   .logo{
-    position: absolute;
-    width: size(585);
-    z-index: 2;
-    left: size(380);
-    top: calc(50% + #{size(435 - 540)});
+    width:size(163);
+    margin: 5.8em auto 1.2em;
+    }
+  .t1{
+    width:size(602);
+    margin: 0 auto 3.5em;
+    }
+  .t2{font-size: 5.4em;letter-spacing: -.05em;
+    color:#EF8200;position: relative;z-index: 2;font-weight: 300;
+    text-shadow: 0 0 .1em #006;
+    span:last-child{font-weight: 900;color:#fff;}
     }
 
   
@@ -104,31 +74,19 @@
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(766);
-    max-height: sizem(766);
+    min-height: sizem(604);
+    max-height: sizem(812);
     font-size:sizem(12);
-
-   .txt{
-    width: sizem(324);
-    position: absolute;
-    right: sizem(25);
-    bottom: sizem(185);
-    top:auto;
-  }
   .logo{
-    width: sizem(302);
-    left: sizem(36.2);
-    top: sizem(153);
+    width:sizem(96);
+    margin: 0em auto 1.2em;
     }
-
-  .love{ 
-    width: sizem(350);
-    left: sizem(12);
-    top: sizem(59);
+  .t1{
+    width:sizem(204);
     }
-
-  .bg1{
-      width: sizem(375);
+  .t2{font-size: 3.9em;text-align: center;
+    line-height: 1.4;
+    span{display: block;}
     }
 
   }

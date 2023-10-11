@@ -1,23 +1,22 @@
+
+
 <template>
-  <article class="s4" ref="s4">
-    <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s4/img.png" /></div>
+  <article class="s4">
+    <div class="bg">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">內行人鍾愛</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">交通中軸</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">榮獲「三冠王」最高榮耀標章，<br />
-萬企一出場，盡是口碑場</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400"><b>厚實力，厚工學</b><br />
-深耕淡水半世紀，曾榮獲「國家建築金獎」最高榮譽<br />
-金象獎、金獅獎、誠信建商，三冠王之企業標竿<br />
-累計超過百棟建築、20000戶幸福家庭口碑見證<br />
-萬企對建築細節與品質的堅持，一磚一瓦，近乎苛求<br />
-本著父母心，從源頭貫徹，把建材用料加碼再加碼<br />
-關於「居住安全」，萬企「永不妥協」<br /><br />
-
-<b>經典作品</b><br />
-萬企大業 晶站 和韻 海天境 圓閣 景闊</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">府城中心，匯聚交通網絡</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">位居中華西路（台17線）、府前路、民生路市中心動軸，鏈結火車站商圈、86快速道路、九份子重劃、台南邁阿密遊艇富豪聚落，北外環連結台南科學園區，願景中心，地段就是難以取代。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -26,8 +25,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -39,20 +38,55 @@
 @import '@/assets/style/function.scss';
 
 .s4 {
-  @apply relative flex items-center justify-center text-[#555];
+  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
+  .bg{
+    span{
+      &:nth-child(1){
+        top: 1vw;
+        left: 10vw;
+        font-size: 3.5vw;
+      }
+      &:nth-child(2){
+        top: 12vw;
+        left: 2vw;
+        font-size: 2vw;
+      }
+      &:nth-child(3){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(4){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
+      }
+      &:nth-child(6){
+        top: 3vw;
+        left: 7vw;
+        font-size: 9vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+    }
+  }
 
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
+
+
   .main {
     @apply flex;
     margin: 0;
@@ -60,44 +94,6 @@
   flex-direction: column;
   text-align: justify;
 }
-  .txt {
-    position: relative;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;
-  .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 700;
-    color:#B78E63;
-    text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
-    }
-  }
-  .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    color:#B78E63;
-    line-height: 1.5;
-  }
-  .desc{
-    margin: 0 0 1em;
-    b{
-    color:#B78E63;}
-  }
-  }
-
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -109,8 +105,8 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
       color: #B78E63;
@@ -132,33 +128,24 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
+
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: 0 sizem(30);
     width: 100%;
 }
 
-  .txt {
-  .title{
-    font-size: 1.8em;
-    &::after,
-    &::before{
-      width: 4.2em;}
-  }
-  .subtitle{
-    font-size: 1.4em;
-  }
-  }
+
+
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12);  
+    font-size:sizem(12); 
     right:sizem(5);
-    bottom:sizem(5);
+    bottom:sizem(5); 
     }
     .slide-item {
       @apply bg-cover;
@@ -192,7 +179,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: false,
+  autoplay: true,
   interval: 4000,
   gap: 0,
   type: 'loop'
@@ -201,25 +188,9 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s4/1_m.webp", import.meta.url).href : new URL("./s4/1.webp", import.meta.url).href,
-    caption: "萬企建設 萬企大業 3D情境示意圖"
-  },
-  {
-    img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "萬企建設 海天境 實景拍攝"
-  },
-  {
-    img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "萬企建設 淡大君品 實景拍攝"
-  },
-  {
-    img:new URL("./s4/4.jpg", import.meta.url).href ,
-    caption: "和合開發 合韻 外觀合成示意圖"
-  },
-  {
-    img:new URL("./s4/5.jpg", import.meta.url).href ,
-    caption: "和合開發 晶站 外觀合成示意圖"
+    caption: ""
   },
 ]
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

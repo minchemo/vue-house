@@ -63,7 +63,7 @@
             position: relative;
             transition: all .5s;
             color: #fff;
-            box-shadow: 0 3px 0 #1C96D4;
+            box-shadow: 0 3px 0 #0366;
 
             &::after {
                 content: '';
@@ -72,7 +72,7 @@
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 3px 0 #1C96D4;
+            box-shadow: 0 3px 0 #0366;
                 //transform: translateX(-10%);
             }
 
@@ -83,7 +83,7 @@
                 top: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 3px 0 #1C96D4;
+            box-shadow: 0 3px 0 #0366;
                 //transform: translateX(-10%);
             }
         }
@@ -128,16 +128,17 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #005783CC;
+        background: #032763cc;
         width:100%;
         height: size(60);
         z-index: 5;
         padding: 0;
         font-size: size(16);
         gap: 2em;
-        padding: 0 0 0 40em;
+        padding: 0 3em 0 0;
         font-weight: 700;
         backdrop-filter: blur(2px);
+        justify-content:flex-end;
 
         .menu-item {
             position: relative;
@@ -146,6 +147,7 @@
             justify-content: center;
             // gap: size(10);
             letter-spacing: 0.1em;
+            white-space: nowrap;
 
             img {
                 width: size(43);
@@ -168,13 +170,14 @@
                 }
             }
             &.btn2{
-                background:#D20001;
+                background:#EF8200;
+;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
 
                 &:hover {
-                    background:#a00909;
+                    background:#df6400;
                     &:after {
                         width:0;
                     }
@@ -258,7 +261,7 @@
         border-radius: 9999px;
 
         .logo {
-            width: sizem(120);
+            width: sizem(80);
             height: sizem(42);
             transition: all .2s;
             top: sizem(13);

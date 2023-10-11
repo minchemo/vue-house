@@ -4,8 +4,7 @@
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <div class="logo">
-      <img src="@/section/s1/love.png" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
-      <img src="@/section/s1/logo.svg" class="logot" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
@@ -140,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #003C95;
+      background-color: #EF8200;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -157,7 +156,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #00255e;
+        background-color: #df6400;
         color: #fff;
 
         img {
@@ -245,7 +244,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background:#003C95;
+    background:#EF8200;
 
     .contact-item {
       height: 100%;      
@@ -351,9 +350,9 @@ const modalType = ref('');
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;
-    // setTimeout(() => {
-    //   window.location.href = "phoneThanks";
-    // }, 1000);
+     setTimeout(() => {
+       window.location.href = "phoneThanks";
+     }, 1000);
   } else if (modalType.value == 'fb') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {

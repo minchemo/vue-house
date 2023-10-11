@@ -1,6 +1,5 @@
 <template>
-  <div id="order" class="order relative text-center bg-[#1691CF]">
-    <div class="bg"><img src="./s4/bg.png" v-if="!$isMobile()" alt=""><img src="./s1/bg_m.png" v-else alt=""></div>
+  <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
@@ -15,18 +14,24 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span>*</span></span>
+          <label class="row"><span>姓名<span>(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>*</span></span>
+            <label class="row"><span>手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-<!--
-          <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>需求房型</option>
-            <option value="二房">二房</option>
-            <option value="三房">三房</option>
-          </select>  -->
+
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
+            <option value="" selected disabled>請選擇房型</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+          </select></label>
+          <label class="row" v-if="info.budget"><span>購屋預算</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇預算</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+          </select>
+        </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -52,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-white">
+        <p class="text-[#FFF]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -85,12 +90,6 @@
 @import "@/assets/style/function.scss";
 
 
-.bg{
-     z-index: 0;
-    position: absolute;
-    top:0;width: 100%;left: 0;
-    img{width: 100%;transform: scaleY(-1);opacity: .2;}
-    }
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -132,9 +131,10 @@
 
   .order-title {
     font-size: size(40);
-    font-weight: 00;
-    color: #fff;
-    padding-top:1.5em;//filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    font-weight: 700;
+    color: #FFF;
+    padding-top:1.5em;
+    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
   .order-title-img {
@@ -143,10 +143,10 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #fffE;
+    color: #FFF;
     padding-top:.8em;
     letter-spacing: .1em;
-    font-weight: 500;//filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
     margin: 0 auto;
@@ -191,11 +191,11 @@
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;}
+        > span{color: #F00;font-size: 12px;}
       }
       input,select{background: inherit;flex: 1;}
       option{color: #666;}
-      select{background: url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
+      select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
       &:focus{
@@ -344,6 +344,7 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  budget: "",
   project: "",
   email: "",
   city: "",
@@ -354,13 +355,14 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type", "city", "area"]
+const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "預算", //budget
   "建案", //project
   "信箱", //email
   "居住縣市", //city
@@ -447,6 +449,7 @@ const send = () => {
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
+      &budget=${formData.budget}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}

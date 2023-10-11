@@ -1,19 +1,18 @@
-
-
 <template>
-  <article class="s7">
-    <div class="love1"><img src="./s1/love.png" alt=""></div>
+  <article class="s7" ref="s7">
+    <div class="bg">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">森活族最愛</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">安心品牌</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">都心綠肺，青潤濃抹，<br />公園第一排，景觀頭等艙</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">碧波盈盈，無疆視野，喧囂自外<br />
-窗映時序，風光巨幕，森籟共鳴<br />
-坐落市心難得2800坪公園預定地樹海首排<br />
-不僅吸附落塵，降低PM2.5的危害<br />
-運動/散步/溜溜孩子與毛小孩，健康樂活你的植感生活</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">創新設計，構築感動</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">建築人的建築，多一份理想性，多一份專業堅持。從挑選土地，量制風格，以獨特的設計接軌國際樣式，專注結構與施工，打造有體感的永續森活，實踐您的夢想。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -22,8 +21,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+      <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -35,25 +34,44 @@
 @import '@/assets/style/function.scss';
 
 .s7 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#555];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
-    .love1{
-    z-index: 1;
-    position: absolute;  
-    width: size(180);
-    right: size(160);
-    bottom: size(110); 
-    animation: an 3s ease-in-out infinite alternate-reverse;
-     transform:translate(10%, 20%);
-     img{transform: scaleX(-1)rotate(-7deg);width:100%;}
+  .bg{
+    span{
+      &:nth-child(1){
+        top: 2vw;
+        left: 8vw;
+        font-size: 2.5vw;
+      }
+      &:nth-child(2){
+        top: 1vw;
+        right: 16vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(3){
+        top: 5vw;
+        right: 2vw;
+        font-size: 5vw;
+      }
+      &:nth-child(4){
+        top: -7vw;
+        right: 20vw;
+        font-size: 4vw;
+      }
     }
+  }
 
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -61,43 +79,6 @@
   flex-direction: column;
   text-align: justify;
 }
-  .txt {
-    position: relative;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;
-  .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 700;
-    color:#B78E63;
-    text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
-    }
-  }
-  .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    color:#B78E63;
-    line-height: 1.5;
-  }
-  .desc{
-    margin: 0 0 1em;
-    b{
-    color:#B78E63;}
-  }
-  }
 
   .slider {
     margin: 0;
@@ -110,11 +91,11 @@
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
-      color: #B78E63;
+      color: #C9A063;
     }
     }
   }
@@ -133,40 +114,22 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-    .love1{
-    width: sizem(60);
-    right: sizem(40);
-    bottom:auto; 
-    top:sizem(100);
-    }
-
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
-    padding: 0 sizem(30);
+    padding: 0 sizem(32.5);
     width: 100%;
 }
-
-
-.txt {
-  .title{
-    font-size: 1.8em;
-    &::after,
-    &::before{
-      width: 4.2em;}
-  }
-  .subtitle{
-    font-size: 1.4em;
-  }
-  }
 
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -200,7 +163,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: true,
+  autoplay: false,
   interval: 4000,
   gap: 0,
   type: 'loop'
@@ -209,12 +172,19 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s7/1_m.webp", import.meta.url).href : new URL("./s7/1.webp", import.meta.url).href,
-    caption: "老街河岸綠地 實景拍攝",
- },
+    caption: "大千"
+  },
   {
     img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "老街河岸綠地 實景拍攝",
+    caption: "見真"
+  },
+  {
+    img:new URL("./s7/3.jpg", import.meta.url).href ,
+    caption: "至真"
+  },
+  {
+    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    caption: "如邑一期"
   },
 ]
 </script>

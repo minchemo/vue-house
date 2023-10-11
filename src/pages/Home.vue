@@ -10,13 +10,14 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#F2F2F2] overflow-hidden font-['Noto_Sans_TC',serif]">
-     <!--   <div class="bg">
+  <div class="home bg-[#003183] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    <img src="@/section/s1/bg0.jpg" class="bgh">
+    <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-    <S2v />
+    <!-- <S2v /> -->
     <S2 />
     <S3 />
     <S4 />
@@ -26,8 +27,8 @@
     <S8 />
     <S9 />
     <S10 />
+  <!--
     <S11 />
-  <!--    
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
       <img src="@/section/s1/bg.jpg" />
@@ -43,11 +44,23 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-@keyframes an {
+@keyframes an1 {
   to {
-     transform:translate(0px);
+     transform:scale(1);opacity: 1;
   }
 }
+  .bg{position: relative;width: 100%;height: 0;
+    span{
+      position: absolute;
+      display: block;width: 1em;height: 1em;
+      background: radial-gradient(ellipse at center, #fff 0%,#fff6 20%,#fff3 30%,#fff0 50%);
+   transform: scale(.5);opacity: 0;
+   animation: an1 2s ease-in-out infinite alternate;
+      &:nth-child(2){animation-delay: 1s;}
+      &:nth-child(3){animation-delay: 1.5s;}
+    }
+  }
+
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
@@ -56,7 +69,10 @@
   opacity: 0;
 }
 
+.home > .bgh{position: fixed;width: 100%;
+  top: 0;left: 0;
 
+}
 img {
   display: inline;
   max-width: unset;
@@ -68,10 +84,48 @@ img {
       @apply absolute;
       right:1em;
       bottom: .5em;
-      font-weight: 500;
+      font-weight: 300;
       font-size: size(15);
       color: #FFF;
       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
+
+
+      .txt {
+    position: relative;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.7;
+    width: 100%;
+  .title{
+    font-size: 2.2em;
+    margin: 2em 0 0em;
+    line-height: 1.4;
+    font-weight: 900;
+    color:#C9A063;
+    text-align: center;
+    &::after,
+    &::before{
+      content: "";
+      width: 15.7em;
+      height: 1px;
+      background: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto 1em;
+    }
+  }
+  .subtitle{
+    font-size: 1.65em;
+    font-weight: 700;
+    margin: 0 0 .8em;
+    color:#C9A063;
+    line-height: 1.5;
+  }
+  .desc{
+    margin: 0 0 1em;
+    b{color:#C9A063;}
+  }
+  }
 .slider {
   @apply relative;
   .arrows{
@@ -123,6 +177,17 @@ img {
   .caption{
       font-size: sizem(12);}
 
+      .txt {
+  .title{
+    font-size: 1.8em;
+    &::after,
+    &::before{
+      width: 4.2em;}
+  }
+  .subtitle{
+    font-size: 1.4em;
+  }
+  }
 .slider {
   @apply relative;
   .arrows{
@@ -157,7 +222,7 @@ img {
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
-import S2v from "@/section/s2v.vue"
+// import S2v from "@/section/s2v.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
@@ -166,7 +231,7 @@ import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
-import S11 from "@/section/s11.vue"
+// import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */

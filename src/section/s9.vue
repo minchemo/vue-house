@@ -2,26 +2,15 @@
 
 <template>
   <article class="s9">
-    <div class="img">
-  <img class="box" src="https://i.imgur.com/tEgarks.png">
-  <img class="img1" src="./s9/img1.png">
-  <img class="img2" src="./s9/img2.png">
-  <img class="img3" src="./s9/img2.png">
-  <img class="img4" src="./s9/img4.png">
-  <img class="img5" src="./s9/img5.png">
-</div>
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">沒有人不愛</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">嚴選建材</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">賞河景、觀夕照、遊老街、探人文⋯<br />
-在家，就能小旅行</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">閒看觀音山巒疊翠、大屯連峰<br />
-沈浸淡水河靜謐流淌、江帆船影<br />
-騎單車、坐渡輪、賞河景、觀夕照<br />
-遊老街、探人文、享美食<br />
-山水和風月，日常的美好，在家，就能小旅行</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">精品建材，尊榮享受</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">衛浴：浴廁採用ＴＯＴＯ衛浴設備、ＨＣＧ、西班牙ＲＯＣＡ免治馬桶。<br>
+廚具：世界級德匠名㕑，附贈林內雙口瓦斯爐、抽風機、烘碗機。<br>電梯：永大六人座電梯。<br>其他：錦鋐氣密窗、冠軍磁磚、台灣水泥、天然瓦斯。
+</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -43,72 +32,17 @@
 @import '@/assets/style/function.scss';
 
 .s9 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#fff] bg-[#1691CF];
+  @apply relative overflow-hidden flex items-center justify-center text-[#000] bg-[#F8F8F8];
   width: 100%;
-  height: auto;
+  height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
 
-  .img {
-  //尺寸位子只需要調這邊
-  position: absolute;
-  width:size(462);
-  right: 0;
-  bottom: size(-150);
-  //底下都不用動
-  @keyframes an {
-    to {
-      transform: rotate(0);
-    }
-  }
-  img {
-    position: absolute;
-    &.box {
-      width: 100%;
-      position: relative;
-    }
-  }
-  .img1 {
-    width: 19.7%;
-    top: 0%;
-    left: 50%;
-    transform: rotate(10deg);
-    transform-origin: 7% 30%;
-    animation: an 1.5s ease-in-out infinite alternate;
-   
-  }
-  .img2 {
-    width: 22.6%;
-    top: 33.4%;
-    left: 14.0%;
-    transform: rotate(90deg);
-    transform-origin:50% 50%;
-    animation: an 2s linear infinite;}
-  .img3 {
-    width: 22.6%;
-    top: 34%;
-    left: 56%;
-    transform: rotate(90deg);
-    transform-origin:50% 50%;
-    animation: an 2s linear infinite;}
-  .img4 {
-    width: 20.6%;
-    top: 11.8%;
-    left: 13.9%;
-    transform: rotate(5deg);
-    transform-origin: 55% 80%;
-    animation: an 1.5s ease-in-out infinite alternate;
-  }
-  .img5 {
-    width: 100%;
-    top:0;
-    left: 0;
-  }
-}
-
+.img{position: absolute;bottom:0;right:size(50);width:size(795);
+img{width: 100%;position: relative;}}
 
   .main {
     @apply flex;
@@ -117,40 +51,13 @@
   flex-direction: column;
   text-align: justify;
 }
-  .txt {
-    position: relative;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;
-  .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 700;
-    text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
-    }
-  }
-  .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    line-height: 1.5;
-  }
-  .desc{
-    margin: 0 0 1em;
-    b{}
-  }
-  }
+.txt {
+.title{
+&::after,
+&::before{
+background: #C9A063;
+}
+}}
 
   .slider {
     margin: 0;
@@ -165,7 +72,10 @@
     .splide__pagination{
       left: calc(100% + 3em);
       justify-content: flex-start;
-    color: #fff; 
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #B78E63;
+    }
     }
   }
 }
@@ -183,32 +93,13 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img {
-  //尺寸位子只需要調這邊
-  width:sizem(150);
-  right: sizem(-10);
-  top: sizem(150);
-  bottom: auto;
-}
+
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
 
   .main {
     padding: 0 sizem(30);
     width: 100%;
 }
-
-
-.txt {
-  .title{
-    font-size: 1.8em;
-    &::after,
-    &::before{
-      width: 4.2em;}
-  }
-  .subtitle{
-    font-size: 1.4em;
-  }
-  }
-
   .slider {
     height: auto;
     width: 100%;
@@ -259,25 +150,29 @@ const options = {
 const imgs = [
   {
     img:new URL("./s9/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s9/1_m.webp", import.meta.url).href : new URL("./s9/1.webp", import.meta.url).href,
-    caption: "老街河岸 實景拍攝",
- },
+    caption: "電梯"
+  },
   {
     img:new URL("./s9/2.jpg", import.meta.url).href ,
-    caption: "金色水岸 實景拍攝",
+    caption: "廚具"
   },
   {
     img:new URL("./s9/3.jpg", import.meta.url).href ,
-    caption: "淡水老街 實景拍攝",
+    caption: "ROCA西班牙百年衛浴"
   },
   {
-    img:new URL("./s9/4.jpg", import.meta.url).href ,
-    caption: "漁人碼頭 實景拍攝",
+    img:new URL("./s9/4.png", import.meta.url).href ,
+    caption: ""
   },
   {
     img:new URL("./s9/5.jpg", import.meta.url).href ,
-    caption: "淡水老街小巷 實景拍攝",
+    caption: "乾濕分離衛浴"
+  },
+  {
+    img:new URL("./s9/6.jpg", import.meta.url).href ,
+    caption: "Panasonic"
   },
 ]
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

@@ -1,23 +1,13 @@
 <template>
   <article class="s8">
-    <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s4/img.png" /></div>
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">通勤族酷愛</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]"  data-aos="fade-up" data-aos-delay="0">電梯店墅</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">一捷╳雙快速道，風馳電掣，翻轉未來</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">打通淡水任督二脈的二大交通建設<br />
-淡江大橋╳淡水北側快速道<br />
-其中預計2025年完工的淡江大橋，不僅是全世界最大的跨距斜張橋<br />
-更是媲美雪梨港灣大橋的景觀地標<br />
-橫跨淡水與八里，快速串連台61、64線直達國際機場<br />
-萬企君品，不需繞道關渡大橋<br />
-直上淡江大橋僅需5分鐘<br />
-有效分流車潮，不必跟塞車比耐心<br />
-發動你的引擎，距淡水河北側道路，9分鐘就到<br />
-捷運飛速暢行，不必跟紅燈乾瞪眼<br />
-沿途盡是繁華與時尚，通勤族最愛</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">地段好的店面，大老闆都搶</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">角地店王，百米店街結市，76-98大建坪，電梯透天店住，開店、辦公、自住、出租，置產投資首選。<br />
+零公設持分、免購車位、零虛坪，百坪大樓有找，超高CP值，當然選「如邑2」!</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -39,77 +29,47 @@
 @import '@/assets/style/function.scss';
 
 .s8 {
-  @apply relative flex items-center justify-center text-[#555];
+  @apply relative flex flex-col items-center justify-center text-[#000] bg-[#F8F8F8];
   width: 100%;
-  height:auto;
+  // height: size(800);
   padding:0 0 7em 0;
   font-size:size(18);
-  gap:3em;
-  flex-wrap: wrap;
-  .img{position: absolute;bottom:0;left:size(-270);width:size(660);
-  img{width: 100%;position: relative;}}
+  gap:1.5em;
+  flex-wrap:nowrap;
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
   flex-direction: column;
-  text-align: justify;
-}
-  .txt {
-    position: relative;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
+  text-align: center;
     width: 100%;
-  .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 700;
-    color:#B78E63;
-    text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
-    }
-  }
-  .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    color:#B78E63;
-    line-height: 1.5;
-  }
-  .desc{
-    margin: 0 0 1em;
-    b{
-    color:#B78E63;}
-  }
-  }
+}
+
+.txt {
+.title{
+&::after,
+&::before{
+background: #C9A063;
+}
+}}
 
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+      height: size(844);
+    width: size(1500);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+      width: 100%;
+    flex-basis: size(1500);
+      height: size(844);
       
     }
-    .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #B78E63;
+    .arrows .prev, .arrows .next{
+      width:3%;
     }
+
+    .splide__pagination{
+      bottom: .5em;
     }
   }
 }
@@ -127,25 +87,11 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(350);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
-
-  .txt {
-  .title{
-    font-size: 1.8em;
-    &::after,
-    &::before{
-      width: 4.2em;}
-  }
-  .subtitle{
-    font-size: 1.4em;
-  }
-  }
   .slider {
     height: auto;
     width: 100%;
@@ -161,6 +107,9 @@
     flex-basis: auto;
       height: sizem(250);
       
+    }
+    .arrows .prev, .arrows .next{
+      width:8%;
     }
   }
   }
@@ -196,17 +145,44 @@ const options = {
 const imgs = [
   {
     img:new URL("./s8/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s8/1_m.webp", import.meta.url).href : new URL("./s8/1.webp", import.meta.url).href,
-    caption: "淡水捷運站 實景拍攝"
+    caption: "外觀實景"
   },
   {
     img:new URL("./s8/2.jpg", import.meta.url).href ,
-    caption: "捷運 實景拍攝"
+    caption: "外觀實景"
   },
   {
     img:new URL("./s8/3.jpg", import.meta.url).href ,
-    caption: "淡水捷運站 實景拍攝"
+    caption: "外觀實景"
+  },
+  {
+    img:new URL("./s8/4.jpg", import.meta.url).href ,
+    caption: "外觀實景"
+  },
+  {
+    img:new URL("./s8/5.jpg", import.meta.url).href ,
+    caption: "外觀實景"
   },
 ]
+/*
+const imgs = [
+  {
+    img: getImg('s8/1'),
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: getImg('s8/2'),
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: getImg('s8/3'),
+    caption: "林口 長耀初"
+  },
+  {
+    img: getImg('s8/4'),
+    caption: "林口 長耀里"
+  },
+]
+*/
 </script>
 

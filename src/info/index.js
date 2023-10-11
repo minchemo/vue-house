@@ -8,23 +8,20 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新北市淡水區新民街65號",
+    address: "台南市安平區府前四街147號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d902.6985236410554!2d121.4377642696526!3d25.176429512310555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5c6ecb65785%3A0x1945836ec1535297!2z6JCs5LyB5ZCb5ZOB5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1689059072363!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/xaf4sYQFGJNJ7LB26",
-    phone: "02-2626-9393",
+    phone: "06-293-2799",
     fbLink: "https://www.facebook.com/100089552726620",
     fbMessage: "https://m.me/100089552726620",
     caseName: caseName,
     houseInfos: [
         /*
         */
-        ["投資興建", "鴻陞建設股份有限公司"],
-        ["建築設計", "陳鴻明建築師事務所 "],
-        ["公設設計", "胡宗雄建築師事務所"],
-        ["結構設計", "沈榮村土木結構技師事務所"],
-        ["建照號碼", "111淡建字第00400號"],
-        ["行銷企劃", "五率國際廣告股份有限公司"],
-        ["經紀人", "黃巧蕙（106）北市經證字第02481號"],
+        ["投資興建", "自冠建設"],
+        ["建築設計", "弘憲聯合建築師事務所"],
+        ["使照號碼", "(111)南工使字第01269號等10個"],
+        ["行銷企劃", "自售"],
     ],
     gtmCode: ["GTM-WJBN353"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
@@ -34,40 +31,52 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
     },
+    //底下2個 沒項目就會隱藏
+    room_type: ["一房","兩房","三房","四房","其他"],
+    budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000~2500萬","2500~3000萬","3000~5000萬","5000萬以上"],
+
     navList: [{
-            name: "三冠王",
+            name: "雙核心地段",
+            target: ".s3",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "交通中軸",
             target: ".s4",
             offset: "-60",
+            offsetmo: "0",
         },{
-            name: "四聚頭",
+            name: "水岸生活",
             target: ".s5",
             offset: "-60",
+            offsetmo: "0",
         },{
-            name: "雙首選",
+            name: "菁英學區",
             target: ".s6",
             offset: "-60",
+            offsetmo: "0",
         },{
-            name: "森活味",
+            name: "安心品牌",
             target: ".s7",
             offset: "-60",
+            offsetmo: "0",
         },{
-            name: "雙快速",
+            name: "電梯店墅",
             target: ".s8",
             offset: "-60",
+            offsetmo: "0",
         },{
-            name: "小旅行",
+            name: "嚴選建材",
             target: ".s9",
             offset: "-60",
+            offsetmo: "0",
         },{
-            name: "飯店宅",
+            name: "傳家首席",
             target: ".s10",
             offset: "-60",
-        },{
-            name: "精品味",
-            target: ".s11",
-            offset: "-60",
+            offsetmo: "0",
         },{
             name: "立即來電",
             target: ".contact-info",
