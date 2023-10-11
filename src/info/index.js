@@ -9,8 +9,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台南市安平區府前四街147號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14690.95655649574!2d120.17752453876997!3d22.996618100000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e766da5fe1d57%3A0xa37aaa6022272fe0!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5bqc5YmN5Zub6KGXMTQ36Jmf!5e0!3m2!1szh-TW!2stw!4v1697006507610!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/xaf4sYQFGJNJ7LB26",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.739139123935!2d120.1852493!3d22.9966181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77584e24e507%3A0xa92f1e0817f0a8ce!2z5aaC6YKRMl_oh6rlhqDlu7roqK1f5Yud5YGV6ZuG5ZyY!5e0!3m2!1szh-TW!2stw!4v1697008525183!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/y5xEjE4vDDsfydrf6",
     phone: "06-293-2799",
     fbLink: "https://www.facebook.com/thebestruyi2",
     fbMessage: "https://m.me/thebestruyi2",
@@ -24,7 +24,7 @@ export default {
         ["行銷企劃", "自售"],
     ],
     gtmCode: ["GTM-WJBN353"], // 可放置多個
-    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
@@ -32,6 +32,7 @@ export default {
     order: {
         title: "預約賞屋",
         subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
+        subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     //底下2個 沒項目就會隱藏
     room_type: ["一房","兩房","三房","四房","其他"],

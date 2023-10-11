@@ -2,8 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
+      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -332,8 +332,13 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, onMounted } from "vue"
+import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
+
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
+
+
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
