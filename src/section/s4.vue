@@ -207,8 +207,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: ""
+    img:new URL("./s4/02.jpg", import.meta.url).href ,
+    caption: "中華西路接軌九份子重劃區、86快速道路"
+  },
+  {
+    img:new URL("./s4/03.jpg", import.meta.url).href ,
+    caption: "永華大道連結水岸生活"
+  },
+  {
+    img:new URL("./s4/04.jpg", import.meta.url).href ,
+    caption: "近接西門路新光三越新天地商圈"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
