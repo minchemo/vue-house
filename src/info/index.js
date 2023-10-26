@@ -1,6 +1,7 @@
 const caseName = "test"
 
 export default {
+    case_code:"tr",
     meta: {
         title: caseName,
         description: caseName,
@@ -40,6 +41,7 @@ export default {
     //底下2個 沒項目就會隱藏
     room_type: ["一房","兩房","三房","四房","其他"],
     budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000~3000萬","3000~5000萬","5000萬以上"],
+
     navList: [{
             name: "重大建設",
             target: ".s3",
