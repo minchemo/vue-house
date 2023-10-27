@@ -1,8 +1,22 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
+    <div class="bg1">
+      
+      <img src="./s1/2.png" alt="moon" class="moon" data-aos="fade-up" data-aos-delay="500"  data-aos-duration="2000">
+      <div class="cloud1"><img src="./s1/cloud1.png" alt="cloud"><img src="./s1/cloud1.png" alt="cloud"></div>
+      <div class="cloud2"><img src="./s1/cloud2.png" alt="cloud"><img src="./s1/cloud2.png" alt="cloud"></div>
+      <img src="./s1/1.png" alt="ground" class="ground">
+      <div class="bubble" data-aos="fade-down" data-aos-delay="0" data-aos-offset="-300"  data-aos-duration="3000">
+        <img src="./s1/bubble.png" alt="bubble">
+        <img src="./s1/bubble.png" alt="bubble">
+        <img src="./s1/bubble.png" alt="bubble">
+        <img src="./s1/bubble.png" alt="bubble">
+        <img src="./s1/bubble.png" alt="bubble">
+      </div>
+    </div>
       <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title text-center font-['Jost']" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
       <!-- <div class="cus-divider"></div> -->
 
@@ -65,7 +79,7 @@
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+      <vue-recaptcha class="relative flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
@@ -96,16 +110,42 @@
    overflow: hidden;
     min-height: size(500);
 
-  .bg-image {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: size(50);
-    vertical-align: middle;
-  }
-
 }
 
+.bg1{position: absolute;bottom:0;left: 0;width: 100%;height: 100%;
+  background: linear-gradient(0deg, #A9E3FF , #3CC2FF 20%, #0073D4 40%, #00429D 60%, #012876 80%);
+.cloud1{position: absolute;bottom:0;left: 0;white-space: nowrap;
+  animation:an 30s linear infinite;
+  transform: translateX(-50%);
+  img{width: 100vw;height:size(400);}
+}
+.cloud2{position: absolute;bottom:size(40);left: 0;white-space: nowrap;
+  animation:an 20s linear infinite;
+  transform: translateX(-50%);
+  img{width: size(2254);height:size(283);}
+}
+.moon{position: absolute;width:size(1653);bottom:size(-60);left: calc(50% - #{size(1653)} * .5);mix-blend-mode: screen;}
+.ground{position: absolute;width:100%;bottom:0;left: 0;}
+
+.bubble{position: absolute;bottom:size(500);left: 0;z-index: 3;
+    mix-blend-mode: screen;
+img{position: absolute;left: 0;transform: translateY(150%);
+  animation:an 16s linear infinite alternate;
+  &:nth-child(1){width:size(25);left:size(100);bottom:size(300);
+    animation-duration:5s;animation-delay:-4s}
+  &:nth-child(2){width:size(52);left:size(700);bottom:size(100);
+    animation-duration:8s;animation-delay:-22s}
+  &:nth-child(3){width:size(100);left:size(200);bottom:size(500);
+    animation-duration:10s;animation-delay:-1s}
+  &:nth-child(4){width:size(25);left:size(1800);bottom:size(0);
+    animation-duration:5s;animation-delay:-10s}
+  &:nth-child(5){width:size(84);left:size(1600);bottom:size(100);
+    animation-duration:6s;animation-delay:0s}
+
+
+}
+}
+  }
 .order {
   width: 100%;
   padding-top: 0;
@@ -130,11 +170,14 @@
   }
 
   .order-title {
-    font-size: size(40);
-    font-weight: 700;
+    position: relative;
+    font-size: size(52);
+    //font-weight: 700;
     color: #FFF;
     padding-top:1.5em;
+    letter-spacing: .05em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    z-index: 2;
   }
 
   .order-title-img {
@@ -142,13 +185,17 @@
     margin-bottom: size(155);
   }
   .order-subTitle{
+    position: relative;
     font-size: size(17);
     color: #FFF;
     padding-top:.8em;
     letter-spacing: .1em;
+    z-index: 2;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
+    position: relative;
+    z-index: 2;
     margin: 0 auto;
     width: size(300);
     height: size(2);
@@ -210,9 +257,9 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #D71718;
-    //border: 1px solid #FFF9;
-    border:0;
+    background-color: #FFF0;
+    border: 1px solid #FFF9;
+    //border:0;
     border-radius: .5em;
 
     width: 308px;
@@ -234,29 +281,21 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
-    // overflow: hidden;
-   // padding-top: sizem(200);
-
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
-    }
-
+  }
+  .bg1{top:0;height:100%;
+.cloud1{bottom:sizem(30);
+  img{height:sizem(150);}
+}
+.cloud2{bottom:sizem(80);
+  img{width: sizem(1000);height:sizem(100);}
+}
+.moon{width:sizem(700);bottom:sizem(330);left: calc(50% - #{sizem(700)} * .5);}
+.ground{width:260%;left: -70%;}
   }
 
   .order {
     width: 100%;
     padding-bottom: sizem(63);
-    // border-radius: sizem(68) sizem(68) 0 0;
-   /* padding-top: sizem(0);
-    margin-top: sizem(0);
-
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
 
     .bird {
       @apply absolute;
@@ -274,7 +313,7 @@
     }
 
     .order-title {
-      font-size: sizem(25);
+      font-size: sizem(36);
       padding-top:1.5em;
     }
     .order-subTitle{

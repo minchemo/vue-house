@@ -3,9 +3,12 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+   
     <div class="logo">
-      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+      <img src="@/section/s2/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
+     <!--
+    -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -112,7 +115,7 @@
   height: 0;z-index: 52;
 }
 .contact-info {
-  padding: size(55) size(0) size(55) size(0);
+  padding: size(55) size(0) size(200) size(0);
     width: size(1440);
     min-width: 680px;
   position: relative;
@@ -120,13 +123,13 @@
   // background: #045147;
 
   .logo {position: relative;
-    width: size(367);
+    width: size(300);
    // height: size(172);
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(30) auto 0;
+    margin: size(30) auto size(20);
     img{width: 100%;}
     .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
   }
@@ -139,7 +142,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #EF8200;
+      background-color: #E183A5;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -152,11 +155,11 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      //border: 1px solid #C29267;
+      border: 1px solid #FFF;
       gap: 1em;
 
       &:hover {
-        background-color: #df6400;
+        background-color: #d8658f;
         color: #fff;
 
         img {
@@ -244,7 +247,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background:#EF8200;
+    background:#E183A5;
 
     .contact-item {
       height: 100%;      
@@ -278,7 +281,7 @@
 
     .logo {
       width: sizem(257);
-    margin: sizem(40) auto sizem(30) auto;
+    margin: sizem(40) auto sizem(50) auto;
      // margin-bottom: sizem(47);
     }
 
