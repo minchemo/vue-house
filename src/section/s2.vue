@@ -63,7 +63,7 @@
 .cloud1{
   img{width: 200vw;height:sizem(340);}
 }
-  .logo{width:sizem(180);margin:sizem(70) auto sizem(70);}
+  .logo{width:sizem(180);margin:sizem(130) auto sizem(70);}
   .txt{font-size:sizem(15);}
 
   .img1{width:sizem(250);margin:sizem(40) auto sizem(80) ;}

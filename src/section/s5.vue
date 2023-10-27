@@ -73,6 +73,7 @@ float: left;
     flex-basis: 73%;
     .slide-item {
       @apply bg-cover;
+  background-color: #CCC;
       height: size(976);
       width: size(1414) ;
       

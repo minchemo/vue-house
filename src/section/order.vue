@@ -7,7 +7,7 @@
       <div class="cloud1"><img src="./s1/cloud1.png" alt="cloud"><img src="./s1/cloud1.png" alt="cloud"></div>
       <div class="cloud2"><img src="./s1/cloud2.png" alt="cloud"><img src="./s1/cloud2.png" alt="cloud"></div>
       <img src="./s1/1.png" alt="ground" class="ground">
-      <div class="bubble" data-aos="fade-down" data-aos-delay="0" data-aos-offset="-300"  data-aos-duration="3000">
+      <div class="bubble">
         <img src="./s1/bubble.png" alt="bubble">
         <img src="./s1/bubble.png" alt="bubble">
         <img src="./s1/bubble.png" alt="bubble">
@@ -291,6 +291,15 @@ img{position: absolute;left: 0;transform: translateY(150%);
 }
 .moon{width:sizem(700);bottom:sizem(330);left: calc(50% - #{sizem(700)} * .5);}
 .ground{width:260%;left: -70%;}
+.bubble{bottom:sizem(400);
+img{
+  &:nth-child(1){width:sizem(15);left:sizem(5);bottom:sizem(300);}
+  &:nth-child(2){width:sizem(30);left:sizem(20);bottom:sizem(100);}
+  &:nth-child(3){width:sizem(80);left:sizem(50);bottom:sizem(400);}
+  &:nth-child(4){width:sizem(25);left:sizem(350);bottom:sizem(-100);}
+  &:nth-child(5){width:sizem(60);left:sizem(300);bottom:sizem(50);}
+}
+}
   }
 
   .order {

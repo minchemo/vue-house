@@ -75,6 +75,7 @@ float: left;
       @apply bg-cover;
       height: size(976);
       width: size(1414) ;
+  background-color: #CCC;
       
     }
   }

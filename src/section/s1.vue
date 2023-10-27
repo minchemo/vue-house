@@ -2,11 +2,13 @@
   <article class="s1" id="s1">
     <!--  
     <img class="t0" src="./s1/mo.jpg" alt="" srcset=""> --> 
+    <div class="bg-box">
     <div class="bg">
       <img src="./s1/2.png" alt="moon" class="moon" data-aos="fade-up" data-aos-delay="500"  data-aos-duration="2000">
       <div class="cloud1"><img src="./s1/cloud1.png" alt="cloud"><img src="./s1/cloud1.png" alt="cloud"></div>
       <div class="cloud2"><img src="./s1/cloud2.png" alt="cloud"><img src="./s1/cloud2.png" alt="cloud"></div>
-      <img src="./s1/1.png" alt="ground" class="ground">
+      <img src="./s1/3.png" alt="ground" class="ground">
+    </div>
     </div>
     <div class="bubble" data-aos="fade-down" data-aos-delay="0" data-aos-offset="-300"  data-aos-duration="3000">
       <img src="./s1/bubble.png" alt="bubble">
@@ -79,12 +81,12 @@
     width: 100%;
     height:size(400);
     position: absolute;
-    bottom: 0;
-    transform: translateY(50%);
-    background: linear-gradient(to bottom, #01287600 0%,#012876 50%,#01287600 100%);z-index: 2;
+    bottom:calc(50% + #{size(-400-1080*.5)});
+    background: linear-gradient(to bottom, #01287600 0%,#01287699 17%,#012876cc 30%,#012876cc 30%,#012876ee 38%, #012876 50%,#01287600 100%);z-index: 2;
   }
   .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .2;z-index: 10;}
-  .bg{position: absolute;top:calc(50% - #{size(1080*.5)});left: 0;width: 100%;height: size(1080);
+  .bg-box{position: absolute;top:calc(50% - #{size(1080*.5)});left: 0;width: 100%;height: size(1280);overflow: hidden;z-index: 2;}
+  .bg{position: absolute;top:0;left: 0;width: 100%;height:100%;height: size(1080);
   background: linear-gradient(0deg, #A9E3FF 0%, #3CC2FF 20%, #0073D4 40%, #00429D 70%, #012876 90%);
   animation:an2 2s 4s linear both;
 .cloud1{position: absolute;bottom:calc(40% + #{size(-0-1080*.4)});left: 0;white-space: nowrap;
@@ -98,7 +100,7 @@
   img{width: size(2254);height:size(283);}
 }
 .moon{position: absolute;width:size(1653);bottom:size(-60);left: calc(50% - #{size(1653)} * .5);mix-blend-mode: screen;}
-.ground{position: absolute;width:100%;bottom:0;left: 0;}
+.ground{position: absolute;width:100%;bottom:size(-200);left: 0;z-index: 2;}
   }
   .bubble{position: absolute;top:size(-50);left: 0;z-index: 3;
     mix-blend-mode: screen;
@@ -171,7 +173,12 @@ img{position: absolute;left: 0;top: 0;
     min-height: sizem(604);
     max-height: sizem(700);
     font-size:sizem(13);
-  .bg{top:0;height:100%;
+    &::after{
+    height:sizem(200);
+    bottom:calc(50% + #{sizem(-200-604*.5)});
+  }
+  .bg-box{top:0;height:calc(100% + #{sizem(100)});}
+  .bg{top:0;height:calc(100% - #{sizem(100)});
 .cloud1{bottom:sizem(30);
   img{height:sizem(150);}
 }
@@ -179,7 +186,7 @@ img{position: absolute;left: 0;top: 0;
   img{width: sizem(1000);height:sizem(100);}
 }
 .moon{width:sizem(700);bottom:calc(70% - #{sizem(580)} * .7);left: calc(50% - #{sizem(700)} * .5);}
-.ground{width:260%;left: -70%;}
+.ground{width:260%;left: -70%;bottom:sizem(-100);}
   }
 
   
