@@ -119,12 +119,6 @@ float: left;
     margin: 0 0 0 1em;
     height: auto;
     width: calc(100% - 1em);
-
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
-    }
     .slide-item {
       @apply bg-cover;
       width: 100%;

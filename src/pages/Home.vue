@@ -85,7 +85,7 @@ img {
       right:1em;
       bottom: .5em;
       font-weight: 300;
-      font-size: size(15);
+      font-size: size(12);
       color: #FFF;
       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
 
@@ -182,7 +182,7 @@ img {
   top: 0;left: 0;
 }
   .caption{
-      font-size: sizem(12);}
+      font-size: sizem(10);}
 .slider {
   @apply relative;
   padding: 0 0 1em;

@@ -8,10 +8,10 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-     address: "(待提供)",//(待提供)
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1698388071078!5m2!1szh-TW!2stw",
-    googleLink: "https://www.google.com/maps/",
-     phone: "00-00000000",
+     address: "台南市東區小東路196號旁(與光明街交叉口)",//(待提供)
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.6477442432265!2d120.22576104614792!3d22.999977361168366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77db3ca021f3%3A0xcfa5beddea6441d4!2z6Im-576O5paw5pmC5Luj!5e0!3m2!1szh-TW!2stw!4v1698629552229!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/CqgVwJZ3wz4yzoJw9",
+     phone: "06-2083366",
     fbLink: "https://www.facebook.com/100094216000797",
     fbMessage: "https://m.me/100094216000797",
     caseName: caseName,
@@ -26,6 +26,7 @@ export default {
         ["燈光設計", "日銧燈光"],
         ["基地面積", "約2044坪"],
         ["格局規劃", "2-3房"],
+        ["企劃行銷", "上博國際"],
     ],
     gtmCode: "GTM-5673NQBS", // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
