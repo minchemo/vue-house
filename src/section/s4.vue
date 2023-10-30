@@ -3,7 +3,7 @@
     <div class="main"><h3 class="title font-['Jost']" data-aos="fade-up" data-aos-delay="0">NEW TAINAN<span><span>T.S.MALL</span></span></h3>
       <div class="txt">
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">平實大局 總和渴望</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">台南正東區平實腹地，更甚2千坪的基地價值<br>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">台南東區平實正核心，無以撼動的繁華簇擁<br>
 南紡商圈、國賓商圈、後甲市場、裕農商圈的環抱青睞<br>
 鄰近平實轉運站，通達仁德交流道，直上高鐵、轉接南科<br>
 映射時尚、人文、綠意、風格的富饒光譜</p>
