@@ -1,6 +1,8 @@
 <template>
   <article class="s3" ref="s3">
 <div class="txt font-['Jost']"><span>THE FIRST, </span>THE INTERNATIONAL</div>
+
+<span class="caption">實景拍攝經電腦輔助處理</span>
   </article>
 </template>
 
@@ -47,54 +49,5 @@ import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
-const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-  return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
-
-const splide = ref();
-
-const currentSlideIndex = ref(0);
-
-const moved = (newIdx, prevIdx, destIdx) => {
-  currentSlideIndex.value = prevIdx
-}
-
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
-const imgs = [
-  {
-    img:new URL("./s3/1.jpg", import.meta.url).href ,
-    caption: "台南市政府"
-  },
-  {
-    img:new URL("./s3/2.jpg", import.meta.url).href ,
-    caption: "新光三越"
-  },
-  {
-    img:new URL("./s3/3.jpg", import.meta.url).href ,
-    caption: "夏慕尼"
-  },
-  {
-    img:new URL("./s3/4.jpg", import.meta.url).href ,
-    caption: "燦坤"
-  },
-  {
-    img:new URL("./s3/5.jpg", import.meta.url).href ,
-    caption: "家樂福-安平店"
-  },
-  {
-    img:new URL("./s3/6.jpg", import.meta.url).href ,
-    caption: "碳佐麻里"
-  },
-]
 </script>
 
