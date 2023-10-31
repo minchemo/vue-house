@@ -9,17 +9,17 @@
 </p>
       </div>
     </div>
-    <div class="slider" data-aos="fade">
+    <div class="slider" data-aos="fade"><div class="box" v-if="imgs.length > 1"></div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
-      <div class="arrows">
+      <div class="arrows" v-if="imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
-      <span class="current-slide">IMAGES {{ currentSlideIndex + 1 }}/{{ imgs.length }}</span>
+      <span class="current-slide" v-if="imgs.length > 1">IMAGES {{ currentSlideIndex + 1 }}/{{ imgs.length }}</span>
     </div>
 
   </article>
@@ -69,8 +69,9 @@ float: left;
 }
 
   .slider {
-    margin: 1.5em 0 0em;
+    margin: 0 0 0em;
     flex-basis: 73%;
+    .box{height: 1.5em;}
     .slide-item {
       @apply bg-cover;
   background-color: #CCC;
@@ -147,25 +148,21 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: false,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
 const imgs = [
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,
     caption: "建築外觀3D模擬示意圖"
   },
-  {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "建築外觀3D模擬示意圖"
-  },
 ]
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: false,
+  autoplay: imgs.length > 1,
+  interval: 5000,
+  gap: 0,
+  type:  (imgs.length > 1)?'loop':'fade'
+}
+
 </script>
 
