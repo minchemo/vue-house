@@ -11,23 +11,23 @@
     </div>
     </div>
     <div class="bubble" data-aos="fade-down" data-aos-delay="0" data-aos-offset="-300"  data-aos-duration="3000">
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
+      <img src="./s1/bubble.png" alt="bubble">
+      <img src="./s1/bubble.png" alt="bubble">
+      <img src="./s1/bubble.png" alt="bubble">
+      <img src="./s1/bubble.png" alt="bubble">
+      <img src="./s1/bubble.png" alt="bubble">
+      <img src="./s1/bubble.png" alt="bubble">
+      <img src="./s1/bubble.png" alt="bubble">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
+      <img src="./s1/bubble.png" alt="bubble" v-if="!$isMobile()">
     </div>
      <!--
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
@@ -104,9 +104,10 @@
   }
   .bubble{position: absolute;top:size(-50);left: 0;z-index: 3;
     mix-blend-mode: screen;
-    > div{position: absolute;left: 0;top: 0;
+img{position: absolute;left: 0;top: 0;
   animation:an 16s linear infinite reverse;
   transform: translateY(size(3900));
+  &:hover{}
   &:nth-child(1){width:size(25);left:size(28);
     animation-duration:19s;animation-delay:-4s}
   &:nth-child(2){width:size(52);left:size(114);
@@ -141,28 +142,7 @@
     animation-duration:26s;animation-delay:0s}
   &:nth-child(17){width:size(50);left:size(1831);
     animation-duration:32s;animation-delay:-30s}
-img{width: 100%;position: relative;
-  animation:an3 5s  both;opacity: 1;
-  // transition:all 1s;
-  &:hover{
-    transform: scale(1);opacity: 1;
-  animation:none;}
 }
-@keyframes an3{
-  0% {
-     transform: scale(1);opacity: 1;
-  }
-  3% {
-     transform: scale(2);opacity: 0;
-  }
-  70% {
-     transform: scale(.1);opacity: 0;
-  }
-  100% {
-     transform: scale(1);opacity: 1;
-  }
-}
-    }
   }
   .t1{
   font-size:size(54);letter-spacing: 1.1em;
@@ -212,7 +192,7 @@ img{width: 100%;position: relative;
   
   .bubble{
     top:sizem(-40);
-    > div{
+img{
   transform: translateY(sizem(1700));
   &:nth-child(1){width:sizem(40);left:sizem(-5);}
   &:nth-child(2){width:sizem(14);left:sizem(20);}

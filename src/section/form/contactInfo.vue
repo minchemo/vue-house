@@ -106,8 +106,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #EF8200;}
-.hover\:bg-color2:hover{background-color:#df6400;}
+.bg-color1{background-color: #E183A5;}
+.hover\:bg-color2:hover{background-color:#d8658f;}
 
 
 .contact-info-img{
@@ -229,7 +229,8 @@
   }
 }
 .modal-box{
-  img{filter:invert(73%) sepia(83%) saturate(4141%) hue-rotate(1deg) brightness(92%) contrast(108%);
+  img{
+    filter:invert(81%) sepia(15%) saturate(4644%) hue-rotate(292deg) brightness(97%) contrast(81%);
   }
 }
 
