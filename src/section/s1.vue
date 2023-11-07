@@ -11,28 +11,80 @@
     </div>
     </div>
     <div class="bubble" data-aos="fade-down" data-aos-delay="0" data-aos-offset="-300"  data-aos-duration="3000">
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
-      <div v-if="!$isMobile()"><img src="./s1/bubble.png" alt="bubble"></div>
+      <div><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
+      <div v-if="!$isMobile()"><img src="./s1/bubble.png" class="animated-img"
+        @mouseenter="playAnimation"
+        @animationend="resetAnimation"
+        alt="bubble"></div>
     </div>
      <!--
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
     <img src="./s1/t1.svg" class="t1" alt="" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>  -->
     <div class="t1 font-['Noto_serif_JP',sans-serif]">完美的顚覆</div>
+    <div class="bubbletxt">戳了{{ animationCount }}個泡泡　<img src="./s1/bubble.png"></div>
   </article>
 </template>
 
@@ -141,29 +193,47 @@
     animation-duration:26s;animation-delay:0s}
   &:nth-child(17){width:size(50);left:size(1831);
     animation-duration:32s;animation-delay:-30s}
-img{width: 100%;position: relative;
-  animation:an3 5s  both;opacity: 1;
-  // transition:all 1s;
-  &:hover{
-    transform: scale(1);opacity: 1;
-  animation:none;}
+
+.animated-img {
+  width: 100%;
+  position: relative;
+  transition: transform 0.5s, opacity 0.5s;
 }
-@keyframes an3{
+
+.animated-img.animate {
+  animation: an3 5s forwards;
+}
+
+@keyframes an3 {
   0% {
-     transform: scale(1);opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
   3% {
-     transform: scale(2);opacity: 0;
+    transform: scale(2);
+    opacity: 0;
   }
   70% {
-     transform: scale(.1);opacity: 0;
+    transform: scale(0.1);
+    opacity: 0;
   }
   100% {
-     transform: scale(1);opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
+
     }
   }
+  .bubbletxt{position: absolute;z-index: 5;
+    bottom:-140vw;padding: 3em 1em;
+    left:0.5em;color: #FFF;
+    white-space: nowrap;mix-blend-mode: screen;
+  transform: translateX(calc(-100% + 2em));
+  transition: transform .5s;
+img{position: relative;height: 1em;}
+&:hover{transform: translateX(0);}
+}
   .t1{
   font-size:size(54);letter-spacing: 1.1em;
     color:#fff;position: relative;z-index: 2;font-weight: 300;
@@ -226,6 +296,11 @@ img{width: 100%;position: relative;
 
 
   }
+
+  
+  .bubbletxt{
+    bottom:-269vw;z-index: 5;
+}
   .t1{font-size:sizem(24);
     }
   }
@@ -245,4 +320,23 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
+
+</script>
+<script>
+export default {
+  data() {
+    return {
+      animationCount: 0,
+    };
+  },
+  methods: {
+    playAnimation(event) {
+      event.target.classList.add('animate');
+      this.animationCount++;
+    },
+    resetAnimation(event) {
+      event.target.classList.remove('animate');
+    }
+  }
+};
 </script>
