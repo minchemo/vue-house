@@ -10,14 +10,14 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#003183] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <img src="@/section/s1/bg0.jpg" class="bgh">
+  <div class="home bg-[#DEDBD4] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    <!--img src="@/section/s1/bg0.jpg" class="bgh"-->
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-    <!-- <S2v /> -->
+    <!-- <S2v /> 
     <S2 />
     <S3 />
     <S4 />
@@ -26,7 +26,7 @@
     <S7 />
     <S8 />
     <S9 />
-    <S10 />
+    <S10 />-->
   <!--
     <S11 />
     <div class="bg">
@@ -225,6 +225,7 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+/* 
 import S2 from "@/section/s2.vue"
 // import S2v from "@/section/s2v.vue"
 import S3 from "@/section/s3.vue"

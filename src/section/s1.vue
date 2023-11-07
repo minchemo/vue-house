@@ -1,11 +1,10 @@
 <template>
   <article class="s1" id="s1">
    <!--  <img class="t0" src="./s1/pc.jpg" alt="" srcset="">  -->
-    <div class="bg"></div>
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
     <img src="./s1/t1.svg" class="t1" alt="" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
-    <div class="t2" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000"><span v-if="$isMobile()">絕版 電梯 店墅</span><span v-else>絕版 電梯 店墅 / </span><span>市政×星鑽
-</span></div>
+    <img src="./s1/t2.svg" class="t2" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+    
   </article>
 </template>
 
@@ -29,7 +28,7 @@
   justify-content: center;
   align-items:center;
   font-size:size(25);
-  background: #1C96D4;
+  background: #DEDBD4;
   .t0{position: absolute;top: -92px;left: 0;width: 100%;opacity: .5;z-index: 10;}
   .bg{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
   background: url("./s1/bg1.jpg") 50% 50%;
@@ -44,17 +43,16 @@
   &::after{background-position: 20vw 50%; animation-delay: 2.5s;}
   }
   .logo{
-    width:size(163);
+    width:size(758);
     margin: 5.8em auto 1.2em;
     }
   .t1{
-    width:size(602);
+    width:size(730);
     margin: 0 auto 3.5em;
     }
-  .t2{font-size: 5.4em;letter-spacing: -.05em;
-    color:#EF8200;position: relative;z-index: 2;font-weight: 300;
-    text-shadow: 0 0 .1em #006;
-    span:last-child{font-weight: 900;color:#fff;}
+  .t2{
+    width:size(730);
+    margin: 0 auto 3.5em;
     }
 
   

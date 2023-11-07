@@ -7,7 +7,7 @@
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
         </div>
-        <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
+        <!--div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
             <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
             <template v-for="item, i in info.navList">
             <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
@@ -17,7 +17,7 @@
             </template>
             <div class="close" @click="menuOpen = !menuOpen"  v-if="$isMobile()">
             </div>
-        </div>
+        </div-->
     </div>
     <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
     </div>
