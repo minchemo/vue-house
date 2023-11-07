@@ -8,8 +8,8 @@
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
-  <!--loading end-->
-   <Nav v-if="config.showNav" />
+  <!--loading end
+   <Nav v-if="config.showNav" />-->
   <div class="home bg-[#DEDBD4] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <!--img src="@/section/s1/bg0.jpg" class="bgh"-->
     <!--   <div class="bg">
@@ -239,9 +239,9 @@ import S10 from "@/section/s10.vue"
 // import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue" */
+import S3 from "@/section/s3.vue"
+import Nav from "@/layout/navbar.vue" */
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';

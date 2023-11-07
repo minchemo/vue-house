@@ -57,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#FFF]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#F00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -108,7 +108,7 @@
 
 .order {
   width: 100%;
-  padding-top: 0;
+  padding-top: 5vw;
 
   .bird {
     @apply absolute;
@@ -130,9 +130,10 @@
   }
 
   .order-title {
+    @apply  font-['Noto_serif_TC',serif];
     font-size: size(40);
     font-weight: 700;
-    color: #FFF;
+    color: #A77C22;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -143,7 +144,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #FFF;
+    color: #666;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -210,7 +211,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #D71718;
+    background-color: #A77C22;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
