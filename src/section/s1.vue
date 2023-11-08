@@ -3,13 +3,14 @@
    <!--  
    <img class="t0" src="./s1/mo.jpg" alt="" srcset="">  -->
 <div class="bg">
+  <img src="./s1/l1.svg" alt="l" class="l">
+  <img src="./s1/tree2.png" alt="tree" class="tree2">
+  <img src="./s1/l2.svg" alt="l" class="l">
   <img src="./s1/tree1.png" alt="tree" class="tree1">
   <img src="./s1/hill2.svg" alt="hill" class="hill2">
   <img src="./s1/hill3.svg" alt="hill" class="hill3">
-  <img src="./s1/l.svg" alt="l" class="l">
   <img src="./s1/hill4.svg" alt="hill" class="hill4">
   <img src="./s1/hill1.svg" alt="hill" class="hill1">
-  <img src="./s1/tree2.png" alt="tree" class="tree2">
 </div>
 
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
@@ -120,7 +121,7 @@
   .hill4{width:sizem(226);bottom:sizem(2);left:sizem(-106);}
   .tree1{width:sizem(79);bottom:sizem(20);left:sizem(3);
     }
-  .tree2{width:sizem(280);bottom:sizem(94);right:sizem(-76);
+  .tree2{width:sizem(280);bottom:sizem(90);right:sizem(-76);
   }
   .l{width:sizem(1100);bottom:sizem(-35);left:sizem(-630);}
   
