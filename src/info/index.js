@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d4059.6169086360005!2d121.45657242813198!3d24.976061114862343!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzM0LjQiTiAxMjHCsDI3JzI3LjgiRQ!5e0!3m2!1szh-TW!2stw!4v1699258462437!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/xg5P7Y9mBxJz6g197",
     phone: "02-2263-1888",
-    fbLink: "https://www.facebook.com/thebestruyi2",
-    fbMessage: "https://m.me/thebestruyi2",
+    fbLink: "https://www.facebook.com/61551474076594",
+    fbMessage: "https://m.me/61551474076594",
     caseName: caseName,
     houseInfos: [
         /*
