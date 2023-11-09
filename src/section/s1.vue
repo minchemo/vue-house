@@ -52,12 +52,12 @@
   .hill3{width:size(469);bottom:size(192);left:size(-22);}
   .hill4{width:size(489);bottom:size(139);left:size(182);}
   .tree1{width:size(165);bottom:size(216);left:size(363);
-     transform: skewX(-3deg);transform-origin: 50% 100%;
-     animation: an1 4s ease-in-out alternate infinite;
+     transform: skewX(-2deg);transform-origin: 50% 100%;
+     animation: an1 5s ease-in-out alternate infinite;
     }
   .tree2{width:size(494);bottom:size(156);right:size(27);
      transform: skewX(-3deg);transform-origin: 50% 100%;
-     animation: an1 4s ease-in-out alternate infinite;}
+     animation: an1 5s ease-in-out alternate infinite;}
   .l{width:100%;bottom:size(-60);left: 0;}
   
   }
