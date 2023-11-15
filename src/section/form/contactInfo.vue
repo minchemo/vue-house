@@ -18,6 +18,12 @@
         <img src="//h65.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
+      <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=711afhav" target="_blank" class="flex contact-item justify-center items-center" >
+        
+      <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
+        <img src="@/section/form/line.svg" alt="加入LINE" srcset="" />
+        <div>加入LINE</div>
+      </a>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
@@ -59,6 +65,10 @@
       <img src="//h65.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
+    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=711afhav" target="_blank" class="flex flex-1 flex-col contact-item justify-center items-center">
+      <img src="@/section/form/line.svg" alt="加入LINE" srcset="" />
+      <div>加入LINE</div>
+    </a>
   </div>
 
   <!-- Modal -->
@@ -256,7 +266,7 @@
 
     .contact-item {
       height: 100%;      
-      font-size: sizem(16);
+      font-size: sizem(14);
       color: #fff;
       border-left:1px solid #fff7;
     font-weight: 700;
