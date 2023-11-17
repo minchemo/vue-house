@@ -12,16 +12,16 @@
 
     <lazy-component class="b1">
       <div class="t" data-aos="fade-up" v-if="!$isMobile()">
-        靜巷，自成氣候<br>
-        靜，全世界洗耳恭聽<br>
-        靜，聽見樹<br>
-        靜，聽見風
+        絕版難再<br>
+        ５５７坪稀世美地<br>
+        四季心有靈犀<br>
+        緣定瑞安公園開窗零距 
       </div>
       <div class="t" data-aos="fade-up" v-else>
-        靜，聽見風<br />
-        靜，聽見樹<br />
-        靜，全世界洗耳恭聽<br />
-        靜巷，自成氣候
+        緣定瑞安公園開窗零距<br>
+        四季心有靈犀<br>
+        557坪稀世美地<br>
+        絕版難再
       </div>
       <img data-aos="fade-in" src="@/section/s1/01.jpg" alt="吉美富徠" srcset="">
 
@@ -29,22 +29,20 @@
     <lazy-component class="b2">
       <img data-aos="fade-in" src="@/section/s1/02.jpg" alt="吉美富徠" srcset="">
       <div class="t" data-aos="fade-up" v-if="$isMobile()">
-        街角咖啡館，輕吻淺烘培<br />
-        早午餐雙蛋黃，閒情拌日光
+        把生活過得像首詩<br />
+        驀然回首，卻在靜巷森隱處
       </div>
     </lazy-component>
     <lazy-component class="b3">
       <div class="t" data-aos="fade-up" v-if="!$isMobile()">
-        與青春不期而遇<br />
-        水牛書店一冊鉛字，<br />
-        官邸屋簷，迭起時代故事<br />
-        早午餐雙蛋黃，閒情拌日光<br />
-        街角咖啡館，輕吻淺烘培
+        城心知遇，定向長遠價值<br />
+        瑞安、和平<br />
+        驀然回首，卻在靜巷森隱處<br />
+        把生活過得像首詩
       </div>
       <div class="t" data-aos="fade-up" v-else>
-        官邸屋簷，迭起時代故事<br />
-        水牛書店一冊鉛字<br />
-        與青春不期而遇
+        瑞安、和平<br />
+        城心知遇，定向長遠價值
       </div>
       <img data-aos="fade-in" src="@/section/s1/03.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
@@ -67,33 +65,28 @@
     </lazy-component>
     <lazy-component class="b8">
       <div v-if="!$isMobile()" class="t" data-aos="fade-up">
-        窗前凝視，樹梢與歲月靜好<br />
-        公園畔陽台，共舞芬多精<br />
-        大樹腳跟子，心平氣和<br />
-        靜，來自修養、化作思想
+        珍稀地塊之上築藝精湛<br />
+        市中心住得純粹
       </div>
       <div v-else class="t" data-aos="fade-up">
-        靜，來自修養、化作思想<br />
-        大樹腳跟子，心平氣和<br />
-        公園畔陽台，共舞芬多精<br />
-        窗前凝視，樹梢與歲月靜好
+        市中心住得純粹<br />
+        珍稀地塊之上築藝精湛
       </div>
-      <div class="caption" v-if="$isMobile()">建築模型環境合成示意圖</div>
+      <div class="caption" >建築模型環境合成示意圖</div>
       <img data-aos="fade-in" src="@/section/s1/09.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
     <lazy-component class="b9">
       <div v-if="!$isMobile()" class="t" data-aos="fade-up">
-        瑞安和平，大局致大安<br />
-        瑞安靜巷，自成一格四季<br />
-        靜，自有高度<br />
-        鬧中有境、靜中有序
+        成為一代臻品名築的建築藏家<br />
+        世代傳承<br />
+        稀有極致規格
       </div>
       <div v-else class="t" data-aos="fade-up">
-        鬧中有境、靜中有序<br />
-        靜，自有高度<br />
-        瑞安靜巷，自成一格四季<br />
-        瑞安和平，大局致大安
+        稀有極致規格<br />
+        世代傳承<br />
+        成為一代臻品名築的建築藏家
       </div>
+      <div class="caption-2">建築模型環境合成示意圖</div>
       <div class="caption">建築模型環境合成示意圖</div>
       <img data-aos="fade-in" src="@/section/s1/10.jpg" alt="吉美富徠" srcset="">
     </lazy-component>
@@ -112,9 +105,9 @@
     </lazy-component>
     <lazy-component class="b12">
       <div v-if="!$isMobile()" class="t" data-aos="fade-up">
-        心有知音、世界為您安靜。<br />
-        鍾情一窗維瓦第、四季演色。<br />
-        伴隨一段德布西、開窗樹海輕舞，<br />
+        心有知音、世界為您安靜<br />
+        鍾情一窗維瓦第、四季演色<br />
+        伴隨一段德布西、開窗樹海輕舞<br />
         <span>心靜，開窗聽海</span>
       </div>
       <div v-else class="t" data-aos="fade-up">
@@ -166,11 +159,11 @@
         <source src="https://h35.banner.tw/jmfl/13.mp4" type="video/mp4">
       </video>
     </lazy-component>
-    <lazy-component class="b16">
+    <!--lazy-component class="b16">
       <video loading="lazy" autoplay loop muted playsinline class="video-background ">
         <source src="https://h35.banner.tw/jmfl/14.mp4" type="video/mp4">
       </video>
-    </lazy-component>
+    </lazy-component-->
   </div>
 </template>
 
@@ -310,9 +303,11 @@
   }
 
   .b8 {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
     gap: size(377);
     margin-top: -#{size(116)};
 
@@ -321,6 +316,16 @@
       font-size: size(32);
       font-weight: 600;
       line-height: size(64);
+    }
+
+    .caption {
+      position: absolute;
+      right: size(970);
+      bottom: size(10);
+      color: #fff;
+      z-index: 1;
+      font-size: size(12);
+      
     }
 
     img {
@@ -344,13 +349,23 @@
       line-height: size(64);
     }
 
-    .caption {
+    .caption{
       position: absolute;
-      left: 10px;
-      bottom: 5px;
+      left: size(10);
+      bottom: size(5);
       color: #fff;
       z-index: 1;
       font-size: size(12);
+
+    }
+    .caption-2{
+      position: absolute;
+      left: size(10);
+      bottom: size(450);
+      color: #fff;
+      z-index: 1;
+      font-size: size(12);
+
     }
 
     img {
@@ -630,7 +645,6 @@
     }
 
     .b8 {
-      position: relative;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -648,11 +662,12 @@
 
       .caption {
         position: absolute;
-        left: 10px;
-        bottom: 5px;
+        left: size-m(10);
+        bottom: size-m(5);
         color: #fff;
         z-index: 1;
         font-size: size-m(10);
+        width: 100%;
       }
 
       img {
@@ -678,8 +693,16 @@
 
       .caption {
         position: absolute;
-        left: 10px;
-        bottom: 5px;
+        left: size-m(10);
+        bottom: size-m(5);
+        color: #fff;
+        z-index: 1;
+        font-size: size-m(10);
+      }
+      .caption-2 {
+        position: absolute;
+        left: size-m(10);
+        bottom: size-m(130);
         color: #fff;
         z-index: 1;
         font-size: size-m(10);
