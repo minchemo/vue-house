@@ -9,21 +9,19 @@ export default {
     address1: "預約中心",//按鈕區的--- 如空白會只呈現地址
     address2: "預約中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市楠梓區益群路84號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29440.596544183438!2d120.27617843319531!3d22.72546962734862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f0aa2c235c3%3A0xb579987bad84c25e!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A55uK576k6LevODTomZ8!5e0!3m2!1szh-TW!2stw!4v1693205622858!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/i182Dtgt68MYaAbz7",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.298802300033!2d120.2967778!3d22.7254647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f16f5704453%3A0x2397ed388311211b!2z6auY5aSn5LmL5qOuL-WinuWAvOaloOaikyDljbPliLvpoJDntIQ!5e0!3m2!1szh-TW!2stw!4v1700464490875!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/nUi6kAc3JcYTeCKh6",
     phone: "07-3648088",
     fbLink: "https://www.facebook.com/112358748493530/",
     fbMessage: "https://m.me/112358748493530/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "建泰工藝"],
-        ["建築設計", "三門聯合建築師事務所 "],
-        ["結構設計", "織本結構株式會社"],
-        ["工程營造", "順緯營造"],
-        ["企劃銷售", "梁茂廣告"],
-        ["建照號碼", "110建字第0357號"],
-        ["證照號碼", "(112)雲縣地字000229號"],
-        ["經紀人", "廖哲志"], 
+        ["投資興建", "中德建設"],
+        ["營造公司", "承優營造"],
+        ["建築執照", "(112)高市工建築使字第01079號"],
+        ["企劃銷售", "得邦廣告"],
+        ["樓層規劃", "地上15層、地下4層"],
+        ["房型規劃", "2-3房、21~35坪"], 
     ],
     gtmCode: ["GTM-M8N6GNQ"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
