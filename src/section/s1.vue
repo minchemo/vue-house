@@ -6,8 +6,10 @@
     </div>
 
     <lazy-component class="b0 top_img">
-    <img data-aos="fade-in" v-if="!$isMobile()" src="@/section/s1/pc_top.jpg" alt="吉美富徠" srcset=""> 
-    <img data-aos="fade-in" v-if="$isMobile()" src="@/section/s1/m_top.jpg" alt="吉美富徠" srcset=""> 
+    <img data-aos="fade-in" class="top-img-absolute-text" v-if="!$isMobile()" src="@/section/s1/pc_top.svg" alt="吉美富徠" srcset=""> 
+    <img data-aos="fade-in" v-if="!$isMobile()" src="@/section/s1/pc_top.webp" alt="吉美富徠" srcset=""> 
+    <img data-aos="fade-in" class="top-img-absolute-text" v-if="$isMobile()" src="@/section/s1/m_top.svg" alt="吉美富徠" srcset=""> 
+    <img v-if="$isMobile()" src="@/section/s1/m_top.webp" alt="吉美富徠" srcset=""> 
     </lazy-component>
 
     <lazy-component class="b1">
@@ -173,6 +175,11 @@
 .s1 {
   width: 100%;
   position: relative;
+
+  .top-img-absolute-text{
+      position: absolute;
+      z-index: 2;
+    }
 
   .title {
     position: relative;
@@ -523,13 +530,19 @@
     width: 100%;
     position: relative;
 
+    .top-img-absolute-text{
+      position: absolute;
+      z-index: 2;
+    }
+
+
     .title {
       margin-top: size-m(41);
-      margin-left: size-m(30);
+      margin-left: size-m(20);
       gap: size-m(29);
 
       p {
-        font-size: size-m(12);
+        font-size: size-m(13);
       }
 
       img {
