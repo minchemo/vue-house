@@ -1,28 +1,24 @@
 <template>
 	<article class="s1 relative">
-		<div class="bubble" ref="bubbleRef">
-			<div class="bubble-1 z-[10]"></div>
-			<div class="bubble-2"></div>
-			<div class="bubble-3"></div>
-			<div class="bubble-4" v-if="!isMobile"></div>
-			<div class="bubble-5" v-if="!isMobile"></div>
-		</div>
-		<div class="content">
-			<div class="intro">
-				<img class="logo"  src="@/section/s1/logo.svg" alt="" srcset="" v-if="!$isMobile()" data-aos="fade-up">
-				<img class="logo"  src="@/section/s1/logo_m.svg" alt="" srcset="" v-else data-aos="fade-up">
-				<img class="t1"  src="@/section/s1/t1.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="200">
-				<img class="t2"  src="@/section/s1/t2.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="300">
-				<img class="arrow"  src="@/section/s1/arrow.svg" alt="" srcset="">
+		<div class="caption">情境示意</div>
+		<div class="title">
+			<img class="logo" src="@/section/s1/logo.png" alt="" srcset="">
+			<div class="t1">
+				百年傳承 世代安居<br />
+				放眼海線 沙鹿最好
 			</div>
-
-			 <!--img class="train absolute" src="@/section/s1/train.png" alt="" srcset="" data-aos="fade-left" data-aos-delay="200"-->
-			<A class="train" data-aos="fade-left" data-aos-delay="300" />
-
-			<img class="leaf absolute"  src="@/section/s1/leaf.webp" alt="" srcset="" v-if="!$isMobile()">
-			<img class="leaf absolute"  src="@/section/s1/leaf_m.webp" alt="" srcset="" v-else>
-			<img class="leaf2 absolute" src="@/section/s1/leaf2.webp" alt="" srcset="" v-if="!$isMobile()">
+			<div class="t2">
+				一座百年火車站、一座市心重劃區<br />
+				蛻變躍升，迎接中台灣國際門戶<br />
+				新世代前進未來，圓夢人生第一屋。
+			</div>
 		</div>
+		<div class="star" ref="starRef">
+			<img class="star1" src="@/section/s1/star1.png" alt="" srcset="">
+			<img class="star2" src="@/section/s1/star2.png" alt="" srcset="">
+		</div>
+			<img class="layer1" src="@/section/s1/layer1.png" alt="" srcset="">
+
 	</article>
 </template>
 
@@ -33,128 +29,68 @@
 	@apply w-full h-screen overflow-visible relative z-20;
 	max-height: size(1080);
 	min-height: size(900);
-	background: linear-gradient(180deg,
-			rgba(255, 62, 161, 1) 67.03703999519348%,
-			rgba(217, 48, 138, 1) 100%);
+	background-image: url(@/section/s1/bg.jpg);
+	background-size: cover;
+	background-position: bottom center;
 
-	.bubble {
-		z-index: 0;
-		@apply absolute w-full h-full inset-0 overflow-hidden;
+	.caption {
+		@apply absolute;
+		color: white;
+		font-size: size(15);
+		font-weight: 400;
+		right: size(16);
+		bottom: size(13);
+	}
 
-		>div {
+	.title {
+		@apply absolute flex flex-col items-center text-center left-1/2 -translate-x-1/2;
+		padding-top: size(162);
+
+		.logo{
+			width: size(313);
+		}
+		
+		.t1 {
+			margin-top:  -#{size(20)};
+			color: #E97290;
+			font-size: size(60);
+			font-weight: 900;
+			line-height: size(77.28);
+		}
+
+		.t2 {
+			margin-top: size(30);
+			color:#fff;
+			font-size: size(24);
+			font-weight: 500;
+			line-height: size(40.51);
+			letter-spacing: size(1.92);
+		}
+
+	}
+
+	.star {
+			@apply absolute w-full h-full inset-0;
+		img {
 			@apply absolute;
-			background-color: #ff3ea1;
-			border-radius: 50%;
-
-			&.bubble-3 {
-				width: size(809);
-				height: size(809);
-				left: size(65);
-				top: size(150);
-				box-shadow: 12px 5px 14px 0px rgba(85, 8, 45, 0.25);
+			&.star1 {
+				width: size(751);
+				top: -#{size(108)};
+				right: size(180);
 			}
-
-			&.bubble-5 {
-				width: size(745);
-				height: size(745);
-				left: size(1625);
-				top: size(94);
-				box-shadow: -9px -8px 9px 0px rgba(114, 18, 75, 0.25);
-			}
-
-			&.bubble-4 {
-				width: size(560);
-				height: size(560);
-				left: -#{size(328)};
-				top: size(423);
-				box-shadow: 8px -9px 11px 0px rgba(128, 20, 97, 0.25);
-			}
-
-			&.bubble-1 {
-				width: size(1080);
-				height: size(1080);
-				left: size(1162);
-				top: -#{size(788)};
-				box-shadow: 11px 6px 20px 0px rgba(0, 0, 0, 0.25);
-			}
-
-			&.bubble-2 {
-				width: size(640);
-				height: size(640);
-				left: size(824);
-				top: size(868);
-				box-shadow: -9px 0px 6px 0px rgba(0, 0, 0, 0.25);
-				background: linear-gradient(180deg, #FF3EA1 0%, rgba(255, 62, 161, 0) 100%);
-				box-shadow: -9px 0px 6px rgba(0, 0, 0, 0.25) !important;
+			&.star2 {
+				width: size(468);
+				top: size(300);
+				left: size(282);
 			}
 		}
 	}
 
-	.content {
-		.intro {
-			@apply absolute flex flex-col items-end;
-			gap: size(27);
-			width: size(457);
-			top: size(317);
-			left: size(960);
-			top:calc(50% + #{size(307 - 540)});//size(303);
-
-			img {
-				width: 100%;
-			}
-
-			.t2 {
-				width: size(293);
-			}
-
-			.arrow {
-				width: size(75.31);
-			}
-
-			.arrow {
-				margin-right: size(107);
-				margin-top: size(17);
-			}
-		}
-
-		.train {
-			
-			position: absolute;
-			left: size(104);
-			top:calc(50% + #{size(323 - 540)});//size(303);
-			width: size(909);
-			z-index: 1;
-		}
-
-		.leaf {
-			width: size(739.22);
-			left: size(29);
-			top: size(191);
-			animation: an_s 1.5s linear infinite;
-
-			@keyframes an_s {
-				0% {
-					transform: scale(.5)translateY(0%);
-					opacity: 0;
-				}
-
-				50% {
-					transform: scale(.95)translateY(-30%);
-					opacity: 1;
-				}
-
-				100% {
-					transform: scale(1.5)translateY(-40%);
-					opacity: 0;
-				}
-			}
-		}
-
-		.leaf2 {
-			top: size(491);
-			right: size(352.44);
-			width: size(190.56);
-		}
+	.layer1 {
+		@apply absolute z-10;
+		width: size(132);
+		top: size(355);
+		left: size(488);
 	}
 }
 
@@ -168,114 +104,12 @@
 	.s1 {
 		height: sizem(667);
 		max-height: unset;
-
-		.bubble {
-
-			>div {
-				@apply absolute;
-				background-color: #ff3ea1;
-				border-radius: 50%;
-
-				&.bubble-3 {
-					width: sizem(263);
-					height: sizem(263);
-					left: -#{sizem(113)};
-					top:-#{sizem(68)};
-					box-shadow: sizem(11) sizem(6) sizem(20) 0px rgba(0, 0, 0, 0.25);
-				}
-
-				&.bubble-1 {
-					width: sizem(311);
-					height: sizem(311);
-					left: sizem(299);
-					top: sizem(46);
-					box-shadow: -#{sizem(9)} -#{sizem(8)} sizem(9) rgba(113.69, 17.53, 75.22, 0.25);
-				}
-
-				&.bubble-2 {
-					width: sizem(319);
-					height: sizem(319);
-					left: -#{sizem(108)};
-					top: sizem(321);
-					box-shadow: sizem(12) sizem(5) sizem(14) 0px rgba(85, 8, 45, 0.25) !important;
-				}
-			}
-		}
-
-		.content {
-			.intro {
-				@apply absolute flex flex-col items-center z-10;
-				gap: size(27);
-				width: 100%;
-				top: sizem(63);
-				left: 50%;
-				transform: translateX(-50%);
-
-				img {
-					width: 100%;
-				}
-
-				.logo {
-					width: sizem(247);
-				}
-
-				.t1 {
-					width: sizem(281);
-					margin-top: sizem(26.66);
-				}
-
-				.t2 {
-					width: sizem(180.55);
-					margin-top: sizem(18.23);
-				}
-
-				.arrow {
-					width: sizem(39);
-					margin-right: 0;
-					margin-top: sizem(21.99);
-				}
-			}
-
-			.train {
-				left: -#{sizem(13)};
-				top: sizem(356);
-				width: sizem(412);
-				z-index: 1;
-			}
-
-			.leaf {
-				width: sizem(338.04);
-				left: sizem(10);
-				top: sizem(306.41);
-				animation: an_s 1.5s linear infinite;
-
-				@keyframes an_s {
-					0% {
-						transform: scale(.5)translateY(0%);
-						opacity: 0;
-					}
-
-					50% {
-						transform: scale(.95)translateY(-30%);
-						opacity: 1;
-					}
-
-					100% {
-						transform: scale(1.5)translateY(-40%);
-						opacity: 0;
-					}
-				}
-			}
-
-		}
 	}
 }
 </style>
 
 <script setup>
 import anime from 'animejs/lib/anime.es.js';
-import A from '@/section/anim/a.vue';
-
 import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
@@ -289,19 +123,19 @@ const scrollTo = (target) => {
 	})
 }
 
-const bubbleRef = ref(null);
+const starRef = ref(null);
 
 function r(min, max) {
 	return Math.random() * (max - min) + min;
 }
 
 const animeBubble = () => {
-	const bubbles = bubbleRef.value.children;
-	for (const child of bubbles) {
+	const stars = starRef.value.children;
+	for (const child of stars) {
 		anime({
 			targets: child,
-			translateX: isMobile.value ? r(-10, 10) : r(-100, 100),
-			translateY: isMobile.value ? r(-10, 10) : r(-100, 100),
+			translateX: isMobile.value ? r(-50, 50) : r(-50, 50),
+			translateY: isMobile.value ? r(-50, 50) : r(-50, 50),
 			round: r(1, 10),
 			delay: r(0, 1000),
 			duration: r(5000, 8000),
