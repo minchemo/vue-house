@@ -49,6 +49,7 @@
             <option value="陳振皓">陳振皓</option>
             <option value="紀宥榕">紀宥榕</option>
             <option value="翁雅如">翁雅如</option>
+            <option value="簡家榆">簡家榆</option>
           </select></label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
