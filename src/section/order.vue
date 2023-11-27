@@ -21,7 +21,7 @@
           <select class="select w-full border border-black" v-model="formData.room_type">
             <option value="" selected disabled>需求房型</option>
             <option value="73坪">73坪</option>
-            <option value="150坪">150坪</option>
+            <option value="77坪">77坪</option>
           </select>
           <select class="select w-full border border-black" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>

@@ -2,7 +2,7 @@
   <div class="s1">
     <div class="title" data-aos="fade-up">
       <img src="@/section/s1/logo.svg" alt="吉美富徠" srcset="">
-      <p><span>吉美富徠</span>｜瑞安街最高名宅｜73-150坪｜577坪 大局致大安</p>
+      <p><span>吉美富徠</span>｜瑞安街最高名宅｜73-77坪｜577坪 大局致大安</p>
     </div>
 
     <lazy-component class="b0 top_img">
