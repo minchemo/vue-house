@@ -1,4 +1,4 @@
-const caseName = "快樂王國/理享城"
+const caseName = "勝興興站"
 
 export default {
     meta: {
@@ -6,25 +6,27 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "接待中心：新北市五股區成泰路三段356號旁",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1241.0562918817438!2d121.44986325634159!3d25.098643359775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af9c08905843%3A0x71c9a16c3c2f019a!2z5b-r5qiC546L5ZyLL-eQhuS6q-WfjiDmjqXlvoXkuK3lv4M!5e0!3m2!1szh-TW!2stw!4v1694458066886!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/95gkZkCYSFdadpKFA",
-    phone: "02-8292-3777",
-    fbLink: "https://www.facebook.com/wl2.debang/",
-    fbMessage: "https://m.me/wl2.debang/",
+    address: "台中市沙鹿區永寧路、新站一路口",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3638.173294574602!2d120.55402!3d24.235717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE0JzA4LjYiTiAxMjDCsDMzJzE0LjUiRQ!5e0!3m2!1szh-TW!2stw!4v1692164201995!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/ZPZofPbe1gUT6R9F9",
+    phone: "04-2665-5577",
+    fbLink: "https://www.facebook.com/100095472765730",
+    fbMessage: "https://m.me/100095472765730",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "德裕建設股份有限公司"],
-        ["建築設計", "陳朝雄建築事務所"],
-        ["結構設計", "永安結構技師事務所"],
-        ["工程營造", "鴻信營造股份有限公司"],
-        ["企劃銷售", "得邦廣告股份有限公司"],
-        ["建照號碼", "111股建字第00331號"],
-        ["經 紀 人", "張嘉玲 (104)新北經字第003067號"],
+        ["投資興建", "勝興建設股份有限公司"],
+        ["建築設計", "吳六和建築師事務所"],
+        ["公共藝術", "黃筠茜設計師"],
+        ["基地面積", "1174坪"],
+        ["建照號碼", "110中都建字第01578號"],
+        ["公設設計", "邑埕設計工程有限公司"],
+        ["結構技師", "陳至忠結構技師"],
+        ["格局規劃", "2-4房"],
     ],
-    gtmCode: ["GTM-KKV2XKD"], // 可放置多個
-    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
-    // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
+    gtmCode: ["GTM-PQ8LQ84S"], // 可放置多個
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
