@@ -1,31 +1,44 @@
 <template>
   <article class="s7" ref="s7">
-    <div class="bg">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span v-if="!$isMobile()"></span>
-    </div>
-  <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">安心品牌</h3>
+  <div class="txttop">
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">台北西區新時代揭幕<br v-if="$isMobile()"> 邁向更好的未來</h3>
   </div>
-    <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">創新設計，構築感動</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">建築人的建築，多一份理想性，多一份專業堅持。從挑選土地，量制風格，以獨特的設計接軌國際樣式，專注結構與施工，打造有體感的永續森活，實踐您的夢想。</p>
-      </div>
-    </div>
-    <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
+<div class="list" data-aos="fade-up" data-aos-delay="200">
+  <div class="txt">
+    <h4 class="subtitle">台北車站六鐵共構特區</h4>
+    <p class="desc">每天約逾50萬人次進出，台鐵、捷運、高鐵、機場捷運加上預辦登機直達機場，國際進出北市重要門戶要點。</p>
+    <div class="subdesc">CATHAY REAL ESTATE</div>
+  </div>
+  <div class="img">
+  <img src="./s7/1.jpg" alt=""><span class="caption">圖說</span></div>
+</div>
+<div class="list" data-aos="fade-up" data-aos-delay="400">
+  <div class="txt">
+    <h4 class="subtitle">C1D1台北雙子星</h4>
+    <p class="desc">開發金額達606億台北雙子星大樓聯合開發案，規模超越101，以台灣第二高樓標識首都門戶意象，全球矚目。</p>
+    <div class="subdesc">CATHAY REAL ESTATE</div>
+  </div>
+  <div class="img">
+  <img src="./s7/2.jpg" alt=""><span class="caption">圖說</span></div>
+</div>
+<div class="list" data-aos="fade-up" data-aos-delay="600">
+  <div class="txt">
+    <h4 class="subtitle">台鐵E1E2明日台北埕</h4>
+    <p class="desc">基地範圍達3.47公頃，開發規劃分為高密度開發區住商大樓與低密度開發區文化資產，致力保存與開發並蓄榮景。</p>
+    <div class="subdesc">CATHAY REAL ESTATE</div>
+  </div>
+  <div class="img">
+  <img src="./s7/3.jpg" alt=""><span class="caption">圖說</span></div>
+</div>
+<div class="list" data-aos="fade-up" data-aos-delay="800">
+  <div class="txt">
+    <h4 class="subtitle">郵政雙塔</h4>
+    <p class="desc">台灣版「JP Tower」北門郵局公辦都更計劃，投入經費約270億元，雙塔大樓，將打造創業平台和文創商場。 </p>
+    <div class="subdesc">CATHAY REAL ESTATE</div>
+  </div>
+  <div class="img">
+  <img src="./s7/4.jpg" alt=""><span class="caption">圖說</span></div>
+</div>
 
   </article>
 </template>
@@ -33,72 +46,42 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s7 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center text-[#000];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
-  font-size:size(18);
-  gap:3em;
+  padding:0em 0 6em 0;
+  font-size:size(16);
+  gap:6em;
   flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-        top: 2vw;
-        left: 8vw;
-        font-size: 2.5vw;
-      }
-      &:nth-child(2){
-        top: 1vw;
-        right: 16vw;
-        font-size: 1.5vw;
-      }
-      &:nth-child(3){
-        top: 5vw;
-        right: 2vw;
-        font-size: 5vw;
-      }
-      &:nth-child(4){
-        top: -7vw;
-        right: 20vw;
-        font-size: 4vw;
-      }
-    }
+  .txttop{
+  width: 100%;
+  text-align: center;
+  font-size:size(45);
+  letter-spacing: 0.07em;
+  margin: 4em auto 0 auto;font-weight: 400;
   }
-
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
-  .main {
+.list{width:size(650);
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
-  flex-direction: column;
+    flex-basis: size(650);
   text-align: justify;
+    align-items:center;
+  gap:2em;
+.txt {
+  flex: 1;
+  .subtitle{font-size: 1.5em;color: #719679;}
 }
-
-  .slider {
-    margin: 0;
-    flex-basis: size(840);
-      height: size(560);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
-      
-    }
-    .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #C9A063;
-    }
-    }
-  }
+.img{position: relative;
+  flex: 0;
+img{width: size(310);
+  height:size(244);}
+}
+&:nth-child(4),
+&:nth-child(5){flex-direction:row-reverse;}
+}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -109,55 +92,34 @@
   .s7 {
   @apply flex-col;
     height: auto;
-    padding: 0;
-  font-size:sizem(12);
+    padding:sizem(60) 0 sizem(60) 0;
+  font-size:sizem(11);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
-.bg{
-    span{
-      &:nth-child(1){
-        top: 0vw;
-        left: 0vw;
-        font-size: 15vw;
-      }
-      &:nth-child(2){
-        top: 10vw;
-        left: 15vw;
-        font-size: 5vw;
-      }
-      &:nth-child(3){
-        top: 20vw;
-        left: 77vw;
-        font-size: 5vw;
-      }
-    }
+  .txttop{
+  margin: 0em auto .5em auto;
+  font-size:sizem(21);
   }
-
-  .main {
-    padding: 0 sizem(32.5);
-    width: 100%;
+.list{width:100%;
+    flex-basis:100%;
+  gap:0;
+.txt {
+  flex: 1;
+  padding: 0 1.7em;
+  .subtitle{font-size: 1.3em;color: #719679;}
+}
+.img{position: relative;
+  flex: 0;
+img{width: sizem(188);
+  height:sizem(183);}
+}
+&:nth-child(3),
+&:nth-child(5){flex-direction:row-reverse;}
+&:nth-child(4){flex-direction:row;}
 }
 
-  .slider {
-    height: auto;
-    width: 100%;
 
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
-    }
-  }
   }
 }
 </style>
@@ -165,6 +127,7 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -181,29 +144,37 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
-  autoplay: false,
+  pagination: false,
+  autoplay: true,
   interval: 4000,
-  gap: 0,
+  gap: 10,
   type: 'loop'
 }
 
 const imgs = [
   {
-    img:new URL("./s7/1.jpg", import.meta.url).href ,
-    caption: "大千"
+    img:new URL("./s3/1.jpg", import.meta.url).href ,
+    caption: "台南市政府"
   },
   {
-    img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "見真"
+    img:new URL("./s3/2.jpg", import.meta.url).href ,
+    caption: "新光三越"
   },
   {
-    img:new URL("./s7/3.jpg", import.meta.url).href ,
-    caption: "至真"
+    img:new URL("./s3/3.jpg", import.meta.url).href ,
+    caption: "夏慕尼"
   },
   {
-    img:new URL("./s7/4.jpg", import.meta.url).href ,
-    caption: "如邑一期"
+    img:new URL("./s3/4.jpg", import.meta.url).href ,
+    caption: "燦坤"
+  },
+  {
+    img:new URL("./s3/5.jpg", import.meta.url).href ,
+    caption: "家樂福-安平店"
+  },
+  {
+    img:new URL("./s3/6.jpg", import.meta.url).href ,
+    caption: "碳佐麻里"
   },
 ]
 </script>

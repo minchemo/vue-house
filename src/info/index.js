@@ -8,23 +8,21 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "土城區青雲路336巷30號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d4059.6169086360005!2d121.45657242813198!3d24.976061114862343!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzM0LjQiTiAxMjHCsDI3JzI3LjgiRQ!5e0!3m2!1szh-TW!2stw!4v1699258462437!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/xg5P7Y9mBxJz6g197",
-    phone: "02-2263-1888",
-    fbLink: "https://www.facebook.com/61551474076594",
-    fbMessage: "https://m.me/61551474076594",
+    address: "XXXX",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1701074829535!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/gpLWXKGf8L4TAaaE6",
+    phone: "00-00000000",
+    fbLink: "https://www.facebook.com/",
+    fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
         /*
         */
-        ["投資興建", "宏璟建設股份有限公司"],
-        ["建築設計", "廖錦盈建築師事務所"],
-        ["工程營照", "福華工程股份有限公司"],
-        ["建照號碼", "107土建字第00092號"],
-        ["廣告銷售", "立都廣告企業有限公司"],
-        ["經紀人", "林志龍"],
-        ["經紀人字號", "（97）北縣字第001735號"],
+        ["投資興建", "漢皇開發股份有限公司"],
+        ["行銷企劃", "創意家行銷股份有限公司"],
+        ["建築設計", "XXX"],
+        ["工程營照", "XX"],
+        ["建照號碼", "XXX"],
         
         
     ],
@@ -40,7 +38,7 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     //底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房","四房","其他"],
+    room_type: ["兩房","三房"],
     budget: ["1000~1500萬","1500~2000萬","2000~2500萬","2500~3000萬","3000~5000萬","5000萬以上"],
 
     navList: [{

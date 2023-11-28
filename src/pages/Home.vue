@@ -17,13 +17,13 @@
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-    <!-- <S2v /> 
     <S2 />
     <S3 />
     <S4 />
     <S5 />
     <S6 />
     <S7 />
+    <!-- <S2v /> 
     <S8 />
     <S9 />
     <S10 />-->
@@ -49,6 +49,7 @@
      transform:scale(1);opacity: 1;
   }
 }
+/*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
     span{
       position: absolute;
@@ -59,7 +60,7 @@
       &:nth-child(2){animation-delay: 1s;}
       &:nth-child(3){animation-delay: 1.5s;}
     }
-  }
+  }*/
 
 
 .fade-enter-active, .fade-leave-active {
@@ -69,9 +70,16 @@
   opacity: 0;
 }
 
+.home{
+  background: url("@/section/s1/bg.jpg");
+  background-attachment: fixed;
+  background-size: size(600) auto;
+}
+/*
 .home > .bgh{position: fixed;width: 100%;
   top: 0;left: 0;
 }
+*/
 img {
   display: inline;
   max-width: unset;
@@ -91,39 +99,29 @@ img {
 
       .txt {
     position: relative;
-    font-weight: 300;
-    letter-spacing: 0;
+    font-weight: 400;
+    letter-spacing: 0.05em;
     line-height: 1.7;
-    width: 100%;
+    width: 100%;    
   .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 900;
-    color:#C9A063;
-    text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: #fff;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto 1em;
-    }
+    font-size: 1.875em;
+    margin: .9em 0 0em;
+    // line-height: 1.4;
+    font-weight: 700;    
   }
   .subtitle{
-    font-size: 1.65em;
+    font-size: 1.875em;
     font-weight: 700;
-    margin: 0 0 .8em;
-    color:#C9A063;
-    line-height: 1.5;
+    margin: 0 0 .7em;
+    // line-height: 1.5;
   }
   .desc{
-    margin: 0 0 1em;
-    b{color:#C9A063;}
+    margin: 0 0 1.4em;
   }
+  .subdesc{
+    font-size: 1.25em;
+  }
+
   }
 .slider {
   @apply relative;
@@ -132,19 +130,22 @@ img {
     padding: 0; 
     height: 100%;
     pointer-events: none;
+    width: 110%;
+    left: -5%;
     .prev,
     .next{
-      width:5%;
+      width:4%;
       display: flex;
       pointer-events: stroke;
       cursor: pointer;
-      
-  justify-content: center;
-  align-items:center;
-    background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+      justify-content: center;
+      align-items:center;
+    background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23666' stroke-width='5' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
     background-size: 50% auto;
     transition:background-color .5s ;
-    &:hover{background-color: #0003;}
+    &:hover{
+      // background-color: #0003;
+    }
     }
     .prev{transform: scaleX(-1);
     }
@@ -174,27 +175,33 @@ img {
 }
 @media screen and (max-width: 767px) {
   
-
+.home{
+  background-size: sizem(300) auto;
+}
+/*
 .home > .bgh{width: 250%;
   top: 0;left: 0;
 }
+*/
   .caption{
       font-size: sizem(12);}
 
       .txt {
   .title{
-    font-size: 2.3em;
-    &::after,
-    &::before{
-      width: 2.6em;}
+    font-size: 1.5em;
   }
   .subtitle{
     font-size: 1.4em;
+  }
+  .subdesc{
+    font-size: 1.1em;
   }
   }
 .slider {
   @apply relative;
   .arrows{
+    width: 120%;
+    left: -10%;
     .prev,
     .next{
       width: 8%;
@@ -225,14 +232,14 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-/* 
 import S2 from "@/section/s2.vue"
-// import S2v from "@/section/s2v.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
+/* 
+// import S2v from "@/section/s2v.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"

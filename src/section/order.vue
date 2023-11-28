@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order relative text-center">
+  <div id="order" class="order relative text-center bg-[#806245]">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -20,7 +20,12 @@
             <label class="row"><span>手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-
+          <label class="row"><span>性別</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.gender">
+            <option value="" selected disabled>請選擇性別</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select></label>
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
@@ -57,9 +62,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#FFF]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#F00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -133,7 +138,7 @@
     @apply  font-['Noto_serif_TC',serif];
     font-size: size(40);
     font-weight: 700;
-    color: #A77C22;
+    color: #FFF;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -144,7 +149,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #666;
+    color: #FFF;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -154,7 +159,6 @@
     width: size(300);
     height: size(2);
     margin-bottom: size(50);
-    background-color: #055F76;
   }
 
   .form {
@@ -211,7 +215,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #A77C22;
+    background-color: #543D28;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -351,6 +355,7 @@ const formData = reactive({
   phone: "",
   room_type: "",
   budget: "",
+  gender: "",
   project: "",
   email: "",
   city: "",
@@ -361,7 +366,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "email", "room_type","budget","gender", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
@@ -369,6 +374,7 @@ const formDataRef = ref([
   "手機", //phone
   "房型", //room_type
   "預算", //budget
+  "性別", //gender
   "建案", //project
   "信箱", //email
   "居住縣市", //city
@@ -456,6 +462,7 @@ const send = () => {
       &phone=${formData.phone}
       &room_type=${formData.room_type}
       &budget=${formData.budget}
+      &gender=${formData.gender}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}

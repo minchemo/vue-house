@@ -1,21 +1,18 @@
 <template>
   <article class="s5" ref="s5">
-    <div class="bg">
-      <span></span>
-      <span></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-    </div>
-  <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">水岸生活</h3>
-  </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">悠遊水岸 享受森活</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">出門就能享有國際水岸！2公頃的林默娘公園、港濱歷史公園享受水岸悠閒生活，探訪[大魚的祝福]藝術地標。出門就能享受健康！永華運動中心離家近，讓運動不再有藉口，生活美學館，文化展覽提升生活。</p>
+    <h3 class="title">
+      <div data-aos="fade-up" data-aos-delay="0"><span>16</span>座大安森林公園</div>
+      <div data-aos="fade-up" data-aos-delay="100" class="title2">廣達<span>424</span>公頃，全長<span>7.7</span>公里</div>
+      <div data-aos="fade-up" data-aos-delay="200" class="title3"><span>31</span>座溜滑梯、<span>100</span>多組遊樂設施</div>
+    </h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="300">在大台北都會公園，發現一座森林</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">大台北都會公園，相當於16座大安森林公園，紐約中央公園的1.25倍！7.7公里珍稀水景，規划24公里環狀自行車步道、68座多功能運動場，結合音樂節、路跑、野餐、煙火盛事等各項藝文活動!</p>
+        <div class="subdesc" data-aos="fade-up" data-aos-delay="500">CATHAY REAL ESTATE</div>
       </div>
     </div>
-    <div class="slider" data-aos="fade">
+    <div class="slider" data-aos="fade-up" data-aos-delay="600">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -33,63 +30,52 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s5 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center text-[#000];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
-  font-size:size(18);
-  gap:3em;
+  padding:6em 0 6em 0;
+  font-size:size(16);
+  gap:6em;
   flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-    top: 3vw;
-    left: 9vw;
-    font-size: 6vw;
-}
-      &:nth-child(2){
-    top: 10vw;
-    left: 2vw;
-    font-size: 3vw;
-}
-      &:nth-child(3){
-    top: 14vw;
-    right: 2vw;
-    font-size: 4vw;}
-      &:nth-child(4){
-        top: 20vw;
-        left: 36vw;
-        font-size: 9vw;
-        transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
-        animation-delay: 1.8s;
-      }
-    }
-  }
+  background:#CAE1D2 url("./s5/bg.jpg") no-repeat 0 100%;
+  background-size: size(874) auto;
 
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
+    flex-basis: size(500);
   flex-direction: column;
   text-align: justify;
 }
 
+
+.txt {
+  .slogo{height:size(45);}
+  .title{
+    margin: 0 0 .4em;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    line-height: 1.3;
+    span{font-size: 1.6em;letter-spacing: 0;margin-right: .05em;}
+    .title2{align-self:flex-end;}
+    .title3{
+      &::after{content: "";display: inline-block;width: 3em;height: 1em;}
+    }
+  }
+}
+
   .slider {
     margin: 0;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: size(720);
+      height: size(700);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: size(720);
+      height: size(700);
       
     }
     .splide__pagination{
@@ -111,35 +97,30 @@
   .s5 {
   @apply flex-col;
     height: auto;
-    padding: 0;
-  font-size:sizem(12);
+    padding:sizem(60) 0 sizem(60) 0;
+  font-size:sizem(13);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
-  .bg{
-    span{
-      &:nth-child(1){
-    top: 3vw;
-    left: 86vw;
-    font-size: 8vw;
-}
-      &:nth-child(2){
-    top: 20vw;
-    left: 12vw;
-    font-size: 3vw;
-}
-    }
-  }
+  background-size: sizem(360) auto;
+  background-position: 0 sizem(340);
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
-}
+  }
+
+  .txt {
+    margin-bottom: 5.5em;
+  .title{
+    span{font-size: 1.43em;}
+  }
+  }
+
+
   .slider {
     height: auto;
-    width: 100%;
+    width: sizem(310);
 
     .caption {
     font-size:sizem(12);  
@@ -150,7 +131,7 @@
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(208);
       
     }
   }
@@ -161,6 +142,7 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -177,29 +159,21 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
-  autoplay: false,
+  pagination: false,
+  autoplay: true,
   interval: 4000,
-  gap: 0,
+  gap: 10,
   type: 'loop'
 }
 
 const imgs = [
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "台南生活美學館"
+    caption: "圖說"
   },
   {
     img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "永華國民運動中心"
-  },
-  {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "港濱歷史公園"
-  },
-  {
-    img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "林默娘公園"
+    caption: "圖說"
   },
 ]
 </script>

@@ -2,24 +2,16 @@
 
 <template>
   <article class="s4">
-    <div class="bg">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-    </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">交通中軸</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">府城中心，匯聚交通網絡</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">位居中華西路（台17線）、府前路、民生路市中心動軸，鏈結火車站商圈、86快速道路、九份子重劃、台南邁阿密遊艇富豪聚落，北外環連結台南科學園區，願景中心，地段就是難以取代。</p>
+    <div class="subdesc" data-aos="fade-up" data-aos-delay="0">CATHAY REAL ESTATE</div>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="100">辦公、商業、物流、飯店、住宅<br>五大範疇</h4>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="200">跨足台灣 移植純日生活</h3>
       </div>
     </div>
-    <div class="slider" data-aos="fade">
+    <div class="slider" data-aos="fade-up" data-aos-delay="300">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -38,7 +30,7 @@
 @import '@/assets/style/function.scss';
 
 .s4 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
+  @apply relative overflow-hidden flex items-center justify-center text-[#000];
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
@@ -46,44 +38,6 @@
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-        top: 1vw;
-        left: 10vw;
-        font-size: 3.5vw;
-      }
-      &:nth-child(2){
-        top: 12vw;
-        left: 2vw;
-        font-size: 2vw;
-      }
-      &:nth-child(3){
-        top: 3vw;
-        left: 7vw;
-        font-size: 9vw;
-        transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
-        animation-delay: 1.8s;
-      }
-      &:nth-child(4){
-        top: 5vw;
-        left: 26vw;
-        font-size: 1.5vw;
-      }
-      &:nth-child(5){
-        top: 12vw;
-        right: 33vw;
-        font-size: 4.5vw;
-      }
-      &:nth-child(6){
-        top: 12vw;
-        right: 1vw;
-        font-size: 2.5vw;
-        animation-delay: 1.5s;
-      }
-    }
-  }
 
 
 
@@ -94,14 +48,22 @@
   flex-direction: column;
   text-align: justify;
 }
+
+.txt {
+  text-align: center;
+  .subtitle{
+    font-weight: 300;
+    margin:  0.2em 0 0em;}
+  .title{margin: 0 0 0em;}
+}
   .slider {
     margin: 0;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: size(730);
+      height: size(400);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: size(730);
+      height: size(400);
       
     }
     .splide__pagination{
@@ -123,43 +85,23 @@
   .s4 {
   @apply flex-col;
     height: auto;
-    padding: 0;
+    padding:0 0 5em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
 
-.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
-.bg{
-    span{
-      &:nth-child(1){
-        top: 4vw;
-        left: 82vw;
-        font-size: 6vw;
-      }
-      &:nth-child(2){
-        top: 57vw;
-        left: 2vw;
-        font-size: 8vw;
-      }
-      &:nth-child(3){
-        top: 3vw;
-        left: 77vw;
-        font-size: 23vw;
-      }
-    }
-  }
-
   .main {
     padding: 0 sizem(30);
     width: 100%;
 }
-
-
+.txt {
+  margin: 0em auto 2em auto;
+}
 
   .slider {
     height: auto;
-    width: 100%;
+    width: sizem(310);
 
     .caption {
     font-size:sizem(12); 
@@ -170,7 +112,7 @@
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(168);
       
     }
   }
@@ -198,25 +140,25 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
+  pagination: false,
   autoplay: true,
   interval: 4000,
-  gap: 0,
+  gap: 10,
   type: 'loop'
 }
 
 const imgs = [
   {
-    img:new URL("./s4/02.jpg", import.meta.url).href ,
-    caption: "中華西路接軌九份子重劃區、86快速道路"
+    img:new URL("./s4/1.jpg", import.meta.url).href ,
+    caption: "圖說"
   },
   {
-    img:new URL("./s4/03.jpg", import.meta.url).href ,
-    caption: "永華大道連結水岸生活"
+    img:new URL("./s4/2.jpg", import.meta.url).href ,
+    caption: "圖說"
   },
   {
-    img:new URL("./s4/04.jpg", import.meta.url).href ,
-    caption: "近接西門路新光三越新天地商圈"
+    img:new URL("./s4/3.jpg", import.meta.url).href ,
+    caption: "圖說"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
