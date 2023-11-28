@@ -5,7 +5,7 @@
 				力挺小資<br v-if="!$isMobile()">快樂當家
 				<svg class="group-1" width="82" height="38" viewBox="0 0 82 38" fill="none"
 					xmlns="http://www.w3.org/2000/svg">
-					<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#FF3EA1" stroke-width="2" />
+					<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#A92D41" stroke-width="2" />
 				</svg>
 			</div>
 			<div class="t2" data-aos="fade-up" data-aos-delay="100">星級夢幻主題休閒會館</div>

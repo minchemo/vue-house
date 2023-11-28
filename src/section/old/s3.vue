@@ -75,7 +75,7 @@
 	.sep-text {
 		@apply absolute z-10 w-full;
 		text-align: center;
-		color: #FF3EA1;
+		color: #A92D41;
 		font-size: size(27);
 		font-family: 'Noto Serif TC';
 		font-weight: 700;
@@ -179,7 +179,7 @@
 	.sep-text {
 		@apply absolute z-10 w-full;
 		text-align: center;
-		color: #FF3EA1;
+		color: #A92D41;
 		font-size: sizem(14);
 		font-family: 'Noto Serif TC';
 		font-weight: 700;

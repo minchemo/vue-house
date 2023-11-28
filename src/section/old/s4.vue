@@ -4,7 +4,7 @@
 			<div class="title" v-if="$isMobile()">
 				<div class="t1">大直再進化<br />水岸宜居新盛世<svg class="group-1" width="82" height="38" viewBox="0 0 82 38"
 						fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#FF3EA1"
+						<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#A92D41"
 							stroke-width="2" />
 					</svg>
 				</div>
@@ -24,7 +24,7 @@
 			<div class="title">
 				<div class="t1" v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="0">大直再進化<br />水岸宜居新盛世<svg class="group-1" width="82" height="38" viewBox="0 0 82 38"
 						fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#FF3EA1"
+						<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#A92D41"
 							stroke-width="2" />
 					</svg>
 				</div>
@@ -204,7 +204,7 @@
 	.sep-text {
 		@apply relative;
 		text-align: center;
-		color: #FF3EA1;
+		color: #A92D41;
 		font-size: size(27);
 		font-family: 'Noto Serif TC';
 		font-weight: 700;
@@ -215,7 +215,7 @@
 			content: '';
 			width: size(462);
 			height: 1px;
-			background-color: #FF3EA1;
+			background-color: #A92D41;
 			position: absolute;
 			top: 50%;
 			margin-top: -0.5px;
@@ -226,7 +226,7 @@
 			content: '';
 			width: size(478);
 			height: 1px;
-			background-color: #FF3EA1;
+			background-color: #A92D41;
 			position: absolute;
 			top: 50%;
 			margin-top: -0.5px;

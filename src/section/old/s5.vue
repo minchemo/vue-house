@@ -9,7 +9,7 @@
 					萬坪公園城 水岸生活宅
 					<svg class="group-1" width="82" height="38" viewBox="0 0 82 38" fill="none"
 						xmlns="http://www.w3.org/2000/svg">
-						<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#FF3EA1"
+						<path d="M82 -1.43945e-05L40.8057 37.2727L3.34789e-06 -2.15632e-05" stroke="#A92D41"
 							stroke-width="2" />
 					</svg>
 				</div>
@@ -69,7 +69,7 @@
 	.sep-text {
 		@apply relative;
 		text-align: left;
-		color: #FF3EA1;
+		color: #A92D41;
 		font-size: size(27);
 		font-family: 'Noto Serif TC';
 		font-weight: 700;
@@ -133,14 +133,14 @@
 				@apply relative flex flex-col items-center justify-center;
 				width: size(226);
 				height: size(226);
-				border: #FF3EA1 1px solid;
+				border: #A92D41 1px solid;
 				border-radius: 100%;
-				color: #FF3EA1;
+				color: #A92D41;
 
 				.t1 {
 					font-size: size(65.534);
 					font-weight: 400;
-					border-bottom: 1px solid #FF3EA1;
+					border-bottom: 1px solid #A92D41;
 
 					span {
 						font-size: size(38.835);
@@ -168,7 +168,7 @@
 				}
 
 				&.active {
-					background-color: #FF3EA1;
+					background-color: #A92D41;
 					color: #fff;
 
 					.t1 {
@@ -177,7 +177,7 @@
 				}
 
 				&:hover {
-					background-color: #FF3EA1;
+					background-color: #A92D41;
 					color: #fff;
 					cursor: pointer;
 
@@ -372,7 +372,7 @@
 					}
 
 					&.active {
-						background-color: #FF3EA1;
+						background-color: #A92D41;
 						color: #fff;
 
 						.t1 {
@@ -381,7 +381,7 @@
 					}
 
 					&:hover {
-						background-color: #FF3EA1;
+						background-color: #A92D41;
 						color: #fff;
 						cursor: pointer;
 

@@ -1,6 +1,6 @@
 <template>
   <div class="contact-info mx-auto bg-[transparent] flex flex-col items-center justify-between">
-    <!-- <div class="logo" data-aos="zoom-in"></div> -->
+    <div class="logo" data-aos="zoom-in"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
@@ -101,19 +101,19 @@
   width: size(1200);
   // border-radius: size(115);
   padding: size(0) size(168) size(55) size(168);
-  margin-top: size(160);
+  margin-top: size(80);
   position: relative;
   z-index: 50;
   margin-bottom: 0;
 
   .logo {
-    width: size(380.7);
-    height: size(308.78);
+    width: size(361);
+    height: size(280);
     background-image: url("@/section/form/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: size(30);
+    margin-bottom: size(0);
   }
 
   .contact-item-box {
@@ -122,7 +122,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #FF3EA1;
+      background-color: #A92D41;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -136,7 +136,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #FF3EA1;
+        background-color: #A92D41;
         color: #fff;
 
         img {
@@ -174,7 +174,7 @@
 
 
       &.googlemap {
-      background-color: #FF3EA1;
+      background-color: #A92D41;
         color: #fff;
 
         img {
@@ -182,7 +182,7 @@
         }
 
         &:hover {
-          background-color: #FF3EA1;
+          background-color: #A92D41;
           color: #fff;
         img {
           filter: brightness(1) invert(0);
@@ -209,7 +209,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #FF3EA1;
+      background-color: #A92D41;
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;

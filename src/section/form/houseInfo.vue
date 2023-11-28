@@ -1,6 +1,6 @@
 <template>
     <div>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-[#fff] house">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-[#E97290] house">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_sans_TC']">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
@@ -8,7 +8,7 @@
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-5 border-l-4 border-[#FF3EA1] pl-2 text-[#FF3EA1]" v-html="item[0]"></p>
+                        <p class="mr-5 border-l-4 border-[#FCEE21] pl-2 text-[#FCEE21]" v-html="item[0]"></p>
                         <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal" v-html="item[1]">
                         </p>
                     </div>
@@ -40,7 +40,7 @@
 //     background-repeat: no-repeat;
 // }
 .house {
-  background-image: url('@/section/form/bg.webp');
+//   background-image: url('@/section/form/bg.webp');
   background-size: 100%;
 }
 .displaynone{display: none;}
@@ -76,7 +76,7 @@
 
 @media screen and (max-width:768px) {
 .house {
-  background-image: url('@/section/form/bg_m.webp');
+//   background-image: url('@/section/form/bg_m.webp');
 }
     .footer {
         margin-bottom: sizem(0);

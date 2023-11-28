@@ -18,7 +18,7 @@
             <div class="close" @click="menuOpen = !menuOpen">
                 <img src="@/section/close.svg" alt="" srcset="">
             </div>
-            <img class="navlogo" src="@/section/navlogo.webp" alt="" srcset="">
+            <img class="navlogo" src="@/section/navlogo.png" alt="" srcset="">
         </div>
     </div>
     <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
@@ -34,7 +34,8 @@
     height: size(100);
 
     .navlogo {
-        width: size(287);
+        width: size(173);
+        mix-blend-mode: plus-lighter;
     }
 
     .logo {
@@ -47,7 +48,7 @@
     }
 
     .menu-btn {
-         background: #c41e84;
+        background: #E97290;
         height: size(62);
         width: size(62);
         display: flex;
@@ -55,7 +56,7 @@
         justify-content: center;
         position: relative;
         z-index: 1;
-        // border: 1px solid #fff;
+        border: 1px solid #C9A063;
 
         p {
             transition: all .5s;
@@ -127,7 +128,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.49);
+        background: rgba(233, 114, 144, 0.90);
         width: size(374);
         height: 100%;
         z-index: 5;
@@ -139,20 +140,9 @@
 
         .menu-item-wrapper {
             @apply flex flex-col relative;
-            gap: size(50);
-            padding-right: size(40);
-            margin-bottom: 15%;
+            gap: size(25);
+            // margin-bottom: 15%;
             padding-top: 5%;
-
-            &::after {
-                content: '';
-                width: 1px;
-                height: 120%;
-                background-color: #FF3EA1;
-                position: absolute;
-                right: 5%;
-                top: 0;
-            }
         }
 
         .menu-item {
@@ -160,11 +150,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: size(24);
+            font-size: size(28);
             gap: size(10);
             font-family: 'Noto Sans TC';
             font-weight: 500;
-            color: #FF3EA1;
+            color: #fff;
+            letter-spacing: size(7.2);
+
+            span {
+                &::first-letter {
+                    font-size: size(36);
+                    color: #FCEE21;
+                }
+
+            }
 
             img {
                 width: size(43);
@@ -181,27 +180,17 @@
             }
 
             &:hover {
-                color :#fff;
+                color: #fff;
+
                 &:after {
                     // width: 100%;
                 }
             }
 
             &.active {
-                
-                color :#fff;
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: size(20);
-                    height: size(20);
-                    background-color: #FF3EA1;
-                    border-radius: 100%;
-                    left: 125%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
+                color: #fff;
+
             }
 
         }
@@ -213,33 +202,14 @@
         .close {
             position: absolute;
             bottom: unset;
-            top: size(60);
-            right: size(60);
-            width: size(44);
-            height: size(44);
+            top: size(40);
+            right: size(40);
+            width: size(34);
+            height: size(34);
             cursor: pointer;
 
             img {
                 width: 100%;
-            }
-        }
-
-        .decor {
-            position: absolute;
-            width: size(330);
-            top: -#{size(170)};
-            left: size(22);
-            z-index: 1;
-            animation: rotate 10s infinite linear;
-
-            @keyframes rotate {
-                from {
-                    transform: rotate(0deg);
-                }
-
-                to {
-                    transform: rotate(360deg);
-                }
             }
         }
 
@@ -273,7 +243,7 @@
     }
 
     .navlogo {
-        width: sizem(185) !important;
+        width: sizem(100) !important;
     }
 
     .nav {
@@ -318,6 +288,7 @@
 
             &.open {
                 display: none;
+
                 p {
                     color: #fff;
                 }
@@ -366,23 +337,32 @@
             gap: sizem(40);
             justify-content: flex-start;
             padding-top: sizem(100);
-            background: rgba(77.75, 0, 41.98, 0.81);
+            // background: rgba(77.75, 0, 41.98, 0.81);
 
             .menu-item-wrapper {
                 @apply flex flex-col relative;
-                gap: sizem(38);
+                gap: sizem(28);
                 padding-right: 0;
                 margin-bottom: sizem(10);
                 padding-top: 0;
 
                 &::after {
-                @apply hidden;
-                    }
+                    @apply hidden;
+                }
             }
 
             .menu-item {
-                font-size: sizem(18);
+                font-size: sizem(15);
                 gap: sizem(5);
+                letter-spacing: sizem(4);
+
+                span {
+                    &::first-letter {
+                        font-size: sizem(20);
+                        color: #FCEE21;
+                    }
+
+                }
 
                 img {
                     width: sizem(30);
@@ -401,13 +381,6 @@
                 left: unset;
             }
 
-            .decor {
-                width: 30vh;
-                left: 50%;
-                margin-left: -15vh;
-                top: -15vh;
-                animation: rotate 10s infinite linear;
-            }
 
             .close {
                 position: absolute;

@@ -1,8 +1,11 @@
 <template>
   <div id="order" class="order relative bg-[#fff] text-center">
+
     <div class="order-section">
+      <OrderIntro />
       <!-- Title -->
       <div class="order-title text-center text-[#fff]">{{ info.order.title }}</div>
+      <div class="order-subtitle text-center text-[#fff]">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
@@ -47,7 +50,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF3EA1] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#A92D41] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -63,6 +66,9 @@
 
       <!-- Contact Info -->
       <ContactInfo />
+
+      <img src="@/section/stargroup.png" class="stargroup" alt="" srcset="" v-if="!isMobile">
+      <img src="@/section/stargroupm.png" class="stargroup" alt="" srcset="" v-else>
     </div>
 
 
@@ -78,7 +84,8 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  background-image: url('@/section/form/bg.webp');
+  // background-image: url('@/section/form/bg.webp');
+  background-color: #E97290;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -87,6 +94,13 @@
   height: auto;
   padding-top: size(100);
   overflow: hidden;
+
+  .stargroup {
+    @apply absolute;
+    bottom: 10%;
+    right: -18%;
+    width: 115%;
+  }
 
   .z-10 {
     z-index: 10;
@@ -107,7 +121,7 @@
     top: size(67);
     right: 0;
     z-index: 10;
-    transform: scale(2.5) translate(-50%,-50%) rotate(12deg);
+    transform: scale(2.5) translate(-50%, -50%) rotate(12deg);
   }
 }
 
@@ -123,7 +137,7 @@
     width: size(292);
     text-align: center;
     margin: 0 auto;
-    margin-bottom: size(20);
+    margin-bottom: size(10);
 
     // &::after {
     //   content: '';
@@ -137,6 +151,11 @@
     //   left: -25%;
     //   top: 0;
     // }
+  }
+
+  .order-subtitle {
+    font-size: size(15);
+    margin-bottom: size(30);
   }
 
   .cus-divider {
@@ -163,9 +182,9 @@
 
     .input-style {
       border-radius: 0;
-      background-color: rgba(255,255,255,0.1);
+      background-color: rgba(255, 255, 255, 0.1);
       border: 1px solid #fff;
-      color:#fff;
+      color: #fff;
 
       &::placeholder {
         color: #fff !important;
@@ -201,7 +220,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #FF3EA1;
+    background-color: #A92D41;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
@@ -223,18 +242,28 @@
     padding-top: size(200)
   }
 }
+
 @media screen and (max-width:768px) {
   .order-section {
-    background-image: url('@/section/form/bg_m.webp');
+    // background-image: url('@/section/form/bg_m.webp');
     height: auto;
     padding-bottom: sizem(0);
-    padding-top: sizem(120);
+    padding-top: sizem(60);
     position: relative;
     overflow: hidden;
-  &::after {
-    width: 100%;
-    height: 100%;
-  }
+
+    .stargroup {
+      @apply absolute;
+      bottom: 20%;
+      right: -15%;
+      width: 120%;
+    }
+
+
+    &::after {
+      width: 100%;
+      height: 100%;
+    }
 
     .bg-image {
       position: absolute;
@@ -269,8 +298,16 @@
     .order-title {
       font-size: sizem(29);
       font-weight: 700;
-      margin-bottom: sizem(30);
+      margin-bottom: sizem(10);
       width: 100%;
+    }
+
+    .order-subtitle {
+      font-size: sizem(12);
+      margin-bottom: sizem(20) !important;
+      width: sizem(220);
+      text-align: center;
+      margin: 0 auto;
     }
 
     .order-title-img {
@@ -314,6 +351,7 @@
 </style>
 
 <script setup>
+import OrderIntro from "@/section/order_intro.vue"
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
@@ -322,8 +360,10 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, onMounted } from "vue"
+import { computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 import { useToast } from "vue-toastification"
 const toast = useToast()

@@ -25,7 +25,7 @@
 .s9 {
 	@apply w-full h-screen overflow-visible relative z-10;
 	height: size(1308);
-	background: linear-gradient(175deg, #FF3EA1 3.87%, #8E135E 96.09%);
+	background: linear-gradient(175deg, #A92D41 3.87%, #8E135E 96.09%);
 	padding-top: size(228);
 
 	.bubble {
@@ -68,7 +68,7 @@
 				left: size(1162);
 				top: -#{size(788)};
 				box-shadow: size(11) size(6) size(20) 0px rgba(0, 0, 0, 0.25);
-				background: #FF3EA1;
+				background: #A92D41;
 			}
 
 			&.bubble-2 {
@@ -123,7 +123,7 @@
 	.s9 {
 	@apply w-full h-screen overflow-visible relative z-10;
 	height: sizem(664);
-	background: linear-gradient(175deg, #FF3EA1 3.87%, #8E135E 96.09%);
+	background: linear-gradient(175deg, #A92D41 3.87%, #8E135E 96.09%);
 	padding-top: sizem(125);
 
 	.bubble {
@@ -166,7 +166,7 @@
 				left: sizem(213.53);
 				top: -#{sizem(158)};
 				box-shadow: sizem(11) sizem(6) sizem(20) 0px rgba(0, 0, 0, 0.25);
-				background: #FF3EA1;
+				background: #A92D41;
 			}
 
 			&.bubble-2 {

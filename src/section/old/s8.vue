@@ -170,7 +170,7 @@
 					width: 1px;
 					height: 100%;
 					left: size(20);
-					background-color: #FF3EA1;
+					background-color: #A92D41;
 
 					.pos {
 						@apply absolute;
@@ -180,7 +180,7 @@
 						border-radius: 100%;
 						width: size(17);
 						height: size(17);
-						background-color: #FF3EA1;
+						background-color: #A92D41;
 						transition: all .5s;
 					}
 				}
@@ -203,7 +203,7 @@
 	.sep-text {
 		@apply relative;
 		text-align: left;
-		color: #FF3EA1;
+		color: #A92D41;
 		font-size: size(27);
 		font-family: 'Noto Serif TC';
 		font-weight: 700;
@@ -215,7 +215,7 @@
 			content: '';
 			width: size(800);
 			height: 1px;
-			background-color: #FF3EA1;
+			background-color: #A92D41;
 			position: absolute;
 			top: 50%;
 			margin-top: -0.5px;

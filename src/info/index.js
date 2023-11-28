@@ -29,27 +29,35 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋",
-        subTitle: "",
+        subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
     },
     navList: [{
-            name: "理想啟城",
+            name: "興沙鹿",
+            target: ".s1",
+            offset: "",
+        },{
+            name: "興建築",
             target: ".s2",
             offset: "",
         },{
-            name: "理想環境",
+            name: "興交通",
             target: ".s3",
             offset: "",
         },{
-            name: "理想健康",
+            name: "興產業",
+            target: ".s4",
+            offset: "",
+        },{
+            name: "興機能",
             target: ".s5",
             offset: "",
         },{
-            name: "理想交通",
-            target: ".s6",
-            offset: "",
+            name: "興重劃",
+            target: ".s5 .section2",
+            offset: "100",
         },{
-            name: "理想生活",
-            target: ".s7",
+            name: "興建材",
+            target: ".s6",
             offset: "",
         }
     ],
