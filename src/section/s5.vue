@@ -34,11 +34,12 @@
 			</div>
 		</div>
 		<img class="i3" src="@/section/s5/i3.jpg" alt="" srcset="" v-if="!isMobile">
-
+		<img class="i1" src="@/section/s5/i1.jpg" alt="" srcset="" v-if="!isMobile">
 		<div class="section2">
 			<img class="group" src="@/section/s5/group.jpg" alt="" srcset="" v-if="isMobile">
 			<div class="title">
 				<img class="i2" src="@/section/s5/i2.jpg" alt="" srcset="" v-if="!isMobile">
+				
 				<div class="t1" data-aos="fade-up" data-aos-delay="0">
 					市中心<span>重劃好生活</span>
 				</div>
@@ -161,6 +162,8 @@
 			width: size(791);
 			padding-bottom: size(79);
 
+			
+
 			.i2 {
 				@apply w-full;
 			}
@@ -198,6 +201,12 @@
 		width: size(708);
 		left: 0;
 		top: size(804);
+	}
+	.i1 {
+		@apply absolute;
+		width: size(521);
+		left: size(350);
+		bottom: size(180);
 	}
 }
 
