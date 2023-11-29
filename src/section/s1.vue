@@ -4,8 +4,13 @@
     <div class="bg"></div>
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
     <img src="./s1/t1.svg" class="t1" alt="" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
-    <div class="t2" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000"><span v-if="$isMobile()">絕版 電梯 店墅</span><span v-else>絕版 電梯 店墅 / </span><span>市政×星鑽
-</span></div>
+    <div class="main">
+      <img src="./s1/c4.png"  alt="" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>
+      <img src="./s1/c3.png"  alt="" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"/>
+      <img src="./s1/c2.png"  alt="" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000"/>
+      <img src="./s1/c1.png"  alt="" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000"/>
+    </div>
+
   </article>
 </template>
 
@@ -29,33 +34,42 @@
   justify-content: center;
   align-items:center;
   font-size:size(25);
-  background: #1C96D4;
+  background: #fff;
   .t0{position: absolute;top: -92px;left: 0;width: 100%;opacity: .5;z-index: 10;}
-  .bg{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
-  background: url("./s1/bg1.jpg") 50% 50%;
-  background-size: auto 100%;
-  &::before,&::after{content: "";display: block;
-    position: absolute;top: 0;left: 0;width: 100%;height: 100%;
-  background: url("./s1/bg1.jpg");
-  background-size: auto 100%;
-  animation: op 5s linear infinite alternate;
-  }
-  &::before{background-position: -20vw 50%;}
-  &::after{background-position: 20vw 50%; animation-delay: 2.5s;}
-  }
+
   .logo{
-    width:size(163);
-    margin: 5.8em auto 1.2em;
+    width:size(568);
+    position: absolute;
+    left: size(165);
+    top: size(204);
     }
+
   .t1{
-    width:size(602);
-    margin: 0 auto 3.5em;
+    width:size(239);
+    position: absolute;
+    left: size(197);
+    top: size(574);
     }
   .t2{font-size: 5.4em;letter-spacing: -.05em;
     color:#EF8200;position: relative;z-index: 2;font-weight: 300;
     text-shadow: 0 0 .1em #006;
     span:last-child{font-weight: 900;color:#fff;}
     }
+
+  .main{
+      position: absolute;
+      width: size(998);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: size(8);
+      right: size(108);
+      bottom: size(100);
+
+      img{
+        width: size(242);
+      }
+    }  
 
   
 

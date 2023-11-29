@@ -128,7 +128,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #032763cc;
+        background: #f49f00ce;
         width:100%;
         height: size(60);
         z-index: 5;
@@ -170,14 +170,14 @@
                 }
             }
             &.btn2{
-                background:#EF8200;
+                background:#3E3A39;
 ;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
 
                 &:hover {
-                    background:#df6400;
+                    background:#252323;
                     &:after {
                         width:0;
                     }
