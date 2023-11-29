@@ -4,7 +4,7 @@
       <div class="txt">
     <img src="./s3/slogo2.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="0" />
     <h3 class="title" data-aos="fade-up" data-aos-delay="100">日本不動產第一品牌 締造城市未來</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="200">品牌歷史淵源長達346年，三井不動產集團80年來以創新思維佈局全球不動產領域，包括商業設施、精品飯店、商辦大樓、高優質住宅等事業版圖；日本國際城市地標：東京六本木中城(TOKYO MIDTOWN Roppongi)、日比谷中城(MIDTOWN HIBIYA)皆其代表作。</p>
+        <p class="desc" data-aos="fade-up" data-aos-delay="200">品牌歷史淵源長達346年，三井不動產集團80年來以創新思維佈局全球不動產領域，包括商業設施、精品飯店、商辦大樓、高優質住宅等事業版圖；日本國際城市地標：東京六本木中城 (TOKYO MIDTOWN Roppongi)、日比谷中城(MIDTOWN HIBIYA)皆其代表作。</p>
         <div class="subdesc" data-aos="fade-up" data-aos-delay="300">CATHAY REAL ESTATE</div>
       </div>
     </div>

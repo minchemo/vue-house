@@ -36,7 +36,6 @@
     <img src="./s2/img2.svg" data-aos="fade-up" data-aos-delay="900" alt="4大保證" v-if="!$isMobile()">
     <img src="./s2/img2m.svg" data-aos="fade-up" data-aos-delay="900" alt="4大保證" v-else>
   </div>
-
   </article>
 </template>
 

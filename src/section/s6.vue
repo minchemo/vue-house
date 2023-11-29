@@ -23,7 +23,6 @@
         </SplideSlide>
       </Splide>
     </div>
-
   </article>
 </template>
 

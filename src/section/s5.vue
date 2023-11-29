@@ -8,7 +8,7 @@
       <div data-aos="fade-up" data-aos-delay="200" class="title3"><span>31</span>座溜滑梯、<span>100</span>多組遊樂設施</div>
     </h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="300">在大台北都會公園，發現一座森林</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">大台北都會公園，相當於16座大安森林公園，紐約中央公園的1.25倍！7.7公里珍稀水景，規划24公里環狀自行車步道、68座多功能運動場，結合音樂節、路跑、野餐、煙火盛事等各項藝文活動!</p>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">大台北都會公園，相當於16座大安森林公園，紐約中央公園的1.25倍！ 7.7公里珍稀水景，規劃24公里環狀自行車步道、68座多功能運動場，結合音樂節、路跑、野餐、煙火盛事等各項藝文活動！</p>
         <div class="subdesc" data-aos="fade-up" data-aos-delay="500">CATHAY REAL ESTATE</div>
       </div>
     </div>

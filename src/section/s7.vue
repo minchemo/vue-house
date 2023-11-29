@@ -33,7 +33,7 @@
 <div class="list" data-aos="fade-up" data-aos-delay="800">
   <div class="txt">
     <h4 class="subtitle">郵政雙塔</h4>
-    <p class="desc">台灣版「JP Tower」北門郵局公辦都更計劃，投入經費約270億元，雙塔大樓，將打造創業平台和文創商場。 </p>
+    <p class="desc">台灣版「JP Tower」北門郵局公辦都更計劃，投入經費約270億元，雙塔大樓，將打造創業平台和文創商場。</p>
     <div class="subdesc">CATHAY REAL ESTATE</div>
   </div>
   <div class="img">
