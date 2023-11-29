@@ -212,7 +212,7 @@
 .s2 {
 	width: 100%;
 	height: size(1080);
-	background-image: url(@/section/s2/bg.jpg);
+	background-image: url(@/section/s2/bg.webp);
 	@apply flex items-center justify-center bg-cover;
 
 	.contain {
@@ -330,8 +330,10 @@
 				filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
 				.arrows {
-					@apply absolute z-10 flex items-center justify-between left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2;
-					width: 109%;
+					@apply absolute z-10 flex justify-between left-1/2 -translate-x-1/2 top-1/4 -translate-y-1/2;
+					width: 85%;
+					margin-top:sizem(30);
+					padding: sizem(10);
 
 					.next {
 						transform: rotate(180deg);
@@ -414,7 +416,8 @@
 		@apply relative;
 		width: 100%;
 		height: sizem(742);
-		background-image: url(@/section/s2/bgm.jpg);
+		background-image: url(@/section/s2/bgm.webp);
+		background-position: bottom;
 		@apply items-start;
 		padding-top: sizem(60);
 
@@ -536,73 +539,73 @@ const setSelected = (item) => {
 }
 const data = [
 	{
-		cover: new URL("../section/s2/1.jpg", import.meta.url).href,
+		cover: new URL("../section/s2/1.webp", import.meta.url).href,
 		t1: "勝興A+｜一、二期",
 		t2: "喧囂市心的寂靜，公園轉彎就到家，且一期好評不斷、再次獻上二期精心聚作。",
 		caption: "實景拍攝",
 		imgs: [
 			{
-				img: new URL("../section/s2/1_1.jpg", import.meta.url).href,
+				img: new URL("../section/s2/1_1.webp", import.meta.url).href,
 				caption: "實景拍攝"
 			},
 			{
-				img: new URL("../section/s2/1_2.jpg", import.meta.url).href,
+				img: new URL("../section/s2/1_2.webp", import.meta.url).href,
 				caption: "實景拍攝"
 			},
 		]
 	},
 	{
-		cover: new URL("../section/s2/2.jpg", import.meta.url).href,
+		cover: new URL("../section/s2/2.webp", import.meta.url).href,
 		t1: "勝興文心大慶",
 		t2: "全齡化公設，親子共讀社區環境",
 		caption: "實景拍攝",
 		imgs: [
 			{
-				img: new URL("../section/s2/3_1.jpg", import.meta.url).href,
+				img: new URL("../section/s2/3_1.webp", import.meta.url).href,
 				caption: "實景拍攝"
 			},
 			{
-				img: new URL("../section/s2/3_2.jpg", import.meta.url).href,
+				img: new URL("../section/s2/3_2.webp", import.meta.url).href,
 				caption: "示意圖"
 			},
 			{
-				img: new URL("../section/s2/3_3.jpg", import.meta.url).href,
+				img: new URL("../section/s2/3_3.webp", import.meta.url).href,
 				caption: "示意圖"
 			},
 			{
-				img: new URL("../section/s2/3_4.jpg", import.meta.url).href,
+				img: new URL("../section/s2/3_4.webp", import.meta.url).href,
 				caption: "示意圖"
 			},
 			{
-				img: new URL("../section/s2/3_5.jpg", import.meta.url).href,
+				img: new URL("../section/s2/3_5.webp", import.meta.url).href,
 				caption: "示意圖"
 			},
 		]
 	},
 	{
-		cover: new URL("../section/s2/3.jpg", import.meta.url).href,
+		cover: new URL("../section/s2/3.webp", import.meta.url).href,
 		t1: "勝興松竹",
 		t2: "重劃先驅，領銜十期門戶",
 		caption: "實景拍攝",
 		imgs: [
 			{
-				img: new URL("../section/s2/2_1.jpg", import.meta.url).href,
+				img: new URL("../section/s2/2_1.webp", import.meta.url).href,
 				caption: "實景拍攝"
 			},
 			{
-				img: new URL("../section/s2/2_2.jpg", import.meta.url).href,
+				img: new URL("../section/s2/2_2.webp", import.meta.url).href,
 				caption: "實景拍攝"
 			},
 		]
 	},
 	{
-		cover: new URL("../section/s2/4.jpg", import.meta.url).href,
+		cover: new URL("../section/s2/4.webp", import.meta.url).href,
 		t1: "勝興豐境",
 		t2: "凌空22層，市政重劃區雙港核心地段。",
 		caption: "示意圖",
 		imgs: [
 			{
-				img: new URL("../section/s2/4_1.jpg", import.meta.url).href,
+				img: new URL("../section/s2/4_1.webp", import.meta.url).href,
 				caption: "示意圖"
 			},
 

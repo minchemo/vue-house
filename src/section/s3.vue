@@ -45,7 +45,7 @@
 	@apply flex items-center justify-center relative bg-cover;
 	width: 100%;
 	height: size(1080);
-	background-image: url(@/section/s3/bg.jpg);
+	background-image: url(@/section/s3/bg.webp);
 
 	.contain {
 		@apply flex items-center justify-center relative z-10;
@@ -144,7 +144,7 @@
 	.s3 {
 		width: 100%;
 		height: sizem(654);
-		background-image: url(@/section/s3/bgm.jpg);
+		background-image: url(@/section/s3/bgm.webp);
 		background-position: top center;
 		background-size: cover;
 		@apply items-start;
@@ -260,15 +260,15 @@ const scrollTo = (target) => {
 
 const data = [
 	{
-		img: new URL("../section/s3/1.jpg", import.meta.url).href,
+		img: new URL("../section/s3/1.webp", import.meta.url).href,
 		caption: "現場實景拍攝"
 	},
 	{
-		img: new URL("../section/s3/2.jpg", import.meta.url).href,
+		img: new URL("../section/s3/2.webp", import.meta.url).href,
 		caption: "現場實景拍攝"
 	},
 	{
-		img: new URL("../section/s3/3.jpg", import.meta.url).href,
+		img: new URL("../section/s3/3.webp", import.meta.url).href,
 		caption: "情境示意圖"
 	},
 ]

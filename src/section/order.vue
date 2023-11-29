@@ -25,6 +25,18 @@
           <input type="text" placeholder="手機" class="input w-full input-style" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" />
 
+          
+          <select class="select w-full input-style select-style" v-model="formData.people">
+            <option value="" selected disabled>選擇專員</option>
+            <option value="陳睿珩">陳睿珩</option>
+            <option value="曾依琇">曾依琇</option>
+            <option value="柯智鈞">柯智鈞</option>
+            <option value="陳振皓">陳振皓</option>
+            <option value="紀宥榕">紀宥榕</option>
+            <option value="翁雅如">翁雅如</option>
+            <option value="簡家榆">簡家榆</option>
+          </select>
+
           <select class="select w-full input-style select-style" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
@@ -376,6 +388,7 @@ const formData = reactive({
   room_type: "",
   project: "",
   email: "",
+  people: "",
   city: "",
   area: "",
   msg: "",
@@ -384,7 +397,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email"]
+const bypass = ["project", "msg", "email","city","area","room_type"]
 
 //中文對照
 const formDataRef = ref([
@@ -393,6 +406,7 @@ const formDataRef = ref([
   "房型", //room_type
   "建案", //project
   "信箱", //email
+  "選擇專員", //people
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
@@ -479,6 +493,7 @@ const send = () => {
       &room_type=${formData.room_type}
       &project=${formData.project}
       &email=${formData.email}
+      &people=${formData.people}
       &cityarea=${formData.city}${formData.area}
       &msg=${formData.msg}
       &utm_source=${utmSource}

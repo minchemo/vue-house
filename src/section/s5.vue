@@ -33,12 +33,12 @@
 				</div>
 			</div>
 		</div>
-		<img class="i3" src="@/section/s5/i3.jpg" alt="" srcset="" v-if="!isMobile">
-		<img class="i1" src="@/section/s5/i1.jpg" alt="" srcset="" v-if="!isMobile">
+		<img class="i3" src="@/section/s5/i3.webp" alt="" srcset="" v-if="!isMobile">
+		<img class="i1" src="@/section/s5/i1.webp" alt="" srcset="" v-if="!isMobile">
 		<div class="section2">
-			<img class="group" src="@/section/s5/group.jpg" alt="" srcset="" v-if="isMobile">
+			<img class="group" src="@/section/s5/group.webp" alt="" srcset="" v-if="isMobile">
 			<div class="title">
-				<img class="i2" src="@/section/s5/i2.jpg" alt="" srcset="" v-if="!isMobile">
+				<img class="i2" src="@/section/s5/i2.webp" alt="" srcset="" v-if="!isMobile">
 				
 				<div class="t1" data-aos="fade-up" data-aos-delay="0">
 					市中心<span>重劃好生活</span>
@@ -57,7 +57,7 @@
 	@apply relative bg-cover;
 	width: 100%;
 	height: size(2006);
-	background-image: url(@/section/s5/bg.jpg);
+	background-image: url(@/section/s5/bg.webp);
 	padding-top: size(180);
 	padding-right: size(183);
 
@@ -214,7 +214,7 @@
 	.s5 {
 		width: 100%;
 		height: sizem(1260);
-		background-image: url(@/section/s5/bgm.jpg);
+		background-image: url(@/section/s5/bgm.webp);
 		padding: 0;
 		padding-top: sizem(65);
 
@@ -367,19 +367,19 @@ const move = (index, index2) => {
 }
 const data = [
 	{
-		img: new URL("../section/s5/1.jpg", import.meta.url).href,
+		img: new URL("../section/s5/1.webp", import.meta.url).href,
 		caption: "現場實景拍攝"
 	},
 	{
-		img: new URL("../section/s5/2.jpg", import.meta.url).href,
+		img: new URL("../section/s5/2.webp", import.meta.url).href,
 		caption: "現場實景拍攝"
 	},
 	{
-		img: new URL("../section/s5/3.jpg", import.meta.url).href,
+		img: new URL("../section/s5/3.webp", import.meta.url).href,
 		caption: "現場實景拍攝"
 	},
 	{
-		img: new URL("../section/s5/4.jpg", import.meta.url).href,
+		img: new URL("../section/s5/4.webp", import.meta.url).href,
 		caption: "現場實景拍攝"
 	},
 ]

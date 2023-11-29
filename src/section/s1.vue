@@ -2,7 +2,7 @@
 	<article class="s1 relative">
 		<div class="caption">情境示意</div>
 		<div class="title">
-			<img class="logo" src="@/section/s1/logo.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
+			<img class="logo" src="@/section/s1/logo.webp" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
 			<div class="t1" data-aos="fade-up" data-aos-delay="100">
 				百年傳承 世代安居<br />
 				放眼海線 沙鹿最好
@@ -14,11 +14,10 @@
 			</div>
 		</div>
 		<div class="star" ref="starRef">
-			<img class="star1" src="@/section/s1/star1.png" alt="" srcset="">
-			<img class="star2" src="@/section/s1/star2.png" alt="" srcset="">
+			<img class="star1" src="@/section/s1/star1.webp" alt="" srcset="">
+			<img class="star2" src="@/section/s1/star2.webp" alt="" srcset="">
 		</div>
 		<Boy class="layer1" />
-		<!-- <img class="layer1" src="@/section/s1/layer1.png" alt="" srcset=""> -->
 
 	</article>
 </template>
@@ -30,7 +29,7 @@
 	@apply w-full h-screen overflow-visible relative z-20;
 	max-height: size(1080);
 	min-height: size(900);
-	background-image: url(@/section/s1/bg.jpg);
+	background-image: url(@/section/s1/bg.webp);
 	background-size: cover;
 	background-position: 0 center;
 
@@ -108,7 +107,7 @@
 	.s1 {
 		height: sizem(667);
 		max-height: unset;
-		background-image: url(@/section/s1/bgm.jpg);
+		background-image: url(@/section/s1/bgm.webp);
 
 
 		.caption {

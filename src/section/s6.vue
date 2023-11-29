@@ -19,7 +19,7 @@
 	@apply flex flex-col relative bg-cover z-10;
 	width: 100%;
 	height: size(1080);
-	background-image: url(@/section/s6/bg.jpg);
+	background-image: url(@/section/s6/bg.webp);
 	padding-top: size(135);
 
 	.star {
@@ -56,7 +56,7 @@
 	.s6 {
 		width: 100%;
 		height: sizem(667);
-		background-image: url(@/section/s6/bgm.jpg);
+		background-image: url(@/section/s6/bgm.webp);
 		padding-top: sizem(68);
 
 		.star {

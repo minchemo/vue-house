@@ -18,7 +18,7 @@
 	@apply flex justify-center relative bg-cover;
 	width: 100%;
 	height: size(1080);
-	background-image: url(@/section/s4/bg.jpg);
+	background-image: url(@/section/s4/bg.webp);
 
 	.title {
 		@apply flex flex-col items-center relative z-10;
@@ -64,7 +64,7 @@
 	.s4 {
 		width: 100%;
 		height: sizem(678);
-		background-image: url(@/section/s4/bgm.jpg);
+		background-image: url(@/section/s4/bgm.webp);
 		padding: 0 sizem(32);
 
 

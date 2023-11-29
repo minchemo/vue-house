@@ -186,37 +186,37 @@ const isMobile = computed(() => globals.$isMobile());
 const splide = ref(null);
 const data = [
     {
-        img: new URL("../section/s6/1.png", import.meta.url).href,
+        img: new URL("../section/s6/1.webp", import.meta.url).href,
         logo: isMobile ? new URL("../section/s6/l1m.png", import.meta.url).href : new URL("../section/s6/l1.png", import.meta.url).href,
         t1: "台灣精品衛浴",
         t2: "超省水奈米馬桶，以智能淨未來。"
     },
     {
-        img: new URL("../section/s6/2.png", import.meta.url).href,
+        img: new URL("../section/s6/2.webp", import.meta.url).href,
         logo: isMobile ? new URL("../section/s6/l2m.png", import.meta.url).href : new URL("../section/s6/l2.png", import.meta.url).href,
         t1: "德國倍世淨水",
         t2: "199年淨水科技專家，全屋用水品質把關。"
     },
     {
-        img: new URL("../section/s6/3.png", import.meta.url).href,
+        img: new URL("../section/s6/3.webp", import.meta.url).href,
         logo: isMobile ? new URL("../section/s6/l3m.png", import.meta.url).href : new URL("../section/s6/l3.png", import.meta.url).href,
         t1: "淨流換氣系統",
         t2: "新風淨化自動切換，隨時維持最佳空氣品質。"
     },
     {
-        img: new URL("../section/s6/4.png", import.meta.url).href,
+        img: new URL("../section/s6/4.webp", import.meta.url).href,
         logo: isMobile ? new URL("../section/s6/l4m.png", import.meta.url).href : new URL("../section/s6/l4.png", import.meta.url).href,
         t1: "5+5mm膠合玻璃",
         t2: "氣密、水密、抗風壓、隔音，多項專利認證。"
     },
     {
-        img: new URL("../section/s6/5.png", import.meta.url).href,
+        img: new URL("../section/s6/5.webp", import.meta.url).href,
         logo: isMobile ? new URL("../section/s6/l5m.png", import.meta.url).href : new URL("../section/s6/l5.png", import.meta.url).href,
         t1: "智慧節能洗碗機",
         t2: "德國百年家電精品，優適高效率的洗碗行程。"
     },
     {
-        img: new URL("../section/s6/6.png", import.meta.url).href,
+        img: new URL("../section/s6/6.webp", import.meta.url).href,
         logo: isMobile ? new URL("../section/s6/l6m.png", import.meta.url).href : new URL("../section/s6/l6.png", import.meta.url).href,
         t1: "樂邁石晶降噪地板",
         t2: "歐美大廠台灣製造，零甲醛添加，健康貼近自然。"

@@ -267,7 +267,8 @@
           max-width: sizem(27);
           height: auto;
           max-height: sizem(27);
-          margin: unset;
+          margin-right: sizem(20);
+          //margin: unset;
         }
 
         &.address {
