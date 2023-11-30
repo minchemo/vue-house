@@ -196,9 +196,11 @@
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
+    font-weight: 700;
         > span{color: #F00;font-size: 12px;}
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background: inherit;flex: 1;
+    font-weight: 500;}
       option{color: #666;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -224,7 +226,7 @@
     height:3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 400;
+    font-weight: 700;
     position: relative;
   }
 

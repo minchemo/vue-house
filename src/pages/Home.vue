@@ -99,7 +99,7 @@ img {
 
       .txt {
     position: relative;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.05em;
     line-height: 1.7;
     width: 100%;    

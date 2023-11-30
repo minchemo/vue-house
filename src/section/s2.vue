@@ -111,8 +111,9 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   line-height: 1;
+  margin-bottom: .8em;
     span{
-      font-family: 'Microsoft Himalaya';
+      font-family: 'Scheherazade New', serif;
   font-size:3.2em;
   font-weight: 400;}
   }
@@ -187,6 +188,7 @@
   margin: 3em auto;
   .title{
   font-size:sizem(21);
+  margin-bottom: 1.1em;
   }
 }
 .list1{

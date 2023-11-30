@@ -1,4 +1,4 @@
-const caseName = "宏璟青雲"
+const caseName = "RiVER PARK"
 
 export default {
     meta: {
@@ -8,21 +8,21 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "XXXX",
+    // address: "XXXX",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1701074829535!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/gpLWXKGf8L4TAaaE6",
-    phone: "00-00000000",
-    fbLink: "https://www.facebook.com/61551470159566",
+    // phone: "00-00000000",
+    fbLink: "https://www.facebook.com/61551470159566/",
     fbMessage: "https://m.me/61551470159566",
     caseName: caseName,
     houseInfos: [
         /*
         */
-        ["投資興建", "漢皇開發股份有限公司"],
+        /*   ["投資興建", "漢皇開發股份有限公司"],
         ["行銷企劃", "創意家行銷股份有限公司"],
-        ["建築設計", "XXX"],
+     ["建築設計", "XXX"],
         ["工程營照", "XX"],
-        ["建照號碼", "XXX"],
+        ["建照號碼", "XXX"],*/
         
         
     ],
