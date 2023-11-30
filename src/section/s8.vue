@@ -1,6 +1,6 @@
 <template>
   <article class="s8">
-    <h2 class="title" data-aos="fade-down" data-aos-delay="0" >難得3房2衛<br>規劃當區最優</h2>
+    <h2 class="title" data-aos="fade-down" data-aos-delay="0" >正38坪3房2廳<br>規劃當區最優</h2>
     
     <img src="./s8/1.png" alt="" v-if="!$isMobile()">
     <img src="./s8/1m.png" alt="" v-else>
