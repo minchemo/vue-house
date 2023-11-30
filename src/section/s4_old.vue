@@ -1,19 +1,22 @@
 
 
 <template>
-  <article class="s5">
+  <article class="s4">
     <div class="bg">
       <span></span>
       <span></span>
-      <span v-if="$isMobile()"></span>
+      <span></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
     </div>
-  <!--div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">菁英學區</h3>
-  </div-->
+  <div class="txt">
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">交通中軸</h3>
+  </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">捷運輕軌 光速前進</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">機捷泰山站、中和新蘆線輔大站、新莊站，未來機捷A5a站、五泰輕軌、泰板輕軌，台北車站、桃園機場、市心精華四通八達。</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">府城中心，匯聚交通網絡</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">位居中華西路（台17線）、府前路、民生路市中心動軸，鏈結火車站商圈、86快速道路、九份子重劃、台南邁阿密遊艇富豪聚落，北外環連結台南科學園區，願景中心，地段就是難以取代。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -27,8 +30,6 @@
         </SplideSlide>
       </Splide>
     </div>
-    <div class="square" data-aos="fade-in" data-aos-delay="400" data-aos-duration="1000"></div>
-    <img src="./s5/style.svg" v-if="!$isMobile()" class="style" alt="" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>
 
   </article>
 </template>
@@ -36,42 +37,55 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s5 {
-  @apply relative overflow-hidden flex items-center justify-center ;
+.s4 {
+  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:7em 0 7em 0;
+  padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-
-  .txt{
-    border-top:2px solid #FFE000;
-    border-bottom:2px solid #FFE000;
-    z-index: 1;
+  .bg{
+    span{
+      &:nth-child(1){
+        top: 1vw;
+        left: 10vw;
+        font-size: 3.5vw;
+      }
+      &:nth-child(2){
+        top: 12vw;
+        left: 2vw;
+        font-size: 2vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 7vw;
+        font-size: 9vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+      &:nth-child(4){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(6){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
+      }
+    }
   }
 
-  .style{
-    position: absolute;
-    right: size(-13);
-    top: size(193);
-    opacity: 0.2 !important;
-  }
 
-  .square{
-    position: absolute;
-    width: size(830);
-    height: size(508);
-    z-index: 0;
-    background: #FFE000;
-    left: size(197);
-    top:size(190);
-  }
-
-
-.img{position: absolute;bottom:0;right:size(50);width:size(795);
-img{width: 100%;position: relative;}}
 
   .main {
     @apply flex;
@@ -83,8 +97,7 @@ img{width: 100%;position: relative;}}
   .slider {
     margin: 0;
     flex-basis: size(840);
-    height: size(560);
-    z-index: 2;
+      height: size(560);
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
@@ -107,7 +120,7 @@ img{width: 100%;position: relative;}}
 
 @media screen and (max-width: 767px) {
 
-  .s5 {
+  .s4 {
   @apply flex-col;
     height: auto;
     padding: 0;
@@ -116,49 +129,31 @@ img{width: 100%;position: relative;}}
   margin-bottom:0em;
   gap:2em;
 
-  .square{
-    width: sizem(343);
-    height: sizem(257);
-    left: sizem(0);
-    top:auto;
-    bottom: 0;
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+.bg{
+    span{
+      &:nth-child(1){
+        top: 4vw;
+        left: 82vw;
+        font-size: 6vw;
+      }
+      &:nth-child(2){
+        top: 57vw;
+        left: 2vw;
+        font-size: 8vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 77vw;
+        font-size: 23vw;
+      }
+    }
   }
 
   .main {
-    padding: sizem(20) sizem(32.5) sizem(5);
+    padding: 0 sizem(30);
     width: 100%;
 }
-
-  .txt{
-    border: none;
-    
-
-    .subtitle{
-      text-align: center;
-      
-      &::before,
-      &::after
-      {
-          content: "";
-          width: sizem(69);
-          height: 1.5px;
-          background: #FFE000;
-          display: inline-block;
-          vertical-align: middle;
-          
-      }
-      &::before{
-        margin: auto 1em auto 0;
-      }
-      &::after{
-        margin: auto 0 auto 1em;
-      }
-      }
-    .desc{margin: 0 !important;text-align: left;}
-  }
-
-
-.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
 
 
 
@@ -185,6 +180,7 @@ img{width: 100%;position: relative;}}
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
@@ -211,16 +207,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.webp", import.meta.url).href ,
-    caption: "機捷-A5泰山站"
+    img:new URL("./s4/02.jpg", import.meta.url).href ,
+    caption: "中華西路接軌九份子重劃區、86快速道路"
   },
   {
-    img:new URL("./s5/2.webp", import.meta.url).href ,
-    caption: "中和新蘆線-新莊站"
+    img:new URL("./s4/03.jpg", import.meta.url).href ,
+    caption: "永華大道連結水岸生活"
   },
   {
-    img:new URL("./s5/3.webp", import.meta.url).href ,
-    caption: "中和新蘆線-輔大站"
+    img:new URL("./s4/04.jpg", import.meta.url).href ,
+    caption: "近接西門路新光三越新天地商圈"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

@@ -1,6 +1,6 @@
 <template>
-    <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s2/map.webp" alt="" srcset="">
+    <div class="viewbox3" ref="viewbox">
+        <img ref="viewImg" src="@/section/s4/map.webp" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -10,10 +10,10 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.viewbox {
+.viewbox3 {
     position: relative;
-    width: size(1920);
-    height: size(900);
+    width: size(1500);
+    height: size(1501);
     background: #eee;
 
     > img {
@@ -26,7 +26,8 @@
 }
 
 @media screen and (max-width: 767px) {
-    .viewbox {
+
+    .viewbox3 {
         height: sizem(480);
         overflow: hidden;
         width: 100%;

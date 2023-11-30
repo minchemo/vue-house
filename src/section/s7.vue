@@ -1,18 +1,19 @@
+
+
 <template>
-  <article class="s7" ref="s7">
+  <article class="s7">
     <div class="bg">
       <span></span>
       <span></span>
-      <span></span>
-      <span v-if="!$isMobile()"></span>
+      <span v-if="$isMobile()"></span>
     </div>
-  <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">安心品牌</h3>
-  </div>
+  <!--div class="txt">
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">菁英學區</h3>
+  </div-->
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">創新設計，構築感動</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">建築人的建築，多一份理想性，多一份專業堅持。從挑選土地，量制風格，以獨特的設計接軌國際樣式，專注結構與施工，打造有體感的永續森活，實踐您的夢想。</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">菁英搖籃 健康樂活</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">輔仁大學城、新莊高中、新泰國中國小；新莊棒球場、體育館、國民運動中心、輔大醫療園區、臺北醫院…文教醫療完善，全民樂運動。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -21,11 +22,13 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
+    <div class="square" data-aos="fade-in" data-aos-delay="400" data-aos-duration="1000"></div>
+    <img src="./s7/style.svg" v-if="!$isMobile()" class="style" alt="" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>
 
   </article>
 </template>
@@ -34,44 +37,42 @@
 @import '@/assets/style/function.scss';
 
 .s7 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative overflow-hidden flex items-center justify-center ;
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:7em 0 7em 0;
   font-size:size(18);
   gap:3em;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-        top: 2vw;
-        left: 8vw;
-        font-size: 2.5vw;
-      }
-      &:nth-child(2){
-        top: 1vw;
-        right: 16vw;
-        font-size: 1.5vw;
-      }
-      &:nth-child(3){
-        top: 5vw;
-        right: 2vw;
-        font-size: 5vw;
-      }
-      &:nth-child(4){
-        top: -7vw;
-        right: 20vw;
-        font-size: 4vw;
-      }
-    }
+
+  .txt{
+    border-top:2px solid #FFE000;
+    border-bottom:2px solid #FFE000;
+    z-index: 1;
   }
 
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
+  .style{
+    position: absolute;
+    right: size(-13);
+    top: size(163);
+    opacity: 0.2 !important;
+  }
+
+  .square{
+    position: absolute;
+    width: size(830);
+    height: size(508);
+    z-index: 0;
+    background: #FFE000;
+    left: size(197);
+    top:size(190);
+  }
+
+
+.img{position: absolute;bottom:0;right:size(50);width:size(795);
+img{width: 100%;position: relative;}}
+
   .main {
     @apply flex;
     margin: 0;
@@ -79,11 +80,11 @@
   flex-direction: column;
   text-align: justify;
 }
-
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+    height: size(560);
+    z-index: 2;
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
@@ -91,11 +92,11 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
-      color: #C9A063;
+      color: #B78E63;
     }
     }
   }
@@ -114,41 +115,61 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
-.bg{
-    span{
-      &:nth-child(1){
-        top: 0vw;
-        left: 0vw;
-        font-size: 15vw;
-      }
-      &:nth-child(2){
-        top: 10vw;
-        left: 15vw;
-        font-size: 5vw;
-      }
-      &:nth-child(3){
-        top: 20vw;
-        left: 77vw;
-        font-size: 5vw;
-      }
-    }
+
+  .square{
+    width: sizem(343);
+    height: sizem(257);
+    left: sizem(0);
+    top:auto;
+    bottom: 0;
   }
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: sizem(20) sizem(32.5) sizem(5);
     width: 100%;
 }
+
+  .txt{
+    border: none;
+    
+
+    .subtitle{
+      text-align: center;
+      
+      &::before,
+      &::after
+      {
+          content: "";
+          width: sizem(69);
+          height: 1.5px;
+          background: #FFE000;
+          display: inline-block;
+          vertical-align: middle;
+          
+      }
+      &::before{
+        margin: auto 1em auto 0;
+      }
+      &::after{
+        margin: auto 0 auto 1em;
+      }
+      }
+    .desc{margin: 0 !important;text-align: left;}
+  }
+
+
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+
+
 
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12);  
+    font-size:sizem(12); 
     right:sizem(5);
-    bottom:sizem(5);
+    bottom:sizem(5); 
     }
     .slide-item {
       @apply bg-cover;
@@ -182,7 +203,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: false,
+  autoplay: true,
   interval: 4000,
   gap: 0,
   type: 'loop'
@@ -190,21 +211,22 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.jpg", import.meta.url).href ,
-    caption: "大千"
+    img:new URL("./s7/1.webp", import.meta.url).href ,
+    caption: "輔仁大學城"
   },
   {
-    img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "見真"
+    img:new URL("./s7/2.webp", import.meta.url).href ,
+    caption: "新泰國中"
   },
   {
-    img:new URL("./s7/3.jpg", import.meta.url).href ,
-    caption: "至真"
+    img:new URL("./s7/3.webp", import.meta.url).href ,
+    caption: "國民運動中心"
   },
   {
-    img:new URL("./s7/4.jpg", import.meta.url).href ,
-    caption: "如邑一期"
+    img:new URL("./s7/3.webp", import.meta.url).href ,
+    caption: "輔大醫療園區"
   },
 ]
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

@@ -5,10 +5,10 @@
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
     <img src="./s1/t1.svg" class="t1" alt="" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
     <div class="main">
-      <img src="./s1/c4.png"  alt="" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>
-      <img src="./s1/c3.png"  alt="" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"/>
-      <img src="./s1/c2.png"  alt="" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000"/>
-      <img src="./s1/c1.png"  alt="" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000"/>
+      <img src="./s1/c4.webp"  alt="" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>
+      <img src="./s1/c3.webp"  alt="" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"/>
+      <img src="./s1/c2.webp"  alt="" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000"/>
+      <img src="./s1/c1.webp"  alt="" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000"/>
     </div>
 
   </article>
@@ -92,15 +92,24 @@
     max-height: sizem(812);
     font-size:sizem(12);
   .logo{
-    width:sizem(96);
-    margin: 0em auto 1.2em;
+    width:sizem(240);
+    top: sizem(89);
+    left: sizem(67);
     }
   .t1{
-    width:sizem(204);
+    width:sizem(127);
+    top: sizem(228);
+    left: sizem(124);
     }
-  .t2{font-size: 3.9em;text-align: center;
-    line-height: 1.4;
-    span{display: block;}
+
+    .main{
+     width: sizem(310); 
+     left: sizem(33);
+     bottom: 0;
+
+     img{
+      width: sizem(75); 
+     }
     }
 
   }

@@ -10,8 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#003183] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <img src="@/section/s1/bg0.jpg" class="bgh">
+  <div class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
@@ -89,12 +88,13 @@ img {
       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
 
 
-      .txt {
+    .txt {
     position: relative;
     font-weight: 300;
     letter-spacing: 0;
     line-height: 1.7;
     width: 100%;
+    padding: 1em 0;
   .title{
     font-size: 2.2em;
     margin: 2em 0 0em;
@@ -115,9 +115,9 @@ img {
   }
   .subtitle{
     font-size: 1.65em;
-    font-weight: 700;
+    font-weight: 500;
     margin: 0 0 .8em;
-    color:#C9A063;
+    color:#3E3A39;
     line-height: 1.5;
   }
   .desc{

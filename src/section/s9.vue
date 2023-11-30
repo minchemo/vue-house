@@ -2,15 +2,29 @@
 
 <template>
   <article class="s9">
-  <div class="txt">
+  <!--div class="txt">
     <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">嚴選建材</h3>
-  </div>
+  </div-->
     <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">精品建材，尊榮享受</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">衛浴：浴廁採用ＴＯＴＯ衛浴設備、ＨＣＧ、西班牙ＲＯＣＡ免治馬桶。<br>
-廚具：世界級德匠名㕑，附贈林內雙口瓦斯爐、抽風機、烘碗機。<br>電梯：永大六人座電梯。<br>其他：錦鋐氣密窗、冠軍磁磚、台灣水泥、天然瓦斯。
-</p>
+      <div class="txt"  v-if="!$isMobile()">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">職人團隊 匠心質作</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+          獨到眼光 前瞻城市<br>
+          呂信坤 / 國鉅機構董事長<br>
+          「建築的價值來自於地段的願景未來。」<br><br>
+
+          紐約上城 當代經典<br>
+          黃永興 / 黃永興建築師事務所<br>
+          「講究建築的原創性，融入風光水綠與環境共生。」<br><br>
+
+          安全頂規 抗震專利<br>
+          戴雲發 /中力建築系統團隊 總經理<br>
+          「執行全台使用Alfa Safe耐震系統工法建案超過400例。」<br><br>
+
+          大地工程 永恆之奧<br>
+          楊永豐 / 豐立工程顧問<br>
+          「安全，永遠是家唯一的價值。」<br><br>
+        </p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -19,6 +33,7 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+          
         <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
           <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
@@ -32,12 +47,12 @@
 @import '@/assets/style/function.scss';
 
 .s9 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#000] bg-[#F8F8F8];
+  @apply relative overflow-hidden flex items-center justify-end text-[#fff] bg-[#000];
   width: 100%;
-  height:auto;
+  height:size(900);
   padding:0 0 7em 0;
   font-size:size(18);
-  gap:3em;
+  gap:8em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
 
@@ -57,20 +72,25 @@ img{width: 100%;position: relative;}}
 &::before{
 background: #C9A063;
 }
-}}
+}
+.subtitle{color: #fff;}
+}
+
 
   .slider {
+    left: 0 !important;
     margin: 0;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: size(959);
+      height: size(900);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: size(959);
+      height: size(900);
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
+      left: calc(100% + 8em);
+      bottom: size(80);
       justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
@@ -87,21 +107,23 @@ background: #C9A063;
 
   .s9 {
   @apply flex-col;
-    height: auto;
-    padding: 0;
+  height: auto;
+  padding: 0;
+  height: sizem(537);  
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
 
 .img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+
+ .txt{text-align: center; padding-top:3em;}
 
   .main {
     padding: 0 sizem(30);
     width: 100%;
 }
   .slider {
-    height: auto;
+    height: sizem(350);
     width: 100%;
 
     .caption {
@@ -113,7 +135,7 @@ background: #C9A063;
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(350);
       
     }
   }
@@ -149,28 +171,20 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s9/1.jpg", import.meta.url).href ,
-    caption: "電梯"
-  },
-  {
-    img:new URL("./s9/2.jpg", import.meta.url).href ,
-    caption: "廚具"
-  },
-  {
-    img:new URL("./s9/3.jpg", import.meta.url).href ,
-    caption: "ROCA西班牙百年衛浴"
-  },
-  {
-    img:new URL("./s9/4.png", import.meta.url).href ,
+    img:new URL("./s9/1.webp", import.meta.url).href ,
     caption: ""
   },
   {
-    img:new URL("./s9/5.jpg", import.meta.url).href ,
-    caption: "乾濕分離衛浴"
+    img:new URL("./s9/2.webp", import.meta.url).href ,
+    caption: ""
   },
   {
-    img:new URL("./s9/6.jpg", import.meta.url).href ,
-    caption: "Panasonic"
+    img:new URL("./s9/3.webp", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s9/4.webp", import.meta.url).href ,
+    caption: ""
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

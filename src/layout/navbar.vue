@@ -128,7 +128,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #f49f00ce;
+        background: #f49f00be;
         width:100%;
         height: size(60);
         z-index: 5;
@@ -177,7 +177,7 @@
                 padding:.7em 1.5em;
 
                 &:hover {
-                    background:#252323;
+                    background:#df6400;
                     &:after {
                         width:0;
                     }

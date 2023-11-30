@@ -5,13 +5,13 @@
       <span></span>
       <span></span>
     </div>
-  <div class="txt">
+  <!--div class="txt">
     <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">雙核心地段</h3>
-  </div>
+  </div-->
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">碳佐麻里園區、壽司郎國際企業都選在這裡！政府所在，匯聚知名餐飲、家樂福、燦坤、麥當勞，新光三越新天地，機能完善，接軌水岸發展重心：星鑽特區，市中心稀有雙核心，願景可期！</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">新泰跨界 眾星拱月</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">相當2.6個台北信義計畫區、7.4個新板特區，歷經20年規劃臻於至善，接棒新莊副都心、頭前重劃區，贏家致富關鍵搶在起跑點！</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -25,6 +25,8 @@
         </SplideSlide>
       </Splide>
     </div>
+    <div class="square" data-aos="fade-in" data-aos-delay="400" data-aos-duration="1000"></div>
+    <img src="./s3/style.svg" v-if="!$isMobile()" class="style" alt="" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>
 
   </article>
 </template>
@@ -35,27 +37,35 @@
 
 
 .s3 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center ;
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:7em 0 7em 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-      top:size(26);left: 0;
-  font-size:size(120);
-}
-      &:nth-child(2){
-      top: size(147);left: size(110);
-  font-size:size(27);
-}
-      &:nth-child(3){
-      top: size(20);right:size(80);
-  font-size:size(75);}
-    }
+
+  .txt{
+    border-top:2px solid #F4A000;
+    border-bottom:2px solid #F4A000;
+    z-index: 1;
+  }
+
+  .style{
+    position: absolute;
+    left: 0;
+    top: size(183);
+    opacity: 0.2 !important;
+  }
+
+  .square{
+    position: absolute;
+    width: size(830);
+    height: size(508);
+    z-index: 0;
+    background: #F4A000;
+    right: size(197);
+    top:size(190);
   }
 
   .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
@@ -81,11 +91,15 @@
     }
   }
 }
+.arrows{
+  display: none !important;
+}
 
   .slider {
     margin: 0;
     flex-basis: size(840);
       height: size(560);
+      z-index: 1;
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
@@ -93,6 +107,7 @@
       
     }
     .splide__pagination{
+      display: none;
       right: calc(100% + 3em);
       justify-content: flex-end;
     color: #C5C5C5; 
@@ -116,21 +131,49 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
+
+  .square{
+    width: sizem(343);
+    height: sizem(257);
+    right: sizem(0);
+    top:auto;
+    bottom: 0;
+  }
+
   .img{position: absolute;top:sizem(300);left: auto;
     right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: sizem(20) sizem(32.5) sizem(5);
     width: 100%;
 }
 
 .txt {
-  .title{
-    &::after,
-    &::before{
-      width: 2em;
+  border:none;
+
+  .subtitle{
+    text-align: center;
+    
+    &::before,
+    &::after
+    {
+        content: "";
+        width: sizem(69);
+        height: 1.5px;
+        background: #F4A000;
+        display: inline-block;
+        vertical-align: middle;
+        
     }
+    &::before{
+      margin: auto 1em auto 0;
+    }
+    &::after{
+      margin: auto 0 auto 1em;
+    }
+
   }
+  .desc{margin:0;text-align: left;}
 }
 
 
@@ -184,28 +227,8 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.jpg", import.meta.url).href ,
-    caption: "台南市政府"
-  },
-  {
-    img:new URL("./s3/2.jpg", import.meta.url).href ,
-    caption: "新光三越"
-  },
-  {
-    img:new URL("./s3/3.jpg", import.meta.url).href ,
-    caption: "夏慕尼"
-  },
-  {
-    img:new URL("./s3/4.jpg", import.meta.url).href ,
-    caption: "燦坤"
-  },
-  {
-    img:new URL("./s3/5.jpg", import.meta.url).href ,
-    caption: "家樂福-安平店"
-  },
-  {
-    img:new URL("./s3/6.jpg", import.meta.url).href ,
-    caption: "碳佐麻里"
+    img:new URL("./s3/1.webp", import.meta.url).href ,
+    caption: "情境示意圖"
   },
 ]
 </script>
