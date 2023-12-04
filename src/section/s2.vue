@@ -32,7 +32,7 @@
 						drag: true,
 						autoplay: true,
 						autoWidth: true,
-						interval: 4000,
+						interval: 3000,
 						gap: 15,
 						focus: 'center',
 						perPage: 1.5,

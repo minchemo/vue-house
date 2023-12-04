@@ -17,8 +17,9 @@
 						arrows: false,
 						drag: true,
 						autoplay: true,
-						interval: 4000,
+						interval: 3000,
 						gap: 15,
+            type: 'loop'
 					}" @splide:move="move">
 						<SplideSlide class="slide" v-for="img, i in data">
 							<img :src="img.img" alt="" srcset="">
@@ -365,6 +366,8 @@ const currentIndex = ref(0)
 const move = (index, index2) => {
 	currentIndex.value = index2;
 }
+
+
 const data = [
 	{
 		img: new URL("../section/s5/1.webp", import.meta.url).href,
