@@ -120,13 +120,13 @@
   // background: #045147;
 
   .logo {position: relative;
-    width: size(367);
+    width: size(500);
    // height: size(172);
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(30) auto 0;
+    margin: size(30) auto size(20);
     img{width: 100%;}
     .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
   }
@@ -277,8 +277,8 @@
   background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(257);
-    margin: sizem(40) auto sizem(30) auto;
+      width: sizem(310);
+    margin: sizem(10) auto sizem(30) auto;
      // margin-bottom: sizem(47);
     }
 
