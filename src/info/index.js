@@ -23,7 +23,7 @@ export default {
         ["結構技師", "陳至忠結構技師"],
         ["格局規劃", "2-4房"],
     ],
-    gtmCode: ["GTM-PQ8LQ84S"], // 可放置多個
+    gtmCode: ["GTM-PQ8LQ84S","GTM-M9QDFPGJ"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
