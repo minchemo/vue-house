@@ -40,27 +40,27 @@ export default {
 
     navList: [{
             name: "區域環境",
-            target: ".s3",
+            target: ".s2",
             offset: "-60",
             offsetmo: "0",
         },{
             name: "職人團隊",
-            target: ".s4",
+            target: ".s9",
             offset: "-60",
             offsetmo: "0",
         },{
             name: "精品御所",
-            target: ".s5",
-            offset: "-60",
+            target: ".s10",
+            offset: "60",
             offsetmo: "0",
         },{
             name: "科技靚宅",
-            target: ".s6",
+            target: ".s11",
             offset: "-60",
             offsetmo: "0",
         },{
             name: "品質保證",
-            target: ".s7",
+            target: ".s12",
             offset: "-60",
             offsetmo: "0",
         },{

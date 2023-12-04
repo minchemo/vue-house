@@ -26,6 +26,9 @@
     <S8 />
     <S9 />
     <S10 />
+    <S11 />
+    <S12 />
+    <S13 />
   <!--
     <S11 />
     <div class="bg">
@@ -235,7 +238,9 @@ import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
-// import S11 from "@/section/s11.vue"
+import S11 from "@/section/s11.vue"
+import S12 from "@/section/s12.vue"
+import S13 from "@/section/s13.vue"
 /* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */

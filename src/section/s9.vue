@@ -26,6 +26,18 @@
           「安全，永遠是家唯一的價值。」<br><br>
         </p>
       </div>
+
+
+      <div class="txt" data-aos="zoom-in" v-else>
+        <transition name="fade" mode="out-in">
+          <h4 class="subtitle" :key="currentImg.title" v-html="currentImg.title"></h4>
+        </transition>
+        <transition name="fade" mode="out-in">
+        <p class="desc" :key="currentImg.desc" v-html="currentImg.desc"></p>
+        </transition>
+      </div>
+
+
     </div>
     <div class="slider" data-aos="fade">
       <div class="arrows">
@@ -109,14 +121,43 @@ background: #C9A063;
   @apply flex-col;
   height: auto;
   padding: 0;
-  height: sizem(537);  
+  height: sizem(520);  
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
+  gap: 2em;
 
 .img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
 
- .txt{text-align: center; padding-top:3em;}
+ .txt{text-align: center; padding-top:3em;
+
+  .subtitle{
+    text-align: center;
+    
+    &::before,
+    &::after
+    {
+        content: "";
+        width: sizem(69);
+        height: 1.5px;
+        background: #Fff;
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
+    &::before{
+      margin: auto 1em auto 0;
+    }
+    &::after{
+      margin: auto 0 auto 1em;
+    }
+
+  }
+ 
+  .desc{
+    margin: 0;
+  }
+ }
 
   .main {
     padding: 0 sizem(30);
@@ -172,19 +213,31 @@ const options = {
 const imgs = [
   {
     img:new URL("./s9/1.webp", import.meta.url).href ,
-    caption: ""
+    //img: globals.$isMobile() ? new URL("./s3/1_m.webp", import.meta.url).href : new URL("./s3/1.webp", import.meta.url).href,
+    caption: "北外環實景拍攝",
+    title:"職人團隊 匠心質作",
+    desc:"獨到眼光 前瞻城市<br>呂信坤 / 國鉅機構董事長<br>「建築的價值來自於地段的願景未來。」",
   },
   {
     img:new URL("./s9/2.webp", import.meta.url).href ,
-    caption: ""
+    //img: globals.$isMobile() ? new URL("./s3/1_m.webp", import.meta.url).href : new URL("./s3/1.webp", import.meta.url).href,
+    caption: "北外環實景拍攝",
+    title:"職人團隊 匠心質作",
+    desc:"紐約上城 當代經典<br>黃永興 / 黃永興建築師事務所<br>「講究建築的原創性，融入風光水綠與環境共生。」",
   },
   {
     img:new URL("./s9/3.webp", import.meta.url).href ,
-    caption: ""
+    //img: globals.$isMobile() ? new URL("./s3/1_m.webp", import.meta.url).href : new URL("./s3/1.webp", import.meta.url).href,
+    caption: "北外環實景拍攝",
+    title:"職人團隊 匠心質作",
+    desc:"安全頂規 抗震專利<br>戴雲發 /中力建築系統團隊 總經理<br>「執行全台使用Alfa Safe耐震系統工法建案超過400例。」",
   },
   {
     img:new URL("./s9/4.webp", import.meta.url).href ,
-    caption: ""
+    //img: globals.$isMobile() ? new URL("./s3/1_m.webp", import.meta.url).href : new URL("./s3/1.webp", import.meta.url).href,
+    caption: "北外環實景拍攝",
+    title:"職人團隊 匠心質作",
+    desc:"大地工程 永恆之奧<br>楊永豐 / 豐立工程顧問<br>「安全，永遠是家唯一的價值。」",
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

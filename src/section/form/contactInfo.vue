@@ -112,12 +112,13 @@
   height: 0;z-index: 52;
 }
 .contact-info {
+  margin-top: size(132);
   padding: size(55) size(0) size(55) size(0);
     width: size(1440);
     min-width: 680px;
   position: relative;
   z-index: 50;
-  // background: #045147;
+   background: #F4A000;
 
   .logo {position: relative;
     width: size(367);
@@ -139,7 +140,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #EF8200;
+      background-color: #3E3A39;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -270,8 +271,8 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(80) 0;
-    margin-top: sizem(0);
+    padding: sizem(50) 0 sizem(80) 0;
+    margin-top: sizem(90);
     position: relative;
     justify-content: space-between;
   background-size: sizem(450) auto;

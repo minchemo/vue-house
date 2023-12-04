@@ -1,12 +1,11 @@
 <template>
-  <article class="s10">
+  <article class="s12">
   <!--div class="txt">
     <h3 class="title font-['Noto_Serif_TC',serif]"  data-aos="fade-up" data-aos-delay="0">電梯店墅</h3>
   </div-->
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">品味菁英 國際御所</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">正30米莊泰大道，雙校園首排、視野無極限，新藝術美學、經典興地標。</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">國鉅機構 17大保證</h4>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -27,8 +26,8 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s10 {
-  @apply relative flex flex-col items-center justify-center text-[#fff] bg-[#000];
+.s12 {
+  @apply relative flex flex-col items-center justify-center text-[#3E3A39] ;
   width: 100%;
   //height: size(1200);
   padding:7em 0 7em 0;
@@ -51,21 +50,18 @@
 background: #C9A063;
 }
 }
-.subtitle{
-  color: #fff;
-}
 }
 
   .slider {
     margin: 0;
-    flex-basis: size(1060);
-    height: size(1060);
+    flex-basis: size(613);
+    height: size(613);
     width: size(1500);
     .slide-item {
       @apply bg-cover;
       width: 100%;
     flex-basis: size(1500);
-      height: size(1060);
+      height: size(613);
       
     }
     .arrows .prev, .arrows .next{
@@ -84,10 +80,10 @@ background: #C9A063;
 
 @media screen and (max-width: 767px) {
 
-  .s10 {
+  .s12 {
   @apply flex-col;
     height: auto;
-    padding: 2em 0 0em 0;
+    padding: 2em 0 5em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
@@ -106,9 +102,9 @@ background: #C9A063;
     &::after
     {
         content: "";
-        width: sizem(69);
+        width: sizem(65);
         height: 1.5px;
-        background: #Fff;
+        background: #F4A000;
         display: inline-block;
         vertical-align: middle;
         
@@ -121,11 +117,10 @@ background: #C9A063;
     }
 
   }
- 
 }
   .slider {
-    height: sizem(373);
-    width: 100%;
+    height: sizem(450);
+    width: sizem(310);
 
     .caption {
     font-size:sizem(12);  
@@ -134,9 +129,9 @@ background: #C9A063;
     }
     .slide-item {
       @apply bg-cover;
-      width: 100%;
+      width: sizem(310);
     flex-basis: auto;
-      height: sizem(373);
+      height: sizem(450);
       
     }
     .arrows .prev, .arrows .next{
@@ -175,8 +170,8 @@ const options = {
 
 const imgs = [
   {
-    img: globals.$isMobile() ? new URL("./s10/1m.webp", import.meta.url).href : new URL("./s10/1.webp", import.meta.url).href,
-    caption: "外觀實景"
+    img: globals.$isMobile() ? new URL("./s12/1m.webp", import.meta.url).href : new URL("./s12/1.webp", import.meta.url).href,
+    caption: ""
   },
 ]
 /*

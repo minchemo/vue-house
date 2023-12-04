@@ -1,6 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
+      
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
@@ -57,21 +58,24 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#FFF]">
+        <p class="text-[#3E3A39]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#F4A000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+      <vue-recaptcha class="recaptcha flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
         {{ sending? '發送中..': '立即預約' }}
       </div>
+
+      <img class="order-title-img" v-if="!$isMobile()" src="@/section/form/c1.svg" alt="" srcset="">
+      <img class="order-title-img" v-else src="@/section/form/c1m.svg" alt="" srcset="">
 
       <!-- Contact Info -->
       <ContactInfo />
@@ -116,6 +120,7 @@
     top: size(420);
     right: size(450);
     animation: fly 6s ease-in-out infinite alternate-reverse;
+    
 
     @keyframes fly {
       from {
@@ -129,21 +134,29 @@
     }
   }
 
+  .recaptcha{
+    position: relative;
+  }
+
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #FFF;
+    color: #3E3A39;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
   .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
+    position: absolute;
+    z-index: 0;
+    width: size(1920);
+    left: 0;
+    opacity: .2;
+    bottom: size(0);
   }
   .order-subTitle{
     font-size: size(17);
-    color: #FFF;
+    color: #3E3A39;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -210,7 +223,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #D71718;
+    background-color: #3E3A39;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -252,11 +265,14 @@
     // border-radius: sizem(68) sizem(68) 0 0;
    /* padding-top: sizem(0);
     margin-top: sizem(0);
+ */
 
     .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
+      width: sizem(310);
+      bottom: sizem(650);
+      left: sizem(32);
+      opacity: 1;
+    }
 
     .bird {
       @apply absolute;

@@ -1,19 +1,24 @@
 <template>
-  <article class="s11">
-    <div class="love1"><img src="./s1/love.png" alt=""></div>
-  <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">懂生活，肯定愛</h3>
-  </div>
+  <article class="s11" ref="s11">
+    <div class="bg" v-if="!$isMobile()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  <!--div class="txt">
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">雙核心地段</h3>
+  </div-->
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">富而不奢的國際精品味，<br />新富生活質感對位</h4>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">健康純淨 科技靚宅</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          日系精工與德國極致工藝<br />
-讓療癒廚房與衛浴，解放超載疲累的身心<br />
-降噪地板與隔音氣密窗，日藏每個舒適又靜好時光<br />
-完善的淨水系統，讓每一滴水都乾淨又純粹<br />
-嚴格精選，專鑄細節，用心呈現美好您的日常
-        </p>
+          ☆Alfa Safe耐震系統<br>
+          ☆AI人臉辨識系統 <br>
+          ☆永大電梯+ SHARP空氣清淨機<br>
+          ☆德國HONEYWELL淨水系統<br>
+          ☆英國STUDOR+PAPA排水通氣系統<br>
+          ☆電動車友善社區
+</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -27,6 +32,8 @@
         </SplideSlide>
       </Splide>
     </div>
+    <div class="square" data-aos="fade-in" data-aos-delay="400" data-aos-duration="1000"></div>
+    <img src="./s11/style.svg" v-if="!$isMobile()" class="style" alt="" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>
 
   </article>
 </template>
@@ -34,23 +41,47 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s11 {
-  @apply relative flex items-center justify-center text-[#555];
+  @apply relative flex items-center justify-center ;
   width: 100%;
-  padding:0 0 7em 0;
+  height:auto;
+  padding:7em 0 7em 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-    .love1{
+
+  .txt{
+    border-top:2px solid #F4A000;
+    border-bottom:2px solid #F4A000;
     z-index: 1;
-    position: absolute;  
-    width: size(150);
-    left: size(160);
-    bottom: size(70); 
-    animation: an 3s ease-in-out infinite alternate-reverse;
-     transform:translate(10%, 20%);
-     img{transform:rotate(-20deg);width:100%;}
-    }
+  }
+
+  .style{
+    position: absolute;
+    left: 0;
+    top: size(233);
+    opacity: 0.2 !important;
+    
+  }
+
+  .square{
+    position: absolute;
+    width: size(830);
+    height: size(508);
+    z-index: 0;
+    background: #F4A000;
+    right: size(197);
+    top:size(190);
+  }
+
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -58,48 +89,22 @@
   flex-direction: column;
   text-align: justify;
 }
-  .txt {
-    position: relative;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;
+
+
+.txt {
   .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 700;
-    color:#B78E63;
-    text-align: center;
     &::after,
     &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
+      width: 15.3em;
     }
   }
-  .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    color:#B78E63;
-    line-height: 1.5;
-  }
-  .desc{
-    margin: 0 0 1em;
-    b{
-    color:#B78E63;}
-  }
-  }
+}
 
   .slider {
     margin: 0;
     flex-basis: size(840);
       height: size(560);
+      z-index: 1;
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
@@ -111,7 +116,7 @@
       justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
-      color: #B78E63;
+      color: #C9A063;
     }
     }
   }
@@ -130,31 +135,52 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-    .love1{
-    width: sizem(60);
-    left: auto;
-    right: sizem(40);
-    bottom:auto; 
-    top:sizem(100);
-     img{transform:rotate(20deg)scaleX(-1);width:100%;}
-    }
+
+  .square{
+    width: sizem(343);
+    height: sizem(257);
+    right: sizem(0);
+    top:auto;
+    bottom: 0;
+  }
+
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: sizem(20) sizem(32.5) sizem(5);
     width: 100%;
 }
 
-  .txt {
-  .title{
-    font-size: 1.8em;
-    &::after,
-    &::before{
-      width: 3.3em;}
-  }
+.txt {
+  border:none;
+
   .subtitle{
-    font-size: 1.4em;
+    text-align: center;
+    
+    &::before,
+    &::after
+    {
+        content: "";
+        width: sizem(69);
+        height: 1.5px;
+        background: #F4A000;
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
+    &::before{
+      margin: auto 1em auto 0;
+    }
+    &::after{
+      margin: auto 0 auto 1em;
+    }
+
   }
-  }
+  .desc{margin:0;text-align: left;}
+}
+
+
   .slider {
     height: auto;
     width: 100%;
@@ -179,6 +205,7 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -204,54 +231,28 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s11/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s11/1_m.webp", import.meta.url).href : new URL("./s11/1.webp", import.meta.url).href,
-    caption: "廚具情境示意圖"
+    img:new URL("./s11/1.webp", import.meta.url).href ,
+    caption: "ai人臉辨識系統示意"
   },
   {
-    img:new URL("./s11/2.jpg", import.meta.url).href ,
-    caption: "情境示意圖"
+    img:new URL("./s11/2.webp", import.meta.url).href ,
+    caption: "STUDOR+PAPA示意"
   },
   {
-    img:new URL("./s11/3.jpg", import.meta.url).href ,
-    caption: "衛浴情境示意圖"
-  },/*
-  {
-    img:new URL("./s11/4.jpg", import.meta.url).href ,
-    caption: "衛浴情境示意圖"
-  },*/
-  {
-    img:new URL("./s11/5.jpg", import.meta.url).href ,
-    caption: "電梯情境示意圖"
+    img:new URL("./s11/3.webp", import.meta.url).href ,
+    caption: "永大電梯示意"
   },
   {
-    img:new URL("./s11/6.jpg", import.meta.url).href ,
-    caption: "木地板情境示意圖"
+    img:new URL("./s11/4.webp", import.meta.url).href ,
+    caption: "空氣清淨機示意"
   },
   {
-    img:new URL("./s11/7.jpg", import.meta.url).href ,
-    caption: "電子鎖情境示意圖"
-  },
-]
-/*
-const imgs = [
-  {
-    img: getImg('s11/1'),
-    caption: "內湖 豁達達禮"
+    img:new URL("./s11/5.webp", import.meta.url).href ,
+    caption: "淨水器示意"
   },
   {
-    img: getImg('s11/2'),
-    caption: "林口 長耀PARK"
+    img:new URL("./s11/6.webp", import.meta.url).href ,
+    caption: "電動車友善社區示意"
   },
-  {
-    img: getImg('s11/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s11/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
+] 
 </script>
-
