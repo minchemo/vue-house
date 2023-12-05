@@ -7,11 +7,7 @@
 			<img src="@/section/s4/t2.png" class="t2" alt="" srcset="" data-aos="fade-up" data-aos-delay="200">
 			<div class="t3" data-aos="fade-up" data-aos-delay="400">位處中部科技走廊與臨港產業鏈中央，全台最密集的產業聚落，囊括大台中80%工作機會，<br v-if="!isMobile">超過20萬就業人口，沙鹿成為中台灣購屋移居首選。</div>
 		</div>
-    <div class="star-1">
-      <div class="star01"><img src="./s1/star1.svg" alt="star"></div>
-      <div class="star02"><img src="./s1/star1.svg" alt="star"></div>
-      <div class="star03"><img src="./s1/star1.svg" alt="star"></div>
-    </div>
+		<img ref="starRef" src="@/section/s4/star.png" class="star" alt="" srcset="">
 	</article>
 </template>
 
@@ -62,65 +58,6 @@
 		right: size(231.5);
 		top: size(205);
 	}
-@keyframes star {	
-	0%{
-	transform: scale(.5)translateY(30%);
-    opacity: 0;
-   }
-   10%{
-	transform: scale(1);
-    opacity: 1;
-   }
-   65%{
-	transform: scale(1)translateY(-10%);
-    opacity: 1;
-   }
-   75%{
-	transform: scale(1.5)translateY(-30%);
-    opacity: 0;
-   }
-   100%{
-	transform: scale(.5)translateY(0%);;
-    opacity: 0;
-   }
-}
-.star-1{position: absolute;left: 0;top: 0;width: 100%;height: 100%;
-> div {position: absolute;
-/*	*/
-	transform: scale(.5);
-    opacity: 0;
-	animation:star 8s ease-in-out infinite;
-	
-img{width: 100%;}}
-  .star01{
-    width: 7vw;
-    top: 42.5%;
-    left: 64%;
-	animation-delay: 0s;
-    img{
-		opacity:0.3;
-		transform: rotate(5deg);}
-  }
-  .star02{
-    width: 13vw;
-    top: 40%;
-    left: 68%;
-	animation-delay: 0.3s;
-    img{
-    opacity: 0.3;
-    transform: rotate(164deg);
-		filter: saturate(30%)brightness(1.15);}
-  }
-  .star03{
-    width: 12.5vw;
-    top: 29%;
-    left: 72.5%;
-	animation-delay: 0.6s;
-    img{
-    opacity: 0.3;
-    transform: rotate(65deg);}
-  }
-}
 }
 
 @media screen and (max-width: 767px) {
@@ -165,32 +102,39 @@ img{width: 100%;}}
 			right: size(231.5);
 			top: size(205);
 		}
-.star-1{
-  .star01{
-    width: 22vw;
-    top: 34.5%;
-    left: 64%;
-  }
-  .star02{
-    width: 31vw;
-    top: 30%;
-    left: 75%;
-    img{
-		filter: saturate(10%)brightness(1.2);}
-  }
-  .star03{
-    width: 28.5vw;
-    top: 1%;
-    left: 68.5%;
-}
-}
 	}
 }
 </style>
 <script setup>
+import anime from 'animejs/lib/anime.es.js';
 import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const smoothScroll = inject('smoothScroll')
 const isMobile = computed(() => globals.$isMobile());
+
+const starRef = ref(null);
+
+function r(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+const animeS = () => {
+	anime({
+		targets: starRef.value,
+		translateX: isMobile.value ? r(-100, 100) : r(-100, 100),
+		translateY: isMobile.value ? r(-100, 100) : r(-100, 100),
+		round: r(1, 10),
+		delay: r(0, 1000),
+		duration: r(5000, 8000),
+		direction: 'alternate',
+		easing: 'easeInOutSine',
+		loop: true,
+	});
+}
+
+
+onMounted(() => {
+	animeS();
+})
 </script>

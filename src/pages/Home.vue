@@ -6,7 +6,7 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="泰嘉拓真" srcset="">
+    <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
@@ -78,20 +78,7 @@ onMounted(async () => {
  * 預載圖片，直接帶入路徑，由上而下依序加載，完成後才會關閉loading畫面
  */
 const preloadList = [
-  new URL("../section/anim/01/02.webp", import.meta.url).href,
-  new URL("../section/anim/01/03.webp", import.meta.url).href,
-  new URL("../section/anim/01/04.webp", import.meta.url).href,
-  new URL("../section/anim/01/05.webp", import.meta.url).href,
-  new URL("../section/anim/01/06.webp", import.meta.url).href,
-  new URL("../section/anim/02/01.webp", import.meta.url).href,
-  new URL("../section/anim/02/02.webp", import.meta.url).href,
-  new URL("../section/anim/03/01.webp", import.meta.url).href,
-  new URL("../section/anim/03/02.webp", import.meta.url).href,
-  new URL("../section/anim/03/03.webp", import.meta.url).href,
-  new URL("../section/anim/03/04.webp", import.meta.url).href,
-  new URL("../section/anim/04/01.webp", import.meta.url).href,
-  new URL("../section/anim/04/02.webp", import.meta.url).href,
-  new URL("../section/anim/04/03.webp", import.meta.url).href,
+  new URL("../section/s1/bg.webp", import.meta.url).href,
 ]
 const preloadThreshold = 0.8
 

@@ -35,16 +35,7 @@
 				<div class="t3" data-aos="fade-up" data-aos-delay="400">沙鹿新站加上未來捷運藍線B4站黃金雙軸線，台灣大道、中科聯外道路特五通車，串連中部科技走廊，海線生活圈成熟發展，沙鹿受惠最多。</div>
 			</div>
 		</div>
-		<div class="star-1" v-if="!isMobile">
-			<div class="star01"><img src="./s1/star1.svg" alt="star"></div>
-			<div class="star02"><img src="./s1/star1.svg" alt="star"></div>
-			<div class="star03"><img src="./s1/star1.svg" alt="star"></div>
-			<div class="star04"><img src="./s1/star1.svg" alt="star"></div>
-			<div class="star05"><img src="./s1/star1.svg" alt="star"></div>
-			<div class="star06"><img src="./s1/star1.svg" alt="star"></div>
-			<div class="star07"><img src="./s1/star1.svg" alt="star"></div>
-			<div class="star08"><img src="./s1/star1.svg" alt="star"></div>
-		</div>
+		<img class="star" ref="starRef" src="@/section/s3/star.png" alt="" srcset="" v-if="!isMobile">
 	</article>
 </template>
 
@@ -148,116 +139,6 @@
 		right: size(59.15);
 		bottom: -#{size(120)};
 	}
-	
-	@keyframes star {	
-		0%{
-		transform: scale(.5)translateY(30%);
-		opacity: 0;
-	   }
-	   10%{
-		transform: scale(1);
-		opacity: 1;
-	   }
-	   65%{
-		transform: scale(1)translateY(-10%);
-		opacity: 1;
-	   }
-	   75%{
-		transform: scale(1.5)translateY(-30%);
-		opacity: 0;
-	   }
-	   100%{
-		transform: scale(.5)translateY(0%);;
-		opacity: 0;
-	   }
-	}
-	
-.star-1{position: absolute;left: 0;top: 0;width: 100%;height: 100%;
-> div {position: absolute;
-/* */	transform: scale(.5);
-    opacity: 0;
-	animation:star 8s ease-in-out infinite;
-img{width: 100%;}}
-  .star01{
-    width: 13.5vw;
-    top: 75%;
-    left: 33%;
-	animation-delay: 0s;
-    img{
-		opacity:0.4;
-		transform: rotate(17deg);
-		filter: saturate(10%)brightness(1.2);}
-  }
-  .star02{
-	width: 11vw;
-    top: 67%;
-    left: 37.5%;
-	animation-delay: 0.3s;
-    img{
-    opacity: 0.3;
-    transform: rotate(164deg);}
-  }
-  .star03{
-    width: 5.5vw;
-    top: 75%;
-    left: 46.5%;
-	animation-delay: 0.6s;
-    img{
-    opacity: 0.4;
-    transform: rotate(172deg);
-	filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);
-	}
-  }
-  .star04{
-    width: 5.5vw;
-    top: 84%;
-    left: 55.5%;
-	animation-delay: 0.9s;
-    img{
-    opacity: 0.3;
-    transform: rotate(-3deg);
-	}
-  }
-  .star05{
-    width: 5vw;
-    top: 85%;
-    left: 62%;
-	animation-delay: 1.2s;
-    img{
-    opacity: 0.3;
-    transform: rotate(117deg);
-	filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);
-	}
-  }
-  .star06{
-    width: 8vw;
-    top: 78%;
-    left: 71.5%;
-	animation-delay: 1.5s;
-    img{
-    opacity: 0.3;
-    transform: rotate(79deg);}
-  }
-  .star07{
-    width: 13vw;
-    top: 75%;
-    left: 77%;
-	animation-delay: 1.8s;
-    img{
-		opacity:0.4;
-		transform: rotate(96deg);
-		filter: saturate(20%)brightness(1.2);}
-  }
-  .star08{
-    width: 13.5vw;
-    top: 64%;
-    left: 80.5%;
-	animation-delay: 2.1s;
-    img{
-		opacity:0.3;
-		transform: rotate(67deg);}
-  }
-}
 }
 
 @media screen and (max-width: 767px) {
@@ -357,6 +238,7 @@ img{width: 100%;}}
 }
 </style>
 <script setup>
+import anime from 'animejs/lib/anime.es.js';
 import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
@@ -391,4 +273,31 @@ const data = [
 		caption: "情境示意圖"
 	},
 ]
+
+/*
+const starRef = ref(null);
+
+function r(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+const animeS = () => {
+	anime({
+		targets: starRef.value,
+		translateX: isMobile.value ? r(-100, 100) : r(-100, 100),
+		translateY: isMobile.value ? r(-100, 100) : r(-100, 100),
+		round: r(1, 10),
+		delay: r(0, 1000),
+		duration: r(5000, 8000),
+		direction: 'alternate',
+		easing: 'easeInOutSine',
+		loop: true,
+	});
+}
+
+
+onMounted(() => {
+	animeS();
+})
+*/
 </script>
