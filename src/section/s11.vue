@@ -100,6 +100,7 @@
   }
 }
 
+
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -110,7 +111,13 @@
     flex-basis: size(840);
       height: size(560);
       
+      
+        
+
     }
+    .slide-item:nth-child(1) .caption{color: #3E3A39 !important;}
+    
+
     .splide__pagination{
       right: calc(100% + 3em);
       justify-content: flex-end;
@@ -231,24 +238,25 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s11/1.webp", import.meta.url).href ,
-    caption: "ai人臉辨識系統示意"
+    img:new URL("./s11/7.webp", import.meta.url).href ,
+    caption: "Alfa Safe耐震系統示意"
   },
   {
-    img:new URL("./s11/2.webp", import.meta.url).href ,
-    caption: "STUDOR+PAPA示意"
+    img:new URL("./s11/1.webp", import.meta.url).href ,
+    caption: "ai人臉辨識系統示意"
   },
   {
     img:new URL("./s11/3.webp", import.meta.url).href ,
     caption: "永大電梯示意"
   },
-  {
-    img:new URL("./s11/4.webp", import.meta.url).href ,
-    caption: "空氣清淨機示意"
-  },
+  
   {
     img:new URL("./s11/5.webp", import.meta.url).href ,
-    caption: "淨水器示意"
+    caption: "Honeywell淨水系統示意"
+  },
+  {
+    img:new URL("./s11/2.webp", import.meta.url).href ,
+    caption: "STUDOR+PAPA示意"
   },
   {
     img:new URL("./s11/6.webp", import.meta.url).href ,

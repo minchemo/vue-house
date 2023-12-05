@@ -19,6 +19,7 @@
     > img {
         height: 100%;
         max-width: unset;
+        width: 100%;
     //    background:url("@/section/s3/view.jpg") 50%;
     //    background-size: 100% auto;
     }
@@ -34,6 +35,7 @@
 
         img {
             height: 100%;
+            width: auto;
         }
 
         .mask {
