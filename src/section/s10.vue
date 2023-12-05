@@ -51,10 +51,32 @@
 background: #C9A063;
 }
 }
+
 .subtitle{
-  color: #fff;
+    text-align: center;
+    color: #fff;
+    
+    &::before,
+    &::after
+    {
+        content: "";
+        width: size(550);
+        height: 1.5px;
+        background: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
+    &::before{
+      margin: auto size(40) auto 0;
+    }
+    &::after{
+      margin: auto 0 auto size(40);
+    }
+
+  }
 }
-}
+
 
   .slider {
     margin: 0;
@@ -114,10 +136,10 @@ background: #C9A063;
         
     }
     &::before{
-      margin: auto 1em auto 0;
+      margin: auto sizem(10) auto 0;
     }
     &::after{
-      margin: auto 0 auto 1em;
+      margin: auto 0 auto sizem(10);
     }
 
   }

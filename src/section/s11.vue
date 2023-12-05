@@ -177,10 +177,10 @@
         
     }
     &::before{
-      margin: auto 1em auto 0;
+      margin: auto size(40) auto 0;
     }
     &::after{
-      margin: auto 0 auto 1em;
+      margin: auto 0 auto size(40);
     }
 
   }

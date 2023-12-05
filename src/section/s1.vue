@@ -27,7 +27,7 @@
 .s1 {
   
   @apply relative w-full h-screen;
-  min-height: size(900);
+  min-height: size(1020);
   max-height: size(1080);
   display: flex;
   flex-direction: column;

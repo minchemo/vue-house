@@ -29,7 +29,32 @@
   text-align: center;
     width: 100%;
 }
-.subtitle{font-size:size(30); color: #3E3A39; font-weight: 500;}
+
+.subtitle{
+    text-align: center;
+    font-size:size(30);
+     color: #3E3A39; 
+     font-weight: 500;
+    
+    &::before,
+    &::after
+    {
+        content: "";
+        width: size(550);
+        height: 1.5px;
+        background: #F4A000;
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
+    &::before{
+      margin: auto size(40) auto 0;
+    }
+    &::after{
+      margin: auto 0 auto size(40);
+    }
+
+  }
 .desc{font-size:size(18);}
 
 }
@@ -63,10 +88,10 @@
         
     }
     &::before{
-      margin: auto 1em auto 0;
+      margin: auto sizem(10) auto 0;
     }
     &::after{
-      margin: auto 0 auto 1em;
+      margin: auto 0 auto sizem(10);
     }
   
   }

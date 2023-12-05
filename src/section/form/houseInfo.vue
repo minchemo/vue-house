@@ -44,6 +44,7 @@
 // }
 .displaynone{display: none;}
 .house {
+    position: relative;
    // height: auto;
     color: #FFF;
     font-size: size(22);
@@ -58,6 +59,27 @@
         font-weight: 700;
         color: #3E3A39;
         margin: 0 auto 1em auto;
+
+        &::before,
+        &::after
+        {
+            content: "";
+            position: absolute;
+            width: size(430);
+            height: 1.5px;
+            background: #F4A000;
+            display: inline-block;
+            vertical-align: middle;
+            
+        }
+        &::before{
+        left: size(400);
+        top: size(70);
+        }
+        &::after{
+        right: size(400);
+        top: size(70);
+        }
     }
 
     .info-items {
@@ -96,7 +118,16 @@
         .title {
             font-size: sizem(29);
             width: auto;
-        }
+
+            &::before{
+            left: sizem(30);
+            top: sizem(60);
+            }
+            &::after{
+            right: sizem(30);
+            top: sizem(60);
+            }
+            }
 
         .info-items {
             row-gap: sizem(20);
