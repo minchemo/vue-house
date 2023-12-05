@@ -99,6 +99,7 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
+    padding-top: 2em;
 
   .bg-image {
     position: absolute;
@@ -139,11 +140,33 @@
   }
 
   .order-title {
+    position: relative;
     font-size: size(40);
     font-weight: 700;
     color: #3E3A39;
-    padding-top:1.5em;
+
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+
+    &::before,
+        &::after
+        {
+            content: "";
+            position: absolute;
+            width: size(430);
+            height: 1.5px;
+            background: #F4A000;
+            display: inline-block;
+            vertical-align: middle;
+            
+        }
+        &::before{
+        left: size(400);
+        top: size(30);
+        }
+        &::after{
+        right: size(400);
+        top: size(30);
+        }
   }
 
   .order-title-img {
@@ -291,7 +314,15 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1.5em;
+
+      &::before{
+            left: sizem(30);
+            top: sizem(20);
+            }
+            &::after{
+            right: sizem(30);
+            top: sizem(20);
+            }
     }
     .order-subTitle{
       font-size: sizem(13);
