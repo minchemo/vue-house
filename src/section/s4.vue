@@ -74,7 +74,9 @@
 }
   .txt {
     top: 2em;
-  .subtitle{font-size:sizem(18);
+  .subtitle{
+  font-size:sizem(18);
+  
   
   &::before,
     &::after
@@ -95,7 +97,7 @@
     }
   
   }
-  .desc{font-size:sizem(13); }
+  .desc{font-size:sizem(13); text-align: left;}
   }
   .caption {
     font-size: sizem(12);
