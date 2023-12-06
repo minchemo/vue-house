@@ -1,19 +1,6 @@
 <template>
   <article class="s1" id="s1">
-    <div class="star">
-      <div class="star01" data-aos="zoom-in" data-aos-delay="1800"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star02" data-aos="zoom-in" data-aos-delay="1300"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star03" data-aos="zoom-in" data-aos-delay="2100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star04" data-aos="zoom-in" data-aos-delay="1100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star05" data-aos="zoom-in" data-aos-delay="1200"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star06" data-aos="zoom-in" data-aos-delay="1400"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star07" data-aos="zoom-in" data-aos-delay="1700"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star08" data-aos="zoom-in" data-aos-delay="2000"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star09" data-aos="zoom-in" data-aos-delay="1000"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star10" data-aos="zoom-in" data-aos-delay="1500"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star11" data-aos="zoom-in" data-aos-delay="1600"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star12" data-aos="zoom-in" data-aos-delay="1900"><img src="./s1/star1.png" alt="star"></div>
-    </div>
+	<img src="./s1/pc.jpg" class="t0">
       <div class="boy" data-aos="fade-up" data-aos-delay="0"><img src="./s1/boy.svg" alt="boy">
       <div class="star13" data-aos="fade-up" data-aos-delay="800"><img src="./s1/star.svg" alt="star"></div>
       <div class="star14" data-aos="fade-up" data-aos-delay="600"><img src="./s1/star.svg" alt="star"></div>
@@ -44,6 +31,7 @@
   color: #FFF;
   line-height: 1.3;
   font-weight: 700;
+  .t0{position: absolute;width: 100%;top: 0;left: 0; pointer-events: none;}
   // background: url("./s1/pc.jpg") center;
   // background-size: cover;
   /*
