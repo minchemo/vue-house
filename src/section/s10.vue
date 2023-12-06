@@ -10,12 +10,13 @@
       </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows">
+      <div class="arrows" v-if="imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+        <SplideSlide class="slide-item" v-for="img in imgs">
+          <img :src="img.img" :alt="img.caption" />
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
@@ -81,13 +82,15 @@ background: #C9A063;
   .slider {
     margin: 0;
     flex-basis: size(1060);
-    height: size(1060);
+    //height: size(1060);
     width: size(1500);
     .slide-item {
       @apply bg-cover;
       width: 100%;
     flex-basis: size(1500);
-      height: size(1060);
+   // height: size(1060);
+      img{width: 100%;
+      height:auto;}
       
     }
     .arrows .prev, .arrows .next{
@@ -185,22 +188,22 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
 const imgs = [
   {
     img: globals.$isMobile() ? new URL("./s10/1m.webp", import.meta.url).href : new URL("./s10/1.webp", import.meta.url).href,
     caption: "外觀實景"
   },
 ]
+
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: false,//true
+  autoplay: false, //true
+  interval: 4000,
+  gap: 0,
+ // type: 'loop'
+}
 /*
 const imgs = [
   {

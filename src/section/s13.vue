@@ -1,5 +1,5 @@
 <template>
-  <article class="s1" id="s1">
+  <article class="s13" id="s13">
    <!--  <img class="t0" src="./s1/pc.jpg" alt="" srcset="">  -->
     <div class="bg"></div>
     <img src="./s13/t2.svg" v-if="!$isMobile()" class="t1" alt="" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
@@ -24,7 +24,7 @@
 }
 
 
-.s1 {
+.s13 {
   
   @apply relative w-full h-screen;
   min-height: size(1020);
@@ -81,7 +81,7 @@
 
 
 
-  .s1 {
+  .s13 {
     height:calc(100vh - 63px);
     min-height: sizem(570);
     max-height: sizem(570);
