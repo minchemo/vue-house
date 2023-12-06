@@ -220,7 +220,7 @@ const imgs = [
   },
   {
     img:new URL("./s7/3.webp", import.meta.url).href ,
-    caption: "國民運動中心"
+    caption: "新莊國民運動中心"
   },
   {
     img:new URL("./s7/4.webp", import.meta.url).href ,
