@@ -226,6 +226,10 @@ const imgs = [
     img:new URL("./s7/4.webp", import.meta.url).href ,
     caption: "輔大醫療園區"
   },
+  {
+    img:new URL("./s6/4.webp", import.meta.url).href ,
+    caption: "泰山國民運動中心"
+  },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>

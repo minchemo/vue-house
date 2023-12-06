@@ -225,7 +225,7 @@ const options = {
 const imgs = [
   {
     img:new URL("./s6/1.webp", import.meta.url).href ,
-    caption: "新莊國民運動中心"
+    caption: "新莊棒球主題共融式公園"
   },
   {
     img:new URL("./s6/2.webp", import.meta.url).href ,
@@ -234,10 +234,6 @@ const imgs = [
   {
     img:new URL("./s6/3.webp", import.meta.url).href ,
     caption: "中平公園"
-  },
-  {
-    img:new URL("./s6/4.webp", import.meta.url).href ,
-    caption: "泰山國民運動中心"
   },
   {
     img:new URL("./s6/5.webp", import.meta.url).href ,
