@@ -11,10 +11,12 @@
   <!--loading end-->
    <Nav v-if="config.showNav" />
   <div class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
+    <!--img src="@/section/s1/landscape.svg" class="landscape" /-->
     <S1 />
     <!-- <S2v /> -->
     <S2 />
@@ -222,6 +224,24 @@ img {
     }
   }
 }
+}
+@media screen and (orientation: portrait) {
+ .landscape{
+  display: none;
+ }
+}
+
+@media screen and (orientation: landscape) {
+
+  .landscape{
+  display: block;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background: #ececec;
+  height:100vh;
+ }
+
 }
 </style>
 

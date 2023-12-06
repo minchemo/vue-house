@@ -340,6 +340,40 @@
     }
   }
 }
+
+@media screen and (orientation: landscape) {
+
+  .mo-contact-info {
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: sizem(30);
+    gap: sizem(1);
+    box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
+    background:#EF8200;
+
+    .contact-item {
+      height: 100%;      
+      font-size: sizem(8);
+      font-weight: 400;
+      color: #fff;
+      border-left:1px solid #fff7;
+
+      img {
+        margin-bottom: sizem(3);
+        max-width: sizem(10);
+        height: auto;
+        max-height: sizem(10);
+        filter: brightness(0) invert(1);
+      }
+
+    }
+  }
+}
+
+
 </style>
 
 <script setup>

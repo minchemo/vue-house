@@ -116,6 +116,16 @@
 
   
 }
+
+@media screen and (orientation: landscape) {
+
+  .s1 {
+    width: 100vw;
+
+
+  }
+
+}
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
