@@ -13,7 +13,7 @@
 .viewbox3 {
     position: relative;
     width: size(1500);
-    height: size(1501);
+    height: 100%;
     background: #eee;
 
     > img {

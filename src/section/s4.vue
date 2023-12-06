@@ -17,7 +17,7 @@
 .s4 {
   @apply relative overflow-hidden flex flex-col items-center justify-between text-[#000] bg-[#fff];
   width: 100%;
-  height: size(1262);
+  height: auto;
   //padding:0 0 5em 0;
   font-size:size(30);
   gap:size(5);
