@@ -130,7 +130,7 @@
         right: 0;
         background: #f49f00be;
         width:100%;
-        height: size(60);
+        height: size(70);
         z-index: 5;
         padding: 0;
         font-size: size(16);
