@@ -24,7 +24,7 @@ export default {
         ["行銷企劃", "澄品廣告"],
         ["經紀人", "陳佳享（112）新北經字第004521號"],
     ],
-    gtmCode: ["GTM-MTSV7QCR"], // 可放置多個
+    gtmCode: ["GTM-M3ZG5V54"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
