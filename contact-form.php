@@ -28,9 +28,8 @@ $utm_medium   = isset($_POST['utm_medium']) ? $_POST['utm_medium'] : '';
 $utm_content  = isset($_POST['utm_content']) ? $_POST['utm_content'] : '';
 $utm_campaign = isset($_POST['utm_campaign']) ? $_POST['utm_campaign'] : '';
 $datetime     = date("Y-m-d H:i:s", mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y')));
-
-# 鳳翔 fs 客製資料：房型
-$room_type        = isset($_POST['room_type']) ? $_POST['room_type'] : '';
+$room_type    = isset($_POST['room_type']) ? $_POST['room_type'] : '';
+$budget       = isset($_POST['budget']) ? $_POST['budget'] : '';
 
 # 好站 hj 客製資料：可聯絡時間
 $time_start        = isset($_POST['time_start']) ? $_POST['time_start'] : '';
@@ -262,7 +261,7 @@ $mail->From = "noreply@h35.tw"; //設定寄件者信箱
 $mail->FromName = $case_name . " - 官網網站"; //設定寄件者姓名
 
 $mail->Subject = $case_name . " - 官網網站"; //設定郵件標題
-$mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：". $room_type ."<BR>留言：" . $msg . "<BR><BR>填表日期：" . $datetime . "<BR>廣告來源：" . $utm_source . "<BR>廣告媒介：" . $utm_medium . "<BR>廣告名稱：" . $utm_campaign . "<BR>廣告內容：" . $utm_content; //設定郵件內容
+$mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>購屋預算：".$budget."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
 $mail->IsHTML(true); //設定郵件內容為HTML
 
 $tomail_arr = explode(",", $tomail);
@@ -281,7 +280,7 @@ if ($bCheck == true) { //if start
         $url .= "&city=" . $city;
         $url .= "&area=" . $area;
         $url .= "&room_type=" . $room_type;
-        $url .= "&message=".$msg;
+        $url .= "&message=".$msg.";預算".$budget;
         $url .= "&utm_source=" . $utm_source;
         $url .= "&utm_medium=" . $utm_medium;
         $url .= "&utm_content=" . $utm_content;
