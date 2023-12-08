@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3614.3968571642185!2d121.45341507611329!3d25.05453483746298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE2LjMiTiAxMjHCsDI3JzIxLjYiRQ!5e0!3m2!1szh-TW!2stw!4v1701853096132!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/izBcPxPhYjCMDFjV9",
     phone: "02-2279-1188",
-    fbLink: "https://www.facebook.com/",
-    fbMessage: "https://m.me/",
+    fbLink: "https://www.facebook.com/61554320400557",
+    fbMessage: "https://m.me/61554320400557",
     caseName: caseName,
     houseInfos: [
       /*  ["投資興建", "勝興建設股份有限公司"],
@@ -25,7 +25,7 @@ export default {
         ["結構技師", "陳至忠結構技師"],
         ["格局規劃", "2-4房"], */
     ],
-    gtmCode: ["GTM-PQ8LQ84S"], // 可放置多個
+    gtmCode: ["GTM-WGDV7JR5"], // 可放置多個
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
