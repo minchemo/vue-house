@@ -5,8 +5,8 @@
 	<img src="./s1/2.png" class="img2" alt="" />
 	<img src="./s1/3.png" class="img3" alt="" />
 	
-	<img src="./s1/logo.svg" v-if="!$isMobile()" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000"/>
-	<img src="./s1/logom.svg" v-else class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000"/>
+	<img src="./s1/logo.svg" v-if="!$isMobile()" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
+	<img src="./s1/logom.svg" v-else class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 
   </article>
 </template>

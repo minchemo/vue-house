@@ -1,22 +1,22 @@
 <template>
   <article class="s2">
 	<ul class="txt">
-		<li>世界級收藏家都知道</li>
-		<li>唯一和絕版，有錢也買不到<br />　</li>
-		<li>中華路X中原路十字軸</li>
-		<li>面迎中港清溪川第一排</li>
-		<li>雙面臨路黃金方正角地</li>
-		<li>百利唯一地，眾勢成一王</li>
-		<li>新莊副都心這一席不會再有了<br /> </li>
-		<li>因為視野不一樣、格局不一樣</li>
-		<li>正如同全世界沒有兩個你</li>
-		<li>也沒有兩部一模一樣的哈雷</li>
-		<li>在豪宅大坪數限定的唯一角地</li>
-		<li>成就絕無僅有的小坪數和你的不一樣<br /> </li>
-		<li>副都中心最精華的0.00187平方公里</li>
-		<li>蘇富比也買不到的才值得你的收藏<br /> </li>
+		<li data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">世界級收藏家都知道</li>
+		<li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">唯一和絕版，有錢也買不到<br />&nbsp;</li>
+		<li data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">中華路X中原路十字軸</li>
+		<li data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">面迎中港清溪川第一排</li>
+		<li data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">雙面臨路黃金方正角地</li>
+		<li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">百利唯一地，眾勢成一王</li>
+		<li data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">新莊副都心這一席不會再有了<br />&nbsp;</li>
+		<li data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">因為視野不一樣、格局不一樣</li>
+		<li data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">正如同全世界沒有兩個你</li>
+		<li data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">也沒有兩部一模一樣的哈雷</li>
+		<li data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">在豪宅大坪數限定的唯一角地</li>
+		<li data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">成就絕無僅有的小坪數和你的不一樣<br />&nbsp;</li>
+		<li data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">副都中心最精華的0.00187平方公里</li>
+		<li data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000">蘇富比也買不到的才值得你的收藏<br /> </li>
 	</ul>
-	<img src="./s1/title.svg" class="title" alt="" />
+	<img src="./s1/title.svg" class="title" alt="title" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" />
   </article>
 </template>
 
