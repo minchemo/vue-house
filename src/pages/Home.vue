@@ -37,12 +37,6 @@
   background:url("@/section/s1/bg1.jpg") top center;
   background-size: cover;
   }
-  /*
-  background-image:url("@/section/s1/bg.png");
-  background-size: size(170) auto;
-  &::before{content: "";display: block;left: 0;top: 0;width: 100%;height: 100%;position: fixed;
-  background: linear-gradient(to bottom,#BB511F 0%,#BB511F00 50%,#BB511F 100%);
-}  */
 }
 img {
   display: inline;
@@ -50,94 +44,12 @@ img {
   height: unset;
   margin: 0 auto;
 }
-/*
-.slider {
-  @apply relative;
-  .caption{
-      @apply absolute;
-      right:1em;
-      bottom: 1em;
-      font-weight: 500;
-      font-size: size(15);
-      color: #FFF;
-      text-shadow: 0px size(2) size(2) rgba(0, 0, 0, 0.8);}
-  .arrows{
-    @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
-    padding: 0; 
-    height: 100%;
-    pointer-events: none;
-    .prev,
-    .next{
-      width:5%;
-      display: flex;
-      pointer-events: stroke;
-      cursor: pointer;
-      
-  justify-content: center;
-  align-items:center;
-    background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
-    background-size: 50% auto;
-    transition:background-color .5s ;
-    &:hover{background-color: #0003;}
-    }
-    .prev{transform: scaleX(-1);
-    }
-    img {
-      margin: unset;
-      @apply cursor-pointer hover:opacity-50;
-    }
-  }
-  .splide__pagination {
-    @apply absolute flex justify-center w-full;
-    bottom: size(19);
-    gap: size(6.9);
-    li {
-      button {
-        @apply rounded-full  hover:opacity-50;
-        width: size(62.84);
-        height: size(9.4);
-        border: size(1) solid #fff;
-
-        &.is-active{
-          @apply bg-white;
-      }
-      }
-    }
-  }
-}
-*/
 @media screen and (max-width: 767px) {
 .home{
-  background-size: sizem(85) auto;
-}
-/*
-.slider {
-  @apply relative;
-  .arrows{
-    .prev,
-    .next{
-      width: 8%;
-    }
-  }
-  .splide__pagination {
-    @apply absolute flex justify-center w-full;
-    bottom: sizem(6.7);
-    gap: sizem(2.5);
-    li {
-      button {
-        @apply rounded-full  hover:opacity-50;
-        width: sizem(10.3);
-        height: sizem(3.34);
-        border: sizem(1) solid #fff;
-
-        &.is-active{
-          @apply bg-white;
-      }
-      }
-    }
+  > .bg{
+  background-image:url("@/section/s1/bg1m.jpg");
   }
 }
-*/
 }
 </style>
 
@@ -145,15 +57,6 @@ img {
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
-/* 
-import S3 from "@/section/s3.vue"
-import S4 from "@/section/s4.vue"
-import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
-import Nav from "@/layout/navbar.vue" */
 import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 
