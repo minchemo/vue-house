@@ -1,5 +1,5 @@
 <template>
-    <div class="house">
+    <div class="house" v-if="info.houseInfos.length > 0">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
             <div class="flex-1 items-center justify-center py-10">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
@@ -7,7 +7,7 @@
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos">
-                            <p class="mr-5 border-l-2 border-[#A92D41] pl-2 text-[#A92D41] font-[700]" v-html="item[0]"></p>
+                            <p class="mr-5 border-l-2 border-[#ceaa6d] pl-2 text-[#ceaa6d] font-[700]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal"
                                 v-html="item[1]">
                             </p>
@@ -17,10 +17,10 @@
             </div>
         </div>
     </div>
-    <!--
-    <div class="house bg-[#FF3EA1] flex items-center justify-center">
-            <p class=""><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
-    </div> -->
+    <!-- -->
+    <div class="bg-[#ceaa6d]  py-5 flex items-center justify-center">
+            <p class="db"><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
+    </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
@@ -43,7 +43,6 @@
 .displaynone{display: none;}
 .house {
    // height: auto;
-    color: #FFF;
     font-size: size(22);
     background: #FFF;
    // height:4em;
@@ -55,7 +54,7 @@
     .title {
         font-size: size(40);
         font-weight: 700;
-        color: #A92D41;
+        color: #ceaa6d;
         margin: 0 auto 1em auto;
     }
 
@@ -76,7 +75,6 @@
         }
     }
 }
-
 @media screen and (max-width:768px) {
 .house {
     // background:#fff;

@@ -18,12 +18,6 @@
         <img src="//h65.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
-      <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=711afhav" target="_blank" class="flex contact-item justify-center items-center" >
-        
-      <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
-        <img src="@/section/form/line.svg" alt="加入LINE" srcset="" />
-        <div>加入LINE</div>
-      </a>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
@@ -65,10 +59,6 @@
       <img src="//h65.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
-    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=711afhav" target="_blank" class="flex flex-1 flex-col contact-item justify-center items-center">
-      <img src="@/section/form/line.svg" alt="加入LINE" srcset="" />
-      <div>加入LINE</div>
-    </a>
   </div>
 
   <!-- Modal -->
@@ -120,8 +110,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#A92D41;}
-.hover\:bg-color2:hover{background-color:#861427;}
+.bg-color1{background:#ceaa6d;}
+.hover\:bg-color2:hover{background-color:#c09140;}
 
 
 .contact-info-img{
@@ -154,13 +144,13 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#A92D41;
+      background:#ceaa6d;
       color: #FFF;
       width: 100%;
     font-weight: 700;
       flex: 1;
       padding: 1.1em 0;
-  //  border-radius: .5em;
+    border-radius: .5em;
       font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -172,7 +162,7 @@
       gap: 1em;
 
       &:hover {
-      background:#861427;
+      background:#c09140;
         color: #fff;
 
         img {
@@ -197,6 +187,7 @@
         flex:2.17;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
+    border-radius: .5em 0 0 .5em;
         justify-content: center;
 
         &::before {
@@ -221,6 +212,7 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
+    border-radius: 0 .5em .5em 0;
         color: #FFF;
 
         img {
@@ -243,8 +235,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(23%) sepia(27%) saturate(4297%) hue-rotate(324deg) brightness(96%) contrast(92%);
-  //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
+  img{filter:invert(73%) sepia(33%) saturate(480%) hue-rotate(359deg) brightness(90%) contrast(88%);
   }
 }
 
@@ -262,7 +253,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#A92D41;
+    background:#ceaa6d;
 
     .contact-item {
       height: 100%;      
@@ -329,7 +320,7 @@
 
         &.address {
           font-size: sizem(15);
-          border-radius: sizem(0) sizem(0) 0 0;
+    border-radius: .5em .5em 0 0;
           padding: 1.1em 0;
           margin: sizem(20) 0px 0px 0px;
           //font-size: .9em;
@@ -343,11 +334,9 @@
         }
 
         &.address+div {
-          border-radius: 0 0 sizem(0) sizem(0);
         }
       &.googlemap {
-        border-top-width: 0;
-      border-left-width:0;
+    border-radius: 0 0 .5em .5em;
       }
       }
 

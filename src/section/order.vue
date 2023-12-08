@@ -1,19 +1,5 @@
 <template>
   <div id="order" class="order relative text-center">
-    <div class="star">
-      <div class="star01" data-aos="zoom-in" data-aos-delay="800"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star02" data-aos="zoom-in" data-aos-delay="300"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star03" data-aos="zoom-in" data-aos-delay="1100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star04" data-aos="zoom-in" data-aos-delay="100"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star05" data-aos="zoom-in" data-aos-delay="200"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star06" data-aos="zoom-in" data-aos-delay="400"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star07" data-aos="zoom-in" data-aos-delay="700"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star08" data-aos="zoom-in" data-aos-delay="1000"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star09" data-aos="zoom-in" data-aos-delay="0"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star10" data-aos="zoom-in" data-aos-delay="500"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star11" data-aos="zoom-in" data-aos-delay="600"><img src="./s1/star1.png" alt="star"></div>
-      <div class="star12" data-aos="zoom-in" data-aos-delay="900"><img src="./s1/star1.png" alt="star"></div>
-    </div>
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
@@ -39,7 +25,7 @@
             <option value="" selected disabled>需求房型</option>
             <option value="二房">二房</option>
             <option value="三房">三房</option>
-          </select>  -->
+          </select> 
           <label class="row"><span>服務專員</span>
           <select class="select w-full rounded-none bg-white" v-model="formData.people">
             <option value="" selected disabled>選擇專員</option>
@@ -50,7 +36,7 @@
             <option value="紀宥榕">紀宥榕</option>
             <option value="翁雅如">翁雅如</option>
             <option value="簡家榆">簡家榆</option>
-          </select></label>
+          </select></label> -->
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -109,52 +95,14 @@
 @import "@/assets/style/function.scss";
 
 
-.star{position: absolute;left: 0;top: 0;width: 100%;height:20vw;
-> div {position: absolute;
-img{width: 100%;}}
-  .star01{width: size(395);top: 164%;left: 7%;
-    img{opacity:0.1;transform: rotate(16deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star02{width: size(556);top: 104%;left: 48%;
-    img{opacity: 0.1;transform: rotate(37deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star03{width: size(360);top: 175%;left: -3%;
-    img{opacity: 0.1;transform: rotate(16deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star04{width: size(556);top: -8%;left: 72%;
-    img{opacity: 0.1;transform: rotate(-39deg);filter: saturate(50%)brightness(1.1);}
-  }
-  .star05{width: size(484);top: 57%;left: 63%;
-    img{opacity: 0.3;transform: rotate(170deg);}
-  }
-  .star06{width: size(268);top:163%;left: 53%;
-    img{opacity: 0.3;transform: rotate(-94deg);}
-  }
-  .star07{width: size(147);top: 195%;left: 30%;
-    img{opacity: 0.3;transform: rotate(-5deg);}
-  }
-  .star08{width: size(308);top: 127%;left: 3.5%;
-    img{opacity: 0.3;transform: rotate(17deg);}
-  }
-  .star09{width: size(566);top: 51%;left: 78%;
-    img{opacity: 0.3;transform: rotate(97deg);}
-  }
-  .star10{width: size(137);top: 175%;left: 65%;
-    img{opacity: 0.3;transform: rotate(-32deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-  .star11{width: size(137);top: 195%;left: 42.5%;
-    img{opacity: 0.3;transform: rotate(40deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-  .star12{width: size(137);top: 160%;left: 17%;
-    img{opacity: 0.52;transform: rotate(27deg);filter:saturate(400%) brightness(0.46) hue-rotate(-76deg)contrast(130%);}
-  }
-}
 .order-section {
   position: relative;
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
+background: linear-gradient(0deg, #074544 0%, #083F46 33%, #0C2F4C 76%, #0F2351 100%);
 
+;
   .bg-image {
     position: absolute;
     width: 100%;
@@ -245,7 +193,7 @@ img{width: 100%;}}
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+    .row{background: #00133f66;border: 1px solid #CCC;color: #fff;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -254,11 +202,13 @@ img{width: 100%;}}
         font-weight: 700;
         > span{color: #F00;}
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background:none;flex: 1;}
       option{color: #666;}
       select{background: url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
+        filter: brightness(0) invert(1);
+
       &:focus{
         background-position:calc(100% - .5em) 0%;
       }
@@ -271,7 +221,7 @@ img{width: 100%;}}
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#A92D41;
+    background:#ceaa6d;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -292,47 +242,6 @@ img{width: 100%;}}
 }
 
 @media screen and (max-width:768px) {
-.star{
-  height:sizem(604);
-
-  .star01{width:sizem(118);top: -1%;left: 57%;
-    img{transform: rotate(-20deg);}
-  }
-  .star02{width:sizem(162);top:19%;left: -4%;
-    img{transform: rotate(121deg);}
-  }
-  .star03{width:sizem(108);top: 0%;left: 73%;
-    img{transform: rotate(-20deg);}
-  }
-  .star04{width:sizem(167);top:122%;left: 18%;
-    img{transform: rotate(152deg);}
-  }
-  .star05{width:sizem(149);top: 115%;left: 1%;
-    img{transform: rotate(162deg);}
-  }
-  .star06{width:sizem(86);top: 122%;left: 76%;
-    img{transform: rotate(34deg);}
-  }
-  .star07{width:sizem(43);top: 0%;left: 25%;
-    img{transform: rotate(30deg);}
-  }
-  .star08{width:sizem(91);top: 10%;left: 69.5%;
-    img{transform: rotate(-19deg);}
-  }
-  .star09{width:sizem(178);top: 129%;left: 10%;
-    img{transform: rotate(164deg);}
-  }
-  .star10{width:sizem(43);top: 123%;left: 70%;
-    img{transform: rotate(-107deg);}
-  }
-  .star11{width:sizem(43);top: 14%;left: 0%;
-    img{transform: rotate(-68deg);}
-  }
-  .star12{width:sizem(45);top: 5%;left: 62%;
-    img{transform: rotate(-15deg);}
-  }
-
-}
   .order-section {
     min-height: sizem(800);
     position: relative;

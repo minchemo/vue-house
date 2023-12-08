@@ -1,23 +1,22 @@
 <template>
   <article class="s2">
-    <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <div class="txt">
-    <h4 class="subtitle font-['noto_serif_tc']" data-aos="zoom-in">SMILE EUROPE</h4>
-    <h3 class="title font-['noto_serif_tc']" data-aos="zoom-in" data-aos-delay="200" v-html="img.title"></h3>
-        <p data-aos="zoom-in" data-aos-delay="400" v-html="img.desc"></p>
-      </div>
-      <span class="caption" v-html="img.caption"></span>
-        </SplideSlide>
-      </Splide>
-    </div>
-    <img class="bg2" src="./s2/bg2.png" alt="" srcset="">
-
+	<ul class="txt">
+		<li>世界級收藏家都知道</li>
+		<li>唯一和絕版，有錢也買不到<br />　</li>
+		<li>中華路X中原路十字軸</li>
+		<li>面迎中港清溪川第一排</li>
+		<li>雙面臨路黃金方正角地</li>
+		<li>百利唯一地，眾勢成一王</li>
+		<li>新莊副都心這一席不會再有了<br /> </li>
+		<li>因為視野不一樣、格局不一樣</li>
+		<li>正如同全世界沒有兩個你</li>
+		<li>也沒有兩部一模一樣的哈雷</li>
+		<li>在豪宅大坪數限定的唯一角地</li>
+		<li>成就絕無僅有的小坪數和你的不一樣<br /> </li>
+		<li>副都中心最精華的0.00187平方公里</li>
+		<li>蘇富比也買不到的才值得你的收藏<br /> </li>
+	</ul>
+	<img src="./s1/title.svg" class="title" alt="" />
   </article>
 </template>
 
@@ -25,61 +24,20 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden flex items-center justify-center text-white bg-[#F27200];
+  @apply relative overflow-hidden flex items-center justify-center text-white;
   width: 100%;
   height: auto;
-  padding:0;
-  font-size:size(18);
-  gap:3em;
-  flex-direction: column;
-   .bg2{position: absolute;bottom:0;left: 0;width: 100%;pointer-events: none;}
-  .slider {
-    margin: 0 0 size(150);
-    width: 100%;
-    flex-basis: 100%;
-    //  height: size(00);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: 100%;
-      height: size(1180);
-      background-position: 50% 100%;
-  &::before,
-  &::after{
-    content: "";
-    background: linear-gradient(to top, #F27200 0%,#F2720000 100%);
-    position: absolute;
-    bottom: 0;left: 0;width: 100%;height:30%;z-index: 4;display: block;
-  }
-  &::before{top: 0;
-    background: linear-gradient(to bottom, #F27200 0%,#F2720099 50%,#F2720000 100%);height:50%;}
-      
-    }
-    
-  .txt {
-    @apply absolute flex text-[#fff];
-  z-index: 5;
-    margin: 0;top: 0;left: 0;right: 0;
-  flex-direction: column;
-  text-align: center;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-  .title{
-    font-size: 2.5em;
-    margin: 0 0 .2em;
-    line-height: 1.4;
-  }
-  .subtitle{
-    font-size: 1.2em;
-    margin: 1em 0 .6em;
-  }
-  }
-    .caption {z-index: 5;}
-  .arrows{
-    .prev,
-    .next{width: 2.3%;}
-  }
-  }
+  padding:size(90) 0 size(200) 0;
+  font-size:size(25);
+  gap:size(95);
+  .txt{margin: auto 0 auto size(-45);
+	font-weight: 400;line-height: 1.55;letter-spacing: 0.1em;
+  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 1))}
+  .title{margin: auto 0;
+  width: size(457);
+  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 1))
+}
+  // flex-direction: column;
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -89,42 +47,12 @@
 
   .s2 {
   @apply flex-col;
-    padding: 0;
+  padding:sizem(110) 0 sizem(60) 0;
   font-size:sizem(14);
-
-  .main {
-    padding: 0 sizem(32.5);
-
-    
-    
-  .txt {
+  gap:sizem(35);
+  .txt{margin: auto 0 auto 0;line-height: 1.7;text-align: center;}
   .title{
-    font-size: 1.8em;
-  }
-  .subtitle{
-    font-size: 1.07em;
-  }
-  }
-}
-
-  .slider {
-    height: auto;
-    width: 100%;
-    margin: 0 0 sizem(30);
-
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(550);
-      
-    }
-  }
+  width: sizem(190);}
   }
 }
 </style>
@@ -155,6 +83,7 @@ const options = {
   type: 'loop'
 }
 
+/*
 const imgs = [
   {
     img:new URL("./s2/1.jpg", import.meta.url).href ,
@@ -167,25 +96,6 @@ const imgs = [
     title:"恣意徜徉私家花園",
     desc:"聽風和樹低語、閱讀四季表情，微笑領略新幸福",
     caption: "情境示意圖",
-  },
-]
-/*
-const imgs = [
-  {
-    img: getImg('s4/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s4/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s4/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s4/4'),
-    caption: "林口 長耀里"
   },
 ]
 */
