@@ -20,7 +20,7 @@
         <a :href="item.link" target="_blank" class="link" v-if="item.link"></a>
         <span :class="['t1', item.t1[0]]" v-html="item.t1[1]"></span>
         <span class="t2" v-html="item.t2"></span>
-        <h3 class="t3">{{item.t3}}<span class="t4_a" v-if="item.link&$isMobile()"></span><span class="t4" v-if="item.link">下載</span></h3>
+        <h3 class="t3">{{item.t3}}<span class="t4_a" v-if="item.link&&$isMobile()"></span><span class="t4" v-if="item.link">下載</span></h3>
         
       </section>
       <!-- <a class="download" href="https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link" target="_blank">公開資料下載</a> -->
@@ -102,6 +102,7 @@ font-size: 2em;}
   flex-wrap: wrap;
  }
  .t2{flex: 0 1 calc(100% - 7em);}
+  .t3{display: block;}
   .t4{position: absolute;right: 0;bottom: .6em;}
  }}
 }
@@ -118,7 +119,8 @@ const list1 = [
         ["都市計畫", "本案位於111年6月20日府都規字第11130026221號公告「臺北市中正區都市計畫通盤檢討(細部計畫)案」計畫範圍內。"],
         ["基地面積(㎡)", "2,391.00㎡"],
         ["使用分區", "第三之二種住宅區、第三種住宅區及道路用地"],
-        ["實施方式", "協議合建"],
+        ["實施方式", "部分協議合建、部分權利變換"],
+       // ["實施方式", "協議合建"],
         ["都更規劃", "弘傑城市開發股份有限公司"],
         ["建築設計", "陳朝雄建築師事務所"],
         ["鑑價機構", "宇豐不動產估價師聯合事務所"],
@@ -183,16 +185,16 @@ const list2 = [
     link:"",
   },
   {
-    t1: ["v1", "已完成"],
+    t1: ["v2", "作業中"],
     t2: "112/12/22",
-    t3: "召開自辦公聽會 自辦公聽會公告",
+    t3: "召開自辦公聽會 時間：下午兩點 地點：台北市中正區仁愛路二段80號 自辦公聽會公告",
     link:"https://drive.google.com/file/d/1zzGhi3VHiveMBeeKvJ_KFJ7DqOwruXfJ/view?usp=drive_link",
   },
   {
-    t1: ["v1", "已完成"],
+    t1: ["v2", "作業中"],
     t2: "112/12/22",
-    t3: "召開自辦公聽會 自辦公聽會簡報",
-    link:"https://drive.google.com/file/d/1RJdD2ymIzqkgEsy9hUvxQ6uhz5Mdiolj/view?usp=drive_link",
+    t3: "召開自辦公聽會 時間：下午兩點 地點：台北市中正區仁愛路二段80號 自辦公聽會簡報",
+    link:"https://drive.google.com/file/d/19APb2OvFxIsZzqE5Ax2FyDwiiYX7U3pR/view?usp=drive_link",
   },
 
   /*
