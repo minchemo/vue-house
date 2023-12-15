@@ -49,8 +49,8 @@
   @apply flex-col;
   padding:sizem(110) 0 sizem(60) 0;
   font-size:sizem(14);
-  gap:sizem(35);
-  .txt{margin: auto 0 auto 0;line-height: 1.7;text-align: center;}
+  gap:0;
+  .txt{margin: auto 0 sizem(35) 0;line-height: 1.7;text-align: center;}
   .title{
   width: sizem(190);}
   }

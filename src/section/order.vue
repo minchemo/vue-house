@@ -21,14 +21,14 @@
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
+          <label class="row" v-if="info.room_type"><span>需求</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
+      <!--     <option value="" selected disabled>請選擇房型</option>  -->
             <option v-for="room in info.room_type" :value="room" v-text="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算</span>
+          <label class="row" v-if="info.budget"><span>預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇預算</option>
+         <!--   <option value="" selected disabled>請選擇預算</option> -->
             <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
         </label>
@@ -70,7 +70,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending? '發送中..': '即刻預約' }}
       </div>
 
       <!-- Contact Info -->
@@ -292,14 +292,17 @@ background: linear-gradient(0deg, #074544 0%, #083F46 33%, #0C2F4C 76%, #0F2351 
       width: sizem(310);
       min-width: 0;
       height: auto;
-      gap: sizem(15);
+      gap: 0;
       margin-bottom: sizem(20);
       flex-direction: column;
       margin-top: sizem(20);
 
       .left {
         width: 100%;
-        gap: sizem(15);
+        gap: 0;
+        .row{
+         margin: 0 0 sizem(15);
+        }
       }
 
       .right {
@@ -349,6 +352,7 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  budget: "",
   project: "",
   people: "",
   email: "",
@@ -360,13 +364,14 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "people", "email", "room_type", "city", "area"]
+const bypass = ["project", "msg", "people", "email", "room_type","budget", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "預算", //budget
   "建案", //project
   "服務專員", //people
   "信箱", //email
@@ -454,6 +459,7 @@ const send = () => {
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
+      &budget=${formData.budget}
       &people=${formData.people}
       &project=${formData.project}
       &email=${formData.email}
