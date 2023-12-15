@@ -17,10 +17,10 @@
             </div>
         </div>
     </div>
-    <!-- -->
+    <!-- 
     <div class="bg-[#ceaa6d]  py-5 flex items-center justify-center">
             <p class="db"><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
-    </div>
+    </div> -->
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>

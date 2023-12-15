@@ -9,11 +9,11 @@
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
         <img src="//h65.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink">
       <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
         <img src="//h65.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
@@ -46,8 +46,8 @@
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink&&!info.address||!info.phone">
-      <img src="//h65.tw/img/form/fb.svg" alt="FB 諮詢" srcset="" />
+      @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink&&(!info.address||!info.phone)">
+      <img src="//h65.tw/img/form/fb.svg" alt="粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
