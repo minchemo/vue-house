@@ -5,8 +5,8 @@ export default {
   googleLink: "https://goo.gl/maps/tgKASisg7aDH9N3T7",
   phone: "03-990-8811",
   fbLink:
-    "https://www.facebook.com/111516394449508/",
-  fbMessage: "https://m.me/111516394449508/",
+    "https://www.facebook.com/100090771143934/",
+  fbMessage: "https://m.me/100090771143934/",
   caseName: "金牛座",
   indigatorLength: 10,
   houseInfos: [
