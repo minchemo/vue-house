@@ -75,7 +75,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending? '發送中..': '送出表單' }}
       </div>
 
       <!-- Contact Info -->

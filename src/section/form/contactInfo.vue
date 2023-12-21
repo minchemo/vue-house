@@ -50,7 +50,7 @@
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h65.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
-      <div>預約賞屋</div>
+      <div>服務諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
