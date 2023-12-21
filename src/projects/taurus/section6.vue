@@ -323,7 +323,7 @@
       color: #bd802f;
       font-size: 1.2vw;
       font-weight: bold;
-      box-shadow: 1px 1px 10px rgb(0 0 0 / 40%);
+      box-shadow: 1px 1px 10px rgb(0 0 0 / 40%);line-height: 1.3;
       &.title-rt {
         right: 12vw;
       }
@@ -677,7 +677,7 @@ export default {
           el: "viewer-2",
           img: require("./s6/viewer/02.jpg"),
           mo_bg: require("./s6/viewer/02_mo.jpg"),
-          title: "溫泉全景圖",
+          title: isMobile?"雙泉會館<br>全景圖":"雙泉會館全景圖",
           titlePos: "lt",
         },
       ],
