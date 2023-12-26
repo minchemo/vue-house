@@ -1,25 +1,18 @@
 <template>
 	<article class="s1 relative">
-		<div class="caption">情境示意</div>
-		<div class="title">
-			<img class="logo" src="@/section/s1/logo.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
-			<div class="t1" data-aos="fade-up" data-aos-delay="100">
-				百年傳承 世代安居<br />
-				放眼海線 沙鹿最好
+		<div class="section1">
+			<div class="t">
+				<img class="logo" src="@/section/s1/LOGO01.png" alt="" srcset="">
+				<img class="t1" src="@/section/s1/LOGO02.png" alt="" srcset="">
+				<div class="t2">楠梓高大特區最華麗的一極</div>
+				<div class="t3">大台北重劃推手之王前進高雄代表作</div>
 			</div>
-			<div class="t2"  data-aos="fade-up" data-aos-delay="200">
-				一座百年火車站、一座市心重劃區<br />
-				蛻變躍升，迎接中台灣國際門戶<br />
-				新世代前進未來，圓夢人生第一屋。
-			</div>
+			<video autoplay inline muted loop src="@/section/s1/01.mp4"></video>
+			<div class="mask"></div>
 		</div>
-		<div class="star" ref="starRef">
-			<img class="star1" src="@/section/s1/star1.png" alt="" srcset="">
-			<img class="star2" src="@/section/s1/star2.png" alt="" srcset="">
+		<div class="section2">
+			y1
 		</div>
-		<Boy class="layer1" />
-		<!-- <img class="layer1" src="@/section/s1/layer1.png" alt="" srcset=""> -->
-
 	</article>
 </template>
 
@@ -27,75 +20,60 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-	@apply w-full h-screen overflow-visible relative z-20;
-	max-height: size(1080);
-	min-height: size(900);
-	background-image: url(@/section/s1/bg.jpg);
-	background-size: cover;
-	background-position: 0 center;
+	@apply w-full overflow-visible relative z-20;
 
-	.caption {
-		@apply absolute;
-		color: white;
-		font-size: size(15);
-		font-weight: 400;
-		right: size(16);
-		bottom: size(13);
-	}
+	.section1 {
+		@apply w-full flex flex-col items-center justify-center relative overflow-hidden;
+		max-height: size(1080);
+		min-height: size(900);
+		background-size: cover;
+		background-position: 0 center;
 
-	.title {
-		@apply absolute flex flex-col items-center text-center left-1/2 -translate-x-1/2 z-10;
-		padding-top: size(162);
+		.t {
+			@apply w-full flex flex-col items-center justify-center z-10;
 
-		.logo {
-			width: size(313);
-		}
-
-		.t1 {
-			margin-top: -#{size(20)};
-			color: #E97290;
-			font-size: size(60);
-			font-weight: 900;
-			line-height: size(77.28);
-		}
-
-		.t2 {
-			margin-top: size(30);
-			color: #fff;
-			font-size: size(24);
-			font-weight: 500;
-			line-height: size(40.51);
-			letter-spacing: size(1.92);
-		}
-
-	}
-
-	.star {
-		@apply absolute w-full h-full inset-0;
-
-		img {
-			@apply absolute;
-
-			&.star1 {
-				width: size(751);
-				top: -#{size(108)};
-				right: size(180);
+			.logo {
+				width: size(151);
+				margin-bottom: size(60);
 			}
 
-			&.star2 {
-				width: size(468);
-				top: size(300);
-				left: size(282);
+			.t1 {
+				width: size(536);
+				margin-bottom: size(20);
+			}
+
+			.t2 {
+				background: linear-gradient(236deg, #A18151 15%, #E9D9BB 46%, #8E682E 99%);
+				color: #042B54;
+				font-size: size(38.66);
+				font-weight: 700;
+				letter-spacing: size(3.48);
+				padding: size(8) size(16);
+				margin-bottom: size(8);
+			}
+
+			.t3 {
+				color: white;
+				font-size: size(29.87);
+				font-weight: 700;
+				letter-spacing: size(3.88);
+				word-wrap: break-word
 			}
 		}
+
+		video {
+			@apply w-full h-auto absolute z-0;
+		}
+
+		.mask {
+			@apply w-full h-[30%] absolute bottom-0 z-0;
+			background-position: 0px 0px;
+			background: linear-gradient(to bottom, rgba(10, 59, 117, 0%) 0%,  rgba(10, 59, 117, 100%) 70%, rgba(10, 59, 117, 100%) 100%);
+		}
+
 	}
 
-	.layer1 {
-		@apply absolute z-10;
-		width: size(90);
-		top: size(455);
-		left: size(428);
-	}
+	.section2 {}
 }
 
 /* 螢幕尺寸標準 */
@@ -177,40 +155,4 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const smoothScroll = inject('smoothScroll')
 const isMobile = computed(() => globals.$isMobile());
-
-const scrollTo = (target) => {
-	let el = document.getElementById(target);
-	smoothScroll({
-		scrollTo: el
-	})
-}
-
-const starRef = ref(null);
-
-function r(min, max) {
-	return Math.random() * (max - min) + min;
-}
-
-const animeBubble = () => {
-	const stars = starRef.value.children;
-	for (const child of stars) {
-		anime({
-			targets: child,
-			translateX: isMobile.value ? r(-100, 100) : r(-100, 100),
-			translateY: isMobile.value ? r(-100, 100) : r(-100, 100),
-			round: r(1, 10),
-			delay: r(0, 1000),
-			duration: r(5000, 8000),
-			direction: 'alternate',
-			easing: 'easeInOutSine',
-			loop: true,
-		});
-	}
-}
-
-
-onMounted(() => {
-	animeBubble();
-})
-
 </script>
