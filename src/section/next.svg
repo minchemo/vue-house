@@ -1,9 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.8.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 21 42" style="enable-background:new 0 0 21 42;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;}
-</style>
-<path class="st0" d="M1.5,40.6l18-19.9L1.5,1"/>
+<svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_11_491)">
+<path d="M7 22.1733L16.3374 14.5867L7 7.00001" stroke="#33EAEA" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+<path d="M7 22.1733L16.3374 14.5867L7 7.00001" stroke="#33EAEA" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+<g filter="url(#filter1_f_11_491)">
+<path d="M7 22.1733L16.3374 14.5867L7 7.00001" stroke="white" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+<defs>
+<filter id="filter0_f_11_491" x="-0.00012207" y="0" width="24.5092" height="29.1735" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_11_491"/>
+</filter>
+<filter id="filter1_f_11_491" x="5.5" y="5.5" width="12.6303" height="18.1733" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_11_491"/>
+</filter>
+</defs>
 </svg>

@@ -2,7 +2,6 @@
   <div id="order" class="order relative bg-[#fff] text-center">
 
     <div class="order-section">
-      <OrderIntro />
       <!-- Title -->
       <div class="order-title text-center text-[#fff]">{{ info.order.title }}</div>
       <div class="order-subtitle text-center text-[#fff]">{{ info.order.subTitle }}</div>
@@ -67,8 +66,6 @@
       <!-- Contact Info -->
       <ContactInfo />
 
-      <img src="@/section/stargroup.png" class="stargroup" alt="" srcset="" v-if="!isMobile">
-      <img src="@/section/stargroupm.png" class="stargroup" alt="" srcset="" v-else>
     </div>
 
 
@@ -85,14 +82,14 @@
 
 .order-section {
   // background-image: url('@/section/form/bg.webp');
-  background-color: #E97290;
+  background-color: #082D57;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: size(0);
   position: relative;
   height: auto;
-  padding-top: size(100);
+  padding-top: size(0);
   overflow: hidden;
 
   .stargroup {
