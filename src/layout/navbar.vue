@@ -329,8 +329,8 @@
             border-radius: 0;
             padding: 0;
             gap: sizem(0);
-            justify-content: flex-start;
-            padding-top: sizem(100);
+            justify-content: center;
+            padding-top: 0;
             // background: rgba(77.75, 0, 41.98, 0.81);
 
             .menu-item-wrapper {

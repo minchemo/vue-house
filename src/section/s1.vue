@@ -7,7 +7,7 @@
 				<div class="t2" data-aos="fade-up" data-aos-delay="0">楠梓高大特區最華麗的一極</div>
 				<div class="t3" data-aos="fade-up" data-aos-delay="200">大台北重劃推手之王前進高雄代表作</div>
 			</div>
-			<video autoplay inline muted loop src="https://h35.banner.tw/sigma/01.mp4"></video>
+			<video autoplay loop muted playsinline src="https://h35.banner.tw/sigma/01.mp4"></video>
 			<div class="mask"></div>
 		</div>
 		<div class="line">
@@ -48,6 +48,7 @@
 						autoplay: true,
 						interval: 4000,
 						gap: 15,
+						type: 'loop'
 					}" @splide:move="move">
 						<SplideSlide class="slide" v-for="img, i in s3_imgs">
 							<img :src="img.img" alt="" srcset="">
@@ -64,15 +65,18 @@
 				<div class="swiper-text">
 					<div class="item">
 						<div class="t1" data-aos="fade-up" data-aos-delay="0">台積電Fab22高雄廠拍板核定</div>
-						<div class="t2" data-aos="fade-up" data-aos-delay="200">台積電高雄廠2奈米營運部隊已悄然成軍，旗下高雄廠正式編定為台積22廠，逾7,000億元的1.4奈米投資計畫亦可望同步轉向高大特區。</div>
+						<div class="t2" data-aos="fade-up" data-aos-delay="200">
+							台積電高雄廠2奈米營運部隊已悄然成軍，旗下高雄廠正式編定為台積22廠，逾7,000億元的1.4奈米投資計畫亦可望同步轉向高大特區。</div>
 					</div>
 					<div class="item">
 						<div class="t1" data-aos="fade-up" data-aos-delay="0">散步200米走進捷運紫線預定站</div>
-						<div class="t2" data-aos="fade-up" data-aos-delay="200">高雄捷運紫線串聯高雄大學、文藻大學、高師大高科大等七所院校，同步連結「高大之森」與橋頭科學園區，4站進左營高鐵台鐵輕軌三鐵共構站。</div>
+						<div class="t2" data-aos="fade-up" data-aos-delay="200">
+							高雄捷運紫線串聯高雄大學、文藻大學、高師大高科大等七所院校，同步連結「高大之森」與橋頭科學園區，4站進左營高鐵台鐵輕軌三鐵共構站。</div>
 					</div>
 					<div class="item">
 						<div class="t1" data-aos="fade-up" data-aos-delay="0">新台17線15分鐘<br>漢神巨蛋及高雄美術館園區</div>
-						<div class="t2" data-aos="fade-up" data-aos-delay="200">新台17線快速道路，預計115年全線通車，從基地至高雄美術館園區、漢神巨蛋及農16特區僅15分鐘，輕鬆三首歌時間直達高雄藝文瑰寶區。</div>
+						<div class="t2" data-aos="fade-up" data-aos-delay="200">
+							新台17線快速道路，預計115年全線通車，從基地至高雄美術館園區、漢神巨蛋及農16特區僅15分鐘，輕鬆三首歌時間直達高雄藝文瑰寶區。</div>
 					</div>
 				</div>
 			</div>
@@ -106,7 +110,8 @@
 				<div class="caption">建築外觀3D示意參考圖</div>
 			</div>
 			<div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">｜賀高大之森榮獲2023美國TITAN白金獎 法國NDA金獎｜</div>
-			<div class="t2" v-else data-aos="fade-up" data-aos-delay="0">賀高大之森榮獲2023<br v-if="isMobile">美國TITAN白金獎 法國NDA金獎</div>
+			<div class="t2" v-else data-aos="fade-up" data-aos-delay="0">賀高大之森榮獲2023<br v-if="isMobile">美國TITAN白金獎 法國NDA金獎
+			</div>
 			<div class="t3" v-if="isMobile" data-aos="fade-up" data-aos-delay="200">我們向世界證明<br>這座建築配得上您</div>
 			<div class="t3" v-else data-aos="fade-up" data-aos-delay="200">我們向世界證明，這座建築配得上您</div>
 			<div class="badges">
@@ -137,8 +142,8 @@
 			<div class="persons" v-if="!isMobile">
 				<div class="item" v-for="item in s7_person">
 					<div class="visible-t">
-						<div class="t t1" v-html="item.t1"  data-aos="fade-up" data-aos-delay="0"></div>
-						<div class="name"  data-aos="fade-up" data-aos-delay="200">
+						<div class="t t1" v-html="item.t1" data-aos="fade-up" data-aos-delay="0"></div>
+						<div class="name" data-aos="fade-up" data-aos-delay="200">
 							<div class="t t2" v-html="item.t2"></div>
 							<span></span>
 							<div class="t t3" v-html="item.t3"></div>
@@ -154,16 +159,18 @@
 			<Splide ref="splide2" class="persons" v-else :options="{
 				type: 'loop',
 				pagination: false,
+				rewind: false,
 				arrows: false,
 				drag: true,
-				autoplay: true,
+				autoplay: false,
 				interval: 4000,
-				autoWidth: true,
 				gap: 15,
 				focus: 'center',
+				perPage: 1,
+				perMove: 1
 
 			}" @splide:move="move2">
-				<SplideSlide class="item" v-for="item, i in s7_person" :class="{ active: currentIndex2 == i }">
+				<SplideSlide class="item" v-for="item, i in s7_person">
 					<div class="visible-t">
 						<div class="t t1" v-html="item.t1"></div>
 						<div class="name">
@@ -180,7 +187,7 @@
 					<div class="mask"></div>
 				</SplideSlide>
 			</Splide>
-			<div class="arrows" v-if="isMobile"> 
+			<div class="arrows" v-if="isMobile">
 				<img class="prev" @click="splide2.splide.go('<')" src="@/section/arrow.png" alt="" srcset="">
 				<img class="next" @click="splide2.splide.go('>')" src="@/section/arrow.png" alt="" srcset="">
 			</div>
@@ -1089,7 +1096,7 @@
 			}
 
 			.bubbles {
-				@apply block relative;
+				@apply block relative mix-blend-lighten;
 				height: sizem(420);
 
 				.bubble {
@@ -1124,21 +1131,21 @@
 					}
 
 					.bg {
-						@apply w-full h-full absolute left-0 top-0 mix-blend-screen;
+						@apply w-full h-full absolute left-0 top-0;
 						z-index: 1;
 					}
 
 					&:nth-child(1) {
-						@apply left-1/2 -translate-x-1/2 mix-blend-screen;
+						@apply left-1/2 -translate-x-1/2;
 					}
 
 					&:nth-child(2) {
-						@apply bottom-0 mix-blend-screen;
+						@apply bottom-0;
 						left: -#{sizem(30)};
 					}
 
 					&:nth-child(3) {
-						@apply bottom-0 mix-blend-screen;
+						@apply bottom-0;
 						right: -#{sizem(30)};
 					}
 				}
@@ -1487,18 +1494,18 @@
 			}
 
 			.persons {
-				@apply flex;
+				@apply block;
 				gap: 0;
 				margin-top: sizem(40);
-				width: sizem(375);
+				width: 100%;
 
 				.item {
 					@apply relative text-white;
-					width: sizem(240);
+					flex-basis: sizem(240);
 					height: auto;
 					aspect-ratio: 310/670;
 
-					&.active {
+					&.is-active {
 						.visible-t {
 							opacity: 1;
 						}
