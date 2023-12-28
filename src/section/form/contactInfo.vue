@@ -209,7 +209,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #A92D41;
+      background-color: #CCA86D;
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
@@ -230,7 +230,7 @@
     height: auto;
     // border-radius: sizem(68);
     padding: sizem(40) sizem(15);
-    margin-top: sizem(50);
+    margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
 

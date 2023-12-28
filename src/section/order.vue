@@ -245,7 +245,7 @@
     // background-image: url('@/section/form/bg_m.webp');
     height: auto;
     padding-bottom: sizem(0);
-    padding-top: sizem(60);
+    padding-top: sizem(0);
     position: relative;
     overflow: hidden;
 
