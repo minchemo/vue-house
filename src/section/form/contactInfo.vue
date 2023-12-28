@@ -1,6 +1,6 @@
 <template>
   <div class="contact-info mx-auto bg-[transparent] flex flex-col items-center justify-between">
-    <div class="logo" data-aos="zoom-in"></div>
+    <!-- <div class="logo" data-aos="zoom-in"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
@@ -122,7 +122,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #A92D41;
+      background-color: #CCA86D;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -136,8 +136,8 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #A92D41;
-        color: #fff;
+        background-color: #CCA86D;
+        color: #000;
 
         img {
           filter: brightness(1) invert(0);
@@ -174,7 +174,7 @@
 
 
       &.googlemap {
-      background-color: #A92D41;
+      background-color: #CCA86D;
         color: #fff;
 
         img {
@@ -182,8 +182,8 @@
         }
 
         &:hover {
-          background-color: #A92D41;
-          color: #fff;
+          background-color: #CCA86D;
+          color: #000;
         img {
           filter: brightness(1) invert(0);
         }

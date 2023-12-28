@@ -18,7 +18,7 @@
             <div class="close" @click="menuOpen = !menuOpen">
                 <img src="@/section/close.svg" alt="" srcset="">
             </div>
-            <img class="navlogo" src="@/section/navlogo.png" alt="" srcset="">
+            <!-- <img class="navlogo" src="@/section/navlogo.png" alt="" srcset=""> -->
         </div>
     </div>
     <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
@@ -48,7 +48,7 @@
     }
 
     .menu-btn {
-        background: #E97290;
+        background: transparent;
         height: size(62);
         width: size(62);
         display: flex;
@@ -56,7 +56,7 @@
         justify-content: center;
         position: relative;
         z-index: 1;
-        border: 1px solid #C9A063;
+        // border: 1px solid #C9A063;
 
         p {
             transition: all .5s;
@@ -128,7 +128,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        background: rgba(233, 114, 144, 0.90);
+        background: rgba(0, 51, 102, 0.80);
         width: size(374);
         height: 100%;
         z-index: 5;
@@ -150,20 +150,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: size(28);
+            font-size: size(16);
             gap: size(10);
             font-family: 'Noto Sans TC';
             font-weight: 500;
             color: #fff;
             letter-spacing: size(7.2);
-
-            span {
-                &::first-letter {
-                    font-size: size(36);
-                    color: #FCEE21;
-                }
-
-            }
 
             img {
                 width: size(43);
@@ -171,26 +163,28 @@
 
             &:after {
                 content: '';
-                position: absolute;
-                bottom: -5px;
-                width: 0%;
-                height: size(3);
-                background-color: #E7BA65;
-                transition: all .35s;
+                @apply absolute;
+                bottom: -#{size(10)};
+                background-image: url('@/assets/nav_divider.png');
+                width: size(213);
+                height: size(2);
+                background-size: 100%;
             }
 
             &:hover {
                 color: #fff;
-
-                &:after {
-                    // width: 100%;
-                }
             }
 
             &.active {
 
                 color: #fff;
 
+            }
+
+            &:last-child {
+                &::after {
+                    background-image: unset;
+                }
             }
 
         }
@@ -334,14 +328,14 @@
             transition: all .5s;
             border-radius: 0;
             padding: 0;
-            gap: sizem(40);
+            gap: sizem(0);
             justify-content: flex-start;
             padding-top: sizem(100);
             // background: rgba(77.75, 0, 41.98, 0.81);
 
             .menu-item-wrapper {
                 @apply flex flex-col relative;
-                gap: sizem(28);
+                gap: sizem(30);
                 padding-right: 0;
                 margin-bottom: sizem(10);
                 padding-top: 0;
@@ -353,15 +347,13 @@
 
             .menu-item {
                 font-size: sizem(15);
-                gap: sizem(5);
+                gap: sizem(1);
                 letter-spacing: sizem(4);
 
-                span {
-                    &::first-letter {
-                        font-size: sizem(20);
-                        color: #FCEE21;
-                    }
-
+                &::after {
+                    width: sizem(202);
+                    height: sizem(2);
+                    bottom: -#{sizem(15)};
                 }
 
                 img {

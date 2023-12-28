@@ -49,7 +49,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#A92D41] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#fff000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -60,7 +60,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending ? '發送中..' : '立即預約' }}
+        {{ sending ? '發送中..' : '送出表單' }}
       </div>
 
       <!-- Contact Info -->
@@ -217,7 +217,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #A92D41;
+    background: rgba(255, 255, 255, 0.20);
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
