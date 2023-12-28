@@ -85,12 +85,12 @@ const imgs = [
   {
     img:new URL("./s8/1.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s8/1m.jpg", import.meta.url).href : new URL("./s8/1.jpg", import.meta.url).href,
-    caption: "樣品屋實景拍攝"
+    caption: "公設3D示意圖"
   },
   {
     img:new URL("./s8/2.jpg", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s8/1m.jpg", import.meta.url).href : new URL("./s8/1.jpg", import.meta.url).href,
-    caption: "樣品屋實景拍攝"
+    caption: "公設3D示意圖"
   },
 ]
 const options = {
