@@ -85,7 +85,11 @@
 
 @media screen and (max-width:768px) {
     .banner-pc{display: none;}
-    .banner-m{display: block;}
+    .banner-m{
+    display: block;
+    width: 100%;
+    background: #CCA86D;
+    }
 .house {
 //   background-image: url('@/section/form/bg_m.webp');
 }

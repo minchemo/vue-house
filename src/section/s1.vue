@@ -47,7 +47,6 @@
 						drag: true,
 						autoplay: true,
 						interval: 4000,
-						
 						gap: 15,
 					}" @splide:move="move">
 						<SplideSlide class="slide" v-for="img, i in s3_imgs">
@@ -664,7 +663,8 @@
 			margin-top: size(50);
 
 			img {
-				@apply mix-blend-lighten;
+				mix-blend-mode: lighten;
+
 				width: size(261.4);
 			}
 		}
@@ -1489,14 +1489,14 @@
 			.persons {
 				@apply flex;
 				gap: 0;
-				margin-top: sizem(80);
+				margin-top: sizem(40);
 				width: sizem(375);
 
 				.item {
 					@apply relative text-white;
 					width: sizem(240);
 					height: auto;
-					aspect-ratio: 310/810;
+					aspect-ratio: 310/670;
 
 					&.active {
 						.visible-t {
@@ -1562,7 +1562,7 @@
 
 					.avatar {
 						@apply absolute transition-all;
-						bottom: sizem(70);
+						top: sizem(70);
 						left: 0;
 						width: 100%;
 						height: auto;
