@@ -21,7 +21,7 @@ export default {
         ["樓層規劃", "地上15層、地下4層"],
         ["房型規劃", "2-3房、21~35坪"],
     ],
-    gtmCode: ["GTM-PQ8LQ84S"], // 可放置多個
+    gtmCode: ["GTM-M8N6GNQ"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2

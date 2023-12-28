@@ -137,6 +137,7 @@
 		width: size(1273.85);
 		right: size(59.15);
 		bottom: -#{size(120)};
+		
 	}
 }
 

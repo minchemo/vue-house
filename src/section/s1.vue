@@ -7,7 +7,7 @@
 				<div class="t2" data-aos="fade-up" data-aos-delay="0">楠梓高大特區最華麗的一極</div>
 				<div class="t3" data-aos="fade-up" data-aos-delay="200">大台北重劃推手之王前進高雄代表作</div>
 			</div>
-			<video autoplay inline muted loop src="@/section/s1/01.mp4"></video>
+			<video autoplay inline muted loop src="https://h35.banner.tw/sigma/01.mp4"></video>
 			<div class="mask"></div>
 		</div>
 		<div class="line">
@@ -28,7 +28,7 @@
 			</div>
 			<div class="t3" data-aos="fade-up" data-aos-delay="0">｜高大Σ計畫打造科技極地理想國｜</div>
 			<div class="t4" data-aos="fade-up" data-aos-delay="200">邀請你一起看見高雄的世界級</div>
-			<img class="view" src="@/section/s1/view.jpg" alt="" srcset="">
+			<img class="view" src="@/section/s1/view.webp" alt="" srcset="">
 			<img class="bg1" src="@/section/s1/bg1.png" alt="" srcset="">
 			<img class="bg2" src="@/section/s1/bg2_m.png" alt="" srcset="" v-if="isMobile">
 			<img class="bg2" src="@/section/s1/bg2.png" alt="" srcset="" v-else>
@@ -47,6 +47,7 @@
 						drag: true,
 						autoplay: true,
 						interval: 4000,
+						
 						gap: 15,
 					}" @splide:move="move">
 						<SplideSlide class="slide" v-for="img, i in s3_imgs">
@@ -102,7 +103,7 @@
 		</div>
 		<div class="section5">
 			<div class="t1">
-				<img src="@/section/s5/1.jpg" alt="" srcset="">
+				<img src="@/section/s5/1.webp" alt="" srcset="">
 				<div class="caption">建築外觀3D示意參考圖</div>
 			</div>
 			<div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">｜賀高大之森榮獲2023美國TITAN白金獎 法國NDA金獎｜</div>
@@ -300,6 +301,7 @@
 			transform: translateX(-50%) scale(0.8);
 			opacity: 0.35;
 			animation: star 4s infinite;
+			mix-blend-mode: lighten;
 
 			@keyframes star {
 				to {
@@ -507,6 +509,7 @@
 
 				.item {
 					color: white;
+					text-align: left;
 
 					.t1 {
 						font-size: size(26);
@@ -728,7 +731,7 @@
 			bottom: -#{size(400)};
 			width: 100%;
 			height: size(2000);
-			background: url(@/section/s6/bg.png) no-repeat center;
+			background: url(@/section/s6/bg.webp) no-repeat center;
 			background-size: cover;
 		}
 	}
@@ -870,7 +873,7 @@
 		padding-top: size(750);
 		padding-bottom: size(50);
 		height: auto;
-		background: url('@/section/s8/bg.png') no-repeat top center;
+		background: url('@/section/s8/bg.webp') no-repeat top center;
 		background-size: 100%;
 		background-color: #082D57;
 
@@ -1487,11 +1490,11 @@
 				@apply flex;
 				gap: 0;
 				margin-top: sizem(80);
-				width: sizem(310);
+				width: sizem(375);
 
 				.item {
 					@apply relative text-white;
-					width: sizem(200);
+					width: sizem(240);
 					height: auto;
 					aspect-ratio: 310/810;
 
@@ -1559,7 +1562,7 @@
 
 					.avatar {
 						@apply absolute transition-all;
-						bottom: 0;
+						bottom: sizem(70);
 						left: 0;
 						width: 100%;
 						height: auto;

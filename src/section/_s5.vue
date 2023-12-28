@@ -358,7 +358,7 @@ const move = (index, index2) => {
 }
 const data = [
 	{
-		img: new URL("../section/s5/1.jpg", import.meta.url).href,
+		img: new URL("../section/s5/1.webp", import.meta.url).href,
 		caption: "現場實景拍攝"
 	},
 	{

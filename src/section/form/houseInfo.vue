@@ -19,9 +19,12 @@
 
     </div>
     </div>
+     <img class="banner-m" src="@/section/form/db-banner-m.svg" alt="高大之森">
+    <img  class="banner-pc" src="@/section/form/db-banner.svg" alt="高大之森">
+   
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="泰嘉拓真" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="高大之森" srcset=""></a>
 
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
@@ -44,7 +47,11 @@
   background-size: 100%;
 }
 .displaynone{display: none;}
+.banner-m{display: none;}
+.banner-pc{display: block;}
 .info-box {
+
+
     
 
     width: size(800);
@@ -55,6 +62,8 @@
         font-weight: 700;
         margin-bottom: size(36);
     }
+
+    
 
     .info-items {
         row-gap: size(20);
@@ -75,6 +84,8 @@
 }
 
 @media screen and (max-width:768px) {
+    .banner-pc{display: none;}
+    .banner-m{display: block;}
 .house {
 //   background-image: url('@/section/form/bg_m.webp');
 }
