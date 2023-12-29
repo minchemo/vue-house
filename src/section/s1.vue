@@ -3,7 +3,7 @@
   <article class="s1">
     <!-- 
     <img class="t0" src="./s1/mo.jpg" alt="" srcset="">  -->
-    <video class="video-bg" src="https://h35.banner.tw/sigma/01.mov" playsinline autoplay muted loop></video>
+    <video class="video-bg" src="https://h35.banner.tw/sigma/01.mp4" playsinline autoplay muted loop></video>
     <div class="txtall">
       <div class="logo">
         <div class="logot"><span data-aos="fade-right" data-aos-delay="1100" data-aos-duration="1000">尋找</span></div>
