@@ -10,8 +10,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d522.9414792203362!2d120.27978848648348!3d22.726743968384447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f16f5704453%3A0x2397ed388311211b!2z6auY5aSn5LmL5qOuL-WinuWAvOaloOaikyDljbPliLvpoJDntIQ!5e0!3m2!1szh-TW!2sjp!4v1703742850255!5m2!1szh-TW!2sjp",
     googleLink: "https://maps.app.goo.gl/A5cbZX8QWugoJG1o6",
     phone: "07-3648088",
-    fbLink: "https://www.facebook.com/100095472765730",
-    fbMessage: "https://m.me/100095472765730",
+    fbLink: "https://www.facebook.com/sigma.debang/",
+    fbMessage: "https://m.me/sigma.debang/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "中德建設"],
@@ -33,7 +33,7 @@ export default {
     },
     navList: [{
         name: "高大Σ計畫",
-        target: ".section1",
+        target: ".section2",
         offset: "",
     }, {
         name: "增值列車",
@@ -45,7 +45,7 @@ export default {
         offset: "",
     }, {
         name: "國際高度",
-        target: ".section6",
+        target: ".section5",
         offset: "",
     }, {
         name: "豪宅團隊",
