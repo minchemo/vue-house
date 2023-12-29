@@ -348,7 +348,7 @@
 </style>
 
 <script setup>
-import OrderIntro from "@/section/order_intro.vue"
+// import OrderIntro from "@/section/order_intro.vue"
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
