@@ -133,7 +133,10 @@
 				23年來以種樹哲學　在北台灣躍建築新高峰
 			</div>
 			<div class="t t3" data-aos="fade-up" data-aos-delay="400">以種樹哲學 躍建築新高峰　以服務紮根 跨品牌新里程</div>
-			<div class="bg"></div>
+			
+      <div class="bg" v-if="!isMobile"></div>
+      <label class="bg1" v-else><input type="checkbox" name="s6img"><div class="pican"><img src="./s6/imgm.webp" alt=""><img src="./s6/imgm.webp" alt=""></div></label>
+      
 		</div>
 		<div class="section7">
 			<img class="t1" src="@/section/s7/t1.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
@@ -171,6 +174,7 @@
 
 			}" @splide:move="move2">
 				<SplideSlide class="item" v-for="item, i in s7_person">
+					<img class="avatar" :src="item.img" alt="" srcset="">
 					<div class="visible-t">
 						<div class="t t1" v-html="item.t1"></div>
 						<div class="name">
@@ -183,7 +187,6 @@
 						<div class="t4" v-html="item.t4"></div>
 						<div class="t5" v-html="item.t5"></div>
 					</div>
-					<img class="avatar" :src="item.img" alt="" srcset="">
 					<div class="mask"></div>
 				</SplideSlide>
 			</Splide>
@@ -735,10 +738,10 @@
 
 		.bg {
 			@apply absolute;
-			bottom: -#{size(400)};
+			bottom: -#{size(370)};
 			width: 100%;
 			height: size(2000);
-			background: url(@/section/s6/bg.webp) no-repeat center;
+			background: url("@/section/s6/bg.webp") no-repeat center;
 			background-size: cover;
 		}
 	}
@@ -784,6 +787,7 @@
 					top: 15%;
 					left: 3.5%;
 					gap: size(10);
+          transition: opacity .5s;
 
 					.t1 {
 						writing-mode: vertical-lr;
@@ -829,7 +833,8 @@
 				}
 
 				.hidden-t {
-					@apply absolute z-10 transition-all;
+					@apply absolute z-10;
+          transition: opacity .5s;
 					opacity: 0;
 					padding: 0 size(20);
 					bottom: 0;
@@ -842,7 +847,8 @@
 					.t4 {
 						padding-bottom: size(20);
 						border-bottom: 1px solid #fff;
-						margin-bottom: size(20)
+						margin-bottom: size(20);
+            text-align: justify;
 					}
 				}
 
@@ -1244,7 +1250,7 @@
 
 				.swiper-text {
 					@apply flex flex-col;
-					gap: sizem(30);
+					gap:0;// sizem(30);
 					margin-top: 0;
 					padding: 0 sizem(25);
 
@@ -1263,6 +1269,7 @@
 							letter-spacing: sizem(1.1);
 							width: 100%;
 							margin-top: sizem(10);
+               margin-bottom:sizem(30);
 						}
 					}
 
@@ -1326,7 +1333,7 @@
 
 			.intros {
 				@apply flex flex-col items-center justify-center;
-				gap: sizem(40);
+				gap: 0;
 				margin-top: sizem(35);
 				padding: 0 sizem(25);
 
@@ -1339,6 +1346,7 @@
 
 					.t2 {
 						margin-top: sizem(10);
+            margin-bottom:sizem(40);
 						font-size: sizem(13);
 						font-weight: 400;
 						line-height: sizem(22.3);
@@ -1393,6 +1401,7 @@
 				img {
 					@apply mix-blend-lighten;
 					width: sizem(133);
+					height: sizem(63);
 				}
 			}
 
@@ -1427,6 +1436,9 @@
 			@apply text-white text-center relative;
 			margin-top: sizem(95);
 			height: sizem(500);
+      background-image: url("./s6/bg1m.webp");
+      background-size: 130% auto;
+      background-position: center center;
 
 			.t {
 				@apply relative z-10;
@@ -1459,17 +1471,33 @@
 				animation: anim 20s infinite linear reverse forwards;
 				background-size: 200% 100%;
 				background-position: 0% 0%;
-
+			}
+      .bg1{width: 100%;
+        img{
+				height: sizem(250);
+      }
+      .pican{
+        width: auto;
+        display: inline-block;
+        position: relative;
+        white-space: nowrap;
+        margin: 15vw 0 0 0;
+        white-space: nowrap;
+        animation: anim 20s linear infinite reverse ;
+        transform: translateX(-50%)}
+      input {
+        display: none;
+      }
+      input:checked + .pican:hover {
+        animation-play-state: paused;
+      }
 				@keyframes anim {
-					0% {
-						background-position: 0% 0%;
-					}
 
-					100% {
-						background-position: 100% 0%;
+					to {
+            transform: translateX(0)
 					}
 				}
-			}
+      }
 		}
 
 		.section7 {
@@ -1513,6 +1541,12 @@
 						.hidden-t {
 							opacity: 1;
 						}
+					&:hover {
+
+						.hidden-t {
+							opacity: 1;
+						}
+					}
 					}
 
 					.t {
@@ -1520,7 +1554,7 @@
 					}
 
 					.visible-t {
-						@apply absolute flex transition-all w-full items-start justify-start z-10;
+						@apply absolute flex w-full items-start justify-start z-10;
 						top: 0% !important;
 						left: 3.5%;
 						gap: sizem(5);
@@ -1533,7 +1567,6 @@
 							line-height: sizem(36);
 							letter-spacing: sizem(2.55);
 						}
-
 						.name {
 							@apply flex flex-col;
 							font-size: sizem(12);
@@ -1550,7 +1583,7 @@
 					}
 
 					.hidden-t {
-						@apply absolute z-10 transition-all;
+						@apply absolute z-10;
 						opacity: 0;
 						padding: 0 sizem(10);
 						bottom: 0;
@@ -1595,7 +1628,7 @@
 						}
 
 						.hidden-t {
-							opacity: 1;
+							opacity: 0;
 						}
 					}
 				}
