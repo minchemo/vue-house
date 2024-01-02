@@ -57,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#FFF]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -132,7 +132,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #FFF;
+    color: #000;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -143,7 +143,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #FFF;
+    color: #000;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -210,10 +210,10 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #D71718;
+    background-color: #E60012;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: .5em;
+    border-radius: 0em;
 
     width: 308px;
     height:3.3em;

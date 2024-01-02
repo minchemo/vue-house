@@ -9,15 +9,16 @@
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-   <Nav v-if="config.showNav" />
-  <div class="home bg-[#003183] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <img src="@/section/s1/bg0.jpg" class="bgh">
-    <!--   <div class="bg">
+   <Nav v-if="info.navList.length > 0" />
+  <div class="home bg-[#DDDDDD] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+     <!--  <img src="@/section/s1/bg0.jpg" class="bgh">
+    <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
     <!-- <S2v /> -->
+  <!--
     <S2 />
     <S3 />
     <S4 />
@@ -27,7 +28,6 @@
     <S8 />
     <S9 />
     <S10 />
-  <!--
     <S11 />
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -49,6 +49,7 @@
      transform:scale(1);opacity: 1;
   }
 }
+/*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
     span{
       position: absolute;
@@ -60,6 +61,7 @@
       &:nth-child(3){animation-delay: 1.5s;}
     }
   }
+  */
 
 
 .fade-enter-active, .fade-leave-active {
@@ -247,10 +249,6 @@ import AOS from 'aos';
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
-const config = ref({
-  showNav: true
-})
-
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
