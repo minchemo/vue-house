@@ -164,14 +164,12 @@
 				pagination: false,
 				rewind: false,
 				arrows: false,
-				drag: true,
-				autoplay: false,
-				interval: 4000,
 				gap: 15,
 				focus: 'center',
 				perPage: 1,
-				perMove: 1
-
+				perMove: 1,
+				flickPower: 10,
+				flickMaxPages: 1
 			}" @splide:move="move2">
 				<SplideSlide class="item" v-for="item, i in s7_person">
 					<img class="avatar" :src="item.img" alt="" srcset="">
