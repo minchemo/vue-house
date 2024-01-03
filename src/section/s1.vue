@@ -6,17 +6,17 @@
     <img src="./s1/t1.svg" class="t1" alt="" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
     <div class="t2" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000"><span v-if="$isMobile()">絕版 電梯 店墅</span><span v-else>絕版 電梯 店墅 / </span><span>市政×星鑽
 </span></div>  -->
-<img src="./s1/img.webp" alt="img" class="img">
-<img src="./s1/rtxt.svg" alt="rtxt" class="rtxt">
+<img src="./s1/img.webp" alt="img" class="img" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+<img src="./s1/rtxt.svg" alt="rtxt" class="rtxt"  >
 <img src="./s1/rb.svg" alt="rtxt" class="rb">
 <div class="txt">
-<h3 class="t1">敢</h3>
-<h4 class="t2">與眾不同</h4>
-<div class="t3">別墅新寵 即將亮相</div>
-<div class="t4">Are U Ready
-<img src="./s1/question.svg" alt="question"></div>
-<div class="t5">
-<img src="./s1/t5.svg" alt="t5">07-585-6655</div>
+<h3 class="t1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">敢</h3>
+<h4 class="t2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">與眾不同</h4>
+<div class="t3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">別墅新寵 即將亮相</div>
+<div class="t4" data-aos="fade--up" data-aos-duration="500" data-aos-delay="600">Are U Ready
+<img src="./s1/question.svg" alt="question" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200"></div>
+<div class="t5"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">
+<img src="./s1/t5.svg" alt="t5"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">07-585-6655</div>
 </div>
 
 
