@@ -10,12 +10,9 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home bg-[#DDDDDD] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-     <!--  <img src="@/section/s1/bg0.jpg" class="bgh">
-    <div class="bg">
-      <img src="@/section/s1/bg1.png" class="bg1" />
-      <img src="@/section/s1/bg2.png" class="bg2" />
-    </div> -->
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+       <img src="@/section/s1/bg.webp" class="bgh" v-if="!$isMobile()">
+       <img src="@/section/s1/bgm.webp" class="bgh" v-else>
     <S1 />
     <!-- <S2v /> -->
   <!--
@@ -71,9 +68,11 @@
   opacity: 0;
 }
 
-.home > .bgh{position: fixed;width: 100%;
+.home > .bgh{
+  position: fixed;width: 100%;
   top: 0;left: 0;
 }
+
 img {
   display: inline;
   max-width: unset;
@@ -176,7 +175,6 @@ img {
 }
 @media screen and (max-width: 767px) {
   
-
 .home > .bgh{width: 250%;
   top: 0;left: 0;
 }

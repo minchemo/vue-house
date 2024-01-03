@@ -6,7 +6,7 @@
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>  -->
-    <div class="flex justify-between w-full contact-item-box">
+    <div class="flex justify-between w-full contact-item-box font-['Noto_Serif_TC',serif]">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #E60012;
+      background-color: #00312E;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -156,7 +156,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #94000c;
+        background-color: #001d1a;
         color: #fff;
 
         img {
@@ -244,7 +244,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#c20010;
+    background:#00312E;
 
     .contact-item {
       height: 100%;      

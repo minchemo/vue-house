@@ -1,25 +1,12 @@
 <template>
   <article class="s1" id="s1">
-   <!--  <img class="t0" src="./s1/pc.jpg" alt="" srcset="">
-    <div class="bg"></div>
-    <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
-    <img src="./s1/t1.svg" class="t1" alt="" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
-    <div class="t2" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000"><span v-if="$isMobile()">絕版 電梯 店墅</span><span v-else>絕版 電梯 店墅 / </span><span>市政×星鑽
-</span></div>  -->
-<img src="./s1/img.webp" alt="img" class="img" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
-<img src="./s1/rtxt.svg" alt="rtxt" class="rtxt"  >
-<img src="./s1/rb.svg" alt="rtxt" class="rb">
+<img src="./s1/book.webp" alt="img" class="img" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
 <div class="txt">
-<h3 class="t1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">敢</h3>
-<h4 class="t2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">與眾不同</h4>
-<div class="t3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">別墅新寵 即將亮相</div>
-<div class="t4" data-aos="fade--up" data-aos-duration="500" data-aos-delay="600">Are U Ready
-<img src="./s1/question.svg" alt="question" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200"></div>
-<div class="t5"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">
-<img src="./s1/t5.svg" alt="t5"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">07-585-6655</div>
+<h3 class="t1 font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">歡迎回<span>嘉</span><br>開啟幸福篇章</h3>
+<div class="t2 font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">START HAPPINESS</div>
 </div>
-
-
+<img src="./s1/style1.webp" alt="style1" class="style1" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+<img src="./s1/style2.webp" alt="style2" class="style2" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
   </article>
 </template>
 
@@ -36,49 +23,64 @@
 .s1 {
   
   @apply relative w-full h-screen;
-  min-height: size(1000);
-  max-height: size(1080);
+  min-height: size(900);
+  max-height: size(900);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
   font-size:size(36);
-  background: #E60012;
-  // background: #742229 url("./s1/rame.png");
+  //background: #E60012;
+  //background: url("./s1/bg.webp");
   background-size: 100% auto;
 
-    .img{position: absolute;width: size(553);left: size(294);
-    top:calc(50% + #{size(82 - 540)});
+    .img{position: absolute;width: size(740);left: size(187);
+    top:calc(50% + #{size(320 - 540)});
+    z-index: 99;
     }
-    .rtxt{position: absolute;width: size(88);right: size(60);
-    top:calc(20% + #{size(40 - (1080*.2))});}
-    .rb{position: absolute;width: size(227);right: size(60);
-    bottom:size(20);}
-    .txt{margin: auto;text-align: center;color: #FFF;
-    font-weight: 900;
-  line-height: 1.2;
-.t1{
-  font-size:size(310);}
-.t2{
-  font-size:size(160);
-margin-top: -.18em;
-margin-bottom: .8em;}
-.t3{letter-spacing: 0.8em;}
-.t4{
-  @apply font-['Arial'];
-    font-weight: 700;
-  font-size:size(95);letter-spacing: -.04em;
-  text-indent: .6em;
-margin-bottom: .2em;
-img{height: 1.43em;}}
-.t5{
-  @apply font-['Arial'];
-    font-weight: 700;
-  font-size:size(65);
-img{height:0.49em;display: block;
-margin-bottom: .1em;}}
 
-    }
+    .style1{
+    position: absolute;
+    width: size(247);
+    right: size(873);
+    mix-blend-mode: soft-light;
+  }
+  .style2{
+    position: absolute;
+    width: size(226);
+    right: size(119);
+    top:size(350);
+    mix-blend-mode: soft-light;
+  }
+
+    .txt{
+    width: auto;
+    position: absolute;
+    right:size(364);
+    text-align:center;
+    color: #FFF;
+    font-weight: 900;
+    line-height: 1.2;
+.t1{
+  font-size:size(68);
+  font-weight: 500;
+  letter-spacing:size(16.32);
+  line-height: size(90);
+  text-shadow: 0px size(4) size(20) #000;
+
+  span{color: #FFFCB0;}
+  }
+
+.t2{
+  color: #5BBC96;
+  font-size:size(25);
+  margin-top: .5em;
+  font-weight: 500;
+  letter-spacing:size(16.32);
+  }
+
+}
+
 
   
 
@@ -97,31 +99,50 @@ margin-bottom: .1em;}}
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(550);
+    min-height: sizem(667);
     max-height: sizem(812);
     font-size:sizem(15);
-    .rb{position: absolute;width: sizem(227);right: auto;left: auto;margin: auto;
-    bottom:sizem(30);}
 
-.img{position: absolute;width: sizem(185);left:0;
-top:sizem(110);
-top:calc(50% + #{sizem(110 - (604*.5))});
+.img{
+  position: absolute;
+  width: sizem(520);
+  left:sizem(-50);
+  top:auto;
+  bottom:sizem(50);
 }
-.rtxt{position: absolute;width: sizem(39);right: sizem(20);
-top:sizem(25);
-top:calc(20% + #{sizem(25 - (604*.2))});
-}
-    .txt{
+
+
+  .style1{
+    position: absolute;
+    width: sizem(148);
+    left: sizem(-20);
+    right:auto;
+    top:sizem(56);
+    mix-blend-mode: soft-light;
+  }
+  .style2{
+    position: absolute;
+    width: sizem(143);
+    left: auto;
+    right:sizem(-20);
+    top:auto;
+    bottom:sizem(-20);
+    mix-blend-mode: soft-light;
+  }
+
+.txt{
+  position: absolute;
+  top:sizem(94);
+  right: sizem(60);
+
+
 .t1{
-  font-size:sizem(118);
-margin-bottom: 0.1em;}
+  font-size:sizem(35);
+  line-height:sizem(50);
+  letter-spacing: sizem(8.4);
+  }
 .t2{
-  font-size:sizem(58);
-margin-bottom: 1.5em;}
-.t4{
-  font-size:sizem(40);}
-.t5{
-  font-size:sizem(27);
+  font-size:sizem(12);
 margin-bottom: 1.5em;}
 
 }
