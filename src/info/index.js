@@ -23,7 +23,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-MTSV7QCR"], // 可放置多個
+    gtmCode: ["GTM-KTP354Z8"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -36,7 +36,7 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     // room_type: ["一房","兩房","三房","四房","其他"],
-    budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000~2500萬","2500~3000萬","3000~5000萬","5000萬以上"],
+    budget: ["2000以下","2000-2500","2500-3000","3000-3500","3500以上"],
 
     navList: [
         /*

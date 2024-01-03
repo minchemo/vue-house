@@ -243,8 +243,8 @@
     width: sizem(375);
     height: sizem(63);
     gap: sizem(1);
-    box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background:#EF8200;
+    box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
+    background:#c20010;
 
     .contact-item {
       height: 100%;      
