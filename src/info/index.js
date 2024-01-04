@@ -1,4 +1,4 @@
-const caseName = " "
+const caseName = "鋭揚北城新案"
 
 export default {
     meta: {
@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.739139123935!2d120.1852493!3d22.9966181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77584e24e507%3A0xa92f1e0817f0a8ce!2z5aaC6YKRMl_oh6rlhqDlu7roqK1f5Yud5YGV6ZuG5ZyY!5e0!3m2!1szh-TW!2stw!4v1697008525183!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/y5xEjE4vDDsfydrf6",
     phone: "07-585-6655",
-    fbLink: "https://www.facebook.com/",
-    fbMessage: "https://m.me/",
+    fbLink: "https://www.facebook.com/61554916575175/",
+    fbMessage: "https://m.me/61554916575175/",
     caseName: caseName,
     houseInfos: [
         /*
