@@ -1,8 +1,8 @@
 <template>
   <article class="s2" ref="s2">
   <div class="txttop">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">台日兩大頂尖建設集團</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="100">首度跨足三重演繹森活</h4>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">台日兩大頂尖集團</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="100">跨足三重演繹森活</h4>
   </div>
     <div class="main">
       <div class="txt">
