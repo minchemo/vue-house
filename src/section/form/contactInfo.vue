@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #EF8200;}
-.hover\:bg-color2:hover{background-color:#df6400;}
+.bg-color1{background-color: #00312E;}
+.hover\:bg-color2:hover{background-color:#002421;}
 
 
 .contact-info-img{
