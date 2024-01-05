@@ -4,7 +4,8 @@
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">台日兩大頂尖集團</h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="100">跨足三重演繹森活</h4>
   </div>
-    <div class="main">
+  <img src="./s2/group6.svg" alt="group6" class="main0" data-aos="fade-up" data-aos-delay="200" v-if="!$isMobile()">
+ <div class="main" v-else>
       <div class="txt">
     <img src="./s1/slogo1.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="0" />
     <h3 class="title" data-aos="fade-up" data-aos-delay="100">台灣首家上市建設品牌<span>(股票代號2501)</span></h3>
@@ -13,10 +14,11 @@
         <div class="subdesc" data-aos="fade-up" data-aos-delay="400">CATHAY REAL ESTATE</div>
       </div>
     </div>
+       <!-- 
     <div class="imgs" data-aos="fade-up" data-aos-delay="500">
       <div><img src="./s2/01.jpg" alt="圖說"><span class="caption">圖說</span></div>
       <div><img src="./s2/02.jpg" alt="圖說"><span class="caption">圖說</span></div>
-   <!--   <div class="arrows">
+     <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -24,8 +26,8 @@
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
-      </Splide> -->
-    </div>
+      </Splide>
+    </div> -->
   <div class="list1">
     <h3 class="title" data-aos="fade-up" data-aos-delay="600"><span>5</span>大事業體 跨足生活全方位</h3>
     <img src="./s2/img1.svg" data-aos="fade-up" data-aos-delay="700" alt="5大事業體" v-if="!$isMobile()">
@@ -36,6 +38,20 @@
     <img src="./s2/img2.svg" data-aos="fade-up" data-aos-delay="900" alt="4大保證" v-if="!$isMobile()">
     <img src="./s2/img2m.svg" data-aos="fade-up" data-aos-delay="900" alt="4大保證" v-else>
   </div>
+  <img src="./s2/list.svg" alt="list" class="main1" data-aos="fade-up" data-aos-delay="200" v-if="!$isMobile()">
+  <img src="./s2/listm.svg" alt="list" class="main1" data-aos="fade-up" data-aos-delay="200" v-else>
+  
+  <div class="slider" data-aos="fade-up" data-aos-delay="400">
+      <div class="arrows">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
+      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+      <span class="caption">{{ img.caption }}</span>
+        </SplideSlide>
+      </Splide>
+    </div>
   </article>
 </template>
 
@@ -48,7 +64,7 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:0 0 13em 0;
+  padding:0 0 0em 0;
   gap:6em;
   flex-wrap: wrap;
   background: url("./s2/bg.jpg");
@@ -64,6 +80,10 @@
   .title{font-weight: 700;}
   .subtitle{font-weight: 400;}
   }
+  .main0{
+  width:size(800);}
+  .main1{
+  width:size(1262);}
 
   .main {
     @apply flex;
@@ -124,27 +144,27 @@
 .list2{
   img{width:size(988);}
 }
-/*
   .slider {
     margin: 0;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: size(1920);
+      height: size(606);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+   // flex-basis: size(840);
+      height: size(606);
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      right:0;left:0;
+      top: -1.5em;bottom: auto;
+
+      justify-content:center;
     color: #C5C5C5; 
     li button.is-active{
       color: #C9A063;
     }
     }
   }
-  */
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -155,7 +175,7 @@
   .s2 {
   @apply flex-col;
     height: auto;
-    padding: 0 0 5em;
+    padding: 0 0 2em;
   font-size:sizem(13);
   flex-wrap:nowrap;
   margin-bottom:0em;
@@ -166,6 +186,8 @@
   margin: 2em auto 1em auto;
   font-size:sizem(30);
   }
+  .main1{
+  width:sizem(302);}
 
   .main {
     padding: 0 sizem(32.5);
@@ -200,9 +222,11 @@
 
 
 /*
+  */
   .slider {
     height: auto;
-    width: 100%;
+    width:sizem(311);
+    flex-basis: auto;
 
     .caption {
     font-size:sizem(12);  
@@ -213,11 +237,10 @@
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(297);
       
     }
   }
-  */
   }
 }
 </style>
@@ -240,39 +263,44 @@ const moved = (newIdx, prevIdx, destIdx) => {
 }
 
 const options = {
+  perPage:globals.$isMobile()? 1 : 3,
   rewind: false,
   arrows: false,
   pagination: true,
   autoplay: true,
   interval: 4000,
-  gap: 0,
-  type: 'loop'
+  gap: 8,
+  type: 'loop',
 }
 
 const imgs = [
   {
-    img:new URL("./s3/1.jpg", import.meta.url).href ,
-    caption: "台南市政府"
+    img:new URL("./s2/1.jpg", import.meta.url).href ,
+    caption: "國泰蒔美"
   },
   {
-    img:new URL("./s3/2.jpg", import.meta.url).href ,
-    caption: "新光三越"
+    img:new URL("./s2/2.jpg", import.meta.url).href ,
+    caption: "國泰雍萃"
   },
   {
-    img:new URL("./s3/3.jpg", import.meta.url).href ,
-    caption: "夏慕尼"
+    img:new URL("./s2/3.jpg", import.meta.url).href ,
+    caption: "國泰悠陽"
   },
   {
-    img:new URL("./s3/4.jpg", import.meta.url).href ,
-    caption: "燦坤"
+    img:new URL("./s2/4.jpg", import.meta.url).href ,
+    caption: "國泰悠境"
   },
   {
-    img:new URL("./s3/5.jpg", import.meta.url).href ,
-    caption: "家樂福-安平店"
+    img:new URL("./s2/5.jpg", import.meta.url).href ,
+    caption: "國泰豐格"
   },
   {
-    img:new URL("./s3/6.jpg", import.meta.url).href ,
-    caption: "碳佐麻里"
+    img:new URL("./s2/6.jpg", import.meta.url).href ,
+    caption: "國泰豐和"
+  },
+  {
+    img:new URL("./s2/7.jpg", import.meta.url).href ,
+    caption: "國泰豐碩"
   },
 ]
 </script>

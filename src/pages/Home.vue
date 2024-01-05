@@ -19,8 +19,11 @@
     <S1 />
    <S2 />
     <S3 />
-    <S4 />
-    <S5 />
+    <S4_1 />
+    <S4_4 />
+    <S5_1 />
+    <S5_2 />
+    <S5_3 />
     <S6 />
     <S7 />
    <!--   <S2v /> 
@@ -90,10 +93,11 @@ img {
   .caption{
       @apply absolute;
       right:1em;
-      bottom: .5em;
+      top: .5em;
       font-weight: 300;
       font-size: size(15);
       color: #FFF;
+      text-align: right;
       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
 
 
@@ -234,8 +238,11 @@ import info from "@/info"
 import S1 from "@/section/s1.vue"
  import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
-import S4 from "@/section/s4.vue"
-import S5 from "@/section/s5.vue"
+import S4_1 from "@/section/s4-1.vue"
+import S4_4 from "@/section/s4-4.vue"
+import S5_1 from "@/section/s5-1.vue"
+import S5_2 from "@/section/s5-2.vue"
+import S5_3 from "@/section/s5-3.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 /*

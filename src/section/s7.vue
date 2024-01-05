@@ -7,20 +7,21 @@
   <div class="txt">
     <h4 class="subtitle">台北車站六鐵共構特區</h4>
     <p class="desc">每天約逾50萬人次進出，台鐵、捷運、高鐵、機場捷運加上預辦登機直達機場，國際進出北市重要門戶要點。</p>
-    <div class="subdesc">CATHAY REAL ESTATE</div>
+   <!-- <div class="subdesc">CATHAY REAL ESTATE</div> --> 
   </div>
   <div class="img">
-  <img src="./s7/1.jpg" alt=""><span class="caption">圖說</span></div>
+  <img src="./s7/1.jpg" alt=""><span class="caption">台北車站</span></div>
 </div>
 <div class="list" data-aos="fade-up" data-aos-delay="400">
   <div class="txt">
     <h4 class="subtitle">C1D1台北雙子星</h4>
     <p class="desc">開發金額達606億台北雙子星大樓聯合開發案，規模超越101，以台灣第二高樓標識首都門戶意象，全球矚目。</p>
-    <div class="subdesc">CATHAY REAL ESTATE</div>
+   <!--  <div class="subdesc">CATHAY REAL ESTATE</div> --> 
   </div>
   <div class="img">
-  <img src="./s7/2.jpg" alt=""><span class="caption">圖說</span></div>
+  <img src="./s7/2.jpg" alt=""><span class="caption">台北雙子星3D示意圖<br v-if="$isMobile()"> （資料來源 臺北市政府捷運工程局）</span></div>
 </div>
+<!-- 
 <div class="list" data-aos="fade-up" data-aos-delay="600">
   <div class="txt">
     <h4 class="subtitle">台鐵E1E2明日台北埕</h4>
@@ -39,6 +40,7 @@
   <div class="img">
   <img src="./s7/4.jpg" alt=""><span class="caption">圖說</span></div>
 </div>
+--> 
 
   </article>
 </template>
@@ -69,14 +71,17 @@
     flex-basis: size(650);
   text-align: justify;
     align-items:center;
-  gap:2em;
+    flex-direction:column;
+  gap:1em;
 .txt {
   flex: 1;
+  text-align: center;
+  width: 73%;
   .subtitle{font-size: 1.5em;color: #719679;}
 }
 .img{position: relative;
   flex: 0;
-img{width: size(310);
+img{width: size(650);
   height:size(244);}
 }
 &:nth-child(4),
@@ -107,16 +112,19 @@ img{width: size(310);
 .txt {
   flex: 1;
   padding: 0 1.7em;
+  width: 95%;
   .subtitle{font-size: 1.3em;color: #719679;}
 }
 .img{position: relative;
   flex: 0;
-img{width: sizem(188);
-  height:sizem(183);}
+img{width: sizem(310);
+  height:sizem(169);}
 }
+/*
 &:nth-child(3),
 &:nth-child(5){flex-direction:row-reverse;}
 &:nth-child(4){flex-direction:row;}
+*/
 }
 
 
@@ -150,7 +158,7 @@ const options = {
   gap: 10,
   type: 'loop'
 }
-
+/*
 const imgs = [
   {
     img:new URL("./s3/1.jpg", import.meta.url).href ,
@@ -177,5 +185,6 @@ const imgs = [
     caption: "碳佐麻里"
   },
 ]
+*/
 </script>
 

@@ -2,14 +2,9 @@
   <article class="s5" ref="s5">
     <div class="main">
       <div class="txt">
-    <h3 class="title">
-      <div data-aos="fade-up" data-aos-delay="0"><span>16</span>座大安森林公園</div>
-      <div data-aos="fade-up" data-aos-delay="100" class="title2">廣達<span>424</span>公頃，全長<span>7.7</span>公里</div>
-      <div data-aos="fade-up" data-aos-delay="200" class="title3"><span>31</span>座溜滑梯、<span>100</span>多組遊樂設施</div>
-    </h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="300">在大台北都會公園，發現一座森林</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">大台北都會公園，相當於16座大安森林公園，紐約中央公園的1.25倍！ 7.7公里珍稀水景，規劃24公里環狀自行車步道、68座多功能運動場，結合音樂節、路跑、野餐、煙火盛事等各項藝文活動！</p>
-        <div class="subdesc" data-aos="fade-up" data-aos-delay="500">CATHAY REAL ESTATE</div>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北首座CITY LINK商場</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">時尚美食逛街購物 連結生活</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">三重首家大型百貨商場，結合主題餐廳、國際名品時尚，連結未來新北大都會公園的休閒綠帶和双捷運交通動能，未來生活更添豐采。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade-up" data-aos-delay="600">
@@ -36,7 +31,7 @@
   @apply relative flex items-center justify-center text-[#000];
   width: 100%;
   height:auto;
-  padding:6em 0 6em 0;
+  padding:6em 0 12em 0;
   font-size:size(16);
   gap:6em;
   flex-wrap: wrap;
@@ -59,23 +54,19 @@
     display: flex;
     flex-direction:column;
     align-items:flex-start;
-    line-height: 1.3;
-    span{font-size: 1.6em;letter-spacing: 0;margin-right: .05em;}
-    .title2{align-self:flex-end;}
-    .title3{
-      &::after{content: "";display: inline-block;width: 3em;height: 1em;}
-    }
+    line-height: 1.3;color: #11554B;
   }
+  .subtitle{color: #B5761D;}
 }
 
   .slider {
     margin: 0;
     flex-basis: size(720);
-      height: size(700);
+      height: size(440);
     .slide-item {
       @apply bg-cover;
     flex-basis: size(720);
-      height: size(700);
+      height: size(440);
       
     }
     .splide__pagination{
@@ -97,13 +88,13 @@
   .s5 {
   @apply flex-col;
     height: auto;
-    padding:sizem(60) 0 sizem(60) 0;
+    padding:sizem(60) 0 sizem(140) 0;
   font-size:sizem(13);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  gap:0em;
   background-size: sizem(360) auto;
-  background-position: 0 sizem(340);
+  background-position: 0 100%;
 
   .main {
     padding: 0 sizem(32.5);
@@ -111,7 +102,7 @@
   }
 
   .txt {
-    margin-bottom: 5.5em;
+    margin-bottom:0em;
   .title{
     span{font-size: 1.43em;}
   }
@@ -168,12 +159,20 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "圖說"
+    img:new URL("./s5/531.jpg", import.meta.url).href ,
+    caption: "CITY LINK情境示意"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "圖說"
+    img:new URL("./s5/532.jpg", import.meta.url).href ,
+    caption: "CITY LINK情境示意"
+  },
+  {
+    img:new URL("./s5/533.jpg", import.meta.url).href ,
+    caption: "CITY LINK情境示意"
+  },
+  {
+    img:new URL("./s5/534.jpg", import.meta.url).href ,
+    caption: "CITY LINK情境示意"
   },
 ]
 </script>

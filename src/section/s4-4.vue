@@ -1,19 +1,10 @@
 
 
 <template>
-  <article class="s6">
-  <div class="txt">
-  </div>
-    <div class="main">
-      <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">一橋之隔台北雙子星<br>
-世界國門一線直通未來家門</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="100">一座橋，串起繁華與綠意，前擁新北大都會公園壯闊綠海，往前一步直達雙子星西區國門特區，十分鐘到達全國政經、商貿、交通，最中樞位置，開展下一個盛世繁華。</p>
-   <!--  <div class="subdesc" data-aos="fade-up" data-aos-delay="200">CATHAY REAL ESTATE</div> -->
-      </div>
-    </div>
-    <div class="slider" data-aos="fade-up" data-aos-delay="300">
-      <div class="arrows" v-if="imgs.length > 1">
+  <article class="s4-4">
+  <img src="./s4/group3.jpg" alt="group3" class="group3" data-aos="fade-up" data-aos-delay="600" v-if="!$isMobile()">
+    <div class="slider" data-aos="fade-up" data-aos-delay="300" v-else>
+      <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -23,46 +14,33 @@
         </SplideSlide>
       </Splide>
     </div>
+
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s6 {
+.s4-4 {
   @apply relative overflow-hidden flex items-center justify-center text-[#000];
   width: 100%;
   height:auto;
-  padding:2.5em 0 0 0;
+  padding:0 0 0 0;
   font-size:size(18);
-  gap:6em;
+  gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
 
-
-
-  .main {
-    @apply flex;
-    margin: 0;
-    flex-basis: size(530);
-  flex-direction: column;
-  text-align: justify;
-}
-
-.txt {
-  .subtitle{
-    font-weight: 300;
-    margin:  0.2em 0 0em;}
-  .title{margin: 0 0 0em;color: #719579;}
-}
+  .group3{
+  width:100%;}
   .slider {
     margin: 0;
-    flex-basis: size(760);
-      height: size(470);
+    flex-basis: size(730);
+      height: size(400);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(760);
-      height: size(470);
+    flex-basis: size(730);
+      height: size(400);
       
     }
     .splide__pagination{
@@ -81,25 +59,17 @@
 
 @media screen and (max-width: 767px) {
 
-  .s6 {
+  .s4-4 {
   @apply flex-col;
     height: auto;
-    padding:2em 0 0 0;
+    padding:0 0 3em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:0em;
+  .group3{
+  width:100%;}
 
-  .main {
-    padding: 0 sizem(30);
-    width: 100%;
-}
-.txt {
-  margin: 0em auto 2em auto;
-  .title{
-    margin: 0 0 1em;
-  }
-}
 
   .slider {
     height: auto;
@@ -114,7 +84,7 @@
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(195);
+      height: sizem(168);
       
     }
   }
@@ -138,23 +108,31 @@ const currentSlideIndex = ref(0);
 const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
-const imgs = [
-  {
-    img:new URL("./s6/1.jpg", import.meta.url).href ,
-    caption: "一橋之隔台北雙子星"
-  },
-]
 
 const options = {
   rewind: false,
   arrows: false,
   pagination: false,
-  autoplay: imgs.length > 1,
+  autoplay: true,
   interval: 4000,
-  gap: 0,
- // type: 'loop'
+  gap: 10,
+  type: 'loop'
 }
 
+const imgs = [
+  {
+    img:new URL("./s4/441.jpg", import.meta.url).href ,
+    caption: "TOKYO DOME CITY 東京巨蛋城"
+  },
+  {
+    img:new URL("./s4/442.jpg", import.meta.url).href ,
+    caption: "Halekulani 沖繩"
+  },
+  {
+    img:new URL("./s4/443.jpg", import.meta.url).href ,
+    caption: "東京中城日比谷(中庭)"
+  },
+]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

@@ -1,14 +1,18 @@
 <template>
-  <article class="s3" ref="s3">
+  <article class="s5-1" ref="s5">
     <div class="main">
       <div class="txt">
-    <img src="./s3/slogo2.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="0" />
-    <h3 class="title" data-aos="fade-up" data-aos-delay="100">日本不動產知名品牌 締造城市未來</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="200">日本三井不動產自1941年獨立於三井合名公司不動產部門，歷經80多年來以創新思維佈局全球不動產領域，包括商業設施、飯店、複合商辦大樓、高優質住宅等事業版圖；致力創造城市進化與價值，啟動新時代的夢想與感動。</p>
-        <div class="subdesc" data-aos="fade-up" data-aos-delay="300">Mistui Fudosan Group</div>
+    <h3 class="title">
+      <div data-aos="fade-up" data-aos-delay="0">約<span>16</span>座大安森林公園</div>
+      <div data-aos="fade-up" data-aos-delay="100" class="title2">廣達<span>424</span>公頃，全長<span>7.7</span>公里</div>
+      <div data-aos="fade-up" data-aos-delay="200" class="title3"><span>31</span>座溜滑梯、<span>100</span>多組遊樂設施</div>
+    </h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="300">在新北大都會公園，發現一座森林</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">新北大都會公園，相當於16座大安森林公園，紐約中央公園的1.25倍！ 7.7公里珍稀水景，規劃24公里環狀自行車步道、68座多功能運動場，結合音樂節、路跑、野餐、煙火盛事等各項藝文活動！</p>
+        <div class="subdesc" data-aos="fade-up" data-aos-delay="500">（資料來源 新北市政府施政成果網）</div>
       </div>
     </div>
-    <div class="slider" data-aos="fade-up" data-aos-delay="400">
+    <div class="slider" data-aos="fade-up" data-aos-delay="600">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -28,7 +32,7 @@
 
 
 
-.s3 {
+.s5-1 {
   @apply relative flex items-center justify-center text-[#000];
   width: 100%;
   height:auto;
@@ -36,11 +40,13 @@
   font-size:size(16);
   gap:6em;
   flex-wrap: wrap;
+  background:#CAE1D2;
+  background-size: size(874) auto;
 
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(470);
+    flex-basis: size(500);
   flex-direction: column;
   text-align: justify;
 }
@@ -49,21 +55,27 @@
 .txt {
   .slogo{height:size(45);}
   .title{
-    margin: .9em 0 0.3em;color: #9A6A28;
-  }
-  .desc{
-    margin: 0 0 2.4em;
+    margin: 0 0 .4em;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    line-height: 1.3;color: #11554B;
+    span{font-size: 1.6em;letter-spacing: 0;margin-right: .05em;color: #B5761D;}
+    .title2{align-self:flex-end;}
+    .title3{
+      &::after{content: "";display: inline-block;width: 3em;height: 1em;}
+    }
   }
 }
 
   .slider {
     margin: 0;
-    flex-basis: size(730);
-      height: size(490);
+    flex-basis: size(720);
+      height: size(440);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(730);
-      height: size(490);
+    flex-basis: size(720);
+      height: size(440);
       
     }
     .splide__pagination{
@@ -82,14 +94,16 @@
 
 @media screen and (max-width: 767px) {
 
-  .s3 {
+  .s5-1 {
   @apply flex-col;
     height: auto;
-    padding:sizem(60) 0 0 0;
+    padding:sizem(60) 0 sizem(40) 0;
   font-size:sizem(13);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  gap:0em;
+  background-size: sizem(360) auto;
+  background-position: 0 sizem(340);
 
   .main {
     padding: 0 sizem(32.5);
@@ -97,7 +111,10 @@
   }
 
   .txt {
-    .slogo{height:sizem(29);}
+    margin-bottom:1.5em;
+  .title{
+    span{font-size: 1.43em;}
+  }
   }
 
 
@@ -106,9 +123,9 @@
     width: sizem(310);
 
     .caption {
-    font-size:sizem(7);  
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5);text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -151,12 +168,20 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.png", import.meta.url).href ,
-    caption: "和苑三井花園飯店 台北忠孝"
+    img:new URL("./s5/511.jpg", import.meta.url).href ,
+    caption: "新北大都會公園"
   },
   {
-    img:new URL("./s3/2.png", import.meta.url).href ,
-    caption: "東京中城日比谷"
+    img:new URL("./s5/512.jpg", import.meta.url).href ,
+    caption: "新北大都會公園"
+  },
+  {
+    img:new URL("./s5/513.jpg", import.meta.url).href ,
+    caption: "新北大都會公園"
+  },
+  {
+    img:new URL("./s5/514.jpg", import.meta.url).href ,
+    caption: "新北大都會公園熊猴森樂園"
   },
 ]
 </script>
