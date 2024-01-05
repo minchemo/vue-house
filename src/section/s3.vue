@@ -151,11 +151,11 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.png", import.meta.url).href ,
+    img:new URL("./s3/1.webp", import.meta.url).href ,
     caption: "和苑三井花園飯店 台北忠孝"
   },
   {
-    img:new URL("./s3/2.png", import.meta.url).href ,
+    img:new URL("./s3/2.webp", import.meta.url).href ,
     caption: "東京中城日比谷"
   },
 ]
