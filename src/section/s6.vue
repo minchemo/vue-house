@@ -35,7 +35,7 @@
   height:auto;
   padding:2.5em 0 0 0;
   font-size:size(18);
-  gap:6em;
+  gap:4em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
 
@@ -57,12 +57,11 @@
 }
   .slider {
     margin: 0;
-    flex-basis: size(760);
-      height: size(470);
+    flex-basis: size(823);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(760);
-      height: size(470);
+    flex-basis: 100%;
+      height: size(506);
       
     }
     .splide__pagination{

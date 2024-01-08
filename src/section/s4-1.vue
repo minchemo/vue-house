@@ -15,14 +15,12 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
+          <img :src="img.img" :alt="img.caption">
           <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
-  <img src="./s4/group1.webp" alt="group1" class="group1" data-aos="fade-up" data-aos-delay="400" v-if="!$isMobile()">
-  <img src="./s4/group1m.webp" alt="group1m" class="group1" data-aos="fade-up" data-aos-delay="400" v-else>
-
   </article>
 </template>
 
@@ -38,28 +36,11 @@
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-
-  .group1{
-  width:size(1341);
-  margin: 2em auto 5em;
-}
-  .group2{
-  width:size(1341);
-  margin: 0em auto 5em;}
-  .group3{
-  width:100%;}
-  .main {
-    @apply flex;
-    margin: 0;
-    flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
-}
-
 .txt {
   text-align: center;
+    font-weight: 400;
   .subtitle{
-    font-weight: 300;
+    font-weight: 400;
     margin:  0.2em 0 0em;}
   .title{margin: 0 0 0em; color: #9A6A28;}
 }
@@ -97,22 +78,13 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .group1{
-  width:sizem(310);
-  margin: 2em auto 5em;
-}
-  .group2{
-  width:sizem(310);
-  margin: 0em auto 5em;}
-  .group3{
-  width:100%;}
 
   .main {
     padding: 0 sizem(30);
     width: 100%;
 }
 .txt {
-  margin: 0em auto 2em auto;
+  margin: 5em auto 2em auto;
 }
 
   .slider {

@@ -2,43 +2,43 @@
 
 <template>
   <article class="s4-3">
-  <img src="./s4/group2.webp" alt="group2" class="group2" v-if="!$isMobile()">
-  <img src="./s4/group2m.webp" alt="group2" class="group2" v-else>
   <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">佈局商場住宅地產，深耕台灣</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="300">「在台灣美好土地上深耕」超過半世紀的國泰建設，一如大樹的永續與向下扎根的踏實精神，不僅是國內最受信賴的建設品牌，更是持續帶領台灣建築邁向每一個更美好的未來。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="300">在台灣以林口及台中港OUTLET為集團事業起點，以豐富多元的購物體驗受到台灣消費者青睞，更致力呈現居住、工作、享受<br v-if="!$isMobile()"><span v-else>，</span>
+創造全新生活空間，投入住宅開發案，引領未來建築生活新風貌。</p>
   </div>
 
   <div class="lists">
     <div class="list">
       <h4 data-aos="fade-up" data-aos-delay="0">商業設施</h4>
       <ul>
-        <li data-aos="fade-up" data-aos-delay="200">2016  MITSUI OUTLET PARK 林口</li>
-        <li data-aos="fade-up" data-aos-delay="200">2018  MITSUI OUTLET PARK 台中港</li>
-        <li data-aos="fade-up" data-aos-delay="200">2021  MITSUI OUTLET PARK 台中港 二期</li>
-        <li data-aos="fade-up" data-aos-delay="200">2022  MITSUI OUTLET PARK 台南</li>
-        <li data-aos="fade-up" data-aos-delay="200">2023  Mitsui Shopping Park Lalaport台中</li>
-        <li data-aos="fade-up" data-aos-delay="200">2024  Mitsui Shopping Park Lalaport南港(暫稱／預定)</li>
-        <li data-aos="fade-up" data-aos-delay="200">2024  「林口媒體園區」複合式商業設施</li>
-        <li data-aos="fade-up" data-aos-delay="200">2025  MITSUI OUTLET PARK 台南 二期(預定)</li>
-        <li data-aos="fade-up" data-aos-delay="200">2026  Mitsui Shopping Park LaLaport高雄(暫稱／預定)</li>
-        <li data-aos="fade-up" data-aos-delay="200"></li>
+        <li data-aos="fade-up" data-aos-delay="0"><span>2016</span>  MITSUI OUTLET PARK 林口</li>
+        <li data-aos="fade-up" data-aos-delay="100"><span>2018</span>  MITSUI OUTLET PARK 台中港</li>
+        <li data-aos="fade-up" data-aos-delay="200"><span>2021</span>  MITSUI OUTLET PARK 台中港 二期</li>
+        <li data-aos="fade-up" data-aos-delay="300"><span>2022</span>  MITSUI OUTLET PARK 台南</li>
+        <li data-aos="fade-up" data-aos-delay="400"><span>2023</span>  Mitsui Shopping Park Lalaport台中</li>
+        <li data-aos="fade-up" data-aos-delay="500"><span>2024</span>  Mitsui Shopping Park Lalaport南港(暫稱／預定)</li>
+        <li data-aos="fade-up" data-aos-delay="600"><span>2024</span>  「林口媒體園區」複合式商業設施</li>
+        <li data-aos="fade-up" data-aos-delay="700"><span>2025</span>  MITSUI OUTLET PARK 台南 二期(預定)</li>
+        <li data-aos="fade-up" data-aos-delay="800"><span>2026</span>  Mitsui Shopping Park LaLaport高雄(暫稱／預定)</li>
       </ul>
     </div>
+    <div class="listr">
     <div class="list">
       <h4 data-aos="fade-up" data-aos-delay="0">飯店觀光</h4>
       <ul>
-        <li data-aos="fade-up" data-aos-delay="200">2020  和苑三井花園飯店 台北忠孝</li>
-        <li data-aos="fade-up" data-aos-delay="200">2026  和苑三井花園飯店 敦化北路(預定)</li>
+        <li data-aos="fade-up" data-aos-delay="0"><span>2020</span>  和苑三井花園飯店 台北忠孝</li>
+        <li data-aos="fade-up" data-aos-delay="100"><span>2026</span>  和苑三井花園飯店 敦化北路(預定)</li>
       </ul>
     </div>
     <div class="list">
       <h4 data-aos="fade-up" data-aos-delay="0">住宅建築</h4>
       <ul>
-        <li data-aos="fade-up" data-aos-delay="200">2021  三松M PARK</li>
-        <li data-aos="fade-up" data-aos-delay="200">2025  UNi PARK(預定)</li>
-        <li data-aos="fade-up" data-aos-delay="200">2026  三松Jade PARK(預定)</li>
+        <li data-aos="fade-up" data-aos-delay="0"><span>2021</span>  三松M PARK</li>
+        <li data-aos="fade-up" data-aos-delay="100"><span>2025</span>  UNi PARK(預定)</li>
+        <li data-aos="fade-up" data-aos-delay="200"><span>2026</span>  三松Jade PARK(預定)</li>
       </ul>
+    </div>
     </div>
   </div>
 
@@ -49,39 +49,33 @@
 @import '@/assets/style/function.scss';
 
 .s4-3 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#000];
+  @apply relative overflow-hidden flex items-center;
   width: 100%;
   height:auto;
-  padding:0 0 0 0;
+  padding:0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-
-  .group2{
-  width:size(1341);
-  margin: 0em auto 5em;position: absolute;top:size(0);opacity: .5;}
-  .group20{
-  width:size(1341);
-  margin: 0em auto 5em;}
+  flex-direction:column;
 .txt {
-  text-align: center;
-  .subtitle{
-    font-weight: 300;
-    margin:  0.2em 0 0em;}
+  text-align: center;font-weight: 400;
   .title{font-size: 2.65em;
-    font-weight: 300;margin: 0 0 0em; color: #9A6A28;}
+    font-weight: 300;margin: 0; color: #9A6A28;}
 }
 
 .lists{
-  width: 100%;
-  font-size:size(17);
-  font-weight: 300;
-  display: flex;gap: size(255);
-  h4{font-size: 1.85em;font-weight: 700;margin-bottom:size(17);}
-  ul{border-left: 1px solid #EED69A;
-  padding: 0 0 0 1.5em;gap: size(6);
+  font-size:size(20);
+  font-weight: 400;
+  display: flex;gap: size(315);
+  margin-bottom:size(120);
+  .list{ display: flex;}
+  .listr{ display: flex;gap: size(50);flex-direction:column;
+    .list:last-child{flex: 1;}
+  }
+  h4{font-size: 1.3em;font-weight: 500;margin-right:size(5);width: 1em;line-height: 1.1;color: #9A6A28;}
+  ul{border-left: 1px solid #000;
+  padding: 0 0 0 1.5em;gap: size(13);
   display: flex;flex-direction:column;line-height: 1.4;letter-spacing: 0.06em;
+  span{font-weight: 700;letter-spacing: 0;}
   }
 }
 }
@@ -93,28 +87,27 @@
 
   .s4-3 {
   @apply flex-col;
-    height: auto;
-    padding:0 0 5em 0;
+    padding:0 0 4em 0;
   font-size:sizem(12);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:2em;
-  .group2{
+  gap:0;
+.txt {
   width:sizem(310);
-  margin: 0em auto 5em;}
-  .group20{
-  width:sizem(310);
-  margin: 0em auto 5em;}
-.list3{
-  font-size:sizem(12);
-  width:sizem(310);margin-bottom:sizem(30);
+  font-size:sizem(13);line-height: 1.9;
+  margin:0 auto sizem(18);
+  .title{font-size: 1.55em;margin-bottom:sizem(4);}
+}
+.lists{
+  font-size:sizem(10);
+ // width:sizem(310);
+ margin-bottom:sizem(0);
   gap:0;flex-direction:column;
-  .list{margin-bottom:sizem(65);
+  .list{margin-bottom:sizem(38);
   &:last-child{margin-bottom:0;}}
-  h4{font-size: 1.75em;margin-bottom:sizem(7);}
-  ul{gap:0;
+  h4{font-size: 1.75em;margin-right:sizem(5);}
+  ul{gap:0; padding: 0 0 0 1em;letter-spacing: 0.04em;
+  span{margin-right: .3em;}
   }
-  li{margin-bottom:sizem(12);
+  li{margin-bottom:sizem(16);
   &:last-child{margin-bottom:0;}
   }
 }

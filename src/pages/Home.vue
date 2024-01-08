@@ -20,6 +20,7 @@
    <S2 />
     <S3 />
     <S4_1 />
+    <S4_2 />
     <S4_3 />
     <S4_4 />
     <S5_1 />
@@ -159,6 +160,9 @@ img {
       @apply cursor-pointer hover:opacity-50;
     }
   }
+    .slide-item {
+      img{width: 100%;height: 100%;object-fit: cover;}
+    }
   .splide__pagination {
     @apply absolute flex justify-center w-full;
     bottom: 0;
@@ -240,6 +244,7 @@ import S1 from "@/section/s1.vue"
  import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4_1 from "@/section/s4-1.vue"
+import S4_2 from "@/section/s4-2.vue"
 import S4_3 from "@/section/s4-3.vue"
 import S4_4 from "@/section/s4-4.vue"
 import S5_1 from "@/section/s5-1.vue"

@@ -83,8 +83,9 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="img in imgs">
+          <img :src="img.img" :alt="img.caption">
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -114,7 +115,7 @@
   letter-spacing: 0.07em;
   margin: 4em auto 0 auto;
   .title{font-weight: 700;}
-  .subtitle{font-weight: 400;}
+  .subtitle{font-weight: 300;}
   }
   .main1{
   width:size(1262);position: absolute;top:size(1565);opacity: .5;}
@@ -209,9 +210,7 @@
       height: size(606);
     .slide-item {
       @apply bg-cover;
-   // flex-basis: size(840);
-      height: size(606);
-      
+      height: size(606);      
     }
     .splide__pagination{
       right:0;left:0;
@@ -344,6 +343,8 @@ const options = {
   interval: 4000,
   gap: 8,
   type: 'loop',
+  focus: 'center',
+  isNavigation: true, 
 }
 
 const imgs = [
