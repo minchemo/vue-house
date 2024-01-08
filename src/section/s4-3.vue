@@ -1,33 +1,46 @@
 
 
 <template>
-  <article class="s4">
+  <article class="s4-3">
+  <img src="./s4/group2.webp" alt="group2" class="group2" v-if="!$isMobile()">
+  <img src="./s4/group2m.webp" alt="group2" class="group2" v-else>
   <div class="txt">
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">佈局商場住宅地產，深耕台灣</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="300">「在台灣美好土地上深耕」超過半世紀的國泰建設，一如大樹的永續與向下扎根的踏實精神，不僅是國內最受信賴的建設品牌，更是持續帶領台灣建築邁向每一個更美好的未來。</p>
   </div>
-    <div class="main">
-      <div class="txt">
-    <div class="subdesc" data-aos="fade-up" data-aos-delay="0">Mistui Fudosan Group</div>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="100">商業、飯店、住宅<br>三大範疇</h4>
-    <h3 class="title" data-aos="fade-up" data-aos-delay="200">跨足台灣 移植日本元素</h3>
-      </div>
+
+  <div class="lists">
+    <div class="list">
+      <h4 data-aos="fade-up" data-aos-delay="0">商業設施</h4>
+      <ul>
+        <li data-aos="fade-up" data-aos-delay="200">2016  MITSUI OUTLET PARK 林口</li>
+        <li data-aos="fade-up" data-aos-delay="200">2018  MITSUI OUTLET PARK 台中港</li>
+        <li data-aos="fade-up" data-aos-delay="200">2021  MITSUI OUTLET PARK 台中港 二期</li>
+        <li data-aos="fade-up" data-aos-delay="200">2022  MITSUI OUTLET PARK 台南</li>
+        <li data-aos="fade-up" data-aos-delay="200">2023  Mitsui Shopping Park Lalaport台中</li>
+        <li data-aos="fade-up" data-aos-delay="200">2024  Mitsui Shopping Park Lalaport南港(暫稱／預定)</li>
+        <li data-aos="fade-up" data-aos-delay="200">2024  「林口媒體園區」複合式商業設施</li>
+        <li data-aos="fade-up" data-aos-delay="200">2025  MITSUI OUTLET PARK 台南 二期(預定)</li>
+        <li data-aos="fade-up" data-aos-delay="200">2026  Mitsui Shopping Park LaLaport高雄(暫稱／預定)</li>
+        <li data-aos="fade-up" data-aos-delay="200"></li>
+      </ul>
     </div>
-    <div class="slider" data-aos="fade-up" data-aos-delay="300">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
+    <div class="list">
+      <h4 data-aos="fade-up" data-aos-delay="0">飯店觀光</h4>
+      <ul>
+        <li data-aos="fade-up" data-aos-delay="200">2020  和苑三井花園飯店 台北忠孝</li>
+        <li data-aos="fade-up" data-aos-delay="200">2026  和苑三井花園飯店 敦化北路(預定)</li>
+      </ul>
     </div>
-  <img src="./s4/group1.png" alt="group1" class="group1" data-aos="fade-up" data-aos-delay="400" v-if="!$isMobile()">
-  <img src="./s4/group1m.png" alt="group1m" class="group1" data-aos="fade-up" data-aos-delay="400" v-else>
-  <img src="./s4/group2.png" alt="group2" class="group2" data-aos="fade-up" data-aos-delay="500" v-if="!$isMobile()">
-  <img src="./s4/group2m.png" alt="group2" class="group2" data-aos="fade-up" data-aos-delay="500" v-else>
-  <img src="./s4/group3.jpg" alt="group3" class="group3" data-aos="fade-up" data-aos-delay="600" v-if="!$isMobile()">
-  <img src="./s4/group3m.jpg" alt="group3" class="group3" data-aos="fade-up" data-aos-delay="600" v-else>
+    <div class="list">
+      <h4 data-aos="fade-up" data-aos-delay="0">住宅建築</h4>
+      <ul>
+        <li data-aos="fade-up" data-aos-delay="200">2021  三松M PARK</li>
+        <li data-aos="fade-up" data-aos-delay="200">2025  UNi PARK(預定)</li>
+        <li data-aos="fade-up" data-aos-delay="200">2026  三松Jade PARK(預定)</li>
+      </ul>
+    </div>
+  </div>
 
   </article>
 </template>
@@ -35,7 +48,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s4 {
+.s4-3 {
   @apply relative overflow-hidden flex items-center justify-center text-[#000];
   width: 100%;
   height:auto;
@@ -45,49 +58,32 @@
   flex-direction: row-reverse;
   flex-wrap: wrap;
 
-  .group1{
-  width:size(1341);
-  margin: 2em auto 5em;
-}
   .group2{
   width:size(1341);
+  margin: 0em auto 5em;position: absolute;top:size(0);opacity: .5;}
+  .group20{
+  width:size(1341);
   margin: 0em auto 5em;}
-  .group3{
-  width:100%;}
-  .main {
-    @apply flex;
-    margin: 0;
-    flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
-}
-
 .txt {
   text-align: center;
   .subtitle{
     font-weight: 300;
     margin:  0.2em 0 0em;}
-  .title{margin: 0 0 0em; color: #9A6A28;}
+  .title{font-size: 2.65em;
+    font-weight: 300;margin: 0 0 0em; color: #9A6A28;}
 }
-  .slider {
-    margin: 0;
-    flex-basis: size(730);
-      height: size(400);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: size(730);
-      height: size(400);
-      
-    }
-    .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #B78E63;
-    }
-    }
+
+.lists{
+  width: 100%;
+  font-size:size(17);
+  font-weight: 300;
+  display: flex;gap: size(255);
+  h4{font-size: 1.85em;font-weight: 700;margin-bottom:size(17);}
+  ul{border-left: 1px solid #EED69A;
+  padding: 0 0 0 1.5em;gap: size(6);
+  display: flex;flex-direction:column;line-height: 1.4;letter-spacing: 0.06em;
   }
+}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -95,7 +91,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s4 {
+  .s4-3 {
   @apply flex-col;
     height: auto;
     padding:0 0 5em 0;
@@ -103,41 +99,26 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .group1{
-  width:sizem(310);
-  margin: 2em auto 5em;
-}
   .group2{
   width:sizem(310);
   margin: 0em auto 5em;}
-  .group3{
-  width:100%;}
-
-  .main {
-    padding: 0 sizem(30);
-    width: 100%;
-}
-.txt {
-  margin: 0em auto 2em auto;
-}
-
-  .slider {
-    height: auto;
-    width: sizem(310);
-
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(168);
-      
-    }
+  .group20{
+  width:sizem(310);
+  margin: 0em auto 5em;}
+.list3{
+  font-size:sizem(12);
+  width:sizem(310);margin-bottom:sizem(30);
+  gap:0;flex-direction:column;
+  .list{margin-bottom:sizem(65);
+  &:last-child{margin-bottom:0;}}
+  h4{font-size: 1.75em;margin-bottom:sizem(7);}
+  ul{gap:0;
   }
+  li{margin-bottom:sizem(12);
+  &:last-child{margin-bottom:0;}
+  }
+}
+
   }
 }
 </style>

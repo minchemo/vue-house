@@ -20,6 +20,7 @@
    <S2 />
     <S3 />
     <S4_1 />
+    <S4_3 />
     <S4_4 />
     <S5_1 />
     <S5_2 />
@@ -103,7 +104,7 @@ img {
 
       .txt {
     position: relative;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 0.05em;
     line-height: 1.7;
     width: 100%;    
@@ -239,6 +240,7 @@ import S1 from "@/section/s1.vue"
  import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4_1 from "@/section/s4-1.vue"
+import S4_3 from "@/section/s4-3.vue"
 import S4_4 from "@/section/s4-4.vue"
 import S5_1 from "@/section/s5-1.vue"
 import S5_2 from "@/section/s5-2.vue"

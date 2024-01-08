@@ -2,8 +2,6 @@
 
 <template>
   <article class="s4-1">
-  <div class="txt">
-  </div>
     <div class="main">
       <div class="txt">
     <div class="subdesc" data-aos="fade-up" data-aos-delay="0">Mistui Fudosan Group</div>
@@ -24,8 +22,6 @@
     </div>
   <img src="./s4/group1.webp" alt="group1" class="group1" data-aos="fade-up" data-aos-delay="400" v-if="!$isMobile()">
   <img src="./s4/group1m.webp" alt="group1m" class="group1" data-aos="fade-up" data-aos-delay="400" v-else>
-  <img src="./s4/group2.webp" alt="group2" class="group2" data-aos="fade-up" data-aos-delay="500" v-if="!$isMobile()">
-  <img src="./s4/group2m.webp" alt="group2" class="group2" data-aos="fade-up" data-aos-delay="500" v-else>
 
   </article>
 </template>

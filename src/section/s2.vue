@@ -4,8 +4,7 @@
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">台日兩大頂尖集團</h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="100">跨足三重演繹森活</h4>
   </div>
-  <img src="./s2/group6.svg" alt="group6" class="main0" data-aos="fade-up" data-aos-delay="200" v-if="!$isMobile()">
- <div class="main" v-else>
+ <div class="main">
       <div class="txt">
     <img src="./s1/slogo1.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="0" />
     <h3 class="title" data-aos="fade-up" data-aos-delay="100">台灣首家上市建設品牌<span>(股票代號2501)</span></h3>
@@ -29,18 +28,55 @@
       </Splide>
     </div> -->
   <div class="list1">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="600"><span>5</span>大事業體 跨足生活全方位</h3>
-    <img src="./s2/img1.svg" data-aos="fade-up" data-aos-delay="700" alt="5大事業體" v-if="!$isMobile()">
-    <img src="./s2/img1m.svg" data-aos="fade-up" data-aos-delay="700" alt="5大事業體" v-else>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span>5</span>大事業體 跨足生活全方位</h3>
+    <img src="./s2/img1.svg" data-aos="fade-up" data-aos-delay="200" alt="5大事業體" v-if="!$isMobile()">
+    <img src="./s2/img1m.svg" data-aos="fade-up" data-aos-delay="200" alt="5大事業體" v-else>
   </div>
   <div class="list2">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="800"><span>4</span>大保證</h3>
-    <img src="./s2/img2.svg" data-aos="fade-up" data-aos-delay="900" alt="4大保證" v-if="!$isMobile()">
-    <img src="./s2/img2m.svg" data-aos="fade-up" data-aos-delay="900" alt="4大保證" v-else>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span>4</span>大保證</h3>
+    <img src="./s2/img2.svg" data-aos="fade-up" data-aos-delay="200" alt="4大保證" v-if="!$isMobile()">
+    <img src="./s2/img2m.svg" data-aos="fade-up" data-aos-delay="200" alt="4大保證" v-else>
   </div>
-  <img src="./s2/list.svg" alt="list" class="main1" data-aos="fade-up" data-aos-delay="200" v-if="!$isMobile()">
-  <img src="./s2/listm.svg" alt="list" class="main1" data-aos="fade-up" data-aos-delay="200" v-else>
-  
+  <div class="list3">
+    <div class="list">
+      <h4 data-aos="fade-up" data-aos-delay="0">永續傳承 大樹基因</h4>
+      <ul>
+        <li data-aos="fade-up" data-aos-delay="200">2023  讀者文摘 房地產開發商類金獎</li>
+        <li data-aos="fade-up" data-aos-delay="300">2022  台灣企業永續獎-報告類-不動產及營造業白金獎·讀者文摘-房地產開發商類金獎</li>
+        <li data-aos="fade-up" data-aos-delay="400">2021  台灣企業永續獎-報告類-不動產及營造業白金獎·讀者文摘-房地產開發商類金獎</li>
+        <li data-aos="fade-up" data-aos-delay="500">2020  讀者文摘-房地產開發商類金獎·台灣企業永續獎永續報告類銅獎</li>
+        <li data-aos="fade-up" data-aos-delay="600">2019  台灣企業永續獎 報告類金獎暨單項創新成長獎·讀者文摘-房地產開發商類金獎</li>
+        <li data-aos="fade-up" data-aos-delay="700">2018  台灣企業永續獎-報告類TOP50白金獎·讀者文摘-房地產開發商類金獎</li>
+        <li data-aos="fade-up" data-aos-delay="800">2017  台灣企業永續獎-報告類TOP50白金獎</li>
+        <li data-aos="fade-up" data-aos-delay="900">2015  管理雜誌-台灣全區消費者心目中建設公司理想品牌調查排行榜第三名</li>
+        <li data-aos="fade-up" data-aos-delay="1000">2014  國家卓越建設獎·經營繢效傑出企業獎</li>
+        <li data-aos="fade-up" data-aos-delay="1100">2007  讀者文摘「信譽品牌」消費者評選最可信賴優質建設公司-金獎</li>
+        <li data-aos="fade-up" data-aos-delay="1200">2006  讀者文摘「非常品牌」消費者評選最優質建設公司-白金獎 </li>
+      </ul>
+    </div>
+    <div class="list">
+      <h4 data-aos="fade-up" data-aos-delay="0">棟棟經典 口碑見證</h4>
+      <ul>
+        <li data-aos="fade-up" data-aos-delay="100">2023 國泰民樂 新北市 永和區</li>
+        <li data-aos="fade-up" data-aos-delay="200">2022 國泰雍萃 台北市 北投區</li>
+        <li data-aos="fade-up" data-aos-delay="300">2022 國泰蒔美 台北市 內湖區</li>
+        <li data-aos="fade-up" data-aos-delay="400">2021 國泰悠境 台北市 南港區</li>
+        <li data-aos="fade-up" data-aos-delay="500">2021 國泰悠陽 台北市 南港區</li>
+        <li data-aos="fade-up" data-aos-delay="600">2021 國泰和河 新北市 三重區</li>
+        <li data-aos="fade-up" data-aos-delay="700">2020 國泰豐碩 新北市 新店區</li>
+        <li data-aos="fade-up" data-aos-delay="800">2019 國泰上城 新北市 土城區</li>
+        <li data-aos="fade-up" data-aos-delay="900">2019 國泰田 新北市 板橋區</li>
+        <li data-aos="fade-up" data-aos-delay="1000">2019 國泰豐和 新北市 新店區</li>
+        <li data-aos="fade-up" data-aos-delay="1100">2019 國泰華威豐年 台北市 北投區</li>
+        <li data-aos="fade-up" data-aos-delay="1200">2018 國泰朋 新北市 板橋區</li>
+        <li data-aos="fade-up" data-aos-delay="1300">2018 國泰豐格 新北市 新店區</li>
+        <li data-aos="fade-up" data-aos-delay="1400">2018 國泰悅 新北市 三重區</li>
+        <li data-aos="fade-up" data-aos-delay="1500">2017 國泰昕春 台北市 文山區</li>
+        <li data-aos="fade-up" data-aos-delay="1600">2015 國泰沐善 台北市 內湖區</li>
+        <li data-aos="fade-up" data-aos-delay="1700">(整理自2023最新資料)</li>
+      </ul>
+    </div>
+  </div>
   <div class="slider" data-aos="fade-up" data-aos-delay="400">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -80,33 +116,46 @@
   .title{font-weight: 700;}
   .subtitle{font-weight: 400;}
   }
-  .main0{
-  width:size(800);}
   .main1{
-  width:size(1262);}
+  width:size(1262);position: absolute;top:size(1565);opacity: .5;}
 
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(520);
+    flex-basis: size(800);
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
 }
 
 
 .txt {
-  .slogo{height:size(45);}
+  .slogo{height:size(47);}
   .title{
+  text-align: justify;
     span{
     font-size: 0.73em;
     font-weight: 300;}
   }
   .subtitle{
+  text-align: justify;
       color: #EFD79B;
   }
   .subdesc{
       color: #EFD79B;
   }
+@media screen and (min-width: 767px) {
+
+  .slogo{float: left;
+    margin: size(23) size(50) size(23) size(10);
+
+  }
+  .title{ margin:0;line-height: 1.5;
+  }
+  .subtitle{margin: 0 0 0.6em;
+    
+  }
+  .desc{line-height: 1.9;margin: 0 0 1em;}
+}
 }
 .imgs{
   @apply flex;
@@ -143,6 +192,16 @@
 }
 .list2{
   img{width:size(988);}
+}
+.list3{
+  font-size:size(17);
+  font-weight: 300;
+  display: flex;gap: size(255);
+  h4{font-size: 1.85em;font-weight: 700;margin-bottom:size(17);}
+  ul{border-left: 1px solid #EED69A;
+  padding: 0 0 0 1.5em;gap: size(6);
+  display: flex;flex-direction:column;line-height: 1.4;letter-spacing: 0.06em;
+  }
 }
   .slider {
     margin: 0;
@@ -187,11 +246,12 @@
   font-size:sizem(30);
   }
   .main1{
-  width:sizem(302);}
+  width:sizem(302);position: absolute;top:sizem(1237);opacity: .5;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
+  text-align: justify;
 }
 
 .txt {
@@ -218,6 +278,19 @@
 }
 .list2{
   img{width:sizem(200);}
+}
+.list3{
+  font-size:sizem(12);
+  width:sizem(310);margin-bottom:sizem(30);
+  gap:0;flex-direction:column;
+  .list{margin-bottom:sizem(65);
+  &:last-child{margin-bottom:0;}}
+  h4{font-size: 1.75em;margin-bottom:sizem(7);}
+  ul{gap:0;
+  }
+  li{margin-bottom:sizem(12);
+  &:last-child{margin-bottom:0;}
+  }
 }
 
 

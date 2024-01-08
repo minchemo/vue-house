@@ -2,7 +2,11 @@
 
 <template>
   <article class="s4-4">
-  <img src="./s4/group3.jpg" alt="group3" class="group3" data-aos="fade-up" data-aos-delay="600" v-if="!$isMobile()">
+    <div class="pic" data-aos="fade-up" data-aos-delay="300" v-if="!$isMobile()">
+      <div class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+          <span class="caption">{{ img.caption }}</span>
+        </div>
+    </div>
     <div class="slider" data-aos="fade-up" data-aos-delay="300" v-else>
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -22,34 +26,16 @@
 @import '@/assets/style/function.scss';
 
 .s4-4 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#000];
-  width: 100%;
-  height:auto;
-  padding:0 0 0 0;
-  font-size:size(18);
-  gap:3em;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-
-  .group3{
-  width:100%;}
-  .slider {
+  @apply relative overflow-hidden;
+  .pic {
+     @apply flex;
     margin: 0;
-    flex-basis: size(730);
-      height: size(400);
+    flex-basis:100%;gap: size(8);
     .slide-item {
-      @apply bg-cover;
-    flex-basis: size(730);
-      height: size(400);
-      
-    }
-    .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #B78E63;
-    }
+      @apply relative bg-cover;
+      flex: 1;
+      width:size((1920/3)-8);
+      height: size(340);
     }
   }
 }
@@ -58,23 +44,11 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-
   .s4-4 {
-  @apply flex-col;
-    height: auto;
     padding:0 0 3em 0;
-  font-size:sizem(12);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:0em;
-  .group3{
-  width:100%;}
-
-
   .slider {
     height: auto;
-    width: sizem(310);
-
+    width: sizem(310);margin: auto;
     .caption {
     font-size:sizem(12); 
     right:sizem(5);
@@ -83,9 +57,8 @@
     .slide-item {
       @apply bg-cover;
       width: 100%;
-    flex-basis: auto;
-      height: sizem(168);
-      
+      flex-basis: auto;
+      height: sizem(168);      
     }
   }
   }
