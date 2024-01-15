@@ -35,6 +35,7 @@
             <option value="紀宥榕">紀宥榕</option>
             <option value="翁雅如">翁雅如</option>
             <option value="簡家榆">簡家榆</option>
+            <option value="邱筱玫">邱筱玫</option>
           </select>
 
           <select class="select w-full input-style select-style" v-model="formData.city">
