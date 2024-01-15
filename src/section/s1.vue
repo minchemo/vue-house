@@ -1,12 +1,13 @@
 <template>
   <article class="s1" id="s1">
-<img src="./s1/book.webp" alt="img" class="img" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+<!--img src="./s1/book.webp" alt="img" class="img" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0"-->
 <div class="txt">
-<h3 class="t1 font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">歡迎回<span>嘉</span><br>開啟幸福篇章</h3>
-<div class="t2 font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">START HAPPINESS</div>
+<h3 class="t1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">歡迎回<span>嘉</span><br>開啟幸福篇章</h3>
+<div class="t2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">START HAPPINESS</div>
+<h3 class="t3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">【嘉義首座日系選冊宅】</h3>
 </div>
-<img src="./s1/style1.webp" alt="style1" class="style1" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
-<img src="./s1/style2.webp" alt="style2" class="style2" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+<!--img src="./s1/style1.webp" alt="style1" class="style1" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+<img src="./s1/style2.webp" alt="style2" class="style2" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0"-->
   </article>
 </template>
 
@@ -31,8 +32,9 @@
   align-items:center;
   font-size:size(36);
   //background: #E60012;
-  //background: url("./s1/bg.webp");
-  background-size: 100% auto;
+  background: url("./s1/bg.jpg");
+
+  background-size: cover;
 
     .img{position: absolute;width: size(740);left: size(187);
     top:calc(50% + #{size(320 - 540)});
@@ -56,14 +58,14 @@
     .txt{
     width: auto;
     position: absolute;
-    right:size(364);
+    right:size(304);
     text-align:center;
     color: #FFF;
-    font-weight: 900;
+    font-weight: 500;
     line-height: 1.2;
 .t1{
   font-size:size(68);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing:size(16.32);
   line-height: size(90);
   text-shadow: 0px size(4) size(20) #000;
@@ -72,12 +74,22 @@
   }
 
 .t2{
-  color: #5BBC96;
+  color: #fff;
   font-size:size(25);
   margin-top: .5em;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing:size(16.32);
+  text-shadow: 0px 4px 12px #02271C;
   }
+
+  .t3{
+  font-size:size(30);
+  font-weight: 400;
+  letter-spacing:size(16.32);
+  line-height: size(90);
+  text-shadow: 0px size(4) size(20) #000;
+  }
+
 
 }
 
@@ -102,6 +114,9 @@
     min-height: sizem(667);
     max-height: sizem(812);
     font-size:sizem(15);
+    background: url("./s1/bgm.jpg");
+    background-size: auto 100%;
+
 
 .img{
   position: absolute;
@@ -132,8 +147,8 @@
 
 .txt{
   position: absolute;
-  top:sizem(94);
-  right: sizem(60);
+  top:sizem(50);
+  right: sizem(55);
 
 
 .t1{
@@ -144,6 +159,12 @@
 .t2{
   font-size:sizem(12);
 margin-bottom: 1.5em;}
+
+.t3{
+  font-size:sizem(15);
+  line-height:sizem(30);
+  letter-spacing: sizem(8.4);
+  }
 
 }
 
