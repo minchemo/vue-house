@@ -5,8 +5,7 @@
 	<img src="./s1/2.png" class="img2" alt="" />
 	<img src="./s1/3.png" class="img3" alt="" />
 	
-	<img src="./s1/logo.svg" v-if="!$isMobile()" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
-	<img src="./s1/logom.svg" v-else class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
+	<img src="./s1/logo.png" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 
   </article>
 </template>
@@ -31,10 +30,10 @@
 
   .logo{
 	position: absolute;
-	top:size(440);
-	left:size(425);
-	top:calc(50% + #{size(440-(1080*.5))});
-	width: 51.5vw;
+	top:size(280);
+	left:size(675);
+	top:calc(50% + #{size(280-(1080*.5))});
+	width: size(556);
   }
 @keyframes an1 {
 	to{transform: scale(1);}
@@ -82,10 +81,10 @@
 
 	.logo{
 		position: absolute;
-		top:sizem(190);
+		top:sizem(160);
 		left:auto;right: auto;margin: auto;
-		top:calc(50% + #{sizem(190-(604*.5))});
-		width: 58vw;
+		top:calc(50% + #{sizem(160-(604*.5))});
+		width: sizem(271);
 	}
   .img1{
 	top:sizem(-30);
