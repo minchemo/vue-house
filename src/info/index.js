@@ -1,4 +1,4 @@
-const caseName = "鋭揚北城新案"
+const caseName = "佳鋐大境"
 
 export default {
     meta: {
@@ -8,12 +8,12 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-   // address: "台南市安平區府前四街147號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.739139123935!2d120.1852493!3d22.9966181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77584e24e507%3A0xa92f1e0817f0a8ce!2z5aaC6YKRMl_oh6rlhqDlu7roqK1f5Yud5YGV6ZuG5ZyY!5e0!3m2!1szh-TW!2stw!4v1697008525183!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/y5xEjE4vDDsfydrf6",
-    phone: "07-585-6655",
-    fbLink: "https://www.facebook.com/61554916575175/",
-    fbMessage: "https://m.me/61554916575175/",
+    address: "台中市梧棲區中華路二段258號(旁)",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3637.813058514882!2d120.5550312!3d24.2483163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469151ebe57d387%3A0x8553e024331e32ed!2z5L2z6YuQ5aSn5aKD5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1705376910890!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/V5sYHiChFYQAUNZH7",
+    phone: "04-2663-0999",
+    fbLink: "https://www.facebook.com/61554748627993/",
+    fbMessage: "https://m.me/61554748627993/",
     caseName: caseName,
     houseInfos: [
         /*
@@ -35,9 +35,8 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-    // room_type: ["一房","兩房","三房","四房","其他"],
-    budget: ["2000以下","2000-2500","2500-3000","3000-3500","3500以上"],
-
+    room_type: ["兩房","三房"],
+    budget: ["601-800萬","801-1,000萬","1,001-1,200萬","1,201-1,400萬","1,400萬以上"],
     navList: [
         /*
         {
