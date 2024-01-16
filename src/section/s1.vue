@@ -1,21 +1,21 @@
 <template>
   <article class="s1 relative">
-    <div class="title absolute">
-      <div class="logo"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
+    <div class="title">
+      <div class="logo absolute"  data-aos="fade-up"><img src="@/section/s1/logo.svg" alt="" srcset=""></div>
       <!--div class="t1"  data-aos="fade-up" data-aos-delay="200">回「嘉」 即刻預約 <br/>高大特區 泰嘉建築經典再現</div-->
-      <img class="title1" src="@/section/s1/title1.svg" data-aos="fade-up"/><br>
-      <img class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
+      <img class="title1 absolute" src="@/section/s1/title1.svg" data-aos="fade-up"/><br>
+      <img class="title2 absolute" src="@/section/s1/title2.svg" data-aos="fade-up"/>
     </div>
     <!--div class="tip absolute text-white">TIMELESS TIME</div-->
-    <div class="home-openning absolute font-['Noto_Sans_TC']">
-      <!--div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div-->
+    <!--div class="home-openning absolute font-['Noto_Sans_TC']">
+      <div class="t1"  data-aos="fade-up" data-aos-delay="400">河海之間，吹著學風的基地<br>泰嘉，迎著掌聲回楠梓了！</div-->
       <!-- <img v-if="isMobile" class="title2" src="@/section/s1/title2.svg" data-aos="fade-up"/>
-       div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div -->
+       div class="t2"  data-aos="fade-up" data-aos-delay="600">HOME OPENNING</div>
       <div class="line">
         <span></span>
       </div>
-    </div>
-    <!--wave-->
+    </div -->
+    <!-- wave
     <div class="w">
       <div class="w4"><img src="https://i.imgur.com/qStzKed.png" /><img src="https://i.imgur.com/qStzKed.png" /></div>
       <div class="w3"><img src="https://i.imgur.com/4CQrKVN.png" /><img src="https://i.imgur.com/4CQrKVN.png" /></div>
@@ -23,7 +23,7 @@
       <div class="w1"><img src="https://i.imgur.com/u9i71yr.png" /><img src="https://i.imgur.com/u9i71yr.png" /></div>
     </div>
     <img src="@/section/s1/bg.png" class="bg" v-if="!isMobile" />
-    <img src="@/section/s1/bg_m.png" class="bg" v-else />
+    <img src="@/section/s1/bg_m.png" class="bg" v-else />-->
   </article>
 </template>
 
@@ -35,17 +35,17 @@
   height: 100vh;
   min-height: size(900);
   max-height: size(1080);
-  background:#005da8;
-  background-size: cover;
-  .bg{position: absolute;top:calc(50% + 14.3vw);left: 0;width: 100%;}
+  background: url("./s1/bg.jpg") center; 
+  background-size:cover;
+ // .bg{position: absolute;top:calc(50% + 14.3vw);left: 0;width: 100%;}
 
   .title {
-    left: 0;right: 0;margin: auto;
-    top: calc(50% + #{size(170 - 540)});
     text-align: center;z-index:3;
 
     .logo {
-      width: size(369);margin: auto;
+    left: 0;right: 0;margin: auto;
+    top: calc(10% + #{size(90 - 1080 * .1)});
+      width: size(355);margin: auto;
 
       img {
         width: 100%;
@@ -53,15 +53,18 @@
     }
 
     .title1{
-      width: size(369);
-      margin-top: size(60);
+    left: 0;right: 0;margin: auto;
+    top: calc(20% + #{size(340 - 1080 * .2)});
+      width: size(455);
     }
 
     .title2{
-      width: size(280);
-      margin-top: size(80);
+    left: 0;right: 0;margin: auto;
+    top: calc(60% + #{size(868 - 1080 * .6)});
+      width: size(420);
     }
-
+}
+/*
     .t1 {
       font-size: size(40);
       letter-spacing: 0.07em;
@@ -209,7 +212,7 @@
       }
     }
   }
-
+*/
 
 }
 
@@ -221,30 +224,27 @@
 
   .s1 {
     height: calc(100vh - 63px);
-    min-height: size-m(604);
+    min-height: size-m(550);
     max-height: size-m(750);
     position: relative;
-  .bg{top:auto;bottom:calc(10% + (0 - (750 * .1)) * 100vw / 375);height: size-m(94);}
+	background-image: url("./s1/bg_m.jpg");
+ // .bg{top:auto;bottom:calc(10% + (0 - (750 * .1)) * 100vw / 375);height: size-m(94);}
 
     .title {
-      top: size-m(79);
-    top: calc(50% + #{size-m(110 - 604 * .5)});
-      z-index: 99;
-      
-
       .logo {
-        width: size-m(175);
+        width: size-m(195);
         margin: 0px auto;
+    top: calc(30% + #{size-m(53 - 604 * .3)});
       }
 
       .title1{
-      width: size-m(175);
-      margin-top: size-m(40);
+      width: size-m(255);
+    top: calc(30% + #{size-m(190 - 604 * .3)});
 
     }
       .title2{
-      width: size-m(175);
-      margin-top: size-m(50);
+      width: size-m(238);
+    top: calc(75% + #{size-m(486 - 604 * .75)});
     }
 
     
