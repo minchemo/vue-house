@@ -1,6 +1,6 @@
 <template>
   <article class="s8">
-    <h2 class="title" data-aos="fade-down" data-aos-delay="0" >正38坪3房2廳<br>規劃當區最優</h2>
+    <h2 class="title" data-aos="fade-down" data-aos-delay="0" >正38坪888萬起<span>(車位另購)</span><br>規劃當區最優</h2>
     
     <img src="./s8/1.png" alt="" v-if="!$isMobile()">
     <img src="./s8/1m.png" alt="" v-else>
@@ -30,6 +30,8 @@
     width:100%;
     padding: .6em 0;
     text-align: center;
+    span{font-size: .5em;margin: 0 -4.8em 0 0;
+    font-weight: 700;}
 
   }
   img{width: size(1043);}
