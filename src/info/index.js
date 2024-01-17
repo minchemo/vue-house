@@ -16,14 +16,7 @@ export default {
     fbMessage: "https://m.me/61554320400557",
     caseName: caseName,
     houseInfos: [
-      /*  ["投資興建", "勝興建設股份有限公司"],
-        ["建築設計", "吳六和建築師事務所"],
-        ["公共藝術", "黃筠茜設計師"],
-        ["基地面積", "1174坪"],
-        ["建照號碼", "110中都建字第01578號"],
-        ["公設設計", "邑埕設計工程有限公司"],
-        ["結構技師", "陳至忠結構技師"],
-        ["格局規劃", "2-4房"], */
+        /*["坪數規劃", "19-27坪"],*/
     ],
     gtmCode: ["GTM-WGDV7JR5"], // 可放置多個
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
