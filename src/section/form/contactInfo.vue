@@ -81,8 +81,8 @@
         'btsearch': modalType == 'gmap',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'gmap' ? '開啟導航' : modalType == 'fb' ? '立即諮詢' :
+        ''
         }}</div>
       <!-- btn phone -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
@@ -91,8 +91,8 @@
         'btsearch': modalType == 'gmap',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'gmap' ? '開啟導航' : modalType == 'fb' ? '立即諮詢' :
+        ''
         }}</div>
     </div>
   </div>
