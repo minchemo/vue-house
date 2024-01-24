@@ -3,6 +3,7 @@
     <img src="./s1/pc_bg.jpg" alt="bg" class="bg-img" v-if="!$isMobile()">
     <img src="./s1/m_bg.jpg" alt="bg"  class="bg-img" v-else>
     <img src="./s1/logo1.svg" class="logo" data-aos="fade-up" data-aos-delay="0">
+    <div class="txt font-['noto_Serif_tc']" data-aos="fade-up" data-aos-delay="200">統一工商綜合區開發股份有限公司</div>
     <div class="line"></div>
       
   </article>
@@ -30,6 +31,7 @@
 }
 .logo {width: size(390);position: relative;z-index: 2;
 }
+.txt{color: #000;position: relative;z-index: 2;font-size: size(50);font-weight: 900;margin: .5em auto 0;}
 .line{position: relative;z-index: 2;
   color: #fff;
   background:currentColor;
@@ -62,6 +64,7 @@
     height: sizem(667);
 .logo {width: sizem(176);
 }
+.txt{font-size: sizem(20);}
 .line{margin:5em auto -15em auto;
   font-size:sizem(12);height: 22em;
   }
