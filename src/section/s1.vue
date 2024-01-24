@@ -1,5 +1,5 @@
 <template>
-  <article class="s1">
+  <article class="s1" id="s1">
     <img src="./s1/pc_bg.jpg" alt="bg" class="bg-img" v-if="!$isMobile()">
     <img src="./s1/m_bg.jpg" alt="bg"  class="bg-img" v-else>
     <img src="./s1/logo1.svg" class="logo" data-aos="fade-up" data-aos-delay="0">
