@@ -1,5 +1,5 @@
 <?php
-#h65 111-4 版
+#h65 113/1/17 版
 #下3段式抓 為案件編號 $case_code
 #$case_code_test 是用來判斷是否為1的測試頁
 #$case_code = "jw";特殊案使用
@@ -36,8 +36,8 @@ $budget       = isset($_POST['budget']) ? $_POST['budget'] : '';
 $time_start        = isset($_POST['time_start']) ? $_POST['time_start'] : '';
 $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
 
-# 不同版本前端相容 Start
-if ($name == '') {
+    # 不同版本前端相容 Start
+    if ($name == '') {
         $name = isset($_POST['widget-contact-form-name']) ? $_POST['widget-contact-form-name'] : '';
     }
     if ($phone == '') {
@@ -75,6 +75,21 @@ if ($name == '') {
     # 不同版本前端相容 End
 
     $bCheck = true; //信件檢查
+    
+    if (empty($name) || empty($phone)) {
+        // 名字或電話為空
+        $bCheck = false;
+        echo "名字或電話為空，檢查不通過";
+    }
+    /*
+    if (empty($name) && empty($phone) && empty($user_email) && empty($city) && empty($area) && 
+    empty($msg) && empty($utm_source) && empty($utm_medium) && empty($utm_content) && empty($utm_campaign)) {
+        // 所有欄位都為空
+        $bCheck = false;
+        echo "所有欄位都為空，檢查不通過";
+    }
+    */
+
 
     # 取得 IP Start
     if (!empty($_SERVER["HTTP_CLIENT_IP"])){
@@ -271,8 +286,8 @@ if ($name == '') {
             $url .= "&city=".$city;
             $url .= "&area=".$area;
             $url .= "&room_type=" . $room_type;
-            //$url .= "&budget=" . $budget;
-            $url .= "&message=".$msg.$budget;
+            $url .= "&budget=" . $budget;
+            $url .= "&message=".$msg;
             $url .= "&utm_source=".$utm_source;
             $url .= "&utm_medium=".$utm_medium;
             $url .= "&utm_content=".$utm_content;
@@ -280,12 +295,24 @@ if ($name == '') {
             $url .= "&case_code=".$case_code;
             $url .= "&reservation_datetime=".$datetime;
 
-            $ch = curl_init();
-            curl_setopt($ch,CURLOPT_URL,$url);
-            curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-            curl_setopt($ch,CURLOPT_TIMEOUT,1);
-            $result = curl_exec($ch);
-            curl_close($ch);
+            // $ch = curl_init();
+            // curl_setopt($ch,CURLOPT_URL,$url);
+            // curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+            // curl_setopt($ch,CURLOPT_TIMEOUT,1);
+            // $result = curl_exec($ch);
+            // curl_close($ch);
+            
+            // 使用 file_get_contents 發送 GET 請求
+            $response = file_get_contents($url);
+
+            // 檢查回應是否為 FALSE，這可能表示請求失敗
+            if ($response === FALSE) {
+                // 處理錯誤
+                die('Error occurred');
+            }
+
+            // 輸出回應
+            echo $response;
 
             // echo "send ok";
 
