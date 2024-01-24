@@ -17,8 +17,8 @@
         position: absolute;
         color: #fff;
         font-size: size(14);
-        right: size(45);
-        bottom: size(25);
+        left: size(15);
+        bottom: size(10);
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8))
     }
 }
@@ -80,7 +80,7 @@ import { onMounted, ref, getCurrentInstance } from 'vue';
 
 const props = defineProps(['imgs', 'w', 'w_m', 'h', 'h_m', 'dot', 'dot_color', 'dot_size', 'dot_bottom', 'dot_bottom_m', 'align', 'align_m'])
 const options = {
-    rewind: false,
+    rewind: true,
     arrows: false,
     pagination: props.dot ?? false,
     autoplay: true,

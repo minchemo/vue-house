@@ -12,6 +12,8 @@
   <Nav v-if="config.showNav" />
   <div class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC'] pb-[64px] md:pb-0">
     <S1 />
+    <S2 />
+    <S3 />
     <Order />
   </div>
 </template>
@@ -26,7 +28,7 @@ img {
 }
 
 .home {
-  background: linear-gradient(175deg, #0A3B75 0%, #040E1B 43%, #0A3B75 100%);
+  background: #DEDBD4;
 
 }
 </style>
@@ -34,6 +36,8 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
@@ -50,6 +54,9 @@ const config = ref({
 
 onMounted(async () => {
 
+  if (preloadList.length === 0) {
+    isLoading.value = false
+  }
 
   preloadImages(preloadList, function () {
     console.log('all images loaded');
@@ -70,20 +77,6 @@ onMounted(async () => {
  * 預載圖片，直接帶入路徑，由上而下依序加載，完成後才會關閉loading畫面
  */
 const preloadList = [
-  new URL("../section/anim/01/02.webp", import.meta.url).href,
-  new URL("../section/anim/01/03.webp", import.meta.url).href,
-  new URL("../section/anim/01/04.webp", import.meta.url).href,
-  new URL("../section/anim/01/05.webp", import.meta.url).href,
-  new URL("../section/anim/01/06.webp", import.meta.url).href,
-  new URL("../section/anim/02/01.webp", import.meta.url).href,
-  new URL("../section/anim/02/02.webp", import.meta.url).href,
-  new URL("../section/anim/03/01.webp", import.meta.url).href,
-  new URL("../section/anim/03/02.webp", import.meta.url).href,
-  new URL("../section/anim/03/03.webp", import.meta.url).href,
-  new URL("../section/anim/03/04.webp", import.meta.url).href,
-  new URL("../section/anim/04/01.webp", import.meta.url).href,
-  new URL("../section/anim/04/02.webp", import.meta.url).href,
-  new URL("../section/anim/04/03.webp", import.meta.url).href,
 ]
 const preloadThreshold = 0.8
 
