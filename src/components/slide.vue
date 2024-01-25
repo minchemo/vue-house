@@ -1,6 +1,6 @@
 <template>
-    <Splide ref="splide" :options="options" @splide:mounted="setSize" @splide:moved="moved">
-        <SplideSlide class="slide" v-for="img in props.imgs" v-lazy:background-image="img.img">
+    <Splide ref="splide" :options="options" @splide:mounted="mounted" @splide:move="moved">
+        <SplideSlide class="slide" v-for="img in props.imgs" :style="{backgroundImage: `url(${img.img})`}">
             <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
         </SplideSlide>
     </Splide>
@@ -78,15 +78,24 @@
 import { size, size_m } from '@/utils/size'
 import { onMounted, ref, getCurrentInstance } from 'vue';
 
-const props = defineProps(['imgs', 'w', 'w_m', 'h', 'h_m', 'dot', 'dot_color', 'dot_size', 'dot_bottom', 'dot_bottom_m', 'align', 'align_m'])
+const getGap = () => {
+    if (document.documentElement.clientWidth < 767) {
+        return props.gap_m ? size_m(props.gap_m) : 5
+    } else {
+        return props.gap ? size(props.gap) : 5
+    }
+}
+
+const props = defineProps(['gap', 'gap_m', 'per_page', 'imgs', 'w', 'w_m', 'h', 'h_m', 'box_w', 'box_h', 'box_w_m', 'box_h_m', 'dot', 'dot_color', 'dot_size', 'dot_bottom', 'dot_bottom_m', 'align', 'align_m'])
 const options = {
     rewind: true,
     arrows: false,
     pagination: props.dot ?? false,
+    perPage: props.per_page ?? 1,
     autoplay: true,
     interval: 4000,
-    gap: 5,
-    type:'loop'
+    gap: getGap(),
+    type: 'loop'
 }
 
 const width = ref(0);
@@ -99,22 +108,31 @@ const go = (idx) => {
     splide.value.splide.go(idx)
 }
 
+
 const moved = (newIdx, prevIdx, destIdx) => {
     currentSlideIndex.value = prevIdx
     ctx.emit('slideIndex', currentSlideIndex.value)
 }
 
-const setSize = () => {
+const mounted = () => {
+        console.log(1);
+    let boxWidth;
+    let boxHeight;
     if (document.documentElement.clientWidth < 767) {
         width.value = document.documentElement.clientWidth;
         height.value = size_m(props.h_m);
+        boxWidth = props.box_w_m ? size_m(props.box_w_m) : width.value;
+        boxHeight = props.box_h_m ? size_m(props.box_h_m) : height.value;
     } else {
         width.value = size(props.w);
         height.value = size(props.h);
+        boxWidth = props.box_w ? size(props.box_w) : width.value;
+        boxHeight = props.box_h ? size(props.box_h) : height.value;
     }
 
-    splide.value.$el.style.width = width.value + 'px';
-    splide.value.$el.style.height = height.value + 'px';
+    splide.value.$el.style.width = boxWidth + 'px';
+    splide.value.$el.style.height = boxHeight + 'px';
+
     splide.value.splide.options = {
         fixedWidth: width.value,
         fixedHeight: height.value
@@ -123,6 +141,8 @@ const setSize = () => {
     if (props.dot) {
         setDot();
     }
+
+    ctx.emit('mounted', splide.value)
 }
 
 const setDot = () => {
@@ -155,7 +175,7 @@ defineExpose({
 
 onMounted(() => {
     window.addEventListener('resize', function (event) {
-        setSize()
+        mounted()
     }, true);
 })
 </script>
