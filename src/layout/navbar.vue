@@ -48,7 +48,7 @@
     }
 
     .menu-btn {
-        background: transparent;
+        background: #A77C22;
         height: size(62);
         width: size(62);
         display: flex;
@@ -128,7 +128,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        background: rgba(0, 51, 102, 0.80);
+        background: rgba(#a77d22, 0.9);
         width: size(374);
         height: 100%;
         z-index: 5;
@@ -150,7 +150,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: size(16);
+            font-size: size(24);
             gap: size(10);
             font-family: 'Noto Sans TC';
             font-weight: 500;
@@ -165,7 +165,6 @@
                 content: '';
                 @apply absolute;
                 bottom: -#{size(10)};
-                background-image: url('@/assets/nav_divider.png');
                 width: size(213);
                 height: size(2);
                 background-size: 100%;
@@ -173,6 +172,7 @@
 
             &:hover {
                 color: #fff;
+                opacity: 50%;
             }
 
             &.active {
@@ -378,10 +378,10 @@
                 position: absolute;
                 left: unset;
                 bottom: unset;
-                top: 15px;
-                right: 15px;
-                width: sizem(30);
-                height: sizem(30);
+                top: 25px;
+                right: 25px;
+                width: sizem(20);
+                height: sizem(20);
                 cursor: pointer;
                 margin-top: 0;
                 margin-bottom: 0;

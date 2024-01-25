@@ -1,6 +1,6 @@
 <template>
-    <Splide ref="splide" :options="options" @splide:mounted="mounted" @splide:move="moved">
-        <SplideSlide class="slide" v-for="img in props.imgs" :style="{backgroundImage: `url(${img.img})`}">
+    <Splide ref="splide" :options="options" @splide:mounted="mounted" @splide:move="moved" class="splide-widget">
+        <SplideSlide class="slide" v-for="img in props.imgs" :style="{ backgroundImage: `url(${img.img})` }">
             <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
         </SplideSlide>
     </Splide>
@@ -8,6 +8,8 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+
+.splide-widget {}
 
 .slide {
     position: relative;
@@ -59,11 +61,29 @@
 
 @media screen and (max-width: 767px) {
 
+
+    .splide-widget {
+        .splide__arrows {
+            @apply absolute flex justify-between left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10;
+            width: sizem(365);
+
+            .splide__arrow {
+                filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(299deg) brightness(103%) contrast(102%) drop-shadow(0 4px 2px rgba(0, 0, 0, 0.6));
+
+
+                &.splide__arrow--next {
+                    @apply transform rotate-180;
+                filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(299deg) brightness(103%) contrast(102%) drop-shadow(0 -4px 2px rgba(0, 0, 0, 0.6));
+                }
+            }
+        }
+    }
+
     .slide {
         .caption {
             font-size: sizem(12);
-            right: sizem(10);
-            bottom: sizem(10);
+            left: sizem(10);
+            bottom: sizem(5);
         }
     }
 
@@ -85,17 +105,26 @@ const getGap = () => {
         return props.gap ? size(props.gap) : 5
     }
 }
+const getShowArrow = () => {
+    if (document.documentElement.clientWidth < 767) {
+        return props.arrow_m ?? false;
+    } else {
+        return props.arrow ?? false;
+    }
+}
 
-const props = defineProps(['gap', 'gap_m', 'per_page', 'imgs', 'w', 'w_m', 'h', 'h_m', 'box_w', 'box_h', 'box_w_m', 'box_h_m', 'dot', 'dot_color', 'dot_size', 'dot_bottom', 'dot_bottom_m', 'align', 'align_m'])
+const props = defineProps(['arrow', 'arrow_m', 'gap', 'gap_m', 'per_page', 'imgs', 'w', 'w_m', 'h', 'h_m', 'box_w', 'box_h', 'box_w_m', 'box_h_m', 'dot', 'dot_color', 'dot_size', 'dot_bottom', 'dot_bottom_m', 'align', 'align_m'])
 const options = {
     rewind: true,
-    arrows: false,
+    arrows: getShowArrow(),
     pagination: props.dot ?? false,
     perPage: props.per_page ?? 1,
-    autoplay: true,
+    // autoplay: true,
+    autoplay: false,
     interval: 4000,
     gap: getGap(),
-    type: 'loop'
+    type: 'loop',
+    arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`
 }
 
 const width = ref(0);
@@ -108,18 +137,16 @@ const go = (idx) => {
     splide.value.splide.go(idx)
 }
 
-
 const moved = (newIdx, prevIdx, destIdx) => {
     currentSlideIndex.value = prevIdx
     ctx.emit('slideIndex', currentSlideIndex.value)
 }
 
 const mounted = () => {
-        console.log(1);
     let boxWidth;
     let boxHeight;
     if (document.documentElement.clientWidth < 767) {
-        width.value = document.documentElement.clientWidth;
+        width.value = size_m(props.w_m);
         height.value = size_m(props.h_m);
         boxWidth = props.box_w_m ? size_m(props.box_w_m) : width.value;
         boxHeight = props.box_h_m ? size_m(props.box_h_m) : height.value;

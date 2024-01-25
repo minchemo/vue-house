@@ -1,16 +1,16 @@
 <template>
-	<article class="s3">
+	<article class="s8">
 		<div class="t">
-			<div class="t1">慢享土城日常</div>
-			<div class="t2">光合植萃建築</div>
+			<div class="t1" data-aos="fade-up" data-aos-delay="0">慢享土城日常</div>
+			<div class="t2" data-aos="fade-up" data-aos-delay="200">光合植萃建築</div>
 			<div class="l"></div>
-			<div class="t3">2-4房 全新落成 親眼見證美好</div>
-			<div class="pagi">
+			<div class="t3" data-aos="fade-up" data-aos-delay="400">2-4房 全新落成 <br v-if="isMobile">親眼見證美好</div>
+			<div class="pagi" v-if="!isMobile">
 				<span v-for="img, i in imgsA" :class="{ 'active': i == currentIdxA }" @click="splideA.go(i)"></span>
 			</div>
 		</div>
 
-		<Slide ref="splideA" :gap="1" :imgs="imgsA" :w="1920" :h="1089" :w_m="375" :h_m="615" :dot="false"
+		<Slide ref="splideA" :arrow_m="true" :gap="1" :gap_m="0" :imgs="isMobile ? imgsAm : imgsA" :w="1920" :h="1089" :w_m="375" :h_m="615" :dot="false"
 			@slideIndex="onMovedA" />
 		<img class="architectural" src="@/section/s8/architectural.png" alt="" srcset="">
 	</article>
@@ -19,7 +19,7 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s3 {
+.s8{
 	@apply w-full relative;
 	height: size(1080);
 
@@ -130,9 +130,50 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-	.s3 {
-		@apply w-full overflow-visible relative z-20;
+	.s8 {
+		@apply w-full relative;
+		height: sizem(615);
 
+		.t {
+			@apply absolute z-10 text-white flex flex-col items-center justify-center;
+			top: sizem(67);
+			right: sizem(90);
+
+			.t1 {
+				font-size: sizem(30);
+				letter-spacing: sizem(2.7)
+			}
+
+			.t2 {
+				font-size: sizem(30);
+				letter-spacing: sizem(2.7)
+			}
+
+			.l {
+				@apply bg-white;
+				width: sizem(194);
+				height: sizem(1);
+				margin: sizem(15) 0;
+			}
+
+			.t3 {
+				@apply text-center;
+				font-size: sizem(17);
+				letter-spacing: sizem(4.42)
+			}
+
+			.pagi {
+				@apply hidden;
+			}
+		}
+
+
+		.architectural {
+			@apply absolute;
+			width: sizem(304);
+			left: sizem(35);
+			bottom: sizem(3);
+		}
 	}
 }
 </style>
@@ -154,6 +195,16 @@ const imgsA = [
 	},
 	{
 		img: new URL("../section/s8/2.jpg", import.meta.url).href,
+		caption: "",
+	},
+]
+const imgsAm = [
+	{
+		img: new URL("../section/s8/1m.jpg", import.meta.url).href,
+		caption: "",
+	},
+	{
+		img: new URL("../section/s8/2m.jpg", import.meta.url).href,
 		caption: "",
 	},
 ]

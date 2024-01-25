@@ -2,10 +2,10 @@
 	<article class="s2">
 		<div class="t">
 			<div class="t-m">
-				<div class="t1">品味土城繁華</div>
-				<div class="t2">悠享漫漫日常</div>
+				<div class="t1" data-aos="fade-up" data-aos-delay="0">品味土城繁華</div>
+				<div class="t2" data-aos="fade-up" data-aos-delay="200">悠享漫漫日常</div>
 			</div>
-			<div class="t3">無垠繁榮的前景，正於土城逐漸成形，板南線、萬大線拉近土城與台北的距離，三大科技園區接手區域商業榮景。<br>
+			<div class="t3" data-aos="fade-up" data-aos-delay="400">無垠繁榮的前景，正於土城逐漸成形，板南線、萬大線拉近土城與台北的距離，三大科技園區接手區域商業榮景。<br>
 				司法特區開始構建，菁英匯聚，但綠意並沒有因為城市的繁榮而消弭。在土城繁華的光景中，我們依舊可以步入在山林草地中享受生活慢時光。</div>
 		</div>
 		<div class="view">

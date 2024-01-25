@@ -1,7 +1,7 @@
 <template>
 	<article class="s4">
 		<div class="slide-box slide-box-a">
-			<Slide ref="splide" :gap="24" :box_w="1369" :per_page="3" :imgs="imgsA" :w="440" :h="458" :w_m="311"
+			<Slide ref="splide" :arrow_m="true" :gap="24" :box_w="1369" :per_page="3" :imgs="imgsA" :w="440" :h="458" :w_m="311"
 				:h_m="323.72" :dot="false" @slideIndex="onMovedA" />
 			<div class="slide-t">
 				<div class="pagi">
@@ -10,13 +10,18 @@
 			</div>
 		</div>
 		<div class="t">
-			<img class="t1" src="@/section/s4/convenient.png" alt="" srcset="">
-			<div class="t2">極緻機能｜日常採買好方便 美食隨處可見</div>
-			<div class="t3">
-				日月光廣場、秀泰影城、家樂福，時尚購物與都市休閒匯集，看電影買東西都好容易。<br />延吉街、裕民路商圈，下班後晚餐不擔心，採買食材煮頓飯都很便利。</div>
+			<img class="t1" src="@/section/s4/convenient.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0">
+			<div class="t2" data-aos="fade-up" data-aos-delay="200">極緻機能｜日常採買好方便 美食隨處可見</div>
+			<div class="t3" data-aos="fade-up" data-aos-delay="400">
+				日月光廣場、秀泰影城、家樂福，時尚購物與都市休閒匯集，看電影買東西都好容易。<br v-if="!isMobile" />延吉街、裕民路商圈，下班後晚餐不擔心，採買食材煮頓飯都很便利。</div>
 		</div>
-		<img class="hill1 hill" src="@/section/s4/hill1.png" alt="" srcset="">
-		<img class="hill2 hill" src="@/section/s4/hill2.png" alt="" srcset="">
+		<template v-if="!isMobile">
+			<img class="hill1 hill" src="@/section/s4/hill1.png" alt="" srcset="">
+			<img class="hill2 hill" src="@/section/s4/hill2.png" alt="" srcset="">
+		</template>
+		<template v-else>
+			<img class="hillm hill" src="@/section/s4/hillm.svg" alt="" srcset="">
+		</template>
 	</article>
 </template>
 
@@ -25,6 +30,7 @@
 
 .s4 {
 	@apply w-full relative flex flex-col items-center justify-center;
+	background: #DEDBD4;
 	height: size(1000);
 	padding: 0 size(277);
 	gap: size(50);
@@ -101,9 +107,55 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-	.s3 {
-		@apply w-full overflow-visible relative z-20;
+	.s4 {
+		@apply w-full overflow-hidden relative z-20 justify-start;
+		height: sizem(584);
+		padding: 0 sizem(31);
+		padding-top: sizem(40);
 
+		.t {
+			@apply w-full flex flex-col items-start;
+			color: #000;
+			gap: sizem(5);
+			margin-top: sizem(15);
+
+			.t1 {
+				width: sizem(230);
+			}
+
+			.t2 {
+				font-size: sizem(14);
+				font-weight: 500;
+				letter-spacing: sizem(1.26);
+			}
+
+			.t3 {
+				@apply text-left;
+				font-size: sizem(13);
+				line-height: sizem(20);
+				letter-spacing: 1;
+			}
+
+		}
+
+		.slide-box {
+			gap: size(14);
+			width: sizem(311);
+
+			.pagi {
+				@apply hidden;
+			}
+
+		}
+
+		.hill {
+			@apply absolute;
+
+			&.hillm {
+				width: 100%;
+				bottom: sizem(15);
+			}
+		}
 	}
 }
 </style>

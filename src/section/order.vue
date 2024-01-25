@@ -8,9 +8,9 @@
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="泰嘉拓真" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="宏璟青雲" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="泰嘉拓真" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="宏璟青雲" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
@@ -60,7 +60,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending ? '發送中..' : '送出表單' }}
+        {{ sending ? '發送中..' : '立即預約' }}
       </div>
 
       <!-- Contact Info -->
@@ -82,14 +82,14 @@
 
 .order-section {
   // background-image: url('@/section/form/bg.webp');
-  background-color: #082D57;
+  background-color: #DEDBD4;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: size(0);
   position: relative;
   height: auto;
-  padding-top: size(0);
+  padding-top: size(126);
   overflow: hidden;
 
   .stargroup {
@@ -127,14 +127,15 @@
   padding-top: size(0);
 
   .order-title {
-    @apply relative z-10 font-['noto_sans_tc'];
+    @apply relative z-10 font-['noto_serif_tc'];
     font-size: size(43);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: size(60);
-    width: size(292);
+    width: auto;
     text-align: center;
     margin: 0 auto;
     margin-bottom: size(10);
+    color: #A77C22;
 
     // &::after {
     //   content: '';
@@ -179,19 +180,19 @@
 
     .input-style {
       border-radius: 0;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: #fff;
       border: 1px solid #fff;
-      color: #fff;
+      color: #000;
 
       &::placeholder {
-        color: #fff !important;
+        color: #000 !important;
       }
 
     }
 
     .select-style {
       option {
-        background-color: #000;
+        background-color: #fff;
       }
     }
 
@@ -217,7 +218,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background: rgba(255, 255, 255, 0.20);
+    background: #A77C22;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;

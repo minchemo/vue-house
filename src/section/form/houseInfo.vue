@@ -1,30 +1,31 @@
 <template>
     <div>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-[#083161] house">
-        <!-- <div class="map"></div> -->
-        <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_sans_TC']">
-            <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
-                <div class="title text-[#fff]">建案資訊</div>
-                <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
-                    <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                        v-for="item in info.houseInfos">
-                        <p class="mr-5 border-l-4 border-[#fff] pl-2 text-[#fff]" v-html="item[0]"></p>
-                        <p class="whitespace-pre-line leading-normal text-left text-[#ccc] font-normal" v-html="item[1]">
-                        </p>
+        <div class="flex flex-col md:flex-row items-center justify-between bg-[#DEDBD4] house">
+            <!-- <div class="map"></div> -->
+            <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_sans_TC']">
+                <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
+                    <div class="title text-[#A77C22] font-['noto_serif_tc']">建｜案｜資｜訊</div>
+                    <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
+                        <div class="item font-bold flex items-center w-full whitespace-nowrap"
+                            v-for="item in info.houseInfos">
+                            <p class="mr-4 border-r-2 border-[#C9A063] pr-4 text-[#C9A063]" v-html="item[0]"></p>
+                            <p class="whitespace-pre-line leading-normal text-left text-[#221714] font-normal"
+                                v-html="item[1]">
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
-
-
     </div>
-    </div>
-     <img class="banner-m" src="@/section/form/db-banner-m.svg" alt="高大之森">
-    <img  class="banner-pc" src="@/section/form/db-banner.svg" alt="高大之森">
-   
+    <!-- <img class="banner-m" src="@/section/form/db-banner-m.svg" alt="宏璟青雲">
+    <img class="banner-pc" src="@/section/form/db-banner.svg" alt="宏璟青雲"> -->
+
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="高大之森" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="宏璟青雲" srcset=""></a>
 
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
@@ -43,27 +44,35 @@
 //     background-repeat: no-repeat;
 // }
 .house {
-//   background-image: url('@/section/form/bg.webp');
-  background-size: 100%;
+    //   background-image: url('@/section/form/bg.webp');
+    background-size: 100%;
 }
-.displaynone{display: none;}
-.banner-m{display: none;}
-.banner-pc{display: block;}
+
+.displaynone {
+    display: none;
+}
+
+.banner-m {
+    display: none;
+}
+
+.banner-pc {
+    display: block;
+}
+
 .info-box {
 
 
-    
+
 
     width: size(800);
 
     .title {
         width: 100%;
-        font-size: size(36);
+        font-size: size(43);
         font-weight: 700;
-        margin-bottom: size(36);
+        margin-bottom: size(24);
     }
-
-    
 
     .info-items {
         row-gap: size(20);
@@ -84,15 +93,20 @@
 }
 
 @media screen and (max-width:768px) {
-    .banner-pc{display: none;}
-    .banner-m{
-    display: block;
-    width: 100%;
-    background: #CCA86D;
+    .banner-pc {
+        display: none;
     }
-.house {
-//   background-image: url('@/section/form/bg_m.webp');
-}
+
+    .banner-m {
+        display: block;
+        width: 100%;
+        background: #CCA86D;
+    }
+
+    .house {
+        //   background-image: url('@/section/form/bg_m.webp');
+    }
+
     .footer {
         margin-bottom: sizem(0);
         //margin-bottom: sizem(63);
@@ -115,8 +129,7 @@
         }
     }
 
-}
-</style>
+}</style>
 
 <script setup>
 import info from "@/info"

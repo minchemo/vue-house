@@ -1,17 +1,21 @@
 <template>
   <div class="contact-info mx-auto bg-[transparent] flex flex-col items-center justify-between">
-    <!-- <div class="logo" data-aos="zoom-in"></div> -->
+    <img v-if="!$isMobile()" src="@/section/order_hill.svg" class="hill" alt="" srcset="">
+    <img v-else src="@/section/order_hill_m.svg" class="hill" alt="" srcset="">
+    <img src="@/section/tree.png" class="tree" alt="" srcset="">
+
+    <div class="logo" data-aos="zoom-in"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/phone.svg" alt="宏璟青雲" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="宏璟青雲" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/fb.svg" alt="宏璟青雲" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -20,7 +24,7 @@
         <div>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-between items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="宏璟青雲" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -32,21 +36,21 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
+      <img src="@/section/form/phone.svg" alt="宏璟青雲" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="宏璟青雲" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="泰嘉拓真" srcset="" />
+      <img src="@/section/form/pen.svg" alt="宏璟青雲" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="宏璟青雲" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -57,9 +61,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="泰嘉拓真" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="泰嘉拓真" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="泰嘉拓真" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="宏璟青雲" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="宏璟青雲" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="宏璟青雲" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
         '接待會館'
@@ -101,14 +105,39 @@
   width: size(1200);
   // border-radius: size(115);
   padding: size(0) size(168) size(55) size(168);
-  margin-top: size(80);
+  margin-top: size(40);
   position: relative;
   z-index: 50;
   margin-bottom: 0;
 
+  .tree {
+    @apply absolute;
+    width: size(104);
+    left: size(125);
+    bottom: 115%;
+    animation: an1 5s ease-in-out alternate infinite;
+    transform-origin: bottom center;
+
+    @keyframes an1 {
+      from {
+        transform: skewX(-3deg)
+      }
+
+      to {
+        transform: skewX(3deg)
+      }
+    }
+  }
+
+  .hill {
+    @apply absolute;
+    bottom: 100%;
+    width: size(1413);
+  }
+
   .logo {
     width: size(361);
-    height: size(280);
+    height: size(180);
     background-image: url("@/section/form/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -122,7 +151,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #CCA86D;
+      background-color: #A77C22;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -174,7 +203,7 @@
 
 
       &.googlemap {
-      background-color: #CCA86D;
+        background-color: #A77C22;
         color: #fff;
 
         img {
@@ -184,9 +213,10 @@
         &:hover {
           background-color: #CCA86D;
           color: #000;
-        img {
-          filter: brightness(1) invert(0);
-        }
+
+          img {
+            filter: brightness(1) invert(0);
+          }
         }
       }
     }
@@ -209,7 +239,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #CCA86D;
+      background-color: #A77C22;
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
@@ -230,11 +260,37 @@
     height: auto;
     // border-radius: sizem(68);
     padding: sizem(40) sizem(15);
-    margin-top: sizem(0);
+    margin-top: sizem(120);
     position: relative;
     justify-content: space-between;
 
+    .hill {
+      @apply absolute;
+      bottom: 90%;
+      width: 100%;
+    }
+
+    .tree {
+      @apply absolute;
+      width: sizem(89.9);
+      left: 10%;
+      bottom: 90%;
+      animation: an1 5s ease-in-out alternate infinite;
+      transform-origin: bottom center;
+
+      @keyframes an1 {
+        from {
+          transform: skewX(-3deg)
+        }
+
+        to {
+          transform: skewX(3deg)
+        }
+      }
+    }
+
     .logo {
+      @apply hidden;
       width: sizem(177);
       height: sizem(138.51);
       background-image: url("@/section/form/logo.png");

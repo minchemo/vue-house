@@ -1,6 +1,6 @@
 <template>
 	<article class="s7">
-		<div class="is">
+		<div class="is" v-if="!isMobile">
 			<div class="item" v-for="img in imgs">
 				<div class="i" :style="{ backgroundImage: `url(${img.img})` }">
 					<div class="caption">{{ img.caption }}</div>
@@ -11,9 +11,33 @@
 				</div>
 			</div>
 		</div>
-		<img class="title" src="@/section/s7/t.svg" alt="" srcset="">
-		<img class="i1" src="@/section/s7/i1.png" alt="" srcset="">
-		<img class="i2" src="@/section/s7/i2.png" alt="" srcset="">
+		<Splide v-else ref="splide" class="is splide-widget" :options="{
+			rewind: true,
+			arrows: true,
+			autoplay: true,
+			interval: 4000,
+			gap: 20,
+			type: 'loop',
+			arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`
+		}" @splide:mounted="mounted" @splide:move="moved">
+			<SplideSlide :class="`item item-${i}`" v-for="img, i in imgs">
+				<div class="i" :style="{ backgroundImage: `url(${img.img})` }">
+					<div class="caption">{{ img.caption }}</div>
+				</div>
+				<div class="t">
+					<div class="t1" v-html="img.t1"></div>
+					<div class="t2" v-html="img.t2"></div>
+				</div>
+			</SplideSlide>
+		</Splide>
+		<template v-if="!isMobile">
+			<img class="title" src="@/section/s7/t.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
+			<img class="i1" src="@/section/s7/i1.png" alt="" srcset="">
+			<img class="i2" src="@/section/s7/i2.png" alt="" srcset="">
+		</template>
+		<template v-else>
+			<img class="title" src="@/section/s7/t_m.png" alt="" srcset="">
+		</template>
 	</article>
 </template>
 
@@ -115,8 +139,80 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-	.s3 {
-		@apply w-full overflow-visible relative z-20;
+	.s7 {
+		@apply w-full relative items-start;
+		height: auto;
+		padding: sizem(15) sizem(31);
+
+		.is {
+			@apply block items-center;
+			gap: 0;
+			width: sizem(311);
+
+			.item {
+				.i {
+					width: sizem(311);
+					height: sizem(323.72);
+
+					.caption {
+						font-size: sizem(12);
+						left: sizem(10);
+						bottom: sizem(5);
+					}
+
+				}
+
+				.t {
+					@apply flex flex-col items-center justify-center text-white;
+					height: sizem(97);
+					border: sizem(2) solid #fff;
+					border-top: 0;
+					gap: sizem(0);
+
+
+					.t1 {
+						svg {
+							max-width: sizem(110);
+							max-height: sizem(55);
+							min-height: sizem(22);
+						}
+					}
+
+					.t2 {
+						font-size: sizem(16);
+						font-weight: 700;
+						line-height: 1.5;
+						letter-spacing: sizem(0.2);
+					}
+				}
+
+				&.item-0 {
+					.t {
+						gap: sizem(15);
+						@apply flex-row;
+
+						.t2 {
+							@apply text-left;
+						}
+					}
+				}
+
+				&.item-2 {
+					.t {
+						.t2 {
+							@apply text-center;
+						}
+					}
+				}
+			}
+		}
+
+		.title {
+			@apply relative;
+			left: 0;
+			width: sizem(345);
+			margin-top: sizem(20);
+		}
 
 	}
 }

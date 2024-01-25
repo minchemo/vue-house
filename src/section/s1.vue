@@ -3,10 +3,12 @@
 		<div class="t">
 			<img src="@/section/s1/logo.png" class="t1">
 			<div class="t-m">
-				<div class="t2">土城植萃<span>｜</span>慢享日常</div>
-				<div class="t3">青雲路<span>•</span>明德路 光合2-4房</div>
+				<div class="t2" data-aos="fade-up" data-aos-delay="0">土城植萃<span>｜</span>慢享日常</div>
+				<div class="t3" data-aos="fade-up" data-aos-delay="200">青雲路<span>•</span>明德路 <br v-if="isMobile" />光合2-4房</div>
+
+				<div class="t4" v-if="isMobile">全新落成</div>
 			</div>
-			<div class="t4">全新<br>
+			<div class="t4" v-if="!isMobile">全新<br>
 				落成</div>
 		</div>
 		<s1bg />
@@ -81,7 +83,55 @@
 @media screen and (max-width: 767px) {
 	.s1 {
 		@apply w-full overflow-visible relative z-20;
+		height: calc(100vh - 63px);
+		min-height: sizem(604);
+		max-height: sizem(812);
 
+		.t {
+			@apply absolute z-10 w-full flex flex-col items-center justify-center;
+			bottom: unset;
+			top: sizem(151);
+			gap: sizem(19);
+
+			.t1 {
+				width: sizem(272);
+			}
+
+			.t-m {
+				@apply flex flex-row items-center justify-between flex-wrap w-full;
+				gap: size(26);
+				padding-left: sizem(53);
+				padding-right: sizem(53);
+
+				.t2 {
+					flex-basis: 100%;
+					font-size: sizem(21);
+					font-weight: 400;
+					letter-spacing: sizem(10);
+					white-space: nowrap;
+					margin-bottom: sizem(15);
+				}
+
+				.t3 {
+					font-size: sizem(15);
+					letter-spacing: sizem(1.5);
+					line-height: sizem(15);
+					font-weight: 700;
+
+					span {
+						font-size: size(24);
+						font-weight: 1000;
+					}
+				}
+			}
+
+			.t4 {
+				font-size: sizem(17);
+				font-weight: 700;
+				letter-spacing: sizem(1.53);
+				padding: sizem(9) sizem(19);
+			}
+		}
 	}
 }
 </style>
