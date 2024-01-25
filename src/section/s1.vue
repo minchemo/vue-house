@@ -3,7 +3,7 @@
     <img src="./s1/pc_bg.jpg" alt="bg" class="bg-img" v-if="!$isMobile()">
     <img src="./s1/m_bg.jpg" alt="bg"  class="bg-img" v-else>
     <img src="./s1/logo1.svg" class="logo" data-aos="fade-up" data-aos-delay="0">
-    <div class="txt font-['noto_Serif_tc']" data-aos="fade-up" data-aos-delay="200">統一工商綜合區開發股份有限公司</div>
+    <div class="txt font-['noto_Serif_tc']" data-aos="fade-up" data-aos-delay="200">眾德建設股份有限公司</div>
     <div class="line"></div>
       
   </article>
