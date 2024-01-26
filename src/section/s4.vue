@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="t">
-			<img class="t1" src="@/section/s4/convenient.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0">
+			<img class="t1" src="@/section/s4/convenient.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0">
 			<div class="t2" data-aos="fade-up" data-aos-delay="200">極緻機能｜日常採買好方便 美食隨處可見</div>
 			<div class="t3" data-aos="fade-up" data-aos-delay="400">
 				日月光廣場、秀泰影城、家樂福，時尚購物與都市休閒匯集，看電影買東西都好容易。<br v-if="!isMobile" />延吉街、裕民路商圈，下班後晚餐不擔心，採買食材煮頓飯都很便利。</div>
@@ -42,6 +42,7 @@
 
 		.t1 {
 			width: size(467);
+			margin: auto auto size(10) auto;
 		}
 
 		.t2 {
@@ -121,11 +122,12 @@
 
 			.t1 {
 				width: sizem(230);
+				margin: auto auto sizem(10) 0;
 			}
 
 			.t2 {
 				font-size: sizem(14);
-				font-weight: 500;
+				font-weight: 900;
 				letter-spacing: sizem(1.26);
 			}
 

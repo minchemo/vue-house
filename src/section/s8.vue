@@ -2,9 +2,9 @@
 	<article class="s8">
 		<div class="t">
 			<div class="t1" data-aos="fade-up" data-aos-delay="0">慢享土城日常</div>
-			<div class="t2" data-aos="fade-up" data-aos-delay="200">光合植萃建築</div>
-			<div class="l"></div>
-			<div class="t3" data-aos="fade-up" data-aos-delay="400">2-4房 全新落成 <br v-if="isMobile">親眼見證美好</div>
+			<div class="t2" data-aos="fade-up" data-aos-delay="100">光合植萃建築</div>
+			<div class="l" data-aos="fade-up" data-aos-delay="200"></div>
+			<div class="t3" data-aos="fade-up" data-aos-delay="300">2-4房 全新落成 <br v-if="isMobile">親眼見證美好</div>
 			<div class="pagi" v-if="!isMobile">
 				<span v-for="img, i in imgsA" :class="{ 'active': i == currentIdxA }" @click="splideA.go(i)"></span>
 			</div>
@@ -12,7 +12,7 @@
 
 		<Slide ref="splideA" :arrow_m="true" :gap="1" :gap_m="0" :imgs="isMobile ? imgsAm : imgsA" :w="1920" :h="1089" :w_m="375" :h_m="615" :dot="false"
 			@slideIndex="onMovedA" />
-		<img class="architectural" src="@/section/s8/architectural.png" alt="" srcset="">
+		<img class="architectural" src="@/section/s8/architectural.svg" alt="" srcset="">
 	</article>
 </template>
 

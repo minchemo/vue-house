@@ -6,7 +6,7 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="宏璟青雲" srcset="">
+    <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="宏璟青雲" srcset="">
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />

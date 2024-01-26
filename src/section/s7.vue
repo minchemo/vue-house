@@ -165,7 +165,7 @@
 				.t {
 					@apply flex flex-col items-center justify-center text-white;
 					height: sizem(97);
-					border: sizem(2) solid #fff;
+					border: sizem(3) solid #fff;
 					border-top: 0;
 					gap: sizem(0);
 

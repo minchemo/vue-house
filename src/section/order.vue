@@ -37,7 +37,7 @@
             </option>
           </select>
         </div>
-        <div class="right h-full">
+        <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
             class="textarea w-full h-full input-style" placeholder="備註訊息"></textarea>
         </div>
@@ -47,9 +47,9 @@
       <div class="flex gap-2 items-center justify-center control relative z-10">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-white">
+        <p class="text-[#333333]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#fff000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -89,7 +89,7 @@
   padding-bottom: size(0);
   position: relative;
   height: auto;
-  padding-top: size(126);
+  padding-top: size(100);
   overflow: hidden;
 
   .stargroup {
@@ -173,16 +173,21 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    // height: size(500);
     gap: size(80);
     margin-bottom: size(50);
     z-index: 50;
+    align-items:stretch;
+
 
     .input-style {
       border-radius: 0;
       background-color: #fff;
       border: 1px solid #fff;
       color: #000;
+      margin-bottom:size(15);
+      &:last-child{
+      margin-bottom:size(0);}
 
       &::placeholder {
         color: #000 !important;
@@ -202,6 +207,11 @@
 
     .right {
       width: size(419);
+    margin: 0;
+    align-self:stretch;
+    .textarea{
+      height: 100%;
+    }
     }
 
     &::after {
@@ -237,7 +247,7 @@
 
 @media screen and (max-width:1300px) {
   .order-section {
-    padding-top: size(200)
+   // padding-top: size(200)
   }
 }
 
@@ -246,7 +256,7 @@
     // background-image: url('@/section/form/bg_m.webp');
     height: auto;
     padding-bottom: sizem(0);
-    padding-top: sizem(0);
+    padding-top: sizem(50);
     position: relative;
     overflow: hidden;
 
@@ -316,13 +326,19 @@
     .form {
       width: sizem(310);
       height: auto;
-      gap: sizem(15);
+      gap:0;
       margin-bottom: sizem(20);
       flex-direction: column;
 
+
+    .input-style {
+      margin-bottom:sizem(15);
+      &:last-child{
+      margin-bottom:sizem(15);}
+    }
       .left {
         width: 100%;
-        gap: sizem(15);
+        gap:0;
       }
 
       .right {

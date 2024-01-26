@@ -2,6 +2,7 @@
     <div class="s1bg">
         <div class="bg">
             <img src="@/section/s1/l1.svg" alt="l" class="l">
+            <img src="@/section/s1/tree2.png" alt="tree" class="tree2">
             <img src="@/section/s1/l2.svg" alt="l" class="l">
             <template v-if="!isMobile">
                 <img src="@/section/s1/tree1.png" alt="tree" class="tree1">
@@ -16,7 +17,6 @@
                 <img src="@/section/s1/hill2_m.svg" alt="hill" class="hill2m">
                 <img src="@/section/s1/buildingm.png" alt="building" class="building">
             </template>
-            <img src="@/section/s1/tree2.png" alt="tree" class="tree2">
             <img src="@/section/s1/slowliving.svg" alt="hill" class="slowliving">
         </div>
     </div>
@@ -107,7 +107,7 @@
 
         .tree2 {
             width: size(333);
-            bottom: size(110);
+            bottom: size(95);
             right: size(61);
             transform: skewX(-3deg);
             transform-origin: 50% 100%;

@@ -25,7 +25,7 @@
 
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="宏璟青雲" srcset=""></a>
+                src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
 
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
@@ -86,7 +86,7 @@
             text-align: left;
 
             p:first-child {
-                width: 4.5em;
+                min-width: 4.5em;
             }
         }
     }

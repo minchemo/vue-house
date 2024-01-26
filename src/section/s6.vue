@@ -2,7 +2,7 @@
 	<article class="s6">
 		<div class="text-box">
 			<div class="t" v-if="!isMobile">
-				<img class="t1" src="@/section/s6/brand.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
+				<img class="t1" src="@/section/s6/brand.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
 				<div class="t-m">
 					<div class="t2" data-aos="fade-up" data-aos-delay="200">三步慢慢</div>
 					<div class="t3" data-aos="fade-up" data-aos-delay="400">光和樹住進家</div>
@@ -21,7 +21,7 @@
 					2019 新莊｜宏景榮華<br />
 					2019 台北｜帝璟苑
 				</div>
-				<img src="@/section/s6/cmyk.png" class="cmyk" alt="" srcset="">
+				<img src="@/section/s6/cmyk.png" class="cmyk" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
 			</div>
 		</div>
 		<div class="slide-box">
@@ -59,6 +59,7 @@
 
 			.t1 {
 				width: size(251);
+				margin: auto auto size(23) 0;
 			}
 
 			.t-m {

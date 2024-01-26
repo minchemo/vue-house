@@ -1,7 +1,7 @@
 <template>
 	<article class="s3">
 		<div class="t">
-			<img class="t1" src="@/section/s3/t1.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0">
+			<img class="t1" src="@/section/s3/t1.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0">
 			<div class="t-m">
 				<div class="t2"  data-aos="fade-up" data-aos-delay="200">一步滿滿</div>
 				<div class="t3"  data-aos="fade-up" data-aos-delay="400">土城繁華無垠</div>
@@ -58,6 +58,7 @@
 
 		.t1 {
 			width: size(467.43);
+			margin: auto auto size(15) auto;
 		}
 
 		.t-m {

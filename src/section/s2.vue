@@ -54,7 +54,7 @@
 		.t3 {
 			@apply text-center;
 			font-size: size(17);
-			font-weight: 500;
+			font-weight: 400;
 			line-height: size(38.6);
 			letter-spacing: size(2.38);
 			width: size(1069);

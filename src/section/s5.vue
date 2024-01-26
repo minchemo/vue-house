@@ -1,7 +1,7 @@
 <template>
 	<article class="s5">
 		<div class="t">
-			<img class="t1" src="@/section/s5/greenery.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
+			<img class="t1" src="@/section/s5/greenery.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
 			<div class="t-m">
 				<div class="t2" data-aos="fade-up" data-aos-delay="200">二步慢慢</div>
 				<div class="t3" data-aos="fade-up" data-aos-delay="400">綠意飽滿入懷</div>
@@ -48,7 +48,7 @@
 			<div class="t4" data-aos="fade-up" data-aos-delay="0">綠享人生｜三大公園環繞 擁倘適切閑然</div>
 			<div class="t5" data-aos="fade-up" data-aos-delay="200">近擁城市中的綠洲，開車很近，走路也不遠，與家人共享天倫時光不必走遠。</div>
 		</div>
-		<img src="@/section/s5/leaf.png" class="leaf" alt="" srcset="">
+		<img src="@/section/s5/leaf.png" data-aos="fade-down-left" data-aos-delay="200" data-aos-duration="3000" class="leaf" alt="" srcset="">
 	</article>
 </template>
 
@@ -61,6 +61,8 @@
 	height: size(1594);
 	padding: 0 size(277);
 	gap: size(50);
+ > .t > .t1{
+			margin: auto auto size(23) auto;}
 
 	.t {
 		@apply w-full flex flex-col items-center justify-center;
@@ -168,7 +170,8 @@
 		height: auto;
 		padding:  sizem(30) sizem(31);
 		gap: sizem(20);
-
+ > .t > .t1{
+				margin: auto auto sizem(18) 0;}
 
 		.t {
 			@apply w-full flex flex-col items-start justify-center;
@@ -189,6 +192,7 @@
 				.t3 {
 					font-size: sizem(15);
 					letter-spacing: sizem(1.35);
+					font-weight: 700;
 				}
 			}
 
