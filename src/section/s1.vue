@@ -6,6 +6,7 @@
 	<img src="./s1/3.png" class="img3" alt="" />
 	
 	<img src="./s1/logo.png" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
+	<div class="t1" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">十字軸心｜19-27坪</div>
 
   </article>
 </template>
@@ -34,6 +35,13 @@
 	left:size(675);
 	top:calc(50% + #{size(280-(1080*.5))});
 	width: size(556);
+  }
+  .t1{
+	position: absolute;
+	left:size(710);
+	top:size(820);
+	font-weight: 500;
+	letter-spacing: .3em;
   }
 @keyframes an1 {
 	to{transform: scale(1);}
@@ -81,18 +89,27 @@
 
 	.logo{
 		position: absolute;
-		top:sizem(160);
+		top:sizem(604);
 		left:auto;right: auto;margin: auto;
-		top:calc(50% + #{sizem(160-(604*.5))});
+		top:calc(50% + #{sizem(130-(604*.5))});
 		width: sizem(271);
 	}
+
+	.t1{
+	left:auto;right: auto;margin: auto;
+	top:sizem(390);
+	font-weight: 500;
+	top:calc(50% + #{sizem(400-(604*.5))});
+	letter-spacing: .3em;
+	font-size: sizem(20);
+  }
   .img1{
 	top:sizem(-30);
 	left:sizem(-45);
 	width: sizem(250);
   }
   .img2{
-	bottom:sizem(15);
+	bottom:sizem(0);
 	right:sizem(0);
 	width: sizem(110);
   }
