@@ -7,12 +7,11 @@ export default {
     keywords: caseName,
   },
   address: "土城區青雲路336巷30號",
-  googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d522.9414792203362!2d120.27978848648348!3d22.726743968384447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f16f5704453%3A0x2397ed388311211b!2z6auY5aSn5LmL5qOuL-WinuWAvOaloOaikyDljbPliLvpoJDntIQ!5e0!3m2!1szh-TW!2sjp!4v1703742850255!5m2!1szh-TW!2sjp",
-  googleLink: "https://maps.app.goo.gl/A5cbZX8QWugoJG1o6",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d4059.6169086360005!2d121.45657242813198!3d24.976061114862343!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzM0LjQiTiAxMjHCsDI3JzI3LjgiRQ!5e0!3m2!1szh-TW!2stw!4v1699258462437!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/xg5P7Y9mBxJz6g197",
   phone: "02-2263-1888",
-  fbLink: "",
-  fbMessage: "",
+  fbLink: "https://www.facebook.com/61551474076594",
+  fbMessage: "https://m.me/61551474076594",
   caseName: caseName,
   houseInfos: [
     ["投資興建", "宏璟建設股份有限公司"],
