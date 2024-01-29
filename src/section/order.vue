@@ -31,7 +31,7 @@
             <option value="" selected disabled>請選擇房型</option>
             <option v-for="room in info.room_type" :value="room" v-text="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋用途</span>
+          <label class="row" v-if="info.budget"><span>購屋用途<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇用途</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
@@ -368,7 +368,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "budget","gender",]
+const bypass = ["project", "msg", "email", "gender",]
 
 //中文對照
 const formDataRef = ref([
