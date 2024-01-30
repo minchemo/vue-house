@@ -62,11 +62,11 @@
 
   .slider {
     margin: 0;
-    flex-basis: size(720);
+    flex-basis: size(718);
       height: size(440);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(720);
+    flex-basis: size(718);
       height: size(440);
       
     }

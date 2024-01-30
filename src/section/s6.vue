@@ -57,11 +57,11 @@
 }
   .slider {
     margin: 0;
-    flex-basis: size(823);
+    flex-basis: size(760);
     .slide-item {
       @apply bg-cover;
     flex-basis: 100%;
-      height: size(506);
+      height: size(470);
       
     }
     .splide__pagination{
@@ -139,7 +139,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 }
 const imgs = [
   {
-    img:new URL("./s6/1.jpg", import.meta.url).href ,
+    img:new URL("./s6/1.webp", import.meta.url).href ,
     caption: "一橋之隔台北雙子星"
   },
 ]

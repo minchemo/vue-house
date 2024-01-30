@@ -10,7 +10,7 @@
    <!-- <div class="subdesc">CATHAY REAL ESTATE</div> --> 
   </div>
   <div class="img">
-  <img src="./s7/1.jpg" alt=""><span class="caption">台北車站</span></div>
+  <img src="./s7/1.webp" alt=""><span class="caption">台北車站</span></div>
 </div>
 <div class="list" data-aos="fade-up" data-aos-delay="400">
   <div class="txt">
@@ -19,7 +19,7 @@
    <!--  <div class="subdesc">CATHAY REAL ESTATE</div> --> 
   </div>
   <div class="img">
-  <img src="./s7/2.jpg" alt=""><span class="caption">台北雙子星3D示意圖<br v-if="$isMobile()"> （資料來源 臺北市政府捷運工程局）</span></div>
+  <img src="./s7/2.webp" alt=""><span class="caption">台北雙子星3D示意圖<br v-if="$isMobile()"> （資料來源 臺北市政府捷運工程局）</span></div>
 </div>
 <!-- 
 <div class="list" data-aos="fade-up" data-aos-delay="600">

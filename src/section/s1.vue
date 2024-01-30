@@ -3,8 +3,12 @@
    <!--  
    <img class="t0" src="./s1/mo.jpg" alt="" srcset="">
    <img class="t0" src="./s1/pc.jpg" alt="" srcset="">  -->
+   <img class="bg1" src="./s1/bg2.jpg" alt="" srcset=""> 
+   <img class="gif" src="./s1/gif4.gif" alt="" srcset=""> 
 
-    <img src="./s1/txt.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"/>
+   <img src="./s1/logo.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-if="!$isMobile()" />
+   <img src="./s1/logom.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-else />
+    
     <div class="t1">
     <img src="./s1/slogo1.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/>
     <img src="./s1/slogo2.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/></div>
@@ -22,35 +26,41 @@
 }
 @keyframes an1 {
   to {
-     transform: skewX(3deg)
+     transform: translate(0)
   }
 }
 .s1 {
   @apply relative w-full h-screen;
- // min-height: size(900);
- // max-height: size(1080);
-  height: size(2118);
+  min-height: size(900);
+  max-height: size(1180);
+  height:100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
   font-size:size(35);
-  gap: 44vw;
-  background:url("./s1/bg1.jpg");
-  background-size: cover;
+  gap: 8.5vw;
   letter-spacing: 0.09em;
   .t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .3;z-index: 10;}
+  .bg1{position: absolute;top: 0;left: 0;width: 135.4%;height: 100%;
+    transform: translateX(calc(-100% + 100vw));
+    animation: an1 50s alternate linear infinite;}
+  .gif{position: absolute;top: 0;left:-150%;width: 300%;height: 100%;
+    mix-blend-mode: overlay;
+    opacity: .2;}
   .logo{position: relative;z-index: 3;
-    width:size(922);
-    margin: 0em auto 0;left: .6vw;
+    width:size(1186);
+    margin: 7.2em auto 0;left: .6vw;
+    filter:drop-shadow(0 0 size(15) #142C67cc);
+    //142C67
     }
   .t1{position: relative;z-index: 3;
   display: flex;
   justify-content: center;
   align-items:center;
-  gap:2vw;
+  gap:4vw;
   margin-bottom: 5.5vw;
-  img{height:size(70);}
+  img{height:size(86);}
     }
 
   
@@ -69,21 +79,29 @@
 
 
   .s1 {
-    height:sizem(564);
+  min-height:sizem(568);
+  max-height: sizem(812);
+    height: calc(100vh - 62px);
     font-size:sizem(14);
-  gap: 53vw;
-  background-image: url("./s1/bg1m.jpg");
+  gap: 0;
+  .bg1{
+    width: 240%;
+    height: 100%;
+    animation: an1 60s alternate linear infinite;
+    //left: -90%;
+  }
 
     
   .logo{
-    width:sizem(290);
-    left: 2.2vw;
+    width:sizem(270);
+    left: auto;
+    margin: 6.5em auto 7em auto;
     }
   .t1{
   flex-direction: column;
   gap:5vw;
-    margin-bottom: 1.5vw;
-  img{height:sizem(21);}
+   // margin-bottom: 1.5vw;
+  img{height:sizem(34);}
     }
 
   }

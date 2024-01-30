@@ -1,82 +1,73 @@
-
-
 <template>
-  <article class="s9">
-  <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">嚴選建材</h3>
-  </div>
+  <article class="s9" ref="s9">
+   <img class="gif" src="./s1/gif4.gif" alt="" srcset=""> 
     <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">精品建材，尊榮享受</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">衛浴：浴廁採用ＴＯＴＯ衛浴設備、ＨＣＧ、西班牙ＲＯＣＡ免治馬桶。<br>
-廚具：世界級德匠名㕑，附贈林內雙口瓦斯爐、抽風機、烘碗機。<br>電梯：永大六人座電梯。<br>其他：錦鋐氣密窗、冠軍磁磚、台灣水泥、天然瓦斯。
-</p>
-      </div>
+	 <div class="txt">
+	  <h3 class="title" data-aos="fade-up" data-aos-delay="0">自然之藝 風光水綠 </h3>
+	  <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">自然の芸術 優れた風景</h4>
+    <hr data-aos="fade-up" data-aos-delay="100" />
+	  <p class="desc" data-aos="fade-up" data-aos-delay="200">RiVER PARK將流動的自然從平面的律動延伸至整體外觀的垂直節奏，<br v-if="!$isMobile()">
+輕盈的姿態妝點綠色跳躍，延伸新北大都會公園壯闊綠河，<br v-if="!$isMobile()">
+現代框景美學，引景入室自然而居。</p>
+		</div>
     </div>
-    <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
-
+    <img src="./s9/img.webp" alt="img" class="img" data-aos="fade-up" data-aos-delay="300">
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s9 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#000] bg-[#F8F8F8];
+  @apply relative flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
-  font-size:size(18);
-  gap:3em;
-  flex-direction: row-reverse;
+  padding:8em 0 9em 0;
+  font-size:size(17);
+  gap:5em;
   flex-wrap: wrap;
-
-.img{position: absolute;bottom:0;right:size(50);width:size(795);
-img{width: 100%;position: relative;}}
+  background:url("./s9/bg.webp") center;
+  background-size: cover;
+  .gif{position: absolute;top: 0;left:-150%;width: 300%;height: 100%;
+    mix-blend-mode: overlay;
+    opacity: .2;}
 
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
+    flex-basis: size(550);
   flex-direction: column;
   text-align: justify;
 }
-.txt {
-.title{
-&::after,
-&::before{
-background: #C9A063;
-}
-}}
 
-  .slider {
+
+.txt {
+    text-align: center;
+    text-shadow: 0 0 6px #00284e;
+  .slogo{height:size(45);}
+  .title{font-size: 2.8em;
     margin: 0;
-    flex-basis: size(840);
-      height: size(560);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
-      
-    }
-    .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #B78E63;
-    }
-    }
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 300;
+  }
+  .subtitle{
+  @apply font-['Noto_serif_TC',sans-serif];
+    font-size: 1.1em;letter-spacing: 0.15em;
+    margin: 0;
+    text-align: center;}
+  .desc{
+    font-weight: 400;
+  }
+  hr{width: 23em;margin:1.7em auto;}
+    
+}
+
+  .img {position: relative;
+    margin: 0 -7.5em 0 0;top: 1em;
+    flex-basis: size(826);
   }
 }
 /* 螢幕尺寸標準 */
@@ -88,34 +79,26 @@ background: #C9A063;
   .s9 {
   @apply flex-col;
     height: auto;
-    padding: 0;
-  font-size:sizem(12);
+    padding:sizem(60) 0 sizem(60) 0;
+  font-size:sizem(13);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
-
-.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+  gap:0em;
 
   .main {
-    padding: 0 sizem(30);
+    padding: 0 sizem(32.5);
     width: 100%;
-}
-  .slider {
-    height: auto;
-    width: 100%;
+  }
 
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
-    }
+  .txt {
+    margin-bottom:0em;
+  .title{font-size: 2em;margin: 0 0 0.2em;}
+  hr{width: 17em;}
+  }
+
+
+  .img {
+    width: sizem(330);margin: auto;left: .5em;
   }
   }
 }
@@ -124,6 +107,7 @@ background: #C9A063;
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -140,39 +124,30 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
+  pagination: false,
   autoplay: true,
   interval: 4000,
-  gap: 0,
+  gap: 10,
   type: 'loop'
 }
 
 const imgs = [
   {
-    img:new URL("./s9/1.jpg", import.meta.url).href ,
-    caption: "電梯"
+    img:new URL("./s9/531.jpg", import.meta.url).href ,
+    caption: "CITY LINK情境示意"
   },
   {
-    img:new URL("./s9/2.jpg", import.meta.url).href ,
-    caption: "廚具"
+    img:new URL("./s9/532.jpg", import.meta.url).href ,
+    caption: "CITY LINK情境示意"
   },
   {
-    img:new URL("./s9/3.jpg", import.meta.url).href ,
-    caption: "ROCA西班牙百年衛浴"
+    img:new URL("./s9/533.jpg", import.meta.url).href ,
+    caption: "CITY LINK情境示意"
   },
   {
-    img:new URL("./s9/4.png", import.meta.url).href ,
-    caption: ""
-  },
-  {
-    img:new URL("./s9/5.jpg", import.meta.url).href ,
-    caption: "乾濕分離衛浴"
-  },
-  {
-    img:new URL("./s9/6.jpg", import.meta.url).href ,
-    caption: "Panasonic"
+    img:new URL("./s9/534.jpg", import.meta.url).href ,
+    caption: "CITY LINK情境示意"
   },
 ]
-const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 
