@@ -5,7 +5,7 @@
                 百年車站 興未來<br>
                 重劃願景 綻光芒</div>
             <div class="t2" data-aos="fade-up" data-aos-delay="200">
-                新站特區 ｜ 2-4房
+                新站特區 ｜ 3-4房
             </div>
             <div class="t3" data-aos="fade-up" data-aos-delay="400">
                 基地位置：<span>台中市沙鹿區青年路、永寧路口</span><br />

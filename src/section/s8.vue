@@ -4,7 +4,7 @@
 			<div class="t1" data-aos="fade-up" data-aos-delay="0">慢享土城日常</div>
 			<div class="t2" data-aos="fade-up" data-aos-delay="100">光合植萃建築</div>
 			<div class="l" data-aos="fade-up" data-aos-delay="200"></div>
-			<div class="t3" data-aos="fade-up" data-aos-delay="300">2-4房 全新落成 <br v-if="isMobile">親眼見證美好</div>
+			<div class="t3" data-aos="fade-up" data-aos-delay="300">3-4房 全新落成 <br v-if="isMobile">親眼見證美好</div>
 			<div class="pagi" v-if="!isMobile">
 				<span v-for="img, i in imgsA" :class="{ 'active': i == currentIdxA }" @click="splideA.go(i)"></span>
 			</div>
