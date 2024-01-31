@@ -7,7 +7,7 @@
 	  <p class="desc" data-aos="fade-up" data-aos-delay="100">當水岸遇見公園，當三重開始懂得森活；<br v-if="$isMobile()">世界台北都在掌心悠遊。</p>
 		</div>
 	  <Fullview />
-	  <div class="caption">空拍合成示意圖</div>
+	  <div class="caption">空拍實景</div>
 	</article>
   </template>
   

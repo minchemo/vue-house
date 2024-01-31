@@ -5,7 +5,7 @@
       </div>
     <div class="main">
       <div class="txt">
-    <p class="desc" data-aos="fade-up" data-aos-delay="100">李文勝建築師全案整體規劃，建築、公設、景觀一氣呵成的自然思維，對位四季芳華不同的時令之美，從踏入RiVER PARK開始，水岸、公園、天光、生活，都在信步之間全然享受。!</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="100">李文勝建築師全案整體規劃，建築、公設、景觀一氣呵成的自然思維，對位四季芳華不同的時令之美，從踏入RiVER PARK開始，水岸、公園、天光、生活，都在信步之間全然享受。</p>
       
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">獲獎 / 展覽</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="300">台灣 TRAA 第六屆台灣住宅建築獎 首獎<br>
