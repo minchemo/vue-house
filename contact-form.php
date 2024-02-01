@@ -286,7 +286,7 @@ if (empty($phone)) {
             $url .= "&city=".$city;
             $url .= "&area=".$area;
             $url .= "&room_type=" . $room_type;
-            $url .= "&message=".$msg.";性別:".$gender.";用途:".$use_type;
+            $url .= "&message=".$msg.";性別:".$gender.";用途:".$use_type";預算".$budget;
             $url .= "&utm_source=".$utm_source;
             $url .= "&utm_medium=".$utm_medium;
             $url .= "&utm_content=".$utm_content;

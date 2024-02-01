@@ -31,9 +31,15 @@
             <option value="" selected disabled>請選擇房型</option>
             <option v-for="room in info.room_type" :value="room" v-text="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋用途<span>(必填)</span></span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+          <label class="row" v-if="info.use_type"><span>購屋用途<span>(必填)</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
             <option value="" selected disabled>請選擇用途</option>
+            <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type"></option>
+          </select>
+        </label>
+        <label class="row" v-if="info.budget"><span>購屋預算<span>(必填)</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇區間</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
         </label>
@@ -357,6 +363,7 @@ const formData = reactive({
   phone: "",
   room_type: "",
   budget: "",
+  use_type: "",
   gender: "",
   project: "",
   email: "",
@@ -375,7 +382,8 @@ const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
-  "用途", //budget
+  "預算", //budget
+  "用途", //use_type
   "性別", //gender
   "建案", //project
   "信箱", //email
