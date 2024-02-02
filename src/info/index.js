@@ -1,4 +1,4 @@
-const caseName = "北城之星"
+const caseName = "鋭揚北城之星"
 
 export default {
     meta: {
@@ -17,7 +17,7 @@ export default {
     caseName: caseName,
     houseInfos: [
         
-        ["建案名稱", "北城之星"],
+        ["建案名稱", "鋭揚北城之星"],
         ["樓層規劃", "4F"],
         ["房型規劃", "臨路店面、社區"],
         ["投資興建", "鋭揚建設集團"],
