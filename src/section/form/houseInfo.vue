@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="false">
         <div class="flex flex-col md:flex-row items-center justify-between bg-[#DEDBD4] house">
             <!-- <div class="map"></div> -->
             <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_sans_TC']">
@@ -20,12 +20,12 @@
 
         </div>
     </div>
-    <!-- <img class="banner-m" src="@/section/form/db-banner-m.svg" alt="宏璟青雲">
-    <img class="banner-pc" src="@/section/form/db-banner.svg" alt="宏璟青雲"> -->
+    <!-- <img class="banner-m" src="@/section/form/db-banner-m.svg" alt="北城之星">
+    <img class="banner-pc" src="@/section/form/db-banner.svg" alt="北城之星"> -->
 
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="宏璟青雲" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="北城之星" srcset=""></a>
 
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>

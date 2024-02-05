@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order relative bg-[#fff] text-center">
+  <div id="order" class="order relative bg-[#000] text-center">
 
     <div class="order-section">
       <!-- Title -->
@@ -8,9 +8,9 @@
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="宏璟青雲" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="北城之星" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="宏璟青雲" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="北城之星" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->
@@ -49,7 +49,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#fff000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#C9A063] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -70,7 +70,7 @@
 
 
     <!-- Map -->
-    <Map />
+    <Map v-if="false" />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -82,7 +82,7 @@
 
 .order-section {
   // background-image: url('@/section/form/bg.webp');
-  background-color: #DEDBD4;
+  background-color: #000;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,7 +127,7 @@
   padding-top: size(0);
 
   .order-title {
-    @apply relative z-10 font-['noto_serif_tc'];
+    @apply relative z-10;
     font-size: size(43);
     font-weight: 700;
     margin-bottom: size(60);
@@ -135,7 +135,7 @@
     text-align: center;
     margin: 0 auto;
     margin-bottom: size(10);
-    color: #A77C22;
+    color: #fff;
 
     // &::after {
     //   content: '';
@@ -218,12 +218,12 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background: #A77C22;
+    background: #C9A063;
     width: size(350);
     height: 3.3em;
     line-height: 3.3;
     border: 0;
-    border-radius: 10px;
+    border-radius: 0px;
     z-index: 10;
     position: relative;
   }
@@ -246,7 +246,7 @@
     // background-image: url('@/section/form/bg_m.webp');
     height: auto;
     padding-bottom: sizem(0);
-    padding-top: sizem(0);
+    padding-top: sizem(40);
     position: relative;
     overflow: hidden;
 
@@ -338,7 +338,7 @@
     .send {
       font-size: sizem(21);
       width: 92%;
-      border-radius: sizem(10);
+      border-radius: sizem(0);
     }
 
     .control {

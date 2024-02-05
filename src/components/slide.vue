@@ -1,7 +1,8 @@
 <template>
     <Splide ref="splide" :options="options" @splide:mounted="mounted" @splide:move="moved" class="splide-widget">
         <SplideSlide class="slide" v-for="img in props.imgs" :style="{ backgroundImage: `url(${img.img})` }">
-            <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
+            <div class="mask"></div>
+            <div class="caption font-['Noto_sans_tc']" v-html="img.caption"></div>
         </SplideSlide>
     </Splide>
 </template>
@@ -18,10 +19,21 @@
     .caption {
         position: absolute;
         color: #fff;
-        font-size: size(14);
-        left: size(15);
-        bottom: size(10);
-        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8))
+        font-size: size(20);
+        left: size(35);
+        bottom: size(20);
+
+
+        span {
+            font-size: size(25);
+        }
+    }
+
+    .mask {
+        @apply absolute bottom-0 left-0;
+        width: 100%;
+        height: size(144);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 100%)
     }
 }
 
@@ -73,7 +85,7 @@
 
                 &.splide__arrow--next {
                     @apply transform rotate-180;
-                filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(299deg) brightness(103%) contrast(102%) drop-shadow(0 -4px 2px rgba(0, 0, 0, 0.6));
+                    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(299deg) brightness(103%) contrast(102%) drop-shadow(0 -4px 2px rgba(0, 0, 0, 0.6));
                 }
             }
         }
@@ -84,12 +96,20 @@
             font-size: sizem(12);
             left: sizem(10);
             bottom: sizem(5);
+
+            span {
+                font-size: sizem(15);
+            }
         }
     }
 
     .splide__pagination {
         gap: sizem(10);
-        padding: 0 size-m(10);
+        padding: 0 sizem(10);
+    }
+
+    .mask {
+        @apply hidden;
     }
 }
 </style>

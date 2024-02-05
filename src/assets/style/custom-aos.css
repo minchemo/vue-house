@@ -1,0 +1,9 @@
+[data-aos=leafIn] {
+  opacity: 0;
+  transform: translateY(-10vh) rotate(-90deg);
+  transition-property: transform, opacity;
+}
+[data-aos=leafIn].aos-animate {
+  transform: translateY(0%) rotate(0deg);
+  opacity: 1;
+}/*# sourceMappingURL=custom-aos.css.map */

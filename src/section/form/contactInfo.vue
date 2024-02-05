@@ -1,30 +1,27 @@
 <template>
   <div class="contact-info mx-auto bg-[transparent] flex flex-col items-center justify-between">
-    <img v-if="!$isMobile()" src="@/section/order_hill.svg" class="hill" alt="" srcset="">
-    <img v-else src="@/section/order_hill_m.svg" class="hill" alt="" srcset="">
-    <img src="@/section/tree.png" class="tree" alt="" srcset="">
 
-    <div class="logo" data-aos="zoom-in"></div>
+    <!-- <div class="logo" data-aos="zoom-in"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="宏璟青雲" srcset="" />
+        <img src="@/section/form/phone.svg" alt="北城之星" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="宏璟青雲" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="北城之星" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="宏璟青雲" srcset="" />
+        <img src="@/section/form/fb.svg" alt="北城之星" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="flex justify-between w-full contact-item-box no-gap">
+    <div class="flex justify-between w-full contact-item-box no-gap" v-if="false">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-between items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="宏璟青雲" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="北城之星" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -36,21 +33,21 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="宏璟青雲" srcset="" />
+      <img src="@/section/form/phone.svg" alt="北城之星" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="宏璟青雲" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="北城之星" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="宏璟青雲" srcset="" />
+      <img src="@/section/form/pen.svg" alt="北城之星" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="宏璟青雲" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="北城之星" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -61,9 +58,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="宏璟青雲" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="宏璟青雲" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="宏璟青雲" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="北城之星" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="北城之星" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="北城之星" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
         '接待會館'
@@ -151,11 +148,11 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #A77C22;
+      background-color: #C9A063;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
-      border-radius: size(10);
+      border-radius: size(0);
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.06em;
@@ -239,7 +236,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #A77C22;
+      background-color: #C9A063;
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
@@ -260,7 +257,7 @@
     height: auto;
     // border-radius: sizem(68);
     padding: sizem(40) sizem(15);
-    margin-top: sizem(120);
+    margin-top: sizem(20);
     position: relative;
     justify-content: space-between;
 
@@ -308,7 +305,7 @@
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
-        border-radius: sizem(10);
+        border-radius: sizem(0);
 
         img {
           max-width: sizem(27);

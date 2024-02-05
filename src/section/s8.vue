@@ -1,127 +1,104 @@
 <template>
 	<article class="s8">
 		<div class="t">
-			<div class="t1" data-aos="fade-up" data-aos-delay="0">慢享土城日常</div>
-			<div class="t2" data-aos="fade-up" data-aos-delay="200">光合植萃建築</div>
-			<div class="l"></div>
-			<div class="t3" data-aos="fade-up" data-aos-delay="400">2-4房 全新落成 <br v-if="isMobile">親眼見證美好</div>
-			<div class="pagi" v-if="!isMobile">
-				<span v-for="img, i in imgsA" :class="{ 'active': i == currentIdxA }" @click="splideA.go(i)"></span>
+			<div class="t1">Better than Better</div>
+			<img class="t2" src="@/section/s8/team.png" alt="" srcset="">
+			<div class="t3" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">以誠信深耕在地<br>以品質創造價值</div>
+			<div class="t3" data-aos="fade-up" data-aos-delay="0" v-else>以誠信深耕在地｜以品質創造價值</div>
+			<div class="t4" data-aos="fade-up" data-aos-delay="200">精益求精，格局規劃細膩貼心、用料實在深得人心<br>
+				榮獲多項建築金獎肯定，完美傳遞幸福心關係！</div>
+			<div class="t5"></div>
+		</div>
+		<div class="slidebox">
+			<img class="slide-t" src="@/section/s8/title.svg" alt="" srcset="">
+			<div class="arrows">
+				<img @click="splideA.go('<')" class="prev" src="@/section/arrow.png" alt="" srcset="">
+				<img @click="splideA.go('>')" class="next" src="@/section/arrow.png" alt="" srcset="">
 			</div>
+			<Slide ref="splideA" :arrow_m="false" :gap="10" :gap_m="0" :imgs="isMobile ? imgsAm : imgsA" :w="952"
+				:h="591.87" :w_m="337" :h_m="296" :dot="false" @slideIndex="onMovedA" />
 		</div>
 
-		<Slide ref="splideA" :arrow_m="true" :gap="1" :gap_m="0" :imgs="isMobile ? imgsAm : imgsA" :w="1920" :h="1089" :w_m="375" :h_m="615" :dot="false"
-			@slideIndex="onMovedA" />
-		<img class="architectural" src="@/section/s8/architectural.png" alt="" srcset="">
 	</article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s8{
-	@apply w-full relative;
-	height: size(1080);
+.s8 {
+	@apply w-full overflow-visible relative z-10 flex justify-center items-center;
+	height: size(793);
+	background: url('@/section/s8/bg.jpg');
+	background-size: cover;
+	gap: size(138);
 
 	.t {
-		@apply absolute z-10 text-white flex flex-col items-center justify-center;
-		top: size(415);
-		right: size(367);
+		@apply flex flex-col justify-center items-center;
 
 		.t1 {
-			font-family: "Noto Serif TC";
-			font-size: size(64);
-			font-weight: 500;
-			letter-spacing: size(5.76)
+			color: #B28247;
+			font-size: size(48);
+			font-family: 'Noto Serif TC';
+			font-weight: 700;
+			word-wrap: break-word
 		}
 
 		.t2 {
-			font-size: size(48);
-			font-weight: 500;
-			letter-spacing: size(4.32)
-		}
-
-		.l {
-			@apply bg-white;
-			width: size(397);
-			height: size(1);
-			margin: size(25) 0;
+			margin-top: size(31.2);
+			width: size(485.28);
 		}
 
 		.t3 {
-			font-size: size(24);
-			font-weight: 500;
-			letter-spacing: size(6.24)
+			margin-top: size(55.89);
+			color: #595757;
+			font-size: size(40);
+			font-family: 'Noto Serif TC';
+			font-weight: 700;
+			letter-spacing: size(4.8);
+			word-wrap: break-word
 		}
 
-		.pagi {
-			@apply flex items-center justify-center;
-			gap: size(9);
-			margin-top: size(20);
+		.t4 {
+			margin-top: size(12);
+			color: #595757;
+			font-size: size(25);
+			font-weight: 700;
+			word-wrap: break-word;
+			text-align: center;
+		}
 
-			span {
-				@apply block cursor-pointer hover:opacity-50;
-				width: size(9);
-				height: size(9);
-				background-color: #D9D9D9;
-
-				&.active {
-					background-color: #A77C22;
-				}
-			}
+		.t5 {
+			margin-top: size(30);
+			background-color: #B28247;
+			width: size(604);
+			height: size(15);
 		}
 	}
 
-	.slide-box {
-		@apply flex items-center justify-center text-white;
-		gap: size(14);
+	.slidebox {
+		@apply relative flex flex-col;
+		gap: size(22);
+		width: size(952);
 
 		.slide-t {
-			@apply flex flex-col items-start justify-center w-full h-full;
-			background-color: rgba(167, 124, 34, 0.60);
-			width: size(604);
-			height: size(367);
-			padding: 0 size(60);
+			width: 100%;
+		}
 
-			.pagi {
-				@apply flex items-center;
-				gap: size(9);
-				margin-bottom: size(15);
+		.arrows {
+			@apply absolute z-10 w-full flex justify-between items-center top-1/2 -translate-y-1/2;
+			padding: 0 size(10);
 
-				span {
-					@apply block cursor-pointer hover:opacity-50;
-					width: size(9);
-					height: size(9);
-					background-color: #D9D9D9;
-
-					&.active {
-						background-color: #A77C22;
-					}
-				}
+			>img {
+				@apply hover:opacity-50 cursor-pointer;
+				width: size(15);
 			}
 
-			.t1 {
-				@apply whitespace-nowrap;
-				font-size: size(25);
-				font-weight: 900;
-				letter-spacing: size(2.25);
-				margin-bottom: size(25);
-			}
-
-			.t2 {
-				font-size: size(17);
-				letter-spacing: size(1.53);
-				font-weight: 500;
+			.next {
+				transform: scaleX(-1)
 			}
 		}
 	}
 
-	.architectural {
-		@apply absolute;
-		width: size(614);
-		left: size(157);
-		bottom: size(10);
-	}
 
 }
 
@@ -131,49 +108,73 @@
 
 @media screen and (max-width: 767px) {
 	.s8 {
-		@apply w-full relative;
-		height: sizem(615);
+
+		@apply w-full overflow-visible relative z-0 flex flex-col justify-end items-center;
+		height: sizem(751);
+		background: url('@/section/s8/bgm.jpg');
+		gap: sizem(24);
+		background-size: cover;
+		padding-bottom: sizem(15);
+		margin-top: -#{sizem(50)};
 
 		.t {
-			@apply absolute z-10 text-white flex flex-col items-center justify-center;
-			top: sizem(67);
-			right: sizem(90);
+			@apply flex flex-col justify-center items-center;
 
 			.t1 {
-				font-size: sizem(30);
-				letter-spacing: sizem(2.7)
+				font-size: sizem(34);
+				font-weight: 600;
 			}
 
 			.t2 {
-				font-size: sizem(30);
-				letter-spacing: sizem(2.7)
-			}
-
-			.l {
-				@apply bg-white;
-				width: sizem(194);
-				height: sizem(1);
-				margin: sizem(15) 0;
+				margin-top: sizem(19);
+				width: sizem(280);
 			}
 
 			.t3 {
-				@apply text-center;
-				font-size: sizem(17);
-				letter-spacing: sizem(4.42)
+				margin-top: sizem(15);
+				color: #595757;
+				font-size: sizem(20);
+				font-weight: 700;
+				letter-spacing: 1;
+				word-wrap: break-word
 			}
 
-			.pagi {
-				@apply hidden;
+			.t4 {
+				margin-top: sizem(2);
+				font-size: sizem(12);
+				font-weight: 400;
+			}
+
+			.t5 {
+				margin-top: sizem(4);
+				background-color: #B28247;
+				width: sizem(245);
+				height: sizem(6);
 			}
 		}
 
+		.slidebox {
+			@apply relative flex flex-col;
+			gap: sizem(12);
+			width: sizem(337);
 
-		.architectural {
-			@apply absolute;
-			width: sizem(304);
-			left: sizem(35);
-			bottom: sizem(3);
+			.slide-t {
+				width: 100%;
+			}
+
+			.arrows {
+				padding: 0 sizem(10);
+
+				>img {
+					width: sizem(13);
+				}
+
+				.next {
+					transform: scaleX(-1)
+				}
+			}
 		}
+
 	}
 }
 </style>
@@ -186,30 +187,102 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const smoothScroll = inject('smoothScroll')
 const isMobile = computed(() => globals.$isMobile());
 
+
 const splideA = ref(null)
 const currentIdxA = ref(0)
 const imgsA = [
 	{
 		img: new URL("../section/s8/1.jpg", import.meta.url).href,
-		caption: "",
+		caption: "<span>銳揚國寶</span>｜2018 / 鳳山區",
 	},
 	{
 		img: new URL("../section/s8/2.jpg", import.meta.url).href,
-		caption: "",
+		caption: "<span>銳揚國囍</span>｜2022 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/3.jpg", import.meta.url).href,
+		caption: "<span>銳揚八方</span>｜2022 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/4.jpg", import.meta.url).href,
+		caption: "<span>鋭揚新生活</span>｜2024 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/5.jpg", import.meta.url).href,
+		caption: "<span>鋭揚新樂活</span>｜2023 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/6.jpg", import.meta.url).href,
+		caption: "<span>銳揚巴洛克</span>｜2021 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/7.jpg", import.meta.url).href,
+		caption: "<span>銳揚天鵝堡</span>｜2020 / 楠梓區",
+	},
+	{
+		img: new URL("../section/s8/8.jpg", import.meta.url).href,
+		caption: "<span>銳揚新世代</span>｜2019 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/9.jpg", import.meta.url).href,
+		caption: "<span>銳揚國美</span>｜2019 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/10.jpg", import.meta.url).href,
+		caption: "<span>銳揚捷仕堡</span>｜2019 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/11.jpg", import.meta.url).href,
+		caption: "<span>銳揚新天第</span>｜2017 / 鳳山區",
 	},
 ]
 const imgsAm = [
 	{
 		img: new URL("../section/s8/1m.jpg", import.meta.url).href,
-		caption: "",
+		caption: "<span>銳揚國寶</span>｜2018 / 鳳山區",
 	},
 	{
 		img: new URL("../section/s8/2m.jpg", import.meta.url).href,
-		caption: "",
+		caption: "<span>銳揚國囍</span>｜2022 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/3m.jpg", import.meta.url).href,
+		caption: "<span>銳揚八方</span>｜2022 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/4m.jpg", import.meta.url).href,
+		caption: "<span>鋭揚新生活</span>｜2024 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/5m.jpg", import.meta.url).href,
+		caption: "<span>鋭揚新樂活</span>｜2023 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/6m.jpg", import.meta.url).href,
+		caption: "<span>銳揚巴洛克</span>｜2021 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/7m.jpg", import.meta.url).href,
+		caption: "<span>銳揚天鵝堡</span>｜2020 / 楠梓區",
+	},
+	{
+		img: new URL("../section/s8/8m.jpg", import.meta.url).href,
+		caption: "<span>銳揚新世代</span>｜2019 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/9m.jpg", import.meta.url).href,
+		caption: "<span>銳揚國美</span>｜2019 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/10m.jpg", import.meta.url).href,
+		caption: "<span>銳揚捷仕堡</span>｜2019 / 鳳山區",
+	},
+	{
+		img: new URL("../section/s8/11m.jpg", import.meta.url).href,
+		caption: "<span>銳揚新天第</span>｜2017 / 鳳山區",
 	},
 ]
 const onMovedA = (idx) => {
 	currentIdxA.value = idx;
 }
-
 </script>

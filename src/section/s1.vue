@@ -1,17 +1,9 @@
 <template>
 	<article class="s1">
-		<div class="t">
-			<img src="@/section/s1/logo.png" class="t1">
-			<div class="t-m">
-				<div class="t2" data-aos="fade-up" data-aos-delay="0">土城植萃<span>｜</span>慢享日常</div>
-				<div class="t3" data-aos="fade-up" data-aos-delay="200">青雲路<span>•</span>明德路 <br v-if="isMobile" />光合2-4房</div>
-
-				<div class="t4" v-if="isMobile">全新落成</div>
-			</div>
-			<div class="t4" v-if="!isMobile">全新<br>
-				落成</div>
-		</div>
-		<s1bg />
+		<img class="logo" src="@/section/s1/logo.png" alt="" srcset="">
+		<div class="t1" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">台積電共榮圈<br>高鐵聚富光點</div>
+		<div class="t1" data-aos="fade-up" data-aos-delay="0" v-else>台積電共榮圈 · 高鐵聚富光點</div>
+		<div class="t2" data-aos="fade-up" data-aos-delay="200">23-38地坪｜城市新門戶｜別墅新浪潮</div>
 	</article>
 </template>
 
@@ -19,61 +11,33 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-	@apply w-full h-screen overflow-visible relative z-20;
+	@apply w-full h-screen overflow-visible relative z-20 flex flex-col items-center;
 	min-height: size(900);
 	max-height: size(1080);
+	background-image: url('@/section/s1/bg.png');
+	background-size: cover;
+	background-position: bottom center;
+	padding-top: size(139);
 
-	.t {
-		@apply absolute z-10 w-full flex items-center justify-center;
-		bottom: size(667);
-		gap: size(46);
 
-		.t1 {
-			width: size(540.29);
-		}
-
-		.t-m {
-			@apply flex flex-col;
-			gap: size(26);
-
-			.t2 {
-				font-size: size(47);
-				font-weight: 400;
-				letter-spacing: size(24.43);
-				line-height: 1;
-				word-wrap: break-word;
-
-				span {
-					color: #A77C22
-				}
-			}
-
-			.t3 {
-				font-size: size(39.15);
-				font-weight: 600;
-				letter-spacing: size(13.31);
-				line-height: 1;
-
-				span {
-					font-size: size(24);
-					font-weight: 1000;
-				}
-			}
-		}
-
-		.t4 {
-			background-color: #A77C22;
-			color: white;
-			font-size: size(43);
-			font-family: Inter;
-			font-weight: 700;
-			letter-spacing: size(3.87);
-			line-height: 1.25;
-			word-wrap: break-word;
-			padding: size(8) size(16);
-		}
+	.logo {
+		width: size(389.37);
 	}
 
+
+	.t1 {
+		color: white;
+		font-size: size(42);
+		font-weight: 700;
+		margin-top: size(57);
+	}
+
+	.t2 {
+		color: #C9A063;
+		font-size: size(38);
+		font-weight: 700;
+		margin-top: size(19);
+	}
 }
 
 /* 螢幕尺寸標準 */
@@ -82,62 +46,32 @@
 
 @media screen and (max-width: 767px) {
 	.s1 {
-		@apply w-full overflow-visible relative z-20;
-		height: calc(100vh - 63px);
-		min-height: sizem(604);
-		max-height: sizem(812);
+		height: 100vh;
+		min-height: sizem(600);
+		max-height: 100vh;
+		background-image: url('@/section/s1/bgm.png');
+		padding-top: sizem(68);
 
-		.t {
-			@apply absolute z-10 w-full flex flex-col items-center justify-center;
-			bottom: unset;
-			top: sizem(151);
-			gap: sizem(19);
 
-			.t1 {
-				width: sizem(272);
-			}
+		.logo {
+			width: sizem(200);
+		}
 
-			.t-m {
-				@apply flex flex-row items-center justify-between flex-wrap w-full;
-				gap: size(26);
-				padding-left: sizem(53);
-				padding-right: sizem(53);
 
-				.t2 {
-					flex-basis: 100%;
-					font-size: sizem(21);
-					font-weight: 400;
-					letter-spacing: sizem(10);
-					white-space: nowrap;
-					margin-bottom: sizem(15);
-				}
+		.t1 {
+			font-size: sizem(22);
+			margin-top: sizem(28.5);
+		}
 
-				.t3 {
-					font-size: sizem(15);
-					letter-spacing: sizem(1.5);
-					line-height: sizem(15);
-					font-weight: 700;
-
-					span {
-						font-size: size(24);
-						font-weight: 1000;
-					}
-				}
-			}
-
-			.t4 {
-				font-size: sizem(17);
-				font-weight: 700;
-				letter-spacing: sizem(1.53);
-				padding: sizem(9) sizem(19);
-			}
+		.t2 {
+			font-size: sizem(18);
+			margin-top: sizem(10);
 		}
 	}
 }
 </style>
 
 <script setup>
-import s1bg from "./s1/bg.vue";
 import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 

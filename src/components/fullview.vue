@@ -1,8 +1,8 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img class="view1" ref="viewImg" src="@/section/s2/view.jpg" alt="" srcset="">
+        <img class="view1" ref="viewImg" src="@/section/s3/view.jpg" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
-            <img src="@/components/fullview/finger.svg" alt="" srcset="">
+            <img src="@/components/fullview/swipe.png" alt="" srcset="">
         </div>
     </div>
 </template>
@@ -21,7 +21,7 @@
         position: absolute; 
         left: 0;
         top: 0;   
-        background-image: url(@/section/s2/view.webp);
+        background-image: url(@/section/s3/view.webp);
 	    background-size: cover;
         }
 
@@ -56,12 +56,12 @@
             pointer-events: none;
             opacity: 1;
             transition: all 1s;
-            background: rgba(255, 62, 161, 0.46);
+            background: transparentize(#000034, 0.5);
 
             img {
                 height: auto;
                 min-width: auto;
-                width: 80%;
+                width: sizem(80);
             }
 
 
@@ -79,7 +79,7 @@ import { onMounted, ref } from 'vue';
 const viewbox = ref()
 const viewImg = ref()
 const swiped = ref(false)
-const offsetRatio = 2; //調整此值設定X軸位置偏移參數
+const offsetRatio = 2.2; //調整此值設定X軸位置偏移參數
 
 
 onMounted(() => {
