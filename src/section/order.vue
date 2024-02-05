@@ -30,9 +30,6 @@
             <option value="" selected disabled>選擇專員</option>
             <option value="陳睿珩">陳睿珩</option>
             <option value="曾依琇">曾依琇</option>
-            <option value="柯智鈞">柯智鈞</option>
-            <option value="陳振皓">陳振皓</option>
-            <option value="紀宥榕">紀宥榕</option>
             <option value="翁雅如">翁雅如</option>
             <option value="簡家榆">簡家榆</option>
             <option value="邱筱玫">邱筱玫</option>
