@@ -1,9 +1,9 @@
 <template>
 	<article class="s1">
-		<img class="logo" src="@/section/s1/logo.png" alt="" srcset="">
-		<div class="t1" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">台積電共榮圈<br>高鐵聚富光點</div>
-		<div class="t1" data-aos="fade-up" data-aos-delay="0" v-else>台積電共榮圈 · 高鐵聚富光點</div>
-		<div class="t2" data-aos="fade-up" data-aos-delay="200">23-38地坪｜城市新門戶｜別墅新浪潮</div>
+		<img class="logo" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo.webp" alt="" srcset="">
+		<div class="t1" data-aos="fade-up" data-aos-delay="200" v-if="isMobile">台積電共榮圈<br>高鐵聚富光點</div>
+		<div class="t1" data-aos="fade-up" data-aos-delay="200" v-else>台積電共榮圈 · 高鐵聚富光點</div>
+		<div class="t2" data-aos="fade-up" data-aos-delay="400">23-38地坪｜城市新門戶｜別墅新浪潮</div>
 	</article>
 </template>
 
@@ -14,7 +14,7 @@
 	@apply w-full h-screen overflow-visible relative z-20 flex flex-col items-center;
 	min-height: size(900);
 	max-height: size(1080);
-	background-image: url('@/section/s1/bg.png');
+	background-image: url('@/section/s1/bg.webp');
 	background-size: cover;
 	background-position: bottom center;
 	padding-top: size(139);
@@ -49,7 +49,7 @@
 		height: 100vh;
 		min-height: sizem(600);
 		max-height: 100vh;
-		background-image: url('@/section/s1/bgm.png');
+		background-image: url('@/section/s1/bgm.webp');
 		padding-top: sizem(68);
 
 

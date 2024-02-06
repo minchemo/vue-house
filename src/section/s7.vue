@@ -20,7 +20,7 @@
 .s7 {
 	@apply w-full overflow-visible relative z-10 flex justify-start items-start;
 	height: size(1080);
-	background: url('@/section/s7/bg.jpg');
+	background: url('@/section/s7/bg.webp');
 	background-size: cover;
 
 	.t {
@@ -78,7 +78,7 @@
 @media screen and (max-width: 767px) {
 	.s7 {
 		height: sizem(487);
-		background: url('@/section/s7/bgm.png');
+		background: url('@/section/s7/bgm.webp');
 		background-size: cover;
 
 		.t {

@@ -1,7 +1,7 @@
 <template>
 	<article class="s5">
-		<img class="i" v-if="isMobile" src="@/section/s5/im.png" alt="" srcset="">
-		<img class="i" v-else src="@/section/s5/i.png" alt="" srcset="">
+		<img class="i" v-if="isMobile" src="@/section/s5/im.webp" alt="" srcset="">
+		<img class="i" v-else src="@/section/s5/i.webp" alt="" srcset="">
 		<div class="t">
 			<div class="t1" data-aos="fade-up" data-aos-delay="0">The<br v-if="isMobile"> Modern Life</div>
 			<div class="t2" data-aos="fade-up" data-aos-delay="200">百貨商圈密度之冠<br>
@@ -10,9 +10,9 @@
 				時尚氣息獨步南台灣，近擁哈囉市場<br>
 				左營大路商圈，生活不僅國際、而且在地！</div>
 		</div>
-		<img class="bg" v-if="isMobile" src="@/section/s5/bgm.png" alt="" srcset="">
-		<img class="bg" v-else src="@/section/s5/bg.png" alt="" srcset="">
-		<img class="dancer" data-aos="fade-up" data-aos-delay="400" src="@/section/s5/dancer.png" alt="" srcset="">
+		<img class="bg" v-if="isMobile" src="@/section/s5/bgm.webp" alt="" srcset="">
+		<img class="bg" v-else src="@/section/s5/bg.webp" alt="" srcset="">
+		<img class="dancer" data-aos="fade-up" data-aos-delay="400" src="@/section/s5/dancer.webp" alt="" srcset="">
 		<div class="fashion" v-if="isMobile">Fashion</div>
 	</article>
 </template>
@@ -65,6 +65,14 @@
 	.dancer {
 		@apply absolute right-0 bottom-0 mix-blend-multiply;
 		width: size(371);
+		transform: rotate(10deg);
+		animation: an 3s infinite ease-in-out alternate-reverse;
+	}
+
+	@keyframes an {
+		to {
+			transform: rotate(-10deg);
+		}
 	}
 }
 
@@ -112,7 +120,7 @@
 		.dancer {
 			@apply absolute mix-blend-multiply;
 			width: sizem(155);
-			bottom: sizem(160);
+			bottom: sizem(162);
 			right: -#{sizem(10)}
 		}
 

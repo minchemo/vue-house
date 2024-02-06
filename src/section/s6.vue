@@ -1,5 +1,6 @@
 <template>
 	<article class="s6">
+		<img class="cloud" src="@/section/s6/cloud.webp" alt="" srcset="">
 		<div class="t">
 			<div class="t1" data-aos="fade-up" data-aos-delay="0">Nearby <br v-if="isMobile">Nature Areas</div>
 			<div class="t2" data-aos="fade-up" data-aos-delay="200" v-if="isMobile">半山伴水城市綠洲<br>健康生活不必遠求</div>
@@ -16,9 +17,21 @@
 .s6 {
 	@apply w-full overflow-visible relative z-10 flex justify-start items-start;
 	height: size(1080);
-	background: url('@/section/s6/bg.jpg');
+	background: url('@/section/s6/bg.webp');
 	background-size: cover;
 
+	.cloud{
+	@apply absolute;
+	top: size(-10);
+	right: size(450);
+	transform: translate(-30%, 0%);
+	animation: an 8s infinite ease-in-out alternate-reverse;
+	}
+	@keyframes an {
+		to {
+			transform: translate(10%, 0%);
+		}
+	}
 	.t {
 		@apply absolute;
 		top: size(307.3);
@@ -58,8 +71,23 @@
 	.s6 {
 		@apply w-full overflow-visible relative z-10 flex justify-center items-center;
 		height: sizem(726);
-		background: url('@/section/s6/bgm.jpg');
+		background: url('@/section/s6/bgm.webp');
 		background-size: cover;
+
+		.cloud{
+		@apply absolute;
+		top: sizem(130);
+		right: sizem(0);
+		width: sizem(360);
+		transform: translate(-30%, 0%);
+		}
+
+		@keyframes an {
+		to {
+			transform: translate(-70%, 0%);
+		}
+	}
+
 
 		.t {
 			@apply absolute;

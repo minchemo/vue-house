@@ -28,7 +28,7 @@
 .s8 {
 	@apply w-full overflow-visible relative z-10 flex justify-center items-center;
 	height: size(793);
-	background: url('@/section/s8/bg.jpg');
+	background: url('@/section/s8/bg.webp');
 	background-size: cover;
 	gap: size(138);
 
@@ -111,7 +111,7 @@
 
 		@apply w-full overflow-visible relative z-0 flex flex-col justify-end items-center;
 		height: sizem(751);
-		background: url('@/section/s8/bgm.jpg');
+		background: url('@/section/s8/bgm.webp');
 		gap: sizem(24);
 		background-size: cover;
 		padding-bottom: sizem(15);
@@ -192,93 +192,93 @@ const splideA = ref(null)
 const currentIdxA = ref(0)
 const imgsA = [
 	{
-		img: new URL("../section/s8/1.jpg", import.meta.url).href,
+		img: new URL("../section/s8/1.webp", import.meta.url).href,
 		caption: "<span>銳揚國寶</span>｜2018 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/2.jpg", import.meta.url).href,
+		img: new URL("../section/s8/2.webp", import.meta.url).href,
 		caption: "<span>銳揚國囍</span>｜2022 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/3.jpg", import.meta.url).href,
+		img: new URL("../section/s8/3.webp", import.meta.url).href,
 		caption: "<span>銳揚八方</span>｜2022 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/4.jpg", import.meta.url).href,
+		img: new URL("../section/s8/4.webp", import.meta.url).href,
 		caption: "<span>鋭揚新生活</span>｜2024 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/5.jpg", import.meta.url).href,
+		img: new URL("../section/s8/5.webp", import.meta.url).href,
 		caption: "<span>鋭揚新樂活</span>｜2023 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/6.jpg", import.meta.url).href,
+		img: new URL("../section/s8/6.webp", import.meta.url).href,
 		caption: "<span>銳揚巴洛克</span>｜2021 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/7.jpg", import.meta.url).href,
+		img: new URL("../section/s8/7.webp", import.meta.url).href,
 		caption: "<span>銳揚天鵝堡</span>｜2020 / 楠梓區",
 	},
 	{
-		img: new URL("../section/s8/8.jpg", import.meta.url).href,
+		img: new URL("../section/s8/8.webp", import.meta.url).href,
 		caption: "<span>銳揚新世代</span>｜2019 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/9.jpg", import.meta.url).href,
+		img: new URL("../section/s8/9.webp", import.meta.url).href,
 		caption: "<span>銳揚國美</span>｜2019 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/10.jpg", import.meta.url).href,
+		img: new URL("../section/s8/10.webp", import.meta.url).href,
 		caption: "<span>銳揚捷仕堡</span>｜2019 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/11.jpg", import.meta.url).href,
+		img: new URL("../section/s8/11.webp", import.meta.url).href,
 		caption: "<span>銳揚新天第</span>｜2017 / 鳳山區",
 	},
 ]
 const imgsAm = [
 	{
-		img: new URL("../section/s8/1m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/1m.webp", import.meta.url).href,
 		caption: "<span>銳揚國寶</span>｜2018 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/2m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/2m.webp", import.meta.url).href,
 		caption: "<span>銳揚國囍</span>｜2022 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/3m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/3m.webp", import.meta.url).href,
 		caption: "<span>銳揚八方</span>｜2022 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/4m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/4m.webp", import.meta.url).href,
 		caption: "<span>鋭揚新生活</span>｜2024 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/5m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/5m.webp", import.meta.url).href,
 		caption: "<span>鋭揚新樂活</span>｜2023 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/6m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/6m.webp", import.meta.url).href,
 		caption: "<span>銳揚巴洛克</span>｜2021 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/7m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/7m.webp", import.meta.url).href,
 		caption: "<span>銳揚天鵝堡</span>｜2020 / 楠梓區",
 	},
 	{
-		img: new URL("../section/s8/8m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/8m.webp", import.meta.url).href,
 		caption: "<span>銳揚新世代</span>｜2019 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/9m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/9m.webp", import.meta.url).href,
 		caption: "<span>銳揚國美</span>｜2019 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/10m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/10m.webp", import.meta.url).href,
 		caption: "<span>銳揚捷仕堡</span>｜2019 / 鳳山區",
 	},
 	{
-		img: new URL("../section/s8/11m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/11m.webp", import.meta.url).href,
 		caption: "<span>銳揚新天第</span>｜2017 / 鳳山區",
 	},
 ]

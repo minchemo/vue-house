@@ -14,7 +14,7 @@
 .s2 {
 	@apply w-full overflow-visible relative z-10 flex flex-col justify-end items-center;
 	height: size(1300);
-	background-image: url('@/section/s2/bg.jpg');
+	background-image: url('@/section/s2/bg.webp');
 	background-size: cover;
 	background-position: bottom center;
 	margin-top: -#{size(220)};
@@ -55,7 +55,7 @@
 
 	.s2 {
 		height: sizem(451);
-		background-image: url('@/section/s2/bgm.jpg');
+		background-image: url('@/section/s2/bgm.webp');
 		margin-top: -#{sizem(93)};
 		padding-bottom: sizem(21);
 

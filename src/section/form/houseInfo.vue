@@ -1,15 +1,15 @@
 <template>
-    <div v-if="false">
-        <div class="flex flex-col md:flex-row items-center justify-between bg-[#DEDBD4] house">
+    <div>
+        <div class="flex flex-col md:flex-row items-center justify-between bg-[#000] house">
             <!-- <div class="map"></div> -->
             <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_sans_TC']">
                 <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
-                    <div class="title text-[#A77C22] font-['noto_serif_tc']">建｜案｜資｜訊</div>
+                    <div class="title text-[#C9A063] font-['noto_serif_tc']">建｜案｜資｜訊</div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos">
                             <p class="mr-4 border-r-2 border-[#C9A063] pr-4 text-[#C9A063]" v-html="item[0]"></p>
-                            <p class="whitespace-pre-line leading-normal text-left text-[#221714] font-normal"
+                            <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal"
                                 v-html="item[1]">
                             </p>
                         </div>

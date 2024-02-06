@@ -45,11 +45,11 @@
       <img src="@/section/form/pen.svg" alt="北城之星" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
       <img src="@/section/form/gmap.svg" alt="北城之星" srcset="" />
       <div>地圖導航</div>
-    </div>
+    </div-->
   </div>
 
   <!-- Modal -->

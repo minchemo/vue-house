@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img class="view1" ref="viewImg" src="@/section/s3/view.jpg" alt="" srcset="">
+        <img class="view1" ref="viewImg" src="@/section/s3/view.webp" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/swipe.png" alt="" srcset="">
         </div>

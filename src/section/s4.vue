@@ -9,8 +9,8 @@
 			<div class="t3" data-aos="fade-up" data-aos-delay="400">近享高鐵、台鐵、捷運共構優勢，台積電園區約6分鐘<br>
 				輕取國道10號、中山高及南二高，南來北往四通八達！</div>
 		</div>
-		<img class="i" src="@/section/s4/1m.png" alt="" srcset="" v-if="isMobile">
-		<img class="i" src="@/section/s4/1.png" alt="" srcset="" v-else>
+		<img class="i" src="@/section/s4/1m.webp" alt="" srcset="" v-if="isMobile">
+		<img class="i" src="@/section/s4/1.webp" alt="" srcset="" v-else>
 	</article>
 </template>
 

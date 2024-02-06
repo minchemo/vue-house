@@ -21,7 +21,7 @@
 .s9 {
 	@apply w-full overflow-visible relative z-10 flex justify-center items-center;
 	height: size(886);
-	background: url('@/section/s9/bg.jpg');
+	background: url('@/section/s9/bg.webp');
 	background-size: cover;
 	gap: size(216);
 
@@ -101,7 +101,7 @@
 	.s9 {
 		@apply w-full overflow-visible relative z-10 flex flex-col justify-start items-center;
 		height: sizem(571);
-		background: url('@/section/s9/bgm.jpg');
+		background: url('@/section/s9/bgm.webp');
 		background-size: cover;
 		gap: sizem(25);
 		padding-top: sizem(40);

@@ -2,7 +2,7 @@
 	<article class="s3">
 		<div class="viewbox">
 			<fullview />
-			<div class="caption" v-if="isMobile">環境3D示意參考圖</div>
+			<div class="caption">環境3D示意參考圖</div>
 		</div>
 		<div class="t1" data-aos="fade-up" data-aos-delay="0">Evolution of City</div>
 		<div class="t2" data-aos="fade-up" data-aos-delay="200" v-if="isMobile">北高雄最具潛力地段<br><span>立足城市希望之地</span></div>
@@ -31,9 +31,10 @@
 			content: '';
 			width: 100%;
 			height: size(80);
-			background-image: url('@/section/s3/light.png');
+			background-image: url('@/section/s3/light.webp');
 			background-size: cover;
-			top: -#{size(40)};
+			top: -#{size(35)};
+			z-index: 99;
 		}
 
 		&:after {
@@ -41,10 +42,21 @@
 			content: '';
 			width: 100%;
 			height: size(80);
-			background-image: url('@/section/s3/light.png');
+			background-image: url('@/section/s3/light.webp');
 			background-size: cover;
 			bottom: -#{size(40)};
+			z-index: 99;
 		}
+
+		.caption {
+				@apply absolute z-10;
+				right: 10px;
+				bottom: 5px;
+				color: white;
+				font-size: size(12);
+				font-weight: 400;
+				word-wrap: break-word
+			}
 	}
 
 	.t1 {
