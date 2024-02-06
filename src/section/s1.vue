@@ -1,5 +1,5 @@
 <template>
-  <article class="s1" id="s1">
+  <article class="s1" id="s1" :style="isMobile?{ fontSize: adjustedFontSize + 'px' }:{}">
    <!--  <img class="t0" src="./s1/pc.jpg" alt="" srcset="">
     <div class="bg"></div>
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
@@ -10,7 +10,7 @@
 <img src="./s1/rtxt.svg" alt="rtxt" class="rtxt"  >
 <img src="./s1/rb.svg" alt="rtxt" class="rb">
 <div class="txt">
-<h3 class="t1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">敢</h3>
+<h3 class="t1" ref="t1Element" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">敢</h3>
 <h4 class="t2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">與眾不同</h4>
 <div class="t3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">別墅新寵 即將亮相</div>
 <div class="t4" data-aos="fade--up" data-aos-duration="500" data-aos-delay="600">Are U Ready
@@ -111,17 +111,26 @@ top:calc(50% + #{sizem(110 - (604*.5))});
 top:sizem(25);
 top:calc(20% + #{sizem(25 - (604*.2))});
 }
-    .txt{
+    .txt{width: 100%;
+      display: flex;flex-direction:column;justify-content:center;align-items:center;
 .t1{
   font-size:sizem(118);
-margin-bottom: 0.1em;}
+  font-size:7.86em;
+margin-bottom: 0.1em;
+  white-space: nowrap;}
 .t2{
   font-size:sizem(58);
-margin-bottom: 1.5em;}
+  font-size:3.86em;
+margin-bottom: 1.5em;
+  white-space: nowrap;}
+.t3a{position: absolute;top: 0;left: 0;}
 .t4{
-  font-size:sizem(40);}
+  font-size:sizem(40);
+  font-size:2.66em;
+  white-space: nowrap;}
 .t5{
   font-size:sizem(27);
+  font-size:1.8em;
 margin-bottom: 1.5em;}
 
 }
@@ -132,7 +141,7 @@ margin-bottom: 1.5em;}
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref ,inject, onMounted} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
@@ -143,4 +152,45 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
+
+const t1Element = ref(null);
+const width = ref('');
+const t1Width = ref(0);
+
+onMounted(() => {
+  if (isMobile.value) {
+  t1Width.value = t1Element.value.offsetWidth;
+ // width.value = `t1的宽度: ${t1Width.value}px`;
+  }
+});
+
+const viewportWidth = computed(() => {
+  // 获取视口宽度
+  return window.innerWidth;
+});
+
+const vwToPixel = (vw) => {
+  // 将vw转换为像素值
+  return (vw * viewportWidth.value) / 100;
+};
+
+const t1WidthInVW = computed(() => {
+  // 将t1的宽度转换为vw单位
+  return (t1Width.value * 100) / viewportWidth.value;
+});
+
+const isT1WidthGreaterThan118 = computed(() => {
+  // 检查t1的宽度是否大于118vw
+  return t1WidthInVW.value > 31.467; // 将vw值转换为对应的像素值
+});
+
+const adjustedFontSize = computed(() => {
+  // 将超过118vw的宽度映射回到118vw，并计算相应的字体大小
+  const maxWidth = 31.467; // 118vw对应的vw值
+  const widthInVW = t1WidthInVW.value;
+  const scaleFactor = maxWidth / widthInVW; // 缩放比例
+  const originalFontSize = 15; // 初始字体大小
+  return originalFontSize * scaleFactor;
+});
+
 </script>
