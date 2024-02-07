@@ -19,7 +19,7 @@
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
-      </Splide>
+      </Splide>re
     </div>
 
   </article>
