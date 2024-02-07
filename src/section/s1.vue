@@ -12,7 +12,7 @@
 
 .s1 {
 	@apply w-full h-screen overflow-visible relative z-20 flex flex-col items-center;
-	min-height: size(900);
+	min-height: size(1080);
 	max-height: size(1080);
 	background-image: url('@/section/s1/bg.webp');
 	background-size: cover;

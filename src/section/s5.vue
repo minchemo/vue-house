@@ -65,8 +65,8 @@
 	.dancer {
 		@apply absolute right-0 bottom-0 mix-blend-multiply;
 		width: size(371);
-		transform: rotate(10deg);
-		animation: an 3s infinite ease-in-out alternate-reverse;
+		//transform: rotate(10deg);
+		//animation: an 3s infinite ease-in-out alternate-reverse;
 	}
 
 	@keyframes an {

@@ -7,7 +7,7 @@
 		</div>
 		<div class="r-t">
 			<img class="t1" src="@/section/s9/logo.png" alt="">
-			<div class="t2" data-aos="fade-up" data-aos-delay="0">北城計畫 <span>╳</span> 科技之星 台積電</div>
+			<div class="t2" data-aos="fade-up" data-aos-delay="0">北城計畫 <span>╳</span> 科技之心 台積電</div>
 			<div class="t3" data-aos="fade-up" data-aos-delay="200">23-38地坪｜城市新門戶｜別墅新浪潮</div>
 			<img class="t4" src="@/section/s9/logo2.png" alt="">
 			<img src="@/section/s9/light.png" class="light" alt="" srcset="">
