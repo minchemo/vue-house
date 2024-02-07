@@ -46,9 +46,9 @@
 
 @media screen and (max-width: 767px) {
 	.s1 {
-		height: 100vh;
+		height: sizem(600);
 		min-height: sizem(600);
-		max-height: 100vh;
+		max-height: sizem(600);
 		background-image: url('@/section/s1/bgm.webp');
 		padding-top: sizem(68);
 

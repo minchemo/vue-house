@@ -8,7 +8,7 @@
 		<div class="t2" data-aos="fade-up" data-aos-delay="200" v-if="isMobile">北高雄最具潛力地段<br><span>立足城市希望之地</span></div>
 		<div class="t2" data-aos="fade-up" data-aos-delay="200" v-else>北高雄最具潛力地段｜立足城市希望之地</div>
 		<div class="t3" data-aos="fade-up" data-aos-delay="400">【北城之星】要居「高科技S廊道」關鍵樞紐<br>
-			讓您買對地點、預見未來，擔當台積電鄰居趁現在！</div>
+			讓您買對地點、預見未來，搶當台積電鄰居趁現在！</div>
 	</article>
 </template>
 
