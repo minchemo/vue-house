@@ -1,7 +1,7 @@
 <template>
     <div class="viewbox" ref="viewbox">
         <img class="view1" ref="viewImg" src="@/section/s3/view.webp" alt="" srcset="">
-        <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
+        <div class="mask" v-bind:class="{ hide: swiped }">
             <img src="@/components/fullview/swipe.png" alt="" srcset="">
         </div>
     </div>
@@ -30,7 +30,9 @@
         min-width: 100%;
         max-width: unset;
     }
-
+    .mask {
+        @apply hidden;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -49,7 +51,7 @@
             height: 100%;
             left: 0;
             top: 0;
-            z-index: 10;
+            z-index: 1000;
             display: flex;
             justify-content: center;
             align-items: center;
