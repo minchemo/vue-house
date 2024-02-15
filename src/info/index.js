@@ -6,10 +6,10 @@ export default {
     description: caseName,
     keywords: caseName,
   },
-  address: "",
+  address: "813高雄市左營區左營大路680號1F",
   googleSrc:
-    "",
-  googleLink: "",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.963782483882!2d120.29600277630729!3d22.6923921285672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05781743a8cf%3A0x1817a83eadc00acd!2zODEz6auY6ZuE5biC5bem54ef5Y2A5bem54ef5aSn6LevNjgw6Jmf!5e0!3m2!1szh-TW!2stw!4v1707967967783!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/nbLqs73LTWEtunR98",
   phone: "07-585-6655",
   fbLink: "https://www.facebook.com/61554916575175/",
   fbMessage: "https://m.me/61554916575175/",

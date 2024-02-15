@@ -70,7 +70,7 @@
 
 
     <!-- Map -->
-    <Map v-if="false" />
+    <Map />
 
     <!-- HouseInfo -->
     <HouseInfo />
