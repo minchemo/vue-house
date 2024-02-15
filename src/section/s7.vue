@@ -19,7 +19,7 @@
 
 .s7 {
 	@apply w-full overflow-visible relative z-10 flex justify-start items-start;
-	height: size(1080);
+	height: size(1190);
 	background: url('@/section/s7/bg.webp');
 	background-size: cover;
 
