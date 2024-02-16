@@ -61,9 +61,9 @@
             background: transparentize(#000034, 0.5);
 
             img {
-                height: auto;
-                min-width: auto;
-                width: sizem(80);
+                min-width: unset;
+                width: sizem(83);
+                height: sizem(83);
             }
 
 
