@@ -102,8 +102,7 @@
 			height: sizem(455);
 
 			&:before {
-				@apply absolute left-1/2 z-10 mix-blend-screen pointer-events-none;
-        transform: translateX(-50%);
+				@apply absolute left-1/2 -translate-x-1/2 z-10 mix-blend-screen pointer-events-none;
 				content: '';
 				width: 115%;
 				height: size(80);
@@ -113,9 +112,8 @@
 			}
 
 			&:after {
-				@apply absolute left-1/2 z-10 mix-blend-screen pointer-events-none;
+				@apply absolute left-1/2 -translate-x-1/2 z-10 mix-blend-screen pointer-events-none;
 				content: '';
-        transform: translateX(-50%);
 				width: 115%;
 				height: size(80);
 				background-image: url('@/section/s3/light.png');
