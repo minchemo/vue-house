@@ -22,7 +22,7 @@ export default {
     ["經紀人字號", "（97）北縣字第001735號"],
     ["建照號碼", "107土建字第00092號"],
   ],
-  gtmCode: ["GTM-M8N6GNQ"], // 可放置多個
+  gtmCode: ["GTM-5CCR4GLZ"], // 可放置多個
   recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
