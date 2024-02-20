@@ -1,65 +1,55 @@
 <template>
-  <div id="order" class="order relative text-center">
+  <div id="order" class="order relative bg-[#fff] text-center">
+
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <div class="order-title text-center text-[#fff]">{{ info.order.title }}</div>
+      <div class="order-subtitle text-center text-[#fff]">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
-      <!-- Title Image
-      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
- -->
+      <!-- Title Image -->
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="宏璟青雲" srcset=""
+      data-aos="fade" data-aos-duration="1000">
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="宏璟青雲" srcset="" data-aos="fade"
+      data-aos-duration="1000"> -->
+
       <!-- Custom Image -->
+      <!-- <img class="decor" v-if="!$isMobile()" data-aos="fade" src="@/section/form/decor.png" alt="" srcset=""> -->
 
       <!-- Form -->
-      <div class="form mx-auto relative flex justify-center">
+      <div class="form mx-auto relative flex items-start justify-center" data-aos="zoom-in">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span>(必填)</span></span>
-          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-            @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>(必填)</span></span>
-              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" /></label>
+          <input type="text" placeholder="姓名" class="input w-full input-style" :value="formData.name"
+            @input="(event) => (formData.name = event.target.value)" />
+          <input type="text" placeholder="手機" class="input w-full input-style" :value="formData.phone"
+            @input="(event) => (formData.phone = event.target.value)" />
 
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
-          </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
-          </select>
-        </label>
-          <label class="row"><span>居住縣市</span>
-          <select class="select w-full rounded-none" v-model="formData.city">
-            <option value="" selected disabled>請選擇城市</option>
+          <select class="select w-full input-style select-style" v-model="formData.city">
+            <option value="" selected disabled>居住縣市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
-          </select></label>
-          <label class="row"><span>居住地區</span>
-          <select class="select w-full rounded-none" v-model="formData.area">
-            <option value="" selected disabled>請選擇地區</option>
+          </select>
+          <select class="select w-full input-style select-style" v-model="formData.area">
+            <option value="" selected disabled>居住地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
             </option>
-          </select></label>
+          </select>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
+            class="textarea w-full h-full input-style" placeholder="備註訊息"></textarea>
         </div>
       </div>
 
       <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control">
+      <div class="flex gap-2 items-center justify-center control relative z-10">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#333333]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#F00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -70,16 +60,17 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending ? '發送中..' : '立即預約' }}
       </div>
 
       <!-- Contact Info -->
       <ContactInfo />
+
     </div>
 
 
     <!-- Map -->
-    <Map v-if="info.address" />
+    <Map />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -89,12 +80,29 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
 .order-section {
+  // background-image: url('@/section/form/bg.webp');
+  background-color: #DEDBD4;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: size(0);
   position: relative;
- // padding-top: size(406);
-   overflow: hidden;
-    min-height: size(500);
+  height: auto;
+  padding-top: size(100);
+  overflow: hidden;
+
+  .stargroup {
+    @apply absolute;
+    bottom: 10%;
+    right: -18%;
+    width: 115%;
+  }
+
+  .z-10 {
+    z-index: 10;
+    position: relative;
+  }
 
   .bg-image {
     position: absolute;
@@ -104,51 +112,50 @@
     vertical-align: middle;
   }
 
+  .decor {
+    position: absolute;
+    width: size(316);
+    top: size(67);
+    right: 0;
+    z-index: 10;
+    transform: scale(2.5) translate(-50%, -50%) rotate(12deg);
+  }
 }
 
 .order {
   width: 100%;
-  padding-top: 5vw;
-
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
+  padding-top: size(0);
 
   .order-title {
-    @apply  font-['Noto_serif_TC',serif];
-    font-size: size(40);
+    @apply relative z-10 font-['noto_serif_tc'];
+    font-size: size(43);
     font-weight: 700;
+    margin-bottom: size(60);
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: size(10);
     color: #A77C22;
-    padding-top:1.5em;
-    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+
+    // &::after {
+    //   content: '';
+    //   width: 150%;
+    //   height: 110%;
+    //   background-image: url('@/section/form/title_decor.png');
+    //   background-size: contain;
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   position: absolute;
+    //   left: -25%;
+    //   top: 0;
+    // }
   }
 
-  .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
+  .order-subtitle {
+    font-size: size(15);
+    margin-bottom: size(30);
   }
-  .order-subTitle{
-    font-size: size(17);
-    color: #666;
-    padding-top:.8em;
-    letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-  }
+
   .cus-divider {
     margin: 0 auto;
     width: size(300);
@@ -157,26 +164,54 @@
     background-color: #055F76;
   }
 
+  .order-title-img {
+    display: block;
+    width: size(859);
+    margin: 0 auto;
+    margin-bottom: size(40);
+  }
+
   .form {
     width: size(920);
-    min-width: 680px;
-    //  height: 350px;
+    // height: size(500);
     gap: size(80);
-    margin-top: size(45);
     margin-bottom: size(50);
     z-index: 50;
-    align-items: stretch;
+    align-items:stretch;
+
+
+    .input-style {
+      border-radius: 0;
+      background-color: #fff;
+      border: 1px solid #fff;
+      color: #000;
+      margin-bottom:size(15);
+      &:last-child{
+      margin-bottom:size(0);}
+
+      &::placeholder {
+        color: #000 !important;
+      }
+
+    }
+
+    .select-style {
+      option {
+        background-color: #fff;
+      }
+    }
 
     .left {
-      flex: 1;
-      gap: size(20);
-      //   width: size(419);
+      width: size(419);
     }
 
     .right {
-      flex: 1;
-      height: auto;
-      //  width: size(419);
+      width: size(419);
+    margin: 0;
+    align-self:stretch;
+    .textarea{
+      height: 100%;
+    }
     }
 
     &::after {
@@ -186,41 +221,20 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
-      display: flex;width: 100%;
-    align-items:center;
-      > span{
-        width: 5.5em;
-        text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
-      }
-      input,select{background: inherit;flex: 1;}
-      option{color: #666;}
-      select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
-      background-size:auto 200%;
-      transition: background .3s;
-      &:focus{
-        background-position:calc(100% - .5em) 0%;
-      }
-      }
-    }
   }
 
   .send {
-    font-size:20px;
+    font-size: size(22);
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #FFF;
-    background-color: #A77C22;
-    //border: 1px solid #FFF9;
-    border:0;
-    border-radius: .5em;
-
-    width: 308px;
-    height:3.3em;
+    color: #fff;
+    background: #A77C22;
+    width: size(350);
+    height: 3.3em;
     line-height: 3.3;
+    border: 0;
+    border-radius: 10px;
     z-index: 10;
-    font-weight: 400;
     position: relative;
   }
 
@@ -231,12 +245,33 @@
   }
 }
 
+@media screen and (max-width:1300px) {
+  .order-section {
+   // padding-top: size(200)
+  }
+}
+
 @media screen and (max-width:768px) {
   .order-section {
-    min-height: sizem(800);
+    // background-image: url('@/section/form/bg_m.webp');
+    height: auto;
+    padding-bottom: sizem(0);
+    padding-top: sizem(50);
     position: relative;
-    // overflow: hidden;
-   // padding-top: sizem(200);
+    overflow: hidden;
+
+    .stargroup {
+      @apply absolute;
+      bottom: 20%;
+      right: -15%;
+      width: 120%;
+    }
+
+
+    &::after {
+      width: 100%;
+      height: 100%;
+    }
 
     .bg-image {
       position: absolute;
@@ -245,26 +280,20 @@
       bottom: sizem(590);
     }
 
+    .decor {
+      position: absolute;
+      width: sizem(148);
+      top: -#{sizem(50)};
+      right: -#{sizem(35)};
+    }
   }
 
   .order {
     width: 100%;
-    padding-bottom: sizem(63);
     // border-radius: sizem(68) sizem(68) 0 0;
-   /* padding-top: sizem(0);
+    padding-top: sizem(0);
     margin-top: sizem(0);
 
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
 
     .cus-divider {
       margin: 0 auto;
@@ -275,35 +304,46 @@
     }
 
     .order-title {
-      font-size: sizem(25);
-      padding-top:1.5em;
-    }
-    .order-subTitle{
-      font-size: sizem(13);
-      padding-top:0;
+      font-size: sizem(29);
+      font-weight: 700;
+      margin-bottom: sizem(10);
+      width: 100%;
     }
 
+    .order-subtitle {
+      font-size: sizem(12);
+      margin-bottom: sizem(20) !important;
+      width: sizem(220);
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .order-title-img {
+      width: sizem(208);
+      margin-bottom: sizem(20);
+    }
 
     .form {
       width: sizem(310);
-      min-width: 0;
       height: auto;
-      gap: sizem(15);
+      gap:0;
       margin-bottom: sizem(20);
       flex-direction: column;
-      margin-top: sizem(20);
 
+
+    .input-style {
+      margin-bottom:sizem(15);
+      &:last-child{
+      margin-bottom:sizem(15);}
+    }
       .left {
         width: 100%;
-        gap: sizem(15);
+        gap:0;
       }
 
       .right {
         width: 100%;
         height: sizem(100);
-        .row{
-          height: 7em;
-        }
       }
 
       &::after {
@@ -313,8 +353,8 @@
 
     .send {
       font-size: sizem(21);
-      width: sizem(310);
-      height: sizem(72);
+      width: 92%;
+      border-radius: sizem(10);
     }
 
     .control {
@@ -325,6 +365,7 @@
 </style>
 
 <script setup>
+import OrderIntro from "@/section/order_intro.vue"
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
@@ -333,13 +374,10 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import { computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
-
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
-
-
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
@@ -350,7 +388,6 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
-  budget: "",
   project: "",
   email: "",
   city: "",
@@ -361,14 +398,13 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "email", "room_type", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
-  "預算", //budget
   "建案", //project
   "信箱", //email
   "居住縣市", //city
@@ -455,7 +491,6 @@ const send = () => {
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
-      &budget=${formData.budget}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
