@@ -107,7 +107,6 @@
   padding: size(0) size(168) size(55) size(168);
   margin-top: size(40);
   position: relative;
-  z-index: 50;
   margin-bottom: 0;
 
   .tree {
@@ -133,6 +132,7 @@
     @apply absolute;
     bottom: 100%;
     width: size(1413);
+    pointer-events: none;
   }
 
   .logo {
