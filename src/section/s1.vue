@@ -6,7 +6,7 @@
 	<img src="./s1/3.png" class="img3" alt="" />
 	
 	<img src="./s1/logo.png" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
-	<div class="t1" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">十字軸心｜19-27坪</div>
+	<div class="t1" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">十字軸心｜20-28坪</div>
 
   </article>
 </template>
