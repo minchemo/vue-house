@@ -7,8 +7,8 @@
 				<div class="t3" data-aos="fade-up" data-aos-delay="400">綠意飽滿入懷</div>
 			</div>
 		</div>
-		<img class="i1" v-if="!isMobile" src="@/section/s5/1.jpg" alt="" srcset="">
-		<img class="i1" v-else src="@/section/s5/1m.jpg" alt="" srcset="">
+		<img class="i1" v-if="!isMobile" src="@/section/s5/1.webp" alt="" srcset="">
+		<img class="i1" v-else src="@/section/s5/1m.webp" alt="" srcset="">
 		<div class="t">
 			<div class="t4" data-aos="fade-up" data-aos-delay="0">樂活健行｜離山很近 開始山系Outdoor生活</div>
 			<div class="t5" data-aos="fade-up" data-aos-delay="200">
@@ -48,7 +48,7 @@
 			<div class="t4" data-aos="fade-up" data-aos-delay="0">綠享人生｜三大公園環繞 擁倘適切閑然</div>
 			<div class="t5" data-aos="fade-up" data-aos-delay="200">近擁城市中的綠洲，開車很近，走路也不遠，與家人共享天倫時光不必走遠。</div>
 		</div>
-		<img src="@/section/s5/leaf.png" data-aos="fade-down-left" data-aos-delay="200" data-aos-duration="3000" class="leaf" alt="" srcset="">
+		<img src="@/section/s5/leaf.webp" data-aos="fade-down-left" data-aos-delay="200" data-aos-duration="3000" class="leaf" alt="" srcset="">
 	</article>
 </template>
 
@@ -270,19 +270,19 @@ const isMobile = computed(() => globals.$isMobile());
 
 const imgs = [
 	{
-		img: new URL("../section/s5/i1.jpg", import.meta.url).href,
+		img: new URL("../section/s5/i1.webp", import.meta.url).href,
 		caption: "斬龍山公園",
 		t1: "斬龍山遺址文化公園",
 		t2: "步行約15分鐘、開車約5分鐘"
 	},
 	{
-		img: new URL("../section/s5/i2.jpg", import.meta.url).href,
+		img: new URL("../section/s5/i2.webp", import.meta.url).href,
 		caption: "清和公園",
 		t1: "清和社區公園",
 		t2: "步行約5分鐘，開車約1分鐘"
 	},
 	{
-		img: new URL("../section/s5/i3.jpg", import.meta.url).href,
+		img: new URL("../section/s5/i3.webp", import.meta.url).href,
 		caption: "大清水公園",
 		t1: "大清水運動公園",
 		t2: "步行約20分鐘、開車約4分鐘"

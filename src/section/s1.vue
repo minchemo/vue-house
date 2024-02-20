@@ -1,7 +1,7 @@
 <template>
 	<article class="s1">
 		<div class="t">
-			<img src="@/section/s1/logo.png" class="t1" data-aos="fade-up" data-aos-delay="0">
+			<img src="@/section/s1/logo.svg" class="t1" data-aos="fade-up" data-aos-delay="0">
 			<div class="t-m" data-aos="fade-up" data-aos-delay="200">
 				<div class="t2">土城植萃<span>｜</span>慢享日常</div>
 				<div class="t3">青雲路<span>•</span>明德路 <br v-if="isMobile" />光合3-4房</div>

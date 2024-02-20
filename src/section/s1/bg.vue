@@ -10,12 +10,12 @@
                 <img src="@/section/s1/hill3.svg" alt="hill" class="hill3">
                 <img src="@/section/s1/hill4.svg" alt="hill" class="hill4">
                 <img src="@/section/s1/hill1.svg" alt="hill" class="hill1">
-                <img src="@/section/s1/building.png" alt="building" class="building">
+                <img src="@/section/s1/building.webp" alt="building" class="building">
             </template>
             <template v-else>
                 <img src="@/section/s1/hill1_m.svg" alt="hill" class="hill1m">
                 <img src="@/section/s1/hill2_m.svg" alt="hill" class="hill2m">
-                <img src="@/section/s1/buildingm.png" alt="building" class="building">
+                <img src="@/section/s1/buildingm.webp" alt="building" class="building">
             </template>
             <img src="@/section/s1/slowliving.svg" alt="hill" class="slowliving">
         </div>

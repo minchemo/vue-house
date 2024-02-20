@@ -41,7 +41,7 @@
     .logo {
         width: size(190);
         height: size(30);
-        background-image: url('@/assets/navlogo.webp');
+       // background-image: url('@/assets/navlogo.webp');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;

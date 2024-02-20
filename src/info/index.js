@@ -7,8 +7,8 @@ export default {
     keywords: caseName,
   },
   address: "土城區青雲路336巷30號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d4059.6169086360005!2d121.45657242813198!3d24.976061114862343!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzM0LjQiTiAxMjHCsDI3JzI3LjgiRQ!5e0!3m2!1szh-TW!2stw!4v1699258462437!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/xg5P7Y9mBxJz6g197",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3616.7045274936604!2d121.45667963970466!3d24.976165599999987!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34680322214eaac3%3A0xaf96c3cdb71fc1ae!2z5a6P55Kf6Z2S6Zuy!5e0!3m2!1szh-TW!2stw!4v1708410652809!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/NbMjWuvqji6zpTyE9",
   phone: "02-2263-1888",
   fbLink: "https://www.facebook.com/61551474076594",
   fbMessage: "https://m.me/61551474076594",
@@ -34,7 +34,7 @@ export default {
     subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
 },
 //底下2個 沒項目就會隱藏
-room_type: ["兩房","三房","四房","其他"],
+room_type: ["三房","四房","其他"],
 budget: ["1500~2000萬","2000~2500萬","2500~3000萬","3000~5000萬","5000萬以上"],
   navList: [
     {

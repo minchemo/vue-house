@@ -10,7 +10,7 @@
 			</div>
 		</div>
 
-		<Slide ref="splideA" :arrow_m="true" :gap="1" :gap_m="0" :imgs="isMobile ? imgsAm : imgsA" :w="1920" :h="1089" :w_m="375" :h_m="615" :dot="false"
+		<Slide ref="splideA" :arrow_m="true" :gap="1" :gap_m="0" :imgs="isMobile ? imgsAm : imgsA" :w="1920" :h="1080" :w_m="375" :h_m="615" :dot="false"
 			@slideIndex="onMovedA" />
 		<img class="architectural" src="@/section/s8/architectural.svg" alt="" srcset="">
 	</article>
@@ -190,21 +190,21 @@ const splideA = ref(null)
 const currentIdxA = ref(0)
 const imgsA = [
 	{
-		img: new URL("../section/s8/1.jpg", import.meta.url).href,
+		img: new URL("../section/s8/1.webp", import.meta.url).href,
 		caption: "",
 	},
 	{
-		img: new URL("../section/s8/2.jpg", import.meta.url).href,
+		img: new URL("../section/s8/2.webp", import.meta.url).href,
 		caption: "",
 	},
 ]
 const imgsAm = [
 	{
-		img: new URL("../section/s8/1m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/1m.webp", import.meta.url).href,
 		caption: "",
 	},
 	{
-		img: new URL("../section/s8/2m.jpg", import.meta.url).href,
+		img: new URL("../section/s8/2m.webp", import.meta.url).href,
 		caption: "",
 	},
 ]
