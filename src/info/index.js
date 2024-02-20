@@ -1,4 +1,4 @@
-const caseName = "RiVER PARK"
+const caseName = "恆合機構"
 
 export default {
     meta: {
@@ -9,11 +9,11 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     // address: "XXXX",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1701074829535!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/gpLWXKGf8L4TAaaE6",
-    // phone: "00-00000000",
-    fbLink: "https://www.facebook.com/61551470159566/",
-    fbMessage: "https://m.me/61551470159566",
+    googleSrc: "",
+    googleLink: "",
+     phone: "02-2581-5588",
+    //fbLink: "https://www.facebook.com/61551470159566/",
+   // fbMessage: "https://m.me/61551470159566",
     caseName: caseName,
     houseInfos: [
         /*
@@ -33,14 +33,14 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "服務諮詢",
+        title: "預約賞屋",
         subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     //底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房"],
-    budget: ["1000-1999萬","2000-2999萬","3000-3999萬","4000-4999萬","5000-6000萬"],
-    use_type: ["投資","自住","置產","贈與"],
+    room_type: ["1+1房","2房","3房"],
+    //budget: ["1000-1999萬","2000-2999萬","3000-3999萬","4000-4999萬","5000-6000萬"],
+    use_type: ["自住","換屋","置產","子女購屋"],
 
     navList: [{
             name: "雙核心地段",

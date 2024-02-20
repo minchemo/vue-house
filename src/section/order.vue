@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order relative text-center bg-[#806245]">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -20,12 +20,6 @@
             <label class="row"><span>手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-          <label class="row"><span>性別</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.gender">
-            <option value="" selected disabled>請選擇性別</option>
-            <option value="男">男</option>
-            <option value="女">女</option>
-          </select></label>
           <label class="row" v-if="info.room_type"><span>需求房型<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
@@ -223,7 +217,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #543D28;
+    background-color: #AE2C2D;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -364,7 +358,6 @@ const formData = reactive({
   room_type: "",
   budget: "",
   use_type: "",
-  gender: "",
   project: "",
   email: "",
   city: "",
@@ -375,7 +368,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "gender",]
+const bypass = ["project", "msg", "email"]
 
 //中文對照
 const formDataRef = ref([
@@ -384,7 +377,6 @@ const formDataRef = ref([
   "房型", //room_type
   "預算", //budget
   "用途", //use_type
-  "性別", //gender
   "建案", //project
   "信箱", //email
   "居住縣市", //city
@@ -473,7 +465,6 @@ const send = () => {
       &room_type=${formData.room_type}
       &use_type=${formData.use_type}
       &budget=${formData.budget}
-      &gender=${formData.gender}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}

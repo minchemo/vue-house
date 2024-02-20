@@ -11,27 +11,25 @@
   <!--loading end
    <Nav v-if="config.showNav" />-->
   <div class="home bg-[#DEDBD4] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    <div class="bg" v-if="!$isMobile()">
+    <img src="@/section/s1/bg.webp">
+    <img src="@/section/s1/bg.webp">
+    <img src="@/section/s1/bg.webp">
+    </div>
+
+    <div class="bg" v-else>
+    <img src="@/section/s1/bgm.webp">
+    <img src="@/section/s1/bgm.webp">
+    <img src="@/section/s1/bgm.webp">
+    </div>
+
+
     <!--img src="@/section/s1/bg0.jpg" class="bgh"-->
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-   <S2 />
-    <S3 />
-    <S4_1 />
-    <S4_2 />
-    <S4_3 />
-    <S4_4 />
-    <S5_1 />
-    <S5_2 />
-    <S5_3 />
-    <S6 />
-    <S7 />
-    <S8 />
-    <S9 />
-    <S10 />
-    <S11 />
   <!--
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -74,11 +72,41 @@
   opacity: 0;
 }
 
-.home{
-  background: url("@/section/s1/bg.jpg");
-  background-attachment: fixed;
-  background-size: size(600) auto;
+@keyframes an1 {
+  to {
+     transform: translate(0%)
+  }
 }
+
+@keyframes an2 {
+  to {
+     transform: translate(-100%)
+  }
+}
+
+.home{
+  //background: url("@/section/s1/bg.webp");
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+.bg{
+position: fixed;
+top:0; left: 0;
+transform: translateX(-66.66%);
+white-space:nowrap;animation: an1 30s linear infinite reverse;
+
+img{
+  width: size(1920);
+  &:nth-child(2){
+    transform:scaleX(-1);
+  }
+}
+
+}
+
+
+
 /*
 .home > .bgh{position: fixed;width: 100%;
   top: 0;left: 0;
@@ -240,23 +268,9 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
- import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue"
-import S4_1 from "@/section/s4-1.vue"
-import S4_2 from "@/section/s4-2.vue"
-import S4_3 from "@/section/s4-3.vue"
-import S4_4 from "@/section/s4-4.vue"
-import S5_1 from "@/section/s5-1.vue"
-import S5_2 from "@/section/s5-2.vue"
-import S5_3 from "@/section/s5-3.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
-import S10 from "@/section/s10.vue"
-import S11 from "@/section/s11.vue"
+
 /*
-// import S11 from "@/section/s11.vue" 
+ 
 import Nav from "@/layout/navbar.vue" */
 import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
