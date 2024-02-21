@@ -15,11 +15,11 @@
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"><span>姓名<span>(必填)</span></span>
-          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+          <input type="text" placeholder="請使用中文" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
             <label class="row"><span>手機<span>(必填)</span></span>
-              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" /></label>
+  <input type="number" placeholder="請使用數字" class="input w-full rounded-none" :value="formData.phone"
+         @input="(event) => (formData.phone = event.target.value)" min="0" /></label>
           <label class="row" v-if="info.room_type"><span>需求房型<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
@@ -201,6 +201,15 @@
       }
       input,select{background: inherit;flex: 1;
     font-weight: 500;}
+//藏電話的上下箭頭
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
       option{color: #666;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -446,6 +455,14 @@ const send = () => {
   if (unfill.length > 0) {
     pass = false
     toast.error(`「${unfill.join(", ")}」為必填或必選`)
+    return
+  }
+
+  // 姓名字段中只允许中文字符
+  const ChineseReg = /^[\u4E00-\u9FA5]+$/
+  if (!formData.name.match(ChineseReg)) {
+    pass = false
+    toast.error(`姓名只能使用中文`)
     return
   }
 
