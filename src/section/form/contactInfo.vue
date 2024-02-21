@@ -43,11 +43,11 @@
       <img src="//h65.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
       <img src="//h65.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
-    </div>
+    </div-->
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h65.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>服務諮詢</div>
@@ -105,8 +105,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #543D28;}
-.hover\:bg-color2:hover{background-color:#2c1b0a;}
+.bg-color1{background-color: #AE2C2D;}
+.hover\:bg-color2:hover{background-color:#7e1b1b;}
 
 
 .contact-info-img{
@@ -228,7 +228,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(23%) sepia(11%) saturate(1902%) hue-rotate(347deg) brightness(93%) contrast(88%);
+  img{filter: invert(29%) sepia(100%) saturate(1389%) hue-rotate(333deg) brightness(69%) contrast(98%);
   }
 }
 
@@ -246,7 +246,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background:#543D28;
+    background:#123872;
 
     .contact-item {
       height: 100%;      
