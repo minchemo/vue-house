@@ -10,7 +10,7 @@
   </div>
   <!--loading end
    <Nav v-if="config.showNav" />-->
-  <div class="home bg-[#DEDBD4] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+  <div class="home bg-[#0c2971] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <div class="bg" v-if="!$isMobile()">
     <img src="@/section/s1/bg.webp">
     <img src="@/section/s1/bg.webp">
@@ -22,22 +22,7 @@
     <img src="@/section/s1/bgm.webp">
     <img src="@/section/s1/bgm.webp">
     </div>
-
-
-    <!--img src="@/section/s1/bg0.jpg" class="bgh"-->
-    <!--   <div class="bg">
-      <img src="@/section/s1/bg1.png" class="bg1" />
-      <img src="@/section/s1/bg2.png" class="bg2" />
-    </div> -->
     <S1 />
-  <!--
-    <div class="bg">
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-    </div>
-    <S1new />
-    <S1new2 /> -->
     <Order />
   </div>
 </template>
@@ -51,19 +36,6 @@
      transform:scale(1);opacity: 1;
   }
 }
-/*
-  .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
-    span{
-      position: absolute;
-      display: block;width: 1em;height: 1em;
-      background: radial-gradient(ellipse at center, #fff 0%,#fff6 20%,#fff3 30%,#fff0 50%);
-   transform: scale(.5);opacity: 0;
-   animation: an1 2s ease-in-out infinite alternate;
-      &:nth-child(2){animation-delay: 1s;}
-      &:nth-child(3){animation-delay: 1.5s;}
-    }
-  }*/
-
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
@@ -78,14 +50,7 @@
   }
 }
 
-@keyframes an2 {
-  to {
-     transform: translate(-100%)
-  }
-}
-
 .home{
-  //background: url("@/section/s1/bg.webp");
   background-attachment: fixed;
   background-size: 100%;
 }
@@ -102,16 +67,11 @@ img{
     transform:scaleX(-1);
   }
 }
-
+&::after{content: "";position: absolute;bottom: 0;left: 0;width: 100%;height: 8vw;
+background: linear-gradient(to bottom,  #c3292000 0%,#0c2971 100%);
+}
 }
 
-
-
-/*
-.home > .bgh{position: fixed;width: 100%;
-  top: 0;left: 0;
-}
-*/
 img {
   display: inline;
   max-width: unset;
