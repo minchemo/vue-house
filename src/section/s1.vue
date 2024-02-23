@@ -5,11 +5,11 @@
    <img class="t0" src="./s1/pc.jpg" alt="" srcset="">  -->
    <!--img class="bg1" src="./s1/bg2.jpg" alt="" srcset=""-->  
 
-   <img src="./s1/logo.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-if="!$isMobile()" />
-   <img src="./s1/logom.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-else />
+   <img src="./s1/logo.svg" alt="恆合機構×中山北路" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-if="!$isMobile()" />
+   <img src="./s1/logom.svg" alt="恆合機構×中山北路" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-else />
     
     <div class="t1">
-    <img src="./s1/t2.svg" class="t2" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/>
+    <img src="./s1/t2.svg" class="t2" alt="中山北路旁．雙綠帶金軸 捷運雙連站頂歸精品建築" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/>
 
     <div class="t3" data-aos="fade-up" v-if="$isMobile()">即將公開</div>
     </div>
