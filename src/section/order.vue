@@ -2,8 +2,8 @@
   <div id="order" class="order relative text-center bg-[#806245]">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <!--div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div-->
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -20,42 +20,10 @@
             <label class="row"><span>手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-          <label class="row"><span>性別</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.gender">
-            <option value="" selected disabled>請選擇性別</option>
-            <option value="男">男</option>
-            <option value="女">女</option>
-          </select></label>
-          <label class="row" v-if="info.room_type"><span>需求房型<span>(必填)</span></span>
+          <label class="row" v-if="info.room_type"><span>坪數需求<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
             <option v-for="room in info.room_type" :value="room" v-text="room"></option>
-          </select></label>
-          <label class="row" v-if="info.use_type"><span>購屋用途<span>(必填)</span></span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
-            <option value="" selected disabled>請選擇用途</option>
-            <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type"></option>
-          </select>
-        </label>
-        <label class="row" v-if="info.budget"><span>購屋預算<span>(必填)</span></span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇區間</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
-          </select>
-        </label>
-          <label class="row"><span>居住縣市<span>(必填)</span></span>
-          <select class="select w-full rounded-none" v-model="formData.city">
-            <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value">
-              {{ city.label }}
-            </option>
-          </select></label>
-          <label class="row"><span>居住地區<span>(必填)</span></span>
-          <select class="select w-full rounded-none" v-model="formData.area">
-            <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value">
-              {{ area.label }}
-            </option>
           </select></label>
         </div>
         <div class="right">
