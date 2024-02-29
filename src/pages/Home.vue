@@ -32,7 +32,7 @@
     <S9 />
     <S10 />
     <S11 />
-    <S12 />
+    
   <!--
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -48,6 +48,7 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+
 
 @keyframes an1 {
   to {

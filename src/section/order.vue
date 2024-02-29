@@ -1,6 +1,9 @@
 <template>
-  <div id="order" class="order relative text-center bg-[#806245]">
+  <div id="order" class="order relative text-center">
+  <img class="bg1" src="./s1/bg2.jpg" alt="" srcset=""> 
+   <img class="gif" src="./s1/gif4.gif" alt="" srcset=""> 
     <div class="order-section">
+
       <!-- Title -->
       <!--div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div-->
@@ -68,7 +71,12 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
+.bg1{position: absolute;top: 0;left: 0;width: 135.4%;height: 100%;
+    transform: translateX(calc(-100% + 100vw));
+    animation: an1 50s alternate linear infinite;}
+  .gif{position: absolute;top: 0;left:-150%;width: 300%;height: 100%;
+    mix-blend-mode: overlay;
+    opacity: .2;}
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -212,6 +220,12 @@
 }
 
 @media screen and (max-width:768px) {
+  .bg1{
+    width: 240%;
+    height: 100%;
+    animation: an1 60s alternate linear infinite;
+    //left: -90%;
+  }
   .order-section {
     min-height: sizem(800);
     position: relative;
