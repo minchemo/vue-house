@@ -143,9 +143,9 @@ const list2 = [
   },
   {
     t1: ["v2", "準備中"],
-    t2: "",
+    t2: "113/03/12",
     t3: "自辦公聽會",
-    link:"#2",
+    link:"https://drive.google.com/drive/folders/12l5cKU4cLSsySCx_WGbTXDvtKjJiQDQW?usp=sharing",
   },  
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
