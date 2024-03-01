@@ -263,7 +263,7 @@ if (empty($phone)) {
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "(" . $gender . ")<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>購屋用途：".$use_type."<BR>購屋預算：".$budget."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>坪數需求：".$room_type."<BR>購屋用途：".$use_type."<BR>購屋預算：".$budget."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);

@@ -2,8 +2,11 @@
   <div id="order" class="order relative text-center">
   <img class="bg1" src="./s1/bg2.jpg" alt="" srcset=""> 
    <img class="gif" src="./s1/gif4.gif" alt="" srcset=""> 
-    <div class="order-section">
 
+   <img v-if="!$isMobile()" class="txtimg" src="./form/txt.svg" alt="" srcset="">
+   <img v-else class="txtimg" src="./form/txtm.svg" alt="" srcset="">
+
+    <div class="order-section">
       <!-- Title -->
       <!--div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div-->
@@ -25,7 +28,7 @@
             @input="(event) => (formData.phone = event.target.value)" /></label>
           <label class="row" v-if="info.room_type"><span>坪數需求<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
+            <option value="" selected disabled>請選擇坪數</option>
             <option v-for="room in info.room_type" :value="room" v-text="room"></option>
           </select></label>
         </div>
@@ -77,6 +80,12 @@
   .gif{position: absolute;top: 0;left:-150%;width: 300%;height: 100%;
     mix-blend-mode: overlay;
     opacity: .2;}
+
+.txtimg{
+  width: size(920);
+  position: relative;
+}  
+
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -199,7 +208,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #543D28;
+    background-color: #1B2D4A;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -226,6 +235,12 @@
     animation: an1 60s alternate linear infinite;
     //left: -90%;
   }
+
+  .txtimg{
+  width: sizem(310);
+  margin: sizem(50) 0 sizem(20);
+}  
+
   .order-section {
     min-height: sizem(800);
     position: relative;
