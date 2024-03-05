@@ -1,7 +1,7 @@
 <template>
   <article class="s1" id="s1">
 	<!-- <img src="./s1/mo.jpg" class="t0">  -->
-	<img src="./s1/1.svg" data-aos="zoom-in" data-aos-delay="300" class="img1" alt="" />
+	<img src="./s1/1.svg" class="img1" alt="" />
 	<img src="./s1/2.webp" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1600" class="img2" alt="" />
 	<img src="./s1/mark.svg" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"  class="mark" alt="" />
 	<img src="./s1/smile.svg" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1600"  class="smile" alt="" />
