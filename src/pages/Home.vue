@@ -14,6 +14,7 @@
      <div class="bg">
     <S1 />
     <S2 />
+    <Order />
     </div>
   <!--
     <S3 />
@@ -25,7 +26,7 @@
     <S9 />
     <S1new />
     <S1new2 /> -->
-    <Order />
+    
   </div>
 </template>
 
@@ -33,9 +34,10 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 .home{
+  background: #4a95c2;
   > .bg{
-  background:url("@/section/s1/bg1.jpg") top center;
-  background-size: cover;
+  background:url("@/section/s1/bg1.webp") top center;
+  background-size: 100%;
   }
 }
 img {
@@ -46,8 +48,10 @@ img {
 }
 @media screen and (max-width: 767px) {
 .home{
+  
   > .bg{
   background-image:url("@/section/s1/bg1m.jpg");
+  background-repeat: no-repeat;
   }
 }
 }

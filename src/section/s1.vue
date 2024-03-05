@@ -1,12 +1,12 @@
 <template>
   <article class="s1" id="s1">
 	<!-- <img src="./s1/mo.jpg" class="t0">  -->
-	<img src="./s1/1.png" class="img1" alt="" />
-	<img src="./s1/2.png" class="img2" alt="" />
-	<img src="./s1/3.png" class="img3" alt="" />
+	<img src="./s1/1.svg" data-aos="zoom-in" data-aos-delay="300" class="img1" alt="" />
+	<img src="./s1/2.webp" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1600" class="img2" alt="" />
+	<img src="./s1/mark.svg" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"  class="mark" alt="" />
+	<img src="./s1/smile.svg" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1600"  class="smile" alt="" />
 	
-	<img src="./s1/logo.png" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
-	<div class="t1" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">十字軸心｜20-28坪</div>
+	<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 
   </article>
 </template>
@@ -17,7 +17,7 @@
 .s1 {
   @apply relative w-full h-screen;
   min-height: size(900);
-  max-height: size(1080);
+  max-height: size(990);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,9 +31,9 @@
 
   .logo{
 	position: absolute;
-	top:size(280);
-	left:size(675);
-	top:calc(50% + #{size(280-(1080*.5))});
+	top:size(320);
+	left:size(300);
+	top:calc(50% + #{size(270-(900*.5))});
 	width: size(556);
   }
   .t1{
@@ -49,27 +49,31 @@
 
   .img1{
 	position: absolute;
-	top:size(-85);
-	left:size(-10);
-	width: size(521);
-	transform: skewX(-10deg);
+	top:size(35);
+	top:calc(50% + #{size(25-(900*.5))});
+	left:size(180);
+	width: size(821);
+	transform: skew(-5deg, 5deg);
 	transform-origin: 0 0;
 	animation: an1 7s ease-in-out alternate infinite;
   }
   .img2{
 	position: absolute;
-	bottom:size(230);
-	right:size(0);
-	width: size(388);
+	bottom:size(-20);
+	right:size(180);
+	width: size(550);
   }
-  .img3{
+  .mark{
 	position: absolute;
-	bottom:size(-100);
-	right:size(-134);
-	width: size(737);
-	transform: skewY(3deg);
-	transform-origin: 100% 10%;
-	animation: an1 3s ease-in-out alternate infinite;
+	width: size(250);
+	bottom:size(130);
+	right:size(650);
+  }
+  .smile{
+	position: absolute;
+	width: size(250);
+	top:size(50);
+	right:size(510);
   }
  
 }
@@ -83,16 +87,16 @@
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);
+    min-height: sizem(667);
+    max-height: sizem(667);
     font-size:sizem(14);
 
 	.logo{
 		position: absolute;
 		top:sizem(604);
 		left:auto;right: auto;margin: auto;
-		top:calc(50% + #{sizem(130-(604*.5))});
-		width: sizem(271);
+		top:calc(50% + #{sizem(130-(760*.5))});
+		width: sizem(250);
 	}
 
 	.t1{
@@ -104,19 +108,27 @@
 	font-size: sizem(20);
   }
   .img1{
-	top:sizem(-30);
-	left:sizem(-45);
-	width: sizem(250);
+	top:sizem(15);
+	left:sizem(25);
+	width: sizem(330);
   }
   .img2{
-	bottom:sizem(0);
-	right:sizem(0);
-	width: sizem(110);
+	bottom:sizem(-30);
+	right:sizem(65);
+	width: sizem(250);
   }
-  .img3{
-	bottom:sizem(-100);
-	right:sizem(-60);
-	width: sizem(240);
+  .smile{
+	top:sizem(350);
+	top:calc(50% + #{sizem(130-(350*.5))});
+	right:auto;
+	left:sizem(30);
+	width: sizem(120);
+  }
+  .mark{
+	bottom:sizem(50);
+	right:auto;
+	right:sizem(20);
+	width: sizem(120);
   }
     
   }

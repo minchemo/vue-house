@@ -21,14 +21,14 @@
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-          <label class="row" v-if="info.room_type"><span>需求</span>
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-      <!--     <option value="" selected disabled>請選擇房型</option>  -->
+           <option value="" selected disabled>請選擇房型</option> 
             <option v-for="room in info.room_type" :value="room" v-text="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>預算</span>
+          <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-         <!--   <option value="" selected disabled>請選擇預算</option> -->
+           <option value="" selected disabled>請選擇預算</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
         </label>
@@ -95,7 +95,7 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
-background: linear-gradient(0deg, #074544 0%, #083F46 33%, #0C2F4C 76%, #0F2351 100%);
+ background: transparent;
 
 ;
   .bg-image {
@@ -188,10 +188,13 @@ background: linear-gradient(0deg, #074544 0%, #083F46 33%, #0C2F4C 76%, #0F2351 
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #00133f66;border: 1px solid #CCC;color: #fff;
+    .row{background: #ffffff;border: 1px solid #CCC;//color: #000;
+    font-weight: 500;
       display: flex;width: 100%;
+      
     align-items:center;
       > span{
+        color: #000;
         width: 5.5em;
         text-align: left;padding-left:1em ;
         > span{color: #F00;font-size: 12px;}
@@ -201,7 +204,7 @@ background: linear-gradient(0deg, #074544 0%, #083F46 33%, #0C2F4C 76%, #0F2351 
       select{background: url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
-        filter: brightness(0) invert(1);
+      //filter: brightness(0) invert(1);
 
       &:focus{
         background-position:calc(100% - .5em) 0%;
@@ -215,7 +218,7 @@ background: linear-gradient(0deg, #074544 0%, #083F46 33%, #0C2F4C 76%, #0F2351 
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#ceaa6d;
+    background:#0466CA;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
