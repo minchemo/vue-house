@@ -22,7 +22,7 @@
           <label class="row" v-if="info.main_type"><span>選擇項目<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.main_type">
             <option value="" selected disabled>請選擇項目</option>
-            <option v-for="main in info.main_type" :value="room" v-text="main"></option>
+            <option v-for="main in info.main_type" :value="main" v-text="main"></option>
           </select></label>
           <label class="row"><span>姓名<span>(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
