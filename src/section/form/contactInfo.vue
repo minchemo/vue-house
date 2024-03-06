@@ -1,13 +1,13 @@
 <template>
   <div>
-  <div class="contact-info-img">
-</div>
-  <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <!--
+  <!--div class="contact-info-img">
+</div-->
+  <!--<div class="contact-info mx-auto  flex flex-col items-center justify-between">
+    
     <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
-    -->
+    
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -32,12 +32,14 @@
         <div>導航 GoogleMap</div>
       </div>
     </div>
+    
+    
 
-  </div>
+  </div>-->
 </div>
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <!--div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
       <img src="//h65.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
@@ -57,7 +59,7 @@
       <img src="//h65.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
-  </div>
+  </div-->
 
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />

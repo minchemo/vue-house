@@ -30,6 +30,7 @@ $utm_content  = isset($_POST['utm_content']) ? $_POST['utm_content'] : '';
 $utm_campaign = isset($_POST['utm_campaign']) ? $_POST['utm_campaign'] : '';
 $datetime     = date ("Y-m-d H:i:s" , mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y'))) ;
 $room_type    = isset($_POST['room_type']) ? $_POST['room_type'] : '';
+$main_type    = isset($_POST['main_type']) ? $_POST['main_type'] : '';
 $budget       = isset($_POST['budget']) ? $_POST['budget'] : '';
 $use_type     = isset($_POST['use_type']) ? $_POST['use_type'] : '';
     
@@ -265,7 +266,7 @@ $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name .  "<BR>電話：" . $phone .  "<BR>需求房型：".$room_type."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name .  "<BR>電話：" . $phone .  "<BR>需求房型：".$room_type."<BR>選擇項目：".$main_type."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
@@ -288,6 +289,7 @@ $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
             $url .= "&city=".$city;
             $url .= "&area=".$area;
             $url .= "&room_type=" . $room_type;
+            $url .= "&main_type=" . $main_type;
             $url .= "&budget=" . $budget;
             $url .= "&use_type=" . $use_type;
             $url .= "&gender=".$gender;

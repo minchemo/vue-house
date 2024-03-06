@@ -6,12 +6,8 @@
    <img class="bg1" src="./s1/bg2.jpg" alt="" srcset=""> 
    <img class="gif" src="./s1/gif4.gif" alt="" srcset=""> 
 
-   <img src="./s1/logo.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-if="!$isMobile()" />
-   <img src="./s1/logom.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-else />
-    
-    <div class="t1">
-    <img src="./s1/slogo1.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/>
-    <img src="./s1/slogo2.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/></div>
+   <img v-if="!$isMobile()" class="txtimg" src="./form/txt.svg" alt="" srcset="">
+   <img v-else class="txtimg" src="./form/txtm.svg" alt="" srcset="">
     
   </article>
 </template>
@@ -31,8 +27,8 @@
 }
 .s1 {
   @apply relative w-full h-screen;
-  min-height: size(900);
-  max-height: size(1180);
+  min-height: size(700);
+  max-height: size(700);
   height:100vh;
   display: flex;
   flex-direction: column;
@@ -63,6 +59,11 @@
   img{height:size(86);}
     }
 
+  .txtimg{
+  width: size(1400);
+  position: relative;
+}    
+
   
 
     
@@ -79,7 +80,7 @@
 
 
   .s1 {
-  min-height:sizem(568);
+  min-height:sizem(812);
   max-height: sizem(812);
     height: calc(100vh - 62px);
     font-size:sizem(14);
@@ -103,6 +104,11 @@
    // margin-bottom: 1.5vw;
   img{height:sizem(34);}
     }
+
+   .txtimg{
+  width: sizem(310);
+  margin: sizem(20) 0 sizem(20);
+}   
 
   }
 

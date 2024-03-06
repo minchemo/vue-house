@@ -1,15 +1,16 @@
 <template>
   <div id="order" class="order relative text-center">
+  <img class="bg1" src="./s1/bg2.jpg" alt="" srcset=""> 
+   <img class="gif" src="./s1/gif4.gif" alt="" srcset=""> 
+
+   <img v-if="!$isMobile()" class="txtimg" src="./form/txt.svg" alt="" srcset="">
+   <img v-else class="txtimg" src="./form/txtm.svg" alt="" srcset="">
 
     <div class="order-section">
-      <div class="txt-phone">
-        VVIP預約專線 <span>2989-9688</span>
-      </div>
       <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-      <div class="cus-divider"></div>
-      
+      <!--div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div-->
+      <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
@@ -19,11 +20,6 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row" v-if="info.main_type"><span>選擇項目<span>(必填)</span></span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.main_type">
-            <option value="" selected disabled>請選擇項目</option>
-            <option v-for="main in info.main_type" :value="room" v-text="main"></option>
-          </select></label>
           <label class="row"><span>姓名<span>(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
@@ -46,9 +42,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#FFF]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#1B2D4A] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -88,18 +84,7 @@
 .txtimg{
   width: size(920);
   position: relative;
-}
-
-.txt-phone{
-  @apply  font-['Noto_serif_TC',serif];
-  font-size:size(40);
-  font-weight: 500;
-
-  span{
-    font-size:size(60);
-    color:#b49235;
-  }
-}
+}  
 
 .order-section {
   position: relative;
@@ -120,7 +105,6 @@
 .order {
   width: 100%;
   padding-top: 5vw;
-  padding-bottom: 5vw;
 
   .bird {
     @apply absolute;
@@ -145,7 +129,7 @@
     @apply  font-['Noto_serif_TC',serif];
     font-size: size(40);
     font-weight: 700;
-    color: #1B2D4A;
+    color: #FFF;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -156,7 +140,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #1B2D4A;
+    color: #FFF;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -257,17 +241,6 @@
   margin: sizem(50) 0 sizem(20);
 }  
 
-.txt-phone{
-  @apply  font-['Noto_serif_TC',serif];
-  font-size:sizem(20);
-  font-weight: 500;
-
-  span{
-    font-size:sizem(30);
-    color:#b49235;
-  }
-}
-
   .order-section {
     min-height: sizem(800);
     position: relative;
@@ -285,8 +258,7 @@
 
   .order {
     width: 100%;
-    padding-bottom: sizem(40);
-    padding-top: sizem(40);
+    padding-bottom: sizem(63);
     // border-radius: sizem(68) sizem(68) 0 0;
    /* padding-top: sizem(0);
     margin-top: sizem(0);
@@ -308,17 +280,16 @@
       width: sizem(117);
       height: sizem(2);
       margin-bottom: sizem(25);
-      margin-top: sizem(10);
       background-color: #055F76;
     }
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1em;
+      padding-top:1.5em;
     }
     .order-subTitle{
       font-size: sizem(13);
-      padding-top:sizem(10);
+      padding-top:0;
     }
 
 
@@ -388,7 +359,6 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
-  main_type: "",
   budget: "",
   use_type: "",
   gender: "",
@@ -409,7 +379,6 @@ const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
-  "項目", //room_type
   "預算", //budget
   "用途", //use_type
   "性別", //gender
@@ -498,7 +467,6 @@ const send = () => {
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
-      &main_type=${formData.main_type}
       &room_type=${formData.room_type}
       &use_type=${formData.use_type}
       &budget=${formData.budget}

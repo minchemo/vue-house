@@ -6,12 +6,9 @@
    <img class="bg1" src="./s1/bg2.jpg" alt="" srcset=""> 
    <img class="gif" src="./s1/gif4.gif" alt="" srcset=""> 
 
-   <img src="./s1/logo.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-if="!$isMobile()" />
-   <img src="./s1/logom.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-else />
-    
-    <div class="t1">
-    <img src="./s1/slogo1.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/>
-    <img src="./s1/slogo2.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/></div>
+   <img src="./s1/t1.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-if="!$isMobile()" />
+   <img src="./s1/t1m.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-else />
+   
     
   </article>
 </template>
@@ -49,7 +46,7 @@
     mix-blend-mode: overlay;
     opacity: .2;}
   .logo{position: relative;z-index: 3;
-    width:size(1186);
+    width:size(1300);
     margin: 7.2em auto 0;left: .6vw;
     filter:drop-shadow(0 0 size(15) #142C67cc);
     //142C67
@@ -79,8 +76,8 @@
 
 
   .s1 {
-  min-height:sizem(568);
-  max-height: sizem(812);
+  min-height:sizem(667);
+  max-height: sizem(667);
     height: calc(100vh - 62px);
     font-size:sizem(14);
   gap: 0;
@@ -93,15 +90,15 @@
 
     
   .logo{
-    width:sizem(270);
+    width:sizem(230);
     left: auto;
-    margin: 6.5em auto 7em auto;
+    margin-top: sizem(5);
     }
   .t1{
   flex-direction: column;
   gap:5vw;
    // margin-bottom: 1.5vw;
-  img{height:sizem(34);}
+  img{height:sizem(150);}
     }
 
   }

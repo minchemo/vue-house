@@ -38,6 +38,7 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     //底下2個 沒項目就會隱藏
+    main_type: ["國泰世華銀行","國泰人壽"],
     room_type: ["30坪","40坪","50坪"],
     budget: [],
     use_type: [],
