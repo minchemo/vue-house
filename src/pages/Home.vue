@@ -10,13 +10,13 @@
   </div>
   <!-- loading end
    <Nav v-if="config.showNav" /> -->
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif_TC]">
      <div class="bg">
     <S1 />
-    <S2 />
     <Order />
     </div>
   <!--
+    <S2 />
     <S3 />
     <S4 />
     <S5 />
@@ -34,10 +34,10 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 .home{
-  background: #4a95c2;
+  background: linear-gradient(to bottom, #1f375e, #000);
   > .bg{
-  background:url("@/section/s1/bg1.webp") top center;
-  background-size: 100%;
+  //background:url("@/section/s1/bg1.webp") top center;
+  //background-size: 100%;
   }
 }
 img {
@@ -50,7 +50,7 @@ img {
 .home{
   
   > .bg{
-  background-image:url("@/section/s1/bg1m.jpg");
+  //background-image:url("@/section/s1/bg1m.jpg");
   background-repeat: no-repeat;
   }
 }

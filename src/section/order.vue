@@ -134,6 +134,7 @@
   }
 
   .order-title {
+    font-family: "Noto serif TC", serif;
     font-size: size(40);
     font-weight: 700;
     color: #fff;
@@ -218,7 +219,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#0466CA;
+    background:#c9912b;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;

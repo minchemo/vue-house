@@ -1,12 +1,11 @@
 <template>
   <article class="s1" id="s1">
 	<!-- <img src="./s1/mo.jpg" class="t0">  -->
-	<img src="./s1/1.svg" class="img1" alt="" />
-	<img src="./s1/2.webp" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1600" class="img2" alt="" />
-	<img src="./s1/mark.svg" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"  class="mark" alt="" />
-	<img src="./s1/smile.svg" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1600"  class="smile" alt="" />
+	<div class="txt">
+		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
+		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
+	</div>
 	
-	<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 
   </article>
 </template>
@@ -15,9 +14,11 @@
 @import '@/assets/style/function.scss';
 
 .s1 {
-  @apply relative w-full h-screen;
-  min-height: size(900);
-  max-height: size(990);
+  @apply relative w-full h-screen ;
+  background-image:url("../section/s1/bg.webp");
+  background-size: cover;
+  min-height: size(1080);
+  max-height: size(1080);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,52 +30,21 @@
   font-weight: 700;
   .t0{position: absolute;width: 100%;top: 0;left: 0; pointer-events: none;opacity: .3;}
 
-  .logo{
-	position: absolute;
-	top:size(320);
-	left:size(300);
-	top:calc(50% + #{size(270-(900*.5))});
-	width: size(556);
+  .txt{
+	position: relative;
+	margin: 0px auto;
+	gap:size(130);
+	display: flex;
+	flex-direction: column;
   }
-  .t1{
-	position: absolute;
-	left:size(710);
-	top:size(820);
-	font-weight: 500;
-	letter-spacing: .3em;
-  }
-@keyframes an1 {
-	to{transform: scale(1);}
-}
 
-  .img1{
-	position: absolute;
-	top:size(35);
-	top:calc(50% + #{size(25-(900*.5))});
-	left:size(180);
-	width: size(821);
-	transform: skew(-5deg, 5deg);
-	transform-origin: 0 0;
-	animation: an1 7s ease-in-out alternate infinite;
+  .logo{
+	width: size(800);
   }
-  .img2{
-	position: absolute;
-	bottom:size(-20);
-	right:size(180);
-	width: size(550);
+  .title{
+	width: size(800);
   }
-  .mark{
-	position: absolute;
-	width: size(250);
-	bottom:size(130);
-	right:size(650);
-  }
-  .smile{
-	position: absolute;
-	width: size(250);
-	top:size(50);
-	right:size(510);
-  }
+
  
 }
 
@@ -86,6 +56,7 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
+	background-image:url("./section/s1/bgm.webp");
     height:calc(100vh - 63px);
     min-height: sizem(667);
     max-height: sizem(667);
