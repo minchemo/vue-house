@@ -7,7 +7,7 @@
 </div>
 <!-- <img src="./s1/en.png" class="en" alt="" loading="lazy"> -->
 <!--img src="./s1/style2.png" data-aos="fade-right" class="style1" alt="" loading="lazy"-->
-<img src="./s1/synlogo.png" class="synlogo" alt="" loading="lazy">
+<!--img src="./s1/synlogo.png" class="synlogo" alt="" loading="lazy"-->
 
     <div class="title">
       <img loading="lazy"

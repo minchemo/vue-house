@@ -18,7 +18,7 @@ export default {
         ["戶數", "72戶"],
         ["建照號碼", "(110)南工造字第02377號"],
         ["坪數", "41-52坪"],
-        ["行銷企劃", "<img src=" + require("@/projects/cfyd/other.svg") + ">"]
+        //["行銷企劃", "<img src=" + require("@/projects/cfyd/other.svg") + ">"]
     ],
 
     gtmCode: ["M87MK5M","5HXCSFF"], // 可放置多個
