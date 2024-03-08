@@ -56,19 +56,23 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
-	background-image:url("./section/s1/bgm.webp");
+	background-image:url("../section/s1/bgm.webp");
+	background-size: cover;
     height:calc(100vh - 63px);
     min-height: sizem(667);
     max-height: sizem(667);
     font-size:sizem(14);
 
+	.txt{
+	gap:sizem(50);
+  }
+
 	.logo{
-		position: absolute;
-		top:sizem(604);
-		left:auto;right: auto;margin: auto;
-		top:calc(50% + #{sizem(130-(760*.5))});
-		width: sizem(250);
+		width: sizem(300);
 	}
+	.title{
+	width: sizem(300);
+  }
 
 	.t1{
 	left:auto;right: auto;margin: auto;

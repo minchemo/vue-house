@@ -21,7 +21,7 @@ export default {
         ["使照號碼", "(112)高工使字第.02450號"],
         ["建設公司", "自售"],
     ],
-    gtmCode: ["GTM-W6PJV9QK"], // 可放置多個
+    gtmCode: ["GTM-TR3R56SJ"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -32,8 +32,8 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     //底下2個 沒項目就會隱藏
-    room_type: ["套房","2房","3房"],
-    budget: ["1000-1500萬","1500-2000萬","2000-2500萬","2500-3000萬"],
+    room_type: ["四房","其他"],
+    budget: ["2000-3000萬","3000-5000萬"],
     navList: [
         /*
         {
