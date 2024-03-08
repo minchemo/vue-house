@@ -1,6 +1,7 @@
 <template>
   <article class="s1" id="s1">
 	<!-- <img src="./s1/mo.jpg" class="t0">  -->
+  <img src="./s1/logoicon.svg" class="logoicon" alt="">
 	<div class="txt">
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
@@ -29,6 +30,13 @@
   line-height: 1.3;
   font-weight: 700;
   .t0{position: absolute;width: 100%;top: 0;left: 0; pointer-events: none;opacity: .3;}
+
+  .logoicon{
+    position: absolute;
+    right:size(20);
+    top:size(20);
+    width: size(150);
+  }
 
   .txt{
 	position: relative;
@@ -62,6 +70,14 @@
     min-height: sizem(667);
     max-height: sizem(667);
     font-size:sizem(14);
+
+
+  .logoicon{
+    position: absolute;
+    right:sizem(40);
+    top:sizem(70);
+    width: sizem(100);
+  }  
 
 	.txt{
 	gap:sizem(50);
