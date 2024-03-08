@@ -16,11 +16,6 @@
 		<li data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">讓好事成雙發生，</li>
 		<li data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000">預約未來的雙倍幸福</li>
 	</ul>
-	<img src="./s1/title.svg" class="title" alt="title" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" />
-  <img src="./s1/3.svg" class="img3" alt="" />
-  <img src="./s1/3.svg" class="img4" v-if="$isMobile()" alt="" />
-  <img src="./s1/style.svg" class="style" alt="" />
-  <img src="./s1/style.svg" class="style2" alt="" />
   </article>
 </template>
 
