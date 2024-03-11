@@ -5,11 +5,15 @@
     <img src="./s1/t.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="!$isMobile()"/>
     <img src="./s1/tm.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="$isMobile()"/> -->
        <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
-    <img class="bg" src="./s1/bg.jpg" alt="" srcset="">
+    <img class="bg" src="./s1/bg.webp" v-if="!$isMobile()" alt="" srcset="">
+    <img class="bg" src="./s1/bgm.webp" v-else alt="" srcset="">
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000"/>
-       <div class="txt" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+    <img src="./s1/01.webp" class="a01" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000"/>
+    <img src="./s1/smile.svg" class="smile" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000"/>
+    <img src="./s1/mark.svg" class="mark" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000"/>
+       <!--div class="txt" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
         <span class="t1">實坪電梯別墅｜樂享花園會館</span><span class="t2">64-74坪｜大器落成｜正式公開</span>
-      </div>
+      </div-->
 
   </article>
 </template>
@@ -19,8 +23,8 @@
 
 .s1 {
   @apply relative w-full h-screen;
-  min-height: size(1000);
-  max-height: size(1180);
+  min-height: size(1080);
+  max-height: size(1080);
   height: calc(100vh + 100vw * 100 /1920);
   display: flex;
   flex-direction: row;
@@ -47,7 +51,33 @@
     .t2{font-size: 1em;position: relative;top: .03em;left: -.04em;margin: auto -0.01em;  background: linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);padding: 0.3em;
     }
   }
-  .logo{width: size(503);margin: -2em 0 0 0;}
+  .logo{
+    position: absolute;
+    width: size(550);
+    left: size(250);
+    top: size(320);
+    }
+
+  .a01{
+    position: absolute;
+    width: size(750);
+    bottom: size(0);
+    right: size(50);
+   }
+   .mark{
+    position: absolute;
+    width: size(180);
+    top: size(400);
+    right: size(750);
+   }
+
+   .smile{
+    position: absolute;
+    width: size(200);
+    top: size(220);
+    right: size(600);
+   }
+    
 
 }
 
@@ -59,9 +89,9 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
-    height:calc(100vh - 63px);
-    min-height: sizem(660);
-    max-height: sizem(770);
+    height:sizem(667);
+    min-height: sizem(667);
+    max-height: sizem(667);
     font-size:sizem(21);
   flex-direction: column;
    .bg{left: -20%;width: 120%;max-width: 900%;}
@@ -70,7 +100,29 @@
     font-size:1em;
    left: 0em;
    }
-  .logo{width: sizem(300);margin: 0em auto 1em auto;}
+  .logo{
+    width: sizem(280);
+    left: sizem(45);
+    top: sizem(50);
+    }
+
+    .a01{
+    width: sizem(350);
+    bottom: sizem(0);
+    right: sizem(-20);
+   }
+   .mark{
+    width: sizem(90);
+    top: sizem(270);
+    right: sizem(30);
+   }
+
+   .smile{
+    width: sizem(100);
+    top: sizem(270);
+    right: auto;
+    left: sizem(40)
+   }
   }
 }
 </style>
