@@ -24,10 +24,10 @@
             <option value="" selected disabled>請選擇項目</option>
             <option v-for="main in info.main_type" :value="main" v-text="main"></option>
           </select></label>
-          <label class="row"><span>姓名<span>(必填)</span></span>
+          <label class="row"><span>貴賓姓名<span>(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>(必填)</span></span>
+            <label class="row"><span>貴賓手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
           <label class="row" v-if="info.room_type"><span>坪數需求<span>(必填)</span></span>
@@ -38,7 +38,7 @@
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
+            class="row textarea w-full h-full rounded-none" placeholder="留言詢問"></textarea>
         </div>
       </div>
 
@@ -47,8 +47,8 @@
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
         <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#1B2D4A] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+          本人知悉並同意<a href="https://www.cathay-red.com.tw/tw/Home/Privacy" target="_blank"
+            class="modal-button text-[#1B2D4A] cursor-pointer hover:opacity-70">「個資告知事項聲明」</a>內容
         </p>
       </div>
       <Policy />

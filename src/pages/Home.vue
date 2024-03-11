@@ -1,13 +1,13 @@
 <template>
   <div ref="gtmNoScript" />
   <!--loading-->
-  <div v-bind:class="{
+  <!--<div v-bind:class="{
     'opacity-0': !isLoading,
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
-  </div>
+  </div>-->
   <!--loading end
    <Nav v-if="config.showNav" />-->
   <div class="home bg-[#DEDBD4] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
