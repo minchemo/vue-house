@@ -19,9 +19,9 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row" v-if="info.main_type"><span>選擇項目<span>(必填)</span></span>
+          <label class="row" v-if="info.main_type"><span>貴賓身分<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.main_type">
-            <option value="" selected disabled>請選擇項目</option>
+            <option value="" selected disabled>請選擇身分</option>
             <option v-for="main in info.main_type" :value="main" v-text="main"></option>
           </select></label>
           <label class="row"><span>貴賓姓名<span>(必填)</span></span>
