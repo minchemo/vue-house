@@ -5,10 +5,10 @@
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <!--div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
-      </div-->
+      </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
         <img src="//h65.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
@@ -35,11 +35,11 @@
 
   <!-- Mobile contact info -->
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <!--div class="flex flex-1 flex-col contact-item justify-center items-center" 
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
       <img src="//h65.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
-    </div-->
+    </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
       <img src="//h65.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
@@ -59,6 +59,7 @@
       <img src="//h65.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
+    
   </div>
 
   <!-- Modal -->
@@ -110,8 +111,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#0466CA;}
-.hover\:bg-color2:hover{background-color:#014d99;}
+.bg-color1{background:#c9912b;}
+.hover\:bg-color2:hover{background-color:#996c17;}
 
 
 .contact-info-img{
@@ -235,7 +236,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(13%) sepia(58%) saturate(7486%) hue-rotate(198deg) brightness(87%) contrast(107%);
+  img{filter: invert(58%) sepia(61%) saturate(502%) hue-rotate(0deg) brightness(91%) contrast(94%);
   }
 }
 
@@ -253,7 +254,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#033364;
+    background:#40210D;
 
     .contact-item {
       height: 100%;      

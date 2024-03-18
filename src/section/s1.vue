@@ -1,10 +1,11 @@
 <template>
   <article class="s1" id="s1">
-	<!-- <img src="./s1/mo.jpg" class="t0">  -->
-  <img src="./s1/logoicon.svg" class="logoicon" alt="">
+	 <img src="./s1/house.webp" class="house"> 
+   <img src="./s1/style2.svg" class="style2">   
 	<div class="txt">
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
+    <img src="./s1/style.svg" class="style" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
 	</div>
 	
 
@@ -31,26 +32,45 @@
   font-weight: 700;
   .t0{position: absolute;width: 100%;top: 0;left: 0; pointer-events: none;opacity: .3;}
 
-  .logoicon{
+  .house{
     position: absolute;
-    right:size(20);
-    top:size(20);
-    width: size(150);
+    right:size(210);
+    bottom:size(30);
+    width: size(520);
+    background: transparent;
+    z-index: 99;
+  }
+  .style2{
+    position: absolute;
+    width: size(1900);
+    right:size(-480);
+    bottom:size(-273);
+    mix-blend-mode: screen;
   }
 
   .txt{
-	position: relative;
-	margin: 0px auto;
-	gap:size(130);
+	position: absolute;
+  left: size(250);
+	gap:size(120);
 	display: flex;
 	flex-direction: column;
   }
 
   .logo{
-	width: size(800);
+	width: size(650);
+  z-index: 99;
   }
   .title{
-	width: size(800);
+	width: size(650);
+  z-index: 99;
+  }
+
+  .style{
+    position: absolute;
+    width: 85%;
+    left: size(65);
+    top: size(-20);
+    mix-blend-mode: screen;
   }
 
  
@@ -72,23 +92,40 @@
     font-size:sizem(14);
 
 
-  .logoicon{
+  .house{
     position: absolute;
-    right:sizem(40);
-    top:sizem(70);
-    width: sizem(100);
+    right:sizem(95);
+    bottom:sizem(10);
+    width: sizem(180);
   }  
 
-	.txt{
-	gap:sizem(50);
+  .style2{
+    width: sizem(850);
+    right:sizem(-235);
+    bottom:sizem(-121);
   }
 
-	.logo{
-		width: sizem(300);
+	.txt{
+	gap:sizem(20);
+  left: sizem(48);
+  top: sizem(20);
+
+
+  .logo{
+		width: sizem(280);
 	}
 	.title{
-	width: sizem(300);
+	width: sizem(280);
   }
+
+  .style{
+    width: 85%;
+    left: sizem(28);
+    top: sizem(-20);
+  }
+  }
+
+	
 
 	.t1{
 	left:auto;right: auto;margin: auto;

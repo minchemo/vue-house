@@ -1,4 +1,4 @@
-const caseName = "三景三錦"
+const caseName = "保泰一品"
 
 export default {
     meta: {
@@ -8,20 +8,20 @@ export default {
     },
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "高雄市鳳山區國泰路二段13巷6號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.0114573400842!2d120.34940707630585!3d22.616047331374592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1b51d5101915%3A0x342883cd9e436cbf!2zODMw6auY6ZuE5biC6bOz5bGx5Y2A5ZyL5rOw6Lev5LqM5q61MTPlt7c26Jmf!5e0!3m2!1szh-TW!2stw!4v1710121953279!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/mRqw51WXNyyUpKcZ8",
-    phone: "02-2855-9933",
-    fbLink: "https://www.facebook.com/61556786833263",
-    fbMessage: "https://m.me/61556786833263",
+    address: "高雄市前鎮區永豐路237號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.2039021366445!2d120.33038727630576!3d22.608859731638393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0357e46857dd%3A0x2435498d582d88bd!2zODA26auY6ZuE5biC5YmN6Y6u5Y2A5rC46LGQ6LevMjM36Jmf!5e0!3m2!1szh-TW!2stw!4v1710724704786!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/wjeFDtefUeKC3qkv8",
+    phone: "07-722-0088",
+    fbLink: "https://www.facebook.com/61557147771320",
+    fbMessage: "https://m.me/61557147771320",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "自冠建設"],
-        ["建築設計", "原東聯合建築師事務所"],
-        ["使照號碼", "(112)高工使字第.02450號"],
-        ["建設公司", "自售"],
+        ["投資興建", "晟揚建設股份有限公司"],
+        ["建築設計", "梁慶源沈鈺峰聯合建築師事務所"],
+        ["建照號碼", "109高市建築字第01797號"],
+        ["行銷企劃", "上宸國際"],
     ],
-    gtmCode: ["GTM-TR3R56SJ"], // 可放置多個
+    gtmCode: ["GTM-W2JR8PCQ"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2

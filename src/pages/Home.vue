@@ -34,7 +34,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 .home{
-  background: linear-gradient(to bottom, #1f375e, #000);
+  background: linear-gradient(to bottom, #40210D, #000);
   > .bg{
   //background:url("@/section/s1/bg1.webp") top center;
   //background-size: 100%;
