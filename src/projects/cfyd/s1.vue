@@ -44,10 +44,10 @@
 
       .bg-img{
       position: absolute;
-      width:size(2280);
+      width:100%;
       height:auto;
-      left:size(-180);
-      bottom:size(0);
+      left:0;
+      bottom:0;
       z-index: 0;
       //transform:skewX(7deg);
       //transform-origin: 100% 26%;
@@ -93,9 +93,9 @@
 
 
     .t1 {
-    width: 55%;
-    filter: drop-shadow(0em 0em 0.8em rgba(9, 20, 58, 0.6));
-    margin: 0 auto 5% auto;
+    width:100%;
+    filter: drop-shadow(0em 0em 0.5em rgba(9, 20, 58, 0.6));
+    margin: 0 auto 0 auto;
     }
 
     .t2 {
@@ -114,14 +114,14 @@
   .s1 {
     position: relative;
     width: size-m(375);
-    height: size-m(610);
+    height: size-m(667);
     z-index: 12;
 
     .bg-img{
       top:size-m(0);
       left:size-m(0);
       width: size-m(375);
-      height: size-m(610);
+      height: size-m(667);
       transform-origin: 100% 0%;
     }
     .style1{
@@ -143,8 +143,8 @@
 
 
     .title {
-      position: absolute;
-      width: size-m(308);
+     /* position: absolute;
+      width: 100%;
       height: size-m(249);
       display: flex;
       align-items: center;
@@ -152,11 +152,10 @@
       flex-direction: column;
       right: 50%;
       transform: translateX(50%);
-      bottom: size-m(250);
+      bottom: size-m(250);*/
       .t1 {
-        width:86%;
-    margin: 53% auto 0% auto;
-    filter: drop-shadow(0em 0em 0.8em rgba(9, 20, 58, 0.6));
+        width:100;
+    filter: drop-shadow(0em 0em 0.5em rgba(9, 20, 58, 0.6));
     
       }
       .t2 {
