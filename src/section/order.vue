@@ -21,25 +21,25 @@
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
+          <label class="row" v-if="info.room_type"><span>需求房型<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
            <option value="" selected disabled>請選擇房型</option> 
             <option v-for="room in info.room_type" :value="room" v-text="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算</span>
+          <!--label class="row" v-if="info.budget"><span>購屋預算<span>(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
            <option value="" selected disabled>請選擇預算</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
-        </label>
-          <label class="row"><span>居住縣市</span>
+        </label-->
+          <label class="row"><span>居住縣市<span>(必填)</span></span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row"><span>居住地區</span>
+          <label class="row"><span>居住地區<span>(必填)</span></span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value">
@@ -195,8 +195,9 @@
       
     align-items:center;
       > span{
+        font-size: 0.8em;
         color: #000;
-        width: 5.5em;
+        width: 8em;
         text-align: left;padding-left:1em ;
         > span{color: #F00;font-size: 12px;}
       }
@@ -368,7 +369,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "people", "email", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "people", "email","budget"]
 
 //中文對照
 const formDataRef = ref([
@@ -395,6 +396,10 @@ watch(
     formData.area = areaList.value[0].value
   }
 )
+
+onMounted(()=>{
+  formData.city = '高雄市'
+})
 
 const onRecaptchaVerify = () => {
   formData.r_verify = true
