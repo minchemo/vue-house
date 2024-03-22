@@ -109,6 +109,9 @@
 .order {
   width: 100%;
   padding-top: 0;
+  //background: #195c45;
+  background: linear-gradient(to bottom, #195c45, #000704);
+  
 
   .bird {
     @apply absolute;
@@ -210,7 +213,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #00312E;
+    background-color: #ca9e25;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: 0em;

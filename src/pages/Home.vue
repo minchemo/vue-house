@@ -11,8 +11,8 @@
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-       <img src="@/section/s1/bg.webp" class="bgh" v-if="!$isMobile()">
-       <img src="@/section/s1/bgm.webp" class="bgh" v-else>
+       <!--img src="@/section/s1/bg.webp" class="bgh" v-if="!$isMobile()">
+       <img src="@/section/s1/bgm.webp" class="bgh" v-else-->
     <S1 />
     <!-- <S2v /> -->
   <!--

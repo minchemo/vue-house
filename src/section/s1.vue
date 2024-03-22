@@ -1,13 +1,15 @@
 <template>
   <article class="s1" id="s1">
 <!--img src="./s1/book.webp" alt="img" class="img" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0"-->
-<div class="txt">
+<!--div class="txt">
 <h3 class="t1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">歡迎回<span>嘉</span><br>開啟幸福篇章</h3>
 <div class="t2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">START HAPPINESS</div>
 <h3 class="t3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">【嘉義首座日系選冊宅】</h3>
-</div>
-<!--img src="./s1/style1.webp" alt="style1" class="style1" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
-<img src="./s1/style2.webp" alt="style2" class="style2" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0"-->
+</div-->
+<img src="./s1/logo.svg" alt="logo" class="logo" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+<img src="./s1/title.svg" alt="title" class="title" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+<img src="./s1/style.svg" alt="style" class="style" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+<img src="./s1/logoicon.svg" alt="logoicon" class="logoicon" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
   </article>
 </template>
 
@@ -24,21 +26,35 @@
 .s1 {
   
   @apply relative w-full h-screen;
-  min-height: size(900);
-  max-height: size(900);
+  min-height: size(1080);
+  max-height: size(1080);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
   font-size:size(36);
   //background: #E60012;
-  background: url("./s1/bg.jpg");
+  background: url("./s1/bg.webp");
 
   background-size: cover;
 
     .img{position: absolute;width: size(740);left: size(187);
     top:calc(50% + #{size(320 - 540)});
     z-index: 99;
+    }
+
+    .style{
+      position: absolute;
+      width: size(1163);
+      right: size(-10);
+      bottom: size(-80);
+    }
+
+    .logoicon{
+      position: absolute;
+      width: size(200);
+      right: size(20);
+      bottom: size(20);
     }
 
     .style1{
@@ -53,6 +69,21 @@
     right: size(119);
     top:size(350);
     mix-blend-mode: soft-light;
+  }
+  
+
+  .logo{
+    position: absolute;
+    width: size(700);
+    left: size(250);
+    top:size(200);
+  }
+
+  .title{
+    position: absolute;
+    width: size(700);
+    left: size(250);
+    top:size(500);
   }
 
     .txt{
@@ -114,8 +145,33 @@
     min-height: sizem(667);
     max-height: sizem(812);
     font-size:sizem(15);
-    background: url("./s1/bgm.jpg");
+    background: url("./s1/bgm.webp");
     background-size: auto 100%;
+
+
+    .style{
+      width: sizem(450);
+      right: sizem(-10);
+      bottom: sizem(-40);
+    }
+
+    .logo{
+    width: sizem(300);
+    left: sizem(35);
+    top:sizem(100);
+  }
+
+  .logoicon{
+      width: sizem(100);
+      right: sizem(10);
+      bottom: sizem(10);
+    }
+
+  .title{
+    width: sizem(300);
+    left: sizem(35);
+    top:sizem(240);
+  }
 
 
 .img{
