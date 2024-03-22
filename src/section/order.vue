@@ -1,5 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
+    <img src="./s1/bg2.webp" class="eggbg3" alt="蛋黃">
+    <img src="./s1/bg3.webp" class="eggbg4" alt="蛋黃">
+	<img src="./s1/oo.svg" alt="oo" class="oo3">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
@@ -90,14 +93,25 @@
 @import "@/assets/style/function.scss";
 
 
+.eggbg3{position: absolute;
+    display: block;
+    top: size(-150);right:size(100);width:size(700);
+		transform:translateY(-10%);
+		animation: an 2s ease-in-out infinite alternate-reverse;}
+	.eggbg4{position: absolute;
+    display: block;
+    top: size(400);left:size(230);width:size(160);
+		transform:translateY(-50%);
+		animation: an 4s ease-in-out infinite alternate;}
+  .oo3{position: absolute;top:size(120);height:size(50);right:size(60);
+		transform: translateX(20%);
+		animation: an 3s ease-in-out infinite alternate;}
 .order-section {
   position: relative;
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
  background: transparent;
-
-;
   .bg-image {
     position: absolute;
     width: 100%;
@@ -239,6 +253,13 @@
 }
 
 @media screen and (max-width:768px) {
+.eggbg3{
+    top: sizem(-10);right:sizem(-100);width:sizem(300);}
+	.eggbg4{
+    top: sizem(400);left:sizem(0);width:sizem(50);}
+  .oo3{top:sizem(10);height:sizem(20);left:auto;right:sizem(30);}
+
+
   .order-section {
     min-height: sizem(800);
     position: relative;

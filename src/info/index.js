@@ -36,50 +36,50 @@ export default {
     //底下2個 沒項目就會隱藏
     room_type: ["套房","2房","3房"],
     budget: ["1000-1500萬","1500-2000萬","2000-2500萬","2500-3000萬"],
-    navList: [
-        /*
-        {
-            name: "微笑歐洲",
-            target: ".s1",
-            offset: "",
-        },{
-            name: "10大看點",
-            target: ".s3",
-            offset: "",
-        },{
-            name: "大墅人生",
-            target: ".s4",
-            offset: "",
-        },{
-            name: "機能在手",
-            target: ".s6",
-            offset: "",
-        },{
-            name: "港灣錢潮",
-            target: ".s7",
-            offset: "",
-        },{
-            name: "麗寶承諾",
-            target: ".s9",
-            offset: "",
-        },{
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
-        }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },*/
-    ],
     
+    navList: [{
+        name: "最強增值",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "一橋北市",
+        target: ".s3",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "兩代共融",
+        target: ".s6",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "水岸人生",
+        target: ".s7",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "房貸瘦身",
+        target: ".s5",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "立即來電",
+        target: ".contact-info",
+        offset: "",
+        type: 'btn'
+    },
+    {
+          name: "地圖導航",
+          target: ".gmap",
+          offset: "",
+          type: "btn",
+    }
+    ,{
+        name: "立即預約",
+        target: ".order",
+        offset: "",
+        type: 'btn'
+    },
+],
+
 }

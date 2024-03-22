@@ -1,9 +1,10 @@
 <template>
   <div>
   <div class="contact-info-img">
+    <img src="@/section/s1/bg3.webp" class="eggbg" alt="蛋黃">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <!-- <div class="logo"></div> -->
+    <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -116,10 +117,12 @@
 
 .contact-info-img{
   @apply relative;
-  height: 0;z-index: 52;
+  height: 0;z-index: 2;
+  top: -1.5vw;
+  img{width: 64%;}
 }
 .contact-info {
-  padding: size(55) size(0) size(55) size(0);
+  padding: size(105) size(0) size(55) size(0);
     width: size(1440);
     min-width: 680px;
   position: relative;
@@ -127,9 +130,9 @@
   // background: #045147;
 
   .logo {
-    width: size(367);
+    width: size(540);
     height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
+    background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -241,9 +244,12 @@
 
 @media screen and (max-width:768px) {
 
-  .contact-info-img{
+  
+.contact-info-img{
+  height: 0;z-index: 2;
+  top: 70vw;
+  img{width: 200%;margin:-50%;}
 }
-
   .mo-contact-info {
     z-index: 99;
     position: fixed;
@@ -278,7 +284,7 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(80) 0;
+    padding: sizem(80) 0 sizem(40) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
@@ -287,7 +293,7 @@
     .logo {
       width: sizem(257);
       height: sizem(140);
-    margin: sizem(70) auto sizem(30) auto;
+    margin: sizem(70) auto sizem(10) auto;
      // margin-bottom: sizem(47);
     }
 
