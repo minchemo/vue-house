@@ -106,7 +106,7 @@
   }
 
 	.txt{
-	gap:sizem(20);
+	gap:sizem(40);
   left: sizem(48);
   top: sizem(20);
 
