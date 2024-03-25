@@ -9,7 +9,7 @@
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
             <template v-for="item, i in info.navList">
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
+            <div class="menu-item cursor-pointer text-white font-['Noto_Serif_TC',serif]" v-bind:class="{ btn2: item.type }"
                 @click="scrollTo(item.target)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
                 <span>{{ item.name }}</span>
             </div>
@@ -55,32 +55,32 @@
 
         .bar {
             width: size(41.43);
-            height: 2px;
+            height: 3px;
             background-color: currentColor;
             position: relative;
             transition: all .5s;
-            color: #002B69;
-            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
+            color: #fff;
+            box-shadow: 0 3px 0 #40210D99;
 
             &::after {
                 content: '';
                 width: 100%;
-                height: 2px;
+                height: 3px;
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
+            box-shadow: 0 3px 0 #40210D99;
                 //transform: translateX(-10%);
             }
 
             &::before {
                 content: '';
                 width: 100%;
-                height: 2px;
+                height: 3px;
                 top: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 0 2px #FFF, 0 0 8px #FFF;
+            box-shadow: 0 3px 0 #40210D99;
                 //transform: translateX(-10%);
             }
         }
@@ -125,7 +125,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #002B69;
+        background: #40210db2;
       //  background-image: url('@/section/menubg.png');
      /*   background-size: cover;
         background-repeat: no-repeat;
@@ -140,7 +140,7 @@
         gap: 2em;
         font-weight: 300;
  // backdrop-filter: blur(2px);
-        // backdrop-filter: blur(2px);
+         backdrop-filter: blur(2px);
 
         .menu-item {
             position: relative;
@@ -171,13 +171,14 @@
                 }
             }
             &.btn2{
-                background:linear-gradient(180deg, #E48726 0%, #E27E26 10.00%, #DE6929 41.00%, #DB5C2A 72.00%, #DB582B 100%);
+                background:#D38004;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.5em 1em;
+                transition:background .5s ;
 
                 &:hover {
-                    background:linear-gradient(180deg, #E48726 0%, #eb7f20 10.00%, #f19832 41.00%, #f06b37 72.00%, #9e3410 100%);
+                    background:#eb8d00;
                     &:after {
                         width:0;
                     }

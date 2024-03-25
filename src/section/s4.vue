@@ -1,17 +1,17 @@
 <template>
-  <article class="s2" ref="s2">
+  <article class="s4" ref="s4">
     <div class="bg" v-if="!$isMobile()">
       <span></span>
       <span></span>
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">品奢潮</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">品質域</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">入境品奢潮，四大百貨聚首</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">15分鐘快捷距離，近佔夢時代百貨、三多大遠百、SKM Park Oulets高雄草衙、未來三井LALAPORT！一次體會新鳳山最極緻生活日場，感受奢華、懷擁品味，讓所有繁華就此靠攏、身段就此非凡。</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">榮耀品質域，六圈盡環伺</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">綜觀大鳳山，僅一軸保泰路能同時匯聚，保泰、五甲、海洋、大明、瑞隆、武慶等六大商圈，地段的好無須多言，一看便知曉，購物、美食、娛樂，一應俱全，一眼即是。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,7 +35,7 @@
 
 
 
-.s2 {
+.s4 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
@@ -73,6 +73,7 @@
   text-align: justify;
 }
 
+
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -99,7 +100,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s2 {
+  .s4 {
   @apply flex-col;
     height: auto;
     padding: 0;
@@ -114,7 +115,6 @@
     padding: 0 sizem(32.5);
     width: 100%;
 }
-
 
 
   .slider {
@@ -167,20 +167,28 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s2/1.webp", import.meta.url).href ,
-    caption: "大遠百"
+    img:new URL("./s4/1.webp", import.meta.url).href ,
+    caption: "瑞隆商圈"
   },
   {
-    img:new URL("./s2/2.webp", import.meta.url).href ,
-    caption: "統一時代"
+    img:new URL("./s4/2.webp", import.meta.url).href ,
+    caption: "保泰商圈"
   },
   {
-    img:new URL("./s2/3.webp", import.meta.url).href ,
-    caption: "SKM"
+    img:new URL("./s4/3.webp", import.meta.url).href ,
+    caption: "五甲商圈"
   },
   {
-    img:new URL("./s2/4.webp", import.meta.url).href ,
-    caption: "LaLaPort"
+    img:new URL("./s4/4.webp", import.meta.url).href ,
+    caption: "大明商圈"
+  },
+  {
+    img:new URL("./s4/5.webp", import.meta.url).href ,
+    caption: "海洋商圈"
+  },
+  {
+    img:new URL("./s4/6.webp", import.meta.url).href ,
+    caption: "武慶商圈"
   },
 ]
 </script>

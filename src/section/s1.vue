@@ -1,10 +1,10 @@
 <template>
   <article class="s1" id="s1">
-	 <img src="./s1/house.webp" class="house"> 
-   <img src="./s1/style2.svg" class="style2">   
+	 <img src="./s1/house.webp" class="house" data-aos="fade-up" data-aos-delay="0"> 
+   <div class="style2" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1600"><img src="./s1/style2.svg"></div>
 	<div class="txt">
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
-		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
+		<img src="./s1/title.svg" class="title1" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
     <img src="./s1/style.svg" class="style" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
 	</div>
 	
@@ -19,7 +19,7 @@
   @apply relative w-full h-screen ;
   background-image:url("../section/s1/bg.webp");
   background-size: cover;
-  min-height: size(1080);
+  min-height: size(900);
   max-height: size(1080);
   height: 100vh;
   display: flex;
@@ -27,25 +27,27 @@
   justify-content: center;
   align-items:center;
   font-size:size(40);
-  color: #FFF;
+  color: #000;
   line-height: 1.3;
   font-weight: 700;
+	overflow: hidden;
   .t0{position: absolute;width: 100%;top: 0;left: 0; pointer-events: none;opacity: .3;}
 
   .house{
     position: absolute;
-    right:size(210);
-    bottom:size(30);
-    width: size(520);
+    left:calc(75% - #{size(200)});
+    bottom:3%;
+    height:calc(100% - #{size(160)});
     background: transparent;
     z-index: 99;
   }
   .style2{
     position: absolute;
-    width: size(1900);
-    right:size(-480);
-    bottom:size(-273);
+    height:110%;
+    left:calc(75% - #{size(200)});
+    bottom:-20%;
     mix-blend-mode: screen;
+	img{height: 100%;transform: translateX(-36.7%);}
   }
 
   .txt{
@@ -60,7 +62,7 @@
 	width: size(650);
   z-index: 99;
   }
-  .title{
+  .title1{
 	width: size(650);
   z-index: 99;
   }
@@ -88,39 +90,45 @@
 	background-size: cover;
     height:calc(100vh - 63px);
     min-height: sizem(667);
-    max-height: sizem(667);
+    max-height: sizem(812);
     font-size:sizem(14);
 
 
   .house{
     position: absolute;
     right:sizem(95);
-    bottom:sizem(10);
+    bottom:sizem(0);
     width: sizem(180);
+	height: auto;
+	left: auto;
   }  
 
   .style2{
-    width: sizem(850);
-    right:sizem(-235);
-    bottom:sizem(-121);
+    width: sizem(680);
+    right:sizem(-155);
+    bottom:sizem(-100);
+	height: auto;
+	left: auto;
+	img{height: auto;width: 100%;transform: translateX(-0%);}
   }
 
 	.txt{
-	gap:sizem(40);
-  left: sizem(48);
-  top: sizem(20);
+	gap:0;
+  left: 0;right: 0;margin: auto;
+  top: sizem(40);
+  top:calc(70% + #{sizem(40-667*.7)});
 
 
   .logo{
-		width: sizem(280);
+		width: sizem(218);margin: auto auto 3.5em auto;
 	}
-	.title{
-	width: sizem(280);
+	.title1{
+	width: sizem(225);
   }
 
   .style{
-    width: 85%;
-    left: sizem(28);
+    width: 51%;
+    left: sizem(96);
     top: sizem(-20);
   }
   }

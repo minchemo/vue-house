@@ -1,17 +1,17 @@
 <template>
-  <article class="s2" ref="s2">
+  <article class="s7" ref="s7">
     <div class="bg" v-if="!$isMobile()">
       <span></span>
       <span></span>
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">品奢潮</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">品建築</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">入境品奢潮，四大百貨聚首</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">15分鐘快捷距離，近佔夢時代百貨、三多大遠百、SKM Park Oulets高雄草衙、未來三井LALAPORT！一次體會新鳳山最極緻生活日場，感受奢華、懷擁品味，讓所有繁華就此靠攏、身段就此非凡。</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">城揚品建築，深植在地心</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">創立於民國83年的城揚建設為在地深耕品牌，建築本科起家的楊董事長，秉持著『專業、效率、品質、永續』的經營理念，以其專業實力及對社會的使命感，致力為世世代代打造出一座理想的家園。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,8 +35,8 @@
 
 
 
-.s2 {
-  @apply relative flex items-center justify-center text-[#fff];
+.s7 {
+  @apply relative flex items-center justify-center text-[#000];
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
@@ -72,11 +72,24 @@
   flex-direction: column;
   text-align: justify;
 }
+.txt {
+  text-shadow:0 0 10px #fff;
+.title{color: #6A3F12;
+&::after,
+&::before{
+background: #6A3F12;
+}
+}
+.subtitle{color: #6A3F12;}
+}
+
 
   .slider {
     margin: 0;
     flex-basis: size(840);
       height: size(560);
+      background: url("./s7/bg.webp");
+      background-size: cover;
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
@@ -99,7 +112,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s2 {
+  .s7 {
   @apply flex-col;
     height: auto;
     padding: 0;
@@ -114,7 +127,6 @@
     padding: 0 sizem(32.5);
     width: 100%;
 }
-
 
 
   .slider {
@@ -167,20 +179,20 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s2/1.webp", import.meta.url).href ,
-    caption: "大遠百"
+    img:new URL("./s7/1.webp", import.meta.url).href ,
+    caption: "帝之匯"
   },
   {
-    img:new URL("./s2/2.webp", import.meta.url).href ,
-    caption: "統一時代"
+    img:new URL("./s7/2.webp", import.meta.url).href ,
+    caption: "帝品苑"
   },
   {
-    img:new URL("./s2/3.webp", import.meta.url).href ,
-    caption: "SKM"
+    img:new URL("./s7/3.webp", import.meta.url).href ,
+    caption: "御廳苑"
   },
   {
-    img:new URL("./s2/4.webp", import.meta.url).href ,
-    caption: "LaLaPort"
+    img:new URL("./s7/4.webp", import.meta.url).href ,
+    caption: "KS1"
   },
 ]
 </script>

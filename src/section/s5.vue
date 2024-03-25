@@ -1,17 +1,22 @@
+
+
 <template>
-  <article class="s2" ref="s2">
-    <div class="bg" v-if="!$isMobile()">
+  <article class="s5">
+    <div class="bg">
       <span></span>
       <span></span>
       <span></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">品奢潮</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">品書香</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">入境品奢潮，四大百貨聚首</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">15分鐘快捷距離，近佔夢時代百貨、三多大遠百、SKM Park Oulets高雄草衙、未來三井LALAPORT！一次體會新鳳山最極緻生活日場，感受奢華、懷擁品味，讓所有繁華就此靠攏、身段就此非凡。</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">世代品書香，人文傳家藏</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">在鳳山之裡，一品正義國小、瑞豐國小、五甲國中，孩子9年免接送，培養世代菁英；鄰近衛武營國家藝文中心、高雄市立圖書館，買進一個知識匯聚的寶庫，為孩子，準備好向上的成長動能。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -33,38 +38,56 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-
-
-.s2 {
-  @apply relative flex items-center justify-center text-[#fff];
+.s5 {
+  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
       &:nth-child(1){
-      top:size(26);left: 0;
-  font-size:size(120);
-}
+        top: 1vw;
+        left: 10vw;
+        font-size: 3.5vw;
+      }
       &:nth-child(2){
-      top: size(147);left: size(110);
-  font-size:size(27);
-}
+        top: 12vw;
+        left: 2vw;
+        font-size: 2vw;
+      }
       &:nth-child(3){
-      top: size(20);right:size(80);
-  font-size:size(75);}
+        top: 3vw;
+        left: 7vw;
+        font-size: 9vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+      &:nth-child(4){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(6){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
+      }
     }
   }
 
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
+
+
   .main {
     @apply flex;
     margin: 0;
@@ -72,7 +95,6 @@
   flex-direction: column;
   text-align: justify;
 }
-
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -84,11 +106,11 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
-      color: #C9A063;
+      color: #B78E63;
     }
     }
   }
@@ -99,7 +121,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s2 {
+  .s5 {
   @apply flex-col;
     height: auto;
     padding: 0;
@@ -107,11 +129,30 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
+
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+.bg{
+    span{
+      &:nth-child(1){
+        top: 4vw;
+        left: 82vw;
+        font-size: 6vw;
+      }
+      &:nth-child(2){
+        top: 57vw;
+        left: 2vw;
+        font-size: 8vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 77vw;
+        font-size: 23vw;
+      }
+    }
+  }
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: 0 sizem(30);
     width: 100%;
 }
 
@@ -122,9 +163,9 @@
     width: 100%;
 
     .caption {
-    font-size:sizem(12);  
+    font-size:sizem(12); 
     right:sizem(5);
-    bottom:sizem(5);
+    bottom:sizem(5); 
     }
     .slide-item {
       @apply bg-cover;
@@ -140,8 +181,8 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
+
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -167,21 +208,26 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s2/1.webp", import.meta.url).href ,
-    caption: "大遠百"
+    img:new URL("./s5/1.webp", import.meta.url).href ,
+    caption: "正義國小"
   },
   {
-    img:new URL("./s2/2.webp", import.meta.url).href ,
-    caption: "統一時代"
+    img:new URL("./s5/2.webp", import.meta.url).href ,
+    caption: "五甲國中"
   },
   {
-    img:new URL("./s2/3.webp", import.meta.url).href ,
-    caption: "SKM"
+    img:new URL("./s5/3.webp", import.meta.url).href ,
+    caption: "瑞豐國小"
   },
   {
-    img:new URL("./s2/4.webp", import.meta.url).href ,
-    caption: "LaLaPort"
+    img:new URL("./s5/4.webp", import.meta.url).href ,
+    caption: "衛武營國家藝文中心"
+  },
+  {
+    img:new URL("./s5/5.webp", import.meta.url).href ,
+    caption: "高雄市立圖書館"
   },
 ]
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

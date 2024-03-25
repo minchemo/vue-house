@@ -34,50 +34,64 @@ export default {
     //底下2個 沒項目就會隱藏
     room_type: ["3房(33-41坪)","4房(51-53坪)"],
     budget: ["1600-1800","1800-2000","2000-2200"],
-    navList: [
-        /*
-        {
-            name: "微笑歐洲",
-            target: ".s1",
-            offset: "",
-        },{
-            name: "10大看點",
+    navList: [{
+            name: "雙核心地段",
             target: ".s3",
-            offset: "",
+            offset: "-60",
+            offsetmo: "0",
         },{
-            name: "大墅人生",
-            target: ".s4",
-            offset: "",
-        },{
-            name: "機能在手",
-            target: ".s6",
-            offset: "",
-        },{
-            name: "港灣錢潮",
-            target: ".s7",
-            offset: "",
-        },{
-            name: "麗寶承諾",
-            target: ".s9",
-            offset: "",
-        },{
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
-        }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },*/
+        name: "品奢潮",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "品盛市",
+        target: ".s5",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "品質域",
+        target: ".s6",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "品書香",
+        target: ".s7",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "品風采",
+        target: ".s8",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "品建築",
+        target: ".s9",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "品保泰",
+        target: ".s10",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "立即來電",
+        target: ".contact-info",
+        offset: "",
+        type: 'btn'
+    },
+    {
+          name: "地圖導航",
+          target: ".gmap",
+          offset: "",
+          type: "btn",
+    }
+    ,{
+        name: "立即預約",
+        target: ".order",
+        offset: "",
+        type: 'btn'
+    },
     ],
     
 }

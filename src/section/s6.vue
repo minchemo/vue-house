@@ -1,17 +1,12 @@
 <template>
-  <article class="s2" ref="s2">
-    <div class="bg" v-if="!$isMobile()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <article class="s6">
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">品奢潮</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]"  data-aos="fade-up" data-aos-delay="0">品風采</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">入境品奢潮，四大百貨聚首</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">15分鐘快捷距離，近佔夢時代百貨、三多大遠百、SKM Park Oulets高雄草衙、未來三井LALAPORT！一次體會新鳳山最極緻生活日場，感受奢華、懷擁品味，讓所有繁華就此靠攏、身段就此非凡。</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">居首品風采，俯瞰鳳山城</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">二十四層擎天擘劃，攬山海城景於心，繁華鳳山，盡收眼底，歷史與現代風情共存，享受時光交錯的無敵景緻。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -33,63 +28,52 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-
-
-.s2 {
-  @apply relative flex items-center justify-center text-[#fff];
+.s6 {
+  @apply relative flex flex-col items-center justify-center text-[#000];
   width: 100%;
-  height:auto;
+  // height: size(800);
   padding:0 0 7em 0;
   font-size:size(18);
-  gap:3em;
-  flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-      top:size(26);left: 0;
-  font-size:size(120);
-}
-      &:nth-child(2){
-      top: size(147);left: size(110);
-  font-size:size(27);
-}
-      &:nth-child(3){
-      top: size(20);right:size(80);
-  font-size:size(75);}
-    }
-  }
-
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
+  gap:1.5em;
+  flex-wrap:nowrap;
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
+    width: 100%;
+}
+
+.txt {
+  text-shadow:0 0 10px #fff;
+ 
+.title{color: #6A3F12;
+&::after,
+&::before{
+background: #6A3F12;
+}
+}
+.subtitle{color: #6A3F12;}
 }
 
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+      height: size(844);
+    width: size(1500);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+      width: 100%;
+    flex-basis: size(1500);
+      height: size(844);
       
     }
-    .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #C9A063;
+    .arrows .prev, .arrows .next{
+      width:3%;
     }
+
+    .splide__pagination{
+      bottom: .5em;
     }
   }
 }
@@ -99,7 +83,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s2 {
+  .s6 {
   @apply flex-col;
     height: auto;
     padding: 0;
@@ -107,16 +91,11 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
-
-
-
   .slider {
     height: auto;
     width: 100%;
@@ -133,6 +112,9 @@
       height: sizem(250);
       
     }
+    .arrows .prev, .arrows .next{
+      width:8%;
+    }
   }
   }
 }
@@ -141,7 +123,6 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -167,21 +148,33 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s2/1.webp", import.meta.url).href ,
-    caption: "大遠百"
+    img:new URL("./s6/1.webp", import.meta.url).href ,
+    caption: "外觀實景"
   },
   {
-    img:new URL("./s2/2.webp", import.meta.url).href ,
-    caption: "統一時代"
-  },
-  {
-    img:new URL("./s2/3.webp", import.meta.url).href ,
-    caption: "SKM"
-  },
-  {
-    img:new URL("./s2/4.webp", import.meta.url).href ,
-    caption: "LaLaPort"
+    img:new URL("./s6/2.webp", import.meta.url).href ,
+    caption: "外觀實景"
   },
 ]
+/*
+const imgs = [
+  {
+    img: getImg('s6/1'),
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: getImg('s6/2'),
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: getImg('s6/3'),
+    caption: "林口 長耀初"
+  },
+  {
+    img: getImg('s6/4'),
+    caption: "林口 長耀里"
+  },
+]
+*/
 </script>
 
