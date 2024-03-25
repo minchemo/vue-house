@@ -62,7 +62,7 @@
   &:nth-child(3){animation-delay: 0s;}
   }
 }
-.home > .bg1{background: url("@/section/s2/bg4.jpg");
+.home > .bg1{background: url("@/section/s2/bg4.webp");
 background-size: cover;
 }
 
