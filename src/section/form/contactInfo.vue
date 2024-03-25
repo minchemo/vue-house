@@ -5,10 +5,10 @@
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+      <!--div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
-      </div>
+      </div-->
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
         <img src="//h65.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
@@ -35,11 +35,11 @@
 
   <!-- Mobile contact info -->
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
       <img src="//h65.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
-    </div>
+    </div-->
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
       <img src="//h65.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
@@ -111,8 +111,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#c9912b;}
-.hover\:bg-color2:hover{background-color:#996c17;}
+.bg-color1{background:#9f3318;}
+.hover\:bg-color2:hover{background-color:#7e240e;}
 
 
 .contact-info-img{
@@ -145,7 +145,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#c9912b;
+      background:#9f3318;
       color: #FFF;
       width: 100%;
     font-weight: 700;
@@ -163,7 +163,7 @@
       gap: 1em;
 
       &:hover {
-      background:#9c7121;
+      background:#6b200d;
         color: #fff;
 
         img {
@@ -236,7 +236,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(58%) sepia(61%) saturate(502%) hue-rotate(0deg) brightness(91%) contrast(94%);
+  img{filter: invert(22%) sepia(94%) saturate(1352%) hue-rotate(348deg) brightness(90%) contrast(95%);
   }
 }
 

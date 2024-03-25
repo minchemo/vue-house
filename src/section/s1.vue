@@ -1,11 +1,8 @@
 <template>
-  <article class="s1" id="s1">
-	 <img src="./s1/house.webp" class="house"> 
-   <img src="./s1/style2.svg" class="style2">   
+  <article class="s1" id="s1">  
 	<div class="txt">
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
-    <img src="./s1/style.svg" class="style" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
 	</div>
 	
 
@@ -40,37 +37,22 @@
     background: transparent;
     z-index: 99;
   }
-  .style2{
-    position: absolute;
-    width: size(1900);
-    right:size(-480);
-    bottom:size(-273);
-    mix-blend-mode: screen;
-  }
 
   .txt{
-	position: absolute;
-  left: size(250);
+	position: relative;
+  margin: 0 auto;
 	gap:size(120);
 	display: flex;
 	flex-direction: column;
   }
 
   .logo{
-	width: size(650);
+	width: size(950);
   z-index: 99;
   }
   .title{
-	width: size(650);
+	width: size(950);
   z-index: 99;
-  }
-
-  .style{
-    position: absolute;
-    width: 85%;
-    left: size(65);
-    top: size(-20);
-    mix-blend-mode: screen;
   }
 
  
@@ -106,16 +88,15 @@
   }
 
 	.txt{
-	gap:sizem(40);
-  left: sizem(48);
+	gap:sizem(80);
   top: sizem(20);
 
 
   .logo{
-		width: sizem(280);
+		width: sizem(320);
 	}
 	.title{
-	width: sizem(280);
+	width: sizem(320);
   }
 
   .style{
