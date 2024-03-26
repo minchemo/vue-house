@@ -11,7 +11,7 @@ export default {
     address: "高雄市鳳山區國泰路二段13巷6號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.0114573400842!2d120.34940707630585!3d22.616047331374592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1b51d5101915%3A0x342883cd9e436cbf!2zODMw6auY6ZuE5biC6bOz5bGx5Y2A5ZyL5rOw6Lev5LqM5q61MTPlt7c26Jmf!5e0!3m2!1szh-TW!2stw!4v1710121953279!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/mRqw51WXNyyUpKcZ8",
-    phone: "02-2855-9933",
+    phone: "07-763-0999",
     fbLink: "https://www.facebook.com/61556786833263",
     fbMessage: "https://m.me/61556786833263",
     caseName: caseName,
