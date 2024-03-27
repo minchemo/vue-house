@@ -6,12 +6,12 @@
     <img src="./s1/tm.svg" class="t12" alt="" data-aos="zoom-out-down" v-if="$isMobile()"/> -->
        <!--  <div class="slide" @click="scrollTo('#s2')" data-aos="zoom-out" data-aos-delay="800">SLIDE</div> -->
        <!--div class="txt font-['noto_serif_tc']" data-aos="zoom-out" data-aos-duration="1000"><span class="t1">高鐵<br  v-if="$isMobile()"/>台積宅</span><span class="t2">2</span><span class="t3">字頭</span><span class="t4">THE GREEN ROAD</span></div-->
-    <div class="love"><img src="./s1/love.png" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/></div>
+    <!-- <div class="love"><img src="./s1/love.png" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/></div>
     <div class="love1" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div>
-    <div class="love2" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div>
-    <img src="./s1/bg1.png" v-if="!$isMobile()" class="bg1" alt=""/>
+    <div class="love2" v-if="!$isMobile()"><img src="./s1/love.png" alt=""></div> -->
+    <!-- <img src="./s1/bg1.png" v-if="!$isMobile()" class="bg1" alt=""/>
     <img src="./s1/bg2.png" v-if="!$isMobile()" class="bg2" alt=""/>
-    <img src="./s1/bg_m.png" v-if="$isMobile()" class="bg1" alt=""/>
+    <img src="./s1/bg_m.png" v-if="$isMobile()" class="bg1" alt=""/> -->
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     <img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="600" data-aos-duration="1000"/>
   </article>
@@ -30,10 +30,11 @@
   justify-content: center;
   align-items:center;
   font-size:size(25);
-  background: #1C96D4;
+  // background: #1C96D4 url("./s1/bg.png") center;
+  // background-size: cover;
 
     img{width:100%;}
-    .love{
+   /* .love{
     z-index: 1;
     position: absolute;  
     width: size(695);
@@ -60,6 +61,7 @@
      transform:translate(20%, -20%);
      img{transform: rotate(-7deg);}
     }
+	*/
 
     .bg1{
      z-index: 0;
@@ -84,7 +86,7 @@
     width: size(585);
     z-index: 2;
     left: size(380);
-    top: calc(50% + #{size(435 - 540)});
+    top: calc(50% + #{size(310 - 540)});
     }
 
   
@@ -104,21 +106,24 @@
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(766);
-    max-height: sizem(766);
+    min-height: sizem(604);
+    max-height: sizem(750);
     font-size:sizem(12);
+	// background-image: url("./s1/bgm.png");
 
    .txt{
     width: sizem(324);
     position: absolute;
     right: sizem(25);
-    bottom: sizem(185);
+    bottom: sizem(110);
+	bottom: calc(40% + #{sizem(110 - 750 * .4)});
     top:auto;
   }
   .logo{
     width: sizem(302);
     left: sizem(36.2);
-    top: sizem(153);
+    top: sizem(130);
+	top: calc(40% + #{sizem(130 - 750 * .4)});
     }
 
   .love{ 

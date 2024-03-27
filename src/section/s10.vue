@@ -31,7 +31,7 @@
 @import '@/assets/style/function.scss';
 
 .s10 {
-  @apply relative flex flex-col items-center justify-center text-[#555];
+  @apply relative flex flex-col items-center justify-center text-[#555] bg-[#F2F2F2];
   width: 100%;
   // height: size(800);
   padding:0 0 7em 0;
@@ -148,7 +148,7 @@
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(215);
       
     }
     .arrows .prev, .arrows .next{
@@ -187,22 +187,32 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s10/01.jpg", import.meta.url).href ,
+    img:new URL("./s10/1.webp", import.meta.url).href ,
     //img: globals.$isMobile() ? new URL("./s10/1_m.webp", import.meta.url).href : new URL("./s10/1.webp", import.meta.url).href,
-    caption: "公設3D示意圖 家具擺飾實際由建設公司點交為主"
+    caption: ""
   },
   {
-    img:new URL("./s10/02.jpg", import.meta.url).href ,
-    caption: "公設3D示意圖 家具擺飾實際由建設公司點交為主"
+    img:new URL("./s10/2.webp", import.meta.url).href ,
+    caption: ""
   },
   {
-    img:new URL("./s10/03.jpg", import.meta.url).href ,
-    caption: "公設3D示意圖 家具擺飾實際由建設公司點交為主"
+    img:new URL("./s10/3.webp", import.meta.url).href ,
+    caption: ""
   },
   {
-    img:new URL("./s10/04.jpg", import.meta.url).href ,
+    img:new URL("./s10/4.webp", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s10/5.webp", import.meta.url).href ,
+    caption: ""
+  },
+  /*
+  {
+    img:new URL("./s10/5.webp", import.meta.url).href ,
     caption: "公設3D示意圖 家具擺飾實際由建設公司點交為主"
   },
+  */
 ]
 /*
 const imgs = [

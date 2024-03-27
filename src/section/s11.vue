@@ -35,7 +35,7 @@
 @import '@/assets/style/function.scss';
 
 .s11 {
-  @apply relative flex items-center justify-center text-[#555];
+  @apply relative flex items-center justify-center text-[#555] bg-[#F2F2F2];
   width: 100%;
   padding:0 0 7em 0;
   font-size:size(18);

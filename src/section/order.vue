@@ -1,6 +1,6 @@
 <template>
-  <div id="order" class="order relative text-center bg-[#1691CF]">
-    <div class="bg"><img src="./s4/bg.png" v-if="!$isMobile()" alt=""><img src="./s1/bg_m.png" v-else alt=""></div>
+  <div id="order" class="order relative text-center">
+    <!-- <div class="bg"><img src="./s4/bg.png" v-if="!$isMobile()" alt=""><img src="./s1/bg_m.png" v-else alt=""></div> -->
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>

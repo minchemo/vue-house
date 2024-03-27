@@ -10,11 +10,9 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#F2F2F2] overflow-hidden font-['Noto_Sans_TC',serif]">
-     <!--   <div class="bg">
-      <img src="@/section/s1/bg1.png" class="bg1" />
-      <img src="@/section/s1/bg2.png" class="bg2" />
-    </div> -->
+  <div class="home bg-[#1691CF] overflow-hidden font-['Noto_Sans_TC',serif]">
+     <!--   --> <div class="bg">
+    </div>
     <S1 />
     <S2v />
     <S2 />
@@ -49,6 +47,15 @@
   }
 }
 
+.bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1C96D4 url("@/section/s1/bg.png") center;
+  background-size: cover;
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
 }
@@ -120,6 +127,9 @@ img {
   }
 }
 @media screen and (max-width: 767px) {
+.bg{
+  background-image: url("@/section/s1/bgm.png");
+}
   .caption{
       font-size: sizem(12);}
 

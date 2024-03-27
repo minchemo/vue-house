@@ -43,7 +43,7 @@
 @import '@/assets/style/function.scss';
 
 .s9 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#fff] bg-[#1691CF];
+  @apply relative overflow-hidden flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
   padding:0 0 7em 0;

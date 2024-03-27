@@ -36,7 +36,7 @@
 @import '@/assets/style/function.scss';
 
 .s5 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#555];
+  @apply relative overflow-hidden flex items-center justify-center text-[#555] bg-[#F2F2F2];
   width: 100%;
   height:auto;
   padding:0 0 7em 0;

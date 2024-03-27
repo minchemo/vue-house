@@ -38,7 +38,7 @@
   font-size:size(18);
   gap:3em;
   flex-direction: column;
-  background: url("./s2/bg.jpg") 50% 40%;
+  background: url("./s2/bg.webp") 50% 40%;
   background-size: cover;
   .txt {
     @apply flex;
@@ -77,7 +77,7 @@
   max-height: sizem(1080);
   height: sizem(667);
   font-size:sizem(13);
-  background:#1691CF url("./s2/bgm.jpg") 50% 100% no-repeat;
+  background:#1691CF url("./s2/bgm.webp") 50% 100% no-repeat;
   background-size: 100% auto;
   .txt {
     margin:4em auto auto auto;
