@@ -33,7 +33,7 @@
     .logo {
         width: size(145);
         height: size(50);
-        background-image: url('@/section/s1/logo.svg');
+        background-image: url('@/section/s1/logo2.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;

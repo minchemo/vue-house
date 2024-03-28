@@ -127,7 +127,7 @@ img {
   }
 }
 @media screen and (max-width: 767px) {
-.bg{
+.bg{ 
   background-image: url("@/section/s1/bgm.png");
 }
   .caption{

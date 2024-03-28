@@ -5,11 +5,35 @@
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">飯店俬旅，奢享一座藝術飯店沙龍的家</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="100">飯店俬旅，奢享一座藝術飯店沙龍的家</h4>
+   <!--   <p class="desc" data-aos="fade-up" data-aos-delay="400">
           挑高門廳、交誼廳熱情迎賓、人文沙龍閱覽空間、健身房、韻律教室、兒童遊戲室…<br />
 從社交到藝文，十多項全齡樂活公設，不只藝術，而且生活，美學實用兼容並蓄<br />
-收納美感的堂奧，是盛裝嶄新故事、富享一生的家</p>
+收納美感的堂奧，是盛裝嶄新故事、富享一生的家</p> -->   
+
+<ul class="desc">
+  <li data-aos="fade-up" data-aos-delay="200"><span>氣派挑高大廳</span>
+飯店式氣派門廳，大氣場域雍容清逸</li>
+  <li data-aos="fade-up" data-aos-delay="300"><span>迎賓休憩區</span>
+讓住戶與訪客慢享生活，一隅寧靜，韻美閑常</li>
+  <li data-aos="fade-up" data-aos-delay="400"><span>沙龍式咖啡吧</span>
+融入英式沙龍的休閒氛圍，提供放鬆的生活感</li>
+  <li data-aos="fade-up" data-aos-delay="500"><span>多功能交誼廳</span>
+一室多用的複合機能，可舉辦不同面向的活動<br>
+插花、品酒、社區聯誼⋯營造靈活百變的生活</li>
+  <li data-aos="fade-up" data-aos-delay="600"><span>歡唱KTV室</span>
+週末解壓、家族親友聚會，一曲高歌，療癒煥心</li>
+  <li data-aos="fade-up" data-aos-delay="700"><span>家教自習室</span>
+安全不受干擾，靜謐舒適，親子伴讀、家教自習<br>
+提供孩子更好的自發性學習環境</li>
+  <li data-aos="fade-up" data-aos-delay="800"><span>戶外兒童遊戲區</span>
+更開闊、更自然、不再侷促封閉的室內空間<br>
+解放孩子活潑好動的心靈與身體，讓孩子玩樂成長</li>
+  <li data-aos="fade-up" data-aos-delay="900"><span>林蔭大道</span>
+室內公設與戶外穿透連結，彼此互為生活風景</li>
+  <li data-aos="fade-up" data-aos-delay="1000"><span>空中花園</span>
+可以停留、轉換心境，登高眺瞰淡水山河海景</li>
+</ul>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -77,10 +101,26 @@
     line-height: 1.5;
   }
   .desc{
-    margin: 0 0 1em;
-    b{
-    color:#B78E63;}
+    width: size(1500);
+    margin: 0 auto 1em;
+    gap: 1em 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+
+li{
+    text-align: left;
+width: 28%;
+}
+span{
+  display: block;
+  font-weight: 700;
+    color:#B78E63;
+}
+
   }
+
+
   }
 
   .slider {
@@ -133,6 +173,26 @@
   }
   .subtitle{
     font-size: 1.4em;
+  }
+  .desc{
+    width: sizem(350);
+    gap: 0;
+   // letter-spacing: -0.03em;
+  font-size:sizem(11.5);
+  margin-bottom: 0;
+li{
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.5em;margin-left: 6.3em;
+  &:last-child{margin-bottom: 0;}
+}
+span{
+  position: absolute;
+  top: 0;left: 0;
+  display: block;
+  font-weight: 700;
+    color:#B78E63;transform:  translateX(calc(-100% - .3em));
+}
   }
   }
   .slider {
