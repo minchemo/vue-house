@@ -147,15 +147,15 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/1.webp", import.meta.url).href ,
-    caption: "建築河岸實景"
+    caption: "外觀實景經電腦修飾"
   },
   {
     img:new URL("./s7/2.webp", import.meta.url).href ,
-    caption: "建築外觀實景"
+    caption: "外觀實景經電腦修飾"
   },
   {
     img:new URL("./s7/3.webp", import.meta.url).href ,
-    caption: "建築外觀實景"
+    caption: "外觀實景經電腦修飾"
   },
   {
     img:new URL("./s7/4.webp", import.meta.url).href ,
