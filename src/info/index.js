@@ -12,7 +12,7 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1808.4008417858497!2d121.32480559999999!3d24.9728611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzIyLjMiTiAxMjHCsDE5JzI5LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1711352738464!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/az5iQcjFjvZg89aw7",
     phone: "07-722-0088",
-    fbLink: "https://www.facebook.com/615575294498200",
+    fbLink: "https://www.facebook.com/61557529449820",
     fbMessage: "https://m.me/61557529449820",
     caseName: caseName,
     houseInfos: [
