@@ -208,7 +208,6 @@ import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
-import s4 from "../section/s4.vue"
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
