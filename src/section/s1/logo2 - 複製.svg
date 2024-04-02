@@ -47,14 +47,14 @@
 <g>
 	<g>
 		<defs>
-			<polygon id="g11" points="391.5,124.1 453,124.1 422.7,156.8 			"/>
+			<polygon id="SVGID_1_" points="391.5,124.1 453,124.1 422.7,156.8 			"/>
 		</defs>
-		<clipPath id="g12">
-			<use xlink:href="#g11"  style="overflow:visible;"/>
+		<clipPath id="SVGID_00000034780540361961974260000018434818019816745386_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
-		<g style="clip-path:url(#g12);">
+		<g style="clip-path:url(#SVGID_00000034780540361961974260000018434818019816745386_);">
 			
-				<image style="overflow:visible;" width="1476" height="1476" xlink:href="@/section/s1/bbg.jpg"  transform="matrix(4.866825e-02 0 0 5.333731e-02 384.5639 88.6847)">
+				<image style="overflow:visible;" width="1476" height="1476" xlink:href="427314AB.jpg"  transform="matrix(4.866825e-02 0 0 5.333731e-02 384.5639 88.6847)">
 			</image>
 		</g>
 	</g>
@@ -67,7 +67,7 @@
 		</clipPath>
 		<g transform="matrix(1 0 0 1 0 0)" style="clip-path:url(#SVGID_00000012432152569227814720000015422499796553216178_);">
 			
-				<image style="overflow:visible;" width="1476" height="1476" xlink:href="bbg.jpg"  transform="matrix(3.702009e-02 0 0 4.057171e-02 609.7788 -16.6204)">
+				<image style="overflow:visible;" width="1476" height="1476" xlink:href="427314AC.jpg"  transform="matrix(3.702009e-02 0 0 4.057171e-02 609.7788 -16.6204)">
 			</image>
 		</g>
 	</g>
@@ -80,7 +80,7 @@
 		</clipPath>
 		<g style="clip-path:url(#SVGID_00000113313555410525897460000005205945397130114438_);">
 			
-				<image style="overflow:visible;" width="1476" height="1476" xlink:href="bbg.jpg"  transform="matrix(6.491058e-02 0 0 6.491058e-02 361.4766 -22.3614)">
+				<image style="overflow:visible;" width="1476" height="1476" xlink:href="427314AD.jpg"  transform="matrix(6.491058e-02 0 0 6.491058e-02 361.4766 -22.3614)">
 			</image>
 		</g>
 	</g>
@@ -94,7 +94,7 @@
 		
 			<g transform="matrix(1 2.980232e-08 0 1 0 0)" style="clip-path:url(#SVGID_00000112619955866872774820000004890935090700033978_);">
 			
-				<image style="overflow:visible;" width="1476" height="1476" xlink:href="bbg.jpg"  transform="matrix(3.198672e-02 -7.638191e-02 7.083561e-02 2.966429e-02 476.4561 134.546)">
+				<image style="overflow:visible;" width="1476" height="1476" xlink:href="427314AA.jpg"  transform="matrix(3.198672e-02 -7.638191e-02 7.083561e-02 2.966429e-02 476.4561 134.546)">
 			</image>
 		</g>
 	</g>
@@ -107,7 +107,7 @@
 		</clipPath>
 		<g style="clip-path:url(#SVGID_00000098940781331923686660000012322407351207873689_);">
 			
-				<image style="overflow:visible;" width="1476" height="1476" xlink:href="bbg.jpg"  transform="matrix(6.491058e-02 0 0 6.491058e-02 423.673 -22.3614)">
+				<image style="overflow:visible;" width="1476" height="1476" xlink:href="427314A9.jpg"  transform="matrix(6.491058e-02 0 0 6.491058e-02 423.673 -22.3614)">
 			</image>
 		</g>
 	</g>
@@ -122,7 +122,7 @@
 		
 			<g transform="matrix(1 0 0 1 0 9.536743e-07)" style="clip-path:url(#SVGID_00000139251887024377008720000018358112169436153227_);">
 			
-				<image style="overflow:visible;" width="1476" height="1476" xlink:href="bbg.jpg"  transform="matrix(0 2.585347e-02 -4.816800e-02 0 127.3676 13.9368)">
+				<image style="overflow:visible;" width="1476" height="1476" xlink:href="427314B4.jpg"  transform="matrix(0 2.585347e-02 -4.816800e-02 0 127.3676 13.9368)">
 			</image>
 		</g>
 	</g>
@@ -136,7 +136,7 @@
 		</clipPath>
 		<g style="clip-path:url(#SVGID_00000169542492090969328070000000337287587684229292_);">
 			
-				<image style="overflow:visible;" width="1476" height="1476" xlink:href="./bbg.jpg"  transform="matrix(0 2.585347e-02 -4.816800e-02 0 127.3676 33.9024)">
+				<image style="overflow:visible;" width="1476" height="1476" xlink:href="427314B7.jpg"  transform="matrix(0 2.585347e-02 -4.816800e-02 0 127.3676 33.9024)">
 			</image>
 		</g>
 	</g>
@@ -151,7 +151,7 @@
 		
 			<g transform="matrix(1 0 0 1 0 -3.814697e-06)" style="clip-path:url(#SVGID_00000054265281291686064220000009245801985891939006_);">
 			
-				<image style="overflow:visible;" width="1476" height="1476" xlink:href="/src/section/bbg.jpg"  transform="matrix(4.932086e-02 2.104992e-02 -1.915459e-02 4.661597e-02 250.7331 46.3333)">
+				<image style="overflow:visible;" width="1476" height="1476" xlink:href="427314BA.jpg"  transform="matrix(4.932086e-02 2.104992e-02 -1.915459e-02 4.661597e-02 250.7331 46.3333)">
 			</image>
 		</g>
 	</g>

@@ -9,18 +9,11 @@
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!-- loading end -->
-   <Nav />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-     <div class="bg">
+  <!--  <Nav /> -->
+  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] text-[#000]">
     <S1 />
     <S2 />
-    <S3 />
-    <S4 />
-    <S5 />
-    <S6 />
-    <S7 />
     <Order />
-    </div>
   <!--
     <S6 />
     <S7 />
@@ -37,12 +30,6 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-@keyframes an {
-  to {
-	transform: translate(0)
-  }
-}
-
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
 }
@@ -50,10 +37,13 @@
   opacity: 0;
 }
 
-.home > .bgh{position: fixed;width: 100%;
-  top: 0;left: 0;
+.home::before{content: "";
+position: fixed;display: block;
+top: 0;
+left: 0;right: 0;bottom: 0;
+background: url("@/section/s1/bg.jpg");
+background-size: 100% auto;
 }
-.bg{background: linear-gradient(135deg, #3F94CA 0%, #3F94CA 20%, #71A3A5 25%, #E0C663 33%, #E1A843 40%, #E1A843 50%,#E0C663 57%, #71A3A5 63%,#3F94CA 65%,#3F94CA 67%, #71A3A5 72%,#E0C663 78%,#E1A843 83%,#E1A843 85%,#E0C663 90%, #71A3A5 95%);}
 img {
   display: inline;
   max-width: unset;
@@ -67,10 +57,10 @@ img {
       bottom: .5em;
       font-weight: 300;
       font-size: size(15);
-      color: #FFF;z-index: 3;
+      z-index: 3;
       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
 
-
+/*
       .txt {
     position: relative;
     font-weight: 300;
@@ -151,6 +141,7 @@ img {
     }
   }
 }
+  */
 @media screen and (max-width: 767px) {
   
 
@@ -205,13 +196,15 @@ img {
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
+/* 
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
+*/
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
+// import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';

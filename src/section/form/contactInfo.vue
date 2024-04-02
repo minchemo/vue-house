@@ -1,11 +1,10 @@
 <template>
   <div>
-  <div class="contact-info-img">
-    <img src="@/section/s1/bg3.webp" class="eggbg" alt="蛋黃">
-</div>
+ <!--  <div class="contact-info-img">
+</div> -->
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo"></div>
-    <div class="flex justify-between w-full contact-item-box">
+    <Logo class="logo" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500" />
+		<div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
@@ -111,8 +110,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#0466CA;}
-.hover\:bg-color2:hover{background-color:#014d99;}
+.bg-color1{background:#888;}
+.hover\:bg-color2:hover{background-color:#666;}
 
 
 .contact-info-img{
@@ -131,11 +130,6 @@
 
   .logo {
     width: size(540);
-    height: size(172);
-    background-image: url("@/section/s1/logo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     margin: size(30) auto;
   }
 
@@ -147,13 +141,13 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#0466CA;
+      background:#888;
       color: #FFF;
       width: 100%;
     font-weight: 700;
       flex: 1;
       padding: 1.1em 0;
-    border-radius: .5em;
+    border-radius: 0;
       font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -165,7 +159,7 @@
       gap: 1em;
 
       &:hover {
-      background:#014d99;
+      background:#666;
         color: #fff;
 
         img {
@@ -190,7 +184,7 @@
         flex:2.17;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
-    border-radius: .5em 0 0 .5em;
+    border-radius: 0;
         justify-content: center;
 
         &::before {
@@ -215,7 +209,7 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-    border-radius: 0 .5em .5em 0;
+    border-radius: 0;
         color: #FFF;
 
         img {
@@ -238,7 +232,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(13%) sepia(58%) saturate(7486%) hue-rotate(198deg) brightness(87%) contrast(107%);
+  img{filter: invert(40%) ;
   }
 }
 
@@ -259,20 +253,22 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#0051a1;
+    background:url("@/section/s1/bbg.jpg") center;
+    background-size: cover;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(14);
-      color: #fff;
-      border-left:1px solid #fff7;
-    font-weight: 700;
+      color: #000;
+      font-weight: 700;
+      border-left:1px solid #0005;
+      &:first-child{border: 0;}
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
       }
 
     }
@@ -284,7 +280,7 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(40) 0;
+    padding: sizem(40) 0 sizem(40) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
@@ -292,8 +288,8 @@
 
     .logo {
       width: sizem(257);
-      height: sizem(140);
-    margin: sizem(70) auto sizem(10) auto;
+    //  height: sizem(140);
+    margin: sizem(70) auto sizem(40) auto;
      // margin-bottom: sizem(47);
     }
 
@@ -357,6 +353,7 @@
 <script setup>
 import info from "@/info"
 import { inject, ref } from "vue";
+import Logo from "@/section/logo.vue"
 const modalOpen = ref(false);
 const modalType = ref('');
 

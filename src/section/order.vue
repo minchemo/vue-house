@@ -1,8 +1,5 @@
 <template>
   <div id="order" class="order relative text-center">
-    <img src="./s1/bg2.webp" class="eggbg3" alt="蛋黃">
-    <img src="./s1/bg3.webp" class="eggbg4" alt="蛋黃">
-	<img src="./s1/oo.svg" alt="oo" class="oo3">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
@@ -60,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#c00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -93,19 +90,6 @@
 @import "@/assets/style/function.scss";
 
 
-.eggbg3{position: absolute;
-    display: block;
-    top: size(-150);right:size(100);width:size(700);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-	.eggbg4{position: absolute;
-    display: block;
-    top: size(400);left:size(230);width:size(160);
-		transform:translateY(-50%);
-		animation: an 4s ease-in-out infinite alternate;}
-  .oo3{position: absolute;top:size(120);height:size(50);right:size(60);
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -128,29 +112,9 @@
   padding-top: 0;
   
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
-
   .order-title {
-    font-size: size(40);
-    font-weight: 700;
-    color: #fff;
+    font-size: size(43);
+    font-weight: 900;
     padding-top:2em;
   }
 
@@ -160,7 +124,6 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #fff;
     padding-top:.8em;
     letter-spacing: 0em;
     font-weight: 500;
@@ -199,10 +162,10 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #fff;
+      background-color: #ccc;
       position: absolute;
     }
-    .row{background: #ffffff;border: 1px solid #CCC;//color: #000;
+    .row{background: #fff;border: 1px solid #CCC;//color: #000;
     font-weight: 500;
       display: flex;width: 100%;
       
@@ -210,8 +173,13 @@
       > span{
         color: #000;
         width: 5.5em;
+        font-weight: 800;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        > span{color: #F00;font-size: 12px;
+        font-weight: 500;}
+      }
+      select{
+        font-weight: 500;
       }
       input,select{background:none;flex: 1;}
       option{color: #666;}
@@ -231,11 +199,13 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #FFF;
-    background:#0466CA;
+    color: #000;
+    background:url("@/section/s1/bbg.jpg") center;
+    background-size: cover;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: .5em;
+    // border-radius: .5em;
+    border-radius: 0;
 
     width: 308px;
     height:3.3em;
@@ -253,11 +223,6 @@
 }
 
 @media screen and (max-width:768px) {
-.eggbg3{
-    top: sizem(-10);right:sizem(-100);width:sizem(300);}
-	.eggbg4{
-    top: sizem(400);left:sizem(0);width:sizem(50);}
-  .oo3{top:sizem(10);height:sizem(20);left:auto;right:sizem(30);}
 
 
   .order-section {

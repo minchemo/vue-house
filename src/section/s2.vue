@@ -1,13 +1,16 @@
 <template>
   <article class="s2">
    <!--   -->  <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北第一環  水岸第一景</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">前景×美景  好景成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">位處重陽重劃區核心地段，奢享山河豪景，靜藏雙公園漫翠，三大建設重心齊發，置身未來增值中央，遙望台北大好江山</p>
-   
+   <ul class="desc">
+    <li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">位居重陽特區30米集賢路第一排，</li>
+    <li data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">臨環狀線Y22五華街站計畫位置，</li>
+    <li data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">五泰輕軌相會、雙捷運交匯核心，</li>
+    <li data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1500">家門前即是家樂福旗艦店，</li>
+    <li data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1500">後迎銀河灣北側開發計畫，</li>
+    <li data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1500">百年難得一見的超級三重地王，</li>
+    <li data-aos="zoom-in" data-aos-delay="1200" data-aos-duration="1500">「鼎藏豐碩」即將登場，佔盡地利優勢！</li>
+   </ul>
       </div>
-    <Fullview />
-    <div class="caption">基地空拍實景經後製修飾</div>
   </article>
 </template>
 
@@ -15,14 +18,15 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden bg-[#00398A] text-[#fff];
-  width: 100%;
+  @apply relative overflow-hidden;
  // height: size(1059);
-  font-size:size(19);
-  .txt {text-align: center;position: relative;
-  padding-top:3.2em;z-index: 10;margin-bottom:-9.3em ;
+  font-size:size(24);
+  .txt {text-align: center;position: relative;z-index: 10;
+    line-height: 2.6;
+    padding: 3.5em 0;
+  letter-spacing: .1em;
+      font-weight: 500;
   }
-  .viewbox{z-index: 2;}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -32,12 +36,11 @@
 
   .s2 {
    // height: sizem(550);
-  font-size:sizem(15);
+  font-size:sizem(16);
 
-  .txt {text-align: justify;
-  padding-top:4.2em;width:sizem(310);margin:auto auto -4.3em auto;
+  .txt {
+    padding: 7.5em 0;
   }
-  .viewbox{height: sizem(550);}
 
 
   }
@@ -45,7 +48,6 @@
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
-import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
