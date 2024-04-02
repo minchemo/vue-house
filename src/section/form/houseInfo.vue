@@ -55,7 +55,7 @@
         font-size: size(40);
         font-weight: 700;
         color: #CC8700;
-        margin: 0 auto 1em auto;
+        margin: 0 auto 0em auto;
     }
 
     .info-items {
@@ -79,7 +79,7 @@
 .house {
     // background:#fff;
   //  height: sizem(400);
-    font-size: sizem(14);
+    font-size: sizem(16);
 }
     .footer {
         margin-bottom: sizem(0);
@@ -99,7 +99,7 @@
             row-gap: sizem(20);
 
             .item {
-                font-size: sizem(14);
+                font-size: sizem(16);
             }
         }
     }
