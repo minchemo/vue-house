@@ -19,7 +19,7 @@
           <li data-aos="fade-up" data-aos-delay="1400">轉角遇見愛，全都是天菜</li>
         </ul>
       </div>
-      <div class="st" data-aos="fade-up" data-aos-delay="200"><img src="./s2/t.svg" alt=""></div>
+    <!--  <div class="st" data-aos="fade-up" data-aos-delay="200"><img src="./s2/t.svg" alt=""></div> -->
       <div class="caption">外觀模擬示意圖</div>
 
   </article>
