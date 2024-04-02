@@ -204,14 +204,14 @@ const imgs = [
   },
   {
     img:new URL("./s7/07.webp", import.meta.url).href ,
-    caption: "帝之匯"
-  },
-  {
-    img:new URL("./s7/09.webp", import.meta.url).href ,
     caption: "帝匯"
   },
   {
     img:new URL("./s7/08.webp", import.meta.url).href ,
+    caption: "帝之匯"
+  },
+  {
+    img:new URL("./s7/09.webp", import.meta.url).href ,
     caption: "都廳苑"
   },
 ]
