@@ -13,7 +13,10 @@
     <img src="./s1/bg2.png" v-if="!$isMobile()" class="bg2" alt=""/>
     <img src="./s1/bg_m.png" v-if="$isMobile()" class="bg1" alt=""/> -->
     <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    <img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="600" data-aos-duration="1000"/>
+    <img src="./s1/img.webp" class="img" alt="" data-aos="zoom-out" data-aos-delay="600" data-aos-duration="1000"/>
+<img src="./s1/t.svg" class="txt" alt="" data-aos="zoom-out" data-aos-delay="600" data-aos-duration="1000"/>
+    
+    <div class="caption">五率國際廣告</div>
   </article>
 </template>
 
@@ -29,6 +32,7 @@
   flex-direction: column;
   justify-content: center;
   align-items:center;
+  overflow: hidden;
   font-size:size(25);
   // background: #1C96D4 url("./s1/bg.png") center;
   // background-size: cover;
@@ -76,10 +80,18 @@
     }
    .txt{
     z-index: 2;
-    width: size(535);
+    width: size(500);
     position: absolute;
     right: size(330);
-    top: calc(50% + #{size(380 - 540)});
+    top: calc(70% + #{size(340 - 1080 * .7)});
+  }
+   .img{
+    z-index: 2;
+    width: size(480);
+    position: absolute;
+    right: size(340);
+    bottom: 0;
+    bottom: calc(20% + #{size(0 - 1080 * .2)});
   }
   .logo{
     position: absolute;
@@ -91,6 +103,7 @@
 
   
 
+    .caption{z-index: 3;}
     
 
 }
@@ -106,24 +119,28 @@
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(604);
+    min-height: sizem(667);
     max-height: sizem(750);
     font-size:sizem(12);
 	// background-image: url("./s1/bgm.png");
 
-   .txt{
-    width: sizem(324);
-    position: absolute;
-    right: sizem(25);
-    bottom: sizem(110);
-	bottom: calc(40% + #{sizem(110 - 750 * .4)});
-    top:auto;
-  }
   .logo{
-    width: sizem(302);
-    left: sizem(36.2);
-    top: sizem(130);
-	top: calc(40% + #{sizem(130 - 750 * .4)});
+    width: sizem(242);
+    left: sizem(65);
+    top: sizem(50);
+    top: calc(45% + #{sizem(80 - 750 * .45)});
+    }
+   .txt{
+    width: sizem(244);
+    position: absolute;
+    right: sizem(65);
+    top: sizem(310);
+    top: calc(60% + #{sizem(330 - 750 * .6)});
+  }
+  .img{
+    width: sizem(262);
+    left: sizem(56.2);
+	bottom: calc(13% + #{sizem(0 - 750 * .13)});
     }
 
   .love{ 
