@@ -179,20 +179,40 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.webp", import.meta.url).href ,
-    caption: "帝之匯"
+    img:new URL("./s7/01.webp", import.meta.url).href ,
+    caption: "KS1"
   },
   {
-    img:new URL("./s7/2.webp", import.meta.url).href ,
+    img:new URL("./s7/02.webp", import.meta.url).href ,
+    caption: "珈柏麗"
+  },
+  {
+    img:new URL("./s7/03.webp", import.meta.url).href ,
+    caption: "美廳"
+  },
+  {
+    img:new URL("./s7/04.webp", import.meta.url).href ,
+    caption: "御廳"
+  },
+  {
+    img:new URL("./s7/05.webp", import.meta.url).href ,
+    caption: "新都廳"
+  },
+  {
+    img:new URL("./s7/06.webp", import.meta.url).href ,
     caption: "帝品苑"
   },
   {
-    img:new URL("./s7/3.webp", import.meta.url).href ,
-    caption: "御廳苑"
+    img:new URL("./s7/07.webp", import.meta.url).href ,
+    caption: "帝匯"
   },
   {
-    img:new URL("./s7/4.webp", import.meta.url).href ,
-    caption: "KS1"
+    img:new URL("./s7/08.webp", import.meta.url).href ,
+    caption: "帝之匯"
+  },
+  {
+    img:new URL("./s7/09.webp", import.meta.url).href ,
+    caption: "都廳苑"
   },
 ]
 </script>
