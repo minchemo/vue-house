@@ -149,11 +149,11 @@ const options = {
 const imgs = [
   {
     img:new URL("./s6/1.webp", import.meta.url).href ,
-    caption: "外觀實景"
+    caption: "外觀3D示意圖，完工建物已實況為準"
   },
   {
     img:new URL("./s6/2.webp", import.meta.url).href ,
-    caption: "外觀實景"
+    caption: "外觀3D示意圖，完工建物已實況為準"
   },
 ]
 /*

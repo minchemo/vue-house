@@ -180,7 +180,7 @@ const imgs = [
   },
   {
     img:new URL("./s2/4.webp", import.meta.url).href ,
-    caption: "LaLaPort"
+    caption: "LaLaPort外觀示意圖／高雄市政府提供"
   },
 ]
 </script>
