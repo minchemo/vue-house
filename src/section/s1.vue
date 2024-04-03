@@ -78,9 +78,11 @@
   }
   .c{
     position: absolute;
-  width:size(17);
-    left:calc(75% + #{size(220)});
+    height:calc(100% - #{size(630)});
+    right:size(390);
+    //left:calc(35% + #{size(1000)});
     bottom:10%;
+  img{height: 100%;transform: translateX(900%);}
   
   }
 
@@ -178,10 +180,12 @@
   .c{
     position: absolute;
   width:sizem(10);
+	height: auto;
   left: auto;
     right:sizem(75);
     bottom:6%;
-  img{width: 100%;}
+  img{width: 100%;
+	height: auto;}
   
   }
     
