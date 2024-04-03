@@ -188,11 +188,11 @@ const imgs = [
   },
   {
     img:new URL("./s7/03.webp", import.meta.url).href ,
-    caption: "美廳"
+    caption: "美廳苑"
   },
   {
     img:new URL("./s7/04.webp", import.meta.url).href ,
-    caption: "御廳"
+    caption: "御廳苑"
   },
   {
     img:new URL("./s7/05.webp", import.meta.url).href ,
