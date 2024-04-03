@@ -7,6 +7,8 @@
 		<img src="./s1/title.svg" class="title1" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
     <img src="./s1/style.svg" class="style" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
 	</div>
+  <div class="c" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600">
+    <img src="./s1/c.svg" alt="建築外觀3D示意圖，完工建物以實況為準"/></div>
 	
 
   </article>
@@ -73,6 +75,13 @@
     left: size(65);
     top: size(-20);
     mix-blend-mode: screen;
+  }
+  .c{
+    position: absolute;
+  width:size(17);
+    left:calc(75% + #{size(220)});
+    bottom:10%;
+  
   }
 
  
@@ -165,6 +174,15 @@
 	right:auto;
 	right:sizem(20);
 	width: sizem(120);
+  }
+  .c{
+    position: absolute;
+  width:sizem(10);
+  left: auto;
+    right:sizem(75);
+    bottom:6%;
+  img{width: 100%;}
+  
   }
     
   }
