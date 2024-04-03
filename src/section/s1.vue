@@ -7,7 +7,7 @@
 		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
     <img src="./s1/style.svg" class="style" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
 	</div>
-  <div class="c" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600">
+  <div class="c">
     <img src="./s1/c.svg" alt="建築外觀3D示意圖，完工建物以實況為準"/></div>
 	
 
