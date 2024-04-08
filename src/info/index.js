@@ -49,17 +49,17 @@ export default {
   navList: [
     {
       name: "國家級副都心",
-      target: ".s1",
-      offset: "",
-    },
-    {
-      name: "清溪川首排",
       target: ".s2",
       offset: "",
     },
     {
+      name: "清溪川首排",
+      target: ".s31",
+      offset: "",
+    },
+    {
       name: "雙大道樞紐",
-      target: ".s3",
+      target: ".s32",
       offset: "",
     },
     {
@@ -74,7 +74,7 @@ export default {
     },
     {
       name: "國際頂級精工",
-      target: ".s6",
+      target: ".s52",
       offset: "",
     },
     {

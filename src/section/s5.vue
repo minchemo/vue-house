@@ -55,7 +55,7 @@
       </Splide>
     </div>
 
-    <div class="footer">
+    <div class="footer s52">
       <div class="logo-box">
         <div class="div"></div>
         <img v-if="!isMobile" src="@/section/s5/logos.png" alt="" srcset="" />

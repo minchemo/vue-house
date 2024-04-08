@@ -1,6 +1,6 @@
 <template>
   <article class="s3">
-    <div class="slide-box">
+    <div class="slide-box s31">
       <Splide
         ref="splide"
         class="slide"
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="slide-box">
+    <div class="slide-box s32">
       <Splide
         ref="splide2"
         class="slide"
