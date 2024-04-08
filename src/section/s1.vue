@@ -1,14 +1,12 @@
 <template>
   <article class="s1" id="s1">
-	 <img src="./s1/house.webp" class="house" data-aos="fade-up" data-aos-delay="0"> 
-   <div class="style2" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1600"><img src="./s1/style2.svg"></div>
+    <div class="house" data-aos="fade-up" data-aos-delay="0"><img src="./s1/house.webp" class="h"><img src="./s1/c.svg" class="c1" alt="建築外觀3D示意圖，完工建物以實況為準"/></div>
+   <div class="style2" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1600"><img src="./s1/ll.webp"></div>
 	<div class="txt">
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 		<img src="./s1/title.svg" class="title1" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
     <img src="./s1/style.svg" class="style" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
 	</div>
-  <div class="c" data-aos="fade-up" data-aos-delay="0" data-aos-offset="-700" >
-    <img src="./s1/c.svg" alt="建築外觀3D示意圖，完工建物以實況為準"/></div>
 	
 
   </article>
@@ -20,6 +18,7 @@
 .s1 {
   @apply relative w-full h-screen ;
   background-image:url("../section/s1/bg.webp");
+  background-position: center;
   background-size: cover;
   min-height: size(900);
   max-height: size(1080);
@@ -35,22 +34,34 @@
 	overflow: hidden;
   .t0{position: absolute;width: 100%;top: 0;left: 0; pointer-events: none;opacity: .3;}
 
-  .house{
-    position: absolute;
-    left:calc(75% - #{size(200)});
-    bottom:3%;
-    height:calc(100% - #{size(160)});
-    background: transparent;
-    z-index: 99;
-  }
   .style2{
     position: absolute;
-    height:110%;
-    left:calc(75% - #{size(200)});
-    bottom:-20%;
+    height:calc(100% + #{size(90)});
+    left:calc(80% - #{size(154)});
+    bottom:-15.5%;
     mix-blend-mode: screen;
 	img{height: 100%;transform: translateX(-36.7%);}
   }
+  .house{
+    position: absolute;
+    left:calc(80% - #{size(300)});
+    bottom:2.5%;
+    height:calc(100% - #{size(80)});
+    background: transparent;
+    z-index: 99;
+    opacity: .6;
+    .h{height: 100%;}
+    .c1{
+    position: absolute;
+    top: 41%;
+    left: 84%;
+    height: 48%;}
+
+
+  
+  }
+
+
 
   .txt{
 	position: absolute;
@@ -106,18 +117,24 @@
 
 
   .house{
-    position: absolute;
-    right:sizem(95);
-    bottom:sizem(0);
-    width: sizem(180);
+    bottom:sizem(15);
+    width: sizem(265);
 	height: auto;
-	left: auto;
+	left: sizem(70);
+    .h{
+    width: 100%;
+	height: auto;}
+    .c1{
+    position: absolute;
+    top: 41%;
+    left: 84%;
+    height: 48%;}
   }  
 
   .style2{
-    width: sizem(680);
-    right:sizem(-155);
-    bottom:sizem(-100);
+    width: sizem(560);
+    right:sizem(-110);
+    bottom:sizem(-80);
 	height: auto;
 	left: auto;
 	img{height: auto;width: 100%;transform: translateX(-0%);}
