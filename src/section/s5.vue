@@ -71,11 +71,11 @@
 
         <img
           v-if="!isMobile"
-          src="@/section/s5/contries.png"
+          src="@/section/s5/contries.webp"
           alt=""
           srcset=""
         />
-        <img v-else src="@/section/s5/contriesm.png" alt="" srcset="" />
+        <img v-else src="@/section/s5/contriesm.webp" alt="" srcset="" />
       </div>
     </div>
 
@@ -97,7 +97,7 @@
     </div>
 
     <img
-      src="@/section/s5/f1.png"
+      src="@/section/s5/f1.webp"
       class="f1"
       v-if="!isMobile"
       alt=""
@@ -112,7 +112,7 @@
 .s5 {
   @apply relative w-full z-30 text-white flex flex-col items-center justify-center;
   height: size(1472);
-  background-image: url("@/section/s5/bg.jpg");
+  background-image: url("@/section/s5/bg.webp");
   background-size: cover;
 
   .title {
@@ -246,7 +246,7 @@
 @media screen and (max-width: 767px) {
   .s5 {
     height: sizem(1570);
-    background-image: url("@/section/s5/bgm.jpg");
+    background-image: url("@/section/s5/bgm.webp");
 
     .title {
       width: sizem(375);
@@ -360,35 +360,35 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s5/1.jpg", import.meta.url).href,
+    img: new URL("../section/s5/1.webp", import.meta.url).href,
     caption: "大廳情境示意圖",
   },
   {
-    img: new URL("../section/s5/2.jpg", import.meta.url).href,
+    img: new URL("../section/s5/2.webp", import.meta.url).href,
     caption: "大廳情境示意圖",
   },
   {
-    img: new URL("../section/s5/3.jpg", import.meta.url).href,
+    img: new URL("../section/s5/3.webp", import.meta.url).href,
     caption: "健身房情境示意圖",
   },
   {
-    img: new URL("../section/s5/4.jpg", import.meta.url).href,
+    img: new URL("../section/s5/4.webp", import.meta.url).href,
     caption: "瑜珈室情境示意圖",
   },
   {
-    img: new URL("../section/s5/5.jpg", import.meta.url).href,
+    img: new URL("../section/s5/5.webp", import.meta.url).href,
     caption: "宴會廳境示意圖",
   },
   {
-    img: new URL("../section/s5/6.jpg", import.meta.url).href,
+    img: new URL("../section/s5/6.webp", import.meta.url).href,
     caption: "公設情境示意圖",
   },
   {
-    img: new URL("../section/s5/7.jpg", import.meta.url).href,
+    img: new URL("../section/s5/7.webp", import.meta.url).href,
     caption: "公設情境示意圖",
   },
   {
-    img: new URL("../section/s5/8.jpg", import.meta.url).href,
+    img: new URL("../section/s5/8.webp", import.meta.url).href,
     caption: "公設情境示意圖",
   },
 ]

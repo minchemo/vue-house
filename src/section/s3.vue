@@ -75,8 +75,8 @@
       srcset=""
     />
     <img v-else src="@/section/s3/lt2m.png" class="lt lt2" alt="" srcset="" />
-    <img src="@/section/s3/f1.png" class="lt f f1" alt="" srcset="" />
-    <img src="@/section/s3/f2.png" class="lt f f2" alt="" srcset="" />
+    <img src="@/section/s3/f1.webp" class="lt f f1" alt="" srcset="" />
+    <img src="@/section/s3/f2.webp" class="lt f f2" alt="" srcset="" />
 
     <div class="arrows" v-if="isMobile">
       <img
@@ -373,33 +373,33 @@ const splide2 = ref()
 
 const imgsA = [
   {
-    img: new URL("../section/s3/a1.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a1.webp", import.meta.url).href,
     caption: "塭仔圳溼地公園",
   },
   {
-    img: new URL("../section/s3/a2.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a2.webp", import.meta.url).href,
     caption: "塭仔圳溼地公園",
   },
   {
-    img: new URL("../section/s3/a3.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a3.webp", import.meta.url).href,
     caption: "中港綠堤",
   },
   {
-    img: new URL("../section/s3/a4.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a4.webp", import.meta.url).href,
     caption: "昌平公園",
   },
   {
-    img: new URL("../section/s3/a5.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a5.webp", import.meta.url).href,
     caption: "願景公園",
   },
 ]
 const imgsB = [
   {
-    img: new URL("../section/s3/b1.jpg", import.meta.url).href,
+    img: new URL("../section/s3/b1.webp", import.meta.url).href,
     caption: "iTower新莊創新園區",
   },
   {
-    img: new URL("../section/s3/b2.jpg", import.meta.url).href,
+    img: new URL("../section/s3/b2.webp", import.meta.url).href,
     caption: "宏匯廣場",
   },
 ]

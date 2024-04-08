@@ -18,7 +18,7 @@
 .s4 {
   @apply relative w-full z-0 text-white;
   height: size(1080);
-  background-image: url("@/section/s4/bg.jpg");
+  background-image: url("@/section/s4/bg.webp");
   background-size: cover;
   .t {
     @apply absolute z-20;
@@ -59,7 +59,7 @@
   .s4 {
     @apply relative w-full z-0 text-white;
     height: sizem(750);
-    background-image: url("@/section/s4/bgm.jpg");
+    background-image: url("@/section/s4/bgm.webp");
     .t {
       @apply absolute left-0 z-20 w-full;
       top: sizem(50);
