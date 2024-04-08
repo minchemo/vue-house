@@ -1,7 +1,7 @@
 <template>
   <article class="s1" id="s1">
 	 <img src="./s1/house.webp" class="house"> 
-   <img src="./s1/style2.svg" class="style2">   
+   <img src="./s1/ll.webp" class="style2">   
 	<div class="txt">
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
@@ -36,17 +36,17 @@
 
   .house{
     position: absolute;
-    right:size(210);
+    right:size(150);
     bottom:size(30);
-    width: size(520);
+    width: size(700);
     background: transparent;
     z-index: 99;
   }
   .style2{
     position: absolute;
     width: size(1900);
-    right:size(-480);
-    bottom:size(-273);
+    right:size(-550);
+    bottom:size(-300);
     mix-blend-mode: screen;
   }
 
@@ -76,9 +76,9 @@
   }
   .c{
     position: absolute;
-  width:size(17);
-    right:size(180);
-    bottom:size(80);
+  width:size(10);
+    right:size(250);
+    bottom:size(150);
   
   }
 
@@ -103,15 +103,15 @@
 
   .house{
     position: absolute;
-    right:sizem(95);
-    bottom:sizem(10);
-    width: sizem(180);
+    right:sizem(45);
+    bottom:sizem(5);
+    width: sizem(260);
   }  
 
   .style2{
-    width: sizem(850);
-    right:sizem(-235);
-    bottom:sizem(-121);
+    width: sizem(550);
+    right:sizem(-120);
+    bottom:sizem(-80);
   }
 
 	.txt{
