@@ -171,7 +171,7 @@
       font-family: "Noto Sans TC";
       font-weight: 500;
       color: #fff;
-      letter-spacing: size(7.2);
+      letter-spacing:0.1em;
 
       img {
         width: size(43);
@@ -366,8 +366,8 @@
 
       .menu-item {
         font-size: sizem(15);
-        gap: sizem(1);
-        letter-spacing: sizem(4);
+        gap: 0;
+       // letter-spacing: sizem(4);
 
         &::after {
           width: sizem(202);

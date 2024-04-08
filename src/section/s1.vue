@@ -31,9 +31,9 @@
   color: #fff;
   line-height: 1.3;
   font-weight: 700;
-  background-image: url("@/section/s1/bg.png");
-  background-position: bottom;
-  background-size: 100%;
+ // background-image: url("@/section/s1/bg1.jpg");
+ // background-position: top center;
+ // background-size: 100%;
 
   .bg {
     @apply absolute w-full z-0;

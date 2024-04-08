@@ -245,7 +245,7 @@
 
 @media screen and (max-width: 767px) {
   .s5 {
-    height: sizem(1550);
+    height: sizem(1570);
     background-image: url("@/section/s5/bgm.jpg");
 
     .title {
@@ -288,6 +288,7 @@
       @apply flex flex-col w-full items-center justify-center;
       gap: 0;
       margin-top: sizem(30);
+      margin-bottom: sizem(20);
       .logo-box {
         width: sizem(333);
         img {

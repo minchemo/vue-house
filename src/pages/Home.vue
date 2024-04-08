@@ -15,8 +15,9 @@
   <div
     class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC'] pb-[64px] md:pb-0"
   >
+  <div class="bgs1s2">
     <S1 />
-    <S2 />
+    <S2 /></div>
     <S3 />
     <S4 />
     <S5 />
@@ -35,6 +36,17 @@ img {
 
 .home {
   background: #efefef;
+}
+.bgs1s2{
+  background-image: url("@/section/s1/bg1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+.bgs1s2{
+  background-image: url("@/section/s1/bg1m.jpg");
+}
 }
 </style>
 

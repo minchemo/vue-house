@@ -222,7 +222,7 @@
     font-size: size(40);
     font-weight: 700;
     color: #fff;
-    padding-top: 2em;
+    padding-top: 4em;
   }
 
   .order-title-img {

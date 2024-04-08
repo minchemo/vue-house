@@ -57,6 +57,8 @@
       :src="`s2/leaf/${activeLeaf}im.png`"
       alt=""
     />
+    <div v-if="isMobile" class="gol" @click="splide.go('<')"></div>
+    <div v-if="isMobile" class="gor" @click="splide.go('>')"></div>
     <img
       v-if="isMobile"
       class="leaf-arrow"
@@ -94,11 +96,11 @@
 .s2 {
   @apply relative w-full z-0;
   height: size(2085);
-  background: #074544;
+  background-image:linear-gradient(0deg, #093948 70%, rgba(15, 35, 81, 0) 100%);
   &::after {
     @apply absolute w-full h-full z-10;
     content: "";
-    background-image: url("@/section/s2/bg.png");
+   // background-image: url("@/section/s2/bg.png");
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -176,12 +178,14 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(1975);
-    background: #1b527a;
+    height: sizem(1920);
+    background-image:linear-gradient(0deg, #093948 75%, rgba(15, 35, 81, 0) 100%);
+  
+   // background: #1b527a;
     &::after {
       @apply absolute w-full h-full z-10;
       content: "";
-      background-image: url("@/section/s2/bgm.jpg");
+    //  background-image: url("@/section/s2/bgm.jpg");
       background-position: top;
       background-size: 100%;
       background-repeat: no-repeat;
@@ -224,6 +228,15 @@
       @apply absolute z-20;
       top: sizem(950);
       right: sizem(22.5);
+    }
+    .gor,.gol{
+      @apply absolute z-20;
+      top: sizem(500);
+      right: 0;
+      width:  sizem(100);height:  sizem(750);
+    }
+    .gol{
+      left: 0;height:  sizem(200);
     }
 
     .t {
