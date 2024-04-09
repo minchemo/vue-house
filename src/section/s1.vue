@@ -41,7 +41,7 @@
   .txt{
 	position: relative;
   margin: 0 auto;
-	gap:size(120);
+	gap:size(70);
 	display: flex;
 	flex-direction: column;
   }
@@ -51,7 +51,7 @@
   z-index: 99;
   }
   .title{
-	width: size(950);
+	width: size(500);
   z-index: 99;
   }
 
@@ -88,15 +88,17 @@
   }
 
 	.txt{
-	gap:sizem(80);
+	gap:0;
   top: sizem(20);
 
 
   .logo{
-		width: sizem(320);
+		width: sizem(330);
+    margin-bottom:sizem(30);
 	}
 	.title{
-	width: sizem(320);
+	width: sizem(180);
+    margin-bottom:sizem(20);
   }
 
   .style{
