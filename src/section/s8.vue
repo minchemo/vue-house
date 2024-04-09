@@ -5,10 +5,12 @@
     <img src="./s1/style.svg" class="style" alt="" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1600"/>
     <div class="title0" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1600"><span class="title1">鳳山真地王．傳家最上品</span>
       <span class="title2">3-4房</span><span class="title3">即將公開</span>
-    <img src="./s1/slogom.svg" class="slogo" v-if="isMobile" alt=""/>
-    <img src="./s1/slogo.svg" class="slogo" v-else alt=""/></div>
-
+    <!-- <img src="./s1/slogom.svg" class="slogo" v-if="isMobile" alt=""/>
+    <img src="./s1/slogo.svg" class="slogo" v-else alt=""/> --></div>
+    <img src="./s8/slogo1.svg" class="slogo1" alt=""/>
+    <img src="./s8/slogo2.svg" class="slogo2" alt=""/>
 	</div>
+
 	
     <div class="txt2">CROWN THE CITY</div>
 
@@ -59,13 +61,15 @@
     padding:0.2em 0;letter-spacing: 0.05em;
   }
   .title2{
-  &::after{content: "";height: 1px;background: #000;width: 2em;display: inline-block;vertical-align: middle;margin: 0 0.2em;}
-  }
-  .title3{
+  &::after{content: "";position: relative;height: 1px;background: #000;width: 2em;display: inline-block;vertical-align: middle;margin: 0 0.2em;top: -.1em;}
   }
   .slogo{
     height:1.05em;margin: 0 0 0 .5em;vertical-align: middle;
   }
+  .slogo1,.slogo2{height:size(50) ;}
+  .slogo1{position: absolute;  
+  top: 0;left: 0;transform: translate(-280%,-200%);}
+  .slogo2{position: absolute;right: 0;bottom: 0;transform: translate(280%,200%);}
 
   .style{
     position: absolute;
@@ -112,7 +116,7 @@ padding:3em 0;color: #9B7C52;
 	.txt{
 	gap:0;
   left: sizem(0);
-  top: sizem(60);width: sizem(260);
+  top: sizem(85);width: sizem(260);
 
   .logo{
 		width: sizem(218);
@@ -128,6 +132,9 @@ padding:3em 0;color: #9B7C52;
   .slogo{
     height:1.05em;margin: 0 auto 0 auto;
   }
+  .slogo1,.slogo2{height:sizem(25) ;}
+  .slogo1{transform: translate(-55%,-300%);}
+  .slogo2{transform: translate(55%,300%);}
 
   .style{
     width: 72%;

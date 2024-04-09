@@ -11,7 +11,7 @@
     <div class="main">
       <div class="txt">
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">入境品奢潮，四大百貨聚首</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">15分鐘快捷距離，近佔夢時代百貨、三多大遠百、SKM Park Oulets高雄草衙、未來三井LALAPORT！一次體會新鳳山最極緻生活日場，感受奢華、懷擁品味，讓所有繁華就此靠攏、身段就此非凡。</p>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">15分鐘快捷距離，近佔夢時代百貨、三多大遠百、SKM Park Oulets高雄草衙、未來三井LALAPORT！一次體會新鳳山最極緻生活日場，感受奢華、懷擁品味，讓所有繁華就此靠攏、身段就此非凡。<br>(15分鐘來源依據是google map)</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -121,11 +121,6 @@
     height: auto;
     width: 100%;
 
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
-    }
     .slide-item {
       @apply bg-cover;
       width: 100%;

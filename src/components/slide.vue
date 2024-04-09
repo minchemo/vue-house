@@ -13,14 +13,6 @@
     position: relative;
     background-size: cover;
 
-    .caption {
-        position: absolute;
-        color: #fff;
-        font-size: size(14);
-        right: size(45);
-        bottom: size(25);
-        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8))
-    }
 }
 
 .splide__pagination {
@@ -58,14 +50,6 @@
 }
 
 @media screen and (max-width: 767px) {
-
-    .slide {
-        .caption {
-            font-size: sizem(12);
-            right: sizem(10);
-            bottom: sizem(10);
-        }
-    }
 
     .splide__pagination {
         gap: sizem(10);

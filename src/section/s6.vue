@@ -99,12 +99,6 @@ background: #6A3F12;
   .slider {
     height: auto;
     width: 100%;
-
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
-    }
     .slide-item {
       @apply bg-cover;
       width: 100%;
@@ -116,6 +110,10 @@ background: #6A3F12;
       width:8%;
     }
   }
+.caption{
+      font-size: sizem(10.2);text-align: center;
+      padding: 5em 1em .5em 1em;
+} 
   }
 }
 </style>
@@ -149,11 +147,11 @@ const options = {
 const imgs = [
   {
     img:new URL("./s6/1.webp", import.meta.url).href ,
-    caption: "外觀3D示意圖，完工建物已實況為準"
+    caption: "3D示意圖，相關距離建物座向位置及周邊建物與環境、綠意等，以實景為準"
   },
   {
     img:new URL("./s6/2.webp", import.meta.url).href ,
-    caption: "外觀3D示意圖，完工建物已實況為準"
+    caption: "3D示意圖，相關距離建物座向位置及周邊建物與環境、綠意等，以實景為準"
   },
 ]
 /*

@@ -161,12 +161,6 @@
   .slider {
     height: auto;
     width: 100%;
-
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
-    }
     .slide-item {
       @apply bg-cover;
       width: 100%;

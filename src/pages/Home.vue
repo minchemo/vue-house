@@ -80,12 +80,17 @@ img {
 } 
 .caption{
       @apply absolute;
-      right:1em;
-      bottom: .5em;
+      right: 0;
+      bottom: 0;
       font-weight: 300;
       font-size: size(15);
+      padding: 5em 1em .5em 0;
+      width: 100%;
       color: #FFF;
-      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
+      text-align: right;
+      background:linear-gradient(-3deg,#000c 10%,#0009 20%,#0003 50%,#0000 69%);
+      text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5),0px 0px 3px rgba(0, 0, 0, 1);
+    }
 
 
       .txt {
