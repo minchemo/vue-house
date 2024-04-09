@@ -22,7 +22,7 @@ export default {
         ["企劃銷售", "新理想廣告"],
         ["建照號碼", "112重建字第00439號"],
     ],
-    gtmCode: ["GTM-W6PJV9QK"], // 可放置多個
+    gtmCode: ["GTM-TNHNNFWL"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
