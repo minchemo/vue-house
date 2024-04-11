@@ -1,23 +1,38 @@
 <template>
-  <article class="s8" ref="s8">
+  <article class="s9" ref="s9">
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
+      <swiper  class="slide"
+        :slidesPerView="'auto'"
+        :pagination="{
+          clickable: true
+        }"
+        :navigation="false"
+        :loop="true"
+        :speed="1000"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide  class="slide-item" v-for="img in imgs">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
+        </swiper-slide>
+      </swiper>
+
+
     </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>未來</span><span class="en">UPGRADE THE FUTURE</span></h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">對位繁華<br>嘉義的世界級</h4>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>盛世</span><span class="en">PROSPEROUS TIME</span></h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">台積電抵嘉<br>億級榮景啟城</h4>
     <div class="hr"></div>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">與全球都會比肩，市心最大「湖子內重劃」，移植國際經驗，對位台北信義計畫、新莊副都心；4大新創開發區X7大產業區，護國神山加持，增值潛力看漲。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">台積電CoWoS先進封裝廠，確定落址嘉義科學園區，第一座規劃2026年底完工，預計可創造約3000個就業機會。國家級建設啟動，竹科效應再現，繁盛指日可待。</p>
     </div>
     </div>
 
@@ -29,19 +44,15 @@
 
 
 
-.s8 {
-  @apply relative flex items-center justify-center text-[#F1CC8B];
+.s9 {
+  @apply relative flex items-center justify-center text-[#633804];
   width: 100%;
   height:auto;
   padding:5em 0;
   font-size:size(28);
-  gap:3em;
-    flex-direction:row-reverse;
+  gap:2.6em;
   flex-wrap: wrap;
-  &::before{content: "";width:100%;mix-blend-mode: multiply;
-  height: 100%;background: #22491B;display: block;
-  position: absolute;bottom:0%;left:0%;
-}
+    flex-direction:column-reverse;
 
 
   .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
@@ -52,55 +63,36 @@
   img{width: 100%;position: relative;}}
   .main {
     @apply flex;
-    margin: 0 0 0 size(120);
+    margin: 0 size(120) 0 0;
     flex-basis: size(560);
   flex-direction: column;
   text-align: justify;
 }
-.txt{
-  .title{
-    .icon{background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 47 47' fill='%23EBF28F' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='23.5'/%3E%3Cpath stroke='%2322491B' stroke-width='5' d='M7,23.5h33 M23.5,7v33'/%3E%3C/svg%3E");}
-    .en{margin-left: .2em;}
-    &::before{background:#78e05217;left: auto;right: 1.4em;
-    }
-  }
-  
-  .desc{
-      color: #fff;
-  }
-}
+
+
+
   .slider {
     margin: 0;
-    flex-basis: size(1050);
+    flex-basis: 100%;
+    width: 100%;
       height: size(1009);
     .slide-item {
       @apply bg-cover;
     flex-basis:100%;
+    width: 100%;
       height: size(1009);
       
     }
-  .splide__pagination {
-    color: #D0D0D0;
-    li {
-      button {
-      &:hover{
-    color: #FFF;}
-
-        &.is-active{
-    color: #FFF;
-      }
-      }
-    }
-  }
   }
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
 @media screen and (max-width: 767px) {
 
 
-.s8 {
+.s9 {
 @apply flex-col;
   height: auto;
   padding:3em 0 2em;
@@ -132,7 +124,7 @@ gap:0em;
     
   }
   .arrows{
-    filter: invert(84%) sepia(26%) saturate(599%) hue-rotate(346deg) brightness(97%) contrast(95%);
+    filter: invert(22%) sepia(14%) saturate(5170%) hue-rotate(9deg) brightness(96%) contrast(97%);
   }
 }
 }
@@ -140,6 +132,13 @@ gap:0em;
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
+// import 'swiper/css/swiper.css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, Autoplay } from "swiper";
+const modules = ref([Pagination, Navigation, Autoplay]);
+
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
@@ -168,16 +167,24 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.webp", import.meta.url).href ,
-    caption: "重陽橋"
+    img:new URL("./s9/1.jpg", import.meta.url).href ,
+    caption: "士林生活圈實景"
   },
   {
-    img:new URL("./s7/2.webp", import.meta.url).href ,
-    caption: "北環段捷運情境示意圖"
+    img:new URL("./s9/1.jpg", import.meta.url).href ,
+    caption: "士林商圈實景"
   },
   {
-    img:new URL("./s7/3.webp", import.meta.url).href ,
-    caption: "新蘆線捷運徐匯中學站"
+    img:new URL("./s9/1.jpg", import.meta.url).href ,
+    caption: "士林科教館實景"
+  },
+  {
+    img:new URL("./s9/1.jpg", import.meta.url).href ,
+    caption: "士林科教館實景"
+  },
+  {
+    img:new URL("./s9/1.jpg", import.meta.url).href ,
+    caption: "士林科教館實景"
   },
 ]
 </script>
