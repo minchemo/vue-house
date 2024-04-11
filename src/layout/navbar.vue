@@ -2,8 +2,7 @@
     <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
-            v-bind:class="{ 'open': menuOpen }">
+        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen" v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
         </div>
@@ -15,7 +14,7 @@
                 <span>{{ item.name }}</span>
             </div>
             </template>
-            <div class="close" @click="menuOpen = !menuOpen"  v-if="$isMobile()">
+            <div class="close" @click="menuOpen = !menuOpen">
             </div>
         </div>
     </div>
@@ -28,8 +27,8 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    right: size(114);
-    top: size(51);
+    right: size(10);
+    top: size(10);
  /*   .logo {
         width: size(145);
         height: size(50);
@@ -126,20 +125,21 @@
 
     .menu {
         position: fixed;
-        flex-direction: row;
         top: 0;
         right: 0;
         background: #19A3CEcc;
-        width:100%;
-        height: size(60);
+        width:size(375);
+        height: 100%;
         z-index: 5;
         padding: 0;
         font-size: size(16);
         gap: 2em;
-        padding: 0 3em 0 0;
         font-weight: 700;
         backdrop-filter: blur(2px);
-        justify-content:flex-end;
+        transform: translateX(150%);
+        transition: all .5s;
+            justify-content: center;
+            flex-direction: column;
 
         .menu-item {
             position: relative;
@@ -189,16 +189,24 @@
 
         &.open {
             transform: translateX(0);
+                left: unset;
         }
 
         .close {
             position: absolute;
-            top: size(77);
-            left: 50%;
-            transform: translateX(-50%);
+            top: size(10);right: size(10);
+            transform: translateX(0);
             width: size(44);
             height: size(44);
-            cursor: pointer;
+                cursor: pointer;
+                margin:0;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items:center;
+                &::before,&::after{content:"";background: #FFF;height: 2px;width: 100%;display: block;}
+                &::before{transform: rotate(45deg);margin-bottom:-2px;}
+                &::after{transform: rotate(-45deg);}
 
             img {
                 width: 100%;
@@ -335,15 +343,10 @@
 
         .menu {
             height: 100%;
+        width:100%;
           //  z-index: 0;
-            transform: translateX(150%);
-            transition: all .5s;
            // padding: 0;
            font-size: sizem(18);
-            gap: sizem(23);
-            justify-content: center;
-            flex-direction: column;
-        padding: 0;
           //  background-image: url('@/section/menubgm.png');
 
             .menu-item {
@@ -359,35 +362,21 @@
             }
 
             &.open {
-                transform: translateX(0);
                 left: unset;
             }
 
+
+            .close {
+                top: sizem(10);right: sizem(10);
+                width: sizem(44);
+                height: sizem(44);
+            }
             .decor {
                 width: 30vh;
                 left: 50%;
                 margin-left: -15vh;
                 top: -15vh;
                 animation: rotate 10s infinite linear;
-            }
-
-            .close {
-                position: absolute;
-                left: unset;
-                bottom: 0;
-                transform: translateX(0);
-                top: sizem(10);right: sizem(10);
-                width: sizem(44);
-                height: sizem(44);
-                cursor: pointer;
-                margin:0;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items:center;
-                &::before,&::after{content:"";background: #FFF;height: 2px;width: 100%;display: block;}
-                &::before{transform: rotate(45deg);margin-bottom:-2px;}
-                &::after{transform: rotate(-45deg);}
             }
         }
     }

@@ -1,13 +1,14 @@
 <template>
   <article class="s2">
    <!--   -->  <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北第一環  水岸第一景</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">前景×美景  好景成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">位處重陽重劃區核心地段，奢享山河豪景，靜藏雙公園漫翠，三大建設重心齊發，置身未來增值中央，遙望台北大好江山</p>
+    <h4 class="entitle" data-aos="fade-up" data-aos-delay="200">NEW WORLD CITY</h4>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">前進湖子內 宜居新都心</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">掌握城市進化力量，繁華與綠帶鄰距離</h4>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">工作在園區、生活在市區，應許夢想宜居的家</p>
    
       </div>
     <Fullview />
-    <div class="caption">基地空拍實景經後製修飾</div>
+    <div class="caption">空拍實景電腦修飾圖</div>
   </article>
 </template>
 
@@ -19,10 +20,11 @@
   width: 100%;
  // height: size(1059);
   font-size:size(19);
-  .txt {text-align: center;position: relative;
-  padding-top:3.2em;z-index: 10;margin-bottom:-9.3em ;
+  .txt {text-align: center;position: absolute;top: 0;left: 0;
+  padding-top:0.2em;z-index: 10;margin-bottom:-10.8em ;
   }
   .viewbox{z-index: 2;}
+  .caption{top: 0.5em;}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -31,7 +33,7 @@
 @media screen and (max-width: 767px) {
 
   .s2 {
-   // height: sizem(550);
+    height: sizem(670);
   font-size:sizem(15);
 
   .txt {text-align: justify;

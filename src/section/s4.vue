@@ -1,15 +1,5 @@
 <template>
   <article class="s4" ref="s4">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
-    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃" v-if="!isMobile">
-    <img src="./s1/oo.svg" alt="oo" class="oo1" v-if="!isMobile">
-    <div class="main">
-      <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">北士科半價  最甜補漲區</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">好地段×大品牌  增值成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">坐擁5分鐘直達士林燙金地段，北士科半價輕鬆挺進新士林生活圈，加上麗寶集團大品牌效益、未來捷運網路、銀新未來城等利多加持，享受未來紅利增值爆發期。</p>
-    </div>
-    </div>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -22,6 +12,14 @@
         </SplideSlide>
       </Splide>
     </div>
+    <div class="main">
+      <div class="txt">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>未來</span><span class="en">UPGRADE THE FUTURE</span></h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">對位繁華<br>嘉義的世界級</h4>
+    <div class="hr"></div>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">與全球都會比肩，市心最大「湖子內重劃」，移植國際經驗，對位台北信義計畫、新莊副都心；4大新創開發區X7大產業區，護國神山加持，增值潛力看漲。</p>
+    </div>
+    </div>
 
   </article>
 </template>
@@ -32,27 +30,18 @@
 
 
 .s4 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center text-[#F1CC8B];
   width: 100%;
   height:auto;
-  padding:11em 0 10em 0;
-  font-size:size(19);
+  padding:5em 0;
+  font-size:size(28);
   gap:3em;
-  flex-wrap: wrap;
     flex-direction:row-reverse;
-	.eggbg1{position: absolute;
-    display: block;
-    top: size(-50);left:size(-30);width:size(500);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-	.eggbg2{position: absolute;
-    display: block;
-    top: size(870);right:size(-30);width:size(350);
-		transform:translateY(-50%);
-		animation: an 4s ease-in-out infinite alternate;}
-    .oo1{position: absolute;top:size(350);height:size(50);right:size(60);
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
+  flex-wrap: wrap;
+  &::before{content: "";width:100%;mix-blend-mode: multiply;
+  height: 100%;background: #22491B;display: block;
+  position: absolute;bottom:0%;left:0%;
+}
 
 
   .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
@@ -63,75 +52,87 @@
   img{width: 100%;position: relative;}}
   .main {
     @apply flex;
-    margin: 0;
-    flex-basis: size(590);
+    margin: 0 0 0 size(120);
+    flex-basis: size(560);
   flex-direction: column;
   text-align: justify;
 }
-
-
-
+.txt{
+  .title{
+    .icon{background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 47 47' fill='%23EBF28F' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='23.5'/%3E%3Cpath stroke='%2322491B' stroke-width='5' d='M7,23.5h33 M23.5,7v33'/%3E%3C/svg%3E");}
+    .en{margin-left: .2em;}
+    &::before{background:#78e05217;left: auto;right: 1.4em;
+    }
+  }
+  
+  .desc{
+      color: #fff;
+  }
+}
   .slider {
     margin: 0;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: size(1050);
+      height: size(1009);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis:100%;
+      height: size(1009);
       
     }
-    .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+  .splide__pagination {
+    color: #D0D0D0;
+    li {
+      button {
+      &:hover{
+    color: #FFF;}
+
+        &.is-active{
+    color: #FFF;
+      }
+      }
     }
+  }
   }
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
 @media screen and (max-width: 767px) {
 
 
 .s4 {
 @apply flex-col;
   height: auto;
-  padding: 0;
-font-size:sizem(15);
+  padding:3em 0 2em;
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
 
-	.eggbg1{
-    top: sizem(-40);left:sizem(-50);width:sizem(400);}
-.img{position: absolute;top:sizem(300);left: auto;
-  right:sizem(-155);width:sizem(260);bottom: auto;}
 
 .main {
-  padding: 0 sizem(32.5);
+  padding: 0 0;
   width: 100%;
+  margin: 0 auto;
 }
 
-.txt {margin: 4.4em auto 1.3em;
+.txt {margin: 2.3em auto 0em;
+  width: 77%;
 }
 
 
 .slider {
   height: auto;
-  width: 100%;
-
-  .caption {
-  font-size:sizem(12);  
-  right:sizem(5);
-  bottom:sizem(5);
-  }
+  width: sizem(327); 
   .slide-item {
     @apply bg-cover;
     width: 100%;
   flex-basis: auto;
-    height: sizem(250);
+    height: sizem(257);
     
+  }
+  .arrows{
+    filter: invert(84%) sepia(26%) saturate(599%) hue-rotate(346deg) brightness(97%) contrast(95%);
   }
 }
 }
@@ -168,15 +169,15 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/1.webp", import.meta.url).href ,
-    caption: "士林生活圈實景"
+    caption: "重陽橋"
   },
   {
     img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "士林商圈實景"
+    caption: "北環段捷運情境示意圖"
   },
   {
     img:new URL("./s4/3.webp", import.meta.url).href ,
-    caption: "士林科教館實景"
+    caption: "新蘆線捷運徐匯中學站"
   },
 ]
 </script>

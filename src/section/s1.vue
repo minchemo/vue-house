@@ -1,93 +1,122 @@
 <template>
   <article class="s1" id="s1">
-	<!-- 
-		<img src="./s1/pc.jpg" class="t0">
-		<img src="./s1/mo.jpg" class="t0">  -->
-	<div class="txt">
-		<img src="./s1/bg3.webp" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="eggbg" alt="蛋黃"><img src="./s1/logo.svg" alt="logo" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" class="logo"><img src="./s1/txt.svg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" alt="txt" class="txt1">
-	</div>
-	<div class="img"><img src="./s1/b.webp" alt="多會微笑!"><img src="./s1/img.webp" alt="李多慧"><img src="./s1/mark.svg" alt="李多慧"></div>
-	<img src="./s1/oo.svg" alt="oo" class="oo1">
-	<div class="oo2"><img src="./s1/oo.svg" alt="oo"></div>
+    <!-- 
+
+    <img src="./s1/mo.jpg" class="t0">
+    <img src="./s1/pc.jpg" class="t0">
+
+    -->
+
+    <img src="./s1/img.svg" class="img">
+    <div class="txt1">
+    <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">
+    <div class="t1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">紀伊國屋書店</div>
+    <div class="t2" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">嘉義首座<span></span>日系選冊宅</div>
+    <div class="t3" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1500">湖子內｜2-3房</div>
+    </div>
+
 
   </article>
 </template>
 
-<style lang="scss" scoped>  
+<style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
+@keyframes op {
+  50% {
+     opacity: 0;
+  }
+}
 
 
 .s1 {
+  
   @apply relative w-full h-screen;
-  min-height: size(950);
-  max-height: size(1140);
-  height: 100vh;
+  min-height: size(1080);
+  max-height: size(1080);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  font-size:size(40);
-  color: #FFF;
-  line-height: 1.3;
-  font-weight: 700;
-  background: url("./s1/bg.webp");
+  font-size:size(36);
+  //background: #E60012;
+  background: url("./s1/bg.webp") center;
+
   background-size: cover;
-  .t0{position: absolute;width: 100%;top: 0;left: 0; 
-	pointer-events: none;opacity: .3;z-index: 50;}
+  .t0{position: absolute;top: .5vw;left: 0;width: 100%;opacity: .3;z-index: 5;}
 
-  .img{
-	position: absolute;
-	top: size(190);
-	left:size(1343);
-	//height: size(992);
-	height: 87%;
-	img{position: relative;
-	&:first-child{position: absolute;
-		transform: rotate(-3deg);
-		transform-origin: 90% 150%;
-		animation: an 2s ease-in-out infinite alternate;
-    top: -12.5%;
-    width: 70%;
-    left: -20%;}
-	&:last-child{position: absolute;
-    top: 29%;
-    width: 46%;
-    left: 70%;}
-	&:nth-child(2){height:100%;
-		transform: rotate(1deg);
-		transform-origin: 30% 90%;
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-	}
+    .img{position: absolute;width: size(930);right:size(-5);
+   // top:calc(50% + #{size(320 - 540)});
+   bottom:size(0);
+    z-index: 99;
+    }
+  
 
-
+  .logo{position: relative;
+    width: size(660);
+    margin-bottom: .8em;
+    left: -.2em;
   }
-  .txt{
-	position: absolute;
-	left: 0;right: 0;margin: auto;top:size(357);
-	top: calc(50% + #{size(357 - 1140 * .5)});
-	text-align: center;
-    width:size(726);
-	
-	.eggbg{position: absolute;
-    top: -44%;
-    display: block;
-    width: 196%;
-    left: -48%;}
-	.logo{position: relative;display: block;margin: auto;
-    width:100%;z-index: 3;}
-	.txt1{position: relative;display: block;margin:4% auto auto auto;
-    width:99.2%;left: 1.8%;z-index: 3;}
+
+
+    .txt1{
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-size:size(60);
+  line-height:1.5;
+.t1{
+  letter-spacing:0.25em;
+  font-size:1.31em;
+  background:linear-gradient(98deg, #FAE09F 0%, #966D27 100%);
+  width: 10.5em;margin: auto auto .7em auto;
   }
-  .oo1{position: absolute;top:size(225);height:size(50);left:size(260);
-	top: calc(50% + #{size(225 - 1140 * .5)});
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
-  .oo2{position: absolute;top: size(970);height:size(50);right:size(-100);
-	top: calc(50% + #{size(970 - 1140 * .5)});
-		transform: translateX(-15%);
-		animation: an 2s ease-in-out infinite alternate-reverse;
-img{height: 100%;transform: scaleX(-1);}}
+
+.t2{
+  font-size:1.4em;
+  letter-spacing:0.05em;
+    margin-bottom: -.2em;
+  span{
+    position: relative;
+    width: 1.2em;
+    height:1.2em;
+    margin:0 .2em;
+    top: -.3em;
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    &::before,&::after{content:"";background: #FFF;height: 2px;width: 100%;display: block;}
+    &::before{transform: rotate(45deg);margin-bottom:-2px;}
+    &::after{transform: rotate(-45deg);}}
+  }
+
+  .t3{
+  font-size:1.47em;
+  font-weight: 700;
+  &::before,&::after{
+    content:"";
+    position: relative;
+    height: .8em;width: .6em;
+    display: inline-block;
+    margin: auto .3em;
+    border: 1px solid #fff;
+  }
+  &::before{
+    border-right: 0;}
+  &::after{
+    border-left: 0;
+  }  
+  }
+
+
+}
+
+
+  
+
+    
+
 }
 
   
@@ -97,48 +126,47 @@ img{height: 100%;transform: scaleX(-1);}}
 
 @media screen and (max-width: 767px) {
 
+
+
   .s1 {
     height:calc(100vh - 63px);
     min-height: sizem(604);
-    max-height: sizem(821);
-    font-size:sizem(14);
-	background-position: center;
-  background-size:170% 100%;
+    max-height: sizem(812);
+    font-size:sizem(15);
+    .img{position: absolute;width: sizem(455);right:sizem(-20);
+   // top:calc(50% + #{size(320 - 540)});
+   bottom:sizem(-15);
+    z-index: 99;
+    }
 
-	.img{
-	position: absolute;
-	top: sizem(135);
-	top: calc(35% + #{sizem(135 - 604 * .35)});
-	left:sizem(232);
-	min-height: sizem(430);
-	height:60%;
-	img{
-	&:first-child{
-	top: -15%;
-    width: 79%;
-    left: -28%;}
-	&:last-child{
-    top: 82%;
-    width: 61%;
-    left: -34%;}
-}
-}
-  .txt{top:sizem(246);left:sizem(-90);
-	top: calc(50% + #{sizem(246 - 604 * .5)});
-    width:sizem(224);
-	.eggbg{
-    top: -49%;
-    width: 163%;
-    left: -32%;}
 
+    .logo{
+    width: sizem(260);
+    margin-bottom: 1.3em;
   }
-  .oo1{top:sizem(140);height:sizem(20);left:sizem(-20);
-	top: calc(50% + #{sizem(140 - 604 * .5)});}
-  .oo2{top:sizem(490);height:sizem(20);right:sizem(-65);
-	top: calc(50% + #{sizem(490 - 604 * .5)});}
 
-    
-  }
+
+.txt1{
+  font-size:sizem(23);
+  margin-bottom: 4.8em;
+.t1{ width: 10em;
+  letter-spacing:0.2em;
+  margin: auto auto .5em auto;
+}
+.t2{
+  font-size:1.2em;
+}
+
+.t3{
+  font-size:1.3em;
+}
+
+
+}
+
+}
+
+  
 }
 </style>
 <script setup>
