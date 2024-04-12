@@ -2,8 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center font-['Noto_Serif_TC',serif]" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center font-['Noto_Serif_TC',serif]" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -57,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff] font-['Noto_Serif_TC',serif]">
+        <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFFCB0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -69,7 +69,7 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer font-['Noto_Serif_TC',serif]" @click="send()">
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
         {{ sending? '發送中..': '立即預約' }}
       </div>
 
@@ -110,7 +110,7 @@
   width: 100%;
   padding-top: 0;
   //background: #195c45;
-  background: linear-gradient(to bottom, #195c45, #000704);
+ // background: linear-gradient(to bottom, #195c45, #000704);
   
 
   .bird {
@@ -135,7 +135,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #fff;
+    color: #D9E021;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -212,8 +212,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #FFF;
-    background-color: #ca9e25;
+    color: #000;
+    background-color: #D9E021;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: 0em;

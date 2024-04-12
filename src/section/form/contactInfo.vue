@@ -6,7 +6,7 @@
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>  -->
-    <div class="flex justify-between w-full contact-item-box font-['Noto_Serif_TC',serif]">
+    <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
@@ -139,8 +139,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #ca9e25;
-      color: #FFF;
+      background-color: #D9E021;
+      color: #000;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -156,11 +156,11 @@
       gap: 1em;
 
       &:hover {
-        background-color: #ac810c;
-        color: #fff;
+        background-color: #e3e949;
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
       }
 
@@ -168,7 +168,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
         transition: all .5s;
         margin: 0;
       }
@@ -244,22 +244,24 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#00312E;
+    background:#D9E021;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(16);
       font-weight: 400;
-      color: #fff;
-      border-left:1px solid #fff7;
+      color: #000;
+      border-left:1px solid #0003;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
       }
+      &:first-child{
+      border-left:0;}
 
     }
   }

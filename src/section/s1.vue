@@ -1,15 +1,19 @@
 <template>
   <article class="s1" id="s1">
-<!--img src="./s1/book.webp" alt="img" class="img" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0"-->
-<!--div class="txt">
-<h3 class="t1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">歡迎回<span>嘉</span><br>開啟幸福篇章</h3>
-<div class="t2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">START HAPPINESS</div>
-<h3 class="t3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">【嘉義首座日系選冊宅】</h3>
-</div-->
-<img src="./s1/logo.svg" alt="logo" class="logo" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
-<img src="./s1/title.svg" alt="title" class="title" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
-<img src="./s1/style.svg" alt="style" class="style" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
-<img src="./s1/logoicon.svg" alt="logoicon" class="logoicon" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="0">
+	<!--  
+
+   <img src="./s1/mo.jpg" class="t0">
+
+   -->
+       <img src="@/section/s1/bg.webp" class="bgh" v-if="!$isMobile()">
+       <img src="@/section/s1/bgm.webp" class="bgh" v-else>
+       <img src="@/section/s1/gif2.gif" class="gif">
+    <div class="hr" v-if="!$isMobile()"></div>
+
+<img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="0">
+<img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" v-if="!$isMobile()">
+<img src="./s1/t1m.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="400" v-else>
+<img src="./s1/coming.svg" alt="coming" class="coming" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="600">
   </article>
 </template>
 
@@ -21,12 +25,17 @@
      opacity: 0;
   }
 }
+ .bgh{position: absolute;width: 100%;height:auto;top:0;left: 0;
+top:calc(50% + #{size(-1080*.5)});
+}
+ .gif{position: fixed;width:size(1920);height:size(2000);top:0;left: 0;
+mix-blend-mode: lighten;opacity: .2;
+}
 
 
 .s1 {
-  
   @apply relative w-full h-screen;
-  min-height: size(1080);
+  min-height: size(900);
   max-height: size(1080);
   display: flex;
   flex-direction: column;
@@ -34,99 +43,26 @@
   align-items:center;
   font-size:size(36);
   //background: #E60012;
-  background: url("./s1/bg.webp");
+ // background: url("./s1/bg.webp");
 
   background-size: cover;
+  .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
 
-    .img{position: absolute;width: size(740);left: size(187);
-    top:calc(50% + #{size(320 - 540)});
-    z-index: 99;
-    }
-
-    .style{
-      position: absolute;
-      width: size(1163);
-      right: size(-10);
-      bottom: size(-80);
-    }
-
-    .logoicon{
-      position: absolute;
-      width: size(200);
-      right: size(20);
-      bottom: size(20);
-    }
-
-    .style1{
-    position: absolute;
-    width: size(247);
-    right: size(873);
-    mix-blend-mode: soft-light;
-  }
-  .style2{
-    position: absolute;
-    width: size(226);
-    right: size(119);
-    top:size(350);
-    mix-blend-mode: soft-light;
-  }
-  
+.hr{position: absolute;bottom: calc(50% + #{size(-1080*.5)});left: 0;right: 0;margin: auto;opacity: .7;
+    width: size(1410);height: 1px;background: #D9E021;}
 
   .logo{
-    position: absolute;
-    width: size(700);
-    left: size(250);
-    top:size(200);
+    width: size(844);
+    margin-top:7vw;
+    margin-bottom:2vw;
   }
-
-  .title{
-    position: absolute;
-    width: size(700);
-    left: size(250);
-    top:size(500);
+  .t1{
+    width: size(1242);
+    margin-bottom:5.2vw;
   }
-
-    .txt{
-    width: auto;
-    position: absolute;
-    right:size(304);
-    text-align:center;
-    color: #FFF;
-    font-weight: 500;
-    line-height: 1.2;
-.t1{
-  font-size:size(68);
-  font-weight: 400;
-  letter-spacing:size(16.32);
-  line-height: size(90);
-  text-shadow: 0px size(4) size(20) #000;
-
-  span{color: #FFFCB0;}
+  .coming{
+    width: size(507);
   }
-
-.t2{
-  color: #fff;
-  font-size:size(25);
-  margin-top: .5em;
-  font-weight: 400;
-  letter-spacing:size(16.32);
-  text-shadow: 0px 4px 12px #02271C;
-  }
-
-  .t3{
-  font-size:size(30);
-  font-weight: 400;
-  letter-spacing:size(16.32);
-  line-height: size(90);
-  text-shadow: 0px size(4) size(20) #000;
-  }
-
-
-}
-
-
-  
-
     
 
 }
@@ -142,88 +78,30 @@
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(667);
-    max-height: sizem(812);
+    min-height: sizem(604);
+    max-height: sizem(750);
     font-size:sizem(15);
-    background: url("./s1/bgm.webp");
-    background-size: auto 100%;
 
-
-    .style{
-      width: sizem(450);
-      right: sizem(-10);
-      bottom: sizem(-40);
-    }
-
-    .logo{
-    width: sizem(300);
-    left: sizem(35);
-    top:sizem(100);
-  }
-
-  .logoicon{
-      width: sizem(100);
-      right: sizem(10);
-      bottom: sizem(10);
-    }
-
-  .title{
-    width: sizem(300);
-    left: sizem(35);
-    top:sizem(240);
-  }
-
-
-.img{
-  position: absolute;
-  width: sizem(520);
-  left:sizem(-50);
-  top:auto;
-  bottom:sizem(50);
+ .bgh{
+top:0;
+}
+ .gif{width: sizem(800);height:sizem(800);
 }
 
-
-  .style1{
-    position: absolute;
-    width: sizem(148);
-    left: sizem(-20);
-    right:auto;
-    top:sizem(56);
-    mix-blend-mode: soft-light;
+    
+  .logo{
+    width: sizem(335);
+    margin-top:4vw;
+    margin-bottom:3.5vw;
   }
-  .style2{
-    position: absolute;
-    width: sizem(143);
-    left: auto;
-    right:sizem(-20);
-    top:auto;
-    bottom:sizem(-20);
-    mix-blend-mode: soft-light;
+  .t1{
+    width: sizem(297);
+    margin-bottom:16.5vw;
   }
-
-.txt{
-  position: absolute;
-  top:sizem(50);
-  right: sizem(55);
-
-
-.t1{
-  font-size:sizem(35);
-  line-height:sizem(50);
-  letter-spacing: sizem(8.4);
+  .coming{
+    width: sizem(224);
   }
-.t2{
-  font-size:sizem(12);
-margin-bottom: 1.5em;}
-
-.t3{
-  font-size:sizem(15);
-  line-height:sizem(30);
-  letter-spacing: sizem(8.4);
-  }
-
-}
-
+.hr{bottom: -1px;}
 }
 
   
