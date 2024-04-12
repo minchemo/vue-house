@@ -1,5 +1,7 @@
 <template>
   <article class="s6" ref="s6">
+    <img src="./s4/l2.png" class="l" alt="線" v-if="!isMobile">
+    <img src="./s4/l2m.png" class="l" alt="線" v-else>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile && imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -30,7 +32,7 @@
 
 
 .s6 {
-  @apply relative flex items-center justify-center text-[#F1CC8B];
+  @apply relative flex items-center justify-center overflow-hidden text-[#F1CC8B];
   width: 100%;
   height:auto;
   padding:4.4em 0;
@@ -43,13 +45,9 @@
   position: absolute;bottom:0%;left:0%;
 }
 
-
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
+.l{position: absolute;bottom: size(-80);left: size(-26);width: size(1300);
+opacity: .5;
 }
-  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0 0 0 size(120);
@@ -109,6 +107,9 @@ flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
 
+.l{bottom: sizem(-23);left: sizem(60);width: sizem(375);
+
+}
 
 .main {
   padding: 0 0;

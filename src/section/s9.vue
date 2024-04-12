@@ -49,13 +49,6 @@
   flex-wrap: wrap;
     flex-direction:column-reverse;
 
-
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0 size(190) 0 auto;

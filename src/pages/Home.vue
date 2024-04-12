@@ -19,8 +19,10 @@
     <S6 />
     <S7 />
     <S8 />
+    <div class="bg9">
     <S9 />
     <S10 />
+  </div>
     <Order />
   <!--
     <S9 />
@@ -61,6 +63,10 @@ img {
   height: unset;
   margin: 0 auto;
 }
+    .bg9{
+      background: url("@/section/s9/bg.jpg") center;
+      background-size: 100% auto;
+    }
 
   .caption{
       @apply absolute;
