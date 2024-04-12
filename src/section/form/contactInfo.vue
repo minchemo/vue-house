@@ -204,17 +204,17 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #FFF;
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
 
         &:hover {
    //     background-color: #C29267;
-          color: #fff;
+          color: #000;
           img {
-            filter: brightness(0) invert(1);
+            filter: brightness(0) invert(0);
           }
         }
       }

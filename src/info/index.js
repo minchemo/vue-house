@@ -8,21 +8,24 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-   // address: "台南市安平區府前四街147號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.739139123935!2d120.1852493!3d22.9966181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77584e24e507%3A0xa92f1e0817f0a8ce!2z5aaC6YKRMl_oh6rlhqDlu7roqK1f5Yud5YGV6ZuG5ZyY!5e0!3m2!1szh-TW!2stw!4v1697008525183!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/y5xEjE4vDDsfydrf6",
-    phone: "05-0000000",
-    fbLink: "https://www.facebook.com//",
-    fbMessage: "https://m.me//",
+    address: "桃園市八德區豐德路582號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.2046823277497!2d121.281644!3d24.925096200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468188a4c9039b5%3A0xea3b05f3aad65b25!2zMzM05qGD5ZyS5biC5YWr5b635Y2A6LGQ5b636LevNTgy6Jmf!5e0!3m2!1szh-TW!2stw!4v1712923248688!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/wfWnHoo3pnTDWbG19",
+    phone: "03-368-2668",
+    fbLink: "https://www.facebook.com/61552643335242/",
+    fbMessage: "https://m.me/61552643335242/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "xxxxx"],
-        ["投資興建", "xxxxx"],
-        ["投資興建", "xxxxx"],
-        ["投資興建", "xxxxx"],
+        ["投資興建", "長昇事業夥伴 冠奕建設"],
+        ["建築設計", "王朝雍建築師事務所"],
+        ["工程營造", "又廣營造"],
+        ["空間設計", "相即空間設計"],
+        ["企劃銷售", "低碳健康樂活行銷"],
+        ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
+        ["經紀人", "(99)北市經證字第01094號  陳琬麒"],
         /*
         ["建築設計", "弘憲聯合建築師事務所"],
-        ["使照號碼", "(111)南工使字第01269號等10個"],
+        ["使照號碼", "王朝雍建築師事務所"],
         ["行銷企劃", "自售"],
         */
     ],
@@ -38,7 +41,7 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-     room_type: ["一房","兩房","三房","四房","其他"],
+     room_type: ["兩房","三房"],
     budget: ["2000以下","2000-2500","2500-3000","3000-3500","3500以上"],
 
     navList: [
