@@ -43,7 +43,10 @@
   background: url("./s1/bg.webp") center;
 
   background-size: cover;
-  .t0{position: absolute;top: .5vw;left: 0;width: 100%;opacity: .3;z-index: 5;}
+  .t0{position: absolute;top: 3vw;left: 0;width: 100%;
+    opacity: .0;z-index: 5;
+    pointer-events: none;
+  }
 
     .img{position: absolute;width: size(930);right:size(-5);
    // top:calc(50% + #{size(320 - 540)});

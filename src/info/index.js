@@ -16,12 +16,14 @@ export default {
     fbMessage: "https://m.me/61554828582073/",
     caseName: caseName,
     houseInfos: [
-        /*
-        ["投資興建", "xx"],
-        ["建築設計", "弘憲聯合建築師事務所"],
-        ["使照號碼", "(111)南工使字第01269號等10個"],
-        ["行銷企劃", "自售"],
-        */
+        ["投資興建", "佳展建設股份有限公司"],
+        ["工程營造", "協侑營造"],
+        ["建築結構", "王俊隆建築師事務所"],
+        ["工程結構", "RC"],
+        ["規劃戶數", "168戶/152車位"],
+        ["坪數規劃", "2房24-28坪/3房33-38坪/"],
+        ["樓層規劃", "地上12-14層 地下3層"],
+        ["企劃銷售", "新富利廣告有限公司"],
     ],
     gtmCode: ["GTM-59B4C885"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -31,8 +33,10 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋",
+        /*
         subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
+        */
     },
     // 底下2個 沒項目就會隱藏
     // room_type: ["一房","兩房","三房","四房","其他"],

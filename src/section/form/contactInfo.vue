@@ -1,7 +1,6 @@
 <template>
   <div>
   <div class="contact-info-img">
-    <img src="@/section/s1/bg3.webp" class="eggbg" alt="蛋黃">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <div class="logo"></div>
@@ -111,15 +110,11 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#0466CA;}
-.hover\:bg-color2:hover{background-color:#014d99;}
+.bg-color1{background:#BE9F6B;}
+.hover\:bg-color2:hover{background-color:#a78853;}
 
 
 .contact-info-img{
-  @apply relative;
-  height: 0;z-index: 2;
-  top: -1.5vw;
-  img{width: 64%;}
 }
 .contact-info {
   padding: size(105) size(0) size(55) size(0);
@@ -147,7 +142,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#0466CA;
+      background:#BE9F6B;
       color: #FFF;
       width: 100%;
     font-weight: 700;
@@ -165,7 +160,7 @@
       gap: 1em;
 
       &:hover {
-      background:#014d99;
+      background:#a78853;
         color: #fff;
 
         img {
@@ -259,7 +254,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#0051a1;
+    background:#22491B;
 
     .contact-item {
       height: 100%;      

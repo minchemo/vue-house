@@ -20,6 +20,7 @@
     <S7 />
     <S8 />
     <S9 />
+    <S10 />
     <Order />
   <!--
     <S9 />
@@ -86,7 +87,8 @@ img {
     font-weight: 900;letter-spacing: 0.3em;
     b{margin-right: .1em;}
     .icon{background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 47 47' fill='%2322491B' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='23.5'/%3E%3Cpath stroke='%23FFF' stroke-width='5' d='M7,23.5h33 M23.5,7v33'/%3E%3C/svg%3E");
-  width: 1.7em;height: 1.7em;display: inline-block;position: relative;top: -1em;margin-right: .3em;
+  width: 1em;height: 1em;display: inline-block;position: relative;top: -.3em;margin-right: .1em;
+    font-size:1.6em;
   }
   .title_c{
     font-size:3.5em;}
@@ -127,7 +129,7 @@ img {
   @apply relative;
   z-index: 2;
   .slide-item{
-  img{width: 100%;height: 100%;}
+  img{width: 100%;height: 100%;object-fit: cover}
   
   }
   .arrows{
@@ -249,6 +251,7 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
+import S10 from "@/section/s10.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

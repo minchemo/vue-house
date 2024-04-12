@@ -1,8 +1,5 @@
 <template>
   <div id="order" class="order relative text-center">
-    <img src="./s1/bg2.webp" class="eggbg3" alt="蛋黃">
-    <img src="./s1/bg3.webp" class="eggbg4" alt="蛋黃">
-	<img src="./s1/oo.svg" alt="oo" class="oo3">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
@@ -92,20 +89,6 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
-.eggbg3{position: absolute;
-    display: block;
-    top: size(-150);right:size(100);width:size(700);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-	.eggbg4{position: absolute;
-    display: block;
-    top: size(400);left:size(230);width:size(160);
-		transform:translateY(-50%);
-		animation: an 4s ease-in-out infinite alternate;}
-  .oo3{position: absolute;top:size(120);height:size(50);right:size(60);
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -126,26 +109,11 @@
   position: relative;
   width: 100%;
   padding-top: 0;
+  &::before{content: "";width:100%;mix-blend-mode: multiply;
+  height: 100%;background: #22491B;display: block;
+  position: absolute;bottom:0%;left:0%;
+}
   
-
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
 
   .order-title {
     font-size: size(40);
@@ -232,7 +200,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#0466CA;
+    background:#BE9F6B;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;

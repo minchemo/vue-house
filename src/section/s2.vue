@@ -19,9 +19,32 @@
   @apply relative overflow-hidden bg-[#00398A] text-[#fff];
   width: 100%;
  // height: size(1059);
-  font-size:size(19);
+  font-size:size(28);
   .txt {text-align: center;position: absolute;top: 0;left: 0;
-  padding-top:0.2em;z-index: 10;margin-bottom:-10.8em ;
+  padding-top:2.3em;z-index: 10;margin-bottom:0;
+  .entitle{
+    @apply font-['Noto_serif_TC',serif];
+    font-size: 2.7em;letter-spacing: 0.05em;
+    line-height: 1.5;opacity: .5;
+  }
+  .title{
+    margin:0 auto 0em auto;
+    font-size: 3em;letter-spacing: 0.2em;color: #FCFF94;
+    &::after,
+    &::before{display: none;}
+  }
+  .subtitle{
+    @apply font-['Noto_Sans_TC',sans-serif];
+    font-size: 1.3em;
+    font-weight: 400;
+    margin:0.4em auto 0em;
+    line-height: 1.2;letter-spacing: 0.04em;
+  }
+  .desc{
+    font-size: 1.4em;letter-spacing: 0.04em;
+      color: #fff;
+  }
+
   }
   .viewbox{z-index: 2;}
   .caption{top: 0.5em;}
@@ -37,9 +60,29 @@
   font-size:sizem(15);
 
   .txt {text-align: justify;
-  padding-top:4.2em;width:sizem(310);margin:auto auto -4.3em auto;
+  padding-top:4.2em;width:100%;margin:auto auto -4.3em auto;
+text-align: center;position: absolute;top: 0;left: 0;right: 0;
+z-index: 10;
+  .entitle{
+    font-size: 1.5em;
+    margin-bottom: .1em;
   }
-  .viewbox{height: sizem(550);}
+  .title{
+    font-size: 1.8em;letter-spacing: 0.12em;
+    margin-bottom: .7em;
+  }
+  .subtitle{
+    font-size: 1em;
+    font-weight: 400;
+    margin:0.4em auto 0em;
+    line-height: 1.2;letter-spacing: 0.04em;
+  }
+  .desc{
+    font-size: 1em;letter-spacing: 0.04em;
+  }
+
+  }
+  .viewbox{height: sizem(670);}
 
 
   }

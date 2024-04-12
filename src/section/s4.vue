@@ -1,7 +1,7 @@
 <template>
   <article class="s4" ref="s4">
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
+      <div class="arrows" v-if="isMobile && imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -16,8 +16,8 @@
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>未來</span><span class="en">UPGRADE THE FUTURE</span></h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">對位繁華<br>嘉義的世界級</h4>
-    <div class="hr"></div>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">與全球都會比肩，市心最大「湖子內重劃」，移植國際經驗，對位台北信義計畫、新莊副都心；4大新創開發區X7大產業區，護國神山加持，增值潛力看漲。</p>
+    <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">與全球都會比肩，市心最大「湖子內重劃」，移植國際經驗，對位台北信義計畫、新莊副都心；4大新創開發區X7大產業區，護國神山加持，增值潛力看漲。</p>
     </div>
     </div>
 
@@ -33,7 +33,7 @@
   @apply relative flex items-center justify-center text-[#F1CC8B];
   width: 100%;
   height:auto;
-  padding:5em 0;
+  padding:4.4em 0;
   font-size:size(28);
   gap:3em;
     flex-direction:row-reverse;
@@ -155,30 +155,23 @@ const currentSlideIndex = ref(0);
 const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
+const imgs = [
+  {
+    img:new URL("./s4/1.webp", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+]
 
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
-  autoplay: true,
+  pagination: imgs.length > 1,
+  autoplay: imgs.length > 1,
   interval: 4000,
   gap: 0,
-  type: 'loop'
+  type: 'loop',
+  drag: imgs.length > 1,
 }
 
-const imgs = [
-  {
-    img:new URL("./s4/1.webp", import.meta.url).href ,
-    caption: "重陽橋"
-  },
-  {
-    img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "北環段捷運情境示意圖"
-  },
-  {
-    img:new URL("./s4/3.webp", import.meta.url).href ,
-    caption: "新蘆線捷運徐匯中學站"
-  },
-]
 </script>
 

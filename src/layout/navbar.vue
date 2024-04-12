@@ -171,7 +171,7 @@
                 }
             }
             &.btn2{
-                background:#0466CA;
+                background:#BE9F6B;
 ;
                 border-radius: 2em;
                 margin-right:-1em;

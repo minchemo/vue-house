@@ -1,5 +1,5 @@
 <template>
-  <article class="s9" ref="s9">
+  <article class="s10" ref="s10">
     <div class="slider" data-aos="fade">
       <swiper  class="slide"
         :slidesPerView="'auto'"
@@ -17,6 +17,7 @@
         <swiper-slide  class="slide-item" v-for="img in imgs">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
+      <span class="caption caption_r">{{ img.caption_r }}</span>
         </swiper-slide>
       </swiper>
 
@@ -24,10 +25,10 @@
     </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>品味</span><span class="en">HONOR RESIDENCE</span></h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">風格緻造<br v-if="isMobile"> 居宅心美學</h4>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>榮耀</span><span class="en">REMARKABLE WORK</span></h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">慧眼選址<br v-if="isMobile"> 構築家經典</h4>
     <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
-    <p class="desc" data-aos="fade-up" data-aos-delay="600">由日本紀伊國屋書店，為社區精選各領域書籍，讓孩子從小在書香中長大；交誼廳、健身房、親子室，禮遇從返家開始，構築舒心居所，全齡質感生活。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">佳展建設嚴選值得期待的地段，與人居場域融合，與環境相互映襯，讓建築昇華，與土地共映美好生活；一路踏實、千戶美滿，超過1800戶幸福見證，成為幸福成家的後盾。</p>
     </div>
     </div>
 
@@ -39,7 +40,7 @@
 
 
 
-.s9 {
+.s10 {
   @apply relative flex items-center justify-center text-[#633804];
   width: 100%;
   height:auto;
@@ -62,6 +63,17 @@
     width: size(1060);
   flex-direction: column;
   text-align: justify;
+}
+.caption{
+  left:1em;
+}
+.caption_r{
+    @apply font-['Noto_serif_TC',serif];
+  left:auto;
+      right:.8em;
+      bottom: .3em;
+      font-size: size(25);
+      text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
 }
 .txt{
 @media screen and (min-width: 768px) {
@@ -161,7 +173,7 @@
 @media screen and (max-width: 767px) {
 
 
-.s9 {
+.s10 {
 @apply flex-col;
   height: auto;
   padding:3em 0 2em;
@@ -181,6 +193,9 @@ gap:0em;
   width: 77%;
 }
 
+.caption_r{
+      font-size: sizem(20);
+}
 
 .slider {
   width:sizem(327);
@@ -222,28 +237,19 @@ const moved = (newIdx, prevIdx, destIdx) => {
 
 const imgs = [
   {
-    img:new URL("./s9/1.webp", import.meta.url).href ,
-    caption: "公設3D示意圖"
+    img:new URL("./s10/1.webp", import.meta.url).href ,
+    caption: "外觀實景拍攝電腦後製合成",
+    caption_r: "2018｜佳展大景"
   },
   {
-    img:new URL("./s9/2.webp", import.meta.url).href ,
-    caption: "公設3D示意圖"
+    img:new URL("./s10/2.webp", import.meta.url).href ,
+    caption: "外觀3D示意圖",
+    caption_r: "2018｜佳展大方"
   },
   {
-    img:new URL("./s9/3.webp", import.meta.url).href ,
-    caption: "公設3D示意圖"
-  },
-  {
-    img:new URL("./s9/4.webp", import.meta.url).href ,
-    caption: "公設3D示意圖"
-  },
-  {
-    img:new URL("./s9/5.webp", import.meta.url).href ,
-    caption: "公設3D示意圖"
-  },
-  {
-    img:new URL("./s9/6.webp", import.meta.url).href ,
-    caption: "公設3D示意圖"
+    img:new URL("./s10/3.webp", import.meta.url).href ,
+    caption: "外觀3D示意圖",
+    caption_r: "2018｜佳展大展"
   },
 ]
 </script>

@@ -1,7 +1,7 @@
 <template>
   <article class="s5" ref="s5">
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
+      <div class="arrows" v-if="isMobile && imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -14,10 +14,10 @@
     </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>盛世</span><span class="en">PROSPEROUS TIME</span></h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">台積電抵嘉<br>億級榮景啟城</h4>
-    <div class="hr"></div>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">台積電CoWoS先進封裝廠，確定落址嘉義科學園區，第一座規劃2026年底完工，預計可創造約3000個就業機會。國家級建設啟動，竹科效應再現，繁盛指日可待。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>饗樂</span><span class="en">SHOPPING AREA</span></h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">購物豐景<br>快意近商圈</h4>
+    <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">重劃區的寬域街廓，彈指間快意抵達城心；站前、民生商圈鄰距離，新光三越、遠東百貨潮流接軌；輕鬆切換繁華城區與舒心街廓，動靜雙贏美好生活。</p>
     </div>
     </div>
 
@@ -33,7 +33,7 @@
   @apply relative flex items-center justify-center text-[#633804];
   width: 100%;
   height:auto;
-  padding:5em 0;
+  padding:4.4em 0;
   font-size:size(28);
   gap:2.6em;
   flex-wrap: wrap;
@@ -130,30 +130,39 @@ const currentSlideIndex = ref(0);
 const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
+const imgs = [
+  {
+    img:new URL("./s5/1.webp", import.meta.url).href ,
+    caption: "新光三越"
+  },
+  {
+    img:new URL("./s5/2.webp", import.meta.url).href ,
+    caption: "耐斯廣場"
+  },
+  {
+    img:new URL("./s5/3.webp", import.meta.url).href ,
+    caption: "遠東百貨"
+  },
+  {
+    img:new URL("./s5/4.webp", import.meta.url).href ,
+    caption: "秀泰影城"
+  },
+  {
+    img:new URL("./s5/5.webp", import.meta.url).href ,
+    caption: "好市多"
+  },
+]
 
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
-  autoplay: true,
+  pagination: imgs.length > 1,
+  autoplay: imgs.length > 1,
   interval: 4000,
   gap: 0,
-  type: 'loop'
+  type: 'loop',
+  drag: imgs.length > 1,
 }
 
-const imgs = [
-  {
-    img:new URL("./s5/1.webp", import.meta.url).href ,
-    caption: "士林生活圈實景"
-  },
-  {
-    img:new URL("./s5/2.webp", import.meta.url).href ,
-    caption: "士林商圈實景"
-  },
-  {
-    img:new URL("./s5/3.webp", import.meta.url).href ,
-    caption: "士林科教館實景"
-  },
-]
 </script>
 
