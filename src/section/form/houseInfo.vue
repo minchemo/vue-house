@@ -82,7 +82,7 @@
 .house {
     // background:#fff;
   //  height: sizem(400);
-    font-size: sizem(14);
+    font-size: sizem(13);
 }
     .footer {
         margin-bottom: sizem(0);
@@ -102,7 +102,7 @@
             row-gap: sizem(20);
 
             .item {
-                font-size: sizem(14);
+                font-size: sizem(13);
             }
         }
     }

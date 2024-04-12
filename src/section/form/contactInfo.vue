@@ -226,7 +226,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(73%) sepia(83%) saturate(4141%) hue-rotate(1deg) brightness(92%) contrast(108%);
+  img{filter: invert(12%) sepia(29%) saturate(4484%) hue-rotate(205deg) brightness(98%) contrast(113%);
   }
 }
 
