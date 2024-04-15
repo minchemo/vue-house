@@ -28,7 +28,7 @@
         <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>榮耀</span><span class="en">REMARKABLE WORK</span></h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">慧眼選址<br v-if="isMobile"> 構築家經典</h4>
     <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
-    <p class="desc" data-aos="fade-up" data-aos-delay="600">佳展建設嚴選值得期待的地段，與人居場域融合，與環境相互映襯，讓建築昇華，與土地共映美好生活；一路踏實、千戶美滿，超過1800戶幸福見證，成為幸福成家的後盾。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">佳展建設嚴選值得期待的地段，與人居場域融合，與環境相互映襯，讓建築昇華，與土地共映美好生活；一路踏實、千戶美滿，超過2000戶幸福見證，成為幸福成家的後盾。</p>
     </div>
     </div>
 
@@ -239,17 +239,17 @@ const imgs = [
   {
     img:new URL("./s10/1.webp", import.meta.url).href ,
     caption: "外觀實景拍攝電腦後製合成",
-    caption_r: "2018｜佳展大景"
+    caption_r: "2019｜佳展大景"
   },
   {
     img:new URL("./s10/2.webp", import.meta.url).href ,
     caption: "外觀3D示意圖",
-    caption_r: "2018｜佳展大方"
+    caption_r: "2021｜佳展大方"
   },
   {
     img:new URL("./s10/3.webp", import.meta.url).href ,
     caption: "外觀3D示意圖",
-    caption_r: "2018｜佳展大展"
+    caption_r: "2022｜佳展大展"
   },
 ]
 </script>
