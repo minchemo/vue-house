@@ -14,6 +14,7 @@ export default {
     phone: "02-2855-9933",
     fbLink: "https://www.facebook.com/61556636163046",
     fbMessage: "https://m.me/61556636163046",
+    line: "https://lin.ee/jX9Xyhz",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "茂群國際投資有限公司"],

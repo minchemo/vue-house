@@ -1,5 +1,9 @@
 <template>
   <article class="s1" id="s1">
+
+<a href="https://lin.ee/jX9Xyhz" target="_blank" v-if="!isMobile">
+<img src="./s1/lineicon.png" class="lineicon" data-aos="zoom-in" data-aos-delay="200" /> 
+</a>
 	<!-- 
 		<img src="./s1/pc.jpg" class="t0">
 		<img src="./s1/mo.jpg" class="t0">  -->
@@ -35,6 +39,14 @@
   background-size: cover;
   .t0{position: absolute;width: 100%;top: 0;left: 0; 
 	pointer-events: none;opacity: .3;z-index: 50;}
+.lineicon{
+  position: fixed;
+  width: size(80);
+  height: size(80);
+  right: size(20);
+  bottom: size(120);
+  z-index: 99;
+}
 
   .img{
 	position: absolute;
