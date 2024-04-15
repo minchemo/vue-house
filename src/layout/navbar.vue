@@ -127,17 +127,17 @@
         position: fixed;
         top: 0;
         right: 0;
-        background: #19A3CEcc;
+        background: #22491bcc;
         width:size(375);
         height: 100%;
         z-index: 5;
         padding: 0;
-        font-size: size(16);
+        font-size: size(20);
         gap: 2em;
         font-weight: 700;
         backdrop-filter: blur(2px);
         transform: translateX(150%);
-        transition: all .5s;
+        transition: all .5s; 
             justify-content: center;
             flex-direction: column;
 
@@ -149,10 +149,18 @@
             // gap: size(10);
             letter-spacing: 0.1em;
             white-space: nowrap;
+    @apply font-['Noto_serif_TC',serif];
+
 
             img {
                 width: size(43);
             }
+            &::before{
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 47 47' fill='%23EBF28F' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='23.5'/%3E%3Cpath stroke='%2322491B' stroke-width='5' d='M7,23.5h33 M23.5,7v33'/%3E%3C/svg%3E");
+              display: inline-block;
+              width: 1em;height: 1em;font-size: .7em; margin-right:.5em;
+              }
 
             &:after {
                 content: '';
@@ -160,7 +168,7 @@
                 bottom: -5px;
                 width: 0%;
                 height: size(2);
-                background-color: #fff;
+                background-color: #EBF28F;
                 transition: all .35s;
             }
 
@@ -171,14 +179,17 @@
                 }
             }
             &.btn2{
-                background:#BE9F6B;
+                background:#EBF28F;
+                color: #22491B;
 ;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
+                &::before{display: none;
+              }
 
                 &:hover {
-                    background:#014d99;
+                    background:#EBF28F;
                     &:after {
                         width:0;
                     }

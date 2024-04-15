@@ -43,23 +43,23 @@ export default {
     //budget: ["2000以下","2000-2500","2500-3000","3000-3500","3500以上"],
 
     navList: [{
-        name: "+嘉 未來",
+        name: "嘉 未來",
         target: ".s4",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "+嘉 速度",
-        target: ".s3",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "+嘉 嚴選",
+        name: "嘉 速度",
         target: ".s6",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "+嘉 品味",
-        target: ".s7",
+        name: "嘉 嚴選",
+        target: ".s8",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "嘉 品味",
+        target: ".s9",
         offset: "-60",
         offsetmo: "0",
     }
