@@ -395,6 +395,8 @@ const go = () => {
     window.open(info.fbLink);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
+  } else if (modalType.value == 'line') {
+    window.open(info.line);
 
   }
 }
