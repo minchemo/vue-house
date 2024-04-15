@@ -239,11 +239,11 @@
 
 @media screen and (max-width:768px) {
 
-  
+   
 .contact-info-img{
   height: 0;z-index: 2;
   top: 70vw;
-  img{width: 200%;margin:-50%;}
+ // img{width: 200%;margin:-50%;}
 }
   .mo-contact-info {
     z-index: 99;
@@ -279,7 +279,7 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(40) 0;
+    padding: sizem(0) 0 sizem(40) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;

@@ -64,8 +64,16 @@ img {
   margin: 0 auto;
 }
     .bg9{
+      @apply relative;
+      
+  &::before{
+      @apply absolute;
+      content: "";
+  top: 0;left: 0;right: 0;bottom: 0;
       background: url("@/section/s9/bg.jpg") center;
-      background-size: 100% auto;
+      background-size: 100% auto;opacity: .6;
+
+}
     }
 
   .caption{
@@ -194,9 +202,13 @@ img {
 @media screen and (max-width: 767px) {
   
 
-.home > .bgh{width: 250%;
-  top: 0;left: 0;
+  .bg9{
+      
+  &::before{
+      background-size: 200% auto;
+
 }
+    }
   .caption{
       font-size: sizem(12);}
 
