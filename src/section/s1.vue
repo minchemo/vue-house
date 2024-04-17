@@ -9,8 +9,12 @@
        <img src="@/section/s1/bgm.webp" class="bgh" v-else>
        <img src="@/section/s1/gif2.gif" class="gif">
     <div class="hr" v-if="!$isMobile()"></div>
-
-<img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="0">
+<div class="logo" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="0">
+  <img src="./s1/logo.svg" alt="logo">
+  <div class="earth">
+  <img src="./s1/e.jpg" alt="earth" >
+  <img src="./s1/e.jpg" alt="earth" ></div>
+</div>
 <img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" v-if="!$isMobile()">
 <img src="./s1/t1m.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="400" v-else>
 <img src="./s1/coming.svg" alt="coming" class="coming" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="600">
@@ -51,10 +55,32 @@ mix-blend-mode: lighten;opacity: .2;
 .hr{position: absolute;bottom: calc(50% + #{size(-1080*.5)});left: 0;right: 0;margin: auto;opacity: .7;
     width: size(1410);height: 1px;background: #D9E021;}
 
-  .logo{
+  .logo{position: relative;
     width: size(844);
     margin-top:7vw;
     margin-bottom:2vw;
+    img{width: 100%;
+    }
+      .earth{position: absolute;
+        top:2vw;left: 0;right: 0;margin: auto;
+        width:size(100);height:size(100);
+        border-radius: 50%;overflow: hidden;
+       // filter:drop-shadow(0 0 .8vw #FFF) drop-shadow(0 0 .2vw #FFF9);
+       box-shadow: 0 0 .9vw #FFF, 0 0 .2vw #FFF;
+       transform: rotate(10deg);
+       white-space: nowrap;
+    img{position: relative;top:-10%;
+      opacity: 1;transform: translateX(-100%);height: 120%;width: auto;
+      animation:earth 7s linear infinite reverse  ;
+    }
+    &::after{content: "";position: absolute;display: block;top: 0;left: 0;width: 100%;height: 100%;background: radial-gradient(100% 84% at 40% 90%, #000 0%, rgba(0, 0, 0, 0.24) 26.74%, rgba(0, 0, 0, 0.00) 60%, rgba(255, 255, 255, 0.00) 70%, rgba(255, 255, 255, 0.50) 100%);}
+      }
+@keyframes earth {
+  to {
+    transform: translateX(0%);
+  }
+}
+    
   }
   .t1{
     width: size(1242);
