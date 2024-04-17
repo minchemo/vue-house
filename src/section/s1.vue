@@ -116,9 +116,15 @@ top:0;
 
     
   .logo{
-    width: sizem(335);
+    width: sizem(320);
     margin-top:4vw;
     margin-bottom:3.5vw;
+      .earth{
+        top:4vw; width:size(210);height:size(210);
+        box-shadow: 0 0 2vw #FFF, 0 0 1vw #FFF;
+       
+
+      }
   }
   .t1{
     width: sizem(297);
