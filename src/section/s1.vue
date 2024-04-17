@@ -10,8 +10,8 @@
    <img src="./s1/logom.svg" class="logo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" v-else />
     
     <div class="t1">
-    <img src="./s1/slogo1.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/>
-    <img src="./s1/slogo2.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/></div>
+    <img src="./s1/s1.png" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/>
+    <img src="./s1/s2.png" class="slogo" alt="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"/></div>
     
   </article>
 </template>
@@ -98,7 +98,7 @@
     margin: 6.5em auto 7em auto;
     }
   .t1{
-  flex-direction: column;
+ // flex-direction: column;
   gap:5vw;
    // margin-bottom: 1.5vw;
   img{height:sizem(34);}
