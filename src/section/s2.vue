@@ -3,7 +3,6 @@
    <!--   <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">淡水正核心 贏接市中心</h3>
       </div> --> 
-    <Fullview />
     <div class="caption">空拍合成示意圖</div>
   </article>
 </template>
@@ -78,7 +77,6 @@
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
-import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
