@@ -1,5 +1,7 @@
 <template>
   <article class="s1" id="s1">
+    <img src="./s1/txt.svg" class="all" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
+   <!--
 	 <img src="./s1/house.webp" class="house"> 
    <img src="./s1/ll.webp" class="style2">   
 	<div class="txt">
@@ -9,7 +11,7 @@
 	</div>
   <div class="c">
     <img src="./s1/c.svg" alt="建築外觀3D示意圖，完工建物以實況為準"/></div>
-	
+	-->
 
   </article>
 </template>
@@ -21,18 +23,21 @@
   @apply relative w-full h-screen ;
   background-image:url("../section/s1/bg.webp");
   background-size: cover;
-  min-height: size(1080);
+ /* min-height: size(1080);
   max-height: size(1080);
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items:center;*/
+  overflow: hidden;
   font-size:size(40);
   color: #FFF;
   line-height: 1.3;
   font-weight: 700;
+  height: auto;
   .t0{position: absolute;width: 100%;top: 0;left: 0; pointer-events: none;opacity: .3;}
+  .all{width: 100%;position: relative;}
 
   .house{
     position: absolute;
