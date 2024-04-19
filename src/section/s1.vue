@@ -1,29 +1,10 @@
 <template>
   <article class="s1" id="s1">
-  <!--  <img class="t0" src="./s1/01m.jpg" alt="" srcset="">  -->
-    <div class="bg">
-      <div class="tl">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="br">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    <img src="./s1/img.webp" class="img" alt="img" srcset="">
-        <div class="style"></div>
-    </div>
-    <div class="txt">
+  <!--  
     <img src="./s1/logo.svg" class="logo" alt="img" srcset="">
-    <h3 class="t1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">沙鹿車站商圈</h3>
-    <h4 class="t2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">景觀<i>2-3</i>房<span>658</span>萬起</h4>
-    <div class="t3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600"><span>台灣、中華大道</span>04-2663-0999</div>
-   
-  </div>
+    -->
+    <img class="t0" src="./s1/pc.jpg" alt="" srcset="">
+    <img src="./s1/bg1.jpg" class="bg" alt="bg" srcset="">
   </article>
 </template>
 
@@ -54,27 +35,13 @@
   font-size:size(36);
   background: #E5005C;
  // background: #994b6a;
-  .t0{position: absolute;
+  .t0{position: absolute;top: 0;
     width: 100%;opacity: .2;
   }
   .img{position: absolute;
     left:size(270);width:size(438);
   top:calc(85% + #{size(490 - 1080 * .85)});
 }
-  .bg{position: absolute;
-    width: 100%;top: 0;left: 0;height: 100%;
-  > div > div{position: absolute;
-    border-radius: 50%;
-    width: 1em;height: 1em;
-    background: #4F4398;
-    &:nth-child(1){
-    background: #8BC782;}
-    &:nth-child(2){
-    background: #00B4ED;}
-    &:nth-child(3){
-    background: #EA5514;}
-  }
-  }
   .tl{position: absolute;
   top: size(240);left:size(249);
   top:calc(80% + #{size(240 - 1080 * .8)});
