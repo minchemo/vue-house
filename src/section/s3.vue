@@ -2,7 +2,7 @@
   <article class="s3" ref="s3">
     <div class="main">
       <div class="txt">
-    <img src="./s3/slogo2.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="0" />
+    <img src="./s1/s2.png" class="slogo" alt="" data-aos="fade-up" data-aos-delay="0" />
     <h3 class="title" data-aos="fade-up" data-aos-delay="100">日本不動產知名品牌 締造城市未來</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="200">日本三井不動產自1941年獨立於三井合名公司不動產部門，歷經80多年來以創新思維佈局全球不動產領域，包括商業設施、飯店、複合商辦大樓、高優質住宅等事業版圖；致力創造城市進化與價值，啟動新時代的夢想與感動。</p>
         <div class="subdesc" data-aos="fade-up" data-aos-delay="300">Mistui Fudosan Group</div>
