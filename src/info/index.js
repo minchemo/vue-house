@@ -30,13 +30,14 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約賞屋",
+        title: "預約鑑賞",/*
         subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
-        subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
+        subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",  
+        */
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房"],
-    budget: ["601-800萬","801-1,000萬","1,001-1,200萬","1,201-1,400萬","1,400萬以上"],
+    // room_type: ["兩房","三房"],
+    budget: ["1500~2000萬","2000~3000萬","3000~5000萬","5000萬以上"],
     navList: [
         /*
         {

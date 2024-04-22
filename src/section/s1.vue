@@ -2,19 +2,20 @@
   <article class="s1" id="s1">
   <!--  
     <img src="./s1/logo.svg" class="logo" alt="img" srcset="">
-    <img class="t0" src="./s1/mo.jpg" alt="" srcset="">
+    <img class="t0 events-n" src="./s1/mo.jpg" alt="" srcset="">
+    <img class="t0 events-n" src="./s1/pc.jpg" alt="" srcset="">
     -->
     <div class="bg absolute">
     <img src="./s1/bg1m.jpg" alt="bg" srcset="" v-if="isMobile">
     <img src="./s1/bg1.jpg" alt="bg" srcset="" v-else></div>
     <div class="logo absolute">
-    <img src="./s1/logo.svg" alt="logo" srcset=""></div>
+    <img src="./s1/logo.svg" alt="logo" srcset="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500"></div>
     <div class="slogo absolute">
-    <img src="./s1/slogo.svg" alt="slogo" srcset=""></div>
+    <img src="./s1/slogo.svg" alt="slogo" srcset="" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1500"></div>
     <div class="t1 absolute">
-    <img src="./s1/txt.svg" alt="txt" srcset=""></div>
+    <img src="./s1/txt.svg" alt="txt" srcset="" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1500"></div>
     <div class="en absolute">
-    <img src="./s1/en.svg" alt="en" srcset=""></div>
+    <img src="./s1/en.svg" alt="en" srcset="" :data-aos="isMobile?'zoom-in':'fade-left'" data-aos-delay="400" data-aos-duration="1500"></div>
 
   </article>
 </template>
@@ -39,8 +40,9 @@
   justify-content: center;
   align-items:center;
   font-size:size(36);
-  background: #E5005C;
- img.t0{position: absolute;top: 0;
+  overflow: hidden;
+  z-index: 2;
+ img.t0{position: absolute;top: 0vw;
     width: 100%;opacity: .3;z-index: 2;height: auto;
   }
   .bg{ position: absolute;width: 110%;top: 0;left: -5%;height: 100%;transform: skewX(-3deg);transform-origin: 50% 100%;animation: an 5s  alternate ease-in-out infinite;

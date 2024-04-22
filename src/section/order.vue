@@ -1,5 +1,10 @@
 <template>
   <div id="order" class="order relative text-center">
+    <ul class="order-text">
+      <li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">在台中，看見純翠秘境</li>
+      <li data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">於是，終於在其中覓得自然</li>
+      <li data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">並在自然裡，看見自我</li>
+    </ul>
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -7,8 +12,8 @@
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
-      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
  -->
+      <img class="order-title-img" src="@/section/form/coming.svg" alt="" srcset="">
       <!-- Custom Image -->
 
       <!-- Form -->
@@ -57,9 +62,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -70,7 +75,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending? '發送中..': '確認送出' }}
       </div>
 
       <!-- Contact Info -->
@@ -109,41 +114,30 @@
 .order {
   width: 100%;
   padding-top: 0;
-
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
+.order-text{
+    font-size: size(37);
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    margin: 3.5em auto 0.2em auto;
+    line-height: 2;
   }
 
   .order-title {
-    font-size: size(40);
+    font-size: size(52);
+    letter-spacing: 0.02em;
     font-weight: 700;
-    color: #000;
-    padding-top:1.5em;
+    color: #015E50;
+    padding:1.5em 0 .1em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
   .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
+    width: size(420);
+    margin-bottom: size(10);
   }
   .order-subTitle{
     font-size: size(17);
-    color: #000;
+    color: #fff;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -182,10 +176,10 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #fff;
+      background-color: #ccc;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+    .row{background: #E6E6E6;border: 2px solid #015E50;color: #015E50;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -193,7 +187,8 @@
         text-align: left;padding-left:1em ;
         > span{color: #F00;font-size: 12px;}
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background: inherit;flex: 1;color: #000;
+      }
       option{color: #666;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -210,9 +205,9 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color:#E5005C;;
+    background-color:#0A5F61;;
     //border: 1px solid #FFF9;
-    border:0;
+    border:2px solid #fff;
     border-radius: 0em;
 
     width: 308px;
@@ -249,22 +244,15 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
-    // border-radius: sizem(68) sizem(68) 0 0;
-   /* padding-top: sizem(0);
-    margin-top: sizem(0);
 
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
-
+.order-text{
+    font-size: sizem(19);
+    letter-spacing: 0.18em;
+    margin: 5.7em auto 1.4em sizem(33);
+    line-height: 1.9;
+    text-align: justify;
+    li{transform-origin: 0 0;}
+  }
     .cus-divider {
       margin: 0 auto;
       width: sizem(117);
@@ -274,9 +262,16 @@
     }
 
     .order-title {
-      font-size: sizem(25);
-      padding-top:1.5em;
+      font-size: sizem(29);
+      padding-top:0em;text-align: left;
+      margin-left:sizem(32);
+      float: left;
     }
+  .order-title-img {
+      display: block;
+    width: sizem(170);
+      margin: sizem(27) sizem(33) 0 auto;
+  }
     .order-subTitle{
       font-size: sizem(13);
       padding-top:0;

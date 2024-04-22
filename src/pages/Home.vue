@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home bg-[#DDDDDD] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+  <div class="home bg-[#80C2BF] overflow-hidden font-['Noto_Sans_TC',sans-serif] text-[#fff]">
      <!--  <img src="@/section/s1/bg0.jpg" class="bgh">
     <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
@@ -18,9 +18,9 @@
     </div> -->
     <S1 />
     <S2 />
+    <S3 />
     <!-- <S2v /> -->
   <!--
-    <S3 />
     <S4 />
     <S5 />
     <S6 />
@@ -70,10 +70,22 @@
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-
-.home > .bgh{position: fixed;width: 100%;
-  top: 0;left: 0;
+.user-n{
+  user-select: none;
 }
+.events-n{
+  pointer-events: none;
+}
+
+.home{
+  &::before{content: "";
+  position: fixed;
+  top: 0;left: 0;right: 0;bottom: 0;
+    width: 100%;
+    background: url("@/section/s1/bg.webp");
+}
+}
+
 img {
   display: inline;
   max-width: unset;
@@ -176,10 +188,12 @@ img {
 }
 @media screen and (max-width: 767px) {
   
-
-.home > .bgh{width: 250%;
-  top: 0;left: 0;
+.home{
+  &::before{content: "";
+    background-image: url("@/section/s1/bgm.webp");
 }
+}
+
   .caption{
       font-size: sizem(12);}
 
@@ -228,10 +242,8 @@ img {
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
-// import S2v from "@/section/s2v.vue"
-// import S11 from "@/section/s11.vue"
-/* 
 import S3 from "@/section/s3.vue"
+/* 
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
@@ -242,9 +254,11 @@ import S10 from "@/section/s10.vue"
  */
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
-import { onMounted, ref } from "vue"
+import {computed, getCurrentInstance, onMounted, ref } from "vue"
 
 import AOS from 'aos';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
