@@ -1,4 +1,4 @@
-const caseName = "佳鋐大境"
+const caseName = "豐邑匯禮"
 
 export default {
     meta: {
@@ -8,9 +8,9 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市西屯區市政路16號(旁)",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.446116529466!2d120.6455898!3d24.156082400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d93746f5467%3A0xb5331ea619d010e9!2zNDA35Y-w5Lit5biC6KW_5bGv5Y2A5biC5pS_6LevMTbomZ8!5e0!3m2!1szh-TW!2stw!4v1713771796155!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/eoQWdw7XJtWkrjEj7",
+    address: "台中市西屯區市政路10號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.4442108791386!2d120.64352467571972!3d24.156149273077798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d939f7b250b%3A0x978bc5bc4f3ede49!2zNDA35Y-w5Lit5biC6KW_5bGv5Y2A5biC5pS_6LevMTDomZ8!5e0!3m2!1szh-TW!2stw!4v1713772329889!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/ikSpJr5b4uUZd96P6",
     phone: "04-2258-0988",
     fbLink: "https://www.facebook.com/61556823341836/",
     fbMessage: "https://m.me/61556823341836/",
