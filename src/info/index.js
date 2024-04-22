@@ -8,12 +8,12 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市梧棲區中華路二段258號(旁)",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3637.813058514882!2d120.5550312!3d24.2483163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469151ebe57d387%3A0x8553e024331e32ed!2z5L2z6YuQ5aSn5aKD5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1705376910890!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/V5sYHiChFYQAUNZH7",
-    phone: "04-2663-0999",
-    fbLink: "https://www.facebook.com/61554748627993/",
-    fbMessage: "https://m.me/61554748627993/",
+    address: "台中市西屯區市政路16號(旁)",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.446116529466!2d120.6455898!3d24.156082400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d93746f5467%3A0xb5331ea619d010e9!2zNDA35Y-w5Lit5biC6KW_5bGv5Y2A5biC5pS_6LevMTbomZ8!5e0!3m2!1szh-TW!2stw!4v1713771796155!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/eoQWdw7XJtWkrjEj7",
+    phone: "04-2258-0988",
+    fbLink: "https://www.facebook.com/61556823341836/",
+    fbMessage: "https://m.me/61556823341836/",
     caseName: caseName,
     houseInfos: [
         /*
