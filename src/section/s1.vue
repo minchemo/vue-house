@@ -12,7 +12,7 @@
     <img src="./s1/2.webp" alt="水" srcset=""></div>
     <img src="./s1/t1.svg" class="t1" alt="醇萃 為了相聚" srcset="" data-aos="zoom-out-down" data-aos-delay="0" data-aos-duration="1500">
     <img src="./s1/img.webp" class="img" alt="茶具" srcset="" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1500">
-    <img src="./s1/t2.svg" class="t2" alt="新竹高鐵畔 #菁英的新團員學" srcset="" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500">
+    <img src="./s1/t2.svg" class="t2" alt="竹北高鐵畔 #菁英的新團員學" srcset="" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500">
     <div class="t3" data-aos="zoom-out" data-aos-delay="600" data-aos-duration="1500">
       <span>即</span>
       <span>將</span>
