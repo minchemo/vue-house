@@ -3,11 +3,28 @@
   <!--  
     <img src="./s1/logo.svg" class="logo" alt="img" srcset="">
     <img class="t0 events-n" src="./s1/mo.jpg" alt="" srcset="">
-    <img class="t0 events-n" src="./s1/pc.jpg" alt="" srcset="">
     -->
+    <img class="t0 events-n" src="./s1/pc.jpg" alt="" srcset="">
     <div class="bg absolute">
     <img src="./s1/bg1m.jpg" alt="bg" srcset="" v-if="isMobile">
     <img src="./s1/bg1.jpg" alt="bg" srcset="" v-else></div>
+    <div class="t1">
+    <img src="./s1/t1.svg" alt="t1" srcset="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">
+    <img src="./s1/img.webp" class="img" alt="img" srcset="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500"></div>
+    <img src="./s1/t2.svg" class="t2" alt="t2" srcset="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">
+    <div class="t3">
+      <span>即</span>
+      <span>將</span>
+      <span>相</span>
+      <span>見</span>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+      <div class="line4"></div>
+      <div class="line5"></div>
+    </div>
+    
+  <!--  
     <div class="logo absolute">
     <img src="./s1/logo.svg" alt="logo" srcset="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500"></div>
     <div class="slogo absolute">
@@ -17,6 +34,7 @@
     <div class="en absolute">
     <img src="./s1/en.svg" alt="en" srcset="" :data-aos="isMobile?'zoom-in':'fade-left'" data-aos-delay="400" data-aos-duration="1500"></div>
 
+  -->
   </article>
 </template>
 
@@ -29,25 +47,65 @@
   }
 }
 
-
-.s1 {
-  
+.s1 {  
   @apply relative w-full h-screen text-[#fff];
   min-height: size(900);
-  max-height: size(1080);
+  max-height: size(1070);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
   font-size:size(36);
-  overflow: hidden;
+  // overflow: hidden;
   z-index: 2;
- img.t0{position: absolute;top: 0vw;
-    width: 100%;opacity: .3;z-index: 2;height: auto;
+  img.t0{position: absolute;top: 0;
+    width: 100%;opacity: .0;z-index: 2;height: auto;
   }
-  .bg{ position: absolute;width: 110%;top: 0;left: -5%;height: 100%;transform: skewX(-3deg);transform-origin: 50% 100%;animation: an 5s  alternate ease-in-out infinite;
-   img{width: 100%;height: 100%;}
+  .bg{ position: absolute;width: 100%;top: 0;left: 0%;height: 100%;
+   img{width: 100%;height: 100%;object-fit: cover;}
   }
+  .t1{
+    @apply relative;
+    height: 46.5%;top:  -19.5%;
+    // margin-bottom: 22.2%;
+  img{
+    height: 100%;
+    &.img{
+      @apply absolute;
+      bottom: -32%;
+      left: -20%;
+      height: 49%;
+    }
+  }
+}
+.t2{
+  @apply absolute;bottom: 4%;left: 0;right: 0;margin: auto;height: 3.75%;
+}
+.t3{
+  @apply absolute;top: 0;left: 0;width: 100%;height: 100%;
+  font-size:size(145);
+  font-weight:100;
+  line-height: 1.25;
+span{
+  @apply absolute;
+  &:nth-child(1){top: 0;left: .2em;}
+  &:nth-child(2){top: 0;right: .2em;}
+  &:nth-child(3){bottom: 0;left: .2em;}
+  &:nth-child(4){bottom: 0;right: .2em;}
+}
+div{
+  @apply absolute;
+  background: #FFF;
+}
+$line-pa:size(50);
+$line-tb:size(230);
+$line-lr:size(200);
+.line1{height: 1px;width: calc(100% - $line-tb * 2);left: $line-tb;top:$line-pa;}
+.line2{width: 1px;height:calc(100% - $line-lr * 2);top: $line-lr;left:$line-pa;}
+.line3{width: 1px;height: calc(100% - $line-lr * 2);top: $line-lr;right: $line-pa;}
+.line4{height: 1px;width: calc(50% - $line-tb * 2 - 5vw);left: $line-tb;bottom: $line-pa;}
+.line5{height: 1px;width: calc(50% - $line-tb * 2 - 5vw);right: $line-tb;bottom: $line-pa;}
+}
   /*
   .en{ @apply absolute font-['Bellota_Text'];
   bottom: 0;right: 0;
@@ -57,9 +115,10 @@
   */
 
 }
-/* PC */
+/* PC
 @media screen and (min-width: 767px) {
   .s1 {
+    
    img{height: 100%;}
   .logo{height:81%;top: 9%;left:size(310);transform: translateX(-40%);
   }
@@ -72,7 +131,7 @@
 
 
   }
-}
+} */
   
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -87,7 +146,11 @@
     min-height: sizem(604);
     max-height: sizem(812);
     font-size:sizem(15);
-  .bg{width: 100%;top:-5%;left: 0%;height: 110%;transform: skewY(-3deg);transform-origin: 0% 50%;
+  .bg{ 
+    &::after{content: "";position: absolute;top: 0;left: 0;
+    width: 100%;height:sizem(225);
+    background: linear-gradient(180deg, rgba(239, 178, 135, 0.5) 0%, rgba(250, 214, 189, 0) 100%);
+mix-blend-mode: multiply;}
   }
    img{width: 100%;}
   .logo{width: sizem(210);top:sizem(97);left:sizem(22);

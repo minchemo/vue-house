@@ -17,10 +17,10 @@
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-    <S2 />
-    <S3 />
     <!-- <S2v /> -->
   <!--
+    <S2 />
+    <S3 />
     <S4 />
     <S5 />
     <S6 />
@@ -82,7 +82,8 @@
   position: fixed;
   top: 0;left: 0;right: 0;bottom: 0;
     width: 100%;
-    background: url("@/section/s1/bg.webp");
+    background: url("@/section/s1/bg.jpg");
+    background-size: 100% auto;
 }
 }
 
@@ -190,7 +191,7 @@ img {
   
 .home{
   &::before{content: "";
-    background-image: url("@/section/s1/bgm.webp");
+   // background-image: url("@/section/s1/bgm.webp");
 }
 }
 
@@ -241,9 +242,9 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+/* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
-/* 
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
