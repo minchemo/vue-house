@@ -3,9 +3,9 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-   <!--    --><div class="logo">
+   <!--  <div class="logo">
       <img src="@/section/form/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>
+    </div>  -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #E5005C;}
-.hover\:bg-color2:hover{background-color:#a00040;}
+.bg-color1{background-color: #785A4F;}
+.hover\:bg-color2:hover{background-color:#4b2d22;}
 
 
 .contact-info-img{
@@ -138,7 +138,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #0A5F61;
+      background-color: #785A4F;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -151,11 +151,11 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      border: 2px solid #FFF;
+      border: 1px solid #785A4F;
       gap: 1em;
 
       &:hover {
-        background-color: #004344;
+        background-color: #4b2d22;
         color: #fff;
 
         img {
@@ -225,7 +225,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(11%) sepia(70%) saturate(6607%) hue-rotate(327deg) brightness(103%) contrast(108%);
+  img{filter: invert(34%) sepia(41%) saturate(313%) hue-rotate(331deg) brightness(97%) contrast(88%);
   }
 }
 
@@ -243,7 +243,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#0A5F61;
+    background:#785A4F;
 
     .contact-item {
       height: 100%;      

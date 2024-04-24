@@ -1,10 +1,5 @@
 <template>
   <div id="order" class="order relative text-center">
-    <ul class="order-text">
-      <li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">在台中，看見純翠秘境</li>
-      <li data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">於是，終於在其中覓得自然</li>
-      <li data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">並在自然裡，看見自我</li>
-    </ul>
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -12,39 +7,39 @@
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
- -->
       <img class="order-title-img" src="@/section/form/coming.svg" alt="" srcset="">
+ -->
       <!-- Custom Image -->
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span>(必填)</span></span>
+          <label class="row"><span>姓名<span v-if="!bypass.includes('name')">(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>(必填)</span></span>
+            <label class="row"><span>手機<span v-if="!bypass.includes('phone')">(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
+          <label class="row" v-if="info.room_type"><span>需求房型<span v-if="!bypass.includes('room_type')">(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
             <option v-for="room in info.room_type" :value="room" v-text="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算</span>
+          <label class="row" v-if="info.budget"><span>購屋預算<span v-if="!bypass.includes('budget')">(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇預算</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
         </label>
-          <label class="row"><span>居住縣市</span>
+          <label class="row"><span>居住縣市<span v-if="!bypass.includes('city') ">(必填)</span></span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row"><span>居住地區</span>
+          <label class="row"><span>居住地區<span v-if="!bypass.includes('area')">(必填)</span></span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value">
@@ -62,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -114,20 +109,13 @@
 .order {
   width: 100%;
   padding-top: 0;
-.order-text{
-    font-size: size(37);
-    letter-spacing: 0.2em;
-    font-weight: 300;
-    margin: 3.5em auto 0.2em auto;
-    line-height: 2;
-  }
 
   .order-title {
     font-size: size(52);
     letter-spacing: 0.02em;
     font-weight: 700;
-    color: #015E50;
-    padding:1.5em 0 .1em;
+    color: #785A4F;
+    padding:1.5em 0 0em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
@@ -137,9 +125,9 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #fff;
-    padding-top:.8em;
-    letter-spacing: .1em;
+    color: #000;
+    padding-top:0em;
+    letter-spacing: .04em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
@@ -147,7 +135,7 @@
     width: size(300);
     height: size(2);
     margin-bottom: size(50);
-    background-color: #055F76;
+    background-color: #785A4F;
   }
 
   .form {
@@ -155,7 +143,7 @@
     min-width: 680px;
     //  height: 350px;
     gap: size(80);
-    margin-top: size(45);
+    margin-top: size(40);
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
@@ -179,13 +167,14 @@
       background-color: #ccc;
       position: absolute;
     }
-    .row{background: #E6E6E6;border: 2px solid #015E50;color: #015E50;
+    .row{background: #FFF;border: 2px solid #785A4F;color: #785A4F;
       display: flex;width: 100%;
     align-items:center;
       > span{
-        width: 5.5em;
+        width: 7.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        font-weight: 700;
+        > span{color: #F00;font-size: 0.75em;}
       }
       input,select{background: inherit;flex: 1;color: #000;
       }
@@ -205,9 +194,8 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color:#0A5F61;;
+    background-color:#785A4F;
     //border: 1px solid #FFF9;
-    border:2px solid #fff;
     border-radius: 0em;
 
     width: 308px;
@@ -245,27 +233,19 @@
     width: 100%;
     padding-bottom: sizem(63);
 
-.order-text{
-    font-size: sizem(19);
-    letter-spacing: 0.18em;
-    margin: 5.7em auto 1.4em sizem(33);
-    line-height: 1.9;
-    text-align: justify;
-    li{transform-origin: 0 0;}
-  }
     .cus-divider {
       margin: 0 auto;
       width: sizem(117);
       height: sizem(2);
       margin-bottom: sizem(25);
-      background-color: #055F76;
+      background-color: #785A4F;
     }
 
     .order-title {
       font-size: sizem(29);
-      padding-top:0em;text-align: left;
+      padding-top:1.5em;
       margin-left:sizem(32);
-      float: left;
+     // float: left;text-align: left;
     }
   .order-title-img {
       display: block;
@@ -283,6 +263,7 @@
       min-width: 0;
       height: auto;
       gap: sizem(15);
+    font-size: sizem(15);
       margin-bottom: sizem(20);
       flex-direction: column;
       margin-top: sizem(20);
@@ -355,7 +336,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "email", "budget"]
 
 //中文對照
 const formDataRef = ref([

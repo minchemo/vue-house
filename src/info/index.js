@@ -11,7 +11,7 @@ export default {
     // address: "新竹縣竹北市文興路二段2號2號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3621.626354641783!2d121.03027861140102!3d24.808244877871388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ4JzI5LjciTiAxMjHCsDAxJzU4LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1713862128454!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/nZD8RtJGdj8BQhua9",
-    //phone: "03-590-5588",
+    // phone: "03-590-5588",
     fbLink: "https://www.facebook.com/61558478311163/",
     fbMessage: "https://m.me/61558478311163/",
     caseName: caseName,
@@ -30,14 +30,14 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約鑑賞",/*
+        title: "預約賞屋",
         subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",  
-        */
+        /*  */
     },
     // 底下2個 沒項目就會隱藏
     room_type: ["兩房","三房","四房","其他"],
-    budget: ["1500-2000萬","2001-3000萬","3001-4000萬","4001-5000萬","5000萬以上"],
+   // budget: ["1500-2000萬","2001-3000萬","3001-4000萬","4001-5000萬","5000萬以上"],
     navList: [
         /*
         {
