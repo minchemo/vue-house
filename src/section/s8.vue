@@ -1,6 +1,6 @@
 <template>
   <article class="s8">
-    <h2 class="title" data-aos="fade-down" data-aos-delay="0" >正38坪888萬起<span>(車位另購)</span><br>規劃當區最優</h2>
+    <h2 class="title" data-aos="fade-down" data-aos-delay="0" >景觀3房40坪968萬起<br><span>(車位另購)</span></h2>
     
     <img src="./s8/1.webp" alt="" v-if="!$isMobile()">
     <img src="./s8/1m.webp" alt="" v-else>
@@ -24,13 +24,13 @@
     color: #FFF;
     font-size: 2em;
     margin: 0 auto .5em auto;
-    line-height: 1.4;
+    line-height: 1;
     font-weight: 900;
     background: linear-gradient(70deg, #F6AD48 0%, #E96087 25%, #3551A1 50%, #49BBBC 100%);
     width:100%;
     padding: .6em 0;
     text-align: center;
-    span{font-size: .5em;margin: 0 -4.8em 0 0;
+    span{font-size: .5em;margin: 0 0em 0 0;
     font-weight: 700;}
 
   }
