@@ -95,7 +95,7 @@
 
 .s2 {
   @apply relative w-full z-0;
-  height: size(2085);
+  height: size(2250);
   background-image:linear-gradient(0deg, #093948 70%, rgba(15, 35, 81, 0) 100%);
   &::after {
     @apply absolute w-full h-full z-10;
@@ -167,7 +167,8 @@
 
   .view {
     @apply w-full absolute bottom-0 left-0 z-20;
-    height: size(1187);
+    width: 100%;
+    height: size(1180);
   }
 }
 
@@ -261,7 +262,7 @@
     }
 
     .view {
-      height: sizem(900);
+      height: sizem(830);
     }
   }
 }

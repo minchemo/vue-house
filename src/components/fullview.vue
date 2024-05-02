@@ -24,12 +24,13 @@
         position: absolute; 
         left: 0;
         top: 0;   
-      //  background-image: url(@/section/s3/view.webp);
-	  //  background-size: cover;
+        background-image: url(@/section/s2/view.jpg);
+	    background-size: 100% 100%;
         }
 
     img {
         height: 100%;
+        width: 100%;
         min-width: 100%;
         max-width: unset;
     }
@@ -44,6 +45,7 @@
         overflow: hidden;
 
         img {
+        width:auto;
             height: 100%;
         }
         
