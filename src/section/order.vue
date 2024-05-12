@@ -1,12 +1,6 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <img
-        class="order-title-img relative z-10"
-        src="@/section/form/logo.png"
-        alt=""
-        srcset=""
-      />
       <!-- Title -->
       <div class="order-title text-center relative z-10">
         {{ info.order.title }}
@@ -29,7 +23,7 @@
             <input
               type="text"
               placeholder="姓名"
-              class="input w-full rounded-none"
+              class="input w-full rounded-none placeholder:text-white"
               :value="formData.name"
               @input="(event) => (formData.name = event.target.value)"
           /></label>
@@ -38,7 +32,7 @@
             <input
               type="text"
               placeholder="手機"
-              class="input w-full rounded-none"
+              class="input w-full rounded-none placeholder:text-white"
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
@@ -46,7 +40,7 @@
           <label class="row" v-if="info.room_type"
             ><span>需求</span>
             <select
-              class="select w-full rounded-none bg-white"
+              class="select w-full rounded-none bg-white "
               v-model="formData.room_type"
             >
               <!--     <option value="" selected disabled>請選擇房型</option>  -->
@@ -56,7 +50,7 @@
                 v-text="room"
               ></option></select
           ></label>
-          <label class="row" v-if="info.budget"
+          <label class="row" v-if="info.budget.length > 0"
             ><span>預算</span>
             <select
               class="select w-full rounded-none bg-white"
@@ -110,7 +104,7 @@
         <p class="text-[#fff]">
           本人知悉並同意<label
             for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70"
+            class="modal-button text-[#0D5052] cursor-pointer hover:opacity-70"
             >「個資告知事項聲明」</label
           >內容
         </p>
@@ -131,7 +125,7 @@
         class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer relative z-10"
         @click="send()"
       >
-        {{ sending ? "發送中.." : "即刻預約" }}
+        {{ sending ? "發送中.." : "立即預約" }}
       </div>
 
       <!-- Contact Info -->
@@ -151,9 +145,10 @@
 
 .order-section {
   position: relative;
-  padding-top: size(280);
+  padding-top: size(103);
   overflow: hidden;
   min-height: size(500);
+  background-color: #E89213;
 
   .bg-image {
     position: absolute;
@@ -163,36 +158,6 @@
     vertical-align: middle;
   }
 
-  &:before {
-    content: "";
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-image: url('@/section/form/bg.png');
-    background-color: #0f2351;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-
-  &:after {
-    content: "";
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    background: linear-gradient(
-      0deg,
-      #074544 0%,
-      #083f46 33%,
-      #0c2f4c 76%,
-      #0f2351 100%
-    );
-  }
 }
 
 .order {
@@ -222,7 +187,7 @@
     font-size: size(40);
     font-weight: 700;
     color: #fff;
-    padding-top: 4em;
+    padding-top: 0;
   }
 
   .order-title-img {
@@ -274,7 +239,7 @@
       position: absolute;
     }
     .row {
-      background: #00133f66;
+      background: rgba($color: #fff, $alpha: .3);
       border: 1px solid #ccc;
       color: #fff;
       display: flex;
@@ -295,7 +260,7 @@
         flex: 1;
       }
       option {
-        color: #666;
+        color: #000;
       }
       select {
         background: url("//h65.tw/img/select.svg") no-repeat calc(100% - 0.5em)
@@ -308,6 +273,9 @@
           background-position: calc(100% - 0.5em) 0%;
         }
       }
+      &::placeholder {
+        color: #fff;
+      }
     }
   }
 
@@ -316,7 +284,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background: #ceaa6d;
+    background: #0D5052;
     //border: 1px solid #FFF9;
     border: 0;
     border-radius: 0.5em;

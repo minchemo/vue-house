@@ -1,5 +1,5 @@
 <template>
-  <article class="s6">
+  <article class="s7">
     <div class="slide-box">
       <div class="arrows" v-if="isMobile">
         <img
@@ -22,8 +22,9 @@
         class="slide"
         :options="{
           arrows: false,
-          autoplay: true,
-          pagination: true,
+          autoplay: false,
+          pagination: false,
+          drag: false,
           interval: 4000,
           gap: 10,
           type: 'loop',
@@ -36,51 +37,58 @@
           v-for="i in imgs"
           :style="{ 'background-image': `url(${i.img})` }"
         >
-          <div class="caption">
-            {{ i.caption }}
-          </div>
         </SplideSlide>
       </Splide>
       <div class="t">
         <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">
-          百年成州學區<br />資優素養明日菁英
+          藝術格律美學<br />綻放當代人文品味
         </div>
-        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">百年成州學區 資優素養明日菁英</div>
+        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">藝術格律美學 綻放當代人文品味</div>
         <div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">
-          成州國小學區近距離，文教學<br />
-          府一氣呵成，日日書香飄溢，<br />
-          天天快樂學習；為孩子奠定最<br />
-          好的學習起點，就是邁向勝利<br />
-          人生的指標！
+          內斂亦富有質感，簡約的幾何線條，<br />
+          大方表現建築的俐落<br />
+          每一個細節，都是最高品味！<br />
+          單純戶數輕奢感受<br />
+          <span>２-３房</span>
+          創造寬適且彈性有餘的生活時尚！
         </div>
         <div class="t2" v-else data-aos="fade-up" data-aos-delay="200">
-          成州國小學區近距離，文教學府一氣呵成，日日書香飄溢，天天快樂學習；為孩子奠定最好的學習起點，就是邁向勝利人生的指標！
+          內斂亦富有質感，簡約的幾何線條，大方表現建築的俐落每一個細節，都是最高品味！<br>單純戶數輕奢感受
+          <span>２-３房</span>
+          創造寬適且彈性有餘的生活時尚！
         </div>
       </div>
     </div>
-    <img class="en" src="@/section/s6/en.png" alt="" srcset="" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0"/>
-    <img class="en" src="@/section/s6/enm.png" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
+    <img
+      class="en"
+      src="@/section/s7/en.png"
+      alt=""
+      srcset=""
+      v-if="!isMobile"
+      data-aos="fade-up" data-aos-delay="0"
+    />
+    <img class="en" src="@/section/s7/enm.png" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
   </article>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s6 {
+.s7 {
   @apply w-full relative bg-[#0D5052] flex text-white;
-  height: size(1080);
-  padding-top: size(323);
-  padding-left: size(70);
+  height: size(1205);
+  padding-top: size(229);
+  padding-left: size(168);
 
   .slide-box {
-    @apply flex items-start;
-    gap: size(106);
+    @apply flex flex-row-reverse items-start;
+    gap: size(151);
     .slide {
-      width: size(1061);
-      height: size(624);
+      width: size(903);
+      height: size(906);
       .slide-item {
-        width: size(1061);
-        height: size(624);
+        width: size(903);
+        height: size(906);
         background: #eee;
         background-size: cover;
         .caption {
@@ -93,7 +101,7 @@
         }
       }
       .splide__pagination {
-        @apply absolute left-0 w-full flex justify-start;
+        @apply absolute right-0 w-full flex justify-end;
         padding: size(25) 0;
         li {
           line-height: 0;
@@ -111,32 +119,42 @@
       }
     }
     .t {
-      width: size(546);
+      width: size(623);
+      padding-top: size(95);
       .t1 {
+        @apply text-center;
         color: #e89213;
         font-size: size(51);
         font-weight: 700;
         line-height: 126.7%;
         letter-spacing: size(4.08);
-        margin-bottom: size(112);
+        margin-bottom: size(100);
         padding-bottom: size(35);
         border-bottom: size(1) solid #fff;
       }
       .t2 {
+        @apply text-center;
         font-size: size(32);
         font-weight: 700;
-        text-align: justify;
         line-height: 157.9%;
         letter-spacing: size(6.4);
+        span {
+          @apply block;
+          margin-top: size(40);
+          margin-bottom: size(5);
+          font-size: size(52);
+          font-weight: 700;
+          letter-spacing: size(10.4);
+        }
       }
     }
   }
 
   .en {
     @apply absolute;
-    height: size(146.34);
+    height: size(151.67);
     top: size(23);
-    right: size(4);
+    left: size(4);
   }
 }
 
@@ -146,17 +164,17 @@
 }
 
 @media screen and (max-width: 767px) {
-  .s6 {
+  .s7 {
     height: sizem(667);
-    padding-top: sizem(132);
+    padding-top: sizem(97);
     padding-left: 0;
 
     .slide-box {
-      @apply flex flex-col;
-      gap: sizem(24);
+      @apply flex flex-col items-start;
+      gap: sizem(27);
       .arrows {
         @apply absolute z-20 w-full flex justify-between;
-        top: sizem(280);
+        top: sizem(260);
         padding: 0 sizem(5);
 
         .arrow {
@@ -170,19 +188,34 @@
       }
       .slide {
         width: sizem(375);
-        height: sizem(281);
+        height: sizem(331);
         .slide-item {
           width: sizem(375);
-          height: sizem(281);
+          height: sizem(331);
           .caption {
             right: sizem(11);
-            bottom: sizem(6);
+            bottom: sizem(7);
             font-size: sizem(12);
-            letter-spacing: size(2.6);
+            font-weight: 400;
+            letter-spacing: sizem(1.5);
           }
         }
         .splide__pagination {
-          @apply hidden;
+          @apply absolute right-0 w-full flex justify-end;
+          padding: size(25) 0;
+          li {
+            line-height: 0;
+            button {
+              @apply rounded-full;
+              width: size(10);
+              height: size(10);
+              background: #0d6b68;
+              &.is-active {
+                background: #138784;
+              }
+            }
+          }
+          gap: size(13);
         }
       }
       .t {
@@ -190,26 +223,36 @@
         padding: 0 sizem(30);
         .t1 {
           font-size: sizem(20);
-          line-height: 1;
+          font-weight: 700;
+          line-height: 126.7%;
           letter-spacing: sizem(1.6);
           margin-bottom: sizem(14);
           padding-bottom: sizem(14);
-          border-bottom: sizem(1) solid #fff;
+          border-bottom: 1px solid #fff;
         }
         .t2 {
+          @apply text-left;
           font-size: sizem(13);
+          font-weight: 700;
           line-height: 157.9%;
           letter-spacing: sizem(2.6);
+          span {
+            @apply block;
+            margin-top: sizem(9);
+            margin-bottom: sizem(9);
+            font-size: sizem(20);
+            font-weight: 700;
+            letter-spacing: sizem(2.6);
+          }
         }
       }
     }
 
     .en {
       @apply absolute;
-      height: sizem(58.5);
-      top: sizem(36);
-      right: 0;
-      left: unset;
+      height: sizem(48.95);
+      top: sizem(26);
+      left: 0;
     }
   }
 }
@@ -227,16 +270,8 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s6/1.jpg", import.meta.url).href,
-    caption: "洲子洋公園",
-  },
-  {
-    img: new URL("../section/s6/2.jpg", import.meta.url).href,
-    caption: "大都會公園",
-  },
-  {
-    img: new URL("../section/s6/3.jpg", import.meta.url).href,
-    caption: "大都會公園周邊環境",
+    img:  new URL("../section/s7/1.jpg", import.meta.url).href,
+    caption: "成州市場",
   },
 ]
 </script>

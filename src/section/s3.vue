@@ -1,6 +1,22 @@
 <template>
   <article class="s3">
-    <div class="slide-box s31">
+    <div class="slide-box">
+      <div class="arrows" v-if="isMobile">
+        <img
+          src="@/section/arrow.png"
+          class="arrow prev"
+          alt=""
+          srcset=""
+          @click="splide.go('<')"
+        />
+        <img
+          src="@/section/arrow.png"
+          class="arrow next"
+          alt=""
+          srcset=""
+          @click="splide.go('>')"
+        />
+      </div>
       <Splide
         ref="splide"
         class="slide"
@@ -11,13 +27,12 @@
           interval: 4000,
           gap: 10,
           type: 'loop',
-          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
         }"
       >
         <SplideSlide
           class="slide-item"
           :key="i"
-          v-for="i in imgsA"
+          v-for="i in imgs"
           :style="{ 'background-image': `url(${i.img})` }"
         >
           <div class="caption">
@@ -26,91 +41,24 @@
         </SplideSlide>
       </Splide>
       <div class="t">
-        <div class="t1" v-if="isMobile">清溪川首排<br />綠金十字軸</div>
-        <div class="t1" v-else>清溪川首排 綠金十字軸</div>
-        <div class="t2">奢擁都心，奢享謐境</div>
-        <div class="t3">
-          與自然相棲，與藝文相伴，列席首爾清溪川美譽的中港綠堤第一排，開闊的不只是視野的永恆棟距，林濤濃蔭，滿窗翠綠，水域風光，綿延串起1.4公頃溫仔圳濕地公園、昌平公園、願景公園、國家電影文化園區、昌平國小、頭前國中明星學區，繁華裡藏奢綠，四季裡有斑斕，藝文書香裡自在漫居。
+        <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">未來新五泰輕軌<br />幸福生活圈</div>
+        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">未來新五泰輕軌 幸福生活圈</div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="200">
+          未來雙享五泰輕軌、新蘆線，串聯新北市蘆洲、五股、泰山
+          三個行政區，暢連捷運路網雙 北自在移動；動靜皆宜的雙北
+          精采生活，就是你的幸福圈！
         </div>
       </div>
     </div>
-    <div class="slide-box s32">
-      <Splide
-        ref="splide2"
-        class="slide"
-        :options="{
-          arrows: false,
-          autoplay: true,
-          interval: 4000,
-          gap: 10,
-          type: 'loop',
-          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
-        }"
-      >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgsB"
-          :style="{ 'background-image': `url(${i.img})` }"
-        >
-          <div class="caption">
-            {{ i.caption }}
-          </div>
-        </SplideSlide>
-      </Splide>
-      <div class="t">
-        <div class="t1">雙大道樞紐 雙商圈核心</div>
-        <div class="t2">大道即是價值，稀缺更顯珍貴</div>
-        <div class="t3">
-          大道即是價值，稀缺更顯珍貴，中原X中華雙大道十字金軸的鑽石角地新舊商圈交融的市街文化，副都心的時尚，舊新莊的豐饒，織就「文華苑」美好的生活地圖。宏匯廣場i-Tower、晶鑽購物中心時尚、影視潮流脈動，連結著中原傳統市場的生猛活力，一步行履街頭小吃、市場採買、百貨商場國際美食，時尚咖、文青族、食藝家…都能在此邂逅所愛。
-        </div>
-      </div>
-    </div>
-    <img src="@/section/s3/lt1.png" class="lt lt1" alt="" srcset="" />
     <img
-      v-if="!isMobile"
-      src="@/section/s3/lt2.png"
-      class="lt lt2"
+      class="en"
+      src="@/section/s3/ENm.png"
       alt=""
       srcset=""
+      v-if="isMobile"
+      data-aos="fade-up" data-aos-delay="0"
     />
-    <img v-else src="@/section/s3/lt2m.png" class="lt lt2" alt="" srcset="" />
-    <img src="@/section/s3/f1.webp" class="lt f f1" alt="" srcset="" />
-    <img src="@/section/s3/f2.webp" class="lt f f2" alt="" srcset="" />
-
-    <div class="arrows" v-if="isMobile">
-      <img
-        src="@/section/arrow.png"
-        class="arrow prev"
-        alt=""
-        srcset=""
-        @click="splide.go('<')"
-      />
-      <img
-        src="@/section/arrow.png"
-        class="arrow next"
-        alt=""
-        srcset=""
-        @click="splide.go('>')"
-      />
-    </div>
-
-    <div class="arrows2" v-if="isMobile">
-      <img
-        src="@/section/arrow.png"
-        class="arrow prev"
-        alt=""
-        srcset=""
-        @click="splide2.go('<')"
-      />
-      <img
-        src="@/section/arrow.png"
-        class="arrow next"
-        alt=""
-        srcset=""
-        @click="splide2.go('>')"
-      />
-    </div>
+    <img class="en" src="@/section/s3/EN.png" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
   </article>
 </template>
 
@@ -118,124 +66,76 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply relative w-full z-20 flex flex-col items-center justify-center;
-  height: size(1480);
-  background-color: #efefef;
-  gap: size(25);
-  padding-right: size(225);
+  @apply w-full relative bg-[#0D5052] flex text-white;
+  height: size(1080);
+  padding-top: size(313);
+  padding-left: size(139);
 
   .slide-box {
-    @apply flex items-end;
-    gap: size(94);
+    @apply flex flex-row-reverse items-start;
+    gap: size(137);
     .slide {
-      width: size(778);
-      height: size(521);
+      width: size(1061);
+      height: size(624);
       .slide-item {
-        width: size(778);
-        height: size(521);
+        width: size(1061);
+        height: size(624);
         background: #eee;
         background-size: cover;
         .caption {
-          @apply absolute;
-          left: size(29);
-          bottom: size(14);
-          color: #fff;
-          font-size: size(14);
+          @apply absolute font-['Noto_Sanc_TC'];
+          right: size(14);
+          bottom: size(15);
+          font-size: size(20);
           font-weight: 400;
+          letter-spacing: size(2.6);
         }
       }
       .splide__pagination {
         @apply absolute right-0 w-full flex justify-end;
-        padding: size(16) 0;
+        padding: size(25) 0;
         li {
           line-height: 0;
           button {
-            width: size(42);
-            height: size(5);
-            background: #ebbf55;
-            opacity: 0.4;
+            @apply rounded-full;
+            width: size(10);
+            height: size(10);
+            background: #0d6b68;
             &.is-active {
-              opacity: 1;
+              background: #138784;
             }
           }
         }
-        gap: size(15);
+        gap: size(13);
       }
     }
     .t {
-      width: size(470);
+      width: size(508);
       .t1 {
-        color: #c9a063;
-        font-size: size(45);
+        color: #e89213;
+        font-size: size(51);
         font-weight: 700;
-        margin-bottom: size(15);
+        line-height: 126.7%;
+        letter-spacing: size(4.08);
+        margin-bottom: size(112);
+        padding-bottom: size(35);
+        border-bottom: size(1) solid #fff;
       }
       .t2 {
-        color: #000;
-        font-size: size(23);
-        font-weight: 500;
-        margin-bottom: size(5);
-      }
-      .t3 {
-        color: #000;
-        font-size: size(16);
-        font-weight: 400;
+        font-size: size(32);
+        font-weight: 700;
         text-align: justify;
-      }
-    }
-    &:nth-child(1) {
-      .slide {
-        .splide__pagination {
-          @apply bottom-full;
-        }
-      }
-    }
-    &:nth-child(2) {
-      .slide {
-        .splide__pagination {
-          @apply top-full;
-        }
+        line-height: 157.9%;
+        letter-spacing: size(6.4);
       }
     }
   }
 
-  .lt {
-    @apply absolute z-10 pointer-events-none;
-    &.lt1 {
-      width: size(372);
-      top: size(232);
-      right: size(116);
-    }
-
-    &.lt2 {
-      width: size(578);
-      bottom: size(83);
-      left: size(457);
-    }
-    &.f1 {
-      width: size(568);
-      right: 0;
-      top: size(169);
-      transform-origin: right;
-    }
-    &.f2 {
-      width: size(540);
-      left: 0;
-      bottom: -#{size(310)};
-      transform-origin: left;
-    }
-
-    &.f {
-      animation: swin 3s infinite alternate-reverse ease-in-out;
-      @keyframes swin {
-        from {
-          transform: skewY(-6deg);
-        }
-        to {
-          transform: skewY(3deg);
-        }
-      }
-    }
+  .en {
+    @apply absolute;
+    height: size(146.34);
+    top: size(23);
+    left: size(4);
   }
 }
 
@@ -246,25 +146,24 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    @apply relative w-full z-20 flex flex-col items-center justify-center;
-    height: sizem(1439);
-    gap: sizem(60);
-    padding-right: sizem(27.5);
-    padding-left: sizem(27.5);
+    height: sizem(667);
+    padding-top: sizem(132);
+    padding-left: 0;
 
     .slide-box {
-      @apply flex items-end;
-      gap: sizem(35);
+      @apply flex flex-col;
+      gap: sizem(24);
       .slide {
-        @apply w-full;
-        height: sizem(227.69);
+        width: sizem(375);
+        height: sizem(281);
         .slide-item {
-          @apply w-full;
-          height: sizem(227.69);
+          width: sizem(375);
+          height: sizem(281);
           .caption {
-            left: sizem(12);
+            right: sizem(11);
             bottom: sizem(6);
             font-size: sizem(12);
+            letter-spacing: size(2.6);
           }
         }
         .splide__pagination {
@@ -272,96 +171,51 @@
         }
       }
       .t {
-        @apply w-full;
+        width: 100%;
+        padding: 0 sizem(30);
         .t1 {
-          font-size: sizem(25);
-          margin-bottom: sizem(10);
+          font-size: sizem(20);
+          line-height: 1;
+          letter-spacing: sizem(1.6);
+          margin-bottom: sizem(14);
+          padding-bottom: sizem(14);
+          border-bottom: sizem(1) solid #fff;
         }
         .t2 {
-          font-size: sizem(16);
-          margin-bottom: sizem(10);
-        }
-        .t3 {
-          font-size: sizem(14);
+          font-size: sizem(13);
+          line-height: 157.9%;
+          letter-spacing: sizem(2.6);
         }
       }
-      &:nth-child(1) {
-        @apply flex-col-reverse;
-      }
-      &:nth-child(2) {
-        @apply flex-col;
-      }
-    }
 
-    .lt {
-      @apply absolute z-10 pointer-events-none;
-      &.lt1 {
-        width: sizem(237);
-        top: sizem(50);
-        right: sizem(110.5);
-      }
+      .arrows {
+        @apply absolute z-20 w-full flex justify-between;
+        top: sizem(280);
+        padding: 0 sizem(5);
 
-      &.lt2 {
-        width: sizem(181.53);
-        bottom: sizem(47.2);
-        left: sizem(166);
-      }
-      &.f1 {
-        width: sizem(190);
-        top: -#{sizem(50)};
-      }
-      &.f2 {
-        width: sizem(170);
-        bottom: -#{sizem(60)};
-      }
-
-      &.f {
-        animation: swin 3s infinite alternate-reverse ease-in-out;
-        @keyframes swin {
-          from {
-            transform: skewY(-6deg);
-          }
-          to {
-            transform: skewY(3deg);
+        .arrow {
+          @apply cursor-pointer;
+          width: sizem(12.8);
+          height: sizem(22.86);
+          &.prev {
+            transform: scaleX(-1);
           }
         }
       }
     }
 
-    .arrows {
-      @apply absolute z-20 -translate-y-1/2 flex justify-between;
-      top: sizem(580);
-      width: sizem(350);
-
-      .arrow {
-        @apply cursor-pointer;
-        width: sizem(30);
-        height: sizem(30);
-        &.prev {
-          transform: scaleX(-1);
-        }
-      }
-    }
-
-    .arrows2 {
-      @apply absolute z-20 -translate-y-1/2 flex justify-between;
-      top: sizem(870);
-      width: sizem(350);
-
-      .arrow {
-        @apply cursor-pointer;
-        width: sizem(30);
-        height: sizem(30);
-        &.prev {
-          transform: scaleX(-1);
-        }
-      }
+    .en {
+      @apply absolute;
+      height: sizem(63.94);
+      top: sizem(36);
+      left: 0;
     }
   }
 }
 </style>
 
 <script setup>
+import View from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
@@ -369,38 +223,19 @@ const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
-const splide2 = ref()
 
-const imgsA = [
+const imgs = [
   {
-    img: new URL("../section/s3/a1.webp", import.meta.url).href,
-    caption: "塭仔圳溼地公園",
+    img: new URL("../section/s3/1.jpg", import.meta.url).href,
+    caption: "成蘆大橋",
   },
   {
-    img: new URL("../section/s3/a2.webp", import.meta.url).href,
-    caption: "塭仔圳溼地公園",
+    img: new URL("../section/s3/2.jpg", import.meta.url).href,
+    caption: "65快速道路",
   },
   {
-    img: new URL("../section/s3/a3.webp", import.meta.url).href,
-    caption: "中港綠堤",
-  },
-  {
-    img: new URL("../section/s3/a4.webp", import.meta.url).href,
-    caption: "昌平公園",
-  },
-  {
-    img: new URL("../section/s3/a5.webp", import.meta.url).href,
-    caption: "願景公園",
-  },
-]
-const imgsB = [
-  {
-    img: new URL("../section/s3/b1.webp", import.meta.url).href,
-    caption: "iTower新莊創新園區",
-  },
-  {
-    img: new URL("../section/s3/b2.webp", import.meta.url).href,
-    caption: "宏匯廣場",
+    img: new URL("../section/s3/3.jpg", import.meta.url).href,
+    caption: "新北環快",
   },
 ]
 </script>
