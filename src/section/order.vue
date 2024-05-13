@@ -49,7 +49,7 @@
               class="select w-full rounded-none bg-white"
               v-model="formData.room_type"
             >
-              <!--     <option value="" selected disabled>請選擇房型</option>  -->
+            <option value="" selected disabled>請選擇需求</option>
               <option
                 v-for="room in info.room_type"
                 :value="room"
@@ -62,7 +62,7 @@
               class="select w-full rounded-none bg-white"
               v-model="formData.budget"
             >
-              <!--   <option value="" selected disabled>請選擇預算</option> -->
+              <option value="" selected disabled>請選擇預算</option>
               <option
                 v-for="budget in info.budget"
                 :value="budget"
