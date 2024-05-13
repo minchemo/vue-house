@@ -17,7 +17,7 @@
     </div>
     <div class="en2">
       <div class="en2-t" data-aos="fade-up" data-aos-delay="0">工藝品味之選 輕奢訂製享受生活</div>
-      <img class="en2-i" data-aos="fade-up" data-aos-delay="200" src="@/section/s8/en2.png" alt="" srcset="" />
+      <img class="en2-i" data-aos="fade-up" data-aos-delay="200" src="@/section/s8/en2.svg" alt="" srcset="" />
     </div>
     <div class="slide-box">
       <Splide
@@ -62,13 +62,13 @@
     </div>
     <img
       class="en"
-      src="@/section/s8/en.png"
+      src="@/section/s8/en.svg"
       alt=""
       srcset=""
       v-if="!isMobile"
       data-aos="fade-up" data-aos-delay="0"
     />
-    <img class="en" src="@/section/s8/enm.png" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
+    <img class="en" src="@/section/s8/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
     <div class="c" data-aos="fade" data-aos-delay="600"></div>
   </article>
 </template>
@@ -84,7 +84,7 @@
   .i {
     @apply relative w-full;
     height: size(538);
-    background-image: url("@/section/s8/i.jpg");
+    background-image: url("@/section/s8/i.webp");
     background-size: cover;
     background-position: center;
     .cap {
@@ -198,9 +198,14 @@
     height: sizem(1334);
     padding-top: sizem(97);
 
+    .c {
+      display: none;
+    }
+
     .i {
       height: sizem(331);
-      background-image: url("@/section/s8/im.jpg");
+      background-image: url("@/section/s8/im.webp");
+      background-repeat: no-repeat;
       .cap {
         @apply absolute;
         right: sizem(11);
@@ -301,13 +306,13 @@ const splide = ref()
 const imgs = [
   {
     img: globals.$isMobile()
-      ? new URL("../section/s8/1m.png", import.meta.url).href
-      : new URL("../section/s8/1.png", import.meta.url).href,
+      ? new URL("../section/s8/1m.webp", import.meta.url).href
+      : new URL("../section/s8/1.webp", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s8/2m.png", import.meta.url).href
-      : new URL("../section/s8/2.png", import.meta.url).href,
+      ? new URL("../section/s8/2m.webp", import.meta.url).href
+      : new URL("../section/s8/2.webp", import.meta.url).href,
   },
 ]
 </script>

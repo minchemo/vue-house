@@ -1,6 +1,6 @@
 <template>
   <article class="s1">
-    <img class="t1" src="@/section/s1/logo.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
+    <img class="t1" src="@/section/s1/logo.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
     <div class="t2" data-aos="fade-up" data-aos-delay="200">|成州生活圈 高質感精工2-3房|</div>
   </article>
 </template>
@@ -12,7 +12,7 @@
   @apply w-full h-screen relative flex flex-col items-center justify-center text-white;
   min-height: size(900);
   max-height: size(1080);
-  background-image: url("@/section/s1/bg.jpg");
+  background-image: url("@/section/s1/bg.webp");
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
@@ -36,11 +36,12 @@
 @media screen and (max-width: 767px) {
   .s1 {
     height: calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);
+    min-height: sizem(667);
+    max-height: sizem(667);
     font-size: sizem(14);
-    background-size: 115%;
-    background-image: url("@/section/s1/bgm.jpg");
+    background-size: 100%;
+    background-image: url("@/section/s1/bgm.png");
+    background-size: cover;
     background-position: center;
     background-attachment: unset;
     gap: sizem(50);

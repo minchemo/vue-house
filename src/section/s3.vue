@@ -52,13 +52,13 @@
     </div>
     <img
       class="en"
-      src="@/section/s3/ENm.png"
+      src="@/section/s3/ENm.svg"
       alt=""
       srcset=""
       v-if="isMobile"
       data-aos="fade-up" data-aos-delay="0"
     />
-    <img class="en" src="@/section/s3/EN.png" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
+    <img class="en" src="@/section/s3/EN.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
   </article>
 </template>
 
@@ -226,15 +226,15 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
+    img: new URL("../section/s3/1.webp", import.meta.url).href,
     caption: "成蘆大橋",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
+    img: new URL("../section/s3/2.webp", import.meta.url).href,
     caption: "65快速道路",
   },
   {
-    img: new URL("../section/s3/3.jpg", import.meta.url).href,
+    img: new URL("../section/s3/3.webp", import.meta.url).href,
     caption: "新北環快",
   },
 ]

@@ -38,12 +38,12 @@
           /></label>
 
           <label class="row" v-if="info.room_type"
-            ><span>需求</span>
+            ><span>需求房型</span>
             <select
-              class="select w-full rounded-none bg-white "
+              class="select w-full rounded-none"
               v-model="formData.room_type"
             >
-              <!--     <option value="" selected disabled>請選擇房型</option>  -->
+              <option value="" selected disabled>請選擇房型</option>  
               <option
                 v-for="room in info.room_type"
                 :value="room"

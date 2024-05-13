@@ -61,13 +61,13 @@
     </div>
     <img
       class="en"
-      src="@/section/s5/en.png"
+      src="@/section/s5/en.svg"
       alt=""
       srcset=""
       v-if="!isMobile"
       data-aos="fade-up" data-aos-delay="0"
     />
-    <img class="en" src="@/section/s5/enm.png" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
+    <img class="en" src="@/section/s5/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
   </article>
 </template>
 
@@ -234,15 +234,15 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s5/1.jpg", import.meta.url).href,
+    img: new URL("../section/s5/1.webp", import.meta.url).href,
     caption: "成州市場",
   },
   {
-    img: new URL("../section/s5/2.jpg", import.meta.url).href,
+    img: new URL("../section/s5/2.webp", import.meta.url).href,
     caption: "成州市場",
   },
   {
-    img: new URL("../section/s5/3.jpg", import.meta.url).href,
+    img: new URL("../section/s5/3.webp", import.meta.url).href,
     caption: "成泰路商圈",
   },
 ]

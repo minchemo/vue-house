@@ -58,8 +58,8 @@
         </div>
       </div>
     </div>
-    <img class="en" src="@/section/s6/en.png" alt="" srcset="" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0"/>
-    <img class="en" src="@/section/s6/enm.png" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
+    <img class="en" src="@/section/s6/en.svg" alt="" srcset="" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0"/>
+    <img class="en" src="@/section/s6/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
   </article>
 </template>
 
@@ -227,16 +227,16 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s6/1.jpg", import.meta.url).href,
-    caption: "洲子洋公園",
+    img: new URL("../section/s6/1.webp", import.meta.url).href,
+    caption: "成州國小",
   },
   {
-    img: new URL("../section/s6/2.jpg", import.meta.url).href,
-    caption: "大都會公園",
+    img: new URL("../section/s6/2.webp", import.meta.url).href,
+    caption: "情境圖",
   },
   {
-    img: new URL("../section/s6/3.jpg", import.meta.url).href,
-    caption: "大都會公園周邊環境",
+    img: new URL("../section/s6/3.webp", import.meta.url).href,
+    caption: "五股圖書館",
   },
 ]
 </script>

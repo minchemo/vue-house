@@ -2,18 +2,18 @@
   <article class="s2">
     <img
       class="en"
-      src="@/section/s2/enm.png"
+      src="@/section/s2/ENm.svg"
       alt=""
       srcset=""
       v-if="isMobile"
       data-aos="fade-up" data-aos-delay="0"
     />
-    <img class="en" src="@/section/s2/en.png" alt="" srcset="" v-else  data-aos="fade-up" data-aos-delay="0"/>
+    <img class="en" src="@/section/s2/EN.svg" alt="" srcset="" v-else  data-aos="fade-up" data-aos-delay="0"/>
     <div class="viewbox"  data-aos="fade-up" data-aos-delay="400">
       <View />
     </div>
     <div class="t1"  data-aos="fade-up" data-aos-delay="100">1高雙橋3快 南來北往一路暢快</div>
-    <img class="t2" v-if="!isMobile" src="@/section/s2/t.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="200" />
+    <img class="t2" v-if="!isMobile" src="@/section/s2/t.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="200" />
   </article>
 </template>
 
@@ -22,7 +22,7 @@
 
 .s2 {
   @apply w-full relative bg-[#108FF6] flex flex-col items-center justify-start text-white;
-  height: size(1202);
+  height: size(1080);
   padding-top: size(221);
 
   .en {

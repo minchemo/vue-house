@@ -37,6 +37,9 @@
           v-for="i in imgs"
           :style="{ 'background-image': `url(${i.img})` }"
         >
+        <div class="caption">
+            {{ i.caption }}
+          </div>
         </SplideSlide>
       </Splide>
       <div class="t">
@@ -61,13 +64,13 @@
     </div>
     <img
       class="en"
-      src="@/section/s7/en.png"
+      src="@/section/s7/en.svg"
       alt=""
       srcset=""
       v-if="!isMobile"
       data-aos="fade-up" data-aos-delay="0"
     />
-    <img class="en" src="@/section/s7/enm.png" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
+    <img class="en" src="@/section/s7/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
   </article>
 </template>
 
@@ -165,7 +168,7 @@
 
 @media screen and (max-width: 767px) {
   .s7 {
-    height: sizem(667);
+    height: sizem(740);
     padding-top: sizem(97);
     padding-left: 0;
 
@@ -174,6 +177,7 @@
       gap: sizem(27);
       .arrows {
         @apply absolute z-20 w-full flex justify-between;
+        display: none;
         top: sizem(260);
         padding: 0 sizem(5);
 
@@ -188,16 +192,15 @@
       }
       .slide {
         width: sizem(375);
-        height: sizem(331);
+        height: sizem(370);
         .slide-item {
           width: sizem(375);
-          height: sizem(331);
+          height: sizem(370);
           .caption {
             right: sizem(11);
-            bottom: sizem(7);
+            bottom: sizem(6);
             font-size: sizem(12);
-            font-weight: 400;
-            letter-spacing: sizem(1.5);
+            letter-spacing: size(2.6);
           }
         }
         .splide__pagination {
@@ -270,8 +273,8 @@ const splide = ref()
 
 const imgs = [
   {
-    img:  new URL("../section/s7/1.jpg", import.meta.url).href,
-    caption: "成州市場",
+    img:  new URL("../section/s7/1.webp", import.meta.url).href,
+    caption: "建築外觀3D模擬示意圖",
   },
 ]
 </script>
