@@ -1,10 +1,50 @@
 <template>
   <article class="s8">
-    <div class="i">
-      <div class="cap">情境示意圖</div>
+    <div class="slide-box-i">
+      <Splide
+        ref="splide2"
+        :options="{
+          arrows: false,
+          autoplay: true,
+          pagination: true,
+          interval: 4000,
+          gap: 20,
+          type: 'loop',
+        }"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs2"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+          <div class="caption">
+            {{ i.caption }}
+          </div>
+        </SplideSlide>
+      </Splide>
+      <div class="arrows" v-if="isMobile">
+        <img
+          src="@/section/arrow.png"
+          class="arrow prev"
+          alt=""
+          srcset=""
+          @click="splide2.go('<')"
+        />
+        <img
+          src="@/section/arrow.png"
+          class="arrow next"
+          alt=""
+          srcset=""
+          @click="splide2.go('>')"
+        />
+      </div>
     </div>
+
     <div class="t">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">茂德建設品牌 職人工藝再現經典</div>
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
+        茂德建設品牌 職人工藝再現經典
+      </div>
       <div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">
         家，是永恆幸福的承諾。<br />
         因為有承諾，所以更堅持以職人工藝，一磚一瓦細心雕琢，<br />
@@ -16,8 +56,17 @@
       </div>
     </div>
     <div class="en2">
-      <div class="en2-t" data-aos="fade-up" data-aos-delay="0">工藝品味之選 輕奢訂製享受生活</div>
-      <img class="en2-i" data-aos="fade-up" data-aos-delay="200" src="@/section/s8/en2.svg" alt="" srcset="" />
+      <div class="en2-t" data-aos="fade-up" data-aos-delay="0">
+        工藝品味之選 輕奢訂製享受生活
+      </div>
+      <img
+        class="en2-i"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        src="@/section/s8/en2.svg"
+        alt=""
+        srcset=""
+      />
     </div>
     <div class="slide-box">
       <Splide
@@ -66,9 +115,18 @@
       alt=""
       srcset=""
       v-if="!isMobile"
-      data-aos="fade-up" data-aos-delay="0"
+      data-aos="fade-up"
+      data-aos-delay="0"
     />
-    <img class="en" src="@/section/s8/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
+    <img
+      class="en"
+      src="@/section/s8/enm.svg"
+      alt=""
+      srcset=""
+      v-else
+      data-aos="fade-up"
+      data-aos-delay="0"
+    />
     <div class="c" data-aos="fade" data-aos-delay="600"></div>
   </article>
 </template>
@@ -81,21 +139,40 @@
   height: size(2162);
   padding-top: size(224);
 
-  .i {
+  .slide-box-i {
     @apply relative w-full;
     height: size(538);
-    background-image: url("@/section/s8/i.webp");
-    background-size: cover;
-    background-position: center;
-    .cap {
-      @apply absolute;
-      right: size(49);
-      bottom: size(20);
-      color: #fff;
-      font-family: "Noto Sans TC";
-      font-size: size(20);
-      font-weight: 400;
-      letter-spacing: size(2.6);
+    margin-bottom: size(20);
+    .slide-item {
+      @apply w-full;
+      height: size(538);
+      background-size: cover;
+      .caption {
+        @apply absolute font-['Noto_Sanc_TC'];
+        right: size(49);
+        bottom: size(20);
+        color: #fff;
+        font-size: size(20);
+        font-weight: 400;
+        letter-spacing: size(2.6);
+      }
+    }
+    .splide__pagination {
+      @apply absolute right-0 w-full flex justify-center;
+      padding: size(25) 0;
+      li {
+        line-height: 0;
+        button {
+          @apply rounded-full;
+          width: size(10);
+          height: size(10);
+          background: #0d6b68;
+          &.is-active {
+            background: #138784;
+          }
+        }
+      }
+      gap: size(13);
     }
   }
 
@@ -202,17 +279,24 @@
       display: none;
     }
 
-    .i {
+    .slide-box-i {
       height: sizem(331);
-      background-image: url("@/section/s8/im.webp");
-      background-repeat: no-repeat;
-      .cap {
-        @apply absolute;
-        right: sizem(11);
-        bottom: sizem(7);
-        font-size: sizem(12);
-        font-weight: 400;
-        letter-spacing: sizem(1.56);
+      margin-bottom: 0;
+      .slide-item {
+        height: sizem(331);
+        .caption {
+          right: sizem(11);
+          bottom: sizem(7);
+          font-size: sizem(12);
+          font-weight: 400;
+          letter-spacing: sizem(1.56);
+        }
+      }
+      .splide__pagination {
+        @apply hidden;
+      }
+      .arrows {
+        @apply top-1/2 -translate-y-1/2;
       }
     }
 
@@ -302,6 +386,7 @@ const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
+const splide2 = ref()
 
 const imgs = [
   {
@@ -313,6 +398,21 @@ const imgs = [
     img: globals.$isMobile()
       ? new URL("../section/s8/2m.webp", import.meta.url).href
       : new URL("../section/s8/2.webp", import.meta.url).href,
+  },
+]
+
+const imgs2 = [
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/im.webp", import.meta.url).href
+      : new URL("../section/s8/i.webp", import.meta.url).href,
+    caption: "情境示意圖",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/im.webp", import.meta.url).href
+      : new URL("../section/s8/i.webp", import.meta.url).href,
+    caption: "情境示意圖",
   },
 ]
 </script>
