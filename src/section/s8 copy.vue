@@ -401,43 +401,58 @@ const imgs = [
   },
 ]
 
+const imgs2 = [
 
+  
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/01m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/01.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/02m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/02.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/03m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/01.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/04m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/02.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/05m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/01.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/06m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/02.webp", import.meta.url).href,
+    caption: "",
+  },
+]
 
- const imgs2 = globals.$isMobile()
+ const imgs3 = globals.$isMobile()
   ? [
        {
-        img: new URL("../section/s8/slider/01m.webp", import.meta.url).href,
-         caption: "",
-       },
-       {
-        img: new URL("../section/s8/slider/02m.webp", import.meta.url).href,
-         caption: "",
-       },
-       {
-        img: new URL("../section/s8/slider/03m.webp", import.meta.url).href,
-         caption: "",
-       },
-       {
-        img: new URL("../section/s8/slider/04m.webp", import.meta.url).href,
-         caption: "",
-       },
-       {
-        img: new URL("../section/s8/slider/05m.webp", import.meta.url).href,
-         caption: "",
-       },
-       {
-        img: new URL("../section/s8/slider/06m.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/xxx.webp", import.meta.url).href,
+         caption: "手機圖片路徑",
        },
      ]
    : [
        {
-         img: new URL("../section/s8/slider/01.webp", import.meta.url).href,
-         caption: "",
-       },
-       {
-         img: new URL("../section/s8/slider/02.webp", import.meta.url).href,
-         caption: "",
+         img: new URL("../section/s8/slider/xxx.webp", import.meta.url).href,
+         caption: "PC圖片路徑",
        },
      ]
 </script>
