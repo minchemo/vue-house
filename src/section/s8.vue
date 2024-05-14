@@ -439,4 +439,18 @@ const imgs2 = [
     caption: "",
   },
 ]
+
+// const imgs3 = globals.$isMobile()
+//   ? [
+//       {
+//         img: new URL("../section/s8/slider/xxx.webp", import.meta.url).href,
+//         caption: "手機圖片路徑",
+//       },
+//     ]
+//   : [
+//       {
+//         img: new URL("../section/s8/slider/xxx.webp", import.meta.url).href,
+//         caption: "PC圖片路徑",
+//       },
+//     ]
 </script>
