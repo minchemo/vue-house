@@ -6,9 +6,7 @@
 	.st0{fill:#040000;}
 	.st1{fill:#E26F11;}
 	.st2{fill:#5C3719;}
-	.st3{fill:#50080D;stroke:#40210D;stroke-width:0.3222;stroke-miterlimit:10;}
 	.st4{fill:#221714;}
-	.st5{fill:none;stroke:#5C3719;stroke-width:0.3296;stroke-miterlimit:10;}
 	.st6{fill:#933723;}
 	.st7{fill:#BA7A1F;}
 </style>
@@ -240,7 +238,6 @@
 				v-17h-16.9l-0.4-1.4h31.6l3.5-4.6c0,0,4,3.1,6.3,5.3c-0.1,0.6-0.6,0.8-1.4,0.8h-16.3v17h6.5l3.4-4.4c0,0,3.8,3,6.1,5.1
 				c-0.1,0.5-0.6,0.8-1.4,0.8h-14.6v19.4h9.9L307.4,244.6z"/>
 		</g>
-		<line class="st3" x1="61.1" y1="252" x2="313.4" y2="252"/>
 	</g>
 	<g>
 		<g>
@@ -712,8 +709,6 @@
 			</g>
 		</g>
 	</g>
-	<polyline class="st5" points="88.9,287.7 61.6,287.7 61.6,271.3 88.9,271.3 	"/>
-	<polyline class="st5" points="285.3,287.7 312.6,287.7 312.6,271.3 285.3,271.3 	"/>
 </g>
 <g>
 	<g>
