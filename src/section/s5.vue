@@ -1,12 +1,10 @@
 <template>
   <article class="s5">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
-    <img src="./s1/oo.svg" alt="oo" class="oo1">
+    <img src="./s5/hr.webp" class="hr" alt="亮光">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">新購屋經濟學 <br v-if="isMobile"> 房貸瘦身術</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">成家×收租  好室成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">麗寶新購屋經濟學「好室成雙」新格局，讓您一次晉升「成家屋主」+「收租房東」兩種身份，一間自住一間收租，邊住邊賺立即回本，加上地上權低於市場行情總價，利上加利首購出手最佳時機。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">公園門牌  綠富生活</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">隱富繁華大道旁，心在幽靜樹海裡，「三井三錦」榮景只在轉身之間，公園門牌連動捷運便利，更顯地段價值非凡，近靜漲的魅力，成為層峰家庭置產首選。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -31,19 +29,14 @@
   @apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
   // height: size(800);
-  padding:10em 0 10em 0;
+  padding:6em 0 10em 0;
   font-size:size(18);
   gap:1.5em;
   flex-wrap:nowrap;
-    flex-direction:column-reverse;
-	.eggbg1{position: absolute;
-    display: block;
-    top: size(600);left:size(-50);width:size(1000);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-    .oo1{position: absolute;bottom:size(0);height:size(50);left:size(60);
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
+    flex-direction:column;
+  .hr{position: absolute;
+  width:size(1525);bottom: size(-50);left:size(-10);pointer-events: none;z-index: 2;
+  }
   .main {
     @apply flex;
     margin: 0;
@@ -59,14 +52,14 @@
 
   .slider {
     margin: 0;
-    flex-basis: size(840);
-      height: size(844);
+    flex-basis: size(1060);
+      height: size(1060);
     width: size(1500);
     .slide-item {
       @apply bg-cover;
       width: 100%;
     flex-basis: size(1500);
-      height: size(844);
+      height: size(1060);
       
     }
 
@@ -85,14 +78,13 @@
   .s5 {
   @apply flex-col;
     height: auto;
-    padding: 0;
+    padding: 0 0 2em 0;
   font-size:sizem(15);
   flex-wrap:nowrap;
 gap:0em;
-background:linear-gradient(135deg, #3F94CA 0%, #71A3A5 20%, #E0C663 50%,#E1A843 70%);
-	.eggbg1{
-    top: sizem(50);left:sizem(100);width:sizem(400);}
-  .oo1{top:sizem(20);height:sizem(20);left:sizem(10); right: auto;}
+  .hr{
+  width:sizem(600);bottom: sizem(-80);left:sizem(-100);
+  }
 
   .main {
     padding: 0 sizem(32.5);
@@ -152,19 +144,11 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.webp", import.meta.url).href ,
-    caption: "現場實景經電腦修飾"
+    caption: "環示圖"
   },
   {
     img:new URL("./s5/2.webp", import.meta.url).href ,
-    caption: "現場實景經電腦修飾"
-  },
-  {
-    img:new URL("./s5/3.webp", import.meta.url).href ,
-    caption: "現場實景經電腦修飾"
-  },
-  {
-    img:new URL("./s5/4.webp", import.meta.url).href ,
-    caption: "現場實景經電腦修飾"
+    caption: "國泰路二段"
   },
 ]
 </script>

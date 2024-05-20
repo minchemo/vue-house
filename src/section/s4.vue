@@ -1,26 +1,14 @@
 <template>
   <article class="s4" ref="s4">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
-    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃" v-if="!isMobile">
-    <img src="./s1/oo.svg" alt="oo" class="oo1" v-if="!isMobile">
+    <img src="./s4/hr.webp" class="hr" alt="亮光">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">北士科半價  最甜補漲區</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">好地段×大品牌  增值成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">坐擁5分鐘直達士林燙金地段，北士科半價輕鬆挺進新士林生活圈，加上麗寶集團大品牌效益、未來捷運網路、銀新未來城等利多加持，享受未來紅利增值爆發期。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">黃線捷運  軌道鍍金</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">距南京路/輜汽路口附近捷運Y19(新甲站)約800公尺，屬於鳳山都市計畫中的精華站點、增值可期！黃線未來可連結捷運紅橘線、輕軌、台鐵，在市區形成格狀網路，預計2028年底完工通車。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
-          <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
+      <img src="./s4/1.webp" alt="捷運">
     </div>
 
   </article>
@@ -32,59 +20,36 @@
 
 
 .s4 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex items-center text-[#fff] bg-[#292A2B];
   width: 100%;
   height:auto;
-  padding:11em 0 10em 0;
+  padding:0;
   font-size:size(19);
-  gap:3em;
+  gap:0em;
   flex-wrap: wrap;
     flex-direction:row-reverse;
-	.eggbg1{position: absolute;
-    display: block;
-    top: size(-50);left:size(-30);width:size(500);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-	.eggbg2{position: absolute;
-    display: block;
-    top: size(870);right:size(-30);width:size(350);
-		transform:translateY(-50%);
-		animation: an 4s ease-in-out infinite alternate;}
-    .oo1{position: absolute;top:size(350);height:size(50);right:size(60);
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
+    justify-content:flex-start;
+  .hr{position: absolute;
+  width:100%;bottom: size(-20);left:size(0);pointer-events: none;z-index:2;
+  }
 
 
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
+    flex: 1;
     margin: 0;
-    flex-basis: size(590);
   flex-direction: column;
-  text-align: justify;
+  text-align: justify;z-index:2;
 }
+  .txt{width:size(570);}
 
 
 
   .slider {
-    margin: 0;
-    flex-basis: size(840);
-      height: size(560);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
-      
-    }
-    .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
-    }
+    margin: 0 size(-10) 0 0;
+    flex-basis: size(1132);
+    height:auto;z-index: 1;
+    img{width: 100%;}
   }
 }
 /* 螢幕尺寸標準 */
@@ -102,37 +67,23 @@ font-size:sizem(15);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
-
-	.eggbg1{
-    top: sizem(-40);left:sizem(-50);width:sizem(400);}
-.img{position: absolute;top:sizem(300);left: auto;
-  right:sizem(-155);width:sizem(260);bottom: auto;}
-
+  .hr{
+  width:sizem(500);bottom: sizem(-8);left:sizem(-50);
+  }
 .main {
   padding: 0 sizem(32.5);
   width: 100%;
 }
 
-.txt {margin: 4.4em auto 1.3em;
+.txt {margin: 4.4em auto 1.3em;width: 100%;
 }
 
 
 .slider {
+  position: relative;
   height: auto;
-  width: 100%;
-
-  .caption {
-  font-size:sizem(12);  
-  right:sizem(5);
-  bottom:sizem(5);
-  }
-  .slide-item {
-    @apply bg-cover;
-    width: 100%;
-  flex-basis: auto;
-    height: sizem(250);
-    
-  }
+  width: 115%;
+  left: 0;
 }
 }
 }
@@ -164,20 +115,5 @@ const options = {
   gap: 0,
   type: 'loop'
 }
-
-const imgs = [
-  {
-    img:new URL("./s4/1.webp", import.meta.url).href ,
-    caption: "士林生活圈實景"
-  },
-  {
-    img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "士林商圈實景"
-  },
-  {
-    img:new URL("./s4/3.webp", import.meta.url).href ,
-    caption: "士林科教館實景"
-  },
-]
 </script>
 

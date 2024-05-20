@@ -1,13 +1,10 @@
 <template>
   <article class="s6" ref="s6">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃" v-if="isMobile">
-    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃">
-	<img src="./s1/oo.svg" alt="oo" class="oo1" v-if="!isMobile">
+    <div class="hr" v-if="!isMobile"></div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">兩代完美共融 <br v-if="isMobile"> 獨立空間不打擾</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">陪伴×孝親  盡孝成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">除了自住同步收租，也可規劃一間自住一間孝親，兩代同堂不同室，獨立門戶享充足隱私，近鄰雙公園、家樂福，方便隨時出門散步、購物共聚天倫，家人之間的親情不再因居住距離而降溫。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">書香名門  明星學風</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">忠孝國小.國中、鳳甲國中、鳳西國中、國立鳳新高級中學，皆在車程5分鐘內可達，「三井三錦」坐擁豐沛教育資源，是培養菁英下一代的最佳人生起點。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,25 +32,16 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:11em 0 10em 0;
+  padding:8em 0 7em 0;
   font-size:size(19);
   gap:3em;
   flex-wrap: wrap;
-	.eggbg2{position: absolute;
-    display: block;
-    top: size(60);right:size(260);width:size(500);
-		transform:translateY(-20%);
-		animation: an 4s ease-in-out infinite alternate;}
-    .oo1{position: absolute;bottom:size(-50);height:size(50);left:size(1000);
-		transform: translateX(20%);z-index: 2;
-		animation: an 3s ease-in-out infinite alternate;}
-
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
+.hr{position: absolute;left: 0;right: 0;bottom:size(-15);width:size(750);height: size(30);margin: 0 auto;background: radial-gradient(50% 50% at 50% 50%, #E8BE54 0%, rgba(232, 190, 84, 0.00) 100%);
+  &::before{content: "";display: block;
+  position: absolute;width:200%;background: linear-gradient(90deg, rgba(232, 190, 84, 0.00) 0%, #E8BE54 25%, #FFF 50%, #E8BE54 75%, rgba(232, 190, 84, 0.00) 100%);height:size(5);left: -50%;top:size(12.5);
 }
-  img{width: 100%;position: relative;}}
+
+}
   .main {
     @apply flex;
     margin: 0;
@@ -89,19 +77,11 @@
   .s6 {
   @apply flex-col;
     height: auto;
-    padding: 0;
+    padding: 2em 0 0 0;
   font-size:sizem(15);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:0em;
-background:linear-gradient(135deg, #71A3A5 0%, #E0C663 30%,#E1A843 50%);
-	.eggbg1{position: absolute;
-    display: block;
-    top: sizem(50);left:sizem(-100);width:sizem(500);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
@@ -162,24 +142,20 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s6/1.webp", import.meta.url).href ,
-    caption: "五華國小實景"
+    img:new URL("./s6/1.jpg", import.meta.url).href ,
+    caption: "忠孝國小"
   },
   {
-    img:new URL("./s6/2.webp", import.meta.url).href ,
-    caption: "淡水河畔公園實景"
+    img:new URL("./s6/2.jpg", import.meta.url).href ,
+    caption: "鳳甲國中"
   },
   {
-    img:new URL("./s6/3.webp", import.meta.url).href ,
-    caption: "家樂福商圈實景"
+    img:new URL("./s6/3.jpg", import.meta.url).href ,
+    caption: "鳳西國中"
   },
   {
-    img:new URL("./s6/4.webp", import.meta.url).href ,
-    caption: "星巴克重陽集賢門市實景"
-  },
-  {
-    img:new URL("./s6/5.webp", import.meta.url).href ,
-    caption: "親水公園實景"
+    img:new URL("./s6/4.jpg", import.meta.url).href ,
+    caption: "國立鳳新高級中學"
   },
 ]
 </script>

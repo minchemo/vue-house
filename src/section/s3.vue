@@ -1,13 +1,10 @@
 <template>
   <article class="s3" ref="s3">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃" v-if="!isMobile">
-    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃">
-	<img src="./s1/oo.svg" alt="oo" class="oo1">
+    <img src="./s3/hr.webp" class="hr" alt="亮光">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">便捷三重奏 <br v-if="isMobile"> 一橋北市二捷三線</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">重陽橋×捷運Y22站  好"運"成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">一橋(重陽橋)迅抵台北大士林生活圈，捷運北環段Y22/Y23站(預計2031年完工)隨侍左右，輕鬆串接精華三線：新蘆線、信義線、文湖線，交通動能多元完善，坐車開車都是PLAN A。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">千億建設  聚富核心</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">鳳山重磅建設一級地段，匯聚三井LaLaport、衛武營藝術之丘、空中鳳城、 大東文創之星…國際級購物中心、高雄藝術新門戶、首宗雙捷運聯開案...鑽石領地前景無限。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,30 +32,14 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:11em 0 10em 0;
+  padding:8em 0 9em 0;
   font-size:size(19);
   gap:3em;
   flex-wrap: wrap;
-	.eggbg1{position: absolute;
-    display: block;
-    top: size(-250);left:size(630);width:size(700);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-	.eggbg2{position: absolute;
-    display: block;
-    top: size(850);right:size(400);width:size(150);
-		transform:translateY(-50%);
-		animation: an 4s ease-in-out infinite alternate;}
-  .oo1{position: absolute;top:size(225);height:size(50);left:size(60);
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
+  .hr{position: absolute;
+  width:size(2048);bottom: size(-104);left:size(-64);pointer-events: none;z-index: 2;
+  }
 
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -91,17 +72,13 @@
   .s3 {
   @apply flex-col;
     height: auto;
-    padding: 0;
+    padding: 0 0 3em;
   font-size:sizem(15);
   flex-wrap:nowrap;
-  margin-bottom:0em;
   gap:0em;
-	.eggbg2{
-    top: sizem(-160);right:sizem(-80);width:sizem(280);
-  transform: translateY(-10%);}
-  .oo1{top:sizem(30);height:sizem(20);left:auto;right:sizem(100);}
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
+  .hr{
+  width:sizem(627);bottom: sizem(-60);left:sizem(-55);
+  }
 
   .main {
     padding: 0 sizem(32.5);

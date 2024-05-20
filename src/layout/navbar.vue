@@ -129,7 +129,8 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #19A3CEcc;
+        background: linear-gradient(180deg, rgba(43, 17, 0, 0.80) 0%, rgba(183, 135, 39, 0.80) 100%);
+        backdrop-filter: blur(2px);
         width:100%;
         height: size(60);
         z-index: 5;
@@ -171,14 +172,14 @@
                 }
             }
             &.btn2{
-                background:#0466CA;
-;
+                background:#AE7F47;
+                transition: background .2s;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
 
                 &:hover {
-                    background:#014d99;
+                    background:#daaf3b;
                     &:after {
                         width:0;
                     }
@@ -343,6 +344,8 @@
             gap: sizem(23);
             justify-content: center;
             flex-direction: column;
+            background: linear-gradient(180deg, rgba(183, 135, 39, 0.80) 0%, rgba(43, 17, 0, 0.80) 100%);
+       
         padding: 0;
           //  background-image: url('@/section/menubgm.png');
 
