@@ -27,7 +27,7 @@
   @apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
   // height: size(800);
-  padding:6em 0 6em 0;
+  padding:6em 0 11em 0;
   font-size:size(18);
   gap:1.5em;
   flex-wrap:nowrap;
