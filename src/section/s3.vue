@@ -139,16 +139,24 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.webp", import.meta.url).href ,
-    caption: "重陽橋"
+    img:new URL("./s3/1.jpg", import.meta.url).href ,
+    caption: "台積電擴大投資高雄"
   },
   {
-    img:new URL("./s3/2.webp", import.meta.url).href ,
-    caption: "北環段捷運情境示意圖"
+    img:new URL("./s3/2.jpg", import.meta.url).href ,
+    caption: "三井LaLaport"
   },
   {
-    img:new URL("./s3/3.webp", import.meta.url).href ,
-    caption: "新蘆線捷運徐匯中學站"
+    img:new URL("./s3/3.jpg", import.meta.url).href ,
+    caption: "衛武營藝術之丘"
+  },
+  {
+    img:new URL("./s3/4.jpg", import.meta.url).href ,
+    caption: "衛武營國家藝文中心"
+  },
+  {
+    img:new URL("./s3/5.jpg", import.meta.url).href ,
+    caption: "空中鳳城"
   },
 ]
 </script>
