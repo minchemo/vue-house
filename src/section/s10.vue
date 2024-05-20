@@ -137,7 +137,7 @@ const options = {
 const imgs = [
   {
     img:new URL("./s10/1.webp", import.meta.url).href ,
-    caption: "環示圖"
+    caption: "樣品屋預留"
   },
 ]
 </script>

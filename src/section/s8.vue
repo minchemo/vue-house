@@ -145,11 +145,11 @@ const options = {
 const imgs = [
   {
     img:new URL("./s8/1.webp", import.meta.url).href ,
-    caption: "環示圖"
+    caption: "外觀實景"
   },
   {
     img:new URL("./s8/2.webp", import.meta.url).href ,
-    caption: "環示圖"
+    caption: "外觀實景"
   },
 ]
 </script>
