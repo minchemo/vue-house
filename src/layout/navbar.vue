@@ -1,17 +1,20 @@
 <template>
     <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
-        <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
             v-bind:class="{ 'open': menuOpen }">
-            <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
            <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>  -->
-            <template v-for="item, i in info.navList">
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
-                @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
+           <template v-for="item in info.navList">
+            <div
+                class="menu-item cursor-pointer text-white font-['noto_sans_tc']"
+                v-bind:class="{ btn2: item.type }"
+                @click="scrollTo(item.target, $isMobile() ? (item.offsetmo ? item.offsetmo : item.offset) : item.offset)"
+                v-if="!(item.name === '地圖導航' && !info.address) && !(item.name === '立即來電' && !info.phone)"
+                :key="item.name"
+            >
                 <span>{{ item.name }}</span>
             </div>
             </template>
@@ -30,17 +33,6 @@
 .nav {
     right: size(114);
     top: size(51);
- /*   .logo {
-        width: size(145);
-        height: size(50);
-        background-image: url('@/section/s1/logo.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        left:1em;
-    }
-    */
 
     .menu-btn {
         background-color: transparent;
@@ -269,9 +261,6 @@
             top: sizem(13);
             left:sizem(10);
 
-            &.open {
-              //  filter: brightness(0) invert(1);
-            }
         }
 
         .menu-btn {

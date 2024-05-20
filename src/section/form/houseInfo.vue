@@ -6,7 +6,7 @@
                     <div class="title font-['Noto_serif_TC',serif]">建案資訊</div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                            v-for="item in info.houseInfos">
+                            v-for="item in info.houseInfos" :key="item">
                             <p class="mr-5 border-l-2 border-[#C9912B] pl-2 text-[#C9912B] font-[700]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal"
                                 v-html="item[1]">
@@ -68,22 +68,15 @@
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
-
-            p:first-child {
-                // min-width: 4.5em;
-            }
         }
     }
 }
 @media screen and (max-width:768px) {
 .house {
-    // background:#fff;
-  //  height: sizem(400);
     font-size: sizem(14);
 }
     .footer {
         margin-bottom: sizem(0);
-        //margin-bottom: sizem(63);
     }
 
     .info-box {
