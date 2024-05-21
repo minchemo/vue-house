@@ -4,7 +4,7 @@
   <article class="s2">
     <div class="main">
       <div class="txt">
-        <p class="desc" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">如何打造永續生存的韌性城市才是解決之道，也是全世界都在努力找尋的解方;看看世界想想台灣，從深耕建築出發，我們要更積極推動地球解方。找出『地球解方』的兩把鑰匙：提升能效與近零碳，從源頭設計管控，解決因極端氣候造成的問題，實現永續發展近零碳1+能效建築。唯有我們先做好準備才能防範於未然，衷心希望我們的地球與下一代都能更好。</p>
+        <p class="desc" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">如何打造永續生存的韌性城市才是解決之道，也是全世界都在努力找尋的解方;看看世界想想台灣，從深耕建築出發，我們要更積極推動地球解方。找出『淨零地球』的三把救地球鑰匙：建築能效標示＋建築碳足跡標示＋智慧健康促進建築，從源頭設計管控，解決因極端氣候造成的問題，實現永續發展近零碳1+能效建築。唯有我們先做好準備才能防範於未然，衷心希望我們的地球與下一代都能更好。</p>
 
       </div>
     </div>
@@ -25,7 +25,7 @@
   height:auto;
   padding:7em 0 7em 0;
   font-size:size(32);
-  gap:4.5em;
+  gap:4.4em;
   flex-direction: row;
     align-items:stretch;
   flex-wrap: wrap;
@@ -33,7 +33,7 @@
 
   .main {
     margin: auto 0;
-    flex-basis: size(523);
+    flex-basis: size(545);
     .txt{text-align: justify}
 }
   .timg {
