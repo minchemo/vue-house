@@ -10,10 +10,10 @@
     <img :src="img.img" :alt="img.name">
       <div class="name">{{ img.name }}</div>
       <div class="desc">{{ img.desc }}</div>
-  </div>
+  </div><!-- 
     <div class="button">
       <button>更多資訊</button>
-    </div>
+    </div> -->
   </div>
 
   
@@ -38,13 +38,11 @@
       <div class="desc">{{ img.desc }}</div>
         </swiper-slide>
       </swiper>
-  <!--  <div class="arrows">
-        <div class="swiper-button-next"></div>
-      </div>  -->  
-
+<!-- 
     <div class="button">
       <button>更多資訊</button>
     </div>
+  -->
     </div>
   
 
