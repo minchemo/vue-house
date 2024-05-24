@@ -155,10 +155,7 @@ gap:0em;
   align-items:center;
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 52 52' fill='%23B7A999' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26,52c34.7,0,34.7-52,0-52S-8.7,52,26,52z'/%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.5' d='M40.5,26h-28 M27.6,17.4L40.5,26l-12.9,8.6'/%3E%3C/svg%3E") no-repeat center;
     background-size: 50% auto;
-    transition:background-color .5s ;
-    &:hover{
-      //background-color: #0003;
-    }
+    transition:background-color .5s;
     }
     .swiper-button-prev{transform: scaleX(-1);
       left: calc(50% - 13em);

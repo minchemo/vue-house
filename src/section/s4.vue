@@ -133,7 +133,7 @@
   flex-wrap:nowrap;
 gap:0em;
     .txt{
-  .title{;margin: 0 auto 2.5em;
+  .title{margin: 0 auto 2.5em;
     img{height: 2.56em;left: 0em;
     }
   }

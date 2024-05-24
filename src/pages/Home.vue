@@ -94,7 +94,6 @@ img {
   }
   .desc{
     margin: 0 0 0;
-    b{}
   }
   }
 .slider {

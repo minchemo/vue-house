@@ -241,8 +241,6 @@
 
 @media screen and (max-width:768px) {
 
-  .contact-info-img{
-}
 
   .mo-contact-info {
     z-index: 99;
@@ -333,8 +331,6 @@
           }
         }
 
-        &.address+div {
-        }
       &.googlemap {
     border-radius: 0 0 .5em .5em;
       }
