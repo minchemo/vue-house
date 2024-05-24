@@ -121,7 +121,7 @@ button{display: block;background: #B7A999; color: #000;border-radius: 0 .8em 0 .
   flex-wrap:nowrap;
 gap:0em;
     .txt{
-  .title{;margin: 0 auto 2.5em;
+  .title{margin: 0 auto 2.5em;
     img{height: 2.3em;left: -.5em;
     }
   }
@@ -188,18 +188,6 @@ const moved = (newIdx, prevIdx, destIdx) => {
 
 const imgs = [
   {
-    img:new URL("./s5/6.jpg", import.meta.url).href ,
-    link:'https://money.udn.com/money/story/5638/7785718',
-    name: "高雄勝偕集團「活建築+藝術建築」的實踐家",
-    desc: "高雄勝偕集團董事長吳宗國汲取Less is More(減法建築)的簡約之美、Richard Meier(白派建築)的純淨風格、Green Building(綠建築)的環保概念，以及Intelligent Building(智慧建築)的科技應用，發展出屬於自己的Living Architecture(活建築)。集團秉持著設計、結構、施工、建築、服務五大理念為基石，並以活建築的概念打破傳統框架，呈現建築即藝術的獨特風采，他是「活建築+藝術建築」的實踐家。"
-  },
-  {
-    img:new URL("./s5/5.webp", import.meta.url).href ,
-    link:'https://tw.stock.yahoo.com/news/%E8%87%AA%E5%86%A0%E5%BB%BA%E8%A8%AD%E3%80%8C%E4%B8%89%E6%99%AF%E4%B8%89%E9%8C%A6%E3%80%8D-%E6%89%93%E9%80%A0%E4%B8%80%E5%B7%B7%E7%B6%A0%E6%86%A9%E6%B4%BB%E6%B0%A7%E5%BB%BA%E7%AF%89-022148929.html',
-    name: "自冠建設「三景三錦」 打造一巷綠憩活氧建築",
-    desc: "【MyGoNews蕭又安/專題報導】世界衛生組織(WHO)發布噪音風險研究報告指出，噪音越大，人類發生高血壓的風險也會隨之升高，當環境噪音大於40分貝，每增加10分貝，罹患高血壓的風險就會增加約6％。這份報告還建議，公路交通噪音平均值應控制在53分貝以下，而夜間則應在45分貝以下。因此，現在很多居家不得不門窗緊閉隔絕噪音，卻犧牲居住的空氣流暢，為了空氣流暢，又加裝室內全熱交換系統(或新風機)，讓家裡處處都是「人工」，缺少「自然」。"
-  },
-  {
     img:new URL("./s5/4.webp", import.meta.url).href ,
     link:'https://www.nownews.com/news/6428611',
     name: "星級待客之道綿延好宅　春福安安導入「飯店宅」服務精神",
@@ -212,6 +200,12 @@ const imgs = [
     desc: "【MyGoNews蕭又安/專題報導】春福機構堅持「共好哲學」，期許能夠從個人出發進而影響團隊再邁向社會共好。除了自己好、夥伴好、公司好，更要讓合作廠商與客戶都好。「沒有獨好，只有共好」的堅持，持續影響整個企業體系、合作廠商、購買客戶，春福機構堅持推出好的建築作品及好的售後服務，讓更多的客戶能買到安心的房子，圓滿萬戶家庭的夢想，讓共好精神持續傳遞下去。"
   },
   {
+    img:new URL("./s5/5.webp", import.meta.url).href ,
+    link:'https://tw.stock.yahoo.com/news/%E8%87%AA%E5%86%A0%E5%BB%BA%E8%A8%AD%E3%80%8C%E4%B8%89%E6%99%AF%E4%B8%89%E9%8C%A6%E3%80%8D-%E6%89%93%E9%80%A0%E4%B8%80%E5%B7%B7%E7%B6%A0%E6%86%A9%E6%B4%BB%E6%B0%A7%E5%BB%BA%E7%AF%89-022148929.html',
+    name: "自冠建設「三景三錦」 打造一巷綠憩活氧建築",
+    desc: "【MyGoNews蕭又安/專題報導】世界衛生組織(WHO)發布噪音風險研究報告指出，噪音越大，人類發生高血壓的風險也會隨之升高，當環境噪音大於40分貝，每增加10分貝，罹患高血壓的風險就會增加約6％。這份報告還建議，公路交通噪音平均值應控制在53分貝以下，而夜間則應在45分貝以下。因此，現在很多居家不得不門窗緊閉隔絕噪音，卻犧牲居住的空氣流暢，為了空氣流暢，又加裝室內全熱交換系統(或新風機)，讓家裡處處都是「人工」，缺少「自然」。"
+  },
+  {
     img:new URL("./s5/2.jpg", import.meta.url).href ,
     link:'https://money.udn.com/money/story/5638/7887498?from=edn_search_result',
     name: "安南區房價翻揚 近鄰「南科」合理價在「長安里」",
@@ -222,6 +216,12 @@ const imgs = [
     link:'https://www.ctee.com.tw/news/20240325700994-431206',
     name: "通膨置產3建議 台南「春福安安」全滿足",
     desc: "中央銀行在今年3月21日宣佈調高半碼利率，各金融機構自3月25日起調升0.125個百分點新台幣存放款利率，綜合房地產業的觀點是「衝擊不大」，但是深究央行調高利率的背後動機，則是4月電價上漲後，央行看到了「預期通貨膨脹」的未來趨勢，而對抗通貨膨脹的理財方式之一，就是「房地產」。"
+  },
+  {
+    img:new URL("./s5/6.jpg", import.meta.url).href ,
+    link:'https://money.udn.com/money/story/5638/7785718',
+    name: "高雄勝偕集團「活建築+藝術建築」的實踐家",
+    desc: "高雄勝偕集團董事長吳宗國汲取Less is More(減法建築)的簡約之美、Richard Meier(白派建築)的純淨風格、Green Building(綠建築)的環保概念，以及Intelligent Building(智慧建築)的科技應用，發展出屬於自己的Living Architecture(活建築)。集團秉持著設計、結構、施工、建築、服務五大理念為基石，並以活建築的概念打破傳統框架，呈現建築即藝術的獨特風采，他是「活建築+藝術建築」的實踐家。"
   },
 ]
 </script>
