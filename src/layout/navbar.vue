@@ -1,12 +1,12 @@
 <template>
-    <div class="nav fixed z-[100]"
+    <div class="nav fixed flex z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
+           <div class="logo z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"><img src="@/section/form/logo.svg"><span>房地產行銷．建築廣告</span></div>
+        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile() && info.navList.length > 0"
             v-bind:class="{ 'open': menuOpen }">
             <div class="bar"></div>
         </div>
-        <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
-           <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>  -->
+        <div class="menu flex items-center justify-center" v-if="info.navList.length > 0" v-bind:class="{ open: menuOpen }">
            <template v-for="item in info.navList">
             <div
                 class="menu-item cursor-pointer text-white font-['noto_sans_tc']"
@@ -31,8 +31,24 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    right: size(114);
-    top: size(51);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    right:0;
+    top:0;
+    background:#000c;
+    color: #FFF;
+    width:100%;
+    font-size: size(16);
+        backdrop-filter: blur(2px);
+        height: size(60);
+        align-items: center;
+        justify-content:flex-end;
+        //border-bottom: 1px solid #FFF2;
+    .logo{width: auto;
+        padding: 0 0 0 4.3em;z-index: 2; margin: 0 auto 0 0;
+        img{height:size(29); margin: 0 1em 0 0;}
+        span{font-size: size(19);border-left: 1px solid currentColor;display: inline-block;vertical-align: middle;padding: 0 0 0 1em;letter-spacing: 0.1em;line-height: 1.8;}
+    }
 
     .menu-btn {
         background-color: transparent;
@@ -116,22 +132,14 @@
         }
     }
 
-    .menu {
-        position: fixed;
+    .menu {width: auto;
         flex-direction: row;
-        top: 0;
-        right: 0;
-        background: linear-gradient(180deg, rgba(43, 17, 0, 0.80) 0%, rgba(183, 135, 39, 0.80) 100%);
-        backdrop-filter: blur(2px);
-        width:100%;
-        height: size(60);
         z-index: 5;
         padding: 0;
-        font-size: size(16);
         gap: 2em;
         padding: 0 3em 0 0;
         font-weight: 700;
-        backdrop-filter: blur(2px);
+        flex: 1;
         justify-content:flex-end;
 
         .menu-item {
@@ -164,14 +172,14 @@
                 }
             }
             &.btn2{
-                background:#AE7F47;
+                background:#B7A999;
                 transition: background .2s;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
 
                 &:hover {
-                    background:#daaf3b;
+                    background:#998977;
                     &:after {
                         width:0;
                     }
@@ -224,7 +232,7 @@
     width: size(49.4);
     height: size(49.4);
     right: size(20);
-    bottom: size(50);
+    bottom: size(20);
     background-image: url('@/assets/top.png');
     background-size: contain;
     background-position: center;
@@ -243,24 +251,22 @@
         width: sizem(34.24);
         height: sizem(34.24);
         right: sizem(20);
-        bottom: sizem(80);
+        bottom: sizem(20);
     }
 
     .nav {
-        // width: sizem(350);
-        right:0;
-        top:0;
-        // padding: 0 sizem(8);
-        height:auto;
-        border-radius: 9999px;
+        height:sizem(60);
 
         .logo {
+        img{height:sizem(17);}
+        span{font-size: sizem(11);margin: .5em 0 0;}
+            /*
             width: sizem(80);
             height: sizem(42);
             transition: all .2s;
             top: sizem(13);
             left:sizem(10);
-
+            */
         }
 
         .menu-btn {
@@ -324,19 +330,17 @@
         }
 
         .menu {
-            height: 100%;
-          //  z-index: 0;
+            position:absolute;
+            top: 0;right: 0;width: 100%;
+            height:100vh;
             transform: translateX(150%);
             transition: all .5s;
-           // padding: 0;
            font-size: sizem(18);
             gap: sizem(23);
             justify-content: center;
             flex-direction: column;
-            background: linear-gradient(180deg, rgba(183, 135, 39, 0.80) 0%, rgba(43, 17, 0, 0.80) 100%);
-       
-        padding: 0;
-          //  background-image: url('@/section/menubgm.png');
+            background: #0009;
+            padding: 0;
 
             .menu-item {
 

@@ -1,6 +1,10 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
+  <div class="txt">
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">
+    <img src="./form/title.svg">聯絡我們</h3>
+  </div>
       <!-- Title -->
       <div class="order-title text-center  font-['Noto_serif_TC',serif]">{{ info.order.title }}</div>
       <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
@@ -71,17 +75,14 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '即刻預約' }}
+        {{ sending? '發送中..': '確認送出' }}
       </div>
 
-      <!-- Contact Info -->
-      <ContactInfo />
     </div>
 
 
-    <!-- Map -->
-    <Map v-if="info.address" />
-
+    <img src="@/section/form/order.svg" class="order-bottom" alt="order" srcset="" v-if="!isMobile">
+    <img src="@/section/form/order_m.svg" class="order-bottom" alt="order" srcset="" v-else>
     <!-- HouseInfo -->
     <HouseInfo />
   </div>
@@ -104,38 +105,24 @@
   }
 
 }
+.order-bottom{margin-top: 5vw;width: size(1677);}
 
 .order {
   position: relative;
   width: 100%;
   padding-top: 0;
-  
 
-  .order-title {
-    font-size: size(40);
-    font-weight: 700;
-    color: #FDD118;
-    padding-top:2em;
+ .txt{width:100%;
+  font-size:size(17);
+  text-align: center;color: #fff;
+  .title{
+    position: relative;margin: 0 auto 1.8em;display: inline-block;
+    img{height: 1.85em;
+      display: block;position: relative;
+      margin: 0 auto 0.3em auto;
+    }
   }
-
-  .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
-  }
-  .order-subTitle{
-    font-size: size(17);
-    color: #fff;
-    padding-top:.8em;
-    letter-spacing: 0em;
-    font-weight: 500;
-  }
-  .cus-divider {
-    margin: 0 auto;
-    width: size(300);
-    height: size(2);
-    margin-bottom: size(50);
-    background-color: #055F76;
-  }
+}
 
   .form {
     width: size(920);
@@ -196,7 +183,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#C9912B;
+    background:#B7A999;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -217,15 +204,8 @@
 }
 
 @media screen and (max-width:768px) {
-.eggbg3{
-    top: sizem(-10);right:sizem(-100);width:sizem(300);}
-	.eggbg4{
-    top: sizem(400);left:sizem(0);width:sizem(50);}
-  .oo3{top:sizem(10);height:sizem(20);left:auto;right:sizem(30);}
-
-
   .order-section {
-    min-height: sizem(800);
+    min-height: sizem(600);
     position: relative;
     // overflow: hidden;
    // padding-top: sizem(200);
@@ -238,10 +218,11 @@
     }
 
   }
+.order-bottom{margin-top: 14vw;width: 100%;}
 
   .order {
     width: 100%;
-    padding-bottom: sizem(63);
+    // padding-bottom: sizem(63);
     // border-radius: sizem(68) sizem(68) 0 0;
    /* padding-top: sizem(0);
     margin-top: sizem(0);
@@ -250,6 +231,11 @@
       width: sizem(315);
       margin-bottom: sizem(22);
     } */
+ .txt{
+  font-size:sizem(14);
+  .title{margin: 0 auto 0.8em;}
+}
+
 
     .cus-divider {
       margin: 0 auto;
@@ -314,17 +300,19 @@
 
 <script setup>
 import Policy from "@/section/form/policy.vue"
-import ContactInfo from "@/section/form/contactInfo.vue"
-import Map from "@/section/form/map.vue"
+// import ContactInfo from "@/section/form/contactInfo.vue"
+// import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, onMounted } from "vue"
+import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 const toast = useToast()
 
 const sending = ref(false)

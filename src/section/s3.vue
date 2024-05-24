@@ -1,25 +1,23 @@
 <template>
   <article class="s3" ref="s3">
-    <img src="./s3/hr.webp" class="hr" alt="亮光">
-    <div class="main">
-      <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">千億建設  聚富核心</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">鳳山重磅建設一級地段，匯聚三井LaLaport、衛武營藝術之丘、空中鳳城、 大東文創之星…國際級購物中心、高雄藝術新門戶、首宗雙捷運聯開案...鑽石領地前景無限。</p>
+  <img src="./s3/bg.jpg" class="bg absolute" alt="bg">
+  <img src="./s3/linem.svg" class="line1 absolute" alt="line" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">
+  <img src="./s3/line.svg" class="line1 absolute" alt="line" data-aos="fade-up" data-aos-delay="0" v-else>
+  <img src="./s3/a.svg" class="line2 absolute" alt="a" v-if="!isMobile">
+  <div class="txt">
+    <h3 class="title" data-aos="fade-up" data-aos-delay="200">
+    <img src="./s3/title.svg">整合服務</h3>
+  </div>
+  <div class="img" v-if="!isMobile" data-aos="fade-up" data-aos-delay="400">
+    <img src="./s3/icon.svg" alt="img">
+  </div>
+  <label class="img" v-else>
+    <input type="checkbox" name="pics">
+    <div class="pican">
+      <img src="./s3/icon.svg" alt="img">
+      <img src="./s3/icon.svg" alt="img">
     </div>
-    </div>
-    <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
-
+  </label>
   </article>
 </template>
 
@@ -32,36 +30,34 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:8em 0 9em 0;
-  font-size:size(19);
+  padding:21em 0 10em 0;
+  font-size:size(17);
   gap:3em;
   flex-wrap: wrap;
-  .hr{position: absolute;
-  width:size(2048);bottom: size(-104);left:size(-64);pointer-events: none;z-index: 2;
+  .bg{opacity: .3;width: 100%;bottom: 0;left: 0;}
+  .line1{top: 12em;left: 0;width: 100%;}
+  .line2{top: size(675);right:size(-465);width:size(832);}
+.txt{width:100%;
+  text-align: center;
+  .title{
+    position: relative;margin: 0 auto 6.5em;display: inline-block;
+    img{height: 2.6em;display: inline-block;
+      vertical-align: bottom;
+      margin: 0 1.5em 0.3em -.6em;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      top: 1em;
+      left: 2%;right: 0;margin: auto;
+      width:100%;height:95%;border-bottom: 1px solid #B7A999;
+    }
   }
-
-  .main {
-    @apply flex;
-    margin: 0;
-    flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
 }
-  .slider {
-    margin: 0;
-    flex-basis: size(840);
-      height: size(560);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
-      
-    }
-    .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
-    }
-  }
+.img{margin: auto;width:size(1427);
+  img{width: 100%;}
+}
+
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -72,40 +68,47 @@
   .s3 {
   @apply flex-col;
     height: auto;
-    padding: 0 0 3em;
-  font-size:sizem(15);
+    padding: 7em 0 7.6em;
+  font-size:sizem(14);
   flex-wrap:nowrap;
   gap:0em;
-  .hr{
-  width:sizem(627);bottom: sizem(-60);left:sizem(-55);
-  }
-
-  .main {
-    padding: 0 sizem(32.5);
-    width: 100%;
-}
-
-.txt {margin: 4.4em auto 1.3em;
-}
-
-
-  .slider {
-    height: auto;
-    width: 100%;
-
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
+  .bg{opacity: .3;width: 200%;height:sizem(320);object-fit: cover;
+    bottom: 0;left: -100%;}
+  .line1{top: 2em;left: 0;width: 100%;height:sizem(80);}
+.txt{
+  .title{letter-spacing: 0.3em;margin: 0 auto 9.4em;
+    img{height: 2.35em;
+      margin: 0 1.2em 0.3em -.6em;
     }
   }
+}
+.img{width:100%;display: block;
+  white-space: nowrap;
+  input {
+    display: none;
+  }
+  input:checked + .pican:hover {
+    animation-play-state: paused;
+  }
+.pican {
+  width: auto;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  animation: an 20s linear infinite reverse;
+  img {
+    position: relative;
+    display: inline-block;width: auto;
+    margin: 0 sizem(50) 0 0;height:sizem(103);
+  }
+}
+@keyframes an {
+  to {
+    transform: translateX(0);
+  }
+}
+}
   }
 }
 </style>

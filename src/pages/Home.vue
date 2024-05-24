@@ -5,23 +5,19 @@
     'opacity-0': !isLoading,
     'pointer-events-none': !isLoading
   }"
-    class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
+    class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 z-[10000] bg-[#fff]">
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!-- loading end -->
-   <Nav />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#122A51]">
+  <!--  --> 
+  <Nav></Nav>
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#000]">
   
     <S1 />
     <S2 />
     <S3 />
     <S4 />
     <S5 />
-    <S6 />
-    <S7 />
-    <S8 />
-    <S9 />
-    <S11 />
     <Order />
   <!--
     <S10 />
@@ -79,23 +75,22 @@ img {
     position: relative;
     font-weight: 300;
     letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;letter-spacing: 0.03em;
+    line-height: 1.9;
+    width: 100%;letter-spacing: 0.06em;
     text-align:justify;
   .title{
-    @apply font-['Noto_serif_TC',serif];
-    font-size: 2.22em;
+    font-size:1.65em;
     margin:0 auto 0.35em;
     line-height: 1.5;
-    font-weight: 900;
-    letter-spacing: 0.04em;
-    color: #FDD118;
+    font-weight: 500;
+    letter-spacing: 0.45em;
   }
   .subtitle{
-    font-size: 1.1em;
-    font-weight: 700;
-    margin:0 auto 0.45em;
-    line-height: 1.5;letter-spacing: 0.06em;
+    font-size: 1.41em;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    margin:0 auto 0.55em;
+    line-height: 1.5;
   }
   .desc{
     margin: 0 0 0;
@@ -172,10 +167,10 @@ img {
 
       .txt {line-height: 1.6;letter-spacing: 0.01em;
   .title{
-    font-size: 1.8em;
+    font-size: 1.1em;
   }
   .subtitle{
-    font-size: 1.1em;
+    font-size: 1.4em;
   }
   }
 .slider {
@@ -218,11 +213,6 @@ import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
-import S11 from "@/section/s11.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
@@ -237,7 +227,7 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 800
+      duration: 2000
     });
   };
 

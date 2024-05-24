@@ -15,11 +15,11 @@ export default {
     fbLink: "https://www.facebook.com/61556786833263",
     fbMessage: "https://m.me/61556786833263",
     caseName: caseName,
-    houseInfos: [
+    houseInfos: [/*
         ["投資興建", "自冠建設"],
         ["建築設計", "原東聯合建築師事務所"],
         ["使照號碼", "(112)高工使字第.02450號"],
-        ["建設公司", "自售"],
+        ["建設公司", "自售"],*/
     ],
     gtmCode: ["GTM-TR3R56SJ"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -28,13 +28,14 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約賞屋",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+       // title: "聯絡我們",
+      //  subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
-    //底下2個 沒項目就會隱藏
-    room_type: ["四房","其他"],
-    budget: ["3000-3500萬","3600-4200萬"],
+    // 底下2個 沒項目就會隱藏
+    // room_type: ["四房","其他"],
+    // budget: ["3000-3500萬","3600-4200萬"],
     navList: [
+        /*
         {
             name: "千億建設",
             target: ".s3",
@@ -43,7 +44,8 @@ export default {
             name: "軌道鍍金",
             target: ".s4",
             offset: "",
-        },{
+        },
+        ,{
             name: "綠富生活",
             target: ".s5",
             offset: "",
@@ -84,7 +86,7 @@ export default {
             target: ".order",
             offset: "",
             type: 'btn'
-        },
+        },*/
     ],
     
 }

@@ -17,10 +17,12 @@
             </div>
         </div>
     </div>
-    <!-- 
-    <div class="bg-[#ceaa6d]  py-5 flex items-center justify-center">
-            <p class="db"><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
-    </div> -->
+
+    <div class="ho bg-[#B7A999] flex items-center justify-center text-[#000]">
+    <img src="@/section/form/logobottom.svg" class="logo" alt="logo" srcset="">
+    <span><span>連絡電話/<span>06 251 9025</span></span>
+    <span>通訊地址/<span>臺南市安平區平通路71號3樓</span></span></span>
+    </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
@@ -30,6 +32,15 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+.ho{padding: 1.5vw 4vw;font-size: size(20);
+    .logo{margin: 0 auto 0 0;width: size(246);}
+    span{margin:0;font-weight: 600;
+    span{margin: 0 0 0 3vw;
+    span{margin: 0 0 0 .5vw;font-size: 1.4em;
+    }
+    }
+    }
+}
 
 // .map {
 //     width: size(772);
@@ -72,6 +83,16 @@
     }
 }
 @media screen and (max-width:768px) {
+.ho{padding:6vw 7vw; flex-direction:column;font-size: sizem(15);
+    .logo{margin: 0 auto 8vw 0;width:sizem(257);}
+    span{margin: 0 auto 0 0;font-weight: 600;display: block;
+        text-align: left;
+    span{margin: 0 0 1.5vw 0;
+    span{margin: 0 0 0 2vw;font-size: 1.1em;display:inline;
+    }
+    }
+    }
+}
 .house {
     font-size: sizem(14);
 }

@@ -1,13 +1,22 @@
 <template>
   <article class="s1" id="s1">
-	<!-- <img src="./s1/mo.jpg" class="t0">
+	<!-- 
   <img src="./s1/pc.jpg" class="t0">
+  <img src="./s1/mo.jpg" class="t0">
     -->
+  <img src="./s1/wave.gif" class="wave absolute" alt="wave">
+  <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0"><b>THE FIRST,</b><br>THE INTERNATIONAL</div>
+  <img src="./s1/t2m.svg" class="t2 absolute" alt="logo" data-aos="fade-up" data-aos-delay="200" v-if="isMobile">
+  <img src="./s1/t2.svg" class="t2 absolute" alt="logo" data-aos="fade-up" data-aos-delay="200" v-else>
+  <img src="./s1/icon.svg" class="icon absolute" alt="icon" data-aos="fade-up" data-aos-delay="400">
+
+
+  	<!--
   <img src="./s1/logoicon.svg" class="logoicon" alt="" data-aos="zoom-in" data-aos-delay="400">
 	<div class="txt">
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1600"/>
 		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1600"/>
-	</div>
+	</div>  -->
 	
 
   </article>
@@ -18,10 +27,10 @@
 
 .s1 {
   @apply relative w-full h-screen ;
-  background-image:url("../section/s1/bg.webp");
+  background-image:url("../section/s1/bg.jpg");
   background-size: cover;
-  min-height: size(900);
-  max-height: size(1080);
+  min-height: size(976);
+  max-height: size(976);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,30 +40,36 @@
   color: #FFF;
   line-height: 1.3;
   font-weight: 700;
-  padding: size(70) 0 0 0;
-  .t0{position: absolute;width: 100%;top: 0;left: 0; pointer-events: none;opacity: .3;z-index: 10;}
-
-  .logoicon{
-    position: absolute;
-    right:size(60);
-    top:size(110);
-    width: size(180);
+  padding:0;
+  margin: size(60) 0 0 0;
+  .t0{position: absolute;width: 100%;top:calc( -2.3vw - #{size(60)});left: 0;
+  pointer-events: none;opacity: .3;z-index: 10;}
+  .wave{bottom: 0;
+    left: 0;
+    width: 100%;height:size(205);mix-blend-mode:overlay;opacity: .6;
   }
 
-  .txt{
-	position: relative;
-	margin: 0px auto;
-	gap:size(130);
-	display: flex;
-	flex-direction: column;
+  .t1{
+   // font-family: Inter;
+    left:size(314);
+    top:size(315);
+    font-weight: 200;
+    letter-spacing: .03em;
+    b{
+    font-weight: 600;
+    letter-spacing: 0em;}
+  }
+  .t2{
+    left:size(580);
+    top:size(127);
+    width: size(1023);
+  }
+  .icon{
+    right:size(40);
+    bottom:size(45);
+    width: size(107);
   }
 
-  .logo{
-	width: size(820);
-  }
-  .title{
-	width: size(1050);
-  }
 
  
 }
@@ -67,64 +82,32 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
-	background-image:url("../section/s1/bgm.webp");
+	background-image:url("../section/s1/bgm.jpg");
 	background-size: cover;
     height:calc(100vh - 63px);
-    min-height: sizem(667);
-    max-height: sizem(667);
-    font-size:sizem(14);
-
-
-  .logoicon{
-    position: absolute;
-    right:sizem(30);
-    top:sizem(70);
-    width: sizem(100);
-  }  
-
-	.txt{
-	gap:sizem(50);
+    min-height: sizem(578);
+    max-height: sizem(578);
+    font-size:sizem(18);
+  margin: sizem(60) 0 0 0;
+  .wave{height:sizem(62);
   }
 
-	.logo{
-		width: sizem(300);
-	}
-	.title{
-	width: sizem(300);
+  .t0{top:sizem(-90);}
+  .t1{
+    left:sizem(46);
+    top:sizem(37);
+  }
+  .t2{
+    left:sizem(46);
+    top:sizem(106);
+    width: sizem(273);
+  }
+  .icon{
+    right:sizem(12);
+    bottom:sizem(12);
+    width: sizem(70);
   }
 
-	.t1{
-	left:auto;right: auto;margin: auto;
-	top:sizem(390);
-	font-weight: 500;
-	top:calc(50% + #{sizem(400-(604*.5))});
-	letter-spacing: .3em;
-	font-size: sizem(20);
-  }
-  .img1{
-	top:sizem(15);
-	left:sizem(25);
-	width: sizem(330);
-  }
-  .img2{
-	bottom:sizem(-30);
-	right:sizem(65);
-	width: sizem(250);
-  }
-  .smile{
-	top:sizem(350);
-	top:calc(50% + #{sizem(130-(350*.5))});
-	right:auto;
-	left:sizem(30);
-	width: sizem(120);
-  }
-  .mark{
-	bottom:sizem(50);
-	right:auto;
-	right:sizem(20);
-	width: sizem(120);
-  }
-    
   }
 }
 </style>
