@@ -1,9 +1,21 @@
 import { createRouter, createWebHistory } from "vue-router"
 import Home from "@/pages/Home.vue"
+import projects from "@/pages/projects.vue"
+import news from "@/pages/news.vue"
 const routes = [{
         path: "/",
         name: "Home",
         component: Home,
+    },
+    {
+        path: "/projects",
+        name: "projects",
+        component: projects,
+    },
+    {
+        path: "/news",
+        name: "news",
+        component: news,
     },
     {
         path: "/formThanks",

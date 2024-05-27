@@ -116,7 +116,7 @@
   font-size:size(17);
   text-align: center;color: #fff;
   .title{
-    position: relative;margin: 0 auto 1.8em;display: inline-block;
+    position: relative;margin: 3em auto 1.8em;display: inline-block;
     img{height: 1.85em;
       display: block;position: relative;
       margin: 0 auto 0.3em auto;

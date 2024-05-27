@@ -46,6 +46,7 @@
         //border-bottom: 1px solid #FFF2;
     .logo{width: auto;
         padding: 0 0 0 4.3em;z-index: 2; margin: 0 auto 0 0;
+        cursor: pointer;
         img{height:size(29); margin: 0 1em 0 0;}
         span{font-size: size(19);border-left: 1px solid currentColor;display: inline-block;vertical-align: middle;padding: 0 0 0 1em;letter-spacing: 0.1em;line-height: 1.8;}
     }

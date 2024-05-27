@@ -31,6 +31,7 @@
   width: 100%;
   height:auto;
   padding:21em 0 10em 0;
+  margin-bottom: 9em;
   font-size:size(17);
   gap:3em;
   flex-wrap: wrap;
@@ -69,6 +70,7 @@
   @apply flex-col;
     height: auto;
     padding: 7em 0 7.6em;
+  margin-bottom: 4em;
   font-size:sizem(14);
   flex-wrap:nowrap;
   gap:0em;

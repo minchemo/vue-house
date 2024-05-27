@@ -1,13 +1,13 @@
 <template>
-  <article class="s1" id="s1">
+  <article :class="`s1 ${inside == '1' ? 'active' : ''}`" id="s1">
 	<!-- 
   <img src="./s1/pc.jpg" class="t0">
   <img src="./s1/mo.jpg" class="t0">
     -->
   <img src="./s1/wave.gif" class="wave absolute" alt="wave">
   <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0"><b>THE FIRST,</b><br>THE INTERNATIONAL</div>
-  <img src="./s1/t2m.svg" class="t2 absolute" alt="logo" data-aos="fade-up" data-aos-delay="200" v-if="isMobile">
-  <img src="./s1/t2.svg" class="t2 absolute" alt="logo" data-aos="fade-up" data-aos-delay="200" v-else>
+  <img src="./s1/t2m.svg" class="t2 mo absolute" alt="logo" data-aos="fade-up" data-aos-delay="200">
+  <img src="./s1/t2.svg" class="t2 absolute" alt="logo" data-aos="fade-up" data-aos-delay="200">
   <img src="./s1/icon.svg" class="icon absolute" alt="icon" data-aos="fade-up" data-aos-delay="400">
 
 
@@ -29,9 +29,9 @@
   @apply relative w-full h-screen ;
   background-image:url("../section/s1/bg.jpg");
   background-size: cover;
-  min-height: size(976);
-  max-height: size(976);
-  height: 100vh;
+  // min-height: size(976);
+  // max-height: size(976);
+  height: size(976);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,7 +44,8 @@
   margin: size(60) 0 0 0;
   .t0{position: absolute;width: 100%;top:calc( -2.3vw - #{size(60)});left: 0;
   pointer-events: none;opacity: .3;z-index: 10;}
-  .wave{bottom: 0;
+  .wave{
+    bottom: 0;
     left: 0;
     width: 100%;height:size(205);mix-blend-mode:overlay;opacity: .6;
   }
@@ -63,12 +64,36 @@
     left:size(580);
     top:size(127);
     width: size(1023);
+    &.mo{display: none;}
   }
   .icon{
     right:size(40);
     bottom:size(45);
     width: size(107);
   }
+  &.active{
+  height: size(300);
+  background-position: 0 73%;
+  .wave{height:size(200);
+    bottom:size(-175);
+  }
+  .t1{
+  font-size:size(15);
+    left:size(1210);
+    top:size(100);
+  }
+  .t2{
+    left:size(1300);
+    top:size(30);
+    width: size(360);
+  }
+  .icon{
+    right:size(40);
+    bottom:size(20);
+    width: size(70);
+  }
+
+}
 
 
  
@@ -84,9 +109,7 @@
   .s1 {
 	background-image:url("../section/s1/bgm.jpg");
 	background-size: cover;
-    height:calc(100vh - 63px);
-    min-height: sizem(578);
-    max-height: sizem(578);
+    height:sizem(578);
     font-size:sizem(18);
   margin: sizem(60) 0 0 0;
   .wave{height:sizem(62);
@@ -100,12 +123,38 @@
   .t2{
     left:sizem(46);
     top:sizem(106);
-    width: sizem(273);
+    width: sizem(273);display: none;
+    &.mo{display: block;}
   }
   .icon{
     right:sizem(12);
     bottom:sizem(12);
     width: sizem(70);
+  }
+  &.active{
+  height: sizem(200);
+	background-image:url("../section/s1/bg.jpg");
+	background-size: 145% auto;
+  background-position: 50% 65%;
+  .wave{height:sizem(70);
+  }
+  .t1{
+    left:sizem(46);
+    top:sizem(55);
+    font-size:sizem(12);
+  }
+  .t2{
+    left:sizem(130);
+    top:sizem(20);
+    width: sizem(210);display: block;
+    &.mo{display: none;}
+  }
+  .icon{
+    right:sizem(12);
+    bottom:sizem(12);
+    width: sizem(35);
+  }
+
   }
 
   }
@@ -123,4 +172,10 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
+const props = defineProps({
+  inside: {
+    type: Number,
+    default: 0
+  }
+});
 </script>

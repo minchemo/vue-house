@@ -1,19 +1,20 @@
 <template>
-  <article class="s5" ref="s5">
+  <article class="s5" id="s5" ref="s5">
   <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">
     <img src="./s5/title.svg">房市新訊</h3>
   </div>
-  <div class="slider" data-aos="fade-up" data-aos-delay="200" v-if="!isMobile">
-  <div class="slide-item" v-for="img in imgs" :key="img.img">
+  <div class="slider" data-aos="fade-up" data-aos-delay="200" v-if="!isMobile || maxImages == 0">
+  <div class="slide-item" v-for="img in limitedImgs" :key="img.img">
     <a :href="img.link"  target=" _blank" class="link"></a>
     <img :src="img.img" :alt="img.name">
       <div class="name">{{ img.name }}</div>
       <div class="desc">{{ img.desc }}</div>
-  </div><!-- 
+  </div>
     <div class="button">
-      <button>更多資訊</button>
-    </div> -->
+      <a href="/#s5" v-if="maxImages == 0">回首頁</a>
+      <a href="/news/" v-else-if="imgs.length > 7">更多資訊</a>
+    </div>
   </div>
 
   
@@ -31,18 +32,16 @@
         }"
         :modules="modules"
       >
-        <swiper-slide  class="slide-item" v-for="img in imgs" :key="img.img">
+        <swiper-slide  class="slide-item" v-for="img in limitedImgs" :key="img.img">
           <a :href="img.link"  target=" _blank" class="link"></a>
           <img :src="img.img" :alt="img.name">
       <div class="name">{{ img.name }}</div>
       <div class="desc">{{ img.desc }}</div>
         </swiper-slide>
       </swiper>
-<!-- 
     <div class="button">
-      <button>更多資訊</button>
+      <a href="/news/"  v-if="imgs.length > 6">更多資訊</a>
     </div>
-  -->
     </div>
   
 
@@ -56,7 +55,7 @@
   @apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
   // height: size(800);
-  padding:7em 0 8em 0;
+  padding:6em 0 9em 0;
   font-size:size(17);
   gap:1.5em;
   flex-wrap:nowrap;
@@ -74,7 +73,10 @@
 }
 .button{width: 100%;
 text-align: center;
-button{display: block;background: #B7A999; color: #000;border-radius: 0 .8em 0 .8em;margin: auto;width: 7.8em;line-height: 2;letter-spacing: .2em;}
+a{display: block;background: #B7A999; color: #000;border-radius: 0 .8em 0 .8em;margin: auto;width: 7.8em;line-height: 2;letter-spacing: .2em;
+  transition:transform .5s ;
+&:hover{transform: scale(1.1);}
+}
 }
 .slider {
     margin: 0 auto 0 auto;padding:0;
@@ -82,7 +84,7 @@ button{display: block;background: #B7A999; color: #000;border-radius: 0 .8em 0 .
       height:auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 1em; justify-content:space-between;
+      gap:3em; justify-content:flex-start;
 
       .slide-item {position: relative;
           width: size(480);margin: 0;
@@ -116,7 +118,7 @@ button{display: block;background: #B7A999; color: #000;border-radius: 0 .8em 0 .
   .s5 {
   @apply flex-col;
     height: auto;
-    padding: 1em 0 10em 0;
+    padding: 3em 0 10em 0;
   font-size:sizem(14);
   flex-wrap:nowrap;
 gap:0em;
@@ -131,14 +133,14 @@ gap:0em;
 }
 .slider {
   left: 0%;  width:100%;
-.swiper {
-  .swiper-slide {opacity: 1; width: sizem(275);
+    justify-content: center;
+  .slide-item{opacity: 1; width: sizem(275);
+  .link:hover{background: #0000;}
     img{height:sizem(282);margin-bottom: .5em;}
   .name{font-size: 1.3em;margin-bottom: .2em;}
   .desc{font-size: 1em;
     -webkit-line-clamp: 3;max-height:5em;}
   }
-}
 }
   
   .swiper-button-prev,
@@ -181,7 +183,14 @@ const currentSlideIndex = ref(0);
 
 const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
-}
+};
+
+const props = defineProps({
+  maxImages: {
+    type: Number,
+    default: 0
+  }
+});
 
 const imgs = [
   {
@@ -220,6 +229,40 @@ const imgs = [
     name: "高雄勝偕集團「活建築+藝術建築」的實踐家",
     desc: "高雄勝偕集團董事長吳宗國汲取Less is More(減法建築)的簡約之美、Richard Meier(白派建築)的純淨風格、Green Building(綠建築)的環保概念，以及Intelligent Building(智慧建築)的科技應用，發展出屬於自己的Living Architecture(活建築)。集團秉持著設計、結構、施工、建築、服務五大理念為基石，並以活建築的概念打破傳統框架，呈現建築即藝術的獨特風采，他是「活建築+藝術建築」的實踐家。"
   },
+  {
+    img:new URL("./s5/6.jpg", import.meta.url).href ,
+    link:'https://money.udn.com/money/story/5638/7785718',
+    name: "高雄勝偕集團「活建築+藝術建築」的實踐家",
+    desc: "高雄勝偕集團董事長吳宗國汲取Less is More(減法建築)的簡約之美、Richard Meier(白派建築)的純淨風格、Green Building(綠建築)的環保概念，以及Intelligent Building(智慧建築)的科技應用，發展出屬於自己的Living Architecture(活建築)。集團秉持著設計、結構、施工、建築、服務五大理念為基石，並以活建築的概念打破傳統框架，呈現建築即藝術的獨特風采，他是「活建築+藝術建築」的實踐家。"
+  },
+  {
+    img:new URL("./s5/6.jpg", import.meta.url).href ,
+    link:'https://money.udn.com/money/story/5638/7785718',
+    name: "1",
+    desc: "1"
+  },
+  /*
+  {
+    img:new URL("./s5/6.jpg", import.meta.url).href ,
+    link:'https://money.udn.com/money/story/5638/7785718',
+    name: "2",
+    desc: "2"
+  },
+  {
+    img:new URL("./s5/6.jpg", import.meta.url).href ,
+    link:'https://money.udn.com/money/story/5638/7785718',
+    name: "3",
+    desc: "3"
+  },
+  {
+    img:new URL("./s5/6.jpg", import.meta.url).href ,
+    link:'https://money.udn.com/money/story/5638/7785718',
+    name: "4",
+    desc: "4"
+  },*/
 ]
+const limitedImgs = computed(() => {
+  return props.maxImages > 0 ? imgs.slice(0, props.maxImages) : imgs;
+});
 </script>
 
