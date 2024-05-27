@@ -182,7 +182,7 @@ gap:0em;
     img{height:sizem(282);margin-bottom: .5em;}
   .name{font-size: 1.5em;margin-bottom: .2em;}
   .area{font-size: 1em;}
-  .desc{font-size: 1.1em;position: absolute;bottom: 0;right: 0;}
+  .desc{font-size: 1.1em;}
   }
 }
   .swiper-button-prev,

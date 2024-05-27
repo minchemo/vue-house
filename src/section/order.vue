@@ -179,7 +179,7 @@
   }
 
   .send {
-    font-size:20px;
+    font-size:18px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
@@ -192,7 +192,7 @@
     height:3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 700;
+    font-weight: 300;
     position: relative;
   }
 

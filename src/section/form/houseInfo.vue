@@ -32,25 +32,17 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-.ho{padding: 1.5vw 4vw;font-size: size(20);
-    .logo{margin: 0 auto 0 0;width: size(246);}
-    span{margin:0;font-weight: 600;
+.ho{padding: 1.5vw 4vw;font-size: size(17);font-weight: 400;
+    letter-spacing: 0.06em;
+    .logo{margin: 0 auto 0 0;width: size(235);}
+    span{margin:0;
     span{margin: 0 0 0 3vw;
-    span{margin: 0 0 0 .5vw;font-size: 1.4em;
+    span{margin: 0 0 0 .5vw;font-size: 1.4em;font-weight: 500;
+    letter-spacing: 0.08em;
     }
     }
     }
 }
-
-// .map {
-//     width: size(772);
-//     height: size(642);
-//     background-color: #75E3D5;
-//     background-image: url('@/section/form/map.png');
-//     background-size: contain;
-//     background-position: center;
-//     background-repeat: no-repeat;
-// }
 .displaynone{display: none;}
 .house {
    // height: auto;
@@ -83,9 +75,9 @@
     }
 }
 @media screen and (max-width:768px) {
-.ho{padding:6vw 7vw; flex-direction:column;font-size: sizem(15);
-    .logo{margin: 0 auto 8vw 0;width:sizem(257);}
-    span{margin: 0 auto 0 0;font-weight: 600;display: block;
+.ho{padding:8vw 7vw; flex-direction:column;font-size: sizem(15);
+    .logo{margin: 0 auto 8vw 0;width:sizem(200);}
+    span{margin: 0 auto 0 0;display: block;
         text-align: left;
     span{margin: 0 0 1.5vw 0;
     span{margin: 0 0 0 2vw;font-size: 1.1em;display:inline;
