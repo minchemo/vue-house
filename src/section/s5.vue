@@ -67,7 +67,7 @@
     position: relative;margin: 0 auto 1.8em;display: inline-block;
     img{
       display: block;position: relative;
-      margin: 0 auto 0.3em auto;
+      margin: 0 auto 0.3em auto;height: 1.9em;
     }
   }
 }
