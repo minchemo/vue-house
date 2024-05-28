@@ -16,7 +16,7 @@
     <div class="main">
       <div class="txt">
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">世代品書香，人文傳家藏</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">在鳳山之裡，一品正義國小、瑞豐國小、五甲國中，孩子9年免接送，培養世代菁英；鄰近衛武營國家藝文中心、高雄市立圖書館，買進一個知識匯聚的寶庫，為孩子，準備好向上的成長動能。</p>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">在鳳山之裡，一品正義國小、五甲國中，近在咫尺，培養世代菁英；鄰近衛武營國家藝文中心、高雄市立圖書館，買進一個知識匯聚的寶庫，為孩子，準備好向上的成長動能。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
