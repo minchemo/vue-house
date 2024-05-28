@@ -2,7 +2,7 @@
   <article class="s5" id="s5" ref="s5">
   <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">
-    <img src="./s5/title.svg">房市新訊</h3>
+    <img src="./s5/title.svg">策劃實例</h3>
   </div>
   <div class="slider" data-aos="fade-up" data-aos-delay="200" v-if="!isMobile || maxImages == 0">
   <div class="slide-item" v-for="img in limitedImgs" :key="img.img">
@@ -65,9 +65,9 @@
   text-align: center;
   .title{
     position: relative;margin: 0 auto 1.8em;display: inline-block;
-    img{height: 2.8em;
+    img{
       display: block;position: relative;
-      margin: 0 auto 0.3em auto;left: -.5em;
+      margin: 0 auto 0.3em auto;
     }
   }
 }
@@ -124,7 +124,7 @@ a{display: block;background: #B7A999; color: #000;border-radius: 0 .8em 0 .8em;m
 gap:0em;
     .txt{
   .title{margin: 0 auto 2.5em;
-    img{height: 2.3em;left: -.5em;
+    img{height: 1.7em;
     }
   }
 }

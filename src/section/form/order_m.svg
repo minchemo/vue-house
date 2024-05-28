@@ -1,4 +1,15 @@
-<svg viewBox="0 0 375 131" stroke="#B7A999" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 375 131" fill="none" stroke="url(#SVGID_1_)" xmlns="http://www.w3.org/2000/svg">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
+	<stop  offset="0" style="stop-color:#B7A999"/>
+	<stop  offset="0.5" style="stop-color:#FFF"/>
+	<stop  offset="1" style="stop-color:#B7A999"/>
+<animate
+      attributeName="x1" from="-300" to="1900"
+      dur="5s" repeatCount="indefinite" />
+<animate
+      attributeName="x2" from="-200" to="2000"
+      dur="5s" repeatCount="indefinite" />
+</linearGradient>
 <path d="M20.8,2.7v43.1c0,4.8,1,5.2,3.7,5.2v0.4H12.1v-0.6c2.9-0.4,3.5-0.8,3.5-4.5V2.7H5.5c-1.7,0-2.7,0.4-3.1,0.8
 	s-1,1.9-1.5,4.6H0.5V1h35.8v7h-0.4c-0.6-2.5-1.2-4.1-1.5-4.6c-0.4-0.6-1.5-0.8-3.1-0.8H20.8V2.7z M92.4,1.6V1h28.8v7h-0.4
 	c-1.2-5-1.2-5.2-4.6-5.2h-15.5v22.6h14.5c2.9,0,3.1-0.6,3.3-1.7h0.4v4.8h-0.8c-0.2-1.2-0.6-1.7-2.9-1.7h-14.5v15.7
