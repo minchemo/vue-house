@@ -8,9 +8,9 @@
             <div class="bar"></div>
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <template v-for="item, i in info.navList">
+            <template v-for="item, in info.navList">
             <div class="menu-item cursor-pointer text-white font-['Noto_Serif_TC',serif]" v-bind:class="{ btn2: item.type }"
-                @click="scrollTo(item.target)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
+                @click="scrollTo(item.target)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)" :key="item">
                 <span>{{ item.name }}</span>
             </div>
             </template>
