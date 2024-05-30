@@ -9,16 +9,6 @@
   <img src="./s1/t2m.svg" class="t2 mo absolute" alt="logo" data-aos="fade-up" data-aos-delay="200">
   <img src="./s1/t2.svg" class="t2 absolute" alt="logo" data-aos="fade-up" data-aos-delay="200">
   <img src="./s1/icon.svg" class="icon absolute" alt="icon" data-aos="fade-up" data-aos-delay="400">
-
-
-  	<!--
-  <img src="./s1/logoicon.svg" class="logoicon" alt="" data-aos="zoom-in" data-aos-delay="400">
-	<div class="txt">
-		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1600"/>
-		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1600"/>
-	</div>  -->
-	
-
   </article>
 </template>
 
