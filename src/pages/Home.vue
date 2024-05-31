@@ -95,16 +95,17 @@ img {
 }
 
   .caption{
-      @apply absolute;
-      right:1em;
-      bottom: .5em;
-      font-weight: 300;
-      font-size: size(15);
-      color: #FFF;
-      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
+    position: absolute;
+    right:1em;
+    bottom: .5em;
+    font-weight: 300;
+    font-size: size(15);
+    color: #FFF;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  }
 
 
-      .txt {
+    .txt {
     position: relative;
     font-weight: 300;
     letter-spacing: 0;
