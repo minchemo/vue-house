@@ -1,32 +1,26 @@
-<svg viewBox="0 0 600 750" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style>
-.line {fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;}
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 750" style="enable-background:new 0 0 600 750;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#606060;}
+	
+		.st1{clip-path:url(#SVGID_00000166636310715065755670000002761111700727013032_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;}
+	
+		.st2{clip-path:url(#SVGID_00000004509855990086761060000009936517546631177901_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;}
+	
+		.st3{clip-path:url(#SVGID_00000131350742986955015330000001372976027349319594_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;}
+	
+		.st4{clip-path:url(#SVGID_00000039133768257896286250000001399568396682782103_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;}
+	
+		.st5{clip-path:url(#SVGID_00000013180132548677342410000014837286709366292144_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:url(#SVGID_00000062877010687934141110000007431372569022517911_);}
+	.st7{fill:#FFFFFF;}
 </style>
-<linearGradient id="t1" gradientUnits="userSpaceOnUse" x1="0" y1="-30" x2="0" y2="20">
-	<stop offset="0" style="stop-color:#FFFF"/>
-	<stop offset="1" style="stop-color:#FFF0"/>
-	<animate attributeName="y1" id="an1" from="-50" to="190" dur=".3s" fill="freeze" begin="2s"/>
-	<animate attributeName="y2" id="an2" from="20" to="300" dur=".3s" fill="freeze" begin="2s"/>
-</linearGradient>
-<path style="fill:url(#t1);" d="M5.5,48L5,46.4h18.5l3.8-5.9l7,6.1c-0.6,1-1.6,1.4-3.7,1.4 M13.8,23l11.6,1.1c-0.2,1.1-0.8,1.7-3.3,2v69.2
-	c0,0-1.2,3-8.3,3 M53.5,68.9c-0.5,0.6-1.6,1-3,1.4c0,28-3.5,27-11.8,28c0-3.9-0.6-5.2-5.3-6.2v-1.3l5.9,0.1c3.1,0,3.4-0.3,4.3-22.4
-	L42.9,67l3.1-3.8 M69,57.5c-0.2,1-0.6,1.5-2.9,1.8C65.5,83,58.9,91.7,50,98.6l-1.1-1.1c7.6-10.3,9.6-20.3,9.6-40.6 M25,68.5L24.5,67
-	h45.6l3.2-3.9l7.9,5.9c-0.6,0.6-1.5,1.1-3.1,1.4c-0.6,25.8-2.3,27.5-12.6,28c0-4.5-0.8-5.6-5.9-6.7l0.1-1.2l6.6,0.1
-	c2.7,0,3.8,0.5,4.5-22 M42.5,57.7c-0.1,1-0.6,1.5-2.9,1.7c0,21.3-6.9,33-14.9,38.9l-1.1-1.1c6.1-8.6,8.8-18.7,8.8-40.2 M60.6,24.4
-	c-0.2,1.2-1.1,1.6-3.3,1.8c-2,18-13.1,27.4-29.5,31.7l-0.5-1.3C41.3,51.3,48.4,40,48.9,23 M32.5,35.4L32,33.8h34.4l3.2-3.8l7.9,5.9
-	c-0.6,0.6-1.5,1-3,1.3c-1.4,16.4-4,19.2-13.6,19.3c0-4.2-0.8-5.7-6.7-6.7v-1.2l7.7,0.2c2.7,0,3.6,0.3,5.1-13.4 M31.6,181.5
-	c0,5.4-1.2,9.1-9.5,10c0-6-1.5-7.3-6.4-7.8v-1.1h7.2c0.8,0,1-0.3,1-1.2v-20.7h-7.3c-0.8,10.8-3.3,22.1-10.4,30.9l-1.1-0.6
-	c4.5-13.2,4.5-29.3,4.5-46.1v-27l8.8,3.4h4.8l3.1-4l8.1,5.9c-0.5,0.6-1.4,1.1-2.8,1.4 M23.9,141.4h-6.8c0,6,0,12.6-0.3,17.6h7.1
-	 M23.9,122.8h-6.8v17h6.8 M60,154.1c-0.2,1.2-1,1.7-3.3,1.8c-1.5,19.1-10.2,29.9-23.2,35.6l-0.7-1.2c10.1-6.7,15.6-18.7,15.5-37.3
-	 M38.3,165.7l-0.5-1.6h25.1l3.3-4l8.3,6.2c-0.5,0.6-1.4,1.1-3,1.3c-1,23.3-4.4,23.2-13.5,23.8c0-4.8-1.3-5.9-6.8-7.1l0.1-1.1
-	l7.5,0.2c2.7,0,4,0,4.8-17.6 M36.1,118.6c18.5,7.5,7.6,19.9,2.8,13.1c0.2-4-1.4-9.4-3.6-12.6 M74.3,121.1c-0.3,0.9-1.1,1.3-3,1.2
-	c-2.7,4.1-6.1,9.2-11,13.9c4.8,10.8,12.7,16.9,21.5,21.1l-0.1,0.8c-2.9,0.7-5.2,3.1-6.2,6.9c-6-4.6-11.8-10.7-16.6-28.3
-	c2.1-4.9,3.8-11.3,5.3-18.3 M32.5,149l-0.4-1.5h37.5l4.1-5.5l7.9,5.7c-0.6,1-1.6,1.4-3.8,1.4 M34.7,136.7l-0.4-1.6H66l4.1-5.1
-	l7.7,5.3c-0.6,1.1-1.7,1.4-3.8,1.4 M60.6,118.8c-0.2,1-0.9,1.7-3.1,1.8c-3.7,23.6-14.9,41.6-31.3,47.9
-	c15.4-10.8,21.7-29.4,23.4-51.7"/>
-<g class="line">
+<rect x="-49.9" y="-46.5" class="st0" width="739.6" height="859.3"/>
+<g>
 	<defs>
-		<path id="l11" d="M235.1,182.8c-3.9-0.7-10.4,2.5-13.5-0.9c-1.6-1.1-3.4-0.6-4.9,0.1c-6.8,1.8-11.8-3-18.5,3
+		<path id="SVGID_1_" d="M235.1,182.8c-3.9-0.7-10.4,2.5-13.5-0.9c-1.6-1.1-3.4-0.6-4.9,0.1c-6.8,1.8-11.8-3-18.5,3
 			c-15.3,8-32.9,7.4-49.7,9.6c-27,4.6-9.7-18.5-16.8-30.7c-4.3-1.4,4.7-5.7-1.2-10.2c-5.4-4.8,2.7-8.5-0.7-11.8
 			c-2.9-2.5-2.8-10.2,1.8-10.1c1.7,0.6,2.4-0.1,2.5-1.9c-1.1-8.7,13.1-6.6,17.8-3.4c3.8,0.8,8.9,5.3,12.1,3.4
 			c2.8-1.5,5.9,0.5,8.8,0.5c3.9,0.8,8.5-1,12.1-0.7c2.8,1,5.4,1,8.2,0.2c1.4-0.1,3.2,0.9,4.7,0.4c1.4-0.6,2.8-0.9,4.2,0
@@ -36,14 +30,16 @@
 			c-0.9,2.1,1.9,4.3-0.6,5.8c-5,3.6-5.1,11.6-12.3,12.7c-1.2,0.3-2.4,1.9-2.9,3.2c-10.3,11.8-53.7,8.3-69.9,10.1
 			c-12.6,1.1-25.3,1.8-37.6-2.1c-4.2-0.8-10.3-3.5-14.5-1.9c-9.1,3.3-19.2,1-28.4,4.1C245.8,180.3,241.1,182.9,235.1,182.8z"/>
 	</defs>
-	<clipPath id="l12">
-		<use xlink:href="#l11" style="overflow:visible;"/>
+	<clipPath id="SVGID_00000181778137444748001280000017391887396229201585_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 	</clipPath>
-	<path style="clip-path:url(#l12);" d="M112.2,160.9c47.1-5.8,226.9-0.1,281.7-16.2" stroke-dasharray="283" stroke-dashoffset="283">
-		<animate attributeName="stroke-dashoffset" id="an5" from="283" to="0" dur=".28s" fill="freeze" begin="an1.end-.15s"/>
-	</path>
+	
+		<path style="clip-path:url(#SVGID_00000181778137444748001280000017391887396229201585_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M112.2,160.9c47.1-5.8,226.9-0.1,281.7-16.2"/>
+</g>
+<g>
 	<defs>
-		<path id="l21" d="M281.5,534.3c-5.2,8.2,6,12.2,3.6,15.7
+		<path id="SVGID_00000183246001811872955620000013237563858481370796_" d="M281.5,534.3c-5.2,8.2,6,12.2,3.6,15.7
 			c-2.6,4.6-7.9,8.3-13,10.1c-2.6,0.5-5.1-0.9-7.7-0.4c-2.2-3-4.9,3-7.8,0c-0.5-0.4-1.5-0.4-2.2-0.5c-2.2,0-0.9-2-1.8-3.2
 			c-1.6-2.7-5.1-3.3-6.5-6.4c-12.3-6.8-27.7-3.3-41-1.4c-5.4-0.2-10.6,0.6-15.7,2c-1.7-0.4-2.1-0.2-2.2,1.5c-0.5,0-1,0-1.6,0
 			c-0.1,0.4-0.1,0.8-0.2,1.2c-0.7,0-1.3,0.2-1.8,0.1c-1.6-0.4-2.3,0.7-3.1,1.7c-1,0.8-2.4,1.1-3.6,1.7c-1,0.5-1.9,1.4-3.2,0.7
@@ -95,35 +91,37 @@
 			c-2.5-2.4-5.7-2.8-8.9-3.1c-2-0.2-3.9,0.1-5.5-1.6c-6.5-2.4-13.3-4.7-19.9-7.1c-12.4-4.8-25.8-6.4-39-6.6
 			C320.6,230.7,316.7,225.4,309.9,223.7"/>
 	</defs>
-	<clipPath id="l22">
-		<use xlink:href="#l21"  style="overflow:visible;"/>
-	</clipPath>	
-		<path style="clip-path:url(#l22);" d="M283.1,29.8c-5.7,30.9-17.7,261.5-142.8,236.1" stroke-dasharray="310" stroke-dashoffset="310">
-		<animate attributeName="stroke-dashoffset" id="an6" from="310" to="0" dur=".31s" fill="freeze" begin="an5.end-.1s"/>
-	</path>	
-		<path style="clip-path:url(#l22);" d="M289.9,203.3c25.6,65.6,120,75.2,162.8,72" stroke-dasharray="190" stroke-dashoffset="190">
-		<animate attributeName="stroke-dashoffset" id="an7" from="190" to="0" dur=".19s" fill="freeze" begin="an6.end"/>
-	</path>	
-		<path style="clip-path:url(#l22);" d="M139.2,413.3c32.2-24.6,188.7-12.4,222.3-24.7" stroke-dasharray="226" stroke-dashoffset="226">
-		<animate attributeName="stroke-dashoffset" id="an8" from="226" to="0" dur=".27s" fill="freeze" begin="an7.end"/>
-	</path>	
-		<path style="clip-path:url(#l22);" d="M167.4,418.8c7.5,20.2,9,56.5,13.5,68.2c5.9,15.2-1.3,1.9-24,38.2" stroke-dasharray="118" stroke-dashoffset="118">
-		<animate attributeName="stroke-dashoffset" id="an9" from="118" to="0" dur=".12s" fill="freeze" begin="an8.end"/>
-	</path>	
-		<path style="clip-path:url(#l22);" d="M299.1,407c-5.3,41.8-12.2,108.3-11.9,131.9" stroke-dasharray="133" stroke-dashoffset="133">
-		<animate attributeName="stroke-dashoffset" id="an10" from="133" to="0" dur=".13s" fill="freeze" begin="an9.end"/>
-	</path>	
-		<path style="clip-path:url(#l22);" d="M191.9,439.3c26.2-0.6,52.2,1.2,55.4,1.3" stroke-dasharray="56" stroke-dashoffset="56">
-		<animate attributeName="stroke-dashoffset" id="an11" from="56" to="0" dur=".06s" fill="freeze" begin="an10.end"/>
-	</path>	
-		<path style="clip-path:url(#l22);" d="M193.3,476.3c0,0,55.7,4.3,58,4.5" stroke-dasharray="59" stroke-dashoffset="59">
-		<animate attributeName="stroke-dashoffset" id="an12" from="59" to="0" dur=".06s" fill="freeze" begin="an11.end"/>
-	</path>	
-		<path style="clip-path:url(#l22);" d="M169.8,525.2c26.6-11.4,63.9-10.7,80.5-6.7" stroke-dasharray="82" stroke-dashoffset="82">
-		<animate attributeName="stroke-dashoffset" id="an13" from="82" to="0" dur=".08s" fill="freeze" begin="an12.end"/>
-	</path>
+	<clipPath id="SVGID_00000052808690491144364470000000976547297246665385_">
+		<use xlink:href="#SVGID_00000183246001811872955620000013237563858481370796_"  style="overflow:visible;"/>
+	</clipPath>
+	
+		<path style="clip-path:url(#SVGID_00000052808690491144364470000000976547297246665385_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M283.1,29.8c-5.7,30.9-17.7,261.5-142.8,236.1"/>
+	
+		<path style="clip-path:url(#SVGID_00000052808690491144364470000000976547297246665385_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M289.9,203.3c25.6,65.6,120,75.2,162.8,72"/>
+	
+		<path style="clip-path:url(#SVGID_00000052808690491144364470000000976547297246665385_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M139.2,413.3c32.2-24.6,188.7-12.4,222.3-24.7"/>
+	
+		<path style="clip-path:url(#SVGID_00000052808690491144364470000000976547297246665385_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M167.4,418.8c7.5,20.2,9,56.5,13.5,68.2c5.9,15.2-1.3,1.9-24,38.2"/>
+	
+		<path style="clip-path:url(#SVGID_00000052808690491144364470000000976547297246665385_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M299.1,407c-5.3,41.8-12.2,108.3-11.9,131.9"/>
+	
+		<path style="clip-path:url(#SVGID_00000052808690491144364470000000976547297246665385_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M191.9,439.3c26.2-0.6,52.2,1.2,55.4,1.3"/>
+	
+		<path style="clip-path:url(#SVGID_00000052808690491144364470000000976547297246665385_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M193.3,476.3c0,0,55.7,4.3,58,4.5"/>
+	
+		<path style="clip-path:url(#SVGID_00000052808690491144364470000000976547297246665385_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M169.8,525.2c26.6-11.4,63.9-10.7,80.5-6.7"/>
+</g>
+<g>
 	<defs>
-		<path id="l31" d="M330.7,521.7c-0.6-0.2-1.2,0-2,0.9
+		<path id="SVGID_00000176760725268945907670000015596727455090417809_" d="M330.7,521.7c-0.6-0.2-1.2,0-2,0.9
 			c-2.6,1.2-4.7,3-7.2,4.4c-0.4,0.2-0.2,1.5-0.3,2c-1.9,1.8-3.1,3.3-6,3.4c-1.2,3.4-5.7,2.4-8.6,2c-1.8,0.4-2.1,2.8-4.3,1.3
 			c-2.1-1.4-1.7,0.9-3.2,1.1c-1.3-0.5-4.1-0.3-3.5-2.5c0.1-0.7-0.7-2-0.2-2.7c1.7-2-4.8-4.8-6.1-6.5c0.6,0.1,1,0.1,1.5,0.1
 			c0.1-0.1,0.2-0.2,0.3-0.3c-1-1.3-2.1-2.5-3.1-3.8c0.1-0.1,0.1-0.2,0.2-0.3c1.1,0.6,2.2,1.2,3.3,1.8c0.6-1.7,0.5-3.1-1-4.1
@@ -135,14 +133,16 @@
 			c-0.1,0.3-0.8,0.4-1.2,0.6c1,2.4-2.6,3.6-3.8,5.3c-0.8,1.4-1.8,2.6-3.2,3.4C345.9,507,338.9,518.6,330.7,521.7z M355.4,481.7
 			c-0.2,2.1,0.7,2,2.2,1.6C356.8,482.7,356.3,482.3,355.4,481.7"/>
 	</defs>
-	<clipPath id="l32">
-		<use xlink:href="#l31"  style="overflow:visible;"/>
-	</clipPath>	
-		<path style="clip-path:url(#l32);" d="M277.2,440.7c95.1-53.7,146,51.1,47.6,92.4" stroke-dasharray="216" stroke-dashoffset="216">
-		<animate attributeName="stroke-dashoffset" id="an14" from="216" to="0" dur=".22s" fill="freeze" begin="an13.end"/>
-	</path>
+	<clipPath id="SVGID_00000085239296018560216480000011760845966127242374_">
+		<use xlink:href="#SVGID_00000176760725268945907670000015596727455090417809_"  style="overflow:visible;"/>
+	</clipPath>
+	
+		<path style="clip-path:url(#SVGID_00000085239296018560216480000011760845966127242374_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M277.2,440.7c95.1-53.7,146,51.1,47.6,92.4"/>
+</g>
+<g>
 	<defs>
-		<path id="l41" d="M315.4,502.7c-2.6-7-9.5-10.4-16-13.6
+		<path id="SVGID_00000113314748679161405830000015404260720358938042_" d="M315.4,502.7c-2.6-7-9.5-10.4-16-13.6
 			c1.1,0.1,1.8,0.1,2.5,0.1c0.1-0.1,0.1-0.2,0.2-0.3c-0.4-0.3-0.8-0.7-1.2-1c-0.6-0.4-2.1-0.1-1.2-1.6c-1-0.9-3.3,0-2.6-2.2
 			c-0.7,0.3-1.2,0.4-1.8,0.6c-0.2-0.2-0.6-0.7-1.1-1.2c1.7,0.3,3.2,0.5,4.8,0.7c0.1-0.1,0.1-0.3,0.2-0.4c-0.4-0.4-0.7-0.7-1.3-1.4
 			c1.7-0.2,4.3,0.4,2.9-2c5.9,0.8,11.4,2.1,17.1,3.8c4.3,0.8,9.6,5.7,13.6,2.5l20.4,17.7c0,0.4,0,0.5,0,0.9c1,0.5,2.4,0.6,3,1.3
@@ -173,23 +173,22 @@
 			C207.3,641.6,207.6,641.4,207.9,641.3 M250.7,622.8c-0.1-0.1-0.3-0.2-0.4-0.3c-0.6,1-1.1,1.9-1.7,3
 			C250,625.8,250,625.8,250.7,622.8"/>
 	</defs>
-	<clipPath id="l42">
-		<use xlink:href="#l41"  style="overflow:visible;"/>
+	<clipPath id="SVGID_00000089575565909873258520000000614297974819298993_">
+		<use xlink:href="#SVGID_00000113314748679161405830000015404260720358938042_"  style="overflow:visible;"/>
 	</clipPath>
 	
-		<path style="clip-path:url(#l42);" d="M274.5,464.3c34.9,0,50.9,58.9,118.2,49.5" stroke-dasharray="133" stroke-dashoffset="133">
-		<animate attributeName="stroke-dashoffset" id="an15" from="133" to="0" dur=".13s" fill="freeze" begin="an14.end"/>
-	</path>
+		<path style="clip-path:url(#SVGID_00000089575565909873258520000000614297974819298993_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M274.5,464.3c34.9,0,50.9,58.9,118.2,49.5"/>
 	
-		<path style="clip-path:url(#l42);" d="M229.4,539.9c-10.4,48.8-37.5,53.1-59,57.7" stroke-dasharray="90" stroke-dashoffset="90">
-		<animate attributeName="stroke-dashoffset" id="an16" from="90" to="0" dur=".09s" fill="freeze" begin="an15.end"/>
-	</path>
+		<path style="clip-path:url(#SVGID_00000089575565909873258520000000614297974819298993_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M229.4,539.9c-10.4,48.8-37.5,53.1-59,57.7"/>
 	
-		<path style="clip-path:url(#l42);" d="M256,575.4c-17,74.3-61.2,82.6-93.4,81.7" stroke-dasharray="138" stroke-dashoffset="138">
-		<animate attributeName="stroke-dashoffset" id="an17" from="138" to="0" dur=".14s" fill="freeze" begin="an16.end"/>
-	</path>
+		<path style="clip-path:url(#SVGID_00000089575565909873258520000000614297974819298993_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M256,575.4c-17,74.3-61.2,82.6-93.4,81.7"/>
+</g>
+<g>
 	<defs>
-		<path id="l51" d="M251.9,567.9c1,1.8,0,4.3-2.1,4.6
+		<path id="SVGID_00000116200150739148144850000012195644794177507493_" d="M251.9,567.9c1,1.8,0,4.3-2.1,4.6
 			c-3.9,0.2-6.3,2.7-9.1,5.1c1.1,1.2,2.3,2.5,3.7,3.9c-1,1.7-2.8,3.9-0.1,5.5c-1.5,1.4-1.5,1.9,0.4,2.9c-2.4,1.5-0.3,3.6-0.5,5.5
 			c5,0.6,8.9,6.8,14.3,5.2c5.3-1,8.7,4.4,13.6-0.6c1.6,6.1,1.8,11.6,0.7,17.6c0.4,4.7,0.6,9.6,0.8,14.2c3,7.2-0.1,14.8-0.6,22.2
 			c0.2,8.1,0,16-0.8,23.9c-0.8,7.9-3.9,15.5-3.7,23.4c0.6,2.9,0.1,6.2-0.9,9.1c-1,1.7,1.9,2.2,1.8,4.1c0.2,1.7,2.9,1.8,2.6,3.6
@@ -214,30 +213,24 @@
 			c-1.6,0.2-1.7,0-2.4-1.1c-1.9-2.1-3.9-4.6-6.5-1.9c-6.6,0.9-11.2,5.5-17.6,7.3c-4.3,0.5-7.8,3.3-11.9,4.2
 			c-3.4-0.2-6.9,0.8-9.9,2.7c0.2,0.4,0.4,0.8,0.8,1.6C258.2,566.1,255.2,565,251.9,567.9"/>
 	</defs>
-	<clipPath id="l52">
-		<use xlink:href="#l51"  style="overflow:visible;"/>
+	<clipPath id="SVGID_00000152243230519379520930000006703298005953315242_">
+		<use xlink:href="#SVGID_00000116200150739148144850000012195644794177507493_"  style="overflow:visible;"/>
 	</clipPath>
 	
-		<path style="clip-path:url(#l52);" d="M322.8,533.4c-7,16.9-51,21-64.5,30.9" stroke-dasharray="73" stroke-dashoffset="73">
-		<animate attributeName="stroke-dashoffset" id="an18" from="73" to="0" dur=".07s" fill="freeze" begin="an17.end"/>
-	</path>
+		<path style="clip-path:url(#SVGID_00000152243230519379520930000006703298005953315242_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M322.8,533.4c-7,16.9-51,21-64.5,30.9"/>
 	
-		<path style="clip-path:url(#l52);" d="M274.7,559.1c-33.1,48.8-4.6,94.5-9.8,143.1" stroke-dasharray="147" stroke-dashoffset="147">
-		<animate attributeName="stroke-dashoffset" id="an19" from="147" to="0" dur=".15s" fill="freeze" begin="an18.end"/>
-	</path>
+		<path style="clip-path:url(#SVGID_00000152243230519379520930000006703298005953315242_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M274.7,559.1c-33.1,48.8-4.6,94.5-9.8,143.1"/>
 	
-		<path style="clip-path:url(#l52);" d="M389.5,539.4c0,35-92.9,46.9-118.2,54.1c20.1,26.7,99.9,90.4,142.2,78.6" stroke-dasharray="305" stroke-dashoffset="305">
-		<animate attributeName="stroke-dashoffset" id="an20" from="305" to="0" dur=".30s" fill="freeze" begin="an19.end"/>
-	</path>
-
+		<path style="clip-path:url(#SVGID_00000152243230519379520930000006703298005953315242_);fill:none;stroke:#FFFFFF;stroke-width:80;stroke-linecap:round;stroke-miterlimit:10;" d="
+		M389.5,539.4c0,35-92.9,46.9-118.2,54.1c20.1,26.7,99.9,90.4,142.2,78.6"/>
 </g>
-<linearGradient id="t3" gradientUnits="userSpaceOnUse" x1="0" y1="-50" x2="0" y2="70">
-	<stop  offset="0" style="stop-color:#C79F62FF"/>
-	<stop  offset="1" style="stop-color:#C79F6200"/>
-	<animate attributeName="y1" id="an21" from="-50" to="710" dur=".5s" fill="freeze" begin="an20.end"/>
-	<animate attributeName="y2" from="70" to="800" dur=".5s" fill="freeze" begin="an20.end"/>
+<linearGradient id="SVGID_00000155114484093523518610000001562351573663271856_" gradientUnits="userSpaceOnUse" x1="559.3398" y1="706.4033" x2="559.3398" y2="71.1821">
+	<stop  offset="0" style="stop-color:#C79F62;stop-opacity:0"/>
+	<stop  offset="1" style="stop-color:#C79F62"/>
 </linearGradient>
-<path style="fill:url(#t3);" d="M585.3,117.9v49.2c0,2.6-2.5,3.8-5.2,3.2
+<path style="fill:url(#SVGID_00000155114484093523518610000001562351573663271856_);" d="M585.3,117.9v49.2c0,2.6-2.5,3.8-5.2,3.2
 	v-3.8h-42.4v1.3c0,2.2-2.2,3.6-5.2,2.9v-58.5l4,0.9c1,0.2,1.2,0.7,1.2,0.9h39.3c1.3,0,2.2-0.5,3.1-1.5l4.2,1.3
 	C587.4,114.7,585.3,116.9,585.3,117.9 M580.1,117.4h-42.4v45.5h42.4V117.4z M560.8,149.5c-3.2,2-12.5,5.8-16.4,7.3
 	c-2,0.8-2.2,0.5-5.6-3.4c7.6-1.5,17.2-3.9,21.3-5.2C561.1,148,561.4,149.1,560.8,149.5 M575.5,128.9h-10.2c0.1,7.5,0.4,11.5,1.5,15
@@ -320,4 +313,20 @@
 	c-0.8,0.5-1.6,0.1-1.2-0.8c0.6-1.2,1.5-3.2,1.9-4.5h-25.8c-0.1,0.9-0.3,1.8-0.5,2.6C554.1,606.7,546.3,603.5,550.4,599.1
 	 M581.3,605.3c0,1.3-1.4,2.2-3.6,2.2h-18.2c-1,0-1.4-1-2.6-3.5h18.7c1.3,0,2.1-0.6,3.2-1.9C580.1,603.5,581.3,604.3,581.3,605.3
 	 M595,71.2h-71.3v2.3H595V71.2z M595,704.1h-71.3v2.3H595V704.1z"/>
+<path class="st7" d="M5.5,48L5,46.4h18.5l3.8-5.9l7,6.1c-0.6,1-1.6,1.4-3.7,1.4 M13.8,23l11.6,1.1c-0.2,1.1-0.8,1.7-3.3,2v69.2
+	c0,0-1.2,3-8.3,3 M53.5,68.9c-0.5,0.6-1.6,1-3,1.4c0,28-3.5,27-11.8,28c0-3.9-0.6-5.2-5.3-6.2v-1.3l5.9,0.1c3.1,0,3.4-0.3,4.3-22.4
+	L42.9,67l3.1-3.8 M69,57.5c-0.2,1-0.6,1.5-2.9,1.8C65.5,83,58.9,91.7,50,98.6l-1.1-1.1c7.6-10.3,9.6-20.3,9.6-40.6 M25,68.5L24.5,67
+	h45.6l3.2-3.9l7.9,5.9c-0.6,0.6-1.5,1.1-3.1,1.4c-0.6,25.8-2.3,27.5-12.6,28c0-4.5-0.8-5.6-5.9-6.7l0.1-1.2l6.6,0.1
+	c2.7,0,3.8,0.5,4.5-22 M42.5,57.7c-0.1,1-0.6,1.5-2.9,1.7c0,21.3-6.9,33-14.9,38.9l-1.1-1.1c6.1-8.6,8.8-18.7,8.8-40.2 M60.6,24.4
+	c-0.2,1.2-1.1,1.6-3.3,1.8c-2,18-13.1,27.4-29.5,31.7l-0.5-1.3C41.3,51.3,48.4,40,48.9,23 M32.5,35.4L32,33.8h34.4l3.2-3.8l7.9,5.9
+	c-0.6,0.6-1.5,1-3,1.3c-1.4,16.4-4,19.2-13.6,19.3c0-4.2-0.8-5.7-6.7-6.7v-1.2l7.7,0.2c2.7,0,3.6,0.3,5.1-13.4 M31.6,181.5
+	c0,5.4-1.2,9.1-9.5,10c0-6-1.5-7.3-6.4-7.8v-1.1h7.2c0.8,0,1-0.3,1-1.2v-20.7h-7.3c-0.8,10.8-3.3,22.1-10.4,30.9l-1.1-0.6
+	c4.5-13.2,4.5-29.3,4.5-46.1v-27l8.8,3.4h4.8l3.1-4l8.1,5.9c-0.5,0.6-1.4,1.1-2.8,1.4 M23.9,141.4h-6.8c0,6,0,12.6-0.3,17.6h7.1
+	 M23.9,122.8h-6.8v17h6.8 M60,154.1c-0.2,1.2-1,1.7-3.3,1.8c-1.5,19.1-10.2,29.9-23.2,35.6l-0.7-1.2c10.1-6.7,15.6-18.7,15.5-37.3
+	 M38.3,165.7l-0.5-1.6h25.1l3.3-4l8.3,6.2c-0.5,0.6-1.4,1.1-3,1.3c-1,23.3-4.4,23.2-13.5,23.8c0-4.8-1.3-5.9-6.8-7.1l0.1-1.1
+	l7.5,0.2c2.7,0,4,0,4.8-17.6 M36.1,118.6c18.5,7.5,7.6,19.9,2.8,13.1c0.2-4-1.4-9.4-3.6-12.6 M74.3,121.1c-0.3,0.9-1.1,1.3-3,1.2
+	c-2.7,4.1-6.1,9.2-11,13.9c4.8,10.8,12.7,16.9,21.5,21.1l-0.1,0.8c-2.9,0.7-5.2,3.1-6.2,6.9c-6-4.6-11.8-10.7-16.6-28.3
+	c2.1-4.9,3.8-11.3,5.3-18.3 M32.5,149l-0.4-1.5h37.5l4.1-5.5l7.9,5.7c-0.6,1-1.6,1.4-3.8,1.4 M34.7,136.7l-0.4-1.6H66l4.1-5.1
+	l7.7,5.3c-0.6,1.1-1.7,1.4-3.8,1.4 M60.6,118.8c-0.2,1-0.9,1.7-3.1,1.8c-3.7,23.6-14.9,41.6-31.3,47.9
+	c15.4-10.8,21.7-29.4,23.4-51.7"/>
 </svg>

@@ -1,10 +1,5 @@
 <template>
   <article class="s1" id="s1">
-  <!--  
-    <img src="./s1/logo.svg" class="logo" alt="img" srcset="">
-    <img class="t0 events-n" src="./s1/mo.jpg" alt="" srcset="">
-    <img class="t0 events-n" src="./s1/pc.jpg" alt="" srcset="">
-    -->
     <div class="bg absolute">
     <img src="./s1/bg1m.jpg" alt="bg" srcset="" v-if="isMobile">
     <img src="./s1/bg1.jpg" alt="bg" srcset="" v-else></div>
@@ -43,7 +38,17 @@
   }
   .bg{position: absolute;width: 100%;bottom: 0;left: 0%;height: 100%;
    img{width: 100%;height: 100%;object-fit: cover;}
+   &::after{content: "";display: block;position: absolute;top: 0;right: 0;width: 200%;height: 100%;
+   background:linear-gradient(to left, #000 50%,#0000 100%);
+  animation: bga 2s 2s forwards;
+     transform: translateX(0%);
   }
+  }
+@keyframes bga {
+  to {
+     transform: translateX(100%);
+  }
+}
   .logo{top: size(80);
     top:calc(35% + #{size(80 - 1070 * .35)});
     right: size(190);
