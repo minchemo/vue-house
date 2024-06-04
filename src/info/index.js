@@ -8,20 +8,17 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    // address: "新竹縣竹北市文興路二段2號2號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3621.626354641783!2d121.03027861140102!3d24.808244877871388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ4JzI5LjciTiAxMjHCsDAxJzU4LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1713862128454!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/nZD8RtJGdj8BQhua9",
-    // phone: "03-590-5588",
+    address: "新竹縣竹北市文興路二段6號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3621.629911336255!2d121.03023567634662!3d24.808123147348038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ4JzI5LjIiTiAxMjHCsDAxJzU4LjEiRQ!5e0!3m2!1szh-TW!2stw!4v1717484871365!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/RP7kGshmTBtiq1eT9",
+     phone: "03-590-5588",
     fbLink: "https://www.facebook.com/61558478311163/",
     fbMessage: "https://m.me/61558478311163/",
     caseName: caseName,
     houseInfos: [
-        /*
-        ["投資興建", "xx"],
-        ["建築設計", "弘憲聯合建築師事務所"],
-        ["使照號碼", "(111)南工使字第01269號等10個"],
-        ["行銷企劃", "自售"],
-        */
+        
+        ["投資興建", "協勝建設股份有限公司"],
+        ["企劃銷售", "寰宇動力廣告有限公司"],
     ],
     gtmCode: ["GTM-MN3GRRP6"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
