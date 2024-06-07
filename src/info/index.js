@@ -8,9 +8,9 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新竹縣竹北市文興路二段6號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3621.629911336255!2d121.03023567634662!3d24.808123147348038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ4JzI5LjIiTiAxMjHCsDAxJzU4LjEiRQ!5e0!3m2!1szh-TW!2stw!4v1717484871365!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/RP7kGshmTBtiq1eT9",
+    address: "新竹縣竹北市文興路二段2號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7243.256439264223!2d121.02758189084733!3d24.80818104725497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683655383ab73d%3A0x419ad0738a8278f3!2zMzAy5paw56u557ij56u55YyX5biC5paH6IiI6Lev5LqM5q61MuiZnw!5e0!3m2!1szh-TW!2stw!4v1717751317733!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/xBSKbeKYndXGpRte9",
      phone: "03-590-5588",
     fbLink: "https://www.facebook.com/61558478311163/",
     fbMessage: "https://m.me/61558478311163/",
@@ -18,7 +18,7 @@ export default {
     houseInfos: [
         
         ["投資興建", "協勝建設股份有限公司"],
-        ["企劃銷售", "寰宇動力廣告有限公司"],
+        ["企劃銷售", "新智力廣告"],
     ],
     gtmCode: ["GTM-MN3GRRP6"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
