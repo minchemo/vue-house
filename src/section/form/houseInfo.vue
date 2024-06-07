@@ -6,7 +6,7 @@
                     <div class="title">建案資訊</div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                            v-for="item in info.houseInfos">
+                            v-for="item in info.houseInfos" :key="item">
                             <p class="mr-5 border-l-2 border-[#A92D41] pl-2 text-[#A92D41] font-[700]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal"
                                 v-html="item[1]">
