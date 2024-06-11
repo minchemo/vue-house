@@ -104,8 +104,23 @@ a{display: block;background: #B7A999; color: #000;border-radius: 0 .8em 0 .8em;m
   .name{font-size: 1.4em;margin-bottom: .5em;}
   .area{font-size: 0.85em;}
   .desc{font-size: 1.1em;}
+
+  
 @media screen and (min-width: 767px) {
-  /* 詭異跳動的除錯 */
+  opacity:0;
+  &.swiper-slide-duplicate-active,
+  &.swiper-slide-active,
+  &.swiper-slide-duplicate-next,
+  &.swiper-slide-next{opacity: 1;}
+  &.swiper-slide-duplicate-prev,
+  &.swiper-slide-prev,
+  &.swiper-slide-duplicate-next + .swiper-slide,
+  &.swiper-slide-next + .swiper-slide{opacity: 0;}
+ }
+   /* 詭異跳動的除錯 */
+   /*
+@media screen and (min-width: 767px) {
+ 
   opacity:0;
   &:nth-child(5),
   &:nth-child(6),
@@ -121,6 +136,7 @@ a{display: block;background: #B7A999; color: #000;border-radius: 0 .8em 0 .8em;m
   &.swiper-slide-next + .swiper-slide + .swiper-slide {opacity: 0;}
 
       }
+      */
   }
   }
   

@@ -62,7 +62,7 @@ img {
 }
 
   .caption{
-      @apply absolute;
+      position: absolute;
       right:1em;
       bottom: .5em;
       font-weight: 300;
@@ -97,7 +97,7 @@ img {
   }
   }
 .slider {
-  @apply relative;
+  position: relative;
   z-index: 2;
   .slide-item{
   img{width: 100%;height: 100%;}
