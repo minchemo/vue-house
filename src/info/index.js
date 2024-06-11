@@ -8,10 +8,10 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    // address: "XXXX",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1701074829535!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/gpLWXKGf8L4TAaaE6",
-    // phone: "00-00000000",
+    address: "新北市三重區水漾路一段241號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.5822206507911!2d121.48183011956951!3d25.056839798612604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a959f3ae360b%3A0x4333e4948d97485f!2zUmlWRVIgUEFSS-Wci-azsOS4ieS6leaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1718097349796!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/dXZrx2nbefGTivpP6",
+    phone: "02-29899688",
     fbLink: "https://www.facebook.com/61551470159566/",
     fbMessage: "https://m.me/61551470159566",
     caseName: caseName,
