@@ -5,6 +5,8 @@
 		<img src="./s1/mo.jpg" class="t0">  -->
 	<div class="txt">
     <Logo class="logo" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500" />
+		<img src="./s1/logo.svg">
+		<img src="./s1/s5title.svg">
 		<h3 class="t1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">Y22雙捷運 五華街站</h3>
     <div class="hr" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500"></div>
     <h4 class="t2" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1500">百年一遇 三重地王</h4>
