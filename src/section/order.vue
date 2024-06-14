@@ -20,26 +20,29 @@
             <label class="row"><span>手機<span v-if="!bypass.includes('phone')">(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
+            <label class="row"><span>Email</span>
+              <input type="text" placeholder="Email" class="input w-full rounded-none" :value="formData.email"
+            @input="(event) => (formData.email = event.target.value)" /></label>
 
-          <label class="row" v-if="info.room_type"><span>需求房型<span v-if="!bypass.includes('room_type')">(必填)</span></span>
+          <label class="row" v-if="info.room_type"><span>可預約的時段</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
+            <option value="" selected disabled>請選擇時段</option>
             <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算<span v-if="!bypass.includes('budget')">(必填)</span></span>
+          <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇預算</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
-          <label class="row"><span>居住縣市<span v-if="!bypass.includes('city') ">(必填)</span></span>
+          <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row"><span>居住地區<span v-if="!bypass.includes('area')">(必填)</span></span>
+          <label class="row"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value" :key="area">
@@ -57,9 +60,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#BBA693] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -114,7 +117,7 @@
     font-size: size(52);
     letter-spacing: 0.02em;
     font-weight: 700;
-    color: #785A4F;
+    color: #BBA693;
     padding:1.5em 0 0em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -125,7 +128,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #000;
+    color: #fff;
     padding-top:0em;
     letter-spacing: .04em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -167,7 +170,7 @@
       background-color: #ccc;
       position: absolute;
     }
-    .row{background: #FFF;border: 2px solid #785A4F;color: #785A4F;
+    .row{background: #FFF;border: 2px solid #12352A;color: #12352A;
       display: flex;width: 100%;
     align-items:center;
       > span{
