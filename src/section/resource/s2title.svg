@@ -1,0 +1,36 @@
+<svg viewBox="0 0 366 92" fill="#FFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M0,87.3V78h78.5v9.3 M6.7,17.7V8.6h65v9.1 M13.1,50.2v-9.1h52.2v9.1 M140.4,84.4h34.2h0v6.4H94.7v-6.4h34V14.1
+	c-9.6,0.4-18.8,0.5-25.8,0.3L102.2,9c17.9-0.8,39.2-3.9,55.3-9l8.8,10c-7.1,1.6-16.4,2.7-26,3.4 M96.4,26.1v-6.3h77.1v6.3
+	 M104.4,64.6V32.2h60.4v32.4 M101.2,77.3v-6.2h66.9v6.2 M153.5,58.5l0-20.2h-37.7v20.2 M210.7,66.5h-11.1V4h11.1 M189.6,33.5v-6.1
+	h30.8v6.1 M250.2,70.2H240V1.8h10.2 M234.1,74.3c0,4.6,1.7,5.8,5.6,6.1c7.2,0.5,12.1,0.5,18.9,0c5.4-0.4,6.1-2.1,6.1-21.6h4.7
+	c4.4,24.5,3.9,31.9-9.7,32.7v0c-8.5,0.6-15,0.5-22.5,0c-10.3-0.7-13.9-2.8-13.9-14.7V11.2h10.8 M215.7,46.4l-1.7-6l41.5-17.7
+	l1.8-3.2l10.8,3c-1.5,11-5.5,31.4-9.3,40.3l-4.4-1c1-8,2.1-25.7,2.1-32.5 M331.6,81.7h33.7V89h-79.6v-7.3l0,0H319V14.6h-29.2V7.3
+	h70.7v7.3h-29"/>
+<defs>
+  <linearGradient id="grad" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FFE679"/>
+    <stop offset="0.02" stop-color="#FDE276"/>
+    <stop offset="0.33" stop-color="#E0B64E"/>
+    <stop offset="0.61" stop-color="#CC9631"/>
+    <stop offset="0.84" stop-color="#BF8320"/>
+    <stop offset="1" stop-color="#BB7C1A"/>
+  </linearGradient>
+</defs>
+<linearGradient id="paint0" x1="294.15" y1="0" x2="356.84" y2="0" xlink:href="#grad"/>
+<linearGradient id="paint1" x1="115.77" y1="0" x2="164.84" y2="0" xlink:href="#grad"/>
+<linearGradient id="paint2" x1="32.8" y1="0" x2="45.7" y2="0" xlink:href="#grad"/>
+<linearGradient id="paint3" x1="188.19" y1="0" x2="222.54" y2="0" xlink:href="#grad"/>
+<path fill="url(#paint0)" d="M356.9,42.6h-62.7v7h62.7V42.6z"/>
+<path fill="url(#paint1)" d="M164.8,45.2h-49.1v6h49.1V45.2z"/>
+<path fill="url(#paint2)" d="M39.3,39.2l-6.4,6.4l6.4,6.4l6.4-6.4L39.3,39.2z"/>
+<path fill="url(#paint3)" d="M220.3,58.1l2.2,4.7c-8,7.6-19.4,14.8-29.7,19.9l-4.6-12.6C191.3,69.9,217.4,60,220.3,58.1z"/>
+<linearGradient id="light1" gradientUnits="userSpaceOnUse" x1="0" y1="50" x2="100" y2="0">
+	<stop  offset="0" style="stop-color:#FFF0"/>
+	<stop  offset="0.5" style="stop-color:#FFFF"/>
+	<stop  offset="1" style="stop-color:#FFF0"/>
+<animate attributeName="x1" from="-400" to="1400" dur="4s" repeatCount="indefinite" />
+<animate attributeName="x2" from="-300" to="1500" dur="4s" repeatCount="indefinite" />
+</linearGradient>
+<path style="fill:url(#light1);stroke:url(#light1);" d="M356.9,42.6h-62.7v7h62.7V42.6z M164.8,45.2h-49.1v6h49.1V45.2z M39.3,39.2l-6.4,6.4l6.4,6.4l6.4-6.4L39.3,39.2z
+	 M220.3,58.1l2.2,4.7c-8,7.6-19.4,14.8-29.7,19.9l-4.6-12.6C191.3,69.9,217.4,60,220.3,58.1z"/>
+</svg>

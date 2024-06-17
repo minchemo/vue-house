@@ -1,215 +1,456 @@
 <template>
-	<article class="s8">
-		<div class="t">
-			<div class="t1" data-aos="fade-up" data-aos-delay="0">慢享土城日常</div>
-			<div class="t2" data-aos="fade-up" data-aos-delay="200">光合植萃建築</div>
-			<div class="l"></div>
-			<div class="t3" data-aos="fade-up" data-aos-delay="400">2-4房 全新落成 <br v-if="isMobile">親眼見證美好</div>
-			<div class="pagi" v-if="!isMobile">
-				<span v-for="img, i in imgsA" :class="{ 'active': i == currentIdxA }" @click="splideA.go(i)"></span>
-			</div>
-		</div>
+  <article class="s8">
+    <div class="slide-box-i">
+      <Splide
+        ref="splide2"
+        :options="{
+          arrows: false,
+          autoplay: true,
+          pagination: true,
+          interval: 4000,
+          gap: 20,
+          type: 'loop',
+        }"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs2"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+          <div class="caption">
+            {{ i.caption }}
+          </div>
+        </SplideSlide>
+      </Splide>
+      <div class="arrows" v-if="isMobile">
+        <img
+          src="@/section/arrow.png"
+          class="arrow prev"
+          alt=""
+          srcset=""
+          @click="splide2.go('<')"
+        />
+        <img
+          src="@/section/arrow.png"
+          class="arrow next"
+          alt=""
+          srcset=""
+          @click="splide2.go('>')"
+        />
+      </div>
+    </div>
 
-		<Slide ref="splideA" :arrow_m="true" :gap="1" :gap_m="0" :imgs="isMobile ? imgsAm : imgsA" :w="1920" :h="1089" :w_m="375" :h_m="615" :dot="false"
-			@slideIndex="onMovedA" />
-		<img class="architectural" src="@/section/s8/architectural.png" alt="" srcset="">
-	</article>
+    <div class="t">
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
+        茂德建設品牌 職人工藝再現經典
+      </div>
+      <div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">
+        家，是永恆幸福的承諾。<br />
+        因為有承諾，所以更堅持以職人工藝，一磚一瓦細心雕琢，<br />
+        手感打造家的溫暖美學。為每個愛家的人，獻上一生的信念！
+      </div>
+      <div class="t2" v-else data-aos="fade-up" data-aos-delay="200">
+        家，是永恆幸福的承諾。<br />
+        因為有承諾，所以更堅持以職人工藝，一磚一瓦細心雕琢，手感打造家的溫暖美學。為每個愛家的人，獻上一生的信念！
+      </div>
+    </div>
+    <div class="en2">
+      <div class="en2-t" data-aos="fade-up" data-aos-delay="0">
+        工藝品味之選 輕奢訂製享受生活
+      </div>
+      <img
+        class="en2-i"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        src="@/section/s8/en2.svg"
+        alt=""
+        srcset=""
+      />
+    </div>
+    <div class="slide-box">
+      <Splide
+        ref="splide"
+        class="slide"
+        :options="{
+          arrows: false,
+          autoplay: true,
+          pagination: true,
+          interval: 4000,
+          gap: 20,
+          type: 'loop',
+          drag: 'free',
+          snap: true,
+          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
+        }"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+        </SplideSlide>
+      </Splide>
+    </div>
+    <div class="arrows" v-if="isMobile">
+      <img
+        src="@/section/arrow.png"
+        class="arrow prev"
+        alt=""
+        srcset=""
+        @click="splide.go('<')"
+      />
+      <img
+        src="@/section/arrow.png"
+        class="arrow next"
+        alt=""
+        srcset=""
+        @click="splide.go('>')"
+      />
+    </div>
+    <img
+      class="en"
+      src="@/section/s8/en.svg"
+      alt=""
+      srcset=""
+      v-if="!isMobile"
+      data-aos="fade-up"
+      data-aos-delay="0"
+    />
+    <img
+      class="en"
+      src="@/section/s8/enm.svg"
+      alt=""
+      srcset=""
+      v-else
+      data-aos="fade-up"
+      data-aos-delay="0"
+    />
+    <div class="c" data-aos="fade" data-aos-delay="600"></div>
+  </article>
 </template>
 
-<style lang="scss" scoped>
-@import '@/assets/style/function.scss';
+<style lang="scss">
+@import "@/assets/style/function.scss";
 
-.s8{
-	@apply w-full relative;
-	height: size(1080);
+.s8 {
+  @apply w-full relative bg-[#0D5052] flex flex-col items-center text-white;
+  height: size(2162);
+  padding-top: size(224);
 
-	.t {
-		@apply absolute z-10 text-white flex flex-col items-center justify-center;
-		top: size(415);
-		right: size(367);
+  .slide-box-i {
+    @apply relative w-full;
+    height: size(538);
+    margin-bottom: size(20);
+    .slide-item {
+      @apply w-full;
+      height: size(538);
+      background-size: cover;
+      .caption {
+        @apply absolute font-['Noto_Sanc_TC'];
+        right: size(49);
+        bottom: size(20);
+        color: #fff;
+        font-size: size(20);
+        font-weight: 400;
+        letter-spacing: size(2.6);
+      }
+    }
+    .splide__pagination {
+      @apply absolute right-0 w-full flex justify-center;
+      padding: size(25) 0;
+      li {
+        line-height: 0;
+        button {
+          @apply rounded-full;
+          width: size(10);
+          height: size(10);
+          background: #0d6b68;
+          &.is-active {
+            background: #138784;
+          }
+        }
+      }
+      gap: size(13);
+    }
+  }
 
-		.t1 {
-			font-family: "Noto Serif TC";
-			font-size: size(64);
-			font-weight: 500;
-			letter-spacing: size(5.76)
-		}
+  .t {
+    @apply w-full;
+    .t1 {
+      @apply text-center;
+      color: #e89213;
+      font-size: size(51);
+      font-weight: 700;
+      line-height: 126.7%;
+      letter-spacing: size(4.08);
+      margin: size(43) 0;
+    }
+    .t2 {
+      @apply text-center;
+      font-size: size(24);
+      font-weight: 700;
+      line-height: 157.9%;
+      letter-spacing: size(4.8);
+    }
+  }
 
-		.t2 {
-			font-size: size(48);
-			font-weight: 500;
-			letter-spacing: size(4.32)
-		}
+  .en2 {
+    @apply relative w-full flex items-center justify-center z-10;
+    gap: size(182);
+    margin-top: size(151);
+    margin-bottom: size(62);
+    .en2-t {
+      color: #e89213;
+      font-size: size(51);
+      font-weight: 700;
+      line-height: 126.7%;
+      letter-spacing: size(4.08);
+    }
+    .en2-i {
+      width: size(795);
+    }
+  }
 
-		.l {
-			@apply bg-white;
-			width: size(397);
-			height: size(1);
-			margin: size(25) 0;
-		}
+  .slide {
+    width: size(1009);
+    height: size(682.74);
+    .slide-item {
+      width: size(1009);
+      height: size(682.74);
+      background-size: cover;
+      .caption {
+        @apply absolute font-['Noto_Sanc_TC'];
+        right: size(14);
+        bottom: size(15);
+        font-size: size(20);
+        font-weight: 400;
+        letter-spacing: size(2.6);
+      }
+    }
+    .splide__pagination {
+      @apply absolute right-0 w-full flex justify-center;
+      padding: size(25) 0;
+      li {
+        line-height: 0;
+        button {
+          @apply rounded-full;
+          width: size(10);
+          height: size(10);
+          background: #0d6b68;
+          &.is-active {
+            background: #138784;
+          }
+        }
+      }
+      gap: size(13);
+    }
+  }
 
-		.t3 {
-			font-size: size(24);
-			font-weight: 500;
-			letter-spacing: size(6.24)
-		}
+  .en {
+    @apply absolute;
+    height: size(146.5);
+    top: size(23);
+    left: size(4);
+  }
 
-		.pagi {
-			@apply flex items-center justify-center;
-			gap: size(9);
-			margin-top: size(20);
-
-			span {
-				@apply block cursor-pointer hover:opacity-50;
-				width: size(9);
-				height: size(9);
-				background-color: #D9D9D9;
-
-				&.active {
-					background-color: #A77C22;
-				}
-			}
-		}
-	}
-
-	.slide-box {
-		@apply flex items-center justify-center text-white;
-		gap: size(14);
-
-		.slide-t {
-			@apply flex flex-col items-start justify-center w-full h-full;
-			background-color: rgba(167, 124, 34, 0.60);
-			width: size(604);
-			height: size(367);
-			padding: 0 size(60);
-
-			.pagi {
-				@apply flex items-center;
-				gap: size(9);
-				margin-bottom: size(15);
-
-				span {
-					@apply block cursor-pointer hover:opacity-50;
-					width: size(9);
-					height: size(9);
-					background-color: #D9D9D9;
-
-					&.active {
-						background-color: #A77C22;
-					}
-				}
-			}
-
-			.t1 {
-				@apply whitespace-nowrap;
-				font-size: size(25);
-				font-weight: 900;
-				letter-spacing: size(2.25);
-				margin-bottom: size(25);
-			}
-
-			.t2 {
-				font-size: size(17);
-				letter-spacing: size(1.53);
-				font-weight: 500;
-			}
-		}
-	}
-
-	.architectural {
-		@apply absolute;
-		width: size(614);
-		left: size(157);
-		bottom: size(10);
-	}
-
+  .c {
+    @apply rounded-full absolute z-0 select-none;
+    width: size(91);
+    height: size(91);
+    top: size(1168);
+    left: size(809);
+    border: 1px solid #fff;
+  }
 }
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
 
 @media screen and (max-width: 767px) {
-	.s8 {
-		@apply w-full relative;
-		height: sizem(615);
+  .s8 {
+    height: sizem(1334);
+    padding-top: sizem(97);
 
-		.t {
-			@apply absolute z-10 text-white flex flex-col items-center justify-center;
-			top: sizem(67);
-			right: sizem(90);
+    .c {
+      display: none;
+    }
 
-			.t1 {
-				font-size: sizem(30);
-				letter-spacing: sizem(2.7)
-			}
+    .slide-box-i {
+      height: sizem(331);
+      margin-bottom: 0;
+      .slide-item {
+        height: sizem(331);
+        .caption {
+          right: sizem(11);
+          bottom: sizem(7);
+          font-size: sizem(12);
+          font-weight: 400;
+          letter-spacing: sizem(1.56);
+        }
+      }
+      .splide__pagination {
+        @apply hidden;
+      }
+      .arrows {
+        @apply top-1/2 -translate-y-1/2;
+      }
+    }
 
-			.t2 {
-				font-size: sizem(30);
-				letter-spacing: sizem(2.7)
-			}
+    .t {
+      padding: 0 sizem(30);
+      .t1 {
+        font-size: sizem(20);
+        letter-spacing: sizem(1.6);
+        margin-top: sizem(27);
+        margin-bottom: sizem(14);
+        padding-bottom: sizem(14);
+        border-bottom: 1px solid #fff;
+      }
+      .t2 {
+        font-size: sizem(13);
+        letter-spacing: sizem(2.6);
+      }
+    }
 
-			.l {
-				@apply bg-white;
-				width: sizem(194);
-				height: sizem(1);
-				margin: sizem(15) 0;
-			}
+    .en2 {
+      @apply flex-col-reverse;
+      gap: sizem(9);
+      margin-top: sizem(100);
+      margin-bottom: sizem(40);
+      .en2-t {
+        font-size: sizem(20);
+        font-weight: 700;
+        line-height: 126.7%;
+        letter-spacing: sizem(1.6);
+      }
+      .en2-i {
+        width: sizem(301);
+      }
+    }
 
-			.t3 {
-				@apply text-center;
-				font-size: sizem(17);
-				letter-spacing: sizem(4.42)
-			}
+    .slide {
+      width: sizem(270);
+      height: sizem(417.59);
+      .slide-item {
+        width: sizem(270);
+        height: sizem(417.59);
+      }
+      .splide__pagination {
+        @apply hidden;
+      }
+    }
 
-			.pagi {
-				@apply hidden;
-			}
-		}
+    .arrows {
+      @apply absolute z-20 w-full flex justify-between;
+      bottom: sizem(300);
+      padding: 0 sizem(5);
 
+      .arrow {
+        @apply cursor-pointer;
+        width: sizem(12.8);
+        height: sizem(22.86);
+        &.prev {
+          transform: scaleX(-1);
+        }
+      }
+    }
+    .en {
+      @apply absolute;
+      height: sizem(58.95);
+      top: sizem(16);
+      left: 0;
+    }
 
-		.architectural {
-			@apply absolute;
-			width: sizem(304);
-			left: sizem(35);
-			bottom: sizem(3);
-		}
-	}
+    .c {
+      @apply rounded-full absolute z-10 select-none;
+      width: size(91);
+      height: size(91);
+      top: size(1168);
+      left: size(809);
+      border: 1px solid #fff;
+    }
+  }
 }
 </style>
 
 <script setup>
-import Slide from "@/components/slide.vue";
-import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
+import View from "@/components/fullview.vue"
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
 
-const smoothScroll = inject('smoothScroll')
-const isMobile = computed(() => globals.$isMobile());
+const smoothScroll = inject("smoothScroll")
+const isMobile = computed(() => globals.$isMobile())
 
-const splideA = ref(null)
-const currentIdxA = ref(0)
-const imgsA = [
-	{
-		img: new URL("../section/s8/1.jpg", import.meta.url).href,
-		caption: "",
-	},
-	{
-		img: new URL("../section/s8/2.jpg", import.meta.url).href,
-		caption: "",
-	},
+const splide = ref()
+const splide2 = ref()
+
+const imgs = [
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/1m.webp", import.meta.url).href
+      : new URL("../section/s8/1.webp", import.meta.url).href,
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/2m.webp", import.meta.url).href
+      : new URL("../section/s8/2.webp", import.meta.url).href,
+  },
 ]
-const imgsAm = [
-	{
-		img: new URL("../section/s8/1m.jpg", import.meta.url).href,
-		caption: "",
-	},
-	{
-		img: new URL("../section/s8/2m.jpg", import.meta.url).href,
-		caption: "",
-	},
-]
-const onMovedA = (idx) => {
-	currentIdxA.value = idx;
-}
 
+const imgs2 = [
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/01m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/01.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/02m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/02.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/03m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/01.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/04m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/02.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/05m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/01.webp", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s8/slider/06m.webp", import.meta.url).href
+      : new URL("../section/s8/slider/02.webp", import.meta.url).href,
+    caption: "",
+  },
+]
+
+// const imgs3 = globals.$isMobile()
+//   ? [
+//       {
+//         img: new URL("../section/s8/slider/xxx.webp", import.meta.url).href,
+//         caption: "手機圖片路徑",
+//       },
+//     ]
+//   : [
+//       {
+//         img: new URL("../section/s8/slider/xxx.webp", import.meta.url).href,
+//         caption: "PC圖片路徑",
+//       },
+//     ]
 </script>

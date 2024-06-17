@@ -4,15 +4,15 @@
     <!-- <div class="logo" data-aos="zoom-in"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="幸福享享" srcset="" />
+        <img src="@/section/form/phone.svg" alt="鼎藏豐碩" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="幸福享享" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="鼎藏豐碩" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="幸福享享" srcset="" />
+        <img src="@/section/form/fb.svg" alt="鼎藏豐碩" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <div>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-between items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="幸福享享" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="鼎藏豐碩" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -33,21 +33,21 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="幸福享享" srcset="" />
+      <img src="@/section/form/phone.svg" alt="鼎藏豐碩" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="幸福享享" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="鼎藏豐碩" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="幸福享享" srcset="" />
+      <img src="@/section/form/pen.svg" alt="鼎藏豐碩" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="幸福享享" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="鼎藏豐碩" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -58,9 +58,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="幸福享享" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="幸福享享" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="幸福享享" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="鼎藏豐碩" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="鼎藏豐碩" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="鼎藏豐碩" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
         '接待會館'
@@ -102,10 +102,10 @@
   width: size(1200);
   // border-radius: size(115);
   padding: size(0) size(168) size(55) size(168);
-  margin-top: size(132);
+  margin-top: size(100);
+  margin-bottom: size(70);
   position: relative;
   z-index: 50;
-  margin-bottom: 0;
 
   .tree {
     @apply absolute;
@@ -148,7 +148,8 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #0D5052;
+      border: 1px solid #b28247;
+      background: linear-gradient(90deg, #ffe679 0%, #bb7c1a 100%);
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -179,7 +180,8 @@
       }
 
       &.address {
-        background-color: #fff;
+        background: #E0E0E0 !important;
+        border: 0;
         color: #000;
         z-index: 0;
         position: relative;
@@ -192,7 +194,7 @@
           position: absolute;
           width: 8em;
           height: 100%;
-          background-color: #fff;
+          background-color: #E0E0E0;
           left: calc(100% - 4em);
           z-index: -1;
         }
@@ -200,7 +202,8 @@
 
 
       &.googlemap {
-        background-color: #0D5052;
+        // background-color: #0D5052;
+        border: 0;
         color: #fff;
 
         img {
@@ -233,20 +236,28 @@
     width: sizem(375);
     height: sizem(63);
     gap: sizem(1);
+    background: url('@/section/mo_menu.jpg');
+    background-size: cover;
+
 
     .contact-item {
       height: 100%;
-      background-color: #CEAA6D;
+      // background-color: #CEAA6D;
       font-size: sizem(16);
       font-weight: 400;
-      color: #fff;
+      color: black;
+      border-right: 1px solid #000;
+
+      &:last-child {
+        border: 0;
+      }
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
       }
 
     }

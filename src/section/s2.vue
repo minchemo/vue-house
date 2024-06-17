@@ -1,19 +1,17 @@
 <template>
   <article class="s2">
-    <img
-      class="en"
-      src="@/section/s2/ENm.svg"
-      alt=""
-      srcset=""
-      v-if="isMobile"
-      data-aos="fade-up" data-aos-delay="0"
-    />
-    <img class="en" src="@/section/s2/EN.svg" alt="" srcset="" v-else  data-aos="fade-up" data-aos-delay="0"/>
-    <div class="viewbox"  data-aos="fade-up" data-aos-delay="400">
-      <View />
+    <div class="t">
+      <img class="t1" src="@/section/resource/s2title.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">各大園區全能同步</div>
+      <div class="t3" data-aos="fade-up" data-aos-delay="400">
+        近距北士科、內湖科技園區、圓山新創產業聚落、新北知識產業園區，<br />
+        前迎家樂福、後擁銀河灣開發計畫，百年難得一見的三重地王【鼎藏豐碩】，佔盡地利優勢！
+      </div>
     </div>
-    <div class="t1"  data-aos="fade-up" data-aos-delay="100">1高雙橋3快 南來北往一路暢快</div>
-    <img class="t2" v-if="!isMobile" src="@/section/s2/t.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="200" />
+    <div class="fillcolor"></div>
+    <div class="viewbox">
+      <fullview />
+    </div>
   </article>
 </template>
 
@@ -21,33 +19,63 @@
 @import "@/assets/style/function.scss";
 
 .s2 {
-  @apply w-full relative bg-[#108FF6] flex flex-col items-center justify-start text-white;
-  height: size(1080);
-  padding-top: size(221);
+  @apply w-full relative;
+  height: size(1357);
+  background: rgb(2, 103, 196);
 
-  .en {
-    @apply absolute z-10;
-    width: size(1837.36);
-    top: size(21.5);
-    left: size(7.5);
+  .t {
+    @apply absolute z-20 flex flex-col items-center justify-center w-full;
+    top: size(98);
+    gap: size(43);
+    .t1 {
+      width: size(365.29);
+    }
+    .t2 {
+      @apply flex items-center justify-center;
+      width: size(622.26);
+      height: size(54.44);
+      color: #000;
+      font-size: size(32);
+      font-weight: 500;
+      letter-spacing: size(1.92);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 230, 121, 0) 0%,
+        #ffe679 21%,
+        #e4bc53 30%,
+        #d6a640 44%,
+        #c28724 67%,
+        #bb7c1a 80%,
+        rgba(187, 124, 26, 0) 100%
+      );
+    }
+    .t3 {
+      color: #fff;
+      text-align: center;
+      font-size: size(24);
+      font-weight: 500;
+      line-height: size(39);
+      letter-spacing: size(1.44);
+    }
+  }
+
+  .fillcolor {
+    @apply w-full relative z-10;
+    height: size(506);
+    background: rgb(2, 103, 196);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 103, 196, 0) 0%,
+      rgba(2, 103, 196, 1) 44.5%,
+      rgba(2, 103, 196, 1) 100%
+    );
   }
 
   .viewbox {
-    @apply absolute w-full h-full left-0 top-0;
-  }
-  .t1 {
-    @apply absolute z-10;
-    font-size: size(51);
-    font-weight: 700;
-    letter-spacing: size(4);
-    right: size(75);
-    top: size(45);
-  }
-  .t2 {
-    @apply absolute z-10;
-    width: size(590);
-    left: size(73);
-    top: size(236);
+    @apply absolute w-full;
+    height: size(1083);
+    left: 0;
+    bottom: 0;
   }
 }
 
@@ -58,33 +86,54 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(667);
-    padding-top: sizem(100);
+    height: sizem(810);
+    
+    .t {
+      @apply absolute z-[101] flex flex-col items-center justify-center w-full;
+      top: sizem(51.86);
+      gap: sizem(10);
+      .t1 {
+        width: sizem(139.1);
+      }
+      .t2 {
+        @apply flex items-center justify-center;
+        width: sizem(325);
+        height: sizem(27);
+        font-size: sizem(16);
+        letter-spacing: 170%;
+      }
+      .t3 {
+        width: sizem(340);
+        font-size: sizem(14);
+        line-height: 170%;
+        letter-spacing: sizem(0.84);
+      }
+    }
 
-    .en {
-      @apply absolute z-[101];
-      width: sizem(345);
-      top: sizem(9.5);
-      left: 0;
+    .fillcolor {
+      @apply w-full relative z-10 pointer-events-none;
+      height: sizem(150);
+      background: rgb(2, 103, 196);
+      background: linear-gradient(
+        0deg,
+        rgba(2, 103, 196, 0) 0%,
+        rgba(2, 103, 196, 1) 44.5%,
+        rgba(2, 103, 196, 1) 100%
+      );
     }
 
     .viewbox {
-      @apply absolute w-full h-full left-0 top-0;
-    }
-    .t1 {
-      @apply relative z-[101];
-      font-size: sizem(20);
-      font-weight: 700;
-      letter-spacing: sizem(1.6);
-      right: unset;
-      top: unset;
+      @apply absolute w-full;
+      height: sizem(720);
+      left: 0;
+      bottom: 0;
     }
   }
 }
 </style>
 
 <script setup>
-import View from "@/components/fullview.vue"
+import fullview from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 

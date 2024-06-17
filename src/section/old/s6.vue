@@ -1,271 +1,242 @@
 <template>
-	<article class="s6">
-		<div class="text-box">
-			<div class="t" v-if="!isMobile">
-				<img class="t1" src="@/section/s6/brand.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
-				<div class="t-m">
-					<div class="t2" data-aos="fade-up" data-aos-delay="200">三步慢慢</div>
-					<div class="t3" data-aos="fade-up" data-aos-delay="400">光和樹住進家</div>
-				</div>
-			</div>
-			<div class="t4" data-aos="fade-up" data-aos-delay="0">精實品牌｜上市公司宏璟建設 土城新作</div>
-			<div class="t5" data-aos="fade-up" data-aos-delay="200">日月光集團-宏璟建設（2527）<br><br>
-				以精準的眼光選地，用溫柔的心做建築，坐擁集團硬實力，仔細的了解在地需求，不疾不徐的把房子做到最好，以慢成就細心精工，成為每個顧客最穩固的靠山、不變的依靠。
-			</div>
-			<div class="t6-m">
-				<div class="t6" data-aos="fade-up" data-aos-delay="0">
-					<span>經典建案：</span><br v-if="isMobile"/>
-					2015 南港｜東方金鑽<br />
-					2017 汐止｜宏璟麗園<br />
-					2018 土城｜日月光<br />
-					2019 新莊｜宏景榮華<br />
-					2019 台北｜帝璟苑
-				</div>
-				<img src="@/section/s6/cmyk.png" class="cmyk" alt="" srcset="">
-			</div>
-		</div>
-		<div class="slide-box">
-			<div class="pagi">
-				<span v-for="img, i in imgs" :class="{ 'active': i == currentIdx }" @click="splide.go(i)"></span>
-			</div>
-			<Slide ref="splide"  :arrow_m="true" :gap="20" :imgs="imgs" :w="665" :h="673" :w_m="311" :h_m="314" :dot="false"
-				@slideIndex="onMoved" />
-		</div>
-		<div class="t" v-if="isMobile">
-			<img class="t1" src="@/section/s6/brand.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
-			<div class="t-m">
-				<div class="t2" data-aos="fade-up" data-aos-delay="200">三步慢慢</div>
-				<div class="t3" data-aos="fade-up" data-aos-delay="400">光和樹住進家</div>
-			</div>
-		</div>
-	</article>
+  <article class="s6">
+    <div class="slide-box">
+      <div class="arrows" v-if="isMobile">
+        <img
+          src="@/section/arrow.png"
+          class="arrow prev"
+          alt=""
+          srcset=""
+          @click="splide.go('<')"
+        />
+        <img
+          src="@/section/arrow.png"
+          class="arrow next"
+          alt=""
+          srcset=""
+          @click="splide.go('>')"
+        />
+      </div>
+      <Splide
+        ref="splide"
+        class="slide"
+        :options="{
+          arrows: false,
+          autoplay: true,
+          pagination: true,
+          interval: 4000,
+          gap: 10,
+          type: 'loop',
+          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
+        }"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+          <div class="caption">
+            {{ i.caption }}
+          </div>
+        </SplideSlide>
+      </Splide>
+      <div class="t">
+        <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">
+          百年成州學區<br />資優素養明日菁英
+        </div>
+        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">百年成州學區 資優素養明日菁英</div>
+        <div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">
+          成州國小學區近距離，文教學<br />
+          府一氣呵成，日日書香飄溢，<br />
+          天天快樂學習；為孩子奠定最<br />
+          好的學習起點，就是邁向勝利<br />
+          人生的指標！
+        </div>
+        <div class="t2" v-else data-aos="fade-up" data-aos-delay="200">
+          成州國小學區近距離，文教學府一氣呵成，日日書香飄溢，天天快樂學習；為孩子奠定最好的學習起點，就是邁向勝利人生的指標！
+        </div>
+      </div>
+    </div>
+    <img class="en" src="@/section/s6/en.svg" alt="" srcset="" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0"/>
+    <img class="en" src="@/section/s6/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
+  </article>
 </template>
 
-<style lang="scss" scoped>
-@import '@/assets/style/function.scss';
+<style lang="scss">
+@import "@/assets/style/function.scss";
 
 .s6 {
-	@apply w-full relative flex items-center justify-center;
-	height: size(949);
-	padding: 0 size(277);
-	gap: size(98);
-	background: #A77C22;
+  @apply w-full relative bg-[#0D5052] flex text-white;
+  height: size(1080);
+  padding-top: size(323);
+  padding-left: size(70);
 
-	.text-box {
-		@apply text-white;
+  .slide-box {
+    @apply flex items-start;
+    gap: size(106);
+    .slide {
+      width: size(1061);
+      height: size(624);
+      .slide-item {
+        width: size(1061);
+        height: size(624);
+        background: #eee;
+        background-size: cover;
+        .caption {
+          @apply absolute font-['Noto_Sanc_TC'];
+          right: size(14);
+          bottom: size(15);
+          font-size: size(20);
+          font-weight: 400;
+          letter-spacing: size(2.6);
+        }
+      }
+      .splide__pagination {
+        @apply absolute left-0 w-full flex justify-start;
+        padding: size(25) 0;
+        li {
+          line-height: 0;
+          button {
+            @apply rounded-full;
+            width: size(10);
+            height: size(10);
+            background: #0d6b68;
+            &.is-active {
+              background: #138784;
+            }
+          }
+        }
+        gap: size(13);
+      }
+    }
+    .t {
+      width: size(546);
+      .t1 {
+        color: #e89213;
+        font-size: size(51);
+        font-weight: 700;
+        line-height: 126.7%;
+        letter-spacing: size(4.08);
+        margin-bottom: size(112);
+        padding-bottom: size(35);
+        border-bottom: size(1) solid #fff;
+      }
+      .t2 {
+        font-size: size(32);
+        font-weight: 700;
+        text-align: justify;
+        line-height: 157.9%;
+        letter-spacing: size(6.4);
+      }
+    }
+  }
 
-		.t {
-			@apply w-full flex flex-col items-start justify-center whitespace-nowrap;
-
-			.t1 {
-				width: size(251);
-			}
-
-			.t-m {
-				@apply flex items-end justify-center leading-none;
-				gap: size(24);
-
-				.t2 {
-					@apply font-['Noto_Serif_TC'];
-					font-size: size(64);
-					font-weight: 500;
-					letter-spacing: size(5.76);
-				}
-
-				.t3 {
-					font-size: size(48);
-					font-family: Noto Sans TC;
-					font-weight: 500;
-					letter-spacing: size(4.32);
-				}
-			}
-		}
-
-		.t4 {
-			font-size: size(32);
-			font-weight: 900;
-			letter-spacing: size(2.88);
-			margin-top: size(75);
-		}
-
-		.t5 {
-			font-size: size(17);
-			font-weight: 500;
-			line-height: size(30);
-			letter-spacing: size(1.53);
-			width: size(595);
-		}
-
-		.t6-m {
-			@apply flex items-center justify-between;
-			margin-top: size(39);
-
-			.t6 {
-				span {
-					@apply block;
-					font-size: size(20);
-					font-weight: 700;
-					line-height: size(30);
-					letter-spacing: size(1.8);
-				}
-
-				font-size: size(17);
-				font-weight: 500;
-				line-height: size(30);
-				letter-spacing: size(1.53);
-			}
-
-			.cmyk {
-				width: size(145);
-			}
-		}
-	}
-
-	.slide-box {
-		@apply relative;
-		width: size(665);
-		height: size(673);
-
-		.pagi {
-			@apply flex items-center justify-center absolute left-0 z-10 w-full;
-			gap: size(9);
-			bottom: size(14);
-
-			span {
-				@apply block cursor-pointer hover:opacity-50;
-				width: size(9);
-				height: size(9);
-				background-color: #D9D9D9;
-
-				&.active {
-					background-color: #A77C22;
-				}
-			}
-		}
-	}
-
+  .en {
+    @apply absolute;
+    height: size(146.34);
+    top: size(23);
+    right: size(4);
+  }
 }
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
 
 @media screen and (max-width: 767px) {
-	.s6 {
-		@apply w-full relative flex flex-col-reverse items-start justify-end;
-		height: auto;
-		padding: sizem(33) sizem(31);
-		gap: 0;
+  .s6 {
+    height: sizem(667);
+    padding-top: sizem(132);
+    padding-left: 0;
 
-		.t {
-			@apply text-white;
+    .slide-box {
+      @apply flex flex-col;
+      gap: sizem(24);
+      .arrows {
+        @apply absolute z-20 w-full flex justify-between;
+        top: sizem(280);
+        padding: 0 sizem(5);
 
-			.t1 {
-				width: sizem(129);
-			}
+        .arrow {
+          @apply cursor-pointer;
+          width: sizem(12.8);
+          height: sizem(22.86);
+          &.prev {
+            transform: scaleX(-1);
+          }
+        }
+      }
+      .slide {
+        width: sizem(375);
+        height: sizem(281);
+        .slide-item {
+          width: sizem(375);
+          height: sizem(281);
+          .caption {
+            right: sizem(11);
+            bottom: sizem(6);
+            font-size: sizem(12);
+            letter-spacing: size(2.6);
+          }
+        }
+        .splide__pagination {
+          @apply hidden;
+        }
+      }
+      .t {
+        width: 100%;
+        padding: 0 sizem(30);
+        .t1 {
+          font-size: sizem(20);
+          line-height: 1;
+          letter-spacing: sizem(1.6);
+          margin-bottom: sizem(14);
+          padding-bottom: sizem(14);
+          border-bottom: sizem(1) solid #fff;
+        }
+        .t2 {
+          font-size: sizem(13);
+          line-height: 157.9%;
+          letter-spacing: sizem(2.6);
+        }
+      }
+    }
 
-			.t-m {
-				@apply flex items-end justify-center leading-none;
-				gap: sizem(12);
-				margin-top: sizem(10);
-
-				.t2 {
-					@apply font-['Noto_Serif_TC'];
-					font-weight: 500;
-					font-size: sizem(22);
-					letter-spacing: sizem(2);
-				}
-
-				.t3 {
-					font-family: Noto Sans TC;
-					font-weight: 500;
-					font-size: sizem(15);
-					letter-spacing: sizem(1.35);
-				}
-			}
-		}
-
-		.text-box {
-			@apply text-white;
-
-			.t4 {
-				font-size: sizem(14);
-				font-weight: 900;
-				letter-spacing: sizem(1.26);
-				margin-top: sizem(17);
-			}
-
-			.t5 {
-				font-size: sizem(13);
-				font-weight: 500;
-				line-height: sizem(20.41);
-				letter-spacing: sizem(1.53);
-				width: 100%;
-				margin-top: sizem(10)
-			}
-
-			.t6-m {
-				@apply flex items-end justify-between;
-				margin-top: sizem(39);
-
-				.t6 {
-					span {
-						@apply block;
-						font-size: sizem(13);
-						font-weight: 700;
-						line-height: sizem(20.41);
-						letter-spacing: 1;
-					}
-
-					font-size: sizem(13);
-					font-weight: 500;
-					line-height: sizem(20.41);
-					letter-spacing: 1;
-				}
-
-				.cmyk {
-					width: sizem(79);
-				}
-			}
-		}
-
-		.slide-box {
-			@apply relative;
-			width: sizem(311);
-			height: sizem(314);
-			margin-top: sizem(25);
-
-			.pagi {
-				@apply hidden;
-			}
-		}
-	}
+    .en {
+      @apply absolute;
+      height: sizem(58.5);
+      top: sizem(36);
+      right: 0;
+      left: unset;
+    }
+  }
 }
 </style>
 
 <script setup>
-import Slide from "@/components/slide.vue";
-import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
+import View from "@/components/fullview.vue"
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
 
-const smoothScroll = inject('smoothScroll')
-const isMobile = computed(() => globals.$isMobile());
+const smoothScroll = inject("smoothScroll")
+const isMobile = computed(() => globals.$isMobile())
 
-const splide = ref(null)
-const currentIdx = ref(0)
+const splide = ref()
+
 const imgs = [
-	{
-		img: new URL("../section/s6/1.jpg", import.meta.url).href,
-		caption: "2018 土城｜日月光",
-	},
-	{
-		img: new URL("../section/s6/2.jpg", import.meta.url).href,
-		caption: "2019 台北｜帝璟苑",
-	},
+  {
+    img: new URL("../section/s6/1.webp", import.meta.url).href,
+    caption: "成州國小",
+  },
+  {
+    img: new URL("../section/s6/2.webp", import.meta.url).href,
+    caption: "情境圖",
+  },
+  {
+    img: new URL("../section/s6/3.webp", import.meta.url).href,
+    caption: "五股圖書館",
+  },
 ]
-const onMoved = (idx) => {
-	currentIdx.value = idx;
-}
-
-
 </script>

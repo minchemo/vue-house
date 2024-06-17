@@ -27,7 +27,6 @@
           interval: 4000,
           gap: 10,
           type: 'loop',
-          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
         }"
       >
         <SplideSlide
@@ -42,24 +41,17 @@
         </SplideSlide>
       </Splide>
       <div class="t">
-        <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">
-          百年成州學區<br />資優素養明日菁英
+        <div class="t1">
+          <img src="@/section/resource/s6title.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
+          <p data-aos="fade-up" data-aos-delay="200">親子共遊水岸綠地</p>
         </div>
-        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">百年成州學區 資優素養明日菁英</div>
-        <div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">
-          成州國小學區近距離，文教學<br />
-          府一氣呵成，日日書香飄溢，<br />
-          天天快樂學習；為孩子奠定最<br />
-          好的學習起點，就是邁向勝利<br />
-          人生的指標！
-        </div>
-        <div class="t2" v-else data-aos="fade-up" data-aos-delay="200">
-          成州國小學區近距離，文教學府一氣呵成，日日書香飄溢，天天快樂學習；為孩子奠定最好的學習起點，就是邁向勝利人生的指標！
+        <div class="divi"></div>
+        <div class="desc" data-aos="fade-up" data-aos-delay="400">
+          緊鄰三蘆區內最大綠地—14368坪三重集賢環保公園，<br v-if="!isMobile" />
+          親子自在共遊水岸綠境，為假日時光提供多樣化的休閒選擇。
         </div>
       </div>
     </div>
-    <img class="en" src="@/section/s6/en.svg" alt="" srcset="" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0"/>
-    <img class="en" src="@/section/s6/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
   </article>
 </template>
 
@@ -67,76 +59,86 @@
 @import "@/assets/style/function.scss";
 
 .s6 {
-  @apply w-full relative bg-[#0D5052] flex text-white;
+  @apply w-full relative;
+  @apply flex justify-center;
   height: size(1080);
-  padding-top: size(323);
-  padding-left: size(70);
+  background: url("@/section/s6/bg.jpg");
+  background-size: cover;
+  padding-top: size(218);
 
   .slide-box {
-    @apply flex items-start;
-    gap: size(106);
+    @apply flex flex-row-reverse items-start relative z-10;
+    gap: size(72);
     .slide {
-      width: size(1061);
-      height: size(624);
+      @apply relative;
+      width: size(997);
+      height: size(605);
       .slide-item {
-        width: size(1061);
-        height: size(624);
-        background: #eee;
+        @apply relative;
+        width: size(997);
+        height: size(605);
         background-size: cover;
+        transform-style: preserve-3d;
         .caption {
-          @apply absolute font-['Noto_Sanc_TC'];
-          right: size(14);
-          bottom: size(15);
+          @apply absolute text-white;
+          left: size(14);
+          bottom: size(10);
           font-size: size(20);
           font-weight: 400;
           letter-spacing: size(2.6);
         }
       }
       .splide__pagination {
-        @apply absolute left-0 w-full flex justify-start;
-        padding: size(25) 0;
+        @apply absolute right-0 w-full flex justify-center;
+        padding: size(27) 0;
         li {
           line-height: 0;
           button {
-            @apply rounded-full;
-            width: size(10);
-            height: size(10);
-            background: #0d6b68;
+            @apply rounded-full bg-transparent;
+            width: size(17.3);
+            height: size(17.3);
+            border: 1px solid #B5E598;
             &.is-active {
-              background: #138784;
+              background: #B5E598;
             }
           }
         }
         gap: size(13);
       }
-    }
-    .t {
-      width: size(546);
-      .t1 {
-        color: #e89213;
-        font-size: size(51);
-        font-weight: 700;
-        line-height: 126.7%;
-        letter-spacing: size(4.08);
-        margin-bottom: size(112);
-        padding-bottom: size(35);
-        border-bottom: size(1) solid #fff;
-      }
-      .t2 {
-        font-size: size(32);
-        font-weight: 700;
-        text-align: justify;
-        line-height: 157.9%;
-        letter-spacing: size(6.4);
+      &::after {
+        @apply w-full h-full absolute top-0 left-0 pointer-events-none;
+        content: "";
+        background: url("@/section/resource/stroke.svg");
       }
     }
-  }
 
-  .en {
-    @apply absolute;
-    height: size(146.34);
-    top: size(23);
-    right: size(4);
+    .t {
+      @apply flex flex-col text-black;
+      gap: size(15);
+      width: size(673);
+      .t1 {
+        @apply flex items-end justify-between;
+        margin-bottom: size(15);
+        img {
+          width: size(364.95);
+        }
+        p {
+          font-size: size(32);
+          font-weight: 500;
+          letter-spacing: size(1.92);
+        }
+      }
+      .divi {
+        @apply bg-black;
+        height: 1px;
+      }
+      .desc {
+        font-size: size(24);
+        font-weight: 500;
+        line-height: size(39);
+        letter-spacing: size(0.72);
+      }
+    }
   }
 }
 
@@ -147,76 +149,80 @@
 
 @media screen and (max-width: 767px) {
   .s6 {
-    height: sizem(667);
-    padding-top: sizem(132);
-    padding-left: 0;
+    @apply w-full relative z-20;
+    @apply flex justify-center;
+    height: sizem(526);
+    background: url("@/section/s6/bgm.jpg");
+    background-size: cover;
+    padding-top: sizem(56);
 
     .slide-box {
-      @apply flex flex-col;
+      @apply flex-col-reverse items-center justify-end;
       gap: sizem(24);
-      .arrows {
-        @apply absolute z-20 w-full flex justify-between;
-        top: sizem(280);
-        padding: 0 sizem(5);
-
-        .arrow {
-          @apply cursor-pointer;
-          width: sizem(12.8);
-          height: sizem(22.86);
-          &.prev {
-            transform: scaleX(-1);
-          }
-        }
-      }
       .slide {
-        width: sizem(375);
-        height: sizem(281);
+        width: sizem(330);
+        height: sizem(200);
         .slide-item {
-          width: sizem(375);
-          height: sizem(281);
+          width: sizem(330);
+          height: sizem(200);
           .caption {
-            right: sizem(11);
+            @apply absolute text-white;
+            left: sizem(8);
             bottom: sizem(6);
             font-size: sizem(12);
-            letter-spacing: size(2.6);
+            letter-spacing: sizem(0.72);
           }
         }
         .splide__pagination {
           @apply hidden;
         }
+        &::after {
+          @apply w-full h-full absolute top-0 left-0 pointer-events-none;
+          content: "";
+          background: url("@/section/resource/stroke.svg");
+        }
       }
       .t {
-        width: 100%;
-        padding: 0 sizem(30);
+        @apply flex flex-col text-black;
+        gap: sizem(24);
+        width: sizem(310);
         .t1 {
-          font-size: sizem(20);
-          line-height: 1;
-          letter-spacing: sizem(1.6);
-          margin-bottom: sizem(14);
-          padding-bottom: sizem(14);
-          border-bottom: sizem(1) solid #fff;
+          @apply flex items-end justify-between;
+          margin-bottom: sizem(5);
+          img {
+            width: sizem(136);
+          }
+          p {
+            font-size: sizem(14);
+            letter-spacing: sizem(0.42);
+          }
         }
-        .t2 {
-          font-size: sizem(13);
-          line-height: 157.9%;
-          letter-spacing: sizem(2.6);
+        .desc {
+          font-size: sizem(14);
+          line-height: 170%;
+          letter-spacing: sizem(0.42);
+        }
+      }
+      .arrows {
+        @apply absolute flex justify-between;
+        width: 98vw;
+        bottom: sizem(170);
+        .prev {
+          @apply -scale-x-100;
         }
       }
     }
 
-    .en {
+    .style {
       @apply absolute;
-      height: sizem(58.5);
-      top: sizem(36);
-      right: 0;
-      left: unset;
+      top: sizem(420);
+      width: 150vw;
     }
   }
 }
 </style>
 
 <script setup>
-import View from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
@@ -227,16 +233,24 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s6/1.webp", import.meta.url).href,
-    caption: "成州國小",
+    img: new URL("../section/s6/1.jpg", import.meta.url).href,
+    caption: "淡水河畔公園景緻",
   },
   {
-    img: new URL("../section/s6/2.webp", import.meta.url).href,
-    caption: "情境圖",
+    img: new URL("../section/s6/2.jpg", import.meta.url).href,
+    caption: "淡水河畔公園景緻",
   },
   {
-    img: new URL("../section/s6/3.webp", import.meta.url).href,
-    caption: "五股圖書館",
+    img: new URL("../section/s6/3.jpg", import.meta.url).href,
+    caption: "淡水河畔公園景緻",
+  },
+  {
+    img: new URL("../section/s6/4.jpg", import.meta.url).href,
+    caption: "淡水河畔公園景緻",
+  },
+  {
+    img: new URL("../section/s6/5.jpg", import.meta.url).href,
+    caption: "淡水河畔公園景緻",
   },
 ]
 </script>

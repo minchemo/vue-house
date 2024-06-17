@@ -17,7 +17,7 @@
       v-bind:class="{ open: menuOpen }"
     >
       <div class="menu-item-wrapper">
-        <img class="navlogo" src="@/section/navlogo.png" alt="" srcset="" />
+        <!-- <img class="navlogo" src="@/section/navlogo.png" alt="" srcset="" /> -->
         <div
           class="menu-item font-bold cursor-pointer font-['noto_serif_tc']"
           v-for="(item, i) in info.navList"
@@ -44,8 +44,8 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-  padding: 0 size(20);
-  height: size(100);
+  padding: 0;
+  height: auto;
 
   .navlogo {
     @apply mx-auto;
@@ -64,7 +64,7 @@
   }
 
   .menu-btn {
-    // background: #a77c22;
+    background: rgba($color: #fff, $alpha: 0.5);
     height: size(62);
     width: size(62);
     display: flex;
@@ -82,7 +82,7 @@
     .bar {
       width: size(30);
       height: 2px;
-      background-color: #fff;
+      background-color: #505050;
       position: relative;
       transform: all 0.5s;
 
@@ -92,7 +92,7 @@
         height: 2px;
         bottom: -#{size(10)};
         position: absolute;
-        background-color: #fff;
+        background-color: #505050;
         transition: all 0.5s;
       }
 
@@ -102,7 +102,7 @@
         height: 2px;
         top: -#{size(10)};
         position: absolute;
-        background-color: #fff;
+        background-color: #505050;
         transition: all 0.5s;
       }
     }
@@ -144,7 +144,7 @@
     top: 0;
     right: 0;
 
-    width: size(374);
+    width: size(375);
     height: 100%;
     z-index: 5;
     transform: translateX(150%);
@@ -152,7 +152,7 @@
     border-radius: 0;
     padding: size(100) 0;
     backdrop-filter: blur(2px);
-    background: rgba(0, 40, 86, 0.8);
+    background: rgba(226, 195, 119, 0.80);
 
     .menu-item-wrapper {
       @apply flex flex-col relative;
@@ -166,11 +166,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: size(17);
+      font-size: size(23);
       gap: size(10);
       font-family: "Noto Sans TC";
       font-weight: 500;
-      color: #fff;
+      color: #000;
       letter-spacing:0.1em;
 
       img {
@@ -202,10 +202,12 @@
       }
 
       &:last-child {
-        @apply rounded-full;
         width: size(232);
         height: size(47);
-        background: #ceaa6d;
+        border-radius: 10px;
+        background: url('@/section/mo_order_btn_bg.jpg');
+        border: 1px solid #B28247;
+        color: #fff;
       }
     }
 
@@ -261,11 +263,13 @@
 
   .nav {
     width: sizem(350);
-    left: sizem(12.5);
-    top: sizem(12.5);
-    padding: 0 sizem(8);
-    height: sizem(35);
+    left: unset;
+    right: 0;
+    top: 0;
+    padding: 0;
+    height: auto;
     border-radius: 9999px;
+    z-index: 99999999;
 
     .logo {
       width: sizem(101.83);
@@ -278,9 +282,9 @@
     }
 
     .menu-btn {
-      width: sizem(30);
-      height: sizem(30);
-      padding: sizem(5);
+      width: sizem(50);
+      height: sizem(50);
+      // padding: sizem(5);
 
       p {
         font-size: sizem(14);
@@ -365,7 +369,7 @@
       }
 
       .menu-item {
-        font-size: sizem(15);
+        font-size: sizem(23);
         gap: 0;
        // letter-spacing: sizem(4);
 

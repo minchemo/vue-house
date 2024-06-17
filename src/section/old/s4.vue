@@ -1,200 +1,251 @@
 <template>
-	<article class="s4">
-		<div class="slide-box slide-box-a">
-			<Slide ref="splide" :arrow_m="true" :gap="24" :box_w="1369" :per_page="3" :imgs="imgsA" :w="440" :h="458" :w_m="311"
-				:h_m="323.72" :dot="false" @slideIndex="onMovedA" />
-			<div class="slide-t">
-				<div class="pagi">
-					<span v-for="img, i in imgsA" :class="{ 'active': i == currentIdxA }" @click="splide.go(i)"></span>
-				</div>
-			</div>
-		</div>
-		<div class="t">
-			<img class="t1" src="@/section/s4/convenient.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0">
-			<div class="t2" data-aos="fade-up" data-aos-delay="200">極緻機能｜日常採買好方便 美食隨處可見</div>
-			<div class="t3" data-aos="fade-up" data-aos-delay="400">
-				日月光廣場、秀泰影城、家樂福，時尚購物與都市休閒匯集，看電影買東西都好容易。<br v-if="!isMobile" />延吉街、裕民路商圈，下班後晚餐不擔心，採買食材煮頓飯都很便利。</div>
-		</div>
-		<template v-if="!isMobile">
-			<img class="hill1 hill" src="@/section/s4/hill1.png" alt="" srcset="">
-			<img class="hill2 hill" src="@/section/s4/hill2.png" alt="" srcset="">
-		</template>
-		<template v-else>
-			<img class="hillm hill" src="@/section/s4/hillm.svg" alt="" srcset="">
-		</template>
-	</article>
+  <article class="s4">
+    <div class="slide-box">
+      <div class="arrows" v-if="isMobile">
+        <img
+          src="@/section/arrow.png"
+          class="arrow prev"
+          alt=""
+          srcset=""
+          @click="splide.go('<')"
+        />
+        <img
+          src="@/section/arrow.png"
+          class="arrow next"
+          alt=""
+          srcset=""
+          @click="splide.go('>')"
+        />
+      </div>
+      <Splide
+        ref="splide"
+        class="slide"
+        :options="{
+          arrows: false,
+          autoplay: true,
+          pagination: true,
+          interval: 4000,
+          gap: 10,
+          type: 'loop',
+          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
+        }"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+          <div class="caption">
+            {{ i.caption }}
+          </div>
+        </SplideSlide>
+      </Splide>
+      <div class="t">
+        <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">
+          咫尺天乙公園<br />山林相伴一次到位
+        </div>
+        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">咫尺天乙公園 山林相伴一次到位</div>
+        <div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">
+          繁華轉身就是綠意滿懷，天乙<br />
+          公園散步到，大台北都會公園，<br />
+          近擁7.7公里珍稀水景、24公<br />
+          里環狀自行車步道，觀音山景<br />
+          成日常，享受最難得的<br />
+          森活綠意！
+        </div>
+        <div class="t2" v-else data-aos="fade-up" data-aos-delay="200">
+          繁華轉身就是綠意滿懷，天乙公園散步到，大台北都會公園，近擁7.7公里珍稀水景、24公里環狀自行車步道，觀音山景成日常，享受最難得的森活綠意！
+        </div>
+      </div>
+    </div>
+    <img
+      class="en"
+      src="@/section/s4/en.svg"
+      alt=""
+      srcset=""
+      v-if="!isMobile"
+      data-aos="fade-up" data-aos-delay="0"
+    />
+
+    <img class="en" src="@/section/s4/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
+  </article>
 </template>
 
-<style lang="scss" scoped>
-@import '@/assets/style/function.scss';
+<style lang="scss">
+@import "@/assets/style/function.scss";
 
 .s4 {
-	@apply w-full relative flex flex-col items-center justify-center;
-	background: #DEDBD4;
-	height: size(1000);
-	padding: 0 size(277);
-	gap: size(50);
+  @apply w-full relative bg-[#0D5052] flex text-white;
+  height: size(1080);
+  padding-top: size(323);
+  padding-left: size(70);
 
-	.t {
-		@apply w-full flex flex-col items-center;
-		color: #000;
-		gap: size(10);
+  .slide-box {
+    @apply flex items-start;
+    gap: size(106);
+    .slide {
+      width: size(1061);
+      height: size(624);
+      .slide-item {
+        width: size(1061);
+        height: size(624);
+        background: #eee;
+        background-size: cover;
+        .caption {
+          @apply absolute font-['Noto_Sanc_TC'];
+          right: size(14);
+          bottom: size(15);
+          font-size: size(20);
+          font-weight: 400;
+          letter-spacing: size(2.6);
+        }
+      }
+      .splide__pagination {
+        @apply absolute left-0 w-full flex justify-start;
+        padding: size(25) 0;
+        li {
+          line-height: 0;
+          button {
+            @apply rounded-full;
+            width: size(10);
+            height: size(10);
+            background: #0d6b68;
+            &.is-active {
+              background: #138784;
+            }
+          }
+        }
+        gap: size(13);
+      }
+    }
+    .t {
+      width: size(546);
+      .t1 {
+        color: #e89213;
+        font-size: size(51);
+        font-weight: 700;
+        line-height: 126.7%;
+        letter-spacing: size(4.08);
+        margin-bottom: size(112);
+        padding-bottom: size(35);
+        border-bottom: size(1) solid #fff;
+      }
+      .t2 {
+        font-size: size(32);
+        font-weight: 700;
+        text-align: justify;
+        line-height: 157.9%;
+        letter-spacing: size(6.4);
+      }
+    }
+  }
 
-		.t1 {
-			width: size(467);
-		}
-
-		.t2 {
-			font-size: size(32);
-			font-weight: 900;
-			letter-spacing: size(0.32);
-		}
-
-		.t3 {
-			@apply text-center;
-			font-size: size(17);
-			font-weight: 500;
-			line-height: size(30);
-			letter-spacing: size(1.53);
-		}
-
-	}
-
-	.slide-box {
-		@apply flex flex-col items-center justify-center text-white;
-		gap: size(14);
-		width: size(1369);
-
-		.pagi {
-			@apply flex items-center;
-			gap: size(9);
-			margin-bottom: size(15);
-
-			span {
-				@apply block cursor-pointer hover:opacity-50;
-				width: size(9);
-				height: size(9);
-				background-color: #C9A063;
-
-				&.active {
-					background-color: #A77C22;
-				}
-			}
-		}
-
-	}
-
-	.hill {
-		@apply absolute;
-
-		&.hill1 {
-			width: size(462);
-			left: size(276);
-			bottom: size(27);
-		}
-
-		&.hill2 {
-			width: size(288);
-			right: size(261);
-			bottom: size(117);
-		}
-	}
-
+  .en {
+    @apply absolute;
+    height: size(146.34);
+    top: size(23);
+    right: size(4);
+  }
 }
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
 
 @media screen and (max-width: 767px) {
-	.s4 {
-		@apply w-full overflow-hidden relative z-20 justify-start;
-		height: sizem(584);
-		padding: 0 sizem(31);
-		padding-top: sizem(40);
+  .s4 {
+    height: sizem(667);
+    padding-top: sizem(132);
+    padding-left: 0;
 
-		.t {
-			@apply w-full flex flex-col items-start;
-			color: #000;
-			gap: sizem(5);
-			margin-top: sizem(15);
+    .slide-box {
+      @apply flex flex-col;
+      gap: sizem(24);
+      .arrows {
+        @apply absolute z-20 w-full flex justify-between;
+        top: sizem(280);
+        padding: 0 sizem(5);
 
-			.t1 {
-				width: sizem(230);
-			}
+        .arrow {
+          @apply cursor-pointer;
+          width: sizem(12.8);
+          height: sizem(22.86);
+          &.prev {
+            transform: scaleX(-1);
+          }
+        }
+      }
+      .slide {
+        width: sizem(375);
+        height: sizem(281);
+        .slide-item {
+          width: sizem(375);
+          height: sizem(281);
+          .caption {
+            right: sizem(11);
+            bottom: sizem(6);
+            font-size: sizem(12);
+            letter-spacing: size(2.6);
+          }
+        }
+        .splide__pagination {
+          @apply hidden;
+        }
+      }
+      .t {
+        width: 100%;
+        padding: 0 sizem(30);
+        .t1 {
+          font-size: sizem(20);
+          line-height: 1;
+          letter-spacing: sizem(1.6);
+          margin-bottom: sizem(14);
+          padding-bottom: sizem(14);
+          border-bottom: sizem(1) solid #fff;
+        }
+        .t2 {
+          font-size: sizem(13);
+          line-height: 157.9%;
+          letter-spacing: sizem(2.6);
+        }
+      }
+    }
 
-			.t2 {
-				font-size: sizem(14);
-				font-weight: 500;
-				letter-spacing: sizem(1.26);
-			}
-
-			.t3 {
-				@apply text-left;
-				font-size: sizem(13);
-				line-height: sizem(20);
-				letter-spacing: 1;
-			}
-
-		}
-
-		.slide-box {
-			gap: size(14);
-			width: sizem(311);
-
-			.pagi {
-				@apply hidden;
-			}
-
-		}
-
-		.hill {
-			@apply absolute;
-
-			&.hillm {
-				width: 100%;
-				bottom: sizem(15);
-			}
-		}
-	}
+    .en {
+      @apply absolute;
+      height: sizem(61);
+      top: sizem(36);
+      left: unset;
+      right: 0;
+    }
+  }
 }
 </style>
 
 <script setup>
-import Slide from "@/components/slide.vue";
-import { computed, getCurrentInstance, ref, inject, onMounted } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
+import View from "@/components/fullview.vue"
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
 
-const smoothScroll = inject('smoothScroll')
-const isMobile = computed(() => globals.$isMobile());
+const smoothScroll = inject("smoothScroll")
+const isMobile = computed(() => globals.$isMobile())
 
-const splide = ref(null)
-const currentIdxA = ref(0)
-const imgsA = [
-	{
-		img: new URL("../section/s4/1.jpg", import.meta.url).href,
-		caption: "土城日月光",
-	},
-	{
-		img: new URL("../section/s4/2.jpg", import.meta.url).href,
-		caption: "土城日月光-秀泰影城",
-	},
-	{
-		img: new URL("../section/s4/3.jpg", import.meta.url).href,
-		caption: "家樂福",
-	},
-	{
-		img: new URL("../section/s4/4.jpg", import.meta.url).href,
-		caption: "延吉街市場",
-	},
-	{
-		img: new URL("../section/s4/5.jpg", import.meta.url).href,
-		caption: "裕民路商圈",
-	},
+const splide = ref()
+
+const imgs = [
+  {
+    img: new URL("../section/s4/1.webp", import.meta.url).href,
+    caption: "洲子洋公園",
+  },
+  {
+    img: new URL("../section/s4/2.webp", import.meta.url).href,
+    caption: "大都會公園",
+  },
+  {
+    img: new URL("../section/s4/3.webp", import.meta.url).href,
+    caption: "大都會公園周邊環境",
+  },
 ]
-const onMovedA = (idx) => {
-	currentIdxA.value = idx;
-}
-
-
 </script>

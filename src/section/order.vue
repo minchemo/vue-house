@@ -1,11 +1,14 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
+      <orderIntro />
+      <orderBadge />
+
       <!-- Title -->
-      <div class="order-title text-center relative z-10">
+      <div class="order-title text-center relative z-10 font-['Noto_serif_tc'] ">
         {{ info.order.title }}
       </div>
-      <div class="order-subTitle text-center relative z-10">
+      <div class="order-subTitle text-center relative z-10 font-['Noto_serif_tc']">
         {{ info.order.subTitle }}
       </div>
       <!-- <div class="cus-divider"></div> -->
@@ -43,7 +46,7 @@
               class="select w-full rounded-none"
               v-model="formData.room_type"
             >
-              <option value="" selected disabled>請選擇房型</option>  
+              <option value="" selected disabled>請選擇房型</option>
               <option
                 v-for="room in info.room_type"
                 :value="room"
@@ -101,10 +104,10 @@
           :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md"
         />
-        <p class="text-[#fff]">
+        <p class="text-black">
           本人知悉並同意<label
             for="policy-modal"
-            class="modal-button text-[#0D5052] cursor-pointer hover:opacity-70"
+            class="modal-button text-[#A67219] cursor-pointer font-bold hover:opacity-70"
             >「個資告知事項聲明」</label
           >內容
         </p>
@@ -148,7 +151,10 @@
   padding-top: size(103);
   overflow: hidden;
   min-height: size(500);
-  background-color: #E89213;
+  // background-color: #e89213;
+  background: url("@/section/order_bg.jpg");
+  background-size: cover;
+  background-position: center;
 
   .bg-image {
     position: absolute;
@@ -157,7 +163,6 @@
     bottom: size(50);
     vertical-align: middle;
   }
-
 }
 
 .order {
@@ -186,7 +191,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #fff;
+    color: black;
     padding-top: 0;
   }
 
@@ -196,7 +201,7 @@
   }
   .order-subTitle {
     font-size: size(17);
-    color: #fff;
+    color: black;
     padding-top: 0.8em;
     letter-spacing: 0em;
     font-weight: 500;
@@ -235,13 +240,13 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #fff;
+      background-color: #a6a6a6;
       position: absolute;
     }
     .row {
-      background: rgba($color: #fff, $alpha: .3);
-      border: 1px solid #ccc;
-      color: #fff;
+      background: rgba($color: #fff, $alpha: 0.3);
+      border: 1px solid #a6a6a6;
+      color: black;
       display: flex;
       width: 100%;
       align-items: center;
@@ -256,6 +261,7 @@
       }
       input,
       select {
+        @apply font-bold;
         background: none;
         flex: 1;
       }
@@ -267,14 +273,14 @@
           100%;
         background-size: auto 200%;
         transition: background 0.3s;
-        filter: brightness(0) invert(1);
+        // filter: brightness(0) invert(1);
 
         &:focus {
           background-position: calc(100% - 0.5em) 0%;
         }
       }
       &::placeholder {
-        color: #fff;
+        color: black;
       }
     }
   }
@@ -284,9 +290,8 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background: #0D5052;
-    //border: 1px solid #FFF9;
-    border: 0;
+    border: 1px solid #b28247;
+    background: linear-gradient(90deg, #ffe679 0%, #bb7c1a 100%);
     border-radius: 0.5em;
 
     width: 308px;
@@ -308,6 +313,7 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
+    background: url("@/section/order_bgm.jpg");
     // overflow: hidden;
     // padding-top: sizem(200);
 
@@ -357,7 +363,7 @@
     }
     .order-subTitle {
       font-size: sizem(13);
-      padding-top: 0;
+      padding: sizem(10) sizem(20);
     }
 
     .form {
@@ -394,6 +400,8 @@
       font-size: sizem(21);
       width: sizem(310);
       height: sizem(72);
+      background: url('@/section/mo_order_btn_bg.jpg');
+      background-size: cover;
     }
 
     .control {
@@ -408,6 +416,8 @@ import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
+import orderIntro from "@/section/order_intro.vue"
+import orderBadge from "@/section/order_badge.vue"
 
 import info from "@/info"
 
