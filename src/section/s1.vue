@@ -1,26 +1,14 @@
 <template>
   <article class="s1" id="s1">
-    <div class="bg absolute">
-    <img src="./s1/bg1m.jpg" alt="bg" srcset="" v-if="isMobile">
-    <img src="./s1/bg1.jpg" alt="bg" srcset="" v-else></div>
-
-    <img src="./s1/logo.svg" class="logo absolute" alt="logo" srcset="" data-aos="zoom-out-down" data-aos-delay="0" data-aos-duration="1500">
-    <div class="t1 absolute" data-aos="zoom-out-down" data-aos-delay="200" data-aos-duration="1500">
-      <span>新竹高鐵650M</span>
-      <span>30-46坪</span>
-      <span>03-5905588</span>
-    </div>
+    <video v-if="isMobile" src="https://h35.banner.tw/yjp/mo.mov" playsinline autoplay muted loop></video>
+    <video v-else src="https://h35.banner.tw/yjp/pc.mov" playsinline autoplay muted loop></video>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-@keyframes an {
-  to {
-     transform: translateY(0);
-  }
-}
+
 
 .s1 {  
   @apply relative w-full h-screen text-[#fff];
@@ -31,43 +19,17 @@
   justify-content: center;
   align-items:center;
   font-size:size(66);
-  // overflow: hidden;
-  // z-index: 2;
-  img.t0{position: absolute;top:0;
-    width: 100%;opacity: .3;z-index: 2;height: auto;
+
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .bg{position: absolute;width: 100%;bottom: 0;left: 0%;height: 100%;
-   img{width: 100%;height: 100%;object-fit: cover;}
-   &::after{content: "";display: block;position: absolute;top: 0;right: 0;width: 200%;height: 100%;
-   background:linear-gradient(to left, #000 50%,#0000 100%);
-  animation: bga 2s 2s forwards;
-     transform: translateX(0%);
-  }
-  }
-@keyframes bga {
-  to {
-     transform: translateX(100%);
-  }
-}
-  .logo{top: size(80);
-    top:calc(35% + #{size(80 - 1070 * .35)});
-    right: size(190);
-    width: size(610);
-}
-.t1{bottom: size(45);
-  bottom:calc(20% + #{size(45 - 1070 * .2)});
-  left: 0;right: 0;margin: auto;
-  text-align: center;
-  line-height: 1.7;
-  span{display: inline-block;
-    position: relative;
-    padding: 0 .55em;
-    &::after{content: "";display: block;width: 1px;height: 1em;background: currentColor;position: absolute;right: 0;top: calc(50% - .45em);}
-  &:last-child{
-    &::after{display: none;}
-  }
-  }
-}
+  
+  
+
+
+
 
 }
 /* PC

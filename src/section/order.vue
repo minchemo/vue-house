@@ -117,7 +117,7 @@
     font-size: size(52);
     letter-spacing: 0.02em;
     font-weight: 700;
-    color: #BBA693;
+    color: #fff;
     padding:1.5em 0 0em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -170,7 +170,7 @@
       background-color: #ccc;
       position: absolute;
     }
-    .row{background: #FFF;border: 2px solid #12352A;color: #12352A;
+    .row{background: #FFF;border: 1px solid #12352A;color: #000; font-weight: 700;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -339,7 +339,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "budget"]
+const bypass = ["project", "msg", "email", "budget", "room_type", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
