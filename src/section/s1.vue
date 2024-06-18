@@ -12,7 +12,7 @@
   @apply w-full h-screen relative flex flex-col items-center justify-center text-white z-20;
   min-height: size(900);
   max-height: size(1080);
-  background-image: url("@/section/s1/bg.jpg");
+  background-image: url("@/section/s1/bg.webp");
   background-size: cover;
   background-position: bottom;
   padding-bottom: size(150);
@@ -38,7 +38,7 @@
     height: calc(100vh - 63px);
     min-height: sizem(667);
     max-height: sizem(667);
-    background-image: url("@/section/s1/bgm.jpg");
+    background-image: url("@/section/s1/bgm.webp");
     padding-bottom: sizem(120);
     .logo {
       width: sizem(270);

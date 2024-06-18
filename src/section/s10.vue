@@ -87,6 +87,9 @@
     padding-right: unset;
     padding: 0 sizem(32.5);
     padding-top: sizem(140);
+  &::before{content: "";
+  background: linear-gradient(to bottom, #FFFF 0%,#FFF0 100%);
+  position: absolute;top: 0;left: 0;width: 100%;height: 25vw}
 
     .slide-box {
       @apply flex flex-row-reverse items-start relative z-10;

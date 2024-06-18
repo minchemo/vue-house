@@ -1,6 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 889" fill="none">
-<style type="text/css">
-</style>
+
+  <defs>
+    <filter id="f1" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="-10" dy="15" />
+      <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+      values=".6 0 0 .2 0    
+             0 .6 0 0 .2   
+             .1 0 .6 0 0   
+             0 0 0 .6 0" />
+      <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="15" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
 <linearGradient id="light1" gradientUnits="userSpaceOnUse" x1="-230" y1="1072" x2="470" y2="780">
 	<stop  offset="0" style="stop-color:#FFF0"/>
 	<stop  offset="0.5" style="stop-color:#FFFF"/>
@@ -90,7 +101,7 @@
 	<stop  offset="0.86" style="stop-color:#E3C477"/>
 	<stop  offset="0.91" style="stop-color:#A67219"/>
 </linearGradient>
-<path style="fill:url(#r2);" d="M1737.6,488.6
+<path style="fill:url(#r2);" filter="url(#f1)" d="M1737.6,488.6
 	c134.6-68.2,259.8-71,435.1-71l30.3,38.3c-175.3,0-300.4,2.4-435.1,60.8c-98.6,42.8-182.7,95.5-308.6,120.4
 	c-124,24.5-270.4,17.4-395.8-5.7C827.6,588,677.8,496.3,369.8,525.5C221.4,539.6,98.3,575-7.4,613.5l-91-11.9
 	C7.3,556.7,191.1,494.5,339.5,478.1c308-34.1,457.8,93.8,693.7,144.5c125.4,26.9,271.8,35.3,395.8,6.7
