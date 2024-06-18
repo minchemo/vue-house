@@ -54,12 +54,12 @@
               ></option></select
           ></label>
           <label class="row" v-if="info.budget.length > 0"
-            ><span>預算</span>
+            ><span>購屋預算</span>
             <select
               class="select w-full rounded-none bg-white"
               v-model="formData.budget"
             >
-              <!--   <option value="" selected disabled>請選擇預算</option> -->
+             <option value="" selected disabled>請選擇預算</option>
               <option
                 v-for="budget in info.budget"
                 :value="budget"

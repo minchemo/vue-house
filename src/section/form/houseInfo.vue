@@ -51,7 +51,7 @@
     padding: 50px 0;
 }
 .info-box {
-    width: size(800);
+    width: size(900);
 
     .title {
         font-size: size(40);
