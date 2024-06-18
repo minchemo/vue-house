@@ -100,7 +100,8 @@
         width: sizem(325);
         height: sizem(27);
         font-size: sizem(16);
-        letter-spacing: 170%;
+        line-height: 170%;
+        letter-spacing: sizem(0.96);
       }
       .t3 {
         width: sizem(340);

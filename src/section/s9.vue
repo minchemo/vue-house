@@ -231,8 +231,10 @@
 
     .style {
       @apply absolute;
-      top: sizem(420);
-      width: 150vw;
+      top: unset;
+      bottom: -#{sizem(180)};
+      width: 170vw;
+      left: -#{sizem(100)};
     }
   }
 }

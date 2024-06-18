@@ -81,12 +81,12 @@
   .s10 {
     @apply w-full relative z-10;
     @apply flex justify-end items-start;
-    height: sizem(690);
+    height: sizem(760);
     background: url("@/section/s10/bgm.jpg");
     background-size: cover;
     padding-right: unset;
     padding: 0 sizem(32.5);
-    padding-top: sizem(56);
+    padding-top: sizem(140);
 
     .slide-box {
       @apply flex flex-row-reverse items-start relative z-10;
