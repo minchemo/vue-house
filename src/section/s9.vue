@@ -205,11 +205,11 @@
             &::after {
               @apply absolute aspect-square;
               content: "";
-              width: size(20);
+              width: sizem(8);
               background: url("@/section/resource/s.svg");
               background-size: cover;
-              left: 60%;
-              top: 18%;
+              left: 70%;
+              top: 15%;
             }
           }
         }
@@ -250,12 +250,12 @@ const splide = ref()
 const imgs = [
   {
     img: globals.$isMobile()
-      ? new URL("../section/s9/1m.jpg", import.meta.url).href
+      ? new URL("../section/s9/1m.png", import.meta.url).href
       : new URL("../section/s9/1.jpg", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s9/2m.jpg", import.meta.url).href
+      ? new URL("../section/s9/2m.png", import.meta.url).href
       : new URL("../section/s9/2.jpg", import.meta.url).href,
   },
 ]
