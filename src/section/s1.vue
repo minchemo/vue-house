@@ -1,6 +1,7 @@
 <template>
   <article class="s1">
     <img class="logo" src="@/section/resource/logo.svg" />
+    <img class="style1" src="@/section/resource/style1.svg" />
   </article>
 </template>
 
@@ -8,14 +9,22 @@
 @import "@/assets/style/function.scss";
 
 .s1 {
-  @apply w-full h-screen relative flex flex-col items-center justify-center text-white;
+  @apply w-full h-screen relative flex flex-col items-center justify-center text-white z-20;
   min-height: size(900);
   max-height: size(1080);
   background-image: url("@/section/s1/bg.jpg");
   background-size: cover;
   background-position: bottom;
+  padding-bottom: size(150);
   .logo {
     width: size(760);
+  }
+
+  .style1 {
+    @apply absolute;
+    width: 100%;
+    bottom: -#{size(180)};
+    left: 0;
   }
 }
 
@@ -30,8 +39,15 @@
     min-height: sizem(667);
     max-height: sizem(667);
     background-image: url("@/section/s1/bgm.jpg");
+    padding-bottom: sizem(120);
     .logo {
       width: sizem(270);
+    }
+
+    .style1 {
+      width: 150vw;
+      bottom: -#{sizem(0)};
+      left: -#{sizem(60)};
     }
   }
 }
