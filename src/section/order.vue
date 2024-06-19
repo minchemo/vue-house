@@ -26,7 +26,7 @@
             <input
               type="text"
               placeholder="姓名"
-              class="input w-full rounded-none placeholder:text-white"
+              class="input w-full rounded-none placeholder:text-[#999]"
               :value="formData.name"
               @input="(event) => (formData.name = event.target.value)"
           /></label>
@@ -35,7 +35,7 @@
             <input
               type="text"
               placeholder="手機"
-              class="input w-full rounded-none placeholder:text-white"
+              class="input w-full rounded-none placeholder:text-[#999]"
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
@@ -151,10 +151,11 @@
   padding-top: size(103);
   overflow: hidden;
   min-height: size(500);
+  background-image:linear-gradient(180deg, #fff0 40%,#fff6 100%);
   // background-color: #e89213;
-  background: url("@/section/order_bg.jpg");
-  background-size: cover;
-  background-position: center;
+  // background: url("@/section/order_bg.jpg");
+  // background-size: cover;
+ // background-position: center;
 
   .bg-image {
     position: absolute;
@@ -313,7 +314,7 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
-    background: url("@/section/order_bgm.jpg");
+   // background: url("@/section/order_bgm.jpg");
     // overflow: hidden;
     // padding-top: sizem(200);
 

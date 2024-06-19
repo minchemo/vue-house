@@ -45,8 +45,9 @@
    // height: auto;
     font-size: size(22);
     // background: #E89213;
-    background: url('@/section/house_bg.jpg');
+  //  background: url('@/section/house_bg.jpg');
    // height:4em;
+  background-image:linear-gradient(90deg, #fff0 0%,#fff6 40%,#fff6 60%,#fff0 100%);
     img{height: 1.3em;vertical-align: middle;}
     padding: 50px 0;
 }

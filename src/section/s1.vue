@@ -12,9 +12,12 @@
   @apply w-full h-screen relative flex flex-col items-center justify-center text-white z-20;
   min-height: size(900);
   max-height: size(1080);
+  background-image:linear-gradient(180deg, #fff0 40%,rgba(255, 255, 255, 0.5) 70%, #0267C4 100%);
+  /*
   background-image: url("@/section/s1/bg.webp");
   background-size: cover;
   background-position: bottom;
+  */
   padding-bottom: size(150);
   .logo {
     width: size(760);
@@ -38,7 +41,8 @@
     height: calc(100vh - 63px);
     min-height: sizem(667);
     max-height: sizem(667);
-    background-image: url("@/section/s1/bgm.webp");
+   //background-image: url("@/section/s1/bgm.webp");
+  background-image:linear-gradient(180deg, #fff0 50%,rgba(255, 255, 255, 0.5) 75%, #0267C4 100%);
     padding-bottom: sizem(120);
     .logo {
       width: sizem(270);

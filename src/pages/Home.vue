@@ -31,6 +31,14 @@
 </template>
 
 <style>
+.home::before{content: "";
+position: fixed;display: block;
+top: 0;
+left: 0;right: 0;bottom: 0;
+background: url("@/section/s1/bgall.jpg");
+background-position:80% 0;
+background-size: 100% auto;
+}
 img {
   display: inline;
   max-width: unset;
@@ -43,6 +51,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .home::before{
+background-size: 200% auto;
+}
 }
 </style>
 

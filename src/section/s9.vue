@@ -62,9 +62,8 @@
   @apply w-full relative z-20;
   @apply flex justify-center items-start;
   height: size(1080);
-  background: url("@/section/s9/bg.jpg");
-  background-size: cover;
   padding-top: size(102);
+  background-image:linear-gradient(180deg, #fff0 40%,#fff 100%);
 
   .slide-box {
     @apply flex flex-col-reverse items-center relative z-10;
@@ -158,8 +157,6 @@
     @apply w-full relative z-20;
     @apply flex justify-center;
     height: sizem(693);
-    background: url("@/section/s9/bgm.jpg");
-    background-size: cover;
     padding-top: sizem(56);
 
     .slide-box {
