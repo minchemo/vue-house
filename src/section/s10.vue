@@ -25,8 +25,8 @@
   @apply w-full relative z-10;
   @apply flex justify-end items-center;
   height: size(1080);
-  background: url("@/section/s10/bg.jpg");
-  background-size: cover;
+  background: url("@/section/s10/bg.webp") no-repeat 0 100%;
+  background-size: contain;
   padding-right: size(80);
 
   .slide-box {
@@ -82,8 +82,8 @@
     @apply w-full relative z-10;
     @apply flex justify-end items-start;
     height: sizem(760);
-    background: url("@/section/s10/bgm.jpg");
-    background-size: cover;
+    background-image: url("@/section/s10/bgm.webp");
+   // background-size: cover;
     padding-right: unset;
     padding: 0 sizem(32.5);
     padding-top: sizem(140);

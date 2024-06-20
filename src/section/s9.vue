@@ -70,11 +70,11 @@
     gap: size(65);
     .slide {
       @apply relative;
-      width: size(1295.43);
+      width: size(1295);
       height: size(606);
       .slide-item {
         @apply relative;
-        width: size(1295.43);
+        width: size(1295);
         height: size(606);
         background-size: cover;
         transform-style: preserve-3d;
@@ -249,13 +249,13 @@ const splide = ref()
 const imgs = [
   {
     img: globals.$isMobile()
-      ? new URL("../section/s9/1m.png", import.meta.url).href
-      : new URL("../section/s9/1.jpg", import.meta.url).href,
+      ? new URL("../section/s9/1m.webp", import.meta.url).href
+      : new URL("../section/s9/1.webp", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s9/2m.png", import.meta.url).href
-      : new URL("../section/s9/2.jpg", import.meta.url).href,
+      ? new URL("../section/s9/2m.webp", import.meta.url).href
+      : new URL("../section/s9/2.webp", import.meta.url).href,
   },
 ]
 </script>

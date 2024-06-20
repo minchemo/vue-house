@@ -129,8 +129,8 @@
       .desc {
         font-size: size(24);
         font-weight: 500;
-        line-height: size(39);
-        letter-spacing: size(0.72);
+        line-height: 1.6;
+        letter-spacing: 0.03em;text-align: justify;
       }
     }
   }

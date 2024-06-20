@@ -47,9 +47,7 @@
         </div>
         <div class="divi"></div>
         <div class="desc" data-aos="fade-up" data-aos-delay="400">
-          重陽橋一橋之隔，5分鐘速達北市，對望士林科技園區，盡收
-          雙城脈動，繁榮漲幅同頻共振，再享24小時家樂福旗艦店、
-          五華商圈、集賢商圈、徐匯廣場極致富足生活機能。
+          重陽橋一橋之隔，5分鐘速達北市，對望士林科技園區，盡收雙城脈動，繁榮漲幅同頻共振，再享24小時家樂福旗艦店、五華商圈、集賢商圈、徐匯廣場極致富足生活機能。
         </div>
       </div>
     </div>
@@ -135,8 +133,8 @@
       .desc {
         font-size: size(24);
         font-weight: 500;
-        line-height: size(39);
-        letter-spacing: size(0.72);
+        line-height: 1.6;
+        letter-spacing: 0.03em;text-align: justify;
       }
     }
   }
