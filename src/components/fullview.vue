@@ -3,7 +3,7 @@
     <img
       class="view1 select-none"
       ref="viewImg"
-      src="@/section/s2/view.jpg"
+      src="@/section/s2/view.svg"
       alt=""
       srcset=""
     />
@@ -27,8 +27,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    //  background-image: url(@/section/s3/view.webp);
-    //  background-size: cover;
+    background-image: url("@/section/s2/view.webp");
+    background-size: cover;
   }
 
   img {
