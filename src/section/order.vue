@@ -31,7 +31,7 @@
             <option value="陳睿珩">陳睿珩</option>
             <option value="曾依琇">曾依琇</option>
             <option value="翁雅如">翁雅如</option>
-            <option value="林菀淳">林莞淳</option>
+            <option value="林莞淳">林莞淳</option>
           </select>
 
           <select class="select w-full input-style select-style" v-model="formData.city">
