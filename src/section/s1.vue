@@ -1,15 +1,16 @@
 <template>
   <article class="s1" id="s1">
+    <img src="./s1/pc.jpg" class="t0 user-n events-n">
     <div class="bg absolute">
     <img src="./s1/bg1m.jpg" alt="bg" srcset="" v-if="isMobile">
     <img src="./s1/bg1.jpg" alt="bg" srcset="" v-else></div>
 
     <img src="./s1/logo.svg" class="logo absolute" alt="logo" srcset="" data-aos="zoom-out-down" data-aos-delay="0" data-aos-duration="1500">
-    <div class="t1 absolute" data-aos="zoom-out-down" data-aos-delay="200" data-aos-duration="1500">
+  <!--  <div class="t1 absolute" data-aos="zoom-out-down" data-aos-delay="200" data-aos-duration="1500">
       <span>新竹高鐵650M</span>
       <span>30-46坪</span>
       <span>03-5905588</span>
-    </div>
+    </div> --> 
   </article>
 </template>
 
@@ -24,7 +25,7 @@
 
 .s1 {  
   @apply relative w-full h-screen text-[#fff];
-  min-height: size(900);
+  min-height: size(1070);
   max-height: size(1070);
   display: flex;
   flex-direction: column;
@@ -34,7 +35,7 @@
   // overflow: hidden;
   // z-index: 2;
   img.t0{position: absolute;top:0;
-    width: 100%;opacity: .3;z-index: 2;height: auto;
+    width: 100%;opacity: .2;z-index: 5;height: auto;
   }
   .bg{position: absolute;width: 100%;bottom: 0;left: 0%;height: 100%;
    img{width: 100%;height: 100%;object-fit: cover;}
@@ -49,10 +50,10 @@
      transform: translateX(100%);
   }
 }
-  .logo{top: size(80);
-    top:calc(35% + #{size(80 - 1070 * .35)});
-    right: size(190);
-    width: size(610);
+  .logo{
+    top:calc(35% + #{size(200 - 1070 * .35)});
+    right: size(170);
+    width: size(450);
 }
 .t1{bottom: size(45);
   bottom:calc(20% + #{size(45 - 1070 * .2)});
@@ -86,15 +87,15 @@
 @media screen and (max-width: 767px) {
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);
+    min-height: sizem(667);
+    max-height: sizem(667);
     font-size:sizem(27);
   .bg{height:100%;//opacity: .4;
    img{height: 100%;}
   }
   
   .logo{
-    width:sizem(220);top: sizem(78);right: sizem(30);
+    width:sizem(220);top: sizem(167);right: sizem(76);
   }
   .t1{
     bottom:sizem(50);

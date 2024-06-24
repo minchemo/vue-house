@@ -17,11 +17,12 @@
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-    <!-- <S2v /> -->
-  <!--
     <S2 />
     <S3 />
     <S4 />
+    <S5 />
+    <!-- <S2v /> -->
+  <!--
     <S5 />
     <S6 />
     <S7 />
@@ -109,35 +110,36 @@ img {
     position: relative;
     font-weight: 300;
     letter-spacing: 0;
-    line-height: 1.7;
+    line-height: 1.8;
     width: 100%;
   .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
+  @apply font-['LXGW_WenKai_Mono_TC'];
+    font-size: 1.1em;
+    margin: 0;
     line-height: 1.4;
-    font-weight: 900;
-    color:#C9A063;
+    font-weight: 400;
+    color:#fff;
     text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: #fff;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto 1em;
-    }
+    background: url("@/section/s3/title.jpg") center;
+    background-size: cover;
+    padding: 0.3em 0;width: 21.3em;
+    img{height: 2.4em;vertical-align: bottom;margin: 0 0 0 1.7em}
   }
   .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    color:#C9A063;
-    line-height: 1.5;
+    @apply relative font-['LXGW_WenKai_Mono_TC'];
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0;
+    color:#958078;
+    line-height: 1.25;
+    &::after,
+    &::before{content: "";background: currentColor;position: absolute;bottom: .1em;right: 0;}
+    &::after{width: 1px;height: 3.9em;}
+    &::before{width: 12em;height: 1px;}
   }
   .desc{
-    margin: 0 0 1em;
+    margin: 2em 0 0.5em;
+    text-align: justify;
     b{color:#C9A063;}
   }
   }
@@ -197,17 +199,17 @@ img {
 }
 
   .caption{
-      font-size: sizem(12);}
+      font-size: sizem(11);}
 
       .txt {
   .title{
-    font-size: 2.3em;
+ //   font-size: 1em;
     &::after,
     &::before{
       width: 2.6em;}
   }
   .subtitle{
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
   }
 .slider {
@@ -243,11 +245,11 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-/* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
+/* 
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
