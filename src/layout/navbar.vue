@@ -2,20 +2,19 @@
     <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
-            v-bind:class="{ 'open': menuOpen }">
+        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen" v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
-            <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
-            <template v-for="item, in info.navList">
+           <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>  -->
+            <template v-for="item, i in info.navList">
             <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
-                @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)" :key="item.type">
+                @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
                 <span>{{ item.name }}</span>
             </div>
             </template>
-            <div class="close" @click="menuOpen = !menuOpen"  v-if="$isMobile()">
+            <div class="close" @click="menuOpen = !menuOpen">
             </div>
         </div>
     </div>
@@ -28,14 +27,19 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    right: size(114);
-    top: size(51);
-    .logo {
+    right: size(10);
+    top: size(10);
+ /*   .logo {
         width: size(145);
         height: size(50);
+        background-image: url('@/section/s1/logo.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         position: absolute;
         left:1em;
     }
+    */
 
     .menu-btn {
         background-color: transparent;
@@ -59,7 +63,7 @@
             position: relative;
             transition: all .5s;
             color: #fff;
-            box-shadow: 0 3px 0 #0366;
+       //     box-shadow: 0 3px 0 #0366;
 
             &::after {
                 content: '';
@@ -68,7 +72,7 @@
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 3px 0 #0366;
+        //    box-shadow: 0 3px 0 #0366;
                 //transform: translateX(-10%);
             }
 
@@ -79,7 +83,7 @@
                 top: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 3px 0 #0366;
+       //     box-shadow: 0 3px 0 #0366;
                 //transform: translateX(-10%);
             }
         }
@@ -121,20 +125,21 @@
 
     .menu {
         position: fixed;
-        flex-direction: row;
         top: 0;
         right: 0;
-        background: #032763cc;
-        width:100%;
-        height: size(60);
+        background: #000c;
+        width:size(375);
+        height: 100%;
         z-index: 5;
         padding: 0;
-        font-size: size(16);
-        gap: 2em;
-        padding: 0 3em 0 0;
+        font-size: size(20);
+        gap: 1.5em;
         font-weight: 700;
         backdrop-filter: blur(2px);
-        justify-content:flex-end;
+        transform: translateX(150%);
+        transition: all .5s; 
+            justify-content: center;
+            flex-direction: column;
 
         .menu-item {
             position: relative;
@@ -144,10 +149,28 @@
             // gap: size(10);
             letter-spacing: 0.1em;
             white-space: nowrap;
+    @apply font-['Noto_serif_TC',serif];
+    border: 1px solid #fff6;
+    line-height: 2;
+    padding: 0 2em;
+
 
             img {
                 width: size(43);
             }
+            &:after {
+                content: '';position: relative;left: .5em;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' fill='none' stroke='%23FFF' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='8.4,5.2 21.3,15.2 8.4,25.9'/%3E%3C/svg%3E");
+              display: inline-block;
+              width: 1em;height: 1em;font-size:1.5em;margin-right: -.5em;
+            }
+            /*
+            &::before{
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 47 47' fill='%23EBF28F' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='23.5'/%3E%3Cpath stroke='%2322491B' stroke-width='5' d='M7,23.5h33 M23.5,7v33'/%3E%3C/svg%3E");
+              display: inline-block;
+              width: 1em;height: 1em;font-size: .7em; margin-right:.5em;
+              }
 
             &:after {
                 content: '';
@@ -155,25 +178,38 @@
                 bottom: -5px;
                 width: 0%;
                 height: size(2);
-                background-color: #fff;
+                background-color: #EBF28F;
                 transition: all .35s;
-            }
+            }*/
 
             &:hover {
 
+                border: 1px solid #958078;
                 &:after {
-                    width: 100%;
+                    animation: tr .5s ease-in-out alternate infinite;
+                }
+            }
+
+            @keyframes tr {
+                from {
+                    transform:translateX(-6%);
+                }
+                to {
+                    transform:translateX(6%);
                 }
             }
             &.btn2{
-                background:#EF8200;
+                background:#EBF28F;
+                color: #22491B;
 ;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
+                &::before{display: none;
+              }
 
                 &:hover {
-                    background:#df6400;
+                    background:#EBF28F;
                     &:after {
                         width:0;
                     }
@@ -184,16 +220,24 @@
 
         &.open {
             transform: translateX(0);
+                left: unset;
         }
 
         .close {
             position: absolute;
-            top: size(77);
-            left: 50%;
-            transform: translateX(-50%);
+            top: size(10);right: size(10);
+            transform: translateX(0);
             width: size(44);
             height: size(44);
-            cursor: pointer;
+                cursor: pointer;
+                margin:0;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items:center;
+                &::before,&::after{content:"";background: #FFF;height: 2px;width: 100%;display: block;}
+                &::before{transform: rotate(45deg);margin-bottom:-2px;}
+                &::after{transform: rotate(-45deg);}
 
             img {
                 width: 100%;
@@ -330,15 +374,10 @@
 
         .menu {
             height: 100%;
+        width:100%;
           //  z-index: 0;
-            transform: translateX(150%);
-            transition: all .5s;
            // padding: 0;
            font-size: sizem(18);
-            gap: sizem(23);
-            justify-content: center;
-            flex-direction: column;
-        padding: 0;
           //  background-image: url('@/section/menubgm.png');
 
             .menu-item {
@@ -354,35 +393,21 @@
             }
 
             &.open {
-                transform: translateX(0);
                 left: unset;
             }
 
+
+            .close {
+                top: sizem(10);right: sizem(10);
+                width: sizem(44);
+                height: sizem(44);
+            }
             .decor {
                 width: 30vh;
                 left: 50%;
                 margin-left: -15vh;
                 top: -15vh;
                 animation: rotate 10s infinite linear;
-            }
-
-            .close {
-                position: absolute;
-                left: unset;
-                bottom: 0;
-                transform: translateX(0);
-                top: sizem(10);right: sizem(10);
-                width: sizem(44);
-                height: sizem(44);
-                cursor: pointer;
-                margin:0;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items:center;
-                &::before,&::after{content:"";background: #FFF;height: 2px;width: 100%;display: block;}
-                &::before{transform: rotate(45deg);margin-bottom:-2px;}
-                &::after{transform: rotate(-45deg);}
             }
         }
     }

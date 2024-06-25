@@ -1,7 +1,8 @@
 <template>
   <article class="s8" ref="s8">
-    <img src="./s8/bg.webp" class="bg" alt="bg">
-    <img src="./s8/img.webp" class="img user-n events-n" alt="高鐵示意圖">
+    <img src="./s8/bgm.webp" class="bg" alt="bg" v-if="isMobile">
+    <img src="./s8/bg.webp" class="bg" alt="bg" v-else>
+    <img src="./s8/img.webp" class="img user-n events-n" alt="外觀">
     <div class="main">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">建築規劃</h3>
@@ -76,7 +77,7 @@
 @apply flex-col;
   height: auto;
   padding: 0;
-font-size:sizem(12);
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
@@ -88,13 +89,13 @@ gap:0em;
 .title{top: sizem(110);left:-5em;
   }
 
-.txt {margin: 3em auto 3em;width: 100%;padding: 0 0 14em 2em;
+.txt {margin: 3em auto 3em;width: 100%;padding: 0 0 12em 2em;
   background: linear-gradient(135deg, #7A6A5699 50%,#7A6A5600 100%);
-  .subtitle{font-size: 1.65em;margin: 2.4em auto 0 2em;
+  .subtitle{margin: 2.4em auto 0 2em;
     &::after{bottom: -.7em;height: 2.7em;}
     &::before{left:  -4.8em;width: 16em;}
   }
-  .name{margin: 1.8em 0 0 0;}
+  .name{margin: 1.8em 0 0 0;font-size: 1.1em;}
   .desc{
     width: 90%;
     margin: 0em 0 1em;}

@@ -14,7 +14,7 @@
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s6/en.svg" class="en" alt="en">
+    <img src="./s6/en.svg" class="en user-n events-n" alt="en">
     <div class="title absolute"><img src="./s3/titleicon.png">綠境</div>
     <div class="main">
       <div class="txt">
@@ -83,7 +83,9 @@
     .caption{width: 1em;text-align: center;top: 0;right: 0;line-height: 1.25;
   font-size:size(20);}
   &::after{content: "";display: block;position:absolute;top:size(-30);left: size(80);
-  width: size(860);height: 100%;border: 4px solid #555c;}
+  width: size(860);height: 100%;border: 4px solid #555c;
+  pointer-events: none;
+  user-select: none;}
   }
 }
 /* 螢幕尺寸標準 */
@@ -97,7 +99,7 @@
 @apply flex-col;
   height: auto;
   padding: 0;
-font-size:sizem(12);
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
@@ -108,11 +110,12 @@ gap:0em;
   padding: 0 sizem(20);
   width: 100%;
 }
-.title{top: sizem(110);left:-5em;
+.title{top: sizem(105);left:-5em;
+    &::before{transform:scaleX(-1);}
   }
 
-.txt {margin: 4.9em auto 0em;width: 100%;padding: 0;
-  .subtitle{font-size: 1.65em;
+.txt {margin: 4em auto 0em;width: 100%;padding: 0;
+  .subtitle{
     &::after,
     &::before{opacity: .5;}
     &::after{bottom: -.7em;height: 2.7em;}
@@ -123,7 +126,7 @@ gap:0em;
 }
 
 .slider {
-    margin: sizem(225) auto 0 auto;
+    margin: sizem(215) auto 0 auto;
     width: 100%;z-index: 2;
     height:auto;text-align: center;
     img{width: sizem(300);margin: auto;

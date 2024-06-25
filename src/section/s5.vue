@@ -7,15 +7,16 @@
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
+      <div class="splide__pagination"></div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
-      <span class="caption  font-['LXGW_WenKai_Mono_TC'] ">{{ img.caption }}</span>
+      <span class="caption font-['LXGW_WenKai_Mono_TC'] ">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s5/enm.svg" class="en" alt="en" v-if="isMobile">
-    <img src="./s5/en.svg" class="en" alt="en" v-else>
+    <img src="./s5/enm.svg" class="en user-n events-n" alt="en" v-if="isMobile">
+    <img src="./s5/en.svg" class="en user-n events-n" alt="en" v-else>
     <img src="./s5/img.webp" class="img user-n events-n" alt="高鐵示意圖">
     <div class="title absolute"><img src="./s3/titleicon.png">文風</div>
     <div class="main">
@@ -46,8 +47,8 @@
     align-items: flex-end;
   .bg{position: absolute;bottom: 0;left: 0;width: 100%;z-index: 1;opacity: .54;
   }
-    .en{width: size(1800);position: absolute;top: size(680);left: 0;right: 0;z-index: 2;filter:drop-shadow(0px 0px 15px rgba(0,0,0,1)) ;}
-  .img{position: absolute;bottom: 0;left: size(50);width: size(410);z-index: 3
+    .en{width: size(1800);position: absolute;top: size(680);left: 0;right: 0;z-index: 5;filter:drop-shadow(0px 0px 15px rgba(0,0,0,1)) ;}
+  .img{position: absolute;bottom: 0;left: size(50);width: size(410);z-index: 5
   }
 
   .main {
@@ -94,22 +95,22 @@
 @apply flex-col;
   height: auto;
   padding: 0;
-font-size:sizem(12);
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
-    .en{width: sizem(360);position: absolute;top:sizem(395);left: 0;right: 0;z-index: 2;}
+    .en{width: sizem(360);position: absolute;top:sizem(395);left: 0;right: 0;}
   .img{top: sizem(38);left: 0;width: sizem(170);z-index: 2;
   }
 .main {
   padding: 0 sizem(20);
   width: 100%;
 }
-.title{top: sizem(110);right:-5em;
+.title{top: sizem(110);right:-6em;
   }
 
-.txt {margin: 6.9em auto 0em;width: 100%;padding: 0;
-  .subtitle{font-size: 1.65em;
+.txt {margin: 6.3em auto 0em;width: 100%;padding: 0;
+  .subtitle{
     &::after{bottom: -.7em;right: -.15em;left: auto;height: 2.7em;}
     &::before{right:  -4.8em;left: auto;width: 16em;}
   }

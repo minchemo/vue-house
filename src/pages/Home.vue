@@ -112,7 +112,7 @@ img {
     font-weight: 400;
     color:#fff;
     text-align: center;
-    padding: 0.3em 0;width: 21.3em;z-index: 3;
+    padding: 0.3em 0;width: 21.3em;z-index: 2;
     img{height: 2.4em;vertical-align: bottom;margin: 0 0 0 1.7em}
     &::before{content: "";display: block;z-index: -1;
       position: absolute;top: 0;left: 0;width: 100%;height: 100%;
@@ -160,9 +160,9 @@ img {
       
   justify-content: center;
   align-items:center;
-    background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
-    background-size: 40% auto;
-    background-position: 50% 60%;
+    background:url("data:image/svg+xml,%3Csvg viewBox='0 0 30 14' fill='none' stroke='%23FFF' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='17,1 28,13 0,13'/%3E%3C/svg%3E") no-repeat center;
+    background-size: 60% auto;
+    background-position: 50% 100%;
     transition:background-color .5s ;
     //&:hover{background-color: #0003;}
     }
@@ -219,7 +219,7 @@ img {
   .arrows{
     .prev,
     .next{
-      width: 8%;
+      width: 10%;
     }
   }
   .splide__pagination {

@@ -1,6 +1,6 @@
 <template>
   <article class="s4" ref="s4">
-    <img src="./s4/en.svg" class="en" alt="en">
+    <img src="./s4/en.svg" class="en user-n events-n" alt="en">
     <div class="title absolute"><img src="./s3/titleicon.png">大境</div>
     <div class="slider" data-aos="fade">
        <img src="./s4/1.webp" alt="3D外觀模擬示意圖">
@@ -85,7 +85,8 @@
     padding: 0 sizem(20);
     width: 100%;
 }
-  .title{top:sizem(105);left:sizem(-100);
+  .title{top:sizem(105);left:-5.4em;
+    &::before{transform: scaleX(-1);}
   }
 
 .txt {margin: 0em auto 1.3em;padding: 0;width:100%;text-align: center;

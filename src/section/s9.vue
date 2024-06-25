@@ -21,7 +21,7 @@
     <p class="desc" data-aos="fade-up" data-aos-delay="400">匯聚全球頂尖品牌，嚴選逸品塑造安適居家；以人為原點，生活為本質細膩體驗，訂製奢華新高度，成就家的恆久美學。</p>
     </div>
     </div>
-    <img src="./s9/en.svg" class="en" alt="en">
+    <img src="./s9/en.svg" class="en user-n events-n" alt="en">
 
   </article>
 </template>
@@ -92,7 +92,7 @@ background: linear-gradient(to bottom, #7A6A56cc 0%,#7A6A5600 100%); }
 @apply flex-col;
   height: auto;
   padding:10em 0 0 0;
-font-size:sizem(12);
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
@@ -110,8 +110,8 @@ gap:0em;
 .title{top: sizem(50);right:-5em;
   }
 
-.txt {margin: 1.9em auto 0em;width: 100%;padding: 0;text-align: center;
-  .subtitle{font-size: 1.65em;
+.txt {margin: 1em auto 0em;width: 100%;padding: 0;text-align: center;
+  .subtitle{
         display: inline-block; 
     &::after{bottom: -.7em;height: 2.7em;}
     &::before{right:  -4.8em;width: 16em;}
@@ -126,6 +126,13 @@ gap:0em;
     img{width: sizem(300);margin: auto;
     height:sizem(200);}
     .caption{  font-size:sizem(12);margin: 1.2em 3em;}
+    
+  .arrows{
+    .prev,
+    .next{
+    background-position: 50% 81%;
+  }
+  }
   }
 }
 }
@@ -160,16 +167,20 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "康乃薾美國學校"
+    img:new URL("./s9/1.jpg", import.meta.url).href ,
+    caption: "PANASONIC 精品廚具"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "康乃薾實驗高中"
+    img:new URL("./s9/2.jpg", import.meta.url).href ,
+    caption: "三星電子鎖"
   },
   {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "文興幼兒園"
+    img:new URL("./s9/3.jpg", import.meta.url).href ,
+    caption: "冠軍磁磚"
+  },
+  {
+    img:new URL("./s9/4.jpg", import.meta.url).href ,
+    caption: "Poll-Tex防霾紗窗"
   },
 ]
 </script>

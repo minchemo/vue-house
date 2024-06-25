@@ -113,7 +113,7 @@
 @apply flex-col;
   height: auto;
   padding: 0;
-font-size:sizem(12);
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
@@ -128,12 +128,12 @@ gap:0em;
   }
 
 .txt {margin: 7.9em auto 0em;width: 100%;padding: 0;
-  .subtitle{font-size: 1.65em;
-    &::after{bottom: -.7em;height: 2.7em;}
-    &::before{left:  -4.8em;width: 16em;}
+  .subtitle{
+    &::after{bottom: -.7em;height: 2.7em;right:-.15em;left: auto;}
+    &::before{right:  -4.8em;width: 16em;left: auto;}
   }
-  .t1{position: relative;left:0;right: 0;bottom: 0.1em;font-size: 1.7em;line-height: 1.5;
-    padding:0 1.5em;display: block;
+  .t1{position: relative;left:0;right: 0;bottom: 0.1em;font-size: 1.5em;line-height: 1.5;
+    padding:0;display: block;text-align: center;width: 8em;
     margin: 0 auto .7em;
   }
   .desc{

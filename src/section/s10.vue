@@ -1,6 +1,6 @@
 <template>
   <article class="s10" ref="s10">
-    <img src="./s5/bgm.svg" class="bg" alt="bg" v-if="isMobile">
+    <img src="./s10/bgm.svg" class="bg" alt="bg" v-if="isMobile">
     <img src="./s5/bg.svg" class="bg" alt="bg" v-else>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
@@ -14,7 +14,7 @@
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s10/en.svg" class="en" alt="en">
+    <img src="./s10/en.svg" class="en user-n events-n" alt="en">
     <div class="title absolute"><img src="./s3/titleicon.png">空間</div>
     <div class="main">
       <div class="txt">
@@ -98,7 +98,7 @@
 @apply flex-col;
   height: auto;
   padding: 0;
-font-size:sizem(12);
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
@@ -112,8 +112,8 @@ gap:0em;
 .title{top: sizem(105);left:-5em;
   }
 
-.txt {margin: 5.5em auto 0em;width: 100%;padding: 0;
-  .subtitle{font-size: 1.65em;
+.txt {margin: 3.5em auto 0em;width: 100%;padding: 0;
+  .subtitle{
     &::after{bottom: -.7em;height: 2.7em;}
     &::before{left:  -4.8em;width: 16em;}
   }
@@ -165,16 +165,24 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "康乃薾美國學校"
+    img:new URL("./s10/1.jpg", import.meta.url).href ,
+    caption: "迎賓大廳"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "康乃薾實驗高中"
+    img:new URL("./s10/2.jpg", import.meta.url).href ,
+    caption: "交誼廳"
   },
   {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "文興幼兒園"
+    img:new URL("./s10/3.jpg", import.meta.url).href ,
+    caption: "閱覽室-紀伊國屋選冊"
+  },
+  {
+    img:new URL("./s10/4.jpg", import.meta.url).href ,
+    caption: "健身房"
+  },
+  {
+    img:new URL("./s10/5.jpg", import.meta.url).href ,
+    caption: "兒童遊戲區"
   },
 ]
 </script>
