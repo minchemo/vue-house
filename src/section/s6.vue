@@ -1,7 +1,7 @@
 <template>
-  <article class="s5" ref="s5">
-    <img src="./s5/bgm.svg" class="bg" alt="bg" v-if="isMobile">
-    <img src="./s5/bg.svg" class="bg" alt="bg" v-else>
+  <article class="s6" ref="s6">
+    <img src="./s6/bgm.webp" class="bg" alt="bg" v-if="isMobile">
+    <img src="./s6/bg.webp" class="bg" alt="bg" v-else>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -14,14 +14,12 @@
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s5/enm.svg" class="en" alt="en" v-if="isMobile">
-    <img src="./s5/en.svg" class="en" alt="en" v-else>
-    <img src="./s5/img.webp" class="img user-n events-n" alt="高鐵示意圖">
-    <div class="title absolute"><img src="./s3/titleicon.png">文風</div>
+    <img src="./s6/en.svg" class="en" alt="en">
+    <div class="title absolute"><img src="./s3/titleicon.png">綠境</div>
     <div class="main">
       <div class="txt">
-        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">國際學府 未來菁英養成</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">6所卓越雙語學府—康乃薾國中小、美國學校、實驗國小，以卓越全球化思維涵養教育，把世界帶到孩子眼前；文興國小114學年度預定招生，完整學制培育棟樑，散步上學輕鬆就學。</p>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">蘊綠蒔光 對話閒逸自然</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">10座公園環繞美好植感，綠在城與家之間綻放；水汴頭公園收藏水圳樹影，近擁都市森氧綠肺；創意特色傑克小路公園、音符公園，親子攜手同遊，寓教於樂遊憩親子時光。</p>
     </div>
     </div>
 
@@ -33,7 +31,7 @@
 
 
 
-.s5 {
+.s6 {
   @apply relative flex items-center text-[#fff] bg-[#000];
   width: 100%;
   height:auto;
@@ -44,9 +42,10 @@
     flex-direction:column;
     justify-content:flex-start;
     align-items: flex-end;
-  .bg{position: absolute;bottom: 0;left: 0;width: 100%;z-index: 1;opacity: .54;
+  .bg{position: absolute;bottom: 0;left: 0;width: 100%;
+    height: 100%;z-index: 1;
   }
-    .en{width: size(1800);position: absolute;top: size(680);left: 0;right: 0;z-index: 2;filter:drop-shadow(0px 0px 15px rgba(0,0,0,1)) ;}
+    .en{width: size(850);position: absolute;top: size(675);left: 0;right: 0;z-index: 2;}
   .img{position: absolute;bottom: 0;left: size(50);width: size(410);z-index: 3
   }
 
@@ -56,13 +55,15 @@
     margin: 0 auto;
   flex-direction: column;z-index:2;
 }
-  .title{top: size(372);right:0em;
+  .title{top: size(372);left:0em;z-index: 3;
+    img{margin: 0 0 0 -1.7em}
+    &::before{transform: rotate(180deg);}
   }
 .txt{width: size(900);padding: 0 0 0 2.8em;
   text-align: center;
 
   .subtitle{text-align:center;margin: 1.9em auto 0 auto;
-        display: inline-block;
+        display: inline-block;color:#fff;
     &::after{bottom: -.3em;left: -.15em;height: 2.1em;}
     &::before{left: -1.5em;width: 13em;}
   }
@@ -75,12 +76,14 @@
 
   .slider {
     margin: size(180) auto 0 auto;
-    width: size(946);
+    width: size(980);
     height:auto;z-index: 1;text-align: center;
     img{width: size(860);margin: auto;
     height:size(577);}
     .caption{width: 1em;text-align: center;top: 0;right: 0;line-height: 1.25;
   font-size:size(20);}
+  &::after{content: "";display: block;position:absolute;top:size(-30);left: size(80);
+  width: size(860);height: 100%;border: 4px solid #555c;}
   }
 }
 /* 螢幕尺寸標準 */
@@ -90,7 +93,7 @@
 @media screen and (max-width: 767px) {
 
 
-.s5 {
+.s6 {
 @apply flex-col;
   height: auto;
   padding: 0;
@@ -98,33 +101,37 @@ font-size:sizem(12);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
-    .en{width: sizem(360);position: absolute;top:sizem(395);left: 0;right: 0;z-index: 2;}
+    .en{width: sizem(300);position: absolute;top:sizem(400);left: 0;right: 0;z-index: 2;}
   .img{top: sizem(38);left: 0;width: sizem(170);z-index: 2;
   }
 .main {
   padding: 0 sizem(20);
   width: 100%;
 }
-.title{top: sizem(110);right:-5em;
+.title{top: sizem(110);left:-5em;
   }
 
-.txt {margin: 6.9em auto 0em;width: 100%;padding: 0;
+.txt {margin: 4.9em auto 0em;width: 100%;padding: 0;
   .subtitle{font-size: 1.65em;
-    &::after{bottom: -.7em;right: -.15em;left: auto;height: 2.7em;}
-    &::before{right:  -4.8em;left: auto;width: 16em;}
+    &::after,
+    &::before{opacity: .5;}
+    &::after{bottom: -.7em;height: 2.7em;}
+    &::before{left:  -4.8em;width: 16em;}
   }
   .desc{
-    margin: 1.5em 0 3em;text-align: justify;}
+    margin: 1.5em 0 3em;}
 }
 
 .slider {
-    margin: sizem(205) auto 0 auto;
-    width: 100%;z-index: 3;
+    margin: sizem(225) auto 0 auto;
+    width: 100%;z-index: 2;
     height:auto;text-align: center;
     img{width: sizem(300);margin: auto;
     height:sizem(200);}
-    .caption{width: 1em;text-align: center;top: 0;right:1.5em;line-height: 1.25;
+    .caption{width: 1em;text-align: center;top: 0;right:1.2em;line-height: 1.25;
   font-size:sizem(12);}
+  &::after{top:sizem(-7);left: sizem(45);
+  width: sizem(300);height: 100%;border: 2px solid #555c;}
   }
 }
 }

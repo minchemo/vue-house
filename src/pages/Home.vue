@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home bg-[#80C2BF] overflow-hidden font-['Noto_Sans_TC',sans-serif] text-[#000]">
+  <div class="home bg-[#000] overflow-hidden font-['Noto_Sans_TC',sans-serif] text-[#000]">
      <!--  <img src="@/section/s1/bg0.jpg" class="bgh">
     <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
@@ -21,14 +21,13 @@
     <S3 />
     <S4 />
     <S5 />
-    <!-- <S2v /> -->
-  <!--
-    <S5 />
     <S6 />
     <S7 />
     <S8 />
     <S9 />
     <S10 />
+    <!-- <S2v /> -->
+  <!--
     <S11 />
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -102,9 +101,24 @@ img {
     font-weight: 300;
     font-size: size(15);
     color: #FFF;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
   }
 
+  .title{
+  @apply font-['LXGW_WenKai_Mono_TC'];
+    font-size: 1em;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 400;
+    color:#fff;
+    text-align: center;
+    padding: 0.3em 0;width: 21.3em;z-index: 3;
+    img{height: 2.4em;vertical-align: bottom;margin: 0 0 0 1.7em}
+    &::before{content: "";display: block;z-index: -1;
+      position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+    background: url("@/section/s3/title.jpg") center;
+    background-size: cover;}
+  }
 
     .txt {
     position: relative;
@@ -112,19 +126,6 @@ img {
     letter-spacing: 0;
     line-height: 1.8;
     width: 100%;
-  .title{
-  @apply font-['LXGW_WenKai_Mono_TC'];
-    font-size: 1.1em;
-    margin: 0;
-    line-height: 1.4;
-    font-weight: 400;
-    color:#fff;
-    text-align: center;
-    background: url("@/section/s3/title.jpg") center;
-    background-size: cover;
-    padding: 0.3em 0;width: 21.3em;
-    img{height: 2.4em;vertical-align: bottom;margin: 0 0 0 1.7em}
-  }
   .subtitle{
     @apply relative font-['LXGW_WenKai_Mono_TC'];
     font-size: 2em;
@@ -133,7 +134,7 @@ img {
     color:#958078;
     line-height: 1.25;
     &::after,
-    &::before{content: "";background: currentColor;position: absolute;bottom: .1em;right: 0;}
+    &::before{content: "";background: #fff9;position: absolute;bottom: 0;right: -.15em;opacity: .8;}
     &::after{width: 1px;height: 3.9em;}
     &::before{width: 12em;height: 1px;}
   }
@@ -160,9 +161,10 @@ img {
   justify-content: center;
   align-items:center;
     background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
-    background-size: 50% auto;
+    background-size: 40% auto;
+    background-position: 50% 60%;
     transition:background-color .5s ;
-    &:hover{background-color: #0003;}
+    //&:hover{background-color: #0003;}
     }
     .prev{transform: scaleX(-1);
     }
@@ -249,12 +251,12 @@ import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
-/* 
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
+/* 
  */
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"

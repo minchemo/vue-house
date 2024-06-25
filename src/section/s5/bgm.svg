@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 368 669" style="enable-background:new 0 0 368 669;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.54;fill:url(#SVGID_1_);}
+	.st1{opacity:0.54;fill:url(#SVGID_00000085934567696813615380000007575548580163256197_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="2454.5986" y1="564.6497" x2="2675.7766" y2="564.6497" gradientTransform="matrix(0 1 1 0 -380.6497 -2006.7767)">
+	<stop  offset="0" style="stop-color:#B40D23;stop-opacity:0.9"/>
+	<stop  offset="8.113092e-02" style="stop-color:#B52235;stop-opacity:0.8513"/>
+	<stop  offset="0.3124" style="stop-color:#B75865;stop-opacity:0.7125"/>
+	<stop  offset="0.528" style="stop-color:#B8838A;stop-opacity:0.5832"/>
+	<stop  offset="0.7212" style="stop-color:#B9A2A5;stop-opacity:0.4673"/>
+	<stop  offset="0.885" style="stop-color:#BAB4B5;stop-opacity:0.369"/>
+	<stop  offset="1" style="stop-color:#BABBBB;stop-opacity:0.3"/>
+</linearGradient>
+<polygon class="st0" points="368,669 368,447.8 0,669 83.6,669 "/>
+<linearGradient id="SVGID_00000183947730578336003980000003899117716170975410_" gradientUnits="userSpaceOnUse" x1="4653.0879" y1="2729.4736" x2="4868.6968" y2="2729.4736" gradientTransform="matrix(-1 0 0 1 4868.6968 -2394.9736)">
+	<stop  offset="0" style="stop-color:#B40D23;stop-opacity:0.9"/>
+	<stop  offset="0.1704" style="stop-color:#B53344;stop-opacity:0.7977"/>
+	<stop  offset="0.4541" style="stop-color:#B76D77;stop-opacity:0.6275"/>
+	<stop  offset="0.6971" style="stop-color:#B9979C;stop-opacity:0.4817"/>
+	<stop  offset="0.8868" style="stop-color:#BAB1B3;stop-opacity:0.3679"/>
+	<stop  offset="1" style="stop-color:#BABBBB;stop-opacity:0.3"/>
+</linearGradient>
+<polygon style="opacity:0.54;fill:url(#SVGID_00000183947730578336003980000003899117716170975410_);" points="0,669 215.6,669 0,0 
+	0,152 "/>
+</svg>

@@ -1,7 +1,7 @@
 <template>
-  <article class="s5" ref="s5">
-    <img src="./s5/bgm.svg" class="bg" alt="bg" v-if="isMobile">
-    <img src="./s5/bg.svg" class="bg" alt="bg" v-else>
+  <article class="s9" ref="s9">
+    <div class="box"></div>
+    <div class="logo"><img src="./s9/icon1.svg" alt="icon"><img src="./s9/icon2.svg" alt="icon"></div>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -14,16 +14,14 @@
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s5/enm.svg" class="en" alt="en" v-if="isMobile">
-    <img src="./s5/en.svg" class="en" alt="en" v-else>
-    <img src="./s5/img.webp" class="img user-n events-n" alt="高鐵示意圖">
-    <div class="title absolute"><img src="./s3/titleicon.png">文風</div>
+    <div class="title absolute"><img src="./s3/titleicon.png">精工</div>
     <div class="main">
       <div class="txt">
-        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">國際學府 未來菁英養成</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">6所卓越雙語學府—康乃薾國中小、美國學校、實驗國小，以卓越全球化思維涵養教育，把世界帶到孩子眼前；文興國小114學年度預定招生，完整學制培育棟樑，散步上學輕鬆就學。</p>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">世界選品<br v-if="!isMobile">構築恆久安居</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">匯聚全球頂尖品牌，嚴選逸品塑造安適居家；以人為原點，生活為本質細膩體驗，訂製奢華新高度，成就家的恆久美學。</p>
     </div>
     </div>
+    <img src="./s9/en.svg" class="en" alt="en">
 
   </article>
 </template>
@@ -33,54 +31,54 @@
 
 
 
-.s5 {
+.s9 {
   @apply relative flex items-center text-[#fff] bg-[#000];
   width: 100%;
   height:auto;
-  padding:0 0 0em 0;
+  padding: 8.2em 0 3em 0;
   font-size:size(20);
   gap:0em;
   flex-wrap: wrap;
-    flex-direction:column;
+    flex-direction:row;
     justify-content:flex-start;
     align-items: flex-end;
-  .bg{position: absolute;bottom: 0;left: 0;width: 100%;z-index: 1;opacity: .54;
-  }
-    .en{width: size(1800);position: absolute;top: size(680);left: 0;right: 0;z-index: 2;filter:drop-shadow(0px 0px 15px rgba(0,0,0,1)) ;}
-  .img{position: absolute;bottom: 0;left: size(50);width: size(410);z-index: 3
-  }
-
+ .box{position: absolute;height: 100%;width: .5em;top: 0;left: 3em;
+background: linear-gradient(to bottom, #7A6A56cc 0%,#7A6A5600 100%); }
+.logo{text-align: center;width: 100%;
+  img{height:size(82);margin: 0 1.7em;}
+}
+    .en{width: size(1150);margin: auto auto auto size(30);}
   .main {
     @apply flex;
     flex: 1;
     margin: 0 auto;
   flex-direction: column;z-index:2;
 }
-  .title{top: size(372);right:0em;
+  .title{top: size(372);right:0em;z-index: 3;
   }
-.txt{width: size(900);padding: 0 0 0 2.8em;
-  text-align: center;
+.txt{width: size(690);padding: 0 0 0 10.5em;
+  text-align: right;
 
-  .subtitle{text-align:center;margin: 1.9em auto 0 auto;
+  .subtitle{text-align:right;margin: 1.9em auto .4em auto;
         display: inline-block;
-    &::after{bottom: -.3em;left: -.15em;height: 2.1em;}
-    &::before{left: -1.5em;width: 13em;}
+    &::after{bottom: -.3em;height: 3.5em;}
+    &::before{right: -4.5em;width: 12em;}
   }
   .desc{
-    margin: 1.5em 0 4.5em;
-    text-align: justify;}
+    margin: 1.5em 0 3.5em;}
 }
 
 
 
   .slider {
-    margin: size(180) auto 0 auto;
-    width: size(946);
+    margin: size(125) auto 0 size(270);
+    width: size(670);
     height:auto;z-index: 1;text-align: center;
-    img{width: size(860);margin: auto;
-    height:size(577);}
-    .caption{width: 1em;text-align: center;top: 0;right: 0;line-height: 1.25;
-  font-size:size(20);}
+    img{width:100%;margin: auto;
+    height:size(440);}
+    .caption{position: relative;display: block;
+      text-align: left;bottom:0;width: 100%;margin: 1.2em 0;
+      right: 0;line-height: 1.25;  font-size:size(20);}
   }
 }
 /* 螢幕尺寸標準 */
@@ -90,41 +88,44 @@
 @media screen and (max-width: 767px) {
 
 
-.s5 {
+.s9 {
 @apply flex-col;
   height: auto;
-  padding: 0;
+  padding:10em 0 0 0;
 font-size:sizem(12);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
-    .en{width: sizem(360);position: absolute;top:sizem(395);left: 0;right: 0;z-index: 2;}
-  .img{top: sizem(38);left: 0;width: sizem(170);z-index: 2;
-  }
+.box{width: .5em;top: 0;left: 1.3em;}
+.logo{
+  img{height:sizem(35);margin:.3em 0;}
+}
+
+    .en{width: sizem(360);position: absolute;top:sizem(482);left: 0;right: 0;margin: auto;}
+
 .main {
   padding: 0 sizem(20);
   width: 100%;
 }
-.title{top: sizem(110);right:-5em;
+.title{top: sizem(50);right:-5em;
   }
 
-.txt {margin: 6.9em auto 0em;width: 100%;padding: 0;
+.txt {margin: 1.9em auto 0em;width: 100%;padding: 0;text-align: center;
   .subtitle{font-size: 1.65em;
-    &::after{bottom: -.7em;right: -.15em;left: auto;height: 2.7em;}
-    &::before{right:  -4.8em;left: auto;width: 16em;}
+        display: inline-block; 
+    &::after{bottom: -.7em;height: 2.7em;}
+    &::before{right:  -4.8em;width: 16em;}
   }
   .desc{
-    margin: 1.5em 0 3em;text-align: justify;}
+    margin: 1.5em 0 3em;}
 }
 
 .slider {
-    margin: sizem(205) auto 0 auto;
-    width: 100%;z-index: 3;
-    height:auto;text-align: center;
+    margin: sizem(35) auto 0 auto;
+    width: 100%;
     img{width: sizem(300);margin: auto;
     height:sizem(200);}
-    .caption{width: 1em;text-align: center;top: 0;right:1.5em;line-height: 1.25;
-  font-size:sizem(12);}
+    .caption{  font-size:sizem(12);margin: 1.2em 3em;}
   }
 }
 }

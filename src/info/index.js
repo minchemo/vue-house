@@ -36,65 +36,41 @@ export default {
     room_type: ["兩房","三房","四房","店面"],
    // budget: ["1500-2000萬","2001-3000萬","3001-4000萬","4001-5000萬","5000萬以上"],
     navList: [
-        /*
         {
-            name: "雙核心地段",
+            name: "聚 特區",
             target: ".s3",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "交通中軸",
+            name: "聚 大境",
             target: ".s4",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "水岸生活",
+            name: "聚 文風",
             target: ".s5",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "菁英學區",
+            name: "聚 綠境",
             target: ".s6",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "安心品牌",
+            name: "聚 團隊",
             target: ".s7",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "電梯店墅",
+            name: "聚 精工",
             target: ".s8",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "嚴選建材",
+            name: "聚 空間",
             target: ".s9",
             offset: "-60",
             offsetmo: "0",
-        },{
-            name: "傳家首席",
-            target: ".s10",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
         }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },
-    */
     ],
 }

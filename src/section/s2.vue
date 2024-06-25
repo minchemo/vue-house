@@ -1,6 +1,6 @@
 <template>
   <article class="s2">
-    <div class="title absolute  font-['Noto_Serif_TC'] "><img src="./s2/en.svg" alt="en">天選盛世啟城  匯聚頂尖居域</div>
+    <div class="title1 absolute  font-['Noto_Serif_TC'] "><img src="./s2/en.svg" alt="en">天選盛世啟城  匯聚頂尖居域</div>
    <!--    <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北第一環  水岸第一景</h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">前景×美景  好景成雙</h4>
@@ -20,7 +20,7 @@
   width: 100%;
   font-size:size(19);
   .viewbox{z-index: 2;}
-  .title{z-index: 3;top: size(55);left: 0;right: 0;
+  .title1{z-index: 3;top: size(55);left: 0;right: 0;
     font-size: size(60);
     text-align: center;
     letter-spacing: 0.01em;
@@ -42,7 +42,7 @@
   }
   */
   .viewbox{height: sizem(667);}
-  .title{z-index: 3;top: size(55);left: 0;right: 0;
+  .title1{z-index: 3;top: size(55);left: 0;right: 0;
     font-size: sizem(21);
     text-align: center;
     letter-spacing: 0.01em;

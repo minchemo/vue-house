@@ -1,13 +1,13 @@
 <template>
   <article class="s4" ref="s4">
     <img src="./s4/en.svg" class="en" alt="en">
+    <div class="title absolute"><img src="./s3/titleicon.png">大境</div>
     <div class="slider" data-aos="fade">
        <img src="./s4/1.webp" alt="3D外觀模擬示意圖">
       <span class="caption">3D外觀模擬示意圖</span>
     </div>
     <div class="main">
       <div class="txt">
-    <div class="title"><img src="./s3/titleicon.png">大境</div>
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">千坪大境<br v-if="!isMobile"> 成就奢域價值</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">因為寬闊，氣度更顯雍容自在；高鐵特區珍稀難尋千坪朗闊基地，貼心謙讓約700坪空間，四季涵養綠化達300坪；臨路10米退縮，延伸寬廣棟距視野，僅獻給品味極致生活家。</p>
     </div>
@@ -40,14 +40,20 @@
   flex-direction: column;
   text-align: justify;z-index:2;
 }
+  .title{top:size(370);left:0em;
+    img{margin: 0 0 0 -1.7em}
+    &::before{transform: rotate(180deg);}
+  }
 .txt{width: size(625);padding: 0 0 0 7.5em;margin: 5em  0 0 0;
 
-  .title{position: absolute;top: 0;left:-0em;
-  }
   .subtitle{margin: 3.4em 0 0 0;text-align: left;
-    &::after{bottom: -.7em;left:0;}
+    &::after,
+    &::before{background: #958078;}
+    &::after{bottom: -.7em;left: -.15em;}
     &::before{left: -4.8em;}
   }
+  .desc{
+    font-weight: 400;}
 }
 
 
@@ -68,8 +74,8 @@
   .s4 {
   @apply flex-col;
     height: auto;
-    padding: 13em 0 3em;
-  font-size:sizem(13);
+    padding: 13em 0 0em;
+  font-size:sizem(14);
   flex-wrap:nowrap;
   gap:0em;
     .en{top: sizem(7);left:sizem(153);
@@ -79,11 +85,10 @@
     padding: 0 sizem(20);
     width: 100%;
 }
+  .title{top:sizem(105);left:sizem(-100);
+  }
 
 .txt {margin: 0em auto 1.3em;padding: 0;width:100%;text-align: center;
-  .title{position: absolute;top: -28em;left:-7.3em;
-    font-size: 1.05em;
-  }
   .subtitle{margin: 1.8em auto 0 auto;
         display: inline-block;
     &::after{height: 2.8em;bottom: -.7em;}

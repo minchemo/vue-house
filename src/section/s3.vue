@@ -2,6 +2,7 @@
   <article class="s3" ref="s3">
     <img src="./s3/enm.svg" class="en" alt="en" v-if="isMobile">
     <img src="./s3/en.svg" class="en" alt="en" v-else>
+    <div class="title absolute"><img src="./s3/titleicon.png">特區</div>
     <div class="slider" data-aos="fade">
        <img src="./s3/1.jpg" alt="情境示意圖">
       <span class="caption">情境示意圖</span>
@@ -9,7 +10,6 @@
     </div>
     <div class="main">
       <div class="txt">
-    <div class="title"><img src="./s3/titleicon.png">特區</div>
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">高鐵金軸<br v-if="!isMobile"> 億級科技領地</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">競速價值，高鐵特區核心富域，快意城際近在咫尺；繁盛榮景，竹北高鐵站步行微距650M，近距聯發科、未來之心Getway Plaza，昂首對位矽谷，區段價值不言而喻。</p>
     </div>
@@ -36,6 +36,7 @@
     align-items: flex-end;
     .en{margin: size(180) auto 0;width: size(1530);}
 
+  .title{top: size(440);right:0;}
   .main {
     @apply flex;
     flex: 1;
@@ -45,8 +46,6 @@
 }
 .txt{width: size(535);padding: 0 0 0 2.8em;
 
-  .title{position: absolute;top: 0;right:-8em;
-  }
   .subtitle{margin: 3.4em 0 0 0;text-align: right;
     &::after{bottom: -.7em;}
     &::before{right: -4.8em;}
@@ -75,7 +74,7 @@
 @apply flex-col;
   height: auto;
   padding: 0;
-font-size:sizem(13);
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
@@ -85,11 +84,8 @@ gap:0em;
   width: 100%;
 }
 
+  .title{top: sizem(108);right:sizem(-90);}
 .txt {margin: 4.4em auto 1.3em;width: 100%;padding: 0;text-align: center;
-  .title{position: absolute;top: -26.2em;right:-7.3em;
-    font-size: 1.05em;
-  }
-  
   .subtitle{margin: 3em auto 0 auto;
         display: inline-block;
     &::after{height: 2.8em;bottom: -.7em;}
