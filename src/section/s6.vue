@@ -177,16 +177,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "康乃薾美國學校"
+    img:new URL("./s6/1.jpg", import.meta.url).href ,
+    caption: "水汴頭公園"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "康乃薾實驗高中"
+    img:new URL("./s6/2.jpg", import.meta.url).href ,
+    caption: "傑克小路公園"
   },
   {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "文興幼兒園"
+    img:new URL("./s6/3.jpg", import.meta.url).href ,
+    caption: "音符公園"
   },
 ]
 </script>
