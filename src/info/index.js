@@ -42,37 +42,37 @@ export default {
         {
             name: "聚 特區",
             target: ".s3",
-            offset: "-60",
+            offset: "0",
             offsetmo: "0",
         },{
             name: "聚 大境",
             target: ".s4",
-            offset: "-60",
+            offset: "0",
             offsetmo: "0",
         },{
             name: "聚 文風",
             target: ".s5",
-            offset: "-60",
+            offset: "0",
             offsetmo: "0",
         },{
             name: "聚 綠境",
             target: ".s6",
-            offset: "-60",
+            offset: "0",
             offsetmo: "0",
         },{
             name: "聚 團隊",
             target: ".s7",
-            offset: "-60",
+            offset: "0",
             offsetmo: "0",
         },{
             name: "聚 精工",
-            target: ".s8",
-            offset: "-60",
+            target: ".s9",
+            offset: "0",
             offsetmo: "0",
         },{
             name: "聚 空間",
-            target: ".s9",
-            offset: "-60",
+            target: ".s10",
+            offset: "0",
             offsetmo: "0",
         }
     ],

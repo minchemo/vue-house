@@ -63,7 +63,7 @@
             position: relative;
             transition: all .5s;
             color: #fff;
-       //     box-shadow: 0 3px 0 #0366;
+            box-shadow: 0 3px 0 #0004;
 
             &::after {
                 content: '';
@@ -72,7 +72,7 @@
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-        //    box-shadow: 0 3px 0 #0366;
+            box-shadow: 0 3px 0 #0004;
                 //transform: translateX(-10%);
             }
 
@@ -83,7 +83,7 @@
                 top: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-       //     box-shadow: 0 3px 0 #0366;
+            box-shadow: 0 3px 0 #0004;
                 //transform: translateX(-10%);
             }
         }
