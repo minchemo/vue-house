@@ -1,6 +1,6 @@
 <template>
   <article class="s1" id="s1">
-    <img src="./s1/mo.jpg" class="t0 user-n events-n">
+    <!-- <img src="./s1/mo.jpg" class="t0 user-n events-n"> -->
     <div class="bg absolute">
     <!-- <img src="./s1/bg1m.jpg" alt="bg" srcset="" v-if="isMobile">
     <img src="./s1/bg1.jpg" alt="bg" srcset="" v-else> --> </div>
@@ -34,9 +34,10 @@
   font-size:size(66);
   // overflow: hidden;
   // z-index: 2;
-  img.t0{position: absolute;top:0px;top:-670px;
+ /* img.t0{position: absolute;top:0px;top:-670px;
     width: 100%;opacity: .0;z-index: 5;height: auto;
   }
+  */
   .bg{position: absolute;width: 100%;bottom: 0;left: 0%;height: 100%;
    // img{width: 100%;height: 100%;object-fit: cover;}
    &::after{content: "";display: block;position: absolute;top: 0;right: 0;width: 200%;height: 100%;
