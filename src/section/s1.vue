@@ -1,16 +1,8 @@
 <template>
   <article class="s1" id="s1">
     <!-- <img src="./s1/mo.jpg" class="t0 user-n events-n"> -->
-    <div class="bg absolute">
-    <!-- <img src="./s1/bg1m.jpg" alt="bg" srcset="" v-if="isMobile">
-    <img src="./s1/bg1.jpg" alt="bg" srcset="" v-else> --> </div>
-
+    <div class="bg absolute"></div>
     <img src="./s1/logo.svg" class="logo absolute" alt="logo" srcset="" data-aos="zoom-out-down" data-aos-delay="0">
-  <!--  <div class="t1 absolute" data-aos="zoom-out-down" data-aos-delay="200" data-aos-duration="1500">
-      <span>新竹高鐵650M</span>
-      <span>30-46坪</span>
-      <span>03-5905588</span>
-    </div> --> 
   </article>
 </template>
 
