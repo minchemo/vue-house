@@ -1,5 +1,7 @@
 <template>
   <article class="s2" id="s2">
+    <h1 class="bt1">擬訂新北市永和區保福段1地號等180筆土地都市更新事業計畫及權利變換計畫案</h1>
+
     <div class="box box1">
       <h2 class="title font-['noto_Serif_tc']">一、基本資料</h2>
       <div class="list" v-for="item in list1">
@@ -20,7 +22,7 @@
         <a :href="item.link" class="link" v-if="item.link&&!item.link.startsWith('#')"></a>
         <span :class="['t1', item.t1[0]]" v-html="item.t1[1]"></span>
         <span class="t2" v-html="item.t2"></span>
-        <h3 class="t3">{{item.t3}}<span class="t4_a" v-if="item.link&&$isMobile()"></span><span class="t4" v-if="item.link">下載</span></h3>
+        <h3 class="t3"><span v-html="item.t3"></span><span class="t4_a" v-if="item.link&&$isMobile()"></span><span class="t4" v-if="item.link">下載</span></h3>
         
       </section>
       <!-- <a class="download" href="https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link" target="_blank">公開資料下載</a> -->
@@ -36,6 +38,11 @@
 font-size: 15px;
 line-height: 1.5;
 padding: size(98) 0;
+}
+.bt1{
+  font-size: 1.7em;
+  text-align: center;
+  margin: 20px 0px;
 }
 .box{margin: auto;max-width:900px;width: 85%;
 display: flex;
@@ -99,6 +106,11 @@ background: #790024;transform: scale(1.2);
 font-size:13px;
 padding: sizem(90) 0;
 
+.bt1{
+  font-size: 1.3em;
+  padding: 0px 20px;
+}
+
 .title{
 font-size: 2em;}
 .box2{
@@ -125,7 +137,7 @@ const list1 = [
         ["使用分區", "住宅區"],
         ["更新規劃", "城林都市更新股份有限公司"],
         ["建築設計", "何慶三建築師事務所"],
-        ["鑑價機構", "宇豐不動產估價師聯合事務所"],
+        ["鑑價機構", "宇豐不動產估價師聯合事務所<br>展碁不動產估價師聯合事務所<br>中泰不動產估價師聯合事務所"],
     ];
 
 const list2 = [
@@ -143,8 +155,8 @@ const list2 = [
   },
   {
     t1: ["v2", "準備中"],
-    t2: "113/03/12",
-    t3: "自辦公聽會",
+    t2: "113/07/06",
+    t3: "自辦公聽會<br><b>第一場次A區(下午14時整)</b><br>A區範圍：保福段1~161、853~856、1064地號等172筆土地<br><br><b>第二場次B區(下午18時整)</b><br>B區範圍：保福段860~867地號等8筆土地",
     link:"https://drive.google.com/drive/folders/12l5cKU4cLSsySCx_WGbTXDvtKjJiQDQW?usp=sharing",
   },  
   //link 設定#開頭  不會另開 放網址才會另開視窗
