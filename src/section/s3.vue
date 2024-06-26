@@ -11,7 +11,7 @@
     <div class="main">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">高鐵金軸<br v-if="!isMobile"> 億級科技領地</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">競速價值，高鐵特區核心富域，快意城際近在咫尺；繁盛榮景，竹北高鐵站步行微距650M，近距聯發科、未來之心Getway Plaza，昂首對位矽谷，區段價值不言而喻。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">競速價值，高鐵特區核心富域，快意城際近在咫尺；繁盛榮景，竹北高鐵站步行微距650M，近距聯發科、未來之心Gateway Plaza，昂首對位矽谷，區段價值不言而喻。</p>
     </div>
     </div>
 

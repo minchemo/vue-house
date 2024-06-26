@@ -1,7 +1,7 @@
 <template>
   <article class="s10" ref="s10">
-    <img src="./s10/bgm.svg" class="bg" alt="bg" v-if="isMobile">
-    <img src="./s5/bg.svg" class="bg" alt="bg" v-else>
+    <img src="./s10/bgm.svg" class="bg" alt="bg user-n events-n" v-if="isMobile">
+    <img src="./s5/bg.svg" class="bg" alt="bg user-n events-n" v-else>
     <div class="slider" data-aos="fade-up" data-aos-delay="200">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -17,7 +17,7 @@
     </div>
     <img src="./s10/en.svg" class="en user-n events-n" alt="en" data-aos="fade-up" data-aos-delay="0">
     <div class="title absolute" data-aos="fade-up" data-aos-delay="0"><img src="./s3/titleicon.png">空間</div>
-    <div class="main">
+    <div class="main events-n">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">藝賞公設 沉浸悠居日常</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">公設是家的延伸、品味的實現，於輕奢時尚中安定身心，營造全齡極致體驗；與日本最大「紀伊國屋書店」攜手選冊，一心一藝打造書香社區，伴讀緻美閱享時光。</p>
