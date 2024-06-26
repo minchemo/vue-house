@@ -1,12 +1,12 @@
 <template>
   <article class="s3" ref="s3">
-    <img src="./s3/enm.svg" class="en" alt="en" v-if="isMobile">
-    <img src="./s3/en.svg" class="en" alt="en" v-else>
-    <div class="title absolute"><img src="./s3/titleicon.png">特區</div>
-    <div class="slider" data-aos="fade">
+    <img src="./s3/enm.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">
+    <img src="./s3/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="0" v-else>
+    <div class="title absolute" data-aos="fade-up" data-aos-delay="0"><img src="./s3/titleicon.png">特區</div>
+    <div class="slider" data-aos="fade-up" data-aos-delay="200">
        <img src="./s3/1.jpg" alt="情境示意圖">
       <span class="caption">情境示意圖</span>
-    <img src="./s3/img.webp" class="img user-n events-n" alt="高鐵示意圖">
+    <img src="./s3/img.webp" class="img user-n events-n" alt="高鐵示意圖" data-aos="fade-right" data-aos-delay="400">
     </div>
     <div class="main">
       <div class="txt">
@@ -35,6 +35,7 @@
     justify-content:flex-start;
     align-items: flex-end;
     .en{margin: size(180) auto 0;width: size(1530);}
+
 
   .title{top: size(440);right:0;}
   .main {
@@ -78,21 +79,16 @@ font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
-    .en{margin: sizem(50) auto sizem(50) ;width: sizem(340);}
-.main {
-  padding: 0 sizem(20);
-  width: 100%;
-}
-
-  .title{top: sizem(108);right:sizem(-90);}
+.en{margin: sizem(50) auto sizem(50) ;width: sizem(340);}
+.caption{bottom: 1.5em;}
+.main {padding: 0 sizem(20);width: 100%;}
+.title{top: sizem(108);right:sizem(-90);}
 .txt {margin: 4.4em auto 1.3em;width: 100%;padding: 0;text-align: center;
-  .subtitle{margin: 3em auto 0 auto;
-        display: inline-block;
+.subtitle{margin: 3em auto 0 auto;display: inline-block;
     &::after{height: 2.8em;bottom: -.7em;}
     &::before{width: 16em;right: -4.8em;}
-  }
-  .desc{
-    margin: 1.5em 0 1em;}
+}
+.desc{margin: 1.5em 0 1em;}
 }
 
 

@@ -138,7 +138,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #785A4F;
+      background-color: #000;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -167,13 +167,13 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: invert(59%) sepia(42%) saturate(394%) hue-rotate(351deg) brightness(94%) contrast(86%);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #fff;
+        background-color: #FFFC;
         color: #000;
         z-index: 0;
         position: relative;
@@ -206,7 +206,7 @@
         color: #FFF;
 
         img {
-          filter: brightness(0) invert(1);
+          filter:invert(59%) sepia(42%) saturate(394%) hue-rotate(351deg) brightness(94%) contrast(86%);
         }
 
         &:hover {

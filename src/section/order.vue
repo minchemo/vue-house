@@ -2,7 +2,7 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title text-center font-['Noto_Serif_TC']">預約賞屋<img src="@/section/form/contact.svg"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
       <!-- <div class="cus-divider"></div> -->
 
@@ -59,7 +59,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -109,13 +109,15 @@
 .order {
   width: 100%;
   padding-top: 0;
+  background:linear-gradient(to left, #000c 60%,#0006 100%);
 
   .order-title {
     font-size: size(52);
     letter-spacing: 0.02em;
     font-weight: 700;
-    color: #785A4F;
+    color: #BA9163;
     padding:1.5em 0 0em;
+    img{height: 1em;vertical-align:baseline;margin-bottom: -.1em;}
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
@@ -125,7 +127,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #000;
+    color: #CCC;
     padding-top:0em;
     letter-spacing: .04em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -197,7 +199,7 @@
     background-color:#785A4F;
     //border: 1px solid #FFF9;
     border-radius: 0em;
-
+    border: 0;
     width: 308px;
     height:3.3em;
     line-height: 3.3;
@@ -242,9 +244,9 @@
     }
 
     .order-title {
-      font-size: sizem(29);
+      font-size: sizem(27);
       padding-top:1.5em;
-      margin-left:sizem(32);
+     // margin-left:sizem(32);
      // float: left;text-align: left;
     }
   .order-title-img {

@@ -2,12 +2,11 @@
   <article class="s5" ref="s5">
     <img src="./s5/bgm.svg" class="bg" alt="bg" v-if="isMobile">
     <img src="./s5/bg.svg" class="bg" alt="bg" v-else>
-    <div class="slider" data-aos="fade">
+    <div class="slider" data-aos="fade-up" data-aos-delay="200">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
-      <div class="splide__pagination"></div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -15,10 +14,10 @@
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s5/enm.svg" class="en user-n events-n" alt="en" v-if="isMobile">
-    <img src="./s5/en.svg" class="en user-n events-n" alt="en" v-else>
-    <img src="./s5/img.webp" class="img user-n events-n" alt="高鐵示意圖">
-    <div class="title absolute"><img src="./s3/titleicon.png">文風</div>
+    <img src="./s5/enm.svg" class="en user-n events-n" alt="en" v-if="isMobile" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s5/en.svg" class="en user-n events-n" alt="en" v-else data-aos="fade-up" data-aos-delay="0">
+    <img src="./s5/img.webp" class="img user-n events-n" alt="img" data-aos="fade-right" data-aos-delay="400">
+    <div class="title absolute" data-aos="fade-up" data-aos-delay="0"><img src="./s3/titleicon.png">文風</div>
     <div class="main">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">國際學府 未來菁英養成</h3>
@@ -82,6 +81,10 @@
     height:size(577);}
     .caption{width: 1em;text-align: center;top: 0;right: 0;line-height: 1.25;
   font-size:size(20);}
+  .splide__pagination {
+    bottom: -1.5em;
+    justify-content: flex-start;left: 3em;
+  }
   }
 }
 /* 螢幕尺寸標準 */
@@ -151,7 +154,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
+  pagination:globals.$isMobile()?false:true,
   autoplay: true,
   interval: 4000,
   gap: 0,

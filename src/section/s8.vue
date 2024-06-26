@@ -2,7 +2,8 @@
   <article class="s8" ref="s8">
     <img src="./s8/bgm.webp" class="bg" alt="bg" v-if="isMobile">
     <img src="./s8/bg.webp" class="bg" alt="bg" v-else>
-    <img src="./s8/img.webp" class="img user-n events-n" alt="外觀">
+    <img src="./s8/img.webp" class="img user-n events-n" alt="外觀" data-aos="fade-up" data-aos-delay="200">>
+    <div class="caption">3D外觀模擬示意圖</div>
     <div class="main">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">建築規劃</h3>
@@ -63,6 +64,7 @@
  // text-align: center;
 }
 }
+    .caption{z-index: 3;}
   .img{position: absolute;bottom:0;right:0;width: size(690);z-index: 3
   }
 }

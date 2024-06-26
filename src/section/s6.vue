@@ -2,7 +2,7 @@
   <article class="s6" ref="s6">
     <img src="./s6/bgm.webp" class="bg" alt="bg" v-if="isMobile">
     <img src="./s6/bg.webp" class="bg" alt="bg" v-else>
-    <div class="slider" data-aos="fade">
+    <div class="slider" data-aos="fade-up" data-aos-delay="200">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -14,8 +14,8 @@
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s6/en.svg" class="en user-n events-n" alt="en">
-    <div class="title absolute"><img src="./s3/titleicon.png">綠境</div>
+    <img src="./s6/en.svg" class="en user-n events-n" alt="en" data-aos="fade-up" data-aos-delay="0">
+    <div class="title absolute" data-aos="fade-up" data-aos-delay="0"><img src="./s3/titleicon.png">綠境</div>
     <div class="main">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">蘊綠蒔光 對話閒逸自然</h3>
@@ -86,6 +86,14 @@
   width: size(860);height: 100%;border: 4px solid #555c;
   pointer-events: none;
   user-select: none;}
+  .splide__pagination {
+    width: auto;
+    bottom:0em;
+    right:.5em;
+    flex-direction:column;
+    justify-content:flex-end;
+    color: #fff;
+  }
   }
 }
 /* 螢幕尺寸標準 */
@@ -160,7 +168,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
+  pagination:globals.$isMobile()?false:true,
   autoplay: true,
   interval: 4000,
   gap: 0,

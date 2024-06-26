@@ -1,27 +1,28 @@
 <template>
   <article class="s9" ref="s9">
     <div class="box"></div>
-    <div class="logo"><img src="./s9/icon1.svg" alt="icon"><img src="./s9/icon2.svg" alt="icon"></div>
-    <div class="slider" data-aos="fade">
+    <div class="logo" data-aos="zoom-out-up" data-aos-delay="0"><img src="./s9/icon1.svg" alt="icon"><img src="./s9/icon2.svg" alt="icon"></div>
+    <div class="slider" data-aos="fade-up" data-aos-delay="200">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption">
+          <div><img :src="img.img" :alt="img.caption">
+      <span class="caption">情境示意圖</span></div>
       <span class="caption  font-['LXGW_WenKai_Mono_TC'] ">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
-    <div class="title absolute"><img src="./s3/titleicon.png">精工</div>
+    <div class="title absolute" data-aos="fade-up" data-aos-delay="0"><img src="./s3/titleicon.png">精工</div>
     <div class="main">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">世界選品<br v-if="!isMobile">構築恆久安居</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">匯聚全球頂尖品牌，嚴選逸品塑造安適居家；以人為原點，生活為本質細膩體驗，訂製奢華新高度，成就家的恆久美學。</p>
     </div>
     </div>
-    <img src="./s9/en.svg" class="en user-n events-n" alt="en">
+    <img src="./s9/en.svg" class="en user-n events-n" alt="en" data-aos="fade-up" data-aos-delay="0">
 
   </article>
 </template>
@@ -76,9 +77,17 @@ background: linear-gradient(to bottom, #7A6A56cc 0%,#7A6A5600 100%); }
     height:auto;z-index: 1;text-align: center;
     img{width:100%;margin: auto;
     height:size(440);}
-    .caption{position: relative;display: block;
+    .slide-item{
+    div{position: relative;}
+    .caption{font-size:size(12);}
+     > .caption{position: relative;display: block;
       text-align: left;bottom:0;width: 100%;margin: 1.2em 0;
       right: 0;line-height: 1.25;  font-size:size(20);}
+    }
+  .splide__pagination {
+    bottom:1.5em;
+    justify-content:flex-end;right:0em;
+  }
   }
 }
 /* 螢幕尺寸標準 */
@@ -101,7 +110,7 @@ gap:0em;
   img{height:sizem(35);margin:.3em 0;}
 }
 
-    .en{width: sizem(360);position: absolute;top:sizem(482);left: 0;right: 0;margin: auto;}
+    .en{width: sizem(360);position: absolute;top:sizem(502);left: 0;right: 0;margin: auto;}
 
 .main {
   padding: 0 sizem(20);
@@ -110,7 +119,7 @@ gap:0em;
 .title{top: sizem(50);right:-5em;
   }
 
-.txt {margin: 1em auto 0em;width: 100%;padding: 0;text-align: center;
+.txt {margin: 2em auto 0em;width: 100%;padding: 0;text-align: center;
   .subtitle{
         display: inline-block; 
     &::after{bottom: -.7em;height: 2.7em;}
@@ -123,9 +132,13 @@ gap:0em;
 .slider {
     margin: sizem(35) auto 0 auto;
     width: 100%;
-    img{width: sizem(300);margin: auto;
+    img{width:100%;
     height:sizem(200);}
-    .caption{  font-size:sizem(12);margin: 1.2em 3em;}
+    .slide-item{
+    div{width: sizem(300);margin: auto;}
+    .caption{font-size:sizem(10);}
+     > .caption{font-size:sizem(12);margin: 1.2em 3em;}
+    }
     
   .arrows{
     .prev,
@@ -158,7 +171,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
+  pagination:globals.$isMobile()?false:true,
   autoplay: true,
   interval: 4000,
   gap: 0,

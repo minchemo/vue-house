@@ -8,7 +8,7 @@
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
            <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>  -->
-            <template v-for="item, i in info.navList">
+            <template v-for="item, in info.navList" :key="item">
             <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
                 @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
                 <span>{{ item.name }}</span>
@@ -128,6 +128,7 @@
         top: 0;
         right: 0;
         background: #000c;
+        background: linear-gradient(to right, #4e402d99 0%,#000c 30%);
         width:size(375);
         height: 100%;
         z-index: 5;
@@ -153,10 +154,17 @@
     border: 1px solid #fff6;
     line-height: 2;
     padding: 0 2em;
+    overflow: hidden;
 
 
             img {
                 width: size(43);
+            }
+            &:before {
+                content: '';position: absolute;
+                top: 0;left: 0;width: 100%;height: 100%;z-index: -1;transform-origin: 0 0;transform: scaleX(.5)translateX(-100%);
+                transition:transform .3s;
+                background: linear-gradient(to right, #7A6A56cc 0%,#7A6A5600 100%);
             }
             &:after {
                 content: '';position: relative;left: .5em;
@@ -164,27 +172,11 @@
               display: inline-block;
               width: 1em;height: 1em;font-size:1.5em;margin-right: -.5em;
             }
-            /*
-            &::before{
-                content: '';
-                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 47 47' fill='%23EBF28F' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='23.5' cy='23.5' r='23.5'/%3E%3Cpath stroke='%2322491B' stroke-width='5' d='M7,23.5h33 M23.5,7v33'/%3E%3C/svg%3E");
-              display: inline-block;
-              width: 1em;height: 1em;font-size: .7em; margin-right:.5em;
-              }
-
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: -5px;
-                width: 0%;
-                height: size(2);
-                background-color: #EBF28F;
-                transition: all .35s;
-            }*/
 
             &:hover {
-
                 border: 1px solid #958078;
+            &:before {transform: scaleX(1.5);
+            }
                 &:after {
                     animation: tr .5s ease-in-out alternate infinite;
                 }

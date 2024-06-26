@@ -1,6 +1,5 @@
 <template>
   <article class="s7" ref="s7">
-    <img src="./s1/bg1.jpg" class="bg" alt="bg" srcset="" v-if="!isMobile">
     <div class="main">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">建築巨擘 名家團隊鑄造</h3>
@@ -11,24 +10,26 @@
     <div class="slider" data-aos="fade">
       <swiper  class="slide-item"
         :slidesPerView=" isMobile ? '2':'4'" 
-        :spaceBetween="0"
+        :spaceBetween="1"
         :pagination="{ clickable: true }"
         :navigation="true"
         :loop="true"
-        :speed="2000"
+        :speed="1000"
         :autoplay="{
           delay: 4000,
           disableOnInteraction: false,
         }"
         :modules="modules"
+        :slidesPerGroup="2"
       >
         <swiper-slide  class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption">
+          <div><img :src="img.img" :alt="img.caption">
+      <span class="caption">3D外觀模擬示意圖</span></div>
       <span class="caption font-['LXGW_WenKai_Mono_TC']">{{ img.caption }}</span>
         </swiper-slide>
       </swiper>
     </div>
-    <div class="title absolute"><img src="./s3/titleicon.png">團隊</div>
+    <div class="title absolute" data-aos="fade-up" data-aos-delay="0"><img src="./s3/titleicon.png">團隊</div>
 
   </article>
 </template>
@@ -39,7 +40,7 @@
 
 
 .s7 {
-  @apply relative flex items-center text-[#fff] bg-[#000];
+  @apply relative flex items-center text-[#fff];
   width: 100%;
   height:auto;
   padding:0 0 3em 0;
@@ -94,12 +95,14 @@
     flex-direction:column-reverse;
 
     }
+    div{position: relative;}
+    .caption{font-size:size(12);}
+    > .caption{position: relative;
+      text-align: center;top: 0;right: 0;line-height: 2.2;color: #000;
+  font-size:size(30);}
   }
     img{width: 100%;margin: auto;
     height:size(450);}
-    .caption{position: relative;
-      text-align: center;top: 0;right: 0;line-height: 2.2;color: #000;
-  font-size:size(30);}
   }
 }
 /* 螢幕尺寸標準 */
@@ -147,10 +150,13 @@ gap:0em;
     height:auto;text-align: center;
     img{
     height:sizem(220);}
-    .caption{
-  font-size:sizem(15);}
   &::after{top:sizem(-7);left: sizem(45);
   width: sizem(300);height: 100%;border: 2px solid #555c;}
+  .slide-item{
+    .caption{font-size:sizem(12);}
+    > .caption{font-size:sizem(15);}
+
+  }
   }
 }
 }

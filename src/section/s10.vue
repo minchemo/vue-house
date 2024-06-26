@@ -2,20 +2,21 @@
   <article class="s10" ref="s10">
     <img src="./s10/bgm.svg" class="bg" alt="bg" v-if="isMobile">
     <img src="./s5/bg.svg" class="bg" alt="bg" v-else>
-    <div class="slider" data-aos="fade">
+    <div class="slider" data-aos="fade-up" data-aos-delay="200">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption">
+          <div><img :src="img.img" :alt="img.caption">
+      <span class="caption">3D模擬示意圖</span></div>
       <span class="caption  font-['LXGW_WenKai_Mono_TC'] ">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s10/en.svg" class="en user-n events-n" alt="en">
-    <div class="title absolute"><img src="./s3/titleicon.png">空間</div>
+    <img src="./s10/en.svg" class="en user-n events-n" alt="en" data-aos="fade-up" data-aos-delay="0">
+    <div class="title absolute" data-aos="fade-up" data-aos-delay="0"><img src="./s3/titleicon.png">空間</div>
     <div class="main">
       <div class="txt">
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">藝賞公設 沉浸悠居日常</h3>
@@ -81,10 +82,18 @@
     margin: size(165) auto 0 auto;
     width: size(950);
     height:auto;z-index: 1;text-align: center;
-    img{width: size(860);margin: auto;
+    img{width: 100%;
     height:size(577);}
-    .caption{width: 1em;text-align: center;top: 0;right: .2em;line-height: 1.25;
+    .slide-item{
+    div{position: relative;width: size(860);margin: auto;}
+    .caption{font-size:size(12);left: .5em;text-align: left;}
+     > .caption{width: 1em;text-align: center;top: 0;right: .2em;left: auto;line-height: 1.25;
   font-size:size(20);color: #3E3A39;}
+}
+  .splide__pagination {
+    bottom: -1.5em;
+    justify-content: flex-start;left: 3em;
+  }
   }
 }
 /* 螢幕尺寸標準 */
@@ -125,10 +134,14 @@ gap:0em;
     margin: sizem(210) auto 0 auto;
     width: 100%;z-index: 2;
     height:auto;text-align: center;
-    img{width: sizem(300);margin: auto;
-    height:sizem(200);}
-    .caption{width: 1em;text-align: center;top: 0;right:1.2em;line-height: 1.25;
-  font-size:sizem(12);}
+    img{height:sizem(200);}
+  
+  .slide-item{
+    div{width: sizem(300);}
+    .caption{font-size:sizem(11);}
+     > .caption{font-size:sizem(12);width: 1em;text-align: center;top: 0;right:1.2em;line-height: 1.25;;}
+}
+
   &::after{top:sizem(-7);left: sizem(45);
   width: sizem(300);height: 100%;border: 2px solid #555c;}
   }
@@ -156,7 +169,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
+  pagination:globals.$isMobile()?false:true,
   autoplay: true,
   interval: 4000,
   gap: 0,
@@ -174,7 +187,7 @@ const imgs = [
   },
   {
     img:new URL("./s10/3.jpg", import.meta.url).href ,
-    caption: "閱覽室-紀伊國屋選冊"
+    caption: "閱覽室｜紀伊國屋選冊"
   },
   {
     img:new URL("./s10/4.jpg", import.meta.url).href ,

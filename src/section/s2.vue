@@ -1,6 +1,6 @@
 <template>
   <article class="s2">
-    <div class="title1 absolute  font-['Noto_Serif_TC'] "><img src="./s2/en.svg" alt="en">天選盛世啟城  匯聚頂尖居域</div>
+    <div class="title1 absolute  font-['Noto_Serif_TC'] " data-aos="zoom-out-down" data-aos-delay="0"><img src="./s2/en.svg" alt="en">天選盛世啟城  匯聚頂尖居域</div>
    <!--    <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北第一環  水岸第一景</h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">前景×美景  好景成雙</h4>

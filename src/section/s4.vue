@@ -1,7 +1,7 @@
 <template>
   <article class="s4" ref="s4">
-    <img src="./s4/en.svg" class="en user-n events-n" alt="en">
-    <div class="title absolute"><img src="./s3/titleicon.png">大境</div>
+    <img src="./s4/en.svg" class="en user-n events-n" alt="en" data-aos="fade-up" data-aos-delay="0">
+    <div class="title absolute" data-aos="fade-up" data-aos-delay="0"><img src="./s3/titleicon.png">大境</div>
     <div class="slider" data-aos="fade">
        <img src="./s4/1.webp" alt="3D外觀模擬示意圖">
       <span class="caption">3D外觀模擬示意圖</span>
@@ -30,6 +30,7 @@
   gap:3em;
   flex-wrap: wrap;
     flex-direction:row-reverse;
+  .caption{text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);}
     .en{position: absolute;top: size(45);left:size(435);z-index: 3;
       width: size(610);}
 

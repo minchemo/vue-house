@@ -82,7 +82,7 @@
   position: fixed;
   top: 0;left: 0;right: 0;bottom: 0;
     width: 100%;
-    background: url("@/section/s1/bg.jpg");
+    background: url("@/section/s1/bg1.jpg");
     background-size: 100% auto;
 }
 }
@@ -177,12 +177,13 @@ img {
     @apply absolute flex justify-center w-full;
     bottom: 0;
     gap: .5em;
-    color: #fff;
+    color: #604C3F;opacity: .8;
     li {
       button {
         @apply rounded-full  hover:opacity-50;
         width: 1em;
         height: 1em;
+        font-size: .8em;
         border: 2px solid currentColor;
 
         &.is-active{
@@ -196,7 +197,7 @@ img {
   
 .home{
   &::before{content: "";
-   // background-image: url("@/section/s1/bgm.webp");
+    background-image: url("@/section/s1/bg1m.jpg");
 }
 }
 
@@ -220,24 +221,6 @@ img {
     .prev,
     .next{
       width: 10%;
-    }
-  }
-  .splide__pagination {
-    @apply absolute flex justify-center w-full;
-    display: none;
-    bottom: sizem(6.7);
-    gap: sizem(2.5);
-    li {
-      button {
-        @apply rounded-full  hover:opacity-50;
-        width: sizem(10.3);
-        height: sizem(3.34);
-        border: sizem(1) solid #fff;
-
-        &.is-active{
-          @apply bg-white;
-      }
-      }
     }
   }
 }
@@ -273,7 +256,7 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 800
+      duration: 1100
     });
   };
 

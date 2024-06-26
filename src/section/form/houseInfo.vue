@@ -50,12 +50,12 @@
     img{height: 1.3em;vertical-align: middle;}
 }
 .info-box {
-    width: size(800);
+    width: size(700);
 
     .title1 {
         font-size: size(40);
         font-weight: 700;
-        color: #785A4F;
+        color: #BA9163;
         margin: 0 auto 1em auto;
     }
 
@@ -69,10 +69,6 @@
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
-
-            p:first-child {
-                // min-width: 4.5em;
-            }
         }
     }
 }
