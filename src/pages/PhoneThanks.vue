@@ -1,8 +1,8 @@
 <template>
     <div class="thanks">
         <a href="/">
-            <img src="~@/assets/thank-img-phone.png" alt="鼎藏豐碩" class="img">
-            <img src="~@/assets/thank-img-phone-h.png" alt="鼎藏豐碩" class="img-hover">
+            <img src="~@/assets/thank-img-phone.png" alt="thank" class="img">
+            <img src="~@/assets/thank-img-phone-h.png" alt="thank" class="img-hover">
         </a>
     </div>
 </template>
@@ -10,7 +10,7 @@
 .thanks {
     width: 100vw;
     height: 100vh;
-    background: url('@/assets/thank_bg.png');
+    background: url('//h65.tw/img/thank_bg.png');
     background-size: cover;
     background-position: center;
     display: flex;

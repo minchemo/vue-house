@@ -1,7 +1,7 @@
 <template>
   <article class="s1">
+    <img class="style1" src="@/section/resource/style12.svg" />
     <img class="logo" src="@/section/resource/logo.svg" />
-    <img class="style1" src="@/section/resource/style1.svg" />
   </article>
 </template>
 
@@ -20,13 +20,15 @@
   */
   padding-bottom: size(150);
   .logo {
+    position: relative;z-index: 2;
     width: size(760);
   }
 
   .style1 {
-    @apply absolute;
+    position: absolute;z-index: 1;
     width: 100%;
-    bottom: -#{size(180)};
+    height:size(920);
+    bottom: size(-250);
     left: 0;
   }
 }
@@ -50,6 +52,7 @@
 
     .style1 {
       width: 150vw;
+    height:sizem(300);
       bottom: -#{sizem(0)};
       left: -#{sizem(60)};
     }
