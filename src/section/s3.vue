@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-    <img class="style" src="@/section/resource/style2.svg" alt="" srcset="" />
+    <img class="style" src="@/section/resource/style21.svg" alt="" srcset="" />
   </article>
 </template>
 
@@ -140,8 +140,8 @@
   }
 
   .style {
-    @apply w-full absolute;
-    top: size(400);
+    position: absolute;z-index: 2;
+    top: size(400);width: 100%;height: size(900);
   }
 }
 

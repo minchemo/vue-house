@@ -62,7 +62,7 @@
 @import "@/assets/style/function.scss";
 
 .s4 {
-  @apply w-full relative z-10;
+  @apply w-full relative;
   @apply flex justify-center;
   height: size(1080);
   background: url("@/section/s4/bg.jpg");
@@ -146,7 +146,7 @@
   }
 
   .style {
-    @apply w-full absolute;
+    position: absolute;z-index: 2;
     top: size(590);
   }
 }
