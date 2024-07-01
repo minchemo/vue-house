@@ -1,5 +1,41 @@
 <template>
   <article class="s5">
+    <!-- bg -->
+    <div class="bgs">
+      <div class="bg bg-w">
+        <div class="wave"></div>
+        <div class="w"></div>
+        <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
+      </div>
+      <img
+        class="bg bg-t"
+        v-if="!isMobile"
+        src="@/section/s5/bg_t.webp"
+        alt=""
+        srcset=""
+      />
+      <img
+        class="bg bg-t"
+        v-else
+        src="@/section/s1/bg_tm.webp"
+        alt=""
+        srcset=""
+      />
+      <img
+        class="bg bg-b"
+        v-if="!isMobile"
+        src="@/section/s1/bg_b.webp"
+        alt=""
+        srcset=""
+      />
+      <img
+        class="bg bg-b"
+        v-else
+        src="@/section/s1/bg_bm.webp"
+        alt=""
+        srcset=""
+      />
+    </div>
     <div class="t">
       <div>
         <div class="t1" v-if="isMobile"  data-aos="fade-up" data-aos-delay="0">壹遇敦南, 壹念四維</div>
@@ -14,8 +50,8 @@
         <img class="t4" src="@/section/s5/t4.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="200"/>
         <img class="t5" src="@/section/s5/t5.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="400"/>
       </div>
-      <img class="t6" src="@/section/s5/t6.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
-      <img class="en" src="@/section/s5/en.png" alt="" srcset="" />
+      <img class="t6" src="@/section/s5/t6.webp" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
+      <img class="en" src="@/section/s5/en.svg" alt="" srcset="" />
     </div>
   </article>
 </template>
@@ -26,10 +62,11 @@
 .s5 {
   @apply w-full relative text-[#36677F];
   @apply flex items-start justify-center;
-  height: size(1214);
+  height: size(1304);
   background-image: url("@/section/s5/bg.jpg");
   padding-top: size(133);
   padding-left: size(50);
+  overflow: hidden;
   .line {
     @apply absolute w-[1px] bg-white z-20;
     left: size(180);
@@ -39,6 +76,7 @@
 
   .t {
     @apply flex flex-col items-end;
+    margin-top: size(54);
     > div {
       &:nth-child(1) {
         @apply flex items-center;
@@ -46,8 +84,8 @@
       }
       &:nth-child(2) {
         @apply flex items-center;
-        gap: size(42.76);
-        margin-top: size(113);
+        gap: size(45);
+        margin-top: size(100);
         margin-bottom: size(48.84);
       }
 
@@ -90,6 +128,62 @@
     .en {
       margin-top: size(121.57);
       width: size(257);
+      z-index: 3;
+    }
+  }
+  .bgs {
+    @apply w-full h-full absolute z-0;
+    top: 0;
+    left: 0;
+    img {
+      @apply w-full h-auto;
+    }
+
+    .bg {
+      @apply absolute;
+
+      &.bg-t {
+        @apply z-10 top-0;
+       // top: 62px;
+      }
+
+      &.bg-w {
+        @apply z-[1] bottom-0;
+        width: size(1920);
+        height: size(1264);
+        > div {
+          @apply w-full h-full absolute left-0 bottom-0;
+          bottom: size(-210);
+          &.wave {
+            @apply z-[1];
+            background: url("@/section/s1/wave.gif") no-repeat;
+            background-size:200% 30vw;
+            background-position: 50% 35vw;
+            mix-blend-mode: overlay;
+            opacity: 0.6;
+          }
+          &.w {
+            background: url("@/section/s1/bg.jpg");
+            background-size: cover;
+          }
+        }
+        .cloud{position:absolute;width: 100%;top:0 ;
+            mix-blend-mode: overlay;}
+      }
+
+      &.bg-ww {
+        @apply z-[2] bottom-0;
+      }
+
+      &.bg-b {
+        @apply z-10 bottom-0;
+      }
+    }
+    .t6 {
+      @apply absolute z-10;
+      right: size(200);
+      bottom: size(211);
+      width: size(406);
     }
   }
 }
@@ -175,6 +269,45 @@
       .en {
         margin-top: size(121.57);
         width: size(257);
+      }
+    }
+    .bgs {
+      @apply w-full h-full absolute z-0;
+      top: 0;
+      left: 0;
+      img {
+        @apply w-full h-auto;
+      }
+
+      .bg {
+        @apply absolute;
+
+        &.bg-t {
+          @apply z-10 top-0;
+        }
+
+        &.bg-w {
+          @apply z-[1] bottom-0;
+          width: sizem(375);
+          height: sizem(248);
+          &.w {
+            background: url("@/section/s1/bgm.jpg");
+            background-size: cover;
+          }
+        }
+      }
+
+      &.bg-ww {
+        @apply z-[2] bottom-0;
+      }
+
+      &.bg-b {
+        @apply z-10 bottom-0;
+      }
+      .t6 {
+        right: sizem(23.84);
+        bottom: sizem(60);
+        width: sizem(115);
       }
     }
   }

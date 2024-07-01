@@ -3,37 +3,37 @@
     <!-- text -->
     <div class="text">
       <div class="t-en">
-        <img class="en" v-if="!isMobile" src="@/section/s1/en.png" alt="" srcset="" />
-        <img class="en" v-else src="@/section/s1/enm.png" alt="" srcset="" />
-        <div class="line"></div>
+        <img class="en" v-if="!isMobile" src="@/section/s1/en.png" alt="" srcset="" data-aos="fade-right" data-aos-delay="0" />
+        <img class="en" v-else src="@/section/s1/enm.png" alt="" srcset="" data-aos="fade-right" data-aos-delay="0" />
+        <div class="line" data-aos="fade-right" data-aos-delay="200"></div>
       </div>
       <div class="t">
         <div class="l">
           <img class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/t1.png" alt="" srcset="" />
-          <img class="t2" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/t2.png" alt="" srcset="" />
+          <img class="t2" data-aos="fade-right" data-aos-delay="200" src="@/section/s1/t2.png" alt="" srcset="" />
         </div>
         <div class="r">
           <div class="ll">
-            <img class="t3"  data-aos="fade-right" data-aos-delay="0" src="@/section/s1/t3.png" alt="" srcset="" />
+            <img class="t3"  data-aos="fade-right" data-aos-delay="400" src="@/section/s1/t3.png" alt="" srcset="" />
             <img
               class="t4"
               v-if="!isMobile"
-              src="@/section/s1/t4.png"
+              src="@/section/s1/t4.webp"
               alt=""
               srcset=""
-               data-aos="fade-up" data-aos-delay="0"
+               data-aos="fade-up" data-aos-delay="500"
             />
             <img
               class="t4"
               v-else
-              src="@/section/s1/t4m.png"
+              src="@/section/s1/t4m.webp"
               alt=""
               srcset=""
-               data-aos="fade-up" data-aos-delay="0"
+               data-aos="fade-up" data-aos-delay="500"
             />
           </div>
           <div class="rr">
-            <img class="t5" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/t5.png" alt="" srcset="" />
+            <img class="t5" data-aos="fade-right" data-aos-delay="600" src="@/section/s1/t5.png" alt="" srcset="" />
           </div>
         </div>
       </div>
@@ -44,32 +44,33 @@
       <div class="bg bg-w">
         <div class="wave"></div>
         <div class="w"></div>
+        <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
       </div>
       <img
         class="bg bg-t"
         v-if="!isMobile"
-        src="@/section/s1/bg_t.png"
+        src="@/section/s1/bg_t.webp"
         alt=""
         srcset=""
       />
       <img
         class="bg bg-t"
         v-else
-        src="@/section/s1/bg_tm.png"
+        src="@/section/s1/bg_tm.webp"
         alt=""
         srcset=""
       />
       <img
         class="bg bg-b"
         v-if="!isMobile"
-        src="@/section/s1/bg_b.png"
+        src="@/section/s1/bg_b.webp"
         alt=""
         srcset=""
       />
       <img
         class="bg bg-b"
         v-else
-        src="@/section/s1/bg_bm.png"
+        src="@/section/s1/bg_bm.webp"
         alt=""
         srcset=""
       />
@@ -162,14 +163,15 @@
 
       &.bg-w {
         @apply z-[1] bottom-0;
-        width: size(1921);
-        height: size(1265);
+        width: size(1920);
+        height: size(1264);
         > div {
           @apply w-full h-full absolute left-0 bottom-0;
           &.wave {
             @apply z-[1];
-            background: url("@/section/s1/wave.gif");
-            background-size: cover;
+            background: url("@/section/s1/wave.gif") no-repeat;
+            background-size:200% 30vw;
+            background-position: 50% 35vw;
             mix-blend-mode: overlay;
             opacity: 0.6;
           }
@@ -178,6 +180,8 @@
             background-size: cover;
           }
         }
+        .cloud{position:absolute;width: 100%;top:0 ;
+            mix-blend-mode: overlay;}
       }
 
       &.bg-ww {

@@ -48,7 +48,7 @@
       </div>
       <img
         @click="splideRef.go('>')"
-        src="@/section/s3/arrow.png"
+        src="@/section/s3/arrow.svg"
         class="arrow"
         alt=""
         srcset=""
@@ -63,8 +63,8 @@
 .s3 {
   @apply w-full relative text-[#36677F];
   height: size(1080);
-  background-image: url("@/section/s3/bg.jpg");
-  background-size: cover;
+// background-image: url("@/section/s3/bg.jpg");
+//  background-size: cover;
 
   .slide {
     .slide-item {
@@ -145,7 +145,7 @@
   .s3 {
     @apply w-full relative text-[#36677F];
     height: sizem(654);
-    background-image: url("@/section/s3/bg.jpg");
+  //  background-image: url("@/section/s3/bg.jpg");
     background-size: cover;
 
     .slide {

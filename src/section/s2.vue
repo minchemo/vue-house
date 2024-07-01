@@ -6,8 +6,8 @@
         <div class="t2">自然建築世界領銜，蘇喻哲人本建築</div>
       </div>
       <div class="r">
-        <img class="en" src="@/section/s2/en.png" alt="" srcset="" />
-        <div class="line"></div>
+        <img class="en" src="@/section/s2/en.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="0" />
+        <div class="line"  data-aos="fade-right" data-aos-delay="200"></div>
       </div>
     </div>
     <div class="swipe-box">
@@ -16,7 +16,7 @@
         <div class="info">
           <div class="t1">
             <p  data-aos="fade-right" data-aos-delay="0">蘇喻哲</p>
-            <div class="line"></div>
+            <div class="line"  data-aos="fade-right" data-aos-delay="200"></div>
             <p  data-aos="fade-right" data-aos-delay="200">自然系建築大師。</p>
           </div>
           <div class="t2"  data-aos="fade-up" data-aos-delay="0">
@@ -86,8 +86,8 @@
 .s2 {
   @apply w-full relative text-[#36677F];
   height: size(1336);
-  background-image: url("@/section/s2/bg.jpg");
-  background-size: cover;
+ /* background-image: url("@/section/s2/bg.jpg");
+  background-size: cover; */
   padding: 0 size(180);
   padding-top: size(63);
   .t-t {
@@ -218,8 +218,8 @@
 @media screen and (max-width: 767px) {
   .s2 {
     height: sizem(1218);
-    background-image: url("@/section/s2/bgm.jpg");
-    background-size: cover;
+  //  background-image: url("@/section/s2/bgm.jpg");
+   // background-size: cover;
     padding: 0 sizem(54);
     padding-top: sizem(13);
     .t-t {

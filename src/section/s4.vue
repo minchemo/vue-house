@@ -1,16 +1,17 @@
 <template>
   <article class="s4">
+ <!--     --><img src="./s4/mo.jpg" class="t0" alt="">
     <div class="view">
       <fullview />
     </div>
     <img
-      src="@/section/s4/bg_b.png"
+      src="@/section/s1/bg_b.webp"
       v-if="!isMobile"
       class="bg-b"
       alt=""
       srcset=""
     />
-    <img src="@/section/s4/bg_bm.png" v-else class="bg-b" alt="" srcset="" />
+    <img src="@/section/s1/bg_bm.webp" v-else class="bg-b" alt="" srcset="" />
     <div class="t"  data-aos="fade-up" data-aos-delay="0">
       <p>講究的是敦南 ，謙遜的是四維</p>
       <p>The Aesthetics of Silence</p>
@@ -24,7 +25,9 @@
 
 .s4 {
   @apply w-full relative text-[#36677F] z-20;
-  height: size(1080);
+  height: size(1025);
+
+  .t0{position: absolute;top: 0;left: 0;width: 100%;z-index: 30;opacity: .4}
 
   .line {
     @apply absolute w-[1px] bg-white z-20;
@@ -46,7 +49,7 @@
   .t {
     @apply absolute z-20;
     left: size(215);
-    bottom: size(44);
+    bottom: size(0);
     p {
       &:nth-child(1) {
         font-size: size(52);

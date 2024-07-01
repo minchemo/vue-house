@@ -8,7 +8,7 @@
     }"
     class="transition-all duration-500flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]"
   >
-    <img class="w-32" src="@/assets/loading_w.gif" alt="鼎藏豐碩" srcset="" />
+    <img class="w-32" src="@/assets/loading_w.gif" alt="loading" srcset="" />
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
@@ -34,7 +34,7 @@ img {
 }
 
 .home {
-  background: #fff;
+  background: url("@/section/s2/bg.jpg") fixed;
 }
 
 @media screen and (max-width: 768px) {
@@ -52,80 +52,23 @@ import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
-import AOS from "aos"
+import AOS from 'aos';
+
 
 const isLoading = ref(true)
-const gtmNoScript = ref("")
+const gtmNoScript = ref('')
 const config = ref({
-  showNav: false,
+  showNav: false
 })
 
-onMounted(async () => {
-  if (preloadList.length === 0) {
-    isLoading.value = false
-  }
-
-  preloadImages(preloadList, function () {
-    console.log("all images loaded")
-    isLoading.value = false
-  })
-
+onMounted(() => {
   window.onload = function () {
+    isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 800,
+      duration: 1500,
     })
-  }
+  };
+
 })
-
-/**
- * 預載圖片，直接帶入路徑，由上而下依序加載，完成後才會關閉loading畫面
- */
-const preloadList = [
-  // "s2/leaf/1_.png",
-  // "s2/leaf/1.png",
-  // "s2/leaf/1i.png",
-  // "s2/leaf/1im.png",
-  // "s2/leaf/2_.png",
-  // "s2/leaf/2.png",
-  // "s2/leaf/2i.png",
-  // "s2/leaf/2im.png",
-  // "s2/leaf/3_.png",
-  // "s2/leaf/3.png",
-  // "s2/leaf/3i.png",
-  // "s2/leaf/3im.png",
-  // "s2/leaf/4_.png",
-  // "s2/leaf/4.png",
-  // "s2/leaf/4i.png",
-  // "s2/leaf/4im.png",
-  // "s2/leaf/5_.png",
-  // "s2/leaf/5.png",
-  // "s2/leaf/5i.png",
-  // "s2/leaf/5im.png",
-  // "s2/leaf/6_.png",
-  // "s2/leaf/6.png",
-  // "s2/leaf/6i.png",
-  // "s2/leaf/6im.png",
-]
-const preloadThreshold = 0.8
-
-function preloadImages(urls, allImagesLoadedCallback) {
-  var loadedCounter = 0
-  var toBeLoadedNumber = urls.length
-  urls.forEach(function (url) {
-    preloadImage(url, function () {
-      loadedCounter++
-
-      console.log("loaded " + loadedCounter + " of " + toBeLoadedNumber)
-      if (loadedCounter == toBeLoadedNumber) {
-        allImagesLoadedCallback()
-      }
-    })
-  })
-  function preloadImage(url, anImageLoadedCallback) {
-    var img = new Image()
-    img.onload = anImageLoadedCallback
-    img.src = url
-  }
-}
 </script>

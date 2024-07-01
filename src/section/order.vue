@@ -149,7 +149,7 @@
   overflow: hidden;
   min-height: size(500);
   // background-color: #e89213;
-  background: url("@/section/order_bg.jpg");
+ // background: url("@/section/order_bg.jpg");
   background-size: cover;
   background-position: center;
   padding: 0 size(364);
