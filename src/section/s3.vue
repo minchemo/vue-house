@@ -1,150 +1,138 @@
 <template>
   <article class="s3">
-    <div class="slide-box">
-      <div class="arrows" v-if="isMobile">
-        <img
-          src="@/section/arrow.png"
-          class="arrow prev"
-          alt=""
-          srcset=""
-          @click="splide.go('<')"
-        />
-        <img
-          src="@/section/arrow.png"
-          class="arrow next"
-          alt=""
-          srcset=""
-          @click="splide.go('>')"
-        />
+    <Splide
+      ref="splideRef"
+      class="slide"
+      @splide:move="onMove"
+      :options="{
+        autoWidth: true,
+        arrows: false,
+        autoplay: true,
+        pagination: false,
+        interval: 4000,
+        gap: 0,
+        type: 'loop',
+      }"
+    >
+      <SplideSlide class="slide-item" :key="i" v-for="i in imgs">
+        <div class="img" :style="{ 'background-image': `url(${i.img})` }"></div>
+      </SplideSlide>
+    </Splide>
+    <div class="t">
+      <div  data-aos="fade-up" data-aos-delay="0">
+        <div class="t1">今井昌彥 散步 隱富街巷</div>
+        <div class="t2">營造顧問，監造十帖刻畫造極</div>
       </div>
-      <Splide
-        ref="splide"
-        class="slide"
-        :options="{
-          arrows: false,
-          autoplay: true,
-          pagination: true,
-          interval: 4000,
-          gap: 10,
-          type: 'loop',
-        }"
-      >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgs"
-          :style="{ 'background-image': `url(${i.img})` }"
-        >
-          <div class="caption">
-            {{ i.caption }}
+      <div>
+        <div class="line"></div>
+        <template v-if="isMobile">
+          <div :key="currentIdx" data-aos="fade">
+            <span class="t3">
+              {{ imgs[currentIdx].t1 }}<br />
+              <span class="t4"> {{ imgs[currentIdx].t2 }} </span
+              ><span class="t5"> {{ imgs[currentIdx].t3 }} </span>
+            </span>
           </div>
-        </SplideSlide>
-      </Splide>
-      <div class="t">
-        <div class="t1">
-          <img src="@/section/resource/s3title.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
-          <p data-aos="fade-up" data-aos-delay="200">雙城同頻商圈共榮</p>
-        </div>
-        <div class="divi"></div>
-        <div class="desc" data-aos="fade-up" data-aos-delay="400">
-          重陽橋一橋之隔，5分鐘速達北市，對望士林科技園區，盡收
-          雙城脈動，繁榮漲幅同頻共振，再享24小時家樂福旗艦店、
-          五華商圈、集賢商圈、徐匯廣場極致富足生活機能。
-        </div>
+        </template>
+        <template v-else>
+          <div class="t3" data-aos="fade" :key="currentIdx">
+            {{ imgs[currentIdx].t1 }}
+          </div>
+          <div class="t4" data-aos="fade" :key="currentIdx">
+            {{ imgs[currentIdx].t2 }}
+          </div>
+          <div class="t5" data-aos="fade" :key="currentIdx">
+            {{ imgs[currentIdx].t3 }}
+          </div>
+        </template>
       </div>
+      <img
+        @click="splideRef.go('>')"
+        src="@/section/s3/arrow.png"
+        class="arrow"
+        alt=""
+        srcset=""
+      />
     </div>
-    <img class="style" src="@/section/resource/style2.svg" alt="" srcset="" />
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply w-full relative;
-  @apply flex justify-center;
+  @apply w-full relative text-[#36677F];
   height: size(1080);
-  background: url("@/section/s3/bg.jpg");
+  background-image: url("@/section/s3/bg.jpg");
   background-size: cover;
-  padding-top: size(200);
 
-  .slide-box {
-    @apply flex flex-row-reverse items-start relative z-10;
-    gap: size(72);
-    .slide {
-      @apply relative;
-      width: size(997);
-      height: size(605);
-      .slide-item {
-        @apply relative;
-        width: size(997);
-        height: size(605);
-        background-size: cover;
-        transform-style: preserve-3d;
-        .caption {
-          @apply absolute text-white;
-          left: size(14);
-          bottom: size(10);
-          font-size: size(20);
-          font-weight: 400;
-          letter-spacing: size(2.6);
-        }
-      }
-      .splide__pagination {
-        @apply absolute right-0 w-full flex justify-center;
-        padding: size(27) 0;
-        li {
-          line-height: 0;
-          button {
-            @apply rounded-full bg-transparent;
-            width: size(17.3);
-            height: size(17.3);
-            border: 1px solid #727171;
-            &.is-active {
-              background: #727171;
-            }
-          }
-        }
-        gap: size(13);
-      }
-      &::after {
-        @apply w-full h-full absolute top-0 left-0 pointer-events-none;
-        content: "";
-        background: url("@/section/resource/stroke.svg");
-      }
-    }
-    .t {
-      @apply flex flex-col text-black;
-      gap: size(15);
-      width: size(673);
-      .t1 {
-        @apply flex items-end justify-between;
-        margin-bottom: size(15);
-        img {
-          width: size(364.95);
-        }
-        p {
-          font-size: size(32);
-          font-weight: 500;
-          letter-spacing: size(1.92);
-        }
-      }
-      .divi {
-        @apply bg-black;
-        height: 1px;
-      }
-      .desc {
-        font-size: size(24);
-        font-weight: 500;
-        line-height: size(39);
-        letter-spacing: size(0.72);
+  .slide {
+    .slide-item {
+      .img {
+        @apply bg-cover;
+        width: size(1920);
+        height: size(858);
       }
     }
   }
 
-  .style {
-    @apply w-full absolute;
-    top: size(400);
+  .t {
+    @apply text-[#36677f] relative;
+    @apply flex items-end justify-between;
+    padding: 0 size(180);
+    margin-top: size(45);
+
+    > div {
+      @apply whitespace-nowrap relative;
+      &:nth-child(2) {
+        @apply flex items-end;
+        width: size(1145);
+        gap: size(11);
+      }
+    }
+
+    .t1 {
+      font-size: size(52);
+      font-weight: 700;
+    }
+    .t2 {
+      @apply relative;
+      font-size: size(30);
+      font-weight: 700;
+
+      &:before {
+        @apply absolute bg-white;
+        width: size(140);
+        height: 1px;
+        content: "";
+        right: 0;
+        bottom: 5px;
+      }
+    }
+
+    .line {
+      @apply bg-white h-[1px] w-full relative transition-all;
+      bottom: 5px;
+    }
+    .t3 {
+      margin-left: size(10);
+      font-size: size(30);
+      font-weight: 700;
+    }
+    .t4 {
+      font-size: size(23);
+      font-weight: 600;
+    }
+    .t5 {
+      font-size: size(16);
+      font-weight: 600;
+    }
+    .arrow {
+      @apply absolute cursor-pointer;
+      right: size(180);
+      top: size(20);
+      width: size(48.5);
+    }
   }
 }
 
@@ -155,74 +143,72 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    @apply w-full relative z-20;
-    @apply flex justify-center;
-    height: sizem(538);
-    background: url("@/section/s3/bgm.jpg");
+    @apply w-full relative text-[#36677F];
+    height: sizem(654);
+    background-image: url("@/section/s3/bg.jpg");
     background-size: cover;
-    padding-top: sizem(56);
 
-    .slide-box {
-      @apply flex-col-reverse items-center justify-end;
-      gap: sizem(24);
-      .slide {
-        width: sizem(330);
-        height: sizem(200);
-        .slide-item {
-          width: sizem(330);
-          height: sizem(200);
-          .caption {
-            @apply absolute text-white;
-            left: sizem(8);
-            bottom: sizem(6);
-            font-size: sizem(12);
-            letter-spacing: sizem(0.72);
-          }
-        }
-        .splide__pagination {
-          @apply hidden;
-        }
-        &::after {
-          @apply w-full h-full absolute top-0 left-0 pointer-events-none;
-          content: "";
-          background: url("@/section/resource/stroke.svg");
-        }
-      }
-      .t {
-        @apply flex flex-col text-black;
-        gap: sizem(29);
-        width: sizem(310);
-        .t1 {
-          @apply flex items-end justify-between;
-          margin-bottom: sizem(5);
-          img {
-            width: sizem(139.91);
-          }
-          p {
-            font-size: sizem(14);
-            letter-spacing: sizem(0.42);
-          }
-        }
-        .desc {
-          font-size: sizem(14);
-          line-height: 170%;
-          letter-spacing: sizem(0.42);
-        }
-      }
-      .arrows {
-        @apply absolute flex justify-between;
-        width: 98vw;
-        bottom: sizem(150);
-        .prev {
-          @apply -scale-x-100;
+    .slide {
+      .slide-item {
+        .img {
+          width: sizem(375);
+          height: sizem(404);
         }
       }
     }
 
-    .style {
-      @apply absolute;
-      top: sizem(420);
-      width: 150vw;
+    .t {
+      @apply flex flex-col items-start justify-between;
+      padding: 0 sizem(54);
+      margin-top: sizem(22);
+      gap: sizem(37);
+
+      > div {
+        @apply whitespace-nowrap relative;
+        &:nth-child(2) {
+          @apply flex flex-col items-end;
+          width: sizem(266);
+          gap: sizem(2);
+        }
+      }
+
+      .t1 {
+        font-size: sizem(20);
+      }
+      .t2 {
+        font-size: sizem(12);
+        font-weight: 700;
+
+        &:before {
+          @apply hidden;
+        }
+      }
+
+      .line {
+        @apply bg-white h-[1px] w-full transition-all absolute;
+        bottom: -#{sizem(17.5)};
+      }
+      .t3 {
+        margin-left: 0;
+        font-size: sizem(15);
+        font-weight: 700;
+      }
+      .t4 {
+        @apply w-full uppercase;
+        font-size: sizem(10);
+        font-weight: 600;
+        margin-right: sizem(5);
+      }
+      .t5 {
+        font-size: sizem(12);
+        font-weight: 600;
+      }
+      .arrow {
+        @apply absolute cursor-pointer;
+        right: sizem(54.5);
+        top: sizem(5);
+        width: sizem(34.5);
+      }
     }
   }
 }
@@ -235,28 +221,45 @@ const globals = getCurrentInstance().appContext.config.globalProperties
 const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
 
-const splide = ref()
+const splideRef = ref()
+const currentIdx = ref(0)
+
+const onMove = (newIndex, prevIndex, destIndex) => {
+  currentIdx.value = prevIndex
+}
 
 const imgs = [
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
-    caption: "重陽大橋",
+    img: globals.$isMobile()
+      ? new URL("../section/s3/1m.jpg", import.meta.url).href
+      : new URL("../section/s3/1.jpg", import.meta.url).href,
+    t1: "東京晴空樹",
+    t2: "Tokyo Skytree",
+    t3: "／ 東京スカイツリー",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
-    caption: "北士科環境",
+    img: globals.$isMobile()
+      ? new URL("../section/s3/2m.jpg", import.meta.url).href
+      : new URL("../section/s3/2.jpg", import.meta.url).href,
+    t1: "東京都廳",
+    t2: "The New Tokyo City Hall",
+    t3: "／ 東京都庁",
   },
   {
-    img: new URL("../section/s3/3.jpg", import.meta.url).href,
-    caption: "士林夜市",
+    img: globals.$isMobile()
+      ? new URL("../section/s3/2m.jpg", import.meta.url).href
+      : new URL("../section/s3/3.jpg", import.meta.url).href,
+    t1: "東京虎之門之丘",
+    t2: "Toranomon Hills",
+    t3: "／ 虎ノ門ヒルズプロジェクト",
   },
   {
-    img: new URL("../section/s3/4.jpg", import.meta.url).href,
-    caption: "五華街麥當勞商圈",
-  },
-  {
-    img: new URL("../section/s3/5.jpg", import.meta.url).href,
-    caption: "家樂福蘆洲店",
+    img: globals.$isMobile()
+      ? new URL("../section/s3/2m.jpg", import.meta.url).href
+      : new URL("../section/s3/4.jpg", import.meta.url).href,
+    t1: "橫濱Landmark大樓",
+    t2: "LANDMARK TOWER",
+    t3: "／ 横浜ランドマークタワー",
   },
 ]
 </script>

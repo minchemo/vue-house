@@ -1,16 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <orderIntro />
-      <orderBadge />
-
       <!-- Title -->
-      <div class="order-title text-center relative z-10 font-['Noto_serif_tc'] ">
-        {{ info.order.title }}
-      </div>
-      <div class="order-subTitle text-center relative z-10 font-['Noto_serif_tc']">
-        {{ info.order.subTitle }}
-      </div>
+
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -20,13 +12,14 @@
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center z-10">
+        <div class="s-order-title">CONTACT US</div>
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"
             ><span>姓名<span>(必填)</span></span>
             <input
               type="text"
               placeholder="姓名"
-              class="input w-full rounded-none placeholder:text-white"
+              class="input w-full rounded-none placeholder:text-[#36677F]"
               :value="formData.name"
               @input="(event) => (formData.name = event.target.value)"
           /></label>
@@ -35,7 +28,7 @@
             <input
               type="text"
               placeholder="手機"
-              class="input w-full rounded-none placeholder:text-white"
+              class="input w-full rounded-none placeholder:text-[#36677F]"
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
@@ -59,7 +52,7 @@
               class="select w-full rounded-none bg-white"
               v-model="formData.budget"
             >
-             <option value="" selected disabled>請選擇預算</option>
+              <option value="" selected disabled>請選擇預算</option>
               <option
                 v-for="budget in info.budget"
                 :value="budget"
@@ -96,39 +89,44 @@
         </div>
       </div>
 
-      <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control relative z-10">
-        <input
-          type="checkbox"
-          v-model="formData.policyChecked"
-          :checked="formData.policyChecked"
-          class="checkbox bg-white rounded-md"
-        />
-        <p class="text-black">
-          本人知悉並同意<label
-            for="policy-modal"
-            class="modal-button text-[#A67219] cursor-pointer font-bold hover:opacity-70"
-            >「個資告知事項聲明」</label
-          >內容
-        </p>
-      </div>
-      <Policy />
-
-      <!-- Recaptcha -->
-      <vue-recaptcha
-        class="flex justify-center mt-8 relative z-10"
-        ref="recaptcha"
-        :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify"
-        @expired="onRecaptchaUnVerify"
-      />
-
-      <!-- Send -->
       <div
-        class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer relative z-10"
-        @click="send()"
+        class="flex flex-col md:flex-row gap-8 md:gap-0 items-center md:items-end justify-between w-full"
       >
-        {{ sending ? "發送中.." : "立即預約" }}
+        <div class="flex flex-col">
+          <!-- Policy -->
+          <div
+            class="flex gap-2 items-center justify-start control relative z-10"
+          >
+            <input
+              type="checkbox"
+              v-model="formData.policyChecked"
+              :checked="formData.policyChecked"
+              class="checkbox bg-white rounded-none"
+            />
+            <p class="text-black">
+              本人知悉並同意<label
+                for="policy-modal"
+                class="modal-button text-[#36677F] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
+                >「個資告知事項聲明」</label
+              >內容
+            </p>
+          </div>
+          <Policy />
+
+          <!-- Recaptcha -->
+          <vue-recaptcha
+            class="flex justify-start mt-8 relative z-10 left-0 ml-0"
+            ref="recaptcha"
+            :sitekey="info.recaptcha_site_key_v2"
+            @verify="onRecaptchaVerify"
+            @expired="onRecaptchaUnVerify"
+          />
+        </div>
+
+        <!-- Send -->
+        <div class="send btn cursor-pointer relative z-10" @click="send()">
+          {{ sending ? "發送中.." : "立即預約" }}
+        </div>
       </div>
 
       <!-- Contact Info -->
@@ -139,7 +137,7 @@
     <Map v-if="info.address" />
 
     <!-- HouseInfo -->
-    <HouseInfo />
+    <!-- <HouseInfo /> -->
   </div>
 </template>
 
@@ -148,13 +146,14 @@
 
 .order-section {
   position: relative;
-  padding-top: size(103);
   overflow: hidden;
   min-height: size(500);
   // background-color: #e89213;
   background: url("@/section/order_bg.jpg");
   background-size: cover;
   background-position: center;
+  padding: 0 size(364);
+  padding-top: size(103);
 
   .bg-image {
     position: absolute;
@@ -188,11 +187,25 @@
     }
   }
 
+  .s-order-title {
+    @apply absolute left-0 bottom-[115%];
+    font-size: size(32);
+    font-weight: 500;
+    color: #36677f;
+    border-bottom: 1px solid #fff;
+    padding-bottom: size(25);
+  }
+
   .order-title {
+    @apply text-left relative left-0 inline-block;
     font-size: size(40);
     font-weight: 700;
-    color: black;
+    color: #36677f;
     padding-top: 0;
+    margin-left: size(0);
+    margin-right: auto;
+    border-bottom: 1px solid #fff;
+    padding-bottom: size(20);
   }
 
   .order-title-img {
@@ -215,7 +228,8 @@
   }
 
   .form {
-    width: size(920);
+    @apply left-1/2 -translate-x-1/2;
+    width: size(1191);
     min-width: 680px;
     //  height: 350px;
     gap: size(80);
@@ -246,7 +260,7 @@
     .row {
       background: rgba($color: #fff, $alpha: 0.3);
       border: 1px solid #a6a6a6;
-      color: black;
+      color: #36677f;
       display: flex;
       width: 100%;
       align-items: center;
@@ -266,7 +280,7 @@
         flex: 1;
       }
       option {
-        color: #000;
+        color: #36677f;
       }
       select {
         background: url("//h65.tw/img/select.svg") no-repeat calc(100% - 0.5em)
@@ -280,7 +294,10 @@
         }
       }
       &::placeholder {
-        color: black;
+        color: #36677f;
+      }
+      textarea {
+        @apply text-[#36677F];
       }
     }
   }
@@ -289,17 +306,19 @@
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    border: 1px solid #b28247;
-    background: linear-gradient(90deg, #ffe679 0%, #bb7c1a 100%);
-    border-radius: 0.5em;
+    color: #36677f;
+    border: 1px solid #36677f;
+    background: #fff;
+    border-radius: 0;
 
-    width: 308px;
-    height: 3.3em;
+    width: size(442);
+    height: size(87);
     line-height: 3.3;
     z-index: 10;
     font-weight: 700;
     position: relative;
+
+    @apply hover:bg-[#36677F] hover:text-white;
   }
 
   .control {
@@ -313,9 +332,11 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
-    background: url("@/section/order_bgm.jpg");
+    // background: url("@/section/order_bgm.jpg");
     // overflow: hidden;
     // padding-top: sizem(200);
+    padding: 0 sizem(30);
+    padding-top: sizem(50);
 
     .bg-image {
       position: absolute;
@@ -336,6 +357,15 @@
       width: sizem(315);
       margin-bottom: sizem(22);
     } */
+
+    .s-order-title {
+      @apply absolute left-0 bottom-[105%] flex items-center justify-center w-full;
+      font-size: sizem(18);
+      font-weight: 500;
+      color: #36677f;
+      border-bottom: 1px solid #fff;
+      padding-bottom: size(25);
+    }
 
     .order-title-img {
       width: sizem(200);
@@ -400,7 +430,6 @@
       font-size: sizem(21);
       width: sizem(310);
       height: sizem(72);
-      background: url('@/section/mo_order_btn_bg.jpg');
       background-size: cover;
     }
 

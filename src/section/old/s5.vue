@@ -22,12 +22,19 @@
         class="slide"
         :options="{
           arrows: false,
-          autoplay: true,
-          pagination: true,
-          interval: 4000,
+          autoplay: isMobile ? true : false,
+          drag: isMobile ? true : false,
+          pagination: false,
+          easing: isMobile ? 'linear' : null,
+          direction: isMobile ? 'ltr' : 'ltr',
+          speed: isMobile ? 3000 : 2000, // 調整跑馬燈速度請改前面值，speed/interval須一致
+          interval: isMobile ? 3000 : 4000,  // 調整跑馬燈速度請改前面值，speed/interval須一致
           gap: 10,
           type: 'loop',
-          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
+          snap: false,
+          perPage: isMobile ? 1 : 3,
+          perMove: 1,
+          autoWidth: isMobile ? true : null,
         }"
       >
         <SplideSlide
@@ -36,38 +43,24 @@
           v-for="i in imgs"
           :style="{ 'background-image': `url(${i.img})` }"
         >
-          <div class="caption">
+          <div class="caption" :class="{ rt: i.rt }">
             {{ i.caption }}
           </div>
         </SplideSlide>
       </Splide>
       <div class="t">
-        <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">
-          出巷口即商圈<br />成泰路便利全網羅
+        <div class="t1">
+          <img src="@/section/resource/s5title.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0"/>
+          <p data-aos="fade-up" data-aos-delay="200">坐擁</p>
         </div>
-        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">出巷口即商圈 成泰路便利全網羅</div>
-        <div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">
-          成洲傳統市場、聯合超市、美<br />
-          聯社，等生鮮超市隨伺在身；<br />
-          五股最熱鬧的成泰路繁華生活<br />
-          圈，輕鬆滿足生活採買所需，<br />
-          優雅搞定生活大小事，<br />
-          便利不求人！
-        </div>
-        <div class="t2" v-else data-aos="fade-up" data-aos-delay="200">
-          成洲傳統市場、聯合超市、美聯社，等生鮮超市隨伺在身；五股最熱鬧的成泰路繁華生活圈，輕鬆滿足生活採買所需，優雅搞定生活大小事，便利不求人！
+        <div class="divi"></div>
+        <div class="desc" data-aos="fade-up" data-aos-delay="400">
+          蘆洲北側重劃區(包含銀河灣計畫)涵蓋五泰輕軌路線，區內規劃產業專區、醫療用地、
+          果菜市場、觀光休閒區塊等，並預留蘆社大橋路廊，連接至北市社子島，現有都市計畫將公園、學校預定地設於【鼎藏豐碩】步行
+          分鐘可達位置，未來勢將共伴共榮。
         </div>
       </div>
     </div>
-    <img
-      class="en"
-      src="@/section/s5/en.svg"
-      alt=""
-      srcset=""
-      v-if="!isMobile"
-      data-aos="fade-up" data-aos-delay="0"
-    />
-    <img class="en" src="@/section/s5/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
   </article>
 </template>
 
@@ -75,76 +68,71 @@
 @import "@/assets/style/function.scss";
 
 .s5 {
-  @apply w-full relative bg-[#0D5052] flex text-white;
+  @apply w-full relative;
+  @apply flex justify-center items-start;
   height: size(1080);
-  padding-top: size(313);
-  padding-left: size(139);
+  background: url("@/section/s5/bg.jpg");
+  background-size: cover;
+  padding-top: size(162);
 
   .slide-box {
-    @apply flex flex-row-reverse items-start;
-    gap: size(137);
+    @apply flex flex-col-reverse relative z-10;
+    gap: size(44);
     .slide {
-      width: size(1061);
-      height: size(624);
+      @apply relative;
+      width: size(1732);
+      height: size(335);
       .slide-item {
-        width: size(1061);
-        height: size(624);
-        background: #eee;
+        @apply relative;
+        width: size(560);
+        height: size(335);
         background-size: cover;
+        transform-style: preserve-3d;
         .caption {
-          @apply absolute font-['Noto_Sanc_TC'];
-          right: size(14);
-          bottom: size(15);
+          @apply absolute text-white;
+          left: size(14);
+          bottom: size(10);
           font-size: size(20);
           font-weight: 400;
           letter-spacing: size(2.6);
-        }
-      }
-      .splide__pagination {
-        @apply absolute right-0 w-full flex justify-end;
-        padding: size(25) 0;
-        li {
-          line-height: 0;
-          button {
-            @apply rounded-full;
-            width: size(10);
-            height: size(10);
-            background: #0d6b68;
-            &.is-active {
-              background: #138784;
-            }
+          &.rt {
+            bottom: unset;
+            top: size(14);
           }
         }
-        gap: size(13);
       }
     }
     .t {
-      width: size(508);
+      @apply flex flex-col text-black;
+      gap: size(15);
+      width: size(687);
       .t1 {
-        color: #e89213;
-        font-size: size(51);
-        font-weight: 700;
-        line-height: 126.7%;
-        letter-spacing: size(4.08);
-        margin-bottom: size(112);
-        padding-bottom: size(35);
-        border-bottom: size(1) solid #fff;
+        @apply flex flex-col items-end relative;
+        gap: size(24);
+        margin-bottom: size(15);
+        img {
+          width: size(650.9);
+        }
+        p {
+          @apply absolute;
+          font-size: size(32);
+          font-weight: 500;
+          letter-spacing: size(1.92);
+          left: 60%;
+          top: 10%;
+        }
       }
-      .t2 {
-        font-size: size(32);
-        font-weight: 700;
-        text-align: justify;
-        line-height: 157.9%;
-        letter-spacing: size(6.4);
+      .divi {
+        @apply bg-black;
+        height: 1px;
+      }
+      .desc {
+        font-size: size(24);
+        font-weight: 500;
+        line-height: size(39);
+        letter-spacing: size(0.72);
       }
     }
-  }
-
-  .en {
-    @apply absolute;
-    height: size(146.34);
-    top: size(23);
-    left: size(4);
   }
 }
 
@@ -155,75 +143,78 @@
 
 @media screen and (max-width: 767px) {
   .s5 {
-    height: sizem(667);
-    padding-top: sizem(132);
-    padding-left: 0;
+    @apply w-full relative z-[18];
+    @apply flex justify-center;
+    height: sizem(720);
+    background: url("@/section/s5/bgm.jpg");
+    background-size: cover;
+    padding-top: sizem(153.54);
 
     .slide-box {
-      @apply flex flex-col;
-      gap: sizem(24);
-      .arrows {
-        @apply absolute z-20 w-full flex justify-between;
-        top: sizem(280);
-        padding: 0 sizem(5);
-
-        .arrow {
-          @apply cursor-pointer;
-          width: sizem(12.8);
-          height: sizem(22.86);
-          &.prev {
-            transform: scaleX(-1);
-          }
-        }
-      }
+      @apply flex-col-reverse items-start justify-end;
+      gap: sizem(25);
       .slide {
-        width: sizem(375);
-        height: sizem(281);
+        width: 100vw;
+        height: sizem(176.92);
         .slide-item {
-          width: sizem(375);
-          height: sizem(281);
+          width: sizem(295.75);
+          height: sizem(176.92);
           .caption {
-            right: sizem(11);
+            @apply absolute text-white;
+            left: sizem(8);
             bottom: sizem(6);
             font-size: sizem(12);
-            letter-spacing: size(2.6);
+            letter-spacing: sizem(0.72);
           }
         }
         .splide__pagination {
           @apply hidden;
         }
+        &::after {
+          @apply hidden;
+        }
       }
       .t {
-        width: 100%;
-        padding: 0 sizem(30);
+        @apply flex flex-col text-black;
+        gap: sizem(24);
+        width: sizem(255);
+        margin-left: sizem(32.5);
         .t1 {
-          font-size: sizem(20);
-          line-height: 1;
-          letter-spacing: sizem(1.6);
-          margin-bottom: sizem(14);
-          padding-bottom: sizem(14);
-          border-bottom: sizem(1) solid #fff;
+          @apply flex items-start justify-between;
+          margin-bottom: sizem(5);
+          img {
+            width: sizem(254.75);
+          }
+          p {
+            @apply absolute;
+            font-size: sizem(14);
+            font-weight: 500;
+            letter-spacing: sizem(0.42);
+            left: 60%;
+            top: 10%;
+          }
         }
-        .t2 {
-          font-size: sizem(13);
-          line-height: 157.9%;
-          letter-spacing: sizem(2.6);
+        .desc {
+          font-size: sizem(14);
+          line-height: 170%;
+          letter-spacing: sizem(0.42);
         }
+      }
+      .arrows {
+        @apply hidden;
       }
     }
 
-    .en {
+    .style {
       @apply absolute;
-      height: sizem(63.94);
-      top: sizem(36);
-      left: 0;
+      top: sizem(420);
+      width: 150vw;
     }
   }
 }
 </style>
 
 <script setup>
-import View from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
@@ -234,16 +225,17 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s5/1.webp", import.meta.url).href,
-    caption: "成州市場",
+    img: new URL("../section/s5/1.jpg", import.meta.url).href,
+    caption: "港灣發展情境示意圖",
   },
   {
-    img: new URL("../section/s5/2.webp", import.meta.url).href,
-    caption: "成州市場",
+    img: new URL("../section/s5/2.jpg", import.meta.url).href,
+    caption: "產業專區情境示意圖",
   },
   {
-    img: new URL("../section/s5/3.webp", import.meta.url).href,
-    caption: "成泰路商圈",
+    img: new URL("../section/s5/3.jpg", import.meta.url).href,
+    caption: "觀光休閒情境示意圖",
+    rt: true,
   },
 ]
 </script>

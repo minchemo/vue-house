@@ -41,24 +41,19 @@
         </SplideSlide>
       </Splide>
       <div class="t">
-        <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">未來新五泰輕軌<br />幸福生活圈</div>
-        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">未來新五泰輕軌 幸福生活圈</div>
-        <div class="t2" data-aos="fade-up" data-aos-delay="200">
-          未來雙享五泰輕軌、新蘆線，串聯新北市蘆洲、五股、泰山
-          三個行政區，暢連捷運路網雙 北自在移動；動靜皆宜的雙北
-          精采生活，就是你的幸福圈！
+        <div class="t1">
+          <img src="@/section/resource/s3title.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
+          <p data-aos="fade-up" data-aos-delay="200">雙城同頻商圈共榮</p>
+        </div>
+        <div class="divi"></div>
+        <div class="desc" data-aos="fade-up" data-aos-delay="400">
+          重陽橋一橋之隔，5分鐘速達北市，對望士林科技園區，盡收
+          雙城脈動，繁榮漲幅同頻共振，再享24小時家樂福旗艦店、
+          五華商圈、集賢商圈、徐匯廣場極致富足生活機能。
         </div>
       </div>
     </div>
-    <img
-      class="en"
-      src="@/section/s3/ENm.svg"
-      alt=""
-      srcset=""
-      v-if="isMobile"
-      data-aos="fade-up" data-aos-delay="0"
-    />
-    <img class="en" src="@/section/s3/EN.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
+    <img class="style" src="@/section/resource/style2.svg" alt="" srcset="" />
   </article>
 </template>
 
@@ -66,76 +61,90 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply w-full relative bg-[#0D5052] flex text-white;
+  @apply w-full relative;
+  @apply flex justify-center;
   height: size(1080);
-  padding-top: size(313);
-  padding-left: size(139);
+  background: url("@/section/s3/bg.jpg");
+  background-size: cover;
+  padding-top: size(200);
 
   .slide-box {
-    @apply flex flex-row-reverse items-start;
-    gap: size(137);
+    @apply flex flex-row-reverse items-start relative z-10;
+    gap: size(72);
     .slide {
-      width: size(1061);
-      height: size(624);
+      @apply relative;
+      width: size(997);
+      height: size(605);
       .slide-item {
-        width: size(1061);
-        height: size(624);
-        background: #eee;
+        @apply relative;
+        width: size(997);
+        height: size(605);
         background-size: cover;
+        transform-style: preserve-3d;
         .caption {
-          @apply absolute font-['Noto_Sanc_TC'];
-          right: size(14);
-          bottom: size(15);
+          @apply absolute text-white;
+          left: size(14);
+          bottom: size(10);
           font-size: size(20);
           font-weight: 400;
           letter-spacing: size(2.6);
         }
       }
       .splide__pagination {
-        @apply absolute right-0 w-full flex justify-end;
-        padding: size(25) 0;
+        @apply absolute right-0 w-full flex justify-center;
+        padding: size(27) 0;
         li {
           line-height: 0;
           button {
-            @apply rounded-full;
-            width: size(10);
-            height: size(10);
-            background: #0d6b68;
+            @apply rounded-full bg-transparent;
+            width: size(17.3);
+            height: size(17.3);
+            border: 1px solid #727171;
             &.is-active {
-              background: #138784;
+              background: #727171;
             }
           }
         }
         gap: size(13);
       }
+      &::after {
+        @apply w-full h-full absolute top-0 left-0 pointer-events-none;
+        content: "";
+        background: url("@/section/resource/stroke.svg");
+      }
     }
     .t {
-      width: size(508);
+      @apply flex flex-col text-black;
+      gap: size(15);
+      width: size(673);
       .t1 {
-        color: #e89213;
-        font-size: size(51);
-        font-weight: 700;
-        line-height: 126.7%;
-        letter-spacing: size(4.08);
-        margin-bottom: size(112);
-        padding-bottom: size(35);
-        border-bottom: size(1) solid #fff;
+        @apply flex items-end justify-between;
+        margin-bottom: size(15);
+        img {
+          width: size(364.95);
+        }
+        p {
+          font-size: size(32);
+          font-weight: 500;
+          letter-spacing: size(1.92);
+        }
       }
-      .t2 {
-        font-size: size(32);
-        font-weight: 700;
-        text-align: justify;
-        line-height: 157.9%;
-        letter-spacing: size(6.4);
+      .divi {
+        @apply bg-black;
+        height: 1px;
+      }
+      .desc {
+        font-size: size(24);
+        font-weight: 500;
+        line-height: size(39);
+        letter-spacing: size(0.72);
       }
     }
   }
 
-  .en {
-    @apply absolute;
-    height: size(146.34);
-    top: size(23);
-    left: size(4);
+  .style {
+    @apply w-full absolute;
+    top: size(400);
   }
 }
 
@@ -146,76 +155,80 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    height: sizem(667);
-    padding-top: sizem(132);
-    padding-left: 0;
+    @apply w-full relative z-20;
+    @apply flex justify-center;
+    height: sizem(538);
+    background: url("@/section/s3/bgm.jpg");
+    background-size: cover;
+    padding-top: sizem(56);
 
     .slide-box {
-      @apply flex flex-col;
+      @apply flex-col-reverse items-center justify-end;
       gap: sizem(24);
       .slide {
-        width: sizem(375);
-        height: sizem(281);
+        width: sizem(330);
+        height: sizem(200);
         .slide-item {
-          width: sizem(375);
-          height: sizem(281);
+          width: sizem(330);
+          height: sizem(200);
           .caption {
-            right: sizem(11);
+            @apply absolute text-white;
+            left: sizem(8);
             bottom: sizem(6);
             font-size: sizem(12);
-            letter-spacing: size(2.6);
+            letter-spacing: sizem(0.72);
           }
         }
         .splide__pagination {
           @apply hidden;
         }
+        &::after {
+          @apply w-full h-full absolute top-0 left-0 pointer-events-none;
+          content: "";
+          background: url("@/section/resource/stroke.svg");
+        }
       }
       .t {
-        width: 100%;
-        padding: 0 sizem(30);
+        @apply flex flex-col text-black;
+        gap: sizem(29);
+        width: sizem(310);
         .t1 {
-          font-size: sizem(20);
-          line-height: 1;
-          letter-spacing: sizem(1.6);
-          margin-bottom: sizem(14);
-          padding-bottom: sizem(14);
-          border-bottom: sizem(1) solid #fff;
+          @apply flex items-end justify-between;
+          margin-bottom: sizem(5);
+          img {
+            width: sizem(139.91);
+          }
+          p {
+            font-size: sizem(14);
+            letter-spacing: sizem(0.42);
+          }
         }
-        .t2 {
-          font-size: sizem(13);
-          line-height: 157.9%;
-          letter-spacing: sizem(2.6);
+        .desc {
+          font-size: sizem(14);
+          line-height: 170%;
+          letter-spacing: sizem(0.42);
         }
       }
-
       .arrows {
-        @apply absolute z-20 w-full flex justify-between;
-        top: sizem(280);
-        padding: 0 sizem(5);
-
-        .arrow {
-          @apply cursor-pointer;
-          width: sizem(12.8);
-          height: sizem(22.86);
-          &.prev {
-            transform: scaleX(-1);
-          }
+        @apply absolute flex justify-between;
+        width: 98vw;
+        bottom: sizem(150);
+        .prev {
+          @apply -scale-x-100;
         }
       }
     }
 
-    .en {
+    .style {
       @apply absolute;
-      height: sizem(63.94);
-      top: sizem(36);
-      left: 0;
+      top: sizem(420);
+      width: 150vw;
     }
   }
 }
 </style>
 
 <script setup>
-import View from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
@@ -226,16 +239,24 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s3/1.webp", import.meta.url).href,
-    caption: "成蘆大橋",
+    img: new URL("../section/s3/1.jpg", import.meta.url).href,
+    caption: "重陽大橋",
   },
   {
-    img: new URL("../section/s3/2.webp", import.meta.url).href,
-    caption: "65快速道路",
+    img: new URL("../section/s3/2.jpg", import.meta.url).href,
+    caption: "北士科環境",
   },
   {
-    img: new URL("../section/s3/3.webp", import.meta.url).href,
-    caption: "新北環快",
+    img: new URL("../section/s3/3.jpg", import.meta.url).href,
+    caption: "士林夜市",
+  },
+  {
+    img: new URL("../section/s3/4.jpg", import.meta.url).href,
+    caption: "五華街麥當勞商圈",
+  },
+  {
+    img: new URL("../section/s3/5.jpg", import.meta.url).href,
+    caption: "家樂福蘆洲店",
   },
 ]
 </script>

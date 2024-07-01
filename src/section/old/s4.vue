@@ -27,7 +27,6 @@
           interval: 4000,
           gap: 10,
           type: 'loop',
-          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
         }"
       >
         <SplideSlide
@@ -42,33 +41,20 @@
         </SplideSlide>
       </Splide>
       <div class="t">
-        <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">
-          咫尺天乙公園<br />山林相伴一次到位
+        <div class="t1">
+          <img src="@/section/resource/s4title.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
+          <p v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">集賢路首排</p>
         </div>
-        <div class="t1" v-else data-aos="fade-up" data-aos-delay="0">咫尺天乙公園 山林相伴一次到位</div>
-        <div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="200">
-          繁華轉身就是綠意滿懷，天乙<br />
-          公園散步到，大台北都會公園，<br />
-          近擁7.7公里珍稀水景、24公<br />
-          里環狀自行車步道，觀音山景<br />
-          成日常，享受最難得的<br />
-          森活綠意！
-        </div>
-        <div class="t2" v-else data-aos="fade-up" data-aos-delay="200">
-          繁華轉身就是綠意滿懷，天乙公園散步到，大台北都會公園，近擁7.7公里珍稀水景、24公里環狀自行車步道，觀音山景成日常，享受最難得的森活綠意！
+        <div class="divi"></div>
+        <div class="desc" data-aos="fade-up" data-aos-delay="400">
+          <p v-if="isMobile" class="text-right">集賢路首排</p>
+          【鼎藏豐碩】位居重陽特區30米集賢路第一排，<br />
+          臨環狀線Y22五華街站計畫位置，五泰輕軌相會、雙捷運<br v-if="!isMobile"/>
+          、交匯核心，與城同行驅動未來。
         </div>
       </div>
     </div>
-    <img
-      class="en"
-      src="@/section/s4/en.svg"
-      alt=""
-      srcset=""
-      v-if="!isMobile"
-      data-aos="fade-up" data-aos-delay="0"
-    />
-
-    <img class="en" src="@/section/s4/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
+    <img class="style" src="@/section/resource/style3.svg" alt="" srcset="" />
   </article>
 </template>
 
@@ -76,76 +62,91 @@
 @import "@/assets/style/function.scss";
 
 .s4 {
-  @apply w-full relative bg-[#0D5052] flex text-white;
+  @apply w-full relative z-10;
+  @apply flex justify-center;
   height: size(1080);
-  padding-top: size(323);
-  padding-left: size(70);
+  background: url("@/section/s4/bg.jpg");
+  background-size: cover;
+  padding-top: size(162);
 
   .slide-box {
-    @apply flex items-start;
-    gap: size(106);
+    @apply flex flex-row items-start relative z-10;
+    gap: size(72);
     .slide {
-      width: size(1061);
-      height: size(624);
+      @apply relative;
+      width: size(997);
+      height: size(605);
       .slide-item {
-        width: size(1061);
-        height: size(624);
-        background: #eee;
+        @apply relative;
+        width: size(997);
+        height: size(605);
         background-size: cover;
+        transform-style: preserve-3d;
         .caption {
-          @apply absolute font-['Noto_Sanc_TC'];
-          right: size(14);
-          bottom: size(15);
+          @apply absolute text-white;
+          left: size(14);
+          bottom: size(10);
           font-size: size(20);
           font-weight: 400;
           letter-spacing: size(2.6);
         }
       }
       .splide__pagination {
-        @apply absolute left-0 w-full flex justify-start;
-        padding: size(25) 0;
+        @apply absolute right-0 w-full flex justify-center;
+        padding: size(27) 0;
         li {
           line-height: 0;
           button {
-            @apply rounded-full;
-            width: size(10);
-            height: size(10);
-            background: #0d6b68;
+            @apply rounded-full bg-transparent;
+            width: size(17.3);
+            height: size(17.3);
+            border: 1px solid #727171;
             &.is-active {
-              background: #138784;
+              background: #727171;
             }
           }
         }
         gap: size(13);
       }
+      &::after {
+        @apply w-full h-full absolute top-0 left-0 pointer-events-none;
+        content: "";
+        background: url("@/section/resource/stroke.svg");
+      }
     }
     .t {
-      width: size(546);
+      @apply flex flex-col text-black;
+      gap: size(15);
+      width: size(673);
       .t1 {
-        color: #e89213;
-        font-size: size(51);
-        font-weight: 700;
-        line-height: 126.7%;
-        letter-spacing: size(4.08);
-        margin-bottom: size(112);
-        padding-bottom: size(35);
-        border-bottom: size(1) solid #fff;
+        @apply flex flex-col items-end;
+        gap: size(24);
+        margin-bottom: size(15);
+        img {
+          width: size(650.9);
+        }
+        p {
+          font-size: size(32);
+          font-weight: 500;
+          letter-spacing: size(1.92);
+        }
       }
-      .t2 {
-        font-size: size(32);
-        font-weight: 700;
-        text-align: justify;
-        line-height: 157.9%;
-        letter-spacing: size(6.4);
+      .divi {
+        @apply bg-black;
+        height: 1px;
+      }
+      .desc {
+        font-size: size(24);
+        font-weight: 500;
+        line-height: size(39);
+        letter-spacing: size(0.72);
       }
     }
   }
 
-  .en {
-    @apply absolute;
-    height: size(146.34);
-    top: size(23);
-    right: size(4);
+  .style {
+    @apply w-full absolute;
+    top: size(590);
   }
 }
 
@@ -156,76 +157,84 @@
 
 @media screen and (max-width: 767px) {
   .s4 {
-    height: sizem(667);
-    padding-top: sizem(132);
-    padding-left: 0;
+    @apply w-full relative z-[19];
+    @apply flex justify-center;
+    height: sizem(615);
+    background: url("@/section/s4/bgm.jpg");
+    background-size: cover;
+    padding-top: sizem(121);
 
     .slide-box {
-      @apply flex flex-col;
+      @apply flex-col-reverse items-center justify-end;
       gap: sizem(24);
-      .arrows {
-        @apply absolute z-20 w-full flex justify-between;
-        top: sizem(280);
-        padding: 0 sizem(5);
-
-        .arrow {
-          @apply cursor-pointer;
-          width: sizem(12.8);
-          height: sizem(22.86);
-          &.prev {
-            transform: scaleX(-1);
-          }
-        }
-      }
       .slide {
-        width: sizem(375);
-        height: sizem(281);
+        width: sizem(330);
+        height: sizem(200);
         .slide-item {
-          width: sizem(375);
-          height: sizem(281);
+          width: sizem(330);
+          height: sizem(200);
           .caption {
-            right: sizem(11);
+            @apply absolute text-white;
+            left: sizem(8);
             bottom: sizem(6);
             font-size: sizem(12);
-            letter-spacing: size(2.6);
+            letter-spacing: sizem(0.72);
           }
         }
         .splide__pagination {
           @apply hidden;
         }
+        &::after {
+          @apply w-full h-full absolute top-0 left-0 pointer-events-none;
+          content: "";
+          background: url("@/section/resource/stroke.svg");
+        }
       }
       .t {
-        width: 100%;
-        padding: 0 sizem(30);
+        @apply flex flex-col text-black;
+        gap: sizem(20);
+        width: sizem(310);
         .t1 {
-          font-size: sizem(20);
-          line-height: 1;
-          letter-spacing: sizem(1.6);
-          margin-bottom: sizem(14);
-          padding-bottom: sizem(14);
-          border-bottom: sizem(1) solid #fff;
+          @apply flex items-end justify-between;
+          margin-bottom: sizem(5);
+          img {
+            width: sizem(238.5);
+          }
+          p {
+            font-size: sizem(14);
+            letter-spacing: sizem(0.42);
+          }
         }
-        .t2 {
-          font-size: sizem(13);
-          line-height: 157.9%;
-          letter-spacing: sizem(2.6);
+        .desc {
+          font-size: sizem(14);
+          line-height: 170%;
+          letter-spacing: sizem(0.42);
+          p {
+            font-size: sizem(16)
+          }
+        }
+      }
+      .arrows {
+        @apply absolute flex justify-between;
+        width: 98vw;
+        bottom: sizem(150);
+        .prev {
+          @apply -scale-x-100;
         }
       }
     }
 
-    .en {
+    .style {
       @apply absolute;
-      height: sizem(61);
-      top: sizem(36);
-      left: unset;
-      right: 0;
+      top: sizem(520);
+      left: -#{sizem(80)};
+      width: 170vw;
     }
   }
 }
 </style>
 
 <script setup>
-import View from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
@@ -236,16 +245,24 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s4/1.webp", import.meta.url).href,
-    caption: "洲子洋公園",
+    img: new URL("../section/s4/1.jpg", import.meta.url).href,
+    caption: "捷運-民權西路站",
   },
   {
-    img: new URL("../section/s4/2.webp", import.meta.url).href,
-    caption: "大都會公園",
+    img: new URL("../section/s4/2.jpg", import.meta.url).href,
+    caption: "機捷A3-新北產業園區站",
   },
   {
-    img: new URL("../section/s4/3.webp", import.meta.url).href,
-    caption: "大都會公園周邊環境",
+    img: new URL("../section/s4/3.jpg", import.meta.url).href,
+    caption: "捷運-劍潭站",
+  },
+  {
+    img: new URL("../section/s4/4.jpg", import.meta.url).href,
+    caption: "台北車站特區",
+  },
+  {
+    img: new URL("../section/s4/5.jpg", import.meta.url).href,
+    caption: "捷運情境示意圖",
   },
 ]
 </script>

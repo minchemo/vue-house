@@ -3,14 +3,14 @@
     <img
       class="view1 select-none"
       ref="viewImg"
-      src="@/section/s2/view.jpg"
+      src="@/section/s4/view.jpg"
       alt=""
       srcset=""
     />
 
-    <div class="mask" v-bind:class="{ hide: swiped }">
+    <!-- <div class="mask" v-bind:class="{ hide: swiped }">
       <img src="@/section/s2/hand.svg" alt="" srcset="" />
-    </div>
+    </div> -->
   </div>
 </template>
 
