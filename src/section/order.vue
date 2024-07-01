@@ -442,13 +442,12 @@
 }
 </style>
 
+
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
-import orderIntro from "@/section/order_intro.vue"
-import orderBadge from "@/section/order_badge.vue"
 
 import info from "@/info"
 
@@ -459,44 +458,32 @@ import { VueRecaptcha } from "vue-recaptcha"
 import { useToast } from "vue-toastification"
 const toast = useToast()
 
-const sending = ref(false)
-
 const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
   budget: "",
-  project: "",
-  people: "",
   email: "",
   city: "",
   area: "",
   msg: "",
   policyChecked: false,
-  r_verify: true,
+  r_verify: false,
 })
 
+const sending = ref(false)
+
 //非必填
-const bypass = [
-  "project",
-  "msg",
-  "people",
-  "email",
-  "room_type",
-  "budget",
-  "city",
-  "area",
-]
+// const bypass = ["msg", "room_type", "email"]
+const bypass = ["msg","room_type","area","city","email","budget"];
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
-  "預算", //budget
-  "建案", //project
-  "服務專員", //people
   "信箱", //email
+  "購屋預算", //budget
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
@@ -522,21 +509,21 @@ const onRecaptchaUnVerify = () => {
 }
 
 const send = () => {
-  const urlParams = new URLSearchParams(window.location.search)
-  const utmSource = urlParams.get("utm_source")
-  const utmMedium = urlParams.get("utm_medium")
-  const utmContent = urlParams.get("utm_content")
-  const utmCampaign = urlParams.get("utm_campaign")
-  const time = new Date()
-  const year = time.getFullYear()
-  const month = time.getMonth() + 1
-  const day = time.getDate()
-  const hour = time.getHours()
-  const min = time.getMinutes()
-  const sec = time.getSeconds()
-  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmSource = urlParams.get("utm_source");
+  const utmMedium = urlParams.get("utm_medium");
+  const utmContent = urlParams.get("utm_content");
+  const utmCampaign = urlParams.get("utm_campaign");
+  const time = new Date();
+  const year = time.getFullYear();
+  const month = time.getMonth() + 1;
+  const day = time.getDate();
+  const hour = time.getHours();
+  const min = time.getMinutes();
+  const sec = time.getSeconds();
+  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
 
-  const presend = new FormData()
+  const presend = new FormData();
   let pass = true
   let unfill = []
   let idx = 0
@@ -548,16 +535,14 @@ const send = () => {
         unfill.push(formDataRef.value[idx])
       }
     }
-
     idx++
-
-    presend.append(key, value)
+    presend.append(key, value);
   }
 
-  presend.append("utm_source", utmSource)
-  presend.append("utm_medium", utmMedium)
-  presend.append("utm_content", utmContent)
-  presend.append("utm_campaign", utmCampaign)
+  presend.append("utm_source", utmSource);
+  presend.append("utm_medium", utmMedium);
+  presend.append("utm_content", utmContent);
+  presend.append("utm_campaign", utmCampaign);
 
   //有未填寫
   if (unfill.length > 0) {
@@ -576,36 +561,17 @@ const send = () => {
 
   if (pass && !sending.value) {
     sending.value = true
-    fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
-      &phone=${formData.phone}
-      &room_type=${formData.room_type}
-      &budget=${formData.budget}
-      &people=${formData.people}
-      &project=${formData.project}
-      &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
-      &utm_source=${utmSource}
-      &utm_medium=${utmMedium}
-      &utm_content=${utmContent}
-      &utm_campaign=${utmCampaign}
-      &date=${date}
-      &campaign_name=${info.caseName}`,
-      {
-        method: "GET",
-      }
-    )
 
     fetch("contact-form.php", {
       method: "POST",
       body: presend,
     }).then((response) => {
       if (response.status === 200) {
-        window.location.href = "formThanks"
+        window.location.href = "formThanks";
       }
       sending.value = false
-    })
+    });
+
 
     // toast.success(`表單已送出，感謝您的填寫`)
   }
