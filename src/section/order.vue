@@ -188,7 +188,8 @@
   }
 
   .s-order-title {
-    @apply absolute left-0 bottom-[115%];
+    @apply absolute left-0;
+    top: size(-10);
     font-size: size(32);
     font-weight: 500;
     color: #36677f;
@@ -359,10 +360,11 @@
     } */
 
     .s-order-title {
-      @apply absolute left-0 bottom-[105%] flex items-center justify-center w-full;
+      @apply absolute left-0 flex items-center justify-center w-full;
       font-size: sizem(18);
       font-weight: 500;
       color: #36677f;
+      top:sizem(-60);
       border-bottom: 1px solid #fff;
       padding-bottom: size(25);
     }

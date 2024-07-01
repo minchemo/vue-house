@@ -249,6 +249,7 @@
         max-width: 9999px;
         justify-content: center;
         border: 1px solid #36677f;
+          border-right-width: 0px;
         color: #36677f;
         @apply basis-2/3 ;
       }
@@ -291,7 +292,7 @@
     left: 0;
     width: sizem(375);
     height: sizem(63);
-    gap: sizem(1);
+    gap:0;
     // background: url("@/section/mo_menu.jpg");
     background-size: cover;
 
@@ -301,7 +302,7 @@
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
-      border-right: 1px solid #fff;
+      border-right: 1px solid #fff6;
 
       &:last-child {
         border: 0;
@@ -382,6 +383,8 @@
         &.address {
           padding: 0 0;
           margin-top: sizem(20);
+          border-right-width: 1px;
+          border-bottom: 0;
           // font-size: sizem(12);
 
           &::before {

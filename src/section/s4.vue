@@ -1,6 +1,6 @@
 <template>
   <article class="s4">
- <!--     --><img src="./s4/mo.jpg" class="t0" alt="">
+ <!--  <img src="./s4/mo.jpg" class="t0" alt="">   -->
     <div class="view">
       <fullview />
     </div>
@@ -27,7 +27,7 @@
   @apply w-full relative text-[#36677F] z-20;
   height: size(1025);
 
-  .t0{position: absolute;top: 0;left: 0;width: 100%;z-index: 30;opacity: .4}
+  .t0{position: absolute;top: 0;left: 0;width: 100%;z-index: 30;opacity: .4;pointer-events: none}
 
   .line {
     @apply absolute w-[1px] bg-white z-20;
@@ -72,7 +72,7 @@
 
 @media screen and (max-width: 767px) {
   .s4 {
-    height: sizem(681);
+    height: sizem(635);
 
     .view {
       @apply relative w-full;
@@ -80,13 +80,12 @@
     }
 
     .bg-b {
-      @apply absolute z-10;
-      @apply w-full left-0 bottom-0 pointer-events-none;
+          bottom: sizem(-35);
     }
 
     .t {
       @apply absolute z-20 flex flex-col items-center w-full;
-      bottom: sizem(12);
+      bottom:sizem(-34);
       left: 0;
       gap: sizem(2);
       p {

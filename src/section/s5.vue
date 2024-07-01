@@ -17,7 +17,7 @@
       <img
         class="bg bg-t"
         v-else
-        src="@/section/s1/bg_tm.webp"
+        src="@/section/s5/bg_tm.webp"
         alt=""
         srcset=""
       />
@@ -66,7 +66,6 @@
   background-image: url("@/section/s5/bg.jpg");
   padding-top: size(133);
   padding-left: size(50);
-  overflow: hidden;
   .line {
     @apply absolute w-[1px] bg-white z-20;
     left: size(180);
@@ -135,6 +134,7 @@
     @apply w-full h-full absolute z-0;
     top: 0;
     left: 0;
+        overflow: hidden;
     img {
       @apply w-full h-auto;
     }
@@ -195,7 +195,7 @@
 
 @media screen and (max-width: 767px) {
   .s5 {
-    height: sizem(539);
+    height: sizem(585);
     background-image: url("@/section/s5/bgm.jpg");
     padding-top: sizem(56);
     padding-left: size(50);
@@ -208,7 +208,8 @@
     }
 
     .t {
-      @apply flex flex-col items-center;
+      @apply items-center;
+    margin-top: sizem(35);
       > div {
         &:nth-child(1) {
           @apply flex flex-col items-center;
@@ -267,43 +268,34 @@
         width: sizem(166.9);
       }
       .en {
-        margin-top: size(121.57);
-        width: size(257);
+        margin-top: sizem(40);
+        margin-left:sizem(150);
+        width: sizem(100);
       }
     }
     .bgs {
-      @apply w-full h-full absolute z-0;
-      top: 0;
-      left: 0;
-      img {
-        @apply w-full h-auto;
-      }
-
       .bg {
-        @apply absolute;
-
-        &.bg-t {
-          @apply z-10 top-0;
-        }
-
         &.bg-w {
-          @apply z-[1] bottom-0;
+          bottom:sizem(0);
           width: sizem(375);
-          height: sizem(248);
+          height: sizem(340);
           &.w {
             background: url("@/section/s1/bgm.jpg");
             background-size: cover;
           }
+        > div {
+          &.wave {
+            background-position: 50% 80%;
+          }
         }
-      }
-
-      &.bg-ww {
-        @apply z-[2] bottom-0;
-      }
+        .cloud{top:sizem(80);}
+        }
 
       &.bg-b {
-        @apply z-10 bottom-0;
+        bottom:  sizem(-35);
       }
+      }
+
       .t6 {
         right: sizem(23.84);
         bottom: sizem(60);

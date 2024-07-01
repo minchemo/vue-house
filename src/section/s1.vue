@@ -189,7 +189,8 @@
       }
 
       &.bg-b {
-        @apply z-10 bottom-0;
+        @apply z-10 ;
+        bottom: 0;
       }
     }
     .t6 {
@@ -288,7 +289,6 @@
         }
 
         &.bg-w {
-          @apply z-[1] bottom-0;
           width: sizem(375);
           height: sizem(248);
           &.w {
@@ -296,15 +296,12 @@
             background-size: cover;
           }
         }
+
+        &.bg-b {
+          bottom: sizem(-35);
+        }
       }
 
-      &.bg-ww {
-        @apply z-[2] bottom-0;
-      }
-
-      &.bg-b {
-        @apply z-10 bottom-0;
-      }
       .t6 {
         right: sizem(23.84);
         bottom: sizem(60);
