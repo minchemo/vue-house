@@ -1,4 +1,4 @@
-const caseName = "敦南詠樂"
+const caseName = "四維哲學"
 
 export default {
   meta: {
