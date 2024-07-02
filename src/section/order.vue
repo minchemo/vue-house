@@ -32,6 +32,15 @@
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
+          <label class="row"
+            ><span>信箱<span>(必填)</span></span>
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="input w-full rounded-none placeholder:text-[#36677F]"
+              :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)"
+          /></label>
 
           <label class="row" v-if="info.room_type"
             ><span>需求房型</span>
@@ -46,7 +55,7 @@
                 v-text="room" :key="room"
               ></option></select
           ></label>
-          <label class="row" v-if="info.budget.length > 0"
+          <label class="row" v-if="formData.budget"
             ><span>購屋預算</span>
             <select
               class="select w-full rounded-none bg-white"
@@ -475,7 +484,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","room_type","area","city","email","budget"];
+const bypass = ["msg","room_type","area","city","budget"];
 
 //中文對照
 const formDataRef = ref([
