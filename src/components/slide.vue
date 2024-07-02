@@ -1,6 +1,6 @@
 <template>
     <Splide ref="splide" :options="options" @splide:mounted="mounted" @splide:move="moved" class="splide-widget">
-        <SplideSlide class="slide" v-for="img in props.imgs" :style="{ backgroundImage: `url(${img.img})` }">
+        <SplideSlide class="slide" v-for="img in props.imgs" :style="{ backgroundImage: `url(${img.img})` }" :key="img">
             <div class="mask"></div>
             <div class="caption font-['Noto_sans_tc']" v-html="img.caption"></div>
         </SplideSlide>
