@@ -43,7 +43,7 @@
               <option
                 v-for="room in info.room_type"
                 :value="room"
-                v-text="room"
+                v-text="room" :key="room"
               ></option></select
           ></label>
           <label class="row" v-if="info.budget.length > 0"
@@ -56,7 +56,7 @@
               <option
                 v-for="budget in info.budget"
                 :value="budget"
-                v-text="budget"
+                v-text="budget" :key="budget"
               ></option>
             </select>
           </label>
@@ -64,7 +64,7 @@
             ><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
-              <option v-for="city in cityList" :value="city.value">
+              <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
             </select></label
@@ -73,7 +73,7 @@
             ><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
-              <option v-for="area in areaList" :value="area.value">
+              <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
             </select></label
