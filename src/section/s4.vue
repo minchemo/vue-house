@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <img class="style" src="@/section/resource/style3.svg" alt="" srcset="" />
+    <img class="style" src="@/section/resource/style31.svg" alt="" srcset="" />
   </article>
 </template>
 

@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-    <img class="style" src="@/section/resource/style4.svg" alt="" srcset="" />
+    <img class="style" src="./resource/style41.svg" alt="" srcset="" />
   </article>
 </template>
 
@@ -66,7 +66,7 @@
   background-image:linear-gradient(180deg, #fff0 40%,#fff 100%);
 
   .slide-box {
-    @apply flex flex-col-reverse items-center relative z-10;
+    @apply flex flex-col-reverse items-center relative z-20;
     gap: size(65);
     .slide {
       @apply relative;
@@ -142,7 +142,7 @@
     }
   }
   .style {
-    @apply w-full absolute z-20 pointer-events-none;
+    @apply w-full absolute z-10 pointer-events-none;
     top: size(620);
   }
 }
