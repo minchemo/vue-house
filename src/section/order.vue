@@ -189,12 +189,12 @@
 
   .s-order-title {
     @apply absolute left-0;
-    top: size(-10);
+    top: size(-120);
     font-size: size(32);
     font-weight: 500;
     color: #36677f;
     border-bottom: 1px solid #fff;
-    padding-bottom: size(25);
+    padding-bottom: size(15);
   }
 
   .order-title {
