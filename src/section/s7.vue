@@ -46,8 +46,7 @@
         </div>
         <div class="divi"></div>
         <div class="desc" data-aos="fade-up" data-aos-delay="200">
-          擁抱加州國際幼兒園、五華、碧華國小、<br v-if="isMobile">碧華國中、新北高中，坐享12年國教<br>
-          菁英養成術。
+          擁抱加州國際幼兒園、五華、碧華國小、<br v-if="isMobile">碧華國中、新北高中，坐享12年國教<br>菁英養成術。
         </div>
       </div>
     </div>
