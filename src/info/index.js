@@ -8,10 +8,10 @@ export default {
   },
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
-  address: "106台北市大安區四維路224號",
+  address: "106台北市大安區四維路",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2500848914024!2d121.54784339999998!3d25.0255857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2df0760619%3A0xbdf6704d03c7e685!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5Zub57at6LevMjI06Jmf!5e0!3m2!1szh-TW!2stw!4v1719792452436!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/RXj4c8BaRWAc2J2p9",
+    "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3615.2501350099815!2d121.54527073809136!3d25.025583998608102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAxJzMyLjEiTiAxMjHCsDMyJzUyLjMiRQ!5e0!3m2!1szh-TW!2stw!4v1719977983560!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/KReJu6c3Bo7XfvtZ6",
   phone: "02-2707-9988",
   fbLink: "",
   fbMessage: "",
