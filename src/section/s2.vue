@@ -22,29 +22,24 @@
           <div class="t2"  data-aos="fade-up" data-aos-delay="0">
             <ul>
               <li>
-                西班牙WAF世界建築大獎（World Architecture Festival
-                Award）決選入圍。
+                西班牙WAF世界建築大獎（World Architecture Festival Award）決選入圍。
               </li>
               <li>
-                Internazionale Marmi e Macchine Carrara SpA Marble Architectural
-                Award East Asia 義大利卡諾拉國際大賽\建築設計獎。
+                Internazionale Marmi e Macchine Carrara SpA Marble Architectural Award East Asia 義大利卡諾拉國際大賽\建築設計獎。
               </li>
               <li>
-                威尼斯建築雙年展 11th International Architecture Exhibition – La
-                Biennale di Venezia, Collateral Events － Taiwan Exhibition,
+                威尼斯建築雙年展 11th International Architecture Exhibition – La Biennale di Venezia, Collateral Events － Taiwan Exhibition,
                 Dark City-Dark Space，義大利威尼斯。
               </li>
               <li>
-                世界建築家 581 人 "選錄為跨越世紀代表建築家之一，日本 Gallery Ma
-                出版。
+                《 世界建築家 581 人 》選錄為跨越世紀代表建築家之一，日本 Gallery Ma 出版。
               </li>
               <li>
-                S.D.(Space
-                Design)日本建築雜誌專集選錄為”當代台灣建築代表”，鹿島出版會。
+                S.D.(Space Design)日本建築雜誌專集選錄為“當代台灣建築代表”，鹿島出版會。
               </li>
               <li>第十八屆台灣建築獎 – 首獎。</li>
               <li>第十七屆台灣建築獎 – 首獎。</li>
-              <li>第三屆都市設計景觀大獎 – 首獎 台北市都市發展局。</li>
+              <li>台北市都市發展局第三屆都市設計景觀大獎 – 首獎。</li>
             </ul>
           </div>
         </div>

@@ -247,7 +247,7 @@ const imgs = [
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s3/2m.jpg", import.meta.url).href
+      ? new URL("../section/s3/3m.jpg", import.meta.url).href
       : new URL("../section/s3/3.jpg", import.meta.url).href,
     t1: "東京虎之門之丘",
     t2: "Toranomon Hills",
@@ -255,7 +255,7 @@ const imgs = [
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s3/2m.jpg", import.meta.url).href
+      ? new URL("../section/s3/4m.jpg", import.meta.url).href
       : new URL("../section/s3/4.jpg", import.meta.url).href,
     t1: "橫濱Landmark大樓",
     t2: "LANDMARK TOWER",
