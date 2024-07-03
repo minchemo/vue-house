@@ -63,7 +63,7 @@
   @apply w-full relative text-[#36677F];
   @apply flex items-start justify-center;
   height: size(1304);
-  background-image: url("@/section/s5/bg.jpg");
+// background-image: url("@/section/s5/bg.jpg");
   padding-top: size(133);
   padding-left: size(50);
   .line {
@@ -196,7 +196,7 @@
 @media screen and (max-width: 767px) {
   .s5 {
     height: sizem(585);
-    background-image: url("@/section/s5/bgm.jpg");
+//    background-image: url("@/section/s5/bgm.jpg");
     padding-top: sizem(56);
     padding-left: size(50);
     background-size: cover;
