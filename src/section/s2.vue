@@ -39,7 +39,7 @@
               </li>
               <li>第十八屆台灣建築獎 – 首獎。</li>
               <li>第十七屆台灣建築獎 – 首獎。</li>
-              <li>台北市都市發展局第三屆都市設計景觀大獎 – 首獎。</li>
+              <li>台北市都發局第三屆都市設計景觀大獎 – 首獎。</li>
             </ul>
           </div>
         </div>
@@ -272,6 +272,7 @@
               @apply flex flex-col;
               gap: sizem(7);
               padding-left: sizem(12);
+              width: 107%;
               li {
                 @apply relative;
                 font-size: sizem(12);
