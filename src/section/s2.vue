@@ -4,7 +4,7 @@
 
     <div class="box box1">
       <h2 class="title font-['noto_Serif_tc']">一、基本資料</h2>
-      <div class="list" v-for="item in list1">
+      <div class="list" v-for="item in list1" :key="item">
         <span class="t1" v-html="item[0]"></span>
         <span class="t2" v-html="item[1]"></span>
       </div>
@@ -18,7 +18,7 @@
         <h3 class="t3">內容</h3>
         <span class="t4">相關檔案</span>
       </section>
-      <section class="list" v-for="item in list2">
+      <section class="list" v-for="item in list2" :key="item">
         <a :href="item.link" class="link" v-if="item.link&&!item.link.startsWith('#')"></a>
         <span :class="['t1', item.t1[0]]" v-html="item.t1[1]"></span>
         <span class="t2" v-html="item.t2"></span>
@@ -156,7 +156,7 @@ const list2 = [
   {
     t1: ["v2", "準備中"],
     t2: "113/07/06",
-    t3: "自辦公聽會<br><b>第一場次A區(下午14時整)</b><br>A區範圍：保福段1~161、853~856、1064地號等172筆土地<br><br><b>第二場次B區(下午18時整)</b><br>B區範圍：保福段860~867地號等8筆土地",
+    t3: "自辦公聽會<br><b>第一場次A區(下午14時整)</b><br>A區範圍：保福段1~161、853~856、1464地號等172筆土地<br><br><b>第二場次B區(下午18時整)</b><br>B區範圍：保福段860~867地號等8筆土地",
     link:"https://drive.google.com/drive/folders/12l5cKU4cLSsySCx_WGbTXDvtKjJiQDQW?usp=sharing",
   },  
   //link 設定#開頭  不會另開 放網址才會另開視窗
