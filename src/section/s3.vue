@@ -226,10 +226,6 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s3/01.jpg", import.meta.url).href,
-    caption: "",
-  },
-  {
     img: new URL("../section/s3/03.jpg", import.meta.url).href,
     caption: "蘆洲捷運站",
   },
