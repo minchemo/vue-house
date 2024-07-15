@@ -226,16 +226,24 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s3/1.webp", import.meta.url).href,
+    img: new URL("../section/s3/01.jpg", import.meta.url).href,
+    caption: "",
+  },
+  {
+    img: new URL("../section/s3/03.jpg", import.meta.url).href,
+    caption: "蘆洲捷運站",
+  },
+  {
+    img: new URL("../section/s3/02.jpg", import.meta.url).href,
     caption: "成蘆大橋",
   },
   {
-    img: new URL("../section/s3/2.webp", import.meta.url).href,
-    caption: "65快速道路",
+    img: new URL("../section/s3/04.jpg", import.meta.url).href,
+    caption: "64快速道路",
   },
   {
-    img: new URL("../section/s3/3.webp", import.meta.url).href,
-    caption: "新北環快",
+    img: new URL("../section/s3/05.jpg", import.meta.url).href,
+    caption: "國道1號",
   },
 ]
 </script>

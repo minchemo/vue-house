@@ -236,16 +236,20 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s4/1.webp", import.meta.url).href,
+    img: new URL("../section/s4/01.jpg", import.meta.url).href,
+    caption: "天乙公園",
+  },
+  {
+    img: new URL("../section/s4/02.jpg", import.meta.url).href,
+    caption: "五股體健防災公園",
+  },
+  {
+    img: new URL("../section/s4/03.jpg", import.meta.url).href,
     caption: "洲子洋公園",
   },
   {
-    img: new URL("../section/s4/2.webp", import.meta.url).href,
+    img: new URL("../section/s4/04.jpg", import.meta.url).href,
     caption: "大都會公園",
-  },
-  {
-    img: new URL("../section/s4/3.webp", import.meta.url).href,
-    caption: "大都會公園周邊環境",
   },
 ]
 </script>
