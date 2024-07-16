@@ -32,6 +32,22 @@
             <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
         </label>
+        <label class="row"><span>方便聯絡時間</span>
+          <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>方便聯絡時間</option>
+            <option>09:00-12:00</option>
+            <option>13:00-17:00</option>
+            <option>18:00-21:00</option>
+          </select>
+        </label>
+        <label class="row"><span>購屋目的</span>
+          <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>購屋目的</option>
+            <option>自住</option>
+            <option>投資</option>
+            <option>置產</option>
+          </select>
+        </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -355,6 +371,8 @@ const formData = reactive({
   budget: "",
   project: "",
   email: "",
+  ctime: "",
+  ctime: "",
   city: "",
   area: "",
   msg: "",
@@ -373,6 +391,7 @@ const formDataRef = ref([
   "預算", //budget
   "建案", //project
   "信箱", //email
+  "聯絡時間", //ctime
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
