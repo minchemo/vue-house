@@ -46,7 +46,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .s2 {
+  .s9 {
     height: sizem(667);
     padding-top: sizem(100);
 
@@ -73,7 +73,7 @@
 </style>
 
 <script setup>
-import View from "@/components/fullview.vue"
+import View from "@/components/fullview2.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
