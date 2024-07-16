@@ -14,10 +14,6 @@
                                 v-html="item[1]">
                             </p>
                         </div>
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap">
-                            <p class="border-l-2 pl-2 border-[#fff] whitespace-pre-line leading-normal text-left text-[#fff] font-normal">民間新建建築類(H-2住宅)
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>

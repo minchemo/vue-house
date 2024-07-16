@@ -32,22 +32,7 @@
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
-        <label class="row"><span>聯絡時間<span v-if="!bypass.includes('ctime')">(必填)</span></span>
-          <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
-            <option value="" selected disabled>方便聯絡時間</option>
-            <option>09:00-12:00</option>
-            <option>13:00-17:00</option>
-            <option>18:00-21:00</option>
-          </select>
-        </label>
-          <label class="row" ><span>購屋目的<span v-if="!bypass.includes('use_type')">(必填)</span></span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
-            <option value="" selected disabled>購屋目的</option>
-            <option>自住</option>
-            <option>投資</option>
-            <option>置產</option>
-          </select>
-        </label>
+        
           <label class="row"><span>居住縣市<span v-if="!bypass.includes('city')">(必填)</span></span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -111,7 +96,7 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
-    background: linear-gradient(180deg, #418DBD 0%, #000A39 100%);
+  //  background: linear-gradient(180deg, #418DBD 0%, #000A39 100%);
 
   .bg-image {
     position: absolute;
@@ -129,31 +114,11 @@
   font-size: size(15);
   //background: #195c45;
   
-
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
-
   .order-title {
     font-size: size(40);
     font-weight: 700;
     color: #FFF;
-    padding-top:1.5em;
+    padding-top:3.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
@@ -229,17 +194,15 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #025482;
+    color: #EC6300;
     background-color: #fff;
-    //border: 1px solid #FFF9;
     border:0;
     border-radius: 0em;
-
     width: 308px;
     height:3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 400;
+    font-weight: 600;
     position: relative;
   }
 
@@ -279,13 +242,6 @@
       margin-bottom: sizem(22);
     } */
 
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
-
     .cus-divider {
       margin: 0 auto;
       width: sizem(117);
@@ -296,7 +252,7 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1.5em;
+      padding-top:3.5em;
     }
     .order-subTitle{
       font-size: sizem(13);

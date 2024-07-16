@@ -139,8 +139,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #fff;
-      color: #025482;
+      background-color: #000;
+      color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -156,25 +156,26 @@
       gap: 1em;
 
       &:hover {
-        background-color: #BFD2D9;
+        background-color: #c00;
+        /*
         color: #000;
-
         img {
           filter: brightness(0) invert(0);
         }
+        */
       }
 
       img {
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: invert(20%) sepia(74%) saturate(2094%) hue-rotate(181deg) brightness(91%) contrast(98%);
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #BFD2D9;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -204,19 +205,19 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #025482;
+        color: #fff;
 
         img {
-          filter: invert(20%) sepia(74%) saturate(2094%) hue-rotate(181deg) brightness(91%) contrast(98%);
+        filter: brightness(0) invert(1);
         }
-
+        /*
         &:hover {
-   //     background-color: #C29267;
           color: #000;
           img {
             filter: brightness(0) invert(0);
           }
         }
+          */
       }
     }
 
@@ -244,21 +245,21 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#025482;
+    background:#E6267E;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(16);
       font-weight: 400;
-      color: #000;
-      border-left:1px solid #0003;
+      color: #fff;
+      border-left:1px solid #fff6;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
       }
       &:first-child{
       border-left:0;}
