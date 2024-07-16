@@ -24,15 +24,15 @@
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
           <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
-        <label class="row"><span>方便聯絡時間</span>
+        <label class="row"><span>聯絡時間</span>
           <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
             <option value="" selected disabled>方便聯絡時間</option>
             <option>09:00-12:00</option>
@@ -40,8 +40,8 @@
             <option>18:00-21:00</option>
           </select>
         </label>
-        <label class="row"><span>購屋目的</span>
-          <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+          <label class="row" ><span>購屋目的<span>(必填)</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
             <option value="" selected disabled>購屋目的</option>
             <option>自住</option>
             <option>投資</option>
@@ -51,14 +51,14 @@
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value">
+            <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
           <label class="row"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value">
+            <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
           </select></label>
@@ -86,7 +86,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending? '發送中..': '送出表單' }}
       </div>
 
       <!-- Contact Info -->
@@ -111,6 +111,7 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
+    background: linear-gradient(180deg, #418DBD 0%, #000A39 100%);
 
   .bg-image {
     position: absolute;
@@ -125,8 +126,8 @@
 .order {
   width: 100%;
   padding-top: 0;
+  font-size: size(15);
   //background: #195c45;
- // background: linear-gradient(to bottom, #195c45, #000704);
   
 
   .bird {
@@ -208,11 +209,11 @@
       display: flex;width: 100%;
     align-items:center;
       > span{
-        width: 5.5em;
+        width: 7.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        > span{color: #F00;font-size:0.8em;}
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background: inherit;flex: 1;font-size: inherit;}
       option{color: #666;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -228,8 +229,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
-    background-color: #D9E021;
+    color: #025482;
+    background-color: #fff;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: 0em;
@@ -268,6 +269,7 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+    font-size: sizem(14);
     // border-radius: sizem(68) sizem(68) 0 0;
    /* padding-top: sizem(0);
     margin-top: sizem(0);
@@ -371,7 +373,7 @@ const formData = reactive({
   budget: "",
   project: "",
   email: "",
-  ctime: "",
+  use_type: "",
   ctime: "",
   city: "",
   area: "",
@@ -381,7 +383,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "email", "room_type","budget", "city", "area", "ctime", "use_type"]
 
 //中文對照
 const formDataRef = ref([
@@ -392,6 +394,7 @@ const formDataRef = ref([
   "建案", //project
   "信箱", //email
   "聯絡時間", //ctime
+  "用途", //use_type
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
