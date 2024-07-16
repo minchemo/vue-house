@@ -14,25 +14,25 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span>(必填)</span></span>
+          <label class="row"><span>姓名<span v-if="!bypass.includes('name')">(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>(必填)</span></span>
+            <label class="row"><span>手機<span v-if="!bypass.includes('phone')">(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
+          <label class="row" v-if="info.room_type"><span>需求房型<span v-if="!bypass.includes('room_type')">(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
             <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算</span>
+          <label class="row" v-if="info.budget"><span>購屋預算<span v-if="!bypass.includes('budget')">(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇預算</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
-        <label class="row"><span>聯絡時間</span>
+        <label class="row"><span>聯絡時間<span v-if="!bypass.includes('ctime')">(必填)</span></span>
           <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
             <option value="" selected disabled>方便聯絡時間</option>
             <option>09:00-12:00</option>
@@ -40,7 +40,7 @@
             <option>18:00-21:00</option>
           </select>
         </label>
-          <label class="row" ><span>購屋目的<span>(必填)</span></span>
+          <label class="row" ><span>購屋目的<span v-if="!bypass.includes('use_type')">(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
             <option value="" selected disabled>購屋目的</option>
             <option>自住</option>
@@ -48,14 +48,14 @@
             <option>置產</option>
           </select>
         </label>
-          <label class="row"><span>居住縣市</span>
+          <label class="row"><span>居住縣市<span v-if="!bypass.includes('city')">(必填)</span></span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row"><span>居住地區</span>
+          <label class="row"><span>居住地區<span v-if="!bypass.includes('area')">(必填)</span></span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value" :key="area">

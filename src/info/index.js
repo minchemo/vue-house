@@ -9,8 +9,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "嘉義市西區竹圍路跟四維路口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.2046823277497!2d121.281644!3d24.925096200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468188a4c9039b5%3A0xea3b05f3aad65b25!2zMzM05qGD5ZyS5biC5YWr5b635Y2A6LGQ5b636LevNTgy6Jmf!5e0!3m2!1szh-TW!2stw!4v1712923248688!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/wfWnHoo3pnTDWbG19",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14637.101478857883!2d120.41797097638735!3d23.48658899867268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDI5JzExLjciTiAxMjDCsDI1JzQxLjgiRQ!5e0!3m2!1szh-TW!2stw!4v1721101120504!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/FxMNburSwiGzPvLq5",
     phone: "05-2321-999",
     fbLink: "https://www.facebook.com/61562889772661/",
     fbMessage: "https://m.me/61562889772661/",
