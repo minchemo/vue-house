@@ -1,7 +1,7 @@
 <template>
     <Splide ref="splide" :options="options" @splide:mounted="setSize" @splide:moved="moved">
         <SplideSlide class="slide" v-for="img in props.imgs" v-lazy:background-image="img.img">
-            <div class="caption font-['Noto_sans_tc']">{{ img.caption }}</div>
+            <div class="caption font-['Noto_serif_tc']">{{ img.caption }}</div>
         </SplideSlide>
     </Splide>
 </template>

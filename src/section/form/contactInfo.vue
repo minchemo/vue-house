@@ -136,6 +136,7 @@
     margin-top: size(20);
     gap: size(20);
     width: size(920);
+    font-weight: 600;
     // min-width: 680px;
 
     .contact-item {
@@ -250,15 +251,15 @@
       height: 100%;      
       font-size: sizem(16);
       font-weight: 400;
-      color: #000;
-      border-left:1px solid #0003;
+      color: #fff;
+      border-left:1px solid #fff;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(0);
+        filter: invert(100%) sepia(1%) saturate(1067%) hue-rotate(38deg) brightness(116%) contrast(100%);
       }
       &:first-child{
       border-left:0;}

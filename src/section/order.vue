@@ -211,6 +211,7 @@
       > span{
         width: 7.5em;
         text-align: left;padding-left:1em ;
+        font-weight:600;
         > span{color: #F00;font-size:0.8em;}
       }
       input,select{background: inherit;flex: 1;font-size: inherit;}
@@ -239,7 +240,7 @@
     height:3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 400;
+    font-weight: 600;
     position: relative;
   }
 

@@ -7,17 +7,16 @@
    -->
        <img src="@/section/s1/bg.webp" class="bgh" v-if="!$isMobile()">
        <img src="@/section/s1/bgm.webp" class="bgh" v-else>
-       <img src="@/section/s1/gif2.gif" class="gif">
-    <div class="hr" v-if="!$isMobile()"></div>
-<div class="logo" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="0">
+       <!--img src="@/section/s1/gif2.gif" class="gif"-->
+<!--div class="logo" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="0">
   <img src="./s1/logo.svg" alt="logo">
   <div class="earth">
   <img src="./s1/e.jpg" alt="earth" >
   <img src="./s1/e.jpg" alt="earth" ></div>
-</div>
-<img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" v-if="!$isMobile()">
+</div-->
+<!--img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" v-if="!$isMobile()">
 <img src="./s1/t1m.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="400" v-else>
-<img src="./s1/coming.svg" alt="coming" class="coming" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="600">
+<img src="./s1/coming.svg" alt="coming" class="coming" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="600"-->
   </article>
 </template>
 
@@ -33,7 +32,8 @@
 top:calc(50% + #{size(-1080*.5)});
 }
  .gif{position: fixed;width:size(1920);height:size(2000);top:0;left: 0;
-mix-blend-mode: lighten;opacity: .2;
+//mix-blend-mode: lighten;
+opacity: .2;
 }
 
 
