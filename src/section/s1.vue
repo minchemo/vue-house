@@ -60,6 +60,9 @@
     width: size(670);}
   .t1{
     width: size(525);margin-bottom: size(20);
+    @media screen and (min-width: 767px) {
+      filter: drop-shadow(0.1vw 0.3vw 0.5 vw rgba(0, 0, 0, 0.65));
+      }
   }
   .t2{
     width: size(545);
