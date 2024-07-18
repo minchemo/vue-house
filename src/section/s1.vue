@@ -5,21 +5,11 @@
    <img src="./s1/mo.jpg" class="t0">
 
    -->
-   <img src="./s1/bg.jpg" class="bgh" v-if="!$isMobile()">
-       <img src="./s1/bgm.jpg" class="bgh" v-else>
+   <img src="./s1/bg.webp" class="bgh" v-if="!$isMobile()">
+       <img src="./s1/bgm.webp" class="bgh" v-else>	<!--  
        <img src="@/section/s1/1.gif" class="gif">
        <img src="./s1/txt.svg" class="txt1" v-if="!$isMobile()" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-       <img src="./s1/txtm.svg" class="txt1" v-else data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-       
-<!--div class="logo" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="0">
-  <img src="./s1/logo.svg" alt="logo">
-  <div class="earth">
-  <img src="./s1/e.jpg" alt="earth" >
-  <img src="./s1/e.jpg" alt="earth" ></div>
-</div-->
-<!--img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" v-if="!$isMobile()">
-<img src="./s1/t1m.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="400" v-else>
-<img src="./s1/coming.svg" alt="coming" class="coming" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="600"-->
+       <img src="./s1/txtm.svg" class="txt1" v-else data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0"> -->
   </article>
 </template>
 
