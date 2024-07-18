@@ -8,7 +8,7 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "嘉義市西區竹圍路跟四維路口",
+   // address: "嘉義市西區竹圍路跟四維路口",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3659.275527864753!2d120.42822220000001!3d23.486583300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDI5JzExLjciTiAxMjDCsDI1JzQxLjYiRQ!5e0!3m2!1szh-TW!2stw!4v1721181681181!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/ozbu3bYW6dskFvvE8",
     // phone: "05-2321-999",
