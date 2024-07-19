@@ -1,5 +1,5 @@
 <?php
-#h65 111-4 版
+#h65 113/1/17 版
 #下3段式抓 為案件編號 $case_code
 #$case_code_test 是用來判斷是否為1的測試頁
 #$case_code = "jw";特殊案使用
@@ -38,8 +38,8 @@ $use_type       = isset($_POST['use_type']) ? $_POST['use_type'] : '';
 $time_start        = isset($_POST['time_start']) ? $_POST['time_start'] : '';
 $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
 
-# 不同版本前端相容 Start
-if ($name == '') {
+    # 不同版本前端相容 Start
+    if ($name == '') {
         $name = isset($_POST['widget-contact-form-name']) ? $_POST['widget-contact-form-name'] : '';
     }
     if ($phone == '') {
@@ -77,6 +77,21 @@ if ($name == '') {
     # 不同版本前端相容 End
 
     $bCheck = true; //信件檢查
+    
+    if (empty($name) || empty($phone)) {
+        // 名字或電話為空
+        $bCheck = false;
+        echo "名字或電話為空，檢查不通過";
+    }
+    /*
+    if (empty($name) && empty($phone) && empty($user_email) && empty($city) && empty($area) && 
+    empty($msg) && empty($utm_source) && empty($utm_medium) && empty($utm_content) && empty($utm_campaign)) {
+        // 所有欄位都為空
+        $bCheck = false;
+        echo "所有欄位都為空，檢查不通過";
+    }
+    */
+
 
     # 取得 IP Start
     if (!empty($_SERVER["HTTP_CLIENT_IP"])){
@@ -250,11 +265,11 @@ if ($name == '') {
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>聯絡時間：".$ctime."<BR>購屋預算：".$budget."<BR>用途：".$use_type."<BR>留言：".$msg."<BR>備註："."<BR><BR>
-    
-    填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>聯絡時間：".$ctime."<BR>購屋用途：".$use_type."<BR>留言：".$msg."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
+
+    
     $tomail_arr = explode(",",$tomail);
 
     $mail->IsHTML(true); //設定郵件內容為HTML
@@ -276,7 +291,7 @@ if ($name == '') {
             $url .= "&area=".$area;
             $url .= "&room_type=" . $room_type;
             $url .= "&budget=" . $budget;
-            $url .= "&message=".$msg.$budget;
+            $url .= "&message=購屋目的:".$use_type.";方便聯絡時間:".$ctime.";留言:".$msg;
             $url .= "&utm_source=".$utm_source;
             $url .= "&utm_medium=".$utm_medium;
             $url .= "&utm_content=".$utm_content;
@@ -284,12 +299,24 @@ if ($name == '') {
             $url .= "&case_code=".$case_code;
             $url .= "&reservation_datetime=".$datetime;
 
-            $ch = curl_init();
-            curl_setopt($ch,CURLOPT_URL,$url);
-            curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-            curl_setopt($ch,CURLOPT_TIMEOUT,1);
-            $result = curl_exec($ch);
-            curl_close($ch);
+            // $ch = curl_init();
+            // curl_setopt($ch,CURLOPT_URL,$url);
+            // curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+            // curl_setopt($ch,CURLOPT_TIMEOUT,1);
+            // $result = curl_exec($ch);
+            // curl_close($ch);
+            
+            // 使用 file_get_contents 發送 GET 請求
+            $response = file_get_contents($url);
+
+            // 檢查回應是否為 FALSE，這可能表示請求失敗
+            if ($response === FALSE) {
+                // 處理錯誤
+                die('Error occurred');
+            }
+
+            // 輸出回應
+            echo $response;
 
             // echo "send ok";
 

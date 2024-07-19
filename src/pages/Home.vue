@@ -1,5 +1,6 @@
 <template>
   <div ref="gtmNoScript" />
+  <img src="https://jrty.tw/favicon.png" class="oq">
   <!--loading-->
   <div v-bind:class="{
     'opacity-0': !isLoading,
@@ -44,6 +45,7 @@
      transform:scale(1);opacity: 1;
   }
 }
+.oq{position: absolute;top: 0;left: 0;width: 0;}
 /*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
     span{
