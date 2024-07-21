@@ -1,8 +1,8 @@
 <template>
     <div class="thanks">
         <a href="/">
-            <img src="~@/assets/thank-img-phone.png" alt="鼎藏豐碩" class="img">
-            <img src="~@/assets/thank-img-phone-h.png" alt="鼎藏豐碩" class="img-hover">
+            <img src="~@/assets/thank-img-phone.png" alt="吉晟賦" class="img">
+            <img src="~@/assets/thank-img-phone-h.png" alt="吉晟賦" class="img-hover">
         </a>
     </div>
 </template>

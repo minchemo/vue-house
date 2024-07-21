@@ -1,6 +1,23 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
+      <div class="intro">
+        <img
+          class="logo"
+          src="@/section/order/logo.png"
+          alt=""
+          srcset=""
+          data-aos="fade-up"
+          data-aos-delay="0"
+        />
+        <div class="t" data-aos="fade-up" data-aos-delay="0">
+          接待會館<br />
+
+          新北市三重區仁安街108號<br /><br />
+          禮賓專線<br />
+          02-8282-8088
+        </div>
+      </div>
       <!-- Title -->
 
       <!-- <div class="cus-divider"></div> -->
@@ -12,7 +29,14 @@
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center z-10">
-        <div class="s-order-title">CONTACT US</div>
+        <div class="s-order-title">
+          <p>
+            {{ info.order.title }}
+          </p>
+          <p>
+            {{ info.order.subTitle }}
+          </p>
+        </div>
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"
             ><span>姓名<span>(必填)</span></span>
@@ -106,7 +130,7 @@
             <p class="text-black">
               本人知悉並同意<label
                 for="policy-modal"
-                class="modal-button text-[#36677F] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
+                class="modal-button text-[#955B37] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
                 >「個資告知事項聲明」</label
               >內容
             </p>
@@ -137,7 +161,7 @@
     <Map v-if="info.address" />
 
     <!-- HouseInfo -->
-    <!-- <HouseInfo /> -->
+    <HouseInfo />
   </div>
 </template>
 
@@ -147,13 +171,31 @@
 .order-section {
   position: relative;
   overflow: hidden;
-  min-height: size(500);
+  // height: size(2821);
   // background-color: #e89213;
-  background: url("@/section/order_bg.jpg");
+  background-image: url("@/section/orderbg.jpg");
   background-size: cover;
   background-position: center;
   padding: 0 size(364);
-  padding-top: size(103);
+
+  .intro {
+    @apply flex flex-col items-center justify-end;
+    padding-bottom: size(234);
+    height: size(1641);
+    .logo {
+      width: size(622);
+    }
+    .t {
+      margin-top: size(330);
+      color: #231815;
+      text-align: center;
+      font-size: size(30);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 48px */
+      letter-spacing: size(6);
+    }
+  }
 
   .bg-image {
     position: absolute;
@@ -188,12 +230,17 @@
   }
 
   .s-order-title {
-    @apply absolute left-0 bottom-[115%];
-    font-size: size(32);
-    font-weight: 500;
-    color: #36677f;
-    border-bottom: 1px solid #fff;
-    padding-bottom: size(25);
+    @apply absolute left-0 bottom-[115%] text-center w-full;
+    p {
+      font-size: size(32);
+      font-weight: 500;
+      color: #231815;
+
+      &:nth-child(2) {
+        font-size: size(18);
+        margin-top: size(5);
+      }
+    }
   }
 
   .order-title {
@@ -258,9 +305,9 @@
       position: absolute;
     }
     .row {
-      background: rgba($color: #fff, $alpha: 0.3);
+      background: rgba($color: #fff, $alpha: 1);
       border: 1px solid #a6a6a6;
-      color: #36677f;
+      color: #231815;
       display: flex;
       width: 100%;
       align-items: center;
@@ -280,7 +327,7 @@
         flex: 1;
       }
       option {
-        color: #36677f;
+        color: #231815;
       }
       select {
         background: url("//h65.tw/img/select.svg") no-repeat calc(100% - 0.5em)
@@ -294,10 +341,10 @@
         }
       }
       &::placeholder {
-        color: #36677f;
+        color: #231815;
       }
       textarea {
-        @apply text-[#36677F];
+        @apply text-[#231815];
       }
     }
   }
@@ -306,10 +353,10 @@
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #36677f;
-    border: 1px solid #36677f;
-    background: #fff;
-    border-radius: 0;
+    color: #fff;
+    background: #c9a063;
+    border-radius: 20px;
+    border: 0;
 
     width: size(442);
     height: size(87);
@@ -318,7 +365,7 @@
     font-weight: 700;
     position: relative;
 
-    @apply hover:bg-[#36677F] hover:text-white;
+    @apply hover:bg-[#bd8e48] hover:text-white;
   }
 
   .control {
@@ -330,13 +377,34 @@
 
 @media screen and (max-width: 768px) {
   .order-section {
+    @apply bg-cover;
     min-height: sizem(800);
     position: relative;
-    // background: url("@/section/order_bgm.jpg");
+    background-image: url("@/section/orderbgm.jpg");
     // overflow: hidden;
     // padding-top: sizem(200);
     padding: 0 sizem(30);
-    padding-top: sizem(50);
+    padding-top: sizem(0);
+
+
+    .intro {
+      @apply flex flex-col items-center justify-end;
+      padding-bottom: sizem(107.5);
+      height: sizem(685);
+      .logo {
+        width: sizem(243.01);
+      }
+      .t {
+        margin-top: sizem(127);
+        color: #231815;
+        text-align: center;
+        font-size: sizem(13);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 48px */
+        letter-spacing: sizem(2.6);
+      }
+    }
 
     .bg-image {
       position: absolute;
@@ -359,12 +427,17 @@
     } */
 
     .s-order-title {
-      @apply absolute left-0 bottom-[105%] flex items-center justify-center w-full;
-      font-size: sizem(18);
-      font-weight: 500;
-      color: #36677f;
-      border-bottom: 1px solid #fff;
-      padding-bottom: size(25);
+      @apply absolute left-0 bottom-[105%] flex flex-col items-center justify-center w-full;
+      p {
+        font-size: sizem(29);
+        font-weight: 500;
+        color: #231815;
+
+        &:nth-child(2) {
+          font-size: sizem(15);
+          margin-top: sizem(5);
+        }
+      }
     }
 
     .order-title-img {
@@ -403,7 +476,7 @@
       gap: 0;
       margin-bottom: sizem(20);
       flex-direction: column;
-      margin-top: sizem(20);
+      margin-top: sizem(220);
 
       .left {
         width: 100%;

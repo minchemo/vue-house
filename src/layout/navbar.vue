@@ -64,7 +64,7 @@
   }
 
   .menu-btn {
-    background: rgba($color: #fff, $alpha: 0.5);
+    background: rgba($color: #fff, $alpha: 0);
     height: size(62);
     width: size(62);
     display: flex;
@@ -82,7 +82,7 @@
     .bar {
       width: size(30);
       height: 2px;
-      background-color: #505050;
+      background-color: #653F28;
       position: relative;
       transform: all 0.5s;
 
@@ -92,7 +92,7 @@
         height: 2px;
         bottom: -#{size(10)};
         position: absolute;
-        background-color: #505050;
+        background-color: #653F28;
         transition: all 0.5s;
       }
 
@@ -102,7 +102,7 @@
         height: 2px;
         top: -#{size(10)};
         position: absolute;
-        background-color: #505050;
+        background-color: #653F28;
         transition: all 0.5s;
       }
     }
@@ -152,7 +152,7 @@
     border-radius: 0;
     padding: size(100) 0;
     backdrop-filter: blur(2px);
-    background: rgba(226, 195, 119, 0.80);
+    background: #653F28;
 
     .menu-item-wrapper {
       @apply flex flex-col relative;
@@ -170,7 +170,7 @@
       gap: size(10);
       font-family: "Noto Sans TC";
       font-weight: 500;
-      color: #000;
+      color: #fff;
       letter-spacing:0.1em;
 
       img {
@@ -192,23 +192,10 @@
       }
 
       &.active {
-        color: #fff;
+        color: #a3a3a3;
       }
 
-      &:last-child {
-        &::after {
-          background-image: unset;
-        }
-      }
 
-      &:last-child {
-        width: size(232);
-        height: size(47);
-        border-radius: 10px;
-        background: url('@/section/mo_order_btn_bg.jpg');
-        border: 1px solid #B28247;
-        color: #fff;
-      }
     }
 
     &.open {
@@ -389,10 +376,6 @@
           }
         }
 
-        &:last-child {
-          width: sizem(232);
-          height: sizem(47);
-        }
       }
 
       &.open {

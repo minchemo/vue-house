@@ -1,95 +1,112 @@
 <template>
   <article class="s5">
     <div class="t">
-      <div>
-        <div class="t1" v-if="isMobile"  data-aos="fade-up" data-aos-delay="0">壹遇敦南, 壹念四維</div>
-        <div class="t1" v-else  data-aos="fade-up" data-aos-delay="0">壹遇敦南，壹念四維</div>
-        <div class="t2">
-          <img v-if="isMobile" src="@/section/s5/t2m.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
-          <img v-else src="@/section/s5/t2.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
-        </div>
+      <div class="t1" 
+      data-aos="fade-up"
+      data-aos-delay="0">五大商圈匯聚 <br v-if="isMobile" />繁華富庶生活風采</div>
+      <div class="t2" 
+      data-aos="fade-up"
+      data-aos-delay="0">
+        三蘆繁華核心，運轉著一天的繁華景象，<br v-if="!isMobile" />
+        集賢商圈、徐匯商圈、家樂福商圈、仁愛街商圈、溪尾街商圈，<br
+          v-if="!isMobile"
+        />
+        高人一等的富庶生活，生機蓬勃的全方位機能。
       </div>
-      <div>
-        <img class="t3" src="@/section/s5/t3.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="0"/>
-        <img class="t4" src="@/section/s5/t4.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="200"/>
-        <img class="t5" src="@/section/s5/t5.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="400"/>
+    </div>
+    <div class="swiper-box">
+      <Splide :options="sConfig" ref="splide" class="slide">
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+          <div class="caption">
+            {{ i.caption }}
+          </div>
+        </SplideSlide>
+      </Splide>
+      <div class="arrows" v-if="isMobile">
+        <img
+          @click="splide.go('<')"
+          class="prev"
+          src="@/section/arrow.png"
+          alt="r"
+          srcset=""
+        />
+        <img
+          @click="splide.go('>')"
+          class="next"
+          src="@/section/arrow.png"
+          alt="r"
+          srcset=""
+        />
       </div>
-      <img class="t6" src="@/section/s5/t6.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
-      <img class="en" src="@/section/s5/en.png" alt="" srcset="" />
     </div>
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/style/function.scss";
 
 .s5 {
-  @apply w-full relative text-[#36677F];
-  @apply flex items-start justify-center;
-  height: size(1214);
+  @apply w-full relative bg-cover;
+  height: size(820);
   background-image: url("@/section/s5/bg.jpg");
-  padding-top: size(133);
-  padding-left: size(50);
-  .line {
-    @apply absolute w-[1px] bg-white z-20;
-    left: size(180);
-    top: 0;
-    height: size(170);
+  padding-left: size(582);
+  padding-top: size(114);
+  .t {
+    @apply text-black;
+
+    .t1 {
+      font-size: size(40);
+      font-weight: 700;
+      line-height: 150%; /* 60px */
+      letter-spacing: size(8);
+    }
+    .t2 {
+      @apply relative;
+      margin-top: size(28);
+      font-size: size(20);
+      font-weight: 400;
+      line-height: 150%; /* 30px */
+      letter-spacing: size(4);
+
+      &::after {
+        @apply absolute left-0;
+        bottom: -#{size(25)};
+        content: "";
+        width: size(1100);
+        height: 2px;
+        background: #fcee21;
+      }
+    }
   }
 
-  .t {
-    @apply flex flex-col items-end;
-    > div {
-      &:nth-child(1) {
-        @apply flex items-center;
-        gap: size(181);
+  .swiper-box {
+    @apply relative;
+    margin-top: size(56);
+    @apply relative z-10;
+    .slide-item {
+      @apply bg-cover;
+      width: size(670);
+      height: size(403);
+      margin-right: size(23);
+      .caption {
+        @apply absolute bottom-0 w-full text-white text-right;
+        @apply flex items-end justify-end;
+        padding: size(10);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        height: size(68);
+        font-size: size(12);
+        font-weight: 400;
+        letter-spacing: size(2.4);
       }
-      &:nth-child(2) {
-        @apply flex items-center;
-        gap: size(42.76);
-        margin-top: size(113);
-        margin-bottom: size(48.84);
-      }
-
-      .t1 {
-        font-size: size(48);
-        font-weight: 700;
-      }
-      .t2 {
-        @apply relative;
-        width: size(912);
-        img {
-          @apply w-full;
-        }
-        &::after {
-          @apply w-full h-[1px] bg-white absolute;
-          left: 0;
-          top: -#{size(60)};
-          content: "";
-        }
-        &::before {
-          @apply w-full h-[1px] bg-white absolute;
-          left: 0;
-          bottom: -#{size(60)};
-          content: "";
-        }
-      }
-      .t3 {
-        width: size(162);
-      }
-      .t4 {
-        width: size(413);
-      }
-      .t5 {
-        width: size(97.28);
-      }
-    }
-    .t6 {
-      width: size(480);
-    }
-    .en {
-      margin-top: size(121.57);
-      width: size(257);
     }
   }
 }
@@ -101,80 +118,67 @@
 
 @media screen and (max-width: 767px) {
   .s5 {
-    height: sizem(539);
+    @apply w-full relative bg-cover;
+    height: sizem(850);
     background-image: url("@/section/s5/bgm.jpg");
-    padding-top: sizem(56);
-    padding-left: size(50);
-    background-size: cover;
-    .line {
-      @apply absolute w-[1px] bg-white z-20;
-      left: size(180);
-      top: 0;
-      height: size(170);
+    padding-left: 0;
+    padding-top: sizem(60);
+    .t {
+      @apply text-black;
+      padding: 0 sizem(32.5);
+
+      .t1 {
+        font-size: sizem(25);
+        letter-spacing: sizem(5);
+      }
+      .t2 {
+        @apply relative;
+        font-size: sizem(14);
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: sizem(1.4);
+        margin-top: sizem(22);
+
+        &::after {
+          bottom: -#{sizem(31)};
+          width: sizem(310);
+        }
+      }
     }
 
-    .t {
-      @apply flex flex-col items-center;
-      > div {
-        &:nth-child(1) {
-          @apply flex flex-col items-center;
-          gap: sizem(56.42);
+    .swiper-box {
+      @apply relative;
+      margin-top: sizem(66);
+      @apply relative z-10;
+      .slide-item {
+        @apply bg-cover;
+        width: sizem(300.3);
+        height: sizem(184);
+        margin-right: sizem(6);
+        .caption {
+          padding: sizem(10);
+          height: sizem(68);
+          font-size: sizem(12);
+          letter-spacing: sizem(2.2);
         }
-        &:nth-child(2) {
-          @apply flex items-center;
-          gap: sizem(14.89);
-          margin-top: 0;
-          margin-bottom: sizem(17);
+      }
+
+      .arrows {
+        @apply absolute w-full;
+        @apply flex items-center justify-between;
+        @apply top-1/2 -translate-y-1/2;
+        @apply pointer-events-none;
+        padding: 0 sizem(10);
+        img {
+          @apply pointer-events-auto;
+          width: sizem(12.8);
+        }
+        .prev {
         }
 
-        .t1 {
-          @apply relative;
-          font-size: sizem(18);
-          font-weight: 700;
-          &::after {
-            @apply h-[1px] left-1/2 -translate-x-1/2 bg-white absolute;
-            width: sizem(266);
-            top: -#{sizem(26)};
-            content: "";
-          }
+        .next {
+          @apply -scale-x-100;
         }
-        .t2 {
-          @apply relative;
-          width: sizem(175.99);
-          margin-bottom: sizem(54.99);
-          img {
-            @apply w-full;
-          }
-          &::after {
-            @apply h-[1px] left-1/2 -translate-x-1/2;
-            width: sizem(266);
-            top: -#{sizem(26)};
-            content: "";
-          }
-          &::before {
-            @apply h-[1px] left-1/2 -translate-x-1/2;
-            width: sizem(266);
-            bottom: -#{sizem(26)};
-            content: "";
-          }
-        }
-        .t3 {
-          width: sizem(56.47);
-        }
-        .t4 {
-          width: sizem(144);
-        }
-        .t5 {
-          width: sizem(33.86);
-        }
-      }
-      .t6 {
-        @apply self-end;
-        width: sizem(166.9);
-      }
-      .en {
-        margin-top: size(121.57);
-        width: size(257);
       }
     }
   }
@@ -182,10 +186,56 @@
 </style>
 
 <script setup>
-import fullview from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
-const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
+
+const splide = ref()
+const sConfig = globals.$isMobile()
+  ? { // 手機板配置
+      autoWidth: true,
+      arrows: false,
+      autoplay: true,
+      pagination: false,
+      gap: 0,
+      type: "loop",
+    }
+  : { // 桌面配置
+      autoWidth: true,
+      arrows: false,
+      autoplay: true,
+      pagination: false,
+      drag: true,
+      interval: 5000, // 調整跑馬燈速度，speed/interval須一致
+      speed: 5000, // 調整跑馬燈速度，speed/interval須一致
+      snap: false,
+      easing: "linear",
+      gap: 0,
+      type: "loop",
+      perMove: 1,
+    }
+
+const imgs = [
+  {
+    img: new URL("../section/s5/1.jpg", import.meta.url).href,
+    caption: "家樂福蘆洲店",
+  },
+  {
+    img: new URL("../section/s5/2.jpg", import.meta.url).href,
+    caption: "徐匯廣場",
+  },
+  {
+    img: new URL("../section/s5/3.jpg", import.meta.url).href,
+    caption: "集賢路街廓",
+  },
+  {
+    img: new URL("../section/s5/4.jpg", import.meta.url).href,
+    caption: "水流公傳統市場",
+  },
+  {
+    img: new URL("../section/s5/5.jpg", import.meta.url).href,
+    caption: "溪尾街小吃店家景觀",
+  },
+]
 </script>

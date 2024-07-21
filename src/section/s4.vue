@@ -1,64 +1,59 @@
 <template>
   <article class="s4">
-    <div class="view">
-      <fullview />
+    <div class="t">
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
+        雙大道直通北市 <br v-if="isMobile" />一瞬千里的交通力
+      </div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="0">
+        走集賢路，開車六分鐘過重陽橋連結大台北；<br />
+        走三和路，開車六分鐘上中山高連結全台灣，<br />
+        雙北核心圈一瞬千里的交通力。
+      </div>
     </div>
-    <img
-      src="@/section/s4/bg_b.png"
-      v-if="!isMobile"
-      class="bg-b"
-      alt=""
-      srcset=""
-    />
-    <img src="@/section/s4/bg_bm.png" v-else class="bg-b" alt="" srcset="" />
-    <div class="t"  data-aos="fade-up" data-aos-delay="0">
-      <p>講究的是敦南 ，謙遜的是四維</p>
-      <p>The Aesthetics of Silence</p>
+    <div class="map">
+      <Map />
     </div>
-    <div class="line" data-aos="growLine" data-aos-dalay="1000" data-aos-duration="2000" v-if="!isMobile"></div>
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/style/function.scss";
 
 .s4 {
-  @apply w-full relative text-[#36677F] z-20;
-  height: size(1080);
-
-  .line {
-    @apply absolute w-[1px] bg-white z-20;
-    left: size(180);
-    bottom: -#{size(190)};
-    height: size(333);
-  }
-
-  .view {
-    @apply relative w-full;
-    height: size(945);
-  }
-
-  .bg-b {
-    @apply absolute z-10;
-    @apply w-full left-0 bottom-0 pointer-events-none;
-  }
-
+  @apply w-full relative bg-cover;
+  height: size(1410);
+  margin-bottom: -#{size(6)};
   .t {
-    @apply absolute z-20;
-    left: size(215);
-    bottom: size(44);
-    p {
-      &:nth-child(1) {
-        font-size: size(52);
-        font-weight: 700;
-      }
-      &:nth-child(2) {
-        font-size: size(19);
-        font-weight: 700;
-        letter-spacing: size(1.71);
-        text-transform: uppercase;
+    @apply relative w-full bg-cover text-black text-center;
+    @apply flex flex-col items-center justify-center;
+    gap: size(20);
+    height: size(267);
+    background-image: url("@/section/s4/topbg.jpg");
+    .t1 {
+      font-size: size(40);
+      font-weight: 700;
+      letter-spacing: size(8);
+    }
+    .t2 {
+      @apply relative;
+      font-size: size(20);
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: size(4);
+
+      &::after {
+        @apply absolute left-1/2 -translate-x-1/2;
+        bottom: -#{size(22)};
+        content: "";
+        width: size(860);
+        height: 2px;
+        background: #fcee21;
       }
     }
+  }
+  .map {
+    @apply relative w-full;
+    height: size(1152);
   }
 }
 
@@ -69,42 +64,43 @@
 
 @media screen and (max-width: 767px) {
   .s4 {
-    height: sizem(681);
-
-    .view {
-      @apply relative w-full;
-      height: sizem(628);
-    }
-
-    .bg-b {
-      @apply absolute z-10;
-      @apply w-full left-0 bottom-0 pointer-events-none;
-    }
-
+    @apply w-full relative bg-cover;
+    height: sizem(737);
     .t {
-      @apply absolute z-20 flex flex-col items-center w-full;
-      bottom: sizem(12);
-      left: 0;
-      gap: sizem(2);
-      p {
-        &:nth-child(1) {
-          font-size: sizem(16);
-        }
-        &:nth-child(2) {
-          font-size: sizem(10);
-          letter-spacing: sizem(0.9);
+      @apply relative w-full bg-cover text-black text-center;
+      @apply flex flex-col items-center justify-center;
+      gap: sizem(14);
+      height: sizem(306);
+      background-image: url("@/section/s4/topbgm.jpg");
+      .t1 {
+        font-size: sizem(25);
+        letter-spacing: sizem(5);
+      }
+      .t2 {
+        @apply text-left;
+        font-size: sizem(14);
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: sizem(1.4);
+
+        &::after {
+          bottom: -#{sizem(31)};
+          width: sizem(310);
         }
       }
+    }
+    .map {
+      @apply relative w-full;
+      height: sizem(430);
     }
   }
 }
 </style>
 
 <script setup>
-import fullview from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+import Map from "@/section/s4/map.vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
-const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
 </script>

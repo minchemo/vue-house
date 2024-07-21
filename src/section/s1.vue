@@ -1,79 +1,17 @@
 <template>
   <article class="s1">
-    <!-- text -->
-    <div class="text">
-      <div class="t-en">
-        <img class="en" v-if="!isMobile" src="@/section/s1/en.png" alt="" srcset="" />
-        <img class="en" v-else src="@/section/s1/enm.png" alt="" srcset="" />
-        <div class="line"></div>
-      </div>
-      <div class="t">
-        <div class="l">
-          <img class="t1" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/t1.png" alt="" srcset="" />
-          <img class="t2" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/t2.png" alt="" srcset="" />
-        </div>
-        <div class="r">
-          <div class="ll">
-            <img class="t3"  data-aos="fade-right" data-aos-delay="0" src="@/section/s1/t3.png" alt="" srcset="" />
-            <img
-              class="t4"
-              v-if="!isMobile"
-              src="@/section/s1/t4.png"
-              alt=""
-              srcset=""
-               data-aos="fade-up" data-aos-delay="0"
-            />
-            <img
-              class="t4"
-              v-else
-              src="@/section/s1/t4m.png"
-              alt=""
-              srcset=""
-               data-aos="fade-up" data-aos-delay="0"
-            />
-          </div>
-          <div class="rr">
-            <img class="t5" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/t5.png" alt="" srcset="" />
-          </div>
-        </div>
-      </div>
+    <img
+      class="logo"
+      src="@/section/s1/logo.png"
+      data-aos="fade-up"
+      data-aos-delay="0"
+    />
+    <div class="t1" data-aos="fade-up" data-aos-delay="200">
+      ｜2房23坪 3房36坪 即將完工｜
     </div>
-
-    <!-- bg -->
-    <div class="bgs">
-      <div class="bg bg-w">
-        <div class="wave"></div>
-        <div class="w"></div>
-      </div>
-      <img
-        class="bg bg-t"
-        v-if="!isMobile"
-        src="@/section/s1/bg_t.png"
-        alt=""
-        srcset=""
-      />
-      <img
-        class="bg bg-t"
-        v-else
-        src="@/section/s1/bg_tm.png"
-        alt=""
-        srcset=""
-      />
-      <img
-        class="bg bg-b"
-        v-if="!isMobile"
-        src="@/section/s1/bg_b.png"
-        alt=""
-        srcset=""
-      />
-      <img
-        class="bg bg-b"
-        v-else
-        src="@/section/s1/bg_bm.png"
-        alt=""
-        srcset=""
-      />
-      <img class="t6" src="@/section/s1/t6.png" alt="" srcset="" />
+    <div class="t2" data-aos="fade-up" data-aos-delay="400">
+      接待會館｜新北市三重區仁安街108號<br />
+      禮賓專線｜02-8282-8088
     </div>
   </article>
 </template>
@@ -83,117 +21,29 @@
 
 .s1 {
   @apply w-full relative;
-  height: size(1904);
-  padding-top: size(89);
+  @apply bg-cover bg-center bg-no-repeat;
+  @apply flex flex-col items-center justify-end;
+  color: #653f28;
+  height: size(1260);
+  max-height: 100vh;
+  background-image: url("@/section/s1/bg.jpg");
+  padding-bottom: size(137);
 
-  .text {
-    @apply relative z-[1] w-full h-full top-0 left-0;
-    @apply flex flex-col items-center;
-    gap: size(113);
-    .t-en {
-      @apply flex items-end;
-      gap: size(42);
-      width: size(1631);
-      .en {
-        width: size(200);
-      }
-      .line {
-        @apply bg-white h-[1px] w-0;
-        animation: grow 1.8s forwards ease-in-out;
-
-        @keyframes grow {
-          to {
-            @apply w-full;
-          }
-        }
-      }
-    }
-    .t {
-      @apply relative;
-      @apply flex justify-center items-start;
-      gap: size(88.44);
-
-      .l {
-        @apply flex items-start;
-        gap: size(87.92);
-        .t1 {
-          width: size(368);
-        }
-        .t2 {
-          width: size(297.5);
-        }
-      }
-      .r {
-        @apply flex items-start;
-        gap: size(43.89);
-        .ll {
-          @apply flex flex-col items-end;
-          gap: size(40.78);
-          .t3 {
-            width: size(674.11);
-          }
-          .t4 {
-            width: size(419);
-          }
-        }
-        .rr {
-          .t5 {
-            width: size(95);
-          }
-        }
-      }
-    }
+  .logo {
+    width: size(622);
   }
-
-  .bgs {
-    @apply w-full h-full absolute z-0;
-    top: 0;
-    left: 0;
-    img {
-      @apply w-full h-auto;
-    }
-
-    .bg {
-      @apply absolute;
-
-      &.bg-t {
-        @apply z-10 top-0;
-      }
-
-      &.bg-w {
-        @apply z-[1] bottom-0;
-        width: size(1921);
-        height: size(1265);
-        > div {
-          @apply w-full h-full absolute left-0 bottom-0;
-          &.wave {
-            @apply z-[1];
-            background: url("@/section/s1/wave.gif");
-            background-size: cover;
-            mix-blend-mode: overlay;
-            opacity: 0.6;
-          }
-          &.w {
-            background: url("@/section/s1/bg.jpg");
-            background-size: cover;
-          }
-        }
-      }
-
-      &.bg-ww {
-        @apply z-[2] bottom-0;
-      }
-
-      &.bg-b {
-        @apply z-10 bottom-0;
-      }
-    }
-    .t6 {
-      @apply absolute z-10;
-      right: size(200);
-      bottom: size(211);
-      width: size(406);
-    }
+  .t1 {
+    margin-top: size(44.3);
+    font-size: size(30);
+    font-weight: 400;
+    letter-spacing: size(6);
+  }
+  .t2 {
+    margin-top: size(134);
+    font-size: size(22);
+    font-weight: 400;
+    line-height: 220%;
+    letter-spacing: size(4.4);
   }
 }
 
@@ -205,107 +55,25 @@
 @media screen and (max-width: 767px) {
   .s1 {
     height: calc(100vh - 63px);
-    min-height: sizem(667);
-    max-height: sizem(667);
-    padding-top: sizem(23);
+    min-height: sizem(604);
+    max-height: sizem(604);
+    padding-bottom: sizem(103);
+    background-image: url("@/section/s1/bgm.jpg");
 
-    .text {
-      @apply relative z-[1] w-full h-full top-0 left-0;
-      @apply flex flex-col items-center;
-      gap: sizem(48);
-      .t-en {
-        @apply flex-col items-center;
-        gap: sizem(21);
-        width: sizem(267);
-        .en {
-          width: sizem(117);
-        }
-        .line {
-          @apply bg-white h-[1px] w-0;
-          animation: grow 1.8s forwards ease-in-out;
-
-          @keyframes grow {
-            to {
-              @apply w-full;
-            }
-          }
-        }
-      }
-      .t {
-        @apply relative;
-        @apply flex-col;
-        gap: sizem(46);
-
-        .l {
-          @apply flex items-start;
-          gap: sizem(19);
-          .t1 {
-            width: sizem(133);
-          }
-          .t2 {
-            width: sizem(115);
-          }
-        }
-        .r {
-          @apply flex items-center;
-          gap: sizem(16.78);
-          .ll {
-            @apply flex flex-col items-end;
-            gap: size(40.78);
-            .t3 {
-              width: sizem(227);
-            }
-            .t4 {
-              width: sizem(227);
-            }
-          }
-          .rr {
-            .t5 {
-              width: sizem(31);
-            }
-          }
-        }
-      }
+    .logo {
+      width: sizem(243);
     }
-
-    .bgs {
-      @apply w-full h-full absolute z-0;
-      top: 0;
-      left: 0;
-      img {
-        @apply w-full h-auto;
-      }
-
-      .bg {
-        @apply absolute;
-
-        &.bg-t {
-          @apply z-10 top-0;
-        }
-
-        &.bg-w {
-          @apply z-[1] bottom-0;
-          width: sizem(375);
-          height: sizem(248);
-          &.w {
-            background: url("@/section/s1/bgm.jpg");
-            background-size: cover;
-          }
-        }
-      }
-
-      &.bg-ww {
-        @apply z-[2] bottom-0;
-      }
-
-      &.bg-b {
-        @apply z-10 bottom-0;
-      }
-      .t6 {
-        right: sizem(23.84);
-        bottom: sizem(60);
-        width: sizem(115);
-      }
+    .t1 {
+      margin-top: sizem(17);
+      font-size: sizem(15);
+      letter-spacing: sizem(3);
+    }
+    .t2 {
+      margin-top: sizem(68.4);
+      font-size: sizem(13);
+      font-weight: 400;
+      line-height: 220%;
+      letter-spacing: sizem(2.6);
     }
   }
 }

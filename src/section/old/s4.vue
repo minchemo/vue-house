@@ -48,7 +48,7 @@
         <div class="divi"></div>
         <div class="desc" data-aos="fade-up" data-aos-delay="400">
           <p v-if="isMobile" class="text-right">集賢路首排</p>
-          【鼎藏豐碩】位居重陽特區30米集賢路第一排，<br />
+          【吉晟賦】位居重陽特區30米集賢路第一排，<br />
           臨環狀線Y22五華街站計畫位置，五泰輕軌相會、雙捷運<br v-if="!isMobile"/>
           、交匯核心，與城同行驅動未來。
         </div>
