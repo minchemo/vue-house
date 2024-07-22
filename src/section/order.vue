@@ -114,7 +114,7 @@
       </div>
 
       <div
-        class="flex flex-col md:flex-row gap-8 md:gap-0 items-center md:items-end justify-between w-full"
+        class="form-send flex flex-col md:flex-row items-center md:items-end justify-between w-full"
       >
         <div class="flex flex-col">
           <!-- Policy -->
@@ -139,7 +139,7 @@
 
           <!-- Recaptcha -->
           <vue-recaptcha
-            class="flex justify-start mt-8 relative z-10 left-0 ml-0"
+            class="flex justify-start mt-4 relative z-10 left-0 ml-0"
             ref="recaptcha"
             :sitekey="info.recaptcha_site_key_v2"
             @verify="onRecaptchaVerify"
@@ -176,7 +176,7 @@
   background-image: url("@/section/orderbg.jpg");
   background-size: cover;
   background-position: center;
-  padding: 0 size(364);
+  padding: 0 0;
 
   .intro {
     @apply flex flex-col items-center justify-end;
@@ -211,23 +211,6 @@
   width: 100%;
   padding-top: 0;
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-      }
-    }
-  }
 
   .s-order-title {
     @apply absolute left-0 bottom-[115%] text-center w-full;
@@ -275,15 +258,17 @@
   }
 
   .form {
-    @apply left-1/2 -translate-x-1/2;
-    width: size(1191);
-    min-width: 680px;
+   // @apply left-1/2 -translate-x-1/2;
+    width:100%;
+    // min-width: 680px;
     //  height: 350px;
     gap: size(80);
     margin-top: size(45);
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
+    margin: size(45) auto;
+    width: size(900);
 
     .left {
       flex: 1;
@@ -348,7 +333,9 @@
       }
     }
   }
-
+.form-send{
+    margin: 0 auto size(45) auto;
+    width: size(900);}
   .send {
     font-size: 20px;
     letter-spacing: 0.9em;
