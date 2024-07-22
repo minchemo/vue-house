@@ -1,0 +1,18 @@
+<svg viewBox="0 0 1920 1150" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<linearGradient id="l1" gradientUnits="userSpaceOnUse" x1="45" y1="0" x2="508" y2="200">
+	<stop  offset="0" style="stop-color:#E47D1080"/>
+	<stop  offset="0.5" style="stop-color:#FFFF"/>
+	<stop  offset="1" style="stop-color:#E47D1080"/>
+	<animate attributeName="x1" from="-560" to="3000" dur="3s" repeatCount="indefinite"/>
+	<animate attributeName="x2" from="0" to="3560" dur="3s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="l2" gradientUnits="userSpaceOnUse" x1="45" y1="0" x2="508" y2="200">
+	<stop  offset="0" style="stop-color:#4AC1F180"/>
+	<stop  offset="0.5" style="stop-color:#FFFF"/>
+	<stop  offset="1" style="stop-color:#4AC1F180"/>
+	<animate attributeName="x1" from="-560" to="3000" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+	<animate attributeName="x2" from="0" to="3560" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+</linearGradient>
+<path fill="url(#l1)" d="M1196.4,1004.2l-40.4-55.1l-42,54.9l17.6,13.5l12.7-16.6c-2.7,56.6-2,77.2-25.5,119.9L402.2,686.3c35.2-45.1,56.9-84.4,85.6-148.1l-20-9.5c-26.7,64-68.5,128.2-98.1,163.8l756.8,459c34.5-56,37.4-78.2,39.9-150.7l12.1,16.5L1196.4,1004.2L1196.4,1004.2z"/>
+<path fill="url(#l2)" d="M1431.7,352.9l-11.7,17.1l27.5,18.9c-43.7-10.6-161.4-50.5-207.1-87.1C954.4,73.3,938.7,48.2,807.6,66.7C481,112.6,461.3,282.5,356.1,486l120.3,61.4l9.4-18.5l-102-52.1c79.1-139.5,101.1-346.1,423.9-389.5C929.7,71,940.3,91,1230.3,320c40.7,32.1,166.6,80.9,223.9,90.6l-33.2,23.9l12.1,16.9l69.4-49.9C1502.5,401.5,1431.7,352.9,1431.7,352.9z"/>
+</svg>

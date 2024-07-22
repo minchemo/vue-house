@@ -4,13 +4,12 @@
       <img
         class="view1 select-none"
         ref="viewImg"
-        src="@/section/s4/map.jpg"
+        src="@/section/s4/map.webp"
         alt=""
         srcset=""
       />
       <img class="logo" src="@/section/s4/logo.png" alt="" srcset="" />
-      <img class="blue" src="@/section/s4/blue_line.png" alt="" srcset="" />
-      <img class="orange" src="@/section/s4/orange_line.png" alt="" srcset="" />
+      <img class="line" src="@/section/s4/line.svg" alt="" srcset="" />
     </div>
 
     <div class="mask" v-bind:class="{ hide: swiped }" v-if="isMobile">
@@ -37,6 +36,9 @@
       top: 7%;
     }
     .blue {
+      @apply absolute z-[1] h-full min-w-full;
+    }
+    .line {
       @apply absolute z-[1] h-full min-w-full;
     }
     .orange {

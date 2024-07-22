@@ -56,8 +56,8 @@
   padding-top: size(75);
   .mrt {
     @apply absolute right-0 top-0 w-full h-full;
-    background-image: url("@/section/s3/mrt.png");
-    background-size: cover;
+  //  background-image: url("@/section/s3/mrt.png");
+  //  background-size: cover;
     .caption {
       @apply absolute text-white;
       right: size(15);

@@ -2,7 +2,7 @@
   <article class="s1">
     <img
       class="logo"
-      src="@/section/s1/logo.png"
+      src="@/section/s1/logoan.svg"
       data-aos="fade-up"
       data-aos-delay="0"
     />

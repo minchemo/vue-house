@@ -43,7 +43,7 @@
             <input
               type="text"
               placeholder="姓名"
-              class="input w-full rounded-none placeholder:text-[#36677F]"
+              class="input w-full rounded-none placeholder:text-[#999999]"
               :value="formData.name"
               @input="(event) => (formData.name = event.target.value)"
           /></label>
@@ -52,7 +52,7 @@
             <input
               type="text"
               placeholder="手機"
-              class="input w-full rounded-none placeholder:text-[#36677F]"
+              class="input w-full rounded-none placeholder:text-[#999999]"
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
@@ -119,7 +119,7 @@
         <div class="flex flex-col">
           <!-- Policy -->
           <div
-            class="flex gap-2 items-center justify-start control relative z-10"
+            class="flex gap-2 items-center justify-start control relative z-10  whitespace-nowrap"
           >
             <input
               type="checkbox"
@@ -491,6 +491,7 @@
       width: sizem(310);
       height: sizem(72);
       background-size: cover;
+      margin-top: 1em;
     }
 
     .control {
