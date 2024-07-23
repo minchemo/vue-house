@@ -22,15 +22,16 @@
 .s1 {
   @apply w-full relative;
   @apply bg-cover bg-center bg-no-repeat;
-  @apply flex flex-col items-center justify-end;
+  @apply flex flex-col items-center justify-center;
   color: #653f28;
-  height: size(1260);
-  max-height: 100vh;
+  height:100vh;
+  min-height: size(1000);
+  max-height: size(1260);
   background-image: url("@/section/s1/bg.jpg");
   padding-bottom: size(137);
 
   .logo {
-    width: size(622);
+    width: size(622);margin-top: size(150);
   }
   .t1 {
     margin-top: size(44.3);
