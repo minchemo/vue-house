@@ -4,12 +4,16 @@
 
    <img src="./s1/mo.jpg" class="t0">
 
-   -->
    <img src="./s1/bg.jpg" class="bgh" v-if="!$isMobile()">
        <img src="./s1/bgm.jpg" class="bgh" v-else>
        <img src="@/section/s1/1.gif" class="gif">
        <img src="./s1/txt.svg" class="txt1" v-if="!$isMobile()" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-       <img src="./s1/txtm.svg" class="txt1" v-else data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
+       <img src="./s1/txtm.svg" class="txt1" v-else data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">   -->
+
+       <div class="bg"><img src="./s1/bg.svg" alt="bg"></div>
+       <img src="./s1/img.png" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0">
+       <img src="./s1/txt.svg" class="txt absolute" alt="txt" data-aos="zoom-in" data-aos-delay="200">
+       <img src="./s1/reser.svg" class="reser absolute" alt="reser" data-aos="zoom-in" data-aos-delay="400">
   </article>
 </template>
 
@@ -20,24 +24,28 @@
   50% {
      opacity: 0;
   }
-}*/
+}
  .bgh{position: absolute;width: 100%;height:100%;top:0;left: 0;object-fit: cover;
 }
  .gif{position: absolute;width:100%;height:70%;bottom:0;left: 0;
 mix-blend-mode: overlay;opacity: .8;
 }
+*/
 .s1 {
   @apply relative w-full h-screen;
-  min-height: size(1000);
-  max-height: size(1080);
+  min-height: size(900);
+  max-height: size(900);
   font-size:size(36);
-  //  .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
-  .txt1{position: absolute;
-    width: size(1310);left:0;right: 0;margin: auto;
-    top: size(184);
-    top:calc(50% + #{size(184 - 1080*.5)});
-  }
-
+.t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
+.bg{position: absolute;width: 100%;height: 100%;
+img{width: 100%;height: 100%;}
+&::after{content: "";position: absolute;width: 100%;height: 100%;top: 0;left: 0;background: url("./s1/bg.webp") fixed;display: block;
+background-size: auto size(40);
+mix-blend-mode: multiply;}
+}
+.img{top:size(146);left:size(242);width:size(403);}
+.txt{top:size(276);right:size(260);width:size(799);}
+.reser{top:size(590);right:size(430);width:size(458);}
 }
 
   
@@ -48,17 +56,20 @@ mix-blend-mode: overlay;opacity: .8;
 @media screen and (max-width: 767px) {
 
 
- .gif{width:100%;height:70%;left: 0;}
+ // .gif{width:100%;height:70%;left: 0;}
 
   .s1 {
-    min-height: sizem(667);
-    max-height: sizem(812);
+    height: calc(100vh - 63px);
+    min-height: sizem(604);
+    max-height: sizem(604);
     font-size:sizem(15);
-  .txt1{
-    width: sizem(328);
-    top: sizem(77);
-    top:calc(50% + #{sizem(77-667*.5)});
-  }
+.bg{
+&::after{
+background-size: auto sizem(28);}
+}
+.img{top:sizem(76);left:sizem(86);width:sizem(200);}
+.txt{top:sizem(415);right:sizem(47);width:sizem(280);}
+.reser{top:sizem(535);right:sizem(76);width:sizem(218);}
 }
 
   

@@ -11,7 +11,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_serif_tc',sans-serif] bg-[#418DBD]">
+  <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#BB581D]">
     <S1 />
    <!-- <S2 />
      <S2v />
@@ -77,7 +77,7 @@ img {
 }
 
 
-
+/*
       .txt {
     position: relative;
     font-weight: 300;
@@ -90,6 +90,7 @@ img {
 @media screen and (max-width: 767px) {
   
 }
+*/
 </style>
 
 <script setup>
@@ -114,7 +115,7 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 800
+      duration: 1500
     });
   };
 

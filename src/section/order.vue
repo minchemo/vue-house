@@ -26,18 +26,10 @@
             <option value="" selected disabled>請選擇房型</option>
             <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋目的<span v-if="!bypass.includes('budget')">(必填)</span></span>
+          <label class="row" v-if="info.budget"><span>購屋預算<span v-if="!bypass.includes('budget')">(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇目的</option>
+            <option value="" selected disabled>請選擇預算</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
-          </select>
-        </label>
-        <label class="row"><span>聯絡時間<span v-if="!bypass.includes('email')">(必填)</span></span>
-          <select class="select w-full rounded-none bg-white" v-model="formData.email">
-            <option value="" selected disabled>方便聯絡時間</option>
-            <option>09:00-12:00</option>
-            <option>13:00-17:00</option>
-            <option>18:00-21:00</option>
           </select>
         </label>
           <label class="row"><span>居住縣市<span v-if="!bypass.includes('city')">(必填)</span></span>
@@ -103,7 +95,7 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
-    background: linear-gradient(180deg, #418DBD 0%, #000A39 100%);
+   // background: linear-gradient(180deg, #418DBD 0%, #000A39 100%);
 
   .bg-image {
     position: absolute;
@@ -222,8 +214,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #025482;
-    background-color: #fff;
+    color: #C54700;
+    background-color: #FDFBED;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: 0em;

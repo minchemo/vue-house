@@ -140,8 +140,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #fff;
-      color: #025482;
+      background-color: #FDFBED;
+      color: #C54700;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -157,11 +157,11 @@
       gap: 1em;
 
       &:hover {
-        background-color: #BFD2D9;
-        color: #000;
+        background-color: #fff;
+        color: #aa3e00;
 
         img {
-          filter: brightness(0) invert(0);
+          filter: invert(20%) sepia(85%) saturate(3754%) hue-rotate(32deg) brightness(92%) contrast(101%);
         }
       }
 
@@ -169,7 +169,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: invert(20%) sepia(74%) saturate(2094%) hue-rotate(181deg) brightness(91%) contrast(98%);
+        filter: invert(31%) sepia(41%) saturate(7500%) hue-rotate(22deg) brightness(95%) contrast(101%);
         transition: all .5s;
         margin: 0;
       }
@@ -245,7 +245,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#025482;
+    background:#911d00;
 
     .contact-item {
       height: 100%;      
@@ -299,7 +299,7 @@
         white-space: nowrap;
         margin: 0;
 
-        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        img {
           max-width: sizem(27);
           height: auto;
           max-height: sizem(27);
