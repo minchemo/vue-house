@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#EC6300]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#78B9CD]">
     <S1 />
     <!-- <S2v /> -->
   <!--

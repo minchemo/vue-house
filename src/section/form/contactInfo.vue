@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #000;
+      background-color: #5F7A86;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -244,8 +244,8 @@
     width: sizem(375);
     height: sizem(63);
     gap: sizem(1);
-    box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#E6267E;
+    //box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
+    background:#5F7A86;
 
     .contact-item {
       height: 100%;      

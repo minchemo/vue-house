@@ -6,26 +6,13 @@
    <img src="./s1/mo.jpg" class="t0">
 
    -->
-   <div class="ball absolute">
-    <div class="ball4"></div>
-    <div class="ball1"></div>
-    <div class="ball2"></div>
-    <div class="ball3"></div>
-    <div class="ball5"></div>
-   </div>
-   <div class="train absolute">
-    <img src="./s1/train.svg" alt="train" class="trainbg" v-if="!$isMobile()">
-    <img src="./s1/trainm.svg" alt="train" class="trainbg" v-else>
-    <img src="./s1/train.png" alt="train" class="train1 absolute">
-   </div>
 
    <div class="con flex">
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-  <div class="flex">
-<img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="200" v-if="!$isMobile()">
-<img src="./s1/t1m.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
-<img src="./s1/t2.svg" alt="coming" class="t2" data-aos="zoom-in"  data-aos-delay="600">
-</div>
+  <img src="./s1/02.svg" alt="title" class="t2" data-aos="zoom-in"  data-aos-delay="600">
+  <img src="./s1/03.svg" alt="title" class="t3" data-aos="zoom-in"  data-aos-delay="600">
+  <img src="./s1/04.svg" alt="logo" class="t4" data-aos="zoom-in"  data-aos-delay="600">
+  <img src="./s1/man.png" alt="man" class="man" data-aos="zoom-in"  data-aos-delay="600">
 </div>
   </article>
 </template>
@@ -41,7 +28,7 @@
 
 .s1 {
   @apply relative w-full h-screen;
-  min-height: size(900);
+  min-height: size(1080);
   max-height: size(1080);
   display: flex;
   flex-direction: column;
@@ -56,16 +43,37 @@
 
 .con{gap: size(60);margin: 0 0 size(70) 0;
   div{flex-direction:column;margin: 0;}}
-  .logo{position: relative;
-    width: size(670);}
-  .t1{
-    width: size(525);margin-bottom: size(20);
-    @media screen and (min-width: 767px) {
-      filter: drop-shadow(0.1vw 0.3vw 0.5 vw rgba(0, 0, 0, 0.65));
-      }
-  }
+  .logo{
+    position: absolute;
+    width: size(128);
+    left: size(277);
+    top: size(183);}
   .t2{
-    width: size(545);
+    position: absolute;
+    width: size(373);
+    left: size(747);
+    top: size(139);
+  }
+
+  .man{
+    position: absolute;
+    width: size(236);
+    left: size(455);
+    top: size(102);
+  }
+
+  .t3{
+    position: absolute;
+    width: size(474);
+    right: size(229);
+    top: size(454);
+  }
+
+  .t4{
+    position: absolute;
+    width: size(133);
+    right: size(30);
+    top: size(29);
   }
     
 @keyframes ball {
@@ -124,21 +132,47 @@ animation: ball 5s ease-in-out alternate infinite;}
 
 
   .s1 {
-    height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);
+    height:sizem(667);
+    min-height: sizem(667);
+    max-height: sizem(667);
     font-size:sizem(15);
 
     .con{gap:0;margin: 0 0  sizem(34) 0;flex-direction:column;
   div{flex-direction:column;margin: 0;}}
-  .logo{position: relative;
-    width: sizem(283);margin-bottom: sizem(15);}
-  .t1{
-    width: sizem(222);margin-bottom: sizem(17);
-  }
+  
+
+  .logo{
+    width: sizem(53);
+    left: sizem(25);
+    top: sizem(101);}
+
+
   .t2{
-    width: sizem(226);
+    width: sizem(157);
+    left: auto;
+    right: sizem(15);
+    top: sizem(84);
   }
+
+  .man{
+    width: sizem(100);
+    left: sizem(97);
+    top: sizem(84);
+  }
+
+  .t3{
+    width: sizem(239);
+    right: sizem(68);
+    top: auto;
+    bottom: sizem(90);
+  }
+
+  .t4{
+    width: sizem(80);
+    right: sizem(10);
+    top: sizem(15);
+  }
+    
 
   
 .ball{

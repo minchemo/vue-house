@@ -194,7 +194,7 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #EC6300;
+    color: #286476;
     background-color: #fff;
     border:0;
     border-radius: 0em;
@@ -252,7 +252,7 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top:3.5em;
+      padding-top:1em;
     }
     .order-subTitle{
       font-size: sizem(13);
