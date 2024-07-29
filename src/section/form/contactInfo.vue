@@ -246,7 +246,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#911d00;
+    background:#63432F;
 
     .contact-item {
       height: 100%;      
