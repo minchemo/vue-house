@@ -1,8 +1,8 @@
 <template>
   <article class="s1" id="s1">
 	<!--  
+   <img src="./s1/m.jpg" class="t0">
 
-   <img src="./s1/mo.jpg" class="t0">
 
    <img src="./s1/bg.jpg" class="bgh" v-if="!$isMobile()">
        <img src="./s1/bgm.jpg" class="bgh" v-else>
@@ -11,7 +11,7 @@
        <img src="./s1/txtm.svg" class="txt1" v-else data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">   -->
 
        <div class="bg"><img src="./s1/bg.svg" alt="bg"></div>
-       <img src="./s1/img.png" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0">
+       <img src="./s1/img.webp" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0">
        <img src="./s1/txt.svg" class="txt absolute" alt="txt" data-aos="zoom-in" data-aos-delay="200">
        <svg viewBox="0 0 470 39" fill="#FFF" xmlns="http://www.w3.org/2000/svg" class="reser absolute" data-aos="zoom-in" data-aos-delay="400" @click="scrollTo('.order')">
 <path class="ann" d="M449.1,10V0.7L470,10"/>
@@ -76,8 +76,8 @@ img{width: 100%;height: 100%;}
 background-size: auto size(40);
 mix-blend-mode: multiply;}
 }
-.img{top:size(146);left:size(242);width:size(403);top: calc(50% + #{size(146 - 900 * .5)});}
-.txt{top:size(276);right:size(260);width:size(799);top: calc(50% + #{size(276 - 900 * .5)});}
+.img{top:size(146);left:size(242);width:size(410);top: calc(50% + #{size(146 - 900 * .5)});}
+.txt{top:size(276);right:size(290);width:size(740);top: calc(50% + #{size(276 - 900 * .5)});}
 .reser{top:size(590);right:size(430);width:size(470);top: calc(50% + #{size(590 - 900 * .5)});
 .ann{
    transform: translateX(-2.8%);
@@ -116,8 +116,8 @@ mix-blend-mode: multiply;}
 &::after{
 background-size: auto sizem(28);}
 }
-.img{top:sizem(76);left:sizem(86);width:sizem(200);top: calc(50% + #{sizem(76 - 604 * .5)});}
-.txt{top:sizem(415);right:sizem(47);width:sizem(280);top: calc(50% + #{sizem(415 - 604 * .5)});}
+.img{left:sizem(79);width:sizem(215);top: calc(50% + #{sizem(73 - 604 * .5)});}
+.txt{right:sizem(67);width:sizem(245);top: calc(50% + #{sizem(419 - 604 * .5)});}
 .reser{top:sizem(535);right:sizem(76);width:sizem(218);top: calc(50% + #{sizem(535 - 604 * .5)});
 
 .ann{
