@@ -11,7 +11,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#BB581D]">
+  <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#ECE7E2]">
     <S1 />
    <!-- <S2 />
      <S2v />

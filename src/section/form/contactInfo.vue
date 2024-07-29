@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #C54700;}
-.hover\:bg-color2:hover{background-color:#aa3e00;}
+.bg-color1{background-color: #40220F;}
+.hover\:bg-color2:hover{background-color:#351807;}
 
 
 .contact-info-img{
@@ -140,8 +140,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #FDFBED;
-      color: #C54700;
+      background-color: #40220F;
+      color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -157,11 +157,11 @@
       gap: 1em;
 
       &:hover {
-        background-color: #fff;
-        color: #aa3e00;
+        background-color: #351807;
+        color: #fff;
 
         img {
-          filter: invert(20%) sepia(85%) saturate(3754%) hue-rotate(32deg) brightness(92%) contrast(101%);
+          filter: brightness(0) invert(1);
         }
       }
 
@@ -169,17 +169,18 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: invert(31%) sepia(41%) saturate(7500%) hue-rotate(22deg) brightness(95%) contrast(101%);
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #BFD2D9;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
         flex:2.17;
+        border: 1px solid #ccc;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
@@ -205,10 +206,10 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #025482;
+        color: #fff;
 
         img {
-          filter:invert(31%) sepia(41%) saturate(7500%) hue-rotate(22deg) brightness(95%) contrast(101%);
+          filter: brightness(0) invert(1);
         }
 
         &:hover {
@@ -227,7 +228,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(31%) sepia(41%) saturate(7500%) hue-rotate(22deg) brightness(95%) contrast(101%);
+  img{filter:invert(12%) sepia(31%) saturate(1846%) hue-rotate(348deg) brightness(93%) contrast(92%);
   }
 }
 

@@ -8,7 +8,7 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-   // address: "嘉義市西區竹圍路跟四維路口",
+    // address: "嘉義市西區竹圍路跟四維路口",
     googleSrc: "https://www.google.com/maps/",
     googleLink: "https://maps.app.goo.gl/",
     // phone: "05-2321-999",
