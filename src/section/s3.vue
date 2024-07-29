@@ -16,7 +16,7 @@
 						gap: 15,
 						type: 'loop',
 					}" @splide:move="move">
-						<SplideSlide class="slide" v-for="img, i in data">
+						<SplideSlide class="slide" v-for="img,  in data" :key="img">
 							<img :src="img.img" alt="" srcset="">
 							<div class="caption">{{ img.caption }}</div>
 							<img class="transport" src="@/section/s3/transport.png" alt="" srcset="">
@@ -25,7 +25,7 @@
 				</div>
 				<div class="pagi">
 					<span v-for="item, i in data" @click="splide.splide.go(i)"
-						:class="{ active: i == currentIndex }"></span>
+						:class="{ active: i == currentIndex }" :key="item"></span>
 				</div>
 			</div>
 			<div class="title">

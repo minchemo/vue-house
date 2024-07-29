@@ -10,7 +10,7 @@
         <div class="menu shadow-lg flex flex-col items-center justify-center" v-bind:class="{ open: menuOpen }">
             <div class="menu-item-wrapper">
                 <div class="menu-item font-bold cursor-pointer font-['noto_serif_tc']" v-for="item, i in info.navList"
-                    :class="{ active: activeMenuIdx === i }" @click="scrollTo(item.target, i)">
+                    :class="{ active: activeMenuIdx === i }" @click="scrollTo(item.target, i)" :key="item">
                     <!-- <img src="@/assets/menu_icon.png" alt="" srcset=""> -->
                     <span>{{ item.name }}</span>
                 </div>

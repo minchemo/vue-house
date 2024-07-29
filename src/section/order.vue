@@ -30,19 +30,18 @@
             <option value="" selected disabled>選擇專員</option>
             <option value="陳睿珩">陳睿珩</option>
             <option value="曾依琇">曾依琇</option>
-            <option value="翁雅如">翁雅如</option>
             <option value="林莞淳">林莞淳</option>
           </select>
 
           <select class="select w-full input-style select-style" v-model="formData.city">
             <option value="" selected disabled>居住縣市</option>
-            <option v-for="city in cityList" :value="city.value">
+            <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select>
           <select class="select w-full input-style select-style" v-model="formData.area">
             <option value="" selected disabled>居住地區</option>
-            <option v-for="area in areaList" :value="area.value">
+            <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
           </select>

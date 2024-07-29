@@ -15,7 +15,7 @@
 			</div>
 			<div class="items">
 				<template v-if="!isMobile">
-					<div class="item" v-for="item, i in data">
+					<div class="item" v-for="item, in data" :key="item">
 						<div class="cover" @click="setSelected(item)">
 							<div class="bg" :style="{ 'background-image': `url(${item.cover})` }"></div>
 							<div class="caption">{{ item.caption }}</div>
@@ -38,7 +38,7 @@
 						perPage: 1.5,
 						type: 'loop',
 					}">
-						<SplideSlide class="item" v-for="item, i in data">
+						<SplideSlide class="item" v-for="item, in data" :key="item">
 							<div class="cover" @click="setSelected(item)">
 								<div class="bg" :style="{ 'background-image': `url(${item.cover})` }"></div>
 								<div class="caption">{{ item.caption }}</div>
@@ -70,7 +70,7 @@
 					interval: 4000,
 					gap: 15,
 				}" @splide:move="move">
-					<SplideSlide class="slide" v-for="img, i in selected.imgs">
+					<SplideSlide class="slide" v-for="img, in selected.imgs" :key="img">
 						<img :src="img.img" alt="" srcset="">
 						<div class="caption">{{ img.caption }}</div>
 					</SplideSlide>
@@ -79,7 +79,7 @@
 			<div class="title">
 				<div class="pagi">
 					<span v-for="item, i in selected.imgs" @click="splide.splide.go(i)"
-						:class="{ active: i == currentIndex }"></span>
+						:class="{ active: i == currentIndex }" :key="item"></span>
 				</div>
 				<div class="t">
 					<div class="t1">{{ selected.t1 }}</div>
