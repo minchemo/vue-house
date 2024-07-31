@@ -163,7 +163,7 @@
       //  width: size(419);
     }
 
-    &::after {
+    &::before {
       content: "";
       width: size(1);
       height: 100%;
