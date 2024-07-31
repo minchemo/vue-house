@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/",
     googleLink: "https://maps.app.goo.gl/",
     // phone: "05-2321-999",  //隱藏電話
-    fbLink: "https://www.facebook.com/61562881595995/",
-    fbMessage: "https://m.me/61562881595995/",
+    fbLink: "https://www.facebook.com/",
+    fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "國源建設股份有限公司"],
@@ -36,7 +36,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-"], // 可放置多個
+    gtmCode: ["GTM-00000"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
