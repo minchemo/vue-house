@@ -11,11 +11,11 @@
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'" v-if="info.fbMessage">
         <img src="//h65.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open()" v-if="info.fbLink">
         <img src="//h65.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
@@ -42,7 +42,7 @@
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'">
+      @click="modalOpen = true; modalType = 'fb'" v-if="info.fbMessage">
       <img src="//h65.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
