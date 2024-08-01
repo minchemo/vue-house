@@ -92,7 +92,7 @@ import { onMounted, ref } from "vue"
 const viewbox = ref()
 const viewImg = ref()
 const swiped = ref(false)
-const offsetRatio = 2 //調整此值設定X軸位置偏移參數
+const offsetRatio = 2.8 //調整此值設定X軸位置偏移參數
 
 onMounted(() => {
   viewImg.value.addEventListener("load", () => {
