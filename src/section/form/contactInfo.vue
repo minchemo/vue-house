@@ -157,8 +157,9 @@
       gap: 1em;
 
       &:hover {
-        background-color: #351807;
+        background-color: #b4850c;
         color: #fff;
+        outline: 1px solid #fff;
 
         img {
           filter: brightness(0) invert(1);
@@ -180,6 +181,7 @@
         z-index: 0;
         position: relative;
         flex:2.17;
+        outline: 0px ;
         @media screen and (min-width:768px) {
         border-bottom: 1px solid #fff;}
        // border: 1px solid #ccc;
@@ -208,7 +210,7 @@
       &.googlemap {
         flex:1;
   //    background-color: #9B1E44;
-      border-left-width: 0;
+    //  border-left-width: 0;
       color: #ca9717;
       @media screen and (min-width:768px) {
       border-bottom-left-radius: 0;}
@@ -219,9 +221,9 @@
 
         &:hover {
    //     background-color: #C29267;
-          color: #000;
+          color: #FFF;
           img {
-            filter: brightness(0) invert(0);
+            filter: brightness(0) invert(1);
           }
         }
       }

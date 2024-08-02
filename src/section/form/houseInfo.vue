@@ -20,13 +20,13 @@
         </div>
     </div>
     <!-- -->
-    <div class="house p-4 relative z-10 bg-[#231815] flex items-center justify-center">
+    <div class="house relative z-10 bg-[#231815] flex items-center justify-center dblogo">
             廣告代銷：<img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset="">
     </div>
     <div class="footer relative z-10 flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="//h35.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
-        <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
+                src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
+        <a href="https://www.h35.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
 </template>
 
@@ -51,6 +51,8 @@
     // height:4em;
     img{height: 1.3em;vertical-align: middle;margin: 0;}
 }
+.dblogo{
+    font-size: size(15);padding: 1.5em 0;}
 .info-box {
     width: size(800);
 

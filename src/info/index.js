@@ -16,6 +16,7 @@ export default {
     fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
+        /*
         ["投資興建", "國源建設股份有限公司"],
         ["建築設計", "蔡廷芳建築師事務所"],
         ["基地面積", "614.13坪"],
@@ -23,22 +24,11 @@ export default {
         ["公設設計", "沐橙設計有限公司"],
         ["基地位於", "桃園市桃園區日光路、青溪二路口"],
         ["格局規劃", "2房、3房"],
-        /*
-        ["投資興建", "長昇事業夥伴 冠奕建設"],
-        ["建築設計", "王朝雍建築師事務所"],
-        ["工程營造", "又廣營造"],
-        ["空間設計", "相即空間設計"],
-        ["企劃銷售", "低碳健康樂活行銷"],
-        ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
-        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
-        ["建築設計", "弘憲聯合建築師事務所"],
-        ["使照號碼", "王朝雍建築師事務所"],
-        ["行銷企劃", "自售"],
         */
     ],
     gtmCode: ["GTM-00000"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
@@ -49,7 +39,7 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     room_type: ["兩房","三房"],
-    budget: ["2000萬以下","2000-2500萬","2500-3000萬","3000萬以上"],
+    //  budget: ["2000萬以下","2000-2500萬","2500-3000萬","3000萬以上"],
 
     navList: [
         /*
