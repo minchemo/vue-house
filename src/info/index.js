@@ -11,9 +11,9 @@ export default {
     address: "桃園市桃園區青溪二路115號", //隱藏這條 地址地圖消失
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.914616676359!2d121.31107540000001!3d25.003017099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f3bd5e6cb4b%3A0xf5f4e303be168c16!2z5ZyL5rqQ5bu66Kit5bCP5qqc5rqq!5e0!3m2!1szh-TW!2stw!4v1722397883294!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/93fdvCUtyHW5aSeu9",
-    // phone: "03-3318888",  //隱藏電話
-    // fbLink: "https://www.facebook.com/",
-    // fbMessage: "https://m.me/",
+    phone: "02-2888-5888", 
+    fbLink: "https://www.facebook.com/",
+    fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "國源建設股份有限公司"],

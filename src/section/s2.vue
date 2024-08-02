@@ -2,16 +2,35 @@
 
 <template>
   <article class="s2">
-    <div class="main">
-      <div class="txt">
-        <p class="desc" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">如何打造永續生存的韌性城市才是解決之道，也是全世界都在努力找尋的解方;看看世界想想台灣，從深耕建築出發，我們要更積極推動地球解方。找出『淨零地球』的三把救地球鑰匙：建築能效標示＋建築碳足跡標示＋智慧健康促進建築，從源頭設計管控，解決因極端氣候造成的問題，實現永續發展近零碳1+能效建築。唯有我們先做好準備才能防範於未然，衷心希望我們的地球與下一代都能更好。</p>
-
-      </div>
-    </div>
-    <div class="timg">
-<img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-<img src="./s1/t3.svg" alt="title" class="t3" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-    </div>
+      <ul class="txt">
+        <li data-aos="fade-down" data-aos-delay="0">摩天豪邸的高調炫耀</li>
+        <li data-aos="fade-down" data-aos-delay="100">彷彿日正當中的刺眼</li>
+        <li data-aos="fade-down" data-aos-delay="200">大鳴大放，無所潛藏之爭逐</li>
+        <li>&nbsp;</li>
+        <li data-aos="fade-down" data-aos-delay="300">當財富已達巔峰，夜深人靜時</li>
+        <li data-aos="fade-down" data-aos-delay="400">回盼初心隱現的森林</li>
+        <li data-aos="fade-down" data-aos-delay="500">理想境界是一半山林一半城</li>
+      </ul>
+      <ul class="txt">
+        <li data-aos="fade-down" data-aos-delay="600">放慢腳步，最好的品味是內斂自在</li>
+        <li data-aos="fade-down" data-aos-delay="700">國際林口之東，俯仰天地之墅</li>
+        <li data-aos="fade-down" data-aos-delay="800">讓浩瀚的綠海溫柔包覆</li>
+        <li data-aos="fade-down" data-aos-delay="900">洗滌塵囂浮華，撕去社會賦予的標籤</li>
+        <li data-aos="fade-down" data-aos-delay="1000">低調富裕的謙隱，像甫上山頭的旭日</li>
+        <li data-aos="fade-down" data-aos-delay="1100">海納天地而不喧</li>
+        <li data-aos="fade-down" data-aos-delay="1200">世界的風景，你早已收藏心底</li>
+      </ul>
+      <ul class="txt">
+        <li data-aos="fade-down" data-aos-delay="1300">紐約帝國大廈的日出</li>
+        <li data-aos="fade-down" data-aos-delay="1400">巴黎聖心堂的晨曦</li>
+        <li data-aos="fade-down" data-aos-delay="1500">全世界的時區，都在腦中顯影</li>
+        <li data-aos="fade-down" data-aos-delay="1600">永恆，彷彿在此凝泊…</li>
+        <li v-if="$isMobile()">&nbsp;</li>
+        <li data-aos="fade-down" data-aos-delay="1700">大安豪宅精工品牌 興富謙30鉅獻</li>
+        <li v-if="$isMobile()">&nbsp;</li>
+        <li data-aos="fade-down" data-aos-delay="1800">國際林口之東 康橋雙語名人聚落</li>
+        <li data-aos="fade-down" data-aos-delay="1900">造局者人生新旭 有天有地有院落</li>
+      </ul>
 
   </article>
 </template>
@@ -20,31 +39,12 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden flex  justify-center text-[#FFF];
-  width: 100%;
-  height:auto;
-  padding:7em 0 7em 0;
-  font-size:size(32);
-  gap:4.4em;
-  flex-direction: row;
-    align-items:stretch;
-  flex-wrap: wrap;
+  @apply relative overflow-hidden flex font-['LXGW_WenKai_Mono_TC',monospace] justify-center text-[#000];
+  padding:size(55) 0;
+  font-size:size(25);
+  line-height: 1.83;
+.txt{margin:auto size(34) auto size(62);font-weight:400;}
 
-
-  .main {
-    margin: auto 0;
-    flex-basis: size(545);
-    .txt{text-align: justify}
-}
-  .timg {
-    @apply flex;
-  flex-direction: column;
-    width: size(735);
-    height: auto;margin:.5em 0;
-    text-align: center;justify-content:space-between;
-    .t2{width: size(735);}
-    .t3{width: size(588);margin:auto auto 0;}
-  }
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -54,29 +54,9 @@
 
   .s2 {
   @apply flex-col;
-    height: auto;
-    padding:1em 0;
+  padding:sizem(20) 0;
+  text-align: center;
   font-size:sizem(14);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:0;
-
-
-  .main {
-    padding: 0;
-    width: sizem(222);
-    margin: auto auto 4em auto;
-}
-      .txt {
-    line-height: 2.3;
-  }
-  .timg {
-    margin:.5em auto;
-    width: auto;
-    .t2{width: sizem(295); margin-bottom: 1em;}
-    .t3{width: sizem(238);margin:auto auto 0;}
-  }
-
 
 
   }

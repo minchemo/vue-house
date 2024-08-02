@@ -140,12 +140,12 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #40220F;
-      color: #fff;
+      background-color: #fff;
+      color: #ca9717;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-  //  border-radius: .5em;
+    border-radius: .5em;
       font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -169,20 +169,23 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: invert(58%) sepia(97%) saturate(379%) hue-rotate(5deg) brightness(86%) contrast(96%);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #fff;
-        color: #000;
+        background-color: #0000;
+        color: #fff;
         z-index: 0;
         position: relative;
         flex:2.17;
-        border: 1px solid #ccc;
+        @media screen and (min-width:768px) {
+        border-bottom: 1px solid #fff;}
+       // border: 1px solid #ccc;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
+      border-radius:0;
         justify-content: center;
 
         &::before {
@@ -206,10 +209,12 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #fff;
+      color: #ca9717;
+      @media screen and (min-width:768px) {
+      border-bottom-left-radius: 0;}
 
         img {
-          filter: brightness(0) invert(1);
+          filter:invert(58%) sepia(97%) saturate(379%) hue-rotate(5deg) brightness(86%) contrast(96%);
         }
 
         &:hover {
@@ -246,7 +251,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#63432F;
+    background:#666;
 
     .contact-item {
       height: 100%;      
@@ -315,9 +320,10 @@
 
         &.address {
           font-size: sizem(15);
-          border-radius: sizem(0) sizem(0) 0 0;
+          border-radius: .5em .5em 0 0;
           padding: 1.1em 0;
           margin-top: sizem(25);
+          background: #ad680044;
           //font-size: .9em;
 
           &::before {
@@ -329,11 +335,13 @@
         }
 
         &.address+div {
-          border-radius: 0 0 sizem(0) sizem(0);
+         // border-radius: 0 0 sizem(0) sizem(0);
         }
       &.googlemap {
         border-top-width: 0;
       border-left-width:0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
       }
       }
 

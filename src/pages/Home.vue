@@ -11,12 +11,18 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#ECE7E2]">
+    <!-- 主字體 3選1
+     font-['Noto_Serif_TC',serif]
+     font-['Noto_Sans_TC',sans-serif]
+     font-['LXGW_WenKai_Mono_TC',monospace]
+    -->
+  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#ECE7E2]">
     <S1 />
-   <!-- <S2 />
+    <S2 />
+    <S3 />
+   <!-- 
      <S2v />
   
-    <S3 />
     <S4 />
     <S5 />
     <S6 />
@@ -76,7 +82,13 @@ img {
   margin: 0 auto;
 }
 
-
+.home{
+  background: url("@/section/s1/bg.jpg") fixed repeat;
+  background-size:size(800) auto;
+  @media screen and (max-width: 767px) {
+    background-size:sizem(500) auto;
+  }
+  }
 /*
       .txt {
     position: relative;
@@ -96,12 +108,12 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-//import S2 from "@/section/s2.vue"
+import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
 /* 
-import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue" */
+import S2 from "@/section/s2.vue" */
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

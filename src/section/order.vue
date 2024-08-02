@@ -57,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#c00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -112,13 +112,14 @@
   padding-top: 0;
   font-size: size(15);
   //background: #195c45;
+  &::before{content: "";background: #d8a422;display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;mix-blend-mode: multiply;}
   
 
 
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #40220F;
+    color: #FFF;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -129,7 +130,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #40220F;
+    color: #FFF;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -171,7 +172,7 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+    .row{background: #ad680044;border: 1px solid #fff;color: #fff;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -180,11 +181,14 @@
         font-weight:600;
         > span{color: #F00;font-size:0.8em;}
       }
-      input,select{background: inherit;flex: 1;font-size: inherit;}
-      option{color: #666;}
+      input,select{background: #0000;flex: 1;font-size: inherit;}
+      &::placeholder,
+      input::placeholder{color: #fffa;}
+      option{color: #444;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
+      filter: brightness(0) invert(1);
       &:focus{
         background-position:calc(100% - .5em) 0%;
       }
@@ -197,9 +201,9 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #40220F;
-    //border: 1px solid #FFF9;
-    border:0;
+    background-color: #eeb934cc;
+    border: 1px solid #fff;
+    //border:0;
     border-radius: 0em;
 
     width: 308px;
