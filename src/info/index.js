@@ -1,4 +1,4 @@
-const caseName = "國源可頌"
+const caseName = "謙旭"
 
 export default {
     meta: {
