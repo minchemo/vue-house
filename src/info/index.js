@@ -6,14 +6,14 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
-    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市桃園區青溪二路115號", //隱藏這條 地址地圖消失
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.914616676359!2d121.31107540000001!3d25.003017099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f3bd5e6cb4b%3A0xf5f4e303be168c16!2z5ZyL5rqQ5bu66Kit5bCP5qqc5rqq!5e0!3m2!1szh-TW!2stw!4v1722397883294!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/93fdvCUtyHW5aSeu9",
-    phone: "02-2888-5888", 
-    fbLink: "https://www.facebook.com/",
-    fbMessage: "https://m.me/",
+    address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
+    address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
+   // address: "新北市林口區發財路168號1樓", //隱藏這條 地址地圖消失
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57824.48967739879!2d121.40009375950176!3d25.066951807208056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1722578763128!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/kT4dxAhEysccQQ4n7",
+    phone: "02-2602-2345", 
+    fbLink: "https://www.facebook.com/61560974341225",
+    fbMessage: "https://m.me/61560974341225",
     caseName: caseName,
     houseInfos: [
         /*
@@ -26,7 +26,7 @@ export default {
         ["格局規劃", "2房、3房"],
         */
     ],
-    gtmCode: ["GTM-00000"], // 可放置多個
+    gtmCode: ["GTM-5TGPZ8R5"], // 可放置多個
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -38,7 +38,7 @@ export default {
         //subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房"],
+    // room_type: ["兩房","三房"],
     //  budget: ["2000萬以下","2000-2500萬","2500-3000萬","3000萬以上"],
 
     navList: [

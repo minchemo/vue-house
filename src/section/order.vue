@@ -179,7 +179,7 @@
         width: 7.5em;
         text-align: left;padding-left:1em ;
         font-weight:600;
-        > span{color: #F00;font-size:0.8em;}
+        > span{color: #ff0;font-size:0.8em;}
       }
       input,select{background: #0000;flex: 1;font-size: inherit;}
       &::placeholder,
