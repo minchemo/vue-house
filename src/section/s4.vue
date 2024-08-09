@@ -82,15 +82,15 @@
       data-aos-duration="3000"
       v-if="!isMobile"
     >
-      <img class="leaf1" src="@/section/s4/leaf1.png" alt="" srcset="" />
-      <img class="leaf2" src="@/section/s4/leaf2.png" alt="" srcset="" />
-      <img class="leaf3" src="@/section/s4/leaf3.png" alt="" srcset="" />
-      <img class="leaf4" src="@/section/s4/leaf4.png" alt="" srcset="" />
+      <img class="leaf1" src="@/section/s4/leaf1.webp" alt="" srcset="" />
+      <img class="leaf2" src="@/section/s4/leaf2.webp" alt="" srcset="" />
+      <img class="leaf3" src="@/section/s4/leaf3.webp" alt="" srcset="" />
+      <img class="leaf4" src="@/section/s4/leaf4.webp" alt="" srcset="" />
     </div>
     <div class="mo-leaf" data-aos="leafIn" data-aos-duration="2000" v-else>
-      <img class="leaf1" src="@/section/s4/mleaf1.png" alt="" srcset="" />
-      <img class="leaf2" src="@/section/s4/mleaf2.png" alt="" srcset="" />
-      <img class="leaf3" src="@/section/s4/mleaf3.png" alt="" srcset="" />
+      <img class="leaf1" src="@/section/s4/mleaf1.webp" alt="" srcset="" />
+      <img class="leaf2" src="@/section/s4/mleaf2.webp" alt="" srcset="" />
+      <img class="leaf3" src="@/section/s4/mleaf3.webp" alt="" srcset="" />
     </div>
   </article>
 </template>
@@ -108,7 +108,7 @@
     width: size(472);
     height: size(376);
     &:nth-child(2) {
-      background-image: url("@/section/s4/1.jpg");
+      background-image: url("@/section/s4/1.webp");
     }
   }
 
@@ -129,7 +129,7 @@
       @apply relative;
       width: size(1309);
       height: size(1170);
-      background-image: url("@/section/s4/map.jpg");
+      background-image: url("@/section/s4/map.webp");
       background-size: cover;
     }
     .r {
@@ -186,7 +186,7 @@
     @apply absolute;
     width: size(898);
     height: size(598);
-    background-image: url("@/section/s4/train.png");
+    background-image: url("@/section/s4/train.webp");
     bottom: size(280);
     left: -#{size(163)};
     ////// 動畫位置調整 assets/style/custom-aos.css > TRAININ
@@ -236,7 +236,7 @@
       width: size(472);
       height: size(376);
       &:nth-child(2) {
-        background-image: url("@/section/s4/1.jpg");
+        background-image: url("@/section/s4/1.webp");
       }
     }
 
@@ -270,7 +270,7 @@
         @apply relative;
         width: sizem(375);
         height: sizem(667);
-        background-image: url("@/section/s4/map.jpg");
+      //  background-image: url("@/section/s4/map.webp");
       }
     }
 
@@ -312,7 +312,7 @@
       @apply absolute;
       width: sizem(371);
       height: sizem(247);
-      background-image: url("@/section/s4/train.png");
+      background-image: url("@/section/s4/train.webp");
       bottom: sizem(15);
       left: -#{sizem(138)};
       ////// 動畫位置調整 assets/style/custom-aos.css > TRAININ
@@ -353,25 +353,25 @@ const splide = ref()
 const imgs = globals.$isMobile()
   ? [
       {
-        img: new URL("../section/s4/1.jpg", import.meta.url).href,
+        img: new URL("../section/s4/1.webp", import.meta.url).href,
         caption: "南屯捷運站",
       },
       {
-        img: new URL("../section/s4/2.jpg", import.meta.url).href,
+        img: new URL("../section/s4/2.webp", import.meta.url).href,
         caption: "南屯捷運站",
       },
       {
-        img: new URL("../section/s4/3.jpg", import.meta.url).href,
+        img: new URL("../section/s4/3.webp", import.meta.url).href,
         caption: "南屯捷運站",
       },
     ]
   : [
       {
-        img: new URL("../section/s4/2.jpg", import.meta.url).href,
+        img: new URL("../section/s4/2.webp", import.meta.url).href,
         caption: "南屯捷運站",
       },
       {
-        img: new URL("../section/s4/3.jpg", import.meta.url).href,
+        img: new URL("../section/s4/3.webp", import.meta.url).href,
         caption: "南屯捷運站",
       },
     ]

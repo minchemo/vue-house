@@ -159,7 +159,7 @@
 @import "@/assets/style/function.scss";
 
 .contact-info {
-  @apply left-1/2 -translate-x-1/2;
+//  @apply left-1/2 -translate-x-1/2;
   width: size(1191);
   // border-radius: size(115);
   padding: 0;

@@ -250,47 +250,47 @@ const isMobile = computed(() => globals.$isMobile())
 const splide = ref()
 const imgs = [
   {
-    img: new URL("../section/s5/1.jpg", import.meta.url).href,
+    img: new URL("../section/s5/1.webp", import.meta.url).href,
     caption: "國家歌劇院",
   },
   {
-    img: new URL("../section/s5/2.jpg", import.meta.url).href,
+    img: new URL("../section/s5/2.webp", import.meta.url).href,
     caption: "台中市政府",
   },
   {
-    img: new URL("../section/s5/3.jpg", import.meta.url).href,
+    img: new URL("../section/s5/3.webp", import.meta.url).href,
     caption: "誠品",
   },
   {
-    img: new URL("../section/s5/4.jpg", import.meta.url).href,
+    img: new URL("../section/s5/4.webp", import.meta.url).href,
     caption: "秀泰生活",
   },
   {
-    img: new URL("../section/s5/5.jpg", import.meta.url).href,
+    img: new URL("../section/s5/5.webp", import.meta.url).href,
     caption: "大遠百",
   },
   {
-    img: new URL("../section/s5/6.jpg", import.meta.url).href,
+    img: new URL("../section/s5/6.webp", import.meta.url).href,
     caption: "新光三越",
   },
   {
-    img: new URL("../section/s5/7.jpg", import.meta.url).href,
+    img: new URL("../section/s5/7.webp", import.meta.url).href,
     caption: "TAIGER CITY",
   },
   {
-    img: new URL("../section/s5/8.jpg", import.meta.url).href,
+    img: new URL("../section/s5/8.webp", import.meta.url).href,
     caption: "星巴克",
   },
   {
-    img: new URL("../section/s5/9.jpg", import.meta.url).href,
+    img: new URL("../section/s5/9.webp", import.meta.url).href,
     caption: "IKEA",
   },
   {
-    img: new URL("../section/s5/10.jpg", import.meta.url).href,
+    img: new URL("../section/s5/10.webp", import.meta.url).href,
     caption: "COSTCO",
   },
   {
-    img: new URL("../section/s5/11.jpg", import.meta.url).href,
+    img: new URL("../section/s5/11.webp", import.meta.url).href,
     caption: "台中第二市場",
   },
 ]

@@ -150,20 +150,20 @@ const splide = ref()
 const imgs = [
   {
     img: globals.$isMobile()
-      ? new URL("../section/s3/1m.jpg", import.meta.url).href
-      : new URL("../section/s3/1.jpg", import.meta.url).href,
+      ? new URL("../section/s3/1m.webp", import.meta.url).href
+      : new URL("../section/s3/1.webp", import.meta.url).href,
     caption: "情境示意圖",
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s3/2m.jpg", import.meta.url).href
-      : new URL("../section/s3/2.jpg", import.meta.url).href,
+      ? new URL("../section/s3/2m.webp", import.meta.url).href
+      : new URL("../section/s3/2.webp", import.meta.url).href,
     caption: "情境示意圖",
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s3/3m.jpg", import.meta.url).href
-      : new URL("../section/s3/3.jpg", import.meta.url).href,
+      ? new URL("../section/s3/3m.webp", import.meta.url).href
+      : new URL("../section/s3/3.webp", import.meta.url).href,
     caption: "情境示意圖",
   },
 ]

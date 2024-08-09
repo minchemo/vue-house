@@ -5,34 +5,35 @@
       class="cloth2 absolute"
       data-aos="fade"
       data-aos-delay="200">
-    <img
-      src="@/section/s1/cloth.webp"
-      alt="cloth"
-    />
-  </div>
-  <div
+      <img
+        src="@/section/s1/cloth.webp"
+        alt="cloth"
+      />
+    </div>
+    <div
       class="cloth1 absolute"
       data-aos="fade"
       data-aos-delay="0">
-    <img
-      src="@/section/s1/cloth.webp"
-      alt="cloth"
-    />
-  </div>
-      <img class="logo" src="@/section/logo.png" alt="" srcset="">
+      <img
+        src="@/section/s1/cloth.webp"
+        alt="cloth"
+      />
+    </div>
+      <img class="logo" src="@/section/logo.png" alt="" srcset=""><!-- Title -->
+      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+ 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center z-10">
+             <!--
         <div class="s-order-title">
-          <p v-if="!isMobile">
+          <p>
             {{ info.order.title }}
           </p>
-          <p v-else>
-            預約賞屋
-          </p>
-          <p v-if="!isMobile">
+          <p>
             {{ info.order.subTitle }}
           </p>
-        </div>
+        </div> -->
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"
             ><span>姓名<span>(必填)</span></span>
@@ -109,44 +110,24 @@
         </div>
       </div>
 
-      <div
-        class="flex flex-col md:flex-row gap-8 md:gap-0 items-center md:items-end justify-between w-full"
-      >
-        <div class="flex flex-col">
-          <!-- Policy -->
-          <div
-            class="flex gap-2 items-center justify-start control relative z-10"
-          >
-            <input
-              type="checkbox"
-              v-model="formData.policyChecked"
-              :checked="formData.policyChecked"
-              class="checkbox bg-white rounded-none"
-            />
-            <p class="text-white">
-              本人知悉並同意<label
-                for="policy-modal"
-                class="modal-button text-[#FFF000] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
-                >「個資告知事項聲明」</label
-              >內容
-            </p>
-          </div>
-          <Policy />
+      <!-- Policy -->
+      <div class="flex gap-2 items-center justify-center control">
+        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md" />
+        <p class="text-[#fff]">
+          本人知悉並同意<label for="policy-modal"
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        </p>
+      </div>
+      <Policy />
 
-          <!-- Recaptcha -->
-          <vue-recaptcha
-            class="flex justify-start mt-8 relative z-10 left-0 ml-0"
-            ref="recaptcha"
-            :sitekey="info.recaptcha_site_key_v2"
-            @verify="onRecaptchaVerify"
-            @expired="onRecaptchaUnVerify"
-          />
-        </div>
+      <!-- Recaptcha -->
+      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-        <!-- Send -->
-        <div class="send btn cursor-pointer relative z-10" @click="send()">
-          {{ sending ? "發送中.." : "立即預約" }}
-        </div>
+      <!-- Send -->
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+        {{ sending? '發送中..': '確認送出' }}
       </div>
 
       <!-- Contact Info -->
@@ -173,7 +154,7 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
 
   background-size: cover;
   background-position: center;
-  padding: 0 size(364);
+  padding: size(142) 0 0;
   padding-top: size(142);
 
   .bg-image {
@@ -212,7 +193,7 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
     width: size(559);
     margin-bottom: size(430);
   }
-
+/*
   .s-order-title {
     @apply absolute left-0 top-0 text-center w-full;
     p {
@@ -226,29 +207,25 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
       }
     }
   }
-
-  .order-title {
-    @apply text-left relative left-0 inline-block;
-    font-size: size(40);
+*/
+.order-title {
+    font-size: size(52);
+    letter-spacing: 0.02em;
     font-weight: 700;
-    color: #36677f;
-    padding-top: 0;
-    margin-left: size(0);
-    margin-right: auto;
-    border-bottom: 1px solid #fff;
-    padding-bottom: size(20);
+    color: #FFF;
+    padding:1.5em 0 .1em;
+    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
-
   .order-title-img {
-    width: size(557);
-    margin-bottom: size(0);
+    width: size(420);
+    margin-bottom: size(10);
   }
-  .order-subTitle {
+  .order-subTitle{
     font-size: size(17);
-    color: black;
-    padding-top: 0.8em;
-    letter-spacing: 0em;
-    font-weight: 500;
+    color: #fff;
+    padding-top:.8em;
+    letter-spacing: .1em;
+    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
     margin: 0 auto;
@@ -259,16 +236,15 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
   }
 
   .form {
-    @apply left-1/2 -translate-x-1/2;
-    width: size(1191);
+  //  @apply left-1/2 -translate-x-1/2;
+    width: size(920);
     min-width: 680px;
     //  height: 350px;
     gap: size(80);
-    margin-top: size(45);
-    margin-bottom: size(50);
+    margin: size(45) auto size(50) auto;
     z-index: 50;
     align-items: stretch;
-    padding-top: size(150);
+    //padding-top: size(150);
 
     .left {
       flex: 1;
@@ -319,7 +295,7 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
           100%;
         background-size: auto 200%;
         transition: background 0.3s;
-        // filter: brightness(0) invert(1);
+         filter: brightness(0) invert(1);//箭頭白色 拿掉變黑色  其他顏色用工具變顏色
 
         &:focus {
           background-position: calc(100% - 0.5em) 0%;
@@ -335,27 +311,24 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
   }
 
   .send {
-    @apply bg-white/50 border-white;
-    font-size: 20px;
+    font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    // background: ;
-    border-radius: 0px;
-    border: 1px solid;
-
-    width: size(442);
-    height: size(87);
+    color: #FFF;
+    background-color:#fff3;
+    //border: 1px solid #FFF9;
+    border:2px solid #fff;
+    border-radius: 0em;
+    width: 308px;
+    height:3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 700;
+    font-weight: 400;
     position: relative;
-
-    @apply hover:bg-[#034150] hover:text-white hover:border-[#034150];
   }
 
   .control {
-    font-size: size(16);
+    font-size: calc(12px + #{size(4)});
     color: #000;
     position: relative;
   }
@@ -366,9 +339,10 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
     @apply bg-cover;
     min-height: sizem(800);
     position: relative;
-    background-image: url("@/section/orderbgm.jpg");
+ //   background-image: url("@/section/orderbgm.jpg");
+  
     // overflow: hidden;
-    padding: 0 sizem(30);
+  //  padding: 0 sizem(30);
     padding-top: sizem(150);
 
     .logo {
@@ -381,6 +355,19 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
       left: -#{sizem(30)};
       bottom: sizem(590);
     }
+  .cloth1{
+        width: 237vw;
+        top: -82.5vw;
+        left: -30.6vw;
+        img{transform: rotate(-1deg);height:sizem(700);}
+  }
+  .cloth2{
+        width: 300vw;
+        top: -91.5vw;
+        left: -176.8vw;
+  img{transform: rotate(55deg);opacity: 0.55;}
+  }
+
   }
 
   .order {
@@ -435,8 +422,8 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
       gap: 0;
       margin-bottom: sizem(20);
       flex-direction: column;
-      margin-top: sizem(100);
-      padding-top: sizem(60);
+  /*    margin-top: sizem(100);
+      padding-top: sizem(60); */
 
       .left {
         width: 100%;
@@ -467,7 +454,7 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
     }
 
     .control {
-      font-size: sizem(14.6);
+      font-size: calc(12px + #{sizem(2)});
     }
   }
 }

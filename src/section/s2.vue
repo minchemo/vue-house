@@ -79,7 +79,7 @@
       data-aos="fade-up"
       data-aos-delay="800">第十六屆國家優良建商及營造商認證標章</div>
         </div>
-        <img class="gold" src="@/section/s2/gold.png" alt="" srcset=""
+        <img class="gold" src="@/section/s2/gold.webp" alt="" srcset=""
       data-aos="fade-up"
       data-aos-delay="1000" />
       </div>
@@ -664,58 +664,58 @@ const onMove = (val, val2) => {
 }
 const imgs = [
   {
-    img: new URL("../section/s2/1.jpg", import.meta.url).href,
+    img: new URL("../section/s2/1.webp", import.meta.url).href,
     caption: "浩瀚 森PARK 新竹",
   },
   {
-    img: new URL("../section/s2/2.jpg", import.meta.url).href,
+    img: new URL("../section/s2/2.webp", import.meta.url).href,
     caption: "豐邑GREEN IN桃園龜山",
   },
   {
-    img: new URL("../section/s2/3.jpg", import.meta.url).href,
+    img: new URL("../section/s2/3.webp", import.meta.url).href,
     caption: "豐邑氧森 森活 桃園龜山",
   },
   {
-    img: new URL("../section/s2/4.jpg", import.meta.url).href,
+    img: new URL("../section/s2/4.webp", import.meta.url).href,
     caption: "豐邑之森 新竹竹北",
   },
   {
-    img: new URL("../section/s2/5.jpg", import.meta.url).href,
+    img: new URL("../section/s2/5.webp", import.meta.url).href,
     caption: "浩瀚 景立方 台中北屯",
   },
   {
-    img: new URL("../section/s2/6.jpg", import.meta.url).href,
+    img: new URL("../section/s2/6.webp", import.meta.url).href,
     caption: "浩瀚創立方 台中北屯",
   },
   {
-    img: new URL("../section/s2/7.jpg", import.meta.url).href,
+    img: new URL("../section/s2/7.webp", import.meta.url).href,
     caption: "豐邑豐穗 台中北屯",
   },
   {
-    img: new URL("../section/s2/8.jpg", import.meta.url).href,
+    img: new URL("../section/s2/8.webp", import.meta.url).href,
     caption: "豐邑Park One 臺中市西屯區",
   },
   {
-    img: new URL("../section/s2/9.jpg", import.meta.url).href,
+    img: new URL("../section/s2/9.webp", import.meta.url).href,
     caption: "浩瀚無極 台南東區",
   },
 ]
 
 const imgs2 = [
   {
-    img: new URL("../section/s2/a1.jpg", import.meta.url).href,
+    img: new URL("../section/s2/a1.webp", import.meta.url).href,
     caption: "新竹喜來登大飯店",
   },
   {
-    img: new URL("../section/s2/a2.jpg", import.meta.url).href,
+    img: new URL("../section/s2/a2.webp", import.meta.url).href,
     caption: "MOXY飯店",
   },
   {
-    img: new URL("../section/s2/a3.jpg", import.meta.url).href,
+    img: new URL("../section/s2/a3.webp", import.meta.url).href,
     caption: "台中逢甲商旅La Vida Hotel",
   },
   {
-    img: new URL("../section/s2/a4.jpg", import.meta.url).href,
+    img: new URL("../section/s2/a4.webp", import.meta.url).href,
     caption: "FUNLIFE豐生活購物中心",
   },
 ]

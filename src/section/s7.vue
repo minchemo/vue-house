@@ -80,7 +80,7 @@
   @apply flex flex-col justify-start items-center;
   height: size(1080);
   padding-top: size(132);
-  background-image: url("@/section/s7/bg.jpg");
+  background-image: url("@/section/s7/bg.webp");
   gap: size(65);
   .t {
     @apply pointer-events-none;
@@ -190,7 +190,7 @@
     @apply flex flex-col justify-start items-center;
     height: sizem(674);
     padding-top: sizem(32);
-    background-image: url("@/section/s7/bgm.jpg");
+    background-image: url("@/section/s7/bgm.webp");
     gap: sizem(42.6);
     .t {
       @apply pointer-events-none;
@@ -297,19 +297,19 @@ const onMove = (val, val2) => {
 
 const imgs = [
   {
-    img: new URL("../section/s7/1.jpg", import.meta.url).href,
+    img: new URL("../section/s7/1.webp", import.meta.url).href,
     c1: `上境設計 G-Design<span>許富居</span>`,
     c2: `豪宅欽定，自然詩人`,
     c3: `力求景觀與環境互相融合為「以綠入景，由景入心」的境界，以人與人互動模式為基礎，以空間詮釋生活的變化表現。`,
   },
   {
-    img: new URL("../section/s7/2.jpg", import.meta.url).href,
+    img: new URL("../section/s7/2.webp", import.meta.url).href,
     c1: `天坊室內設計<span>張清平</span>`,
     c2: `台灣首位紅點設計獎得主`,
     c3: `堅持將本土特色融入設計中，實現古代智能現代化，西方設計中國化，中西合併國際化的目標，以當代設計，開創不一樣的心奢華。`,
   },
   {
-    img: new URL("../section/s7/3.jpg", import.meta.url).href,
+    img: new URL("../section/s7/3.webp", import.meta.url).href,
     c1: `永豐建築師事務所<span>呂永豐</span>`,
     c2: `大師手筆，建築巨擘`,
     c3: `好的居宅，除了擁有建築華麗的外觀，更重要的是讓居住者開始懂得享受人生，讓建築以柔韌的力量歷經歲月，成為優雅的經典之作。`,
