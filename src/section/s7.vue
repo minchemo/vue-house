@@ -1,51 +1,74 @@
 <template>
   <article class="s7">
     <div class="t">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">
-        三所校園就近成長 <br v-if="isMobile" />孩子贏在起跑點
-      </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="0">
-        碧華國小、碧華國中、新北高中，<br />
-        朗朗書聲伴隨鐘響，沐浴書香文風、薰染人文氣質。<br />
-        三座校園一路陪伴，讓您的孩子贏在人生起跑點。
-      </div>
+      <div class="t1">匯名匠之作 禮大地風範</div>
+      <img class="t2" src="@/section/s7/en.png" alt="" />
     </div>
-    <div class="swiper-box">
+    <div class="swiper-box relative">
       <Splide
-        :options="sConfig"
         ref="splide"
         class="slide"
+        :options="{
+          drag: isMobile,
+          arrows: false,
+          autoplay: isMobile,
+          pagination: false,
+          interval: 4000,
+          gap: 0,
+          type: 'loop',
+          autoWidth: true,
+        }"
         @splide:move="onMove"
       >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgs"
-          :style="{ 'background-image': `url(${i.img})` }"
-        >
-          <div class="caption">
-            {{ i.caption }}
-          </div>
-        </SplideSlide>
+        <template v-if="!isMobile">
+          <SplideSlide
+            class="slide-item"
+            :class="{ active: i === activeIdx }"
+            :key="i"
+            v-for="(item, i) in imgs"
+          >
+            <div
+              class="avatar"
+              :style="{ 'background-image': `url(${item.img})` }"
+              @click="activeIdx = i"
+              @mouseover="activeIdx = i"
+              @mouseleave="activeIdx = -1"
+            ></div>
+            <div class="c1" v-html="item.c1"></div>
+            <div class="c2" v-html="item.c2"></div>
+            <div class="c3" v-html="item.c3"></div>
+          </SplideSlide>
+        </template>
+        <template v-else>
+          <SplideSlide class="slide-item" :key="i" v-for="(item, i) in imgs">
+            <div
+              class="avatar"
+              :style="{ 'background-image': `url(${item.img})` }"
+              @click="activeIdx = i"
+            ></div>
+            <div class="c1" v-html="item.c1"></div>
+            <div class="c2" v-html="item.c2"></div>
+            <div class="c3" v-html="item.c3"></div>
+          </SplideSlide>
+        </template>
       </Splide>
-      <div class="arrows" v-if="isMobile">
+      <div class="mo-arrow" v-if="isMobile">
         <img
-          @click="splide.go('<')"
           class="prev"
+          @click="splide.go('<')"
           src="@/section/arrow.png"
-          alt="r"
+          alt=""
           srcset=""
         />
         <img
-          @click="splide.go('>')"
           class="next"
+          @click="splide.go('>')"
           src="@/section/arrow.png"
-          alt="r"
+          alt=""
           srcset=""
         />
       </div>
     </div>
-    <div class="cap">情境示意圖</div>
   </article>
 </template>
 
@@ -53,73 +76,106 @@
 @import "@/assets/style/function.scss";
 
 .s7 {
-  @apply w-full relative bg-cover text-white;
+  @apply w-full relative text-white bg-cover;
+  @apply flex flex-col justify-start items-center;
   height: size(1080);
+  padding-top: size(132);
   background-image: url("@/section/s7/bg.jpg");
-  padding-left: size(213);
-  padding-top: size(71);
-
+  gap: size(65);
   .t {
-    @apply flex items-start;
-    gap: size(50);
+    @apply pointer-events-none;
+    @apply relative z-10;
+    @apply flex flex-col items-center justify-center;
+    gap: size(33);
     .t1 {
-      @apply relative;
-      font-size: size(40);
+      font-size: size(48);
       font-weight: 700;
-      letter-spacing: size(8);
-
-      &::after {
-        @apply absolute left-0 w-full;
-        bottom: -#{size(25)};
-        content: "";
-        height: 2px;
-        background: #fcee21;
-      }
+      letter-spacing: size(2.88);
     }
     .t2 {
-      font-size: size(20);
-      font-weight: 400;
-      line-height: 150%; /* 30px */
-      letter-spacing: size(4);
+      width: size(717.8);
     }
   }
-
   .swiper-box {
-    @apply relative z-10;
-    margin-top: size(62);
-    width: size(1450);
+    width: size(1127);
+    height: size(428.08);
     .slide-item {
-      @apply bg-cover;
-      width: size(707);
-      height: size(472);
-      margin-right: size(23);
-      .caption {
-        @apply absolute bottom-0 w-full text-white text-right;
-        @apply flex items-end justify-end;
-        padding: size(10);
-        background: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.8) 0%,
-          rgba(0, 0, 0, 0) 100%
-        );
-        height: size(68);
-        font-size: size(12);
+      @apply relative;
+      width: size(333.15);
+      height: auto;
+      margin-right: size(63.85);
+      .avatar {
+        @apply w-full brightness-[0.3] transition-all;
+        @apply cursor-pointer;
+        height: size(428.08);
+        background-size: 101%;
+        margin-bottom: size(46);
+        &:hover {
+          @apply brightness-100;
+        }
+      }
+      .c1 {
+        @apply absolute whitespace-nowrap select-none;
+        right: size(16);
+        top: size(22);
+        writing-mode: vertical-lr;
+        color: #ceaf73;
+        font-size: size(17);
+        font-weight: 700;
+        letter-spacing: size(1.445);
+        span {
+          @apply relative;
+          margin-top: size(20);
+
+          &::after {
+            @apply bg-[#ceaf73] absolute rotate-[139.76deg];
+            content: "";
+            width: size(17);
+            height: 1px;
+            bottom: 115%;
+            left: 10%;
+          }
+        }
+      }
+      .c2 {
+        @apply absolute whitespace-nowrap select-none;
+        right: size(42);
+        top: size(22);
+        writing-mode: vertical-lr;
+        color: #fff;
+        font-size: size(30.33);
         font-weight: 400;
-        letter-spacing: size(2.4);
+        letter-spacing: size(5);
+      }
+      .c3 {
+        @apply relative select-none opacity-0 transition-all;
+        color: #fff;
+        text-align: justify;
+        font-size: size(15);
+        font-weight: 350;
+        line-height: 155.928%;
+        letter-spacing: size(0.9);
+        &::after {
+          @apply absolute;
+          @apply bg-cover bg-no-repeat;
+          @apply left-1/2 -translate-x-1/2;
+          bottom: 120%;
+          content: "";
+          width: size(31);
+          height: size(15);
+          background-image: url("@/section/s7/arror.png");
+        }
+      }
+
+      &.active {
+        .avatar {
+          @apply brightness-100;
+        }
+        .c3 {
+          @apply opacity-100;
+        }
       }
     }
-  }
-
-  .cap {
-    @apply absolute z-10;
-    @apply text-white;
-    right: size(8);
-    bottom: size(8);
-
-    text-shadow: 0.5px 0.5px 2px #000;
-    font-size: size(12);
-    font-weight: 400;
-    letter-spacing: size(2.4);
   }
 }
 
@@ -130,146 +186,133 @@
 
 @media screen and (max-width: 767px) {
   .s7 {
-    @apply w-full relative bg-cover text-white;
-    height: sizem(728);
+    @apply w-full relative text-white bg-cover;
+    @apply flex flex-col justify-start items-center;
+    height: sizem(674);
+    padding-top: sizem(32);
     background-image: url("@/section/s7/bgm.jpg");
-    padding-left: 0;
-    padding-top: sizem(60);
-
+    gap: sizem(42.6);
     .t {
-      @apply flex flex-col items-start;
-      gap: sizem(13.5);
-      padding: 0 sizem(32.5);
+      @apply pointer-events-none;
+      @apply relative z-10;
+      @apply flex flex-col-reverse items-center justify-center;
+      gap: sizem(10);
       .t1 {
-        @apply relative;
         font-size: sizem(25);
         font-weight: 700;
-        letter-spacing: sizem(5);
-
-        &::after {
-          bottom: -#{sizem(140)};
-          content: "";
-          width: sizem(310);
-          height: 2px;
-          background: #fcee21;
-        }
+        letter-spacing: 1.5px;
       }
       .t2 {
-        font-size: sizem(14);
-        letter-spacing: sizem(2.8);
+        width: sizem(315);
       }
     }
-
     .swiper-box {
-      @apply relative z-10;
-      margin-top: sizem(50);
-      width: sizem(375);
+      width: sizem(316);
+      height: sizem(404.75);
       .slide-item {
-        @apply bg-cover;
-        width: sizem(332.5);
-        height: sizem(222);
-        margin-right: sizem(16.47);
-        .caption {
-          @apply absolute bottom-0 w-full text-white text-right;
-          @apply flex items-end justify-end;
-          padding: sizem(10);
-          background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.8) 0%,
-            rgba(0, 0, 0, 0) 100%
-          );
-          height: sizem(68);
-          font-size: sizem(11);
+        @apply relative;
+        width: sizem(316);
+        height: auto;
+        margin-right: sizem(20);
+        .avatar {
+          @apply w-full brightness-100 transition-all;
+          @apply cursor-pointer;
+          height: sizem(404);
+          background-size: 101%;
+          margin-bottom: sizem(15);
+          &:hover {
+            @apply brightness-100;
+          }
+        }
+        .c1 {
+          @apply absolute whitespace-nowrap select-none;
+          right: sizem(8);
+          top: sizem(15);
+          writing-mode: vertical-lr;
+          color: #ceaf73;
+          font-size: sizem(15);
+          font-weight: 700;
+          letter-spacing: 1.5px;
+          span {
+            @apply relative;
+            margin-top: sizem(20);
+
+            &::after {
+              @apply bg-[#ceaf73] absolute rotate-[139.76deg];
+              content: "";
+              width: sizem(17);
+              height: 1px;
+              bottom: 116%;
+              left: 10%;
+            }
+          }
+        }
+        .c2 {
+          @apply absolute whitespace-nowrap select-none;
+          right: sizem(32);
+          top: sizem(15);
+          writing-mode: vertical-lr;
+          color: #fff;
+          font-size: sizem(20);
           font-weight: 400;
-          letter-spacing: sizem(2.2);
+          letter-spacing: 7px;
+        }
+        .c3 {
+          @apply relative select-none opacity-100 transition-all;
+          font-size: sizem(13);
+          font-weight: 350;
+          line-height: 155.928%;
+          letter-spacing: 0.78px;
+          &::after {
+            @apply hidden;
+          }
+        }
+
+        &.active {
+          .avatar {
+            @apply brightness-100;
+          }
+          .c3 {
+            @apply opacity-100;
+          }
         }
       }
-      .arrows {
-        @apply absolute w-full;
-        @apply flex items-center justify-between;
-        @apply top-1/2 -translate-y-1/2;
-        @apply pointer-events-none;
-        padding: 0 sizem(10);
-        img {
-          @apply pointer-events-auto;
-          width: sizem(12.8);
-        }
-        .prev {
-        }
-
-        .next {
-          @apply -scale-x-100;
-        }
-      }
-    }
-
-    .cap {
-      @apply absolute z-10;
-      @apply text-white;
-      right: sizem(8);
-      bottom: sizem(8);
-
-      font-size: sizem(11);
-      font-weight: 400;
-      letter-spacing: sizem(2.2);
     }
   }
 }
 </style>
 
 <script setup>
-import {
-  computed,
-  getCurrentInstance,
-  ref,
-  inject,
-  onMounted,
-  nextTick,
-} from "vue"
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
-const sConfig = {
-  autoWidth: true,
-  arrows: false,
-  autoplay: true,
-  pagination: false,
-  gap: 0,
-  type: "loop",
-}
-
-let moving = false
+const activeIdx = ref(0)
 
 const onMove = (val, val2) => {
-  if (moving) return
-  moving = true
-
-  nextTick(() => {
-    splide.value.go(val2 + 1)
-    setTimeout(() => {
-      moving = false
-    }, 100)
-  })
+  activeIdx.value = val2
 }
 
 const imgs = [
   {
     img: new URL("../section/s7/1.jpg", import.meta.url).href,
-    caption: "新北高中",
+    c1: `上境設計 G-Design<span>許富居</span>`,
+    c2: `豪宅欽定，自然詩人`,
+    c3: `力求景觀與環境互相融合為「以綠入景，由景入心」的境界，以人與人互動模式為基礎，以空間詮釋生活的變化表現。`,
   },
   {
     img: new URL("../section/s7/2.jpg", import.meta.url).href,
-    caption: "碧華國小",
+    c1: `天坊室內設計<span>張清平</span>`,
+    c2: `台灣首位紅點設計獎得主`,
+    c3: `堅持將本土特色融入設計中，實現古代智能現代化，西方設計中國化，中西合併國際化的目標，以當代設計，開創不一樣的心奢華。`,
   },
   {
     img: new URL("../section/s7/3.jpg", import.meta.url).href,
-    caption: "碧華國小",
-  },
-  {
-    img: new URL("../section/s7/4.jpg", import.meta.url).href,
-    caption: "碧華國中",
+    c1: `永豐建築師事務所<span>呂永豐</span>`,
+    c2: `大師手筆，建築巨擘`,
+    c3: `好的居宅，除了擁有建築華麗的外觀，更重要的是讓居住者開始懂得享受人生，讓建築以柔韌的力量歷經歲月，成為優雅的經典之作。`,
   },
 ]
 </script>

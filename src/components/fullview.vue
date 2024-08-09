@@ -3,14 +3,14 @@
     <img
       class="view1 select-none"
       ref="viewImg"
-      src="@/section/s2/view.jpg"
+      src="@/section/s4/map.jpg"
       alt=""
       srcset=""
     />
 
-    <!-- <div class="mask" v-bind:class="{ hide: swiped }">
-      <img src="@/section/s2/hand.svg" alt="" srcset="" />
-    </div> -->
+    <div class="mask" v-bind:class="{ hide: swiped }">
+      <img src="@/section/hand.svg" alt="" srcset="" />
+    </div>
   </div>
 </template>
 
@@ -52,6 +52,7 @@
     }
 
     .mask {
+      @apply bg-[#0D5052]/50;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -65,12 +66,6 @@
       opacity: 1;
       transition: all 1s;
 
-      background: linear-gradient(
-        0deg,
-        rgba(2, 103, 196, 0) 0%,
-        rgba(2, 103, 196, 0.5) 14.5%,
-        rgba(2, 103, 196, 1) 100%
-      );
 
       img {
         min-width: unset;
@@ -92,7 +87,7 @@ import { onMounted, ref } from "vue"
 const viewbox = ref()
 const viewImg = ref()
 const swiped = ref(false)
-const offsetRatio = 1.26 //調整此值設定X軸位置偏移參數
+const offsetRatio = 2 //調整此值設定X軸位置偏移參數
 
 onMounted(() => {
   viewImg.value.addEventListener("load", () => {

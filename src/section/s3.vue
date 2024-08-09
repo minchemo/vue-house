@@ -1,16 +1,30 @@
 <template>
   <article class="s3">
-    <div class="t" data-aos="fade-up" data-aos-delay="0">
-      <div class="t1">徐匯中學站 雙線捷運宅</div>
-      <div class="t2">
-        徐匯中學捷運站450公尺，<br />
-        蘆洲線、環狀線(施工中)雙捷運樞紐金鑽，<br />
-        環狀線三站讀秒直驅北市士林區，<br />
-        蘆洲線三站瞬間抵達北市大同區。
+    <div class="t">
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
+        世界即眼下，七期最國際
       </div>
+      <img class="t2" 
+      data-aos="fade-up"
+      data-aos-delay="200" src="@/section/s3/t2.png" alt="" />
     </div>
     <div class="swiper-box">
-      <Splide :options="sConfig" ref="splide" class="slide">
+      <Splide
+        ref="splide"
+        class="slide"
+        :options="{
+          rewind: true,
+          arrows: false,
+          autoplay: true,
+          pagination: false,
+          interval: 3000,
+          pauseOnHover: false,
+          pauseOnFocus: false,
+          gap: 0,
+          type: 'fade',
+          autoWidth: true,
+        }"
+      >
         <SplideSlide
           class="slide-item"
           :key="i"
@@ -22,25 +36,22 @@
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows" v-if="isMobile">
-        <img
-          @click="splide.go('<')"
-          class="prev"
-          src="@/section/arrow.png"
-          alt="r"
-          srcset=""
-        />
-        <img
-          @click="splide.go('>')"
-          class="next"
-          src="@/section/arrow.png"
-          alt="r"
-          srcset=""
-        />
-      </div>
     </div>
-    <div class="mrt" v-if="!isMobile">
-      <div class="caption">徐匯中學站</div>
+    <div class="arrows" v-if="!isMobile">
+      <img
+        class="prev"
+        @click="splide.go('<')"
+        src="@/section/s3/arrow.png"
+        alt=""
+        srcset=""
+      />
+      <img
+        class="next"
+        @click="splide.go('>')"
+        src="@/section/s3/arrow.png"
+        alt=""
+        srcset=""
+      />
     </div>
   </article>
 </template>
@@ -49,57 +60,52 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply w-full relative bg-cover;
-  height: size(820);
-  background-image: url("@/section/s3/bg.jpg");
-  padding: 0 size(185);
-  padding-top: size(75);
-  .mrt {
-    @apply absolute right-0 top-0 w-full h-full;
-    background-image: url("@/section/s3/mrt.png");
-    background-size: cover;
-    .caption {
-      @apply absolute text-white;
-      right: size(15);
-      bottom: size(7);
-      font-size: size(12);
-      font-weight: 400;
-      letter-spacing: size(2.4);
-    }
-  }
+  @apply w-full relative text-white;
+  height: size(1242);
+  padding-top: size(140);
   .t {
-    @apply relative z-[1] text-black;
+    @apply pointer-events-none;
+    @apply relative z-10;
+    @apply flex flex-col items-center justify-center;
+    gap: size(33);
     .t1 {
-      font-size: size(40);
+      font-size: size(48);
       font-weight: 700;
-      letter-spacing: size(8);
+      letter-spacing: size(2.88);
     }
     .t2 {
-      @apply relative;
-      font-size: size(20);
-      font-weight: 400;
-      line-height: 150%;
-      letter-spacing: size(4);
-      margin-top: size(20);
-
-      &::after {
-        @apply absolute left-0;
-        bottom: -#{size(45)};
-        content: "";
-        width: size(377);
-        height: 2px;
-        background: #fcee21;
-      }
+      width: size(1169);
     }
   }
   .swiper-box {
-    @apply relative;
-    margin-top: size(167);
-    @apply relative z-10;
+    @apply w-full h-full absolute left-0 top-0;
     .slide-item {
-      width: size(524);
-      height: size(314);
-      margin-right: size(48);
+      @apply relative bg-cover;
+      width: size(1920);
+      height: size(1242);
+      .caption {
+        @apply absolute;
+        font-size: size(14);
+        font-weight: 400;
+        letter-spacing: size(0.84);
+        right: size(30);
+        bottom: size(10);
+      }
+    }
+  }
+  .arrows {
+    @apply absolute w-full;
+    @apply flex items-center justify-center pointer-events-none;
+    gap: size(90);
+    bottom: size(50);
+
+    .prev {
+      @apply -scale-x-100;
+    }
+
+    img {
+      @apply cursor-pointer pointer-events-auto;
+      width: size(36);
     }
   }
 }
@@ -111,57 +117,36 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    height: sizem(667);
-    background-image: url("@/section/s3/bgm.jpg");
-    padding: 0;
-    padding-top: sizem(60);
-
+    @apply w-full relative text-white;
+    height: sizem(558);
+    padding-top: sizem(50);
     .t {
-      padding: 0 sizem(32.5);
+      @apply pointer-events-none;
+      @apply relative z-10;
+      @apply flex flex-col items-center justify-center;
+      gap: sizem(17);
       .t1 {
-        @apply whitespace-nowrap;
         font-size: sizem(25);
-        letter-spacing: sizem(5);
+        font-weight: 700;
+        letter-spacing: sizem(1.5);
       }
       .t2 {
-        @apply relative;
-        font-size: sizem(14);
-        font-weight: 400;
-        line-height: 150%;
-        letter-spacing: sizem(1.4);
-        margin-top: sizem(14);
-
-        &::after {
-          bottom: -#{sizem(29)};
-          width: sizem(310);
-        }
+        width: sizem(315);
       }
     }
     .swiper-box {
-      @apply relative;
-      margin-top: sizem(63);
-      @apply relative z-10;
+      @apply w-full h-full absolute left-0 top-0;
       .slide-item {
-        width: sizem(300);
-        height: sizem(180);
-        margin-right: sizem(10);
-      }
-
-      .arrows {
-        @apply absolute w-full;
-        @apply flex items-center justify-between;
-        @apply top-1/2 -translate-y-1/2;
-        @apply pointer-events-none;
-        padding: 0 sizem(10);
-        img {
-          @apply pointer-events-auto;
-          width: sizem(12.8);
-        }
-        .prev {
-        }
-
-        .next {
-          @apply -scale-x-100;
+        @apply relative;
+        width: sizem(375);
+        height: sizem(558);
+        .caption {
+          @apply absolute;
+          font-size: sizem(14);
+          font-weight: 400;
+          letter-spacing: sizem(0.84);
+          right: sizem(30);
+          bottom: sizem(10);
         }
       }
     }
@@ -171,31 +156,30 @@
 
 <script setup>
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
-import fullview from "@/components/fullview.vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
-const sConfig = {
-  autoWidth: true,
-  arrows: false,
-  autoplay: globals.$isMobile() ? true : false,
-  pagination: false,
-  drag: globals.$isMobile() ? true : false,
-  interval: 4000,
-  gap: 0,
-  type: globals.$isMobile() ? "loop" : "",
-}
 
 const imgs = [
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
-    caption: "",
+    img: globals.$isMobile()
+      ? new URL("../section/s3/1m.jpg", import.meta.url).href
+      : new URL("../section/s3/1.jpg", import.meta.url).href,
+    caption: "情境示意圖",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
-    caption: "",
+    img: globals.$isMobile()
+      ? new URL("../section/s3/2m.jpg", import.meta.url).href
+      : new URL("../section/s3/2.jpg", import.meta.url).href,
+    caption: "情境示意圖",
+  },
+  {
+    img: globals.$isMobile()
+      ? new URL("../section/s3/3m.jpg", import.meta.url).href
+      : new URL("../section/s3/3.jpg", import.meta.url).href,
+    caption: "情境示意圖",
   },
 ]
 </script>

@@ -21,7 +21,7 @@
         <div
           class="menu-item font-bold cursor-pointer font-['noto_serif_tc']"
           v-for="(item, i) in info.navList"
-          :class="{ active: activeMenuIdx === i }"
+          :class="{ active: activeMenuIdx === i, isOrder: item.isOrder }"
           @click="scrollTo(item.target, i)"
         >
           <!-- <img src="@/assets/menu_icon.png" alt="" srcset=""> -->
@@ -64,7 +64,7 @@
   }
 
   .menu-btn {
-    background: rgba($color: #fff, $alpha: 0);
+    background: rgba($color: #fff, $alpha: 0.5);
     height: size(62);
     width: size(62);
     display: flex;
@@ -82,7 +82,7 @@
     .bar {
       width: size(30);
       height: 2px;
-      background-color: #653F28;
+      background-color: #505050;
       position: relative;
       transform: all 0.5s;
 
@@ -92,7 +92,7 @@
         height: 2px;
         bottom: -#{size(10)};
         position: absolute;
-        background-color: #653F28;
+        background-color: #505050;
         transition: all 0.5s;
       }
 
@@ -102,7 +102,7 @@
         height: 2px;
         top: -#{size(10)};
         position: absolute;
-        background-color: #653F28;
+        background-color: #505050;
         transition: all 0.5s;
       }
     }
@@ -152,7 +152,7 @@
     border-radius: 0;
     padding: size(100) 0;
     backdrop-filter: blur(2px);
-    background: #653F28;
+    background: #034150;
 
     .menu-item-wrapper {
       @apply flex flex-col relative;
@@ -171,7 +171,7 @@
       font-family: "Noto Sans TC";
       font-weight: 500;
       color: #fff;
-      letter-spacing:0.1em;
+      letter-spacing: 0.1em;
 
       img {
         width: size(43);
@@ -195,7 +195,12 @@
         color: #a3a3a3;
       }
 
-
+      &.isOrder {
+        @apply bg-[#83CCD2] text-[#034150];
+        padding: size(5) size(35);
+        border-radius: 10px;
+        margin-top: 20px;
+      }
     }
 
     &.open {
@@ -358,7 +363,7 @@
       .menu-item {
         font-size: sizem(23);
         gap: 0;
-       // letter-spacing: sizem(4);
+        // letter-spacing: sizem(4);
 
         &::after {
           width: sizem(202);
@@ -376,6 +381,14 @@
           }
         }
 
+        &.isOrder {
+          @apply bg-[#83CCD2] text-[#034150];
+          padding: sizem(5) sizem(35);
+          border-radius: 10px;
+          margin-top: 20px;
+          letter-spacing: 10px;
+          text-indent: 10px;
+        }
       }
 
       &.open {

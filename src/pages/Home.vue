@@ -8,7 +8,7 @@
     }"
     class="transition-all duration-500flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]"
   >
-    <img class="w-32" src="@/assets/loading_w.gif" alt="吉晟賦" srcset="" />
+    <img class="w-32" src="@/assets/loading_w.gif" alt="豐邑匯禮" srcset="" />
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
@@ -22,14 +22,14 @@
     <S5 />
     <S6 />
     <S7 />
-    <S8 />
-    <S9 />
     <Order />
   </div>
 </template>
 
-<style>
+<style lang="scss">
 @import "@/assets/style/custom-aos.css";
+@import "@/assets/style/function.scss";
+
 img {
   display: inline;
   max-width: unset;
@@ -42,6 +42,19 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .mo-arrow {
+    @apply absolute w-screen left-0 z-10;
+    @apply flex justify-between items-center;
+    @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none;
+    padding: 0 10px;
+    .next {
+      @apply -scale-x-100;
+    }
+    img {
+      @apply pointer-events-auto;
+      width: sizem(15);
+    }
+  }
 }
 </style>
 
@@ -54,8 +67,6 @@ import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

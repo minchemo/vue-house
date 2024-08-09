@@ -1,40 +1,85 @@
 <template>
   <article class="s6">
-    <div class="left">
-      <img class="en" src="@/section/s6/en.png" alt="" />
-      <div class="imgbox">
-        <img
-          src="@/section/s6/1.jpg"
-          alt=""
-          data-aos="fade-left"
-          data-aos-delay="0"
-        />
-        <img
-          src="@/section/s6/2.jpg"
-          alt=""
-          data-aos="fade-left"
-          data-aos-delay="0"
-        />
-        <div class="cap">
-          <div class="line"></div>
-          <p>碧華公園</p>
-        </div>
-      </div>
-    </div>
     <div class="t">
       <div class="t1" data-aos="fade-up" data-aos-delay="0">
-        五座公園環繞生活<br />
-        璀璨的城市綠寶石
+        匯綠馥大地，禮鮮氧體會
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="0">
-        永安兒童公園、尼加拉瓜公園、<br v-if="!isMobile" />
-        三蘆公園、碧華公園、慈愛公園，<br v-if="!isMobile" />
-        五座公園環繞老中青三代生活，<br v-if="!isMobile" />
-        城市最難得的綠色悠閒，<br v-if="!isMobile" />
-        是您最親密的日常場景。
+      <img
+        class="t2"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        src="@/section/s6/en.png"
+        alt=""
+      />
+      <div class="t3" data-aos="fade-up" data-aos-delay="200">
+        為您將台中七期的森林綠馥備妥安放，文心森林公園的綠意盎然、假日出遊的首選之地，<br />
+        搭配禮惠公園與南屯公園的悠然鮮氧，這裡的生活時光，是一份無可取代的鮮氧森活式。
       </div>
     </div>
-    <div class="caption">情境示意圖</div>
+    <div class="swiper-box">
+      <Splide
+        ref="splide"
+        class="slide"
+        :options="{
+          arrows: false,
+          autoplay: true,
+          pagination: false,
+          interval: 4000,
+          gap: 0,
+          type: 'loop',
+          autoWidth: true,
+        }"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+          <div class="caption">
+            {{ i.caption }}
+          </div>
+        </SplideSlide>
+      </Splide>
+    </div>
+    <div class="info" v-if="!isMobile">
+      <div class="c">
+        為您將台中七期的森林綠馥備妥安放，文心森林公園的綠意盎然、假日出遊的首選之地，<br /><br />
+        搭配禮惠公園與南屯公園的悠然鮮氧，這裡的生活時光，是一份無可取代的鮮氧森活式。
+      </div>
+      <div class="arrows">
+        <img
+          class="prev"
+          @click="splide.go('<')"
+          src="@/section/s6/arrow.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          class="next"
+          @click="splide.go('>')"
+          src="@/section/s6/arrow.png"
+          alt=""
+          srcset=""
+        />
+      </div>
+    </div>
+    <div class="mo-arrow" v-if="isMobile">
+      <img
+        class="prev"
+        @click="splide.go('<')"
+        src="@/section/arrow.png"
+        alt=""
+        srcset=""
+      />
+      <img
+        class="next"
+        @click="splide.go('>')"
+        src="@/section/arrow.png"
+        alt=""
+        srcset=""
+      />
+    </div>
   </article>
 </template>
 
@@ -42,75 +87,69 @@
 @import "@/assets/style/function.scss";
 
 .s6 {
-  @apply w-full relative bg-cover;
-  @apply flex items-start justify-start;
+  @apply w-full relative text-white;
   height: size(1080);
-  background-image: url("@/section/s6/bg.jpg");
-  padding-left: size(146.23);
-  padding-top: size(40.92);
-  gap: size(90);
-
-  .left {
-    @apply flex-[0];
-    @apply flex items-start;
-    gap: size(36.53);
-    .en {
-      width: size(30.24);
-    }
-    .imgbox {
-      @apply flex flex-col relative;
-      gap: size(20);
-      > img {
-        width: size(820);
-        height: size(492);
-      }
-
-      .cap {
-        @apply flex items-center;
-        @apply absolute z-10;
-        bottom: size(10);
-        left: size(26);
-        gap: size(17);
-        .line {
-          width: size(711);
-          height: 2px;
-          background: #fcee21;
-        }
-        p {
-          @apply text-white;
-          font-size: size(12);
-          font-weight: 400;
-          letter-spacing: size(2.4);
-        }
-      }
-    }
-  }
+  padding-top: size(132);
   .t {
-    @apply text-white;
+    @apply pointer-events-none;
+    @apply relative z-10;
+    @apply flex flex-col items-center justify-center;
+    gap: size(33);
     .t1 {
-      font-size: size(40);
+      font-size: size(48);
       font-weight: 700;
-      line-height: 140%; /* 56px */
-      letter-spacing: size(8);
+      letter-spacing: size(2.88);
     }
     .t2 {
-      margin-top: size(33);
-      font-size: size(20);
-      font-weight: 400;
-      line-height: 150%; /* 30px */
-      letter-spacing: size(4);
+      width: size(717.8);
     }
   }
-  .caption {
-    @apply absolute z-10;
-    @apply text-white;
-    right: size(8);
-    bottom: size(8);
+  .swiper-box {
+    @apply w-full h-full absolute left-0 top-0;
+    .slide-item {
+      @apply relative bg-cover;
+      width: size(1920);
+      height: size(1080);
+      .caption {
+        @apply absolute;
+        font-size: size(14);
+        font-weight: 400;
+        letter-spacing: size(0.84);
+        right: size(30);
+        bottom: size(10);
+      }
+    }
+  }
+  .info {
+    @apply absolute z-10 bg-white/70;
+    left: size(92);
+    bottom: 0;
+    width: size(344);
+    height: size(350);
+    padding: 0 size(50);
+    padding-top: size(74);
+    .c {
+      color: #034150;
+      text-align: justify;
+      font-size: size(15);
+      font-weight: 400;
+      letter-spacing: size(0.9);
+    }
+    .arrows {
+      @apply relative;
+      @apply flex items-center justify-center pointer-events-none;
+      gap: size(90);
+      margin-top: size(43);
 
-    text-shadow: 0.5px 0.5px 2px #000;
-    font-size: size(12);
-    font-weight: 400;
-    letter-spacing: size(2.4);
+      .prev {
+        @apply -scale-x-100;
+      }
+
+      img {
+        @apply cursor-pointer pointer-events-auto;
+        width: size(36);
+      }
+    }
   }
 }
 
@@ -121,63 +160,46 @@
 
 @media screen and (max-width: 767px) {
   .s6 {
-    @apply w-full relative bg-cover;
-    @apply flex flex-col items-start justify-start;
-    height: sizem(1091);
-    background-image: url("@/section/s6/bgm.jpg");
-    padding-left: 0;
-    padding-top: sizem(30);
-    gap: sizem(87);
-
-    .left {
-      @apply flex-[0];
-      @apply flex items-start justify-center w-full;
-      gap: sizem(14.89);
-      .en {
-        width: sizem(13.83);
-      }
-      .imgbox {
-        @apply flex flex-col relative;
-        gap: sizem(7.27);
-        > img {
-          width: sizem(298.11);
-          height: sizem(178.66);
-        }
-
-        .cap {
-          bottom: sizem(10);
-          left: sizem(10);
-          gap: sizem(17);
-          .line {
-            width: sizem(208.16);
-          }
-          p {
-            @apply whitespace-nowrap;
-            font-size: sizem(11);
-            letter-spacing: sizem(2.2);
-          }
-        }
-      }
-    }
+    @apply w-full relative text-white;
+    height: sizem(628);
+    padding-top: sizem(50);
     .t {
-      @apply text-white;
-      padding: 0 sizem(31);
+      @apply pointer-events-none;
+      @apply relative z-10;
+      @apply flex flex-col items-center justify-center;
+      gap: size(33);
       .t1 {
-        font-size: sizem(25);
-        letter-spacing: sizem(5);
+        font-size: sizem(13);
+        font-weight: 700;
+        letter-spacing: size(2.88);
       }
       .t2 {
-        margin-top: sizem(25);
-        font-size: sizem(14);
-        letter-spacing: sizem(2.8);
+        width: sizem(315);
+        margin-top: sizem(9);
+      }
+      .t3 {
+        width: sizem(315);
+        font-size: sizem(13);
+        font-weight: 400;
+        margin-top: sizem(17.32);
+        letter-spacing: 0.78px;
       }
     }
-    .caption {
-      right: sizem(8);
-      bottom: sizem(8);
-      font-size: sizem(11);
-      font-weight: 400;
-      letter-spacing: sizem(2.2);
+    .swiper-box {
+      @apply w-full h-full absolute left-0 top-0;
+      .slide-item {
+        @apply relative bg-cover;
+        width: sizem(375);
+        height: sizem(628);
+        .caption {
+          @apply absolute;
+          font-size: sizem(12);
+          font-weight: 400;
+          letter-spacing: 0.78px;
+          right: sizem(15);
+          bottom: sizem(10);
+        }
+      }
     }
   }
 }
@@ -188,4 +210,25 @@ import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
 const isMobile = computed(() => globals.$isMobile())
+
+const splide = ref()
+
+const imgs = [
+  {
+    img: new URL("../section/s6/1.jpg", import.meta.url).href,
+    caption: "南屯公園",
+  },
+  {
+    img: new URL("../section/s6/2.jpg", import.meta.url).href,
+    caption: "南屯公園",
+  },
+  {
+    img: new URL("../section/s6/3.jpg", import.meta.url).href,
+    caption: "文心公園",
+  },
+  {
+    img: new URL("../section/s6/4.jpg", import.meta.url).href,
+    caption: "文心公園",
+  },
+]
 </script>

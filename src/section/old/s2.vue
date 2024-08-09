@@ -5,7 +5,7 @@
       <div class="t2" data-aos="fade-up" data-aos-delay="200">各大園區全能同步</div>
       <div class="t3" data-aos="fade-up" data-aos-delay="400">
         近距北士科、內湖科技園區、圓山新創產業聚落、新北知識產業園區，<br />
-        前迎家樂福、後擁銀河灣開發計畫，百年難得一見的三重地王【吉晟賦】，佔盡地利優勢！
+        前迎家樂福、後擁銀河灣開發計畫，百年難得一見的三重地王【豐邑匯禮】，佔盡地利優勢！
       </div>
     </div>
     <div class="fillcolor"></div>

@@ -1,39 +1,17 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="intro">
-        <img
-          class="logo"
-          src="@/section/order/logo.png"
-          alt=""
-          srcset=""
-          data-aos="fade-up"
-          data-aos-delay="0"
-        />
-        <div class="t" data-aos="fade-up" data-aos-delay="0">
-          接待會館<br />
-
-          新北市三重區仁安街108號<br /><br />
-          禮賓專線<br />
-          02-8282-8088
-        </div>
-      </div>
-      <!-- Title -->
-
-      <!-- <div class="cus-divider"></div> -->
-
-      <!-- Title Image
-      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
- -->
-      <!-- Custom Image -->
-
+      <img class="logo" src="@/section/logo.png" alt="" srcset="">
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center z-10">
         <div class="s-order-title">
-          <p>
+          <p v-if="!isMobile">
             {{ info.order.title }}
           </p>
-          <p>
+          <p v-else>
+            預約賞屋
+          </p>
+          <p v-if="!isMobile">
             {{ info.order.subTitle }}
           </p>
         </div>
@@ -43,7 +21,7 @@
             <input
               type="text"
               placeholder="姓名"
-              class="input w-full rounded-none placeholder:text-[#36677F]"
+              class="input w-full rounded-none placeholder:text-[#fff]"
               :value="formData.name"
               @input="(event) => (formData.name = event.target.value)"
           /></label>
@@ -52,13 +30,13 @@
             <input
               type="text"
               placeholder="手機"
-              class="input w-full rounded-none placeholder:text-[#36677F]"
+              class="input w-full rounded-none placeholder:text-[#fff]"
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
 
           <label class="row" v-if="info.room_type"
-            ><span>需求房型</span>
+            ><span>需求房型<span>(必填)</span></span>
             <select
               class="select w-full rounded-none"
               v-model="formData.room_type"
@@ -71,7 +49,7 @@
               ></option></select
           ></label>
           <label class="row" v-if="info.budget.length > 0"
-            ><span>購屋預算</span>
+            ><span>購屋預算<span>(必填)</span></span>
             <select
               class="select w-full rounded-none bg-white"
               v-model="formData.budget"
@@ -85,7 +63,7 @@
             </select>
           </label>
           <label class="row"
-            ><span>居住縣市</span>
+            ><span>居住縣市<span>(必填)</span></span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value">
@@ -94,7 +72,7 @@
             </select></label
           >
           <label class="row"
-            ><span>居住地區</span>
+            ><span>居住地區<span>(必填)</span></span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value">
@@ -127,10 +105,10 @@
               :checked="formData.policyChecked"
               class="checkbox bg-white rounded-none"
             />
-            <p class="text-black">
+            <p class="text-white">
               本人知悉並同意<label
                 for="policy-modal"
-                class="modal-button text-[#955B37] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
+                class="modal-button text-[#FFF000] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
                 >「個資告知事項聲明」</label
               >內容
             </p>
@@ -171,31 +149,12 @@
 .order-section {
   position: relative;
   overflow: hidden;
-  // height: size(2821);
   // background-color: #e89213;
   background-image: url("@/section/orderbg.jpg");
   background-size: cover;
   background-position: center;
   padding: 0 size(364);
-
-  .intro {
-    @apply flex flex-col items-center justify-end;
-    padding-bottom: size(234);
-    height: size(1641);
-    .logo {
-      width: size(622);
-    }
-    .t {
-      margin-top: size(330);
-      color: #231815;
-      text-align: center;
-      font-size: size(30);
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 48px */
-      letter-spacing: size(6);
-    }
-  }
+  padding-top: size(142);
 
   .bg-image {
     position: absolute;
@@ -204,37 +163,25 @@
     bottom: size(50);
     vertical-align: middle;
   }
+
+  
 }
 
 .order {
   position: relative;
   width: 100%;
-  padding-top: 0;
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-      }
-    }
+  .logo {
+    width: size(559);
+    margin-bottom: size(430);
   }
 
   .s-order-title {
-    @apply absolute left-0 bottom-[115%] text-center w-full;
+    @apply absolute left-0 top-0 text-center w-full;
     p {
       font-size: size(32);
       font-weight: 500;
-      color: #231815;
+      color: #fff;
 
       &:nth-child(2) {
         font-size: size(18);
@@ -284,6 +231,7 @@
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
+    padding-top: size(150);
 
     .left {
       flex: 1;
@@ -305,18 +253,18 @@
       position: absolute;
     }
     .row {
-      background: rgba($color: #fff, $alpha: 1);
-      border: 1px solid #a6a6a6;
-      color: #231815;
+      background: rgba($color: #fff, $alpha: 0);
+      border: 1px solid #fff;
+      color: #fff;
       display: flex;
       width: 100%;
       align-items: center;
       > span {
-        width: 5.5em;
+        width: 7.5em;
         text-align: left;
         padding-left: 1em;
         > span {
-          color: #f00;
+          color: #FFF000;
           font-size: 12px;
         }
       }
@@ -327,7 +275,7 @@
         flex: 1;
       }
       option {
-        color: #231815;
+        color: #000;
       }
       select {
         background: url("//h65.tw/img/select.svg") no-repeat calc(100% - 0.5em)
@@ -341,22 +289,23 @@
         }
       }
       &::placeholder {
-        color: #231815;
+        color: #fff;
       }
       textarea {
-        @apply text-[#231815];
+        @apply text-[#fff];
       }
     }
   }
 
   .send {
+    @apply bg-white/50 border-white;
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background: #c9a063;
-    border-radius: 20px;
-    border: 0;
+    // background: ;
+    border-radius: 0px;
+    border: 1px solid;
 
     width: size(442);
     height: size(87);
@@ -365,7 +314,7 @@
     font-weight: 700;
     position: relative;
 
-    @apply hover:bg-[#bd8e48] hover:text-white;
+    @apply hover:bg-[#034150] hover:text-white hover:border-[#034150];
   }
 
   .control {
@@ -382,28 +331,11 @@
     position: relative;
     background-image: url("@/section/orderbgm.jpg");
     // overflow: hidden;
-    // padding-top: sizem(200);
     padding: 0 sizem(30);
-    padding-top: sizem(0);
+    padding-top: sizem(150);
 
-
-    .intro {
-      @apply flex flex-col items-center justify-end;
-      padding-bottom: sizem(107.5);
-      height: sizem(685);
-      .logo {
-        width: sizem(243.01);
-      }
-      .t {
-        margin-top: sizem(127);
-        color: #231815;
-        text-align: center;
-        font-size: sizem(13);
-        font-style: normal;
-        font-weight: 400;
-        line-height: 160%; /* 48px */
-        letter-spacing: sizem(2.6);
-      }
+    .logo {
+      width: sizem(269);
     }
 
     .bg-image {
@@ -416,22 +348,12 @@
 
   .order {
     width: 100%;
-    // padding-bottom: sizem(63);
-    // border-radius: sizem(68) sizem(68) 0 0;
-    /* padding-top: sizem(0);
-    margin-top: sizem(0);
-
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
 
     .s-order-title {
-      @apply absolute left-0 bottom-[105%] flex flex-col items-center justify-center w-full;
+      @apply absolute left-0 top-0 flex flex-col items-center justify-center w-full;
       p {
         font-size: sizem(29);
         font-weight: 500;
-        color: #231815;
 
         &:nth-child(2) {
           font-size: sizem(15);
@@ -476,7 +398,8 @@
       gap: 0;
       margin-bottom: sizem(20);
       flex-direction: column;
-      margin-top: sizem(220);
+      margin-top: sizem(100);
+      padding-top: sizem(60);
 
       .left {
         width: 100%;
@@ -524,10 +447,12 @@ import orderBadge from "@/section/order_badge.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, onMounted } from "vue"
+import { computed, ref, reactive, getCurrentInstance, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
+const globals = getCurrentInstance().appContext.config.globalProperties
+const isMobile = computed(() => globals.$isMobile())
 const toast = useToast()
 
 const sending = ref(false)
