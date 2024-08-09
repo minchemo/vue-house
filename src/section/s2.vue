@@ -1,5 +1,34 @@
 <template>
   <article class="s2">
+    <div
+      class="cloth3 absolute"
+      data-aos="fade"
+      data-aos-delay="400" v-if="!$isMobile()">
+      <img
+        src="@/section/s1/cloth.webp"
+        alt="cloth"
+      />
+    </div>
+    <div
+      class="cloth2 absolute"
+      data-aos="fade"
+      data-aos-delay="0">
+      <img
+        src="@/section/s1/cloth.webp"
+        alt="cloth"
+      />
+    </div>
+    <div
+      class="cloth1 absolute"
+      data-aos="fade"
+      data-aos-delay="0">
+      <img
+        src="@/section/s1/cloth.webp"
+        alt="cloth"
+      />
+    </div>
+    <div class="bg absolute">
+    </div>
     <div class="t1" data-aos="fade-up" data-aos-delay="0">
       以感恩的心，突破並創新
     </div>
@@ -11,13 +40,21 @@
       data-aos="fade-up"
       data-aos-delay="200"
     />
-    <div class="t3">
+    <div class="t3"
+      data-aos="fade-up"
+      data-aos-delay="400">
       豐邑機構在台耕耘二十多年，身為不動產開發專業領導者，以愛為名穩紮穩打，在大台中、大新竹建構眾多精彩實績，嚴格講求安全為首，注重建築空間內涵，<br />
       <span>以溫暖的「豐生活」社區營造聞名，深受住戶好評！</span>
     </div>
-    <img class="spn" src="@/section/s2/spn.png" alt="" />
-    <div class="t4" v-if="!isMobile">全國唯一連續23年，榮獲國家金質獎</div>
-    <div class="t4 text-center" v-else>
+    <img class="spn" src="@/section/s2/spn.png" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="200" />
+    <div class="t4" v-if="!isMobile"
+      data-aos="fade-up"
+      data-aos-delay="0">全國唯一連續23年，榮獲國家金質獎</div>
+    <div class="t4 text-center" v-else
+      data-aos="fade-up"
+      data-aos-delay="0">
       全國唯一連續23年<br />榮獲國家金質獎
     </div>
     <div class="swiper-section">
@@ -29,16 +66,26 @@
           <div class="tt2" data-aos="fade-up" data-aos-delay="200">
             豐邑匠心藝，國家的肯定
           </div>
-          <div class="tt3">建築金質獎</div>
-          <div class="tt4">
+          <div class="tt3"
+      data-aos="fade-up"
+      data-aos-delay="400">建築金質獎</div>
+          <div class="tt4"
+      data-aos="fade-up"
+      data-aos-delay="600">
             建築金質獎、優質獎、鑽石金首獎、卓越金首獎
             <br v-if="isMobile" />特別獎/最佳創意設計
           </div>
-          <div class="tt5">第十六屆國家優良建商及營造商認證標章</div>
+          <div class="tt5"
+      data-aos="fade-up"
+      data-aos-delay="800">第十六屆國家優良建商及營造商認證標章</div>
         </div>
-        <img class="gold" src="@/section/s2/gold.png" alt="" srcset="" />
+        <img class="gold" src="@/section/s2/gold.png" alt="" srcset=""
+      data-aos="fade-up"
+      data-aos-delay="1000" />
       </div>
-      <div class="r">
+      <div class="r"
+      data-aos="fade-up"
+      data-aos-delay="0">
         <div class="rt1">經典業績，永恆篇章</div>
         <div class="swiper-box">
           <Splide
@@ -165,8 +212,43 @@
   @apply w-full relative text-white bg-cover;
   @apply flex flex-col items-center justify-start;
   height: size(3181);
-  background-image: url("@/section/s2/bg.jpg");
+background-image:linear-gradient(180deg, #45A0B2 0%, #75C2CA 25%, #82CBD1 44%);
+ 
+  //background-image: url("@/section/s2/bg.jpg");
   padding-top: size(160);
+  
+  .cloth1{
+    width: 89.9vw;
+    top: -7vw;
+    left: -69.4vw;
+    transform: rotate(-10deg)translateX(-10%);
+  img{width: 100%;transform: rotate(-163deg);opacity: 0.5;}
+  }
+  .cloth2{
+    width: 87vw;
+    bottom: 10vw;
+    right: -33vw;
+    transform: rotate(10deg)translateX(10%);
+  img{width: 100%;
+    transform: rotate(-29deg) scaleY(-1);}
+  }
+
+  .cloth3{
+    width: 130vw;
+    bottom: -5vw;
+    right: -62vw;
+    transform: rotate(-10deg)translateX(-10%);
+  img{width: 100%;
+    transform: rotate(195deg);opacity: 0.5;}
+  }
+  .bg{
+    width:100%;
+    height: size(1806);
+    bottom:0;
+    background: linear-gradient(180deg, rgba(3, 65, 80, 0.00) 3.34%, #034150 87.72%);
+    left:0;
+  }
+
   .t1 {
     font-size: size(48);
     font-weight: 700;
@@ -378,8 +460,21 @@
     @apply w-full relative text-white bg-cover;
     @apply flex flex-col items-center justify-start;
     height: sizem(2339);
-    background-image: url("@/section/s2/bgm.jpg");
+   // background-image: url("@/section/s2/bgm.jpg");
     padding-top: sizem(44);
+  .cloth1{
+        width: 127vw;
+        top: 113vw;
+        left: -78.4vw;
+  }
+  .cloth2{
+    width: 303vw;
+    bottom: -5vw;
+    right: -194vw;
+  }
+  .bg{
+    height: sizem(1200);
+  }
     .t1 {
       font-size: sizem(25);
       font-weight: 700;

@@ -1,6 +1,6 @@
 <template>
-  <article class="s3">
-    <div class="t">
+  <article class="s3 w-full relative text-white bg-[#034150]">
+    <div class="t relative z-10 pointer-events-none flex flex-col items-center justify-center">
       <div class="t1" data-aos="fade-up" data-aos-delay="0">
         世界即眼下，七期最國際
       </div>
@@ -8,7 +8,7 @@
       data-aos="fade-up"
       data-aos-delay="200" src="@/section/s3/t2.png" alt="" />
     </div>
-    <div class="swiper-box">
+    <div class="swiper-box w-full h-full absolute left-0 top-0">
       <Splide
         ref="splide"
         class="slide"
@@ -17,12 +17,13 @@
           arrows: false,
           autoplay: true,
           pagination: false,
-          interval: 3000,
+          interval: 7000,
           pauseOnHover: false,
           pauseOnFocus: false,
           gap: 0,
           type: 'fade',
           autoWidth: true,
+          speed: 4000,
         }"
       >
         <SplideSlide
@@ -31,7 +32,7 @@
           v-for="i in imgs"
           :style="{ 'background-image': `url(${i.img})` }"
         >
-          <div class="caption">
+          <div class="caption absolute">
             {{ i.caption }}
           </div>
         </SplideSlide>
@@ -58,15 +59,10 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
 .s3 {
-  @apply w-full relative text-white;
   height: size(1242);
   padding-top: size(140);
   .t {
-    @apply pointer-events-none;
-    @apply relative z-10;
-    @apply flex flex-col items-center justify-center;
     gap: size(33);
     .t1 {
       font-size: size(48);
@@ -78,13 +74,11 @@
     }
   }
   .swiper-box {
-    @apply w-full h-full absolute left-0 top-0;
     .slide-item {
       @apply relative bg-cover;
       width: size(1920);
       height: size(1242);
       .caption {
-        @apply absolute;
         font-size: size(14);
         font-weight: 400;
         letter-spacing: size(0.84);
@@ -114,16 +108,11 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
-
 @media screen and (max-width: 767px) {
   .s3 {
-    @apply w-full relative text-white;
     height: sizem(558);
     padding-top: sizem(50);
     .t {
-      @apply pointer-events-none;
-      @apply relative z-10;
-      @apply flex flex-col items-center justify-center;
       gap: sizem(17);
       .t1 {
         font-size: sizem(25);
@@ -135,15 +124,11 @@
       }
     }
     .swiper-box {
-      @apply w-full h-full absolute left-0 top-0;
       .slide-item {
-        @apply relative;
         width: sizem(375);
         height: sizem(558);
         .caption {
-          @apply absolute;
           font-size: sizem(14);
-          font-weight: 400;
           letter-spacing: sizem(0.84);
           right: sizem(30);
           bottom: sizem(10);

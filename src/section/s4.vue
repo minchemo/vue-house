@@ -130,6 +130,7 @@
       width: size(1309);
       height: size(1170);
       background-image: url("@/section/s4/map.jpg");
+      background-size: cover;
     }
     .r {
       .t {
