@@ -465,19 +465,27 @@ const send = () => {
         method: "GET"
       }
     );
+// 获取当前网站的URL
 
-fetch("contact-form.php", {
-  method: "POST",
-  body: presend,
-}).then((response) => {
-  if (response.status === 200) {
-    window.location.href = "formThanks";
+// 去掉头部（例如，去掉协议和域名部分）
+const urlWithoutProtocol = currentURL.replace(/^(https?:\/\/)?(www\.)?/, '');
+// 去掉尾部（例如，去掉路径和查询字符串部分）
+const urlWithoutTrailing = urlWithoutProtocol.replace(/\/.*$/, '');
+// 设置 src 的值为处理后的URL
+const src = urlWithoutTrailing;
+console.log('处理后的 src：', src);
+fetch(`https://h65.tw/contact-form.php?src=${src}&case_code=${case_code}`, {
+      method: "POST",
+      body: presend,
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+      sending.value = false
+    });
+
+
+    // toast.success(`表單已送出，感謝您的填寫`)
   }
-  sending.value = false
-});
-
-
-// toast.success(`表單已送出，感謝您的填寫`)
-}
 }
 </script>
