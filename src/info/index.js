@@ -16,7 +16,14 @@ export default {
   fbLink: "",
   fbMessage: "",
   caseName: caseName,
-  houseInfos: [["", ""]],
+  houseInfos: [
+    ["投資興建", "豐邑建設"],
+    ["公設設計", "天坊室內設計"],
+    ["建照號碼", "113中都建字第420號"],
+    ["園藝景觀", "上境設計"],
+    ["建築設計", "永豐建築師事務所"],
+    ["結構技師", "立信工程顧問有限公司"],
+  ],
   gtmCode: ["GTM-TNHNNFWL"], // 可放置多個
   recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1

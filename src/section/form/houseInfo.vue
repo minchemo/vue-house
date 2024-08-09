@@ -64,13 +64,13 @@
   // height: auto;
   font-size: size(22);
   background: #034150;
+  // padding: 50px 0;
   // background: url('@/section/house_bg.jpg');
   // height:4em;
   img {
     height: 1.3em;
     vertical-align: middle;
   }
-  padding: 50px 0;
 }
 .info-box {
   width: size(900);
