@@ -69,16 +69,6 @@ export default {
       offset: "",
     },
     {
-      name: "藝術融入生活",
-      target: ".s5",
-      offset: "",
-    },
-    {
-      name: "國際頂級精工",
-      target: ".s52",
-      offset: "",
-    },
-    {
       name: "立即預約",
       target: ".order",
       offset: "",
