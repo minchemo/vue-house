@@ -281,7 +281,7 @@
     }
   }
 }
-
+.modal-box img{filter:invert(17%) sepia(23%) saturate(3137%) hue-rotate(157deg) brightness(102%) contrast(98%);}
 @media screen and (max-width: 768px) {
   .mo-contact-info {
     z-index: 9999;

@@ -103,7 +103,7 @@
   .house {
     // background:#fff;
     //  height: sizem(400);
-    background: url("@/section/house_bgm.jpg");
+   // background: url("@/section/house_bgm.jpg");
     font-size: sizem(14);
     @apply bg-cover;
   }
