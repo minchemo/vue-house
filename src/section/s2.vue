@@ -38,17 +38,17 @@
       alt=""
       srcset=""
       data-aos="fade-up"
-      data-aos-delay="200"
+      data-aos-delay="100"
     />
     <div class="t3"
       data-aos="fade-up"
-      data-aos-delay="400">
+      data-aos-delay="300">
       豐邑機構在台耕耘二十多年，身為不動產開發專業領導者，以愛為名穩紮穩打，在大台中、大新竹建構眾多精彩實績，嚴格講求安全為首，注重建築空間內涵，<br />
       <span>以溫暖的「豐生活」社區營造聞名，深受住戶好評！</span>
     </div>
     <img class="spn" src="@/section/s2/spn.png" alt=""
       data-aos="zoom-in"
-      data-aos-delay="200" />
+      data-aos-delay="0" />
     <div class="t4" v-if="!isMobile"
       data-aos="fade-up"
       data-aos-delay="0">全國唯一連續23年，榮獲國家金質獎</div>
@@ -63,25 +63,25 @@
           <div class="tt1" data-aos="fade-up" data-aos-delay="0">
             豐邑機構至2023年連續23年榮獲建築金質獎肯定，累積獲獎135座，其中有43座全國首獎、87座金質獎、5座特別獎(優質獎、鑽石金首獎、卓越金首獎、最佳創意設計。
           </div>
-          <div class="tt2" data-aos="fade-up" data-aos-delay="200">
+          <div class="tt2" data-aos="fade-up" data-aos-delay="100">
             豐邑匠心藝，國家的肯定
           </div>
           <div class="tt3"
       data-aos="fade-up"
-      data-aos-delay="400">建築金質獎</div>
+      data-aos-delay="200">建築金質獎</div>
           <div class="tt4"
       data-aos="fade-up"
-      data-aos-delay="600">
+      data-aos-delay="300">
             建築金質獎、優質獎、鑽石金首獎、卓越金首獎
             <br v-if="isMobile" />特別獎/最佳創意設計
           </div>
           <div class="tt5"
       data-aos="fade-up"
-      data-aos-delay="800">第十六屆國家優良建商及營造商認證標章</div>
+      data-aos-delay="400">第十六屆國家優良建商及營造商認證標章</div>
         </div>
         <img class="gold" src="@/section/s2/gold.webp" alt="" srcset=""
       data-aos="fade-up"
-      data-aos-delay="1000" />
+      data-aos-delay="500" />
       </div>
       <div class="r"
       data-aos="fade-up"
@@ -148,7 +148,7 @@
       data-aos-delay="0" v-else>五星飯店標竿<br />將創立豐生活購物中心</div>
       <div class="ttt2" 
       data-aos="fade-up"
-      data-aos-delay="200">
+      data-aos-delay="100">
         跨足飯店事業注入軟實力，新竹五星級喜來登大飯店，奢華渡假美學標竿，台中逢甲商旅La
         Vida
         Hotel深耕在地觀光；引進國際品牌萬豪集團台灣首家Moxy飯店，打造全新FUNLIFE豐生活購物中心，以多元版圖豐美全方位悠享人生。

@@ -83,7 +83,7 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 1500,
+      duration: 1000,
     })
   };
 })

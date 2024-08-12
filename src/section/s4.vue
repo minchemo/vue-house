@@ -3,7 +3,7 @@
     <div class="up">
       <div class="mo-t" v-if="isMobile">
         <div class="t1" data-aos="fade-up" data-aos-delay="0">匯七期豐華 禮名人胸襟</div>
-        <img class="en" data-aos="fade-up" data-aos-delay="200" src="@/section/s4/en1.png" alt="" srcset="" />
+        <img class="en" data-aos="fade-up" data-aos-delay="100" src="@/section/s4/en1.png" alt="" srcset="" />
       </div>
       <div class="map">
         <Fullview v-if="isMobile" />
@@ -12,7 +12,7 @@
       <div class="r" v-if="!isMobile">
         <div class="t">
           <div class="t1" data-aos="fade-up" data-aos-delay="0">匯七期豐華</div>
-          <img class="en" data-aos="fade-up" data-aos-delay="200" src="@/section/s4/en1.png" alt="" srcset="" />
+          <img class="en" data-aos="fade-up" data-aos-delay="100" src="@/section/s4/en1.png" alt="" srcset="" />
           <div class="t1" data-aos="fade-up" data-aos-delay="0">禮名人胸襟</div>
         </div>
         <div class="i" data-aos="fade-up" data-aos-delay="0">
@@ -23,12 +23,12 @@
     <div class="down">
       <div class="t">
         <div class="t1" data-aos="fade-up" data-aos-delay="0">匯快捷樞紐，禮城心之點</div>
-        <div class="t2" data-aos="fade-up" data-aos-delay="200">
+        <div class="t2" data-aos="fade-up" data-aos-delay="100">
           捷運綠線南屯站x捷運綠線文心森林公園站<br />
           雙捷站點環伺在旁，日常通勤、出遊，一卡瞬連<br />
           聰明掌握捷運經濟，如同您對於生活的講究
         </div>
-        <img class="t3" data-aos="fade-up" data-aos-delay="400" src="@/section/s4/en2.png" alt="" srcset="" />
+        <img class="t3" data-aos="fade-up" data-aos-delay="200" src="@/section/s4/en2.png" alt="" srcset="" />
       </div>
 
       <div class="swiper-box relative" data-aos="fade-up" data-aos-delay="0">

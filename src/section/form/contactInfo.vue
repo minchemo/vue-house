@@ -4,15 +4,15 @@
     <!-- <div class="logo" data-aos="zoom-in"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between md:justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="豐邑匯禮" srcset="" />
+        <img src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between md:justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="豐邑匯禮" srcset="" />
+        <img src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-between md:justify-center items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="豐邑匯禮" srcset="" />
+        <img src="//h65.tw/img/form/fb.svg" alt="fb" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <div>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-between md:justify-center items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="豐邑匯禮" srcset="" />
+        <img src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -33,21 +33,21 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="豐邑匯禮" srcset="" />
+      <img src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="豐邑匯禮" srcset="" />
+      <img src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="豐邑匯禮" srcset="" />
+      <img src="//h65.tw/img/form/pen.svg" alt="pen" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="豐邑匯禮" srcset="" />
+      <img src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -72,22 +72,22 @@
       <img
         class="h-12"
         v-if="modalType == 'phone'"
-        src="@/section/form/phone.svg"
-        alt="豐邑匯禮"
+        src="//h65.tw/img/form/phone.svg"
+        alt="phone"
         srcset=""
       />
       <img
         class="h-12"
         v-else-if="modalType == 'fb'"
-        src="@/section/form/messenger.svg"
-        alt="豐邑匯禮"
+        src="//h65.tw/img/form/messenger.svg"
+        alt="messenger"
         srcset=""
       />
       <img
         class="h-12"
         v-else-if="modalType == 'gmap'"
-        src="@/section/form/gmap.svg"
-        alt="豐邑匯禮"
+        src="//h65.tw/img/form/gmap.svg"
+        alt="gmap"
         srcset=""
       />
       <!-- title -->
@@ -196,10 +196,10 @@
   .logo {
     width: size(361);
     height: size(180);
-    background-image: url("@/section/form/logo.png");
+   /* background-image: url("@/section/s1/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     margin-bottom: size(0);
   }
 
@@ -354,7 +354,7 @@
       @apply hidden;
       width: sizem(177);
       height: sizem(138.51);
-      background-image: url("@/section/form/logo.png");
+    //  background-image: url("@/section/form/logo.png");
       margin-bottom: sizem(30);
     }
 

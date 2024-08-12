@@ -76,16 +76,13 @@
 @import "@/assets/style/function.scss";
 
 .s7 {
-  @apply w-full relative text-white bg-cover;
-  @apply flex flex-col justify-start items-center;
+  @apply w-full relative text-white bg-cover flex flex-col justify-start items-center;
   height: size(1080);
   padding-top: size(132);
   background-image: url("@/section/s7/bg.webp");
   gap: size(65);
   .t {
-    @apply pointer-events-none;
-    @apply relative z-10;
-    @apply flex flex-col items-center justify-center;
+    @apply pointer-events-none relative z-10 flex flex-col items-center justify-center;
     gap: size(33);
     .t1 {
       font-size: size(48);
@@ -115,7 +112,7 @@
         }
       }
       .c1 {
-        @apply absolute whitespace-nowrap select-none;
+        @apply absolute whitespace-nowrap select-none pointer-events-none;
         right: size(16);
         top: size(22);
         writing-mode: vertical-lr;
@@ -138,7 +135,7 @@
         }
       }
       .c2 {
-        @apply absolute whitespace-nowrap select-none;
+        @apply absolute whitespace-nowrap select-none pointer-events-none;
         right: size(42);
         top: size(22);
         writing-mode: vertical-lr;
@@ -148,7 +145,7 @@
         letter-spacing: size(5);
       }
       .c3 {
-        @apply relative select-none opacity-0 transition-all;
+        @apply relative select-none opacity-0 transition-all pointer-events-none;
         color: #fff;
         text-align: justify;
         font-size: size(15);
@@ -200,7 +197,7 @@
       .t1 {
         font-size: sizem(25);
         font-weight: 700;
-        letter-spacing: 1.5px;
+        letter-spacing:0.115em;
       }
       .t2 {
         width: sizem(315);
@@ -265,15 +262,6 @@
           letter-spacing: 0.78px;
           &::after {
             @apply hidden;
-          }
-        }
-
-        &.active {
-          .avatar {
-            @apply brightness-100;
-          }
-          .c3 {
-            @apply opacity-100;
           }
         }
       }

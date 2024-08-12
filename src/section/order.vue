@@ -19,7 +19,7 @@
         alt="cloth"
       />
     </div>
-      <img class="logo" src="@/section/logo.png" alt="" srcset=""><!-- Title -->
+      <img class="logo" src="@/section/s1/logo.svg" alt="" srcset=""><!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
  
@@ -85,7 +85,7 @@
             ><span>居住縣市<span>(必填)</span></span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
-              <option v-for="city in cityList" :value="city.value">
+              <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
             </select></label
@@ -94,7 +94,7 @@
             ><span>居住地區<span>(必填)</span></span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
-              <option v-for="area in areaList" :value="area.value">
+              <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
             </select></label
@@ -465,8 +465,10 @@ import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
+/*
 import orderIntro from "@/section/order_intro.vue"
 import orderBadge from "@/section/order_badge.vue"
+*/
 
 import info from "@/info"
 

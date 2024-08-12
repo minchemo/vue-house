@@ -169,9 +169,9 @@
       @apply flex flex-col items-center justify-center;
       gap: size(33);
       .t1 {
-        font-size: sizem(13);
+        font-size: sizem(25);
         font-weight: 700;
-        letter-spacing: size(2.88);
+        letter-spacing:0.115em;
       }
       .t2 {
         width: sizem(315);

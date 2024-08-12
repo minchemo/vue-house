@@ -1,6 +1,5 @@
 <template>
   <article class="order-intro">
-    
     <img class="t1" src="@/section/resource/logo.svg" alt="" srcset="">
     <img class="t2" src="@/section/order_intro/t2.png" alt="" srcset="">
   </article>
