@@ -18,7 +18,7 @@
             <img
               class="t4"
               v-if="!isMobile"
-              src="@/section/s1/t4.webp"
+              src="@/section/s1/t4.svg"
               alt=""
               srcset=""
                data-aos="fade-up" data-aos-delay="500"
@@ -26,7 +26,7 @@
             <img
               class="t4"
               v-else
-              src="@/section/s1/t4m.webp"
+              src="@/section/s1/t4.svg"
               alt=""
               srcset=""
                data-aos="fade-up" data-aos-delay="500"
@@ -134,7 +134,7 @@
             width: size(674.11);
           }
           .t4 {
-            width: size(419);
+            width: size(259);
           }
         }
         .rr {
@@ -261,7 +261,7 @@
               width: sizem(227);
             }
             .t4 {
-              width: sizem(227);
+              width: sizem(80);
             }
           }
           .rr {

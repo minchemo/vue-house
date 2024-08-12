@@ -1,7 +1,7 @@
 <template>
-    <div class="gmap relative z-10">
+    <!--div class="gmap relative z-10">
         <iframe :src="info.googleSrc" frameborder="0"></iframe>
-    </div>
+    </div-->
 </template>
 
 <style lang="scss">

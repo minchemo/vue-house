@@ -14,7 +14,7 @@
         <img class="t4" src="@/section/s5/t4.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="200"/>
         <img class="t5" src="@/section/s5/t5.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="400"/>
       </div>
-      <img class="t6" src="@/section/s5/t6.webp" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
+      <img class="t6" src="@/section/s5/t6.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
       <img class="en" src="@/section/s5/en.png" alt="" srcset="" />
     </div>
   </article>
