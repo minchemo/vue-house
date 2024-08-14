@@ -3,14 +3,14 @@
     <img
       class="view1 select-none"
       ref="viewImg"
-      src="@/section/s2/view.jpg"
+      src="@/section/s2/map.svg"
       alt=""
       srcset=""
     />
 
-    <!-- <div class="mask" v-bind:class="{ hide: swiped }">
+    <!--  --><div class="mask" v-bind:class="{ hide: swiped }">
       <img src="@/section/s2/hand.svg" alt="" srcset="" />
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -27,8 +27,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    //  background-image: url(@/section/s3/view.webp);
-    //  background-size: cover;
+    background-image: url("@/section/s2/map.jpg");
+    background-size: cover;
   }
 
   img {

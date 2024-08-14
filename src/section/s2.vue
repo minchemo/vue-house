@@ -1,8 +1,6 @@
 <template>
   <article class="s2">
-    <div class="viewbox">
-      <fullview />
-    </div>
+    <fullview class="viewbox" />
     <div class="t" data-aos="fade-up" data-aos-delay="0">
       <div class="t1">集賢大道靜巷宅 交會軸心</div>
       <div class="t2">
@@ -20,13 +18,13 @@
 
 .s2 {
   @apply w-full relative;
-  height: size(1200);
-  padding-top: size(89);
+  height: size(1455);
+  padding-top: size(100);
   .viewbox {
-    @apply absolute left-0 top-0;
+    @apply absolute left-0;top: size(-25);
   }
   .t {
-    @apply text-white relative z-[1] text-center;
+    @apply text-[#000] relative z-[1] text-center;
     .t1 {
       font-size: size(40);
       font-weight: 700;
@@ -51,8 +49,11 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(667);
+    height: sizem(605);
     padding-top: sizem(60);
+  .viewbox {
+    @apply absolute left-0;top:sizem(65);height: sizem(540);
+  }
     .t {
       .t1 {
         font-size: sizem(25);

@@ -1,6 +1,32 @@
 <template>
   <article class="s1">
     <img
+      class="t0"
+      src="@/section/s1/mo.jpg" alt="0"
+    />
+    <img
+      class="bg"
+      src="@/section/s1/bg.png" alt="bg" v-if="!$isMobile()"
+    />
+    <img
+      class="bg"
+      src="@/section/s1/bgm.png" alt="bg" v-else
+    />
+    
+    <img
+      class="logo"
+      src="@/section/s1/logo.png" alt="logo"
+      data-aos="fade-up"
+      data-aos-delay="0"
+    />
+    <div class="t1" data-aos="fade-up" data-aos-delay="200">集賢大道 ｜ 靜巷好宅    </div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="200">2房23坪｜3房36坪<span>即將完工</span></div>
+    <div class="t3" data-aos="fade-up" data-aos-delay="400">
+      接待會館｜新北市三重區仁安街108號<span v-if="!$isMobile()"> 　 </span><br v-else>
+      禮賓專線｜02-8282-8088
+    </div>
+    <!--
+    <img
       class="logo"
       src="@/section/s1/logoan.svg"
       data-aos="fade-up"
@@ -13,6 +39,7 @@
       接待會館｜新北市三重區仁安街108號<br />
       禮賓專線｜02-8282-8088
     </div>
+    -->
   </article>
 </template>
 
@@ -23,28 +50,50 @@
   @apply w-full relative;
   @apply bg-cover bg-center bg-no-repeat;
   @apply flex flex-col items-center justify-center;
-  color: #653f28;
-  height:100vh;
-  min-height: size(1000);
+  color: #000;
+  height:calc(100vh + #{size(180)});
+  // min-height: size(900+180);
+  min-height: size(1260);
   max-height: size(1260);
-  background-image: url("@/section/s1/bg.jpg");
+//  background-image: url("@/section/s1/bg.jpg");
   padding-bottom: size(137);
-
+  line-height: 1.7;
+.t0{position: absolute;top: 0;left: 0;width: 100%;opacity:0.3;z-index: 10;
+  user-select: none;
+  pointer-events: none;}
+.bg{position: absolute;top: 0;left: 0;width: 100%;z-index:1;
+  user-select: none;
+  pointer-events: none;}
   .logo {
-    width: size(622);margin-top: size(150);
+    position: relative;z-index:2;
+    width: size(622);margin-top: size(380);
   }
   .t1 {
-    margin-top: size(44.3);
-    font-size: size(30);
-    font-weight: 400;
-    letter-spacing: size(6);
+    position: relative;z-index:2;
+    margin-top: size(150);
+    font-size: size(40);
+    font-weight: 600;
+    letter-spacing:0.73em;
+    text-indent: .3em;
   }
   .t2 {
-    margin-top: size(134);
-    font-size: size(22);
-    font-weight: 400;
-    line-height: 220%;
-    letter-spacing: size(4.4);
+    position: relative;z-index:2;
+    margin-top: size(30);
+    font-size: size(40);
+    font-weight: 500;
+    letter-spacing:0.3em;
+    text-indent: -.4em;
+    span{color: #fff;background: #E60012;
+      font-size: 0.875em;
+      font-weight: 400;padding: .1em .3em .16em .4em;border-radius: .4em;
+      letter-spacing:0.1em;text-align: center;margin: 0 0 0 0.5em;}
+  }
+  .t3{
+    position: relative;z-index:2;
+    margin-top: size(150);
+    font-size: size(30);
+    font-weight: 500;
+    letter-spacing: 0.2em;
   }
 }
 
@@ -59,22 +108,26 @@
     min-height: sizem(604);
     max-height: sizem(604);
     padding-bottom: sizem(103);
-    background-image: url("@/section/s1/bgm.jpg");
+   //background-image: url("@/section/s1/bgm.jpg");
 
     .logo {
-      width: sizem(243);
+      width: sizem(230);
+      margin-top: sizem(170);
     }
     .t1 {
-      margin-top: sizem(17);
-      font-size: sizem(15);
-      letter-spacing: sizem(3);
+      margin-top: sizem(85);
+      font-size: sizem(17);
+    //  letter-spacing: sizem(3);
     }
     .t2 {
-      margin-top: sizem(68.4);
+      margin-top: sizem(15);
+      font-size: sizem(17);
+    //  letter-spacing: sizem(3);
+    }
+    .t3 {
+      margin-top: sizem(95);
       font-size: sizem(13);
-      font-weight: 400;
-      line-height: 220%;
-      letter-spacing: sizem(2.6);
+      line-height: 2.2;
     }
   }
 }
