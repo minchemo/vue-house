@@ -1,0 +1,11 @@
+<svg viewBox="0 0 501 523" xmlns="http://www.w3.org/2000/svg">
+<radialGradient id="paint0" cx="0" cy="0" r="750" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" stop-color="#C2CC56"/>
+	<stop  offset="0.4" stop-color="#FFC74E"/>
+	<stop  offset="0.7" stop-color="#FFB25D"/>
+	<stop  offset="1" stop-color="#FFECC4"/>
+	<animate attributeName="cx"  values="-10;510;490;10;-10" dur="6s"  repeatCount="indefinite"/>
+	<animate attributeName="cy" values="0;10;530;510;0" dur="6s"  repeatCount="indefinite"/>
+</radialGradient>
+<path fill="url(#paint0)" d="M156.7,522.8h187c0,0-33.6-99.8-33.6-373.2H190.2C190.2,423,156.6,522.8,156.7,522.8L156.7,522.8z M250.1,52.2c87.9,0,162.9,44.8,191.4,97.4h58.8V0H0v149.6h58.8C87.4,96.9,162.3,52.2,250.1,52.2L250.1,52.2z"/>
+</svg>
