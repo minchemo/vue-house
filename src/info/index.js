@@ -6,8 +6,8 @@ export default {
     description: caseName,
     keywords: caseName,
   },
-  address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
-  address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
+  address1: "接待中心", //按鈕區的--- 如空白會只呈現地址
+  address2: "接待中心", //map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市三重區仁安街108號",
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11808.600935752811!2d121.48721360705572!3d25.081881778877694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a996954dab69%3A0x5d2bf7f40b960a90!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5LuB5a6J6KGXMTA46Jmf!5e0!3m2!1szh-TW!2stw!4v1721554559833!5m2!1szh-TW!2stw",

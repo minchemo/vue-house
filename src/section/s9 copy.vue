@@ -2,48 +2,49 @@
   <article class="s9">
     <template v-for="(img, i) in imgs" :key="i">
       <section>
-        <div class="l swiper-box">
-          <Splide
-            :options="sConfig"
-            ref="splide"
-            class="slide"
-          >
-            <SplideSlide
-              class="slide-item"
-              :key="index"
-              v-for="(image, index) in img.renderImg"
-              :style="{ 'background-image': `url(${image})` }"
-            >
-              <div class="caption absolute">
-                {{ img.renderCaption[index] }}
-              </div>
-              <img
-                @click="openPopup('render', image)"
-                class="view"
-                src="./s9/view.png"
-                alt=""
-                srcset=""
-              />
-            </SplideSlide>
-          </Splide><!-- 
-          <div class="arrows">
-            <img
-              @click="goPrev"
-              class="prev"
-              src="@/section/arrow.png"
-              alt="r"
-              srcset=""
-            />
-            <img
-              @click="goNext"
-              class="next"
-              src="@/section/arrow.png"
-              alt="r"
-              srcset=""
-            />
-          </div> -->
-        </div>
-        
+    <div class="l swiper-box">
+      <Splide
+        :options="sConfig"
+        ref="splide"
+        class="slide"
+        @splide:move="onMove"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs"
+           :style="{ 'background-image': `url(${img.renderImg})` }"
+        >
+          <div class="caption">
+            {{ img.renderCaption }}
+          </div>
+          <img
+            @click="openPopup('render', img.popupRenderImg)"
+            class="view"
+            src="./s9/view.png"
+            alt=""
+            srcset=""
+          />
+        </SplideSlide>
+      </Splide>
+      <div class="arrows" v-if="isMobile">
+        <img
+          @click="splide.go('<')"
+          class="prev"
+          src="@/section/arrow.png"
+          alt="r"
+          srcset=""
+        />
+        <img
+          @click="splide.go('>')"
+          class="next"
+          src="@/section/arrow.png"
+          alt="r"
+          srcset=""
+        />
+      </div>
+    </div>
+    
         <div class="r">
           <div class="t">
             <div
@@ -72,7 +73,7 @@
             />
           </div>
         </div>
-        <img class="hidden" :src="img.renderImg" alt="" srcset="" />
+        <img class="hidden" :src="img.popupRenderImg" alt="" srcset="" />
         <img class="hidden" :src="img.popupPlanImg" alt="" srcset="" />
       </section>
     </template>
@@ -106,7 +107,6 @@
   </div>
 </template>
 
-
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
@@ -134,24 +134,6 @@
         font-size: size(12);
         font-weight: 400;
         letter-spacing: size(2.4);
-      }  
-      .slide-item {
-        width: size(960);
-        height: size(960);
-        background-size: cover
-      }
-      .arrows {
-        @apply absolute w-full flex items-center justify-between top-1/2 -translate-y-1/2;
-        padding: 0 size(20) 0 size(10);
-        img {
-          width: size(20);
-        }
-        .prev {
-        }
-
-        .next {
-          @apply -scale-x-100;
-        }
       }
     }
     .r {
@@ -238,10 +220,6 @@
         .caption {
           @apply hidden;
         }
-      .slide-item {
-        width: sizem(375);
-        height: sizem(375);
-      }
       }
       .r {
         @apply flex flex-col justify-between;
@@ -314,88 +292,58 @@
 </style>
 
 <script setup>
-import { computed, getCurrentInstance, ref, onMounted, nextTick } from "vue";
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
 
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const isMobile = computed(() => globals.$isMobile());
-const popupType = ref("");
-const popupImg = ref("");
+const isMobile = computed(() => globals.$isMobile())
+const popupType = ref("")
+const popupImg = ref("")
 
 const openPopup = (type, img) => {
-  popupType.value = type;
-  popupImg.value = img;
-};
+  popupType.value = type
+  popupImg.value = img
+}
 
 const closePopup = () => {
-  popupType.value = "";
-  popupImg.value = "";
-};
-
-const splide = ref(null);
-const sConfig = {
-  autoWidth: true,
-  arrows: false,
-  autoplay: true,
-  pagination: false,
-  gap: 0,
-  type: "loop",
-};
-
-const goPrev = () => {
-    splide.value?.go("<");
-};
-
-const goNext = () => {
-    splide.value?.go(">");
-};
-
-onMounted(async () => {
-  await nextTick();  // 确保 DOM 渲染完成
-});
-
+  popupType.value = ""
+  popupImg.value = ""
+}
 
 const imgs = [
   {
     t1: "A2戶型/時尚簡約2房",
     t2: "格局規劃方正且雙面採光，規劃雙廁所，客廳結合開放式餐廳與廚房合為一體，做菜時與家人互動，讓每一餐都充滿愛與溫情，主臥套房空間寬敞明亮，享受獨立廁所，另設計有開放式客衛浴外洗手台，方便一回家就洗手，衛浴乾濕分離設計。",
-    renderImg:[
-      new URL("../section/s9/r11.jpg", import.meta.url).href,
-      new URL("../section/s9/r12.jpg", import.meta.url).href,
-    ],
-    renderCaption:[
-       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
-    ],
+    bgImg: globals.$isMobile()
+      ? new URL("../section/s9/bg1m.jpg", import.meta.url).href
+      : new URL("../section/s1/bg.png", import.meta.url).href,
+    renderImg: new URL("../section/s9/r11.jpg", import.meta.url).href,
+    renderCaption: "樣品屋3D模擬示意",
     planImg: new URL("../section/s9/p1.jpg", import.meta.url).href,
+    popupRenderImg: new URL("../section/s9/r11.jpg", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp1.jpg", import.meta.url).href,
   },
   {
     t1: "A6戶型/溫馨人文2房",
     t2: "格局規劃方正且雙面採光，規劃獨立玄關及雙廁所，客廳結合開放式餐廳與廚房合為一體，讓您在烹飪的同時與家人分享每一刻的愉悅，主臥套房空間寬敞明亮，享受獨立廁所及更衣間，客浴乾濕分離設計。",
-    renderImg:[
-      new URL("../section/s9/r21.jpg", import.meta.url).href,
-      new URL("../section/s9/r22.jpg", import.meta.url).href,
-    ],
-    renderCaption:[
-       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
-    ],
+    bgImg: globals.$isMobile()
+      ? new URL("../section/s9/bg1m.jpg", import.meta.url).href
+      : new URL("../section/s9/bg2.jpg", import.meta.url).href,
+    renderImg: new URL("../section/s9/r21.jpg", import.meta.url).href,
+    renderCaption: "樣品屋3D模擬示意",
     planImg: new URL("../section/s9/p2.jpg", import.meta.url).href,
+    popupRenderImg: new URL("../section/s9/r21.jpg", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
   },
   {
     t1: "A1戶型/美式現代3房",
     t2: "格局規劃方正且三面採光，規劃獨立玄關及廚房，客廳結合開闊的用餐空間，搭配前陽台採光通風，視線寬敞明亮，是家人間互動的場域，盡享美好時光，雙衛浴皆開窗採光，一主臥套房及兩間次臥，雍容的寢臥設計大採光，空間敞朗。",
-    renderImg:[
-      new URL("../section/s9/r31.jpg", import.meta.url).href,
-      new URL("../section/s9/r32.jpg", import.meta.url).href,
-    ],
-    renderCaption:[
-       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
-    ],
+    bgImg: globals.$isMobile()
+      ? new URL("../section/s9/bg1m.jpg", import.meta.url).href
+      : new URL("../section/s9/bg3.jpg", import.meta.url).href,
+    renderImg: new URL("../section/s9/r31.jpg", import.meta.url).href,
+    renderCaption: "樣品屋3D模擬示意",
     planImg: new URL("../section/s9/p3.jpg", import.meta.url).href,
+    popupRenderImg: new URL("../section/s9/r31.jpg", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
   },
 ]

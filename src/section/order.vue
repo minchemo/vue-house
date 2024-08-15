@@ -1,5 +1,14 @@
 <template>
   <div id="order" class="order relative text-center">
+    <img
+      class="bg"
+      src="@/section/order/bg.png" alt="bg" v-if="!$isMobile()"
+    />
+    <img
+      class="bg"
+      src="@/section/order/bgm.png" alt="bg" v-else
+    />
+    
     <div class="order-section">
       <div class="intro">
         <img
@@ -11,7 +20,7 @@
           data-aos-delay="0"
         />
         <div class="t" data-aos="fade-up" data-aos-delay="0">
-          接待會館<br />
+          接待中心<br />
 
           新北市三重區仁安街108號<br /><br />
           禮賓專線<br />
@@ -180,7 +189,7 @@
   padding: 0 0;
 
   .intro {
-    @apply flex flex-col items-center justify-end;
+    @apply flex flex-col items-center justify-end relative z-[5];
     padding-bottom: size(234);
     height: size(1641);
     .logo {
@@ -211,6 +220,9 @@
   position: relative;
   width: 100%;
   padding-top: 0;
+.bg{position: absolute;top: size(-140);;left: 0;width: 100%;z-index:2;
+  user-select: none;
+  pointer-events: none;}
 
 
   .s-order-title {

@@ -28,7 +28,7 @@
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows" v-if="isMobile">
+      <div class="arrows">
         <img
           @click="splide.go('<')"
           class="prev"
@@ -108,6 +108,19 @@
         letter-spacing: size(2.4);
       }
     }
+      .arrows {
+        @apply absolute w-full flex items-center justify-between top-1/2 -translate-y-1/2;
+        padding: 0 size(20) 0 size(10);
+        img {
+          width: size(20);
+        }
+        .prev {
+        }
+
+        .next {
+          @apply -scale-x-100;
+        }
+      }
   }
 
   .cap {
@@ -240,19 +253,6 @@ const sConfig = {
   type: "loop",
 }
 
-let moving = false
-
-const onMove = (val, val2) => {
-  if (moving) return
-  moving = true
-
-  nextTick(() => {
-    splide.value.go(val2 + 1)
-    setTimeout(() => {
-      moving = false
-    }, 100)
-  })
-}
 
 const imgs = [
   {

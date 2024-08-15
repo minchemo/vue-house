@@ -90,7 +90,7 @@
   .caption {
     @apply absolute z-10;
     left: size(10);
-    bottom: size(10);
+    bottom: size(20);
     @apply text-white;
     font-size: size(12);
     font-weight: 400;

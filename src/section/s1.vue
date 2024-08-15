@@ -1,10 +1,6 @@
 <template>
   <article class="s1">
     <img
-      class="t0"
-      src="@/section/s1/mo.jpg" alt="0"
-    />
-    <img
       class="bg"
       src="@/section/s1/bg.png" alt="bg" v-if="!$isMobile()"
     />
@@ -22,10 +18,14 @@
     <div class="t1" data-aos="fade-up" data-aos-delay="200">集賢大道 ｜ 靜巷好宅    </div>
     <div class="t2" data-aos="fade-up" data-aos-delay="200">2房23坪｜3房36坪<span>即將完工</span></div>
     <div class="t3" data-aos="fade-up" data-aos-delay="400">
-      接待會館｜新北市三重區仁安街108號<span v-if="!$isMobile()"> 　 </span><br v-else>
+      接待中心｜新北市三重區仁安街108號<span v-if="!$isMobile()"> 　 </span><br v-else>
       禮賓專線｜02-8282-8088
     </div>
     <!--
+    <img
+      class="t0"
+      src="@/section/s1/pc.jpg" alt="0"
+    />
     <img
       class="logo"
       src="@/section/s1/logoan.svg"
@@ -36,7 +36,7 @@
       ｜2房23坪 3房36坪 即將完工｜
     </div>
     <div class="t2" data-aos="fade-up" data-aos-delay="400">
-      接待會館｜新北市三重區仁安街108號<br />
+      接待中心｜新北市三重區仁安街108號<br />
       禮賓專線｜02-8282-8088
     </div>
     -->
@@ -52,13 +52,13 @@
   @apply flex flex-col items-center justify-center;
   color: #000;
   height:calc(100vh + #{size(180)});
-  // min-height: size(900+180);
-  min-height: size(1260);
+  min-height: size(900+180);
+  // min-height: size(1260);
   max-height: size(1260);
 //  background-image: url("@/section/s1/bg.jpg");
   padding-bottom: size(137);
   line-height: 1.7;
-.t0{position: absolute;top: 0;left: 0;width: 100%;opacity:0 ;z-index: 10;
+.t0{position: absolute;top: 0;left: 0;width: 100%;opacity:0.3 ;z-index: 10;
   user-select: none;
   pointer-events: none;}
 .bg{position: absolute;top: 0;left: 0;width: 100%;z-index:3;

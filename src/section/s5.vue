@@ -35,7 +35,7 @@
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows" v-if="isMobile">
+      <div class="arrows">
         <img
           @click="splide.go('<')"
           class="prev"
@@ -97,17 +97,15 @@
   }
 
   .swiper-box {
-    @apply relative;
-    margin-top: size(56);
     @apply relative z-10;
+    margin-top: size(56);
     .slide-item {
       @apply bg-cover;
       width: size(670);
       height: size(403);
       margin-right: size(23);
       .caption {
-        @apply absolute bottom-0 w-full text-white text-right;
-        @apply flex items-end justify-end;
+        @apply absolute bottom-0 w-full text-white text-right flex items-end justify-end;
         padding: size(10);
         background: linear-gradient(
           0deg,
@@ -120,6 +118,19 @@
         letter-spacing: size(2.4);
       }
     }
+      .arrows {
+        @apply absolute w-full flex items-center justify-between top-1/2 -translate-y-1/2;
+        padding: 0 size(10);
+        img {
+          width: size(20);
+        }
+        .prev {
+        }
+
+        .next {
+          @apply -scale-x-100;
+        }
+      }
   }
 }
 
@@ -231,24 +242,24 @@ const sConfig = globals.$isMobile()
 
 const imgs = [
   {
-    img: new URL("../section/s5/1.jpg", import.meta.url).href,
-    caption: "家樂福蘆洲店",
+    img: new URL("../section/s5/3.jpg", import.meta.url).href,
+    caption: "集賢路街廓",
   },
   {
     img: new URL("../section/s5/2.jpg", import.meta.url).href,
     caption: "徐匯廣場",
   },
   {
-    img: new URL("../section/s5/3.jpg", import.meta.url).href,
-    caption: "集賢路街廓",
-  },
-  {
-    img: new URL("../section/s5/4.jpg", import.meta.url).href,
-    caption: "水流公傳統市場",
+    img: new URL("../section/s5/1.jpg", import.meta.url).href,
+    caption: "家樂福蘆洲店",
   },
   {
     img: new URL("../section/s5/5.jpg", import.meta.url).href,
-    caption: "溪尾街小吃店家景觀",
+    caption: "溪尾街商圈",
+  },
+  {
+    img: new URL("../section/s5/4.jpg", import.meta.url).href,
+    caption: "三蘆市場",
   },
 ]
 </script>

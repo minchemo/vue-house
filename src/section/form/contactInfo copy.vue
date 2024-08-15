@@ -97,7 +97,7 @@
             ? "賞屋專線"
             : modalType == "fb"
             ? "Facebook Messenger"
-            : "接待會館"
+            : "接待中心"
         }}
       </div>
       <!-- content -->

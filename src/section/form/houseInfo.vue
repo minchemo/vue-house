@@ -41,6 +41,7 @@
 //     background-repeat: no-repeat;
 // }
 .house {
+  position: relative;z-index: 5;
    // height: auto;
     font-size: size(22);
     // background: #E89213;
