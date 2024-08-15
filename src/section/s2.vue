@@ -20,11 +20,18 @@
   @apply w-full relative;
   height: size(1455);
   padding-top: size(100);
+  &::before{content: "";position: absolute;top:size(-55);left: 0;width: 100%;height:size(150); 
+  background: linear-gradient(
+        0deg,
+       #fff0 0%, #fff 100%
+      );
+    z-index: 2;
+    }
   .viewbox {
-    @apply absolute left-0;top: size(-25);
+    @apply absolute left-0;top: size(-55);
   }
   .t {
-    @apply text-[#000] relative z-[1] text-center;
+    @apply text-[#000] relative z-[4] text-center;
     .t1 {
       font-size: size(40);
       font-weight: 700;
@@ -49,10 +56,20 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(605);
+    height: sizem(130+540);
     padding-top: sizem(60);
+    
+  &::before{top:sizem(0);height:sizem(200);
+    background: linear-gradient(
+        0deg,
+       #97CEF000 0%,
+       #97CEF0 30%,
+       #97CEF0 50%,
+       #fff 100%
+      );
+    }
   .viewbox {
-    @apply absolute left-0;top:sizem(65);height: sizem(540);
+    @apply absolute left-0;top:sizem(130);height: sizem(540);
   }
     .t {
       .t1 {

@@ -173,9 +173,10 @@
   overflow: hidden;
   // height: size(2821);
   // background-color: #e89213;
-  background-image: url("@/section/orderbg.jpg");
+/*  background-image: url("@/section/orderbg.jpg");
   background-size: cover;
   background-position: center;
+  */
   padding: 0 0;
 
   .intro {
@@ -367,7 +368,7 @@
     @apply bg-cover;
     min-height: sizem(800);
     position: relative;
-    background-image: url("@/section/orderbgm.jpg");
+  //  background-image: url("@/section/orderbgm.jpg");
     // overflow: hidden;
     // padding-top: sizem(200);
     padding: 0 sizem(30);

@@ -265,39 +265,39 @@ const closePopup = () => {
 
 const imgs = [
   {
-    t1: "A2戶型/時尚2房",
+    t1: "A2戶型/時尚簡約2房",
     t2: "格局規劃方正且雙面採光，規劃雙廁所，客廳結合開放式餐廳與廚房合為一體，做菜時與家人互動，讓每一餐都充滿愛與溫情，主臥套房空間寬敞明亮，享受獨立廁所，另設計有開放式客衛浴外洗手台，方便一回家就洗手，衛浴乾濕分離設計。",
     bgImg: globals.$isMobile()
       ? new URL("../section/s9/bg1m.jpg", import.meta.url).href
       : new URL("../section/s9/bg1.jpg", import.meta.url).href,
-    renderImg: new URL("../section/s9/r1.jpg", import.meta.url).href,
+    renderImg: new URL("../section/s9/r11.jpg", import.meta.url).href,
     renderCaption: "樣品屋3D模擬示意",
     planImg: new URL("../section/s9/p1.jpg", import.meta.url).href,
-    popupRenderImg: new URL("../section/s9/pr1.jpg", import.meta.url).href,
+    popupRenderImg: new URL("../section/s9/r11.jpg", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp1.jpg", import.meta.url).href,
   },
   {
-    t1: "A6戶型/溫馨2房",
+    t1: "A6戶型/溫馨人文2房",
     t2: "格局規劃方正且雙面採光，規劃獨立玄關及雙廁所，客廳結合開放式餐廳與廚房合為一體，讓您在烹飪的同時與家人分享每一刻的愉悅，主臥套房空間寬敞明亮，享受獨立廁所及更衣間，客浴乾濕分離設計。",
     bgImg: globals.$isMobile()
       ? new URL("../section/s9/bg1m.jpg", import.meta.url).href
       : new URL("../section/s9/bg2.jpg", import.meta.url).href,
-    renderImg: new URL("../section/s9/r2.jpg", import.meta.url).href,
+    renderImg: new URL("../section/s9/r21.jpg", import.meta.url).href,
     renderCaption: "樣品屋3D模擬示意",
     planImg: new URL("../section/s9/p2.jpg", import.meta.url).href,
-    popupRenderImg: new URL("../section/s9/pr2.jpg", import.meta.url).href,
+    popupRenderImg: new URL("../section/s9/r21.jpg", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
   },
   {
-    t1: "A1戶型/雍容3房",
+    t1: "A1戶型/美式現代3房",
     t2: "格局規劃方正且三面採光，規劃獨立玄關及廚房，客廳結合開闊的用餐空間，搭配前陽台採光通風，視線寬敞明亮，是家人間互動的場域，盡享美好時光，雙衛浴皆開窗採光，一主臥套房及兩間次臥，雍容的寢臥設計大採光，空間敞朗。",
     bgImg: globals.$isMobile()
       ? new URL("../section/s9/bg1m.jpg", import.meta.url).href
       : new URL("../section/s9/bg3.jpg", import.meta.url).href,
-    renderImg: new URL("../section/s9/r3.jpg", import.meta.url).href,
+    renderImg: new URL("../section/s9/r31.jpg", import.meta.url).href,
     renderCaption: "樣品屋3D模擬示意",
     planImg: new URL("../section/s9/p3.jpg", import.meta.url).href,
-    popupRenderImg: new URL("../section/s9/pr2.jpg", import.meta.url).href,
+    popupRenderImg: new URL("../section/s9/r31.jpg", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
   },
 ]

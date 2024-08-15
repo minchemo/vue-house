@@ -31,9 +31,9 @@
     }
     .logo {
       @apply absolute z-10;
-      width: size(464.79);
-      left: 3.2%;
-      top: 7%;
+      width: size(410);
+      left: 4.5%;
+      top: 4%;
     }
     .blue {
       @apply absolute z-[1] h-full min-w-full;

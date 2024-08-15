@@ -9,7 +9,7 @@
     />
 
     <!--  --><div class="mask" v-bind:class="{ hide: swiped }">
-      <img src="@/section/s2/hand.svg" alt="" srcset="" />
+      <img src="@/components/fullview/finger.svg" alt="" srcset="" />
     </div>
   </div>
 </template>
@@ -32,9 +32,10 @@
   }
 
   img {
-    height: 100%;
     min-width: 100%;
     max-width: unset;
+    width: 100%;
+    height: auto;
   }
   .mask {
     @apply hidden;
@@ -46,9 +47,10 @@
     @apply relative;
     height: 100%;
     overflow: hidden;
-
+    
     img {
       height: 100%;
+    width: auto;
     }
 
     .mask {
@@ -57,7 +59,7 @@
       height: 100%;
       left: 0;
       top: 0;
-      z-index: 100;
+      z-index: 3;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -67,10 +69,11 @@
 
       background: linear-gradient(
         0deg,
-        rgba(2, 103, 196, 0) 0%,
-        rgba(2, 103, 196, 0.5) 14.5%,
-        rgba(2, 103, 196, 1) 100%
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 102, 153, 0.9) 10%,
+         rgba(0, 102, 153, 0) 100%
       );
+
 
       img {
         min-width: unset;
@@ -92,7 +95,7 @@ import { onMounted, ref } from "vue"
 const viewbox = ref()
 const viewImg = ref()
 const swiped = ref(false)
-const offsetRatio = 1.26 //調整此值設定X軸位置偏移參數
+const offsetRatio = 5.8 //調整此值設定X軸位置偏移參數
 
 onMounted(() => {
   viewImg.value.addEventListener("load", () => {

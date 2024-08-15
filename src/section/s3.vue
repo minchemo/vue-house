@@ -1,9 +1,18 @@
 <template>
   <article class="s3">
+    <img
+      class="bg"
+      src="@/section/s3/bg1.png" alt="bg" v-if="!$isMobile()"
+    />
+    <img
+      class="bg"
+      src="@/section/s3/bgm1.png" alt="bg" v-else
+    />
+
     <div class="t" data-aos="fade-up" data-aos-delay="0">
       <div class="t1">徐匯中學站 雙線捷運宅</div>
       <div class="t2">
-        徐匯中學捷運站450公尺，<br />
+        捷運徐匯中學站、Ｙ21站450公尺，<br />
         蘆洲線、環狀線(施工中)雙捷運樞紐金鑽，<br />
         環狀線三站讀秒直驅北市士林區，<br />
         蘆洲線三站瞬間抵達北市大同區。
@@ -39,9 +48,14 @@
         />
       </div>
     </div>
+    <img
+      class="ma"
+      src="@/section/s3/ma.svg" alt="ma" 
+    />
+    <!-- 
     <div class="mrt" v-if="!isMobile">
       <div class="caption">徐匯中學站</div>
-    </div>
+    </div> -->
   </article>
 </template>
 
@@ -51,9 +65,15 @@
 .s3 {
   @apply w-full relative bg-cover;
   height: size(820);
-  background-image: url("@/section/s3/bg.jpg");
-  padding: 0 size(185);
-  padding-top: size(75);
+ // background-image: url("@/section/s3/bg.jpg");
+  padding: 0 size(40);
+ // padding-top: size(105);
+.bg{position: absolute;top: size(-245);left: 0;width: 100%;z-index:3;
+  user-select: none;
+  pointer-events: none;}
+.ma{position: absolute;top: size(-96);right: size(131);width: size(827);z-index:3;
+  user-select: none;
+  pointer-events: none;}
   .mrt {
     @apply absolute right-0 top-0 w-full h-full;
   //  background-image: url("@/section/s3/mrt.png");
@@ -68,7 +88,9 @@
     }
   }
   .t {
-    @apply relative z-[1] text-black;
+    @apply relative z-[5] text-black;
+    margin: 0 0 0 size(145);
+    padding-top: size(100);
     .t1 {
       font-size: size(40);
       font-weight: 700;
@@ -94,13 +116,15 @@
   }
   .swiper-box {
     @apply relative;
-    margin-top: size(167);
+    margin-top: size(130);
     @apply relative z-10;
     .slide-item {
-      width: size(524);
-      height: size(314);
-      margin-right: size(48);
+      width: size(600);
+      height: size(400);
+     // height: size(314);
+      margin-right: size(12);
     }
+    .caption{color: #FFF;position: absolute;right: .5em;bottom: .5em;text-shadow: 0 0 10px #000;}
   }
 }
 
@@ -112,12 +136,16 @@
 @media screen and (max-width: 767px) {
   .s3 {
     height: sizem(667);
-    background-image: url("@/section/s3/bgm.jpg");
+   // background-image: url("@/section/s3/bgm.jpg");
     padding: 0;
     padding-top: sizem(60);
+.ma{position: absolute;top: sizem(450);right: 0;
+  left: 0;margin: auto;
+  width: sizem(330);}
 
     .t {
       padding: 0 sizem(32.5);
+      margin: auto;
       .t1 {
         @apply whitespace-nowrap;
         font-size: sizem(25);
@@ -190,12 +218,16 @@ const sConfig = {
 
 const imgs = [
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
-    caption: "",
+    img: new URL("../section/s3/1.webp", import.meta.url).href,
+    caption: "徐匯中學站實景",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
-    caption: "",
+    img: new URL("../section/s3/2.webp", import.meta.url).href,
+    caption: "徐匯中學站實景",
+  },
+  {
+    img: new URL("../section/s3/3.webp", import.meta.url).href,
+    caption: "徐匯中學站實景",
   },
 ]
 </script>

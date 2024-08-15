@@ -1,5 +1,13 @@
 <template>
   <article class="s4">
+    <img
+      class="bg"
+      src="@/section/s4/bg.png" alt="bg" v-if="!$isMobile()"
+    />
+    <img
+      class="bg"
+      src="@/section/s4/bgm.png" alt="bg" v-else
+    />
     <div class="t">
       <div class="t1" data-aos="fade-up" data-aos-delay="0">
         雙大道直通北市 <br v-if="isMobile" />一瞬千里的交通力
@@ -22,13 +30,17 @@
 .s4 {
   @apply w-full relative bg-cover;
   height: size(1410);
-  margin-bottom: -#{size(6)};
+  margin-bottom: size(0);
+.bg{position: absolute;top: size(-123);left: 0;width: 100%;z-index:3;
+  user-select: none;
+  pointer-events: none;}
   .t {
-    @apply relative w-full bg-cover text-black text-center;
+    @apply relative z-[5] w-full bg-cover text-white text-center;
     @apply flex flex-col items-center justify-center;
     gap: size(20);
-    height: size(267);
-    background-image: url("@/section/s4/topbg.jpg");
+  //  height: size(267);
+    padding: size(240) 0 0;
+   // background-image: url("@/section/s4/topbg.jpg");
     .t1 {
       font-size: size(40);
       font-weight: 700;
@@ -40,10 +52,11 @@
       font-weight: 400;
       line-height: 150%;
       letter-spacing: size(4);
+      margin-bottom: size(60);
 
       &::after {
         @apply absolute left-1/2 -translate-x-1/2;
-        bottom: -#{size(22)};
+        bottom: -#{size(40)};
         content: "";
         width: size(860);
         height: 2px;
@@ -52,8 +65,11 @@
     }
   }
   .map {
-    @apply relative w-full;
-    height: size(1152);
+    @apply relative w-full z-[5];
+    height: auto;
+    width: size(1764);
+    border-radius: size(130);
+    margin: auto;overflow: hidden;
   }
 }
 
@@ -66,12 +82,13 @@
   .s4 {
     @apply w-full relative bg-cover;
     height: sizem(737);
+.bg{top: sizem(35);}
     .t {
-      @apply relative w-full bg-cover text-black text-center;
+      @apply relative w-full bg-cover text-center;
       @apply flex flex-col items-center justify-center;
       gap: sizem(14);
       height: sizem(306);
-      background-image: url("@/section/s4/topbgm.jpg");
+     // background-image: url("@/section/s4/topbgm.jpg");
       .t1 {
         font-size: sizem(25);
         letter-spacing: sizem(5);
@@ -92,6 +109,7 @@
     .map {
       @apply relative w-full;
       height: sizem(430);
+      border-radius:0;
     }
   }
 }

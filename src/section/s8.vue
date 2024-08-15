@@ -1,5 +1,18 @@
 <template>
   <article class="s8">
+    <img
+      class="bg"
+      src="@/section/s8/bg.png" alt="bg" v-if="!$isMobile()"
+    />
+    <img
+      class="bg"
+      src="@/section/s8/bgm.png" alt="bg" v-else
+    />
+    <img
+      class="coff"
+      src="@/section/s8/coff.png" alt="coff"
+    />
+
     <div class="t">
       <div class="t1" data-aos="fade-up" data-aos-delay="0">
         水墨繪地景 <br v-if="isMobile" />雋永的建築藝術
@@ -40,17 +53,24 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  @apply w-full relative bg-cover overflow-hidden;
+  @apply w-full relative bg-cover;
   height: size(1935);
+.bg{position: absolute;top: 0;left: 0;width: 100%;z-index:3;
+  user-select: none;
+  pointer-events: none;}
 
+  .coff{position: absolute;top:size(-110);left:size(-55);;width: size(680);z-index:5;
+  user-select: none;
+  pointer-events: none;}
   .t {
-    @apply relative w-full bg-cover text-black text-center;
+    @apply relative w-full bg-cover text-white text-center;
     @apply flex flex-col items-center justify-center;
     @apply z-10;
     gap: size(65);
-    height: size(693);
-    background-image: url("@/section/s8/bg.jpg");
+   // height: size(693);
+  //  background-image: url("@/section/s8/bg.jpg");
     .t1 {
+    margin:size(190) auto 0;
       font-size: size(40);
       font-weight: 700;
       letter-spacing: size(8);
@@ -64,7 +84,7 @@
   }
   .building {
     @apply relative w-full bg-cover bg-center;
-    background-image: url("@/section/s8/building.jpg");
+  //  background-image: url("@/section/s8/building.jpg");
     height: size(1242);
   }
   .caption {
@@ -86,28 +106,30 @@
 @media screen and (max-width: 767px) {
   .s8 {
     height: sizem(710);
+  .coff{top:sizem(-20);left:sizem(-50);;width: sizem(260)}
 
     .t {
-      @apply relative w-full bg-cover text-black text-center;
+      @apply relative w-full bg-cover text-center;
       @apply flex flex-col items-center justify-center;
       @apply z-10;
       gap: sizem(21);
       height: sizem(423);
-      background-image: url("@/section/s8/bgm.jpg");
+    //  background-image: url("@/section/s8/bgm.jpg");
       padding: 0 sizem(21);
       .t1 {
+        margin:sizem(70) auto 0;
         font-size: sizem(25);
         letter-spacing: sizem(5);
       }
       .t2 {
         @apply whitespace-nowrap;
         font-size: sizem(14);
-        line-height: 150%;
-        letter-spacing: sizem(2.8);
+        line-height: 1.8;
+        letter-spacing: 0.1em;
       }
     }
     .building {
-      background-image: url("@/section/s8/building.jpg");
+    // background-image: url("@/section/s8/building.jpg");
       height: sizem(287);
     }
     .caption {
@@ -120,12 +142,14 @@
       font-size: sizem(8);
       font-weight: 400;
       letter-spacing: sizem(1.6);
+      /*
       background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 0.2) 59%,
         rgba(0, 0, 0, 0.5) 100%
       );
+      */
     }
   }
 }

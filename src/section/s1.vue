@@ -58,18 +58,18 @@
 //  background-image: url("@/section/s1/bg.jpg");
   padding-bottom: size(137);
   line-height: 1.7;
-.t0{position: absolute;top: 0;left: 0;width: 100%;opacity:0.3;z-index: 10;
+.t0{position: absolute;top: 0;left: 0;width: 100%;opacity:0 ;z-index: 10;
   user-select: none;
   pointer-events: none;}
-.bg{position: absolute;top: 0;left: 0;width: 100%;z-index:1;
+.bg{position: absolute;top: 0;left: 0;width: 100%;z-index:3;
   user-select: none;
   pointer-events: none;}
   .logo {
-    position: relative;z-index:2;
+    position: relative;z-index:4;
     width: size(622);margin-top: size(380);
   }
   .t1 {
-    position: relative;z-index:2;
+    position: relative;z-index:4;
     margin-top: size(150);
     font-size: size(40);
     font-weight: 600;
@@ -77,7 +77,7 @@
     text-indent: .3em;
   }
   .t2 {
-    position: relative;z-index:2;
+    position: relative;z-index:4;
     margin-top: size(30);
     font-size: size(40);
     font-weight: 500;
@@ -89,7 +89,7 @@
       letter-spacing:0.1em;text-align: center;margin: 0 0 0 0.5em;}
   }
   .t3{
-    position: relative;z-index:2;
+    position: relative;z-index:4;
     margin-top: size(150);
     font-size: size(30);
     font-weight: 500;

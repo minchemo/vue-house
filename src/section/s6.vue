@@ -45,14 +45,14 @@
   @apply w-full relative bg-cover;
   @apply flex items-start justify-start;
   height: size(1080);
-  background-image: url("@/section/s6/bg.jpg");
+  background-image: url("@/section/s6/bg.png");
   padding-left: size(146.23);
   padding-top: size(40.92);
   gap: size(90);
 
   .left {
     @apply flex-[0];
-    @apply flex items-start;
+    @apply flex items-start relative z-[5];
     gap: size(36.53);
     .en {
       width: size(30.24);
@@ -86,7 +86,8 @@
     }
   }
   .t {
-    @apply text-white;
+    @apply text-white relative z-[5];
+    top: size(-25);
     .t1 {
       font-size: size(40);
       font-weight: 700;
@@ -124,7 +125,7 @@
     @apply w-full relative bg-cover;
     @apply flex flex-col items-start justify-start;
     height: sizem(1091);
-    background-image: url("@/section/s6/bgm.jpg");
+    background-image: url("@/section/s6/bgm.png");
     padding-left: 0;
     padding-top: sizem(30);
     gap: sizem(87);

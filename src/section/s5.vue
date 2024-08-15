@@ -1,5 +1,13 @@
 <template>
   <article class="s5">
+    <img
+      class="bg"
+      src="@/section/s5/bg.png" alt="bg" v-if="!$isMobile()"
+    />
+    <img
+      class="bg"
+      src="@/section/s5/bgm.png" alt="bg" v-else
+    />
     <div class="t">
       <div class="t1" 
       data-aos="fade-up"
@@ -53,16 +61,20 @@
 .s5 {
   @apply w-full relative bg-cover;
   height: size(820);
-  background-image: url("@/section/s5/bg.jpg");
+ //  background-image: url("@/section/s5/bg.jpg");
   padding-left: size(582);
   padding-top: size(114);
+.bg{position: absolute;top: size(-295);left: 0;width: 100%;z-index:3;
+  user-select: none;
+  pointer-events: none;}
   .t {
-    @apply text-black;
+    @apply text-black relative z-[5];
+    margin:size(40) 0 0 0;
 
     .t1 {
       font-size: size(40);
       font-weight: 700;
-      line-height: 150%; /* 60px */
+      line-height: 1.5; /* 60px */
       letter-spacing: size(8);
     }
     .t2 {
@@ -120,9 +132,10 @@
   .s5 {
     @apply w-full relative bg-cover;
     height: sizem(850);
-    background-image: url("@/section/s5/bgm.jpg");
+   // background-image: url("@/section/s5/bgm.jpg");
     padding-left: 0;
     padding-top: sizem(60);
+.bg{top: sizem(-80);}
     .t {
       @apply text-black;
       padding: 0 sizem(32.5);
