@@ -8,7 +8,7 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "鵬程東三路vs介壽路",
+    address: "高雄市楠梓區芎林一街",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3678.489826005084!2d120.289203!3d22.784307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ3JzAzLjUiTiAxMjDCsDE3JzIxLjEiRQ!5e0!3m2!1szh-TW!2stw!4v1721979864766!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/Y3AsifGx63NWpNSQA",
     phone: "",
