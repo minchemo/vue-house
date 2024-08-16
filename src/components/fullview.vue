@@ -27,7 +27,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url("@/section/s2/map.jpg");
+    background-image: url("@/section/s2/map.webp");
     background-size: cover;
   }
 

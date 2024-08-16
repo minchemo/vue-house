@@ -1,13 +1,17 @@
 <template>
   <article class="s3">
+    <div class="inkbg absolute">
+      <div class="ink1 absolute" data-aos="zoom-in" data-aos-delay="0">
     <img
-      class="bg"
-      src="@/section/s3/bg1.png" alt="bg" v-if="!$isMobile()"
+      src="./s1/ink2.png" alt="ink"
     />
+  </div>
+  <div class="ink2 absolute" data-aos="zoom-in" data-aos-delay="200">
     <img
-      class="bg"
-      src="@/section/s3/bgm1.png" alt="bg" v-else
+      src="./s1/ink2.png" alt="ink"
     />
+  </div>
+    </div>
 
     <div class="t" data-aos="fade-up" data-aos-delay="0">
       <div class="t1">徐匯中學站 雙線捷運宅</div>
@@ -18,7 +22,7 @@
         蘆洲線三站瞬間抵達北市大同區。
       </div>
     </div>
-    <div class="swiper-box">
+    <div class="swiper-box" data-aos="fade-up" data-aos-delay="0">
       <Splide :options="sConfig" ref="splide" class="slide">
         <SplideSlide
           class="slide-item"
@@ -50,12 +54,8 @@
     </div>
     <img
       class="ma"
-      src="@/section/s3/ma.svg" alt="ma" 
+      src="@/section/s3/ma.svg" alt="ma"  data-aos="fade-up" data-aos-delay="100"
     />
-    <!-- 
-    <div class="mrt" v-if="!isMobile">
-      <div class="caption">徐匯中學站</div>
-    </div> -->
   </article>
 </template>
 
@@ -123,8 +123,28 @@
       height: size(400);
      // height: size(314);
       margin-right: size(12);
+      background-size: cover;
     }
-    .caption{color: #FFF;position: absolute;right: .5em;bottom: .5em;text-shadow: 0 0 10px #000;}
+    .caption{color: #fcd05466;position: absolute;right: .5em;bottom: .5em;text-shadow: 0 0 10px #000;}
+  }
+.inkbg{top: 0;left: 0;width: 100%;z-index:3;
+  user-select: none;
+  pointer-events: none;
+
+}
+  .ink1{
+    top: size(-265);left:size(-350);width:size(2120);
+    img{
+      width: 100%;filter: invert(86%) sepia(4%) saturate(1113%) hue-rotate(319deg) brightness(111%) contrast(98%);
+      transform: rotate(165deg);
+    }
+  }
+  .ink2{
+    top: size(-350);left:size(325);width:size(2850);height:size(1275);
+    img{
+      width: 100%;height: 100%;filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
+      transform: rotate(165deg);
+    }
   }
 }
 
@@ -135,11 +155,11 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    height: sizem(667);
+    height: sizem(687);
    // background-image: url("@/section/s3/bgm.jpg");
     padding: 0;
     padding-top: sizem(60);
-.ma{position: absolute;top: sizem(450);right: 0;
+.ma{position: absolute;top: sizem(470);right: 0;
   left: 0;margin: auto;
   width: sizem(330);}
 
@@ -171,9 +191,10 @@
       @apply relative z-10;
       .slide-item {
         width: sizem(300);
-        height: sizem(180);
+        height: sizem(200);
         margin-right: sizem(10);
       }
+      .caption{font-size: sizem(12);}
 
       .arrows {
         @apply absolute w-full;
@@ -193,13 +214,27 @@
         }
       }
     }
+  .ink1{
+    top: sizem(290);left:sizem(-390);width:sizem(890);
+    img{
+      transform: rotate(0deg);
+    }
+  }
+  .ink2{
+    top: sizem(-48);left:sizem(-330);width:sizem(908);height:sizem(405);
+    img{
+      width: 100%;height: 100%;
+      //filter: invert(0);
+      filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
+      transform: rotate(0deg);
+    }
+  }
   }
 }
 </style>
 
 <script setup>
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
-import fullview from "@/components/fullview.vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
 const isMobile = computed(() => globals.$isMobile())

@@ -32,8 +32,8 @@
     .logo {
       @apply absolute z-10;
       width: size(410);
-      left: 4.5%;
-      top: 4%;
+      left: 4.35%;
+      top: 9.5%;
     }
     .blue {
       @apply absolute z-[1] h-full min-w-full;
@@ -63,6 +63,8 @@
       @apply relative aspect-[1920/1150] h-full w-auto;
       .logo {
         width: sizem(176.5);
+        left: 3.2%;
+        top: 7.8%;
       }
     }
 

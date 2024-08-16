@@ -235,13 +235,12 @@
 
       .l {
         width: sizem(375);
-        .caption {
-          @apply hidden;
-        }
       .slide-item {
+        position: relative;
         width: sizem(375);
         height: sizem(375);
       }
+      .caption{font-size: sizem(8);}
       }
       .r {
         @apply flex flex-col justify-between;
@@ -367,7 +366,7 @@ const imgs = [
        "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
        "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
     ],
-    planImg: new URL("../section/s9/p1.jpg", import.meta.url).href,
+    planImg: new URL("../section/s9/p1.webp", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp1.jpg", import.meta.url).href,
   },
   {
@@ -381,7 +380,7 @@ const imgs = [
        "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
        "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
     ],
-    planImg: new URL("../section/s9/p2.jpg", import.meta.url).href,
+    planImg: new URL("../section/s9/p2.webp", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
   },
   {
@@ -395,7 +394,7 @@ const imgs = [
        "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
        "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
     ],
-    planImg: new URL("../section/s9/p3.jpg", import.meta.url).href,
+    planImg: new URL("../section/s9/p3.webp", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
   },
 ]

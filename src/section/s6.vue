@@ -45,7 +45,7 @@
   @apply w-full relative bg-cover;
   @apply flex items-start justify-start;
   height: size(1080);
-  background-image: url("@/section/s6/bg.png");
+  background-image: url("@/section/s6/bg.jpg");
   padding-left: size(146.23);
   padding-top: size(40.92);
   gap: size(90);
@@ -125,7 +125,7 @@
     @apply w-full relative bg-cover;
     @apply flex flex-col items-start justify-start;
     height: sizem(1091);
-    background-image: url("@/section/s6/bgm.png");
+    background-image: url("@/section/s6/bgm.webp");
     padding-left: 0;
     padding-top: sizem(30);
     gap: sizem(87);
