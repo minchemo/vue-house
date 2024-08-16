@@ -9,8 +9,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市楠梓區芎林一街",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3678.489826005084!2d120.289203!3d22.784307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ3JzAzLjUiTiAxMjDCsDE3JzIxLjEiRQ!5e0!3m2!1szh-TW!2stw!4v1721979864766!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/Y3AsifGx63NWpNSQA",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.3929277349284!2d120.32715317587568!3d22.75079482641466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0e3a8d104035%3A0xd900026850cca572!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A6IqO5p6X5LiA6KGXMTk26Jmf!5e0!3m2!1szh-TW!2stw!4v1723798378236!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/6THX5eCnbaks9ixf8",
     phone: "",
     fbLink: "",
     fbMessage: "",
