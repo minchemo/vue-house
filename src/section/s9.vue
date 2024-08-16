@@ -25,23 +25,24 @@
                 srcset=""
               />
             </SplideSlide>
-          </Splide><!-- 
+          </Splide>
+          
           <div class="arrows">
             <img
-              @click="goPrev"
-              class="prev"
+              @click="goPrev(i)"
+              class="prev cursor-pointer"
               src="@/section/arrow.png"
               alt="r"
               srcset=""
             />
             <img
-              @click="goNext"
-              class="next"
+              @click="goNext(i)"
+              class="next cursor-pointer"
               src="@/section/arrow.png"
               alt="r"
               srcset=""
             />
-          </div> -->
+          </div>
         </div>
         
         <div class="r">
@@ -331,7 +332,7 @@ const closePopup = () => {
   popupImg.value = "";
 };
 
-const splide = ref(null);
+const splide = ref([]);
 const sConfig = {
   autoWidth: true,
   arrows: false,
@@ -341,12 +342,12 @@ const sConfig = {
   type: "loop",
 };
 
-const goPrev = () => {
-    splide.value?.go("<");
+const goPrev = (refIdx) => {
+    splide.value[refIdx].go("<");
 };
 
-const goNext = () => {
-    splide.value?.go(">");
+const goNext = (refIdx) => {
+    splide.value[refIdx].go(">");
 };
 
 onMounted(async () => {
