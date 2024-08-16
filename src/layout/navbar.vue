@@ -57,7 +57,7 @@
   .logo {
     width: size(120);
     height: size(92);
-    background-image: url("@/section/navlogo.png");
+    //background-image: url("@/section/navlogo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
