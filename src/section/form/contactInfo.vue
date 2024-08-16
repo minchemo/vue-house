@@ -36,7 +36,7 @@
 
   <!-- Mobile contact info -->
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
       <img src="//h65.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
@@ -45,7 +45,7 @@
       @click="modalOpen = true; modalType = 'fb'">
       <img src="//h65.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
-    </div>
+    </div-->
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h65.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #5F7A86;
+      background-color: #002e69;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -245,7 +245,7 @@
     height: sizem(63);
     gap: sizem(1);
     //box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#5F7A86;
+    background:#004271;
 
     .contact-item {
       height: 100%;      

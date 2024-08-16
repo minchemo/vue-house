@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#78B9CD]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <S1 />
     <!-- <S2v /> -->
   <!--
@@ -43,6 +43,10 @@
   to {
      transform:scale(1);opacity: 1;
   }
+}
+
+.home{
+  background:linear-gradient(to right, #00426C, #008C98);
 }
 /*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
@@ -86,6 +90,10 @@ img {
   }
   }
 @media screen and (max-width: 767px) {
+
+.home{
+  background:linear-gradient(to top, #00426C, #008C98);
+}
   
 }
 </style>

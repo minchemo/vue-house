@@ -194,7 +194,7 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #286476;
+    color: #004271;
     background-color: #fff;
     border:0;
     border-radius: 0em;

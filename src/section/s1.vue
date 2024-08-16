@@ -1,5 +1,6 @@
 <template>
   <article class="s1" id="s1">
+    <img src="./s1/bgm.webp" alt="bg" class="bgm" v-if="isMobile">
 	<!--  
 
    <img src="./s1/pc.jpg" class="t0">
@@ -9,10 +10,8 @@
 
    <div class="con flex">
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-  <img src="./s1/02.svg" alt="title" class="t2" data-aos="zoom-in"  data-aos-delay="600">
-  <img src="./s1/03.svg" alt="title" class="t3" data-aos="zoom-in"  data-aos-delay="600">
-  <img src="./s1/04.svg" alt="logo" class="t4" data-aos="zoom-in"  data-aos-delay="600">
-  <img src="./s1/man.png" alt="man" class="man" data-aos="zoom-in"  data-aos-delay="600">
+  <img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in"  data-aos-delay="600">
+  <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in"  data-aos-delay="600">
 </div>
   </article>
 </template>
@@ -36,45 +35,34 @@
   align-items:center;
   font-size:size(36);
   //background: #E60012;
- // background: url("./s1/bg.webp");
+  background: url("./s1/bg.webp");
 
   background-size: cover;
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
 
 .con{gap: size(60);margin: 0 0 size(70) 0;
   div{flex-direction:column;margin: 0;}}
+
+  .flex{
+    display: flex;
+    flex-direction: column;
+
+
   .logo{
-    position: absolute;
-    width: size(128);
-    left: size(277);
-    top: size(183);}
+    width: size(678);
+    }
+  .t1{
+    width: size(514);
+  }
+
   .t2{
-    position: absolute;
-    width: size(373);
-    left: size(747);
-    top: size(139);
+    width: size(200);
+    margin-top: size(50);
   }
 
-  .man{
-    position: absolute;
-    width: size(236);
-    left: size(455);
-    top: size(102);
   }
-
-  .t3{
-    position: absolute;
-    width: size(474);
-    right: size(229);
-    top: size(454);
-  }
-
-  .t4{
-    position: absolute;
-    width: size(133);
-    right: size(30);
-    top: size(29);
-  }
+  
+ 
     
 @keyframes ball {
   to{
@@ -136,41 +124,43 @@ animation: ball 5s ease-in-out alternate infinite;}
     min-height: sizem(667);
     max-height: sizem(667);
     font-size:sizem(15);
+    background-position: bottom;
+    background-size: cover;
+    background: linear-gradient(to bottom,  #018c97 0%,#004271 50%,#004271 50%);
+
+
+   
+
+
 
     .con{gap:0;margin: 0 0  sizem(34) 0;flex-direction:column;
   div{flex-direction:column;margin: 0;}}
+
+  .bgm{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
   
 
-  .logo{
-    width: sizem(53);
-    left: sizem(25);
-    top: sizem(101);}
+.flex{
+    display: flex;
+    flex-direction: column;
 
+
+  .logo{
+    width: sizem(280);
+    }
+  .t1{
+    width: sizem(223);
+    margin-top: sizem(30);
+  }
 
   .t2{
-    width: sizem(157);
-    left: auto;
-    right: sizem(15);
-    top: sizem(84);
+    width: sizem(115);
+    margin-top: sizem(70);
   }
 
-  .man{
-    width: sizem(100);
-    left: sizem(97);
-    top: sizem(84);
-  }
-
-  .t3{
-    width: sizem(239);
-    right: sizem(68);
-    top: auto;
-    bottom: sizem(90);
-  }
-
-  .t4{
-    width: sizem(80);
-    right: sizem(10);
-    top: sizem(15);
   }
     
 
