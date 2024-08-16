@@ -74,7 +74,7 @@ export default {
     },
     {
       name: "立即賞屋",
-      target: ".s9",
+      target: ".s-order-title",
       offset: "",
     },
   ],
