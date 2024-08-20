@@ -18,7 +18,7 @@
                 {{ img.renderCaption[index] }}
               </div>
               <img
-                @click="openPopup('render', image,true,index,i)"
+                @click="openPopup('render', image)"
                 class="view"
                 src="./s9/view.png"
                 alt=""
@@ -65,7 +65,7 @@
             :style="{ 'background-image': `url(${img.planImg})` }"
           >
             <img
-              @click="openPopup('plan', img.popupPlanImg,false)"
+              @click="openPopup('plan', img.popupPlanImg)"
               class="view"
               src="@/section/s9/view.png"
               alt=""
@@ -77,69 +77,14 @@
         <img class="hidden" :src="img.popupPlanImg" alt="" srcset="" />
       </section>
     </template>
-    
-    <div class="inkbg absolute">
-    <div
-      class="ink1 absolute" data-aos="fade" data-aos-delay="0">
-      <img
-        src="./s1/ink2.png" alt="ink"
-      />
-    </div>
-    <div
-      class="ink2 absolute" data-aos="fade" data-aos-delay="0">
-      <img
-        src="./s1/ink2.png" alt="ink"
-      />
-    </div>
-    <div
-      class="ink3 absolute" data-aos="fade" data-aos-delay="0">
-      <img
-        src="./s1/ink2.png" alt="ink"
-      />
-    </div>
-    <div
-      class="ink9 absolute" data-aos="fade" data-aos-delay="0" v-if="$isMobile()">>
-      <img
-        src="./s1/ink2.png" alt="ink"
-      />
-    </div>
-    <div
-      class="ink10 absolute" data-aos="fade" data-aos-delay="0" v-if="$isMobile()">>
-      <img
-        src="./s1/ink2.png" alt="ink"
-      />
-    </div>
-    <div
-      class="ink4 absolute" data-aos="fade" data-aos-delay="0">
-      <img
-        src="./s1/ink2.png" alt="ink"
-      />
-    </div>
-    <div
-      class="ink5 absolute" data-aos="fade" data-aos-delay="0" v-if="!$isMobile()">
-      <img
-        src="./s1/ink1.webp" alt="ink"
-      />
-    </div>
-    <div
-      class="ink6 absolute" data-aos="fade" data-aos-delay="0">
-      <img
-        src="./s1/ink1.webp" alt="ink"
-      />
-    </div>
-    <div
-      class="ink7 absolute" data-aos="fade" data-aos-delay="500">
-      <img
-        src="./s1/ink3.png" alt="ink"
-      />
-    </div>
-    <div
-      class="ink8 absolute" data-aos="fade" data-aos-delay="500">
-      <img
-        src="./s1/ink3.png" alt="ink"
-      />
-    </div>
-    </div>
+    <img
+      class="bg"
+      src="./s9/bg.png" alt="bg" v-if="!$isMobile()"
+    />
+    <img
+      class="bg"
+      src="./s9/bgm1.png" alt="bg" v-else
+    />
   </article>
   <div class="popup" :class="{ open: popupType != '' }">
     <template v-if="popupImg != '' && isMobile">
@@ -147,38 +92,10 @@
       <div class="wrapper">
         <img class="i" :src="popupImg" />
       </div>
-      <div class="arrows" v-if="showArrows">
-            <img
-              class="prev cursor-pointer"
-              src="@/section/arrow.png"
-              alt="r"
-      @click="gonn"
-            />
-            <img
-              class="next cursor-pointer"
-              src="@/section/arrow.png"
-              alt="r"
-      @click="gonn"
-            />
-          </div>
     </template>
 
     <template v-else-if="popupImg != ''">
       <img class="i" :src="popupImg" />
-      <div class="arrows" v-if="showArrows">
-            <img
-              class="prev cursor-pointer"
-              src="@/section/arrow.png"
-              alt="r"
-      @click="gonn"
-            />
-            <img
-              class="next cursor-pointer"
-              src="@/section/arrow.png"
-              alt="r"
-      @click="gonn"
-            />
-          </div>
     </template>
     <img
       @click="closePopup()"
@@ -197,63 +114,13 @@
 .s9 {
   @apply w-full relative bg-cover;
   padding: size(210) 0 0 0;
-.inkbg{top: 0;left: 0;width: 100%;z-index:3;
+.bg{position: absolute;top:size(-430);left: 0;width: 100%;z-index:2;
   user-select: none;
-  pointer-events: none;
+  pointer-events: none;}
 
-}
-  .ink1{top: size(250);left:size(-850);width:size(2610);height:size(1545);
-    img{width: 100%;height: 100%;
-      transform: rotate(-0deg);//opacity: .3;
-   filter:invert(86%) sepia(4%) saturate(1113%) hue-rotate(319deg) brightness(111%) contrast(98%);
-  }
-}
-  .ink2{top: size(-257);left:size(-100);width:size(2310);height:size(1020);
-    img{width: 100%;height: 100%;//opacity: .3;
-      transform: rotate(-8.6deg);
-     filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
-  }
-}
-  .ink3{top: size(2000);left:size(-390);width:size(2610);height:size(1545);
-    img{width: 100%;height: 100%;
-      transform: rotate(-0deg);//opacity: .3;
-    filter:invert(86%) sepia(4%) saturate(1113%) hue-rotate(319deg) brightness(111%) contrast(98%);
-  }
-}
-  .ink4{top: size(1645);left:size(-25);width:size(2310);height:size(1020);
-    img{width: 100%;height: 100%;//opacity: .3;
-      transform: rotate(-8.6deg);
-    filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
-  }
-}
-  .ink5{top: size(585);left:size(265);width:size(2000);
-    transform: rotate(-5deg)translateX(10%);
-    img{width: 100%;//opacity: .3;
-    }
-  }
-  .ink6{top: size(2450);left:size(280);width:size(2000);
-    transform: rotate(-5deg)translateX(10%);
-    img{width: 100%; //opacity: .3;
-      transform: rotate(180deg);
-    }
-  }
-  .ink7{top: size(1150);left:size(-1100);width:size(2000);height:size(500);
-    transform: translate(-10%,-10%);
-   img{width: 100%;height: 100%; //opacity: .3;
-    transform: perspective(5vw)rotate(-20deg)rotateX(-5deg)rotateY(3deg);
-    filter:invert(79%) sepia(17%) saturate(537%) hue-rotate(358deg) brightness(98%) contrast(89%);
-  }
-  }
-  .ink8{top: size(2170);right:size(-500);width:size(1300);height:size(450);
-    transform: translate(-10%,-10%);
-   img{width: 100%;height: 100%; //opacity: .3;
-    transform: perspective(5vw)rotate(-22deg)rotateX(-5deg)rotateY(2deg);
-    filter:invert(79%) sepia(17%) saturate(537%) hue-rotate(358deg) brightness(98%) contrast(89%);
-  }
-  }
   section {
     @apply flex items-end relative z-10;
-    height: size(1075); // opacity: 0;
+    height: size(1075);
     gap: size(80);
 
     .l {
@@ -313,7 +180,6 @@
         height: size(634);
         border-radius: size(30);
         overflow: hidden;
-        box-shadow: 0 0 size(20) #9669;
       }
     }
 
@@ -344,21 +210,12 @@
   .i {
     max-height: 90vh;
     min-height: size(763);
-    max-width: calc(100% - #{size(150)});
   }
   .close {
     @apply self-start cursor-pointer;
     @apply relative z-10;
     width: size(56);
     padding-top: size(50);
-  }
-  .arrows{
-    @apply absolute w-full flex items-center justify-between;
-    padding:0 size(20);
-  
-    .next {
-          @apply -scale-x-100;
-        }
   }
 }
 
@@ -370,64 +227,7 @@
 @media screen and (max-width: 767px) {
   .s9 {
     @apply w-full relative bg-cover;
-    padding: 0;
-
-.ink1{top: sizem(650);left:sizem(-390);width:sizem(890);height:sizem(525);
-    img{
-      transform: rotate(-15deg);
-  }
-}
-.ink2{top: sizem(230);left:sizem(-530);width:sizem(1100);height:sizem(478);
-    img{
-      transform: rotate(-0deg);
-  }
-}
-.ink3{top: sizem(1190);left:sizem(-295);width:sizem(910);height:sizem(400);
-    img{
-      transform: rotate(0deg);filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
-  }
-}
-.ink4{top: sizem(1290);left:sizem(-435);width:sizem(910);height:sizem(520);
-    img{
-      transform: rotate(0deg);
-      filter:invert(86%) sepia(4%) saturate(1113%) hue-rotate(319deg) brightness(111%) contrast(98%);
-  }
-}
-.ink5{top: sizem(475);left:sizem(55);width:sizem(400);
-    transform: rotate(-5deg)translateX(10%);
-    img{
-      transform: rotate(180deg);
-    }
-  }
-.ink6{top: sizem(2565);left:sizem(-258);width:sizem(1110);
-    transform: rotate(-5deg)translateX(10%);
-    img{
-      transform: rotate(180deg);
-    }
-  }
-.ink7{top: sizem(2385);left:sizem(-60);width:sizem(750);height:sizem(210);
-   img{
-    transform: rotate(-25deg);
-  }
-  }
-.ink8{top: sizem(1668);left:sizem(120);width:sizem(315);height:sizem(90);
-   img{
-    transform: rotate(-25deg);
-  }
-  }
-.ink9{top: sizem(1750);left:sizem(-360);width:sizem(910);height:sizem(404);
-    img{width: 100%;height: 100%;
-      transform: rotate(-0deg);
-      filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
-  }
-}
-.ink10{top: sizem(2440);left:sizem(-395);width:sizem(920);height:sizem(520);
-    img{width: 100%;height: 100%;
-      transform: rotate(-14deg);
-      filter:invert(86%) sepia(4%) saturate(1113%) hue-rotate(319deg) brightness(111%) contrast(98%);
-  }
-}
-
+.bg{top:sizem(230);}
 
     section {
       @apply flex flex-col items-start bg-cover;
@@ -500,7 +300,6 @@
       .i {
         max-height: sizem(487);
         min-height: sizem(487);
-        max-width:none;
       }
     }
     .close {
@@ -522,16 +321,10 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
 const popupType = ref("");
 const popupImg = ref("");
-const showArrows = ref(false);
-const currentImgIndex = ref(0); // 追踪當前顯示的 renderImg 索引
-const currentGroup = ref(null); // 追踪當前顯示的 img 組
 
-const openPopup = (type, img, arr, index,i) => {
+const openPopup = (type, img) => {
   popupType.value = type;
   popupImg.value = img;
-  showArrows.value = arr; 
-  currentImgIndex.value = index; // renderImg 索引
-  currentGroup.value = i; // img 組
 };
 
 const closePopup = () => {
@@ -557,19 +350,6 @@ const goNext = (refIdx) => {
     splide.value[refIdx].go(">");
 };
 
-const gonn = () => {
-  if (currentImgIndex.value > 0) {
-    currentImgIndex.value--;
-  } else {
-    currentImgIndex.value = imgs[currentGroup.value].renderImg.length - 1;
-  }
-  updatePopupImg();
-};
-const updatePopupImg = () => {
-  popupImg.value = imgs[currentGroup.value].renderImg[currentImgIndex.value];
-  
-};
-
 onMounted(async () => {
   await nextTick();  // 确保 DOM 渲染完成
 });
@@ -578,7 +358,7 @@ onMounted(async () => {
 const imgs = [
   {
     t1: "A2戶型/時尚簡約2房",
-    t2: "格局規劃方正且雙面採光，規劃雙衛廁，客廳結合開放式餐廳與廚房合為一體，做菜時與家人互動，讓每一餐都充滿愛與溫情，主臥套房空間寬敞明亮，享受獨立衛廁，另設計有開放式客衛浴外洗手台，方便一回家就洗手，衛浴乾濕分離設計。",
+    t2: "格局規劃方正且雙面採光，規劃雙廁所，客廳結合開放式餐廳與廚房合為一體，做菜時與家人互動，讓每一餐都充滿愛與溫情，主臥套房空間寬敞明亮，享受獨立廁所，另設計有開放式客衛浴外洗手台，方便一回家就洗手，衛浴乾濕分離設計。",
     renderImg:[
       new URL("../section/s9/r11.jpg", import.meta.url).href,
       new URL("../section/s9/r12.jpg", import.meta.url).href,
@@ -592,7 +372,7 @@ const imgs = [
   },
   {
     t1: "A6戶型/溫馨人文2房",
-    t2: "格局規劃方正且雙面採光，規劃獨立玄關，雙衛廁皆有對外窗，客廳結合開放式餐廳與廚房合為一體，讓您在烹飪的同時與家人分享每一刻的愉悅，主臥套房空間寬敞明亮，享受獨立衛廁及更衣間，客浴乾濕分離設計。",
+    t2: "格局規劃方正且雙面採光，規劃獨立玄關及雙廁所，客廳結合開放式餐廳與廚房合為一體，讓您在烹飪的同時與家人分享每一刻的愉悅，主臥套房空間寬敞明亮，享受獨立廁所及更衣間，客浴乾濕分離設計。",
     renderImg:[
       new URL("../section/s9/r21.jpg", import.meta.url).href,
       new URL("../section/s9/r22.jpg", import.meta.url).href,
@@ -619,7 +399,4 @@ const imgs = [
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
   },
 ]
-
-
-
 </script>

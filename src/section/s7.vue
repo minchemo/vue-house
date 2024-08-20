@@ -53,7 +53,7 @@
 @import "@/assets/style/function.scss";
 
 .s7 {
-  @apply w-full relative bg-cover text-white;
+  @apply w-full relative bg-cover text-white z-[2];
   height: size(1080);
   background-image: url("@/section/s7/bg.jpg");
   padding-left: size(213);

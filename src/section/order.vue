@@ -2,13 +2,76 @@
   <div id="order" class="order relative text-center">
     <img
       class="bg"
-      src="@/section/order/bg.png" alt="bg" v-if="!$isMobile()"
+      src="@/section/order/bgm.png" alt="bg" v-if="$isMobile()"
     />
+    <div class="inkbg absolute" v-else>
+    <div
+      class="ink1 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+        src="./s1/ink2.png" alt="ink"
+      />
+    </div>
+    <div
+      class="ink2 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+        src="./s1/ink2.png" alt="ink"
+      />
+    </div>
+    <div
+      class="ink3 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+        src="./s1/ink2.png" alt="ink"
+      />
+    </div>
+    <div
+      class="ink4 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+        src="./s1/ink2.png" alt="ink"
+      />
+    </div>
+    <div
+      class="ink5 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+      src="./s1/ink1.webp" alt="ink"
+      />
+    </div>
+    <div
+      class="ink6 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+        src="./s1/ink3.png" alt="ink"
+      />
+    </div>
+    <div
+      class="ink7 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+        src="./s1/ink3.png" alt="ink"
+      />
+    </div>
+    <div
+      class="ink8 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+        src="./s1/ink3.png" alt="ink"
+      />
+    </div>
+    <div
+      class="ink9 absolute" data-aos="fade" data-aos-delay="0">
+      <img
+        src="./s1/ink3.png" alt="ink"
+      />
+    </div>
+  <div
+      class="ink10 absolute" data-aos="fade" data-aos-delay="600">
     <img
-      class="bg"
-      src="@/section/order/bgm.png" alt="bg" v-else
+      src="./s1/ink4.png" alt="ink"
     />
-    
+  </div>
+  <div
+      class="ink11 absolute" data-aos="fade" data-aos-delay="600">
+    <img
+      src="./s1/ink5.png" alt="ink"
+    />
+  </div>
+    </div>
     <div class="order-section">
       <div class="intro">
         <img
@@ -221,8 +284,84 @@
   width: 100%;
   padding-top: 0;
 .bg{position: absolute;top: size(-140);;left: 0;width: 100%;z-index:2;
-  user-select: none;
+  user-select: none;// opacity: .7;
   pointer-events: none;}
+
+  .ink1{top: size(533);left:size(-310);width:size(2135);height:size(1255);
+  img{width: 100%;height: 100%;
+    transform: rotate(-0deg);//opacity: .3;
+  filter:invert(86%) sepia(4%) saturate(1113%) hue-rotate(319deg) brightness(111%) contrast(98%);
+}
+}
+
+.ink2{top: size(-140);left:size(-80);width:size(2187);height:size(970);
+  img{width: 100%;height: 100%;
+    transform: rotate(-0deg);//opacity: .3;
+    filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
+}
+}
+.ink3{top: size(2029);left:size(-310);width:size(2135);height:size(1255);
+  img{width: 100%;height: 100%;
+    transform: rotate(-0deg);//opacity: .3;
+   filter:invert(86%) sepia(4%) saturate(1113%) hue-rotate(319deg) brightness(111%) contrast(98%);
+}
+}
+
+.ink4{top: size(1417);left:size(5);width:size(2455);height:size(1085);
+  img{width: 100%;height: 100%;
+    transform: rotate(180deg);//opacity: .3;
+    filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
+}
+}
+
+.ink5{top: size(473);left:size(-160);width:size(2970);height:size(990);
+  img{width: 100%;height: 100%;
+    transform: rotate(0deg);
+}
+}
+  .ink6{top: size(775);left:size(-450);width:size(1340);height:size(310);
+    transform: translate(-10%,-10%);
+    img{width: 100%;height: 100%;
+      transform: rotate(24deg);
+    //  filter:invert(91%) sepia(67%) saturate(3215%) hue-rotate(294deg) brightness(100%) contrast(91%);
+    }
+  }
+  .ink7{top: size(630);left:size(1020);width:size(830);height:size(290);
+    transform: translate(-10%,-10%);
+    img{width: 100%;height: 100%;
+      transform: perspective(5vw)rotate(10deg)rotateX(-7deg)rotateY(3deg);
+     filter:invert(79%) sepia(17%) saturate(537%) hue-rotate(358deg) brightness(98%) contrast(89%);
+    }
+  }
+  .ink8{top: size(740);left:size(-80);width:size(770);height:size(210);
+    transform: translate(-10%,-10%);
+    img{width: 100%;height: 100%;
+      transform: rotate(7.5deg);
+    filter:invert(79%) sepia(17%) saturate(537%) hue-rotate(358deg) brightness(98%) contrast(89%);
+    }
+  }
+  .ink9{top: size(2320);left:size(250);width:size(1550);height:size(400);
+    transform: translate(-10%,-10%);
+    img{width: 100%;height: 100%;
+      transform: rotate(189deg);
+      filter:invert(91%) sepia(67%) saturate(3215%) hue-rotate(294deg) brightness(100%) contrast(91%);
+    }
+  }
+
+  .ink10{top: size(150);left:size(960);width:size(1290);
+    transform: translate(-10%,-10%);
+    img{width: 100%;
+      transform: rotate(17deg);
+    //  filter:brightness(30%);
+    }
+  }
+  .ink11{top: size(1175);left:size(-530);width:size(1770);
+    transform: translate(-10%,-10%);
+    img{width: 100%;
+      transform: rotate(0deg);
+    //  filter:brightness(0%);
+    }
+  }
 
 
   .s-order-title {
@@ -416,15 +555,33 @@
 
   .order {
     width: 100%;
-    // padding-bottom: sizem(63);
-    // border-radius: sizem(68) sizem(68) 0 0;
-    /* padding-top: sizem(0);
-    margin-top: sizem(0);
 
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
+.ink1{top: sizem(190);left:sizem(-345);width:sizem(850);height:sizem(515);
+    img{
+      transform: rotate(-0deg);
+  }
+}
+.ink2{top: sizem(-27);left:sizem(-266);width:sizem(906);height:sizem(410);
+    img{
+      transform: rotate(-0deg);
+  }
+}
+.ink3{top: sizem(1310);left:sizem(-370);width:sizem(895);height:sizem(540);
+    img{
+      transform: rotate(0deg);
+  }
+}
+.ink4{top: sizem(645);left:sizem(-267);width:sizem(910);height:sizem(410);
+    img{
+      transform: rotate(0deg);
+  }
+}
+.ink5{top: sizem(205);left:sizem(-270);width:sizem(1150);height:sizem(420);
+    img{
+      transform: rotate(0deg);
+     // filter:brightness(30%) ;
+  }
+}
 
     .s-order-title {
       @apply absolute left-0 bottom-[105%] flex flex-col items-center justify-center w-full;

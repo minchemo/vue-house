@@ -11,8 +11,9 @@
     />
     <img
       class="ink3 absolute" data-aos="fade" data-aos-delay="200"
-      src="./s1/ink1.svg" alt="ink"
+      src="./s1/ink1.webp" alt="ink"
     />
+    
     <div
       class="ink4 absolute" data-aos="fade" data-aos-delay="500">
     <img
