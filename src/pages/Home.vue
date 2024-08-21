@@ -10,11 +10,11 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#001c57]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFF] text-[#000]">
     <S1 />
-    <S2 />
     <!-- <S2v /> -->
   <!--
+    <S2 />
     <S3 />
     <S4 />
     <S5 />
@@ -112,7 +112,7 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 800
+      duration: 2000
     });
   };
 

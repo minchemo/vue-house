@@ -57,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#666]">
+        <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#EA5514] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -108,7 +108,7 @@
 
 .order {
   width: 100%;
-  padding-top: size(40);
+  padding-top: 0;
   //background: #195c45;
  // background: linear-gradient(to bottom, #195c45, #000704);
   
@@ -135,7 +135,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #32B8C3;
+    color: #FFF;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -146,7 +146,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    // color: #fff;
+    color: #fff;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -156,7 +156,7 @@
     width: size(300);
     height: size(2);
     margin-bottom: size(50);
-  //  background-color: #055F76;
+    background-color: #055F76;
   }
 
   .form {
@@ -185,10 +185,10 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #0003;
+      background-color: #fff;
       position: absolute;
     }
-    .row{background: #f1f7f5;border: 1px solid #CCC;color: #000;
+    .row{background: #FFF;border: 1px solid #CCC;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -212,8 +212,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    background-color: #EA5514;
+    color: #000;
+    background-color: #D9E021;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: 0em;
