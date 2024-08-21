@@ -323,7 +323,7 @@
     transform: translate(-10%,-10%);
     img{width: 100%;height: 100%;
       transform: rotate(24deg);
-    //  filter:invert(91%) sepia(67%) saturate(3215%) hue-rotate(294deg) brightness(100%) contrast(91%);
+      filter:invert(91%) sepia(67%) saturate(3215%) hue-rotate(294deg) brightness(100%) contrast(91%);
     }
   }
   .ink7{top: size(630);left:size(1020);width:size(830);height:size(290);

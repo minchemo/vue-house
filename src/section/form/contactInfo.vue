@@ -46,7 +46,7 @@
       <img src="//h65.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.s-order-title')">
       <img src="//h65.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
