@@ -46,7 +46,7 @@
 }
 
 .home{
-  background:linear-gradient(to right, #00426C, #008C98);
+  background:#001761;
 }
 /*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
@@ -90,10 +90,6 @@ img {
   }
   }
 @media screen and (max-width: 767px) {
-
-.home{
-  background:linear-gradient(to top, #00426C, #008C98);
-}
   
 }
 </style>
