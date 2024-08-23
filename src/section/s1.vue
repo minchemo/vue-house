@@ -17,8 +17,8 @@
     <div class="t2" data-aos="fade-up" data-aos-delay="0" >
       <img src="./s1/t2.svg" alt="t2">
       <div class="earth absolute">
-        <img src="./s1/e.jpg" alt="earth" >
-        <img src="./s1/e.jpg" alt="earth" >
+        <img src="./s1/e.webp" alt="earth" >
+        <img src="./s1/e.webp" alt="earth" >
       </div>
     </div>
     <img src="./s1/t3.svg" class="t3" alt="t3" data-aos="fade-up" data-aos-delay="0" >
