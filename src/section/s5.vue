@@ -2,7 +2,7 @@
   <article class="s5">
     <img
       class="bg"
-      src="@/section/s5/bg.png" alt="bg" v-if="!$isMobile()"
+      src="@/section/s5/bg.webp" alt="bg" v-if="!$isMobile()"
     />
     <img
       class="bg"
