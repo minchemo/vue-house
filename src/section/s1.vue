@@ -1,6 +1,5 @@
 <template>
   <article class="s1" id="s1">
-    <img src="./s1/bgm.webp" alt="bg" class="bgm" v-if="isMobile">
 	<!--  
 
    <img src="./s1/pc.jpg" class="t0">
@@ -9,9 +8,8 @@
    -->
 
    <div class="con flex">
-  <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-  <img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in"  data-aos-delay="600">
-  <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in"  data-aos-delay="600">
+  <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" v-if="!isMobile">
+  <img src="./s1/logo_m.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" v-else>
 </div>
   </article>
 </template>
@@ -49,7 +47,8 @@
 
 
   .logo{
-    width: size(678);
+    width: size(1140);
+    margin-bottom: size(250);
     }
   .t1{
     width: size(514);
@@ -124,9 +123,9 @@ animation: ball 5s ease-in-out alternate infinite;}
     min-height: sizem(667);
     max-height: sizem(667);
     font-size:sizem(15);
-    background-position: bottom;
+    background: url("./s1/bgm.webp");
     background-size: cover;
-    background: linear-gradient(to bottom,  #018c97 0%,#004271 50%,#004271 50%);
+    background-position: bottom;
 
 
    
@@ -150,6 +149,7 @@ animation: ball 5s ease-in-out alternate infinite;}
 
   .logo{
     width: sizem(280);
+    margin-bottom: 0;
     }
   .t1{
     width: sizem(223);

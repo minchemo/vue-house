@@ -8,12 +8,12 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "高雄市楠梓區芎林一街",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.3929277349284!2d120.32715317587568!3d22.75079482641466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0e3a8d104035%3A0xd900026850cca572!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A6IqO5p6X5LiA6KGXMTk26Jmf!5e0!3m2!1szh-TW!2stw!4v1723798378236!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/6THX5eCnbaks9ixf8",
+    address: "桃園市大林路7號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.3500447254487!2d121.31732039999999!3d24.9882189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ee52bdba827%3A0x709762564c2f2567!2zMzMw5qGD5ZyS5biC5qGD5ZyS5Y2A5aSn5p6X6LevN-iZnw!5e0!3m2!1szh-TW!2stw!4v1724395934655!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/rK6cwzTwrTH9eskU7",
     phone: "03-3642277",
-    fbLink: "",
-    fbMessage: "",
+    fbLink: "https://www.facebook.com/61564385383020",
+    fbMessage: "https://m.me/61564385383020/",
     caseName: caseName,
     houseInfos: [
         /*,
@@ -24,7 +24,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-K2C7KPDV"], // 可放置多個
+    gtmCode: ["GTM-TLNH82HB"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -36,7 +36,7 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     //room_type: ["兩房","三房"],
-    //budget: ["900-1,000萬","1,100-1,200萬","1,200-1,300萬","1,300-1,400萬","1,400-1,500萬"],
+    budget: ["2388萬-2588萬","2688萬-2888萬",],
     navList: [
         /*
         {
