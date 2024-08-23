@@ -1,4 +1,4 @@
-const caseName = "深耕13"
+const caseName = "國泰skypark"
 
 export default {
     meta: {
@@ -8,10 +8,10 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市八德區豐德路582號",
+    // address: "桃園市八德區豐德路582號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.2046823277497!2d121.281644!3d24.925096200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468188a4c9039b5%3A0xea3b05f3aad65b25!2zMzM05qGD5ZyS5biC5YWr5b635Y2A6LGQ5b636LevNTgy6Jmf!5e0!3m2!1szh-TW!2stw!4v1712923248688!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/wfWnHoo3pnTDWbG19",
-    phone: "03-368-2668",
+    // phone: "03-368-2668",
     fbLink: "https://www.facebook.com/61552643335242/",
     fbMessage: "https://m.me/61552643335242/",
     caseName: caseName,

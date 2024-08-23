@@ -1,6 +1,11 @@
 <template>
   <article class="s1" id="s1">
+    <img src="./s1/pc.jpg" class="t0">
+    <div class="box"></div>
+    <img src="./s1/bg.png" class="bg">
+    <h3>超越南港<br>摩登時代</h3>
    <!-- <img src="./s1/mo.jpg" class="t0"> -->
+  <!--  
    <img src="./s1/logom.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0" v-if="$isMobile()" >
    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0" v-else >
    <img src="./s1/t1.svg" class="t1" alt="t1" data-aos="zoom-in" data-aos-delay="400" >
@@ -29,22 +34,11 @@
 生態跳島陽台｜雨水溢洪住居｜智慧健康促進｜寵物友善環境</p>
 <img src="./s1/t4.svg" class="t4" alt="03-3682668"  data-aos="fade-up" data-aos-delay="200">
   </div>
+
+
+   -->
 	<!--  
 
-
-       <img src="@/section/s1/bg.webp" class="bgh" v-if="!$isMobile()">
-       <img src="@/section/s1/bgm.webp" class="bgh" v-else>
-       <img src="@/section/s1/gif2.gif" class="gif">
-    <div class="hr" v-if="!$isMobile()"></div>
-<div class="logo" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="0">
-  <img src="./s1/logo.svg" alt="logo">
-  <div class="earth">
-  <img src="./s1/e.jpg" alt="earth" >
-  <img src="./s1/e.jpg" alt="earth" ></div>
-</div>
-<img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200" v-if="!$isMobile()">
-<img src="./s1/t1m.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="400" v-else>
-<img src="./s1/coming.svg" alt="coming" class="coming" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="600">
    -->
   </article>
 </template>
@@ -76,7 +70,8 @@
   &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
 
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
-  
+  .box{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
+  .bg{position: absolute;width:size(2517);top:size(-347);left:size(-291);}
   .logo{position: relative;
     width: size(315);
     margin-top:4.5vw;
