@@ -1,15 +1,5 @@
 <template>
   <article class="s1" id="s1">
-	<!--  
-   <img src="./s1/m.jpg" class="t0">
-
-
-   <img src="./s1/bg.jpg" class="bgh" v-if="!$isMobile()">
-       <img src="./s1/bgm.jpg" class="bgh" v-else>
-       <img src="@/section/s1/1.gif" class="gif">
-       <img src="./s1/txt.svg" class="txt1" v-if="!$isMobile()" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-       <img src="./s1/txtm.svg" class="txt1" v-else data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">   -->
-
        <div class="bg"><img src="./s1/bg.svg" alt="bg"></div>
        <img src="./s1/img.webp" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0">
        <img src="./s1/txt.svg" class="txt absolute" alt="txt" data-aos="zoom-in" data-aos-delay="200">
@@ -52,18 +42,6 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-/*
-@keyframes op {
-  50% {
-     opacity: 0;
-  }
-}
- .bgh{position: absolute;width: 100%;height:100%;top:0;left: 0;object-fit: cover;
-}
- .gif{position: absolute;width:100%;height:70%;bottom:0;left: 0;
-mix-blend-mode: overlay;opacity: .8;
-}
-*/
 .s1 {
   @apply relative w-full h-screen;
   min-height: size(900);
