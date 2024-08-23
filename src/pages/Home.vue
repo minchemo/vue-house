@@ -44,20 +44,6 @@
      transform:scale(1);opacity: 1;
   }
 }
-/*
-  .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
-    span{
-      position: absolute;
-      display: block;width: 1em;height: 1em;
-      background: radial-gradient(ellipse at center, #fff 0%,#fff6 20%,#fff3 30%,#fff0 50%);
-   transform: scale(.5);opacity: 0;
-   animation: an1 2s ease-in-out infinite alternate;
-      &:nth-child(2){animation-delay: 1s;}
-      &:nth-child(3){animation-delay: 1.5s;}
-    }
-  }
-  */
-
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
@@ -82,18 +68,13 @@ img {
     letter-spacing: 0;
     line-height: 1.85;
     width: 100%;
-  .desc{
   }
-  }
-@media screen and (max-width: 767px) {
-  
-}
 </style>
 
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
+//import S2 from "@/section/s2.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
 /* 

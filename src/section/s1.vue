@@ -4,7 +4,11 @@
    <img src="./s1/logom.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0" v-if="$isMobile()" >
    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0" v-else >
    <img src="./s1/t1.svg" class="t1" alt="t1" data-aos="zoom-in" data-aos-delay="400" >
-  <img src="./s1/img.webp" class="img" alt="img" data-aos="zoom-in" data-aos-delay="0" >
+  
+   <div class="img" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/img.webp" alt="img" >
+    <span>建築外觀3D示意圖</span>
+   </div>
    <div class="whale">
     <img src="./s1/whale.webp" class="whale1" alt="whale" >
     <img src="./s1/gif.gif" class="gif" alt="gif" >
@@ -102,6 +106,12 @@
       top:size(1110);
       left:size(175);
       width: size(875);
+      img{width: 100%;}
+      span{
+        position: absolute;left: 0.5em;bottom: 0.5em;
+        color: #fff;font-size: size(15);text-shadow:0 1px 3px #000;letter-spacing: 0.03em;
+      }
+
     }
     .t{
       display: flex;
@@ -188,6 +198,10 @@
       left:0;
       width: 100%;
       margin-top:sizem(82);
+      span{
+        font-size: sizem(12);
+      }
+
     }
     .t{
       flex-direction: column;
