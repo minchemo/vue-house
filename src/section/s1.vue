@@ -1,10 +1,12 @@
 <template>
   <article class="s1" id="s1">
-    <img src="./s1/pc.jpg" class="t0">
+    <img src="./s1/bg.png" class="bg" data-aos="fade" data-aos-delay="0">
+    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">超越南港<br>摩登時代</h3>
+    <img src="./s1/slogo.svg" class="slogo" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/logor.svg" class="logor absolute">
+   <!-- 
     <div class="box"></div>
-    <img src="./s1/bg.png" class="bg">
-    <h3>超越南港<br>摩登時代</h3>
-   <!-- <img src="./s1/mo.jpg" class="t0"> -->
+    <img src="./s1/mo.jpg" class="t0"><img src="./s1/mo.jpg" class="t0"> -->
   <!--  
    <img src="./s1/logom.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0" v-if="$isMobile()" >
    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0" v-else >
@@ -37,9 +39,6 @@
 
 
    -->
-	<!--  
-
-   -->
   </article>
 </template>
 
@@ -58,103 +57,32 @@
 }
 .s1 {
   @apply relative; // w-full h-screen;
- // min-height: size(900);
-// max-height: size(1080);
+  //min-height: size(900);
+  //max-height: size(1070);
+  height: size(1070);
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content:center;
   align-items:center;
   font-size:size(36);
-  //background: #E60012;
-  padding-bottom: size(140);
-  &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
+ // background: #0003;
 
-  .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
-  .box{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
-  .bg{position: absolute;width:size(2517);top:size(-347);left:size(-291);}
-  .logo{position: relative;
-    width: size(315);
-    margin-top:4.5vw;
-    margin-bottom:0;
-    }
-  .t1{position: relative;
-    width: size(951);
-    margin-top:1vw;
-    margin-bottom:0;
-    }
-  .whale{position: relative;//z-index: 2;
-    width: size(1665);
-    margin-top:1vw;
-    margin-bottom:0;
-    img{width: 100%;}
-    .whale1{transform: translateY(7%);
-      animation:an 3s ease-in-out infinite alternate;}
-    .gif{
-      position: absolute;
-      width:100%;height:110%;top:0;left: 0;
-      mix-blend-mode: overlay;
-      opacity:1;
-    }
+  .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
+  .box{position: fixed;width: 100%;height: 100vh;background: #666;mix-blend-mode: hue;
+    top:0;left: 0; pointer-events: none;z-index: 10;opacity: .7;}
+  .bg{position: absolute;width:size(2517);top:size(-347);left:size(-291);
+  top:calc(50% + #{size(-347 - 1070 * .5)});
+  transform: rotate(7deg)scale(.8);
+  transform-origin: 50% 80%;
   }
-    .img{
-      position: absolute;
-      top:size(1110);
-      left:size(175);
-      width: size(875);
-      img{width: 100%;}
-      span{
-        position: absolute;left: 0.5em;bottom: 0.5em;
-        color: #fff;font-size: size(15);text-shadow:0 1px 3px #000;letter-spacing: 0.03em;
-      }
-
+  .t1{position: relative;
+    font-size:size(143);
+    line-height: 1.13;
+    letter-spacing: 0.07em;
+    font-weight: 900;z-index: 3;
     }
-    .t{
-      display: flex;
-      justify-content:center;
-      align-items:center;
-      gap:size(40);
-      margin-top:size(44);
-    }
-    .t2{
-      width: size(602);position: relative;
-      img{width: 100%;}
-      .earth{
-        top:1.8vw;left: 0;right: 0;margin: auto;
-        width:size(73);height:size(73);
-        border-radius: 50%;overflow: hidden;
-        box-shadow: 0 0 .9vw #FFF, 0 0 .2vw #FFF;
-        transform: rotate(10deg);
-        white-space: nowrap;
-        img{position: relative;top:-10%;
-          opacity: 1;transform: translateX(-100%);height: 120%;width: auto;
-          animation:an 7s linear infinite reverse  ;
-        }
-        &::after{content: "";position: absolute;display: block;top: 0;left: 0;width: 100%;height: 100%;background: radial-gradient(100% 84% at 40% 90%, #000 0%, rgba(0, 0, 0, 0.24) 26.74%, rgba(0, 0, 0, 0.00) 60%, rgba(255, 255, 255, 0.00) 70%, rgba(255, 255, 255, 0.50) 100%);}
-      }
-    }
-    .t3{
-      width: size(627);}
-    .txt{
-      width: size(625);margin: size(53) auto auto size(1105);
-      line-height: 1.95;
-      text-align: center;
-      font-weight:400;
-      .t5{
-        width: size(619);letter-spacing: 0.01em;color: #000;
-        text-align: justify;
-      }
-      .t6{
-        margin-top:  size(175);
-        line-height: 1.5;
-        font-weight:800;
-        font-size:size(23);color: #333;
-      }
-      .t4{
-        margin-top:  size(17);
-        width: size(624);
-      }
-    }
-
+    .slogo{ width: size(470);position: relative;z-index: 3;margin-top:size(50);}
+    .logor{right: size(55);bottom: size(40); width: size(130);z-index: 3;}
 }
 
   
@@ -170,89 +98,17 @@
    /* height:calc(100vh - 63px);
     min-height: sizem(604);
     max-height: sizem(750);*/
+    height: sizem(604);
     font-size:sizem(16);
-    padding-bottom: sizem(50);
-    &::after{width: sizem(310);}
-  .logo{
-    width: sizem(142);
-    margin-top:sizem(56);
-    }
-  .t1{
-    width: sizem(325);
-    margin-top:sizem(33);
-    }
-  .whale{
-    width: sizem(350);
-    margin-top:sizem(-50);
-    top:sizem(-405);
-    .whale1{transform: translateY(10%);}
-  }
-  
-  .img{position: relative;
-      top:0;
-      left:0;
-      width: 100%;
-      margin-top:sizem(82);
-      span{
-        font-size: sizem(12);
-      }
-
-    }
-    .t{
-      flex-direction: column;
-      gap:0;
-      margin-top:sizem(5);
-    }
-    .t2{
-      width: sizem(220);
-      .earth{top:3vw;width:sizem(28);height:sizem(28);}
-    }
-    .t3{
-      margin-top:sizem(20);
-      width: sizem(220);}
-    .txt{
-      width: 100%;margin: sizem(45) auto auto auto;
-      .t5{
-        width: sizem(290);margin:auto;
-      }
-      .t6{
-        margin-top:  sizem(75);
-        font-size:sizem(11);
-      }
-      .t4{
-        margin-top:  sizem(10);
-        width: sizem(235);
-      }
-    }
-/*
- .bgh{
-top:0;
-}
- .gif{width: sizem(800);height:sizem(800);
-}
-
-    
-  .logo{
-    width: sizem(320);
-    margin-top:4vw;
-    margin-bottom:3.5vw;
-      .earth{
-        top:4vw; width:size(210);height:size(210);
-        box-shadow: 0 0 2vw #FFF, 0 0 1vw #FFF;
-       
-
-      }
+  .bg{width:sizem(764);top:sizem(30);left:sizem(-195);
+  top:calc(50% + #{sizem(30 - 604 * .5)})
   }
   .t1{
-    width: sizem(297);
-    margin-bottom:16.5vw;
-  }
-  .coming{
-    width: sizem(224);
-  }
-.hr{bottom: -1px;}
-*/
-
+    font-size:sizem(63);
+    }
+    .slogo{ width: sizem(230);margin-top:sizem(30);
+    margin-bottom:sizem(65);}
+    .logor{right: sizem(20);bottom: sizem(20); width: sizem(130);}
 }
 }
 </style>

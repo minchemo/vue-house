@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: linear-gradient(to bottom, #32B8C3 0%,#97C634 100%);
+      background: #3DC82A;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -246,21 +246,21 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#D9E021;
+    background:#3DC82A;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(16);
       font-weight: 400;
-      color: #000;
-      border-left:1px solid #0003;
+      color: #fff;
+      border-left:1px solid #fff9;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
       }
       &:first-child{
       border-left:0;}

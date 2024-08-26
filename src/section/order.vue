@@ -1,10 +1,12 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <!-- Title -->
+
+      <div class="order-title" data-aos="fade-up" data-aos-delay="0"><img src="@/section/s2/line.svg" alt="line" class="line"><br>邀約行家 領席鑑賞</div>
+      <!-- Title
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-      <!-- <div class="cus-divider"></div> -->
+       --><!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
@@ -109,35 +111,19 @@
 .order {
   width: 100%;
   padding-top: size(40);
-  //background: #195c45;
+  background:url("@/section/form/bg.jpg");
+  background-size: auto;
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
 
   .order-title {
-    font-size: size(40);
+    font-size: size(30);
     font-weight: 700;
-    color: #32B8C3;
+    color: #000;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    .line{width: size(439);}
   }
 
   .order-title-img {
@@ -188,7 +174,7 @@
       background-color: #0003;
       position: absolute;
     }
-    .row{background: #f1f7f5;border: 1px solid #CCC;color: #000;
+    .row{background: #fff;border: 1px solid #999;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -213,7 +199,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #EA5514;
+    background-color: #3DC82A;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: 0em;
@@ -252,21 +238,6 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
-    // border-radius: sizem(68) sizem(68) 0 0;
-   /* padding-top: sizem(0);
-    margin-top: sizem(0);
-
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
 
     .cus-divider {
       margin: 0 auto;
@@ -277,8 +248,9 @@
     }
 
     .order-title {
-      font-size: sizem(25);
+      font-size: sizem(20);
       padding-top:1.5em;
+      .line{width: sizem(258);}
     }
     .order-subTitle{
       font-size: sizem(13);
