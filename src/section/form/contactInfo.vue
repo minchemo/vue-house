@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="contact-info-img">
+  <div class="contact-info-img relative">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
    <!--  <div class="logo">
@@ -108,7 +108,6 @@
 
 
 .contact-info-img{
-  @apply relative;
   height: 0;z-index: 52;
 }
 .contact-info {
@@ -234,8 +233,6 @@
 
 @media screen and (max-width:768px) {
 
-  .contact-info-img{
-}
 
   .mo-contact-info {
     z-index: 99;

@@ -16,35 +16,53 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span>(必填)</span></span>
+          <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>(必填)</span></span>
+          <div class="gender">
+          <label><input  type="radio" name="gender" value="男" 
+              @input="(event) => (formData.gender = event.target.value)">先生</label>
+          <label><input  type="radio" name="gender" value="女" 
+              @input="(event) => (formData.gender = event.target.value)">女士</label>
+        </div>
+            <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
+        <!--
+          <label class="row"><span>性別</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.gender">
+            <option value="" selected disabled>請選擇性別</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select></label>  -->
+          <label class="row" v-if="info.room_type"><span>需求房型<span>*</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+          <label class="row" v-if="info.use_type"><span>購屋用途<span>*</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
+            <option value="" selected disabled>請選擇用途</option>
+            <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
           </select>
         </label>
-          <label class="row"><span>居住縣市</span>
+        <label class="row" v-if="info.budget"><span>購屋預算<span>*</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇區間</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
+          </select>
+        </label>
+          <label class="row"><span>居住縣市<span>*</span></span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value">
+            <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row"><span>居住地區</span>
+          <label class="row"><span>居住地區<span>*</span></span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value">
+            <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
           </select></label>
@@ -147,7 +165,7 @@
 
   .form {
     width: size(920);
-    min-width: 680px;
+    min-width: 750px;
     //  height: 350px;
     gap: size(80);
     margin-top: size(45);
@@ -155,9 +173,10 @@
     z-index: 50;
     align-items: stretch;
 
-    .left {
+    .left {position: relative;
       flex: 1;
       gap: size(20);
+      align-items: flex-start;
       //   width: size(419);
     }
 
@@ -180,7 +199,8 @@
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        > span{color: #F00;//font-size: 12px;
+          }
       }
       input,select{background: inherit;flex: 1;}
       option{color: #666;}
@@ -191,6 +211,13 @@
         background-position:calc(100% - .5em) 0%;
       }
       }
+      &.name{width: calc(100% - 3.8em);
+      // .input{height: 5em;}
+      }
+    }
+    .gender{display: flex;position: absolute;right: 0; flex-direction:column;
+      label:first-child{margin-bottom: .3em;}
+      input{margin-right: .3em;}
     }
   }
 
@@ -320,11 +347,14 @@ const toast = useToast()
 
 const sending = ref(false)
 
+
 const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
   budget: "",
+  use_type: "",
+  gender: "",
   project: "",
   email: "",
   city: "",
@@ -335,7 +365,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "email", "gender",]
 
 //中文對照
 const formDataRef = ref([
@@ -343,6 +373,8 @@ const formDataRef = ref([
   "手機", //phone
   "房型", //room_type
   "預算", //budget
+  "用途", //use_type
+  "性別", //gender
   "建案", //project
   "信箱", //email
   "居住縣市", //city

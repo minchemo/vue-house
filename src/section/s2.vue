@@ -28,8 +28,6 @@
 .s2 {
  height: size(1070);
  overflow: hidden;
-  //min-height: size(900);
- // max-height: size(1080);
   display: flex;
   flex-direction: column;
   justify-content:center;
