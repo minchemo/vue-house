@@ -1,6 +1,6 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/bg.png" class="bg" data-aos="fade" data-aos-delay="0">
+    <img src="./s1/bg.webp" class="bg" data-aos="fade" data-aos-delay="0">
     <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">超越南港<br>摩登時代</h3>
     <img src="./s1/slogo.svg" class="slogo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/logor.svg" class="logor absolute">
