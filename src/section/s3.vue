@@ -42,9 +42,9 @@
     font-size:size(62);
     line-height: 1.13;
     letter-spacing: 0.07em;
-    font-weight: 900;z-index: 3;top:size(172);color: #fff;
+    font-weight: 900;z-index: 3;top:size(142);color: #fff;
     }
-    .logoall{width: size(807);position: relative;top:size(-10);}
+    .logoall{width: size(740);position: relative;top:size(20);}
   .line{ width: 102%;left: -1%;
       position: absolute;z-index: 3;top:size(345);}
   .txt{left: 0;bottom: 0; width:100%;background: #fff;
@@ -76,9 +76,9 @@
     font-size:sizem(16);
     background-size: 340% auto;
     .bg{position: absolute;width:295%;top:sizem(-70);left:-90%;}
-  .t1{font-size:sizem(25);top:sizem(86);
+  .t1{font-size:sizem(25);top:sizem(66);
     }
-    .logoall{width: sizem(327);}
+    .logoall{width: sizem(327);top:sizem(15);}
   .line{ width: sizem(400);left:sizem(-22);top:sizem(164);}
   .txt{height:auto;padding: sizem(35) 0 sizem(62) 0;
     flex-direction: column;
