@@ -1,6 +1,7 @@
 <template>
   <article class="s2 relative" id="s2">
     <img src="./s2/bg.webp" alt="bg" class="bg" data-aos="fade-up" data-aos-delay="0" data-aos-offset="600">
+    <div class="bubble" data-aos="fade-up" data-aos-delay="0" ><img src="./s2/bubble.svg" alt="bubble"></div>
     <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">16458坪  國際菁英生活誌</h3>
     <img src="./s2/line.svg" alt="line" class="line">
     <div class="txt absolute">
@@ -15,14 +16,18 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-@keyframes op {
-  50% {
-     opacity: 0;
+@keyframes an1 {
+  0% {
+    transform:rotate(-70deg);opacity: .8;
   }
-}
-@keyframes an {
-  to {
-    transform: translateX(0%);
+  20% {
+    transform:rotate(110deg);opacity: 0;
+  }
+  80% {
+    transform:rotate(110deg);opacity: 0;
+  }
+  100% {
+    transform:rotate(290deg);opacity: .8;
   }
 }
 .s2 {
@@ -34,6 +39,14 @@
   align-items:center;
   font-size:size(36);
   .bg{position: absolute;width:100%;top:size(-332);left:0%;}
+  .bubble{position: absolute;left:0;right:size(12);top:size(512);margin: auto;width:size(307);
+    mix-blend-mode: overlay;
+   // background: #0003;
+    img{width: 100%;
+ //  transform: rotate(180deg);opacity: 0;
+  animation: an1 2s linear infinite reverse;
+ }
+  }
 
   .t1{position: absolute;
     left: 0;right: 0;margin: auto;text-align: center;
@@ -41,6 +54,7 @@
     line-height: 1.13;
     letter-spacing: 0.07em;
     font-weight: 900;z-index: 3;top:size(172);
+    
     }
   .line{ width: 102%;left: -1%;
       position: absolute;z-index: 3;top:size(345);}
@@ -66,13 +80,14 @@
 
 
   .s2 {
-   /* height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);*/
     height: sizem(740);
     font-size:sizem(16);
     background-size: 340% auto;
     .bg{position: absolute;width:330%;top:sizem(-335);left:-115%;}
+    
+  .bubble{left:0;right:sizem(12);top:sizem(215);margin: auto;width:sizem(198);//background: #000;
+  }
+
   .t1{font-size:sizem(25);top:sizem(86);
     }
   .line{ width: sizem(400);left:sizem(-22);top:sizem(164);}
