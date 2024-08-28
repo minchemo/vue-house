@@ -1,8 +1,8 @@
 import { isMobile } from "../utils/index";
 export default {
     address: '新北市五股區成泰路三段356號',
-    googleSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.9072377450757!2d121.45206197640343!3d25.10500123542692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af213b157e05%3A0x7725924cb26159c7!2z5Ly05pyI54Gj5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1692083681953!5m2!1szh-TW!2stw',
-    googleLink: 'https://goo.gl/maps/BHpkhhfrUc2HDGxy8',
+    googleSrc: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1806.5475283303817!2d121.4498633!3d25.0986434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af9c08905843%3A0x71c9a16c3c2f019a!2z5b-r5qiC546L5ZyL55CG5Lqr5Z-OIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1724835285527!5m2!1szh-TW!2stw',
+    googleLink: 'https://maps.app.goo.gl/EHco4rsJij9ixjiA7',
     phone: "02-8292-3777",
     fbLink: "https://www.facebook.com/103573018971658/",
     fbMessage: "https://m.me/103573018971658/",
