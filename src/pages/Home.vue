@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFF] text-[#000]">
+  <div class="home overflow-hidden font-[com4f,'Noto_Serif_TC',serif] bg-[#FFF] text-[#000]">
     <S1 />
     <S2 />
     <S3 />
@@ -58,6 +58,13 @@ img {
   max-width: unset;
   height: unset;
   margin: 0 auto;
+}
+
+// 字體
+@font-face {
+  font-family: 'com4f';
+  src: local("COM4tFine"),local("COM4t Fine Regular"),
+  url('@/section/form/com4f.ttf') format("opentype"),
 }
 
 </style>
