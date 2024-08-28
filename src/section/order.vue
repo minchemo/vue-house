@@ -1,12 +1,12 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-
-      <div class="order-title" data-aos="fade-up" data-aos-delay="0"><img src="@/section/s2/line.svg" alt="line" class="line"><br>邀約行家 領席鑑賞</div>
-      <!-- Title
+<!-- 
+      <div class="order-title" data-aos="fade-up" data-aos-delay="0"><img src="@/section/s2/line.svg" alt="line" class="line"><br>邀約行家 領席鑑賞</div> -->
+      <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-       --><!-- <div class="cus-divider"></div> -->
+      <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
@@ -136,9 +136,9 @@
 
 
   .order-title {
-    font-size: size(30);
-    font-weight: 700;
-    color: #000;
+    font-size: size(40);
+    font-weight: 400;
+    color: #A30C24;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
     .line{width: size(439);}
@@ -226,10 +226,10 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #3DC82A;
+    background-color: #A30C24;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: 0em;
+    border-radius: .5em;
 
     width: 308px;
     height:3.3em;
@@ -275,8 +275,8 @@
     }
 
     .order-title {
-      font-size: sizem(20);
-      padding-top:1.5em;
+      font-size: sizem(27);
+      padding-top:2em;
       .line{width: sizem(258);}
     }
     .order-subTitle{

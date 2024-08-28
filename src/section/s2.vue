@@ -13,9 +13,9 @@
           v-for="i in imgs"
         >
         <img :src="i.img" :alt="i.caption">
-          <div class="caption">
+          <span class="caption">
             {{ i.caption }}
-          </div>
+          </span>
         </SplideSlide>
       </Splide>
     </div>
@@ -38,9 +38,9 @@
       </div>
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">首席台積電璀璨版圖<br>
         聚焦全球AI科技核心</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0"> Technology Core</h4>
-        <div class="hr"></div>
-      <p data-aos="fade-up" data-aos-delay="0">台積電連動美、日、星國際科研能量競速佈局，港都華麗轉身科研繁城，頂尖跨國企業搶駐，科技菁英絡繹進城，共構我國南方發展新藍圖，躍居國際產業核心之列，領銜全球聚焦目光。</p>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"> Technology Core</h4>
+        <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
+      <p data-aos="fade-up" data-aos-delay="600">台積電連動美、日、星國際科研能量競速佈局，港都華麗轉身科研繁城，頂尖跨國企業搶駐，科技菁英絡繹進城，共構我國南方發展新藍圖，躍居國際產業核心之列，領銜全球聚焦目光。</p>
     </div>
   </article>
 </template>
@@ -52,13 +52,14 @@
 
 
   .swiper-box {
-    width: 100%;
-    
-    .slide-item {width: 100%;
-    img{width: 100%;}
+    position: relative;
+    left: 50%;transform: translateX(-50%);
+    width:sizem(458);
+    .slide-item {width: 100%;height:100%;
+    img{width:100%;object-fit: cover;height:sizem(317);}
     
     .caption {
-      position: absolute;top: 0.5em;right: 0.5em;color: #FFF;font-size: sizem(12);
+      position: absolute;top: 0.5em;right: 4.3em;color: #FFF;font-size: sizem(11);text-shadow:0 1px 3px #000;
     }
     }
   }

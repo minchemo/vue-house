@@ -1,6 +1,6 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!--  --><img src="./s1/mo.jpg" class="t0">
+    <!-- <img src="./s1/mo.jpg" class="t0"> -->
     <img src="./s1/bg.webp" class="bg">
     
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
@@ -19,7 +19,7 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:-60px;left: 0; pointer-events: none;z-index: 9;opacity: .1;}
+  .t0{position: absolute;width: 100%;top:-60px;left: 0; pointer-events: none;z-index: 9;opacity: .5;}
 @keyframes an {
   to {
     transform: translateX(0%);

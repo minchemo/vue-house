@@ -3,10 +3,10 @@
     <div class="txt">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">職人匠心恆持初心<br>
         留白哲思細琢鑑築</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">Art of architecture</h4>
-        <div class="hr"></div>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">Art of architecture</h4>
+        <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
     </div>
-        <img src="./s3/img.webp" class="img" data-aos="zoom-in" data-aos-delay="0">
+        <img src="./s3/img.webp" class="img" data-aos="zoom-in" data-aos-delay="600">
         <img src="./s3/w.webp" class="w" data-aos="zoom-in" data-aos-delay="0">
   </article>
 </template>
