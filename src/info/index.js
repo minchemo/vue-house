@@ -1,4 +1,4 @@
-const caseName = "展志縱橫時代"
+const caseName = "展志建設建國段"
 
 export default {
     meta: {
