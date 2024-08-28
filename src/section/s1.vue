@@ -19,7 +19,7 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
+  .t0{position: absolute;width: 100%;top:-60px;left: 0; pointer-events: none;z-index: 9;opacity: .1;}
 @keyframes an {
   to {
     transform: translateX(0%);

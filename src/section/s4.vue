@@ -1,46 +1,10 @@
 <template>
-  <article class="s2 relative" id="s2">
-    <div class="swiper-box">
-      <Splide
-        :options="sConfig"
-        ref="splide"
-        class="slide"
-        @splide:move="onMove"
-      >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgs"
-        >
-        <img :src="i.img" :alt="i.caption">
-          <div class="caption">
-            {{ i.caption }}
-          </div>
-        </SplideSlide>
-      </Splide>
-    </div>
+  <article class="s4 relative" id="s4">
     <div class="txt">
-      <div class="arrows">
-        <img
-          @click="splide.go('<')"
-          class="prev"
-          src="@/section/arrow.svg"
-          alt="r"
-          srcset=""
-        />
-        <img
-          @click="splide.go('>')"
-          class="next"
-          src="@/section/arrow.svg"
-          alt="r"
-          srcset=""
-        />
-      </div>
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">首席台積電璀璨版圖<br>
-        聚焦全球AI科技核心</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0"> Technology Core</h4>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">職人匠心恆持初心<br>
+        留白哲思細琢鑑築</h3>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">Art of architecture</h4>
         <div class="hr"></div>
-      <p data-aos="fade-up" data-aos-delay="0">台積電連動美、日、星國際科研能量競速佈局，港都華麗轉身科研繁城，頂尖跨國企業搶駐，科技菁英絡繹進城，共構我國南方發展新藍圖，躍居國際產業核心之列，領銜全球聚焦目光。</p>
     </div>
   </article>
 </template>
@@ -48,47 +12,21 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s2 {
+.s4 {
 
-
-  .swiper-box {
-    width: 100%;
-    
-    .slide-item {width: 100%;
-    img{width: 100%;}
-    
-    .caption {
-      position: absolute;top: 0.5em;right: 0.5em;color: #FFF;font-size: sizem(12);
-    }
-    }
-  }
-      .arrows {/*
-        @apply absolute w-full;
-        @apply flex items-center justify-between;
-        @apply top-1/2 -translate-y-1/2;
-        @apply pointer-events-none;
-        */
-        padding: 0;
-        text-align: center;
-        img {
-         // @apply pointer-events-auto;
-          width: sizem(20);
-        }
-
-        .next {
-          @apply -scale-x-100;
-          margin-left:sizem(15);
-        }
-      }
+  // background: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
       .txt{
         position: relative;
-        background: #FFF;
         color: #000;
         font-size:sizem(14);
-        line-height: 1.8;
-        width: sizem(327);
-        margin: sizem(-33) auto sizem(20) auto;
-        padding: sizem(6) sizem(38) sizem(38) sizem(38);
+        line-height: 1.8; 
+        width: sizem(251);
+        margin: sizem(0) auto sizem(20) auto;
+        padding: sizem(16) 0 sizem(20) 0;
         text-align: justify;
         .title{
           font-size:sizem(26);
@@ -104,6 +42,10 @@
           background: #A30C24;
           margin:sizem(6) 0 sizem(23);}
       }
+        .img{
+          width: sizem(280);margin: auto;}
+        .w{
+          width: sizem(346);margin:sizem(60) auto auto auto;transform-origin: 50% 100%;}
 
 
 }
@@ -123,7 +65,7 @@
     transform:rotate(290deg);opacity: .8;
   }
 }
-.s2 {
+.s4 {
  height: size(1070);
  overflow: hidden;
   display: flex;
@@ -172,7 +114,7 @@
 
 /*
 
-  .s2 {
+  .s4 {
     height: sizem(740);
     font-size:sizem(16);
     background-size: 340% auto;
@@ -202,27 +144,5 @@ import { computed, getCurrentInstance, ref} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
-
-const splide = ref()
-const sConfig = {
-  autoWidth: true,
-  arrows: false,
-  autoplay: true,
-  pagination: false,
-  gap: 0,
-  type: "loop",
-}
-
-
-const imgs = [
-  {
-    img: new URL("./s2/1.webp", import.meta.url).href,
-    caption: "依政府公開計畫繪製，僅供參考請以實際為主",
-  },
-  {
-    img: new URL("./s2/2.webp", import.meta.url).href,
-    caption: "圖片來源google地圖，僅供參考請以實際為主",
-  },
-]
 
 </script>

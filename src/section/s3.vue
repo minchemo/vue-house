@@ -1,50 +1,98 @@
 <template>
   <article class="s3 relative" id="s3">
-    <img src="./s3/bg.webp" alt="bg" class="bg">
-    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">五大巨擘攜手 核心最強心動<br>
-      <img src="./s3/logoall.svg" alt="logoall" class="logoall" data-aos="zoom-in" data-aos-delay="200"></h3>
-    <img src="./s2/line.svg" alt="line" class="line">
-    <div class="txt absolute">
-      <h4 data-aos="fade-up" data-aos-delay="0">住宅Ｘ商場Ｘ辦公Ｘ飯店Ｘ綠軸</h4>
-      <p data-aos="fade-up" data-aos-delay="0">國泰人壽、三商美邦人壽、華泰大飯店、國泰建設、國泰商旅，五大品牌，史詩鉅獻<br>
-        讓回家是五大風格之旅，驚艷東區門戶的時尚漫遊，刷新南港國際高度，躬逢・必擁</p>
-      <img src="./s2/bottom.webp" class="bottom absolute">
+    <div class="txt">
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">職人匠心恆持初心<br>
+        留白哲思細琢鑑築</h3>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">Art of architecture</h4>
+        <div class="hr"></div>
     </div>
+        <img src="./s3/img.webp" class="img" data-aos="zoom-in" data-aos-delay="0">
+        <img src="./s3/w.webp" class="w" data-aos="zoom-in" data-aos-delay="0">
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-@keyframes op {
-  50% {
-     opacity: 0;
-  }
+.s3 {
+
+  background: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+      .txt{
+        position: relative;
+        color: #000;
+        font-size:sizem(14);
+        line-height: 1.8; 
+        width: sizem(251);
+        margin: sizem(0) auto sizem(20) auto;
+        padding: sizem(16) 0 sizem(20) 0;
+        text-align: justify;
+        .title{
+          font-size:sizem(26);
+          color: #A30C24;
+          line-height: 1.2;
+          margin-top:sizem(28);
+          letter-spacing: 0.03em;
+        }
+        .subtitle{
+          font-size:sizem(20);
+        }
+        .hr{width: 100%; height: 1px;
+          background: #A30C24;
+          margin:sizem(6) 0 sizem(23);}
+      }
+        .img{
+          width: sizem(280);margin: auto;}
+        .w{
+          width: sizem(346);margin:sizem(60) auto auto auto;transform-origin: 50% 100%;}
+
+
 }
-@keyframes an {
-  to {
-    transform: translateX(0%);
+
+/*
+@keyframes an1 {
+  0% {
+    transform:rotate(-70deg);opacity: .8;
+  }
+  20% {
+    transform:rotate(110deg);opacity: 0;
+  }
+  80% {
+    transform:rotate(110deg);opacity: 0;
+  }
+  100% {
+    transform:rotate(290deg);opacity: .8;
   }
 }
 .s3 {
  height: size(1070);
  overflow: hidden;
-  //min-height: size(900);
- // max-height: size(1080);
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items:center;
   font-size:size(36);
-  .bg{position: absolute;width:100%;top:0;left:0%;}
+  .bg{position: absolute;width:100%;top:size(-332);left:0%;}
+  .bubble{position: absolute;left:0;right:size(12);top:size(512);margin: auto;width:size(307);
+    mix-blend-mode: overlay;
+   // background: #0003;
+    img{width: 100%;
+ //  transform: rotate(180deg);opacity: 0;
+  animation: an1 2s linear infinite reverse;
+ }
+  }
+
   .t1{position: absolute;
     left: 0;right: 0;margin: auto;text-align: center;
     font-size:size(62);
     line-height: 1.13;
     letter-spacing: 0.07em;
-    font-weight: 900;z-index: 3;top:size(142);color: #fff;
+    font-weight: 900;z-index: 3;top:size(172);
+    
     }
-    .logoall{width: size(740);position: relative;top:size(20);}
   .line{ width: 102%;left: -1%;
       position: absolute;z-index: 3;top:size(345);}
   .txt{left: 0;bottom: 0; width:100%;background: #fff;
@@ -58,7 +106,7 @@
   }
   .bottom{left: 0;bottom: 0; width:100%;z-index: 3;height:size(16);}
 }
-
+*/
   
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -66,19 +114,19 @@
 
 @media screen and (max-width: 767px) {
 
-
+/*
 
   .s3 {
-   /* height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);*/
     height: sizem(740);
     font-size:sizem(16);
     background-size: 340% auto;
-    .bg{position: absolute;width:295%;top:sizem(-70);left:-90%;}
-  .t1{font-size:sizem(25);top:sizem(66);
+    .bg{position: absolute;width:330%;top:sizem(-335);left:-115%;}
+    
+  .bubble{left:0;right:sizem(12);top:sizem(215);margin: auto;width:sizem(198);//background: #000;
+  }
+
+  .t1{font-size:sizem(25);top:sizem(86);
     }
-    .logoall{width: sizem(327);top:sizem(15);}
   .line{ width: sizem(400);left:sizem(-22);top:sizem(164);}
   .txt{height:auto;padding: sizem(35) 0 sizem(62) 0;
     flex-direction: column;
@@ -90,19 +138,13 @@
   }
   .bottom{height:sizem(16);}
   
-}
+}*/
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
 
-const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-  smoothScroll({
-    scrollTo: document.querySelector(el)
-  })
-}
 </script>
