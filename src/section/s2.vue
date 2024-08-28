@@ -6,8 +6,7 @@
     <img src="./s2/line.svg" alt="line" class="line">
     <div class="txt absolute">
       <h4 data-aos="fade-up" data-aos-delay="0">創新複合 綠動園區</h4>
-      <p data-aos="fade-up" data-aos-delay="0">住進南港，走進世界。以國際城中城規格，超越地表極致想像、超前世界住居前瞻<br>
-      體驗您的一天，萬坪綠逸起跳，席捲家的多元。於松山—南港車站間，悸動・等待</p>
+      <p data-aos="fade-up" data-aos-delay="0">住進南港，走進世界。以國際城中城規格，超越地表極致想像、超前世界住居前瞻<br>體驗您的一天，萬坪綠逸起跳，席捲家的多元。於松山—南港車站間，悸動・等待</p>
       <img src="./s2/bottom.webp" class="bottom absolute">
     </div>
   </article>

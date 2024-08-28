@@ -6,8 +6,7 @@
     <img src="./s2/line.svg" alt="line" class="line">
     <div class="txt absolute">
       <h4 data-aos="fade-up" data-aos-delay="0">住宅Ｘ商場Ｘ辦公Ｘ飯店Ｘ綠軸</h4>
-      <p data-aos="fade-up" data-aos-delay="0">國泰人壽、三商美邦人壽、華泰大飯店、國泰建設、國泰商旅，五大品牌，史詩鉅獻<br>
-        讓回家是五大風格之旅，驚艷東區門戶的時尚漫遊，刷新南港國際高度，躬逢・必擁</p>
+      <p data-aos="fade-up" data-aos-delay="0">國泰人壽、三商美邦人壽、國泰建設、國泰飯店觀光事業、華泰大飯店集團，五大品牌，史詩鉅獻<br>讓回家是五大風格之旅，驚艷東區門戶的時尚漫遊，刷新南港國際高度，躬逢・必擁</p>
       <img src="./s2/bottom.webp" class="bottom absolute">
     </div>
   </article>
