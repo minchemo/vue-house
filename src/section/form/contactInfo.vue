@@ -173,7 +173,7 @@
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #FFF;
         background-image: none;
         color: #000;
         z-index: 0;
@@ -271,7 +271,7 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(80) 0;
+    padding: sizem(80) 0 sizem(40) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;

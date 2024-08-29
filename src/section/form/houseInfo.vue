@@ -1,24 +1,14 @@
 <template>
     <!--  -->
     <div class="house" v-if="info.houseInfos.length > 0">
-        <div class="flex h-full flex-col md:flex-row items-center justify-between">
-            
-            <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
-                <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
-                    <div class="title">建案資訊</div>
-                    <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                            v-for="item in info.houseInfos" :key="item">
-                            <p class="sub mr-5 pl-2 text-[#fff]" v-html="item[0]"></p>
-                            <p class="whitespace-pre-line leading-normal text-left font-normal"
-                                v-html="item[1]">
-                            </p>
-                        </div>
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap">
-                            <p class=" pl-2 whitespace-pre-line leading-normal text-left font-normal">民間新建建築類(H-2住宅)
-                            </p>
-                        </div>
-                    </div>
+        <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
+            <div class="title">建案資訊</div>
+            <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
+                <div class="item flex items-center w-full whitespace-nowrap"
+                    v-for="item in info.houseInfos" :key="item">
+                    <p class="sub mr-5 pl-2 text-[#fff]" v-html="item[0]"></p>
+                    <p class="whitespace-pre-line leading-normal text-left font-normal" v-html="item[1]">
+                    </p>
                 </div>
             </div>
         </div>
@@ -37,13 +27,14 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#32B8C3;
+$house-c1:#A30C24;
 $house-c2:#000;
 .displaynone{display: none;}
 .house {
    // height: auto;
     color: $house-c2;
     font-size: size(22);
+    padding: 3em 0;
     // height:4em;
     img{height: 1.3em;vertical-align: middle;}
 }
@@ -52,9 +43,9 @@ $house-c2:#000;
 
     .title {
         font-size: size(40);
-        font-weight: 700;
+       // font-weight: 700;
         color: $house-c1;
-        margin: 0 auto 1em auto;
+        margin: 0 auto 0em auto;
     }
 
     .info-items {

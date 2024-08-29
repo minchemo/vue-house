@@ -27,7 +27,7 @@
 }
   .s1 {
     height:calc(100vh - 63px);
-    height:sizem(667);
+  //  height:sizem(667);
     min-height: sizem(604);
     max-height: sizem(750);
   display: flex;

@@ -79,7 +79,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-[#666]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#EA5514] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#A30C24] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -129,8 +129,10 @@
 .order {
   width: 100%;
   padding-top: size(40);
+  /*
   background:url("@/section/form/bg.jpg");
   background-size: auto;
+  */
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
