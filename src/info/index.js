@@ -11,7 +11,7 @@ export default {
     // address: "桃園市八德區豐德路582號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14457.958495169116!2d121.57516714972567!3d25.0513888777126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzA1LjAiTiAxMjHCsDM1JzA3LjciRQ!5e0!3m2!1szh-TW!2stw!4v1724895819952!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/VqYjh5t7WvtyHg9f6",
-    // phone: "(02)2651-2688",
+    phone: "02-2651-2688",
     fbLink: "https://www.facebook.com/61560608373036/",
     fbMessage: "https://m.me/61560608373036/",
     caseName: caseName,
@@ -30,9 +30,9 @@ export default {
         */
     ],
     gtmCode: ["GTM-W5R5M4WP"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
