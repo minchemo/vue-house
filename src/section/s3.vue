@@ -1,7 +1,7 @@
 <template>
   <article class="s3 relative" id="s3">
     <div class="txt">
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">職人匠心恆持初心<br>
+      <h3 class="title" data-aos="fade" data-aos-delay="0">職人匠心恆持初心<br>
         留白哲思細琢鑑築</h3>
         <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">Art of architecture</h4>
         <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
@@ -15,7 +15,6 @@
 @import '@/assets/style/function.scss';
 
 .s3 {
-
   background: #F0F0F0;
   display: flex;
   flex-direction: column;
@@ -30,24 +29,62 @@
         margin: sizem(0) auto sizem(20) auto;
         padding: sizem(16) 0 sizem(20) 0;
         text-align: justify;
+        @media screen and (min-width: 768px) {
+        width: size(962);
+        margin: 0  size(733) 0 auto;
+        padding: 0;
+        }
+      }
         .title{
           font-size:sizem(26);
           color: #A30C24;
           line-height: 1.2;
           margin-top:sizem(28);
           letter-spacing: 0.03em;
+          transform: translateY(sizem(100));
+        @media screen and (min-width: 768px) {
+          font-size:size(40);
+          margin-top:size(135);
+          transform: translateX(size(-100));
+          
+        }
         }
         .subtitle{
           font-size:sizem(20);
+          transform: translateY(sizem(100));
+        @media screen and (min-width: 768px) {
+          font-size:size(30);
+          margin-top:size(40);
+          transform: translateX(size(-100));
+        }
         }
         .hr{width: 100%; height: 1px;
           background: #A30C24;
-          margin:sizem(6) 0 sizem(23);}
+          margin:sizem(6) 0 sizem(23);
+          transform: translateY(sizem(100));
+        @media screen and (min-width: 768px) {
+          margin:size(-70) 0 0;
+          transform: translateX(size(-100)) scaleX(.2);
+          transform-origin: 0 50%;
+        }
       }
         .img{
-          width: sizem(280);margin: auto;}
+          width: sizem(280);margin: auto;
+        @media screen and (min-width: 768px) {
+          position: absolute;
+          right: size(130);
+          top: size(90);
+          width: size(533);
+        }
+      }
         .w{
-          width: sizem(346);margin:sizem(60) auto auto auto;transform-origin: 50% 100%;}
+          width: sizem(346);
+          margin:sizem(60) auto auto auto;transform-origin: 50% 100%;
+          @media screen and (min-width: 768px) {
+          width: size(820);
+          margin:size(240) auto auto auto;
+        }
+        }
 
 
 }

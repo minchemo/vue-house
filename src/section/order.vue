@@ -19,12 +19,12 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-          <div class="gender">
+          <!-- <div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>
+        </div> -->
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -35,31 +35,31 @@
             <option value="男">男</option>
             <option value="女">女</option>
           </select></label>  -->
-          <label class="row" v-if="info.room_type"><span>需求房型<span>*</span></span>
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
             <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
-          <label class="row" v-if="info.use_type"><span>購屋用途<span>*</span></span>
+          <label class="row" v-if="info.use_type"><span>購屋用途</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
             <option value="" selected disabled>請選擇用途</option>
             <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
           </select>
         </label>
-        <label class="row" v-if="info.budget"><span>購屋預算<span>*</span></span>
+        <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇區間</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
-          <label class="row"><span>居住縣市<span>*</span></span>
+          <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row"><span>居住地區<span>*</span></span>
+          <label class="row"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value" :key="area">
@@ -213,9 +213,7 @@
         background-position:calc(100% - .5em) 0%;
       }
       }
-      &.name{width: calc(100% - 3.8em);
-      // .input{height: 5em;}
-      }
+      // &.name{width: calc(100% - 3.8em);}
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;
       label:first-child{margin-bottom: .3em;}
@@ -367,7 +365,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "gender",]
+const bypass = ["project", "msg", "email", "gender","use_type","budget","room_type"]
 
 //中文對照
 const formDataRef = ref([

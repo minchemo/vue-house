@@ -6,20 +6,12 @@
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/building.webp" class="building" data-aos="zoom-in" data-aos-delay="200">
     <img src="./s1/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="200">
-    <!--
-    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">比鄰台積電一隅無界</h3>
-    <h4 class="t2" data-aos="zoom-in" data-aos-delay="0">26層耐震/2~3房</h4>
-    <img src="./s1/bg.webp" class="bg" data-aos="fade" data-aos-delay="0">
-    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">超越南港<br>摩登時代</h3>
-    <img src="./s1/slogo.svg" class="slogo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/logor.svg" class="logor absolute">
-    -->
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:-60px;left: 0; pointer-events: none;z-index: 9;opacity: .5;}
+  .t0{position: absolute;width: 100%;top:0px;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
 @keyframes an {
   to {
     transform: translateX(0%);
@@ -34,78 +26,39 @@
   flex-direction: column;
   justify-content:center;
   align-items:center;
+  overflow: hidden;
+  
+@media screen and (min-width: 768px) {
+    height:100vh;
+    // height: size(1070);
+    min-height: size(900);
+    max-height: size(1080);
+    justify-content:space-between;
+    padding: 0 size(650) 0 0;
+}
   .bg{position: absolute;
-    top:sizem(0);left:0;
+    top:0;left:0;
     height: 100%; transform: translateX(calc(-100% + 100vw));
     animation: an 20s linear alternate infinite;
-  }
-  .logo{width:sizem(270);margin:sizem(37) auto sizem(47);}
-  .building{width:sizem(78);transform-origin: 50% 100%;}
-  .bottom{width:sizem(330);transform-origin: 50% 0%;background: url("./s1/bottom.png");background-size: cover;}
-
-
-  }
-/*
-
-@keyframes op {
-  50% {
-     opacity: 0;
-  }
-}
-.s1 {
-  min-height: size(900);
-  max-height: size(1070);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
-  font-size:size(36);
-
-  .box{position: fixed;width: 100%;height: 100vh;background: #666;mix-blend-mode: hue;
-    top:0;left: 0; pointer-events: none;z-index: 10;opacity: .7;}
-  .bg{position: absolute;width:size(2517);top:size(-347);left:size(-291);
-  top:calc(50% + #{size(-347 - 1070 * .5)});
-  transform: rotate(7deg)scale(.8);
-  transform-origin: 50% 80%;
-  }
-  .t1{position: relative;
-    font-size:size(143);
-    line-height: 1.13;
-    letter-spacing: 0.07em;
-    font-weight: 900;z-index: 3;
+    @media screen and (min-width: 768px) {
+      height: auto;width:size(2300);top:calc(50% + #{size(0 - 1080 * .5)});
     }
-    .slogo{ width: size(470);position: relative;z-index: 3;margin-top:size(50);}
-    .logor{right: size(55);bottom: size(40); width: size(130);z-index: 3;}
-}
-*/
-  
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-/*
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-@media screen and (max-width: 767px) {
-
-
-
-  .s1 {
-    height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);
-    height: sizem(604);
-    font-size:sizem(16);
-  .bg{width:sizem(764);top:sizem(30);left:sizem(-195);
-  top:calc(50% + #{sizem(30 - 604 * .5)})
   }
-  .t1{
-    font-size:sizem(63);
-    }
-    .slogo{ width: sizem(230);margin-top:sizem(30);
-    margin-bottom:sizem(65);}
-    .logor{right: sizem(20);bottom: sizem(20); width: sizem(130);}
+  .logo{width:sizem(270);margin:sizem(37) auto sizem(47);
+    @media screen and (min-width: 768px) {
+      position: relative;top:calc(20% - #{size(150)});
+      width:size(566);margin:auto;}
+  }
+  .building{
+    width:sizem(78);transform-origin: 50% 100%;
+    @media screen and (min-width: 768px) {width:size(208);}
+  }
+  .bottom{
+    width:sizem(330);transform-origin: 50% 0%;background: url("./s1/bottom.png");background-size: cover;
+    @media screen and (min-width: 768px) {position: absolute;bottom:0;right:0;
+      width:size(658);}
+  }
 }
-}*/
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref ,inject} from 'vue';

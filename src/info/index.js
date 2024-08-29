@@ -43,7 +43,7 @@ export default {
     // 底下2個 沒項目就會隱藏
     room_type: [" "],
     budget: [" "],
-    use_type: [" "],
+   // use_type: [" "],
 
     navList: [
         /*
