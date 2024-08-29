@@ -616,7 +616,7 @@ const imgs = [
        "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
     ],
     planImg: new URL("../section/s9/p3.webp", import.meta.url).href,
-    popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
+    popupPlanImg: new URL("../section/s9/pp3.jpg", import.meta.url).href,
   },
 ]
 
