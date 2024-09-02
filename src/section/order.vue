@@ -14,7 +14,7 @@
       <!-- Custom Image -->
 
       <!-- Form -->
-      <div class="form mx-auto relative flex justify-center">
+      <div class="form mx-auto relative flex justify-center font-['Noto_Serif_TC',serif]">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
