@@ -54,7 +54,7 @@
     @media screen and (min-width: 768px) {width:size(208);}
   }
   .bottom{
-    width:sizem(330);transform-origin: 50% 0%;background: url("./s1/bottom.png");background-size: cover;
+    width:sizem(330);transform-origin: 50% 0%;background: url("./s1/bottom.webp");background-size: cover;
     @media screen and (min-width: 768px) {position: absolute;bottom:0;right:0;
       width:size(658);}
   }
