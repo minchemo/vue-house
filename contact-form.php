@@ -282,7 +282,7 @@ $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
         try {
             $url = "http://104.155.235.216/send.php";
             $url .= "?token=".$token;
-            $url .= "&name=".$name."(".$gender.")";
+            $url .= "&name=".$name;
             $url .= "&phone=".$phone;
             $url .= "&email=".$user_email;
             $url .= "&city=".$city;
