@@ -61,9 +61,9 @@
           margin:sizem(6) 0 sizem(23);}
       }
         .slogo{
-          width: sizem(175);margin:sizem(18) auto sizem(38);
+          width: sizem(120);margin:sizem(18) auto sizem(38);
           @media screen and (min-width: 768px) {
-            width:size(347);margin:size(70) auto size(80);
+            width:size(200);margin:size(70) auto size(80);
           }}
 
 

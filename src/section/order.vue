@@ -52,6 +52,7 @@
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
+        <!-- 
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -65,11 +66,11 @@
             <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
-          </select></label>
+          </select></label> -->
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
+            class="row textarea w-full h-full rounded-none" placeholder="(非必填) 請輸入您的留言"></textarea>
         </div>
       </div>
 

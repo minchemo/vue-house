@@ -28,6 +28,7 @@
           alt="r"
           srcset=""
         />
+        <span v-if="$isMobile()">左右滑動切換</span>
         <img
           @click="splide.go('>')"
           class="next"
@@ -71,23 +72,27 @@
       .arrows {
         padding: 0;
         text-align: center;
+       // vertical-align: middle;
         @media screen and (min-width: 768px) {
           position: absolute;bottom:size(40);
           right:size(30);
         }
         img {
-          width: sizem(20);
+          width: sizem(20); pointer-events:all;
           @media screen and (min-width: 768px) {width: size(40);}
         }
+        span{vertical-align: middle}
 
         .next {
           @apply -scale-x-100;
-          margin-left:sizem(15);
-          @media screen and (min-width: 768px) {margin-left:size(40);}
+           margin-left:sizem(-2);
+          @media screen and (min-width: 768px) {
+            margin-left:size(35);
+          }
         }
       }
       .txt{
-        position: relative;
+        position: relative; pointer-events: none;
         background: #FFF;
         color: #000;
         font-size:sizem(14);
