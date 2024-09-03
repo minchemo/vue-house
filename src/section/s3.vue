@@ -1,25 +1,5 @@
 <template>
   <article class="s3" id="s3">
-    <img src="./s1/appearance.webp" class="appearance absolute" data-aos="fade-up" data-aos-delay="0">
-    <div data-aos="fade-left" data-aos-delay="0">
-    <img src="./s1/tree.png" class="tree3 absolute">
-    <img src="./s1/tree.png" class="tree2 absolute">
-    <img src="./s1/img6.webp" class="img7 absolute">
-  </div>
-  <div data-aos="fade-right">
-    <img src="./s1/img4.webp" class="img5 absolute" v-if="!$isMobile()">
-    <img src="./s1/img7.webp" class="img2 absolute" v-if="!$isMobile()">
-  </div>
-  <div data-aos="fade-left" data-aos-delay="400">
-    <img src="./s1/img5.webp" class="img6 absolute">
-    <img src="./s1/tree.png" class="tree1 absolute" data-aos="fade-left" data-aos-delay="0">
-    <img src="./s1/img1.webp" class="img1 absolute">
-    <img src="./s1/img7.webp" class="img8 absolute">
-  </div>
-    <img src="./s1/t2.svg" class="t1 absolute" data-aos="zoom-in" data-aos-delay="0">
-	<!-- 
-   -->
-
 
   </article>
 </template>
@@ -34,6 +14,7 @@
 .s3 {
   @apply relative w-full h-screen;
   height: size(690);
+  background: #8fc31f;
   /*
   min-height: size(940);
   max-height: size(940);*/

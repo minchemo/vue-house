@@ -1,24 +1,16 @@
 <template>
   <article class="s1" id="s1">
-    <div data-aos="fade-left">
-    <img src="./s1/tree.png" class="tree2 absolute" v-if="!$isMobile()">
-    <img src="./s1/img2.webp" class="img2 absolute">
-    <img src="./s1/img5.webp" class="img6 absolute" v-if="$isMobile()">
-    <img src="./s1/img3.webp" class="img3 absolute">
-
-    </div>
-    <div data-aos="fade-right">
-    <img src="./s1/img3.webp" class="img4 absolute">
-    <img src="./s1/img4.webp" class="img5 absolute" v-if="$isMobile()">
-    <img src="./s1/tree.png" class="tree1 absolute">
+    <img src="./s1/pc.jpg" class="t0">
     <img src="./s1/img1.webp" class="img1 absolute">
+    <img src="./s1/appearance.png" class="appearance absolute">
+    <img src="./s1/img2.webp" class="img2 absolute">
+    <div class="txt absolute">
+      <img src="./s1/logo.svg" class="logo">
+      <img src="./s1/t1m.svg" class="t1" v-if="$isMobile()">
+      <img src="./s1/t1.svg" class="t1" v-else>
     </div>
-    <img src="./s1/txtm.svg" class="t1 absolute" data-aos="fade-down" data-aos-delay="0" v-if="$isMobile()">
-    <img src="./s1/txt.svg" class="t1 absolute" data-aos="fade-down" data-aos-delay="0" v-else>
-    <img src="./s1/logo.svg" class="logo absolute" data-aos="zoom-in" data-aos-delay="400">
     
 	<!--  
-    <img src="./s1/mo.jpg" class="t0">
     <img src="./s1/02.jpg" class="t0">
        <div class="bg"><img src="./s1/bg.svg" alt="bg"></div>
        <img src="./s1/img.webp" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0">
@@ -38,23 +30,34 @@
 }
 .s1 {
   @apply relative w-full h-screen;
-  height: size(940);
+  height: size(1080);
   /*
   min-height: size(940);
   max-height: size(940);*/
   font-size:size(36);
 
-.t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 10;opacity:.5;mix-blend-mode: multiply;
+.t0{position: absolute;width: 78%;top:0px;left: 11%; pointer-events: none;z-index: 10;opacity:.3;//mix-blend-mode: multiply;
 }
+
+.txt{top:size(295);left:0;right: 0;margin: auto;width:100%;display: flex; justify-content:center;align-items:center;
+
+  .t1{width:size(530);margin: size(60) 0 0 size(50);}
+.logo{width:size(330);margin: 0;}
+}
+.img1{top: 0;right: 0;transform:skewY(3deg);transform-origin:100% 0;animation: ann 10s ease-in-out alternate-reverse infinite;}
+.img2{bottom: 0;right: 0;width: 105%;transform:skewX(-3deg);transform-origin:50% 100%;animation: ann 10s ease-in-out alternate-reverse infinite;}
+.appearance{bottom: size(170);right: 0;left: 0;margin: auto;width:size(500);}
+/*
 .t1{top:size(190);left:0;right: 0;margin: auto;width:size(1014);}
-.logo{top:size(320);left:0;right: 0;margin: auto;width:size(596);}
+.logo{top:size(320);left:0;right: 0;margin: auto;width:size(596);}*/
+/*
 .img1{top:size(710);left:size(-540);width:size(1760);transform: translateX(4%);animation: ann 10s ease-in-out alternate infinite;}
 .img2{top:size(574);right:size(-172);width:size(1050);transform: translateX(-2%);animation: ann 10s ease-in-out alternate-reverse infinite;}
 .img3{top:size(695);right:size(-830);width:size(1327);transform: translateX(5%);animation: ann 5s ease-in-out alternate infinite;}
 .img4{top:size(550);left:size(-860);width:size(1327);transform: translateX(5%);animation: ann 5s ease-in-out alternate infinite;}
 .tree1{top:size(567);left:size(260);width:size(196);}
 .tree2{top:size(535);right:size(275);width:size(95);}
-
+*/
 }
   
 /* 螢幕尺寸標準 */

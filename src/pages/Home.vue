@@ -1,6 +1,5 @@
 <template>
   <div ref="gtmNoScript" />
-  <img src="https://jrty.tw/favicon.png" class="oq">
   <!--loading-->
   <div v-bind:class="{
     'opacity-0': !isLoading,
@@ -16,7 +15,7 @@
      font-['Noto_Sans_TC',sans-serif]
      font-['LXGW_WenKai_Mono_TC',monospace]
     -->
-  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#ECE7E2]">
+  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#fff]">
     <S1 />
     <S2 />
     <S3 />
@@ -51,7 +50,6 @@
      transform:scale(1);opacity: 1;
   }
 }
-.oq{position: absolute;top: 0;left: 0;width: 0;}
 /*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
     span{
@@ -83,11 +81,11 @@ img {
 }
 
 .home{
-  background: url("@/section/s1/bg.jpg") fixed repeat;
+ /* background: url("@/section/s1/bg.jpg") fixed repeat;
   background-size:size(800) auto;
   @media screen and (max-width: 767px) {
     background-size:sizem(500) auto;
-  }
+  }*/
   }
 /*
       .txt {
