@@ -15,7 +15,7 @@
      font-['Noto_Sans_TC',sans-serif]
      font-['LXGW_WenKai_Mono_TC',monospace]
     -->
-  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#fff]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#fff]">
     <S1 />
     <S2 />
     <S3 />

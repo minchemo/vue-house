@@ -3,9 +3,9 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-   <!--  <div class="logo">
+    <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>  -->
+    </div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #40220F;}
-.hover\:bg-color2:hover{background-color:#351807;}
+.bg-color1{background-color: #8fc31f;}
+.hover\:bg-color2:hover{background-color:#71a108;}
 
 
 .contact-info-img{
@@ -120,13 +120,13 @@
   // background: #045147;
 
   .logo {position: relative;
-    width: size(367);
+    width: size(250);
    // height: size(172);
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(30) auto 0;
+    margin: size(30) auto size(30);
     img{width: 100%;}
     .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
   }
@@ -140,8 +140,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #fff;
-      color: #ca9717;
+      background-color: #8fc31f;
+      color: #FFF;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -157,7 +157,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #b4850c;
+        background-color: #71a108;
         color: #fff;
         outline: 1px solid #fff;
 
@@ -170,7 +170,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: invert(58%) sepia(97%) saturate(379%) hue-rotate(5deg) brightness(86%) contrast(96%);
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
@@ -235,7 +235,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(12%) sepia(31%) saturate(1846%) hue-rotate(348deg) brightness(93%) contrast(92%);
+  img{filter: invert(90%) sepia(28%) saturate(5724%) hue-rotate(28deg) brightness(95%) contrast(76%);
   }
 }
 
@@ -281,15 +281,15 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(80) 0;
+    padding: sizem(50) 0 sizem(80) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
   background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(257);
-    margin: sizem(40) auto sizem(30) auto;
+      width: sizem(200);
+    margin: sizem(20) auto sizem(40) auto;
      // margin-bottom: sizem(47);
     }
 

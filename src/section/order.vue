@@ -1,5 +1,6 @@
 <template>
   <div id="order" class="order relative text-center">
+    <img src="./s1/img1.webp" class="img1 absolute">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -57,9 +58,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#666]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -89,7 +90,13 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+@keyframes ann {
+  to {
+    transform: translateX(0%);
+  }
+}
 
+.img1{width:size(791);top: 0;right: 0;transform:skewY(3deg);transform-origin:100% 0;animation: ann 8s ease-in-out alternate-reverse infinite;}
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -111,16 +118,17 @@
   width: 100%;
   padding-top: 0;
   font-size: size(15);
+  overflow: hidden;
   //background: #195c45;
-  &::before{content: "";background: #d8a422;display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;mix-blend-mode: multiply;}
+ // &::before{content: "";background: #d8a422;display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;mix-blend-mode: multiply;}
   
 
 
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #FFF;
-    padding-top:1.5em;
+    color: #8fc31f;
+    padding-top:3em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
@@ -130,9 +138,9 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #FFF;
+    color: #727171;
     padding-top:.8em;
-    letter-spacing: .1em;
+    letter-spacing:0;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
@@ -172,23 +180,23 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #ad680044;border: 1px solid #fff;color: #fff;
+    .row{background: #9993;border: 0px solid #999;color: #666;
       display: flex;width: 100%;
     align-items:center;
       > span{
         width: 7.5em;
         text-align: left;padding-left:1em ;
         font-weight:600;
-        > span{color: #ff0;font-size:0.8em;}
+        > span{color: #F00;font-size:0.8em;}
       }
       input,select{background: #0000;flex: 1;font-size: inherit;}
       &::placeholder,
-      input::placeholder{color: #fffa;}
+      input::placeholder{color: #000a;}
       option{color: #444;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
-      filter: brightness(0) invert(1);
+      filter: brightness(0) invert(.3);
       &:focus{
         background-position:calc(100% - .5em) 0%;
       }
@@ -201,7 +209,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #eeb934cc;
+    background-color: #8fc31f;
     border: 1px solid #fff;
     //border:0;
     border-radius: 0em;
@@ -222,6 +230,7 @@
 }
 
 @media screen and (max-width:768px) {
+  .img1{width:sizem(270);}
   .order-section {
     min-height: sizem(800);
     position: relative;
@@ -267,7 +276,7 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1.5em;
+      padding-top:4.7em;
     }
     .order-subTitle{
       font-size: sizem(13);

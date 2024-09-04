@@ -1,6 +1,38 @@
 <template>
   <article class="s3" id="s3">
-
+    <div class="swiper-box">
+      <Splide :options="sConfig" ref="splide" class="slide">
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+          <div class="caption">
+            {{ i.caption }}
+          </div>
+        </SplideSlide>
+      </Splide>
+      <!-- 
+      <div class="arrows" v-if="$isMobile()">
+        <img
+          @click="splide.go('<')"
+          class="prev"
+          src="@/section/arrow.png"
+          alt="r"
+          srcset=""
+        />
+        <img
+          @click="splide.go('>')"
+          class="next"
+          src="@/section/arrow.png"
+          alt="r"
+          srcset=""
+        />
+      </div> -->
+    </div>
+    <img src="./s1/t3m.svg" alt="t3" class="t3" v-if="$isMobile()" data-aos="fade-down" data-aos-delay="0">
+    <img src="./s1/t3.svg" alt="t3" class="t3" v-else data-aos="fade-down" data-aos-delay="0">
   </article>
 </template>
 
@@ -12,27 +44,42 @@
   }
 }
 .s3 {
-  @apply relative w-full h-screen;
-  height: size(690);
+  @apply relative;
+  //height: size(400);
   background: #8fc31f;
   /*
   min-height: size(940);
   max-height: size(940);*/
   font-size:size(36);
+  text-align: center;
 
-.t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity:.5;mix-blend-mode: multiply;
-}
-.appearance{top:size(57);right:size(297);width:size(760);}
-.img5{top:size(325);left:size(-5);width:size(269);}
-.img6{top:size(535);right:size(920);width:size(579);transform: translateX(10%);animation: ann 5s ease-in-out alternate infinite;}
-.tree3{top:size(410);left:size(440);width:size(95);} 
-.tree2{top:size(360);left:size(512);width:size(130);}
-.tree1{top:size(385);right:size(202);width:size(158);}
-.img7{top:size(335);right:size(0);width:size(1600);}
-.img1{top:size(515);right:size(-1233);width:size(1700);}
-.img8{top:size(578);right:size(-232);width:size(915);transform: translateX(10%);animation: ann 5s 2s ease-in-out alternate infinite;}
-.img2{top:size(395);left:size(-690);width:size(914);transform: translateX(10%);animation: ann 5s ease-in-out alternate infinite;}
-.t1{top:size(60);left:size(320);width:size(455);}
+  .swiper-box {
+    @apply relative z-10;
+    width: size(1540);
+    margin: auto;
+  //  margin-top: size(56);
+    .slide-item {
+      @apply bg-cover;
+      width: size(300);
+      height: size(200);
+      margin-right: size(10);
+      .caption {
+        @apply absolute bottom-0 w-full text-white text-right flex items-end justify-end;
+        padding: .5em;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        height: size(68);
+        font-size: size(12);
+        font-weight: 400;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+  .t3{position: relative;
+    width: size(1120);margin:size(40) auto size(70) auto;}
 
 }
   
@@ -45,32 +92,90 @@
 
 
   .s3 {
-    height: sizem(375);
+ //   height: sizem(375);
     font-size:sizem(15);
-    .appearance{top:sizem(12);right:0;left: 0;
-      margin: auto;width:sizem(205);}
-      .img6{top:sizem(135);right:sizem(170);width:sizem(180);}
-.tree3{top:sizem(106);left:sizem(50);width:sizem(24);}
-.tree2{top:sizem(95);left:sizem(68);width:sizem(30);}
-.tree1{top:sizem(78);right:sizem(67);width:sizem(55);}
-.img7{top:sizem(90);right:sizem(-10);width:sizem(385);}
-.img1{top:sizem(120);right:sizem(-460);width:sizem(620);}
-.img8{top:sizem(150);right:sizem(-60);width:sizem(210);}
-.t1{top:sizem(198);right:0;left: 0;
-  margin: auto;width:sizem(230);}
+    .swiper-box {
+      
+    width: 100%;
+
+    .slide-item {
+      width: sizem(300);
+      height: sizem(200);
+      margin-right: sizem(10);
+      .caption {
+        @apply absolute bottom-0 w-full text-white text-right flex items-end justify-end;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        height: sizem(68);
+        font-size: sizem(12);
+        font-weight: 400;
+      //  letter-spacing: size(2.4);
+      }
+    }
+
+
+    }
+  .t3{
+    width: sizem(310);margin:sizem(30) auto sizem(30) auto;}
 }
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
 
-const isMobile = computed(() => globals.$isMobile());
+const isMobile = computed(() => globals.$isMobile())
 
-const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-  smoothScroll({
-    scrollTo: document.querySelector(el)
-  })
-}
+const splide = ref()
+const sConfig = globals.$isMobile()
+  ? { // 手機板配置
+      autoWidth: true,
+      arrows: false,
+      autoplay: true,
+      pagination: false,
+      drag: true,
+      interval: 6000, // 調整跑馬燈速度，speed/interval須一致
+      speed: 6000, // 調整跑馬燈速度，speed/interval須一致
+      snap: false,
+      easing: "linear",
+      gap: 0,
+      type: "loop",
+      perMove: 1,
+    }
+  : { // 桌面配置
+      autoWidth: true,
+      arrows: false,
+      autoplay: false,
+      pagination: false,
+      drag: false,
+      interval: 4000,
+      gap: 0,
+      type:"",
+    }
+
+const imgs = [
+  {
+    img: new URL("../section/s1/1.webp", import.meta.url).href,
+    caption: "康橋國際學校",
+  },
+  {
+    img: new URL("../section/s1/2.webp", import.meta.url).href,
+    caption: "馬禮遜美國學校",
+  },
+  {
+    img: new URL("../section/s1/3.webp", import.meta.url).href,
+    caption: "AAIA美國學校",
+  },
+  {
+    img: new URL("../section/s1/4.webp", import.meta.url).href,
+    caption: "三井OUTLET",
+  },
+  {
+    img: new URL("../section/s1/5.webp", import.meta.url).href,
+    caption: "ASML",
+  },
+]
 </script>
