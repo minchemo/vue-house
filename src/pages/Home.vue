@@ -81,11 +81,11 @@ img {
 }
 
 .home{
- /* background: url("@/section/s1/bg.jpg") fixed repeat;
+  background: url("@/section/s1/bg.jpg") fixed repeat;
   background-size:size(800) auto;
   @media screen and (max-width: 767px) {
     background-size:sizem(500) auto;
-  }*/
+  }
   }
 /*
       .txt {

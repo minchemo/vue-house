@@ -8,7 +8,7 @@
       <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
       <!-- <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="200" v-if="$isMobile()">
       <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="200" v-else>  -->
-      <div class="t2 font-['Noto_Serif_TC',serif]"><span><span>人生換幕</span>何須趕路</span><span><span>心本富足</span>何必媚俗</span></div>
+      <div class="t2 font-['Noto_Serif_TC',serif]" data-aos="zoom-in" data-aos-delay="200"><span><span>人生換幕</span>何須趕路</span><span><span>心本富足</span>何必媚俗</span></div>
     </div>
     
 	<!--  
