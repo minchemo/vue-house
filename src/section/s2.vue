@@ -40,7 +40,7 @@
 
 .s2 {
   @apply relative overflow-hidden flex font-['LXGW_WenKai_Mono_TC',monospace] justify-center text-[#FFF];
-  padding:size(55) 0;
+  padding:size(75) 0;
   font-size:size(25);
   line-height: 1.83;
   background: #8fc31f;
@@ -55,7 +55,7 @@
 
   .s2 {
   @apply flex-col;
-  padding:sizem(20) 0;
+  padding:sizem(40) 0;
   text-align: center;
   font-size:sizem(14);
 

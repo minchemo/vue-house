@@ -6,9 +6,8 @@
     <img src="./s1/img2.webp" class="img2 absolute" v-else>
     <div class="txt absolute">
       <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
-      <!-- <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="200" v-if="$isMobile()">
-      <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="200" v-else>  -->
-      <div class="t2 font-['Noto_Serif_TC',serif]"><span><span>人生換幕</span>何須趕路</span><span><span>心本富足</span>何必媚俗</span></div>
+      <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="200" v-if="$isMobile()">
+      <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="200" v-else>
     </div>
     
 	<!--  
@@ -46,16 +45,6 @@
 
   .t1{width:size(530);margin: size(60) 0 0 size(50);}
 .logo{width:size(330);margin: 0;}
-.t2{ color: #717071;margin: size(60) 0 0 size(50);
-  font-size:size(45);
-  letter-spacing: 0.06em;
-  display: flex;
-  flex-direction:column;
-  > span{
-    span{margin:auto .5em auto auto;}
-    &:nth-child(1){color: #8fc31f;}
-  }
-}
 }
 .img1{width:size(791);top: 0;right: 0;transform:skewY(3deg);transform-origin:100% 0;animation: ann 8s ease-in-out alternate-reverse infinite;}
 .img2{bottom: 0;right: 0;width: 105%;transform:skewX(-3deg);transform-origin:50% 100%;animation: ann 5s ease-in-out alternate-reverse infinite;}
@@ -80,15 +69,6 @@
       flex-direction:column;
   .t1{width:sizem(40);margin: sizem(20) auto;}
 .logo{width:sizem(140);margin: 0;}
-.t2{ margin: sizem(20) auto;
-  flex-direction:row;
-  font-size:sizem(18);
-  line-height: 1.4;
-  > span{width: 1em;
-    span{margin:auto auto .5em auto;display: inline-block;}
-    &:nth-child(1){margin-right: .5em;}
-  }
-}
     }
     .img1{width:sizem(270);}
     .img2{width: 112%;right: -6%;transform:skewX(-5deg);}

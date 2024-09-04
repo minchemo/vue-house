@@ -1,7 +1,9 @@
 <template>
   <article class="s3" id="s3">
     <img src="./s1/appearance.png" class="appearance absolute" data-aos="fade-up" data-aos-delay="0">
-    <img src="./s1/t2.svg" class="t1 absolute" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/img2m.webp" class="img2 absolute" v-if="$isMobile()">
+    <img src="./s1/img3.webp" class="img2 absolute" v-else>
+    <img src="./s1/t4.svg" class="t1 absolute" data-aos="zoom-in" data-aos-delay="0">
 	<!-- 
    -->
 
@@ -18,7 +20,7 @@
 }
 .s3 {
   @apply relative w-full h-screen;
-  height: size(690);
+  height: size(630);
   /*
   min-height: size(940);
   max-height: size(940);*/
@@ -26,18 +28,12 @@
   
   background: #8fc31f;
 
-.appearance{top:size(57);right:size(297);width:size(760);
+  .img2{bottom: 0;right: 0;width: 105%;transform:skewX(-3deg);transform-origin:50% 100%;animation: ann 5s ease-in-out alternate-reverse infinite;}
+.appearance{top:size(50);right:size(297);width:size(760);
   filter: brightness(0) invert(1);}
-.img5{top:size(325);left:size(-5);width:size(269);}
-.img6{top:size(535);right:size(920);width:size(579);transform: translateX(10%);animation: ann 5s ease-in-out alternate infinite;}
-.tree3{top:size(410);left:size(440);width:size(95);} 
-.tree2{top:size(360);left:size(512);width:size(130);}
-.tree1{top:size(385);right:size(202);width:size(158);}
-.img7{top:size(335);right:size(0);width:size(1600);}
-.img1{top:size(515);right:size(-1233);width:size(1700);}
-.img8{top:size(578);right:size(-232);width:size(915);transform: translateX(10%);animation: ann 5s 2s ease-in-out alternate infinite;}
-.img2{top:size(395);left:size(-690);width:size(914);transform: translateX(10%);animation: ann 5s ease-in-out alternate infinite;}
-.t1{top:size(60);left:size(320);width:size(455);}
+.t1{top:size(70);left:size(310);width:size(455);
+  // filter: brightness(0) invert(1);
+}
 
 }
   
@@ -52,16 +48,10 @@
   .s3 {
     height: sizem(375);
     font-size:sizem(15);
-    .appearance{top:sizem(12);right:0;left: 0;
+    .appearance{top:sizem(215);right:0;left: 0;
       margin: auto;width:sizem(205);}
-      .img6{top:sizem(135);right:sizem(170);width:sizem(180);}
-.tree3{top:sizem(106);left:sizem(50);width:sizem(24);}
-.tree2{top:sizem(95);left:sizem(68);width:sizem(30);}
-.tree1{top:sizem(78);right:sizem(67);width:sizem(55);}
-.img7{top:sizem(90);right:sizem(-10);width:sizem(385);}
-.img1{top:sizem(120);right:sizem(-460);width:sizem(620);}
-.img8{top:sizem(150);right:sizem(-60);width:sizem(210);}
-.t1{top:sizem(198);right:0;left: 0;
+      .img2{width: 112%;right: -6%;transform:skewX(-5deg);}
+.t1{top:sizem(15);right:0;left: 0;
   margin: auto;width:sizem(230);}
 }
 }
