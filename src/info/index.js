@@ -1,4 +1,4 @@
-const caseName = "白隅"
+const caseName = "淳真年代"
 
 export default {
     meta: {
