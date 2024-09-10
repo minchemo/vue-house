@@ -27,8 +27,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#A30C24;
-$house-c2:#000;
+$house-c1:#FF0;
+$house-c2:#FFF;
 .displaynone{display: none;}
 .house {
    // height: auto;
@@ -36,6 +36,8 @@ $house-c2:#000;
     font-size: size(22);
     padding: 3em 0;
     // height:4em;
+    background:#000 url("@/section/s1/bg.jpg") no-repeat center 103%;
+    background-size: 100% auto;
     img{height: 1.3em;vertical-align: middle;}
 }
 .info-box {
@@ -43,7 +45,7 @@ $house-c2:#000;
 
     .title {
         font-size: size(40);
-       // font-weight: 700;
+        font-weight: 600;
         color: $house-c1;
         margin: 0 auto 0em auto;
     }
@@ -73,6 +75,7 @@ $house-c2:#000;
     // background:#fff;
   //  height: sizem(400);
     font-size: sizem(13);
+    background-size: 400% auto;
 }
     .footer {
         margin-bottom: sizem(0);

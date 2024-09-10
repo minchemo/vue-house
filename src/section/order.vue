@@ -52,7 +52,7 @@
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
-        <!-- 
+       
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -66,7 +66,7 @@
             <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
-          </select></label> -->
+          </select></label> <!--  -->
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -78,9 +78,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#666]">
+        <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#A30C24] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -116,6 +116,10 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
+    background: url("./s1/bg.jpg") no-repeat bottom center;
+    background-size: 100% auto;
+    padding-top: size(40);
+
 
   .bg-image {
     position: absolute;
@@ -124,12 +128,16 @@
     bottom: size(50);
     vertical-align: middle;
   }
+&::before{content: "";
+width: 100%;position: absolute;top: 0;left: 0;height: 15vw;
+background:linear-gradient(to bottom, #000F 0%,#0000 100%);
+}
 
 }
 
 .order {
   width: 100%;
-  padding-top: size(40);
+ // padding-top: size(40);
   /*
   background:url("@/section/form/bg.jpg");
   background-size: auto;
@@ -137,11 +145,11 @@
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
-
-  .order-title {
+  .order-title {position: relative;
+    z-index: 3;
     font-size: size(40);
-    font-weight: 400;
-    color: #A30C24;
+    font-weight: 600;
+    color: #FFF;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
     .line{width: size(439);}
@@ -193,23 +201,24 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #0003;
+      background-color: #6Cf6;
       position: absolute;
     }
-    .row{background: #fff;border: 1px solid #999;color: #000;
+    .row{background: #09F3;border: 1px solid #6Cf6;color: #FFF;
       display: flex;width: 100%;
     align-items:center;
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;//font-size: 12px;
+        > span{color: #ff0;//font-size: 12px;
           }
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background: none;flex: 1;}
       option{color: #666;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
+      filter: brightness(0) invert(1);
       &:focus{
         background-position:calc(100% - .5em) 0%;
       }
@@ -227,7 +236,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #A30C24;
+    background-color: #09F6;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -253,6 +262,8 @@
     position: relative;
     // overflow: hidden;
    // padding-top: sizem(200);
+   background-position: 50% calc(100% - 45vw);
+    background-size: 400% auto;
 
     .bg-image {
       position: absolute;
@@ -260,6 +271,13 @@
       left: -#{sizem(30)};
       bottom: sizem(590);
     }
+&::before{height: 30vw;
+}
+&::after{content:"";
+width: 100%;position: absolute;bottom: 0;left: 0;height: 45vw;
+background:#000;
+}
+
 
   }
 

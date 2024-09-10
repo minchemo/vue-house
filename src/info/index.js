@@ -8,17 +8,18 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "高雄市 經武路X橋新七路",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7359.266492949288!2d120.3097038172106!3d22.74186923554725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ0JzMwLjciTiAxMjDCsDE4JzUzLjUiRQ!5e0!3m2!1szh-TW!2stw!4v1725006447269!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
-    // phone: "07-611-8333",
-    fbLink: "https://www.facebook.com/61564328289468",
-    fbMessage: "https://m.me/61564328289468",
+    address: "台南市善化區三民路80號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14676.092839442186!2d120.27827834967239!3d23.132826879009304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7bb034f7043d%3A0xc1bf048a55c37186!2zNzQx5Y-w5Y2X5biC5ZaE5YyW5Y2A5LiJ5rCR6LevODDomZ8!5e0!3m2!1szh-TW!2stw!4v1725962046338!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/9HcPGPwEo6BynxFh6",
+    phone: "06-5818567",
+    fbLink: "https://www.facebook.com/",
+    fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "興連城開發_興華城建設"],
-        ["建築設計", "原東聯合建築師事務所"],
-        ["行銷企劃", "允城國際事業"],
+        ["投資興建", "淳真國際投資控股有限公司"],
+        ["建築設計", "林覺偉建築師事務所"],
+        ["基地面積", "944.06坪"],
+        ["格局規劃", "4F雙車美墅"],
         /*
         ["空間設計", "相即空間設計"],
         ["企劃銷售", "低碳健康樂活行銷"],
@@ -37,12 +38,12 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋",
-        subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
-        subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
+      //  subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
+       // subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-   // room_type: ["兩房","三房"],
-   // budget: [" "],
+    room_type: ["兩房","三房","其他"],
+    budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000萬以上"],
    // use_type: [" "],
 
     navList: [
