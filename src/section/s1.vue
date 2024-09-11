@@ -67,6 +67,7 @@
     top: calc(50% + #{sizem(430 - 604 * .5)});
     @media screen and (min-width: 768px) {
       top: size(536);left:size(347);width:size(326);right: auto;
+      top: calc(50% + #{size(536 - 1080 * .5)});
     }
   }
 }
