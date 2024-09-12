@@ -31,6 +31,9 @@ export default {
         title: "我想了解",
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
+    // 底下2個 沒項目就會隱藏
+    room_type: [],
+    budget: ["1500～1900萬","2000～3000萬","3000萬以上"],
     navList: [{
         name: "高大Σ計畫",
         target: ".section2",

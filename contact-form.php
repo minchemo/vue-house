@@ -19,6 +19,7 @@ $case_name = $dataList[0]['casename'];
 
     $name         = isset($_POST['name']) ? $_POST['name'] : '';
     $phone        = isset($_POST['phone']) ? $_POST['phone'] : '';
+    $budget        = isset($_POST['budget']) ? $_POST['budget'] : '';
     $user_email   = isset($_POST['email']) ? $_POST['email'] : '';
     $city         = isset($_POST['city']) ? $_POST['city'] : '';
     $area         = isset($_POST['area']) ? $_POST['area'] : '';
@@ -254,7 +255,7 @@ $case_name = $dataList[0]['casename'];
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：".$name."<BR>手機：".$phone."<BR>居住城市：".$city."<BR>居住地區：".$area."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：".$name."<BR>手機：".$phone."<BR>購屋預算：".$budget."<BR>居住城市：".$city."<BR>居住地區：".$area."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
@@ -273,6 +274,7 @@ $case_name = $dataList[0]['casename'];
             $url .= "?token=".$token;
             $url .= "&name=".$name;
             $url .= "&phone=".$phone;
+            $url .= "&budget=".$budget;
             $url .= "&email=".$user_email;
             $url .= "&city=".$city;
             $url .= "&area=".$area;
