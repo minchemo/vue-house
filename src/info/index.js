@@ -8,7 +8,7 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台南市善化區三民路80號",
+    // address: "台南市善化區三民路80號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14676.092839442186!2d120.27827834967239!3d23.132826879009304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7bb034f7043d%3A0xc1bf048a55c37186!2zNzQx5Y-w5Y2X5biC5ZaE5YyW5Y2A5LiJ5rCR6LevODDomZ8!5e0!3m2!1szh-TW!2stw!4v1725962046338!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/9HcPGPwEo6BynxFh6",
     phone: "06-5818567",
