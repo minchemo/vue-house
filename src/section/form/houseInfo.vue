@@ -36,7 +36,7 @@ $house-c2:#FFF;
     font-size: size(22);
     padding: 3em 0;
     // height:4em;
-    background:#000 url("@/section/s1/bg.jpg") no-repeat center 103%;
+    background:#013; //url("@/section/s1/bg.jpg") no-repeat center 103%;
     background-size: 100% auto;
     img{height: 1.3em;vertical-align: middle;}
 }
