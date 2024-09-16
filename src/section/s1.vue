@@ -1,5 +1,12 @@
 <template>
   <article class="s1">
+    <img
+      class="logo"
+      src="@/section/s1/logo.svg"
+      alt="logo"
+      data-aos="fade-up"
+      data-aos-delay="0"
+    />
     <div class="vid">
       <video autoplay loop muted playsinline v-if="!isMobile" src="https://h35.banner.tw/fongyi-huili/pc.mp4"></video>
       <video autoplay loop muted playsinline v-else src="https://h35.banner.tw/fongyi-huili/mobile.mp4"></video>
@@ -44,6 +51,7 @@
 
   .logo {
     width: size(559);
+    position: absolute;
   }
   .t1 {
     width: size(883);
@@ -82,6 +90,8 @@
 
     .logo {
       width: sizem(260);
+      position: absolute;
+      z-index: 99;
     }
     .t1 {
       width: sizem(306.69);
