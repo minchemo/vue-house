@@ -8,8 +8,8 @@
    -->
 
    <div class="con flex">
-  <img src="./s1/logo1.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" v-if="!isMobile">
-  <img src="./s1/logo1.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" v-else>
+  <img src="./s1/logo2.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" v-if="!isMobile">
+  <img src="./s1/logo2.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" v-else>
 </div>
   </article>
 </template>
