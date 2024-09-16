@@ -1,10 +1,36 @@
 <template>
   <article class="s1">
-    <div class="vid">
-      <video src="https://h35.banner.tw/fongyi-huili/pc.mp4" autoplay muted loop v-if="!isMobile"></video>
-      <video src="https://h35.banner.tw/fongyi-huili/mobile.mp4" autoplay muted loop v-else></video>
-
-    </div>
+    <div
+      class="cloth2 absolute"
+      data-aos="fade"
+      data-aos-delay="200">
+    <img
+      src="@/section/s1/cloth.webp"
+      alt="cloth"
+    />
+  </div>
+  <div
+      class="cloth1 absolute"
+      data-aos="fade"
+      data-aos-delay="0">
+    <img
+      src="@/section/s1/cloth.webp"
+      alt="cloth"
+    />
+  </div>
+    <img
+      class="logo"
+      src="@/section/s1/logo.svg"
+      alt="logo"
+      data-aos="fade-up"
+      data-aos-delay="0"
+    />
+    <img class="t1" v-if="!isMobile" src="@/section/s1/t1.png" alt="" 
+      data-aos="fade-up"
+      data-aos-delay="200"/>
+    <img class="t1" 
+      data-aos="fade-up"
+      data-aos-delay="200" v-else src="@/section/s1/t1m.png" alt="" />
   </article>
 </template>
 
@@ -86,28 +112,6 @@
     .t1 {
       width: sizem(306.69);
     }
-
-    .vid {
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    video {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
   }
 }
 </style>
