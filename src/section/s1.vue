@@ -1,8 +1,8 @@
 <template>
   <article class="s1">
     <div class="vid">
-      <video src="https://h35.banner.tw/fongyi-huili/pc.mp4" autoplay muted loop v-if="!isMobile"></video>
-      <video src="https://h35.banner.tw/fongyi-huili/mobile.mp4" autoplay muted loop v-else></video>
+      <video autoplay loop muted playsinline v-if="!isMobile" src="https://h35.banner.tw/fongyi-huili/pc.mp4"></video>
+      <video autoplay loop muted playsinline v-else src="https://h35.banner.tw/fongyi-huili/mobile.mp4"></video>
 
     </div>
   </article>
