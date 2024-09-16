@@ -7,6 +7,9 @@
       data-aos="fade-up"
       data-aos-delay="0"
     />
+    <img class="t1" src="@/section/s1/t1new.png" alt="" 
+      data-aos="fade-up"
+      data-aos-delay="200"/>
     <div class="vid">
       <video autoplay loop muted playsinline v-if="!isMobile" src="https://h35.banner.tw/fongyi-huili/pc.mp4"></video>
       <video autoplay loop muted playsinline v-else src="https://h35.banner.tw/fongyi-huili/mobile.mp4"></video>
@@ -52,9 +55,12 @@
   .logo {
     width: size(559);
     position: absolute;
+    top:size(250);
   }
   .t1 {
-    width: size(883);
+    width: size(251);
+    position: absolute;
+    top: size(600);
   }
 }
 
@@ -92,9 +98,13 @@
       width: sizem(260);
       position: absolute;
       z-index: 99;
+      top:sizem(200);
+
     }
     .t1 {
-      width: sizem(306.69);
+      width: sizem(150);
+      z-index: 99;
+      top:sizem(350);
     }
 
     .vid {
