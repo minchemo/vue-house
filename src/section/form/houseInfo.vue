@@ -38,11 +38,13 @@
       srcset=""
     />
   </div>
-  <!--div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
+   <img class="banner-m" src="@/section/form/db-banner-m.svg" alt="謙旭" v-if="isMobile">
+    <img  class="banner-pc" src="@/section/form/db-banner.svg" alt="謙旭" v-else>
+  <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
       <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
               src="@/section/form/footerlogo.gif" alt="Lixin" srcset=""></a>
       <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
-  </div-->
+  </div>
 </template>
 
 <style lang="scss">
@@ -124,10 +126,6 @@
       @apply absolute left-0 top-0 z-10;
       width: 80%;
     }
-  }
-  .footer {
-    margin-bottom: sizem(63);
-    display: none;
   }
 
   .info-box {
