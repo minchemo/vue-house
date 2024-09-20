@@ -1,31 +1,33 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-    <div
-      class="cloth2 absolute"
-      data-aos="fade"
-      data-aos-delay="200">
+      <img class="tree1" v-if="!isMobile" src="@/section/order-tree.png" alt="" srcset="" />
+      <img class="tree1" v-else src="@/section/order-treem.png" alt="" srcset="" />
+      <img class="tree2"  v-if="!isMobile"  src="@/section/order-tree2.png" alt="" srcset="" />
       <img
-        src="@/section/s1/cloth.webp"
-        alt="cloth"
-      />
-    </div>
-    <div
-      class="cloth1 absolute"
-      data-aos="fade"
-      data-aos-delay="0">
-      <img
-        src="@/section/s1/cloth.webp"
-        alt="cloth"
-      />
-    </div>
-      <img class="logo" src="@/section/s1/logo.svg" alt="" srcset=""><!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
- 
+        class="logo"
+        src="@/section/logo.png"
+        alt=""
+        srcset=""
+      /><!-- Title -->
+      <div
+        class="order-title text-center"
+        v-if="info.order.title"
+        v-html="info.order.title"
+      ></div>
+      <div
+        class="order-subTitle text-center"
+        v-if="info.order.subTitle"
+        v-html="
+          $isMobile() && info.order.subTitle_mo
+            ? info.order.subTitle_mo
+            : info.order.subTitle
+        "
+      ></div>
+
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center z-10">
-             <!--
+        <!--
         <div class="s-order-title">
           <p>
             {{ info.order.title }}
@@ -40,7 +42,7 @@
             <input
               type="text"
               placeholder="姓名"
-              class="input w-full rounded-none placeholder:text-[#fff]"
+              class="input w-full rounded-none placeholder:text-[#F5F5F5]"
               :value="formData.name"
               @input="(event) => (formData.name = event.target.value)"
           /></label>
@@ -49,7 +51,7 @@
             <input
               type="text"
               placeholder="手機"
-              class="input w-full rounded-none placeholder:text-[#fff]"
+              class="input w-full rounded-none placeholder:text-[#F5F5F5]"
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
@@ -64,7 +66,8 @@
               <option
                 v-for="room in info.room_type"
                 :value="room"
-                v-text="room" :key="room"
+                v-text="room"
+                :key="room"
               ></option></select
           ></label>
           <label class="row" v-if="info.budget.length > 0"
@@ -77,7 +80,8 @@
               <option
                 v-for="budget in info.budget"
                 :value="budget"
-                v-text="budget" :key="budget"
+                v-text="budget"
+                :key="budget"
               ></option>
             </select>
           </label>
@@ -112,22 +116,37 @@
 
       <!-- Policy -->
       <div class="flex gap-2 items-center justify-center control">
-        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-          class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        <input
+          type="checkbox"
+          v-model="formData.policyChecked"
+          :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md"
+        />
+        <p class="text-[#000]">
+          本人知悉並同意<label
+            for="policy-modal"
+            class="modal-button text-[#F20E0E] cursor-pointer hover:opacity-70"
+            >「個資告知事項聲明」</label
+          >內容
         </p>
       </div>
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+      <vue-recaptcha
+        class="flex justify-center mt-8 z-10"
+        ref="recaptcha"
+        :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify"
+        @expired="onRecaptchaUnVerify"
+      />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '確認送出' }}
+      <div
+        class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer"
+        @click="send()"
+      >
+        {{ sending ? "發送中.." : "確認送出" }}
       </div>
 
       <!-- Contact Info -->
@@ -139,6 +158,7 @@
 
     <!-- HouseInfo -->
     <HouseInfo />
+
   </div>
 </template>
 
@@ -149,13 +169,13 @@
   position: relative;
   overflow: hidden;
   // background-color: #e89213;
-//  background-image: url("@/section/orderbg.jpg");
-background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 76%, #4EA8B3 86%, #45A0B2 100%);
-
+  //  background-image: url("@/section/orderbg.jpg");
+  background-image: #f5f5f5;
   background-size: cover;
   background-position: center;
   padding: size(142) 0 0;
-  padding-top: size(142);
+  padding-top: size(500);
+  padding-bottom: size(580);
 
   .bg-image {
     position: absolute;
@@ -164,24 +184,14 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
     bottom: size(50);
     vertical-align: middle;
   }
-  .cloth1{
-    width: 106vw;
-    top: size(-700);
-  //  top: calc(50% + #{size(-770 - 1080 * .5)});
-    left: 13.4vw;
-    transform: rotate(5deg)translateX(10%);
-    img{width: 100%;}
+  .tree1 {
+    @apply absolute top-0 right-0;
+    width: size(1000);
   }
-  .cloth2{
-    width: 116.7vw;
-    top: size(-600);
-  //  top: calc(50% + #{size(-670 - 1080 * .5)});
-    left: -31.8vw;
-    transform: rotate(-10deg)translateX(-10%);
-  img{width: 100%;transform: rotate(51.1deg);opacity: 0.55;}
+  .tree2 {
+    @apply absolute bottom-0 right-0;
+    width: 100%;
   }
-
-  
 }
 
 .order {
@@ -189,42 +199,28 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
   width: 100%;
 
   .logo {
-    position: relative;z-index: 2;
+    position: relative;
+    z-index: 2;
     width: size(559);
-    margin-bottom: size(430);
+    margin-bottom: 0;
   }
-/*
-  .s-order-title {
-    @apply absolute left-0 top-0 text-center w-full;
-    p {
-      font-size: size(32);
-      font-weight: 500;
-      color: #fff;
-
-      &:nth-child(2) {
-        font-size: size(18);
-        margin-top: size(5);
-      }
-    }
-  }
-*/
-.order-title {
+  .order-title {
     font-size: size(52);
     letter-spacing: 0.02em;
     font-weight: 700;
-    color: #FFF;
-    padding:1.5em 0 .1em;
+    color: #8fc31f;
+    padding: 1.5em 0 0.1em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .order-title-img {
     width: size(420);
     margin-bottom: size(10);
   }
-  .order-subTitle{
+  .order-subTitle {
     font-size: size(17);
-    color: #fff;
-    padding-top:.8em;
-    letter-spacing: .1em;
+    color: #302626;
+    padding-top: 0.8em;
+    letter-spacing: 0.1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
@@ -236,7 +232,7 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
   }
 
   .form {
-  //  @apply left-1/2 -translate-x-1/2;
+    //  @apply left-1/2 -translate-x-1/2;
     width: size(920);
     min-width: 680px;
     //  height: 350px;
@@ -262,13 +258,13 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #FFF;
+      background-color: #fff;
       position: absolute;
     }
     .row {
-      background: rgba($color: #fff, $alpha: 0);
+      background: rgba($color: #d9d9d9, $alpha: 1);
       border: 1px solid #fff;
-      color: #fff;
+      color: #000;
       display: flex;
       width: 100%;
       align-items: center;
@@ -277,7 +273,7 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
         text-align: left;
         padding-left: 1em;
         > span {
-          color: #FFF000;
+          color: #fff000;
           font-size: 12px;
         }
       }
@@ -295,14 +291,14 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
           100%;
         background-size: auto 200%;
         transition: background 0.3s;
-         filter: brightness(0) invert(1);//箭頭白色 拿掉變黑色  其他顏色用工具變顏色
+        filter: brightness(0) invert(1); //箭頭白色 拿掉變黑色  其他顏色用工具變顏色
 
         &:focus {
           background-position: calc(100% - 0.5em) 0%;
         }
       }
       &::placeholder {
-        color: #fff;
+        color: #f5f5f5;
       }
       textarea {
         @apply text-[#fff];
@@ -311,16 +307,16 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
   }
 
   .send {
-    font-size:20px;
+    font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #FFF;
-    background-color:#fff3;
+    color: #fff;
+    background-color: #8fc31f;
     //border: 1px solid #FFF9;
-    border:2px solid #fff;
+    border: 2px solid #fff;
     border-radius: 0em;
     width: 308px;
-    height:3.3em;
+    height: 3.3em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 400;
@@ -339,35 +335,16 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
     @apply bg-cover;
     min-height: sizem(800);
     position: relative;
- //   background-image: url("@/section/orderbgm.jpg");
-  
-    // overflow: hidden;
-  //  padding: 0 sizem(30);
-    padding-top: sizem(150);
+    padding-top: sizem(224);
+    padding-bottom: 0;
 
     .logo {
-      width: sizem(269);
+      width: sizem(219);
     }
-
-    .bg-image {
-      position: absolute;
+    .tree1 {
+      @apply absolute top-0 right-0;
       width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
     }
-  .cloth1{
-        width: 237vw;
-        top: -82.5vw;
-        left: -30.6vw;
-        img{transform: rotate(-1deg);height:sizem(700);}
-  }
-  .cloth2{
-        width: 300vw;
-        top: -91.5vw;
-        left: -176.8vw;
-  img{transform: rotate(55deg);opacity: 0.55;}
-  }
-
   }
 
   .order {
@@ -422,7 +399,7 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
       gap: 0;
       margin-bottom: sizem(20);
       flex-direction: column;
-  /*    margin-top: sizem(100);
+      /*    margin-top: sizem(100);
       padding-top: sizem(60); */
 
       .left {
@@ -473,7 +450,14 @@ import orderBadge from "@/section/order_badge.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { computed, ref, reactive, getCurrentInstance, watch, onMounted } from "vue"
+import {
+  computed,
+  ref,
+  reactive,
+  getCurrentInstance,
+  watch,
+  onMounted,
+} from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"

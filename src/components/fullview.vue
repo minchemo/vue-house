@@ -3,7 +3,7 @@
     <img
       class="view1 select-none"
       ref="viewImg"
-      src="@/section/s4/map.webp"
+      src="@/section/s2/view.jpg"
       alt=""
       srcset=""
     />

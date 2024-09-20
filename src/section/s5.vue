@@ -1,156 +1,170 @@
 <template>
   <article class="s5">
-    <div class="swiper-box">
-      <Splide
-        ref="splide"
-        class="slide"
-        :options="{
-          arrows: false,
-          autoplay: true,
-          pagination: false,
-          interval: 4000,
-          gap: 0,
-          type: 'loop',
-          autoWidth: true,
-        }"
-      >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgs"
-          :style="{ 'background-image': `url(${i.img}) !important` }"
-        >
-          <div class="caption">
-            {{ i.caption }}
-          </div>
-        </SplideSlide>
-      </Splide>
+    <div class="grids" v-if="!isMobile">
+      <div class="item">
+        <img src="@/section/s5/1.jpg" alt="" srcset="" />
+        <div class="caption">夏恩國際幼兒園</div>
+      </div>
+      <div class="item">
+        <img src="@/section/s5/2.jpg" alt="" srcset="" />
+        <div class="caption">師範大學</div>
+      </div>
+      <div class="item">
+        <img src="@/section/s5/3.jpg" alt="" srcset="" />
+        <div class="caption">康橋國際學校林口校區</div>
+      </div>
+      <div class="item">
+        <img src="@/section/s5/4.jpg" alt="" srcset="" />
+        <div class="caption">新北市馬禮遜美國學校</div>
+      </div>
     </div>
-    <div class="t">
-      <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">
-        匯繁華精彩
-      </div>
-      <div class="t1"  data-aos="fade-up" data-aos-delay="0" v-else>
-        匯繁華精彩 禮日常身段
-      </div>
-      <img
-        class="en"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        src="@/section/s5/en.png"
-        alt=""
-        srcset=""
-      />
-      <div class="t1" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0" >禮日常身段</div>
-      <div class="tlist">
-        <div
-          class="tl"
-          v-for="(t, i) in tlist"
-          :key="i"
-          data-aos="fade-up"
-          :data-aos-delay="i * 200"
-        >
-          <div class="tt1" v-html="t.a"></div>
-          <div class="tt2" v-html="t.b"></div>
+    <div class="info">
+      <div class="t">
+        <div class="t1"  data-aos="fade-up" data-aos-delay="0">
+          國際之旭<br />
+          常春藤蔓茁壯生根
+        </div>
+        <div class="t2"  data-aos="fade-up" data-aos-delay="200">
+          康橋國際學校、馬禮遜美國學校、AAIA新北<br v-if="!isMobile" />
+          美國學校離家近，盼望孩子在雙語菁英交流的<br v-if="!isMobile" />
+          殿堂，培育出海納百川的胸襟，未來走進世界<br v-if="!isMobile" />
+          舞台時，舉手投足也會洋溢優雅自信。
         </div>
       </div>
-      <div class="arrows">
-        <img
-          class="prev"
-          @click="splide.go('<')"
-          src="@/section/s3/arrow.png"
-          alt=""
-          srcset=""
-        />
-        <img
-          class="next"
-          @click="splide.go('>')"
-          src="@/section/s3/arrow.png"
-          alt=""
-          srcset=""
-        />
+      <div class="swiper-box">
+        <Splide
+          ref="splide"
+          class="slide"
+          :options="{
+            drag: isMobile,
+            arrows: false,
+            autoplay: isMobile,
+            pagination: false,
+            interval: 4000,
+            gap: 0,
+            type: 'loop',
+            autoWidth: true,
+          }"
+        >
+          <SplideSlide
+            class="slide-item"
+            :key="i"
+            v-for="(img, i) in imgs"
+            :style="{ 'background-image': `url(${img.imgs})` }"
+          >
+            <div class="caption">
+              {{ img.caption }}
+            </div>
+          </SplideSlide>
+        </Splide>
+        <div class="mo-arrow" v-if="isMobile">
+          <img
+            class="prev"
+            @click="splide.go('<')"
+            src="@/section/arrow2.png"
+            alt=""
+            srcset=""
+          />
+          <img
+            class="next"
+            @click="splide.go('>')"
+            src="@/section/arrow2.png"
+            alt=""
+            srcset=""
+          />
+        </div>
       </div>
     </div>
+    <img class="i i1" src="@/section/s5/i1.png" alt="" srcset="" />
+    <img class="i i2" src="@/section/s5/i2.png" alt="" srcset="" />
+    <img class="i i3" v-if="!isMobile" src="@/section/s5/i3.png" alt="" srcset="" />
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
-
 .s5 {
-  @apply w-full relative;
-  @apply flex items-end justify-center;
-  height: size(957);
-  gap: size(38);
-  padding-bottom: size(54);
-
-  .swiper-box {
-    width: size(1306);
-    height: size(805);
-    .slide-item {
-      @apply bg-cover;
-      width: size(1306);
-      height: size(805);
+  @apply w-full relative bg-[#fff] font-['Noto_Serif_TC'];
+  @apply flex justify-center items-end;
+  height: size(1080);
+  gap: size(12);
+  padding-bottom: size(134);
+  .grids {
+    width: size(973);
+    @apply grid grid-cols-2;
+    gap: size(12);
+    .item {
+      @apply relative;
+      width: size(480);
+      height: size(365);
+      img {
+        @apply w-full h-full object-cover;
+      }
       .caption {
-        @apply absolute text-white;
-        font-size: size(14);
+        @apply absolute z-10;
+        color: #fff;
+        font-family: "Noto Sans TC";
+        font-size: size(15);
         font-weight: 400;
-        letter-spacing: size(0.84);
-        right: size(20);
-        bottom: size(20);
+        left: size(20);
+        bottom: size(10);
       }
     }
   }
-  .t {
-    @apply text-[#034150];
-    .t1 {
-      font-size: size(48);
-      font-weight: 700;
-      letter-spacing: size(2.88);
-    }
-    .en {
-      width: size(413);
-    }
-    .tlist {
-      margin-top: size(55);
-      .tl {
-        padding-left: size(18);
-        margin-top: size(20);
-        .tt1 {
-          @apply relative;
-          font-size: size(26);
-          font-weight: 700;
-          letter-spacing: size(0.52);
-          &:before {
-            @apply absolute rounded-full bg-[#83CCD2];
-            @apply top-1/2 -translate-y-1/2;
-            content: "";
-            width: size(11);
-            height: size(11);
-            right: 102%;
-          }
-        }
-        .tt2 {
-          width: size(395);
-          margin-top: size(10);
-          font-size: size(15);
-          letter-spacing: size(0.9);
-        }
+  .info {
+    width: size(479);
+    .t {
+      padding-left: size(58);
+      padding-bottom: size(45);
+      .t1 {
+        color: #8fc31f;
+        font-size: size(36);
+        font-weight: 600;
+        margin-bottom: size(35);
+      }
+      .t2 {
+        font-size: size(16);
+        font-weight: 400;
       }
     }
-    .arrows {
+    .swiper-box {
+      width: size(479);
+      height: size(365);
       @apply relative;
-      @apply flex items-center justify-start pointer-events-none;
-      margin-top: size(90);
-      gap: size(90);
-      .prev {
-        @apply -scale-x-100;
+      .slide-item {
+        @apply relative bg-cover h-full;
+        width: size(479);
+        height: size(365);
+        margin-right: size(5);
+        .caption {
+          @apply absolute z-10;
+          color: #fff;
+          font-family: "Noto Sans TC";
+          font-size: size(15);
+          font-weight: 400;
+          left: size(20);
+          bottom: size(10);
+        }
       }
-
-      img {
-        @apply cursor-pointer pointer-events-auto;
-        width: size(36);
-      }
+    }
+  }
+  .i {
+    @apply absolute;
+    @apply pointer-events-none;
+    &.i1 {
+      width: size(149);
+      top: size(134);
+      left: size(1259);
+    }
+    &.i2 {
+      width: size(402.6);
+      top: size(62);
+      left: size(1436.4);
+    }
+    &.i3 {
+      width: size(186);
+      top: size(395);
+      left: size(1629);
     }
   }
 }
@@ -162,79 +176,63 @@
 
 @media screen and (max-width: 767px) {
   .s5 {
-    @apply w-full relative;
-    @apply flex flex-col-reverse items-center justify-center;
-    height: sizem(742);
-    gap: sizem(29);
-    padding-bottom: sizem(56.78);
-
-    .swiper-box {
-      width: sizem(315);
-      height: sizem(206);
-      .slide-item {
-        width: sizem(315);
-        height: sizem(206);
-        .caption {
-          @apply absolute text-white;
-          font-size: sizem(12);
+    @apply w-full relative bg-[#fff] font-['Noto_Serif_TC'];
+    @apply flex justify-center items-start;
+    height: sizem(567);
+    gap: 0;
+    padding-bottom: 0;
+    padding-top: sizem(86);
+    .info {
+      width: 100%;
+      .t {
+        padding: 0 sizem(30);
+        padding-bottom: size(45);
+        .t1 {
+          color: #8fc31f;
+          font-size: sizem(25);
+          font-weight: 600;
+          margin-bottom: sizem(24);
+        }
+        .t2 {
+          font-size: sizem(13);
           font-weight: 400;
-          letter-spacing: 1.5px;
-          right: sizem(10);
-          bottom: sizem(5);
+        }
+      }
+      .swiper-box {
+        width: sizem(315);
+        height: sizem(239.53);
+        left: sizem(30);
+        margin-top: sizem(24);
+        @apply relative;
+        .slide-item {
+          @apply relative bg-cover h-full;
+          width: sizem(315);
+          height: sizem(239.53);
+          margin-right: sizem(5);
+          .caption {
+            @apply absolute z-10;
+            color: #fff;
+            font-family: "Noto Sans TC";
+            font-size: sizem(12);
+            font-weight: 400;
+            left: sizem(10);
+            bottom: sizem(10);
+          }
         }
       }
     }
-    .t {
-      @apply text-[#034150] text-center;
-      .t1 {
-        font-size: sizem(25);
-        font-weight: 700;
-        letter-spacing: 1.5px;
+    .i {
+      @apply absolute;
+      @apply pointer-events-none;
+      &.i1 {
+        width: sizem(63);
+        top: sizem(112);
+        left: sizem(236);
       }
-      .en {
-        width: sizem(271);
-      }
-      .tlist {
-        margin-top: sizem(30);
-        .tl {
-          @apply text-left;
-          padding-left: 0;
-          margin-top: sizem(19);
-          .tt1 {
-            @apply relative;
-            font-size: sizem(15);
-            font-weight: 700;
-            letter-spacing: size(0.52);
-            &:before {
-              @apply absolute rounded-full bg-[#83CCD2];
-              @apply top-1/2 -translate-y-1/2;
-              content: "";
-              width: sizem(6);
-              height: sizem(6);
-              right: 103%;
-            }
-          }
-          .tt2 {
-            width: sizem(315);
-            margin-top: sizem(10);
-            font-size: sizem(13);
-            letter-spacing: 0.78px;
-          }
-        }
-      }
-      .arrows {
-        @apply absolute;
-        @apply flex items-center justify-between pointer-events-none;
-        margin-top: size(90);
-        gap: 0;
-        left: 0;
-        width: sizem(375);
-        bottom: sizem(170);
-        padding: 0 sizem(10);
-        img {
-          @apply cursor-pointer pointer-events-auto;
-          width: sizem(35.5);
-        }
+      &.i2 {
+        width: sizem(162);
+        top: sizem(20.9);
+        left: sizem(206);
       }
     }
   }
@@ -244,69 +242,39 @@
 <script setup>
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
-
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
+const activeIdx = ref(0)
+const onMove = (val, val2) => {
+  activeIdx.value = val2
+}
+
+const selectImgs = (imgs) => {
+  activeImgs.value = imgs
+  splide.value.go(1)
+}
+
 const imgs = [
   {
-    img: new URL("../section/s5/1.webp", import.meta.url).href,
-    caption: "國家歌劇院",
+    imgs: new URL("../section/s5/1.jpg", import.meta.url).href,
+    caption: "夏恩國際幼兒園",
   },
   {
-    img: new URL("../section/s5/2.webp", import.meta.url).href,
-    caption: "台中市政府",
+    imgs: new URL("../section/s5/2.jpg", import.meta.url).href,
+    caption: "師範大學",
   },
   {
-    img: new URL("../section/s5/3.webp", import.meta.url).href,
-    caption: "誠品",
+    imgs: new URL("../section/s5/3.jpg", import.meta.url).href,
+    caption: "康橋國際學校林口校區",
   },
   {
-    img: new URL("../section/s5/4.webp", import.meta.url).href,
-    caption: "秀泰生活",
+    imgs: new URL("../section/s5/4.jpg", import.meta.url).href,
+    caption: "新北市馬禮遜美國學校",
   },
   {
-    img: new URL("../section/s5/5.webp", import.meta.url).href,
-    caption: "大遠百",
-  },
-  {
-    img: new URL("../section/s5/6.webp", import.meta.url).href,
-    caption: "新光三越",
-  },
-  {
-    img: new URL("../section/s5/7.webp", import.meta.url).href,
-    caption: "TAIGER CITY",
-  },
-  {
-    img: new URL("../section/s5/8.webp", import.meta.url).href,
-    caption: "星巴克",
-  },
-  {
-    img: new URL("../section/s5/9.webp", import.meta.url).href,
-    caption: "IKEA",
-  },
-  {
-    img: new URL("../section/s5/10.webp", import.meta.url).href,
-    caption: "COSTCO",
-  },
-  {
-    img: new URL("../section/s5/11.webp", import.meta.url).href,
-    caption: "台中第二市場",
-  },
-]
-
-const tlist = [
-  {
-    a: "七期市政都心 被知識優雅環繞之地",
-    b: "台中市政府、國家歌劇院、台中市議會、台中警察總局..等，匯聚文教領袖、名流菁英，以最藝文的區段，禮遇您的日常身段",
-  },
-  {
-    a: "七期百貨核心，國際百貨零時差串接",
-    b: "家樂福、好市多、IKEA，從百貨購物到日常生活購物，隨時隨地擁有，以富人的角度為您準備好您所需要的頂級生活感",
-  },
-  {
-    a: "公益路商圈 奢華名店料理環伺",
-    b: "輕井澤、屋馬、森森燒肉、不葷主義…等，即刻享受台中一級戰區的美食好料，以最好的區段，款待您的每一個夜晚日常",
+    imgs: new URL("../section/s5/5.jpg", import.meta.url).href,
+    caption: "AAIA 新北美國學校",
   },
 ]
 </script>

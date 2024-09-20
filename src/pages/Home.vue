@@ -75,7 +75,7 @@ import AOS from 'aos';
 const isLoading = ref(true)
 const gtmNoScript = ref('')
 const config = ref({
-  showNav: true
+  showNav: false
 })
 
 onMounted(() => {

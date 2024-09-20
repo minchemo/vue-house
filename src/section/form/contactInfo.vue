@@ -26,6 +26,7 @@
       </div>
     </div>
 
+
   </div>
 
 
@@ -163,16 +164,16 @@
   width: size(1191);
   // border-radius: size(115);
   padding: 0;
-  margin-top: size(100);
-  margin-bottom: size(70);
+  margin-top: size(20);
+  padding-bottom: size(0);
   position: relative;
   z-index: 50;
 
-  .tree {
+  .tree2 {
     @apply absolute;
-    width: size(104);
-    left: size(125);
-    bottom: 115%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
     animation: an1 5s ease-in-out alternate infinite;
     transform-origin: bottom center;
 
@@ -185,12 +186,6 @@
         transform: skewX(3deg);
       }
     }
-  }
-
-  .hill {
-    @apply absolute;
-    bottom: 100%;
-    width: size(1413);
   }
 
   .logo {
@@ -209,7 +204,7 @@
     gap: size(20);
 
     .contact-item {
-      background: #034150;
+      background: #8FC31F;
       border: 0;
       color: #fff;
       width: 100%;
@@ -224,7 +219,7 @@
       gap: size(20);
 
       &:hover {
-        background-color: #0a809e;
+        background-color: #8FC31F;
         color: #fff;
 
         img {
@@ -242,7 +237,7 @@
       }
 
       &.address {
-        background-color: #fff;
+        background-color: #D9D9D9;
         border: 0;
         z-index: 0;
         position: relative;
@@ -255,7 +250,7 @@
       }
 
       &.googlemap {
-        background: #034150;
+        background: #8FC31F;
         color: #fff;
         border: 0;
         border: 0;
@@ -266,7 +261,7 @@
         }
 
         &:hover {
-          background-color: #0a809e;
+          background-color: #8FC31F;
           color: #fff;
 
           img {

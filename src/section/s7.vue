@@ -1,177 +1,38 @@
 <template>
   <article class="s7">
     <div class="t">
-      <div class="t1">匯名匠之作 禮大地風範</div>
-      <img class="t2" src="@/section/s7/en.png" alt="" />
-    </div>
-    <div class="swiper-box relative">
-      <Splide
-        ref="splide"
-        class="slide"
-        :options="{
-          drag: isMobile,
-          arrows: false,
-          autoplay: isMobile,
-          pagination: false,
-          interval: 4000,
-          gap: 0,
-          type: 'loop',
-          autoWidth: true,
-        }"
-        @splide:move="onMove"
-      >
-        <template v-if="!isMobile">
-          <SplideSlide
-            class="slide-item"
-            :class="{ active: i === activeIdx }"
-            :key="i"
-            v-for="(item, i) in imgs"
-          >
-            <div
-              class="avatar"
-              :style="{ 'background-image': `url(${item.img})` }"
-              @click="activeIdx = i"
-              @mouseover="activeIdx = i"
-              @mouseleave="activeIdx = -1"
-            ></div>
-            <div class="c1" v-html="item.c1"></div>
-            <div class="c2" v-html="item.c2"></div>
-            <div class="c3" v-html="item.c3"></div>
-          </SplideSlide>
-        </template>
-        <template v-else>
-          <SplideSlide class="slide-item" :key="i" v-for="(item, i) in imgs">
-            <div
-              class="avatar"
-              :style="{ 'background-image': `url(${item.img})` }"
-              @click="activeIdx = i"
-            ></div>
-            <div class="c1" v-html="item.c1"></div>
-            <div class="c2" v-html="item.c2"></div>
-            <div class="c3" v-html="item.c3"></div>
-          </SplideSlide>
-        </template>
-      </Splide>
-      <div class="mo-arrow" v-if="isMobile">
-        <img
-          class="prev"
-          @click="splide.go('<')"
-          src="@/section/arrow.png"
-          alt=""
-          srcset=""
-        />
-        <img
-          class="next"
-          @click="splide.go('>')"
-          src="@/section/arrow.png"
-          alt=""
-          srcset=""
-        />
+      <div class="t1"  data-aos="fade-up" data-aos-delay="0">養心之境 謙隱生活哲學</div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
+        微風、光影、林口獨有的水綠山色， 構築謙隱的生活哲學，永恆，在此凝泊。<br />
+        獨門獨院與大院落，彷彿打開心的門扉。<br />
+        沉穩的大地色系，建築師以它來詮釋建築，不譁眾取寵，卻有非常厚實的底蘊，伴隨大面無暇的落地窗，通往內在的宇宙。<br v-if="!isMobile" />
+        洄游而入微風也明白通透，沒有一面牆能遮蔽景觀，沒有一扇窗能框限想像，灑水蒔花，與知己品茗話家常，<br v-if="!isMobile"/>
+        當建築使人感受不到時間的敦促，永恆，便孕育而生。
       </div>
     </div>
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
-
 .s7 {
-  @apply w-full relative text-white bg-cover flex flex-col justify-start items-center;
-  height: size(1080);
-  padding-top: size(132);
-  background-image: url("@/section/s7/bg.webp");
-  gap: size(65);
+  @apply w-full relative;
+  @apply bg-cover bg-center;
+  height: size(1183);
+  background-image: url("@/section/s7/bg.jpg");
+  padding-top: size(155);
+
   .t {
-    @apply pointer-events-none relative z-10 flex flex-col items-center justify-center;
-    gap: size(33);
+    @apply text-white text-center;
+    font-family: "Noto Serif TC";
     .t1 {
-      font-size: size(48);
-      font-weight: 700;
-      letter-spacing: size(2.88);
+      font-size: size(36);
+      font-weight: 600;
+      margin-bottom: size(27);
     }
     .t2 {
-      width: size(717.8);
-    }
-  }
-  .swiper-box {
-    width: size(1127);
-    height: size(428.08);
-    .slide-item {
-      @apply relative;
-      width: size(333.15);
-      height: auto;
-      margin-right: size(63.85);
-      .avatar {
-        @apply w-full brightness-[0.3] transition-all;
-        @apply cursor-pointer;
-        height: size(428.08);
-        background-size: 101%;
-        margin-bottom: size(46);
-        &:hover {
-          @apply brightness-100;
-        }
-      }
-      .c1 {
-        @apply absolute whitespace-nowrap select-none pointer-events-none;
-        right: size(16);
-        top: size(22);
-        writing-mode: vertical-lr;
-        color: #ceaf73;
-        font-size: size(17);
-        font-weight: 700;
-        letter-spacing: size(1.445);
-        span {
-          @apply relative;
-          margin-top: size(20);
-
-          &::after {
-            @apply bg-[#ceaf73] absolute rotate-[139.76deg];
-            content: "";
-            width: size(17);
-            height: 1px;
-            bottom: 115%;
-            left: 10%;
-          }
-        }
-      }
-      .c2 {
-        @apply absolute whitespace-nowrap select-none pointer-events-none;
-        right: size(42);
-        top: size(22);
-        writing-mode: vertical-lr;
-        color: #fff;
-        font-size: size(30.33);
-        font-weight: 400;
-        letter-spacing: size(5);
-      }
-      .c3 {
-        @apply relative select-none opacity-0 transition-all pointer-events-none;
-        color: #fff;
-        text-align: justify;
-        font-size: size(15);
-        font-weight: 350;
-        line-height: 155.928%;
-        letter-spacing: size(0.9);
-        &::after {
-          @apply absolute;
-          @apply bg-cover bg-no-repeat;
-          @apply left-1/2 -translate-x-1/2;
-          bottom: 120%;
-          content: "";
-          width: size(31);
-          height: size(15);
-          background-image: url("@/section/s7/arror.png");
-        }
-      }
-
-      &.active {
-        .avatar {
-          @apply brightness-100;
-        }
-        .c3 {
-          @apply opacity-100;
-        }
-      }
+      font-size: size(16);
+      font-weight: 400;
     }
   }
 }
@@ -183,87 +44,25 @@
 
 @media screen and (max-width: 767px) {
   .s7 {
-    @apply w-full relative text-white bg-cover;
-    @apply flex flex-col justify-start items-center;
-    height: sizem(674);
-    padding-top: sizem(32);
-    background-image: url("@/section/s7/bgm.webp");
-    gap: sizem(42.6);
+    @apply w-full relative;
+    @apply bg-cover bg-center;
+    height: sizem(762);
+    background-image: url("@/section/s7/bg.jpg");
+    padding-top: sizem(45);
+
     .t {
-      @apply pointer-events-none;
-      @apply relative z-10;
-      @apply flex flex-col-reverse items-center justify-center;
-      gap: sizem(10);
+      @apply text-white text-center;
+      font-family: "Noto Serif TC";
+      padding: 0 sizem(30);
       .t1 {
         font-size: sizem(25);
-        font-weight: 700;
-        letter-spacing:0.115em;
+        font-weight: 600;
+        margin-bottom: sizem(20);
       }
       .t2 {
-        width: sizem(315);
-      }
-    }
-    .swiper-box {
-      width: sizem(316);
-      height: sizem(404.75);
-      .slide-item {
-        @apply relative;
-        width: sizem(316);
-        height: auto;
-        margin-right: sizem(20);
-        .avatar {
-          @apply w-full brightness-100 transition-all;
-          @apply cursor-pointer;
-          height: sizem(404);
-          background-size: 101%;
-          margin-bottom: sizem(15);
-          &:hover {
-            @apply brightness-100;
-          }
-        }
-        .c1 {
-          @apply absolute whitespace-nowrap select-none;
-          right: sizem(8);
-          top: sizem(15);
-          writing-mode: vertical-lr;
-          color: #ceaf73;
-          font-size: sizem(15);
-          font-weight: 700;
-          letter-spacing: 1.5px;
-          span {
-            @apply relative;
-            margin-top: sizem(20);
-
-            &::after {
-              @apply bg-[#ceaf73] absolute rotate-[139.76deg];
-              content: "";
-              width: sizem(17);
-              height: 1px;
-              bottom: 116%;
-              left: 10%;
-            }
-          }
-        }
-        .c2 {
-          @apply absolute whitespace-nowrap select-none;
-          right: sizem(32);
-          top: sizem(15);
-          writing-mode: vertical-lr;
-          color: #fff;
-          font-size: sizem(20);
-          font-weight: 400;
-          letter-spacing: 7px;
-        }
-        .c3 {
-          @apply relative select-none opacity-100 transition-all;
-          font-size: sizem(13);
-          font-weight: 350;
-          line-height: 155.928%;
-          letter-spacing: 0.78px;
-          &::after {
-            @apply hidden;
-          }
-        }
+        @apply text-left;
+        font-size: sizem(13);
+        font-weight: 400;
       }
     }
   }
@@ -273,34 +72,5 @@
 <script setup>
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
-
 const isMobile = computed(() => globals.$isMobile())
-
-const splide = ref()
-const activeIdx = ref(0)
-
-const onMove = (val, val2) => {
-  activeIdx.value = val2
-}
-
-const imgs = [
-  {
-    img: new URL("../section/s7/1.webp", import.meta.url).href,
-    c1: `上境設計 G-Design<span>許富居</span>`,
-    c2: `豪宅欽定，自然詩人`,
-    c3: `力求景觀與環境互相融合為「以綠入景，由景入心」的境界，以人與人互動模式為基礎，以空間詮釋生活的變化表現。`,
-  },
-  {
-    img: new URL("../section/s7/2.webp", import.meta.url).href,
-    c1: `天坊室內設計<span>張清平</span>`,
-    c2: `台灣首位紅點設計獎得主`,
-    c3: `堅持將本土特色融入設計中，實現古代智能現代化，西方設計中國化，中西合併國際化的目標，以當代設計，開創不一樣的心奢華。`,
-  },
-  {
-    img: new URL("../section/s7/3.webp", import.meta.url).href,
-    c1: `永豐建築師事務所<span>呂永豐</span>`,
-    c2: `大師手筆，建築巨擘`,
-    c3: `好的居宅，除了擁有建築華麗的外觀，更重要的是讓居住者開始懂得享受人生，讓建築以柔韌的力量歷經歲月，成為優雅的經典之作。`,
-  },
-]
 </script>

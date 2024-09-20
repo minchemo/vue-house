@@ -1,221 +1,211 @@
 <template>
   <article class="s4">
-    <div class="up">
-      <div class="mo-t" v-if="isMobile">
-        <div class="t1" data-aos="fade-up" data-aos-delay="0">匯七期豐華 禮名人胸襟</div>
-        <img class="en" data-aos="fade-up" data-aos-delay="100" src="@/section/s4/en1.png" alt="" srcset="" />
+    <div class="t">
+      <div class="t1"  data-aos="fade-up" data-aos-delay="0">
+        浮嵐暖翠<br />
+        尋野奢之徑敞開身心
       </div>
-      <div class="map">
-        <Fullview v-if="isMobile" />
-        <div class="caption" v-if="!isMobile">環境空拍參考示意圖</div>
+      <div class="t2"  data-aos="fade-up" data-aos-delay="200">
+        棲居林口最詩意的綠墅，新寮和老公崎步道剛好離家很近，森色的旋律一路吟唱，感知特別敏銳，每一抹色調都饒富層次，桐花、熱帶蕨、溪流與蟬響…一呼一吸之間，貼合大地脈輪，覓得忘卻時間之酣暢。
       </div>
-      <div class="r" v-if="!isMobile">
-        <div class="t">
-          <div class="t1" data-aos="fade-up" data-aos-delay="0">匯七期豐華</div>
-          <img class="en" data-aos="fade-up" data-aos-delay="100" src="@/section/s4/en1.png" alt="" srcset="" />
-          <div class="t1" data-aos="fade-up" data-aos-delay="0">禮名人胸襟</div>
-        </div>
-        <div class="i" data-aos="fade-up" data-aos-delay="0">
-          <div class="caption">南屯捷運站</div>
-        </div>
-      </div>
-    </div>
-    <div class="down">
-      <div class="t">
-        <div class="t1" data-aos="fade-up" data-aos-delay="0">匯快捷樞紐，禮城心之點</div>
-        <div class="t2" data-aos="fade-up" data-aos-delay="100">
-          捷運綠線南屯站x捷運綠線文心森林公園站<br />
-          雙捷站點環伺在旁，日常通勤、出遊，一卡瞬連<br />
-          聰明掌握捷運經濟，如同您對於生活的講究
-        </div>
-        <img class="t3" data-aos="fade-up" data-aos-delay="200" src="@/section/s4/en2.png" alt="" srcset="" />
-      </div>
-
-      <div class="swiper-box relative" data-aos="fade-up" data-aos-delay="0">
-        <Splide
-          ref="splide"
-          class="slide"
-          :options="{
-            drag: isMobile,
-            arrows: false,
-            autoplay: isMobile,
-            pagination: false,
-            interval: 4000,
-            gap: 0,
-            type: 'loop',
-            autoWidth: true,
-          }"
+      <div class="timeline">
+        <div
+          class="item"
+          v-for="(item, i) in imgsLabel"
+          :key="item"
+          :class="{ active: activeImgs === i }"
+          @click="selectImgs(i)"
         >
-          <SplideSlide
-            class="slide-item i"
-            :key="i"
-            v-for="i in imgs"
-            :style="{ 'background-image': `url(${i.img}) !important` }"
-          >
-            <div class="caption">
-              {{ i.caption }}
-            </div>
-          </SplideSlide>
-        </Splide>
-        <div class="mo-arrow" v-if="isMobile">
-          <img
-            class="prev"
-            @click="splide.go('<')"
-            src="@/section/arrow.png"
-            alt=""
-            srcset=""
-          />
-          <img
-            class="next"
-            @click="splide.go('>')"
-            src="@/section/arrow.png"
-            alt=""
-            srcset=""
-          />
+          {{ item }}
         </div>
+        <img v-if="!isMobile" src="@/section/s4/i1.png" alt="" srcset="" />
       </div>
+      <div class="timeline-mask"></div>
+      <img class="tree" src="@/section/s4/i2.png" alt="" srcset="" />
+      <img
+        v-if="isMobile"
+        class="timeline-img"
+        src="@/section/s4/i1.png"
+        alt=""
+        srcset=""
+      />
     </div>
-    <div class="train" data-aos="TRAININ" data-aos-duration="1000"></div>
-    <div
-      class="leaf"
-      data-aos="leafIn"
-      data-aos-duration="3000"
-      v-if="!isMobile"
-    >
-      <img class="leaf1" src="@/section/s4/leaf1.webp" alt="" srcset="" />
-      <img class="leaf2" src="@/section/s4/leaf2.webp" alt="" srcset="" />
-      <img class="leaf3" src="@/section/s4/leaf3.webp" alt="" srcset="" />
-      <img class="leaf4" src="@/section/s4/leaf4.webp" alt="" srcset="" />
-    </div>
-    <div class="mo-leaf" data-aos="leafIn" data-aos-duration="2000" v-else>
-      <img class="leaf1" src="@/section/s4/mleaf1.webp" alt="" srcset="" />
-      <img class="leaf2" src="@/section/s4/mleaf2.webp" alt="" srcset="" />
-      <img class="leaf3" src="@/section/s4/mleaf3.webp" alt="" srcset="" />
+    <div class="swiper-box">
+      <Splide
+        ref="splide"
+        class="slide"
+        :key="activeImgs"
+        :options="{
+          arrows: false,
+          autoplay: true,
+          pagination: false,
+          interval: 4000,
+          gap: 0,
+          type: 'loop',
+          autoWidth: true,
+        }"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="(img, i) in imgs[activeImgs].imgs"
+          :style="{ 'background-image': `url(${img})` }"
+        >
+          <div class="caption">
+            {{ imgs[activeImgs].caption[i] }}
+          </div>
+        </SplideSlide>
+      </Splide>
+      <div class="mo-arrow" v-if="isMobile">
+        <img
+          class="prev"
+          @click="splide.go('<')"
+          src="@/section/arrow2.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          class="next"
+          @click="splide.go('>')"
+          src="@/section/arrow2.png"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="arrow" v-else>
+        <img
+          class="prev"
+          @click="splide.go('<')"
+          src="@/section/arrow.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          class="next"
+          @click="splide.go('>')"
+          src="@/section/arrow.png"
+          alt=""
+          srcset=""
+        />
+      </div>
     </div>
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
-
 .s4 {
-  @apply w-full relative text-[#034150] z-10;
-  height: size(1706);
-  padding-right: size(60);
-  padding-top: size(48);
-  .i {
-    @apply relative bg-cover;
-    width: size(472);
-    height: size(376);
-    &:nth-child(2) {
-      background-image: url("@/section/s4/1.webp");
-    }
-  }
+  @apply w-full relative bg-[#fff] font-['Noto_Serif_TC'];
+  @apply flex justify-end;
+  height: size(1080);
+  gap: size(57);
 
-  .caption {
-    @apply absolute text-white;
-    font-size: size(14);
-    font-weight: 400;
-    letter-spacing: size(0.84);
-    right: size(20);
-    bottom: size(20);
-  }
-
-  .up {
-    @apply flex items-end justify-end;
-    gap: size(22);
-    margin-bottom: size(15);
-    .map {
-      @apply relative;
-      width: size(1309);
-      height: size(1170);
-      background-image: url("@/section/s4/map.webp");
-      background-size: cover;
+  .t {
+    width: size(324);
+    padding-top: size(217);
+    .t1 {
+      color: #8fc31f;
+      font-size: size(36);
+      font-weight: 600;
+      margin-bottom: size(33);
     }
-    .r {
-      .t {
-        margin-bottom: size(314);
-        padding-left: size(10);
-        .t1 {
-          font-size: size(48);
+    .t2 {
+      color: #000;
+      font-size: size(16);
+      font-weight: 400;
+    }
+    .timeline {
+      @apply font-['noto_sans_tc'] relative;
+      margin-top: size(90);
+      .item {
+        @apply transition-all relative text-right cursor-pointer;
+        @apply hover:font-bold;
+        color: #8fc31f;
+        font-size: size(18);
+        font-weight: 400;
+        padding-right: size(39);
+        margin-bottom: size(31);
+        &.active {
+          font-size: size(20);
           font-weight: 700;
-          letter-spacing: size(2.88);
+          &:after {
+            opacity: 100%;
+          }
         }
-        .en {
-          width: size(450.86);
-          margin: size(8) 0;
+        &:after {
+          @apply absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-[#8FC31F] transition-all;
+          content: "";
+          width: size(25);
+          height: size(25);
+          opacity: 0;
+        }
+      }
+      img {
+        @apply absolute z-10;
+        right: -#{size(10)};
+        width: size(171);
+      }
+      &:after {
+        @apply absolute bg-[#8FC31F];
+        content: "";
+        height: size(410);
+        width: 1px;
+        right: size(12.5);
+        top: -#{size(50)};
+      }
+    }
+    .tree {
+      @apply absolute;
+      width: size(296);
+      left: size(33);
+      bottom: size(135);
+      animation: a2 3s ease-in-out infinite alternate-reverse;
+      transform-origin: bottom center;
+
+      @keyframes a2 {
+        from {
+          transform: skewX(-1deg);
+        }
+        to {
+          transform: skewX(6deg);
         }
       }
     }
   }
 
-  .down {
-    @apply flex items-end justify-end;
-    gap: size(72);
-    .t {
-      .t1 {
-        font-size: size(48);
-        font-weight: 700;
-        letter-spacing: size(2.88);
-      }
-      .t2 {
+  .swiper-box {
+    width: size(1320);
+    height: size(1080);
+    @apply relative;
+    .slide-item {
+      @apply relative bg-cover h-full;
+      width: size(1320);
+      height: size(1080);
+      margin-right: size(5);
+      .caption {
+        @apply absolute;
+        right: size(20);
+        bottom: size(20);
+        color: #fff;
+        font-family: "Noto Sans TC";
         font-size: size(15);
         font-weight: 400;
-        letter-spacing: size(0.9);
-        margin-top: size(23);
-      }
-      .t3 {
-        width: size(605.2);
-        margin-top: size(23);
       }
     }
+    .arrow {
+      @apply absolute z-20 w-full top-1/2 -translate-y-1/2;
+      @apply flex justify-between;
+      @apply pointer-events-none;
+      padding: 0 size(43);
 
-    .swiper-box {
-      width: size(966);
-      .slide-item {
-        @apply relative;
-        width: size(472);
-        height: size(376);
-        margin-right: size(22);
+      img {
+        @apply pointer-events-auto;
+        @apply cursor-pointer;
+        width: size(45);
+        &:last-child {
+          transform: scaleX(-1);
+        }
       }
-    }
-  }
-
-  .train {
-    @apply bg-cover;
-    @apply absolute;
-    width: size(898);
-    height: size(598);
-    background-image: url("@/section/s4/train.webp");
-    bottom: size(280);
-    left: -#{size(163)};
-    ////// 動畫位置調整 assets/style/custom-aos.css > TRAININ
-  }
-
-  .leaf {
-    @apply absolute w-full h-full top-0 left-0 pointer-events-none;
-    .leaf1 {
-      left: 0;
-      bottom: 0;
-      width: size(245);
-    }
-    .leaf2 {
-      left: size(232);
-      bottom: -#{size(100)};
-      width: size(286);
-    }
-    .leaf3 {
-      left: size(1381);
-      bottom: -#{size(70)};
-      width: size(185);
-    }
-    .leaf4 {
-      left: size(1625);
-      bottom: -#{size(250)};
-      width: size(182);
-    }
-    img {
-      @apply absolute;
     }
   }
 }
@@ -227,115 +217,120 @@
 
 @media screen and (max-width: 767px) {
   .s4 {
-    @apply w-full relative text-[#034150];
-    height: sizem(1376);
-    padding-right: 0;
-    padding-top: sizem(57);
-    .i {
-      @apply relative bg-cover;
-      width: size(472);
-      height: size(376);
-      &:nth-child(2) {
-        background-image: url("@/section/s4/1.webp");
-      }
-    }
+    @apply w-full relative bg-[#fff] font-['Noto_Serif_TC'];
+    @apply flex flex-col items-center justify-start;
+    height: sizem(667);
+    gap: sizem(10);
+    padding-top: sizem(46);
 
-    .caption {
-      @apply absolute text-white;
-      font-size: sizem(12);
-      font-weight: 400;
-      letter-spacing: 1.5px;
-      right: sizem(10);
-      bottom: sizem(10);
-    }
-
-    .up {
-      @apply flex flex-col items-center justify-center;
-      gap: sizem(25.82);
-      margin-bottom: sizem(37);
-      .mo-t {
-        @apply flex flex-col items-center justify-center;
-        gap: sizem(10);
-        .t1 {
-          color: #034150;
-          font-size: sizem(25);
-          font-weight: 700;
-          letter-spacing: 1.5px;
-        }
-        .en {
-          width: sizem(271);
-        }
+    .t {
+      @apply relative;
+      width: 100%;
+      padding-top: 0;
+      .t1 {
+        font-size: sizem(25);
+        margin-bottom: sizem(24);
+        padding: 0 sizem(30);
       }
-      .map {
-        @apply relative;
-        width: sizem(375);
-        height: sizem(667);
-      //  background-image: url("@/section/s4/map.webp");
+      .t2 {
+        color: #000;
+        font-size: sizem(13);
+        font-weight: 400;
+        padding: 0 sizem(30);
       }
-    }
-
-    .down {
-      @apply flex flex-col items-center justify-center;
-      @apply text-center;
-      gap: sizem(9.6);
-      .t {
-        .t1 {
-          font-size: sizem(25);
-          font-weight: 700;
-          letter-spacing: 1.5px;
-        }
-        .t2 {
-          font-size: sizem(13);
+      .timeline {
+        @apply flex relative;
+        @apply overflow-x-scroll;
+        margin-top: sizem(85);
+        padding-left: sizem(145);
+        .item {
+          @apply transition-all relative text-right cursor-pointer;
+          @apply hover:font-bold whitespace-nowrap;
+          color: #8fc31f;
+          font-size: sizem(15);
           font-weight: 400;
-          letter-spacing: 0.78px;
-          margin-top: sizem(14);
+          padding-right: 0;
+          margin-bottom: sizem(31);
+          margin-right: sizem(106);
+          &.active {
+            font-size: sizem(15);
+            font-weight: 700;
+            &:after {
+              opacity: 100%;
+            }
+          }
+          &:after {
+            @apply absolute left-0 right-[unset] top-[unset] -translate-y-0 rounded-full bg-[#8FC31F] transition-all;
+            content: "";
+            width: sizem(13);
+            height: sizem(13);
+            opacity: 100%;
+            bottom: -#{sizem(18)};
+          }
         }
-        .t3 {
-          width: sizem(312);
-          margin-top: sizem(23);
+        &:after {
+          @apply absolute bg-[#8FC31F];
+          content: "";
+          height: 1px;
+          width: 300%;
+          left: 0;
+          top: unset;
+          bottom: sizem(20);
         }
       }
 
-      .swiper-box {
-        width: sizem(315);
-        .slide-item {
-          @apply relative;
-          width: sizem(315);
-          height: sizem(250.93);
-          margin-right: sizem(22);
-        }
+      .timeline-img {
+        @apply absolute z-10 pointer-events-none;
+        left: sizem(11);
+        width: sizem(112);
+        bottom: sizem(12);
       }
-    }
-
-    .train {
-      @apply bg-cover pointer-events-none;
-      @apply absolute;
-      width: sizem(371);
-      height: sizem(247);
-      background-image: url("@/section/s4/train.webp");
-      bottom: sizem(15);
-      left: -#{sizem(138)};
-      ////// 動畫位置調整 assets/style/custom-aos.css > TRAININ
-    }
-    .mo-leaf {
-      @apply absolute w-full h-full top-0 left-0 pointer-events-none;
-      .leaf1 {
-        left: sizem(155);
-        bottom: sizem(100);
-        width: sizem(69.5);
+      .timeline-mask {
+        @apply w-[40%] pointer-events-none;
+        @apply absolute right-0 bottom-0;
+        height: sizem(80);
+        background: linear-gradient(
+          270deg,
+          #fff 0%,
+          rgba(255, 255, 255, 0) 50%
+        );
       }
-      .leaf2 {
-        left: sizem(225);
-        bottom: sizem(50);
-        width: sizem(51);
-      }
-      .leaf3 {
-        left: sizem(12);
-        bottom: -#{sizem(20)};
-        width: sizem(50.5);
-      }
-      img {
+      .tree {
         @apply absolute;
+        width: sizem(95);
+        left: sizem(268);
+        bottom: unset;
+        top: -#{sizem(35)};
+        animation: a2 3s ease-in-out infinite alternate-reverse;
+        transform-origin: bottom center;
+
+        @keyframes a2 {
+          from {
+            transform: skewX(-1deg);
+          }
+          to {
+            transform: skewX(6deg);
+          }
+        }
+      }
+    }
+
+    .swiper-box {
+      width: sizem(375);
+      height: sizem(306.82);
+      @apply relative;
+      .slide-item {
+        @apply relative bg-cover h-full;
+        width: sizem(375);
+        height: sizem(306.82);
+        margin-right: sizem(5);
+        .caption {
+          @apply absolute;
+          right: sizem(15);
+          bottom: sizem(20);
+          font-size: sizem(12);
+          font-weight: 400;
+        }
       }
     }
   }
@@ -344,35 +339,62 @@
 
 <script setup>
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
-import Fullview from "../components/fullview.vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
-
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
-const imgs = globals.$isMobile()
-  ? [
-      {
-        img: new URL("../section/s4/1.webp", import.meta.url).href,
-        caption: "南屯捷運站",
-      },
-      {
-        img: new URL("../section/s4/2.webp", import.meta.url).href,
-        caption: "南屯捷運站",
-      },
-      {
-        img: new URL("../section/s4/3.webp", import.meta.url).href,
-        caption: "南屯捷運站",
-      },
-    ]
-  : [
-      {
-        img: new URL("../section/s4/2.webp", import.meta.url).href,
-        caption: "南屯捷運站",
-      },
-      {
-        img: new URL("../section/s4/3.webp", import.meta.url).href,
-        caption: "南屯捷運站",
-      },
-    ]
+
+const activeImgs = ref(0)
+const imgsLabel = [
+  "足夢運動公園",
+  "林口仁愛公園",
+  "林口社區運動公園",
+  "老公崎步道",
+  "新林步道",
+]
+const activeIdx = ref(0)
+const onMove = (val, val2) => {
+  activeIdx.value = val2
+}
+
+const selectImgs = (imgs) => {
+  activeImgs.value = imgs
+  splide.value.go(1)
+}
+
+const imgs = [
+  {
+    imgs: [
+      new URL("../section/s4/a1.jpg", import.meta.url).href,
+      new URL("../section/s4/a2.jpg", import.meta.url).href,
+      new URL("../section/s4/a3.jpg", import.meta.url).href,
+    ],
+    caption: ["足夢運動公園", "足夢運動公園", "足夢運動公園"],
+  },
+  {
+    imgs: [
+      new URL("../section/s4/b1.jpg", import.meta.url).href,
+      new URL("../section/s4/b2.jpg", import.meta.url).href,
+    ],
+    caption: ["林口仁愛公園", "林口仁愛公園"],
+  },
+  {
+    imgs: [
+      new URL("../section/s4/c1.jpg", import.meta.url).href,
+      new URL("../section/s4/c2.jpg", import.meta.url).href,
+    ],
+    caption: ["林口社區運動公園", "林口社區運動公園"],
+  },
+  {
+    imgs: [
+      new URL("../section/s4/d1.jpg", import.meta.url).href,
+      new URL("../section/s4/d2.jpg", import.meta.url).href,
+    ],
+    caption: ["老公崎步道", "老公崎步道"],
+  },
+  {
+    imgs: [new URL("../section/s4/e1.jpg", import.meta.url).href],
+    caption: ["新林步道"],
+  },
+]
 </script>
