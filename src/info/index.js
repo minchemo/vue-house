@@ -8,12 +8,12 @@ export default {
   },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市西屯區市政路10號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.4442108791386!2d120.64352467571972!3d24.156149273077798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d939f7b250b%3A0x978bc5bc4f3ede49!2zNDA35Y-w5Lit5biC6KW_5bGv5Y2A5biC5pS_6LevMTDomZ8!5e0!3m2!1szh-TW!2stw!4v1713772329889!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/ikSpJr5b4uUZd96P6",
-    phone: "04-2258-0988",
-    fbLink: "https://www.facebook.com/61556823341836/",
-    fbMessage: "https://m.me/61556823341836/",
+    address: "新北市林口區文化二路二段60號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d319.4039860888177!2d121.37767826797482!3d25.080066366496027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a6e7e572c369%3A0x8028d3b6800b1a1b!2zMjQ05paw5YyX5biC5p6X5Y-j5Y2A5paH5YyW5LqM6Lev5LqM5q61NjDomZ8!5e0!3m2!1szh-TW!2stw!4v1726813097945!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/76GcShMYFqgQCvB76",
+    phone: "02-26022345",
+    fbLink: "https://www.facebook.com/61560974341225/",
+    fbMessage: "https://m.me/61560974341225/",
     caseName: caseName,
   houseInfos: [
     ["投資興建", "興富謙建設股份有限公司"],
@@ -26,7 +26,7 @@ export default {
     ["建照號碼", "112林建字00159號"],
     ["經  紀  人", "鍾佩儒(108)桃市經字第001714號"],
   ],
-  gtmCode: ["GTM-PRNDKDGX"], // 可放置多個
+  gtmCode: ["GTM-5TGPZ8R5"], // 可放置多個
   recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -37,8 +37,8 @@ export default {
     subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
   },
   //底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房","四房","其他"],
-    budget: ["1500-2000萬","2001-3000萬","3001-4000萬","4001-5000萬","5000萬以上"],
+    room_type: [],
+    budget: [],
   navList: [
     {
       name: "金質品牌",

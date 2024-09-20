@@ -56,8 +56,8 @@
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
 
-          <label class="row" v-if="info.room_type"
-            ><span>需求房型<span>(必填)</span></span>
+          <!--label class="row" v-if="info.room_type"
+            ><span>需求房型</span>
             <select
               class="select w-full rounded-none"
               v-model="formData.room_type"
@@ -69,9 +69,9 @@
                 v-text="room"
                 :key="room"
               ></option></select
-          ></label>
-          <label class="row" v-if="info.budget.length > 0"
-            ><span>購屋預算<span>(必填)</span></span>
+          ></label-->
+          <!--label class="row" v-if="info.budget.length > 0"
+            ><span>購屋預算</span>
             <select
               class="select w-full rounded-none bg-white"
               v-model="formData.budget"
@@ -84,9 +84,9 @@
                 :key="budget"
               ></option>
             </select>
-          </label>
+          </label-->
           <label class="row"
-            ><span>居住縣市<span>(必填)</span></span>
+            ><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
@@ -95,7 +95,7 @@
             </select></label
           >
           <label class="row"
-            ><span>居住地區<span>(必填)</span></span>
+            ><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
@@ -273,7 +273,7 @@
         text-align: left;
         padding-left: 1em;
         > span {
-          color: #fff000;
+          color: #ff0000;
           font-size: 12px;
         }
       }

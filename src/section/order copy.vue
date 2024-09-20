@@ -301,7 +301,7 @@ background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 
         text-align: left;
         padding-left: 1em;
         > span {
-          color: #FFF000;
+          color: #FF0000;
           font-size: 12px;
         }
       }
