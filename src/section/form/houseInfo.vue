@@ -127,6 +127,10 @@
       width: 80%;
     }
   }
+  .banner-m{
+    background: #231815;
+    width: 100%;
+  }
 
   .info-box {
     width: sizem(275);
