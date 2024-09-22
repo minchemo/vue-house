@@ -1,16 +1,17 @@
 <template>
   <article class="s4">
     <div class="t">
-      <div class="t1"  data-aos="fade-up" data-aos-delay="0">
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
         浮嵐暖翠<br />
         尋野奢之徑敞開身心
       </div>
-      <div class="t2"  data-aos="fade-up" data-aos-delay="200">
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
         棲居林口最詩意的綠墅，新寮和老公崎步道剛好離家很近，森色的旋律一路吟唱，感知特別敏銳，每一抹色調都饒富層次，桐花、熱帶蕨、溪流與蟬響…一呼一吸之間，貼合大地脈輪，覓得忘卻時間之酣暢。
       </div>
       <div class="timeline">
         <div
           class="item"
+          :data-name="imgsLabel[i]"
           v-for="(item, i) in imgsLabel"
           :key="item"
           :class="{ active: activeImgs === i }"
@@ -44,6 +45,7 @@
           type: 'loop',
           autoWidth: true,
         }"
+        @splide:move="onMove"
       >
         <SplideSlide
           class="slide-item"
@@ -355,6 +357,25 @@ const imgsLabel = [
 const activeIdx = ref(0)
 const onMove = (val, val2) => {
   activeIdx.value = val2
+
+  if (val2 == 0) {
+    if (activeImgs.value + 1 == imgs.length) {
+      activeImgs.value = 0
+    } else {
+      activeImgs.value++
+    }
+    splide.value.go(0)
+
+    const timelineTarget = document.querySelector(
+      '.item[data-name="' + imgsLabel[activeImgs.value] + '"]'
+    )
+
+    timelineTarget.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    })
+  }
 }
 
 const selectImgs = (imgs) => {
@@ -393,8 +414,11 @@ const imgs = [
     caption: ["老公崎步道", "老公崎步道"],
   },
   {
-    imgs: [new URL("../section/s4/e1.jpg", import.meta.url).href],
-    caption: ["新林步道"],
+    imgs: [
+      new URL("../section/s4/e1.jpg", import.meta.url).href,
+      new URL("../section/s4/e1.jpg", import.meta.url).href,
+    ],
+    caption: ["新林步道", "新林步道"],
   },
 ]
 </script>
