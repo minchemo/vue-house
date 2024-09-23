@@ -31,7 +31,7 @@
         srcset=""
       />
     </div>
-    <div class="swiper-box">
+    <div class="swiper-box" ref="swiperBoxRef">
       <Splide
         ref="splide"
         class="slide"
@@ -345,6 +345,7 @@ const globals = getCurrentInstance().appContext.config.globalProperties
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
+const swiperBoxRef = ref()
 
 const activeImgs = ref(0)
 const imgsLabel = [
@@ -358,6 +359,17 @@ const activeIdx = ref(0)
 const onMove = (val, val2) => {
   activeIdx.value = val2
 
+  const isInViewport = (element) => {
+    const rect = element.getBoundingClientRect()
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  }
+
   if (val2 == 0) {
     if (activeImgs.value + 1 == imgs.length) {
       activeImgs.value = 0
@@ -366,15 +378,18 @@ const onMove = (val, val2) => {
     }
     splide.value.go(0)
 
-    const timelineTarget = document.querySelector(
-      '.item[data-name="' + imgsLabel[activeImgs.value] + '"]'
-    )
-
-    timelineTarget.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    })
+    if (isMobile.value) {
+      if (isInViewport(swiperBoxRef.value)) {
+        const timelineTarget = document.querySelector(
+          '.item[data-name="' + imgsLabel[activeImgs.value] + '"]'
+        )
+        timelineTarget.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        })
+      }
+    }
   }
 }
 
