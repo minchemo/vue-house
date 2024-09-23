@@ -1,12 +1,12 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <img class="tree1" v-if="!isMobile" src="@/section/order-tree.png" alt="" srcset="" />
-      <img class="tree1" v-else src="@/section/order-treem.png" alt="" srcset="" />
-      <img class="tree2"  v-if="!isMobile"  src="@/section/order-tree2.png" alt="" srcset="" />
+      <img class="tree1" v-if="!isMobile" src="@/section/order-tree.webp" alt="" srcset="" />
+      <img class="tree1" v-else src="@/section/order-treem.webp" alt="" srcset="" />
+      <img class="tree2"  v-if="!isMobile"  src="@/section/order-tree2.webp" alt="" srcset="" />
       <img
         class="logo"
-        src="@/section/logo.png"
+        src="@/section/logo.webp"
         alt=""
         srcset=""
       /><!-- Title -->

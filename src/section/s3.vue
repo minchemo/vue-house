@@ -1,10 +1,10 @@
 <template>
   <article class="s3">
     <div class="imgs">
-      <img class="tree1" v-if="!isMobile" src="@/section/s3/tree1.png" alt="" srcset="" />
-      <img class="tree1" v-else src="@/section/s3/tree1m.png" alt="" srcset="" />
-      <img class="tree2" v-if="!isMobile" src="@/section/s3/tree2.png" alt="" srcset="" />
-      <img class="tree2" v-else src="@/section/s3/tree2m.png" alt="" srcset="" />
+      <img class="tree1" v-if="!isMobile" src="@/section/s3/tree1.webp" alt="" srcset="" />
+      <img class="tree1" v-else src="@/section/s3/tree1m.webp" alt="" srcset="" />
+      <img class="tree2" v-if="!isMobile" src="@/section/s3/tree2.webp" alt="" srcset="" />
+      <img class="tree2" v-else src="@/section/s3/tree2m.webp" alt="" srcset="" />
       <img class="cloud1" src="@/section/s3/i1.png" alt="" srcset="" />
       <img class="cloud2" src="@/section/s3/i1.png" alt="" srcset="" />
       <img class="airplane" src="@/section/s3/i2.png" alt="" srcset="" />
@@ -635,37 +635,37 @@ const onMove2 = (val, val2) => {
 
 const imgs = [
   {
-    img: new URL("../section/s3/1.jpg", import.meta.url).href,
+    img: new URL("../section/s3/1.webp", import.meta.url).href,
     caption: "",
   },
   {
-    img: new URL("../section/s3/2.jpg", import.meta.url).href,
+    img: new URL("../section/s3/2.webp", import.meta.url).href,
     caption: "",
   },
   {
-    img: new URL("../section/s3/3.jpg", import.meta.url).href,
+    img: new URL("../section/s3/3.webp", import.meta.url).href,
     caption: "",
   },
 ]
 
 const imgs2 = [
   {
-    img: new URL("../section/s3/a1.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a1.webp", import.meta.url).href,
     caption: "三井OUTLET",
     thumbnailsLabel: "三井<br>OUTLET",
   },
   {
-    img: new URL("../section/s3/a2.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a2.webp", import.meta.url).href,
     caption: "中正藝術商街",
     thumbnailsLabel: "中正<br>藝術商街",
   },
   {
-    img: new URL("../section/s3/a3.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a3.webp", import.meta.url).href,
     caption: "夜市",
     thumbnailsLabel: "林口<br>在地夜市",
   },
   {
-    img: new URL("../section/s3/a4.jpg", import.meta.url).href,
+    img: new URL("../section/s3/a4.webp", import.meta.url).href,
     caption: "林口昕境廣場",
     thumbnailsLabel: "林口<br>昕境廣場",
   },

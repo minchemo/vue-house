@@ -14,11 +14,11 @@
     <img
       class="tree"
       v-if="!isMobile"
-      src="@/section/s6/tree.png"
+      src="@/section/s6/tree.webp"
       alt=""
       srcset=""
     />
-    <img class="tree" v-else src="@/section/s6/treem.png" alt="" srcset="" />
+    <img class="tree" v-else src="@/section/s6/treem.webp" alt="" srcset="" />
   </article>
 </template>
 

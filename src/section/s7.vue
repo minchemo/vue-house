@@ -19,7 +19,7 @@
   @apply w-full relative;
   @apply bg-cover bg-center;
   height: size(1183);
-  background-image: url("@/section/s7/bg.jpg");
+  background-image: url("@/section/s7/bg.webp");
   padding-top: size(155);
 
   .t {
