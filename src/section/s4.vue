@@ -386,37 +386,37 @@ const selectImgs = (imgs) => {
 const imgs = [
   {
     imgs: [
-      new URL("../section/s4/a1.jpg", import.meta.url).href,
-      new URL("../section/s4/a2.jpg", import.meta.url).href,
-      new URL("../section/s4/a3.jpg", import.meta.url).href,
+      new URL("../section/s4/a1.webp", import.meta.url).href,
+      new URL("../section/s4/a2.webp", import.meta.url).href,
+      new URL("../section/s4/a3.webp", import.meta.url).href,
     ],
     caption: ["足夢運動公園", "足夢運動公園", "足夢運動公園"],
   },
   {
     imgs: [
-      new URL("../section/s4/b1.jpg", import.meta.url).href,
-      new URL("../section/s4/b2.jpg", import.meta.url).href,
+      new URL("../section/s4/b1.webp", import.meta.url).href,
+      new URL("../section/s4/b2.webp", import.meta.url).href,
     ],
     caption: ["林口仁愛公園", "林口仁愛公園"],
   },
   {
     imgs: [
-      new URL("../section/s4/c1.jpg", import.meta.url).href,
-      new URL("../section/s4/c2.jpg", import.meta.url).href,
+      new URL("../section/s4/c1.webp", import.meta.url).href,
+      new URL("../section/s4/c2.webp", import.meta.url).href,
     ],
     caption: ["林口社區運動公園", "林口社區運動公園"],
   },
   {
     imgs: [
-      new URL("../section/s4/d1.jpg", import.meta.url).href,
-      new URL("../section/s4/d2.jpg", import.meta.url).href,
+      new URL("../section/s4/d1.webp", import.meta.url).href,
+      new URL("../section/s4/d2.webp", import.meta.url).href,
     ],
     caption: ["老公崎步道", "老公崎步道"],
   },
   {
     imgs: [
-      new URL("../section/s4/e1.jpg", import.meta.url).href,
-      new URL("../section/s4/e1.jpg", import.meta.url).href,
+      new URL("../section/s4/e1.webp", import.meta.url).href,
+      new URL("../section/s4/e1.webp", import.meta.url).href,
     ],
     caption: ["新林步道", "新林步道"],
   },

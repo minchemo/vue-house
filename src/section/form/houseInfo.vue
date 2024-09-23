@@ -2,7 +2,7 @@
   <div
     class="houseinfo md:flex md:items-center md:justify-between bg-[#8FC31F]"
   >
-    <img class="logo" src="@/section/logo2.png" />
+    <img class="logo" src="@/section/logo2.webp" />
     <div
       class="info-box"
       data-aos="fade-up"
@@ -11,7 +11,7 @@
     >
       <div class="title">
         建案資訊
-        <img src="@/section/houseInfoTitle.png" alt="" srcset="" />
+        <img src="@/section/houseInfoTitle.webp" alt="" srcset="" />
       </div>
       <div class="info-items">
         <div
@@ -26,14 +26,14 @@
     <img
       class="tree"
       v-if="!isMobile"
-      src="@/section/houseInfoTree.png"
+      src="@/section/houseInfoTree.webp"
       alt=""
       srcset=""
     />
     <img
       class="tree"
       v-else
-      src="@/section/houseInfoTreem.png"
+      src="@/section/houseInfoTreem.webp"
       alt=""
       srcset=""
     />

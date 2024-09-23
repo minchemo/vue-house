@@ -2,19 +2,19 @@
   <article class="s5">
     <div class="grids" v-if="!isMobile">
       <div class="item">
-        <img src="@/section/s5/1.jpg" alt="" srcset="" />
+        <img src="@/section/s5/1.webp" alt="" srcset="" />
         <div class="caption">夏恩國際幼兒園</div>
       </div>
       <div class="item">
-        <img src="@/section/s5/2.jpg" alt="" srcset="" />
+        <img src="@/section/s5/2.webp" alt="" srcset="" />
         <div class="caption">師範大學</div>
       </div>
       <div class="item">
-        <img src="@/section/s5/3.jpg" alt="" srcset="" />
+        <img src="@/section/s5/3.webp" alt="" srcset="" />
         <div class="caption">康橋國際學校林口校區</div>
       </div>
       <div class="item">
-        <img src="@/section/s5/4.jpg" alt="" srcset="" />
+        <img src="@/section/s5/4.webp" alt="" srcset="" />
         <div class="caption">新北市馬禮遜美國學校</div>
       </div>
     </div>
@@ -257,23 +257,23 @@ const selectImgs = (imgs) => {
 
 const imgs = [
   {
-    imgs: new URL("../section/s5/1.jpg", import.meta.url).href,
+    imgs: new URL("../section/s5/1.webp", import.meta.url).href,
     caption: "夏恩國際幼兒園",
   },
   {
-    imgs: new URL("../section/s5/2.jpg", import.meta.url).href,
+    imgs: new URL("../section/s5/2.webp", import.meta.url).href,
     caption: "師範大學",
   },
   {
-    imgs: new URL("../section/s5/3.jpg", import.meta.url).href,
+    imgs: new URL("../section/s5/3.webp", import.meta.url).href,
     caption: "康橋國際學校林口校區",
   },
   {
-    imgs: new URL("../section/s5/4.jpg", import.meta.url).href,
+    imgs: new URL("../section/s5/4.webp", import.meta.url).href,
     caption: "新北市馬禮遜美國學校",
   },
   {
-    imgs: new URL("../section/s5/5.jpg", import.meta.url).href,
+    imgs: new URL("../section/s5/5.webp", import.meta.url).href,
     caption: "AAIA 新北美國學校",
   },
 ]
