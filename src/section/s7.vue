@@ -139,6 +139,9 @@ background: #6A3F12;
       height: sizem(250);
       
     }
+    .caption{
+     font-size:sizem(11); 
+    }
   }
   }
 }
