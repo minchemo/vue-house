@@ -12,8 +12,70 @@
  -->
       <!-- Custom Image -->
 
+      <!-- Form -->
+      <div class="form mx-auto relative flex justify-center">
+        <div class="left h-full flex flex-col justify-between items-center">
+          <label class="row"><span>姓名<span v-if="!bypass.includes('name')">(必填)</span></span>
+          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+            @input="(event) => (formData.name = event.target.value)" /></label>
+            <label class="row"><span>手機<span v-if="!bypass.includes('phone')">(必填)</span></span>
+              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+            @input="(event) => (formData.phone = event.target.value)" /></label>
 
+          <label class="row" v-if="info.room_type"><span>需求房型<span v-if="!bypass.includes('room_type')">(必填)</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
+            <option value="" selected disabled>請選擇房型</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
+          </select></label>
+          <label class="row" v-if="info.budget"><span>購屋預算<span v-if="!bypass.includes('budget')">(必填)</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇預算</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
+          </select>
+        </label>
+          <label class="row"><span>居住縣市<span v-if="!bypass.includes('city')">(必填)</span></span>
+          <select class="select w-full rounded-none" v-model="formData.city">
+            <option value="" selected disabled>請選擇縣市</option>
+            <option v-for="city in cityList" :value="city.value" :key="city">
+              {{ city.label }}
+            </option>
+          </select></label>
+          <label class="row"><span>居住地區<span v-if="!bypass.includes('area')">(必填)</span></span>
+          <select class="select w-full rounded-none" v-model="formData.area">
+            <option value="" selected disabled>請先選擇縣市</option>
+            <option v-for="area in areaList" :value="area.value" :key="area">
+              {{ area.label }}
+            </option>
+          </select></label>
+        </div>
+        <div class="right">
+          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
+            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
+        </div>
+      </div>
 
+      <!-- Policy -->
+      <div class="flex gap-2 items-center justify-center control">
+        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md" />
+        <p class="text-[#fff]">
+          本人知悉並同意<label for="policy-modal"
+            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        </p>
+      </div>
+      <Policy />
+
+      <!-- Recaptcha -->
+      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+
+      <!-- Send -->
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+        {{ sending? '發送中..': '送出表單' }}
+      </div>
+
+      <!-- Contact Info -->
+      <ContactInfo />
     </div>
 
 
@@ -34,8 +96,7 @@
   position: relative;
  // padding-top: size(406);
    overflow: hidden;
-   margin-bottom: size(50);
-   //min-height: size(500);
+    min-height: size(500);
    // background: linear-gradient(180deg, #418DBD 0%, #000A39 100%);
 
   .bg-image {
@@ -178,11 +239,10 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    //min-height: sizem(800);
+    min-height: sizem(800);
     position: relative;
     // overflow: hidden;
    // padding-top: sizem(200);
-   margin-bottom: sizem(30);
 
     .bg-image {
       position: absolute;
