@@ -208,6 +208,34 @@ const imgs = [
     img:new URL("./s7/09.webp", import.meta.url).href ,
     caption: "都廳苑"
   },
+  {
+    img:new URL("./s7/10.webp", import.meta.url).href ,
+    caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
+  },
+  {
+    img:new URL("./s7/11.webp", import.meta.url).href ,
+    caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
+  },
+  {
+    img:new URL("./s7/12.webp", import.meta.url).href ,
+    caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
+  },
+  {
+    img:new URL("./s7/13.webp", import.meta.url).href ,
+    caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
+  },
+  {
+    img:new URL("./s7/14.webp", import.meta.url).href ,
+    caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
+  },
+  {
+    img:new URL("./s7/15.webp", import.meta.url).href ,
+    caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
+  },
+  {
+    img:new URL("./s7/16.webp", import.meta.url).href ,
+    caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
+  },
 ]
 </script>
 
