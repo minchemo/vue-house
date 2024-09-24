@@ -4,7 +4,7 @@
        <img src="./s1/img.webp" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0">
        <img src="./s1/txt.svg" class="txt absolute" alt="txt" data-aos="zoom-in" data-aos-delay="200">
 	   <a href="https://www.facebook.com/61562881595995/" target="_blank">
-       <svg viewBox="0 0 470 39" fill="#FFF" xmlns="http://www.w3.org/2000/svg" class="reser absolute" data-aos="zoom-in" data-aos-delay="400">
+       <svg viewBox="0 0 470 39" fill="#FFF" xmlns="http://www.w3.org/2000/svg" class="reser absolute" data-aos="zoom-in" data-aos-delay="400" @click="scrollTo('.order')">
 <path class="ann" d="M449.1,10V0.7L470,10"/>
 <path d="M190.3,10V7h259.3v3"/>
 <path d="M38.2,34.6v1.3H0.3v-1.3h12.6c-1.4-8-3.1-15.6-5.2-22.8H2.2v-1.3h16.7c-0.7-2.4-1.6-4.5-2.5-6.4l1.5-0.2
@@ -88,7 +88,7 @@ mix-blend-mode: multiply;}
  // .gif{width:100%;height:70%;left: 0;}
 
   .s1 {
-    //height: calc(100vh - 63px);
+    height: calc(100vh - 63px);
     min-height: sizem(604);
     max-height: sizem(750);
     font-size:sizem(15);

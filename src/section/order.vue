@@ -1,5 +1,6 @@
 <template>
   <div id="order" class="order relative text-center">
+  
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -91,6 +92,7 @@
 
 
 .order-section {
+  display: none;
   position: relative;
  // padding-top: size(406);
    overflow: hidden;
@@ -253,7 +255,7 @@
 
   .order {
     width: 100%;
-    padding-bottom: sizem(63);
+    //padding-bottom: sizem(63);
     font-size: sizem(14);
     // border-radius: sizem(68) sizem(68) 0 0;
    /* padding-top: sizem(0);

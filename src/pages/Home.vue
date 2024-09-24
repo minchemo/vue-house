@@ -12,6 +12,7 @@
   <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#BB581D]">
     <S1 />
     <Order />
+    
   </div>
 </template>
 
