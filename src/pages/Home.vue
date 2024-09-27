@@ -9,16 +9,10 @@
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!-- loading end -->
-   <Nav />
+     <!-- <Nav /> -->
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
      <div class="bg">
     <S1 />
-    <S2 />
-    <S3 />
-    <S4 />
-    <S5 />
-    <S6 />
-    <S7 />
     <Order />
     </div>
   <!--
@@ -50,10 +44,8 @@
   opacity: 0;
 }
 
-.home > .bgh{position: fixed;width: 100%;
-  top: 0;left: 0;
+.bg{background: linear-gradient(90deg, #17A9AF 0%, #007CBB 87%);
 }
-.bg{background: linear-gradient(135deg, #3F94CA 0%, #3F94CA 20%, #71A3A5 25%, #E0C663 33%, #E1A843 40%, #E1A843 50%,#E0C663 57%, #71A3A5 63%,#3F94CA 65%,#3F94CA 67%, #71A3A5 72%,#E0C663 78%,#E1A843 83%,#E1A843 85%,#E0C663 90%, #71A3A5 95%);}
 img {
   display: inline;
   max-width: unset;
@@ -154,9 +146,7 @@ img {
 @media screen and (max-width: 767px) {
   
 
-.home > .bgh{width: 250%;
-  top: 0;left: 0;
-}
+ // .bg{background: linear-gradient(90deg, #17A9AF 0%, #007CBB 100%); }
   .caption{
       font-size: sizem(12);}
 
@@ -204,14 +194,8 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue"
-import S4 from "@/section/s4.vue"
-import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
+// import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
