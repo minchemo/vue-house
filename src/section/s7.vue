@@ -2,8 +2,20 @@
   <article class="s7">
     <div class="slider">
       <div class="arrows">
-        <img loading="lazy"  class="prev" @click="splide.splide.go('<')" src="@/section/prev.png" alt="" srcset="">
-        <img loading="lazy"  class="next" @click="splide.splide.go('>')" src="@/section/next.png" alt="" srcset="">
+        <img
+          @click="splide.go('<')"
+          class="prev"
+          src="./arrow.svg"
+          alt="r"
+          srcset=""
+        />
+        <img
+          @click="splide.go('>')"
+          class="next"
+          src="./arrow.svg"
+          alt="r"
+          srcset=""
+        />
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
@@ -29,17 +41,18 @@
 @import "@/assets/style/function.scss";
 .s7 {
   @apply w-full relative;
-  @apply bg-cover bg-center;
-   height: size(1183);
+ //  @apply bg-cover bg-center;
+ //  height: size(1183);
  //  background-image: url("@/section/s7/bg.webp");
  // padding-top: size(155);
 
   .t {
     @apply text-white text-center;
     font-family: "Noto Serif TC";
-    position: relative;
+    position: absolute;
     z-index: 3;
-    padding-top: size(155);
+    top: size(155);
+    left: 0;width:100%;
     .t1 {
       font-size: size(36);
       font-weight: 600;
@@ -51,17 +64,10 @@
     }
   }
 }
-  .slider {
-    position: absolute;
-    top: 0;left: 0;
-    z-index: 1;
-   //flex-basis: size(1000);
-    width: 100%;
-    height: 100%;
     .slide-item {
       @apply bg-cover relative;
       width: 100%;
-      height: 100%;
+     // height: 100%;
       img{width: 100%;}
       
       .caption {
@@ -74,7 +80,15 @@
         color: #fff;
       }
     }
-  }
+      .arrows {
+    .next {
+      &:hover{transform:scaleX(-1)translateX(-10%);}
+    }
+        img {width: size(40);pointer-events:all;
+          transition:transform .5s;
+        &:hover{transform:translateX(-10%);}
+      }
+      }
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -85,13 +99,14 @@
   .s7 {
     @apply w-full relative;
     @apply bg-cover bg-center;
-    height: sizem(762);
-    background-image: url("@/section/s7/bg.jpg");
-    padding-top: sizem(45);
+  //  height: sizem(762);
+  //  background-image: url("@/section/s7/bg.jpg");
+   // padding-top: sizem(45);
 
     .t {
       @apply text-white text-center;
       font-family: "Noto Serif TC";
+      top: sizem(45);
       padding: 0 sizem(30);
       .t1 {
         font-size: sizem(25);
@@ -105,23 +120,14 @@
       }
     }
 
-.slider {
-  flex-basis: sizem(359.26);
-  height: auto;
-    width: sizem(355);
   .slide-item {
-    @apply bg-cover relative;
-    width: sizem(355);
-    height: sizem(359.26);
-    
     .caption {
-      right: sizem(10);
-      bottom: unset;
-      top: sizem(10);
       font-size: sizem(12);
     }
-  }
 }
+    .arrows {
+      img {width: sizem(40);}
+    }
   }
 }
 </style>
@@ -150,7 +156,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
+  pagination: false,
   autoplay: true,
   interval: 4000,
   gap: 0,
@@ -163,6 +169,18 @@ const imgs = [
   },
   {
     img: globals.$isMobile() ? new URL("./s7/02m.webp", import.meta.url).href : new URL("./s7/02.webp", import.meta.url).href,
+    caption: "本圖為3D模擬示意圖"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s7/03m.webp", import.meta.url).href : new URL("./s7/03.webp", import.meta.url).href,
+    caption: "本圖為3D模擬示意圖"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s7/04m.webp", import.meta.url).href : new URL("./s7/04.webp", import.meta.url).href,
+    caption: "本圖為3D模擬示意圖"
+  },
+  {
+    img: globals.$isMobile() ? new URL("./s7/05m.webp", import.meta.url).href : new URL("./s7/05.webp", import.meta.url).href,
     caption: "本圖為3D模擬示意圖"
   },
 ]

@@ -41,12 +41,12 @@ img {
   background: #fff;
 }
   .arrows {
-    @apply absolute w-screen left-0 z-10;
+    @apply absolute w-screen z-10;
     @apply flex justify-between items-center;
     @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none;
     padding: 0 10px;
     .next {
-      @apply -scale-x-100;
+      transform:scaleX(-1);
     }
     img {
       @apply pointer-events-auto;
