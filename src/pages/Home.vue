@@ -40,6 +40,19 @@ img {
 .home {
   background: #fff;
 }
+  .arrows {
+    @apply absolute w-screen left-0 z-10;
+    @apply flex justify-between items-center;
+    @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none;
+    padding: 0 10px;
+    .next {
+      @apply -scale-x-100;
+    }
+    img {
+      @apply pointer-events-auto;
+      width: sizem(15);
+    }
+  }
 
 @media screen and (max-width: 768px) {
   .mo-arrow {
