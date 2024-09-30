@@ -31,8 +31,8 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "立即預約",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        title: "預約賞屋",
+     //   subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     //底下2個 沒項目就會隱藏
     room_type: ["套房","2房","3房"],

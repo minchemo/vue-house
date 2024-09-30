@@ -1,11 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
-    <img src="./s1/bg2.webp" class="eggbg3" alt="蛋黃">
-    <img src="./s1/bg3.webp" class="eggbg4" alt="蛋黃">
-	<img src="./s1/oo.svg" alt="oo" class="oo3">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-title font-['Noto_Serif_TC',serif] text-center">{{ info.order.title }}</div>
       <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
@@ -73,7 +70,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '即刻預約' }}
+        {{ sending? '發送中..': '確認送出' }}
       </div>
 
       <!-- Contact Info -->
@@ -92,7 +89,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
+/*
 .eggbg3{position: absolute;
     display: block;
     top: size(-150);right:size(100);width:size(700);
@@ -106,6 +103,7 @@
   .oo3{position: absolute;top:size(120);height:size(50);right:size(60);
 		transform: translateX(20%);
 		animation: an 3s ease-in-out infinite alternate;}
+    */
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -125,7 +123,7 @@
 .order {
   position: relative;
   width: 100%;
-  padding-top: 0;
+  padding-top: 6vw;
   
 
   .bird {
@@ -148,10 +146,10 @@
   }
 
   .order-title {
-    font-size: size(40);
+    font-size: size(45);
     font-weight: 700;
     color: #fff;
-    padding-top:2em;
+    padding-top:1.5em;
   }
 
   .order-title-img {
@@ -174,8 +172,8 @@
   }
 
   .form {
-    width: size(920);
-    min-width: 680px;
+    width: size(1150);
+    min-width: 700px;
     //  height: 350px;
     gap: size(80);
     margin-top: size(45);
@@ -202,7 +200,7 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #ffffff;border: 1px solid #CCC;//color: #000;
+    .row{background: #ffffff;//border: 1px solid #CCC;//color: #000;
     font-weight: 500;
       display: flex;width: 100%;
       
@@ -253,12 +251,13 @@
 }
 
 @media screen and (max-width:768px) {
+  /*
 .eggbg3{
     top: sizem(-10);right:sizem(-100);width:sizem(300);}
 	.eggbg4{
     top: sizem(400);left:sizem(0);width:sizem(50);}
   .oo3{top:sizem(10);height:sizem(20);left:auto;right:sizem(30);}
-
+*/
 
   .order-section {
     min-height: sizem(800);
@@ -281,18 +280,7 @@
     // border-radius: sizem(68) sizem(68) 0 0;
    /* padding-top: sizem(0);
     margin-top: sizem(0);
-
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
+*/
 
     .cus-divider {
       margin: 0 auto;
@@ -303,7 +291,11 @@
     }
 
     .order-title {
-      font-size: sizem(25);
+      font-size: sizem(31);
+      text-align: justify;
+      width: sizem(310);
+      margin: auto;
+      padding-top: .5em;
       // padding-top:4.5em;
     }
     .order-subTitle{

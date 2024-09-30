@@ -1,7 +1,30 @@
 <template>
   <div>
   <div class="contact-info-img">
-    <img src="@/section/s1/bg3.webp" class="eggbg" alt="蛋黃">
+    <div class="oo1"></div>
+    <div class="oo2"></div>
+    <div class="bubble1 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="@/section/s1/bubble4.png" alt="bubble">
+    </div>
+    <div class="bubble2 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="@/section/s1/bubble4.png" alt="bubble">
+    </div>
+    <div class="bubble3 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="@/section/s1/bubble3.png" alt="bubble">
+    </div>
+    <div class="bubble4 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="@/section/s1/bubble5.png" alt="bubble">
+    </div>
+    <div class="bubble5 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="@/section/s1/bubble5.png" alt="bubble">
+    </div>
+    <div class="bubble6 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="@/section/s1/bubble1.png" alt="bubble">
+    </div>
+    <div class="bubble7 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="@/section/s1/bubble1.png" alt="bubble">
+    </div>
+
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <div class="logo"></div>
@@ -141,8 +164,49 @@
 .contact-info-img{
   @apply relative;
   height: 0;z-index: 2;
-  top: -1.5vw;
-  img{width: 64%;}
+  //top: -1.5vw;
+  img{width: 100%;}
+@keyframes bubble1 {
+  to {
+	transform:rotate(20deg);
+  }
+}
+@keyframes bubble2 {
+  to {
+	transform:rotate(0deg);
+  }
+}  
+  .oo1{position: absolute;
+    background: radial-gradient(ellipse at center, #F8D8A9 12%,  #B9CFB7 20%, #9ACBBF 25%,#82C8C5 32%, #5db5c5ad 43.4%,#269ac630 62%, #118fc700 70%);
+    right: size(-1200);top:size(-550);width:size(2300);
+    &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}
+  }
+  .oo2{position: absolute;
+    background: radial-gradient(ellipse at center, #F8D8A9 12%,  #B9CFB7 20%, #9ACBBF 25%,#82C8C5 32%, #5db5c5ad 43.4%,#269ac630 62%, #118fc700 70%);
+    right: size(-94);top:size(-280);width:size(2300);
+    &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}
+  }
+.bubble1{left:size(-840);top:size(120);width:size(1200);
+  img{transform: rotate(24deg)translateX(-5%);
+  animation: bubble1 4s -2s ease-in-out alternate infinite;}
+}
+.bubble2{right:size(-500);top:size(90);width:size(1376);
+  img{transform: rotate(-5deg)translateX(-5%);
+  animation: bubble2 10s ease-in-out alternate infinite;}
+}
+.bubble3{left:size(190);top:size(280);width:size(1350);
+  img{transform: rotate(-5deg)translateX(-5%);
+  animation: bubble2 10s  ease-in-out alternate infinite;}}
+.bubble4{left:size(250);top:size(330);width:size(619);}
+.bubble5{right:size(-270);top:size(260);width:size(559);}
+.bubble6{left:size(125);top:size(40);width:size(319);
+  img{transform: translateY(10%);
+  animation: bubble2 5s ease-in-out alternate infinite;}
+}
+.bubble7{right:size(-50);top:size(420);width:size(257);
+  img{transform: translateY(-10%);
+  animation: bubble2 5s -2s ease-in-out alternate infinite;}
+}
 }
 .contact-info {
   padding: size(105) size(0) size(55) size(0);
@@ -153,13 +217,13 @@
   // background: #045147;
 
   .logo {
-    width: size(540);
-    height: size(172);
+    width: size(605);
+    height: size(218);
     background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(30) auto;
+    margin: size(5) auto size(90) auto;
   }
 
   .contact-item-box {
@@ -170,7 +234,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#0466CA;
+      background:#F6878C;
       color: #FFF;
       width: 100%;
     font-weight: 700;
@@ -188,7 +252,7 @@
       gap: 1em;
 
       &:hover {
-      background:#014d99;
+      background:#d8676d;
         color: #fff;
 
         img {
@@ -269,9 +333,22 @@
 
   
 .contact-info-img{
-  height: 0;z-index: 2;
-  top: 70vw;
-  img{width: 200%;margin:-50%;}
+  top: 20vw;
+  //img{width: 200%;margin:-50%;}
+.oo1{right: sizem(-550);top:sizem(-250);width:sizem(800);}
+.oo2{right: sizem(-250);top:sizem(0);width:sizem(800);}
+.bubble1{left:sizem(-300);top:sizem(220);width:sizem(420);}
+.bubble2{right:sizem(-400);top:sizem(0);width:sizem(480);}
+.bubble3{left:sizem(-30);top:sizem(110);width:sizem(470);}
+.bubble4{left:sizem(-20);top:sizem(140);width:sizem(210);}
+.bubble5{right:sizem(-100);top:sizem(290);width:sizem(300);}
+.bubble6{left:sizem(-10);top:sizem(80);width:sizem(48);
+  img{transform: translateY(20%);}
+}
+.bubble7{right:sizem(-50);top:sizem(360);width:sizem(80);
+  img{transform: translateY(-20%);}
+}
+
 }
   .mo-contact-info {
     z-index: 99;
@@ -307,16 +384,16 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(40) 0;
+    padding: sizem(55) 0 sizem(40) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
   background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(257);
+      width: sizem(266);
       height: sizem(140);
-    margin: sizem(70) auto sizem(10) auto;
+    margin: sizem(0) auto sizem(40) auto;
      // margin-bottom: sizem(47);
     }
 

@@ -209,7 +209,8 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 800
+     // easing: 'ease-out-back',
+      duration: 1500,
     });
   };
 
