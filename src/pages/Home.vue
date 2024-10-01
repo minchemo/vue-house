@@ -38,7 +38,11 @@ img {
 }
 
 .home {
-  background: #fff;
+  background: url("@/section/form/bg.jpg") fixed repeat;
+  background-size:size(800) auto;
+  @media screen and (max-width: 767px) {
+    background-size:sizem(500) auto;
+  }
 }
   .arrows {
     @apply absolute w-screen z-10;
