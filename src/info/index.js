@@ -16,7 +16,7 @@ export default {
     fbMessage: "",
     caseName: caseName,
     houseInfos: [
-        ,
+        
         ["投資興建", "禾森事業&永盈建設"],
         ["廣告代銷", "富裕臻實業有限公司"],
         ["基地面積", "290.89坪"],
