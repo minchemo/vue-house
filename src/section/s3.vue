@@ -15,7 +15,8 @@
       <div class="txt">
     <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">住岡山市心 享站前商圈</h3>
     <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">S科技廊帶效應 重大建設集結岡山</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="200">「岡山車站TOD聯開案」延伸線捷運紅線，全方位強化北高交通動脈<br>
+        <p v-if="isMobile" class="desc" data-aos="fade-up" data-aos-delay="200">「岡山車站TOD聯開案」延伸線捷運紅線，全方位強化北高交通動脈，「岡山87期重劃」未來隱富聚落，比肩美術館特區，更勝高雄農16區域利多集合，引領北高經濟量能，岡山未來蓄勢待發。</p>
+<p v-else class="desc" data-aos="fade-up" data-aos-delay="200">「岡山車站TOD聯開案」延伸線捷運紅線，全方位強化北高交通動脈<br>
 「岡山87期重劃」未來隱富聚落，比肩美術館特區，更勝高雄農16<br>
 區域利多集合，引領北高經濟量能，岡山未來蓄勢待發。</p>
       </div>
@@ -31,11 +32,13 @@
 .s3 {
   @apply relative flex  flex-col bg-[#0D3A79] text-[#fff];
   width: 100%;
-  height:size(1070);
-  padding:1em 0 6em 0;
+  height:size(1050);
+  padding:1em 0 0 0;
   font-size:size(24);
  // gap:6em;
   flex-wrap: wrap;
+  &::before{content: "";position: absolute;top: 0;left: 0;z-index: 1;pointer-events: none;
+  width: 100%;height: 50vw;background: linear-gradient(180deg, #0D3B79 0%, rgba(13, 59, 121, 0.00) 100%);}
   
 
 .txt {
@@ -47,6 +50,11 @@
       font-size:size(82);
       font-weight: 700;letter-spacing: 0.1em;
       border-bottom: 1px solid #fff;
+    }
+    .subtitle{
+      font-size:size(32);
+      font-weight: 700;letter-spacing: 0.1em;
+      margin: .5em auto .1em;
     }
     /*
   .slogo{height:size(45);}
@@ -89,20 +97,20 @@
 
   .s3 {
   @apply flex-col;
-  height:sizem(604);
-    padding:sizem(60) 0 0 0;
+  height:sizem(667);
+    padding:3em 0 0 0;
   font-size:sizem(13);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
 
-  .main {
-    padding: 0 sizem(32.5);
-    width: 100%;
-  }
-
   .txt {
-    .slogo{height:sizem(29);}
+    width:sizem(310);
+    margin:0 auto;
+    .title{
+      font-size:sizem(25);}
+    .subtitle{
+      font-size:sizem(15);}
   }
   .slider {
     height: auto;

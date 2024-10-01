@@ -23,12 +23,12 @@
 
   .t{
     position: relative;
-    z-index: 3;width:size(553);
+    z-index: 3;width:size(800);
   }
   .lighten{
     position: absolute;
     top: 5vw;left: 0;right: 0;margin: auto;mix-blend-mode: lighten;
-    z-index: 3;width:size(640);
+    z-index: 3;width:size(860);
   }
 }
 /* 螢幕尺寸標準 */
