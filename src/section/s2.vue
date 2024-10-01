@@ -2,17 +2,8 @@
 
 <template>
   <article class="s2">
-    <div class="main">
-      <div class="txt">
-        <p class="desc" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">如何打造永續生存的韌性城市才是解決之道，也是全世界都在努力找尋的解方;看看世界想想台灣，從深耕建築出發，我們要更積極推動地球解方。找出『淨零地球』的三把救地球鑰匙：建築能效標示＋建築碳足跡標示＋智慧健康促進建築，從源頭設計管控，解決因極端氣候造成的問題，實現永續發展近零碳1+能效建築。唯有我們先做好準備才能防範於未然，衷心希望我們的地球與下一代都能更好。</p>
-
-      </div>
-    </div>
-    <div class="timg">
-<img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-<img src="./s1/t3.svg" alt="title" class="t3" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-    </div>
-
+    <img src="./s2/t.svg" alt="t" class="t" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s2/lighten.png" alt="lighten" class="lighten" data-aos="zoom-in" data-aos-delay="0">
   </article>
 </template>
 
@@ -20,30 +11,24 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden flex  justify-center text-[#FFF];
+  @apply relative overflow-hidden flex bg-[#0D3A79] justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:7em 0 7em 0;
+  padding:6em 0 6em 0;
   font-size:size(32);
   gap:4.4em;
   flex-direction: row;
     align-items:stretch;
   flex-wrap: wrap;
 
-
-  .main {
-    margin: auto 0;
-    flex-basis: size(545);
-    .txt{text-align: justify}
-}
-  .timg {
-    @apply flex;
-  flex-direction: column;
-    width: size(735);
-    height: auto;margin:.5em 0;
-    text-align: center;justify-content:space-between;
-    .t2{width: size(735);}
-    .t3{width: size(588);margin:auto auto 0;}
+  .t{
+    position: relative;
+    z-index: 3;width:size(553);
+  }
+  .lighten{
+    position: absolute;
+    top: 5vw;left: 0;right: 0;margin: auto;mix-blend-mode: lighten;
+    z-index: 3;width:size(640);
   }
 }
 /* 螢幕尺寸標準 */
@@ -55,26 +40,18 @@
   .s2 {
   @apply flex-col;
     height: auto;
-    padding:1em 0;
-  font-size:sizem(14);
+    padding:9em 0 2em 0;
+  font-size:sizem(20);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:0;
-
-
-  .main {
-    padding: 0;
-    width: sizem(222);
-    margin: auto auto 4em auto;
-}
-      .txt {
-    line-height: 2.3;
+  .t{
+    position: relative;
+    z-index: 3;width:sizem(318);
   }
-  .timg {
-    margin:.5em auto;
-    width: auto;
-    .t2{width: sizem(295); margin-bottom: 1em;}
-    .t3{width: sizem(238);margin:auto auto 0;}
+  .lighten{
+    position: absolute;
+    top: 35vw;left: 0;right: 0;margin: auto;mix-blend-mode: lighten;
+    z-index: 3;width:sizem(350);
   }
 
 

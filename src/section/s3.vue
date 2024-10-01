@@ -1,13 +1,5 @@
 <template>
   <article class="s3" ref="s3">
-    <div class="main">
-      <div class="txt">
-    <img src="./s3/slogo2.svg" class="slogo" alt="" data-aos="fade-up" data-aos-delay="0" />
-    <h3 class="title" data-aos="fade-up" data-aos-delay="100">日本不動產知名品牌 締造城市未來</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="200">日本三井不動產自1941年獨立於三井合名公司不動產部門，歷經80多年來以創新思維佈局全球不動產領域，包括商業設施、飯店、複合商辦大樓、高優質住宅等事業版圖；致力創造城市進化與價值，啟動新時代的夢想與感動。</p>
-        <div class="subdesc" data-aos="fade-up" data-aos-delay="300">Mistui Fudosan Group</div>
-      </div>
-    </div>
     <div class="slider" data-aos="fade-up" data-aos-delay="400">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -20,6 +12,13 @@
         </SplideSlide>
       </Splide>
     </div>
+      <div class="txt">
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">住岡山市心 享站前商圈</h3>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">S科技廊帶效應 重大建設集結岡山</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="200">「岡山車站TOD聯開案」延伸線捷運紅線，全方位強化北高交通動脈<br>
+「岡山87期重劃」未來隱富聚落，比肩美術館特區，更勝高雄農16<br>
+區域利多集合，引領北高經濟量能，岡山未來蓄勢待發。</p>
+      </div>
 
   </article>
 </template>
@@ -30,46 +29,50 @@
 
 
 .s3 {
-  @apply relative flex items-center justify-center text-[#000];
+  @apply relative flex  flex-col bg-[#0D3A79] text-[#fff];
   width: 100%;
-  height:auto;
-  padding:6em 0 6em 0;
-  font-size:size(16);
-  gap:6em;
+  height:size(1070);
+  padding:1em 0 6em 0;
+  font-size:size(24);
+ // gap:6em;
   flex-wrap: wrap;
-
-  .main {
-    @apply flex;
-    margin: 0;
-    flex-basis: size(470);
-  flex-direction: column;
-  text-align: justify;
-}
-
+  
 
 .txt {
-    font-weight: 400;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+    font-weight: 400;pointer-events: none;
+    .title{display: inline-block;
+      font-size:size(82);
+      font-weight: 700;letter-spacing: 0.1em;
+      border-bottom: 1px solid #fff;
+    }
+    /*
   .slogo{height:size(45);}
   .title{
-    margin: .9em 0 0.3em;color: #9A6A28;
+    margin: .9em 0 0.3em;//color: #9A6A28;
   }
   .desc{
     margin: 0 0 2.4em;
-  }
+  }*/
 }
 
   .slider {
+    position: absolute;
+    top: 0;left: 0;
     margin: 0;
-    flex-basis: size(730);
-      height: size(490);
+    width: 100%;
+      height:100%;
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(730);
-      height: size(490);
-      
+    flex-basis:100%;
+      height: 100%;
+      img{height: 100%; width: 100%;}
+      .caption{position: absolute;left: 0;bottom: 0;}
     }
     .splide__pagination{
-      right: calc(100% + 3em);
+    //  right: calc(100% + 3em);
       justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
@@ -86,7 +89,7 @@
 
   .s3 {
   @apply flex-col;
-    height: auto;
+  height:sizem(604);
     padding:sizem(60) 0 0 0;
   font-size:sizem(13);
   flex-wrap:nowrap;
@@ -101,8 +104,15 @@
   .txt {
     .slogo{height:sizem(29);}
   }
+  .slider {
+    height: auto;
+    width: sizem(775);
+    left:sizem(-200);
+    top: auto;
+    bottom: 0;
+    }
 
-
+/*
   .slider {
     height: auto;
     width: sizem(310);
@@ -119,7 +129,7 @@
       height: sizem(208);
       
     }
-  }
+  }*/
   }
 }
 </style>
@@ -147,18 +157,34 @@ const options = {
   pagination: false,
   autoplay: true,
   interval: 4000,
-  gap: 10,
+  gap: 0,
   type: 'loop'
 }
 
 const imgs = [
   {
-    img:new URL("./s3/1.webp", import.meta.url).href ,
-    caption: "和苑三井花園飯店 台北忠孝"
+    img:new URL("./s3/01.webp", import.meta.url).href ,
+    caption: "0"
   },
   {
-    img:new URL("./s3/2.webp", import.meta.url).href ,
-    caption: "東京中城日比谷"
+    img:new URL("./s3/02.webp", import.meta.url).href ,
+    caption: "0"
+  },
+  {
+    img:new URL("./s3/03.webp", import.meta.url).href ,
+    caption: "0"
+  },
+  {
+    img:new URL("./s3/04.webp", import.meta.url).href ,
+    caption: "0"
+  },
+  {
+    img:new URL("./s3/05.webp", import.meta.url).href ,
+    caption: "0"
+  },
+  {
+    img:new URL("./s3/06.webp", import.meta.url).href ,
+    caption: "0"
   },
 ]
 </script>
