@@ -32,6 +32,9 @@ const toastOptions = {
 
 import { createGtm } from '@gtm-support/vue-gtm';
 
+import VCalendar from 'v-calendar';
+import 'v-calendar/style.css';
+
 createApp(App)
     .use(Toast, toastOptions)
     .use(VueMobileDetection)
@@ -43,7 +46,9 @@ createApp(App)
         preLoad: 2,
         lazyComponent: true,
         attempt: 1,
-    }).use(
+    })
+    .use(VCalendar, {})
+    .use(
         createGtm({
           id: info.gtmCode, 
           defer: false, // Script can be set to `defer` to speed up page load at the cost of less accurate results (in case visitor leaves before script is loaded, which is unlikely but possible). Defaults to false, so the script is loaded `async` by default

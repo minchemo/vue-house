@@ -27,7 +27,7 @@
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
         <img src="//h65.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
-        <div>導航 GoogleMap</div>
+        <div>導航 Google 地圖</div>
       </div>
     </div>
 
@@ -140,8 +140,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #FDFBED;
-      color: #C54700;
+      background-color: transparent;
+      color: #DD5510;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -153,12 +153,12 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      //border: 1px solid #C29267;
+      border: 1px solid #DD5510;
       gap: 1em;
 
       &:hover {
         background-color: #fff;
-        color: #aa3e00;
+        color: #DD5510;
 
         img {
           filter: invert(20%) sepia(85%) saturate(3754%) hue-rotate(32deg) brightness(92%) contrast(101%);
@@ -175,8 +175,8 @@
       }
 
       &.address {
-        background-color: #BFD2D9;
-        color: #000;
+        @apply bg-[#DD5510]/20;
+        color: #fff;
         z-index: 0;
         position: relative;
         flex:2.17;
@@ -204,8 +204,7 @@
       &.googlemap {
         flex:1;
   //    background-color: #9B1E44;
-      border-left-width: 0;
-        color: #025482;
+        color: #DD5510;
 
         img {
           filter:invert(31%) sepia(41%) saturate(7500%) hue-rotate(22deg) brightness(95%) contrast(101%);
@@ -332,7 +331,6 @@
         }
       &.googlemap {
         border-top-width: 0;
-      border-left-width:0;
       }
       }
 

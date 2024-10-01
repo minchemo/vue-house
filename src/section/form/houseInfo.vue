@@ -9,13 +9,9 @@
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos" :key="item">
-                            <p class="mr-5 border-l-2 border-[#fff] pl-2 text-[#fff]" v-html="item[0]"></p>
-                            <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal"
+                            <p class="mr-5 border-l-2 border-[#DD5510] pl-2 text-[#DD5510]" v-html="item[0]"></p>
+                            <p class="leading-normal text-left text-[#fff] font-normal"
                                 v-html="item[1]">
-                            </p>
-                        </div>
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap">
-                            <p class="border-l-2 pl-2 border-[#fff] whitespace-pre-line leading-normal text-left text-[#fff] font-normal">民間新建建築類(H-2住宅)
                             </p>
                         </div>
                     </div>
@@ -59,9 +55,10 @@
 
     .title {
         font-size: size(40);
-        font-weight: 700;
-        color: #fff;
-        margin: 0 auto 1em auto;
+        font-weight: 400;
+        color: #DD5510;
+        margin: 0 auto .5rem auto;
+        font-family: 'Noto serif TC';
     }
 
     .info-items {
@@ -87,6 +84,7 @@
     // background:#fff;
   //  height: sizem(400);
     font-size: sizem(13);
+    padding-bottom: sizem(50);
 }
     .footer {
         margin-bottom: sizem(0);

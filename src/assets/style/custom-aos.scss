@@ -8,3 +8,21 @@
     opacity: 1;
   }
 }
+
+[data-aos="airplane"] {
+  transform: translateX(-100vw) skew(10deg, 10deg) scale(0.5);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    transform:translateX(0%) skew(0deg, 0deg) scale(1);
+  }
+}
+
+[data-aos="bright"] {
+  filter: grayscale(100%) brightness(0.35);
+  transition-property: all;
+
+  &.aos-animate {
+    filter: grayscale(0%) brightness(1);
+  }
+}

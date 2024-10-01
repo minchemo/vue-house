@@ -1,21 +1,100 @@
 <template>
   <div id="order" class="order relative text-center">
-  
     <div class="order-section">
-      <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-      <!-- <div class="cus-divider"></div> -->
+      <!-- Form -->
+      <div class="form mx-auto relative flex justify-center">
+        <label class="row"
+          ><span>姓名</span>
+          <input
+            type="text"
+            placeholder="請輸入姓名"
+            class="input w-full rounded-none"
+            :value="formData.name"
+            @input="(event) => (formData.name = event.target.value)"
+        /></label>
+        <label class="row"
+          ><span>電話</span>
+          <input
+            type="text"
+            placeholder="請輸入連絡電話"
+            class="input w-full rounded-none"
+            :value="formData.phone"
+            @input="(event) => (formData.phone = event.target.value)"
+        /></label>
+        <label class="row"
+          ><span>預約人數</span>
+          <select>
+            <option value="1">1 人</option>
+            <option value="2">2 人</option>
+            <option value="3">3 人</option>
+            <option value="4">4 人</option>
+            <option value="5">5 人</option>
+          </select>
+        </label>
+        <label class="row"
+          ><span>預約日期</span>
+          <div class="calendar-bar">
+            <VDatePicker v-model="date">
+              <template #default="{ togglePopover }">
+                <div class="input w-full rounded-none" @click="togglePopover">
+                  {{ formatDate(date) }}
+                </div>
+              </template>
+            </VDatePicker>
+          </div>
+        </label>
 
-      <!-- Title Image
-      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
- -->
-      <!-- Custom Image -->
+        <label class="row tworow"
+          ><span>預約時段</span>
+          <div class="time-btns">
+            <div class="item">10:00</div>
+            <div class="item">13:00</div>
+            <div class="item">15:00</div>
+            <div class="item">17:00</div>
+          </div>
+        </label>
 
+        <div class="flex flex-col items-start mt-4">
+          <!-- Policy -->
+          <div class="flex gap-2 items-center justify-center control">
+            <input
+              type="checkbox"
+              v-model="formData.policyChecked"
+              :checked="formData.policyChecked"
+              class="checkbox bg-white rounded-md"
+            />
+            <p class="text-[#fff]">
+              本人知悉並同意<label
+                for="policy-modal"
+                class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70"
+                >「個資告知事項聲明」</label
+              >內容
+            </p>
+          </div>
+          <Policy />
 
+          <!-- Recaptcha -->
+          <vue-recaptcha
+            class="flex w-full justify-center mt-8 z-10"
+            ref="recaptcha"
+            :sitekey="info.recaptcha_site_key_v2"
+            @verify="onRecaptchaVerify"
+            @expired="onRecaptchaUnVerify"
+          />
+        </div>
 
+        <!-- Send -->
+        <div
+          class="send grow hover:scale-[98%] btn cursor-pointer"
+          @click="send()"
+        >
+          {{ sending ? "發送中.." : "即刻預約" }}
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <ContactInfo />
     </div>
-
 
     <!-- Map -->
     <Map v-if="info.address" />
@@ -28,15 +107,13 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
 .order-section {
   //display: none;
   position: relative;
- // padding-top: size(406);
-   overflow: hidden;
-   margin-bottom: size(50);
-   //min-height: size(500);
-   // background: linear-gradient(180deg, #418DBD 0%, #000A39 100%);
+  // padding-top: size(406);
+  overflow: hidden;
+  min-height: size(500);
+  // background: linear-gradient(180deg, #418DBD 0%, #000A39 100%);
 
   .bg-image {
     position: absolute;
@@ -45,128 +122,103 @@
     bottom: size(50);
     vertical-align: middle;
   }
-
 }
 
 .order {
   width: 100%;
-  padding-top: 0;
+  padding-top: size(132);
   font-size: size(15);
-  //background: #195c45;
-  
-
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
-
-  .order-title {
-    font-size: size(40);
-    font-weight: 700;
-    color: #FFF;
-    padding-top:1.5em;
-    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-  }
-
-  .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
-  }
-  .order-subTitle{
-    font-size: size(17);
-    color: #fff;
-    padding-top:.8em;
-    letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-  }
-  .cus-divider {
-    margin: 0 auto;
-    width: size(300);
-    height: size(2);
-    margin-bottom: size(50);
-    background-color: #055F76;
-  }
+  background: #000;
 
   .form {
-    width: size(920);
-    min-width: 680px;
-    //  height: 350px;
-    gap: size(80);
-    margin-top: size(45);
-    margin-bottom: size(50);
-    z-index: 50;
-    align-items: stretch;
+    @apply relative z-[100];
+    width: size(788);
+    gap: size(27.8);
+    @apply grid grid-cols-2;
 
-    .left {
-      flex: 1;
-      gap: size(20);
-      //   width: size(419);
-    }
-
-    .right {
-      flex: 1;
-      height: auto;
-      //  width: size(419);
-    }
-
-    &::after {
-      content: "";
-      width: size(1);
-      height: 100%;
-      background-color: #fff;
-      position: absolute;
-    }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
-      display: flex;width: 100%;
-    align-items:center;
-      > span{
-        width: 7.5em;
-        text-align: left;padding-left:1em ;
-        font-weight:600;
-        > span{color: #F00;font-size:0.8em;}
+    .row {
+      background: transparent;
+      border: none;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: start;
+      gap: size(10);
+      > span {
+        text-align: left;
+        font-weight: 500;
+        font-size: size(21);
       }
-      input,select{background: inherit;flex: 1;font-size: inherit;}
-      option{color: #666;}
-      select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
-      background-size:auto 200%;
-      transition: background .3s;
-      &:focus{
-        background-position:calc(100% - .5em) 0%;
+      input,
+      .input,
+      select {
+        @apply bg-[#DD5510]/20 w-full;
+        @apply border-[#DD5510] text-left;
+        border-radius: size(5);
+        height: size(53);
+        padding: 0 size(20);
+        color-scheme: dark;
+        line-height: size(53);
       }
+
+      select {
+        @apply border-[#DD5510] border;
+      }
+      option {
+        @apply bg-black;
+      }
+      &.tworow {
+        grid-column: span 2;
+        .time-btns {
+          @apply flex w-full rounded;
+          gap: size(18.23);
+          .item {
+            @apply flex-1;
+            height: size(60);
+            border-radius: size(5);
+            background: linear-gradient(
+              180deg,
+              #dd5510 0%,
+              rgba(221, 85, 16, 0) 100%
+            );
+            border: 1px solid #dd5510;
+            font-size: size(21);
+            line-height: size(58);
+            &:hover {
+              @apply cursor-pointer opacity-80;
+            }
+          }
+        }
+      }
+    }
+
+    .calendar-bar {
+      @apply relative z-20 w-full;
+      .date-picker {
+        @apply absolute left-0;
       }
     }
   }
 
   .send {
-    font-size:20px;
+    font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #C54700;
-    background-color: #FDFBED;
-    //border: 1px solid #FFF9;
-    border:0;
+    color: #fff;
+    border: 1px solid #dd5510;
+    background: linear-gradient(180deg, #dd5510 0%, rgba(221, 85, 16, 0) 100%);
     border-radius: 0em;
 
-    width: 308px;
-    height:3.3em;
+    width: 80%;
+    height: 3.3em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 600;
     position: relative;
+    font-family: "Noto serif tc";
+    align-self: flex-end;
+    justify-self: flex-end;
   }
 
   .control {
@@ -176,13 +228,12 @@
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .order-section {
-    //min-height: sizem(800);
+    min-height: sizem(800);
     position: relative;
     // overflow: hidden;
-   // padding-top: sizem(200);
-   margin-bottom: sizem(30);
+    // padding-top: sizem(200);
 
     .bg-image {
       position: absolute;
@@ -190,21 +241,12 @@
       left: -#{sizem(30)};
       bottom: sizem(590);
     }
-
   }
 
   .order {
     width: 100%;
-    //padding-bottom: sizem(63);
+    padding-top: sizem(50);
     font-size: sizem(14);
-    // border-radius: sizem(68) sizem(68) 0 0;
-   /* padding-top: sizem(0);
-    margin-top: sizem(0);
-
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
 
     .bird {
       @apply absolute;
@@ -218,43 +260,86 @@
       width: sizem(117);
       height: sizem(2);
       margin-bottom: sizem(25);
-      background-color: #055F76;
+      background-color: #055f76;
     }
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1.5em;
+      padding-top: 1.5em;
     }
-    .order-subTitle{
+    .order-subTitle {
       font-size: sizem(13);
-      padding-top:0;
+      padding-top: 0;
     }
-
 
     .form {
       width: sizem(310);
-      min-width: 0;
-      height: auto;
-      gap: sizem(15);
-      margin-bottom: sizem(20);
-      flex-direction: column;
-      margin-top: sizem(20);
+      gap: sizem(14.3);
+      @apply grid grid-cols-1;
 
-      .left {
+      .row {
+        background: transparent;
+        border: none;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        gap: sizem(15);
-      }
+        align-items: start;
+        gap: sizem(6.8);
+        > span {
+          text-align: left;
+          font-weight: 500;
+          font-size: sizem(13);
+        }
+        input,
+        .input,
+        select {
+          @apply bg-[#DD5510]/20 w-full;
+          @apply border-[#DD5510] text-left;
+          border-radius: sizem(5);
+          height: sizem(31.1);
+          padding: 0 sizem(10);
+          color-scheme: dark;
+          line-height: sizem(31.1);
+        }
 
-      .right {
-        width: 100%;
-        height: sizem(100);
-        .row{
-          height: 7em;
+        select {
+          @apply border-[#DD5510] border;
+        }
+        option {
+          @apply bg-black;
+        }
+
+        &.tworow {
+          grid-column: span 1;
+          .time-btns {
+            @apply flex w-full rounded;
+            gap: sizem(7.2);
+            .item {
+              @apply flex-1;
+              height: sizem(34.5);
+              border-radius: sizem(5);
+              background: linear-gradient(
+                180deg,
+                #dd5510 0%,
+                rgba(221, 85, 16, 0) 100%
+              );
+              border: 1px solid #dd5510;
+              font-size: sizem(15);
+              line-height: sizem(34.5);
+              &:hover {
+                @apply cursor-pointer opacity-80;
+              }
+            }
+          }
         }
       }
 
-      &::after {
-        display: none;
+      .calendar-bar {
+        @apply relative z-[100] w-full;
+        .date-picker {
+          @apply absolute left-0;
+        }
       }
     }
 
@@ -280,18 +365,25 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import {
+  computed,
+  getCurrentInstance,
+  ref,
+  reactive,
+  watch,
+  onMounted,
+} from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
-
-
+const globals = getCurrentInstance().appContext.config.globalProperties
+const isMobile = computed(() => globals.$isMobile())
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
 
 const sending = ref(false)
+
+const date = ref(new Date())
 
 const formData = reactive({
   name: "",
@@ -308,7 +400,15 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = [
+  "project",
+  "msg",
+  "email",
+  "room_type",
+  "budget",
+  "city",
+  "area",
+]
 
 //中文對照
 const formDataRef = ref([
@@ -327,6 +427,10 @@ const formDataRef = ref([
 
 const areaList = ref([])
 
+onMounted(() => {
+  getSlots()
+})
+
 watch(
   () => formData.city,
   (newVal, oldVal) => {
@@ -342,22 +446,30 @@ const onRecaptchaUnVerify = () => {
   formData.r_verify = false
 }
 
-const send = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source");
-  const utmMedium = urlParams.get("utm_medium");
-  const utmContent = urlParams.get("utm_content");
-  const utmCampaign = urlParams.get("utm_campaign");
-  const time = new Date();
-  const year = time.getFullYear();
-  const month = time.getMonth() + 1;
-  const day = time.getDate();
-  const hour = time.getHours();
-  const min = time.getMinutes();
-  const sec = time.getSeconds();
-  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+const getSlots = async () => {
+  const response = await fetch(
+    "https://test-two.h65.tw/get_reservation_time_slots.php"
+  )
+  const data = await response.json()
+  console.log(data)
+}
 
-  const presend = new FormData();
+const send = () => {
+  const urlParams = new URLSearchParams(window.location.search)
+  const utmSource = urlParams.get("utm_source")
+  const utmMedium = urlParams.get("utm_medium")
+  const utmContent = urlParams.get("utm_content")
+  const utmCampaign = urlParams.get("utm_campaign")
+  const time = new Date()
+  const year = time.getFullYear()
+  const month = time.getMonth() + 1
+  const day = time.getDate()
+  const hour = time.getHours()
+  const min = time.getMinutes()
+  const sec = time.getSeconds()
+  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
+
+  const presend = new FormData()
   let pass = true
   let unfill = []
   let idx = 0
@@ -368,18 +480,17 @@ const send = () => {
       if (value == "" || value == false) {
         unfill.push(formDataRef.value[idx])
       }
-
     }
 
-    idx++;
+    idx++
 
-    presend.append(key, value);
+    presend.append(key, value)
   }
 
-  presend.append("utm_source", utmSource);
-  presend.append("utm_medium", utmMedium);
-  presend.append("utm_content", utmContent);
-  presend.append("utm_campaign", utmCampaign);
+  presend.append("utm_source", utmSource)
+  presend.append("utm_medium", utmMedium)
+  presend.append("utm_content", utmContent)
+  presend.append("utm_campaign", utmCampaign)
 
   //有未填寫
   if (unfill.length > 0) {
@@ -414,22 +525,30 @@ const send = () => {
       &date=${date}
       &campaign_name=${info.caseName}`,
       {
-        method: "GET"
+        method: "GET",
       }
-    );
+    )
 
     fetch("contact-form.php", {
       method: "POST",
       body: presend,
     }).then((response) => {
       if (response.status === 200) {
-        window.location.href = "formThanks";
+        window.location.href = "formThanks"
       }
       sending.value = false
-    });
-
+    })
 
     // toast.success(`表單已送出，感謝您的填寫`)
   }
+}
+
+const formatDate = (dateValue) => {
+  const date = dateValue
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const daysOfWeek = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"]
+  const dayOfWeek = daysOfWeek[date.getDay()]
+  return `${month}月${day}日 ${dayOfWeek}`
 }
 </script>
