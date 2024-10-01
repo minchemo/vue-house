@@ -51,7 +51,7 @@
     font-family: "Noto Serif TC";
     position: absolute;
     z-index: 3;
-    top: size(155);
+    top: size(80);
     left: 0;width:100%;
     .t1 {
       font-size: size(36);
@@ -106,7 +106,7 @@
     .t {
       @apply text-white text-center;
       font-family: "Noto Serif TC";
-      top: sizem(45);
+      top: sizem(30);
       padding: 0 sizem(30);
       .t1 {
         font-size: sizem(25);
