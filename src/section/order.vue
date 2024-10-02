@@ -23,7 +23,7 @@
         /></label>
         <label class="row"
           ><span>預約人數</span>
-          <select>
+          <select v-model="formData.reservation.vistor_count">
             <option value="1">1 人</option>
             <option value="2">2 人</option>
             <option value="3">3 人</option>
@@ -34,11 +34,17 @@
         <label class="row"
           ><span>預約日期</span>
           <div class="calendar-bar">
-            <VDatePicker v-model="date">
+            <VDatePicker
+              v-model="selectedDate"
+              :attributes="calendarAttributes"
+            >
               <template #default="{ togglePopover }">
-                <div class="input w-full rounded-none" @click="togglePopover">
-                  {{ formatDate(date) }}
-                </div>
+                <button
+                  class="input w-full rounded-none"
+                  @click.stop="togglePopover"
+                >
+                  {{ formatDate(selectedDate) }}
+                </button>
               </template>
             </VDatePicker>
           </div>
@@ -47,10 +53,18 @@
         <label class="row tworow"
           ><span>預約時段</span>
           <div class="time-btns">
-            <div class="item">10:00</div>
-            <div class="item">13:00</div>
-            <div class="item">15:00</div>
-            <div class="item">17:00</div>
+            <div
+              class="item"
+              v-for="(r, i) in reservations"
+              :key="i"
+              :class="{
+                active: r.slots > 0,
+                selected: formData.reservation.time == r.time,
+              }"
+              @click="onSelectSlots(r)"
+            >
+              {{ r.time }}
+            </div>
           </div>
         </label>
 
@@ -174,7 +188,7 @@
           @apply flex w-full rounded;
           gap: size(18.23);
           .item {
-            @apply flex-1;
+            @apply flex-1 cursor-not-allowed opacity-20;
             height: size(60);
             border-radius: size(5);
             background: linear-gradient(
@@ -185,8 +199,14 @@
             border: 1px solid #dd5510;
             font-size: size(21);
             line-height: size(58);
-            &:hover {
-              @apply cursor-pointer opacity-80;
+            &.active {
+              @apply opacity-100 cursor-pointer;
+              &:hover {
+                @apply opacity-80;
+              }
+            }
+            &.selected {
+              @apply bg-white text-black hover:opacity-100;
             }
           }
         }
@@ -383,8 +403,6 @@ const toast = useToast()
 
 const sending = ref(false)
 
-const date = ref(new Date())
-
 const formData = reactive({
   name: "",
   phone: "",
@@ -395,6 +413,11 @@ const formData = reactive({
   city: "",
   area: "",
   msg: "",
+  reservation: {
+    vistor_count: 5,
+    date: "",
+    time: "",
+  },
   policyChecked: false,
   r_verify: true,
 })
@@ -427,10 +450,6 @@ const formDataRef = ref([
 
 const areaList = ref([])
 
-onMounted(() => {
-  getSlots()
-})
-
 watch(
   () => formData.city,
   (newVal, oldVal) => {
@@ -446,12 +465,96 @@ const onRecaptchaUnVerify = () => {
   formData.r_verify = false
 }
 
+const selectedDate = ref(new Date())
+const calendarAttributes = ref([
+  {
+    highlight: true,
+    dates: [],
+  },
+])
+const slots = ref([])
+const validReservationTime = ["10:00", "13:00", "15:00", "17:00"]
+const reservations = reactive(
+  validReservationTime.map((item) => ({ date: "", time: item, slots: 0 }))
+)
+
+watch(
+  () => selectedDate.value,
+  (newVal, oldVal) => {
+    checkSlots(newVal)
+  }
+)
+
+onMounted(() => {
+  getSlots()
+})
+
+const setAllReservationsDate = (dates) => {
+  const dates_ = []
+  dates.forEach((date) => {
+    if (date.count > 0) {
+      const datetime = date.reservation_datetime
+      const reservationTime = date.reservation_time
+      const isValidTime = validReservationTime.includes(reservationTime)
+
+      if (isValidTime) {
+        const d = new Date(datetime)
+        dates_.push(d)
+      }
+    }
+  })
+
+  calendarAttributes.value = [
+    {
+      highlight: {
+        fillMode: "light",
+      },
+      dates: dates_,
+    },
+  ]
+}
+
 const getSlots = async () => {
   const response = await fetch(
     "https://test-two.h65.tw/get_reservation_time_slots.php"
   )
   const data = await response.json()
-  console.log(data)
+  slots.value = data
+  setAllReservationsDate(data)
+}
+
+const checkSlots = (date) => {
+  formData.reservation.time = ""
+  formData.reservation.date = ""
+
+  const formattedDate =
+    date.getFullYear() +
+    "-" +
+    String(date.getMonth() + 1).padStart(2, "0") +
+    "-" +
+    String(date.getDate()).padStart(2, "0")
+
+  const allSlotsByDate = slots.value.filter(
+    (item) => item.reservation_datetime == formattedDate
+  )
+
+  reservations.forEach((item) => {
+    const targetTime = allSlotsByDate.find(
+      (i) => i.reservation_time == item.time
+    )
+    item.date = targetTime ? targetTime.reservation_datetime : ""
+    item.slots = targetTime ? targetTime.count : 0
+  })
+}
+
+const onSelectSlots = (data) => {
+  if (data.date == "") {
+    toast.error(`該時段不開放預約或已額滿`)
+    return
+  }
+
+  formData.reservation.date = data.date
+  formData.reservation.time = data.time
 }
 
 const send = () => {
@@ -518,6 +621,9 @@ const send = () => {
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
       &msg=${formData.msg}
+      &reservation_date=${formData.reservation.date}
+      &reservation_time=${formData.reservation.time}
+      &reservation_count=${formData.reservation.count}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
@@ -534,6 +640,9 @@ const send = () => {
       body: presend,
     }).then((response) => {
       if (response.status === 200) {
+        const dateString = `${formData.reservation.date},${formData.reservation.time}`
+        const base64String = btoa(dateString)
+        window.localStorage.setItem("reservation", base64String)
         window.location.href = "formThanks"
       }
       sending.value = false
