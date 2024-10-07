@@ -1,4 +1,4 @@
-const caseName = "一功青"
+const caseName = "日進學"
 
 export default {
     meta: {
@@ -8,18 +8,18 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "鵬程東三路vs介壽路",
+    address: "新北市五股區成洲三路與號疏洪北路交叉口",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3678.489826005084!2d120.289203!3d22.784307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ3JzAzLjUiTiAxMjDCsDE3JzIxLjEiRQ!5e0!3m2!1szh-TW!2stw!4v1721979864766!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/Y3AsifGx63NWpNSQA",
-    phone: "",
-    fbLink: "https://www.facebook.com/61562121533694/",
-    fbMessage: "https://m.me/61562121533694/",
+    phone: "02-8295-3311",
+    fbLink: "https://www.facebook.com/100063678532415/",
+    fbMessage: "https://m.me/100063678532415/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "升鴻水電工程股份有限公司"],
-        ["建築設計", "弘憲聯合建築師事務所"],
-        ["企劃銷售", "上旺開發股份有限公司"],
-        ["接待中心", "鵬程東三路vs介壽路"],
+        ["投資興建", "茂德建設"],
+        ["建築設計", "陳朝雄"],
+        ["營造公司", "鴻信營造"],
+        ["企劃銷售", "太御地產開發"],
         /*,
         ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
         ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
@@ -28,7 +28,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-WPMCT7FB"], // 可放置多個
+    gtmCode: ["GTM-5GX3PDJ2"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -40,6 +40,7 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     room_type: ["兩房","三房"],
+    ctime: ["早上","下午","晚上"],
     //budget: ["900-1,000萬","1,100-1,200萬","1,200-1,300萬","1,300-1,400萬","1,400-1,500萬"],
     navList: [
         /*

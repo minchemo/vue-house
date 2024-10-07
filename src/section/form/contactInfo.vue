@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #5F7A86;
+      background-color: #666666;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -156,7 +156,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #c00;
+        background-color: rgb(145, 0, 0);
         /*
         color: #000;
         img {
@@ -180,6 +180,7 @@
         z-index: 0;
         position: relative;
         flex:2.17;
+        border: 1px solid #929292;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
@@ -245,7 +246,7 @@
     height: sizem(63);
     gap: sizem(1);
     //box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#5F7A86;
+    background:#666666;
 
     .contact-item {
       height: 100%;      

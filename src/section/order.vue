@@ -26,6 +26,11 @@
             <option value="" selected disabled>請選擇房型</option>
             <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
+          <label class="row" v-if="info.ctime"><span>可聯絡的時段<span v-if="!bypass.includes('ctime')">(必填)</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>請選擇時段</option>
+            <option v-for="ctime in info.ctime" :value="ctime" v-text="ctime" :key="ctime"></option>
+          </select></label>
           <label class="row" v-if="info.budget"><span>購屋預算<span v-if="!bypass.includes('budget')">(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇預算</option>
@@ -58,9 +63,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#666666]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF0000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -117,7 +122,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #FFF;
+    color: #666666;
     padding-top:3.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -128,7 +133,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #fff;
+    color: #666666;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -194,8 +199,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #286476;
-    background-color: #fff;
+    color: #fff;
+    background-color: #666666;
     border:0;
     border-radius: 0em;
     width: 308px;
@@ -252,7 +257,7 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1em;
+      padding-top:2em;
     }
     .order-subTitle{
       font-size: sizem(13);
@@ -327,6 +332,7 @@ const formData = reactive({
   phone: "",
   room_type: "",
   budget: "",
+  ctime: "",
   project: "",
   email: "",
   use_type: "",
@@ -339,7 +345,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area", "ctime", "use_type"]
+const bypass = ["project", "msg", "email", "room_type","budget", "city", "area", "ctime", "use_type", "ctime"]
 
 //中文對照
 const formDataRef = ref([
@@ -349,7 +355,7 @@ const formDataRef = ref([
   "預算", //budget
   "建案", //project
   "信箱", //email
-  "聯絡時間", //ctime
+  "可聯絡的時段", //ctime
   "用途", //use_type
   "居住縣市", //city
   "居住地區", //area
