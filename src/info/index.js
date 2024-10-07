@@ -9,8 +9,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市五股區成洲三路與號疏洪北路交叉口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3678.489826005084!2d120.289203!3d22.784307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ3JzAzLjUiTiAxMjDCsDE3JzIxLjEiRQ!5e0!3m2!1szh-TW!2stw!4v1721979864766!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/Y3AsifGx63NWpNSQA",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.088960028898!2d121.45121889999999!3d25.098849799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b6a68c61de4e78f%3A0xbf75a4b4b3810a1!2z5rSy576O57ag5YWJIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1728273253876!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/KifgrHQZg5Xdrabb8",
     phone: "02-8295-3311",
     fbLink: "https://www.facebook.com/100063678532415/",
     fbMessage: "https://m.me/100063678532415/",
