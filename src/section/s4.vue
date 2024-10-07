@@ -33,8 +33,8 @@
 .s4 {
   @apply relative flex  flex-col text-[#fff];
   width: 100%;
-  height:size(1080);
-  padding:1em 0 0 0;
+  height:size(1070);
+  padding:0;
   font-size:size(24);
  // gap:6em;
   flex-wrap: wrap;
@@ -48,7 +48,7 @@
     color: #000;transition: transform .5s;
     filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
 
-      .en{width: size(945);display: block;transition:opacity .5s,margin .5s;opacity: .2;margin:-.7em auto -2.5em;}
+      .en{width: size(945);display: block;transition:opacity .5s,margin .5s;opacity: .2;margin:0em auto -2.5em;}
     .title{display: inline-block;transition:font-size .5s;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
@@ -61,13 +61,13 @@
     }
     &.v1{
       filter: invert(1);
-      transform: translateY(size(340));
-      .en{opacity: 1;margin:0 auto 0;}
+      transform: translateY(size(390));
+      .en{opacity: 1;margin:0 auto .7em;}
     .title{
       font-size:size(82);border-bottom: 1px solid #000;
     }
     .subtitle{
-      margin: 0em auto .5em;
+      margin: 0em auto .8em;
     }
     
     }
@@ -78,21 +78,9 @@
     top: 0;left: 0;
     margin: 0;
     width: 100%;
-      height:100%;
-      .slide{
-        width: 100%;
-        height:100%;
-      }
-      /*
-  &::before{content: "";position: absolute;top: 0;left: 0;z-index: 1;pointer-events: none;
-  width: 100%;height: 40vw;background: linear-gradient(180deg, #0D3B79 0%, #0D3B7944 50%, #0D3B7900 100%);}
-  */
-  .splide__track,
-  .splide__list{height: 100%;}
     .slide-item {
       @apply bg-cover;
     flex-basis:100%;
-      height: 100%;
       display: flex;
       text-align: center;
       justify-content:center;
@@ -100,7 +88,7 @@
       img{height: auto; width:size(1315);margin: auto auto 0 auto;
       &.v1{width:100%;}
       }
-      .caption{position: absolute;left: 0;bottom: 0;}
+    // .caption{position: absolute;left: 0;bottom: 0;}
     }
     .splide__pagination{
     //  right: calc(100% + 3em);
@@ -190,7 +178,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: false,
-  autoplay: true,
+  // autoplay: true,
   interval: 5000,
   gap: 0,
   type: 'loop'
@@ -199,7 +187,7 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/0.webp", import.meta.url).href ,
-    caption: "3D鳥瞰環境合成示意圖，僅供參考"
+    caption: "情境示意"
   },
   {
     img:new URL("./s4/1.webp", import.meta.url).href ,

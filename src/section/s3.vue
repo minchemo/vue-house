@@ -32,8 +32,8 @@
 .s3 {
   @apply relative flex  flex-col bg-[#0D3A79] text-[#fff];
   width: 100%;
-  height:size(1050);
-  padding:1em 0 0 0;
+  height:size(1040);
+  padding:0;
   font-size:size(24);
  // gap:6em;
   flex-wrap: wrap;
@@ -44,6 +44,7 @@
   z-index: 3;
   text-align: center;
     font-weight: 400;pointer-events: none;
+    padding:1.9em 0 0 0;
     .title{display: inline-block;
       font-size:size(82);
       font-weight: 700;letter-spacing: 0.1em;
@@ -52,7 +53,7 @@
     .subtitle{
       font-size:size(32);
       font-weight: 700;letter-spacing: 0.1em;
-      margin: .5em auto .1em;
+      margin: .6em auto .3em;
     }
     /*
   .slogo{height:size(45);}
@@ -69,15 +70,12 @@
     top: 0;left: 0;
     margin: 0;
     width: 100%;
-      height:100%;
   &::before{content: "";position: absolute;top: 0;left: 0;z-index: 1;pointer-events: none;
   width: 100%;height: 40vw;background: linear-gradient(180deg, #0D3B79 0%, #0D3B7944 50%, #0D3B7900 100%);}
-    .slide-item {
+
+  .slide-item {
       @apply bg-cover;
-    flex-basis:100%;
-      height: 100%;
-      img{height: 100%; width: 100%;}
-      .caption{position: absolute;left: 0;bottom: 0;}
+    // flex-basis:100%;
     }
     .splide__pagination{
     //  right: calc(100% + 3em);
@@ -113,15 +111,20 @@
       font-size:sizem(15);}
   }
   .slider {
-    height: auto;
+    height: 100%;
     width: sizem(805);
     left:sizem(-215);
-    top: auto;
-    bottom: 0; 
-    &::before{height: 70vw;}
+    &::before{height: 70vw;top: sizem(60);}
     .slide-item {
+      width: 100%;
+      display: flex;
+      align-items:flex-end;
       .caption{left: sizem(220);}
+      img{height: auto; width: 100%;}
     }
+    #splide01-slide05{width:sizem(375);}
+    #splide01-slide06{width:sizem(375);}
+    .splide__list{align-items:stretch;}
     }
 
 /*
@@ -167,7 +170,10 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: false,
-  autoplay: true,
+  autoWidth: true,
+  focus    : 'center',
+  omitEnd  : true,
+ // autoplay: true,
   interval: 5000,
   gap: 0,
   type: 'loop'
@@ -191,11 +197,11 @@ const imgs = [
     caption: "RK1站西基地案模擬圖。圖/高雄市政府捷運工程局"
   },
   {
-    img:new URL("./s3/05.webp", import.meta.url).href ,
+    img:globals.$isMobile()? new URL("./s3/05m.jpg", import.meta.url).href : new URL("./s3/05.webp", import.meta.url).href ,
     caption: "麥當勞"
   },
   {
-    img:new URL("./s3/06.webp", import.meta.url).href ,
+    img:globals.$isMobile()? new URL("./s3/06m.jpg", import.meta.url).href : new URL("./s3/06.webp", import.meta.url).href ,
     caption: "星巴克"
   },
 ]
