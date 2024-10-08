@@ -1,4 +1,4 @@
-const caseName = "微笑寓所"
+const caseName = "淳真年代"
 
 export default {
     meta: {
@@ -39,28 +39,38 @@ export default {
     budget: ["1000-1500萬","1500-2000萬","2000-2500萬","2500-3000萬"],
     
     navList: [{
-        name: "最強增值",
-        target: ".s4",
+        name: "淳真年代",
+        target: ".s1",
+        offset: "0",
+        offsetmo: "0",
+    },{
+        name: "優勢論述",
+        target: ".s2",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "一橋北市",
+        name: "南科論述",
         target: ".s3",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "兩代共融",
+        name: "完整機能",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "四方通行",
+        target: ".s5",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "優質建商",
         target: ".s6",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "水岸人生",
+        name: "雙車美墅",
         target: ".s7",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "房貸瘦身",
-        target: ".s5",
         offset: "-60",
         offsetmo: "0",
     },{

@@ -1,13 +1,11 @@
 <template>
   <article class="s4" ref="s4">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
-    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃" v-if="!isMobile">
-    <img src="./s1/oo.svg" alt="oo" class="oo1" v-if="!isMobile">
+  <div class="bg1 absolute">
+		<img src="./s1/bg.webp"></div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">北士科半價  最甜補漲區</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">好地段×大品牌  增值成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">坐擁5分鐘直達士林燙金地段，北士科半價輕鬆挺進新士林生活圈，加上麗寶集團大品牌效益、未來捷運網路、銀新未來城等利多加持，享受未來紅利增值爆發期。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">城市機能 生活便利翻轉</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">山上國中、山上國小，輕輕漫步皆可抵達，享受完整學區、教育資源。假日散步去山上傳統市場逛逛，是日常的美好；下班行車經善化全聯買食材，煮頓簡單的晚餐，生活就該如此溫暖愜意。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,32 +33,22 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:11em 0 10em 0;
+  padding:15em 0 10em 0;
   font-size:size(19);
   gap:3em;
   flex-wrap: wrap;
-    flex-direction:row-reverse;
-	.eggbg1{position: absolute;
-    display: block;
-    top: size(-50);left:size(-30);width:size(500);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-	.eggbg2{position: absolute;
-    display: block;
-    top: size(870);right:size(-30);width:size(350);
-		transform:translateY(-50%);
-		animation: an 4s ease-in-out infinite alternate;}
-    .oo1{position: absolute;top:size(350);height:size(50);right:size(60);
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
-
-
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
+  .bg1{
+    width: 100%;
+    height: size(3000);
+    top:  size(720);
+    left: 0;
+	pointer-events: none;
+  //opacity: .5;
+  z-index: 1;
+  overflow: hidden;
+  img{width:  size(2670);transform:rotate(-90deg)translateX(-100%);transform-origin: 0 0%}
 }
-  img{width: 100%;position: relative;}}
+
   .main {
     @apply flex;
     margin: 0;
@@ -68,9 +56,6 @@
   flex-direction: column;
   text-align: justify;
 }
-
-
-
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -82,8 +67,8 @@
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     }
   }
 }
@@ -93,48 +78,44 @@
 
 @media screen and (max-width: 767px) {
 
+  .s4 {
+  @apply flex-col;
+    height: auto;
+    padding: 0;
+  font-size:sizem(15);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:0em;
+flex-direction:column-reverse;
 
-.s4 {
-@apply flex-col;
-  height: auto;
-  padding: 0;
-font-size:sizem(15);
-flex-wrap:nowrap;
-margin-bottom:0em;
-gap:0em;
-
-	.eggbg1{
-    top: sizem(-40);left:sizem(-50);width:sizem(400);}
-.img{position: absolute;top:sizem(300);left: auto;
-  right:sizem(-155);width:sizem(260);bottom: auto;}
-
-.main {
-  padding: 0 sizem(32.5);
-  width: 100%;
-}
-
-.txt {margin: 4.4em auto 1.3em;
-}
-
-
-.slider {
-  height: auto;
-  width: 100%;
-
-  .caption {
-  font-size:sizem(12);  
-  right:sizem(5);
-  bottom:sizem(5);
-  }
-  .slide-item {
-    @apply bg-cover;
+  .main {
+    padding: 0 sizem(30);
     width: 100%;
-  flex-basis: auto;
-    height: sizem(250);
-    
+}
+
+.txt {margin: 2em auto 6.5em;
+  width: 100%;
+}
+
+
+  .slider {
+    height: auto;
+    width: 100%;
+
+    .caption {
+    font-size:sizem(12);  
+    right:sizem(5);
+    bottom:sizem(5);
+    }
+    .slide-item {
+      @apply bg-cover;
+      width: 100%;
+    flex-basis: auto;
+      height: sizem(250);
+      
+    }
   }
-}
-}
+  }
 }
 </style>
 <script setup>
@@ -167,16 +148,24 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.webp", import.meta.url).href ,
-    caption: "士林生活圈實景"
+    img:new URL("./s4/1.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
   },
   {
-    img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "士林商圈實景"
+    img:new URL("./s4/2.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
   },
   {
-    img:new URL("./s4/3.webp", import.meta.url).href ,
-    caption: "士林科教館實景"
+    img:new URL("./s4/3.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s4/4.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s4/5.jpg", import.meta.url).href ,
+    caption: "情境示意圖"
   },
 ]
 </script>

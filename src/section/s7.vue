@@ -1,25 +1,28 @@
 <template>
   <article class="s7">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
+    <div class="img">
+      <img src="./s7/0.jpg">
+      <span class="caption">示意圖</span>
+    </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">水岸公園美景 <br v-if="isMobile"> 全室設計師美裝</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">景觀×裝潢  好美成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">緊鄰淡水河畔公園，限量水岸景觀席飽覽壯闊河景，窗景萬千，白天臨摹震撼人心的山水畫作，晚上畫風一轉，增豔而成撫慰心靈的百萬夜景。景美室更美，步入大廳猶如置身精品飯店，全室設計師精緻裝潢傢俱，一卡皮箱開啟質感水岸人生。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">市區小宅價格 住進雙車位透天美墅</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">用市區小宅的價格，入主開闊透天格局。標配雙車位，家人停車再也不煩惱，大空間好規劃，出遊設備輕鬆收納，戶戶套房讓每個家人都有私空間，讓生活可好好舒展，親情更凝聚。下班後就好好休息吧，生活的愜意將成為你人生的動力。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
-          <img :src="img.img" :alt="img.caption">
+  <div class="arrows" v-if="isMobile">
+    <div class="prev" @click="splide.splide.go('<')"></div>
+    <div class="next" @click="splide.splide.go('>')"></div>
+  </div>
+  <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+    <SplideSlide v-for="(img, index) in imgs" :key="index">
+      <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
+    </SplideSlide>
+  </Splide>
+</div>
+
   </article>
 </template>
 
@@ -34,12 +37,12 @@
   font-size:size(18);
   gap:1.5em;
   flex-wrap:nowrap;
-    flex-direction:column-reverse;
-	.eggbg1{position: absolute;
-    display: block;
-    top: size(-200);left:size(0);width:size(1300);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
+    flex-direction:column;
+    .img{position: relative;
+      margin:0 auto -6em auto;
+      img{width: 100%;}
+      .caption{bottom: 7em;right: 6em;}
+    }
   .main {
     @apply flex;
     margin: 0;
@@ -49,28 +52,76 @@
 }
 
 .txt {
-  margin: auto;
+  margin: auto auto 2em;
   width: size(1500);
 }
 
   .slider {
     margin: 0;
-    flex-basis: size(1000);
-      height: size(1000);
+    flex-basis: size(800);
+      height: size(800);
     width: size(1500);
     .slide-item {
       @apply bg-cover;
       width: 100%;
-    flex-basis: size(1500);
-      height: size(1000);
       
     }
 
     .splide__pagination{
-      justify-content: flex-end;
+      justify-content:center;
       bottom: -2em;
+      font-size: size(25);
+      gap: .6em;
+      
+    li {
+      button {
+      &::after{
+      transform-origin: 0% 0;
+    
+    }
+        &::before{transform-origin: 50% 100%;
+          transition: transform .5s,color .3s;}
+      &:hover{
+          color: #ff0;}
+
+        &.is-active{
+        &::before{  transform: scale(1.8);color: #ff0;}
+        &::after{
+          transform: scaleY(3);
+      }}
+      }
+    }
+li:nth-child(1) .splide__pagination__page:before {
+  content: "A1";
+}
+li:nth-child(2) .splide__pagination__page:before {
+  content: "A2";
+}
+li:nth-child(3) .splide__pagination__page:before {
+  content: "A3";
+}
+li:nth-child(4) .splide__pagination__page:before {
+  content: "B1";
+}
+li:nth-child(5) .splide__pagination__page:before {
+  content: "B2";
+}
+li:nth-child(6) .splide__pagination__page:before {
+  content: "D1";
+}
+li:nth-child(7) .splide__pagination__page:before {
+  content: "D2";
+}
+li:nth-child(8) .splide__pagination__page:before {
+  content: "D3";
+}
+li:nth-child(9) .splide__pagination__page:before {
+  content: "E8";
+}
     }
   }
+}
+.splide__pagination {
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -86,15 +137,15 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
 gap:0em;
-background:linear-gradient(135deg, #3F94CA 0%, #71A3A5 20%, #E0C663 50%,#E1A843 70%);
-	.eggbg1{
-    top: sizem(50);left:sizem(100);width:sizem(400);}
 
-  .main {
-    padding: 0 sizem(32.5);
+flex-direction:column-reverse;
+
+    .main {
+    padding: 0 sizem(30);
     width: 100%;
 }
-.txt {margin: 4.4em auto 1.3em;
+.txt {margin: 2em auto 6.5em;
+  width: 100%;
 }
   .slider {
     height: auto;
@@ -146,37 +197,55 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.webp", import.meta.url).href ,
+    img:new URL("./s7/1.jpg", import.meta.url).href ,
+    caption: "A1"
+  },
+  {
+    img:new URL("./s7/2.jpg", import.meta.url).href ,
+    caption: "A2"
+  },
+  {
+    img:new URL("./s7/3.jpg", import.meta.url).href ,
+    caption: "B1"
+  },
+  {
+    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    caption: "B2"
+  },
+  {
+    img:new URL("./s7/5.jpg", import.meta.url).href ,
     caption: "外觀實景經電腦修飾"
   },
   {
-    img:new URL("./s7/2.webp", import.meta.url).href ,
+    img:new URL("./s7/6.jpg", import.meta.url).href ,
     caption: "外觀實景經電腦修飾"
   },
   {
-    img:new URL("./s7/3.webp", import.meta.url).href ,
+    img:new URL("./s7/7.jpg", import.meta.url).href ,
     caption: "外觀實景經電腦修飾"
   },
   {
-    img:new URL("./s7/4.webp", import.meta.url).href ,
-    caption: "社區梯廳實景"
+    img:new URL("./s7/8.jpg", import.meta.url).href ,
+    caption: "外觀實景經電腦修飾"
   },
   {
-    img:new URL("./s7/5.webp", import.meta.url).href ,
-    caption: "社區門面實景"
-  },
-  {
-    img:new URL("./s7/6.webp", import.meta.url).href ,
-    caption: "接待大廳實景"
-  },
-  {
-    img:new URL("./s7/7.webp", import.meta.url).href ,
-    caption: "淡水河畔公園實景"
-  },
-  {
-    img:new URL("./s7/8.webp", import.meta.url).href ,
-    caption: "淡水河畔公園實景"
+    img:new URL("./s7/9.jpg", import.meta.url).href ,
+    caption: "外觀實景經電腦修飾"
   },
 ]
+// const splide = new Splide( '.splide' );
+/*
+splide.on( 'pagination:mounted', function ( data ) {
+  // You can add your class to the UL element
+  data.list.classList.add( 'splide__pagination--custom' );
+
+  // `items` contains all dot items
+  data.items.forEach( function ( item ) {
+    item.button.textContent = String( item.page + 1 );
+  } );
+} );
+
+splide.mount();
+*/
 </script>
 

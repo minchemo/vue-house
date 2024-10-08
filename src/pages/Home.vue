@@ -10,8 +10,8 @@
   </div>
   <!-- loading end -->
    <Nav />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-     <div class="bg">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#3B6E38]">
+     
     <S1 />
     <S2 />
     <S3 />
@@ -20,7 +20,6 @@
     <S6 />
     <S7 />
     <Order />
-    </div>
   <!--
     <S6 />
     <S7 />
@@ -53,7 +52,7 @@
 .home > .bgh{position: fixed;width: 100%;
   top: 0;left: 0;
 }
-.bg{background: linear-gradient(135deg, #3F94CA 0%, #3F94CA 20%, #71A3A5 25%, #E0C663 33%, #E1A843 40%, #E1A843 50%,#E0C663 57%, #71A3A5 63%,#3F94CA 65%,#3F94CA 67%, #71A3A5 72%,#E0C663 78%,#E1A843 83%,#E1A843 85%,#E0C663 90%, #71A3A5 95%);}
+// .bg{background: linear-gradient(135deg, #3F94CA 0%, #3F94CA 20%, #71A3A5 25%, #E0C663 33%, #E1A843 40%, #E1A843 50%,#E0C663 57%, #71A3A5 63%,#3F94CA 65%,#3F94CA 67%, #71A3A5 72%,#E0C663 78%,#E1A843 83%,#E1A843 85%,#E0C663 90%, #71A3A5 95%);}
 img {
   display: inline;
   max-width: unset;
@@ -84,6 +83,7 @@ img {
     margin:0 auto 0.35em;
     line-height: 1.5;
     font-weight: 900;
+    color: #FF0;
   }
   .subtitle{
     font-size: 1.1em;
@@ -100,7 +100,7 @@ img {
   @apply relative;
   z-index: 2;
   .slide-item{
-  img{width: 100%;height: 100%;border-radius: 1em;}
+  img{width: 100%;height: 100%;border-radius: 3em;}
   
   }
   .arrows{
@@ -136,16 +136,26 @@ img {
     color: #fff;
     li {
       button {
-        @apply rounded-full;
-        width: 1em;
-        height: 1em;
+        height: 2em;
+        //background:#0003;
+        flex-direction:column;display: flex;
+    align-items:center;
+        justify-content:flex-end;
+        // @apply rounded-full;
+      &::after{content: "";
+      display: block;
+        width: 3em;
+        height: 3px;
           background:currentColor;
       transition: transform .5s;
-      &:hover{
-          transform: scale(.8);}
+      transform-origin: 0% 100%;
+    
+    }
+      &:hover:after{
+          transform: scaleY(1);}
 
-        &.is-active{
-          transform: scale(1.5);
+        &.is-active::after{
+          transform: scaleY(3);
       }
       }
     }
@@ -162,7 +172,7 @@ img {
 
       .txt {line-height: 1.6;letter-spacing: 0.01em;
   .title{
-    font-size: 1.9em;
+    font-size: 1.8em;letter-spacing: 0em;
   }
   .subtitle{
     font-size: 1.1em;
@@ -215,7 +225,7 @@ import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
-import s4 from "../section/s4.vue"
+//import s4 from "../section/s4.vue"
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
