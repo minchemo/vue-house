@@ -2,16 +2,19 @@
 
 <template>
   <article class="s2">
-    <div class="main">
-      <div class="txt">
-        <p class="desc" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">如何打造永續生存的韌性城市才是解決之道，也是全世界都在努力找尋的解方;看看世界想想台灣，從深耕建築出發，我們要更積極推動地球解方。找出『淨零地球』的三把救地球鑰匙：建築能效標示＋建築碳足跡標示＋智慧健康促進建築，從源頭設計管控，解決因極端氣候造成的問題，實現永續發展近零碳1+能效建築。唯有我們先做好準備才能防範於未然，衷心希望我們的地球與下一代都能更好。</p>
+    <div class="con" v-if="!isMobile">
+      <img src="./s2/t1.svg" alt="t1" class="t1" data-aos="zoom-in" data-aos-delay="0">
+      <img src="./s2/t2.svg" alt="t2" class="t2" data-aos="zoom-in" data-aos-delay="400">
+  </div>
 
-      </div>
-    </div>
-    <div class="timg">
-<img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-<img src="./s1/t3.svg" alt="title" class="t3" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0">
-    </div>
+  <div class="con" v-else>
+        <img src="./s2/t1m.svg" alt="title" class="t1" data-aos="zoom-in"  data-aos-delay="0">
+        <img src="./s2/t2m.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="400">
+        
+  </div>
+
+  <img src="./s2/city.svg" alt="city" class="city" v-if="!isMobile">
+  <img src="./s2/citym.svg" alt="city" class="city" v-else>
 
   </article>
 </template>
@@ -23,7 +26,7 @@
   @apply relative overflow-hidden flex  justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:7em 0 7em 0;
+  padding:7em 0 0 0;
   font-size:size(32);
   gap:4.4em;
   flex-direction: row;
@@ -31,20 +34,39 @@
   flex-wrap: wrap;
 
 
-  .main {
-    margin: auto 0;
-    flex-basis: size(545);
-    .txt{text-align: justify}
-}
-  .timg {
-    @apply flex;
+  .con{
+  gap: size(150);
+  display: flex;
+  margin: 0 0 size(70) 0;
   flex-direction: column;
-    width: size(735);
-    height: auto;margin:.5em 0;
-    text-align: center;justify-content:space-between;
-    .t2{width: size(735);}
-    .t3{width: size(588);margin:auto auto 0;}
+  z-index: 99;
+  position: relative;
+
+
+.t1{
+    width: size(1466);
   }
+
+  .t2{
+    width: size(477);
+  }
+}
+
+
+
+
+  
+
+
+
+  .city{
+    position: absolute;
+    width: size(1920);
+    right: size(0);
+    top: size(0);
+    z-index: 0;
+  }
+    
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -62,19 +84,26 @@
   gap:0;
 
 
-  .main {
-    padding: 0;
-    width: sizem(222);
-    margin: auto auto 4em auto;
-}
-      .txt {
-    line-height: 2.3;
+  .con{gap:sizem(90);  margin: sizem(94) 0  sizem(30) 0;flex-direction:column;
+  img{margin: 0 auto;}
+
+  .t1{
+    width: sizem(242);
   }
-  .timg {
-    margin:.5em auto;
-    width: auto;
-    .t2{width: sizem(295); margin-bottom: 1em;}
-    .t3{width: sizem(238);margin:auto auto 0;}
+
+  .t2{
+    width: sizem(204);
+  }
+
+  }
+  
+  
+
+
+  .city{
+    position: absolute;
+    width: sizem(375);
+    right: sizem(0);
   }
 
 

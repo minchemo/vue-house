@@ -6,26 +6,14 @@
    <img src="./s1/mo.jpg" class="t0">
 
    -->
-  <div class="con" v-if="!isMobile">
-      <div class="left">
-        <img src="./s1/new/t1.svg" alt="title" class="t1" data-aos="zoom-in"  data-aos-delay="200">
-        <img src="./s1/new/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="400">
-        <img src="./s1/new/t3.svg" alt="title" class="t3" data-aos="zoom-in"  data-aos-delay="600">
-      </div>
-      <div class="right">
-        <img src="./s1/new/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-      </div>
-  </div>
 
-  <div class="con" v-else>
-        <img src="./s1/new/t1m.svg" alt="title" class="t1" data-aos="zoom-in"  data-aos-delay="600">
-        <img src="./s1/new/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-        <img src="./s1/new/t2m.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="0">
-        
-  </div>
+   <div class="con flex">
+  <img src="./s1/t1.svg" alt="title " class="t1" data-aos="zoom-in"  data-aos-delay="600" v-if="!isMobile">
+  <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
+  <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in"  data-aos-delay="600">
+</div>
 
-
-
+  <img src="./s1/t3.svg" alt="title" class="t3" data-aos="zoom-in"  data-aos-delay="1200">
   <img src="./s1/city.svg" alt="city" class="city" v-if="!isMobile">
   <img src="./s1/city_m.svg" alt="city" class="city" v-else>
   </article>
@@ -55,52 +43,31 @@
   background-size: cover;
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
 
-.con{
-  gap: size(60);
-  display: flex;
-  margin: 0 0 size(70) 0;
-  flex-direction:row;
-  z-index: 99;
-  position: relative;
-
-img{margin: inherit;}
-}
-
-
-.left{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
+.con{gap: size(60);margin: 0 0 size(70) 0;
+  div{flex-direction:column;margin: 0;}}
+  .logo{
+    width: size(500);
+    }
 
   .t1{
-    width: size(685);
+    width: size(485);
+    left: size(100);
+    top: size(490);
   }
 
   .t2{
-    width: size(496);
+    width: size(484);
+    right: size(100);
+    top: size(490);
   }
 
   .t3{
-    width: size(304);
+    display: flex;
+    width: size(320);
+    margin-bottom: size(56);
+    //right: size(759);
+    //bottom: size(175);
   }
-  
-}
-
-
-.right{
-  display: flex;
-  flex-direction: column;
-
-  .logo{
-    width: size(597);
-    }
-
-}
-
-  
-
-
 
   .city{
     position: absolute;
@@ -170,25 +137,35 @@ animation: ball 5s ease-in-out alternate infinite;}
     max-height: sizem(667);
     font-size:sizem(15);
 
-  .con{gap:sizem(20);margin: 0 0  sizem(94) 0;flex-direction:column;
-  img{margin: 0 auto;}
-  }
+    .con{gap:0;margin: 0 0  sizem(34) 0;flex-direction:column;
+  div{flex-direction:column;margin: 0;}}
   
 
   .logo{
-    width: sizem(291);
+    width: sizem(297);
 
   }  
 
 
   .t1{
-    width: sizem(242);
+    width: sizem(208);
   }
+
+
+
 
   .t2{
-    width: sizem(213);
+    position: absolute;
+    width: sizem(208);
+    left: auto;
+    right: sizem(80);
+    top: sizem(90);
   }
 
+
+  .t3{
+    width: sizem(203);
+  }
     
 
   
