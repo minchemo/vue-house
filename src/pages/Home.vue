@@ -12,7 +12,8 @@
    <Nav />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#3B6E38]">
      
-    <S1 />
+    <S1  
+    />
     <S2 />
     <S3 />
     <S4 />
@@ -229,6 +230,8 @@ import AOS from 'aos';
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
+
+
 
 onMounted(() => {
   window.onload = function () {

@@ -7,12 +7,12 @@
     </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
+      <div class="arrows" v-if="isMobile && imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
@@ -45,11 +45,12 @@
 }
   img{width: 100%;position: relative;}}
   .main {
-    @apply flex;
+    @apply relative flex;
     margin: 0;
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+  z-index: 3;
 }
 
 
@@ -133,21 +134,21 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
 const imgs = [
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
     caption: "情境示意圖"
   },
 ]
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: imgs.length > 1,
+  autoplay: imgs.length > 1,
+  interval: 4000,
+  gap: 10,
+  type: 'loop',
+  drag: imgs.length > 1
+}
 </script>
 

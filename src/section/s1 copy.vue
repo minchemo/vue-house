@@ -9,12 +9,10 @@
 		<img src="./s1/mo.jpg" class="t0">  -->
   <div class="bg1 absolute">
 		<img src="./s1/bg.webp"></div>
-	<div class="txt" v-if="scrollPos < 1000">
-		<!--<img src="./s1/logoan.svg" class="logo" v-if="scrollPos < 1000"> -->
-    
-    <logo class="logo" data-aos="fade-up" data-aos-delay="0" />
-		<img src="./s1/txt.svg" class="t1" data-aos="fade-up" data-aos-delay="200" />
-    <div class="t2" data-aos="fade-up" data-aos-delay="400">繁華轉身 近擁南科</div>
+	<div class="txt">
+		<img src="./s1/logoan.svg" class="logo" v-if="scrollPos < 1000">
+		<img src="./s1/txt.svg" class="t1">
+    <div class="t2">繁華轉身 近擁南科</div>
 	</div>
 
 
@@ -122,8 +120,6 @@
 </style>
 <script setup>
 import { inject,computed, getCurrentInstance, onMounted, ref} from 'vue';
-
-import logo from './s1/logo.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
@@ -132,6 +128,10 @@ const scrollPos = ref(0)
 
 onMounted(() => {
     const ratio = window.innerHeight / window.innerWidth
+
+    // if (!globals.$isMobile() && ratio > 0.46875) {
+    //     higherScreen.value = true
+    // }
 
     window.addEventListener('scroll', (event) => {
         let scroll = window.pageYOffset || document.documentElement.scrollTop;

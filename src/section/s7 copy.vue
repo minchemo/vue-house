@@ -155,19 +155,19 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/1.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "A1"
   },
   {
     img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "A2"
   },
   {
     img:new URL("./s7/3.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "B1"
   },
   {
     img:new URL("./s7/4.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "B2"
   },
   {
     img:new URL("./s7/5.jpg", import.meta.url).href ,

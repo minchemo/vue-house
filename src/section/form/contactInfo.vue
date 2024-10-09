@@ -1,8 +1,7 @@
 <template>
   <div>
-  <div class="contact-info-img">
-    <img src="@/section/s1/bg3.webp" class="eggbg" alt="蛋黃">
-</div>
+  <div class="bg_contact absolute">
+		<img src="@/section/s1/bg.webp"></div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
@@ -134,15 +133,26 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#0466CA;}
-.hover\:bg-color2:hover{background-color:#014d99;}
-
+.bg-color1{background:#050;}
+.hover\:bg-color2:hover{background-color:#020;}
+/*
 
 .contact-info-img{
   @apply relative;
   height: 0;z-index: 2;
   top: -1.5vw;
   img{width: 64%;}
+}*/
+
+.bg_contact{
+    width: 104%;
+    bottom: -8vw;
+    right: -4%;
+	pointer-events: none;
+  //opacity: .5;
+  z-index: 1;
+  overflow: hidden;
+  img{width: 100%;transform: scale(-1)translateY(-8.4%)}
 }
 .contact-info {
   padding: size(105) size(0) size(55) size(0);
@@ -153,13 +163,13 @@
   // background: #045147;
 
   .logo {
-    width: size(540);
-    height: size(172);
+    width: size(600);
+    height: size(220);
     background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(30) auto;
+    margin: size(0) auto;
   }
 
   .contact-item-box {
@@ -170,8 +180,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#0466CA;
-      color: #FFF;
+      background:#fe0;
+      color: #000;
       width: 100%;
     font-weight: 700;
       flex: 1;
@@ -188,7 +198,7 @@
       gap: 1em;
 
       &:hover {
-      background:#014d99;
+      background:#030;
         color: #fff;
 
         img {
@@ -200,7 +210,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
         transition: all .5s;
         margin: 0;
       }
@@ -239,10 +249,10 @@
   //    background-color: #9B1E44;
       border-left-width: 0;
     border-radius: 0 .5em .5em 0;
-        color: #FFF;
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
 
         &:hover {
@@ -267,12 +277,32 @@
 
 @media screen and (max-width:768px) {
 
-  
+  /*
 .contact-info-img{
   height: 0;z-index: 2;
   top: 70vw;
   img{width: 200%;margin:-50%;}
 }
+  */
+
+.bg_contact{
+    width: 194%;
+    bottom: 100vw;
+    right: -50%;
+	pointer-events: none;
+  //opacity: .5;
+  z-index: 1;
+  overflow: hidden;
+  img{width: 100%;transform: scale(-1)translateY(-8.4%)} 
+  &::before{
+      content: "";display: block;width: 100%;height: 30%;position: absolute;
+      bottom: 0;left: 0;
+      z-index: 2;
+      background: linear-gradient(to bottom, #3B6E3800 0%,#3B6E38 100%);
+  }
+  //#3B6E38
+}
+
   .mo-contact-info {
     z-index: 99;
     position: fixed;
@@ -282,13 +312,13 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#0051a1;
+    background:#003C00;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(14);
       color: #fff;
-      border-left:1px solid #fff7;
+      border-left:1px solid #fff4;
     font-weight: 700;
       img {
         margin-bottom: sizem(5);
@@ -314,9 +344,9 @@
   background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(257);
+      width: sizem(310);
       height: sizem(140);
-    margin: sizem(70) auto sizem(10) auto;
+    margin: sizem(0) auto sizem(25) auto;
      // margin-bottom: sizem(47);
     }
 

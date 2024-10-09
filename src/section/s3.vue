@@ -9,7 +9,7 @@
     </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
+      <div class="arrows" v-if="isMobile && imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -33,15 +33,21 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:9.5em 0 6em 0;
+  padding:9.5em 0 9em 0;
   font-size:size(19);
   gap:3em;
   flex-wrap: wrap;
     flex-direction:row-reverse;
+    &::before{
+      content: "";display: block;width: 100%;height: 100%;position: absolute;
+      bottom: 0;left: 0;
+      z-index: 2;
+      background: linear-gradient(to bottom, #00330000 0%,#00330099 100%);
+  }
 
     .bg1{
     width: 136%;
-    bottom: -3vw;
+    bottom: 0vw;
     right: -45%;
 	pointer-events: none;
   //opacity: .5;
@@ -92,6 +98,16 @@ flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
 flex-direction:column-reverse;
+    .bg1{
+    width: 270%;
+    bottom: 0vw;
+    right: -120%;
+	pointer-events: none;
+  //opacity: .5;
+  z-index: 1;
+  overflow: hidden;
+  img{width: 100%;transform: scale(-1)translateY(-8.4%)}
+}
 
 
 .main {
@@ -140,15 +156,6 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
 
 const imgs = [
   {
@@ -156,5 +163,15 @@ const imgs = [
     caption: "情境示意圖"
   },
 ]
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: imgs.length > 1,
+  autoplay: imgs.length > 1,
+  interval: 4000,
+  gap: 10,
+  type: 'loop',
+  drag: imgs.length > 1
+}
 </script>
 

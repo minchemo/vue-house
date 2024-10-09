@@ -9,12 +9,12 @@
     </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
+      <div class="arrows" v-if="isMobile && imgs.length > 1">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
@@ -33,14 +33,14 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:15em 0 10em 0;
+  padding:10em 0 10em 0;
   font-size:size(19);
   gap:3em;
   flex-wrap: wrap;
   .bg1{
     width: 100%;
     height: size(3000);
-    top:  size(720);
+    top:  size(670);
     left: 0;
 	pointer-events: none;
   //opacity: .5;
@@ -50,11 +50,12 @@
 }
 
   .main {
-    @apply flex;
+    @apply relative flex;
     margin: 0;
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+  z-index: 3;
 }
   .slider {
     margin: 0;
@@ -87,6 +88,14 @@
   margin-bottom:0em;
   gap:0em;
 flex-direction:column-reverse;
+
+  .bg1{
+    height: sizem(1500);
+    top:  sizem(450);
+  img{width:  sizem(1300);
+  }
+}
+
 
   .main {
     padding: 0 sizem(30);
@@ -136,15 +145,6 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
 
 const imgs = [
   {
@@ -168,5 +168,15 @@ const imgs = [
     caption: "情境示意圖"
   },
 ]
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: imgs.length > 1,
+  autoplay: imgs.length > 1,
+  interval: 4000,
+  gap: 10,
+  type: 'loop',
+  drag: imgs.length > 1
+}
 </script>
 

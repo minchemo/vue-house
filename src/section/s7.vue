@@ -6,17 +6,17 @@
     </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">市區小宅價格 住進雙車位透天美墅</h3>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">市區小宅價格<br  v-if="isMobile"> 住進雙車位透天美墅</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">用市區小宅的價格，入主開闊透天格局。標配雙車位，家人停車再也不煩惱，大空間好規劃，出遊設備輕鬆收納，戶戶套房讓每個家人都有私空間，讓生活可好好舒展，親情更凝聚。下班後就好好休息吧，生活的愜意將成為你人生的動力。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
-  <div class="arrows" v-if="isMobile">
+      <div class="arrows" v-if="isMobile && imgs.length > 1">
     <div class="prev" @click="splide.splide.go('<')"></div>
     <div class="next" @click="splide.splide.go('>')"></div>
   </div>
   <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-    <SplideSlide v-for="(img, index) in imgs" :key="index">
+    <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
       <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
     </SplideSlide>
@@ -64,6 +64,7 @@
     .slide-item {
       @apply bg-cover;
       width: 100%;
+      .caption{color: #000}
       
     }
 
@@ -121,8 +122,6 @@ li:nth-child(9) .splide__pagination__page:before {
     }
   }
 }
-.splide__pagination {
-}
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -136,15 +135,19 @@ li:nth-child(9) .splide__pagination__page:before {
   font-size:sizem(15);
   flex-wrap:nowrap;
   margin-bottom:0em;
-gap:0em;
+gap:0em;z-index: 3;
 
-flex-direction:column-reverse;
+flex-direction:column;
+    .img{
+      margin:0 auto -1em auto;
+      .caption{bottom: 2em;right: 3em;}
+    }
 
     .main {
     padding: 0 sizem(30);
     width: 100%;
 }
-.txt {margin: 2em auto 6.5em;
+.txt {margin: 2em auto 3em;
   width: 100%;
 }
   .slider {
@@ -153,15 +156,15 @@ flex-direction:column-reverse;
 
     .caption {
     font-size:sizem(12);  
-    right:sizem(5);
+    right:sizem(35);
     bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
-      
+     // height: sizem(250);
+     img{width: 85%;margin: auto;display: block;border-radius:1.3em;}
     }
   }
   }
@@ -185,67 +188,53 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
 const imgs = [
   {
     img:new URL("./s7/1.jpg", import.meta.url).href ,
-    caption: "A1"
+    caption: "格局家配參考示意圖"
   },
   {
     img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "A2"
+    caption: "格局家配參考示意圖"
   },
   {
     img:new URL("./s7/3.jpg", import.meta.url).href ,
-    caption: "B1"
+    caption: "格局家配參考示意圖"
   },
   {
     img:new URL("./s7/4.jpg", import.meta.url).href ,
-    caption: "B2"
+    caption: "格局家配參考示意圖"
   },
   {
     img:new URL("./s7/5.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "格局家配參考示意圖"
   },
   {
     img:new URL("./s7/6.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "格局家配參考示意圖"
   },
   {
     img:new URL("./s7/7.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "格局家配參考示意圖"
   },
   {
     img:new URL("./s7/8.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "格局家配參考示意圖"
   },
   {
     img:new URL("./s7/9.jpg", import.meta.url).href ,
-    caption: "外觀實景經電腦修飾"
+    caption: "格局家配參考示意圖"
   },
 ]
-// const splide = new Splide( '.splide' );
-/*
-splide.on( 'pagination:mounted', function ( data ) {
-  // You can add your class to the UL element
-  data.list.classList.add( 'splide__pagination--custom' );
-
-  // `items` contains all dot items
-  data.items.forEach( function ( item ) {
-    item.button.textContent = String( item.page + 1 );
-  } );
-} );
-
-splide.mount();
-*/
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: imgs.length > 1,
+  autoplay: imgs.length > 1,
+  interval: 4000,
+  gap: 10,
+  type: 'loop',
+  drag: imgs.length > 1
+}
 </script>
 

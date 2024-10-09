@@ -2,8 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
+      <div class="order-title font-['Noto_Serif_TC',serif] text-center">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center" v-html="$isMobile()?info.order.subTitle_mo:info.order.subTitle"></div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -24,25 +24,25 @@
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
            <option value="" selected disabled>請選擇房型</option> 
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
           <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
            <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value">
+            <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
           <label class="row"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value">
+            <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
           </select></label>
@@ -70,7 +70,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '即刻預約' }}
+        {{ sending? '發送中..': '確認送出' }}
       </div>
 
       <!-- Contact Info -->
@@ -109,31 +109,11 @@
   width: 100%;
   padding-top: 0;
   
-
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
-
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #fff;
-    padding-top:2em;
+    color: #ff0;
+    padding-top:1em;
   }
 
   .order-title-img {
@@ -184,23 +164,23 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #ffffff;border: 1px solid #CCC;//color: #000;
+    .row{background: #0203;border: 1px solid #fff9;//color: #000;
     font-weight: 500;
       display: flex;width: 100%;
       
     align-items:center;
       > span{
-        color: #000;
+        color: #fff;
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        > span{color: #ff0;font-size: 12px;}
       }
       input,select{background:none;flex: 1;}
       option{color: #666;}
       select{background: url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
-      //filter: brightness(0) invert(1);
+      filter: brightness(0) invert(1);
 
       &:focus{
         background-position:calc(100% - .5em) 0%;
@@ -214,7 +194,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#0466CA;
+    background:#020c;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -269,13 +249,6 @@
       margin-bottom: sizem(22);
     } */
 
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
-
     .cus-divider {
       margin: 0 auto;
       width: sizem(117);
@@ -286,7 +259,7 @@
 
     .order-title {
       font-size: sizem(25);
-      // padding-top:4.5em;
+      padding-top:3em;
     }
     .order-subTitle{
       font-size: sizem(13);
@@ -346,13 +319,16 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, onMounted } from "vue"
+import { ref, reactive, watch, onMounted, getCurrentInstance} from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
 
 const sending = ref(false)
+
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
 
 const formData = reactive({
   name: "",
