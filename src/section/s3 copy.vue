@@ -1,18 +1,26 @@
 <template>
   <article class="s3" ref="s3">
-    <img src="./s3/0.jpg" class="t0">
-    <div class="txt">
-      <img src="./s3/en.svg" class="en">
-      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">岡山六大 利多建設</h3>
-      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">軌道經濟 讓世界看見岡山 </h4>
-      <p class="desc" data-aos="fade-up" data-aos-delay="200">岡山六大利多，高雄城市輕移。<br>
-        隨著高雄捷運RK1岡山站正式通車，<br>
-        雙鐵共構引領岡山進入軌道經濟時代。<br>
-        岡山站聯開案、高醫岡山分院、87期重劃區、<br>
-        岡山區行政中心(機15)、第二交流道...等<br>
-        諸多前瞻項目，讓岡山成為世界焦點。</p>
+    <div class="slider" data-aos="fade-up" data-aos-delay="400">
+      <div class="arrows">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
+      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
+          <img :src="img.img" :alt="img.caption">
+      <span class="caption">{{ img.caption }}</span>
+        </SplideSlide>
+      </Splide>
     </div>
-    <div></div>
+      <div class="txt">
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">住岡山市心 享站前商圈</h3>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">S科技廊帶效應 重大建設集結岡山</h4>
+        <p v-if="isMobile" class="desc" data-aos="fade-up" data-aos-delay="200">「岡山車站TOD聯開案」延伸線捷運紅線，全方位強化北高交通動脈，「岡山87期重劃」未來隱富聚落，比肩美術館特區，更勝高雄農16區域利多集合，引領北高經濟量能，岡山未來蓄勢待發。</p>
+<p v-else class="desc" data-aos="fade-up" data-aos-delay="200">「岡山車站TOD聯開案」延伸線捷運紅線，全方位強化北高交通動脈<br>
+「岡山87期重劃」未來隱富聚落，比肩美術館特區，更勝高雄農16<br>
+區域利多集合，引領北高經濟量能，岡山未來蓄勢待發。</p>
+      </div>
+
   </article>
 </template>
 
@@ -22,15 +30,13 @@
 
 
 .s3 {
-  @apply relative flex  flex-col  text-[#4D4D4D];
+  @apply relative flex  flex-col bg-[#0D3A79] text-[#fff];
   width: 100%;
-  height:size(1080);
+  height:size(1040);
   padding:0;
   font-size:size(24);
+ // gap:6em;
   flex-wrap: wrap;
-  background-image:url("./s3/bg.jpg");
-  background-size: cover;
-  .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
   
 
 .txt {
@@ -38,21 +44,17 @@
   z-index: 3;
   text-align: center;
     font-weight: 400;pointer-events: none;
-    padding:4.3em 0 0 0;
-    .en{filter: drop-shadow(0px 0px 10px rgba(76, 84, 135, 0.50));
-      height: 4.75em;display: block;margin: auto auto .5em auto;
-    }
+    padding:1.9em 0 0 0;
     .title{display: inline-block;
-      font-size:size(82);width: size(970);
+      font-size:size(82);
       font-weight: 700;letter-spacing: 0.1em;
-      border-bottom: 1px solid currentColor;
+      border-bottom: 1px solid #fff;
     }
     .subtitle{
       font-size:size(32);
       font-weight: 700;letter-spacing: 0.1em;
-      margin: .1em auto 0;
+      margin: .6em auto .3em;
     }
-    .desc{position: absolute;text-align: justify;letter-spacing: 0.06em;font-weight: 700;left: size(220);top:size(550);}
     /*
   .slogo{height:size(45);}
   .title{
@@ -68,7 +70,8 @@
     top: 0;left: 0;
     margin: 0;
     width: 100%;
-  //&::before{content: "";position: absolute;top: 0;left: 0;z-index: 1;pointer-events: none;  width: 100%;height: 40vw;background: linear-gradient(180deg, #0D3B79 0%, #0D3B7944 50%, #0D3B7900 100%);}
+  &::before{content: "";position: absolute;top: 0;left: 0;z-index: 1;pointer-events: none;
+  width: 100%;height: 40vw;background: linear-gradient(180deg, #0D3B79 0%, #0D3B7944 50%, #0D3B7900 100%);}
 
   .slide-item {
       @apply bg-cover;
