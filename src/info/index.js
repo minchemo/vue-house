@@ -36,7 +36,7 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "感謝首波預約貴賓<br>十月賞屋即將公佈",
+        title: "感謝首波預約貴賓<br>賞屋時間另行公布",
         subTitle: "",
         //subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
