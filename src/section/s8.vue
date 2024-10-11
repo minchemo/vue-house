@@ -14,7 +14,6 @@
           type: 'loop',
           autoWidth: true,
           focus: 'center',
-          drag: 'free',
         }"
       >
         <SplideSlide

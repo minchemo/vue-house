@@ -465,7 +465,7 @@ const onRecaptchaUnVerify = () => {
   formData.r_verify = false
 }
 
-const selectedDate = ref(new Date())
+const selectedDate = ref(new Date('2025-01-02'))
 const calendarAttributes = ref([
   {
     highlight: true,
