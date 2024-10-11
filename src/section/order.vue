@@ -145,7 +145,7 @@
   background: #000;
 
   .form {
-    @apply relative z-[100];
+    @apply relative z-[98];
     width: size(788);
     gap: size(27.8);
     @apply grid grid-cols-2;

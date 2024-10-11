@@ -45,6 +45,8 @@
   .t {
     @apply flex;
     gap: size(135);
+    z-index: 99;
+    position: relative;
     div {
       @apply text-white;
       &:nth-child(1) {
