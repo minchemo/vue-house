@@ -5,7 +5,7 @@
 #$case_code = "jw";特殊案使用
 $src =$_SERVER['SERVER_NAME']; 
 $case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
-$case_code = "one-skyline";
+$case_code = "one-skyline-new";
 
 # PDO DB 連線 Start
     $pdo=new pdo('mysql:host=localhost;dbname=htw12_web','htw12','3hdaiU813Q');
@@ -31,6 +31,9 @@ $utm_campaign = isset($_POST['utm_campaign']) ? $_POST['utm_campaign'] : '';
 $datetime     = date ("Y-m-d H:i:s" , mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y'))) ;
 $room_type    = isset($_POST['room_type']) ? $_POST['room_type'] : '';
 $budget       = isset($_POST['budget']) ? $_POST['budget'] : '';
+$reservation_date       = isset($_POST['reservation_date']) ? $_POST['reservation_date'] : '';
+$reservation_time       = isset($_POST['reservation_time']) ? $_POST['reservation_time'] : '';
+$reservation_count       = isset($_POST['reservation_count']) ? $_POST['reservation_count'] : '';
     
 # 好站 hj 客製資料：可聯絡時間
 $time_start        = isset($_POST['time_start']) ? $_POST['time_start'] : '';
@@ -263,7 +266,7 @@ $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>購屋預算：".$budget."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>購屋預算：".$budget."<BR>預約日期：".$reservation_date."<BR>預約時段：".$reservation_time."<BR>預約人數：".$reservation_count."<BR>留言：".$msg."<BR>備註："."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
@@ -294,6 +297,9 @@ $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
             $url .= "&utm_campaign=".$utm_campaign;
             $url .= "&case_code=".$case_code;
             $url .= "&reservation_datetime=".$datetime;
+            $url .= "&reservation_date=".$reservation_date;
+            $url .= "&reservation_time=".$reservation_time;
+            $url .= "&reservation_count=".$reservation_count;
 
             // $ch = curl_init();
             // curl_setopt($ch,CURLOPT_URL,$url);
