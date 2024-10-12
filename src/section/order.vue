@@ -36,6 +36,8 @@
           <div class="calendar-bar">
             <VDatePicker
               v-model="selectedDate"
+              :min-date="minDate"
+              :max-date="maxDate"
               :attributes="calendarAttributes"
             >
               <template #default="{ togglePopover }">
@@ -465,7 +467,9 @@ const onRecaptchaUnVerify = () => {
   formData.r_verify = false
 }
 
-const selectedDate = ref(new Date('2025-01-02'))
+const minDate = ref(new Date("2025-01-02"))
+const maxDate = ref(new Date("2025-01-26"))
+const selectedDate = ref(new Date("2025-01-02"))
 const calendarAttributes = ref([
   {
     highlight: true,
