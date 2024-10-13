@@ -606,7 +606,7 @@ const send = () => {
   /// 日期預約
   presend.append("reservation_date", formData.reservation.date)
   presend.append("reservation_time", formData.reservation.time)
-  presend.append("reservation_count", formData.reservation.count)
+  presend.append("reservation_count", formData.reservation.vistor_count)
   presend.delete("reservation")
   /// 日期預約 - end
 
@@ -638,7 +638,7 @@ const send = () => {
       &msg=${formData.msg}
       &reservation_date=${formData.reservation.date}
       &reservation_time=${formData.reservation.time}
-      &reservation_count=${formData.reservation.count}
+      &reservation_count=${formData.reservation.vistor_count}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
