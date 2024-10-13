@@ -60,7 +60,7 @@
               v-for="(r, i) in reservations"
               :key="i"
               :class="{
-                active: r.slots > 0,
+                active: r.slots < MAX_COUNT,
                 selected: formData.reservation.time == r.time,
               }"
               @click="onSelectSlots(r)"
@@ -481,6 +481,7 @@ const validReservationTime = ["10:00", "13:00", "15:00", "17:00"]
 const reservations = reactive(
   validReservationTime.map((item) => ({ date: "", time: item, slots: 0 }))
 )
+const MAX_COUNT = 10
 
 watch(
   () => selectedDate.value,
@@ -496,7 +497,7 @@ onMounted(() => {
 const setAllReservationsDate = (dates) => {
   const dates_ = []
   dates.forEach((date) => {
-    if (date.count > 0) {
+    if (date.count < MAX_COUNT) {
       const datetime = date.reservation_datetime
       const reservationTime = date.reservation_time
       const isValidTime = validReservationTime.includes(reservationTime)
@@ -525,9 +526,10 @@ const getSlots = async () => {
   const data = await response.json()
   slots.value = data
   setAllReservationsDate(data)
+  checkSlots(selectedDate.value)
 }
 
-const checkSlots = (date) => {
+const checkSlots = (date) => {  
   formData.reservation.time = ""
   formData.reservation.date = ""
 
@@ -552,6 +554,8 @@ const checkSlots = (date) => {
 }
 
 const onSelectSlots = (data) => {
+  console.log(data)
+
   if (data.date == "") {
     toast.error(`該時段不開放預約或已額滿`)
     return
@@ -598,6 +602,13 @@ const send = () => {
   presend.append("utm_medium", utmMedium)
   presend.append("utm_content", utmContent)
   presend.append("utm_campaign", utmCampaign)
+
+  /// 日期預約
+  presend.append("reservation_date", formData.reservation.date)
+  presend.append("reservation_time", formData.reservation.time)
+  presend.append("reservation_count", formData.reservation.count)
+  presend.delete("reservation")
+  /// 日期預約 - end
 
   //有未填寫
   if (unfill.length > 0) {
