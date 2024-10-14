@@ -4,13 +4,11 @@
     <div class="t">
       <div class="t1">
         感謝您預約《AI慕光城》<br />
-        我們誠摯期待您的光臨，<br
-          v-if="isMobile"
-        />請在入場時向工作人員出示此頁面。
+        專人會盡快與您聯繫
       </div>
-      <div class="t2">{{ reservationDate }}</div>
+      <!--div class="t2">{{ reservationDate }}</div>
       <div class="t3">{{ reservationTime }}</div>
-      <div class="t4">高雄市前鎮區凱旋四路688號</div>
+      <div class="t4">高雄市前鎮區凱旋四路688號</div-->
     </div>
   </div>
 </template>
