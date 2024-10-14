@@ -453,6 +453,7 @@ const send = () => {
 
   if (pass && !sending.value) {
     sending.value = true
+    onFormSubmit()
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -473,6 +474,7 @@ const send = () => {
       }
     );
 
+
     fetch("contact-form.php", {
       method: "POST",
       body: presend,
@@ -482,6 +484,7 @@ const send = () => {
       }
       sending.value = false
     });
+
 
 
     // toast.success(`表單已送出，感謝您的填寫`)
