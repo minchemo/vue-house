@@ -139,7 +139,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #FFF;
+    color: #DD5510;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
