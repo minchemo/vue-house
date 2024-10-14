@@ -7,8 +7,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption" :class="['v'+ (index + 1)]">
+        <SplideSlide :class="['slide-item v'+ (index + 1)]" class="slide-item" v-for="(img, index) in imgs" :key="img">
+          <img :src="img.img" :alt="img.caption">
           <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
@@ -16,11 +16,11 @@
 
     <!-- Conditionally applying 'v1' class if on the first slide -->
     <div :class="['txt', currentSlideIndex === 0 ? 'v1' : '']">
-      <img src="./s8/en.svg" class="en">
-      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">國家級市醫特區<br>
+      <img src="./s8/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
+      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">國家級市醫特區<br>
         職醫菁英新聚落</h3>
-        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100" v-if="!$isMobile()">高雄市立岡山醫院╳高醫岡山醫院╳國軍總醫院岡山分院</h4>
-        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100" v-else>高雄市立岡山醫院<br>高醫岡山醫院<br>國軍總醫院岡山分院</h4>
+        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400" v-if="!$isMobile()">高雄市立岡山醫院╳高醫岡山醫院╳國軍總醫院岡山分院</h4>
+        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="600" v-else>高雄市立岡山醫院<br>高醫岡山醫院<br>國軍總醫院岡山分院</h4>
       <p class="desc" data-aos="fade-up" data-aos-delay="200">高雄首間捷運共構醫院落成岡山，三大醫院匯聚<br>
         醫療、交通雙重優勢，晉升醫療資源最完整的首善之區。</p>
         <img src="./s8/sen.svg" class="sen">
@@ -37,7 +37,7 @@
 .s8 {
   @apply relative flex  flex-col text-[#fff];
   width: 100%;
-  height:size(1070);
+  height:size(1060);
   padding:0;
   font-size:size(24);
  // gap:6em;
@@ -53,8 +53,8 @@
     color: #000;transition: transform .5s;
     filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
 
-      .en{width: size(590);display: block;transition:opacity .5s,margin .5s;opacity: .2;margin:1.5em auto -2.5em;}
-    .title{display: inline-block;transition:font-size .5s;
+      img.en{width: size(590);display: block;opacity: .2;margin:1.5em auto -2.5em;}
+    .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
       border-bottom: 1px solid #000;
@@ -71,7 +71,7 @@
     &.v1{
       filter: invert(0);
       transform: translateY(size(210));
-      .en{opacity: 1;margin:0 auto .7em;filter: invert(65%) sepia(38%) saturate(460%) hue-rotate(145deg) brightness(86%) contrast(88%);}
+      img.en{opacity: 1;margin:0 auto .7em;filter: invert(65%) sepia(38%) saturate(460%) hue-rotate(145deg) brightness(86%) contrast(88%);}
     .title{
       font-size:size(82);border-bottom: 1px solid #000;padding: 0 0 .2em;
       br{display:block;}
@@ -98,14 +98,18 @@
       text-align: center;
       justify-content:center;
       align-items:flex-end;
-      img{height: auto; width:size(1315);margin: auto auto size(20) auto;
+      img{height: auto; width:size(1315);margin: auto auto 0 auto;
       
+  }
+    .caption{position: absolute;left:size(300);bottom: .5em;}
     @media screen and (min-width: 768px) {
-      &.v1{width:100%;}
+      &.v1{
+        img{width:100%;
+        }
+        .caption{left:.5em;bottom: .5em;}
     }
   }
-    // .caption{position: absolute;left: 0;bottom: 0;}
-    }
+}
     .splide__pagination{
     //  right: calc(100% + 3em);
       justify-content: flex-end;
@@ -134,7 +138,7 @@
   .txt {
     width:sizem(290);
     margin:0 auto auto auto;
-    .en{width:sizem(245);opacity: 1;margin:0em auto 1.5em;}
+    img.en{width:sizem(245);opacity: 1;margin:0em auto 1.5em;}
 
     .title{
       font-size:sizem(28);
@@ -210,15 +214,15 @@ const imgs = [
   {
     img:new URL("./s8/1.jpg", import.meta.url).href ,
   //  img:isMobile ?new URL("./s4/1m.webp", import.meta.url).href :new URL("./s4/1.webp", import.meta.url).href,
-    caption: ""
+    caption: "高雄市立岡山醫院"
   },
   {
     img:new URL("./s8/2.jpg", import.meta.url).href ,
-    caption: "岡山新行政中心模擬圖圖/高雄市府發展局"
+    caption: "高醫岡山分院"
   },
   {
     img:new URL("./s8/3.jpg", import.meta.url).href ,
-    caption: "第87期市地重劃區。圖/高雄市府地政局"
+    caption: "國軍高雄總醫院岡山分院 "
   },
 ]
 </script>

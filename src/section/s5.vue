@@ -7,8 +7,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption" :class="['v'+ (index + 1)]">
+        <SplideSlide :class="['slide-item v'+ (index + 1)]" class="slide-item" v-for="(img, index) in imgs" :key="img">
+          <img :src="img.img" :alt="img.caption">
           <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
@@ -16,10 +16,10 @@
 
     <!-- Conditionally applying 'v1' class if on the first slide -->
     <div :class="['txt', currentSlideIndex === 0 ? 'v1' : '']">
-      <img src="./s4/en.svg" class="en">
-      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">科技S廊道 置產前瞻視角</h3>
-      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">北高科技新都心</h4>
-      <p class="desc" data-aos="fade-up" data-aos-delay="200">
+      <img src="./s4/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
+      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">科技S廊道 置產前瞻視角</h3>
+      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400">北高科技新都心</h4>
+      <p class="desc" data-aos="fade-up" data-aos-delay="600">
         岡山鑽石級前景，S廊道正核心，世界級台積電<br>橋科、白埔產業園區國家級重劃，北高未來蓄勢待發</p>
     </div>
   </article>
@@ -34,7 +34,7 @@
 .s5 {
   @apply relative flex  flex-col text-[#fff];
   width: 100%;
-  height:size(1070);
+  height:size(1060);
   padding:0;
   font-size:size(24);
  // gap:6em;
@@ -50,8 +50,8 @@
     color: #000;transition: transform .5s;
     filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
 
-      .en{width: size(945);display: block;transition:opacity .5s,margin .5s;opacity: .2;margin:2em auto -2.5em;}
-    .title{display: inline-block;transition:font-size .5s;
+      img.en{width: size(945);display: block;opacity: .2;margin:2em auto -2.5em;}
+    .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
     //  border-bottom: 1px solid #000
@@ -65,7 +65,7 @@
     &.v1{
       filter: invert(1);
       transform: translateY(size(390));
-      .en{opacity: 1;margin:0 auto .7em;}
+      img.en{opacity: 1;margin:0 auto .7em;}
     .title{
       font-size:size(82);border-bottom: 1px solid #000;
     }
@@ -91,12 +91,16 @@
       align-items:flex-end;
       img{height: auto; width:size(1315);margin: auto auto 0 auto;
       
+  }
+    .caption{position: absolute;left:size(300);bottom: .5em;}
     @media screen and (min-width: 768px) {
-      &.v1{width:100%;}
+      &.v1{
+        img{width:100%;
+        }
+        .caption{left:.5em;bottom: .5em;}
     }
   }
-    // .caption{position: absolute;left: 0;bottom: 0;}
-    }
+}
     .splide__pagination{
     //  right: calc(100% + 3em);
       justify-content: flex-end;
@@ -125,7 +129,7 @@
   .txt {
     width:sizem(310);
     margin:0 auto;
-    .en{width:sizem(300);opacity: 1;margin:2em auto .5em;}
+    img.en{width:sizem(300);opacity: 1;margin:2em auto .5em;}
 
     .title{
       font-size:sizem(25);
@@ -145,10 +149,14 @@
     bottom:sizem(30);
     &::before{height: 70vw;}
     .slide-item {width:100%;
+
       img{ width:100%;margin: 0 auto auto auto;
-        &.v2{width:85%;}
       }
       .caption{left:.5em;font-size:sizem(12);bottom: 1em;}
+      
+      &.v2{
+        img{ width:85%;}
+      }
     }
     }
 
@@ -189,7 +197,7 @@ const imgs = [
     caption: "情境示意"
   },
   {
-    img:isMobile ?new URL("./s4/1m.webp", import.meta.url).href :new URL("./s4/1.webp", import.meta.url).href,
+    img:globals.$isMobile() ?new URL("./s4/1m.webp", import.meta.url).href :new URL("./s4/1.webp", import.meta.url).href,
     caption: ""
   },
   {

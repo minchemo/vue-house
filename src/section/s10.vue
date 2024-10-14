@@ -18,10 +18,10 @@
 
     <!-- Conditionally applying 'v1' class if on the first slide -->
     <div :class="['txt', currentSlideIndex === 0 ? 'v1' : '']">
-      <img src="./s10/en.svg" class="en">
-      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">青年之夢，所向未來</h3>
-        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">純白之境：定義岡山市心</h4>
-      <p class="desc" data-aos="fade-up" data-aos-delay="200">以流暢美學符號，串聯站前價值，<br>
+      <img src="./s10/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
+      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">青年之夢，所向未來</h3>
+        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400">純白之境：定義岡山市心</h4>
+      <p class="desc" data-aos="fade-up" data-aos-delay="600">以流暢美學符號，串聯站前價值，<br>
         以全球豪宅標準，起筆生而典雅的純白</p>
     </div>
   </article>
@@ -36,9 +36,9 @@
 .s10 {
   @apply relative flex  flex-col text-[#fff];
   width: 100%;
-  height:size(1070);
+  height:size(1060);
   padding:0;
-  font-size:size(24);
+  font-size:size(24);overflow: hidden;
  // gap:6em;
   flex-wrap: wrap;
   background:radial-gradient(82% 54% at 33.5% 8%, #FFF 0%, #B0D5E1 57%, #78B7CB 100%);

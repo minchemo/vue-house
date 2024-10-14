@@ -16,10 +16,10 @@
 
     <!-- Conditionally applying 'v1' class if on the first slide -->
     <div :class="['txt', currentSlideIndex === 0 ? 'v1' : '']">
-      <img src="./s7/en.svg" class="en">
-      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">時尚輕購物<br> 文青潮流最錢線</h3>
-      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">樂購廣場╳秀泰影城</h4>
-     <p class="desc" data-aos="fade-up" data-aos-delay="200">時尚不只一面，潮流不拘一格，<br v-if="!$isMobile()">南台灣最大4K超級巨幕影城，超大型複合式商場，<br v-if="!$isMobile()">樂購廣場成為心中的時尚標籤，享受無與倫比的購物體驗。<br v-if="!$isMobile()">在這裡，時尚購物、美食饗宴、頂尖娛樂應有盡有，<br v-if="!$isMobile()">盡情沉浸在岡山的非凡魅力與無限便利之中。</p>
+      <img src="./s7/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
+      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">時尚輕購物<br> 文青潮流最錢線</h3>
+      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400">樂購廣場╳秀泰影城</h4>
+     <p class="desc" data-aos="fade-up" data-aos-delay="600">時尚不只一面，潮流不拘一格，<br v-if="!$isMobile()">南台灣最大4K超級巨幕影城，超大型複合式商場，<br v-if="!$isMobile()">樂購廣場成為心中的時尚標籤，享受無與倫比的購物體驗。<br v-if="!$isMobile()">在這裡，時尚購物、美食饗宴、頂尖娛樂應有盡有，<br v-if="!$isMobile()">盡情沉浸在岡山的非凡魅力與無限便利之中。</p>
     </div>
   </article>
 </template>
@@ -31,7 +31,7 @@
 .s7 {
   @apply relative flex  flex-col text-[#fff];
   width: 100%;
-  height:size(1070);
+  height:size(1060);
   padding:0;
   font-size:size(24);
  // gap:6em;
@@ -48,8 +48,8 @@
     margin: auto auto auto size(75);//width: size(685);
     filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
 
-      .en{width: size(565);display: block;transition:opacity .5s,margin .5s;opacity: 1;margin:0em auto 0.5em 0;}
-    .title{display: inline-block;transition:font-size .5s;
+      .en{width: size(565);display: block;margin:0em auto 0.5em 0;}
+    .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
       border-bottom: 1px solid #000;
@@ -99,9 +99,11 @@
       align-items:center;padding: 0 size(63) 0 0;
       img{height: auto; width:size(970);margin: 0 0 0 auto;
   }
+  .caption{position: absolute;left:size(880);bottom:size(195);}
     @media screen and (min-width: 768px) {
       &.v1{padding: 0;
         img{width:100%;margin:0;}
+        .caption{left:.5em;bottom: .5em;}
       }
     }
     // .caption{position: absolute;left: 0;bottom: 0;}
@@ -136,7 +138,7 @@
     width:sizem(310);
     margin:0 auto auto auto;
     text-align: center;
-    .en{width:sizem(250);opacity: 1;margin:1.5em auto 1.3em;}
+    .en{width:sizem(250);margin:1.5em auto 1.3em;}
 
     .title{
       font-size:sizem(25);
@@ -204,23 +206,31 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/bg.jpg", import.meta.url).href,
-    caption: "秀泰生活｜影城/情境示意"
+    caption: "情境示意"
   },
   {
     img:new URL("./s7/1.jpg", import.meta.url).href,
-    caption: "樂購廣場"
+    caption: "秀泰生活｜影城/情境示意"
   },
   {
     img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "秀泰生活｜影城"
+    caption: "樂購廣場"
   },
   {
     img:new URL("./s7/3.jpg", import.meta.url).href ,
+    caption: "秀泰生活｜影城"
+  },
+  {
+    img:new URL("./s7/4.jpg", import.meta.url).href ,
     caption: "樂購廣場"
   },
   {
     img:new URL("./s7/4.jpg", import.meta.url).href ,
     caption: "麥當勞"
+  },
+  {
+    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    caption: "星巴克"
   },
 ]
 </script>

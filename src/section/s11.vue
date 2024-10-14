@@ -1,11 +1,11 @@
 <template>
   <article class="s11" ref="s11">
     <!--<img src="./s11/40.jpg" class="t0">
-   --><img src="./s11/10.jpg" class="t0">
+   -->
     <img src="./s11/bg.jpg" class="bg">
     <span class="caption">情境示意圖</span>
     <div class="slider" data-aos="fade" data-aos-delay="400">
-      <div class="arrows">
+      <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -18,10 +18,10 @@
     </div>
     <!-- Conditionally applying 'v1' class if on the first slide -->
     <div :class="['txt', currentSlideIndex === 0 ? 'v1' : '']">
-      <img src="./s11/en.svg" class="en">
-      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">國家金獎肯定 誠信典範</h3>
-        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">一流功力-甲級營造實力</h4>
-      <p class="desc" data-aos="fade-up" data-aos-delay="200">憑藉對品質和誠信的執著,獲頒「台灣誠信品牌」最高榮譽,<br v-if="!$isMobile()">
+      <img src="./s11/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
+      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">國家金獎肯定 誠信典範</h3>
+        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400">一流功力-甲級營造實力</h4>
+      <p class="desc" data-aos="fade-up" data-aos-delay="600">憑藉對品質和誠信的執著,獲頒「台灣誠信品牌」最高榮譽,<br v-if="!$isMobile()">
 更多次獲頒「金質獎」、「建築園治獎」等權威大獎。<br v-if="!$isMobile()">
 致力實現每一位業主對完美家園的獨特想像。</p>
     </div>
@@ -37,9 +37,10 @@
 .s11 {
   @apply relative flex  flex-col text-[#fff];
   width: 100%;
-  height:size(1070);
+  height:size(1060);
   padding:0;
   font-size:size(24);
+  overflow: hidden;
  // gap:6em;
   flex-wrap: wrap;
   background:radial-gradient(82% 54% at 33.5% 8%, #FFF 0%, #B0D5E1 57%, #78B7CB 100%);
@@ -138,13 +139,14 @@
     width:100%;
     left:0;
     top: auto;
-    bottom:sizem(0);
-    margin: 0 0  sizem(55);
+    bottom:sizem(150);
+    margin: 0;
     &::before{height: 70vw;}
     .slide-item {width:100%;padding: 0 0 sizem(25) 0;
       img{ width:100%;margin: 0 auto 0em auto;
        // &.v2{width:85%;}
       }
+      .caption{left:.5em;font-size:sizem(12);bottom: 0.5em;}
     }
     }
 
@@ -170,16 +172,6 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: false,
-  // autoplay: true,
-  interval: 5000,
-  perPage: 3,
-  gap: 20,
-  type: 'loop'
-}
 
 const imgs = [
   {
@@ -195,5 +187,17 @@ const imgs = [
     caption: "迪卡儂商場新建工程"
   },
 ]
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: false,
+  // autoplay: true,
+  interval: 5000,
+  perPage:  globals.$isMobile()?1.5:3,
+  gap: 20,
+  focus: 'center',
+  type: 'loop',
+  drag:globals.$isMobile()?true:false,
+}
 </script>
 

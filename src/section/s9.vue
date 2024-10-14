@@ -16,10 +16,10 @@
 
     <!-- Conditionally applying 'v1' class if on the first slide -->
     <div :class="['txt', currentSlideIndex === 0 ? 'v1' : '']">
-      <img src="./s9/en.svg" class="en">
-      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">萬坪生態綠地<br> 綠意環繞城市森林</h3>
-      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">5分鐘半徑圈 六大馥郁綠金</h4>
-     <p class="desc" data-aos="fade-up" data-aos-delay="200">盡享生態綠金全視野，成就岡山綠覆率之最。<br>
+      <img src="./s9/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
+      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">萬坪生態綠地<br> 綠意環繞城市森林</h3>
+      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400">5分鐘半徑圈 六大馥郁綠金</h4>
+     <p class="desc" data-aos="fade-up" data-aos-delay="600">盡享生態綠金全視野，成就岡山綠覆率之最。<br>
       住進優游綠意，刻畫健康樂活的未來眼界。</p>
 <img src="./s8/sen.svg" class="sen">
     </div>
@@ -33,7 +33,7 @@
 .s9 {
   @apply relative flex  flex-col text-[#fff];
   width: 100%;
-  height:size(1070);
+  height:size(1060);
   padding:0;
   font-size:size(24);
  // gap:6em;
@@ -50,8 +50,8 @@
     margin: auto 0 auto auto;width: size(685);
     filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
 
-      .en{width: size(530);display: block;transition:opacity .5s,margin .5s;opacity: 1;margin:0em auto 1.1em 0;}
-    .title{display: inline-block;transition:font-size .5s;
+      .en{width: size(530);display: block;opacity: 1;margin:0em auto 1.1em 0;}
+    .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
       border-bottom: 1px solid #000;
@@ -103,9 +103,11 @@
       align-items:center;padding: 0 0 0 size(63);
       img{height: auto; width:size(1093);margin: 0 auto 0 0;
   }
+  .caption{position: absolute;left:size(80);bottom:size(195);}
     @media screen and (min-width: 768px) {
       &.v1{padding: 0;
         img{width:100%;margin:0;}
+        .caption{left:.5em;bottom: .5em;}
       }
     }
     // .caption{position: absolute;left: 0;bottom: 0;}
@@ -207,19 +209,31 @@ const options = {
 const imgs = [
   {
     img:new URL("./s9/bg.jpg", import.meta.url).href,
-    caption: "情境示意圖"
+    caption: ""
   },
   {
     img:new URL("./s9/1.jpg", import.meta.url).href,
-    caption: "高鐵左營站"
+    caption: "岡山陽明公園"
   },
   {
     img:new URL("./s9/2.jpg", import.meta.url).href ,
-    caption: "岡山車站"
+    caption: "岡山夢想飛翔公園"
   },
   {
     img:new URL("./s9/3.jpg", import.meta.url).href ,
-    caption: "岡山車站與RK1捷運站"
+    caption: "岡山河堤公園"
+  },
+  {
+    img:new URL("./s9/4.jpg", import.meta.url).href ,
+    caption: "岡山和平公園"
+  },
+  {
+    img:new URL("./s9/5.jpg", import.meta.url).href ,
+    caption: "岡山劉厝公園"
+  }, 
+  {
+    img:new URL("./s9/6.jpg", import.meta.url).href ,
+    caption: "岡山公園"
   },
 ]
 </script>

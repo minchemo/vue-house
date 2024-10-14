@@ -3,7 +3,7 @@
 <template>
   <article class="s2">
     <img src="./s2/t.svg" alt="t" class="t" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s2/lighten.png" alt="lighten" class="lighten" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s2/lighten.png" alt="lighten" class="lighten" data-aos="zoom-in" data-aos-delay="500">
   </article>
 </template>
 
@@ -14,7 +14,7 @@
   @apply relative overflow-hidden flex bg-[#0D3A79] justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:6em 0 6em 0;
+  padding:8em 0 6em 0;
   font-size:size(32);
   gap:4.4em;
   flex-direction: row;
@@ -27,7 +27,7 @@
   }
   .lighten{
     position: absolute;
-    top: 5vw;left: 0;right: 0;margin: auto;mix-blend-mode: lighten;
+    top: 8vw;left: 0;right: 0;margin: auto;mix-blend-mode: lighten;
     z-index: 3;width:size(860);
   }
 }

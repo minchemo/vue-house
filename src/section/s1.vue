@@ -33,7 +33,7 @@
 
 .s1 {
   @apply relative w-full h-screen;
-  min-height: size(1080);
+  min-height: size(980);
   max-height: size(1080);
   display: flex;
   flex-direction: column;
@@ -52,18 +52,22 @@
     position: absolute;
     width: size(500);
     left: size(297);
-    top: size(445);}
+    top: size(445);
+  top:calc(50% + #{size(445 - 1080 * .5)});
+  }
   .slogo{
     position: absolute;
     width: size(297);
     left: size(410);
     top: size(700);
+    top:calc(50% + #{size(700 - 1080 * .5)});
   }
   .man{
     position: absolute;
     width: size(885);
     right: size(0);
     top: size(70);
+    top:calc(50% + #{size(70 - 1080 * .5)});
     z-index: 3;
   }
   .t1,.t2{
@@ -71,6 +75,7 @@
     width: size(823);
     right: size(95);
     top: size(53);
+    top:calc(50% + #{size(53 - 1080 * .5)});
     z-index: 3;
   }
 

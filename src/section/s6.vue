@@ -16,10 +16,10 @@
 
     <!-- Conditionally applying 'v1' class if on the first slide -->
     <div :class="['txt', currentSlideIndex === 0 ? 'v1' : '']">
-      <img src="./s6/en.svg" class="en">
-      <h4 class="subtitle t1 font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">捷運RK1╳台鐵岡山站</h4>
-      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100"> 青快路網 無往不利</h3>
-      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">穿梭高雄都心 隨掌城市脈動</h4>
+      <img src="./s6/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
+      <h4 class="subtitle t1 font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">捷運RK1╳台鐵岡山站</h4>
+      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400"> 青快路網 無往不利</h3>
+      <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="600">穿梭高雄都心 隨掌城市脈動</h4>
      <p class="desc" data-aos="fade-up" data-aos-delay="200">約3分鐘岡山車站，一站直達百貨核心，<br>
 近享國道、高鐵、捷運、台鐵，<br>
 串起都會核心，全台一日生活圈，輕鬆get！</p>
@@ -34,7 +34,7 @@
 .s6 {
   @apply relative flex  flex-col text-[#fff];
   width: 100%;
-  height:size(1070);
+  height:size(1060);
   padding:0;
   font-size:size(24);
  // gap:6em;
@@ -51,8 +51,8 @@
     margin: auto 0 auto auto;width: size(685);
     filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
 
-      .en{width: size(530);display: block;transition:opacity .5s,margin .5s;opacity: 1;margin:0em auto 1.1em 0;}
-    .title{display: inline-block;transition:font-size .5s;
+      .en{width: size(530);display: block;margin:0em auto 1.1em 0;}
+    .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
       border-bottom: 1px solid #000;
@@ -99,9 +99,11 @@
       align-items:center;padding: 0 0 0 size(63);
       img{height: auto; width:size(1093);margin: 0 auto 0 0;
   }
+  .caption{position: absolute;left:size(80);bottom:size(195);}
     @media screen and (min-width: 768px) {
       &.v1{padding: 0;
         img{width:100%;margin:0;}
+        .caption{left:.5em;bottom: .5em;}
       }
     }
     // .caption{position: absolute;left: 0;bottom: 0;}
