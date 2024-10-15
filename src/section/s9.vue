@@ -48,13 +48,13 @@
     font-weight: 400;pointer-events: none;
     color: #000;transition: transform .5s;
     margin: auto 0 auto auto;width: size(685);
-    filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
+    filter: none;color: #0D3A79;
 
       .en{width: size(530);display: block;opacity: 1;margin:0em auto 1.1em 0;}
     .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid currentColor;
       line-height: 1.3;
       margin: 0em 0 0 0;
       padding: 0 0 .5em;
@@ -70,12 +70,12 @@
     .sen{display:block;width: size(540);margin: 1em auto .8em 0;}
     @media screen and (min-width: 768px) {
     &.v1{text-align: center; margin: 0 auto auto auto;
-      filter: invert(1);
+      filter:saturate(0)brightness(600%);
       width:auto;
       transform: translateY(size(290));
       .en{opacity: 1;margin:0 auto .7em;}
     .title{
-      font-size:size(82);border-bottom: 1px solid #000;
+      font-size:size(82);
       padding: 0 0 .1em;
       br{display: none;}
     }
@@ -142,8 +142,7 @@
     width:sizem(310);
     margin:0 auto auto auto;
     text-align: center;
-        filter: invert(0);
-        .en,.title,.subtitle,.desc{filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);}
+    filter: none;color: #0D3A79;
     .en{width:sizem(250);opacity: 1;margin:1.5em auto 2.5em;}
 
     .title{
@@ -155,7 +154,7 @@
       margin: .8em auto .5em;
       font-size:sizem(15);}
       .sen{display:block;width: sizem(270);position: absolute;bottom: sizem(-255);left: 0;right: 0;
-        filter: invert(1);
+        filter:saturate(0)brightness(600%);
       margin: 0em auto 0;}
   }
   .slider {

@@ -1,7 +1,7 @@
 <template>
   <article class="s4" ref="s4">
     <div class="txt">
-      <img src="./s3/en.svg" class="en">
+      <img src="./s4/en.svg" class="en">
       <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">岡山六大 利多建設</h3>
       <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">軌道經濟 讓世界看見岡山 </h4>
       <p class="desc" data-aos="fade-up" data-aos-delay="200">岡山六大利多，高雄城市輕移。<br>
@@ -12,26 +12,26 @@
         諸多前瞻項目，讓岡山成為世界焦點。</p>
     </div>
     <div class="img">
-      <img src="./s3/img.svg">
-      <div class="list list1"  @click="modalOpen = true; modalType = 'list1'"><img src="./s3/1.jpg"></div>
-      <div class="list list2"  @click="modalOpen = true; modalType = 'list2'"><img src="./s3/2.jpg"></div>
-      <div class="list list3"  @click="modalOpen = true; modalType = 'list3'"><img src="./s3/3.jpg"></div>
-      <div class="list list4"  @click="modalOpen = true; modalType = 'list4'"><img src="./s3/4.jpg"></div>
+      <img src="./s4/img.svg">
+      <div class="list list1" @click="modalOpen = true; modalType = 'list1'"><img src="./s4/1.jpg"></div>
+      <div class="list list2" @click="modalOpen = true; modalType = 'list2'"><img src="./s4/2.jpg"></div>
+      <div class="list list3" @click="modalOpen = true; modalType = 'list3'"><img src="./s4/3.jpg"></div>
+      <div class="list list4" ><img src="./s4/4.jpg"></div>
     </div>
   </article>
 
     <!-- Modal -->
     <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
-  <div class="modal s3mod flex  items-center justify-center">
+  <div class="modal s4mod flex  items-center justify-center">
     <label for="contact-modal" class="bg absolute left-0 top-0"></label>
     <div class="py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-0 top-2">✕</label>
       <!-- icon -->
-      <img class="modimg" v-if="modalType == 'list1'" src="./s3/1.jpg" alt="list1" srcset="" />
-      <img class="modimg" v-else-if="modalType == 'list2'" src="./s3/2.jpg" alt="list2" srcset="" />
-      <img class="modimg" v-else-if="modalType == 'list3'" src="./s3/3.jpg" alt="list3" srcset="" />
+      <img class="modimg" v-if="modalType == 'list1'" src="./s4/1.jpg" alt="list1" srcset="" />
+      <img class="modimg" v-else-if="modalType == 'list2'" src="./s4/2.jpg" alt="list2" srcset="" />
+      <img class="modimg" v-else-if="modalType == 'list3'" src="./s4/3.jpg" alt="list3" srcset="" />
       <!-- title -->
-      <div class="text-[#fff] mt-2 font-bold">{{ 
+      <div class="text-[#fff] mt-2 font-[500]">{{ 
       modalType == 'list1' ? '岡山新行政中心模擬圖圖/高雄市府發展局' : 
       modalType == 'list2' ? '第87期市地重劃區。圖/高雄市府地政局' :
           'RK1站西基地案模擬圖。圖/高雄市政府捷運工程局'
@@ -52,7 +52,7 @@
   padding:0;
   font-size:size(24);
   flex-wrap: wrap;
-  background :url("./s3/bg.jpg") center center;
+  background :url("./s4/bg.webp") center center;
   background-size: cover;
   
 .txt {
@@ -114,8 +114,9 @@ img{position: relative;
 }
 }
 }
-.s3mod{background: rgba(86, 166, 187, 0.40);
+.s4mod{background: rgba(86, 166, 187, 0.40);
   backdrop-filter: blur(2px);
+text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
 .bg{width: 100%;height: 100%;}
 } 
 .modimg{width:size(1200);}
@@ -138,7 +139,7 @@ img{position: relative;
     width:sizem(310);
     margin:0 auto;
     padding: 0;
-    .en{filter: drop-shadow(0px 0px 10px rgba(76, 84, 135, 0.50));
+    .en{filter: drop-shadow(0px 0px 5px rgba(76, 84, 135, 0.50));
       height:2.8em;margin: auto auto 0 auto;
     }
     .title{width:100%;
@@ -202,28 +203,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/01.webp", import.meta.url).href ,
-    caption: "3D鳥瞰環境合成示意圖，僅供參考"
-  },
-  {
-    img:new URL("./s3/02.webp", import.meta.url).href ,
+    img:new URL("./s4/1.jpg", import.meta.url).href ,
     caption: "岡山新行政中心模擬圖圖/高雄市府發展局"
   },
   {
-    img:new URL("./s3/03.webp", import.meta.url).href ,
+    img:new URL("./s4/2.jpg", import.meta.url).href ,
     caption: "第87期市地重劃區。圖/高雄市府地政局"
   },
   {
-    img:new URL("./s3/04.webp", import.meta.url).href ,
+    img:new URL("./s4/3.jpg", import.meta.url).href ,
     caption: "RK1站西基地案模擬圖。圖/高雄市政府捷運工程局"
-  },
-  {
-    img:globals.$isMobile()? new URL("./s3/05m.jpg", import.meta.url).href : new URL("./s3/05.webp", import.meta.url).href ,
-    caption: "麥當勞"
-  },
-  {
-    img:globals.$isMobile()? new URL("./s3/06m.jpg", import.meta.url).href : new URL("./s3/06.webp", import.meta.url).href ,
-    caption: "星巴克"
   },
 ]
 

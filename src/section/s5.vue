@@ -16,7 +16,7 @@
 
     <!-- Conditionally applying 'v1' class if on the first slide -->
     <div :class="['txt', currentSlideIndex === 0 ? 'v1' : '']">
-      <img src="./s4/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
+      <img src="./s5/en.svg" class="en" data-aos="fade-up" data-aos-delay="0">
       <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">科技S廊道 置產前瞻視角</h3>
       <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400">北高科技新都心</h4>
       <p class="desc" data-aos="fade-up" data-aos-delay="600">
@@ -47,8 +47,8 @@
   z-index: 3;
   text-align: center;
     font-weight: 400;pointer-events: none;
-    color: #000;transition: transform .5s;
-    filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
+    transition: transform .5s;
+    filter: none;color: #0D3A79;
 
       img.en{width: size(945);display: block;opacity: .2;margin:2em auto -2.5em;}
     .title{display: inline-block;
@@ -63,11 +63,11 @@
     }
     @media screen and (min-width: 768px) {
     &.v1{
-      filter: invert(1);
+      filter:saturate(0)brightness(600%)drop-shadow(0 0 8px #0D3A7999);
       transform: translateY(size(390));
       img.en{opacity: 1;margin:0 auto .7em;}
     .title{
-      font-size:size(82);border-bottom: 1px solid #000;
+      font-size:size(82);border-bottom: 1px solid currentColor;
     }
     .subtitle{
       margin: 0em auto .8em;
@@ -128,7 +128,7 @@
 
   .txt {
     width:sizem(310);
-    margin:0 auto;
+    margin:0 auto; 
     img.en{width:sizem(300);opacity: 1;margin:2em auto .5em;}
 
     .title{
@@ -193,20 +193,20 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/0.webp", import.meta.url).href,
+    img:new URL("./s5/0.webp", import.meta.url).href,
     caption: "情境示意"
   },
   {
-    img:globals.$isMobile() ?new URL("./s4/1m.webp", import.meta.url).href :new URL("./s4/1.webp", import.meta.url).href,
+    img:globals.$isMobile() ?new URL("./s5/1m.webp", import.meta.url).href :new URL("./s5/1.webp", import.meta.url).href,
     caption: ""
   },
   {
-    img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "岡山新行政中心模擬圖圖/高雄市府發展局"
+    img:new URL("./s5/2.webp", import.meta.url).href ,
+    caption: "橋科情境示意"
   },
   {
-    img:new URL("./s4/3.webp", import.meta.url).href ,
-    caption: "第87期市地重劃區。圖/高雄市府地政局"
+    img:new URL("./s5/3.webp", import.meta.url).href ,
+    caption: "路竹科技園區。圖/高雄市府地政局"
   },
 ]
 </script>

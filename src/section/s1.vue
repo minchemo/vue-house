@@ -11,7 +11,7 @@
     <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/slogo.svg" alt="slogo" class="slogo" data-aos="zoom-in" data-aos-delay="200">
     <img src="./s1/main1.svg" alt="t1" class="t1" data-aos="zoom-in" data-aos-delay="200">
-  <img src="./s1/man.png" alt="man" class="man" data-aos="zoom-in"  data-aos-delay="0">
+  <img src="./s1/man.webp" alt="man" class="man" data-aos="zoom-in"  data-aos-delay="0">
     <img src="./s1/main2.svg" alt="t2" class="t2" data-aos="zoom-in" data-aos-delay="400">
   <!--
   <img src="./s1/02.svg" alt="title" class="t2" data-aos="zoom-in"  data-aos-delay="600">

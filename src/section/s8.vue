@@ -50,14 +50,14 @@
   z-index: 3;
   text-align: center;
     font-weight: 400;pointer-events: none;
-    color: #000;transition: transform .5s;
-    filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
+    transition: transform .5s;
+    filter: none;color: #0D3A79;
 
       img.en{width: size(590);display: block;opacity: .2;margin:1.5em auto -2.5em;}
     .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid currentColor;
       line-height: 1.4;
       br{display:none;}
     }
@@ -68,12 +68,11 @@
     }
     .sen{display:none;}
     @media screen and (min-width: 768px) {
-    &.v1{
-      filter: invert(0);
+    &.v1{color: #000;
       transform: translateY(size(210));
       img.en{opacity: 1;margin:0 auto .7em;filter: invert(65%) sepia(38%) saturate(460%) hue-rotate(145deg) brightness(86%) contrast(88%);}
     .title{
-      font-size:size(82);border-bottom: 1px solid #000;padding: 0 0 .2em;
+      font-size:size(82);padding: 0 0 .2em;
       br{display:block;}
     }
     .subtitle{
@@ -150,8 +149,7 @@
       margin: .8em auto 1em;line-height: 1.4;
       font-size:sizem(14);}
       &.v1{
-        filter: invert(0);
-        .en,.title,.subtitle,.desc{filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);}
+        filter: none;color: #0D3A79;
     .sen{display:block;width: sizem(270);position: absolute;bottom: sizem(-250);left: 0;right: 0;
       filter: invert(65%) sepia(38%) saturate(460%) hue-rotate(145deg) brightness(86%) contrast(88%);
       margin: 0em auto 0;}

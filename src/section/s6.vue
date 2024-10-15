@@ -47,15 +47,15 @@
   z-index: 3;
   text-align: justify;
     font-weight: 400;pointer-events: none;
-    color: #000;transition: transform .5s;
+    transition: transform .5s;
     margin: auto 0 auto auto;width: size(685);
-    filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
+    filter: none;color: #0D3A79;
 
       .en{width: size(530);display: block;margin:0em auto 1.1em 0;}
     .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid currentColor;
       margin: -.2em 0 0 0;
     }
     .subtitle{
@@ -68,12 +68,12 @@
     }
     @media screen and (min-width: 768px) {
     &.v1{text-align: center; margin: 0 auto auto auto;
-      filter: invert(1);
+      filter:saturate(0)brightness(600%)drop-shadow(0 0 8px #0D3A7999);
       width:auto;
       transform: translateY(size(120));
       .en{opacity: 1;margin:0 auto 1.6em;}
     .title{
-      font-size:size(82);border-bottom: 1px solid #000;
+      font-size:size(82);
     }
     .subtitle{
       margin: 0em auto .8em;

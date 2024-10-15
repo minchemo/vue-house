@@ -99,6 +99,7 @@ img {
     padding: 0; 
     height: 100%;
     pointer-events: none;
+    filter:saturate(0)brightness(600%)drop-shadow(0 0 8px #0D3A7999);
     .prev,
     .next{
       width:3%;
@@ -138,6 +139,15 @@ img {
 
 @media screen and (max-width: 767px) {
   
+  .arrows{
+    top: 0%;
+    height: calc(100% - 7vw);
+    transform: translateY(0);
+    .prev,
+    .next{
+      width:7%;
+    }
+  }
 }
 </style>
 

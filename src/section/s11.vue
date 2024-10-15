@@ -4,7 +4,7 @@
    -->
     <img src="./s11/bg.jpg" class="bg">
     <span class="caption">情境示意圖</span>
-    <div class="slider" data-aos="fade" data-aos-delay="400">
+    <div class="slider" data-aos="fade-up" data-aos-delay="800">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -58,7 +58,7 @@
     //filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
 
       .en{width: size(440);display: block;margin:1.5em auto .9em;}
-    .title{display: inline-block;transition:font-size .5s;
+    .title{display: inline-block;
       font-size:size(82);padding: 0 0 .1em;
       font-weight: 700;letter-spacing: 0.09em;
       border-bottom: 1px solid #000;
@@ -89,7 +89,7 @@
       img{height: auto; width:100%; margin: auto auto 1em auto;
       
   }
-     .caption{left: 0;bottom: 0;width: auto;white-space: nowrap;color: #000;display: block;font-size: size(14);}
+     .caption{left: 0;bottom: 0;width: auto;white-space: nowrap;color: #000;display: block;font-size: size(14);text-shadow: 0px 0px 0px #0000;font-weight: 500;}
     }
     .splide__pagination{
     //  right: calc(100% + 3em);

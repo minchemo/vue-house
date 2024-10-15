@@ -50,15 +50,14 @@
   z-index: 3;
   text-align: center;
     font-weight: 400;pointer-events: none;
-    color: #000;
+    color: #fff;
+    filter:drop-shadow(0 0 8px #0D3A7999);
     transform: translate(size(-335),size(200));
-    filter: invert(1);
-
       .en{width: size(306);display: block;margin:1.5em auto 1.5em;}
     .title{display: inline-block;
       font-size:size(80);
       font-weight: 700;letter-spacing: 0.07em;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid currentColor;
       line-height: 1.4;
       padding: 0 0 0.2em;
       br{display:none;}

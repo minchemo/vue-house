@@ -44,15 +44,15 @@
   z-index: 3;
   text-align: justify;
     font-weight: 400;pointer-events: none;
-    color: #000;transition: transform .5s;
-    margin: auto auto auto size(75);//width: size(685);
-    filter: invert(10%) sepia(85%) saturate(3509%) hue-rotate(209deg) brightness(97%) contrast(90%);
+    transition: transform .5s;
+    margin: auto auto auto size(75);
+    filter: none;color: #0D3A79;
 
       .en{width: size(565);display: block;margin:0em auto 0.5em 0;}
     .title{display: inline-block;
       font-size:size(62);
       font-weight: 700;letter-spacing: 0.1em;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid currentColor;
       line-height: 1.4;
       padding: 0 0 .3em;
       margin: 0em 0 0 0;
@@ -67,12 +67,12 @@
     }
     @media screen and (min-width: 768px) {
     &.v1{text-align: center; margin: 0 auto auto auto;
-      filter: invert(1);
+      filter:saturate(0)brightness(600%)drop-shadow(0 0 7px #0D3A7999);
       width:auto;
       transform: translateY(size(125));
       .en{opacity: 1;margin:0 auto .4em;}
     .title{
-      font-size:size(82);border-bottom: 1px solid #000;padding: 0 0 .1em;
+      font-size:size(82);padding: 0 0 .1em;
       br{display: none;}
     }
     .subtitle{
@@ -225,11 +225,11 @@ const imgs = [
     caption: "樂購廣場"
   },
   {
-    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    img:new URL("./s7/5.jpg", import.meta.url).href ,
     caption: "麥當勞"
   },
   {
-    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    img:new URL("./s7/6.jpg", import.meta.url).href ,
     caption: "星巴克"
   },
 ]
