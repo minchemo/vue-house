@@ -20,7 +20,7 @@
       <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">國家級市醫特區<br>
         職醫菁英新聚落</h3>
         <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400" v-if="!$isMobile()">高醫岡山醫院╳高雄市立岡山醫院╳國軍總醫院岡山分院</h4>
-        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="600" v-else>高醫岡山醫院高醫岡山醫院<br>高雄市立岡山醫院<br>國軍總醫院岡山分院</h4>
+        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="600" v-else>高醫岡山醫院<br>高雄市立岡山醫院<br>國軍總醫院岡山分院</h4>
       <p class="desc" data-aos="fade-up" data-aos-delay="200">高雄首間捷運共構醫院落成岡山，三大醫院匯聚<br>
         醫療、交通雙重優勢，晉升醫療資源最完整的首善之區。</p>
         <img src="./s8/sen.svg" class="sen">
@@ -210,7 +210,7 @@ const imgs = [
     caption: "情境示意"
   },
   {
-    img:new URL("./s8/3.jpg", import.meta.url).href ,
+    img:new URL("./s8/2.jpg", import.meta.url).href ,
     caption: "高醫岡山分院"
   },
   {
@@ -219,7 +219,7 @@ const imgs = [
     caption: "高雄市立岡山醫院"
   },
   {
-    img:new URL("./s8/2.jpg", import.meta.url).href ,
+    img:new URL("./s8/3.jpg", import.meta.url).href ,
     caption: "國軍高雄總醫院岡山分院 "
   },
   
