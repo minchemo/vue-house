@@ -21,7 +21,7 @@
       <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="400"> 青快路網 無往不利</h3>
       <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="600">穿梭高雄都心 隨掌城市脈動</h4>
      <p class="desc" data-aos="fade-up" data-aos-delay="200">約3分鐘岡山車站，一站直達百貨核心，<br>
-近享國道、高鐵、捷運、台鐵，<br>
+近享國道、捷運、台鐵、高鐵，<br>
 串起都會核心，全台一日生活圈，輕鬆get！</p>
     </div>
   </article>
@@ -204,17 +204,18 @@ const imgs = [
     caption: "情境示意圖"
   },
   {
-    img:new URL("./s6/1.jpg", import.meta.url).href,
-    caption: "高鐵左營站"
+    img:new URL("./s6/3.jpg", import.meta.url).href ,
+    caption: "岡山車站與RK1捷運站"
   },
   {
     img:new URL("./s6/2.jpg", import.meta.url).href ,
     caption: "岡山車站"
   },
   {
-    img:new URL("./s6/3.jpg", import.meta.url).href ,
-    caption: "岡山車站與RK1捷運站"
+    img:new URL("./s6/1.jpg", import.meta.url).href,
+    caption: "高鐵左營站"
   },
+  
 ]
 </script>
 

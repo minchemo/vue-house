@@ -41,6 +41,11 @@
   background:radial-gradient(82% 54% at 33.5% 8%, #FFF 0%, #B0D5E1 57%, #78B7CB 100%);
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
 
+
+ .caption1{right: 15px;bottom: 15px;width: auto;white-space: nowrap;color: #fff;;font-size: size(14);text-shadow: 0px 0px 0px #0000;font-weight: 500;
+ position: absolute;left: auto;z-index: 3;
+ } 
+
 .txt {
   position: relative;
   z-index: 3;
@@ -207,7 +212,7 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s9/bg.jpg", import.meta.url).href,
+    img:globals.$isMobile() ?new URL("./s9/bgm.jpg", import.meta.url).href :new URL("./s9/bg.jpg", import.meta.url).href,
     caption: ""
   },
   {
