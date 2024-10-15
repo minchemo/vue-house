@@ -453,6 +453,7 @@ const send = () => {
 
   if (pass && !sending.value) {
     sending.value = true
+    onFormSubmit()
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
