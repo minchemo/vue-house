@@ -21,11 +21,11 @@
   </article>
 
     <!-- Modal -->
-    <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
+    <input type="checkbox" v-model="modalOpen" id="contact-modal1" class="modal-toggle" />
   <div class="modal s4mod flex  items-center justify-center">
-    <label for="contact-modal" class="bg absolute left-0 top-0"></label>
+    <label for="contact-modal1" class="bg absolute left-0 top-0"></label>
     <div class="py-12 relative flex flex-col items-center justify-center">
-      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-0 top-2">✕</label>
+      <label for="contact-modal1" class="btn btn-sm btn-circle absolute right-0 top-2">✕</label>
       <!-- icon -->
       <img class="modimg" v-if="modalType == 'list1'" src="./s4/1.jpg" alt="list1" srcset="" />
       <img class="modimg" v-else-if="modalType == 'list2'" src="./s4/2.jpg" alt="list2" srcset="" />
