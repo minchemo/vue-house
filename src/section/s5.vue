@@ -1,7 +1,7 @@
 <template>
   <article class="s5" data-aos="bright" data-aos-duration="2000" data-aos-delay="500">
     <div class="t">
-      <img src="@/section/s5/logo.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="0"/>
+      <img src="@/section/s5/logo.webp" alt="" srcset=""  data-aos="fade-right" data-aos-delay="0"/>
       <div class="t1"  data-aos="fade-right" data-aos-delay="0">絮寫國際地標偉大建築</div>
       <div class="t2"  data-aos="fade" data-aos-delay="200">國際建築 寫全台紀錄 為高雄留下經典</div>
       <div class="t3"  data-aos="fade" data-aos-delay="400">
@@ -56,7 +56,7 @@
     @apply relative;
     width: size(1103);
     height: size(900);
-    background-image: url("@/section/s5/1.jpg");
+    background-image: url("@/section/s5/1.webp");
     .mask {
       @apply absolute h-full;
       width: size(300);
@@ -120,7 +120,7 @@
       @apply relative;
       width: sizem(375);
       height: sizem(472);
-      background-image: url("@/section/s5/1m.jpg");
+      background-image: url("@/section/s5/1m.webp");
       .mask {
         @apply absolute h-full;
         width: sizem(375);

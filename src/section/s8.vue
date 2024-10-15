@@ -30,14 +30,14 @@
         <img
           class="arrow prev"
           @click="splide.go('>')"
-          src="@/section/s8/prev.png"
+          src="@/section/s8/prev.webp"
           alt=""
           srcset=""
         />
         <img
           class="arrow next"
           @click="splide.go('>')"
-          src="@/section/s8/next.png"
+          src="@/section/s8/next.webp"
           alt=""
           srcset=""
         />
@@ -203,10 +203,10 @@
 }
 </style>
 <script setup>
-import img1 from "@/section/s8/1.jpg"
-import img2 from "@/section/s8/2.jpg"
-import img3 from "@/section/s8/3.jpg"
-import img4 from "@/section/s8/4.jpg"
+import img1 from "@/section/s8/1.webp"
+import img2 from "@/section/s8/2.webp"
+import img3 from "@/section/s8/3.webp"
+import img4 from "@/section/s8/4.webp"
 
 import { computed, getCurrentInstance, ref } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties

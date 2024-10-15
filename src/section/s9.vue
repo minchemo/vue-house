@@ -56,7 +56,7 @@
     @apply relative;
     width: size(1226);
     height: size(900);
-    background-image: url("@/section/s9/1.jpg");
+    background-image: url("@/section/s9/1.webp");
     .mask {
       @apply absolute h-full;
       width: size(300);
@@ -122,7 +122,7 @@
       @apply relative;
       width: sizem(375);
       height: sizem(267);
-      background-image: url("@/section/s9/1m.jpg");
+      background-image: url("@/section/s9/1m.webp");
       .mask {
         @apply hidden;
       }

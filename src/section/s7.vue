@@ -162,11 +162,11 @@
 }
 </style>
 <script setup>
-import img1 from "@/section/s7/1.jpg"
-import img2 from "@/section/s7/2.jpg"
-import img3 from "@/section/s7/3.jpg"
-import img4 from "@/section/s7/4.jpg"
-import img5 from "@/section/s7/5.jpg"
+import img1 from "@/section/s7/1.webp"
+import img2 from "@/section/s7/2.webp"
+import img3 from "@/section/s7/3.webp"
+import img4 from "@/section/s7/4.webp"
+import img5 from "@/section/s7/5.webp"
 
 import { computed, getCurrentInstance, ref } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties

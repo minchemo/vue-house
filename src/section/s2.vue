@@ -25,7 +25,7 @@
       data-aos="airplane"
       data-aos-duration="3000"
       data-aos-delay="200"
-      src="@/section/s2/airplane.png"
+      src="@/section/s2/airplane.webp"
       class="airplane fadejs"
       alt=""
       srcset=""
@@ -39,7 +39,7 @@
 .s2 {
   @apply relative w-full bg-cover bg-center;
   height: size(900);
-  background-image: url("@/section/s2/bg.jpg");
+  background-image: url("@/section/s2/bg.webp");
   padding-top: size(104);
   padding-left: size(137);
   .t {
@@ -84,7 +84,7 @@
   .s2 {
     @apply relative w-full bg-contain bg-bottom bg-no-repeat bg-black;
     height: sizem(554);
-    background-image: url("@/section/s2/bgm.jpg");
+    background-image: url("@/section/s2/bgm.webp");
     padding-top: 0;
     padding-left: 0;
     .t {

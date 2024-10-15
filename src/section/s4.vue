@@ -1,7 +1,7 @@
 <template>
   <article class="s4" data-aos="bright" data-aos-duration="2000" data-aos-delay="500">
     <div class="t">
-      <img v-if="!isMobile" src="@/section/s4/logo.png"  data-aos="fade-left" data-aos-delay="0" alt="" srcset="">
+      <img v-if="!isMobile" src="@/section/s4/logo.webp"  data-aos="fade-left" data-aos-delay="0" alt="" srcset="">
       <div class="t2"  data-aos="fade" data-aos-delay="200">
         全球科技大廠共好高雄 共創亞灣AI矽島
       </div>
@@ -56,7 +56,7 @@
     @apply relative;
     width: size(1226);
     height: size(900);
-    background-image: url("@/section/s4/1.jpg");
+    background-image: url("@/section/s4/1.webp");
     .mask {
       @apply absolute h-full;
       width: size(300);
@@ -114,7 +114,7 @@
       @apply relative;
       width: sizem(375);
       height: sizem(408);
-      background-image: url("@/section/s4/1m.jpg");
+      background-image: url("@/section/s4/1m.webp");
       .mask {
         @apply absolute h-full;
         width: sizem(375);

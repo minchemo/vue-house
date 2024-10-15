@@ -12,7 +12,7 @@
   @apply relative w-full bg-black bg-cover bg-fixed;
   @apply flex items-end justify-center;
   height: size(900);
-  background-image: url("@/section/s10/bg.jpg");
+  background-image: url("@/section/s10/bg.webp");
   padding-bottom: size(244.84);
   gap: size(141);
   img {
@@ -35,7 +35,7 @@
     @apply relative w-full bg-black bg-cover bg-fixed;
     @apply flex flex-col items-center justify-center;
     height: sizem(540);
-    background-image: url("@/section/s10/bgm.jpg");
+    background-image: url("@/section/s10/bgm.webp");
     padding-bottom: 0;
     gap: sizem(49);
     img {
