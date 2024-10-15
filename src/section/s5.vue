@@ -1,7 +1,7 @@
 <template>
   <article class="s5" data-aos="bright" data-aos-duration="2000" data-aos-delay="500">
     <div class="t">
-      <img src="@/section/s5/logo.webp" alt="" srcset=""  data-aos="fade-right" data-aos-delay="0"/>
+      <img loading="lazy"  src="@/section/s5/logo.webp" alt="" srcset=""  data-aos="fade-right" data-aos-delay="0"/>
       <div class="t1"  data-aos="fade-right" data-aos-delay="0">絮寫國際地標偉大建築</div>
       <div class="t2"  data-aos="fade" data-aos-delay="200">國際建築 寫全台紀錄 為高雄留下經典</div>
       <div class="t3"  data-aos="fade" data-aos-delay="400">

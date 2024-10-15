@@ -20,7 +20,7 @@
     </div>
     <div class="mask" v-if="isMobile"></div>
     <div class="mask2" v-if="isMobile"></div>
-    <img
+    <img loading="lazy" 
       v-if="!isMobile"
       data-aos="airplane"
       data-aos-duration="3000"

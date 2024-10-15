@@ -1,7 +1,7 @@
 <template>
   <article class="s4" data-aos="bright" data-aos-duration="2000" data-aos-delay="500">
     <div class="t">
-      <img v-if="!isMobile" src="@/section/s4/logo.webp"  data-aos="fade-left" data-aos-delay="0" alt="" srcset="">
+      <img loading="lazy"  v-if="!isMobile" src="@/section/s4/logo.webp"  data-aos="fade-left" data-aos-delay="0" alt="" srcset="">
       <div class="t2"  data-aos="fade" data-aos-delay="200">
         全球科技大廠共好高雄 共創亞灣AI矽島
       </div>

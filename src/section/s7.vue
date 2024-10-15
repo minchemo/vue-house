@@ -1,7 +1,7 @@
 <template>
   <article class="s7" data-aos="bright" data-aos-duration="2000" data-aos-delay="500">
     <div class="t">
-      <img class="t1" src="@/section/s7/title.svg" alt="" srcset="" />
+      <img loading="lazy"  class="t1" src="@/section/s7/title.svg" alt="" srcset="" />
       <div class="t2">SCDA全球知名作品</div>
     </div>
     <div class="box">

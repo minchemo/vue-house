@@ -1,7 +1,7 @@
 <template>
   <article class="s10" data-aos="bright" data-aos-duration="2000" data-aos-delay="500">
-    <img class="img1" src="@/section/s10/1.svg" alt="" srcset="" />
-    <img class="img2" src="@/section/s10/2.svg" alt="" srcset="" />
+    <img loading="lazy"  class="img1" src="@/section/s10/1.svg" alt="" srcset="" />
+    <img loading="lazy"  class="img2" src="@/section/s10/2.svg" alt="" srcset="" />
   </article>
 </template>
 

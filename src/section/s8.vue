@@ -27,14 +27,14 @@
         </SplideSlide>
       </Splide>
       <div class="arrows">
-        <img
+        <img loading="lazy" 
           class="arrow prev"
           @click="splide.go('>')"
           src="@/section/s8/prev.webp"
           alt=""
           srcset=""
         />
-        <img
+        <img loading="lazy" 
           class="arrow next"
           @click="splide.go('>')"
           src="@/section/s8/next.webp"

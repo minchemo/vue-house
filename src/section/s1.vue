@@ -1,8 +1,8 @@
 <template>
   <article class="s1" id="s1">
-       <div class="bg"><img src="./s1/bg.svg" alt="bg"></div>
-       <img src="./s1/img.webp" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0">
-       <img src="./s1/txt.svg" class="txt absolute" alt="txt" data-aos="zoom-in" data-aos-delay="200">
+       <div class="bg"><img loading="lazy" src="./s1/bg.svg" alt="bg"></div>
+       <img loading="lazy" src="./s1/img.webp" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0" >
+       <img loading="lazy" src="./s1/txt.svg" class="txt absolute" alt="txt" data-aos="zoom-in" data-aos-delay="200">
 	   <a href="https://www.facebook.com/61562881595995/" target="_blank">
        <svg viewBox="0 0 470 39" fill="#FFF" xmlns="http://www.w3.org/2000/svg" class="reser absolute" data-aos="zoom-in" data-aos-delay="400">
 <path class="ann" d="M449.1,10V0.7L470,10"/>
