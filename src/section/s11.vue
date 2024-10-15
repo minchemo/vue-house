@@ -176,11 +176,11 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const imgs = [
   {
     img:new URL("./s11/1.jpg", import.meta.url).href,
-    caption: "國立臺東大學三項合併工程"
+    caption: "Uniqlo案"
   },
   {
     img:new URL("./s11/2.jpg", import.meta.url).href,
-    caption: "高野大飯店新建工程"
+    caption: "一功文自路BOT商辦"
   },
   {
     img:new URL("./s11/3.jpg", import.meta.url).href,
