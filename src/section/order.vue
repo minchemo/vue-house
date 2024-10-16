@@ -116,7 +116,7 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
-    background: url("./s1/bg.jpg") no-repeat bottom center;
+    background: no-repeat bottom center;
     background-size: 100% auto;
     padding-top: size(40);
 
@@ -130,7 +130,7 @@
   }
 &::before{content: "";
 width: 100%;position: absolute;top: 0;left: 0;height: 15vw;
-background:linear-gradient(to bottom, #000F 0%,#0000 100%);
+// background:linear-gradient(to bottom, #000F 0%,#0000 100%);
 }
 
 }

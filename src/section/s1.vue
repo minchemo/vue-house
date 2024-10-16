@@ -1,13 +1,9 @@
 <template>
   <article class="s1 relative" id="s1">
     <!-- 
-     <img src="./s1/pc.jpg" class="t0">
      <img src="./s1/mo.jpg" class="t0">  -->
-     <img src="./s1/bg1.svg" class="bg absolute" data-aos="zoom-in" data-aos-delay="0"> 
-    
-    <img src="./s1/logo.svg" class="logo absolute" data-aos="zoom-in" data-aos-delay="200" />
-    <img src="./s1/t.svg" class="t absolute" data-aos="zoom-in" data-aos-delay="400" />
-    <img src="./s1/en.svg" class="en absolute" data-aos="zoom-in" data-aos-delay="600" />
+     <img src="./s1/pc.jpg" class="t0">
+     <img src="./s1/bg.jpg" class="bg">
   </article>
 </template>
 
@@ -29,23 +25,21 @@
   justify-content:center;
   align-items:center;
   overflow: hidden;
-  background: url("./s1/bg.jpg") no-repeat 60% 100%;
-  background-size: 250% auto;
   
 @media screen and (min-width: 768px) {
     height:100vh;
     // height: size(1070);
-    min-height: size(900);
+    min-height: size(1080);
     max-height: size(1080);
     justify-content:space-between;
     padding: 0 0 0 0;
     background-size: cover;
 }
-  .bg{width:sizem(430);top: sizem(100);left:sizem(-163);
-    top: calc(50% + #{sizem(100 - 604 * .5)});
-    @media screen and (min-width: 768px) {
-      top: size(45);left: size(0);width:size(1010);
-      top: calc(50% + #{size(45 - 1080 * .5)});
+  .bg{width:auto;height: 100%;position: absolute;
+    top: 0;left:50%;transform: translateX(-50%);
+    @media screen and (min-width: 768px) {height: auto;
+      top: size(0);left: size(0);width:100%;transform: translateX(0);
+      top: calc(50% + #{size(0 - 1080 * .5)});
       
     }
   }
