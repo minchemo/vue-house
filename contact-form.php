@@ -31,6 +31,7 @@ $utm_campaign = isset($_POST['utm_campaign']) ? $_POST['utm_campaign'] : '';
 $datetime     = date ("Y-m-d H:i:s" , mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y'))) ;
 $room_type    = isset($_POST['room_type']) ? $_POST['room_type'] : '';
 $budget       = isset($_POST['budget']) ? $_POST['budget'] : '';
+$ctime       = isset($_POST['ctime']) ? $_POST['ctime'] : '';
     
 # 好站 hj 客製資料：可聯絡時間
 $time_start        = isset($_POST['time_start']) ? $_POST['time_start'] : '';
