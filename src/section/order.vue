@@ -638,7 +638,7 @@ const send = () => {
       &msg=${formData.msg}
       &reservation_date=${formData.reservation.date}
       &reservation_time=${formData.reservation.time}
-      &reservation_people_count=${formData.reservation.vistor_count}
+      &reservation_people_num=${formData.reservation.vistor_count}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
