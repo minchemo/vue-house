@@ -1,4 +1,4 @@
-const caseName = "日進學"
+const caseName = "得邦日進學"
 
 export default {
     meta: {
