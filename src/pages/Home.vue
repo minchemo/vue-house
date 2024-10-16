@@ -15,7 +15,7 @@
      font-['Noto_Sans_TC',sans-serif]
      font-['LXGW_WenKai_Mono_TC',monospace]
     -->
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#011C61] text-[#FFF]">
+  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#011C61] text-[#FFF]">
     <S1 />
     <Order />
   </div>

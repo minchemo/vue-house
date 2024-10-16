@@ -2,8 +2,10 @@
   <article class="s1 relative" id="s1">
     <!-- 
      <img src="./s1/mo.jpg" class="t0">  -->
-     <img src="./s1/pc.jpg" class="t0">
+     <img src="./s1/mo.jpg" class="t0">
      <img src="./s1/bg.jpg" class="bg">
+
+    <div class="t1 absolute">上曜集團<br>輝映南科</div>
   </article>
 </template>
 
@@ -43,7 +45,10 @@
       
     }
   }
-  .logo{width:sizem(300);top: sizem(180);right:sizem(40);
+  .t1{font-size:sizem(70);letter-spacing: 0.04em;
+    font-weight: 700;top: sizem(80);left: 0;right: 0;
+   line-height: 1.2; text-align: center;}
+  .logo{width:sizem(300);top: sizem(180);right:sizem(40);color: #0FF;
     top: calc(50% + #{sizem(180 - 604 * .5)});
     @media screen and (min-width: 768px) {
       top: size(328);right:size(174);width:size(755);
