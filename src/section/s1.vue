@@ -2,8 +2,9 @@
   <article class="s1 relative" id="s1">
     <!-- 
      <img src="./s1/mo.jpg" class="t0">
-     <img src="./s1/pc.jpg" class="t0" />  -->
-     <img src="./s1/bg.jpg" class="bg" />
+     <img src="./s1/pc.jpg" class="t0" /> -->
+     <img src="./s1/bg.webp" class="bg" /> 
+     <img src="./s1/bg.svg" class="bgs" />
      <Line1 class="l" />
 
     <div class="t1 absolute" data-aos="zoom-in-up" data-aos-delay="0">上曜集團<br>輝映南科</div>
@@ -42,6 +43,15 @@
 }
   .bg{width:auto;height: 100%;position: absolute;
     top: 0;left:50%;transform: translateX(-50%);
+    @media screen and (min-width: 768px) {height: auto;
+      left: size(0);width:100%;transform: translateX(0);
+      top: calc(50% + #{size(-55 - 1080 * .5)});
+      
+    }
+  }
+  .bgs{width:auto;height: 100%;position: absolute;
+    top: 0;left:50%;transform: translateX(-50%);
+    filter:drop-shadow(0px 0px 9px #fdcb);
     @media screen and (min-width: 768px) {height: auto;
       left: size(0);width:100%;transform: translateX(0);
       top: calc(50% + #{size(-55 - 1080 * .5)});
