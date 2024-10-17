@@ -1,4 +1,4 @@
-const caseName = "淳真年代"
+const caseName = "城之芯"
 
 export default {
     meta: {
@@ -9,11 +9,11 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "xxxxxx",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14676.092839442186!2d120.27827834967239!3d23.132826879009304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e7bb034f7043d%3A0xc1bf048a55c37186!2zNzQx5Y-w5Y2X5biC5ZaE5YyW5Y2A5LiJ5rCR6LevODDomZ8!5e0!3m2!1szh-TW!2stw!4v1725962046338!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/9HcPGPwEo6BynxFh6",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1729134765760!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/rsbphVJs6tyPo45J9",
     phone: "000",
-    fbLink: "https://www.facebook.com/100082362497143/",
-    fbMessage: "https://m.me/100082362497143/",
+    fbLink: "https://www.facebook.com//",
+    fbMessage: "https://m.me//",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "xxx"],
@@ -43,7 +43,8 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     // room_type: ["兩房","三房","其他"],
-    budget: ["1500~2000萬","2000萬以上"],
+    room_type: ["一房","兩房","三房","四房","其他"],
+    budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000~3000萬","3000~5000萬","5000萬以上"],
    // use_type: [" "],
 
     navList: [
