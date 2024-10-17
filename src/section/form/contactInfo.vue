@@ -2,7 +2,7 @@
   <div>
   <div class="contact-info-img relative">
 </div>
-  <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto  flex flex-col items-center justify-between font-['Noto_Sans_TC',sans-serif]">
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>  -->
@@ -138,8 +138,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #EE0;
-      color: #000;
+      background: #DF437A;
+      color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -155,7 +155,7 @@
       gap: 1em;
 
       &:hover {
-        background: #09F6;
+        background: #9b1a47;
         color: #fff;
 
         img {
@@ -167,7 +167,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }

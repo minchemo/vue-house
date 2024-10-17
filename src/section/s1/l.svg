@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 350">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="-300" x2="0" y2="350">
+	<stop  offset="0" style="stop-color:#f060"/>
+	<stop  offset=".25" style="stop-color:#f063"/>
+	<stop  offset=".7" style="stop-color:#ff63"/>
+	<stop  offset="1" style="stop-color:#fff0"/>
+</linearGradient>
+<defs>
+<line id="line1" x1="1000" y1="350" x2="1000" y2="-300">
+<animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1s"
+            type="rotate"
+            from="-4 1000 350"
+            to="0 1000 350"
+            repeatCount="indefinite"
+        />
+</line>
+</defs>
+<g stroke="url(#SVGID_1_)">
+<use xlink:href="#line1" x="0" y="0" transform="rotate(0 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(4 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(8 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(12 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(16 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(20 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(24 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(28 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(32 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(36 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(40 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(44 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(48 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(52 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(56 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(60 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(64 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(68 1000 350)"/>
+<use xlink:href="#line1" x="0" y="0" transform="rotate(72 1000 350)"/>
+</g>
+</svg>

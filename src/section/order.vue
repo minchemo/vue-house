@@ -14,7 +14,7 @@
       <!-- Custom Image -->
 
       <!-- Form -->
-      <div class="form mx-auto relative flex justify-center font-['Noto_Serif_TC',serif]">
+      <div class="form mx-auto relative flex justify-center font-['Noto_Sans_TC',sans-serif]">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
@@ -75,7 +75,7 @@
       </div>
 
       <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control">
+      <div class="flex gap-2 items-center justify-center control  font-['Noto_Sans_TC',sans-serif]">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
         <p class="text-[#fff]">
@@ -90,7 +90,7 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer  font-['Noto_Sans_TC',sans-serif]" @click="send()">
         {{ sending? '發送中..': '立即預約' }}
       </div>
 
@@ -128,11 +128,6 @@
     bottom: size(50);
     vertical-align: middle;
   }
-&::before{content: "";
-width: 100%;position: absolute;top: 0;left: 0;height: 15vw;
-// background:linear-gradient(to bottom, #000F 0%,#0000 100%);
-}
-
 }
 
 .order {
@@ -204,13 +199,13 @@ width: 100%;position: absolute;top: 0;left: 0;height: 15vw;
       background-color: #6Cf6;
       position: absolute;
     }
-    .row{background: #09F3;border: 1px solid #6Cf6;color: #FFF;
+    .row{background: #fff;border: 0;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
         width: 5.5em;
-        text-align: left;padding-left:1em ;
-        > span{color: #ff0;//font-size: 12px;
+        text-align: left;padding-left:1em ;font-weight:700;
+        > span{color: #c00;//font-size: 12px;
           }
       }
       input,select{background: none;flex: 1;}
@@ -218,7 +213,7 @@ width: 100%;position: absolute;top: 0;left: 0;height: 15vw;
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
-      filter: brightness(0) invert(1);
+     // filter: brightness(0) invert(1);
       &:focus{
         background-position:calc(100% - .5em) 0%;
       }
@@ -235,8 +230,8 @@ width: 100%;position: absolute;top: 0;left: 0;height: 15vw;
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    background-color: #09F6;
+    color: #000;
+    background-color: #FBCB72;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -273,11 +268,6 @@ width: 100%;position: absolute;top: 0;left: 0;height: 15vw;
     }
 &::before{height: 30vw;
 }
-&::after{content:"";
-width: 100%;position: absolute;bottom: 0;left: 0;height: 45vw;
-background:#000;
-}
-
 
   }
 
@@ -326,9 +316,6 @@ background:#000;
         }
       }
 
-      &::after {
-        display: none;
-      }
     }
 
     .send {
