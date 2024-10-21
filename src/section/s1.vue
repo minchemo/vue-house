@@ -102,6 +102,7 @@
     max-height: sizem(667);
     font-size:sizem(15);
     background: url("./s1/bgm.webp");
+    background-size: cover;
 
 
     .con{gap:0;margin: 0 0  sizem(34) 0;
