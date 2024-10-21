@@ -1,4 +1,4 @@
-const caseName = "一功青"
+const caseName = "福泰侘"
 
 export default {
     meta: {
@@ -8,19 +8,20 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "鵬程東三路vs介壽路",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3678.489826005084!2d120.289203!3d22.784307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ3JzAzLjUiTiAxMjDCsDE3JzIxLjEiRQ!5e0!3m2!1szh-TW!2stw!4v1721979864766!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/Y3AsifGx63NWpNSQA",
-    phone: "",
-    fbLink: "https://www.facebook.com/61562121533694/",
-    fbMessage: "https://m.me/61562121533694/",
+    address: "大園科一街171號（大園國中旁）",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.373439383656!2d121.1681575759265!3d25.05532893743127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468274ab208439d%3A0x612c2e8076cad70e!2zMzM35qGD5ZyS5biC5aSn5ZyS5Y2A56eR5LiA6KGXMTcx6Jmf!5e0!3m2!1szh-TW!2stw!4v1729145143839!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/SjEpuWt6vGfEj9kr9",
+    phone: "03-3842666",
+    fbLink: "https://www.facebook.com/",
+    fbMessage: "https://m.me/",
     caseName: caseName,
     houseInfos: [
+         /*,
         ["投資興建", "升鴻水電工程股份有限公司"],
         ["建築設計", "弘憲聯合建築師事務所"],
         ["企劃銷售", "上旺開發股份有限公司"],
         ["接待中心", "鵬程東三路vs介壽路"],
-        /*,
+       
         ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
         ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
         ["建築設計", "弘憲聯合建築師事務所"],
@@ -35,8 +36,8 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "我想了解",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        title: "預約賞屋",
+        subTitle: "",
     },
     // 底下2個 沒項目就會隱藏
     room_type: ["兩房","三房"],

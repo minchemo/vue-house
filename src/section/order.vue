@@ -58,9 +58,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#584A3D]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#B65700] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -117,7 +117,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #FFF;
+    color: #584A3D;
     padding-top:3.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -170,13 +170,13 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+    .row{background: #FFF;border: 1px solid #CCC;color: #584A3D;
       display: flex;width: 100%;
     align-items:center;
       > span{
         width: 7.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size:0.8em;}
+        > span{color: #B18863;font-size:0.8em;}
       }
       input,select{background: inherit;flex: 1;font-size: inherit;}
       option{color: #666;}
@@ -194,9 +194,9 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #286476;
+    color: #584A3D;
     background-color: #fff;
-    border:0;
+    border:1px solid #B18863;
     border-radius: 0em;
     width: 308px;
     height:3.3em;

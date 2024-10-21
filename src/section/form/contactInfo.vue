@@ -139,8 +139,9 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #5F7A86;
-      color: #fff;
+      background-color: #fff;
+      color: #584A3D;
+      border:1px solid #B18863;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -156,9 +157,14 @@
       gap: 1em;
 
       &:hover {
-        background-color: #c00;
+        background-color: #584A3D;
+        color: #fff;
+
+        img {
+            filter: invert(100%) sepia(100%) saturate(6%) hue-rotate(198deg) brightness(106%) contrast(100%);
+          }
         /*
-        color: #000;
+        
         img {
           filter: brightness(0) invert(0);
         }
@@ -169,14 +175,14 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: invert(54%) sepia(40%) saturate(378%) hue-rotate(347deg) brightness(97%) contrast(90%);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
         background-color: #fff;
-        color: #000;
+        color: #584A3D;
         z-index: 0;
         position: relative;
         flex:2.17;
@@ -205,19 +211,19 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #fff;
+        color: #584A3D;
 
         img {
-        filter: brightness(0) invert(1);
+        filter: invert(54%) sepia(40%) saturate(378%) hue-rotate(347deg) brightness(97%) contrast(90%);
         }
-        /*
+        
         &:hover {
-          color: #000;
+          color: #fff;
           img {
-            filter: brightness(0) invert(0);
+            filter: invert(100%) sepia(100%) saturate(6%) hue-rotate(198deg) brightness(106%) contrast(100%);
           }
         }
-          */
+      
       }
     }
 
@@ -313,7 +319,7 @@
         }
 
         &.address {
-          font-size: sizem(15);
+          font-size: sizem(14);
           border-radius: sizem(0) sizem(0) 0 0;
           padding: 1.1em 0;
           margin-top: sizem(25);
@@ -332,7 +338,7 @@
         }
       &.googlemap {
         border-top-width: 0;
-      border-left-width:0;
+      border-left-width:1px !important;
       }
       }
 
