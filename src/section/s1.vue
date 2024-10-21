@@ -7,11 +7,15 @@
 
    -->
 
+   <div class="w">
+    <img src="./s1/2.webp" alt="水" srcset=""></div>
+    <img src="./s1/bg1.webp" class="bg" v-if="!$isMobile()">
+    <img src="./s1/bgm1.webp" class="bg" v-else>
+
    <div class="con flex">
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <img src="./s1/t1.svg" alt="t1" class="t1" data-aos="zoom-in" data-aos-delay="500">
 </div>
-<div class="w"></div>
   </article>
 </template>
 
@@ -38,12 +42,26 @@
 
   background-size: cover;
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
+  .bg{position: absolute;width: 100vw;height: 100%;
+    top:0;left: 0; pointer-events: none;z-index: 4;object-fit: cover;}
+  .w{
+  position: absolute;
+  z-index: 3; width: 100%;height: 100%;
+  bottom: 0;left: auto;right: auto;
+  //background: #0006;
+  //border-radius: 50%;
+  mix-blend-mode: soft-light;
+  overflow: hidden;
+  img{width: 100%;position: relative;top: 7%;left:25%;
+  animation: w 5s linear infinite;
+  }
+}
 
 .con{
   gap: size(120);
   margin: 0 0 size(120) 0;
   display: flex;
-  flex-direction:column;
+  flex-direction:column;z-index: 5;
   
 
   .logo{
@@ -70,21 +88,6 @@
      transform:scale(2);opacity: 0;
   }
 }
-  .w{
-    @apply absolute;
-  z-index: 3; height: 38.9%;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  //background: #0006;
-  border-radius: 50%;
-  mix-blend-mode: soft-light;
-  overflow: hidden;
-  img{height: 100%;position: relative;top: 10%;
-  animation: w 5s linear infinite;
-  }
-}
 }
 
   
@@ -103,6 +106,10 @@
     font-size:sizem(15);
     background: url("./s1/bgm.webp");
     background-size: cover;
+  .w{
+  img{top: 20%;width: 130%;left:12%;height:sizem(250);
+  }
+}
 
 
     .con{gap:0;margin: 0 0  sizem(34) 0;
@@ -122,12 +129,6 @@
 
   }
 
-  .w{
- height: auto;width: sizem(240);
-  bottom: sizem(110);left: auto;right: auto;
-  img{height:auto;width: 100%;
-  }
-}
   
 
 }
