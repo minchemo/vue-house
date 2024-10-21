@@ -11,6 +11,7 @@
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <img src="./s1/t1.svg" alt="t1" class="t1" data-aos="zoom-in" data-aos-delay="500">
 </div>
+<div class="w"></div>
   </article>
 </template>
 
@@ -55,6 +56,35 @@
 
 
 }
+
+@keyframes w {
+  0% {
+     transform:scale(0.5);opacity: 0;
+  }
+  60% {
+     transform:scale(0.5);opacity: 0;
+  }
+  80%{
+     transform:scale(1.3);opacity: .5;}
+  100% {
+     transform:scale(2);opacity: 0;
+  }
+}
+  .w{
+    @apply absolute;
+  z-index: 3; height: 38.9%;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  //background: #0006;
+  border-radius: 50%;
+  mix-blend-mode: soft-light;
+  overflow: hidden;
+  img{height: 100%;position: relative;top: 10%;
+  animation: w 5s linear infinite;
+  }
+}
 }
 
   
@@ -90,6 +120,13 @@
   
 
   }
+
+  .w{
+ height: auto;width: sizem(240);
+  bottom: sizem(110);left: auto;right: auto;
+  img{height:auto;width: 100%;
+  }
+}
   
 
 }
