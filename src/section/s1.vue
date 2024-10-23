@@ -15,7 +15,7 @@
    <div class="con flex">
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <img src="./s1/t1.svg" alt="t1" class="t1" data-aos="zoom-in" data-aos-delay="500">
-  <div class="t2">2-3房｜20-33坪</div>
+  <div class="t2" data-aos="zoom-in" data-aos-delay="1000">2-3房｜20-33坪</div>
 </div>
   </article>
 </template>
