@@ -4,7 +4,7 @@
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">公園門牌  綠富生活</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">隱富繁華大道旁，心在幽靜樹海裡，「三井三錦」榮景只在轉身之間，公園門牌連動捷運便利，更顯地段價值非凡，近靜漲的魅力，成為層峰家庭置產首選。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">隱富繁華大道旁，心在幽靜樹海裡，「三景三錦」榮景只在轉身之間，公園門牌連動捷運便利，更顯地段價值非凡，近靜漲的魅力，成為層峰家庭置產首選。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">

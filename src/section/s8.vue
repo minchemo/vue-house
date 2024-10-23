@@ -4,7 +4,7 @@
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">「活建築」＋<br v-if="isMobile">「藝術建築」 別墅名作</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">以公園旁活氧綠憇基地，打好健康空間好基底，樹海棟距藏風納氣，「三井三錦」以生活好質，以及門當戶對的鄰里素質，敬獻層峰最佳名宅風範。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">以公園旁活氧綠憇基地，打好健康空間好基底，樹海棟距藏風納氣，「三景三錦」以生活好質，以及門當戶對的鄰里素質，敬獻層峰最佳名宅風範。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">

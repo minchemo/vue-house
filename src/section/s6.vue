@@ -4,7 +4,7 @@
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">書香名門  明星學風</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">忠孝國小.國中、鳳甲國中、鳳西國中、國立鳳新高級中學，皆在車程5分鐘內可達，「三井三錦」坐擁豐沛教育資源，是培養菁英下一代的最佳人生起點。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">忠孝國小.國中、鳳甲國中、鳳西國中、國立鳳新高級中學，皆在車程5分鐘內可達，「三景三錦」坐擁豐沛教育資源，是培養菁英下一代的最佳人生起點。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
