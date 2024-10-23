@@ -15,6 +15,7 @@
    <div class="con flex">
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <img src="./s1/t1.svg" alt="t1" class="t1" data-aos="zoom-in" data-aos-delay="500">
+  <div class="t2">2-3房｜20-33坪</div>
 </div>
   </article>
 </template>
@@ -58,7 +59,7 @@
 }
 
 .con{
-  gap: size(120);
+  gap: size(100);
   margin: 0 0 size(120) 0;
   display: flex;
   flex-direction:column;z-index: 5;
@@ -70,6 +71,12 @@
 
    .t1{
     width: size(190);
+  }
+  .t2{
+    color: #fff;
+    font-size: size(28);
+    font-weight: 500;
+    margin-top: size(-60);
   }
 
 
@@ -123,8 +130,16 @@
 
 
   .t1{
-    width: sizem(106);
+    width: sizem(145);
   }
+
+  .t2{
+    color: #fff;
+    font-size: sizem(20);
+    font-weight: 500;
+    margin-top: sizem(-40);
+  }
+
   
 
   }
