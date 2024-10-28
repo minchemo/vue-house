@@ -276,11 +276,11 @@
       }
       .arrows {
         @apply absolute w-full flex items-center justify-between top-1/2 -translate-y-1/2;
-        padding: 0 size(20) 0 size(10);pointer-events: none;
+        padding: 0 size(20) 0 size(10);
         img {
           width: size(20);
         }
-        .prev, .next {pointer-events:stroke;
+        .prev {
         }
 
         .next {
@@ -441,14 +441,6 @@
         width: sizem(375);
         height: sizem(375);
       }
-      
-      .arrows {
-        padding: 0 sizem(10) 0 sizem(10);
-        img {
-          width: sizem(20);
-        }
-      }
-
       .caption{font-size: sizem(8);}
       }
       .r {
@@ -501,14 +493,13 @@
     }
     .finger {
       width: sizem(290);
-      margin-top: sizem(10);
+      margin-top: sizem(20);
     }
     .wrapper {
       @apply w-full overflow-x-scroll;
-      text-align: center;
       .i {
-        max-height: 100%;
-        min-height: 100%;
+        max-height: sizem(487);
+        min-height: sizem(487);
         max-width:none;
       }
     }
@@ -517,7 +508,7 @@
       @apply relative z-10;
       width: sizem(36);
       padding: 0;
-      margin: sizem(25) sizem(33) sizem(10) sizem(33);
+      margin: sizem(33);
     }
   }
 }
@@ -589,14 +580,12 @@ const imgs = [
     t1: "A2戶型/時尚簡約2房",
     t2: "格局規劃方正且正面採光，規劃雙衛廁，客廳結合開放式餐廳與廚房合為一體，做菜時與家人互動，讓每一餐都充滿愛與溫情，主臥套房空間寬敞明亮，享受獨立衛廁，另設計有開放式客衛浴外洗手台，方便回家清潔防疫，衛浴乾濕分離設計。",
     renderImg:[
-      new URL("../section/s9/p11.jpg", import.meta.url).href,
-      new URL("../section/s9/p12.jpg", import.meta.url).href,
-      new URL("../section/s9/p13.jpg", import.meta.url).href,
+      new URL("../section/s9/r11.jpg", import.meta.url).href,
+      new URL("../section/s9/r12.jpg", import.meta.url).href,
     ],
     renderCaption:[
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
+       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
+       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
     ],
     planImg: new URL("../section/s9/p1.webp", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp1.jpg", import.meta.url).href,
@@ -605,14 +594,12 @@ const imgs = [
     t1: "A6戶型/溫馨人文2房",
     t2: "格局規劃方正且雙面採光，規劃獨立玄關，雙衛廁皆有對外窗，客廳結合開放式餐廳與廚房合為一體，讓您在烹飪的同時與家人分享每一刻的愉悅，主臥套房空間彈性運用更衣間，享受獨立衛廁，客浴乾溼分離設計。",
     renderImg:[
-    new URL("../section/s9/p21.jpg", import.meta.url).href,
-    new URL("../section/s9/p22.jpg", import.meta.url).href,
-    new URL("../section/s9/p23.jpg", import.meta.url).href,
+      new URL("../section/s9/r21.jpg", import.meta.url).href,
+      new URL("../section/s9/r22.jpg", import.meta.url).href,
     ],
     renderCaption:[
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
+       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
+       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
     ],
     planImg: new URL("../section/s9/p2.webp", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
@@ -621,22 +608,12 @@ const imgs = [
     t1: "A1戶型/美式現代3房",
     t2: "格局規劃方正且邊間採光，規劃獨立玄關及廚房，客廳結合開闊的用餐空間，搭配前陽台採光通風，視線寬敞明亮，是家人間互動的場域，盡享美好時光，雙衛浴皆開窗採光，一主臥套房及兩間次臥，雍容的寢臥設計大採光，空間敞朗。",
     renderImg:[
-    new URL("../section/s9/p31.jpg", import.meta.url).href,
-    new URL("../section/s9/p32.jpg", import.meta.url).href,
-    new URL("../section/s9/p33.jpg", import.meta.url).href,
-    new URL("../section/s9/p34.jpg", import.meta.url).href,
-    new URL("../section/s9/p35.jpg", import.meta.url).href,
-    new URL("../section/s9/p36.jpg", import.meta.url).href,
-    new URL("../section/s9/p37.jpg", import.meta.url).href,
+      new URL("../section/s9/r31.jpg", import.meta.url).href,
+      new URL("../section/s9/r32.jpg", import.meta.url).href,
     ],
     renderCaption:[
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本裝潢實品屋僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
+       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
+       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
     ],
     planImg: new URL("../section/s9/p3.webp", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp3.jpg", import.meta.url).href,

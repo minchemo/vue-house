@@ -74,7 +74,8 @@
 //  background-image: url("@/section/s1/bg.jpg");
   padding-bottom: size(137);
   line-height: 1.7;
-.t0{position: absolute;top: 0;left: 0;width: 100%;opacity:0.3 ;z-index: 10;
+.t0{position: absolute;top: 0;left: 0;width: 100%;
+  opacity:0.3 ;z-index: 10;
   user-select: none;
   pointer-events: none;}
 .bg{position: absolute;top: 0;left: 0;width: 100%;z-index:3;
