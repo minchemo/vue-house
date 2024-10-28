@@ -59,7 +59,7 @@
 
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
-  <div class="modal -mt-20 md:-mt-72">
+  <div class="modal -mt-20 md:-mt-72 text-[#000]">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
