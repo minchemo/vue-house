@@ -4,13 +4,13 @@
      <img src="./s1/pc.jpg" class="t0" />
      <img src="./s1/mo.jpg" class="t0"> -->
      <img src="./s1/bg.webp" class="bg" /> 
-     <img src="./s1/t1.svg" class="t1 absolute" data-aos="zoom-in-down" data-aos-delay="0">
-     <img src="./s1/bird.svg" class="bird absolute" data-aos="zoom-in-down" data-aos-delay="0">
+     <img src="./s1/t1.svg" class="t1 absolute" data-aos="zoom-in" data-aos-delay="0">
+     <img src="./s1/bird.svg" class="bird absolute" data-aos="zoom-in" data-aos-delay="200">
      <div class="txt">
-      <logo class="logo absolute" data-aos="zoom-in-down" data-aos-delay="0"></logo>
+      <logo class="logo absolute" data-aos="zoom-in" data-aos-delay="400"></logo>
   <!--  <img src="./s1/logo.svg" class="logo absolute" data-aos="zoom-in-down" data-aos-delay="0"> -->
-     <img src="./s1/t2.svg" class="t2 absolute" data-aos="zoom-in-down" data-aos-delay="0">
-     <img src="./s1/slogo.svg" class="slogo absolute" data-aos="zoom-in-down" data-aos-delay="0">
+     <img src="./s1/t2.svg" class="t2 absolute" data-aos="zoom-in" data-aos-delay="600">
+     <img src="./s1/slogo.svg" class="slogo absolute" data-aos="zoom" data-aos-delay="800">
     </div>
   </article>
 </template>

@@ -230,8 +230,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
-    background-color: #FBCB72;
+    color: #fff;
+    background-color: #002D4D;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
