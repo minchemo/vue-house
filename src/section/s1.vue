@@ -1,23 +1,23 @@
 <template>
   <article class="s1 relative" id="s1">
     <!-- 
-     <img src="./s1/mo.jpg" class="t0">
-     <img src="./s1/pc.jpg" class="t0" /> -->
-     <img src="./s1/bg2.jpg" class="bg" /> 
-     <div class="bgs">
-     <img src="./s1/bg.svg" /></div>
-     <Line1 class="l" />
-     <img src="./s1/l.png" class="l2" data-aos="zoom-out" />
-
-    <div class="t1 absolute" data-aos="zoom-in-up" data-aos-delay="0">上曜集團<br>輝映南科</div>
-    <img src="./s1/t2.svg" class="t2 absolute" data-aos="zoom-in-down" data-aos-delay="0">
-    <img src="./s1/t3.svg" class="t3 absolute" data-aos="zoom-in-down" data-aos-delay="0">
+     <img src="./s1/pc.jpg" class="t0" />
+     <img src="./s1/mo.jpg" class="t0"> -->
+     <img src="./s1/bg.webp" class="bg" /> 
+     <img src="./s1/t1.svg" class="t1 absolute" data-aos="zoom-in-down" data-aos-delay="0">
+     <img src="./s1/bird.svg" class="bird absolute" data-aos="zoom-in-down" data-aos-delay="0">
+     <div class="txt">
+      <logo class="logo absolute" data-aos="zoom-in-down" data-aos-delay="0"></logo>
+  <!--  <img src="./s1/logo.svg" class="logo absolute" data-aos="zoom-in-down" data-aos-delay="0"> -->
+     <img src="./s1/t2.svg" class="t2 absolute" data-aos="zoom-in-down" data-aos-delay="0">
+     <img src="./s1/slogo.svg" class="slogo absolute" data-aos="zoom-in-down" data-aos-delay="0">
+    </div>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:600px;left: 0; pointer-events: none;z-index: 9;opacity: .5;}
+  .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: .5;}
 @keyframes an {
   to {
     transform: translateX(0%);
@@ -27,11 +27,12 @@
     height:calc(100vh - 63px);
   //  height:sizem(667);
     min-height: sizem(604);
-    max-height: sizem(700);
+    max-height: sizem(750);
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items:center;
+ // background: #000;
  // overflow: hidden;
   
 @media screen and (min-width: 768px) {
@@ -43,71 +44,54 @@
     padding: 0 0 0 0;
     background-size: cover;
 }
-  .bg{width:auto;height: 100%;position: absolute;
-    top: 0;left:50%;transform: translateX(-50%);
+  .bg{width:220%;height:sizem(840);position: absolute;
+    top: -3%;left:50%;transform: translateX(-39%);
     @media screen and (min-width: 768px) {height: auto;
       left: size(0);width:100%;transform: translateX(0);
       top: calc(50% + #{size(-55 - 1080 * .5)});
       
     }
   }
-  .bgs{width:auto;height: 100%;position: absolute;overflow: hidden;
-    top: 0;left:50%;transform: translateX(-50%);
-    img{height: 100%;
-    filter:drop-shadow(0px 0px 9px #fdcb);}
-    @media screen and (min-width: 768px) {height: auto;
-      left: size(0);width:100%;transform: translateX(0);
-      top: calc(50% + #{size(-55 - 1080 * .5)});
-      img{height: auto;width:100%;}
-      
-    }
-  }
-  .l2{width:sizem(300);position: absolute;
-    top:  calc(50% + #{sizem(287 - 604 * .5)});left: calc(50% - #{sizem(300*.5)});
-    @media screen and (min-width: 768px) {height: auto;
-     width:size(450);left: calc(50% - #{size(450*.5)});
-      top: calc(50% + #{size(520 - 1080 * .5)});
-      
-    }
-  }
-  .l{width:auto;height: 110%;position: absolute;stroke-width:2;
-    top: 0;left:50%;transform: translateX(-50%)scaleY(.5); 
-    transform-origin: 50% 0%;
-    @media screen and (min-width: 768px) {height: auto;stroke-width:1;
-      width:179%;max-width:none;transform: translateX(-50.2%)scaleY(.49);
-      top: calc(50% + #{size(-0 - 1080 * .5)});
-      //top:0;
-      
-    }
-  }
-  .t1{font-size:sizem(70);letter-spacing: 0.04em;
-    font-weight: 700;top: sizem(80);left: 0;right: 0;
-    top: calc(50% + #{sizem(80 - 604 * .5)});
-   line-height: 1.2; text-align: center;
+  .t1{width:sizem(62);top: sizem(110);left: 0;right: 0;
+    top: calc(50% + #{sizem(110 - 750 * .50)});
    @media screen and (min-width: 768px) {
-    font-size:size(153);
-    top: calc(50% + #{size(84 - 1080 * .5)});
+    width:size(126);right: size(650);
+    top: calc(50% + #{size(267 - 1080 * .5)});
     }
   }
-  .t2{top: sizem(410);left: 0;right: 0;width:sizem(245);
-    top: calc(50% + #{sizem(410 - 604 * .5)});
+  .bird{width:sizem(90);top: sizem(295);left: 0;right: sizem(195);
+    top: calc(55% + #{sizem(295 - 750 * .55)});
    @media screen and (min-width: 768px) {
-    width:size(533);
-    top: calc(50% + #{size(742 - 1080 * .5)});
+    width:size(182);right: size(655);
+    top: calc(50% + #{size(804 - 1080 * .5)});
     }
   }
-  .t3{top: sizem(460);left: 0;right: 0;width:sizem(245);
-    top: calc(50% + #{sizem(460 - 604 * .5)});
+  .logo{width:sizem(235);top: sizem(377);left: 0;right: 0;
+    top: calc(55% + #{sizem(377 - 750 * .55)});margin: auto;
    @media screen and (min-width: 768px) {
-    width:size(533);
-    top: calc(50% + #{size(854 - 1080 * .5)});
+    width:size(650);left: size(255);
+    top: calc(50% + #{size(254 - 1080 * .5)});
+    }
+  }
+  .t2{width:sizem(235);top: sizem(522);left: 0;right: 0;
+    top: calc(55% + #{sizem(522 - 750 * .55)});
+   @media screen and (min-width: 768px) {
+    width:size(650);left: size(255);
+    top: calc(50% + #{size(648 - 1080 * .5)});
+    }
+  }
+  .slogo{width:sizem(96);bottom: sizem(30);left: 0;right: 0;
+    bottom: calc(15% + #{sizem(30 - 750 * .15)});
+   @media screen and (min-width: 768px) {
+    width:size(190);right: size(35);left: auto;
+    bottom: calc(15% + #{size(45 - 1080 * .15)});
     }
   }
 }
 </style>
 <script setup>
+import logo from './s1/logo.vue';
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
-import Line1 from './s1/l.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());

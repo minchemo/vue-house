@@ -1,5 +1,5 @@
+<template>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 650 356" >
-<rect x="-64" y="-73" fill="#666" width="762" height="498"/>
 <linearGradient id="p0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="350">
 	<stop  offset="0" stop-color="#FFF"/>
 	<stop  offset="1" stop-color="#FFF0"/>
@@ -175,3 +175,5 @@
 	 M527.5,349c0,7.3-9.3,8.7-13.5,5.1l0.3-0.3c4.3,3.3,11.6,1.7,11.6-4.7v-3.8c-2.4,6.3-12.8,5.7-12.8-4.2c0-10.1,10.6-10.5,12.9-4
 	l0.2-4h1.4 M525.8,337.9c-2.5-6.6-11.1-6.5-11.1,3.2c0,9.6,8.9,9.6,11.1,3.1"/>
 </svg>
+
+  </template>

@@ -1,4 +1,4 @@
-const caseName = "城之芯"
+const caseName = "春陽逸居"
 
 export default {
     meta: {
@@ -8,29 +8,30 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "xxxxxx",
+    // address: "xxxxxx",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1729134765760!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/rsbphVJs6tyPo45J9",
-    phone: "000",
-    fbLink: "https://www.facebook.com//",
-    fbMessage: "https://m.me//",
+    phone: "07-352-1660",
+    fbLink: "https://www.facebook.com/61567278457423/",
+    fbMessage: "https://m.me/61567278457423/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "xxx"],
-        ["建築設計", "xxx"],
-        ["基地面積", "xxx"],
-        ["格局規劃", "xxx"],
+        ["投資興建", "百春陽建設股份有限公司"],
+        ["建築設計", "林子森林伯諭聯合建築師事務所"],
+        ["格局規劃", "2-3房"],
         /*
+        ["格局規劃", "xxx"],
         ["空間設計", "相即空間設計"],
         ["企劃銷售", "低碳健康樂活行銷"],
         ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
         ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
         ["建築設計", "弘憲聯合建築師事務所"],
         ["使照號碼", "王朝雍建築師事務所"],
-        ["行銷企劃", "自售"],
+        ["行銷企劃", "自售"],"gtm-
+5R729NRG"
         */
     ],
-    gtmCode: ["GTM-000000"], // 可放置多個
+    gtmCode: ["GTM-5R729NRG"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
