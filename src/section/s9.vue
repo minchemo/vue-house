@@ -272,7 +272,8 @@
       .slide-item {
         width: size(960);
         height: size(960);
-        background-size: cover
+        background-size: cover;
+        background-position: 50% 50%;
       }
       .arrows {
         @apply absolute w-full flex items-center justify-between top-1/2 -translate-y-1/2;
