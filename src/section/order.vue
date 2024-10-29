@@ -16,18 +16,34 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center font-['Noto_Sans_TC',sans-serif]">
         <div class="left h-full flex flex-col justify-between items-center">
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
+            <option value="" selected disabled>請選擇房型</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
+          </select></label>
+        <label class="row" v-if="info.budget"><span>購屋預算</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇區間</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
+          </select>
+        </label>
+        <div class="relative">
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-          <!-- <div class="gender">
+          <!--  --><div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div> -->
+        </div>
+      </div>
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
+            <label class="row"><span>E-mail<span>*</span></span>
+              <input type="text" placeholder="聯絡信箱" class="input w-full rounded-none" :value="formData.email"
+            @input="(event) => (formData.email = event.target.value)" /></label>
         <!--
           <label class="row"><span>性別</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.gender">
@@ -35,24 +51,13 @@
             <option value="男">男</option>
             <option value="女">女</option>
           </select></label>  -->
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
-          </select></label>
           <label class="row" v-if="info.use_type"><span>購屋用途</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
             <option value="" selected disabled>請選擇用途</option>
             <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
           </select>
         </label>
-        <label class="row" v-if="info.budget"><span>購屋預算</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇區間</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
-          </select>
-        </label>
-       
+        <!-- 
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -66,7 +71,7 @@
             <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
-          </select></label> <!--  -->
+          </select></label>  -->
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -184,6 +189,8 @@
       gap: size(20);
       align-items: flex-start;
       //   width: size(419);
+      .relative{
+        width: 100%;padding: 0 4em 0 0;}
     }
 
     .right {
@@ -220,8 +227,8 @@
       }
       // &.name{width: calc(100% - 3.8em);}
     }
-    .gender{display: flex;position: absolute;right: 0; flex-direction:column;
-      label:first-child{margin-bottom: .3em;}
+    .gender{display: flex;position: absolute;right: 0;top: -.2em; flex-direction:column;
+      label:first-child{margin-bottom: .5em;}
       input{margin-right: .3em;}
     }
   }
@@ -305,7 +312,7 @@
 
       .left {
         width: 100%;
-        gap: sizem(15);
+        gap: sizem(20);
       }
 
       .right {
@@ -315,6 +322,8 @@
           height: 7em;
         }
       }
+    &::after {display: none;
+    }
 
     }
 
@@ -371,7 +380,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "gender","use_type","budget","room_type"]
+const bypass = ["project", "msg", "gender","use_type","budget","room_type","city","area"]
 
 //中文對照
 const formDataRef = ref([
@@ -460,6 +469,14 @@ const send = () => {
     toast.error(`手機格式錯誤 ( 09開頭10位數字 )`)
     return
   }
+
+// Email 驗證
+const EmailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+if (!formData.email.match(EmailReg)) {
+  pass = false
+  toast.error(`Email 格式錯誤`)
+  return
+}
 
   if (pass && !sending.value) {
     sending.value = true
