@@ -52,6 +52,12 @@
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
+        <label class="row" v-if="info.ctime"><span>聯絡時間</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>請選擇時間</option>
+            <option v-for="ctime in info.ctime" :value="ctime" v-text="ctime" :key="ctime"></option>
+          </select>
+        </label>
        
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
@@ -359,6 +365,7 @@ const formData = reactive({
   phone: "",
   room_type: "",
   budget: "",
+  ctime: "",
   use_type: "",
   gender: "",
   project: "",
@@ -371,7 +378,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "gender","use_type","budget","room_type"]
+const bypass = ["project", "msg", "email", "gender","use_type","budget","ctime","room_type"]
 
 //中文對照
 const formDataRef = ref([
@@ -379,6 +386,7 @@ const formDataRef = ref([
   "手機", //phone
   "房型", //room_type
   "預算", //budget
+  "時間", //ctime
   "用途", //use_type
   "性別", //gender
   "建案", //project
@@ -468,7 +476,7 @@ const send = () => {
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.msg}
+      &msg=${formData.room_type}；${formData.budget}；${formData.ctime}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
