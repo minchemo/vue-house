@@ -357,6 +357,20 @@ onMounted(async () => {
 
 const imgs = [
   {
+    t1: "A1戶型/美式現代3房",
+    t2: "格局規劃方正且三面採光，規劃獨立玄關及廚房，客廳結合開闊的用餐空間，搭配前陽台採光通風，視線寬敞明亮，是家人間互動的場域，盡享美好時光，雙衛浴皆開窗採光，一主臥套房及兩間次臥，雍容的寢臥設計大採光，空間敞朗。",
+    renderImg:[
+      new URL("../section/s9/r31.jpg", import.meta.url).href,
+      new URL("../section/s9/r32.jpg", import.meta.url).href,
+    ],
+    renderCaption:[
+       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
+       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
+    ],
+    planImg: new URL("../section/s9/p3.webp", import.meta.url).href,
+    popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
+  },
+  {
     t1: "A2戶型/時尚簡約2房",
     t2: "格局規劃方正且雙面採光，規劃雙廁所，客廳結合開放式餐廳與廚房合為一體，做菜時與家人互動，讓每一餐都充滿愛與溫情，主臥套房空間寬敞明亮，享受獨立廁所，另設計有開放式客衛浴外洗手台，方便一回家就洗手，衛浴乾濕分離設計。",
     renderImg:[
@@ -384,19 +398,6 @@ const imgs = [
     planImg: new URL("../section/s9/p2.webp", import.meta.url).href,
     popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
   },
-  {
-    t1: "A1戶型/美式現代3房",
-    t2: "格局規劃方正且三面採光，規劃獨立玄關及廚房，客廳結合開闊的用餐空間，搭配前陽台採光通風，視線寬敞明亮，是家人間互動的場域，盡享美好時光，雙衛浴皆開窗採光，一主臥套房及兩間次臥，雍容的寢臥設計大採光，空間敞朗。",
-    renderImg:[
-      new URL("../section/s9/r31.jpg", import.meta.url).href,
-      new URL("../section/s9/r32.jpg", import.meta.url).href,
-    ],
-    renderCaption:[
-       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。",
-       "本模擬示意圖僅供參考，格局規劃及建材設備以核准之使用執照竣工圖及實際現場為準。"
-    ],
-    planImg: new URL("../section/s9/p3.webp", import.meta.url).href,
-    popupPlanImg: new URL("../section/s9/pp2.jpg", import.meta.url).href,
-  },
+  
 ]
 </script>
