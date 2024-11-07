@@ -17,6 +17,7 @@
   >
   <div class="bgs1s2">
     <S1 />
+    <!-- <Vid /> -->
     <S2 /></div>
     <S3 />
     <S4 />
@@ -53,6 +54,7 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+// import Vid from "@/section/video.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
