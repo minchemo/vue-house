@@ -20,7 +20,8 @@
         <!-- <img class="navlogo" src="@/section/navlogo.png" alt="" srcset="" /> -->
         <div
           class="menu-item font-bold cursor-pointer font-['noto_serif_tc']"
-          v-for="(item, i) in info.navList" :key="item"
+          v-for="(item, i) in info.navList"
+          :key="item"
           :class="{ active: activeMenuIdx === i }"
           @click="scrollTo(item.target, i)"
         >
@@ -31,6 +32,7 @@
       <div class="close" @click="menuOpen = !menuOpen">
         <img src="@/section/close.svg" alt="" srcset="" />
       </div>
+      <img class="menu-logo" src="@/section/menu-logo.png" alt="" srcset="" />
     </div>
   </div>
   <div
@@ -79,10 +81,12 @@
       font-size: size(20);
     }
 
+    $bar-color: #fff;
+
     .bar {
       width: size(30);
       height: 2px;
-      background-color: #653F28;
+      background-color: $bar-color;
       position: relative;
       transform: all 0.5s;
 
@@ -92,7 +96,7 @@
         height: 2px;
         bottom: -#{size(10)};
         position: absolute;
-        background-color: #653F28;
+        background-color: $bar-color;
         transition: all 0.5s;
       }
 
@@ -102,7 +106,7 @@
         height: 2px;
         top: -#{size(10)};
         position: absolute;
-        background-color: #653F28;
+        background-color: $bar-color;
         transition: all 0.5s;
       }
     }
@@ -140,6 +144,7 @@
   }
 
   .menu {
+    @apply bg-[#422412]/80;
     position: fixed;
     top: 0;
     right: 0;
@@ -152,7 +157,6 @@
     border-radius: 0;
     padding: size(100) 0;
     backdrop-filter: blur(2px);
-    background: #653F28;
 
     .menu-item-wrapper {
       @apply flex flex-col relative;
@@ -171,7 +175,7 @@
       font-family: "Noto Sans TC";
       font-weight: 500;
       color: #fff;
-      letter-spacing:0.1em;
+      letter-spacing: 0.1em;
 
       img {
         width: size(43);
@@ -194,8 +198,6 @@
       &.active {
         color: #a3a3a3;
       }
-
-
     }
 
     &.open {
@@ -214,6 +216,13 @@
       img {
         width: 100%;
       }
+    }
+
+    .menu-logo {
+      @apply absolute;
+      left: size(40);
+      top: size(40);
+      width: size(120);
     }
   }
 }
@@ -358,7 +367,7 @@
       .menu-item {
         font-size: sizem(23);
         gap: 0;
-       // letter-spacing: sizem(4);
+        // letter-spacing: sizem(4);
 
         &::after {
           width: sizem(202);
@@ -375,7 +384,6 @@
             @apply hidden;
           }
         }
-
       }
 
       &.open {
@@ -398,6 +406,13 @@
         img {
           width: 100%;
         }
+      }
+      
+      .menu-logo {
+        @apply absolute;
+        left: 25px;
+        top: 25px;
+        width: 6rem;
       }
     }
   }

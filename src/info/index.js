@@ -1,4 +1,4 @@
-const caseName = "吉晟賦"
+const caseName = "富科大苑"
 
 export default {
   meta: {
@@ -8,23 +8,18 @@ export default {
   },
   address1: "接待中心", //按鈕區的--- 如空白會只呈現地址
   address2: "接待中心", //map點下確認的--- 如空白會顯示"導航地址"
-  address: "新北市三重區仁安街108號",
+  address: "接待中心：高雄市楠梓區芎林一街196號",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11808.600935752811!2d121.48721360705572!3d25.081881778877694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a996954dab69%3A0x5d2bf7f40b960a90!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5LuB5a6J6KGXMTA46Jmf!5e0!3m2!1szh-TW!2stw!4v1721554559833!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/jZjs8ha5YMmqaEeh8",
-  phone: "02-8282-8088",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.2275586031965!2d120.32715317603095!3d22.750794826414317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0e3a8d104035%3A0xd900026850cca572!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A6IqO5p6X5LiA6KGXMTk26Jmf!5e0!3m2!1szh-TW!2stw!4v1731266725508!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/jGQisT6Uv3CKMHrC7",
+  phone: "07-352-2333",
    // fbLink: "",
    // fbMessage: "",
   caseName: caseName,
   houseInfos: [
-    ["投資興建", "吉晟建設股份有限公司"],
-    ["建築規劃", "李浩原建築師事務所"],
-    ["企劃行銷", "聯安房屋開發有限公司"],
-    ["建照號碼", "110重建字第00161號"],
-    ["樓層規劃", "地上12樓，地下3層"],
-    ["規劃戶數", "63戶住家、5戶店面"],
-    ["基地面積", "329坪"],
-    ["經紀人字號", "(99)北市經證字第00731號"],
+    ["投資興建", "禾森事業&永盈建設"],
+    ["廣告代銷", "富裕臻實業有限公司"],
+    ["基地面積", "290.89坪"],
 
   ],
   gtmCode: ["GTM-KRZ397T3"], // 可放置多個
@@ -34,47 +29,62 @@ export default {
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    title: "預約賞屋",
+    title: "我想了解",
     subTitle:
-      "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
+      "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
   },
   //底下2個 沒項目就會隱藏
   room_type: ["兩房", "三房"],
   budget: [],
   navList: [
     {
-      name: "集賢大道",
-      target: ".s2",
+      name: "連結橋科",
+      target: ".anchor1",
       offset: "",
     },
     {
-      name: "雙線捷運",
-      target: ".s3",
+      name: "四大天王",
+      target: ".anchor2",
       offset: "",
     },
     {
-      name: "五大商圈",
-      target: ".s5",
+      name: "北高科技",
+      target: ".anchor3",
       offset: "",
     },
     {
-      name: "五座公園",
-      target: ".s6",
+      name: "速度共構",
+      target: ".anchor4",
       offset: "",
     },
     {
-      name: "三所校園",
-      target: ".s7",
+      name: "軌道經濟",
+      target: ".anchor5",
       offset: "",
     },
     {
-      name: "雋永建築",
-      target: ".s8",
+      name: "健康環抱",
+      target: ".anchor6",
       offset: "",
     },
     {
-      name: "立即賞屋",
-      target: ".s-order-title",
+      name: "優質學風",
+      target: ".anchor7",
+      offset: "",
+    },
+    {
+      name: "崗石別墅",
+      target: ".anchor8",
+      offset: "",
+    },
+    {
+      name: "雙強聯手",
+      target: ".anchor9",
+      offset: "",
+    },
+    {
+      name: "品牌建材",
+      target: ".anchor10",
       offset: "",
     },
   ],

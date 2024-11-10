@@ -1,120 +1,133 @@
 <template>
-  <article class="s6">
-    <div class="left">
-      <img class="en" src="@/section/s6/en.png" alt="" />
-      <div class="imgbox">
+  <article class="s6 anchor7">
+    <div class="swiper-box">
+      <Splide
+        ref="splide"
+        class="slide"
+        :options="{
+          autoWidth: false,
+          arrows: false,
+          autoplay: true,
+          pagination: false,
+          interval: 4000,
+          gap: 10,
+          type: 'loop',
+          perPage: 1,
+        }"
+      >
+        <SplideSlide
+          class="slide-item"
+          :key="i"
+          v-for="i in imgs"
+          :style="{ 'background-image': `url(${i.img})` }"
+        >
+          <div class="caption">
+            {{ i.caption }}
+          </div>
+        </SplideSlide>
+      </Splide>
+      <div class="arrows">
         <img
-          src="@/section/s6/1.jpg"
+          src="@/section/arrow.png"
+          class="arrow prev"
+          @click="splide.go('<')"
           alt=""
-          data-aos="fade-left"
-          data-aos-delay="0"
+          srcset=""
         />
         <img
-          src="@/section/s6/2.jpg"
+          src="@/section/arrow.png"
+          class="arrow next"
+          @click="splide.go('>')"
           alt=""
-          data-aos="fade-left"
-          data-aos-delay="0"
+          srcset=""
         />
-        <div class="cap">
-          <div class="line"></div>
-          <p>碧華公園</p>
-        </div>
       </div>
     </div>
     <div class="t">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">
-        五座公園環繞生活<br />
-        璀璨的城市綠寶石
+      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        高科大人文特區<br />
+        優質學風
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="0">
-        永安兒童公園、尼加拉瓜公園、<br v-if="!isMobile" />
-        三蘆公園、碧華公園、慈愛公園，<br v-if="!isMobile" />
-        五座公園環繞老中青三代生活，<br v-if="!isMobile" />
-        城市最難得的綠色悠閒，<br v-if="!isMobile" />
-        是您最親密的日常場景。
+      <div class="t2">
+        坐看高雄科學大學第一校區，以散策地步伐收藏萬坪學海；楠梓高中、楠梓國中小等學校包圍在側，以單車可達的距離，輕快掌握上下學時區。
       </div>
     </div>
-    <div class="caption">情境示意圖</div>
+    <img
+      class="line"
+      v-if="!isMobile"
+      src="@/section/s4/line.png"
+      alt=""
+      srcset=""
+    />
+    <img class="line" v-else src="@/section/s4/linem.png" alt="" srcset="" />
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
 .s6 {
-  @apply w-full relative bg-cover;
-  @apply flex items-start justify-start;
-  height: size(1080);
-  background-image: url("@/section/s6/bg.jpg");
-  padding-left: size(146.23);
-  padding-top: size(40.92);
-  gap: size(90);
+  @apply relative w-full;
+  @apply flex;
+  height: size(900);
+  gap: size(50);
 
-  .left {
-    @apply flex-[0];
-    @apply flex items-start relative z-[5];
-    gap: size(36.53);
-    .en {
-      width: size(30.24);
-    }
-    .imgbox {
-      @apply flex flex-col relative;
-      gap: size(20);
-      > img {
-        width: size(820);
-        height: size(492);
-      }
-
-      .cap {
-        @apply flex items-center;
-        @apply absolute z-10;
-        bottom: size(10);
-        left: size(26);
-        gap: size(17);
-        .line {
-          width: size(711);
-          height: 2px;
-          background: #fcee21;
-        }
-        p {
+  .swiper-box {
+    @apply relative h-full;
+    width: size(1229);
+    .slide {
+      .slide-item {
+        @apply bg-cover;
+        width: size(1229);
+        height: size(900);
+        .caption {
           @apply text-white;
-          font-size: size(12);
-          font-weight: 400;
-          letter-spacing: size(2.4);
+          @apply absolute;
+          left: size(20);
+          bottom: size(12);
+          font-family: "Noto Sans TC";
+          font-size: size(15);
+          font-weight: 700;
         }
+      }
+    }
+    .arrows {
+      @apply absolute w-full;
+      @apply left-1/2 -translate-x-1/2;
+      @apply top-1/2 -translate-y-1/2;
+      @apply flex items-center justify-between;
+      padding: 0 size(15);
+      img {
+        @apply cursor-pointer;
+        width: size(28);
+      }
+      .next {
+        @apply -scale-x-100;
       }
     }
   }
   .t {
-    @apply text-white relative z-[5];
-    top: size(-25);
+    @apply text-black;
+    padding-top: size(251);
     .t1 {
-      font-size: size(40);
-      font-weight: 700;
-      line-height: 140%; /* 56px */
-      letter-spacing: size(8);
+      font-size: size(54);
+      font-weight: 600;
+      margin-bottom: size(43);
     }
     .t2 {
-      margin-top: size(33);
-      font-size: size(20);
+      font-family: "Noto Sans TC";
+      font-size: size(16);
       font-weight: 400;
-      line-height: 150%; /* 30px */
-      letter-spacing: size(4);
+      line-height: 151.41%;
+      width: size(470);
     }
   }
-  .caption {
-    @apply absolute z-10;
-    @apply text-white;
-    right: size(8);
-    bottom: size(8);
-
-    text-shadow: 0.5px 0.5px 2px #000;
-    font-size: size(12);
-    font-weight: 400;
-    letter-spacing: size(2.4);
+  .line {
+    @apply absolute right-0 bottom-0;
+    @apply pointer-events-none select-none;
+    width: size(1200);
   }
 }
-
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -122,71 +135,95 @@
 
 @media screen and (max-width: 767px) {
   .s6 {
-    @apply w-full relative bg-cover;
-    @apply flex flex-col items-start justify-start;
-    height: sizem(1091);
-    background-image: url("@/section/s6/bgm.webp");
-    padding-left: 0;
-    padding-top: sizem(30);
-    gap: sizem(87);
+    @apply flex-col-reverse justify-end;
+    height: auto;
+    gap: sizem(40);
 
-    .left {
-      @apply flex-[0];
-      @apply flex items-start justify-center w-full;
-      gap: sizem(14.89);
-      .en {
-        width: sizem(13.83);
-      }
-      .imgbox {
-        @apply flex flex-col relative;
-        gap: sizem(7.27);
-        > img {
-          width: sizem(298.11);
-          height: sizem(178.66);
+    .swiper-box {
+      @apply relative h-auto;
+      width: 100vw;
+      .slide {
+        .slide-item {
+          @apply bg-cover;
+          width: sizem(375);
+          height: sizem(274.61);
+          .caption {
+            @apply text-white;
+            @apply absolute;
+            left: unset;
+            right: sizem(10);
+            bottom: sizem(6);
+            font-size: sizem(12);
+            font-weight: 700;
+          }
         }
-
-        .cap {
-          bottom: sizem(10);
-          left: sizem(10);
-          gap: sizem(17);
-          .line {
-            width: sizem(208.16);
-          }
-          p {
-            @apply whitespace-nowrap;
-            font-size: sizem(11);
-            letter-spacing: sizem(2.2);
-          }
+      }
+      .arrows {
+        @apply absolute w-full;
+        @apply left-1/2 -translate-x-1/2;
+        @apply top-1/2 -translate-y-1/2;
+        @apply flex items-center justify-between;
+        padding: 0 sizem(8);
+        img {
+          @apply cursor-pointer;
+          width: sizem(15);
+        }
+        .next {
+          @apply -scale-x-100;
         }
       }
     }
     .t {
-      @apply text-white;
-      padding: 0 sizem(31);
+      @apply text-black;
+      padding-top: sizem(60);
+      padding-left: sizem(20);
       .t1 {
         font-size: sizem(25);
-        letter-spacing: sizem(5);
+        font-weight: 600;
+        margin-bottom: sizem(10);
       }
       .t2 {
-        margin-top: sizem(25);
         font-size: sizem(14);
-        letter-spacing: sizem(2.8);
+        font-weight: 400;
+        line-height: 151.41%;
+        width: sizem(310);
       }
     }
-    .caption {
-      right: sizem(8);
-      bottom: sizem(8);
-      font-size: sizem(11);
-      font-weight: 400;
-      letter-spacing: sizem(2.2);
+    .line {
+      @apply absolute right-0 top-0;
+      @apply pointer-events-none select-none;
+      bottom: unset;
+      width: 100%;
     }
   }
 }
 </style>
 
 <script setup>
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+import { computed, getCurrentInstance, ref } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
-
 const isMobile = computed(() => globals.$isMobile())
+const splide = ref()
+const imgs = [
+  {
+    img: new URL("../section/s6/1.jpg", import.meta.url).href,
+    caption: "高科大校園",
+  },
+  {
+    img: new URL("../section/s6/2.jpg", import.meta.url).href,
+    caption: "高科大校園",
+  },
+  {
+    img: new URL("../section/s6/3.jpg", import.meta.url).href,
+    caption: "高科大綠地",
+  },
+  {
+    img: new URL("../section/s6/4.jpg", import.meta.url).href,
+    caption: "高雄科大",
+  },
+  {
+    img: new URL("../section/s6/5.jpg", import.meta.url).href,
+    caption: "楠梓高中",
+  },
+]
 </script>

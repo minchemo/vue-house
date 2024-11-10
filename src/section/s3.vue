@@ -1,153 +1,335 @@
 <template>
   <article class="s3">
-    <div class="inkbg absolute">
-      <div class="ink1 absolute" data-aos="zoom-in" data-aos-delay="0">
-    <img
-      src="./s1/ink2.png" alt="ink"
-    />
-  </div>
-  <div class="ink2 absolute" data-aos="zoom-in" data-aos-delay="200">
-    <img
-      src="./s1/ink2.png" alt="ink"
-    />
-  </div>
+    <div class="map">
+      <img
+        class="map1"
+        src="@/section/s3/1.png"
+        alt=""
+        srcset=""
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
+      />
+      <img
+        class="map2"
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="1200"
+        src="@/section/s3/2.png"
+        alt=""
+        srcset=""
+      />
+      <img
+        class="map3"
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="1400"
+        src="@/section/s3/3.png"
+        alt=""
+        srcset=""
+      />
+      <img
+        class="map4"
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="1600"
+        src="@/section/s3/4.png"
+        alt=""
+        srcset=""
+      />
     </div>
-
-    <div class="t" data-aos="fade-up" data-aos-delay="0">
-      <div class="t1">徐匯中學站 雙線捷運宅</div>
-      <div class="t2">
-        捷運徐匯中學站、Ｙ21站450公尺，<br />
-        蘆洲線、環狀線(施工中)雙捷運樞紐金鑽，<br />
-        環狀線三站讀秒直驅北市士林區，<br />
-        蘆洲線三站瞬間抵達北市大同區。
-      </div>
-    </div>
-    <div class="swiper-box" data-aos="fade-up" data-aos-delay="0">
-      <Splide :options="sConfig" ref="splide" class="slide">
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgs"
-          :style="{ 'background-image': `url(${i.img})` }"
+    <div class="a anchor3">
+      <div class="t">
+        <div
+          class="t1"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="0"
         >
-          <div class="caption">
-            {{ i.caption }}
-          </div>
-        </SplideSlide>
-      </Splide>
-      <div class="arrows" v-if="isMobile">
-        <img
-          @click="splide.go('<')"
-          class="prev"
-          src="@/section/arrow.png"
-          alt="r"
-          srcset=""
-        />
-        <img
-          @click="splide.go('>')"
-          class="next"
-          src="@/section/arrow.png"
-          alt="r"
-          srcset=""
-        />
+          佔地高雄主場 連結橋科台積
+        </div>
+        <div
+          class="t2"
+          v-if="!isMobile"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          向北連起橋頭科學園區，往南聯動楠梓科學園區、台積電，<br />
+          共構北高雄最強科技流域，承接三大科技園區超過2千億產值、2萬名就業機會，帶動人流、商圈、價值無限紅利！
+        </div>
+        <img class="t3" src="@/section/s3/2000.svg" alt="" srcset="" />
+        <div
+          class="t2"
+          v-if="isMobile"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          向北連起橋頭科學園區，往南聯動楠梓科學園區、台積電，共構北高雄最強科技流域，承接三大科技園區超過2千億產值、2萬名就業機會，帶動人流、商圈、價值無限紅利！
+        </div>
+        <div
+          class="t1"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="0"
+        >
+          昨日台南LM特區  <br v-if="isMobile" />今日楠梓科技流域
+        </div>
+        <div
+          class="t2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          高雄緊隨南科LM區成功經驗，楠梓、橋頭一帶已見園區生活圈樣貌成型，約15分鐘內可以上班、擁有生活機能、<br
+            v-if="!isMobile"
+          />規劃新穎的道路系統，楠梓已邁向煥然一新的城市風貌！
+        </div>
+      </div>
+      <div class="slide-box">
+        <Splide
+          ref="splide"
+          class="slide"
+          :options="{
+            drag: isMobile ? true : false,
+            autoWidth: isMobile ? true : false,
+            arrows: false,
+            autoplay: true,
+            pagination: false,
+            interval: 4000,
+            gap: isMobile ? 5 : 10,
+            type: 'loop',
+            focus: isMobile ? 'center' : null,
+            perPage: isMobile ? 2.5 : 3,
+          }"
+        >
+          <SplideSlide
+            class="slide-item"
+            :key="i"
+            v-for="i in imgs"
+            :style="{ 'background-image': `url(${i.img})` }"
+          >
+            <div class="caption">
+              {{ i.caption }}
+            </div>
+          </SplideSlide>
+        </Splide>
       </div>
     </div>
-    <img
-      class="ma"
-      src="@/section/s3/ma.svg" alt="ma"  data-aos="fade-up" data-aos-delay="100"
-    />
+    <div class="b anchor4">
+      <div class="t">
+        <div
+          class="t1"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="0"
+        >
+          R22捷運青埔站 <br v-if="isMobile" />速度共構國1
+        </div>
+        <div
+          class="t2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          捷運軌道貫暢大高雄，坐擁紅線青埔站、橋頭糖廠站；近取台鐵楠梓火車站，連結未來輕軌燕巢線，驅車轉身就是台1線，速接國10、國1，南來北往無往不利！
+        </div>
+      </div>
+      <div class="slide-box">
+        <Splide
+          ref="splide2"
+          class="slide"
+          :options="{
+            autoWidth: false,
+            arrows: false,
+            autoplay: true,
+            pagination: false,
+            interval: 4000,
+            gap: 10,
+            type: 'loop',
+            perPage: 1,
+          }"
+        >
+          <SplideSlide
+            class="slide-item"
+            :key="i"
+            v-for="i in imgs"
+            :style="{ 'background-image': `url(${i.img})` }"
+          >
+            <div class="caption">
+              {{ i.caption }}
+            </div>
+          </SplideSlide>
+        </Splide>
+        <div class="arrows">
+          <img
+            src="@/section/arrow.png"
+            class="arrow prev"
+            @click="splide2.go('<')"
+            alt=""
+            srcset=""
+          />
+          <img
+            src="@/section/arrow.png"
+            class="arrow next"
+            @click="splide2.go('>')"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+    </div>
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply w-full relative bg-cover;
-  height: size(820);
- // background-image: url("@/section/s3/bg.jpg");
-  padding: 0 size(40);
- // padding-top: size(105);
-.bg{position: absolute;top: size(-245);left: 0;width: 100%;z-index:3;
-  user-select: none;
-  pointer-events: none;}
-.ma{position: absolute;top: size(-96);right: size(131);width: size(827);z-index:3;
-  user-select: none;
-  pointer-events: none;}
-  .mrt {
-    @apply absolute right-0 top-0 w-full h-full;
-  //  background-image: url("@/section/s3/mrt.png");
-  //  background-size: cover;
-    .caption {
-      @apply absolute text-white;
-      right: size(15);
-      bottom: size(7);
-      font-size: size(12);
-      font-weight: 400;
-      letter-spacing: size(2.4);
-    }
-  }
+  @apply relative w-full;
+  @apply bg-cover bg-bottom;
+  background-image: url("@/section/s3/bg.jpg");
+
   .t {
-    @apply relative z-[5] text-black;
-    margin: 0 0 0 size(145);
-    padding-top: size(100);
+    @apply text-white;
     .t1 {
-      font-size: size(40);
-      font-weight: 700;
-      letter-spacing: size(8);
+      font-size: size(54);
+      font-weight: 600;
+      margin-bottom: size(29);
     }
     .t2 {
-      @apply relative;
-      font-size: size(20);
+      @apply font-['Noto_Sans_TC'];
+      font-size: size(16);
       font-weight: 400;
-      line-height: 150%;
-      letter-spacing: size(4);
-      margin-top: size(20);
+      line-height: 151.41%;
+    }
+    .t3 {
+      width: size(959);
+      margin-top: size(48);
+      margin-bottom: size(60);
+    }
+  }
 
-      &::after {
-        @apply absolute left-0;
-        bottom: -#{size(45)};
-        content: "";
-        width: size(377);
-        height: 2px;
-        background: #fcee21;
+  .caption {
+    @apply text-white;
+    @apply absolute;
+    right: size(20);
+    bottom: size(12);
+    font-family: "Noto Sans TC";
+    font-size: size(15);
+    font-weight: 700;
+  }
+
+  .a {
+    @apply w-full relative;
+    @apply flex flex-col;
+    height: size(1641);
+    padding-left: size(224);
+    padding-top: size(238);
+
+    .slide-box {
+      width: size(1586);
+      margin-top: size(41);
+      margin-left: -#{size(76)};
+      .slide {
+        .slide-item {
+          @apply bg-cover;
+          height: size(348);
+        }
       }
     }
   }
-  .swiper-box {
-    @apply relative;
-    margin-top: size(130);
-    @apply relative z-10;
-    .slide-item {
-      width: size(600);
-      height: size(400);
-     // height: size(314);
-      margin-right: size(12);
-      background-size: cover;
-    }
-    .caption{color: #fcd05466;position: absolute;right: .5em;bottom: .5em;text-shadow: 0 0 10px #000;}
-  }
-.inkbg{top: 0;left: 0;width: 100%;z-index:3;
-  user-select: none;
-  pointer-events: none;
+  .b {
+    @apply w-full relative;
+    height: size(900);
+    padding-left: size(222);
+    padding-top: size(129);
 
-}
-  .ink1{
-    top: size(-265);left:size(-350);width:size(2120);
-    img{
-      width: 100%;filter: invert(86%) sepia(4%) saturate(1113%) hue-rotate(319deg) brightness(111%) contrast(98%);
-      transform: rotate(165deg);
+    .t {
+      @apply flex items-center;
+      gap: size(89);
+      .t1 {
+        @apply m-0;
+      }
+      .t2 {
+        @apply m-0 relative;
+        width: size(660);
+        &::before {
+          @apply w-[1px] bg-white;
+          @apply absolute;
+          @apply top-1/2 -translate-y-1/2;
+          content: "";
+          height: size(51);
+          left: -#{size(30)};
+        }
+        &::after {
+          @apply w-[1px] bg-white;
+          @apply absolute;
+          @apply top-1/2 -translate-y-1/2;
+          content: "";
+          height: size(51);
+          right: -#{size(30)};
+        }
+      }
+    }
+    .slide-box {
+      @apply absolute;
+      right: size(199);
+      bottom: size(129);
+      width: size(855);
+      margin-top: size(65);
+      .slide {
+        .slide-item {
+          @apply bg-cover relative;
+          width: size(855);
+          height: size(506);
+        }
+      }
+      .arrows {
+        @apply absolute w-[107%];
+        @apply left-1/2 -translate-x-1/2;
+        @apply top-1/2 -translate-y-1/2;
+        @apply flex items-center justify-between;
+        img {
+          @apply cursor-pointer;
+          width: size(18);
+        }
+        .next {
+          @apply -scale-x-100;
+        }
+      }
     }
   }
-  .ink2{
-    top: size(-350);left:size(325);width:size(2850);height:size(1275);
-    img{
-      width: 100%;height: 100%;filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
-      transform: rotate(165deg);
-    }
-  }
-}
 
+  .map {
+    @apply absolute right-0 top-0;
+    @apply pointer-events-none select-none;
+    img {
+      @apply absolute;
+    }
+    .map1 {
+      top: 0;
+      right: size(126.86);
+      width: size(952);
+    }
+    .map2 {
+      top: 0;
+      right: 0;
+      width: size(647);
+    }
+    .map3 {
+      top: size(435.78);
+      right: size(498.31);
+      width: size(41.15);
+    }
+    .map4 {
+      top: size(0);
+      right: size(338.91);
+      width: size(266.64);
+    }
+  }
+}
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -155,114 +337,197 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    height: sizem(687);
-   // background-image: url("@/section/s3/bgm.jpg");
-    padding: 0;
-    padding-top: sizem(60);
-.ma{position: absolute;top: sizem(470);right: 0;
-  left: 0;margin: auto;
-  width: sizem(330);}
+    @apply relative w-full;
+    @apply bg-cover bg-bottom;
+    background-image: url("@/section/s3/bg.jpg");
+    height: auto;
 
     .t {
-      padding: 0 sizem(32.5);
-      margin: auto;
+      @apply text-white;
       .t1 {
-        @apply whitespace-nowrap;
         font-size: sizem(25);
-        letter-spacing: sizem(5);
+        font-weight: 600;
+        margin-bottom: 0;
       }
       .t2 {
-        @apply relative;
         font-size: sizem(14);
-        font-weight: 400;
-        line-height: 150%;
-        letter-spacing: sizem(1.4);
-        margin-top: sizem(14);
+        width: sizem(310);
+      }
+      .t3 {
+        width: sizem(286);
+        margin-top: size(48);
+        margin-bottom: size(60);
+      }
+    }
 
-        &::after {
-          bottom: -#{sizem(29)};
+    .caption {
+      @apply text-white;
+      @apply absolute;
+      right: sizem(10);
+      bottom: sizem(6);
+      font-size: sizem(12);
+      font-weight: 700;
+    }
+
+    .a {
+      @apply w-full relative;
+      @apply flex flex-col;
+      height: auto;
+      padding-left: sizem(36);
+      padding-top: sizem(60);
+
+      .slide-box {
+        width: 100vw;
+        margin-top: 0;
+        margin-left: -#{sizem(36)};
+        .slide {
+          .slide-item {
+            @apply bg-cover;
+            width: sizem(234.96);
+            height: sizem(156);
+          }
+        }
+      }
+      .t1 {
+        margin-bottom: sizem(10);
+        &:nth-child(4) {
+          margin-top: sizem(240);
+        }
+      }
+      .t2 {
+        margin-bottom: sizem(35.36);
+      }
+      .t3 {
+        margin-bottom: sizem(20);
+      }
+    }
+    .b {
+      @apply w-full relative;
+      @apply bg-cover bg-bottom;
+      height: sizem(734);
+      padding-left: sizem(32);
+      padding-top: sizem(68);
+      background-image: url("@/section/s3/bgbm.jpg");
+
+      .t {
+        @apply flex flex-col items-start;
+        gap: sizem(10);
+        .t1 {
+          @apply m-0;
+        }
+        .t2 {
+          @apply m-0 relative;
           width: sizem(310);
+          &::before {
+            @apply hidden;
+          }
+          &::after {
+            @apply hidden;
+          }
+        }
+      }
+      .slide-box {
+        @apply relative;
+        right: unset;
+        bottom: unset;
+        width: sizem(311.3);
+        margin-top: sizem(23);
+        .slide {
+          .slide-item {
+            @apply bg-cover relative;
+            width: sizem(311.3);
+            height: sizem(184.23);
+          }
+        }
+        .arrows {
+          @apply absolute w-[115%];
+          @apply left-1/2 -translate-x-1/2;
+          @apply top-1/2 -translate-y-1/2;
+          @apply flex items-center justify-between;
+          img {
+            @apply cursor-pointer;
+            width: sizem(20);
+          }
+          .next {
+            @apply -scale-x-100;
+          }
         }
       }
     }
-    .swiper-box {
+
+    .map {
+      top: sizem(100);
       @apply relative;
-      margin-top: sizem(63);
-      @apply relative z-10;
-      .slide-item {
-        width: sizem(300);
-        height: sizem(200);
-        margin-right: sizem(10);
+      .map1 {
+        top: sizem(180);
+        right: sizem(42.63);
+        width: sizem(320.37);
       }
-      .caption{font-size: sizem(12);}
-
-      .arrows {
-        @apply absolute w-full;
-        @apply flex items-center justify-between;
-        @apply top-1/2 -translate-y-1/2;
-        @apply pointer-events-none;
-        padding: 0 sizem(10);
-        img {
-          @apply pointer-events-auto;
-          width: sizem(12.8);
-        }
-        .prev {
-        }
-
-        .next {
-          @apply -scale-x-100;
-        }
+      .map2 {
+        top: sizem(180);
+        right: 0;
+        width: sizem(217.7);
+      }
+      .map3 {
+        top: sizem(330);
+        right: sizem(167.61);
+        width: sizem(13.85);
+      }
+      .map4 {
+        top: sizem(180);
+        right: sizem(113.98);
+        width: sizem(89.72);
+      }
+      img {
+        mask-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 1) 80%,
+          rgba(0, 0, 0, 0) 100%
+        );
       }
     }
-  .ink1{
-    top: sizem(290);left:sizem(-390);width:sizem(890);
-    img{
-      transform: rotate(0deg);
-    }
-  }
-  .ink2{
-    top: sizem(-48);left:sizem(-330);width:sizem(908);height:sizem(405);
-    img{
-      width: 100%;height: 100%;
-      //filter: invert(0);
-      filter:invert(90%) sepia(14%) saturate(861%) hue-rotate(316deg) brightness(101%) contrast(95%);
-      transform: rotate(0deg);
-    }
-  }
   }
 }
 </style>
 
 <script setup>
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+import { ref, computed, getCurrentInstance } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
-
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
-const sConfig = {
-  autoWidth: true,
-  arrows: false,
-  autoplay: globals.$isMobile() ? true : false,
-  pagination: false,
-  drag: globals.$isMobile() ? true : false,
-  interval: 4000,
-  gap: 0,
-  type: globals.$isMobile() ? "loop" : "",
-}
+const splide2 = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s3/1.webp", import.meta.url).href,
-    caption: "徐匯中學站實景",
+    img: new URL("../section/s3/i1.jpg", import.meta.url).href,
+    caption: "橋頭科學園區",
   },
   {
-    img: new URL("../section/s3/2.webp", import.meta.url).href,
-    caption: "徐匯中學站實景",
+    img: new URL("../section/s3/i2.jpg", import.meta.url).href,
+    caption: "台積電",
   },
   {
-    img: new URL("../section/s3/3.webp", import.meta.url).href,
-    caption: "徐匯中學站實景",
+    img: new URL("../section/s3/i3.jpg", import.meta.url).href,
+    caption: "楠梓科技園區",
+  },
+]
+const imgs2 = [
+  {
+    img: new URL("../section/s3/ii1.jpg", import.meta.url).href,
+    caption: "捷運橋頭糖廠站",
+  },
+  {
+    img: new URL("../section/s3/ii2.jpg", import.meta.url).href,
+    caption: "捷運青埔站",
+  },
+  {
+    img: new URL("../section/s3/ii3.jpg", import.meta.url).href,
+    caption: "楠梓火車站",
+  },
+  {
+    img: new URL("../section/s3/ii4.jpg", import.meta.url).href,
+    caption: "橋頭火車站",
   },
 ]
 </script>

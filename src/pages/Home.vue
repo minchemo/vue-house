@@ -13,7 +13,7 @@
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div
-    class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC'] pb-[64px] md:pb-0"
+    class="home bg-[#fff] overflow-hidden font-['Noto_Serif_TC'] pb-[64px] md:pb-0"
   >
     <S1 />
     <S2 />

@@ -3,7 +3,7 @@
     <img
       class="view1 select-none"
       ref="viewImg"
-      src="@/section/s2/ma.svg"
+      src="@/section/s2/map.png"
       alt=""
       srcset=""
     />
@@ -54,6 +54,7 @@
     }
 
     .mask {
+      @apply bg-[#683700]/50;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -66,14 +67,6 @@
       pointer-events: none;
       opacity: 1;
       transition: all 1s;
-
-      background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(0, 102, 153, 0.9) 10%,
-         rgba(0, 102, 153, 0) 100%
-      );
-
 
       img {
         min-width: unset;
