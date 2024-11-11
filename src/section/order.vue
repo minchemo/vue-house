@@ -1,11 +1,23 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-<!-- 
+      <!-- 
       <div class="order-title" data-aos="fade-up" data-aos-delay="0"><img src="@/section/s2/line.svg" alt="line" class="line"><br>邀約行家 領席鑑賞</div> -->
       <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <div
+        class="order-title text-center"
+        v-if="info.order.title"
+        v-html="info.order.title"
+      ></div>
+      <div
+        class="order-subTitle text-center"
+        v-if="info.order.subTitle"
+        v-html="
+          $isMobile() && info.order.subTitle_mo
+            ? info.order.subTitle_mo
+            : info.order.subTitle
+        "
+      ></div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -14,50 +26,110 @@
       <!-- Custom Image -->
 
       <!-- Form -->
-      <div class="form mx-auto relative flex justify-center font-['Noto_Sans_TC',sans-serif]">
+      <div
+        class="form mx-auto relative flex justify-center font-['Noto_Sans_TC',sans-serif]"
+      >
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
-          </select></label>
-        <label class="row" v-if="info.budget"><span>購屋預算</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇區間</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
-          </select>
-        </label>
-        <div class="relative">
-          <label class="row name"><span>姓名<span>*</span></span>
-          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-            @input="(event) => (formData.name = event.target.value)" /></label>
-          <!--  --><div class="gender">
-          <label><input  type="radio" name="gender" value="男" 
-              @input="(event) => (formData.gender = event.target.value)">先生</label>
-          <label><input  type="radio" name="gender" value="女" 
-              @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>
-      </div>
-            <label class="row"><span>手機<span>*</span></span>
-              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" /></label>
-            <label class="row"><span>E-mail<span>*</span></span>
-              <input type="text" placeholder="聯絡信箱" class="input w-full rounded-none" :value="formData.email"
-            @input="(event) => (formData.email = event.target.value)" /></label>
-        <!--
+          <label class="row" v-if="info.room_type"
+            ><span>需求房型</span>
+            <select
+              class="select w-full rounded-none bg-white"
+              v-model="formData.room_type"
+            >
+              <option value="" selected disabled>請選擇房型</option>
+              <option
+                v-for="room in info.room_type"
+                :value="room"
+                v-text="room"
+                :key="room"
+              ></option></select
+          ></label>
+          <label class="row" v-if="info.budget"
+            ><span>購屋預算</span>
+            <select
+              class="select w-full rounded-none bg-white"
+              v-model="formData.budget"
+            >
+              <option value="" selected disabled>請選擇區間</option>
+              <option
+                v-for="budget in info.budget"
+                :value="budget"
+                v-text="budget"
+                :key="budget"
+              ></option>
+            </select>
+          </label>
+          <div class="relative">
+            <label class="row name"
+              ><span>姓名<span>*</span></span>
+              <input
+                type="text"
+                placeholder="姓名"
+                class="input w-full rounded-none"
+                :value="formData.name"
+                @input="(event) => (formData.name = event.target.value)"
+            /></label>
+            <!--  -->
+            <div class="gender">
+              <label
+                ><input
+                  type="radio"
+                  name="gender"
+                  value="男"
+                  @input="(event) => (formData.gender = event.target.value)"
+                />先生</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="gender"
+                  value="女"
+                  @input="(event) => (formData.gender = event.target.value)"
+                />女士</label
+              >
+            </div>
+          </div>
+          <label class="row"
+            ><span>手機<span>*</span></span>
+            <input
+              type="text"
+              placeholder="手機"
+              class="input w-full rounded-none"
+              :value="formData.phone"
+              @input="(event) => (formData.phone = event.target.value)"
+          /></label>
+          <label class="row"
+            ><span>E-mail<span>*</span></span>
+            <input
+              type="text"
+              placeholder="聯絡信箱"
+              class="input w-full rounded-none"
+              :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)"
+          /></label>
+          <!--
           <label class="row"><span>性別</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.gender">
             <option value="" selected disabled>請選擇性別</option>
             <option value="男">男</option>
             <option value="女">女</option>
           </select></label>  -->
-          <label class="row" v-if="info.use_type"><span>購屋用途</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
-            <option value="" selected disabled>請選擇用途</option>
-            <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
-          </select>
-        </label>
-        <!-- 
+          <label class="row" v-if="info.use_type"
+            ><span>購屋用途</span>
+            <select
+              class="select w-full rounded-none bg-white"
+              v-model="formData.use_type"
+            >
+              <option value="" selected disabled>請選擇用途</option>
+              <option
+                v-for="use_type in info.use_type"
+                :value="use_type"
+                v-text="use_type"
+                :key="use_type"
+              ></option>
+            </select>
+          </label>
+          <!-- 
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -74,35 +146,68 @@
           </select></label>  -->
         </div>
         <div class="right">
-          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="(非必填) 請輸入您的留言"></textarea>
+          <textarea
+            :value="formData.msg"
+            @input="(event) => (formData.msg = event.target.value)"
+            class="row textarea w-full h-full rounded-none"
+            placeholder="(非必填) 請輸入您的留言"
+          ></textarea>
         </div>
       </div>
 
       <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control  font-['Noto_Sans_TC',sans-serif]">
-        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-          class="checkbox bg-white rounded-md" />
+      <div
+        class="flex gap-2 items-center justify-center control font-['Noto_Sans_TC',sans-serif]"
+      >
+        <input
+          type="checkbox"
+          v-model="formData.policyChecked"
+          :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md"
+        />
         <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+          本人知悉並同意<label
+            for="policy-modal"
+            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70"
+            >「個資告知事項聲明」</label
+          >內容
         </p>
       </div>
       <Policy />
 
+      <div class="mt-8">
+        <div class="flex items-center justify-center">
+          <CaptchaImage
+            ref="captchaRef"
+            :contentWidth="164"
+            :contentHeight="48"
+            :codeType="['A', '0']"
+          />
+          <input
+            type="text"
+            maxlength="4"
+            class="text-black px-4 text-md w-36 h-12 font-['Noto_sans_tc']"
+            placeholder="輸入4位驗證碼"
+            v-model="formData.captcha"
+          />
+        </div>
+      </div>
+
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+      <!-- <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" /> -->
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer  font-['Noto_Sans_TC',sans-serif]" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+      <div
+        class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer font-['Noto_Sans_TC',sans-serif]"
+        @click="send()"
+      >
+        {{ sending ? "發送中.." : "立即預約" }}
       </div>
 
       <!-- Contact Info -->
       <ContactInfo />
     </div>
-
 
     <!-- Map -->
     <Map v-if="info.address" />
@@ -115,16 +220,14 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
 .order-section {
   position: relative;
- // padding-top: size(406);
-   overflow: hidden;
-    min-height: size(500);
-    background: no-repeat bottom center;
-    background-size: 100% auto;
-    padding-top: size(40);
-
+  // padding-top: size(406);
+  overflow: hidden;
+  min-height: size(500);
+  background: no-repeat bottom center;
+  background-size: 100% auto;
+  padding-top: size(40);
 
   .bg-image {
     position: absolute;
@@ -137,33 +240,35 @@
 
 .order {
   width: 100%;
- // padding-top: size(40);
+  // padding-top: size(40);
   /*
   background:url("@/section/form/bg.jpg");
   background-size: auto;
   */
- // background: linear-gradient(to bottom, #195c45, #000704);
-  
+  // background: linear-gradient(to bottom, #195c45, #000704);
 
-  .order-title {position: relative;
+  .order-title {
+    position: relative;
     z-index: 3;
     font-size: size(40);
     font-weight: 600;
-    color: #FFF;
-    padding-top:1.5em;
+    color: #fff;
+    padding-top: 1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-    .line{width: size(439);}
+    .line {
+      width: size(439);
+    }
   }
 
   .order-title-img {
     width: size(1008);
     margin-bottom: size(155);
   }
-  .order-subTitle{
+  .order-subTitle {
     font-size: size(17);
     // color: #fff;
-    padding-top:.8em;
-    letter-spacing: .1em;
+    padding-top: 0.8em;
+    letter-spacing: 0.1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
   .cus-divider {
@@ -171,7 +276,7 @@
     width: size(300);
     height: size(2);
     margin-bottom: size(50);
-  //  background-color: #055F76;
+    //  background-color: #055F76;
   }
 
   .form {
@@ -184,13 +289,16 @@
     z-index: 50;
     align-items: stretch;
 
-    .left {position: relative;
+    .left {
+      position: relative;
       flex: 1;
       gap: size(20);
       align-items: flex-start;
       //   width: size(419);
-      .relative{
-        width: 100%;padding: 0 4em 0 0;}
+      .relative {
+        width: 100%;
+        padding: 0 4em 0 0;
+      }
     }
 
     .right {
@@ -203,48 +311,72 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #6Cf6;
+      background-color: #6cf6;
       position: absolute;
     }
-    .row{background: #fff;border: 0;color: #000;
-      display: flex;width: 100%;
-    align-items:center;
-      > span{
+    .row {
+      background: #fff;
+      border: 0;
+      color: #000;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      > span {
         width: 5.5em;
-        text-align: left;padding-left:1em ;font-weight:700;
-        > span{color: #c00;//font-size: 12px;
-          }
+        text-align: left;
+        padding-left: 1em;
+        font-weight: 700;
+        > span {
+          color: #c00; //font-size: 12px;
+        }
       }
-      input,select{background: none;flex: 1;}
-      option{color: #666;}
-      select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
-      background-size:auto 200%;
-      transition: background .3s;
-     // filter: brightness(0) invert(1);
-      &:focus{
-        background-position:calc(100% - .5em) 0%;
+      input,
+      select {
+        background: none;
+        flex: 1;
       }
+      option {
+        color: #666;
+      }
+      select {
+        background: url("//h65.tw/img/select.svg") no-repeat calc(100% - 0.5em)
+          100%;
+        background-size: auto 200%;
+        transition: background 0.3s;
+        // filter: brightness(0) invert(1);
+        &:focus {
+          background-position: calc(100% - 0.5em) 0%;
+        }
       }
       // &.name{width: calc(100% - 3.8em);}
     }
-    .gender{display: flex;position: absolute;right: 0;top: -.2em; flex-direction:column;
-      label:first-child{margin-bottom: .5em;}
-      input{margin-right: .3em;}
+    .gender {
+      display: flex;
+      position: absolute;
+      right: 0;
+      top: -0.2em;
+      flex-direction: column;
+      label:first-child {
+        margin-bottom: 0.5em;
+      }
+      input {
+        margin-right: 0.3em;
+      }
     }
   }
 
   .send {
-    font-size:20px;
+    font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #000;
-    background-color: #FBCB72;
+    background-color: #fbcb72;
     //border: 1px solid #FFF9;
-    border:0;
-    border-radius: .5em;
+    border: 0;
+    border-radius: 0.5em;
 
     width: 308px;
-    height:3.3em;
+    height: 3.3em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 400;
@@ -258,13 +390,13 @@
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .order-section {
     min-height: sizem(800);
     position: relative;
     // overflow: hidden;
-   // padding-top: sizem(200);
-   background-position: 50% calc(100% - 45vw);
+    // padding-top: sizem(200);
+    background-position: 50% calc(100% - 45vw);
     background-size: 400% auto;
 
     .bg-image {
@@ -273,9 +405,9 @@
       left: -#{sizem(30)};
       bottom: sizem(590);
     }
-&::before{height: 30vw;
-}
-
+    &::before {
+      height: 30vw;
+    }
   }
 
   .order {
@@ -287,19 +419,20 @@
       width: sizem(117);
       height: sizem(2);
       margin-bottom: sizem(25);
-      background-color: #055F76;
+      background-color: #055f76;
     }
 
     .order-title {
       font-size: sizem(27);
-      padding-top:2em;
-      .line{width: sizem(258);}
+      padding-top: 2em;
+      .line {
+        width: sizem(258);
+      }
     }
-    .order-subTitle{
+    .order-subTitle {
       font-size: sizem(13);
-      padding-top:0;
+      padding-top: 0;
     }
-
 
     .form {
       width: sizem(310);
@@ -318,13 +451,13 @@
       .right {
         width: 100%;
         height: sizem(100);
-        .row{
+        .row {
           height: 7em;
         }
       }
-    &::after {display: none;
-    }
-
+      &::after {
+        display: none;
+      }
     }
 
     .send {
@@ -341,6 +474,7 @@
 </style>
 
 <script setup>
+import { CaptchaImage } from "vue3-captcha-canvas"
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
@@ -349,19 +483,23 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import {
+  computed,
+  getCurrentInstance,
+  ref,
+  reactive,
+  watch,
+  onMounted,
+} from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
-
-
+const globals = getCurrentInstance().appContext.config.globalProperties
+const isMobile = computed(() => globals.$isMobile())
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
 
 const sending = ref(false)
-
 
 const formData = reactive({
   name: "",
@@ -377,10 +515,21 @@ const formData = reactive({
   msg: "",
   policyChecked: false,
   r_verify: true,
+  captcha: "",
 })
 
 //非必填
-const bypass = ["project", "msg", "gender","use_type","budget","room_type","city","area"]
+const bypass = [
+  "project",
+  "msg",
+  "gender",
+  "use_type",
+  "budget",
+  "room_type",
+  "city",
+  "area",
+  "r_verify",
+]
 
 //中文對照
 const formDataRef = ref([
@@ -397,6 +546,7 @@ const formDataRef = ref([
   "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
   "機器人驗證", //r_verify
+  "圖形驗證",
 ])
 
 const areaList = ref([])
@@ -416,22 +566,24 @@ const onRecaptchaUnVerify = () => {
   formData.r_verify = false
 }
 
-const send = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source");
-  const utmMedium = urlParams.get("utm_medium");
-  const utmContent = urlParams.get("utm_content");
-  const utmCampaign = urlParams.get("utm_campaign");
-  const time = new Date();
-  const year = time.getFullYear();
-  const month = time.getMonth() + 1;
-  const day = time.getDate();
-  const hour = time.getHours();
-  const min = time.getMinutes();
-  const sec = time.getSeconds();
-  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+const captchaRef = ref(null)
 
-  const presend = new FormData();
+const send = () => {
+  const urlParams = new URLSearchParams(window.location.search)
+  const utmSource = urlParams.get("utm_source")
+  const utmMedium = urlParams.get("utm_medium")
+  const utmContent = urlParams.get("utm_content")
+  const utmCampaign = urlParams.get("utm_campaign")
+  const time = new Date()
+  const year = time.getFullYear()
+  const month = time.getMonth() + 1
+  const day = time.getDate()
+  const hour = time.getHours()
+  const min = time.getMinutes()
+  const sec = time.getSeconds()
+  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
+
+  const presend = new FormData()
   let pass = true
   let unfill = []
   let idx = 0
@@ -442,18 +594,17 @@ const send = () => {
       if (value == "" || value == false) {
         unfill.push(formDataRef.value[idx])
       }
-
     }
 
-    idx++;
+    idx++
 
-    presend.append(key, value);
+    presend.append(key, value)
   }
 
-  presend.append("utm_source", utmSource);
-  presend.append("utm_medium", utmMedium);
-  presend.append("utm_content", utmContent);
-  presend.append("utm_campaign", utmCampaign);
+  presend.append("utm_source", utmSource)
+  presend.append("utm_medium", utmMedium)
+  presend.append("utm_content", utmContent)
+  presend.append("utm_campaign", utmCampaign)
 
   //有未填寫
   if (unfill.length > 0) {
@@ -470,13 +621,29 @@ const send = () => {
     return
   }
 
-// Email 驗證
-const EmailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-if (!formData.email.match(EmailReg)) {
-  pass = false
-  toast.error(`Email 格式錯誤`)
-  return
-}
+  // Email 驗證
+  const EmailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!formData.email.match(EmailReg)) {
+    pass = false
+    toast.error(`Email 格式錯誤`)
+    return
+  }
+
+  if (formData.captcha.length <= 3) {
+    pass = false
+    toast.error(`請輸入完整圖形驗證碼`)
+    return
+  }
+
+  // 圖形驗證
+  const verified = captchaRef.value.verify(formData.captcha)
+  if (!verified) {
+    pass = false
+    toast.error(`圖形驗證碼輸入錯誤`)
+    formData.captcha = ""
+    captchaRef.value.refresh()
+    return
+  }
 
   if (pass && !sending.value) {
     sending.value = true
@@ -493,20 +660,19 @@ if (!formData.email.match(EmailReg)) {
       &date=${date}
       &campaign_name=${info.caseName}`,
       {
-        method: "GET"
+        method: "GET",
       }
-    );
+    )
 
     fetch("contact-form.php", {
       method: "POST",
       body: presend,
     }).then((response) => {
       if (response.status === 200) {
-        window.location.href = "formThanks";
+        window.location.href = "formThanks"
       }
       sending.value = false
-    });
-
+    })
 
     // toast.success(`表單已送出，感謝您的填寫`)
   }
