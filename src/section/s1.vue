@@ -40,7 +40,7 @@
     align-items: center;
   font-size:size(36);
   //background: #E60012;
-  background: url("./s1/new/group.jpg") center;
+  background: url("./s1/new/group.webp") center;
   background-size: 100%;
 
   .txt-box{
@@ -66,10 +66,10 @@
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(812);
+    min-height: sizem(667);
+    max-height: sizem(667);
     font-size:sizem(15);
-    background: url("./s1/new/group_m.jpg") center;
+    background: url("./s1/new/group_m.webp") center;
     background-size: 100%;
     .img{position: absolute;width: sizem(455);right:sizem(-20);
    // top:calc(50% + #{size(320 - 540)});
