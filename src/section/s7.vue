@@ -1,18 +1,17 @@
 <template>
   <article class="s7" ref="s7">
-    <div class="bg">
+    <div class="bg" v-if="!$isMobile()">
       <span></span>
       <span></span>
       <span></span>
-      <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">安心品牌</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0"><span>嗅覺｜</span>城市與自然的淡淡芬芳</h3>
   </div>
     <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">創新設計，構築感動</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">建築人的建築，多一份理想性，多一份專業堅持。從挑選土地，量制風格，以獨特的設計接軌國際樣式，專注結構與施工，打造有體感的永續森活，實踐您的夢想。</p>
+      <div class="txt font-['Noto_Serif_TC',serif]">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">福泰侘｜在平和的空氣中聞到未來的希望  </h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">草漯重劃區的綠意，搭配青埔高鐵特區的現代氣息，讓這片區域多了一種淡雅的香氣。這裡的一切既有自然的清新，又帶著未來的繁榮，卻不顯張揚。生活在此，如同聞到一股無形的潛力，悠然自得地在這片土地上綻放，讓每一口呼吸都滿載期待與希望。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -33,8 +32,12 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s7 {
   @apply relative flex items-center justify-center text-[#fff];
+  background: url("./left_bg.jpg") 50% 50%;
+  background-size: cover;
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
@@ -44,25 +47,16 @@
   .bg{
     span{
       &:nth-child(1){
-        top: 2vw;
-        left: 8vw;
-        font-size: 2.5vw;
-      }
+      top:size(26);left: 0;
+  font-size:size(120);
+}
       &:nth-child(2){
-        top: 1vw;
-        right: 16vw;
-        font-size: 1.5vw;
-      }
+      top: size(147);left: size(110);
+  font-size:size(27);
+}
       &:nth-child(3){
-        top: 5vw;
-        right: 2vw;
-        font-size: 5vw;
-      }
-      &:nth-child(4){
-        top: -7vw;
-        right: 20vw;
-        font-size: 4vw;
-      }
+      top: size(20);right:size(80);
+  font-size:size(75);}
     }
   }
 
@@ -79,6 +73,9 @@
   flex-direction: column;
   text-align: justify;
 }
+
+
+
 
   .slider {
     margin: 0;
@@ -108,38 +105,31 @@
 
   .s7 {
   @apply flex-col;
+  background: url("./bg_m.jpg") 50% 50%;
+  background-size: cover;
     height: auto;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  gap:1.5em;
   .img{position: absolute;top:sizem(300);left: auto;
     right:sizem(-155);width:sizem(260);bottom: auto;}
-.bg{
-    span{
-      &:nth-child(1){
-        top: 0vw;
-        left: 0vw;
-        font-size: 15vw;
-      }
-      &:nth-child(2){
-        top: 10vw;
-        left: 15vw;
-        font-size: 5vw;
-      }
-      &:nth-child(3){
-        top: 20vw;
-        left: 77vw;
-        font-size: 5vw;
-      }
-    }
-  }
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 2em;
+    }
+  }
+}
+
 
   .slider {
     height: auto;
@@ -165,6 +155,7 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -182,7 +173,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: false,
+  autoplay: true,
   interval: 4000,
   gap: 0,
   type: 'loop'
@@ -191,19 +182,27 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/1.jpg", import.meta.url).href ,
-    caption: "大千"
+    caption: "大園運動籃球場"
   },
   {
     img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "見真"
+    caption: "大園運動籃球場"
   },
   {
     img:new URL("./s7/3.jpg", import.meta.url).href ,
-    caption: "至真"
+    caption: "大園國中棒球場"
   },
   {
     img:new URL("./s7/4.jpg", import.meta.url).href ,
-    caption: "如邑一期"
+    caption: "大園南港里活動中心"
+  },
+  {
+    img:new URL("./s7/5.jpg", import.meta.url).href ,
+    caption: "大園南港里活動中心"
+  },
+  {
+    img:new URL("./s7/6.jpg", import.meta.url).href ,
+    caption: "大園砲兵陣地公園"
   },
 ]
 </script>

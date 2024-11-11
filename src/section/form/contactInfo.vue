@@ -120,13 +120,13 @@
   // background: #045147;
 
   .logo {position: relative;
-    width: size(367);
+    width: size(300);
    // height: size(172);
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(30) auto 0;
+    margin: size(30) auto size(30);
     img{width: 100%;}
     .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
   }
@@ -139,9 +139,10 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #EF8200;
-      color: #FFF;
+      background-color: #ffff;
+      color: #584A3D;
       width: 100%;
+      font-weight: 500;
       flex: 1;
       padding: 1.1em 0;
   //  border-radius: .5em;
@@ -152,11 +153,11 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      //border: 1px solid #C29267;
+      border: 1px solid #B18863;
       gap: 1em;
 
       &:hover {
-        background-color: #df6400;
+        background-color: #584A3D;
         color: #fff;
 
         img {
@@ -168,17 +169,18 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: invert(54%) sepia(51%) saturate(293%) hue-rotate(347deg) brightness(94%) contrast(93%);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
         background-color: #fff;
-        color: #000;
+        color: #584A3D;
         z-index: 0;
         position: relative;
         flex:2.17;
+
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
@@ -204,10 +206,10 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #FFF;
+        color: #584A3D;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: invert(54%) sepia(51%) saturate(293%) hue-rotate(347deg) brightness(94%) contrast(93%);
         }
 
         &:hover {
@@ -244,7 +246,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background:#EF8200;
+    background:#584A3D;
 
     .contact-item {
       height: 100%;      

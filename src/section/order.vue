@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order relative text-center">
+  <div id="order" class="order relative text-center font-['Noto_Serif_TC',serif]">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -57,9 +57,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#FFF]">
+        <p class="text-[#584A3D]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#B65700] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -132,7 +132,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #FFF;
+    color: #584A3D;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -143,7 +143,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #FFF;
+    color: #584A3D;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -182,16 +182,16 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #fff;
+      background-color: #B18863;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+    .row{background: #FFF;border: 1px solid #B18863;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        > span{color: #B18863;font-size: 12px;}
       }
       input,select{background: inherit;flex: 1;}
       option{color: #666;}
@@ -208,18 +208,16 @@
   .send {
     font-size:20px;
     letter-spacing: 0.9em;
+    font-weight: 700;
     text-indent: 0.9em;
-    color: #FFF;
-    background-color: #D71718;
-    //border: 1px solid #FFF9;
-    border:0;
+    color: #584A3D;
+    background-color: #fff;
+    border: 1px solid #B18863;
     border-radius: .5em;
-
     width: 308px;
     height:3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 400;
     position: relative;
   }
 

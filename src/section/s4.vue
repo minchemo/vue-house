@@ -11,12 +11,12 @@
       <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">交通中軸</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0"><span>聽覺｜</span>發展脈動的節奏 </h3>
   </div>
     <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">府城中心，匯聚交通網絡</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">位居中華西路（台17線）、府前路、民生路市中心動軸，鏈結火車站商圈、86快速道路、九份子重劃、台南邁阿密遊艇富豪聚落，北外環連結台南科學園區，願景中心，地段就是難以取代。</p>
+      <div class="txt font-['Noto_Serif_TC',serif]">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">聽大園觀音：聽見未來的活力節奏！</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">隨著大園客運轉運站、青埔高鐵特區的交通便捷加乘，這裡的發展脈動清晰可聽！不論是來往的便捷交通，還是華泰名品城帶來的商業繁榮，生活的每一刻都充滿成長的律動。這片區域的房市價值在穩步提升的節奏中一同成長，住在這裡，讓您的投資隨時聽得見未來的機遇！</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -39,6 +39,8 @@
 
 .s4 {
   @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
+  background: url("./right_bg.jpg") 50% 50%;
+  background-size: cover;
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
@@ -63,7 +65,7 @@
         left: 7vw;
         font-size: 9vw;
         transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        background: radial-gradient(ellipse at center, #bd925a33 65%,  #fff0 70%);
         animation-delay: 1.8s;
       }
       &:nth-child(4){
@@ -122,12 +124,14 @@
 
   .s4 {
   @apply flex-col;
+  background: url("./bg_m.jpg") 50% 50%;
+  background-size: cover;
     height: auto;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  gap:1.5em;
 
 .img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
 .bg{
@@ -207,16 +211,24 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/02.jpg", import.meta.url).href ,
-    caption: "中華西路接軌九份子重劃區、86快速道路"
+    img:new URL("./s4/1.jpg", import.meta.url).href ,
+    caption: "高鐵站"
   },
   {
-    img:new URL("./s4/03.jpg", import.meta.url).href ,
-    caption: "永華大道連結水岸生活"
+    img:new URL("./s4/2.jpg", import.meta.url).href ,
+    caption: "捷運A15"
   },
   {
-    img:new URL("./s4/04.jpg", import.meta.url).href ,
-    caption: "近接西門路新光三越新天地商圈"
+    img:new URL("./s4/3.jpg", import.meta.url).href ,
+    caption: "高速公路"
+  },
+  {
+    img:new URL("./s4/4.jpg", import.meta.url).href ,
+    caption: "台61"
+  },
+  {
+    img:new URL("./s4/5.jpg", import.meta.url).href ,
+    caption: "機場系統線"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

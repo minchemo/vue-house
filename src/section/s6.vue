@@ -5,15 +5,18 @@
     <div class="bg">
       <span></span>
       <span></span>
-      <span v-if="$isMobile()"></span>
+      <span></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">菁英學區</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0"><span>味覺｜</span>多元生活的豐富滋味 </h3>
   </div>
     <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">優質學區 菁英養成圈</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">京都大學研究，境教，是未來卓越的關鍵！新南國小、慈濟國小、慈濟國中、金城高國中、慈濟高中，滿足高端家庭教育需求，精英搖籃，已經為您準備就緒。</p>
+      <div class="txt font-['Noto_Serif_TC',serif]">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">青埔高鐵特區旁，品味豐富多彩的生活！ </h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">隨著華泰名品城、航空城計劃、草漯重劃區的完善，這裡將成為美食、購物、休閒娛樂的理想場所。每一天的生活都充滿著多樣滋味，從青埔高鐵特區帶來的國際風采，到華泰名品城的豐富商圈，這裡將是品味生活的理想地，房市價值也如生活滋味般不斷提升。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -36,6 +39,8 @@
 
 .s6 {
   @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
+  background: url("./right_bg.jpg") 50% 50%;
+  background-size: cover;
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
@@ -47,19 +52,42 @@
     span{
       &:nth-child(1){
         top: 1vw;
-        left: 8vw;
-        font-size: 1.5vw;
+        left: 10vw;
+        font-size: 3.5vw;
       }
       &:nth-child(2){
-        top: 0vw;
-        right: 31vw;
-        font-size: 5vw;
+        top: 12vw;
+        left: 2vw;
+        font-size: 2vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 7vw;
+        font-size: 9vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #bd925a33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+      &:nth-child(4){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(6){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
       }
     }
   }
 
-.img{position: absolute;bottom:0;right:size(50);width:size(795);
-img{width: 100%;position: relative;}}
+
 
   .main {
     @apply flex;
@@ -96,33 +124,32 @@ img{width: 100%;position: relative;}}
 
   .s6 {
   @apply flex-col;
+  background: url("./bg_m.jpg") 50% 50%;
+  background-size: cover;
     height: auto;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  gap:1.5em;
 
 .img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
-  .bg{
+.bg{
     span{
       &:nth-child(1){
-    top: 50vw;
-    left: 86vw;
-    font-size: 9vw;
-}
+        top: 4vw;
+        left: 82vw;
+        font-size: 6vw;
+      }
       &:nth-child(2){
-    top: 8vw;
-    left: 7vw;
-    font-size: 7vw;
-}
+        top: 57vw;
+        left: 2vw;
+        font-size: 8vw;
+      }
       &:nth-child(3){
-        top: 45vw;
-        left: -10vw;
-        font-size:36vw;
-        transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
-        animation-delay: 1.8s;
+        top: 3vw;
+        left: 77vw;
+        font-size: 23vw;
       }
     }
   }
@@ -131,6 +158,8 @@ img{width: 100%;position: relative;}}
     padding: 0 sizem(30);
     width: 100%;
 }
+
+
 
   .slider {
     height: auto;
@@ -155,6 +184,7 @@ img{width: 100%;position: relative;}}
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
@@ -182,19 +212,31 @@ const options = {
 const imgs = [
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
-    caption: "新南國小"
+    caption: "大園商圈街景"
   },
   {
     img:new URL("./s6/2.jpg", import.meta.url).href ,
-    caption: "新南國小"
+    caption: "大園商圈街景"
   },
   {
     img:new URL("./s6/3.jpg", import.meta.url).href ,
-    caption: "新南國小"
+    caption: "大園商圈街景"
   },
   {
     img:new URL("./s6/4.jpg", import.meta.url).href ,
-    caption: "新南國小"
+    caption: "大園商圈街景"
+  },
+  {
+    img:new URL("./s6/5.jpg", import.meta.url).href ,
+    caption: "大園商圈街景"
+  },
+  {
+    img:new URL("./s6/6.jpg", import.meta.url).href ,
+    caption: "大園商圈街景"
+  },
+  {
+    img:new URL("./s6/7.jpg", import.meta.url).href ,
+    caption: "大觀路店家街景"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

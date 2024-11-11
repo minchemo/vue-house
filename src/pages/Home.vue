@@ -10,8 +10,8 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#003183] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <img src="@/section/s1/bg0.jpg" class="bgh">
+  <div class="home bg-[#F4F0ED] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
@@ -26,7 +26,6 @@
     <S7 />
     <S8 />
     <S9 />
-    <S10 />
   <!--
     <S11 />
     <div class="bg">
@@ -99,29 +98,23 @@ img {
     font-size: 2.2em;
     margin: 2em 0 0em;
     line-height: 1.4;
-    font-weight: 900;
+    font-weight: 800;
     color:#C9A063;
     text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: #fff;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto 1em;
-    }
+    color: #584A3D;
+    span{color: #947D4E;}
   }
   .subtitle{
-    font-size: 1.65em;
+    font-size: size(22);
     font-weight: 700;
     margin: 0 0 .8em;
-    color:#C9A063;
+    color:#947D4E;
     line-height: 1.5;
   }
   .desc{
     margin: 0 0 1em;
+    color: #000000;
+    font-weight: 500;
     b{color:#C9A063;}
   }
   }
@@ -183,15 +176,12 @@ img {
 
       .txt {
   .title{
-    font-size: 2.3em;
-    &::after,
-    &::before{
-      width: 2.6em;}
-  }
+    font-size: sizem(18);
+    }
   .subtitle{
-    font-size: 1.4em;
+    font-size: sizem(15);
   }
-  }
+      }
 .slider {
   @apply relative;
   .arrows{
@@ -234,7 +224,6 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
-import S10 from "@/section/s10.vue"
 // import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue"

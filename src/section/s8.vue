@@ -1,13 +1,22 @@
+
+
 <template>
   <article class="s8">
+    <div class="bg">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
+    </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]"  data-aos="fade-up" data-aos-delay="0">電梯店墅</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0"><span>觸覺｜</span>觸摸未來居住的堅韌 </h3>
   </div>
     <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">地段好的店面，大老闆都搶</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">角地店王，百米店街結市，76-98大建坪，電梯透天店住，開店、辦公、自住、出租，置產投資首選。<br />
-零公設持分、免購車位、零虛坪，百坪大樓有找，超高CP值，當然選「如邑2」!</p>
+      <div class="txt font-['Noto_Serif_TC',serif]">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">在福泰侘，觸摸到安全與穩固的生活感受  </h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">在這片大地上，基座皆由Alfa safe 系統支撐而成，帶來安心與持久的居住感受。福泰侘以堅韌的支撐守護您的每一天，讓每一次觸摸都能感受到穩定、厚重而不失細膩的居住品質。這裡的生活，如自然般不言自明，卻值得信賴。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -16,8 +25,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -29,47 +38,81 @@
 @import '@/assets/style/function.scss';
 
 .s8 {
-  @apply relative flex flex-col items-center justify-center text-[#000] bg-[#F8F8F8];
+  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
+  background: url("./right_bg.jpg") 50% 50%;
+  background-size: cover;
   width: 100%;
-  // height: size(800);
+  height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
-  gap:1.5em;
-  flex-wrap:nowrap;
+  gap:3em;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  .bg{
+    span{
+      &:nth-child(1){
+        top: 1vw;
+        left: 10vw;
+        font-size: 3.5vw;
+      }
+      &:nth-child(2){
+        top: 12vw;
+        left: 2vw;
+        font-size: 2vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 7vw;
+        font-size: 9vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #bd925a33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+      &:nth-child(4){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(6){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
+      }
+    }
+  }
+
+
+
   .main {
     @apply flex;
     margin: 0;
+    flex-basis: size(590);
   flex-direction: column;
-  text-align: center;
-    width: 100%;
+  text-align: justify;
 }
-
-.txt {
-.title{
-&::after,
-&::before{
-background: #C9A063;
-}
-}}
-
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(844);
-    width: size(1500);
+      height: size(560);
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-    flex-basis: size(1500);
-      height: size(844);
+    flex-basis: size(840);
+      height: size(560);
       
     }
-    .arrows .prev, .arrows .next{
-      width:3%;
-    }
-
     .splide__pagination{
-      bottom: .5em;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #B78E63;
+    }
     }
   }
 }
@@ -81,25 +124,51 @@ background: #C9A063;
 
   .s8 {
   @apply flex-col;
+  background: url("./bg_m.jpg") 50% 50%;
+  background-size: cover;
     height: auto;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  gap:1.5em;
+
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+.bg{
+    span{
+      &:nth-child(1){
+        top: 4vw;
+        left: 82vw;
+        font-size: 6vw;
+      }
+      &:nth-child(2){
+        top: 57vw;
+        left: 2vw;
+        font-size: 8vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 77vw;
+        font-size: 23vw;
+      }
+    }
+  }
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: 0 sizem(30);
     width: 100%;
 }
+
+
+
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12);  
+    font-size:sizem(12); 
     right:sizem(5);
-    bottom:sizem(5);
+    bottom:sizem(5); 
     }
     .slide-item {
       @apply bg-cover;
@@ -108,9 +177,6 @@ background: #C9A063;
       height: sizem(250);
       
     }
-    .arrows .prev, .arrows .next{
-      width:8%;
-    }
   }
   }
 }
@@ -118,6 +184,7 @@ background: #C9A063;
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
@@ -145,44 +212,17 @@ const options = {
 const imgs = [
   {
     img:new URL("./s8/1.jpg", import.meta.url).href ,
-    caption: "外觀實景"
+    caption: "Alfa safe 系統"
   },
   {
     img:new URL("./s8/2.jpg", import.meta.url).href ,
-    caption: "外觀實景"
+    caption: "Alfa safe 系統"
   },
   {
     img:new URL("./s8/3.jpg", import.meta.url).href ,
-    caption: "外觀實景"
-  },
-  {
-    img:new URL("./s8/4.jpg", import.meta.url).href ,
-    caption: "外觀實景"
-  },
-  {
-    img:new URL("./s8/5.jpg", import.meta.url).href ,
-    caption: "外觀實景"
+    caption: "Alfa safe 系統"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s8/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s8/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s8/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s8/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

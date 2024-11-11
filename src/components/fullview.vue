@@ -47,7 +47,7 @@
             pointer-events: none;
             opacity: 1;
             transition: all 1s;
-            background-color: rgba($color: #008DD5, $alpha: 0.5);
+            background-color: rgba($color: #947D4E, $alpha: 0.5);
 
             img {
                 height: 47px;
@@ -67,7 +67,7 @@ import { onMounted, ref, computed, getCurrentInstance } from 'vue';
 const viewbox = ref();
 const viewImg = ref();
 const swiped = ref(false);
-const offsetRatio = 2.57; 
+const offsetRatio = 1.9; 
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());

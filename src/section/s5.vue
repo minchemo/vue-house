@@ -1,18 +1,17 @@
 <template>
   <article class="s5" ref="s5">
-    <div class="bg">
+    <div class="bg" v-if="!$isMobile()">
       <span></span>
       <span></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
+      <span></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">水岸生活</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0"><span>知覺｜</span>未來生活的實在感</h3>
   </div>
     <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">悠遊水岸 享受森活</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">出門就能享有國際水岸！2公頃的林默娘公園、港濱歷史公園享受水岸悠閒生活，探訪[大魚的祝福]藝術地標。出門就能享受健康！永華運動中心離家近，讓運動不再有藉口，生活美學館，文化展覽提升生活。</p>
+      <div class="txt font-['Noto_Serif_TC',serif]">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">觸摸到未來居住的安全感，大園觀音不容錯過！ </h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">桃園航空城計劃、大園客運轉運站、青埔高鐵特區等重大建設穩步落地，讓這裡成為房市穩健升值的區域。無論是未來的產業機會，還是居住的便利生活，這裡的每一處都充滿未來感。居住在此，您將切實感受到穩定的生活品質和長期投資潛力的雙重保障！</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -33,8 +32,12 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s5 {
   @apply relative flex items-center justify-center text-[#fff];
+  background: url("./left_bg.jpg") 50% 50%;
+  background-size: cover;
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
@@ -44,27 +47,16 @@
   .bg{
     span{
       &:nth-child(1){
-    top: 3vw;
-    left: 9vw;
-    font-size: 6vw;
+      top:size(26);left: 0;
+  font-size:size(120);
 }
       &:nth-child(2){
-    top: 10vw;
-    left: 2vw;
-    font-size: 3vw;
+      top: size(147);left: size(110);
+  font-size:size(27);
 }
       &:nth-child(3){
-    top: 14vw;
-    right: 2vw;
-    font-size: 4vw;}
-      &:nth-child(4){
-        top: 20vw;
-        left: 36vw;
-        font-size: 9vw;
-        transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
-        animation-delay: 1.8s;
-      }
+      top: size(20);right:size(80);
+  font-size:size(75);}
     }
   }
 
@@ -81,6 +73,9 @@
   flex-direction: column;
   text-align: justify;
 }
+
+
+
 
   .slider {
     margin: 0;
@@ -110,33 +105,32 @@
 
   .s5 {
   @apply flex-col;
+  background: url("./bg_m.jpg") 50% 50%;
+  background-size: cover;
     height: auto;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  gap:1.5em;
   .img{position: absolute;top:sizem(300);left: auto;
     right:sizem(-155);width:sizem(260);bottom: auto;}
-  .bg{
-    span{
-      &:nth-child(1){
-    top: 3vw;
-    left: 86vw;
-    font-size: 8vw;
-}
-      &:nth-child(2){
-    top: 20vw;
-    left: 12vw;
-    font-size: 3vw;
-}
-    }
-  }
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 2em;
+    }
+  }
+}
+
+
   .slider {
     height: auto;
     width: 100%;
@@ -161,6 +155,7 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -178,7 +173,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: false,
+  autoplay: true,
   interval: 4000,
   gap: 0,
   type: 'loop'
@@ -187,19 +182,27 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "台南生活美學館"
+    caption: "草漯商圈街景"
   },
   {
     img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "永華國民運動中心"
+    caption: "草漯商圈街景"
   },
   {
     img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "港濱歷史公園"
+    caption: "草漯商圈街景"
   },
   {
     img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "林默娘公園"
+    caption: "大園商圈街景"
+  },
+  {
+    img:new URL("./s5/5.jpg", import.meta.url).href ,
+    caption: "大園商圈街景"
+  },
+  {
+    img:new URL("./s5/6.jpg", import.meta.url).href ,
+    caption: "大園商圈街景"
   },
 ]
 </script>

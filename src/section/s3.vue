@@ -6,12 +6,12 @@
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">雙核心地段</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0"><span>觀覺｜</span>安靜見證福泰建設x祥鼎營造</h3>
   </div>
     <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">碳佐麻里園區、壽司郎國際企業都選在這裡！政府所在，匯聚知名餐飲、家樂福、燦坤、麥當勞，新光三越新天地，機能完善，接軌水岸發展重心：星鑽特區，市中心稀有雙核心，願景可期！</p>
+      <div class="txt font-['Noto_Serif_TC',serif]">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">在簡樸中孕育的未來光景</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">桃園航空城計劃、青埔高鐵特區的繁榮，與草漯重劃區的自然相融，靜靜孕育著未來的輪廓。這片土地不喧鬧、不張揚，卻在無聲中成長壯大。在這裡，您能從寧靜的街景中，望見日漸清晰的生活藍圖。這是都市繁榮與自然安逸的微妙平衡，讓居住成為一種純粹的美學。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -36,6 +36,8 @@
 
 .s3 {
   @apply relative flex items-center justify-center text-[#fff];
+  background: url("./left_bg.jpg") 50% 50%;
+  background-size: cover;
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
@@ -73,14 +75,7 @@
 }
 
 
-.txt {
-  .title{
-    &::after,
-    &::before{
-      width: 15.3em;
-    }
-  }
-}
+
 
   .slider {
     margin: 0;
@@ -110,12 +105,14 @@
 
   .s3 {
   @apply flex-col;
+  background: url("./bg_m.jpg") 50% 50%;
+  background-size: cover;
     height: auto;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  gap:1.5em;
   .img{position: absolute;top:sizem(300);left: auto;
     right:sizem(-155);width:sizem(260);bottom: auto;}
 
@@ -185,27 +182,31 @@ const options = {
 const imgs = [
   {
     img:new URL("./s3/1.jpg", import.meta.url).href ,
-    caption: "台南市政府"
+    caption: "青埔高鐵A18站"
   },
   {
     img:new URL("./s3/2.jpg", import.meta.url).href ,
-    caption: "新光三越"
+    caption: "桃園國際機場"
   },
   {
     img:new URL("./s3/3.jpg", import.meta.url).href ,
-    caption: "夏慕尼"
+    caption: "公一公園店子埤"
   },
   {
     img:new URL("./s3/4.jpg", import.meta.url).href ,
-    caption: "燦坤"
+    caption: "華泰名品城"
   },
   {
     img:new URL("./s3/5.jpg", import.meta.url).href ,
-    caption: "家樂福-安平店"
+    caption: "美術館"
   },
   {
     img:new URL("./s3/6.jpg", import.meta.url).href ,
-    caption: "碳佐麻里"
+    caption: "華泰OUTLET"
+  },
+  {
+    img:new URL("./s3/7.jpg", import.meta.url).href ,
+    caption: "華泰置地XPARK"
   },
 ]
 </script>

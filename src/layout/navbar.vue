@@ -31,14 +31,14 @@
     right: size(114);
     top: size(51);
     .logo {
-        width: size(145);
+        width: size(110);
         height: size(50);
-        background-image: url('@/section/s1/logo.svg');
+        background-image: url('@/section/s1/logo1.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
-        left:1em;
+        left:3em;
     }
 
     .menu-btn {
@@ -128,7 +128,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #032763cc;
+        background: #947d4eb9;
         width:100%;
         height: size(60);
         z-index: 5;
@@ -170,7 +170,7 @@
                 }
             }
             &.btn2{
-                background:#EF8200;
+                background:#584A3D;
 ;
                 border-radius: 2em;
                 margin-right:-1em;
