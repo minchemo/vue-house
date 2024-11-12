@@ -170,7 +170,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: size(23);
+      font-size: size(20);
       gap: size(10);
       font-family: "Noto Sans TC";
       font-weight: 500;
@@ -365,7 +365,7 @@
       }
 
       .menu-item {
-        font-size: sizem(23);
+        font-size: sizem(15);
         gap: 0;
         // letter-spacing: sizem(4);
 
