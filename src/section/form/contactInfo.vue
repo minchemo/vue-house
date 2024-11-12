@@ -20,8 +20,9 @@
       <div class="flex contact-item justify-center items-center address">
         <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="gmap" srcset="" />
+      <div class="flex contact-item justify-center items-center googlemap"
+        @click="modalOpen = true; modalType = 'gmap'">
+        <img src="//h65.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -30,15 +31,15 @@
 
 
   <!-- Mobile contact info -->
-  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="富科大苑" srcset="" />
+    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+      @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+      <img src="//h65.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="富科大苑" srcset="" />
+      <img src="//h65.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
