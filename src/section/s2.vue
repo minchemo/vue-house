@@ -8,7 +8,6 @@
     <div
       class="t1 anchor2"
       data-aos="fade-up"
-      data-aos-duration="1000"
       data-aos-delay="0"
     >
       橋科富墅 四大天王
@@ -19,7 +18,6 @@
         v-for="(icon, i) in icons"
         :key="i"
         data-aos="fade-up"
-        data-aos-duration="1000"
         :data-aos-delay="i * 200"
       >
         <div class="title">{{ icon.title }}</div>

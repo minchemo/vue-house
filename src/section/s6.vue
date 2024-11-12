@@ -44,11 +44,11 @@
       </div>
     </div>
     <div class="t">
-      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
         高科大人文特區<br />
         優質學風
       </div>
-      <div class="t2">
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
         坐看高雄科學大學第一校區，以散策地步伐收藏萬坪學海；楠梓高中、楠梓國中小等學校包圍在側，以單車可達的距離，輕快掌握上下學時區。
       </div>
     </div>

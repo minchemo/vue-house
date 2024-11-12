@@ -3,7 +3,6 @@
     <div
       class="t"
       data-aos="fade-up"
-      data-aos-duration="1000"
       data-aos-delay="0"
     >
       精挑世界品牌建材<br />置頂規格敬獻最愛

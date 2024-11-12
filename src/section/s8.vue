@@ -5,19 +5,17 @@
       <p>永盈業績-永盈世紀</p>
     </div>
     <div class="t">
-      <div class="t1">雙強聯手改寫橋科最美墅</div>
+      <div class="t1"
+            data-aos="fade-up"
+            data-aos-delay="0">雙強聯手改寫橋科最美墅</div>
       <div
         class="t2"
         data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="0"
+        data-aos-delay="200"
       >
         <template v-if="!isMobile">
           <div
             class="tt"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="400"
           >
             國際金獎常勝軍 禾森室內設計
           </div>
@@ -26,9 +24,6 @@
           Award等國際獎項。 <br /><br />
           <div
             class="tt"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="800"
           >
             台北千戶家庭推手 永盈建設
           </div>
@@ -38,9 +33,6 @@
         <template v-else>
           <div
             class="tt"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="400"
           >
             國際金獎常勝軍 禾森室內設計
           </div>
@@ -49,9 +41,6 @@
           Award等國際獎項。 <br /><br />
           <div
             class="tt"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="800"
           >
             台北千戶家庭推手 永盈建設
           </div>
@@ -64,7 +53,6 @@
     <div
       class="reward-box"
       data-aos="fade"
-      data-aos-duration="1000"
       data-aos-delay="0"
     >
       <img src="@/section/s8/reward.png" alt="" srcset="" />

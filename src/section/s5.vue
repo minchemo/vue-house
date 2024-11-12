@@ -47,12 +47,13 @@
       <div
         class="t1"
         data-aos="fade-up"
-        data-aos-duration="1000"
         data-aos-delay="0"
       >
         >200公頃綠浪綿延 <br v-if="isMobile" />健康環抱
       </div>
-      <div class="t2">
+      <div class="t2"
+        data-aos="fade-up"
+        data-aos-delay="200">
         以高雄科大73公頃樹海為起點，95公頃的高雄都會公園、高雄花卉農園中心、青埔棒球場、創新公園等綠帶環扣，獨步大高雄，連起都市中難能可貴的芬多長廊。
       </div>
     </div>

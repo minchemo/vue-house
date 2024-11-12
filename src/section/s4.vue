@@ -47,13 +47,14 @@
       <div
         class="t1"
         data-aos="fade-up"
-        data-aos-duration="1000"
         data-aos-delay="0"
       >
         青埔軌道經濟圈<br />
         家樂福繁華上演
       </div>
-      <div class="t2">
+      <div class="t2"
+        data-aos="fade-up"
+        data-aos-delay="200">
         暢遊捷運青埔站生活半徑，圈起楠梓車站的熟成繁華，散步土庫家樂福，為生活豐盛保持彈性，周邊傳統市場、連鎖餐廳、便利商店、一應俱全！
       </div>
     </div>

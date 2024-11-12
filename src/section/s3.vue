@@ -7,13 +7,11 @@
         alt=""
         srcset=""
         data-aos="fade"
-        data-aos-duration="1000"
         data-aos-delay="1000"
       />
       <img
         class="map2"
         data-aos="fade"
-        data-aos-duration="1000"
         data-aos-delay="1200"
         src="@/section/s3/2.png"
         alt=""
@@ -22,7 +20,6 @@
       <img
         class="map3"
         data-aos="fade"
-        data-aos-duration="1000"
         data-aos-delay="1400"
         src="@/section/s3/3.png"
         alt=""
@@ -31,7 +28,6 @@
       <img
         class="map4"
         data-aos="fade"
-        data-aos-duration="1000"
         data-aos-delay="1600"
         src="@/section/s3/4.png"
         alt=""
@@ -43,7 +39,6 @@
         <div
           class="t1"
           data-aos="fade-up"
-          data-aos-duration="1000"
           data-aos-delay="0"
         >
           佔地高雄主場 連結橋科台積
@@ -52,35 +47,33 @@
           class="t2"
           v-if="!isMobile"
           data-aos="fade-up"
-          data-aos-duration="1000"
           data-aos-delay="200"
         >
           向北連起橋頭科學園區，往南聯動楠梓科學園區、台積電，<br />
           共構北高雄最強科技流域，承接三大科技園區超過2千億產值、2萬名就業機會，帶動人流、商圈、價值無限紅利！
         </div>
-        <img class="t3" src="@/section/s3/2000.svg" alt="" srcset="" />
+        <img class="t3" src="@/section/s3/2000.svg" 
+          data-aos="fade-up"
+          data-aos-delay="400" alt="" srcset="" />
         <div
           class="t2"
           v-if="isMobile"
           data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="200"
+          data-aos-delay="600"
         >
           向北連起橋頭科學園區，往南聯動楠梓科學園區、台積電，共構北高雄最強科技流域，承接三大科技園區超過2千億產值、2萬名就業機會，帶動人流、商圈、價值無限紅利！
         </div>
         <div
           class="t1"
           data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="0"
+          data-aos-delay="800"
         >
           昨日台南LM特區  <br v-if="isMobile" />今日楠梓科技流域
         </div>
         <div
           class="t2"
           data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="200"
+          data-aos-delay="1000"
         >
           高雄緊隨南科LM區成功經驗，楠梓、橋頭一帶已見園區生活圈樣貌成型，約15分鐘內可以上班、擁有生活機能、<br
             v-if="!isMobile"
@@ -122,7 +115,6 @@
         <div
           class="t1"
           data-aos="fade-up"
-          data-aos-duration="1000"
           data-aos-delay="0"
         >
           R22捷運青埔站 <br v-if="isMobile" />速度共構國1
@@ -130,7 +122,6 @@
         <div
           class="t2"
           data-aos="fade-up"
-          data-aos-duration="1000"
           data-aos-delay="200"
         >
           捷運軌道貫暢大高雄，坐擁紅線青埔站、橋頭糖廠站；近取台鐵楠梓火車站，連結未來輕軌燕巢線，驅車轉身就是台1線，速接國10、國1，南來北往無往不利！

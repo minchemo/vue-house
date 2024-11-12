@@ -2,7 +2,7 @@
   <article class="s1">
     <div class="content">
       <img class="logo" src="@/section/s1/logo.svg" alt="" />
-      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">橋科核心．連線台積｜6.8米併排雙車墅</div>
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">橋科核心．連線台積｜6.8米併排雙車墅</div>
     </div>
     <div class="bg"></div>
   </article>

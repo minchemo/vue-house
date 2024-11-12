@@ -44,11 +44,11 @@
       </div>
     </div>
     <div class="t">
-      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
         新古典美學<br />
         歐式輕奢崗石別墅
       </div>
-      <div class="t2">
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
         專為品味家族量身訂製，<br
           v-if="isMobile"
         />成就事業之後的最美歸屬。<br />
