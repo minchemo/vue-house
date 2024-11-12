@@ -1,8 +1,10 @@
 <template>
   <article class="s2 anchor1">
+    <img class="bg" v-if="!isMobile" src="./s2/bg.png" alt="bg">
+    <img class="bg" v-else src="./s2/bgm.png" alt="bg">
     <div class="t1">佔地高雄主場 連結橋科台積</div>
     <div class="map">
-      <img v-if="!isMobile" src="@/section/s2/map.png" alt="" srcset="" />
+      <img v-if="!isMobile" src="@/section/s2/map.webp" alt="" srcset="" />
       <Fullview v-else />
     </div>
     <div
@@ -34,10 +36,16 @@
 .s2 {
   @apply relative w-full;
   @apply flex flex-col items-center justify-center;
-  @apply bg-cover bg-bottom;
   height: size(2160);
   background-image: url("@/section/s2/bg.jpg");
+  background-size: size(800) auto;
+  // background-attachment: fixed;
 
+.bg{position: absolute;
+bottom: 0;
+width: size(1542);
+right: 0;
+}
   .map {
     @apply relative bg-white/50;
     width: size(1387);
@@ -98,9 +106,12 @@
     @apply flex flex-col items-center justify-start;
     @apply bg-cover bg-bottom;
     height: sizem(1481);
-    background-image: url("@/section/s2/bgm.jpg");
+    background-size: sizem(500) auto;
     padding-top: sizem(60);
 
+    .bg{
+width:100%;
+}
     .map {
       @apply relative bg-transparent;
       width: 100%;

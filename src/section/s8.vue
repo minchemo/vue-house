@@ -78,7 +78,9 @@
   @apply flex items-center;
   @apply text-black;
   height: size(790);
-  background-image: url("@/section/s8/bg.jpg");
+  background-image: url("@/section/s2/bg.jpg");
+  background-size: size(800) auto;
+  // background-attachment: fixed;
 
   .img-box {
     margin-right: size(54);
@@ -141,7 +143,7 @@
     @apply flex flex-col-reverse items-start justify-end;
     @apply text-black;
     height: sizem(660);
-    background-image: url("@/section/s8/bgm.jpg");
+    background-size: sizem(500) auto;
     padding-top: sizem(60);
 
     .img-box {

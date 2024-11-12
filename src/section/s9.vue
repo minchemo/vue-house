@@ -1,7 +1,7 @@
 <template>
   <article class="s9 anchor10">
     <div
-      class="t"
+      class="t relative"
       data-aos="fade-up"
       data-aos-delay="0"
     >
@@ -10,11 +10,11 @@
     <img
       v-if="!isMobile"
       class="logos"
-      src="@/section/s9/logos.jpg"
+      src="@/section/s9/logos.png"
       alt=""
       srcset=""
     />
-    <img v-else class="logos" src="@/section/s9/logos.png" alt="" srcset="" />
+    <img v-else class="logos" src="@/section/s9/logosm.png" alt="" srcset="" />
   </article>
 </template>
 
@@ -39,6 +39,7 @@
   .t {
     font-size: size(54);
     font-weight: 600;
+    z-index: 10;
   }
 
   .logos {
