@@ -14,7 +14,14 @@
     <div class="t2" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">嘉義首座<span></span>日系選冊宅</div>
     <div class="t3" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1500">湖子內｜2-3房</div>
     </div>
-
+  <!-- Modal -->
+  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
+  <div class="modal -mt-20 md:-mt-72">
+    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
+      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+      9999
+    </div>
+  </div>
 
   </article>
 </template>
@@ -174,6 +181,10 @@
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
+
+const modalOpen = ref(false);
+const modalType = ref('');
+
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
