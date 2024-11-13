@@ -7,7 +7,7 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
@@ -58,7 +58,6 @@
     flex-basis: size(1050);
       height: size(1009);
     .slide-item {
-      @apply bg-cover;
     flex-basis:100%;
       height: size(1009);
       
@@ -99,7 +98,6 @@ gap:0em;
   height: auto;
   width: sizem(327); 
   .slide-item {
-    @apply bg-cover;
     width: 100%;
   flex-basis: auto;
     height: sizem(257);

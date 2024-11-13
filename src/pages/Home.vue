@@ -19,7 +19,7 @@
     <S6 />
     <S7 />
     <S8 />
-    <div class="bg9">
+    <div class="bg9 relative">
     <S9 />
     <S10 />
   </div>
@@ -64,11 +64,10 @@ img {
   margin: 0 auto;
 }
     .bg9{
-      @apply relative;
       
   &::before{
-      @apply absolute;
       content: "";
+    position: absolute;
   top: 0;left: 0;right: 0;bottom: 0;
       background: url("@/section/s9/bg.jpg") center;
       background-size: 100% auto;opacity: .6;
@@ -77,7 +76,7 @@ img {
     }
 
   .caption{
-      @apply absolute;
+    position: absolute;
       right:1em;
       bottom: .5em;
       font-weight: 400;
@@ -143,6 +142,7 @@ img {
   @apply relative;
   z-index: 2;
   .slide-item{
+    @apply bg-cover;
   img{width: 100%;height: 100%;object-fit: cover}
   
   }
@@ -165,9 +165,7 @@ img {
     background:url("data:image/svg+xml,%3Csvg stroke='%23000' stroke-width='5' stroke-linecap='round' width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
     background-size: 50% auto;
     transition:background-color .5s ;
-    &:hover{
-      //background-color: #0003;
-    }
+    /* &:hover{ background-color: #0003;} */
     }
     .prev{transform: scaleX(-1);
     }

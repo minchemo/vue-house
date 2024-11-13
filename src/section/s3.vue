@@ -1,5 +1,5 @@
 <template>
-  <article class="s3" ref="s3">
+  <article class="s3 relative flex items-center justify-center overflow-hidden text-[#633804]" ref="s3">
     <img src="./s3/l1.png" class="l" alt="線">
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile && imgs.length > 1">
@@ -7,13 +7,13 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
-    <div class="main">
+    <div class="main flex">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0"><span class="icon"></span><span class="title_c"><b>嘉</b>盛世</span><span class="en">PROSPEROUS TIME</span></h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">台積電抵嘉<br>億級榮景啟城</h4>
@@ -28,10 +28,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-
-
 .s3 {
-  @apply relative flex items-center justify-center overflow-hidden text-[#633804];
   width: 100%;
   height:auto;
   padding:4.4em 0;
@@ -44,7 +41,6 @@
 }
 
   .main {
-    @apply flex;
     margin: 0 size(120) 0 0;
     flex-basis: size(560);
   flex-direction: column;
@@ -58,7 +54,6 @@
     flex-basis: size(1050);
       height: size(1009);
     .slide-item {
-      @apply bg-cover;
     flex-basis:100%;
       height: size(1009);
       
@@ -99,7 +94,6 @@ gap:0em;
   height: auto;
   width: sizem(327); 
   .slide-item {
-    @apply bg-cover;
     width: 100%;
   flex-basis: auto;
     height: sizem(257);

@@ -8,8 +8,8 @@
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
            <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>  -->
-            <template v-for="item, i in info.navList">
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
+            <template v-for="item, in info.navList" :key="item">
+            <div class="menu-item cursor-pointer text-white font-['Noto_serif_TC',serif]" v-bind:class="{ btn2: item.type }"
                 @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
                 <span>{{ item.name }}</span>
             </div>
@@ -149,7 +149,6 @@
             // gap: size(10);
             letter-spacing: 0.1em;
             white-space: nowrap;
-    @apply font-['Noto_serif_TC',serif];
 
 
             img {
@@ -286,10 +285,9 @@
             transition: all .2s;
             top: sizem(13);
             left:sizem(10);
-
-            &.open {
-              //  filter: brightness(0) invert(1);
-            }
+            /* &.open {
+                filter: brightness(0) invert(1);
+            }*/
         }
 
         .menu-btn {

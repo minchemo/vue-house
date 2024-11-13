@@ -14,7 +14,7 @@
         }"
         :modules="modules"
       >
-        <swiper-slide  class="slide-item" v-for="img in imgs">
+        <swiper-slide  class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
       <span class="caption caption_r">{{ img.caption_r }}</span>
