@@ -181,27 +181,27 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.jpg", import.meta.url).href ,
+    img:new URL("./s7/1.webp", import.meta.url).href ,
     caption: "大園運動籃球場"
   },
   {
-    img:new URL("./s7/2.jpg", import.meta.url).href ,
+    img:new URL("./s7/2.webp", import.meta.url).href ,
     caption: "大園運動籃球場"
   },
   {
-    img:new URL("./s7/3.jpg", import.meta.url).href ,
+    img:new URL("./s7/3.webp", import.meta.url).href ,
     caption: "大園國中棒球場"
   },
   {
-    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    img:new URL("./s7/4.webp", import.meta.url).href ,
     caption: "大園南港里活動中心"
   },
   {
-    img:new URL("./s7/5.jpg", import.meta.url).href ,
+    img:new URL("./s7/5.webp", import.meta.url).href ,
     caption: "大園南港里活動中心"
   },
   {
-    img:new URL("./s7/6.jpg", import.meta.url).href ,
+    img:new URL("./s7/6.webp", import.meta.url).href ,
     caption: "大園砲兵陣地公園"
   },
 ]

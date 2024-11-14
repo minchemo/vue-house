@@ -23,8 +23,8 @@
 .s1 {
   
   @apply relative w-full h-screen;
-  background: url("./s1/bg.jpg") 50% 50%;
-  background-size: auto 100%;
+  background: url("./s1/bg.webp") 50% 50%;
+  background-size: cover;
   min-height: size(900);
   max-height: size(1080);
   display: flex;
@@ -65,7 +65,7 @@
 
 
   .s1 {
-    background: url("./s1/bgm.jpg") 50% 50%;
+    background: url("./s1/bgm.webp") 50% 50%;
     background-size: cover;
     height:calc(100vh - 63px);
     min-height: sizem(604);

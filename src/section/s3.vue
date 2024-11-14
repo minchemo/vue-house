@@ -181,31 +181,31 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.jpg", import.meta.url).href ,
+    img:new URL("./s3/1.webp", import.meta.url).href ,
     caption: "青埔高鐵A18站"
   },
   {
-    img:new URL("./s3/2.jpg", import.meta.url).href ,
+    img:new URL("./s3/2.webp", import.meta.url).href ,
     caption: "桃園國際機場"
   },
   {
-    img:new URL("./s3/3.jpg", import.meta.url).href ,
+    img:new URL("./s3/3.webp", import.meta.url).href ,
     caption: "公一公園店子埤"
   },
   {
-    img:new URL("./s3/4.jpg", import.meta.url).href ,
+    img:new URL("./s3/4.webp", import.meta.url).href ,
     caption: "華泰名品城"
   },
   {
-    img:new URL("./s3/5.jpg", import.meta.url).href ,
+    img:new URL("./s3/5.webp", import.meta.url).href ,
     caption: "美術館"
   },
   {
-    img:new URL("./s3/6.jpg", import.meta.url).href ,
+    img:new URL("./s3/6.webp", import.meta.url).href ,
     caption: "華泰OUTLET"
   },
   {
-    img:new URL("./s3/7.jpg", import.meta.url).href ,
+    img:new URL("./s3/7.webp", import.meta.url).href ,
     caption: "華泰置地XPARK"
   },
 ]

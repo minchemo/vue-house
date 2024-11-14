@@ -211,15 +211,15 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s8/1.jpg", import.meta.url).href ,
+    img:new URL("./s8/1.webp", import.meta.url).href ,
     caption: "Alfa safe 系統"
   },
   {
-    img:new URL("./s8/2.jpg", import.meta.url).href ,
+    img:new URL("./s8/2.webp", import.meta.url).href ,
     caption: "Alfa safe 系統"
   },
   {
-    img:new URL("./s8/3.jpg", import.meta.url).href ,
+    img:new URL("./s8/3.webp", import.meta.url).href ,
     caption: "Alfa safe 系統"
   },
 ]

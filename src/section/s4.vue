@@ -211,23 +211,23 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.jpg", import.meta.url).href ,
+    img:new URL("./s4/1.webp", import.meta.url).href ,
     caption: "高鐵站"
   },
   {
-    img:new URL("./s4/2.jpg", import.meta.url).href ,
+    img:new URL("./s4/2.webp", import.meta.url).href ,
     caption: "捷運A15"
   },
   {
-    img:new URL("./s4/3.jpg", import.meta.url).href ,
+    img:new URL("./s4/3.webp", import.meta.url).href ,
     caption: "高速公路"
   },
   {
-    img:new URL("./s4/4.jpg", import.meta.url).href ,
+    img:new URL("./s4/4.webp", import.meta.url).href ,
     caption: "台61"
   },
   {
-    img:new URL("./s4/5.jpg", import.meta.url).href ,
+    img:new URL("./s4/5.webp", import.meta.url).href ,
     caption: "機場系統線"
   },
 ]

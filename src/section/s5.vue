@@ -181,27 +181,27 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
+    img:new URL("./s5/1.webp", import.meta.url).href ,
     caption: "草漯商圈街景"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
+    img:new URL("./s5/2.webp", import.meta.url).href ,
     caption: "草漯商圈街景"
   },
   {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
+    img:new URL("./s5/3.webp", import.meta.url).href ,
     caption: "草漯商圈街景"
   },
   {
-    img:new URL("./s5/4.jpg", import.meta.url).href ,
+    img:new URL("./s5/4.webp", import.meta.url).href ,
     caption: "大園商圈街景"
   },
   {
-    img:new URL("./s5/5.jpg", import.meta.url).href ,
+    img:new URL("./s5/5.webp", import.meta.url).href ,
     caption: "大園商圈街景"
   },
   {
-    img:new URL("./s5/6.jpg", import.meta.url).href ,
+    img:new URL("./s5/6.webp", import.meta.url).href ,
     caption: "大園商圈街景"
   },
 ]

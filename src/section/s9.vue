@@ -182,15 +182,15 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s9/1.jpg", import.meta.url).href ,
+    img:new URL("./s9/1.webp", import.meta.url).href ,
     caption: "防水保固15年"
   },
   {
-    img:new URL("./s9/2.jpg", import.meta.url).href ,
+    img:new URL("./s9/2.webp", import.meta.url).href ,
     caption: "賀眾淨水設備"
   },
   {
-    img:new URL("./s9/3.jpg", import.meta.url).href ,
+    img:new URL("./s9/3.webp", import.meta.url).href ,
     caption: "TOTO分離式馬桶"
   },
 ]
