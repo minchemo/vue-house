@@ -1,4 +1,4 @@
-const caseName = "國源可頌"
+const caseName = "佳瓚鹿瓚"
 
 export default {
     meta: {
@@ -8,32 +8,19 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市桃園區青溪二路115號", //隱藏這條 地址地圖消失
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.914616676359!2d121.31107540000001!3d25.003017099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f3bd5e6cb4b%3A0xf5f4e303be168c16!2z5ZyL5rqQ5bu66Kit5bCP5qqc5rqq!5e0!3m2!1szh-TW!2stw!4v1722397883294!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/93fdvCUtyHW5aSeu9",
-    // phone: "03-3318888",  //隱藏電話
-    // fbLink: "https://www.facebook.com/",
-    // fbMessage: "https://m.me/",
+    address: "台中市沙鹿區鎮南路二段&南斗路口", //隱藏這條 地址地圖消失
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.7009377030636!2d120.56832638437805!3d24.21725150000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346915000d39a495%3A0x3688d6f5b4322214!2z5L2z55Oa6bm_55OaLeaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1731574149001!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/6sto7n6JyckM34Ye6",
+    phone: "04-26566600",  //隱藏電話
+    fbLink: "//facebook.com/61568301731210",
+    fbMessage: "//m.me/61568301731210",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "國源建設股份有限公司"],
-        ["建築設計", "蔡廷芳建築師事務所"],
-        ["基地面積", "614.13坪"],
-        ["建照號碼", "（110）桃市都建執照字第會桃01003號"],
-        ["公設設計", "沐橙設計有限公司"],
-        ["基地位於", "桃園市桃園區日光路、青溪二路口"],
-        ["格局規劃", "2房、3房"],
+        ["投資興建　　", "佳瓚建設股份有限公司"],
+        ["建築執照　　", "111中都建字第02524號"],
+        ["企劃銷售　　", "富麗廣告有限公司"],
+        ["不動產經紀人", "鄭吟君（105）新北經字第003223號"],
         /*
-        ["投資興建", "長昇事業夥伴 冠奕建設"],
-        ["建築設計", "王朝雍建築師事務所"],
-        ["工程營造", "又廣營造"],
-        ["空間設計", "相即空間設計"],
-        ["企劃銷售", "低碳健康樂活行銷"],
-        ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
-        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
-        ["建築設計", "弘憲聯合建築師事務所"],
-        ["使照號碼", "王朝雍建築師事務所"],
-        ["行銷企劃", "自售"],
         */
     ],
     gtmCode: ["GTM-00000"], // 可放置多個
@@ -43,14 +30,13 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "我想了解",
+        title: "預約賞屋",
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
         //subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房"],
-    budget: ["2000萬以下","2000-2500萬","2500-3000萬","3000萬以上"],
-
+    room_type: ["兩房","三房","店面"],
+    budget: ["800-1000萬","1000-1200萬","1200-1400萬","1400-1600萬","1600萬以上"],
     navList: [
         /*
         {

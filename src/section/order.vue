@@ -70,7 +70,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '送出表單' }}
+        {{ sending? '發送中..': '確認送出' }}
       </div>
 
       <!-- Contact Info -->
@@ -118,7 +118,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #40220F;
+    color: #C30D23;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -129,7 +129,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #40220F;
+    color: #000;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -197,10 +197,10 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #40220F;
+    background-color: #C30D23;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: 0em;
+    border-radius: .5em;
 
     width: 308px;
     height:3.3em;
