@@ -50,6 +50,7 @@
         </template>
       </div>
     </div>
+    <!-- 
     <div
       class="reward-box"
       data-aos="fade"
@@ -58,6 +59,7 @@
       <img src="@/section/s8/reward.png" alt="" srcset="" />
       <p>獎盃圖待提供</p>
     </div>
+     -->
     <img
       class="line"
       v-if="!isMobile"

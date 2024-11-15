@@ -40,7 +40,7 @@
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
 
-          <label class="row" v-if="info.room_type"
+          <label class="row" v-if="info.room_type.length > 0"
             ><span>需求房型</span>
             <select
               class="select w-full rounded-none"

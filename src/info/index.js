@@ -34,8 +34,8 @@ export default {
       "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
   },
   //底下2個 沒項目就會隱藏
-  room_type: ["兩房", "三房"],
-  budget: [],
+   room_type: [],
+   budget: [],
   navList: [
     {
       name: "連結橋科",
@@ -72,11 +72,11 @@ export default {
       target: ".anchor7",
       offset: "",
     },
-    {
+   /* {
       name: "崗石別墅",
       target: ".anchor8",
       offset: "",
-    },
+    }, */
     {
       name: "雙強聯手",
       target: ".anchor9",
