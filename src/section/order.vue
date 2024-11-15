@@ -329,7 +329,7 @@ const formData = reactive({
   area: "",
   msg: "",
   policyChecked: false,
-  r_verify: true,
+  r_verify: false,
 })
 
 //非必填
