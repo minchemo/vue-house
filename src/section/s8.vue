@@ -429,6 +429,18 @@ const imgs = [
         img: new URL("../section/s8/slider/06m.webp", import.meta.url).href,
          caption: "",
        },
+       {
+        img: new URL("../section/s8/slider/07m.webp", import.meta.url).href,
+         caption: "",
+       },
+       {
+        img: new URL("../section/s8/slider/08m.webp", import.meta.url).href,
+         caption: "",
+       },
+       {
+        img: new URL("../section/s8/slider/09m.webp", import.meta.url).href,
+         caption: "",
+       },
      ]
    : [
        {
@@ -437,6 +449,10 @@ const imgs = [
        },
        {
          img: new URL("../section/s8/slider/02.webp", import.meta.url).href,
+         caption: "",
+       },
+       {
+         img: new URL("../section/s8/slider/03.webp", import.meta.url).href,
          caption: "",
        },
      ]
