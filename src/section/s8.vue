@@ -426,10 +426,6 @@ const imgs = [
          caption: "",
        },
        {
-        img: new URL("../section/s8/slider/06m.webp", import.meta.url).href,
-         caption: "",
-       },
-       {
         img: new URL("../section/s8/slider/07m.webp", import.meta.url).href,
          caption: "",
        },
