@@ -1,47 +1,18 @@
 <template>
   <article class="s2 relative" id="s2">
-    <div class="swiper-box">
-      <Splide
-        :options="sConfig"
-        ref="splide"
-        class="slide"
-        @splide:move="onMove"
-      >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgs"
-        >
-        <img :src="i.img" :alt="i.caption">
-          <span class="caption">
-            {{ i.caption }}
-          </span>
-        </SplideSlide>
-      </Splide>
-    </div>
     <div class="txt">
-      <div class="arrows">
-        <img
-          @click="splide.go('<')"
-          class="prev"
-          src="@/section/arrow.svg"
-          alt="r"
-          srcset=""
-        />
-        <span v-if="$isMobile()">左右滑動切換</span>
-        <img
-          @click="splide.go('>')"
-          class="next"
-          src="@/section/arrow.svg"
-          alt="r"
-          srcset=""
-        />
-      </div>
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">首席台積電璀璨版圖<br>
-        聚焦全球AI科技核心</h3>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">科技<span>S</span>廊道<br>
+        全面啟動新未來</h3>
         <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"> Technology Core</h4>
         <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
-      <p data-aos="fade-up" data-aos-delay="600">台積電連動美、日、星國際科研能量競速佈局，港都華麗轉身科研繁城，頂尖跨國企業搶駐，科技菁英絡繹進城，共構我國南方發展新藍圖，躍居國際產業核心之列，領銜全球聚焦目光。</p>
+      <p data-aos="fade-up" data-aos-delay="600">和台積電、橋科、仁武航太園區，比鄰而居，<br>
+宛如加州矽谷、台北內湖、新竹竹科，<br>
+儼然科技副都心，具備未來價值的美好版圖。<br>
+台積電2奈米晶圓廠，預計將帶來4500億的年產值，<br>
+以及4500個就業機會，<br>
+加上近鄰國巨、日月光知名大廠，<br>
+5G產業、AI智能、半導體、航太科技，輕鬆掌控！</p>
+<!-- <img src="./s2/en.png" alt="en"> -->
     </div>
   </article>
 </template>
@@ -51,46 +22,6 @@
 
 .s2 {
   position: relative;
-  .swiper-box {
-    position: relative;
-    left: 50%;transform: translateX(-50%);
-    width:sizem(458);
-    @media screen and (min-width: 768px) {
-      width:size(1380);
-      left:0;transform: translateX(0%);right: 0;margin: 0 0 0 auto;
-    }
-    .slide-item {width: 100%;height:100%;
-    img{width:100%;object-fit: cover;height:sizem(317);
-      @media screen and (min-width: 768px) {height:size(960);}
-    }
-    .caption {
-      position: absolute;top: 0.5em;right: 4.3em;color: #FFF;font-size: sizem(11);text-shadow:0 1px 3px #000;
-      @media screen and (min-width: 768px) {right: .5em;font-size: size(17);}
-    }
-    }
-  }
-      .arrows {
-        padding: 0;
-        text-align: center;
-       // vertical-align: middle;
-        @media screen and (min-width: 768px) {
-          position: absolute;bottom:size(40);
-          right:size(30);
-        }
-        img {
-          width: sizem(20); pointer-events:all;
-          @media screen and (min-width: 768px) {width: size(40);}
-        }
-        span{vertical-align: middle}
-
-        .next {
-          @apply -scale-x-100;
-           margin-left:sizem(-2);
-          @media screen and (min-width: 768px) {
-            margin-left:size(35);
-          }
-        }
-      }
       .txt{
         position: relative; pointer-events: none;
         background: #FFF;

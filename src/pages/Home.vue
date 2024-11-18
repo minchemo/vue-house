@@ -17,6 +17,9 @@
     -->
   <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#015EA0] text-[#FFF]">
     <S1 />
+    <S2 />
+   <!--  <S3 /> -->
+    <S10 />
     <Order />
   </div>
 </template>
@@ -58,6 +61,9 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
+import S10 from "@/section/s10.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

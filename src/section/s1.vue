@@ -1,8 +1,8 @@
 <template>
   <article class="s1 relative" id="s1">
     <!-- 
-     <img src="./s1/pc.jpg" class="t0" />
      <img src="./s1/mo.jpg" class="t0"> -->
+     <img src="./s1/pc.jpg" class="t0" />
      <img src="./s1/bg.webp" class="bg" /> 
      <img src="./s1/t1.svg" class="t1 absolute" data-aos="zoom-in" data-aos-delay="0">
      <img src="./s1/bird.svg" class="bird absolute" data-aos="zoom-in" data-aos-delay="200">
