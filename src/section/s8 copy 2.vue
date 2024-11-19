@@ -8,19 +8,16 @@
           autoplay: true,
           pagination: true,
           interval: 4000,
-          gap: isMobile ?10:0,
+          gap: 20,
           type: 'loop',
-          focus:isMobile ? 'center':'left',
-          autoWidth: true,
-          perPage: isMobile ? 1 : 'auto'
         }"
       >
         <SplideSlide
           class="slide-item"
           :key="i"
           v-for="i in imgs2"
+          :style="{ 'background-image': `url(${i.img})` }"
         >
-        <img :src="i.img" :alt="i.caption">
           <div class="caption">
             {{ i.caption }}
           </div>
@@ -144,22 +141,20 @@
 
   .slide-box-i {
     @apply relative w-full;
-    height: size(496);
+    height: size(538);
     margin-bottom: size(20);
     .slide-item {
       @apply w-full;
-      height: size(496);width: auto;
+      height: size(538);
       background-size: cover;
-      img{height: 100%;width: auto;}
       .caption {
-        @apply absolute font-[arial,'Noto_Sanc_TC'];
-        left: size(49);
-        top: size(20);
+        @apply absolute font-['Noto_Sanc_TC'];
+        right: size(49);
+        bottom: size(20);
         color: #fff;
-        font-size: size(30);
-        font-weight: 500;
-        letter-spacing:0.05em;
-        text-shadow: 0 0 3px #0003
+        font-size: size(20);
+        font-weight: 400;
+        letter-spacing: size(2.6);
       }
     }
     .splide__pagination {
@@ -226,7 +221,7 @@
       height: size(682.74);
       background-size: cover;
       .caption {
-        @apply absolute font-[arial,'Noto_Sanc_TC'];
+        @apply absolute font-['Noto_Sanc_TC'];
         right: size(14);
         bottom: size(15);
         font-size: size(20);
@@ -290,9 +285,9 @@
       .slide-item {
         height: sizem(331);
         .caption {
-          left: calc(50% - sizem(170));
-          top: sizem(7);
-          font-size: sizem(23);
+          right: sizem(11);
+          bottom: sizem(7);
+          font-size: sizem(12);
           font-weight: 400;
           letter-spacing: sizem(1.56);
         }
@@ -382,7 +377,8 @@
 }
 </style>
 
-<script setup> 
+<script setup>
+import View from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
@@ -407,63 +403,53 @@ const imgs = [
 
 
 
- const imgs2 = [
+ const imgs2 = globals.$isMobile()
+  ? [
        {
-        img: new URL("../section/s8/slider/1.jpg", import.meta.url).href,
-         caption: "仁仁河",
+        img: new URL("../section/s8/slider/01m.webp", import.meta.url).href,
+         caption: "",
        },
        {
-        img: new URL("../section/s8/slider/2.jpg", import.meta.url).href,
-         caption: "江翠ONE",
+        img: new URL("../section/s8/slider/02m.webp", import.meta.url).href,
+         caption: "",
        },
        {
-        img: new URL("../section/s8/slider/3.jpg", import.meta.url).href,
-         caption: "希望城市",
+        img: new URL("../section/s8/slider/03m.webp", import.meta.url).href,
+         caption: "",
        },
        {
-        img: new URL("../section/s8/slider/4.jpg", import.meta.url).href,
-         caption: "江翠park",
+        img: new URL("../section/s8/slider/04m.webp", import.meta.url).href,
+         caption: "",
        },
        {
-        img: new URL("../section/s8/slider/5.jpg", import.meta.url).href,
-         caption: "江匯life",
+        img: new URL("../section/s8/slider/05m.webp", import.meta.url).href,
+         caption: "",
        },
        {
-        img: new URL("../section/s8/slider/6.jpg", import.meta.url).href,
-         caption: "公園66",
+        img: new URL("../section/s8/slider/07m.webp", import.meta.url).href,
+         caption: "",
        },
        {
-        img: new URL("../section/s8/slider/7.jpg", import.meta.url).href,
-         caption: "頂溪大苑",
+        img: new URL("../section/s8/slider/08m.webp", import.meta.url).href,
+         caption: "",
        },
        {
-        img: new URL("../section/s8/slider/8.jpg", import.meta.url).href,
-         caption: "金城舞5",
-       },
-       {
-        img: new URL("../section/s8/slider/9.jpg", import.meta.url).href,
-         caption: "都廳大院",
-       },
-       {
-        img: new URL("../section/s8/slider/10.jpg", import.meta.url).href,
-         caption: "晴空大地",
-       },
-       {
-        img: new URL("../section/s8/slider/11.jpg", import.meta.url).href,
-         caption: "自由綠洲",
+        img: new URL("../section/s8/slider/09m.webp", import.meta.url).href,
+         caption: "",
        },
      ]
-// 下一張滑塊
-const goNext = () => {
-  splide2.value?.go(">");
-};
-
-// 組件掛載後執行一次 `goNext`
-onMounted(() => {
-  setTimeout(() => {
-    if (splide2.value) {
-      goNext(); // 執行一次 goNext
-    }
-  }, 100); // 確保 Splide 初始化完成
-});
+   : [
+       {
+         img: new URL("../section/s8/slider/01.webp", import.meta.url).href,
+         caption: "",
+       },
+       {
+         img: new URL("../section/s8/slider/02.webp", import.meta.url).href,
+         caption: "",
+       },
+       {
+         img: new URL("../section/s8/slider/03.webp", import.meta.url).href,
+         caption: "",
+       },
+     ]
 </script>
