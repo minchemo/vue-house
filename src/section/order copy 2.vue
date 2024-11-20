@@ -29,30 +29,36 @@
       <div
         class="form mx-auto relative flex justify-center font-['Noto_Sans_TC',sans-serif]"
       >
-        <div class="left h-full flex flex-col justify-between items-center">      
-          <div class="button">
-            <span>需求房型:</span>
-            <div>
-              <label v-for="room in info.room_type" :key="room"
-                ><input
-                  type="radio"
-                  name="room_type"
-                  :value="room"
-                  @input="(event) => (formData.room_type = event.target.value)"
-                /><span v-html="room"></span></label
-              ></div>
-          </div>
-          <div class="button budget">
-            <span>購屋預算:</span><div>
-              <label v-for="budget in info.budget" :key="budget"
-                ><input
-                  type="radio"
-                  name="budget"
-                  :value="budget"
-                  @input="(event) => (formData.budget = event.target.value)"
-                /><span v-html="budget"></span></label
-              ></div>
-          </div>
+        <div class="left h-full flex flex-col justify-between items-center">
+          <label class="row" v-if="info.room_type"
+            ><span>需求房型</span>
+            <select
+              class="select w-full rounded-none bg-white"
+              v-model="formData.room_type"
+            >
+              <option value="" selected disabled>請選擇房型</option>
+              <option
+                v-for="room in info.room_type"
+                :value="room"
+                v-text="room"
+                :key="room"
+              ></option></select
+          ></label>
+          <label class="row" v-if="info.budget"
+            ><span>購屋預算</span>
+            <select
+              class="select w-full rounded-none bg-white"
+              v-model="formData.budget"
+            >
+              <option value="" selected disabled>請選擇區間</option>
+              <option
+                v-for="budget in info.budget"
+                :value="budget"
+                v-text="budget"
+                :key="budget"
+              ></option>
+            </select>
+          </label>
           <div class="relative">
             <label class="row name"
               ><span>姓名<span>*</span></span>
@@ -199,8 +205,8 @@
         {{ sending ? "發送中.." : "立即預約" }}
       </div>
 
-      <!-- Contact Info
-      <ContactInfo /> -->
+      <!-- Contact Info -->
+      <ContactInfo />
     </div>
 
     <!-- Map -->
@@ -274,7 +280,7 @@
   }
 
   .form {
-    width: size(1100);
+    width: size(920);
     min-width: 750px;
     //  height: 350px;
     gap: size(80);
@@ -307,45 +313,6 @@
       height: 100%;
       background-color: #6cf6;
       position: absolute;
-    }
-    .button {
-      border: 0;
-      color: #fff;
-      display: flex;
-      width: 100%;
-      align-items:flex-start;
-      gap: 0;
-      > span {
-        width: 5.5em;
-        text-align: left;
-        font-weight: 700;
-        white-space: nowrap;
-        padding:.5em 0;
-       // margin-right:.5em;
-        > span {
-          color: #c00; //font-size: 12px;
-        }
-      }
-      > div{
-        display: flex;gap: .5em;flex-wrap: wrap;flex: 1;
-
-      }
-      label{
-        input{display: none;
-        &:checked+span{ background: #fbcb72;}
-        }
-        span{display: inline-block;padding: .5em 1.5em;
-        background: #ccc;border-radius: .5em;
-        color: #000;margin: auto 0;white-space: nowrap;
-        cursor: pointer;
-        &:hover{background: #fff;}
-        }
-      }
-      &.budget{
-        label span{
-font-size: .92em;
-        }
-      }
     }
     .row {
       background: #fff;
@@ -414,7 +381,6 @@ font-size: .92em;
     z-index: 10;
     font-weight: 400;
     position: relative;
-    margin-bottom: 4em;
   }
 
   .control {
@@ -423,7 +389,6 @@ font-size: .92em;
     position: relative;
   }
 }
-.modal{color: #000;}
 
 @media screen and (max-width: 768px) {
   .order-section {
@@ -447,7 +412,7 @@ font-size: .92em;
 
   .order {
     width: 100%;
-   // padding-bottom: sizem(63);
+    padding-bottom: sizem(63);
 
     .cus-divider {
       margin: 0 auto;
@@ -493,8 +458,6 @@ font-size: .92em;
       &::after {
         display: none;
       }
-
-
     }
 
     .send {
@@ -513,7 +476,7 @@ font-size: .92em;
 <script setup>
 import { CaptchaImage } from "vue3-captcha-canvas"
 import Policy from "@/section/form/policy.vue"
-// import ContactInfo from "@/section/form/contactInfo.vue"
+import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
 

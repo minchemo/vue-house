@@ -8,19 +8,19 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "xxxxxx",
+   // address: "xxxxxx",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1729134765760!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/rsbphVJs6tyPo45J9",
-    phone: "000",
-    fbLink: "https://www.facebook.com//",
-    fbMessage: "https://m.me//",
+   // phone: "000",
+   // fbLink: "https://www.facebook.com//",
+   // fbMessage: "https://m.me//",
     caseName: caseName,
     houseInfos: [
+        /*
         ["投資興建", "xxx"],
         ["建築設計", "xxx"],
         ["基地面積", "xxx"],
         ["格局規劃", "xxx"],
-        /*
         ["空間設計", "相即空間設計"],
         ["企劃銷售", "低碳健康樂活行銷"],
         ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
