@@ -20,8 +20,8 @@
     <label for="s1banner" class="absolute top-0 left-0 right-0 bottom-0"></label>
     <div class="relative box">
       <label for="s1banner" class="btn btn-sm btn-circle absolute right-0">✕</label>
-      <img src="./s1/new/pc1.jpg" v-if="!$isMobile()">
-      <img src="./s1/new/mo1.jpg" v-else>
+      <img src="./s1/1120pc.jpg" v-if="!$isMobile()">
+      <img src="./s1/1120mo.jpg" v-else>
     </div>
   </div>
 
@@ -64,7 +64,7 @@
   .btn{
     top:-3em;
   }
-  img{width:size(800);}
+  img{width:auto;max-width: 100%;}
 }
 }
 
