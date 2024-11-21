@@ -1,8 +1,8 @@
 <template>
   <article class="s1 relative" id="s1">
     <!-- 
-     <img src="./s1/mo.jpg" class="t0"> -->
-     <img src="./s1/pc.jpg" class="t0" />
+     <img src="./s1/pc.jpg" class="t0" /> -->
+     <img src="./s1/mo.jpg" class="t0">
      <img src="./s1/bg.webp" class="bg" /> 
      <img src="./s1/t1.svg" class="t1 absolute" data-aos="zoom-in" data-aos-delay="0">
      <img src="./s1/bird.svg" class="bird absolute" data-aos="zoom-in" data-aos-delay="200">
@@ -17,7 +17,8 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: .5;}
+  .t0{position: absolute;width: 100%;top:490px;left: 0; 
+    pointer-events: none;z-index: 9;opacity: .0;}
 @keyframes an {
   to {
     transform: translateX(0%);
@@ -38,7 +39,7 @@
 @media screen and (min-width: 768px) {
     height:100vh;
     // height: size(1070);
-    min-height: size(900);
+    min-height: size(1080);
     max-height: size(1080);
     justify-content:space-between;
     padding: 0 0 0 0;

@@ -3,17 +3,17 @@
     <div class="txt">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">科技<span>S</span>廊道<br>
         全面啟動新未來</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"> Technology Core</h4>
         <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
-      <p data-aos="fade-up" data-aos-delay="600">和台積電、橋科、仁武航太園區，比鄰而居，<br>
+      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">和台積電、橋科、仁武航太園區，比鄰而居，<br>
 宛如加州矽谷、台北內湖、新竹竹科，<br>
 儼然科技副都心，具備未來價值的美好版圖。<br>
 台積電2奈米晶圓廠，預計將帶來4500億的年產值，<br>
 以及4500個就業機會，<br>
 加上近鄰國巨、日月光知名大廠，<br>
 5G產業、AI智能、半導體、航太科技，輕鬆掌控！</p>
-<!-- <img src="./s2/en.png" alt="en"> -->
+<!--  --><img src="./s2/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="800">
     </div>
+    <img src="./s2/img.png" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
   </article>
 </template>
 
@@ -22,7 +22,22 @@
 
 .s2 {
   position: relative;
+  background: url("./s2/bg.webp");
+  font-size:sizem(12);
+  line-height: 1.5;
+  padding:1em 0;
       .txt{
+        width: sizem(310);
+        margin:0 auto 1em;
+        .title{
+          font-size:2.3em;
+          line-height: 1.2;
+        }
+        .en{width: sizem(220);}
+
+        
+        
+        /*
         position: relative; pointer-events: none;
         background: #FFF;
         color: #000;
@@ -63,8 +78,10 @@
           margin:sizem(6) 0 sizem(23);
           @media screen and (min-width: 768px) {margin:size(10) 0 size(40);}
         }
-      }
 
+        */
+      }
+      .img{width: sizem(320);margin: auto;display: block; background: url("./s2/img.jpg");background-size: cover;}
 
 }
 </style>
@@ -74,26 +91,5 @@ const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
 
-const splide = ref()
-const sConfig = {
-  autoWidth: true,
-  arrows: false,
-  autoplay: true,
-  pagination: false,
-  gap: 0,
-  type: "loop",
-}
-
-
-const imgs = [
-  {
-    img: new URL("./s2/1.webp", import.meta.url).href,
-    caption: "依政府公開計畫繪製，僅供參考請以實際為主",
-  },
-  {
-    img: new URL("./s2/2.webp", import.meta.url).href,
-    caption: "圖片來源google地圖，僅供參考請以實際為主",
-  },
-]
 
 </script>
