@@ -5,6 +5,7 @@ import { resolve } from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
+  base: '/ForestPark/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
