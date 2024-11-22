@@ -44,22 +44,22 @@
           >
             台北千戶家庭推手 永盈建設
           </div>
-          超過60年的在地耕耘，永盈建設和<br />中永和的城市同氣連枝融成一體，<br />也以建築改建成了城市的發展與文<br />化演進。<br />
+          超過60年的在地耕耘，永盈建設和中永和的城市同氣連枝融成一體，也以建築改建成了城市的發展與文化演進。<br />
           <b>經典作品</b
-          >：永盈世紀、君子集1-5、<br />永盈雙星、和平藝墅、超越中和
+          >：永盈世紀、君子集1-5、永盈雙星、<br />和平藝墅、超越中和
         </template>
       </div>
     </div>
-    <!-- 
     <div
       class="reward-box"
       data-aos="fade"
       data-aos-delay="0"
     >
-      <img src="@/section/s8/reward.png" alt="" srcset="" />
-      <p>獎盃圖待提供</p>
-    </div>
+      <img src="@/section/s8/reward.webp" alt="" srcset="" />
+      
+    <!-- <p>獎盃圖待提供</p>
      -->
+    </div>
     <img
       class="line"
       v-if="!isMobile"
@@ -107,6 +107,7 @@
       @apply font-['Noto_sans_tc'];
       font-size: size(16);
       line-height: 151.41%;
+      margin: 0 0 8em;
       .tt {
         font-size: size(20);
         font-weight: 700;
@@ -117,9 +118,9 @@
   .reward-box {
     @apply absolute text-center;
     right: size(46);
-    top: size(291);
+    bottom: size(30);z-index: 3;
     img {
-      width: size(244);
+      width: size(500);
     }
     p {
       @apply font-['Noto_sans_tc'];
@@ -144,7 +145,7 @@
     @apply bg-cover;
     @apply flex flex-col-reverse items-start justify-end;
     @apply text-black;
-    height: sizem(660);
+    height:auto;
     background-size: sizem(500) auto;
     padding-top: sizem(60);
 
@@ -170,6 +171,8 @@
         font-size: sizem(14);
         line-height: 151.41%;
         width: sizem(310);
+        
+        margin: 0 0 10em;
         .tt {
           font-size: sizem(14);
           font-weight: 700;
@@ -179,10 +182,10 @@
 
     .reward-box {
       @apply absolute text-center;
-      right: -#{sizem(13)};
-      top: sizem(215);
+      right: sizem(32);
+      bottom: sizem(190);
       img {
-        width: sizem(151.16);
+        width: sizem(300);
       }
       p {
         font-size: sizem(12);
