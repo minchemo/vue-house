@@ -1,18 +1,16 @@
 <template>
-  <article class="s2 relative" id="s2">
+  <article class="s5 relative" id="s5">
     <img src="./s2/bg.svg" class="bg" alt="bg" data-aos="fade-up" data-aos-delay="0">
     <div class="txt relative">
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">科技<span>S</span>廊道<br>
-        全面啟動新未來</h3>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">九大學府，<br>
+串起知性與智慧</h3>
         <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
-      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">和台積電、橋科、仁武航太園區，比鄰而居，<br>
-宛如加州矽谷、台北內湖、新竹竹科，<br>
-儼然科技副都心，具備未來價值的美好版圖。<br>
-台積電2奈米晶圓廠，預計將帶來4500億的年產值，<br>
-以及4500個就業機會，<br>
-加上近鄰國巨、日月光知名大廠，<br>
-5G產業、AI智能、半導體、航太科技，輕鬆掌控！</p>
-<!--  --><img src="./s2/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="800">
+      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">難得人文領地，一次匯集九所校園，<br>
+囊括了：大社國小國中、楠梓高中、<br>
+義守大學＆醫學院、樹德科大、<br>
+高科大燕巢校區＆第一校區、高師大燕巢校區，<br>
+知識滿分、智慧能量無限提升！</p>
+<!--  --><img src="./s5/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="800">
     </div>
     <img src="./s2/img.png" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
   </article>
@@ -21,7 +19,7 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s2 {
+.s5 {
   position: relative;
   background: url("./s2/bg.webp");
   font-size:sizem(12);

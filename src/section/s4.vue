@@ -1,11 +1,18 @@
 <template>
   <article class="s4 relative" id="s4">
-    <div class="txt">
-      <p data-aos="fade-up" data-aos-delay="0">興連城開發團隊潛心掘拾樸真土地，以手感孵化美學底蘊，人本思維嚴守工程品質，精實工法扎根基底，細琢空間與質選建材嵌合建築內蘊，以微知著每一處細節，凝鍊真粹，兼及知人、知宅、知築心。</p>
-      <h3 class="title" data-aos="fade-up" data-aos-delay="200">善良<span>｜</span>正直<span>｜</span>誠信</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="400">正當做事 蓋出價值</h4>
+    <img src="./s4/bg.png" class="tree" alt="tree" data-aos="fade-up" data-aos-delay="0">
+    <div class="txt relative">
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">繁華軸心<span>上等靜巷質地</span></h3>
+        <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
+      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">雙面臨路，靜巷美地，<br>
+讀秒進入中山路繁華軸心，<br>
+出門就是流動的生活饗宴，<br>
+土銀、合庫、全聯、寶雅、四大超商匯集地，<br>
+大社商圈、黃昏市場、果菜市場、夜市，<br>
+美食小吃一條街，富庶生活精彩絕倫，<br>
+食衣住行逸樂，都在你身邊！</p>
     </div>
-    <img src="./s3/slogo.svg" class="slogo" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./s4/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
   </article>
 </template>
 
@@ -13,59 +20,53 @@
 @import '@/assets/style/function.scss';
 
 .s4 {
-  background: #F0F0F0;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
-      .txt{
-        position: relative;
-        color: #000;
-        font-size:sizem(14);
-        line-height: 1.8; 
-        width: 100%;
-        margin: sizem(0) auto sizem(20) auto;
-        padding: sizem(76) sizem(62) sizem(62);
-        text-align: justify;
-        background: #E0E0E0;
-        @media screen and (min-width: 768px) {
-          font-size:size(22);
-          padding:size(123) size(450) size(85) size(450);
-          margin: auto;        
-        }
-        .title{
-          font-size:sizem(21);
-          color: #000;
-          line-height: 1.2;
-          margin-top:sizem(58);
-          margin-bottom:sizem(17);
-          letter-spacing: 0.03em;
-          text-align: center;
-          span{
-            color: #A30C24;}
-          @media screen and (min-width: 768px) {
-            font-size:size(40);
-          margin-top:size(130);
-          margin-bottom:size(17);
-          }
-        }
-        .subtitle{
-          font-size:sizem(12);
-          text-align: center;
-          @media screen and (min-width: 768px) {
-            font-size:size(20);
-          }
-        }
-        .hr{width: 100%; height: 1px;
-          background: #A30C24;
-          margin:sizem(6) 0 sizem(23);}
-      }
-        .slogo{
-          width: sizem(120);margin:sizem(18) auto sizem(38);
-          @media screen and (min-width: 768px) {
-            width:size(200);margin:size(70) auto size(80);
-          }}
+  position: relative;
+  background: url("./s2/bg.webp");
+  font-size:sizem(12);
+  line-height: 1.6;
+  padding:2em 0;
+  @media screen and (min-width: 768px) {
+    font-size:size(33);
+  }
+  @keyframes tree1 {
+  to {
+    transform:skewY(4deg);
+  }
+}
+  .tree{
+    position: absolute;
+    top: 3em;
+    right:0;
+    width:sizem(190);transform:skewY(0deg);
+    transform-origin: 100% 50%;
+    animation: tree1 5s linear alternate infinite;
+  @media screen and (min-width: 768px) {
+    width:size(950);
+    top: -2em;
+  }
+  }
+  .txt{
+    width: sizem(310);
+    margin:0 auto 1em;z-index: 2;
+  @media screen and (min-width: 768px) {
+    width: size(990);
+  }
+    .title{
+      font-size:2.3em;text-align: justify;
+      line-height: 1.2;
+      margin-bottom: .3em;width: 6em;
+      span{white-space: nowrap;}
+  @media screen and (min-width: 768px) {
+    font-size:3em;
+  }
+    }
+  }
+  .img{width: sizem(320);margin: auto;display: block;
 
+  @media screen and (min-width: 768px) {
+    width: size(990);
+  }
+}
 
 }
 </style>
@@ -74,5 +75,6 @@ import { computed, getCurrentInstance, ref} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
 
 </script>
