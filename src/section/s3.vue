@@ -6,12 +6,14 @@
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">雙核心地段</h3>
+    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Leading the New Era</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">領銜未來前鋒 先得桃園紅心！</h3>
+    <hr class="hr" v-if="isMobile">
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">碳佐麻里園區、壽司郎國際企業都選在這裡！政府所在，匯聚知名餐飲、家樂福、燦坤、麥當勞，新光三越新天地，機能完善，接軌水岸發展重心：星鑽特區，市中心稀有雙核心，願景可期！</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">4700億三心六線 預演北台灣未來十年</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">4700億「三心六線」向世界宣示：北台灣未來十年，桃園領銜主演！國家最大規模開發計畫 ─ 航空城、桃園、中壢黃金三心連袂；綠線、棕線、機場捷運、三鶯線、綠線中壢段延伸、鐵路地下化等六大鑲金串鍊，兆億經濟櫥窗×TOD立體城，成就亞太經貿門戶。桃園車站三鐵樞紐×新站特區前瞻，桃園關鍵戰略位置，鑄印家的故事。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -74,10 +76,11 @@
 
 
 .txt {
+  
   .title{
     &::after,
     &::before{
-      width: 15.3em;
+      width: 11.1em;
     }
   }
 }
@@ -128,9 +131,13 @@
   .title{
     &::after,
     &::before{
-      width: 2em;
+      width: 0;
     }
   }
+  .hr{
+    width: sizem(100);
+    margin: sizem(20) auto sizem(10);
+    }
 }
 
 
@@ -184,28 +191,12 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.jpg", import.meta.url).href ,
-    caption: "台南市政府"
+    img:new URL("./s3/1.webp", import.meta.url).href ,
+    caption: "三心六線"
   },
   {
-    img:new URL("./s3/2.jpg", import.meta.url).href ,
-    caption: "新光三越"
-  },
-  {
-    img:new URL("./s3/3.jpg", import.meta.url).href ,
-    caption: "夏慕尼"
-  },
-  {
-    img:new URL("./s3/4.jpg", import.meta.url).href ,
-    caption: "燦坤"
-  },
-  {
-    img:new URL("./s3/5.jpg", import.meta.url).href ,
-    caption: "家樂福-安平店"
-  },
-  {
-    img:new URL("./s3/6.jpg", import.meta.url).href ,
-    caption: "碳佐麻里"
+    img:new URL("./s3/2.webp", import.meta.url).href ,
+    caption: "桃園新站3D示意圖"
   },
 ]
 </script>

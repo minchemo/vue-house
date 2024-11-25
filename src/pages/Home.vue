@@ -10,8 +10,9 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#003183] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <img src="@/section/s1/bg0.jpg" class="bgh">
+  <div class="home bg-[#012265] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    
+    <img src="@/section/s1/bg.webp" class="bgh">
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
@@ -26,7 +27,6 @@
     <S7 />
     <S8 />
     <S9 />
-    <S10 />
   <!--
     <S11 />
     <div class="bg">
@@ -59,6 +59,12 @@
       &:nth-child(2){animation-delay: 1s;}
       &:nth-child(3){animation-delay: 1.5s;}
     }
+  }
+
+  .bgh{
+    opacity: .3;
+    margin: 0 auto;
+    text-align: center;
   }
 
 
@@ -95,12 +101,18 @@ img {
     letter-spacing: 0;
     line-height: 1.7;
     width: 100%;
+  .title-sub{
+    font-size: size(20);
+    text-align: center;
+    margin-top: 2em;
+    font-weight: 500;
+  } 
   .title{
     font-size: 2.2em;
-    margin: 2em 0 0em;
+    margin: 0em 0 0em;
     line-height: 1.4;
-    font-weight: 900;
-    color:#C9A063;
+    font-weight: 700;
+    color:#fff;
     text-align: center;
     &::after,
     &::before{
@@ -114,10 +126,10 @@ img {
     }
   }
   .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
+    font-size: size(25);
+    font-weight: 500;
     margin: 0 0 .8em;
-    color:#C9A063;
+    color:#fff;
     line-height: 1.5;
   }
   .desc{
@@ -175,18 +187,27 @@ img {
 @media screen and (max-width: 767px) {
   
 
-.home > .bgh{width: 250%;
-  top: 0;left: 0;
+.home > .bgh{
+  width: 200%;
+  text-align: center;
+  left: -50%;
+  top: 20%;
 }
   .caption{
       font-size: sizem(12);}
 
       .txt {
+  .title-sub{
+    font-size: sizem(15);
+    text-align: center;
+  }       
   .title{
-    font-size: 2.3em;
+    font-size: sizem(23);
+    text-align: center;
     &::after,
     &::before{
-      width: 2.6em;}
+      width: 0em !important;
+      position: absolute;}
   }
   .subtitle{
     font-size: 1.4em;
@@ -234,7 +255,7 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
-import S10 from "@/section/s10.vue"
+//import S10 from "@/section/s10.vue"
 // import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue"

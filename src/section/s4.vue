@@ -11,14 +11,23 @@
       <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">交通中軸</h3>
+    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">International City Model</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">昨日東京車站，明日桃園新站</h3>
+    <hr class="hr" v-if="isMobile">
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">府城中心，匯聚交通網絡</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">位居中華西路（台17線）、府前路、民生路市中心動軸，鏈結火車站商圈、86快速道路、九份子重劃、台南邁阿密遊艇富豪聚落，北外環連結台南科學園區，願景中心，地段就是難以取代。</p>
-      </div>
+        <transition name="fade" mode="out-in">
+          <h4 class="subtitle" :key="currentImg.subtitle" v-html="currentImg.subtitle"></h4>
+        </transition>
+        <transition name="fade" mode="out-in">
+        <p :key="currentImg.desc" v-html="currentImg.desc"></p>
+        </transition>
     </div>
+    </div>
+
+
+
     <div class="slider" data-aos="fade">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -94,6 +103,20 @@
   flex-direction: column;
   text-align: justify;
 }
+
+
+.txt {
+  
+  .title{
+    &::after,
+    &::before{
+      width: 11.1em;
+    }
+  }
+}
+
+
+
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -155,6 +178,19 @@
     width: 100%;
 }
 
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 0;
+    }
+  }
+  .hr{
+    width: sizem(100);
+    margin: sizem(20) auto sizem(10);
+    }
+}
+
 
 
   .slider {
@@ -207,16 +243,22 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/02.jpg", import.meta.url).href ,
-    caption: "中華西路接軌九份子重劃區、86快速道路"
+    img:new URL("./s4/1.webp", import.meta.url).href ,
+    caption: "東京車站",
+    subtitle: "TOD×CBD雙核引擎<br>三鐵共構×24層站前雙星",
+    desc: "對位世界大都會車站，借鑑東京車站六本木，桃園新站蓄勢啟幕！桃園新站導入TOD×CBD雙引擎開發量能，巨蛋型外觀站體，規劃地下5層車站，涵蓋「鐵路在上、捷運在下」的三鐵共構，地面鉅鑄24層擎天雙子星大廈，匯聚轉運、購物、商辦、旅館等多功能場域，旅運人次將直追台北車站，錢潮商機磅礴聚合，贏接桃園都會新盛世。",
+ },
+  {
+    img:new URL("./s4/2.webp", import.meta.url).href ,
+    caption: "桃園新站3D示意圖",
+    subtitle: "大後站旗艦計畫<br>舊城再生×都市更新複刻信義計畫",
+    desc: "大後站計劃即將發威，中正路、延平路打通，前後站全面縫合，空廊連通車站工程，繁華不再楚河漢界！連動桃園新站開發，形塑千億新站特區，同時活化台銀土地、閒置工業區feat.倉儲用地轉型、住宅區都市更新，百貨巨頭、頂尖企業進駐，圍塑燙金增值版圖，共鳴國際CBD氣度，磁吸菁英人口紅利。",
   },
   {
-    img:new URL("./s4/03.jpg", import.meta.url).href ,
-    caption: "永華大道連結水岸生活"
-  },
-  {
-    img:new URL("./s4/04.jpg", import.meta.url).href ,
-    caption: "近接西門路新光三越新天地商圈"
+    img:new URL("./s4/3.webp", import.meta.url).href ,
+    caption: "桃園新站3D示意圖",
+    subtitle: "桃園大中軸特區 鐵路地下化綠軸<br>波士頓森活既視感",
+    desc: "無論城市如何更迭，宜居永遠是關鍵命題。桃園鐵路地下化、「大中軸特區」計畫啟動，借鏡波士頓綠園道設計，將橫跨桃園、八德、中壢、平鎮行政區的16公里路廊，建構森態綠意共棲的休憩空間，標誌宜居宜業的國際大都會典範。",
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

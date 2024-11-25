@@ -170,14 +170,14 @@
                 }
             }
             &.btn2{
-                background:#EF8200;
+                background:#C9A063;
 ;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
 
                 &:hover {
-                    background:#df6400;
+                    background:#8b6c3d;
                     &:after {
                         width:0;
                     }

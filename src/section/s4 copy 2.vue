@@ -1,7 +1,7 @@
 
 
 <template>
-  <article class="s8">
+  <article class="s4">
     <div class="bg">
       <span></span>
       <span></span>
@@ -11,14 +11,14 @@
       <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
-    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">About CHAN CHIC</h3>
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">桃園績優品牌 展志建設</h3>
+    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Leading the New Era</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">領銜未來前鋒 先得桃園紅心！</h3>
     <hr class="hr" v-if="isMobile">
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">用自住心說好一個家的故事</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">「在想像建築之前，先想像自己嚮往的生活輪廓。」<br>展志建設創立20年來，細究桃園每一寸土地紋理，永不甘自我滿足。視每一座建築為自己的家，眼光嚴謹挑剔，針對美學、尺度、格局、選材、施工等細節不斷進化，冶煉居宅品味的職人精神，昇華藝術價值、實用機能兼容的層次，將作品推至國際格局。</p>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">府城中心，匯聚交通網絡</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">位居中華西路（台17線）、府前路、民生路市中心動軸，鏈結火車站商圈、86快速道路、九份子重劃、台南邁阿密遊艇富豪聚落，北外環連結台南科學園區，願景中心，地段就是難以取代。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -39,7 +39,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s8 {
+.s4 {
   @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
@@ -96,16 +96,6 @@
   flex-direction: column;
   text-align: justify;
 }
-
-.txt {
-  
-  .title{
-    &::after,
-    &::before{
-      width: 11.1em;
-    }
-  }
-}
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -132,7 +122,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s8 {
+  .s4 {
   @apply flex-col;
     height: auto;
     padding: 0;
@@ -193,7 +183,7 @@
     }
     .slide-item {
       @apply bg-cover;
-      width: 100%; 
+      width: 100%;
     flex-basis: auto;
       height: sizem(250);
       
@@ -232,36 +222,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s8/1.webp", import.meta.url).href ,
-    caption: "情境示意圖"
+    img:new URL("./s4/02.jpg", import.meta.url).href ,
+    caption: "中華西路接軌九份子重劃區、86快速道路"
   },
   {
-    img:new URL("./s8/2.webp", import.meta.url).href ,
-    caption: "天玉晴山實景圖"
+    img:new URL("./s4/03.jpg", import.meta.url).href ,
+    caption: "永華大道連結水岸生活"
   },
   {
-    img:new URL("./s8/3.webp", import.meta.url).href ,
-    caption: "安騰居建築外觀修飾圖"
-  },
-  {
-    img:new URL("./s8/4.webp", import.meta.url).href ,
-    caption: "皇家庭苑建築外觀修飾圖"
-  },
-  {
-    img:new URL("./s8/5.webp", import.meta.url).href ,
-    caption: "展志學實景圖拷貝"
-  },
-  {
-    img:new URL("./s8/6.webp", import.meta.url).href ,
-    caption: "涵韻實景圖"
-  },
-  {
-    img:new URL("./s8/7.webp", import.meta.url).href ,
-    caption: "謙境實景圖"
-  },
-  {
-    img:new URL("./s8/8.webp", import.meta.url).href ,
-    caption: "馥境觀美實景圖"
+    img:new URL("./s4/04.jpg", import.meta.url).href ,
+    caption: "近接西門路新光三越新天地商圈"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

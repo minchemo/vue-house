@@ -4,7 +4,9 @@
   <article class="s4">
     <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s4/img.png" /></div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">交通中軸</h3>
+    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Leading the New Era</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">領銜未來前鋒 先得桃園紅心！</h3>
+    <hr class="hr" v-if="isMobile">
   </div>
     <div class="main">
       <div class="txt" data-aos="fade-up" data-aos-delay="300">
@@ -56,37 +58,20 @@ img{width: 100%;position: relative;}}
 }
   .txt {
     position: relative;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 0;
     line-height: 1.7;
     width: 100%;
   .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 700;
-    color:#B78E63;
-    text-align: center;
     &::after,
     &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
+      width: 11.1em;
     }
   }
   .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    color:#B78E63;
-    line-height: 1.5;
+    color:#fff;
   }
   .desc{
-    margin: 0 0 1em;
     b{
     color:#B78E63;}
   }
@@ -145,6 +130,10 @@ img{width: 100%;position: relative;}}
   .subtitle{
     font-size: 1.4em;
   }
+  .hr{
+    width: sizem(100);
+    margin: sizem(20) auto sizem(10);
+    }
   }
 
   .slider {
