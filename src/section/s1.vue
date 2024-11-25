@@ -1,9 +1,9 @@
 <template>
   <article class="s1" id="s1">  
-	<div class="txt">
+	<!--div class="txt">
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
-	</div>
+	</div-->
 	
 
   </article>
@@ -18,7 +18,7 @@
   background-size: cover;
   min-height: size(1080);
   max-height: size(1080);
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
