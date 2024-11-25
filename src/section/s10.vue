@@ -1,8 +1,5 @@
 <template>
   <article class="s10 relative" id="s10">
-    <!-- 
-     <img src="./s1/10.jpg" class="t0" />
-     <img src="./s1/mo.jpg" class="t0"> -->
      <img src="./s1/bg.webp" class="bg" /> 
      <div class="txt">
       <logo class="logo absolute" data-aos="zoom-in" data-aos-delay="400"></logo>
@@ -18,7 +15,6 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: .5;}
 @keyframes an {
   to {
     transform: translateX(0%);
@@ -61,7 +57,7 @@
 
     }
   }
-  .t1{top: sizem(260);}
+  .t1{top: sizem(260);color: #fff;}
   .t2{top: sizem(285);color: #dca66b;}
   @media screen and (min-width: 768px) {
   .t1{top: size(560);}

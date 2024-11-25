@@ -3,7 +3,6 @@
     <img src="./s4/bg.png" class="tree" alt="tree" data-aos="fade-up" data-aos-delay="0">
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">繁華軸心<span>上等靜巷質地</span></h3>
-        <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
       <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">雙面臨路，靜巷美地，<br>
 讀秒進入中山路繁華軸心，<br>
 出門就是流動的生活饗宴，<br>
@@ -21,7 +20,6 @@
 
 .s4 {
   position: relative;
-  background: url("./s2/bg.webp");
   font-size:sizem(12);
   line-height: 1.6;
   padding:2em 0;

@@ -3,7 +3,6 @@
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">近擁國1+國10雙國道<br>
         最強交通攻略</h3>
-        <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
       <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">有了雙國道加持，南來北往輕鬆飆馳，<br>
 約15 分鐘、一杯咖啡時間，<br>
 快意串聯「台積電」「橋科」「仁武航太園區」<br>
@@ -28,7 +27,6 @@
 
 .s3 {
   position: relative;
-  background: url("./s2/bg.webp");
   font-size:sizem(12);
   line-height: 1.6;
   padding:2em 0 .5em;

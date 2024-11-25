@@ -4,7 +4,6 @@
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">科技<span>S</span>廊道<br>
         全面啟動新未來</h3>
-        <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
       <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">和台積電、橋科、仁武航太園區，比鄰而居，<br>
 宛如加州矽谷、台北內湖、新竹竹科，<br>
 儼然科技副都心，具備未來價值的美好版圖。<br>
@@ -23,7 +22,6 @@
 
 .s2 {
   position: relative;
-  background: url("./s2/bg.webp");
   font-size:sizem(12);
   line-height: 1.6;
   padding:2em 0 0;

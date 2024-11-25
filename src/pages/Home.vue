@@ -15,12 +15,16 @@
      font-['Noto_Sans_TC',sans-serif]
      font-['LXGW_WenKai_Mono_TC',monospace]
     -->
-  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#015EA0] text-[#2a3e49]">
+  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] text-[#2a3e49]">
     <S1 />
     <S2 />
     <S3 />
     <S4 />
     <S5 />
+    <S6 />
+    <S7 />
+    <S8 />
+    <S9 />
     <S10 />
     <Order />
   </div>
@@ -50,14 +54,11 @@ img {
   height: unset;
   margin: 0 auto;
 }
+.home{
+  background: url("@/section/s2/bg.webp") fixed;
+  background-size: auto;
 
-// 字體
-@font-face {
-  font-family: 'com4f';
-  src: local("COM4tFine"),local("COM4t Fine Regular"),
-  url('@/section/form/com4f.ttf') format("opentype"),
 }
-
 </style>
 
 <script setup>
@@ -67,6 +68,10 @@ import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
+import S6 from "@/section/s6.vue"
+import S7 from "@/section/s7.vue"
+import S8 from "@/section/s8.vue"
+import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"

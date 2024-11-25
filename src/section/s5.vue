@@ -1,18 +1,25 @@
 <template>
   <article class="s5 relative" id="s5">
-    <img src="./s2/bg.svg" class="bg" alt="bg" data-aos="fade-up" data-aos-delay="0">
+    <div class="bg absolute" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s5/bg.webp" class="bg1 absolute" alt="bg">
+    <img src="./s5/bg.webp" class="bg2 absolute" alt="bg">
+    <img src="./s5/bird.svg" class="bird absolute" alt="bg">
+  </div>
+
+    <div class="tree">
+    <img src="./s4/bg.png" alt="tree" data-aos="fade-up" data-aos-delay="0"></div>
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">九大學府，<br>
 串起知性與智慧</h3>
-        <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
       <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">難得人文領地，一次匯集九所校園，<br>
 囊括了：大社國小國中、楠梓高中、<br>
 義守大學＆醫學院、樹德科大、<br>
 高科大燕巢校區＆第一校區、高師大燕巢校區，<br>
 知識滿分、智慧能量無限提升！</p>
 <!--  --><img src="./s5/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="800">
+    <img src="./s5/book.svg" class="book" alt="book" data-aos="fade-up" data-aos-delay="0">
     </div>
-    <img src="./s2/img.png" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s5/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
   </article>
 </template>
 
@@ -21,25 +28,45 @@
 
 .s5 {
   position: relative;
-  background: url("./s2/bg.webp");
   font-size:sizem(12);
   line-height: 1.6;
-  padding:2em 0 0;
+  padding:2em 0 17.5em;
   @media screen and (min-width: 768px) {
     font-size:size(33);
   }
-  .bg{
+.bg{left: 0;bottom: 0;width: 100%;
+.bg1{left: 0;bottom:3em;width: sizem(353);height: sizem(111);
+  transform: scaleX(-1);opacity: .55;filter: grayscale(.8);}
+.bg2{width: sizem(267);height: sizem(88);right: 0;bottom: 0;}
+.bird{width: sizem(85);left:10%;bottom:3em;}
+@media screen and (min-width: 768px) {
+  .bg1{width: size(1880);height: size(450);bottom:1em;}
+  .bg2{width: size(1225);height: size(302);}
+  .bird{width: size(300);left:12%;bottom:2.7em;}
+}
+}
+  @keyframes tree1 {
+  to {
+    transform:skewY(4deg);
+  }
+}
+  .tree{
     position: absolute;
-    top: 1em;
-    left: calc(58% + 1em);
-    width:sizem(130);
+    top: 15em;
+    left:-2em;
+    width:sizem(230);
+    transform: scaleX(-1);
+    img{width: 100%;transform:skewY(0deg);
+    transform-origin: 100% 50%;
+    animation: tree1 5s linear alternate infinite;}
   @media screen and (min-width: 768px) {
-    width:size(390);
+    width:size(780);
+    top: 15.5em;
   }
   }
   .txt{
     width: sizem(310);
-    margin:0 auto 1em;z-index: 2;
+    margin:0 auto 0em;z-index: 2;padding-bottom: 1.2em;
   @media screen and (min-width: 768px) {
     width: size(1150);
   }
@@ -53,8 +80,18 @@
   }
     }
     .en{
-      width: 18.5em;
-      margin-top: .3em;}
+      width: 15.5em;
+      margin-top: .3em;
+      @media screen and (min-width: 768px) {
+        margin:-.95em 0 0 0em;
+      }
+    }
+  .book{
+    width:sizem(155);margin:-1em -6em 0 -.4em;
+  @media screen and (min-width: 768px) {
+    width:size(655);margin:-3.3em -5em 0 -.4em;
+  }
+  }
 
         
         
@@ -102,7 +139,7 @@
 
         */
   }
-  .img{width: sizem(320);margin: auto;display: block; background: url("./s2/img.jpg");background-size: cover;
+  .img{width: sizem(320);margin: auto;display: block;
 
   @media screen and (min-width: 768px) {
     width: size(1190);

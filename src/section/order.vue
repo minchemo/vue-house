@@ -1,5 +1,6 @@
 <template>
-  <div id="order" class="order relative text-center">
+  <div id="order" class="order relative text-center bg-[#015EA0]">
+    <img src="@/section/s1/bg.webp" class="bg" /> 
     <div class="order-section">
 <!-- 
       <div class="order-title" data-aos="fade-up" data-aos-delay="0"><img src="@/section/s2/line.svg" alt="line" class="line"><br>邀約行家 領席鑑賞</div> -->
@@ -137,13 +138,14 @@
 }
 
 .order {
-  width: 100%;
- // padding-top: size(40);
-  /*
-  background:url("@/section/form/bg.jpg");
-  background-size: auto;
-  */
- // background: linear-gradient(to bottom, #195c45, #000704);
+  width: 100%;overflow: hidden;
+  .bg{width:220%;height:sizem(840);position: absolute;
+    top: sizem(-500);left:50%;transform: translateX(-39%);
+    @media screen and (min-width: 768px) {height: auto;
+      left: size(0);width:100%;transform: translateX(0);  top: size(-1080);
+      
+    }
+  }
   
 
   .order-title {position: relative;
