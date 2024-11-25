@@ -41,6 +41,10 @@
     width:size(602);
     margin: 0 auto 2em;
     }
+    .t2{
+    width:size(602);
+    margin: 0 auto 2em;
+    }
   .t3{
     position: absolute;
     bottom: size(50);
