@@ -245,11 +245,11 @@ const imgs = [
   },
   {
     img:new URL("./s8/4.webp", import.meta.url).href ,
-    caption: "皇家庭苑建築外觀修飾圖"
+    caption: "展志千雅外觀"
   },
   {
     img:new URL("./s8/5.webp", import.meta.url).href ,
-    caption: "展志學實景圖拷貝"
+    caption: "展志學實景圖"
   },
   {
     img:new URL("./s8/6.webp", import.meta.url).href ,
