@@ -1,15 +1,17 @@
-
-
 <template>
-  <article class="s9">
+  <article class="s9" ref="s9">
+    <div class="bg" v-if="!$isMobile()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">嚴選建材</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">下樓即7-11便利購 日常採買0距離</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">精品建材，尊榮享受</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">衛浴：浴廁採用ＴＯＴＯ衛浴設備、ＨＣＧ、西班牙ＲＯＣＡ免治馬桶。<br>
-廚具：世界級德匠名㕑，附贈林內雙口瓦斯爐、抽風機、烘碗機。<br>電梯：永大六人座電梯。<br>其他：錦鋐氣密窗、冠軍磁磚、台灣水泥、天然瓦斯。
+    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">日常繳費、取貨、購票、咖啡宵夜，24H精彩不打烊，你是SOHO族、愛買族、夜貓族、上班族...下樓採買輕鬆滿足！
 </p>
       </div>
     </div>
@@ -19,8 +21,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+      <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -31,19 +33,38 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s9 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#000] bg-[#F8F8F8];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
+  .bg{
+    span{
+      &:nth-child(1){
+      top:size(26);left: 0;
+  font-size:size(120);
+}
+      &:nth-child(2){
+      top: size(147);left: size(110);
+  font-size:size(27);
+}
+      &:nth-child(3){
+      top: size(20);right:size(80);
+  font-size:size(75);}
+    }
+  }
 
-.img{position: absolute;bottom:0;right:size(50);width:size(795);
-img{width: 100%;position: relative;}}
-
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -51,13 +72,16 @@ img{width: 100%;position: relative;}}
   flex-direction: column;
   text-align: justify;
 }
+
+
 .txt {
-.title{
-&::after,
-&::before{
-background: #C9A063;
+  .title{
+    &::after,
+    &::before{
+      width: 12.2em;
+    }
+  }
 }
-}}
 
   .slider {
     margin: 0;
@@ -70,11 +94,11 @@ background: #C9A063;
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
-      color: #B78E63;
+      color: #C9A063;
     }
     }
   }
@@ -93,21 +117,34 @@ background: #C9A063;
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-
-.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
-    padding: 0 sizem(30);
+    padding: 0 sizem(32.5);
     width: 100%;
+    flex-basis: auto;
 }
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 0em !important;
+      position: absolute;
+    }
+  }
+}
+
+
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -124,6 +161,7 @@ background: #C9A063;
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -149,30 +187,9 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s9/1.jpg", import.meta.url).href ,
-    caption: "電梯"
-  },
-  {
-    img:new URL("./s9/2.jpg", import.meta.url).href ,
-    caption: "廚具"
-  },
-  {
-    img:new URL("./s9/3.jpg", import.meta.url).href ,
-    caption: "ROCA西班牙百年衛浴"
-  },
-  {
-    img:new URL("./s9/4.png", import.meta.url).href ,
-    caption: ""
-  },
-  {
-    img:new URL("./s9/5.jpg", import.meta.url).href ,
-    caption: "乾濕分離衛浴"
-  },
-  {
-    img:new URL("./s9/6.jpg", import.meta.url).href ,
-    caption: "Panasonic"
+    img:new URL("./s9/1.webp", import.meta.url).href ,
+    caption: "樓下即是7-11"
   },
 ]
-const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

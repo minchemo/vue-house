@@ -10,8 +10,9 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#003183] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <img src="@/section/s1/bg0.jpg" class="bgh">
+  <div class="home bg-[#AF1600] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    <img src="@/section/s1/bg.jpg" class="bgh bg-pc">
+    <img src="@/section/s1/bgm.jpg" class="bgh bg-mo">
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
@@ -26,8 +27,9 @@
     <S7 />
     <S8 />
     <S9 />
-    <S10 />
   <!--
+  
+    <S10 />
     <S11 />
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -61,6 +63,10 @@
     }
   }
 
+  .bgh{
+    opacity: .5;
+  }
+
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
@@ -71,6 +77,10 @@
 
 .home > .bgh{position: fixed;width: 100%;
   top: 0;left: 0;
+}
+
+.bg-mo{
+  display: none;
 }
 img {
   display: inline;
@@ -99,8 +109,8 @@ img {
     font-size: 2.2em;
     margin: 2em 0 0em;
     line-height: 1.4;
-    font-weight: 900;
-    color:#C9A063;
+    font-weight: 500;
+    color:#fff;
     text-align: center;
     &::after,
     &::before{
@@ -175,15 +185,18 @@ img {
 @media screen and (max-width: 767px) {
   
 
-.home > .bgh{width: 250%;
+.home > .bgh{width: 100%;
   top: 0;left: 0;
+  opacity: .7;
 }
+.bg-mo{display: block;}
+.bg-pc{display: none;}
   .caption{
       font-size: sizem(12);}
 
       .txt {
   .title{
-    font-size: 2.3em;
+    font-size: sizem(20);
     &::after,
     &::before{
       width: 2.6em;}
@@ -234,7 +247,7 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
-import S10 from "@/section/s10.vue"
+//import S10 from "@/section/s10.vue"
 // import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue"

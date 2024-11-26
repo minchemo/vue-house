@@ -1,19 +1,12 @@
-
-
 <template>
   <article class="s6">
-    <div class="bg">
-      <span></span>
-      <span></span>
-      <span v-if="$isMobile()"></span>
-    </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">菁英學區</h3>
+    <h3 class="title"  data-aos="fade-up" data-aos-delay="0">師承隈研吾派 林伯諭大師傑作</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">優質學區 菁英養成圈</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">京都大學研究，境教，是未來卓越的關鍵！新南國小、慈濟國小、慈濟國中、金城高國中、慈濟高中，滿足高端家庭教育需求，精英搖籃，已經為您準備就緒。</p>
+    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">地段好的店面，大老闆都搶</h4-->
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">"Less is more" 簡約線條、雋永獨秀，妝點煥新生活風景。建築薈萃風與光，以開闊的視野，融合周邊地景，打造一座美學與機能兼容的風光建築。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -22,8 +15,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+      <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -35,56 +28,49 @@
 @import '@/assets/style/function.scss';
 
 .s6 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
+  @apply relative flex flex-col items-center justify-center;
   width: 100%;
-  height:auto;
+  // height: size(800);
   padding:0 0 7em 0;
   font-size:size(18);
-  gap:3em;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-        top: 1vw;
-        left: 8vw;
-        font-size: 1.5vw;
-      }
-      &:nth-child(2){
-        top: 0vw;
-        right: 31vw;
-        font-size: 5vw;
-      }
-    }
-  }
-
-.img{position: absolute;bottom:0;right:size(50);width:size(795);
-img{width: 100%;position: relative;}}
-
+  gap:1.5em;
+  flex-wrap:nowrap;
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
+    width: 100%;
 }
+
+.txt {
+  color: #fff;
+.title{
+&::after,
+&::before{
+background: #fff;
+width: 11.3em;
+}
+}}
+
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+      height: size(844);
+    width: size(1500);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+      width: 100%;
+    flex-basis: size(1500);
+      height: size(844);
       
     }
-    .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #B78E63;
+    .arrows .prev, .arrows .next{
+      width:3%;
     }
+
+    .splide__pagination{
+      bottom: .5em;
     }
   }
 }
@@ -103,50 +89,36 @@ img{width: 100%;position: relative;}}
   margin-bottom:0em;
   gap:2em;
 
-.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
-  .bg{
-    span{
-      &:nth-child(1){
-    top: 50vw;
-    left: 86vw;
-    font-size: 9vw;
-}
-      &:nth-child(2){
-    top: 8vw;
-    left: 7vw;
-    font-size: 7vw;
-}
-      &:nth-child(3){
-        top: 45vw;
-        left: -10vw;
-        font-size:36vw;
-        transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
-        animation-delay: 1.8s;
-      }
-    }
-  }
-
   .main {
-    padding: 0 sizem(30);
+    padding: 0 sizem(32.5);
     width: 100%;
 }
 
+.txt {
+.title{
+&::after,
+&::before{
+width:0em;
+}
+}}
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(210);
       
+    }
+    .arrows .prev, .arrows .next{
+      width:8%;
     }
   }
   }
@@ -181,22 +153,33 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s6/1.jpg", import.meta.url).href ,
-    caption: "新南國小"
+    img:new URL("./s6/1.webp", import.meta.url).href ,
+    caption: "3D立面示意圖"
   },
   {
-    img:new URL("./s6/2.jpg", import.meta.url).href ,
-    caption: "新南國小"
-  },
-  {
-    img:new URL("./s6/3.jpg", import.meta.url).href ,
-    caption: "新南國小"
-  },
-  {
-    img:new URL("./s6/4.jpg", import.meta.url).href ,
-    caption: "新南國小"
+    img:new URL("./s6/2.webp", import.meta.url).href ,
+    caption: "3D立面示意圖"
   },
 ]
-const currentImg = computed(() => imgs[currentSlideIndex.value]);
+/*
+const imgs = [
+  {
+    img: getImg('s6/1'),
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: getImg('s6/2'),
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: getImg('s6/3'),
+    caption: "林口 長耀初"
+  },
+  {
+    img: getImg('s6/4'),
+    caption: "林口 長耀里"
+  },
+]
+*/
 </script>
 

@@ -1,51 +1,105 @@
 <template>
-  <article class="s2">
-   <!--   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">淡水正核心 贏接市中心</h3>
-      </div> --> 
-    <Fullview />
-    <div class="caption">空拍合成示意圖</div>
+  <article class="s2" ref="s2">
+    <div class="bg" v-if="!$isMobile()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  <div class="txt">
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">大樹生活圈  滿分宜居</h3>
+  </div>
+    <div class="main">
+      <div class="txt">
+    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">大樹生活圈核心，機能滿分。採買便利，農會行政中心、超商、傳統市場、夜市，十分鐘內，生活所需就近滿足。</p>
+      </div>
+    </div>
+    <div class="slider" data-aos="fade">
+      <div class="arrows">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
+      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+      <span class="caption">{{ img.caption }}</span>
+        </SplideSlide>
+      </Splide>
+    </div>
+
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s2 {
-  @apply relative overflow-hidden bg-[#008DD5];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  height: size(1030);
-  padding-top:0;
+  height:auto;
+  padding:0 0 7em 0;
   font-size:size(18);
-  .txt {
-    @apply absolute z-10;
-    top: 4em;
-    left:0;right: 0;text-align: center;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-    color: #fff;
-    //text-shadow: 0 0 5px
-  .title{
-    font-size: 2em;
-    margin: 0 0 .2em;
-    line-height: 1.4;
-    font-weight: 700;
-    &::after,
-    &::before{
-      content: "";
-      width: 11.3em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
+  gap:3em;
+  flex-wrap: wrap;
+  .bg{
+    span{
+      &:nth-child(1){
+      top:size(26);left: 0;
+  font-size:size(120);
+}
+      &:nth-child(2){
+      top: size(147);left: size(110);
+  font-size:size(27);
+}
+      &:nth-child(3){
+      top: size(20);right:size(80);
+  font-size:size(75);}
     }
   }
-  .desc{
-    font-size: 1.5em;
-    letter-spacing: .1em;
+
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
+  .main {
+    @apply flex;
+    margin: 0;
+    flex-basis: size(590);
+  flex-direction: column;
+  text-align: justify;
+}
+
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 13.1em;
+    }
   }
+}
+
+  .slider {
+    margin: 0;
+    flex-basis: size(840);
+      height: size(560);
+    .slide-item {
+      @apply bg-cover;
+    flex-basis: size(840);
+      height: size(560);
+      
+    }
+    .splide__pagination{
+      right: calc(100% + 3em);
+      justify-content: flex-end;
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #C9A063;
+    }
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -55,31 +109,109 @@
 @media screen and (max-width: 767px) {
 
   .s2 {
-    height: sizem(667);
-  font-size:sizem(14);
-  .txt {
-    top: 4em;
+  @apply flex-col;
+    height: auto;
+    padding: 0;
+  font-size:sizem(12);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:2em;
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
+
+  .main {
+    padding: 0 sizem(32.5);
+    width: 100%;
+    flex-basis: auto;
+}
+
+.txt {
   .title{
-    font-size: 1.8em;
     &::after,
     &::before{
-      width: 1em;}
+      width: 2em;
+    }
   }
-  .desc{
-    font-size: 1.1em;
-    letter-spacing: .1em;
-  }
-  }
-  .caption {
-    font-size: sizem(12);
+}
+
+
+  .slider {
+    height: auto;
+    width: 100%;
+
+    .caption {
+    font-size:sizem(12);  
+    right:sizem(5);
+    bottom:sizem(5);
+    }
+    .slide-item {
+      @apply bg-cover;
+      width: 100%;
+    flex-basis: auto;
+      height: sizem(250);
+      
+    }
   }
   }
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
-import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+const getImg = (path) => {
+  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
+  return new URL(`./${path}_m.jpg`, import.meta.url).href
+}
+
+const splide = ref();
+
+const currentSlideIndex = ref(0);
+
+const moved = (newIdx, prevIdx, destIdx) => {
+  currentSlideIndex.value = prevIdx
+}
+
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: true,
+  autoplay: true,
+  interval: 4000,
+  gap: 0,
+  type: 'loop'
+}
+
+const imgs = [
+  {
+    img:new URL("./s2/1.webp", import.meta.url).href ,
+    caption: "大樹生活圈"
+  },
+  {
+    img:new URL("./s2/2.webp", import.meta.url).href ,
+    caption: "大樹公有市場"
+  },
+  {
+    img:new URL("./s2/3.webp", import.meta.url).href ,
+    caption: "大樹夜市"
+  },
+  {
+    img:new URL("./s2/4.webp", import.meta.url).href ,
+    caption: "全聯福利中心"
+  },
+  {
+    img:new URL("./s2/5.webp", import.meta.url).href ,
+    caption: "舊鐵橋濕地公園"
+  },
+  {
+    img:new URL("./s2/6.webp", import.meta.url).href ,
+    caption: "高雄市立圖書館大樹分館"
+  },
+  {
+    img:new URL("./s2/7.webp", import.meta.url).href ,
+    caption: "大樹郵局"
+  },
+]
 </script>
+

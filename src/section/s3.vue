@@ -6,12 +6,12 @@
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">雙核心地段</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">產業核心 快速通勤</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">碳佐麻里園區、壽司郎國際企業都選在這裡！政府所在，匯聚知名餐飲、家樂福、燦坤、麥當勞，新光三越新天地，機能完善，接軌水岸發展重心：星鑽特區，市中心稀有雙核心，願景可期！</p>
+    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4-->
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">仁武航太園區10分鐘，和發產業園區15分鐘，205兵工廠….位處產業核心地位，串聯科技廊道，快速通勤回家更近，更坐享人口增值紅利。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -41,6 +41,7 @@
   padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
@@ -70,6 +71,7 @@
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+
 }
 
 
@@ -77,7 +79,7 @@
   .title{
     &::after,
     &::before{
-      width: 15.3em;
+      width: 13.7em;
     }
   }
 }
@@ -93,11 +95,11 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+     left: calc(100% + 3em);
+      justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
-      color: #C9A063;
+      color: #B78E63;
     }
     }
   }
@@ -122,13 +124,14 @@
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
+    flex-basis: auto;
 }
 
 .txt {
   .title{
     &::after,
     &::before{
-      width: 2em;
+      width: 2.6em;
     }
   }
 }
@@ -184,28 +187,12 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.jpg", import.meta.url).href ,
-    caption: "台南市政府"
+    img:new URL("./s3/1.webp", import.meta.url).href ,
+    caption: "仁武航太園區"
   },
   {
-    img:new URL("./s3/2.jpg", import.meta.url).href ,
-    caption: "新光三越"
-  },
-  {
-    img:new URL("./s3/3.jpg", import.meta.url).href ,
-    caption: "夏慕尼"
-  },
-  {
-    img:new URL("./s3/4.jpg", import.meta.url).href ,
-    caption: "燦坤"
-  },
-  {
-    img:new URL("./s3/5.jpg", import.meta.url).href ,
-    caption: "家樂福-安平店"
-  },
-  {
-    img:new URL("./s3/6.jpg", import.meta.url).href ,
-    caption: "碳佐麻里"
+    img:new URL("./s3/2.webp", import.meta.url).href ,
+    caption: "中科院大樹院區"
   },
 ]
 </script>

@@ -1,22 +1,17 @@
-
-
 <template>
-  <article class="s4">
-    <div class="bg">
+  <article class="s4" ref="s4">
+    <div class="bg" v-if="!$isMobile()">
       <span></span>
       <span></span>
       <span></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">交通中軸</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">快速路網  輕鬆暢遊</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">府城中心，匯聚交通網絡</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">位居中華西路（台17線）、府前路、民生路市中心動軸，鏈結火車站商圈、86快速道路、九份子重劃、台南邁阿密遊艇富豪聚落，北外環連結台南科學園區，願景中心，地段就是難以取代。</p>
+    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">國道七道、台29線、國道10號，以及未來高屏2快，加速南來北往跨境生活。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -25,8 +20,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+      <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -37,56 +32,38 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s4 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
       &:nth-child(1){
-        top: 1vw;
-        left: 10vw;
-        font-size: 3.5vw;
-      }
+      top:size(26);left: 0;
+  font-size:size(120);
+}
       &:nth-child(2){
-        top: 12vw;
-        left: 2vw;
-        font-size: 2vw;
-      }
+      top: size(147);left: size(110);
+  font-size:size(27);
+}
       &:nth-child(3){
-        top: 3vw;
-        left: 7vw;
-        font-size: 9vw;
-        transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
-        animation-delay: 1.8s;
-      }
-      &:nth-child(4){
-        top: 5vw;
-        left: 26vw;
-        font-size: 1.5vw;
-      }
-      &:nth-child(5){
-        top: 12vw;
-        right: 33vw;
-        font-size: 4.5vw;
-      }
-      &:nth-child(6){
-        top: 12vw;
-        right: 1vw;
-        font-size: 2.5vw;
-        animation-delay: 1.5s;
-      }
+      top: size(20);right:size(80);
+  font-size:size(75);}
     }
   }
 
-
-
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -94,6 +71,17 @@
   flex-direction: column;
   text-align: justify;
 }
+
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 13.7em;
+    }
+  }
+}
+
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -105,11 +93,11 @@
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
-      color: #B78E63;
+      color: #C9A063;
     }
     }
   }
@@ -128,33 +116,23 @@
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-
-.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
-.bg{
-    span{
-      &:nth-child(1){
-        top: 4vw;
-        left: 82vw;
-        font-size: 6vw;
-      }
-      &:nth-child(2){
-        top: 57vw;
-        left: 2vw;
-        font-size: 8vw;
-      }
-      &:nth-child(3){
-        top: 3vw;
-        left: 77vw;
-        font-size: 23vw;
-      }
-    }
-  }
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
-    padding: 0 sizem(30);
+    padding: 0 sizem(32.5);
     width: 100%;
+    flex-basis: auto;
 }
 
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 2em;
+    }
+  }
+}
 
 
   .slider {
@@ -162,9 +140,9 @@
     width: 100%;
 
     .caption {
-    font-size:sizem(12); 
+    font-size:sizem(12);  
     right:sizem(5);
-    bottom:sizem(5); 
+    bottom:sizem(5);
     }
     .slide-item {
       @apply bg-cover;
@@ -180,8 +158,8 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -207,18 +185,9 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/02.jpg", import.meta.url).href ,
-    caption: "中華西路接軌九份子重劃區、86快速道路"
-  },
-  {
-    img:new URL("./s4/03.jpg", import.meta.url).href ,
-    caption: "永華大道連結水岸生活"
-  },
-  {
-    img:new URL("./s4/04.jpg", import.meta.url).href ,
-    caption: "近接西門路新光三越新天地商圈"
+    img:new URL("./s4/1.webp", import.meta.url).href ,
+    caption: "國道10號"
   },
 ]
-const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

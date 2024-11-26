@@ -1,18 +1,18 @@
 <template>
   <article class="s7" ref="s7">
-    <div class="bg">
+    <div class="bg" v-if="!$isMobile()">
       <span></span>
       <span></span>
       <span></span>
-      <span v-if="!$isMobile()"></span>
     </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">安心品牌</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">首座飯店式公寓 享受升級</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">創新設計，構築感動</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">建築人的建築，多一份理想性，多一份專業堅持。從挑選土地，量制風格，以獨特的設計接軌國際樣式，專注結構與施工，打造有體感的永續森活，實踐您的夢想。</p>
+    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">大樹區首座飯店式公寓，尊榮禮遇成家！多元實用公設，智慧管理門廳、室內信箱區、曬被區、宅配室、兒童遊戲區、交誼會議室、環保室、健身房…回家就像在度假。
+</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -33,6 +33,8 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s7 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
@@ -44,25 +46,16 @@
   .bg{
     span{
       &:nth-child(1){
-        top: 2vw;
-        left: 8vw;
-        font-size: 2.5vw;
-      }
+      top:size(26);left: 0;
+  font-size:size(120);
+}
       &:nth-child(2){
-        top: 1vw;
-        right: 16vw;
-        font-size: 1.5vw;
-      }
+      top: size(147);left: size(110);
+  font-size:size(27);
+}
       &:nth-child(3){
-        top: 5vw;
-        right: 2vw;
-        font-size: 5vw;
-      }
-      &:nth-child(4){
-        top: -7vw;
-        right: 20vw;
-        font-size: 4vw;
-      }
+      top: size(20);right:size(80);
+  font-size:size(75);}
     }
   }
 
@@ -78,6 +71,16 @@
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+}
+
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 12.2em;
+    }
+  }
 }
 
   .slider {
@@ -116,30 +119,22 @@
   gap:2em;
   .img{position: absolute;top:sizem(300);left: auto;
     right:sizem(-155);width:sizem(260);bottom: auto;}
-.bg{
-    span{
-      &:nth-child(1){
-        top: 0vw;
-        left: 0vw;
-        font-size: 15vw;
-      }
-      &:nth-child(2){
-        top: 10vw;
-        left: 15vw;
-        font-size: 5vw;
-      }
-      &:nth-child(3){
-        top: 20vw;
-        left: 77vw;
-        font-size: 5vw;
-      }
-    }
-  }
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
+    flex-basis: auto;
 }
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 1em;
+    }
+  }
+}
+
 
   .slider {
     height: auto;
@@ -165,6 +160,7 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -182,7 +178,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: false,
+  autoplay: true,
   interval: 4000,
   gap: 0,
   type: 'loop'
@@ -190,20 +186,36 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.jpg", import.meta.url).href ,
-    caption: "大千"
+    img:new URL("./s7/1.webp", import.meta.url).href ,
+    caption: "3D模擬圖"
   },
   {
-    img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "見真"
+    img:new URL("./s7/2.webp", import.meta.url).href ,
+    caption: "情境示意圖"
   },
   {
-    img:new URL("./s7/3.jpg", import.meta.url).href ,
-    caption: "至真"
+    img:new URL("./s7/3.webp", import.meta.url).href ,
+    caption: "情境示意圖"
   },
   {
-    img:new URL("./s7/4.jpg", import.meta.url).href ,
-    caption: "如邑一期"
+    img:new URL("./s7/4.webp", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s7/5.webp", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s7/6.webp", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s7/7.webp", import.meta.url).href ,
+    caption: "情境示意圖"
+  },
+  {
+    img:new URL("./s7/8.webp", import.meta.url).href ,
+    caption: "情境示意圖"
   },
 ]
 </script>

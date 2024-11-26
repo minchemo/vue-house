@@ -1,13 +1,17 @@
 <template>
-  <article class="s8">
+  <article class="s8" ref="s8">
+    <div class="bg" v-if="!$isMobile()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   <div class="txt">
-    <h3 class="title font-['Noto_Serif_TC',serif]"  data-aos="fade-up" data-aos-delay="0">電梯店墅</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">2-3房 高效採光格局</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">地段好的店面，大老闆都搶</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">角地店王，百米店街結市，76-98大建坪，電梯透天店住，開店、辦公、自住、出租，置產投資首選。<br />
-零公設持分、免購車位、零虛坪，百坪大樓有找，超高CP值，當然選「如邑2」!</p>
+    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4-->
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">以舒適生活為基準，方正格局、減少坪效浪費聰明規劃，優質採光，引入風光流暢，不論新婚夫妻、甜蜜小家庭都能感受幸福滿屋。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -28,48 +32,75 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s8 {
-  @apply relative flex flex-col items-center justify-center text-[#000] bg-[#F8F8F8];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  // height: size(800);
+  height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
-  gap:1.5em;
-  flex-wrap:nowrap;
+  gap:3em;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  .bg{
+    span{
+      &:nth-child(1){
+      top:size(26);left: 0;
+  font-size:size(120);
+}
+      &:nth-child(2){
+      top: size(147);left: size(110);
+  font-size:size(27);
+}
+      &:nth-child(3){
+      top: size(20);right:size(80);
+  font-size:size(75);}
+    }
+  }
+
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
+    flex-basis: size(590);
   flex-direction: column;
-  text-align: center;
-    width: 100%;
+  text-align: justify;
+
 }
 
+
 .txt {
-.title{
-&::after,
-&::before{
-background: #C9A063;
+  .title{
+    &::after,
+    &::before{
+      width: 13.4em;
+    }
+  }
 }
-}}
 
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(844);
-    width: size(1500);
+      height: size(560);
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-    flex-basis: size(1500);
-      height: size(844);
+    flex-basis: size(840);
+      height: size(560);
       
     }
-    .arrows .prev, .arrows .next{
-      width:3%;
-    }
-
     .splide__pagination{
-      bottom: .5em;
+     left: calc(100% + 3em);
+      justify-content: flex-start;
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #B78E63;
+    }
     }
   }
 }
@@ -87,11 +118,25 @@ background: #C9A063;
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
+    flex-basis: auto;
 }
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 2.4em;
+    }
+  }
+}
+
+
   .slider {
     height: auto;
     width: 100%;
@@ -108,9 +153,6 @@ background: #C9A063;
       height: sizem(250);
       
     }
-    .arrows .prev, .arrows .next{
-      width:8%;
-    }
   }
   }
 }
@@ -119,6 +161,7 @@ background: #C9A063;
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -144,45 +187,45 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s8/1.jpg", import.meta.url).href ,
-    caption: "外觀實景"
+    img:new URL("./s8/1.webp", import.meta.url).href ,
+    caption: "輕奢3房實品屋"
   },
   {
-    img:new URL("./s8/2.jpg", import.meta.url).href ,
-    caption: "外觀實景"
+    img:new URL("./s8/2.webp", import.meta.url).href ,
+    caption: "輕奢3房實品屋"
   },
   {
-    img:new URL("./s8/3.jpg", import.meta.url).href ,
-    caption: "外觀實景"
+    img:new URL("./s8/3.webp", import.meta.url).href ,
+    caption: "輕奢3房實品屋"
   },
   {
-    img:new URL("./s8/4.jpg", import.meta.url).href ,
-    caption: "外觀實景"
+    img:new URL("./s8/4.webp", import.meta.url).href ,
+    caption: "輕奢3房實品屋"
   },
   {
-    img:new URL("./s8/5.jpg", import.meta.url).href ,
-    caption: "外觀實景"
+    img:new URL("./s8/5.webp", import.meta.url).href ,
+    caption: "輕奢3房實品屋"
+  },
+  {
+    img:new URL("./s8/6.webp", import.meta.url).href ,
+    caption: "甜蜜2房實品屋"
+  },
+  {
+    img:new URL("./s8/7.webp", import.meta.url).href ,
+    caption: "甜蜜2房實品屋"
+  },
+  {
+    img:new URL("./s8/8.webp", import.meta.url).href ,
+    caption: "甜蜜2房實品屋"
+  },
+  {
+    img:new URL("./s8/9.webp", import.meta.url).href ,
+    caption: "甜蜜2房實品屋"
+  },
+  {
+    img:new URL("./s8/10.webp", import.meta.url).href ,
+    caption: "甜蜜2房實品屋"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s8/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s8/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s8/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s8/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>
 
