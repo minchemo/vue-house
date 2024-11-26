@@ -12,7 +12,7 @@
     </div>
   <div class="txt">
     <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Luxury Style Daily</h3>
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">繁華清采 時尚生活掌心擁有</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">繁華精彩 時尚生活掌心擁有</h3>
     <hr class="hr" v-if="isMobile">
   </div>
     <div class="main">
