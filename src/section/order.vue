@@ -323,6 +323,9 @@
           height: 7em;
         }
       }
+    &::after {
+      width: 0;
+    }
 
     }
 
