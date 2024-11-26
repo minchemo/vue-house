@@ -106,7 +106,7 @@ img {
     line-height: 1.7;
     width: 100%;
   .title{
-    font-size: 2.2em;
+    font-size: 2.8em;
     margin: 2em 0 0em;
     line-height: 1.4;
     font-weight: 500;
@@ -132,6 +132,7 @@ img {
   }
   .desc{
     margin: 0 0 1em;
+    font-size: 1.4em;
     b{color:#C9A063;}
   }
   }

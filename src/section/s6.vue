@@ -49,7 +49,7 @@
 &::after,
 &::before{
 background: #fff;
-width: 11.3em;
+width: 7.3em;
 }
 }}
 

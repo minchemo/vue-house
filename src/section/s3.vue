@@ -11,7 +11,7 @@
     <div class="main">
       <div class="txt">
     <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">仁武航太園區10分鐘，和發產業園區15分鐘，205兵工廠….位處產業核心地位，串聯科技廊道，快速通勤回家更近，更坐享人口增值紅利。</p>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">中科院大樹分院5分鐘，仁武航太產業園區10分鐘，和發產業園區15分鐘，205兵工廠..... ，位處產業核心地位，串聯科技廊道，快速通勤回家更近，坐享人口增值紅利。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -79,7 +79,7 @@
   .title{
     &::after,
     &::before{
-      width: 13.7em;
+      width: 9.7em;
     }
   }
 }

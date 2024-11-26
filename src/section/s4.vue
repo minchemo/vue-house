@@ -11,7 +11,7 @@
     <div class="main">
       <div class="txt">
     <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">國道七道、台29線、國道10號，以及未來高屏2快，加速南來北往跨境生活。</p>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">國道10號、台29線，以及未來的國道7號、高屏2快，加速南北來往跨境生活，打造都市新路網。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -77,7 +77,7 @@
   .title{
     &::after,
     &::before{
-      width: 13.7em;
+      width: 9.6em;
     }
   }
 }

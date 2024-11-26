@@ -78,7 +78,7 @@
   .title{
     &::after,
     &::before{
-      width: 12.2em;
+      width: 8.1em;
     }
   }
 }
