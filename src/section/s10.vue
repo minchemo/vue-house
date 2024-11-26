@@ -2,13 +2,19 @@
   <article class="s10 relative" id="s10">
      <img src="./s1/bg.webp" class="bg" /> 
      <div class="txt">
-      <logo class="logo absolute" data-aos="zoom-in" data-aos-delay="400"></logo>
+      <logo class="logo relative" data-aos="zoom-in" data-aos-delay="400"></logo>
 
-      <div class="t1 absolute font-['Noto_Sans_TC',sans-serif]">約15Min 台積電/約15Min 高鐵/約15Min 巨蛋/繁華鄰距離</div>
-      <div class="t2 absolute">當代新質感建築/精粹2-3房/25%低公設更安逸/即將公開</div>
-  <!--  <img src="./s1/logo.svg" class="logo absolute" data-aos="zoom-in-down" data-aos-delay="0"> -->
-      <img src="./s10/t3.svg" class="t3 absolute" data-aos="zoom-in" data-aos-delay="600">
-     <img src="./s10/slogo.svg" class="slogo absolute" data-aos="zoom" data-aos-delay="800">
+      <div class="ts relative" v-if="!isMobile">
+        <div class="t1 font-['Noto_Sans_TC',sans-serif]">約15Min 台積電/約15Min 高鐵/約15Min 巨蛋/繁華鄰距離</div>
+        <div class="t2">當代新質感建築/精粹2-3房/25%低公設更安逸/即將公開</div>
+      </div>
+      <div class="ts relative" v-else>
+        <div class="t1 font-['Noto_Sans_TC',sans-serif]">約15Min 台積電/約15Min 高鐵<br>約15Min 巨蛋/繁華鄰距離</div>
+        <div class="t2">當代新質感建築/精粹2-3房<br>25%低公設更安逸/即將公開</div>
+      </div>
+
+      <img src="./s10/t3.svg" class="t3 relative" data-aos="zoom-in" data-aos-delay="600">
+     <img src="./s10/slogo.svg" class="slogo relative" data-aos="zoom" data-aos-delay="800">
     </div>
   </article>
 </template>
@@ -42,39 +48,39 @@
       
     }
   }
-  .logo{width:sizem(235);top: sizem(80);left: 0;right: 0;margin: auto;
+  .logo{width:sizem(235);margin: sizem(30) auto 0;
    @media screen and (min-width: 768px) {
     width:size(650);//left: size(255);
-    top: size(150);
+    margin:size(150) auto 0;
     }
   }
-  .t1,.t2{
-    text-align: center;left: 0;right: 0;margin: auto;width:sizem(360);
-    font-size:sizem(14);
+  .ts{
+    text-align: center;left: 0;right: 0;width:sizem(360);
+    font-size:sizem(16);margin:1.5em auto;
+      line-height: 1.4;
     @media screen and (min-width: 768px) {width:100%;
       font-size:size(34);
       letter-spacing: 0.06em;
-
     }
   }
-  .t1{top: sizem(260);color: #fff;}
-  .t2{top: sizem(285);color: #dca66b;}
+  .t1{color: #fff;}
+  .t2{color: #dca66b;margin-top: .4em;}
   @media screen and (min-width: 768px) {
-  .t1{top: size(560);}
-  .t2{top: size(610);letter-spacing: 0.1em;}
+  .t2{letter-spacing: 0.1em;margin-top: .1em}
   }
   
   
-  .t3{width:sizem(235);top: sizem(330);left: 0;right: 0;
+  .t3{width:sizem(235);
+    margin: auto;display: block;
    @media screen and (min-width: 768px) {
     width:size(530);
-    top: size(730);
+   // top: size(730);
     }
   }
-  .slogo{width:sizem(235);top: sizem(410);left: 0;right: 0;
+  .slogo{width:sizem(235);
+    margin: auto;display: block;margin:sizem(25) auto 0;
    @media screen and (min-width: 768px) {
-    width:size(530);
-    top: size(895);
+    width:size(530);margin:size(47) auto 0;
     }
   }
 }
