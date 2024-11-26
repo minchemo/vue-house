@@ -156,12 +156,12 @@ const sConfig = {
 
 const imgs = [
   {
-    img: new URL("./s2/1.webp", import.meta.url).href,
+    img: new URL("./s2/1.jpg", import.meta.url).href,
     caption: "",
    // caption: "依政府公開計畫繪製，僅供參考請以實際為主",
   },
   {
-    img: new URL("./s2/2.webp", import.meta.url).href,
+    img: new URL("./s2/2.jpg", import.meta.url).href,
     caption: "",
    // caption: "圖片來源google地圖，僅供參考請以實際為主",
   },
