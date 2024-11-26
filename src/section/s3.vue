@@ -3,21 +3,21 @@
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">近擁國1+國10雙國道<br>
         最強交通攻略</h3>
-      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">有了雙國道加持，南來北往輕鬆飆馳，<br>
+      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="200">有了雙國道加持，南來北往輕鬆飆馳，<br>
 約15 分鐘、一杯咖啡時間，<br>
 快意串聯「台積電」「橋科」「仁武航太園區」<br>
 三大重量級經濟引擎，帶來無限增值紅利，<br>
 還能飆速抵達義大世界、高鐵、漢神巨蛋，<br>
 嶄新的大社、便捷的交通，<br>看得見的不凡未來！</p>
-<img src="./s3/stxt.svg" class="stxt" alt="備註" data-aos="fade-up" data-aos-delay="800"><br>
-<!--  --><img src="./s3/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="800">
+<img src="./s3/stxt.svg" class="stxt" alt="備註" data-aos="fade-up" data-aos-delay="400"><br>
+<!--  --><img src="./s3/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="600">
     </div>
     <img src="./s3/coffee.webp" class="coffee absolute" alt="coffee" data-aos="fade-up" data-aos-delay="0">
-    <img src="./s3/img.jpg" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s3/img.jpg" class="img" alt="img" data-aos="fade-up" data-aos-delay="200">
     <div class="lists relative">
-      <div class="list"><img src="./s3/img1.jpg" alt=""><span>台積電</span><span><i>約</i>15min</span></div>
-    <div class="list"><img src="./s3/img2.jpg" alt=""><span>橋科園區</span><span><i>約</i>15min</span></div>
-    <div class="list"><img src="./s3/img3.jpg" alt=""><span>仁武航太園區</span><span><i>約</i>15min</span></div>
+      <div class="list" data-aos="fade-up" data-aos-delay="400"><img src="./s3/img1.jpg" alt=""><span>台積電</span><span><i>約</i>15min</span></div>
+    <div class="list" data-aos="fade-up" data-aos-delay="600"><img src="./s3/img2.jpg" alt=""><span>橋科園區</span><span><i>約</i>15min</span></div>
+    <div class="list" data-aos="fade-up" data-aos-delay="800"><img src="./s3/img3.jpg" alt=""><span>仁武航太園區</span><span><i>約</i>15min</span></div>
   </div>
   </article>
 </template>

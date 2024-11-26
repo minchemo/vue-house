@@ -1,9 +1,9 @@
 <template>
   <article class="s4 relative" id="s4">
-    <img src="./s4/bg.png" class="tree" alt="tree" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s4/bg.png" class="tree" alt="tree">
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">繁華軸心<span>上等靜巷質地</span></h3>
-      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">雙面臨路，靜巷美地，<br>
+      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="200">雙面臨路，靜巷美地，<br>
 讀秒進入中山路繁華軸心，<br>
 出門就是流動的生活饗宴，<br>
 土銀、合庫、全聯、寶雅、四大超商匯集地，<br>
@@ -11,7 +11,7 @@
 美食小吃一條街，富庶生活精彩絕倫，<br>
 食衣住行逸樂，都在你身邊！</p>
     </div>
-    <img src="./s4/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s4/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="400">
   </article>
 </template>
 

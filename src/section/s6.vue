@@ -1,13 +1,13 @@
 <template>
   <article class="s6 relative" id="s6">
 
-    <div class="bird">
-    <img src="./s6/bird.webp" alt="bird" data-aos="fade-up" data-aos-delay="0"></div>
+    <div class="bird" data-aos="fade-left" data-aos-delay="600">
+    <img src="./s6/bird.webp" alt="bird"></div>
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">漫遊，奢綠後花園<br>居城市，坐擁一方山水逸境</h3>
       <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">「霧，像愛情一樣，在山峰的心上遊戲，<br>生出種種美麗的變幻。」—摘錄自詩人《泰戈爾》</h4>
     </div>
-    <img src="./s6/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s6/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="400">
     <div class="txt relative">
       <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">將近42公頃的觀音山，是您家後花園，<br>
 層層疊翠、綠意盎然，親山親湖親自然，<br>

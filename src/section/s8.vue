@@ -2,8 +2,8 @@
   <article class="s8 relative" id="s8">
     <img src="./s8/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
     <div class="txt relative">
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0"><img src="./s8/icon.svg" class="icon" alt="icon">百春陽建設</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">16年的精湛品質馬拉松 追求完美，極致苛求</h4>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="200"><img src="./s8/icon.svg" class="icon" alt="icon">百春陽建設</h3>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="400">16年的精湛品質馬拉松 追求完美，極致苛求</h4>
       <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">注重人本思維、精研平面細節、<br>
 紮實美學精工、專業優質售服，<br>
 「百春陽」是追求卓越的豪宅推手。<br>

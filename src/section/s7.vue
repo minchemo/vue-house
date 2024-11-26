@@ -1,14 +1,14 @@
 <template>
   <article class="s7 relative" id="s7">
-    <div class="img relative">
-    <img src="./s7/img.jpg" alt="img" data-aos="fade-up" data-aos-delay="0">
-    <img src="./s7/en.svg" class="en absolute" alt="en" data-aos="fade-up" data-aos-delay="800">
+    <div class="img relative" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s7/img.jpg" alt="img">
+    <img src="./s7/en.svg" class="en absolute" alt="en">
     <span class="c absolute  font-['Noto_Sans_TC',sans-serif]">本案外觀3D示意圖</span>
   </div>
     <div class="txt relative">
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">以簡御繁<br>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="200">以簡御繁<br>
         當代新質感建築</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">《安藤忠雄》曾說:「我希望建築能夠同時達成『簡明』<br>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="400">《安藤忠雄》曾說:「我希望建築能夠同時達成『簡明』<br>
 也希望達到擁有『深度』。建築應該是一個<br>
 讓人在精神上能夠獲得充實飽滿力量的空間。」</h4>
       <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">【百春陽建設】也是，致力打造當代新質感建築，<br>

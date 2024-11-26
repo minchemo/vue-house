@@ -1,25 +1,25 @@
 <template>
   <article class="s5 relative" id="s5">
-    <div class="bg absolute" data-aos="fade-up" data-aos-delay="0">
+    <div class="bg absolute">
     <img src="./s5/bg.webp" class="bg1 absolute" alt="bg">
     <img src="./s5/bg.webp" class="bg2 absolute" alt="bg">
-    <img src="./s5/bird.svg" class="bird absolute" alt="bg">
+    <img src="./s5/bird.svg" class="bird absolute" alt="bg" data-aos="fade-up" data-aos-delay="0">
   </div>
 
     <div class="tree">
-    <img src="./s4/bg.png" alt="tree" data-aos="fade-up" data-aos-delay="0"></div>
+    <img src="./s4/bg.png" alt="tree"></div>
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">九大學府，<br>
 串起知性與智慧</h3>
-      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">難得人文領地，一次匯集九所校園，<br>
+      <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="200">難得人文領地，一次匯集九所校園，<br>
 囊括了：大社國小國中、楠梓高中、<br>
 義守大學＆醫學院、樹德科大、<br>
 高科大燕巢校區＆第一校區、高師大燕巢校區，<br>
 知識滿分、智慧能量無限提升！</p>
-<!--  --><img src="./s5/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="800">
-    <img src="./s5/book.svg" class="book" alt="book" data-aos="fade-up" data-aos-delay="0">
+<!--  --><img src="./s5/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="400">
+    <img src="./s5/book.svg" class="book" alt="book" data-aos="fade-up" data-aos-delay="400">
     </div>
-    <img src="./s5/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s5/img.webp" class="img" alt="img" data-aos="fade-up" data-aos-delay="600">
   </article>
 </template>
 

@@ -1,17 +1,17 @@
 <template>
   <article class="s9 relative" id="s9">
-    <div class="img relative">
-      <img src="./s9/img.jpg" class="img1" alt="img" data-aos="fade-up" data-aos-delay="0">
-      <img src="./s9/img2.jpg" class="img2 absolute" alt="img" data-aos="fade-up" data-aos-delay="0">
-    <img src="./s9/en.svg" class="en absolute" alt="en" data-aos="fade-up" data-aos-delay="800">
+    <div class="img relative" data-aos="fade-up" data-aos-delay="0">
+      <img src="./s9/img.jpg" class="img1" alt="img">
+      <img src="./s9/img2.jpg" class="img2 absolute" alt="img">
+    <img src="./s9/en.svg" class="en absolute" alt="en">
     <span class="c absolute  font-['Noto_Sans_TC',sans-serif]">情境示意圖</span>
   </div>
 
-    <div class="bird">
-    <img src="./s9/bird.png" alt="bird" data-aos="fade-up" data-aos-delay="0"></div>
+    <div class="bird" data-aos="fade-left" data-aos-delay="600">
+    <img src="./s9/bird.png" alt="bird"></div>
     <div class="txt relative">
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">25%低公設高坪效</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">3房價買到4房空間尺度</h4>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="200">25%低公設高坪效</h3>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="400">3房價買到4房空間尺度</h4>
       <p class="font-['Noto_Sans_TC',sans-serif]" data-aos="fade-up" data-aos-delay="600">以25% 超低公設比， Less is more 的當代思維，<br>
 創造高坪效、高CP的空間機能，<br>
 更打造2房2衛「雙套房」、<br>市場罕見的完美空間，<br>
