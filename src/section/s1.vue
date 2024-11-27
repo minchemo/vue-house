@@ -44,10 +44,10 @@
       height: auto;width:size(2300);top:calc(50% + #{size(0 - 1080 * .5)});
     }
   }
-  .logo{width:sizem(270);margin:sizem(37) auto sizem(47);
+  .logo{width:sizem(290);margin:sizem(37) auto sizem(47);
     @media screen and (min-width: 768px) {
-      position: relative;top:calc(20% - #{size(150)});
-      width:size(566);margin:auto;}
+      position: relative;top:calc(20% - #{size(155)});
+      width:size(608);margin:auto;}
   }
   .building{
     width:sizem(78);transform-origin: 50% 100%;
