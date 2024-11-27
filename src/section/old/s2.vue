@@ -1,16 +1,31 @@
 <template>
-  <article class="s2">
-    <div class="t">
-      <img class="t1" src="@/section/resource/s2title.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">各大園區全能同步</div>
-      <div class="t3" data-aos="fade-up" data-aos-delay="400">
-        近距北士科、內湖科技園區、圓山新創產業聚落、新北知識產業園區，<br />
-        前迎家樂福、後擁銀河灣開發計畫，百年難得一見的三重地王【吉晟賦】，佔盡地利優勢！
-      </div>
+  <article class="s2 anchor1">
+    <img class="bg" v-if="!isMobile" src="./s2/bg.png" alt="bg">
+    <img class="bg" v-else src="./s2/bgm.png" alt="bg">
+    <div class="t1">佔地高雄主場 連結橋科台積</div>
+    <div class="map">
+      <img v-if="!isMobile" src="@/section/s2/map.webp" alt="" srcset="" />
+      <Fullview v-else />
     </div>
-    <div class="fillcolor"></div>
-    <div class="viewbox">
-      <fullview />
+    <div
+      class="t1 anchor2"
+      data-aos="fade-up"
+      data-aos-delay="0"
+    >
+      橋科富墅 四大天王
+    </div>
+    <div class="icons">
+      <div
+        class="icon"
+        v-for="(icon, i) in icons"
+        :key="i"
+        data-aos="fade-up"
+        :data-aos-delay="i * 200"
+      >
+        <div class="title">{{ icon.title }}</div>
+        <div class="content">{{ icon.content }}</div>
+        <img :src="icon.icon" alt="" srcset="" />
+      </div>
     </div>
   </article>
 </template>
@@ -19,66 +34,67 @@
 @import "@/assets/style/function.scss";
 
 .s2 {
-  @apply w-full relative;
-  height: size(1357);
-  background: rgb(2, 103, 196);
+  @apply relative w-full;
+  @apply flex flex-col items-center justify-center;
+  height: size(2160);
+  background-image: url("@/section/s2/bg.jpg");
+  background-size: size(800) auto;
+  // background-attachment: fixed;
 
-  .t {
-    @apply absolute z-20 flex flex-col items-center justify-center w-full;
-    top: size(98);
-    gap: size(43);
-    .t1 {
-      width: size(365.29);
-    }
-    .t2 {
-      @apply flex items-center justify-center;
-      width: size(622.26);
-      height: size(54.44);
-      color: #000;
-      font-size: size(32);
-      font-weight: 500;
-      letter-spacing: size(1.92);
-      background: linear-gradient(
-        90deg,
-        rgba(255, 230, 121, 0) 0%,
-        #ffe679 21%,
-        #e4bc53 30%,
-        #d6a640 44%,
-        #c28724 67%,
-        #bb7c1a 80%,
-        rgba(187, 124, 26, 0) 100%
-      );
-    }
-    .t3 {
-      color: #fff;
-      text-align: center;
-      font-size: size(24);
-      font-weight: 500;
-      line-height: size(39);
-      letter-spacing: size(1.44);
+.bg{position: absolute;
+bottom: 0;
+width: size(1542);
+right: 0;
+}
+  .map {
+    @apply relative bg-white/50;
+    width: size(1387);
+    margin-bottom: size(50);
+    img {
+      @apply w-full;
     }
   }
 
-  .fillcolor {
-    @apply w-full relative z-10;
-    height: size(506);
-    background: rgb(2, 103, 196);
-    background: linear-gradient(
-      0deg,
-      rgba(2, 103, 196, 0) 0%,
-      rgba(2, 103, 196, 1) 44.5%,
-      rgba(2, 103, 196, 1) 100%
-    );
+  .t1 {
+    @apply text-black;
+    font-size: size(54);
+    font-weight: 600;
+    margin-bottom: size(22);
   }
 
-  .viewbox {
-    @apply absolute w-full;
-    height: size(1083);
-    left: 0;
-    bottom: 0;
+  .icons {
+    @apply flex items-start;
+    @apply font-['Noto_Sans_TC'];
+    gap: size(107);
+    margin-top: size(25);
+    .icon {
+      @apply flex flex-col items-center justify-center;
+      width: size(220);
+
+      .title {
+        @apply w-full bg-[#523828BA]/70 text-white;
+        @apply text-center;
+        height: size(50);
+        border-radius: size(10);
+        font-size: size(31);
+        font-weight: 500;
+        letter-spacing: size(3.1);
+        line-height: size(50);
+        margin-bottom: size(20);
+      }
+      .content {
+        @apply text-black text-left;
+        font-size: size(20);
+        font-weight: 500;
+        letter-spacing: size(2);
+        margin-bottom: size(32);
+      }
+      img {
+        @apply w-[95%];
+      }
+    }
   }
 }
-
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -86,58 +102,99 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(810);
-    
-    .t {
-      @apply absolute z-[101] flex flex-col items-center justify-center w-full;
-      top: sizem(51.86);
-      gap: sizem(10);
-      .t1 {
-        width: sizem(139.1);
-      }
-      .t2 {
-        @apply flex items-center justify-center;
-        width: sizem(325);
-        height: sizem(27);
-        font-size: sizem(16);
-        line-height: 170%;
-        letter-spacing: sizem(0.96);
-      }
-      .t3 {
-        width: sizem(340);
-        font-size: sizem(14);
-        line-height: 170%;
-        letter-spacing: sizem(0.84);
+    @apply relative w-full;
+    @apply flex flex-col items-center justify-start;
+    @apply bg-cover bg-bottom;
+    height: sizem(1481);
+    background-size: sizem(500) auto;
+    padding-top: sizem(60);
+
+    .bg{
+width:100%;
+}
+    .map {
+      @apply relative bg-transparent;
+      width: 100%;
+      height: sizem(634);
+      margin-bottom: sizem(76);
+      img {
+        @apply w-auto;
       }
     }
 
-    .fillcolor {
-      @apply w-full relative z-10 pointer-events-none;
-      height: sizem(150);
-      background: rgb(2, 103, 196);
-      background: linear-gradient(
-        0deg,
-        rgba(2, 103, 196, 0) 0%,
-        rgba(2, 103, 196, 1) 44.5%,
-        rgba(2, 103, 196, 1) 100%
-      );
+    .t1 {
+      @apply text-black;
+      font-size: sizem(25);
+      font-weight: 600;
+      margin-bottom: sizem(10);
     }
 
-    .viewbox {
-      @apply absolute w-full;
-      height: sizem(720);
-      left: 0;
-      bottom: 0;
+    .icons {
+      @apply grid grid-cols-2 items-start;
+      gap: sizem(33.6);
+      margin-top: sizem(20);
+      .icon {
+        @apply flex flex-col items-center justify-center;
+        width: sizem(140);
+
+        .title {
+          @apply w-full bg-[#523828BA]/70 text-white;
+          @apply text-center;
+          height: sizem(25.79);
+          border-radius: sizem(10);
+          font-size: sizem(17);
+          font-weight: 500;
+          letter-spacing: sizem(1.7);
+          line-height: sizem(25.79);
+          margin-bottom: sizem(11);
+        }
+        .content {
+          @apply text-black text-left;
+          font-size: sizem(14);
+          font-weight: 500;
+          letter-spacing: sizem(1);
+          margin-bottom: sizem(16);
+        }
+        img {
+          @apply w-[80%];
+        }
+      }
     }
   }
 }
 </style>
 
 <script setup>
-import fullview from "@/components/fullview.vue"
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
-const globals = getCurrentInstance().appContext.config.globalProperties
+import icon1 from "@/section/s2/i1.png"
+import icon2 from "@/section/s2/i2.png"
+import icon3 from "@/section/s2/i3.png"
+import icon4 from "@/section/s2/i4.png"
 
-const smoothScroll = inject("smoothScroll")
+import { computed, getCurrentInstance } from "vue"
+import Fullview from "@/components/fullview.vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
 const isMobile = computed(() => globals.$isMobile())
+
+const icons = [
+  {
+    title: "雙強品牌",
+    content: "禾森事業X永盈建設，雙品牌實力聯手",
+    icon: icon1,
+  },
+  {
+    title: "三大科技",
+    content: "橋頭科學園區X楠梓科學園區X台積電",
+    icon: icon2,
+  },
+  {
+    title: "兩百頃綠地",
+    content: "高科大人文特區，周圍綠地遠超兩百頃",
+    icon: icon3,
+  },
+  {
+    title: "寬闊雙車墅",
+    content: "6.8米併排雙車墅，頂樓大露臺花園",
+    icon: icon4,
+  },
+]
 </script>

@@ -1,5 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
+    <!-- Map -->
+    <Map v-if="info.address" />
     <div class="order-section">
       <!-- Title -->
 
@@ -13,12 +15,13 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center z-10">
         <div class="s-order-title text-white">
-          <p>
+          預約賞屋 Book now
+          <!-- <p>
             {{ info.order.title }}
           </p>
           <p>
             {{ info.order.subTitle }}
-          </p>
+          </p> -->
         </div>
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"
@@ -112,10 +115,10 @@
               :checked="formData.policyChecked"
               class="checkbox bg-white rounded-none"
             />
-            <p class="text-white">
+            <p class="text-black">
               本人知悉並同意<label
                 for="policy-modal"
-                class="modal-button text-[#FFFF00] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
+                class="modal-button text-[#20575A] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
                 >「個資告知事項聲明」</label
               >內容
             </p>
@@ -134,7 +137,7 @@
 
         <!-- Send -->
         <div class="send btn cursor-pointer relative z-10" @click="send()">
-          {{ sending ? "發送中.." : "確認送出" }}
+          {{ sending ? "發送中.." : "立即預約" }}
         </div>
       </div>
 
@@ -142,11 +145,8 @@
       <ContactInfo />
     </div>
 
-    <!-- Map -->
-    <Map v-if="info.address" />
-
     <!-- HouseInfo -->
-    <HouseInfo />
+    <HouseInfo v-if="false" />
   </div>
 </template>
 
@@ -154,12 +154,11 @@
 @import "@/assets/style/function.scss";
 
 .order-section {
-  @apply bg-cover bg-bottom;
+  @apply bg-cover bg-bottom bg-white;
   position: relative;
   overflow: hidden;
   padding: 0 0;
   padding-top: size(150);
-  background-image: url("@/section/orderbg.jpg");
 
   .intro {
     @apply flex flex-col items-center justify-end relative z-[5];
@@ -205,16 +204,8 @@
   }
 
   .s-order-title {
-    @apply absolute left-0 bottom-[115%] text-center w-full;
-    p {
-      font-size: size(32);
-      font-weight: 500;
-
-      &:nth-child(2) {
-        font-size: size(18);
-        margin-top: size(5);
-      }
-    }
+    @apply absolute left-0 bottom-[110%] text-left w-full text-[#103438] font-bold;
+    font-size: size(26);
   }
 
   .order-title {
@@ -282,7 +273,7 @@
     }
     .row {
       background: rgba($color: #fff, $alpha: 1);
-      border: 1px solid #a6a6a6;
+      border: 1px solid #20575A;
       color: #231815;
       display: flex;
       width: 100%;
@@ -332,10 +323,10 @@
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
-    background: white;
-    border-radius: 10px;
-    border: 0;
+    color: #fff;
+    background: #20575A;
+    border-radius: 0px;
+    border: 1px solid #20575A;
 
     width: size(442);
     height: size(87);
@@ -344,7 +335,7 @@
     font-weight: 700;
     position: relative;
 
-    @apply hover:bg-[#bd8e48] hover:text-white;
+    @apply hover:bg-[#fff] hover:text-[#20575A];
   }
 
   .control {
@@ -365,14 +356,7 @@
     background-image: unset;
     padding: 0 sizem(30);
     padding-top: sizem(0);
-    background: linear-gradient(
-      0deg,
-      #714e39 0%,
-      #654631 36%,
-      #4a331e 60%,
-      #36250f 84%,
-      #2f200a 100%
-    );
+    background: #fff;
 
     .intro {
       @apply flex flex-col items-center justify-end;
@@ -405,16 +389,9 @@
     width: 100%;
 
     .s-order-title {
-      @apply absolute left-0 bottom-[105%] flex flex-col items-center justify-center w-full;
-      p {
-        font-size: sizem(29);
-        font-weight: 500;
-
-        &:nth-child(2) {
-          font-size: sizem(13);
-          margin-top: sizem(5);
-        }
-      }
+      @apply absolute text-left left-0 bottom-[105%] flex flex-col items-center justify-center w-full;
+      
+      font-size: sizem(29);
     }
 
     .order-title-img {
@@ -453,7 +430,7 @@
       gap: 0;
       margin-bottom: sizem(20);
       flex-direction: column;
-      margin-top: sizem(150);
+      margin-top: sizem(100);
 
       .left {
         width: 100%;

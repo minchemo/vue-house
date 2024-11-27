@@ -1,32 +1,18 @@
 <template>
-  <article class="s6">
-    <div class="slide-box">
-      <div class="arrows" v-if="isMobile">
-        <img
-          src="@/section/arrow.png"
-          class="arrow prev"
-          alt=""
-          srcset=""
-          @click="splide.go('<')"
-        />
-        <img
-          src="@/section/arrow.png"
-          class="arrow next"
-          alt=""
-          srcset=""
-          @click="splide.go('>')"
-        />
-      </div>
+  <article class="s6 anchor7">
+    <div class="swiper-box">
       <Splide
         ref="splide"
         class="slide"
         :options="{
+          autoWidth: false,
           arrows: false,
           autoplay: true,
-          pagination: true,
+          pagination: false,
           interval: 4000,
           gap: 10,
           type: 'loop',
+          perPage: 1,
         }"
       >
         <SplideSlide
@@ -40,108 +26,108 @@
           </div>
         </SplideSlide>
       </Splide>
-      <div class="t">
-        <div class="t1">
-          <img src="@/section/resource/s6title.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
-          <p data-aos="fade-up" data-aos-delay="200">親子共遊水岸綠地</p>
-        </div>
-        <div class="divi"></div>
-        <div class="desc" data-aos="fade-up" data-aos-delay="400">
-          緊鄰三蘆區內最大綠地—14368坪三重集賢環保公園，<br v-if="!isMobile" />
-          親子自在共遊水岸綠境，為假日時光提供多樣化的休閒選擇。
-        </div>
+      <div class="arrows">
+        <img
+          src="@/section/arrow.png"
+          class="arrow prev"
+          @click="splide.go('<')"
+          alt=""
+          srcset=""
+        />
+        <img
+          src="@/section/arrow.png"
+          class="arrow next"
+          @click="splide.go('>')"
+          alt=""
+          srcset=""
+        />
       </div>
     </div>
+    <div class="t">
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
+        高科大人文特區<br />
+        優質學風
+      </div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
+        坐看高雄科學大學第一校區，以散策地步伐收藏萬坪學海；楠梓高中、楠梓國中小等學校包圍在側，以單車可達的距離，輕快掌握上下學時區。
+      </div>
+    </div>
+    <img
+      class="line"
+      v-if="!isMobile"
+      src="@/section/s4/line.png"
+      alt=""
+      srcset=""
+    />
+    <img class="line" v-else src="@/section/s4/linem.png" alt="" srcset="" />
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
 .s6 {
-  @apply w-full relative;
-  @apply flex justify-center;
-  height: size(1080);
-  background: url("@/section/s6/bg.jpg");
-  background-size: cover;
-  padding-top: size(218);
+  @apply relative w-full;
+  @apply flex;
+  height: size(900);
+  gap: size(50);
 
-  .slide-box {
-    @apply flex flex-row-reverse items-start relative z-10;
-    gap: size(72);
+  .swiper-box {
+    @apply relative h-full;
+    width: size(1229);
     .slide {
-      @apply relative;
-      width: size(997);
-      height: size(605);
       .slide-item {
-        @apply relative;
-        width: size(997);
-        height: size(605);
-        background-size: cover;
-        transform-style: preserve-3d;
+        @apply bg-cover;
+        width: size(1229);
+        height: size(900);
         .caption {
-          @apply absolute text-white;
-          left: size(14);
-          bottom: size(10);
-          font-size: size(20);
-          font-weight: 400;
-          letter-spacing: size(2.6);
+          @apply text-white;
+          @apply absolute;
+          left: size(20);
+          bottom: size(12);
+          font-family: "Noto Sans TC";
+          font-size: size(15);
+          font-weight: 700;
         }
-      }
-      .splide__pagination {
-        @apply absolute right-0 w-full flex justify-center;
-        padding: size(27) 0;
-        li {
-          line-height: 0;
-          button {
-            @apply rounded-full bg-transparent;
-            width: size(17.3);
-            height: size(17.3);
-            border: 1px solid #B5E598;
-            &.is-active {
-              background: #B5E598;
-            }
-          }
-        }
-        gap: size(13);
-      }
-      &::after {
-        @apply w-full h-full absolute top-0 left-0 pointer-events-none;
-        content: "";
-        background: url("@/section/resource/stroke.svg");
       }
     }
-
-    .t {
-      @apply flex flex-col text-black;
-      gap: size(15);
-      width: size(673);
-      .t1 {
-        @apply flex items-end justify-between;
-        margin-bottom: size(15);
-        img {
-          width: size(364.95);
-        }
-        p {
-          font-size: size(32);
-          font-weight: 500;
-          letter-spacing: size(1.92);
-        }
+    .arrows {
+      @apply absolute w-full;
+      @apply left-1/2 -translate-x-1/2;
+      @apply top-1/2 -translate-y-1/2;
+      @apply flex items-center justify-between;
+      padding: 0 size(15);
+      img {
+        @apply cursor-pointer;
+        width: size(28);
       }
-      .divi {
-        @apply bg-black;
-        height: 1px;
-      }
-      .desc {
-        font-size: size(24);
-        font-weight: 500;
-        line-height: size(39);
-        letter-spacing: size(0.72);
+      .next {
+        @apply -scale-x-100;
       }
     }
   }
+  .t {
+    @apply text-black;
+    padding-top: size(251);
+    .t1 {
+      font-size: size(54);
+      font-weight: 600;
+      margin-bottom: size(43);
+    }
+    .t2 {
+      font-family: "Noto Sans TC";
+      font-size: size(16);
+      font-weight: 400;
+      line-height: 151.41%;
+      width: size(470);
+    }
+  }
+  .line {
+    @apply absolute right-0 bottom-0;
+    @apply pointer-events-none select-none;
+    width: size(1200);
+  }
 }
-
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -149,108 +135,95 @@
 
 @media screen and (max-width: 767px) {
   .s6 {
-    @apply w-full relative z-20;
-    @apply flex justify-center;
-    height: sizem(526);
-    background: url("@/section/s6/bgm.jpg");
-    background-size: cover;
-    padding-top: sizem(56);
+    @apply flex-col-reverse justify-end;
+    height: auto;
+    gap: sizem(40);
 
-    .slide-box {
-      @apply flex-col-reverse items-center justify-end;
-      gap: sizem(24);
+    .swiper-box {
+      @apply relative h-auto;
+      width: 100vw;
       .slide {
-        width: sizem(330);
-        height: sizem(200);
         .slide-item {
-          width: sizem(330);
-          height: sizem(200);
+          @apply bg-cover;
+          width: sizem(375);
+          height: sizem(274.61);
           .caption {
-            @apply absolute text-white;
-            left: sizem(8);
+            @apply text-white;
+            @apply absolute;
+            left: unset;
+            right: sizem(10);
             bottom: sizem(6);
             font-size: sizem(12);
-            letter-spacing: sizem(0.72);
+            font-weight: 700;
           }
-        }
-        .splide__pagination {
-          @apply hidden;
-        }
-        &::after {
-          @apply w-full h-full absolute top-0 left-0 pointer-events-none;
-          content: "";
-          background: url("@/section/resource/stroke.svg");
-        }
-      }
-      .t {
-        @apply flex flex-col text-black;
-        gap: sizem(24);
-        width: sizem(310);
-        .t1 {
-          @apply flex items-end justify-between;
-          margin-bottom: sizem(5);
-          img {
-            width: sizem(136);
-          }
-          p {
-            font-size: sizem(14);
-            letter-spacing: sizem(0.42);
-          }
-        }
-        .desc {
-          font-size: sizem(14);
-          line-height: 170%;
-          letter-spacing: sizem(0.42);
         }
       }
       .arrows {
-        @apply absolute flex justify-between;
-        width: 98vw;
-        bottom: sizem(170);
-        .prev {
+        @apply absolute w-full;
+        @apply left-1/2 -translate-x-1/2;
+        @apply top-1/2 -translate-y-1/2;
+        @apply flex items-center justify-between;
+        padding: 0 sizem(8);
+        img {
+          @apply cursor-pointer;
+          width: sizem(15);
+        }
+        .next {
           @apply -scale-x-100;
         }
       }
     }
-
-    .style {
-      @apply absolute;
-      top: sizem(420);
-      width: 150vw;
+    .t {
+      @apply text-black;
+      padding-top: sizem(60);
+      padding-left: sizem(20);
+      .t1 {
+        font-size: sizem(25);
+        font-weight: 600;
+        margin-bottom: sizem(10);
+      }
+      .t2 {
+        font-size: sizem(14);
+        font-weight: 400;
+        line-height: 151.41%;
+        width: sizem(310);
+      }
+    }
+    .line {
+      @apply absolute right-0 top-0;
+      @apply pointer-events-none select-none;
+      bottom: unset;
+      width: 100%;
     }
   }
 }
 </style>
 
 <script setup>
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+import { computed, getCurrentInstance, ref } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
-
-const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
-
 const splide = ref()
-
 const imgs = [
   {
     img: new URL("../section/s6/1.jpg", import.meta.url).href,
-    caption: "淡水河畔公園景緻",
+    caption: "高科大校園",
   },
   {
     img: new URL("../section/s6/2.jpg", import.meta.url).href,
-    caption: "淡水河畔公園景緻",
+    caption: "高科大校園",
   },
   {
     img: new URL("../section/s6/3.jpg", import.meta.url).href,
-    caption: "淡水河畔公園景緻",
+    caption: "高科大綠地",
   },
   {
     img: new URL("../section/s6/4.jpg", import.meta.url).href,
-    caption: "淡水河畔公園景緻",
+    caption: "高雄科大",
   },
   {
     img: new URL("../section/s6/5.jpg", import.meta.url).href,
-    caption: "淡水河畔公園景緻",
+    caption: "楠梓高中",
   },
 ]
 </script>

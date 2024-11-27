@@ -3,7 +3,7 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo" data-aos="fade-" data-aos-duration="2000" data-aos-delay="200"></div>
+    <!-- <div class="logo" data-aos="fade-" data-aos-duration="2000" data-aos-delay="200"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -153,12 +153,12 @@
     gap: size(20);
 
     .contact-item {
-      background: #31210B;
+      background: #fff;
       border: 0;
-      color: #fff;
+      color: #000;
       width: 100%;
       padding: 0 size(55);
-      border-radius: 10px;
+      border-radius: 0px;
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.06em;
@@ -166,9 +166,10 @@
       transition: all 0.3s;
       cursor: pointer;
       gap: size(20);
+      border: 1px solid #20575A;
 
       &:hover {
-        background-color: #130b01;
+        background-color: #20575A;
         color: #fff;
 
         img {
@@ -180,7 +181,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(1) invert(1);
+        filter: invert(25%) sepia(43%) saturate(560%) hue-rotate(134deg) brightness(102%) contrast(94%);
 
         transition: all 0.5s;
       }
@@ -190,30 +191,34 @@
         border: 0;
         z-index: 0;
         position: relative;
-        border-radius: 10px 0 0 10px;
+        border-radius: 0px 0 0 0px;
         max-width: 9999px;
         justify-content: center;
-        border: 0;
+        border: 1px solid #20575A;
         color: #000;
         @apply basis-2/3 ;
       }
 
       &.googlemap {
-        background-color: #31210B;
+        background-color: #20575A;
         color: #fff;
-        border: 0;
-        border: 0;
+        border: 1px solid #20575A;
         gap: size(20);
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 0px 0px 0;
         @apply basis-1/3 ;
+
+        img {
+          
+          filter: brightness(1) invert(1);
+        }
 
 
         &:hover {
-          background-color: #130b01;
-          color: #fff;
+          background-color: #fff;
+          color: #20575A;
 
           img {
-            filter: brightness(1) invert(1);
+            filter: invert(25%) sepia(43%) saturate(560%) hue-rotate(134deg) brightness(102%) contrast(94%);
           }
         }
       }
@@ -239,7 +244,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #422A1C;
+      background-color: #20575A;
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
@@ -311,7 +316,7 @@
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
-        border-radius: sizem(15);
+        border-radius: 0;
 
         img {
           max-width: sizem(27);
@@ -324,7 +329,7 @@
           padding: 0 0;
           margin-top: sizem(20);
           // font-size: sizem(12);
-          border-radius: sizem(15) sizem(15) 0 0;
+          border-radius: 0;
 
           &::before {
             width: 100%;
@@ -335,7 +340,7 @@
         }
 
         &.address + div {
-          border-radius: 0 0 sizem(15) sizem(15);
+          border-radius: 0;
         }
       }
 

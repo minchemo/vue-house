@@ -1,16 +1,38 @@
 <template>
-  <article class="s4 anchor5">
-    <div class="swiper-box">
+  <article class="s4">
+    <div class="t">
+      <div
+        class="t1"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
+        <span>6.6</span>
+        米面寬
+      </div>
+      <div
+        class="t2"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      >
+        <div class="t3">超尺度面寬大器非凡</div>
+        <div class="t4">
+          寬敞視野、明亮通風，提升居住品質，無論客廳或臥房都倍感適意舒暢，盡享尊榮生活尺度。
+        </div>
+      </div>
+    </div>
+    <div class="splide-box">
       <Splide
         ref="splide"
         class="slide"
         :options="{
           autoWidth: false,
           arrows: false,
-          autoplay: true,
-          pagination: false,
-          interval: 4000,
-          gap: 10,
+          autoplay: false,
+          pagination: true,
+          drag: false,
+          gap: 20,
           type: 'loop',
           perPage: 1,
         }"
@@ -18,54 +40,15 @@
         <SplideSlide
           class="slide-item"
           :key="i"
-          v-for="i in imgs"
-          :style="{ 'background-image': `url(${i.img})` }"
+          v-for="(img, i) in imgs"
+          :style="{ 'background-image': `url(${img.img})` }"
         >
           <div class="caption">
-            {{ i.caption }}
+            {{ img.caption }}
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows">
-        <img
-          src="@/section/arrow.png"
-          class="arrow prev"
-          @click="splide.go('<')"
-          alt=""
-          srcset=""
-        />
-        <img
-          src="@/section/arrow.png"
-          class="arrow next"
-          @click="splide.go('>')"
-          alt=""
-          srcset=""
-        />
-      </div>
     </div>
-    <div class="t">
-      <div
-        class="t1"
-        data-aos="fade-up"
-        data-aos-delay="0"
-      >
-        青埔軌道經濟圈<br />
-        家樂福繁華上演
-      </div>
-      <div class="t2"
-        data-aos="fade-up"
-        data-aos-delay="200">
-        暢遊捷運青埔站生活半徑，圈起楠梓車站的熟成繁華，散步土庫家樂福，為生活豐盛保持彈性，周邊傳統市場、連鎖餐廳、便利商店、一應俱全！
-      </div>
-    </div>
-    <img
-      class="line"
-      v-if="!isMobile"
-      src="@/section/s4/line.png"
-      alt=""
-      srcset=""
-    />
-    <img class="line" v-else src="@/section/s4/linem.png" alt="" srcset="" />
   </article>
 </template>
 
@@ -74,64 +57,67 @@
 
 .s4 {
   @apply relative w-full;
-  @apply flex;
-  height: size(900);
-  gap: size(50);
+  @apply flex flex-col items-center justify-center;
+  @apply bg-bottom bg-cover;
+  height: size(1090);
 
-  .swiper-box {
-    @apply relative h-full;
-    width: size(1229);
-    .slide {
+  .t {
+    @apply absolute z-10;
+    @apply text-white;
+    @apply flex items-end;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+    left: size(159);
+    top: size(191);
+    font-family: "Noto Sans TC";
+    .t1 {
+      font-size: size(60);
+      font-weight: 500;
+      line-height: 1;
+      margin-right: size(779);
+      span {
+        font-family: Inter;
+        font-size: size(168);
+        font-weight: 600;
+      }
+    }
+    .t2 {
+      .t3 {
+        font-size: size(27);
+        font-weight: 500;
+        letter-spacing: size(2.7);
+      }
+      .t4 {
+        font-size: size(17);
+        font-weight: 500;
+        line-height: 180%;
+        letter-spacing: size(1.7);
+        width: size(400);
+        margin-top: size(20);
+      }
+    }
+  }
+
+  .splide-box {
+    @apply absolute left-0 top-0;
+    @apply w-full;
+    .splide {
+      @apply w-full;
+      height: size(1090);
       .slide-item {
-        @apply bg-cover;
-        width: size(1229);
-        height: size(900);
+        @apply relative w-full bg-cover;
+        height: size(1090);
         .caption {
-          @apply text-white;
-          @apply absolute;
-          left: size(20);
-          bottom: size(12);
+          @apply absolute text-white;
           font-family: "Noto Sans TC";
-          font-size: size(15);
+          font-size: size(14);
           font-weight: 700;
+          line-height: 170%;
+          right: size(30);
+          bottom: size(20);
+          filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
         }
       }
     }
-    .arrows {
-      @apply absolute w-full;
-      @apply left-1/2 -translate-x-1/2;
-      @apply top-1/2 -translate-y-1/2;
-      @apply flex items-center justify-between;
-      padding: 0 size(15);
-      img {
-        @apply cursor-pointer;
-        width: size(28);
-      }
-      .next {
-        @apply -scale-x-100;
-      }
-    }
-  }
-  .t {
-    @apply text-black;
-    padding-top: size(251);
-    .t1 {
-      font-size: size(54);
-      font-weight: 600;
-      margin-bottom: size(43);
-    }
-    .t2 {
-      font-family: "Noto Sans TC";
-      font-size: size(16);
-      font-weight: 400;
-      line-height: 151.41%;
-      width: size(470);
-    }
-  }
-  .line {
-    @apply absolute right-0 bottom-0;
-    @apply pointer-events-none select-none;
-    width: size(1200);
   }
 }
 /* 螢幕尺寸標準 */
@@ -141,65 +127,68 @@
 
 @media screen and (max-width: 767px) {
   .s4 {
-    @apply flex-col-reverse justify-end;
-    height: auto;
-    gap: sizem(40);
+    @apply relative w-full;
+    @apply flex flex-col items-center justify-start;
+    height: sizem(595);
+    padding-top: sizem(45);
 
-    .swiper-box {
-      @apply relative h-auto;
-      width: 100vw;
-      .slide {
+    .t {
+      @apply relative z-10;
+      @apply text-white;
+      @apply flex flex-col justify-center items-center;
+      @apply text-center;
+      filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
+      left: auto;
+      top: auto;
+      font-family: "Noto Sans TC";
+      .t1 {
+        font-size: sizem(22);
+        font-weight: 500;
+        line-height: 1;
+        margin-right: 0;
+        span {
+          font-size: sizem(62);
+        }
+      }
+      .t2 {
+        margin-top: sizem(10);
+        .t3 {
+          font-size: sizem(17);
+          letter-spacing: auto;
+          letter-spacing: sizem(1);
+        }
+        .t4 {
+          font-size: sizem(13);
+          font-weight: 500;
+          line-height: 180%;
+          letter-spacing: auto;
+          width: sizem(300);
+          margin-top: sizem(13);
+        }
+      }
+    }
+
+    .splide-box {
+      @apply absolute left-0 top-0;
+      @apply w-full;
+      .splide {
+        @apply w-full;
+        height: sizem(595);
         .slide-item {
-          @apply bg-cover;
-          width: sizem(375);
-          height: sizem(274.61);
+          @apply relative w-full;
+          height: sizem(595);
           .caption {
-            @apply text-white;
-            @apply absolute;
-            left: unset;
-            right: sizem(10);
-            bottom: sizem(6);
+            @apply absolute text-white;
+            font-family: "Noto Sans TC";
             font-size: sizem(12);
             font-weight: 700;
+            line-height: 170%;
+            right: sizem(10);
+            bottom: sizem(10);
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
           }
         }
       }
-      .arrows {
-        @apply absolute w-full;
-        @apply left-1/2 -translate-x-1/2;
-        @apply top-1/2 -translate-y-1/2;
-        @apply flex items-center justify-between;
-        padding: 0 sizem(8);
-        img {
-          @apply cursor-pointer;
-          width: sizem(15);
-        }
-        .next {
-          @apply -scale-x-100;
-        }
-      }
-    }
-    .t {
-      @apply text-black;
-      padding-top: sizem(60);
-      padding-left: sizem(20);
-      .t1 {
-        font-size: sizem(25);
-        font-weight: 600;
-        margin-bottom: sizem(10);
-      }
-      .t2 {
-        font-size: sizem(14);
-        font-weight: 400;
-        line-height: 151.41%;
-        width: sizem(310);
-      }
-    }
-    .line {
-      @apply absolute right-0 top-0;
-      @apply pointer-events-none select-none;
-      bottom: unset;
-      width: 100%;
     }
   }
 }
@@ -209,19 +198,16 @@
 import { computed, getCurrentInstance, ref } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 const isMobile = computed(() => globals.$isMobile())
+
 const splide = ref()
 const imgs = [
   {
-    img: new URL("../section/s4/1.jpg", import.meta.url).href,
-    caption: "家樂福-新楠店",
-  },
-  {
-    img: new URL("../section/s4/2.jpg", import.meta.url).href,
-    caption: "7-11高第一門市",
-  },
-  {
-    img: new URL("../section/s4/3.jpg", import.meta.url).href,
-    caption: "7-11高第一門市",
+    img: globals.$isMobile()
+      ? new URL("../section/s4/1m.jpg", import.meta.url).href
+      : new URL("../section/s4/1.jpg", import.meta.url).href,
+    caption: globals.$isMobile()
+      ? "藏筑2  3d情境示意圖"
+      : "日間外觀3d透視參考示意圖 | 此為廣告效果示意，為單一建物電腦3d透視表現，周遭環境係電腦合成，建設公司保有建物外觀修正之權利",
   },
 ]
 </script>

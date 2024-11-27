@@ -1,7 +1,10 @@
 <template>
   <article class="s1">
-    <img class="logo" src="@/section/resource/logo.svg" />
-    <img class="style1" src="@/section/resource/style1.svg" />
+    <div class="content">
+      <img class="logo" src="@/section/s1/logo.svg" alt="" />
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">橋科核心．連線台積｜6.8米併排雙車墅</div>
+    </div>
+    <div class="bg"></div>
   </article>
 </template>
 
@@ -9,25 +12,44 @@
 @import "@/assets/style/function.scss";
 
 .s1 {
-  @apply w-full h-screen relative flex flex-col items-center justify-center text-white z-20;
-  min-height: size(900);
-  max-height: size(1080);
-  background-image: url("@/section/s1/bg.jpg");
-  background-size: cover;
-  background-position: bottom;
-  padding-bottom: size(150);
-  .logo {
-    width: size(760);
+  @apply relative w-full max-h-screen;
+  @apply flex flex-col items-center justify-center;
+  padding-bottom: size(160);
+  height: size(1080);
+  background: var(
+    --0,
+    linear-gradient(
+      0deg,
+      #714e39 0%,
+      #654631 36%,
+      #4a331e 60%,
+      #36250f 84%,
+      #2f200a 100%
+    )
+  );
+
+  .content {
+    @apply relative z-10;
+    @apply flex flex-col items-center justify-center;
+    gap: size(42);
+
+    .logo {
+      width: size(469.2);
+    }
+
+    .t1 {
+      @apply text-white;
+      font-size: size(45);
+      font-weight: 600;
+    }
   }
 
-  .style1 {
-    @apply absolute;
-    width: 100%;
-    bottom: -#{size(180)};
-    left: 0;
+  .bg {
+    @apply absolute w-full h-full top-0 left-0 bg-cover bg-bottom;
+    @apply pointer-events-none;
+    background-image: url("@/section/s1/bg.png");
   }
 }
-
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -35,28 +57,36 @@
 
 @media screen and (max-width: 767px) {
   .s1 {
-    height: calc(100vh - 63px);
-    min-height: sizem(667);
-    max-height: sizem(667);
-    background-image: url("@/section/s1/bgm.jpg");
-    padding-bottom: sizem(120);
-    .logo {
-      width: sizem(270);
+    @apply relative w-full max-h-screen;
+    @apply flex flex-col items-center justify-start;
+    padding-bottom: 0;
+    padding-top: sizem(129);
+    height: sizem(667);
+
+    .content {
+      @apply relative z-10;
+      @apply flex flex-col items-center justify-center;
+      gap: sizem(31);
+
+      .logo {
+        width: sizem(270);
+      }
+
+      .t1 {
+        font-size: sizem(15);
+      }
     }
 
-    .style1 {
-      width: 150vw;
-      bottom: -#{sizem(0)};
-      left: -#{sizem(60)};
+    .bg {
+      @apply bg-contain bg-no-repeat bg-bottom;
+      background-image: url("@/section/s1/bgm.png");
     }
   }
 }
 </style>
 
 <script setup>
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+import { computed, getCurrentInstance } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
-
-const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
 </script>

@@ -1,16 +1,38 @@
 <template>
-  <article class="s5 anchor6">
-    <div class="swiper-box">
+  <article class="s5">
+    <div class="t">
+      <div
+        class="t1"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
+        <span>4</span>
+        車位 ／
+      </div>
+      <div
+        class="t2"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      >
+        <div class="t3">車位市心獨享豈止難得</div>
+        <div class="t4">
+          奢擁4車位稀有配置，核心地段停車無憂、輕鬆出行，訪客隨時歡迎，迎接從容愜意居住體驗。
+        </div>
+      </div>
+    </div>
+    <div class="splide-box">
       <Splide
         ref="splide"
         class="slide"
         :options="{
           autoWidth: false,
           arrows: false,
-          autoplay: true,
-          pagination: false,
-          interval: 4000,
-          gap: 0,
+          autoplay: false,
+          pagination: true,
+          drag: false,
+          gap: 20,
           type: 'loop',
           perPage: 1,
         }"
@@ -18,44 +40,14 @@
         <SplideSlide
           class="slide-item"
           :key="i"
-          v-for="i in imgs"
-          :style="{ 'background-image': `url(${i.img})` }"
+          v-for="(img, i) in imgs"
+          :style="{ 'background-image': `url(${img.img})` }"
         >
           <div class="caption">
-            {{ i.caption }}
+            {{ img.caption }}
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows">
-        <img
-          src="@/section/arrow.png"
-          class="arrow prev"
-          @click="splide.go('<')"
-          alt=""
-          srcset=""
-        />
-        <img
-          src="@/section/arrow.png"
-          class="arrow next"
-          @click="splide.go('>')"
-          alt=""
-          srcset=""
-        />
-      </div>
-    </div>
-    <div class="t">
-      <div
-        class="t1"
-        data-aos="fade-up"
-        data-aos-delay="0"
-      >
-        >200公頃綠浪綿延 <br v-if="isMobile" />健康環抱
-      </div>
-      <div class="t2"
-        data-aos="fade-up"
-        data-aos-delay="200">
-        以高雄科大73公頃樹海為起點，95公頃的高雄都會公園、高雄花卉農園中心、青埔棒球場、創新公園等綠帶環扣，獨步大高雄，連起都市中難能可貴的芬多長廊。
-      </div>
     </div>
   </article>
 </template>
@@ -65,61 +57,68 @@
 
 .s5 {
   @apply relative w-full;
-  height: size(900);
+  @apply flex flex-col items-center justify-center;
+  @apply bg-bottom bg-cover;
+  height: size(1090);
 
-  .swiper-box {
-    @apply relative h-full w-full;
-    .slide {
-      .slide-item {
-        @apply bg-cover;
-        width: size(1229);
-        height: size(900);
-        .caption {
-          @apply text-white;
-          @apply absolute;
-          right: size(20);
-          bottom: size(12);
-          font-family: "Noto Sans TC";
-          font-size: size(15);
-          font-weight: 700;
-        }
+  .t {
+    @apply absolute z-10;
+    @apply text-white;
+    @apply flex flex-col items-start;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+    left: size(159);
+    top: size(191);
+    font-family: "Noto Sans TC";
+    gap: size(40);
+    .t1 {
+      font-size: size(60);
+      font-weight: 500;
+      line-height: 1;
+      margin-right: size(779);
+      span {
+        font-family: Inter;
+        font-size: size(168);
+        font-weight: 600;
       }
     }
-    .arrows {
-      @apply absolute w-full;
-      @apply left-1/2 -translate-x-1/2;
-      @apply top-1/2 -translate-y-1/2;
-      @apply flex items-center justify-between;
-      padding: 0 size(15);
-      img {
-        @apply cursor-pointer;
-        width: size(28);
+    .t2 {
+      .t3 {
+        font-size: size(27);
+        font-weight: 500;
+        letter-spacing: size(2.7);
       }
-      .next {
-        @apply -scale-x-100;
+      .t4 {
+        font-size: size(17);
+        font-weight: 500;
+        line-height: 180%;
+        letter-spacing: size(1.7);
+        width: size(400);
+        margin-top: size(20);
       }
     }
   }
-  .t {
-    @apply absolute w-full h-full;
-    @apply top-0 left-0;
-    @apply text-white;
-    @apply bg-cover;
-    @apply pointer-events-none select-none;
-    background-image: url("@/section/s5/mask.png");
-    padding-top: size(78);
-    padding-left: size(153);
-    .t1 {
-      font-size: size(54);
-      font-weight: 600;
-      margin-bottom: size(15);
-    }
-    .t2 {
-      font-family: "Noto Sans TC";
-      font-size: size(16);
-      font-weight: 400;
-      line-height: 151.41%;
-      width: size(470);
+
+  .splide-box {
+    @apply absolute left-0 top-0;
+    @apply w-full;
+    .splide {
+      @apply w-full;
+      width: size(1920);
+      height: size(1090);
+      .slide-item {
+        @apply relative w-full bg-cover;
+        height: size(1090);
+        .caption {
+          @apply absolute text-white;
+          font-family: "Noto Sans TC";
+          font-size: size(14);
+          font-weight: 700;
+          line-height: 170%;
+          right: size(30);
+          bottom: size(20);
+          filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+        }
+      }
     }
   }
 }
@@ -131,63 +130,66 @@
 @media screen and (max-width: 767px) {
   .s5 {
     @apply relative w-full;
-    height: auto;
+    @apply flex flex-col items-center justify-start;
+    height: sizem(595);
+    padding-top: sizem(45);
 
-    .swiper-box {
-      @apply relative h-full w-full;
-      .slide {
-        .slide-item {
-          @apply bg-no-repeat bg-bottom;
-          background-size: sizem(615) auto;
-          width: sizem(375);
-          height: sizem(582);
-          .caption {
-            @apply text-white;
-            @apply absolute;
-            right: sizem(10);
-            bottom: sizem(6);
-            font-family: "Noto Sans TC";
-            font-size: sizem(12);
-            font-weight: 700;
-          }
+    .t {
+      @apply relative z-10;
+      @apply text-white;
+      @apply flex flex-col justify-center items-center;
+      @apply text-center;
+      filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
+      left: auto;
+      top: auto;
+      font-family: "Noto Sans TC";
+      .t1 {
+        font-size: sizem(22);
+        font-weight: 500;
+        line-height: 1;
+        margin-right: 0;
+        span {
+          font-size: sizem(62);
         }
       }
-      .arrows {
-        @apply absolute w-full z-10;
-        @apply left-1/2 -translate-x-1/2;
-        @apply top-1/2 -translate-y-1/2;
-        @apply flex items-center justify-between;
-        padding: 0 sizem(8);
-        padding-top: sizem(300);
-        img {
-          @apply cursor-pointer;
-          width: sizem(15);
+      .t2 {
+        margin-top: sizem(10);
+        .t3 {
+          font-size: sizem(17);
+          letter-spacing: auto;
+          letter-spacing: sizem(1);
         }
-        .next {
-          @apply -scale-x-100;
+        .t4 {
+          font-size: sizem(13);
+          font-weight: 500;
+          line-height: 180%;
+          letter-spacing: auto;
+          width: sizem(300);
+          margin-top: sizem(13);
         }
       }
     }
-    .t {
-      @apply absolute w-full h-full;
-      @apply top-0 left-0;
-      @apply text-white;
-      @apply bg-cover;
-      @apply pointer-events-none select-none;
-      background-image: url("@/section/s5/maskm.png");
-      padding-top: sizem(60);
-      padding-left: sizem(30);
-      .t1 {
-        font-size: sizem(25);
-        font-weight: 600;
-        margin-bottom: sizem(10);
-      }
-      .t2 {
-        font-family: "Noto Sans TC";
-        font-size: sizem(14);
-        font-weight: 400;
-        line-height: 151.41%;
-        width: sizem(310);
+
+    .splide-box {
+      @apply absolute left-0 top-0;
+      @apply w-full;
+      .splide {
+        @apply w-full;
+        height: sizem(595);
+        .slide-item {
+          @apply relative w-full;
+          height: sizem(595);
+          .caption {
+            @apply absolute text-white;
+            font-family: "Noto Sans TC";
+            font-size: sizem(12);
+            font-weight: 700;
+            line-height: 170%;
+            right: sizem(10);
+            bottom: sizem(10);
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+          }
+        }
       }
     }
   }
@@ -198,19 +200,14 @@
 import { computed, getCurrentInstance, ref } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 const isMobile = computed(() => globals.$isMobile())
+
 const splide = ref()
 const imgs = [
   {
-    img: new URL("../section/s5/1.jpg", import.meta.url).href,
-    caption: "都會公園",
-  },
-  {
-    img: new URL("../section/s5/2.jpg", import.meta.url).href,
-    caption: "都會公園",
-  },
-  {
-    img: new URL("../section/s5/3.jpg", import.meta.url).href,
-    caption: "都會公園",
+    img: globals.$isMobile()
+      ? new URL("../section/s5/1m.jpg", import.meta.url).href
+      : new URL("../section/s5/1.jpg", import.meta.url).href,
+    caption: "藏筑2  3d情境示意圖",
   },
 ]
 </script>
