@@ -1,9 +1,6 @@
 <template>
   <article class="s1 relative">
     <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />
-    <div class="t1">壹念敦南林蔭．壹遇四維街巷</div>
-    <img class="logo" src="./s1/logo.svg" alt="敦南詠楽" />
-    <img class="txt" src="./s1/txt.svg" alt="txt" />
 
     <!-- bg
     <div class="bgs">
@@ -45,22 +42,129 @@
   </article>
 </template>
 
-<style lang="scss" scoped> 
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
 .s1 {
   height: size(1080);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction:column;
 
   .t0{
     opacity: .3;
   }
-  .t1{color: #fff;font-size: size(50);}
 
+  .text {
+    @apply relative z-[1] w-full h-full top-0 left-0;
+    @apply flex flex-col items-center;
+    gap: size(113);
+    .t-en {
+      @apply flex items-end;
+      gap: size(42);
+      width: size(1631);
+      .en {
+        width: size(200);
+      }
+      .line {
+        @apply bg-white h-[1px] w-0;
+        animation: grow 1.8s forwards ease-in-out;
 
+        @keyframes grow {
+          to {
+            @apply w-full;
+          }
+        }
+      }
+    }
+    .t {
+      @apply relative;
+      @apply flex justify-center items-start;
+      gap: size(88.44);
+
+      .l {
+        @apply flex items-start;
+        gap: size(87.92);
+        .t1 {
+          width: size(368);
+        }
+        .t2 {
+          width: size(297.5);
+        }
+      }
+      .r {
+        @apply flex items-start;
+        gap: size(43.89);
+        .ll {
+          @apply flex flex-col items-end;
+          gap: size(40.78);
+          .t3 {
+            width: size(674.11);
+          }
+          .t4 {
+            width: size(259);
+          }
+        }
+        .rr {
+          .t5 {
+            width: size(95);
+          }
+        }
+      }
+    }
+  }
+
+  .bgs {
+    @apply w-full h-full absolute z-0;
+    top: 0;
+    left: 0;
+    img {
+      @apply w-full h-auto;
+    }
+
+    .bg {
+      @apply absolute;
+
+      &.bg-t {
+        @apply z-10 top-0;
+      }
+
+      &.bg-w {
+        @apply z-[1] bottom-0;
+        width: size(1920);
+        height: size(1264);
+        > div {
+          @apply w-full h-full absolute left-0 bottom-0;
+          &.wave {
+            @apply z-[1];
+            background: url("@/section/s1/wave.gif") no-repeat;
+            background-size:200% 30vw;
+            background-position: 50% 35vw;
+            mix-blend-mode: overlay;
+            opacity: 0.6;
+          }
+          &.w {
+            background: url("@/section/s1/bg.jpg");
+            background-size: cover;
+          }
+        }
+        .cloud{position:absolute;width: 100%;top:0 ;
+            mix-blend-mode: overlay;}
+      }
+
+      &.bg-ww {
+        @apply z-[2] bottom-0;
+      }
+
+      &.bg-b {
+        @apply z-10 ;
+        bottom: 0;
+      }
+    }
+    .t6 {
+      @apply absolute z-10;
+      right: size(200);
+      bottom: size(211);
+      width: size(406);
+    }
+  }
 }
 
 /* 螢幕尺寸標準 */
