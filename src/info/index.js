@@ -1,4 +1,4 @@
-const caseName = "新月建設鳳福案"
+const caseName = "鳴日之城"
 
 export default {
     meta: {
@@ -8,9 +8,9 @@ export default {
     },
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新北市鶯歌區鶯桃路二段203號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1808.4008417858497!2d121.32480559999999!3d24.9728611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzIyLjMiTiAxMjHCsDE5JzI5LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1711352738464!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/az5iQcjFjvZg89aw7",
+    address: "桃園市桃園區大仁路50巷17號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.8171403848105!2d121.31995017592463!3d24.972335340770687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ec37700bfc7%3A0xa90ca6f99779e83c!2zMzMw5qGD5ZyS5biC5qGD5ZyS5Y2A5aSn5LuB6LevNTDlt7cxN-iZnw!5e0!3m2!1szh-TW!2stw!4v1732777802405!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/HyyRkXFi9PcGVRMs9",
     phone: "07-722-0088",
     fbLink: "https://www.facebook.com/61557529449820",
     fbMessage: "https://m.me/61557529449820",
