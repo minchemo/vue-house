@@ -23,7 +23,7 @@ export default {
         ["建築代銷", "美學生活置業股份有限公司"],
         ["建案位置", "台北市大安區瑞安街149巷"],
     ],
-    gtmCode: ["GTM-WZDB8NX","GTM-T2HTGV6"], // 可放置多個
+    gtmCode: ["GTM-WF7XPPB3","GTM-WZDB8NX","GTM-T2HTGV6"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
@@ -41,11 +41,13 @@ export default {
             name: "撥打電話",
             target: ".contact-info",
             offset: "",
+            url: "tel:02-27008589",
         },
         {
             name: "導航地圖",
             target: ".gmap",
             offset: "",
+            url: "https://goo.gl/maps/VGaz7DxFwskxmmKh6",
         },
         {
             name: "粉絲專頁",

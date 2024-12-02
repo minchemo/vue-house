@@ -2,23 +2,25 @@
   <div class="contact-info mx-auto bg-transparent flex flex-col items-center justify-between">
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <a class="flex contact-item justify-center md:justify-center gap-2 items-center" :href="'tel:'+info.phone" target="_blank">
-        <img src="@/section/form/phone.svg" alt="phone" srcset="" />
+      <div class="flex contact-item justify-center md:justify-center gap-2 items-center"
+        @click="modalOpen = true; modalType = 'phone'">
+        <img src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">{{ info.phone }}</div>
-      </a>
+      </div>
       
       
-      <a class="flex contact-item justify-center md:justify-center gap-2 items-center" :href="info.fbMessage" target="_blank">
-        <img src="@/section/form/messenger.svg" alt="messenger" srcset="" />
+      <div class="flex contact-item justify-center md:justify-center gap-2 items-center"
+        @click="modalOpen = true; modalType = 'fb'">
+        <img src="@/section/form/messenger.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">線上諮詢</div>
-      </a> 
-      <a class="flex contact-item justify-center md:justify-center gap-2 items-center btfanpage" :href="info.fbLink" target="_blank">
-        <img src="@/section/form/fb.svg" alt="fb" srcset="" />
+      </div> 
+      <div class="flex contact-item justify-center md:justify-center gap-2 items-center btfanpage" @click="open()">
+        <img src="@/section/form/fb.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">前往粉絲專頁</div>
-      </a>
+      </div>
       <a class="flex contact-item justify-center md:justify-center gap-2 items-center"
         href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
-        <img src="@/section/form/info.svg" alt="info" srcset="" />
+        <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">瞭解更多</div>
       </a>
     </div>
@@ -26,10 +28,11 @@
       <div class="flex contact-item justify-between md:justify-center gap-2 items-center address">
         <div class="whitespace-nowrap">{{ info.address }}</div>
       </div>
-      <a class="flex contact-item justify-center md:justify-center gap-2 items-center" :href="info.googleLink" target="_blank">
-        <img src="@/section/form/gmap.svg" alt="gmap" srcset="" />
+      <div class="flex contact-item justify-center md:justify-center gap-2 items-center"
+        @click="modalOpen = true; modalType = 'gmap'">
+        <img src="@/section/form/gmap.svg" alt="吉美富徠" srcset="" />
         <div class="whitespace-nowrap">導航 Google 地圖</div>
-      </a>
+      </div>
     </div>
 
   </div>
@@ -37,27 +40,30 @@
 
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <a class="flex flex-1 flex-col contact-item justify-center items-center" :href="'tel:'+info.phone" target="_blank">
-      <img src="@/section/form/phone.svg" alt="phone" srcset="" />
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'phone'">
+      <img src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
       <div>撥打電話</div>
-    </a>
+    </div>
     <!-- <a class="flex flex-1 flex-col contact-item justify-center items-center"
         href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
         <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
         <div>瞭解更多</div>
       </a>-->
-    <a class="flex flex-1 flex-col contact-item justify-center items-center" :href="info.fbMessage" target="_blank">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'fb'">
       <img src="@/section/form/messenger.svg" alt="吉美富徠" srcset="" />
       <div>線上諮詢</div>
-    </a>  
+    </div>  
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="@/section/form/pen.svg" alt="吉美富徠" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <a class="flex flex-1 flex-col contact-item justify-center items-center" :href="info.googleLink" target="_blank">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'gmap'">
       <img src="@/section/form/gmap.svg" alt="吉美富徠" srcset="" />
       <div>地圖導航</div>
-    </a>
+    </div>
   </div>
 
   <!-- Modal -->
@@ -66,9 +72,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="messenger" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="吉美富徠" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="吉美富徠" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="吉美富徠" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? '線上諮詢' :
           '接待會館'
@@ -286,33 +292,10 @@ const go = () => {
   }
 }
 
-const openphone= () => {
-  if (modalType.value == 'phone') {
-    window.location.href = `tel:${info.phone.replace("-", "")}`;
-    setTimeout(() => {
-      window.location.href = "phoneThanks";
-    }, 1000);
-
-}
-
-}
-
-const open = () => {
-  if (modalType.value == 'fb') {
-    window.open(info.fbMessage);
-  } else if (modalType.value == 'gmap') {
-    window.open(info.googleLink);
-  } else if (modalType.value == 'fbLink') {
-    window.open(info.fbLink);
-    
-  }
-}
-
-/*
 const open = () => {
   window.open(info.fbLink);
 }
-*/
+
 
 const smoothScroll = inject('smoothScroll')
 const scrollTo = (el) => {
