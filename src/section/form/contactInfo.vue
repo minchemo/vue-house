@@ -17,7 +17,7 @@
         <div class="whitespace-nowrap">前往粉絲專頁</div>
       </a>
       <a class="flex contact-item justify-center md:justify-center gap-2 items-center"
-        href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
+        href="https://a-life.com.tw/2018new/product_main_41.html" target="_blank">
         <img src="@/section/form/info.svg" alt="info" srcset="" />
         <div class="whitespace-nowrap">瞭解更多</div>
       </a>
@@ -42,7 +42,7 @@
       <div>撥打電話</div>
     </a>
     <!-- <a class="flex flex-1 flex-col contact-item justify-center items-center"
-        href="https://a-life.com.tw/2018new/product_main_29.html" target="_blank">
+        href="https://a-life.com.tw/2018new/product_main_41.html" target="_blank">
         <img src="@/section/form/info.svg" alt="吉美富徠" srcset="" />
         <div>瞭解更多</div>
       </a>-->

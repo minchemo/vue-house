@@ -59,7 +59,7 @@ export default {
             name: "瞭解更多",
             target: ".contact-info",
             offset: "",
-            url: "https://a-life.com.tw/2018new/product_main_29.html",
+            url: "https://a-life.com.tw/2018new/product_main_41.html",
         },
     ],
 }
