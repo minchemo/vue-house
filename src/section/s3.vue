@@ -16,7 +16,7 @@
             :options="{
               autoWidth: false,
               arrows: false,
-              autoplay: false,
+              autoplay: true,
               pagination: true,
               gap: 20,
               type: 'loop',
@@ -75,7 +75,7 @@
   @apply flex flex-col items-center justify-center;
   @apply bg-bottom bg-cover;
   height: size(1080);
-  background-image: url("@/section/s3/bg.jpg");
+  background-image: url("@/section/s3/bg.webp");
 
   .t {
     @apply flex items-center;
@@ -187,7 +187,7 @@
     @apply flex flex-col items-center justify-center;
     @apply bg-bottom bg-cover;
     height: sizem(1240);
-    background-image: url("@/section/s3/bgm.jpg");
+    background-image: url("@/section/s3/bgm.webp");
 
     .t {
       @apply flex items-center;
@@ -291,19 +291,19 @@ const splide = ref()
 const imgs = [
   {
     img: [
-      new URL("../section/s3/a1.jpg", import.meta.url).href,
-      new URL("../section/s3/a2.jpg", import.meta.url).href,
-      new URL("../section/s3/a3.jpg", import.meta.url).href,
+      new URL("../section/s3/a1.webp", import.meta.url).href,
+      new URL("../section/s3/a2.webp", import.meta.url).href,
+      new URL("../section/s3/a3.webp", import.meta.url).href,
     ],
     caption: ["新光三越 台南新天地", "林百貨", "好市多"],
     title: "STORE",
   },
   {
     img: [
-      new URL("../section/s3/b1.jpg", import.meta.url).href,
-      new URL("../section/s3/b2.jpg", import.meta.url).href,
-      new URL("../section/s3/b3.jpg", import.meta.url).href,
-      new URL("../section/s3/b4.jpg", import.meta.url).href,
+      new URL("../section/s3/b1.webp", import.meta.url).href,
+      new URL("../section/s3/b2.webp", import.meta.url).href,
+      new URL("../section/s3/b3.webp", import.meta.url).href,
+      new URL("../section/s3/b4.webp", import.meta.url).href,
     ],
     caption: [
       "臺南第一高級中等學校",
@@ -315,9 +315,9 @@ const imgs = [
   },
   {
     img: [
-      new URL("../section/s3/c1.jpg", import.meta.url).href,
-      new URL("../section/s3/c2.jpg", import.meta.url).href,
-      new URL("../section/s3/c3.jpg", import.meta.url).href,
+      new URL("../section/s3/c1.webp", import.meta.url).href,
+      new URL("../section/s3/c2.webp", import.meta.url).href,
+      new URL("../section/s3/c3.webp", import.meta.url).href,
     ],
     caption: ["成大醫院", "奇美醫院", "郭綜合醫院"],
     title: "HOSPITAL",

@@ -371,32 +371,32 @@ const splide = ref()
 const currentDot = ref(1)
 const imgs = [
   {
-    img: new URL("../section/s8/1.jpg", import.meta.url).href,
+    img: new URL("../section/s8/1.webp", import.meta.url).href,
     caption: "藏筑2",
     dot: 1,
   },
   {
-    img: new URL("../section/s8/2.jpg", import.meta.url).href,
+    img: new URL("../section/s8/2.webp", import.meta.url).href,
     caption: "藏筑",
     dot: 1,
   },
   {
-    img: new URL("../section/s8/3.jpg", import.meta.url).href,
+    img: new URL("../section/s8/3.webp", import.meta.url).href,
     caption: "那藏",
     dot: 2,
   },
   {
-    img: new URL("../section/s8/4.jpg", import.meta.url).href,
+    img: new URL("../section/s8/4.webp", import.meta.url).href,
     caption: "一品苑3",
     dot: 3,
   },
   {
-    img: new URL("../section/s8/5.jpg", import.meta.url).href,
+    img: new URL("../section/s8/5.webp", import.meta.url).href,
     caption: "一品苑2",
     dot: 3,
   },
   {
-    img: new URL("../section/s8/6.jpg", import.meta.url).href,
+    img: new URL("../section/s8/6.webp", import.meta.url).href,
     caption: "一品苑1",
     dot: 3,
   },

@@ -205,8 +205,8 @@ const splide = ref()
 const imgs = [
   {
     img: globals.$isMobile()
-      ? new URL("../section/s5/1m.jpg", import.meta.url).href
-      : new URL("../section/s5/1.jpg", import.meta.url).href,
+      ? new URL("../section/s5/1m.webp", import.meta.url).href
+      : new URL("../section/s5/1.webp", import.meta.url).href,
     caption: "藏筑2  3d情境示意圖",
   },
 ]

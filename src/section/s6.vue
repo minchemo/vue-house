@@ -29,7 +29,7 @@
         :options="{
           autoWidth: false,
           arrows: false,
-          autoplay: false,
+          autoplay: true,
           pagination: true,
           gap: isMobile ? 0 : 20,
           type: 'loop',
@@ -236,20 +236,20 @@ const splide = ref()
 const imgs = ref([
   {
     img: globals.$isMobile()
-      ? new URL("../section/s6/1m.jpg", import.meta.url).href
-      : new URL("../section/s6/1.jpg", import.meta.url).href,
+      ? new URL("../section/s6/1m.webp", import.meta.url).href
+      : new URL("../section/s6/1.webp", import.meta.url).href,
     caption: "藏筑2  3d情境示意圖",
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s6/2m.jpg", import.meta.url).href
-      : new URL("../section/s6/2.jpg", import.meta.url).href,
+      ? new URL("../section/s6/2m.webp", import.meta.url).href
+      : new URL("../section/s6/2.webp", import.meta.url).href,
     caption: "藏筑2  3d情境示意圖",
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s6/3m.jpg", import.meta.url).href
-      : new URL("../section/s6/3.jpg", import.meta.url).href,
+      ? new URL("../section/s6/3m.webp", import.meta.url).href
+      : new URL("../section/s6/3.webp", import.meta.url).href,
     caption: "藏筑2  3d情境示意圖",
   },
 ])

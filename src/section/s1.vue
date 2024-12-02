@@ -106,7 +106,7 @@
   @apply flex flex-col items-center justify-center;
   @apply bg-center bg-cover;
   height: size(1080);
-  background-image: url("@/section/s1/bg.jpg");
+  background-image: url("@/section/s1/bg.webp");
 
   .t {
     @apply flex flex-col items-center select-none pointer-events-none;

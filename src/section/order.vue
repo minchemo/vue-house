@@ -42,6 +42,15 @@
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
+          <label class="row"
+            ><span>信箱</span>
+            <input
+              type="text"
+              placeholder="信箱"
+              class="input w-full rounded-none placeholder:text-[#999999]"
+              :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)"
+          /></label>
 
           <label class="row" v-if="info.room_type.length > 0"
             ><span>需求房型</span>
@@ -602,26 +611,6 @@ const send = () => {
 
   if (pass && !sending.value) {
     sending.value = true
-    fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
-      &phone=${formData.phone}
-      &room_type=${formData.room_type}
-      &budget=${formData.budget}
-      &people=${formData.people}
-      &project=${formData.project}
-      &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
-      &utm_source=${utmSource}
-      &utm_medium=${utmMedium}
-      &utm_content=${utmContent}
-      &utm_campaign=${utmCampaign}
-      &date=${date}
-      &campaign_name=${info.caseName}`,
-      {
-        method: "GET",
-      }
-    )
 
     fetch("contact-form.php", {
       method: "POST",
