@@ -29,7 +29,7 @@
         :options="{
           autoWidth: false,
           arrows: false,
-          autoplay: false,
+          autoplay: true,
           pagination: true,
           gap: isMobile ? 0 : 20,
           type: 'loop',
