@@ -1,58 +1,23 @@
 <template>
   <article class="s5">
-    <!-- bg -->
-    <div class="bgs">
-      <div class="bg bg-w">
-        <div class="wave"></div>
-        <div class="w"></div>
-        <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
-      </div>
-      <img
-        class="bg bg-t"
-        v-if="!isMobile"
-        src="@/section/s5/bg_t.webp"
-        alt=""
-        srcset=""
-      />
-      <img
-        class="bg bg-t"
-        v-else
-        src="@/section/s5/bg_tm.webp"
-        alt=""
-        srcset=""
-      />
-      <img
-        class="bg bg-b"
-        v-if="!isMobile"
-        src="@/section/s1/bg_b.webp"
-        alt=""
-        srcset=""
-      />
-      <img
-        class="bg bg-b"
-        v-else
-        src="@/section/s1/bg_bm.webp"
-        alt=""
-        srcset=""
-      />
+    <div class="bg absolute"></div>
+    <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+    <div class="txt">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">台北綠核大安森林，書卷學器捷運悠遊</h4>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">大安森林公園800米綠帶軸距綠色流域，台灣大學、師範大學、私立復興實中等，孩子同儕等同未來事業夥伴。步行6分鐘捷運科技大樓站，連通大安站東西縱橫；貴族醫療頂級照護，國泰、中山、宏恩與聯合醫院，全面守護家人健康。</p>
     </div>
-    <div class="t">
-      <div>
-        <div class="t1" v-if="isMobile"  data-aos="fade-up" data-aos-delay="0">壹遇敦南, 壹念四維</div>
-        <div class="t1" v-else  data-aos="fade-up" data-aos-delay="0">壹遇敦南，壹念四維</div>
-        <div class="t2">
-          <img v-if="isMobile" src="@/section/s5/t2m.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
-          <img v-else src="@/section/s5/t2.png" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
-        </div>
-      </div>
-      <div>
-        <img class="t3" src="@/section/s5/t3.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="0"/>
-        <img class="t4" src="@/section/s5/t4.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="200"/>
-        <img class="t5" src="@/section/s5/t5.png" alt="" srcset=""  data-aos="fade-right" data-aos-delay="400"/>
-      </div>
-      <img class="t6" src="@/section/s5/t6.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="0"/>
-      <img class="en" src="@/section/s5/en.svg" alt="" srcset="" />
-    </div>
+<div class="pics relative">
+<div class="list">
+  <img src="./s5/1.jpg" alt="">
+</div>
+<div class="list">
+  <img src="./s5/2.jpg" alt="">
+</div>
+<div class="list">
+  <img src="./s5/3.jpg" alt="">
+</div>
+</div>
+
   </article>
 </template>
 
@@ -60,257 +25,84 @@
 @import "@/assets/style/function.scss";
 
 .s5 {
-  @apply w-full relative text-[#36677F];
-  @apply flex items-start justify-center;
-  height: size(1304);
-// background-image: url("@/section/s5/bg.jpg");
-  padding-top: size(133);
-  padding-left: size(50);
-  .line {
-    @apply absolute w-[1px] bg-white z-20;
-    left: size(180);
-    top: 0;
-    height: size(170);
+  @apply w-full relative text-[#0c7494];
+ // height: size(1336);
+ /* background-image: url("@/section/s2/bg.jpg");
+  background-size: cover; */
+  padding: sizem(50) 0 5em 0;
+  font-size: sizem(13);
+  line-height: 1.7;
+  font-weight: 600;
+@media screen and (min-width: 768px) {
+  padding: size(223) 0 9em 0;
+  font-size: size(17);
+}
+
+  .bg{font-size: sizem(5);
+    border: sizem(2) solid currentColor;color: #fff;width: 94%;margin:auto;left: 0;right: 0;top: sizem(5);bottom:sizem(120);
+  &::before{content: "";background: currentColor;position: absolute;left: 1em;right: 1em;top: 1em;bottom: 1em;display: block;}
+@media screen and (min-width: 768px) {
+  font-size: size(12);
+  top: size(150);bottom:size(410);
+  border: size(5) solid currentColor;width: 91.5%;
+}
+  }
+.txt {margin:0 auto 3em;
+  display: flex;
+  flex-wrap: wrap;text-align: center;
+  justify-content: center;gap:0 4em;width: 100%;
+  @media screen and (min-width: 768px) {
+    margin:0 auto 5em;
   }
 
-  .t {
-    @apply flex flex-col items-end;
-    margin-top: size(54);
-    > div {
-      &:nth-child(1) {
-        @apply flex items-center;
-        gap: size(181);
-      }
-      &:nth-child(2) {
-        @apply flex items-center;
-        gap: size(45);
-        margin-top: size(100);
-        margin-bottom: size(48.84);
-      }
-
-      .t1 {
-        font-size: size(48);
-        font-weight: 700;
-      }
-      .t2 {
-        @apply relative;
-        width: size(912);
-        img {
-          @apply w-full;
-        }
-        &::after {
-          @apply w-full h-[1px] bg-white absolute;
-          left: 0;
-          top: -#{size(60)};
-          content: "";
-        }
-        &::before {
-          @apply w-full h-[1px] bg-white absolute;
-          left: 0;
-          bottom: -#{size(60)};
-          content: "";
-        }
-      }
-      .t3 {
-        width: size(162);
-      }
-      .t4 {
-        width: size(413);
-      }
-      .t5 {
-        width: size(97.28);
-      }
-    }
-    .t6 {
-      width: size(280);
-    }
-    .en {
-      margin-top: size(121.57);
-      width: size(257);
-      z-index: 3;
+  .title{width: 100%;font-size: 1.5em;
+    @media screen and (min-width: 768px) {
+      font-size: 3.1em;
     }
   }
-  .bgs {
-    @apply w-full h-full absolute z-0;
-    top: 0;
-    left: 0;
-        overflow: hidden;
-    img {
-      @apply w-full h-auto;
+  .en{width: 100%;font-size: .6em;text-transform:uppercase;margin: .3em auto 3em;letter-spacing: 0.16em;
+    @media screen and (min-width: 768px) {
+      font-size: 1.2em;margin: .3em auto 4em;
     }
-
-    .bg {
-      @apply absolute;
-
-      &.bg-t {
-        @apply z-10 top-0;
-       // top: 62px;
-      }
-
-      &.bg-w {
-        @apply z-[1] bottom-0;
-        width: size(1920);
-        height: size(1264);
-        > div {
-          @apply w-full h-full absolute left-0 bottom-0;
-          bottom: size(-210);
-          &.wave {
-            @apply z-[1];
-            background: url("@/section/s1/wave.gif") no-repeat;
-            background-size:200% 30vw;
-            background-position: 50% 35vw;
-            mix-blend-mode: overlay;
-            opacity: 0.6;
-          }
-          &.w {
-            background: url("@/section/s1/bg.jpg");
-            background-size: cover;
-          }
-        }
-        .cloud{position:absolute;width: 100%;top:0 ;
-            mix-blend-mode: overlay;}
-      }
-
-      &.bg-ww {
-        @apply z-[2] bottom-0;
-      }
-
-      &.bg-b {
-        @apply z-10 bottom-0;
-      }
+  }
+  .subtitle{display: flex;justify-content: center;align-items: center;padding:.5em 0;margin:0 0 1.7em 0;
+    width:sizem(280);font-size: 1.1em;border:0 solid currentColor;border-width: 1px 0 1px 0;
+    @media screen and (min-width: 768px) {
+      width: size(560);font-size: 1.6em;padding: 0;margin: 0;
     }
-    .t6 {
-      @apply absolute z-10;
-      right: size(200);
-      bottom: size(211);
-      width: size(406);
+  }
+  .desc{width: sizem(280);text-align: justify;color: #000;margin: -.2em 0;
+    @media screen and (min-width: 768px) {
+      width: size(560);
     }
   }
 }
-
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+.pics{height:sizem(110);display: flex;justify-content: center;gap:.3em;width: 100%;z-index: 3;
+  .list{height: 100%;}
+img{height: 100%;}
+    @media screen and (min-width: 768px) {
+      height:size(560);gap:1em;
+    }
 }
-
-@media screen and (max-width: 767px) {
-  .s5 {
-    height: sizem(585);
-//    background-image: url("@/section/s5/bgm.jpg");
-    padding-top: sizem(56);
-    padding-left: size(50);
-    background-size: cover;
-    .line {
-      @apply absolute w-[1px] bg-white z-20;
-      left: size(180);
-      top: 0;
-      height: size(170);
-    }
-
-    .t {
-      @apply items-center;
-    margin-top: sizem(35);
-      > div {
-        &:nth-child(1) {
-          @apply flex flex-col items-center;
-          gap: sizem(56.42);
-        }
-        &:nth-child(2) {
-          @apply flex items-center;
-          gap: sizem(14.89);
-          margin-top: 0;
-          margin-bottom: sizem(17);
-        }
-
-        .t1 {
-          @apply relative;
-          font-size: sizem(18);
-          font-weight: 700;
-          &::after {
-            @apply h-[1px] left-1/2 -translate-x-1/2 bg-white absolute;
-            width: sizem(266);
-            top: -#{sizem(26)};
-            content: "";
-          }
-        }
-        .t2 {
-          @apply relative;
-          width: sizem(175.99);
-          margin-bottom: sizem(54.99);
-          img {
-            @apply w-full;
-          }
-          &::after {
-            @apply h-[1px] left-1/2 -translate-x-1/2;
-            width: sizem(266);
-            top: -#{sizem(26)};
-            content: "";
-          }
-          &::before {
-            @apply h-[1px] left-1/2 -translate-x-1/2;
-            width: sizem(266);
-            bottom: -#{sizem(26)};
-            content: "";
-          }
-        }
-        .t3 {
-          width: sizem(56.47);
-        }
-        .t4 {
-          width: sizem(144);
-        }
-        .t5 {
-          width: sizem(33.86);
-        }
-      }
-      .t6 {
-        @apply self-end;
-        width: sizem(106.9);
-      }
-      .en {
-        margin-top: sizem(40);
-        margin-left:sizem(150);
-        width: sizem(100);
-      }
-    }
-    .bgs {
-      .bg {
-        &.bg-w {
-          bottom:sizem(0);
-          width: sizem(375);
-          height: sizem(340);
-          &.w {
-            background: url("@/section/s1/bgm.jpg");
-            background-size: cover;
-          }
-        > div {
-          &.wave {
-            background-position: 50% 80%;
-          }
-        }
-        .cloud{top:sizem(80);}
-        }
-
-      &.bg-b {
-        bottom:  sizem(-35);
-      }
-      }
-
-      .t6 {
-        right: sizem(23.84);
-        bottom: sizem(60);
-        width: sizem(115);
-      }
-    }
+.box{width:sizem(150);height: sizem(150);bottom:sizem(-30);right:sizem(108);z-index:2;overflow: hidden;
+  @media screen and (min-width: 768px) {
+    bottom:size(-60);width:size(600);height: size(500);right:size(640);
   }
+img{height: 150%;opacity: .6;transform: translateX(-50%);margin-top: -40%;
+  animation: box1 15s linear alternate infinite;}
+}
+@keyframes box1 {
+  to {
+  transform: translateX(0%);
+}
+}
 }
 </style>
 
 <script setup>
-import fullview from "@/components/fullview.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
-const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
+
 </script>

@@ -1,9 +1,13 @@
 <template>
   <article class="s1 relative">
-    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />
+    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/mo.jpg" alt="" />
     <div class="t1">壹念敦南林蔭．壹遇四維街巷</div>
     <img class="logo" src="./s1/logo.svg" alt="敦南詠楽" />
-    <img class="txt" src="./s1/txt.svg" alt="txt" />
+    <div class="txt relative">
+      <img  src="./s1/txt.svg" alt="txt" v-if="!isMobile" />
+      <img  src="./s1/txtm.svg" alt="txt" v-else />
+      <div class="button absolute">即刻<br>預約</div>
+    </div>
 
     <!-- bg
     <div class="bgs">
@@ -49,125 +53,48 @@
 @import "@/assets/style/function.scss";
 
 .s1 {
-  height: size(1080);
+  height: sizem(550);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction:column;
+  flex-direction:column;font-size: sizem(15);
+  // background: #0006;
+  
+@media screen and (min-width: 768px) {
+  height: size(1080);font-size: size(40);
+
+}
 
   .t0{
-    opacity: .3;
+    opacity: .0;pointer-events: none;
   }
-  .t1{color: #fff;font-size: size(50);}
-
-
-}
-
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-}
-
-@media screen and (max-width: 767px) {
-  .s1 {
-    height: calc(100vh - 63px);
-    min-height: sizem(667);
-    max-height: sizem(667);
-    padding-top: sizem(23);
-
-    .text {
-      @apply relative z-[1] w-full h-full top-0 left-0;
-      @apply flex flex-col items-center;
-      gap: sizem(48);
-      .t-en {
-        @apply flex-col items-center;
-        gap: sizem(21);
-        width: sizem(267);
-        .en {
-          width: sizem(117);
-        }
-        .line {
-          @apply bg-white h-[1px] w-0;
-          animation: grow 1.8s forwards ease-in-out;
-
-          @keyframes grow {
-            to {
-              @apply w-full;
-            }
-          }
-        }
-      }
-      .t {
-        @apply relative;
-        @apply flex-col;
-        gap: sizem(46);
-
-        .l {
-          @apply flex items-start;
-          gap: sizem(19);
-          .t1 {
-            width: sizem(133);
-          }
-          .t2 {
-            width: sizem(115);
-          }
-        }
-        .r {
-          @apply flex items-center;
-          gap: sizem(16.78);
-          .ll {
-            @apply flex flex-col items-end;
-            gap: size(40.78);
-            .t3 {
-              width: sizem(227);
-            }
-            .t4 {
-              width: sizem(80);
-            }
-          }
-          .rr {
-            .t5 {
-              width: sizem(31);
-            }
-          }
-        }
-      }
+  .t1{color: #fff;font-weight: 600;letter-spacing: 0.23em;
+    margin: 0 auto;
+    text-shadow: 0 0.05em .4em #004d64;
+  }
+  .logo{width: sizem(225);
+    margin: 3.1em auto 4em auto;
+    filter:drop-shadow(0 0.1em .2em #034C);
+    @media screen and (min-width: 768px) {
+      margin: 3.5em auto 3.6em auto;
+      width: size(632);
     }
-
-    .bgs {
-      @apply w-full h-full absolute z-0;
-      top: 0;
-      left: 0;
-      img {
-        @apply w-full h-auto;
-      }
-
-      .bg {
-        @apply absolute;
-
-        &.bg-t {
-          @apply z-10 top-0;
-        }
-
-        &.bg-w {
-          width: sizem(375);
-          height: sizem(248);
-          &.w {
-            background: url("@/section/s1/bgm.jpg");
-            background-size: cover;
-          }
-        }
-
-        &.bg-b {
-          bottom: sizem(-35);
-        }
-      }
-
-      .t6 {
-        right: sizem(23.84);
-        bottom: sizem(60);
-        width: sizem(115);
-      }
+  }
+  .txt{width: sizem(225);
+    margin: 0 auto 1.4em auto;
+    filter:drop-shadow(0 0.1em .2em #034C);
+  img{width: 100%;}
+  .button{right: 0;bottom: 2.3em;letter-spacing: .25em;color: #0c7494;
+  background: #fff;font-size:1em;font-weight: 900;text-align: center;
+  width: 3.2em;padding: .1em 0 .1em 0.2em;
+  transition: transform 2s,border-radius 2s;
+  &:hover{transform: scale(1.2);border-radius: .6em;}
+    @media screen and (min-width: 768px) {
+      bottom: 0.1em;
+    }
+  }
+    @media screen and (min-width: 768px) {
+      width: size(1227);
     }
   }
 }

@@ -1,59 +1,20 @@
 <template>
   <article class="s3">
-    <Splide
-      ref="splideRef"
-      class="slide"
-      @splide:move="onMove"
-      :options="{
-        autoWidth: true,
-        arrows: false,
-        autoplay: true,
-        pagination: false,
-        interval: 4000,
-        gap: 0,
-        type: 'loop',
-      }"
-    >
-      <SplideSlide class="slide-item" :key="i" v-for="i in imgs">
-        <div class="img" :style="{ 'background-image': `url(${i.img})` }"></div>
-      </SplideSlide>
-    </Splide>
-    <div class="t">
-      <div  data-aos="fade-up" data-aos-delay="0">
-        <div class="t1">今井昌彥 散步 隱富街巷</div>
-        <div class="t2">營造顧問，監造十帖刻畫造極</div>
-      </div>
-      <div>
-        <div class="line"></div>
-        <template v-if="isMobile">
-          <div :key="currentIdx" data-aos="fade">
-            <span class="t3">
-              {{ imgs[currentIdx].t1 }}<br />
-              <span class="t4"> {{ imgs[currentIdx].t2 }} </span
-              ><span class="t5"> {{ imgs[currentIdx].t3 }} </span>
-            </span>
-          </div>
-        </template>
-        <template v-else>
-          <div class="t3" data-aos="fade" :key="currentIdx">
-            {{ imgs[currentIdx].t1 }}
-          </div>
-          <div class="t4" data-aos="fade" :key="currentIdx">
-            {{ imgs[currentIdx].t2 }}
-          </div>
-          <div class="t5" data-aos="fade" :key="currentIdx">
-            {{ imgs[currentIdx].t3 }}
-          </div>
-        </template>
-      </div>
-      <img
-        @click="splideRef.go('>')"
-        src="@/section/s3/arrow.svg"
-        class="arrow"
-        alt=""
-        srcset=""
-      />
+    <div class="bg absolute"></div>
+    <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+    <div class="txt">
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">大安富境首善富域，四維況味隱富場域</h4>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">大安區獨有時光豐壤，熙來攘往交錯身影，蘊藏歷史與人文交織的精彩篇章，台北唯一首善之地眾人欽羨。四維路街巷悠閒雅緻姿態相伴，米其林美食、步登公寓、糕點舖子、風格選品…在這隨處可見綠巷子中，久久不忍離去。</p>
     </div>
+<div class="pics relative">
+<div class="list">
+  <img src="./s3/1.jpg" alt="">
+</div>
+<div class="list">
+  <img src="./s3/2.jpg" alt="">
+</div>
+</div>
+
   </article>
 </template>
 
@@ -61,156 +22,80 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply w-full relative text-[#36677F];
-  height: size(1080);
-// background-image: url("@/section/s3/bg.jpg");
-//  background-size: cover;
+  @apply w-full relative text-[#0c7494];
+ // height: size(1336);
+ /* background-image: url("@/section/s2/bg.jpg");
+  background-size: cover; */
+  padding: sizem(50) 0 2em 0;
+  font-size: sizem(13);
+  line-height: 1.7;
+  font-weight: 600;
+@media screen and (min-width: 768px) {
+  padding: size(220) 0 0 0;
+  font-size: size(17);
+}
 
-  .slide {
-    .slide-item {
-      .img {
-        @apply bg-cover;
-        width: size(1920);
-        height: size(858);
-      }
-    }
+  .bg{font-size: sizem(5);
+    border: sizem(2) solid currentColor;color: #fff;width: 94%;margin:auto;left: 0;right: 0;top: sizem(5);bottom:sizem(60);
+  &::before{content: "";background: currentColor;position: absolute;left: 1em;right: 1em;top: 1em;bottom: 1em;display: block;}
+@media screen and (min-width: 768px) {
+  font-size: size(12);
+  top: size(100);bottom:size(110);
+  border: size(5) solid currentColor;width: 91.5%;
+}
+  }
+.txt {margin:0 auto 3em;
+  display: flex;
+  flex-wrap: wrap;text-align: center;
+  justify-content: center;gap:0 4em;width: 100%;
+  @media screen and (min-width: 768px) {
+    margin:0 auto 4em;
   }
 
-  .t {
-    @apply text-[#36677f] relative;
-    @apply flex items-end justify-between;
-    padding: 0 size(180);
-    margin-top: size(45);
-
-    > div {
-      @apply whitespace-nowrap relative;
-      &:nth-child(2) {
-        @apply flex items-end;
-        width: size(1145);
-        gap: size(11);
-      }
+  .title{width: 100%;font-size: 1.5em;
+    @media screen and (min-width: 768px) {
+      font-size: 3.1em;
     }
-
-    .t1 {
-      font-size: size(52);
-      font-weight: 700;
+  }
+  .en{width: 100%;font-size: .6em;text-transform:uppercase;margin: .3em auto 3em;letter-spacing: 0.16em;
+    @media screen and (min-width: 768px) {
+      font-size: 1.2em;margin: .3em auto 4em;
     }
-    .t2 {
-      @apply relative;
-      font-size: size(30);
-      font-weight: 700;
-
-      &:before {
-        @apply absolute bg-white;
-        width: size(140);
-        height: 1px;
-        content: "";
-        right: 0;
-        bottom: 5px;
-      }
+  }
+  .subtitle{display: flex;justify-content: center;align-items: center;padding:.5em 0;margin:0 0 1.7em 0;
+    width:sizem(280);font-size: 1.1em;border:0 solid currentColor;border-width: 1px 0 1px 0;
+    @media screen and (min-width: 768px) {
+      width: size(560);font-size: 1.6em;padding: 0;margin: 0;
     }
-
-    .line {
-      @apply bg-white h-[1px] w-full relative transition-all;
-      bottom: 5px;
-    }
-    .t3 {
-      margin-left: size(10);
-      font-size: size(30);
-      font-weight: 700;
-    }
-    .t4 {
-      font-size: size(23);
-      font-weight: 600;
-    }
-    .t5 {
-      font-size: size(16);
-      font-weight: 600;
-    }
-    .arrow {
-      @apply absolute cursor-pointer;
-      right: size(180);
-      top: size(20);
-      width: size(48.5);
+  }
+  .desc{width: sizem(280);text-align: justify;color: #000;margin: -.2em 0;
+    @media screen and (min-width: 768px) {
+      width: size(580);
     }
   }
 }
-
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+.pics{height:sizem(110);display: flex;justify-content: center;gap:.3em;width: 100%;z-index:3;
+  .list{height: 100%;}
+img{height: 100%;}
+    @media screen and (min-width: 768px) {
+      height:size(560);gap:1em;
+    }
 }
-
-@media screen and (max-width: 767px) {
-  .s3 {
-    @apply w-full relative text-[#36677F];
-    height: sizem(654);
-  //  background-image: url("@/section/s3/bg.jpg");
-    background-size: cover;
-
-    .slide {
-      .slide-item {
-        .img {
-          width: sizem(375);
-          height: sizem(404);
-        }
-      }
-    }
-
-    .t {
-      @apply flex flex-col items-start justify-between;
-      padding: 0 sizem(54);
-      margin-top: sizem(22);
-      gap: sizem(37);
-
-      > div {
-        @apply whitespace-nowrap relative;
-        &:nth-child(2) {
-          @apply flex flex-col items-end;
-          width: sizem(266);
-          gap: sizem(2);
-        }
-      }
-
-      .t1 {
-        font-size: sizem(20);
-      }
-      .t2 {
-        font-size: sizem(12);
-        font-weight: 700;
-
-        &:before {
-          @apply hidden;
-        }
-      }
-
-      .line {
-        @apply bg-white h-[1px] w-full transition-all absolute;
-        bottom: -#{sizem(17.5)};
-      }
-      .t3 {
-        margin-left: 0;
-        font-size: sizem(15);
-        font-weight: 700;
-      }
-      .t4 {
-        @apply w-full uppercase;
-        font-size: sizem(10);
-        font-weight: 600;
-        margin-right: sizem(5);
-      }
-      .t5 {
-        font-size: sizem(12);
-        font-weight: 600;
-      }
-      .arrow {
-        @apply absolute cursor-pointer;
-        right: sizem(54.5);
-        top: sizem(5);
-        width: sizem(34.5);
-      }
-    }
+.box{width:sizem(30);height: sizem(150);bottom:sizem(-40);left:sizem(23);z-index:2;overflow: hidden;
+  @media screen and (min-width: 768px) {    
+    width:size(130);height: size(435);bottom:size(-330);left:size(50);
   }
+img{height: 120%;opacity: .6;transform: translateX(-60%);
+  animation: box1 15s linear alternate infinite;
+  @media screen and (min-width: 768px) { 
+    animation: box1 30s linear alternate infinite;  }
+}
+}
+@keyframes box1 {
+  to {
+  transform: translateX(0%);
+}
+}
 }
 </style>
 
@@ -218,48 +103,6 @@
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
-const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
 
-const splideRef = ref()
-const currentIdx = ref(0)
-
-const onMove = (newIndex, prevIndex, destIndex) => {
-  currentIdx.value = prevIndex
-}
-
-const imgs = [
-  {
-    img: globals.$isMobile()
-      ? new URL("../section/s3/1m.jpg", import.meta.url).href
-      : new URL("../section/s3/1.jpg", import.meta.url).href,
-    t1: "東京晴空樹",
-    t2: "Tokyo Skytree",
-    t3: "／ 東京スカイツリー",
-  },
-  {
-    img: globals.$isMobile()
-      ? new URL("../section/s3/2m.jpg", import.meta.url).href
-      : new URL("../section/s3/2.jpg", import.meta.url).href,
-    t1: "東京都廳",
-    t2: "The New Tokyo City Hall",
-    t3: "／ 東京都庁",
-  },
-  {
-    img: globals.$isMobile()
-      ? new URL("../section/s3/3m.jpg", import.meta.url).href
-      : new URL("../section/s3/3.jpg", import.meta.url).href,
-    t1: "東京虎之門之丘",
-    t2: "Toranomon Hills",
-    t3: "／ 虎ノ門ヒルズプロジェクト",
-  },
-  {
-    img: globals.$isMobile()
-      ? new URL("../section/s3/4m.jpg", import.meta.url).href
-      : new URL("../section/s3/4.jpg", import.meta.url).href,
-    t1: "橫濱Landmark大樓",
-    t2: "LANDMARK TOWER",
-    t3: "／ 横浜ランドマークタワー",
-  },
-]
 </script>
