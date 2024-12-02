@@ -1,5 +1,7 @@
 <template>
   <article class="s8">
+    <div class="box1 absolute"><img src="./s1/box.jpg" alt=""></div>
+    <div class="box2 absolute"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">自然謙讓，隱富於世｜建築美學</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">TArchitecture of Humility</h3>
@@ -28,7 +30,7 @@
  /* background-image: url("@/section/s2/bg.jpg");
   background-size: cover; */
   background: #FFF;
-  padding: sizem(50) 0 2em 0;
+  padding: sizem(80) 0 2em 0;
   font-size: sizem(13);
   line-height: 1.7;
   font-weight: 600;
@@ -36,7 +38,7 @@
   padding: size(190) 0 0 0;
   font-size: size(17);
 }
-.txt {margin:0 auto 3em;
+.txt {margin:0 auto 3.5em;
   display: flex;
   flex-wrap: wrap;text-align: justify;
   justify-content: center;gap:0 4em;width: 100%;
@@ -65,9 +67,11 @@
 img{width: 100%;}
 }
   .slider {
-    margin: 0;
+    position: relative;
+    margin: 0 0 0 -10%;
     height: auto;
-    width: 100%;
+    width: 120%;
+    z-index: 3;
     .caption {
     font-size:sizem(12);  
     right:sizem(5);
@@ -77,7 +81,7 @@ img{width: 100%;}
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-    height: sizem(150);
+    height: sizem(170);
     img{width: 100%;height: 100%;object-fit: cover;}
       
     }
@@ -87,6 +91,25 @@ img{width: 100%;}
       bottom: -2em;
     }
   }
+.box1{width:sizem(80);height: sizem(130);top:sizem(160);right:0;overflow: hidden;
+  @media screen and (min-width: 768px) {
+    top:size(350);width:size(400);height: size(700);
+  }
+img{height: 180%;opacity: .6;transform: translateX(-50%);margin-top: -130%;
+  animation: box1 15s linear alternate infinite;}
+}
+.box2{width:sizem(180);height: sizem(135);top:sizem(230);left:0;z-index:2;overflow: hidden;
+  @media screen and (min-width: 768px) {
+    top:size(780);width:size(750);height: size(600);left:0;
+  }
+img{height: 160%;opacity: .6;transform: translateX(-50%);margin-top: -50%;
+  animation: box1 15s linear alternate infinite;}
+}
+@keyframes box1 {
+  to {
+  transform: translateX(0%);
+}
+}
 
 }
 </style>

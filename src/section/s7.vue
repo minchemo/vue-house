@@ -1,7 +1,9 @@
 <template>
   <article class="s7">
+    <div class="box1 absolute"><img src="./s1/box.jpg" alt=""></div>
+    <div class="box2 absolute"><img src="./s1/box.jpg" alt=""></div>
     <div class="bg absolute"></div>
-    <div class="txt">
+    <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">精誠國際，堅持初衷｜哲學品牌</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">Deep In The Soul</h3>
 
@@ -29,17 +31,17 @@
  // height: size(1336);
  /* background-image: url("@/section/s2/bg.jpg");
   background-size: cover; */
-  padding: sizem(50) 0 2em 0;
+  padding: sizem(70) 0 6em 0;
   font-size: sizem(13);
   line-height: 1.7;
   font-weight: 600;
 @media screen and (min-width: 768px) {
-  padding: size(223) 0 11em 0;
+  padding: size(250) 0 11em 0;
   font-size: size(17);
 }
 
-  .bg{font-size: sizem(5);
-    border: sizem(2) solid currentColor;color: #fff;width: 94%;margin:auto;left: 0;right: 0;top: sizem(5);bottom:sizem(0);
+  .bg{font-size: sizem(5);z-index: 3;
+    border: sizem(2) solid currentColor;color: #fff;width: 94%;margin:auto;left: 0;right: 0;top: sizem(30);bottom:sizem(60);
   &::before{content: "";background: currentColor;position: absolute;left: 1em;right: 1em;top: 1em;bottom: 1em;display: block;}
 @media screen and (min-width: 768px) {
   font-size: size(12);
@@ -65,7 +67,7 @@ img{width: 100%;}
 }
 }
 
-.txt {margin:0 auto 3em;
+.txt {margin:0 auto 3em;z-index: 4;
   display: flex;
   flex-wrap: wrap;text-align: justify;
   justify-content: center;gap:0 4em;width: 100%;
@@ -106,6 +108,25 @@ img{width: 100%;}
       width: auto;margin: 0  size(250) 0 0;
     }
   }
+}
+.box1{width:sizem(100);height: sizem(130);top:sizem(-50);left:sizem(50);overflow: hidden;
+  @media screen and (min-width: 768px) {
+    top:size(-170);width:size(400);height: size(400);left:size(130);z-index: 4;
+  }
+img{height: 160%;opacity: .6;transform: translateX(-50%);margin-top: -40%;
+  animation: box1 15s linear alternate infinite;}
+}
+.box2{width:sizem(180);height: sizem(190);bottom:sizem(-40);right:sizem(95);z-index:2;overflow: hidden;
+  @media screen and (min-width: 768px) {
+    bottom:size(-100);width:size(610);height: size(500);right:size(630);
+  }
+img{height: 160%;opacity: .6;transform: translateX(-50%);margin-top: -50%;
+  animation: box1 15s linear alternate infinite;}
+}
+@keyframes box1 {
+  to {
+  transform: translateX(0%);
+}
 }
 }
 </style>
