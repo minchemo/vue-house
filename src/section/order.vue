@@ -58,10 +58,10 @@
               :checked="formData.policyChecked"
               class="checkbox bg-white rounded-none"
             />
-            <p class="text-black">
+            <p class="text-[#FFF]">
               本人知悉並同意<label
                 for="policy-modal"
-                class="modal-button text-[#36677F] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
+                class="modal-button text-[#FF0] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
                 >「個資告知事項聲明」</label
               >內容
             </p>
@@ -147,7 +147,7 @@
     top: size(-120);
     font-size: size(32);
     font-weight: 500;
-    color: #36677f;
+    color: #FFF;
     border-bottom: 1px solid #fff;
     padding-bottom: size(15);
   }
@@ -156,7 +156,7 @@
     @apply text-left relative left-0 inline-block;
     font-size: size(40);
     font-weight: 700;
-    color: #36677f;
+    color: #FFF;
     padding-top: 0;
     margin-left: size(0);
     margin-right: auto;
@@ -210,20 +210,21 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #a6a6a6;
+      background-color: #FFF;
       position: absolute;
     }
     .row {
-      background: rgba($color: #fff, $alpha: 0.3);
-      border: 1px solid #a6a6a6;
-      color: #36677f;
+      background: #FFF;
+     //border: 1px solid #a6a6a6;
+      color: #444;
       display: flex;
       width: 100%;
       align-items: center;
       > span {
-        width: 5.5em;
+        width: 5.5em;color: #1675b5;
         text-align: left;
         padding-left: 1em;
+        font-weight: 700;
         > span {
           color: #f00;
           font-size: 12px;
@@ -231,12 +232,13 @@
       }
       input,
       select {
-        @apply font-bold;
+        font-weight: 500;
         background: none;
         flex: 1;
+        color: inherit;
       }
       option {
-        color: #36677f;
+        color: inherit;
       }
       select {
         background: url("//h65.tw/img/select.svg") no-repeat calc(100% - 0.5em)
@@ -318,7 +320,7 @@
       @apply absolute left-0 flex items-center justify-center w-full;
       font-size: sizem(18);
       font-weight: 500;
-      color: #36677f;
+      color: #FFF;
       top:sizem(-60);
       border-bottom: 1px solid #fff;
       padding-bottom: size(25);

@@ -3,28 +3,30 @@
 
     <!-- <div class="logo" data-aos="zoom-in"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="phone" srcset="" />
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+        <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="messenger" srcset="" />
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
+        <img src="//h65.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="fb" srcset="" />
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink">
+      <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
+        <img src="//h65.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <!--div class="flex justify-center w-full contact-item-box no-gap">
+    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
-        <div>{{ info.address }}</div>
+        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="gmap" srcset="" />
+      <div class="flex contact-item justify-center items-center googlemap"
+        @click="modalOpen = true; modalType = 'gmap'">
+        <img src="//h65.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
-    </div-->
+    </div>
 
   </div>
 
@@ -45,11 +47,11 @@
       <img src="@/section/form/pen.svg" alt="pen" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <!--div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="gmap" srcset="" />
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
+      <img src="//h65.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
-    </div-->
+    </div>
   </div>
 
   <!-- Modal -->
@@ -209,12 +211,13 @@
     gap: size(20);
 
     .contact-item {
-      border: 1px solid #36677f;
-      color: #36677f;
+      border: 2px solid #FFF;
+      color: #FFF;
       width: 100%;
       padding: 0 size(55);
       border-radius: size(0);
-      font-size: size(16);
+      font-size: size(18);
+      font-weight: 700;
       line-height: 3.8;
       letter-spacing: 0.06em;
       z-index: 1;
@@ -235,8 +238,8 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: invert(37%) sepia(18%) saturate(1106%) hue-rotate(155deg)
-          brightness(94%) contrast(96%);
+        filter: brightness(1) invert(1);
+       // filter: invert(37%) sepia(18%) saturate(1106%) hue-rotate(155deg) brightness(94%) contrast(96%);
 
         transition: all 0.5s;
       }
@@ -248,9 +251,9 @@
         // border-radius: 999px 0 0 999px;
         max-width: 9999px;
         justify-content: center;
-        border: 1px solid #36677f;
-          border-right-width: 0px;
-        color: #36677f;
+        border: 2px solid #FFF;
+        border-right-width: 0px;
+        color: #FFF;
         @apply basis-2/3 ;
       }
 
@@ -258,7 +261,7 @@
         background-color: #fff;
         color: #36677f;
         border: 0;
-        border: 1px solid #36677f;
+        border: 1px solid #fff;
         gap: size(20);
         @apply basis-1/3 ;
 

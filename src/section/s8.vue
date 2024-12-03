@@ -1,7 +1,7 @@
 <template>
   <article class="s8">
-    <div class="box1 absolute"><img src="./s1/box.jpg" alt=""></div>
-    <div class="box2 absolute"><img src="./s1/box.jpg" alt=""></div>
+    <div class="box1 absolute" data-aos="fade-up" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
+    <div class="box2 absolute" data-aos="fade-down" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">自然謙讓，隱富於世｜建築美學</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">TArchitecture of Humility</h3>
@@ -21,7 +21,7 @@
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/style/function.scss";
 
 .s8 {
@@ -71,7 +71,12 @@ img{width: 100%;}
     margin: 0 0 0 -10%;
     height: auto;
     width: 120%;
-    z-index: 3;
+    z-index: 3; 
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      width: 100%;
+
+    }
     .caption {
     font-size:sizem(12);  
     right:sizem(5);
@@ -89,6 +94,12 @@ img{width: 100%;}
     .splide__pagination{
       justify-content: flex-end;
       bottom: -2em;
+      width: 92%;
+      left: 0;
+      @media screen and (max-width: 767px) {
+        font-size: .5em;
+        width: 85%;
+      }
     }
   }
 .box1{width:sizem(80);height: sizem(130);top:sizem(160);right:0;overflow: hidden;

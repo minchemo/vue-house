@@ -1,19 +1,19 @@
 <template>
   <article class="s5">
-    <div class="bg absolute"></div>
-    <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+    <div class="bg absolute" data-aos="fade" data-aos-delay="0"></div>
+    <div class="box absolute" data-aos="fade-down" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">台北綠核大安森林，書卷學器捷運悠遊</h4>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">大安森林公園800米綠帶軸距綠色流域，台灣大學、師範大學、私立復興實中等，孩子同儕等同未來事業夥伴。步行6分鐘捷運科技大樓站，連通大安站東西縱橫；貴族醫療頂級照護，國泰、中山、宏恩與聯合醫院，全面守護家人健康。</p>
     </div>
 <div class="pics relative">
-<div class="list">
+<div class="list" data-aos="fade-up" data-aos-delay="0">
   <img src="./s5/1.jpg" alt="">
 </div>
-<div class="list">
+<div class="list" data-aos="fade-up" data-aos-delay="200">
   <img src="./s5/2.jpg" alt="">
 </div>
-<div class="list">
+<div class="list" data-aos="fade-up" data-aos-delay="400">
   <img src="./s5/3.jpg" alt="">
 </div>
 </div>

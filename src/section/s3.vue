@@ -1,16 +1,16 @@
 <template>
   <article class="s3">
-    <div class="bg absolute"></div>
-    <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+    <div class="bg absolute" data-aos="fade" data-aos-delay="0"></div>
+    <div class="box absolute" data-aos="fade-right" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">大安富境首善富域，四維況味隱富場域</h4>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">大安區獨有時光豐壤，熙來攘往交錯身影，蘊藏歷史與人文交織的精彩篇章，台北唯一首善之地眾人欽羨。四維路街巷悠閒雅緻姿態相伴，米其林美食、步登公寓、糕點舖子、風格選品…在這隨處可見綠巷子中，久久不忍離去。</p>
     </div>
 <div class="pics relative">
-<div class="list">
+<div class="list" data-aos="fade-up" data-aos-delay="0">
   <img src="./s3/1.jpg" alt="">
 </div>
-<div class="list">
+<div class="list" data-aos="fade-up" data-aos-delay="200">
   <img src="./s3/2.jpg" alt="">
 </div>
 </div>

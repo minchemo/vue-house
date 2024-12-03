@@ -1,7 +1,7 @@
 <template>
-  <article class="s8">
-    <div class="box1 absolute"><img src="./s1/box.jpg" alt=""></div>
-    <div class="box2 absolute"><img src="./s1/box.jpg" alt=""></div>
+  <article class="s9">
+    <div class="box1 absolute" data-aos="fade-up" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
+    <div class="box2 absolute" data-aos="fade-down" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">引風逐光，靜謐共生｜人性空間</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">Free and Bright</h3>
@@ -18,25 +18,26 @@
         </SplideSlide>
       </Splide>
     </div>
+    <div class="bottomen absolute" data-aos="fade-up" data-aos-delay="0">The Aesthetics of Silence</div>
   </article>
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s8 {
+.s9 {
   @apply w-full relative text-[#0c7494];
  // height: size(1336);
  /* background-image: url("@/section/s2/bg.jpg");
   background-size: cover; */
   background: #FFF;
-  padding: sizem(80) 0 2em 0;
+  padding: sizem(80) 0 10em 0;
   font-size: sizem(13);
   line-height: 1.7;
   font-weight: 600;
 @media screen and (min-width: 768px) {
-  padding: size(190) 0 0 0;
+  padding: size(190) 0 15em 0;
   font-size: size(17);
 }
 .txt {margin:0 auto 3.5em;
@@ -73,6 +74,10 @@ img{width: 100%;}
     height: auto;
     width: 120%;
     z-index: 3;
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      width: 100%;
+    }
     .caption {
     font-size:sizem(12);  
     right:sizem(5);
@@ -88,8 +93,15 @@ img{width: 100%;}
     }
 
     .splide__pagination{
-      justify-content: flex-end;
+      justify-content:flex-start;
       bottom: -2em;
+      width: 92%;
+      left:auto;
+      right: 0;
+      @media screen and (max-width: 767px) {
+        font-size: .5em;
+        width: 85%;
+      }
     }
   }
 .box1{width:sizem(80);height: sizem(130);top:sizem(160);left:sizem(0);overflow: hidden;
@@ -111,7 +123,13 @@ img{height: 160%;opacity: .6;transform: translateX(-50%);margin-top: -50%;
   transform: translateX(0%);
 }
 }
-
+.bottomen{bottom: sizem(50);left:sizem(30);font-size: sizem(8);color: #333;
+  text-transform:uppercase;
+  @media screen and (min-width: 768px) {
+    bottom: size(100);left:size(130);font-size: size(17);
+    letter-spacing: 0.06EM;
+  }
+}
 }
 </style>
 

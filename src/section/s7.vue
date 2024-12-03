@@ -1,8 +1,8 @@
 <template>
   <article class="s7">
-    <div class="box1 absolute"><img src="./s1/box.jpg" alt=""></div>
-    <div class="box2 absolute"><img src="./s1/box.jpg" alt=""></div>
-    <div class="bg absolute"></div>
+    <div class="box1 absolute" data-aos="fade-up" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
+    <div class="box2 absolute" data-aos="fade-down" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
+    <div class="bg absolute" data-aos="fade" data-aos-delay="0"></div>
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">精誠國際，堅持初衷｜哲學品牌</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">Deep In The Soul</h3>

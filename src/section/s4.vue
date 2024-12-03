@@ -1,20 +1,20 @@
 <template>
   <article class="s4">
-    <div class="bg absolute"></div>
-    <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+    <div class="bg absolute" data-aos="fade" data-aos-delay="0"></div>
+    <div class="box absolute" data-aos="fade-left" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
     <div class="box-w absolute"></div>
     <div class="txt">
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">對望遠企匯流國際，豐饒商圈盡在這裡</h4>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">歐美旗艦品牌進駐台灣高端消費開端，客戶群彰顯自我性格與堅持生活品質屬性，一時之間名流冠蓋雲集；收攏台北豐饒生活，向西提汲永康青田與師大書卷步調，向東追尋信義計劃時尚前沿，向北擁抱東區SOGO商圈。</p>
     </div>
 <div class="pics relative">
-<div class="list">
+<div class="list" data-aos="fade-up" data-aos-delay="0">
   <img src="./s4/1.webp" alt="">
 </div>
-<div class="list">
+<div class="list" data-aos="fade-up" data-aos-delay="200">
   <img src="./s4/2.jpg" alt="">
 </div>
-<div class="list">
+<div class="list" data-aos="fade-up" data-aos-delay="400">
   <img src="./s4/3.webp" alt="">
 </div>
 </div>

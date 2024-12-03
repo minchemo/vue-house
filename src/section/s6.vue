@@ -4,7 +4,7 @@
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">蘇氏美學，日本藝極｜兼雅團隊</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">The Mind of Nature</h3>
       <div class="list list1">
-        <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+        <div class="box absolute" data-aos="fade-up-right" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
         <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">美學統籌｜大硯建築師事務所 </h4>
         <div class="pic relative" data-aos="fade-up" data-aos-delay="400">
           <img src="./s6/1.jpg" alt="">
@@ -17,7 +17,7 @@
 </p>
       </div>
       <div class="list list2">
-        <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+        <div class="box absolute" data-aos="fade-up-left" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
         <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">監造顧問｜日商台灣大林組</h4>
         <div class="pic relative" data-aos="fade-up" data-aos-delay="400">
           <img src="./s6/2.jpg" alt="">
@@ -30,7 +30,7 @@
 </p>
       </div>
       <div class="list list3">
-        <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+        <div class="box absolute" data-aos="fade-up-right" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
         <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">營造施工｜翊豐營造</h4>
         <div class="pic relative" data-aos="fade-up" data-aos-delay="400">
           <img src="./s6/3.jpg" alt="">
@@ -41,7 +41,7 @@
 </p>
       </div>
       <div class="list list4">
-        <div class="box absolute"><img src="./s1/box.jpg" alt=""></div>
+        <div class="box absolute" data-aos="fade-up-left" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
         <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">結構設計｜聯邦工程顧問</h4>
         <div class="pic relative" data-aos="fade-up" data-aos-delay="400">
           <img src="./s6/4.jpg" alt="">

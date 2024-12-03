@@ -1,6 +1,5 @@
 <template>
-  <article class="s1 relative">
-   <!-- <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/mo.jpg" alt="" /> -->
+  <article class="s10 relative">
     <div class="t1" data-aos="fade-up" data-aos-delay="0">壹念敦南林蔭．壹遇四維街巷</div>
     <img class="logo" src="./s1/logo.svg" alt="敦南詠楽" data-aos="fade-up" data-aos-delay="200" />
     <div class="txt relative" data-aos="fade-up" data-aos-delay="400">
@@ -14,7 +13,7 @@
 <style lang="scss" scoped> 
 @import "@/assets/style/function.scss";
 
-.s1 {
+.s10 {
   height: sizem(550);
   display: flex;
   align-items: center;
