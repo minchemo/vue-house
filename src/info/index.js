@@ -1,4 +1,4 @@
-const caseName = "展志建設建國段"
+const caseName = "統元極美"
 
 export default {
     meta: {
@@ -35,8 +35,8 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["三房"],
-    budget: ["2388萬-2588萬","2688萬-2888萬",],
+    room_type: ["二房","三房"],
+    budget: ["1500~2000萬","2000~2500萬","2500~3000萬","3000~3500萬"],
     navList: [
         /*
         {

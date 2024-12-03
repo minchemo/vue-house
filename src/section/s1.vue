@@ -8,8 +8,8 @@
    -->
 
    <div class="con flex">
-  <img src="./s1/logo2.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" v-if="!isMobile">
-  <img src="./s1/logo2.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0" v-else>
+  <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
+  <img src="./s1/logo2.svg" alt="logo" class="logo2" data-aos="zoom-in" data-aos-delay="0">
 </div>
   </article>
 </template>
@@ -33,7 +33,7 @@
   align-items:center;
   font-size:size(36);
   //background: #E60012;
-  background: url("./s1/bg1.webp");
+  background: url("./s1/bg.webp");
 
   background-size: cover;
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
@@ -47,7 +47,11 @@
 
 
   .logo{
-    width: size(1140);
+    width: size(758);
+    //margin-bottom: size(250);
+    }
+  .logo2{
+    width: size(603);
     //margin-bottom: size(250);
     }
   .t1{
@@ -123,7 +127,7 @@ animation: ball 5s ease-in-out alternate infinite;}
     min-height: sizem(667);
     max-height: sizem(667);
     font-size:sizem(15);
-    background: url("./s1/bgm2.webp");
+    background: url("./s1/bgm.webp");
     background-size: cover;
     background-position: bottom;
 
