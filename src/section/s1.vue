@@ -2,8 +2,11 @@
   <article class="s1" id="s1">
  <!--  <img src="./s1/mo.jpg" class="t0">  -->
     <img src="./s1/light.png" class="light absolute" data-aos="zoom-in" data-aos-delay="500">
+    <div class="t1 absolute" data-aos="fade" data-aos-delay="0">正向上路地標<br />運動公園首排</div>
+    <div class="t2 absolute" data-aos="fade" data-aos-delay="0"><span>直取中科 全雙衛<span>2-3</span>房</span></div>
+    <!--
     <div class="t1 absolute" data-aos="fade" data-aos-delay="0">逐鹿新光田<br />運動公園首排</div>
-    <div class="t2 absolute" data-aos="fade" data-aos-delay="0"><span>近距中科 全雙衛<span>2-3</span>房</span></div>
+    <div class="t2 absolute" data-aos="fade" data-aos-delay="0"><span>近距中科 全雙衛<span>2-3</span>房</span></div>  -->
     <img src="./s1/coming.svg" class="coming absolute" data-aos="zoom-in" data-aos-delay="1000">
    <img src="./s1/logo.svg" class="logo absolute" data-aos="fade" data-aos-delay="1200">
     <div class="t3 absolute" data-aos="fade" data-aos-delay="1200">｜新案即將公開｜</div>
