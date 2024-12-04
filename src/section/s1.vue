@@ -8,9 +8,13 @@
    -->
 
    <div class="con flex">
-  <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-  <img src="./s1/logo2.svg" alt="logo" class="logo2" data-aos="zoom-in" data-aos-delay="0">
-</div>
+  <img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="0">
+  <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="100">
+  <img src="./s1/t3.svg" v-if="!isMobile" alt="title" class="t3" data-aos="zoom-in" data-aos-delay="300">
+  <img src="./s1/t3m.svg" v-else alt="title" class="t3" data-aos="zoom-in" data-aos-delay="300">
+  </div>
+
+  <img src="./s1/logoicon.svg" alt="logoicon" class="logoicon" data-aos="zoom-in" data-aos-delay="600">
   </article>
 </template>
 
@@ -46,23 +50,25 @@
     flex-direction: column;
 
 
-  .logo{
-    width: size(758);
-    //margin-bottom: size(250);
-    }
-  .logo2{
-    width: size(603);
-    //margin-bottom: size(250);
-    }
   .t1{
-    width: size(514);
-  }
-
+    width: size(884);
+    //margin-bottom: size(250);
+    }
   .t2{
-    width: size(200);
-    margin-top: size(50);
+    width: size(602);
+    margin-top: size(40);
+  }
+  .t3{
+    width: size(885);
+    margin-top: size(40);
   }
 
+  }
+  .logoicon{
+    width: size(605);
+    position: absolute;
+    bottom: size(50);
+    right: size(650);
   }
   
  
@@ -151,23 +157,28 @@ animation: ball 5s ease-in-out alternate infinite;}
     flex-direction: column;
 
 
-  .logo{
-    //width: sizem(280);
-    width: sizem(370);
-    margin-bottom: 0;
-    margin-left: sizem(20);
-    }
   .t1{
-    width: sizem(223);
-    margin-top: sizem(30);
-  }
-
+    width: sizem(303);
+    //margin-bottom: size(250);
+    }
   .t2{
-    width: sizem(115);
-    margin-top: sizem(70);
+    width: sizem(205);
+    margin-top: sizem(60);
+  }
+  .t3{
+    width: sizem(205);
+    margin-top: sizem(60);
   }
 
   }
+
+  .logoicon{
+    width: sizem(293);
+    position: absolute;
+    bottom: sizem(20);
+    right: sizem(50);
+  }
+  
     
 
   

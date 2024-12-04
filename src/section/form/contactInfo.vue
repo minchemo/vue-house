@@ -7,10 +7,10 @@
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>  -->
     <div class="flex justify-between w-full contact-item-box">
-      <!--div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
-      </div-->
+      </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="//h65.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #002e69;
+      background-color: #002350;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -245,7 +245,7 @@
     height: sizem(63);
     gap: sizem(1);
     //box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#004271;
+    background:#b48339;
 
     .contact-item {
       height: 100%;      

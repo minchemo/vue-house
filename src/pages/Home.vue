@@ -46,7 +46,7 @@
 }
 
 .home{
-  background:#c70014;
+  background:#00457e;
 }
 /*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
