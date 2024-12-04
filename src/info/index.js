@@ -79,7 +79,7 @@ export default {
     //},
     {
       name: "立即預約",
-      target: ".order",
+      target: ".form",
       offset: "",
       type: "btn",
     },

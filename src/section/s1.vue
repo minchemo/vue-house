@@ -6,7 +6,7 @@
     <div class="txt relative" data-aos="fade-up" data-aos-delay="400">
       <img  src="./s1/txt.svg" alt="txt" v-if="!isMobile" />
       <img  src="./s1/txtm.svg" alt="txt" v-else />
-      <div class="button absolute">即刻<br>預約</div>
+      <div class="button absolute"  @click="scrollTo('.form')">即刻<br>預約</div>
     </div>
   </article>
 </template>
@@ -69,4 +69,9 @@ const globals = getCurrentInstance().appContext.config.globalProperties
 
 const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el),
+  })
+}
 </script>

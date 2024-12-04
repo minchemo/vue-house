@@ -43,7 +43,7 @@
       <img src="@/section/form/messenger.svg" alt="messenger" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.form')">
       <img src="@/section/form/pen.svg" alt="pen" srcset="" />
       <div>預約賞屋</div>
     </div>
