@@ -53,10 +53,6 @@
       </div>
       <Policy />
 
-      <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
-
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
         {{ sending ? '發送中..' : '送出表單' }}
@@ -250,7 +246,7 @@ const formData = reactive({
   area: "",
   note: "",
   policyChecked: false,
-  r_verify: false,
+  r_verify: true,
 })
 
 //非必填
