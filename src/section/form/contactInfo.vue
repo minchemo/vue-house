@@ -29,6 +29,11 @@
     </div>
 
   </div>
+  
+  <div class="gmap relative z-10" v-if="info.address"
+        @click="modalOpen = true; modalType = 'gmap'">
+       <img src="@/section/form/map.webp" alt="map" srcset="" />
+  </div>
 
 
   <!-- Mobile contact info -->
@@ -286,6 +291,18 @@
     }
   }
 }
+
+.gmap {
+    width: 100vw;left: calc(50% - 50vw);
+    cursor: pointer;
+//   height: size(500);
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
   .mo-contact-info {

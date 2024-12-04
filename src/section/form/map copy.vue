@@ -1,8 +1,6 @@
 <template>
     <div class="gmap relative z-10">
-        <!--<iframe :src="info.googleSrc" frameborder="0"></iframe>-->
-        
-      <a ><img src="@/section/form/map.webp" alt="map" srcset="" /></a>
+        <iframe :src="info.googleSrc" frameborder="0"></iframe>
     </div>
 </template>
 

@@ -8,7 +8,7 @@ export default {
   },
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
-  // address: "106台北市大安區四維路",
+  address: "台北市大安區四維路228巷",
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3615.2501350099815!2d121.54527073809136!3d25.025583998608102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAxJzMyLjEiTiAxMjHCsDMyJzUyLjMiRQ!5e0!3m2!1szh-TW!2stw!4v1719977983560!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/KReJu6c3Bo7XfvtZ6",
@@ -17,6 +17,15 @@ export default {
   fbMessage: "https://m.me/61564023519818/",
   caseName: caseName,
   houseInfos: [
+    ["投資興建", "精誠國際建設企業股份有限公司"],
+    ["建築代銷", "聯碩行銷股份有限公司"],
+    ["建築規劃", "大硯建築師事務所"],
+    ["營建顧問", "台灣大林組營造股份有限公司"],
+    ["營造施工", "翊豐營造股份有限公司"],
+    ["結構工程", "聯邦工程顧問股份有限公司"],
+    ["物業管理", "新美齊物業113建字第0233號"],
+    ["建照號碼", "113建字第0233號"],
+    ["經紀人", "陳盈志（109）南市字第00684號"],
   ],
   gtmCode: ["GTM-P3JCJ3HC"], // 可放置多個
   recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3

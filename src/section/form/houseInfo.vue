@@ -1,116 +1,163 @@
 <template>
-    <div class="house" v-if="info.houseInfos.length > 0">
-        <div class="flex h-full flex-col md:flex-row items-center justify-between">
-            <div class="flex-1 items-center justify-center py-10">
-                <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
-                    <div class="title">建案資訊</div>
-                    <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                            v-for="item in info.houseInfos" :key="item">
-                            <p class="mr-5 border-l-2 border-[#3E3A39] pl-2 text-[#3E3A39] font-[700]" v-html="item[0]"></p>
-                            <p class="whitespace-pre-line leading-normal text-left text-[#3E3A39] font-normal"
-                                v-html="item[1]">
-                            </p>
-                        </div>
-                    </div>
+    <div class="house-info text-white relative">
+        <img class="bg absolute bottom-[40px] left-0 w-full md:hidden" src="@/section/form/bg2.png" />
+        <!-- <img class="bg hidden md:block" src="@/section/s1/bg.png" /> -->
+        <!-- <img class="bg md:hidden" src="@/section/s1/bg-m.png" /> -->
+        <!-- <div class="links relative">
+            <a target="_blank" href="https://www.da-li.com.tw/">
+                <img src="@/section/form/btn1.svg" alt="達麗建設官網" />
+            </a>
+            <a target="_blank" href="https://unigiants.com.tw/">
+                <img src="@/section/form/btn2.svg" alt="聯碩行銷團隊官網" />
+            </a>
+            <a target="_blank" href="https://www.facebook.com/unigiant/">
+                <img src="@/section/form/btn3.svg" alt="聯碩城市風格誌" />
+            </a>
+        </div> -->
+        <div class="content relative">
+           <!--  <div class="title">建案資訊</div> -->
+            <div class="list">
+                <div class="item flex justify-start items-stretch" v-for="(item, idx) in info.houseInfos" :key="idx">
+                    <div class="t1 whitespace-nowrap">{{ item[0] }}</div>
+                    <div class="ll relative"></div>
+                    <div class="t2 whitespace-nowrap">{{ item[1] }}</div>
                 </div>
             </div>
         </div>
+        <img class="logo2 relative" src="@/section/s1/logo.svg" alt="敦南詠楽" />
+        <div class="bottomen absolute" data-aos="fade-up" data-aos-delay="0">The Aesthetics of Silence</div>
     </div>
-    <!-- 
-    <div class="bg-[#ceaa6d]  py-5 flex items-center justify-center">
-            <p class="db"><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
-    </div> -->
+<!--
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
-        <a href="https://www.h35.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
-    </div>
+                src="@/section/form/footerlogo.gif" alt="達麗河蘊" srcset=""></a>
+        <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
+    </div>  -->
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-// .map {
-//     width: size(772);
-//     height: size(642);
-//     background-color: #75E3D5;
-//     background-image: url('@/section/form/map.png');
-//     background-size: contain;
-//     background-position: center;
-//     background-repeat: no-repeat;
-// }
-.displaynone{display: none;}
-.house {
-   // height: auto;
-    font-size: size(22);
-    // background: #E89213;
-    background: url('@/section/house_bg.jpg');
-   // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
-    padding: 50px 0;
-}
-.info-box {
-    width: size(900);
-
-    .title {
-        font-size: size(40);
-        font-weight: 700;
-        color: #3E3A39;
-        margin: 0 auto 0em auto;
+.house-info {
+    width: 100%;
+    margin: 0 auto;
+    padding: sizem(42) sizem(50) sizem(100) sizem(50);
+    font-family: 'Noto Serif TC';
+    background: #30859966;
+    @media screen and (min-width:768px) {
+        // padding: size(116) size(0);
+        padding: 0;
+      //  height: size(968);
     }
 
-    .info-items {
-        row-gap: size(20);
-        column-gap: size(20);
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
 
-        .item {
-            line-height: size(17);
-            font-size: size(16);
-            align-items: flex-start;
-            line-height: 1.5;
-            text-align: left;
+    .links {
+        margin-bottom: size-m(38);
+        @media screen and (min-width:768px) {
+            margin-bottom: 0;
+            position: absolute;
+            top: size(119);
+            left: size(128);
+        }
 
-            p:first-child {
-                // min-width: 4.5em;
+        img {
+            height: size-m(25);
+            width: auto;
+            margin-bottom: size-m(13);
+            @media screen and (min-width:768px) {
+                height: size(43);
+                margin-bottom: size(23);
             }
         }
     }
-}
-@media screen and (max-width:768px) {
-.house {
-    // background:#fff;
-  //  height: sizem(400);
-    font-size: sizem(14);
-}
-    .footer {
-        margin-bottom: sizem(0);
-        //margin-bottom: sizem(63);
-    }
 
-    .info-box {
-        width: sizem(313);
-        padding: 0;
+    .content {
+        @media screen and (min-width:768px) {
+          //  position: absolute;
+            width: size(700);
+            margin: 0 size(200) 0 auto;
+          //  top: size(129);
+          //  left: size(867);
+        }
 
         .title {
-            font-size: sizem(29);
-            width: auto;
+            font-weight: 700;
+            font-size: sizem(18);
+            line-height: sizem(26);
+            text-align: left;
+            @media screen and (min-width:768px) {
+                font-size: size(29);
+                line-height: size(42);
+                margin-bottom: size(28);
+            }
         }
 
-        .info-items {
-            row-gap: sizem(20);
+        .list {
+            font-weight: 500;
+            font-size: sizem(12);
+            line-height: 1.4;
+            margin-bottom: size-m(74);
+            @media screen and (min-width:768px) {
+                font-size: size(25);
+                line-height:2.5;
+                margin-bottom: size(0);
+            }
 
             .item {
-                font-size: sizem(14);
+                margin-top: sizem(15);
+            border-bottom: 1px solid #FFF9;
+                @media screen and (min-width:768px) {
+                    margin-top: size(3);
+                }
+            }
+            .t1{width: 5em;text-align: right;}
+
+            .ll {margin: .5em;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 0.4em);
+                    left: 0;
+                   // right: size-m(10);
+                    height:1em;width: 1px;
+                    background: #fff;
+                    @media screen and (min-width:768px) {
+                      //  left: size(10);
+                     //   right: size(10);
+                    }
+                }
             }
         }
     }
 
+    .logo2 {
+        width: 100%;
+        @media screen and (min-width:768px) {
+            position: absolute;
+            width: size(450);
+            top: size(300);
+            left: size(250);
+        }
+    }
+    
+    .bottomen{bottom: sizem(50);left:sizem(30);font-size: sizem(8);color: #FFF;
+    text-transform:uppercase;
+    @media screen and (min-width: 768px) {
+        bottom: size(100);left:size(130);font-size: size(17);
+        letter-spacing: 0.06em;
+    }
+    }
 }
 </style>
 
 <script setup>
 import info from "@/info"
-
-
 </script>
