@@ -188,6 +188,10 @@ const imgs = [
     img:new URL("./s4/1.webp", import.meta.url).href ,
     caption: "國道10號"
   },
+  {
+    img:new URL("./s4/2.webp", import.meta.url).href ,
+    caption: "國道七號及高屏二快預計規畫路線"
+  },
 ]
 </script>
 

@@ -194,6 +194,10 @@ const imgs = [
     img:new URL("./s3/2.webp", import.meta.url).href ,
     caption: "中科院大樹院區"
   },
+  {
+    img:new URL("./s3/3.webp", import.meta.url).href ,
+    caption: "205兵工廠拆遷至中科院林園營區、大樹北營區示意圖"
+  },
 ]
 </script>
 
