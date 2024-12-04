@@ -216,8 +216,9 @@
     gap: size(20);
 
     .contact-item {
-      border: 2px solid #FFF;
-      color: #FFF;
+      background: #fff;
+      //border: 2px solid #FFF;
+      color: #1d536b;
       width: 100%;
       padding: 0 size(55);
       border-radius: size(0);
@@ -243,8 +244,8 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(1) invert(1);
-       // filter: invert(37%) sepia(18%) saturate(1106%) hue-rotate(155deg) brightness(94%) contrast(96%);
+        // filter: brightness(1) invert(1);
+        filter: invert(37%) sepia(18%) saturate(1106%) hue-rotate(155deg) brightness(94%) contrast(96%);
 
         transition: all 0.5s;
       }
@@ -256,31 +257,37 @@
         // border-radius: 999px 0 0 999px;
         max-width: 9999px;
         justify-content: center;
-        border: 2px solid #FFF;
+       // border: 2px solid #FFF;
         border-right-width: 0px;
-        color: #FFF;
+        color: #1d536b;
         @apply basis-2/3 ;
+        cursor:auto;
+        &:hover {
+          
+        background-color: #fff;
+        color: #1d536b;
+        }
       }
 
       &.googlemap {
-        background-color: #fff;
-        color: #36677f;
+        background-color: #36677f;
+        color: #fff;
         border: 0;
-        border: 1px solid #fff;
+        //border: 1px solid #fff;
         gap: size(20);
         @apply basis-1/3 ;
 
         img {
-        filter: invert(37%) sepia(18%) saturate(1106%) hue-rotate(155deg)
-          brightness(94%) contrast(96%);
+        filter: brightness(1) invert(1);
+        //filter: invert(37%) sepia(18%) saturate(1106%) hue-rotate(155deg) brightness(94%) contrast(96%);
         }
 
         &:hover {
-          background-color: #fff;
-          color: #000;
+          background-color: #094664;
+          color: #fff;
 
           img {
-            filter: brightness(1) invert(0);
+            filter: brightness(1) invert(1);
           }
         }
       }

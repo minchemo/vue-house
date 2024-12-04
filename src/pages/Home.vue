@@ -33,6 +33,7 @@
     <img class="wave" src="@/section/s1/wave.gif" alt="" srcset="" />
     <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
     <img class="wave" src="@/section/s1/wave.gif" alt="" srcset="" />
+    <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
   </div>
   </div>
     <S1 />
@@ -76,7 +77,7 @@ img {
   background: url("@/section/s1/bg.jpg") center top;
   background-size: 270% auto;
     transform: translateY(0); // 初始位置
-    transition: transform 0.1s ease-out; // 平滑過渡效果（可選）
+    transition: transform 0.2s ease-out; // 平滑過渡效果（可選）
     @media screen and (min-width: 768px) {
       background-size: 100% auto;
     }

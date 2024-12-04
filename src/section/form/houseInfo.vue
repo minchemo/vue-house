@@ -1,7 +1,8 @@
 <template>
     <div class="house-info text-white relative">
-        <img class="bg absolute bottom-[40px] left-0 w-full md:hidden" src="@/section/form/bg2.png" />
-        <!-- <img class="bg hidden md:block" src="@/section/s1/bg.png" /> -->
+        <img class="logo2 relative" src="@/section/s1/logo.svg" alt="敦南詠楽" />
+        <!--
+        <img class="bg absolute bottom-[40px] left-0 w-full md:hidden" src="@/section/form/bg2.png" /> <img class="bg hidden md:block" src="@/section/s1/bg.png" /> -->
         <!-- <img class="bg md:hidden" src="@/section/s1/bg-m.png" /> -->
         <!-- <div class="links relative">
             <a target="_blank" href="https://www.da-li.com.tw/">
@@ -24,7 +25,6 @@
                 </div>
             </div>
         </div>
-        <img class="logo2 relative" src="@/section/s1/logo.svg" alt="敦南詠楽" />
         <div class="bottomen absolute" data-aos="fade-up" data-aos-delay="0">The Aesthetics of Silence</div>
     </div>
 <!--
@@ -41,12 +41,12 @@
 .house-info {
     width: 100%;
     margin: 0 auto;
-    padding: sizem(42) sizem(50) sizem(100) sizem(50);
+    padding: sizem(40) sizem(0) sizem(100) sizem(0);
     font-family: 'Noto Serif TC';
     background: #30859966;
     @media screen and (min-width:768px) {
         // padding: size(116) size(0);
-        padding: 0;
+        padding: size(150) 0;
       //  height: size(968);
     }
 
@@ -80,6 +80,7 @@
     }
 
     .content {
+        width: sizem(300);margin: auto;
         @media screen and (min-width:768px) {
           //  position: absolute;
             width: size(700);
@@ -102,20 +103,19 @@
 
         .list {
             font-weight: 500;
-            font-size: sizem(12);
-            line-height: 1.4;
+            font-size: sizem(14);
+            line-height:2.7;
             margin-bottom: size-m(74);
             @media screen and (min-width:768px) {
                 font-size: size(25);
-                line-height:2.5;
                 margin-bottom: size(0);
             }
 
             .item {
-                margin-top: sizem(15);
-            border-bottom: 1px solid #FFF9;
+              // margin-top: sizem();
                 @media screen and (min-width:768px) {
-                    margin-top: size(3);
+                 //   margin-top: size(3);
+            border-bottom: 1px solid #FFF9;
                 }
             }
             .t1{width: 5em;text-align: right;}
@@ -139,20 +139,22 @@
     }
 
     .logo2 {
-        width: 100%;
+        width: sizem(230);margin: sizem(50) auto;
         @media screen and (min-width:768px) {
             position: absolute;
-            width: size(450);
-            top: size(300);
+            width: size(550);
+            top: size(300);margin:auto;
             left: size(250);
         }
     }
     
-    .bottomen{bottom: sizem(50);left:sizem(30);font-size: sizem(8);color: #FFF;
+    .bottomen{bottom: sizem(50);left:0;font-size: sizem(13);color: #FFF;width: 100%;
     text-transform:uppercase;
+    letter-spacing: 0.1em;
     @media screen and (min-width: 768px) {
-        bottom: size(100);left:size(130);font-size: size(17);
-        letter-spacing: 0.06em;
+        bottom: size(160);left:size(250);font-size: size(17);
+        width: size(550);
+        text-align: center;
     }
     }
 }
