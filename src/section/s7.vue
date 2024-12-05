@@ -6,14 +6,21 @@
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">精誠國際，堅持初衷｜哲學品牌</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">Deep In The Soul</h3>
-
-      <div class="pic relative" data-aos="fade-up" data-aos-delay="400">
+      <div class="txt1">
+        <div class="pic relative" data-aos="fade-up" data-aos-delay="400">
           <img src="./s7/1.jpg" alt="">
         </div>
-        <div class="t1" data-aos="fade-up" data-aos-delay="0">從土地出發、<br>與環境分享、與生活共好</div>
-        <p class="desc" data-aos="fade-up" data-aos-delay="200">精誠國際著眼於自身對土地的熱愛與專業，與對美好建築的執著與想望，組織專業團隊充分發揮土地價值，在友善自然的環境中，為客戶構築一輩子珍愛的高品質住宅。</p>
-        <div class="t2" data-aos="fade-up" data-aos-delay="400">與城市友善共生，<br>容積服務第一品牌</div>
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">成功必須從小地方開始累積，這是精誠國際堅守的信念與價值，20多年來持續協助解決都會區中巷弄狹隘與房屋老舊的問題，推動城市邁向友善環境的嶄新理想風貌。</p>
+        <div class="txt2">
+          <div>
+            <div class="t1" data-aos="fade-up" data-aos-delay="0">從土地出發、<br>與環境分享、與生活共好</div>
+            <p class="desc" data-aos="fade-up" data-aos-delay="200">精誠國際著眼於自身對土地的熱愛與專業，與對美好建築的執著與想望，組織專業團隊充分發揮土地價值，在友善自然的環境中，為客戶構築一輩子珍愛的高品質住宅。</p>
+          </div>
+          <div>
+            <div class="t2" data-aos="fade-up" data-aos-delay="400">與城市友善共生，<br>容積服務第一品牌</div>
+            <p class="desc" data-aos="fade-up" data-aos-delay="600">成功必須從小地方開始累積，這是精誠國際堅守的信念與價值，20多年來持續協助解決都會區中巷弄狹隘與房屋老舊的問題，推動城市邁向友善環境的嶄新理想風貌。</p>
+          </div>
+        </div>
+      </div>
       <div class="pic2 relative" data-aos="fade-up" data-aos-delay="400">
         <img src="./s7/bom.svg" alt="" v-if="isMobile">
         <img src="./s7/bo.svg" alt="" v-else>
@@ -52,7 +59,7 @@
 .pic{width:sizem(310);
 img{width: 100%;}
 @media screen and (min-width: 768px) {
-  float: left;width:size(950);
+  float: left;width:size(920);
   margin: 0 size(130) 0 0;
 
 }
@@ -92,20 +99,27 @@ img{width: 100%;}
       width: size(560);font-size: 1.6em;padding: 0;margin: 0;
     }
   }
-  .t1{display:block;margin:1em 0 .5em 0;width: sizem(280);font-size: 1.6em;line-height: 1.3;
+  
+  @media screen and (min-width: 768px) {
+  .txt2{
+    display: flex;flex-direction:column;height:100%;justify-content:space-between;
+    
+  }
+}
+  .t1{display:block;margin:1em 0 .8em 0;width: sizem(280);font-size: 1.6em;line-height: 1.3;
     @media screen and (min-width: 768px) {
-      font-size: 2em;padding: 0;
+      font-size: 2.5em;padding: 0;margin:0em 0 1em 0;
       width: auto;
     }
   }
-  .t2{display:block;margin:1em 0 .5em 0;width: sizem(280);font-size: 1.4em;line-height: 1.3;
+  .t2{display:block;margin:2em 0 .9em 0;width: sizem(280);font-size: 1.4em;line-height: 1.3;
     @media screen and (min-width: 768px) {
-      width:auto;font-size: 1.8em;padding: 0;margin:2em 0 .5em 0;
+      width:auto;font-size: 2.5em;padding: 0;margin:2em 0 1em 0;
     }
   }
-  .desc{width: sizem(280);text-align: justify;color: #000;margin: -.2em 0 0.5em ;
+  .desc{width: sizem(280);text-align: justify;color: #000;margin: -.2em 0 .8em ;
     @media screen and (min-width: 768px) {
-      width: auto;margin: 0  size(250) 0 0;
+      width: auto;margin: 0  size(270) 0 0;
     }
   }
 }

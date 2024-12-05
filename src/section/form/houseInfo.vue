@@ -19,7 +19,7 @@
            <!--  <div class="title">建案資訊</div> -->
             <div class="list">
                 <div class="item flex justify-start items-stretch" v-for="(item, idx) in info.houseInfos" :key="idx">
-                    <div class="t1 whitespace-nowrap">{{ item[0] }}</div>
+                    <div class="t1">{{ item[0] }}</div>
                     <div class="ll relative"></div>
                     <div class="t2 whitespace-nowrap">{{ item[1] }}</div>
                 </div>
@@ -118,16 +118,23 @@
             border-bottom: 1px solid #FFF9;
                 }
             }
-            .t1{width: 5em;text-align: right;}
+            .t1{width: 4.2em;text-align: justify;margin:0 0 -2.7em 0;
+            &::after{
+                content: "";
+                width: 100%;
+                display: inline-block;
+                height: 1px;
+            }
+            }
 
             .ll {margin: .5em;
                 &:after {
                     content: "";
                     position: absolute;
-                    top: calc(50% - 0.4em);
+                    top: calc(50% - 0.5em);
                     left: 0;
                    // right: size-m(10);
-                    height:1em;width: 1px;
+                    height:1.05em;width: 1px;
                     background: #fff;
                     @media screen and (min-width:768px) {
                       //  left: size(10);
