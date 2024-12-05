@@ -129,7 +129,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #19A3CEcc;
+        background: #00494ab3;
         width:100%;
         height: size(60);
         z-index: 5;
@@ -171,14 +171,13 @@
                 }
             }
             &.btn2{
-                background:#0466CA;
-;
+                background:linear-gradient(180deg, #FFE6AE 0%, #E89F00 49%, #BA7F00 50%, #B27700 100%);
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
 
                 &:hover {
-                    background:#014d99;
+                    background:linear-gradient(180deg, #FFE6AE 0%, #c97900 49%, #a35c00 50%, #7a4100 100%);
                     &:after {
                         width:0;
                     }
