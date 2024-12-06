@@ -68,7 +68,7 @@ img{width: 100%;}
 .pic2{width:sizem(280);margin:3em auto 0 auto;
 img{width: 100%;}
 @media screen and (min-width: 768px) {
-  margin:size(370) auto 0 auto;
+  margin:size(150) auto 0 auto;
   img{width: 100%;}
 
 }
@@ -101,6 +101,7 @@ img{width: 100%;}
   }
   
   @media screen and (min-width: 768px) {
+    .txt1{height: size(637);}
   .txt2{
     display: flex;flex-direction:column;height:100%;justify-content:space-between;
     
