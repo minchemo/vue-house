@@ -7,7 +7,7 @@
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos" :key="item">
-                            <p class="mr-5 border-l-2 border-[#0AA] pl-2 text-[#0AA] font-[700]" v-html="item[0]"></p>
+                            <p class=" border-l-2 border-[#0AA] pl-2 text-[#0AA] font-[700]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal"
                                 v-html="item[1]">
                             </p>
@@ -61,7 +61,7 @@
             text-align: left;
 
             p:first-child {
-                // min-width: 4.5em;
+                 min-width: 6em;
             }
         }
     }
