@@ -5,8 +5,8 @@
 <img src="./s1/lineicon.png" class="lineicon" data-aos="zoom-in" data-aos-delay="200" /> 
 </a>  -->
 	<!-- 
-		<img src="./s1/pc.jpg" class="t0">  -->
-		<img src="./s1/mo.jpg" class="t0">
+		<img src="./s1/pc.jpg" class="t0"> 
+		<img src="./s1/mo.jpg" class="t0"> -->
     
     
     
@@ -34,6 +34,9 @@
  // max-height: size(1140);
  // height: 100vh;
  height: sizem(667);
+  min-height: sizem(604);
+  max-height: sizem(750);
+  height: calc(100vh - 63px);
   font-size:sizem(33);
   display: flex;
   flex-direction: column;
@@ -44,7 +47,10 @@
   font-weight: 700;
 
   @media screen and (min-width: 768px) {
- height: size(1080);
+ // height: size(1080);
+  min-height: size(900);
+  max-height: size(1080);
+  height: 100vh;
   font-size:size(53);
   }
 
@@ -57,126 +63,7 @@
 }
   .t1{margin-top: .8em;text-align: center;
   }
-
-
-  /*
-.lineicon{
-  position: fixed;
-  width: size(80);
-  height: size(80);
-  right: size(20);
-  bottom: size(120);
-  z-index: 99;
 }
-
-  .img{
-	position: absolute;
-	top: size(190);
-	left:size(1343);
-	//height: size(992);
-	height: 87%;
-	img{position: relative;
-	&:first-child{position: absolute;
-		transform: rotate(-3deg);
-		transform-origin: 90% 150%;
-		animation: an 2s ease-in-out infinite alternate;
-    top: -12.5%;
-    width: 70%;
-    left: -20%;}
-	&:last-child{position: absolute;
-    top: 29%;
-    width: 46%;
-    left: 70%;}
-	&:nth-child(2){height:100%;
-		transform: rotate(1deg);
-		transform-origin: 30% 90%;
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-	}
-
-
-  }
-  .txt{
-	position: absolute;
-	left: 0;right: 0;margin: auto;top:size(357);
-	top: calc(50% + #{size(357 - 1140 * .5)});
-	text-align: center;
-    width:size(726);
-	
-	.eggbg{position: absolute;
-    top: -44%;
-    display: block;
-    width: 196%;
-    left: -48%;}
-	.logo{position: relative;display: block;margin: auto;
-    width:100%;z-index: 3;}
-	.txt1{position: relative;display: block;margin:4% auto auto auto;
-    width:99.2%;left: 1.8%;z-index: 3;}
-  }
-  .oo1{position: absolute;top:size(225);height:size(50);left:size(260);
-	top: calc(50% + #{size(225 - 1140 * .5)});
-		transform: translateX(20%);
-		animation: an 3s ease-in-out infinite alternate;}
-  .oo2{position: absolute;top: size(970);height:size(50);right:size(-100);
-	top: calc(50% + #{size(970 - 1140 * .5)});
-		transform: translateX(-15%);
-		animation: an 2s ease-in-out infinite alternate-reverse;
-img{height: 100%;transform: scaleX(-1);}}
-*/
-
-
-}
-
-  
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-/*
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-@media screen and (max-width: 767px) {
-
-  .s1 {
-    height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(821);
-    font-size:sizem(14);
-	background-position: center;
-  background-size:170% 100%;
-
-	.img{
-	position: absolute;
-	top: sizem(135);
-	top: calc(35% + #{sizem(135 - 604 * .35)});
-	left:sizem(232);
-	min-height: sizem(430);
-	height:60%;
-	img{
-	&:first-child{
-	top: -15%;
-    width: 79%;
-    left: -28%;}
-	&:last-child{
-    top: 82%;
-    width: 61%;
-    left: -34%;}
-}
-}
-  .txt{top:sizem(246);left:sizem(-90);
-	top: calc(50% + #{sizem(246 - 604 * .5)});
-    width:sizem(224);
-	.eggbg{
-    top: -49%;
-    width: 163%;
-    left: -32%;}
-
-  }
-  .oo1{top:sizem(140);height:sizem(20);left:sizem(-20);
-	top: calc(50% + #{sizem(140 - 604 * .5)});}
-  .oo2{top:sizem(490);height:sizem(20);right:sizem(-65);
-	top: calc(50% + #{sizem(490 - 604 * .5)});}
-
-    
-  }
-}*/
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref ,inject} from 'vue';

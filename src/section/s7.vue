@@ -2,7 +2,7 @@
   <article class="s7" ref="s7">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">質感建材精品 舒適寧靜環保</h3>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">質感建材精品<br v-if="isMobile"> 舒適寧靜環保</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">嚴選TOTO日本百年衛浴、櫻花廚具料理美味、晶鑽木地板溫潤寧境、大合石膏磚環保輕隔間綠建材、耶魯美國知名電子門鎖…不只安全健康舒適，更全面提升居家質感品味。</p>
     </div>
     </div>
@@ -73,7 +73,7 @@
 
 
 .s7 {
-@apply flex-col;
+  @apply flex-col-reverse;
   height: auto;
   padding: 0;
 font-size:sizem(15);
@@ -90,8 +90,7 @@ gap:0em;
   padding: 0 sizem(32.5);
   width: 100%;
 }
-
-.txt {margin: 4.4em auto 1.3em;
+.txt {margin: 2em auto 5em;
 }
 
 

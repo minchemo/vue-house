@@ -27,11 +27,9 @@
     <S5 />
     <S6 />
     <S7 />
+    <S8 />
     <Order />
   <!--
-    <S6 />
-    <S7 />
-    <S8 />
     <S9 />
     <S1new />
     <S1new2 /> -->
@@ -130,6 +128,7 @@ img {
   z-index: 2;
   .slide-item{
   img{width: 100%;height: 100%;//border-radius: 1em;
+    object-fit: cover;
   }
   
   }
@@ -252,6 +251,7 @@ import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
+import S8 from "@/section/s8.vue"
 import Order from "@/section/order.vue"
 import { ref, onMounted, onUnmounted } from "vue"
 

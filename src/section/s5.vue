@@ -95,10 +95,13 @@
     bottom:sizem(5);
     }
     .slide-item {
-      @apply bg-cover;
+      // @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(330);
+  img{
+    object-fit: contain;
+  }
       
     }
   }
