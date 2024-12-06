@@ -91,7 +91,7 @@
 
     .caption {
     font-size:sizem(12);  
-    right:sizem(5);
+    right:sizem(65);
     bottom:sizem(5);
     }
     .slide-item {

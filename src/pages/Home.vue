@@ -18,7 +18,9 @@
   <div class="home relative overflow-hidden font-['Noto_Sans_TC',sans-serif]">
   <div class="allbg">
     <!-- bg內容想做成滾動視差 去符合 allbg 的高度-->
-  <div class="bg"></div>
+  <div class="bg">
+
+  </div>
 </div>
     <S1 />
     <S2 />
@@ -65,8 +67,8 @@ img {
 .allbg{
   position: absolute;
   top: 0;left: 0;right: 0;bottom: 0;height: 100%;
-  background: url("@/section/s1/bg.jpg") center top;
-  background-size: 270% auto;
+  // background: url("@/section/s1/bg.jpg") center top;
+  // background-size: 270% auto;
     @media screen and (min-width: 768px) {
       background-size: 100% auto;
     }
@@ -75,11 +77,11 @@ img {
   width: 100%;
   height: auto;
 }
-  .bg{width: 100%;height: 100%;
+  .bg{width: 100%;height: calc(100% + 100vw);
   background: url("@/section/s1/bg.jpg") center top;
   background-size: 270% auto;
     transform: translateY(0); // 初始位置
-    transition: transform 0.2s ease-out; // 平滑過渡效果（可選）
+    transition: transform 0.5s ease-out; // 平滑過渡效果（可選）
     @media screen and (min-width: 768px) {
       background-size: 100% auto;
     }
@@ -111,6 +113,7 @@ img {
     line-height: 1.5;
     font-weight: 900;
     color: #FD3;
+    text-shadow: 0 0 10px #003838,0 0 3px #003838;
   }
   .subtitle{
     font-size: 1.1em;
@@ -120,6 +123,7 @@ img {
   }
   .desc{
     margin: 0 0 0;
+    text-shadow: 0 0 10px #003838,0 0 3px #003838;
     b{}
   }
   }
@@ -193,9 +197,6 @@ img {
 @media screen and (max-width: 767px) {
   
 
-.home > .bgh{width: 250%;
-  top: 0;left: 0;
-}
   .caption{
       font-size: sizem(12);}
 
@@ -253,11 +254,14 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import Order from "@/section/order.vue"
-import { ref, onMounted, onUnmounted } from "vue"
+import { computed, getCurrentInstance, ref, onMounted, onUnmounted } from "vue";
+
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
-
+/*
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
@@ -268,8 +272,8 @@ onMounted(() => {
   };
 
 })
+*/
 
-/*
 const config = ref({
   showNav: false
 })
@@ -283,7 +287,7 @@ onMounted(() => {
       window.requestAnimationFrame(() => {
         const scrollPosition = window.scrollY;
         if (allbg) {
-          allbg.style.transform = `translateY(${scrollPosition * 0.25}px)`; // 0.3 為速度係數
+          allbg.style.transform = `translateY(${scrollPosition * (globals.$isMobile()?-0.17:-0.27)}px)`; // 0.3 為速度係數
         }
         ticking = false; // 完成處理後重置
       });
@@ -307,5 +311,5 @@ onMounted(() => {
     window.removeEventListener("scroll", handleScroll);
   });
 });
-*/
+
 </script>

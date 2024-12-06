@@ -8,15 +8,6 @@
 		<img src="./s1/pc.jpg" class="t0"> 
 		<img src="./s1/mo.jpg" class="t0"> -->
     
-    
-    
-    <!-- 
-	<div class="txt">
-		<img src="./s1/bg3.webp" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="eggbg" alt="蛋黃"><img src="./s1/logo.svg" alt="logo" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" class="logo"><img src="./s1/txt.svg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" alt="txt" class="txt1">
-	</div>
-	<div class="img"><img src="./s1/b.webp" alt="多會微笑!"><img src="./s1/img.webp" alt="李多慧"><img src="./s1/mark.svg" alt="李多慧"></div>
-	<img src="./s1/oo.svg" alt="oo" class="oo1">
-	<div class="oo2"><img src="./s1/oo.svg" alt="oo"></div> -->
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <div class="t1 font-['Noto_Serif_TC',serif]" v-if="isMobile" data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王<br>25~34坪市心地標</div>
   <div class="t1 font-['Noto_Serif_TC',serif]" v-else  data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王｜25~34坪市心地標</div>
@@ -35,7 +26,7 @@
  // height: 100vh;
  height: sizem(667);
   min-height: sizem(604);
-  max-height: sizem(750);
+  max-height: sizem(700);
   height: calc(100vh - 63px);
   font-size:sizem(33);
   display: flex;
@@ -56,9 +47,9 @@
 
   .t0{position: absolute;width: 100%;top: 0;left: 0; 
 	pointer-events: none;opacity: .3;z-index: 50;}
-  .logo{width:sizem(246);
+  .logo{width:sizem(246);margin-top: -2em;
   @media screen and (min-width: 768px) {
-    width:size(424);
+    width:size(424);margin-top:0em;
   }
 }
   .t1{margin-top: .8em;text-align: center;

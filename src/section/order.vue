@@ -24,25 +24,25 @@
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
            <option value="" selected disabled>請選擇房型</option> 
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
           <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
            <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value">
+            <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
           <label class="row"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value">
+            <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
           </select></label>
@@ -54,7 +54,7 @@
       </div>
 
       <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control">
+      <div class="flex gap-2 items-center justify-center control relative z-10">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
         <p class="text-[#fff]">
@@ -65,7 +65,7 @@
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+      <vue-recaptcha class="flex justify-center mt-8 relative z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
@@ -95,14 +95,13 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
- background: transparent;
-  .bg-image {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: size(50);
-    vertical-align: middle;
-  }
+ // background: transparent;
+ &::before{
+  content: "";display: block;left: 0;right: 0;margin: auto;z-index:1;
+  position: absolute;width:size(1200);height: size(700);
+  border-radius: 50px 50px 0px 0px;
+  background: linear-gradient(180deg, #003838 0%, rgba(0, 56, 56, 0.00) 100%);
+ }
 
 }
 
@@ -114,17 +113,19 @@
 
 
   .order-title {
+    position: relative;
     font-size: size(40);
     font-weight: 700;
     color: #FD3;
-    padding-top:2em;
+    padding-top:2em;z-index:5;
   }
 
   .order-title-img {
     width: size(1008);
     margin-bottom: size(155);
   }
-  .order-subTitle{
+  .order-subTitle{z-index:5;
+    position: relative;
     font-size: size(17);
     color: #fff;
     padding-top:.8em;
@@ -198,7 +199,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background:#0466CA;
+    background:#056;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -219,16 +220,14 @@
 }
 
 @media screen and (max-width:768px) {
-.eggbg3{
-    top: sizem(-10);right:sizem(-100);width:sizem(300);}
-	.eggbg4{
-    top: sizem(400);left:sizem(0);width:sizem(50);}
-  .oo3{top:sizem(10);height:sizem(20);left:auto;right:sizem(30);}
 
 
   .order-section {
     min-height: sizem(800);
     position: relative;
+ &::before{
+  position: absolute;width:100%;height: sizem(700);
+ }
     // overflow: hidden;
    // padding-top: sizem(200);
 
