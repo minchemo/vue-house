@@ -8,13 +8,12 @@
    -->
 
    <div class="con flex">
-  <img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="0">
-  <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="100">
-  <img src="./s1/t3.svg" v-if="!isMobile" alt="title" class="t3" data-aos="zoom-in" data-aos-delay="300">
-  <img src="./s1/t3m.svg" v-else alt="title" class="t3" data-aos="zoom-in" data-aos-delay="300">
+    <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
+  <img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="100">
+  <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="300">
   </div>
 
-  <img src="./s1/logoicon.svg" alt="logoicon" class="logoicon" data-aos="zoom-in" data-aos-delay="600">
+  <img src="./s1/logoicon.svg" alt="logoicon" class="logoicon">
   </article>
 </template>
 
@@ -49,26 +48,25 @@
     display: flex;
     flex-direction: column;
 
+  .logo{
+    width: size(420);
+    }
 
   .t1{
-    width: size(884);
-    //margin-bottom: size(250);
+    width: size(417);
+    margin-top: size(30);
     }
   .t2{
-    width: size(602);
-    margin-top: size(40);
-  }
-  .t3{
-    width: size(885);
-    margin-top: size(40);
+    width: size(538);
+    margin-top: size(30);
   }
 
   }
   .logoicon{
-    width: size(605);
+    width: size(438);
     position: absolute;
     bottom: size(50);
-    right: size(650);
+    right: size(730);
   }
   
  
@@ -157,16 +155,15 @@ animation: ball 5s ease-in-out alternate infinite;}
     flex-direction: column;
 
 
+  .logo{
+    width: sizem(197);
+    }
   .t1{
-    width: sizem(303);
-    //margin-bottom: size(250);
+    width: sizem(255);
+    margin-top: size(250);
     }
   .t2{
-    width: sizem(205);
-    margin-top: sizem(60);
-  }
-  .t3{
-    width: sizem(205);
+    width: sizem(262);
     margin-top: sizem(60);
   }
 
@@ -176,7 +173,7 @@ animation: ball 5s ease-in-out alternate infinite;}
     width: sizem(293);
     position: absolute;
     bottom: sizem(20);
-    right: sizem(50);
+    right: sizem(45);
   }
   
     
