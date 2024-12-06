@@ -52,6 +52,9 @@
     flex-basis: size(840);
       height: size(844);
     width: size(1500);
+    .caption {
+      left:1em;
+    }
     .slide-item {
       @apply bg-cover;
       width: 100%;
@@ -93,7 +96,7 @@ gap:0em;
 
     .caption {
     font-size:sizem(12);  
-    right:sizem(5);
+    left:sizem(5);
     bottom:sizem(5);
     }
     .slide-item {

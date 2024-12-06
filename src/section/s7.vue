@@ -149,7 +149,8 @@ const imgs = [
   },
   {
     img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "大合石膏磚"
+    caption: ""
+    // caption: "大合石膏磚"
   },
   {
     img:new URL("./s7/3.jpg", import.meta.url).href ,
