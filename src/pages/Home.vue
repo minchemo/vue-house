@@ -10,8 +10,16 @@
   </div>
   <!-- loading end -->
    <Nav />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-     <div class="bg">
+    <!-- 主字體 3選1
+     font-['Noto_Serif_TC',serif]
+     font-['Noto_Sans_TC',sans-serif]
+     font-['LXGW_WenKai_Mono_TC',monospace]
+    -->
+  <div class="home relative overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+  <div class="allbg">
+    <!-- bg內容想做成滾動視差 去符合 allbg 的高度-->
+  <div class="bg"></div>
+</div>
     <S1 />
     <S2 />
     <S3 />
@@ -20,7 +28,6 @@
     <S6 />
     <S7 />
     <Order />
-    </div>
   <!--
     <S6 />
     <S7 />
@@ -50,15 +57,36 @@
   opacity: 0;
 }
 
-.home > .bgh{position: fixed;width: 100%;
-  top: 0;left: 0;
-}
-.bg{background: linear-gradient(135deg, #3F94CA 0%, #3F94CA 20%, #71A3A5 25%, #E0C663 33%, #E1A843 40%, #E1A843 50%,#E0C663 57%, #71A3A5 63%,#3F94CA 65%,#3F94CA 67%, #71A3A5 72%,#E0C663 78%,#E1A843 83%,#E1A843 85%,#E0C663 90%, #71A3A5 95%);}
 img {
   display: inline;
   max-width: unset;
   height: unset;
   margin: 0 auto;
+}
+
+.allbg{
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;height: 100%;
+  background: url("@/section/s1/bg.jpg") center top;
+  background-size: 270% auto;
+    @media screen and (min-width: 768px) {
+      background-size: 100% auto;
+    }
+
+img {
+  width: 100%;
+  height: auto;
+}
+  .bg{width: 100%;height: 100%;
+  background: url("@/section/s1/bg.jpg") center top;
+  background-size: 270% auto;
+    transform: translateY(0); // 初始位置
+    transition: transform 0.2s ease-out; // 平滑過渡效果（可選）
+    @media screen and (min-width: 768px) {
+      background-size: 100% auto;
+    }
+  }
+
 }
 
   .caption{
@@ -84,6 +112,7 @@ img {
     margin:0 auto 0.35em;
     line-height: 1.5;
     font-weight: 900;
+    color: #FD3;
   }
   .subtitle{
     font-size: 1.1em;
@@ -100,7 +129,8 @@ img {
   @apply relative;
   z-index: 2;
   .slide-item{
-  img{width: 100%;height: 100%;border-radius: 1em;}
+  img{width: 100%;height: 100%;//border-radius: 1em;
+  }
   
   }
   .arrows{
@@ -132,20 +162,30 @@ img {
   .splide__pagination {
     @apply absolute flex justify-center w-full;
     bottom: 0;
-    gap: 1.2em;
+    gap: .8em;
     color: #fff;
     li {
       button {
-        @apply rounded-full;
-        width: 1em;
-        height: 1em;
-          background:currentColor;
-      transition: transform .5s;
+       // @apply rounded-full;
+        width: 3.5em;
+        height: 2em;
+        position: relative;
+      &::after{
+        content: "";display: block;
+        width: 100%;height: .3em;
+        background:currentColor;
+        transition: transform .5s;
+        transform-origin: 50% 90%;
+        position: absolute;left: 0;bottom: 0;
+      }
       &:hover{
-          transform: scale(.8);}
+        //  transform: scaleY(.8);
+        }
 
-        &.is-active{
-          transform: scale(1.5);
+        &.is-active{ 
+          &::after{
+          transform: scaleY(3);
+          background:#FD3;}
       }
       }
     }
@@ -203,6 +243,8 @@ img {
 </style>
 <script setup>
 import info from "@/info"
+import AOS from 'aos';
+import Nav from "@/layout/navbar.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
@@ -211,11 +253,7 @@ import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
-import { onMounted, ref } from "vue"
-
-import AOS from 'aos';
-import s4 from "../section/s4.vue"
+import { ref, onMounted, onUnmounted } from "vue"
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
@@ -225,9 +263,49 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 800
+      duration: 1500
     });
   };
 
 })
+
+/*
+const config = ref({
+  showNav: false
+})
+
+onMounted(() => {
+  let ticking = false; // 確保在一幀內只處理一次滾動事件
+  const allbg = document.querySelector(".allbg .bg");
+
+  const handleScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollPosition = window.scrollY;
+        if (allbg) {
+          allbg.style.transform = `translateY(${scrollPosition * 0.25}px)`; // 0.3 為速度係數
+        }
+        ticking = false; // 完成處理後重置
+      });
+      ticking = true; // 標記正在處理中
+    }
+  };
+
+  // 綁定滾動事件
+  window.addEventListener("scroll", handleScroll);
+
+  window.onload = function () {
+    isLoading.value = false;
+    AOS.init({
+      offset: 0,
+      duration: 1500,
+    });
+  };
+
+  // 在組件卸載時清理事件
+  onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+  });
+});
+*/
 </script>

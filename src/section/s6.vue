@@ -1,13 +1,9 @@
 <template>
-  <article class="s6" ref="s6">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃" v-if="isMobile">
-    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃">
-	<img src="./s1/oo.svg" alt="oo" class="oo1" v-if="!isMobile">
+  <article class="s6">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">兩代完美共融 <br v-if="isMobile"> 獨立空間不打擾</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">陪伴×孝親  盡孝成雙</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">除了自住同步收租，也可規劃一間自住一間孝親，兩代同堂不同室，獨立門戶享充足隱私，近鄰雙公園、家樂福，方便隨時出門散步、購物共聚天倫，家人之間的親情不再因居住距離而降溫。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">當代美學地標 榮耀整座城市</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">鶯歌市心地王開天闢地！2500坪大砌開發前所未有！全新美麗的現代建築群壯闊氣勢，外觀造型拉高天際線，簡潔對稱典雅氣質，營造沉穩內斂的和諧美感，創新優雅街廓，重塑都市景觀，成為鄰里美好的菁英生活聚落。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -16,67 +12,57 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
-
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-
-
 .s6 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
-  height:auto;
-  padding:11em 0 10em 0;
-  font-size:size(19);
-  gap:3em;
-  flex-wrap: wrap;
-	.eggbg2{position: absolute;
-    display: block;
-    top: size(60);right:size(260);width:size(500);
-		transform:translateY(-20%);
-		animation: an 4s ease-in-out infinite alternate;}
-    .oo1{position: absolute;bottom:size(-50);height:size(50);left:size(1000);
-		transform: translateX(20%);z-index: 2;
-		animation: an 3s ease-in-out infinite alternate;}
-
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
+  // height: size(800);
+  padding:10em 0 6em 0;
+  font-size:size(18);
+  gap:1.5em;
+  flex-wrap:nowrap;
+    flex-direction:column-reverse;
+    background: #003838cc;
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
+    width: 100%;
 }
 
-
+.txt {
+  margin: auto;
+  width: size(1500);
+}
 
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+      height: size(844);
+    width: size(1500);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+      width: 100%;
+    flex-basis: size(1500);
+      height: size(844);
       
     }
+
     .splide__pagination{
-      right: calc(100% + 3em);
       justify-content: flex-end;
+      bottom: -2em;
     }
   }
 }
@@ -92,25 +78,18 @@
     padding: 0;
   font-size:sizem(15);
   flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:0em;
-background:linear-gradient(135deg, #71A3A5 0%, #E0C663 30%,#E1A843 50%);
-	.eggbg1{position: absolute;
-    display: block;
-    top: sizem(50);left:sizem(-100);width:sizem(500);
-		transform:translateY(-10%);
-		animation: an 2s ease-in-out infinite alternate-reverse;}
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
+gap:0em;
+background:linear-gradient(135deg, #3F94CA 0%, #71A3A5 20%, #E0C663 50%,#E1A843 70%);
+	.eggbg1{
+    top: sizem(50);left:sizem(100);width:sizem(400);}
+  .oo1{top:sizem(20);height:sizem(20);left:sizem(10); right: auto;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
-
 .txt {margin: 4.4em auto 1.3em;
 }
-
 
   .slider {
     height: auto;
@@ -135,8 +114,8 @@ background:linear-gradient(135deg, #71A3A5 0%, #E0C663 30%,#E1A843 50%);
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
+
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -162,24 +141,20 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s6/1.webp", import.meta.url).href ,
-    caption: "五華國小實景"
+    img:new URL("./s6/1.jpg", import.meta.url).href ,
+    caption: "外觀3D 日禾 日"
   },
   {
-    img:new URL("./s6/2.webp", import.meta.url).href ,
-    caption: "淡水河畔公園實景"
+    img:new URL("./s6/2.jpg", import.meta.url).href ,
+    caption: "外觀3D 日禾 夜"
   },
   {
-    img:new URL("./s6/3.webp", import.meta.url).href ,
-    caption: "家樂福商圈實景"
+    img:new URL("./s6/3.jpg", import.meta.url).href ,
+    caption: "外觀3D 日安 日"
   },
   {
-    img:new URL("./s6/4.webp", import.meta.url).href ,
-    caption: "星巴克重陽集賢門市實景"
-  },
-  {
-    img:new URL("./s6/5.webp", import.meta.url).href ,
-    caption: "親水公園實景"
+    img:new URL("./s6/4.jpg", import.meta.url).href ,
+    caption: "外觀3D 日安 夜"
   },
 ]
 </script>
