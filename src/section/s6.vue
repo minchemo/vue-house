@@ -12,7 +12,7 @@
         <div class="txt1">
           <div>
             <div class="t1" data-aos="fade-up" data-aos-delay="0">蘇喻哲，世界建築家581人。</div>
-            <p class="desc" data-aos="fade-up" data-aos-delay="200">蘇喻哲建築師1989年設立大硯建築師事務所， 1995年被日本出版「世界建築家581人」選錄為世紀代表建築師之一，2011年入圍西班牙WAF世界建築大獎決選。</p>
+            <p class="desc" data-aos="fade-up" data-aos-delay="200">蘇喻哲建築家1989年設立大硯建築師事務所， 1995年被日本出版「世界建築家581人」選錄為世紀代表建築家之一，2011年入圍西班牙WAF世界建築大獎決選。</p>
           </div>
           <div>
             <div class="t2" data-aos="fade-up" data-aos-delay="400">讓建築消失在自然之中。</div>
