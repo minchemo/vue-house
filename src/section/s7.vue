@@ -1,7 +1,6 @@
 <template>
   <article class="s7">
     <div class="box1 absolute" data-aos="fade-up" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
-    <div class="box2 absolute" data-aos="fade-down" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
     <div class="bg absolute" data-aos="fade" data-aos-delay="0"></div>
     <div class="txt relative">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">精誠國際，堅持初衷｜哲學品牌</h3>
@@ -129,13 +128,6 @@ img{width: 100%;}
     top:size(-170);width:size(400);height: size(400);left:size(130);z-index: 4;
   }
 img{height: 160%;opacity: .6;transform: translateX(-50%);margin-top: -40%;
-  animation: box1 15s linear alternate infinite;}
-}
-.box2{width:sizem(180);height: sizem(190);bottom:sizem(-40);right:sizem(95);z-index:2;overflow: hidden;
-  @media screen and (min-width: 768px) {
-    bottom:size(-100);width:size(610);height: size(500);right:size(630);
-  }
-img{height: 160%;opacity: .6;transform: translateX(-50%);margin-top: -50%;
   animation: box1 15s linear alternate infinite;}
 }
 @keyframes box1 {

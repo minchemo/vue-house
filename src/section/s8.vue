@@ -1,5 +1,6 @@
 <template>
   <article class="s8">
+    <div class="box0 absolute" data-aos="fade-down" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
     <div class="box1 absolute" data-aos="fade-up" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
     <div class="box2 absolute" data-aos="fade-down" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
@@ -102,6 +103,14 @@ img{width: 100%;}
       }
     }
   }
+  
+.box0{width:sizem(180);height: sizem(190);top:sizem(-150);right:sizem(95);z-index:2;overflow: hidden;
+  @media screen and (min-width: 768px) {
+    top:size(-400);width:size(610);height: size(500);right:size(630);
+  }
+img{height: 160%;opacity: .6;transform: translateX(-50%);margin-top: -50%;
+  animation: box1 15s linear alternate infinite;}
+}
 .box1{width:sizem(80);height: sizem(130);top:sizem(160);right:0;overflow: hidden;
   @media screen and (min-width: 768px) {
     top:size(350);width:size(400);height: size(700);
