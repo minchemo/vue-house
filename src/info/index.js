@@ -6,7 +6,7 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "台北市大安區敦化南路二段126號",
+    address: "台北市大安區瑞安街149巷8號2樓",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2317945798654!2d121.548313!3d25.0262066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab26c04ad089%3A0x688ac06fe84d210!2zRm9yZXN0IFBhcmsg5ZCJ576O5a-M5b6g!5e0!3m2!1szh-TW!2stw!4v1683100296873!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/VGaz7DxFwskxmmKh6",
     phone: "02-27008589",
