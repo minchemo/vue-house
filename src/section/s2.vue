@@ -3,10 +3,10 @@
     <div class="bg absolute" data-aos="fade" data-aos-delay="0"></div>
     <div class="box absolute" data-aos="fade-left" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">壹念敦南，壹遇四維｜傳世絕押</h3>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">壹念敦南，壹遇四維｜經典傳世</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">The Aesthetics of Silence </h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">林蔭敦南使節之道，豪宅中軸百年家邸</h4>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">70米寬、4600米長敦化南北路，以大器尺度提點尊貴，用枝繁葉茂訴說派頭，也流轉出國際台北的人文豐壤；敦化南北路新舊豪宅經久芬芳，華固敦品、富邦藝樹、元大柏悅、潤泰敦仁…等，無數經典名邸長久相伴。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">70米寬、4600米長敦化南北路，以大器尺度提點尊貴，用枝繁葉茂訴說派頭，也流轉出國際台北的人文豐壤；敦化南北路新舊豪宅經久芬芳，華固敦品、富邦藝樹、元大栢悅、潤泰敦仁…等，無數經典名邸長久相伴。</p>
     </div>
 <div class="pics relative">
 <div class="list" data-aos="fade-up" data-aos-delay="0">

@@ -6,7 +6,8 @@
     <div class="txt relative" data-aos="fade-up" data-aos-delay="400">
       <img  src="./s1/txt.svg" alt="txt" v-if="!isMobile" />
       <img  src="./s1/txtm.svg" alt="txt" v-else />
-      <div class="button absolute"  @click="scrollTo('.form')">即刻<br>預約</div>
+      <div class="button"  @click="scrollTo('.form')">即刻<br v-if="!isMobile">預約</div>
+      <img  src="./s1/slogo.svg" class="slogo" alt="slogo" v-if="isMobile" />
     </div>
   </article>
 </template>
@@ -15,7 +16,7 @@
 @import "@/assets/style/function.scss";
 
 .s1 {
-  height: sizem(550);
+  height: sizem(850);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,15 +44,21 @@
     }
   }
   .txt{width: sizem(255);
-    margin: 0 auto 1.4em auto;
+    margin: 0 auto 1.4em auto;text-align: center;
     filter:drop-shadow(0 0.1em .2em #034);
-  img{width: 100%;}
-  .button{right: .5em;bottom: 2em;letter-spacing: .25em;color: #0c7494;
-  background: #fff;font-size:1.25em;font-weight: 900;text-align: center;
-  width: 3.2em;padding: .1em 0 .1em 0.2em;
+  img{width: 100%;
+  &.slogo{width: 90%;}
+  }
+  .button{position: relative;letter-spacing: .25em;color: #0c7494;
+  background: #fff;font-size:1.25em;font-weight: 900;
+  padding: .1em 0 .1em 0.2em;width: 70%;margin:5em auto;
   transition: transform 2s,border-radius 2s;
+  @media screen and (max-width: 767px) {
+  &::before{content: "";position: absolute;top:0;left:0;right: 0;bottom: 0;border: 1px solid #fff;margin:-4px;}
+  }
+  @media screen and (min-width: 768px) {
   &:hover{transform: scale(1.2);border-radius: .6em;}
-    @media screen and (min-width: 768px) {
+      position: absolute;width: 3.2em;margin:0;
       bottom: 0.1em;font-size:1em;right: 0;
     }
   }

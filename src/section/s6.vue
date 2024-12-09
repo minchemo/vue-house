@@ -16,7 +16,7 @@
           </div>
           <div>
             <div class="t2" data-aos="fade-up" data-aos-delay="400">讓建築消失在自然之中。</div>
-            <p class="desc" data-aos="fade-up" data-aos-delay="600">「我是一個相信無限可能，內在超級瘋狂，卻希望能回歸自然的人。」蘇喻哲建築師奉行世界公民觀，削減形式回歸建築本質，在自然與建築間取得和平共處的美學關係。<br><br>業績作品：<span>●天母 仰哲 ●大安區 勤美璞真<br v-if="isMobile"> ●內湖區 碧湖畔<br v-if="!isMobile"> ●大安區 璞園信義</span></p>
+            <p class="desc" data-aos="fade-up" data-aos-delay="600">「我是一個相信無限可能，內在超級瘋狂，卻希望能回歸自然的人。」蘇喻哲建築家奉行世界公民觀，削減形式回歸建築本質，在自然與建築間取得和平共處的美學關係。<br><br>業績作品：<span>●天母 仰哲 ●大安區 勤美璞真<br v-if="isMobile"> ●內湖區 碧湖畔<br v-if="!isMobile"> ●大安區 璞園信義</span></p>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
           <div>
         <div class="t1" data-aos="fade-up" data-aos-delay="0">創新施工技法，<br>精度建築執行者。</div>
         <p class="desc" data-aos="fade-up" data-aos-delay="200">翊豐營造始終以堅守施工品質為圭臬，與環境共好追求節能減碳營造過程，打造讓每個住戶都擁有安心信賴的好宅；擅於將建築設計、結構、公設裝修橫向垂直整合，與昇陽建設、璞園團隊、新美齊集團等知名建商有著深厚緊密的合作關係。<br><br>
-業績作品：<span>●新美齊the Top●璞知溪●璞玥</span>
+業績作品：<span>●新美齊the Top ●璞永 璞知溪<br v-if="isMobile"> ●璞全 璞玥</span>
 </p>
           </div>
         </div>
