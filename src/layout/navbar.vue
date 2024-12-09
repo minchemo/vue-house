@@ -4,14 +4,7 @@
     v-bind:class="{ 'r16-9': higherScreen }"
   >
     <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-    <div
-      class="menu-btn cursor-pointer flex items-center gap-3"
-      @click="menuOpen = !menuOpen"
-      v-bind:class="{ open: menuOpen }"
-    >
-      <!-- <p class="uppercase text-color2 z-10">menu</p> -->
-      <div class="bar"></div>
-    </div>
+
     <div
       class="menu shadow-lg flex flex-col items-center justify-center"
       v-bind:class="{ open: menuOpen }"

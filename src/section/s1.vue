@@ -1,10 +1,10 @@
 <template>
   <article class="s1">
     <div class="content">
-      <img class="logo" src="@/section/s1/logo.svg" alt="" />
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">橋科核心．連線台積｜6.8米併排雙車墅</div>
+      <img class="t1" src="@/section/s1/t1.svg" alt="" data-aos="fade-up" data-aos-delay="0"/>
+      <img class="logo" src="@/section/s1/logo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
     </div>
-    <div class="bg"></div>
+    <img class="style" src="@/section/s1/style.webp" alt="" data-aos="fade-left" data-aos-delay="500"/>
   </article>
 </template>
 
@@ -14,19 +14,9 @@
 .s1 {
   @apply relative w-full max-h-screen;
   @apply flex flex-col items-center justify-center;
+  background-image: url("@/section/s1/bg.webp");
   padding-bottom: size(160);
   height: size(1080);
-  background: var(
-    --0,
-    linear-gradient(
-      0deg,
-      #714e39 0%,
-      #654631 36%,
-      #4a331e 60%,
-      #36250f 84%,
-      #2f200a 100%
-    )
-  );
 
   .content {
     @apply relative z-10;
@@ -34,21 +24,23 @@
     gap: size(42);
 
     .logo {
-      width: size(469.2);
+      width: size(269);
     }
 
     .t1 {
-      @apply text-white;
-      font-size: size(45);
-      font-weight: 600;
+      width: size(400);
     }
   }
 
-  .bg {
-    @apply absolute w-full h-full top-0 left-0 bg-cover bg-bottom;
-    @apply pointer-events-none;
-    background-image: url("@/section/s1/bg.png");
-  }
+  .style{
+    position: absolute;
+    width: size(516);
+    right:0;
+    bottom: size(100);
+
+}
+
+
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -59,6 +51,7 @@
   .s1 {
     @apply relative w-full max-h-screen;
     @apply flex flex-col items-center justify-start;
+    background-image: url("@/section/s1/bgm.webp");
     padding-bottom: 0;
     padding-top: sizem(129);
     height: sizem(667);
@@ -77,10 +70,7 @@
       }
     }
 
-    .bg {
-      @apply bg-contain bg-no-repeat bg-bottom;
-      background-image: url("@/section/s1/bgm.png");
-    }
+
   }
 }
 </style>
