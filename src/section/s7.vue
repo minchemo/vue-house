@@ -150,7 +150,7 @@
         .slide-item {
           @apply bg-cover bg-center;
           width: sizem(375);
-          height: sizem(362);
+          height: sizem(272);
           .caption {
             @apply text-white;
             @apply absolute;
@@ -211,12 +211,12 @@ const isMobile = computed(() => globals.$isMobile())
 const splide = ref()
 const imgs = [
   {
-    img: new URL("../section/s7/1.jpg", import.meta.url).href,
-    caption: "",
+    img: new URL("../section/s7/1.webp", import.meta.url).href,
+    caption: "實景拍攝",
   },
   {
-    img: new URL("../section/s7/1.jpg", import.meta.url).href,
-    caption: "",
+    img: new URL("../section/s7/2.webp", import.meta.url).href,
+    caption: "實景拍攝",
   },
 ]
 </script>
