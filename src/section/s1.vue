@@ -1,6 +1,7 @@
 <template>
   <article class="s1">
-    
+<!--  -->
+    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/mo.jpg" alt="" />
     <div class="content">
       <img class="t1" src="./s1/t1.svg" alt="" data-aos="fade-up" data-aos-delay="0"/>
       <img class="logo" src="./s1/logo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
