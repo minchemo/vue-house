@@ -6,6 +6,7 @@
       <img class="t1" src="./s1/t1.svg" alt="" data-aos="fade-up" data-aos-delay="0"/>
       <img class="logo" src="./s1/logo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
     </div>
+    <img class="slogo absolute" src="./s1/slogo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
     <div class="style">
       <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="500"/>
       <img src="./s1/style2.png" alt="" data-aos="fade-left" data-aos-delay="500"/>
@@ -19,21 +20,40 @@
 .s1 {
   @apply relative w-full max-h-screen;
   @apply flex flex-col items-center justify-center;
-  background-image: url("@/section/s1/bg.webp");
-  padding-bottom: size(160);
-  height: size(1080);
+  background-image: url("@/section/s1/bgm.webp");
+  padding-top: sizem(129);
+  height: sizem(667);
+  @media screen and (min-width: 768px) {
+    background-image: url("@/section/s1/bg.webp");
+    padding-bottom: size(160);
+    height: size(1080);
+  }
+  .t0{
+	pointer-events: none;opacity: .3;}
+  .slogo{top: sizem(13);right: sizem(13);width: sizem(77);
+    @media screen and (min-width: 768px) {
+      top: size(13);right: size(13);width: size(141);
+    }
+  }
+
 
   .content {
     @apply relative z-10;
     @apply flex flex-col items-center justify-center;
-    gap: size(42);
-
-    .logo {
-      width: size(269);
-    }
-
     .t1 {
-      width: size(400);
+      width: sizem(168);
+    }
+    .logo {
+      width: sizem(114);
+    }
+    @media screen and (min-width: 768px) {
+      gap: size(42);
+      .t1 {
+        width: size(400);
+      }
+      .logo {
+        width: size(269);
+      }
     }
   }
 
@@ -54,7 +74,7 @@
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
 
 @media screen and (max-width: 767px) {
@@ -82,7 +102,7 @@
 
 
   }
-}
+}*/
 </style>
 
 <script setup>
