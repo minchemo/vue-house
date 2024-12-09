@@ -1,10 +1,13 @@
 <template>
   <article class="s1">
     <div class="content">
-      <img class="t1" src="@/section/s1/t1.svg" alt="" data-aos="fade-up" data-aos-delay="0"/>
-      <img class="logo" src="@/section/s1/logo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
+      <img class="t1" src="./s1/t1.svg" alt="" data-aos="fade-up" data-aos-delay="0"/>
+      <img class="logo" src="./s1/logo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
     </div>
-    <img class="style" src="@/section/s1/style.webp" alt="" data-aos="fade-left" data-aos-delay="500"/>
+    <div class="style">
+      <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="500"/>
+      <img src="./s1/style2.png" alt="" data-aos="fade-left" data-aos-delay="500"/>
+    </div>
   </article>
 </template>
 
@@ -37,6 +40,11 @@
     width: size(516);
     right:0;
     bottom: size(100);
+    img{width: 100%;mix-blend-mode: multiply;
+    &:last-child{
+      position: absolute;top:0;left: 0;mix-blend-mode: normal;
+    }
+    }
 
 }
 
