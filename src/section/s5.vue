@@ -192,7 +192,7 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.webp", import.meta.url).href ,
-    caption: "臺北車站"
+    caption: "台北車站"
   },
   {
     img:new URL("./s5/2.webp", import.meta.url).href ,
