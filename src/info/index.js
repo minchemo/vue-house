@@ -26,6 +26,8 @@ export default {
     ["物業管理", "新美齊保全股份有限公司"],
     ["建照號碼", "113建字第0233號"],
     ["經紀人", "陳盈志（109）南市字第00684號"],
+    ["建案位置", "台北市大安區四維路226號"],
+    ["貴賓專線", "02-2707-9988"],
   ],
   gtmCode: ["GTM-P3JCJ3HC"], // 可放置多個
   recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
