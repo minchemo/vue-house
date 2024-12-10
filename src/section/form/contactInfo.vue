@@ -113,7 +113,7 @@
             ? "Facebook Messenger"
             : modalType == "fb"
             ? "Facebook 粉絲專頁"
-            : "接待會館"
+            : info.address2
         }}
       </div>
       <!-- content -->
@@ -125,7 +125,7 @@
             ? "線上諮詢"
             : modalType == "fb"
             ? ""
-            : `接待中心：${info.address}`
+            : info.address
         }}
       </div>
       <!-- btn
