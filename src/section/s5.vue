@@ -1,61 +1,45 @@
 <template>
   <article class="s5 anchor6">
-    <div class="swiper-box">
-      <Splide
-        ref="splide"
-        class="slide"
-        :options="{
-          autoWidth: false,
-          arrows: false,
-          autoplay: true,
-          pagination: false,
-          interval: 4000,
-          gap: 0,
-          type: 'loop',
-          perPage: 1,
-        }"
-      >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgs"
-          :style="{ 'background-image': `url(${i.img})` }"
-        >
-          <div class="caption">
-            {{ i.caption }}
-          </div>
-        </SplideSlide>
-      </Splide>
-      <div class="arrows">
-        <img
-          src="@/section/arrow.png"
-          class="arrow prev"
-          @click="splide.go('<')"
-          alt=""
-          srcset=""
-        />
-        <img
-          src="@/section/arrow.png"
-          class="arrow next"
-          @click="splide.go('>')"
-          alt=""
-          srcset=""
-        />
-      </div>
+    <div class="style" v-if="!isMobile">
+      <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="500"/>
+      <img src="./s1/style2.png" alt="" data-aos="fade-left" data-aos-delay="500"/>
     </div>
     <div class="t">
       <div
         class="t1"
         data-aos="fade-up"
         data-aos-delay="0"
-      >
-        >200公頃綠浪綿延 <br v-if="isMobile" />健康環抱
+      >家的多重宇宙<br />
+創作也創業，點子源源不絕⋯<br />
+讓喜歡的事成為工作／生活
       </div>
-      <div class="t2"
+      <img src="./s1/logo.svg" class="logo" alt="logo"
         data-aos="fade-up"
         data-aos-delay="200">
-        以高雄科大73公頃樹海為起點，95公頃的高雄都會公園、高雄花卉農園中心、青埔棒球場、創新公園等綠帶環扣，獨步大高雄，連起都市中難能可貴的芬多長廊。
+      <div
+        class="t2"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >基地位置｜臺中市西屯區朝富二街/台灣大道三段<br />
+接待會館｜臺中市西區梅川西路一段23號<br />
+投資興建｜麗晨建設股份有限公司<br />
+設計團隊｜元根建築工坊<br />
+樓層規劃｜地上18層、地下4層<br />
+戶數規劃｜住家76戶／店面3戶<br />
+坪數規劃｜33-42坪
       </div>
+      <div
+        class="t3"
+        data-aos="fade-up"
+        data-aos-delay="600"
+      >七期 秋紅谷 捷運宅<br />
+遇見 幸福的轉角 美麗的意外<br />
+捎來溪畔的家⋯<br />
+無二的無二 又見麗晨
+      </div>
+      <img src="./s1/t4.svg" class="t4" alt="33 42坪"
+        data-aos="fade-up"
+        data-aos-delay="800">
     </div>
   </article>
 </template>
@@ -65,63 +49,43 @@
 
 .s5 {
   @apply relative w-full;
-  height: size(900);
-
-  .swiper-box {
-    @apply relative h-full w-full;
-    .slide {
-      .slide-item {
-        @apply bg-cover;
-        width: size(1229);
-        height: size(900);
-        .caption {
-          @apply text-white;
-          @apply absolute;
-          right: size(20);
-          bottom: size(12);
-          font-family: "Noto Sans TC";
-          font-size: size(15);
-          font-weight: 700;
-        }
-      }
-    }
-    .arrows {
-      @apply absolute w-full;
-      @apply left-1/2 -translate-x-1/2;
-      @apply top-1/2 -translate-y-1/2;
-      @apply flex items-center justify-between;
-      padding: 0 size(15);
-      img {
-        @apply cursor-pointer;
-        width: size(28);
-      }
-      .next {
-        @apply -scale-x-100;
-      }
-    }
-  }
+ // height: size(900);
+  background: linear-gradient(0deg, #FFF 4%, #CDDBD9 58%, #CBDAD8 60%, #79B3BA 100%);
   .t {
-    @apply absolute w-full h-full;
-    @apply top-0 left-0;
-    @apply text-white;
-    @apply bg-cover;
-    @apply pointer-events-none select-none;
-    background-image: url("@/section/s5/mask.png");
-    padding-top: size(78);
-    padding-left: size(153);
-    .t1 {
-      font-size: size(54);
-      font-weight: 600;
-      margin-bottom: size(15);
-    }
+    @apply w-full h-full top-0 left-0 pointer-events-none select-none;
+  //  background-image: url("@/section/s5/mask.png");
+    padding-top: size(111);
+   // padding-left: size(153);
+    text-align: center;
+    
+    .logo{width:size(425);margin:size(112) auto size(144) auto;display: block;}
     .t2 {
-      font-family: "Noto Sans TC";
-      font-size: size(16);
-      font-weight: 400;
-      line-height: 151.41%;
-      width: size(470);
+      font-size: size(23);
+      line-height: 1.9;
+      display: inline-block;text-align: left;
     }
+@media screen and (min-width: 767px) {
+    .t1 {
+      font-size: size(30);
+    }
+    .t3 {
+      font-size: size(30);margin:size(83) auto size(70) auto;
+    }
+    .t4{width:size(399);display: block;margin:0 auto size(110);}
   }
+}
+.style{
+    position: absolute;
+    right:0;
+    width: size(516);
+    top: size(250);
+    img{width: 100%;mix-blend-mode: multiply;
+    &:last-child{
+      position: absolute;top:0;left: 0;mix-blend-mode: normal;
+    }
+    }
+
+}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -130,68 +94,20 @@
 
 @media screen and (max-width: 767px) {
   .s5 {
-    @apply relative w-full;
-    height: auto;
 
-    .swiper-box {
-      @apply relative h-full w-full;
-      .slide {
-        .slide-item {
-          @apply bg-no-repeat bg-bottom;
-          background-size: sizem(615) auto;
-          width: sizem(375);
-          height: sizem(582);
-          .caption {
-            @apply text-white;
-            @apply absolute;
-            right: sizem(10);
-            bottom: sizem(6);
-            font-family: "Noto Sans TC";
-            font-size: sizem(12);
-            font-weight: 700;
-          }
-        }
-      }
-      .arrows {
-        @apply absolute w-full z-10;
-        @apply left-1/2 -translate-x-1/2;
-        @apply top-1/2 -translate-y-1/2;
-        @apply flex items-center justify-between;
-        padding: 0 sizem(8);
-        padding-top: sizem(300);
-        img {
-          @apply cursor-pointer;
-          width: sizem(15);
-        }
-        .next {
-          @apply -scale-x-100;
-        }
-      }
-    }
     .t {
-      @apply absolute w-full h-full;
-      @apply top-0 left-0;
-      @apply text-white;
-      @apply bg-cover;
-      @apply pointer-events-none select-none;
-      background-image: url("@/section/s5/maskm.png");
       padding-top: sizem(60);
-      padding-left: sizem(30);
-      .t1 {
-        font-size: sizem(25);
-        font-weight: 600;
-        margin-bottom: sizem(10);
-      }
+      .logo{width:sizem(237);margin:sizem(50) auto sizem(77) auto;}
       .t2 {
-        font-family: "Noto Sans TC";
-        font-size: sizem(14);
-        font-weight: 400;
-        line-height: 151.41%;
-        width: sizem(310);
-      }
+      font-size: sizem(14);margin-bottom:sizem(77);
+    }
+    .t4{width:sizem(176);display: block;margin:sizem(20) auto sizem(60);}
+    
     }
   }
 }
+
+
 </style>
 
 <script setup>

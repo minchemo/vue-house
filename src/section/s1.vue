@@ -1,7 +1,8 @@
 <template>
   <article class="s1">
-<!--  -->
-    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />
+    <img class="bg" src="./s1/11.gif" alt="" />
+<!--
+    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />  -->
     <div class="content">
       <img class="t1" src="./s1/t1.svg" alt="" data-aos="fade-up" data-aos-delay="0"/>
       <img class="logo" src="./s1/logo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
@@ -20,12 +21,13 @@
 .s1 {
   @apply relative w-full max-h-screen;
   @apply flex flex-col items-center justify-center;
-  background-image: url("@/section/s1/bgm.webp");
-  background-size: cover;
+  background: url("@/section/s1/bg.webp") 0 0;
+  background-size: auto 100%;
   height: sizem(550);
   @media screen and (min-width: 768px) {
-    background-image: url("@/section/s1/bg.webp");
+   // background-image: url("@/section/s1/bg.webp");
     height: size(1080);
+    background-size: 100% auto;
   }
   .t0{
 	pointer-events: none;opacity: .0;}
@@ -34,21 +36,32 @@
       top: size(13);right: size(23);width: size(141);
     }
   }
+.bg{opacity: .6;filter: blur(sizem(2));
+  position: absolute;width: 200%;top: 0;left: 0;height: 100%;mix-blend-mode:soft-light;
+  
+  @media screen and (min-width: 768px) {
+    filter: blur(size(5));
+    }
 
+
+}
 
   .content {
     @apply relative z-10;
     @apply flex flex-col items-center justify-center;
     .t1 {
       width: sizem(168);
+      filter:drop-shadow(sizem(1) sizem(1) sizem(3) #3339);
     }
     .logo {
       width: sizem(114);
       margin:sizem(18) auto sizem(44) auto;
+      filter: brightness(.52)grayscale(.8);
     }
     @media screen and (min-width: 768px) {
       .t1 {
         width: size(400);
+        filter:drop-shadow(size(2) size(2) size(4) #3339);
       }
       .logo {
         width: size(269);

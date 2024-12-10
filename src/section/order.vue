@@ -12,7 +12,7 @@
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center z-10">
-        <div class="s-order-title text-white">
+        <div class="s-order-title">
           <p>
             {{ info.order.title }}
           </p>
@@ -98,10 +98,7 @@
         </div>
       </div>
 
-      <div
-        class="form-send flex flex-col md:flex-row items-center md:items-end justify-between w-full"
-      >
-        <div class="flex flex-col">
+        <div class="flex flex-col w-full items-center">
           <!-- Policy -->
           <div
             class="flex gap-2 items-center justify-start control relative z-10 whitespace-nowrap"
@@ -112,10 +109,10 @@
               :checked="formData.policyChecked"
               class="checkbox bg-white rounded-none"
             />
-            <p class="text-white">
+            <p class="text-[#000]">
               本人知悉並同意<label
                 for="policy-modal"
-                class="modal-button text-[#FFFF00] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
+                class="modal-button text-[#c00] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
                 >「個資告知事項聲明」</label
               >內容
             </p>
@@ -134,9 +131,8 @@
 
         <!-- Send -->
         <div class="send btn cursor-pointer relative z-10" @click="send()">
-          {{ sending ? "發送中.." : "確認送出" }}
+          {{ sending ? "發送中.." : "即刻預約" }}
         </div>
-      </div>
 
       <!-- Contact Info -->
       <ContactInfo />
@@ -159,7 +155,7 @@
   overflow: hidden;
   padding: 0 0;
   padding-top: size(150);
-  background-image: url("@/section/orderbg.jpg");
+//  background-image: url("@/section/orderbg.jpg");
 
   .intro {
     @apply flex flex-col items-center justify-end relative z-[5];
@@ -207,39 +203,19 @@
   .s-order-title {
     @apply absolute left-0 bottom-[115%] text-center w-full;
     p {
-      font-size: size(32);
-      font-weight: 500;
+      font-size: size(45);
+      font-weight: 700;
+      color: #6D5E50;
 
       &:nth-child(2) {
         font-size: size(18);
         margin-top: size(5);
+        font-weight: 400;
+        color: #666;
       }
     }
   }
 
-  .order-title {
-    @apply text-left relative left-0 inline-block;
-    font-size: size(40);
-    font-weight: 700;
-    color: #36677f;
-    padding-top: 0;
-    margin-left: size(0);
-    margin-right: auto;
-    border-bottom: 1px solid #fff;
-    padding-bottom: size(20);
-  }
-
-  .order-title-img {
-    width: size(557);
-    margin-bottom: size(0);
-  }
-  .order-subTitle {
-    font-size: size(17);
-    color: black;
-    padding-top: 0.8em;
-    letter-spacing: 0em;
-    font-weight: 500;
-  }
   .cus-divider {
     margin: 0 auto;
     width: size(300);
@@ -260,6 +236,7 @@
     align-items: stretch;
     margin: size(45) auto;
     width: size(900);
+    flex-wrap: wrap;
 
     .left {
       flex: 1;
@@ -277,13 +254,13 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #a6a6a6;
+      background-color: #E2EDEE;
       position: absolute;
     }
     .row {
-      background: rgba($color: #fff, $alpha: 1);
-      border: 1px solid #a6a6a6;
-      color: #231815;
+      background: #E2EDEE;
+      border: 0;
+     // color: #231815;
       display: flex;
       width: 100%;
       align-items: center;
@@ -291,6 +268,7 @@
         width: 5.5em;
         text-align: left;
         padding-left: 1em;
+        font-weight: 700;
         > span {
           color: #f00;
           font-size: 12px;
@@ -301,6 +279,7 @@
         @apply font-bold;
         background: none;
         flex: 1;
+        font-weight: 500;
       }
       option {
         color: #231815;
@@ -332,11 +311,11 @@
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
-    background: white;
+    color: #fff;
+    background: #6D5E50;
     border-radius: 10px;
     border: 0;
-
+margin-top: 1.5em;
     width: size(442);
     height: size(87);
     line-height: 3.3;
@@ -359,20 +338,8 @@
     @apply bg-cover;
     min-height: sizem(800);
     position: relative;
-    //  background-image: url("@/section/orderbgm.jpg");
-    // overflow: hidden;
-    // padding-top: sizem(200);
-    background-image: unset;
     padding: 0 sizem(30);
     padding-top: sizem(0);
-    background: linear-gradient(
-      0deg,
-      #714e39 0%,
-      #654631 36%,
-      #4a331e 60%,
-      #36250f 84%,
-      #2f200a 100%
-    );
 
     .intro {
       @apply flex flex-col items-center justify-end;

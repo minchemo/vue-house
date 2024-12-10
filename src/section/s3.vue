@@ -1,6 +1,6 @@
 <template>
   <article class="s3 anchor7">
-    <div class="swiper-box">
+    <div class="swiper-box relative">
       <Splide
         ref="splide"
         class="slide"
@@ -10,9 +10,10 @@
           autoplay: true,
           pagination: false,
           interval: 4000,
-          gap: 10,
+          gap: 1,
           type: 'loop',
           perPage: 1,
+          drag: imgs.length>1?true :false 
         }"
       >
         <SplideSlide
@@ -26,7 +27,7 @@
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows">
+      <div class="arrows" v-if="imgs.length > 1">
         <img
           src="@/section/arrow.png"
           class="arrow prev"
@@ -45,10 +46,10 @@
     </div>
     <div class="t">
       <div class="t2" data-aos="fade-up" data-aos-delay="200">
-        米其林餐廳星羅棋布，這裡的住民都是天生的美食家
-新光三越、大遠百、老虎城旗艦百貨商圈、時尚藝文
-捷運、轉運站、國道1號、台74線、台灣大道⋯
-食衣住行一切精華匯集於此，定義中台灣最精華國際位階
+        米其林餐廳星羅棋布，這裡的住民都是天生的美食家<br>
+新光三越、大遠百、老虎城旗艦百貨商圈、時尚藝文<br>
+捷運、轉運站、國道1號、台74線、台灣大道⋯<br>
+食衣住行一切精華匯集於此<span v-if="!isMobile">，</span><br v-else>定義中台灣最精華國際位階
       </div>
     </div>
   </article>
@@ -58,13 +59,11 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply relative w-full;
-  @apply flex;
+  @apply relative w-full flex;
   height: size(690);
- //gap: size(50);
 
   .swiper-box {
-    @apply relative h-full;
+    @apply h-full;
     width: size(995);
     .slide {
       .slide-item {
@@ -76,9 +75,7 @@
           @apply absolute;
           left: size(20);
           bottom: size(12);
-          font-family: "Noto Sans TC";
           font-size: size(15);
-          font-weight: 700;
         }
       }
     }
@@ -98,27 +95,10 @@
     }
   }
   .t {
-    @apply text-black flex flex-1 flex-col items-start justify-center;
+    @apply flex flex-1 flex-col items-start justify-center;
     //padding-top: size(251);
     background: linear-gradient(90deg, #FFF 4%, #CDDBD9 58%, #CBDAD8 60%, #79B3BA 100%);
     padding: 0 0 0 size(137);
-    .t1 {
-      font-size: size(54);
-      font-weight: 600;
-      margin-bottom: size(43);
-    }
-    .t2 {
-      font-family: "Noto Sans TC";
-      font-size: size(16);
-      font-weight: 400;
-      line-height: 151.41%;
-      width: size(470);
-    }
-  }
-  .line {
-    @apply absolute right-0 bottom-0;
-    @apply pointer-events-none select-none;
-    width: size(1200);
   }
 }
 /* 螢幕尺寸標準 */
@@ -130,63 +110,31 @@
   .s3 {
     @apply flex-col-reverse justify-end;
     height: auto;
-    gap: sizem(40);
 
     .swiper-box {
-      @apply relative h-auto;
+      @apply h-auto;
       width: 100vw;
       .slide {
         .slide-item {
-          @apply bg-cover;
           width: sizem(375);
-          height: sizem(274.61);
+          height: sizem(275);
           .caption {
-            @apply text-white;
-            @apply absolute;
             left: unset;
             right: sizem(10);
             bottom: sizem(6);
             font-size: sizem(12);
-            font-weight: 700;
           }
         }
       }
       .arrows {
-        @apply absolute w-full;
-        @apply left-1/2 -translate-x-1/2;
-        @apply top-1/2 -translate-y-1/2;
-        @apply flex items-center justify-between;
         padding: 0 sizem(8);
         img {
-          @apply cursor-pointer;
           width: sizem(15);
-        }
-        .next {
-          @apply -scale-x-100;
         }
       }
     }
     .t {
-      @apply text-black;
-      padding-top: sizem(60);
-      padding-left: sizem(20);
-      .t1 {
-        font-size: sizem(25);
-        font-weight: 600;
-        margin-bottom: sizem(10);
-      }
-      .t2 {
-        font-size: sizem(14);
-        font-weight: 400;
-        line-height: 151.41%;
-        width: sizem(310);
-      }
-    }
-    .line {
-      @apply absolute right-0 top-0;
-      @apply pointer-events-none select-none;
-      bottom: unset;
-      width: 100%;
+      padding: sizem(50) sizem(0) sizem(50) sizem(26);
     }
   }
 }

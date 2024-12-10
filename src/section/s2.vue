@@ -1,6 +1,6 @@
 <template>
   <article class="s2 anchor7">
-    <div class="swiper-box">
+    <div class="swiper-box relative">
       <Splide
         ref="splide"
         class="slide"
@@ -10,9 +10,10 @@
           autoplay: true,
           pagination: false,
           interval: 4000,
-          gap: 10,
+          gap: 1,
           type: 'loop',
           perPage: 1,
+          drag: imgs.length>1?true :false 
         }"
       >
         <SplideSlide
@@ -26,7 +27,7 @@
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows">
+      <div class="arrows" v-if="imgs.length > 1">
         <img
           src="@/section/arrow.png"
           class="arrow prev"
@@ -63,14 +64,12 @@
 @import "@/assets/style/function.scss";
 
 .s2 {
-  @apply relative w-full;
-  @apply flex flex-row-reverse;
+  @apply relative w-full flex flex-row-reverse;
   height: size(900);
-  //gap: size(50);
 
   .swiper-box {
-    @apply relative h-full;
     width: size(1229);
+    height: 100%;
     .slide {
       .slide-item {
         @apply bg-cover;
@@ -81,9 +80,7 @@
           @apply absolute;
           left: size(20);
           bottom: size(12);
-          font-family: "Noto Sans TC";
           font-size: size(15);
-          font-weight: 700;
         }
       }
     }
@@ -103,7 +100,7 @@
     }
   }
   .t {
-    @apply text-black flex flex-1 flex-col items-start justify-center;
+    @apply flex flex-1 flex-col items-start justify-center;
    //padding-top: size(251);
     background: linear-gradient(-90deg, #FFF 4%, #CDDBD9 58%, #CBDAD8 60%, #79B3BA 100%);
     padding: 0 0 0 size(137);
@@ -113,12 +110,6 @@
       margin-bottom: 1.1em;//.4
       line-height:1.5;
       letter-spacing: .05em;
-    }
-    .t2 {
-    //  font-family: "Noto Sans TC";
-      font-size: size(18);
-      font-weight: 400;
-      line-height:1.7;
     }
   }
 }
@@ -131,53 +122,37 @@
   .s2 {
     @apply flex-col-reverse justify-end;
     height: auto;
-    gap: sizem(40);
     
 
     .swiper-box {
-      @apply relative h-auto;
       width: 100vw;
+      height: auto;
       .slide {
         .slide-item {
           @apply bg-cover;
           width: sizem(375);
           height: sizem(274.61);
           .caption {
-            @apply text-white;
-            @apply absolute;
             left: unset;
             right: sizem(10);
             bottom: sizem(6);
             font-size: sizem(12);
-            font-weight: 700;
           }
         }
       }
       .arrows {
-        @apply absolute w-full;
-        @apply left-1/2 -translate-x-1/2;
-        @apply top-1/2 -translate-y-1/2;
-        @apply flex items-center justify-between;
         padding: 0 sizem(8);
         img {
-          @apply cursor-pointer;
           width: sizem(15);
-        }
-        .next {
-          @apply -scale-x-100;
         }
       }
     }
     .t {
-      @apply text-black;
       padding: sizem(50) sizem(0) sizem(50) sizem(34);
       .t1 {
         font-size: sizem(19);
-        font-weight: 600;
       }
       .t2 {
-        font-size: sizem(14);
-        font-weight: 400;
         width: sizem(310);
       }
     }

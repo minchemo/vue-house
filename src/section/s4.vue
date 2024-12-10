@@ -1,6 +1,6 @@
 <template>
-  <article class="s4 anchor5">
-    <div class="swiper-box">
+  <article class="s4 anchor7">
+    <div class="swiper-box relative">
       <Splide
         ref="splide"
         class="slide"
@@ -10,9 +10,10 @@
           autoplay: true,
           pagination: false,
           interval: 4000,
-          gap: 10,
+          gap: 1,
           type: 'loop',
           perPage: 1,
+          drag: imgs.length>1?true :false 
         }"
       >
         <SplideSlide
@@ -26,7 +27,7 @@
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows">
+      <div class="arrows" v-if="imgs.length > 1">
         <img
           src="@/section/arrow.png"
           class="arrow prev"
@@ -44,28 +45,16 @@
       </div>
     </div>
     <div class="t">
-      <div
-        class="t1"
-        data-aos="fade-up"
-        data-aos-delay="0"
-      >
-        青埔軌道經濟圈<br />
-        家樂福繁華上演
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
+        秋紅谷的一抹綠 聆聽生態的對話
       </div>
-      <div class="t2"
-        data-aos="fade-up"
-        data-aos-delay="200">
-        暢遊捷運青埔站生活半徑，圈起楠梓車站的熟成繁華，散步土庫家樂福，為生活豐盛保持彈性，周邊傳統市場、連鎖餐廳、便利商店、一應俱全！
-      </div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
+在城市和自然之間，幸福的一天，從散步秋紅谷開始<br />
+猶如台北大安森林公園、紐約中央公園的城市綠肺<br />
+佇足景觀U型橋，巔覆你對公園的想像<br />
+蜿蜒的河湖、細長的丘陵、寧靜富有詩意的地景⋯<br />
+下過雨的藍天更加清澄時，特別有感覺</div>
     </div>
-    <img
-      class="line"
-      v-if="!isMobile"
-      src="@/section/s4/line.png"
-      alt=""
-      srcset=""
-    />
-    <img class="line" v-else src="@/section/s4/linem.png" alt="" srcset="" />
   </article>
 </template>
 
@@ -73,14 +62,12 @@
 @import "@/assets/style/function.scss";
 
 .s4 {
-  @apply relative w-full;
-  @apply flex;
+  @apply relative w-full flex flex-row-reverse;
   height: size(900);
-  gap: size(50);
 
   .swiper-box {
-    @apply relative h-full;
-    width: size(1229);
+    @apply h-full;
+    width: size(1032);
     .slide {
       .slide-item {
         @apply bg-cover;
@@ -89,11 +76,10 @@
         .caption {
           @apply text-white;
           @apply absolute;
-          left: size(20);
+          right: size(20);
           bottom: size(12);
-          font-family: "Noto Sans TC";
           font-size: size(15);
-          font-weight: 700;
+          //font-weight: 700;
         }
       }
     }
@@ -113,25 +99,17 @@
     }
   }
   .t {
-    @apply text-black;
-    padding-top: size(251);
+    @apply flex flex-1 flex-col items-start justify-center;
+   //padding-top: size(251);
+    background: linear-gradient(90deg, #FFF 5.44%, #CDDBD9 78.9%, #CBDAD8 81.6%, #79B3BA 136%);
+    padding: 0 0 0 size(137);
     .t1 {
-      font-size: size(54);
+      font-size: size(30);
       font-weight: 600;
-      margin-bottom: size(43);
+      margin-bottom: 1.1em;//.4
+      line-height:1.5;
+      letter-spacing: .05em;
     }
-    .t2 {
-      font-family: "Noto Sans TC";
-      font-size: size(16);
-      font-weight: 400;
-      line-height: 151.41%;
-      width: size(470);
-    }
-  }
-  .line {
-    @apply absolute right-0 bottom-0;
-    @apply pointer-events-none select-none;
-    width: size(1200);
   }
 }
 /* 螢幕尺寸標準 */
@@ -143,63 +121,33 @@
   .s4 {
     @apply flex-col-reverse justify-end;
     height: auto;
-    gap: sizem(40);
-
+    
     .swiper-box {
-      @apply relative h-auto;
+      @apply h-auto;
       width: 100vw;
       .slide {
         .slide-item {
-          @apply bg-cover;
           width: sizem(375);
           height: sizem(274.61);
           .caption {
-            @apply text-white;
-            @apply absolute;
-            left: unset;
             right: sizem(10);
             bottom: sizem(6);
             font-size: sizem(12);
-            font-weight: 700;
           }
         }
       }
       .arrows {
-        @apply absolute w-full;
-        @apply left-1/2 -translate-x-1/2;
-        @apply top-1/2 -translate-y-1/2;
-        @apply flex items-center justify-between;
         padding: 0 sizem(8);
         img {
-          @apply cursor-pointer;
           width: sizem(15);
-        }
-        .next {
-          @apply -scale-x-100;
         }
       }
     }
     .t {
-      @apply text-black;
-      padding-top: sizem(60);
-      padding-left: sizem(20);
+      padding: sizem(50) sizem(0) sizem(50) sizem(27);
       .t1 {
-        font-size: sizem(25);
-        font-weight: 600;
-        margin-bottom: sizem(10);
+        font-size: sizem(19);
       }
-      .t2 {
-        font-size: sizem(14);
-        font-weight: 400;
-        line-height: 151.41%;
-        width: sizem(310);
-      }
-    }
-    .line {
-      @apply absolute right-0 top-0;
-      @apply pointer-events-none select-none;
-      bottom: unset;
-      width: 100%;
     }
   }
 }
@@ -212,16 +160,8 @@ const isMobile = computed(() => globals.$isMobile())
 const splide = ref()
 const imgs = [
   {
-    img: new URL("../section/s4/1.jpg", import.meta.url).href,
-    caption: "家樂福-新楠店",
-  },
-  {
-    img: new URL("../section/s4/2.jpg", import.meta.url).href,
-    caption: "7-11高第一門市",
-  },
-  {
-    img: new URL("../section/s4/3.jpg", import.meta.url).href,
-    caption: "7-11高第一門市",
+    img: new URL("./s4/1.jpg", import.meta.url).href,
+    caption: "此為3D示意圖 實際以房屋買賣合約書及未來成屋為準",
   },
 ]
 </script>

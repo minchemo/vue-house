@@ -1,9 +1,8 @@
 <template>
   <div>
-  <div class="contact-info-img">
-</div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo" data-aos="fade-" data-aos-duration="2000" data-aos-delay="200"></div>
+    
+    <img src="@/section/s1/logo.svg" class="logo" alt="logo" data-aos="fade" data-aos-duration="2000" data-aos-delay="200">
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -20,7 +19,7 @@
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
-        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
+        <div><span v-if="info.address1">{{ info.address1 }}：</span><span>{{ info.address }}</span></div>
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
@@ -100,51 +99,19 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
 .contact-info {
   //@apply left-1/2 -translate-x-1/2;
   width: size(900);
   // border-radius: size(115);
   padding: 0;
   margin-top: size(100);
-  margin-bottom: size(70);
-  margin:0 auto size(70);
+  margin:0 auto size(40);
   position: relative;
   z-index: 50;
 
-  .tree {
-    @apply absolute;
-    width: size(104);
-    left: size(125);
-    bottom: 115%;
-    animation: an1 5s ease-in-out alternate infinite;
-    transform-origin: bottom center;
-
-    @keyframes an1 {
-      from {
-        transform: skewX(-3deg);
-      }
-
-      to {
-        transform: skewX(3deg);
-      }
-    }
-  }
-
-  .hill {
-    @apply absolute;
-    bottom: 100%;
-    width: size(1413);
-  }
-
   .logo {
-    width: size(348);
-    height: size(261);
-    background-image: url("@/section/logo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 2rem 0;
+    width: size(425);
+    margin: 8em 0 3em 0;
   }
 
   .contact-item-box {
@@ -153,7 +120,7 @@
     gap: size(20);
 
     .contact-item {
-      background: #31210B;
+      background: #79B3BA;
       border: 0;
       color: #fff;
       width: 100%;
@@ -168,7 +135,7 @@
       gap: size(20);
 
       &:hover {
-        background-color: #130b01;
+        background-color: #3f858d;
         color: #fff;
 
         img {
@@ -186,7 +153,7 @@
       }
 
       &.address {
-        background-color: #fff;
+        background-color: #E2EDEE;
         border: 0;
         z-index: 0;
         position: relative;
@@ -199,7 +166,7 @@
       }
 
       &.googlemap {
-        background-color: #31210B;
+        background-color: #79B3BA;
         color: #fff;
         border: 0;
         border: 0;
@@ -209,7 +176,7 @@
 
 
         &:hover {
-          background-color: #130b01;
+          background-color: #3f858d;
           color: #fff;
 
           img {
@@ -268,36 +235,10 @@
     position: relative;
     justify-content: space-between;
 
-    .hill {
-      @apply absolute;
-      bottom: 90%;
-      width: 100%;
-    }
-
-    .tree {
-      @apply absolute;
-      width: sizem(89.9);
-      left: 10%;
-      bottom: 90%;
-      animation: an1 5s ease-in-out alternate infinite;
-      transform-origin: bottom center;
-
-      @keyframes an1 {
-        from {
-          transform: skewX(-3deg);
-        }
-
-        to {
-          transform: skewX(3deg);
-        }
-      }
-    }
 
     .logo {
-      width: sizem(220);
-      height: sizem(177);
-      background-image: url("@/section/logo.svg");
-      margin-bottom: sizem(20);
+      width: sizem(250);
+      margin: 1.5em 0 3.5em 0;
     }
 
     .contact-item-box {
@@ -321,10 +262,13 @@
         }
 
         &.address {
-          padding: 0 0;
+          padding: 1em 1em;
           margin-top: sizem(20);
           // font-size: sizem(12);
           border-radius: sizem(15) sizem(15) 0 0;
+          white-space: normal;
+          line-height: 1.5;
+          span{white-space: nowrap;}
 
           &::before {
             width: 100%;

@@ -18,14 +18,14 @@
      font-['LXGW_WenKai_Mono_TC',monospace]
     -->
   <div
-    class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC',sans-serif] pb-[64px] md:pb-0"
+    class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC',sans-serif] pb-[64px] md:pb-0 text-black"
   >
     <S1 />
     <S2 />
     <S3 />
-    <!--
     <S4 />
     <S5 />
+    <!--
     <S6 />
     <S7 />
     <S8 />
@@ -35,7 +35,8 @@
   </div>
 </template>
 
-<style>
+<style lang="scss" >
+@import "@/assets/style/function.scss";
 @import "@/assets/style/custom-aos.css";
 img {
   display: inline;
@@ -46,10 +47,14 @@ img {
 
 .home {
   background: #fff;
+  font-size: size(18);
+  font-weight: 400;
+  line-height:1.7;
+@media screen and (max-width: 768px) {
+  font-size: sizem(14);
+}
 }
 
-@media screen and (max-width: 768px) {
-}
 </style>
 
 <script setup>
@@ -57,8 +62,8 @@ import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
-//import S4 from "@/section/s4.vue"
-//import S5 from "@/section/s5.vue"
+import S4 from "@/section/s4.vue"
+import S5 from "@/section/s5.vue"
 //import S6 from "@/section/s6.vue"
 // import S7 from "@/section/s7.vue"
 //import S8 from "@/section/s8.vue"
@@ -80,7 +85,7 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-      duration: 1000
+      duration: 1500
     });
   };
 })
