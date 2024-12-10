@@ -45,21 +45,17 @@
     </div>
     <div class="t">
       <div class="t1" data-aos="fade-up" data-aos-delay="0">
-        高科大人文特區<br />
-        優質學風
+        七期的優雅日常<br />
+生活就是一場歌劇和米其林饗宴
       </div>
       <div class="t2" data-aos="fade-up" data-aos-delay="200">
-        坐看高雄科學大學第一校區，以散策地步伐收藏萬坪學海；楠梓高中、楠梓國中小等學校包圍在側，以單車可達的距離，輕快掌握上下學時區。
+        這個城市，瀰漫著藝術生活的旋律<br />
+讓人自然而然優雅起來的文化基因與時尚品味⋯<br />
+「片片山閑」的日常，拉近你與台中歌劇院的距離<br />
+只要換掉球鞋、牛仔褲<br />
+立刻盛裝聆聽音樂與建築的美聲饗宴
       </div>
     </div>
-    <img
-      class="line"
-      v-if="!isMobile"
-      src="@/section/s4/line.png"
-      alt=""
-      srcset=""
-    />
-    <img class="line" v-else src="@/section/s4/linem.png" alt="" srcset="" />
   </article>
 </template>
 
@@ -68,20 +64,9 @@
 
 .s2 {
   @apply relative w-full;
-  @apply flex;
+  @apply flex flex-row-reverse;
   height: size(900);
-  gap: size(50);
-  background: var(
-      --0,
-      linear-gradient(
-        0deg,
-        #714e39 0%,
-        #654631 36%,
-        #4a331e 60%,
-        #36250f 84%,
-        #2f200a 100%
-      )
-    );
+  //gap: size(50);
 
   .swiper-box {
     @apply relative h-full;
@@ -118,25 +103,23 @@
     }
   }
   .t {
-    @apply text-black;
-    padding-top: size(251);
+    @apply text-black flex flex-1 flex-col items-start justify-center;
+   //padding-top: size(251);
+    background: linear-gradient(-90deg, #FFF 4%, #CDDBD9 58%, #CBDAD8 60%, #79B3BA 100%);
+    padding: 0 0 0 size(137);
     .t1 {
-      font-size: size(54);
+      font-size: size(30);
       font-weight: 600;
-      margin-bottom: size(43);
+      margin-bottom: 1.1em;//.4
+      line-height:1.5;
+      letter-spacing: .05em;
     }
     .t2 {
-      font-family: "Noto Sans TC";
-      font-size: size(16);
+    //  font-family: "Noto Sans TC";
+      font-size: size(18);
       font-weight: 400;
-      line-height: 151.41%;
-      width: size(470);
+      line-height:1.7;
     }
-  }
-  .line {
-    @apply absolute right-0 bottom-0;
-    @apply pointer-events-none select-none;
-    width: size(1200);
   }
 }
 /* 螢幕尺寸標準 */
@@ -187,25 +170,16 @@
     }
     .t {
       @apply text-black;
-      padding-top: sizem(60);
-      padding-left: sizem(20);
+      padding: sizem(50) sizem(0) sizem(50) sizem(34);
       .t1 {
-        font-size: sizem(25);
+        font-size: sizem(19);
         font-weight: 600;
-        margin-bottom: sizem(10);
       }
       .t2 {
         font-size: sizem(14);
         font-weight: 400;
-        line-height: 151.41%;
         width: sizem(310);
       }
-    }
-    .line {
-      @apply absolute right-0 top-0;
-      @apply pointer-events-none select-none;
-      bottom: unset;
-      width: 100%;
     }
   }
 }
@@ -218,23 +192,23 @@ const isMobile = computed(() => globals.$isMobile())
 const splide = ref()
 const imgs = [
   {
-    img: new URL("../section/s2/02.webp", import.meta.url).href,
+    img: new URL("./s2/1.webp", import.meta.url).href,
     caption: "情境示意圖",
   },
   {
-    img: new URL("../section/s2/02.webp", import.meta.url).href,
+    img: new URL("./s2/2.webp", import.meta.url).href,
     caption: "情境示意圖",
   },
   {
-    img: new URL("../section/s2/03.webp", import.meta.url).href,
+    img: new URL("./s2/3.webp", import.meta.url).href,
     caption: "情境示意圖",
   },
   {
-    img: new URL("../section/s2/04.webp", import.meta.url).href,
+    img: new URL("./s2/4.webp", import.meta.url).href,
     caption: "情境示意圖",
   },
   {
-    img: new URL("../section/s2/05.webp", import.meta.url).href,
+    img: new URL("./s2/5.webp", import.meta.url).href,
     caption: "情境示意圖",
   },
 ]

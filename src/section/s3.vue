@@ -44,22 +44,13 @@
       </div>
     </div>
     <div class="t">
-      <div class="t1" data-aos="fade-up" data-aos-delay="0">
-        高科大人文特區<br />
-        優質學風
-      </div>
       <div class="t2" data-aos="fade-up" data-aos-delay="200">
-        坐看高雄科學大學第一校區，以散策地步伐收藏萬坪學海；楠梓高中、楠梓國中小等學校包圍在側，以單車可達的距離，輕快掌握上下學時區。
+        米其林餐廳星羅棋布，這裡的住民都是天生的美食家
+新光三越、大遠百、老虎城旗艦百貨商圈、時尚藝文
+捷運、轉運站、國道1號、台74線、台灣大道⋯
+食衣住行一切精華匯集於此，定義中台灣最精華國際位階
       </div>
     </div>
-    <img
-      class="line"
-      v-if="!isMobile"
-      src="@/section/s4/line.png"
-      alt=""
-      srcset=""
-    />
-    <img class="line" v-else src="@/section/s4/linem.png" alt="" srcset="" />
   </article>
 </template>
 
@@ -69,17 +60,17 @@
 .s3 {
   @apply relative w-full;
   @apply flex;
-  height: size(900);
-  gap: size(50);
+  height: size(690);
+ //gap: size(50);
 
   .swiper-box {
     @apply relative h-full;
-    width: size(1229);
+    width: size(995);
     .slide {
       .slide-item {
         @apply bg-cover;
-        width: size(1229);
-        height: size(900);
+        width: size(995);
+        height: size(690);
         .caption {
           @apply text-white;
           @apply absolute;
@@ -107,8 +98,10 @@
     }
   }
   .t {
-    @apply text-black;
-    padding-top: size(251);
+    @apply text-black flex flex-1 flex-col items-start justify-center;
+    //padding-top: size(251);
+    background: linear-gradient(90deg, #FFF 4%, #CDDBD9 58%, #CBDAD8 60%, #79B3BA 100%);
+    padding: 0 0 0 size(137);
     .t1 {
       font-size: size(54);
       font-weight: 600;

@@ -1,7 +1,7 @@
 <template>
   <article class="s1">
 <!--  -->
-    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/mo.jpg" alt="" />
+    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />
     <div class="content">
       <img class="t1" src="./s1/t1.svg" alt="" data-aos="fade-up" data-aos-delay="0"/>
       <img class="logo" src="./s1/logo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
@@ -21,18 +21,17 @@
   @apply relative w-full max-h-screen;
   @apply flex flex-col items-center justify-center;
   background-image: url("@/section/s1/bgm.webp");
-  padding-top: sizem(129);
-  height: sizem(667);
+  background-size: cover;
+  height: sizem(550);
   @media screen and (min-width: 768px) {
     background-image: url("@/section/s1/bg.webp");
-    padding-bottom: size(160);
     height: size(1080);
   }
   .t0{
-	pointer-events: none;opacity: .3;}
+	pointer-events: none;opacity: .0;}
   .slogo{top: sizem(13);right: sizem(13);width: sizem(77);
     @media screen and (min-width: 768px) {
-      top: size(13);right: size(13);width: size(141);
+      top: size(13);right: size(23);width: size(141);
     }
   }
 
@@ -45,23 +44,28 @@
     }
     .logo {
       width: sizem(114);
+      margin:sizem(18) auto sizem(44) auto;
     }
     @media screen and (min-width: 768px) {
-      gap: size(42);
       .t1 {
         width: size(400);
       }
       .logo {
         width: size(269);
+        margin:size(42) auto size(60) auto;
       }
     }
   }
 
   .style{
     position: absolute;
-    width: size(516);
+    width: sizem(231);
     right:0;
-    bottom: size(100);
+    bottom: sizem(25);
+    @media screen and (min-width: 768px) {
+    width: size(516);
+    bottom: size(15);
+    }
     img{width: 100%;mix-blend-mode: multiply;
     &:last-child{
       position: absolute;top:0;left: 0;mix-blend-mode: normal;

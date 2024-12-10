@@ -12,8 +12,13 @@
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
+    <!-- 主字體 3選1
+     font-['Noto_Serif_TC',serif]
+     font-['Noto_Sans_TC',sans-serif]
+     font-['LXGW_WenKai_Mono_TC',monospace]
+    -->
   <div
-    class="home bg-[#fff] overflow-hidden font-['Noto_Serif_TC'] pb-[64px] md:pb-0"
+    class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC',sans-serif] pb-[64px] md:pb-0"
   >
     <S1 />
     <S2 />
