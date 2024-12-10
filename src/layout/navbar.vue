@@ -23,6 +23,7 @@
           v-for="(item, i) in info.navList"
           :class="{ active: activeMenuIdx === i }"
           @click="scrollTo(item.target, i)"
+          :key="item"
         >
           <!-- <img src="@/assets/menu_icon.png" alt="" srcset=""> -->
           <span>{{ item.name }}</span>

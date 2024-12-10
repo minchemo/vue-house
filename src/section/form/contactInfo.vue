@@ -85,9 +85,16 @@
       />
       <img
         class="h-12"
-        v-else-if="modalType == 'fb'"
+        v-else-if="modalType == 'messenger'"
         src="@/section/form/messenger.svg"
         alt="messenger"
+        srcset=""
+      />
+      <img
+        class="h-12"
+        v-else-if="modalType == 'fb'"
+        src="@/section/form/fb.svg"
+        alt="fb"
         srcset=""
       />
       <img
@@ -102,8 +109,10 @@
         {{
           modalType == "phone"
             ? "賞屋專線"
-            : modalType == "fb"
+            : modalType == "messenger"
             ? "Facebook Messenger"
+            : modalType == "fb"
+            ? "Facebook 粉絲專頁"
             : "接待會館"
         }}
       </div>
@@ -112,28 +121,39 @@
         {{
           modalType == "phone"
             ? info.phone
-            : modalType == "fb"
+            : modalType == "messenger"
             ? "線上諮詢"
+            : modalType == "fb"
+            ? ""
             : `接待中心：${info.address}`
         }}
       </div>
-      <!-- btn -->
+      <!-- btn
+預約賞屋:btregistration
+撥打電話:btcontact
+FB諮詢:btlead
+地圖導航:btsearch
+前往粉專:btfanpage
+      -->
       <div
         class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2"
         @click="go()"
         v-if="modalType != 'phone'"
         v-bind:class="{
           hidden: modalType == 'phone' && !$isMobile(),
-          btlead: modalType == 'fb',
+          btlead: modalType == 'messenger',
+          btfanpage: modalType == 'fb',
           btsearch: modalType == 'gmap',
-          btcontac: modalType == 'phone',
+          btcontact: modalType == 'phone',
         }"
       >
         {{
           modalType == "phone"
             ? "撥打電話"
-            : modalType == "fb"
+            : modalType == "messenger"
             ? "立即諮詢"
+            : modalType == "fb"
+            ? "立即前往"
             : "開啟導航"
         }}
       </div>
@@ -145,7 +165,7 @@
         v-else
         v-bind:class="{
           hidden: modalType == 'phone' && !$isMobile(),
-          btlead: modalType == 'fb',
+          btlead: modalType == 'messenger',
           btsearch: modalType == 'gmap',
           btcontac: modalType == 'phone',
         }"
@@ -153,8 +173,10 @@
         {{
           modalType == "phone"
             ? "撥打電話"
-            : modalType == "fb"
+            : modalType == "messenger"
             ? "立即諮詢"
+            : modalType == "fb"
+            ? "前往粉絲專頁"
             : "開啟導航"
         }}
       </div>
