@@ -13,7 +13,7 @@
   <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="300">
   </div>
 
-  <img src="./s1/logoicon.svg" alt="logoicon" class="logoicon">
+  <img src="./s1/logoicon.svg" alt="logoicon" class="logoicon" data-aos="zoom-in" data-aos-delay="500">
   </article>
 </template>
 
@@ -65,7 +65,7 @@
   .logoicon{
     width: size(438);
     position: absolute;
-    bottom: size(50);
+    bottom: size(200);
     right: size(730);
   }
   
@@ -172,7 +172,7 @@ animation: ball 5s ease-in-out alternate infinite;}
   .logoicon{
     width: sizem(293);
     position: absolute;
-    bottom: sizem(20);
+    bottom: sizem(150);
     right: sizem(45);
   }
   
