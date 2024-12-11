@@ -2,7 +2,7 @@
   <article class="s5 anchor6">
     <div class="style" v-if="!isMobile">
       <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="500"/>
-      <img src="./s1/style2.png" alt="" data-aos="fade-left" data-aos-delay="500"/>
+      <img src="./s1/style2apng.png" alt="" data-aos="fade-left" data-aos-delay="500"/>
     </div>
     <div class="t">
       <div
