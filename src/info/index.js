@@ -1,4 +1,4 @@
-const caseName = "富科大苑"
+const caseName = "片片山閑"
 
 export default {
   meta: {
@@ -10,8 +10,8 @@ export default {
   address2: "接待中心", //map點下確認的--- 如空白會顯示"導航地址"
   address: "臺中市西區梅川西路一段23號",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7281.668869775294!2d120.6627572!3d24.1424519!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0a8ca29c29%3A0xd6bcfff228479a04!2zNDAz5Y-w5Lit5biC6KW_5Y2A5qKF5bed6KW_6Lev5LiA5q61MjPomZ8!5e0!3m2!1szh-TW!2stw!4v1733820052957!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/j7RTKSy6nKYKvqHJA",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7280.105426473607!2d120.63344673309889!3d24.169884019357042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0008cc0f7b%3A0xe8d89c35b82548fe!2z6bqX5pmo54mH54mH5bGx6ZaR!5e0!3m2!1szh-TW!2stw!4v1733904074147!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/ZiE8qN9nZ33HanmY8",
   phone: "04-3705-8658",
   fbLink: "//facebook.com/61552769816381",
   fbMessage: "//m.me/61552769816381",
