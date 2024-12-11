@@ -78,7 +78,7 @@
         .caption {
           @apply text-white;
           @apply absolute;
-          left: size(20);
+          right: size(20);
           bottom: size(12);
           font-size: size(15);
         }
@@ -131,7 +131,7 @@
         .slide-item {
           @apply bg-cover;
           width: sizem(375);
-          height: sizem(274.61);
+          height: sizem(280);
           .caption {
             left: unset;
             right: sizem(10);

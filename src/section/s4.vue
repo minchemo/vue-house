@@ -128,7 +128,7 @@
       .slide {
         .slide-item {
           width: sizem(375);
-          height: sizem(274.61);
+          height: sizem(360);
           .caption {
             right: sizem(10);
             bottom: sizem(6);
@@ -160,7 +160,7 @@ const isMobile = computed(() => globals.$isMobile())
 const splide = ref()
 const imgs = [
   {
-    img: new URL("./s4/1.jpg", import.meta.url).href,
+    img: globals.$isMobile()?new URL("./s4/1m.jpg", import.meta.url).href:new URL("./s4/1.jpg", import.meta.url).href,
     caption: "此為3D示意圖 實際以房屋買賣合約書及未來成屋為準",
   },
 ]
