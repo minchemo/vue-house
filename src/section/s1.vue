@@ -4,13 +4,13 @@
 <!--
     <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />  -->
     <div class="content">
-      <img class="t1" src="./s1/t1.svg" alt="" data-aos="fade-up" data-aos-delay="0"/>
-      <img class="logo" src="./s1/logo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
+      <img class="t1" src="./s1/t1.svg" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000"/>
+      <img class="logo" src="./s1/logo.svg" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000"/>
     </div>
-    <img class="slogo absolute" src="./s1/slogo.svg" alt="" data-aos="fade-up" data-aos-delay="100"/>
+    <img class="slogo absolute" src="./s1/slogo.svg" alt="" data-aos="fade" data-aos-delay="400"/>
     <div class="style">
-      <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="500"/>
-      <img src="./s1/style2.png" alt="" data-aos="fade-left" data-aos-delay="500"/>
+      <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
+      <img src="./s1/style2.png" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
     </div>
   </article>
 </template>
@@ -36,11 +36,11 @@
       top: size(13);right: size(23);width: size(141);
     }
   }
-.bg{opacity: .6;filter: blur(sizem(2));
-  position: absolute;width: 200%;top: 0;left: 0;height: 100%;mix-blend-mode:soft-light;
+.bg{opacity: .6;filter: blur(sizem(3));
+  position: absolute;top: 0;left:0%;width: 100%;height: 100%;mix-blend-mode:soft-light;
   
   @media screen and (min-width: 768px) {
-    filter: blur(size(5));
+    filter: blur(size(5));width: 100%;height: 150%;
     }
 
 
