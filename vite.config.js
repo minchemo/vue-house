@@ -58,7 +58,7 @@ export default defineConfig({
       },
       filter: (source) => {
         // 排除特定的圖片，例如 'exclude-image.png'
-        return !source.includes('style2');
+        return !source.includes('apng');
       }
     }),
   ],

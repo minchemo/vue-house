@@ -10,7 +10,7 @@
     <img class="slogo absolute" src="./s1/slogo.svg" alt="" data-aos="fade" data-aos-delay="400"/>
     <div class="style">
       <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
-      <img src="./s1/style2.png" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
+      <img src="./s1/style2apng.png" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
     </div>
   </article>
 </template>
