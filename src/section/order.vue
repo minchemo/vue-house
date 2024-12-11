@@ -226,7 +226,6 @@
 
   .form {
     // @apply left-1/2 -translate-x-1/2;
-    width: 100%;
     // min-width: 680px;
     //  height: 350px;
     gap: size(80);
