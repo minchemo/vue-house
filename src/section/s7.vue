@@ -40,6 +40,7 @@
           class="slide-item"
           :key="i"
           v-for="(img, i) in imgs"
+          @click="swipeModalRef.open(img.large)"
           :style="{ 'background-image': `url(${img.img})` }"
         >
           <div class="caption">
@@ -64,7 +65,9 @@
         />
       </div>
     </div>
+    <img src="@/section/s7/6_6.png" class="l-number" alt="" srcset="" />
   </article>
+  <swipeModal ref="swipeModalRef"/>
 </template>
 
 <style lang="scss" scoped>
@@ -161,8 +164,11 @@
   .s7 {
     @apply relative w-full;
     @apply flex flex-col items-center justify-start;
-    height: sizem(595);
+    height: sizem(579);
     padding-top: sizem(45);
+    background-image: url("@/section/new-mobg.jpg");
+    background-size: contain;
+    background-position: top;
 
     .t {
       @apply relative z-10;
@@ -196,20 +202,22 @@
           letter-spacing: auto;
           width: sizem(300);
           margin-top: sizem(13);
+          border-top: 1px solid;
+          border-color: #ffffff85;
+          padding-top: sizem(10);
         }
       }
     }
 
     .splide-box {
-      @apply absolute left-0 top-0;
+      @apply absolute left-0 bottom-0 top-[unset];
       @apply w-full;
       .splide {
         @apply w-full;
-        height: sizem(595);
+        height: sizem(234);
         .slide-item {
           @apply relative w-full;
-          height: sizem(595);
-          background-position: 50% 0;
+          height: sizem(234);
           .caption {
             @apply absolute text-white;
             font-family: "Noto Sans TC";
@@ -222,6 +230,27 @@
           }
         }
       }
+      .arrows {
+        @apply absolute w-full;
+        @apply flex justify-between;
+        @apply top-1/2 -translate-y-1/2;
+        @apply px-4 pointer-events-none;
+
+        .prev {
+          @apply -scale-x-100;
+        }
+        img {
+          @apply pointer-events-auto;
+          @apply w-4 opacity-90;
+          filter: drop-shadow(1px 4px 3px rgba(0, 0, 0, 0.8));
+        }
+      }
+    }
+
+    .l-number {
+      @apply absolute left-0 pointer-events-none;
+      bottom: sizem(234);
+      height: sizem(237);
     }
   }
 }
@@ -229,8 +258,10 @@
 
 <script setup>
 import { computed, getCurrentInstance, ref } from "vue"
+import swipeModal from "../components/swipeModal.vue";
 const globals = getCurrentInstance().appContext.config.globalProperties
 const isMobile = computed(() => globals.$isMobile())
+const swipeModalRef = ref()
 
 const splide = ref()
 const imgs = ref([
@@ -239,18 +270,21 @@ const imgs = ref([
       ? new URL("../section/s7/1m.webp", import.meta.url).href
       : new URL("../section/s7/1.webp", import.meta.url).href,
     caption: "藏筑2  3d情境示意圖",
+    large: new URL("../section/s7/l1.jpg", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
       ? new URL("../section/s7/2m.webp", import.meta.url).href
       : new URL("../section/s7/2.webp", import.meta.url).href,
     caption: "藏筑2  3d情境示意圖",
+    large: new URL("../section/s7/l2.jpg", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
       ? new URL("../section/s7/3m.webp", import.meta.url).href
       : new URL("../section/s7/3.webp", import.meta.url).href,
     caption: "藏筑2  3d情境示意圖",
+    large: new URL("../section/s7/l3.jpg", import.meta.url).href,
   },
 ])
 </script>

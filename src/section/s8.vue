@@ -298,12 +298,13 @@
         @apply overflow-hidden;
         width: sizem(290);
         height: sizem(240);
-        border-radius: sizem(25);
+        border-radius: 0;
         .slide-item {
-          @apply relative bg-cover;
+          @apply relative bg-center;
           @apply aspect-[1110/910];
           width: sizem(290);
-          border-radius: sizem(25);
+          border-radius: 0;
+          background-size: 103%;
           .caption {
             @apply absolute text-white;
             font-family: "Noto Sans TC";

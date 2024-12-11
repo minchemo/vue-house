@@ -41,6 +41,7 @@
           class="slide-item"
           :key="i"
           v-for="(img, i) in imgs"
+          @click="swipeModalRef.open(img.large)"
           :style="{ 'background-image': `url(${img.img})` }"
         >
           <div class="caption">
@@ -49,7 +50,9 @@
         </SplideSlide>
       </Splide>
     </div>
+    <img src="@/section/s5/6_6.png" class="l-number" alt="" srcset="" />
   </article>
+  <swipeModal ref="swipeModalRef"/>
 </template>
 
 <style lang="scss" scoped>
@@ -131,8 +134,11 @@
   .s5 {
     @apply relative w-full;
     @apply flex flex-col items-center justify-start;
-    height: sizem(595);
+    height: sizem(579);
     padding-top: sizem(45);
+    background-image: url("@/section/new-mobg.jpg");
+    background-size: contain;
+    background-position: top;
 
     .t {
       @apply relative z-10;
@@ -166,19 +172,22 @@
           letter-spacing: auto;
           width: sizem(300);
           margin-top: sizem(13);
+          border-top: 1px solid;
+          border-color: #ffffff85;
+          padding-top: sizem(10);
         }
       }
     }
 
     .splide-box {
-      @apply absolute left-0 top-0;
+      @apply absolute left-0 bottom-0 top-[unset];
       @apply w-full;
       .splide {
         @apply w-full;
-        height: sizem(595);
+        height: sizem(234);
         .slide-item {
           @apply relative w-full;
-          height: sizem(595);
+          height: sizem(234);
           .caption {
             @apply absolute text-white;
             font-family: "Noto Sans TC";
@@ -192,22 +201,31 @@
         }
       }
     }
+
+    .l-number {
+      @apply absolute left-0 pointer-events-none;
+      bottom: sizem(234);
+      height: sizem(237);
+    }
   }
 }
 </style>
 
 <script setup>
 import { computed, getCurrentInstance, ref } from "vue"
+import swipeModal from "../components/swipeModal.vue";
 const globals = getCurrentInstance().appContext.config.globalProperties
 const isMobile = computed(() => globals.$isMobile())
+const swipeModalRef = ref()
 
 const splide = ref()
 const imgs = [
   {
     img: globals.$isMobile()
-      ? new URL("../section/s5/1m.webp", import.meta.url).href
+      ? new URL("../section/s5/p1.jpg", import.meta.url).href
       : new URL("../section/s5/1.webp", import.meta.url).href,
     caption: "藏筑2  3d情境示意圖",
+    large: new URL("../section/s5/l1.jpg", import.meta.url).href,
   },
 ]
 </script>

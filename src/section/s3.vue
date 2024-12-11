@@ -7,7 +7,7 @@
         奢華日常極限量爭藏席
       </div>
     </div>
-    <div class="swiper-box">
+    <div class="swiper-box" v-if="!isMobile">
       <template v-for="(img, i) in imgs" :key="i">
         <div class="splide-box">
           <Splide
@@ -55,11 +55,61 @@
         </div>
       </template>
     </div>
+    <div class="swiper-box" v-else>
+      <template v-for="(img, i) in imgs" :key="i">
+        <div class="splide-box">
+          <Splide
+            ref="splide"
+            class="slide"
+            :options="{
+              autoWidth: false,
+              arrows: false,
+              autoplay: true,
+              pagination: true,
+              gap: 20,
+              type: 'loop',
+              perPage: 1,
+            }"
+          >
+            <SplideSlide
+              class="slide-item"
+              :key="i"
+              v-for="(imgurl, i) in img.img"
+              :style="{ 'background-image': `url(${imgurl})` }"
+            >
+              <div class="caption">
+                {{ img.caption[i] }}
+              </div>
+            </SplideSlide>
+          </Splide>
+          <div class="arrows" v-if="isMobile">
+            <img
+              @click="splide[i].go('<')"
+              src="@/section/arrow.png"
+              class="arrow prev"
+              alt=""
+              srcset=""
+            />
+            <img
+              @click="splide[i].go('>')"
+              src="@/section/arrow.png"
+              class="arrow next"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </template>
+    </div>
     <div class="desc-box">
-      <div class="desc" v-for="(desc, i) in desc" :key="i" 
+      <div
+        class="desc"
+        v-for="(desc, i) in desc"
+        :key="i"
         data-aos="fade-up"
         data-aos-duration="1000"
-        :data-aos-delay="200 * i">
+        :data-aos-delay="200 * i"
+      >
         <div class="title">{{ desc.title }}</div>
         <div class="content">{{ desc.content }}</div>
       </div>
@@ -186,7 +236,7 @@
     @apply relative w-full;
     @apply flex flex-col items-center justify-center;
     @apply bg-bottom bg-cover;
-    height: sizem(1240);
+    height: sizem(664);
     background-image: url("@/section/s3/bgm.webp");
 
     .t {
@@ -207,17 +257,17 @@
     .swiper-box {
       @apply flex flex-col;
       gap: sizem(20);
-      margin-left: -#{sizem(16)};
+      margin-left: 0;
       .splide-box {
         @apply flex flex-col relative;
         .splide {
           @apply relative;
-          width: sizem(310);
+          width: sizem(336);
           .slide-item {
             @apply relative bg-cover bg-center;
-            width: sizem(310);
-            height: sizem(290);
-            border-radius: sizem(20);
+            width: sizem(336);
+            height: sizem(315);
+            border-radius: 0;
             .caption {
               font-size: sizem(16);
               font-weight: 700;
@@ -233,23 +283,20 @@
             @apply hidden;
           }
         }
-        p {
-          @apply absolute;
-          color: #103438;
-          text-align: center;
-          font-family: "Noto Sans TC";
-          font-size: sizem(30);
-          font-weight: 900;
-          line-height: 1;
-          letter-spacing: sizem(1.5);
-          writing-mode: vertical-lr;
-          right: -#{sizem(32)};
-          top: sizem(12);
-        }
-        .arrow {
-          @apply absolute;
-          right: -#{sizem(24)};
-          bottom: sizem(12);
+        .arrows {
+          @apply absolute w-full;
+          @apply flex justify-between;
+          @apply top-1/2 -translate-y-1/2;
+          @apply px-4 pointer-events-none;
+
+          .prev {
+            @apply -scale-x-100;
+          }
+          img {
+            @apply pointer-events-auto;
+            @apply w-4 opacity-90;
+            filter: drop-shadow(1px 4px 3px rgba(0, 0, 0, 0.8));
+          }
         }
       }
     }
@@ -257,7 +304,7 @@
     .desc-box {
       @apply flex flex-col;
       gap: sizem(4);
-      margin-top: sizem(31);
+      margin-top: sizem(20);
       .desc {
         @apply flex items-center font-['Noto_Sans_TC'];
         gap: sizem(6);
@@ -268,7 +315,7 @@
           font-size: sizem(13);
           font-weight: 700;
           letter-spacing: sizem(1.1);
-          line-height: 1
+          line-height: 1;
         }
         .content {
           @apply text-black;
@@ -288,41 +335,70 @@ const globals = getCurrentInstance().appContext.config.globalProperties
 const isMobile = computed(() => globals.$isMobile())
 
 const splide = ref()
-const imgs = [
-  {
-    img: [
-      new URL("../section/s3/a1.webp", import.meta.url).href,
-      new URL("../section/s3/a2.webp", import.meta.url).href,
-      new URL("../section/s3/a3.webp", import.meta.url).href,
-    ],
-    caption: ["新光三越 台南新天地", "林百貨", "好市多"],
-    title: "STORE",
-  },
-  {
-    img: [
-      new URL("../section/s3/b1.webp", import.meta.url).href,
-      new URL("../section/s3/b2.webp", import.meta.url).href,
-      new URL("../section/s3/b3.webp", import.meta.url).href,
-      new URL("../section/s3/b4.webp", import.meta.url).href,
-    ],
-    caption: [
-      "臺南第一高級中等學校",
-      "文賢國民中學",
-      "立人國民小學",
-      "國立成功大學",
-    ],
-    title: "SCHOOL",
-  },
-  {
-    img: [
-      new URL("../section/s3/c1.webp", import.meta.url).href,
-      new URL("../section/s3/c2.webp", import.meta.url).href,
-      new URL("../section/s3/c3.webp", import.meta.url).href,
-    ],
-    caption: ["成大醫院", "奇美醫院", "郭綜合醫院"],
-    title: "HOSPITAL",
-  },
-]
+const imgs = globals.$isMobile()
+  ? [
+      {
+        img: [
+          new URL("../section/s3/a1.webp", import.meta.url).href,
+          new URL("../section/s3/a2.webp", import.meta.url).href,
+          new URL("../section/s3/a3.webp", import.meta.url).href,
+          new URL("../section/s3/b1.webp", import.meta.url).href,
+          new URL("../section/s3/b2.webp", import.meta.url).href,
+          new URL("../section/s3/b3.webp", import.meta.url).href,
+          new URL("../section/s3/b4.webp", import.meta.url).href,
+          new URL("../section/s3/c1.webp", import.meta.url).href,
+          new URL("../section/s3/c2.webp", import.meta.url).href,
+          new URL("../section/s3/c3.webp", import.meta.url).href,
+        ],
+        caption: [
+          "新光三越 台南新天地",
+          "林百貨",
+          "好市多",
+          "臺南第一高級中等學校",
+          "文賢國民中學",
+          "立人國民小學",
+          "國立成功大學",
+          "成大醫院",
+          "奇美醫院",
+          "郭綜合醫院",
+        ],
+      },
+    ]
+  : [
+      {
+        img: [
+          new URL("../section/s3/a1.webp", import.meta.url).href,
+          new URL("../section/s3/a2.webp", import.meta.url).href,
+          new URL("../section/s3/a3.webp", import.meta.url).href,
+        ],
+        caption: ["新光三越 台南新天地", "林百貨", "好市多"],
+        title: "STORE",
+      },
+      {
+        img: [
+          new URL("../section/s3/b1.webp", import.meta.url).href,
+          new URL("../section/s3/b2.webp", import.meta.url).href,
+          new URL("../section/s3/b3.webp", import.meta.url).href,
+          new URL("../section/s3/b4.webp", import.meta.url).href,
+        ],
+        caption: [
+          "臺南第一高級中等學校",
+          "文賢國民中學",
+          "立人國民小學",
+          "國立成功大學",
+        ],
+        title: "SCHOOL",
+      },
+      {
+        img: [
+          new URL("../section/s3/c1.webp", import.meta.url).href,
+          new URL("../section/s3/c2.webp", import.meta.url).href,
+          new URL("../section/s3/c3.webp", import.meta.url).href,
+        ],
+        caption: ["成大醫院", "奇美醫院", "郭綜合醫院"],
+        title: "HOSPITAL",
+      },
+    ]
 
 const desc = [
   {
