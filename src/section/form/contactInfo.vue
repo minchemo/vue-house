@@ -102,37 +102,39 @@
 .contact-info {
   //@apply left-1/2 -translate-x-1/2;
   width: size(900);
+  min-width: 750px;
   // border-radius: size(115);
   padding: 0;
   margin-top: size(100);
   margin:0 auto size(40);
   position: relative;
   z-index: 50;
+  font-size: 1rem;
 
   .logo {
-    width: size(425);
+    width:26.56em;
     margin: 8em 0 3em 0;
   }
 
   .contact-item-box {
     position: relative;
-    margin-top: size(20);
-    gap: size(20);
+    margin-top:1.25em;
+    gap:1.25em;
 
     .contact-item {
       background: #79B3BA;
       border: 0;
       color: #fff;
       width: 100%;
-      padding: 0 size(55);
+      padding: 0;
       border-radius: 10px;
-      font-size: size(16);
+      font-size: 1em;
       line-height: 3.8;
       letter-spacing: 0.06em;
       z-index: 1;
       transition: all 0.3s;
       cursor: pointer;
-      gap: size(20);
+      gap:1.25em;
 
       &:hover {
         background-color: #3f858d;
@@ -144,9 +146,8 @@
       }
 
       img {
-        max-width: size(27);
-        height: auto;
-        max-height: size(27);
+        width:1.6875em;
+        height:1.6875em;
         filter: brightness(1) invert(1);
 
         transition: all 0.5s;
@@ -170,7 +171,7 @@
         color: #fff;
         border: 0;
         border: 0;
-        gap: size(20);
+        gap: 1.1em;
         border-radius: 0 10px 10px 0;
         @apply basis-1/3 ;
 
@@ -229,6 +230,7 @@
   .contact-info {
     width: 100%;
     height: auto;
+    min-width:100%;
     // border-radius: sizem(68);
     padding: sizem(40) 0;
     margin-top: sizem(20);
@@ -238,6 +240,7 @@
 
     .logo {
       width: sizem(250);
+      //width: 15.625em;
       margin: 1.5em 0 3.5em 0;
     }
 
@@ -248,18 +251,19 @@
       flex-direction: column;
 
       .contact-item {
-        padding: 0 sizem(80);
+        padding: 0 ;
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
         border-radius: sizem(15);
-
+        > div{width:sizem(130);}
+/*
         img {
           max-width: sizem(27);
           height: auto;
           max-height: sizem(27);
           margin: unset;
-        }
+        }*/
 
         &.address {
           padding: 1em 1em;
@@ -268,6 +272,8 @@
           border-radius: sizem(15) sizem(15) 0 0;
           white-space: normal;
           line-height: 1.5;
+          
+        > div{width:100%;}
           span{white-space: nowrap;}
 
           &::before {

@@ -2,6 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
+      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
 
       <!-- <div class="cus-divider"></div> -->
 
@@ -12,14 +14,14 @@
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center z-10">
-        <div class="s-order-title">
+       <!--  <div class="s-order-title">
           <p>
             {{ info.order.title }}
           </p>
           <p>
             {{ info.order.subTitle }}
           </p>
-        </div>
+        </div> -->
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"
             ><span>姓名<span>(必填)</span></span>
@@ -155,6 +157,7 @@
   overflow: hidden;
   padding: 0 0;
   padding-top: size(150);
+  font-size: 0.875rem;
 //  background-image: url("@/section/orderbg.jpg");
 
   .intro {
@@ -200,20 +203,17 @@
     pointer-events: none;
   }
 
-  .s-order-title {
-    @apply absolute left-0 bottom-[115%] text-center w-full;
-    p {
-      font-size: size(45);
-      font-weight: 700;
-      color: #6D5E50;
-
-      &:nth-child(2) {
-        font-size: size(18);
-        margin-top: size(5);
-        font-weight: 400;
-        color: #666;
-      }
-    }
+  .order-title {
+    font-size: size(45);
+    font-weight: 700;
+    color: #6D5E50;
+    padding-top:2em;
+  }
+  .order-subTitle{
+    color: #666;
+    padding:.8em 0;
+    letter-spacing: 0em;
+    font-weight: 500;
   }
 
   .cus-divider {
@@ -230,12 +230,13 @@
     // min-width: 680px;
     //  height: 350px;
     gap: size(80);
-    margin-top: size(45);
+   //margin-top: size(45);
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
     margin: size(45) auto;
     width: size(900);
+    min-width: 750px;
     flex-wrap: wrap;
 
     .left {
@@ -308,7 +309,7 @@
     width: size(900);
   }
   .send {
-    font-size: 20px;
+    font-size: 1.43em;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
@@ -316,8 +317,8 @@
     border-radius: 10px;
     border: 0;
 margin-top: 1.5em;
-    width: size(442);
-    height: size(87);
+    width:22em;
+    height: 4.35em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 700;
@@ -327,7 +328,7 @@ margin-top: 1.5em;
   }
 
   .control {
-    font-size: size(16);
+  //  font-size: size(16);
     color: #000;
     position: relative;
   }
@@ -369,33 +370,7 @@ margin-top: 1.5em;
   }
 
   .order {
-    width: 100%;
-
-    .s-order-title {
-      @apply absolute left-0 bottom-[105%] flex flex-col items-center justify-center w-full;
-      p {
-        font-size: sizem(29);
-        font-weight: 500;
-
-        &:nth-child(2) {
-          font-size: sizem(13);
-          margin-top: sizem(5);
-        }
-      }
-    }
-
-    .order-title-img {
-      width: sizem(200);
-      margin-bottom: sizem(22);
-    }
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
-
+    width: 100%;margin-top: sizem(150);
     .cus-divider {
       margin: 0 auto;
       width: sizem(117);
@@ -409,8 +384,9 @@ margin-top: 1.5em;
       // padding-top:4.5em;
     }
     .order-subTitle {
-      font-size: sizem(13);
-      padding: sizem(10) sizem(20);
+     // font-size: sizem(13);
+      font-size: .94em;
+      padding: sizem(10) 0 sizem(10) 0;margin: 0 -1em;
     }
 
     .form {
@@ -420,7 +396,7 @@ margin-top: 1.5em;
       gap: 0;
       margin-bottom: sizem(20);
       flex-direction: column;
-      margin-top: sizem(150);
+     // margin-top: sizem(150);
 
       .left {
         width: 100%;
@@ -444,15 +420,15 @@ margin-top: 1.5em;
     }
 
     .send {
-      font-size: sizem(21);
+     // font-size: sizem(21);
       width: sizem(310);
-      height: sizem(72);
+      height: 3.6em;
       background-size: cover;
       margin-top: 1em;
     }
 
     .control {
-      font-size: sizem(14.6);
+     //font-size: sizem(14.6);
     }
   }
 }
