@@ -2,7 +2,7 @@
   <article class="s1">
     <div class="relative z-10 flex flex-col items-center justify-center">
     <img class="cathayredlogo" src="./s1/cathayredlogo.svg" alt="國泰建設logo" data-aos="zoom-in" data-aos-delay="0" />
-    <img class="t1" src="./s1/t1.svg" alt="在13期找回生活的原點" data-aos="zoom-in" data-aos-delay="200" />
+    <img class="t1" src="./s1/t1a.svg" alt="在13期找回生活的原點" data-aos="zoom-in" data-aos-delay="200" />
     <img class="t2" src="./s1/t2.svg" alt="en1" data-aos="zoom-in" data-aos-delay="400" />
     <img class="t3" src="./s1/t3.svg" alt="en2" data-aos="zoom-in" data-aos-delay="600" />
     <img class="t4" src="./s1/t4.svg" alt="當城裡的時光遇見生活的芬芳" data-aos="zoom-in" data-aos-delay="800" />
@@ -14,20 +14,6 @@
     <img src="@/section/s1/tree.webp" alt="" srcset="">
   </div>
 
-  <!--  <img class="bg" src="./s1/11.gif" alt="" />
-    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />
-
-    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" /> 
-    <div class="content">
-      <img class="t1" src="./s1/t1.svg" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000"/>
-      <img class="logo" src="./s1/logo.svg" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000"/>
-    </div>
-    <img class="slogo absolute" src="./s1/slogo.svg" alt="" data-aos="fade" data-aos-delay="400"/>
-    <div class="style">
-      <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
-      <img src="./s1/style2apng.png" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
-    </div>
-  -->
   </article>
 </template>
 
