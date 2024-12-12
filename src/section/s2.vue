@@ -30,7 +30,7 @@
   @apply relative w-full;
   @apply flex flex-col items-center justify-end;
   @apply bg-bottom bg-cover;
-  height: size(1090);
+  height: size(1250);
   background-image: url("@/section/s2/bg.webp");
   padding-bottom: size(70);
 
@@ -64,13 +64,13 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(560);
+    height: sizem(700);
     background-image: url("@/section/s2/bgm.webp");
     padding-bottom: sizem(62);
 
     .fullview {
       @apply absolute w-full top-0;
-      height: sizem(260);
+      height: sizem(400);
     }
 
     .t {

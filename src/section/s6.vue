@@ -235,6 +235,7 @@
       @apply absolute left-0 pointer-events-none;
       bottom: sizem(234);
       height: sizem(237);
+      opacity: .5;
     }
   }
 }
@@ -253,21 +254,27 @@ const imgs = ref([
     img: globals.$isMobile()
       ? new URL("../section/s6/p1.jpg", import.meta.url).href
       : new URL("../section/s6/1.webp", import.meta.url).href,
-    caption: "藏筑2  3d情境示意圖",
+    caption: globals.$isMobile()
+      ? "點擊瀏覽 藏筑2  3d情境示意圖"
+      : "藏筑2  3d情境示意圖",
     large: new URL("../section/s6/l1.jpg", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
       ? new URL("../section/s6/p2.jpg", import.meta.url).href
       : new URL("../section/s6/2.webp", import.meta.url).href,
-    caption: "藏筑2  3d情境示意圖",
+    caption: globals.$isMobile()
+      ? "點擊瀏覽 藏筑2  3d情境示意圖"
+      : "藏筑2  3d情境示意圖",
     large: new URL("../section/s6/l2.jpg", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
       ? new URL("../section/s6/p3.jpg", import.meta.url).href
       : new URL("../section/s6/3.webp", import.meta.url).href,
-    caption: "藏筑2  3d情境示意圖",
+    caption: globals.$isMobile()
+      ? "點擊瀏覽 藏筑2  3d情境示意圖"
+      : "藏筑2  3d情境示意圖",
     large: new URL("../section/s6/l3.jpg", import.meta.url).href,
   },
 ])

@@ -110,6 +110,7 @@
 
   .t {
     @apply flex flex-col items-center select-none pointer-events-none;
+    
     .t1 {
       width: size(443);
       margin-bottom: size(43);
@@ -170,10 +171,12 @@
     @apply relative w-full max-h-screen;
     @apply flex flex-col items-center justify-start;
     padding-top: sizem(123);
-    height: sizem(667);
+    height: sizem(610);
+    
 
     .t {
       @apply flex flex-col items-center select-none pointer-events-none;
+      margin-top: sizem(-50);
       .t1 {
         width: sizem(253.77);
         margin-bottom: sizem(25);

@@ -204,6 +204,7 @@
       @apply absolute left-0 pointer-events-none;
       bottom: sizem(234);
       height: sizem(237);
+      opacity: .5;
     }
   }
 }
@@ -220,10 +221,10 @@ const splide = ref()
 const imgs = [
   {
     img: globals.$isMobile()
-      ? new URL("../section/s4/p1.jpg", import.meta.url).href
+      ? new URL("../section/s4/p1.webp", import.meta.url).href
       : new URL("../section/s4/1.webp", import.meta.url).href,
     caption: globals.$isMobile()
-      ? "藏筑2  3d情境示意圖"
+      ? "點擊瀏覽 藏筑2  3d情境示意圖"
       : "日間外觀3d透視參考示意圖 | 此為廣告效果示意，為單一建物電腦3d透視表現，周遭環境係電腦合成，建設公司保有建物外觀修正之權利",
     large: new URL("../section/s4/l1.jpg", import.meta.url).href,
   },

@@ -206,6 +206,7 @@
       @apply absolute left-0 pointer-events-none;
       bottom: sizem(234);
       height: sizem(237);
+      opacity: .5;
     }
   }
 }
@@ -224,7 +225,9 @@ const imgs = [
     img: globals.$isMobile()
       ? new URL("../section/s5/p1.jpg", import.meta.url).href
       : new URL("../section/s5/1.webp", import.meta.url).href,
-    caption: "藏筑2  3d情境示意圖",
+    caption: globals.$isMobile()
+      ? "點擊瀏覽 藏筑2  3d情境示意圖"
+      : "藏筑2  3d情境示意圖",
     large: new URL("../section/s5/l1.jpg", import.meta.url).href,
   },
 ]

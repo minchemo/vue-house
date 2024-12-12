@@ -251,6 +251,7 @@
       @apply absolute left-0 pointer-events-none;
       bottom: sizem(234);
       height: sizem(237);
+      opacity: .5;
     }
   }
 }
@@ -267,23 +268,29 @@ const splide = ref()
 const imgs = ref([
   {
     img: globals.$isMobile()
-      ? new URL("../section/s7/1m.webp", import.meta.url).href
-      : new URL("../section/s7/1.webp", import.meta.url).href,
-    caption: "藏筑2  3d情境示意圖",
-    large: new URL("../section/s7/l1.jpg", import.meta.url).href,
+      ? new URL("../section/s7/2m.webp", import.meta.url).href
+      : new URL("../section/s7/2.webp", import.meta.url).href,
+    caption: globals.$isMobile()
+      ? "點擊瀏覽 藏筑2  3d情境示意圖"
+      : "藏筑2  3d情境示意圖",
+    large: new URL("../section/s7/l2.jpg", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
-      ? new URL("../section/s7/2m.webp", import.meta.url).href
-      : new URL("../section/s7/2.webp", import.meta.url).href,
-    caption: "藏筑2  3d情境示意圖",
-    large: new URL("../section/s7/l2.jpg", import.meta.url).href,
+      ? new URL("../section/s7/1m.webp", import.meta.url).href
+      : new URL("../section/s7/1.webp", import.meta.url).href,
+    caption: globals.$isMobile()
+      ? "點擊瀏覽 藏筑2  3d情境示意圖"
+      : "藏筑2  3d情境示意圖",
+    large: new URL("../section/s7/l1.jpg", import.meta.url).href,
   },
   {
     img: globals.$isMobile()
       ? new URL("../section/s7/3m.webp", import.meta.url).href
       : new URL("../section/s7/3.webp", import.meta.url).href,
-    caption: "藏筑2  3d情境示意圖",
+    caption: globals.$isMobile()
+      ? "點擊瀏覽 藏筑2  3d情境示意圖"
+      : "藏筑2  3d情境示意圖",
     large: new URL("../section/s7/l3.jpg", import.meta.url).href,
   },
 ])

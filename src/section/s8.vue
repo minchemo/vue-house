@@ -170,7 +170,7 @@
       @apply overflow-hidden;
       width: size(1110);
       height: size(910);
-      border-radius: size(35);
+      border-radius: size(0);
       .slide-item {
         @apply relative bg-cover;
         @apply aspect-[1110/910];
