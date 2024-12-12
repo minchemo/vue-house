@@ -1,8 +1,23 @@
 <template>
   <article class="s1">
-    <img class="bg" src="./s1/11.gif" alt="" />
-<!--
-    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />  -->
+    <div class="relative z-10 flex flex-col items-center justify-center">
+    <img class="cathayredlogo" src="./s1/cathayredlogo.svg" alt="國泰建設logo" data-aos="zoom-in" data-aos-delay="0" />
+    <img class="t1" src="./s1/t1.svg" alt="在13期找回生活的原點" data-aos="zoom-in" data-aos-delay="200" />
+    <img class="t2" src="./s1/t2.svg" alt="en1" data-aos="zoom-in" data-aos-delay="400" />
+    <img class="t3" src="./s1/t3.svg" alt="en2" data-aos="zoom-in" data-aos-delay="600" />
+    <img class="t4" src="./s1/t4.svg" alt="當城裡的時光遇見生活的芬芳" data-aos="zoom-in" data-aos-delay="800" />
+  </div>
+  <div class="tree1 absolute" data-aos="fade-left" data-aos-delay="800" data-aos-duration="6000">
+    <img src="@/section/s1/tree.webp" alt="" srcset="">
+  </div>
+  <div class="tree2 absolute" data-aos="fade-right" data-aos-delay="1200" data-aos-duration="6000">
+    <img src="@/section/s1/tree.webp" alt="" srcset="">
+  </div>
+
+  <!--  <img class="bg" src="./s1/11.gif" alt="" />
+    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" />
+
+    <img class="t0 absolute top-0 left-0 w-full z-10" src="./s1/pc.jpg" alt="" /> 
     <div class="content">
       <img class="t1" src="./s1/t1.svg" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000"/>
       <img class="logo" src="./s1/logo.svg" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000"/>
@@ -12,6 +27,7 @@
       <img src="./s1/style1.webp" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
       <img src="./s1/style2apng.png" alt="" data-aos="fade-left" data-aos-delay="700" data-aos-duration="3000"/>
     </div>
+  -->
   </article>
 </template>
 
@@ -19,74 +35,76 @@
 @import "@/assets/style/function.scss";
 
 .s1 {
-  @apply relative w-full max-h-screen;
-  @apply flex flex-col items-center justify-center;
-  background: url("@/section/s1/bg.webp") 0 0;
-  background-size: auto 100%;
-  height: sizem(550);
+  @apply relative w-full;
   @media screen and (min-width: 768px) {
    // background-image: url("@/section/s1/bg.webp");
-    height: size(1080);
     background-size: 100% auto;
   }
   .t0{
-	pointer-events: none;opacity: .0;}
-  .slogo{top: sizem(13);right: sizem(13);width: sizem(77);
+	pointer-events: none;opacity: .3;}
+  .cathayredlogo{
+    width: sizem(148);
+    margin: sizem(75) auto 0 auto;
     @media screen and (min-width: 768px) {
-      top: size(13);right: size(23);width: size(141);
+      width: size(200);
+      margin: size(110) auto 0 auto;
     }
   }
-.bg{opacity: .6;filter: blur(sizem(3));
-  position: absolute;top: 0;left:0%;width: 100%;height: 100%;mix-blend-mode:soft-light;
+  .t1{
+    width: sizem(290);
+    margin: sizem(77) auto 0 auto;
+    @media screen and (min-width: 768px) {
+      width: size(565);
+      margin: size(160) auto 0 auto;
+    }
+  }
+  .t2{
+    width: sizem(152);
+    margin: sizem(17) auto 0 auto;
+    @media screen and (min-width: 768px) {
+      width: size(295);
+      margin: size(77) auto 0 auto;
+    }
+  }
+  .t3{
+    width: sizem(170);
+    margin: sizem(26) auto sizem(0) auto;
+    @media screen and (min-width: 768px) {
+      width: size(330);
+      margin: size(50) auto 0 auto;
+    }
+  }
+  .t4{
+    width: sizem(46);
+    margin: sizem(50) auto sizem(0) auto;
+    @media screen and (min-width: 768px) {
+      width: size(79);
+      margin: size(135) auto 0 auto;
+    }
+  }
   
-  @media screen and (min-width: 768px) {
-    filter: blur(size(5));width: 100%;height: 150%;
-    }
-
-
+@keyframes tree{
+  to{transform: skewX(-1deg);}
 }
-
-  .content {
-    @apply relative z-10;
-    @apply flex flex-col items-center justify-center;
-    .t1 {
-      width: sizem(168);
-      filter:drop-shadow(sizem(1) sizem(1) sizem(3) #3339);
-    }
-    .logo {
-      width: sizem(114);
-      margin:sizem(18) auto sizem(44) auto;
-      filter: brightness(.52)grayscale(.8);
+  .tree1{
+    top: sizem(321);left: sizem(224);width: sizem(940);
+    img{width: 100%;transform: skewX(2deg);transform-origin:50% 90%;
+      animation:5s tree ease-in-out alternate infinite;
     }
     @media screen and (min-width: 768px) {
-      .t1 {
-        width: size(400);
-        filter:drop-shadow(size(2) size(2) size(4) #3339);
-      }
-      .logo {
-        width: size(269);
-        margin:size(42) auto size(60) auto;
-      }
+      top: size(-10);left: size(1234);width: size(3410);
     }
   }
-
-  .style{
-    position: absolute;
-    width: sizem(231);
-    right:0;
-    bottom: sizem(25);
+  .tree2{
+    top: sizem(543);right: sizem(95);width: sizem(940);
+    img{width: 100%;transform: skewX(2deg);transform-origin:50% 90%;
+      animation:5s tree ease-in-out alternate infinite;
+    }
     @media screen and (min-width: 768px) {
-    width: size(516);
-    bottom: size(15);
+      top: size(585);right: size(770);width: size(3410);
+      
     }
-    img{width: 100%;mix-blend-mode: multiply;
-    &:last-child{
-      position: absolute;top:0;left: 0;mix-blend-mode: normal;
-    }
-    }
-
-}
-
+  }
 
 }
 /* 螢幕尺寸標準 */

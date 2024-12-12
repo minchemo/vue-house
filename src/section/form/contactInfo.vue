@@ -1,8 +1,9 @@
 <template>
   <div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    
+    <!--
     <img src="@/section/s1/logo.svg" class="logo" alt="logo" data-aos="fade" data-aos-duration="2000" data-aos-delay="200">
+    -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -122,7 +123,7 @@
     gap:1.25em;
 
     .contact-item {
-      background: #79B3BA;
+      background: #C2B69E;
       border: 0;
       color: #fff;
       width: 100%;
@@ -137,7 +138,7 @@
       gap:1.25em;
 
       &:hover {
-        background-color: #3f858d;
+        background-color: #B28247;
         color: #fff;
 
         img {
@@ -154,20 +155,20 @@
       }
 
       &.address {
-        background-color: #E2EDEE;
+        background-color: #FFF;
         border: 0;
         z-index: 0;
         position: relative;
         border-radius: 10px 0 0 10px;
         max-width: 9999px;
         justify-content: center;
-        border: 0;
+        border:1px solid #C2B69E;
         color: #000;
         @apply basis-2/3 ;
       }
 
       &.googlemap {
-        background-color: #79B3BA;
+        background-color: #C2B69E;
         color: #fff;
         border: 0;
         border: 0;
@@ -177,7 +178,7 @@
 
 
         &:hover {
-          background-color: #3f858d;
+          background-color: #B28247;
           color: #fff;
 
           img {

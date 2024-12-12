@@ -5,7 +5,7 @@
         <div
           class="h-full info-box mx-auto flex flex-col items-center justify-center"
         >
-          <div class="title text-white">建案資訊</div>
+          <div class="title text-[#B9975F] font-['Noto_Serif_TC',serif]">建案資訊</div>
           <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
             <div
               class="item font-bold flex items-center w-full whitespace-nowrap"
@@ -16,7 +16,7 @@
                 v-html="item[0]"
               ></p>
               <p
-                class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal"
+                class="whitespace-pre-line leading-normal text-left text-[#000] font-normal"
                 v-html="item[1]"
               ></p>
             </div>
@@ -55,19 +55,12 @@
   position: relative;
   z-index: 5;
   font-size: size(22);
-  background: linear-gradient(
-    0deg,
-    #714e39 0%,
-    #654631 36%,
-    #4a331e 60%,
-    #36250f 84%,
-    #2f200a 100%
-  );
+  //background:#FFF;
   img {
     height: 1.3em;
     vertical-align: middle;
   }
-  padding: 50px 0;
+  padding:0px 0 2em;
 }
 .info-box {
   width: size(900);

@@ -1,10 +1,13 @@
 <template>
   <div id="order" class="order relative text-center">
+    <img class="order-bg" src="@/section/s1/tree.webp" alt="" srcset="">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
-
+       <div class="order-title-all relative z-10">
+       <img class="order-title-img" src="@/section/form/ordertitle.svg" alt="" srcset="">
+      <div class="order-title text-center" v-html="info.order.title" v-if="info.order.title"></div>
+      <div class="order-subTitle text-center" v-html="info.order.subTitle" v-if="info.order.subTitle"></div>
+    </div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -80,6 +83,7 @@
               </option>
             </select></label
           >
+          <!-- 
           <label class="row"
             ><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
@@ -88,7 +92,7 @@
                 {{ area.label }}
               </option>
             </select></label
-          >
+          >  -->
         </div>
         <div class="right">
           <textarea
@@ -159,33 +163,21 @@
   padding-top: size(150);
   font-size: 0.875rem;
 //  background-image: url("@/section/orderbg.jpg");
+@media screen and (min-width: 768px) {
+&::before{content: "";
+display: block;
+background: #fffc;
+top: 5rem;
+left: 0;right: 0;
+height: 51rem;position: absolute;margin: auto;
+width: size(1100);
+min-width: 950px;
+border-radius: 5rem;
+box-shadow:0 40px 40px -15px #0009;
+}
 
-  .intro {
-    @apply flex flex-col items-center justify-end relative z-[5];
-    padding-bottom: size(234);
-    height: size(1641);
-    .logo {
-      width: size(622);
-    }
-    .t {
-      margin-top: size(330);
-      color: #231815;
-      text-align: center;
-      font-size: size(30);
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 48px */
-      letter-spacing: size(6);
-    }
-  }
+}
 
-  .bg-image {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: size(50);
-    vertical-align: middle;
-  }
 }
 
 .order {
@@ -193,27 +185,44 @@
   position: relative;
   width: 100%;
   padding-top: 0;
-  .bg {
+@keyframes tree{
+  to{transform: skewX(-1deg);}
+}
+  .order-bg {
     position: absolute;
-    top: size(-140);
-    left: 0;
-    width: 100%;
-    z-index: 2;
+    top: size(110);
+    left: size(-360);
+    width: size(3439);
+    //z-index: 2;
     user-select: none; // opacity: .7;
     pointer-events: none;
+    transform: skewX(2deg);transform-origin:50% 90%;
+    animation:5s tree ease-in-out alternate infinite;
   }
-
+  .order-title-all{
+    width: size(900);
+    min-width: 750px;
+    text-align: left;
+    border-left: 2px solid #B28247;
+    padding: 0 0 0 1em;
+    margin: auto;}
+.order-title-img{
+ width: 20.3em;
+  margin: auto auto auto 0;}
   .order-title {
     font-size: size(45);
     font-weight: 700;
     color: #6D5E50;
     padding-top:2em;
+    margin: 0;
   }
   .order-subTitle{
     color: #666;
-    padding:.8em 0;
+    padding:.8em 0 0;
     letter-spacing: 0em;
     font-weight: 500;
+    margin: 0;
+    text-align: left;
   }
 
   .cus-divider {
@@ -225,11 +234,7 @@
   }
 
   .form {
-    // @apply left-1/2 -translate-x-1/2;
-    // min-width: 680px;
-    //  height: 350px;
     gap: size(80);
-   //margin-top: size(45);
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
@@ -254,12 +259,12 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #E2EDEE;
+      background-color: #B28247;
       position: absolute;
     }
     .row {
-      background: #E2EDEE;
-      border: 0;
+      background: #FFF;
+      border:1px solid #B28247;
      // color: #231815;
       display: flex;
       width: 100%;
@@ -312,18 +317,19 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background: #6D5E50;
+    background: #B28247;
     border-radius: 10px;
     border: 0;
-margin-top: 1.5em;
-    width:22em;
-    height: 4.35em;
+    margin: 1.2em auto 7em;
+    width:17em;
+    height: 4em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 700;
     position: relative;
 
-    @apply hover:bg-[#bd8e48] hover:text-white;
+
+    @apply hover:bg-[#6D5E50] hover:text-white;
   }
 
   .control {
@@ -341,35 +347,37 @@ margin-top: 1.5em;
     padding: 0 sizem(30);
     padding-top: sizem(0);
 
-    .intro {
-      @apply flex flex-col items-center justify-end;
-      padding-bottom: sizem(107.5);
-      height: sizem(685);
-      .logo {
-        width: sizem(243.01);
-      }
-      .t {
-        margin-top: sizem(127);
-        color: #231815;
-        text-align: center;
-        font-size: sizem(13);
-        font-style: normal;
-        font-weight: 400;
-        line-height: 160%; /* 48px */
-        letter-spacing: sizem(2.6);
-      }
-    }
 
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
-    }
   }
 
   .order {
-    width: 100%;margin-top: sizem(150);
+    width: 100%;margin-top: sizem(42);
+    .order-bg {
+    position: absolute;
+    top: sizem(550);
+    left: sizem(-183);
+    width: sizem(1280);
+    //z-index: 2;
+    user-select: none; // opacity: .7;
+    pointer-events: none;
+  }
+  .order-title-all{
+    width: sizem(310);
+    padding: 0 0 0 sizem(15);
+    min-width:0;}
+
+.order-title-img{
+ width:sizem(127);
+  margin: auto auto auto 0;}
+    .order-title {
+      font-size: sizem(25);
+      // padding-top:4.5em;
+    }
+    .order-subTitle {
+     // font-size: sizem(13);
+      font-size: .94em;
+     // padding: sizem(10) 0 sizem(10) 0;margin: 0 -1em;
+    }
     .cus-divider {
       margin: 0 auto;
       width: sizem(117);
@@ -378,23 +386,14 @@ margin-top: 1.5em;
       background-color: #055f76;
     }
 
-    .order-title {
-      font-size: sizem(25);
-      // padding-top:4.5em;
-    }
-    .order-subTitle {
-     // font-size: sizem(13);
-      font-size: .94em;
-      padding: sizem(10) 0 sizem(10) 0;margin: 0 -1em;
-    }
-
     .form {
       width: sizem(310);
       min-width: 0;
       height: auto;
       gap: 0;
-      margin-bottom: sizem(20);
+     //margin-bottom: sizem(20);
       flex-direction: column;
+      margin: sizem(30) auto;
      // margin-top: sizem(150);
 
       .left {
