@@ -574,7 +574,7 @@ const send = () => {
       &people=${formData.people}
       &project=${formData.project}
       &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
+      &cityarea=${formData.city}
       &msg=${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
@@ -586,7 +586,7 @@ const send = () => {
         method: "GET",
       }
     )
-
+ //${formData.area}
     fetch("contact-form.php", {
       method: "POST",
       body: presend,
