@@ -63,6 +63,7 @@
   .t4{
     width: sizem(46);
     margin: sizem(50) auto sizem(0) auto;
+    filter:drop-shadow(0px 0px 1px #fff);
     @media screen and (min-width: 768px) {
       width: size(79);
       margin: size(135) auto 0 auto;
