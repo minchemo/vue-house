@@ -1,14 +1,12 @@
 <template>
   <article class="s2 relative" id="s2">
-    <img src="./s2/bg.webp" alt="bg" class="bg" data-aos="fade-up" data-aos-delay="0" data-aos-offset="600">
-    <div class="bubble" data-aos="fade-up" data-aos-delay="0" ><img src="./s2/bubble.svg" alt="bubble"></div>
-    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">16458坪  國際菁英生活誌</h3>
-    <img src="./s2/line.svg" alt="line" class="line">
-    <div class="txt absolute">
-      <h4 data-aos="fade-up" data-aos-delay="0">創新複合 綠動園區</h4>
-      <p data-aos="fade-up" data-aos-delay="0">住進南港，走進世界。以國際城中城規格，超越地表極致想像、超前世界住居前瞻<br v-if="!isMobile">體驗您的一天，萬坪綠逸起跳，席捲家的多元。於松山—南港車站間，悸動・等待</p>
-      <img src="./s2/bottom.webp" class="bottom absolute">
+    <div class="main">
+    <img src="./s2/house.svg" class="house" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s2/txt_pc.svg" class="txt" data-aos="zoom-in" data-aos-delay="200" v-if="!isMobile">
+    <img src="./s2/txt_mo.svg" class="txt" data-aos="zoom-in" data-aos-delay="200" v-else>
     </div>
+
+
   </article>
 </template>
 
@@ -32,41 +30,35 @@
 .s2 {
  height: size(1070);
  overflow: hidden;
+  font-size:size(36);
+  background:url("@/section/s2/bg.webp");
+  background-size: cover;
+  padding: 0 size(250);
+  
+
+
+
+  .main{
+  gap: size(0);
   display: flex;
   flex-direction: column;
   justify-content:center;
+  flex-direction: row;
   align-items:center;
-  font-size:size(36);
-  .bg{position: absolute;width:100%;top:size(-332);left:0%;}
-  .bubble{position: absolute;left:0;right:size(12);top:size(512);margin: auto;width:size(307);
-    mix-blend-mode: overlay;
-   // background: #0003;
-    img{width: 100%;
- //  transform: rotate(180deg);opacity: 0;
-  animation: an1 2s linear infinite reverse;
- }
-  }
+  margin-top: size(100);
 
-  .t1{position: absolute;
-    left: 0;right: 0;margin: auto;text-align: center;
-    font-size:size(62);
-    line-height: 1.13;
-    letter-spacing: 0.07em;
-    font-weight: 900;z-index: 3;top:size(172);
-    
-    }
-  .line{ width: 102%;left: -1%;
-      position: absolute;z-index: 3;top:size(345);}
-  .txt{left: 0;bottom: 0; width:100%;background: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;height: size(130);padding-bottom: size(17);
-  letter-spacing: 0.04em;
-    h4{font-size:size(36); border-right:1px solid currentColor;font-weight: 600;
-      padding: .15em .8em .15em 0;margin-right: .8em;}
-    p{font-size:size(24);}
+  .house{
+    width: size(445);
   }
-  .bottom{left: 0;bottom: 0; width:100%;z-index: 3;height:size(16);}
+  .txt{
+    width: size(749);
+  }  
+
+  }
+  
+  
+  
+
 }
 
   
@@ -79,26 +71,30 @@
 
 
   .s2 {
-    height: sizem(740);
+    height: sizem(745);
     font-size:sizem(16);
     background-size: 340% auto;
-    .bg{position: absolute;width:330%;top:sizem(-335);left:-115%;}
-    
-  .bubble{left:0;right:sizem(12);top:sizem(215);margin: auto;width:sizem(198);//background: #000;
+    background:url("@/section/s2/bgm.webp");
+    background-size: cover;
+
+
+  .main{
+  margin-top: sizem(80);
+  flex-direction: column;
+  gap: sizem(20);
+
+  .house{
+    width: sizem(245);
+  }
+  .txt{
+    width: sizem(270);
+  }  
+
   }
 
-  .t1{font-size:sizem(25);top:sizem(86);
-    }
-  .line{ width: sizem(400);left:sizem(-22);top:sizem(164);}
-  .txt{height:auto;padding: sizem(35) 0 sizem(62) 0;
-    flex-direction: column;
-  letter-spacing: 0.04em;
-    h4{font-size:sizem(20); border-right:0px solid currentColor; border-bottom:1px solid currentColor;font-weight: 600;
-      padding: 0 0 .6em 0;margin: auto auto .6em auto;width: sizem(310);text-align: center;}
-    p{font-size:sizem(15);line-height: 1.7;
-      margin: auto;width: sizem(310);text-align: justify;}
-  }
-  .bottom{height:sizem(16);}
+
+  
+
   
 }
 }

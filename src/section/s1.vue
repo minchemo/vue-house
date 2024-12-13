@@ -1,9 +1,7 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/bg.webp" class="bg" data-aos="fade" data-aos-delay="0">
-    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">超越南港<br>摩登時代</h3>
-    <img src="./s1/slogo.svg" class="slogo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/logor.svg" class="logor absolute">
+    <img src="./s1/logo.webp" class="logo" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/txt.svg" class="txt" data-aos="zoom-in" data-aos-delay="200">
   </article>
 </template>
 
@@ -25,27 +23,16 @@
   max-height: size(1070);
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content:center;
   align-items:center;
   font-size:size(36);
+  padding: 0 size(200);
+  background:url("@/section/s1/bg.webp");
 
-  .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
-  .box{position: fixed;width: 100%;height: 100vh;background: #666;mix-blend-mode: hue;
-    top:0;left: 0; pointer-events: none;z-index: 10;opacity: .7;}
-  .bg{position: absolute;width:size(2517);top:size(-347);left:size(-291);
-  top:calc(50% + #{size(-347 - 1070 * .5)});
-  transform: rotate(7deg)scale(.8);
-  transform-origin: 50% 80%;
-  }
-  .t1{position: relative;
-    font-size:size(143);
-    line-height: 1.13;
-    letter-spacing: 0.07em;
-    font-weight: 900;z-index: 3;
-    }
-    .slogo{ width: size(470);position: relative;z-index: 3;margin-top:size(50);}
-    .logor{right: size(55);bottom: size(40); width: size(130);z-index: 3;}
+  .logo{width: size(518);position: relative;z-index: 3;}
+  .txt{width: size(728);position: relative;z-index: 3;}
+
 }
 
   
@@ -60,18 +47,17 @@
   .s1 {
     height:calc(100vh - 63px);
     min-height: sizem(604);
-    max-height: sizem(750);
+    max-height: sizem(667);
     height: sizem(604);
     font-size:sizem(16);
-  .bg{width:sizem(764);top:sizem(30);left:sizem(-195);
-  top:calc(50% + #{sizem(30 - 604 * .5)})
-  }
-  .t1{
-    font-size:sizem(63);
-    }
-    .slogo{ width: sizem(230);margin-top:sizem(30);
-    margin-bottom:sizem(65);}
-    .logor{right: sizem(20);bottom: sizem(20); width: sizem(130);}
+    flex-direction: column;
+    padding: 0;
+    gap: sizem(50);
+    background:url("@/section/s1/bgm.webp");
+    background-size: cover;
+
+    .logo{width: sizem(215);}
+    .txt{width: sizem(268);}
 }
 }
 </style>

@@ -19,6 +19,10 @@
         <img src="//h65.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open1()">
+        <img src="//h65.tw/img/form/line.svg" alt="Line諮詢" srcset="" />
+        <div>Line諮詢</div>
+      </div>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
@@ -49,6 +53,10 @@
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h65.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="open1()">
+      <img src="//h65.tw/img/form/line.svg" alt="預約賞屋" srcset="" />
+      <div>Line諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
@@ -138,12 +146,12 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #3DC82A;
-      color: #fff;
+      background: #fff;
+      color: #9e773c;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-  //  border-radius: .5em;
+      border-radius: .5em;
       font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -155,7 +163,7 @@
       gap: 1em;
 
       &:hover {
-        background: linear-gradient(to bottom, #32B8C3 0%,#97C634 50%,#d0db32 100%);
+        background: #967038;
         color: #fff;
 
         img {
@@ -167,7 +175,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: invert(44%) sepia(99%) saturate(269%) hue-rotate(357deg) brightness(90%) contrast(87%);
         transition: all .5s;
         margin: 0;
       }
@@ -243,7 +251,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#3DC82A;
+    background:#7e6025;
 
     .contact-item {
       height: 100%;      
@@ -364,6 +372,9 @@ const go = () => {
 
 const open = () => {
   window.open(info.fbLink);
+}
+const open1 = () => {
+  window.open(info.lineLink);
 }
 
 
