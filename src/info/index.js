@@ -22,6 +22,7 @@ export default {
         ["建築設計", "李俊利建築師事務所"],
         ["行銷企劃", "錦盒建築行銷有限公司"],
         ["建照號碼", "(111)桃市都建執照字第會桃00148-01號"],
+        ["基地位置", "桃園市延平路及樹林四街路口"],
     ],
     gtmCode: ["GTM-TLNH82HB"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
