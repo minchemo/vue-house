@@ -20,6 +20,7 @@
     <S1 />
     <!-- <S2v /> -->
     <S2 />
+    <S12 />
     <S3 />
     <S4 />
     <S5 />
@@ -255,6 +256,7 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
+import S12 from "@/section/s12.vue"
 //import S10 from "@/section/s10.vue"
 // import S11 from "@/section/s11.vue"
 /* 

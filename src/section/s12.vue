@@ -1,5 +1,5 @@
 <template>
-  <article class="s2">
+  <article class="s12">
    <!--   <div class="txt">
     <h3 class="title" data-aos="fade-up" data-aos-delay="0">淡水正核心 贏接市中心</h3>
       </div> --> 
@@ -11,10 +11,10 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s2 {
+.s12 {
   @apply relative overflow-hidden bg-[#008DD5];
   width: 100%;
-  height: size(1030);
+  height: size(1405);
   padding-top:0;
   font-size:size(18);
   .txt {
@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s2 {
+  .s12 {
     height: sizem(667);
   font-size:sizem(14);
   .txt {
