@@ -1,8 +1,9 @@
 <template>
     <div class="thanks">
+        <img src="https://bcp.crwdcntrl.net/5/c=13578/b=78113418" width="1" height="1" />
         <a href="/">
-            <img src="//h65.tw/img/thank-img.png" alt="thank" class="img">
-            <img src="//h65.tw/img/thank-img-hover.png" alt="thank" class="img-hover">
+            <img src="@/assets/thank-img.png" alt="thank" class="img pc">
+            <img src="@/assets/thank-img_m.png" alt="thank" class="img mobile">
         </a>
     </div>
 </template>
@@ -10,7 +11,7 @@
 .thanks {
     width: 100vw;
     height: 100vh;
-    background: url('//h65.tw/img/thank_bg.png');
+    background: url('@/assets/thank_bg.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -20,23 +21,15 @@
 
     a {
         .img {
-            position: absolute;
+            //position: absolute;
             opacity: 1;
         }
 
-        .img-hover {
-            opacity: 0;
-        }
+        
+    }
 
-        &:hover {
-            .img {
-                opacity: 0;
-            }
-
-            .img-hover {
-                opacity: 1;
-            }
-        }
+    .mobile{
+        display: none;
     }
 }
 
@@ -44,12 +37,15 @@
     .thanks {
         a {
 
-            .img,
-            .img-hover {
-                width: 90vw;
+            .img {
+                width: 80vw;
             }
         }
     }
+    .mobile{
+        display: block !important;
+    }
+    .pc{display: none;}
 }
 </style>
 
