@@ -30,7 +30,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-W5R5M4WP"], // 可放置多個
+    gtmCode: ["GTM-57HV5M4W"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -42,7 +42,7 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["2房","2+1房","3房","3房以上"],
+    //room_type: ["2房","2+1房","3房","3房以上"],
     budget: ["2001-3000萬","3001-4000萬","4001-5000萬","5001-6000萬","6001-7000萬","7001-8000萬","8001萬以上",],
     //use_type: [" "],
 
