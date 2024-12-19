@@ -474,7 +474,7 @@ const send = () => {
       }
     );
 
-    fetch("contact-form.php", {
+    fetch("email.php", {
       method: "POST",
       body: presend,
     }).then((response) => {

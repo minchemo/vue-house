@@ -1,37 +1,37 @@
 import { createRouter, createWebHistory } from "vue-router"
 import Home from "@/pages/Home.vue"
 const routes = [{
-        path: "/",
+        path: "/oak_gueili/",
         name: "Home",
         component: Home,
     },
     {
-        path: "/formThanks",
+        path: "/oak_gueili/formThanks",
         name: "formThanks",
         component: () =>
             import ("@/pages/FormThanks.vue"),
     },
     {
-        path: "/phoneThanks",
+        path: "/oak_gueili/phoneThanks",
         name: "phoneThanks",
         component: () =>
             import ("@/pages/PhoneThanks.vue"),
     },
     {
         name: "404",
-        path: "/404",
+        path: "/oak_gueili/404",
         component: () =>
             import ("@/pages/404.vue"),
     },
     {
         name: "404",
-        path: "/404",
+        path: "/oak_gueili/404",
         component: () =>
             import ("@/pages/404.vue"),
     },
     {
-        path: "/:catchAll(.*)", // 此处需特别注意至于最底部
-        redirect: "/404",
+        path: "/oak_gueili/:catchAll(.*)", // 此处需特别注意至于最底部
+        redirect: "404",
     },
 ]
 const router = createRouter({

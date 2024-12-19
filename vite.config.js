@@ -5,6 +5,7 @@ import { resolve } from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
+  base: '/oak_gueili',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
