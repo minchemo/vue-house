@@ -6,8 +6,11 @@
    <img src="./s1/mo.jpg" class="t0">
 
    -->
+   <div class="bg">
+    <div class="bg1"></div><div class="bg2"></div>
+  </div>
 
-   <div class="con flex">
+   <div class="con flex">    
     <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="100">
   <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="300">
@@ -40,8 +43,26 @@
 
   background-size: cover;
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
+.bg{position: absolute; top: 0;left: 0;width: 100%;height: 100%;background: #171c61;
+.bg1,.bg2{
+  position: absolute; top: 0;left: 0;width: 200%;height: 100%;
+  background: url("./s1/bgggg.jpg");
+  background-size: 50% auto;
+  animation: ww 10s linear infinite;opacity: .75;
+}
+.bg2{background-position: 100% 100%;mix-blend-mode: overlay;
+animation-delay: -5s;
+animation-direction:reverse;
+}
+&::after{content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #171c61;mix-blend-mode: soft-light;opacity: .5;}
 
-.con{gap: size(60);margin: 0 0 size(70) 0;
+}
+@keyframes ww {
+  to {
+     transform: translateX(-50%);
+  }
+}
+.con{gap: size(60);margin: 0 0 size(70) 0;filter:drop-shadow(0px 0px size(20) #171c61);
   div{flex-direction:column;margin: 0;}}
 
   .flex{
@@ -135,12 +156,18 @@ animation: ball 5s ease-in-out alternate infinite;}
     background-size: cover;
     background-position: bottom;
 
+    .bg{
+.bg1,.bg2{width: 550%;
+}
+.bg2{background-position: 100% 130%;
+}
 
+}
    
 
 
 
-    .con{gap:0;margin: 0 0  sizem(34) 0;flex-direction:column;
+    .con{gap:0;margin: 0 0  sizem(34) 0;flex-direction:column;filter:drop-shadow(0px 0px sizem(15) #171c61);
   div{flex-direction:column;margin: 0;}}
 
   .bgm{

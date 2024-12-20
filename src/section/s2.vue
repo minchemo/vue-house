@@ -52,7 +52,7 @@
 @media screen and (max-width: 767px) {
 
   .s2 {
-    height: sizem(667);
+    height: sizem(665);
   font-size:sizem(14);
   .txt {
     top: 4em;
