@@ -84,8 +84,6 @@
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
@@ -361,11 +359,11 @@ const formData = reactive({
   area: "",
   msg: "",
   policyChecked: false,
-  r_verify: false,
+  r_verify: true,
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "gender","use_type","budget","room_type","city","area"]
+const bypass = ["project", "msg", "email", "gender","use_type","budget","room_type","city","area","r_verify"]
 
 //中文對照
 const formDataRef = ref([
