@@ -10,7 +10,9 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#78B9CD]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#042D00]">
+    <img src="@/section/s1/bg.webp" alt="bg" class="bg" v-if="!isMobile">
+    <img src="@/section/s1/bgm.webp" alt="bg" class="bg" v-else>
     <S1 />
     <!-- <S2v /> -->
   <!--
@@ -43,6 +45,11 @@
   to {
      transform:scale(1);opacity: 1;
   }
+}
+.bg{
+  position: fixed;
+  top: 0;left: 0;right: 0;bottom: 0;
+  opacity: .2;
 }
 /*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;

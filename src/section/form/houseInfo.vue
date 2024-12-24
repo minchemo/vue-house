@@ -44,6 +44,7 @@
 // }
 .displaynone{display: none;}
 .house {
+    background: #042D00;
    // height: auto;
     color: #FFF;
     font-size: size(22);

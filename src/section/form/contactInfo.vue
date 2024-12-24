@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #5F7A86;
+      background-color: #C9A063;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -156,7 +156,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #c00;
+        background-color: #83663c;
         /*
         color: #000;
         img {
@@ -227,7 +227,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(20%) sepia(74%) saturate(2094%) hue-rotate(181deg) brightness(91%) contrast(98%);
+  img{filter: invert(15%) sepia(27%) saturate(1962%) hue-rotate(134deg) brightness(94%) contrast(104%);
   }
 }
 
@@ -245,7 +245,7 @@
     height: sizem(63);
     gap: sizem(1);
     //box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#5F7A86;
+    background:#07220b;
 
     .contact-item {
       height: 100%;      
