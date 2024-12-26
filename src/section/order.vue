@@ -127,7 +127,8 @@
   width: 100%;
   padding-top: size(40);
   background:url("@/section/form/bg.webp");
-  background-size: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
