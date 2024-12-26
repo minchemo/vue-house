@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s2/map.webp" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s2/map1.webp" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -19,8 +19,8 @@
     > img {
         height: 100%;
         max-width: unset;
-    //    background:url("@/section/s3/view.jpg") 50%;
-    //    background-size: 100% auto;
+        background:url("@/section/s2/map2.webp") 50%;
+        background-size: 100% auto;
     }
 
 }
@@ -67,7 +67,7 @@ import { onMounted, ref, computed, getCurrentInstance } from 'vue';
 const viewbox = ref();
 const viewImg = ref();
 const swiped = ref(false);
-const offsetRatio = 1.3; 
+const offsetRatio = 1.37; 
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
