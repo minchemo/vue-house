@@ -37,29 +37,29 @@ export default {
     //底下2個 沒項目就會隱藏
     room_type: ["套房","2房","3房"],
     budget: ["1000-1500萬","1500-2000萬","2000-2500萬","2500-3000萬"],
-    
+
     navList: [{
-        name: "最強增值",
-        target: ".s4",
-        offset: "-60",
+        name: "微笑雲朵",
+        target: ".s1",
+        offset: "0",
         offsetmo: "0",
     },{
-        name: "一橋北市",
+        name: "6大看點",
         target: ".s3",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "兩代共融",
+        name: "豪宅地段",
         target: ".s6",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "水岸人生",
+        name: "建築美學",
         target: ".s7",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "房貸瘦身",
+        name: "麗寶集團",
         target: ".s5",
         offset: "-60",
         offsetmo: "0",

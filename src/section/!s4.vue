@@ -1,5 +1,5 @@
 <template>
-  <article class="s5" ref="s5">
+  <article class="s4" ref="s4">
     <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
     <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃" v-if="!isMobile">
     <img src="./s1/oo.svg" alt="oo" class="oo1" v-if="!isMobile">
@@ -31,7 +31,7 @@
 
 
 
-.s5 {
+.s4 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
@@ -94,7 +94,7 @@
 @media screen and (max-width: 767px) {
 
 
-.s5 {
+.s4 {
 @apply flex-col;
   height: auto;
   padding: 0;
@@ -167,15 +167,15 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.webp", import.meta.url).href ,
+    img:new URL("./s4/1.webp", import.meta.url).href ,
     caption: "士林生活圈實景"
   },
   {
-    img:new URL("./s5/2.webp", import.meta.url).href ,
+    img:new URL("./s4/2.webp", import.meta.url).href ,
     caption: "士林商圈實景"
   },
   {
-    img:new URL("./s5/3.webp", import.meta.url).href ,
+    img:new URL("./s4/3.webp", import.meta.url).href ,
     caption: "士林科教館實景"
   },
 ]

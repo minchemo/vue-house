@@ -9,10 +9,17 @@
     <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!-- loading end -->
-     <!-- <Nav /> -->
+     <!--  -->
+     <Nav />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
      <div class="bg">
-    <S1 />
+      <S1 />
+      <S2 />
+      <S3 />
+      <S4 />
+      <S5 />
+      <S6 />
+      <S7 />
     <Order />
     </div>
   <!--
@@ -71,11 +78,11 @@ img {
     width: 100%;letter-spacing: 0.03em;
     text-align:justify;
   .title{
-    @apply font-['Noto_serif_TC',serif];
+   // @apply font-['Noto_serif_TC',serif];
     font-size: 2.22em;
     margin:0 auto 0.35em;
     line-height: 1.5;
-    font-weight: 900;
+    font-weight: 700;
   }
   .subtitle{
     font-size: 1.1em;
@@ -194,8 +201,14 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
+import S4 from "@/section/s4.vue"
+import S5 from "@/section/s5.vue"
+import S6 from "@/section/s6.vue"
+import S7 from "@/section/s7.vue"
 import Order from "@/section/order.vue"
-// import Nav from "@/layout/navbar.vue"
+import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
