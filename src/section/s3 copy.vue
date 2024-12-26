@@ -1,9 +1,13 @@
 <template>
-  <article class="s5" ref="s5">
+  <article class="s3" ref="s3">
+    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃" v-if="!isMobile">
+    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃">
+	<img src="./s1/oo.svg" alt="oo" class="oo1">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">溪福機構 × 新月建設<br>雙巨擘聯手</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">在地深耕、品質卓越，以「第芬尼」、「富景」、「世界W」、「綠富綠」…等區域地標累積品牌實力；「鳴日之城」翻轉鶯桃雙城中軸，仰望微軟數據園區、遊賞千坪公園綠意，打造藝術科技城心鉅作。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">便捷三重奏 <br v-if="isMobile"> 一橋北市二捷三線</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">重陽橋×捷運Y22站  好"運"成雙</h4>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">一橋(重陽橋)迅抵台北大士林生活圈，捷運北環段Y22/Y23站(預計2031年完工)隨侍左右，輕鬆串接精華三線：新蘆線、信義線、文湖線，交通動能多元完善，坐車開車都是PLAN A。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -27,17 +31,34 @@
 
 
 
-.s5 {
+.s3 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:0em 0 0em 0;
-  font-size:size(18);
+  padding:11em 0 10em 0;
+  font-size:size(19);
   gap:3em;
   flex-wrap: wrap;
-  background: #003838cc;
-  z-index: 2;
+	.eggbg1{position: absolute;
+    display: block;
+    top: size(-250);left:size(630);width:size(700);
+		transform:translateY(-10%);
+		animation: an 2s ease-in-out infinite alternate-reverse;}
+	.eggbg2{position: absolute;
+    display: block;
+    top: size(850);right:size(400);width:size(150);
+		transform:translateY(-50%);
+		animation: an 4s ease-in-out infinite alternate;}
+  .oo1{position: absolute;top:size(225);height:size(50);left:size(60);
+		transform: translateX(20%);
+		animation: an 3s ease-in-out infinite alternate;}
 
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -48,16 +69,15 @@
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(1040);
+      height: size(560);
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
-      height: size(1040);
+      height: size(560);
       
     }
     .splide__pagination{
       right: calc(100% + 3em);
-      bottom: 13em;
       justify-content: flex-end;
     }
   }
@@ -68,21 +88,27 @@
 
 @media screen and (max-width: 767px) {
 
-  .s5 {
-    @apply flex-col-reverse;
+  .s3 {
+  @apply flex-col;
     height: auto;
     padding: 0;
   font-size:sizem(15);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:0em;
+	.eggbg2{
+    top: sizem(-160);right:sizem(-80);width:sizem(280);
+  transform: translateY(-10%);}
+  .oo1{top:sizem(30);height:sizem(20);left:auto;right:sizem(100);}
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
 
-.txt {margin: 2em auto 5em;
+.txt {margin: 4.4em auto 1.3em;
 }
 
 
@@ -92,17 +118,14 @@
 
     .caption {
     font-size:sizem(12);  
-    right:sizem(65);
+    right:sizem(5);
     bottom:sizem(5);
     }
     .slide-item {
-      // @apply bg-cover;
+      @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(330);
-  img{
-    object-fit: contain;
-  }
+      height: sizem(250);
       
     }
   }
@@ -139,20 +162,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "第芬尼"
+    img:new URL("./s3/1.webp", import.meta.url).href ,
+    caption: "重陽橋"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "富景"
+    img:new URL("./s3/2.webp", import.meta.url).href ,
+    caption: "北環段捷運情境示意圖"
   },
   {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "世界W"
-  },
-  {
-    img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "綠富綠"
+    img:new URL("./s3/3.webp", import.meta.url).href ,
+    caption: "新蘆線捷運徐匯中學站"
   },
 ]
 </script>

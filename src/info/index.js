@@ -9,8 +9,8 @@ export default {
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
     address: "桃園市桃園區大仁路50巷17號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.8171403848105!2d121.31995017592463!3d24.972335340770687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ec37700bfc7%3A0xa90ca6f99779e83c!2zMzMw5qGD5ZyS5biC5qGD5ZyS5Y2A5aSn5LuB6LevNTDlt7cxN-iZnw!5e0!3m2!1szh-TW!2stw!4v1732777802405!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/HyyRkXFi9PcGVRMs9",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d904.2043117493027!2d121.32188136965512!3d24.972331714343376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f19115d0bf5%3A0x600fd0878a3dc2a6!2z6bO05pel5LmL5Z-OLeaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1735177430232!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/XV4WL3ZWX2AQP63Z7",
     phone: "02-7754-2628",
     fbLink: "https://www.facebook.com/61557529449820",
     fbMessage: "https://m.me/61557529449820",

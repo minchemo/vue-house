@@ -109,6 +109,7 @@
   position: relative;
   width: 100%;
   padding-top: 0;
+  z-index: 2;
   
 
 

@@ -37,6 +37,7 @@
   flex-wrap: wrap;
     flex-direction:row-reverse;
     background:linear-gradient(0deg, #00383800 0%, #003838cc 100%);
+    z-index: 2;
 
 
   .main {
@@ -80,11 +81,6 @@ font-size:sizem(15);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
-
-	.eggbg1{
-    top: sizem(-40);left:sizem(-50);width:sizem(400);}
-.img{position: absolute;top:sizem(300);left: auto;
-  right:sizem(-155);width:sizem(260);bottom: auto;}
 
 .main {
   padding: 0 sizem(32.5);

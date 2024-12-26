@@ -24,6 +24,7 @@
   color: #FFF;
   line-height: 1.7;
   font-weight: 700;
+  z-index: 2;
 
   @media screen and (min-width: 768px) {
  height: size(900);

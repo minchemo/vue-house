@@ -16,12 +16,6 @@
      font-['LXGW_WenKai_Mono_TC',monospace]
     -->
   <div class="home relative overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-  <div class="allbg">
-    <!-- bg內容想做成滾動視差 去符合 allbg 的高度-->
-  <div class="bg">
-
-  </div>
-</div>
     <S1 />
     <S2 />
     <S3 />
@@ -31,6 +25,12 @@
     <S7 />
     <S8 />
     <Order />
+  <div class="allbg">
+    <!-- bg內容想做成滾動視差 去符合 allbg 的高度-->
+  <div class="bg">
+
+  </div>
+</div>
   <!--
     <S9 />
     <S1new />
@@ -66,7 +66,7 @@ img {
 
 .allbg{
   position: absolute;
-  top: 0;left: 0;right: 0;bottom: 0;height: 100%;
+  top: 0;left: 0;right: 0;bottom: 0;height: 100%;z-index: 1;
   // background: url("@/section/s1/bg.jpg") center top;
   // background-size: 270% auto;
     @media screen and (min-width: 768px) {
@@ -78,7 +78,7 @@ img {
   height: auto;
 }
   .bg{width: 100%;height: calc(100% + 100vw);
-  background: url("@/section/s1/bg.jpg") center top;
+  background: url("@/section/s1/bg.webp") center top;
   background-size: 270% auto;
     transform: translateY(0); // 初始位置
     transition: transform 0.5s ease-out; // 平滑過渡效果（可選）
@@ -106,6 +106,7 @@ img {
     line-height: 1.7;
     width: 100%;letter-spacing: 0.03em;
     text-align:justify;
+    z-index: 3;
   .title{
     @apply font-['Noto_serif_TC',serif];
     font-size: 2.22em;

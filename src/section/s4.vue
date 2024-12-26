@@ -37,6 +37,7 @@
   flex-wrap: wrap;
     flex-direction:row-reverse;
     background: #003838cc;
+    z-index: 2;
   .main {
     @apply flex;
     margin: 0;

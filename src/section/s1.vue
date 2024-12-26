@@ -34,8 +34,7 @@
   justify-content: center;
   align-items:center;
   color: #FFF;
-  line-height: 1.7;
-  font-weight: 700;
+  line-height: 1.7; z-index: 2;
 
   @media screen and (min-width: 768px) {
  // height: size(1080);

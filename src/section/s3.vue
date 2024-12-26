@@ -36,6 +36,7 @@
   gap:3em;
   flex-wrap: wrap;
   background: #003838cc;
+  z-index: 2;
 
   .main {
     @apply flex;
