@@ -1,7 +1,7 @@
 <template>
     <div class="thanks">
         <img src="https://bcp.crwdcntrl.net/5/c=13578/b=78113418" width="1" height="1" />
-        <a href="/">
+        <a href="/oak_gueili/">
             <img src="@/assets/thank-img.png" alt="thank" class="img pc">
             <img src="@/assets/thank-img_m.png" alt="thank" class="img mobile">
         </a>

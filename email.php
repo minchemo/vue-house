@@ -3,7 +3,7 @@ setlocale(LC_CTYPE, 'zh_TW.UTF-8');
 mb_internal_encoding('UTF-8');
 
 /* Set e-mail recipient */
-$recipient = 'ifstay.linda@gmail.com, Pink01281220@gmail.com'; // Who will get this email.
+$recipient = 'ifstay.linda@gmail.com, Pink01281220@gmail.com, mollytsai@lixin.com.tw'; // Who will get this email.
 
 /* Check all form inputs using check_input function */
 $subject = '春城家 - 線上預約';
