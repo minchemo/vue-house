@@ -75,6 +75,11 @@
       height: size(844);
       
     }
+    .arrows{
+    .prev,
+    .next{
+      width:3%;}
+    }
 
     .splide__pagination{
       justify-content: flex-end;

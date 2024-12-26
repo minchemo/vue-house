@@ -104,7 +104,8 @@ img {
     @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
     padding: 0; 
     height: 100%;
-    pointer-events: none;
+    pointer-events: none; 
+    filter:drop-shadow(0em 0.2em 0.2em rgba(0, 0, 0, .5));
     .prev,
     .next{
       width:5%;
