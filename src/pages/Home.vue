@@ -20,13 +20,10 @@
       <S5 />
       <S6 />
       <S7 />
+      <S8 />
     <Order />
     </div>
   <!--
-    <S6 />
-    <S7 />
-    <S8 />
-    <S9 />
     <S1new />
     <S1new2 /> -->
     
@@ -79,17 +76,18 @@ img {
     text-align:justify;
   .title{
    // @apply font-['Noto_serif_TC',serif];
-    font-size: 2.22em;
-    margin:0 auto 0.35em;
+    font-size: 2.6em;
+    margin:0 auto 0em;
     line-height: 1.5;
     font-weight: 700;
   }
   .subtitle{
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: 700;
     margin:0 auto 0.45em;
     line-height: 1.5;letter-spacing: 0.06em;
   }
+  .hr{width: 100%; height: size(100);margin: -1.5em 0;}
   .desc{
     margin: 0 0 0;
     b{}
@@ -99,7 +97,7 @@ img {
   @apply relative;
   z-index: 2;
   .slide-item{
-  img{width: 100%;height: 100%;border-radius: 1em;}
+  img{width: 100%;height: 100%;border-radius: 1em;object-fit: cover}
   
   }
   .arrows{
@@ -164,6 +162,7 @@ img {
   .subtitle{
     font-size: 1.1em;
   }
+  .hr{height: sizem(70);}
   }
 .slider {
   @apply relative;
@@ -207,6 +206,7 @@ import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
+import S8 from "@/section/s8.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

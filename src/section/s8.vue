@@ -1,28 +1,25 @@
 <template>
-  <article class="s5" ref="s5">
-    <div class="img absolute">
-      <div class="oo1 absolute"></div>
+  <article class="s8" ref="s8">
+    <div class="oo1 absolute"></div>
     <div class="bubble1 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="./s1/bubble3.png" alt="bubble">
+      <img src="./s1/bubble1.png" alt="bubble" v-if="!isMobile">
+      <img src="./s1/bubble5.png" alt="bubble" v-else>
     </div>
-    <div class="g absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="./s5/img.webp" alt="img">
-    </div>
-    </div>
-    <div class="bubble2 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="100" >
-      <img src="./s1/bubble5.png" alt="bubble">
+    <div class="bubble2 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="./s1/bubble2.png" alt="bubble">
     </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-[caveat]" data-aos="fade-up" data-aos-delay="0">Gathering of Bliss</h4>
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">站前特區簽到<br>
-          美好生活雲集</h3>
-          <img src="./s5/hr.png" class="hr" data-aos="fade-up" data-aos-delay="400" />
-    <p class="desc" data-aos="fade-up" data-aos-delay="600">銀行郵局、生活百貨、美食飲料，斗六火車站前應有盡有，加上近鄰家樂福、全聯、寶雅等旗鑑店，還有斗六西市場等早市和黃昏市場，365天都是衣食無缺的精彩生活。</p>
+    <h4 class="subtitle font-[caveat]" data-aos="fade-up" data-aos-delay="0">HAPPINESS LIHPAO</h4>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">麗寶集團 <span>鵬程建設 x 麗寶百貨</span></h3>
+        <img src="./s5/hr.png" class="hr" data-aos="fade-up" data-aos-delay="400" />
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">大公司蓋的房子住的最安心。麗寶集團全台企業版圖橫跨連鎖飯店、樂園百貨、不動產等，旗下鵬程建設30年以上深厚建築經驗與穩健售後服務，讓家住的安心有保障。</p>
+    <img src="./s8/img.png" class="img" data-aos="fade-up" data-aos-delay="800" />
+
     </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
+      <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -42,48 +39,33 @@
 
 
 
-.s5 {
+.s8 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:11em 0 10em 0;
+  padding:9em 0 5em 0;
   font-size:size(20);
   gap:3em;
   flex-wrap: wrap;
   flex-direction:row-reverse;
-  .img{
-    right: 0;
+  
+  .oo1{right: size(-750);
     bottom:size(-200);
-  .oo1{right: size(-700);
-    bottom:0;
-    width:size(1239);
+    width:size(1300);
     background: radial-gradient(ellipse at center,#F8D8A9 0%, #aad1b8dd 15%,#aad1b8aa 20%, #118fc700 60%);
     &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}  
   }
-.bubble1{right: size(-320);width:size(686);
-  bottom: size(-260);
-  img{width: 100%;
-    animation: bubble 4s -2s ease-in-out alternate infinite;
-    transform:rotate(-3deg);
-  }
-}
-.g{right: size(65);width:size(260);
-  bottom: size(-50);
+.bubble1{right: size(-90);width:size(270);
+  top: size(320);
   img{width: 100%;
     animation: bubble 4s ease-in-out alternate infinite;
-    transform:rotate(3deg);
-    transform-origin:70% 100%;
-  }
+    transform:translate(0,10%);}
 }
-@keyframes bubble {
-  to {
-	transform:translate(0);
-  }
-}
-  }
-.bubble2{left: size(-300);width:size(560);
-  top: size(540);
-  img{width: 100%;}
+.bubble2{left: size(-70);width:size(190);
+  bottom: size(-100);
+  img{width: 100%;
+    animation: bubble 4s ease-in-out alternate infinite;
+    transform:translate(0,10%);}
 }
 
   .main {
@@ -96,18 +78,26 @@
 .txt{
  // margin: auto auto 3vw auto;
  padding: 0 6vw 0 0;
-  .subtitle{font-weight: 400;}
+ .title{
+
+  span{font-size: .5em;font-weight: 500;}
+ }
+ .subtitle{font-weight: 400;}
+}
+.img{
+  margin: 2em auto 0 auto;display: block;
+  width:size(452);
+  filter:drop-shadow(size(20) size(20) size(30) rgba(0, 0, 0, 0.30));
 }
 
-
-  .slider {
+  .slider {border-radius: 1em;overflow: hidden;
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+      height: size(580);
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
-      height: size(560);
+      height: size(580);
       
     }
     .splide__pagination{
@@ -123,7 +113,7 @@
 @media screen and (max-width: 767px) {
 
 
-.s5 {
+.s8 {
 @apply flex-col;
   height: auto;
   padding: 0;
@@ -131,33 +121,43 @@ font-size:sizem(15);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
-.img{
-  bottom: auto;
-  top:sizem(370);
-  .oo1{right: sizem(-260);
-    width:sizem(480);}
 
-    .bubble1{right: sizem(-110);width:sizem(250);
-  bottom: sizem(-35);}
-.g{right: sizem(30);width:sizem(100);
-  bottom: sizem(40);}
+
+.oo1{right: sizem(130);
+    bottom:sizem(-30);
+    width:sizem(625);
+  }
+.bubble1{right: sizem(-30);width:sizem(218);
+  top: sizem(-140);
+  img{
+    animation:none;
+    transform:translate(0);}
 }
-.bubble2{left: sizem(130);width:sizem(218);
-  top: sizem(-170);
+.bubble2{left: sizem(-17);width:sizem(47);
+  bottom: auto;top: sizem(385);
 }
+
+
+
+
 
 .main {
   padding: 0 sizem(32.5);
   width: 100%;
 }
 
-.txt {margin: 3em auto 2em;padding: 0 30vw 0 0;
+.txt {margin: 3em auto 2em;padding: 0;
 }
 
+.img{
+  width:sizem(273);
+  filter:drop-shadow(sizem(10) sizem(10) sizem(12) rgba(0, 0, 0, 0.40));
+}
 
 .slider {
-  height: auto;
+  height: auto;border-radius: 0;
   width: 100%;
+  flex-basis:sizem(250);
 
   .caption {
   font-size:sizem(12);  
@@ -196,7 +196,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
+  pagination: false,
   autoplay: true,
   interval: 4000,
   gap: 0,
@@ -205,28 +205,24 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "斗六車站"
+    img:new URL("./s8/1.jpg", import.meta.url).href ,
+    caption: "麗寶 Outlet Mall"
   },
   {
-    img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "星巴克中正門市"
+    img:new URL("./s8/2.jpg", import.meta.url).href ,
+    caption: "淡水福容大飯店"
   },
   {
-    img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "全聯莊敬店"
+    img:new URL("./s8/3.jpg", import.meta.url).href ,
+    caption: "微笑莊園"
   },
   {
-    img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "斗六西市場"
+    img:new URL("./s8/4.jpg", import.meta.url).href ,
+    caption: "鵬程V1"
   },
   {
-    img:new URL("./s5/5.jpg", import.meta.url).href ,
-    caption: "家樂福斗六店"
-  },
-  {
-    img:new URL("./s5/6.jpg", import.meta.url).href ,
-    caption: "站前商圈"
+    img:new URL("./s8/5.jpg", import.meta.url).href ,
+    caption: "鵬程NEW1"
   },
 ]
 </script>

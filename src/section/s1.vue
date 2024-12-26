@@ -5,8 +5,8 @@
     <img src="./s1/lineicon.png" class="lineicon" data-aos="zoom-in" data-aos-delay="200" /> 
     </a>
 	<!--  
-		<img src="./s1/mo.jpg" class="t0"> -->
-		<img src="./s1/pc.jpg" class="t0">
+		<img src="./s1/mo.jpg" class="t0">
+		<img src="./s1/pc.jpg" class="t0"> -->
     <div class="bg1" data-aos="fade" data-aos-delay="0" >
       <div class="oo1"></div>
       <div class="oo2"></div>
@@ -63,7 +63,7 @@
 .s1 {
  // @apply relative w-full h-screen;
   // height: size(1080);
-  min-height: size(978);
+  min-height: size(960);
   max-height: size(1080);
   height: 100vh;
   font-size:size(40);
@@ -74,7 +74,7 @@
 
 
   .t0{position: absolute;width: 100%;top: -2.2vw;left: 0; 
-	pointer-events: none;opacity: .4;z-index: 50;}
+	pointer-events: none;opacity: .32;z-index: 50;}
 .lineicon{
   position: fixed;
   width: size(80);
