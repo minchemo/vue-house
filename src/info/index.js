@@ -50,7 +50,7 @@ export default {
         offsetmo: "0",
     },{
         name: "豪宅地段",
-        target: ".s6",
+        target: ".s4",
         offset: "-60",
         offsetmo: "0",
     },{
@@ -60,7 +60,7 @@ export default {
         offsetmo: "0",
     },{
         name: "麗寶集團",
-        target: ".s5",
+        target: ".s8",
         offset: "-60",
         offsetmo: "0",
     },{
