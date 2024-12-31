@@ -18,7 +18,7 @@
  // height: size(1059);
   font-size:size(20);
   .txt {text-align: center;position: relative;
-  padding-top:2.8em;z-index: 10;margin-bottom:-9.3em ;
+  padding-top:1.8em;z-index: 10;margin-bottom:-6.3em ;
   
   .subtitle{font-size: 1.25em;margin-top: .4em;
       font-weight: 500;}
