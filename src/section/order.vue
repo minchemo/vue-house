@@ -1,12 +1,12 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-
-      <div class="order-title" data-aos="fade-up" data-aos-delay="0"><img src="@/section/s2/line.svg" alt="line" class="line"><br>邀約行家 領席鑑賞</div>
-      <!-- Title
+<!-- 
+      <div class="order-title" data-aos="fade-up" data-aos-delay="0">邀約行家 領席鑑賞</div> -->
+      <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-       --><!-- <div class="cus-divider"></div> -->
+      <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
@@ -35,31 +35,36 @@
             <option value="男">男</option>
             <option value="女">女</option>
           </select></label>  -->
-          <label class="row" v-if="info.room_type"><span>需求房型<span>*</span></span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
+          <label class="row" v-if="info.ctime"><span>連絡時段</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>請選擇時段</option>
+            <option v-for="ctime in info.ctime" :value="ctime" v-text="ctime" :key="ctime"></option>
           </select></label>
-          <label class="row" v-if="info.use_type"><span>購屋用途<span>*</span></span>
+          <label class="row" v-if="info.use_type"><span>購屋用途</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
             <option value="" selected disabled>請選擇用途</option>
             <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
           </select>
         </label>
-        <label class="row" v-if="info.budget"><span>購屋預算<span>*</span></span>
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
+            <option value="" selected disabled>請選擇房型</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
+          </select></label>
+        <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇區間</option>
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
-          <label class="row"><span>居住縣市<span>*</span></span>
+          <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row"><span>居住地區<span>*</span></span>
+          <label class="row"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value" :key="area">
@@ -77,9 +82,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#666]">
+        <p class="text-[#FFF]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#EA5514] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -129,19 +134,30 @@
 .order {
   width: 100%;
   padding-top: size(40);
-  background:url("@/section/form/bg.jpg");
-  background-size: auto;
+ // background:url("@/section/form/bg.jpg");
+ // background-size: auto;
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
 
   .order-title {
-    font-size: size(30);
+    font-size:30px;
     font-weight: 700;
-    color: #000;
+    color: #FFF;
     padding-top:1.5em;
+    letter-spacing: .4em;
+    display: flex;
+  justify-content:center;
+  align-items:center;
+  text-indent: .4em;
+    width: size(920);
+    min-width: 750px;
+    margin: auto;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
     .line{width: size(439);}
+    &::after,
+    &::before
+    {content: "";display:block;height: 1px;background: #FFF6;flex: 1;}
   }
 
   .order-title-img {
@@ -150,7 +166,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    // color: #fff;
+    color: #fff;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -215,7 +231,7 @@
       // .input{height: 5em;}
       }
     }
-    .gender{display: flex;position: absolute;right: 0; flex-direction:column;
+    .gender{display: flex;position: absolute;right: 0; flex-direction:column;color: #FFF;
       label:first-child{margin-bottom: .3em;}
       input{margin-right: .3em;}
     }
@@ -226,10 +242,10 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #3DC82A;
+    background-color: #c9a063;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: 0em;
+    border-radius: .6em;
 
     width: 308px;
     height:3.3em;
@@ -240,7 +256,7 @@
   }
 
   .control {
-    font-size: size(16);
+    font-size: 14px;
     color: #000;
     position: relative;
   }
@@ -277,6 +293,8 @@
     .order-title {
       font-size: sizem(20);
       padding-top:1.5em;
+      width: sizem(310);
+      min-width: 0;
       .line{width: sizem(258);}
     }
     .order-subTitle{
@@ -359,13 +377,14 @@ const formData = reactive({
   email: "",
   city: "",
   area: "",
+  ctime: "",
   msg: "",
   policyChecked: false,
   r_verify: false,
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "gender","use_type"]
+const bypass = ["project", "msg", "email", "gender","use_type","room_type","budget","city","area"]
 
 //中文對照
 const formDataRef = ref([
@@ -377,6 +396,7 @@ const formDataRef = ref([
   "性別", //gender
   "建案", //project
   "信箱", //email
+  "連絡時段", //ctime
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg

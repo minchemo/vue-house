@@ -20,8 +20,8 @@
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
-      <div class="flex contact-item justify-center items-center address">
+    <div class="flex justify-between w-full contact-item-box no-gap address" v-if="info.address">
+      <div class="flex contact-item justify-center items-center add">
         <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
@@ -111,12 +111,12 @@
   height: 0;z-index: 52;
 }
 .contact-info {
-  padding: size(55) size(0) size(55) size(0);
-    width: size(1440);
-    min-width: 680px;
+  padding: 5em 0 2.5em 0;
   position: relative;
   z-index: 50;
-  // background: #045147;
+  width: size(920);
+  min-width: 750px;
+  font-size:16px;
 
   .logo {position: relative;
     width: size(367);
@@ -132,19 +132,18 @@
 
   .contact-item-box {
     position: relative;
-    margin-top: size(20);
-    gap: size(20);
-    width: size(920);
+    margin-top:1.25em;
+    gap: 1.25em;
+   // width: size(920);
     // min-width: 680px;
 
     .contact-item {
-      background: #3DC82A;
-      color: #fff;
+      background: #FFF;
+      color: #172a88;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-  //  border-radius: .5em;
-      font-size: size(16);
+    border-radius: .6em;
       line-height: 1.6;//3.8
       letter-spacing: 0em;
      // max-width: size(280);
@@ -155,7 +154,7 @@
       gap: 1em;
 
       &:hover {
-        background: linear-gradient(to bottom, #32B8C3 0%,#97C634 50%,#d0db32 100%);
+        background: #c9a063;
         color: #fff;
 
         img {
@@ -164,18 +163,29 @@
       }
 
       img {
-        max-width: size(27);
+        max-width: 1.35em;
         height: auto;
-        max-height: size(27);
-        filter: brightness(0) invert(1);
+        max-height: 1.35em;
+        filter:invert(17%) sepia(32%) saturate(3185%) hue-rotate(213deg) brightness(106%) contrast(116%);
         transition: all .5s;
         margin: 0;
       }
 
-      &.address {
+    }
+    &.address {
         background-color: #eee;
-        background-image: none;
+        border-radius: .6em;
+
+      .contact-item {
+        &.add{
+          background: none;
         color: #000;
+        cursor: text;
+        flex:2.10;
+
+        }
+        /*
+        background: none;
         z-index: 0;
         position: relative;
         flex:2.17;
@@ -197,7 +207,6 @@
           white-space: normal;
           padding: 0 1em;
         }
-      }
 
 
       &.googlemap {
@@ -205,29 +214,17 @@
   //    background-color: #9B1E44;
       border-left-width: 0;
       //  color: #fff;
-/*
-        img {
-          filter: brightness(0) invert(0);
-        }
-
-        &:hover {
-   //     background-color: #C29267;
-          color: #000;
-          img {
-            filter: brightness(0) invert(0);
-          }
-        }
-          */
       }
+    */
     }
-
+    }
     &.no-gap {
       gap: 0 !important;
     }
   }
 }
 .modal-box{
-  img{filter: invert(12%) sepia(29%) saturate(4484%) hue-rotate(205deg) brightness(98%) contrast(113%);
+  img{filter:invert(17%) sepia(32%) saturate(3185%) hue-rotate(213deg) brightness(106%) contrast(116%);
   }
 }
 
@@ -243,7 +240,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#3DC82A;
+    background:#c9a063;
 
     .contact-item {
       height: 100%;      
@@ -309,7 +306,7 @@
         div{
           text-indent: 2em;
         }
-
+/*
         &.address {
           font-size: sizem(15);
           border-radius: sizem(0) sizem(0) 0 0;
@@ -324,7 +321,6 @@
             left: 0;
           }
         }
-
         &.address+div {
           border-radius: 0 0 sizem(0) sizem(0);
         }
@@ -332,6 +328,15 @@
         border-top-width: 0;
       border-left-width:0;
       }
+*/
+      }
+      &.address {
+        margin:sizem(15) 0 0 0 ;
+        .contact-item {
+          &.add{text-align: center;
+          div{text-indent: 0em;}
+          }
+        }
       }
 
       &.no-gap {

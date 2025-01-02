@@ -1,4 +1,4 @@
-const caseName = "國泰skypark"
+const caseName = "高大之森"
 
 export default {
     meta: {
@@ -36,14 +36,15 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約賞屋",
-        subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
-        subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
+        title: "我要預約",
+       // subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
+       // subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["2房","2+1房","3房","3房以上"],
-    budget: ["2001-3000萬","3001-4000萬","4001-5000萬","5001-6000萬","6001-7000萬","7001-8000萬","8001萬以上",],
-    //use_type: [" "],
+    // ctime: ["上午","下午","晚上","皆可"],//連絡時段
+    // use_type: ["自住","投資","二代置產","換屋"],//購屋用途
+    room_type: ["2房","3房"],//需求房型
+    budget: ["1000-1500萬","1501-2000萬","2001萬以上",],//購屋預算
 
     navList: [
         /*

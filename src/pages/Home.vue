@@ -11,11 +11,12 @@
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFF] text-[#000]">
+    <img src="@/section/s1/bg1.jpg" class="bg1" data-aos="fade" data-aos-delay="0">
     <S1 />
     <S2 />
-    <S3 />
     <!-- <S2v /> -->
   <!--
+    <S3 />
     <S4 />
     <S5 />
     <S6 />
@@ -59,6 +60,12 @@ img {
   height: unset;
   margin: 0 auto;
 }
+.bg1{
+  position: fixed;top: 0;left: 0;width: 100%;object-fit: fill;
+  height: 100vh;
+  min-height: size(900);
+ // max-height: size(1080);
+}
 
 </style>
 
@@ -66,7 +73,7 @@ img {
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue"
+//import S3 from "@/section/s3.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
 /* 

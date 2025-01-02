@@ -1,82 +1,133 @@
 <template>
   <article class="s2 relative" id="s2">
-    <img src="./s2/bg.webp" alt="bg" class="bg" data-aos="fade-up" data-aos-delay="0" data-aos-offset="600">
-    <div class="bubble" data-aos="fade-up" data-aos-delay="0" ><img src="./s2/bubble.svg" alt="bubble"></div>
-    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">16458坪  國際菁英生活誌</h3>
-    <img src="./s2/line.svg" alt="line" class="line">
-    <div class="txt absolute">
-      <h4 data-aos="fade-up" data-aos-delay="0">創新複合 綠動園區</h4>
-      <p data-aos="fade-up" data-aos-delay="0">住進南港，走進世界。以國際城中城規格，超越地表極致想像、超前世界住居前瞻<br v-if="!isMobile">體驗您的一天，萬坪綠逸起跳，席捲家的多元。於松山—南港車站間，悸動・等待</p>
-      <img src="./s2/bottom.webp" class="bottom absolute">
+    <img src="./s2/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0">
+    <div class="txt" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">
+      <div data-aos="fade-up" data-aos-delay="0">
+        高雄崛起，世界望向台灣
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        台灣高雄，躍升新亞洲核心
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        台積電從高雄啟航
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        劃出第一道亞洲聚富軸線
+      </div>
+      <div data-aos="fade-up" data-aos-delay="400">
+        全球科技集團在高雄攻城掠地
+      </div>
+      <div data-aos="fade-up" data-aos-delay="500">
+        您必須重新布局，回到亞洲的新核心一高雄<br>&ensp;
+      </div>
+      <div data-aos="fade-up" data-aos-delay="600">
+        論談地段，台積電說了才算
+      </div>
+      <div data-aos="fade-up" data-aos-delay="700">
+        世界同步聚富磁場，高大特區奇貨可居
+      </div>
+      <div data-aos="fade-up" data-aos-delay="800">
+        地王之王一席難求，精華土地不可複製
+      </div>
+      <div data-aos="fade-up" data-aos-delay="900">
+        增值實力越墊越高<br>&ensp;
+      </div>
+      <div data-aos="fade-up" data-aos-delay="1000">
+        站上科技巨人的肩膀，定錨台積電高大核心
+      </div>
+      <div data-aos="fade-up" data-aos-delay="1100">
+        掌握世界級的耀眼先積
+      </div>
+      <div data-aos="fade-up" data-aos-delay="1200">
+        與台積電、高雄大學共榮推漲
+      </div>
+      <div data-aos="fade-up" data-aos-delay="1300">
+        昔日一地尊貴，未來一席絕響
+      </div>      
+    </div>
+    <div class="txt" v-else>
+      <div data-aos="fade-up" data-aos-delay="0">
+        高雄崛起，世界望向台灣，台灣高雄，躍升新亞洲核心
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        台積電從高雄啟航，劃出第一道亞洲聚富軸線
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        全球科技集團在高雄攻城掠地
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        您必須重新布局，回到亞洲的新核心一高雄<br>&ensp;
+      </div>
+      <div data-aos="fade-up" data-aos-delay="400">
+        論談地段，台積電說了才算，世界同步聚富磁場
+      </div>
+      <div data-aos="fade-up" data-aos-delay="500">
+        高大特區奇貨可居，地王之王一席難求
+      </div>
+      <div data-aos="fade-up" data-aos-delay="600">
+        精華土地不可複製，增值實力越墊越高<br>&ensp;
+      </div>
+      <div data-aos="fade-up" data-aos-delay="700">
+        站上科技巨人的肩膀，定錨台積電高大核心
+      </div>
+      <div data-aos="fade-up" data-aos-delay="800">
+        掌握世界級的耀眼先積，與台積電、高雄大學共榮推漲
+      </div>
+      <div data-aos="fade-up" data-aos-delay="900">
+        昔日一地尊貴，未來一席絕響
+      </div>
+    </div>
+    <div class="img">
+      <img src="./s2/logo.svg" alt="logo" data-aos="fade-up" data-aos-delay="0">
+      <img src="./s2/coming.svg" alt="coming" data-aos="fade-up" data-aos-delay="200">
     </div>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-
-@keyframes an1 {
-  0% {
-    transform:rotate(-70deg);opacity: .8;
-  }
-  20% {
-    transform:rotate(110deg);opacity: 0;
-  }
-  80% {
-    transform:rotate(110deg);opacity: 0;
-  }
-  100% {
-    transform:rotate(290deg);opacity: .8;
-  }
-}
 .s2 {
- height: size(1070);
- overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   justify-content:center;
   align-items:center;
-  font-size:size(36);
-  .bg{position: absolute;width:100%;top:size(-332);left:0%;}
-  .bubble{position: absolute;left:0;right:size(12);top:size(512);margin: auto;width:size(307);
-    mix-blend-mode: overlay;
-   // background: #0003;
-    img{width: 100%;
- //  transform: rotate(180deg);opacity: 0;
-  animation: an1 2s linear infinite reverse;
- }
-  }
-
-  .t1{position: absolute;
-    left: 0;right: 0;margin: auto;text-align: center;
-    font-size:size(62);
-    line-height: 1.13;
-    letter-spacing: 0.07em;
-    font-weight: 900;z-index: 3;top:size(172);
-    
-    }
-  .line{ width: 102%;left: -1%;
-      position: absolute;z-index: 3;top:size(345);}
-  .txt{left: 0;bottom: 0; width:100%;background: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;height: size(130);padding-bottom: size(17);
+  color: #3e3a39;
+  gap: size(95);
+  font-size: size(22);
+  line-height: 1.8;
   letter-spacing: 0.04em;
-    h4{font-size:size(36); border-right:1px solid currentColor;font-weight: 600;
-      padding: .15em .8em .15em 0;margin-right: .8em;}
-    p{font-size:size(24);}
+  padding: size(152) 0 size(430) 0;
+  overflow: hidden;
+  z-index: 2;
+  .bg{position: absolute;width:100%;left:0;bottom: 0;}
+  .txt{position: relative;z-index: 3;margin-left: size(10);}
+  .img{position: relative;z-index: 3;width: size(604);
+    img{width: 100%;margin: size(40) 0 size(20) 0;}
   }
-  .bottom{left: 0;bottom: 0; width:100%;z-index: 3;height:size(16);}
 }
-
   
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
+  .s2 {
+    flex-direction:column;
+    font-size: sizem(12.5);
+    text-align: center;line-height: 1.92;
+    padding: sizem(46) 0 sizem(240) 0;
+    gap:0;
+    .bg{bottom: auto;top: 0;width: 354%;left: -124%;}
+    .txt{margin-left: 0;}
+    .img{width: sizem(245);
+      img{margin: sizem(26) 0 sizem(4) 0;
+      &:last-child{width:82%;}
+      }
+    }
+  
+  }
 
-
+/*
 
   .s2 {
     height: sizem(740);
@@ -100,7 +151,7 @@
   }
   .bottom{height:sizem(16);}
   
-}
+} */
 }
 </style>
 <script setup>
