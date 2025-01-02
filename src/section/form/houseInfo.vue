@@ -14,19 +14,20 @@
                                 v-html="item[1]">
                             </p>
                         </div>
+                        <!-- 
                         <div class="item font-bold flex items-center w-full whitespace-nowrap">
                             <p class=" pl-2 whitespace-pre-line leading-normal text-left font-normal">民間新建建築類(H-2住宅)
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--
-    <div class="house bg-[#FF3EA1] flex items-center justify-center">
-            <p class=""><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
-    </div> -->
+    <!-- -->
+    <div class="house pt-4 pb-4 bg-[#c9a063] flex items-center justify-center">
+        <img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset="">
+    </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
@@ -37,15 +38,15 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#32B8C3;
-$house-c2:#000;
+$house-c1:#fff;
+$house-c2:#fffc;
 .displaynone{display: none;}
 .house {
    // height: auto;
     color: $house-c2;
     font-size: size(22);
     // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
+    img{height: 1.1em;vertical-align: middle;}
 }
 .info-box {
     width: size(800);

@@ -150,7 +150,7 @@
   justify-content:center;
   align-items:center;
   text-indent: .4em;
-    width: size(920);
+    width: size(1000);
     min-width: 750px;
     margin: auto;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -180,7 +180,7 @@
   }
 
   .form {
-    width: size(920);
+    width: size(1000);
     min-width: 750px;
     //  height: 350px;
     gap: size(80);

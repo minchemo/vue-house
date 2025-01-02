@@ -112,6 +112,7 @@
   .bg{width:sizem(584);top:sizem(0);left:sizem(-104.5);height:sizem(805);
   //top:calc(50% + #{sizem(0 - 604 * .5)})
   }
+  .l1{height: 155%;}
   .t1{
     font-size:sizem(23);writing-mode: vertical-lr;margin-top:sizem(0);letter-spacing: 0.1em;
     }

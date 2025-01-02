@@ -114,7 +114,7 @@
   padding: 5em 0 2.5em 0;
   position: relative;
   z-index: 50;
-  width: size(920);
+  width: size(1000);
   min-width: 750px;
   font-size:16px;
 
