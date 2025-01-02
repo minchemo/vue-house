@@ -23,14 +23,14 @@
               <label class="row"><span>電子信箱</span>
                 <input type="text" placeholder="電子信箱" class="input w-full rounded-none" :value="formData.email"
               @input="(event) => (formData.email = event.target.value)" /></label>
-            <label class="row"><span>居住縣市</span>
+            <label class="row"><span>居住縣市<span> *</span></span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
             </select></label>
-            <label class="row"><span>居住地區</span>
+            <label class="row"><span>居住地區<span> *</span></span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
@@ -221,7 +221,7 @@
       width: 100%;
       align-items: center;
       > span {
-        width: 5.5em;color: #1675b5;
+        width: 6.5em;color: #1675b5;
         text-align: left;
         padding-left: 1em;
         font-weight: 700;
@@ -431,7 +431,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","room_type","area","city","email"];
+const bypass = ["msg","room_type","email"];
 
 //中文對照
 const formDataRef = ref([
