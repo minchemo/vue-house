@@ -165,7 +165,7 @@ import { computed, getCurrentInstance, ref } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 const isMobile = computed(() => globals.$isMobile())
 const splide = ref()
-const imgs = [
+const imgs = [/*
   {
     img: new URL("./s2/1.webp", import.meta.url).href,
     caption: "情境示意圖",
@@ -177,7 +177,7 @@ const imgs = [
   {
     img: new URL("./s2/3.webp", import.meta.url).href,
     caption: "情境示意圖",
-  },
+  },*/
   {
     img: new URL("./s2/4.webp", import.meta.url).href,
     caption: "情境示意圖",
