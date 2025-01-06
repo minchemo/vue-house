@@ -6,12 +6,12 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address1: "預約中心",//按鈕區的--- 如空白會只呈現地址
-    address2: "導航地址",//map點下確認的--- 如空白會顯示"導航地址"
-    // address: "高雄市楠梓區藍田路x大學西路口",
+    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
+    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
+    address: "高雄市三民區大昌二路569號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.565993669337!2d120.2566881!3d22.7229815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f16f5704453%3A0x2397ed388311211b!2z6auY5aSn5LmL5qOuL-WinuWAvOaloOaikyDljbPliLvpoJDntIQ!5e0!3m2!1szh-TW!2stw!4v1736128841746!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/Fs3jaRzHt3j2sqBT9",
-    phone: "07-3648088",
+    phone: "07-335-5689",
     fbLink: "https://www.facebook.com/pi.debang/",
     fbMessage: "https://m.me/pi.debang/",
     caseName: caseName,
@@ -32,15 +32,15 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約增值",
+        title: "我要預約",
        // subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
        // subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
     // ctime: ["上午","下午","晚上","皆可"],//連絡時段
     // use_type: ["自住","投資","二代置產","換屋"],//購屋用途
-    room_type: ["2房","3房"],//需求房型
-    budget: ["1000-1500萬","1501-2000萬","2001萬以上",],//購屋預算
+    // room_type: ["2房","3房"],//需求房型
+    // budget: ["1000-1500萬","1501-2000萬","2001萬以上",],//購屋預算
 
     navList: [
         /*

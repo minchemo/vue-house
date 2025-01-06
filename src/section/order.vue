@@ -19,12 +19,12 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-          <div class="gender">
+           <!--  <div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>
+        </div>  -->
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -45,7 +45,7 @@
             <option value="" selected disabled>請選擇用途</option>
             <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
           </select>
-        </label> -->
+        </label>
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
@@ -70,7 +70,7 @@
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
-          </select></label>
+          </select></label> -->
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -82,9 +82,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#FFF]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#f00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -95,7 +95,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending? '發送中..': '確認送出' }}
       </div>
 
       <!-- Contact Info -->
@@ -143,7 +143,7 @@
   .order-title {
     font-size:30px;
     font-weight: 700;
-    color: #FFF;
+    color: #154675;
     padding-top:1.5em;
     letter-spacing: .4em;
     display: flex;
@@ -157,7 +157,7 @@
     .line{width: size(439);}
     &::after,
     &::before
-    {content: "";display:block;height: 1px;background: #FFF6;flex: 1;}
+    {content: "";display:block;height: 1px;background: #15467566;flex: 1;}
   }
 
   .order-title-img {
@@ -209,7 +209,7 @@
       background-color: #0003;
       position: absolute;
     }
-    .row{background: #fff;border: 1px solid #999;color: #000;
+    .row{background: #fff;border: 1px solid #fff;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -227,9 +227,9 @@
         background-position:calc(100% - .5em) 0%;
       }
       }
-      &.name{width: calc(100% - 3.8em);
+     // &.name{width: calc(100% - 3.8em);
       // .input{height: 5em;}
-      }
+     // }
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;color: #FFF;
       label:first-child{margin-bottom: .3em;}
@@ -242,7 +242,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #c9a063;
+    background-color: #154675;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .6em;

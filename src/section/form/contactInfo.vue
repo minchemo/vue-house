@@ -47,8 +47,8 @@
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h65.tw/img/form/pen.svg" alt="預約增值" srcset="" />
-      <div>預約增值</div>
+      <img src="//h65.tw/img/form/pen.svg" alt="我要預約" srcset="" />
+      <div>我要預約</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
@@ -143,7 +143,7 @@
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-    border-radius: .6em;
+   // border-radius: .6em;
       line-height: 1.6;//3.8
       letter-spacing: 0em;
      // max-width: size(280);
