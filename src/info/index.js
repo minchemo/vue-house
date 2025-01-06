@@ -9,11 +9,11 @@ export default {
     address1: "預約中心",//按鈕區的--- 如空白會只呈現地址
     address2: "導航地址",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市楠梓區藍田路x大學西路口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3680.032497717002!2d120.27837765810584!3d22.727033452612165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f16f5704453%3A0x2397ed388311211b!2z6auY5aSn5LmL5qOuL-WinuWAvOaloOaikyDljbPliLvpoJDntIQ!5e0!3m2!1szh-TW!2stw!4v1735803927263!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/MeuwGiYHgBvCkmme8",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.565993669337!2d120.2566881!3d22.7229815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f16f5704453%3A0x2397ed388311211b!2z6auY5aSn5LmL5qOuL-WinuWAvOaloOaikyDljbPliLvpoJDntIQ!5e0!3m2!1szh-TW!2stw!4v1736128841746!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/Fs3jaRzHt3j2sqBT9",
     phone: "07-3648088",
-    fbLink: "https://www.facebook.com/sigma.debang/",
-    fbMessage: "https://m.me/sigma.debang/",
+    fbLink: "https://www.facebook.com/pi.debang/",
+    fbMessage: "https://m.me/pi.debang/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "中德建設"],
@@ -35,7 +35,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-M8N6GNQ"], // 可放置多個
+    gtmCode: ["GTM-K3BF79NM"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3

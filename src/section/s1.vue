@@ -3,7 +3,7 @@
     
     <img src="./s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0">
     <div class="l1"></div>
-    <h3 class="t1" data-aos="zoom-in-up" data-aos-delay="100">台灣二次經濟奇蹟&ensp;在高雄</h3>
+    <h3 class="t1" data-aos="zoom-in-up" data-aos-delay="100">經濟奇蹟&ensp;在高雄</h3>
     <img src="./s1/en1.svg" class="en1" data-aos="zoom-in-up" data-aos-delay="200">
     <div class="img" data-aos="zoom-in-up" data-aos-delay="300">
       <img src="./s1/img.png">
@@ -104,17 +104,18 @@
 
   .s1 {
     height:calc(100vh - 63px);
-    min-height: sizem(710);
-    max-height: sizem(710);
-    height: sizem(710);
+    min-height: sizem(604);
+    max-height: sizem(750);
+   // height: sizem(650);
     font-size:sizem(16);
-    justify-content:flex-end;
+    justify-content:center;
   .bg{width:sizem(584);top:sizem(0);left:sizem(-104.5);height:sizem(805);
-  //top:calc(50% + #{sizem(0 - 604 * .5)})
+  top:calc(50% + #{sizem(-105 - 604 * .5)})
   }
-  .l1{height: 155%;}
+  .l1{height: calc(100% + 78vw);}
   .t1{
-    font-size:sizem(23);writing-mode: vertical-lr;margin-top:sizem(0);letter-spacing: 0.1em;
+    font-size:sizem(23);writing-mode: vertical-lr;margin-top:sizem(56);letter-spacing: 0.1em;
+    white-space: nowrap;
     }
     .en1{ width: sizem(250);margin-top:sizem(45);}
     .img{ width: sizem(245);margin-top:sizem(16);}
