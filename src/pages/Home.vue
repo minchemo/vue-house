@@ -10,8 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFF] text-[#000]">
-    <img src="@/section/s1/bg1.jpg" class="bg1" data-aos="fade" data-aos-delay="0">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFE600] text-[#000]">
     <S1 />
     <S2 />
     <!-- <S2v /> -->
@@ -59,12 +58,6 @@ img {
   max-width: unset;
   height: unset;
   margin: 0 auto;
-}
-.bg1{
-  position: fixed;top: 0;left: 0;width: 100%;object-fit: fill;
-  height: 100vh;
-  min-height: size(900);
- // max-height: size(1080);
 }
 
 </style>
