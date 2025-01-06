@@ -243,7 +243,7 @@
     text-indent: 0.9em;
     color: #fff;
     //background-color: #c9a063;
-    background:linear-gradient(180deg, #BF7AFF , #4133C2);
+    background:linear-gradient(180deg, #FF8BF3 , #7400E0 );
     //border: 1px solid #FFF9;
    //border:0;
    box-shadow: 0 0 .5em #0366;
