@@ -392,7 +392,6 @@ const bypass = [
   "use_type",
   "room_type",
   "budget",
-  "ctime",
   "city",
   "area",
 ]
