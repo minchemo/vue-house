@@ -1,24 +1,11 @@
 <template>
   <article class="s1 relative" id="s1">
-    
-    <img src="./s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0">
-    <div class="l1"></div>
-    <h3 class="t1" data-aos="zoom-in-up" data-aos-delay="100">經濟奇積&ensp;在高雄</h3>
-    <img src="./s1/en1.svg" class="en1" data-aos="zoom-in-up" data-aos-delay="200">
-    <div class="img" data-aos="zoom-in-up" data-aos-delay="300">
-      <img src="./s1/img.png">
-      <img src="./s1/img.svg">
-    </div>
-    <h3 class="t2" data-aos="zoom-in" data-aos-delay="400">未來已來 先積到來</h3>
-    <img src="./s1/en2.svg" class="en2" data-aos="zoom-in" data-aos-delay="500">
-    <img src="./s1/en3.svg" class="en3" data-aos="zoom-in" data-aos-delay="600">
-
-    <!-- 
-    <img src="./s1/mo.jpg" class="t0" >
-    <img src="./s1/bg.webp" class="bg" data-aos="fade" data-aos-delay="0">
-    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">超越南港<br>摩登時代</h3>
-    <img src="./s1/slogo.svg" class="slogo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/logor.svg" class="logor absolute"> -->
+    <img src="./s1/pc.jpg" class="t0" >
+    <img src="./s1/bg.svg" class="bg" >
+    <img src="./s1/logo.svg" class="logo" >
+    <div class="t1"><span>百貨群聚</span><span>機能齊聚</span><span>雙軌相聚</span></div>
+    <img src="./s1/en.svg" class="en" >
+    <div class="t2">2-3房</div>
   </article>
 </template>
 
@@ -36,7 +23,7 @@
   }
 }
 .s1 {
-  min-height: size(920);
+  min-height: size(1070);
   max-height: size(1070);
   height: 100vh;
   display: flex;
@@ -48,8 +35,14 @@
   
 
   .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: 0.5;}
-   .bg{position: absolute;width:100%;left:0;top:calc(50% + #{size(-60 - 1070 * .5)});
+   .bg{position: absolute;width:size(1170);left:0;right: 0;
+    top: size(-30);
+    top:calc(50% + #{size(-30 - 1070 * .5)});
   }
+  .logo{width:size(1180);}
+  .en{width:size(710);}
+
+  /*
   .l1{position: absolute;width:100%;left:0;top: 0;height: calc(100% + 22vw);
     background: 
     linear-gradient(to bottom right, #FFFC 0%, #fff0 50%) bottom right / 50% 50% no-repeat, 
@@ -73,7 +66,7 @@
     font-size:size(85);
     line-height: 1.13;
     letter-spacing: 0.14em;
-    font-weight: 900;z-index: 3;color: #FFF;margin-top:size(58);
+    font-weight: 900;z-index: 3;color: #fff6;margin-top:size(58);
     }
     .en1{ width: size(705);position: relative;z-index: 3;margin-top:size(73);}
     .img{ width: size(705);position: relative;z-index: 3;margin-top:size(34);mix-blend-mode: screen;
@@ -91,6 +84,8 @@
     }
     .en2{ width: size(510);position: relative;z-index: 3;margin-top:size(22);mix-blend-mode: screen;}
     .en3{ width: size(510);position: relative;z-index: 3;margin-top:size(18);}
+
+    */
 }
 
   

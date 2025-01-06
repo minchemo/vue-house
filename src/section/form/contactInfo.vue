@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #00312E;}
-.hover\:bg-color2:hover{background-color:#002421;}
+.bg-color1{background-color: #DC4434;}
+.hover\:bg-color2:hover{background-color:#af2f20;}
 
 
 .contact-info-img{
@@ -138,8 +138,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #FFF;
-      color: #172a88;
+      background: #DC4434;
+      color: #FFF;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -154,8 +154,8 @@
       gap: 1em;
 
       &:hover {
-        background: #c9a063;
-        color: #fff;
+        background: #af2f20;
+        color: #FFF;
 
         img {
           filter: brightness(0) invert(1);
@@ -166,15 +166,15 @@
         max-width: 1.35em;
         height: auto;
         max-height: 1.35em;
-        filter:invert(17%) sepia(32%) saturate(3185%) hue-rotate(213deg) brightness(106%) contrast(116%);
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
 
     }
     &.address {
-        background-color: #eee;
-        border-radius: .6em;
+        background-color: #FFF;
+      // border-radius: .6em;
 
       .contact-item {
         &.add{
@@ -240,7 +240,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#c9a063;
+    background:#154675;
 
     .contact-item {
       height: 100%;      
@@ -293,6 +293,7 @@
         max-width: 100%;
         white-space: nowrap;
         margin: 0;
+        display: none;
 
         img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
           max-width: sizem(27);
@@ -333,7 +334,9 @@
       &.address {
         margin:sizem(15) 0 0 0 ;
         .contact-item {
+        display: block;
           &.add{text-align: center;
+            padding: 1.1em 0;
           div{text-indent: 0em;}
           }
         }

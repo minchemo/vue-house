@@ -24,10 +24,10 @@
             </div>
         </div>
     </div>
-    <!--  -->
+    <!-- 
     <div class="house pt-4 pb-4 bg-[#c9a063] flex items-center justify-center">
         <img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset="">
-    </div>
+    </div> -->
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
@@ -38,8 +38,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#fff;
-$house-c2:#fffc;
+$house-c1:#154675;
+$house-c2:#000;
 .displaynone{display: none;}
 .house {
    // height: auto;

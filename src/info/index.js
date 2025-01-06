@@ -1,4 +1,4 @@
-const caseName = "高大之森"
+const caseName = "聚丰景"
 
 export default {
     meta: {
@@ -16,14 +16,14 @@ export default {
     fbMessage: "https://m.me/pi.debang/",
     caseName: caseName,
     houseInfos: [
+        ["興建投資", "頂誠建設有限公司"],
+        ["建築代銷", "棠安創意開發有限公司"],
+        ["建築設計", "朱文明建築師事務所"],
+        ["基地面積", "1011平方公尺(305.8坪)"],
+        ["格局規劃", "2-3房"],
         /*
-        ["投資興建", "中德建設"],
-        ["營造公司", "承優營造"],
-        ["建築執照", "(112)高市工建築使字第01079號"],
-        ["企劃銷售", "得邦廣告"],
-        ["樓層規劃", "地上15層、地下4層"],
-        ["房型規劃", "2-3房、21~35坪"],
         */
+       // ["房型規劃", "2-3房、21~35坪"],
     ],
     gtmCode: ["GTM-K3BF79NM"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
