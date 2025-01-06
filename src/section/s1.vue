@@ -3,7 +3,7 @@
     
     <img src="./s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0">
     <div class="l1"></div>
-    <h3 class="t1" data-aos="zoom-in-up" data-aos-delay="100">經濟奇蹟&ensp;在高雄</h3>
+    <h3 class="t1" data-aos="zoom-in-up" data-aos-delay="100">經濟奇積&ensp;在高雄</h3>
     <img src="./s1/en1.svg" class="en1" data-aos="zoom-in-up" data-aos-delay="200">
     <div class="img" data-aos="zoom-in-up" data-aos-delay="300">
       <img src="./s1/img.png">
