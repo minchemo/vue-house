@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 import { resolve } from 'path'
+import fs from 'fs'
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
