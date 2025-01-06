@@ -240,7 +240,9 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#c9a063;
+   // background:#c9a063;
+   background:linear-gradient(180deg, #BF7AFF , #4133C2);
+
 
     .contact-item {
       height: 100%;      

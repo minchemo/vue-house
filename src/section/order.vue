@@ -242,9 +242,11 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #c9a063;
+    //background-color: #c9a063;
+    background:linear-gradient(180deg, #BF7AFF , #4133C2);
     //border: 1px solid #FFF9;
-    border:0;
+   //border:0;
+   box-shadow: 0 0 .5em #0366;
     border-radius: .6em;
 
     width: 308px;
