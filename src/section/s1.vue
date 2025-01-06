@@ -50,7 +50,7 @@
   .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: 0.5;}
    .bg{position: absolute;width:100%;left:0;top:calc(50% + #{size(-60 - 1070 * .5)});
   }
-  .l1{position: absolute;width:100%;left:0;top: 0;height: 145%;
+  .l1{position: absolute;width:100%;left:0;top: 0;height: calc(100% + 22vw);
     background: 
     linear-gradient(to bottom right, #FFFC 0%, #fff0 50%) bottom right / 50% 50% no-repeat, 
     linear-gradient(to bottom left, #FFFC 0%, #fff0 50%) bottom left / 50% 50% no-repeat,
