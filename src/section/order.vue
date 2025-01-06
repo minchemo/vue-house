@@ -41,7 +41,11 @@
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
           /></label>
-
+          <label class="row" v-if="info.ctime"><span>連絡時段</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>請選擇時段</option>
+            <option v-for="ctime in info.ctime" :value="ctime" v-text="ctime" :key="ctime"></option>
+          </select></label>
           <label class="row" v-if="info.room_type.length > 0"
             ><span>需求房型</span>
             <select
@@ -80,6 +84,7 @@
               </option>
             </select></label
           >
+          <!--
           <label class="row"
             ><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
@@ -88,7 +93,7 @@
                 {{ area.label }}
               </option>
             </select></label
-          >
+          >  -->
         </div>
         <div class="right">
           <textarea
@@ -460,6 +465,7 @@ const formData = reactive({
   project: "",
   people: "",
   email: "",
+  ctime: "",
   city: "",
   area: "",
   msg: "",
@@ -475,6 +481,7 @@ const bypass = [
   "email",
   "room_type",
   "budget",
+  "ctime",
   "city",
   "area",
 ]
@@ -487,6 +494,7 @@ const formDataRef = ref([
   "預算", //budget
   "建案", //project
   "服務專員", //people
+  "連絡時段", //ctime
   "信箱", //email
   "居住縣市", //city
   "居住地區", //area
@@ -574,8 +582,8 @@ const send = () => {
       &budget=${formData.budget}
       &people=${formData.people}
       &project=${formData.project}
-      &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
+      &email=${formData.ctime}
+      &cityarea=${formData.city}
       &msg=${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
