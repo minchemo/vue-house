@@ -9,11 +9,11 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市三民區大昌二路569號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.565993669337!2d120.2566881!3d22.7229815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f16f5704453%3A0x2397ed388311211b!2z6auY5aSn5LmL5qOuL-WinuWAvOaloOaikyDljbPliLvpoJDntIQ!5e0!3m2!1szh-TW!2stw!4v1736128841746!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/Fs3jaRzHt3j2sqBT9",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.04474077968!2d120.32676297602906!3d22.652120430049745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04d863ce75f7%3A0x4551d9d93554b732!2zODA3MDU26auY6ZuE5biC5LiJ5rCR5Y2A5aSn5piM5LqM6LevNTY56Jmf!5e0!3m2!1szh-TW!2stw!4v1736245033777!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/UN2pFMz9Zr7FqRDu6",
     phone: "07-335-5689",
-    fbLink: "https://www.facebook.com/pi.debang/",
-    fbMessage: "https://m.me/pi.debang/",
+    fbLink: "https://www.facebook.com/61561344586140/",
+    fbMessage: "https://m.me/61561344586140/",
     caseName: caseName,
     houseInfos: [
         ["興建投資", "頂誠建設有限公司"],
@@ -23,9 +23,8 @@ export default {
         ["格局規劃", "2-3房"],
         /*
         */
-       // ["房型規劃", "2-3房、21~35坪"],
     ],
-    gtmCode: ["GTM-K3BF79NM"], // 可放置多個
+    gtmCode: ["GTM-0000000"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
