@@ -244,8 +244,10 @@
     color: #fff;
     //background-color: #c9a063;
     background:linear-gradient(180deg, #FF8BF3 , #7400E0 );
+    //background:linear-gradient(180deg, #f575a6 , #652ccf );
+    // background:linear-gradient(180deg, #b2baff , #781297 );
     //border: 1px solid #FFF9;
-   //border:0;
+   border:0;
    box-shadow: 0 0 .5em #0366;
     border-radius: .6em;
 
