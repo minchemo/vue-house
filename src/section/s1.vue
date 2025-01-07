@@ -40,6 +40,14 @@
     top:calc(50% + #{size(-30 - 1070 * .5)});
   }
   .logo{width:size(1180);}
+  .t1 span{
+    font-size: size(60);
+    font-weight: 700;
+    &::before{content: url("./s1/icon.svg");
+  width: 1em;height: 1em;
+  }
+
+  }
   .en{width:size(710);}
 
   /*
