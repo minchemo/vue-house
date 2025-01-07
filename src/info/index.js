@@ -14,7 +14,7 @@ export default {
     phone: "05-5320638",
     fbLink: "https://www.facebook.com/61566167571561",
     fbMessage: "https://m.me/61566167571561",
-    line: "https://lin.ee/jX9Xyhz",
+    line: "https://lin.ee/uzbHOpK",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "麗寶集團-鵬程建設"],

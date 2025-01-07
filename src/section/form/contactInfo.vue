@@ -1,5 +1,8 @@
 <template>
   <div>
+    <a :href="info.line" target="_blank" v-if="!isMobile&&info.line">
+    <img src="@/section/s1/lineicon.png" class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]" /> 
+    </a>
   <div class="contact-info-img">
     <div class="oo1"></div>
     <div class="oo2"></div>

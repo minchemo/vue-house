@@ -1,9 +1,6 @@
 <template>
   <article class="s1 relative" id="s1">
 
-    <a href="https://lin.ee/jX9Xyhz" target="_blank" v-if="!isMobile">
-    <img src="./s1/lineicon.png" class="lineicon" data-aos="zoom-in" data-aos-delay="200" /> 
-    </a>
 	<!--  
 		<img src="./s1/mo.jpg" class="t0">
 		<img src="./s1/pc.jpg" class="t0"> -->
@@ -75,14 +72,6 @@
 
   .t0{position: absolute;width: 100%;top: -2.2vw;left: 0; 
 	pointer-events: none;opacity: .32;z-index: 50;}
-.lineicon{
-  position: fixed;
-  width: size(80);
-  height: size(80);
-  right: size(20);
-  bottom: size(120);
-  z-index: 99;
-}
 .bg1{position: absolute;top:0;left: 0;width: 100%;height: 100%;
   div{position: absolute;
     background: radial-gradient(ellipse at center,#F8D8A9 0%, #aad1b8dd 15%,#aad1b8aa 20%, #118fc700 60%);
