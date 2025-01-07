@@ -1,27 +1,16 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/pc.jpg" class="t0" >
-    <img src="./s1/bg.svg" class="bg" >
-    <img src="./s1/logo.svg" class="logo" >
-    <div class="t1"><span>百貨群聚</span><span>機能齊聚</span><span>雙軌相聚</span></div>
-    <img src="./s1/en.svg" class="en" >
-    <div class="t2">2-3房</div>
+    <!-- <img src="./s1/mo.jpg" class="t0" > -->
+    <img src="./s1/bg.svg" class="bg" data-aos="zoom-out" data-aos-delay="0" >
+    <Logo data-aos="zoom-in" data-aos-delay="500" />
+    <div class="t1" data-aos="zoom-in" data-aos-delay="1000"><span>百貨群聚</span><span>機能齊聚</span><span>雙軌相聚</span></div>
+    <img src="./s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="1000" >
+    <div class="t2" data-aos="zoom-in" data-aos-delay="1000">2-3房</div>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-
-@keyframes op {
-  50% {
-     opacity: 0;
-  }
-}
-@keyframes an {
-  to {
-    transform: translateX(0%);
-  }
-}
 .s1 {
   min-height: size(1070);
   max-height: size(1070);
@@ -30,70 +19,38 @@
   flex-direction: column;
   justify-content:center;
   align-items:center;
-  font-size:size(36);
+  font-size:size(30);
   overflow: hidden;
-  
+  $ma:size(30);
+  &::before{content: "";position: absolute;left:$ma;right: $ma;top:$ma;bottom:$ma;border: 3px solid #fff;margin: auto;}
 
-  .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: 0.5;}
+  .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: 0.3;}
    .bg{position: absolute;width:size(1170);left:0;right: 0;
     top: size(-30);
     top:calc(50% + #{size(-30 - 1070 * .5)});
   }
-  .logo{width:size(1180);}
-  .t1 span{
-    font-size: size(60);
-    font-weight: 700;
+  .logo{position: relative;z-index: 3;margin-bottom: size(25);margin-top: size(22);
+    width:size(1180);}
+  .t1{position: relative;z-index:3;
+    font-size: size(67);
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .49em;margin-bottom: size(20);
+     span{
     &::before{content: url("./s1/icon.svg");
-  width: 1em;height: 1em;
-  }
-
-  }
-  .en{width:size(710);}
-
-  /*
-  .l1{position: absolute;width:100%;left:0;top: 0;height: calc(100% + 22vw);
-    background: 
-    linear-gradient(to bottom right, #FFFC 0%, #fff0 50%) bottom right / 50% 50% no-repeat, 
-    linear-gradient(to bottom left, #FFFC 0%, #fff0 50%) bottom left / 50% 50% no-repeat,
-    linear-gradient(to top left, #FFF 0%, #fff0 50%) top left / 50% 50% no-repeat,
-    linear-gradient(to top right, #FFF 0%, #fff0 50%) top right / 50% 50% no-repeat;
-    mix-blend-mode:soft-light;
-    animation: l1 5s ease-in-out infinite;
-    transform: scale(1,0.001);opacity: 1;
-  }
-@keyframes l1 {
-  40% {
-    transform: scale(0.1,3);opacity:1;
-  }
-  100% {
-    transform: scale(0.05,3.5);opacity:0;
+  width: .5em;display: inline-block;vertical-align:baseline;margin: 0 0.1em 0 0;
   }
 }
-
-  .t1{position: relative;
-    font-size:size(85);
-    line-height: 1.13;
-    letter-spacing: 0.14em;
-    font-weight: 900;z-index: 3;color: #fff6;margin-top:size(58);
-    }
-    .en1{ width: size(705);position: relative;z-index: 3;margin-top:size(73);}
-    .img{ width: size(705);position: relative;z-index: 3;margin-top:size(34);mix-blend-mode: screen;
-    img{width: 100%;
-    &:last-child{position: absolute;top:0;left: 0;}
-    }
-    }
-    
-  .t2{position: relative;
-    font-size:size(42);
-    line-height: 1.13;
-    letter-spacing: 0.46em;
-    text-indent: 0.46em;
-    font-weight: 300;z-index: 3;color: #FFF;margin-top:size(55);
-    }
-    .en2{ width: size(510);position: relative;z-index: 3;margin-top:size(22);mix-blend-mode: screen;}
-    .en3{ width: size(510);position: relative;z-index: 3;margin-top:size(18);}
-
-    */
+  }
+  .en{width:size(710);position: relative;z-index: 3;margin-bottom: size(27);}
+  .t2{position: relative;z-index: 3;font-size: size(65);font-weight: 800;line-height: 1.05;padding: 0 0 .1em 0 ;color: #154675;
+    border-top: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;width: 4.1em;text-align: center;
+  margin-bottom:0;
+  }
 }
 
   
@@ -115,29 +72,26 @@
   .bg{width:sizem(584);top:sizem(0);left:sizem(-104.5);height:sizem(805);
   top:calc(50% + #{sizem(-105 - 604 * .5)})
   }
-  .l1{height: calc(100% + 78vw);}
-  .t1{
-    font-size:sizem(23);writing-mode: vertical-lr;margin-top:sizem(56);letter-spacing: 0.1em;
-    white-space: nowrap;
-    }
-    .en1{ width: sizem(250);margin-top:sizem(45);}
-    .img{ width: sizem(245);margin-top:sizem(16);}
-  .t2{
-    font-size:sizem(17);margin-top:sizem(42);
-    }
-    .en2{ width: sizem(205);margin-top:sizem(8);}
-    .en3{ width: sizem(205);margin-top:sizem(8);margin-bottom:sizem(49);}
- 
-    /*
-    .slogo{ width: sizem(230);margin-top:sizem(30);
-    margin-bottom:sizem(65);}
-    .logor{right: sizem(20);bottom: sizem(20); width: sizem(130);}
-
-    */
+  .logo{margin-bottom: sizem(12);margin-top: sizem(8);
+    width:sizem(300);}
+  .t1{order:4;
+    font-size: sizem(20);
+    margin-bottom: sizem(12);
+    gap: .9em;
+     span{
+    &::before{content: url("./s1/icon.svg");
+  width: .5em;display: block;margin: 0 auto -.5em auto;
+  }
+}
+  }
+  .en{order:3;width:sizem(230);margin-bottom: sizem(15);}
+  .t2{order:5;font-size: sizem(21);width: 4.5em;}
 }
 }
 </style>
 <script setup>
+import Logo from "./s1/logo.vue"
+
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
