@@ -12,7 +12,7 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 .s1 {
-  min-height: size(1070);
+  min-height: size(900);
   max-height: size(1070);
   height: 100vh;
   display: flex;
