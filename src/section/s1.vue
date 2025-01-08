@@ -2,6 +2,7 @@
   <article class="s1 relative" id="s1">
     <!-- <img src="./s1/mo.jpg" class="t0" > -->
     <img src="./s1/bg.svg" class="bg" data-aos="zoom-out" data-aos-delay="0" >
+    <div class="box"><span></span></div>
     <Logo data-aos="zoom-in" data-aos-delay="500" />
     <div class="t1" data-aos="zoom-in" data-aos-delay="1000"><span>百貨群聚</span><span>機能齊聚</span><span>雙軌相聚</span></div>
     <img src="./s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="1000" >
@@ -29,6 +30,22 @@
     top: size(-30);
     top:calc(50% + #{size(-30 - 1070 * .5)});
   }
+  .box{position: absolute; 
+   width: size(3100);
+   height: size(745);
+// opacity: 0.5;
+transform:rotate(17deg);
+span{display: block;width: 100%;height: 100%;position: relative;
+   background: linear-gradient(90deg, #ff00, #FFF9 , #ffd90080 , #ff00);
+   transform:translateX(100%);
+animation: an1 10s linear infinite reverse;}
+  }
+@keyframes an1 {
+  to {
+     transform:translateX(-100%);
+  }
+}
+
   .logo{position: relative;z-index: 3;margin-bottom: size(25);margin-top: size(22);
     width:size(1180);}
   .t1{position: relative;z-index:3;
@@ -72,6 +89,9 @@
   .bg{width:sizem(584);top:sizem(0);left:sizem(-104.5);height:sizem(805);
   top:calc(50% + #{sizem(-105 - 604 * .5)})
   }
+  .box{
+   width: sizem(1600);
+   height: sizem(400);}
   .logo{margin-bottom: sizem(12);margin-top: sizem(8);
     width:sizem(300);}
   .t1{order:4;

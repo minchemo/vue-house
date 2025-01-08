@@ -1,5 +1,6 @@
 <template>
   <div id="order" class="order relative text-center">
+    <div class="box"><span></span></div>
     <div class="order-section">
 <!-- 
       <div class="order-title" data-aos="fade-up" data-aos-delay="0">邀約行家 領席鑑賞</div> -->
@@ -139,6 +140,22 @@
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
+ .box{position: absolute; 
+   width: size(3100);
+   height: size(745);top: size(500);left: calc(50% - size(1550));
+// opacity: 0.5;
+transform:rotate(165deg);
+transform-origin: 50% 50%;
+span{display: block;width: 100%;height: 100%;position: relative;
+   background: linear-gradient(90deg, #ff00, #FFF9 , #ffd90080 , #ff00);
+   transform:translateX(100%);
+animation: an2 10s linear infinite reverse;}
+  }
+@keyframes an2 {
+  to {
+    transform:translateX(-100%);
+  }
+}
 
   .order-title {
     font-size:30px;
@@ -281,6 +298,9 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+  .box{
+   width: sizem(1600);top: sizem(100);left: calc(50% - sizem(800));
+   height: sizem(400);}
 
     .cus-divider {
       margin: 0 auto;

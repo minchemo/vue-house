@@ -13,24 +13,9 @@
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFE600] text-[#000]">
     <S1 />
     <S2 />
-    <!-- <S2v /> -->
   <!--
     <S3 />
-    <S4 />
-    <S5 />
-    <S6 />
-    <S7 />
-    <S8 />
-    <S9 />
-    <S10 />
-    <S11 />
-    <div class="bg">
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-    </div>
-    <S1new />
-    <S1new2 /> -->
+     -->
     <Order />
   </div>
 </template>
