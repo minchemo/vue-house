@@ -82,7 +82,7 @@ animation: an1 10s linear infinite reverse;}
   .s1 {
     height:calc(100vh - 63px);
     min-height: sizem(604);
-    max-height: sizem(750);
+    max-height: sizem(700);
    // height: sizem(650);
     font-size:sizem(16);
     justify-content:center;

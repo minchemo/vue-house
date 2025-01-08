@@ -228,14 +228,14 @@ animation: an2 10s linear infinite reverse;}
     }
     .row{background: #fff;border: 1px solid #fff;color: #000;
       display: flex;width: 100%;
-    align-items:center;
+    align-items:center;font-size: 18px;
       > span{
-        width: 5.5em;
+        width:4.5em;
         text-align: left;padding-left:1em ;
         > span{color: #F00;//font-size: 12px;
           }
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background: inherit;flex: 1;font-size: 1em;padding: 0 .5em;}
       option{color: #666;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -263,7 +263,6 @@ animation: an2 10s linear infinite reverse;}
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .6em;
-
     width: 308px;
     height:3.3em;
     line-height: 3.3;
@@ -311,7 +310,7 @@ animation: an2 10s linear infinite reverse;}
     }
 
     .order-title {
-      font-size: sizem(20);
+      font-size: sizem(25);
       padding-top:1.5em;
       width: sizem(310);
       min-width: 0;

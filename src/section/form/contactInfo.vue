@@ -6,6 +6,8 @@
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>  -->
+    <Logo data-aos="zoom-in" data-aos-delay="0" />
+    <img src="@/section/s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0" >
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -111,7 +113,7 @@
   height: 0;z-index: 52;
 }
 .contact-info {
-  padding: 5em 0 2.5em 0;
+  padding: 3em 0 2.5em 0;
   position: relative;
   z-index: 50;
   width: size(1000);
@@ -119,16 +121,10 @@
   font-size:16px;
 
   .logo {position: relative;
-    width: size(367);
-   // height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: size(30) auto 0;
-    img{width: 100%;}
-    .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
+    width: size(572);
+    margin: size(30) auto size(30);
   }
+  .en{width:size(450);margin-bottom: size(30);}
 
   .contact-item-box {
     position: relative;
@@ -268,17 +264,18 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(80) 0;
+    padding: sizem(50) 0 sizem(50) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
   background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(257);
-    margin: sizem(40) auto sizem(30) auto;
+      width: sizem(290);
+    margin: sizem(20) auto sizem(20) auto;
      // margin-bottom: sizem(47);
     }
+    .en{width:sizem(220);margin-bottom: sizem(20);}
 
     .contact-item-box {
       position: relative;
@@ -352,6 +349,7 @@
 
 <script setup>
 import info from "@/info"
+import Logo from "@/section/s1/logo.vue"
 import { inject, ref } from "vue";
 const modalOpen = ref(false);
 const modalType = ref('');
