@@ -9,8 +9,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市西屯區市政路10號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.4442108791386!2d120.64352467571972!3d24.156149273077798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d939f7b250b%3A0x978bc5bc4f3ede49!2zNDA35Y-w5Lit5biC6KW_5bGv5Y2A5biC5pS_6LevMTDomZ8!5e0!3m2!1szh-TW!2stw!4v1713772329889!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/ikSpJr5b4uUZd96P6",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.4456548862177!2d120.64585090000001!3d24.156098600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d000f1c2ccf%3A0xb2554ffe02fcf3bb!2z6LGQ6YKR5Yyv56au772c5LiD5pyf5paw5bu65qGI772c5aSn5aKp5Zub6KGX772c5Y2X5bGv5o236YGL56uZ772c5paH5b-D5qOu5p6X5YWs5ZyS772c5YWs55uK6Lev5ZWG5ZyI772cMy005oi_!5e0!3m2!1szh-TW!2stw!4v1736418037806!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/wsacNj4DcqZjg85T6",
     phone: "04-2258-0988",
     fbLink: "https://www.facebook.com/61556823341836/",
     fbMessage: "https://m.me/61556823341836/",

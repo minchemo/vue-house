@@ -51,17 +51,17 @@
       data-aos-delay="0" />
     <div class="t4" v-if="!isMobile"
       data-aos="fade-up"
-      data-aos-delay="0">全國唯一連續23年，榮獲國家金質獎</div>
+      data-aos-delay="0">全國唯一連續24年，榮獲國家金質獎</div>
     <div class="t4 text-center" v-else
       data-aos="fade-up"
       data-aos-delay="0">
-      全國唯一連續23年<br />榮獲國家金質獎
+      全國唯一連續24年<br />榮獲國家金質獎
     </div>
     <div class="swiper-section">
       <div class="l">
         <div class="t">
           <div class="tt1" data-aos="fade-up" data-aos-delay="0">
-            豐邑機構至2023年連續23年榮獲建築金質獎肯定，累積獲獎135座，其中有43座全國首獎、87座金質獎、5座特別獎(優質獎、鑽石金首獎、卓越金首獎、最佳創意設計。
+            豐邑機構至2024年10月已連續24年榮獲建築金質獎肯定，累積獲獎140座，其中有43座全國首獎、92座金質獎、5座特別獎(優質獎、鑽石金首獎、卓越金首獎、最佳創意設計)
           </div>
           <div class="tt2" data-aos="fade-up" data-aos-delay="100">
             豐邑匠心藝，國家的肯定
@@ -118,12 +118,16 @@
           <span v-if="!isMobile">2022</span>
           <span v-else>
             <template v-if="currentIdx == 4">2023</template>
+            <template v-else-if="currentIdx == 5">2024</template>
             <template v-else>2022</template>
           </span>
           <div class="line"></div>
           <span v-if="!isMobile">2023</span>
           <span v-else>{{ imgs[currentIdx].caption }} </span>
           <div class="line" v-if="!isMobile"></div>
+          <span v-if="!isMobile">2024</span>
+          <div class="line" v-if="!isMobile"></div>
+          
         </div>
         <div class="swiper-btns" v-if="!isMobile">
           <div
@@ -369,31 +373,49 @@ background-image:linear-gradient(180deg, #45A0B2 0%, #75C2CA 25%, #82CBD1 44%);
           @apply bg-[#034150];
           height: 0.5px;
           &:nth-child(2) {
-            width: size(692);
+            width: size(607);
           }
           &:nth-child(4) {
-            width: size(117);
+            width: size(113);
+          }
+          &:nth-child(6) {
+            width: size(110);
           }
         }
       }
       .swiper-btns {
         @apply flex whitespace-nowrap flex-wrap;
         @apply text-center;
-        width: size(953);
+        width: size(1103);
         column-gap: size(5);
         row-gap: size(11);
         .item {
           @apply cursor-pointer;
-          width: size(185);
+          width: size(175);
           height: size(36);
           line-height: size(36);
           border: 1px solid #fff;
           font-size: size(15);
+          &:nth-child(1) {
+            width: size(155);
+          }
+          &:nth-child(4) {
+            width: size(150);
+          }
           &:nth-child(5) {
             margin-left: size(8);
           }
-          &:nth-child(8) {
+          &:nth-child(6) {
+            margin-left: size(8);
+          }
+          &:nth-child(7) {
+            width: size(155);
+          }
+          &:nth-child(9) {
             font-size: size(13.37);
+          }
+          &:nth-child(10) {
+            width: size(150);
           }
           &.active {
             @apply bg-white text-[#83CCD2];
@@ -682,6 +704,10 @@ const imgs = [
   {
     img: new URL("../section/s2/5.webp", import.meta.url).href,
     caption: "浩瀚 景立方 台中北屯",
+  },
+  {
+    img: new URL("../section/s2/10.jpg", import.meta.url).href,
+    caption: "豐邑TOP+ 高雄前金",
   },
   {
     img: new URL("../section/s2/6.webp", import.meta.url).href,
