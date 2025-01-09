@@ -15,7 +15,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
+      <span class="caption absolute">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -80,8 +80,12 @@ img{width: 100%;}
     }
     .caption {
     font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
+    right:.7em;
+    bottom:.5em;
+    color: #FFF;
+    @media screen and (min-width: 768px) {
+    font-size:size(15);  
+    }
     }
     .slide-item {
       @apply bg-cover;
@@ -160,19 +164,11 @@ const options = {
 const imgs = [
   {
     img:new URL("./s8/1.jpg", import.meta.url).href ,
-    caption: "0"
+    caption: "3D外觀透視圖"
   },
   {
-    img:new URL("./s8/1.jpg", import.meta.url).href ,
-    caption: "0"
-  },
-  {
-    img:new URL("./s8/1.jpg", import.meta.url).href ,
-    caption: "0"
-  },
-  {
-    img:new URL("./s8/1.jpg", import.meta.url).href ,
-    caption: "0"
+    img:new URL("./s8/2.jpg", import.meta.url).href ,
+    caption: "3D外觀透視圖"
   },
 ]
 </script>
