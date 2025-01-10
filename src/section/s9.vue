@@ -79,12 +79,12 @@ img{width: 100%;}
       width: 100%;
     }
     .caption {
-    font-size:sizem(12);  
+    font-size:sizem(8);
     right:.7em;
     bottom:.5em;
-    color: #FFF;
+    color: #FFFc;
     @media screen and (min-width: 768px) {
-    font-size:size(15);  
+    font-size:size(15);
     }
     }
     .slide-item {
