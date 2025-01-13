@@ -1,11 +1,14 @@
 <template>
   <article class="s1" id="s1">
-    <div class="bg relative">
-      <img src="./s1/bg.jpg" class="bg1">
-    <img src="./s1/en.svg" class="en absolute" data-aos="fade-up" data-aos-delay="400">
-      <img src="./s1/img.webp" class="img absolute" data-aos="fade-left" data-aos-delay="0">
+    <div class="bg">
+      <img src="./s1/bg.webp" class="bg1">
     </div>
-    <img src="./s1/logo.svg" class="logo absolute" data-aos="zoom-in" data-aos-delay="200">
+    <div class="main relative">
+    <img src="./s1/logo.svg" class="logo" data-aos="fade-up" data-aos-delay="100" v-if="!isMobile">
+    <img src="./s1/logom.svg" class="logo" data-aos="fade-up" data-aos-delay="100" v-else>
+    <img src="./s1/title.svg" class="title" data-aos="zoom-in" data-aos-delay="200">
+    </div>
+    <img src="./s1/comingsoon.svg" class="comingsoon" data-aos="zoom-in" data-aos-delay="500">
 	<!--  
     <img src="./s1/02.jpg" class="t0">
        <div class="bg"><img src="./s1/bg.svg" alt="bg"></div>
@@ -36,17 +39,32 @@ mix-blend-mode: overlay;opacity: .8;
   min-height: size(900);
   max-height: size(1080);
   font-size:size(36);
-  padding: size(20);
+  //padding: size(20);
+
+  .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: size(50);
+
+  .logo{width: size(1068);}
+  .title{width: size(869);}
+}
+.comingsoon{width: size(243);position: absolute; bottom: size(50);left: size(839);}
 
 .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
-.bg{overflow: hidden;width: 100%;height: 100%;
+.bg{overflow: hidden;width: 100%;height: 100%;position: absolute;
   .bg1{width: 100%;height: 113%;object-fit: cover;
   transform: skewY(-3deg);transform-origin: 0 0%;
   animation: ann 3s ease-in-out alternate infinite;
   }
 }
-.img{bottom:0;right:size(70);height: size(1020);max-height: 99%;}
-.logo{top:size(310);left:size(160);width:size(878);top: calc(50% + #{size(310-1080*.5)});}
+
+
 .en{top:size(40);right:size(40);width:size(18);}
 }
 @keyframes ann {
@@ -70,16 +88,23 @@ mix-blend-mode: overlay;opacity: .8;
     min-height: sizem(604);
     max-height: sizem(700);
     font-size:sizem(15);
-    padding: sizem(10);
+    //padding: sizem(10);
     
 .bg{
   .bg1{width: 140%;height: 113%;object-fit: cover;
   transform: skewY(-10deg);
   }
 }
-.img{bottom:0;right:sizem(10);height: sizem(380);max-height: 55%;}
-.logo{top:sizem(125);left:sizem(40);width:sizem(270);top: calc(20% + #{sizem(125-604*.2)});}
-.en{top:sizem(20);right:sizem(20);width:sizem(9);}
+
+.main{
+    width: 100%;
+    height: 100%;
+    gap: sizem(50);
+
+  .logo{width: sizem(290);}
+  .title{width: sizem(290);}
+}
+.comingsoon{width: sizem(136);position: absolute; bottom: sizem(30);left: sizem(120);}
 
 
 }

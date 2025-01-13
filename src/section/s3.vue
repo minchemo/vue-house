@@ -1,16 +1,16 @@
 
 
 <template>
-  <article class="s2">
+  <article class="s3">
     <div class="bg">
-      <img src="./s2/bg.webp" class="bg1" v-if="!isMobile">
-      <img src="./s2/bgm.webp" class="bg1" v-else>
+      <img src="./s3/bg.webp" class="bg1" v-if="!isMobile">
+      <img src="./s3/bgm.webp" class="bg1" v-else>
     </div>
     <div class="main">
       <div class="txt">
-        <p class="desc" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">區內5大主題公園，讓自然成為日常生活的一部分</p>
+        <p class="desc" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">鄰近國道及主要幹道，快速通勤，暢行無阻<br>桃捷綠線G09，散步就到</p>
       </div>
-        <img src="./s2/en.svg" class="en" data-aos="zoom-in" data-aos-delay="500">
+        <img src="./s3/en.svg" class="en" data-aos="zoom-in" data-aos-delay="500">
     </div>
 
   </article>
@@ -19,11 +19,11 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s2 {
+.s3 {
   @apply relative overflow-hidden flex  justify-center text-[#FFF];
   min-height: size(1080);
   max-height: size(1080);
-  background: #65632A;
+  background: #936101;
   width: 100%;
   height:auto;
   //padding:7em 0 7em 0;
@@ -47,9 +47,9 @@
     position: relative;
     padding-right: size(30);
     padding-bottom: size(50);
-    .txt{text-align: justify}
+    .txt{text-align: justify;text-align: right;}
 
-   .en{width: size(680);
+   .en{width: size(687);
        z-index: 99;
       position: relative;
       margin-top: size(50)} 
@@ -70,7 +70,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s2 {
+  .s3 {
   height: calc(100vh - 63px);
   min-height: sizem(604);
   max-height: sizem(700);
@@ -99,7 +99,7 @@
     line-height: 2.3;
   }
 
-  .en{width: sizem(300);}
+  .en{width: sizem(312);}
 }
     
 

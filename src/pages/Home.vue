@@ -13,10 +13,12 @@
    <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#ECE7E2]">
     <S1 />
-   <!-- <S2 />
-     <S2v />
-  
+    <S2 />
     <S3 />
+   <!--
+   <S2 />
+    <S3 />
+     <S2v />
     <S4 />
     <S5 />
     <S6 />
@@ -96,12 +98,12 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-//import S2 from "@/section/s2.vue"
+import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
+//import S3 from "@/section/s3.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
-/* 
-import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue" */
+
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

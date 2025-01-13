@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #40220F;}
-.hover\:bg-color2:hover{background-color:#351807;}
+.bg-color1{background-color: #002856;}
+.hover\:bg-color2:hover{background-color:#001b3a;}
 
 
 .contact-info-img{
@@ -140,7 +140,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #40220F;
+      background-color: #002856;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -157,7 +157,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #351807;
+        background-color: #001833;
         color: #fff;
 
         img {
@@ -214,9 +214,9 @@
 
         &:hover {
    //     background-color: #C29267;
-          color: #000;
+          color: #fff;
           img {
-            filter: brightness(0) invert(0);
+            filter: brightness(0) invert(1);
           }
         }
       }
@@ -228,7 +228,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(12%) sepia(31%) saturate(1846%) hue-rotate(348deg) brightness(93%) contrast(92%);
+  img{filter: invert(12%) sepia(99%) saturate(1217%) hue-rotate(191deg) brightness(96%) contrast(107%);
   }
 }
 
@@ -246,7 +246,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#63432F;
+    background:#002856;
 
     .contact-item {
       height: 100%;      
