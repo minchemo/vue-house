@@ -1,19 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 290 224" style="enable-background:new 0 0 290 224;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
-</style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="111.6937" x2="290" y2="111.6937">
-	<stop  offset="0" style="stop-color:#002856"/>
-	<stop  offset="0.2754" style="stop-color:#EFFFFF"/>
-	<stop  offset="0.5487" style="stop-color:#002856"/>
-</linearGradient>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 224">
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-500" y1="0" x2="-300" y2="150">
-	<stop  offset="0" stop-color="#002856"/>
-	<stop  offset="0.5" stop-color="#EFFFFF"/>
-	<stop  offset="1" stop-color="#002856"/>
+	<stop offset="0" stop-color="#002856"/>
+	<stop offset="0.5" stop-color="#EFFFFF"/>
+	<stop offset="1" stop-color="#002856"/>
 	<animate attributeName="x1" to="4000" dur="5s" repeatCount="indefinite" /> 
 	<animate attributeName="x2" to="4200" dur="5s" repeatCount="indefinite" /> 
 </linearGradient>
