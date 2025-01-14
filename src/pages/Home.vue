@@ -14,7 +14,7 @@
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
      <div class="bg">
       <S1 />
-      <S2 />
+    <!--  <S2 />-->
       <S3 />
       <S4 />
       <S5 />

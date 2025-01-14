@@ -167,6 +167,7 @@
 .contact-info-img{
   @apply relative;
   height: 0;z-index: 2;
+  pointer-events: none;
   //top: -1.5vw;
   img{width: 100%;}
 @keyframes bubble1 {
@@ -180,11 +181,13 @@
   }
 }  
   .oo1{position: absolute;
+    pointer-events: none;
     background: radial-gradient(ellipse at center, #F8D8A9 12%,  #B9CFB7 20%, #9ACBBF 25%,#82C8C5 32%, #5db5c5ad 43.4%,#269ac630 62%, #118fc700 70%);
     right: size(-1200);top:size(-550);width:size(2300);
     &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}
   }
   .oo2{position: absolute;
+    pointer-events: none;
     background: radial-gradient(ellipse at center, #F8D8A9 12%,  #B9CFB7 20%, #9ACBBF 25%,#82C8C5 32%, #5db5c5ad 43.4%,#269ac630 62%, #118fc700 70%);
     right: size(-94);top:size(-280);width:size(2300);
     &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}
