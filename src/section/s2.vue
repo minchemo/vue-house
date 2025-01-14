@@ -8,9 +8,9 @@
     </div>
     <div class="main">
       <div class="txt">
-        <p class="desc" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1500">區內5大主題公園，讓自然成為日常生活的一部分</p>
+        <p class="desc" data-aos="fade-left" data-aos-delay="0">區內5大主題公園，讓自然成為日常生活的一部分</p>
       </div>
-        <img src="./s2/en.svg" class="en" data-aos="zoom-in" data-aos-delay="500">
+        <img src="./s2/en.svg" class="en" data-aos="fade-left" data-aos-delay="500">
     </div>
 
   </article>
