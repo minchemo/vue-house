@@ -170,5 +170,21 @@ const imgs = [
     img:new URL("./s8/2.jpg", import.meta.url).href ,
     caption: "3D外觀透視圖"
   },
+  {
+    img:new URL("./s8/3.jpg", import.meta.url).href ,
+    caption: "3D外觀透視圖"
+  },
+  {
+    img:new URL("./s8/4.jpg", import.meta.url).href ,
+    caption: "3D外觀透視圖"
+  },
+  {
+    img:new URL("./s8/5.jpg", import.meta.url).href ,
+    caption: "3D外觀透視圖"
+  },
+  {
+    img:new URL("./s8/6.jpg", import.meta.url).href ,
+    caption: "3D外觀透視圖"
+  },
 ]
 </script>
