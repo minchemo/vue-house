@@ -1,7 +1,7 @@
 <template>
   <section class="s2 w-full relative">
     <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/ixcNQAvIHtQ?autoplay=1&mute=1&loop=1&playlist=ixcNQAvIHtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/YkF4Vvuqqaw?autoplay=1&mute=1&loop=1&playlist=YkF4Vvuqqaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </section>
 </template>
@@ -21,7 +21,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100%;pointer-events: none;
     }
   }
 }
