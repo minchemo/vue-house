@@ -8,7 +8,7 @@ export default {
   },
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
-  address: "高雄市前鎮區瑞吉街103號對面",
+  address: "高雄市前鎮區凱旋四路688號旁",
   googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d920.8769437338581!2d120.318623286795!3d22.59750600884785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDM1JzUxLjEiTiAxMjDCsDE5JzA4LjYiRQ!5e0!3m2!1szh-TW!2stw!4v1736820168576!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/FJiANsmqtxrAN8tK7",
   phone: "07-8216677",
