@@ -42,7 +42,7 @@
                 /><span v-html="room"></span></label
               ></div>
           </div>
-          <div class="button budget">
+        <!--   <div class="button budget">
             <span>購屋預算:</span><div>
               <label v-for="budget in info.budget" :key="budget"
                 ><input
@@ -52,7 +52,7 @@
                   @input="(event) => (formData.budget = event.target.value)"
                 /><span v-html="budget"></span></label
               ></div>
-          </div>
+          </div> -->
           <div class="relative">
             <label class="row name"
               ><span>姓名<span>*</span></span>
