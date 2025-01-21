@@ -84,7 +84,7 @@
               </option>
             </select></label
           >
-          <!--
+          <!-- -->
           <label class="row"
             ><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
@@ -93,7 +93,7 @@
                 {{ area.label }}
               </option>
             </select></label
-          >  -->
+          >  
         </div>
         <div class="right">
           <textarea
@@ -583,7 +583,7 @@ const send = () => {
       &people=${formData.people}
       &project=${formData.project}
       &email=${formData.ctime}
-      &cityarea=${formData.city}
+      &cityarea=${formData.city}${formData.area}
       &msg=${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
