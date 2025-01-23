@@ -24,9 +24,6 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
-
-
-
 .s3 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;

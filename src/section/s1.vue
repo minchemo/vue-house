@@ -1,5 +1,5 @@
 <template>
-  <article class="s1" id="s1">
+  <article class="s1 font-['Noto_Serif_TC',serif]" id="s1">
 <!-- 
 <a href="https://lin.ee/jX9Xyhz" target="_blank" v-if="!isMobile">
 <img src="./s1/lineicon.png" class="lineicon" data-aos="zoom-in" data-aos-delay="200" /> 
@@ -8,9 +8,10 @@
 		<img src="./s1/pc.jpg" class="t0"> 
 		<img src="./s1/mo.jpg" class="t0"> -->
     
-  <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-  <div class="t1 font-['Noto_Serif_TC',serif]" v-if="isMobile" data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王<br>25~34坪市心地標</div>
-  <div class="t1 font-['Noto_Serif_TC',serif]" v-else  data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王｜25~34坪市心地標</div>
+    <h1 class="h1">{{ info.caseName }}</h1>
+  <img src="./s1/logo.svg" alt="鳴日之城logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
+  <div class="t1" v-if="isMobile" data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王<br>25~34坪市心地標</div>
+  <div class="t1" v-else  data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王｜25~34坪市心地標</div>
   </article>
 </template>
 
@@ -18,12 +19,11 @@
 @import '@/assets/style/function.scss';
 
 
+.h1{position: absolute;top: 0;left: 0;transform: translate(-200%);
+        pointer-events: none;color: #fff0;}
 
 .s1 {
   @apply relative w-full h-screen;
- // min-height: size(950);
- // max-height: size(1140);
- // height: 100vh;
  height: sizem(667);
   min-height: sizem(604);
   max-height: sizem(700);
@@ -37,7 +37,6 @@
   line-height: 1.7; z-index: 2;
 
   @media screen and (min-width: 768px) {
- // height: size(1080);
   min-height: size(900);
   max-height: size(1080);
   height: 100vh;
@@ -56,6 +55,7 @@
 }
 </style>
 <script setup>
+import info from "@/info"
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 

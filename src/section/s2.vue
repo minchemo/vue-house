@@ -3,10 +3,8 @@
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北門戶 黃金中軸</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">桃鶯路往北→桃園車站 遠百統領威秀百貨商圈<span v-if="!isMobile">。</span><br>
-鶯桃路往東南→三鶯市區 三鶯之心 陶瓷博物館 鶯歌老街 新北美術館。
-</p>
-    </div>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">桃鶯路往北→桃園車站 遠百統領威秀百貨商圈<span v-if="!isMobile">。</span><br>鶯桃路往東南→三鶯市區 三鶯之心 陶瓷博物館 鶯歌老街 新北美術館。</p>
+      </div>
     </div>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
@@ -16,7 +14,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -37,26 +35,24 @@
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-    flex-direction:row-reverse;
-    background:linear-gradient(180deg, #00383800 0%, #003838cc 100%);
-    z-index: 2;
-
+  flex-direction:row-reverse;
+  background:linear-gradient(180deg, #00383800 0%, #003838cc 100%);
+  z-index: 2;
   .main {
     @apply flex;
     margin: 0;
     flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
-}
+    flex-direction: column;
+    text-align: justify;
+  }
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+    height: size(560);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
+      flex-basis: size(840);
       height: size(560);
-      
     }
     .splide__pagination{
       left: calc(100% + 3em);
@@ -69,24 +65,21 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-
-
 .s2 {
-@apply flex-col-reverse;
+  @apply flex-col-reverse;
   height: auto;
   padding: 0;
-font-size:sizem(15);
-flex-wrap:nowrap;
-margin-bottom:0em;
-gap:0em;
-
-.main {
-  padding: 0 sizem(32.5);
-  width: 100%;
-}
-
-.txt {margin: 2em auto 5em;
-}
+  font-size:sizem(15);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:0em;
+  .main {
+    padding: 0 sizem(32.5);
+    width: 100%;
+  }
+  .txt {
+    margin: 2em auto 5em;
+  }
 
 
 .slider {

@@ -1,6 +1,7 @@
 <template>
     <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
+        <h1 class="h1">{{ info.caseName }}</h1>
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
             v-bind:class="{ 'open': menuOpen }">
@@ -28,8 +29,11 @@
 @import "@/assets/style/function.scss";
 
 .nav {
+    position: relative;
     right: size(114);
     top: size(51);
+    .h1{position: absolute;top: 0;left: 0;transform: translate(-200%);
+        pointer-events: none;color: #fff0;}
  /*   .logo {
         width: size(145);
         height: size(50);
