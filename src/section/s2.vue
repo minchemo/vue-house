@@ -1,7 +1,7 @@
 <template>
   <section class="s2 w-full relative">
     <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/YkF4Vvuqqaw?autoplay=1&mute=1&loop=1&playlist=YkF4Vvuqqaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/h4jx0gF08Ik?autoplay=1&mute=1&loop=1&playlist=h4jx0gF08Ik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </section>
 </template>
