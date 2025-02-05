@@ -6,7 +6,7 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-200 flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
-    <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
+    <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
   <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#BB581D]">
