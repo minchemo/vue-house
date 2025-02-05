@@ -183,7 +183,7 @@
       }
       input,select{background:none;flex: 1;}
       option{color: #666;}
-      select{background: url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
+      select{background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
       //filter: brightness(0) invert(1);
