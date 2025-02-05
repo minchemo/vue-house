@@ -244,7 +244,7 @@ if ($name == '') {
     $mail->Username = $mailName; //設定驗證帳號
     $mail->Password = $mailPwd; //設定驗證密碼
 
-    $mail->From = "noreply@h65.tw"; //設定寄件者信箱
+    $mail->From = "noreply@h35.tw"; //設定寄件者信箱
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
