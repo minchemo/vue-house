@@ -6,12 +6,13 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
-    <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="">
+    <img class="w-32" src="//h35.banner.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFF] text-[#000]">
     <img src="@/section/s1/bg1.jpg" class="bg1" data-aos="fade" data-aos-delay="0">
+    <S0 />
     <S1 />
     <S2 />
     <!-- <S2v /> -->
@@ -71,6 +72,8 @@ img {
 
 <script setup>
 import info from "@/info"
+
+import S0 from "@/section/s0.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 //import S3 from "@/section/s3.vue"
