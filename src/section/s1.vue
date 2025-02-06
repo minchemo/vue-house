@@ -1,5 +1,5 @@
 <template>
-  <article class="s1 relative" id="s1">
+  <article class="s1 relative s1-section" id="s1" ref="s1">
     
     <img src="./s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0">
     <div class="l1"></div>
@@ -34,6 +34,13 @@
   to {
     transform: translateX(0%);
   }
+}
+.s1-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  transition: transform 0.1s ease-out;
 }
 .s1 {
   min-height: size(920);
@@ -103,10 +110,13 @@
 
 
   .s1 {
-    height:calc(100vh - 63px);
+   /* height:calc(100vh - 63px);
     min-height: sizem(604);
-    max-height: sizem(750);
+    max-height: sizem(750);*/
    // height: sizem(650);
+    height: sizem(660);
+    min-height: 0;
+    max-height: sizem(750);
     font-size:sizem(16);
     justify-content:center;
   .bg{width:sizem(584);top:sizem(0);left:sizem(-104.5);height:sizem(805);
@@ -135,7 +145,7 @@
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref ,inject, onMounted, onUnmounted} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
@@ -146,4 +156,5 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
+
 </script>
