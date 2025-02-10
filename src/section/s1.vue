@@ -8,8 +8,8 @@
    -->
 
    <div class="con flex">
-    <img src="./s1/txt.svg" alt="title" class="txt" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0" v-if="!isMobile">
-    <img src="./s1/txt_m.svg" alt="title" class="txt" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0" v-else>
+    <img src="./s1/txt1.svg" alt="title" class="txt" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0" v-if="!isMobile">
+    <img src="./s1/txt1_m.svg" alt="title" class="txt" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="0" v-else>
 </div>
   </article>
 </template>
@@ -33,7 +33,7 @@
   align-items:center;
   font-size:size(36);
   //background: #E60012;
-  background: url("./s1/bg.webp");
+  background: url("./s1/bg1.webp");
 
   background-size: cover;
 
@@ -41,7 +41,7 @@
   div{flex-direction:column;margin: 0;}}
 
 .txt{
-  width: size(1300);
+  width: size(900);
 }
 
 }
@@ -60,9 +60,9 @@
     min-height: sizem(667);
     max-height: sizem(667);
     font-size:sizem(15);
-    background: url("./s1/bgm.webp");
+    background: url("./s1/bg1m.webp");
 
-    .con{gap:0;margin: 0 0  sizem(34) 0;flex-direction:column;
+    .con{gap:0;margin: 0 0  sizem(0) 0;flex-direction:column;
   div{flex-direction:column;margin: 0;}}
   
 
