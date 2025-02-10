@@ -10,15 +10,14 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#AF1600] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <img src="@/section/s1/bg.jpg" class="bgh bg-pc">
-    <img src="@/section/s1/bgm.jpg" class="bgh bg-mo">
+  <div class="home bg-[#340000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    <img src="@/section/s1/bg.webp" class="bgh bg-pc">
+    <img src="@/section/s1/bgm.webp" class="bgh bg-mo">
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-    <!-- <S2v /> -->
     <S2 />
     <S3 />
     <S4 />
@@ -64,7 +63,7 @@
   }
 
   .bgh{
-    opacity: .5;
+    opacity: .3;
   }
 
 
@@ -106,33 +105,35 @@ img {
     line-height: 1.7;
     width: 100%;
   .title{
-    font-size: 2.8em;
-    margin: 2em 0 0em;
+    font-size: size(42);
+    margin: 0em;
     line-height: 1.4;
-    font-weight: 500;
-    color:#fff;
-    text-align: center;
-    &::after,
-    &::before{
+    font-weight: 700;
+    color: #E1A86C;
+    text-align: left;
+    &::after{
       content: "";
-      width: 15.7em;
+      width: 8.7em;
+      margin: auto .0em auto .3em;
       height: 1px;
       background: #fff;
       display: inline-block;
       vertical-align: middle;
-      margin: auto 1em;
     }
+    margin-bottom: size(53);
   }
+
+
   .subtitle{
-    font-size: 1.65em;
+    font-size: size(30); 
     font-weight: 700;
     margin: 0 0 .8em;
-    color:#C9A063;
+    color:#E1A86C;
     line-height: 1.5;
   }
   .desc{
     margin: 0 0 1em;
-    font-size: 1.4em;
+    font-size: size(20); 
     b{color:#C9A063;}
   }
   }
@@ -188,22 +189,36 @@ img {
 
 .home > .bgh{width: 100%;
   top: 0;left: 0;
-  opacity: .7;
+  opacity: .3;
 }
 .bg-mo{display: block;}
 .bg-pc{display: none;}
   .caption{
       font-size: sizem(12);}
 
-      .txt {
+  .txt {
   .title{
     font-size: sizem(20);
-    &::after,
-    &::before{
-      width: 2.6em;}
+  margin-bottom: sizem(20);
+    text-align: center;
+    &::before,
+    &::after{
+      content: "";
+      width: 4.2em !important;
+      height: 1px;
+      background: #fff;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &::before{margin-right: 1em; margin-left: 0;}
+    &::after{margin-left: 1em; margin-right: 0;}
   }
   .subtitle{
-    font-size: 1.4em;
+    font-size: sizem(15);
+    text-align: center;
+  }
+  .desc{
+    font-size: sizem(12);
   }
   }
 .slider {

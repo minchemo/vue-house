@@ -6,12 +6,13 @@
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">步行約5分鐘  輕鬆上學去</h3>
+    
   </div>
     <div class="main">
       <div class="txt">
-    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">與校園最美好距離，寶貝天天睡飽再上學，上學不心累，就近求學路程，能讓家長更放心，陪伴孩子快樂成長。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">交通臻便利</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">坐擁樞紐優勢  從容縱橫全台</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">駕車約10分鐘可抵國道一號，北斗交流道與台1線交織而成的便捷動脈，輕鬆連接全台南北，快速往來彰化市區、台中、高雄等地。鄰近溪州大橋，大幅縮短至雲林、嘉義等地的通勤時間。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -112,7 +113,8 @@
 
   .s5 {
   @apply flex-col;
-    height: auto;
+    height: sizem(610);
+    justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
@@ -188,11 +190,11 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.webp", import.meta.url).href ,
-    caption: "大樹國小"
+    caption: "情境示意"
   },
   {
     img:new URL("./s5/2.webp", import.meta.url).href ,
-    caption: "大樹國中"
+    caption: "情境示意"
   },
 ]
 </script>

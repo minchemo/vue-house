@@ -32,20 +32,20 @@
             <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
           </select>
         </label>
-          <!--label class="row"><span>居住縣市</span>
+          <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value">
               {{ city.label }}
             </option>
-          </select></label-->
-          <!--label class="row"><span>居住地區</span>
+          </select></label>
+          <label class="row"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value">
               {{ area.label }}
             </option>
-          </select></label-->
+          </select></label>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -210,7 +210,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #EF8200;
+    background-color: #BB9259;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;

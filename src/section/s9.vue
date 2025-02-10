@@ -1,20 +1,16 @@
 <template>
-  <article class="s9" ref="s9">
-    <div class="bg" v-if="!$isMobile()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <article class="s9">
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">下樓即7-11便利購 日常採買0距離</h3>
-  </div>
+    
     <div class="main">
       <div class="txt">
-    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">日常繳費、取貨、購票、咖啡宵夜，24H精彩不打烊，你是SOHO族、愛買族、夜貓族、上班族...下樓採買輕鬆滿足！
-</p>
-      </div>
+        <h3 class="title"  data-aos="fade-up" data-aos-delay="0">傳承臻幸福</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">日系美墅 傳承臻品</h4>
+        <p class="desc" data-aos="fade-up" v-if="!isMobile" data-aos-delay="400">以現代日式風格，勾勒出一幅全齡皆可悅的美好生活畫卷，離塵不離城，靜謐如初見，於繁華中保有一方心靈淨土。<br>竹塘難得一見的電梯美墅，為懂生活的您而生，值得臻藏傳承，細細品味，美好歲月，如梯而上。</p>
+       </div>
     </div>
+  </div>
+    
     <div class="slider" data-aos="fade">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -33,73 +29,58 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-
-
 .s9 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex flex-col items-center justify-center;
   width: 100%;
-  height:auto;
+  // height: size(800);
   padding:0 0 7em 0;
   font-size:size(18);
-  gap:3em;
-  flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-      top:size(26);left: 0;
-  font-size:size(120);
-}
-      &:nth-child(2){
-      top: size(147);left: size(110);
-  font-size:size(27);
-}
-      &:nth-child(3){
-      top: size(20);right:size(80);
-  font-size:size(75);}
-    }
-  }
-
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
+  gap:1.5em;
+  flex-wrap:nowrap;
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
+    width: 100%;
 }
 
-
 .txt {
-  .title{
-    &::after,
-    &::before{
-      width: 6.3em;
+  color: #fff;
+.title{
+  text-align: center;
+&::after,
+&::before{
+      content: "";
+      width: 8.7em;
+      margin: auto 1em;
+      height: 1px;
+      background: #fff;
+      display: inline-block;
+      vertical-align: middle;
     }
-  }
+}
+.desc{font-size:size(30);}
 }
 
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(560);
+      height: size(844);
+    width: size(1500);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+      width: 100%;
+    flex-basis: size(1500);
+      height: size(844);
       
     }
-    .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #C9A063;
+    .arrows .prev, .arrows .next{
+      width:3%;
     }
+
+    .splide__pagination{
+      bottom: .5em;
     }
   }
 }
@@ -111,32 +92,33 @@
 
   .s9 {
   @apply flex-col;
-    height: auto;
+    height: sizem(600);
+    justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
-    flex-basis: auto;
 }
 
 .txt {
-  .title{
-    &::after,
-    &::before{
-      width: 0em !important;
-      position: absolute;
-    }
+  margin-top: 3.5em;
+.title{
+&::after,
+&::before{
+width:0em;
+}
+&::before{margin-right: 1em; margin-left: 0;}
+ &::after{margin-left: 1em; margin-right: 0;}
+}
+.desc{
+    font-size: sizem(12);
   }
 }
-
-
   .slider {
     height: auto;
     width: 100%;
@@ -150,8 +132,11 @@
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(210);
       
+    }
+    .arrows .prev, .arrows .next{
+      width:8%;
     }
   }
   }
@@ -161,7 +146,6 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -188,7 +172,27 @@ const options = {
 const imgs = [
   {
     img:new URL("./s9/1.webp", import.meta.url).href ,
-    caption: "樓下即是7-11"
+    caption: "本案外觀3D透視示意圖"
+  },
+  {
+    img:new URL("./s9/2.webp", import.meta.url).href ,
+    caption: "本案外觀3D透視示意圖"
+  },
+  {
+    img:new URL("./s9/3.webp", import.meta.url).href ,
+    caption: "本案外觀3D透視示意圖"
+  },
+  {
+    img:new URL("./s9/4.webp", import.meta.url).href ,
+    caption: "本案外觀3D透視示意圖"
+  },
+  {
+    img:new URL("./s9/5.webp", import.meta.url).href ,
+    caption: "本案外觀3D透視示意圖"
+  },
+  {
+    img:new URL("./s9/6.webp", import.meta.url).href ,
+    caption: "本案外觀3D透視示意圖"
   },
 ]
 </script>

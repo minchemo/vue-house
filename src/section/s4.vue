@@ -6,12 +6,13 @@
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">快速路網  輕鬆暢遊</h3>
+    
   </div>
     <div class="main">
       <div class="txt">
-    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">國道10號、台29線，以及未來的國道7號、高屏2快，加速南北來往跨境生活，打造都市新路網。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">漫翠臻樂活</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">少點熙攘 多點蓊鬱<br>徜徉都市難尋的豐潤綠野</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">僅需4分鐘車程即可到達竹塘風雨球場，在充滿設計感的建築中運動，晴雨無礙地綻放活力。溪州森林公園、牛稠仔公園更是您週末的秘密花園，漫步在蒼翠林間，讓心靈在時間之外悄然栖息。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -73,14 +74,7 @@
 }
 
 
-.txt {
-  .title{
-    &::after,
-    &::before{
-      width: 9.6em;
-    }
-  }
-}
+
 
   .slider {
     margin: 0;
@@ -110,7 +104,8 @@
 
   .s4 {
   @apply flex-col;
-    height: auto;
+    height: sizem(600);
+    justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
@@ -123,6 +118,7 @@
     padding: 0 sizem(32.5);
     width: 100%;
     flex-basis: auto;
+    margin-top: 0em;
 }
 
 .txt {
@@ -186,11 +182,15 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/1.webp", import.meta.url).href ,
-    caption: "國道10號"
+    caption: "竹塘公園風雨球場"
   },
   {
     img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "國道七號及高屏二快預計規畫路線"
+    caption: "溪州森林公園"
+  },
+  {
+    img:new URL("./s4/3.webp", import.meta.url).href ,
+    caption: "牛稠仔公園"
   },
 ]
 </script>

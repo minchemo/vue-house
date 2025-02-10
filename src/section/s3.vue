@@ -6,12 +6,14 @@
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">產業核心 快速通勤</h3>
+    
   </div>
     <div class="main">
       <div class="txt">
-    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">市政特區 × 星鑽特區，水岸雙核心</h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">中科院大樹分院5分鐘，仁武航太產業園區10分鐘，和發產業園區15分鐘，205兵工廠..... ，位處產業核心地位，串聯科技廊道，快速通勤回家更近，坐享人口增值紅利。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">生活臻便捷</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">完備生活機能  慢活幸福醍醐味</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">原來竹塘這麼方便！主婦生鮮超市、全聯、7-11…從日常採買到生活小確幸，車行2分鐘通通搞定！鄰近竹塘圖書館與慈航宮，隨時用文化與信仰豐富身心靈，每週四的早市與夜市，更能感受舌尖美味與濃濃人情味。
+</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -75,14 +77,7 @@
 }
 
 
-.txt {
-  .title{
-    &::after,
-    &::before{
-      width: 9.7em;
-    }
-  }
-}
+
 
   .slider {
     margin: 0;
@@ -112,7 +107,8 @@
 
   .s3 {
   @apply flex-col;
-    height: auto;
+    height: sizem(630);
+    justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
@@ -123,6 +119,7 @@
 
   .main {
     padding: 0 sizem(32.5);
+    margin-top: 0em;
     width: 100%;
     flex-basis: auto;
 }
@@ -188,15 +185,31 @@ const options = {
 const imgs = [
   {
     img:new URL("./s3/1.webp", import.meta.url).href ,
-    caption: "仁武航太園區"
+    caption: "主婦生鮮超市"
   },
   {
     img:new URL("./s3/2.webp", import.meta.url).href ,
-    caption: "中科院大樹院區"
+    caption: "全聯"
   },
   {
     img:new URL("./s3/3.webp", import.meta.url).href ,
-    caption: "205兵工廠拆遷至中科院林園營區、大樹北營區示意圖"
+    caption: "7-ELEVEN"
+  },
+  {
+    img:new URL("./s3/4.webp", import.meta.url).href ,
+    caption: "竹塘圖書館"
+  },
+  {
+    img:new URL("./s3/5.webp", import.meta.url).href ,
+    caption: "慈航宮"
+  },
+  {
+    img:new URL("./s3/6.webp", import.meta.url).href ,
+    caption: "竹塘傳統市場"
+  },
+  {
+    img:new URL("./s3/7.webp", import.meta.url).href ,
+    caption: "夜市"
   },
 ]
 </script>

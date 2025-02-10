@@ -2,7 +2,7 @@
   <article class="s1" id="s1">
    <!--  <img class="t0" src="./s1/pc.jpg" alt="" srcset="">  -->
     <div class="bg"></div>
-    <img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
+    <img src="./s1/logo.webp" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
     <img src="./s1/t1.svg" class="t1" alt="" v-if="!isMobile" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
     <img src="./s1/t1m.svg" class="t1" alt="" v-else data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000"/>
     

@@ -1,12 +1,13 @@
 <template>
-  <article class="s8">
+  <article class="s6">
   <div class="txt">
-    <h3 class="title"  data-aos="fade-up" data-aos-delay="0">建材臻用心</h3>
+    <h3 class="title"  data-aos="fade-up" data-aos-delay="0">師承隈研吾派 林伯諭大師傑作</h3>
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">嚴選建材  精緻生活新風尚</h4>
-        </div>
+    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">地段好的店面，大老闆都搶</h4-->
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">"Less is more" 簡約線條、雋永獨秀，妝點煥新生活風景。建築薈萃風與光，以開闊的視野，融合周邊地景，打造一座美學與機能兼容的風光建築。</p>
+      </div>
     </div>
     <div class="slider" data-aos="fade">
       <div class="arrows">
@@ -26,7 +27,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s8 {
+.s6 {
   @apply relative flex flex-col items-center justify-center;
   width: 100%;
   // height: size(800);
@@ -45,19 +46,12 @@
 .txt {
   color: #fff;
 .title{
-  text-align: center;
 &::after,
 &::before{
-      content: "";
-      width: 8.7em;
-      margin: auto 1em;
-      height: 1px;
-      background: #fff;
-      display: inline-block;
-      vertical-align: middle;
-    }
+background: #fff;
+width: 7.3em;
 }
-}
+}}
 
   .slider {
     margin: 0;
@@ -72,7 +66,6 @@
       
     }
     .arrows .prev, .arrows .next{
-      display: none;
       width:3%;
     }
 
@@ -87,21 +80,19 @@
 
 @media screen and (max-width: 767px) {
 
-  .s8 {
+  .s6 {
   @apply flex-col;
-    height: sizem(600);
+    height: auto;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:0em;
+  gap:2em;
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
-
-
 
 .txt {
 .title{
@@ -109,12 +100,9 @@
 &::before{
 width:0em;
 }
-}
-.title{margin-bottom: sizem(5);}
-.subtitle{margin-bottom: sizem(28);}
-}
+}}
   .slider {
-    height: sizem(503);
+    height: auto;
     width: 100%;
 
     .caption {
@@ -126,7 +114,7 @@ width:0em;
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(503);
+      height: sizem(210);
       
     }
     .arrows .prev, .arrows .next{
@@ -156,18 +144,42 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
-  autoplay: false,
+  pagination: true,
+  autoplay: true,
   interval: 4000,
   gap: 0,
+  type: 'loop'
 }
 
 const imgs = [
   {
-    img: globals.$isMobile() ? new URL("./s8/1m.webp", import.meta.url).href : new URL("./s8/1.webp", import.meta.url).href,
-    caption: ""
+    img:new URL("./s6/1.webp", import.meta.url).href ,
+    caption: "3D立面示意圖"
+  },
+  {
+    img:new URL("./s6/2.webp", import.meta.url).href ,
+    caption: "3D立面示意圖"
   },
 ]
-
+/*
+const imgs = [
+  {
+    img: getImg('s6/1'),
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: getImg('s6/2'),
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: getImg('s6/3'),
+    caption: "林口 長耀初"
+  },
+  {
+    img: getImg('s6/4'),
+    caption: "林口 長耀里"
+  },
+]
+*/
 </script>
 

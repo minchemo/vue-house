@@ -5,13 +5,14 @@
       <span></span>
       <span></span>
     </div>
-  <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">大樹生活圈  滿分宜居</h3>
-  </div>
     <div class="main">
       <div class="txt">
-    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">大樹生活圈核心，機能滿分。採買便利，農會行政中心、超商、傳統市場、夜市，十分鐘內，生活所需就近滿足。</p>
+         <h3 class="title" data-aos="fade-up" data-aos-delay="0">就業臻方便</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">離塵不離城 輕鬆切換城市與靜謐</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+          車程10分鐘-中科二林園區<br>您是掌握未來的科技菁英，站在產業浪潮最前端。
+          <br><br>車程8分鐘-埤頭工業區<br>您是傳承傳統產業，文化延續的力量。
+          <br><br>回家後，您是質感品味生活的收藏家，在家靜享溫潤時光。事業與生活的平衡臻輕鬆</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -38,7 +39,7 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:7em 0 7em 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
@@ -73,14 +74,7 @@
 }
 
 
-.txt {
-  .title{
-    &::after,
-    &::before{
-      width: 9.1em;
-    }
-  }
-}
+
 
   .slider {
     margin: 0;
@@ -110,18 +104,21 @@
 
   .s2 {
   @apply flex-col;
-    height: auto;
+    height: sizem(600);
+    justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  gap:2em;
+  
+  //gap:2em;
   .img{position: absolute;top:sizem(300);left: auto;
     right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
+    margin-top: 3.5em;
     flex-basis: auto;
 }
 
@@ -186,32 +183,21 @@ const options = {
 const imgs = [
   {
     img:new URL("./s2/1.webp", import.meta.url).href ,
-    caption: "大樹生活圈"
+    caption: "中部科學園區管理中心"
   },
   {
     img:new URL("./s2/2.webp", import.meta.url).href ,
-    caption: "大樹公有市場"
+    caption: "武漢機械"
   },
   {
     img:new URL("./s2/3.webp", import.meta.url).href ,
-    caption: "大樹夜市"
+    caption: "矽品精密"
   },
   {
     img:new URL("./s2/4.webp", import.meta.url).href ,
-    caption: "全聯福利中心"
+    caption: "情境示意"
   },
-  {
-    img:new URL("./s2/5.webp", import.meta.url).href ,
-    caption: "舊鐵橋濕地公園"
-  },
-  {
-    img:new URL("./s2/6.webp", import.meta.url).href ,
-    caption: "高雄市立圖書館大樹分館"
-  },
-  {
-    img:new URL("./s2/7.webp", import.meta.url).href ,
-    caption: "大樹郵局"
-  },
+  
 ]
 </script>
 

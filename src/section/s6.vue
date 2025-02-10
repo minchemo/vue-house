@@ -1,12 +1,19 @@
 <template>
-  <article class="s6">
+  <article class="s6" ref="s6">
+    <div class="bg" v-if="!$isMobile()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   <div class="txt">
-    <h3 class="title"  data-aos="fade-up" data-aos-delay="0">師承隈研吾派 林伯諭大師傑作</h3>
+    
   </div>
     <div class="main">
       <div class="txt">
-    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">地段好的店面，大老闆都搶</h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">"Less is more" 簡約線條、雋永獨秀，妝點煥新生活風景。建築薈萃風與光，以開闊的視野，融合周邊地景，打造一座美學與機能兼容的風光建築。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">學區臻卓越</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">菁英學府匯聚 孕育英才一條龍</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">竹塘鄉立幼兒園、竹塘國小、竹塘國中，從幼兒教育到青少年成長，教育資源一應俱全。孩子每天就近上學，大幅減少上下課通勤時間，為寶貝提供無縫銜接的優質教育鏈條。
+</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -27,50 +34,66 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s6 {
-  @apply relative flex flex-col items-center justify-center;
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  // height: size(800);
+  height:auto;
   padding:0 0 7em 0;
   font-size:size(18);
-  gap:1.5em;
-  flex-wrap:nowrap;
+  gap:3em;
+  flex-wrap: wrap;
+  .bg{
+    span{
+      &:nth-child(1){
+      top:size(26);left: 0;
+  font-size:size(120);
+}
+      &:nth-child(2){
+      top: size(147);left: size(110);
+  font-size:size(27);
+}
+      &:nth-child(3){
+      top: size(20);right:size(80);
+  font-size:size(75);}
+    }
+  }
+
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
+    flex-basis: size(590);
   flex-direction: column;
-  text-align: center;
-    width: 100%;
+  text-align: justify;
 }
 
-.txt {
-  color: #fff;
-.title{
-&::after,
-&::before{
-background: #fff;
-width: 7.3em;
-}
-}}
+
+
 
   .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(844);
-    width: size(1500);
+      height: size(560);
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-    flex-basis: size(1500);
-      height: size(844);
+    flex-basis: size(840);
+      height: size(560);
       
     }
-    .arrows .prev, .arrows .next{
-      width:3%;
-    }
-
     .splide__pagination{
-      bottom: .5em;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #C9A063;
+    }
     }
   }
 }
@@ -82,25 +105,32 @@ width: 7.3em;
 
   .s6 {
   @apply flex-col;
-    height: auto;
+    height: sizem(600);
+    justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
+    flex-basis: auto;
 }
 
 .txt {
-.title{
-&::after,
-&::before{
-width:0em;
+  .title{
+    &::after,
+    &::before{
+      width: 2em;
+    }
+  }
 }
-}}
+
+
   .slider {
     height: auto;
     width: 100%;
@@ -114,11 +144,8 @@ width:0em;
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(210);
+      height: sizem(250);
       
-    }
-    .arrows .prev, .arrows .next{
-      width:8%;
     }
   }
   }
@@ -128,6 +155,7 @@ width:0em;
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -154,32 +182,16 @@ const options = {
 const imgs = [
   {
     img:new URL("./s6/1.webp", import.meta.url).href ,
-    caption: "3D立面示意圖"
+    caption: "國道10號"
   },
   {
     img:new URL("./s6/2.webp", import.meta.url).href ,
-    caption: "3D立面示意圖"
+    caption: "竹塘國小"
+  },
+  {
+    img:new URL("./s6/3.webp", import.meta.url).href ,
+    caption: "竹塘國中"
   },
 ]
-/*
-const imgs = [
-  {
-    img: getImg('s6/1'),
-    caption: "內湖 豁達達禮"
-  },
-  {
-    img: getImg('s6/2'),
-    caption: "林口 長耀PARK"
-  },
-  {
-    img: getImg('s6/3'),
-    caption: "林口 長耀初"
-  },
-  {
-    img: getImg('s6/4'),
-    caption: "林口 長耀里"
-  },
-]
-*/
 </script>
 

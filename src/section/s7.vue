@@ -6,13 +6,13 @@
       <span></span>
     </div>
   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">首座飯店式公寓 享受升級</h3>
+    
   </div>
     <div class="main">
       <div class="txt">
-    <!--h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"></h4-->
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">大樹區首座飯店式公寓，尊榮禮遇成家！多元實用公設，智慧管理門廳、室內信箱區、曬被區、宅配室、兒童遊戲區、交誼會議室、環保室、健身房…回家就像在度假。
-</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">鴻儀臻誠意</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">以誠信承載土地溫度  人情築就居家品質</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">鴻儀建設從銷售到設計，從開發到施工，細膩雕琢每一處細節，堅守【誠信為主、質量為優】的理念。用專業回應需求，用情感與土地對話，以【好地方、好緣份、重人情】的精神，將土地的價值轉化為家的溫度。代表作品包括龍潭五福莊園電梯別墅、宜蘭三星馥悅透天別墅、規劃中的台南南紡購物中心旁商圈大樓及台北副都心中央商辦，以專業、誠信與情感，打造理想生活的幸福藍圖。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -42,6 +42,7 @@
   padding:0 0 7em 0;
   font-size:size(18);
   gap:3em;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
@@ -71,6 +72,7 @@
     flex-basis: size(590);
   flex-direction: column;
   text-align: justify;
+
 }
 
 
@@ -78,7 +80,7 @@
   .title{
     &::after,
     &::before{
-      width: 8.1em;
+      width: 8.3em;
     }
   }
 }
@@ -94,11 +96,11 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+     left: calc(100% + 3em);
+      justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
-      color: #C9A063;
+      color: #B78E63;
     }
     }
   }
@@ -111,7 +113,8 @@
 
   .s7 {
   @apply flex-col;
-    height: auto;
+    height: sizem(600);
+    justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
@@ -187,36 +190,21 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/1.webp", import.meta.url).href ,
-    caption: "3D模擬圖"
+    caption: "鴻儀建設"
   },
   {
     img:new URL("./s7/2.webp", import.meta.url).href ,
-    caption: "情境示意圖"
+    caption: ""
   },
   {
     img:new URL("./s7/3.webp", import.meta.url).href ,
-    caption: "情境示意圖"
+    caption: "情境示意"
   },
   {
     img:new URL("./s7/4.webp", import.meta.url).href ,
-    caption: "情境示意圖"
+    caption: "情境示意"
   },
-  {
-    img:new URL("./s7/5.webp", import.meta.url).href ,
-    caption: "情境示意圖"
-  },
-  {
-    img:new URL("./s7/6.webp", import.meta.url).href ,
-    caption: "情境示意圖"
-  },
-  {
-    img:new URL("./s7/7.webp", import.meta.url).href ,
-    caption: "情境示意圖"
-  },
-  {
-    img:new URL("./s7/8.webp", import.meta.url).href ,
-    caption: "情境示意圖"
-  },
+  
 ]
 </script>
 

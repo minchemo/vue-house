@@ -4,7 +4,7 @@
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <div class="logo">
-      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+      <img src="@/section/s1/logo.webp" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #EF8200;}
-.hover\:bg-color2:hover{background-color:#df6400;}
+.bg-color1{background-color: #BB9259;}
+.hover\:bg-color2:hover{background-color:#96703b;}
 
 
 .contact-info-img{
@@ -122,7 +122,7 @@
   .logo {position: relative;
     width: size(320);
    // height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
+    // background-image: url("@/section/s1/logo.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #EF8200;
+      background-color: #BB9259;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -156,7 +156,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #df6400;
+        background-color: #866331;
         color: #fff;
 
         img {
@@ -226,7 +226,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(73%) sepia(83%) saturate(4141%) hue-rotate(1deg) brightness(92%) contrast(108%);
+  img{filter: invert(4%) sepia(94%) saturate(5995%) hue-rotate(34deg) brightness(84%) contrast(114%);
   }
 }
 
@@ -244,7 +244,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background:#EF8200;
+    background:#BB9259;
 
     .contact-item {
       height: 100%;      
