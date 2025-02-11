@@ -14,7 +14,7 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img" :key="img">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
@@ -27,7 +27,7 @@
 @import '@/assets/style/function.scss';
 
 .s8 {
-  @apply relative flex flex-col items-center justify-center;
+  @apply relative flex flex-col items-center justify-center bg-[#300b];
   width: 100%;
   // height: size(800);
   padding:0 0 7em 0;
@@ -89,8 +89,8 @@
 
   .s8 {
   @apply flex-col;
-    height: sizem(600);
-    padding: 0;
+   //height: sizem(600);
+    padding:6em 0 0 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;

@@ -8,15 +8,17 @@
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
-  <!--loading end-->
+  <!-- loading end -->
    <Nav v-if="config.showNav" />
   <div class="home bg-[#340000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    <div class="bgh">
+      <img src="@/section/s1/light2.svg" class="light bg-pc"/>
+      <img src="@/section/s1/light2m.svg" class="light bg-mo"/>
+    </div>
+    <!--
     <img src="@/section/s1/bg.webp" class="bgh bg-pc">
     <img src="@/section/s1/bgm.webp" class="bgh bg-mo">
-    <!--   <div class="bg">
-      <img src="@/section/s1/bg1.png" class="bg1" />
-      <img src="@/section/s1/bg2.png" class="bg2" />
-    </div> -->
+  -->
     <S1 />
     <S2 />
     <S3 />
@@ -30,11 +32,6 @@
   
     <S10 />
     <S11 />
-    <div class="bg">
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-    </div>
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -44,13 +41,18 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
-
+  .bgh{position: fixed;width: 100%;top:0;left: 0;bottom: 0;right: 0;
+  background: url("@/section/s1/bg.webp");
+  background-size: 100% auto;
+  .light{width: 100%;}
+  }
+/*
 @keyframes an1 {
   to {
      transform:scale(1);opacity: 1;
   }
 }
-  .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
+
     span{
       position: absolute;
       display: block;width: 1em;height: 1em;
@@ -65,7 +67,7 @@
   .bgh{
     opacity: .3;
   }
-
+*/
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
@@ -73,11 +75,11 @@
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-
+/*
 .home > .bgh{position: fixed;width: 100%;
   top: 0;left: 0;
 }
-
+*/
 .bg-mo{
   display: none;
 }
@@ -186,11 +188,17 @@ img {
 }
 @media screen and (max-width: 767px) {
   
-
+  .bgh{
+  background-image: url("@/section/s1/bgm.webp");
+  background-size: 100% auto;
+  .light{width: 100%;}
+  }
+/*
 .home > .bgh{width: 100%;
   top: 0;left: 0;
   opacity: .3;
 }
+  */
 .bg-mo{display: block;}
 .bg-pc{display: none;}
   .caption{

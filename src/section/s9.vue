@@ -1,6 +1,7 @@
 <template>
   <article class="s9">
-  <div class="txt">
+    <img src="./s1/img.webp" class="img img1" />
+    <img src="./s1/img.webp" class="img img2" />
     
     <div class="main">
       <div class="txt">
@@ -9,7 +10,6 @@
         <p class="desc" data-aos="fade-up" v-if="!isMobile" data-aos-delay="400">以現代日式風格，勾勒出一幅全齡皆可悅的美好生活畫卷，離塵不離城，靜謐如初見，於繁華中保有一方心靈淨土。<br>竹塘難得一見的電梯美墅，為懂生活的您而生，值得臻藏傳承，細細品味，美好歲月，如梯而上。</p>
        </div>
     </div>
-  </div>
     
     <div class="slider" data-aos="fade">
       <div class="arrows">
@@ -17,7 +17,7 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img" :key="img">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
@@ -30,13 +30,18 @@
 @import '@/assets/style/function.scss';
 
 .s9 {
-  @apply relative flex flex-col items-center justify-center;
+  @apply relative flex flex-col items-center justify-center bg-[#300b];
   width: 100%;
   // height: size(800);
   padding:0 0 7em 0;
   font-size:size(18);
   gap:1.5em;
   flex-wrap:nowrap;
+  .img{position: absolute;
+    animation: an 5s ease-in-out infinite alternate;}
+    .img1{width: size(150);top:size(-50);right: size(60);animation-delay: -5s;}
+    .img2{width: size(90);top:size(700);left: size(90);z-index: 5;}
+
   .main {
     @apply flex;
     margin: 0;
@@ -92,13 +97,15 @@
 
   .s9 {
   @apply flex-col;
-    height: sizem(600);
+  //  height: sizem(600);
     justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
+  .img1{width: sizem(60);top:sizem(0);right: sizem(40);}
+  .img2{width: sizem(25);top:sizem(180);left: sizem(5);}
 
   .main {
     padding: 0 sizem(32.5);

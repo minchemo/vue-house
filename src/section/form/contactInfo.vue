@@ -3,9 +3,8 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo">
-      <img src="@/section/s1/logo.webp" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>
+    <div class="logo" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"><img src="@/section/s1/logo.svg" class="img"></div>
+  
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
@@ -118,7 +117,7 @@
   position: relative;
   z-index: 50;
   // background: #045147;
-
+/*
   .logo {position: relative;
     width: size(320);
    // height: size(172);
@@ -129,7 +128,14 @@
     margin: size(30) auto size(30);
     img{width: 100%;}
     .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
-  }
+  }*/
+    .logo{
+      width:size(320);text-align: center;
+    background:url("@/section/s1/light1.svg") ,url("@/section/s1/logobg.jpg") ;background-size: cover, cover;
+  box-shadow: size(3) size(5) size(15) size(8) #3009;padding: size(66) 0;
+  margin: 4em auto 2.5em;
+.img{width: 65%;}  
+}
 
   .contact-item-box {
     position: relative;
@@ -276,10 +282,12 @@
     justify-content: space-between;
   background-size: sizem(450) auto;
 
-    .logo {
-      width: sizem(257);
-    margin: sizem(40) auto sizem(30) auto;
-     // margin-bottom: sizem(47);
+  .logo{
+    width:sizem(257);
+    box-shadow: sizem(3) sizem(5) sizem(15) sizem(8) #3009;
+    padding: sizem(35) 0;
+    .img{width: 74%;}
+    
     }
 
     .contact-item-box {

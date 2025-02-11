@@ -109,6 +109,7 @@
 .order {
   width: 100%;
   padding-top: 0;
+  background: #300b;
 
   .bird {
     @apply absolute;

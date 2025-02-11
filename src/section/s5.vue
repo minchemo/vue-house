@@ -1,13 +1,7 @@
 <template>
   <article class="s5" ref="s5">
-    <div class="bg" v-if="!$isMobile()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  <div class="txt">
-    
-  </div>
+    <img src="./s1/img.webp" class="img img1" />
+    <img src="./s1/img.webp" class="img img2" v-if="isMobile" />
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">交通臻便利</h3>
@@ -21,7 +15,7 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
+        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img" :key="img">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
@@ -36,36 +30,18 @@
 
 
 .s5 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center text-[#fff] bg-[#300b];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:9em 0 9em 0;
   font-size:size(18);
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
-      top:size(26);left: 0;
-  font-size:size(120);
-}
-      &:nth-child(2){
-      top: size(147);left: size(110);
-  font-size:size(27);
-}
-      &:nth-child(3){
-      top: size(20);right:size(80);
-  font-size:size(75);}
-    }
-  }
+  .img{position: absolute;
+    animation: an 5s ease-in-out infinite alternate;}
+    .img1{width: size(110);top:size(0);right: size(700);animation-delay: -2s;}
 
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
@@ -113,18 +89,18 @@
 
   .s5 {
   @apply flex-col;
-    height: sizem(610);
+    //height: sizem(610);
     justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
+  .img1{width: sizem(60);top:sizem(200);right: sizem(30);}
+  .img2{width: sizem(40);top:sizem(-20);left: sizem(50);}
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: 5em sizem(32.5) 5em sizem(32.5);
     width: 100%;
     flex-basis: auto;
 }
