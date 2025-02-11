@@ -13,6 +13,7 @@
   <div class="home bg-[#340000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <div class="bgh">
       <img src="@/section/s1/light2.svg" class="light bg-pc"/>
+      <img src="@/section/s1/light2.svg" class="light bg-pc"/>
       <img src="@/section/s1/light2m.svg" class="light bg-mo"/>
     </div>
     <!--
