@@ -97,14 +97,14 @@
 
   .s9 {
   @apply flex-col;
-  //  height: sizem(600);
+    height: sizem(600);
     justify-content: space-around;
     padding: 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img1{width: sizem(60);top:sizem(0);right: sizem(40);}
+  .img1{width: sizem(40);top:sizem(0);right: sizem(40);}
   .img2{width: sizem(25);top:sizem(180);left: sizem(5);}
 
   .main {
