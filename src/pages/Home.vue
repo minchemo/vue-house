@@ -15,6 +15,7 @@
       <img src="@/section/s1/light2.svg" class="light bg-pc"/>
       <img src="@/section/s1/light2.svg" class="light bg-pc"/>
       <img src="@/section/s1/light2m.svg" class="light bg-mo"/>
+      <img src="@/section/s1/light2m.svg" class="light bg-mo"/>
     </div>
     <!--
     <img src="@/section/s1/bg.webp" class="bgh bg-pc">
@@ -190,7 +191,7 @@ img {
 @media screen and (max-width: 767px) {
   
   .bgh{
-  background-image: url("@/section/s1/bgm.webp");
+  background-image: url("@/section/s1/bgm.jpg");
   background-size: 100% auto;
   .light{width: 100%;}
   }

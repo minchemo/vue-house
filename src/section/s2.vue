@@ -11,7 +11,7 @@
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
           車程10分鐘-中科二林園區<br>您是掌握未來的科技菁英，站在產業浪潮最前端。
           <br><br>車程8分鐘-埤頭工業區<br>您是傳承傳統產業，文化延續的力量。
-          <br><br>回家後，您是質感品味生活的收藏家，在家靜享溫潤時光。事業與生活的平衡臻輕鬆</p>
+          <br><br>回家後，您是質感品味生活的收藏家，在家靜享溫潤時光。<br>事業與生活的平衡臻輕鬆</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -93,14 +93,14 @@
 
   .s2 {
   @apply flex-col;
-    height: sizem(600);
+   // height: sizem(600);
     justify-content: space-around;
     padding:3em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
-  .img1{width: sizem(60);top:sizem(0);left: sizem(40);}
-  .img2{width: sizem(40);top:sizem(150);right: sizem(20);}
+  .img1{width: sizem(40);top:sizem(5);left: sizem(40);z-index: 5;}
+  .img2{width: sizem(60);top:sizem(150);right: sizem(15);}
   
   .main {
     padding: 0 sizem(32.5);
