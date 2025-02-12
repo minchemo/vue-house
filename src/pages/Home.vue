@@ -191,7 +191,7 @@ img {
 @media screen and (max-width: 767px) {
   
   .bgh{
-  background-image: url("@/section/s1/bgm.jpg");
+  background-image: url("@/section/s1/bgm.webp");
   background-size: 100% auto;
   .light{width: 100%;}
   }
