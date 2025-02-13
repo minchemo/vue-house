@@ -124,6 +124,7 @@ width:0em;
 }
 .desc{
     font-size: sizem(12);
+    text-align: left;
   }
 }
   .slider {
