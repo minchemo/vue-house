@@ -12,7 +12,7 @@
      <!--  -->
      <Nav />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-     <div class="bg">
+    <img src="@/section/s1/bg.svg" class="bg">
       <S1 />
     <!--  <S2 />-->
       <S3 />
@@ -22,7 +22,6 @@
      <!-- <S7 /> -->
       <S8 />
     <Order />
-    </div>
   <!--
     <S1new />
     <S1new2 /> -->
@@ -40,7 +39,11 @@
 	transform: translate(0)
   }
 }
-
+.home{
+  background: url("@/section/s1/bg.webp") fixed;
+  background-size: 100% auto;
+}
+.bg{position: fixed;top: 0;left: 0;width: 100%;height: 100vh;bottom: 0;right: 0;}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
 }
@@ -48,8 +51,6 @@
   opacity: 0;
 }
 
-.bg{background: linear-gradient(90deg, #17A9AF 0%, #007CBB 87%);
-}
 img {
   display: inline;
   max-width: unset;

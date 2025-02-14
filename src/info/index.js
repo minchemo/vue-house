@@ -39,27 +39,42 @@ export default {
     budget: ["700-1000萬"],
 
     navList: [{
-        name: "微笑雲朵",
+ /*       name: "微笑雲朵",
         target: ".s1",
         offset: "0",
         offsetmo: "0",
+    },{*/
+        name: "三民核心",
+        target: ".s2",
+        offset: "-60",
+        offsetmo: "0",
     },{
-        name: "6大看點",
+        name: "耀眼港都",
         target: ".s3",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "豪宅地段",
+        name: "快捷交通",
         target: ".s4",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "建築美學",
+        name: "繁華環伺",
+        target: ".s5",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "書香圍繞",
+        target: ".s6",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "愜意休憩",
         target: ".s7",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "麗寶集團",
+        name: "城揚品牌",
         target: ".s8",
         offset: "-60",
         offsetmo: "0",
