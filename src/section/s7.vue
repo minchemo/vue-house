@@ -1,22 +1,14 @@
 <template>
-  <article class="s7">
-    <div class="oo1 absolute" v-if="isMobile"></div>
-    <div class="bubble1 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="100" v-if="isMobile" >
-      <img src="./s1/bubble1.png" alt="bubble">
-    </div>
-    <div class="bubble2 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="100" v-else >
-      <img src="./s1/bubble5.png" alt="bubble">
-    </div>
+  <article class="s7" ref="s7">
+		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-        <h4 class="subtitle font-[caveat]" data-aos="fade-up" data-aos-delay="0">Design Aesthetics</h4>
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">建築大師出列<br v-if="isMobile"> 小資氣派當家</h3>
-        <img src="./s5/hr.png" class="hr" data-aos="fade-up" data-aos-delay="400" />
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">房子不大，空間也可以很奢華!微笑雲朵禮聘世界大獎團隊打造包浩斯美學當代建築。氣派門廳、私家交誼廳、空中Lounge、健身房等公設，及嚴選日本、荷蘭與瑞典等經典品牌打造星級飯店家居，誠摯獻給有品味的主人。</p>
-      </div>
+          <h3 class="title" data-aos="fade-up" data-aos-delay="200">悠閒綠意圍繞<br>愜意散策時光</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">科工館、愛河之心、本和里滯洪池公園、金獅湖…等，無論哪個方向，都有能夠放鬆休閒的去處，綠意、湖景、河畔、運動、展覽，隨您自在悠遊，漫步大自然與人文之中！</p>
+    </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows">
+      <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -27,63 +19,58 @@
         </SplideSlide>
       </Splide>
     </div>
+
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s7 {
-  @apply relative flex flex-col items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  // height: size(800);
-  padding:8em 0 5em 0;
+  height:auto;
+  padding:11em 0 10em 0;
   font-size:size(20);
-  gap:1.5em;
-  flex-wrap:nowrap;
-    flex-direction:column-reverse;
-    background: linear-gradient(303deg, rgba(170, 209, 184, 0.83) 0%, rgba(129, 192, 188, 0.61) 37.97%, rgba(17, 143, 199, 0.00) 97.36%);
-    background-blend-mode: lighten;
-.bubble2{right: size(10);width:size(700);
-  top: size(450);
-  img{width: 100%;}
-}
+  gap:3em;
+  flex-wrap: wrap;
+  flex-direction:row-reverse;
+  .oo{position: absolute;top: calc(50% - #{size(550)});left: calc(50% - #{size(190)});width: size(1100);
+ }
+
   .main {
     @apply flex;
     margin: 0;
-  flex-direction: column;
-  text-align: center;
-    width: 100%;
+    flex-basis: size(590);
+    flex-direction: column;
+    text-align: justify;
+  }
+.txt{
+ // margin: auto auto 3vw auto;
+ padding: 0 6vw 0 0;
+  .subtitle{font-weight: 400;}
+  a{text-decoration:underline;margin: 0 1em 0 0;display: inline-block;
+  &::after{content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17' fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M12,10v3.5c0,1.4-1.1,2.5-2.5,2.5H3.5c-1.4,0-2.5-1.1-2.5-2.5v-6c0-1.4,1.1-2.5,2.5-2.5h3.5M16,8V1h-7M5,12L16,1'/%3E%3C/svg%3E");display: inline-block;width: .8em;margin:0 0 0 .2em;position: relative;top: .1em;}
+  &:hover{text-decoration:none;}
+  }
 }
 
-.txt {
-  margin: auto;
-  width: size(1500);
-  text-align:center;
-  .subtitle{font-weight: 400;}
-}
 
   .slider {
-    margin: 0;border-radius: 1em;overflow: hidden;
+    margin: 0;
     flex-basis: size(840);
-      height: size(844);
-    width: size(1500);
+      height: size(560);
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-    flex-basis: size(1500);
-      height: size(844);
+    flex-basis: size(840);
+      height: size(560);
       
     }
-    .arrows{
-    .prev,
-    .next{
-      width:3%;}
-    }
-
     .splide__pagination{
-      justify-content: flex-end;
-      bottom: -2em;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     }
   }
 }
@@ -93,65 +80,54 @@
 
 @media screen and (max-width: 767px) {
 
-  .s7 {
-  @apply flex-col;
-    height: auto;
-    padding: 0;
-  font-size:sizem(15);
-  flex-wrap:nowrap;
+
+.s7 {
+@apply flex-col-reverse;
+  height: auto;
+  padding: 0;
+font-size:sizem(15);
+flex-wrap:nowrap;
+margin-bottom:0em;
 gap:0em;
-  .oo1{right: sizem(-280);
-    bottom:auto;top:sizem(-330);
-    width:sizem(600);
-    background: radial-gradient(ellipse at center,#F8D8A9 0%, #aad1b8dd 15%,#aad1b8aa 20%, #118fc700 60%);
-    &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}  
-  }
-.bubble1{right: sizem(-50);width:sizem(150);
-  bottom:auto;top:sizem(30);
-  img{width: 100%;
-    animation: bubble 4s -2s ease-in-out alternate infinite;
-    transform:translateY(-10%);
-  }
-}
-@keyframes bubble {
-  to {
-	transform:translate(0);
-  }
+
+.oo{bottom: sizem(-50);top: auto;
+left: calc(50% - #{sizem(330)});
+width: sizem(660);transform: rotate(90deg);
+ }
+.main {
+  padding: 0 sizem(32.5);
+  width: 100%;
 }
 
-  .main {
-    padding: 0 0;
+.txt {margin: 2em auto 6em;padding: 0;
+}
+
+
+.slider {
+  height: auto;
+  width: 100%;
+
+  .caption {
+  font-size:sizem(12);  
+  right:sizem(5);
+  bottom:sizem(5);
+  }
+  .slide-item {
+    @apply bg-cover;
     width: 100%;
-}
-.txt {margin: 3em auto 2em;text-align: justify;padding: 0;width:sizem(310);
-}
-
-  .slider {
-    height: auto;
-    width: 100%;border-radius: 0;
-    flex-basis:sizem(250);
-
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
-    }
+  flex-basis: auto;
+    height: sizem(250);
+    
   }
-  }
+}
+}
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -168,7 +144,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
+  pagination: true,
   autoplay: true,
   interval: 4000,
   gap: 0,
@@ -178,7 +154,23 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/1.jpg", import.meta.url).href ,
-    caption: "現場實景經電腦修飾"
+    caption: "高雄科工館"
+  },
+  {
+    img:new URL("./s7/2.jpg", import.meta.url).href ,
+    caption: "愛河之心"
+  },
+  {
+    img:new URL("./s7/3.jpg", import.meta.url).href ,
+    caption: "同盟公園"
+  },
+  {
+    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    caption: "河堤公園"
+  },
+  {
+    img:new URL("./s7/5.jpg", import.meta.url).href ,
+    caption: "金獅湖"
   },
 ]
 </script>

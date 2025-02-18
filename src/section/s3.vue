@@ -1,12 +1,29 @@
 <template>
   <article class="s3" ref="s3">
+		<img src="./s1/oo.svg" class="oo">
+    <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">斗六青年站出來<br v-if="isMobile"> 成家跟我這樣買</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"><svg viewBox="0 0 30 50" fill="#007DB9" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.8,27.4l-0.3-0.6c7.4-7.5,16.9-6.5,20.1-0.4C32.7,34.2,28,49,13.5,49C-10.5,49,0,2.5,26.6,0l0.2,0.5	C5.7,3.5-2.1,47,13.4,47c11.5,0,13.1-13.7,10.3-19.3C21.1,22.6,13.4,22.6,8.8,27.4z"/>
-</svg>
-大看點報哩哉 輕鬆成家真的溜</h4>
+          <h3 class="title" data-aos="fade-up" data-aos-delay="200">城市全新樣貌<br>
+            未來耀眼綻放</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">完工的高雄車站，象徵著一個新時代的到來！預計2027年完工的富邦BOT，帶來全新的時尚氛圍，而預計2034年全線通車的捷運黃線，將串聯起更緊密的路網。選擇三民正核心，座落極具潛力的軌道地段，擁抱高雄最具指標的發展計畫，將耀眼未來納入生活版圖！
+<br>
+圖片來源：<a href="https://finance.kcg.gov.tw/News_Content.aspx?n=6976FD3842A19BA6&sms=11E45B2CB786190D&s=4A669AC34F9FA1EB" target="_blank">高雄市政府財政局</a><br>
+新聞來源：<a href="https://news.ltn.com.tw/news/life/breakingnews/4871687" target="_blank">連結</a><a href="https://news.ltn.com.tw/news/life/breakingnews/4700400" target="_blank">連結</a></p>
     </div>
+    </div>
+    <div class="slider" data-aos="fade">
+      <div class="arrows" v-if="isMobile">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
+      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
+          <img :src="img.img" :alt="img.caption">
+      <span class="caption">{{ img.caption }}</span>
+        </SplideSlide>
+      </Splide>
+    </div>
+
   </article>
 </template>
 
@@ -16,34 +33,98 @@
 
 
 .s3 {
-  @apply relative flex  justify-center text-[#007DB9];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  height:sizem(863);
-  padding:3.2em 0 0 0;
-  font-size:sizem(16);
-  background: url("./s3/bgm.jpg") center;
-  background-size: cover;
+  height:auto;
+  padding:11em 0 10em 0;
+  font-size:size(20);
+  gap:3em;
+  flex-wrap: wrap;
+  flex-direction:row-reverse;
+  .oo{position: absolute;top: calc(50% - #{size(550)});left: calc(50% - #{size(190)});width: size(1100);
+ }
 
-  @media screen and (min-width: 768px) {
-  height:size(1080);
-  padding:3.1em 0 0 0;
-    background-image: url("./s3/bg.jpg");
-    font-size:size(20);
+  .main {
+    @apply flex;
+    margin: 0;
+    flex-basis: size(590);
+    flex-direction: column;
+    text-align: justify;
   }
+.txt{
+ // margin: auto auto 3vw auto;
+ padding: 0 6vw 0 0;
+  .subtitle{font-weight: 400;}
+  a{text-decoration:underline;margin: 0 1em 0 0;display: inline-block;
+  &::after{content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17' fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M12,10v3.5c0,1.4-1.1,2.5-2.5,2.5H3.5c-1.4,0-2.5-1.1-2.5-2.5v-6c0-1.4,1.1-2.5,2.5-2.5h3.5M16,8V1h-7M5,12L16,1'/%3E%3C/svg%3E");display: inline-block;width: .8em;margin:0 0 0 .2em;position: relative;top: .1em;}
+  &:hover{text-decoration:none;}
+  }
+}
 
-  .txt {text-align: center;
-    .title{margin-bottom: .1em;}
-    .subtitle{font-size: 1em;
-      font-weight: 500;
-      svg{height: 2em;display: inline-block;vertical-align: bottom;
-      }
+
+  .slider {
+    margin: 0;
+    flex-basis: size(840);
+      height: size(560);
+    .slide-item {
+      @apply bg-cover;
+    flex-basis: size(840);
+      height: size(560);
       
-  @media screen and (min-width: 768px) {
-    font-size: 1.25em;
-  }
+    }
+    .splide__pagination{
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     }
   }
+}
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
+@media screen and (max-width: 767px) {
+
+
+.s3 {
+@apply flex-col-reverse;
+  height: auto;
+  padding: 0;
+font-size:sizem(15);
+flex-wrap:nowrap;
+margin-bottom:0em;
+gap:0em;
+
+.oo{bottom: sizem(-50);top: auto;
+left: calc(50% - #{sizem(330)});
+width: sizem(660);transform: rotate(90deg);
+ }
+.main {
+  padding: 0 sizem(32.5);
+  width: 100%;
+}
+
+.txt {margin: 2em auto 6em;padding: 0;
+}
+
+
+.slider {
+  height: auto;
+  width: 100%;
+
+  .caption {
+  font-size:sizem(12);  
+  right:sizem(5);
+  bottom:sizem(5);
+  }
+  .slide-item {
+    @apply bg-cover;
+    width: 100%;
+  flex-basis: auto;
+    height: sizem(250);
+    
+  }
+}
+}
 }
 </style>
 <script setup>
@@ -76,16 +157,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.webp", import.meta.url).href ,
-    caption: "重陽橋"
+    img:new URL("./s3/1.jpg", import.meta.url).href ,
+    caption: "捷運情境示意"
   },
   {
-    img:new URL("./s3/2.webp", import.meta.url).href ,
-    caption: "北環段捷運情境示意圖"
+    img:new URL("./s3/2.jpg", import.meta.url).href ,
+    caption: "富邦BOT 3D圖"
   },
   {
-    img:new URL("./s3/3.webp", import.meta.url).href ,
-    caption: "新蘆線捷運徐匯中學站"
+    img:new URL("./s3/3.jpg", import.meta.url).href ,
+    caption: "高雄車站 3D圖"
   },
 ]
 </script>

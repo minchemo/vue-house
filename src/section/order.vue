@@ -2,7 +2,7 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-title text-center font-['Noto_serif_TC',serif]">{{ info.order.title }}</div>
       <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
       <!-- <div class="cus-divider"></div> -->
 
@@ -70,7 +70,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '確認送出' }}
+        {{ sending? '發送中..': '即刻預約' }}
       </div>
 
       <!-- Contact Info -->
@@ -148,7 +148,7 @@
   .order-title {
     font-size: size(45);
     font-weight: 700;
-    color: #fff;
+    color: #EDC244;
     padding-top:1.5em;
   }
 
@@ -229,11 +229,11 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #FFF;
-    background:#0466CA;
+    color: #000;
+    background:#EDC244;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: .5em;
+    border-radius: 2em;
 
     width: 308px;
     height:3.3em;
@@ -292,15 +292,16 @@
 
     .order-title {
       font-size: sizem(31);
-      text-align: justify;
+      //text-align: justify;
       width: sizem(310);
       margin: auto;
       padding-top: .5em;
       // padding-top:4.5em;
     }
     .order-subTitle{
-      font-size: sizem(13);
+      font-size: sizem(12);
       padding-top:0;
+      font-weight: 400;
     }
 
 

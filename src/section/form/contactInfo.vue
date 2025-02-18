@@ -4,29 +4,6 @@
     <img src="@/section/s1/lineicon.png" class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]" /> 
     </a>
   <div class="contact-info-img">
-    <div class="oo1"></div>
-    <div class="oo2"></div>
-    <div class="bubble1 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="@/section/s1/bubble4.png" alt="bubble">
-    </div>
-    <div class="bubble2 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="@/section/s1/bubble4.png" alt="bubble">
-    </div>
-    <div class="bubble3 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="@/section/s1/bubble3.png" alt="bubble">
-    </div>
-    <div class="bubble4 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="@/section/s1/bubble5.png" alt="bubble">
-    </div>
-    <div class="bubble5 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="@/section/s1/bubble5.png" alt="bubble">
-    </div>
-    <div class="bubble6 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="@/section/s1/bubble1.png" alt="bubble">
-    </div>
-    <div class="bubble7 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="@/section/s1/bubble1.png" alt="bubble">
-    </div>
 
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
@@ -170,49 +147,6 @@
   pointer-events: none;
   //top: -1.5vw;
   img{width: 100%;}
-@keyframes bubble1 {
-  to {
-	transform:rotate(20deg);
-  }
-}
-@keyframes bubble2 {
-  to {
-	transform:rotate(0deg);
-  }
-}  
-  .oo1{position: absolute;
-    pointer-events: none;
-    background: radial-gradient(ellipse at center, #F8D8A9 12%,  #B9CFB7 20%, #9ACBBF 25%,#82C8C5 32%, #5db5c5ad 43.4%,#269ac630 62%, #118fc700 70%);
-    right: size(-1200);top:size(-550);width:size(2300);
-    &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}
-  }
-  .oo2{position: absolute;
-    pointer-events: none;
-    background: radial-gradient(ellipse at center, #F8D8A9 12%,  #B9CFB7 20%, #9ACBBF 25%,#82C8C5 32%, #5db5c5ad 43.4%,#269ac630 62%, #118fc700 70%);
-    right: size(-94);top:size(-280);width:size(2300);
-    &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}
-  }
-.bubble1{left:size(-840);top:size(120);width:size(1200);
-  img{transform: rotate(24deg)translateX(-5%);
-  animation: bubble1 4s -2s ease-in-out alternate infinite;}
-}
-.bubble2{right:size(-500);top:size(90);width:size(1376);
-  img{transform: rotate(-5deg)translateX(-5%);
-  animation: bubble2 10s ease-in-out alternate infinite;}
-}
-.bubble3{left:size(190);top:size(280);width:size(1350);
-  img{transform: rotate(-5deg)translateX(-5%);
-  animation: bubble2 10s  ease-in-out alternate infinite;}}
-.bubble4{left:size(250);top:size(330);width:size(619);}
-.bubble5{right:size(-270);top:size(260);width:size(559);}
-.bubble6{left:size(125);top:size(40);width:size(319);
-  img{transform: translateY(10%);
-  animation: bubble2 5s ease-in-out alternate infinite;}
-}
-.bubble7{right:size(-50);top:size(420);width:size(257);
-  img{transform: translateY(-10%);
-  animation: bubble2 5s -2s ease-in-out alternate infinite;}
-}
 }
 .contact-info {
   padding: size(105) size(0) size(55) size(0);
@@ -240,13 +174,13 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#F6878C;
-      color: #FFF;
+      background:#EDC244;
+      color: #000;
       width: 100%;
     font-weight: 700;
       flex: 1;
       padding: 1.1em 0;
-    border-radius: .5em;
+    border-radius: 0em;
       font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -258,7 +192,7 @@
       gap: 1em;
 
       &:hover {
-      background:#d8676d;
+      background:#ca8c30;
         color: #fff;
 
         img {
@@ -270,7 +204,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
         transition: all .5s;
         margin: 0;
       }
@@ -283,7 +217,7 @@
         flex:2.17;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
-    border-radius: .5em 0 0 .5em;
+    border-radius: 0;
         justify-content: center;
 
         &::before {
@@ -308,11 +242,12 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-    border-radius: 0 .5em .5em 0;
-        color: #FFF;
+    border-radius: 0;
+    /*
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
 
         &:hover {
@@ -322,6 +257,7 @@
             filter: brightness(0) invert(1);
           }
         }
+          */
       }
     }
 
@@ -432,7 +368,6 @@
 
         &.address {
           font-size: sizem(15);
-    border-radius: .5em .5em 0 0;
           padding: 1.1em 0;
           margin: sizem(20) 0px 0px 0px;
           //font-size: .9em;
@@ -448,7 +383,6 @@
         &.address+div {
         }
       &.googlemap {
-    border-radius: 0 0 .5em .5em;
       }
       }
 

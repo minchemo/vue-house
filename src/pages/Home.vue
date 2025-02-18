@@ -14,13 +14,14 @@
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <img src="@/section/s1/bg.svg" class="bg">
       <S1 />
-    <!--  <S2 />-->
+      <S2 />
       <S3 />
       <S4 />
       <S5 />
       <S6 />
-     <!-- <S7 /> -->
+      <S7 />
       <S8 />
+      <S9 />
     <Order />
   <!--
     <S1new />
@@ -41,6 +42,7 @@
 }
 .home{
   background: url("@/section/s1/bg.webp") fixed;
+ // background: #333;
   background-size: 100% auto;
 }
 .bg{position: fixed;top: 0;left: 0;width: 100%;height: 100vh;bottom: 0;right: 0;}
@@ -72,15 +74,16 @@ img {
     position: relative;
     font-weight: 300;
     letter-spacing: 0;
-    line-height: 1.7;
+    line-height: 1.5;
     width: 100%;letter-spacing: 0.03em;
     text-align:justify;
   .title{
-   // @apply font-['Noto_serif_TC',serif];
-    font-size: 2.6em;
-    margin:0 auto 0em;
+    @apply font-['Noto_serif_TC',serif];
+    font-size: 2.2em;
+    margin:0 auto .5em;
     line-height: 1.5;
     font-weight: 700;
+    color: #EDC244;
   }
   .subtitle{
     font-size: 1.15em;
@@ -98,7 +101,7 @@ img {
   @apply relative;
   z-index: 2;
   .slide-item{
-  img{width: 100%;height: 100%;border-radius: 1em;object-fit: cover}
+  img{width: 100%;height: 100%;object-fit: cover}
   
   }
   .arrows{
@@ -138,14 +141,14 @@ img {
         @apply rounded-full;
         width: 1em;
         height: 1em;
-          background:currentColor;
-      transition: transform .5s;
-      &:hover{
-          transform: scale(.8);}
-
+        background:currentColor;
+        transition: background .5s, transform .5s;
+        &:hover{
+          transform: scale(.8);
+        }
         &.is-active{
-          transform: scale(1.5);
-      }
+          background:#EDC244;
+        }
       }
     }
   }
@@ -202,13 +205,14 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-// import S2 from "@/section/s2.vue"
+import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
-// import S7 from "@/section/s7.vue"
+import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
+import S9 from "@/section/s9.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

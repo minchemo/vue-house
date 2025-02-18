@@ -1,25 +1,14 @@
 <template>
   <article class="s8" ref="s8">
-    <div class="oo1 absolute"></div>
-    <div class="bubble1 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="./s1/bubble1.png" alt="bubble" v-if="!isMobile">
-      <img src="./s1/bubble5.png" alt="bubble" v-else>
-    </div>
-    <div class="bubble2 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
-      <img src="./s1/bubble2.png" alt="bubble">
-    </div>
+		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-[caveat]" data-aos="fade-up" data-aos-delay="0">HAPPINESS LIHPAO</h4>
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">麗寶集團 <span>鵬程建設 x 麗寶百貨</span></h3>
-        <img src="./s5/hr.png" class="hr" data-aos="fade-up" data-aos-delay="400" />
-    <p class="desc" data-aos="fade-up" data-aos-delay="600">大公司蓋的房子住的最安心。麗寶集團全台企業版圖橫跨連鎖飯店、樂園百貨、不動產等，旗下鵬程建設30年以上深厚建築經驗與穩健售後服務，讓家住的安心有保障。</p>
-    <img src="./s8/img.png" class="img" data-aos="fade-up" data-aos-delay="800" />
-
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">建築領航者<br>新世代指標</h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="600">城揚建設集團『高雄名宅˙建築首席』，創立於民國83年，陪伴這片土地走過30年的歲月，穩健前行的企業步伐，始終致力於土地和建築，為新世代家庭打造一座座的理想家園！</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows">
+      <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
@@ -43,66 +32,39 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:9em 0 5em 0;
+  padding:11em 0 10em 0;
   font-size:size(20);
   gap:3em;
   flex-wrap: wrap;
-  flex-direction:row-reverse;
-  
-  .oo1{right: size(-750);
-    bottom:size(-200);
-    width:size(1300);
-    background: radial-gradient(ellipse at center,#F8D8A9 0%, #aad1b8dd 15%,#aad1b8aa 20%, #118fc700 60%);
-    &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}  
-  }
-.bubble1{right: size(-90);width:size(270);
-  top: size(320);
-  img{width: 100%;
-    animation: bubble 4s ease-in-out alternate infinite;
-    transform:translate(0,10%);}
-}
-.bubble2{left: size(-70);width:size(190);
-  bottom: size(-100);
-  img{width: 100%;
-    animation: bubble 4s ease-in-out alternate infinite;
-    transform:translate(0,10%);}
-}
+  .oo{position: absolute;top: calc(50% - #{size(550)});right: calc(50% - #{size(190)});width: size(1100);
+  transform: scaleX(-1);}
 
   .main {
     @apply flex;
     margin: 0;
     flex-basis: size(590);
-    flex-direction: column;
-    text-align: justify;
-  }
+  flex-direction: column;
+  text-align: justify;
+}
 .txt{
  // margin: auto auto 3vw auto;
- padding: 0 6vw 0 0;
- .title{
-
-  span{font-size: .5em;font-weight: 500;}
- }
- .subtitle{font-weight: 400;}
-}
-.img{
-  margin: 2em auto 0 auto;display: block;
-  width:size(452);
-  filter:drop-shadow(size(20) size(20) size(30) rgba(0, 0, 0, 0.30));
+ padding: 0 0 0 6vw;
+  .subtitle{font-weight: 400;}
 }
 
-  .slider {border-radius: 1em;overflow: hidden;
+  .slider {
     margin: 0;
     flex-basis: size(840);
-      height: size(580);
+      height: size(840);
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
-      height: size(580);
+      height: size(840);
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     }
   }
 }
@@ -112,67 +74,46 @@
 
 @media screen and (max-width: 767px) {
 
+  .s8 {
+    @apply flex-col-reverse;
+    height: auto;
+    padding: 0;
+  font-size:sizem(15);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:0em;
+  .oo{bottom: sizem(-50);top: auto;
+left: calc(50% - #{sizem(330)});
+width: sizem(660);transform: rotate(90deg);
+ }
 
-.s8 {
-@apply flex-col;
-  height: auto;
-  padding: 0;
-font-size:sizem(15);
-flex-wrap:nowrap;
-margin-bottom:0em;
-gap:0em;
-
-
-.oo1{right: sizem(130);
-    bottom:sizem(-30);
-    width:sizem(625);
-  }
-.bubble1{right: sizem(-30);width:sizem(218);
-  top: sizem(-140);
-  img{
-    animation:none;
-    transform:translate(0);}
-}
-.bubble2{left: sizem(-17);width:sizem(47);
-  bottom: auto;top: sizem(385);
-}
-
-
-
-
-
-.main {
-  padding: 0 sizem(32.5);
-  width: 100%;
-}
-
-.txt {margin: 3em auto 2em;padding: 0;
-}
-
-.img{
-  width:sizem(273);
-  filter:drop-shadow(sizem(10) sizem(10) sizem(12) rgba(0, 0, 0, 0.40));
-}
-
-.slider {
-  height: auto;border-radius: 0;
-  width: 100%;
-  flex-basis:sizem(250);
-
-  .caption {
-  font-size:sizem(12);  
-  right:sizem(5);
-  bottom:sizem(5);
-  }
-  .slide-item {
-    @apply bg-cover;
+  .main {
+    padding: 0 sizem(32.5);
     width: 100%;
-  flex-basis: auto;
-    height: sizem(250);
-    
+}
+
+.txt {margin: 2em auto 6em;padding: 0;
+}
+
+
+  .slider {
+    height: auto;
+    width: 100%;
+
+    .caption {
+    font-size:sizem(12);  
+    right:sizem(5);
+    bottom:sizem(5);
+    }
+    .slide-item {
+      @apply bg-cover;
+      width: 100%;
+    flex-basis: auto;
+      height: sizem(375);
+      
+    }
   }
-}
-}
+  }
 }
 </style>
 <script setup>
@@ -196,7 +137,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
+  pagination: true,
   autoplay: true,
   interval: 4000,
   gap: 0,
@@ -206,23 +147,23 @@ const options = {
 const imgs = [
   {
     img:new URL("./s8/1.jpg", import.meta.url).href ,
-    caption: "麗寶 Outlet Mall"
+    caption: "城揚建設"
   },
   {
     img:new URL("./s8/2.jpg", import.meta.url).href ,
-    caption: "淡水福容大飯店"
+    caption: "2020御廳苑"
   },
   {
     img:new URL("./s8/3.jpg", import.meta.url).href ,
-    caption: "微笑莊園"
+    caption: "2023珈柏麗"
   },
   {
     img:new URL("./s8/4.jpg", import.meta.url).href ,
-    caption: "鵬程V1"
+    caption: "2023美廳苑"
   },
   {
     img:new URL("./s8/5.jpg", import.meta.url).href ,
-    caption: "鵬程NEW1"
+    caption: "2024惟美術"
   },
 ]
 </script>

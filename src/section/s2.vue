@@ -1,35 +1,57 @@
 <template>
-  <section class="s2 w-full relative" ref="s2">
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/hlWiI4xVXKY?autoplay=1&mute=1&loop=1&playlist=hlWiI4xVXKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </section>
+  <article class="s2">
+   <!-- 
+    <div class="caption">基地空拍實景經後製修飾</div>  --> 
+    <Fullview />
+  </article>
 </template>
 
-<style lang="scss">
-@import "@/assets/style/function.scss";
+<style lang="scss" scoped>
+@import '@/assets/style/function.scss';
 
 .s2 {
-  .video-container {
-    width: 100%;
-    height: 0;
-    padding-top: 56.25%;
-    position: relative;
-    @media screen and (max-width: 767px) {
-      
-    padding-top:74%;
-    }
+  @apply relative overflow-hidden bg-[#005890] text-[#fff];
+  width: 100%;
+ // height: size(1059);
+  font-size:size(20);
+  .txt {text-align: center;position: relative;
+  padding-top:1.8em;z-index: 10;margin-bottom:-6.3em ;
+  
+  .subtitle{font-size: 1.25em;margin-top: .4em;
+      font-weight: 500;}
+  }
+  .viewbox{z-index: 2;
+/*    margin: 0 0 -5vw 0;
+    top: -5vw; */
+  }
+}
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+@media screen and (max-width: 767px) {
+
+  .s2 {
+   // height: sizem(550);
+  font-size:sizem(15);
+
+  .txt {//text-align: justify;
+  padding-top:3.5em;width:sizem(310);margin:auto auto -4.3em auto;
+  .subtitle{font-size: 1em;
+      font-weight: 400;}
+  }
+  .viewbox{height: sizem(550);
+    margin: 0;
+    top:0;}
+
+
   }
 }
 </style>
-
 <script setup>
+import { computed, getCurrentInstance, ref } from 'vue';
+import Fullview from '../components/fullview.vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
 </script>
