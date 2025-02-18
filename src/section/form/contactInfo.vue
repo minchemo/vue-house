@@ -1,187 +1,130 @@
 <template>
-  <div class="contact-info mx-auto bg-[transparent] flex flex-col items-center justify-between">
-
-    <!-- <div class="logo" data-aos="zoom-in"></div> -->
+<div>
+  <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-        <img src="//h65.tw/img/form/phone.svg" alt="電話" srcset="" />
+        <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
-        <img src="//h65.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
+        <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink">
       <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
-        <img src="//h65.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
+        <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
-        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
+        <div><span v-if="info.address1">{{ info.address1 }}：<br v-if="$isMobile()"></span>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="//h65.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
 
   </div>
-  
-  <div class="gmap relative z-10" v-if="info.address"
-        @click="modalOpen = true; modalType = 'gmap'">
-       <img src="@/section/form/map.webp" alt="map" srcset="" />
-  </div>
-
+</div>
 
   <!-- Mobile contact info -->
-  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="phone" srcset="" />
+    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+      @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+      <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="messenger" srcset="" />
+      @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
+      <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.form')">
-      <img src="@/section/form/pen.svg" alt="pen" srcset="" />
-      <div>預約賞屋</div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink&&(!info.address||!info.phone)">
+      <img src="//h35.banner.tw/img/form/fb.svg" alt="粉絲專頁" srcset="" />
+      <div>粉絲專頁</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+      <img src="//h35.banner.tw/img/form/pen.svg" alt="即刻預約" srcset="" />
+      <div>即刻預約</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
-      <img src="//h65.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
+      <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'line'"  v-if="info.line" >
+      <img src="//h35.banner.tw/img/form/line.svg" alt="Line" srcset="" />
+      <div>Line</div>
     </div>
   </div>
 
   <!-- Modal -->
-  <input
-    type="checkbox"
-    v-model="modalOpen"
-    id="contact-modal"
-    class="modal-toggle"
-  />
+  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
   <div class="modal -mt-20 md:-mt-72">
-    <div
-      class="modal-box py-12 relative flex flex-col items-center justify-center"
-    >
-      <label
-        for="contact-modal"
-        class="btn btn-sm btn-circle absolute right-4 top-4"
-        >✕</label
-      >
+    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
+      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img
-        class="h-12"
-        v-if="modalType == 'phone'"
-        src="@/section/form/phone.svg"
-        alt="phone"
-        srcset=""
-      />
-      <img
-        class="h-12"
-        v-else-if="modalType == 'messenger'"
-        src="@/section/form/messenger.svg"
-        alt="messenger"
-        srcset=""
-      />
-      <img
-        class="h-12"
-        v-else-if="modalType == 'fb'"
-        src="@/section/form/fb.svg"
-        alt="fb"
-        srcset=""
-      />
-      <img
-        class="h-12"
-        v-else-if="modalType == 'gmap'"
-        src="@/section/form/gmap.svg"
-        alt="gmap"
-        srcset=""
-      />
+      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/fb.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img/form/line.svg" alt="line" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">
-        {{
-          modalType == "phone"
-            ? "賞屋專線"
-            : modalType == "messenger"
-            ? "Facebook Messenger"
-            : modalType == "fb"
-            ? "Facebook 粉絲專頁"
-            : info.address2
-        }}
-      </div>
+      <div class="text-xl mt-4 font-bold">{{
+       modalType == 'phone' ? '賞屋專線' :
+       modalType == 'messenger' ? 'Facebook Messenger' :
+       modalType == 'fb' ? 'Facebook 粉絲專頁' :
+       modalType == 'line' ? 'LINE賞屋客服' :
+       modalType == 'gmap' ? `${info.address2?info.address2:'導航地址'}` : 
+       ''
+      }}</div>
       <!-- content -->
-      <div class="text-md mt-4">
-        {{
-          modalType == "phone"
-            ? info.phone
-            : modalType == "messenger"
-            ? "線上諮詢"
-            : modalType == "fb"
-            ? ""
-            : info.address
-        }}
-      </div>
-      <!-- btn
-預約賞屋:btregistration
-撥打電話:btcontact
-FB諮詢:btlead
-地圖導航:btsearch
-前往粉專:btfanpage
-      -->
-      <div
-        class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2"
-        @click="go()"
-        v-if="modalType != 'phone'"
-        v-bind:class="{
-          hidden: modalType == 'phone' && !$isMobile(),
-          btlead: modalType == 'messenger',
-          btfanpage: modalType == 'fb',
-          btsearch: modalType == 'gmap',
-          btcontact: modalType == 'phone',
-        }"
-      >
-        {{
-          modalType == "phone"
-            ? "撥打電話"
-            : modalType == "messenger"
-            ? "立即諮詢"
-            : modalType == "fb"
-            ? "立即前往"
-            : "開啟導航"
-        }}
-      </div>
+      <div class="text-md mt-4">{{ 
+      modalType == 'phone' ? info.phone : 
+      modalType == 'messenger' ? '線上諮詢' : 
+      modalType == 'fb' ? '' :
+      modalType == 'line' ? '' :
+      modalType == 'gmap' ? `${info.address}` : 
+      ''
+      }}</div>
+      <!-- btn -->
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'messenger',
+        'btfanpage': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btline': modalType == 'line',
+        'btcontac': modalType == 'phone'
+      }">
+        {{ 
+        modalType == 'phone' ? '撥打電話' : 
+        modalType == 'messenger' ? '立即諮詢' : 
+        modalType == 'fb' ? '前往粉絲專頁' :
+        modalType == 'line' ? '加入' :
+        modalType == 'gmap' ? '開啟導航' : 
+        ''
+        }}</div>
       <!-- btn phone -->
-      <div
-        class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2"
-        @click="go()"
-        id="phonegtm"
-        v-else
-        v-bind:class="{
-          hidden: modalType == 'phone' && !$isMobile(),
-          btlead: modalType == 'messenger',
-          btsearch: modalType == 'gmap',
-          btcontac: modalType == 'phone',
-        }"
-      >
-        {{
-          modalType == "phone"
-            ? "撥打電話"
-            : modalType == "messenger"
-            ? "立即諮詢"
-            : modalType == "fb"
-            ? "前往粉絲專頁"
-            : "開啟導航"
-        }}
-      </div>
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'messenger',
+        'btfanpage': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btline': modalType == 'line',
+        'btcontac': modalType == 'phone'
+      }">
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' : modalType == 'fb' ? '前往粉絲專頁' :
+        '開啟導航'
+        }}</div>
     </div>
   </div>
+
+
 </template>
 
 <style lang="scss">
@@ -464,17 +407,23 @@ const modalOpen = ref(false)
 const modalType = ref("")
 
 const go = () => {
-  if (modalType.value == "phone") {
-    window.location.href = `tel:${info.phone.replace("-", "")}`
+  if (modalType.value == 'phone') {
+    window.location.href = `tel:${info.phone.replace("-", "")}`;
      setTimeout(() => {
        window.location.href = "phoneThanks";
      }, 1000);
-  } else if (modalType.value == "fb") {
-    window.open(info.fbMessage)
-  } else if (modalType.value == "gmap") {
-    window.open(info.googleLink)
+  } else if (modalType.value == 'messenger') {
+    window.open(info.fbMessage);
+  } else if (modalType.value == 'fb') {
+    window.open(info.fbLink);
+  } else if (modalType.value == 'gmap') {
+    window.open(info.googleLink);
+  } else if (modalType.value == 'line') {
+    window.open(info.line);
+
   }
 }
+
 
 const open = () => {
   window.open(info.fbLink)
