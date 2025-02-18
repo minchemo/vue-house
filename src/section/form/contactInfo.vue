@@ -10,16 +10,16 @@
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
+        <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
-        <img src="//h35.banner.tw/img//form/messenger.svg" alt="Facebook 諮詢" srcset="" />
+        <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink">
       <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
-        <img src="//h35.banner.tw/img//form/fb.svg" alt="前往粉絲專頁" srcset="" />
+        <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -29,7 +29,7 @@
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -41,31 +41,31 @@
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-      <img src="//h35.banner.tw/img//form/phone.svg" alt="撥打電話" srcset="" />
+      <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
-      <img src="//h35.banner.tw/img//form/messenger.svg" alt="FB 諮詢" srcset="" />
+      <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink&&(!info.address||!info.phone)">
-      <img src="//h35.banner.tw/img//form/fb.svg" alt="粉絲專頁" srcset="" />
+      <img src="//h35.banner.tw/img/form/fb.svg" alt="粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img//form/pen.svg" alt="即刻預約" srcset="" />
+      <img src="//h35.banner.tw/img/form/pen.svg" alt="即刻預約" srcset="" />
       <div>即刻預約</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
-      <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
+      <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'line'"  v-if="info.line" >
-      <img src="//h35.banner.tw/img//form/line.svg" alt="Line" srcset="" />
+      <img src="//h35.banner.tw/img/form/line.svg" alt="Line" srcset="" />
       <div>Line</div>
     </div>
   </div>
@@ -76,11 +76,11 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img//form/line.svg" alt="line" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/fb.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img/form/line.svg" alt="line" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{
        modalType == 'phone' ? '賞屋專線' :
@@ -277,19 +277,6 @@
 .contact-info-img{
   top: 20vw;
   //img{width: 200%;margin:-50%;}
-.oo1{right: sizem(-550);top:sizem(-250);width:sizem(800);}
-.oo2{right: sizem(-250);top:sizem(0);width:sizem(800);}
-.bubble1{left:sizem(-300);top:sizem(220);width:sizem(420);}
-.bubble2{right:sizem(-400);top:sizem(0);width:sizem(480);}
-.bubble3{left:sizem(-30);top:sizem(110);width:sizem(470);}
-.bubble4{left:sizem(-20);top:sizem(140);width:sizem(210);}
-.bubble5{right:sizem(-100);top:sizem(290);width:sizem(300);}
-.bubble6{left:sizem(-10);top:sizem(80);width:sizem(48);
-  img{transform: translateY(20%);}
-}
-.bubble7{right:sizem(-50);top:sizem(360);width:sizem(80);
-  img{transform: translateY(-20%);}
-}
 
 }
   .mo-contact-info {

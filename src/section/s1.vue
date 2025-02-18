@@ -2,8 +2,8 @@
   <article class="s1 relative" id="s1">
 
 	<!--  
-		<img src="./s1/pc.jpg" class="t0"> -->
 		<img src="./s1/mo.jpg" class="t0">
+		<img src="./s1/pc.jpg" class="t0"> -->
 		<img src="./s1/oo.svg" class="oo1">
 		<img src="./s1/oo.svg" class="oo2">
 		<img src="./s1/logo.svg" class="logo">
