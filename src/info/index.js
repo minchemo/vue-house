@@ -25,8 +25,8 @@ export default {
        /* ["使用執照", "110重使字第00336號"],*/
     ],
     gtmCode: ["GTM-MCP2RFPF"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
@@ -35,8 +35,8 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     //底下2個 沒項目就會隱藏
-    room_type: ["1房","2房"],
-    budget: ["700-1000萬","1000-2000萬"],
+    room_type: ["兩房","三房","四房"],
+    //budget: ["1000萬以下","1000-2000萬","2000-3000萬","3000萬以上"],
 
     navList: [{
  /*       name: "微笑雲朵",

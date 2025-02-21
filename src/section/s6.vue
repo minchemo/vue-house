@@ -147,23 +147,23 @@ const options = {
 const imgs = [
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
-    caption: "國民運動中心"
+    caption: "鼎金國小"
   },
   {
     img:new URL("./s6/2.jpg", import.meta.url).href ,
-    caption: "藝術水岸園區"
+    caption: "鼎金國中"
   },
   {
     img:new URL("./s6/3.jpg", import.meta.url).href ,
-    caption: "繪本圖書館"
+    caption: "高雄高工"
   },
   {
     img:new URL("./s6/4.jpg", import.meta.url).href ,
-    caption: "雲科大"
+    caption: "高雄科大"
   },
   {
     img:new URL("./s6/5.jpg", import.meta.url).href ,
-    caption: "中山紀念公園"
+    caption: "高雄醫大"
   },
 ]
 </script>

@@ -13,9 +13,9 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
           <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
+      <span class="caption" :class="'caption-' + index">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -66,6 +66,12 @@
       right: calc(100% + 3em);
       justify-content: flex-end;
     }
+    
+    .caption {
+    right:.5em;
+    top:.5em;
+    &.caption-0 { color: #444;text-shadow: none;font-weight: 500; }
+    }
   }
 }
 /* 螢幕尺寸標準 */
@@ -101,9 +107,7 @@ width: sizem(660);transform: rotate(90deg);
     width: 100%;
 
     .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
+    font-size:sizem(12);
     }
     .slide-item {
       @apply bg-cover;

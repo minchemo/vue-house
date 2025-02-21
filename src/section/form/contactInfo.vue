@@ -137,8 +137,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background:#0466CA;}
-.hover\:bg-color2:hover{background-color:#014d99;}
+.bg-color1{background:#EDC244;}
+.hover\:bg-color2:hover{background-color:#ca8c30;}
 
 
 .contact-info-img{
@@ -267,7 +267,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(13%) sepia(58%) saturate(7486%) hue-rotate(198deg) brightness(87%) contrast(107%);
+  img{filter:  invert(9%) sepia(88%) saturate(4943%) hue-rotate(360deg) brightness(96%) contrast(114%);
   }
 }
 
@@ -288,20 +288,20 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background:#0051a1;
+    background:#EDC244;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(14);
-      color: #fff;
-      border-left:1px solid #fff7;
+      color: #000;
+      border-left:1px solid #0003;
     font-weight: 700;
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
       }
 
     }
