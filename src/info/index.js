@@ -1,4 +1,4 @@
-const caseName = "微笑雲朵"
+const caseName = "城揚Twin S"
 
 export default {
     meta: {
@@ -24,7 +24,7 @@ export default {
         ["經&ensp;紀&ensp;人", "(102)高市字第00034號 林峰旭"],
        /* ["使用執照", "110重使字第00336號"],*/
     ],
-    gtmCode: ["GTM-MCP2RFPF"], // 可放置多個
+    gtmCode: ["GTM-TJMNGGMP"], // 可放置多個
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
