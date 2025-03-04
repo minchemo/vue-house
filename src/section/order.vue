@@ -1,8 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
-    <div class="box"><span></span></div>
     <div class="order-section">
 <!-- 
+    <div class="box"><span></span></div>
       <div class="order-title" data-aos="fade-up" data-aos-delay="0">邀約行家 領席鑑賞</div> -->
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -20,12 +20,12 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-           <!--  <div class="gender">
+           <!--    --><div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>  -->
+        </div>
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -46,7 +46,7 @@
             <option value="" selected disabled>請選擇用途</option>
             <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
           </select>
-        </label>
+        </label> -->
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
@@ -71,7 +71,7 @@
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
-          </select></label> -->
+          </select></label>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -121,6 +121,10 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
+    background: #FFF;
+    width: size(1500);
+    margin: auto;
+  //  margin: 3em;
 
   .bg-image {
     position: absolute;
@@ -160,7 +164,7 @@ animation: an2 10s linear infinite reverse;}
   .order-title {
     font-size:30px;
     font-weight: 700;
-    color: #154675;
+    color: #bfb38c;
     padding-top:1.5em;
     letter-spacing: .4em;
     display: flex;
@@ -174,7 +178,7 @@ animation: an2 10s linear infinite reverse;}
     .line{width: size(439);}
     &::after,
     &::before
-    {content: "";display:block;height: 1px;background: #15467566;flex: 1;}
+    {content: "";display:block;height: 1px;background: #bfb38c;flex: 1;}
   }
 
   .order-title-img {
@@ -226,11 +230,11 @@ animation: an2 10s linear infinite reverse;}
       background-color: #0003;
       position: absolute;
     }
-    .row{background: #fff;border: 1px solid #fff;color: #000;
+    .row{background: #EEE;border: 1px solid #fff;color: #000;
       display: flex;width: 100%;
-    align-items:center;font-size: 18px;
+    align-items:center;font-size: 15px;
       > span{
-        width:4.5em;
+        width:5.5em;
         text-align: left;padding-left:1em ;
         > span{color: #F00;//font-size: 12px;
           }
@@ -244,11 +248,12 @@ animation: an2 10s linear infinite reverse;}
         background-position:calc(100% - .5em) 0%;
       }
       }
-     // &.name{width: calc(100% - 3.8em);
+      //有性別時這格開啟
+      &.name{width: calc(100% - 3.8em);
       // .input{height: 5em;}
-     // }
+      }
     }
-    .gender{display: flex;position: absolute;right: 0; flex-direction:column;color: #FFF;
+    .gender{display: flex;position: absolute;right: 0; flex-direction:column;color: #000;
       label:first-child{margin-bottom: .3em;}
       input{margin-right: .3em;}
     }
@@ -259,7 +264,7 @@ animation: an2 10s linear infinite reverse;}
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #154675;
+    background-color: #bfb38c;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .6em;

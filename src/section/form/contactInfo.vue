@@ -5,9 +5,10 @@
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>  -->
-    <Logo data-aos="zoom-in" data-aos-delay="0" />
+    </div>
+    <Logo data-aos="zoom-in" data-aos-delay="0" /> 
     <img src="@/section/s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0" >
+     -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
@@ -105,8 +106,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #DC4434;}
-.hover\:bg-color2:hover{background-color:#af2f20;}
+.bg-color1{background-color: #bfb38c;}
+.hover\:bg-color2:hover{background-color:#a3966c;}
 
 
 .contact-info-img{
@@ -134,7 +135,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #DC4434;
+      background: #bfb38c;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -150,7 +151,7 @@
       gap: 1em;
 
       &:hover {
-        background: #af2f20;
+        background: #a3966c;
         color: #FFF;
 
         img {
@@ -169,7 +170,7 @@
 
     }
     &.address {
-        background-color: #FFF;
+        background-color: #EEE;
       // border-radius: .6em;
 
       .contact-item {
@@ -349,7 +350,7 @@
 
 <script setup>
 import info from "@/info"
-import Logo from "@/section/s1/logo.vue"
+// import Logo from "@/section/s1/logo.vue"
 import { inject, ref } from "vue";
 const modalOpen = ref(false);
 const modalType = ref('');

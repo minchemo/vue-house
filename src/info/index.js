@@ -1,4 +1,4 @@
-const caseName = "聚丰景"
+const caseName = "裕翔織光"
 
 export default {
     meta: {
@@ -8,20 +8,20 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "高雄市三民區大昌二路569號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.04474077968!2d120.32676297602906!3d22.652120430049745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04d863ce75f7%3A0x4551d9d93554b732!2zODA3MDU26auY6ZuE5biC5LiJ5rCR5Y2A5aSn5piM5LqM6LevNTY56Jmf!5e0!3m2!1szh-TW!2stw!4v1736245033777!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/UN2pFMz9Zr7FqRDu6",
-    phone: "07-398-6686",
-    fbLink: "https://www.facebook.com/61561344586140/",
-    fbMessage: "https://m.me/61561344586140/",
+    address: "台中市西屯區華美西街二段234號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.0984367239857!2d120.6656371!3d24.1682803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917469d98b4a1%3A0x9c67c9ab88af276d!2z57mU5YWJ5o6l5b6F5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1741070001714!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/WaiQzmWb8ih18rR88",
+    phone: "04-2312-1688",
+    fbLink: "https://www.facebook.com/ys23298768/",
+    fbMessage: "https://m.me/ys23298768/",
     caseName: caseName,
     houseInfos: [
+        /*
         ["興建投資", "頂誠建設有限公司"],
         ["建築代銷", "棠安創意開發有限公司"],
         ["建築設計", "朱文明建築師事務所"],
         ["基地面積", "1011平方公尺(305.8坪)"],
         ["格局規劃", "2-3房"],
-        /*
         */
     ],
     gtmCode: ["GTM-TV9XVPJL"], // 可放置多個 TV9XVPJL客戶提供
@@ -39,7 +39,7 @@ export default {
     // ctime: ["上午","下午","晚上","皆可"],//連絡時段
     // use_type: ["自住","投資","二代置產","換屋"],//購屋用途
     // room_type: ["2房","3房"],//需求房型
-    // budget: ["1000-1500萬","1501-2000萬","2001萬以上",],//購屋預算
+    budget: ["2000~2500萬","2500~3000萬","3000~3000萬",],//購屋預算
 
     navList: [
         /*
