@@ -11,7 +11,7 @@ export default {
     address: "高雄市三民區大昌二路569號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.04474077968!2d120.32676297602906!3d22.652120430049745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04d863ce75f7%3A0x4551d9d93554b732!2zODA3MDU26auY6ZuE5biC5LiJ5rCR5Y2A5aSn5piM5LqM6LevNTY56Jmf!5e0!3m2!1szh-TW!2stw!4v1736245033777!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/UN2pFMz9Zr7FqRDu6",
-    phone: "07-335-5689",
+    phone: "07-398-6686",
     fbLink: "https://www.facebook.com/61561344586140/",
     fbMessage: "https://m.me/61561344586140/",
     caseName: caseName,
