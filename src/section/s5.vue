@@ -3,11 +3,12 @@
     <div class="img absolute">
       <div class="oo1 absolute"></div>
     <div class="bubble1 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+      <img src="./s1/bubble5.png" alt="bubble">
       <img src="./s1/bubble3.png" alt="bubble">
     </div>
-    <div class="g absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
+   <!-- <div class="g absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="300" >
       <img src="./s5/img.webp" alt="img">
-    </div>
+    </div> --> 
     </div>
     <div class="bubble2 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="100" >
       <img src="./s1/bubble5.png" alt="bubble">
@@ -61,10 +62,13 @@
     &::before{content:url("data:image/svg+xml,%3Csvg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");width: 100%;display: block;}  
   }
 .bubble1{right: size(-320);width:size(686);
-  bottom: size(-260);
-  img{width: 100%;
+  bottom: size(-160);
+  img{width: 70%;
+    position: absolute;top:-60%;left: 15%;
+    &:last-child{position: relative;
+      width: 100%;top:0;left: 0;
     animation: bubble 4s -2s ease-in-out alternate infinite;
-    transform:rotate(-3deg);
+    transform:rotate(-3deg);}
   }
 }
 .g{right: size(65);width:size(260);

@@ -35,12 +35,13 @@
     <div class="bubble8 absolute" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="100" >
       <img src="./s1/bubble1.png" alt="bubble">
     </div>
+    <!--
     <div class="b absolute" data-aos="zoom-in" data-aos-easing="ease-out-back">
       <img src="./s1/b.png" alt="多會微笑">
     </div>
 		<img src="./s1/img.png" class="img absolute" alt="李多慧" data-aos="fade-left">
 		<img src="./s1/name.svg" class="name absolute" alt="李多慧簽名" data-aos="fade-left">
-
+-->
     <div class="txt absolute" v-if="isMobile">
       <img src="./s1/logom.svg" alt="logo" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="0" class="logo">
       <img src="./s1/t1m.svg" alt="藝術水岸園區" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-delay="200" class="t1">
@@ -175,7 +176,7 @@
 }
 
   .txt{
-    left: size(275);
+    left: 0;right: 0;margin: auto;
     top: calc(65% + #{size(300 - 1080 * .65)});
     width:size(882);
     .logo{
@@ -249,9 +250,8 @@
   top: calc(90% + #{sizem(515 - 604 * .9)});
 }
 .txt{
-  left: sizem(43);
-  top: calc(50% + #{sizem(105 - 604 * .5)});
-  width:sizem(145);
+  top: calc(50% + #{sizem(90 - 604 * .5)});
+  width:sizem(190);
 }
   }
 }
