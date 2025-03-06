@@ -221,7 +221,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(17%) sepia(32%) saturate(3185%) hue-rotate(213deg) brightness(106%) contrast(116%);
+  img{filter:invert(76%) sepia(11%) saturate(750%) hue-rotate(8deg) brightness(93%) contrast(91%);
   }
 }
 
@@ -237,7 +237,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#154675;
+    background:#bfb38c;
 
     .contact-item {
       height: 100%;      
@@ -291,7 +291,7 @@
         max-width: 100%;
         white-space: nowrap;
         margin: 0;
-        display: none;
+       // display: none;
 
         img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
           max-width: sizem(27);
@@ -335,6 +335,7 @@
         display: block;
           &.add{text-align: center;
             padding: 1.1em 0;
+        font-size: sizem(14) ;
           div{text-indent: 0em;}
           }
         }

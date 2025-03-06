@@ -138,7 +138,7 @@
 
 .order {
   width: 100%;
-  padding-top: size(40);
+  padding-top: size(70);
  // background:url("@/section/form/bg.jpg");
  // background-size: auto;
  // background: linear-gradient(to bottom, #195c45, #000704);
@@ -287,6 +287,7 @@ animation: an2 10s linear infinite reverse;}
   .order-section {
     min-height: sizem(800);
     position: relative;
+    width: sizem(350);
     // overflow: hidden;
    // padding-top: sizem(200);
 
@@ -302,6 +303,7 @@ animation: an2 10s linear infinite reverse;}
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+    padding-top: sizem(30);
   .box{
    width: sizem(1600);top: sizem(100);left: calc(50% - sizem(800));
    height: sizem(400);}
