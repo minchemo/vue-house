@@ -60,4 +60,14 @@ export default {
     components: {},
     methods: {},
 }
+import axios from "axios";
+
+axios.post("https://hook.us1.make.com/fdod6r53f2m0vgp9qjqvpc86xl5sbflc", {
+  orderId: "123456",
+  status: "success"
+}).then(response => {
+  console.log("Webhook Sent:", response.data);
+}).catch(error => {
+  console.error("Error:", error);
+});
 </script>
