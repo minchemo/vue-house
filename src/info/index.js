@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.0984367239857!2d120.6656371!3d24.1682803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917469d98b4a1%3A0x9c67c9ab88af276d!2z57mU5YWJ5o6l5b6F5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1741070001714!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/WaiQzmWb8ih18rR88",
     phone: "04-2312-1688",
-    fbLink: "https://www.facebook.com/ys23298768/",
-    fbMessage: "https://m.me/ys23298768/",
+    fbLink: "https://www.facebook.com/61573593124160/",
+    fbMessage: "https://m.me/61573593124160/",
     caseName: caseName,
     houseInfos: [
         /*
