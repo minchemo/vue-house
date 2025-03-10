@@ -337,6 +337,7 @@ import info from "@/info"
 import { cityList, renderAreaList } from "@/info/address.js"
 import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
+import axios from "axios"
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
