@@ -3,6 +3,8 @@
   <div class="contact-info-img relative">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+    
+    <img src="@/section/form/logo.png" alt="" class="logo" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
@@ -106,8 +108,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #bfb38c;}
-.hover\:bg-color2:hover{background-color:#a3966c;}
+.bg-color1{background-color: #a67c52;}
+.hover\:bg-color2:hover{background-color:#8a6037;}
 
 
 .contact-info-img{
@@ -135,7 +137,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #bfb38c;
+      background: #a67c52;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -151,7 +153,7 @@
       gap: 1em;
 
       &:hover {
-        background: #a3966c;
+        background: #8a6037;
         color: #FFF;
 
         img {
@@ -176,7 +178,7 @@
       .contact-item {
         &.add{
           background: none;
-        color: #000;
+        color: #a67c52;
         cursor: text;
         flex:2.10;
 
@@ -237,7 +239,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#bfb38c;
+    background:#a67c52;
 
     .contact-item {
       height: 100%;      

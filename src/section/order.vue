@@ -83,7 +83,7 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#a67c52]">
           本人知悉並同意<label for="policy-modal"
             class="modal-button text-[#f00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
@@ -164,7 +164,7 @@ animation: an2 10s linear infinite reverse;}
   .order-title {
     font-size:30px;
     font-weight: 700;
-    color: #bfb38c;
+    color: #a67c52;
     padding-top:1.5em;
     letter-spacing: .4em;
     display: flex;
@@ -178,7 +178,7 @@ animation: an2 10s linear infinite reverse;}
     .line{width: size(439);}
     &::after,
     &::before
-    {content: "";display:block;height: 1px;background: #bfb38c;flex: 1;}
+    {content: "";display:block;height: 1px;background: #a67c52;flex: 1;}
   }
 
   .order-title-img {
@@ -230,7 +230,7 @@ animation: an2 10s linear infinite reverse;}
       background-color: #0003;
       position: absolute;
     }
-    .row{background: #EEE;border: 1px solid #fff;color: #000;
+    .row{background: #EEE;border: 1px solid #fff;color: #a67c52;
       display: flex;width: 100%;
     align-items:center;font-size: 15px;
       > span{
@@ -253,7 +253,7 @@ animation: an2 10s linear infinite reverse;}
       // .input{height: 5em;}
       }
     }
-    .gender{display: flex;position: absolute;right: 0; flex-direction:column;color: #000;
+    .gender{display: flex;position: absolute;right: 0; flex-direction:column;color: #a67c52;
       label:first-child{margin-bottom: .3em;}
       input{margin-right: .3em;}
     }
@@ -264,7 +264,7 @@ animation: an2 10s linear infinite reverse;}
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #bfb38c;
+    background-color: #a67c52;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .6em;
@@ -278,7 +278,7 @@ animation: an2 10s linear infinite reverse;}
 
   .control {
     font-size: 14px;
-    color: #000;
+    color: #a67c52;
     position: relative;
   }
 }
