@@ -1,6 +1,17 @@
 <template>
   <article class="s1" id="s1">
-   <!-- <img src="./s1/mo.jpg" class="t0"> -->
+   <!-- --><img src="./s1/pc.jpg" class="t0">
+    <img src="./s1/s1bg.jpg" class="bg"> 
+    <div class="txt">
+      <h2 class="t1">在這裡<br>發現布魯克林</h2>
+      <div class="t2">紐約曼哈頓，為布魯克林而美麗<br>
+台灣的布魯克林，驚喜發現在八里<br>
+同步匯集智慧、綠意、人文城市於一身</div>
+<div class="t3"><span>國際心跳 矚目之光</span>蓄勢待發</div>
+<img src="./s1/en.svg" class="en"> 
+    </div>
+   
+   <!--
    <img src="./s1/logom.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0" v-if="$isMobile()" >
    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0" v-else >
    <img src="./s1/t1.svg" class="t1" alt="t1" data-aos="zoom-in" data-aos-delay="400" >
@@ -28,7 +39,7 @@
     <p class="t6" data-aos="fade-up" data-aos-delay="0">三水共構規劃｜風光水綠社區｜全區無火建築｜原生療癒生態<br>
 生態跳島陽台｜雨水溢洪住居｜智慧健康促進｜寵物友善環境</p>
 <img src="./s1/t4.svg" class="t4" alt="03-3682668"  data-aos="fade-up" data-aos-delay="200">
-  </div>
+  </div>-->
 	<!--  
 
 
@@ -76,7 +87,14 @@
   &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
 
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
-  
+  .txt{
+    position: absolute;
+    top: 0;left: 0;right: 0;text-align: center;
+.t1{color: #FFF;}
+
+
+  }
+  /*
   .logo{position: relative;
     width: size(315);
     margin-top:4.5vw;
@@ -159,6 +177,7 @@
         width: size(624);
       }
     }
+      */
 
 }
 
