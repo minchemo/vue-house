@@ -59,7 +59,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-[#666]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#EA5514] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -113,29 +113,10 @@
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
-  }
-
   .order-title {
     font-size: size(40);
-    font-weight: 700;
-    color: #32B8C3;
+    font-weight: 500;
+    color: #000;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -146,6 +127,7 @@
   }
   .order-subTitle{
     font-size: size(17);
+    color: #333;
     // color: #fff;
     padding-top:.8em;
     letter-spacing: .1em;
@@ -188,15 +170,15 @@
       background-color: #0003;
       position: absolute;
     }
-    .row{background: #f1f7f5;border: 1px solid #CCC;color: #000;
-      display: flex;width: 100%;
+    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+      display: flex;width: 100%;border-radius: 0.3em;
     align-items:center;
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
         > span{color: #F00;font-size: 12px;}
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background: inherit;flex: 1;border-radius: 0.5em;}
       option{color: #666;}
       select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -213,10 +195,10 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #EA5514;
+    background-color: #898989;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: 0em;
+    border-radius: .5em;
 
     width: 308px;
     height:3.3em;

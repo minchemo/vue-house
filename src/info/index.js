@@ -1,4 +1,4 @@
-const caseName = "深耕13"
+const caseName = "紐約心光"
 
 export default {
     meta: {
@@ -8,30 +8,30 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市八德區豐德路582號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.2046823277497!2d121.281644!3d24.925096200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468188a4c9039b5%3A0xea3b05f3aad65b25!2zMzM05qGD5ZyS5biC5YWr5b635Y2A6LGQ5b636LevNTgy6Jmf!5e0!3m2!1szh-TW!2stw!4v1712923248688!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/wfWnHoo3pnTDWbG19",
-    phone: "03-368-2668",
-    fbLink: "https://www.facebook.com/61552643335242/",
-    fbMessage: "https://m.me/61552643335242/",
+    address: "新北市八里區商港路2號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3611.7443866121916!2d121.3951871!3d25.1443313!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a4536fd66a97%3A0x1c07f95e9924ff77!2zMjQ55paw5YyX5biC5YWr6YeM5Y2A5ZWG5riv6LevMuiZnw!5e0!3m2!1szh-TW!2stw!4v1741688492581!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/pDA5nnT3mt6sFqYz7",
+    phone: "02-26101786",
+    fbLink: "https://www.facebook.com/61573035974323/",
+    fbMessage: "https://m.me/61573035974323/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "長昇事業夥伴 冠奕建設"],
+        /*["投資興建", "長昇事業夥伴 冠奕建設"],
         ["建築設計", "王朝雍建築師事務所"],
         ["工程營造", "又廣營造"],
         ["空間設計", "相即空間設計"],
         ["企劃銷售", "低碳健康樂活行銷"],
         ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
-        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
+        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], */
         /*
         ["建築設計", "弘憲聯合建築師事務所"],
         ["使照號碼", "王朝雍建築師事務所"],
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-5N96QXB","GTM-M2SZCZCZ"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    gtmCode: ["GTM-000"], // 可放置多個
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",

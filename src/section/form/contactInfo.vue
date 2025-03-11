@@ -3,9 +3,8 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-   <!--  <div class="logo">
-      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>  -->
+    <div class="logo" data-aos="zoom-in" data-aos-delay="600">
+      <img src="@/section/s2/logobg.webp"><img src="@/section/s2/logo.svg"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'; onPhoneClick();" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
@@ -103,7 +102,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #00312E;}
+.bg-color1{background-color: #1163A1;}
 .hover\:bg-color2:hover{background-color:#002421;}
 
 
@@ -119,17 +118,20 @@
   z-index: 50;
   // background: #045147;
 
-  .logo {position: relative;
-    width: size(367);
-   // height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: size(30) auto 0;
-    img{width: 100%;}
-    .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
+
+
+  .logo{width: size(400);margin: auto;position: relative;
+img{width: 100%;
+&:last-child{margin: auto;width: 63.5%;position: absolute;top: 24%;left: 0;right: 0;}
+
+&:first-child{position: relative;transform: rotate(-10deg);animation: an 5s linear infinite alternate;}
+}
+}
+@keyframes an {
+  to {
+    transform: rotate(10deg);
   }
+}
 
   .contact-item-box {
     position: relative;
@@ -139,12 +141,12 @@
     // min-width: 680px;
 
     .contact-item {
-      background: linear-gradient(to bottom, #32B8C3 0%,#97C634 100%);
+      background: #1163A1;
       color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-  //  border-radius: .5em;
+      border-radius: .5em;
       font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -156,7 +158,7 @@
       gap: 1em;
 
       &:hover {
-        background: linear-gradient(to bottom, #32B8C3 0%,#97C634 50%,#d0db32 100%);
+        background: #064c81;
         color: #fff;
 
         img {
@@ -174,7 +176,7 @@
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #fff;
         background-image: none;
         color: #000;
         z-index: 0;
@@ -246,13 +248,13 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#D9E021;
+    background:#EA6DA0;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(16);
       font-weight: 400;
-      color: #000;
+      color: #FFF;
       border-left:1px solid #0003;
 
       img {
@@ -260,7 +262,7 @@
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
       }
       &:first-child{
       border-left:0;}
@@ -315,7 +317,8 @@
 
         &.address {
           font-size: sizem(15);
-          border-radius: sizem(0) sizem(0) 0 0;
+          // border-radius: sizem(0) sizem(0) 0 0;
+          border-radius: .5em .5em 0 0;
           padding: 1.1em 0;
           margin-top: sizem(25);
           //font-size: .9em;
@@ -329,7 +332,8 @@
         }
 
         &.address+div {
-          border-radius: 0 0 sizem(0) sizem(0);
+        //  border-radius: 0 0 sizem(0) sizem(0);
+          border-radius: 0 0 .5em .5em;
         }
       &.googlemap {
         border-top-width: 0;
