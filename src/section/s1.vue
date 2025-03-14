@@ -1,11 +1,12 @@
 <template>
   <article class="s1">
-    <img src="./s1/1.png" class="img1" alt="" />
+   <!--  <img src="./s1/1.png" class="img1" alt="" />
     <img src="./s1/2.png" class="img2" alt="" />
-    <img src="./s1/3.png" class="img3" alt="" />
-
+    <img src="./s1/3.png" class="img3" alt="" /> -->
+    <img src="./s1/img1.webp" class="img1" alt="" />
+    <img src="./s1/img2.webp" class="img2" alt="" />
     <img
-      src="./s1/logo.png"
+      src="./s1/logo.svg"
       class="logo"
       alt=""
       data-aos="zoom-in"
@@ -31,7 +32,7 @@
   color: #fff;
   line-height: 1.3;
   font-weight: 700;
- // background-image: url("@/section/s1/bg1.jpg");
+  background-image: url("./s1/bg.jpg");
  // background-position: top center;
  // background-size: 100%;
 
@@ -57,19 +58,22 @@
   .img1 {
     @apply z-10;
     position: absolute;
-    top: size(-85);
-    left: size(-10);
-    width: size(521);
-    transform: skewX(-10deg);
-    transform-origin: 0 0;
+    bottom: 0;
+    left: 0;
+    width: size(700);
+    transform: skewX(5deg);
+    transform-origin: 0 100%;
     animation: an1 7s ease-in-out alternate infinite;
   }
   .img2 {
     @apply z-10;
     position: absolute;
-    bottom: size(230);
+    bottom: 0;
     right: size(0);
-    width: size(388);
+    width: size(500);
+    transform: skewX(-5deg);
+    transform-origin: 0 100%;
+    animation: an1 7s ease-in-out alternate infinite;
   }
   .img3 {
     @apply z-10;
@@ -96,7 +100,7 @@
     font-size: sizem(14);
     background-size: 105%;
     background-image: url("@/section/s1/bgm.jpg");
-    background-position: bottom;
+    background-position: top;
 
     .logo {
       position: absolute;
@@ -109,14 +113,12 @@
     }
 
     .img1 {
-      top: sizem(-30);
       left: sizem(-45);
-      width: sizem(250);
+      width: sizem(350);
     }
     .img2 {
-      bottom: sizem(0);
-      right: sizem(0);
-      width: sizem(110);
+      right: sizem(-25);
+      width: sizem(310);
     }
     .img3 {
       bottom: sizem(-100);
