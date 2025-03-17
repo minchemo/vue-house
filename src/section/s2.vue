@@ -187,7 +187,7 @@ const list2 = [
     t1: ["v2", "進行中"],
     t2: "114/3/17",
     t3: "公辦公聽會<br>時間：114/3/17(一)下午2時30分<br>地點：溪洲市民活動中心3樓禮堂(新北市永和區勵行街42之1號2號3樓)",
-    link:"",
+    link:"https://drive.google.com/file/d/10Wp_Vdb7YhaRSoejjCGVwGRtQjJjK07s/view?usp=sharing",
   },
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
