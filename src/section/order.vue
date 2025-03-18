@@ -4,8 +4,8 @@
     <div class="order-section">
       <!-- Title -->
        <div class="order-title-all relative z-10">
-       <img class="order-title-img" src="@/section/form/ordertitle.svg" alt="" srcset="">
-      <div class="order-title text-center" v-html="info.order.title" v-if="info.order.title"></div>
+       <!-- <img class="order-title-img" src="@/section/form/ordertitle.svg" alt="" srcset=""> -->
+      <div class="order-title text-center font-['Noto_Serif_TC',serif]" v-html="info.order.title" v-if="info.order.title"></div>
       <div class="order-subTitle text-center" v-html="info.order.subTitle" v-if="info.order.subTitle"></div>
     </div>
       <!-- <div class="cus-divider"></div> -->
@@ -26,8 +26,23 @@
           </p>
         </div> -->
         <div class="left h-full flex flex-col justify-between items-center">
+          <label class="row" v-if="info.budget.length > 0"
+            ><span>貴賓身份<span>(必填)</span></span>
+            <select
+              class="select w-full rounded-none bg-white"
+              v-model="formData.budget"
+            >
+              <option value="" selected disabled>請選擇預算</option>
+              <option
+                v-for="budget in info.budget"
+                :value="budget"
+                v-text="budget"
+                :key="budget"
+              ></option>
+            </select>
+          </label>
           <label class="row"
-            ><span>姓名<span>(必填)</span></span>
+            ><span>貴賓姓名<span>(必填)</span></span>
             <input
               type="text"
               placeholder="姓名"
@@ -36,10 +51,10 @@
               @input="(event) => (formData.name = event.target.value)"
           /></label>
           <label class="row"
-            ><span>手機<span>(必填)</span></span>
+            ><span>連絡電話<span>(必填)</span></span>
             <input
               type="text"
-              placeholder="手機"
+              placeholder="電話"
               class="input w-full rounded-none placeholder:text-[#999999]"
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
@@ -59,22 +74,7 @@
                 :key="room"
               ></option></select
           ></label>
-          <label class="row" v-if="info.budget.length > 0"
-            ><span>購屋預算</span>
-            <select
-              class="select w-full rounded-none bg-white"
-              v-model="formData.budget"
-            >
-              <option value="" selected disabled>請選擇預算</option>
-              <option
-                v-for="budget in info.budget"
-                :value="budget"
-                v-text="budget"
-                :key="budget"
-              ></option>
-            </select>
-          </label>
-          <label class="row"
+         <!--  <label class="row"
             ><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
@@ -82,7 +82,7 @@
                 {{ city.label }}
               </option>
             </select></label
-          >
+          > -->
           <!-- 
           <label class="row"
             ><span>居住地區</span>
@@ -190,9 +190,9 @@ box-shadow:0 40px 40px -15px #0009;
 }
   .order-bg {
     position: absolute;
-    top: size(110);
-    left: size(-360);
-    width: size(3439);
+    top: size(190);
+    left: size(70);
+    width: size(2720);
     //z-index: 2;
     user-select: none; // opacity: .7;
     pointer-events: none;
@@ -210,12 +210,15 @@ box-shadow:0 40px 40px -15px #0009;
  width: 20.3em;
   margin: auto auto auto 0;}
   .order-title {
-    font-size: size(45);
-    font-weight: 700;
-    color: #6D5E50;
-    padding-top:2em;
+    font-size: size(37);
+    font-weight: 600;
+    color: #B28247;
+    text-align: left;
+    line-height: 1.2;
+   // padding-top:2em;
     margin: 0;
   }
+
   .order-subTitle{
     color: #666;
     padding:.8em 0 0;
@@ -270,7 +273,7 @@ box-shadow:0 40px 40px -15px #0009;
       width: 100%;
       align-items: center;
       > span {
-        width: 5.5em;
+        width: 7.5em;
         text-align: left;
         padding-left: 1em;
         font-weight: 700;

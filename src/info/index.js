@@ -29,13 +29,13 @@ export default {
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    // title: "預約賞屋",
+    title: "RESERVATION",
     subTitle:
       "若想了解建案資訊歡迎填寫表單或來電查詢，<br>我們將由專人為您服務，謝謝",
   },
   //底下2個 沒項目就會隱藏
-   room_type: ["三房","四房"],
-   budget: [],
+   room_type: [/*"三房","四房"*/],
+   budget: ["國泰世華銀行","國泰人壽"],
   navList: [
     {
       name: "連結橋科",
