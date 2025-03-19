@@ -27,12 +27,12 @@
         </div> -->
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row" v-if="info.budget.length > 0"
-            ><span>貴賓身份<span>(必填)</span></span>
+            ><span>貴賓身份<span>*</span></span>
             <select
               class="select w-full rounded-none bg-white"
               v-model="formData.budget"
             >
-              <option value="" selected disabled>請選擇預算</option>
+              <option value="" selected disabled>請選擇</option>
               <option
                 v-for="budget in info.budget"
                 :value="budget"
@@ -42,7 +42,7 @@
             </select>
           </label>
           <label class="row name"
-            ><span>貴賓姓名<span>(必填)</span></span>
+            ><span>貴賓姓名<span>*</span></span>
             <input
               type="text"
               placeholder="姓名"
@@ -57,7 +57,7 @@
               @input="(event) => (formData.gender = event.target.value)">女士</label>
         </div>
           <label class="row"
-            ><span>連絡電話<span>(必填)</span></span>
+            ><span>連絡電話<span>*</span></span>
             <input
               type="text"
               placeholder="電話"
@@ -175,7 +175,7 @@ display: block;
 background: #fffc;
 top: 5rem;
 left: 0;right: 0;
-height: calc(16.5vw + 440px);position: absolute;margin: auto;
+height: calc(18.5vw + 470px);position: absolute;margin: auto;
 width: size(1100);
 min-width: 950px;
 border-radius: 5rem;
@@ -280,13 +280,13 @@ box-shadow:0 40px 40px -15px #0009;
       width: 100%;
       align-items: center;
       > span {
-        width: 7.5em;
+        width: 6em;
         text-align: left;
         padding-left: 1em;
         font-weight: 700;
         > span {
           color: #f00;
-          font-size: 12px;
+          // font-size: 12px;
         }
       }
       input,

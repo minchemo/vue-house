@@ -25,15 +25,19 @@
         ref="splide"
         class="slide"
         :options="{
-          autoWidth: false,
+          autoWidth:$isMobile() ? false : true,
           arrows: false,
           autoplay: true,
           pagination: false,
-          interval: 4000,
+          interval: 5000, // 調整跑馬燈速度，speed/interval須一致
+          speed: $isMobile() ? 500 : 5000, // 調整跑馬燈速度，speed/interval須一致
+          snap: $isMobile() ? true : false,
+          easing: 'linear',
           gap: 30,
           type: 'loop',
+          perMove: 1,
           perPage: $isMobile() ? 1 : 3,
-          drag:  $isMobile() ? true : false
+          drag: true
         }"
       >
         <SplideSlide
@@ -143,14 +147,14 @@
     }
     @media screen and (min-width: 768px) {
     margin: size(90) auto size(45) auto;
-    width: size(1710);
+    width: 100%;
     .slide {
-      .slide-item {
+      .slide-item {width:  size(550);
         height: size(355);
       }
     }}
     .caption{
-      font-size: sizem(12);text-align: center;letter-spacing: 0.06em;
+      font-size: sizem(12);text-align: right;letter-spacing: 0.06em;
       position: absolute;bottom: .5em;right: .7em;color: #FFF;
       text-shadow: 0 0 .5em #000;
       @media screen and (min-width: 768px) { font-size: size(15);}
@@ -228,13 +232,23 @@ const imgs = [
     img: new URL("./s1/1.jpg", import.meta.url).href,
     caption: "文心秀泰",
   },
+  /*
   {
     img: new URL("./s1/2.jpg", import.meta.url).href,
     caption: "玉&ensp;音&ensp;橋",
   },
+  */
   {
     img: new URL("./s1/3.jpg", import.meta.url).href,
-    caption: "大慶車站",
+    caption: "雙鐵共構大慶站",
+  },
+  {
+    img: new URL("./s1/4.jpg", import.meta.url).href,
+    caption: "Costco",
+  },
+  {
+    img: new URL("./s1/5.jpg", import.meta.url).href,
+    caption: "中山醫學大學",
   },
 ]
 </script>
