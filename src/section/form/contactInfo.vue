@@ -56,11 +56,6 @@
       <img src="@/section/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'line'"  v-if="info.line" >
-      <img src="@/section/form/line.svg" alt="Line" srcset="" />
-      <div>Line</div>
-    </div>
   </div>
 
   <!-- Modal -->
@@ -73,7 +68,6 @@
       <img class="h-12" v-else-if="modalType == 'messenger'" src="@/section/form/messenger.svg" alt="messenger" srcset="" />
       <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/fb.svg" alt="fb" srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="gmap" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'line'" src="@/section/form/line.svg" alt="line" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{
        modalType == 'phone' ? '賞屋專線' :
