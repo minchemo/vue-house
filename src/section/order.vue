@@ -175,7 +175,7 @@ display: block;
 background: #fffc;
 top: 5rem;
 left: 0;right: 0;
-height: 48rem;position: absolute;margin: auto;
+height: calc(16.5vw + 440px);position: absolute;margin: auto;
 width: size(1100);
 min-width: 950px;
 border-radius: 5rem;
@@ -321,7 +321,7 @@ box-shadow:0 40px 40px -15px #0009;
       // .input{height: 5em;}
       }
     }
-    .gender{display: flex;position: absolute;right: 0;top: 4.7em;
+    .gender{display: flex;position: absolute;right: 0;top: calc(1.15vw + 48px);
       flex-direction:column;color: #a67c52;
       label:first-child{margin-bottom: .3em;}
       input{margin-right: .3em;}
@@ -434,6 +434,7 @@ box-shadow:0 40px 40px -15px #0009;
       &::after {
         display: none;
       }
+      .gender{top: calc(3vw + 55px);}
     }
 
     .send {
