@@ -14,9 +14,9 @@
     <img class="t3" src="./s1/t3.svg" alt="en2" data-aos="zoom-in" data-aos-delay="400" />
     <div class="t23">
       <span class="sp1" data-aos="zoom-in" data-aos-delay="600">低密度＋高綠覆</span>
-      <span class="sp1" data-aos="zoom-in" data-aos-delay="800">3期城市綠洲，自然的詩意座標</span>
+      <span class="sp1" data-aos="zoom-in" data-aos-delay="800">13期城市綠洲，自然的詩意座標</span>
       <span data-aos="zoom-in" data-aos-delay="1000">近三萬坪綠意盎然，擁抱四季都會生活。</span>
-      <span data-aos="zoom-in" data-aos-delay="1200">左有好市多、IKEA、文心秀泰，右接中山醫、大慶雙鐵、台中高鐵，美好與未來交織相連。</span>
+      <span data-aos="zoom-in" data-aos-delay="1200">鄰近好市多、IKEA、文心秀泰，串接中山醫、大慶雙鐵、台中高鐵，美好與未來交織相連。</span>
     </div>
 
     
@@ -229,6 +229,18 @@ const isMobile = computed(() => globals.$isMobile())
 const splide = ref()
 const imgs = [
   {
+    img: new URL("./s1/3.jpg", import.meta.url).href,
+    caption: "雙鐵共構大慶站",
+  },
+  {
+    img: new URL("./s1/5.jpg", import.meta.url).href,
+    caption: "中山醫學大學",
+  },
+  {
+    img: new URL("./s1/4.jpg", import.meta.url).href,
+    caption: "Costco",
+  },
+  {
     img: new URL("./s1/1.jpg", import.meta.url).href,
     caption: "文心秀泰",
   },
@@ -238,17 +250,5 @@ const imgs = [
     caption: "玉&ensp;音&ensp;橋",
   },
   */
-  {
-    img: new URL("./s1/3.jpg", import.meta.url).href,
-    caption: "雙鐵共構大慶站",
-  },
-  {
-    img: new URL("./s1/4.jpg", import.meta.url).href,
-    caption: "Costco",
-  },
-  {
-    img: new URL("./s1/5.jpg", import.meta.url).href,
-    caption: "中山醫學大學",
-  },
 ]
 </script>

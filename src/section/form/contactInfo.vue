@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto  flex flex-col items-center justify-between" v-if="!$isMobile()">
     <!--
     <img src="@/section/s1/logo.svg" class="logo" alt="logo" data-aos="fade" data-aos-duration="2000" data-aos-delay="200">
     -->
