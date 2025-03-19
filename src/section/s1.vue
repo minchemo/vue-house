@@ -1,6 +1,6 @@
 <template>
   <article class="s1">
-    <img src="./s1/mo.jpg" class="t0" />
+    <!-- <img src="./s1/mo.jpg" class="t0" /> -->
     <div class="relative z-10 flex flex-col items-center justify-center">
     <img class="cathayredlogo" src="./s1/cathayredlogo.svg" alt="國泰建設logo" data-aos="zoom-in" data-aos-delay="0" />
     <img class="t21" src="./s1/t21.svg" alt="敬獻尊榮貴賓" data-aos="zoom-in" data-aos-delay="200" />
@@ -134,20 +134,26 @@
   @media screen and (min-width: 768px) {font-size: size(24);}
   }
   .swiper-box {
-    margin: size(90) auto size(45) auto;
-    width: size(1710);
-    @media screen and (min-width: 768px) {
-    margin: size(90) auto size(45) auto;
-    width: size(1710);}
+    margin: sizem(30) auto sizem(40) auto;
+    width: sizem(310);
     .slide {
       .slide-item {position: relative;
-        height: size(355);
+        height: sizem(200);background-size: cover;
       }
     }
+    @media screen and (min-width: 768px) {
+    margin: size(90) auto size(45) auto;
+    width: size(1710);
+    .slide {
+      .slide-item {
+        height: size(355);
+      }
+    }}
     .caption{
-      font-size: size(15);text-align: center;letter-spacing: 0.06em;
+      font-size: sizem(12);text-align: center;letter-spacing: 0.06em;
       position: absolute;bottom: .5em;right: .7em;color: #FFF;
       text-shadow: 0 0 .5em #000;
+      @media screen and (min-width: 768px) { font-size: size(15);}
     span{display: block;
     &:first-child{font-size: 1.5em;}
     }

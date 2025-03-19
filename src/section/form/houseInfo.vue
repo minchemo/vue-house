@@ -5,7 +5,9 @@
         <div
           class="h-full info-box mx-auto flex flex-col items-center justify-center"
         >
-          <div class="title text-[#B9975F] font-['Noto_Serif_TC',serif]">建案資訊</div>
+          <div class="title text-[#000]">
+    <span class=" text-[#B28247] font-['Noto_Serif_TC',serif]">INFORMATION</span>
+    基本資料</div>
           <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
             <div
               class="item font-bold flex items-center w-full whitespace-nowrap"
@@ -66,9 +68,11 @@
   width: size(900);
 
   .title {
-    font-size: size(40);
+    font-size: size(30);
     font-weight: 700;
-    margin: 0 auto 0em auto;
+    margin: 0 auto 0.7em auto;
+    line-height: 1.3;
+    span{display: block;font-size: 1.2em;}
   }
 
   .info-items {
@@ -101,7 +105,7 @@
     padding: 0;
 
     .title {
-      font-size: sizem(29);
+      font-size: sizem(24);
       width: auto;
     }
 
