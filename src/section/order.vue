@@ -321,7 +321,7 @@ box-shadow:0 40px 40px -15px #0009;
       // .input{height: 5em;}
       }
     }
-    .gender{display: flex;position: absolute;right: 0;top: 5em;
+    .gender{display: flex;position: absolute;right: 0;top: 4.7em;
       flex-direction:column;color: #a67c52;
       label:first-child{margin-bottom: .3em;}
       input{margin-right: .3em;}
@@ -456,8 +456,8 @@ import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
-import orderIntro from "@/section/order_intro.vue"
-import orderBadge from "@/section/order_badge.vue"
+// import orderIntro from "@/section/order_intro.vue"
+// import orderBadge from "@/section/order_badge.vue"
 
 import info from "@/info"
 

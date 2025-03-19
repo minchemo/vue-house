@@ -11,7 +11,7 @@
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="" />
   </div>
   <!--loading end-->
-  <Nav v-if="config.showNav" />
+  <!-- <Nav v-if="config.showNav" /> -->
     <!-- 主字體 3選1
      font-['Noto_Serif_TC',serif]
      font-['Noto_Sans_TC',sans-serif]
@@ -73,7 +73,7 @@ import S6 from "@/section/s6.vue"
 //import S9 from "@/section/s9.vue"
 */
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
+// import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';

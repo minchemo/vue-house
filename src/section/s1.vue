@@ -4,23 +4,23 @@
     <div class="relative z-10 flex flex-col items-center justify-center">
     <img class="cathayredlogo" src="./s1/cathayredlogo.svg" alt="國泰建設logo" data-aos="zoom-in" data-aos-delay="0" />
     <img class="t21" src="./s1/t21.svg" alt="敬獻尊榮貴賓" data-aos="zoom-in" data-aos-delay="200" />
-    <div class="t22">
-      <span class="text-[#000]">專屬vip禮遇給最獨特的您</span>
-      <span>誠摯的邀約您填單預約</span>
-      <span>我們將為您安排優先禮賓鑑賞</span>
+    <div class="t22" data-aos="zoom-in" data-aos-delay="300">
+      <span class="text-[#000]" data-aos="zoom-in" data-aos-delay="400">專屬vip禮遇給最獨特的您</span>
+      <span data-aos="zoom-in" data-aos-delay="500">誠摯的邀約您填單預約</span>
+      <span data-aos="zoom-in" data-aos-delay="600">我們將為您安排優先禮賓鑑賞</span>
     </div>
-    <img class="t1" src="./s1/t1a.svg" alt="在13期找回生活的原點" data-aos="zoom-in" data-aos-delay="200" />
-    <img class="t2" src="./s1/t2.svg" alt="en1" data-aos="zoom-in" data-aos-delay="400" />
-    <img class="t3" src="./s1/t3.svg" alt="en2" data-aos="zoom-in" data-aos-delay="600" />
+    <img class="t1" src="./s1/t1a.svg" alt="在13期找回生活的原點" data-aos="zoom-in" data-aos-delay="0" />
+    <img class="t2" src="./s1/t2.svg" alt="en1" data-aos="zoom-in" data-aos-delay="200" />
+    <img class="t3" src="./s1/t3.svg" alt="en2" data-aos="zoom-in" data-aos-delay="400" />
     <div class="t23">
-      <span class="sp1">低密度＋高綠覆</span>
-      <span class="sp1">3期城市綠洲，自然的詩意座標</span>
-      <span>近三萬坪綠意盎然，擁抱四季都會生活。</span>
-      <span>左有好市多、IKEA、文心秀泰，右接中山醫、大慶雙鐵、台中高鐵，美好與未來交織相連。</span>
+      <span class="sp1" data-aos="zoom-in" data-aos-delay="600">低密度＋高綠覆</span>
+      <span class="sp1" data-aos="zoom-in" data-aos-delay="800">3期城市綠洲，自然的詩意座標</span>
+      <span data-aos="zoom-in" data-aos-delay="1000">近三萬坪綠意盎然，擁抱四季都會生活。</span>
+      <span data-aos="zoom-in" data-aos-delay="1200">左有好市多、IKEA、文心秀泰，右接中山醫、大慶雙鐵、台中高鐵，美好與未來交織相連。</span>
     </div>
 
     
-    <div class="swiper-box relative">
+    <div class="swiper-box relative" data-aos="fade-up" data-aos-delay="0">
       <Splide
         ref="splide"
         class="slide"
