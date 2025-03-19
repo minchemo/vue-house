@@ -6,9 +6,9 @@ export default {
     description: caseName,
     keywords: caseName,
   },
-  address1: "接待中心", //按鈕區的--- 如空白會只呈現地址
-  address2: "接待中心", //map點下確認的--- 如空白會顯示"導航地址"
-  // address: "待提供",
+  address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
+  address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
+  address: "台中市南屯區三民路與文心南路口",
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.8306269183545!2d120.6674858!3d24.1425856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0ed9a2796b%3A0x4acf8c43e71cdd1a!2z6bqX5pmo5bu66Kit!5e0!3m2!1szh-TW!2stw!4v1733905506117!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/t1HoEMUrd7NvPAfXA",

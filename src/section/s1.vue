@@ -1,6 +1,6 @@
 <template>
   <article class="s1">
-    <img src="./s1/pc.jpg" class="t0" />
+    <img src="./s1/mo.jpg" class="t0" />
     <div class="relative z-10 flex flex-col items-center justify-center">
     <img class="cathayredlogo" src="./s1/cathayredlogo.svg" alt="國泰建設logo" data-aos="zoom-in" data-aos-delay="0" />
     <img class="t21" src="./s1/t21.svg" alt="敬獻尊榮貴賓" data-aos="zoom-in" data-aos-delay="200" />
@@ -52,10 +52,10 @@
 
     <!-- <img class="t4" src="./s1/t4.svg" alt="當城裡的時光遇見生活的芬芳" data-aos="zoom-in" data-aos-delay="800" /> -->
   </div>
-  <div class="tree1 absolute" data-aos="fade-left" data-aos-delay="800" data-aos-duration="6000">
+  <div class="tree1 absolute" data-aos="fade-left" data-aos-delay="800" data-aos-duration="6000" v-if="!isMobile">
     <img src="@/section/s1/tree.webp" alt="" srcset="">
   </div>
-  <div class="tree2 absolute" data-aos="fade-right" data-aos-delay="1200" data-aos-duration="6000">
+  <div class="tree2 absolute" data-aos="fade-right" data-aos-delay="1200" data-aos-duration="6000" v-if="!isMobile">
     <img src="@/section/s1/tree.webp" alt="" srcset="">
   </div>
 
@@ -82,8 +82,8 @@
     }
   }
   .t21{
-    width: sizem(280);
-    margin: sizem(77) auto 0 auto;
+    width: sizem(218);
+    margin: sizem(74) auto sizem(29) auto;
     @media screen and (min-width: 768px) {
       width: size(414);
       margin: size(130) auto size(60) auto;
@@ -94,13 +94,14 @@
     padding: 1.35em .5em;
     border-top: 1px solid currentColor;
     border-bottom: 1px solid currentColor;
-    font-size: size(30);letter-spacing: 0.01em;
+    font-size: sizem(15.5);letter-spacing: 0.01em;
     line-height: 2;
   span{display: block;}
+  @media screen and (min-width: 768px) {font-size: size(30);}
   }
   .t1{
     width: sizem(290);
-    margin: sizem(77) auto 0 auto;
+    margin: sizem(73) auto 0 auto;
     @media screen and (min-width: 768px) {
       width: size(565);
       margin: size(145) auto 0 auto;
@@ -116,7 +117,7 @@
   }
   .t3{
     width: sizem(170);
-    margin: sizem(26) auto sizem(0) auto;
+    margin: sizem(26) auto sizem(75) auto;
     @media screen and (min-width: 768px) {
       width: size(330);
       margin: size(50) auto size(145) auto;
@@ -125,15 +126,19 @@
   .t23{
     color:#000;text-align: center;
     padding: 0;
-    font-size: size(24);letter-spacing: 0.01em;
+    font-size: sizem(13);letter-spacing: 0.01em;
     line-height: 2;
     width: 24em;
     .sp1{ color: #AE9562;font-size: 1.25em;line-height: 1.9;}
   span{display: block;}
+  @media screen and (min-width: 768px) {font-size: size(24);}
   }
   .swiper-box {
     margin: size(90) auto size(45) auto;
     width: size(1710);
+    @media screen and (min-width: 768px) {
+    margin: size(90) auto size(45) auto;
+    width: size(1710);}
     .slide {
       .slide-item {position: relative;
         height: size(355);

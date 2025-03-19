@@ -41,7 +41,7 @@
               ></option>
             </select>
           </label>
-          <label class="row name"
+          <label class="row"
             ><span>貴賓姓名<span>(必填)</span></span>
             <input
               type="text"
@@ -50,12 +50,6 @@
               :value="formData.name"
               @input="(event) => (formData.name = event.target.value)"
           /></label>
-           <!--    --><div class="gender">
-          <label><input  type="radio" name="gender" value="男" 
-              @input="(event) => (formData.gender = event.target.value)">先生</label>
-          <label><input  type="radio" name="gender" value="女" 
-              @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>
           <label class="row"
             ><span>連絡電話<span>(必填)</span></span>
             <input
@@ -175,7 +169,7 @@ display: block;
 background: #fffc;
 top: 5rem;
 left: 0;right: 0;
-height: 48rem;position: absolute;margin: auto;
+height: 51rem;position: absolute;margin: auto;
 width: size(1100);
 min-width: 950px;
 border-radius: 5rem;
@@ -252,10 +246,9 @@ box-shadow:0 40px 40px -15px #0009;
     min-width: 750px;
     flex-wrap: wrap;
 
-    .left {position: relative;
+    .left {
       flex: 1;
       gap: size(20);
-      align-items: flex-start;
       //   width: size(419);
     }
 
@@ -316,15 +309,6 @@ box-shadow:0 40px 40px -15px #0009;
       textarea {
         @apply text-[#231815];
       }
-      //有性別時這格開啟
-      &.name{width: calc(100% - 3.8em);
-      // .input{height: 5em;}
-      }
-    }
-    .gender{display: flex;position: absolute;right: 0;top: 5em;
-      flex-direction:column;color: #a67c52;
-      label:first-child{margin-bottom: .3em;}
-      input{margin-right: .3em;}
     }
   }
   .form-send {
