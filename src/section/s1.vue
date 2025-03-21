@@ -132,7 +132,7 @@
     padding: 0;
     font-size: sizem(13);letter-spacing: 0.01em;
     line-height: 2;
-    width: 24em;
+    width: 26em;
     .sp1{ color: #AE9562;font-size: 1.25em;line-height: 1.9;}
   span{display: block;}
   @media screen and (min-width: 768px) {font-size: size(24);}
