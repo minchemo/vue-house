@@ -122,11 +122,8 @@
               class="checkbox bg-white rounded-none"
             />
             <p class="text-[#000]">
-              本人知悉並同意<label
-                for="policy-modal"
-                class="modal-button text-[#c00] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap"
-                >「個資告知事項聲明」</label
-              >內容
+              本人知悉並同意
+              <a href="https://www.cathay-red.com.tw/tw/Home/Privacy" target="_blank" class="modal-button text-[#c00] cursor-pointer font-bold hover:opacity-70 whitespace-nowrap">「個資告知事項聲明」</a>內容
             </p>
           </div>
           <Policy />
