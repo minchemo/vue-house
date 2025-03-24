@@ -5,7 +5,7 @@
     <img class="cathayredlogo" src="./s1/cathayredlogo.svg" alt="國泰建設logo" data-aos="zoom-in" data-aos-delay="0" />
     <img class="t21" src="./s1/t21.svg" alt="敬獻尊榮貴賓" data-aos="zoom-in" data-aos-delay="200" />
     <div class="t22" data-aos="zoom-in" data-aos-delay="300">
-      <span class="text-[#000]" data-aos="zoom-in" data-aos-delay="400">專屬vip禮遇給最獨特的您</span>
+      <span class="text-[#000]" data-aos="zoom-in" data-aos-delay="400">專屬VIP禮遇給最獨特的您</span>
       <span data-aos="zoom-in" data-aos-delay="500">誠摯的邀約您填單預約</span>
       <span data-aos="zoom-in" data-aos-delay="600">我們將為您安排優先禮賓鑑賞</span>
     </div>
@@ -74,7 +74,10 @@
   @media screen and (min-width: 768px) {
    // background-image: url("@/section/s1/bg.webp");
     background-size: 100% auto;
+
   }
+
+
   .t0{
 	pointer-events: none;opacity: .3;position: absolute;top: 0;left: 0;width: 100%;z-index: 5;}
   .cathayredlogo{

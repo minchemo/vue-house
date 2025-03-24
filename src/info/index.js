@@ -12,7 +12,7 @@ export default {
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7282.778224713295!2d120.64385728545543!3d24.122969412649752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0021cccd65%3A0xcd35d74704949dd8!2z5ZyL5rOw5Y2B5LiJ5pyf5paw5qGI5bu656-J5Z-65Zyw!5e0!3m2!1szh-TW!2stw!4v1742350577870!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/iUFyE7zsx7Cc9UzUA",
-  // phone: "04-3705-8658",
+   phone: "04-2475-2388",
   fbLink: "//facebook.com/cathayredprod/",
   fbMessage: "//m.me/cathayredprod/",
   caseName: caseName,
