@@ -6,7 +6,7 @@
        <div class="order-title-all relative z-10">
        <!-- <img class="order-title-img" src="@/section/form/ordertitle.svg" alt="" srcset=""> -->
       <div class="order-title text-center font-['Noto_Serif_TC',serif]" v-html="info.order.title" v-if="info.order.title"></div>
-      <div class="order-subTitle text-center" v-html="info.order.subTitle" v-if="info.order.subTitle"></div>
+      <div class="order-subTitle text-center" v-html="$isMobile()?info.order.subTitle_m:info.order.subTitle" v-if="info.order.subTitle"></div>
     </div>
       <!-- <div class="cus-divider"></div> -->
 
@@ -607,7 +607,6 @@ const send = () => {
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
-      &room_type=${formData.room_type}
       &budget=${formData.budget}
       &people=${formData.people}
       &project=${formData.project}
