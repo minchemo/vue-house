@@ -1,13 +1,5 @@
 <template>
   <article class="s1" id="s1">
-    <img src="./s1/mo.jpg" class="t0">
-    <img src="./s1/t1m.svg" class="t1" data-aos="fade-up" data-aos-delay="100" v-if="isMobile">
-    <img src="./s1/t1.svg" class="t1" data-aos="fade-up" data-aos-delay="100" v-else>
-    <img src="./s1/img.png" class="img" data-aos="fade-up" data-aos-delay="100">
-    <img src="./s1/t2.svg" class="t2" data-aos="fade-up" data-aos-delay="100">
-    
-	<!--  
-    <img src="./s1/pc.jpg" class="t0">
     <div class="bg">
       <img src="./s1/bg.webp" class="bg1">
     </div>
@@ -17,6 +9,8 @@
     <img src="./s1/title.svg" class="title" data-aos="zoom-in" data-aos-delay="200">
     </div>
     <img src="./s1/comingsoon.svg" class="comingsoon" data-aos="zoom-in" data-aos-delay="500">
+	<!--  
+    <img src="./s1/02.jpg" class="t0">
        <div class="bg"><img src="./s1/bg.svg" alt="bg"></div>
        <img src="./s1/img.webp" class="img absolute" alt="img" data-aos="zoom-in" data-aos-delay="0">
        <img src="./s1/txt.svg" class="txt absolute" alt="txt" data-aos="zoom-in" data-aos-delay="200">
@@ -41,45 +35,12 @@ mix-blend-mode: overlay;opacity: .8;
 }
 */
 .s1 {
-  @apply relative w-full h-screen;
+  @apply relative w-full h-screen bg-[#FFF];
   min-height: size(900);
   max-height: size(1080);
   font-size:size(36);
-  background: linear-gradient(124.8deg, #eee5df 41.3%,#c3ab9f 41.4%);
   //padding: size(20);
-  
-@media screen and (max-width: 767px) {
-    height: calc(100vh - 63px);
-    min-height: sizem(450);
-    max-height: sizem(667);
-    font-size:sizem(15);
-    background: linear-gradient(135deg, #eee5df 41.3%,#c3ab9f 41.4%);
 
-}
-  .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .0;
-    height: 100%;
-  }
-  .t1{position: absolute;left: 0;right: 0;margin: auto;width: size(1600);top: calc(50% - #{size(250)});
-  @media screen and (max-width: 767px) {
-    width: sizem(340);
-    top: calc(50% - #{sizem(140)});  
-  }
-}
-  .img{position: absolute;left: 0;right:size(370);margin: auto;width: size(560);top: calc(50% - #{size(370)});
-  filter:drop-shadow(size(10) size(12) size(10) #000C);
-  @media screen and (max-width: 767px) {
-    right:sizem(-30);width: sizem(165);
-    top: calc(50% - #{sizem(180)});
-    filter:drop-shadow(sizem(5) sizem(6) sizem(5) #000C);
-  }
-}
-  .t2{position: absolute;left:  calc(50% + #{size(50)});margin: auto;width: size(745);top: calc(50% + #{size(135)});
-  @media screen and (max-width: 767px) {
-    left: 0;right: 0;width: sizem(270);top: calc(50% + #{sizem(95)});
-  }
-}
-
-  /*
   .main{
     width: 100%;
     height: 100%;
@@ -95,7 +56,7 @@ mix-blend-mode: overlay;opacity: .8;
 }
 .comingsoon{width: size(243);position: absolute; bottom: size(50);left: size(839);}
 
-
+.t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
 .bg{overflow: hidden;width: 100%;height: 100%;position: absolute;
   .bg1{width: 100%;height: 113%;object-fit: cover;
   transform: skewY(-3deg);transform-origin: 0 0%;
@@ -105,17 +66,16 @@ mix-blend-mode: overlay;opacity: .8;
 
 
 .en{top:size(40);right:size(40);width:size(18);}
-*/
 }
 @keyframes ann {
   to {
     transform: translateX(0%);
   }
 }
+
   
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-/*
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
@@ -151,7 +111,6 @@ mix-blend-mode: overlay;opacity: .8;
 
   
 }
-*/
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
