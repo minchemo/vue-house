@@ -1,10 +1,12 @@
 <template>
   <article class="s1" id="s1">
     <img src="./s1/mo.jpg" class="t0">
-    <img src="./s1/t1m.svg" class="t1" data-aos="fade-up" data-aos-delay="100" v-if="isMobile">
-    <img src="./s1/t1.svg" class="t1" data-aos="fade-up" data-aos-delay="100" v-else>
-    <img src="./s1/img.png" class="img" data-aos="fade-up" data-aos-delay="100">
-    <img src="./s1/t2.svg" class="t2" data-aos="fade-up" data-aos-delay="100">
+    <img src="./s1/t1m1.svg" class="t1" data-aos="flip-up" data-aos-delay="400" v-if="isMobile">
+    <img src="./s1/t12.svg" class="t1" data-aos="flip-up" data-aos-delay="400" v-else>
+    <img src="./s1/t1m2.svg" class="t1" data-aos="flip-down" data-aos-delay="400" v-if="isMobile">
+    <img src="./s1/t11.svg" class="t1" data-aos="flip-down" data-aos-delay="400" v-else>
+    <img src="./s1/img.png" class="img" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/t2.svg" class="t2" data-aos="fade-up" data-aos-delay="800">
     
 	<!--  
     <img src="./s1/pc.jpg" class="t0">
