@@ -51,7 +51,9 @@
   background: url("./s1/bgm.webp");
   background-size: cover;
   @media screen and (min-width: 768px) {
-    height:size(1080);
+    height:100vh;
+    max-height:size(1080);
+    min-height:size(900);
     background-image: url("./s1/bg.webp");
   }
   //background: #E60012;
@@ -90,7 +92,7 @@ animation: an 5s -1s linear alternate infinite;}
   transform: translateY(20%);
 animation: an 9s -6s linear alternate infinite;}
 @media screen and (min-width: 768px) {
-.ball1{width:size(515);top: -20%;left: 7%;}
+.ball1{width:size(515);top: -30%;left: 7%;}
 .ball2{width:size(354);top: 80%;left: 11%;}
 .ball3{width:size(740);top: 68%;left: 77%;}
 .ball4{width:size(170);top: 16%;left: 75%;}
