@@ -523,8 +523,8 @@ const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "貴賓身分", //budget
   "性別", //gender
-  "預算", //budget
   "建案", //project
   "服務專員", //people
   "信箱", //email
