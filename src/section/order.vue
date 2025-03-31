@@ -513,7 +513,7 @@ const bypass = [
   "people",
   "email",
   "room_type",
-  "budget",
+  // "budget",
   "city",
   "area",
 ]
