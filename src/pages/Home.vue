@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#FFF] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFF] text-[#000]">
     <S1 />
     <S2 />
     <S3 />
@@ -52,10 +52,27 @@
   opacity: 0;
 }
 
-.home{
-  &::before{content: "";background: url("@/section/s1/bg.jpg");width: 100%;position: fixed;left: 0;right: 0;top: 0;bottom: 0;}
+.home{ background:#393cdb;
+  &::before{content: "";
+  background: url("@/section/s3/1.webp") center;background-size: 100% auto;
+  width: 120%;height: 120vw;position: fixed;
+  left: -10%;right: 0;top: calc(50% - 60vw);bottom: 0;
+transform: translateX(0%) rotate(360deg);filter: blur(10px);
+  animation: bg 40s linear infinite;
+  @media screen and (max-width: 767px) {
+    width: 240%;
+    height: 240vw;
+    left: -70%;
+    top: calc(50% - 120vw);
+  }
+}
 }
 
+@keyframes bg {
+  to {
+    transform: translateX(0%);
+  }
+}
 img {
   display: inline;
   max-width: unset;

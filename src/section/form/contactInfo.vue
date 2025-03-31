@@ -3,8 +3,8 @@
   <div class="contact-info-img">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo" data-aos="zoom-in" data-aos-delay="600">
-      <img src="@/section/s2/logobg.webp"><img src="@/section/s2/logo.svg"></div>
+   <!--  <div class="logo" data-aos="zoom-in" data-aos-delay="600">
+      <img src="@/section/s2/logobg.webp"><img src="@/section/s2/logo.svg"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'; onPhoneClick();" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
@@ -137,17 +137,18 @@ img{width: 100%;
     position: relative;
     margin-top: size(20);
     gap: size(20);
-    width: size(920);
+    width: size(1100);
+    min-width: 680px;
     // min-width: 680px;
 
     .contact-item {
-      background: #1163A1;
+      background: #b6006499;
       color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
       border-radius: .5em;
-      font-size: size(16);
+      // font-size: size(16);
       line-height: 1.6;//3.8
       letter-spacing: 0em;
      // max-width: size(280);
@@ -158,7 +159,7 @@ img{width: 100%;
       gap: 1em;
 
       &:hover {
-        background: #064c81;
+        background: #d600a8b6;
         color: #fff;
 
         img {
@@ -167,9 +168,9 @@ img{width: 100%;
       }
 
       img {
-        max-width: size(27);
+        max-width: 1.69em;
         height: auto;
-        max-height: size(27);
+        max-height: 1.69em;
         filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
@@ -185,7 +186,7 @@ img{width: 100%;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
-
+        border-radius: .5em 0 0 .5em;
         &::before {
           content: "";
           position: absolute;
@@ -207,6 +208,7 @@ img{width: 100%;
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
+      border-radius: 0 .5em .5em 0;
       //  color: #fff;
 /*
         img {
@@ -248,7 +250,10 @@ img{width: 100%;
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#EA6DA0;
+    // background:#EA6DA0;
+    background: linear-gradient(120deg, #4000D7 0%, #870ED9 50%, #AA2EA7 100%);
+
+
 
     .contact-item {
       height: 100%;      
@@ -276,7 +281,7 @@ img{width: 100%;
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(80) 0;
+    padding: sizem(80) 0 sizem(40) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
@@ -294,18 +299,19 @@ img{width: 100%;
       gap: sizem(15);
       flex-direction: column;
     width: sizem(310);
+    min-width: 0;
 
       .contact-item {
         padding: 1.1em sizem(80);
-        font-size: sizem(16);
+       // font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
         margin: 0;
 
         img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-          max-width: sizem(27);
+        //  max-width: sizem(27);
           height: auto;
-          max-height: sizem(27);
+        //  max-height: sizem(27);
           margin: unset;
           position: absolute;
           left: calc(50% - 5em);
@@ -316,7 +322,7 @@ img{width: 100%;
         }
 
         &.address {
-          font-size: sizem(15);
+          // font-size: sizem(15);
           // border-radius: sizem(0) sizem(0) 0 0;
           border-radius: .5em .5em 0 0;
           padding: 1.1em 0;

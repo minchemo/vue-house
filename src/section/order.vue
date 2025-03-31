@@ -1,6 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
+      <img class="o1" src="@/section/s3/o1.svg" alt="">
+      <img class="o2" src="@/section/s3/o2.svg" alt="">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
@@ -24,12 +26,18 @@
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
           <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
             <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
+          </select>
+        </label>
+          <label class="row" v-if="info.ctime"><span>聯絡時間</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>請選擇時間</option>
+            <option v-for="ctime in info.ctime" :value="ctime" v-text="ctime" :key="ctime"></option>
           </select>
         </label>
           <label class="row"><span>居住縣市</span>
@@ -57,9 +65,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#666]">
+        <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -103,12 +111,15 @@
     bottom: size(50);
     vertical-align: middle;
   }
+  .o1{width:size(543);margin:0 size(60) 0 auto;}
+  .o2{width:size(484);}
 
 }
 
 .order {
   width: 100%;
-  padding-top: size(40);
+  padding-top: size(140);
+  // background: #666;
   //background: #195c45;
  // background: linear-gradient(to bottom, #195c45, #000704);
   
@@ -116,7 +127,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 500;
-    color: #000;
+    color: #fff;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -127,7 +138,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #333;
+    color: #fff;
     // color: #fff;
     padding-top:.8em;
     letter-spacing: .1em;
@@ -142,7 +153,7 @@
   }
 
   .form {
-    width: size(920);
+    width: size(1100);
     min-width: 680px;
     //  height: 350px;
     gap: size(80);
@@ -167,22 +178,26 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #0003;
+      background-color: #fff6;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
-      display: flex;width: 100%;border-radius: 0.3em;
+    textarea{font-size: 1em;}
+      textarea::placeholder,
+      input::placeholder {color: #fff9;}
+    .row{background: #0082;border: 1px solid #CCC;color: #fff;
+      display: flex;width: 100%; // border-radius: 0.3em;
     align-items:center;
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        > span{color: #ff0;font-size: 12px;}
       }
-      input,select{background: inherit;flex: 1;border-radius: 0.5em;}
+      input,select{background: none;flex: 1;border-radius: 0.5em;font-size: 1em;}
       option{color: #666;}
-      select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
+      select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;filter: invert(100%);color: #000;
       background-size:auto 200%;
       transition: background .3s;
+
       &:focus{
         background-position:calc(100% - .5em) 0%;
       }
@@ -195,7 +210,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #898989;
+    background-color: #d600a8b6;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -228,6 +243,8 @@
       left: -#{sizem(30)};
       bottom: sizem(590);
     }
+  .o1{width:sizem(265);margin:sizem(40) auto sizem(20) ;}
+  .o2{width:sizem(265);}
 
   }
 
@@ -260,7 +277,7 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1.5em;
+      padding-top:2.5em;
     }
     .order-subTitle{
       font-size: sizem(13);
@@ -334,6 +351,7 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  ctime: "",
   budget: "",
   project: "",
   email: "",
@@ -345,7 +363,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "ctime", "email", "room_type","budget", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
@@ -353,6 +371,7 @@ const formDataRef = ref([
   "手機", //phone
   "房型", //room_type
   "預算", //budget
+  "時間", //ctime
   "建案", //project
   "信箱", //email
   "居住縣市", //city

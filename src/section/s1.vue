@@ -1,8 +1,21 @@
 <template>
   <article class="s1" id="s1">
-   <!-- <img src="./s1/mo.jpg" class="t0">  -->
-    <img src="./s1/s1bgm.jpg" class="bg" v-if="isMobile"> 
-    <img src="./s1/s1bg.jpg" class="bg" v-else> 
+   <!-- <img src="./s1/mo.jpg" class="t0">
+    <img src="./s1/mo.jpg" class="t0">  -->
+    <div class="ball">
+      <img src="./s1/ball1.webp" class="ball1">
+      <img src="./s1/ball1.webp" class="ball2">
+      <img src="./s1/ball1.webp" class="ball3">
+      <img src="./s1/ball2.webp" class="ball4">
+      <img src="./s1/ball2.webp" class="ball5">
+      <img src="./s1/ball2.webp" class="ball6" v-if="isMobile">
+    </div>
+
+      <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
+      <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
+      <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="400">
+
+   <!--  <img src="./s1/s1bg.jpg" class="bg" v-else> 
     <div class="txt">
       <h2 class="t1" data-aos="zoom-in" data-aos-delay="0">在這裡<br>發現布魯克林</h2>
       <div class="t2" data-aos="zoom-in" data-aos-delay="200">紐約曼哈頓，為布魯克林而美麗<br>
@@ -11,7 +24,7 @@
 <div class="t3" data-aos="zoom-in" data-aos-delay="400">國際心跳 矚目之光<span>蓄勢待發</span></div>
 <img src="./s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="600"> 
     </div>
-   
+  -->
   </article>
 </template>
 
@@ -32,38 +45,64 @@
   @apply relative; 
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content:center;
   align-items:center;
-  font-size:size(26);
+  height:sizem(750);
+  background: url("./s1/bgm.webp");
+  @media screen and (min-width: 768px) {
+    height:size(1080);
+    background: url("./s1/bg.webp");
+  }
   //background: #E60012;
-// padding-bottom: size(140);
+// padding-bottom: size(140);V
  // &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
 
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
  .bg{width: 100%;}
- 
-  .txt{
-    position: absolute;
-    top: size(154);left: 0;right: 0;text-align: center;
-  line-height: 1.7;
-.t1{color: #FFF;line-height: 1.4;
-  font-size: 2em;margin-bottom:.45em;
-&::before{content: url("./s1/6537.svg");position: absolute;top: 0.3em;
-width: 8.8em;left: calc(50% - 8.8em * .5);}
+.t1{width:sizem(260);margin: sizem(-13) 0 sizem(19) 0;
 }
-.t3{letter-spacing: 0.05em;margin:2.65em auto;line-height: 1.5;
-span{display: block;font-size: 1.5em;}
-  &::before,&::after{content: "";
-width: 3em;height: 1px; background: currentColor;display: block;margin:.7em auto;
+.t2{width:sizem(260);
 }
+@media screen and (min-width: 768px) {
+.t1{width:size(1014);margin: size(90) 0 size(50) 0;}
+.t2{width:size(676);}
 }
-.en{width: 24em;}
+.ball{position: absolute;width: 100%;height: 100%;left: 0;top:0;z-index: 2;
+img{position: absolute;}
+.ball1{width:sizem(243);top: -14%;left: -13%;
+  transform: translateY(20%);
+animation: an 10s alternate infinite;
+}
+.ball2{width:sizem(195);top: 78%;left: -22%;
+  transform: translateY(40%);
+animation: an 8s -4s linear alternate infinite;}
+.ball3{width:sizem(61);top: 13%;left: 71%;
+  transform: translateY(20%);
+animation: an 6s -2s linear alternate infinite;}
+.ball4{width:sizem(147);top: 73%;left: 78%;
+  transform: translateY(30%);
+animation: an 7s -5s linear alternate infinite;}
+.ball5{width:sizem(24);top: 82%;left: 29%;
+  transform: translateY(50%);
+animation: an 5s -1s linear alternate infinite;}
+.ball6{width:sizem(154);top: 137%;left: 77%;
+  transform: translateY(20%);
+animation: an 9s -6s linear alternate infinite;}
+@media screen and (min-width: 768px) {
+.ball1{width:size(515);top: -20%;left: 7%;}
+.ball2{width:size(354);top: 80%;left: 11%;}
+.ball3{width:size(740);top: 68%;left: 77%;}
+.ball4{width:size(170);top: 16%;left: 75%;}
+.ball5{width:size(103);top: 128%;left: 9%;}
+
+}
 }
 }
 
   
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
+/*
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
@@ -75,6 +114,7 @@ width: 3em;height: 1px; background: currentColor;display: block;margin:.7em auto
   }
 }
 }
+*/
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
