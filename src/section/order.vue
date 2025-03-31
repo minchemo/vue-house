@@ -494,6 +494,7 @@ const formData = reactive({
   phone: "",
   room_type: "",
   budget: "",
+  gender: "",
   project: "",
   people: "",
   email: "",
@@ -508,6 +509,7 @@ const formData = reactive({
 const bypass = [
   "project",
   "msg",
+  "gender",
   "people",
   "email",
   "room_type",
@@ -521,6 +523,7 @@ const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "性別", //gender
   "預算", //budget
   "建案", //project
   "服務專員", //people
@@ -605,14 +608,14 @@ const send = () => {
   if (pass && !sending.value) {
     sending.value = true
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}(${formData.gender})
       &phone=${formData.phone}
       &budget=${formData.budget}
       &people=${formData.people}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}
-      &msg=${formData.room_type}；${formData.msg}
+      &msg=${formData.budget}；${formData.room_type}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
