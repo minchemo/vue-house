@@ -49,9 +49,10 @@
   align-items:center;
   height:sizem(750);
   background: url("./s1/bgm.webp");
+  background-size: cover;
   @media screen and (min-width: 768px) {
     height:size(1080);
-    background: url("./s1/bg.webp");
+    background-image: url("./s1/bg.webp");
   }
   //background: #E60012;
 // padding-bottom: size(140);V
