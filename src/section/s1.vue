@@ -5,7 +5,7 @@
     
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/building.webp" class="building" data-aos="zoom-in" data-aos-delay="200">
-    <img src="./s1/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="200">
+    <!-- <img src="./s1/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="200"> -->
   </article>
 </template>
 
@@ -18,10 +18,12 @@
   }
 }
   .s1 {
-    height:calc(100vh - 63px);
+    height:  sizem(604);
   //  height:sizem(667);
-    min-height: sizem(604);
+  /*  height:calc(100vh - 63px);
+  min-height: sizem(604);
     max-height: sizem(750);
+    */
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -34,7 +36,7 @@
     min-height: size(900);
     max-height: size(1080);
     justify-content:space-between;
-    padding: 0 size(650) 0 0;
+    padding: 0;
 }
   .bg{position: absolute;
     top:0;left:0;
@@ -44,13 +46,13 @@
       height: auto;width:size(2300);top:calc(50% + #{size(0 - 1080 * .5)});
     }
   }
-  .logo{width:sizem(290);margin:sizem(37) auto sizem(47);
+  .logo{width:sizem(290);margin:sizem(110) auto sizem(67);
     @media screen and (min-width: 768px) {
-      position: relative;top:calc(20% - #{size(155)});
+      position: relative;top:calc(20% - #{size(180)});
       width:size(608);margin:auto;}
   }
   .building{
-    width:sizem(78);transform-origin: 50% 100%;
+    width:sizem(110);transform-origin: 50% 100%;
     @media screen and (min-width: 768px) {width:size(208);}
   }
   .bottom{
