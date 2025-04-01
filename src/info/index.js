@@ -8,10 +8,10 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "xxxxx",
+    // address: "xxxxx",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3611.7443866121916!2d121.3951871!3d25.1443313!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a4536fd66a97%3A0x1c07f95e9924ff77!2zMjQ55paw5YyX5biC5YWr6YeM5Y2A5ZWG5riv6LevMuiZnw!5e0!3m2!1szh-TW!2stw!4v1741688492581!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/pDA5nnT3mt6sFqYz7",
-    phone: "02-xxxxxx",
+    // phone: "02-xxxxxx",
     fbLink: "https://www.facebook.com/gtcip.debang/",
     fbMessage: "https://m.me/gtcip.debang/",
     caseName: caseName,
