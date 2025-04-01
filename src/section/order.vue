@@ -621,7 +621,7 @@ const send = () => {
       &utm_content=${utmContent}
       &utm_campaign=${utmCampaign}
       &date=${date}
-      &campaign_name=${info.caseName}`,
+      &campaign_name=${info.caseName}-vip`,
       {
         method: "GET",
       }
