@@ -4,8 +4,8 @@
     <img src="./s1/bg.webp" class="bg">
     
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/building.webp" class="building" data-aos="zoom-in" data-aos-delay="200">
-    <!-- <img src="./s1/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="200"> -->
+     <!-- <img src="./s1/building.webp" class="building" data-aos="zoom-in" data-aos-delay="200">
+   <img src="./s1/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="200"> -->
   </article>
 </template>
 

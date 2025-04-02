@@ -37,11 +37,13 @@
           srcset=""
         />
       </div>
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">首席台積電璀璨版圖<br>
-        聚焦全球AI科技核心</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200"> Technology Core</h4>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">生態綠廊公園內的<br>
+        半導體園區</h3>
+        <div class="t_s" data-aos="fade-up" data-aos-delay="200">全區<b>175</b>公頃｜<span class="text-[#000]">材料研發專區</span>＋<span class="text-[#000]">晶圓廠</span></div>
         <div class="hr" data-aos="fade-up" data-aos-delay="400"></div>
-      <p data-aos="fade-up" data-aos-delay="600">台積電連動美、日、星國際科研能量競速佈局，港都華麗轉身科研繁城，頂尖跨國企業搶駐，科技菁英絡繹進城，共構我國南方發展新藍圖，躍居國際產業核心之列，領銜全球聚焦目光。</p>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="600"> Technology Core</h4>
+      <p data-aos="fade-up" data-aos-delay="800">園區內除晶圓廠外，另規劃濕地公園、生態公園、生態湖及生活綠廊，連結周邊半屏山自然公園，建構生態綠廊公園內半導體園區願景，落實綠色製造與環境共生。<br><br>
+基地座落晶圓廠旁，上下班可避過痛苦塞車潮，僅約500公尺可到達R20後勁捷運站，僅四站捷運站(約13分鐘)的距離可抵達R16左營高鐵站及新光三越百貨。5座全球最先進的台積電晶圓廠正在陸續落成，高雄後勁將迎來史上最大蛻變。</p>
     </div>
   </article>
 </template>
@@ -98,12 +100,12 @@
         font-size:sizem(14);
         line-height: 1.8;
         width: sizem(327);
-        margin: sizem(-33) auto sizem(20) auto;
+        margin: sizem(-17) auto sizem(20) auto;
         padding: sizem(6) sizem(38) sizem(38) sizem(38);
         text-align: justify;
         @media screen and (min-width: 768px) {
           position: absolute;
-          top: size(80);left: size(159);
+          top: size(80);left: size(80);
           font-size:size(22);
           margin: 0 auto 0 auto;
           padding: size(0) size(48) size(0) size(48);
@@ -125,12 +127,22 @@
         }
         .subtitle{
           font-size:sizem(20);
+          margin:0em 0 1em;
           @media screen and (min-width: 768px) {font-size:size(30);}
         }
         .hr{width: 100%; height: 1px;
           background: #A30C24;
-          margin:sizem(6) 0 sizem(23);
-          @media screen and (min-width: 768px) {margin:size(10) 0 size(40);}
+          margin:0em 0 .3em;
+          // @media screen and (min-width: 768px) {margin:size(10) 0 size(40);}
+        }
+        .t_s{color: #A30C24;font-size: 1.04em;
+          margin-top:.3em;
+        b{font-size: 1.1em;font-weight: 400;}
+        }
+        @media screen and (min-width: 768px) {
+          
+        p{font-size: .85em;
+        }
         }
       }
 
@@ -161,7 +173,7 @@ const imgs = [
    // caption: "依政府公開計畫繪製，僅供參考請以實際為主",
   },
   {
-    img: new URL("./s2/2.webp", import.meta.url).href,
+    img: new URL("./s2/2.jpg", import.meta.url).href,
     caption: "",
    // caption: "圖片來源google地圖，僅供參考請以實際為主",
   },
