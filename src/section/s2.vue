@@ -19,7 +19,7 @@
         <span class="t4">相關檔案</span>
       </section>
       <section class="list" v-for="item in list2" :key="item">
-        <a :href="item.link" class="link" v-if="item.link&&!item.link.startsWith('#')"></a>
+        <a :href="item.link" class="link" v-if="item.link&&!item.link.startsWith('#')" target="_blank"></a>
         <span :class="['t1', item.t1[0]]" v-html="item.t1[1]"></span>
         <span class="t2" v-html="item.t2"></span>
         <h3 class="t3"><span v-html="item.t3"></span><span class="t4_a" v-if="item.link&&$isMobile()"></span><span class="t4" v-if="item.link">下載</span></h3>
@@ -157,7 +157,7 @@ const list2 = [
     t1: ["v1", "已完成"],
     t2: "113/07/06",
     t3: "自辦公聽會<br><b>第一場次A區(下午14時整)</b><br>A區範圍：保福段1~161、853~856、1464地號等172筆土地<br><br><b>第二場次B區(下午18時整)</b><br>B區範圍：保福段860~867地號等8筆土地",
-    link:"https://drive.google.com/drive/folders/12l5cKU4cLSsySCx_WGbTXDvtKjJiQDQW?usp=sharing",
+    link:"https://drive.google.com/file/d/1IsvVfc1T1h4dznE_L2xoLObFy9UQv70P/view?usp=sharing",
   },
   {
     t1: ["v1", "已完成"],
