@@ -290,7 +290,7 @@
         color: #231815;
       }
       select {
-        background: url("h35.banner.tw/img/select.svg") no-repeat calc(100% - 0.5em)
+        background: url("//h35.banner.tw/img/select.svg") no-repeat calc(100% - 0.5em)
           100%;
         background-size: auto 200%;
         transition: background 0.3s;
