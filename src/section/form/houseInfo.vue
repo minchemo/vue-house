@@ -35,7 +35,7 @@
     <a href="https://www.lixin.com.tw/" target="_blank"
       ><img
         class="hover:opacity-50"
-        src="//h65.tw/img/footerLogo.gif"
+        src="//h35.banner.tw/img/footerLogo.gif"
         alt="立炘數位"
         srcset=""
     /></a>
