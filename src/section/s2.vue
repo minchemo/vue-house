@@ -157,7 +157,7 @@ const list2 = [
     t1: ["v1", "已完成"],
     t2: "113/07/06",
     t3: "自辦公聽會<br><b>第一場次A區(下午14時整)</b><br>A區範圍：保福段1~161、853~856、1464地號等172筆土地<br><br><b>第二場次B區(下午18時整)</b><br>B區範圍：保福段860~867地號等8筆土地",
-    link:"https://drive.google.com/file/d/1IsvVfc1T1h4dznE_L2xoLObFy9UQv70P/view?usp=sharing",
+    link:"https://drive.google.com/drive/folders/12l5cKU4cLSsySCx_WGbTXDvtKjJiQDQW?usp=sharing",
   },
   {
     t1: ["v1", "已完成"],
