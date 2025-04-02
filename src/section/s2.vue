@@ -181,7 +181,7 @@ const list2 = [
     t1: ["v2", "進行中"],
     t2: "114/2/26起",
     t3: " 公展30日",
-    link:"https://drive.google.com/file/d/1RDZt4_Fer_P69n9pdZcUn-y5NXj311nE/view?usp=sharing",
+    link:"https://drive.google.com/drive/folders/1UwGocDKDqGiaryxfzI5p0joqaFVwSjox?usp=sharing",
   },
   {
     t1: ["v2", "進行中"],
