@@ -1,4 +1,4 @@
-const caseName = "國泰13期"
+const caseName = "國泰13期-vip"
 
 export default {
   meta: {
