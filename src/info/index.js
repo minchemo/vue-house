@@ -8,11 +8,11 @@ export default {
   },
   address1: "接待中心", //按鈕區的--- 如空白會只呈現地址
   address2: "接待中心", //map點下確認的--- 如空白會顯示"導航地址"
-  address: "臺中市西區梅川西路一段23號",
+  address: "台中市南屯區大業路二段556號5F-A",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.8306269183545!2d120.6674858!3d24.1425856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0ed9a2796b%3A0x4acf8c43e71cdd1a!2z6bqX5pmo5bu66Kit!5e0!3m2!1szh-TW!2stw!4v1733905506117!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/t1HoEMUrd7NvPAfXA",
-  phone: "04-3705-8658",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.059411178104!2d120.63789919999998!3d24.169649099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d0008cc0f7b%3A0xe8d89c35b82548fe!2z6bqX5pmo54mH54mH5bGx6ZaR!5e0!3m2!1szh-TW!2stw!4v1743988058447!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/BXMMRBUkqkv5moNu7",
+  phone: "04-2255-8788",
   fbLink: "//facebook.com/61552769816381",
   fbMessage: "//m.me/61552769816381",
   caseName: caseName,

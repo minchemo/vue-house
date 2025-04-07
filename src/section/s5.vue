@@ -21,7 +21,7 @@
         data-aos="fade-up"
         data-aos-delay="400"
       >基地位置｜臺中市西屯區朝富二街/台灣大道三段<br />
-接待會館｜臺中市西區梅川西路一段23號<br />
+接待會館｜台中市南屯區大業路二段556號5F-A<br />
 投資興建｜麗晨建設股份有限公司<br />
 設計團隊｜元根建築工房<br />
 樓層規劃｜地上18層、地下4層<br />
@@ -33,13 +33,15 @@
         data-aos="fade-up"
         data-aos-delay="600"
       >七期 秋紅谷 捷運宅<br />
-遇見 幸福的轉角 美麗的意外<br />
-捎來溪畔的家⋯<br />
-無二的無二 又見麗晨
+      遇見 幸福的轉角 美麗的意外<br />
+      捎來溪畔的家⋯<br />
+      無二的無二 又見麗晨
       </div>
-      <img src="./s1/t4.svg" class="t4" alt="33 42坪"
+      <div class="t4"
         data-aos="fade-up"
         data-aos-delay="800">
+        33-42坪 <span>04</span>2255-8788
+      </div>
     </div>
   </article>
 </template>
@@ -64,6 +66,9 @@
       line-height: 1.9;
       display: inline-block;text-align: left;
     }
+    .t4{font-size: size(42);letter-spacing: 0.05em;color: #444;
+    span{font-size: .43em;display: inline-block;width: 1em;word-wrap:break-word;line-height: 1;}
+    }
 @media screen and (min-width: 767px) {
     .t1 {
       font-size: size(30);
@@ -71,7 +76,6 @@
     .t3 {
       font-size: size(30);margin:size(83) auto size(70) auto;
     }
-    .t4{width:size(399);display: block;margin:0 auto size(110);}
   }
 }
 .style{
@@ -101,7 +105,7 @@
       .t2 {
       font-size: sizem(14);margin-bottom:sizem(77);
     }
-    .t4{width:sizem(176);display: block;margin:sizem(20) auto sizem(60);}
+    .t4{font-size: sizem(20);margin: 1em 0 3em 0;}
     
     }
   }
