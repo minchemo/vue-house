@@ -12,8 +12,8 @@
    <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <S1 />
-    <S2 />
     <!--
+    <S2 />
     <S3 />
     <S4 />
     <S5 />
@@ -45,7 +45,7 @@
 }
 
 .home{
-  background:#00457e;
+  background:#D56653;
 }
 /*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;

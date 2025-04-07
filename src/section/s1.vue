@@ -1,22 +1,16 @@
 <template>
   <article class="s1" id="s1">
-	<!--  
 
-   <img src="./s1/pc.jpg" class="t0">
-   <img src="./s1/mo.jpg" class="t0">
-
-   -->
-   <div class="bg">
-    <div class="bg1"></div><div class="bg2"></div>
-  </div>
-
-   <div class="con flex">    
-    <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
+   
+  <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="100">
   <img src="./s1/t2.svg" alt="title" class="t2" data-aos="zoom-in" data-aos-delay="300">
-  </div>
 
-  <img src="./s1/logoicon.svg" alt="logoicon" class="logoicon" data-aos="zoom-in" data-aos-delay="500">
+  <img src="./s1/leaf.webp" alt="leaf" class="leaf" data-aos="zoom-in" data-aos-delay="0">
+  <img src="./s1/tree.webp" alt="tree" class="tree" data-aos="zoom-in" data-aos-delay="0">
+  <img src="./s1/main.webp" alt="main" class="main" data-aos="zoom-in" data-aos-delay="100">
+  <img src="./s1/cloud.webp" alt="cloud" class="cloud" data-aos="zoom-in" data-aos-delay="200">
+  <img src="./s1/city.webp" alt="city" class="city" data-aos="zoom-in" data-aos-delay="300">
   </article>
 </template>
 
@@ -43,100 +37,77 @@
 
   background-size: cover;
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
-.bg{position: absolute; top: 0;left: 0;width: 100%;height: 100%;background: #171c61;
-.bg1,.bg2{
-  position: absolute; top: 0;left: 0;width: 200%;height: 100%;
-  background: url("./s1/bgggg.jpg");
-  background-size: 50% auto;
-  animation: ww 10s linear infinite;opacity: .75;
-}
-.bg2{background-position: 100% 100%;mix-blend-mode: overlay;
-animation-delay: -5s;
-animation-direction:reverse;
-}
-&::after{content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #171c61;mix-blend-mode: soft-light;opacity: .5;}
 
-}
-@keyframes ww {
-  to {
-     transform: translateX(-50%);
+  .leaf{
+    position: absolute;
+    left: size(-20);
+    top: size(-20);
+    width: size(749);
+    z-index: 1;
   }
-}
-.con{gap: size(60);margin: 0 0 size(70) 0;filter:drop-shadow(0px 0px size(20) #171c61);
-  div{flex-direction:column;margin: 0;}}
+  .main{
+    position: absolute;
+    left: size(0);
+    top: size(0);
+    bottom: size(0);
+    width: size(1920);
+    top: auto;
+    z-index: 1;
+  }
+  .tree{
+    position: absolute;
+    left: size(0);
+    top: size(0);
+    bottom: size(0);
+    width: size(1920);
+    top: auto;
+    z-index: 2;
+  }
+  .city{
+    position: absolute;
+    right:size(0);
+    bottom: size(0);
+    top: auto;
+    width: size(1150);
+    z-index: 0;
+    mix-blend-mode: overlay;
+  }
 
-  .flex{
-    display: flex;
-    flex-direction: column;
+  .cloud{
+    position: absolute;
+    left: size(0);
+    top: size(0);
+    width: size(1284);
+    z-index: 0;
+  }
 
   .logo{
-    width: size(420);
+    position: absolute;
+    width: size(337);
+    right: size(915);
+    top: size(209);
+    z-index: 99;
     }
 
   .t1{
-    width: size(417);
-    margin-top: size(30);
+    position: absolute;
+    width: size(565);
+    right: size(262);
+    top: size(170);
+    z-index: 99;
     }
   .t2{
-    width: size(538);
-    margin-top: size(30);
+    position: absolute;
+    width: size(565);
+    right: size(262);
+    top: size(308);
+    z-index: 99;
   }
 
-  }
-  .logoicon{
-    width: size(438);
-    position: absolute;
-    bottom: size(200);
-    right: size(730);
-  }
+}
   
  
-    
-@keyframes ball {
-  to{
-     transform: translate(0);
-  }
-}
 
-.ball{top: 0;left: 0;width: 100%;height: 100%;//background: #0003;
-div{position: absolute;border-radius: 50%;width: 1em;height: 1em;
-  transform: translateY(-150%);
-animation: ball 5s ease-in-out alternate infinite;}
-.ball1{background: linear-gradient(212deg, #DF91B6 20.3%, #D94371 86.6%);
-  bottom:size(312) ;left: size(65);font-size: size(52);animation-delay: .5s;
-}
-.ball2{background:  linear-gradient(355deg, #DD7E58 -55.4%, #E2A44A 30.8%, #E7D03A 116.9%, #E9DD36 138.4%);
-  bottom:size(130) ;left: size(490);font-size: size(54);
-}
-.ball3{background: #D42A78;animation-delay: 1s;
-  bottom:size(190) ;left: size(605);font-size: size(38);}
-.ball4{background:#0000 url("./s1/ball.png") center;background-size: size(18) auto;
-  bottom:size(200);left: size(-37);font-size: size(144);opacity: .3;animation-delay: 2s;}
-.ball5{background:  linear-gradient(355deg, #DD7E58 -55.4%, #E2A44A 30.8%, #E7D03A 116.9%, #E9DD36 138.4%);animation-delay: 3s;
-  bottom:size(120) ;right: size(165);font-size: size(76);
-}
-}
-@keyframes train {
-  0%{
-     transform: translate(250vw);
-  }
-  55%{
-     transform: translate(135vw);
-  }
-  65%{
-     transform: translate(135vw);
-  }
-  100%{
-     transform: translate(-50vw);
-  }
-}
-.train{bottom: 0;left: 0;width: 100%;text-align: right;
-      .trainbg{width:size(1617);}
-      .train1{bottom: size(10);right:100%;height:size(143);
-      animation:train 10s infinite;
-      }
-    }
-}
 
   
 /* 螢幕尺寸標準 */
@@ -156,94 +127,61 @@ animation: ball 5s ease-in-out alternate infinite;}
     background-size: cover;
     background-position: bottom;
 
-    .bg{
-.bg1,.bg2{width: 550%;
-}
-.bg2{background-position: 100% 130%;
-}
 
-}
    
-
-
-
-    .con{gap:0;margin: 0 0  sizem(34) 0;flex-direction:column;filter:drop-shadow(0px 0px sizem(15) #171c61);
-  div{flex-direction:column;margin: 0;}}
-
-  .bgm{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-  
-
-.flex{
-    display: flex;
-    flex-direction: column;
-
-
   .logo{
-    width: sizem(197);
+    width: sizem(217);
+    right: sizem(79);
+    top: sizem(294);
     }
+
   .t1{
-    width: sizem(255);
-    margin-top: size(250);
+    width: sizem(217);
+    right: sizem(79);
+    top: sizem(230);
     }
   .t2{
-    width: sizem(262);
-    margin-top: sizem(60);
+    width: sizem(217);
+    right: sizem(79);
+    top: sizem(173);
   }
 
+  .main{
+    width: sizem(514);
+    left: sizem(-66);
+    bottom: sizem(30);
   }
 
-  .logoicon{
-    width: sizem(293);
-    position: absolute;
-    bottom: sizem(150);
-    right: sizem(45);
+  .tree{
+    width: sizem(921);
+    left: sizem(-144);
+    bottom: sizem(0);
   }
-  
-    
 
-  
-.ball{
-.ball1{
-  bottom:sizem(177) ;left: sizem(23);font-size: sizem(25);
-}
-.ball2{
-  bottom:sizem(55) ;left: sizem(60);font-size: sizem(20);
-}
-.ball3{
-  bottom:sizem(135) ;right:sizem(25);;left:auto;font-size: sizem(13);}
-.ball4{background-size: sizem(8) auto;
-  bottom:sizem(120) ;left: sizem(-20);font-size: sizem(70);}
-.ball5{
-  bottom:sizem(45) ;right: sizem(23);font-size: sizem(40);
-}
-}
+  .leaf{
+    width: sizem(287);
+    left: auto;
+    right: sizem(-25);
+    top: sizem(-18);
+    transform:scaleX(-1) !important;
+  }
+
+  .city{
+    right:sizem(22);
+    bottom: sizem(102);
+    width: sizem(331);
+  }
+
+  .cloud{
+    left: sizem(0);
+    top: sizem(0);
+    width: sizem(375);
+  }
 
 
-@keyframes train {
-  0%{
-     transform: translate(calc(100% + 150vw));
+
+
   }
-  55%{
-     transform: translate(100%);
-  }
-  65%{
-     transform: translate(100%);
-  }
-  100%{
-     transform: translate(-50vw);
-  }
-}
-.train{
-      .trainbg{width:100%;}
-      .train1{bottom: sizem(2);height:sizem(52);
-        transform: translate(100%);
-      }
-    }
-}
 
   
 }
