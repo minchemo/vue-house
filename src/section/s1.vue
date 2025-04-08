@@ -11,6 +11,7 @@
   <img src="./s1/main.webp" alt="main" class="main" data-aos="zoom-in" data-aos-delay="100">
   <img src="./s1/cloud.webp" alt="cloud" class="cloud" data-aos="zoom-in" data-aos-delay="200">
   <img src="./s1/city.webp" alt="city" class="city" data-aos="zoom-in" data-aos-delay="300">
+  <div class="txt">外觀3D示意圖 僅供參考</div>
   </article>
 </template>
 
@@ -44,6 +45,14 @@
     top: size(-20);
     width: size(749);
     z-index: 1;
+  }
+  .txt{
+    position:absolute;
+    font-size: size(16);
+    color: #fff;
+    bottom: size(20);
+    left: size(300);
+    z-index: 99;
   }
   .main{
     position: absolute;
@@ -128,7 +137,13 @@
     background-position: bottom;
 
 
-   
+  .txt{
+    font-size: sizem(7);
+    bottom: sizem(5);
+    left: sizem(5);
+  }
+
+
   .logo{
     width: sizem(217);
     right: sizem(79);
