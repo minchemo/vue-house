@@ -41,10 +41,10 @@
       <img src="@/section/form/messenger.svg" alt="佳鋐首邑" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="@/section/form/pen.svg" alt="佳鋐首邑" srcset="" />
       <div>預約賞屋</div>
-    </div>
+    </div-->
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
       <img src="@/section/form/gmap.svg" alt="佳鋐首邑" srcset="" />

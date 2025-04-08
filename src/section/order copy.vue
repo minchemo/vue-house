@@ -1,6 +1,72 @@
   <template>
   <div id="order" class="order relative bg-[#DFDDC8] text-center">
     <div class="order-section font-['noto_sans_tc']">
+      <!-- Title -->
+      <div class="order-title text-center font-['noto_serif_tc'] text-[#ffffff]">{{ info.order.title }}</div>
+      <div class="cus-divider"></div>
+
+      <!-- Title Image -->
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="佳鋐首邑" srcset=""
+      data-aos="fade" data-aos-duration="1000">
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="佳鋐首邑" srcset="" data-aos="fade"
+      data-aos-duration="1000"> -->
+
+      <!-- Custom Image -->
+      <img class="decor" src="@/section/form/decor.png" alt="" srcset="">
+
+      <!-- Form -->
+      <div class="form mx-auto relative flex items-start justify-center">
+        <div class="left h-full flex flex-col justify-between items-center">
+          <input type="text" placeholder="姓名" class="input w-full rounded-full" :value="formData.name"
+            @input="(event) => (formData.name = event.target.value)" />
+          <input type="text" placeholder="手機" class="input w-full rounded-full" :value="formData.phone"
+            @input="(event) => (formData.phone = event.target.value)" />
+
+          <select class="select w-full rounded-full" v-model="formData.room_type">
+            <option value="" selected disabled>需求房型</option>
+            <option value="三房(40坪)">三房(40坪)</option>
+            <option value="四房(45坪)">四房(45坪)</option>
+          </select>
+
+          <select class="select w-full rounded-full" v-model="formData.city">
+            <option value="" selected disabled>居住縣市</option>
+            <option v-for="city in cityList" :value="city.value">
+              {{ city.label }}
+            </option>
+          </select>
+          <select class="select w-full rounded-full" v-model="formData.area">
+            <option value="" selected disabled>居住地區</option>
+            <option v-for="area in areaList" :value="area.value">
+              {{ area.label }}
+            </option>
+          </select>
+        </div>
+        <div class="right h-full">
+          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
+            class="textarea w-full h-full rounded-3xl" placeholder="備註訊息"></textarea>
+        </div>
+      </div>
+
+      <!-- Policy -->
+      <div class="flex gap-2 items-center justify-center control">
+        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md" />
+        <p>
+          本人知悉並同意<label for="policy-modal"
+            class="modal-button text-[#CC0000] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        </p>
+      </div>
+      <Policy />
+
+      <!-- Recaptcha -->
+      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+
+      <!-- Send -->
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer font-['noto_serif_tc']" @click="send()">
+        {{ sending ? '發送中..' : '立即預約' }}
+      </div>
+
       <!-- Contact Info -->
       <ContactInfo />
     </div>
@@ -24,7 +90,7 @@
   background-size: cover;
   padding-bottom: size(0);
   position: relative;
-  height: size(700);
+  height: size(1477);
   padding-top: size(90);
   overflow: hidden;
 
@@ -135,7 +201,7 @@
 @media screen and (max-width:768px) {
   .order-section {
     background-image: url('@/section/form/bg_m.jpg');
-    height: size-m(700);
+    height: size-m(1452);
     padding-bottom: 0;
     position: relative;
     overflow: hidden;
