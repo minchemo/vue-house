@@ -46,10 +46,10 @@
       <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
-    </div>
+    </div-->
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
       <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
