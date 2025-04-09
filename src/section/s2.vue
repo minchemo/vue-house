@@ -8,14 +8,12 @@
         @splide:move="onMove"
       >
         <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgs"
-        >
-        <img :src="i.img" :alt="i.caption">
-          <span class="caption">
-            {{ i.caption }}
-          </span>
+          class="slide-item">
+          <img src="./s2/1.webp" alt="1">
+        </SplideSlide>
+        <SplideSlide
+          class="slide-item">
+          <img src="./s2/2.svg" alt="2" class="img2" style="">
         </SplideSlide>
       </Splide>
     </div>
@@ -62,9 +60,10 @@
       left:0;transform: translateX(0%);right: 0;margin: 0 0 0 auto;
     }
     .slide-item {width: 100%;height:100%;
-    img{width:100%;object-fit: cover;height:sizem(317);
+    img{width:100%;object-fit: cover;height:sizem(317);background-size:cover;
       @media screen and (min-width: 768px) {height:size(960);}
     }
+    .img2{background-image:url('./s2/2.jpg');}
     .caption {
       position: absolute;top: 0.5em;right: 4.3em;color: #FFF;font-size: sizem(11);text-shadow:0 1px 3px #000;
       @media screen and (min-width: 768px) {right: .5em;font-size: size(17);}
@@ -165,18 +164,5 @@ const sConfig = {
   type: "loop",
 }
 
-
-const imgs = [
-  {
-    img: new URL("./s2/1.webp", import.meta.url).href,
-    caption: "",
-   // caption: "依政府公開計畫繪製，僅供參考請以實際為主",
-  },
-  {
-    img: new URL("./s2/2.jpg", import.meta.url).href,
-    caption: "",
-   // caption: "圖片來源google地圖，僅供參考請以實際為主",
-  },
-]
 
 </script>

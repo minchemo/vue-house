@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1386 960">
+  <defs>
+    <style>
+
+      .st2 {
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <path d="M55,280.8v681.2h1334V280.8H55ZM165.6,457.1c-28.4-.5-28.4-42.8,0-43.3,28.4.5,28.4,42.8,0,43.3ZM216.5,456.7c4.1-7.6,11.1-7,22.1-11.1,11.1-4.1,14-5.2,32-12.2,18.1-7,42.5-4.1,42.5-4.1,21.6,1.9,11.6-.6,33.8,3.3,43.2,9.6,69.5,30.3,97.3,39.4l-227.7-15.3h0ZM609.4,483.4c-28.4-.5-28.4-42.8,0-43.3,28.4.5,28.4,42.8,0,43.3ZM823.7,511.8c-28.4-.5-28.4-42.8,0-43.3,28.4.5,28.4,42.8,0,43.3ZM1156.3,622.6c-28.4-.5-28.4-42.8,0-43.3,28.4.5,28.4,42.8,0,43.3ZM1254.8,811.8c.5-28.4,42.8-28.4,43.3,0-.5,28.4-42.8,28.4-43.3,0Z"/>
+    </clipPath>
+    <linearGradient id="lg" x1="0" y1="500" x2="0" y2="771" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff0"/>
+      <stop offset=".6" stop-color="#fff">
+      <animate attributeName="offset" from=".5" to=".7" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="1" stop-color="#fff0"/>
+      <animate attributeName="y1" from="771" to="-50" dur="2s" repeatCount="indefinite" />
+    </linearGradient>
+    <linearGradient id="lg2" x1="0" y1="0" x2="300" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff0" />
+      <stop offset=".5" stop-color="#fff" />
+      <stop offset="1" stop-color="#fff0"/>
+      <animate attributeName="y1" from="0" to="3000" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="y2" from="300" to="3300" dur="5s" repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+  <path stroke="url(#lg2)" 
+        clip-path="url(#clippath)" stroke-width="8" d="M150.8,377.4c-23.9,29-46.8,49.7-16.8,54.2,77.5,11.6,286.6,18.9,385.6,25.5,132.9,8.9,459.3,52.9,574.2,93.7,49.9,17.7,49.6,31.1,69.8,71.1s127,212.2,152.9,255.6,72.4,101.7,80.6,108"/>
+  <rect fill="url(#lg)" x="901.3" width="70" height="771" >
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
+    </rect>
+</svg>
