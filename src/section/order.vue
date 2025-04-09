@@ -353,12 +353,9 @@ const sending = ref(false)
 const formData = reactive({
   name: "",
   phone: "",
+  email: "no@email.com",
   room_type: "",
   budget: "",
-  use_type: "",
-  gender: "",
-  project: "",
-  email: "",
   city: "",
   area: "",
   msg: "",
@@ -367,18 +364,15 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "gender","city","area","use_type","budget","room_type"]
+const bypass = ["project","email" , "msg","city","area","budget","room_type"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
+  "信箱", //email
   "房型", //room_type
   "預算", //budget
-  "用途", //use_type
-  "性別", //gender
-  "建案", //project
-  "信箱", //email
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
@@ -396,8 +390,8 @@ watch(
   }
 )
 
-const onRecaptchaVerify = () => {
-  formData.r_verify = true
+const onRecaptchaVerify = (token) => {
+  formData.r_verify = token;
 }
 const onRecaptchaUnVerify = () => {
   formData.r_verify = false
@@ -436,7 +430,8 @@ const send = () => {
 
     presend.append(key, value);
   }
-
+  
+  presend.append("msg", formData.msg.trim() || "無留言");
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
@@ -475,7 +470,7 @@ const send = () => {
         method: "GET"
       }
     );
-
+/*
     fetch("https://mail.wutopia.com.tw/reserve/5bf1f5a5-a8a2-4b5b-ad4b-6c6b5da312d5", {
       method: "POST",
       body: presend,
@@ -484,7 +479,28 @@ const send = () => {
         window.location.href = "formThanks";
       }
       sending.value = false
-    });
+    });*/
+    fetch("https://mail.wutopia.com.tw/reserve/5bf1f5a5-a8a2-4b5b-ad4b-6c6b5da312d5", {
+  method: "POST",
+  body: presend,
+})
+  .then((response) => {
+    if (response.status === 200) {
+      window.location.href = "formThanks";
+    } else {
+      return response.json().then(err => {
+        console.error("後端錯誤訊息：", err);
+        toast.error(err.message || "提交失敗");
+      });
+    }
+  })
+  .catch((error) => {
+    console.error("傳送失敗：", error);
+    toast.error("無法連線或伺服器錯誤");
+  })
+  .finally(() => {
+    sending.value = false;
+  });
 
 
     // toast.success(`表單已送出，感謝您的填寫`)
