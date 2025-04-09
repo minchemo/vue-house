@@ -52,7 +52,7 @@
             <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
-        <!-- 
+        <!--  -->
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -66,7 +66,7 @@
             <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
-          </select></label> -->
+          </select></label>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -476,7 +476,7 @@ const send = () => {
       }
     );
 
-    fetch("contact-form.php", {
+    fetch("https://mail.wutopia.com.tw/reserve/5bf1f5a5-a8a2-4b5b-ad4b-6c6b5da312d5", {
       method: "POST",
       body: presend,
     }).then((response) => {
