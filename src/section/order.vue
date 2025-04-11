@@ -349,16 +349,16 @@ const toast = useToast()
 
 const sending = ref(false)
 
-
+// 後端那 name phone email msg 為必填欄位 請勿刪除
 const formData = reactive({
   name: "",
   phone: "",
   email: "no@email.com",
+  msg: "",
   room_type: "",
   budget: "",
   city: "",
   area: "",
-  msg: "",
   policyChecked: false,
   r_verify: false,
 })
@@ -371,11 +371,11 @@ const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "信箱", //email
+  "備註訊息", //msg
   "房型", //room_type
   "預算", //budget
   "居住縣市", //city
   "居住地區", //area
-  "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
   "機器人驗證", //r_verify
 ])
@@ -389,7 +389,7 @@ watch(
     formData.area = areaList.value[0].value
   }
 )
-
+// 新系統這裡需調整
 const onRecaptchaVerify = (token) => {
   formData.r_verify = token;
 }
@@ -430,7 +430,7 @@ const send = () => {
 
     presend.append(key, value);
   }
-  
+
   presend.append("msg", formData.msg.trim() || "無留言");
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
