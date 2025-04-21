@@ -67,8 +67,9 @@ width: 7.3em;
 }
 
   .slider {
+     @apply relative;
     margin: 0;
-    flex-basis: size(840);
+    flex-basis: size(812);
     height: size(812);
     width: size(1682);
     .slide-item {
@@ -93,8 +94,58 @@ width: 7.3em;
       right: size(10);
     }
 
+
+   
+  .arrows{
+    @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
+    padding: 0; 
+    height: 100%;
+    pointer-events: none;
+    .prev,
+    .next{
+      width:3%;
+      display: flex;
+      pointer-events: stroke;
+      cursor: pointer;
+      
+  justify-content: center;
+  align-items:center;
+    background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+    background-size: 50% auto;
+    transition:background-color .5s ;
+    &:hover{background-color: #0003;}
+    }
+    .prev{transform: scaleX(-1);
+    }
+    img {
+      margin: unset;
+      @apply cursor-pointer hover:opacity-50;
+    }
+  }
+  .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    bottom: 2%;
+    gap: .5em;
+    color: #fff;
+    li {
+      button {
+        @apply rounded-full  hover:opacity-50;
+        width: 1em;
+        height: 1em;
+        border: 2px solid currentColor;
+
+        &.is-active{
+          background:currentColor;
+      }
+      }
+    }
+  }
+
     
   }
+
+
+
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -135,6 +186,7 @@ width:0em;
 
 }
   .slider {
+      @apply relative;
     height: auto;
     width: 100%;
 
@@ -153,6 +205,32 @@ width:0em;
     .arrows .prev, .arrows .next{
       width:8%;
     }
+
+    
+  .arrows{
+    .prev,
+    .next{
+      width: 8%;
+    }
+  }
+  .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    display: none;
+    bottom: sizem(6.7);
+    gap: sizem(2.5);
+    li {
+      button {
+        @apply rounded-full  hover:opacity-50;
+        width: sizem(10.3);
+        height: sizem(3.34);
+        border: sizem(1) solid #fff;
+
+        &.is-active{
+          @apply bg-white;
+      }
+      }
+    }
+  }
   }
   }
 }
@@ -186,7 +264,7 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s6/7.webp", import.meta.url).href ,
+    img:new URL("./s6/1.webp", import.meta.url).href ,
     caption: "迎賓大廳現場實景拍攝"
   },
   {

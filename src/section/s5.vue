@@ -23,7 +23,7 @@
   @apply relative overflow-hidden flex  justify-center text-[#FFF];
   min-height: size(1080);
   max-height: size(1080);
-  background: #936101;
+  background: #144483;
   width: 100%;
   height:auto;
   //padding:7em 0 7em 0;
@@ -73,7 +73,7 @@
   .s5 {
   height: calc(100vh - 63px);
   min-height: sizem(604);
-  max-height: sizem(700);
+  max-height: sizem(630);
   padding:1em 0;
   font-size:sizem(14);
   margin-bottom:0em;
