@@ -1,11 +1,11 @@
 <template>
   <article class="s4">
    <!--   -->  <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">桃園核心精華 <br v-if="isMobile">小檜溪重劃區</h3>
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">桃園核心精華 小檜溪重劃區</h3>
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">雙溪匯聚，五大主題公園，站前、中正藝文、大有三大商圈環抱</h4>   
       </div>
     <Fullview />
-    <!--div class="caption">基地空拍實景經後製修飾</div-->
+    <div class="caption">空拍實景美化圖</div>
   </article>
 </template>
 
@@ -13,30 +13,29 @@
 @import '@/assets/style/function.scss';
 
 .s4 {
-  @apply relative overflow-hidden bg-[#018ee4] text-[#fff];
+  @apply relative overflow-hidden bg-[#005890] text-[#fff];
   width: 100%;
-  height: 100%;
+ // height: size(1059);
   font-size:size(20);
   .txt {
-    position: absolute;
-    text-align: center;
-    top:size(60);
-    left: size(600);
-    z-index: 3;
-  
+  text-align: center;position: relative;
+  padding-top:1.8em;z-index: 10;margin-bottom:-6.3em ;padding-bottom:2.5em;
   .title{
-   font-size: 2em;
-   font-weight: 700;
+    font-size: 2em;
+    font-weight: 700;
   }
   .subtitle{font-size: 1.25em;margin-top: .4em;
       font-weight: 500;}
   }
-  .viewbox{
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    //margin: 0 0 -5vw 0;
-    //top: -5vw;
+  .viewbox{z-index: 2;
+    margin: 0 0 -5vw 0;
+    top: -5vw;
+  }
+  .caption{
+    position: absolute;
+    bottom: size(20);
+    left:size(20);
+    z-index: 3;
   }
 }
 /* 螢幕尺寸標準 */
@@ -50,7 +49,10 @@
   font-size:sizem(15);
 
   .txt {//text-align: justify;
-  padding-top:3.5em;width:sizem(310);margin:auto auto -4.3em auto;
+  padding-top:1.3em;width:sizem(310);margin:auto auto -9.5em auto;
+  .title{
+    font-size: 1.5em;
+  }
   .subtitle{font-size: 1em;
       font-weight: 400;}
   }
