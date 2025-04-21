@@ -13,8 +13,10 @@
    <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#ECE7E2]">
     <S1 />
+    <S4 />
     <S2 />
     <S3 />
+    
    <!--
    <S2 />
     <S3 />
@@ -100,6 +102,7 @@ import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
+import S4 from "@/section/s4.vue"
 //import S3 from "@/section/s3.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
