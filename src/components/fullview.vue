@@ -1,6 +1,7 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s4/map.jpg" alt="" srcset="">
+      <img ref="viewImg" class="txtmap" src="@/section/s4/txt.svg" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s4/map.webp" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -21,6 +22,9 @@
         max-width: unset;
     //    background:url("@/section/s3/view.jpg") 50%;
     //    background-size: 100% auto;
+    }
+    .txtmap{
+      position: absolute;
     }
 
 }
