@@ -1,52 +1,61 @@
 <template>
-  <article class="s3 relative" id="s3">
-    <!-- <img src="./s1/mo.jpg" class="t0" >
-    <img src="./s1/bg.svg" class="bg" data-aos="zoom-out" data-aos-delay="0" >
-    <div class="box"><span></span></div>
-    <Logo data-aos="zoom-in" data-aos-delay="500" />
-    <div class="t1" data-aos="zoom-in" data-aos-delay="1000"><span>百貨群聚</span><span>機能齊聚</span><span>雙軌相聚</span></div>
-    <img src="./s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="1000" >
-    <div class="t2" data-aos="zoom-in" data-aos-delay="1000">2-3房</div> -->
-    <img src="./s3/txt.svg" class="txt">
-    <div class="txt"><span>生活的下一站，人生的下一步</span>
-      <span>在於生活品質的不斷超越</span></div>
+  <article class="s4 relative" id="s4">
+    <div class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">
+      <img src="./s4/title.svg" class="t1">
+      <div class="hr"></div>
+      <div class="sub">值得擁有</div>
+      <div class="sub-s">大眾還在猶豫空間太小<br>你已跨步迎向生活美好
+        <div>寬域2房 <img src="./s4/icon.svg"> 高坪效3房 / 自在切換</div></div>
+    </div>    
+    <img src="./s4/slo.png" class="img" data-aos="fade-up" data-aos-delay="200">
+    <div class="txt font-['Noto_Serif_TC',serif]"><span data-aos="fade-up" data-aos-delay="400">頂誠建築團隊的美學，從生活的舒適感開始</span>
+      <span data-aos="fade-up" data-aos-delay="600">
+        寬域2房/高坪效3房 自在切换</span></div>
+
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-.s3 {
-  height: size(1070);
+.s4 {
+ // height: size(1070);
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items:center;
-  font-size:size(30);
+  font-size:size(53);
   overflow: hidden;
+  padding: size(100) 0 0 0;
 
-  .main{margin: 0 auto 0 auto;}
-
-  .logo{position: relative;z-index: 3;margin: auto;
-    width:size(470);}
-  .t1{position: relative;z-index:3;
-    font-size: size(67);
-    font-weight: 800;
-    letter-spacing: 0.09em;
+  .title{width: 95%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .49em;margin-bottom: size(20);
-     span{
-    &::before{content: url("./s1/icon.svg");
-  width: .5em;display: inline-block;vertical-align:baseline;margin: 0 0.1em 0 0;
+  justify-content:center;
+  align-items:flex-end;
+  gap:size(35);
+  position: relative;
+  font-size:size(30);
+  color: #446A75;
+  .t1{flex: 0;width:size(895);}
+  .hr{flex: 1;background: #fff;height:size(4);margin: auto auto 1.16em -.5em;}
+  .sub{font-weight: 700;font-size:3.3em;letter-spacing: 0.03em;
+  text-shadow:0.03em 0.03em 0.1em #5F6F7Acc;}
+  .sub-s{position: absolute;right: 0;bottom: 6em;font-weight: 700;
+    line-height: 2;
+    text-align: right;letter-spacing: 0.06em;
+    div{margin: .53em 0 0;}
+    img{height: .5em;vertical-align:.1em;}
   }
-}
   }
-  .en{width:size(710);position: relative;z-index: 3;margin-bottom: size(27);}
-  .t2{position: relative;z-index: 3;font-size: size(65);font-weight: 800;line-height: 1.05;padding: 0 0 .1em 0 ;color: #154675;
-    border-top: 1.5px solid currentColor;
-    border-bottom: 1.5px solid currentColor;width: 4.1em;text-align: center;
-  margin-bottom:0;
+  .img{width:size(747);margin: size(240) auto size(0) auto;}
+
+  .txt{
+    margin:1.2em auto 2.6em auto;
+    font-weight: 700;
+    color: #000;
+    text-align: center;letter-spacing: .1em;line-height: 2.8;
+    span{display: block;
+    &:first-child{border-bottom: 3px solid #000;}
+    }
   }
 }
 
@@ -56,41 +65,28 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-
-
-
-  .s3 {
-    height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(700);
-   // height: sizem(650);
-    font-size:sizem(16);
-    justify-content:center;
-  .bg{width:sizem(584);top:sizem(0);left:sizem(-104.5);height:sizem(805);
-  top:calc(50% + #{sizem(-105 - 604 * .5)})
+  .s4 {
+  font-size:sizem(16);
+  padding: sizem(40) 0 0 0;
+  .title{width: 95%;
+  gap:sizem(10);
+  font-size:sizem(12);
+  .t1{width:sizem(175);}
+  .hr{height:sizem(2);margin: auto auto sizem(10);}
+  .sub{font-size:2.5em;}
+  .sub-s{bottom: 4em;
+  
+    div{letter-spacing: -.03em;}
   }
-  .box{
-   width: sizem(1600);
-   height: sizem(400);}
-  .logo{margin-bottom: sizem(12);margin-top: sizem(8);
-    width:sizem(300);}
-  .t1{order:4;
-    font-size: sizem(20);
-    margin-bottom: sizem(12);
-    gap: .9em;
-     span{
-    &::before{content: url("./s1/icon.svg");
-  width: .5em;display: block;margin: 0 auto -.5em auto;
   }
-}
+  .img{width:sizem(220);margin: sizem(120) auto 0 auto;}
+  .txt{
+    margin:1.2em auto 4.5em auto;
   }
-  .en{order:3;width:sizem(230);margin-bottom: sizem(15);}
-  .t2{order:5;font-size: sizem(21);width: 4.5em;}
 }
 }
 </style>
 <script setup>
-import Logo from "./s1/logo.vue"
 
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;

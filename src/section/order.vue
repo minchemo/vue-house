@@ -1,8 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
-    <div class="box"><span></span></div>
     <div class="order-section">
 <!-- 
+    <div class="box"><span></span></div>
       <div class="order-title" data-aos="fade-up" data-aos-delay="0">邀約行家 領席鑑賞</div> -->
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -140,7 +140,7 @@
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
- .box{position: absolute; 
+/* .box{position: absolute; 
    width: size(3100);
    height: size(745);top: size(500);left: calc(50% - size(1550));
 // opacity: 0.5;
@@ -156,6 +156,7 @@ animation: an2 10s linear infinite reverse;}
     transform:translateX(-100%);
   }
 }
+  */
 
   .order-title {
     font-size:30px;

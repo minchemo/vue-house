@@ -1,14 +1,7 @@
 <template>
   <article class="s2 relative" id="s2">
-    <!-- <img src="./s1/mo.jpg" class="t0" >
-    <img src="./s1/bg.svg" class="bg" data-aos="zoom-out" data-aos-delay="0" >
-    <div class="box"><span></span></div>
-    <Logo data-aos="zoom-in" data-aos-delay="500" />
-    <div class="t1" data-aos="zoom-in" data-aos-delay="1000"><span>百貨群聚</span><span>機能齊聚</span><span>雙軌相聚</span></div>
-    <img src="./s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="1000" >
-    <div class="t2" data-aos="zoom-in" data-aos-delay="1000">2-3房</div> -->
-    <img src="./s2/logo2.svg" class="logo">
-    <img src="./s2/main.webp" class="main">
+    <img src="./s2/logo2.svg" class="logo" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s2/main.webp" class="main" data-aos="fade-up" data-aos-delay="200">
   </article>
 </template>
 

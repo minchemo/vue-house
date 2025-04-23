@@ -5,9 +5,10 @@
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>  -->
+    </div> 
     <Logo data-aos="zoom-in" data-aos-delay="0" />
-    <img src="@/section/s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0" >
+    <img src="@/section/s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0" > -->
+    <img src="@/section/s2/logo2.svg" class="logo">
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
@@ -105,8 +106,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #DC4434;}
-.hover\:bg-color2:hover{background-color:#af2f20;}
+.bg-color1{background-color: #446A75;}
+.hover\:bg-color2:hover{background-color:#254c57;}
 
 
 .contact-info-img{
@@ -134,7 +135,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #DC4434;
+      background: #446A75;
       color: #FFF;
       width: 100%;
       flex: 1;
@@ -150,7 +151,7 @@
       gap: 1em;
 
       &:hover {
-        background: #af2f20;
+        background: #254c57;
         color: #FFF;
 
         img {

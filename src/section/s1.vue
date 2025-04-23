@@ -1,26 +1,15 @@
 <template>
   <article class="s1">
-    <!-- <img src="./s1/pc.jpg" class="t0" > --><img src="./s1/mo.png" class="t0" >
-   <!--  <div class="main">
-      <div class="txt">
-        <div class="t1 decor" data-aos="fade-up">一年一樹，城森林</div>
-        <div class="t2">建築為秧，城市為畝。在長耀一畝田的哲學裡，滿懷對大地的謙卑與感謝，於是內湖到林口，我們用心建築城市少數坐擁綠意的精華沃土，期盼藉由自然風土滋養每一個人，同時成為一個有根的人。</div>
-      </div>
-      <div class="caption">{{ imgs[currentSlideIndex].caption }}</div>
-    </div> -->
-
-    <div class="slider"><!-- 
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>  -->
+    <!-- <img src="./s1/pc.jpg" class="t0" >
+<img src="./s1/mo.png" class="t0" > -->
+    <div class="slider" data-aos="fade" data-aos-delay="0">
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img" :key="img">
           <div class="caption font-['Noto_Serif_TC',serif]">{{ img.caption }}</div>
         </SplideSlide>
       </Splide>
     </div>
-    <img src="./s1/title.svg" alt="" class="title">
+    <img src="./s1/title.svg" alt="" class="title" data-aos="fade-right" data-aos-delay="0" />
   </article>
 </template>
 
