@@ -62,12 +62,12 @@
 
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
  .bg{width: 100%;}
-.t1{width:sizem(260);margin: sizem(-13) 0 sizem(19) 0;
+.t1{width:sizem(200);margin: sizem(-110) 0 sizem(19) 0;position: relative;z-index: 99;
 }
 .t2{width:sizem(260);
 }
 @media screen and (min-width: 768px) {
-.t1{width:size(1014);margin: size(90) 0 size(50) 0;}
+.t1{width:size(676);margin: size(20) 0 size(50) 0;}
 .t2{width:size(676);}
 }
 .ball{position: absolute;width: 100%;height: 100%;left: 0;top:0;z-index: 2;
