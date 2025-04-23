@@ -1,61 +1,50 @@
 <template>
   <article class="s3 relative" id="s3">
-    <img src="./s3/bg.webp" alt="bg" class="bg">
-    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">五大巨擘攜手 核心最強心動<br>
-      <img src="./s3/logoall.svg" alt="logoall" class="logoall" data-aos="zoom-in" data-aos-delay="200"></h3>
-    <img src="./s2/line.svg" alt="line" class="line">
-    <div class="txt absolute">
-      <h4 data-aos="fade-up" data-aos-delay="0">住宅Ｘ商場Ｘ辦公Ｘ飯店Ｘ綠軸</h4>
-      <p data-aos="fade-up" data-aos-delay="0">國泰人壽、三商美邦人壽、國泰建設、國泰飯店觀光事業、華泰大飯店集團，五大品牌，史詩鉅獻<br v-if="!isMobile">讓回家是五大風格之旅，驚艷東區門戶的時尚漫遊，刷新南港國際高度，躬逢・必擁</p>
-      <img src="./s2/bottom.webp" class="bottom absolute">
-    </div>
+    <div class="title">
+      <img src="./s3/title.svg">
+      <div></div>
+      <img src="./s3/sub.svg">
+    </div>    
+    <div class="txt font-['Noto_Serif_TC',serif]"><span>生活的下一站，人生的下一步</span>
+      <span>在於生活品質的不斷超越</span></div>
+    <img src="./s3/img.png" class="img">
+
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-
-@keyframes op {
-  50% {
-     opacity: 0;
-  }
-}
-@keyframes an {
-  to {
-    transform: translateX(0%);
-  }
-}
 .s3 {
- height: size(1070);
- overflow: hidden;
-  //min-height: size(900);
- // max-height: size(1080);
+ // height: size(1070);
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items:center;
-  font-size:size(36);
-  .bg{position: absolute;width:100%;top:0;left:0%;}
-  .t1{position: absolute;
-    left: 0;right: 0;margin: auto;text-align: center;
-    font-size:size(62);
-    line-height: 1.13;
-    letter-spacing: 0.07em;
-    font-weight: 900;z-index: 3;top:size(142);color: #fff;
-    }
-    .logoall{width: size(740);position: relative;top:size(20);}
-  .line{ width: 102%;left: -1%;
-      position: absolute;z-index: 3;top:size(345);}
-  .txt{left: 0;bottom: 0; width:100%;background: #fff;
-  display: flex;
+  font-size:size(60);
+  overflow: hidden;
+  padding: size(100) 0 0 0;
+
+  .title{width: 95%;
+    display: flex;
   justify-content:center;
-  align-items:center;height: size(130);padding-bottom: size(17);
-  letter-spacing: 0.04em;
-    h4{font-size:size(36); border-right:1px solid currentColor;font-weight: 600;
-      padding: .15em .8em .15em 0;margin-right: .8em;}
-    p{font-size:size(24);}
+  align-items:flex-end;
+  gap:size(40);
+  img{
+  &:first-child{flex: 0;width:size(895);}
+  &:last-child{flex: 0;margin-bottom:size(20);width:size(400);}
   }
-  .bottom{left: 0;bottom: 0; width:100%;z-index: 3;height:size(16);}
+  div{flex: 1;background: #fff;height:size(4);margin: auto auto size(35);}
+  }
+  .txt{
+    margin:2.6em auto;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;letter-spacing: .15em;line-height: 2;
+    text-shadow: .1em .1em .1em #0009;
+    span{display: block;}
+  }
+  .img{width:size(1492);}
+
 }
 
   
@@ -64,35 +53,22 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-
-
-
   .s3 {
-   /* height:calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);*/
-    height: sizem(740);
-    font-size:sizem(16);
-    background-size: 340% auto;
-    .bg{position: absolute;width:295%;top:sizem(-70);left:-90%;}
-  .t1{font-size:sizem(25);top:sizem(66);
-    }
-    .logoall{width: sizem(327);top:sizem(15);}
-  .line{ width: sizem(400);left:sizem(-22);top:sizem(164);}
-  .txt{height:auto;padding: sizem(35) 0 sizem(62) 0;
-    flex-direction: column;
-  letter-spacing: 0.04em;
-    h4{font-size:sizem(20); border-right:0px solid currentColor; border-bottom:1px solid currentColor;font-weight: 600;
-      padding: 0 0 .6em 0;margin: auto auto .6em auto;width: sizem(310);text-align: center;}
-    p{font-size:sizem(15);line-height: 1.7;
-      margin: auto;width: sizem(310);text-align: justify;}
+  font-size:sizem(16);
+  padding: sizem(40) 0 0 0;
+  .title{width: 95%;
+  gap:sizem(10);
+  img{
+  &:first-child{width:sizem(175);}
+  &:last-child{margin-bottom:sizem(5);width:sizem(120);}
   }
-  .bottom{height:sizem(16);}
-  
+  div{height:sizem(2);margin: auto auto sizem(10);}
+  }
 }
 }
 </style>
 <script setup>
+
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
