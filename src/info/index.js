@@ -8,9 +8,9 @@ export default {
   },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新北市林口區文化二路二段60號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d319.4039860888177!2d121.37767826797482!3d25.080066366496027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a6e7e572c369%3A0x8028d3b6800b1a1b!2zMjQ05paw5YyX5biC5p6X5Y-j5Y2A5paH5YyW5LqM6Lev5LqM5q61NjDomZ8!5e0!3m2!1szh-TW!2stw!4v1726813097945!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/76GcShMYFqgQCvB76",
+    address: "新北市林口區仁愛路一段337號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.768191812435!2d121.3937457!3d25.0758448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a72ea4bfc459%3A0x63a8ee73afc16fc!2z6KyZ5petIOaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1745373809132!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/XRHBZp4nN3q3yL3L6",
     phone: "02-26022345",
     fbLink: "https://www.facebook.com/61560974341225/",
     fbMessage: "https://m.me/61560974341225/",
@@ -24,7 +24,7 @@ export default {
     ["坪數規劃", "105坪透天綠墅"],
     ["企劃銷售", "得邦廣告"],
     ["建照號碼", "112林建字00159號"],
-    ["經  紀  人", "鍾佩儒(108)桃市經字第001714號"],
+    ["經&ensp;紀&ensp;人", "鍾佩儒(108)桃市經字第001714號"],
   ],
   gtmCode: ["GTM-5TGPZ8R5"], // 可放置多個
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3

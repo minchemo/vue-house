@@ -18,8 +18,8 @@
           class="item flex justify-between items-center w-full whitespace-nowrap"
           v-for="item in info.houseInfos"
         >
-          <p>{{ item[0] }}</p>
-          <p>{{ item[1] }}</p>
+          <p v-html="item[0]"></p>
+          <p v-html="item[1]"></p>
         </div>
       </div>
     </div>
