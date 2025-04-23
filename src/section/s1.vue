@@ -11,8 +11,8 @@
       <img src="./s1/ball2.webp" class="ball6" v-if="isMobile">
     </div>
 
-      <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
-      <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
+      <img src="./s1/t1m.webp" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
+      <img src="./s1/t1.webp" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
       <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="400">
 
    <!--  <img src="./s1/s1bg.jpg" class="bg" v-else> 
