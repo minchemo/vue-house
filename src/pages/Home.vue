@@ -8,7 +8,7 @@
     }"
     class="transition-all duration-500flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]"
   >
-    <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="loading" srcset="" />
+    <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="" />
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
@@ -38,7 +38,11 @@ img {
 }
 
 .home {
-  background: #fff;
+  background: url("@/section/form/bg.jpg") fixed repeat;
+  background-size:size(800) auto;
+  @media screen and (max-width: 767px) {
+    background-size:sizem(500) auto;
+  }
 }
   .arrows {
     @apply absolute w-screen z-10;

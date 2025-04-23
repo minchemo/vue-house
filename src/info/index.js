@@ -1,4 +1,4 @@
-const caseName = "豐邑匯禮"
+const caseName = "謙旭"
 
 export default {
   meta: {
@@ -20,15 +20,15 @@ export default {
     ["建築規劃", "曾聰憲建築師事務所 曾聰憲"],
     ["外觀設計", "元佑設計 李志成"],
     ["園藝景觀", "元佑設計 李志成"],
+    ["結構安全", "冠偉工程顧問 陳冠銘"],
     ["坪數規劃", "105坪透天綠墅"],
     ["企劃銷售", "得邦廣告"],
-    ["結構安全", "冠偉工程顧問 陳冠銘"],
     ["建照號碼", "112林建字00159號"],
     ["經  紀  人", "鍾佩儒(108)桃市經字第001714號"],
   ],
   gtmCode: ["GTM-5TGPZ8R5"], // 可放置多個
-  recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-  //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+  //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+  recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",

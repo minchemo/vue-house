@@ -287,7 +287,7 @@
         color: #000;
       }
       select {
-        background: url("//h65.tw/img/select.svg") no-repeat calc(100% - 0.5em)
+        background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - 0.5em)
           100%;
         background-size: auto 200%;
         transition: background 0.3s;
@@ -479,7 +479,7 @@ const formData = reactive({
   area: "",
   msg: "",
   policyChecked: false,
-  r_verify: true,
+  r_verify: false,
 })
 
 //非必填
