@@ -31,11 +31,11 @@
     <div class="box box3">
       <h2 class="title font-['noto_Serif_tc']">三、最新消息</h2>
       <div class="list">
-        <span class="t1">1. 欲提供房屋稅籍資料及對照年份前後之航照圖佐證者，請於114年5月30日前，電郵至本案專屬 <a class="link" href="mailto:dachen.five@gmail.com" target="_blank">電子信箱</a>。</span>
+        <span class="t1">欲提供房屋佐證資料者，請於114年5月30日前，將 1.稅籍資料 2.對照年份前後之航照圖 3.結構證明文件 ，電郵至本案專屬 <a class="link" href="mailto:dachen.five@gmail.com" target="_blank">電子信箱</a>。</span>
       </div>
     </div>
 
-    <div class="box box1">
+    <!--div class="box box1">
       <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
       <div class="list">
         <span class="t1">Line諮詢</span>
@@ -44,6 +44,15 @@
       <div class="list">
         <span class="t1">電子信箱</span>
         <span class="t2"><a class="link" href="mailto:dachen.five@gmail.com" target="_blank">dachen.five@gmail.com</a></span>
+      </div>
+    </div-->
+
+    <div class="box box4">
+      <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
+      <div class="icon">
+        <a class="link" href="https://lin.ee/kltP71Y" target="_blank"><img class="linkimg" src="@/section/s1/line.svg"></a>
+        <img class="linkimg" src="@/section/s1/qr.png">
+        <!--a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="@/section/s1/gmail.svg"></a-->
       </div>
     </div>
   </article>
@@ -85,6 +94,8 @@ width: 100%;}
   color: #9B1E44;
   &::before{content: "";width:.6em;height: .6em;border-radius: 50%;background: currentColor;display: inline-block;margin: 0 0.8em 0.1em 0;}
   }
+
+  
 }
 .box2{
   margin:5em auto;
@@ -125,7 +136,20 @@ border-top:1px solid #0003;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em
  } 
 
  .box4{
+align-items: flex-start;
 border-top:1px solid #0003;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em;
+
+
+.icon{
+ display: flex;
+ gap: 3em;
+ 
+ .linkimg{
+    width: 100px;
+  }
+}  
+
+  
  } 
 
 // @media screen and (max-width: 767px) { 平常我們手機的設定
@@ -148,7 +172,21 @@ font-size: 2em;}
  .t2{flex: 0 1 calc(100% - 7em);}
   .t3{display: block;}
   .t4{position: absolute;right: 0;bottom: .6em;}
- }}
+
+ }
+
+.box4{
+
+    .icon{
+    .linkimg{
+        width: 80px;
+      }
+    }  
+
+  
+ }
+ 
+ }
 }
 </style>
 <script setup>
