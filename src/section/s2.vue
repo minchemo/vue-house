@@ -8,8 +8,8 @@
         <span class="t1" v-html="item[0]"></span>
         <span class="t2" v-html="item[1]"></span>
       </div>
-
     </div>
+
     <div class="box box2">
       <h2 class="title font-['noto_Serif_tc']">二、辦理歷程</h2>
       <section class="list ti" v-if="!$isMobile()">
@@ -26,6 +26,25 @@
         
       </section>
       <!-- <a class="download" href="https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link" target="_blank">公開資料下載</a> -->
+    </div>
+
+    <div class="box box3">
+      <h2 class="title font-['noto_Serif_tc']">三、最新消息</h2>
+      <div class="list">
+        <span class="t1">1. 欲提供房屋稅籍資料及對照年份前後之航照圖佐證者，請於114年5月30日前，電郵至本案專屬 <a class="link" href="mailto:dachen.five@gmail.com" target="_blank">電子信箱</a>。</span>
+      </div>
+    </div>
+
+    <div class="box box1">
+      <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
+      <div class="list">
+        <span class="t1">Line諮詢</span>
+        <span class="t2"><a class="link" href="https://lin.ee/kltP71Y" target="_blank">https://lin.ee/kltP71Y</a></span>
+      </div>
+      <div class="list">
+        <span class="t1">電子信箱</span>
+        <span class="t2"><a class="link" href="mailto:dachen.five@gmail.com" target="_blank">dachen.five@gmail.com</a></span>
+      </div>
     </div>
   </article>
 </template>
@@ -99,6 +118,15 @@ background: #790024;transform: scale(1.2);
 }
 
 }
+
+.box3{
+border-top:1px solid #0003;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em;
+  .link{color: #790024;}
+ } 
+
+ .box4{
+border-top:1px solid #0003;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em;
+ } 
 
 // @media screen and (max-width: 767px) { 平常我們手機的設定
 @media screen and (max-width: 767px) {
@@ -191,5 +219,7 @@ const list2 = [
   },
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
+
+
 
 </script>
