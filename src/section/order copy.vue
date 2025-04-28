@@ -349,13 +349,12 @@ const toast = useToast()
 
 const sending = ref(false)
 
-// 後端那 name phone email msg 為必要欄位 請勿刪除
+// 後端那 name phone email msg 為必填欄位 請勿刪除
 const formData = reactive({
   name: "",
   phone: "",
   email: "",
   msg: "",
-
   room_type: "",
   use_type: "",
   budget: "",
@@ -366,7 +365,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["email" , "msg","project","city","area","budget","room_type","use_type"]
+const bypass = ["project","email" , "msg","city","area","budget","room_type","use_type"]
 
 //中文對照
 const formDataRef = ref([
@@ -374,7 +373,6 @@ const formDataRef = ref([
   "手機", //phone
   "信箱", //email
   "備註訊息", //msg
-
   "房型", //room_type
   "用途", //use_type
   "預算", //budget
@@ -403,10 +401,10 @@ const onRecaptchaUnVerify = () => {
 
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source") || "null"; // 确保有有效的来源
-  const utmMedium = urlParams.get("utm_medium") || "null";
-  const utmContent = urlParams.get("utm_content") || "null";
-  const utmCampaign = urlParams.get("utm_campaign") || "null";
+  const utmSource = urlParams.get("utm_source") || "default_source"; // 确保有有效的来源
+  const utmMedium = urlParams.get("utm_medium") || "default_medium";
+  const utmContent = urlParams.get("utm_content") || "default_content";
+  const utmCampaign = urlParams.get("utm_campaign") || "default_campaign";
   const time = new Date();
   const year = time.getFullYear();
   const month = time.getMonth() + 1;
@@ -417,43 +415,47 @@ const send = () => {
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
 
   const presend = new FormData();
-  let pass = true;
-  let unfill = [];
-  let idx = 0;
+  let pass = true
+  let unfill = []
+  let idx = 0
 
-  // 验证必填字段
+  //驗證
   for (const [key, value] of Object.entries(formData)) {
-    if (!bypass.includes(key) && (value === "" || value === false)) {
-      unfill.push(formDataRef.value[idx]);
-      pass = false;
+    if (!bypass.includes(key)) {
+      if (value == "" || value == false) {
+        unfill.push(formDataRef.value[idx])
+      }
+
     }
-    presend.append(key, value);
+
     idx++;
+
+    presend.append(key, value);
   }
-  
+
+  presend.append("msg", formData.msg.trim() || "無留言");
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
   presend.append("utm_campaign", utmCampaign);
 
-  // 如果有必填字段为空，返回
-  if (!pass) {
-    toast.error(`「${unfill.join(", ")}」為必填或必選`);
-    return;
+  //有未填寫
+  if (unfill.length > 0) {
+    pass = false
+    toast.error(`「${unfill.join(", ")}」為必填或必選`)
+    return
   }
 
-  // 手机格式验证
-  const MobileReg = /^(09)[0-9]{8}$/;
+  //手機驗證
+  const MobileReg = /^(09)[0-9]{8}$/
   if (!formData.phone.match(MobileReg)) {
-    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
-    return;
+    pass = false
+    toast.error(`手機格式錯誤 ( 09開頭10位數字 )`)
+    return
   }
 
-  // 如果通过验证
   if (pass && !sending.value) {
-    sending.value = true;
-    
-    /*
+    sending.value = true
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -470,30 +472,40 @@ const send = () => {
         method: "GET"
       }
     );
-
-    */
-    fetch("https://service-sys.lixin.com.tw/reserve/8208fb37-9546-49ba-b8da-19d60d4b63cb", {
+/*
+    fetch("https://mail.wutopia.com.tw/reserve/5bf1f5a5-a8a2-4b5b-ad4b-6c6b5da312d5", {
       method: "POST",
       body: presend,
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        } else {
-          return response.json().then(err => {
-            console.error("後端錯誤訊息：", err);
-            toast.error(err.message || "提交失敗");
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("傳送失敗：", error);
-        toast.error("無法連線或伺服器錯誤");
-      })
-      .finally(() => {
-        sending.value = false;
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+      sending.value = false
+    });*/
+    fetch("https://service-sys.lixin.com.tw/reserve/dc2b8ce0-bd0f-4326-b951-dcc009b33152", {
+  method: "POST",
+  body: presend,
+})
+  .then((response) => {
+    if (response.status === 200) {
+      window.location.href = "formThanks";
+    } else {
+      return response.json().then(err => {
+        console.error("後端錯誤訊息：", err);
+        toast.error(err.message || "提交失敗");
       });
-  }
-};
+    }
+  })
+  .catch((error) => {
+    console.error("傳送失敗：", error);
+    toast.error("無法連線或伺服器錯誤");
+  })
+  .finally(() => {
+    sending.value = false;
+  });
 
+
+    // toast.success(`表單已送出，感謝您的填寫`)
+  }
+}
 </script>
