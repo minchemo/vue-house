@@ -1,17 +1,15 @@
 <template>
   <article class="s1 relative s1-section" id="s1" ref="s1">
+
+    <img src="./s1/bgm.webp" class="bg" data-aos="fade" data-aos-delay="0" v-if="isMobile">
+    <img src="./s1/bg.webp" class="bg" data-aos="fade" data-aos-delay="0" v-else>
     
-    <img src="./s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0">
     <div class="l1"></div>
-    <h3 class="t1" data-aos="zoom-in-up" data-aos-delay="100">經濟奇積&ensp;在高雄</h3>
-    <img src="./s1/en1.svg" class="en1" data-aos="zoom-in-up" data-aos-delay="200">
-    <div class="img" data-aos="zoom-in-up" data-aos-delay="300">
-      <img src="./s1/img.png">
-      <img src="./s1/img.svg">
-    </div>
-    <h3 class="t2" data-aos="zoom-in" data-aos-delay="400">未來已來 先積到來</h3>
-    <img src="./s1/en2.svg" class="en2" data-aos="zoom-in" data-aos-delay="500">
-    <img src="./s1/en3.svg" class="en3" data-aos="zoom-in" data-aos-delay="600">
+    <h3 class="t1" data-aos="zoom-in-up" data-aos-delay="100">雙捷交鋒&ensp;新店之巔</h3>
+    <h3 class="t2" data-aos="zoom-in" data-aos-delay="400">東基驕址．即將現身</h3>
+    <div class="txt">區域空拍修飾</div>
+    <img src="./s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="600">
+    <img src="./s1/icon.svg" class="icon" data-aos="zoom-in" data-aos-delay="0">
 
     <!-- 
     <img src="./s1/mo.jpg" class="t0" >
@@ -44,11 +42,11 @@
 }
 .s1 {
   min-height: size(920);
-  max-height: size(1070);
+  max-height: size(950);
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: flex-start;
   align-items:center;
   font-size:size(36);
   overflow: hidden;
@@ -82,22 +80,35 @@
     letter-spacing: 0.14em;
     font-weight: 900;z-index: 3;color: #FFF;margin-top:size(58);
     }
-    .en1{ width: size(705);position: relative;z-index: 3;margin-top:size(73);}
-    .img{ width: size(705);position: relative;z-index: 3;margin-top:size(34);mix-blend-mode: screen;
-    img{width: 100%;
-    &:last-child{position: absolute;top:0;left: 0;}
-    }
-    }
+
+  .en{
+   position: relative;
+   width: size(800); 
+   margin-top:size(40);
+  }  
+
+  .icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: size(150);
+  }
+
+  .txt{
+   position: absolute;
+   bottom: size(10);
+   left: size(10);
+   font-size: size(12);
+   color: #fff;
+  }
     
   .t2{position: relative;
     font-size:size(42);
     line-height: 1.13;
-    letter-spacing: 0.46em;
-    text-indent: 0.46em;
-    font-weight: 300;z-index: 3;color: #FFF;margin-top:size(55);
+    letter-spacing: 1.3em;
+    text-indent: 1.18em;
+    font-weight: 500;z-index: 3;color: #FFF;margin-top:size(10);
     }
-    .en2{ width: size(510);position: relative;z-index: 3;margin-top:size(22);mix-blend-mode: screen;}
-    .en3{ width: size(510);position: relative;z-index: 3;margin-top:size(18);}
 }
 
   
@@ -118,22 +129,36 @@
     min-height: 0;
     max-height: sizem(750);
     font-size:sizem(16);
-    justify-content:center;
-  .bg{width:sizem(584);top:sizem(0);left:sizem(-104.5);height:sizem(805);
-  top:calc(50% + #{sizem(-105 - 604 * .5)})
+  .bg{
+  width:sizem(375);height:sizem(667);
+  top:calc(50% + #{sizem(-30 - 604 * .5)})
   }
-  .l1{height: calc(100% + 78vw);}
   .t1{
-    font-size:sizem(23);writing-mode: vertical-lr;margin-top:sizem(56);letter-spacing: 0.1em;
+    font-size:sizem(28);margin-top:sizem(106);letter-spacing: 0.1em;
     white-space: nowrap;
     }
-    .en1{ width: sizem(250);margin-top:sizem(45);}
     .img{ width: sizem(245);margin-top:sizem(16);}
   .t2{
-    font-size:sizem(17);margin-top:sizem(42);
+    font-size:sizem(14);margin-top:sizem(10);
+    letter-spacing: 1.2em;
+    text-indent: 1.1em;
     }
-    .en2{ width: sizem(205);margin-top:sizem(8);}
-    .en3{ width: sizem(205);margin-top:sizem(8);margin-bottom:sizem(49);}
+
+  .icon{
+    width: sizem(80);
+  }
+
+  .en{
+   width: sizem(280); 
+   margin-top:sizem(20);
+  } 
+
+  .txt{
+   bottom: sizem(10);
+   left: sizem(10);
+   font-size: sizem(12);
+  }
+
  
     /*
     .slogo{ width: sizem(230);margin-top:sizem(30);

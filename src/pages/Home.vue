@@ -12,7 +12,7 @@
    <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFF] text-[#000] ">
     <img src="@/section/s1/bg1.jpg" class="bg1" data-aos="fade" data-aos-delay="0">
-    <S0 v-if="isMobile" />
+    
     <S1 />
     <S2 />
     <Order />
@@ -63,7 +63,6 @@ img {
 <script setup>
 import info from "@/info"
 
-import S0 from "@/section/s0.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import Order from "@/section/order.vue"
