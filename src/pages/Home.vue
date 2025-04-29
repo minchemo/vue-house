@@ -13,7 +13,7 @@
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div
-    class="home bg-[#fff] overflow-hidden font-['Noto_Serif_TC'] pb-[64px] md:pb-0"
+    class="home bg-[#de5b1b] overflow-hidden font-['Noto_Serif_TC'] pb-[64px] md:pb-0"
   >
     <S1 />
     <S2 />
@@ -28,7 +28,8 @@
   </div>
 </template>
 
-<style>
+<style lang="scss" >
+@import "@/assets/style/function.scss";
 img {
   display: inline;
   max-width: unset;
@@ -36,12 +37,98 @@ img {
   /* margin: 0 auto; */
 }
 
-.home {
-  background: #0D5052;
+.t1 {
+  color: #f4e827;
+  font-size: size(51);
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing:0.08em;
+  margin-bottom: size(112);
+  padding-bottom: size(35);
+  border-bottom: 1px solid #fff;
+  @media screen and (max-width: 768px) {
+    font-size: sizem(20);
+    margin-bottom: sizem(14);
+    padding-bottom: sizem(14);
+  }
+}
+.t2 {
+  font-size: size(32);
+  font-weight: 500;
+  text-align: justify;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  @media screen and (max-width: 768px) {
+    font-size: sizem(13);    
+  }
 }
 
-@media screen and (max-width: 768px) {
+.slide {
+      .splide__track{height: 100%;}
+      .slide-item {
+        background: #eee;
+        background-size: cover;
+      }
 }
+.caption {
+  @apply absolute font-['Noto_Sanc_TC'];
+  right: .5em;
+  bottom: .5em;
+  font-size: size(20);
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-shadow: 0 0.2em 0.3em #000;
+  @media screen and (max-width: 768px) {
+    font-size: sizem(12);
+  }
+}
+//點點樣式
+.splide__pagination {
+  @apply w-full flex;
+  font-size: size(20); //控制大小
+  padding: .5em 0;
+  li {
+    line-height: 0;
+    button {
+      @apply rounded-full;
+      width: .5em;
+      height: .5em;
+      background: #FF66;
+      &.is-active {
+        background: #FF6C;
+      }
+    }
+  }
+  gap: size(13);
+}
+
+
+//箭頭樣式
+.splide__arrows {
+        @apply absolute z-20 w-full flex justify-between;
+        top: 0;bottom: 0;
+        align-items: center;
+        padding: 0 2%;
+        pointer-events: none;
+        
+
+        .splide__arrow {
+          width: 6%;
+          display: flex;
+          pointer-events: stroke;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+            filter:drop-shadow(0px 2px 3px #000);
+          &.splide__arrow--prev {
+            transform: scaleX(-1);
+          }
+          svg{width: 100%;
+            filter: invert(1);}
+        }
+      }
+
+
 </style>
 
 <script setup>

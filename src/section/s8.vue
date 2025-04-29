@@ -4,9 +4,9 @@
       <Splide
         ref="splide2"
         :options="{
-          arrows: false,
+          arrows: isMobile?true:false,
           autoplay: true,
-          pagination: true,
+          pagination: isMobile?false:true,
           interval: 4000,
           gap: isMobile ?10:0,
           type: 'loop',
@@ -26,22 +26,6 @@
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows" v-if="isMobile">
-        <img
-          src="@/section/arrow.png"
-          class="arrow prev"
-          alt=""
-          srcset=""
-          @click="splide2.go('<')"
-        />
-        <img
-          src="@/section/arrow.png"
-          class="arrow next"
-          alt=""
-          srcset=""
-          @click="splide2.go('>')"
-        />
-      </div>
     </div>
 
     <div class="t">
@@ -138,7 +122,7 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  @apply w-full relative bg-[#0D5052] flex flex-col items-center text-white;
+  @apply w-full relative flex flex-col items-center text-white;
   height: size(2162);
   padding-top: size(224);
 
@@ -147,37 +131,10 @@
     height: size(496);
     margin-bottom: size(20);
     .slide-item {
-      @apply w-full;
-      height: size(496);width: auto;
-      background-size: cover;
-      img{height: 100%;width: auto;}
       .caption {
-        @apply absolute font-[arial,'Noto_Sanc_TC'];
-        left: size(49);
-        top: size(20);
-        color: #fff;
-        font-size: size(30);
-        font-weight: 500;
-        letter-spacing:0.05em;
-        text-shadow: 0 0 3px #0003
+        left: .5em;
+        top: .5em;
       }
-    }
-    .splide__pagination {
-      @apply absolute right-0 w-full flex justify-center;
-      padding: size(25) 0;
-      li {
-        line-height: 0;
-        button {
-          @apply rounded-full;
-          width: size(10);
-          height: size(10);
-          background: #0d6b68;
-          &.is-active {
-            background: #138784;
-          }
-        }
-      }
-      gap: size(13);
     }
   }
 
@@ -185,19 +142,11 @@
     @apply w-full;
     .t1 {
       @apply text-center;
-      color: #e89213;
-      font-size: size(51);
-      font-weight: 700;
-      line-height: 126.7%;
-      letter-spacing: size(4.08);
       margin: size(43) 0;
     }
     .t2 {
       @apply text-center;
       font-size: size(24);
-      font-weight: 700;
-      line-height: 157.9%;
-      letter-spacing: size(4.8);
     }
   }
 
@@ -221,36 +170,6 @@
   .slide {
     width: size(1009);
     height: size(682.74);
-    .slide-item {
-      width: size(1009);
-      height: size(682.74);
-      background-size: cover;
-      .caption {
-        @apply absolute font-[arial,'Noto_Sanc_TC'];
-        right: size(14);
-        bottom: size(15);
-        font-size: size(20);
-        font-weight: 400;
-        letter-spacing: size(2.6);
-      }
-    }
-    .splide__pagination {
-      @apply absolute right-0 w-full flex justify-center;
-      padding: size(25) 0;
-      li {
-        line-height: 0;
-        button {
-          @apply rounded-full;
-          width: size(10);
-          height: size(10);
-          background: #0d6b68;
-          &.is-active {
-            background: #138784;
-          }
-        }
-      }
-      gap: size(13);
-    }
   }
 
   .en {
@@ -289,35 +208,19 @@
       margin-bottom: 0;
       .slide-item {
         height: sizem(331);
-        .caption {
-          left: calc(50% - sizem(170));
-          top: sizem(7);
-          font-size: sizem(23);
-          font-weight: 400;
-          letter-spacing: sizem(1.56);
-        }
+      .caption {
+        left: calc(50% - 14.5em);
       }
-      .splide__pagination {
-        @apply hidden;
-      }
-      .arrows {
-        @apply top-1/2 -translate-y-1/2;
       }
     }
 
     .t {
       padding: 0 sizem(30);
-      .t1 {
-        font-size: sizem(20);
-        letter-spacing: sizem(1.6);
-        margin-top: sizem(27);
-        margin-bottom: sizem(14);
-        padding-bottom: sizem(14);
-        border-bottom: 1px solid #fff;
-      }
+    .t1 {
+      margin: 1em 0 0;
+    }
       .t2 {
         font-size: sizem(13);
-        letter-spacing: sizem(2.6);
       }
     }
 

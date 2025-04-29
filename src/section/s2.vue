@@ -13,7 +13,8 @@
       <View />
     </div>
     <div class="t1"  data-aos="fade-up" data-aos-delay="100">1高雙橋3快 南來北往一路暢快</div>
-    <img class="t2" v-if="!isMobile" src="@/section/s2/t.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="200" />
+    <div class="t2" data-aos="fade-up" data-aos-delay="200">瞬接台64、65、國道一號，暢通南北，橫跨雙北通勤軸帶、國門機場，一橋之隔蘆洲站，輕取北市繁華門戶，都會生活脈動輕鬆駕馭！</div>
+    <!-- <img class="t2" v-if="!isMobile" src="@/section/s2/t.svg" alt="" srcset=""  data-aos="fade-up" data-aos-delay="200" />  -->
   </article>
 </template>
 
@@ -43,12 +44,25 @@
     right: size(75);
     top: size(45);
   }
+  /*
   .t2 {
     @apply absolute z-10;
     width: size(590);
     left: size(73);
     top: size(236);
   }
+    */
+      .t2 {
+        @apply absolute z-10;
+        width: size(800);
+    left: size(73);
+    top: size(236);
+        font-size: size(18);
+        font-weight: 700;
+        text-align: justify;
+        line-height: 1.6;
+        letter-spacing: 0.1em;
+      }
 }
 
 /* 螢幕尺寸標準 */
@@ -79,6 +93,11 @@
       right: unset;
       top: unset;
     }
+        .t2 {
+          font-size: sizem(13);
+          line-height: 157.9%;
+          letter-spacing: sizem(2.6);
+        }
   }
 }
 </style>

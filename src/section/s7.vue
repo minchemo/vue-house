@@ -1,34 +1,17 @@
 <template>
   <article class="s7">
     <div class="slide-box">
-      <div class="arrows" v-if="isMobile">
-        <img
-          src="@/section/arrow.png"
-          class="arrow prev"
-          alt=""
-          srcset=""
-          @click="splide.go('<')"
-        />
-        <img
-          src="@/section/arrow.png"
-          class="arrow next"
-          alt=""
-          srcset=""
-          @click="splide.go('>')"
-        />
-      </div>
       <Splide
         ref="splide"
         class="slide"
         :options="{
-          arrows: false,
-          autoplay: false,
-          pagination: false,
+          arrows: isMobile?false:false,
+          autoplay: true,
+          pagination: isMobile?false:false,
           drag: false,
           interval: 4000,
           gap: 10,
           type: 'loop',
-          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
         }"
       >
         <SplideSlide
@@ -78,7 +61,7 @@
 @import "@/assets/style/function.scss";
 
 .s7 {
-  @apply w-full relative bg-[#0D5052] flex text-white;
+  @apply w-full relative flex text-white;
   height: size(1205);
   padding-top: size(229);
   padding-left: size(168);
@@ -89,36 +72,8 @@
     .slide {
       width: size(903);
       height: size(906);
-      .slide-item {
-        width: size(903);
-        height: size(906);
-        background: #eee;
-        background-size: cover;
-        .caption {
-          @apply absolute font-['Noto_Sanc_TC'];
-          right: size(14);
-          bottom: size(15);
-          font-size: size(20);
-          font-weight: 400;
-          letter-spacing: size(2.6);
-        }
-      }
       .splide__pagination {
-        @apply absolute right-0 w-full flex justify-end;
-        padding: size(25) 0;
-        li {
-          line-height: 0;
-          button {
-            @apply rounded-full;
-            width: size(10);
-            height: size(10);
-            background: #0d6b68;
-            &.is-active {
-              background: #138784;
-            }
-          }
-        }
-        gap: size(13);
+        @apply justify-end;
       }
     }
     .t {
@@ -126,28 +81,15 @@
       padding-top: size(95);
       .t1 {
         @apply text-center;
-        color: #e89213;
-        font-size: size(51);
-        font-weight: 700;
-        line-height: 126.7%;
-        letter-spacing: size(4.08);
-        margin-bottom: size(100);
-        padding-bottom: size(35);
-        border-bottom: size(1) solid #fff;
       }
       .t2 {
         @apply text-center;
-        font-size: size(32);
-        font-weight: 700;
-        line-height: 157.9%;
-        letter-spacing: size(6.4);
         span {
           @apply block;
           margin-top: size(40);
           margin-bottom: size(5);
           font-size: size(52);
           font-weight: 700;
-          letter-spacing: size(10.4);
         }
       }
     }
