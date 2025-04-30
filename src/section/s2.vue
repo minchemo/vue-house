@@ -4,7 +4,7 @@
     <img src="./s2/bg.webp" class="bg" data-aos="fade" data-aos-delay="0" v-else>
     <div class="txt" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">
 
-      <h1>掌握節點者 主宰程式脈動</h1>
+      <h1>掌握節點者 主宰城市脈動</h1>
       <h2>大坪林雙捷運 新店核心快捷鍵</h2>
 
 
@@ -34,7 +34,7 @@
       </div>     
     </div>
     <div class="txt" v-else>
-      <h1>掌握節點者 主宰程式脈動</h1>
+      <h1>掌握節點者 主宰城市脈動</h1>
       <h2>大坪林雙捷運 新店核心快捷鍵</h2>
 
       <div data-aos="fade-up" data-aos-delay="0">
