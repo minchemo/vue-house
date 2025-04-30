@@ -1,8 +1,17 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
+<!-- 
+      <div class="order-title" data-aos="fade-up" data-aos-delay="0"><img src="@/section/s2/line.svg" alt="line" class="line"><br>邀約行家 領席鑑賞</div> -->
+      <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <!-- <div class="cus-divider"></div> -->
+
+      <!-- Title Image
+      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
+ -->
+      <!-- Custom Image -->
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center font-['Noto_Serif_TC',serif]">
@@ -19,7 +28,13 @@
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-
+        <!--
+          <label class="row"><span>性別</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.gender">
+            <option value="" selected disabled>請選擇性別</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select></label>  -->
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
@@ -352,7 +367,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["email" , "msg","gender","project","city","area","budget","room_type","use_type"]
+const bypass = ["email" , "msg","project","city","area","budget","room_type","use_type"]
 
 //中文對照
 const formDataRef = ref([

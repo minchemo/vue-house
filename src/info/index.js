@@ -1,4 +1,4 @@
-const caseName = "白隅"
+const caseName = "000"
 
 export default {
     meta: {
