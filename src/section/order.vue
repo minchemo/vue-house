@@ -10,7 +10,9 @@
 
       <!-- Title Image
       <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
- -->
+ -->  
+      <img class="order-title-img" src="@/section/form/titlem.svg" alt="" srcset="" v-if="isMobile">
+      <img class="order-title-img" src="@/section/form/title.svg" alt="" srcset="" v-else>
       <!-- Custom Image -->
 
       <!-- Form -->
@@ -19,12 +21,12 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-          <div class="gender">
+          <!--div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>
+        </div-->
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -161,8 +163,8 @@
   }
 
   .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
+    width: size(1186);
+    margin: size(80) auto size(35);
   }
   .order-subTitle{
     font-size: size(17);
@@ -227,9 +229,9 @@
         background-position:calc(100% - .5em) 0%;
       }
       }
-      &.name{width: calc(100% - 3.8em);
+      //&.name{width: calc(100% - 3.8em);
       // .input{height: 5em;}
-      }
+      //}
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;color: #FFF;
       label:first-child{margin-bottom: .3em;}
@@ -241,9 +243,9 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    //background-color: #c9a063;
-    background:linear-gradient(180deg, #FF8BF3 , #7400E0 );
+    color: #000;
+    background-color: #e6cf4e;
+    //background:linear-gradient(180deg, #FF8BF3 , #7400E0 );
     //background:linear-gradient(180deg, #f575a6 , #652ccf );
     // background:linear-gradient(180deg, #b2baff , #781297 );
     //border: 1px solid #FFF9;
@@ -301,6 +303,12 @@
       min-width: 0;
       .line{width: sizem(258);}
     }
+
+    .order-title-img {
+    width: sizem(250);
+    margin: sizem(50) auto sizem(30);
+  }
+
     .order-subTitle{
       font-size: sizem(13);
       padding-top:0;

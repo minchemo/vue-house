@@ -47,8 +47,9 @@
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img/form/pen.svg" alt="預約增值" srcset="" />
-      <div>預約增值</div>
+      <img src="//h35.banner.tw/img/form/pen.svg" alt="立即預約" srcset="" />
+      <div>立即預約
+      </div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
@@ -138,8 +139,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #FFF;
-      color: #172a88;
+      background: #e6cf4e;
+      color: #000;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -154,11 +155,11 @@
       gap: 1em;
 
       &:hover {
-        background: #c9a063;
-        color: #fff;
+        background: #bba739;
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
         }
       }
 
@@ -166,7 +167,7 @@
         max-width: 1.35em;
         height: auto;
         max-height: 1.35em;
-        filter:invert(17%) sepia(32%) saturate(3185%) hue-rotate(213deg) brightness(106%) contrast(116%);
+        filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
         transition: all .5s;
         margin: 0;
       }
@@ -224,7 +225,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(17%) sepia(32%) saturate(3185%) hue-rotate(213deg) brightness(106%) contrast(116%);
+  img{filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
   }
 }
 
@@ -240,8 +241,8 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-   // background:#c9a063;
-   background:linear-gradient(180deg, #FF8BF3 , #6D1EDB );
+    background:#004933;
+   //background:linear-gradient(180deg, #FF8BF3 , #6D1EDB );
     //background:linear-gradient(180deg, #f575a6 , #652ccf );
     // background:linear-gradient(180deg, #b2baff , #781297 );
 

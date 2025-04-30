@@ -1,86 +1,72 @@
 <template>
   <article class="s2 relative" id="s2">
-    <img src="./s2/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0">
+    <img src="./s2/bgm.webp" class="bg" data-aos="fade" data-aos-delay="0" v-if="isMobile">
+    <img src="./s2/bg.webp" class="bg" data-aos="fade" data-aos-delay="0" v-else>
     <div class="txt" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">
+
+      <h1>掌握節點者 主宰程式脈動</h1>
+      <h2>大坪林雙捷運 新店核心快捷鍵</h2>
+
+
       <div data-aos="fade-up" data-aos-delay="0">
-        高雄崛起，世界望向台灣
+        「忠孝復興站」貴為雙捷交匯樞紐
       </div>
       <div data-aos="fade-up" data-aos-delay="100">
-        台灣高雄，躍升新亞洲核心
+        一線串聯都會命脈,一站奠定房價天花板
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
-        台積電從高雄啟航
+        同樣坐擁尊貴雙捷DNA的「大坪林站」
       </div>
       <div data-aos="fade-up" data-aos-delay="300">
-        劃出第一道亞洲聚富軸線
+        正以同樣的節奏與能量,重塑新店價值新高地<br><br>
       </div>
       <div data-aos="fade-up" data-aos-delay="400">
-        全球科技集團在高雄攻城掠地
+        真正的核心從不在喧囂之中
       </div>
       <div data-aos="fade-up" data-aos-delay="500">
-        您必須重新布局，回到亞洲的新核心一高雄<br>&ensp;
+        而在能掌握節奏的人手上
       </div>
       <div data-aos="fade-up" data-aos-delay="600">
-        論談地段，台積電說了才算
+        從城市核心起步,向全台增值坐標進發
       </div>
       <div data-aos="fade-up" data-aos-delay="700">
-        世界同步聚富磁場，高大特區奇貨可居
-      </div>
-      <div data-aos="fade-up" data-aos-delay="800">
-        地王之王一席難求，精華土地不可複製
-      </div>
-      <div data-aos="fade-up" data-aos-delay="900">
-        增值實力越墊越高<br>&ensp;
-      </div>
-      <div data-aos="fade-up" data-aos-delay="1000">
-        站上科技巨人的肩膀，定錨台積電高大核心
-      </div>
-      <div data-aos="fade-up" data-aos-delay="1100">
-        掌握世界級的耀眼先積
-      </div>
-      <div data-aos="fade-up" data-aos-delay="1200">
-        與台積電、高雄大學共榮推漲
-      </div>
-      <div data-aos="fade-up" data-aos-delay="1300">
-        昔日一地尊貴，未來一席絕響
-      </div>      
+        通往未來捷境的下一站,即將公開
+      </div>     
     </div>
     <div class="txt" v-else>
+      <h1>掌握節點者 主宰程式脈動</h1>
+      <h2>大坪林雙捷運 新店核心快捷鍵</h2>
+
       <div data-aos="fade-up" data-aos-delay="0">
-        高雄崛起，世界望向台灣，台灣高雄，躍升新亞洲核心
+        「忠孝復興站」貴為雙捷交匯樞紐
       </div>
       <div data-aos="fade-up" data-aos-delay="100">
-        台積電從高雄啟航，劃出第一道亞洲聚富軸線
+        一線串聯都會命脈,一站奠定房價天花板
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
-        全球科技集團在高雄攻城掠地
+        同樣坐擁尊貴雙捷DNA的「大坪林站」
       </div>
       <div data-aos="fade-up" data-aos-delay="300">
-        您必須重新布局，回到亞洲的新核心一高雄<br>&ensp;
+        正以同樣的節奏與能量,重塑新店價值新高地<br><br>
       </div>
       <div data-aos="fade-up" data-aos-delay="400">
-        論談地段，台積電說了才算，世界同步聚富磁場
+        真正的核心從不在喧囂之中
       </div>
       <div data-aos="fade-up" data-aos-delay="500">
-        高大特區奇貨可居，地王之王一席難求
+        而在能掌握節奏的人手上
       </div>
       <div data-aos="fade-up" data-aos-delay="600">
-        精華土地不可複製，增值實力越墊越高<br>&ensp;
+        從城市核心起步,向全台增值坐標進發
       </div>
       <div data-aos="fade-up" data-aos-delay="700">
-        站上科技巨人的肩膀，定錨台積電高大核心
-      </div>
-      <div data-aos="fade-up" data-aos-delay="800">
-        掌握世界級的耀眼先積，與台積電、高雄大學共榮推漲
-      </div>
-      <div data-aos="fade-up" data-aos-delay="900">
-        昔日一地尊貴，未來一席絕響
+        通往未來捷境的下一站,即將公開
       </div>
     </div>
-    <div class="img">
-      <img src="./s2/logo.svg" alt="logo" data-aos="fade-up" data-aos-delay="0">
-      <img src="./s2/coming.svg" alt="coming" data-aos="fade-up" data-aos-delay="200">
-    </div>
+
+    <img src="./s2/iconm.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="0" v-if="isMobile">
+    <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="0" v-else>
+    <div class="font" v-if="isMobile">情境示意圖</div>
+
   </article>
 </template>
 
@@ -89,20 +75,45 @@
 .s2 {
   display: flex;
   flex-direction:row;
-  justify-content:center;
+  justify-content: flex-start;
   align-items:center;
-  color: #3e3a39;
+  background: #e6f5da;
+  color: #231815;
   gap: size(95);
   font-size: size(22);
   line-height: 1.8;
   letter-spacing: 0.04em;
-  padding: size(152) 0 size(430) 0;
+  
   overflow: hidden;
   z-index: 2;
-  .bg{position: absolute;width:100%;left:0;bottom: 0;}
-  .txt{position: relative;z-index: 3;margin-left: size(10);}
-  .img{position: relative;z-index: 3;width: size(604);
-    img{width: 100%;margin: size(40) 0 size(20) 0;}
+  .bg{position: absolute;width:100%;left:size(10);bottom: 0;}
+  .txt{
+  position: relative;z-index: 3;margin-left: size(150);
+  padding: size(200) 0 size(170) 0;
+  
+    h1{
+      color: #007550;
+      font-weight: 700;
+      font-size: size(63);
+    }
+
+    h2{
+      font-size: size(30);
+      letter-spacing: 0.8em;
+      margin-bottom: size(50);
+    }
+    div{
+      margin: size(15) 0;
+    }
+  
+  }
+
+
+  .icon{
+    position: absolute;
+    width: size(860);
+    right: 0;
+    bottom: 0;
   }
 }
   
@@ -115,15 +126,42 @@
     flex-direction:column;
     font-size: sizem(12.5);
     text-align: center;line-height: 1.92;
-    padding: sizem(46) 0 sizem(240) 0;
+    //padding: sizem(46) 0 sizem(240) 0;
     gap:0;
-    .bg{bottom: auto;top: 0;width: 354%;left: -124%;}
-    .txt{margin-left: 0;}
-    .img{width: sizem(245);
-      img{margin: sizem(26) 0 sizem(4) 0;
-      &:last-child{width:82%;}
-      }
+    .bg{
+    width: sizem(375);
+    bottom: 0;
+    left: 0;}
+    .txt{margin-left: 0;
+    padding: sizem(30) 0 sizem(320) 0;
+    
+    h1{
+      font-size: sizem(25);
     }
+
+    h2{
+      font-size: sizem(13);
+      letter-spacing: 0.65em;
+      text-indent: 0.65em;
+      margin-bottom: sizem(30);
+    }
+    div{text-align: left;}
+    }
+
+    .icon{
+    width: sizem(375);
+    right: 0;
+    bottom: 0;
+  }
+
+  .font{
+    position: absolute;
+    color: #fff;
+    bottom: sizem(8);
+    left: sizem(8);
+    font-size: sizem(9);
+    }
+
   
   }
 
