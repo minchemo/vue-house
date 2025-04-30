@@ -414,7 +414,9 @@ const send = () => {
       unfill.push(formDataRef.value[idx]);
       pass = false;
     }
-    presend.append(key, value);
+    if (key !== "r_verify" && key !== "policyChecked") {
+      presend.append(key, value); // 只加入不是 以上條件 的欄位
+    }
     idx++;
   }
   
