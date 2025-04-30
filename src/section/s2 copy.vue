@@ -28,6 +28,33 @@
       <!-- <a class="download" href="https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link" target="_blank">公開資料下載</a> -->
     </div>
 
+    <div class="box box3">
+      <h2 class="title font-['noto_Serif_tc']">三、最新消息</h2>
+      <div class="list">
+        <span class="t1">欲提供房屋佐證資料者，請於114年5月30日前，將 1.稅籍資料 2.對照年份前後之航照圖 3.結構證明文件 ，電郵至本案專屬 <a class="link" href="mailto:dachen.five@gmail.com" target="_blank">電子信箱</a>。</span>
+      </div>
+    </div>
+
+    <!--div class="box box1">
+      <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
+      <div class="list">
+        <span class="t1">Line諮詢</span>
+        <span class="t2"><a class="link" href="https://lin.ee/kltP71Y" target="_blank">https://lin.ee/kltP71Y</a></span>
+      </div>
+      <div class="list">
+        <span class="t1">電子信箱</span>
+        <span class="t2"><a class="link" href="mailto:dachen.five@gmail.com" target="_blank">dachen.five@gmail.com</a></span>
+      </div>
+    </div-->
+
+    <div class="box box4">
+      <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
+      <div class="icon">
+        <a class="link" href="https://lin.ee/kltP71Y" target="_blank"><img class="linkimg" src="@/section/s1/line.svg"></a>
+        <img class="linkimg" src="@/section/s1/qr.png">
+        <!--a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="@/section/s1/gmail.svg"></a-->
+      </div>
+    </div>
   </article>
 </template>
 
