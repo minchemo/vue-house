@@ -108,6 +108,8 @@
     <!-- Map -->
     <Map v-if="info.address" />
 
+    <div class="footer">海沃創意行銷</div>
+
     <!-- HouseInfo
     <HouseInfo /> -->
   </div>
@@ -140,6 +142,17 @@
  // background-size: auto;
  // background: linear-gradient(to bottom, #195c45, #000704);
   
+
+  .footer{
+    width: 100%;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
 
 
   .order-title {
@@ -295,6 +308,17 @@
       margin-bottom: sizem(25);
       background-color: #055F76;
     }
+
+    .footer{
+    width: 100%;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
 
     .order-title {
       font-size: sizem(20);
