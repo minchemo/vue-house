@@ -161,16 +161,17 @@ svago源自歐洲的廚電美學品牌，為義大利文「享樂」之意，體
 
 @media screen and (max-width: 767px) {
   .s10 {
-    height: sizem(667);
-    padding-top: sizem(132);
+    // height: sizem(667);
+    padding-top: sizem(0);
     padding-left: 0;
 
     .slide-box {
       @apply flex-col;
       gap: sizem(24);
       .slide {
-        width: sizem(375);
-        height: sizem(281);
+        width: sizem(270);
+        height: sizem(418);
+        margin: auto;
         .slide-item {
         }
         .splide__pagination {
@@ -180,15 +181,26 @@ svago源自歐洲的廚電美學品牌，為義大利文「享樂」之意，體
       .t {
         width: 100%;
         padding: 0 sizem(30);
+        height: sizem(670);
       }
+    .t2 {
+      font-size: sizem(12);}
     }
 
-    .en {
-      @apply absolute;
-      height: sizem(61);
-      top: sizem(36);
-      left: unset;
-      right: 0;
+    .en2 {
+      @apply flex-col-reverse;
+      gap: sizem(9);
+      margin-top: sizem(30);
+      margin-bottom: sizem(30);
+      .en2-t {
+        font-size: sizem(20);
+        font-weight: 700;
+        line-height: 126.7%;
+        letter-spacing: sizem(1.6);
+      }
+      .en2-i {
+        width: sizem(301);
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <article class="s6">
+  <article class="s5">
     <div class="slide-box">
       <Splide
         ref="splide"
@@ -25,46 +25,53 @@
         </SplideSlide>
       </Splide>
       <div class="t">
-        <div class="t1" data-aos="fade-up" data-aos-delay="0">百年成州學區<br v-if="!isMobile" /> 資優素養明日菁英</div>
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">成州商圈下樓到<br /> 便利機能俯拾皆是</div>
         <div class="t2" data-aos="fade-up" data-aos-delay="200">
-          成州國小學區近距離，文教學府一氣呵成，日日書香飄溢，天天快樂學習；為孩子奠定最好的學習起點，就是邁向勝利人生的指標！
+          成州傳統市場、聯合超市、美聯社，等生鮮超市隨伺在身；五股最熱鬧的成泰路繁華生活圈，輕鬆滿足生活採買所需，優雅搞定生活大小事，便利不求人！
         </div>
       </div>
     </div>
-    <img class="en" src="@/section/s6/en.svg" alt="" srcset="" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0"/>
-    <img class="en" src="@/section/s6/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
+    <img
+      class="en"
+      src="@/section/s5/en.svg"
+      alt=""
+      srcset=""
+      v-if="!isMobile"
+      data-aos="fade-up" data-aos-delay="0"
+    />
+    <img class="en" src="@/section/s5/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
   </article>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s6 {
+.s5 {
   @apply w-full relative flex text-white;
   height: size(1080);
-  padding-top: size(323);
-  padding-left: size(70);
+  padding-top: size(313);
+  padding-left: size(139);
 
   .slide-box {
-    @apply flex items-start;
-    gap: size(106);
+    @apply flex flex-row-reverse items-start;
+    gap: size(137);
     .slide {
       width: size(1061);
       height: size(624);
     }
     .splide__pagination {
-        @apply justify-start;
+        @apply justify-end;
     }
   }
     .t {
-      width: size(546);
+      width: size(508);
     }
 
   .en {
     @apply absolute;
     height: size(146.34);
     top: size(23);
-    left: 0;right: 0;margin: auto;
+    left: size(4);
   }
 }
 
@@ -74,7 +81,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .s6 {
+  .s5 {
     height: sizem(667);
     padding-top: sizem(132);
     padding-left: 0;
@@ -94,10 +101,9 @@
 
     .en {
       @apply absolute;
-      height: sizem(58.5);
+      height: sizem(63.94);
       top: sizem(36);
-      right: 0;
-      left: unset;
+      left: 0;
     }
   }
 }
@@ -115,16 +121,16 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s6/1.webp", import.meta.url).href,
-    caption: "成州國小",
+    img: new URL("../section/s5/1.webp", import.meta.url).href,
+    caption: "成州市場",
   },
   {
-    img: new URL("../section/s6/2.webp", import.meta.url).href,
-    caption: "情境圖",
+    img: new URL("../section/s5/2.webp", import.meta.url).href,
+    caption: "成州市場",
   },
   {
-    img: new URL("../section/s6/3.webp", import.meta.url).href,
-    caption: "五股圖書館",
+    img: new URL("../section/s5/3.webp", import.meta.url).href,
+    caption: "成泰路商圈",
   },
 ]
 </script>

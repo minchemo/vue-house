@@ -71,7 +71,7 @@
     @apply absolute;
     height: size(146.34);
     top: size(23);
-    left: size(4);
+    left: 0;right: 0;margin: auto;
   }
 }
 

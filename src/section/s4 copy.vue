@@ -1,5 +1,5 @@
 <template>
-  <article class="s6">
+  <article class="s4">
     <div class="slide-box">
       <Splide
         ref="splide"
@@ -25,21 +25,29 @@
         </SplideSlide>
       </Splide>
       <div class="t">
-        <div class="t1" data-aos="fade-up" data-aos-delay="0">百年成州學區<br v-if="!isMobile" /> 資優素養明日菁英</div>
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">天乙公園相鄰<br v-if="!isMobile" /> 綠意首景在家享受</div>
         <div class="t2" data-aos="fade-up" data-aos-delay="200">
-          成州國小學區近距離，文教學府一氣呵成，日日書香飄溢，天天快樂學習；為孩子奠定最好的學習起點，就是邁向勝利人生的指標！
+          繁華轉身綠意滿懷，天乙公園為鄰，更享大台北都會公園，近擁7.7公里珍稀水景、24公里環狀自行車步道，觀音山景成日常，享受繁華市心的森活綠景！
         </div>
       </div>
     </div>
-    <img class="en" src="@/section/s6/en.svg" alt="" srcset="" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0"/>
-    <img class="en" src="@/section/s6/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
+    <img
+      class="en"
+      src="@/section/s4/en.svg"
+      alt=""
+      srcset=""
+      v-if="!isMobile"
+      data-aos="fade-up" data-aos-delay="0"
+    />
+
+    <img class="en" src="@/section/s4/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0" />
   </article>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s6 {
+.s4 {
   @apply w-full relative flex text-white;
   height: size(1080);
   padding-top: size(323);
@@ -64,7 +72,7 @@
     @apply absolute;
     height: size(146.34);
     top: size(23);
-    left: 0;right: 0;margin: auto;
+    right: size(4);
   }
 }
 
@@ -74,7 +82,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .s6 {
+  .s4 {
     height: sizem(667);
     padding-top: sizem(132);
     padding-left: 0;
@@ -85,6 +93,11 @@
       .slide {
         width: sizem(375);
         height: sizem(281);
+        .slide-item {
+        }
+        .splide__pagination {
+          @apply hidden;
+        }
       }
       .t {
         width: 100%;
@@ -94,10 +107,10 @@
 
     .en {
       @apply absolute;
-      height: sizem(58.5);
+      height: sizem(61);
       top: sizem(36);
-      right: 0;
       left: unset;
+      right: 0;
     }
   }
 }
@@ -115,16 +128,20 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s6/1.webp", import.meta.url).href,
-    caption: "成州國小",
+    img: new URL("../section/s4/01.jpg", import.meta.url).href,
+    caption: "天乙公園",
   },
   {
-    img: new URL("../section/s6/2.webp", import.meta.url).href,
-    caption: "情境圖",
+    img: new URL("../section/s4/02.jpg", import.meta.url).href,
+    caption: "五股體健防災公園",
   },
   {
-    img: new URL("../section/s6/3.webp", import.meta.url).href,
-    caption: "五股圖書館",
+    img: new URL("../section/s4/03.jpg", import.meta.url).href,
+    caption: "洲子洋公園",
+  },
+  {
+    img: new URL("../section/s4/04.jpg", import.meta.url).href,
+    caption: "大都會公園",
   },
 ]
 </script>

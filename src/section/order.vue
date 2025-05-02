@@ -104,7 +104,7 @@
         <p class="text-[#fff]">
           本人知悉並同意<label
             for="policy-modal"
-            class="modal-button text-[#0D5052] cursor-pointer hover:opacity-70"
+            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70"
             >「個資告知事項聲明」</label
           >內容
         </p>
@@ -235,12 +235,12 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #fff;
+      background-color: #fff6;
       position: absolute;
     }
     .row {
-      background: rgba($color: #fff, $alpha: .3);
-      border: 1px solid #ccc;
+      background:#33110033;
+      border: 1px solid #fff6;
       color: #fff;
       display: flex;
       width: 100%;
@@ -250,7 +250,7 @@
         text-align: left;
         padding-left: 1em;
         > span {
-          color: #f00;
+          color: #FF0;
           font-size: 12px;
         }
       }
@@ -284,7 +284,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background: #0D5052;
+    background: #7b201d;
     //border: 1px solid #FFF9;
     border: 0;
     border-radius: 0.5em;

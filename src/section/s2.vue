@@ -38,11 +38,8 @@
   }
   .t1 {
     @apply absolute z-10;
-    font-size: size(51);
-    font-weight: 700;
-    letter-spacing: size(4);
     right: size(75);
-    top: size(45);
+    top: size(75);color: #FFF;border: 0;
   }
   /*
   .t2 {
@@ -72,7 +69,7 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(667);
+    height: sizem(717);
     padding-top: sizem(100);
 
     .en {
@@ -94,9 +91,10 @@
       top: unset;
     }
         .t2 {
-          font-size: sizem(13);
-          line-height: 157.9%;
-          letter-spacing: sizem(2.6);
+          font-size: sizem(12);
+          width: sizem(290);
+          top: sizem(150);
+          left: sizem(45);
         }
   }
 }

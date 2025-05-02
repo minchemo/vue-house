@@ -25,21 +25,21 @@
         </SplideSlide>
       </Splide>
       <div class="t">
-        <div class="t1" data-aos="fade-up" data-aos-delay="0">成州商圈下樓到<br /> 便利機能俯拾皆是</div>
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">天乙公園相鄰<br v-if="!isMobile" /> 綠意首景在家享受</div>
         <div class="t2" data-aos="fade-up" data-aos-delay="200">
-          成州傳統市場、聯合超市、美聯社，等生鮮超市隨伺在身；五股最熱鬧的成泰路繁華生活圈，輕鬆滿足生活採買所需，優雅搞定生活大小事，便利不求人！
+          繁華轉身綠意滿懷，天乙公園為鄰，更享大台北都會公園，近擁7.7公里珍稀水景、24公里環狀自行車步道，觀音山景成日常，享受繁華市心的森活綠景！
         </div>
       </div>
     </div>
     <img
       class="en"
-      src="@/section/s5/en.svg"
+      src="@/section/s4/en.svg"
       alt=""
       srcset=""
       v-if="!isMobile"
       data-aos="fade-up" data-aos-delay="0"
     />
-    <img class="en" src="@/section/s5/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
+    <img class="en" src="@/section/s4/enm.svg" alt="" srcset="" v-else data-aos="fade-up" data-aos-delay="0"/>
   </article>
 </template>
 
@@ -71,7 +71,7 @@
     @apply absolute;
     height: size(146.34);
     top: size(23);
-    left: size(4);
+    left: 0;right: 0;margin: auto;
   }
 }
 

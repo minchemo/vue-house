@@ -148,7 +148,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #0D5052;
+      background-color: #7b201d;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -162,11 +162,10 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #fff;
-        color: #000;
+        background-color: #5f0300;
+      
 
         img {
-          filter: brightness(1) invert(0);
         }
       }
 
@@ -199,23 +198,6 @@
       }
 
 
-      &.googlemap {
-        background-color: #0D5052;
-        color: #fff;
-
-        img {
-          filter: brightness(0) invert(1);
-        }
-
-        &:hover {
-          background-color: #fff;
-          color: #000;
-
-          img {
-            filter: brightness(1) invert(0);
-          }
-        }
-      }
     }
 
     &.no-gap {
