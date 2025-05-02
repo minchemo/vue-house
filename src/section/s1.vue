@@ -15,10 +15,10 @@
       <img class="b2" src="./s1/b2.png" alt="" />
 </div>
   <div class="txt">
-    <img class="logo" src="./s1/logo.svg" alt="" />
-    <div class="t01">住近繁華，住靜生活</div>
-    <div class="t02">成州生活圈 寧靜特區</div>
-    <div class="t03"><span class="l"><span>訂簽</span>95<span>萬起</span></span><span class="r">2-3房</span></div>
+    <img class="logo" src="./s1/logo.svg" alt="" data-aos="zoom-in" data-aos-delay="0" />
+    <div class="t01" data-aos="zoom-in" data-aos-delay="200">住近繁華，住靜生活</div>
+    <div class="t02" data-aos="zoom-in" data-aos-delay="400">成州生活圈 寧靜特區</div>
+    <div class="t03" data-aos="zoom-in" data-aos-delay="600"><span class="l"><span>訂簽</span>95<span>萬起</span></span><span class="r">2-3房</span></div>
   </div>
   </article>
 </template>
@@ -26,6 +26,11 @@
 <style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
+@keyframes an {
+  to {
+    transform: rotate(0);
+  }
+}
 .s1 {
   @apply w-full h-screen relative flex flex-col items-center justify-center text-white;
   min-height: size(900);
@@ -43,11 +48,27 @@ img{position: absolute;}
 .bg1{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
 img{position: absolute;}
 }
-.f1{right: size(-100);top:size(100);width:size(360);}
-.f2{right: size(-250);bottom:size(-310);width:size(728);opacity: .2;}
-.f3{left: size(166);bottom:size(-755);width:size(977);opacity: .2;}
-.f4{left: size(-150);bottom:size(-280);width:size(390);transform: scaleX(-1)rotate(-20deg);
+.f1{right: size(-100);top:size(100);width:size(360);
+  animation: an 5s alternate infinite;
+  transform: skewY(-2deg)rotate(-3deg);
+  transform-origin: 100% 100%;
+}
+.f2{right: size(-250);bottom:size(-310);width:size(728);opacity: .2;
+  animation: an 5s -2s alternate infinite;
+  transform: skewX(-2deg)rotate(-3deg);
+  transform-origin: 50% 100%;}
+.f3{left: size(166);bottom:size(-755);width:size(977);opacity: .2;
+  animation: an 5s -5s alternate infinite;
+  transform: skewX(-2deg)rotate(-3deg);
+  transform-origin: 50% 100%;}
+.f4{left: size(-150);bottom:size(-275);width:size(390);transform: scaleX(-1)rotate(-17deg);
   filter: invert(0) sepia(100%) saturate(2000%) hue-rotate(340deg);
+  animation: an2 5s -5s alternate infinite;
+  transform-origin: 50% 100%;}
+@keyframes an2 {
+  to {
+    transform: scaleX(-1)rotate(-20deg);
+  }
 }
 .b1{left: size(160);top:size(424);width:size(250);}
 .b2{right: size(560);top:size(766);width:size(119);}
@@ -72,6 +93,7 @@ margin: 1em auto 0 auto;}
     .r{border: 1px solid #fff;border-width:0 1px 0 1px;margin: 0 0 0 .5em ;padding: 0 .5em;line-height: 1.2;}
   }
 }
+
 
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
