@@ -4,41 +4,28 @@
       <Splide
         ref="splide2"
         :options="{
-          arrows: false,
+          arrows: isMobile?true:false,
           autoplay: true,
-          pagination: true,
+          pagination: isMobile?false:true,
           interval: 4000,
-          gap: 20,
+          gap: isMobile ?10:0,
           type: 'loop',
+          focus:isMobile ? 'center':'left',
+          autoWidth: true,
+          perPage: isMobile ? 1 : 'auto'
         }"
       >
         <SplideSlide
           class="slide-item"
           :key="i"
           v-for="i in imgs2"
-          :style="{ 'background-image': `url(${i.img})` }"
         >
+        <img :src="i.img" :alt="i.caption">
           <div class="caption">
             {{ i.caption }}
           </div>
         </SplideSlide>
       </Splide>
-      <div class="arrows" v-if="isMobile">
-        <img
-          src="@/section/arrow.png"
-          class="arrow prev"
-          alt=""
-          srcset=""
-          @click="splide2.go('<')"
-        />
-        <img
-          src="@/section/arrow.png"
-          class="arrow next"
-          alt=""
-          srcset=""
-          @click="splide2.go('>')"
-        />
-      </div>
     </div>
 
     <div class="t">
@@ -135,44 +122,19 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  @apply w-full relative bg-[#0D5052] flex flex-col items-center text-white;
+  @apply w-full relative flex flex-col items-center text-white;
   height: size(2162);
   padding-top: size(224);
 
   .slide-box-i {
     @apply relative w-full;
-    height: size(538);
+    height: size(496);
     margin-bottom: size(20);
     .slide-item {
-      @apply w-full;
-      height: size(538);
-      background-size: cover;
       .caption {
-        @apply absolute font-['Noto_Sanc_TC'];
-        right: size(49);
-        bottom: size(20);
-        color: #fff;
-        font-size: size(20);
-        font-weight: 400;
-        letter-spacing: size(2.6);
+        left: .5em;
+        top: .5em;
       }
-    }
-    .splide__pagination {
-      @apply absolute right-0 w-full flex justify-center;
-      padding: size(25) 0;
-      li {
-        line-height: 0;
-        button {
-          @apply rounded-full;
-          width: size(10);
-          height: size(10);
-          background: #0d6b68;
-          &.is-active {
-            background: #138784;
-          }
-        }
-      }
-      gap: size(13);
     }
   }
 
@@ -180,19 +142,11 @@
     @apply w-full;
     .t1 {
       @apply text-center;
-      color: #e89213;
-      font-size: size(51);
-      font-weight: 700;
-      line-height: 126.7%;
-      letter-spacing: size(4.08);
       margin: size(43) 0;
     }
     .t2 {
       @apply text-center;
       font-size: size(24);
-      font-weight: 700;
-      line-height: 157.9%;
-      letter-spacing: size(4.8);
     }
   }
 
@@ -216,36 +170,6 @@
   .slide {
     width: size(1009);
     height: size(682.74);
-    .slide-item {
-      width: size(1009);
-      height: size(682.74);
-      background-size: cover;
-      .caption {
-        @apply absolute font-['Noto_Sanc_TC'];
-        right: size(14);
-        bottom: size(15);
-        font-size: size(20);
-        font-weight: 400;
-        letter-spacing: size(2.6);
-      }
-    }
-    .splide__pagination {
-      @apply absolute right-0 w-full flex justify-center;
-      padding: size(25) 0;
-      li {
-        line-height: 0;
-        button {
-          @apply rounded-full;
-          width: size(10);
-          height: size(10);
-          background: #0d6b68;
-          &.is-active {
-            background: #138784;
-          }
-        }
-      }
-      gap: size(13);
-    }
   }
 
   .en {
@@ -284,35 +208,19 @@
       margin-bottom: 0;
       .slide-item {
         height: sizem(331);
-        .caption {
-          right: sizem(11);
-          bottom: sizem(7);
-          font-size: sizem(12);
-          font-weight: 400;
-          letter-spacing: sizem(1.56);
-        }
+      .caption {
+        left: calc(50% - 14.5em);
       }
-      .splide__pagination {
-        @apply hidden;
-      }
-      .arrows {
-        @apply top-1/2 -translate-y-1/2;
       }
     }
 
     .t {
       padding: 0 sizem(30);
-      .t1 {
-        font-size: sizem(20);
-        letter-spacing: sizem(1.6);
-        margin-top: sizem(27);
-        margin-bottom: sizem(14);
-        padding-bottom: sizem(14);
-        border-bottom: 1px solid #fff;
-      }
+    .t1 {
+      margin: 1em 0 0;
+    }
       .t2 {
         font-size: sizem(13);
-        letter-spacing: sizem(2.6);
       }
     }
 
@@ -377,8 +285,7 @@
 }
 </style>
 
-<script setup>
-import View from "@/components/fullview.vue"
+<script setup> 
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
@@ -403,53 +310,63 @@ const imgs = [
 
 
 
- const imgs2 = globals.$isMobile()
-  ? [
+ const imgs2 = [
        {
-        img: new URL("../section/s8/slider/01m.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/1.jpg", import.meta.url).href,
+         caption: "仁仁河",
        },
        {
-        img: new URL("../section/s8/slider/02m.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/2.jpg", import.meta.url).href,
+         caption: "江翠ONE",
        },
        {
-        img: new URL("../section/s8/slider/03m.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/3.jpg", import.meta.url).href,
+         caption: "希望城市",
        },
        {
-        img: new URL("../section/s8/slider/04m.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/4.jpg", import.meta.url).href,
+         caption: "江翠park",
        },
        {
-        img: new URL("../section/s8/slider/05m.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/5.jpg", import.meta.url).href,
+         caption: "江匯life",
        },
        {
-        img: new URL("../section/s8/slider/07m.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/6.jpg", import.meta.url).href,
+         caption: "公園66",
        },
        {
-        img: new URL("../section/s8/slider/08m.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/7.jpg", import.meta.url).href,
+         caption: "頂溪大苑",
        },
        {
-        img: new URL("../section/s8/slider/09m.webp", import.meta.url).href,
-         caption: "",
-       },
-     ]
-   : [
-       {
-         img: new URL("../section/s8/slider/01.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/8.jpg", import.meta.url).href,
+         caption: "金城舞5",
        },
        {
-         img: new URL("../section/s8/slider/02.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/9.jpg", import.meta.url).href,
+         caption: "都廳大院",
        },
        {
-         img: new URL("../section/s8/slider/03.webp", import.meta.url).href,
-         caption: "",
+        img: new URL("../section/s8/slider/10.jpg", import.meta.url).href,
+         caption: "晴空大地",
+       },
+       {
+        img: new URL("../section/s8/slider/11.jpg", import.meta.url).href,
+         caption: "自由綠洲",
        },
      ]
+// 下一張滑塊
+const goNext = () => {
+  splide2.value?.go(">");
+};
+
+// 組件掛載後執行一次 `goNext`
+onMounted(() => {
+  setTimeout(() => {
+    if (splide2.value) {
+      goNext(); // 執行一次 goNext
+    }
+  }, 100); // 確保 Splide 初始化完成
+});
 </script>

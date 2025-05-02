@@ -1,7 +1,25 @@
 <template>
   <article class="s1">
-    <img class="t1" src="@/section/s1/logo.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
+  <!--   <img class="t1" src="@/section/s1/logo.svg" alt="" srcset="" data-aos="fade-up" data-aos-delay="0" />
     <div class="t2" data-aos="fade-up" data-aos-delay="200">|成州生活圈 高質感精工2-3房|</div>
+    <img class="t0" src="./s1/1.jpg" alt="" />
+  -->
+    <div class="bg3" data-aos="fade" data-aos-delay="0" >
+      <img class="f2" src="./s1/f1.png" alt="" />
+      <img class="f3" src="./s1/f1.png" alt="" />
+</div>
+    <div class="bg1" data-aos="fade-up" data-aos-delay="0" >
+      <img class="f1" src="./s1/f2.png" alt="" />
+      <img class="f4" src="./s1/f1.png" alt="" />
+      <img class="b1" src="./s1/b1.png" alt="" />
+      <img class="b2" src="./s1/b2.png" alt="" />
+</div>
+  <div class="txt">
+    <img class="logo" src="./s1/logo.svg" alt="" />
+    <div class="t01">住近繁華，住靜生活</div>
+    <div class="t02">成州生活圈 寧靜特區</div>
+    <div class="t03"><span class="l"><span>訂簽</span>95<span>萬起</span></span><span class="r">2-3房</span></div>
+  </div>
   </article>
 </template>
 
@@ -11,20 +29,45 @@
 .s1 {
   @apply w-full h-screen relative flex flex-col items-center justify-center text-white;
   min-height: size(900);
-  max-height: size(1080);
+  max-height: size(1080);/*
   background-image: url("@/section/s1/bg.webp");
   background-size: cover;
   background-position: bottom;
-  background-attachment: fixed;
-  gap: size(135.86);
+  background-attachment: fixed;*/
+  background-image: linear-gradient(180deg, #F4E937, #E89E28 30%, #DE5B1B);
+.t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .1;}
 
-  .t1 {
-    width: size(623.47);
+.bg3{position: fixed;top: 0;left: 0;width: 100%;height: 100%;
+img{position: absolute;}
+}
+.bg1{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+img{position: absolute;}
+}
+.f1{right: size(-100);top:size(100);width:size(360);}
+.f2{right: size(-250);bottom:size(-310);width:size(728);opacity: .2;}
+.f3{left: size(166);bottom:size(-755);width:size(977);opacity: .2;}
+.f4{left: size(-150);bottom:size(-280);width:size(390);transform: scaleX(-1)rotate(-20deg);
+  filter: invert(0) sepia(100%) saturate(2000%) hue-rotate(340deg);
+}
+.b1{left: size(160);top:size(424);width:size(250);}
+.b2{right: size(560);top:size(766);width:size(119);}
+.txt{text-align: center;font-size:size(40); font-weight: 700;text-align: center;
+margin: 1em auto 0 auto;}
+.logo{width:16.1em;}
+  .t01 {font-size: 1.73em;
+    color: #f4e827;   margin: .4em auto .1em;
   }
-  .t2 {
-    font-size: size(51);
-    font-weight: 700;
-    letter-spacing: size(5.6);
+  .t02 {border: 1px solid #fff;margin: 0 auto;
+  }
+  .t03 { font-weight: 600;
+    font-size: 2em;
+    display: flex;line-height: 1.1;
+    justify-content: center;
+    align-items: center;
+    .l{font-size: 1.5em;color: #f4e827; 
+      span{display: inline-block;width: 1em;line-height: 1.2;font-size: .37em;color: #fff;margin: .2em; }
+    }
+    .r{border: 1px solid #fff;border-width:0 1px 0 1px;margin: 0 0 0 .5em ;padding: 0 .5em;line-height: 1.2;}
   }
 }
 
@@ -39,21 +82,19 @@
     min-height: sizem(667);
     max-height: sizem(667);
     font-size: sizem(14);
-    background-size: 100%;
-    background-image: url("@/section/s1/bgm.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: unset;
     gap: sizem(50);
 
-    .t1 {
-      width: sizem(265);
-    }
-    .t2 {
-      font-size: sizem(21);
-      font-weight: 700;
-      letter-spacing: sizem(2.31);
-    }
+
+    
+.f1{right: sizem(-100);top:sizem(100);width:sizem(200);}
+.f2{right: sizem(-250);bottom:sizem(-310);width:sizem(728);}
+.f3{left: sizem(166);bottom:sizem(-755);width:sizem(977);;}
+.f4{left: sizem(-150);bottom:sizem(-280);width:sizem(390);transform: scaleX(-1)rotate(-20deg);
+  filter: invert(0) sepia(100%) saturate(2000%) hue-rotate(340deg);
+}
+.b1{left: sizem(160);top:sizem(424);width:sizem(250);}
+.b2{right: sizem(560);top:sizem(766);width:sizem(119);}
+.txt{font-size:sizem(18);}
   }
 }
 </style>

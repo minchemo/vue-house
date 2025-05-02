@@ -148,7 +148,7 @@
   padding-top: size(103);
   overflow: hidden;
   min-height: size(500);
-  background-color: #E89213;
+  // background-color: #E89213;
 
   .bg-image {
     position: absolute;

@@ -16,14 +16,15 @@
     class="home bg-[#de5b1b] overflow-hidden font-['Noto_Serif_TC'] pb-[64px] md:pb-0"
   >
     <S1 />
+    <S10 />
     <S2 />
-    <S9 />
+    <!-- <S9 /> -->
     <S3 />
-    <S4 />
     <S5 />
+    <S4 />
     <S6 />
-    <S7 />
-    <S8 />
+    <!-- <S7 />
+     <S8 /> -->    
     <Order />
   </div>
 </template>
@@ -135,13 +136,14 @@ img {
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
-import S9 from "@/section/s9.vue"
+// import S9 from "@/section/s9.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
+import S10 from "@/section/s10.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
@@ -157,10 +159,10 @@ const config = ref({
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
-    AOS.init();
-    setTimeout(() => {
-      document.querySelector('.s1').classList.add('animating');
-    }, 1000);
+    AOS.init({
+      offset: 0,
+      duration: 1000
+    });
   };
 })
 </script>

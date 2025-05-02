@@ -22,7 +22,7 @@
 @import "@/assets/style/function.scss";
 
 .s2 {
-  @apply w-full relative bg-[#0D5052] flex flex-col items-center justify-start text-white;
+  @apply w-full relative flex flex-col items-center justify-start text-white;
   height: size(1080);
   padding-top: size(221);
 
