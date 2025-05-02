@@ -20,8 +20,23 @@
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-
-
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
+            <option value="" selected disabled>請選擇房型</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
+          </select></label>
+          <label class="row" v-if="info.use_type"><span>購屋用途</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
+            <option value="" selected disabled>請選擇用途</option>
+            <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
+          </select>
+        </label>
+        <label class="row" v-if="info.budget"><span>購屋預算</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇區間</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
+          </select>
+        </label>
         <!--  -->
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
