@@ -141,7 +141,7 @@
   .t2{
     font-size:sizem(14);margin-top:sizem(10);
     letter-spacing: 1.2em;
-    text-indent: 1.1em;
+    text-indent: 1.08em;
     }
 
   .icon{
@@ -149,7 +149,7 @@
   }
 
   .en{
-   width: sizem(280); 
+   width: sizem(275); 
    margin-top:sizem(20);
   } 
 
