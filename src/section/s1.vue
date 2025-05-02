@@ -149,8 +149,9 @@
   }
 
   .en{
-   width: sizem(275); 
+   width: sizem(265); 
    margin-top:sizem(20);
+   margin-left: sizem(54);
   } 
 
   .txt{
