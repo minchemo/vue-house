@@ -1,69 +1,17 @@
 <template>
-  <article class="s2" id="s2">
-    <h1 class="bt1">擬訂新北市永和區保福段1地號等180筆土地都市更新事業計畫及權利變換計畫案</h1>
-
-    <div class="box box1">
-      <h2 class="title font-['noto_Serif_tc']">一、基本資料</h2>
-      <div class="list" v-for="item in list1" :key="item">
-        <span class="t1" v-html="item[0]"></span>
-        <span class="t2" v-html="item[1]"></span>
-      </div>
-    </div>
-
-    <div class="box box2">
-      <h2 class="title font-['noto_Serif_tc']">二、辦理歷程</h2>
-      <section class="list ti" v-if="!$isMobile()">
-        <span class="t1">執行情形</span>
-        <span class="t2">時間</span>
-        <h3 class="t3">內容</h3>
-        <span class="t4">相關檔案</span>
-      </section>
-      <section class="list" v-for="item in list2" :key="item">
-        <a :href="item.link" class="link" v-if="item.link&&!item.link.startsWith('#')" target="_blank"></a>
-        <span :class="['t1', item.t1[0]]" v-html="item.t1[1]"></span>
-        <span class="t2" v-html="item.t2"></span>
-        <h3 class="t3"><span v-html="item.t3"></span><span class="t4_a" v-if="item.link&&$isMobile()"></span><span class="t4" v-if="item.link" v-html="item.link_t?item.link_t:'下載'"></span></h3>
-        
-      </section>
-      <!-- <a class="download" href="https://drive.google.com/drive/folders/1Wk9oMkyJczWKVRVwAVBsisMJgP1w-0vM?usp=share_link" target="_blank">公開資料下載</a> -->
-    </div>
-
+  <article class="s3" id="s3">
     <div class="box box3">
       <h2 class="title font-['noto_Serif_tc']">三、最新消息</h2>
-      <section class="list ti" v-if="!$isMobile()">
-        <span class="t1">執行情形</span>
-        <span class="t2">時間</span>
-        <h3 class="t3">內容</h3>
-        <span class="t4">相關檔案</span>
-      </section>
-      <section class="list" v-for="item in list3" :key="item">
-        <a :href="item.link" class="link" v-if="item.link&&!item.link.startsWith('#')" target="_blank"></a>
-        <span :class="['t1', item.t1[0]]" v-html="item.t1[1]"></span>
-        <span class="t2" v-html="item.t2"></span>
-        <h3 class="t3"><span v-html="item.t3"></span><span class="t4_a" v-if="item.link&&$isMobile()"></span><span class="t4" v-if="item.link" v-html="item.link_t?item.link_t:'下載'"></span></h3>
-        
-      </section>
+      <div class="list">
+        <span class="t1">欲提供房屋佐證資料者，請於114年5月30日前，將 1.稅籍資料 2.對照年份前後之航照圖 3.結構證明文件 ，電郵至本案專屬 <a class="link" href="mailto:dachen.five@gmail.com" target="_blank">電子信箱</a>。</span>
+      </div>
     </div>
-
-    <!--div class="box box1">
-      <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
-      <div class="list">
-        <span class="t1">Line諮詢</span>
-        <span class="t2"><a class="link" href="https://lin.ee/kltP71Y" target="_blank">https://lin.ee/kltP71Y</a></span>
-      </div>
-      <div class="list">
-        <span class="t1">電子信箱</span>
-        <span class="t2"><a class="link" href="mailto:dachen.five@gmail.com" target="_blank">dachen.five@gmail.com</a></span>
-      </div>
-    </div-->
 
     <div class="box box4">
       <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
       <div class="icon">
-        <a class="link" href="https://lin.ee/kltP71Y" target="_blank"><img class="linkimg" src="./s1/line.svg"></a>
+        <a class="link" href="https://lin.ee/kltP71Y" target="_blank"><img class="linkimg" src="@/section/s1/line.svg"></a>
         <img class="linkimg" src="@/section/s1/qr.png">
-        <a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="./s1/email.png"></a>
-        
         <!--a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="@/section/s1/gmail.svg"></a-->
       </div>
     </div>
@@ -143,39 +91,13 @@ background: #790024;transform: scale(1.2);
 }
 
 .box3{
-  margin:5em auto;
-  .list{border-bottom: 1px solid #CCC;padding: 0.67em 0;gap:0.67em;position: relative;
-  &.ti{background:#BCBCBC;color: #fff;
-  .t1,.t4{background: none;font-weight: 500;}}}
-  .link{position: absolute;top: 0;left: 0;width: 100%;z-index: 2;height: 100%;
-    transition:background .2s;
-    &:hover{background: #0001;}
-    ~ .t3 .t4{background: #9B1E44;}
-  }
-  .t1{flex: 0 0 6em;font-weight: 700;background: #fff;border-radius:0.2em;text-align: center;
-    &.v1{color: #470;}
-    &.v2{color: #d90;}
-
-  }
-  .t2{flex: 0 0 6em;}
-  .t3{flex: 1;display:flex;justify-content:space-between; align-items:flex-start;gap: .5em;}
-  .t4_a{width: 5em;display: inline-block;}
-  .t4{
-    background: #aaa;
-    //background: #9B1E44;    
-    color: #fff;border-radius:0.2em;text-align: center;display: inline-block;min-width: 5em;flex: 0 5em;}
-.download{display: block;background: #9B1E44;
-  color: #fff;width: 10em;padding: .5em 0;
-  text-align: center;margin: 1em auto;border-radius: .5em;
-  letter-spacing: 0.06em;transition:transform .5s,background 1s;
-&:hover{
-background: #790024;transform: scale(1.2);
-}
-}
+border-top:1px solid #0003;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em;
+  .link{color: #790024;}
  } 
 
  .box4{
-align-items: flex-start;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em;
+align-items: flex-start;
+border-top:1px solid #0003;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em;
 
 
 .icon{
@@ -203,7 +125,7 @@ padding: sizem(90) 0;
 
 .title{
 font-size: 2em;}
-.box2,.box3{
+.box2{
 .list{
   flex-wrap: wrap;
  }
@@ -244,7 +166,7 @@ const list1 = [
         ["鑑價機構", "宇豐不動產估價師聯合事務所<br>展碁不動產估價師聯合事務所<br>中泰不動產估價師聯合事務所"],
     ];
 
-    const list2 = [
+const list2 = [
   {
     t1: ["v1", "已完成"],
     t2: "110/10/5",
@@ -292,23 +214,6 @@ const list1 = [
     t2: "114/3/17",
     t3: "公辦公聽會<br>時間：114/3/17(一)下午2時30分<br>地點：溪洲市民活動中心3樓禮堂(新北市永和區勵行街42之1號2號3樓)",
     link:"https://drive.google.com/file/d/10Wp_Vdb7YhaRSoejjCGVwGRtQjJjK07s/view?usp=sharing",
-  },
-  //link 設定#開頭  不會另開 放網址才會另開視窗
-];
-const list3 = [
-  {
-    t1: ["v2", "進行中"],
-    t2: "114/04/25",
-    t3: "針對現況房屋之「結構」及「重建年份」欲提供佐證資料者，請於114年5月30日前，將 1.稅籍資料 2.對照年份前後之航照圖 3.結構證明文件 ，電郵至本案專屬電子信箱。",
-    link:"mailto:dachen.five@gmail.com",
-    link_t:"電子信箱",
-  },
-  {
-    t1: ["v2", "進行中"],
-    t2: "114/05/05",
-    t3: "本案於114年4月26日於駐點辦事處召開溝通協調會，內容參見會議紀錄。",
-    link:"https://drive.google.com/file/d/1wNJ1LOSiQoGWNGgl26uFGALfRUHNfbkM/view?usp=sharing",
-    link_t:"會議紀錄",
   },
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];

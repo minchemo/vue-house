@@ -12,8 +12,9 @@
    <!-- <Nav v-if="config.showNav" /> -->
   <div class="home bg-[#EDEDEC] overflow-hidden font-['Noto_Sans_TC',serif]">
     <S1 />
-  <S2 />
+    <S2 />
   <!--    <S1new />
+    <S3 />
     <S1new2 />
     <S3 />
     <Order /> -->
