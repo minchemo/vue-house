@@ -11,8 +11,9 @@
     <div class="bg1" data-aos="fade-up" data-aos-delay="0" >
       <img class="f1" src="./s1/f2.png" alt="" />
       <img class="f4" src="./s1/f1.png" alt="" />
-      <img class="b1" src="./s1/b1.png" alt="" />
-      <img class="b2" src="./s1/b2.png" alt="" />
+      <div class="b1"><img src="./s1/b1.svg" alt="" /></div>
+      <div class="b2"><img src="./s1/b22.png" alt="" /></div>
+      
 </div>
   <div class="txt">
     <img class="logo" src="./s1/logo.svg" alt="" data-aos="zoom-in" data-aos-delay="0" />
@@ -70,8 +71,30 @@ img{position: absolute;}
     transform: scaleX(-1)rotate(-20deg);
   }
 }
-.b1{left: size(160);top:size(424);width:size(250);}
-.b2{right: size(560);top:size(766);width:size(119);}
+.b1{left: size(260);top:size(400);width:size(300);position: absolute;
+  transform: rotate(35deg);
+img{width: 100%;
+  transform:translatex(-40%);
+  animation: an 5s alternate infinite;}
+}
+.b2{right: size(580);top:size(806);width:size(132);opacity: .6;position: absolute;
+  transform:rotate(-55deg)translate(3vw,-2vw);
+  animation: an4 5s alternate infinite;
+img{width: 100%;
+  animation: an3 2s ease-in-out alternate infinite;
+  transform:scaleX(.5);
+  transform-origin: 50% 100%;}
+}
+@keyframes an4 {
+  to{
+    transform:rotate(-55deg)translateY(0%);
+  }
+}
+@keyframes an3 {
+  70% {
+    transform: scaleX(1);
+  }
+}
 .txt{text-align: center;font-size:size(40); font-weight: 700;text-align: center;
 margin: 1em auto 0 auto;}
 .logo{width:16.1em;
@@ -116,8 +139,8 @@ margin: 1em auto 0 auto;}
 .f4{left: sizem(-50);bottom:sizem(0);width:sizem(150);transform: scaleX(-1)rotate(-20deg);
   filter: invert(0) sepia(100%) saturate(2000%) hue-rotate(340deg);
 }
-.b1{left: sizem(20);top:sizem(110);width:sizem(70);}
-.b2{right: sizem(70);top:sizem(450);width:sizem(50);}
+.b1{left: sizem(60);top:sizem(90);width:sizem(85);}
+.b2{right: sizem(70);top:sizem(500);width:sizem(60);}
 .txt{font-size:sizem(18);
   margin: 0em auto 0 auto;}
   }

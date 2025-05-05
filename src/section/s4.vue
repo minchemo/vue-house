@@ -128,20 +128,16 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s4/01.jpg", import.meta.url).href,
-    caption: "天乙公園",
+    img: new URL("../section/s5/1.webp", import.meta.url).href,
+    caption: "成州市場",
   },
   {
-    img: new URL("../section/s4/02.jpg", import.meta.url).href,
-    caption: "五股體健防災公園",
+    img: new URL("../section/s5/2.webp", import.meta.url).href,
+    caption: "成州市場",
   },
   {
-    img: new URL("../section/s4/03.jpg", import.meta.url).href,
-    caption: "洲子洋公園",
-  },
-  {
-    img: new URL("../section/s4/04.jpg", import.meta.url).href,
-    caption: "大都會公園",
+    img: new URL("../section/s5/3.webp", import.meta.url).href,
+    caption: "成泰路商圈",
   },
 ]
 </script>
