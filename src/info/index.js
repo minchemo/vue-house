@@ -8,10 +8,10 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "導航地址",//map點下確認的--- 如空白會顯示"導航地址"
-     address: "新店區中正路501-8號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.4774949616485!2d121.53354069999999!3d24.983885899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34680319f5b9f925%3A0x6b200f6f3222f28!2z5p2x5Z-6TTHmjqXlvoXkuK3lv4M!5e0!3m2!1szh-TW!2stw!4v1745996030885!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/XDm6n7BFrqFHSH7E9",
-    phone: "02-8667-2266",
+    address: "",
+    googleSrc: "",//嵌入的
+    googleLink: "",//導航網址
+    phone: "",
     fbLink: "https://www.facebook.com/100054446832848/",
     fbMessage: "https://m.me/100054446832848/",
     caseName: caseName,
