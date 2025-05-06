@@ -181,7 +181,7 @@ const list1 = [
 const list2 = [
   {
     t1: ["v2", "進行中"],
-    t2: "114/05/13",
+    t2: "114/05/21",
     t3: "召開自辦公聽會",
     link:"https://drive.google.com/file/d/1iUiftnRbrbjvRPC2njWtrOPSOjl_1MwN/view?usp=sharing",
   },
