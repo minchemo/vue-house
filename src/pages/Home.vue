@@ -9,9 +9,15 @@
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-  <div class="home overflow-hidden font-[com4f,'Noto_Serif_TC',serif] bg-[#E0E0E0] text-[#000]">
-  <!--
+<!--
+  'Noto_Serif_TC',serif
+  'Noto_Sans_TC',sans-serif
+  -->
+
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
     <S1 />
+    <S2 />
+  <!--
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -42,13 +48,21 @@ img {
   height: unset;
   margin: 0 auto;
 }
-
+.home{
+  position: relative;
+  &::before{content: "";display: block;position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
+background: url("@/section/s1/bg.webp") top center;
+background-size: cover;
+}
+}
 // 字體
+/*
 @font-face {
   font-family: 'com4f';
   src: local("COM4tFine"),local("COM4t Fine Regular"),
   url('@/section/form/com4f.ttf') format("opentype"),
 }
+  */
 
 </style>
 
@@ -56,8 +70,9 @@ img {
 import info from "@/info"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
-/* 
-import S2 from "@/section/s2.vue" */
+
+import S1 from "@/section/s1.vue" 
+import S2 from "@/section/s2.vue" 
 import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 

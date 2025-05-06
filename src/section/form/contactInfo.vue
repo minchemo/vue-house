@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #666;}
-.hover\:bg-color2:hover{background-color:#A30C24;}
+.bg-color1{background-color: #c60;}
+.hover\:bg-color2:hover{background-color:#c30;}
 
 
 .contact-info-img{
@@ -138,13 +138,14 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #666;
-      color: #fff;
+      background: #ffe3bb;
+      color: #444;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-  //  border-radius: .5em;
+    border-radius: .5em;
       font-size: size(16);
+      font-weight: 700;
       line-height: 1.6;//3.8
       letter-spacing: 0em;
      // max-width: size(280);
@@ -152,10 +153,11 @@
       transition: all .3s;
       cursor: pointer;
       //border: 1px solid #C29267;
+
       gap: 1em;
 
       &:hover {
-        background: #A30C24;
+        background: #c30;
         color: #fff;
 
         img {
@@ -167,7 +169,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(.4);
         transition: all .5s;
         margin: 0;
       }
@@ -179,6 +181,7 @@
         z-index: 0;
         position: relative;
         flex:2.17;
+        font-weight: 500;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
@@ -312,7 +315,7 @@
 
         &.address {
           font-size: sizem(15);
-          border-radius: sizem(0) sizem(0) 0 0;
+          border-radius: .5em  .5em 0 0;
           padding: 1.1em 0;
           margin-top: sizem(25);
           //font-size: .9em;
@@ -326,7 +329,7 @@
         }
 
         &.address+div {
-          border-radius: 0 0 sizem(0) sizem(0);
+          border-radius: 0 0 .5em .5em;
         }
       &.googlemap {
         border-top-width: 0;
