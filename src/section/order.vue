@@ -255,7 +255,7 @@
       width: 100%;
       left: -#{sizem(30)};
       bottom: sizem(590);
-    }
+    } 
 
   }
 
