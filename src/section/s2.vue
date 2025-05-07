@@ -63,6 +63,9 @@
         <a class="link" href="https://lin.ee/kltP71Y" target="_blank"><img class="linkimg" src="./s1/line.svg"></a>
         <img class="linkimg" src="@/section/s1/qr.png">
         <a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="./s1/email.png"></a>
+        <img class="linkimg" src="@/section/s1/A.jpg">
+        <img class="linkimg" src="@/section/s1/B.jpg">
+        <img class="linkimg" src="@/section/s1/CD.jpg">
         
         <!--a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="@/section/s1/gmail.svg"></a-->
       </div>
@@ -181,6 +184,7 @@ align-items: flex-start;border-bottom:1px solid #0003;padding: 2em 0;gap: 1em;
 .icon{
  display: flex;
  gap: 3em;
+ flex-wrap: wrap;
  
  .linkimg{
     width: 100px;
