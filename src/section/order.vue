@@ -53,7 +53,7 @@
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row" v-if="requiredFields.area"><span>居住地區</span>
+          <label class="row" v-if="requiredFields.area"><span>居住鄉鎮區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value" :key="area">
@@ -193,7 +193,7 @@
       display: flex;width: 100%;
     align-items:center;
       > span{
-        width: 5.5em;
+        width: 6.2em;
         text-align: left;padding-left:1em ;
         > span{color: #F00;//font-size: 12px;
           }
