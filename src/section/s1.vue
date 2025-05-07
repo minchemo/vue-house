@@ -19,7 +19,7 @@
     <img class="logo" src="./s1/logo.svg" alt="" data-aos="zoom-in" data-aos-delay="0" />
     <div class="t01" data-aos="zoom-in" data-aos-delay="200">住近繁華，住靜生活</div>
     <div class="t02" data-aos="zoom-in" data-aos-delay="400">成州生活圈 寧靜特區</div>
-    <div class="t03" data-aos="zoom-in" data-aos-delay="600"><span class="l"><span>訂簽</span>95<span>萬起</span></span><span class="r">2-3房</span></div>
+    <div class="t03" data-aos="zoom-in" data-aos-delay="600"><span class="l"><span>總價</span>1188<span>萬起</span> <span class="car">（含車位）</span> </span><span class="r">2-3房</span></div>
   </div>
   </article>
 </template>
@@ -112,6 +112,7 @@ margin: 1em auto 0 auto;}
     align-items: center;
     .l{font-size: 1.5em;color: #f4e827; 
       span{display: inline-block;width: 1em;line-height: 1.2;font-size: .37em;color: #fff;margin: .2em; }
+      .car{writing-mode: vertical-lr; font-size: 0.21em;margin-left: -1em;margin-bottom: -0.7em;}
     }
     .r{border: 1px solid #fff;border-width:0 1px 0 1px;margin: 0 0 0 .5em ;padding: 0 .5em;line-height: 1.2;}
   }

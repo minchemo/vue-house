@@ -8,10 +8,10 @@ export default {
   },
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
-  address: "新北市五股區成泰路三段542號旁",
+  address: "新北市五股區成泰路三段342號",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d268.53456441230674!2d121.45252513362792!3d25.10334933440515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDA2JzExLjgiTiAxMjHCsDI3JzA5LjYiRQ!5e0!3m2!1szh-TW!2stw!4v1715568971288!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/HRbXRW91Gtvq8aNT8",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d319.3559067979292!2d121.45063591067391!3d25.098488334683655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af547b58a8f3%3A0x53175f13cb99ca21!2zMjQ45paw5YyX5biC5LqU6IKh5Y2A5oiQ5rOw6Lev5LiJ5q61MzQy6Jmf!5e0!3m2!1szh-TW!2stw!4v1746584040099!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/KgZKQBxsds6Au3qBA",
   phone: "02-2293-0808",
   fbLink: "https://www.facebook.com/p/61557013231455/",
   fbMessage: "https://m.me/61557013231455/",
