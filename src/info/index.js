@@ -1,5 +1,4 @@
 const caseName = "春樹醴"
-
 export default {
     meta: {
         title: caseName,
@@ -15,6 +14,7 @@ export default {
     fbLink: "https://www.facebook.com/100063880612874/",
     fbMessage: "https://m.me/100063880612874/",
     caseName: caseName,
+    caseid: "5496014a-12b3-476d-aa7a-002d9144d44a",
     houseInfos: [
         /*
         ["空間設計", "相即空間設計"],

@@ -71,8 +71,7 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal"
+        <p class="text-[#fff]">本人知悉並同意<label for="policy-modal"
             class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
@@ -461,7 +460,6 @@ const send = () => {
   if (pass && !sending.value) {
     sending.value = true;
     
-    /*
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -478,9 +476,8 @@ const send = () => {
         method: "GET"
       }
     );
-
-    */
-    fetch("https://service-sys.lixin.com.tw/reserve/5496014a-12b3-476d-aa7a-002d9144d44a6", {
+//caseid 在index.js裡設定
+    fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
       method: "POST",
       body: presend,
     })
