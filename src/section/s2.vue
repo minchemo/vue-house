@@ -5,7 +5,8 @@
       <h2 class="t1">玖登開發<span></span>春樹系列3</h2>
       <p>將於桃園八德擴大重劃核心區<br v-if="isMobile"><span v-else>，</span>豐德二路、豐德三路口完美角地</p>
       <p class="t2">/ 再續建築新篇章▪值得等待 /</p>
-      <img src="./s2/t3.svg" class="t3">
+      <img src="./s2/t1.svg" class="t3">
+      <img src="./s2/t2.svg" class="t32">
     </div>
     <div class="slider" data-aos="fade">
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
@@ -73,6 +74,8 @@ span{
 .t2{margin: .3em auto 1em;font-weight: 700;font-size: 1.1em;}
 .t3{width: sizem(375);
   @media screen and (min-width: 768px) {width: size(1420);}}
+.t32{width: sizem(100);display: block;margin: -.8em auto 0;
+  @media screen and (min-width: 768px) {width: size(160);margin: -1.8em auto 0;}}
 .slider{width:100%;
   filter:drop-shadow(.2em .2em .05em #0004);
   font-size: sizem(14);
@@ -80,15 +83,37 @@ span{
     font-size: 1em;}
 .slide{width: 100%;}
 .slide-item{width: 100%;padding: 2em 0.85em 0;
-  img{width: 100%;}
+  img{width: 100%;z-index: 2;position: relative;}
+ /* @media screen and (max-width: 767px) {
+    opacity: .5;
+    transition: opacity .2s;
+    &.is-active{opacity: 1;}
+  }*/
+
+
 }
 .caption{position: absolute;bottom: 5.5em;right:1.7em;color: #fff;font-size: 0.64em;}
-.name{position: absolute;top: 0;left: 0;background: #ffe75c;display: flex;aspect-ratio: 1/1;justify-content: center;align-items: center;border-radius: 50%;font-weight: 700;font-size: 1.3em;width: 5.2em;white-space: nowrap;
+.name{position: absolute;background: #ffe75c;display: flex;aspect-ratio: 1/1;justify-content: center;align-items: center;border-radius: 50%;font-weight: 700;font-size: 1.3em;width: 5.2em;white-space: nowrap;z-index: 3;
   box-shadow:.2em .2em .1em -.08em #0002;
   left: .2em;top: .2em;letter-spacing: 0;}
 .bottom{background: #ffe75c;display: block;width: 100%;text-align: center;font-size: 1.1em;
-  line-height: 1.2;padding: 1em 0;
+  line-height: 1.2;padding: 1em 0;z-index: 1;
 b{border-right: 1px solid currentColor;margin-right: .5em;padding-right:.5em;display: inline-block;}
+}
+
+@media screen and (max-width: 767px) {
+.name{transform: translate(0%,20%);transition: transform .5s, opacity .5s;opacity: 0;}
+.bottom{opacity: 0;transition: transform .5s, opacity .5s;transform: translate(0%,-50%);}
+
+.slide-item{
+  img{filter: grayscale(50%);transition: filter .2s;
+    transform-origin: 50% 0;}
+}
+.slide-item.is-active{
+  img{filter: grayscale(0%);}
+    .name{transform: translate(0);opacity: 1;}
+    .bottom{opacity: 1;transform: translate(0);}
+}
 }
 }
 }
@@ -142,7 +167,7 @@ const options = computed(() => {
       focus: 'center',
       padding: mobile ? { left: '10%', right: '10%' } : 0,
       autoplay: mobile? true:false,
-      interval: 4000,
+      interval: 5000,
       arrows: false,
       pagination: false,
       drag:  mobile? true:false,

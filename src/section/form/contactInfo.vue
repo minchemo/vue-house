@@ -175,7 +175,7 @@
       }
 
       &.address {
-        background-color: #FFF;
+        background-color: #ffea;
         background-image: none;
         color: #000;
         z-index: 0;
@@ -184,7 +184,7 @@
         font-weight: 500;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
-        justify-content: center;
+        justify-content: center;margin: 0 -.8em 0 0;
 
         &::before {
           content: "";
@@ -317,7 +317,7 @@
           font-size: sizem(15);
           border-radius: .5em  .5em 0 0;
           padding: 1.1em 0;
-          margin-top: sizem(25);
+          margin: sizem(25) auto 0;
           //font-size: .9em;
 
           &::before {
