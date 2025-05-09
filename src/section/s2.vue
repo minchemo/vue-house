@@ -60,7 +60,6 @@
     <div class="box box4">
       <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
       <div class="icon">
-        <a class="link" href="https://lin.ee/kltP71Y" target="_blank"><img class="linkimg" src="./s1/line.svg"></a>
         <a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="./s1/email.png"></a>
         <a class="link" href="https://lin.ee/fPSCu1Z" target="_blank"><img class="linkimg" src="@/section/s1/A.jpg"></a>
         <a class="link" href="https://lin.ee/OscVx32" target="_blank"><img class="linkimg" src="@/section/s1/B.jpg"></a>
