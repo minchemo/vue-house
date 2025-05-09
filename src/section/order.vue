@@ -353,7 +353,7 @@ const requiredFields = {
 }
 
 // selectFields
-const selectFields = info.selectFields
+const selectFields = info.selectFields || {}
 
 // 初始 formData（包含 selectFields 欄位）
 const formData = reactive({
