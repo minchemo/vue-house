@@ -20,6 +20,27 @@
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
+<!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
+<template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
+    <label class="row">
+      <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
+      <select
+        class="select w-full rounded-none bg-white"
+        v-model="formData[fieldKey]"
+      >
+        <option value="" disabled>{{ fieldData.hold }}</option>
+        <option
+          v-for="option in fieldData.option"
+          :value="option"
+          :key="option"
+        >
+          {{ option }}
+        </option>
+      </select>
+    </label>
+  </template>
+<!-- 動態 select end-->
+
 
 
         <!--  -->
@@ -307,12 +328,11 @@ import info from "@/info"
 import { cityList, renderAreaList } from "@/info/address.js"
 import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
-import axios from "axios"
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
 
-
+// const selectFields = info.selectFields
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
@@ -320,41 +340,50 @@ const toast = useToast()
 const sending = ref(false)
 
 // 後端那 name phone email msg 為必要欄位 請勿刪除
-const formData = reactive({
-  name: "",
-  phone: "",
-  email: "",
-  msg: "",
+const requiredFields = {
+  // 固定必要欄位 (請勿刪)
+  name: "姓名",
+  phone: "手機",
+  email: "信箱",
+  msg: "備註訊息",
+  city: "居住縣市",
+  area: "居住地區",
+  policyChecked: "個資告知事項聲明",
+  r_verify: "機器人驗證"
+}
 
-  gender: "",
-  room_type: "",
-  use_type: "",
-  budget: "",
-  city: "",
-  area: "",
-  policyChecked: false,
-  r_verify: false,
+// selectFields
+const selectFields = info.selectFields
+
+// 初始 formData（包含 selectFields 欄位）
+const formData = reactive({
+  ...Object.keys(requiredFields).reduce((acc, key) => {
+    acc[key] = key === "policyChecked" || key === "r_verify" ? false : ""
+    return acc
+  }, {}),
+  ...Object.keys(selectFields).reduce((acc, key) => {
+    acc[key] = ""
+    return acc
+  }, {})
 })
 
-//非必填
-const bypass = ["email" , "msg","gender","project","city","area","budget","room_type","use_type"]
+// bypass（非必填欄位，根據 selectFields 的 bypass 設定）
+const staticBypass = ["email", "msg", "city", "area"]
+const bypass = [
+  ...staticBypass,
+  ...Object.entries(selectFields)
+    .filter(([_, field]) => field.bypass !== true)
+    .map(([key]) => key)
+]
 
-//中文對照
-const formDataRef = ref([
-  "姓名", //name
-  "手機", //phone
-  "信箱", //email
-  "備註訊息", //msg
-
-  "性別", //gender
-  "房型", //room_type
-  "用途", //use_type
-  "預算", //budget
-  "居住縣市", //city
-  "居住地區", //area
-  "個資告知事項聲明", //policyChecked
-  "機器人驗證", //r_verify
-])
+// 中文對照（formDataRef）
+const formDataRef = {
+  ...requiredFields,
+  ...Object.entries(selectFields).reduce((acc, [key, val]) => {
+    acc[key] = val.title || key
+    return acc
+  }, {})
+}
 
 const areaList = ref([])
 
@@ -395,20 +424,21 @@ const send = () => {
 
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
-    if (!bypass.includes(key) && (value === "" || value === false)) {
-      unfill.push(formDataRef.value[idx]);
-      pass = false;
-    }
-    if (key !== "r_verify" && key !== "policyChecked") {
-      presend.append(key, value); // 只加入不是 以上條件 的欄位
-    }
-    idx++;
+  if (!bypass.includes(key) && (value === "" || value === false)) {
+    unfill.push(formDataRef[key] || key)
+    pass = false
   }
+  if (key !== "r_verify" && key !== "policyChecked") {
+    presend.append(key, value)
+  }
+}
+
   
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
   presend.append("utm_campaign", utmCampaign);
+  presend.append("case_code", info.case_code?info.case_code:info.caseid );
 
   // 如果有必填字段为空，返回
   if (!pass) {
@@ -426,7 +456,6 @@ const send = () => {
   // 如果通过验证
   if (pass && !sending.value) {
     sending.value = true;
-    
     /*
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
@@ -444,9 +473,9 @@ const send = () => {
         method: "GET"
       }
     );
-
     */
-    fetch("https://service-sys.lixin.com.tw/reserve/e118f61c-cbd3-4a8e-b2e5-7edc66071f0e", {
+   //caseid 在index.js裡設定
+    fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
       method: "POST",
       body: presend,
     })

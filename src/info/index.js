@@ -6,6 +6,8 @@ export default {
         description: caseName,
         keywords: caseName,
     },
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "000",
@@ -36,9 +38,29 @@ export default {
         title: "測試表單",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房"],
-    budget: [" 1000","2000","3000"],
-    use_type: ["自住","投資","租賃"],
+    // 控制固定板的新欄位
+    // room_type: ["兩房","三房"],
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["兩房", "三房"],
+          bypass:false,
+        },
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇區間",
+          option: ["1000", "2000", "3000"],
+          bypass:true, //必填開啟使用
+        },
+        /*
+        use_type: {
+          title: "使用用途",
+          hold: "請選擇用途",
+          option: ["自住", "投資", "租賃"]
+      },
+        */
+  },
 
     navList: [
         /*
@@ -52,54 +74,7 @@ export default {
             target: ".s4",
             offset: "-60",
             offsetmo: "0",
-        },{
-            name: "水岸生活",
-            target: ".s5",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "菁英學區",
-            target: ".s6",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "安心品牌",
-            target: ".s7",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "電梯店墅",
-            target: ".s8",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "嚴選建材",
-            target: ".s9",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "傳家首席",
-            target: ".s10",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
         }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },
     */
     ],
 }
