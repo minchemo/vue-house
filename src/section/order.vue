@@ -357,7 +357,7 @@ const requiredFields = {
 }
 
 // selectFields
-const selectFields = info.selectFields
+const selectFields = info.selectFields || {}
 
 // 初始 formData（包含 selectFields 欄位）
 const formData = reactive({
@@ -442,6 +442,7 @@ const send = () => {
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
   presend.append("utm_campaign", utmCampaign);
+  presend.append("message", formData.msg)
   presend.append("case_code", info.case_code?info.case_code:info.caseid );
 
   // 如果有必填字段为空，返回
@@ -460,7 +461,7 @@ const send = () => {
   // 如果通过验证
   if (pass && !sending.value) {
     sending.value = true;
-    
+    /*
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -477,7 +478,8 @@ const send = () => {
         method: "GET"
       }
     );
-//caseid 在index.js裡設定
+    */
+   //caseid 在index.js裡設定
     fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
       method: "POST",
       body: presend,
