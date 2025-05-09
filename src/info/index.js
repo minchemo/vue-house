@@ -1,11 +1,6 @@
 const caseName = "000"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
     caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
     case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
