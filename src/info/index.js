@@ -1,7 +1,7 @@
 const caseName = "幸福享享"
 
 export default {
-  caseid: "090fcad3-e06e-4416-979f-94477667d20f",
+  caseid: "d60b3d87-afc6-4c82-a569-0608e196cc3f",
   case_code: "hi",
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
