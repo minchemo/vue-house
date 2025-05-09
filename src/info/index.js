@@ -6,7 +6,7 @@ export default {
         keywords: caseName,
     },
     caseid: "5496014a-12b3-476d-aa7a-002d9144d44a",
-    // case_code: "csl",
+    case_code: "csl",
     address1: "籌備處",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
     address: "桃園市八德區豐德二路8號",
