@@ -1,11 +1,8 @@
 const caseName = "幸福享享"
 
 export default {
-  meta: {
-    title: caseName,
-    description: caseName,
-    keywords: caseName,
-  },
+  caseid: "090fcad3-e06e-4416-979f-94477667d20f",
+  case_code: "hi",
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市五股區成泰路三段342號",
@@ -31,9 +28,27 @@ export default {
     title: "預約賞屋",
     subTitle: "",
   },
-  //底下2個 沒項目就會隱藏
-  room_type: ["兩房", "三房", "店面"],
-  budget: [],
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["兩房", "三房"],
+          bypass:false,
+        },
+        /*
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇區間",
+          option: ["1000", "2000", "3000"],
+          bypass:true, //必填開啟使用
+        },
+        use_type: {
+          title: "使用用途",
+          hold: "請選擇用途",
+          option: ["自住", "投資", "租賃"]
+      },
+        */
+  },
   navList: [
     {
       name: "國家級副都心",
