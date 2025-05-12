@@ -19,13 +19,13 @@
             </div>
         </div>
     </div>
-    <!--
-    <div class="house bg-[#FF3EA1] flex items-center justify-center">
-            <p class=""><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
-    </div> -->
+    <!-- -->
+    <div class="house bg-[#fff] flex items-center justify-center py-5">
+           <img src="@/section/form/cmlogo.svg" alt="創意家行銷" srcset="">
+    </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="//h35.banner.tw/img//footerLogo.gif" alt="立炘數位" srcset=""></a>
+                src="//h35.banner.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
 </template>
@@ -48,7 +48,7 @@
     color: #FFF;
     font-size: size(22);
     // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
+    img{height: 3em;vertical-align: middle;}
 }
 .info-box {
     width: size(800);
