@@ -48,7 +48,7 @@
     color: #FFF;
     font-size: size(22);
     // height:4em;
-    img{height: 3em;vertical-align: middle;}
+    img{width: 250px;vertical-align: middle;}
 }
 .info-box {
     width: size(800);
@@ -83,6 +83,7 @@
     // background:#fff;
   //  height: sizem(400);
     font-size: sizem(13);
+    img{width: 200px;}
 }
     .footer {
         margin-bottom: sizem(0);
