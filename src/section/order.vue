@@ -432,7 +432,9 @@ const send = () => {
     presend.append(key, value)
   }
 }
-
+if (formData.msg.trim() === "") {
+  formData.msg = "無留言";
+}
   
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
