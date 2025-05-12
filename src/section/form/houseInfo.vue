@@ -23,6 +23,9 @@
             </div>
         </div>
     </div>
+    <div class="house bg-[#fff] flex items-center justify-center py-5">
+           <img src="@/section/form/cmlogo.svg" alt="創意家行銷" srcset="">
+    </div>
     <!--
     <div class="house bg-[#FF3EA1] flex items-center justify-center">
             <p class=""><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
@@ -45,7 +48,7 @@ $house-c2:#000;
     color: $house-c2;
     font-size: size(22);
     // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
+    img{height: 3em;vertical-align: middle;}
 }
 .info-box {
     width: size(800);
