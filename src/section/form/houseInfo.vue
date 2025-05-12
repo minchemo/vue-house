@@ -6,6 +6,7 @@
           class="h-full info-box mx-auto flex flex-col items-center justify-center"
         >
           <div class="title text-[#B9975F] font-['Noto_Serif_TC',serif]">建案資訊</div>
+          <img class="logo-ct" src="@/section/form/logo-cm.png" alt="創意家行銷">
           <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
             <div
               class="item font-bold flex items-center w-full whitespace-nowrap"
@@ -61,6 +62,15 @@
     vertical-align: middle;
   }
   padding:0px 0 2em;
+
+
+  .logo-ct{
+  position: absolute;
+  width: size(260);
+  height: auto !important;
+  right: size(590);
+  top:size(40);
+}
 }
 .info-box {
   width: size(900);
@@ -91,6 +101,13 @@
 @media screen and (max-width: 768px) {
   .house {
     font-size: sizem(14);
+    margin-top:sizem(70);
+
+    .logo-ct{
+      width: sizem(200);
+      right: sizem(100);
+      top:sizem(-30);
+    }
   }
   .footer {
     margin-bottom: sizem(0);
