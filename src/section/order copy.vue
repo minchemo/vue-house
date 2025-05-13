@@ -1,6 +1,9 @@
 <template>
   <div id="order" class="order relative text-center">
+    <div class="box"><span></span></div>
     <div class="order-section">
+<!-- 
+      <div class="order-title" data-aos="fade-up" data-aos-delay="0">邀約行家 領席鑑賞</div> -->
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
@@ -14,38 +17,61 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span>(必填)</span></span>
+          <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>(必填)</span></span>
+           <!--  <div class="gender">
+          <label><input  type="radio" name="gender" value="男" 
+              @input="(event) => (formData.gender = event.target.value)">先生</label>
+          <label><input  type="radio" name="gender" value="女" 
+              @input="(event) => (formData.gender = event.target.value)">女士</label>
+        </div>  -->
+            <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-
+        <!--
+          <label class="row"><span>性別</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.gender">
+            <option value="" selected disabled>請選擇性別</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select></label> 
+          <label class="row" v-if="info.ctime"><span>連絡時段</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>請選擇時段</option>
+            <option v-for="ctime in info.ctime" :value="ctime" v-text="ctime" :key="ctime"></option>
+          </select></label>
+          <label class="row" v-if="info.use_type"><span>購屋用途</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.use_type">
+            <option value="" selected disabled>請選擇用途</option>
+            <option v-for="use_type in info.use_type" :value="use_type" v-text="use_type" :key="use_type"></option>
+          </select>
+        </label>
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
             <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
           </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算</span>
+        <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+            <option value="" selected disabled>請選擇區間</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
           </select>
         </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value">
+            <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
           <label class="row"><span>居住地區</span>
-          <select class="select w-full rounded-none" v-model="formData.area">
-            <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value">
-              {{ area.label }}
-            </option>
-          </select></label>
+            <select class="select w-full rounded-none" v-model="formData.area">
+              <option value="" selected disabled>請選擇地區</option>
+              <option v-for="area in areaList" :value="area.value" :key="area">
+                {{ area.label }}
+              </option>
+          </select></label> -->
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -57,9 +83,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#f00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -70,7 +96,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending? '發送中..': '確認送出' }}
       </div>
 
       <!-- Contact Info -->
@@ -108,36 +134,47 @@
 
 .order {
   width: 100%;
-  padding-top: 0;
-  //background: #195c45;
+  padding-top: size(40);
+ // background:url("@/section/form/bg.jpg");
+ // background-size: auto;
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
+ .box{position: absolute; 
+   width: size(3100);
+   height: size(745);top: size(500);left: calc(50% - size(1550));
+// opacity: 0.5;
+transform:rotate(165deg);
+transform-origin: 50% 50%;
+span{display: block;width: 100%;height: 100%;position: relative;
+   background: linear-gradient(90deg, #ff00, #FFF9 , #ffd90080 , #ff00);
+   transform:translateX(100%);
+animation: an2 10s linear infinite reverse;}
   }
+@keyframes an2 {
+  to {
+    transform:translateX(-100%);
+  }
+}
 
   .order-title {
-    font-size: size(40);
+    font-size:30px;
     font-weight: 700;
-    color: #FFF;
+    color: #154675;
     padding-top:1.5em;
+    letter-spacing: .4em;
+    display: flex;
+  justify-content:center;
+  align-items:center;
+  text-indent: .4em;
+    width: size(1000);
+    min-width: 750px;
+    margin: auto;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    .line{width: size(439);}
+    &::after,
+    &::before
+    {content: "";display:block;height: 1px;background: #15467566;flex: 1;}
   }
 
   .order-title-img {
@@ -156,12 +193,12 @@
     width: size(300);
     height: size(2);
     margin-bottom: size(50);
-    background-color: #055F76;
+  //  background-color: #055F76;
   }
 
   .form {
-    width: size(920);
-    min-width: 680px;
+    width: size(1000);
+    min-width: 750px;
     //  height: 350px;
     gap: size(80);
     margin-top: size(45);
@@ -169,9 +206,10 @@
     z-index: 50;
     align-items: stretch;
 
-    .left {
+    .left {position: relative;
       flex: 1;
       gap: size(20);
+      align-items: flex-start;
       //   width: size(419);
     }
 
@@ -185,18 +223,19 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #fff;
+      background-color: #0003;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
+    .row{background: #fff;border: 1px solid #fff;color: #000;
       display: flex;width: 100%;
-    align-items:center;
+    align-items:center;font-size: 18px;
       > span{
-        width: 5.5em;
+        width:4.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        > span{color: #F00;//font-size: 12px;
+          }
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background: inherit;flex: 1;font-size: 1em;padding: 0 .5em;}
       option{color: #666;}
       select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -205,6 +244,13 @@
         background-position:calc(100% - .5em) 0%;
       }
       }
+     // &.name{width: calc(100% - 3.8em);
+      // .input{height: 5em;}
+     // }
+    }
+    .gender{display: flex;position: absolute;right: 0; flex-direction:column;color: #FFF;
+      label:first-child{margin-bottom: .3em;}
+      input{margin-right: .3em;}
     }
   }
 
@@ -212,12 +258,11 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
-    background-color: #D9E021;
+    color: #fff;
+    background-color: #154675;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: 0em;
-
+    border-radius: .6em;
     width: 308px;
     height:3.3em;
     line-height: 3.3;
@@ -227,7 +272,7 @@
   }
 
   .control {
-    font-size: size(16);
+    font-size: 14px;
     color: #000;
     position: relative;
   }
@@ -252,21 +297,9 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
-    // border-radius: sizem(68) sizem(68) 0 0;
-   /* padding-top: sizem(0);
-    margin-top: sizem(0);
-
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
+  .box{
+   width: sizem(1600);top: sizem(100);left: calc(50% - sizem(800));
+   height: sizem(400);}
 
     .cus-divider {
       margin: 0 auto;
@@ -279,6 +312,9 @@
     .order-title {
       font-size: sizem(25);
       padding-top:1.5em;
+      width: sizem(310);
+      min-width: 0;
+      .line{width: sizem(258);}
     }
     .order-subTitle{
       font-size: sizem(13);
@@ -348,22 +384,37 @@ const toast = useToast()
 
 const sending = ref(false)
 
+
 const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
   budget: "",
+  use_type: "",
+  gender: "",
   project: "",
   email: "",
   city: "",
   area: "",
+  ctime: "",
   msg: "",
   policyChecked: false,
-  r_verify: true,
+  r_verify: false,
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = [
+  "project", 
+  "msg", 
+  "email", 
+  "gender",
+  "use_type",
+  "room_type",
+  "budget",
+  "ctime",
+  "city",
+  "area",
+]
 
 //中文對照
 const formDataRef = ref([
@@ -371,8 +422,11 @@ const formDataRef = ref([
   "手機", //phone
   "房型", //room_type
   "預算", //budget
+  "用途", //use_type
+  "性別", //gender
   "建案", //project
   "信箱", //email
+  "連絡時段", //ctime
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
@@ -454,14 +508,11 @@ const send = () => {
   if (pass && !sending.value) {
     sending.value = true
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}(${formData.gender})
       &phone=${formData.phone}
-      &room_type=${formData.room_type}
-      &budget=${formData.budget}
-      &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
+      &msg=${formData.room_type}；${formData.budget}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
