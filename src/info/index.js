@@ -1,11 +1,8 @@
 const caseName = "聚丰景"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "066209bb-1c22-4987-839f-589fedbd78b8",
+    case_code: "jfj",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市三民區大昌二路569號",
