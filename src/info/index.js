@@ -1,13 +1,10 @@
-const caseName = "東基M1"
+const caseName = "東基鉅獻"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "c6d5e013-7b31-4edf-88d2-fbc312df0612",
+    case_code: "dgm1",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
-    address2: "導航地址",//map點下確認的--- 如空白會顯示"導航地址"
+    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "",
     googleSrc: "",//嵌入的
     googleLink: "",//導航網址
@@ -17,12 +14,13 @@ export default {
     caseName: caseName,
     houseInfos: [
         /*
-        ["投資興建", "中德建設"],
-        ["營造公司", "承優營造"],
-        ["建築執照", "(112)高市工建築使字第01079號"],
-        ["企劃銷售", "得邦廣告"],
-        ["樓層規劃", "地上15層、地下4層"],
-        ["房型規劃", "2-3房、21~35坪"],
+        ["空間設計", "相即空間設計"],
+        ["企劃銷售", "低碳健康樂活行銷"],
+        ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
+        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
+        ["建築設計", "弘憲聯合建築師事務所"],
+        ["使照號碼", "王朝雍建築師事務所"],
+        ["行銷企劃", "自售"],
         */
     ],
     gtmCode: ["GTM-KQ46V36N"], // 可放置多個
@@ -37,10 +35,29 @@ export default {
        // subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-    // ctime: ["上午","下午","晚上","皆可"],//連絡時段
-    // use_type: ["自住","投資","二代置產","換屋"],//購屋用途
-    room_type: ["1房","2房","3房","4房"],//需求房型
-    budget: ["1500-2000萬","2000-2500萬","2500-3000萬","3000-3500萬","3500-4000萬","4000萬以上",],//購屋預算
+    // 控制固定板的新欄位
+    // room_type: ["兩房","三房"],
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["1房", "2房", "3房", "4房"],
+          bypass:false,
+        },
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇區間",
+          option: ["1500-2000萬","2000-2500萬","2500-3000萬","3000-3500萬","3500-4000萬","4000萬以上",],
+          bypass:false, //必填開啟使用
+        },
+        /*
+        use_type: {
+          title: "使用用途",
+          hold: "請選擇用途",
+          option: ["自住", "投資", "租賃"]
+      },
+        */
+  },
 
     navList: [
         /*
@@ -54,54 +71,7 @@ export default {
             target: ".s4",
             offset: "-60",
             offsetmo: "0",
-        },{
-            name: "水岸生活",
-            target: ".s5",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "菁英學區",
-            target: ".s6",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "安心品牌",
-            target: ".s7",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "電梯店墅",
-            target: ".s8",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "嚴選建材",
-            target: ".s9",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "傳家首席",
-            target: ".s10",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
         }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },
     */
     ],
 }
