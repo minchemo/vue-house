@@ -1,10 +1,11 @@
 const caseName = "國家公園"
 
 export default {
-    caseid: "f2da1585-59f8-4d5f-9190-9825f8efb3ad",
-    case_code: "cjl",
-    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
-    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
+    meta: {
+        title: caseName,
+        description: caseName,
+        keywords: caseName,
+    },
     address: "高雄市小港區高松路99號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1842.0860368320316!2d120.36925000000001!3d22.572666700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x56bbb594d965c250!2zMjLCsDM0JzIxLjYiTiAxMjDCsDIyJzA5LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1673336378815!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/WZGwT3xyTRfk61To6",
@@ -21,43 +22,18 @@ export default {
         ["基地面積", "約2180坪"],
         ["房型規劃", "2-3房"],
         ["企劃銷售", "湘澂國際有限公司"],
+       // ["企劃銷售", `<img class="w-full" src="${new URL(`../section/form/comp.png`, import.meta.url).href}">`],
     ],
     gtmCode: ["GTM-KLF25LBV","GTM-MQRTZPS","GTM-M87MK5M"], // 可放置多個
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
+    // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "",
+        title: "預約賞屋",
+        subTitle: "",
     },
-    // 底下2個 沒項目就會隱藏
-    // 控制固定板的新欄位
-    // room_type: ["兩房","三房"],
-    selectFields: {
-        room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
-          option: ["兩房", "三房"],
-          bypass:false,
-        },
-        //budget: {
-        //  title: "購屋預算",
-        //  hold: "請選擇區間",
-        //  option: ["1000", "2000", "3000"],
-        //  bypass:true, //必填開啟使用
-        //},
-        /*
-        use_type: {
-          title: "使用用途",
-          hold: "請選擇用途",
-          option: ["自住", "投資", "租賃"]
-      },
-        */
-  },
-
-    navList: [
-       {
+    navList: [{
             name: "重大建設",
             target: ".s3",
             offset: "",
