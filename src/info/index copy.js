@@ -1,8 +1,11 @@
 const caseName = "一功青"
 
 export default {
-    caseid: "d6e26da0-67e3-475f-a15d-ad199c16cce8",
-    case_code: "yikung",
+    meta: {
+        title: caseName,
+        description: caseName,
+        keywords: caseName,
+    },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "鵬程東三路vs介壽路",
@@ -17,11 +20,18 @@ export default {
         ["建築設計", "弘憲聯合建築師事務所"],
         ["企劃銷售", "上旺開發股份有限公司"],
         ["接待中心", "鵬程東三路vs介壽路"],
+        /*,
+        ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
+        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
+        ["建築設計", "弘憲聯合建築師事務所"],
+        ["使照號碼", "王朝雍建築師事務所"],
+        ["行銷企劃", "自售"],
+        */
     ],
     gtmCode: ["GTM-WPMCT7FB"], // 可放置多個
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
@@ -29,43 +39,35 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
-    // 控制固定板的新欄位
-    // room_type: ["兩房","三房"],
-    selectFields: {
-        room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
-          option: ["兩房","三房"],
-          bypass:false,
-        },
-        //budget: {
-        //  title: "購屋預算",
-        //  hold: "請選擇區間",
-        //  option: ["1000", "2000", "3000"],
-        //  bypass:true, //必填開啟使用
-        //},
-        /*
-        use_type: {
-          title: "使用用途",
-          hold: "請選擇用途",
-          option: ["自住", "投資", "租賃"]
-      },
-        */
-  },
-
+    room_type: ["兩房","三房"],
+    //budget: ["900-1,000萬","1,100-1,200萬","1,200-1,300萬","1,300-1,400萬","1,400-1,500萬"],
     navList: [
         /*
         {
-            name: "雙核心地段",
+            name: "大城之境",
             target: ".s3",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "交通中軸",
-            target: ".s4",
-            offset: "-60",
-            offsetmo: "0",
-        }
-    */
+            offset: "",
+        },
+        {
+            name: "大境美宅",
+            target: ".s5",
+            offset: "",
+        },
+        {
+            name: "工藝嚴選",
+            target: ".s7",
+            offset: "",
+        },
+        {
+            name: "空間展演",
+            target: ".s8",
+            offset: "",
+        },
+        {
+            name: "預約賞屋",
+            target: ".order",
+            offset: "",
+        },
+        */
     ],
 }
