@@ -49,6 +49,7 @@ img {
 }
 .home{
   position: relative;
+  background: #C2D242;
  /* &::before{content: "";display: block;position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
 background: url("@/section/s1/bg.webp") top center;
 background-size: cover;
