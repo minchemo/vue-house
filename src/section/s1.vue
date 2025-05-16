@@ -51,7 +51,7 @@
 @media screen and (min-width: 768px) {
     height:100vh;
     // height: size(1070);
-    min-height: size(1080);
+    min-height: size(900);
     max-height: size(1080);
     //justify-content:space-between;
     padding: 0;
