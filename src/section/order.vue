@@ -82,18 +82,13 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div
-  class="send mt-8 mx-auto btn transition duration-300"
-  :class="sending ? 'opacity-50 pointer-events-none' : 'hover:scale-90 cursor-pointer'"
-  @click="send"
->
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
         {{ sending? '發送中..': '送出表單' }}
       </div>
 
       <!-- Contact Info -->
       <ContactInfo />
     </div>
-
 
     <!-- Map -->
     <Map v-if="info.address" />
