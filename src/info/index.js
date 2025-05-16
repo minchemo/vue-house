@@ -1,14 +1,14 @@
-//const caseName = "松陽馥麗"
+const caseName = "松陽馥麗"
 
-const caseName = "test"
+//const caseName = "test"
 export default {
     meta: {
         title: caseName,
         description: caseName,
         keywords: caseName,
     },
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
-   //caseid: "e35e238b-6a62-4722-b340-a3a799ef3e58",
+   // caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+   caseid: "e35e238b-6a62-4722-b340-a3a799ef3e58",
    //case_code: "csl",
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"

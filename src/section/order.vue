@@ -81,8 +81,8 @@
       <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send -->
-      <div
+      <!-- Send 
+<div
   class="send mt-8 mx-auto btn transition duration-300 flex items-center justify-center gap-2"
   :class="sending ? 'opacity-50 pointer-events-none' : 'hover:scale-90 cursor-pointer'"
   @click="send"
@@ -109,8 +109,33 @@
     ></path>
   </svg>
   {{ sending ? '發送中..' : '送出表單' }}
+</div>-->
+<button class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
+  送出表單
+</button>
+<div v-else class="send-load mt-8 mx-auto">
+  <svg
+    class="animate-spin h-5 w-5 text-blue-600"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+    ></path>
+  </svg>
+  <span>發送中...</span>
 </div>
-
       <!-- Contact Info -->
       <ContactInfo />
     </div>
@@ -258,7 +283,20 @@
     position: relative;
     box-shadow: .2em .2em .05em #0004;
   }
+  @keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
+.send-load{
+  font-size:20px;
+  letter-spacing: 0.9em;
+  font-weight: 400;
+    line-height: 3.3;
+  color: #fff;}
+.animate-spin {
+  display: inline-block;margin:0 .5em; animation: spin 1s linear infinite;
+}
   .control {
     font-size: size(16);
     color: #000;
@@ -337,6 +375,10 @@
       width: sizem(310);
       height: sizem(72);
     }
+    .send-load{
+      font-size: sizem(21);
+
+    }
 
     .control {
       font-size: sizem(14.6);
@@ -364,9 +406,10 @@ const isMobile = computed(() => globals.$isMobile());
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
-
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const sending = ref(false)
-
+const submitted = ref(false)
 // 後端那 name phone email msg 為必要欄位 請勿刪除
 const requiredFields = {
   // 固定必要欄位 (請勿刪)
@@ -482,9 +525,11 @@ const send = () => {
     return;
   }
 
+
   // 如果通过验证
   if (pass && !sending.value) {
-    sending.value = true;
+  sending.value = true;
+  submitted.value = true;
     
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
@@ -502,7 +547,6 @@ const send = () => {
         method: "GET"
       }
     );
-    
    //caseid 在index.js裡設定
     fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
       method: "POST",
@@ -510,7 +554,9 @@ const send = () => {
     })
       .then((response) => {
         if (response.status === 200) {
-          window.location.href = "formThanks";
+          //window.location.href = "formThanks";
+          router.push("/formThanks")
+          //toast.success("已成功送出！");
         } else {
           return response.json().then(err => {
             console.error("後端錯誤訊息：", err);
