@@ -1,13 +1,10 @@
 const caseName = "松陽馥麗"
-
-//const caseName = "test"
 export default {
     meta: {
         title: caseName,
         description: caseName,
         keywords: caseName,
     },
-   // caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
    caseid: "e35e238b-6a62-4722-b340-a3a799ef3e58",
    //case_code: "csl",
     address1: "",//按鈕區的--- 如空白會只呈現地址
@@ -24,7 +21,7 @@ export default {
         ["建築設計", "周劍平建築師事務所"],
         ["建照號碼", "113土建字第00215號"],
         ["行銷企劃", "五率國際地產行銷"],
-        ["經&ensp;紀&ensp;人", "朱春紅 (93) 北縣字第000981號"],
+        ["經&ensp;紀&ensp;人", "何成英 (112)新北經字第004095號"],
         /*
         ["行銷企劃", "自售"],
         */
