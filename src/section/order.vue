@@ -82,9 +82,34 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '送出表單' }}
-      </div>
+      <div
+  class="send mt-8 mx-auto btn transition duration-300 flex items-center justify-center gap-2"
+  :class="sending ? 'opacity-50 pointer-events-none' : 'hover:scale-90 cursor-pointer'"
+  @click="send"
+>
+  <svg
+    v-if="sending"
+    class="animate-spin h-5 w-5 text-white"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 00-8 8z"
+    ></path>
+  </svg>
+  {{ sending ? '發送中..' : '送出表單' }}
+</div>
 
       <!-- Contact Info -->
       <ContactInfo />
