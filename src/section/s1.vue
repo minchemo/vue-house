@@ -1,13 +1,17 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!-- <img src="./s1/pc.jpg" class="t0"> -->
+    <!-- <img src="./s1/mo.jpg" class="t0"> -->
+    <img src="./s1/logooo.png" class="logooo" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/logot.svg" class="logot" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400">
+    <!-- 
     <img src="./s1/tree.png" class="tree">
 
     <div class="t1" data-aos="zoom-in" data-aos-delay="500">玖登開發八擴案<br>
       八擴重劃正核心</div>
     <div class="hr" data-aos="flip-up" data-aos-delay="0"></div>
     <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="800">
-    <div class="t2"></div>
+    <div class="t2"></div> -->
     <!-- <img src="./s1/mo.jpg" class="t0"> -->
      <!-- <img src="./s1/bg.webp" class="bg">
     
@@ -32,6 +36,8 @@
   height:calc(100vh - 63px);
   min-height: sizem(604);
     max-height: sizem(750);
+    background: url("./s1/bg.jpg") center;
+    background-size: cover;
   
   display: flex;
   flex-direction: column;
@@ -51,6 +57,33 @@
     padding: 0;
     font-size: size(56);
 }
+.logooo{
+  width:sizem(157);
+}
+.logot{
+  width:sizem(300);
+  margin: sizem(25) auto sizem(23) auto;
+}
+.t1{
+  width:sizem(300);
+  margin: 0 auto sizem(102);
+}
+@media screen and (min-width: 768px) {
+.logooo{
+  width:size(274);
+}
+.logot{
+  width:size(844);
+  margin: size(25) auto size(55) auto;
+}
+.t1{
+  width:size(663);
+  margin: 0 auto size(35);
+}
+
+}
+
+/*
 .tree{
   position: absolute;bottom: 0;left:calc(50% - #{sizem(850 * .5)});width: sizem(850); 
   transform: skewX(-5deg);
@@ -80,6 +113,7 @@
       height: auto;width:size(2300);top:calc(50% + #{size(0 - 1080 * .5)});
     }
   }
+    */
 }
 </style>
 <script setup>

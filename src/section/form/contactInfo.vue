@@ -103,8 +103,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #c60;}
-.hover\:bg-color2:hover{background-color:#c30;}
+.bg-color1{background-color: #EFA83E;}
+.hover\:bg-color2:hover{background-color:#839300;}
 
 
 .contact-info-img{
@@ -138,8 +138,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #ffe3bb;
-      color: #444;
+      background: #EFA83E;
+      color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -152,12 +152,13 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
+      box-shadow: .2em .2em .05em #0004;
       //border: 1px solid #C29267;
 
       gap: 1em;
 
       &:hover {
-        background: #c30;
+        background: #9eb301;
         color: #fff;
 
         img {
@@ -169,7 +170,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(.4);
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
@@ -246,7 +247,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#A30C24;
+    background:#839300;
 
     .contact-item {
       height: 100%;      
