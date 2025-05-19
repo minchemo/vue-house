@@ -99,8 +99,8 @@
     </div>
 
 
-    <!-- Map -->
-    <Map v-if="info.address" />
+    <!-- Map
+    <Map v-if="info.address" /> -->
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -329,7 +329,6 @@
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
-import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"

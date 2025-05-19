@@ -6,40 +6,72 @@
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>  -->
-    <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
-        <div>{{ info.phone }}</div>
-      </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+    <div class="flex justify-between w-full contact-item-box ">
+      <div class="flex butt" @click="modalOpen = true; modalType = 'fb'">
         <img src="//h35.banner.tw/img//form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
+      <div class="flex butt btfanpage" @click="open()">
         <img src="//h35.banner.tw/img//form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
-      <div class="flex contact-item justify-center items-center address">
-        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
+    <div class="flex w-full flex-col md:flex-row gap-5  box1">
+      <div class="flex flex-wrap flex-1 box0">
+      <div class="butt phone" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
+        <div>新竹：{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center googlemap"
+<div class="address">
+        <div class="flex-1"><span>新竹據點：</span>新竹高鐵站旁-竹北市光明六路東二段𝟔𝟐𝟏號𝟏𝐅</div>
+      
+      <div class="butt googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
         <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
+    <div class="gmap relative z-10 mt-3">
+        <iframe :src="info.googleSrc" frameborder="0"></iframe>
+    </div>
+
+  </div>
+      <div class="flex flex-wrap flex-1 box0">
+      <div class="butt phone" @click="modalOpen = true; modalType = 'phoneB'" v-if="info.phone">
+        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
+        <div>高雄：{{ info.phoneB }}</div>
+      </div>
+<div class="address">
+        <div class="flex-1"><span>高雄據點：</span>高雄橋頭經武路𝟏𝟐𝟑號(橋新七路口)</div>
+      
+      <div class="flex butt googlemap"
+        @click="modalOpen = true; modalType = 'gmapB'">
+        <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <div>導航 GoogleMap</div>
+      </div>
+    </div>
+    <div class="gmap relative z-10 mt-3">
+        <iframe :src="info.googleSrcB" frameborder="0"></iframe>
+    </div>
+
+  </div>
+</div>
+
 
   </div>
 </div>
 
   <!-- Mobile contact info -->
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+      <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+      @click="modalOpen = true; modalType = 'phone'">
+      <img src="//h35.banner.tw/img//form/phone.svg" alt="新竹專線" srcset="" />
+      <div>新竹專線</div>
+    </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
-      @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-      <img src="//h35.banner.tw/img//form/phone.svg" alt="撥打電話" srcset="" />
-      <div>撥打電話</div>
+      @click="modalOpen = true; modalType = 'phoneB'">
+      <img src="//h35.banner.tw/img//form/phone.svg" alt="高雄專線" srcset="" />
+      <div>高雄專線</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
@@ -50,11 +82,6 @@
       <img src="//h35.banner.tw/img//form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
-      <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
-      <div>地圖導航</div>
-    </div>
   </div>
 
   <!-- Modal -->
@@ -62,38 +89,57 @@
   <div class="modal -mt-20 md:-mt-72">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
-      <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/messenger.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
+      <!-- icon --><!-- icon -->
+<img
+  class="h-12"
+  v-if="modalType === 'phone' || modalType === 'phoneB'"
+  src="//h35.banner.tw/img//form/phone.svg"
+  alt="phone"
+/>
+<img
+  class="h-12"
+  v-else-if="modalType === 'fb'"
+  src="//h35.banner.tw/img//form/messenger.svg"
+  alt="fb"
+/>
+<img
+  class="h-12"
+  v-else-if="modalType === 'gmap' || modalType === 'gmapB'"
+  src="//h35.banner.tw/img//form/gmap.svg"
+  alt="gmap"
+/>
+
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-      `${info.address2?info.address2:'導航地址'}`
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '新竹專線' : modalType == 'phoneB' ? '高雄專線' : modalType == 'fb' ? 'Facebook Messenger' :
+      modalType == 'gmap' ? '新竹據點' :
+      modalType == 'gmapB' ? '高雄據點' :""
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-      `${info.address}`
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone :modalType == 'phoneB' ? info.phoneB : modalType == 'fb' ? '線上諮詢' :
+      modalType == 'gmap' ? info.address :
+      modalType == 'gmapB'? info.addressB:""
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
-        }}</div>
-      <!-- btn phone -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btcontac': modalType == 'phone'
-      }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
-        }}</div>
+<div
+  class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2"
+  @click="go()"
+  v-if="modalType != 'phone' || modalType != 'phoneB'"
+  :class="{
+  //  hidden: (modalType === 'phone' || modalType === 'phoneB') && !$isMobile(),
+    btlead: modalType === 'fb',
+    btsearch: modalType === 'gmap' || modalType === 'gmapB',
+    btcontac: modalType === 'phone' || modalType === 'phoneB'
+  }"
+>
+  {{
+    modalType === 'phone' || modalType === 'phoneB'
+      ? '撥打電話'
+      : modalType === 'fb'
+      ? '立即諮詢'
+      : '開啟導航'
+  }}
+</div>
+
     </div>
   </div>
 
@@ -112,10 +158,11 @@
 }
 .contact-info {
   padding: size(55) size(0) size(55) size(0);
-    width: size(1440);
-    min-width: 680px;
+   /* width: size(1440);
+    min-width: 680px;*/
   position: relative;
   z-index: 50;
+  gap: 20px;
   // background: #045147;
 
   .logo {position: relative;
@@ -130,6 +177,52 @@
     .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
   }
 
+    .butt{background: #666;
+      color: #fff;
+      padding: 1.1em 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: size(16);
+      line-height: 1.6;flex: 1;
+      z-index: 1;
+      //margin: .5em 0;
+      cursor: pointer;
+      transition: all .3s;
+      width: 5em;
+      img {
+        max-width: 1.69em;
+        height: auto;
+        max-height: 1.69em;
+        transition: all .5s;
+        margin: 0 1em 0 0;
+        filter: brightness(0) invert(1);
+      }
+      &:hover {
+        background: #A30C24;
+        color: #fff;
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+      &.phone{margin: 0 10px 0 0 ;}
+      &.googlemap{flex: 0;
+        width: 40em;min-width:12em;}  
+    }
+    .address{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: size(16);
+      flex: 3;
+      
+        background-color: #FFF;
+      line-height: 1.6;flex: 1;
+      
+  }
+  .box0{border: 1px solid #0003;padding: 10px;
+  background:#fff5;}
+
   .contact-item-box {
     position: relative;
     margin-top: size(20);
@@ -138,42 +231,9 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #666;
-      color: #fff;
-      width: 100%;
-      flex: 1;
-      padding: 1.1em 0;
-  //  border-radius: .5em;
-      font-size: size(16);
-      line-height: 1.6;//3.8
-      letter-spacing: 0em;
-     // max-width: size(280);
-      z-index: 1;
-      transition: all .3s;
-      cursor: pointer;
-      //border: 1px solid #C29267;
-      gap: 1em;
 
-      &:hover {
-        background: #A30C24;
-        color: #fff;
-
-        img {
-          filter: brightness(0) invert(1);
-        }
-      }
-
-      img {
-        max-width: size(27);
-        height: auto;
-        max-height: size(27);
-        filter: brightness(0) invert(1);
-        transition: all .5s;
-        margin: 0;
-      }
 
       &.address {
-        background-color: #FFF;
         background-image: none;
         color: #000;
         z-index: 0;
@@ -199,26 +259,6 @@
         }
       }
 
-
-      &.googlemap {
-        flex:1;
-  //    background-color: #9B1E44;
-      border-left-width: 0;
-      //  color: #fff;
-/*
-        img {
-          filter: brightness(0) invert(0);
-        }
-
-        &:hover {
-   //     background-color: #C29267;
-          color: #000;
-          img {
-            filter: brightness(0) invert(0);
-          }
-        }
-          */
-      }
     }
 
     &.no-gap {
@@ -283,6 +323,25 @@
      // margin-bottom: sizem(47);
     }
 
+    .butt{
+      font-size: sizem(16);
+      width: sizem(310);
+      padding: 1.1em sizem(50);
+      //margin: 0 0 20px ;
+      &.phone{margin: 0 ;}
+      &.googlemap {
+        width: 100%;min-width:100%;
+      }
+    }
+    .address{
+      margin: 10px auto ; 
+      font-size: sizem(16);width: 100%;flex-wrap: wrap;
+      > div:first-child{ padding: 1.3em 0;}
+
+      
+  }
+
+  .box0{margin: 0 24px;}
     .contact-item-box {
       position: relative;
       margin-top: sizem(0);
@@ -297,7 +356,7 @@
         white-space: nowrap;
         margin: 0;
 
-        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        img {             
           max-width: sizem(27);
           height: auto;
           max-height: sizem(27);
@@ -345,6 +404,7 @@
 <script setup>
 import info from "@/info"
 import { inject, ref } from "vue";
+import Map from "@/section/form/map.vue"
 const modalOpen = ref(false);
 const modalType = ref('');
 
@@ -354,10 +414,18 @@ const go = () => {
      setTimeout(() => {
        window.location.href = "phoneThanks";
      }, 1000);
+  } else if (modalType.value == 'phoneB') {
+    window.location.href = `tel:${info.phoneB.replace("-", "")}`;
+     setTimeout(() => {
+       window.location.href = "phoneThanks";
+     }, 1000);
   } else if (modalType.value == 'fb') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
+
+  }else if (modalType.value == 'gmapB') {
+    window.open(info.googleLinkB);
 
   }
 }

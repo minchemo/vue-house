@@ -8,18 +8,25 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-   // address: "高雄市 經武路X橋新七路",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7359.266492949288!2d120.3097038172106!3d22.74186923554725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ0JzMwLjciTiAxMjDCsDE4JzUzLjUiRQ!5e0!3m2!1szh-TW!2stw!4v1725006447269!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
-   // phone: "07-6118333",
+    address: "新竹高鐵站旁-竹北市光明六路東二段𝟔𝟐𝟏號𝟏𝐅",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.565489465441!2d121.03909047607384!3d24.810327947260433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468370702ee5af1%3A0xcc53171ee49a30a2!2zMzAy5paw56u557ij56u55YyX5biC5YWJ5piO5YWt6Lev5p2x5LqM5q61NjIx6Jmf!5e0!3m2!1szh-TW!2stw!4v1747623184689!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/GgrzHuBa1C4Nrj5VA",
+    phone: "𝟎𝟑-𝟓𝟓𝟎𝟕𝟎𝟓𝟖",
+    addressB: "高雄橋頭經武路𝟏𝟐𝟑號(橋新七路口)",
+    googleSrcB: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.6349749530204!2d120.31233307603084!3d22.741805026746068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0fb4ab02c94d%3A0xadecbd88e4709140!2zODI16auY6ZuE5biC5qmL6aCt5Y2A57aT5q2m6LevMTIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1747623230184!5m2!1szh-TW!2stw",
+    googleLinkB: "https://maps.app.goo.gl/oF95FWHyFFQuj7Nn9",
+    phoneB: "𝟎𝟕-𝟔𝟏𝟏-𝟖𝟑𝟑𝟑",
     fbLink: "https://www.facebook.com/61564328289468",
     fbMessage: "https://m.me/61564328289468",
     caseName: caseName,
+
+
+
     houseInfos: [
-        ["新竹據點", "新竹高鐵站旁-<br>竹北市光明六路東二段𝟔𝟐𝟏號𝟏𝐅"],
+       /* ["新竹據點", "新竹高鐵站旁-<br>竹北市光明六路東二段𝟔𝟐𝟏號𝟏𝐅"],
         ["新竹專線", "03-5507058"],
         ["高雄據點", "高雄橋頭經武路𝟏𝟐𝟑號(橋新七路口)"],
-        ["高雄專線", "07-611-8333"],
+        ["高雄專線", "07-611-8333"],*/
         ["投資興建", "興連城開發_興華城建設"],
         ["建築設計", "原東聯合建築師事務所"],
         ["行銷企劃", "允城國際事業"],
