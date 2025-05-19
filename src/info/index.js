@@ -11,7 +11,7 @@ export default {
     address: "新竹高鐵站旁-竹北市光明六路東二段𝟔𝟐𝟏號𝟏𝐅",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.565489465441!2d121.03909047607384!3d24.810327947260433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468370702ee5af1%3A0xcc53171ee49a30a2!2zMzAy5paw56u557ij56u55YyX5biC5YWJ5piO5YWt6Lev5p2x5LqM5q61NjIx6Jmf!5e0!3m2!1szh-TW!2stw!4v1747623184689!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/GgrzHuBa1C4Nrj5VA",
-    phone: "𝟎𝟑-𝟓𝟓𝟎𝟕𝟎𝟓𝟖",
+    phone: "𝟎𝟑-𝟓𝟓𝟎-𝟕𝟎𝟓𝟖",
     addressB: "高雄橋頭經武路𝟏𝟐𝟑號(橋新七路口)",
     googleSrcB: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.6349749530204!2d120.31233307603084!3d22.741805026746068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0fb4ab02c94d%3A0xadecbd88e4709140!2zODI16auY6ZuE5biC5qmL6aCt5Y2A57aT5q2m6LevMTIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1747623230184!5m2!1szh-TW!2stw",
     googleLinkB: "https://maps.app.goo.gl/oF95FWHyFFQuj7Nn9",
