@@ -2,8 +2,8 @@
   <article class="s4">
     <div class="t">
       <img class="t1" src="@/section/s4/t1.png" alt="" srcset="" />
-      <div class="t2" v-if="isMobile">副都心的驚嘆號<br>新東方文華御邸</div>
-      <div class="t2" v-else>副都心的驚嘆號 新東方文華御邸</div>
+      <div class="t2" v-if="isMobile">副都心的驚嘆號</div>
+      <div class="t2" v-else>副都心的驚嘆號</div>
       <div class="t3">
         打開副都心富人特區生活之鑰，為你的未來而來。2023全台三大建商、大台北重劃推手攜手國際團隊，在國家政經中心，以珍稀小坪數2-3房規劃，雙面臨路黃金方正角地，用更輕盈的身段輕取副都心，定錨中原X中華雙大道十字星芒，一座耀眼建築，藏綠又藏富的永恆地標，現在逢低入主，豐贏未來。
       </div>
@@ -23,14 +23,15 @@
   .t {
     @apply absolute z-20;
     top: size(217);
-    right: size(223);
-    width: size(635);
+    right: size(323);
+    width: size(500);
     .t1 {
       @apply w-full;
     }
     .t2 {
       @apply whitespace-nowrap;
-      font-size: size(45);
+      font-size: size(60);
+      letter-spacing: .21em;
       font-weight: 700;
       margin-top: size(8);
     }
@@ -69,7 +70,7 @@
         @apply w-full;
       }
       .t2 {
-        font-size: sizem(25);
+        font-size: sizem(39);
         margin-top: sizem(16);
       }
       .t3 {
