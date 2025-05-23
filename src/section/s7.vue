@@ -86,7 +86,7 @@ background: #6A3F12;
 
   .slider {
     margin: 0;
-    flex-basis: size(840);
+    flex-basis: size(840);width: size(840);
       height: size(560);
       background: url("./s7/bg.webp");
       background-size: cover;
