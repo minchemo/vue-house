@@ -51,6 +51,7 @@
   .slider {
     margin: 0;
     flex-basis: size(840);
+    width: size(840);
       height: size(844);
     width: size(1500);
     .caption {
