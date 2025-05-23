@@ -98,6 +98,7 @@
   .slider {
     margin: 0;
     flex-basis: size(840);
+    width: size(840);
       height: size(560);
     .slide-item {
       @apply bg-cover;
