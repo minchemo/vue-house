@@ -60,6 +60,7 @@
     margin: 0;
     flex-basis: size(840);
       height: size(560);
+      width:size(840) ;
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
@@ -114,6 +115,7 @@
   .slider {
     height: auto;
     width: 100%;
+    max-width:100% ;
 
     .caption {
     font-size:sizem(12);  
