@@ -101,6 +101,7 @@
   .slider {
     margin: 0;
     flex-basis: size(840);
+    width: size(840);
       height: size(560);
       z-index: 1;
     .slide-item {

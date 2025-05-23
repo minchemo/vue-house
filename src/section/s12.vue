@@ -80,6 +80,7 @@ background: #C9A063;
   .slider {
     margin: 0;
     flex-basis: size(613);
+    width: size(613);
     //height: size(613);
     width: size(1500);
     .slide-item {

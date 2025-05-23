@@ -83,6 +83,7 @@ img{width: 100%;position: relative;}}
   .slider {
     margin: 0;
     flex-basis: size(840);
+    width: size(840);
     height: size(560);
     z-index: 2;
     .slide-item {
