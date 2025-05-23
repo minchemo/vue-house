@@ -70,7 +70,7 @@
         @apply w-full;
       }
       .t2 {
-        font-size: sizem(39);
+        font-size: sizem(25);
         margin-top: sizem(16);
       }
       .t3 {
