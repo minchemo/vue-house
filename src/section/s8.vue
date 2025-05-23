@@ -93,10 +93,12 @@
   .slider {border-radius: 1em;overflow: hidden;
     margin: 0;
     flex-basis: size(840);
+    width:  size(840);
       height: size(580);
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
+    width:  size(840);
       height: size(580);
       
     }
