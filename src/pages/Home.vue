@@ -16,6 +16,7 @@
 
   <div class="home bg-[#C2D242] overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
     <S1 />
+    <S2 />
   <!--
     <S1new />
     <S1new2 /> -->
@@ -72,6 +73,7 @@ import info from "@/info"
 // import S11 from "@/section/s11.vue"
 
 import S1 from "@/section/s1.vue" 
+import S2 from "@/section/s2.vue" 
 import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 

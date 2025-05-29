@@ -1,47 +1,31 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!-- <img src="./s1/mo.jpg" class="t0"> -->
+    <!-- <img src="./s1/mo.jpg" class="t0">
+     <img src="./s1/pc.jpg" class="t0"> -->
     <img src="./s1/logooo.png" class="logooo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/logot.svg" class="logot" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./s1/logoen.svg" class="logot" data-aos="zoom-in" data-aos-delay="200">
     <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400">
-    <!-- 
-    <img src="./s1/tree.png" class="tree">
-
-    <div class="t1" data-aos="zoom-in" data-aos-delay="500">玖登開發八擴案<br>
-      八擴重劃正核心</div>
-    <div class="hr" data-aos="flip-up" data-aos-delay="0"></div>
-    <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="800">
-    <div class="t2"></div> -->
-    <!-- <img src="./s1/mo.jpg" class="t0"> -->
-     <!-- <img src="./s1/bg.webp" class="bg">
-    
-    <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/building.webp" class="building" data-aos="zoom-in" data-aos-delay="200">
-   <img src="./s1/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="200"> -->
+    <img src="./s1/35.svg" class="t2" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/t3.svg" class="t3" data-aos="zoom-in" data-aos-delay="200">
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:0px;left: 0; pointer-events: none;z-index: 9;opacity: .2;}
+  .t0{position: absolute;width: 160%;top:0px;left: -30%; pointer-events: none;z-index: 9;opacity: .6;}
 @keyframes an {
   to {
     transform: translateX(0%);
   }
 }
   .s1 {
-   // height:  sizem(604);
-  //  height:sizem(667);
-  /*  */  
-  height:calc(100vh - 63px);
-  min-height: sizem(604);
-    max-height: sizem(750);
-    background: url("./s1/bg.jpg") center;
-    background-size: cover;
-  
+  // height:calc(100vh - 63px);
+  height: sizem(667);
+  background: url("./s1/bg.jpg") center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content:flex-start;
   align-items:center;
   color: #fff;
   font-size: sizem(32);
@@ -49,35 +33,51 @@
  // overflow: hidden;
   
 @media screen and (min-width: 768px) {
-    height:100vh;
-    // height: size(1070);
-    min-height: size(900);
-    max-height: size(1080);
-    //justify-content:space-between;
+    height: size(2130);
     padding: 0;
     font-size: size(56);
 }
 .logooo{
-  width:sizem(157);
+  width:sizem(253);
+  margin: sizem(40) auto sizem(14);
 }
 .logot{
-  width:sizem(300);
-  margin: sizem(25) auto sizem(23) auto;
+  width:sizem(245);
+  margin: sizem(0) auto sizem(30) auto;
 }
 .t1{
-  width:sizem(300);
-  margin: 0 auto sizem(102);
+  width:sizem(210);
+  margin: 0 auto sizem(50);
+}
+.t2{
+  width:sizem(135);
+  margin: 0 auto sizem(20);
+  background: url("./s1/35.webp");
+  background-size: cover;
+}
+.t3{
+  width:sizem(226);
+  margin: 0 auto sizem(0);
 }
 @media screen and (min-width: 768px) {
 .logooo{
-  width:size(274);
+  width:size(804);
+  margin: size(120) auto size(50);
 }
 .logot{
-  width:size(844);
-  margin: size(25) auto size(55) auto;
+  width:size(760);
+  margin: size(0) auto size(100) auto;
 }
 .t1{
-  width:size(663);
+  width:size(580);
+  margin: 0 auto size(260);
+}
+.t2{
+  width:size(420);
+  margin: 0 auto size(60);
+}
+.t3{
+  width:size(720);
   margin: 0 auto size(35);
 }
 
