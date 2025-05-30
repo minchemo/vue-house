@@ -9,8 +9,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市新莊區富貴路．中華路三段",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3035671629063!2d121.4499402266842!3d25.057698173568948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a900774d3053%3A0x1286e58562204223!2z5ZyL546L5aSn6YGT5o6l5b6F5Lit5b-DI-WJr-mDveW_g-acgOe-juWkqemam-e3mg!5e0!3m2!1szh-TW!2stw!4v1745978788205!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/1i1RLd7mndGvmKjX6",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3098394683584!2d121.45248950000001!3d25.0574855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a965069393e1%3A0x3f4f54588cc81ac7!2z5ZyL546L5aSn6YGTS0lORyBQQVJL5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1748616767788!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/EXyvsgvB5Jd8LmXN7",
     phone: "02-8522-7337",
     fbLink: "https://www.facebook.com/gtcip.debang/",
     fbMessage: "https://m.me/gtcip.debang/",
