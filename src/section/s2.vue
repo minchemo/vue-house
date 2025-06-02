@@ -284,33 +284,46 @@ const list1 = [
     link:"",
   },
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "114/2/26起",
     t3: " 公展30日",
     link:"https://drive.google.com/drive/folders/1UwGocDKDqGiaryxfzI5p0joqaFVwSjox?usp=sharing",
   },
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "114/3/17",
     t3: "公辦公聽會<br>時間：114/3/17(一)下午2時30分<br>地點：溪洲市民活動中心3樓禮堂(新北市永和區勵行街42之1號2號3樓)",
     link:"https://drive.google.com/file/d/10Wp_Vdb7YhaRSoejjCGVwGRtQjJjK07s/view?usp=sharing",
+  },
+  {
+    t1: ["v2", "進行中"],
+    t2: "114/4/24<br>114/4/29",
+    t3: "第一次專案小組審議",
+    link:"",
   },
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
 const list3 = [
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "114/04/25",
-    t3: "針對現況房屋之「結構」及「重建年份」欲提供佐證資料者，請於114年5月30日前，將 1.稅籍資料 2.對照年份前後之航照圖 3.結構證明文件 ，電郵至本案專屬電子信箱。",
+    t3: "針對現況房屋之「結構」及「重建年份」欲提供佐證資料者，請盡速將 1.稅籍資料 2.對照年份前後之航照圖 3.結構證明文件 ，電郵至本案專屬電子信箱。",
     link:"mailto:dachen.five@gmail.com",
     link_t:"電子信箱",
   },
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "114/05/05",
     t3: "本案於114年4月26日於駐點辦事處召開溝通協調會，內容參見會議紀錄。",
     link:"https://drive.google.com/file/d/1wNJ1LOSiQoGWNGgl26uFGALfRUHNfbkM/view?usp=sharing",
     link_t:"會議紀錄",
+  },
+  {
+    t1: ["v2", "進行中"],
+    t2: "",
+    t3: "待收受第一次專案小組會議紀錄，預計114年8月續送第二次小組審議。",
+    link:"",
+    link_t:"",
   },
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
