@@ -1,11 +1,8 @@
 const caseName = "鳴日之城"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "d1c78e3a-ef86-44cc-ad2b-d15ffea54cc5",
+    case_code: "mrjc",
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
     address: "桃園市桃園區大仁路50巷17號",
@@ -33,8 +30,30 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     //底下2個 沒項目就會隱藏
-    room_type: ["2房","3房","3+1"],
-    budget: ["1000-1500","1500-2000","2000以上"],
+
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["2房","3房","3+1"],
+          bypass:false,
+        },
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇預算",
+          option: ["1000-1500","1500-2000","2000以上"],
+          bypass:false, //必填開啟使用
+        },
+        /*
+        use_type: {
+          title: "使用用途",
+          hold: "請選擇用途",
+          option: ["自住", "投資", "租賃"]
+      },
+        */
+  },
+
+
     navList: [{
         name: "新北門戶",
         target: ".s1",
