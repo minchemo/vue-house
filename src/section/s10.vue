@@ -4,7 +4,7 @@
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">質感豪宅公設<br v-if="isMobile"> 享受居家時光</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">城揚建回到家的時光，是享受生活的起點！可以在健身房和多功能室之間動靜自在切換，或是在KTV室和運動Bar好好放鬆身心，擁有多樣的公設規劃，讓居家的樂趣有更多可能！</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">回到家的時光，是享受生活的起點！可以在健身房和多功能室之間動靜自在切換，或是在KTV室和運動Bar好好放鬆身心，擁有多樣的公設規劃，讓居家的樂趣有更多可能！</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
