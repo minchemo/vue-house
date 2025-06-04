@@ -1,12 +1,11 @@
 <template>
-  <article class="s10">
-		<img src="./s1/oo.svg" class="oo" v-if="isMobile">
+  <article class="s11"><!--
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">質感豪宅公設<br v-if="isMobile"> 享受居家時光</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">城揚建回到家的時光，是享受生活的起點！可以在健身房和多功能室之間動靜自在切換，或是在KTV室和運動Bar好好放鬆身心，擁有多樣的公設規劃，讓居家的樂趣有更多可能！</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">公園門牌  綠富生活</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">隱富繁華大道旁，心在幽靜樹海裡，「三景三錦」榮景只在轉身之間，公園門牌連動捷運便利，更顯地段價值非凡，近靜漲的魅力，成為層峰家庭置產首選。</p>
     </div>
-    </div>
+    </div> -->
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -25,7 +24,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s10 {
+.s11 {
   @apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
   // height: size(800);
@@ -34,8 +33,9 @@
   gap:1.5em;
   flex-wrap:nowrap;
     flex-direction:column;
-  .oo{position: absolute;top: calc(50% - #{size(550)});right: calc(50% - #{size(190)});width: size(1100);
-  transform: scaleX(-1);}
+  .hr{position: absolute;
+  width:size(1525);bottom: size(-50);left:size(-10);pointer-events: none;z-index: 2;
+  }
   .main {
     @apply flex;
     margin: 0;
@@ -67,10 +67,6 @@
       bottom: -2em;
     }
   }
-  .caption{
-     @apply font-['Noto_serif_TC',serif];
-    left: .5em;right: auto;font-size:size(30);font-weight: 700;
-    text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.8);}
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -78,23 +74,22 @@
 
 @media screen and (max-width: 767px) {
 
-  .s10 {
-    flex-direction:column-reverse;
+  .s11 {
+  @apply flex-col;
     height: auto;
     padding: 0 0 2em 0;
   font-size:sizem(15);
   flex-wrap:nowrap;
 gap:0em;
-  .oo{bottom: sizem(-50);top: auto;
-left: calc(50% - #{sizem(330)});
-width: sizem(660);transform: rotate(90deg);
- }
+  .hr{
+  width:sizem(600);bottom: sizem(-80);left:sizem(-100);
+  }
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
-.txt {margin: 2em auto 6em;padding: 0;
+.txt {margin: 4.4em auto 1.3em;
 }
 
   .slider {
@@ -110,13 +105,9 @@ width: sizem(660);transform: rotate(90deg);
       @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(211);
       
     }
-  }
-  
-  .caption{
-    font-size: sizem(25);
   }
   }
 }
@@ -151,28 +142,28 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s10/1.jpg", import.meta.url).href ,
-    caption: "迎賓大廳"
+    img:new URL("./s11/1.jpg", import.meta.url).href ,
+    caption: ""
   },
   {
-    img:new URL("./s10/2.jpg", import.meta.url).href ,
-    caption: "交誼廳"
+    img:new URL("./s11/2.jpg", import.meta.url).href ,
+    caption: ""
   },
   {
-    img:new URL("./s10/3.jpg", import.meta.url).href ,
-    caption: "KTV室"
+    img:new URL("./s11/3.jpg", import.meta.url).href ,
+    caption: ""
   },
   {
-    img:new URL("./s10/4.jpg", import.meta.url).href ,
-    caption: "健身房"
+    img:new URL("./s11/4.jpg", import.meta.url).href ,
+    caption: ""
   },
   {
-    img:new URL("./s10/5.jpg", import.meta.url).href ,
-    caption: "運動Bar"
+    img:new URL("./s11/5.jpg", import.meta.url).href ,
+    caption: ""
   },
   {
-    img:new URL("./s10/6.jpg", import.meta.url).href ,
-    caption: "多功能室"
+    img:new URL("./s11/6.jpg", import.meta.url).href ,
+    caption: ""
   },
 ]
 </script>

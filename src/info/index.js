@@ -1,11 +1,8 @@
 const caseName = "城揚Twin S"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "4f13d16e-ebd7-4171-ba99-c3a82ef8b2d0",
+    case_code: "twin-s",
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市三民區建工路597號",
@@ -37,6 +34,27 @@ export default {
     //底下2個 沒項目就會隱藏
     room_type: ["兩房","三房","四房"],
     //budget: ["1000萬以下","1000-2000萬","2000-3000萬","3000萬以上"],
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["兩房","三房","四房"],
+          bypass:false,
+        },
+        /*
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇區間",
+          option: ["1000", "2000", "3000"],
+          bypass:true, //必填開啟使用
+        },
+        use_type: {
+          title: "使用用途",
+          hold: "請選擇用途",
+          option: ["自住", "投資", "租賃"]
+      },
+        */
+  },
 
     navList: [{
  /*       name: "微笑雲朵",

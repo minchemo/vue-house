@@ -14,43 +14,24 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名<span>*</span></span>
+          <label class="row"><span>姓名<span>(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-         <!-- <div class="gender">
-          <label><input  type="radio" name="gender" value="男" 
-              @input="(event) => (formData.gender = event.target.value)">先生</label>
-          <label><input  type="radio" name="gender" value="女" 
-              @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div> --> 
-            <label class="row"><span>手機<span>*</span></span>
+            <label class="row"><span>手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-<!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
-<template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
-    <label class="row">
-      <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
-      <select
-        class="select w-full rounded-none bg-white"
-        v-model="formData[fieldKey]"
-      >
-        <option value="" disabled>{{ fieldData.hold }}</option>
-        <option
-          v-for="option in fieldData.option"
-          :value="option"
-          :key="option"
-        >
-          {{ option }}
-        </option>
-      </select>
-    </label>
-  </template>
-<!-- 動態 select end-->
-
-
-
-        <!--  -->
+          <label class="row" v-if="info.room_type"><span>需求房型</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
+           <option value="" selected disabled>請選擇房型</option> 
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
+          </select></label>
+          <label class="row" v-if="info.budget"><span>購屋預算</span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+           <option value="" selected disabled>請選擇預算</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
+          </select>
+        </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -68,7 +49,7 @@
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="(非必填) 請輸入您的留言"></textarea>
+            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
         </div>
       </div>
 
@@ -84,37 +65,13 @@
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+      <vue-recaptcha class="relative flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send --><div class="sendall mt-8 mx-auto">
-      <button class="send hover:scale-90 cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-        即刻預約
-</button>
-<div v-else class="send-load">
-  <svg
-    class="animate-spin h-5 w-5 text-blue-600"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-  >
-    <circle
-      class="opacity-25"
-      cx="12"
-      cy="12"
-      r="10"
-      stroke="currentColor"
-      stroke-width="4"
-    ></circle>
-    <path
-      class="opacity-75"
-      fill="currentColor"
-      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-    ></path>
-  </svg>
-  <span>發送中...</span>
-</div>
-</div>
+      <!-- Send -->
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+        {{ sending? '發送中..': '即刻預約' }}
+      </div>
 
       <!-- Contact Info -->
       <ContactInfo />
@@ -131,6 +88,22 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
+/*
+.eggbg3{position: absolute;
+    display: block;
+    top: size(-150);right:size(100);width:size(700);
+		transform:translateY(-10%);
+		animation: an 2s ease-in-out infinite alternate-reverse;}
+	.eggbg4{position: absolute;
+    display: block;
+    top: size(400);left:size(230);width:size(160);
+		transform:translateY(-50%);
+		animation: an 4s ease-in-out infinite alternate;}
+  .oo3{position: absolute;top:size(120);height:size(50);right:size(60);
+		transform: translateX(20%);
+		animation: an 3s ease-in-out infinite alternate;}
+    */
 .order-section {
   position: relative;
  // padding-top: size(406);
@@ -152,6 +125,25 @@
   width: 100%;
   padding-top: 6vw;
   
+
+  .bird {
+    @apply absolute;
+    width: size(155);
+    top: size(420);
+    right: size(450);
+    animation: fly 6s ease-in-out infinite alternate-reverse;
+
+    @keyframes fly {
+      from {
+        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
+      }
+
+      to {
+        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
+
+      }
+    }
+  }
 
   .order-title {
     font-size: size(45);
@@ -232,13 +224,9 @@
       }
     }
   }
-  .sendall{
-  font-size:20px;
-  font-weight: 400;
-    line-height: 3.3;
-  height:3.3em;}
 
   .send {
+    font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #000;
@@ -253,22 +241,10 @@
     z-index: 10;
     font-weight: 700;
     position: relative;
-    transition: all .3s;
   }
-  @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.send-load{
-  letter-spacing: 0.9em;
-  text-indent: 0.9em;
-  height:100%;}
-.animate-spin {
-  display: inline-block;margin:0 .5em; animation: spin 1s linear infinite;
-}
 
   .control {
-    font-size:15px;
+    font-size: size(16);
     color: #000;
     position: relative;
   }
@@ -359,10 +335,8 @@
       }
     }
 
-    .sendall {
-      font-size: sizem(21);
-    }
     .send {
+      font-size: sizem(21);
       width: sizem(310);
       height: sizem(72);
     }
@@ -383,65 +357,47 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import { ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
-
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
-
-// const selectFields = info.selectFields
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
 
 const sending = ref(false)
-const submitted = ref(false)
 
-// 後端那 name phone email msg 為必要欄位 請勿刪除
-const requiredFields = {
-  // 固定必要欄位 (請勿刪)
-  name: "姓名",
-  phone: "手機",
-  email: "信箱",
-  msg: "備註訊息",
-  city: "居住縣市",
-  area: "居住地區",
-  policyChecked: "個資告知事項聲明",
-  r_verify: "機器人驗證"
-}
-
-// selectFields
-const selectFields = info.selectFields || {}
-
-// 初始 formData（包含 selectFields 欄位）
 const formData = reactive({
-  ...Object.keys(requiredFields).reduce((acc, key) => {
-    acc[key] = key === "policyChecked" || key === "r_verify" ? false : ""
-    return acc
-  }, {}),
-  ...Object.keys(selectFields).reduce((acc, key) => {
-    acc[key] = ""
-    return acc
-  }, {})
+  name: "",
+  phone: "",
+  room_type: "",
+  budget: "",
+  project: "",
+  people: "",
+  email: "",
+  city: "",
+  area: "",
+  msg: "",
+  policyChecked: false,
+  r_verify: false,
 })
 
-// bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["email", "msg", "city", "area"]
-const bypass = [
-  ...staticBypass,
-  ...Object.entries(selectFields)
-    .filter(([_, field]) => field.bypass !== true)
-    .map(([key]) => key)
-]
+//非必填
+const bypass = ["project", "msg", "people", "email", "room_type","budget", "city", "area"]
 
-// 中文對照（formDataRef）
-const formDataRef = {
-  ...requiredFields,
-  ...Object.entries(selectFields).reduce((acc, [key, val]) => {
-    acc[key] = val.title || key
-    return acc
-  }, {})
-}
+//中文對照
+const formDataRef = ref([
+  "姓名", //name
+  "手機", //phone
+  "房型", //room_type
+  "預算", //budget
+  "建案", //project
+  "服務專員", //people
+  "信箱", //email
+  "居住縣市", //city
+  "居住地區", //area
+  "備註訊息", //msg
+  "個資告知事項聲明", //policyChecked
+  "機器人驗證", //r_verify
+])
 
 const areaList = ref([])
 
@@ -452,9 +408,9 @@ watch(
     formData.area = areaList.value[0].value
   }
 )
-// 新系統這裡需調整
-const onRecaptchaVerify = (token) => {
-  formData.r_verify = token;
+
+const onRecaptchaVerify = () => {
+  formData.r_verify = true
 }
 const onRecaptchaUnVerify = () => {
   formData.r_verify = false
@@ -462,12 +418,10 @@ const onRecaptchaUnVerify = () => {
 
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source") || "null"; // 确保有有效的来源
-  const utmMedium = urlParams.get("utm_medium") || "null";
-  const utmContent = urlParams.get("utm_content") || "null";
-  const utmCampaign = urlParams.get("utm_campaign") || "null";
-  /*
-  const pad = (n) => String(n).padStart(2, '0');
+  const utmSource = urlParams.get("utm_source");
+  const utmMedium = urlParams.get("utm_medium");
+  const utmContent = urlParams.get("utm_content");
+  const utmCampaign = urlParams.get("utm_campaign");
   const time = new Date();
   const year = time.getFullYear();
   const month = time.getMonth() + 1;
@@ -476,56 +430,56 @@ const send = () => {
   const min = time.getMinutes();
   const sec = time.getSeconds();
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
-  */
-  
 
   const presend = new FormData();
-  let pass = true;
-  let unfill = [];
-  let idx = 0;
+  let pass = true
+  let unfill = []
+  let idx = 0
 
-  // 验证必填字段
+  //驗證
   for (const [key, value] of Object.entries(formData)) {
-  if (!bypass.includes(key) && (value === "" || value === false)) {
-    unfill.push(formDataRef[key] || key)
-    pass = false
+    if (!bypass.includes(key)) {
+      if (value == "" || value == false) {
+        unfill.push(formDataRef.value[idx])
+      }
+
+    }
+
+    idx++;
+
+    presend.append(key, value);
   }
-  if (key !== "r_verify" && key !== "policyChecked") {
-    presend.append(key, value)
-  }
-}
-  
+
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
   presend.append("utm_campaign", utmCampaign);
-  presend.append("message", formData.msg)
-  presend.append("case_code", info.case_code?info.case_code:info.caseid );
 
-  // 如果有必填字段为空，返回
-  if (!pass) {
-    toast.error(`「${unfill.join(", ")}」為必填或必選`);
-    return;
+  //有未填寫
+  if (unfill.length > 0) {
+    pass = false
+    toast.error(`「${unfill.join(", ")}」為必填或必選`)
+    return
   }
 
-  // 手机格式验证
-  const MobileReg = /^(09)[0-9]{8}$/;
+  //手機驗證
+  const MobileReg = /^(09)[0-9]{8}$/
   if (!formData.phone.match(MobileReg)) {
-    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
-    return;
+    pass = false
+    toast.error(`手機格式錯誤 ( 09開頭10位數字 )`)
+    return
   }
 
-  // 如果通过验证
   if (pass && !sending.value) {
-  sending.value = true;
-  submitted.value = true;
-    /*
+    sending.value = true
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
+      &people=${formData.people}
+      &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.msg}
+      &msg=${formData.msg}${formData.room_type}${formData.budget}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
@@ -536,29 +490,19 @@ const send = () => {
         method: "GET"
       }
     );
-    */
-   //caseid 在index.js裡設定
-    fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
+
+    fetch("contact-form.php", {
       method: "POST",
       body: presend,
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        } else {
-          return response.json().then(err => {
-            console.error("後端錯誤訊息：", err);
-            toast.error(err.message || "提交失敗");
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("傳送失敗：", error);
-        toast.error("無法連線或伺服器錯誤");
-      })
-      .finally(() => {
-        sending.value = false;
-      });
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+      sending.value = false
+    });
+
+
+    // toast.success(`表單已送出，感謝您的填寫`)
   }
-};
+}
 </script>
