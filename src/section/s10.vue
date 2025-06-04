@@ -15,7 +15,8 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
+          <span class="caption">此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利。</span>
+          <span class="caption_l">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -67,8 +68,9 @@
       bottom: -2em;
     }
   }
-  .caption{
-     @apply font-['Noto_serif_TC',serif];
+  .caption_l{
+     @apply absolute font-['Noto_serif_TC',serif];
+     bottom: .5em;
     left: .5em;right: auto;font-size:size(30);font-weight: 700;
     text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.8);}
 }
@@ -102,9 +104,7 @@ width: sizem(660);transform: rotate(90deg);
     width: 100%;
 
     .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
+    font-size:sizem(10);left: 1em;bottom: .7em;
     }
     .slide-item {
       @apply bg-cover;
@@ -115,8 +115,9 @@ width: sizem(660);transform: rotate(90deg);
     }
   }
   
-  .caption{
+  .caption_l{
     font-size: sizem(25);
+    bottom: .8em;left: .4em;
   }
   }
 }
