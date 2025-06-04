@@ -42,7 +42,7 @@ export default {
       room_type: {
         title: "需求房型",
         hold: "請選擇房型",
-        option: ["兩房", "三房"],
+        option: ["兩房", "三房", "店面"],
         bypass:false,
       },
       /*

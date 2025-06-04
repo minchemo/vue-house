@@ -81,10 +81,34 @@
       <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
-      </div>
+      <!-- Send --><div class="sendall mt-8 mx-auto">
+      <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
+  送出表單
+</button>
+<div v-else class="send-load">
+  <svg
+    class="animate-spin h-5 w-5 text-blue-600"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+    ></path>
+  </svg>
+  <span>發送中...</span>
+</div>
+</div>
 
       <!-- Contact Info -->
       <ContactInfo />
@@ -216,6 +240,11 @@
 
       input::placeholder{color: #333;}
       textarea::placeholder{color: #333;}
+  .sendall{
+  font-size:20px;
+  font-weight: 400;
+    line-height: 3.3;
+  height:3.3em;}
   .send {
     font-size:20px;
     letter-spacing: 0.9em;
@@ -234,6 +263,17 @@
     position: relative;
     box-shadow: .2em .2em .05em #0004;
   }
+  @keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.send-load{
+  letter-spacing: 0.9em;
+  text-indent: 0.9em;
+  height:100%;}
+.animate-spin {
+  display: inline-block;margin:0 .5em; animation: spin 1s linear infinite;
+}
 
   .control {
     font-size: size(16);
@@ -307,6 +347,9 @@
         display: none;
       }
     }
+    .sendall {
+      font-size: sizem(21);
+    }
 
     .send {
       font-size: sizem(21);
@@ -342,6 +385,7 @@ import { useToast } from "vue-toastification"
 const toast = useToast()
 
 const sending = ref(false)
+const submitted = ref(false)
 
 // 後端那 name phone email msg 為必要欄位 請勿刪除
 const requiredFields = {
@@ -412,6 +456,8 @@ const send = () => {
   const utmMedium = urlParams.get("utm_medium") || "null";
   const utmContent = urlParams.get("utm_content") || "null";
   const utmCampaign = urlParams.get("utm_campaign") || "null";
+  /*
+  const pad = (n) => String(n).padStart(2, '0');
   const time = new Date();
   const year = time.getFullYear();
   const month = time.getMonth() + 1;
@@ -420,6 +466,8 @@ const send = () => {
   const min = time.getMinutes();
   const sec = time.getSeconds();
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+  */
+  
 
   const presend = new FormData();
   let pass = true;
@@ -436,7 +484,6 @@ const send = () => {
     presend.append(key, value)
   }
 }
-
   
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
@@ -460,8 +507,9 @@ const send = () => {
 
   // 如果通过验证
   if (pass && !sending.value) {
-    sending.value = true;
-    
+  sending.value = true;
+  submitted.value = true;
+    /*
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -478,7 +526,7 @@ const send = () => {
         method: "GET"
       }
     );
-    
+    */
    //caseid 在index.js裡設定
     fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
       method: "POST",
@@ -503,5 +551,4 @@ const send = () => {
       });
   }
 };
-
 </script>
