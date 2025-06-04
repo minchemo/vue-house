@@ -457,6 +457,7 @@ const send = () => {
   const utmContent = urlParams.get("utm_content") || "null";
   const utmCampaign = urlParams.get("utm_campaign") || "null";
   /*
+  */
   const pad = (n) => String(n).padStart(2, '0');
   const time = new Date();
   const year = time.getFullYear();
@@ -466,7 +467,6 @@ const send = () => {
   const min = time.getMinutes();
   const sec = time.getSeconds();
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
-  */
   
 
   const presend = new FormData();
@@ -510,6 +510,7 @@ const send = () => {
   sending.value = true;
   submitted.value = true;
     /*
+    */
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -526,7 +527,6 @@ const send = () => {
         method: "GET"
       }
     );
-    */
    //caseid 在index.js裡設定
     fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
       method: "POST",
