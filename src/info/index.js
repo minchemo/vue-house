@@ -1,8 +1,6 @@
 const caseName = "都匯天地"
-
 export default {
-    caseid: "a40fbc82-32dc-4886-af8f-20ace8a7e2fe",
-    //case_code: "test",
+  caseid: "a40fbc82-32dc-4886-af8f-20ace8a7e2fe",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市新莊區富貴路．中華路三段路口",

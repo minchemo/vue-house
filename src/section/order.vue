@@ -12,6 +12,12 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
+          <div class="gender">
+          <label><input  type="radio" name="gender" value="男" 
+              @input="(event) => (formData.gender = event.target.value)">先生</label>
+          <label><input  type="radio" name="gender" value="女" 
+              @input="(event) => (formData.gender = event.target.value)">女士</label>
+        </div>
           
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
@@ -203,7 +209,7 @@
         background-position:calc(100% - .5em) 0%;
       }
       }
-       //&.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+       &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;
       label:first-child{margin-bottom: .3em;}
@@ -341,6 +347,7 @@ const requiredFields = {
   msg: "備註訊息",
   city: "居住縣市",
   area: "居住地區",
+  gender: "性別",
   policyChecked: "個資告知事項聲明",
   r_verify: "機器人驗證"
 }
@@ -361,7 +368,7 @@ const formData = reactive({
 })
 
 // bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["email", "msg", "city", "area"]
+const staticBypass = ["email", "msg", "city", "area" , "gender" ]
 const bypass = [
   ...staticBypass,
   ...Object.entries(selectFields)
@@ -414,7 +421,10 @@ const send = () => {
   let pass = true;
   let unfill = [];
   let idx = 0;
-
+  
+if (formData.gender) {
+  formData.name = `${formData.name}(${formData.gender})`;
+}
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
   if (!bypass.includes(key) && (value === "" || value === false)) {
@@ -425,16 +435,16 @@ const send = () => {
     presend.append(key, value)
   }
 }
-if (formData.msg.trim() === "") {
-  formData.msg = "無留言";
+if (formData.gender) {
+  formData.name = `${formData.name}(${formData.gender})`;
 }
-  
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
   presend.append("utm_campaign", utmCampaign);
-  presend.append("message", formData.msg)
+  presend.append("message", formData.msg);
   presend.append("case_code", info.case_code?info.case_code:info.caseid );
+
 
   // 如果有必填字段为空，返回
   if (!pass) {
