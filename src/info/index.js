@@ -1,6 +1,8 @@
 const caseName = "佳展大嘉"
 
 export default {
+    caseid: "f1012bc8-7694-4252-9052-ea63f3262ba7",
+    case_code: "dajia",
     meta: {
         title: caseName,
         description: caseName,
@@ -26,8 +28,8 @@ export default {
         ["企劃銷售", "新富利廣告有限公司"],
     ],
     gtmCode: ["GTM-59B4C885"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
@@ -39,9 +41,14 @@ export default {
         */
     },
     // 底下2個 沒項目就會隱藏
-     room_type: ["店面"],
-    //budget: ["2000以下","2000-2500","2500-3000","3000-3500","3500以上"],
-
+     selectFields: {
+         room_type: {
+           title: "需求房型",
+           hold: "請選擇房型",
+           option: ["店面"],
+           bypass:true,
+         },
+   },
     navList: [{
         name: "嘉 未來",
         target: ".s4",
