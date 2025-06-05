@@ -142,7 +142,8 @@ img{width: 100%;
     // min-width: 680px;
 
     .contact-item {
-      background: #b6006499;
+      background: #b6006400;
+      border: 1px solid #fff;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -159,7 +160,7 @@ img{width: 100%;
       gap: 1em;
 
       &:hover {
-        background: #d600a8b6;
+        background: #1d5586;
         color: #fff;
 
         img {

@@ -52,9 +52,9 @@
   opacity: 0;
 }
 
-.home{ background:#393cdb;
+.home{ background:linear-gradient(to bottom, #009e41 0%,#00a6e9 100%);
   &::before{content: "";
-  background: url("@/section/s3/1.webp") center;background-size: 100% auto;
+  //background: url("@/section/s3/1.webp") center;background-size: 100% auto;
   width: 120%;height: 120vw;position: fixed;
   left: -10%;right: 0;top: calc(50% - 60vw);bottom: 0;
 transform: translateX(0%) rotate(360deg);filter: blur(10px);

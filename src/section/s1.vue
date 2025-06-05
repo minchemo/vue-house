@@ -2,18 +2,13 @@
   <article class="s1" id="s1">
    <!-- <img src="./s1/mo.jpg" class="t0">
     <img src="./s1/mo.jpg" class="t0">  -->
-    <div class="ball">
-      <img src="./s1/ball1.webp" class="ball1">
-      <img src="./s1/ball1.webp" class="ball2">
-      <img src="./s1/ball1.webp" class="ball3">
-      <img src="./s1/ball2.webp" class="ball4">
-      <img src="./s1/ball2.webp" class="ball5">
-      <img src="./s1/ball2.webp" class="ball6" v-if="isMobile">
-    </div>
+      <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
+      <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
+      <img src="./s1/t2.webp" class="t2" data-aos="zoom-in" data-aos-delay="400">
+      <img src="./s1/t3m.svg" class="t3" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
+      <img src="./s1/t3.svg" class="t3" data-aos="zoom-in" data-aos-delay="0" v-else>
 
-      <img src="./s1/t1m.webp" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
-      <img src="./s1/t1.webp" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
-      <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="400">
+      <img src="./s1/earth.svg" class="earth" data-aos="zoom-in" data-aos-delay="400">
 
    <!--  <img src="./s1/s1bg.jpg" class="bg" v-else> 
     <div class="txt">
@@ -47,59 +42,39 @@
   flex-direction: column;
   justify-content:center;
   align-items:center;
-  height:sizem(750);
-  background: url("./s1/bgm.webp");
-  background-size: cover;
+  height:sizem(605);
+  background: #fff;
   @media screen and (min-width: 768px) {
     height:100vh;
     max-height:size(1080);
     min-height:size(900);
-    background-image: url("./s1/bg.webp");
   }
   //background: #E60012;
 // padding-bottom: size(140);V
  // &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
 
-  .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
- .bg{width: 100%;}
-.t1{width:sizem(200);margin: sizem(-110) 0 sizem(19) 0;position: relative;z-index: 99;
+.t1{width:sizem(23);margin: sizem(10) 0 sizem(60) 0;position: relative;z-index: 99;
 }
-.t2{width:sizem(260);
+.t2{width:sizem(289);position: relative;z-index: 99;margin-bottom:sizem(30)
 }
-@media screen and (min-width: 768px) {
-.t1{width:size(676);margin: size(20) 0 size(50) 0;}
-.t2{width:size(676);}
+.t3{width:sizem(181);
 }
-.ball{position: absolute;width: 100%;height: 100%;left: 0;top:0;z-index: 2;
-img{position: absolute;}
-.ball1{width:sizem(243);top: -14%;left: -13%;
-  transform: translateY(20%);
-animation: an 10s alternate infinite;
+.earth{position: absolute;width:sizem(322);top:sizem(230);left: sizem(30);
 }
-.ball2{width:sizem(195);top: 78%;left: -22%;
-  transform: translateY(40%);
-animation: an 8s -4s linear alternate infinite;}
-.ball3{width:sizem(61);top: 13%;left: 71%;
-  transform: translateY(20%);
-animation: an 6s -2s linear alternate infinite;}
-.ball4{width:sizem(147);top: 73%;left: 78%;
-  transform: translateY(30%);
-animation: an 7s -5s linear alternate infinite;}
-.ball5{width:sizem(24);top: 82%;left: 29%;
-  transform: translateY(50%);
-animation: an 5s -1s linear alternate infinite;}
-.ball6{width:sizem(154);top: 137%;left: 77%;
-  transform: translateY(20%);
-animation: an 9s -6s linear alternate infinite;}
-@media screen and (min-width: 768px) {
-.ball1{width:size(515);top: -30%;left: 7%;}
-.ball2{width:size(354);top: 80%;left: 11%;}
-.ball3{width:size(740);top: 68%;left: 77%;}
-.ball4{width:size(170);top: 16%;left: 75%;}
-.ball5{width:size(103);top: 128%;left: 9%;}
 
+@media screen and (min-width: 768px) {
+.t1{width:size(803);margin: size(20) 0 size(250) 0;}
+.t2{width:size(647);margin-bottom:size(70);z-index: 99;}
+.t3{width:size(1085);}
+
+.earth{
+  position: absolute;
+  width:size(721);
+  top:size(190);
+  left: size(590);
 }
 }
+
 }
 
   

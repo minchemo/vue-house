@@ -1,93 +1,96 @@
 <template>
-  <article class="s3" id="s3">
-    <img src="./s3/bgm.jpg" class="bg" v-if="isMobile"> 
-    <img src="./s3/bg.jpg" class="bg" v-else> 
-    <div class="ball">
-      <img src="./s1/ball1.webp" class="ball1">
-      <img src="./s1/ball1.webp" class="ball2">
-      <img src="./s1/ball1.webp" class="ball3">
-      <img src="./s1/ball2.webp" class="ball4">
-      <img src="./s1/ball2.webp" class="ball5">
-    </div>
+  <article class="s3">
+    <img src="./s3/enm.svg" class="en" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
+    <img src="./s3/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0" v-else>
     
-    <div class="txt"> 
-      <span data-aos="zoom-in" data-aos-delay="0">信義區是過去，副都心是未來</span>
-      <span data-aos="zoom-in" data-aos-delay="100">這一次，真的想定下來</span>
-      <span data-aos="zoom-in" data-aos-delay="200">在副都心立下最專情的誓言：</span>
-      <span data-aos="zoom-in" data-aos-delay="300">「成名要趁早，明天會更好」</span>
-      <span data-aos="zoom-in" data-aos-delay="400">真愛要趁早告白</span>
-      <span data-aos="zoom-in" data-aos-delay="500">國家級重劃區的幸福從不重來</span>
+    <div class="txt font-['Noto_Serif_TC',serif]">
+      <span data-aos="zoom-in" data-aos-delay="0">在雙北市中心，匯聚新天地</span>
+      <span data-aos="zoom-in" data-aos-delay="100">城市中有河岸、繁華中有綠意</span>
+      <span data-aos="zoom-in" data-aos-delay="200">對坐北士科輝達AI科技大未來</span>
+      <span data-aos="zoom-in" data-aos-delay="300">雙捷三重A2站，不再只是地理座標</span>
+      <span data-aos="zoom-in" data-aos-delay="400">而是國際科技菁英行旅世界的指標</span><br>
+      <span data-aos="zoom-in" data-aos-delay="500">從三重登場，到世界嚮往</span>
+      <span data-aos="zoom-in" data-aos-delay="600">人生制高點，未來從此耀眼</span>
 </div>
-   
+    <div class="viewbox">
+      <fullview />
+    </div>
   </article>
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/style/function.scss';
-
+@import "@/assets/style/function.scss";
 .s3 {
-  @apply relative; 
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  align-items:center;
-  font-size:sizem(14);
-  color: #fff;
-  @media screen and (min-width: 768px) {
-    font-size:size(32);
-  }
-  .bg{width: 100%;}
+  @apply w-full relative;
+  height: size(1081);
+  padding-top: size(185);
+
+
+
+
   .txt{
     position: absolute;
-    top: sizem(115);left: 0;right: 0;text-align: center;
-  line-height: 2.7;
-  letter-spacing: 0.06em;
-  span{display: block;}
-  @media screen and (min-width: 768px) {
-    top: size(150);
+    top: size(80);
+    left: size(1150);
     line-height: 2;
+    text-align: left;
+    font-size:size(20);
+    font-weight: 500;
+    z-index: 99;
+    color: #fff;
+
+    span{display: block;}
 
   }
-}
-.ball{position: absolute;width: 100%;height: 100%;left: 0;top:0;z-index: 2;
-img{position: absolute;}
-.ball1{width:sizem(110);top: -5%;left: 60%;
-  transform: translateY(40%);
-animation: an 8s linear alternate infinite;}
-.ball2{width:sizem(83);top: 90%;left: 15%;
-  transform: translateY(30%);
-animation: an 6s -7s linear alternate infinite;}
-.ball3{width:sizem(186);top: 47%;left: 69%;
-  transform: translateY(30%);opacity: .9;
-animation: an 9s -2s linear alternate infinite;}
-.ball4{width:sizem(28);top: 9%;left: 13%;
-  transform: translateY(70%);
-animation: an 10s -3s linear alternate infinite;}
-.ball5{width:sizem(77);top: 133%;left: 88%;
-  transform: translateY(60%);
-animation: an 7s -4s linear alternate infinite;}
-@media screen and (min-width: 768px) {
-.ball1{width:size(330);top: -10%;left: 73%;}
-.ball2{width:size(534);top: 20%;left: -10%;}
-.ball3{width:size(542);top: 70%;left: 82%;}
-.ball4{width:size(90);top: 17%;left: 22%;}
-.ball5{width:size(158);top: 126%;left: 8%;}
+  .en{
+    position: absolute;
+    width: size(643);
+    top: size(150);
+    left: size(380);
+    z-index: 99;
+  }
 
-}
-}
+  .viewbox {
+    @apply w-full h-full absolute z-0;
+    @apply left-0 top-0;
+  }
 }
 
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+@media screen and (max-width: 767px) {
+  .s3 {
+    @apply w-full relative;
+    height: sizem(800);
+
+  .txt{
+    position: absolute;
+    top: sizem(30);left: 0;right: 0;text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    color: #fff;
+    font-size:sizem(14);
+    font-weight: 500;
+    span{display: block;}
+  }
+
+  .en{
+    width: sizem(200);
+    top: sizem(250);
+    left: sizem(90);
+  }
+
+  
+  }
+}
 </style>
+
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const isMobile = computed(() => globals.$isMobile());
-
-const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-  smoothScroll({
-    scrollTo: document.querySelector(el)
-  })
-}
+import fullview from "@/components/fullview.vue"
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
+const isMobile = computed(() => globals.$isMobile())
 </script>
