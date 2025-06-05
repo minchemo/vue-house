@@ -1,11 +1,8 @@
 const caseName = "鼎藏豐碩"
 
 export default {
-  meta: {
-    title: caseName,
-    description: caseName,
-    keywords: caseName,
-  },
+    caseid: "a72c4ee9-642a-4096-9bcc-2524f6b3f960",
+    case_code: "dt",
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市三重區集賢路178號",
@@ -33,8 +30,28 @@ export default {
     subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
   },
   //底下2個 沒項目就會隱藏
-  room_type: ["兩房25～27坪", "三房35～36坪"],
-  budget: ["1500-2000萬", "2000-2500萬", "2500-3000萬", "3000-3500萬"],
+  
+  selectFields: {
+    room_type: {
+      title: "需求房型",
+      hold: "請選擇房型",
+      option: ["兩房25～27坪", "三房35～36坪"],
+      bypass:false,
+    },
+    budget: {
+      title: "購屋預算",
+      hold: "請選擇區間",
+      option:["1500-2000萬", "2000-2500萬", "2500-3000萬", "3000-3500萬"],
+      bypass:false, //必填開啟使用
+    },
+    /*
+    use_type: {
+      title: "使用用途",
+      hold: "請選擇用途",
+      option: ["自住", "投資", "租賃"]
+  },
+    */
+},
   navList: [
     {
       name: "三重地王",
