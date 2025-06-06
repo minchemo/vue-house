@@ -4,8 +4,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市新莊區富貴路．中華路三段路口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7359.266492949288!2d120.3097038172106!3d22.74186923554725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ0JzMwLjciTiAxMjDCsDE4JzUzLjUiRQ!5e0!3m2!1szh-TW!2stw!4v1725006447269!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3614.450580005456!2d121.48433800000001!3d25.052712999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzA5LjgiTiAxMjHCsDI5JzAzLjYiRQ!5e0!3m2!1szh-TW!2stw!4v1749198230318!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/vpzks4hQLWX8GLMz9",
     phone: "02-8522-7337",
     fbLink: "https://www.facebook.com/100082950231720/",
     fbMessage: "https://m.me/100082950231720/",
