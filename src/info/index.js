@@ -1,11 +1,9 @@
 const caseName = "吉晟賦"
+//const caseName = "000"
 
 export default {
-  meta: {
-    title: caseName,
-    description: caseName,
-    keywords: caseName,
-  },
+    caseid: "c3f8b471-ae75-4ec2-b127-eb62fe7951d6",
+    case_code: "jichenfu",
   address1: "接待中心", //按鈕區的--- 如空白會只呈現地址
   address2: "接待中心", //map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市三重區仁安街108號",
@@ -39,8 +37,14 @@ export default {
       "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
   },
   //底下2個 沒項目就會隱藏
-  room_type: ["兩房", "三房"],
-  budget: [],
+  selectFields: {
+      room_type: {
+        title: "需求房型",
+        hold: "請選擇房型",
+        option: ["兩房", "三房"],
+        bypass:false,
+      },
+},
   navList: [
     {
       name: "集賢大道",
