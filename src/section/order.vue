@@ -70,7 +70,7 @@
 </button>
 <div v-else class="send-load">
   <svg
-    class="animate-spin h-5 w-5 text-blue-600"
+    class="animate-spin h-5 w-5 text-white-600"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -224,6 +224,13 @@
       }
     }
   }
+.sendall{
+  font-size:20px;
+  font-weight: 400;
+    line-height: 3.3;
+  height:3.3em;
+  color: #FFF;
+  }
 
   .send {
     font-size:20px;
@@ -242,6 +249,18 @@
     font-weight: 400;
     position: relative;
   }
+  @keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.send-load{
+  letter-spacing: 0.9em;
+  text-indent: 0.9em;
+  height:100%;}
+.animate-spin {
+  display: inline-block;margin:0 .5em; animation: spin 1s linear infinite;
+}
+
 
   .control {
     font-size: size(16);
