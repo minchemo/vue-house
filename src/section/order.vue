@@ -83,9 +83,9 @@
         <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
           送出表單
         </button>
-        <div class="send-load">
+        <div v-else class="send-load">
           <svg
-            class="animate-spin h-5 w-5 text-blue-600"
+            class="animate-spin h-5 w-5 text-[#fff]"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -252,6 +252,7 @@
   font-size:20px;
   font-weight: 400;
     line-height: 3.3;
+    color: #fff;
   height:3.3em;}
   .send {
     font-size:20px;
@@ -361,8 +362,11 @@
       }
     }
 
-    .send {
+    .sendall{
       font-size: sizem(21);
+    }
+
+    .send {
       width: sizem(310);
       height: sizem(72);
     }
