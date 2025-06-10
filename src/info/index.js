@@ -1,11 +1,8 @@
 const caseName = "鴻儀臻城"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "89b1cf5f-4da2-4391-a688-24e0984fc741",
+    case_code: "hyjc",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "彰化縣竹塘鄉竹林路一段174號",
@@ -36,68 +33,75 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     //底下2個 沒項目就會隱藏
-    room_type: ["4房","5房"],
+    selectFields: {
+        room_type: {
+            title: "需求房型",
+            hold: "請選擇房型",
+            option: ["4房", "5房"],
+            bypass: false,
+        },
+    },
     //budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000~2500萬","2500~3000萬","3000~5000萬","5000萬以上"],
 
     navList: [{
-            name: "就業臻方便",
-            target: ".s2",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "生活臻便捷",
-            target: ".s3",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "漫翠臻樂活",
-            target: ".s4",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "交通臻便利",
-            target: ".s5",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "學區臻卓越",
-            target: ".s6",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "鴻儀臻誠意",
-            target: ".s7",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "建材臻用心",
-            target: ".s8",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "傳承臻幸福",
-            target: ".s9",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-        
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
-        }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },
+        name: "就業臻方便",
+        target: ".s2",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "生活臻便捷",
+        target: ".s3",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "漫翠臻樂活",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "交通臻便利",
+        target: ".s5",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "學區臻卓越",
+        target: ".s6",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "鴻儀臻誠意",
+        target: ".s7",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "建材臻用心",
+        target: ".s8",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "傳承臻幸福",
+        target: ".s9",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+
+        name: "立即來電",
+        target: ".contact-info",
+        offset: "",
+        type: 'btn'
+    },
+    {
+        name: "地圖導航",
+        target: ".gmap",
+        offset: "",
+        type: "btn",
+    }
+        , {
+        name: "立即預約",
+        target: ".order",
+        offset: "",
+        type: 'btn'
+    },
     ],
-    
+
 }
