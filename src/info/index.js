@@ -1,11 +1,8 @@
 const caseName = "皇城御賞"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "6fe72df6-857c-46b0-8e64-22ca1746501a",
+    case_code: "huangcheng",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市大樹區實踐街97號",
@@ -24,7 +21,7 @@ export default {
         ["使用執照", "(113)高市工建築使字第01160號"],
         ["企劃銷售", "皇上城廣告有限公司"],
     ],
-    gtmCode: ["GTM-PC4H7J45","GTM-MP294TK3"], // 可放置多個
+    gtmCode: ["GTM-PC4H7J45", "GTM-MP294TK3"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -38,60 +35,80 @@ export default {
     //底下2個 沒項目就會隱藏
     //room_type: ["一房","兩房","三房","四房","其他"],
     //budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000~2500萬","2500~3000萬","3000~5000萬","5000萬以上"],
-
+    selectFields: {
+        /*room_type: {
+            title: "需求房型",
+            hold: "請選擇房型",
+            option: ["兩房", "三房"],
+            bypass: false,
+        },
+        budget: {
+            title: "購屋預算",
+            hold: "請選擇區間",
+            option: ["1000", "2000", "3000"],
+            bypass: true, //必填開啟使用
+        },*/
+        /*
+        use_type: {
+          title: "使用用途",
+          hold: "請選擇用途",
+          option: ["自住", "投資", "租賃"]
+      },
+        */
+    },
     navList: [{
-            name: "豐饒生活",
-            target: ".s2",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "未來願景",
-            target: ".s3",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "便利交通",
-            target: ".s4",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "文教學區",
-            target: ".s5",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "建築外觀",
-            target: ".s6",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "輕奢規劃",
-            target: ".s7",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "實品屋",
-            target: ".s8",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
-        }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },
+        name: "豐饒生活",
+        target: ".s2",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "未來願景",
+        target: ".s3",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "便利交通",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "文教學區",
+        target: ".s5",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "建築外觀",
+        target: ".s6",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "輕奢規劃",
+        target: ".s7",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "實品屋",
+        target: ".s8",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "立即來電",
+        target: ".contact-info",
+        offset: "",
+        type: 'btn'
+    },
+    {
+        name: "地圖導航",
+        target: ".gmap",
+        offset: "",
+        type: "btn",
+    }
+        , {
+        name: "立即預約",
+        target: ".order",
+        offset: "",
+        type: 'btn'
+    },
     ],
-    
+
 }
