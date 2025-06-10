@@ -1,11 +1,9 @@
-const caseName = "深耕13"
+//const caseName = "深耕13"
+const caseName = "000"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "e6e6f7b0-90f4-4852-b6c1-bb30217a9c3d",
+    case_code: "shengeng13",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "桃園市八德區豐德路582號",
@@ -22,14 +20,14 @@ export default {
         ["空間設計", "相即空間設計"],
         ["企劃銷售", "低碳健康樂活行銷"],
         ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
-        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
+        ["經紀人", "(91)北市經證字第00692號 陳子瑞"],
         /*
         ["建築設計", "弘憲聯合建築師事務所"],
         ["使照號碼", "王朝雍建築師事務所"],
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-5N96QXB","GTM-M2SZCZCZ"], // 可放置多個
+    gtmCode: ["GTM-5N96QXB", "GTM-M2SZCZCZ"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -41,8 +39,20 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-     room_type: ["兩房","三房"],
-    budget: ["2000以下","2000-2500","2500-3000","3000-3500","3500以上"],
+    selectFields: {
+        room_type: {
+            title: "需求房型",
+            hold: "請選擇房型",
+            option: ["兩房", "三房"],
+            bypass: false,
+        },
+        budget: {
+            title: "購屋預算",
+            hold: "請選擇區間",
+            option: ["2000以下", "2000-2500", "2500-3000", "3000-3500", "3500以上"],
+            //bypass: true, //必填開啟使用
+        },
+    },
 
     navList: [
         /*
