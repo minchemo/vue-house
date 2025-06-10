@@ -1,10 +1,9 @@
 <template>
   <article class="s4" ref="s4">
-		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">比鄰輕軌而居<br>躍動城市交通</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">350米，是輕軌與家之間的距離！透過腳下的步伐，乘上輕軌的身影，連接捷運、鐵路，將整座城市變成您的生活圈！喝杯咖啡就能直上國道，假日輕鬆帶著一家人遊玩全台灣！<br><br>＊以上交通距離參照Google Map，僅供參考</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">食衣住行動 便利全到位</h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="600">星級餐廳與連鎖名品環繞於北新商圈，4分鐘舉步即享風格日常；車行6分鐘即至裕隆城、家樂福等大型商場，完美涵蓋家庭採買與休閒娛樂。與景美夜市、景美河濱公園僅一橋之隔，週末騎車運動輕鬆樂活，美食美景垂手可得。無論是購物、育兒、運動，生活機能全點滿。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -36,8 +35,6 @@
   font-size:size(20);
   gap:3em;
   flex-wrap: wrap;
-  .oo{position: absolute;top: calc(50% - #{size(550)});right: calc(50% - #{size(190)});width: size(1100);
-  transform: scaleX(-1);}
 
   .main {
     @apply flex;
@@ -48,7 +45,7 @@
 }
 .txt{
  // margin: auto auto 3vw auto;
- padding: 0 0 0 6vw;
+ padding: 0 0 0;
   .subtitle{font-weight: 400;}
 }
 
@@ -76,24 +73,20 @@
 @media screen and (max-width: 767px) {
 
   .s4 {
-    @apply flex-col-reverse;
+    @apply flex-col;
     height: auto;
     padding: 0;
-  font-size:sizem(15);
+  font-size:sizem(14);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:0em;
-  .oo{bottom: sizem(-50);top: auto;
-left: calc(50% - #{sizem(330)});
-width: sizem(660);transform: rotate(90deg);
- }
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
 
-.txt {margin: 2em auto 6em;padding: 0;
+.txt {margin:3em auto 2em;padding: 0;
 }
 
 
@@ -148,23 +141,31 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: "輕軌C28站"
+    caption: "北新商圈"
   },
   {
     img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "輕軌C27站"
+    caption: "家樂福"
   },
   {
     img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "科工館車站"
+    caption: "景美夜市"
   },
   {
     img:new URL("./s4/4.jpg", import.meta.url).href ,
-    caption: "國道一號"
+    caption: "景美河濱公園"
   },
   {
     img:new URL("./s4/5.jpg", import.meta.url).href ,
-    caption: "龍德新橋"
+    caption: "景美河濱公園"
+  },
+  {
+    img:new URL("./s4/6.jpg", import.meta.url).href ,
+    caption: "裕隆城"
+  },
+  {
+    img:new URL("./s4/7.jpg", import.meta.url).href ,
+    caption: "裕隆城"
   },
 ]
 </script>

@@ -1,21 +1,16 @@
 <template>
   <article class="s3" ref="s3">
-		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-          <h3 class="title" data-aos="fade-up" data-aos-delay="200">城市全新樣貌<br>
-            未來耀眼綻放</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="600">完工的高雄車站，象徵著一個新時代的到來！預計2027年完工的富邦BOT，帶來全新的時尚氛圍，而預計2034年全線通車的捷運黃線，將串聯起更緊密的路網。選擇三民正核心，座落極具潛力的軌道地段，擁抱高雄最具指標的發展計畫，將耀眼未來納入生活版圖！
-<br>
-圖片來源：<a href="https://finance.kcg.gov.tw/News_Content.aspx?n=6976FD3842A19BA6&sms=11E45B2CB786190D&s=4A669AC34F9FA1EB" target="_blank">高雄市政府財政局</a><br>
-新聞來源：<a href="https://news.ltn.com.tw/news/life/breakingnews/4871687" target="_blank">連結</a><a href="https://news.ltn.com.tw/news/life/breakingnews/4700400" target="_blank">連結</a></p>
+          <h3 class="title" data-aos="fade-up" data-aos-delay="200">一橋北市 一門雙捷 </h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">坐落於雙北交界的黃金門戶，與台北僅一橋之遙，三分鐘散步即可抵達大坪林雙捷運站，迅速轉乘環狀線串聯雙北。6分鐘馳上國道與交流道，無論北上南下都快人一步，從容接軌全台脈動。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
+      </div> 
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -41,9 +36,6 @@
   gap:3em;
   flex-wrap: wrap;
   flex-direction:row-reverse;
-  .oo{position: absolute;top: calc(50% - #{size(550)});left: calc(50% - #{size(190)});width: size(1100);
- }
-
   .main {
     @apply flex;
     margin: 0;
@@ -53,7 +45,7 @@
   }
 .txt{
  // margin: auto auto 3vw auto;
- padding: 0 6vw 0 0;
+ padding: 0;
   .subtitle{font-weight: 400;}
   a{text-decoration:underline;margin: 0 1em 0 0;display: inline-block;
   &::after{content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17' fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M12,10v3.5c0,1.4-1.1,2.5-2.5,2.5H3.5c-1.4,0-2.5-1.1-2.5-2.5v-6c0-1.4,1.1-2.5,2.5-2.5h3.5M16,8V1h-7M5,12L16,1'/%3E%3C/svg%3E");display: inline-block;width: .8em;margin:0 0 0 .2em;position: relative;top: .1em;}
@@ -87,24 +79,20 @@
 
 
 .s3 {
-@apply flex-col-reverse;
+@apply flex-col;
   height: auto;
   padding: 0;
-font-size:sizem(15);
+font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
 
-.oo{bottom: sizem(-50);top: auto;
-left: calc(50% - #{sizem(330)});
-width: sizem(660);transform: rotate(90deg);
- }
 .main {
   padding: 0 sizem(32.5);
   width: 100%;
 }
 
-.txt {margin: 2em auto 6em;padding: 0;
+.txt {margin: 3em auto 2em;padding: 0;
 }
 
 
@@ -159,15 +147,23 @@ const options = {
 const imgs = [
   {
     img:new URL("./s3/1.jpg", import.meta.url).href ,
-    caption: "捷運情境示意"
+    caption: "64號快速道路"
   },
   {
     img:new URL("./s3/2.jpg", import.meta.url).href ,
-    caption: "富邦BOT 3D圖"
+    caption: "大坪林捷運站(3號出口)"
   },
   {
     img:new URL("./s3/3.jpg", import.meta.url).href ,
-    caption: "高雄車站 3D圖"
+    caption: "北新橋"
+  },
+  {
+    img:new URL("./s3/4.jpg", import.meta.url).href ,
+    caption: "國道3號"
+  },
+  {
+    img:new URL("./s3/5.jpg", import.meta.url).href ,
+    caption: "新北環快"
   },
 ]
 </script>

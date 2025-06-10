@@ -1,10 +1,10 @@
 <template>
   <article class="s7" ref="s7">
-		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-          <h3 class="title" data-aos="fade-up" data-aos-delay="200">悠閒綠意圍繞<br>愜意散策時光</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="600">科工館、愛河之心、本和里滯洪池公園、金獅湖…等，無論哪個方向，都有能夠放鬆休閒的去處，綠意、湖景、河畔、運動、展覽，隨您自在悠遊，漫步大自然與人文之中！</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">建設齊發<br v-if="isMobile"> 搶進增值第一排</h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="600">北市一橋之隔，新店正轉型為雙北科技重鎮。寶高智慧園區已吸引特斯拉、鴻海、Garmin等國際企業進駐；榮工廠與開明校地華麗轉身，化身河岸繁星創新園區與百億級長照基地，產官共築新未來。十四張聯開案動能蓄勢待發，萬人就業紅利正快速集結。 <br>
+          同時，捷運南環段正式啟動，一線直達信義區、板橋區，全面串連雙北14個行政區。與國際企業為鄰，與產業升級並行，現在，就是搶進建設紅利的黃金時機。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -36,27 +36,19 @@
   font-size:size(20);
   gap:3em;
   flex-wrap: wrap;
-  flex-direction:row-reverse;
-  .oo{position: absolute;top: calc(50% - #{size(550)});left: calc(50% - #{size(190)});width: size(1100);
- }
 
   .main {
     @apply flex;
     margin: 0;
     flex-basis: size(590);
-    flex-direction: column;
-    text-align: justify;
-  }
+  flex-direction: column;
+  text-align: justify;
+}
 .txt{
  // margin: auto auto 3vw auto;
- padding: 0 6vw 0 0;
+ padding: 0 0 0;
   .subtitle{font-weight: 400;}
-  a{text-decoration:underline;margin: 0 1em 0 0;display: inline-block;
-  &::after{content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17' fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M12,10v3.5c0,1.4-1.1,2.5-2.5,2.5H3.5c-1.4,0-2.5-1.1-2.5-2.5v-6c0-1.4,1.1-2.5,2.5-2.5h3.5M16,8V1h-7M5,12L16,1'/%3E%3C/svg%3E");display: inline-block;width: .8em;margin:0 0 0 .2em;position: relative;top: .1em;}
-  &:hover{text-decoration:none;}
-  }
 }
-
 
   .slider {
     margin: 0;
@@ -70,8 +62,8 @@
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     }
   }
 }
@@ -81,47 +73,42 @@
 
 @media screen and (max-width: 767px) {
 
+  .s7 {
+    @apply flex-col;
+    height: auto;
+    padding: 0;
+  font-size:sizem(14);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:0em;
 
-.s7 {
-@apply flex-col-reverse;
-  height: auto;
-  padding: 0;
-font-size:sizem(15);
-flex-wrap:nowrap;
-margin-bottom:0em;
-gap:0em;
-
-.oo{bottom: sizem(-50);top: auto;
-left: calc(50% - #{sizem(330)});
-width: sizem(660);transform: rotate(90deg);
- }
-.main {
-  padding: 0 sizem(32.5);
-  width: 100%;
-}
-
-.txt {margin: 2em auto 6em;padding: 0;
-}
-
-
-.slider {
-  height: auto;
-  width: 100%;
-
-  .caption {
-  font-size:sizem(12);  
-  right:sizem(5);
-  bottom:sizem(5);
-  }
-  .slide-item {
-    @apply bg-cover;
+  .main {
+    padding: 0 sizem(32.5);
     width: 100%;
-  flex-basis: auto;
-    height: sizem(250);
-    
+}
+
+.txt {margin: 3em auto 2em;padding: 0;
+}
+
+
+  .slider {
+    height: auto;
+    width: 100%;
+
+    .caption {
+    font-size:sizem(12);  
+    right:sizem(5);
+    bottom:sizem(5);
+    }
+    .slide-item {
+      @apply bg-cover;
+      width: 100%;
+    flex-basis: auto;
+      height: sizem(250);
+      
+    }
   }
-}
-}
+  }
 }
 </style>
 <script setup>
@@ -155,23 +142,15 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/1.jpg", import.meta.url).href ,
-    caption: "高雄科工館"
+    caption: "捷運環狀線南環段(示意圖)"
   },
   {
     img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "愛河之心"
+    caption: "寶高智慧園區(示意圖)"
   },
   {
     img:new URL("./s7/3.jpg", import.meta.url).href ,
-    caption: "同盟公園"
-  },
-  {
-    img:new URL("./s7/4.jpg", import.meta.url).href ,
-    caption: "河堤公園"
-  },
-  {
-    img:new URL("./s7/5.jpg", import.meta.url).href ,
-    caption: "金獅湖"
+    caption: "寶橋工業區"
   },
 ]
 </script>

@@ -129,7 +129,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #4B000499;
+        background: #008057b3;
         width:100%;
         height: size(60);
         z-index: 5;
@@ -171,7 +171,7 @@
                 }
             }
             &.btn2{
-                background:#EDC244;
+                background:#FFEB00;
                 color: #000;
                 border-radius: 2em;
                 margin-right:-1em;

@@ -11,8 +11,8 @@
   <!-- loading end -->
      <!--  -->
      <Nav />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    <img src="@/section/s1/bg.svg" class="bg">
+  <div class="home overflow-hidden bg-[#25C9AA] font-['Noto_Sans_TC',sans-serif]">
+    <!-- <img src="@/section/s1/bg.svg" class="bg"> -->
       <S1 />
       <S2 />
       <S3 />
@@ -20,10 +20,7 @@
       <S5 />
       <S6 />
       <S7 />
-      <S10 />
       <S8 />
-      <S11 />
-      <S9 />
     <Order />
   <!--
     <S1new />
@@ -43,7 +40,7 @@
   }
 }
 .home{
-  background: url("@/section/s1/bg.webp") fixed;
+ // background: url("@/section/s1/bg.webp") fixed;
  // background: #333;
   background-size: 100% auto;
 }
@@ -66,7 +63,7 @@ img {
       @apply absolute;
       right:1em;
       bottom: .5em;
-      font-weight: 300;
+      font-weight: 400;
       font-size: size(15);
       color: #FFF;z-index: 3;
       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
@@ -74,18 +71,18 @@ img {
 
       .txt {
     position: relative;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 1.5;
     width: 100%;letter-spacing: 0.03em;
     text-align:justify;
   .title{
-    @apply font-['Noto_serif_TC',serif];
+    // @apply font-['Noto_serif_TC',serif];
     font-size: 2.2em;
     margin:0 auto .5em;
     line-height: 1.5;
     font-weight: 700;
-    color: #EDC244;
+   // color: #EDC244;
   }
   .subtitle{
     font-size: 1.15em;
@@ -140,16 +137,22 @@ img {
     color: #fff;
     li {
       button {
-        @apply rounded-full;
+        //@apply rounded-full;
         width: 1em;
         height: 1em;
         background:currentColor;
         transition: background .5s, transform .5s;
+        overflow: hidden;
+        &::before{content: "";
+          display:block;width: 100%;height: 100%;
+          background: #FFEB00;transform:skewY(0deg)scaleY(0);transform-origin: 0 0 ;transition:transform .5s ;}
         &:hover{
           transform: scale(.8);
         }
         &.is-active{
-          background:#EDC244;
+          &::before{
+            transform:skewY(-45deg)scaleY(1);
+          }
         }
       }
     }
@@ -214,9 +217,6 @@ import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
-import S10 from "@/section/s10.vue"
-import S11 from "@/section/s11.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

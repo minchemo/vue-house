@@ -1,53 +1,56 @@
-const caseName = "城揚Twin S"
+const caseName = "東基鉅獻"
 
 export default {
-    caseid: "4f13d16e-ebd7-4171-ba99-c3a82ef8b2d0",
-    case_code: "twin-s",
+    caseid: "c6d5e013-7b31-4edf-88d2-fbc312df0612",
+    case_code: "dgm1",
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "高雄市三民區建工路597號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7364.292390808579!2d120.3146126!3d22.6483372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04e742aa749f%3A0x723ff240c99a8f2b!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A5bu65bel6LevNTk36Jmf!5e0!3m2!1szh-TW!2stw!4v1739784143593!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/ub2PCV1sqFyGLaMs6",
-    phone: "07-386-7888",
-    fbLink: "https://www.facebook.com/61571891528294",
-    fbMessage: "https://m.me/61571891528294",
-    // line: "https://lin.ee/uzbHOpK",
+    address: "新北市新店區中正路501-8號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.4778349491326!2d121.5309497760775!3d24.98387434030678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34680203afde0fd5%3A0xcb35a451dcd660a7!2zMjMx5paw5YyX5biC5paw5bqX5Y2A5Lit5q2j6LevNTAxLTjomZ8!5e0!3m2!1szh-TW!2stw!4v1749523868318!5m2!1szh-TW!2stw",//嵌入的
+    googleLink: "https://maps.app.goo.gl/buTMmqb29Fw6ox8z6",//導航網址
+    phone: "(02)8667-2266",
+    fbLink: "https://www.facebook.com/100054446832848/",
+    fbMessage: "https://m.me/100054446832848/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "晟揚建設股份有限公司"],
-        ["建築設計", "梁慶源沈鈺峰聯合建築師事務所"],
-        ["建照號碼", "(111)高市工建築字第00877號"],
-        ["行銷企劃", "上旺開發"],
-        ["經&ensp;紀&ensp;人", "(102)高市字第00034號 林峰旭"],
-       /* ["使用執照", "110重使字第00336號"],*/
+        /*
+        ["空間設計", "相即空間設計"],
+        ["企劃銷售", "低碳健康樂活行銷"],
+        ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
+        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
+        ["建築設計", "弘憲聯合建築師事務所"],
+        ["使照號碼", "王朝雍建築師事務所"],
+        ["行銷企劃", "自售"],
+        */
     ],
-    gtmCode: ["GTM-TJMNGGMP"], // 可放置多個
-    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    gtmCode: ["GTM-KQ46V36N"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約賞屋",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        //title: "預約增值",
+       // subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
+       // subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
-    //底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房","四房"],
-    //budget: ["1000萬以下","1000-2000萬","2000-3000萬","3000萬以上"],
+    // 底下2個 沒項目就會隱藏
+    // 控制固定板的新欄位
+    // room_type: ["兩房","三房"],
     selectFields: {
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
-          option: ["兩房","三房","四房"],
+          option: ["1房", "2房", "3房", "4房"],
           bypass:false,
         },
-        /*
         budget: {
           title: "購屋預算",
           hold: "請選擇區間",
-          option: ["1000", "2000", "3000"],
-          bypass:true, //必填開啟使用
+          option: ["1500-2000萬","2000-2500萬","2500-3000萬","3000-3500萬","3500-4000萬","4000萬以上",],
+          bypass:false, //必填開啟使用
         },
+        /*
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",
@@ -56,64 +59,61 @@ export default {
         */
   },
 
-    navList: [{
- /*       name: "微笑雲朵",
-        target: ".s1",
-        offset: "0",
-        offsetmo: "0",
-    },{*/
-        name: "三民核心",
-        target: ".s2",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "耀眼港都",
-        target: ".s3",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "快捷交通",
-        target: ".s4",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "繁華環伺",
-        target: ".s5",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "書香圍繞",
-        target: ".s6",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "愜意休憩",
-        target: ".s7",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "城揚品牌",
-        target: ".s8",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "立即來電",
-        target: ".contact-info",
-        offset: "",
-        type: 'btn'
-    },
-    {
-          name: "地圖導航",
-          target: ".gmap",
-          offset: "",
-          type: "btn",
-    }
-    ,{
-        name: "立即預約",
-        target: ".order",
-        offset: "",
-        type: 'btn'
-    },
-],
-
+    navList: [
+        {
+            name: "璽寓核心",
+            target: ".s2",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "尊榮捷境",
+            target: ".s3",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "制霸機能",
+            target: ".s4",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "名匠薈萃",
+            target: ".s5",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "榮耀四冠",
+            target: ".s6",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "重大建設",
+            target: ".s7",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "菁英磁場",
+            target: ".s8",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "立即來電",
+            target: ".contact-info",
+            offset: "",
+            type: 'btn'
+        },
+        {
+              name: "地圖導航",
+              target: ".gmap",
+              offset: "",
+              type: "btn",
+        }
+        ,{
+            name: "立即預約",
+            target: ".order",
+            offset: "",
+            type: 'btn'
+        },
+        /*
+    */
+    ],
 }
