@@ -85,7 +85,7 @@
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
   送出表單
 </button>
-<div class="send-load text-[#333]" style="letter-spacing: 0.7em;
+<div v-else class="send-load text-[#333]" style="letter-spacing: 0.7em;
   text-indent: 0.9em;
   height:100%;">
   <svg
