@@ -80,16 +80,19 @@
       <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send --><div class="sendall mt-8 mx-auto">
+      <!-- Send --><div class="sendall mt-8 mx-auto" style="font-size:20px;font-weight: 400;
+    line-height: 3.3;height:3.3em">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
   送出表單
 </button>
-<div v-else class="send-load">
+<div class="send-load text-[#333]" style="letter-spacing: 0.7em;
+  text-indent: 0.9em;
+  height:100%;">
   <svg
-    class="animate-spin h-5 w-5 text-blue-600"
+    class="h-5 w-5 mr-2"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
-    viewBox="0 0 24 24"
+    viewBox="0 0 24 24" style=" display: inline-block;margin:0 .8em"
   >
     <circle
       class="opacity-25"
@@ -103,7 +106,15 @@
       class="opacity-75"
       fill="currentColor"
       d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-    ></path>
+    >
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 12 12"
+      to="360 12 12"
+      dur="1s"
+      repeatCount="indefinite" /></path>
   </svg>
   <span>發送中...</span>
 </div>
@@ -236,12 +247,8 @@
       input{margin-right: .3em;}
     }
   }
-  .sendall{
-  font-size:20px;
-  font-weight: 400;
-    line-height: 3.3;
-  height:3.3em;}
   .send {
+  font-size:20px;
     font-size:inherit;
     background-color: #A30C24;
     //border: 1px solid #FFF9;
@@ -252,20 +259,9 @@
     border-radius: .5em;
     width: 308px;
     z-index: 10;
-  color: #fff;
+    color: #fff;
     position: relative;
   }
-  @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.send-load{
-  letter-spacing: 0.9em;
-  text-indent: 0.9em;
-  height:100%;}
-.animate-spin {
-  display: inline-block;margin:0 .5em; animation: spin 1s linear infinite;
-}
 
   .control {
     font-size: size(16);
@@ -339,11 +335,8 @@
         display: none;
       }
     }
-
-    .sendall {
-      font-size: sizem(21);
-    }
     .send {
+      font-size: sizem(21);
       width: sizem(310);
       height: sizem(72);
     }
