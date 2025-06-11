@@ -55,7 +55,7 @@
 
 .t1{width:sizem(23);margin: sizem(10) 0 sizem(60) 0;position: relative;z-index: 99;
 }
-.t2{width:sizem(289);position: relative;z-index: 99;margin-bottom:sizem(30)
+.t2{width:sizem(249);position: relative;z-index: 99;margin-bottom:sizem(30)
 }
 .t3{width:sizem(181);
 }

@@ -252,7 +252,7 @@ img{width: 100%;
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     // background:#EA6DA0;
-    background: #1d5586;
+    background: linear-gradient(to bottom, #00a6e9, #009e41);
 
 
 
