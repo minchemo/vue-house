@@ -287,11 +287,13 @@
       background-color: #055F76;
     }
 
-    .order-title-img{
-      width: sizem(259);
-      margin-bottom: sizem(25);
-      }
-
+    .order-title {
+      font-size: sizem(20);
+      padding-top:1.5em;
+      width: sizem(310);
+      min-width: 0;
+      .line{width: sizem(258);}
+    }
 
     .form {
       width: sizem(310);

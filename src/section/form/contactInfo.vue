@@ -241,7 +241,7 @@
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
    // background:#c9a063;
-   background:linear-gradient(180deg, #FF8BF3 , #6D1EDB );
+   background:linear-gradient(180deg, #70ab8f , #0e4255 );
     //background:linear-gradient(180deg, #f575a6 , #652ccf );
     // background:linear-gradient(180deg, #b2baff , #781297 );
 
