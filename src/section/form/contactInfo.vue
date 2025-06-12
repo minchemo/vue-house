@@ -139,7 +139,7 @@
 
     .contact-item {
       background: #FFF;
-      color: #172a88;
+      color: #00704a;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -154,7 +154,7 @@
       gap: 1em;
 
       &:hover {
-        background: #c9a063;
+        background: #00704a;
         color: #fff;
 
         img {
@@ -166,7 +166,7 @@
         max-width: 1.35em;
         height: auto;
         max-height: 1.35em;
-        filter:invert(17%) sepia(32%) saturate(3185%) hue-rotate(213deg) brightness(106%) contrast(116%);
+        filter: invert(28%) sepia(19%) saturate(4471%) hue-rotate(132deg) brightness(100%) contrast(105%);
         transition: all .5s;
         margin: 0;
       }

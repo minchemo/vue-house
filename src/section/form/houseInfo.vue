@@ -25,7 +25,7 @@
         </div>
     </div>
     <!--  -->
-    <div class="house pt-4 pb-4 bg-[#c9a063] flex items-center justify-center">
+    <div class="house pt-4 pb-4 bg-[#145262] flex items-center justify-center">
         <img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset="">
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
