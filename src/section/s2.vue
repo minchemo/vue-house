@@ -14,36 +14,40 @@
       <div data-aos="fade-up" data-aos-delay="300">
         劃出第一道亞洲聚富軸線
       </div>
-      <div data-aos="fade-up" data-aos-delay="400">
+      <div data-aos="fade-up" data-aos-delay="300">
         全球科技集團在高雄攻城掠地
       </div>
-      <div data-aos="fade-up" data-aos-delay="500">
-        您必須重新布局，回到亞洲的新核心一高雄<br>&ensp;
+      <div data-aos="fade-up" data-aos-delay="300">
+        您必須重新佈局，回到亞洲的新核心—高雄
       </div>
-      <div data-aos="fade-up" data-aos-delay="600">
+      <br>
+      <div data-aos="fade-up" data-aos-delay="400">
         論談地段，台積電說了才算
       </div>
-      <div data-aos="fade-up" data-aos-delay="700">
+      <div data-aos="fade-up" data-aos-delay="500">
         世界同步聚富磁場，高大特區奇貨可居
       </div>
-      <div data-aos="fade-up" data-aos-delay="800">
+      <div data-aos="fade-up" data-aos-delay="600">
         地王之王一席難求，精華土地不可複製
       </div>
-      <div data-aos="fade-up" data-aos-delay="900">
-        增值實力越墊越高<br>&ensp;
+      <div data-aos="fade-up" data-aos-delay="600">
+        增值實力越墊越高
       </div>
-      <div data-aos="fade-up" data-aos-delay="1000">
+      <br>
+      <div data-aos="fade-up" data-aos-delay="700">
         站上科技巨人的肩膀，定錨台積電高大核心
       </div>
-      <div data-aos="fade-up" data-aos-delay="1100">
+      <div data-aos="fade-up" data-aos-delay="800">
         掌握世界級的耀眼先積
       </div>
-      <div data-aos="fade-up" data-aos-delay="1200">
+      <div data-aos="fade-up" data-aos-delay="900">
         與台積電、高雄大學共榮推漲
       </div>
-      <div data-aos="fade-up" data-aos-delay="1300">
+      <div data-aos="fade-up" data-aos-delay="900">
         昔日一地尊貴，未來一席絕響
-      </div>      
+      </div>
+
+
     </div>
     <div class="txt" v-else>
       <div data-aos="fade-up" data-aos-delay="0">
@@ -56,8 +60,9 @@
         全球科技集團在高雄攻城掠地
       </div>
       <div data-aos="fade-up" data-aos-delay="300">
-        您必須重新布局，回到亞洲的新核心一高雄<br>&ensp;
+        您必須重新佈局，回到亞洲的新核心—高雄
       </div>
+      <br>
       <div data-aos="fade-up" data-aos-delay="400">
         論談地段，台積電說了才算，世界同步聚富磁場
       </div>
@@ -65,8 +70,9 @@
         高大特區奇貨可居，地王之王一席難求
       </div>
       <div data-aos="fade-up" data-aos-delay="600">
-        精華土地不可複製，增值實力越墊越高<br>&ensp;
+        精華土地不可複製，增值實力越墊越高
       </div>
+      <br>
       <div data-aos="fade-up" data-aos-delay="700">
         站上科技巨人的肩膀，定錨台積電高大核心
       </div>
@@ -101,7 +107,7 @@
   z-index: 2;
   .bg{position: absolute;width:100%;left:0;bottom: 0;}
   .txt{position: relative;z-index: 3;margin-left: size(10);}
-  .img{position: relative;z-index: 3;width: size(604);
+  .img{position: relative;z-index: 3;width: size(541);
     img{width: 100%;margin: size(40) 0 size(20) 0;}
   }
 }

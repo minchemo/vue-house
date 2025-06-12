@@ -1,17 +1,12 @@
 <template>
   <article class="s1 relative s1-section" id="s1" ref="s1">
     
-    <img src="./s1/bg.jpg" class="bg" data-aos="fade" data-aos-delay="0">
-    <div class="l1"></div>
-    <h3 class="t1" data-aos="zoom-in-up" data-aos-delay="100">經濟奇積&ensp;在高雄</h3>
-    <img src="./s1/en1.svg" class="en1" data-aos="zoom-in-up" data-aos-delay="200">
-    <div class="img" data-aos="zoom-in-up" data-aos-delay="300">
-      <img src="./s1/img.png">
-      <img src="./s1/img.svg">
-    </div>
-    <h3 class="t2" data-aos="zoom-in" data-aos-delay="400">未來已來 先積到來</h3>
-    <img src="./s1/en2.svg" class="en2" data-aos="zoom-in" data-aos-delay="500">
-    <img src="./s1/en3.svg" class="en3" data-aos="zoom-in" data-aos-delay="600">
+    <img class="t1" src="./s1/t1m.svg" v-if="isMobile" data-aos="zoom-in" data-aos-delay="0">
+    <img class="t1" src="./s1/t1.svg" v-else  data-aos="zoom-in" data-aos-delay="0">
+
+    <img class="pi" src="./s1/img.webp"  data-aos="zoom-in" data-aos-delay="200">
+    <img class="logo" src="./s1/logo.svg" data-aos="zoom-in" data-aos-delay="400">
+    <img class="t2" src="./s1/t2.svg" data-aos="zoom-in" data-aos-delay="600">
 
     <!-- 
     <img src="./s1/mo.jpg" class="t0" >
@@ -52,10 +47,12 @@
   align-items:center;
   font-size:size(36);
   overflow: hidden;
+
+
   
 
   .t0{position: absolute;width: 100%;top:0;left: 0; pointer-events: none;z-index: 9;opacity: 0.5;}
-   .bg{position: absolute;width:100%;left:0;top:calc(50% + #{size(-60 - 1070 * .5)});
+  .bg{position: absolute;width:100%;left:0;top:calc(50% + #{size(-60 - 1070 * .5)});
   }
   .l1{position: absolute;width:100%;left:0;top: 0;height: calc(100% + 22vw);
     background: 
@@ -77,11 +74,24 @@
 }
 
   .t1{position: relative;
-    font-size:size(85);
-    line-height: 1.13;
-    letter-spacing: 0.14em;
-    font-weight: 900;z-index: 3;color: #FFF;margin-top:size(58);
+    width: size(865);
+    margin-bottom: size(120);
     }
+
+  .logo{
+    position: relative;
+    width: size(500);
+    margin-bottom: size(30);
+    margin-top: size(30);
+    z-index: 99;
+  }
+  
+
+  .t2{
+    position: relative;
+    width: size(506);
+  }  
+  
     .en1{ width: size(705);position: relative;z-index: 3;margin-top:size(73);}
     .img{ width: size(705);position: relative;z-index: 3;margin-top:size(34);mix-blend-mode: screen;
     img{width: 100%;
@@ -122,18 +132,27 @@
   .bg{width:sizem(584);top:sizem(0);left:sizem(-104.5);height:sizem(805);
   top:calc(50% + #{sizem(-105 - 604 * .5)})
   }
-  .l1{height: calc(100% + 78vw);}
-  .t1{
-    font-size:sizem(23);writing-mode: vertical-lr;margin-top:sizem(56);letter-spacing: 0.1em;
-    white-space: nowrap;
+
+  .t1{position: relative;
+    width: sizem(101);
+    margin-bottom: sizem(80);
+    margin-top: sizem(-60);
     }
-    .en1{ width: sizem(250);margin-top:sizem(45);}
-    .img{ width: sizem(245);margin-top:sizem(16);}
+
+  .logo{
+    position: relative;
+    width: sizem(222);
+    margin-bottom: sizem(20);
+    margin-top: sizem(20);
+  }  
+
   .t2{
-    font-size:sizem(17);margin-top:sizem(42);
-    }
-    .en2{ width: sizem(205);margin-top:sizem(8);}
-    .en3{ width: sizem(205);margin-top:sizem(8);margin-bottom:sizem(49);}
+    position: relative;
+    width: sizem(192);
+  } 
+  .pi{
+    width: sizem(220);
+  }
  
     /*
     .slogo{ width: sizem(230);margin-top:sizem(30);
