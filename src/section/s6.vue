@@ -1,5 +1,9 @@
 <template>
   <article class="s6" ref="s6">
+    <div class="img1" data-aos="fade" data-aos-delay="600"></div>
+    <svg class="img2" v-if="!isMobile" viewBox="0 0 100 100"><path fill="#fff000" d="M0,0V100h100"/></svg>
+    <svg class="img3" viewBox="0 0 100 100"><path fill="#fff000" d="M0,100V0h100"/></svg>
+    <svg class="img4" v-if="!isMobile" viewBox="0 0 100 100"><path fill="#009686" d="M0,100V0h100"/></svg>
     <div class="main">
       <div class="txt">
           <h3 class="title" data-aos="fade-up" data-aos-delay="200">榮耀四冠 鑄就安心地標</h3>
@@ -29,11 +33,22 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:11em 0 10em 0;
+  padding:10em 0 10em 0;
   font-size:size(20);
   gap:3em;
   flex-wrap: wrap;
   flex-direction:row-reverse;
+  &::before{content: "";position: absolute;width: 100%;height: 100%;
+  top: 0;left: 0;background: #00915a;mix-blend-mode: multiply;
+}
+.img1{position: absolute;left: size(190);top:size(360);
+  width: size(415);height: size(415);background: #005a3c;}
+.img2{position: absolute;left: size(170);top:size(160);
+  width: size(40);}
+.img3{position: absolute;right: size(150);bottom:size(280);
+  width: size(55);}
+.img4{position: absolute;right: size(510);bottom:size(0);mix-blend-mode: multiply;
+  width: size(95);}
 
   .main {
     @apply flex;
@@ -80,11 +95,14 @@
 .s6 {
 @apply flex-col;
   height: auto;
-  padding: 0;
+  padding: 0 0 0.5em 0;
 font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
+.img1{left: sizem(0);bottom:sizem(165);top: auto;
+  width: sizem(100);height: sizem(100);}
+  .img3{right: sizem(10);bottom:sizem(260);width: sizem(30);}
 
 .main {
   padding: 0 sizem(32.5);
@@ -97,7 +115,7 @@ gap:0em;
 
 .slider {
   height: auto;
-  width: 100%;
+  width: 95%;
 
   .caption {
   font-size:sizem(12);  

@@ -1,5 +1,9 @@
 <template>
   <article class="s3" ref="s3">
+    <div class="img1" data-aos="fade" data-aos-delay="600"></div>
+    <img src="./s3/imgm.svg" class="img2" data-aos="fade-left" v-if="isMobile" />
+    <img src="./s3/img.svg" class="img2" data-aos="fade-left" v-else />
+    <svg class="img3" data-aos="zoom-in-up" viewBox="0 0 100 100"><path fill="#009686" d="M0,100V0h100"/></svg>
     <div class="main">
       <div class="txt">
           <h3 class="title" data-aos="fade-up" data-aos-delay="200">一橋北市 一門雙捷 </h3>
@@ -28,7 +32,7 @@
 
 
 .s3 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center text-[#222];
   width: 100%;
   height:auto;
   padding:11em 0 10em 0;
@@ -36,6 +40,16 @@
   gap:3em;
   flex-wrap: wrap;
   flex-direction:row-reverse;
+  &::before{content: "";position: absolute;width: 100%;height: 100%;
+  top: 0;left: 0;background: #fffff6;mix-blend-mode: multiply;
+}
+.img1{position: absolute;left: size(190);top:size(380);
+  width: size(415);height: size(415);background: #00915a}
+.img2{position: absolute;right: size(70);top:size(100);mix-blend-mode: multiply;
+  width: size(790);}
+.img3{position: absolute;left: size(56);bottom:size(-150);//transform-origin: 0 0;
+  mix-blend-mode: multiply;
+  width: size(250);}
   .main {
     @apply flex;
     margin: 0;
@@ -46,6 +60,7 @@
 .txt{
  // margin: auto auto 3vw auto;
  padding: 0;
+ .title{color: #00915a;}
   .subtitle{font-weight: 400;}
   a{text-decoration:underline;margin: 0 1em 0 0;display: inline-block;
   &::after{content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17' fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M12,10v3.5c0,1.4-1.1,2.5-2.5,2.5H3.5c-1.4,0-2.5-1.1-2.5-2.5v-6c0-1.4,1.1-2.5,2.5-2.5h3.5M16,8V1h-7M5,12L16,1'/%3E%3C/svg%3E");display: inline-block;width: .8em;margin:0 0 0 .2em;position: relative;top: .1em;}
@@ -81,24 +96,28 @@
 .s3 {
 @apply flex-col;
   height: auto;
-  padding: 0;
+  padding: 0 0 0.5em 0;
 font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
+.img1{left: sizem(0);bottom:sizem(165);top: auto;
+  width: sizem(100);height: sizem(100);}
+.img2{right: sizem(10);top:sizem(10);width: sizem(250);}
+.img3{left: sizem(130);bottom:sizem(-30); width: sizem(50);}
 
 .main {
   padding: 0 sizem(32.5);
   width: 100%;
 }
 
-.txt {margin: 3em auto 2em;padding: 0;
+.txt {margin: 3em auto 3em;padding: 0;
 }
 
 
 .slider {
   height: auto;
-  width: 100%;
+  width: 95%;
 
   .caption {
   font-size:sizem(12);  

@@ -1,5 +1,9 @@
 <template>
   <article class="s8">
+    <div class="img1" data-aos="fade" data-aos-delay="600" v-if="!isMobile"></div>
+    <svg class="img2" viewBox="0 0 100 100"><path fill="#009686" d="M0,100V0h100"/></svg>
+    <svg class="img3" v-if="!isMobile" viewBox="0 0 100 100"><path fill="#fff000" d="M0,100V0h100"/></svg>
+    <svg class="img4" v-if="!isMobile" viewBox="0 0 100 100"><path fill="#009686" d="M0,100V0h100"/></svg>
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北第一環，<br v-if="isMobile">唯一人口正成長</h3>
@@ -25,10 +29,21 @@
   width: 100%;
   // height: size(800);
   padding:6em 0 10em 0;
-  font-size:size(18);
+  font-size:size(20);
   gap:1.5em;
   flex-wrap:nowrap;
     flex-direction:column;
+  &::before{content: "";position: absolute;width: 100%;height: 100%;
+  top: 0;left: 0;background: #00915a;mix-blend-mode: multiply;
+}
+.img1{position: absolute;left: size(320);top:size(660);
+  width: size(415);height: size(415);background: #005a3c;}
+.img2{position: absolute;left: size(340);top:size(100);mix-blend-mode: multiply;
+  width: size(90);}
+.img3{position: absolute;right: size(150);bottom:size(280);
+  width: size(55);}
+.img4{position: absolute;left: size(650);bottom:size(0);mix-blend-mode: multiply;
+  width: size(95);}
   .main {
     @apply flex;
     margin: 0;
@@ -79,12 +94,13 @@
   font-size:sizem(14);
   flex-wrap:nowrap;
 gap:0em;
+.img2{left: sizem(270);top:sizem(50);width: sizem(50);}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
-.txt {margin: 3em auto 0em;padding: 0;text-align: justify;
+.txt {margin: 3em auto 1em;padding: 0;text-align: justify;
 }
 
   .slider {

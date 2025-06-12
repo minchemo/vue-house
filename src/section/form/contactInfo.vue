@@ -281,7 +281,7 @@
 
     .logo {
       width: sizem(257);
-    margin: sizem(40) auto sizem(30) auto;
+    margin: sizem(00) auto sizem(50) auto;
      // margin-bottom: sizem(47);
     }
 

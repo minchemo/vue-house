@@ -1,5 +1,9 @@
 <template>
-  <article class="s4" ref="s4">
+  <article class="s4 " ref="s4">
+    <div class="img1" data-aos="fade" data-aos-delay="600"></div>
+    <svg class="img2" viewBox="0 0 100 100"><path fill="#fff000" d="M0,100V0h100"/></svg>
+    <svg class="img3" viewBox="0 0 100 100"><path fill="#fff000" d="M100,100H0V0"/></svg>
+    <svg class="img4" v-if="!isMobile" viewBox="0 0 100 100"><path fill="#009686" d="M0,100V0h100"/></svg>
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="200">食衣住行動 便利全到位</h3>
@@ -35,7 +39,17 @@
   font-size:size(20);
   gap:3em;
   flex-wrap: wrap;
-
+  &::before{content: "";position: absolute;width: 100%;height: 100%;
+  top: 0;left: 0;background: #00915a;mix-blend-mode: multiply;
+}
+.img1{position: absolute;right: size(190);top:size(380);
+  width: size(415);height: size(415);background: #005a3c;}
+.img2{position: absolute;left: size(220);top:size(270);
+  width: size(50);}
+.img3{position: absolute;right: size(170);top:size(180);
+  width: size(35);}
+.img4{position: absolute;right: size(510);bottom:size(0);mix-blend-mode: multiply;
+  width: size(95);}
   .main {
     @apply flex;
     margin: 0;
@@ -75,24 +89,28 @@
   .s4 {
     @apply flex-col;
     height: auto;
-    padding: 0;
+    padding: 0 0 0.5em 0;
   font-size:sizem(14);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:0em;
+.img1{right: sizem(0);bottom:sizem(165);top: auto;
+  width: sizem(100);height: sizem(100);}
+.img2{left: sizem(30);top:sizem(30);width: sizem(20);}
+.img3{right: sizem(10);top:sizem(220); width: sizem(20);}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
 
-.txt {margin:3em auto 2em;padding: 0;
+.txt {margin:3em auto 3em;padding: 0;
 }
 
 
   .slider {
     height: auto;
-    width: 100%;
+    width: 95%;
 
     .caption {
     font-size:sizem(12);  

@@ -11,7 +11,7 @@
   <!-- loading end -->
      <!--  -->
      <Nav />
-  <div class="home overflow-hidden bg-[#25C9AA] font-['Noto_Sans_TC',sans-serif]">
+  <div class="home overflow-hidden bg-[#fffff6] font-['Noto_Sans_TC',sans-serif]">
     <!-- <img src="@/section/s1/bg.svg" class="bg"> -->
       <S1 />
       <S2 />
@@ -40,11 +40,14 @@
   }
 }
 .home{
- // background: url("@/section/s1/bg.webp") fixed;
- // background: #333;
-  background-size: 100% auto;
+  &::before{content: "";position: fixed;width: 100%;height: 100%;
+  top: 0;left: 0; background: url("@/section/s3/bg.jpg");right: 0;bottom: 0;
 }
-.bg{position: fixed;top: 0;left: 0;width: 100%;height: 100vh;bottom: 0;right: 0;}
+//  background: url("@/section/s3/bg.jpg");
+ // background: #333;
+//  background-size: 100% auto;
+}
+// .bg{position: fixed;top: 0;left: 0;width: 100%;height: 100vh;bottom: 0;right: 0;}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;
 }
@@ -168,6 +171,7 @@ img {
       .txt {line-height: 1.6;letter-spacing: 0.01em;
   .title{
     font-size: 1.9em;
+    margin:0 auto 0.3em;
   }
   .subtitle{
     font-size: 1.1em;

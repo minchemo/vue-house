@@ -1,5 +1,9 @@
 <template>
   <article class="s5">
+    <div class="img1" v-if="!isMobile"  data-aos="fade" data-aos-delay="600"></div>
+    <img src="./s3/img.svg" class="img2" v-if="!isMobile" />
+    <img src="./s5/imgm.svg" class="img2" v-else />
+    <svg class="img3" v-if="!isMobile"  viewBox="0 0 100 100"><path fill="#009686" d="M0,0h100v100"/></svg>
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">東基頂尖團隊<br v-if="isMobile"> 讓願景落地成真</h3>
@@ -26,14 +30,23 @@
 @import '@/assets/style/function.scss';
 
 .s5 {
-  @apply relative flex flex-col items-center justify-center text-[#fff];
+  @apply relative flex flex-col items-center justify-center text-[#222];
   width: 100%;
   // height: size(800);
-  padding:6em 0 10em 0;
-  font-size:size(18);
+  padding:5em 0 10em 0;
+  font-size:size(20);
   gap:1.5em;
   flex-wrap:nowrap;
     flex-direction:column;
+  &::before{content: "";position: absolute;width: 100%;height: 100%;
+  top: 0;left: 0;background: #fffff6;mix-blend-mode: multiply;
+}
+.img1{position: absolute;right: size(320);bottom:size(185);
+  width: size(415);height: size(415);background: #00915a}
+.img2{position: absolute;left: size(70);bottom:size(100);mix-blend-mode: multiply;
+  width: size(790);transform: rotate(180deg);}
+.img3{position: absolute;right: size(56);bottom:size(-150);mix-blend-mode: multiply;
+  width: size(250);}
   .main {
     @apply flex;
     margin: 0;
@@ -44,7 +57,8 @@
 
 .txt {
   margin: auto;
-  width: size(1500);text-align: center;
+  width: size(1050);text-align: center;
+  .title{color: #00915a;}
 }
 
   .slider {
@@ -80,16 +94,20 @@
   .s5 {
     @apply flex-col;
     height: auto;
-    padding: 0 0 ;
+    padding: 0 0 0.5em 0;
   font-size:sizem(14);
   flex-wrap:nowrap;
 gap:0em;
+.img1{right: sizem(0);bottom:sizem(165);top: auto;
+  width: sizem(100);height: sizem(100);}
+  .img2{left: sizem(10);bottom:sizem(270);width: sizem(280);}
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
-.txt {margin: 3em auto 2em;padding: 0;text-align: justify;
+.txt {margin: 3em auto 3em;padding: 0;text-align: justify;
+  width: sizem(310);
 }
 
   .slider {

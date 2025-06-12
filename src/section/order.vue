@@ -116,9 +116,8 @@
     <!-- Map -->
     <Map v-if="info.address" />
     
-    <div class="footer">海沃創意行銷</div>
     <!-- HouseInfo -->
-    <!--HouseInfo /-->
+    <HouseInfo />
   </div>
 </template>
 

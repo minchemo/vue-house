@@ -1,5 +1,9 @@
 <template>
   <article class="s7" ref="s7">
+    <div class="img1" data-aos="fade" data-aos-delay="600"></div>
+    <img src="./s7/img.svg" class="img2" v-if="!isMobile" />
+    <img src="./s7/imgm.svg" class="img2" v-else />
+    <svg v-if="!isMobile" class="img3" viewBox="0 0 100 100"><path fill="#009686" d="M0,0h100v100"/></svg>
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="200">建設齊發<br v-if="isMobile"> 搶進增值第一排</h3>
@@ -29,13 +33,23 @@
 
 
 .s7 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center text-[#222];
   width: 100%;
   height:auto;
-  padding:11em 0 10em 0;
+  padding:10em 0 10em 0;
   font-size:size(20);
   gap:3em;
   flex-wrap: wrap;
+  &::before{content: "";position: absolute;width: 100%;height: 100%;
+  top: 0;left: 0;background: #fffff6;mix-blend-mode: multiply;
+}
+.img1{position: absolute;right: size(185);bottom:size(175);
+  width: size(415);height: size(415);background: #00915a}
+.img2{position: absolute;left: size(100);top:size(60);mix-blend-mode: multiply;
+  width: size(790);//transform:scaleX(-1) ;
+}
+.img3{position: absolute;right: size(350);bottom:size(-150);mix-blend-mode: multiply;
+  width: size(250);}
 
   .main {
     @apply flex;
@@ -47,6 +61,7 @@
 .txt{
  // margin: auto auto 3vw auto;
  padding: 0 0 0;
+ .title{color: #00915a;}
   .subtitle{font-weight: 400;}
 }
 
@@ -76,11 +91,14 @@
   .s7 {
     @apply flex-col;
     height: auto;
-    padding: 0;
+    padding: 0 0 0.5em 0;
   font-size:sizem(14);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:0em;
+.img1{right: sizem(0);bottom:sizem(165);top: auto;
+  width: sizem(100);height: sizem(100);}
+.img2{left: sizem(10);top:sizem(10);width: sizem(320);}
 
   .main {
     padding: 0 sizem(32.5);
@@ -93,7 +111,7 @@
 
   .slider {
     height: auto;
-    width: 100%;
+    width: 95%;
 
     .caption {
     font-size:sizem(12);  
