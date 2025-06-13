@@ -7,7 +7,7 @@
     <div class="main">
       <div class="txt">
           <h3 class="title" data-aos="fade-up" data-aos-delay="200">一橋北市 一門雙捷 </h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="600">坐落於雙北交界的黃金門戶，與台北僅一橋之遙，三分鐘散步即可抵達大坪林雙捷運站，迅速轉乘環狀線串聯雙北。6分鐘馳上國道與交流道，無論北上南下都快人一步，從容接軌全台脈動。</p>
+    <p class="desc" data-aos="fade-up" data-aos-delay="600">坐落於雙北交界的黃金門戶，與北市僅一橋之遙，三分鐘散步即可抵達大坪林雙捷運站，迅速轉乘環狀線串聯雙北。6分鐘馳上國道與交流道，無論北上南下都快人一步，從容接軌全台脈動。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
