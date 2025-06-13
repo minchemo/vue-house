@@ -1,4 +1,4 @@
-const caseName = "東基鉅獻"
+const caseName = "東基M1"
 
 export default {
     caseid: "c6d5e013-7b31-4edf-88d2-fbc312df0612",
