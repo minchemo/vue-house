@@ -454,9 +454,6 @@ if (formData.gender) {
     presend.append(key, value)
   }
 }
-if (formData.gender) {
-  formData.name = `${formData.name}(${formData.gender})`;
-}
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
