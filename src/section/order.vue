@@ -471,32 +471,33 @@ const send = () => {
     if (key !== "r_verify" && key !== "policyChecked") {
       presend.append(key, value)
     }
-    presend.append("utm_source", utmSource);
-    presend.append("utm_medium", utmMedium);
-    presend.append("utm_content", utmContent);
-    presend.append("utm_campaign", utmCampaign);
-    presend.append("message", formData.msg);
-    presend.append("case_code", info.case_code ? info.case_code : info.caseid);
+  }
+  presend.append("utm_source", utmSource);
+  presend.append("utm_medium", utmMedium);
+  presend.append("utm_content", utmContent);
+  presend.append("utm_campaign", utmCampaign);
+  presend.append("message", formData.msg);
+  presend.append("case_code", info.case_code ? info.case_code : info.caseid);
 
 
-    // 如果有必填字段为空，返回
-    if (!pass) {
-      toast.error(`「${unfill.join(", ")}」為必填或必選`);
-      return;
-    }
+  // 如果有必填字段为空，返回
+  if (!pass) {
+    toast.error(`「${unfill.join(", ")}」為必填或必選`);
+    return;
+  }
 
-    // 手机格式验证
-    const MobileReg = /^(09)[0-9]{8}$/;
-    if (!formData.phone.match(MobileReg)) {
-      toast.error("手機格式錯誤 ( 09開頭10位數字 )");
-      return;
-    }
+  // 手机格式验证
+  const MobileReg = /^(09)[0-9]{8}$/;
+  if (!formData.phone.match(MobileReg)) {
+    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
+    return;
+  }
 
-    // 如果通过验证
-    if (pass && !sending.value) {
-      sending.value = true;
-      fetch(
-        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+  // 如果通过验证
+  if (pass && !sending.value) {
+    sending.value = true;
+    fetch(
+      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
@@ -507,33 +508,33 @@ const send = () => {
       &utm_campaign=${utmCampaign}
       &date=${date}
       &campaign_name=${info.caseName}`,
-        {
-          method: "GET"
+      {
+        method: "GET"
+      }
+    );
+    //caseid 在index.js裡設定
+    fetch("https://service-sys.lixin.com.tw/reserve/" + info.caseid, {
+      method: "POST",
+      body: presend,
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          window.location.href = "formThanks";
+        } else {
+          return response.json().then(err => {
+            console.error("後端錯誤訊息：", err);
+            toast.error(err.message || "提交失敗");
+          });
         }
-      );
-      //caseid 在index.js裡設定
-      fetch("https://service-sys.lixin.com.tw/reserve/" + info.caseid, {
-        method: "POST",
-        body: presend,
       })
-        .then((response) => {
-          if (response.status === 200) {
-            window.location.href = "formThanks";
-          } else {
-            return response.json().then(err => {
-              console.error("後端錯誤訊息：", err);
-              toast.error(err.message || "提交失敗");
-            });
-          }
-        })
-        .catch((error) => {
-          console.error("傳送失敗：", error);
-          toast.error("無法連線或伺服器錯誤");
-        })
-        .finally(() => {
-          sending.value = false;
-        });
-    }
-  };
+      .catch((error) => {
+        console.error("傳送失敗：", error);
+        toast.error("無法連線或伺服器錯誤");
+      })
+      .finally(() => {
+        sending.value = false;
+      });
+  }
+};
 
 </script>
