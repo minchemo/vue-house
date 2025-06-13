@@ -18,8 +18,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
-         <!-- <span class="caption">{{ img.caption }} </span>
-           <span class="caption_l">{{ img.caption }}</span>  -->
+          <span class="caption">{{ img.caption }} </span>
         </SplideSlide>
       </Splide>
     </div>
@@ -142,7 +141,7 @@ gap:0em;
     width: 100%;
 
     .caption {
-    font-size:sizem(10);left: 1em;bottom: .7em;
+    font-size:sizem(10);right: 1em;bottom: .7em;
     }
     .slide-item {
       @apply bg-cover;
@@ -191,19 +190,19 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/5.jpg", import.meta.url).href ,
-    caption: ""
+    caption: "東基M1外觀示意合成參考圖"
   },
   {
     img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: ""
+    caption: "東基建設民生段3D外觀示意圖"
   },
   {
     img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: ""
+    caption: "華固映月"
   },
   {
     img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: ""
+    caption: "國立科學博物館 常設展 奇幻自然"
   },
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,

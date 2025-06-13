@@ -18,7 +18,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
