@@ -34,7 +34,7 @@
   flex-wrap:nowrap;
     flex-direction:column;
   &::before{content: "";position: absolute;width: 100%;height: 100%;
-  top: 0;left: 0;background: #00915a;mix-blend-mode: multiply;
+  top: 0;left: 0;background:  url("./s4/bg_green.png")no-repeat center/cover;mix-blend-mode: multiply;
 }
 .img1{position: absolute;left: size(320);top:size(660);
   width: size(415);height: size(415);background: #005a3c;}

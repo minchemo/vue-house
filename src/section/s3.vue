@@ -41,7 +41,7 @@
   flex-wrap: wrap;
   flex-direction:row-reverse;
   &::before{content: "";position: absolute;width: 100%;height: 100%;
-  top: 0;left: 0;background: #fffff6;mix-blend-mode: multiply;
+  top: 0;left: 0;background: url("./s3/bg2.webp");mix-blend-mode: multiply;
 }
 .img1{position: absolute;left: size(190);top:size(380);
   width: size(415);height: size(415);background: #00915a}
@@ -86,6 +86,34 @@
     }
   }
 }
+.s3 .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    bottom: 0;
+    gap: 1.2em;
+    color: #fff;
+    li {
+      button {
+        //@apply rounded-full;
+        width: 1em;
+        height: 1em;
+        background:#0091597e ;
+        transition: background .5s, transform .5s;
+        overflow: hidden;
+        &::before{content: "";
+          display:block;width: 100%;height: 100%;
+          background: #FFEB00;transform:skewY(0deg)scaleY(0);transform-origin: 0 0 ;transition:transform .5s ;}
+        &:hover{
+          transform: scale(.8);
+        }
+        &.is-active{
+          &::before{
+            transform:skewY(-45deg)scaleY(1);
+          }
+        }
+      }
+    }
+  }
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}

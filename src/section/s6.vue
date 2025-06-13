@@ -8,8 +8,8 @@
       <div class="txt">
           <h3 class="title" data-aos="fade-up" data-aos-delay="200">榮耀四冠 鑄就安心地標</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="600">地震頻傳，選房子當然要選有認證的！<br>
-東基M1一次拿下有建築界奧斯卡之稱、台灣建築界最高榮譽的「金質獎」、評定超嚴格，全新店僅5件獲得的「國家級耐震標章」，再加碼永續健康及智能的指標認證「黃金級綠建築」「銀級智慧建築」！<br>
-未來四大國家級認證，從結構安全到節能減碳，從空中花園到智慧生活，每個細節都為您的美好未來把關。</p>
+東基M1一次拿下有建築界奧斯卡之稱、台灣建築界最高榮譽的「金質獎」、評定超嚴格，全新店僅5件獲得的「國家級耐震標章」，再加碼永續健康及智能的指標認證「黃金級綠建築」、「銀級智慧建築」！<br>
+囊括四大國家級認證，從結構安全到節能減碳，從空中花園到智慧生活，每個細節都為您的美好未來把關。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -39,7 +39,7 @@
   flex-wrap: wrap;
   flex-direction:row-reverse;
   &::before{content: "";position: absolute;width: 100%;height: 100%;
-  top: 0;left: 0;background: #00915a;mix-blend-mode: multiply;
+  top: 0;left: 0;background:  url("./s4/bg_green.png");mix-blend-mode: multiply;
 }
 .img1{position: absolute;left: size(190);top:size(360);
   width: size(415);height: size(415);background: #005a3c;}
@@ -85,6 +85,7 @@
     }
   }
 }
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}

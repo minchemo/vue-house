@@ -39,7 +39,7 @@
   flex-wrap:nowrap;
     flex-direction:column;
   &::before{content: "";position: absolute;width: 100%;height: 100%;
-  top: 0;left: 0;background: #fffff6;mix-blend-mode: multiply;
+  top: 0;left: 0;background: url("./s3/bg2.webp");mix-blend-mode: multiply;
 }
 .img1{position: absolute;right: size(320);bottom:size(185);
   width: size(415);height: size(415);background: #00915a}
@@ -85,6 +85,33 @@
     left: .5em;right: auto;font-size:size(30);font-weight: 700;
     text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.8);}
 }
+.s5 .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    bottom: 0;
+    gap: 1.2em;
+    color: #fff;
+    li {
+      button {
+        //@apply rounded-full;
+        width: 1em;
+        height: 1em;
+        background:#0091597e ;
+        transition: background .5s, transform .5s;
+        overflow: hidden;
+        &::before{content: "";
+          display:block;width: 100%;height: 100%;
+          background: #FFEB00;transform:skewY(0deg)scaleY(0);transform-origin: 0 0 ;transition:transform .5s ;}
+        &:hover{
+          transform: scale(.8);
+        }
+        &.is-active{
+          &::before{
+            transform:skewY(-45deg)scaleY(1);
+          }
+        }
+      }
+    }
+  }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -163,7 +190,7 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s5/1.jpg", import.meta.url).href ,
+    img:new URL("./s5/5.jpg", import.meta.url).href ,
     caption: ""
   },
   {
@@ -179,7 +206,7 @@ const imgs = [
     caption: ""
   },
   {
-    img:new URL("./s5/5.jpg", import.meta.url).href ,
+    img:new URL("./s5/1.jpg", import.meta.url).href ,
     caption: ""
   },
 ]
