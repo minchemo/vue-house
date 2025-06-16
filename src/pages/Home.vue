@@ -280,7 +280,7 @@ const config = ref({
 })
 
 onMounted(() => {
-  let ticking = false; // 確保在一幀內只處理一次滾動事件
+ /* let ticking = false; // 確保在一幀內只處理一次滾動事件
   const allbg = document.querySelector(".allbg .bg");
 
   const handleScroll = () => {
@@ -294,10 +294,10 @@ onMounted(() => {
       });
       ticking = true; // 標記正在處理中
     }
-  };
+  };*/
 
   // 綁定滾動事件
-  window.addEventListener("scroll", handleScroll);
+ // window.addEventListener("scroll", handleScroll);
 
   window.onload = function () {
     isLoading.value = false;
@@ -308,9 +308,9 @@ onMounted(() => {
   };
 
   // 在組件卸載時清理事件
-  onUnmounted(() => {
+ /* onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
-  });
+  });*/
 });
 
 </script>
