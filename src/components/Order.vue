@@ -199,9 +199,21 @@ export default {
     },
   },
 
+  mounted() {
+    const elem = this.$refs.parallax2;
+    if (elem) {
+      var parallaxInstance = new Parallax(elem, {
+        relativeInput: true,
+        selector: '.parallax-item',
+      });
+    }
+  },
   methods: {
     showPolicyDialog() {
       this.policyVisible = true;
+    },
+    hidePolicyDialog() {
+      this.policyVisible = false;
     },
 
     alertValidate() {
@@ -237,15 +249,13 @@ export default {
         // !this.form.time_end
         // ||
         // !this.form.email ||
-        // !this.form.city ||
-        // !this.form.area
       ) {
-        this.alertValidate();
+        this.alertValidate('「姓名、手機」是必填欄位')
         this.isSubmit = false;
         return;
       }
       if (this.form.phone.length != 10) {
-        this.alertPhoneValidate();
+        this.alertValidate('手機號碼請填10碼')
         this.isSubmit = false;
         return;
       }
@@ -260,6 +270,8 @@ export default {
       formData.append("email", this.form.email);
       formData.append("msg", this.form.msg);
       formData.append("room", this.form.room);
+      formData.append("message", this.form.msg);//case_code 新系統必要
+      formData.append("case_code", "taurus");//case_code 新系統必要
       // formData.append('time_start', this.form.time_start)
       // formData.append('time_end', this.form.time_end)
       formData.append("city", this.form.city);
@@ -282,15 +294,25 @@ export default {
         {
           method: "GET",
         }
-      );
-      fetch("contact-form.php", {
+      );//caseid 在index.js裡設定
+      fetch("https://service-sys.lixin.com.tw/reserve/58dcb63a-0843-47a6-996b-bfa8f8751a74", {
         method: "POST",
         body: formData,
-      }).then((response) => {
-        this.isSubmit = false;
+      })
+      .then((response) => {
         if (response.status === 200) {
           window.location.href = "formThanks";
+        } else {
+          return response.json().then(err => {
+            console.error("後端錯誤訊息：", err.message || "提交失敗");
+          });
         }
+      })
+      .catch((error) => {
+        console.error("傳送失敗：", error.message || "無法連線或伺服器錯誤");
+      })
+      .finally(() => {
+        this.sending = false; // 提交結束後設為 false
       });
     },
   },
