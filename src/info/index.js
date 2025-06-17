@@ -1,20 +1,17 @@
 const caseName = "謙旭"
 
 export default {
-  meta: {
-    title: caseName,
-    description: caseName,
-    keywords: caseName,
-  },
-    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
-    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新北市林口區仁愛路一段337號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.768191812435!2d121.3937457!3d25.0758448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a72ea4bfc459%3A0x63a8ee73afc16fc!2z6KyZ5petIOaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1745373809132!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/XRHBZp4nN3q3yL3L6",
-    phone: "02-26022345",
-    fbLink: "https://www.facebook.com/61560974341225/",
-    fbMessage: "https://m.me/61560974341225/",
-    caseName: caseName,
+  caseid: "b44882d2-1b49-4373-8d47-02cbd7f07dc2",
+  case_code: "timeless",
+  address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
+  address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
+  address: "新北市林口區仁愛路一段337號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.768191812435!2d121.3937457!3d25.0758448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a72ea4bfc459%3A0x63a8ee73afc16fc!2z6KyZ5petIOaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1745373809132!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/XRHBZp4nN3q3yL3L6",
+  phone: "02-26022345",
+  fbLink: "https://www.facebook.com/61560974341225/",
+  fbMessage: "https://m.me/61560974341225/",
+  caseName: caseName,
   houseInfos: [
     ["投資興建", "興富謙建設股份有限公司"],
     ["建築規劃", "曾聰憲建築師事務所 曾聰憲"],
@@ -37,8 +34,8 @@ export default {
     subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
   },
   //底下2個 沒項目就會隱藏
-    room_type: [],
-    budget: [],
+  room_type: [],
+  budget: [],
   navList: [
     {
       name: "金質品牌",
