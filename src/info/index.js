@@ -1,11 +1,8 @@
 const caseName = "文華苑"
 
 export default {
-  meta: {
-    title: caseName,
-    description: caseName,
-    keywords: caseName,
-  },
+  caseid: "dd5e36f7-230f-4c1d-8b06-6f652f060e1f",
+  case_code: "wen",
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市新莊區中原路101號對面",
@@ -25,8 +22,6 @@ export default {
     ["景觀園藝", "瀚鼎設計 顏名伸"],
     ["坪數規劃", "20-28坪"],
     ["代銷企劃", "得邦廣告"],
-
-
   ],
   gtmCode: ["GTM-WGDV7JR5"], // 可放置多個
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -39,15 +34,25 @@ export default {
     subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
   },
   //底下2個 沒項目就會隱藏
-  room_type: ["兩房", "三房", "店面", "其他"],
-  budget: [
-    "1500-1800萬",
-    "1800-2000萬",
-    "2000-2200萬",
-    "2200-2500萬",
-    "2500萬以上",
-  ],
-  navList: [
+  selectFields: {
+    room_type: {
+      title: "需求",
+      hold: "請選擇房型",
+      option: ["兩房", "三房", "店面", "其他"],
+      bypass: false,
+    },
+    budget: {
+      title: "預算",
+      hold: "請選擇區間",
+      option: ["1500-1800萬",
+        "1800-2000萬",
+        "2000-2200萬",
+        "2200-2500萬",
+        "2500萬以上"],
+      //bypass: true, //必填開啟使用
+    },
+  },
+    navList: [
     {
       name: "國家級副都心",
       target: ".s2",
