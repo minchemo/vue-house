@@ -1,11 +1,8 @@
 const caseName = "微笑寓所"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "edac4bb5-19ff-47be-a468-16f67d8d07d8",
+    case_code: "wsys",
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
     address: "241新北市三重區吉祥街61號",
@@ -35,52 +32,64 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     //底下2個 沒項目就會隱藏
-    room_type: ["套房","2房","3房"],
-    budget: ["1000-1500萬","1500-2000萬","2000-2500萬","2500-3000萬"],
-    
+    selectFields: {
+        room_type: {
+            title: "需求房型",
+            hold: "請選擇房型",
+            option: ["套房", "兩房", "三房"],
+            bypass: false,
+        },
+        budget: {
+            title: "購屋預算",
+            hold: "請選擇區間",
+            option: ["1000-1500萬", "1500-2000萬", "2000-2500萬", "2500-3000萬"],
+            //bypass: true, //必填開啟使用
+        },
+    },
+
     navList: [{
         name: "最強增值",
         target: ".s4",
         offset: "-60",
         offsetmo: "0",
-    },{
+    }, {
         name: "一橋北市",
         target: ".s3",
         offset: "-60",
         offsetmo: "0",
-    },{
+    }, {
         name: "兩代共融",
         target: ".s6",
         offset: "-60",
         offsetmo: "0",
-    },{
+    }, {
         name: "水岸人生",
         target: ".s7",
         offset: "-60",
         offsetmo: "0",
-    },{
+    }, {
         name: "房貸瘦身",
         target: ".s5",
         offset: "-60",
         offsetmo: "0",
-    },{
+    }, {
         name: "立即來電",
         target: ".contact-info",
         offset: "",
         type: 'btn'
     },
     {
-          name: "地圖導航",
-          target: ".gmap",
-          offset: "",
-          type: "btn",
+        name: "地圖導航",
+        target: ".gmap",
+        offset: "",
+        type: "btn",
     }
-    ,{
+        , {
         name: "立即預約",
         target: ".order",
         offset: "",
         type: 'btn'
     },
-],
+    ],
 
 }
