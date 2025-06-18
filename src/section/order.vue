@@ -1,7 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <img src="./form/titleImg_m.svg" class="order-title-img" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
+      <img src="./form/titleImgm.svg" class="order-title-img" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
       <img src="./form/titleImg.svg" class="order-title-img" data-aos="zoom-in" data-aos-delay="0" v-else>
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
@@ -68,7 +68,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#A30C24] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#00213e] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -122,7 +122,8 @@
   background:url("@/section/form/bg.jpg");
   background-size: auto;
   */
-  background: linear-gradient(to bottom, #00a6e9, #009e41);
+  //background: linear-gradient(to bottom, #00a6e9, #009e41);
+  background:#c7152d;
 
 
 
@@ -242,6 +243,7 @@
       position: absolute;
       right: 0;
       flex-direction: column;
+      color: #fff;
 
       label:first-child {
         margin-bottom: .3em;

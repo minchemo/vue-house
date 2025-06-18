@@ -2,13 +2,13 @@
   <article class="s1" id="s1">
    <!-- <img src="./s1/mo.jpg" class="t0">
     <img src="./s1/mo.jpg" class="t0">  -->
+    <img src="./s1/logom.webp" class="logo" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
+      <img src="./s1/logo.webp" class="logo" data-aos="zoom-in" data-aos-delay="0" v-else>
       <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
       <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
-      <img src="./s1/t2.webp" class="t2" data-aos="zoom-in" data-aos-delay="400">
-      <img src="./s1/t3m.svg" class="t3" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
-      <img src="./s1/t3.svg" class="t3" data-aos="zoom-in" data-aos-delay="0" v-else>
 
-      <img src="./s1/earth.svg" class="earth" data-aos="zoom-in" data-aos-delay="400">
+      <img src="./s1/stylem.webp" class="style" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
+      <img src="./s1/style.webp" class="style" data-aos="zoom-in" data-aos-delay="400" v-else>
 
    <!--  <img src="./s1/s1bg.jpg" class="bg" v-else> 
     <div class="txt">
@@ -43,7 +43,7 @@
   justify-content:center;
   align-items:center;
   height:sizem(605);
-  background: #fff;
+  background: #00213e;
   @media screen and (min-width: 768px) {
     height:100vh;
     max-height:size(1080);
@@ -53,25 +53,33 @@
 // padding-bottom: size(140);V
  // &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
 
-.t1{width:sizem(23);margin: sizem(10) 0 sizem(60) 0;position: relative;z-index: 99;
+.t1{width:sizem(120);margin: sizem(0) 0 sizem(0) 0;position: relative;z-index: 99;
 }
-.t2{width:sizem(249);position: relative;z-index: 99;margin-bottom:sizem(30)
+.logo{width:sizem(120);margin: sizem(-140) 0 sizem(30) 0;position: relative;z-index: 99;
 }
-.t3{width:sizem(181);
-}
-.earth{position: absolute;width:sizem(322);top:sizem(230);left: sizem(30);
+.style{
+position: absolute;
+width:100vw;
+height: auto;
+bottom:0;
+left: sizem(0);
+right: 0;
+top: auto;
+margin: 0;
 }
 
 @media screen and (min-width: 768px) {
-.t1{width:size(803);margin: size(20) 0 size(250) 0;}
-.t2{width:size(647);margin-bottom:size(70);z-index: 99;}
-.t3{width:size(1085);}
-
-.earth{
+.t1{width:size(622);margin: size(20) size(700) size(0) 0;}
+.logo{width:size(631);margin: size(20) size(700) size(100) 0;}
+.style{
   position: absolute;
-  width:size(721);
-  top:size(190);
-  left: size(590);
+  width:auto;
+  height: 100vh;
+  top:size(0);
+  right: size(0);
+  left:auto;
+  bottom: 0;
+  rotate: 0deg;
 }
 }
 

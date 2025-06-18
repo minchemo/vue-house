@@ -160,7 +160,7 @@ img{width: 100%;
       gap: 1em;
 
       &:hover {
-        background: #1d5586;
+        background: #00213e;
         color: #fff;
 
         img {
@@ -251,8 +251,8 @@ img{width: 100%;
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    // background:#EA6DA0;
-    background: linear-gradient(to bottom, #00a6e9, #009e41);
+    background:#00213e;
+    //background: linear-gradient(to bottom, #00a6e9, #009e41);
 
 
 
