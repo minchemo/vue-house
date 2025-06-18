@@ -4,7 +4,7 @@
 		<img src="./s1/logo.svg" class="logo" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"/>
 		<img src="./s1/title.svg" class="title" alt="" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1600"/>
 	</div-->
-	
+	<a href="https://mrzc.mingrih.tw/" class="button">了解詳情</a>
 
   </article>
 </template>
@@ -16,9 +16,9 @@
   @apply relative w-full h-screen ;
   background-image:url("../section/s1/bg.webp");
   background-size: cover;
-  min-height: size(1080);
-  max-height: size(1080);
-  height: auto;
+  // min-height: size(1080);
+  // max-height: size(1080);
+  height: size(1080);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,6 +54,17 @@
 	width: size(500);
   z-index: 99;
   }
+  .button{
+    position: absolute;
+    right:size(450);
+    bottom:size(300);
+  border: 1px solid #fc0;padding:.3em 0;
+  border-radius: 1em;
+letter-spacing: .1em;
+width: 10em;
+text-align: center;
+&:hover{background: #fc33;}
+}
 
  
 }
@@ -68,9 +79,9 @@
   .s1 {
 	background-image:url("../section/s1/bgm.webp");
 	background-size: cover;
-    height:calc(100vh - 63px);
-    min-height: sizem(667);
-    max-height: sizem(667);
+    height:sizem(667);
+   // min-height: sizem(667);
+   // max-height: sizem(667);
     font-size:sizem(14);
 
 
@@ -142,6 +153,13 @@
 	width: sizem(120);
   }
     
+  .button{
+    font-size: 1.2em;
+    left: 0;
+    right:sizem(0);
+    margin: auto;
+    bottom:sizem(320);
+}
   }
 }
 </style>

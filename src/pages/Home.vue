@@ -10,10 +10,9 @@
   </div>
   <!-- loading end
    <Nav v-if="config.showNav" /> -->
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif_TC]">
+  <div class="home overflow-hidden font-['Noto_Serif_TC']">
      <div class="bg">
     <S1 />
-    <Order />
     </div>
   <!--
     <S2 />
@@ -24,6 +23,7 @@
     <S7 />
     <S8 />
     <S9 />
+    <Order />
     <S1new />
     <S1new2 /> -->
     
@@ -33,8 +33,10 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+html,body,#app{height: 100%;}
 .home{
-  background: linear-gradient(to bottom, #40210D, #000);
+  background-image: linear-gradient(to bottom, #40210D, #000);
+  height: 100%;
   > .bg{
   //background:url("@/section/s1/bg1.webp") top center;
   //background-size: 100%;
@@ -61,7 +63,7 @@ img {
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
-import Order from "@/section/order.vue"
+//import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
