@@ -1,11 +1,8 @@
 const caseName = "高大之森"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "6807ab93-6df9-49b0-b508-12001c2b5216",
+    case_code: "sigma",
     address: "預約中心：高雄市楠梓區藍田路x大學西路口",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d522.9414792203362!2d120.27978848648348!3d22.726743968384447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f16f5704453%3A0x2397ed388311211b!2z6auY5aSn5LmL5qOuL-WinuWAvOaloOaikyDljbPliLvpoJDntIQ!5e0!3m2!1szh-TW!2sjp!4v1703742850255!5m2!1szh-TW!2sjp",
     googleLink: "https://maps.app.goo.gl/A5cbZX8QWugoJG1o6",
@@ -32,8 +29,13 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: [],
-    budget: ["1500～1900萬","2000～3000萬","3000萬以上"],
+    selectFields: {
+        budget: {
+            hold: "購屋預算",
+            option: ["1500～1900萬", "2000～3000萬", "3000萬以上"],
+            //bypass: true, //必填開啟使用
+        },
+    },
     navList: [{
         name: "高大Σ計畫",
         target: ".section2",
