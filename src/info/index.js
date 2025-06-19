@@ -1,11 +1,8 @@
 const caseName = "國鉅興"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "671fc582-a9e1-4379-84bf-ec8fc85f76ef",
+    case_code: "guo",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市泰山區莊田路62號旁",
@@ -36,52 +33,58 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     //底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房","透天","店面"],
-    //budget: ["1000萬以下","1000~1500萬","1500~2000萬","2000~2500萬","2500~3000萬","3000~5000萬","5000萬以上"],
+    selectFields: {
+        room_type: {
+            title: "需求房型",
+            hold: "請選擇房型",
+            option: ["兩房", "三房", "透天", "店面"],
+            bypass: false,
+        },
+    },
 
     navList: [{
-            name: "區域環境",
-            target: ".s2",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "職人團隊",
-            target: ".s9",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "精品御所",
-            target: ".s10",
-            offset: "60",
-            offsetmo: "0",
-        },{
-            name: "科技靚宅",
-            target: ".s11",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "品質保證",
-            target: ".s12",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
-        }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },
+        name: "區域環境",
+        target: ".s2",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "職人團隊",
+        target: ".s9",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "精品御所",
+        target: ".s10",
+        offset: "60",
+        offsetmo: "0",
+    }, {
+        name: "科技靚宅",
+        target: ".s11",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "品質保證",
+        target: ".s12",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+        name: "立即來電",
+        target: ".contact-info",
+        offset: "",
+        type: 'btn'
+    },
+    {
+        name: "地圖導航",
+        target: ".gmap",
+        offset: "",
+        type: "btn",
+    }
+        , {
+        name: "立即預約",
+        target: ".order",
+        offset: "",
+        type: 'btn'
+    },
     ],
-    
+
 }
