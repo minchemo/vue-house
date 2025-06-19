@@ -1,13 +1,16 @@
 <template>
   <article class="s1 relative" id="s1">
     <!-- <img src="./s1/pc.jpg" class="t0"> -->
-    <img src="./s1/tree.png" class="tree">
+    <img src="./s1/en.png" class="tree">
+    <img src="./s1/txt.png" class="txt" data-aos="zoom-in" data-aos-delay="0">
+    
 
+ <!-- 
     <div class="t1" data-aos="zoom-in" data-aos-delay="500">玖登開發八擴案<br>
       八擴重劃正核心</div>
     <div class="hr" data-aos="flip-up" data-aos-delay="0"></div>
     <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="800">
-    <div class="t2"></div>
+    <div class="t2"></div> -->
     <!-- <img src="./s1/mo.jpg" class="t0"> -->
      <!-- <img src="./s1/bg.webp" class="bg">
     
@@ -45,25 +48,34 @@
 @media screen and (min-width: 768px) {
     height:100vh;
     // height: size(1070);
-    min-height: size(1080);
+    min-height: size(900);
     max-height: size(1080);
     //justify-content:space-between;
     padding: 0;
     font-size: size(56);
 }
 .tree{
-  position: absolute;bottom: 0;left:calc(50% - #{sizem(850 * .5)});width: sizem(850); 
-  transform: skewX(-5deg);
-  transform-origin: 50% 100%;
-  animation: an 5s linear alternate infinite;
-  filter:drop-shadow(0 0 .3vw #fff);
+  position: absolute;bottom: 0;left: sizem(-10);
+  width: sizem(395); 
+  //transform: skewX(-5deg); 
+  bottom:0;
+  //transform-origin: 50% 100%;
+ // animation: an 5s linear alternate infinite;
+  //filter:drop-shadow(0 0 .3vw #fff);
   @media screen and (min-width: 768px) {
-    bottom: calc(20% + #{size(0 - 1080 * .2)});
+    //bottom: calc(20% + #{size(0 - 1080 * .2)});
+    bottom:calc(20% + #{size(-10 - 1080 * .2)});
     left:calc(50% - #{size(2280 * .5)});
     width: size(2280); 
   }
 }
 
+.txt{
+   width:sizem(475);margin: auto sizem(-50);
+  @media screen and (min-width: 768px) {
+    width:size(1100);margin: auto;
+  }
+}
 .t1{font-weight: 900;}
 .hr{height: 1.5em;background: #fff;width: 1px;margin: .3em auto .4em auto;
 }

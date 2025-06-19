@@ -51,7 +51,7 @@ img {
 .home{
   position: relative;
   &::before{content: "";display: block;position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
-background: url("@/section/s1/bg.webp") top center;
+background: url("@/section/s1/bg.jpg") top center;
 background-size: cover;
 }
 }
