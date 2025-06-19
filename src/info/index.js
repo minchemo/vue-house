@@ -3,9 +3,9 @@ export default {
   caseid: "a40fbc82-32dc-4886-af8f-20ace8a7e2fe",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "",
-    googleSrc: "",
-    googleLink: "",
+    address: "新北市三重區水漾路一段58號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.452145777966!2d121.48426509999999!3d25.0526599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9128b69754d%3A0xbd33b05b11577d56!2z6YO95Yyv5aSn5qW1QTIgUEFSS-aOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1750298153921!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/ETzUeoDnH4Vg7D5g8",
     phone: "02-2974-6688",
     fbLink: "https://www.facebook.com/100082950231720/",
     fbMessage: "https://m.me/100082950231720/",
