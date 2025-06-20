@@ -2,7 +2,7 @@ const caseName = "謙旭"
 
 export default {
   caseid: "b44882d2-1b49-4373-8d47-02cbd7f07dc2",
-  case_code: "timeless",
+  //case_code: "timeless",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市林口區仁愛路一段337號",
