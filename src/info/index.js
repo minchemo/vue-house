@@ -2,6 +2,7 @@ const caseName = "一功青"
 
 export default {
     caseid: "d6e26da0-67e3-475f-a15d-ad199c16cce8",
+    case_code: "yikung",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "鵬程東三路vs介壽路",
