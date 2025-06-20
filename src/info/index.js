@@ -2,7 +2,7 @@ const caseName = "東基M1"
 
 export default {
     caseid: "c6d5e013-7b31-4edf-88d2-fbc312df0612",
-    case_code: "dgm1",
+    //case_code: "dgm1",
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市新店區中正路501-8號",
