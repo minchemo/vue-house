@@ -2,7 +2,7 @@ const caseName = "城揚Twin S"
 
 export default {
     caseid: "4f13d16e-ebd7-4171-ba99-c3a82ef8b2d0",
-    case_code: "twin-s",
+    //case_code: "twin-s",
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市三民區建工路597號",
