@@ -3,7 +3,7 @@ const caseName = "000"
 
 export default {
     caseid: "e6e6f7b0-90f4-4852-b6c1-bb30217a9c3d",
-    case_code: "shengeng13",
+    //case_code: "shengeng13",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "桃園市八德區豐德路582號",
