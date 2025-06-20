@@ -3,7 +3,7 @@ const caseName = "吉晟賦"
 
 export default {
     caseid: "c3f8b471-ae75-4ec2-b127-eb62fe7951d6",
-    case_code: "jichenfu",
+    //case_code: "jichenfu",
   address1: "接待中心", //按鈕區的--- 如空白會只呈現地址
   address2: "接待中心", //map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市三重區仁安街108號",
