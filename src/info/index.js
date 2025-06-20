@@ -1,5 +1,5 @@
-//const caseName = "AI慕光城"
-const caseName = "000"
+const caseName = "AI慕光城"
+//const caseName = "000"
 
 export default {
     caseid: "987e4a16-db4e-49d4-8906-29dae98bf805",
