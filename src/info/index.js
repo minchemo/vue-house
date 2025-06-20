@@ -2,7 +2,7 @@ const caseName = "國家公園"
 
 export default {
     caseid: "f2da1585-59f8-4d5f-9190-9825f8efb3ad",
-    case_code: "cjl",
+    //case_code: "cjl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市小港區高松路99號",
