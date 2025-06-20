@@ -2,7 +2,7 @@ const caseName = "鳴日之城"
 
 export default {
     caseid: "d1c78e3a-ef86-44cc-ad2b-d15ffea54cc5",
-    case_code: "mrjc",
+    //case_code: "mrjc",
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
     address: "桃園市桃園區大仁路50巷17號",
