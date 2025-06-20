@@ -3,7 +3,7 @@ const caseName = "000"
 
 export default {
     caseid: "987e4a16-db4e-49d4-8906-29dae98bf805",
-    case_code: "one-skyline",
+    //case_code: "one-skyline",
     address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
     address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市前鎮區凱旋四路688號旁",
