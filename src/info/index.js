@@ -2,6 +2,7 @@ const caseName = "微笑寓所"
 
 export default {
     caseid: "edac4bb5-19ff-47be-a468-16f67d8d07d8",
+    case_code: "wsys",
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
     address: "241新北市三重區吉祥街61號",
