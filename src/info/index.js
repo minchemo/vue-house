@@ -2,7 +2,7 @@ const caseName = "國鉅興"
 
 export default {
     caseid: "671fc582-a9e1-4379-84bf-ec8fc85f76ef",
-    case_code: "guo",
+    //case_code: "guo",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市泰山區莊田路62號旁",
