@@ -2,7 +2,7 @@ const caseName = "富裕臻"
 
 export default {
     caseid: "55e96d16-1645-46e2-85be-381753d9807c",
-    case_code: "fyj",
+    //case_code: "fyj",
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市鳳山區國泰路二段13巷6號",
