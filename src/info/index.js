@@ -2,7 +2,7 @@ const caseName = "皇城御賞"
 
 export default {
     caseid: "6fe72df6-857c-46b0-8e64-22ca1746501a",
-    case_code: "huangcheng",
+    //case_code: "huangcheng",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市大樹區實踐街97號",
