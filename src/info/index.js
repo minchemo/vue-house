@@ -2,7 +2,7 @@ const caseName = "鴻儀臻城"
 
 export default {
     caseid: "89b1cf5f-4da2-4391-a688-24e0984fc741",
-    case_code: "hyjc",
+    //case_code: "hyjc",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "彰化縣竹塘鄉竹林路一段174號",
