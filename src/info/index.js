@@ -2,7 +2,7 @@ const caseName = "鼎藏豐碩"
 
 export default {
     caseid: "a72c4ee9-642a-4096-9bcc-2524f6b3f960",
-    case_code: "dt",
+    //case_code: "dt",
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市三重區集賢路178號",
