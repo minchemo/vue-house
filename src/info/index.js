@@ -2,7 +2,6 @@ const caseName = "文華苑"
 
 export default {
   caseid: "dd5e36f7-230f-4c1d-8b06-6f652f060e1f",
-  case_code: "wen",
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市新莊區中原路101號對面",
