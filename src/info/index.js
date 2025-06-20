@@ -2,7 +2,6 @@ const caseName = "展志縱橫時代"
 
 export default {
     caseid: "ecaae525-3875-4bf9-9dac-fde123650294",
-    case_code: "zhsd",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "桃園市大林路7號",
