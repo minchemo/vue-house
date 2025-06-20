@@ -2,7 +2,7 @@ const caseName = "國源可頌"
 
 export default {
     caseid: "def5051c-de53-49b6-803a-0ece9007e6fc",
-    case_code: "crois-sant",
+    //case_code: "crois-sant",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "桃園市桃園區青溪二路115號", //隱藏這條 地址地圖消失
