@@ -2,7 +2,7 @@ const caseName = "白隅"
 
 export default {
     caseid: "bfdced19-9d39-4c6d-9937-e9cb269790ab",
-    case_code: "baiyu",
+    //case_code: "baiyu",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新竹高鐵站旁-竹北市光明六路東二段𝟔𝟐𝟏號𝟏𝐅",
