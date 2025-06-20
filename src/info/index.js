@@ -2,7 +2,7 @@ const caseName = "微笑雲朵"
 
 export default {
     caseid: "84e5fe74-4666-4794-b6e2-bc680c2ae4ed",
-    case_code: "cloud",
+    //case_code: "cloud",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "雲林縣斗六市中正路216號",
