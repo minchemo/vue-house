@@ -2,7 +2,7 @@ const caseName = "佳展大嘉"
 
 export default {
     caseid: "f1012bc8-7694-4252-9052-ea63f3262ba7",
-    case_code: "dajia",
+    //case_code: "dajia",
     meta: {
         title: caseName,
         description: caseName,
