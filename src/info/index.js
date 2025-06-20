@@ -2,7 +2,6 @@ const caseName = "快樂王國/理享城"
 
 export default {
     caseid: "1ee49fb7-53f3-47af-80bd-de96cfe7b21e",
-    case_code: "wl2",
     address: "接待中心：新北市五股區成泰路三段356號旁",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1241.0562918817438!2d121.44986325634159!3d25.098643359775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af9c08905843%3A0x71c9a16c3c2f019a!2z5b-r5qiC546L5ZyLL-eQhuS6q-WfjiDmjqXlvoXkuK3lv4M!5e0!3m2!1szh-TW!2stw!4v1694458066886!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/95gkZkCYSFdadpKFA",
