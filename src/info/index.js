@@ -2,7 +2,7 @@ const caseName = "保泰一品"
 
 export default {
     caseid: "616ad7c3-204c-4102-a5a8-475ef184c2c0",
-    //case_code: "bt",
+    case_code: "bt",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市前鎮區永豐路237號",
