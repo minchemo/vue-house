@@ -1,23 +1,5 @@
 <template>
   <article class="s2 relative" id="s2">
-    <img src="./s2/bg.jpg" class="bg">
-    <div class="txt">
-      <h2 class="t1">玖登開發<span></span>春樹系列3</h2>
-      <p>將於桃園八德擴大重劃核心區<br v-if="isMobile"><span v-else>，</span>豐德二路、豐田三路口完美角地</p>
-      <p class="t2">/ 再續建築新篇章▪值得等待 /</p>
-      <img src="./s2/t1.svg" class="t3">
-      <img src="./s2/t2.svg" class="t32">
-    </div>
-    <div class="slider" data-aos="fade">
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption">
-          <span class="caption" v-html="img.caption"></span>
-          <span class="name" v-html="img.name"></span>
-          <span class="bottom"><b v-html="img.t1"></b>{{ img.t2 }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
   </article>
 </template>
 

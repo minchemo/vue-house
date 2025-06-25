@@ -35,7 +35,7 @@
 </div>
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
       <img src="//h35.banner.tw/img//form/phone.svg" alt="撥打電話" srcset="" />
@@ -103,7 +103,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #c60;}
+.bg-color1{background-color: #e60;}
 .hover\:bg-color2:hover{background-color:#c30;}
 
 
@@ -112,10 +112,12 @@
 }
 .contact-info {
   padding: size(55) size(0) size(55) size(0);
-    width: size(1440);
-    min-width: 680px;
+  width:980px;
+  max-width: 100%;
+  // min-width: 680px;
   position: relative;
   z-index: 50;
+      font-size: 16px;
   // background: #045147;
 
   .logo {position: relative;
@@ -132,19 +134,20 @@
 
   .contact-item-box {
     position: relative;
-    margin-top: size(20);
-    gap: size(20);
-    width: size(920);
+    margin-top: 1.25em;
+    gap: 1.25em;
+    width: 90%;
+   /* width: 920px;
+    max-width: 100%;*/
     // min-width: 680px;
 
     .contact-item {
-      background: #ffe3bb;
-      color: #444;
+      background: #e60;
+      color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
     border-radius: .5em;
-      font-size: size(16);
       font-weight: 700;
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -166,16 +169,16 @@
       }
 
       img {
-        max-width: size(27);
+        max-width: 1.69em;
         height: auto;
-        max-height: size(27);
-        filter: brightness(0) invert(.4);
+        max-height:  1.69em;
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #ffea;
+        background-color: #fff;
         background-image: none;
         color: #000;
         z-index: 0;
@@ -230,40 +233,68 @@
   }
 }
 .modal-box{
-  img{filter: invert(11%) sepia(94%) saturate(6570%) hue-rotate(347deg) brightness(65%) contrast(93%);
+  img{filter: brightness(0) invert(.4);
   }
 }
 
-@media screen and (max-width:768px) {
-
-
-  .mo-contact-info {
+.mo-contact-info {
     z-index: 99;
     position: fixed;
+    bottom: 5em;
+    right: 0.5em;
+    width: 6.25em;
+    flex-direction:column;
+    background:none; 
+    font-size:16px;
+    gap: .5em;
+    .contact-item {
+      color: #fff;
+      background:#7dbc28; 
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius:50%;
+      position: relative;
+      transition: background-color .5s;
+      img {
+        margin-bottom:0.3em;
+        max-width: 1.03em;
+        height: auto;
+        max-width: 1.03em;
+        filter: brightness(0) invert(1);
+      }
+      &::before{content: "";position: absolute;top: 0.3em;left: 0.3em;bottom: 0.3em;right: 0.3em;border: 1px solid #fff;border-radius: 50%;transition: all .5s;opacity: .5;}
+      &:hover{background:#66a119; 
+        &:before{
+        transform: scale(1.05);opacity: 1;
+      }}
+    }
+}
+
+
+@media screen and (max-width:768px) {
+  .mo-contact-info { 
+    flex-direction:row;
     bottom: 0;
+    right: 0;
     left: 0;
-    width: sizem(375);
+    width:100%;
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#A30C24;
+    background:#7dbc28; 
+    font-size:sizem(16);
 
     .contact-item {
-      height: 100%;      
-      font-size: sizem(16);
+      height: 100%;
       font-weight: 400;
-      color: #fff;
+      background:none; 
       border-left:1px solid #fff9;
+      aspect-ratio:auto;
+      border-radius:0;
 
-      img {
-        margin-bottom: sizem(5);
-        max-width: sizem(16.5);
-        height: auto;
-        max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
-      }
       &:first-child{
       border-left:0;}
+      &::before{display: none;}
 
     }
   }
@@ -274,11 +305,12 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(40) 0;
+    padding: sizem(60) 0 sizem(40) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
-  background-size: sizem(450) auto;
+    background-size: sizem(450) auto;
+    font-size: sizem(16);
 
     .logo {
       width: sizem(257);
@@ -289,18 +321,18 @@
     .contact-item-box {
       position: relative;
       margin-top: sizem(0);
-      gap: sizem(15);
+     // gap: sizem(20);
       flex-direction: column;
     width: sizem(310);
 
       .contact-item {
         padding: 1.1em sizem(80);
-        font-size: sizem(16);
+        margin-bottom:sizem(20);
         max-width: 100%;
         white-space: nowrap;
         margin: 0;
 
-        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        img {
           max-width: sizem(27);
           height: auto;
           max-height: sizem(27);
@@ -314,7 +346,7 @@
         }
 
         &.address {
-          font-size: sizem(15);
+          font-size: sizem(14.5);
           border-radius: .5em  .5em 0 0;
           padding: 1.1em 0;
           margin: sizem(25) auto 0;

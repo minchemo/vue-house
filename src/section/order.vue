@@ -1,7 +1,7 @@
 <template>
   <!--  2025-5-6宜娟進化版 -->
   <div id="order" class="order relative text-center">
-    <div class="order-section">
+    <div class="order-section bg-[#999]">
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
@@ -22,8 +22,11 @@
 
  -->
             <label class="row"><span>手機<span>*</span></span>
-              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+              <input type="tel" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
+          <label class="row"><span>年齡</span>
+          <input type="number" placeholder="年齡" class="input w-full rounded-none" :value="formData.age"
+            @input="(event) => (formData.age = event.target.value)" /></label>
 
 <!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
 <template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
@@ -46,14 +49,14 @@
   </template>
 <!-- 動態 select end-->
 
-          <label class="row" v-if="requiredFields.city"><span>居住縣市</span>
+          <label class="row" v-if="requiredFields.city"><span>居住城市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
             <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row" v-if="requiredFields.area"><span>居住鄉鎮區</span>
+          <label class="row" v-if="requiredFields.area"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value" :key="area">
@@ -110,9 +113,9 @@
 </div>
 </div>
 
+    </div>
       <!-- Contact Info -->
       <ContactInfo />
-    </div>
 
 
     <!-- Map -->
@@ -132,6 +135,9 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
+    width:980px;
+    max-width: 100%;margin: auto;
+    padding-bottom:size(100);
 
   .bg-image {
     position: absolute;
@@ -145,7 +151,7 @@
 
 .order {
   width: 100%;
-  padding-top: size(40);
+//  padding-top: size(40);
   /*
   background:url("@/section/form/bg.jpg");
   background-size: auto;
@@ -155,7 +161,7 @@
 
 
   .order-title {
-    font-size: size(40);
+    font-size:40px;
     font-weight: 700;
     color: #fff;
     padding-top:1.5em;
@@ -183,8 +189,9 @@
   }
 
   .form {
-    width: size(920);
-    min-width: 750px;
+   /* width: size(880);
+    min-width: 750px;*/
+    width: 90%;
     //  height: 350px;
     gap: size(80);
     margin-top: size(45);
@@ -221,7 +228,7 @@
         > span{color: #F00;//font-size: 12px;
           }
       }
-      input,select{background-color: transparent;flex: 1;}
+      input,select{background-color: transparent;flex: 1;appearance: none;}
       option{color: #000;}
       select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -250,7 +257,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #b28146;
+    background-color: #d50;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -276,7 +283,7 @@
 }
 
   .control {
-    font-size: size(16);
+    font-size: 16px;
     color: #000;
     position: relative;
   }
@@ -286,6 +293,7 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
+    padding-bottom:sizem(60);
     // overflow: hidden;
    // padding-top: sizem(200);
 
@@ -456,8 +464,6 @@ const send = () => {
   const utmMedium = urlParams.get("utm_medium") || "null";
   const utmContent = urlParams.get("utm_content") || "null";
   const utmCampaign = urlParams.get("utm_campaign") || "null";
-  /*
-  */
   const pad = (n) => String(n).padStart(2, '0');
   const time = new Date();
   const year = time.getFullYear();
@@ -474,6 +480,19 @@ const send = () => {
   let unfill = [];
   let idx = 0;
 
+//有性別的話 性別顯示
+if (formData.gender) {
+  formData.name = `${formData.name}(${formData.gender})`;
+}
+//有年齡的話 年齡顯示
+if (formData.age) {
+  formData.name = `${formData.name}(${formData.age}歲)`;
+}
+if (!formData.msg) {
+  formData.msg = "無留言";
+}
+
+
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
   if (!bypass.includes(key) && (value === "" || value === false)) {
@@ -489,7 +508,7 @@ const send = () => {
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
   presend.append("utm_campaign", utmCampaign);
-  presend.append("message", formData.msg)
+  presend.append("message",`聯絡時段：${formData.ctime}；${formData.msg}`)
   presend.append("case_code", info.case_code?info.case_code:info.caseid );
 
   // 如果有必填字段为空，返回
@@ -516,7 +535,7 @@ const send = () => {
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.msg}
+      &msg=${formData.room_type}；${formData.ctime}；${formData.budget}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}

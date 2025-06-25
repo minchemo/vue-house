@@ -1,20 +1,16 @@
-const caseName = "春樹醴"
+//const caseName = "昕暉景寬"
+const caseName = "000"
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
-    caseid: "9ec69845-e697-47d0-b7ba-4fad65ec7fcd",
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市八德區豐德二路8號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.1917273405707!2d121.28340937607621!3d24.9255376426491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346818f4c9f0dbcd%3A0x15792d39fd1437be!2zMzM05qGD5ZyS5biC5YWr5b635Y2A6LGQ5b635LqM6LevOOiZnw!5e0!3m2!1szh-TW!2stw!4v1746526523136!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/hwHC6h11hjJun9Rg7",
-    phone: "03-3731117",
-    fbLink: "https://www.facebook.com/100063880612874/",
-    fbMessage: "https://m.me/100063880612874/",
+    address: "台南市永康區公園路．永善路口",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14688.474453457598!2d120.250688!3d23.0194167!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e715b95f29ca9%3A0x2f4514d6a7753303!2z5piV5pqJ5pmv5a-s6Yq35ZSu5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1750833529520!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/gvif6Pzfa34TCkgi9",
+    phone: "06-7031311",
+    fbLink: "https://www.facebook.com/61553920125279/",
+    fbMessage: "https://m.me/61553920125279/",
     caseName: caseName,
     houseInfos: [
         /*
@@ -27,7 +23,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-WL7SMSBH"], // 可放置多個
+    gtmCode: ["GTM-00"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -44,6 +40,18 @@ export default {
         hold: "請選擇房型",
         option: ["兩房", "三房", "店面"],
         bypass:false,
+      },
+      ctime: {
+        title: "聯絡時段",
+        hold: "請選擇時段",
+        option: ["上午", "下午", "晚上", "皆可"],
+        bypass:false, //必填開啟使用
+      },
+      budget: {
+        title: "購屋預算",
+        hold: "請選擇區間",
+        option: ["1000萬以下", "1000-1500萬", "1500萬以上"],
+        bypass:false, //必填開啟使用
       },
       /*
       budget: {
