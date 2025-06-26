@@ -52,7 +52,7 @@ export default {
         title: "購屋預算",
         hold: "請選擇區間",
         option: ["1000萬以下", "1000-1500萬", "1500萬以上"],
-        bypass:false, //必填開啟使用
+        bypass:true, //必填開啟使用
       },
       /*
       budget: {
