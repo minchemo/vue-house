@@ -1,57 +1,58 @@
 <template>
-  <article class="s2">
-    <div class="txt"> 
-      <h3 class="title" data-aos="fade-up" data-aos-delay="200">繁華靜巷X雙捷歸心<br v-if="isMobile"> 新店核心生活圈</h3>
-    </div>
-   <!-- 
-    <div class="caption">基地空拍實景經後製修飾</div>  --> 
-    <Fullview />
+  <article class="s2 relative" id="s2">
+    <h2 data-aos="fade-in" data-aos-delay="200">
+      <img src="./s2/20min竹科.png" alt="20min竹科生活圈 圓夢關鍵密碼 有房沒房很有關西">
+    </h2>
+    <h3 data-aos="fade-up" data-aos-delay="400">世界級健康藝術原鄉 順勢崛起</h3>
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped>  
 @import '@/assets/style/function.scss';
-
 .s2 {
-  @apply relative overflow-hidden bg-[#27AEE6] text-[#fff];
-  width: 100%;
- // height: size(1059);
-  font-size:size(20);
-  .txt {text-align: center;position: relative;
-  padding-top:1.8em;z-index: 10;margin-bottom:-6.3em ;
+  background: url("./s2/bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  //20min竹科
+  h2{
+    img{
+      width: 100%;
+    }
   }
-  .viewbox{z-index: 2;
-/*    margin: 0 0 -5vw 0;
-    top: -5vw; */
+  //世界
+  h3{
+    color: #FFF;
+    font-size: size(52);
+    position: absolute;
+    bottom:calc(20% + #{size(352 - 1080 * .5)});
+    left: calc(30% + #{size(450 - 1080 * .5)});
+    letter-spacing: size(20);
+    text-shadow: #00000030 3px 3px;
   }
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
+/* 手機尺寸 */
 @media screen and (max-width: 767px) {
-
   .s2 {
-   // height: sizem(550);
-  font-size:sizem(15);
-
-  .txt {//text-align: justify;
-    position: absolute;top: sizem(50);left: 0;right: 0;
-  padding-top:0em;width:sizem(310);margin:auto auto 0em auto;
-  }
-  .viewbox{height: sizem(660);
-    margin: 0;
-    padding: sizem(100) 0 0 0;
-    top:0;}
-
-
-  }
-}
+  //世界
+  h3{
+    font-size: size(52);
+    }
+}}
 </style>
+
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
-import Fullview from '../components/fullview.vue';
+import { computed, getCurrentInstance, ref ,inject} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
 </script>
