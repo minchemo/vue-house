@@ -54,17 +54,18 @@ img {
 .slider {
   @apply relative;
   z-index: 2;
-  .slide-item img{
+  .slide-item{
+  img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
   }
   .arrows{
     @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
     padding: 0; 
     height: 100%;
-    pointer-events: none; 
-    filter:drop-shadow(0em 0.2em 0.2em rgba(0, 0, 0, .5));
+    pointer-events: none;
     .prev,
     .next{
       width:5%;
@@ -76,16 +77,46 @@ img {
       background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
       background-size: 50% auto;
       transition:background-color .5s ;
-      &:hover{
-        background-color: #0003;
-      }
+      &:hover{background-color: #0003;}
     }
-    .prev{
-      transform: scaleX(-1);
+    .prev{transform: scaleX(-1);
     }
     img {
       margin: unset;
       @apply cursor-pointer hover:opacity-50;
+    }
+  }
+  //輪播橫條
+  .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    bottom: 0;
+    gap: .8em;
+    color: #fff;
+    li {
+      button {
+       // @apply rounded-full;
+        width: 3.8em;
+        height: 2em;
+        position: relative;
+      &::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: .3em;
+        background:currentColor;
+        transition: transform .5s;
+        transform-origin: 50% 90%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        box-shadow: #00000030 3px 3px;
+      }
+        &.is-active{ 
+          &::after{
+          transform: scaleY(2.5);
+          background:#4F607A;}
+      }
+      }
     }
   }
 }
@@ -96,34 +127,36 @@ img {
     font-size: sizem(12);
   }
   .slider {
-    @apply relative;
-    .slide-item img{
-      border-radius:0em;
+  @apply relative;
+  .slide-item{
+  img{border-radius:0em;}
+  
+  }
+  .arrows{
+    .prev,
+    .next{
+      width: 8%;
     }
-    .arrows{
-      .prev,
-      .next{
-        width: 8%;
+  }
+  .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    display: none;
+    bottom: sizem(6.7);
+    gap: sizem(2.5);
+    li {
+      button {
+        @apply rounded-full  hover:opacity-50;
+        width: sizem(10.3);
+        height: sizem(3.34);
+        border: sizem(1) solid #fff;
+
+        &.is-active{
+          @apply bg-white;
       }
-    }
-    .splide__pagination {
-      @apply absolute flex justify-center w-full;
-      display: none;
-      bottom: sizem(6.7);
-      gap: sizem(2.5);
-      li {
-        button {
-          @apply rounded-full  hover:opacity-50;
-          width: sizem(10.3);
-          height: sizem(3.34);
-          border: sizem(1) solid #fff;
-          &.is-active{
-            @apply bg-white;
-          }
-        }
       }
     }
   }
+}
 }
 </style>
 <script setup>
@@ -139,7 +172,6 @@ import AOS from 'aos';
 //import s4 from "../section/s4.vue"
 const isLoading = ref(true)
 const gtmNoScript = ref('')
-
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
