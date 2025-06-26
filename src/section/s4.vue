@@ -5,6 +5,20 @@
         <h2 data-aos="fade-up" data-aos-delay="200">逐夢竹科  圓夢關西</h2>
         <h3 data-aos="fade-up" data-aos-delay="600">輕取未來  五大Best Buy</h3>
       </div>
+      <img class="line" src="./s4/line.png">
+      <div id="app">
+        <div class="carousel-container">
+          <div
+            v-for="(item, index) in items"
+            :key="index"
+            class="carousel-item"
+            :class="{ active: currentIndex === index }"
+          >
+            <div class="blue"><h4>{{ item.title }}</h4></div>
+            <h5>{{ item.subtitle }}</h5>
+          </div>
+        </div>
+      </div>
     </div>
     <svg class="img" v-if="!isMobile" viewBox="0 0 100 100"></svg>
     <div class="slider" data-aos="fade">
@@ -41,9 +55,8 @@
     .title{
       text-align: center;
       position: absolute;
-      top:calc(60% + #{size(352 - 1080 * .5)});
+      top:calc(60% + #{size(312 - 1080 * .5)});
       left: calc(20% + #{size(380 - 1080 * .5)});
-      
     }
     h2{
       font-size: size(50);
@@ -59,6 +72,46 @@
       letter-spacing: size(0.8);
       margin-top: size(10);
     }
+    .line{
+      width: size(420);
+      position: absolute;
+      top:size(490);
+      left: size(222);
+    }
+    //輪播文字
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+    .carousel-item {
+      position: absolute;
+      top: size(75);
+      left: size(-115);
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .blue{
+        background-image: url(./s4/blue.png);
+        width: 170px;
+        text-align: center;
+      }
+      h4 {
+      font-size: size(30);
+      font-weight: 600;
+      
+    }
+    h5{
+      font-size: size(20.5);
+    }
+    }
+    .carousel-item.active {
+      opacity: 1;
+    }
+    
   }
 
   //輪播圖
@@ -128,7 +181,6 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
@@ -140,6 +192,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
+//圖片輪播
 const options = {
   rewind: false,
   arrows: false,
@@ -174,3 +227,25 @@ const imgs = [
 ]
 </script>
 
+<script>
+//文字輪播
+export default {
+  data() {
+    return {
+      items: [
+        { title: '高速移居', subtitle: '國道三約3分鐘 時間換取空間' },
+        { title: '健康好住', subtitle: '水美米好 休閒樂活 長壽之鄉' },
+        { title: '機能宜居', subtitle: '市心商圈 文教校園 全齡樂園' },
+        { title: '減壓成家', subtitle: '甜蜜入手價 輕鬆移居更宜居' },
+        { title: '圓夢首棧', subtitle: '美學建築 採光通風 舒適格局' }
+      ],
+      currentIndex: 0
+    };
+  },
+  mounted() {
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.items.length;
+    }, 4000); 
+  }
+};
+</script>

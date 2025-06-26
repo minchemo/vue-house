@@ -1,8 +1,7 @@
 <template>
   <article class="s1 relative" id="s1">
-		<!--<img src="./s1/phone.jpg" class="t0">-->
-    <img src="./s1/pc.jpg" class="t0">
-
+		<img src="./s1/phone.jpg" class="t0">
+    <!--<img src="./s1/pc.jpg" class="t0">-->
     <h2 data-aos="fade-up" data-aos-delay="0">
       <img src="./s1/logo.png" alt="和彩開發">
     </h2>
@@ -41,7 +40,7 @@
     top: 0;
     left: 0; 
 	  pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.0;
     z-index: 10;
   }
   .pc{
