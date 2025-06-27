@@ -32,6 +32,7 @@
   background-repeat: no-repeat;
   //弘華機構
   h2{
+    width: sizem(128);
     position: absolute;
     top:calc(40% + #{size(495 - 1080 * .5)});
     left: calc(40% + #{size(395- 1080 * .5)});
@@ -79,9 +80,7 @@
     position: absolute;
     top:calc(40% + #{size(495 - 1080 * .5)});
     left: calc(40% + #{size(395- 1080 * .5)});
-    img{
-      width: 51.5%;
-    }
+
   }
 }}
 </style>

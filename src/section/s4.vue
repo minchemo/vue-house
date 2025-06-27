@@ -3,10 +3,10 @@
     <div class="text">
       <div class="title">
         <h2 data-aos="fade-up" data-aos-delay="200">逐夢竹科  圓夢關西</h2>
-        <h3 data-aos="fade-up" data-aos-delay="600">輕取未來  五大Best Buy</h3>
+        <h3 data-aos="fade-up" data-aos-delay="400">輕取未來  五大Best Buy</h3>
       </div>
-      <img class="line" src="./s4/line.png">
-      <div id="app">
+      <img class="line" data-aos="fade-up" data-aos-delay="400" src="./s4/line.png" >
+      <div id="app" data-aos="fade-in" data-aos-delay="600">
         <div class="carousel-container">
           <div
             v-for="(item, index) in items"
@@ -20,8 +20,8 @@
         </div>
       </div>
     </div>
-    <svg class="img" v-if="!isMobile" viewBox="0 0 100 100"></svg>
-    <div class="slider" data-aos="fade">
+    <svg class="img" v-if="!isMobile" viewBox="0 0 100 100" data-aos="fade-in" data-aos-delay="800"></svg>
+    <div class="slider">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -40,8 +40,9 @@
 @import '@/assets/style/function.scss';
 .s4 {
   @apply relative flex items-center justify-center text-[#4F607A];
-  width: 100%;
-  padding:11em 0 10em 0;
+  min-height: size(900);
+  max-height: size(900);
+  height: 900vh;
   background: url("./s4/bg.png");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -75,18 +76,13 @@
     .line{
       width: size(420);
       position: absolute;
-      top:size(490);
-      left: size(222);
+      top:calc(80% + #{size(310 - 1080 * .5)});
+      left: calc(20% + #{size(380 - 1080 * .5)});
     }
     //輪播文字
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      text-align: center;
-    }
     .carousel-item {
       position: absolute;
-      top: size(75);
+      top: size(630 - 1080 * .5);
       left: size(-115);
       width: 100%;
       opacity: 0;
@@ -102,7 +98,6 @@
       h4 {
       font-size: size(30);
       font-weight: 600;
-      
     }
     h5{
       font-size: size(20.5);
@@ -111,9 +106,7 @@
     .carousel-item.active {
       opacity: 1;
     }
-    
   }
-
   //輪播圖
   .img{
     position: absolute;
@@ -139,6 +132,39 @@
       justify-content: flex-start;
     }
   }
+   //輪播橫條
+   .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    bottom: 0;
+    gap: .8em;
+    color: #fff;
+    li {
+      button {
+       // @apply rounded-full;
+        width: size(61);
+        height: 2em;
+        position: relative;
+      &::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: .3em;
+        background:currentColor;
+        transition: transform .5s;
+        transform-origin: 50% 90%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        box-shadow: #00000030 3px 3px;
+      }
+        &.is-active{ 
+          &::after{
+          transform: scaleY(2.5);
+          background:#4F607A;}
+      }
+      }
+    }
+  }
 }
   
 /* 螢幕尺寸標準 */
@@ -148,34 +174,91 @@
 @media screen and (max-width: 767px) {
   .s4 {
     @apply flex-col;
-    height: auto;
-    padding: 0 0 0.5em 0;
-  font-size:sizem(14);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:0em;
-  .main {
-    padding: 0 sizem(32.5);
-    width: 100%;
-}
-.title {margin:3em auto 3em;padding: 0;
-}
-.slider {
-  height: auto;
-  width: 100%;
-  .caption {
-  font-size:sizem(12);  
-  right:sizem(5);
-  bottom:sizem(5);
+    padding:0;
+    background: url("./s4/bgm.png");
+    background-size: 100%;
+    //文字
+  .text {
+    flex-basis: size(1500);
+    .title{
+      top:calc(20% + #{size(260 - 1080 * .5)});
+      left: calc(25% + #{size(420 - 1080 * .5)});
+    }
+    h2{
+      font-size: size(145);
+    }
+    h3{
+      font-size: size(110);
+      margin-top: size(60);
+    }
+    .line{
+      width: sizem(235);
+      top:size(810);
+      left: size(364);
+    }
+    //輪播文字
+    .carousel-item {
+      width: size(1200);
+      position: absolute;
+      top:size(950);
+      left: size(-610);
+      display: flex;
+      flex-direction: column;
+      .blue{
+        background-image: url(./s4/blue.png);
+        width: size(500);
+        text-align: center;
+      }
+      h4 {
+      font-size: size(100);
+    }
+    h5{
+      font-size: size(80);
+    }
+    }
+    .carousel-item.active {
+      opacity: 1;
+    }
   }
-  .slide-item {
-    @apply bg-cover;
-    width: 100%;
-    flex-basis: auto;
-    height: sizem(250);
-  }
-}
-}
+    //輪播
+    .slider {
+      height: auto;
+      width: 100%;
+      .caption {
+        font-size:sizem(12);  
+        right:sizem(5);
+        bottom:sizem(5);
+      }
+      .slide-item {
+        @apply bg-cover;
+        width: 100%;
+        flex-basis: auto;
+        height: sizem(250);img{
+        border-radius:0em;
+      }}
+      .arrows{
+        .prev,
+        .next{
+          width: 8%;
+        }
+      }
+      .splide__pagination {
+        @apply absolute flex justify-center w-full;
+        display: none;
+        li {
+          button {
+            @apply rounded-full  hover:opacity-50;
+            width: sizem(10.3);
+            height: sizem(3.34);
+            border: sizem(1) solid #fff;
+            &.is-active{
+              @apply bg-white;
+          }
+          }
+        }
+      }
+    }
+    }
 }
 </style>
 <script setup>
@@ -186,10 +269,11 @@ const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
 }
+const submitted = ref(false);
 const splide = ref();
-const currentSlideIndex = ref(0);
-const moved = (newIdx, prevIdx, destIdx) => {
-  currentSlideIndex.value = prevIdx
+const currentIndex = ref(0);
+const moved = (splide,newIdx) => {
+  currentIndex.value = newIdx;
 }
 
 //圖片輪播
@@ -200,7 +284,9 @@ const options = {
   autoplay: true,
   interval: 4000,
   gap: 0,
-  type: 'loop'
+  type: 'loop',
+  pauseOnFocus: false, //點選其他圖後可以繼續輪播
+  pauseOnHover: true,//滑鼠移開會繼續輪播
 }
 
 const imgs = [
@@ -225,27 +311,13 @@ const imgs = [
     caption: "圓夢首棧。 美學建築 採光通風 舒適格局"
   },
 ]
-</script>
 
-<script>
 //文字輪播
-export default {
-  data() {
-    return {
-      items: [
+const items= [
         { title: '高速移居', subtitle: '國道三約3分鐘 時間換取空間' },
         { title: '健康好住', subtitle: '水美米好 休閒樂活 長壽之鄉' },
         { title: '機能宜居', subtitle: '市心商圈 文教校園 全齡樂園' },
         { title: '減壓成家', subtitle: '甜蜜入手價 輕鬆移居更宜居' },
         { title: '圓夢首棧', subtitle: '美學建築 採光通風 舒適格局' }
-      ],
-      currentIndex: 0
-    };
-  },
-  mounted() {
-    setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.items.length;
-    }, 4000); 
-  }
-};
+      ];
 </script>

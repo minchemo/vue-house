@@ -34,9 +34,10 @@
     right: calc(30% + #{size(411 - 1080 * .5)});
     letter-spacing: size(5.8);
   }
-  //合彩開發
+  //和彩開發
   h2{
     position: absolute;
+    width: sizem(130);
     top:calc(30% + #{size(563 - 1080 * .5)});
     right: calc(20% + #{size(444- 1080 * .5)});
     img{

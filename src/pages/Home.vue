@@ -87,77 +87,8 @@ img {
       @apply cursor-pointer hover:opacity-50;
     }
   }
-  //輪播橫條
-  .splide__pagination {
-    @apply absolute flex justify-center w-full;
-    bottom: 0;
-    gap: .8em;
-    color: #fff;
-    li {
-      button {
-       // @apply rounded-full;
-        width: 3.8em;
-        height: 2em;
-        position: relative;
-      &::after{
-        content: "";
-        display: block;
-        width: 100%;
-        height: .3em;
-        background:currentColor;
-        transition: transform .5s;
-        transform-origin: 50% 90%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        box-shadow: #00000030 3px 3px;
-      }
-        &.is-active{ 
-          &::after{
-          transform: scaleY(2.5);
-          background:#4F607A;}
-      }
-      }
-    }
-  }
 }
-@media screen and (max-width: 767px) {
- //圖說
-  .caption{
-    font-size: sizem(12);
-  }
-  .slider {
-  @apply relative;
-  .slide-item{
-  img{border-radius:0em;}
-  
-  }
-  .arrows{
-    .prev,
-    .next{
-      width: 8%;
-    }
-  }
-  .splide__pagination {
-    @apply absolute flex justify-center w-full;
-    display: none;
-    bottom: sizem(6.7);
-    gap: sizem(2.5);
-    li {
-      button {
-        @apply rounded-full  hover:opacity-50;
-        width: sizem(10.3);
-        height: sizem(3.34);
-        border: sizem(1) solid #fff;
-
-        &.is-active{
-          @apply bg-white;
-      }
-      }
-    }
-  }
-}
-}
+ 
 </style>
 <script setup>
 //import info from "@/info"

@@ -1,47 +1,41 @@
 <template>
-  <div id="order" class="order relative text-center bg-[#007550]">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-
-      <img class="order-title-img" src="./form/titlem.svg" alt="" srcset="" v-if="isMobile">
-      <img class="order-title-img" src="./form/title.svg" alt="" srcset="" v-else>
+      <!-- Title -->
+      <div class="order-title font-['Noto_Serif_TC',serif] text-center">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名<span>*</span></span>
+          <label class="row name"><span>姓名<span>(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
         
-            <label class="row"><span>手機<span>*</span></span>
-              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" /></label>
+          <label class="row"><span>手機<span>(必填)</span></span>
+            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+          @input="(event) => (formData.phone = event.target.value)" /></label>
 
-<!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
-<template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
-    <label class="row">
-      <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
-      <select
-        class="select w-full rounded-none bg-white"
-        v-model="formData[fieldKey]"
-      >
-        <option value="" disabled>{{ fieldData.hold }}</option>
-        <option
-          v-for="option in fieldData.option"
-          :value="option"
-          :key="option"
-        >
-          {{ option }}
-        </option>
-      </select>
-    </label>
-  </template>
-<!-- 動態 select end-->
-
-
-
-        <!--  -->
+          <!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
+          <template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
+              <label class="row">
+                <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
+                <select
+                  class="select w-full rounded-none bg-white"
+                  v-model="formData[fieldKey]"
+                >
+                  <option value="" disabled>{{ fieldData.hold }}</option>
+                  <option
+                    v-for="option in fieldData.option"
+                    :value="option"
+                    :key="option"
+                  >
+                    {{ option }}
+                  </option>
+                </select>
+              </label>
+            </template>
+          <!-- 動態 select end-->
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -67,9 +61,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#4F607A]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FF0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#CC0000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -81,11 +75,11 @@
       <!-- Send -->
       <div class="sendall mt-8 mx-auto">
         <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-          送出表單
+          即刻預約
         </button>
         <div v-else class="send-load">
           <svg
-            class="animate-spin h-5 w-5 text-[#fff]"
+            class="animate-spin h-5 w-5 text-[#4F607A]"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -112,7 +106,6 @@
       <ContactInfo />
     </div>
 
-
     <!-- Map -->
     <Map v-if="info.address" />
     
@@ -123,52 +116,18 @@
 
 <style lang="scss">
  @import "@/assets/style/function.scss";
-
-
-.order-section {
-  position: relative;
- // padding-top: size(406);
-   overflow: hidden;
-    min-height: size(500);
-
-  .bg-image {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: size(50);
-    vertical-align: middle;
-  }
-
-}
-
-.footer{
-    width: 100%;
-    height: 40px;
-    background: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-  }
-
 .order {
-  width: 100%;
-  padding-top: size(40);
-  /*
-  background:url("@/section/form/bg.jpg");
-  background-size: auto;
-  */
- // background: linear-gradient(to bottom, #195c45, #000704);
-  
-
-
+ .order-section {
+  background-image: url(./order/bg.png);
+  background-size:auto 100%;
+    position: relative;
+    overflow: hidden;
+}
   .order-title {
-    font-size: size(40);
-    font-weight: 400;
-    color: #A30C24;
+    font-size: size(45);
+    font-weight: 800;
+    color: #4F607A;
     padding-top:1.5em;
-    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
     .line{width: size(439);}
   }
 
@@ -177,18 +136,16 @@
     margin: size(80) auto size(35);
   }
   .order-subTitle{
-    font-size: size(17);
-    // color: #fff;
+    font-size: size(19);
     padding-top:.8em;
     letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    color:#4F607A;
   }
   .cus-divider {
     margin: 0 auto;
     width: size(300);
     height: size(2);
     margin-bottom: size(50);
-  //  background-color: #055F76;
   }
 
   .form {
@@ -211,7 +168,6 @@
     .right {
       flex: 1;
       height: auto;
-      //  width: size(419);
     }
 
     &::after {
@@ -221,23 +177,43 @@
       background-color: #0003;
       position: absolute;
     }
-    .row{background: #fff;border: 1px solid #999;color: #000;
+    .row{
+      background: #fff;
+      color: #4F607A;
       display: flex;width: 100%;
-    align-items:center;
+      align-items:center;
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;//font-size: 12px;
+        font-weight: 600;
+        > span{
+          color: #F00;
+          font-size: 12px;
           }
       }
-      input,select{background: inherit;flex: 1;}
-      option{color: #666;}
-      select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
-      background-size:auto 200%;
-      transition: background .3s;
-      &:focus{
-        background-position:calc(100% - .5em) 0%;
+      input,select{
+        background: inherit;
+        flex: 1;
+        font-weight:200 ;
+        color:#666666;
+        //姓名、手機、備註的註解文字
+        &::placeholder {
+          font-weight:200 ;
+          color: #666666;
+        }
       }
+      
+      option{
+        font-weight:200 ;
+        color:#666666;
+      }
+      select{
+        background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
+        background-size:auto 200%;
+        transition: background .3s;
+        &:focus{
+          background-position:calc(100% - .5em) 0%;
+        }
       }
        //&.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
     }
@@ -246,6 +222,15 @@
       input{margin-right: .3em;}
     }
   }
+
+  //備註
+  textarea{
+    color:#666666 !important;
+    &::placeholder{
+        font-weight:200 ;
+        color: #666666;
+      }
+    }
 
   .sendall{
   font-size:20px;
@@ -257,18 +242,16 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
-    background-color: #FFEB00;
-    //border: 1px solid #FFF9;
+    color: #FFF;
+    background-color: #4F607A;
     border:0;
-    border-radius: .5em;
-
-    width: 308px;
+    width: 315px;
     height:3.3em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 400;
     position: relative;
+    border-radius: 0;
   }
   @keyframes spin {
   from { transform: rotate(0deg); }
@@ -281,8 +264,6 @@
 .animate-spin {
   display: inline-block;margin:0 .5em; animation: spin 1s linear infinite;
 }
-
-
   .control {
     font-size: size(16);
     color: #000;
@@ -290,25 +271,26 @@
   }
 }
 
+//立昕
+.footer{
+    width: 100%;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+
 @media screen and (max-width:768px) {
   .order-section {
     min-height: sizem(800);
     position: relative;
-    // overflow: hidden;
-   // padding-top: sizem(200);
-
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
-    }
-
   }
 
   .order {
     width: 100%;
-    padding-bottom: sizem(63);
 
     .cus-divider {
       margin: 0 auto;
@@ -329,10 +311,9 @@
       .line{width: sizem(258);}
     }
     .order-subTitle{
-      font-size: sizem(13);
+      font-size: sizem(11);
       padding-top:0;
     }
-
 
     .form {
       width: sizem(310);
@@ -343,16 +324,27 @@
       flex-direction: column;
       margin-top: sizem(20);
 
+      .row{
+        &>span{
+          font-size: size(60);
+        }
+        select{
+          font-size: size(50);
+        }
+      }
+
       .left {
         width: 100%;
         gap: sizem(15);
+        label{
+          height: sizem(50);
+        }
       }
-
       .right {
         width: 100%;
         height: sizem(100);
         .row{
-          height: 7em;
+          height: 12em;
         }
       }
 
@@ -368,11 +360,16 @@
     .send {
       width: sizem(310);
       height: sizem(72);
+      font-size: size(100);
     }
 
     .control {
       font-size: sizem(14.6);
     }
+  }
+  //備註
+  textarea{
+    font-size: size(50) !important;
   }
 }
 </style>

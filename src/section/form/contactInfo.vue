@@ -3,9 +3,9 @@
   <div class="contact-info-img relative">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-   <!--    --><div class="logo">
-      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>
+   <!--    <div class="logo">
+      <img src="@/section/s1/logo.png" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+    </div>-->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
@@ -13,7 +13,7 @@
       </div>
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
-        <div>Facebook 諮詢</div>
+        <div>FB 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
         <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
@@ -33,7 +33,6 @@
 
   </div>
 </div>
-
   <!-- Mobile contact info -->
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
@@ -48,14 +47,14 @@
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img/form/pen.svg" alt="立即預約" srcset="" />
-      <div>立即預約
+      <div>預約賞屋
       </div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <!--<div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
       <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
-    </div>
+    </div>-->
   </div>
 
   <!-- Modal -->
@@ -103,26 +102,19 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
-.bg-color1{background-color: #00312E;}
-.hover\:bg-color2:hover{background-color:#002421;}
-
-
 .contact-info-img{
   height: 0;z-index: 52;
 }
 .contact-info {
-  padding: 5em 0 2.5em 0;
+  padding: size(10) 0 size(120) 0;
   position: relative;
   z-index: 50;
-  width: size(1000);
+  width: size(100);
   min-width: 750px;
   font-size:16px;
 
   .logo {position: relative;
     width: size(367);
-   // height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -133,33 +125,24 @@
 
   .contact-item-box {
     position: relative;
-    margin-top:1.25em;
-    gap: 1.25em;
-   // width: size(920);
-    // min-width: 680px;
-
+    margin-top:2em;
+    justify-content:space-around;
     .contact-item {
-      background: #FFEB00;
-      color: #000;
-      width: 100%;
-      flex: 1;
-      padding: 1.1em 0;
-    border-radius: .6em;
-      line-height: 1.6;//3.8
+      background: #B79F79;
+      color: #FFF;
+      height: 4em;
+      flex: 0 315px;
       letter-spacing: 0em;
-     // max-width: size(280);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      //border: 1px solid #C29267;
       gap: 1em;
 
       &:hover {
-        background: #bba739;
-        color: #000;
-
+        background: #74644a;
+        color: #FFF;
         img {
-          filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
+          filter: brightness(0) invert(1);
         }
       }
 
@@ -167,7 +150,7 @@
         max-width: 1.35em;
         height: auto;
         max-height: 1.35em;
-        filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
+        filter: brightness(0) invert(1);//換圖片顏色
         transition: all .5s;
         margin: 0;
       }
@@ -185,38 +168,6 @@
         flex:2.10;
 
         }
-        /*
-        background: none;
-        z-index: 0;
-        position: relative;
-        flex:2.17;
-        // border-radius: 999px 0 0 999px;
-      //  max-width: 9999px;
-        justify-content: center;
-
-        &::before {
-          content: "";
-          position: absolute;
-          width: 8em;
-          height: 100%;
-          background-color: transparent;
-          left: calc(100% - 4em);
-          z-index: -1;
-        }
-        div{
-          text-indent:0em;
-          white-space: normal;
-          padding: 0 1em;
-        }
-
-
-      &.googlemap {
-        flex:1;
-  //    background-color: #9B1E44;
-      border-left-width: 0;
-      //  color: #fff;
-      }
-    */
     }
     }
     &.no-gap {
@@ -230,8 +181,6 @@
 }
 
 @media screen and (max-width:768px) {
-
-
   .mo-contact-info {
     z-index: 99;
     position: fixed;
@@ -241,11 +190,6 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#004933;
-   //background:linear-gradient(180deg, #FF8BF3 , #6D1EDB );
-    //background:linear-gradient(180deg, #f575a6 , #652ccf );
-    // background:linear-gradient(180deg, #b2baff , #781297 );
-
 
     .contact-item {
       height: 100%;      
@@ -253,6 +197,7 @@
       font-weight: 400;
       color: #fff;
       border-left:1px solid #fff9;
+      
 
       img {
         margin-bottom: sizem(5);
@@ -266,40 +211,27 @@
 
     }
   }
-
+  //FB諮詢
   .contact-info {
     width: 100%;
     min-width:0;
-    // height: sizem(400);
-    // border-radius: sizem(68);
-    //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(80) 0;
     margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
-  background-size: sizem(450) auto;
-
-    .logo {
-      width: sizem(257);
-    margin: sizem(00) auto sizem(50) auto;
-     // margin-bottom: sizem(47);
-    }
-
+    background-size: sizem(450) auto;
     .contact-item-box {
       position: relative;
-      margin-top: sizem(0);
-      gap: sizem(15);
+      width: sizem(310);
+      height: 45vw;
       flex-direction: column;
-    width: sizem(310);
-
+      margin-top: 0;
       .contact-item {
         padding: 1.1em sizem(80);
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
-        margin: 0;
-
-        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        margin-top:size(100);
+        img {             
           max-width: sizem(27);
           height: auto;
           max-height: sizem(27);
@@ -311,29 +243,6 @@
         div{
           text-indent: 2em;
         }
-/*
-        &.address {
-          font-size: sizem(15);
-          border-radius: sizem(0) sizem(0) 0 0;
-          padding: 1.1em 0;
-          margin-top: sizem(25);
-          //font-size: .9em;
-
-          &::before {
-            width: 100%;
-            height: 100%;
-            bottom: -50%;
-            left: 0;
-          }
-        }
-        &.address+div {
-          border-radius: 0 0 sizem(0) sizem(0);
-        }
-      &.googlemap {
-        border-top-width: 0;
-      border-left-width:0;
-      }
-*/
       }
       &.address {
         margin:sizem(15) 0 0 0 ;
@@ -375,7 +284,6 @@ const go = () => {
 const open = () => {
   window.open(info.fbLink);
 }
-
 
 const smoothScroll = inject('smoothScroll')
 const scrollTo = (el) => {
