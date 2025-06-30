@@ -173,19 +173,28 @@
 /* 手機尺寸 */
 @media screen and (max-width: 767px) {
   .s4 {
-    @apply flex-col;
-    padding:0;
+    position: relative;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: size(900);
+    max-height: size(2800);
+    height: 104vh;
     background: url("./s4/bgm.png");
     background-size: 100%;
     //文字
   .text {
-    flex-basis: size(1500);
+    position: absolute;
+    top:calc(20% + #{size(250 - 1080 * .5)});
+    right:calc(25% + #{size(280 - 1080 * .5)});
+    width: 100%;
     .title{
-      top:calc(20% + #{size(260 - 1080 * .5)});
-      left: calc(25% + #{size(420 - 1080 * .5)});
+      position: relative;
+      top:0;
+      text-align: center;
     }
     h2{
       font-size: size(145);
+      -webkit-text-stroke:0.2px;
     }
     h3{
       font-size: size(110);
@@ -193,15 +202,19 @@
     }
     .line{
       width: sizem(235);
-      top:size(810);
-      left: size(364);
+      position: relative;
+      top:size(100);
+      margin: 0 auto;
     }
     //輪播文字
+    #app {
+      position: relative;
+        }
     .carousel-item {
       width: size(1200);
       position: absolute;
-      top:size(950);
-      left: size(-610);
+      top:size(170);
+      left: size(590);
       display: flex;
       flex-direction: column;
       .blue{
@@ -216,26 +229,27 @@
       font-size: size(80);
     }
     }
-    .carousel-item.active {
-      opacity: 1;
-    }
   }
     //輪播
     .slider {
+      position: absolute;
+      margin-top: size(50);
       height: auto;
       width: 100%;
+      bottom: 0;
       .caption {
         font-size:sizem(12);  
         right:sizem(5);
         bottom:sizem(5);
       }
       .slide-item {
-        @apply bg-cover;
         width: 100%;
         flex-basis: auto;
-        height: sizem(250);img{
-        border-radius:0em;
-      }}
+        height: sizem(250);
+          img{
+          border-radius:0em;
+        }
+      }
       .arrows{
         .prev,
         .next{
@@ -243,19 +257,7 @@
         }
       }
       .splide__pagination {
-        @apply absolute flex justify-center w-full;
         display: none;
-        li {
-          button {
-            @apply rounded-full  hover:opacity-50;
-            width: sizem(10.3);
-            height: sizem(3.34);
-            border: sizem(1) solid #fff;
-            &.is-active{
-              @apply bg-white;
-          }
-          }
-        }
       }
     }
     }

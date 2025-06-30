@@ -176,7 +176,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
+  img{filter: invert(38%) sepia(44%) saturate(288%) hue-rotate(358deg) brightness(94%) contrast(89%);
   }
 }
 
@@ -190,9 +190,10 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
+    background-color: #B79F79;
 
     .contact-item {
-      height: 100%;      
+      height: 100%;
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
@@ -252,7 +253,6 @@
           }
         }
       }
-
       &.no-gap {
         gap: 0 !important;
       }

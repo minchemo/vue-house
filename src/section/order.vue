@@ -53,7 +53,7 @@
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="(非必填) 請輸入您的留言"></textarea>
+            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
         </div>
       </div>
 
@@ -300,14 +300,13 @@
       background-color: #055F76;
     }
 
-      .order-title-img {
+  .order-title-img {
     width: sizem(250);
     margin: sizem(50) auto sizem(30);
   }
 
     .order-title {
       font-size: sizem(27);
-      padding-top:2em;
       .line{width: sizem(258);}
     }
     .order-subTitle{
@@ -327,8 +326,14 @@
       .row{
         &>span{
           font-size: size(60);
+          > span{
+          font-size: 10px;
+          }
         }
         select{
+          font-size: size(50);
+        }
+        input{
           font-size: size(50);
         }
       }

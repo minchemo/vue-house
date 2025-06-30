@@ -33,6 +33,7 @@
     top:calc(30% + #{size(470 - 1080 * .5)});
     right: calc(30% + #{size(411 - 1080 * .5)});
     letter-spacing: size(5.8);
+    color: #7793a6;
   }
   //和彩開發
   h2{
@@ -55,6 +56,7 @@
       font-size: size(30);
       letter-spacing: size(32);
       text-align: center;
+      color: #7793a6;
     }
   }
   //挺年輕
@@ -66,6 +68,7 @@
     letter-spacing: size(2);
     text-align: center;
     line-height: size(50);
+    color: #204561;
     span{
       font-weight: 800;
       font-size: size(45);
