@@ -18,7 +18,7 @@ export default {
     ["投資興建", "和彩開發股份有限公司"],
     ["營造公司", "億東營造股份有限公司"],
     ["產品規劃", "地上12層／地下2層／2-3房"],
-    ["行銷公司", "森鴻行銷有限公司"],
+    //["行銷公司", "森鴻行銷有限公司"],
   ],
   gtmCode: ["GTM-NM43DCPN"], // 可放置多個
   recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
