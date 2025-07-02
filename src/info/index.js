@@ -38,13 +38,13 @@ export default {
           option: ["2房","3房","3+1"],
           bypass:false,
         },
-        budget: {
+       /*  budget: {
           title: "購屋預算",
           hold: "請選擇預算",
           option: ["1000-1500","1500-2000","2000以上"],
           bypass:false, //必填開啟使用
         },
-        /*
+       
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",
