@@ -5,18 +5,27 @@
         <div class="flex-1 items-center justify-center py-4 md:py-10 font-['Noto_sans_TC']">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title text-[#fff]">建案資訊</div>
+                <!--index.js的houseInfos-->
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
                         <p class="mr-5 border-l-4 border-[#FF3EA1] pl-2 text-[#FF3EA1]" v-html="item[0]"></p>
                         <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal" v-html="item[1]">
                         </p>
-                    </div>
                 </div>
+                <!--其他-->
+                <div class="item font-bold flex items-center w-full whitespace-nowrap align-items-center">
+                    <p class="mr-5 border-l-4 border-[#FF3EA1] pl-2 text-[#FF3EA1]" >企劃銷售</p>
+                    <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal"><img style="width: 60%;" src="../s1/dblogo.svg"></p>
+                    
+                </div>
+                <div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-5 border-l-4 border-[#FF3EA1] pl-2 text-[#FF3EA1]" >接待會館</p>
+                    <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal">五股區成泰路三段516號</p>
+                </div>
+                <div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-5 border-l-4 border-[#FF3EA1] pl-2 text-[#FF3EA1]" >賞屋專線</p>
+                    <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal">02-2295-3888</p></div></div>
             </div>
         </div>
-
-
     </div>
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
