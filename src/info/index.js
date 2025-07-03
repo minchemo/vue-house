@@ -5,7 +5,7 @@ export default {
     address: "接待中心：新北市五股區成泰路三段516號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d903.2465631250577!2d121.4519698!3d25.1023267!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDA2JzA4LjIiTiAxMjHCsDI3JzA4LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1751442050376!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/SmqM2S9yH7ko7pPX8",
-    phone: "02-8292-3777",
+    phone: "02-2295-3888",
     fbLink: "https://www.facebook.com/wl2.debang/",
     fbMessage: "https://m.me/wl2.debang/",
     caseName: caseName,
