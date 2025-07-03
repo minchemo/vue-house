@@ -1,9 +1,9 @@
-//const caseName = "鳴日之城"
-const caseName = "000"
+const caseName = "鳴日之城"
+//const caseName = "000"
 
 export default {
-    //caseid: "d1c78e3a-ef86-44cc-ad2b-d15ffea54cc5",
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    caseid: "d1c78e3a-ef86-44cc-ad2b-d15ffea54cc5",
+    //caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
     //case_code: "mrjc",
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
