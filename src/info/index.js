@@ -1,25 +1,25 @@
-const caseName = "展志縱橫時代"
+const caseName = "松陽馥麗"
 
 export default {
-    caseid: "ecaae525-3875-4bf9-9dac-fde123650294",
-    case_code: "zhsd",
+    caseid: "e35e238b-6a62-4722-b340-a3a799ef3e58",
+    //case_code: "zhsd",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市大林路7號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d904.0875022521666!2d121.3166766696226!3d24.988220114185737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ee52bdba827%3A0x709762564c2f2567!2zMzMw5qGD5ZyS5biC5qGD5ZyS5Y2A5aSn5p6X6LevN-iZnw!5e0!3m2!1szh-TW!2stw!4v1732520660174!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/B7H6uZt97cy68RoWA",
-    phone: "03-364-2277",
-    fbLink: "https://www.facebook.com/61565182162397",
-    fbMessage: "https://m.me/61565182162397",
+    address: "新北市土城區中央路三段93號旁",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d760.3711699011237!2d121.43634903487587!3d24.967638101711515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzAyLjciTiAxMjHCsDI2JzE0LjciRQ!5e0!3m2!1szh-TW!2stw!4v1751529969832!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/FPx9trbBsL5vFKcM8",
+    phone: "02-2268-8388",
+    fbLink: "https://www.facebook.com/61576581560017",
+    fbMessage: "https://m.me/61576581560017/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "展志建設開發股份有限公司"],
-        ["建築設計", "李俊利建築師事務所"],
-        ["行銷企劃", "錦盒建築行銷有限公司"],
-        ["建照號碼", "(111)桃市都建執照字第會桃00148-01號"],
-        ["基地位置", "桃園市延平路及樹林四街路口"],
+        ["投資興建", "宸實建設股份有限公司"],
+        ["建築設計", "周劍平建築師事務所"],
+        ["建照號碼", "113土建字第00215號"],
+        ["行銷企劃", "五率國際地產行銷"],
+        ["經 紀 人", "何成英 (112)新北經字第004095號"],
     ],
-    gtmCode: ["GTM-TLNH82HB","GTM-5BP5WN26"], // 可放置多個
+    gtmCode: ["GTM-0000000",], // 可放置多個
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
