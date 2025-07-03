@@ -71,10 +71,10 @@
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+      <vue-recaptcha class="flex justify-center mt-8 R relative z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send --><div class="sendall mt-8 mx-auto">
+      <!-- Send --><div class="sendall mt-8 mx-auto relative z-10">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
   即刻預約
 </button>
@@ -473,11 +473,24 @@ const send = () => {
   const sec = time.getSeconds();
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
   
+  // 1. 清洗手機格式
+const toHalfWidth = str =>
+  str.replace(/[０-９]/g, s => String.fromCharCode(s.charCodeAt(0) - 0xfee0));
+const cleanedPhone = toHalfWidth(formData.phone).replace(/[^\d]/g, "");
+formData.phone = cleanedPhone; // 更新 formData 中的 phone
+
+// 2. 驗證手機格式（提早檢查）
+const MobileReg = /^09\d{8}$/;
+if (!MobileReg.test(cleanedPhone)) {
+  toast.error("手機格式錯誤 (09 開頭、共 10 碼數字)");
+  return;
+}
 
   const presend = new FormData();
   let pass = true;
   let unfill = [];
   let idx = 0;
+
 
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
@@ -503,12 +516,7 @@ const send = () => {
     return;
   }
 
-  // 手机格式验证
-  const MobileReg = /^(09)[0-9]{8}$/;
-  if (!formData.phone.match(MobileReg)) {
-    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
-    return;
-  }
+
 
   // 如果通过验证
   if (pass && !sending.value) {

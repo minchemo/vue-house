@@ -1,7 +1,9 @@
-const caseName = "鳴日之城"
+//const caseName = "鳴日之城"
+const caseName = "000"
 
 export default {
-    caseid: "d1c78e3a-ef86-44cc-ad2b-d15ffea54cc5",
+    //caseid: "d1c78e3a-ef86-44cc-ad2b-d15ffea54cc5",
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
     //case_code: "mrjc",
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
@@ -20,8 +22,8 @@ export default {
       ["經&ensp;紀&ensp;人", "陳秀琴 (110)桃市經字第001503號<br>朱立民  (112)北市經證字第02756號"],
     ],
     gtmCode: ["GTM-T65K69SP"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    // recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
