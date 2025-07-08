@@ -1,19 +1,11 @@
 <template>
-  <article class="s5" ref="s5">
-    <div class="bg" v-if="!$isMobile()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  <div class="txt">
-    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Wealth through Transit Hubs</h3>
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">軌道經濟漲勢鐵律 </h3>
-    <hr class="hr" v-if="isMobile">
-  </div>
+  <article class="s5">
+
+  
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">桃園新站接棒北台灣大位 </h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">從台北、板橋、南港車站漲幅，見證軌道經濟價值！桃園新站獨霸三鐵核心版圖，樞紐共構領銜漲勢，千億利多機能滿載，財富屬於眺望未來的人！</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">錨定土城AI 科技圈C位<br>每一天都比昨天更值錢</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">站上科技廊道起點，土城成為新北最受矚目的AI智匯科技城。從頂埔科技園區鴻海總部、中工雲宇宙智慧園區到遠東通訊園區，構成完整科技金三角，吸引Google亞洲最大研發中心、微軟、Amazon、Ericsson等國際巨擘相繼佈局，創造百萬高薪職缺，形塑菁英就業磁場。<br>人口持續流入，帶動居住紅利需求逐步推升，形成一股價值累積的正向循環。「松陽馥麗」鼎足AI科技與森態生活的黃金交界，與科技產業共振成長，時間即是價值的倍增器。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -22,8 +14,8 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -34,38 +26,56 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-
-
 .s5 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:7em 0;
   font-size:size(18);
   gap:3em;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
       &:nth-child(1){
-      top:size(26);left: 0;
-  font-size:size(120);
-}
+        top: 1vw;
+        left: 10vw;
+        font-size: 3.5vw;
+      }
       &:nth-child(2){
-      top: size(147);left: size(110);
-  font-size:size(27);
-}
+        top: 12vw;
+        left: 2vw;
+        font-size: 2vw;
+      }
       &:nth-child(3){
-      top: size(20);right:size(80);
-  font-size:size(75);}
+        top: 3vw;
+        left: 7vw;
+        font-size: 9vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+      &:nth-child(4){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(6){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
+      }
     }
   }
 
-  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
-  &::before{content: "";width:120%;
-  height: 20%;border-radius: 50%;background: #1691CF;display: block;
-  position: absolute;bottom: -10%;left: -10%;
-}
-  img{width: 100%;position: relative;}}
+
+
   .main {
     @apply flex;
     margin: 0;
@@ -74,17 +84,15 @@
   text-align: justify;
 }
 
-
 .txt {
   
   .title{
     &::after,
     &::before{
-      width: 13.6em;
+      width: 11.1em;
     }
   }
 }
-
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -97,11 +105,11 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
-      color: #C9A063;
+      color: #529130;
     }
     }
   }
@@ -113,18 +121,37 @@
 @media screen and (max-width: 767px) {
 
   .s5 {
-  @apply flex-col;
-    height: auto;
-    padding: 0;
+  flex-direction: column-reverse;
+  height: auto;
+  padding:0 0 5em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:2em;
-  .img{position: absolute;top:sizem(300);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
+
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+.bg{
+    span{
+      &:nth-child(1){
+        top: 4vw;
+        left: 82vw;
+        font-size: 6vw;
+      }
+      &:nth-child(2){
+        top: 57vw;
+        left: 2vw;
+        font-size: 8vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 77vw;
+        font-size: 23vw;
+      }
+    }
+  }
 
   .main {
-    padding: 0 sizem(32.5);
+    padding: 0 sizem(30);
     width: 100%;
 }
 
@@ -142,14 +169,15 @@
 }
 
 
+
   .slider {
     height: auto;
     width: 100%;
 
     .caption {
-    font-size:sizem(12);  
+    font-size:sizem(12); 
     right:sizem(5);
-    bottom:sizem(5);
+    bottom:sizem(5); 
     }
     .slide-item {
       @apply bg-cover;
@@ -165,8 +193,8 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
+
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -193,28 +221,18 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.webp", import.meta.url).href ,
-    caption: "台北車站"
+    caption: "板橋遠東通訊園區"
   },
   {
     img:new URL("./s5/2.webp", import.meta.url).href ,
-    caption: "板橋車站"
+    caption: "鴻海富士康"
   },
   {
     img:new URL("./s5/3.webp", import.meta.url).href ,
-    caption: "南港車站"
+    caption: "中工雲宇宙智慧園區"
   },
-  {
-    img:new URL("./s5/4.webp", import.meta.url).href ,
-    caption: "桃園車站"
-  },
-  {
-    img:new URL("./s5/5.webp", import.meta.url).href ,
-    caption: "機場捷運"
-  },
-  {
-    img:new URL("./s5/6.webp", import.meta.url).href ,
-    caption: "桃園機場"
-  },
+  
 ]
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
 

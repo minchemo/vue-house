@@ -1,115 +1,249 @@
 <template>
-  <article class="s9" id="s9">
-   <!--  <img class="t0" src="./s9/pc.jpg" alt="" srcset="">  -->
-    <div class="t1 font-['Noto_Serif_TC',serif]" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000" v-if="!isMobile">三鐵匯聚｜全雙併均質3房</div>
-    <div class="t1 font-['Noto_Serif_TC',serif]" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000" v-else>三鐵匯聚<br>全雙併均質3房</div>
-    <img src="./s9/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
-    <div class="t2 font-['Noto_Serif_TC',serif]" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000">稀有地段｜即將公開｜03-364-2277</div>
+  <article class="s9">
+
+  
+    <div class="main">
+      <div class="txt">
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">走過35年半甲子<br>松陽用建築寫下無聲的高級感<br>品牌的價值，從不是一夕成形，而是由時間淬鍊而來的複利累積。松陽機構深耕土城三十五年，憑藉一條龍營造與厚實工法，逐步建立難以取代的信任資本。<br>從土地開發、建築開發、建設營造、產品規劃、營建品管到市場行銷、客戶服務，每一步都踏實堆疊，成為城市與居民共享的永續資產，並自民國94年起成立松陽基金會，回饋於社會大眾。選擇松陽，不只是選擇一座建築，而是與懂得為住戶未來負責的品牌共築人生。</p>
+      </div>
+    </div>
+    <div class="slider" data-aos="fade">
+      <div class="arrows">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
+      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+          <span class="caption">{{ img.caption }}</span>
+        </SplideSlide>
+      </Splide>
+    </div>
+
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/style/function.scss';
 
-@keyframes op {
-  50% {
-     opacity: 0;
+.s9 {
+  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
+  width: 100%;
+  height:auto;
+  padding:7em 0;
+  font-size:size(18);
+  gap:3em;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  .bg{
+    span{
+      &:nth-child(1){
+        top: 1vw;
+        left: 10vw;
+        font-size: 3.5vw;
+      }
+      &:nth-child(2){
+        top: 12vw;
+        left: 2vw;
+        font-size: 2vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 7vw;
+        font-size: 9vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+      &:nth-child(4){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(6){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
+      }
+    }
+  }
+
+
+
+  .main {
+    @apply flex;
+    margin: 0;
+    flex-basis: size(590);
+  flex-direction: column;
+  text-align: justify;
+}
+
+.txt {
+  
+  .title{
+    &::after,
+    &::before{
+      width: 11.1em;
+    }
   }
 }
-
-
-.s9 {
-  
-  @apply relative w-full h-screen;
-  min-height: size(1080);
-  max-height: size(1080);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;
-  font-size:size(25);
-  background: url("./s9/bg.jpg") 50% 50%;
-  background-size: cover;
-  .t0{position: absolute;top: -92px;left: 0;width: 100%;opacity: .5;z-index: 10;}
-
-  .logo{
-    width:size(728);
-    margin: 2em auto 2em;
+  .slider {
+    margin: 0;
+    flex-basis: size(840);
+    width: size(840);
+      height: size(560);
+    .slide-item {
+      @apply bg-cover;
+    flex-basis: size(840);
+      height: size(560);
+      
     }
-  .t1{
-    font-size:size(40);
-    color:#fff;
-    font-weight: 700;
-    position: relative;
-    z-index: 2;
-
-    
+    .splide__pagination{
+      left: calc(100% + 3em);
+      justify-content: flex-start;
+    color: #C5C5C5; 
+    li button.is-active{
+      color: #529130;
     }
-  .t2{
-    font-size:size(40);
-    letter-spacing: -.05em;
-    color:#fff;
-    position: relative;
-    z-index: 2;
-    font-weight: 700;
-    margin-bottom: 3em;
     }
-
-  
-
-    
-
+  }
 }
-
-  
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
 
-
-
   .s9 {
-    height:calc(100vh - 63px);
-    min-height: sizem(667);
-    max-height: sizem(667);
-    font-size:sizem(12);
-    background: url("./s9/bgm.jpg") 50% 50%;
-    background-size: cover;
+  flex-direction: column-reverse;
+  height: auto;
+  padding:0 0 5em 0;
+  font-size:sizem(12);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:2em;
 
-  .logo{
-    width: sizem(272);
-    margin: 2em auto 2em;
+.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+.bg{
+    span{
+      &:nth-child(1){
+        top: 4vw;
+        left: 82vw;
+        font-size: 6vw;
+      }
+      &:nth-child(2){
+        top: 57vw;
+        left: 2vw;
+        font-size: 8vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 77vw;
+        font-size: 23vw;
+      }
     }
-  .t1{
-    font-size: sizem(25);
-    text-align: center;
-    }
-
-  .t2{
-    font-size: sizem(20);
-    text-align: center;
-    line-height: 1.4;
-    span{display: block;}
-    margin-bottom: 3em;
-    }
-
   }
 
-  
+  .main {
+    padding: 0 sizem(30);
+    width: 100%;
+}
+
+.txt {
+  .title{
+    &::after,
+    &::before{
+      width: 0;
+    }
+  }
+  .hr{
+    width: sizem(100);
+    margin: sizem(20) auto sizem(10);
+    }
+}
+
+
+
+  .slider {
+    height: auto;
+    width: 100%;
+
+    .caption {
+    font-size:sizem(12); 
+    right:sizem(5);
+    bottom:sizem(5); 
+    }
+    .slide-item {
+      @apply bg-cover;
+      width: 100%;
+    flex-basis: auto;
+      height: sizem(250);
+      
+    }
+  }
+  }
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
 
-const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-  smoothScroll({
-    scrollTo: document.querySelector(el)
-  })
+const getImg = (path) => {
+  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
+  return new URL(`./${path}_m.jpg`, import.meta.url).href
 }
+
+const splide = ref();
+
+const currentSlideIndex = ref(0);
+
+const moved = (newIdx, prevIdx, destIdx) => {
+  currentSlideIndex.value = prevIdx
+}
+
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: true,
+  autoplay: true,
+  interval: 4000,
+  gap: 0,
+  type: 'loop'
+}
+
+const imgs = [
+  {
+    img:new URL("./s9/1.webp", import.meta.url).href ,
+    caption: "2019榮耀之星"
+  },
+  {
+    img:new URL("./s9/2.webp", import.meta.url).href ,
+    caption: "2013信義之冠"
+  },
+  {
+    img:new URL("./s9/3.webp", import.meta.url).href ,
+    caption: "明德春天2"
+  },
+  {
+    img:new URL("./s9/4.webp", import.meta.url).href ,
+    caption: "1991得意人生一"
+  },
+  {
+    img:new URL("./s9/5.webp", import.meta.url).href ,
+    caption: "1994得意人生二"
+  },
+  {
+    img:new URL("./s9/6.webp", import.meta.url).href ,
+    caption: "2005鎮金殿"
+  },
+  
+]
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
+

@@ -1,33 +1,14 @@
-
-
 <template>
   <article class="s4">
-    <div class="bg">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-    </div>
-  <div class="txt">
-    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">International City Model</h3>
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">昨日東京車站，明日桃園新站</h3>
-    <hr class="hr" v-if="isMobile">
-  </div>
+
+  
     <div class="main">
       <div class="txt">
-        <transition name="fade" mode="out-in">
-          <h4 class="subtitle" :key="currentImg.subtitle" v-html="currentImg.subtitle"></h4>
-        </transition>
-        <transition name="fade" mode="out-in">
-        <p :key="currentImg.desc" v-html="currentImg.desc"></p>
-        </transition>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">從通勤到城市戰略<br>永寧站已超越永寧站</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">散步約900米距離直抵板南線永寧站，更迎來萬大線、三鶯線雙軌通車，構築三捷共構的黃金轉運樞紐。
+永寧轉運站正式啟用，聯動桃園與雙北交通動脈，串起居住、就業與生活的快速網絡。搭配國道三號、金城交流道與台65線，貫穿土城、板橋、新莊與新店，讓通勤效率、城市連結與資產流動性同時放大，真正落實交通複利的長效增值，打造比肩信義與新板的城市交通規格。</p>
+      </div>
     </div>
-    </div>
-
-
-
     <div class="slider" data-aos="fade">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -50,10 +31,10 @@
   @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:7em 0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
+  //flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
@@ -104,7 +85,6 @@
   text-align: justify;
 }
 
-
 .txt {
   
   .title{
@@ -114,9 +94,6 @@
     }
   }
 }
-
-
-
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -129,11 +106,11 @@
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
-      color: #B78E63;
+      color: #529130;
     }
     }
   }
@@ -145,9 +122,9 @@
 @media screen and (max-width: 767px) {
 
   .s4 {
-  @apply flex-col;
-    height: auto;
-    padding: 0;
+  flex-direction: column-reverse;
+  height: auto;
+  padding:0 0 5em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
@@ -245,15 +222,19 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/1.webp", import.meta.url).href ,
-    caption: "東京車站",
-    subtitle: "TOD×CBD雙核引擎<br>三鐵共構 贏接黃金未來",
-    desc: "對位世界大都會車站，借鑑東京車站六本木，桃園新站蓄勢啟幕！桃園新站導入TOD×CBD雙引擎開發量能，力邀荷蘭建築師Mecancoo結合航空城意象，以摺紙飛機的輕躍天花，打造台灣難得一見國際級車站；主體建築規劃地上三層地下二層車站，以共構方式「鐵路在上、捷運在下」結合台鐵、捷運、巴士和商業空間的交通匯流，具有轉運、購物、商辦、等多功能場域。旅運人次直追台北車站，錢潮商機聚合，贏接桃園都會新盛世。",
- },
+    caption: "永寧轉運站"
+  },
   {
     img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "桃園車站完工示意圖",
-    subtitle: "大後站旗艦計畫<br>舊城再生×都市更新複刻信義計畫",
-    desc: "大後站計劃即將發威，中正路、延平路打通，繁華不再楚河漢界！連動桃園新站開發，形塑千億新站特區，同時活化台銀土地、閒置工業區feat.倉儲用地轉型、住宅區都市更新，百貨巨頭、頂尖企業進駐，圍塑燙金增值版圖，共鳴國際CBD氣度，磁吸菁英人口紅利。",
+    caption: "永寧轉運站"
+  },
+  {
+    img:new URL("./s4/3.webp", import.meta.url).href ,
+    caption: "永寧轉運站"
+  },
+  {
+    img:new URL("./s4/4.webp", import.meta.url).href ,
+    caption: "國道3號、65快速道路"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

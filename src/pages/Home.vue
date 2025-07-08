@@ -10,16 +10,17 @@
   </div>
   <!--loading end-->
    <Nav v-if="config.showNav" />
-  <div class="home bg-[#012265] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+  <div class="home bg-[#000000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     
-    <img src="@/section/s1/bg.webp" class="bgh">
+    <img src="@/section/s1/bgm667.webp" class="bgh mob">
+    <img src="@/section/s1/bg.webp" class="bgh pc">
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
     <!-- <S2v /> -->
-    <S2 />
+    <!--S2 /-->
     <S12 />
     <S3 />
     <S4 />
@@ -28,6 +29,7 @@
     <S7 />
     <S8 />
     <S9 />
+    <S10 />
   <!--
     <S11 />
     <div class="bg">
@@ -50,6 +52,14 @@
      transform:scale(1);opacity: 1;
   }
 }
+
+.mob{
+    display: none;
+  }
+ .pc{
+  display: block;
+ }
+
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
     span{
       position: absolute;
@@ -62,6 +72,7 @@
     }
   }
 
+  
   .bgh{
     opacity: .3;
     margin: 0 auto;
@@ -127,8 +138,8 @@ img {
     }
   }
   .subtitle{
-    font-size: size(25);
-    font-weight: 500;
+    font-size: size(30);
+    font-weight: 700;
     margin: 0 0 .8em;
     color:#fff;
     line-height: 1.5;
@@ -186,13 +197,21 @@ img {
   }
 }
 @media screen and (max-width: 767px) {
+
+
+.mob{
+    display: block;
+  }
+ .pc{
+  display: none;
+ }
   
 
 .home > .bgh{
-  width: 200%;
+  width: 100%;
   text-align: center;
-  left: -50%;
-  top: 20%;
+  left: 0%;
+  top: 0%;
 }
   .caption{
       font-size: sizem(12);}
@@ -211,7 +230,11 @@ img {
       position: absolute;}
   }
   .subtitle{
-    font-size: 1.4em;
+    font-size: sizem(20);
+    text-align: center
+  }
+  .desc{
+    font-size: sizem(14);
   }
   }
 .slider {
@@ -247,7 +270,7 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
+//import S2 from "@/section/s2.vue"
 // import S2v from "@/section/s2v.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
@@ -257,7 +280,7 @@ import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S12 from "@/section/s12.vue"
-//import S10 from "@/section/s10.vue"
+import S10 from "@/section/s10.vue"
 // import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue"
@@ -267,6 +290,8 @@ import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
+
+
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')

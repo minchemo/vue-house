@@ -1,33 +1,13 @@
-
-
 <template>
   <article class="s7">
-    <div class="bg">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-    </div>
-  <div class="txt">
-    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Living in a Green Forest </h3>
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">擁抱公園綠意 迎接植感生活</h3>
-    <hr class="hr" v-if="isMobile">
-  </div>
+
+  
     <div class="main">
       <div class="txt">
-        <transition name="fade" mode="out-in">
-          <h4 class="subtitle" :key="currentImg.subtitle" v-html="currentImg.subtitle"></h4>
-        </transition>
-        <transition name="fade" mode="out-in">
-        <p :key="currentImg.desc" v-html="currentImg.desc"></p>
-        </transition>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">學府選在眼前<br>視野才能超前</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">「松陽馥麗」正對在地明星學區土城國中以及附設幼兒園，鄰近土城國小、學府路文教軸線，打造穩定且優質的完整學區環境。周邊預定3700坪「You-niverse」青創基地，新北市府強力推動，將結合創業育成、科技研發、藝術展演與國際交流四大機能，未來將成為新北版華山文創園區。<br>基礎教育的穩定扎根，到創新實踐的場域拓展，學習不再只是過程，而是一場會隨時間逐層加值的知識複利，為孩子的人生拉出更長遠的上升曲線。</p>
+      </div>
     </div>
-    </div>
-
-
-
     <div class="slider" data-aos="fade">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -47,12 +27,13 @@
 @import '@/assets/style/function.scss';
 
 .s7 {
-  @apply relative flex items-center justify-center text-[#fff];
+  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:7em 0;
   font-size:size(18);
   gap:3em;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
@@ -103,7 +84,6 @@
   text-align: justify;
 }
 
-
 .txt {
   
   .title{
@@ -113,9 +93,6 @@
     }
   }
 }
-
-
-
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -128,11 +105,11 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
-      color: #C9A063;
+      color: #529130;
     }
     }
   }
@@ -144,9 +121,9 @@
 @media screen and (max-width: 767px) {
 
   .s7 {
-  @apply flex-col;
-    height: auto;
-    padding: 0;
+  flex-direction: column-reverse;
+  height: auto;
+  padding:0 0 5em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
@@ -244,22 +221,17 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/1.webp", import.meta.url).href ,
-    caption: "77藝文町",
-    subtitle: "16公里香榭大道 蒼翠相棲 私語四季",
-    desc: "超越公園價值，成就整座桃心的馥郁，桃園鐵路地下化後的舊鐵道，規劃打造16公里香榭大道，用自然綠蔭溫柔消弭都會邊際，蓊鬱樹海篩落細碎天光，自在漫步其上，自然是城市原點，更是未來錨點。",
- },
+    caption: "土城國中"
+  },
   {
     img:new URL("./s7/2.webp", import.meta.url).href ,
-    caption: "陽明運動公園",
-    subtitle: "3萬坪陽明運動公園 桃園的中央公園",
-    desc: "擁有綠蔭景深才是品味人生！三萬坪陽明公園，營造桃心慢活時區，遊戲場、體健區、生態教育應有盡有，大人在樹海中跑出健康，孩童在滑梯旁玩耍成長，大手拉小手奔赴草地懷抱，一座陽明運動公園，留住時序節氣，裝載滿城歡聲笑語。",
+    caption: "土城國小"
   },
   {
     img:new URL("./s7/3.webp", import.meta.url).href ,
-    caption: "延平公園",
-    subtitle: "3萬坪陽明運動公園 桃園的中央公園",
-    desc: "擁有綠蔭景深才是品味人生！三萬坪陽明公園，營造桃心慢活時區，遊戲場、體健區、生態教育應有盡有，大人在樹海中跑出健康，孩童在滑梯旁玩耍成長，大手拉小手奔赴草地懷抱，一座陽明運動公園，留住時序節氣，裝載滿城歡聲笑語。",
+    caption: "土城國小"
   },
+  
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title text-center font-['Noto_Serif_TC',serif]" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
       <!-- Form -->
@@ -102,6 +102,9 @@
  // padding-top: size(406);
    overflow: hidden;
     min-height: size(500);
+    background:url("@/section/form/bg.webp");
+    background-size: auto;
+    background-position: top;
 
   .bg-image {
     position: absolute;
@@ -116,10 +119,9 @@
 .order {
   width: 100%;
   padding-top: size(40);
-  /*
-  background:url("@/section/form/bg.jpg");
-  background-size: auto;
-  */
+  
+  
+  
  // background: linear-gradient(to bottom, #195c45, #000704);
   
 
@@ -128,7 +130,8 @@
     font-size: size(40);
     font-weight: 700;
     color: #FFF;
-    padding-top:1.5em;
+    padding-top:8em;
+    //padding-bottom:.3em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
     .line{width: size(439);}
   }
@@ -212,8 +215,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #FFF;
-    background-color: #8b6c3d;
+    color: #000;
+    background-color: #BED400;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: .5em;
@@ -237,6 +240,8 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
+    background:url("@/section/form/bgm.webp");
+    background-size: cover;
     // overflow: hidden;
    // padding-top: sizem(200);
 
@@ -252,6 +257,7 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+    
 
     .cus-divider {
       margin: 0 auto;
@@ -259,11 +265,13 @@
       height: sizem(2);
       margin-bottom: sizem(25);
       background-color: #055F76;
+      
     }
 
     .order-title {
       font-size: sizem(27);
-      padding-top:2em;
+      padding-top:10em;
+      padding-bottom:.3em;
       .line{width: sizem(258);}
     }
     .order-subTitle{

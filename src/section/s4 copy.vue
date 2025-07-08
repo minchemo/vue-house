@@ -2,22 +2,32 @@
 
 <template>
   <article class="s4">
-    <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s4/img.png" /></div>
+    <div class="bg">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
+      <span v-if="!$isMobile()"></span>
+    </div>
   <div class="txt">
-    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Leading the New Era</h3>
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">領銜未來前鋒 先得桃園紅心！</h3>
+    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">International City Model</h3>
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">昨日東京車站，明日桃園新站</h3>
     <hr class="hr" v-if="isMobile">
   </div>
     <div class="main">
-      <div class="txt" data-aos="fade-up" data-aos-delay="300">
-<transition name="fade" mode="out-in">
+      <div class="txt">
+        <transition name="fade" mode="out-in">
           <h4 class="subtitle" :key="currentImg.subtitle" v-html="currentImg.subtitle"></h4>
         </transition>
         <transition name="fade" mode="out-in">
         <p :key="currentImg.desc" v-html="currentImg.desc"></p>
         </transition>
-      </div>
     </div>
+    </div>
+
+
+
     <div class="slider" data-aos="fade">
       <div class="arrows">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -45,9 +55,46 @@
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
+  .bg{
+    span{
+      &:nth-child(1){
+        top: 1vw;
+        left: 10vw;
+        font-size: 3.5vw;
+      }
+      &:nth-child(2){
+        top: 12vw;
+        left: 2vw;
+        font-size: 2vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 7vw;
+        font-size: 9vw;
+        transform: scale(.8);
+        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        animation-delay: 1.8s;
+      }
+      &:nth-child(4){
+        top: 5vw;
+        left: 26vw;
+        font-size: 1.5vw;
+      }
+      &:nth-child(5){
+        top: 12vw;
+        right: 33vw;
+        font-size: 4.5vw;
+      }
+      &:nth-child(6){
+        top: 12vw;
+        right: 1vw;
+        font-size: 2.5vw;
+        animation-delay: 1.5s;
+      }
+    }
+  }
 
-.img{position: absolute;bottom:0;right:size(50);width:size(795);
-img{width: 100%;position: relative;}}
+
 
   .main {
     @apply flex;
@@ -56,30 +103,24 @@ img{width: 100%;position: relative;}}
   flex-direction: column;
   text-align: justify;
 }
-  .txt {
-    position: relative;
-    font-weight: 300;
-    letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;
+
+
+.txt {
+  
   .title{
     &::after,
     &::before{
       width: 11.1em;
     }
   }
-  .subtitle{
-    color:#fff;
-  }
-  .desc{
-    b{
-    color:#B78E63;}
-  }
-  }
+}
+
+
 
   .slider {
     margin: 0;
     flex-basis: size(840);
+    width: size(840);
       height: size(560);
     .slide-item {
       @apply bg-cover;
@@ -113,28 +154,45 @@ img{width: 100%;position: relative;}}
   gap:2em;
 
 .img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
+.bg{
+    span{
+      &:nth-child(1){
+        top: 4vw;
+        left: 82vw;
+        font-size: 6vw;
+      }
+      &:nth-child(2){
+        top: 57vw;
+        left: 2vw;
+        font-size: 8vw;
+      }
+      &:nth-child(3){
+        top: 3vw;
+        left: 77vw;
+        font-size: 23vw;
+      }
+    }
+  }
 
   .main {
     padding: 0 sizem(30);
     width: 100%;
 }
 
-
 .txt {
   .title{
-    font-size: 1.8em;
     &::after,
     &::before{
-      width: 4.2em;}
-  }
-  .subtitle{
-    font-size: 1.4em;
+      width: 0;
+    }
   }
   .hr{
     width: sizem(100);
     margin: sizem(20) auto sizem(10);
     }
-  }
+}
+
+
 
   .slider {
     height: auto;
@@ -159,6 +217,7 @@ img{width: 100%;position: relative;}}
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
@@ -185,28 +244,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: "中山北水碓商圈實景拍攝",
-    subtitle: "淡水最火熱的中山北路水碓商圈",
-    desc: "中山北路核心商圈，淡水人最愛全能生活超強機能<br>傳統市場，連鎖餐飲，電信公司，銀行，<br>所有民生必需，走路就可到<br>還有8-10線公車，到哪都方便",
+    img:new URL("./s4/1.webp", import.meta.url).href ,
+    caption: "東京車站",
+    subtitle: "TOD×CBD雙核引擎<br>三鐵共構 贏接黃金未來",
+    desc: "對位世界大都會車站，借鑑東京車站六本木，桃園新站蓄勢啟幕！桃園新站導入TOD×CBD雙引擎開發量能，力邀荷蘭建築師Mecancoo結合航空城意象，以摺紙飛機的輕躍天花，打造台灣難得一見國際級車站；主體建築規劃地上三層地下二層車站，以共構方式「鐵路在上、捷運在下」結合台鐵、捷運、巴士和商業空間的交通匯流，具有轉運、購物、商辦、等多功能場域。旅運人次直追台北車站，錢潮商機聚合，贏接桃園都會新盛世。",
  },
   {
-    img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "老街人文商圈實景拍攝",
-    subtitle: "老街人文商圈",
-    desc: "伴著河岸風情、品嚐美食小吃<br>阿給、魚丸湯、鐵蛋、魚酥、蝦捲、酸梅汁⋯<br>米店、餅舖、雜貨店、布行，散發濃濃古早味<br>服飾、玩具、紀念品小棧、伴手禮專賣店，吸睛又有趣",
-  },
-  {
-    img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "情境示意圖",
-    subtitle: "家樂福商圈行政中心",
-    desc: "家樂福、全聯、麥當勞、星巴克、燦坤、寶雅<br>便利商店、連鎖餐飲林立<br>還有行政中心、運動中心、雙語國小<br>　",
-  },
-  {
-    img:new URL("./s4/4.jpg", import.meta.url).href ,
-    caption: "真理街學區實景拍攝",
-    subtitle: "真理大學文教圈",
-    desc: "以新民街、新生街為中心的生活圈，<br>店家林立、生活機能健全<br>鄰近紅毛城、小白宮、滬尾砲台、雲門等人文勝地<br>文化藝術氣息濃厚，還有淡江高中、淡水國小、文化國小",
+    img:new URL("./s4/2.webp", import.meta.url).href ,
+    caption: "桃園車站完工示意圖",
+    subtitle: "大後站旗艦計畫<br>舊城再生×都市更新複刻信義計畫",
+    desc: "大後站計劃即將發威，中正路、延平路打通，繁華不再楚河漢界！連動桃園新站開發，形塑千億新站特區，同時活化台銀土地、閒置工業區feat.倉儲用地轉型、住宅區都市更新，百貨巨頭、頂尖企業進駐，圍塑燙金增值版圖，共鳴國際CBD氣度，磁吸菁英人口紅利。",
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

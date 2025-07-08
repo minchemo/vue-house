@@ -128,7 +128,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #032763cc;
+        background: #001d05b0;
         width:100%;
         height: size(60);
         z-index: 5;
@@ -145,6 +145,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            
             // gap: size(10);
             letter-spacing: 0.1em;
             white-space: nowrap;
@@ -155,6 +156,7 @@
 
             &:after {
                 content: '';
+                color: #000;
                 position: absolute;
                 bottom: -5px;
                 width: 0%;
@@ -170,14 +172,14 @@
                 }
             }
             &.btn2{
-                background:#C9A063;
-;
+                background:#BED400;
+                color: #000;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
 
                 &:hover {
-                    background:#8b6c3d;
+                    background:#677200;
                     &:after {
                         width:0;
                     }

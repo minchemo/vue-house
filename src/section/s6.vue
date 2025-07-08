@@ -1,24 +1,11 @@
-
-
 <template>
   <article class="s6">
-    <div class="bg">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-    </div>
-  <div class="txt">
-    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Luxury Style Daily</h3>
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">繁華精彩 時尚生活掌心擁有</h3>
-    <hr class="hr" v-if="isMobile">
-  </div>
+
+  
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">站前百貨聚場 高奢娛樂派對</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">桃園新站未來將以空橋連通遠東百貨，並肩ATT筷時尚、新光三越、威秀影城、統領廣場等時尚龍頭，高訂站前主秀場。美饌佳釀款待味蕾，國際精品增添日常高光，享樂為尊，駕馭城心繁華，是「展志縱橫時代」的專屬特權。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">不必刻意養生<br>森活就會自己養你</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">當城市不再只是水泥與鋼筋，生活才真正回歸本質。「松陽馥麗」坐擁天上山、向天山、文筆山三大森林步道，萬坪綠意就是日常風景，成為你日常健康的靠山，構築難以被複製的森活版圖。<br>每一次與自然的連結，都是對身心健康的長期投資。當散步、呼吸、沉靜與運動融入日常節奏，森活日常便化為一種無聲的健康複利，年年累積、日日生息，讓回家的每一步都更接近理想人生。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -43,10 +30,10 @@
   @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:7em 0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
+  //flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
@@ -118,11 +105,11 @@
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
-      color: #B78E63;
+      color: #529130;
     }
     }
   }
@@ -134,9 +121,9 @@
 @media screen and (max-width: 767px) {
 
   .s6 {
-  @apply flex-col;
-    height: auto;
-    padding: 0;
+  flex-direction: column-reverse;
+  height: auto;
+  padding:0 0 5em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
@@ -234,15 +221,19 @@ const options = {
 const imgs = [
   {
     img:new URL("./s6/1.webp", import.meta.url).href ,
-    caption: "新光三越"
+    caption: "土城桐花公園步道"
   },
   {
     img:new URL("./s6/2.webp", import.meta.url).href ,
-    caption: "ATT筷食尚"
+    caption: "土城桐花公園"
   },
   {
     img:new URL("./s6/3.webp", import.meta.url).href ,
-    caption: "遠東百貨"
+    caption: "永寧廣場"
+  },
+  {
+    img:new URL("./s6/4.webp", import.meta.url).href ,
+    caption: "永寧廣場"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

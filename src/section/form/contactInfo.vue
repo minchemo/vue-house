@@ -139,8 +139,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #C9A063;
-      color: #FFF;
+      background-color: #BED400;
+      color: #000;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -156,11 +156,11 @@
       gap: 1em;
 
       &:hover {
-        background-color: #8b6c3d;
-        color: #fff;
+        background-color: #677200;
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
       }
 
@@ -168,7 +168,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
         transition: all .5s;
         margin: 0;
       }
@@ -204,17 +204,17 @@
         flex:1;
   //    background-color: #9B1E44;
       border-left-width: 0;
-        color: #FFF;
+        color: #000;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
 
         &:hover {
    //     background-color: #C29267;
-          color: #fff;
+          color: #000;
           img {
-            filter: brightness(0) invert(1);
+            filter: brightness(0) invert(0);
           }
         }
       }
@@ -244,13 +244,13 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background:#C9A063;
+    background:#BED400;
 
     .contact-item {
       height: 100%;      
       font-size: sizem(16);
       font-weight: 400;
-      color: #fff;
+      color: #000;
       border-left:1px solid #fff7;
 
       img {
@@ -258,7 +258,7 @@
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
       }
 
     }

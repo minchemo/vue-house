@@ -19,33 +19,33 @@ export default {
         ["行銷企劃", "五率國際地產行銷"],
         ["經 紀 人", "何成英 (112)新北經字第004095號"],
     ],
-    gtmCode: ["GTM-0000000",], // 可放置多個
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    gtmCode: ["GTM-MKH2GFP3",], // 可放置多個
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+   // recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約賞屋",
+        title: "複利未來 從一次預約展開",
         subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
-    selectFields: {
-        room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
-          option: ["三房"],
-          bypass:false,
-        },
-        budget: {
-          title: "購屋預算",
-          hold: "請選擇區間",
-          option: ["2388~2588萬","2688~2888萬"],
-          bypass:false, //必填開啟使用
-        },
+    //selectFields: {
+    //    room_type: {
+    //      title: "需求房型",
+    //      hold: "請選擇房型",
+    //      option: ["三房"],
+    //      bypass:false,
+    //    },
+    //    budget: {
+    //      title: "購屋預算",
+    //      hold: "請選擇區間",
+    //      option: ["2388~2588萬","2688~2888萬"],
+    //      bypass:false, //必填開啟使用
+    //    },
         /*
         use_type: {
           title: "使用用途",
@@ -53,42 +53,47 @@ export default {
           option: ["自住", "投資", "租賃"]
       },
         */
-  },
+  //},
 
     navList: [
         {
-            name: "縱橫未來",
-            target: ".s2",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "三心六線",
+            name: "未來複利",
             target: ".s3",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "舊城新生",
+            name: "交通複利",
             target: ".s4",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "三鐵共構",
+            name: "科技複利",
             target: ".s5",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "繁華時尚",
+            name: "健康複利",
             target: ".s6",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "香榭綠馥",
+            name: "知識複利",
             target: ".s7",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "展志品牌",
+            name: "核心複利",
             target: ".s8",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "品牌複利",
+            target: ".s9",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "建築複利",
+            target: ".s10",
             offset: "-60",
             offsetmo: "0",
         },{

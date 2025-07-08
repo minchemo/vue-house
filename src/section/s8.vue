@@ -1,24 +1,11 @@
-
-
 <template>
   <article class="s8">
-    <div class="bg">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-      <span v-if="!$isMobile()"></span>
-    </div>
-  <div class="txt">
-    <h3 class="title-sub font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">About CHAN CHIC</h3>
-    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="100">桃園績優品牌 展志建設</h3>
-    <hr class="hr" v-if="isMobile">
-  </div>
+
+  
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">用自住心說好一個家的故事</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">「在想像建築之前，先想像自己嚮往的生活輪廓。」<br>展志建設創立20年來，細究桃園每一寸土地紋理，永不甘自我滿足。視每一座建築為自己的家，眼光嚴謹挑剔，針對美學、尺度、格局、選材、施工等細節不斷進化，冶煉居宅品味的職人精神，昇華藝術價值、實用機能兼容的層次，將作品推至國際格局。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">坐鎮雙城正核心<br>城市繁華等你一聲號令</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">一座城不夠看，板橋土城雙城才痛快！「松陽馥麗」坐落新土城永寧生活圈，5分鐘新板特區，精準踏穩雙城生活圈正核心。<br>向北可快速連接板橋大遠百百貨、威秀影城與國際級商辦，向南則坐擁永寧商圈、大潤發、公園、學區等成熟生活機能。都市生活不再只有單一選擇，而是從容切換繁華與靜謐、效率與自在的雙軸平衡。生活的每一步都走在最核心的節奏上，雙城資源無縫接軌。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -43,10 +30,10 @@
   @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
+  padding:7em 0;
   font-size:size(18);
   gap:3em;
-  flex-direction: row-reverse;
+  //flex-direction: row-reverse;
   flex-wrap: wrap;
   .bg{
     span{
@@ -118,11 +105,11 @@
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
-      color: #B78E63;
+      color: #529130;
     }
     }
   }
@@ -134,9 +121,9 @@
 @media screen and (max-width: 767px) {
 
   .s8 {
-  @apply flex-col;
-    height: auto;
-    padding: 0;
+  flex-direction: column-reverse;
+  height: auto;
+  padding:0 0 5em 0;
   font-size:sizem(12);
   flex-wrap:nowrap;
   margin-bottom:0em;
@@ -194,7 +181,7 @@
     }
     .slide-item {
       @apply bg-cover;
-      width: 100%; 
+      width: 100%;
     flex-basis: auto;
       height: sizem(250);
       
@@ -234,35 +221,27 @@ const options = {
 const imgs = [
   {
     img:new URL("./s8/1.webp", import.meta.url).href ,
-    caption: "情境示意圖"
+    caption: "日月光廣場"
   },
   {
     img:new URL("./s8/2.webp", import.meta.url).href ,
-    caption: "天玉晴山實景圖"
+    caption: "土城大潤發"
   },
   {
     img:new URL("./s8/3.webp", import.meta.url).href ,
-    caption: "安騰居建築外觀修飾圖"
+    caption: "大廟市場"
   },
   {
     img:new URL("./s8/4.webp", import.meta.url).href ,
-    caption: "展志千雅外觀"
+    caption: "UNIQLO"
   },
   {
     img:new URL("./s8/5.webp", import.meta.url).href ,
-    caption: "展志學實景圖"
+    caption: "五分鐘到新板特區"
   },
   {
     img:new URL("./s8/6.webp", import.meta.url).href ,
-    caption: "涵韻實景圖"
-  },
-  {
-    img:new URL("./s8/7.webp", import.meta.url).href ,
-    caption: "謙境實景圖"
-  },
-  {
-    img:new URL("./s8/8.webp", import.meta.url).href ,
-    caption: "馥境觀美實景圖"
+    caption: "全聯福利中心"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

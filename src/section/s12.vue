@@ -14,7 +14,7 @@
 .s12 {
   @apply relative overflow-hidden bg-[#008DD5];
   width: 100%;
-  height: size(1405);
+  height: size(1080);
   padding-top:0;
   font-size:size(18);
   .txt {
