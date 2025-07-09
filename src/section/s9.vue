@@ -218,7 +218,7 @@ const options = {
 }
 
 const imgs = [
-  {
+   {
     img:new URL("./s9/1.webp", import.meta.url).href ,
     caption: "2019榮耀之星"
   },
@@ -227,22 +227,21 @@ const imgs = [
     caption: "2013信義之冠"
   },
   {
-    img:new URL("./s9/3.webp", import.meta.url).href ,
-    caption: "明德春天2"
+    img:new URL("./s9/6.webp", import.meta.url).href ,
+    caption: "2005鎮金殿"
   },
   {
-    img:new URL("./s9/4.webp", import.meta.url).href ,
-    caption: "1991得意人生一"
+    img:new URL("./s9/3.webp", import.meta.url).href ,
+    caption: "2001明德春天"
   },
   {
     img:new URL("./s9/5.webp", import.meta.url).href ,
     caption: "1994得意人生二"
   },
   {
-    img:new URL("./s9/6.webp", import.meta.url).href ,
-    caption: "2005鎮金殿"
+    img:new URL("./s9/4.webp", import.meta.url).href ,
+    caption: "1991得意人生一"
   },
-  
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
