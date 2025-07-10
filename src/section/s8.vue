@@ -84,6 +84,8 @@
   text-align: justify;
 }
 
+
+
 .txt {
   
   .title{
@@ -92,6 +94,8 @@
       width: 11.1em;
     }
   }
+
+  
 }
   .slider {
     margin: 0;
