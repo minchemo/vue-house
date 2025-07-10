@@ -56,3 +56,4 @@ createApp(App)
   }),
       )
     .mount("#app")
+document.dispatchEvent(new Event('render-event'))

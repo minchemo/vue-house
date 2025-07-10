@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 import { resolve } from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
+import VitePluginPrerender from 'vite-plugin-prerender'
 
 export default defineConfig({
   resolve: {
@@ -43,6 +44,11 @@ export default defineConfig({
           },
         ],
       },
+    }),
+    VitePluginPrerender({
+      staticDir: resolve(__dirname, 'dist'),        
+      routes: ['/', '/index.html'],
+      renderAfterDocumentEvent: 'render-event',  
     }),
   ],
     server: {
