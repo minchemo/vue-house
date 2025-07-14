@@ -271,7 +271,7 @@ export default {
       formData.append("msg", this.form.msg);
       formData.append("room", this.form.room);
       formData.append("message", this.form.msg);//case_code 新系統必要
-      formData.append("case_code", "taurus");//case_code 新系統必要
+      formData.append("case_code", "58dcb63a-0843-47a6-996b-bfa8f8751a74");//case_code 新系統必要
       // formData.append('time_start', this.form.time_start)
       // formData.append('time_end', this.form.time_end)
       formData.append("city", this.form.city);
