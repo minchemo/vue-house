@@ -14,19 +14,16 @@
                                 v-html="item[1]">
                             </p>
                         </div>
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap">
-                            <p class=" pl-2 whitespace-pre-line leading-normal text-left font-normal">民間新建建築類(H-2住宅)
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- -->
+    <img src="@/section/s1/hr.webp" alt="hr" class="houseimg" />
+    <!--
     <div class="house bg-[#b6006499] flex items-center justify-center py-6 ">
           <img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset="">
-    </div>
+    </div> -->
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="//h35.banner.tw/img//footerLogo.gif" alt="立炘數位" srcset=""></a>
@@ -37,8 +34,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#32B8C3;
-$house-c2:#000;
+$house-c1:#fff;
+$house-c2:#fff;
 .displaynone{display: none;}
 .house {
    // height: auto;
@@ -53,7 +50,7 @@ $house-c2:#000;
     .title {
         font-size: size(40);
         font-weight: 700;
-        color: $house-c1;
+        color: #000;//$house-c1;
         margin: 0 auto 1em auto;
     }
 
@@ -61,13 +58,19 @@ $house-c2:#000;
         row-gap: size(20);
         column-gap: size(20);
 
+        margin-bottom:size(80);
         .item {
             line-height: size(17);
             font-size: size(16);
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
-            border-left: 2px solid $house-c1;
+           // border-left: 2px solid $house-c1;
+           &::before{
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3CradialGradient id='fg' cx='9' cy='9' fx='7' fy='7' r='13' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f7dd9e'/%3E%3Cstop offset='.4' stop-color='%23ffa813'/%3E%3Cstop offset='1' stop-color='%23ac572e'/%3E%3C/radialGradient%3E%3Ccircle fill='url(%23fg)' cx='10' cy='10' r='10'/%3E%3C/svg%3E");
+            display: block;
+            width: .7em;
+        }
 
              .sub{
               color: $house-c1;
@@ -76,13 +79,15 @@ $house-c2:#000;
         }
     }
 }
-
+.houseimg{width: 100%;}
 @media screen and (max-width:768px) {
 .house {
     // background:#fff;
   //  height: sizem(400);
     font-size: sizem(13);
 }
+
+.houseimg{width: 100%;object-fit: cover;height: 16.5vw;}
     .footer {
         margin-bottom: sizem(0);
         //margin-bottom: sizem(63);
