@@ -168,7 +168,7 @@ img{width: 100%;
       gap: 1em;
 
       &:hover {
-        background: linear-gradient(90deg, #FFC38B 0%, #E07B2D 53%, #AB5724 100%);
+        background: linear-gradient(90deg, #ffa654 0%, #ff6f00 53%, #b34400 100%);
         color: #fff;
 
         img {

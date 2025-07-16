@@ -1,7 +1,7 @@
 <template>
     <!--  -->
     <div class="house" v-if="info.houseInfos.length > 0">
-    <img src="@/section/s1/bg1m.png" alt="bg" class="houbg">
+    <img src="@/section/s1/bg1m.png" alt="bg" class="houbg" v-if="isMobile">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
             
             <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
