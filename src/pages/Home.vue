@@ -50,25 +50,25 @@
   opacity: 0;
 }
 .home{ 
- background: linear-gradient(66deg, #FFC38B 0%, #E07B2D 52%, #AB5724 100%);
-
+ //background: linear-gradient(66deg, #FFC38B 30%, #e97721 60%, #b85213 100%);
+/*
   &::before{content: "";
-  background: url("@/section/s1/bg1.png");
-  background-size: 100% auto;
   width: 100%;
   height: auto;
   position: fixed;
   left: 0;right: 0;top:0;bottom: 0;
 //transform: translateX(0%) rotate(360deg);filter: blur(10px);
   //animation: bg 40s linear infinite;
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 768px) {
+  background-image: url("@/section/s1/bg1.png");
+  background-size: 100% auto;
    // width: 240%;
    // height: 240vw;
    // left: -70%;
    // top: calc(50% - 120vw);
   }
 }
-
+*/
 
 }
 

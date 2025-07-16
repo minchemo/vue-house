@@ -1,8 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="ball1"><img src="./s1/ball.webp" alt="img"></div>
-      <div class="ball2"><img src="./s1/ball.webp" alt="img"></div>
+      <div class="ball1a"></div>
+      <div class="ball2a"></div>
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
@@ -146,35 +146,33 @@
    overflow: hidden;
     min-height: size(500);
     padding-bottom:size(80);
-@media screen and (max-width:768px) {
+ background: linear-gradient(66deg, #FFC38B 5%, #f0700f 40%,#f0700f 55%, #b64a07 90%); 
+  @media screen and (min-width: 768px) {
+ &::before{
+  content: "";position: absolute;top: 0;left: 0;
+  width: 100%;
+  height: 100%;  
+  background-image: url("@/section/s1/bg1.png");background-size: 100% auto;
+ }}
+@media screen and (max-width:767px) {
     padding-bottom:sizem(80);}
-/*
-  .bg-image {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: size(50);
-    vertical-align: middle;
-  }
-    */
   &::after{content: "";display: block;clear: both;}
 }
-.ball1{position: absolute;top:size(-510);right: size(-510);width: size(1020);
-  img{width: 100%;
-transform: rotate(180deg);
-  }
+.ball1a{position: absolute;top:size(-510);right: size(-510);width: size(1020);
+height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37515 70%, #FFC38B 85%);
 @media screen and (max-width:768px) {
   width: sizem(600);top:sizem(-300);right: sizem(-300);
+  height: sizem(600);
 }
 
 
 }
-.ball2{position: absolute;bottom:size(-510);left: size(-510);width: size(1020);
-  img{width: 100%;
-transform: rotate(0deg);}
+.ball2a{position: absolute;bottom:size(-510);left: size(-510);width: size(1020);
+height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37515 30%, #FFC38B 50%);
 
 @media screen and (max-width:768px) {
   width: sizem(600);bottom:sizem(-300);left: sizem(-300);
+  height: sizem(600);
 }
 }
 
@@ -190,10 +188,11 @@ transform: rotate(0deg);}
   .order-title {
     position: relative;
     z-index: 2;
-    font-size: size(40);
+    font-size: 32px;
+    letter-spacing: 0.1em;
     font-weight: 500;
     color: #000;
-    padding-top:1.5em;
+    padding-top:2.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
@@ -277,7 +276,7 @@ transform: rotate(0deg);}
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background:linear-gradient(90deg, #FFC38B 0%, #E07B2D 53%, #AB5724 100%);
+    background:linear-gradient(90deg, #FFC38B 0%, #f87612 53%, #b84a07 100%);
     //border: 1px solid #FFF9;
     border:0;
     border-radius: 1.7em;

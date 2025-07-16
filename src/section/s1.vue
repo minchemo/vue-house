@@ -21,7 +21,9 @@
       
     </div>
     <h1 class="t1" data-aos="zoom-in" data-aos-delay="0">台中水湳經貿✕超巨蛋特區</h1>
-    <h2 class="t2" data-aos="zoom-in" data-aos-delay="200">免千萬成家入場券</h2>
+    <!--
+    <h2 class="t2" data-aos="zoom-in" data-aos-delay="200">免千萬成家入場券</h2> -->
+    <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="200">
     <img src="./s1/t3.svg" class="t3" data-aos="zoom-in" data-aos-delay="400">
     <img src="./s1/t4.svg" class="t4" data-aos="zoom-in" data-aos-delay="600">
     <div class="t5">情境示意</div>
@@ -88,18 +90,27 @@
       top: calc(50% + #{size(150 - 1100 * .5)});
     }
   }
+  .t2{
+    position: absolute;left: 0;right: 0;margin: 0 auto;top: sizem(135);z-index: 3;filter:drop-shadow(0px 0px 3px #ed8622);
+      width: sizem(300);
+    @media screen and (min-width: 768px) {
+      top: calc(50% + #{size(250 - 1100 * .5)});
+      width: size(900);
+    }
+  }
+  /*
  .t2{
     font-weight: 900;font-size: 2.35em;
     position: absolute;left: 0;right: 0;text-align: center;
     top: sizem(125);z-index: 3;
-    background: -webkit-linear-gradient(78deg, #FFF5C0 1.06%, #FFF6C7 2.99%, #FFF7CA 5.88%, #FFF7BE 12.62%, #FFF7A5 23.23%, #FFFAC8 27.08%, #FFFDF0 31.9%, #FFF 34.8%, #FFF9D8 45.4%, #FFF5BF 55.04%, #FFF4B6 60.82%, #FFF5C1 67.57%, #FFF7CA 71.42%, #FFF8D5 73.35%, #FFFDF2 77.21%, #FFF 78.17%, #FFF8E2 82.03%, #FFF2C4 85.88%, #FFEDAF 89.74%, #FFEAA3 93.6%, #FFEA9F 97.45%);
+    background: linear-gradient(78deg, #fff2b2 5%, #fff693 23.23%, #FFF 34.8%, #fff2a5 60.82%, #FFF 78.17%, #ffe78e 97.45%);
     background-clip: text; 
     color: transparent;
     @media screen and (min-width: 768px) {
       font-size: 2.25em;
       top: calc(50% + #{size(215 - 1100 * .5)});
     }
-  }
+  } */
   .t3{
     height: 1.5em;filter:drop-shadow(0px 0px 3px #ed8622);
     margin: 0 auto;
@@ -172,7 +183,7 @@ img{width: 100%;}
 }
 .ball8{width:sizem(30);top: 48.5%;left: 75%;
   transform: translateY(-20%);
- animation: an 9s -6s linear alternate infinite;
+  animation: an 9s -6s linear alternate infinite;
   img{transform: rotate(-115deg);filter: blur(1px);}
 }
 .ball9{width:sizem(30);top: 54%;left: 75%;
@@ -184,7 +195,7 @@ img{width: 100%;}
 .ball1{width:size(190);top: 10%;left:-7%;}
 .ball2{width:size(65);top: 16%;left: 12.8%;height:size(65);}
 .ball3{width:size(109);top: 43%;left: 2%;}
-.ball4{width:size(109);top: 86%;left: 2%;opacity:  .5;}
+.ball4{width:size(109);top: 85%;left: 2%;opacity:  .5;}
 .ball5{width:size(47);top: 37%;left: 18%;
   transform: translateY(60%);
  animation: an 9s -3s linear alternate infinite;
@@ -197,8 +208,14 @@ img{width: 100%;}
   transform: translateY(40%);
  animation: an 9s -6s linear alternate-reverse infinite;
   img{transform: rotate(90deg);filter: blur(2px);}}
-.ball8{width:size(71);top: 63%;left: 60%;}
-.ball9{width:size(71);top: 71%;left: 60%;}
+.ball8{
+  width:size(71);
+  top: calc(70% + #{size(690 - 1100*.7)});
+  left: 60%;}
+.ball9{
+  width:size(71);
+  top: calc(70% + #{size(785 - 1100*.7)});
+  left: 60%;}
 .ball10{width:size(120);top: 17%;left: 82.5%;
   transform: translateY(40%);
  animation: an 9s -6s linear alternate infinite;

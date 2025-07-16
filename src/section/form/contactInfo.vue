@@ -1,8 +1,10 @@
 <template>
-  <div>
-  <div class="contact-info-img">
+  <div class="contact">
+  <div class="contact-info-img" v-if="isMobile">
+    <img src="@/section/s1/bg1m.png" alt="bg">
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+  
    <!--  <div class="logo" data-aos="zoom-in" data-aos-delay="600">
       <img src="@/section/s2/logobg.webp"><img src="@/section/s2/logo.svg"></div> -->
     <div class="flex justify-between w-full contact-item-box">
@@ -105,10 +107,14 @@
 .bg-color1{background-color: #1163A1;}
 .hover\:bg-color2:hover{background-color:#002421;}
 
-
+.contact{
+   background: linear-gradient(90deg, #a5815f 0%, #e0c8a4 38%, #ffe7bb 100%);
+}
 .contact-info-img{
   @apply relative;
-  height: 0;z-index: 52;
+  height: 0;z-index: 3;
+  img{position: absolute;top:0;left: 0;width: 100%;transform: translateY(-50%);}
+  
 }
 .contact-info {
   padding: size(55) size(0) size(55) size(0);
@@ -116,23 +122,15 @@
     min-width: 680px;
   position: relative;
   z-index: 50;
-  background: linear-gradient(90deg, #9B846E 0%, #AC967E 8%, #C7B397 22%, #DDC9AB 38%, #ECD9BA 55%, #F5E3C2 74%, #F8E6C5 100%);
-
-  &::before{content: "";
-  background: url("@/section/s1/bg1.png");
-  background-size: 100% auto;
-  width: 100%;height: 100%;position: absolute;
-  left: 0;right: 0;top:0;bottom: 0;
-//transform: translateX(0%) rotate(360deg);filter: blur(10px);
-  //animation: bg 40s linear infinite;
-  @media screen and (max-width: 767px) {
-   // width: 240%;
-   // height: 240vw;
-   // left: -70%;
-   // top: calc(50% - 120vw);
-  }
-}
-
+  /*
+  @media screen and (min-width: 768px) {
+ &::before{
+  content: "";position: absolute;top: 0;left: 0;
+  width: 100%;
+  height: 100%;  
+  background-image: url("@/section/s1/bg1.png");background-size: 100% auto;
+ }}
+  */
 
   .logo{width: size(400);margin: auto;position: relative;
 img{width: 100%;
@@ -156,7 +154,7 @@ img{width: 100%;
     // min-width: 680px;
 
     .contact-item {
-      background: linear-gradient(90deg, #FFC38B 0%, #E07B2D 53%, #AB5724 100%);
+      background: linear-gradient(90deg, #FFC38B 0%, #ec7317 53%, #b84b08 100%);
       color: #fff;
       width: 100%;
       flex: 1;
@@ -251,9 +249,6 @@ img{width: 100%;
 
 @media screen and (max-width:768px) {
 
-  .contact-info-img{
-}
-
   .mo-contact-info {
     z-index: 99;
     position: fixed;
@@ -264,7 +259,7 @@ img{width: 100%;
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     // background:#EA6DA0;
-    background: linear-gradient(180deg, #FFC38B 0%, #E07B2D 52%, #AB5724 100%);
+    background: linear-gradient(180deg, #ffd381 0%, #ec6b09 52%, #be4b02 100%);
 
 
 
@@ -273,7 +268,7 @@ img{width: 100%;
       font-size: sizem(16);
       font-weight: 400;
       color: #FFF;
-      border-left:1px solid #0003;
+      border-left:1px solid #fff3;
 
       img {
         margin-bottom: sizem(5);
@@ -321,7 +316,7 @@ img{width: 100%;
         white-space: nowrap;
         margin: 0;
 
-        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        img {
         //  max-width: sizem(27);
           height: auto;
         //  max-height: sizem(27);
@@ -370,9 +365,11 @@ img{width: 100%;
 
 <script setup>
 import info from "@/info"
-import { inject, ref } from "vue";
+import { inject, ref ,computed, getCurrentInstance} from "vue";
 const modalOpen = ref(false);
 const modalType = ref('');
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const go = () => {
   if (modalType.value == 'phone') {

@@ -18,8 +18,9 @@
                 </div>
             </div>
         </div>
+    <img src="@/section/s1/hr.webp" alt="hr" class="houseimg" v-if="!isMobile" />
+    <img src="@/section/s1/hrm.webp" alt="hr" class="houseimg" v-else />
     </div>
-    <img src="@/section/s1/hr.webp" alt="hr" class="houseimg" />
     <!--
     <div class="house bg-[#b6006499] flex items-center justify-center py-6 ">
           <img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset="">
@@ -42,26 +43,34 @@ $house-c2:#fff;
     color: $house-c2;
     font-size: size(22);
     // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
+    background: linear-gradient(246deg, #FFC38B 0%, #e97721 55%, #b64a07 100%);
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(136deg, #FFC38B 0%, #e97721 55%, #b64a07 100%);
+ &::before{
+  content: "";position: absolute;top: 0;left: 0;
+  width: 100%;
+  height: 100%;  
+  background-image: url("@/section/s1/bg1.png");background-size: 100% auto;
+ }}
 }
-.info-box {
-    width: size(800);
+.info-box {position: relative;z-index: 30;
+    width: 50em;
+    font-size: 16px;
 
     .title {
-        font-size: size(40);
+        font-size:2em;
         font-weight: 700;
         color: #000;//$house-c1;
-        margin: 0 auto 1em auto;
+        margin: 0 auto 0.7em auto;
     }
 
     .info-items {
-        row-gap: size(20);
-        column-gap: size(20);
+        row-gap:1.4em;
+        column-gap:1em;
 
-        margin-bottom:size(80);
+        margin-bottom:5em;
         .item {
             line-height: size(17);
-            font-size: size(16);
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
@@ -116,6 +125,9 @@ $house-c2:#fff;
 
 <script setup>
 import info from "@/info"
+import {computed, getCurrentInstance } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 
 </script>
