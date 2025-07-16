@@ -47,6 +47,7 @@
   background-size:cover ;
   @media screen and (min-width: 768px) {
     background: url("./s1/bg.webp");
+    background-size:cover ;
     height:100vh;
     max-height:size(1080);
     min-height:size(900);
