@@ -2,13 +2,12 @@
   <article class="s1" id="s1">
    <!-- <img src="./s1/mo.jpg" class="t0">
     <img src="./s1/mo.jpg" class="t0">  -->
-    <img src="./s1/logom.webp" class="logo" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
-      <img src="./s1/logo.webp" class="logo" data-aos="zoom-in" data-aos-delay="0" v-else>
+      <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
+
       <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
       <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
 
-      <img src="./s1/stylem.webp" class="style" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
-      <img src="./s1/style.webp" class="style" data-aos="zoom-in" data-aos-delay="400" v-else>
+      <img src="./s1/bird.webp" class="bird" data-aos="fade-up" data-aos-delay="400">
 
    <!--  <img src="./s1/s1bg.jpg" class="bg" v-else> 
     <div class="txt">
@@ -43,8 +42,11 @@
   justify-content:center;
   align-items:center;
   height:sizem(605);
-  background: #00213e;
+  //background: #d62051;
+  background: url("./s1/bgm.webp");
+  background-size:cover ;
   @media screen and (min-width: 768px) {
+    background: url("./s1/bg.webp");
     height:100vh;
     max-height:size(1080);
     min-height:size(900);
@@ -53,30 +55,49 @@
 // padding-bottom: size(140);V
  // &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
 
-.t1{width:sizem(120);margin: sizem(0) 0 sizem(0) 0;position: relative;z-index: 99;
+.t1{width:sizem(250);
+    position: absolute;
+    z-index: 99;
+    top:sizem(30);
+    right: sizem(60);
 }
-.logo{width:sizem(120);margin: sizem(-140) 0 sizem(30) 0;position: relative;z-index: 99;
-}
-.style{
+.logo{
+width:sizem(250);
+top:sizem(70);
 position: absolute;
-width:100vw;
-height: auto;
+z-index: 99;
+}
+.bird{
+position: absolute;
+width:sizem(280);
 bottom:0;
-left: sizem(0);
-right: 0;
+left: auto;
+right: sizem(40);
 top: auto;
 margin: 0;
 }
 
 @media screen and (min-width: 768px) {
-.t1{width:size(622);margin: size(20) size(700) size(0) 0;}
-.logo{width:size(631);margin: size(20) size(700) size(100) 0;}
-.style{
+
+
+.t1{
+  position: absolute;
+  right: size(60);
+  top:size(60);
+  width:size(250);}
+
+.logo{
+width:size(631);
+top:size(180);
+left: size(280);
+
+}
+.bird{
   position: absolute;
   width:auto;
   height: 100vh;
   top:size(0);
-  right: size(0);
+  right: size(100);
   left:auto;
   bottom: 0;
   rotate: 0deg;

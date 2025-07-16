@@ -1,14 +1,14 @@
-const caseName = "都匯天地"
+const caseName = "佳展建設"
 export default {
-  caseid: "a40fbc82-32dc-4886-af8f-20ace8a7e2fe",
+  caseid: "91184de3-cfb1-4bcc-8ca2-d91ef7142c5b",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新北市三重區水漾路一段58號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.452145777966!2d121.48426509999999!3d25.0526599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9128b69754d%3A0xbd33b05b11577d56!2z6YO95Yyv5aSn5qW1QTIgUEFSS-aOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1750298153921!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/ETzUeoDnH4Vg7D5g8",
-    phone: "02-2974-6688",
-    fbLink: "https://www.facebook.com/100082950231720/",
-    fbMessage: "https://m.me/100082950231720/",
+    address: "台南市安南區中央公路X州南路口",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3671.1031289203693!2d120.2182099!3d23.0566804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDAzJzI0LjEiTiAxMjDCsDEzJzA1LjYiRQ!5e0!3m2!1szh-TW!2stw!4v1752630278321!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/B5nD1zxZVMfPFWa8A",
+    phone: "06-888-8888",
+    fbLink: "https://www.facebook.com/61578255539676/",
+    fbMessage: "https://m.me/61578255539676/",
     caseName: caseName,
     houseInfos: [
         /*
@@ -21,14 +21,15 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-     gtmCode: ["GTM-T54BQ9W2"], // 可放置多個
+     gtmCode: ["GTM-00000000"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "",
+        title: "立即預約",
+        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
@@ -37,15 +38,15 @@ export default {
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
-          option: ["兩房", "三房"],
+          option: ["兩房", "三房", "四房", "店面"],
           bypass:false,
         },
-        budget: {
-          title: "購屋預算",
-          hold: "請選擇區間",
-          option: ["1600-2000萬", "2000-2500萬", "2500萬以上"],
-          bypass:false, //必填開啟使用
-        },
+        //budget: {
+        //  title: "購屋預算",
+        //  hold: "請選擇區間",
+        //  option: ["1600-2000萬", "2000-2500萬", "2500萬以上"],
+        //  bypass:false, //必填開啟使用
+        //},
         /*
         use_type: {
           title: "使用用途",

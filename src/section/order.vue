@@ -1,9 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <img src="./form/titleImgm.svg" class="order-title-img" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
-      <img src="./form/titleImg.svg" class="order-title-img" data-aos="zoom-in" data-aos-delay="0" v-else>
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title text-center font-['Noto_Serif_TC',serif]" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle"></div>
 
@@ -13,12 +11,6 @@
           <label class="row name"><span>姓名<span>*</span></span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
               @input="(event) => (formData.name = event.target.value)" /></label>
-          <div class="gender">
-            <label><input type="radio" name="gender" value="男"
-                @input="(event) => (formData.gender = event.target.value)">先生</label>
-            <label><input type="radio" name="gender" value="女"
-                @input="(event) => (formData.gender = event.target.value)">女士</label>
-          </div>
 
           <label class="row"><span>手機<span>*</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
@@ -68,7 +60,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#00213e] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#fff000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -123,14 +115,14 @@
   background-size: auto;
   */
   //background: linear-gradient(to bottom, #00a6e9, #009e41);
-  background:#c7152d;
+  background:#04836e;
 
 
 
   .order-title {
     font-size: size(40);
-    font-weight: 400;
-    color: #A30C24;
+    font-weight: 600;
+    color: #fff;
     padding-top: 1.5em;
 
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -147,7 +139,7 @@
 
   .order-subTitle {
     font-size: size(17);
-    // color: #fff;
+    color: #fff;
     padding-top: .8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -232,7 +224,7 @@
       }
 
       &.name {
-        width: calc(100% - 3.8em);
+        //width: calc(100% - 3.8em);
       }
 
       //沒有性別的話這條槓掉
@@ -306,6 +298,16 @@
       height: sizem(2);
       margin-bottom: sizem(25);
       background-color: #055F76;
+    }
+
+    .order-title {
+      font-size: sizem(27);
+      padding-top:2em;
+      .line{width: sizem(258);}
+    }
+    .order-subTitle{
+      font-size: sizem(13);
+      padding-top:0;
     }
 
     .order-title-img {
@@ -503,7 +505,7 @@ const send = () => {
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.budget}；${formData.msg}
+      &msg=${formData.room_type}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
