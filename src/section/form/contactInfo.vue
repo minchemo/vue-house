@@ -102,8 +102,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #1163A1;}
-.hover\:bg-color2:hover{background-color:#002421;}
+.bg-color1{background-color: #04836e;}
+.hover\:bg-color2:hover{background-color:#01534f;}
 
 
 .contact-info-img{
@@ -160,7 +160,7 @@ img{width: 100%;
       gap: 1em;
 
       &:hover {
-        background: #00213e;
+        background: #01534f;
         color: #fff;
 
         img {
@@ -233,7 +233,7 @@ img{width: 100%;
   }
 }
 .modal-box{
-  img{filter: invert(12%) sepia(29%) saturate(4484%) hue-rotate(205deg) brightness(98%) contrast(113%);
+  img{filter: invert(28%) sepia(62%) saturate(4118%) hue-rotate(158deg) brightness(89%) contrast(97%);
   }
 }
 
