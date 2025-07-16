@@ -1,6 +1,7 @@
 <template>
     <!--  -->
     <div class="house" v-if="info.houseInfos.length > 0">
+    <img src="@/section/s1/bg1m.png" alt="bg" class="houbg">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
             
             <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
@@ -39,6 +40,8 @@ $house-c1:#fff;
 $house-c2:#fff;
 .displaynone{display: none;}
 .house {
+    position: relative;
+    overflow: hidden;
    // height: auto;
     color: $house-c2;
     font-size: size(22);
@@ -52,6 +55,7 @@ $house-c2:#fff;
   height: 100%;  
   background-image: url("@/section/s1/bg1.png");background-size: 100% auto;
  }}
+ .houbg{position: absolute;top:0;left: 0;width: 100%;transform: translateY(-50%);}
 }
 .info-box {position: relative;z-index: 30;
     width: 50em;
@@ -61,7 +65,7 @@ $house-c2:#fff;
         font-size:2em;
         font-weight: 700;
         color: #000;//$house-c1;
-        margin: 0 auto 0.7em auto;
+        margin: 0.6em auto 0.5em auto;
     }
 
     .info-items {
@@ -88,7 +92,7 @@ $house-c2:#fff;
         }
     }
 }
-.houseimg{width: 100%;}
+.houseimg{width: 100%;position: relative;z-index: 5;}
 @media screen and (max-width:768px) {
 .house {
     // background:#fff;

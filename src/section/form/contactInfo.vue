@@ -122,7 +122,7 @@
     min-width: 680px;
   position: relative;
   z-index: 50;
-  /*
+  /*  */
   @media screen and (min-width: 768px) {
  &::before{
   content: "";position: absolute;top: 0;left: 0;
@@ -130,7 +130,7 @@
   height: 100%;  
   background-image: url("@/section/s1/bg1.png");background-size: 100% auto;
  }}
-  */
+
 
   .logo{width: size(400);margin: auto;position: relative;
 img{width: 100%;
