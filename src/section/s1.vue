@@ -210,11 +210,11 @@ img{width: 100%;}
   img{transform: rotate(90deg);filter: blur(2px);}}
 .ball8{
   width:size(71);
-  top: calc(70% + #{size(690 - 1100*.7)});
+  top: calc(52% + #{size(690 - 1100*.52)});
   left: 60%;}
 .ball9{
   width:size(71);
-  top: calc(70% + #{size(785 - 1100*.7)});
+  top: calc(52% + #{size(785 - 1100*.52)});
   left: 60%;}
 .ball10{width:size(120);top: 17%;left: 82.5%;
   transform: translateY(40%);
