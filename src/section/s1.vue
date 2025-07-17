@@ -1,8 +1,8 @@
 <template>
   <article class="s1 relative" id="s1">
     <!-- <img src="./s1/pc.jpg" class="t0"> -->
-    <img src="./s1/en.png" class="tree">
-    <img src="./s1/txt.png" class="txt" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/en.png" class="tree" alt="urban oasis">
+    <img src="./s1/txt.png" class="txt" alt="玖登春樹醴" data-aos="zoom-in" data-aos-delay="0">
     
 
  <!-- 

@@ -1,12 +1,12 @@
 <template>
   <article class="s2 relative" id="s2">
-    <img src="./s2/bg.jpg" class="bg">
+    <img src="./s2/bg.jpg" class="bg" alt="背景">
     <div class="txt">
       <h2 class="t1">玖登開發<span></span>春樹系列3</h2>
       <p>將於桃園八德擴大重劃核心區<br v-if="isMobile"><span v-else>，</span>豐德二路、豐田三路口完美角地</p>
       <p class="t2">/ 再續建築新篇章▪值得等待 /</p>
-      <img src="./s2/t1.svg" class="t3">
-      <img src="./s2/t2.svg" class="t32">
+      <img src="./s2/t1.svg" class="t3" alt="a timeless classlc, a new glory">
+      <img src="./s2/t2.svg" class="t32" alt="榮耀經典">
     </div>
     <div class="slider" data-aos="fade">
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">

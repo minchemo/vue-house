@@ -15,6 +15,7 @@
   -->
 
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
+    <h1 class="absolute opacity-0 pointer-events-none">{{ info.caseName }}</h1>
     <S1 />
     <S2 />
   <!--
