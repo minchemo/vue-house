@@ -9,86 +9,103 @@
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
   <!-- loading end -->
-     <!--  -->
-     <!--<Nav />-->
+  <!--  -->
+  <!--<Nav />-->
   <div class="home overflow-hidden bg-[#fffff6] font-['Noto_Serif_TC',sans-serif]">
     <!-- <img src="@/section/s1/bg.svg" class="bg"> -->
-      <S1 />
-      <S2 />
-      <!--<S3 />-->
-      <S4 />
-      <S5 />
+    <S1 />
+    <S2 />
+    <!--<S3 />-->
+    <S4 />
+    <S5 />
     <Order />
   </div>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+
 @keyframes an {
   to {
-	transform: translate(0)
+    transform: translate(0)
   }
 }
-.fade-enter-active, .fade-leave-active {
+
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.2s;
 }
-.fade-enter, .fade-leave-to {
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
+
 img {
   display: inline;
   max-width: unset;
   height: unset;
   margin: 0 auto;
 }
+
 //圖說
-.caption{
+.caption {
   @apply absolute;
-  right:1em;
+  right: 1em;
   bottom: .5em;
   font-weight: 400;
   font-size: size(15);
-  color: #FFF;z-index: 3;
+  color: #FFF;
+  z-index: 3;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
 }
+
 //輪播
 .slider {
   @apply relative;
   z-index: 2;
-  .slide-item{
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+  .slide-item {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-  }
-  .arrows{
+
+  .arrows {
     @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
-    padding: 0; 
+    padding: 0;
     height: 100%;
     pointer-events: none;
+
     .prev,
-    .next{
-      width:5%;
+    .next {
+      width: 5%;
       display: flex;
       pointer-events: stroke;
       cursor: pointer;
       justify-content: center;
-      align-items:center;
-      background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+      align-items: center;
+      background: url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
       background-size: 50% auto;
-      transition:background-color .5s ;
-      &:hover{background-color: #0003;}
+      transition: background-color .5s;
+
+      &:hover {
+        background-color: #0003;
+      }
     }
-    .prev{transform: scaleX(-1);
+
+    .prev {
+      transform: scaleX(-1);
     }
+
     img {
       margin: unset;
       @apply cursor-pointer hover:opacity-50;
     }
   }
 }
- 
 </style>
 <script setup>
 //import info from "@/info"
@@ -109,7 +126,7 @@ onMounted(() => {
     isLoading.value = false
     AOS.init({
       offset: 0,
-     // easing: 'ease-out-back',
+      // easing: 'ease-out-back',
       duration: 1500,
     });
   };

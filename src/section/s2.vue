@@ -7,20 +7,23 @@
   </article>
 </template>
 
-<style lang="scss" scoped>  
+<style lang="scss" scoped>
 @import '@/assets/style/function.scss';
+
 .s2 {
   background: url("./s2/bg.png");
   background-size: 100%;
   background-repeat: no-repeat;
+
   //20min竹科
-  h2{
-    img{
+  h2 {
+    img {
       width: 100%;
     }
   }
+
   //世界
-  h3{
+  h3 {
     color: #FFF;
     font-size: size(52);
     position: absolute;
@@ -30,21 +33,25 @@
     text-shadow: #00000030 3px 3px;
   }
 }
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
 /* 手機尺寸 */
 @media screen and (max-width: 767px) {
   .s2 {
-  //世界
-  h3{
-    font-size: size(52);
+
+    //世界
+    h3 {
+      font-size: size(52);
     }
-}}
+  }
+}
 </style>
 
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref, inject } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());

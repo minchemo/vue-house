@@ -40,14 +40,22 @@
 //     background-position: center;
 //     background-repeat: no-repeat;
 // }
-.displaynone{display: none;}
+.displaynone {
+    display: none;
+}
+
 .house {
-   // height: auto;
+    // height: auto;
     font-size: size(22);
     background: #4F607A;
-   // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
+
+    // height:4em;
+    img {
+        height: 1.3em;
+        vertical-align: middle;
+    }
 }
+
 .info-box {
     width: size(800);
 
@@ -57,11 +65,13 @@
         color: #FFF;
         margin: 0 auto .5em auto;
     }
+
     //建案資訊下方內容
     .info-items {
         row-gap: size(20);
         column-gap: size(20);
         margin-left: size(70);
+
         .item {
             line-height: size(17);
             font-size: size(16);
@@ -75,12 +85,14 @@
         }
     }
 }
+
 @media screen and (max-width:768px) {
-.house {
-    // background:#fff;
-    height: sizem(300);
-    font-size: sizem(14);
-}
+    .house {
+        // background:#fff;
+        height: sizem(300);
+        font-size: sizem(14);
+    }
+
     .footer {
         margin-bottom: sizem(63);
     }
@@ -93,10 +105,12 @@
             font-size: sizem(29);
             width: auto;
         }
+
         //建案資訊下方內容
         .info-items {
             row-gap: sizem(20);
             margin-left: size(360);
+
             .item {
                 font-size: sizem(14);
             }

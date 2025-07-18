@@ -15,34 +15,38 @@
   </article>
 </template>
 
-<style lang="scss" scoped>  
+<style lang="scss" scoped>
 @import '@/assets/style/function.scss';
+
 .s3 {
   min-height: size(900);
   max-height: size(1080);
   height: 104vh;
   color: #FFF;
   display: flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: url("./s3/bg.png");
   background-position: 50% 50%;
-  background-size:100% auto;
+  background-size: 100% auto;
   background-repeat: no-repeat;
+
   //弘華機構
-  h2{
+  h2 {
     width: sizem(128);
     position: absolute;
     top:calc(40% + #{size(495 - 1080 * .5)});
     left: calc(40% + #{size(395- 1080 * .5)});
-    img{
+
+    img {
       width: 100%;
     }
   }
+
   //戀戀
-  h3{
-    font-family: Arial, Helvetica, sans-serif,"微軟正黑體";
+  h3 {
+    font-family: Arial, Helvetica, sans-serif, "微軟正黑體";
     font-size: size(29);
     position: absolute;
     bottom:calc(45% + #{size(417 - 1080 * .5)});
@@ -50,42 +54,49 @@
     letter-spacing: size(0.6);
     text-align: center;
     line-height: size(50);
-    span{
+
+    span {
       font-weight: 800;
       font-size: size(32);
     }
   }
+
   //雙北好宅
-  h4{
+  h4 {
     font-size: size(24);
     position: absolute;
     top:calc(20% + #{size(448 - 1080 * .5)});
     left: calc(10% + #{size(450 - 1080 * .5)});
     letter-spacing: size(5.3);
     line-height: size(55);
-    span{
+
+    span {
       font-weight: 800;
       font-size: size(42);
     }
   }
 }
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
 /* 手機尺寸 */
 @media screen and (max-width: 767px) {
   .s3 {
-    //弘華機構
-  h2{
-    position: absolute;
-    top:calc(40% + #{size(495 - 1080 * .5)});
-    left: calc(40% + #{size(395- 1080 * .5)});
 
+    //弘華機構
+    h2 {
+      position: absolute;
+      top:calc(40% + #{size(495 - 1080 * .5)});
+      left: calc(40% + #{size(395- 1080 * .5)});
+
+    }
   }
-}}
+}
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref, inject } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
