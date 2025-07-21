@@ -11,6 +11,7 @@ export default {
     phone: "04-8970857",
     fbLink: "https://www.facebook.com/100083195897306/",
     fbMessage: "https://m.me/100083195897306/",
+    line: "https://line.me/R/ti/p/@283hkffz",// https://lin.ee/...
     caseName: caseName,
     houseInfos: [
         /*
