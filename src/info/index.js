@@ -5,7 +5,7 @@ export default {
     case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市北屯區中平路462號",
+    //address: "台中市北屯區中平路462號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.7565141934892!2d120.6621712760603!3d24.180270572136315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691633205c6d0d%3A0x5f4be9fc57df63a0!2zNDA25Y-w5Lit5biC5YyX5bGv5Y2A5Lit5bmz6LevNDYy6Jmf!5e0!3m2!1szh-TW!2stw!4v1753068029165!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/niKHeg7nenoHEPZg6",
     phone: "04-2293-1199",
@@ -13,12 +13,12 @@ export default {
     fbMessage: "https://m.me/dome.smilehouse/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "XX興業股份有限公司"],
-        ["工程營造", "XX營造有限公司"],
-        ["建築設計", "XX建築師事務所"],
-        ["公設規劃", "XX設計有限公司"],
-        ["外觀設計", "XX設計有限公司"],
-        ["景觀規劃", "XX園藝工程有限公司"],
+      //  ["投資興建", "XX興業股份有限公司"],
+      //  ["工程營造", "XX營造有限公司"],
+      //  ["建築設計", "XX建築師事務所"],
+      //  ["公設規劃", "XX設計有限公司"],
+      //  ["外觀設計", "XX設計有限公司"],
+      //  ["景觀規劃", "XX園藝工程有限公司"],
         ["企劃設計", "欣和地產"],
         /*["投資興建", "長昇事業夥伴 冠奕建設"],
         ["建築設計", "王朝雍建築師事務所"],
@@ -42,7 +42,7 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     selectFields: {
-        room_type: {
+      /*   room_type: {
           title: "需求房型",
           hold: "請選擇房型",
           option: ["兩房", "三房"],
@@ -54,7 +54,7 @@ export default {
           option: ["1000", "2000", "3000"],
           bypass:false, //必填開啟使用
         },
-        /*
+       
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",
