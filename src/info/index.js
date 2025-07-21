@@ -6,8 +6,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市北屯區中平路462號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3098394683584!2d121.45248950000001!3d25.0574855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a965069393e1%3A0x3f4f54588cc81ac7!2z5ZyL546L5aSn6YGTS0lORyBQQVJL5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1748616767788!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.7565141934892!2d120.6621712760603!3d24.180270572136315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691633205c6d0d%3A0x5f4be9fc57df63a0!2zNDA25Y-w5Lit5biC5YyX5bGv5Y2A5Lit5bmz6LevNDYy6Jmf!5e0!3m2!1szh-TW!2stw!4v1753068029165!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/niKHeg7nenoHEPZg6",
     phone: "04-2293-1199",
     fbLink: "https://www.facebook.com/dome.smilehouse/",
     fbMessage: "https://m.me/dome.smilehouse/",
