@@ -2,7 +2,7 @@
   <article class="s3" ref="s3">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">高速捷遊 鐵道樂活</h3>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">高速捷遊 鐵道樂活</h2>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">台鐵地下化，鶯歌下一站鳳鳴站100米 (臨時站興建中)，35分鐘到台北車站；約3分鐘上大湳交流道國道2號，轉身機場出境；三鶯線預計2025年通車，1100米到鶯桃福德站，未來延伸八德段。 </p>
     </div>
     </div>

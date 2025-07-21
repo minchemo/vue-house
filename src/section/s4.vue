@@ -2,7 +2,7 @@
   <article class="s4" ref="s4">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">整座鶯歌<br v-if="isMobile"> 都是 你的美術館</h3>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">整座鶯歌<br v-if="isMobile"> 都是 你的美術館</h2>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">陶然品味、玩轉老街、森活步道、走讀古蹟…「新北美術館」以鶯歌連結國際；2分鐘新三沅商場、1分鐘鶯桃商圈，鳳福公園、鳳鳴國中、鳳鳴國小…文教生活圈。</p>
     </div>
     </div>

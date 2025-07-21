@@ -2,7 +2,7 @@
   <article class="s6">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">當代美學地標<br v-if="isMobile"> 榮耀整座城市</h3>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">當代美學地標<br v-if="isMobile"> 榮耀整座城市</h2>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">鶯歌市心地王開天闢地！2500坪大砌開發前所未有！全新美麗的現代建築群壯闊氣勢，外觀造型拉高天際線，簡潔對稱典雅氣質，營造沉穩內斂的和諧美感，創新優雅街廓，重塑都市景觀，成為鄰里美好的菁英生活聚落。</p>
     </div>
     </div>

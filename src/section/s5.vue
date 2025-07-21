@@ -2,7 +2,7 @@
   <article class="s5" ref="s5">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">溪福機構 × 新月建設<br>雙巨擘聯手</h3>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">溪福機構 × 新月建設<br>雙巨擘聯手</h2>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">在地深耕、品質卓越，以「第芬尼」、「富景」、「世界W」、「綠富綠」…等區域地標累積品牌實力；「鳴日之城」翻轉鶯桃雙城中軸，仰望微軟數據園區、遊賞千坪公園綠意，打造藝術科技城心鉅作。</p>
     </div>
     </div>

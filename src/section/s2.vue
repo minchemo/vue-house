@@ -2,7 +2,7 @@
   <article class="s2" ref="s2">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北門戶 黃金中軸</h3>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">新北門戶 黃金中軸</h2>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">桃鶯路往北→桃園車站 遠百統領威秀百貨商圈<span v-if="!isMobile">。</span><br>鶯桃路往東南→三鶯市區 三鶯之心 陶瓷博物館 鶯歌老街 新北美術館。</p>
       </div>
     </div>
