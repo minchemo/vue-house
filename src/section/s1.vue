@@ -8,7 +8,7 @@
 		<img src="./s1/pc.jpg" class="t0"> 
 		<img src="./s1/mo.jpg" class="t0"> -->
     
-    <h2 class="h1">{{ info.caseName }}</h2>
+    <h2 class="h2">{{ info.caseName }}</h2>
   <img src="./s1/logo.svg" alt="鳴日之城logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <div class="t1" v-if="isMobile" data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王<br>25~34坪市心地標</div>
   <div class="t1" v-else  data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王｜25~34坪市心地標</div>
@@ -18,9 +18,6 @@
 <style lang="scss" scoped>  
 @import '@/assets/style/function.scss';
 
-
-.h2{position: absolute;top: 0;left: 0;transform: translate(-200%);
-        pointer-events: none;color: #fff0;}
 
 .s1 {
   @apply relative w-full h-screen;
@@ -42,6 +39,9 @@
   height: 100vh;
   font-size:size(53);
   }
+
+.h2{position: absolute;top: 0;left: 0;transform: translate(-200%);
+        pointer-events: none;color: #fff0;}
 
   .t0{position: absolute;width: 100%;top: 0;left: 0; 
 	pointer-events: none;opacity: .3;z-index: 50;}
