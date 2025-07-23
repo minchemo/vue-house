@@ -222,15 +222,15 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/1.webp", import.meta.url).href ,
-    caption: "永寧轉運站"
+    caption: "永寧捷運站"
   },
   {
     img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "永寧轉運站"
+    caption: "永寧捷運站"
   },
   {
     img:new URL("./s4/3.webp", import.meta.url).href ,
-    caption: "永寧轉運站"
+    caption: "永寧捷運站"
   },
   {
     img:new URL("./s4/4.webp", import.meta.url).href ,

@@ -229,7 +229,7 @@ const imgs = [
   },
   {
     img:new URL("./s8/2.webp", import.meta.url).href ,
-    caption: "土城大潤發"
+    caption: "土城大全聯"
   },
   {
     img:new URL("./s8/3.webp", import.meta.url).href ,
@@ -241,7 +241,7 @@ const imgs = [
   },
   {
     img:new URL("./s8/5.webp", import.meta.url).href ,
-    caption: "五分鐘到新板特區"
+    caption: "新板特區"
   },
   {
     img:new URL("./s8/6.webp", import.meta.url).href ,
