@@ -1,11 +1,8 @@
 const caseName = "紐約心光"
+//const caseName = "000"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "f2c8b9cc-60a4-4038-9008-f8bccee79407",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市八里區商港路2號",
@@ -42,7 +39,15 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
      room_type: ["兩房","三房"],
-    // budget: ["2000以下","2000-2500","2500-3000","3000-3500","3500以上"],
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["兩房", "三房"],
+          bypass:false,
+        },
+  },
+
 
     navList: [
         /*
