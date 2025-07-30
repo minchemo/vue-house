@@ -2,7 +2,7 @@
   <!--  2025-5-6宜娟進化版 -->
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title text-center font-['Noto_Serif_TC',serif] " v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
       <!-- Form -->
@@ -71,8 +71,8 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        <p class="text-[#000]">本人知悉並同意<label for="policy-modal"
+            class="modal-button text-[#c00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -157,7 +157,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #fff;
+  //  color: #fff;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
     .line{width: size(439);}
@@ -250,10 +250,10 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #b28146;
+    background-color: #009FE1;
     //border: 1px solid #FFF9;
     border:0;
-    border-radius: .5em;
+    border-radius: 3em;
 
     width: 308px;
     height:3.3em;
@@ -261,7 +261,7 @@
     z-index: 10;
     font-weight: 400;
     position: relative;
-    box-shadow: .2em .2em .05em #0004;
+    //box-shadow: .2em .2em .05em #0004;
   }
   @keyframes spin {
   from { transform: rotate(0deg); }
@@ -312,12 +312,12 @@
 
     .order-title {
       font-size: sizem(27);
-      padding-top:2em;
-      .line{width: sizem(258);}
+      padding:.6em 0 .2em;
     }
     .order-subTitle{
       font-size: sizem(13);
       padding-top:0;
+      letter-spacing: 0;
     }
 
 

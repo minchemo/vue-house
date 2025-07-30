@@ -14,11 +14,11 @@
   'Noto_Sans_TC',sans-serif
   -->
 
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#C8E1D4] text-[#000]">
     <h1 class="absolute opacity-0 pointer-events-none">{{ info.caseName }}</h1>
     <S1 />
-    <S2 />
   <!--
+    <S2 />
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -51,10 +51,11 @@ img {
 }
 .home{
   position: relative;
-  &::before{content: "";display: block;position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
+/*  &::before{content: "";display: block;position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
 background: url("@/section/s1/bg.jpg") top center;
 background-size: cover;
-}
+
+}*/
 }
 // 字體
 /*
@@ -73,7 +74,6 @@ import info from "@/info"
 // import S11 from "@/section/s11.vue"
 
 import S1 from "@/section/s1.vue" 
-import S2 from "@/section/s2.vue" 
 import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 

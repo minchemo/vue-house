@@ -6,6 +6,8 @@
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>  -->
+    
+    <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo">
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
@@ -103,8 +105,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #c60;}
-.hover\:bg-color2:hover{background-color:#c30;}
+.bg-color1{background-color: #008D87;}
+.hover\:bg-color2:hover{background-color:#00534f;}
 
 
 .contact-info-img{
@@ -119,15 +121,13 @@
   // background: #045147;
 
   .logo {position: relative;
-    width: size(367);
+    width: size(540);
    // height: size(172);
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(30) auto 0;
-    img{width: 100%;}
-    .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
+    margin: size(80) auto size(30);
   }
 
   .contact-item-box {
@@ -138,12 +138,12 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #ffe3bb;
-      color: #444;
+      background: #008D87;
+      color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-    border-radius: .5em;
+    // border-radius: .5em;
       font-size: size(16);
       font-weight: 700;
       line-height: 1.6;//3.8
@@ -169,13 +169,13 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(.4);
+        filter: brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #ffea;
+        background-color: #fff;
         background-image: none;
         color: #000;
         z-index: 0;
@@ -246,7 +246,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#A30C24;
+    background:#008D87;
 
     .contact-item {
       height: 100%;      
@@ -281,7 +281,7 @@
   background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(257);
+      width: sizem(290);
     margin: sizem(40) auto sizem(30) auto;
      // margin-bottom: sizem(47);
     }
@@ -315,7 +315,7 @@
 
         &.address {
           font-size: sizem(15);
-          border-radius: .5em  .5em 0 0;
+         // border-radius: .5em  .5em 0 0;
           padding: 1.1em 0;
           margin: sizem(25) auto 0;
           //font-size: .9em;
@@ -329,7 +329,7 @@
         }
 
         &.address+div {
-          border-radius: 0 0 .5em .5em;
+        //  border-radius: 0 0 .5em .5em;
         }
       &.googlemap {
         border-top-width: 0;
