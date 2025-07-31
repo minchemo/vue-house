@@ -14,7 +14,7 @@ export default {
     line: "https://lin.ee/uzbHOpK",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "麗寶集團-鵬程建設"],
+        ["投資興建", "麗寶集團-麗寶百貨"],
         ["建築設計", "寬泉聯合建築師事務所"],
         ["景觀公設", "磐石設計"],
         ["建築結構", "豐立工程顧問"],
