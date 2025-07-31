@@ -37,22 +37,24 @@
 </div>
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+    <div class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"  v-if="!$isMobile()"  @click="scrollTo('.s1')">
+
+      <div class="flex flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
       <img src="//h35.banner.tw/img//form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
       <img src="//h35.banner.tw/img//form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+    <div class="flex flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img//form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
       <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
@@ -108,6 +110,39 @@
 .bg-color1{background-color: #008D87;}
 .hover\:bg-color2:hover{background-color:#00534f;}
 
+  .mo-contact-info {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: size(60);
+    background:linear-gradient(90deg, #DFF8F6 , #007e7799);
+      font-size: size(16);
+      font-weight: 400;
+      backdrop-filter: blur(3px);
+      .logo{
+        height: 90%;
+        margin: 0em auto 0 1.5em;
+      }
+    .contact-item {
+      height: 100%;      
+      color: #fff;
+      border-left:1px solid #fff9;padding: 0 .6em;
+      transition:background .3s;
+      img {
+        margin-bottom: 0.3em;
+        max-width:1.03em;
+        height: auto;
+        max-height: 1.03em;
+        filter: brightness(0) invert(1);
+      }
+      &:first-child{
+      border-left:0;}
+      &:hover{background: #05a3;}
+    }
+  }
+
 
 .contact-info-img{
   height: 0;z-index: 52;
@@ -157,7 +192,7 @@
       gap: 1em;
 
       &:hover {
-        background: #c30;
+        background: #005c57;
         color: #fff;
 
         img {
@@ -230,7 +265,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(11%) sepia(94%) saturate(6570%) hue-rotate(347deg) brightness(65%) contrast(93%);
+  img{filter: invert(38%) sepia(33%) saturate(1890%) hue-rotate(138deg) brightness(98%) contrast(101%);
   }
 }
 
@@ -238,33 +273,16 @@
 
 
   .mo-contact-info {
-    z-index: 99;
-    position: fixed;
+    top: auto;
     bottom: 0;
-    left: 0;
     width: sizem(375);
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
+    font-size: sizem(16);
     background:#008D87;
-
-    .contact-item {
-      height: 100%;      
-      font-size: sizem(16);
-      font-weight: 400;
-      color: #fff;
-      border-left:1px solid #fff9;
-
-      img {
-        margin-bottom: sizem(5);
-        max-width: sizem(16.5);
-        height: auto;
-        max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
-      }
-      &:first-child{
-      border-left:0;}
-
+    .contact-item{
+      flex: 1;padding: 0;
     }
   }
 

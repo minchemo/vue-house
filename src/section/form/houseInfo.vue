@@ -2,7 +2,7 @@
     <!--  -->
     <div class="house" v-if="info.houseInfos.length > 0">
         <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
-            <div class="title">建案資訊</div>
+            <div class="title font-['Noto_Serif_TC',serif] ">建案資訊</div>
             <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                 <div class="item flex items-center w-full whitespace-nowrap"
                     v-for="item in info.houseInfos" :key="item">
@@ -27,7 +27,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#A30C24;
+$house-c1:#008D87;
 $house-c2:#000;
 .displaynone{display: none;}
 .house {
@@ -35,6 +35,7 @@ $house-c2:#000;
     color: $house-c2;
     font-size: size(22);
     padding: 3em 0;
+    background: #fff;
     // height:4em;
     img{height: 1.3em;vertical-align: middle;}
 }
@@ -43,7 +44,7 @@ $house-c2:#000;
 
     .title {
         font-size: size(40);
-       // font-weight: 700;
+        font-weight: 700;
         color: $house-c1;
         margin: 0 auto 0em auto;
     }

@@ -14,7 +14,7 @@
   'Noto_Sans_TC',sans-serif
   -->
 
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#C8E1D4] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#C8E1D4] text-[#3E3A39]">
     <h1 class="absolute opacity-0 pointer-events-none">{{ info.caseName }}</h1>
     <S1 />
   <!--

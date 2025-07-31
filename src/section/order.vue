@@ -11,7 +11,7 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-          <!-- 性別
+          <!-- 性別 -->
             
           <div class="gender">
           <label><input  type="radio" name="gender" value="男" 
@@ -20,7 +20,7 @@
               @input="(event) => (formData.gender = event.target.value)">女士</label>
         </div>
 
- -->
+
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -63,25 +63,32 @@
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="(非必填) 請輸入您的留言"></textarea>
+            class="row textarea w-full h-full rounded-none" placeholder="留言諮詢"></textarea>
         </div>
       </div>
-
-      <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control">
+<div class="flex order-send mx-auto justify-between flex-wrap">
+<div class="">
+      <!-- Recaptcha -->
+      <vue-recaptcha class="flex mb-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+        
+        <!-- Policy -->
+      <div class="flex gap-2 mb-8 justify-center control text-left">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
         <p class="text-[#000]">本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#c00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#c00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容<br>
+            你所登錄的個人資料將做為以下用途<br>
+          (一)本網站所載之相關事項通知<br>
+(二)客戶管理與服務<br>
+(三)本公司行銷業務之推廣本案實際內容以現場公布為準
         </p>
       </div>
       <Policy />
 
-      <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
-
-      <!-- Send --><div class="sendall mt-8 mx-auto">
+      </div>
+<div>
+        <!-- Send --><div class="sendall mx-auto mt-0">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
   送出表單
 </button>
@@ -108,7 +115,11 @@
   </svg>
   <span>發送中...</span>
 </div>
+</div></div>
 </div>
+      
+
+      
 
       <!-- Contact Info -->
       <ContactInfo />
@@ -182,6 +193,9 @@
   //  background-color: #055F76;
   }
 
+  .order-send{
+    width: size(920);
+    min-width: 750px;}
   .form {
     width: size(920);
     min-width: 750px;
@@ -230,7 +244,7 @@
         background-position:calc(100% - .5em) 0%;
       }
       }
-       //&.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+       &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;
       label:first-child{margin-bottom: .3em;}
@@ -320,6 +334,9 @@
       letter-spacing: 0;
     }
 
+  .order-send{
+      width: sizem(310);
+      min-width: 0;}
 
     .form {
       width: sizem(310);
