@@ -1,104 +1,58 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import "./registerServiceWorker";
+import { createApp } from "vue"
+import App from "./App.vue"
+import "./assets/style/tailwind.css"
+import "./assets/style/custom-aos.scss"
+import router from "./router.js"
 
-import "@/assets/style/global.scss";
-import "locomotive-scroll/dist/locomotive-scroll.min.css";
+import info from "@/info"
 
-/* 全局配置 https://blog.csdn.net/FireBird_one/article/details/80295229 */
-import config from "./lib/config.js";
+import VueMobileDetection from "vue-mobile-detection"
 
-import "element-ui/lib/theme-chalk/index.css";
-import VueScrollTo from "vue-scrollto"; // scroll 錨點
-import VueLazyload from "vue-lazyload"; // 圖片 lazy load
-import VueFullPage from "vue-fullpage.js";
-import VueLazyComponent from "@xunlei/vue-lazy-component";
-import Vue2TouchEvents from "vue2-touch-events";
-import VueRellax from "vue-rellax";
+import VueSplide from "@splidejs/vue-splide"
+import "@splidejs/vue-splide/css/core"
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-    faBars,
-    faTimes,
-    faPhone,
-    faPen,
-    faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import Toast from "vue-toastification"
+import "vue-toastification/dist/index.css"
 
-//import AOS from "@/lib/aos/src/js/aos";
-import "aos/dist/aos.css";
+import VueLazyload from "vue-lazyload"
 
-import {
-    faFacebookMessenger,
-    faFacebookF,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import VueSvgIcon from "vue-svgicon";
-import "./plugins/element.js";
+import "aos/dist/aos.css"
 
-// AOS.init()
+import VueSmoothScroll from "vue3-smooth-scroll"
 
-library.add(faBars);
-library.add(faTimes);
-library.add(faPhone);
-library.add(faPen);
-library.add(faFacebookMessenger);
-library.add(faFacebookF);
-library.add(faMapMarkerAlt);
+import Vue3TouchEvents from "vue3-touch-events";
 
-Vue.component("font-awesome-icon", FontAwesomeIcon);
 
-Vue.use(VueSvgIcon, {
-    tagName: "icon",
-});
+const toastOptions = {
+    transition: "Vue-Toastification__fade",
+    maxToasts: 5,
+    newestOnTop: true,
+}
 
-Vue.use(VueFullPage);
 
-Vue.use(config);
-Vue.use(VueScrollTo);
-Vue.use(VueLazyload, {
-    filter: {
-        progressive(listener, options) {
-            listener.src = $(listener.el).attr("temp");
-        },
-    },
+import { createGtm } from '@gtm-support/vue-gtm';
 
-    lazyComponent: true,
-    webp(listener, options) {
-        // 1. 是否支持webp
-        // 2. 考虑编译速度及热更新相关问题，DEV环境还是照旧
-        // 3. 如果是svg的话，照旧
-        // 4. 做一个防错误处理，是cdn的地址才走webp
-        if (
-            options.supportWebp &&
-            !__DEV__ &&
-            !listener.src.endsWith(".svg") &&
-            listener.src.startsWith(cdnSetting[__ENV__].publicPath)
-        ) {
-            listener.src += ".webp";
-        }
-    },
-});
-Vue.use(VueLazyComponent);
-Vue.use(VueRellax);
-Vue.use(Vue2TouchEvents);
-
-Vue.prototype.$locomotive = "aa";
-
-new Vue({
-    router,
-    store,
-    methods: {
-        // recaptcha() {
-        //   this.$recaptchaLoaded('homepage').then((token) => {
-        //     console.log(token) // Will print the token
-        //   })
-        // }
-    },
-    created() {
-        //AOS.init();
-    },
-    render: (h) => h(App),
-}).$mount("#app");
+createApp(App)
+    .use(Toast, toastOptions)
+    .use(VueMobileDetection)
+    .use(VueSmoothScroll)
+    .use(VueSplide)
+    .use(router)
+    .use(Vue3TouchEvents)
+    .use(VueLazyload, {
+        preLoad: 2,
+        lazyComponent: true,
+        attempt: 1,
+    }).use(
+        createGtm({
+          id: info.gtmCode, 
+          defer: false, // Script can be set to `defer` to speed up page load at the cost of less accurate results (in case visitor leaves before script is loaded, which is unlikely but possible). Defaults to false, so the script is loaded `async` by default
+          compatibility: true, // Will add `async` and `defer` to the script tag to not block requests for old browsers that do not support `async`
+          enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
+          debug: true, // Whether or not display console logs debugs (optional)
+          loadScript: true, // Whether or not to load the GTM Script (Helpful if you are including GTM manually, but need the dataLayer functionality in your components) (optional)
+          vueRouter: router, // Pass the router instance to automatically sync with router (optional)
+          trackOnNextTick: false, // Whether or not call trackView in Vue.nextTick
+  }),
+      )
+    .mount("#app")

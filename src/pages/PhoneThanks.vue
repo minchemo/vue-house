@@ -1,60 +1,62 @@
 <template>
-  <div class="thanks">
-    <a href="/">
-      <img src="~@/assets/img/thank-img.png" alt="藏美表參道" class="img">
-      <img src="~@/assets/img/thank-img-hover.png" alt="藏美表參道" class="img-hover">
-    </a>
-  </div>
+    <div class="thanks">
+        <a href="/">
+            <img src="//h35.banner.tw/img//thank-img.png" alt="thank" class="img">
+            <img src="//h35.banner.tw/img//thank-img-hover.png" alt="thank" class="img-hover">
+        </a>
+    </div>
 </template>
 <style lang="scss" scoped>
-@import '@/assets/style/variableColor.scss';
 .thanks {
-  width: 100vw;
-  height: 100vh;
-  background: $phone_thanks_bg;
-  background-size: cover;
-  background-position: center;
-  // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.24), rgba(156, 30, 35, 0));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  a {
-    .img {
-      position: absolute;
-      opacity: 1;
-    }
-    .img-hover {
-      opacity: 0;
-    }
+    width: 100vw;
+    height: 100vh;
+    background: url('//h35.banner.tw/img//thank_bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    &:hover {
-      .img {
-        opacity: 0;
-      }
-      .img-hover {
-        opacity: 1;
-      }
-    }
-  }
-}
-@media screen and (max-width: 767px) {
-  .thanks {
     a {
-      .img, .img-hover {
-        width: 90vw;
-      }
+        .img {
+            position: absolute;
+            opacity: 1;
+        }
+
+        .img-hover {
+            opacity: 0;
+        }
+
+        &:hover {
+            .img {
+                opacity: 0;
+            }
+
+            .img-hover {
+                opacity: 1;
+            }
+        }
     }
-  }
+}
+
+@media screen and (max-width: 767px) {
+    .thanks {
+        a {
+
+            .img,
+            .img-hover {
+                width: 90vw;
+            }
+        }
+    }
 }
 </style>
 
 <script>
-
 export default {
-  name: 'phoneThanks',
-  components: {},
-
-  methods: {},
+    name: 'phoneThanks',
+    components: {},
+    methods: {},
 }
 </script>
