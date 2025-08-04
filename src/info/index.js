@@ -1,8 +1,7 @@
-//const caseName = "淇發建設"
-const caseName = "000"
+const caseName = "淇發建設"
 
 export default {
-  caseid: "d2db7f2-157b-4a33-acbc-f4abfde91846",//78afd7e7-7a1d-4f82-b239-34ac5348797b
+  caseid: "78afd7e7-7a1d-4f82-b239-34ac5348797b",
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
@@ -21,7 +20,7 @@ export default {
     //["產品規劃", "地上12層／地下2層／2-3房"],
     //["行銷公司", "森鴻行銷有限公司"],
   ],
-  gtmCode: ["GTM-000"], // 可放置多個 GTM-NMVB4WVG
+  gtmCode: ["GTM-NMVB4WVG"], // 可放置多個 
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
