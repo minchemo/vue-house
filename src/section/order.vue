@@ -1,5 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
+    <img class="leaf-left pc" src="./order/leaf-left.png" alt="">
+    <img class="leaf-left ph" src="./order/leaf-left-m.png" alt="">
+    <img class="leaf-right" src="./order/leaf-right.png" alt="">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title font-['Noto_Serif_TC',serif] text-center">{{ info.order.title }}</div>
@@ -54,15 +57,15 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#4F607A]">
+        <p class="text-[#423E3D]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#CC0000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#52777D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+      <vue-recaptcha class="flex justify-center mt-3 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
@@ -71,7 +74,7 @@
           即刻預約
         </button>
         <div v-else class="send-load">
-          <svg class="animate-spin h-5 w-5 text-[#4F607A]" xmlns="http://www.w3.org/2000/svg" fill="none"
+          <svg class="animate-spin h-5 w-5 text-[#52777D]" xmlns="http://www.w3.org/2000/svg" fill="none"
             viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
@@ -96,18 +99,46 @@
 @import "@/assets/style/function.scss";
 
 .order {
+  width: 100%;
+  padding-top: size(115);
+  background: linear-gradient(to right, #f7f7f7 0%, #d7d7d7 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  .leaf-left {
+    width: size(465);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @keyframes an {
+    to {
+      transform: translate(0)
+    }
+  }
+
+  .leaf-right {
+    width: size(465);
+    position: absolute;
+    bottom: calc(35% + #{size(440 - 1080 * .5)});
+    right: 0;
+    animation: an 2s ease-in-out alternate infinite;
+    transform: skewX(-3deg);
+    transform-origin: right bottom;
+  }
+
   .order-section {
     background-image: url(./order/bg.png);
     background-size: auto 100%;
     position: relative;
     overflow: hidden;
+    min-height: size(500);
   }
 
   .order-title {
     font-size: size(45);
     font-weight: 800;
-    color: #4F607A;
-    padding-top: 1.5em;
+    color: #423E3D;
 
     .line {
       width: size(439);
@@ -120,10 +151,10 @@
   }
 
   .order-subTitle {
-    font-size: size(19);
-    padding-top: .8em;
+    font-size: size(17);
+    padding-top: .4em;
     letter-spacing: .1em;
-    color: #4F607A;
+    color: #423E3D;
   }
 
   .cus-divider {
@@ -135,20 +166,18 @@
 
   .form {
     width: size(920);
-    min-width: 750px;
-    //  height: 350px;
+    min-width: 700px;
     gap: size(80);
-    margin-top: size(45);
-    margin-bottom: size(50);
+    margin-top: size(30);
+    margin-bottom: size(40);
     z-index: 50;
     align-items: stretch;
 
     .left {
       position: relative;
       flex: 1;
-      gap: size(20);
+      gap: size(15);
       align-items: flex-start;
-      //   width: size(419);
     }
 
     .right {
@@ -166,7 +195,7 @@
 
     .row {
       background: #fff;
-      color: #4F607A;
+      color: #423E3D;
       display: flex;
       width: 100%;
       align-items: center;
@@ -178,7 +207,7 @@
         font-weight: 600;
 
         >span {
-          color: #F00;
+          color: #52777D;
           font-size: 12px;
         }
       }
@@ -254,9 +283,9 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #4F607A;
+    background-color: #423E3D;
     border: 0;
-    width: 315px;
+    width: 320px;
     height: 3.3em;
     line-height: 3.3;
     z-index: 10;
@@ -306,7 +335,16 @@
   font-size: 18px;
 }
 
+.pc {
+  display: block;
+}
+
+.ph {
+  display: none;
+}
+
 @media screen and (max-width:768px) {
+
   .order-section {
     min-height: sizem(800);
     position: relative;
@@ -314,13 +352,19 @@
 
   .order {
     width: 100%;
+    background: linear-gradient(to right, #E7E7E7 0%, #F6F6F6 100%);
 
-    .cus-divider {
-      margin: 0 auto;
-      width: sizem(117);
-      height: sizem(2);
-      margin-bottom: sizem(25);
-      background-color: #055F76;
+    .leaf-left {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .leaf-right {
+      width: size(1300);
+      position: absolute;
+      bottom: calc(17% + #{size(440 - 1080 * .5)});
     }
 
     .order-title-img {
@@ -330,6 +374,7 @@
 
     .order-title {
       font-size: sizem(27);
+      margin-top: size(100);
 
       .line {
         width: sizem(258);
@@ -338,15 +383,15 @@
 
     .order-subTitle {
       font-size: sizem(11);
-      padding-top: 0;
+      padding-top: size(50);
     }
 
     .form {
       width: sizem(310);
       min-width: 0;
       height: auto;
-      gap: sizem(15);
-      margin-bottom: sizem(20);
+      gap: sizem(10);
+      margin-bottom: sizem(10);
       flex-direction: column;
       margin-top: sizem(20);
 
@@ -382,7 +427,7 @@
         height: sizem(100);
 
         .row {
-          height: 12em;
+          height: 10em;
         }
       }
 
@@ -409,6 +454,14 @@
   //備註
   textarea {
     font-size: size(50) !important;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .ph {
+    display: block;
   }
 }
 </style>

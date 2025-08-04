@@ -1,29 +1,30 @@
-const caseName = "和彩吉翔"
+//const caseName = "淇發建設"
+const caseName = "000"
 
 export default {
-  caseid: "50d0972d-079c-4fc4-8840-167e228edefa",
-  //case_code: "dgm1",
-  address1: "",//按鈕區的--- 如空白會只呈現地址
-  address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "",
-  googleSrc: "",//嵌入的
-  googleLink: "",//導航網址
-  phone: "",
-  fbLink: "https://www.facebook.com/61576824455692/",
-  fbMessage: "https://m.me/61576824455692/",
+  caseid: "d2db7f2-157b-4a33-acbc-f4abfde91846",//78afd7e7-7a1d-4f82-b239-34ac5348797b
+  //case_code: "chi-fa-construction",
+  address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
+  address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
+  address: "屏東縣東港鎮大和街50號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3685.571342811699!2d120.4500642!3d22.5202606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1f0069b27aeb%3A0x65588ed70e46d40b!2z5reH55m85pm25rmb!5e0!3m2!1szh-TW!2stw!4v1754299397233!5m2!1szh-TW!2stw",//嵌入的
+  googleLink: "https://maps.app.goo.gl/QtAQ2XzGSq5SYjmz5",//導航網址
+  phone: "08-8352-888",
+  fbLink: "https://www.facebook.com/61578948028617/",
+  fbMessage: "https://www.facebook.com/messages/t/61578948028617/",
+  fbLink2: "https://www.facebook.com/61578833014291/",
+  fbMessage2: "https://www.facebook.com/messages/t/61578833014291/",
   caseName: caseName,
   houseInfos: [
-    /*
-    */
-    ["投資興建", "和彩開發股份有限公司"],
-    ["營造公司", "億東營造股份有限公司"],
-    ["產品規劃", "地上12層／地下2層／2-3房"],
+    //["投資興建", "和彩開發股份有限公司"],
+    //["營造公司", "億東營造股份有限公司"],
+    //["產品規劃", "地上12層／地下2層／2-3房"],
     //["行銷公司", "森鴻行銷有限公司"],
   ],
-  gtmCode: ["GTM-NM43DCPN"], // 可放置多個
-  recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-  //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+  gtmCode: ["GTM-000"], // 可放置多個 GTM-NMVB4WVG
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+  recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+  //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
