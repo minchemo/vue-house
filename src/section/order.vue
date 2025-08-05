@@ -1,5 +1,5 @@
 <template>
-  <!--  2025-5-6宜娟進化版 -->
+  <!--  雲禾月表單改版型過 -->
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <div class="order-title text-center font-['Noto_Serif_TC',serif] " v-if="info.order.title" v-html="info.order.title"></div>
@@ -8,11 +8,13 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名<span>*</span></span>
-          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-            @input="(event) => (formData.name = event.target.value)" /></label>
-          <!-- 性別 -->
-            
+          <label class="row name">
+            <span>貴賓姓名<span>*</span></span>
+            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+              @input="(event) => (formData.name = event.target.value)" />
+          </label>
+
+          <!-- 性別 -->            
           <div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
@@ -21,30 +23,10 @@
         </div>
 
 
-            <label class="row"><span>手機<span>*</span></span>
+            <label class="row"><span>聯絡電話<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
 
-<!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
-<template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
-    <label class="row">
-      <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
-      <select
-        class="select w-full rounded-none bg-white"
-        v-model="formData[fieldKey]"
-      >
-        <option value="" disabled>{{ fieldData.hold }}</option>
-        <option
-          v-for="option in fieldData.option"
-          :value="option"
-          :key="option"
-        >
-          {{ option }}
-        </option>
-      </select>
-    </label>
-  </template>
-<!-- 動態 select end-->
 
           <label class="row" v-if="requiredFields.city"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
@@ -53,13 +35,23 @@
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row" v-if="requiredFields.area"><span>居住鄉鎮區</span>
+          <label class="row" v-if="requiredFields.area"><span>居住地區</span>
           <select class="select w-full rounded-none" v-model="formData.area">
             <option value="" selected disabled>請選擇地區</option>
             <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
           </select></label>
+          
+          <!-- 需求房型 選項 -->            
+          <div class="row room_type"><span>需求房型</span>
+          <label><input  type="radio" name="room_type" value="兩房" 
+              @input="(event) => (formData.room_type = event.target.value)">兩房</label>
+          <label><input  type="radio" name="room_type" value="三房" 
+              @input="(event) => (formData.room_type = event.target.value)">三房</label>
+          <label><input  type="radio" name="room_type" value="店面" 
+              @input="(event) => (formData.room_type = event.target.value)">店面</label>
+        </div>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -205,6 +197,7 @@
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
+    line-height: 1.7;
 
     .left {position: relative;
       flex: 1;
@@ -226,33 +219,44 @@
       background-color: #fff9;
       position: absolute;
     }
-    .row{background: #fffb;border: 1px solid #fff;color: #000;
+    .row{color: #000;
       display: flex;width: 100%;
-    align-items:center;
+      align-items:flex-start;
+      flex-direction:column;
+      justify-content:flex-start;
       > span{
         width: 6.2em;
-        text-align: left;padding-left:1em ;
+        text-align: left;padding-left:0;
         > span{color: #F00;//font-size: 12px;
           }
       }
-      input,select{background-color: transparent;flex: 1;}
-      option{color: #000;}
-      select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
+      input,select{background: #fffb;flex: 1;padding: 1em;}
+      option{color: #000;background: #fffb;}
+      select{background:#fffb url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
       transition: background .3s;
       &:focus{
         background-position:calc(100% - .5em) 0%;
       }
       }
-       &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+      // &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
     }
-    .gender{display: flex;position: absolute;right: 0; flex-direction:column;
-      label:first-child{margin-bottom: .3em;}
+    .gender{display: flex;position: absolute;right: 0;
+       //flex-direction:column;
+      label:first-child{margin-right: 1em;}
+      input{margin-right: .3em;}
+    }
+    .room_type{display: flex; flex-wrap: wrap;
+      flex-direction:row;
+      span:first-child{width: 100%;}
+      label{margin-right: 1.5em;}
       input{margin-right: .3em;}
     }
   }
 
       input::placeholder{color: #333;}
+      
+      textarea{background:#fffb}
       textarea::placeholder{color: #333;}
   .sendall{
   font-size:20px;
