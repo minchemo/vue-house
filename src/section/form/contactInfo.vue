@@ -64,7 +64,7 @@
       <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <!--<div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <!--因為有兩個建案，區分兩個很醜所以先隱藏<div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
       <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
@@ -93,9 +93,8 @@
         srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '預約專線' : modalType == 'fb' ? '預約專線' : modalType ==
-        'fb2' ?
-        'Facebook Messenger' :
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '預約專線' : modalType == 'fb' ? 'Facebook Messenger' : modalType ==
+        'fb2' ? 'Facebook Messenger' :
         `${info.address2 ? info.address2 : '導航地址'}`
         }}</div>
       <!-- content -->
