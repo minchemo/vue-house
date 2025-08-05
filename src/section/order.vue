@@ -494,6 +494,12 @@ const send = () => {
   let pass = true;
   let unfill = [];
   let idx = 0;
+  
+//有性別的話 性別顯示
+if (formData.gender) {
+  formData.name = `${formData.name}(${formData.gender})`;
+}
+
 
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {

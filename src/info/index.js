@@ -1,6 +1,6 @@
 const caseName = "雲禾月"
 export default {
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    caseid: "76ba5df2-d3a5-4d7d-8e41-ee1d8128a3e4",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
