@@ -10,7 +10,7 @@
             <img src="./淇發寸白.png" alt="淇發寸白" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
           </h2>
           <div class="flex justify-between w-full contact-item-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="flex contact-item justify-center items-center green" @click="open()">
+            <div class="flex contact-item justify-center items-center green btlead-fb" @click="open()">
               <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
               <div>前往粉絲專頁</div>
             </div>
@@ -26,7 +26,7 @@
             <img src="./淇發詠旭.png" alt="淇發詠旭" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
           </h2>
           <div class="flex justify-between contact-item-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="flex contact-item justify-center items-center dark-green" @click="open2()">
+            <div class="flex contact-item justify-center items-center dark-green btlead-fb2" @click="open2()">
               <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
               <div>前往粉絲專頁</div>
             </div>
@@ -93,21 +93,22 @@
         srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '預約專線' : modalType == 'fb' ? 'Facebook Messenger' : modalType ==
-        'fb2' ? 'Facebook Messenger' :
-        `${info.address2 ? info.address2 : '導航地址'}`
-        }}</div>
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '預約專線' : modalType == 'fb' ? 'Facebook Messenger' :
+        modalType ==
+          'fb2' ? 'Facebook Messenger' :
+          `${info.address2 ? info.address2 : '導航地址'}`
+      }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' : modalType == 'fb2' ?
         '線上諮詢' :
         `${info.address}`
-        }}</div>
+      }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
         v-if="modalType != 'phone'" v-bind:class="{
           'hidden': modalType == 'phone' && !$isMobile(),
           'btlead': modalType == 'fb',
-          'btlead': modalType == 'fb2',
+          'btlead2': modalType == 'fb2',
           'btsearch': modalType == 'gmap',
           'btcontac': modalType == 'phone'
         }">
@@ -119,7 +120,7 @@
         v-bind:class="{
           'hidden': modalType == 'phone' && !$isMobile(),
           'btlead': modalType == 'fb',
-          'btlead': modalType == 'fb2',
+          'btlead2': modalType == 'fb2',
           'btsearch': modalType == 'gmap',
           'btcontac': modalType == 'phone'
         }">
