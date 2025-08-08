@@ -111,6 +111,7 @@
 .hover\:bg-color2:hover{background-color:#00534f;}
 
   .mo-contact-info {
+    display: none;
     z-index: 99;
     position: fixed;
     top: 0;
@@ -273,6 +274,7 @@
 
 
   .mo-contact-info {
+    display: block;
     top: auto;
     bottom: 0;
     width: sizem(375);

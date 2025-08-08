@@ -268,7 +268,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #009FE1;
+    background-color: #036eb5;
     //border: 1px solid #FFF9;
     border:0;
     border-radius: 3em;
@@ -494,7 +494,7 @@ const send = () => {
   let pass = true;
   let unfill = [];
   let idx = 0;
-  
+
 //有性別的話 性別顯示
 if (formData.gender) {
   formData.name = `${formData.name}(${formData.gender})`;
@@ -543,7 +543,7 @@ if (formData.gender) {
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.msg}
+      &msg=${formData.room_type}；${formData.budget}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}

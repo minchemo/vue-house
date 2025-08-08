@@ -1,122 +1,139 @@
 <template>
   <article class="s2 relative" id="s2">
-    <img src="./s2/bg.jpg" class="bg" alt="背景">
+    <div class="t1 font-['Noto_Serif_TC',serif]">前瞻眼界 看見世界<span>洞悉先機與未來同行</span>
+</div>
+<div class="t2">從信義計畫區、南港軟體園區、內湖科學園區一步步寫下輝煌過去，你曾錯過的城市高光時刻
+如今，於大南港完美演繹中</div>
+      <img src="./s2/imgm.png" class="img" alt="梓園" v-if="isMobile">
+      <img src="./s2/img.png" class="img" alt="梓園" v-else>
     <div class="txt">
-      <h2 class="t1">玖登開發<span></span>春樹系列3</h2>
-      <p>將於桃園八德擴大重劃核心區<br v-if="isMobile"><span v-else>，</span>豐德二路、豐田三路口完美角地</p>
-      <p class="t2">/ 再續建築新篇章▪值得等待 /</p>
-      <img src="./s2/t1.svg" class="t3" alt="a timeless classlc, a new glory">
-      <img src="./s2/t2.svg" class="t32" alt="榮耀經典">
+      
+      <div class="t3">What,s NEXT</div>
+      <div class="t4 font-['Noto_Serif_TC',serif]"><span>全方位價值湧</span>現啟程 正是時候</div>
     </div>
-    <div class="slider" data-aos="fade">
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption">
-          <span class="caption" v-html="img.caption"></span>
-          <span class="name" v-html="img.name"></span>
-          <span class="bottom"><b v-html="img.t1"></b>{{ img.t2 }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
+ <!--   <img src="./s1/MO.jpg" class="t0">
+    <div class="w01"></div>
+    <div class="w02"></div>
+    <img src="./s1/w3.webp" class="w03" alt="w3">
+    <img src="./s1/logo.svg" class="logo" alt="雲禾月logo" data-aos="zoom-in">
+    <div class="txt font-['Noto_Serif_TC',serif]">
+      <div class="t1" data-aos="zoom-in-right" data-aos-delay="300">幸福從禾來</div>
+      <div class="t2" data-aos="zoom-in-right" data-aos-delay="400">城市與自然<span>左右逢源</span>康健宜居</div>
+      <div class="t3 font-['EB_Garamond']" data-aos="zoom-in-right" data-aos-delay="600">EMBRACING THE VIBRANT LIFE<br>OF CITY AND NATURE.</div>
+    </div>  -->
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .s2 {
-    position: relative;
- //   height:  sizem(604);
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
-  color: #000;
-  font-size: sizem(17);
-  line-height: 1.5;
-  padding: 3.8em 0 4.6em 0;
-@media screen and (min-width: 768px) {
- // line-height: 1.8;
-  font-size: size(20);
-}
-  &::before{content: "";display: block;position: absolute;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
-background: url("./s2/bg.jpg") 0 15%;
-background-size: cover;
-}
-  .bg{position: absolute;
-    top:0;right:-20%;width:auto;
-    height: 100%; //transform: translateX(calc(-100% + 100vw));
-    animation: bg 7s linear alternate infinite;
+  .t0{position: absolute;width: 100%;top:0px;left: 0; pointer-events: none;z-index: 9;opacity: .2;}
+@keyframes an {
+  20% {
+    transform: scale(2,.3);opacity: .3;
   }
-@keyframes bg {
-  30%{
-   opacity: 1;
+  30% {
+    transform: scale(6,.5);opacity: 0;
   }
-  70% {
-   opacity: 0;
+  40% {
+    transform: scale(.03,.01);opacity: 0;
   }
   100% {
-   opacity: 0;
+    opacity: 1;
   }
-}
 
+}
+  .s2 {
+   // height:  sizem(604);
+  //  height:sizem(667);
+  /*  */  
+  background: center;
+  background-size: cover;
+  height:sizem(750);
+  min-height: sizem(750);
+    max-height: sizem(750);
+  
+  color: #036eb5;
+  font-size: sizem(17);
+  line-height: 1.3;
  // overflow: hidden;
-  .txt{position: relative;z-index: 2;text-align: center;margin:0 auto 0em;
-  text-shadow:0em 0em .3em #fff7;
+  
+@media screen and (min-width: 768px) {
+ // background-image: url("./s1/bg.jpg");
+    height:100vh;
+    min-height: size(900);
+    max-height: size(1080);
+    padding: 0;
+    font-size: size(40);
+}
+.t1{
+ //position: absolute;
+ // left:0;right: 0;margin: auto;
+//  display: flex;align-items:center;
+  top:sizem(25);
+  width: sizem(305);
+
+  font-weight: 700;
+  font-size: 1.2em;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.05em;
+ // .line{flex: 1;display: block;border-top: 1px solid #FFF;height: 1px;margin: 0 .5em;}
+@media screen and (min-width: 768px) {
+  top:calc(30% + #{size(70 - 1080 * .3)});
+  width: size(1685);
+  font-weight: 500;
+  letter-spacing: .2em;
+
+}
+}
+.t2{font-weight:500; letter-spacing: 0.01em;
+  font-size: 1.25em;margin: 1.1em 0 0em 0em;color: #727171;
+  @media screen and (min-width: 768px) {   
+font-size: 1.65em;margin: .62em 0 0em 0em;
   }
-.t1{font-weight: 900;font-size: 1.5em;display: flex;
-  justify-content: center;
-  align-items: center;margin: 0 auto .3em;
-span{
-  display: inline-block;height: 1px;background: currentColor;width: 2em;margin: 0 .3em;
-}
-@media screen and (min-width: 768px) {font-size: 2em;}
-}
-.t2{margin: .3em auto 1em;font-weight: 700;font-size: 1.1em;}
-.t3{width: sizem(375);
-  @media screen and (min-width: 768px) {width: size(1420);}}
-.t32{width: sizem(100);display: block;margin: -.8em auto 0;
-  @media screen and (min-width: 768px) {width: size(160);margin: -1.8em auto 0;}}
-.slider{width:100%;
-  filter:drop-shadow(.2em .2em .05em #0004);
-  font-size: sizem(14);
-  @media screen and (min-width: 768px) {width:size(1420);
-    font-size: 1em;}
-.slide{width: 100%;}
-.slide-item{width: 100%;padding: 2em 0.85em 0;
-  img{width: 100%;z-index: 2;position: relative;}
- /* @media screen and (max-width: 767px) {
-    opacity: .5;
-    transition: opacity .2s;
-    &.is-active{opacity: 1;}
-  }*/
-
-
-}
-.caption{position: absolute;bottom: 5.5em;right:1.7em;color: #fff;font-size: 0.64em;}
-.name{position: absolute;background: #ffe75c;display: flex;aspect-ratio: 1/1;justify-content: center;align-items: center;border-radius: 50%;font-weight: 700;font-size: 1.3em;width: 5.2em;white-space: nowrap;z-index: 3;
-  box-shadow:.2em .2em .1em -.08em #0002;
-  left: .2em;top: .2em;letter-spacing: 0;}
-.bottom{background: #ffe75c;display: block;width: 100%;text-align: center;font-size: 1.1em;
-  line-height: 1.2;padding: 1em 0;z-index: 1;
-b{border-right: 1px solid currentColor;margin-right: .5em;padding-right:.5em;display: inline-block;}
 }
 
-@media screen and (max-width: 767px) {
-.name{transform: translate(0%,20%);transition: transform .5s, opacity .5s;opacity: 0;}
-.bottom{opacity: 0;transition: transform .5s, opacity .5s;transform: translate(0%,-50%);}
+.txt{
+  position: absolute;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  left:0;right: 0;margin: auto;
+  top:sizem(89);
+  width:sizem(260);
+ 
+  @media screen and (min-width: 768px) {   
+  left: size(565);
+  top:calc(50% + #{size(265 - 1080 * .5)});
+  width: size(783);
+    
+  }
+}
+.logo{
+  width:sizem(62);
+  @media screen and (min-width: 768px) {   
+  width:100%;
+  }
+}
 
-.slide-item{
-  img{filter: grayscale(50%);transition: filter .2s;
-    transform-origin: 50% 0;}
+.t3{font-size: 1em;  font-weight: 400;letter-spacing: .05em;
+  span{font-size: 1.1em;font-weight: 500;  margin: 0 .5em 0 0;letter-spacing: -.05em;}
+  
+  @media screen and (min-width: 768px) {   
+    font-size: 1.3em;
+  }
 }
-.slide-item.is-active{
-  img{filter: grayscale(0%);}
-    .name{transform: translate(0);opacity: 1;}
-    .bottom{opacity: 1;transform: translate(0);}
+.t4{font-size: 1.3em;  font-weight: 600;color: #fff690;
+border-top:1px solid #fff;
+border-bottom:1px solid #fff;
+text-align: center;width: 100%;margin: .4em 0 0em 0em;padding: .16em 0;
+
+  @media screen and (min-width: 768px) {   
+    font-size:1em;width: 85%;margin: 1.2em 0 0em 0em;
+  }
 }
 }
-}
-}
+
+ 
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
@@ -130,48 +147,4 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
-
-const splide = ref();
-
-const imgs = [
-  {
-    img: new URL("./s2/1.jpg", import.meta.url).href,
-    caption: "現場實景拍攝",
-    name:"Y世代",
-    t1:"台北內湖",
-    t2:"植萃生活 悠然經典",
-  },
-  {
-    img: new URL("./s2/2.jpg", import.meta.url).href,
-    caption: "現場實景拍攝",
-    name:"植春樹",
-    t1:"桃園蘆竹",
-    t2:"並肩青埔 質感地標",
-  },
-  {
-    img: new URL("./s2/3.jpg", import.meta.url).href,
-    caption: "現場實景拍攝",
-    name:"寓上·春樹",
-    t1:"桃園蘆竹",
-    t2:"公園首席 綠意豐盈",
-  },
-];
-
-const options = computed(() => {
-  const mobile = isMobile.value;
-
-    return {
-      type:mobile? 'loop':'slide',
-      perPage: mobile?1:3,
-      perMove: 1,
-      focus: 'center',
-      padding: mobile ? { left: '10%', right: '10%' } : 0,
-      autoplay: mobile? true:false,
-      interval: 5000,
-      arrows: false,
-      pagination: false,
-      drag:  mobile? true:false,
-      gap: 0,
-    };
-});
 </script>
