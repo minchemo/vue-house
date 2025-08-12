@@ -1,14 +1,22 @@
 <template>
-  <article class="s2 relative" id="s2">
-    <div class="t1 font-['Noto_Serif_TC',serif]">大南港時代 NEXT新未來</div>
-    <div class="t2">440公頃東區門戶計畫，劃時代的宏偉序章<br />
+  <article class="s3 relative" id="s3">
+    <div class="top">
+      <div class="line1"></div>
+    <div class="t1 font-['Noto_Serif_TC',serif]" data-aos="zoom-in" data-aos-delay="0">大南港時代<span>NEXT新未來</span></div>
+    <div class="t2" data-aos="zoom-in" data-aos-delay="200">440公頃東區門戶計畫，劃時代的宏偉序章<br />
 南港，正以驚人的速度與規模<br />
 蛻變為台灣鏈結世界的嶄新門戶</div>
-    <div class="t3">南港展覽館1、2館、南港軟體園區1-3期、中信金融園區、<br />
-台北漢來大飯店、三井Lalaport等AI科技、百貨商場、國際飯店匯聚的繁華萬象；<br />
-南港四鐵共構車站、3高3捷3快鏈結城市每一寸肌理，<br />
+      <div class="line2"></div>
+    <div class="t3" data-aos="zoom-in" data-aos-delay="400">南港展覽館1、2館、南港軟體園區1-3期、<br v-if="isMobile" />中信金融園區、<br v-if="!isMobile" />台北漢來大飯店、三井Lalaport等AI科技、<br v-if="isMobile" />百貨商場、國際飯店匯聚的繁華萬象；<br />
+南港四鐵共構車站、3高3捷3快<br v-if="isMobile" />鏈結城市每一寸肌理，<br />
 定義著前所未有的大南港生活。</div>
-    <div class="t1 font-['Noto_Serif_TC',serif]">大南港時代 NEXT新未來</div>
+      <img src="./s3/logo.png" class="logo" alt="梓園"  data-aos="zoom-in" data-aos-delay="600">
+
+</div>
+<div class="bottom">
+    <div class="t4" data-aos="zoom-in" data-aos-delay="0">時間從不等待，它將篩選出，懂得收藏的人<br v-if="isMobile" />美好實現值得你來見證 你，準備好了嗎？</div>
+    <div class="t5" data-aos="zoom-in" data-aos-delay="200">邀請你，預見它 2-3房 即將公開</div>
+</div>
   </article>
 </template>
 
@@ -30,95 +38,98 @@
   }
 
 }
-  .s2 {
-   // height:  sizem(604);
-  //  height:sizem(667);
-  /*  */  
-  background: center;
-  background-size: cover;
-  height:sizem(750);
-  min-height: sizem(750);
-    max-height: sizem(750);
-  
-  color: #036eb5;
-  font-size: sizem(17);
-  line-height: 1.3;
-  background: #036eb5;
- // overflow: hidden;
+  .s3 {
+  font-size: sizem(13);
+@media screen and (min-width: 768px) {
+    font-size: size(26);
+
+}
+  .top {
+  color: #fff;
+  line-height: 1.7;
+  background: url("./s3/bgm.jpg"); 
+  background-size:cover;
+  padding:0 0 sizem(35) 0;
   
 @media screen and (min-width: 768px) {
- // background-image: url("./s1/bg.jpg");
-    height:100vh;
-    min-height: size(900);
-    max-height: size(1080);
-    padding: 0;
-    font-size: size(40);
+    padding:size(0) 0 size(55) 0;
+    background-image:url("./s3/bg.jpg"); 
+}
+.line1{height:sizem(70);width: 1px;background: #fff;margin:0 auto sizem(25) auto;position: relative;z-index: 3;
+  
+@media screen and (min-width: 768px) {
+  height:size(160);
+  margin:0 auto size(25) auto;
+}
+}
+.line2{height:sizem(25);width: 1px;background: #fff;margin:0 auto sizem(15) auto;position: relative;z-index: 3;
+@media screen and (min-width: 768px) {
+  height:size(80);margin:0 auto 0 auto;
+}
 }
 .t1{
- //position: absolute;
- // left:0;right: 0;margin: auto;
-//  display: flex;align-items:center;
-  top:sizem(25);
-  width: sizem(305);
-
+ width: 100%;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 2.5em;
   letter-spacing: 0.06em;
-  margin-bottom: 1.05em;
- // .line{flex: 1;display: block;border-top: 1px solid #FFF;height: 1px;margin: 0 .5em;}
+  margin-bottom: .8em;
+  text-align: center;
+  line-height: 1.3;
 @media screen and (min-width: 768px) {
-  top:calc(30% + #{size(70 - 1080 * .3)});
-  width: size(1685);
-  font-weight: 500;
-  letter-spacing: .2em;
+  font-weight: 700;font-size: 2.51em;
+  margin-bottom: .2em;
+  line-height: 1.7;
 
+}
+span{display: block;
+  
+@media screen and (min-width: 768px) {margin-left: .8em;display: inline-block;}
 }
 }
 .t2{font-weight:500; letter-spacing: 0.01em;
-  font-size: 1.25em;margin: 1.1em 0 0em 0em;color: #727171;
-  @media screen and (min-width: 768px) {   
-font-size: 1.65em;margin: .62em 0 0em 0em;
+  font-size: 1em;margin:1em auto 1.5em auto;
+  width:sizem(310);
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    margin: 0em auto 2em auto;width:size(1100);
   }
 }
-
-.txt{
-  position: absolute;
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  left:0;right: 0;margin: auto;
-  top:sizem(89);
-  width:sizem(260);
- 
+.t3{font-weight:500; letter-spacing: 0.01em;
+  font-size: 1em;margin: 1em 0 0em 0em;
+  text-align: center;
   @media screen and (min-width: 768px) {   
-  left: size(565);
-  top:calc(50% + #{size(265 - 1080 * .5)});
-  width: size(783);
-    
+font-size: 1.06em;margin: 1.8em auto 0em auto;width:size(1100);
   }
 }
 .logo{
-  width:sizem(62);
+  width:sizem(85);margin:sizem(200) auto auto auto;display: block;mix-blend-mode: overlay;
   @media screen and (min-width: 768px) {   
-  width:100%;
+    width:size(165);margin:size(105) auto auto auto;
   }
 }
+}
 
-.t3{font-size: 1em;  font-weight: 400;letter-spacing: .05em;
-  span{font-size: 1.1em;font-weight: 500;  margin: 0 .5em 0 0;letter-spacing: -.05em;}
+  .bottom {
+  color: #036eb5;
+  line-height: 1.7;
+  background: url("./s3/bg2m.jpg"); 
+  background-size:cover;
+  padding: sizem(20) 0 sizem(50) 0;
+  text-align: center;
+
+
+ // overflow: hidden;
   
-  @media screen and (min-width: 768px) {   
-    font-size: 1.3em;
-  }
+@media screen and (min-width: 768px) {
+    padding:size(105) 0 size(55) 0;
+    background-image:url("./s3/bg2.jpg"); 
+    font-size: size(34);
 }
-.t4{font-size: 1.3em;  font-weight: 600;color: #fff690;
-border-top:1px solid #fff;
-border-bottom:1px solid #fff;
-text-align: center;width: 100%;margin: .4em 0 0em 0em;padding: .16em 0;
+.t5{background: #036eb5;color: #fff;width: sizem(220);margin:.7em auto 0;
+@media screen and (min-width: 768px) {width: size(600);
+}
+}
 
-  @media screen and (min-width: 768px) {   
-    font-size:1em;width: 85%;margin: 1.2em 0 0em 0em;
-  }
 }
 }
 

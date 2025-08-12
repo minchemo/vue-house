@@ -27,7 +27,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#008D87;
+$house-c1:#036eb5;
 $house-c2:#000;
 .displaynone{display: none;}
 .house {

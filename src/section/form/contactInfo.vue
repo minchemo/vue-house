@@ -1,7 +1,7 @@
 <template>
-  <div>
   <div class="contact-info-img relative">
 </div>
+  <div class="contact-bg">
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
@@ -33,8 +33,7 @@
       </div>
     </div>
 
-  </div>
-</div>
+  </div></div>
 
   <!-- Mobile contact info -->
     <div class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
@@ -107,8 +106,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #008D87;}
-.hover\:bg-color2:hover{background-color:#00534f;}
+.bg-color1{background-color: #036eb5;}
+.hover\:bg-color2:hover{background-color:#003f69;}
 
   .mo-contact-info {
     display: none;
@@ -144,13 +143,14 @@
     }
   }
 
-
+.contact-bg{background: #036eb5;}
 .contact-info-img{
   height: 0;z-index: 52;
 }
 .contact-info {
-  padding: size(55) size(0) size(55) size(0);
+  padding: size(0) size(0) size(55) size(0);
     width: size(1440);
+    margin-top: size(60);
     min-width: 680px;
   position: relative;
   z-index: 50;
@@ -163,7 +163,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(80) auto size(30);
+    margin: size(60) auto size(30);
   }
 
   .contact-item-box {
@@ -174,7 +174,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #008D87;
+      background: #003f69;
       color: #fff;
       width: 100%;
       flex: 1;
@@ -193,7 +193,7 @@
       gap: 1em;
 
       &:hover {
-        background: #005c57;
+        background: #014;
         color: #fff;
 
         img {
@@ -274,7 +274,7 @@
 
 
   .mo-contact-info {
-    display: block;
+    display: flex;
     top: auto;
     bottom: 0;
     width: sizem(375);
@@ -282,7 +282,7 @@
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-    background:#008D87;
+    background:#036eb5;
     .contact-item{
       flex: 1;padding: 0;
     }
@@ -294,8 +294,8 @@
     // height: sizem(400);
     // border-radius: sizem(68);
     //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(40) 0;
-    margin-top: sizem(0);
+    padding: sizem(0) 0 sizem(40) 0;
+    margin-top:sizem(60);
     position: relative;
     justify-content: space-between;
   background-size: sizem(450) auto;

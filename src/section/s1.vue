@@ -1,13 +1,13 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!--    --><img src="./s1/mo.jpg" class="t0">
-    <div class="t1"><span>築未來</span><span class="line"></span><span>本於真</span></div>
+    <!--  <img src="./s1/mo.jpg" class="t0">  -->
+    <div class="t1" data-aos="zoom-in"><span>築未來</span><span class="line"></span><span>本於真</span></div>
     <div class="txt">
-      <img src="./s1/logom.svg" class="logo" alt="梓園" v-if="isMobile">
-      <img src="./s1/logo.svg" class="logo" alt="梓園" v-else>
-      <div class="t2 font-['Noto_Serif_TC',serif]">過去未曾有 未來更稀有</div>
-      <div class="t3"><span>Live The Next</span>南港展覽館站</div>
-      <div class="t4 font-['Noto_Serif_TC',serif]">VIP早鳥．早鳥預約中</div>
+      <img data-aos="zoom-in" data-aos-delay="200" src="./s1/logom.svg" class="logo" alt="梓園" v-if="isMobile">
+      <img data-aos="zoom-in" data-aos-delay="200" src="./s1/logo.svg" class="logo" alt="梓園" v-else>
+      <div data-aos="zoom-in" data-aos-delay="400" class="t2 font-['Noto_Serif_TC',serif]">過去未曾有 未來更稀有</div>
+      <div data-aos="zoom-in" data-aos-delay="600" class="t3"><span>Live The Next</span>南港展覽館站</div>
+      <div data-aos="zoom-in" data-aos-delay="800" class="t4 font-['Noto_Serif_TC',serif]">VIP早鳥．早鳥預約中</div>
     </div>
  <!--   <img src="./s1/MO.jpg" class="t0">
     <div class="w01"></div>
@@ -24,7 +24,8 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:0px;left: 0; pointer-events: none;z-index: 9;opacity: .2;}
+  .t0{position: absolute;width: 100%;
+    top:-0px;left: 0; pointer-events: none;z-index: 9;opacity: .2;}
 @keyframes an {
   20% {
     transform: scale(2,.3);opacity: .3;
@@ -58,7 +59,7 @@
 @media screen and (min-width: 768px) {
   background-image: url("./s1/bg.jpg");
     height:100vh;
-    min-height: size(1070);
+    min-height: size(900);
     max-height: size(1080);
     padding: 0;
     font-size: size(40);

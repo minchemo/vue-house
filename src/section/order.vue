@@ -43,7 +43,7 @@
             </option>
           </select></label>
           
-          <!-- 需求房型 選項 -->            
+          <!-- 需求房型 選項          
           <div class="row room_type"><span>需求房型</span>
           <label><input  type="radio" name="room_type" value="兩房" 
               @input="(event) => (formData.room_type = event.target.value)">兩房</label>
@@ -51,7 +51,7 @@
               @input="(event) => (formData.room_type = event.target.value)">三房</label>
           <label><input  type="radio" name="room_type" value="店面" 
               @input="(event) => (formData.room_type = event.target.value)">店面</label>
-        </div>
+        </div> -->  
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
