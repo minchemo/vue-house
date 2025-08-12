@@ -1,26 +1,15 @@
 <template>
   <article class="s2 relative" id="s2">
-    <div class="t1 font-['Noto_Serif_TC',serif]">前瞻眼界 看見世界<span>洞悉先機與未來同行</span>
-</div>
-<div class="t2">從信義計畫區、南港軟體園區、內湖科學園區一步步寫下輝煌過去，你曾錯過的城市高光時刻
-如今，於大南港完美演繹中</div>
+    <div class="t1 font-['Noto_Serif_TC',serif]">前瞻眼界 看見世界<span>洞悉先機與未來同行</span></div>
+    <div class="t2">從信義計畫區、南港軟體園區、內湖科學園區一步步寫下輝煌過去，你曾錯過的城市高光時刻如今，於大南港完美演繹中</div>
+    <div class="t3">收藏．城市軸線上的永恆光芒</div>
       <img src="./s2/imgm.png" class="img" alt="梓園" v-if="isMobile">
       <img src="./s2/img.png" class="img" alt="梓園" v-else>
-    <div class="txt">
       
-      <div class="t3">What,s NEXT</div>
-      <div class="t4 font-['Noto_Serif_TC',serif]"><span>全方位價值湧</span>現啟程 正是時候</div>
-    </div>
- <!--   <img src="./s1/MO.jpg" class="t0">
-    <div class="w01"></div>
-    <div class="w02"></div>
-    <img src="./s1/w3.webp" class="w03" alt="w3">
-    <img src="./s1/logo.svg" class="logo" alt="雲禾月logo" data-aos="zoom-in">
-    <div class="txt font-['Noto_Serif_TC',serif]">
-      <div class="t1" data-aos="zoom-in-right" data-aos-delay="300">幸福從禾來</div>
-      <div class="t2" data-aos="zoom-in-right" data-aos-delay="400">城市與自然<span>左右逢源</span>康健宜居</div>
-      <div class="t3 font-['EB_Garamond']" data-aos="zoom-in-right" data-aos-delay="600">EMBRACING THE VIBRANT LIFE<br>OF CITY AND NATURE.</div>
-    </div>  -->
+      <img src="./s2/hr1.png" class="hr1" alt="梓園">
+      <img src="./s2/hr2.png" class="hr2" alt="梓園">
+      <div class="t4 font-['Noto_Serif_TC',serif]">What,s NEXT</div>
+      <div class="t5"><span>全方位價值湧現</span>啟程 正是時候</div>
   </article>
 </template>
 
@@ -43,27 +32,17 @@
 
 }
   .s2 {
-   // height:  sizem(604);
-  //  height:sizem(667);
-  /*  */  
-  background: center;
-  background-size: cover;
-  height:sizem(750);
-  min-height: sizem(750);
-    max-height: sizem(750);
-  
   color: #036eb5;
   font-size: sizem(17);
-  line-height: 1.3;
+  line-height: 1.7;
+  background: linear-gradient(to right, #fff0 ,#fff); 
+
  // overflow: hidden;
   
 @media screen and (min-width: 768px) {
- // background-image: url("./s1/bg.jpg");
-    height:100vh;
-    min-height: size(900);
-    max-height: size(1080);
-    padding: 0;
-    font-size: size(40);
+    padding:size(105) 0 size(55) 0;
+    font-size: size(26);
+    background: u;
 }
 .t1{
  //position: absolute;
@@ -78,58 +57,63 @@
   margin-bottom: 1.05em;
  // .line{flex: 1;display: block;border-top: 1px solid #FFF;height: 1px;margin: 0 .5em;}
 @media screen and (min-width: 768px) {
-  top:calc(30% + #{size(70 - 1080 * .3)});
-  width: size(1685);
-  font-weight: 500;
-  letter-spacing: .2em;
+ // top:calc(30% + #{size(70 - 1080 * .3)});
+ // width: size(1685);
+ width: 100%;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-align: center;font-size: 2.51em;
+  margin-bottom: .2em;
 
 }
+span{margin-left: .8em;}
 }
 .t2{font-weight:500; letter-spacing: 0.01em;
   font-size: 1.25em;margin: 1.1em 0 0em 0em;color: #727171;
   @media screen and (min-width: 768px) {   
-font-size: 1.65em;margin: .62em 0 0em 0em;
+font-size: 1em;margin: 0em auto 0em auto;width:size(1100);
+  text-align: center;
   }
 }
-
-.txt{
+.t3{font-weight:600; letter-spacing: 0.01em;
+  font-size: 1.25em;margin: 1.1em 0 0em 0em;
+  @media screen and (min-width: 768px) {   
+font-size: 1.06em;margin: 2.4em auto 0em auto;width:size(1100);
+  text-align: center;
+  }
+}
+.img{
+  width:size(1470);margin:size(55) auto auto auto;display: block;
+}
+.hr1{
   position: absolute;
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  left:0;right: 0;margin: auto;
-  top:sizem(89);
-  width:sizem(260);
- 
-  @media screen and (min-width: 768px) {   
-  left: size(565);
-  top:calc(50% + #{size(265 - 1080 * .5)});
-  width: size(783);
-    
-  }
+  bottom:size(170);
+  width: size(605);
+  height: auto;
+  left: 0;
 }
-.logo{
-  width:sizem(62);
-  @media screen and (min-width: 768px) {   
-  width:100%;
-  }
+.hr2{
+  position: absolute;
+  bottom:size(170);
+  width: size(650);
+  height: auto;
+  right: 0;
 }
 
-.t3{font-size: 1em;  font-weight: 400;letter-spacing: .05em;
-  span{font-size: 1.1em;font-weight: 500;  margin: 0 .5em 0 0;letter-spacing: -.05em;}
-  
-  @media screen and (min-width: 768px) {   
-    font-size: 1.3em;
-  }
-}
-.t4{font-size: 1.3em;  font-weight: 600;color: #fff690;
-border-top:1px solid #fff;
-border-bottom:1px solid #fff;
-text-align: center;width: 100%;margin: .4em 0 0em 0em;padding: .16em 0;
+.t4{font-size: 1.3em;  font-weight: 600;
+text-align: center;width: 100%;margin: 4em 0 0em 0em;padding: 0;
 
   @media screen and (min-width: 768px) {   
-    font-size:1em;width: 85%;margin: 1.2em 0 0em 0em;
+    font-size:1.4em;margin: 2.9em 0 0em 0em;
   }
+}
+.t5{font-size: 1.3em;  font-weight: 400;
+text-align: center;width: 100%;margin: .2em 0 0em 0em;padding: .16em 0;
+
+  @media screen and (min-width: 768px) {   
+    font-size:1.1em;
+  }
+  span{display: block;font-size:1.15em;}
 }
 }
 

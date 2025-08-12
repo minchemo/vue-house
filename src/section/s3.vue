@@ -1,24 +1,14 @@
 <template>
-  <article class="s1 relative" id="s1">
-    <!--    --><img src="./s1/mo.jpg" class="t0">
-    <div class="t1"><span>築未來</span><span class="line"></span><span>本於真</span></div>
-    <div class="txt">
-      <img src="./s1/logom.svg" class="logo" alt="梓園" v-if="isMobile">
-      <img src="./s1/logo.svg" class="logo" alt="梓園" v-else>
-      <div class="t2 font-['Noto_Serif_TC',serif]">過去未曾有 未來更稀有</div>
-      <div class="t3"><span>Live The Next</span>南港展覽館站</div>
-      <div class="t4 font-['Noto_Serif_TC',serif]">VIP早鳥．早鳥預約中</div>
-    </div>
- <!--   <img src="./s1/MO.jpg" class="t0">
-    <div class="w01"></div>
-    <div class="w02"></div>
-    <img src="./s1/w3.webp" class="w03" alt="w3">
-    <img src="./s1/logo.svg" class="logo" alt="雲禾月logo" data-aos="zoom-in">
-    <div class="txt font-['Noto_Serif_TC',serif]">
-      <div class="t1" data-aos="zoom-in-right" data-aos-delay="300">幸福從禾來</div>
-      <div class="t2" data-aos="zoom-in-right" data-aos-delay="400">城市與自然<span>左右逢源</span>康健宜居</div>
-      <div class="t3 font-['EB_Garamond']" data-aos="zoom-in-right" data-aos-delay="600">EMBRACING THE VIBRANT LIFE<br>OF CITY AND NATURE.</div>
-    </div>  -->
+  <article class="s2 relative" id="s2">
+    <div class="t1 font-['Noto_Serif_TC',serif]">大南港時代 NEXT新未來</div>
+    <div class="t2">440公頃東區門戶計畫，劃時代的宏偉序章<br />
+南港，正以驚人的速度與規模<br />
+蛻變為台灣鏈結世界的嶄新門戶</div>
+    <div class="t3">南港展覽館1、2館、南港軟體園區1-3期、中信金融園區、<br />
+台北漢來大飯店、三井Lalaport等AI科技、百貨商場、國際飯店匯聚的繁華萬象；<br />
+南港四鐵共構車站、3高3捷3快鏈結城市每一寸肌理，<br />
+定義著前所未有的大南港生活。</div>
+    <div class="t1 font-['Noto_Serif_TC',serif]">大南港時代 NEXT新未來</div>
   </article>
 </template>
 
@@ -40,33 +30,34 @@
   }
 
 }
-  .s1 {
+  .s2 {
    // height:  sizem(604);
   //  height:sizem(667);
   /*  */  
-  background: url("./s1/bgm.jpg") center;
+  background: center;
   background-size: cover;
   height:sizem(750);
   min-height: sizem(750);
     max-height: sizem(750);
   
-  color: #fff;
+  color: #036eb5;
   font-size: sizem(17);
   line-height: 1.3;
+  background: #036eb5;
  // overflow: hidden;
   
 @media screen and (min-width: 768px) {
-  background-image: url("./s1/bg.jpg");
+ // background-image: url("./s1/bg.jpg");
     height:100vh;
-    min-height: size(1070);
+    min-height: size(900);
     max-height: size(1080);
     padding: 0;
     font-size: size(40);
 }
 .t1{
-  position: absolute;
-  left:0;right: 0;margin: auto;
-  display: flex;align-items:center;
+ //position: absolute;
+ // left:0;right: 0;margin: auto;
+//  display: flex;align-items:center;
   top:sizem(25);
   width: sizem(305);
 
@@ -74,7 +65,7 @@
   font-size: 1.2em;
   letter-spacing: 0.06em;
   margin-bottom: 1.05em;
-  .line{flex: 1;display: block;border-top: 1px solid #FFF;height: 1px;margin: 0 .5em;}
+ // .line{flex: 1;display: block;border-top: 1px solid #FFF;height: 1px;margin: 0 .5em;}
 @media screen and (min-width: 768px) {
   top:calc(30% + #{size(70 - 1080 * .3)});
   width: size(1685);
@@ -82,6 +73,12 @@
   letter-spacing: .2em;
 
 }
+}
+.t2{font-weight:500; letter-spacing: 0.01em;
+  font-size: 1.25em;margin: 1.1em 0 0em 0em;color: #727171;
+  @media screen and (min-width: 768px) {   
+font-size: 1.65em;margin: .62em 0 0em 0em;
+  }
 }
 
 .txt{
@@ -104,12 +101,6 @@
   width:sizem(62);
   @media screen and (min-width: 768px) {   
   width:100%;
-  }
-}
-.t2{font-weight: 900; letter-spacing: 0.01em;
-  font-size: 1.25em;margin: 1.1em 0 0em 0em;
-  @media screen and (min-width: 768px) {   
-font-size: 1.65em;margin: .62em 0 0em 0em;
   }
 }
 
