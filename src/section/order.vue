@@ -517,6 +517,9 @@ const send = () => {
   let pass = true;
   let unfill = [];
   let idx = 0;
+  if (formData.msg.trim() === "") {
+    formData.msg = "無留言";
+  }
 
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
