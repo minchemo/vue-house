@@ -571,6 +571,7 @@ const send = () => {
   let unfill = [];
   let idx = 0;
 
+
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
     if (!bypass.includes(key) && (value === "" || value === false)) {
@@ -581,9 +582,7 @@ const send = () => {
       presend.append(key, value)
     }
   }
-  if (formData.msg.trim() === "") {
-    formData.msg = "無留言";
-  }
+
 
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
