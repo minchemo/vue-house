@@ -1,7 +1,7 @@
 const caseName = "test-one-h65"
 
 export default {
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    caseid: "bf15c8df-d0cf-468e-8f96-0a04d4ab7dc2",
     case_code: "test-one-h65",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"

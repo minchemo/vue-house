@@ -486,7 +486,7 @@ if (formData.msg.trim() === "") {
       }
     );
    //caseid 在index.js裡設定
-    fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
+    fetch("https://mail-1.wutopia.com.tw/reserve/"+ info.caseid, {
       method: "POST",
       body: presend,
     })
