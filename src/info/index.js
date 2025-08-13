@@ -5,17 +5,17 @@ export default {
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "XXXXXX",
+    address: "臺北市松山區民權東路3段181號2樓",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3614.1874332013117!2d121.54416325252252!3d25.061635595178924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1755050513229!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/",
-    phone: "02-2690-3888",
+    phone: "0000000",
     fbLink: "https://www.facebook.com/61578977057760/",
     fbMessage: "https://m.me/61578977057760/",
     caseName: caseName,
     houseInfos: [
-        ["投資建設", "XXX"],
-        ["企劃銷售", "XXX"],
-        ["建照執照", "XXX"],
+        ["投資建設", "梓園建設股份有限公司"],
+        ["企劃銷售", "忠勝行銷有限公司"],
+       // ["建照執照", "XXX"],
         // ["經&ensp;紀&ensp;人", "ＯＯＯ（114）新北經字第00138138號"], 
         /*
         ["建築設計", "弘憲聯合建築師事務所"],
