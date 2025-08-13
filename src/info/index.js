@@ -6,7 +6,7 @@ export default {
     address: "",
     googleSrc: "",
     googleLink: "",
-    phone: "",
+    phone: "(06)262-8888",
     fbLink: "https://www.facebook.com/61578255539676/",
     fbMessage: "https://m.me/61578255539676/",
     caseName: caseName,
