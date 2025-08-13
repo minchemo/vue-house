@@ -31,6 +31,8 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "測試表單",
+        subTitle:"將有專人與您聯絡，我們將竭誠為您服務",
+        subTitle_mo:"將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位

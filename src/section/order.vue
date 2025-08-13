@@ -5,7 +5,7 @@
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
       <!-- Form -->
-      <div class="form mx-auto relative flex justify-center font-['Noto_Serif_TC',serif]">
+      <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
@@ -136,75 +136,43 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
-.order-section {
-  position: relative;
- // padding-top: size(406);
-   overflow: hidden;
-    min-height: size(500);
-
-  .bg-image {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: size(50);
-    vertical-align: middle;
-  }
-
-}
+$o-title-c:#A30C24; //.order-title
 
 .order {
   width: 100%;
   padding-top: size(40);
-  /*
-  background:url("@/section/form/bg.jpg");
-  background-size: auto;
-  */
- // background: linear-gradient(to bottom, #195c45, #000704);
-  
+  font-size:16px;
 
-
-  .order-title {
-    font-size: size(40);
-    font-weight: 400;
-    color: #A30C24;
-    padding-top:1.5em;
-    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-    .line{width: size(439);}
-  }
-
-  .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
-  }
+.order-section {
+  position: relative;
+  overflow: hidden;
+  min-height: size(500);
+}
+.order-title {
+  font-size: 2.5em;
+  font-weight: 400;
+  color: $o-title-c;
+  padding-top:1.5em;
+}
   .order-subTitle{
-    font-size: size(17);
-    // color: #fff;
-    padding-top:.8em;
+    font-size: 1.0625em;
+    padding-top:.5em;
     letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-  }
-  .cus-divider {
-    margin: 0 auto;
-    width: size(300);
-    height: size(2);
-    margin-bottom: size(50);
-  //  background-color: #055F76;
   }
 
   .form {
     width: size(920);
     min-width: 750px;
     //  height: 350px;
-    gap: size(80);
-    margin-top: size(45);
-    margin-bottom: size(50);
+    gap: 4em;
+    margin-top: 2.8em;
+    margin-bottom: 3em;
     z-index: 50;
     align-items: stretch;
 
     .left {position: relative;
       flex: 1;
-      gap: size(20);
+      gap: 1.25em;
       align-items: flex-start;
       //   width: size(419);
     }
@@ -217,7 +185,7 @@
 
     &::after {
       content: "";
-      width: size(1);
+      width: 1px;
       height: 100%;
       background-color: #0003;
       position: absolute;
@@ -228,7 +196,7 @@
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #F00;//font-size: 12px;
+        > span{color: #F00;
           }
       }
       input,select{background: inherit;flex: 1;}
