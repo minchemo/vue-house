@@ -426,11 +426,16 @@ const send = () => {
 
 //有性別的話 性別顯示
 if (formData.gender) {
-  formData.name = `${formData.name}(${formData.gender})`;
+  const genderTag = `(${formData.gender})`;
+  if (!formData.name.endsWith(genderTag)) {
+    formData.name += genderTag;
+  }
 }
+/*
 if (formData.msg.trim() === "") {
   formData.msg = "無留言";
 }
+  */
 
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
@@ -486,7 +491,7 @@ if (formData.msg.trim() === "") {
       }
     );
    //caseid 在index.js裡設定
-    fetch("https://mail-1.wutopia.com.tw/reserve/"+ info.caseid, {
+    fetch("https://mail.wutopia.com.tw/reserve/"+ info.caseid, {
       method: "POST",
       body: presend,
     })
