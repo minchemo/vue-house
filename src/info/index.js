@@ -5,10 +5,10 @@ export default {
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "臺北市松山區民權東路3段181號2樓",
+    //address: "臺北市松山區民權東路3段181號2樓",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3614.1874332013117!2d121.54416325252252!3d25.061635595178924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1755050513229!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/",
-    phone: "0000000",
+   //phone: "0000000",
     fbLink: "https://www.facebook.com/61578977057760/",
     fbMessage: "https://m.me/61578977057760/",
     caseName: caseName,
