@@ -40,6 +40,7 @@
     @apply relative flex text-[#fff];
     margin: 0;
     flex-basis: size(590);
+    width:size(590);
   flex-direction: column;
   text-align: justify;
   .txt {
@@ -70,10 +71,12 @@
   .slider {
     margin: 0;
     flex-basis: size(840);
+    width:size(840);
       height: size(560);
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
+    width:size(840);
       height: size(560);
       
     }
