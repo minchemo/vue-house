@@ -84,6 +84,7 @@
     margin-bottom: size(30);
     margin-top: size(30);
     z-index: 99;
+    filter: brightness(0) invert(1);
   }
   
 

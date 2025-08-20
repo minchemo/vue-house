@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="img">
-      <img src="./s2/logo.svg" alt="logo" data-aos="fade-up" data-aos-delay="0">
+      <img src="./s1/logo.svg" alt="logo" data-aos="fade-up" data-aos-delay="0">
       <img src="./s2/coming.svg" alt="coming" data-aos="fade-up" data-aos-delay="200">
     </div>
   </article>
