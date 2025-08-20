@@ -80,7 +80,7 @@
       <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send --><div class="sendall mt-8 mx-auto" style="font-size:20px;font-weight: 400;
+      <!-- Send --><div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 400;
     line-height: 3.3;height:3.3em">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
   送出表單
@@ -232,7 +232,7 @@ $o-title-c:#A30C24; //.order-title
   }
 
   .control {
-    font-size: size(16);
+    font-size: 16px;
     color: #000;
     position: relative;
   }
@@ -267,12 +267,14 @@ $o-title-c:#A30C24; //.order-title
     }
 
     .order-title {
-      font-size: sizem(27);
+    /*  font-size: sizem(27);
       padding-top:2em;
-      .line{width: sizem(258);}
+      .line{width: sizem(258);
+      
+      }*/
     }
     .order-subTitle{
-      font-size: sizem(13);
+     // font-size: sizem(13);
       padding-top:0;
     }
 
@@ -280,20 +282,23 @@ $o-title-c:#A30C24; //.order-title
     .form {
       width: sizem(310);
       min-width: 0;
-      height: auto;
+      flex-direction: column;
+      gap: 0;margin: 2em auto 1.1em;
+    /*  height: auto;
       gap: sizem(15);
       margin-bottom: sizem(20);
-      flex-direction: column;
-      margin-top: sizem(20);
+      margin-top: sizem(20);*/
 
       .left {
         width: 100%;
-        gap: sizem(15);
+        //gap: sizem(15);
       }
 
       .right {
         width: 100%;
-        height: sizem(100);
+        height:6.25em;
+        margin-top: 1.1em;
+
         .row{
           height: 7em;
         }
@@ -304,13 +309,11 @@ $o-title-c:#A30C24; //.order-title
       }
     }
     .send {
-      font-size: sizem(21);
       width: sizem(310);
-      height: sizem(72);
     }
 
     .control {
-      font-size: sizem(14.6);
+      font-size: 14px;
     }
   }
 }

@@ -111,12 +111,12 @@
   height: 0;z-index: 52;
 }
 .contact-info {
-  padding: size(55) size(0) size(55) size(0);
-    width: size(1440);
-    min-width: 680px;
   position: relative;
   z-index: 50;
-  // background: #045147;
+   background: #0003;
+    font-size:16px;
+    line-height: 1.6;
+  padding:3.4em 0;
 
   .logo {position: relative;
     width: size(367);
@@ -132,10 +132,10 @@
 
   .contact-item-box {
     position: relative;
-    margin-top: size(20);
-    gap: size(20);
+    margin-top: 1.25em;
+    gap: 1.25em;
     width: size(920);
-    // min-width: 680px;
+    min-width: 750px;
 
     .contact-item {
       background: #666;
@@ -144,8 +144,6 @@
       flex: 1;
       padding: 1.1em 0;
   //  border-radius: .5em;
-      font-size: size(16);
-      line-height: 1.6;//3.8
       letter-spacing: 0em;
      // max-width: size(280);
       z-index: 1;
@@ -153,6 +151,13 @@
       cursor: pointer;
       //border: 1px solid #C29267;
       gap: 1em;
+      img {
+        width:1.68em;
+        height: 1.68em;
+        filter: brightness(0) invert(1);
+        transition: all .5s;
+        margin: 0;
+      }
 
       &:hover {
         background: #A30C24;
@@ -163,14 +168,6 @@
         }
       }
 
-      img {
-        max-width: size(27);
-        height: auto;
-        max-height: size(27);
-        filter: brightness(0) invert(1);
-        transition: all .5s;
-        margin: 0;
-      }
 
       &.address {
         background-color: #FFF;
@@ -268,14 +265,8 @@
   .contact-info {
     width: 100%;
     min-width:0;
-    // height: sizem(400);
-    // border-radius: sizem(68);
-    //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(40) 0;
-    margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
-  background-size: sizem(450) auto;
 
     .logo {
       width: sizem(257);
@@ -285,22 +276,19 @@
 
     .contact-item-box {
       position: relative;
-      margin-top: sizem(0);
-      gap: sizem(15);
+    margin-top:0;
+      gap:0;
       flex-direction: column;
     width: sizem(310);
+    min-width: 0;
 
       .contact-item {
-        padding: 1.1em sizem(80);
-        font-size: sizem(16);
+        padding: 1.1em 0;
         max-width: 100%;
         white-space: nowrap;
-        margin: 0;
+        margin:1.1em 0 0 0;
 
-        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-          max-width: sizem(27);
-          height: auto;
-          max-height: sizem(27);
+        img {                              
           margin: unset;
           position: absolute;
           left: calc(50% - 5em);
@@ -311,10 +299,9 @@
         }
 
         &.address {
-          font-size: sizem(15);
-          border-radius: sizem(0) sizem(0) 0 0;
+          border-radius: 0;
           padding: 1.1em 0;
-          margin-top: sizem(25);
+        //  margin-top: sizem(25);
           //font-size: .9em;
 
           &::before {
@@ -326,11 +313,12 @@
         }
 
         &.address+div {
-          border-radius: 0 0 sizem(0) sizem(0);
+          border-radius: 0 0;
         }
       &.googlemap {
         border-top-width: 0;
-      border-left-width:0;
+        border-left-width:0;
+        margin-top:0;
       }
       }
 
