@@ -261,12 +261,43 @@ const isMobile = computed(() => globals.$isMobile());
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
+/*
+onMounted(() => {
+  window.onload = function () {
+    isLoading.value = false
+    AOS.init({
+      offset: 0,
+      duration: 1500
+    });
+  };
+
+})
+*/
 
 const config = ref({
   showNav: false
 })
 
 onMounted(() => {
+ /* let ticking = false; // 確保在一幀內只處理一次滾動事件
+  const allbg = document.querySelector(".allbg .bg");
+
+  const handleScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollPosition = window.scrollY;
+        if (allbg) {
+          allbg.style.transform = `translateY(${scrollPosition * (globals.$isMobile()?-0.17:-0.27)}px)`; // 0.3 為速度係數
+        }
+        ticking = false; // 完成處理後重置
+      });
+      ticking = true; // 標記正在處理中
+    }
+  };*/
+
+  // 綁定滾動事件
+ // window.addEventListener("scroll", handleScroll);
+
   window.onload = function () {
     isLoading.value = false;
     AOS.init({
@@ -275,6 +306,10 @@ onMounted(() => {
     });
   };
 
+  // 在組件卸載時清理事件
+ /* onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+  });*/
 });
 
 </script>
