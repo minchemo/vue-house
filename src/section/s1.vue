@@ -1,55 +1,27 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!--  <img src="./s1/mo.jpg" class="t0">  -->
-    <div class="t1" data-aos="zoom-in"><span>築未來</span><span class="line"></span><span>本於真</span></div>
-    <div class="txt">
-      <img data-aos="zoom-in" data-aos-delay="200" src="./s1/logom.svg" class="logo" alt="梓園" v-if="isMobile">
-      <img data-aos="zoom-in" data-aos-delay="200" src="./s1/logo.svg" class="logo" alt="梓園" v-else>
-      <div data-aos="zoom-in" data-aos-delay="400" class="t2 font-['Noto_Serif_TC',serif]">過去未曾有 未來更稀有</div>
-      <div data-aos="zoom-in" data-aos-delay="600" class="t3"><span>Live The Next</span>南港展覽館站</div>
-      <div data-aos="zoom-in" data-aos-delay="800" class="t4 font-['Noto_Serif_TC',serif]">VIP早鳥．早鳥預約中</div>
-    </div>
- <!--   <img src="./s1/MO.jpg" class="t0">
-    <div class="w01"></div>
-    <div class="w02"></div>
-    <img src="./s1/w3.webp" class="w03" alt="w3">
-    <img src="./s1/logo.svg" class="logo" alt="雲禾月logo" data-aos="zoom-in">
-    <div class="txt font-['Noto_Serif_TC',serif]">
-      <div class="t1" data-aos="zoom-in-right" data-aos-delay="300">幸福從禾來</div>
-      <div class="t2" data-aos="zoom-in-right" data-aos-delay="400">城市與自然<span>左右逢源</span>康健宜居</div>
-      <div class="t3 font-['EB_Garamond']" data-aos="zoom-in-right" data-aos-delay="600">EMBRACING THE VIBRANT LIFE<br>OF CITY AND NATURE.</div>
-    </div>  -->
+    <!--  <img src="./s1/pc.jpg" class="t0">  -->
+    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/t1.svg" class="t1" alt="t1" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./s1/t2.svg" class="t2" alt="t2" data-aos="zoom-in" data-aos-delay="400">
+    <img src="./s1/en.svg" class="en" alt="en" data-aos="fade-up" data-aos-delay="0" >
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
   .t0{position: absolute;width: 100%;
-    top:-0px;left: 0; pointer-events: none;z-index: 9;opacity: .2;}
-@keyframes an {
-  20% {
-    transform: scale(2,.3);opacity: .3;
-  }
-  30% {
-    transform: scale(6,.5);opacity: 0;
-  }
-  40% {
-    transform: scale(.03,.01);opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    top:-0px;left: 0; pointer-events: none;z-index: 9;opacity: .10;}
 
-}
   .s1 {
    // height:  sizem(604);
   //  height:sizem(667);
   /*  */  
-  background: url("./s1/bgm.jpg") center;
-  background-size: cover;
-  height:sizem(750);
-  min-height: sizem(750);
-    max-height: sizem(750);
+  background:#BAF0FC url("./s1/bgs1.jpg") no-repeat center bottom;
+  background-size: auto sizem(485);
+  height:sizem(604);
+  min-height: sizem(604);
+    max-height: sizem(604);
   
   color: #fff;
   font-size: sizem(17);
@@ -57,13 +29,62 @@
  // overflow: hidden;
   
 @media screen and (min-width: 768px) {
-  background-image: url("./s1/bg.jpg");
+ // background-image: url("./s1/bgs1.jpg");
+ background-position: 50% 90%;
+  background-size: cover;
     height:100vh;
     min-height: size(900);
-    max-height: size(1080);
+    max-height: size(1186);
     padding: 0;
     font-size: size(40);
 }
+.logo,
+.t1,
+.t2,
+.en{
+  position: absolute;
+  margin: auto;
+  left:0;right:0;
+}
+.logo{
+  width:sizem(170);
+  top:sizem(120);
+}
+.t1{
+  width:sizem(308);
+  top:sizem(238);
+}
+.t2{
+  width:sizem(245);
+  top:sizem(285);
+}
+.en{
+  width:100%;
+  bottom:sizem(0);
+}
+@media screen and (min-width: 768px) {
+  .logo{
+    width:size(335);
+    top:size(138);
+  top:calc(25% + #{size(138 - 1186 * .25)});
+  }
+  .t1{
+    width:size(609);
+    top:size(371);
+  top:calc(45% + #{size(371 - 1186 * .45)});
+  }
+  .t2{
+    width:size(484);
+    top:size(464);
+  top:calc(45% + #{size(464 - 1186 * .45)});
+  }
+  .en{
+    width:size(1753);
+    bottom:size(0);
+  }
+}
+
+/*
 .t1{
   position: absolute;
   left:0;right: 0;margin: auto;
@@ -79,7 +100,6 @@
 @media screen and (min-width: 768px) {
   top:calc(30% + #{size(70 - 1080 * .3)});
   width: size(1685);
-  font-weight: 500;
   letter-spacing: .2em;
 
 }
@@ -129,7 +149,7 @@ text-align: center;width: 100%;margin: .4em 0 0em 0em;padding: .16em 0;
   @media screen and (min-width: 768px) {   
     font-size:1em;width: 85%;margin: 1.2em 0 0em 0em;
   }
-}
+}*/
 }
 
  

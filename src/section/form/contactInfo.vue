@@ -5,9 +5,9 @@
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
    <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>  -->
+    </div> 
+    <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"> -->
     
-    <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo">
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
@@ -36,8 +36,8 @@
   </div></div>
 
   <!-- Mobile contact info -->
-    <div class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"  v-if="!$isMobile()"  @click="scrollTo('.s1')">
+    <div class="bg-white mo-contact-info flex justify-end w-full contact-item-box items-center">
+   <!--  <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"  v-if="!$isMobile()"  @click="scrollTo('.s1')"> -->
 
       <div class="flex flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
@@ -106,28 +106,28 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #036eb5;}
-.hover\:bg-color2:hover{background-color:#003f69;}
+.bg-color1{background-color: #857550;}
+.hover\:bg-color2:hover{background-color:#5e5236;}
 
   .mo-contact-info {
-    display: none;
+    //display: none;
     z-index: 99;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: size(60);
-    background:linear-gradient(90deg, #DFF8F6 , #007e7799);
+    background:linear-gradient(90deg, #fff0 70% ,  #fff9);
       font-size: size(16);
-      font-weight: 400;
-      backdrop-filter: blur(3px);
+      font-weight: 700;
+      //backdrop-filter: blur(3px);
       .logo{
         height: 90%;
         margin: 0em auto 0 1.5em;
       }
     .contact-item {
       height: 100%;      
-      color: #fff;
+      color: #857550;
       border-left:1px solid #fff9;padding: 0 .6em;
       transition:background .3s;
       img {
@@ -135,15 +135,17 @@
         max-width:1.03em;
         height: auto;
         max-height: 1.03em;
-        filter: brightness(0) invert(1);
+        filter:  invert(50%) sepia(20%) saturate(662%) hue-rotate(4deg) brightness(88%) contrast(90%);
       }
       &:first-child{
       border-left:0;}
-      &:hover{background: #05a3;}
+      &:hover{background: #fff9;}
     }
   }
 
-.contact-bg{background: #036eb5;}
+.contact-bg{
+  //background: #036eb5;
+}
 .contact-info-img{
   height: 0;z-index: 52;
 }
@@ -170,17 +172,18 @@
     position: relative;
     margin-top: size(20);
     gap: size(20);
-    width: size(920);
+    width: size(1200);
+    min-width: 750px;
     // min-width: 680px;
 
     .contact-item {
-      background: #003f69;
+      background: #857550;
       color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
     // border-radius: .5em;
-      font-size: size(16);
+      font-size: 16px;
       font-weight: 700;
       line-height: 1.6;//3.8
       letter-spacing: 0em;
@@ -193,7 +196,7 @@
       gap: 1em;
 
       &:hover {
-        background: #014;
+        background: #5e5236;
         color: #fff;
 
         img {
@@ -217,7 +220,6 @@
         z-index: 0;
         position: relative;
         flex:2.17;
-        font-weight: 500;
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;margin: 0 -.8em 0 0;
@@ -282,18 +284,19 @@
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-    background:#036eb5;
+    background:#857550;
     .contact-item{
       flex: 1;padding: 0;
+      color: #fff;
+      img {
+        filter: brightness(0) invert(1);
+      }
     }
   }
 
   .contact-info {
     width: 100%;
     min-width:0;
-    // height: sizem(400);
-    // border-radius: sizem(68);
-    //padding: sizem(0) sizem(0);
     padding: sizem(0) 0 sizem(40) 0;
     margin-top:sizem(60);
     position: relative;
@@ -303,7 +306,6 @@
     .logo {
       width: sizem(290);
     margin: sizem(40) auto sizem(30) auto;
-     // margin-bottom: sizem(47);
     }
 
     .contact-item-box {
@@ -312,6 +314,7 @@
       gap: sizem(15);
       flex-direction: column;
     width: sizem(310);
+    min-width:0;
 
       .contact-item {
         padding: 1.1em sizem(80);

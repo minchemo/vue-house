@@ -14,7 +14,7 @@
   'Noto_Sans_TC',sans-serif
   -->
 
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#d5e3e7] text-[#3E3A39]">
+  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#ddd] text-[#3E3A39]">
     <h1 class="absolute opacity-0 pointer-events-none">{{ info.caseName }}</h1>
     <S1 />
     <S2 />
@@ -52,11 +52,16 @@ img {
 }
 .home{
   position: relative;
-/*  &::before{content: "";display: block;position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
+  &::before{content: "";display: block;position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
 background: url("@/section/s1/bg.jpg") top center;
-background-size: cover;
+background-size: auto;
+    font-weight: 700;
+@media screen and (max-width:768px) {
+  
+background-size: sizem(375) auto;
+}
 
-}*/
+}
 }
 // 字體
 /*

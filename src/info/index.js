@@ -1,20 +1,21 @@
-const caseName = "梓園NEXT"
+const caseName = "謙里"
 export default {
-    //caseid: "76ba5df2-d3a5-4d7d-8e41-ee1d8128a3e4",
-    caseid: "4af555cf-93db-4f2a-8dc5-555f2169b8b3",
+    caseid: "4c84cb47-b6b2-4c3a-a68e-3e59a14f1be8",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    //address: "臺北市松山區民權東路3段181號2樓",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3614.1874332013117!2d121.54416325252252!3d25.061635595178924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1755050513229!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/",
-   //phone: "0000000",
-    fbLink: "https://www.facebook.com/61578977057760/",
-    fbMessage: "https://m.me/61578977057760/",
+    address: "台中市后里區三豐路三段1080號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14544.451486716187!2d120.71196831741628!3d24.30769772085668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691aa34085f109%3A0x6f2ac81470ffe75a!2zNDIx5Y-w5Lit5biC5ZCO6YeM5Y2A5LiJ6LGQ6Lev5LiJ5q61MTA4MOiZnw!5e0!3m2!1szh-TW!2stw!4v1755848590741!5m2!1szh-TW!2stw",
+    googleLink: "hhttps://maps.app.goo.gl/tNTo6rTh7QiPWuEZ7",
+    phone: "0000000",
+    fbLink: "https://www.facebook.com/61579396628225/",
+    fbMessage: "https://m.me/61579396628225/",
     caseName: caseName,
     houseInfos: [
-        ["投資建設", "梓園建設股份有限公司"],
-        ["企劃銷售", "忠勝行銷有限公司"],
+        ["投資建設", "詠砌建設股份有限公司"],
+        ["建築設計", "賴恩常建築師事務所"],
+        ["建照號碼", "114中都建字第00692號"],
+        ["行銷企劃", "自建自售"],
        // ["建照執照", "XXX"],
         // ["經&ensp;紀&ensp;人", "ＯＯＯ（114）新北經字第00138138號"], 
         /*
@@ -23,26 +24,26 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-KDXX3P9J"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    gtmCode: ["GTM-W93JX264"], // 可放置多個
+    //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約賞屋",
-        subTitle: "如果您需要預約，可點選下方聯絡方式"
+        title: "五感生活．從容開啟",
+        subTitle: "敬獻菁英的專屬品味｜2-3房｜高感精工宅"
     },
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
-    /* 
        room_type: {
         title: "需求房型",
         hold: "請選擇房型",
         option: ["兩房", "三房"],
         bypass:false,　
       },
+    /* 
       budget: {
         title: "購屋預算",
         hold: "請選擇區間",
