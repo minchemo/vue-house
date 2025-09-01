@@ -296,7 +296,7 @@ const list1 = [
     link:"https://drive.google.com/file/d/10Wp_Vdb7YhaRSoejjCGVwGRtQjJjK07s/view?usp=sharing",
   },
   {
-    t1: ["v2", "已完成"],
+    t1: ["v1", "已完成"],
     t2: "114/4/24<br>114/4/29",
     t3: "第一次專案小組審議",
     link:"",
