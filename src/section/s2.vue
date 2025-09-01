@@ -296,7 +296,7 @@ const list1 = [
     link:"https://drive.google.com/file/d/10Wp_Vdb7YhaRSoejjCGVwGRtQjJjK07s/view?usp=sharing",
   },
   {
-    t1: ["v2", "進行中"],
+    t1: ["v2", "已完成"],
     t2: "114/4/24<br>114/4/29",
     t3: "第一次專案小組審議",
     link:"",
@@ -320,8 +320,8 @@ const list3 = [
   },
   {
     t1: ["v2", "進行中"],
-    t2: "",
-    t3: "待收受第一次專案小組會議紀錄，預計114年8月續送第二次小組審議。",
+    t2: "114/08/18 ",
+    t3: "檢附修正事權續提第2次專案小組審議",
     link:"",
     link_t:"",
   },
