@@ -4,7 +4,6 @@
       <div class="bg">
         <div><img src="./s1/bg1.jpg"><img src="./s1/bg1.jpg"></div>
       </div>
-      <img src="./s1/bg.webp" class="bg1">
     <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/t1.svg" class="t1" alt="t1" data-aos="zoom-in" data-aos-delay="200">
     <img src="./s1/t2.svg" class="t2" alt="t2" data-aos="zoom-in" data-aos-delay="400">
