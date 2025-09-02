@@ -69,9 +69,9 @@
 							台積電高雄廠2奈米營運部隊已悄然成軍，旗下高雄廠正式編定為台積22廠，逾7,000億元的1.4奈米投資計畫亦可望同步轉向高大特區。</div>
 					</div>
 					<div class="item">
-						<div class="t1" data-aos="fade-up" data-aos-delay="0">散步200米走進捷運紫線預定站</div>
+						<div class="t1" data-aos="fade-up" data-aos-delay="0">散步走進捷運紫線預定站</div>
 						<div class="t2" data-aos="fade-up" data-aos-delay="200">
-							高雄捷運紫線串聯高雄大學、文藻大學、高師大高科大等七所院校，同步連結「高大之森」與橋頭科學園區，4站進左營高鐵台鐵輕軌三鐵共構站。</div>
+							高雄捷運紫線串聯高雄大學、文藻大學、高師大高科大等七所院校，同步連結「高大之森」與橋頭科學園區，同步連結左營高鐵台鐵輕軌三軌共構站。</div>
 					</div>
 					<div class="item">
 						<div class="t1" data-aos="fade-up" data-aos-delay="0">新台17線15分鐘<br>漢神巨蛋及高雄美術館園區</div>
@@ -110,7 +110,8 @@
 				<div class="caption">建築外觀3D示意參考圖</div>
 			</div>
 			<div class="t2" v-if="!isMobile" data-aos="fade-up" data-aos-delay="0">｜賀高大之森榮獲2023美國TITAN白金獎 法國NDA金獎｜</div>
-			<div class="t2" v-else data-aos="fade-up" data-aos-delay="0">賀高大之森榮獲2023<br v-if="isMobile">美國TITAN白金獎 法國NDA金獎
+			<div class="t2" v-else data-aos="fade-up" data-aos-delay="0">賀高大之森榮獲2023<br v-if="isMobile">美國TITAN白金獎
+				法國NDA金獎
 			</div>
 			<div class="t3" v-if="isMobile" data-aos="fade-up" data-aos-delay="200">我們向世界證明<br>這座建築配得上您</div>
 			<div class="t3" v-else data-aos="fade-up" data-aos-delay="200">我們向世界證明，這座建築配得上您</div>
@@ -133,10 +134,12 @@
 				23年來以種樹哲學　在北台灣躍建築新高峰
 			</div>
 			<div class="t t3" data-aos="fade-up" data-aos-delay="400">以種樹哲學 躍建築新高峰　以服務紮根 跨品牌新里程</div>
-			
-      <div class="bg" v-if="!isMobile"></div>
-      <label class="bg1" v-else><input type="checkbox" name="s6img"><div class="pican"><img src="./s6/imgm.webp" alt=""><img src="./s6/imgm.webp" alt=""></div></label>
-      
+
+			<div class="bg" v-if="!isMobile"></div>
+			<label class="bg1" v-else><input type="checkbox" name="s6img">
+				<div class="pican"><img src="./s6/imgm.webp" alt=""><img src="./s6/imgm.webp" alt=""></div>
+			</label>
+
 		</div>
 		<div class="section7">
 			<img class="t1" src="@/section/s7/t1.png" alt="" srcset="" data-aos="fade-up" data-aos-delay="0">
@@ -216,7 +219,8 @@
 				<div class="carousell-box" :class="{ paused: pausedCarousell }" @mouseleave="pausedCarousell = false"
 					@mouseover="pausedCarousell = true">
 					<div class="carousell" v-for="i in 3">
-						<div class="item" v-for="item, i in s8_carousell" :style="{ backgroundImage: `url(${item.img})` }">
+						<div class="item" v-for="item, i in s8_carousell"
+							:style="{ backgroundImage: `url(${item.img})` }">
 							<p>{{ item.caption }}</p>
 						</div>
 					</div>
@@ -785,7 +789,7 @@
 					top: 15%;
 					left: 3.5%;
 					gap: size(10);
-          transition: opacity .5s;
+					transition: opacity .5s;
 
 					.t1 {
 						writing-mode: vertical-lr;
@@ -832,7 +836,7 @@
 
 				.hidden-t {
 					@apply absolute z-10;
-          transition: opacity .5s;
+					transition: opacity .5s;
 					opacity: 0;
 					padding: 0 size(20);
 					bottom: 0;
@@ -846,7 +850,7 @@
 						padding-bottom: size(20);
 						border-bottom: 1px solid #fff;
 						margin-bottom: size(20);
-            text-align: justify;
+						text-align: justify;
 					}
 				}
 
@@ -1248,7 +1252,7 @@
 
 				.swiper-text {
 					@apply flex flex-col;
-					gap:0;// sizem(30);
+					gap: 0; // sizem(30);
 					margin-top: 0;
 					padding: 0 sizem(25);
 
@@ -1267,7 +1271,7 @@
 							letter-spacing: sizem(1.1);
 							width: 100%;
 							margin-top: sizem(10);
-               margin-bottom:sizem(30);
+							margin-bottom: sizem(30);
 						}
 					}
 
@@ -1344,7 +1348,7 @@
 
 					.t2 {
 						margin-top: sizem(10);
-            margin-bottom:sizem(40);
+						margin-bottom: sizem(40);
 						font-size: sizem(13);
 						font-weight: 400;
 						line-height: sizem(22.3);
@@ -1434,9 +1438,9 @@
 			@apply text-white text-center relative;
 			margin-top: sizem(95);
 			height: sizem(500);
-      background-image: url("./s6/bg1m.webp");
-      background-size: 130% auto;
-      background-position: center center;
+			background-image: url("./s6/bg1m.webp");
+			background-size: 130% auto;
+			background-position: center center;
 
 			.t {
 				@apply relative z-10;
@@ -1470,32 +1474,40 @@
 				background-size: 200% 100%;
 				background-position: 0% 0%;
 			}
-      .bg1{width: 100%;
-        img{
-				height: sizem(250);
-      }
-      .pican{
-        width: auto;
-        display: inline-block;
-        position: relative;
-        white-space: nowrap;
-        margin: 15vw 0 0 0;
-        white-space: nowrap;
-        animation: anim 20s linear infinite reverse ;
-        transform: translateX(-50%)}
-      input {
-        display: none;
-      }
-      input:checked + .pican:hover {
-        animation-play-state: paused;
-      }
+
+			.bg1 {
+				width: 100%;
+
+				img {
+					height: sizem(250);
+				}
+
+				.pican {
+					width: auto;
+					display: inline-block;
+					position: relative;
+					white-space: nowrap;
+					margin: 15vw 0 0 0;
+					white-space: nowrap;
+					animation: anim 20s linear infinite reverse;
+					transform: translateX(-50%)
+				}
+
+				input {
+					display: none;
+				}
+
+				input:checked+.pican:hover {
+					animation-play-state: paused;
+				}
+
 				@keyframes anim {
 
 					to {
-            transform: translateX(0)
+						transform: translateX(0)
 					}
 				}
-      }
+			}
 		}
 
 		.section7 {
@@ -1539,12 +1551,13 @@
 						.hidden-t {
 							opacity: 1;
 						}
-					&:hover {
 
-						.hidden-t {
-							opacity: 1;
+						&:hover {
+
+							.hidden-t {
+								opacity: 1;
+							}
 						}
-					}
 					}
 
 					.t {
@@ -1565,6 +1578,7 @@
 							line-height: sizem(36);
 							letter-spacing: sizem(2.55);
 						}
+
 						.name {
 							@apply flex flex-col;
 							font-size: sizem(12);
@@ -1773,8 +1787,6 @@ const bubbles = [
 	{
 		t1: "<b>KRTC</b>",
 		t2: "<b>捷運紫線</b>",
-		t3: "4站台積電",
-		t4: "5站高鐵站"
 	},
 ]
 
