@@ -28,8 +28,8 @@
 			</div>
 			<div class="t3" data-aos="fade-up" data-aos-delay="0">｜高大Σ計畫打造科技極地理想國｜</div>
 			<div class="t4" data-aos="fade-up" data-aos-delay="200">邀請你一起看見高雄的世界級</div>
-			<img class="view" src="@/section/s1/view.webp" alt="" srcset="">
-			<img class="bg1" src="@/section/s1/bg1.png" alt="" srcset="">
+			<!--<img class="view" src="@/section/s1/view.webp" alt="" srcset="">
+			<img class="bg1" src="@/section/s1/bg1.png" alt="" srcset="">-->
 			<img class="bg2" src="@/section/s1/bg2_m.png" alt="" srcset="" v-if="isMobile">
 			<img class="bg2" src="@/section/s1/bg2.png" alt="" srcset="" v-else>
 			<img class="text1" src="@/section/s1/text1.png" alt="" srcset="">
