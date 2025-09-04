@@ -3,7 +3,8 @@
     <div class="order-section">
 
       <!-- Title Image -->
-      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
+      <img class="order-logo" src="@/section/s1/logo.svg" alt="" srcset="">
+<img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
 
       <!-- Custom Image -->
       <img class="bird" src="@/section/form/bird.png" alt="" srcset="">
@@ -112,7 +113,7 @@
   // padding-bottom: size(90);
   position: relative;
   min-height: size(1924);
-  padding-top: size(406);
+  padding-top: size(320);
 
   .bg-image {
     position: absolute;
@@ -127,11 +128,6 @@
 .order {
   width: 100%;
   padding-top: size(40);
-  /*
-  background:url("@/section/form/bg.jpg");
-  background-size: auto;
-  */
- // background: linear-gradient(to bottom, #195c45, #000704);
 
 
  .bird {
@@ -153,7 +149,8 @@
     }
   }
   
-
+  .order-logo{width: size(300);display: block;
+    margin-bottom: size(80);}
   .order-title-img {
     width: size(1008);
     margin-bottom: size(155);
@@ -291,6 +288,9 @@
     padding-bottom: sizem(63);
 
 
+  
+  .order-logo{width: sizem(150);display: block;
+    margin-bottom: sizem(35);}
     .order-title-img {
       width: sizem(315);
       margin-bottom: sizem(22);

@@ -6,7 +6,7 @@
         第<span class="t-one">1</span>等 國際級建材豪規配置<br />
         不<span class="t-one">1</span>樣 品牌結盟新生活型態</div>
     </div>
-    <img data-aos="fade-down" data-aos-delay="200" src="@/section/s2/logo.png" class="logo" alt="" srcset="">
+    <img data-aos="fade-down" data-aos-delay="200" src="@/section/s1/logo.svg" class="logo" alt="" srcset="">
     <img v-if="!$isMobile()" src="@/section/s2/1.png" class="one" alt="" srcset="">
     <img v-else src="@/section/s2/1_m.png" class="one" alt="" srcset="">
   </article>
@@ -51,9 +51,9 @@
   }
   .logo {
     @apply absolute;
-    width: size(150);
-    top: size(50);
-    left: size(53);
+    width: size(100);
+    top: size(30);
+    left: size(30);
   }
   .one {
     @apply absolute;
@@ -92,8 +92,8 @@
     }
   }
   .logo {
-    width: sizem(107.89);
-    top: sizem(50);
+    width: sizem(70);
+    top: sizem(30);
     left: sizem(24);
   }
   .one {

@@ -20,7 +20,7 @@ export default {
         ["公設設計", "盼達創意事業"],
         ["基地面積", "約2180坪"],
         ["房型規劃", "2-3房"],
-        ["企劃銷售", "湘澂國際有限公司"],
+        ["企劃銷售", "上揚國際實業股份有限公司"],
     ],
     gtmCode: ["GTM-KLF25LBV","GTM-MQRTZPS","GTM-M87MK5M"], // 可放置多個
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1

@@ -274,6 +274,8 @@
           border-radius: sizem(0) sizem(0) 0 0;
           padding: 1.1em 0;
           margin-top: sizem(20);
+          letter-spacing: 0;
+          span{display: block;}
 
           &::before {
             width: 100%;

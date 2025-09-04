@@ -21,18 +21,18 @@
   justify-content: flex-end;
 
   .logo {
-    width: size(563.58);
-    margin-bottom: size(91.92)
+    width: size(350);
+    margin-bottom: size(50)
   }
   .t1 {
-    width: size(421.95);
-    margin-bottom: size(134.82)
+    width: size(400);
+    margin-bottom: size(30)
   }
   .bird {
     @apply absolute;
     width: size(505.45);
     left: size(813.36);
-    bottom: size(191.55);
+    bottom: size(160);
     animation: fly 5s linear infinite alternate-reverse;  
     transform: rotate(0);
 
@@ -59,12 +59,12 @@
     max-height: sizem(604);
 
   .logo {
-    width: sizem(207.78);
-    margin-bottom: sizem(37.08)
+    width: sizem(200);
+    margin-bottom: sizem(35)
   }
   .t1 {
-    width: sizem(155.56);
-    margin-bottom: sizem(97.23)
+    width: sizem(155);
+    margin-bottom: sizem(35)
   }
   .bird {
     @apply absolute;
