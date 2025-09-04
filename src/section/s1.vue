@@ -68,11 +68,11 @@
 						<div class="t2" data-aos="fade-up" data-aos-delay="200">
 							台積電高雄廠2奈米營運部隊已悄然成軍，旗下高雄廠正式編定為台積22廠，逾7,000億元的1.4奈米投資計畫亦可望同步轉向高大特區。</div>
 					</div>
-					<div class="item">
+					<!--20250904 <div class="item">
 						<div class="t1" data-aos="fade-up" data-aos-delay="0">散步走進捷運紫線預定站</div>
 						<div class="t2" data-aos="fade-up" data-aos-delay="200">
 							高雄捷運紫線串聯高雄大學、文藻大學、高師大高科大等七所院校，同步連結「高大之森」與橋頭科學園區，同步連結左營高鐵台鐵輕軌三軌共構站。</div>
-					</div>
+					</div>-->
 					<div class="item">
 						<div class="t1" data-aos="fade-up" data-aos-delay="0">新台17線15分鐘<br>漢神巨蛋及高雄美術館園區</div>
 						<div class="t2" data-aos="fade-up" data-aos-delay="200">
@@ -1786,7 +1786,7 @@ const bubbles = [
 	},
 	{
 		t1: "<b>KRTC</b>",
-		t2: "<b>捷運紫線</b>",
+		t2: "<b>捷運紫線預定站</b>",
 	},
 ]
 
