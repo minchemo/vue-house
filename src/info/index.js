@@ -1,8 +1,8 @@
 const caseName = "微笑巨蛋"
 
 export default {
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
-    case_code: "test",
+    caseid: "d169ba44-a9d5-47e6-8560-0ac3d3439412",
+    //case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     //address: "台中市北屯區中平路462號",
@@ -13,13 +13,6 @@ export default {
     fbMessage: "https://m.me/dome.smilehouse/",
     caseName: caseName,
     houseInfos: [
-      //  ["投資興建", "XX興業股份有限公司"],
-      //  ["工程營造", "XX營造有限公司"],
-      //  ["建築設計", "XX建築師事務所"],
-      //  ["公設規劃", "XX設計有限公司"],
-      //  ["外觀設計", "XX設計有限公司"],
-      //  ["景觀規劃", "XX園藝工程有限公司"],
-      //  ["企劃設計", "欣和地產"],
         /*["投資興建", "長昇事業夥伴 冠奕建設"],
         ["建築設計", "王朝雍建築師事務所"],
         ["工程營造", "又廣營造"],
@@ -30,8 +23,8 @@ export default {
         */
     ],
     gtmCode: ["GTM-0000"], // 可放置多個
-    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
