@@ -11,8 +11,8 @@
   <!-- loading end -->
   <!--  -->
   <!--<Nav />-->
-  <div class="home overflow-hidden bg-[#fffff6] font-['Noto_Serif_TC',sans-serif]">
-    <!-- <img src="@/section/s1/bg.svg" class="bg"> -->
+  <div class="home overflow-hidden bg font-['Noto_Serif_TC',sans-serif]">
+    <!--<img src="@/section/s1/bg.png" class="bg">-->
     <S1 />
     <Order />
   </div>
@@ -42,6 +42,12 @@ img {
   max-width: unset;
   height: unset;
   margin: 0 auto;
+}
+
+.bg {
+  background: url("@/section/s1/bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat
 }
 
 //圖說

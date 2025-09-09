@@ -1,36 +1,23 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/phone.png" class="t0">
-    <!--<img src="./s1/pc.png" class="t0">-->
+    <!--<img src="./s1/phone.png" class="t0">-->
+    <img src="./s1/pc.png" class="t0">
 
     <img class="circle" src="./s1/circle.png">
-    <h1>
-      <img src="./s1/淇發建設.png" alt="淇發建設">
-    </h1>
-    <h4>
-      <img data-aos="fade-down-right" data-aos-delay="200" src="./s1/光.png" alt="光">
-      <img data-aos="fade-down-left" data-aos-delay="400" class="dot" src="./s1/光點.png" alt="光">
-    </h4>
-    <h5>
-      <img data-aos="fade-down-left" data-aos-delay="600" src="./s1/影.png" alt="影">
-      <img data-aos="zoom-in" data-aos-delay="800" class="dot" src="./s1/影點.png" alt="影">
-    </h5>
-    <h6>
-      <img data-aos="fade-right" data-aos-delay="1000" src="./s1/之間.png" alt="之間">
-      <img data-aos="zoom-in" data-aos-delay="1200" class="dot" src="./s1/之點.png" alt="之">
-      <img data-aos="zoom-in" data-aos-delay="1200" class="dot2" src="./s1/間點.png" alt="間">
-    </h6>
-    <h2 data-aos="fade-up" data-aos-delay="400">488
-      <img src="./s1/萬起.png" alt="萬起">
-      <img class="dot" data-aos="fade-up" data-aos-delay="600" src="./s1/大高屏生活圈.png" alt="大高屏生活圈">
+    <h2>
+      <img src="./s1/淇發建設.png" alt="淇發寸白">
     </h2>
-    <h3 data-aos="fade-up" data-aos-delay="800">
-      <img src="./s1/白派3-4房comingsoon.png" alt="白派3-4房comingsoon">
+    <h1>
+      <img src="./s1/淇發寸白.png" alt="淇發寸白">
+    </h1>
+    <h3 data-aos="fade-up" data-aos-delay="400">488
+      <img src="./s1/萬起.png" alt="萬起">
     </h3>
+    <h4 data-aos="fade-up" data-aos-delay="800">
+      <img src="./s1/寸方皆巧白派3房.png" alt="寸方皆巧白派3房">
+    </h4>
     <p>
-      <img data-aos="fade-right" data-aos-delay="1400" src="./s1/悄然留住.png" alt="悄然留住">
-      <img data-aos="fade-right" data-aos-delay="2000" class="dot" src="./s1/一寸.png" alt="一寸">
-      <img data-aos="fade-right" data-aos-delay="2600" class="dot2" src="./s1/生活的靜好.png" alt="生活的靜好">
+      <img src="./s1/b.png">
     </p>
   </article>
 </template>
@@ -47,9 +34,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("./s1/bg.png");
-  background-position: 50% 50%;
-  background-size: cover;
 
   //電腦手機排版用
   .t0 {
@@ -77,133 +61,46 @@
   }
 
   //淇發建設
+  h2 {
+    position: absolute;
+    top:calc(2% + #{size(545 - 1080 * .5)});
+    left: calc(2% + #{size(535 - 1080 * .5)});
+  }
+
+  //淇發寸白
   h1 {
     position: absolute;
-    top:calc(1% + #{size(545 - 1080 * .5)});
-    left: calc(1% + #{size(540 - 1080 * .5)});
-
-    img {
-      width: sizem(24);
-    }
-  }
-
-  //光
-  h4 {
-    position: absolute;
-    top: calc(20% + #{size(458 - 1080 * .5)});
-    left: calc(60% + #{size(596 - 1080 * .5)});
-
-    img {
-      width: sizem(33);
-    }
-
-    .dot {
-      position: relative;
-      top: sizem(-9);
-      left: sizem(-19);
-      width: sizem(25);
-    }
-  }
-
-  //影
-  h5 {
-    position: absolute;
-    top: calc(30% + #{size(547 - 1080 * .5)});
-    left: calc(60% + #{size(596 - 1080 * .5)});
-
-    img {
-      width: sizem(33);
-    }
-
-    .dot {
-      position: relative;
-      top: sizem(-2);
-      left: sizem(-19);
-      width: sizem(25);
-    }
-  }
-
-  //之間
-  h6 {
-    position: absolute;
-    top: calc(40% + #{size(597 - 1080 * .5)});
-    left: calc(50% + #{size(621 - 1080 * .5)});
-
-    img {
-      width: sizem(33);
-    }
-
-    .dot {
-      position: relative;
-      top: sizem(-36);
-      left: sizem(-25);
-      width: sizem(20);
-    }
-
-    .dot2 {
-      position: relative;
-      top: sizem(22);
-      left: sizem(-51);
-      width: sizem(30);
-    }
+    top:calc(20% + #{size(525 - 1080 * .5)});
+    left: calc(20% + #{size(380 - 1080 * .5)});
   }
 
   //488
-  h2 {
-    color: #00A43E;
-    font-size: sizem(29);
-    position: absolute;
-    top: calc(20% + #{size(587 - 1080 * .5)});
-    left: calc(30% + #{size(598 - 1080 * .5)});
-    z-index: 3;
-
-    img {
-      position: relative;
-      left: sizem(-9);
-      width: sizem(13);
-    }
-
-    .dot {
-      position: relative;
-      top: sizem(17);
-      left: sizem(-68);
-      width: sizem(58);
-    }
-  }
-
-  //白派
   h3 {
+    color: #00A43E;
+    font-size: sizem(61);
     position: absolute;
-    top: calc(60% + #{size(613 - 1080 * .5)});
-    left: calc(30% + #{size(670 - 1080 * .5)});
-    z-index: 3;
+    top: calc(10% + #{size(478 - 1080 * .5)});
+    left: calc(50% + #{size(638 - 1080 * .5)});
 
     img {
-      width: sizem(45);
+      position: relative;
+      top: sizem(1);
+      left: sizem(-18);
     }
   }
 
-  //悄然留住
+  //寸方
+  h4 {
+    position: absolute;
+    top: calc(40% + #{size(613 - 1080 * .5)});
+    left: calc(50% + #{size(660 - 1080 * .5)});
+  }
+
+  //建築
   p {
     position: absolute;
-    top: calc(60% + #{size(555 - 1080 * .5)});
-    right: calc(10% + #{size(400 - 1080 * .5)});
-
-    img {
-      width: sizem(7);
-    }
-
-    .dot {
-      position: relative;
-      top: sizem(9);
-      right: sizem(22);
-    }
-
-    .dot2 {
-      position: relative;
-      top: sizem(13);
-      right: sizem(42);
-    }
+    top: calc(40% + #{size(563 - 1080 * .5)});
+    left: calc(1% + #{size(600 - 1080 * .5)});
   }
 }
 

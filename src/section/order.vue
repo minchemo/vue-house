@@ -1,8 +1,5 @@
 <template>
   <div id="order" class="order relative text-center">
-    <img class="leaf-left pc" src="./order/leaf-left.png" alt="">
-    <img class="leaf-left ph" src="./order/leaf-left-m.png" alt="">
-    <img class="leaf-right" src="./order/leaf-right.png" alt="">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title font-['Noto_Serif_TC',serif] text-center">{{ info.order.title }}</div>
@@ -101,7 +98,6 @@
 .order {
   width: 100%;
   padding-top: size(115);
-  background: linear-gradient(to right, #f7f7f7 0%, #d7d7d7 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   .leaf-left {

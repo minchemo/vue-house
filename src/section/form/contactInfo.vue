@@ -6,10 +6,12 @@
       <!--    -->
       <div class="flex w-full contact-info-box">
         <div class="w-full logo-box">
-          <h2 class="logo">
-            <img src="./淇發寸白.png" alt="淇發寸白" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
-          </h2>
           <div class="flex justify-between w-full contact-item-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex contact-item justify-center items-center gray"
+              @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+              <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
+              <div>{{ info.phone }}</div>
+            </div>
             <div class="flex contact-item justify-center items-center green btlead-fb" @click="open()">
               <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
               <div>前往粉絲專頁</div>
@@ -21,29 +23,9 @@
             </div>
           </div>
         </div>
-        <div class="w-full logo-box">
-          <h2 class="logo">
-            <img src="./淇發詠旭.png" alt="淇發詠旭" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
-          </h2>
-          <div class="flex justify-between contact-item-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="flex contact-item justify-center items-center dark-green btlead-fb2" @click="open2()">
-              <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
-              <div>前往粉絲專頁</div>
-            </div>
-            <div class="flex contact-item justify-center items-center dark-green"
-              @click="modalOpen = true; modalType = 'fb2'">
-              <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
-              <div>Facebook 諮詢</div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="flex justify-between w-full contact-item-box address no-gap" v-if="info.address">
-        <div class="flex contact-item justify-center items-center gray" @click="modalOpen = true; modalType = 'phone'"
-          v-if="info.phone">
-          <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
-          <div>{{ info.phone }}</div>
-        </div>
+
         <div class="flex contact-item justify-center items-center add">
           <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
         </div>
@@ -53,7 +35,6 @@
           <div>導航 GoogleMap</div>
         </div>
       </div>
-
     </div>
   </div>
 
