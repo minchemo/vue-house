@@ -47,7 +47,7 @@ img {
 .bg {
   background: url("@/section/s1/bg.png");
   background-size: 100%;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
 }
 
 //圖說
@@ -106,6 +106,14 @@ img {
       margin: unset;
       @apply cursor-pointer hover:opacity-50;
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bg {
+    background: url("@/section/s1/bgm1.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 </style>

@@ -6,8 +6,8 @@
       <!--    -->
       <div class="flex w-full contact-info-box">
         <div class="w-full logo-box">
-          <div class="flex justify-between w-full contact-item-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="flex contact-item justify-center items-center gray"
+          <div class="flex justify-between w-full contact-item-box">
+            <div class="flex contact-item justify-center items-center green"
               @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
               <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
               <div>{{ info.phone }}</div>
@@ -25,11 +25,10 @@
         </div>
       </div>
       <div class="flex justify-between w-full contact-item-box address no-gap" v-if="info.address">
-
         <div class="flex contact-item justify-center items-center add">
           <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
         </div>
-        <div class="flex contact-item justify-center items-center googlemap gray"
+        <div class="flex contact-item justify-center items-center googlemap green"
           @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
           <div>導航 GoogleMap</div>
@@ -135,11 +134,7 @@
     justify-content: space-around;
   }
 
-  .logo-box {
-    &:first-child {
-      margin-right: 1rem;
-    }
-  }
+
 
   .logo {
     position: relative;
@@ -165,7 +160,6 @@
 
   .contact-item-box {
     position: relative;
-    margin-top: 1.25em;
     gap: 1.25em;
 
     .contact-item {
@@ -226,14 +220,17 @@
     &.address {
       display: grid;
       grid-template-columns: 1fr 2.2fr 1fr;
+      margin-top: 20px;
+      width: 100%;
 
       .add {
-        background: #FFF;
+        background: lch(100% 0.01 296.81);
         color: #000;
-        cursor: text;
-        flex: 2.10;
-        margin-left: 1rem;
+        width: sizem(159);
         justify-self: left;
+      }
+      .googlemap{
+        width:sizem(75.5);
       }
     }
 

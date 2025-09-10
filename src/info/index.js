@@ -15,10 +15,10 @@ export default {
   fbMessage2: "https://www.facebook.com/messages/t/61578833014291/",
   caseName: caseName,
   houseInfos: [
-    //["投資興建", "和彩開發股份有限公司"],
-    //["營造公司", "億東營造股份有限公司"],
-    //["產品規劃", "地上12層／地下2層／2-3房"],
-    //["行銷公司", "森鴻行銷有限公司"],
+    ["投資興建", "XXXXXXXXXXXXXXXXXXXXXX"],
+    ["營造公司", "XXXXXXXXXXXXXXXXXXXXXX"],
+    ["產品規劃", "XXXXXXXXXXXXXXXXXXXXXX"],
+    ["行銷公司", "XXXXXXXXXXXXXXXXXXXXXX"],
   ],
   gtmCode: ["GTM-NMVB4WVG", "GTM-WB2PP4H7"],// 可放置多個 
   recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2

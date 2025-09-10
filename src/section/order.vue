@@ -190,7 +190,7 @@
     }
 
     .row {
-      background: #fff;
+      background: rgb(255, 255, 255,0.7);
       color: #423E3D;
       display: flex;
       width: 100%;
@@ -279,9 +279,9 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #423E3D;
+    background-color: #919F92;
     border: 0;
-    width: 320px;
+    width: sizem(75);
     height: 3.3em;
     line-height: 3.3;
     z-index: 10;
