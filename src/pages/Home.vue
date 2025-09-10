@@ -80,23 +80,13 @@ img {
   height: unset;
   margin: 0 auto;
 }
-
-
-
-      .txt {
-    position: relative;
-    font-weight: 300;
-    letter-spacing: 0;
-    line-height: 1.85;
-    width: 100%;
-  }
 </style>
 
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue"
+// import S2 from "@/section/s2.vue"
+// import S3 from "@/section/s3.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
 /* 

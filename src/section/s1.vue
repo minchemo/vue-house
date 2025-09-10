@@ -1,24 +1,13 @@
 <template>
-  <article class="s1" id="s1">
-   <!-- <img src="./s1/mo.jpg" class="t0">
-    <img src="./s1/mo.jpg" class="t0">  -->
-      <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
-
-      <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
-      <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
-
-      <img src="./s1/bird.webp" class="bird" data-aos="fade-up" data-aos-delay="400">
-
-   <!--  <img src="./s1/s1bg.jpg" class="bg" v-else> 
+  <article class="s1 font-[Amiri,serif,'Noto_Serif_TC']" id="s1">
+   <!-- <img src="./s1/mo.jpg" class="t0">  -->
     <div class="txt">
-      <h2 class="t1" data-aos="zoom-in" data-aos-delay="0">在這裡<br>發現布魯克林</h2>
-      <div class="t2" data-aos="zoom-in" data-aos-delay="200">紐約曼哈頓，為布魯克林而美麗<br>
-台灣的布魯克林，驚喜發現在八里<br>
-同步匯集智慧、綠意、人文城市於一身</div>
-<div class="t3" data-aos="zoom-in" data-aos-delay="400">國際心跳 矚目之光<span>蓄勢待發</span></div>
-<img src="./s1/en.svg" class="en" data-aos="zoom-in" data-aos-delay="600"> 
-    </div>
-  -->
+      <div class="t1" data-aos="fade-right" data-aos-delay="0">市心<b>2</b>字頭<img src="./s1/logo.svg" class="logo" data-aos="fade-right" data-aos-delay="200" /></div>
+      <div class="t2" data-aos="fade-right" data-aos-delay="400">日系選冊宅<b>2-4</b>房&ensp;北外環<b>5</b><span>分鐘</span></div>
+      <div class="t3" data-aos="fade-right" data-aos-delay="600">THE LANDMARK<span>262-8888</span></div>
+  </div>
+      <div class="caption" data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200">佳展建設✕燿鴻廣告</div>
+  <img src="./s1/img.webp" class="img" data-aos="fade-up" data-aos-delay="700" data-aos-offset="-200">
   </article>
 </template>
 
@@ -43,86 +32,64 @@
   align-items:center;
   height:sizem(605);
   //background: #d62051;
-  background: url("./s1/bgm.webp");
+  background: url("./s1/bgm.jpg") center;
   background-size:cover ;
+  color: #FFF;
+  font-size: sizem(13);
+ 
   @media screen and (min-width: 768px) {
-    background: url("./s1/bg.webp");
-    background-size:cover ;
+    background-image: url("./s1/bg.jpg");
     height:100vh;
     max-height:size(1080);
     min-height:size(900);
+  font-size: size(47);
   }
   //background: #E60012;
 // padding-bottom: size(140);V
  // &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
 
-.t1{width:sizem(250);
-    position: absolute;
-    z-index: 99;
-    top:sizem(30);
-    right: sizem(60);
+ .t0{position: absolute; top: 0;left: 0;width: 100%;opacity: .3;}
+
+ .txt{font-weight: 500; line-height: 1.3;width: auto;position: relative;user-select: none;
+  b{font-weight: 400;letter-spacing: 0;}
 }
-.logo{
-width:sizem(250);
-top:sizem(70);
-position: absolute;
-z-index: 99;
+ .t1{font-size: 5.3em;font-weight: 600;letter-spacing: -.06em;
+  filter:drop-shadow(0.042em 0.035em 0.015em #000);
+  b{font-size: 1.4em;margin: auto .01em auto .04em;vertical-align: -.03em;}
+  @media screen and (min-width: 768px) {
+font-size: 4.4em;
+  }
+ }
+ .logo{display: block;width: 2.52em;margin: -.1em -.1em auto .0em;
+  @media screen and (min-width: 768px) {
+    display: inline-block;width: 2.52em;margin: -.3em -.1em auto .36em;}
 }
-.bird{
-position: absolute;
-width:sizem(280);
-bottom:0;
-left: auto;
-right: sizem(40);
-top: auto;
-margin: 0;
-}
-
-@media screen and (min-width: 768px) {
-
-
-.t1{
-  position: absolute;
-  right: size(60);
-  top:size(60);
-  width:size(250);}
-
-.logo{
-width:size(631);
-top:size(180);
-left: size(280);
-
-}
-.bird{
-  position: absolute;
-  width:auto;
-  height: 100vh;
-  top:size(0);
-  right: size(100);
-  left:auto;
-  bottom: 0;
-  rotate: 0deg;
-}
-}
-
-}
-
-  
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-/*
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-@media screen and (max-width: 767px) {
-  .s1 {
-    font-size:sizem(14);
-    .txt{
-    top: sizem(85);
-    .en{width: 18em;}
+ .t2{font-size: 2em;letter-spacing: -.04em;margin:.7em auto auto auto;
+  b{font-size: 1.2em;margin: auto .0em auto .08em;vertical-align: -.03em;}
+  span{display: inline-block;width: 1em;line-height: 1.05;font-size: .44em;}
+  @media screen and (min-width: 768px) {
+    margin:-.35em auto auto auto;
   }
 }
+ .t3{color: #c3ad7b;margin:.6em auto 8.6em .5em;letter-spacing:0.03em;
+  span{display: block;font-size: 3.4em;margin:-.17em auto auto -.05em;letter-spacing: -.03em;}
+  @media screen and (min-width: 768px) {
+    margin:.6em auto 1em .5em;
+  }
 }
-*/
+ .caption{position: absolute; bottom:.6em;left:1.3em;font-size: .7em;user-select: none;
+  @media screen and (min-width: 768px) {
+    font-size: .65em;
+  }
+}
+ .img{position: absolute; bottom: sizem(-115);right: sizem(-60);width: sizem(330);
+  @media screen and (min-width: 768px) {
+    bottom: size(-280);right: size(60);width: size(830);
+  }
+}
+
+}
+
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref ,inject} from 'vue';
