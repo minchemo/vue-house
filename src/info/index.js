@@ -4,8 +4,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "",
-    googleSrc: "",
-    googleLink: "",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3671.102501250292!2d120.21575487603715!3d23.05670341505229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDAzJzI0LjEiTiAxMjDCsDEzJzA2LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1757579588157!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/5qWPKRUKT6wnM8aq8",
     phone: "(06)262-8888",
     fbLink: "https://www.facebook.com/61578255539676/",
     fbMessage: "https://m.me/61578255539676/",

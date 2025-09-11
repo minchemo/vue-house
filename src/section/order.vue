@@ -80,7 +80,7 @@
 
 
     <!-- Map -->
-    <Map v-if="info.address" />
+    <Map v-if="info.googleSrc" />
 
     <!-- HouseInfo -->
     <HouseInfo />
