@@ -50,7 +50,7 @@
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'gmap'; onMapClick();"  v-if="info.address" >
+      @click="modalOpen = true; modalType = 'gmap'; onMapClick();"  v-if="info.googleLink" >
       <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
@@ -261,7 +261,7 @@ img{width: 100%;
       font-size: sizem(16);
       font-weight: 400;
       color: #FFF;
-      border-left:1px solid #0003;
+      border-left:1px solid #c3ad7b55;
 
       img {
         margin-bottom: sizem(5);
