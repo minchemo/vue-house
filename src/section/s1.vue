@@ -2,12 +2,10 @@
   <article class="s1 relative" id="s1">
     <img src="./s1/ph.png" class="t0">
     <!--<img src="./s1/pc.png" class="t0">-->
-
-    <img class="circle" src="./s1/circle.png">
     <h2>
       <img src="./s1/淇發建設.png" alt="淇發寸白">
     </h2>
-    <h1>
+    <h1 data-aos="fade-up" data-aos-delay="400">
       <img src="./s1/淇發寸白.png" alt="淇發寸白">
     </h1>
     <h3 data-aos="fade-up" data-aos-delay="400">488
@@ -42,7 +40,7 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.0;
     z-index: 10;
   }
 
@@ -179,8 +177,8 @@
     //建築
     p {
       position: absolute;
-      top: calc(60% + #{size(650 - 1080 * .5)});
-      left: calc(1% + #{size(490 - 1080 * .5)});
+      top: calc(60% + #{size(690 - 1080 * .5)});
+      left: calc(1% + #{size(450 - 1080 * .5)});
 
       img {
         width: sizem(420);

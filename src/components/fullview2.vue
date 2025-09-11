@@ -45,7 +45,7 @@
             pointer-events: none;
             opacity: 1;
             transition: all 1s;
-            background-color: rgba($color: #000000, $alpha: 0.5);
+            background-color: rgba($color: #000, $alpha: 0.5);
 
             img {
                 height: 47px;

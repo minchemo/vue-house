@@ -1,7 +1,7 @@
-const caseName = "淇發建設"
+const caseName = "淇發寸白"
 
 export default {
-  caseid: "78afd7e7-7a1d-4f82-b239-34ac5348797b",
+  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //dea842a3- 5149 - 4f02 - 92f6 -038d7cf0b298
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
@@ -11,8 +11,6 @@ export default {
   phone: "08-8352-888",
   fbLink: "https://www.facebook.com/61578948028617/",
   fbMessage: "https://www.facebook.com/messages/t/61578948028617/",
-  fbLink2: "https://www.facebook.com/61578833014291/",
-  fbMessage2: "https://www.facebook.com/messages/t/61578833014291/",
   caseName: caseName,
   houseInfos: [
     ["投資興建", "XXXXXXXXXXXXXXXXXXXXXX"],
@@ -20,7 +18,7 @@ export default {
     ["產品規劃", "XXXXXXXXXXXXXXXXXXXXXX"],
     ["行銷公司", "XXXXXXXXXXXXXXXXXXXXXX"],
   ],
-  gtmCode: ["GTM-NMVB4WVG", "GTM-WB2PP4H7"],// 可放置多個 
+  gtmCode: ["GTM-NMVB4WVG"],// 可放置多個 
   recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3

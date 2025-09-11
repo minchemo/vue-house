@@ -41,14 +41,14 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-      <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
+      <img src="./phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <!--因為有兩個建案，區分兩個很醜所以先隱藏<div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
+      <img src="./messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
-    </div>-->
+    </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img/form/pen.svg" alt="立即預約" srcset="" />
       <div>立即預約
@@ -67,20 +67,15 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/messenger.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb2'" src="//h35.banner.tw/img/form/messenger.svg" alt="fb"
-        srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="./phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="./messenger.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="./gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '預約專線' : modalType == 'fb' ? 'Facebook Messenger' :
-        modalType ==
-          'fb2' ? 'Facebook Messenger' :
-          `${info.address2 ? info.address2 : '導航地址'}`
+        `${info.address2 ? info.address2 : '導航地址'}`
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' : modalType == 'fb2' ?
-        '線上諮詢' :
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
         `${info.address}`
       }}</div>
       <!-- btn -->
@@ -88,11 +83,10 @@
         v-if="modalType != 'phone'" v-bind:class="{
           'hidden': modalType == 'phone' && !$isMobile(),
           'btlead': modalType == 'fb',
-          'btlead2': modalType == 'fb2',
           'btsearch': modalType == 'gmap',
           'btcontac': modalType == 'phone'
         }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' : modalType == 'fb2' ? '立即諮詢' :
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
           '開啟導航'
         }}</div>
       <!-- btn phone -->
@@ -100,11 +94,10 @@
         v-bind:class="{
           'hidden': modalType == 'phone' && !$isMobile(),
           'btlead': modalType == 'fb',
-          'btlead2': modalType == 'fb2',
           'btsearch': modalType == 'gmap',
           'btcontac': modalType == 'phone'
         }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' : modalType == 'fb2' ? '立即諮詢' :
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
           '開啟導航'
         }}</div>
     </div>
@@ -229,20 +222,15 @@
         width: sizem(159);
         justify-self: left;
       }
-      .googlemap{
-        width:sizem(75.5);
+
+      .googlemap {
+        width: sizem(75.5);
       }
     }
 
     &.no-gap {
       gap: 0;
     }
-  }
-}
-
-.modal-box {
-  img {
-    filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
   }
 }
 
@@ -286,7 +274,7 @@
   .contact-info {
     width: 100%;
     min-width: 0;
-    padding: sizem(60) 0 sizem(180) 0;
+    padding: sizem(60) 0 sizem(60) 0;
     position: relative;
     justify-content: space-between;
     background-size: sizem(450) auto;
@@ -315,17 +303,17 @@
       gap: sizem(20);
       flex-direction: column;
       width: sizem(310);
-      height: size(920);
+      height: size(880);
 
       .contact-item {
         padding: 1.1em sizem(80);
         font-size: sizem(16);
         max-width: 100%;
         white-space: nowrap;
-        margin-top: size(120);
 
         &:last-child {
           margin-top: 0;
+          width: 100%;
         }
 
         img {
@@ -344,6 +332,7 @@
       }
 
       &.address {
+        width: sizem(310);
         margin-top: sizem(15);
         height: size(600);
         display: flex;
@@ -351,8 +340,9 @@
 
         .contact-item {
           &.add {
+            width: 100%;
             text-align: center;
-            background: #fff;
+            background: hsla(0, 0%, 100%, 0.711);
             margin-left: 0;
 
             div {
@@ -385,9 +375,7 @@ const go = () => {
   } else if (modalType.value == 'fb') {
     window.open(info.fbMessage);
   }
-  else if (modalType.value == 'fb2') {
-    window.open(info.fbMessage2);
-  } else if (modalType.value == 'gmap') {
+  else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
 
   }

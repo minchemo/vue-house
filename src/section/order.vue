@@ -348,7 +348,6 @@
 
   .order {
     width: 100%;
-    background: linear-gradient(to right, #E7E7E7 0%, #F6F6F6 100%);
 
     .leaf-left {
       width: 100%;
@@ -370,7 +369,7 @@
 
     .order-title {
       font-size: sizem(27);
-      margin-top: size(100);
+      margin-top: size(300);
 
       .line {
         width: sizem(258);
@@ -378,7 +377,7 @@
     }
 
     .order-subTitle {
-      font-size: sizem(11);
+      font-size: sizem(12);
       padding-top: size(50);
     }
 
@@ -393,7 +392,7 @@
 
       .row {
         &>span {
-          font-size: size(60);
+          font-size: size(65);
 
           >span {
             font-size: 10px;
@@ -401,11 +400,11 @@
         }
 
         select {
-          font-size: size(50);
+          font-size: size(65);
         }
 
         input {
-          font-size: size(50);
+          font-size: size(65);
         }
       }
 
@@ -449,7 +448,7 @@
 
   //備註
   textarea {
-    font-size: size(50) !important;
+    font-size: size(65) !important;
   }
 
   .pc {

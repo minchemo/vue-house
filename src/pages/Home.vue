@@ -111,7 +111,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .bg {
-    background: url("@/section/s1/bgm1.png");
+    background: url("@/section/s1/bgm.png");
     background-size: 100%;
     background-repeat: no-repeat;
   }

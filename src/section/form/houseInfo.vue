@@ -110,7 +110,6 @@
         //建案資訊下方內容
         .info-items {
             row-gap: sizem(20);
-            margin-left: size(360);
 
             .item {
                 font-size: sizem(14);
