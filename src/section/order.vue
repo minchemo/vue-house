@@ -124,7 +124,6 @@
   }
 
   .order-section {
-    background-image: url(./order/bg.png);
     background-size: auto 100%;
     position: relative;
     overflow: hidden;
