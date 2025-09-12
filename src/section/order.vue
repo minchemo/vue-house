@@ -98,7 +98,10 @@
 .order {
   width: 100%;
   padding-top: size(115);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: url("./s1/bg2.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
 
   .leaf-left {
     width: size(465);
@@ -190,7 +193,7 @@
     }
 
     .row {
-      background: rgb(255, 255, 255,0.7);
+      background: rgba(217, 217, 217, 0.6);
       color: #423E3D;
       display: flex;
       width: 100%;
@@ -214,6 +217,7 @@
         flex: 1;
         font-weight: 200;
         color: #666666;
+        background: none;
 
         //姓名、手機、備註的註解文字
         &::placeholder {
@@ -288,6 +292,21 @@
     font-weight: 400;
     position: relative;
     border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 640%;
+      background-image: url('./s1/bbg.png');
+      background-size: cover;
+      background-position: center;
+      animation: rotate 60s linear infinite;
+      z-index: -1;
+    }
   }
 
   @keyframes spin {
@@ -340,14 +359,18 @@
 }
 
 @media screen and (max-width:768px) {
-
   .order-section {
     min-height: sizem(800);
     position: relative;
   }
 
   .order {
-    width: 100%;
+    height: sizem(2210);
+    min-height: sizem(2210);
+    max-height: sizem(2210);
+    background: url("./s1/bgm2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 
     .leaf-left {
       width: 100%;

@@ -1,7 +1,7 @@
-const caseName = "淇發寸白"
+const caseName = "淇發詠旭"
 
 export default {
-  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //dea842a3- 5149 - 4f02 - 92f6 -038d7cf0b298
+  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //36068e10-11f5-478e-9903-0c172c5d5b4b
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
@@ -9,8 +9,8 @@ export default {
   googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3685.571342811699!2d120.4500642!3d22.5202606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1f0069b27aeb%3A0x65588ed70e46d40b!2z5reH55m85pm25rmb!5e0!3m2!1szh-TW!2stw!4v1754299397233!5m2!1szh-TW!2stw",//嵌入的
   googleLink: "https://maps.app.goo.gl/QtAQ2XzGSq5SYjmz5",//導航網址
   phone: "08-8352-888",
-  fbLink: "https://www.facebook.com/61578948028617/",
-  fbMessage: "https://www.facebook.com/messages/t/61578948028617/",
+  fbLink: "https://www.facebook.com/61578833014291/",
+  fbMessage: "https://www.facebook.com/messages/t/61578833014291/",
   caseName: caseName,
   houseInfos: [
     ["投資興建", "XXXXXXXXXXXXXXXXXXXXXX"],
@@ -18,7 +18,7 @@ export default {
     ["產品規劃", "XXXXXXXXXXXXXXXXXXXXXX"],
     ["行銷公司", "XXXXXXXXXXXXXXXXXXXXXX"],
   ],
-  gtmCode: ["GTM-NMVB4WVG"],// 可放置多個 
+  gtmCode: ["GTM-WB2PP4H7"],// 可放置多個 
   recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3

@@ -1,22 +1,20 @@
 <template>
   <article class="s1 relative" id="s1">
     <img src="./s1/ph.png" class="t0">
-    <!--<img src="./s1/pc.png" class="t0">-->
+    <!--  <img src="./s1/pc.png" class="t0"> -->
     <h2>
       <img src="./s1/淇發建設.png" alt="淇發寸白">
     </h2>
     <h1 data-aos="fade-up" data-aos-delay="400">
-      <img src="./s1/淇發寸白.png" alt="淇發寸白">
+      <img class="pc" src="./s1/淇發詠旭.png" alt="淇淇發詠旭">
+      <img class="ph" src="./s1/淇發詠旭m.png" alt="淇淇發詠旭">
     </h1>
-    <h3 data-aos="fade-up" data-aos-delay="400">488
-      <img src="./s1/萬起.png" alt="萬起">
+    <h3 data-aos="fade-in" data-aos-delay="600">
+      <img src="./s1/從根本就安心.png" alt="從根本就安心">
     </h3>
     <h4 data-aos="fade-up" data-aos-delay="800">
-      <img src="./s1/寸方皆巧白派3房.png" alt="寸方皆巧白派3房">
+      <img src="./s1/南北座向傳統車墅.png" alt="南北座向 傳統車墅">
     </h4>
-    <p>
-      <img src="./s1/b.png">
-    </p>
   </article>
 </template>
 
@@ -25,13 +23,16 @@
 
 .s1 {
   min-height: size(900);
-  max-height: size(1080);
+  max-height: size(1070);
   height: 120vh;
   color: #423E3D;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: url("./s1/bg1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 
   //電腦手機排版用
   .t0 {
@@ -69,54 +70,39 @@
     }
   }
 
-  //淇發寸白
+  //淇發詠旭
   h1 {
     position: absolute;
-    top:calc(20% + #{size(525 - 1080 * .5)});
-    left: calc(20% + #{size(380 - 1080 * .5)});
+    top:calc(30% + #{size(452- 1080 * .5)});
+    left: calc(10% + #{size(480 - 1080 * .5)});
 
     img {
-      width: sizem(113);
+      width: sizem(225);
     }
   }
 
-  //488
+  //根本
   h3 {
-    color: #00A43E;
-    font-size: sizem(61);
     position: absolute;
-    top: calc(10% + #{size(478 - 1080 * .5)});
-    left: calc(50% + #{size(638 - 1080 * .5)});
+    top: calc(80% + #{size(458 - 1080 * .5)});
+    left: calc(15% + #{size(498 - 1080 * .5)});
 
     img {
-      position: relative;
-      width: sizem(30);
-      top: sizem(1);
-      left: sizem(-18);
+      width: sizem(135);
     }
   }
 
-  //寸方
+  //南北
   h4 {
     position: absolute;
-    top: calc(40% + #{size(613 - 1080 * .5)});
-    left: calc(50% + #{size(660 - 1080 * .5)});
+    top: calc(70% + #{size(569 - 1080 * .5)});
+    left: calc(50% + #{size(560 - 1080 * .5)});
 
     img {
-      width: sizem(125);
+      width: sizem(135);
     }
   }
 
-  //建築
-  p {
-    position: absolute;
-    top: calc(40% + #{size(570 - 1080 * .5)});
-    left: calc(1% + #{size(600 - 1080 * .5)});
-
-    img {
-      width: sizem(185);
-    }
-  }
 }
 
 /* 螢幕尺寸標準 */
@@ -125,10 +111,22 @@
 
 /* 手機尺寸 */
 @media screen and (max-width: 767px) {
+
+
   .s1 {
     height: sizem(750);
     min-height: sizem(750);
     max-height: sizem(750);
+    background: url("./s1/bgm1.jpg");
+    background-size: 100%;
+
+    .pc {
+      display: none;
+    }
+
+    .ph {
+      display: block;
+    }
 
     //淇發建設
     h2 {
@@ -140,50 +138,37 @@
       }
     }
 
-    //淇發寸白
+    //淇發詠旭
     h1 {
-      top:calc(20% + #{size(225 - 1080 * .5)});
-      left: calc(25% + #{size(380 - 1080 * .5)});
+      top:calc(20% + #{size(405 - 1080 * .5)});
+      left: calc(30% + #{size(370 - 1080 * .5)});
 
       img {
-        width: sizem(250);
+        width: sizem(220);
       }
     }
 
-    //488
+    //4根本
     h3 {
-      font-size: sizem(120);
-      top: calc(30% + #{size(208 - 1080 * .5)});
-      left: calc(10% + #{size(638 - 1080 * .5)});
-
-      img {
-        position: relative;
-        width: sizem(55);
-        top: sizem(0);
-        left: sizem(-34);
-      }
-    }
-
-    //寸方
-    h4 {
-      top: calc(50% + #{size(313 - 1080 * .5)});
-      left: calc(20% + #{size(470 - 1080 * .5)});
+      top: calc(80% + #{size(238 - 1080 * .5)});
+      left: calc(10% + #{size(658 - 1080 * .5)});
 
       img {
         width: sizem(250);
       }
     }
 
-    //建築
-    p {
-      position: absolute;
-      top: calc(60% + #{size(690 - 1080 * .5)});
-      left: calc(1% + #{size(450 - 1080 * .5)});
+    //南北
+    h4 {
+      top: calc(80% + #{size(533 - 1080 * .5)});
+      left: calc(20% + #{size(475 - 1080 * .5)});
 
       img {
-        width: sizem(420);
+        width: sizem(250);
       }
     }
+
+
   }
 }
 </style>

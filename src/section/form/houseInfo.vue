@@ -7,9 +7,9 @@
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos" :key="item">
-                            <p class="mr-5 border-l-2 border-[#423E3D] pl-2 text-[#423E3D] font-[700]" v-html="item[0]">
+                            <p class="mr-5 border-l-2 border-[#FFF] pl-2 text-[#FFF] font-[700]" v-html="item[0]">
                             </p>
-                            <p class="whitespace-pre-line leading-normal text-left text-[#423E3D] font-normal"
+                            <p class="whitespace-pre-line leading-normal text-left text-[#FFF] font-normal"
                                 v-html="item[1]">
                             </p>
                         </div>
@@ -22,7 +22,7 @@
     <div class="bg-[#ceaa6d]  py-5 flex items-center justify-center">
             <p class="db"><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
     </div> -->
-    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
+    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#FFF]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="//h35.banner.tw/img//footerLogo.gif" alt="立炘數位" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
@@ -48,7 +48,7 @@
 .house {
     // height: auto;
     font-size: size(22);
-    background: #CFCFCF;
+    background: #52777D;
 
     // height:4em;
     img {
@@ -63,7 +63,7 @@
     .title {
         font-size: size(40);
         font-weight: 700;
-        color: #423E3D;
+        color: #FFF;
         margin: 0 auto .5em auto;
     }
 

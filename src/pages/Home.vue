@@ -11,7 +11,7 @@
   <!-- loading end -->
   <!--  -->
   <!--<Nav />-->
-  <div class="home overflow-hidden bg font-['Noto_Serif_TC',sans-serif]">
+  <div class="home overflow-hidden font-['Noto_Serif_TC',sans-serif]">
     <!--<img src="@/section/s1/bg.png" class="bg">-->
     <S1 />
     <Order />
@@ -44,11 +44,11 @@ img {
   margin: 0 auto;
 }
 
-.bg {
+/* .bg {
   background: url("@/section/s1/bg.png");
   background-size: 100%;
   background-repeat: no-repeat;
-}
+} */
 
 //圖說
 .caption {
@@ -110,11 +110,11 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .bg {
+  /* .bg {
     background: url("@/section/s1/bgm.png");
     background-size: 100%;
     background-repeat: no-repeat;
-  }
+  } */
 }
 </style>
 <script setup>

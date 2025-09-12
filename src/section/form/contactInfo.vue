@@ -7,16 +7,16 @@
       <div class="flex w-full contact-info-box">
         <div class="w-full logo-box">
           <div class="flex justify-between w-full contact-item-box">
-            <div class="flex contact-item justify-center items-center green"
+            <div class="flex contact-item justify-center items-center green hover:scale-90"
               @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
               <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
               <div>{{ info.phone }}</div>
             </div>
-            <div class="flex contact-item justify-center items-center green btlead-fb" @click="open()">
+            <div class="flex contact-item justify-center items-center green btlead-fb hover:scale-90" @click="open()">
               <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
               <div>前往粉絲專頁</div>
             </div>
-            <div class="flex contact-item justify-center items-center green"
+            <div class="flex contact-item justify-center items-center green hover:scale-90"
               @click="modalOpen = true; modalType = 'fb'">
               <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
               <div>Facebook 諮詢</div>
@@ -28,7 +28,7 @@
         <div class="flex contact-item justify-center items-center add">
           <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
         </div>
-        <div class="flex contact-item justify-center items-center googlemap green"
+        <div class="flex contact-item justify-center items-center googlemap green "
           @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
           <div>導航 GoogleMap</div>
@@ -187,10 +187,30 @@
     }
 
     .green {
-      background: #919F92;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
 
-      &:hover {
-        background: rgb(110, 124, 111);
+      &::before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 700%;
+        background-image: url('../s1/bbg.png');
+        background-size: cover;
+        background-position: center;
+        animation: rotate 60s linear infinite;
+        z-index: -1;
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
       }
     }
 
@@ -217,7 +237,7 @@
       width: 100%;
 
       .add {
-        background: lch(100% 0.01 296.81);
+        background: rgba(217, 217, 217, 0.6);
         color: #000;
         width: sizem(159);
         justify-self: left;
@@ -246,8 +266,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background: #919F92;
-
+    background: #52777D;
 
     .contact-item {
       height: 100%;
@@ -267,7 +286,6 @@
       &:first-child {
         border-left: 0;
       }
-
     }
   }
 
@@ -303,7 +321,7 @@
       gap: sizem(20);
       flex-direction: column;
       width: sizem(310);
-      height: size(880);
+      height: size(1200);
 
       .contact-item {
         padding: 1.1em sizem(80);
@@ -331,6 +349,11 @@
         }
       }
 
+      .green::before {
+        width: 120%;
+        height: 800%;
+      }
+
       &.address {
         width: sizem(310);
         margin-top: sizem(15);
@@ -342,7 +365,7 @@
           &.add {
             width: 100%;
             text-align: center;
-            background: hsla(0, 0%, 100%, 0.711);
+            background: rgba(217, 217, 217, 0.6);
             margin-left: 0;
 
             div {
