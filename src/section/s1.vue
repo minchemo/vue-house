@@ -3,17 +3,21 @@
     <img src="./s1/ph.png" class="t0">
     <!--  <img src="./s1/pc.png" class="t0"> -->
     <h2>
-      <img src="./s1/淇發建設.png" alt="淇發寸白">
+      <span style="display: none;">淇發詠旭</span>
+      <img src="./s1/淇發建設.png" alt="淇發詠旭">
     </h2>
     <h1 data-aos="fade-up" data-aos-delay="400">
-      <img class="pc" src="./s1/淇發詠旭.png" alt="淇淇發詠旭">
-      <img class="ph" src="./s1/淇發詠旭m.png" alt="淇淇發詠旭">
+      <span style="display: none;">淇發詠旭</span>
+      <img class="pc" src="./s1/淇發詠旭.png" alt="淇發詠旭">
+      <img class="ph" src="./s1/淇發詠旭m.png" alt="淇發詠旭">
     </h1>
     <h3 data-aos="fade-in" data-aos-delay="600">
+      <span style="display: none;">淇發詠旭</span>
       <img src="./s1/從根本就安心.png" alt="從根本就安心">
     </h3>
     <h4 data-aos="fade-up" data-aos-delay="800">
-      <img src="./s1/南北座向傳統車墅.png" alt="南北座向 傳統車墅">
+      <span style="display: none;">淇發詠旭</span>
+      <img src="./s1/南北座向傳統車墅.png" alt="南北座向傳統車墅">
     </h4>
   </article>
 </template>
