@@ -1,7 +1,7 @@
 const caseName = "淇發寸白"
 
 export default {
-  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //dea842a3- 5149 - 4f02 - 92f6 -038d7cf0b298
+  caseid: "dea842a3-5149-4f02-92f6-038d7cf0b298",
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
@@ -13,14 +13,14 @@ export default {
   fbMessage: "https://www.facebook.com/messages/t/61578948028617/",
   caseName: caseName,
   houseInfos: [
-    ["投資興建", "XXXXXXXXXXXXXXXXXXXXXX"],
-    ["營造公司", "XXXXXXXXXXXXXXXXXXXXXX"],
-    ["產品規劃", "XXXXXXXXXXXXXXXXXXXXXX"],
-    ["行銷公司", "XXXXXXXXXXXXXXXXXXXXXX"],
+    ["投資興建", "淇發建設有限公司"],
+    ["營造公司", "東璋營造有限公司"],
+    ["產品規劃", "洪堯山建築師事務所"],
+    ["行銷公司", "自售"],
   ],
   gtmCode: ["GTM-NMVB4WVG"],// 可放置多個 
-  //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-  recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+  recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+  //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
