@@ -3,7 +3,7 @@
 		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">建築領航者<br>新世代指標</h3>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="200">建築領航者<br>新世代指標</h2>
         <p class="desc" data-aos="fade-up" data-aos-delay="600">城揚建設集團『高雄名宅˙建築首席』，創立於民國83年，陪伴這片土地走過30年的歲月，穩健前行的企業步伐，始終致力於土地和建築，為新世代家庭打造一座座的理想家園！</p>
     </div>
     </div>

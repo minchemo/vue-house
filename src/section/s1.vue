@@ -4,11 +4,11 @@
 	<!--  
 		<img src="./s1/mo.jpg" class="t0">
 		<img src="./s1/pc.jpg" class="t0"> -->
-		<img src="./s1/oo.svg" class="oo1">
-		<img src="./s1/oo.svg" class="oo2">
-		<img src="./s1/logo.svg" class="logo">
-		<img src="./s1/txt.svg" class="txt">
-		<img src="./s1/logo_tl.svg" class="tl">
+		<img src="./s1/oo.svg" class="oo1" alt="img">
+		<img src="./s1/oo.svg" class="oo2" alt="img">
+		<img src="./s1/logo.svg" class="logo" alt="logo">
+		<img src="./s1/txt.svg" class="txt" alt="輕軌2-4房">
+		<img src="./s1/logo_tl.svg" class="tl" alt="txt">
     <div class="rb font-['Noto_Serif_TC',serif]">上旺開發</div>
 		<img src="./s1/en.svg" class="en">
     

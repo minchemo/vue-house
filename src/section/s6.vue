@@ -3,7 +3,7 @@
 		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">人文學風鼎盛<br>理想成長起點</h3>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="200">人文學風鼎盛<br>理想成長起點</h2>
         <p class="desc" data-aos="fade-up" data-aos-delay="600">鼎金國小、鼎金國中、高雄高工、高雄科大，培養出無數菁英，近在咫尺的距離，輕鬆上下學，給孩子一個睡飽的早晨，擁有完善的教育資源，是給下一代最好的成長動能。</p>
     </div>
     </div>

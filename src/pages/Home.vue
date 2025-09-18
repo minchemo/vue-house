@@ -12,6 +12,7 @@
      <!--  -->
      <Nav />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    <h1 class="absolute top-0 left-0 pointer-events-none" style="transform:translate(-100%)">城揚Twin S</h1>
     <img src="@/section/s1/bg.svg" class="bg">
       <S1 />
       <S2 />

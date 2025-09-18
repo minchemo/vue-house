@@ -3,7 +3,7 @@
 		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-          <h3 class="title" data-aos="fade-up" data-aos-delay="200">悠閒綠意圍繞<br>愜意散策時光</h3>
+          <h2 class="title" data-aos="fade-up" data-aos-delay="200">悠閒綠意圍繞<br>愜意散策時光</h2>
     <p class="desc" data-aos="fade-up" data-aos-delay="600">科工館、愛河之心、本和里滯洪池公園、金獅湖…等，無論哪個方向，都有能夠放鬆休閒的去處，綠意、湖景、河畔、運動、展覽，隨您自在悠遊，漫步大自然與人文之中！</p>
     </div>
     </div>

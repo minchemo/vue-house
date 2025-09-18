@@ -3,7 +3,7 @@
 		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">比鄰輕軌而居<br>躍動城市交通</h3>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="200">比鄰輕軌而居<br>躍動城市交通</h2>
         <p class="desc" data-aos="fade-up" data-aos-delay="600">350米，是輕軌與家之間的距離！透過腳下的步伐，乘上輕軌的身影，連接捷運、鐵路，將整座城市變成您的生活圈！喝杯咖啡就能直上國道，假日輕鬆帶著一家人遊玩全台灣！<br><br>＊以上交通距離參照Google Map，僅供參考</p>
     </div>
     </div>

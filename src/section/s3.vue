@@ -3,8 +3,8 @@
 		<img src="./s1/oo.svg" class="oo">
     <div class="main">
       <div class="txt">
-          <h3 class="title" data-aos="fade-up" data-aos-delay="200">城市全新樣貌<br>
-            未來耀眼綻放</h3>
+          <h2 class="title" data-aos="fade-up" data-aos-delay="200">城市全新樣貌<br>
+            未來耀眼綻放</h2>
     <p class="desc" data-aos="fade-up" data-aos-delay="600">完工的高雄車站，象徵著一個新時代的到來！預計2027年完工的富邦BOT，帶來全新的時尚氛圍，而預計2034年全線通車的捷運黃線，將串聯起更緊密的路網。選擇三民正核心，座落極具潛力的軌道地段，擁抱高雄最具指標的發展計畫，將耀眼未來納入生活版圖！
 <br>
 圖片來源：<a href="https://finance.kcg.gov.tw/News_Content.aspx?n=6976FD3842A19BA6&sms=11E45B2CB786190D&s=4A669AC34F9FA1EB" target="_blank">高雄市政府財政局</a><br>
