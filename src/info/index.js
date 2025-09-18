@@ -1,7 +1,7 @@
 const caseName = "淇發詠旭"
 
 export default {
-  caseid: "36068e10-11f5-478e-9903-0c172c5d5b4b",
+  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //84367435-7db4-452e-81ae-8094b25e88da
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
@@ -13,12 +13,13 @@ export default {
   fbMessage: "https://www.facebook.com/messages/t/61578833014291/",
   caseName: caseName,
   houseInfos: [
-    ["投資興建", "淇發建設有限公司"],
+    ["投資興建", "金錩建設"],
     ["營造公司", "東璋營造有限公司"],
-    ["產品規劃", "洪堯山建築師事務所"],
+    ["園藝景觀", "昱林設計"],
     ["行銷公司", "自售"],
+    ["建築設計", "黃翔龍建築師事務所"],
   ],
-  gtmCode: ["GTM-WB2PP4H7"],// 可放置多個 
+  gtmCode: ["XXXXX"],// 可放置多個 
   recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3

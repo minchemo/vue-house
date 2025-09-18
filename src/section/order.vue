@@ -323,6 +323,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     height: 100%;
+    margin: auto;
   }
 
   .animate-spin {
