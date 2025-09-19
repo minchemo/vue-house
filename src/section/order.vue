@@ -98,9 +98,7 @@
 .order {
   width: 100%;
   padding-top: size(115);
-  background: url("./s1/bg2.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  //background-color: #131D2A;
 
 
   .leaf-left {
@@ -194,7 +192,7 @@
 
     .row {
       background: rgba(217, 217, 217, 0.6);
-      color: #423E3D;
+      color: #FFF;
       display: flex;
       width: 100%;
       align-items: center;
@@ -280,43 +278,15 @@
 
   .send {
     font-size: 20px;
-    letter-spacing: 0.9em;
+    letter-spacing: 1.5em;
     text-indent: 0.9em;
     color: #FFF;
-    background-color: #919F92;
     border: 0;
-    width: sizem(75);
+    width: sizem(60);
     height: 3.3em;
-    line-height: 3.3;
-    z-index: 10;
-    font-weight: 400;
-    position: relative;
-    border-radius: 0;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 640%;
-      background-image: url('./s1/bbg.png');
-      background-size: cover;
-      background-position: center;
-      animation: rotate 60s linear infinite;
-      z-index: -1;
-    }
-  }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
+    border-radius: 10px;
+    border: 3px solid var(--ggg, linear-gradient(0deg, #735131 0%, #A07248 15%, #CF9E6A 42%, #EFBC81 61%, #FEF9D9 72%, #EDBA80 84%, #593D25 100%));
+    background: var(--gg, linear-gradient(90deg, #735131 0%, #A07248 15%, #CF9E6A 42%, #EFBC81 61%, #FEF9D9 72%, #EDBA80 84%, #593D25 100%));
   }
 
   .send-load {
@@ -324,6 +294,7 @@
     text-indent: 0.9em;
     height: 100%;
     margin: auto;
+
   }
 
   .animate-spin {

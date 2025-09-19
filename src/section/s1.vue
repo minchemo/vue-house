@@ -1,23 +1,23 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/ph.png" class="t0">
-    <!--  <img src="./s1/pc.png" class="t0"> -->
-    <h2>
-      <span style="display: none;">淇發詠旭</span>
-      <img src="./s1/淇發建設.png" alt="淇發詠旭">
+    <!-- <img src="./s1/ph.png" class="t0"> -->
+    <img src="./s1/pc.png" class="t0">
+    <img class="bg" src="./s1/bg.png" alt="覓靓101">
+    <h2 data-aos="fade-down" data-aos-delay="400">
+      <span style="display: none;">覓靓101</span>
+      <img src="./s1/logo1.png" alt="覓靓101">
     </h2>
-    <h1 data-aos="fade-up" data-aos-delay="400">
-      <span style="display: none;">淇發詠旭</span>
-      <img class="pc" src="./s1/淇發詠旭.png" alt="淇發詠旭">
-      <img class="ph" src="./s1/淇發詠旭m.png" alt="淇發詠旭">
+    <h1 data-aos="fade-down" data-aos-delay="400">
+      <span style="display: none;">覓靓101</span>
+      <img src="./s1/logo2.png" alt="覓靓101">
     </h1>
-    <h3 data-aos="fade-in" data-aos-delay="600">
-      <span style="display: none;">淇發詠旭</span>
-      <img src="./s1/從根本就安心.png" alt="從根本就安心">
+    <h3 data-aos="fade-in" data-aos-delay="800">
+      <span style="display: none;">覓靓101</span>
+      <img src="./s1/subtitle1.png" alt="3米6">
     </h3>
-    <h4 data-aos="fade-up" data-aos-delay="800">
-      <span style="display: none;">淇發詠旭</span>
-      <img src="./s1/南北座向傳統車墅.png" alt="南北座向傳統車墅">
+    <h4 data-aos="fade-in" data-aos-delay="800">
+      <span style="display: none;">覓靓101</span>
+      <img src="./s1/subtitle2.png" alt="世界精品行旅">
     </h4>
   </article>
 </template>
@@ -34,9 +34,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("./s1/bg1.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-color: #131D2A;
 
   //電腦手機排版用
   .t0 {
@@ -57,53 +55,53 @@
     display: none;
   }
 
-  .circle {
-    width: size(836);
-    position: relative;
-    z-index: 2;
+  .bg {
+    width: size(771);
+    position: absolute;
+    right: 0;
   }
 
-  //淇發建設
+  //logo
   h2 {
     position: absolute;
-    top:calc(2% + #{size(545 - 1080 * .5)});
-    left: calc(2% + #{size(535 - 1080 * .5)});
+    top:calc(20% + #{size(555 - 1080 * .5)});
+    left: calc(30% + #{size(520 - 1080 * .5)});
 
     img {
-      width: sizem(35);
+      width: sizem(15);
     }
   }
 
-  //淇發詠旭
+  //覓靓101
   h1 {
     position: absolute;
-    top:calc(30% + #{size(452- 1080 * .5)});
-    left: calc(10% + #{size(480 - 1080 * .5)});
+    top:calc(50% + #{size(482- 1080 * .5)});
+    left: calc(15% + #{size(442 - 1080 * .5)});
 
     img {
-      width: sizem(225);
+      width: sizem(150);
     }
   }
 
-  //根本
+  //3米6
   h3 {
     position: absolute;
-    top: calc(80% + #{size(458 - 1080 * .5)});
-    left: calc(15% + #{size(498 - 1080 * .5)});
+    top: calc(80% + #{size(406 - 1080 * .5)});
+    left: calc(15% + #{size(486 - 1080 * .5)});
 
     img {
-      width: sizem(135);
+      width: sizem(48);
     }
   }
 
-  //南北
+  //世界
   h4 {
     position: absolute;
-    top: calc(70% + #{size(569 - 1080 * .5)});
-    left: calc(50% + #{size(560 - 1080 * .5)});
+    top: calc(70% + #{size(535 - 1080 * .5)});
+    left: calc(40% + #{size(310 - 1080 * .5)});
 
     img {
-      width: sizem(135);
+      width: sizem(80);
     }
   }
 
@@ -142,7 +140,7 @@
       }
     }
 
-    //淇發詠旭
+    //覓靓101
     h1 {
       top:calc(20% + #{size(405 - 1080 * .5)});
       left: calc(30% + #{size(370 - 1080 * .5)});

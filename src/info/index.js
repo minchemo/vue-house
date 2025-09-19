@@ -1,4 +1,4 @@
-const caseName = "淇發詠旭"
+const caseName = "覓靓101"
 
 export default {
   caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //84367435-7db4-452e-81ae-8094b25e88da
@@ -19,7 +19,7 @@ export default {
     ["行銷公司", "自售"],
     ["建築設計", "黃翔龍建築師事務所"],
   ],
-  gtmCode: ["XXXXX"],// 可放置多個 
+  gtmCode: ["GTM-XXXXX"],// 可放置多個 
   recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
