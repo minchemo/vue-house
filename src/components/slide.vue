@@ -86,7 +86,7 @@ const options = {
     autoplay: true,
     interval: 4000,
     gap: 5,
-    type:'loop'
+    type: 'loop'
 }
 
 const width = ref(0);

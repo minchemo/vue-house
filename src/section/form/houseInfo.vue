@@ -48,7 +48,7 @@
 .house {
     // height: auto;
     font-size: size(22);
-    background: #52777D;
+    background: #131D2A;
 
     // height:4em;
     img {
@@ -80,10 +80,6 @@
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
-
-            p:first-child {
-                // min-width: 4.5em;
-            }
         }
     }
 }
@@ -112,7 +108,7 @@
         .info-items {
             row-gap: sizem(20);
             margin-left: 0;
-            width: 70%;
+            width: 71%;
 
             .item {
                 font-size: sizem(14);

@@ -5,18 +5,18 @@ export default {
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "屏東縣東港鎮大和街50號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3685.571342811699!2d120.4500642!3d22.5202606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1f0069b27aeb%3A0x65588ed70e46d40b!2z5reH55m85pm25rmb!5e0!3m2!1szh-TW!2stw!4v1754299397233!5m2!1szh-TW!2stw",//嵌入的
-  googleLink: "https://maps.app.goo.gl/QtAQ2XzGSq5SYjmz5",//導航網址
-  phone: "08-8352-888",
-  fbLink: "https://www.facebook.com/61578833014291/",
-  fbMessage: "https://www.facebook.com/messages/t/61578833014291/",
+  address: "新北市三重區捷運路77-1號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1148578247476!2d121.47961248401575!3d25.0640959068353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8e6296d594b%3A0xccf6da0e2a4b0c13!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5b-g5a2d6Lev5LiJ5q61MTAx6Jmf!5e0!3m2!1szh-TW!2stw!4v1758275311483!5m2!1szh-TW!2stw",//嵌入的
+  googleLink: "https://maps.app.goo.gl/M8EzeyJiHPkvEhJS9",//導航網址
+  phone: "02-2977-5888",
+  //fbLink: "https://www.facebook.com/61578833014291/",
+  //fbMessage: "https://www.facebook.com/messages/t/61578833014291/",
   caseName: caseName,
   houseInfos: [
     ["投資興建", "金錩建設"],
-    ["營造公司", "東璋營造有限公司"],
+    ["公設設計", "泰然設計"],
     ["園藝景觀", "昱林設計"],
-    ["行銷公司", "自售"],
+    ["建照號碼", "112重建字第 00326號"],
     ["建築設計", "黃翔龍建築師事務所"],
   ],
   gtmCode: ["GTM-XXXXX"],// 可放置多個 

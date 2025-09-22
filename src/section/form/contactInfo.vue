@@ -7,19 +7,18 @@
       <div class="flex w-full contact-info-box">
         <div class="w-full logo-box">
           <div class="flex justify-between w-full contact-item-box">
-            <div class="flex contact-item justify-center items-center green hover:scale-90"
-              @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+            <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
+              v-if="info.phone">
               <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
               <div>{{ info.phone }}</div>
             </div>
-            <div class="flex contact-item justify-center items-center green btlead-fb hover:scale-90" @click="open()">
+            <div class="flex contact-item justify-center items-center btlead-fb" @click="open()">
               <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
               <div>前往粉絲專頁</div>
             </div>
-            <div class="flex contact-item justify-center items-center green hover:scale-90"
-              @click="modalOpen = true; modalType = 'fb'">
+            <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
               <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
-              <div>Facebook 諮詢</div>
+              <div>FB 諮詢</div>
             </div>
           </div>
         </div>
@@ -28,7 +27,7 @@
         <div class="flex contact-item justify-center items-center add">
           <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
         </div>
-        <div class="flex contact-item justify-center items-center googlemap green "
+        <div class="flex contact-item justify-center items-center googlemap"
           @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
           <div>導航 GoogleMap</div>
@@ -116,18 +115,16 @@
 }
 
 .contact-info {
-  padding: 3.5em 0 1em 0;
+  padding: 3.5em 0 2em 0;
   position: relative;
   z-index: 50;
-  width: size(1200);
+  width: size(950);
   min-width: 750px;
   font-size: 16px;
 
   .contact-info-box {
     justify-content: space-around;
   }
-
-
 
   .logo {
     position: relative;
@@ -156,7 +153,28 @@
     gap: 1.25em;
 
     .contact-item {
-      color: #FFF;
+      color: #55371D;
+      font-weight: 600;
+      width: sizem(60);
+      height: 4em;
+      border-width: 3px;
+      border-style: solid;
+      border-color: transparent;
+      border-radius: 10px;
+      background-image: linear-gradient(90deg,
+          #735131 0%,
+          #A07248 15%,
+          #CF9E6A 42%,
+          #EFBC81 61%,
+          #FEF9D9 72%,
+          #EDBA80 84%,
+          #593D25 100%), linear-gradient(to bottom, #735131, #A07248, #CF9E6A,
+          #EFBC81,
+          #FEF9D9,
+          #EDBA80,
+          #593D25);
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -179,7 +197,7 @@
         max-width: 1.35em;
         height: auto;
         max-height: 1.35em;
-        filter: brightness(0) invert(1);
+        filter: invert(24%) sepia(13%) saturate(1840%) hue-rotate(346deg) brightness(93%) contrast(97%);
         transition: all .5s;
         margin: 0;
       }
@@ -214,14 +232,6 @@
       }
     }
 
-    .dark-green {
-      background: #52777D;
-
-      &:hover {
-        background: #3b646a;
-      }
-    }
-
     .gray {
       background: #423E3D;
 
@@ -232,19 +242,26 @@
 
     &.address {
       display: grid;
-      grid-template-columns: 1fr 2.2fr 1fr;
+      grid-template-columns: 2.15fr 1fr;
       margin-top: 20px;
       width: 100%;
 
       .add {
-        background: rgba(217, 217, 217, 0.6);
-        color: #000;
-        width: sizem(159);
+        color: #FFF;
         justify-self: left;
+        border-radius: 10px 0 0 10px;
+        background: none;
+        border-width: 3px 0 3px 3px;
+        border-style: solid;
+        border-color: #735131;
       }
 
       .googlemap {
-        width: sizem(75.5);
+        border-radius: 0 10px 10px 0;
+
+        @media screen and (max-width:768px) {
+          border-radius: 0 0 10px 10px;
+        }
       }
     }
 
@@ -266,7 +283,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background: #52777D;
+    background: #131D2A;
 
     .contact-item {
       height: 100%;
@@ -365,8 +382,11 @@
           &.add {
             width: 100%;
             text-align: center;
-            background: rgba(217, 217, 217, 0.6);
+            border-width: 3px 3px 0 3px;
+            border-radius: 10px 10px 0 0;
             margin-left: 0;
+
+
 
             div {
               text-indent: 0em;

@@ -54,9 +54,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#423E3D]">
+        <p class="text-[#FFF]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#52777D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#D61518] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -71,7 +71,7 @@
           即刻預約
         </button>
         <div v-else class="send-load">
-          <svg class="animate-spin h-5 w-5 text-[#52777D]" xmlns="http://www.w3.org/2000/svg" fill="none"
+          <svg class="animate-spin h-5 w-5 text-[#D61518]" xmlns="http://www.w3.org/2000/svg" fill="none"
             viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
@@ -98,7 +98,7 @@
 .order {
   width: 100%;
   padding-top: size(115);
-  //background-color: #131D2A;
+  background-color: #131D2A;
 
 
   .leaf-left {
@@ -135,7 +135,7 @@
   .order-title {
     font-size: size(45);
     font-weight: 800;
-    color: #423E3D;
+    color: #FFF;
 
     .line {
       width: size(439);
@@ -151,7 +151,7 @@
     font-size: size(17);
     padding-top: .4em;
     letter-spacing: .1em;
-    color: #423E3D;
+    color: #FFF;
   }
 
   .cus-divider {
@@ -186,16 +186,18 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #0003;
+      background-color: #F7BA77;
       position: absolute;
     }
 
     .row {
-      background: rgba(217, 217, 217, 0.6);
+      border: 1px solid #F7BA77;
+      background: none;
       color: #FFF;
       display: flex;
       width: 100%;
       align-items: center;
+
 
       >span {
         width: 5.5em;
@@ -204,7 +206,7 @@
         font-weight: 600;
 
         >span {
-          color: #52777D;
+          color: #D61518;
           font-size: 12px;
         }
       }
@@ -214,25 +216,27 @@
         background: inherit;
         flex: 1;
         font-weight: 200;
-        color: #666666;
+        color: #FFF;
         background: none;
 
         //姓名、手機、備註的註解文字
         &::placeholder {
           font-weight: 200;
-          color: #666666;
+          color: #FFF;
         }
       }
 
       option {
         font-weight: 200;
-        color: #666666;
+        background-color: #131D2A;
+        color: #FFF;
       }
 
       select {
         background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
+        filter: brightness(0) invert(1);
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
@@ -260,11 +264,11 @@
 
   //備註
   textarea {
-    color: #666666 !important;
+    color: #FFF !important;
 
     &::placeholder {
       font-weight: 200;
-      color: #666666;
+      color: #FFF;
     }
   }
 
@@ -280,13 +284,27 @@
     font-size: 20px;
     letter-spacing: 1.5em;
     text-indent: 0.9em;
-    color: #FFF;
-    border: 0;
+    color: #55371D;
     width: sizem(60);
     height: 3.3em;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
     border-radius: 10px;
-    border: 3px solid var(--ggg, linear-gradient(0deg, #735131 0%, #A07248 15%, #CF9E6A 42%, #EFBC81 61%, #FEF9D9 72%, #EDBA80 84%, #593D25 100%));
-    background: var(--gg, linear-gradient(90deg, #735131 0%, #A07248 15%, #CF9E6A 42%, #EFBC81 61%, #FEF9D9 72%, #EDBA80 84%, #593D25 100%));
+    background-image: linear-gradient(90deg,
+        #735131 0%,
+        #A07248 15%,
+        #CF9E6A 42%,
+        #EFBC81 61%,
+        #FEF9D9 72%,
+        #EDBA80 84%,
+        #593D25 100%), linear-gradient(to bottom, #735131, #A07248, #CF9E6A,
+        #EFBC81,
+        #FEF9D9,
+        #EDBA80,
+        #593D25);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
   }
 
   .send-load {
@@ -340,7 +358,6 @@
     height: sizem(2210);
     min-height: sizem(2210);
     max-height: sizem(2210);
-    background: url("./s1/bgm2.png");
     background-size: 100%;
     background-repeat: no-repeat;
 

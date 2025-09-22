@@ -1,7 +1,7 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!-- <img src="./s1/ph.png" class="t0"> -->
-    <img src="./s1/pc.png" class="t0">
+    <img src="./s1/ph.png" class="t0">
+    <!-- <img src="./s1/pc.png" class="t0"> -->
     <img class="bg" src="./s1/bg.png" alt="覓靓101">
     <h2 data-aos="fade-down" data-aos-delay="400">
       <span style="display: none;">覓靓101</span>
@@ -9,7 +9,7 @@
     </h2>
     <h1 data-aos="fade-down" data-aos-delay="400">
       <span style="display: none;">覓靓101</span>
-      <img src="./s1/logo2.png" alt="覓靓101">
+      <img src="./s1/logo2.svg" alt="覓靓101">
     </h1>
     <h3 data-aos="fade-in" data-aos-delay="800">
       <span style="display: none;">覓靓101</span>
@@ -59,6 +59,7 @@
     width: size(771);
     position: absolute;
     right: 0;
+
   }
 
   //logo
@@ -80,6 +81,7 @@
 
     img {
       width: sizem(150);
+      background-image: url(./s1/logo2.png);
     }
   }
 
@@ -104,7 +106,6 @@
       width: sizem(80);
     }
   }
-
 }
 
 /* 螢幕尺寸標準 */
@@ -116,11 +117,9 @@
 
 
   .s1 {
-    height: sizem(750);
-    min-height: sizem(750);
-    max-height: sizem(750);
-    background: url("./s1/bgm1.jpg");
-    background-size: 100%;
+    height: sizem(800);
+    min-height: sizem(800);
+    max-height: sizem(800);
 
     .pc {
       display: none;
@@ -130,47 +129,59 @@
       display: block;
     }
 
-    //淇發建設
+    .bg {
+      width: sizem(271);
+      transform: scaleX(-1) rotate(90deg);
+      position: absolute;
+      left: 0;
+      bottom: size(-300);
+    }
+
+    //logo
     h2 {
-      top:calc(2% + #{size(515 - 1080 * .5)});
-      left: calc(5% + #{size(525 - 1080 * .5)});
+      position: absolute;
+      top:calc(20% + #{size(360 - 1080 * .5)});
+      left: calc(50% + #{size(420 - 1080 * .5)});
 
       img {
-        width: sizem(92);
+        width: sizem(41);
       }
     }
 
     //覓靓101
     h1 {
-      top:calc(20% + #{size(405 - 1080 * .5)});
-      left: calc(30% + #{size(370 - 1080 * .5)});
+      position: absolute;
+      top:calc(35% + #{size(452- 1080 * .5)});
+      left: calc(15% + #{size(442 - 1080 * .5)});
 
       img {
-        width: sizem(220);
+        width: sizem(300);
+        background-image: url(./s1/logo2.png);
+        background-size: 100%;
       }
     }
 
-    //4根本
+    //3米6
     h3 {
-      top: calc(80% + #{size(238 - 1080 * .5)});
-      left: calc(10% + #{size(658 - 1080 * .5)});
+      position: absolute;
+      top: calc(50% + #{size(336 - 1080 * .5)});
+      left: calc(15% + #{size(406 - 1080 * .5)});
 
       img {
-        width: sizem(250);
+        width: sizem(105);
       }
     }
 
-    //南北
+    //世界
     h4 {
-      top: calc(80% + #{size(533 - 1080 * .5)});
-      left: calc(20% + #{size(475 - 1080 * .5)});
+      position: absolute;
+      top: calc(50% + #{size(365 - 1080 * .5)});
+      left: calc(50% + #{size(350 - 1080 * .5)});
 
       img {
-        width: sizem(250);
+        width: sizem(203);
       }
     }
-
-
   }
 }
 </style>
