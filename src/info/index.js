@@ -8,7 +8,7 @@ export default {
     address: "高雄市小港區松金里松園六路123號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7368.49467639778!2d120.36437874463134!3d22.569850791565685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1d0ab7391117%3A0x5465493064c089b4!2z5riF5pmv6bqf5ZyL5a625YWs5ZySIOaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1756891908806!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/NwCdwBtNKx9998yq5",
-    phone: "07-5568588",
+    phone: "07-8018000",
     fbLink: "https://www.facebook.com/107608068785783/",
     fbMessage: "https://m.me/107608068785783/",
     caseName: caseName,
