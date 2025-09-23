@@ -29,7 +29,7 @@
             </label>
           </template>
           <!-- 動態 select end-->
-          <label class="row"><span>居住縣市</span>
+          <!-- <label class="row"><span>居住城市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
@@ -42,7 +42,8 @@
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
-            </select></label>
+            </select>
+          </label> -->
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"

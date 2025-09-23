@@ -82,6 +82,7 @@
     img {
       width: sizem(150);
       background-image: url(./s1/logo2.png);
+      background-size: 100%;
     }
   }
 
