@@ -11,6 +11,7 @@
 		<img src="./s1/logo_tl.svg" class="tl" alt="txt">
     <div class="rb font-['Noto_Serif_TC',serif]">上旺開發</div>
 		<img src="./s1/en.svg" class="en">
+    <a href="https://twin-s.chen-yan.tw/" class="button">了解詳情</a>
     
   </article>
 </template>
@@ -24,7 +25,6 @@
  // @apply relative w-full h-screen;
   // height: size(1080);
   min-height: size(900);
-  max-height: size(1080);
   height: 100vh;
   font-size:size(40);
   color: #FFF;
@@ -46,13 +46,17 @@
  }
   .oo2{right: 37%;transform: rotate(180deg);
  }
-  .logo{ margin: 1em auto 1.6em auto ;height: calc(100% * 424 / 1080);}
+  .logo{ margin: 2em auto 1.6em auto ;height: calc(100% * 424 / 1080);}
   .txt{height: calc(100% * 102 / 1080);}
   .tl{position: absolute;top: 2.5em;left: 1em;height: 1.3em;}
   .rb{position: absolute;bottom: 0.5em;right: 1em;height: 1.3em;font-weight: 500;font-size: .6em;}
   
   .en{position: absolute;bottom: 1em;left: 0;right: 0;margin:0 auto;mix-blend-mode: overlay;
     width:87%;}
+    .button{border: 1px solid #fff;padding: .5em 3em;border-radius: .8em;margin-top: 3em;
+      transition:transform .5s;position: relative;z-index: 10;
+    &:hover{transform: scale(1.2);}
+    }
 }
 
   
@@ -63,18 +67,16 @@
 @media screen and (max-width: 767px) {
 
   .s1 {
-    height:calc(100vh - 63px);
     min-height: sizem(604);
-    max-height: sizem(604);
     font-size:sizem(23);
-    .oo1,.oo2{top:calc(50% - #{sizem(140)});
+    .oo1,.oo2{top:calc(50% - #{sizem(200)});
   height: sizem(280);
  }
   .oo1{left:calc(50% - #{sizem(75)});
  }
   .oo2{right:calc(50% - #{sizem(75)});
  }
-    .logo{height:auto;width:sizem(210);margin: -.5em auto .8em auto }
+    .logo{height:auto;width:sizem(210);margin: -1.5em auto .8em auto }
     .txt{height:auto;width:sizem(210);}
     .tl{top: .5em;left: .5em;}
 

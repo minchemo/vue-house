@@ -9,23 +9,12 @@
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
   <!-- loading end -->
-     <!--  -->
-     <Nav />
+     <!-- 
+     <Nav /> -->
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <h1 class="absolute top-0 left-0 pointer-events-none" style="transform:translate(-100%)">城揚Twin S</h1>
     <img src="@/section/s1/bg.svg" class="bg">
       <S1 />
-      <S2 />
-      <S3 />
-      <S4 />
-      <S5 />
-      <S6 />
-      <S7 />
-      <S10 />
-      <S8 />
-      <S11 />
-      <S9 />
-    <Order />
   <!--
     <S1new />
     <S1new2 /> -->
@@ -208,18 +197,6 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue"
-import S4 from "@/section/s4.vue"
-import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
-import S10 from "@/section/s10.vue"
-import S11 from "@/section/s11.vue"
-import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
