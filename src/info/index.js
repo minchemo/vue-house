@@ -6,11 +6,11 @@ export default {
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市三重區捷運路77-1號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1148578247476!2d121.47961248401575!3d25.0640959068353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8e6296d594b%3A0xccf6da0e2a4b0c13!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5b-g5a2d6Lev5LiJ5q61MTAx6Jmf!5e0!3m2!1szh-TW!2stw!4v1758275311483!5m2!1szh-TW!2stw",//嵌入的
-  googleLink: "https://maps.app.goo.gl/M8EzeyJiHPkvEhJS9",//導航網址
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3627531846255!2d121.4832322!3d25.0556913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9006813a65f%3A0xacf1fa511a399574!2z6KaT6Z2aMTAx5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1758620343067!5m2!1szh-TW!2stw",//嵌入的
+  googleLink: "https://maps.app.goo.gl/h2gsvHFWo4EbAPV37",//導航網址
   phone: "02-2977-5888",
-  //fbLink: "https://www.facebook.com/61578833014291/",
-  //fbMessage: "https://www.facebook.com/messages/t/61578833014291/",
+  fbLink: "https://www.facebook.com/61580612117472/",
+  fbMessage: "https://www.facebook.com/messages/t/61580612117472/",
   caseName: caseName,
   houseInfos: [
     ["投資興建", "金錩建設"],
