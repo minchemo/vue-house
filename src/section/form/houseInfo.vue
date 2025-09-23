@@ -92,7 +92,7 @@
     }
 
     .footer {
-        margin-bottom: sizem(63);
+        margin-top: sizem(40);
     }
 
     .info-box {

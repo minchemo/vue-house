@@ -37,7 +37,7 @@
   </div>
 
   <!-- Mobile contact info -->
-  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+  <div v-if="$isMobile()" class="bg-gold mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
       <img src="./phone.svg" alt="撥打電話" srcset="" />
@@ -285,23 +285,29 @@
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     background: #131D2A;
 
+    //手機下面的按鈕
     .contact-item {
       height: 100%;
       font-size: sizem(16);
       font-weight: 400;
-      color: #fff;
-      border-left: 1px solid #fff9;
+      border-left: 1px solid #735131;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
       }
 
       &:first-child {
         border-left: 0;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        color: black;
+        border-left: 1px solid rgb(51, 51, 51);
+        filter: invert(21%) sepia(41%) saturate(595%) hue-rotate(346deg) brightness(98%) contrast(98%);
       }
     }
   }
@@ -399,6 +405,22 @@
         gap: 0 !important;
       }
     }
+  }
+
+  .bg-gold {
+    color: #55371D;
+    background-image: linear-gradient(90deg,
+        #735131 0%,
+        #A07248 15%,
+        #CF9E6A 42%,
+        #EFBC81 61%,
+        #FEF9D9 72%,
+        #EDBA80 84%,
+        #593D25 100%), linear-gradient(to bottom, #735131, #A07248, #CF9E6A,
+        #EFBC81,
+        #FEF9D9,
+        #EDBA80,
+        #593D25);
   }
 }
 </style>

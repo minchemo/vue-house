@@ -355,9 +355,9 @@
   }
 
   .order {
-    height: sizem(2210);
-    min-height: sizem(2210);
-    max-height: sizem(2210);
+    height: sizem(2250);
+    min-height: sizem(2250);
+    max-height: sizem(2250);
     background-size: 100%;
     background-repeat: no-repeat;
 
