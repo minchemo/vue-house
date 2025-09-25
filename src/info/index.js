@@ -1,4 +1,4 @@
-const caseName = "宜娟測試"
+const caseName = "ChinLife"
 export default {
   caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
