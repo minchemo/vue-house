@@ -22,16 +22,37 @@
         <div>前往粉絲專頁</div>
       </div>
       <div class="flex contact-item justify-center items-center btfanpage" @click="open(info.line)">
-        <img src="//h35.banner.tw/img/form/line.svg" alt="前往粉絲專頁" srcset="" />
+        <img src="//h35.banner.tw/img/form/line.svg" alt="官方LINE" srcset="" />
         <div>官方LINE</div>
       </div>
     </div>
+    <!-- 單地址的
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
         <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
+        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <div>導航 GoogleMap</div>
+      </div>
+    </div> -->
+    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
+      <div class="flex contact-item justify-center items-center address">
+        <div><span v-if="info.address1">臺北辦事處：</span>台北市松山區八德路二段374號12F</div>
+      </div>
+      <div class="flex contact-item justify-center items-center googlemap"
+        @click="modalOpen = true; modalType = 'gmap1'">
+        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <div>導航 GoogleMap</div>
+      </div>
+    </div>
+    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
+      <div class="flex contact-item justify-center items-center address">
+        <div><span v-if="info.address1">臺南總公司：</span>台南市南區健康路二段545號3樓</div>
+      </div>
+      <div class="flex contact-item justify-center items-center googlemap"
+        @click="modalOpen = true; modalType = 'gmap2'">
         <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -53,6 +74,10 @@
       <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
+    <div class="flex flex-col contact-item justify-center items-center" @click="open(info.line)">
+      <img src="//h35.banner.tw/img/form/line.svg" alt="官方LINE" srcset="" />
+      <div>官方LINE</div>
+    </div>
    <!--   <div class="flex flex-col contact-item justify-center items-center" @click="open()">
       <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
@@ -61,11 +86,11 @@
       <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <div class="flex flex-col contact-item justify-center items-center"
+    <!-- <div class="flex flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
       <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
-    </div>
+    </div> -->
   </div>
 
   <!-- Modal -->
@@ -76,23 +101,35 @@
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
       <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/messenger.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap1' || modalType == 'gmap2'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-      `${info.address2?info.address2:'導航地址'}`
+      <div class="text-xl mt-4 font-bold">{{
+    modalType == 'phone' ? '賞屋專線' :
+    modalType == 'fb' ? 'Facebook Messenger' :
+    modalType == 'gmap1' ? '臺北辦事處' :
+    modalType == 'gmap2' ? '臺南總公司' :
+    (info.address2 ? info.address2 : '導航地址')
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-      `${info.address}`
+      <div class="text-md mt-4">{{
+    modalType == 'phone' ? info.phone :
+    modalType == 'fb' ? '線上諮詢' :
+    modalType == 'gmap1' ? '台北市松山區八德路二段374號12F' :
+    modalType == 'gmap2' ? '台南市南區健康路二段545號3樓' :
+    info.address
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
+        'btsearch1': modalType == 'gmap1',
+        'btsearch2': modalType == 'gmap2',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ 
+        modalType == 'phone' ? '撥打電話' : 
+        modalType == 'fb' ? '立即諮詢' :
         '開啟導航'
         }}</div>
       <!-- btn phone -->
@@ -100,9 +137,13 @@
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
+        'btsearch1': modalType == 'gmap1',
+        'btsearch2': modalType == 'gmap2',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ 
+        modalType == 'phone' ? '撥打電話' : 
+        modalType == 'fb' ? '立即諮詢' :
         '開啟導航'
         }}</div>
     </div>
@@ -392,7 +433,10 @@ const go = () => {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
-
+  } else if (modalType.value == 'gmap1') {
+    window.open("https://maps.app.goo.gl/bXY3zJ7temvb53JH6");
+  } else if (modalType.value == 'gmap2') {
+    window.open("https://maps.app.goo.gl/yM8wgo7q5i9c7vwa6");
   }
 }
 

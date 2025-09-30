@@ -1,11 +1,11 @@
 const caseName = "ChinLife"
 export default {
-  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+  caseid: "9b21683f-e2b7-4cfa-a538-c5c713df2c47",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "VJ4F+3XJ อนุสาวรีย์ Anusawari, Bang Khen, Bangkok 10220泰國",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7747.4606763402335!2d100.62232227940933!3d13.855218699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d630001525237%3A0x75d850054ffce29f!2sChin%20Life%20Ramintra%20KM.4!5e0!3m2!1szh-TW!2stw!4v1758772727335!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/zpBSheRnxc9nj9gXA",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7747.4606763402335!2d100.62232227940933!3d13.855218699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d630001525237%3A0x75d850054ffce29f!2sChin%20Life%20Ramintra%20KM.4!5e0!3m2!1szh-TW!2stw!4v1759201771332!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/YU4xHJCycoM9Kfj79",
     phone: "06-2916208",
     fbLink: "https://www.facebook.com/61581502310202/",
     fbMessage: "https://m.me/61581502310202/",
@@ -23,9 +23,9 @@ export default {
         */
     ],
      gtmCode: ["GTM-000"], // 可放置多個
-    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
