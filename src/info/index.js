@@ -5,10 +5,10 @@ export default {
     //case_code: "bt",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "高雄市前鎮區永豐路237號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.2039021366445!2d120.33038727630576!3d22.608859731638393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0357e46857dd%3A0x2435498d582d88bd!2zODA26auY6ZuE5biC5YmN6Y6u5Y2A5rC46LGQ6LevMjM36Jmf!5e0!3m2!1szh-TW!2stw!4v1710724704786!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/wjeFDtefUeKC3qkv8",
-    phone: "07-722-0088",
+    address: "高雄市鳳山區保泰路418號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.3354603553203!2d120.33376617533251!3d22.60394493182066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0356c81d8549%3A0xfe95e87fc98e8414!2zODMw6auY6ZuE5biC6bOz5bGx5Y2A5L-d5rOw6LevNDE46Jmf!5e0!3m2!1szh-TW!2stw!4v1759212135524!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/CUdmQ4TuuEQLhy7j9",
+    phone: "07-751-9888",
     fbLink: "https://www.facebook.com/61557147771320",
     fbMessage: "https://m.me/61557147771320",
     caseName: caseName,
@@ -33,10 +33,10 @@ export default {
     // room_type: ["兩房","三房"],
     selectFields: {
         room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
-          option: ["3房(33-41坪)", "4房(51-53坪)"],
-          bypass:true,
+            title: "需求房型",
+            hold: "請選擇房型",
+            option: ["3房(33-41坪)", "4房(51-53坪)"],
+            bypass: true,
         },
         //budget: {
         //  title: "購屋預算",
@@ -51,61 +51,61 @@ export default {
           option: ["自住", "投資", "租賃"]
       },
         */
-  },
+    },
 
     navList: [
         {
-        name: "品奢潮",
-        target: ".s2",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "品盛市",
-        target: ".s3",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "品質域",
-        target: ".s4",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "品書香",
-        target: ".s5",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "品風采",
-        target: ".s6",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "品建築",
-        target: ".s7",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "品保泰",
-        target: ".s8",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "立即來電",
-        target: ".contact-info",
-        offset: "",
-        type: 'btn'
-    },
-    {
-          name: "地圖導航",
-          target: ".gmap",
-          offset: "",
-          type: "btn",
-    }
-    ,{
-        name: "立即預約",
-        target: ".order",
-        offset: "",
-        type: 'btn'
-    },
+            name: "品奢潮",
+            target: ".s2",
+            offset: "-60",
+            offsetmo: "0",
+        }, {
+            name: "品盛市",
+            target: ".s3",
+            offset: "-60",
+            offsetmo: "0",
+        }, {
+            name: "品質域",
+            target: ".s4",
+            offset: "-60",
+            offsetmo: "0",
+        }, {
+            name: "品書香",
+            target: ".s5",
+            offset: "-60",
+            offsetmo: "0",
+        }, {
+            name: "品風采",
+            target: ".s6",
+            offset: "-60",
+            offsetmo: "0",
+        }, {
+            name: "品建築",
+            target: ".s7",
+            offset: "-60",
+            offsetmo: "0",
+        }, {
+            name: "品保泰",
+            target: ".s8",
+            offset: "-60",
+            offsetmo: "0",
+        }, {
+            name: "立即來電",
+            target: ".contact-info",
+            offset: "",
+            type: 'btn'
+        },
+        {
+            name: "地圖導航",
+            target: ".gmap",
+            offset: "",
+            type: "btn",
+        }
+        , {
+            name: "立即預約",
+            target: ".order",
+            offset: "",
+            type: 'btn'
+        },
     ],
 }
