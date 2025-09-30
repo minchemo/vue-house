@@ -9,6 +9,7 @@ export default {
     phone: "06-2916208",
     fbLink: "https://www.facebook.com/61581502310202/",
     fbMessage: "https://m.me/61581502310202/",
+    line: "https://lin.ee/VOzO2Sx",
     caseName: caseName,
     houseInfos: [
         /*
@@ -35,11 +36,11 @@ export default {
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
-        room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
-          option: ["兩房", "三房", "四房", "店面"],
-          bypass:false,
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇區間",
+          option: ["300萬以下", "301萬-600萬", "601萬-1000萬", "1000萬以上"],
+          //bypass:false,
         },
         //budget: {
         //  title: "購屋預算",

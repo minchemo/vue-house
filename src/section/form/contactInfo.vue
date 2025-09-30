@@ -17,9 +17,13 @@
         <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open(info.fbLink)">
         <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
+      </div>
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open(info.line)">
+        <img src="//h35.banner.tw/img/form/line.svg" alt="前往粉絲專頁" srcset="" />
+        <div>官方LINE</div>
       </div>
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
@@ -392,8 +396,8 @@ const go = () => {
   }
 }
 
-const open = () => {
-  window.open(info.fbLink);
+const open = (link) => {
+  window.open(link);
 }
 
 
