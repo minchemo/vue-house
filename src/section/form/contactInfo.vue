@@ -113,7 +113,9 @@
 .contact-info-img{
   @apply relative;
   height: 0;z-index: 3;
-  img{position: absolute;top:0;left: 0;width: 100%;transform: translateY(-50%);}
+  img{position: absolute;top:0;left: 0;width: 100%;transform: translateY(-50%);
+  pointer-events: none;
+  }
   
 }
 .contact-info {
