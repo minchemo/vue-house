@@ -11,6 +11,7 @@ export default {
     phone: "04-2293-1199",
     fbLink: "https://www.facebook.com/dome.smilehouse/",
     fbMessage: "https://m.me/dome.smilehouse/",
+    line: "https://lin.ee/fpSDucI",
     caseName: caseName,
     houseInfos: [
         /*["投資興建", "長昇事業夥伴 冠奕建設"],

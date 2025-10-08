@@ -1,5 +1,8 @@
 <template>
   <div class="contact">
+    <a :href="info.line" target="_blank" v-if="!isMobile&&info.line" class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
+    <img src="//h35.banner.tw/img/form/line.svg" /> 
+    </a>
   <div class="contact-info-img" v-if="isMobile">
     <img src="@/section/s1/bg1m.png" alt="bg">
 </div>
@@ -56,6 +59,11 @@
       <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'line'"  v-if="info.line" >
+      <img src="//h35.banner.tw/img/form/line.svg" alt="Line" srcset="" />
+      <div>Line</div>
+    </div>
   </div>
 
   <!-- Modal -->
@@ -110,6 +118,19 @@
 .contact{
    background: linear-gradient(90deg, #a5815f 0%, #e0c8a4 38%, #ffe7bb 100%);
 }
+.lineicon{
+background: #06c755;
+border-radius: 20%;
+aspect-ratio: 1/1;
+display: flex;
+align-items: center;
+justify-content: center;
+        img {
+          width: 71%;
+          filter: brightness(0) invert(1);
+        }
+}
+
 .contact-info-img{
   @apply relative;
   height: 0;z-index: 3;
