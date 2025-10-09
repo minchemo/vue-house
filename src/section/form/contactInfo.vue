@@ -73,34 +73,55 @@
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/messenger.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img//form/line.svg" alt="line" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-      `${info.address2?info.address2:'導航地址'}`
+      <div class="text-xl mt-4 font-bold">{{
+       modalType == 'phone' ? '賞屋專線' :
+       modalType == 'messenger' ? 'Facebook Messenger' :
+       modalType == 'fb' ? 'Facebook 粉絲專頁' :
+       modalType == 'line' ? 'LINE賞屋客服' :
+       modalType == 'gmap' ? `${info.address2?info.address2:'導航地址'}` : 
+       ''
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-      `${info.address}`
+      <div class="text-md mt-4">{{ 
+      modalType == 'phone' ? info.phone : 
+      modalType == 'messenger' ? '線上諮詢' : 
+      modalType == 'fb' ? '' :
+      modalType == 'line' ? '' :
+      modalType == 'gmap' ? `${info.address}` : 
+      ''
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
+        'btlead': modalType == 'messenger',
+        'btfanpage': modalType == 'fb',
         'btsearch': modalType == 'gmap',
+        'btline': modalType == 'line',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-        '開啟導航'
+        {{ 
+        modalType == 'phone' ? '撥打電話' : 
+        modalType == 'messenger' ? '立即諮詢' : 
+        modalType == 'fb' ? '前往粉絲專頁' :
+        modalType == 'line' ? '加入' :
+        modalType == 'gmap' ? '開啟導航' : 
+        ''
         }}</div>
       <!-- btn phone -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
+        'btlead': modalType == 'messenger',
+        'btfanpage': modalType == 'fb',
         'btsearch': modalType == 'gmap',
+        'btline': modalType == 'line',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' : modalType == 'fb' ? '前往粉絲專頁' :
         '開啟導航'
         }}</div>
     </div>
@@ -404,6 +425,8 @@ const go = () => {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
+  } else if (modalType.value == 'line') {
+    window.open(info.line);
 
   }
 }
