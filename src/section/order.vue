@@ -1,8 +1,8 @@
 <template>
-  <div id="order" class="order relative text-center">
+  <div id="order" class="order relative text-center font-['Noto_Sans_TC',serif-sans]">
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title text-center  font-['Noto_Serif_TC',serif]" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
       <!-- <div class="cus-divider"></div> -->
 
@@ -12,11 +12,17 @@
       <!-- Custom Image -->
 
       <!-- Form -->
-      <div class="form mx-auto relative flex justify-center">
-        <div class="left h-full flex flex-col justify-between items-center">
+      <div class="form mx-auto relative flex justify-center ">
+        <div class="left h-full flex flex-col justify-between">
           <label class="row name"><span>姓名<span>(必填)</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
+            <div class="gender">
+          <label><input  type="radio" name="gender" value="男" 
+              @input="(event) => (formData.gender = event.target.value)">先生</label>
+          <label><input  type="radio" name="gender" value="女" 
+              @input="(event) => (formData.gender = event.target.value)">女士</label>
+        </div>
             <label class="row"><span>手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -82,9 +88,9 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send --><div class="sendall mt-8 mx-auto" style="font-size:20px;font-weight: 400;
-    line-height: 3.3;height:3.3em">
+    line-height: 3.3;">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-  送出表單
+  送出預約資訊
 </button>
 <div v-else class="send-load text-[#333]" style="letter-spacing: 0.7em;
   text-indent: 0.9em;
@@ -120,7 +126,7 @@
   <span>發送中...</span>
 </div>
 </div>
-
+<div class="annotation">*現場採預約制</div>
       <!-- Contact Info -->
       <ContactInfo />
     </div>
@@ -202,6 +208,7 @@
     .left {
       flex: 1;
       gap: size(20);
+      position: relative;
       //   width: size(419);
     }
 
@@ -235,6 +242,11 @@
         background-position:calc(100% - .5em) 0%;
       }
       }
+       &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+    }
+    .gender{display: flex;position: absolute;right: 0; flex-direction:column;
+      label:first-child{margin-bottom: .3em;}
+      input{margin-right: .3em;}
     }
   }
 
@@ -254,6 +266,13 @@
     z-index: 10;
     font-weight: 400;
     position: relative;
+  }
+  .annotation{
+    font-size: size(14);
+    color: #666;
+    width: 308px;
+    margin: 0 auto;
+    text-align: right;
   }
 
   .control {
@@ -348,6 +367,10 @@
       width: sizem(310);
       height: sizem(72);
     }
+  .annotation{
+    font-size: sizem(12);
+    width: sizem(310);
+  }
 
     .control {
       font-size: sizem(14.6);

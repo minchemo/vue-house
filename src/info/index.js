@@ -38,8 +38,14 @@ export default {
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-     room_type: ["兩房","三房"],
+     // room_type: ["兩房","三房"],
     selectFields: {
+        budget: {
+          title: "聯絡時間",
+          hold: "請選擇時間",
+          option: ["上午", "下午", "晚上", "皆可"],
+          bypass:false,
+        },
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
