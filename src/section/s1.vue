@@ -1,12 +1,13 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!--  <img src="./s1/pc.jpg" class="t0">  -->
+    <!--  <img src="./s1/1.jpg" class="t0">  -->
       <div class="bg">
         <div><img src="./s1/bg1.jpg"><img src="./s1/bg1.jpg"></div>
       </div>
-    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/t1.svg" class="t1" alt="t1" data-aos="zoom-in" data-aos-delay="200">
-    <img src="./s1/t2.svg" class="t2" alt="t2" data-aos="zoom-in" data-aos-delay="400">
+    <img src="./s1/slogo.svg" class="slogo" alt="logo" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./s1/t1.svg" class="t1" alt="t1" data-aos="zoom-in" data-aos-delay="400">
+    <img src="./s1/t2.svg" class="t2" alt="t2" data-aos="zoom-in" data-aos-delay="600">
     <img src="./s1/en.svg" class="en" alt="en" data-aos-offset="-100" data-aos="fade-up" data-aos-delay="0" >
   </article>
 </template>
@@ -14,7 +15,7 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
   .t0{position: absolute;width: 100%;
-    top:-0px;left: 0; pointer-events: none;z-index: 9;opacity: .10;}
+    top:0px;left: 0;right: 0;margin: auto; pointer-events: none;z-index: 9;opacity: .50;}
 @keyframes an {
   to {
     transform: translateX(0%);
@@ -67,25 +68,30 @@
 }
 
 }
+.slogo,
 .logo,
 .t1,
 .t2,
 .en{
   position: absolute;
   margin: auto;
-  left:0;right:0;
+  left:0;right:0;z-index: 5;
+}
+.slogo{
+  width:sizem(156);
+  top:sizem(45);
 }
 .logo{
-  width:sizem(170);
-  top:sizem(120);
+  width:sizem(310);
+  top:sizem(137);
 }
 .t1{
   width:sizem(308);
-  top:sizem(238);
+  top:sizem(290);
 }
 .t2{
-  width:sizem(245);
-  top:sizem(285);
+  width:sizem(265);
+  top:sizem(333);
 }
 .en{
   width:100%;
@@ -93,20 +99,21 @@
   z-index: 5;
 }
 @media screen and (min-width: 768px) {
+  .slogo{
+    width:size(250);
+  top:calc(20% + #{size(70 - 1186 * .20)});
+  }
   .logo{
-    width:size(335);
-    top:size(138);
-  top:calc(20% + #{size(138 - 1186 * .20)});
+    width:size(490);
+  top:calc(28% + #{size(220 - 1186 * .28)});
   }
   .t1{
-    width:size(609);
-    top:size(371);
-  top:calc(35% + #{size(371 - 1186 * .35)});
+    width:size(509);
+  top:calc(35% + #{size(465 - 1186 * .35)});
   }
   .t2{
-    width:size(484);
-    top:size(464);
-  top:calc(35% + #{size(464 - 1186 * .35)});
+    width:size(420);
+  top:calc(35% + #{size(540 - 1186 * .35)});
   }
   .en{
     width:size(1753);
