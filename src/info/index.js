@@ -12,11 +12,11 @@ export default {
     fbMessage: "https://m.me/61579396628225/",
     caseName: caseName,
     houseInfos: [
-      /*  ["投資建設", "詠砌建設股份有限公司"],
+       ["投資建設", "立瑾機構-詠砌建設股份有限公司"],
         ["建築設計", "賴恩常建築師事務所"],
         ["建照號碼", "114中都建字第00692號"],
         ["行銷企劃", "自建自售"],
-      */
+     /*  */
     ],
     gtmCode: ["GTM-W93JX264"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -26,18 +26,18 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "五感生活．從容開啟",
-        subTitle: "敬獻菁英的專屬品味｜高感精工宅"
+        subTitle: "敬獻菁英的專屬品味｜2-3房｜高感精工宅"
     },
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
-    /* 
        room_type: {
         title: "需求房型",
         hold: "請選擇房型",
         option: ["兩房", "三房"],
         bypass:false,　
       },
+    /* 
       budget: {
         title: "購屋預算",
         hold: "請選擇區間",

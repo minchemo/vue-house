@@ -80,7 +80,7 @@ $house-c2:#3D3939;
     }
 
     .info-box {
-        width: sizem(313);
+        width: sizem(330);
         padding: 0;
 
         .title {
@@ -90,7 +90,6 @@ $house-c2:#3D3939;
 
         .info-items {
             row-gap: sizem(20);
-
             .item {
                 font-size:16px;
             }
