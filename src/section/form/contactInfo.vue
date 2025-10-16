@@ -49,10 +49,10 @@
       <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-col contact-item justify-center items-center" @click="open()">
+   <!-- <div class="flex flex-col contact-item justify-center items-center" @click="open()">
       <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
-    </div>
+    </div> -->
     <div class="flex flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
