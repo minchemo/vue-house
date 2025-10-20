@@ -478,7 +478,7 @@ if (formData.msg.trim() === "") {
     /*
     */
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
@@ -494,7 +494,7 @@ if (formData.msg.trim() === "") {
       }
     );
    //caseid 在index.js裡設定
-    fetch("https://mail.wutopia.com.tw/reserve/"+ info.caseid, {
+    fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
       method: "POST",
       body: presend,
     })
