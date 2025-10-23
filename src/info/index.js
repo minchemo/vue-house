@@ -1,8 +1,8 @@
-const caseName = "test-one-h65"
+const caseName = "test-one"
 
 export default {
-    caseid: "f1e82d4a-8a82-4616-8e69-a4e108f93c95",
-    case_code: "test-one-h65",
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "000",
