@@ -7,8 +7,8 @@
     </a>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     
-      <img src="@/section/s1/logo1.png" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-     <!--
+     <!--   <img src="@/section/s1/logo1.png" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+   
     <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"> -->
     
     <div class="flex justify-between w-full contact-item-box">

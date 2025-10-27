@@ -16,8 +16,9 @@
 
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#ddd] text-[#3E3A39]">
     <h1 class="absolute opacity-0 pointer-events-none">{{ info.caseName }}</h1>
-    <S1 />
+    
   <!--
+    <S1 />
     <S1new />
     <S1new2 /> -->
     <Order />
