@@ -66,7 +66,7 @@
 @media screen and (min-width: 768px) {
   width:size(1860);
  //top:size(312);
-   top:calc(50% + #{size(312 - 1080 * .5)} );
+   top:calc(50% + #{size(375 - 1080 * .5)} );
 
 }
 }
