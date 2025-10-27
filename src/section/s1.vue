@@ -2,9 +2,11 @@
   <article class="s1 relative" id="s1">
     <!--  <img src="./s1/1.jpg" class="t0">
       <img src="./s1/0.jpg" class="t0">  -->
+      <img src="./s1/ll.png" class="ll">
       <img src="./s1/img.png" class="img">
-      <img src="./s1/logo.png" class="logo">
-      <img src="./s1/t1.svg" class="t1">
+      <img src="./s1/o.png" class="o" data-aos="zoom-out" data-aos-delay="0">
+      <img src="./s1/logo.png" class="logo" data-aos="zoom-out" data-aos-delay="0">
+      <img src="./s1/t1.svg" class="t1" data-aos="zoom-out" data-aos-delay="200">
      
   </article>
 </template>
@@ -43,6 +45,30 @@
     max-height: size(1080);
     padding: 0;
     font-size: size(40);
+}
+.ll{
+  position: absolute;
+  left: 0;right: 0;
+  width:sizem(600);
+  top:sizem(100);
+@media screen and (min-width: 768px) {
+  width:size(1860);
+// top:size(85);
+   top:calc(50% + #{size(85 - 1080 * .5)} );
+
+}
+}
+.o{
+  position: absolute;
+  left: 0;right: 0;
+  width:sizem(305);
+  top:sizem(222);
+@media screen and (min-width: 768px) {
+  width:size(1860);
+ //top:size(312);
+   top:calc(50% + #{size(312 - 1080 * .5)} );
+
+}
 }
 .logo{
   position: absolute;
