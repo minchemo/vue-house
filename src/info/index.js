@@ -10,11 +10,12 @@ export default {
     phone: "02-2293-9899",
     fbLink: "https://www.facebook.com/61560673055828/",
     fbMessage: "https://m.me/61560673055828/",
+    line: "https://lin.ee/FTYKISC",
     caseName: caseName,
     houseInfos: [
         ["投資建設", "鵬程建設股份有限公司"],
         ["建照號碼", "110股建字第00368-01號"],
-        ["行銷企劃", "欣和地產股份有限公司"],
+        ["企劃表現", "欣和地產股份有限公司"],
     /*    ["行銷企劃", "自建自售"],
       */
     ],

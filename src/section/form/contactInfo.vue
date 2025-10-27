@@ -2,6 +2,9 @@
   <div class="contact-info-img relative">
 </div>
   <div class="contact-bg">
+    <a :href="info.line" target="_blank" v-if="!isMobile&&info.line" class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
+    <img src="//h35.banner.tw/img/form/line.svg" /> 
+    </a>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
     
       <img src="@/section/s1/logo1.png" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
@@ -62,6 +65,11 @@
       <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'line'"  v-if="info.line" >
+      <img src="//h35.banner.tw/img/form/line.svg" alt="Line" srcset="" />
+      <div>Line</div>
+    </div>
   </div>
 
   <!-- Modal -->
@@ -73,12 +81,19 @@
       <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
       <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/messenger.svg" alt="fb" srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img//form/line.svg" alt="line" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
+      <div class="text-xl mt-4 font-bold">{{ 
+      modalType == 'phone' ? '賞屋專線' : 
+      modalType == 'fb' ? 'Facebook Messenger' :
+      modalType == 'line' ? 'LINE賞屋客服' :
       `${info.address2?info.address2:'導航地址'}`
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+      <div class="text-md mt-4">{{ 
+      modalType == 'phone' ? info.phone : 
+      modalType == 'fb' ? '線上諮詢' :
+      modalType == 'line' ? '' :
       `${info.address}`
       }}</div>
       <!-- btn -->
@@ -86,9 +101,13 @@
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
+        'btline': modalType == 'line',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ 
+        modalType == 'phone' ? '撥打電話' : 
+        modalType == 'fb' ? '立即諮詢' :
+        modalType == 'line' ? '加入' :
         '開啟導航'
         }}</div>
       <!-- btn phone -->
@@ -113,6 +132,18 @@
 .bg-color1{background-color: #857550;}
 .hover\:bg-color2:hover{background-color:#5e5236;}
 
+.lineicon{
+background: #06c755;
+border-radius: 20%;
+aspect-ratio: 1/1;
+display: flex;
+align-items: center;
+justify-content: center;
+        img {
+          width: 71%;
+          filter: brightness(0) invert(1);
+        }
+}
   .mo-contact-info {
     display: none;
     z-index: 99;
@@ -394,7 +425,8 @@ const go = () => {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
-
+  } else if (modalType.value == 'line') {
+    window.open(info.line);
   }
 }
 
