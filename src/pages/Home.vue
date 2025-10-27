@@ -14,11 +14,9 @@
   'Noto_Sans_TC',sans-serif
   -->
 
-  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#ddd] text-[#3E3A39]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#ddd] text-[#3E3A39]">
     <h1 class="absolute opacity-0 pointer-events-none">{{ info.caseName }}</h1>
     <S1 />
-    <S2 />
-    <S3 />
   <!--
     <S1new />
     <S1new2 /> -->
@@ -53,8 +51,7 @@ img {
 .home{
   position: relative;
   &::before{content: "";display: block;position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;
-background: url("@/section/s1/bg.jpg") top center;
-background-size: auto;
+background: radial-gradient(113.5% 63.76% at 47.73% 3.94%, #4C7CA4 0%, #376593 11%, #26496E 27%, #03081F 93%);
     font-weight: 700;
 @media screen and (max-width:768px) {
   
@@ -80,8 +77,6 @@ import info from "@/info"
 // import S11 from "@/section/s11.vue"
 
 import S1 from "@/section/s1.vue" 
-import S2 from "@/section/s2.vue" 
-import S3 from "@/section/s3.vue" 
 import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 

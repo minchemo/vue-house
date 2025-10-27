@@ -1,14 +1,11 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!--  <img src="./s1/1.jpg" class="t0">  -->
-      <div class="bg">
-        <div><img src="./s1/bg1.jpg"><img src="./s1/bg1.jpg"></div>
-      </div>
-    <img src="./s1/slogo.svg" class="slogo" alt="logo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="200">
-    <img src="./s1/t1.svg" class="t1" alt="t1" data-aos="zoom-in" data-aos-delay="400">
-    <img src="./s1/t2.svg" class="t2" alt="t2" data-aos="zoom-in" data-aos-delay="600">
-    <img src="./s1/en.svg" class="en" alt="en" data-aos-offset="-100" data-aos="fade-up" data-aos-delay="0" >
+    <!--  <img src="./s1/1.jpg" class="t0">
+      <img src="./s1/0.jpg" class="t0">  -->
+      <img src="./s1/img.png" class="img">
+      <img src="./s1/logo.png" class="logo">
+      <img src="./s1/t1.svg" class="t1">
+     
   </article>
 </template>
 
@@ -25,9 +22,9 @@
   .s1 {
    // height:  sizem(604);
   //  height:sizem(667);
-  /*  */  
-  background:#BAF0FC;// url("./s1/bgs1.jpg") no-repeat center bottom;
-  // background-size: auto sizem(485);
+  /* 
+  background: url("./s1/bg.jpg") no-repeat center center;
+  background-size: cover;  */ 
   height:sizem(604);
   min-height: sizem(604);
     max-height: sizem(604);
@@ -42,85 +39,60 @@
  // background-position: 50% 90%;
  // background-size: cover;
     height:100vh;
-    min-height: size(910);
-    max-height: size(1186);
+    min-height: size(900);
+    max-height: size(1080);
     padding: 0;
     font-size: size(40);
 }
-.bg{position: relative;height: 100%;
-> div{position: absolute;height: 100%;top: 0;left: 0;
-  transform: translateX(-50%);
-  white-space:nowrap;
-  animation: an 50s linear infinite reverse;
-  img{height: 100%;}
-}
-&::after{content: "";display: block;
-  position: absolute;width: 100%;height: 100%;
-  left:0;right:0;z-index: 2;
-  background:url("./s1/2.webp") no-repeat center bottom;
-  background-size: auto sizem(485);
-@media screen and (min-width: 768px) {
- background-position: 50% 90%;
- background-size: cover;
-
-}
-
-}
-
-}
-.slogo,
-.logo,
-.t1,
-.t2,
-.en{
-  position: absolute;
-  margin: auto;
-  left:0;right:0;z-index: 5;
-}
-.slogo{
-  width:sizem(156);
-  top:sizem(45);
-}
 .logo{
-  width:sizem(310);
+  position: absolute;
+  left: sizem(10);right: 0;
+  width:sizem(360);
   top:sizem(137);
+@media screen and (min-width: 768px) {
+  left: size(40);
+  width:size(1020);
+  // top:size(205);
+  top:calc(50% + #{size(205 - 1080 * .5)} );
+
+}
 }
 .t1{
-  width:sizem(308);
-  top:sizem(290);
-}
-.t2{
-  width:sizem(265);
-  top:sizem(333);
-}
-.en{
-  width:100%;
-  bottom:sizem(0);
-  z-index: 5;
-}
+  position: absolute;
+  left: 0;right: 0;
+  width:sizem(305);
+  top:sizem(285);
 @media screen and (min-width: 768px) {
-  .slogo{
-    width:size(250);
-  top:calc(20% + #{size(70 - 1186 * .20)});
-  }
-  .logo{
-    width:size(490);
-  top:calc(28% + #{size(220 - 1186 * .28)});
-  }
-  .t1{
-    width:size(509);
-  top:calc(35% + #{size(465 - 1186 * .35)});
-  }
-  .t2{
-    width:size(420);
-  top:calc(35% + #{size(540 - 1186 * .35)});
-  }
-  .en{
-    width:size(1753);
-    bottom:size(0);
-  }
+  width:size(696);
+  // top:size(590);
+  top:calc(50% + #{size(590 - 1080 * .5)} );
+
+}
+}
+&::before{
+content: "";
+display: block;
+position: absolute;
+top: 0;left: 0;
+width: 100%;height:sizem(6);
+background: linear-gradient(90deg, #875414 0%, #C7A453 17.62%, #FFDB79 29.37%, #956E2A 64.56%, #7D4500 100.01%);
+@media screen and (min-width: 768px) {
+height:size(6);
+}
 }
 
+.img{
+  position: absolute;
+  bottom: sizem(-50);
+  left: -75%;right: 0;
+  width: 250%;
+@media screen and (min-width: 768px) {
+  width: 100%;  
+  left: 0;
+  bottom: size(-249);
+  bottom:calc(50% + #{size(-249 - 1080 * .5)} );
+}
+}
 }
 
  

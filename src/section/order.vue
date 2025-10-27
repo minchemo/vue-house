@@ -10,12 +10,13 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-          <div class="gender">
+         
+         <!--   <div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>
+        </div>  -->
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -69,9 +70,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#3D3939]">
+        <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#A30C24] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -136,7 +137,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$o-title-c:#857550; //.order-title
+$o-title-c:#FFE780; //.order-title
 
 .order {
   width: 100%;
@@ -157,6 +158,7 @@ $o-title-c:#857550; //.order-title
   .order-subTitle{
     font-size: size(30);
     padding-top:.5em;
+  color:#fff;
     letter-spacing: .1em;
   }
 
@@ -187,7 +189,7 @@ $o-title-c:#857550; //.order-title
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #0003;
+      background-color: #fff6;
       position: absolute;
     }
     .row{background: #fff;border: 1px solid #999;color: #000;
@@ -195,11 +197,13 @@ $o-title-c:#857550; //.order-title
     align-items:center;
       > span{
         width: 5.5em;
+        font-weight: 700;
         text-align: left;padding-left:1em ;
         > span{color: #F00;
           }
       }
-      input,select{background: inherit;flex: 1;}
+      input,select{background: inherit;flex: 1;font-size: 1em;
+        font-weight: 500;}
       option{color: #666;}
       select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -208,7 +212,7 @@ $o-title-c:#857550; //.order-title
         background-position:calc(100% - .5em) 0%;
       }
       }
-       &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+     //  &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;
       label:first-child{margin-bottom: .3em;}
@@ -216,18 +220,19 @@ $o-title-c:#857550; //.order-title
     }
   }
   .send {
-  font-size:20px;
+  // font-size:25px;
     font-size:inherit;
-    background-color: #9D9E9E;
+    //@functionbackground-color: #9D9E9E;
+      background:linear-gradient(0deg, #EFAB38, #FFE780 );
     //border: 1px solid #FFF9;
     border:0;
   letter-spacing: 0.9em;
     text-indent: 0.9em;
     height:100%;
     border-radius: .5em;
-    width: 308px;
+    width: 358px;
     z-index: 10;
-    color: #fff;
+    color: #333;
     position: relative;
   }
 

@@ -3,9 +3,9 @@
 </div>
   <div class="contact-bg">
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-   <!--  <div class="logo">
-      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div> 
+    
+      <img src="@/section/s1/logo1.png" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+     <!--
     <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"> -->
     
     <div class="flex justify-between w-full contact-item-box">
@@ -24,7 +24,7 @@
     </div>
     <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
-        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
+        <div><span v-if="info.address1">{{ info.address1 }}：</span><br v-if="isMobile" />{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
@@ -114,7 +114,7 @@
 .hover\:bg-color2:hover{background-color:#5e5236;}
 
   .mo-contact-info {
-    //display: none;
+    display: none;
     z-index: 99;
     position: fixed;
     top: 0;
@@ -163,13 +163,13 @@
   // background: #045147;
 
   .logo {position: relative;
-    width: size(540);
+    width: size(650);
    // height: size(172);
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(60) auto size(30);
+    margin: size(60) auto size(60);
   }
 
   .contact-item-box {
@@ -181,8 +181,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #857550;
-      color: #fff;
+      background:linear-gradient(0deg, #EFAB38, #FFE780 );
+      color: #444;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -212,7 +212,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter: brightness(0) invert(.2);
         transition: all .5s;
         margin: 0;
       }
@@ -288,7 +288,8 @@
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-    background:#857550;
+    // background:#857550;
+    background:linear-gradient(0deg, #966a04,#EFAB38 );
     .contact-item{
       flex: 1;padding: 0;
       color: #fff;
@@ -374,7 +375,11 @@
 
 <script setup>
 import info from "@/info"
-import { inject, ref } from "vue";
+import { computed, getCurrentInstance, inject, ref } from "vue";
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
+
 const modalOpen = ref(false);
 const modalType = ref('');
 

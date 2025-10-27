@@ -1,43 +1,43 @@
-const caseName = "謙里"
+const caseName = "鵬程豐馥"
 export default {
-    caseid: "4c84cb47-b6b2-4c3a-a68e-3e59a14f1be8",
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市后里區三豐路三段1080號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14544.451486716187!2d120.71196831741628!3d24.30769772085668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691aa34085f109%3A0x6f2ac81470ffe75a!2zNDIx5Y-w5Lit5biC5ZCO6YeM5Y2A5LiJ6LGQ6Lev5LiJ5q61MTA4MOiZnw!5e0!3m2!1szh-TW!2stw!4v1755848590741!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/tNTo6rTh7QiPWuEZ7",
-    phone: "04-25588028",
-    fbLink: "https://www.facebook.com/61579396628225/",
-    fbMessage: "https://m.me/61579396628225/",
+    address: "新北市五股區新五路二段590號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7226.915786208114!2d121.4393011!3d25.0863568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7004e1a2e15%3A0x9f6429d44cf95b57!2z6bWs56iL6LGQ6aalIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1761534781180!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/3V8BTAWcD8pgtvFCA",
+    phone: "02-2293-9899",
+    fbLink: "https://www.facebook.com/61560673055828/",
+    fbMessage: "https://m.me/61560673055828/",
     caseName: caseName,
     houseInfos: [
-       ["投資建設", "立瑾機構-詠砌建設股份有限公司"],
-        ["建築設計", "賴恩常建築師事務所"],
-        ["建照號碼", "114中都建字第00692號"],
-        ["行銷企劃", "自建自售"],
-     /*  */
+        ["投資建設", "鵬程建設股份有限公司"],
+        ["建照號碼", "110股建字第00368-01號"],
+        ["行銷企劃", "欣和地產股份有限公司"],
+    /*    ["行銷企劃", "自建自售"],
+      */
     ],
-    gtmCode: ["GTM-W93JX264"], // 可放置多個
+    gtmCode: ["GTM-TZDBNQB8"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "五感生活．從容開啟",
-        subTitle: "敬獻菁英的專屬品味｜2-3房｜高感精工宅"
+        title: "立即預約",
+        //subTitle: "敬獻菁英的專屬品味｜2-3房｜高感精工宅"
     },
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
-       room_type: {
+        /*    room_type: {
         title: "需求房型",
         hold: "請選擇房型",
         option: ["兩房", "三房"],
         bypass:false,　
       },
-    /* 
+
       budget: {
         title: "購屋預算",
         hold: "請選擇區間",

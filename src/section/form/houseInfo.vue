@@ -27,8 +27,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#857550;
-$house-c2:#3D3939;
+$house-c1:#FFE780;
+$house-c2:#fff;
 .displaynone{display: none;}
 .house {
    // height: auto;
@@ -41,12 +41,12 @@ $house-c2:#3D3939;
     img{height: 1.3em;vertical-align: middle;}
 }
 .info-box {
-    width: size(1200);
+    width: 700px;
 
     .title {
         font-size:2.5em;
         color: $house-c1;
-        margin: 0 auto 0em auto;
+        margin: 0 auto .5em auto;
     }
 
     .info-items {
