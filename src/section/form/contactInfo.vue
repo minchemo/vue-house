@@ -201,6 +201,7 @@
 
       &:hover {
         background: #5e5236;
+        background:linear-gradient(0deg,#774d00, #EFAB38);
         color: #fff;
 
         img {
