@@ -17,8 +17,7 @@
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#ddd] text-[#3E3A39]">
     <h1 class="absolute opacity-0 pointer-events-none">{{ info.caseName }}</h1>
     
-  <!--
-    <S1 />
+  <!--<S1 />
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -77,7 +76,7 @@ import info from "@/info"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
 
-import S1 from "@/section/s1.vue" 
+// import S1 from "@/section/s1.vue" 
 import Order from "@/section/order.vue"
 import { onMounted, ref } from "vue"
 
