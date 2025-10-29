@@ -1,15 +1,15 @@
-const caseName = "雲禾月"
+const caseName = "測試用"
 export default {
-    caseid: "76ba5df2-d3a5-4d7d-8e41-ee1d8128a3e4",
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新北市汐止區樟樹二路422號1樓",
+    address: "新北市",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.83527141937!2d121.6428191!3d25.0735718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d5338f990cd0f%3A0x5b8bfb03db2385c3!2zMjIx5paw5YyX5biC5rGQ5q2i5Y2A5qif5qi55LqM6LevNDIy6Jmf!5e0!3m2!1szh-TW!2stw!4v1753844618616!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/SZmpZ2UPaugZFzHk7",
-    phone: "02-2690-3888",
-    fbLink: "https://www.facebook.com/61578333132817/",
-    fbMessage: "https://m.me/61578333132817/",
+    googleLink: "https://maps.app.goo.gl/",
+    phone: "02-000000",
+    fbLink: "https://www.facebook.com//",
+    fbMessage: "https://m.me//",
     caseName: caseName,
     houseInfos: [
         ["投資建設", "合展建設股份有限公司"],
@@ -22,7 +22,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-W6SNXZWR"], // 可放置多個
+    gtmCode: ["GTM-000000"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
