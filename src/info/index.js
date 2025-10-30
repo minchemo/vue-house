@@ -1,12 +1,12 @@
 const caseName = "成大之森"
 export default {
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    caseid: "5050ed58-93cf-4a7b-ab71-4d9802ed8878",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    //address: "000",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7226.915786208114!2d121.4393011!3d25.0863568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7004e1a2e15%3A0x9f6429d44cf95b57!2z6bWs56iL6LGQ6aalIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1761534781180!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/",
+    address: "臺南市北區北門路二段132號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7345.090273190614!2d120.21059187940935!3d23.0037482!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e770019709bf9%3A0x6e7b20a589808af2!2z5oiQ5aSn5LmL5qOuLeaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1761812589196!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/cNVU4WAJEgS89ZdSA",
     phone: "06-2370888",
     fbLink: "https://www.facebook.com/ForestofAspiration/",
     fbMessage: "https://m.me/ForestofAspiration/",

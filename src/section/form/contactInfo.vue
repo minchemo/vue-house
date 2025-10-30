@@ -104,7 +104,7 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1{background-color: #666;}
-.hover\:bg-color2:hover{background-color:#A30C24;}
+.hover\:bg-color2:hover{background-color:#0e679c;}
 
 
 .contact-info-img{
@@ -159,7 +159,7 @@
       }
 
       &:hover {
-        background: #A30C24;
+        background: #0e679c;
         color: #fff;
 
         img {
@@ -169,7 +169,7 @@
 
 
       &.address {
-        background-color: #FFF;
+        background-color: #CCC;
         background-image: none;
         color: #000;
         z-index: 0;
@@ -178,6 +178,7 @@
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
+        margin-right: -1.4em;
 
         &::before {
           content: "";
