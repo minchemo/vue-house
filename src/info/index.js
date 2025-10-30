@@ -7,9 +7,9 @@ export default {
     //address: "000",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7226.915786208114!2d121.4393011!3d25.0863568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7004e1a2e15%3A0x9f6429d44cf95b57!2z6bWs56iL6LGQ6aalIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1761534781180!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/",
-    phone: "00000",
-    fbLink: "https://www.facebook.com//",
-    fbMessage: "https://m.me//",
+    phone: "06-2370888",
+    fbLink: "https://www.facebook.com/ForestofAspiration/",
+    fbMessage: "https://m.me/ForestofAspiration/",
     // line: "https://lin.ee/FTYKISC",
     caseName: caseName,
     houseInfos: [
@@ -26,13 +26,13 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "立即預約",
+        title: "我要預約",
         //subTitle: "敬獻菁英的專屬品味｜2-3房｜高感精工宅"
     },
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
-        /*    room_type: {
+          room_type: {
         title: "需求房型",
         hold: "請選擇房型",
         option: ["兩房", "三房"],
@@ -42,9 +42,10 @@ export default {
       budget: {
         title: "購屋預算",
         hold: "請選擇區間",
-        option: ["1000", "2000", "3000"],
-        bypass:true, //必填開啟使用
+        option: ["1000萬-1500萬", "1501萬-2000萬", "2001萬以上"],
+        bypass:false, //必填開啟使用1000萬-1500萬、1501萬-2000萬、2001萬以上
       },
+        /*
       use_type: {
         title: "使用用途",
         hold: "請選擇用途",

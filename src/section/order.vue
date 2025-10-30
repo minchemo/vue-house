@@ -1,7 +1,9 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <img src="@/section/s1/otitlem.svg" alt="" class="otitle" v-if="isMobile" />
+      <img src="@/section/s1/otitle.svg" alt="" class="otitle" v-else />
+      <div class="order-title text-center" v-if="info.order.title"><span v-html="info.order.title"></span></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
       <!-- Form -->
@@ -11,12 +13,12 @@
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
          
-         <!--   <div class="gender">
+         <!--    --> <div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>  -->
+        </div>
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -84,7 +86,7 @@
       <!-- Send --><div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 700;
     line-height: 3.3;height:3.3em">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-  送出表單
+  立即預約
 </button>
 <div v-else class="send-load text-[#333]" style="letter-spacing: 0.7em;
   text-indent: 0.9em;
@@ -137,8 +139,6 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$o-title-c:#FFE780; //.order-title
-
 .order {
   width: 100%;
   padding-top: size(40);
@@ -149,11 +149,53 @@ $o-title-c:#FFE780; //.order-title
   overflow: hidden;
   min-height: size(500);
 }
+.otitle{
+  margin:size(90) auto 0 auto;
+  width: size(970);
+  min-width: 750px;
+@media screen and (max-width:768px) {
+  margin:sizem(60) auto 0 auto;
+  width: sizem(310);
+  min-width: 0;
+
+}
+}
 .order-title {
-  font-size: size(60);
-  font-weight: 700;
-  color: $o-title-c;
+    width: size(970);
+    min-width: 750px;
+    margin: 0 auto;
+  font-size: size(40);
+  font-weight: 500;
+  color: #fff;
   padding-top:1.5em;
+  text-indent: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1em;
+@media screen and (max-width:768px) {
+  width: sizem(310);
+  min-width: 0;
+  letter-spacing: .6em;
+}
+  span {
+  display: inline-block;
+  margin:auto -.5em auto .5em; 
+@media screen and (max-width:768px) {
+margin:auto -.3em auto .3em;
+}
+}
+  &::after,
+  &::before {
+    content: "";
+    display: inline-block;
+    width: auto;
+    height: size(1);
+    vertical-align: middle;
+    background-color: #fff;
+    margin: 0 auto 0 auto;
+    flex: 1;
+  }
 }
   .order-subTitle{
     font-size: size(30);
@@ -163,11 +205,11 @@ $o-title-c:#FFE780; //.order-title
   }
 
   .form {
-    width: size(1200);
+    width: size(970);
     min-width: 750px;
     //  height: 350px;
     gap: 4em;
-    margin-top: 2.8em;
+    margin-top: 1.5em;
     margin-bottom: 3em;
     z-index: 50;
     align-items: stretch;
@@ -212,9 +254,10 @@ $o-title-c:#FFE780; //.order-title
         background-position:calc(100% - .5em) 0%;
       }
       }
-     //  &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+       &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;
+      color: #fff;
       label:first-child{margin-bottom: .3em;}
       input{margin-right: .3em;}
     }
@@ -223,16 +266,16 @@ $o-title-c:#FFE780; //.order-title
   // font-size:25px;
     font-size:inherit;
     //@functionbackground-color: #9D9E9E;
-      background:linear-gradient(0deg, #EFAB38, #FFE780 );
+      background:#0e679c;
     //border: 1px solid #FFF9;
     border:0;
   letter-spacing: 0.9em;
     text-indent: 0.9em;
     height:100%;
-    border-radius: .5em;
+    border-radius: 1em;
     width: 358px;
     z-index: 10;
-    color: #333;
+    color: #fff;
     position: relative;
   }
 
