@@ -2,7 +2,7 @@
   <article class="s2 relative" id="s2">
       <img src="./s2/logo.svg" class="logo" data-aos="zoom-out" data-aos-delay="0">
       <img src="./s2/t1.svg" class="t1" data-aos="zoom-out" data-aos-delay="0">
-      <div class="img" data-aos="zoom-out" data-aos-delay="0"><img src="./s2/img.png"></div>
+      <div class="img" data-aos="zoom-out" data-aos-delay="0"  data-aos-offset="-500"><img src="./s2/img.png"></div>
 
   </article>
 </template>

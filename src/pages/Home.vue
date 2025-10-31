@@ -58,8 +58,12 @@ img {
   overflow: hidden;}
 .bg{
   position: absolute;top: 0;left: 0;width: 100%;height: auto;
-  animation: an 50s linear reverse infinite;
+  animation: an 70s linear reverse infinite;
   transform: translateY(-25%);
+    @media screen and (min-width:768px) {
+      
+  animation: an 60s linear reverse infinite;
+    }
 }
 .home{
   position: relative;
