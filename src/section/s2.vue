@@ -24,13 +24,11 @@
     font-size: size(40);
 }
  &::before{content: "";display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;
-  background: url("./s1/bgm.jpg") center center;
+ // background: url("./s1/bgm.jpg") center center;
   background-size: cover; transform: scaleY(-1);
-@media screen and (min-width: 768px) {
-  
-  background-image: url("./s1/bg.jpg");
-}
-
+  @media screen and (min-width: 768px) {
+   // background-image: url("./s1/bg.jpg");
+  }
 }
   
 .logo{

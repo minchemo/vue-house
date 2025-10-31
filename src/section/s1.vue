@@ -14,16 +14,11 @@
   .t0{position: absolute;width: 100%;
     top:15px;left: 0;right: 0;margin: auto;
     pointer-events: none;z-index: 9;opacity: .0;}
-@keyframes an {
-  to {
-    transform: translateX(0%);
-  }
-}
   .s1 {
   height:sizem(750);
   min-height: sizem(750);
   max-height: sizem(750);
-  background: url("./s1/bgm.jpg") center center;
+ // background: url("./s1/bgm.jpg") center center;
   background-size: cover; 
   
   color: #fff;
@@ -31,7 +26,7 @@
   line-height: 1.3;
   
 @media screen and (min-width: 768px) {
-  background-image: url("./s1/bg.jpg");
+ // background-image: url("./s1/bg.jpg");
     height:100vh;
     min-height: size(900);
     max-height: size(1080);
