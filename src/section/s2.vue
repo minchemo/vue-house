@@ -1,7 +1,5 @@
 <template>
-  <article class="s1 relative" id="s1">
-    <!--  <img src="./s1/ph.png" class="t0">
-    <img src="./s1/pc.png" class="t0"> -->
+  <article class="s2 relative" id="s2">
     <h2>
       <span style="display: none;">都廳大院</span>
     </h2>
@@ -14,7 +12,7 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s1 {
+.s2 {
   min-height: size(900);
   max-height: size(1070);
   height: 120vh;
@@ -23,20 +21,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("./s1/1.jpg");
+  background: url("./s2/2.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
 
-  //電腦手機排版用
-  .t0 {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    opacity: 0.0;
-    z-index: 10;
-  }
 
   .pc {
     display: block;
@@ -106,11 +94,11 @@
 @media screen and (max-width: 767px) {
 
 
-  .s1 {
-    height: sizem(640);
-    min-height: sizem(640);
-    max-height: sizem(640);
-    background: url("./s1/1m.jpg");
+  .s2 {
+    height: sizem(635);
+    min-height: sizem(635);
+    max-height: sizem(635);
+    background: url("./s2/2m.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 

@@ -1,8 +1,8 @@
 <template>
     <div class="house" v-if="info.houseInfos.length > 0">
-        <div class="flex h-full flex-col md:flex-row items-center justify-between">
-            <div class="flex-1 items-center justify-center py-10">
-                <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="flex-1 items-center justify-center pb-10">
+                <div class="h-full info-box  flex flex-col items-center justify-center">
                     <div class="title">建案資訊</div>
                     <div class="info-items mt-4 grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
@@ -15,6 +15,7 @@
                         </div>
                     </div>
                 </div>
+                <img src="../order/dblogo.png" class="logo" alt="都廳大院">
             </div>
         </div>
     </div>
@@ -46,9 +47,10 @@
 }
 
 .house {
-    // height: auto;
+    height: size(340);
     font-size: size(22);
-    background: #52777D;
+    background: #042f75;
+
 
     // height:4em;
     img {
@@ -58,6 +60,7 @@
 }
 
 .info-box {
+    margin: size(50) auto 0;
     width: size(800);
 
     .title {
@@ -88,10 +91,16 @@
     }
 }
 
+//得邦log
+.logo {
+    margin-top: size(50);
+    margin-right: size(20);
+}
+
 @media screen and (max-width:768px) {
     .house {
         // background:#fff;
-        height: sizem(300);
+        height: sizem(380);
         font-size: sizem(14);
     }
 
@@ -101,7 +110,7 @@
 
     .info-box {
         width: sizem(313);
-        padding: 0;
+        margin: size(300) auto 0;
 
         .title {
             font-size: sizem(29);
@@ -112,12 +121,17 @@
         .info-items {
             row-gap: sizem(20);
             margin-left: 0;
-            width: 70%;
+            width: 82%;
 
             .item {
                 font-size: sizem(14);
             }
         }
+    }
+
+    //得邦log
+    .logo {
+        margin-top: size(150);
     }
 
 }

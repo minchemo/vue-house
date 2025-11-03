@@ -1,27 +1,26 @@
-const caseName = "淇發詠旭"
-//原本要拿來執行浩瀚開發 光與玥，但抽單了，所以維持在淇發詠旭
+const caseName = "都廳大院"
 
 export default {
-  caseid: "36068e10-11f5-478e-9903-0c172c5d5b4b",
+  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",//這是測試的
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "屏東縣東港鎮大和街50號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3685.571342811699!2d120.4500642!3d22.5202606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1f0069b27aeb%3A0x65588ed70e46d40b!2z5reH55m85pm25rmb!5e0!3m2!1szh-TW!2stw!4v1754299397233!5m2!1szh-TW!2stw",//嵌入的
-  googleLink: "https://maps.app.goo.gl/QtAQ2XzGSq5SYjmz5",//導航網址
-  phone: "08-8352-888",
-  fbLink: "https://www.facebook.com/61578833014291/",
-  fbMessage: "https://www.facebook.com/messages/t/61578833014291/",
+  address: "新北市三重區重新路五段五谷王北街口",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.598176898721!2d121.4724705753964!3d25.047707087739454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9f73c6e5367%3A0x10db8f2e19c24127!2z6YO95buz5aSn6Zmi!5e0!3m2!1szh-TW!2stw!4v1762153144120!5m2!1szh-TW!2stw",//嵌入的
+  googleLink: "https://maps.app.goo.gl/UxSoXcNv3e9qbZzC8",//導航網址
+  phone: "02-2995-8666",
+  fbLink: "https://www.facebook.com/newtaipeinext/",
+  fbMessage: "https://m.me/newtaipeinext/",
   caseName: caseName,
   houseInfos: [
-    ["投資興建", "淇發建設有限公司"],
-    ["營造公司", "東璋營造有限公司"],
-    ["產品規劃", "洪堯山建築師事務所"],
-    ["行銷公司", "自售"],
+    ["投資興建", "XXXXXXXXXXXXXXXXXX"],
+    ["營造公司", "XXXXXXXXXXXXXXXXXX"],
+    ["產品規劃", "XXXXXXXXXXXXXXXXXX"],
+    ["行銷公司", "XXXXXXXXXXXXXXXXXX"],
   ],
-  gtmCode: ["GTM-WB2PP4H7"],// 可放置多個 
-  recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-  //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+  gtmCode: ["GTM-WH55GPZV"],// 可放置多個 
+  //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+  recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",

@@ -14,6 +14,8 @@
   <div class="home overflow-hidden font-['Noto_Serif_TC',sans-serif]">
     <!--<img src="@/section/s1/bg.png" class="bg">-->
     <S1 />
+    <S2 />
+    <S3 />
     <Order />
   </div>
 </template>
@@ -120,6 +122,8 @@ img {
 <script setup>
 //import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
 import Order from "@/section/order.vue"
 //import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

@@ -7,17 +7,16 @@
       <div class="flex w-full contact-info-box">
         <div class="w-full logo-box">
           <div class="flex justify-between w-full contact-item-box">
-            <div class="flex contact-item justify-center items-center green hover:scale-90"
-              @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+            <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
+              v-if="info.phone">
               <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
               <div>{{ info.phone }}</div>
             </div>
-            <div class="flex contact-item justify-center items-center green btlead-fb hover:scale-90" @click="open()">
+            <div class="flex contact-item justify-center items-center btlead-fb" @click="open()">
               <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
               <div>前往粉絲專頁</div>
             </div>
-            <div class="flex contact-item justify-center items-center green hover:scale-90"
-              @click="modalOpen = true; modalType = 'fb'">
+            <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
               <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
               <div>Facebook 諮詢</div>
             </div>
@@ -26,9 +25,9 @@
       </div>
       <div class="flex justify-between w-full contact-item-box address no-gap" v-if="info.address">
         <div class="flex contact-item justify-center items-center add">
-          <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
+          <div><span v-if="info.address1">{{ info.address1 }}：<br class="ph"></span>{{ info.address }}</div>
         </div>
-        <div class="flex contact-item justify-center items-center googlemap green "
+        <div class="flex contact-item justify-center items-center googlemap"
           @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
           <div>導航 GoogleMap</div>
@@ -116,7 +115,7 @@
 }
 
 .contact-info {
-  padding: 3.5em 0 1em 0;
+  padding: 3.5em 0 3.5em 0;
   position: relative;
   z-index: 50;
   width: size(1200);
@@ -157,6 +156,7 @@
 
     .contact-item {
       color: #FFF;
+      background-color: #042f75;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -168,7 +168,7 @@
       gap: 1em;
 
       &:hover {
-        color: #FFF;
+        background-color: hwb(217 2% 54% / 0.7);
 
         img {
           filter: brightness(0) invert(1);
@@ -186,50 +186,6 @@
 
     }
 
-    .green {
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 120%;
-        height: 700%;
-        background-image: url('../s1/bbg.png');
-        background-size: cover;
-        background-position: center;
-        animation: rotate 60s linear infinite;
-        z-index: -1;
-      }
-    }
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .dark-green {
-      background: #52777D;
-
-      &:hover {
-        background: #3b646a;
-      }
-    }
-
-    .gray {
-      background: #423E3D;
-
-      &:hover {
-        background: #423E3D;
-      }
-    }
-
     &.address {
       display: grid;
       grid-template-columns: 1fr 2.2fr 1fr;
@@ -237,8 +193,9 @@
       width: 100%;
 
       .add {
-        background: rgba(217, 217, 217, 0.6);
-        color: #000;
+        border: #042f75 1px solid;
+        background-color: hsla(0, 0%, 100%, 0.2);
+        color: #042f75;
         width: sizem(159);
         justify-self: left;
       }
@@ -266,7 +223,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background: #52777D;
+    background: #042f75;
 
     .contact-item {
       height: 100%;
@@ -308,7 +265,6 @@
 
       &:first-child {
         margin-right: 0;
-        margin-bottom: size(300);
       }
     }
 
@@ -365,7 +321,6 @@
           &.add {
             width: 100%;
             text-align: center;
-            background: rgba(217, 217, 217, 0.6);
             margin-left: 0;
 
             div {

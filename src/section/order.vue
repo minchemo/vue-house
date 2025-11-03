@@ -2,6 +2,8 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
+      <img src="./order/title.png" class="title_img pc" alt="都廳大院">
+      <img src="./order/titlem.png" class="title_img ph" alt="都廳大院">
       <div class="order-title font-['Noto_Serif_TC',serif] text-center">{{ info.order.title }}</div>
       <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
 
@@ -11,6 +13,14 @@
           <label class="row name"><span>姓名<span>(必填)</span></span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
               @input="(event) => (formData.name = event.target.value)" /></label>
+
+          <!--  男女  -->
+          <div class="gender">
+            <label><input type="radio" name="gender" value="男"
+                @input="(event) => (formData.gender = event.target.value)">先生</label>
+            <label><input type="radio" name="gender" value="女"
+                @input="(event) => (formData.gender = event.target.value)">女士</label>
+          </div>
 
           <label class="row"><span>手機<span>(必填)</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
@@ -54,9 +64,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#423E3D]">
+        <p class="text-[#042f75]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#52777D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#f08600] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -71,7 +81,7 @@
           即刻預約
         </button>
         <div v-else class="send-load">
-          <svg class="animate-spin h-5 w-5 text-[#52777D]" xmlns="http://www.w3.org/2000/svg" fill="none"
+          <svg class="animate-spin h-5 w-5 text-[#042f75]" xmlns="http://www.w3.org/2000/svg" fill="none"
             viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
@@ -98,9 +108,10 @@
 .order {
   width: 100%;
   padding-top: size(115);
-  background: url("./s1/bg2.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background: url("./order/bg.jpg");
+  background-size: auto 70%;
+  position: relative;
+  overflow: hidden;
 
 
   .leaf-left {
@@ -116,16 +127,6 @@
     }
   }
 
-  .leaf-right {
-    width: size(465);
-    position: absolute;
-    bottom: calc(35% + #{size(440 - 1080 * .5)});
-    right: 0;
-    animation: an 2s ease-in-out alternate infinite;
-    transform: skewX(-3deg);
-    transform-origin: right bottom;
-  }
-
   .order-section {
     background-image: url(./order/bg.png);
     background-size: auto 100%;
@@ -134,10 +135,16 @@
     min-height: size(500);
   }
 
+  //都廳大院
+  .title_img {
+    width: size(930);
+    margin-bottom: size(50);
+  }
+
   .order-title {
     font-size: size(45);
     font-weight: 800;
-    color: #423E3D;
+    color: #042f75;
 
     .line {
       width: size(439);
@@ -153,7 +160,7 @@
     font-size: size(17);
     padding-top: .4em;
     letter-spacing: .1em;
-    color: #423E3D;
+    color: #042f75;
   }
 
   .cus-divider {
@@ -188,16 +195,17 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #0003;
+      background-color: #042f75;
       position: absolute;
     }
 
     .row {
-      background: rgba(217, 217, 217, 0.6);
-      color: #423E3D;
+      background: rgba(217, 217, 217, 0);
+      color: #042f75;
       display: flex;
       width: 100%;
       align-items: center;
+      border: #042f75 1px solid;
 
       >span {
         width: 5.5em;
@@ -206,7 +214,7 @@
         font-weight: 600;
 
         >span {
-          color: #52777D;
+          color: #f08600;
           font-size: 12px;
         }
       }
@@ -215,20 +223,20 @@
       select {
         background: inherit;
         flex: 1;
-        font-weight: 200;
-        color: #666666;
+        font-weight: 400;
+        color: hsla(217, 93%, 24%, 0.8);
         background: none;
 
         //姓名、手機、備註的註解文字
         &::placeholder {
-          font-weight: 200;
-          color: #666666;
+          font-weight: 400;
+          color: hsla(217, 93%, 24%, 0.8);
         }
       }
 
       option {
-        font-weight: 200;
-        color: #666666;
+        font-weight: 400;
+        color: hsla(217, 93%, 24%, 0.8);
       }
 
       select {
@@ -241,10 +249,16 @@
         }
       }
 
-      //&.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+      &.name {
+        width: calc(100% - 3.8em);
+      }
+
+      //沒有性別的話這條槓掉
     }
 
     .gender {
+      color: #042f75;
+      font-weight: 600;
       display: flex;
       position: absolute;
       right: 0;
@@ -262,11 +276,11 @@
 
   //備註
   textarea {
-    color: #666666 !important;
+    color: hsla(217, 93%, 24%, 0.8) !important;
 
     &::placeholder {
-      font-weight: 200;
-      color: #666666;
+      font-weight: 400;
+      color: hsla(217, 93%, 24%, 0.8);
     }
   }
 
@@ -274,7 +288,7 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 3.3;
-    color: #fff;
+    color: #042f75;
     height: 3.3em;
   }
 
@@ -282,41 +296,16 @@
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #FFF;
-    background-color: #919F92;
-    border: 0;
+    color: #042f75;
+    background-color: #919f9200;
+    border: 1px solid #042f75;
     width: sizem(75);
     height: 3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 400;
+    font-weight: 600;
     position: relative;
     border-radius: 0;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 640%;
-      background-image: url('./s1/bbg.png');
-      background-size: cover;
-      background-position: center;
-      animation: rotate 60s linear infinite;
-      z-index: -1;
-    }
-  }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
   }
 
   .send-load {
@@ -333,7 +322,7 @@
 
   .control {
     font-size: size(16);
-    color: #000;
+    color: #042f75;
     position: relative;
   }
 }
@@ -365,12 +354,11 @@
   }
 
   .order {
-    height: sizem(2210);
-    min-height: sizem(2210);
-    max-height: sizem(2210);
-    background: url("./s1/bgm2.png");
+    height: sizem(2450);
+    min-height: sizem(2450);
+    max-height: sizem(2450);
+    background: url("./order/bgm.jpg");
     background-size: 100%;
-    background-repeat: no-repeat;
 
     .leaf-left {
       width: 100%;
@@ -385,6 +373,13 @@
       bottom: calc(17% + #{size(440 - 1080 * .5)});
     }
 
+    //都廳大院
+    .title_img {
+      width: size(1500);
+      margin-top: size(300);
+      margin-bottom: 0;
+    }
+
     .order-title-img {
       width: sizem(250);
       margin: sizem(50) auto sizem(30);
@@ -392,7 +387,7 @@
 
     .order-title {
       font-size: sizem(27);
-      margin-top: size(300);
+      margin-top: size(150);
 
       .line {
         width: sizem(258);
@@ -438,6 +433,13 @@
         label {
           height: sizem(50);
         }
+      }
+
+      //男女
+      .gender label{
+        margin-top: size(10);
+        font-size: size(65);
+        height: sizem(20);
       }
 
       .right {
