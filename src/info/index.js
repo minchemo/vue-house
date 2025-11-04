@@ -1,13 +1,13 @@
 const caseName = "都廳大院"
 
 export default {
-  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",//這是測試的
+  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",//8f3489d1-b60c-4b88-a34c-32fc276dc9c1
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "新北市三重區重新路五段五谷王北街口",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.598176898721!2d121.4724705753964!3d25.047707087739454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9f73c6e5367%3A0x10db8f2e19c24127!2z6YO95buz5aSn6Zmi!5e0!3m2!1szh-TW!2stw!4v1762153144120!5m2!1szh-TW!2stw",//嵌入的
-  googleLink: "https://maps.app.goo.gl/UxSoXcNv3e9qbZzC8",//導航網址
+  address: "三重區重新路五段577號對面",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3614.649092840621!2d121.469979!3d25.04598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1szh-TW!2stw!4v1762223302135!5m2!1szh-TW!2stw",//嵌入的
+  googleLink: "https://maps.app.goo.gl/H1e7UjpzA9A9KjHS6",//導航網址
   phone: "02-2995-8666",
   fbLink: "https://www.facebook.com/newtaipeinext/",
   fbMessage: "https://m.me/newtaipeinext/",
@@ -42,7 +42,7 @@ export default {
     budget: {
       title: "購屋預算",
       hold: "請選擇區間",
-      option: ["900-1000萬", "1100-1200萬", "1300-1400萬", "1500萬以上",],
+      option: ["1600-2000萬", "2000-2500萬", "2500萬以上",],
       //bypass: false, //必填開啟使用
     },
   },

@@ -354,9 +354,7 @@
   }
 
   .order {
-    height: sizem(2450);
-    min-height: sizem(2450);
-    max-height: sizem(2450);
+    min-height: sizem(2300);
     background: url("./order/bgm.jpg");
     background-size: 100%;
 
@@ -436,7 +434,7 @@
       }
 
       //男女
-      .gender label{
+      .gender label {
         margin-top: size(10);
         font-size: size(65);
         height: sizem(20);
@@ -591,6 +589,13 @@ const send = () => {
   let unfill = [];
   let idx = 0;
 
+  //有性別的話 性別顯示
+  if (formData.gender) {
+    const genderTag = `(${formData.gender})`;
+    if (!formData.name.endsWith(genderTag)) {
+      formData.name += genderTag;
+    }
+  }
 
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
@@ -628,7 +633,7 @@ const send = () => {
   if (pass && !sending.value) {
     sending.value = true;
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}

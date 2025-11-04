@@ -83,10 +83,6 @@
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
-
-            p:first-child {
-                // min-width: 4.5em;
-            }
         }
     }
 }
