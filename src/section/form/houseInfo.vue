@@ -74,7 +74,7 @@
     .info-items {
         row-gap: size(20);
         column-gap: size(20);
-        margin-left: size(70);
+        margin-left: size(110);
         width: 100%;
 
         .item {
@@ -117,7 +117,7 @@
         .info-items {
             row-gap: sizem(20);
             margin-left: 0;
-            width: 82%;
+            width: 73%;
 
             .item {
                 font-size: sizem(14);

@@ -5,7 +5,7 @@ export default {
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "三重區重新路五段577號對面",
+  address: "新北市三重區重新路五段577號對面",
   googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3614.649092840621!2d121.469979!3d25.04598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1szh-TW!2stw!4v1762223302135!5m2!1szh-TW!2stw",//嵌入的
   googleLink: "https://maps.app.goo.gl/H1e7UjpzA9A9KjHS6",//導航網址
   phone: "02-2995-8666",
@@ -13,10 +13,10 @@ export default {
   fbMessage: "https://m.me/newtaipeinext/",
   caseName: caseName,
   houseInfos: [
-    ["投資興建", "XXXXXXXXXXXXXXXXXX"],
-    ["營造公司", "XXXXXXXXXXXXXXXXXX"],
-    ["產品規劃", "XXXXXXXXXXXXXXXXXX"],
-    ["行銷公司", "XXXXXXXXXXXXXXXXXX"],
+    ["投資興建", "國巨投資股份有限公司"],
+    ["營造公司", "紹華營造股份有限公司"],
+    ["產品規劃", "二房、三房、四房"],
+    ["行銷公司", "得邦廣告股份有限公司"],
   ],
   gtmCode: ["GTM-WH55GPZV"],// 可放置多個 
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
