@@ -1,8 +1,8 @@
 const caseName = "都廳大院"
 
 export default {
-  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",//8f3489d1-b60c-4b88-a34c-32fc276dc9c1
-  //case_code: "chi-fa-construction",
+  caseid: "8f3489d1-b60c-4b88-a34c-32fc276dc9c1",
+  //case_code: "dt-debang",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "新北市三重區重新路五段577號對面",
