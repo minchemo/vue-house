@@ -47,7 +47,7 @@
 }
 
 .house {
-    height: size(340);
+    height: size(380);
     font-size: size(22);
     background: #042f75;
 
@@ -96,7 +96,7 @@
 @media screen and (max-width:768px) {
     .house {
         // background:#fff;
-        height: sizem(380);
+        height: sizem(460);
         font-size: sizem(14);
     }
 
