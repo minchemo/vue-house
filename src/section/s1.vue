@@ -3,11 +3,22 @@
     <!--  <img src="./s1/ph.png" class="t0">
     <img src="./s1/pc.png" class="t0"> -->
     <h2>
+      <img data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" src="./s1/1.png" class="pc"
+        alt="都廳大院">
+      <img data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" src="./s1/1m.png" class="ph"
+        alt="都廳大院">
       <span style="display: none;">都廳大院</span>
     </h2>
-    <h1 data-aos="fade-up" data-aos-delay="400">
+    <h1 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500">
+      <img src="./s1/logo.png" class="pc" alt="都廳大院">
+      <img src="./s1/logom.png" class="ph" alt="都廳大院">
       <span style="display: none;">都廳大院</span>
     </h1>
+    <h3>
+      <img src="./s1/2.png" class="pc" alt="都廳大院">
+      <img src="./s1/2m.png" class="ph" alt="都廳大院">
+      <span style="display: none;">都廳大院</span>
+    </h3>
   </article>
 </template>
 
@@ -23,7 +34,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("./s1/1.jpg");
+  background: url("./s1/bg.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
 
@@ -46,56 +57,38 @@
     display: none;
   }
 
-  .circle {
-    width: size(836);
-    position: relative;
-    z-index: 2;
-  }
-
-  //淇發建設
+  //回家
   h2 {
     position: absolute;
-    top:calc(2% + #{size(545 - 1080 * .5)});
-    left: calc(2% + #{size(535 - 1080 * .5)});
+    top:calc(40% + #{size(490 - 1080 * .5)});
+    left: calc(20% + #{size(375 - 1080 * .5)});
 
     img {
-      width: sizem(35);
+      width: sizem(120);
     }
   }
 
   //都廳大院
   h1 {
     position: absolute;
-    top:calc(30% + #{size(452- 1080 * .5)});
-    left: calc(10% + #{size(480 - 1080 * .5)});
+    top:calc(40% + #{size(452- 1080 * .5)});
+    left: calc(50% + #{size(540 - 1080 * .5)});
 
     img {
-      width: sizem(225);
+      width: sizem(28);
     }
   }
 
-  //根本
+  //東京
   h3 {
     position: absolute;
-    top: calc(80% + #{size(458 - 1080 * .5)});
-    left: calc(15% + #{size(498 - 1080 * .5)});
+    bottom: calc(5% + #{size(490 - 1080 * .5)});
+    left: calc(10% + #{size(390 - 1080 * .5)});
 
     img {
-      width: sizem(135);
+      width: sizem(362);
     }
   }
-
-  //南北
-  h4 {
-    position: absolute;
-    top: calc(70% + #{size(569 - 1080 * .5)});
-    left: calc(50% + #{size(560 - 1080 * .5)});
-
-    img {
-      width: sizem(135);
-    }
-  }
-
 }
 
 /* 螢幕尺寸標準 */
@@ -104,13 +97,11 @@
 
 /* 手機尺寸 */
 @media screen and (max-width: 767px) {
-
-
   .s1 {
-    height: sizem(640);
-    min-height: sizem(640);
-    max-height: sizem(640);
-    background: url("./s1/1m.jpg");
+    height: sizem(635);
+    min-height: sizem(635);
+    max-height: sizem(635);
+    background: url("./s1/bgm.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 
@@ -122,47 +113,38 @@
       display: block;
     }
 
-    //淇發建設
+    //回家
     h2 {
-      top:calc(2% + #{size(515 - 1080 * .5)});
-      left: calc(5% + #{size(525 - 1080 * .5)});
+      position: absolute;
+      top:calc(20% + #{size(260 - 1080 * .5)});
+      left: calc(30% + #{size(250 - 1080 * .5)});
 
       img {
-        width: sizem(92);
+        width: sizem(260);
       }
     }
 
     //都廳大院
     h1 {
-      top:calc(20% + #{size(405 - 1080 * .5)});
-      left: calc(30% + #{size(370 - 1080 * .5)});
+      position: absolute;
+      top:calc(40% + #{size(220- 1080 * .5)});
+      left: calc(40% + #{size(450 - 1080 * .5)});
 
       img {
-        width: sizem(220);
+        width: sizem(110);
       }
     }
 
-    //4根本
+    //東京
     h3 {
-      top: calc(80% + #{size(238 - 1080 * .5)});
-      left: calc(10% + #{size(658 - 1080 * .5)});
+      position: absolute;
+      bottom: calc(5% + #{size(380 - 1080 * .5)});
+      left: calc(10% + #{size(370 - 1080 * .5)});
 
       img {
-        width: sizem(250);
+        width: sizem(366);
       }
     }
-
-    //南北
-    h4 {
-      top: calc(80% + #{size(533 - 1080 * .5)});
-      left: calc(20% + #{size(475 - 1080 * .5)});
-
-      img {
-        width: sizem(250);
-      }
-    }
-
-
   }
 }
 </style>

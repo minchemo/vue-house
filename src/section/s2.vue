@@ -1,11 +1,14 @@
 <template>
   <article class="s2 relative" id="s2">
-    <h2>
+    <h1 data-aos="fade-zoom-in">
+      <img src="./s2/1.png" alt="東京都廳城市光景">
+      <span style="display: none;">東京都廳城市光景</span>
+    </h1>
+    <h2 data-aos="fade-up" data-aos-delay="500">
+      <img src="./s2/2.png" class="pc" alt="都廳大院">
+      <img src="./s2/2m.png" class="ph" alt="都廳大院">
       <span style="display: none;">都廳大院</span>
     </h2>
-    <h1 data-aos="fade-up" data-aos-delay="400">
-      <span style="display: none;">都廳大院</span>
-    </h1>
   </article>
 </template>
 
@@ -21,7 +24,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("./s2/2.jpg");
+  background: url("./s2/bg.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
 
@@ -34,56 +37,27 @@
     display: none;
   }
 
-  .circle {
-    width: size(836);
-    position: relative;
-    z-index: 2;
-  }
-
-  //淇發建設
-  h2 {
-    position: absolute;
-    top:calc(2% + #{size(545 - 1080 * .5)});
-    left: calc(2% + #{size(535 - 1080 * .5)});
-
-    img {
-      width: sizem(35);
-    }
-  }
-
-  //都廳大院
+  //東京
   h1 {
     position: absolute;
-    top:calc(30% + #{size(452- 1080 * .5)});
-    left: calc(10% + #{size(480 - 1080 * .5)});
+    top:calc(30% + #{size(410- 1080 * .5)});
+    left: calc(30% + #{size(340 - 1080 * .5)});
 
     img {
-      width: sizem(225);
+      width: sizem(96);
     }
   }
 
-  //根本
-  h3 {
+  //內文
+  h2 {
     position: absolute;
-    top: calc(80% + #{size(458 - 1080 * .5)});
-    left: calc(15% + #{size(498 - 1080 * .5)});
+    top:calc(30% + #{size(415 - 1080 * .5)});
+    left: calc(60% + #{size(380- 1080 * .5)});
 
     img {
-      width: sizem(135);
+      width: sizem(110);
     }
   }
-
-  //南北
-  h4 {
-    position: absolute;
-    top: calc(70% + #{size(569 - 1080 * .5)});
-    left: calc(50% + #{size(560 - 1080 * .5)});
-
-    img {
-      width: sizem(135);
-    }
-  }
-
 }
 
 /* 螢幕尺寸標準 */
@@ -92,13 +66,11 @@
 
 /* 手機尺寸 */
 @media screen and (max-width: 767px) {
-
-
   .s2 {
     height: sizem(635);
     min-height: sizem(635);
     max-height: sizem(635);
-    background: url("./s2/2m.jpg");
+    background: url("./s2/bgm.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 
@@ -110,47 +82,27 @@
       display: block;
     }
 
-    //淇發建設
-    h2 {
-      top:calc(2% + #{size(515 - 1080 * .5)});
-      left: calc(5% + #{size(525 - 1080 * .5)});
-
-      img {
-        width: sizem(92);
-      }
-    }
-
-    //都廳大院
+    //東京
     h1 {
-      top:calc(20% + #{size(405 - 1080 * .5)});
-      left: calc(30% + #{size(370 - 1080 * .5)});
+      position: absolute;
+      top:calc(20% + #{size(275- 1080 * .5)});
+      left: calc(40% + #{size(230 - 1080 * .5)});
 
       img {
-        width: sizem(220);
+        width: sizem(200);
       }
     }
 
-    //4根本
-    h3 {
-      top: calc(80% + #{size(238 - 1080 * .5)});
-      left: calc(10% + #{size(658 - 1080 * .5)});
+    //內文
+    h2 {
+      position: absolute;
+      top:calc(30% + #{size(400 - 1080 * .5)});
+      left: calc(40% + #{size(350- 1080 * .5)});
 
       img {
-        width: sizem(250);
+        width: sizem(150);
       }
     }
-
-    //南北
-    h4 {
-      top: calc(80% + #{size(533 - 1080 * .5)});
-      left: calc(20% + #{size(475 - 1080 * .5)});
-
-      img {
-        width: sizem(250);
-      }
-    }
-
-
   }
 }
 </style>

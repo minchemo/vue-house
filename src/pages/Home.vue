@@ -11,7 +11,7 @@
   <!-- loading end -->
   <!--  -->
   <!--<Nav />-->
-  <div class="home overflow-hidden font-['Noto_Serif_TC',sans-serif]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <!--<img src="@/section/s1/bg.png" class="bg">-->
     <S1 />
     <S2 />

@@ -1,11 +1,21 @@
 <template>
   <article class="s3 relative" id="s3">
-    <h2>
-      <span style="display: none;">都廳大院</span>
-    </h2>
-    <h1 data-aos="fade-up" data-aos-delay="400">
-      <span style="display: none;">都廳大院</span>
+    <h1 data-aos="fade-zoom-in">
+      <img src="./s3/1.png" class="pc" alt="捷運先嗇宮">
+      <img src="./s3/1m.png" class="ph" alt="捷運先嗇宮">
+      <span style="display: none;">捷運先嗇宮</span>
     </h1>
+    <h2 data-aos="fade-zoom-in" data-aos-delay="1000">
+      <img src="./s3/2.png" class="pc" alt="新北市府">
+      <span style="display: none;">新北市府</span>
+    </h2>
+    <h3 data-aos="fade-zoom-in" data-aos-delay="2000">
+      <img src="./s3/3.png" class="pc" alt="新北市府">
+      <span style="display: none;">新北市府</span>
+    </h3>
+    <img class="light" src="./s3/light.png" alt="都廳大院">
+    <img class="light2" src="./s3/light2.png" alt="都廳大院">
+    <p>都廳大院3D情境示意圖</p>
   </article>
 </template>
 
@@ -21,7 +31,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("./s3/3.jpg");
+  background: url("./s3/bg.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
 
@@ -33,56 +43,85 @@
     display: none;
   }
 
-  .circle {
-    width: size(836);
-    position: relative;
-    z-index: 2;
-  }
-
-  //淇發建設
-  h2 {
-    position: absolute;
-    top:calc(2% + #{size(545 - 1080 * .5)});
-    left: calc(2% + #{size(535 - 1080 * .5)});
-
-    img {
-      width: sizem(35);
-    }
-  }
-
-  //都廳大院
+  //捷運先嗇宮
   h1 {
     position: absolute;
-    top:calc(30% + #{size(452- 1080 * .5)});
-    left: calc(10% + #{size(480 - 1080 * .5)});
+    top:calc(30% + #{size(350- 1080 * .5)});
+    left: calc(20% + #{size(382 - 1080 * .5)});
 
     img {
-      width: sizem(225);
+      width: sizem(90);
     }
   }
 
-  //根本
+  //新北市府
+  h2 {
+    position: absolute;
+    top:calc(30% + #{size(350- 1080 * .5)});
+    left: calc(50% + #{size(348 - 1080 * .5)});
+
+    img {
+      width: sizem(90);
+    }
+  }
+
+  //東京都廳的城市新生
   h3 {
     position: absolute;
-    top: calc(80% + #{size(458 - 1080 * .5)});
-    left: calc(15% + #{size(498 - 1080 * .5)});
+    top:calc(30% + #{size(357- 1080 * .5)});
+    left: calc(80% + #{size(308 - 1080 * .5)});
 
     img {
-      width: sizem(135);
+      width: sizem(76);
     }
   }
 
-  //南北
-  h4 {
+  .light,
+  .light2 {
     position: absolute;
-    top: calc(70% + #{size(569 - 1080 * .5)});
-    left: calc(50% + #{size(560 - 1080 * .5)});
+    left: calc(40% + #{size(368 - 1080 * .5)});
+    animation-name: slide-in;
+    animation-iteration-count: infinite;
+  }
 
-    img {
-      width: sizem(135);
+  .light {
+    top:calc(60% + #{size(387- 1080 * .5)});
+    animation-duration: 5s;
+  }
+
+  .light2 {
+    top:calc(70% + #{size(357- 1080 * .5)});
+    animation-duration: 7s;
+  }
+
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      translate: 0 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+      translate: 0 -15vw;
+    }
+
+    100% {
+      opacity: 0;
+      translate: 0 -15vw;
     }
   }
 
+  p {
+    position: absolute;
+    right: sizem(6);
+    bottom: sizem(4);
+    font-size: 14px;
+    color: #FFF;
+  }
 }
 
 /* 螢幕尺寸標準 */
@@ -91,13 +130,11 @@
 
 /* 手機尺寸 */
 @media screen and (max-width: 767px) {
-
-
   .s3 {
-    height: sizem(640);
-    min-height: sizem(640);
-    max-height: sizem(640);
-    background: url("./s3/3m.jpg");
+    height: sizem(635);
+    min-height: sizem(635);
+    max-height: sizem(635);
+    background: url("./s3/bgm.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
 
@@ -109,47 +146,43 @@
       display: block;
     }
 
-    //淇發建設
-    h2 {
-      top:calc(2% + #{size(515 - 1080 * .5)});
-      left: calc(5% + #{size(525 - 1080 * .5)});
-
-      img {
-        width: sizem(92);
-      }
-    }
-
-    //都廳大院
+    //捷運先嗇宮
     h1 {
-      top:calc(20% + #{size(405 - 1080 * .5)});
-      left: calc(30% + #{size(370 - 1080 * .5)});
+      position: absolute;
+      top:calc(20% + #{size(90- 1080 * .5)});
+      left: calc(30% + #{size(300 - 1080 * .5)});
 
       img {
-        width: sizem(220);
+        width: sizem(240);
       }
     }
 
-    //4根本
-    h3 {
-      top: calc(80% + #{size(238 - 1080 * .5)});
-      left: calc(10% + #{size(658 - 1080 * .5)});
-
-      img {
-        width: sizem(250);
-      }
+    .light,
+    .light2 {
+      position: absolute;
+      left: calc(40% + #{size(258 - 1080 * .5)});
+      animation-name: slide-in;
+      animation-iteration-count: infinite;
+      width: sizem(170);
     }
 
-    //南北
-    h4 {
-      top: calc(80% + #{size(533 - 1080 * .5)});
-      left: calc(20% + #{size(475 - 1080 * .5)});
-
-      img {
-        width: sizem(250);
-      }
+    .light {
+      top:calc(80% + #{size(387- 1080 * .5)});
+      animation-duration: 5s;
     }
 
+    .light2 {
+      top:calc(90% + #{size(357- 1080 * .5)});
+      animation-duration: 7s;
+    }
 
+    p {
+      position: absolute;
+      right: sizem(6);
+      bottom: sizem(4);
+      font-size: 10px;
+      color: #FFF;
+    }
   }
 }
 </style>
