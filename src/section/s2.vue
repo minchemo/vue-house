@@ -5,7 +5,7 @@
     
     <div class="txt font-['Noto_Serif_TC',serif]">
       <h1>沒有國界  只有世界</h1>
-      <h2>雙捷運三重A2站｜19-28坪世界觀</h2>
+      <h2>雙捷運三重A2站｜20-30坪世界觀</h2>
       <span data-aos="zoom-in" data-aos-delay="0">雙北市中心 三重新天地</span>
       <span data-aos="zoom-in" data-aos-delay="100">無國界建築計畫即刻啟動</span><br>
 
