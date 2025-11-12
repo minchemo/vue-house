@@ -10,11 +10,13 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#e86f00] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#e86f00] text-[#333]">
     <S1 />
+    <S2 />
+    <S3 />
+    <S4 />
     <!-- <S2v /> -->
   <!--
-    <S4 />
     <S5 />
     <S6 />
     <S7 />
@@ -49,27 +51,155 @@
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-.home{ 
- //background: linear-gradient(66deg, #FFC38B 30%, #e97721 60%, #b85213 100%);
-/*
-  &::before{content: "";
-  width: 100%;
-  height: auto;
-  position: fixed;
-  left: 0;right: 0;top:0;bottom: 0;
-//transform: translateX(0%) rotate(360deg);filter: blur(10px);
-  //animation: bg 40s linear infinite;
-  @media screen and (min-width: 768px) {
-  background-image: url("@/section/s1/bg1.png");
-  background-size: 100% auto;
-   // width: 240%;
-   // height: 240vw;
-   // left: -70%;
-   // top: calc(50% - 120vw);
+.bg{background: linear-gradient(90deg, #17A9AF 0%, #007CBB 87%);
+}
+img {
+  display: inline;
+  max-width: unset;
+  height: unset;
+  margin: 0 auto;
+}
+
+  .caption{
+      @apply absolute;
+      right:1em;
+      bottom: .5em;
+      font-weight: 300;
+      font-size: size(15);
+      color: #FFF;z-index: 3;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
+
+
+      .txt {
+    position: relative;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.7;
+    width: 100%;letter-spacing: 0.03em;
+    text-align:justify;
+  .title{
+   // @apply font-['Noto_serif_TC',serif];
+    font-size: 2.6em;
+    margin:0 auto 0em;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  .subtitle{
+    font-size: 1.15em;
+    font-weight: 700;
+    margin:0 auto 0.45em;
+    line-height: 1.5;letter-spacing: 0.06em;
+  }
+  .hr{width: 100%; height: size(100);margin: -1.5em 0;}
+  .desc{
+    margin: 0 0 0;
+    color: #444;
+    b{}
+  }
+  }
+.slider {
+  @apply relative;
+  z-index: 2;
+  .slide-item{
+  img{width: 100%;height: 100%;border-radius: 0;object-fit: cover}
+  
+  }
+  .arrows{
+    @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
+    padding: 0; 
+    height: 100%;
+    pointer-events: none; 
+    filter:drop-shadow(0em 0.2em 0.2em rgba(0, 0, 0, .5));
+    .prev,
+    .next{
+      width:5%;
+      display: flex;
+      pointer-events: stroke;
+      cursor: pointer;
+      
+  justify-content: center;
+  align-items:center;
+    background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+    background-size: 50% auto;
+    transition:background-color .5s ;
+    &:hover{background-color: #0003;}
+    }
+    .prev{transform: scaleX(-1);
+    }
+    img {
+      margin: unset;
+      @apply cursor-pointer hover:opacity-50;
+    }
+  }
+  .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    bottom: 0;
+    gap: 1.2em;
+    color: #fff;
+    li {
+      button {
+        @apply rounded-full;
+        width: 1em;
+        height: 1em;
+          background:currentColor;
+      transition: transform .5s;
+      &:hover{
+          transform: scale(.8);}
+
+        &.is-active{
+          transform: scale(1.5);
+      }
+      }
+    }
   }
 }
-*/
+@media screen and (max-width: 767px) {
+  
 
+ // .bg{background: linear-gradient(90deg, #17A9AF 0%, #007CBB 100%); }
+  .caption{
+      font-size: sizem(12);}
+
+      .txt {line-height: 1.6;letter-spacing: 0.01em;
+  .title{
+    font-size: 1.9em;
+  }
+  .subtitle{
+    font-size: 1.1em;
+  }
+  .hr{height: sizem(70);}
+  }
+.slider {
+  @apply relative;
+  .slide-item{
+  img{border-radius:0em;}
+  
+  }
+  .arrows{
+    .prev,
+    .next{
+      width: 8%;
+    }
+  }
+  .splide__pagination {
+    @apply absolute flex justify-center w-full;
+    display: none;
+    bottom: sizem(6.7);
+    gap: sizem(2.5);
+    li {
+      button {
+        @apply rounded-full  hover:opacity-50;
+        width: sizem(10.3);
+        height: sizem(3.34);
+        border: sizem(1) solid #fff;
+
+        &.is-active{
+          @apply bg-white;
+      }
+      }
+    }
+  }
+}
 }
 
 
@@ -104,9 +234,10 @@ import info from "@/info"
 import S1 from "@/section/s1.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
-/* 
+/*  */
 import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue" */
+import S3 from "@/section/s3.vue"
+import S4 from "@/section/s4.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

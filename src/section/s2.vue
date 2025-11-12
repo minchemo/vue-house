@@ -1,16 +1,11 @@
 <template>
-  <article class="s2" id="s2">
-    <img src="./s2/bgm.jpg" class="bg" v-if="isMobile"> 
-    <img src="./s2/bg.jpg" class="bg" v-else> 
-    
-    <div class="txt">
-      <span data-aos="zoom-in" data-aos-delay="0">和信義計劃區永結同心</span>
-      <span data-aos="zoom-in" data-aos-delay="100">跟三捷三國道喜結連理</span>
-      <span data-aos="zoom-in" data-aos-delay="200">與國家政經中心琴瑟和鳴</span>
-      <span data-aos="zoom-in" data-aos-delay="300">同公園校園水花園百年好合</span>
-      <span data-aos="zoom-in" data-aos-delay="400">兆元富都千億建設佳偶天成</span>
-</div>
-   
+  <article class="s2">
+   <!--   -->  <div class="txt">
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">中央軸心盛大開場</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">重量級建設共演 台中未來從此綻放</h4>   
+      </div>
+    <Fullview />
+    <div class="caption">基地空拍實景經後製修飾</div>
   </article>
 </template>
 
@@ -18,42 +13,48 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative; 
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  align-items:center;
-  font-size:sizem(14);
-  color: #fff;
-  @media screen and (min-width: 768px) {
-    font-size:size(32);
+  @apply relative overflow-hidden bg-[#005890] text-[#fff];
+  width: 100%;
+ // height: size(1059);
+  font-size:size(20);
+  .txt {text-align: center;position: relative;
+  padding-top:1.8em;z-index: 10;margin-bottom:-6.3em ;
+  
+  .subtitle{font-size: 1.25em;margin-top: .4em;
+      font-weight: 500;}
   }
-  .bg{width: 100%;}
-  .txt{
-    position: absolute;
-    top: sizem(85);left: 0;right: 0;text-align: center;
-  line-height: 2.7;
-  letter-spacing: 0.06em;
-  span{display: block;}
-  @media screen and (min-width: 768px) {
-    top: size(190);
-    line-height: 2;
+  .viewbox{z-index: 2;
+    margin: 0 0 -5vw 0;
+    top: -5vw;
+  }
+}
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+@media screen and (max-width: 767px) {
+
+  .s2 {
+   // height: sizem(550);
+  font-size:sizem(15);
+
+  .txt {//text-align: justify;
+  padding-top:3.5em;width:sizem(310);margin:auto auto -4.3em auto;
+  .subtitle{font-size: 1em;
+      font-weight: 400;}
+  }
+  .viewbox{height: sizem(550);
+    margin: 0;
+    top:0;}
+
 
   }
 }
-}
-
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref } from 'vue';
+import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
-
-const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-  smoothScroll({
-    scrollTo: document.querySelector(el)
-  })
-}
 </script>

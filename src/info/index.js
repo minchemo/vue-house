@@ -58,45 +58,30 @@ export default {
   },
 
     navList: [
-        /*
+        /*  */
         {
-            name: "雙核心地段",
-            target: ".s3",
+            name: "微笑巨蛋",
+            target: ".s1",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "交通中軸",
+            name: "10大看點",
             target: ".s4",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "水岸生活",
+            name: "巨好機能",
             target: ".s5",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "菁英學區",
+            name: "建築鉅作",
             target: ".s6",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "安心品牌",
+            name: "麗寶集團",
             target: ".s7",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "電梯店墅",
-            target: ".s8",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "嚴選建材",
-            target: ".s9",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "傳家首席",
-            target: ".s10",
             offset: "-60",
             offsetmo: "0",
         },{
@@ -117,6 +102,6 @@ export default {
             offset: "",
             type: 'btn'
         },
-    */
+  
     ],
 }

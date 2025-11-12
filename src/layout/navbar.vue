@@ -9,7 +9,7 @@
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
             <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
-            <template v-for="item, i in info.navList">
+            <template v-for="item, in info.navList" :key="item">
             <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
                 @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
                 <span>{{ item.name }}</span>
@@ -124,7 +124,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #032763cc;
+        background: rgba(185, 87, 0, 0.5);
         width:100%;
         height: size(60);
         z-index: 5;
@@ -166,8 +166,7 @@
                 }
             }
             &.btn2{
-                background:#EF8200;
-;
+                background:#FF9D00;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
