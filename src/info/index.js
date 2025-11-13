@@ -41,12 +41,12 @@ export default {
       option: ["2房", "3房", "4房"],
       bypass: false,
     },
-    budget: {
+    /* budget: {
       title: "購屋預算",
       hold: "請選擇區間",
       option: ["1600-2000萬", "2000-2500萬", "2500萬以上",],
       //bypass: false, //必填開啟使用
-    },
+    }, */
   },
 
   navList: [

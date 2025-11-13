@@ -150,10 +150,10 @@
     h1 {
       position: absolute;
       top:calc(20% + #{size(90- 1080 * .5)});
-      left: calc(30% + #{size(300 - 1080 * .5)});
+      left: calc(30% + #{size(330 - 1080 * .5)});
 
       img {
-        width: sizem(240);
+        width: sizem(225);
       }
     }
 
