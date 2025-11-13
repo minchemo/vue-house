@@ -82,11 +82,11 @@ img {
     font-size: 2.6em;
     margin:0 auto 0em;
     line-height: 1.5;
-    font-weight: 700;
+    font-weight: 500;letter-spacing: 0.06em;
   }
   .subtitle{
     font-size: 1.15em;
-    font-weight: 700;
+    font-weight: 500;
     margin:0 auto 0.45em;
     line-height: 1.5;letter-spacing: 0.06em;
   }

@@ -12,7 +12,7 @@
         <div>
           <img src="./s3/o.svg" alt="o" class="o" />
           <span>捷運當道</span>
-          <img src="./s3/1.svg" alt="橘線O10站350米(預定地)" class="t" />
+          <img src="./s3/2.svg" alt="橘線O10站350米(預定地)" class="t" />
         </div>
         <div>
           <img src="./s3/o.svg" alt="o" class="o" />
@@ -92,7 +92,7 @@
     }
   }
   .oall{position: relative;color: #603813;
-    width:100%;margin: auto;
+    width:90%;margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,7 +106,8 @@
 
     }
     .o{position: absolute;width: 100%; height: 100%;top: 0;left: 0;}
-    span{position: relative; z-index: 2;}
+    span{position: relative; z-index: 2;font-weight: 700;font-size: size(30);margin-bottom: .6em;
+    }
     .t{position: relative; z-index: 2;}
   }
 
