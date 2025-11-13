@@ -1,4 +1,4 @@
-const caseName = "都匯天地"
+const caseName = "都匯大極"
 export default {
   caseid: "a40fbc82-32dc-4886-af8f-20ace8a7e2fe",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
