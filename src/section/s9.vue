@@ -1,14 +1,15 @@
 <template>
-  <article class="s4" ref="s4">
+  <article class="s8" ref="s8">
+
     <img src="./s3/spot.png" class="spot">
     <div class="semicircle"></div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">千億建設巨集<br>
-          坐享城市榮景</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">The Future Begins Here</h4>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">繁華捷運都心<br>
+          豐盛生活全就位</h3>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">Life in Full Motion</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          可同時容納3萬人的台中超巨蛋計劃熱力全開，結合周邊會展、藝文、經貿、交通多元發展能量，一次站上台中最精采舞台，生活即是一場動人大秀。</p>
+          家門外的超市百貨，腳步可及的熱鬧商圈，採買、休閒等生活機能全部到位。捷運綠線與國道一號並行，無論日常通勤或遠行，都能從容出發。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -32,36 +33,35 @@
 
 
 
-.s4 {
-  @apply relative flex flex-row-reverse items-center justify-center bg-[#FAE3BF];
+.s8 {
+  @apply relative flex items-center justify-center bg-[#FAE3BF];
   width: 100%;
   height: auto;
   padding: 11em 0 10em 0;
   font-size: size(20);
   gap: 4em;
   flex-wrap: wrap;
-  overflow: hidden;
-  //flex-direction:row-reverse;
+  flex-direction: row;
 
   .spot {
     position: absolute;
-    top: sizem(270);
-    right: sizem(0);
-    width: sizem(188);
+    top: sizem(120);
+    right:sizem(-50);
+    width: sizem(188); 
+    transform: rotate(-90deg);
+    transform-origin: 100% 100%;
     pointer-events: none;
     z-index: 2;
   @media screen and (min-width: 768px) {
-    top: size(10);
-    left: 0;
-    width: size(420);
-    
-  }
+    top: size(-520);
+    right:0;
+    width: size(760); }
   }
 
   .semicircle {
     position: absolute;
     top: sizem(-80);
-    right: sizem(-375);
+    left: sizem(-375);
     aspect-ratio: 1/1;
     pointer-events: none;
     width: sizem(750);
@@ -69,10 +69,9 @@
     border-radius: 50%;
     z-index: 1;
   @media screen and (min-width: 768px) {
-    top: 0;
-    right: size(-777);
-    width: size(1554);
-  }
+    top: size(-200);
+    left: size(-777);
+    width: size(1554);}
   }
 
   .main {
@@ -88,16 +87,17 @@
 
   .txt {
     // margin: auto auto 3vw auto;
-    padding: 0 0 0 0;
+    padding: 0;
 
     .subtitle {
       font-weight: 400;
     }
   }
 
+  // size(110)
 
   .slider {
-    margin: 0;
+    margin: 0 0 0 0;
     flex-basis: size(840);
     width: size(840);
     height: size(560);
@@ -111,8 +111,8 @@
     }
 
     .splide__pagination {
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     }
   }
 }
@@ -124,7 +124,7 @@
 @media screen and (max-width: 767px) {
 
 
-  .s4 {
+  .s8 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -133,6 +133,34 @@
     margin-bottom: 0em;
     gap: 0em;
 
+    .img {
+      bottom: auto;
+      top: sizem(370);
+
+      .oo1 {
+        right: sizem(-260);
+        width: sizem(480);
+      }
+
+      .bubble1 {
+        right: sizem(-110);
+        width: sizem(250);
+        bottom: sizem(-35);
+      }
+
+      .g {
+        right: sizem(30);
+        width: sizem(100);
+        bottom: sizem(40);
+      }
+    }
+
+    .bubble2 {
+      left: sizem(130);
+      width: sizem(218);
+      top: sizem(-170);
+    }
+
     .main {
       padding: 0 sizem(32.5);
       width: 100%;
@@ -140,7 +168,7 @@
 
     .txt {
       margin: 3em auto 2em;
-      padding: 0;
+      padding: 0 ;
     }
 
 

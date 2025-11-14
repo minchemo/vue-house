@@ -38,14 +38,15 @@
   .s2 {
    // height: sizem(550);
   font-size:sizem(15);
+  background: #007CBB;
 
   .txt {//text-align: justify;
   padding-top:3.5em;width:sizem(310);margin:auto auto -4.3em auto;
-  .subtitle{font-size: 1em;
+  .subtitle{font-size: 1em;letter-spacing: 0.05em;
       }
   }
-  .viewbox{height: sizem(550);
-    margin: 0;
+  .viewbox{height: sizem(690);
+    margin:sizem(10) 0 0 0;
     top:0;}
 
 

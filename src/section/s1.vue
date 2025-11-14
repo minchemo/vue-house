@@ -1,9 +1,9 @@
 <template>
   <article class="s1" id="s1">
-    <!--   -->
+    <!-- 
     <img src="./s1/pc.jpg" class="t0" v-if="!isMobile" />
     <img src="./s1/mo.jpg" class="t0" v-else />
-
+  -->
 
     <img src="./s1/smilecity.svg" alt="smilecity" class="smilecity" />
     <img src="./s1/logo.svg" class="logo" />
@@ -53,7 +53,7 @@
   .t0 {
     position: absolute;
     width: 100%;
-    top: 0vw;
+    top: -14vw;
     left: 0;
     pointer-events: none;
     z-index: 10;

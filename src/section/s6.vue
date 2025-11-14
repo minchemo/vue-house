@@ -1,14 +1,14 @@
 <template>
-  <article class="s4" ref="s4">
+  <article class="s6" ref="s6">
     <img src="./s3/spot.png" class="spot">
     <div class="semicircle"></div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">千億建設巨集<br>
-          坐享城市榮景</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">The Future Begins Here</h4>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">城市書香森呼吸<br>
+          日常自有風景</h3>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">Breathe with the City</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          可同時容納3萬人的台中超巨蛋計劃熱力全開，結合周邊會展、藝文、經貿、交通多元發展能量，一次站上台中最精采舞台，生活即是一場動人大秀。</p>
+          在經貿繁華核心，靜靜綻放一處書香與綠意共生的角落。幼兒園到大學明星學區聚落，轉身即是67公頃中央公園森態，日常與自然書卷為伴，城心之中難得的靜謐生活場域。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -32,7 +32,7 @@
 
 
 
-.s4 {
+.s6 {
   @apply relative flex flex-row-reverse items-center justify-center bg-[#FAE3BF];
   width: 100%;
   height: auto;
@@ -124,7 +124,7 @@
 @media screen and (max-width: 767px) {
 
 
-  .s4 {
+  .s6 {
     @apply flex-col;
     height: auto;
     padding: 0;
