@@ -9,6 +9,7 @@
       <img src="./s2/2m.png" class="ph" alt="都廳大院">
       <span style="display: none;">都廳大院</span>
     </h2>
+    <p class="ph">東京都廳特區空拍示意圖</p>
   </article>
 </template>
 
@@ -102,6 +103,14 @@
       img {
         width: sizem(150);
       }
+    }
+
+    p {
+      position: absolute;
+      right: sizem(6);
+      bottom: sizem(4);
+      font-size: 10px;
+      color: #FFF;
     }
   }
 }
