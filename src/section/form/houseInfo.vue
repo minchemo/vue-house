@@ -5,8 +5,27 @@
                 <div class="h-full info-box  flex flex-col items-center justify-center">
                     <div class="title">建案資訊</div>
                     <div class="info-items mt-4 grid grid-cols-1 md:grid-cols-2 ">
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap"
+                        <!--pc-->
+                        <div class="item font-bold flex items-center w-full whitespace-nowrap pc"
                             v-for="item in info.houseInfos" :key="item">
+                            <p class="mr-5 border-l-2 border-[#FFF] pl-2 text-[#FFF] font-[700]" v-html="item[0]">
+                            </p>
+                            <p class="whitespace-pre-line leading-normal text-left text-[#FFF] font-normal"
+                                v-html="item[1]">
+                            </p>
+                        </div>
+                        <!--ph-->
+                        <div class="item font-bold flex items-center w-full whitespace-nowrap ph"
+                            v-for="item in info.houseInfos1" :key="item">
+                            <p class="mr-5 border-l-2 border-[#FFF] pl-2 text-[#FFF] font-[700]" v-html="item[0]">
+                            </p>
+                            <p class="whitespace-pre-line leading-normal text-left text-[#FFF] font-normal"
+                                v-html="item[1]">
+                            </p>
+                        </div>
+                        <br>
+                        <div class="item font-bold flex items-center w-full whitespace-nowrap ph"
+                            v-for="item in info.houseInfos2" :key="item">
                             <p class="mr-5 border-l-2 border-[#FFF] pl-2 text-[#FFF] font-[700]" v-html="item[0]">
                             </p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#FFF] font-normal"
@@ -19,6 +38,7 @@
             </div>
         </div>
     </div>
+
     <!-- 
     <div class="bg-[#ceaa6d]  py-5 flex items-center justify-center">
             <p class="db"><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
@@ -47,7 +67,7 @@
 }
 
 .house {
-    height: size(380);
+    height: size(710);
     font-size: size(22);
     background: #042f75;
 
@@ -61,7 +81,7 @@
 
 .info-box {
     margin: size(50) auto 0;
-    width: size(800);
+    width: size(900);
 
     .title {
         font-size: size(40);
@@ -74,7 +94,7 @@
     .info-items {
         row-gap: size(20);
         column-gap: size(20);
-        margin-left: size(110);
+        margin-left: size(210);
         width: 100%;
 
         .item {
@@ -89,14 +109,23 @@
 
 //得邦log
 .logo {
-    margin-top: size(50);
+    margin-top: size(10);
     margin-right: size(20);
+}
+
+//pc&ph
+.pc {
+    display: flex !important;
+}
+
+.ph {
+    display: none;
 }
 
 @media screen and (max-width:768px) {
     .house {
         // background:#fff;
-        height: sizem(460);
+        height: sizem(1100);
         font-size: sizem(14);
     }
 
@@ -130,6 +159,14 @@
         margin-top: size(150);
     }
 
+    //pc&ph
+    .pc {
+        display: none !important;
+    }
+
+    .ph {
+        display: flex !important;
+    }
 }
 </style>
 
