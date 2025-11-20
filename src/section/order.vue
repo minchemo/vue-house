@@ -1,8 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
+
     <div class="order-section">
-      <img src="@/section/s1/otitlem.svg" alt="" class="otitle" v-if="isMobile" />
-      <img src="@/section/s1/otitle.svg" alt="" class="otitle" v-else />
       <div class="order-title text-center" v-if="info.order.title"><span v-html="info.order.title"></span></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
@@ -13,12 +12,12 @@
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
          
-         <!--    --> <div class="gender">
+         <!--    <div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div>
+        </div> -->
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -72,9 +71,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#C00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -83,8 +82,8 @@
       <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send --><div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 700;
-    line-height: 3.3;height:3.3em">
+      <!-- Send --><div class="sendall mt-8 mx-auto" style="font-weight: 700;
+    line-height: 3.2;height:3.2em">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
   立即預約
 </button>
@@ -151,7 +150,7 @@
 }
 .otitle{
   margin:size(90) auto 0 auto;
-  width: size(970);
+  width: size(1200);
   min-width: 750px;
 @media screen and (max-width:768px) {
   margin:sizem(60) auto 0 auto;
@@ -161,22 +160,21 @@
 }
 }
 .order-title {
-    width: size(970);
+    width: size(1200);
     min-width: 750px;
     margin: 0 auto;
   font-size: size(40);
-  font-weight: 500;
-  color: #fff;
+  font-weight: 700;
+  color: #162783;
   padding-top:1.5em;
   text-indent: 0em;
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 1em;
+  letter-spacing: .06em;
 @media screen and (max-width:768px) {
   width: sizem(310);
   min-width: 0;
-  letter-spacing: .6em;
 }
   span {
   display: inline-block;
@@ -185,38 +183,27 @@
 margin:auto -.3em auto .3em;
 }
 }
-  &::after,
-  &::before {
-    content: "";
-    display: inline-block;
-    width: auto;
-    height: size(1);
-    vertical-align: middle;
-    background-color: #fff;
-    margin: 0 auto 0 auto;
-    flex: 1;
-  }
 }
   .order-subTitle{
-    font-size: size(30);
+    font-size: size(20);
     padding-top:.5em;
-  color:#fff;
-    letter-spacing: .1em;
+  color:#162783;
+    letter-spacing: 0;
   }
 
   .form {
-    width: size(970);
+    width: size(1100);
     min-width: 750px;
     //  height: 350px;
-    gap: 4em;
-    margin-top: 1.5em;
+    gap: 6em;
+    margin-top: 3em;
     margin-bottom: 3em;
     z-index: 50;
     align-items: stretch;
 
     .left {position: relative;
       flex: 1;
-      gap: 1.25em;
+      gap: 1.6em;
       align-items: flex-start;
       //   width: size(419);
     }
@@ -231,10 +218,10 @@ margin:auto -.3em auto .3em;
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #fff6;
+      background-color: #0003;
       position: absolute;
     }
-    .row{background: #fff;border: 1px solid #999;color: #000;
+    .row{background: #fff;border: 0px solid #999;color: #000;
       display: flex;width: 100%;
     align-items:center;
       > span{
@@ -244,7 +231,7 @@ margin:auto -.3em auto .3em;
         > span{color: #F00;
           }
       }
-      input,select{background: inherit;flex: 1;font-size: 1em;
+      input,select{background: inherit;flex: 1;font-size: 1em;height: 3.9em;
         font-weight: 500;}
       option{color: #666;}
       select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
@@ -254,7 +241,7 @@ margin:auto -.3em auto .3em;
         background-position:calc(100% - .5em) 0%;
       }
       }
-       &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+      // &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;
       color: #fff;
@@ -262,18 +249,23 @@ margin:auto -.3em auto .3em;
       input{margin-right: .3em;}
     }
   }
+  .sendall{
+    font-size:28px;
+    margin-bottom: 4em;
+  }
   .send {
   // font-size:25px;
     font-size:inherit;
     //@functionbackground-color: #9D9E9E;
-      background:#0e679c;
+      background:#162783;
     //border: 1px solid #FFF9;
     border:0;
   letter-spacing: 0.9em;
     text-indent: 0.9em;
     height:100%;
-    border-radius: 1em;
-    width: 358px;
+    border-radius: 0em;
+   // border-radius: 1em;
+    width: 400px;
     z-index: 10;
     color: #fff;
     position: relative;
@@ -343,6 +335,8 @@ margin:auto -.3em auto .3em;
       .left {
         width: 100%;
         //gap: sizem(15);
+      gap: 0;
+      .row{ margin-top: 1.1em;}
       }
 
       .right {
@@ -359,6 +353,10 @@ margin:auto -.3em auto .3em;
         display: none;
       }
     }
+    
+  .sendall{
+    font-size:22px;
+  }
     .send {
       width: sizem(310);
     }

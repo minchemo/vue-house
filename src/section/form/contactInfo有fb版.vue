@@ -5,18 +5,23 @@
    
 </div>
   <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <img src="@/section/s1/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
    <!--  <div class="logo">obg.svg
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>  -->
-    <!-- 這個版本因為客戶沒fb才調整成這個 如果開啟了要另一個檔案 contactInfo有fb版.vue  -->
-    <div class="flex justify-between w-full contact-item-box" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000">
-      <div class="flex contact-item justify-center items-center contact-phone" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+    </div>  --> <div class="flex justify-between w-full contact-item-box">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-    
-    <div class="flex justify-between w-full no-gap contact-add" v-if="info.address">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'" v-if="info.fbMessage">
+        <img src="//h35.banner.tw/img//form/messenger.svg" alt="Facebook 諮詢" srcset="" />
+        <div>Facebook 諮詢</div>
+      </div>
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open()" v-if="info.fbLink">
+        <img src="//h35.banner.tw/img//form/fb.svg" alt="前往粉絲專頁" srcset="" />
+        <div>前往粉絲專頁</div>
+      </div>
+    </div>
+    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
       <div class="flex contact-item justify-center items-center address">
         <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
@@ -25,8 +30,7 @@
         <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
-    </div>
-  </div>
+    </div> 
 
   </div>
 </div>
@@ -100,8 +104,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #162783;}
-.hover\:bg-color2:hover{background-color:#666;}
+.bg-color1{background-color: #666;}
+.hover\:bg-color2:hover{background-color:#0e679c;}
 
 
 .contact-info-img{
@@ -111,18 +115,22 @@
 
 .contact-info {
   position: relative;
-  z-index: 3;
+  z-index: 50;
    background: #162783;
-    font-size:19px;
+    font-size:16px;
     line-height: 1.6;
   padding:3.4em 0;
 
   .logo {position: relative;
-    width: size(377);
+    width: size(367);
+   // height: size(172);
+    // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(20) auto size(30);
+    margin: size(30) auto 0;
+    img{width: 100%;}
+    .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
   }
 
   .contact-item-box {
@@ -132,8 +140,6 @@
     width: size(1200);
     min-width: 750px;
 
-    .contact-phone{flex: 2;}
-    .contact-add{flex:3;}
     .contact-item {
       background: #D0D3D3;
       color: #162783;
@@ -156,7 +162,7 @@
       }
 
       &:hover {
-        background: #666;
+        background: #0e679c;
         color: #fff;
 
         img {
@@ -221,7 +227,7 @@
   }
 }
 .modal-box{
-  img{ filter: invert(16%) sepia(25%) saturate(5653%) hue-rotate(220deg) brightness(96%) contrast(108%);
+  img{ filter: invert(20%) sepia(61%) saturate(4301%) hue-rotate(188deg) brightness(88%) contrast(89%);
   }
 }
 
@@ -259,10 +265,6 @@
     }
   }
 
-.contact-info-img{
-  .obg{width: sizem(170);}
-}
-
   .contact-info {
     width: 100%;
     min-width:0;
@@ -275,8 +277,6 @@
      // margin-bottom: sizem(47);
     }
 
-    .contact-add{
-      flex-direction: column;}
     .contact-item-box {
       position: relative;
     margin-top:0;

@@ -1,33 +1,33 @@
-const caseName = "成大之森"
+const caseName = "homm"
 export default {
-    caseid: "5050ed58-93cf-4a7b-ab71-4d9802ed8878",
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "臺南市北區北門路二段132號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7345.090273190614!2d120.21059187940935!3d23.0037482!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e770019709bf9%3A0x6e7b20a589808af2!2z5oiQ5aSn5LmL5qOuLeaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1761812589196!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/cNVU4WAJEgS89ZdSA",
-    phone: "06-2370888",
-    fbLink: "https://www.facebook.com/ForestofAspiration/",
-    fbMessage: "https://m.me/ForestofAspiration/",
+    address: "台南市安平區新港路二段585號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.096232942265!2d120.1635414!3d22.9834885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75feb74702ed%3A0x296f70dc2ee14d30!2zNzA46Ie65Y2X5biC5a6J5bmz5Y2A5paw5riv6Lev5LqM5q61NTg16Jmf!5e0!3m2!1szh-TW!2stw!4v1763537267021!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/chVTrEvxsaGtbkv17",
+    phone: "0938517132",
+   // fbLink: "https://www.facebook.com/ForestofAspiration/",
+   // fbMessage: "https://m.me/ForestofAspiration/",
     // line: "https://lin.ee/FTYKISC",
     caseName: caseName,
     houseInfos: [
-      /*    ["投資建設", "鵬程建設股份有限公司"],
+      /*   ["投資建設", "鵬程建設股份有限公司"],
         ["建照號碼", "110股建字第00368-01號"],
         ["企劃表現", "欣和地產股份有限公司"],
       ["行銷企劃", "自建自售"],
-      */
+      */ 
     ],
-    gtmCode: ["GTM-KGPCM5TH"], // 可放置多個
+    gtmCode: ["GTM-0000000"], // 可放置多個
     // recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "我要預約",
-        //subTitle: "敬獻菁英的專屬品味｜2-3房｜高感精工宅"
+        title: "預約賞屋",
+        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務"
     },
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
@@ -35,17 +35,17 @@ export default {
           room_type: {
         title: "需求房型",
         hold: "請選擇房型",
-        option: ["兩房", "三房"],
+        option: ["兩房", "三房", "四房"],
         bypass:false,　
       },
-
-        /*
       budget: {
         title: "購屋預算",
         hold: "請選擇區間",
-        option: ["1000萬-1500萬", "1501萬-2000萬", "2001萬以上"],
+        option: ["1000萬以下", "1000萬～1500萬", "1500萬～2000萬", "2000萬以上"],
         bypass:false, //必填開啟使用1000萬-1500萬、1501萬-2000萬、2001萬以上
       },
+
+        /*
       use_type: {
         title: "使用用途",
         hold: "請選擇用途",
