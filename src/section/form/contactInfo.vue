@@ -102,7 +102,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #1163A1;}
+.bg-color1{background-color: #bf0008;}
 .hover\:bg-color2:hover{background-color:#002421;}
 
 
@@ -142,9 +142,9 @@ img{width: 100%;
     // min-width: 680px;
 
     .contact-item {
-      background: #b6006400;
-      border: 1px solid #fff;
-      color: #fff;
+      background: #ffbc47;
+     // border: 1px solid #fff;
+      color: #c00;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -160,7 +160,7 @@ img{width: 100%;
       gap: 1em;
 
       &:hover {
-        background: #00213e;
+        background: #ff9100;
         color: #fff;
 
         img {
@@ -172,7 +172,7 @@ img{width: 100%;
         max-width: 1.69em;
         height: auto;
         max-height: 1.69em;
-        filter: brightness(0) invert(1);
+        filter: invert(14%) sepia(48%) saturate(7168%) hue-rotate(11deg) brightness(97%) contrast(134%);
         transition: all .5s;
         margin: 0;
       }
@@ -233,7 +233,7 @@ img{width: 100%;
   }
 }
 .modal-box{
-  img{filter: invert(12%) sepia(29%) saturate(4484%) hue-rotate(205deg) brightness(98%) contrast(113%);
+  img{filter: invert(14%) sepia(48%) saturate(7168%) hue-rotate(11deg) brightness(97%) contrast(134%);
   }
 }
 
@@ -251,7 +251,7 @@ img{width: 100%;
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
-    background:#00213e;
+    background:#ffbc47;
     //background: linear-gradient(to bottom, #00a6e9, #009e41);
 
 
@@ -260,7 +260,7 @@ img{width: 100%;
       height: 100%;      
       font-size: sizem(16);
       font-weight: 400;
-      color: #FFF;
+      color: #000;
       border-left:1px solid #0003;
 
       img {
@@ -268,7 +268,7 @@ img{width: 100%;
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
+       filter: invert(14%) sepia(48%) saturate(7168%) hue-rotate(11deg) brightness(97%) contrast(134%);
       }
       &:first-child{
       border-left:0;}

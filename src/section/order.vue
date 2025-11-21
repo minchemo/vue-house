@@ -123,7 +123,7 @@
   background-size: auto;
   */
   //background: linear-gradient(to bottom, #00a6e9, #009e41);
-  background:#c7152d;
+  background:#bf0008;
 
 
 
@@ -309,7 +309,7 @@
     }
 
     .order-title-img {
-      width: sizem(259);
+      width: sizem(290);
       margin-bottom: sizem(25);
     }
 
