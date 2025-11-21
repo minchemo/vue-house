@@ -1,6 +1,6 @@
 const caseName = "homm"
 export default {
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    caseid: "4fe056be-1c94-4602-b659-f663f478e202",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
