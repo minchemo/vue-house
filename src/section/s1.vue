@@ -1,14 +1,16 @@
 <template>
   <article class="s1" id="s1">
-   <!-- <img src="./s1/mo.jpg" class="t0">
-    <img src="./s1/mo.jpg" class="t0">  -->
+   <!-- 
+    <img src="./s1/mo.jpg" class="t0">
+    <img src="./s1/pc.jpg" class="t0">  -->
     <img src="./s1/logom.webp" class="logo" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
       <img src="./s1/logo.webp" class="logo" data-aos="zoom-in" data-aos-delay="0" v-else>
       <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-if="isMobile">
       <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="0" v-else>
 
-      <img src="./s1/stylem.webp" class="style" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
-      <img src="./s1/style.webp" class="style" data-aos="zoom-in" data-aos-delay="400" v-else>
+      <div class="style1">
+        <img src="./s1/style1.webp" data-aos="zoom-in" data-aos-delay="400">
+      </div>
 
    <!--  <img src="./s1/s1bg.jpg" class="bg" v-else> 
     <div class="txt">
@@ -25,6 +27,18 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
+
+.t0 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  pointer-events: none;
+  z-index: 9;
+  opacity: .0;
+}
 
 @keyframes op {
   50% {
@@ -43,7 +57,7 @@
   justify-content:center;
   align-items:center;
   height:sizem(605);
-  background: #00213e;
+  background: #bf0008;
   @media screen and (min-width: 768px) {
     height:100vh;
     max-height:size(1080);
@@ -57,29 +71,29 @@
 }
 .logo{width:sizem(120);margin: sizem(-140) 0 sizem(30) 0;position: relative;z-index: 99;
 }
-.style{
+.style1{
 position: absolute;
-width:100vw;
+width:sizem(290);
 height: auto;
-bottom:0;
-left: sizem(0);
-right: 0;
-top: auto;
+bottom:sizem(-57);
+left: sizem(-405);
 margin: 0;
+transform: rotate(97.5deg);
+transform-origin:100% 100%; // opacity: 0.5;
+img{width: 100%;}
 }
+
 
 @media screen and (min-width: 768px) {
 .t1{width:size(622);margin: size(20) size(700) size(0) 0;}
 .logo{width:size(631);margin: size(20) size(700) size(100) 0;}
-.style{
-  position: absolute;
-  width:auto;
-  height: 100vh;
-  top:size(0);
-  right: size(0);
-  left:auto;
-  bottom: 0;
-  rotate: 0deg;
+.style1{
+width:size(1120);
+bottom:size(-510);
+bottom:calc(50% + #{size(-510 - 540)});
+left:auto;
+right:size(-305);
+transform: rotate(0);
 }
 }
 
