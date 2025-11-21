@@ -27,8 +27,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#FFE780;
-$house-c2:#fff;
+$house-c1:#162783;
+$house-c2:#333;
 .displaynone{display: none;}
 .house {
    // height: auto;
@@ -44,7 +44,7 @@ $house-c2:#fff;
     width: 700px;
 
     .title {
-        font-size:2.5em;
+        font-size:1.8em;
         color: $house-c1;
         margin: 0 auto .5em auto;
     }
