@@ -13,8 +13,8 @@ export default {
     // line: "https://lin.ee/FTYKISC",
     caseName: caseName,
     houseInfos: [
-      /*   */  ["投資建設", "亞果遊艇集團"],
-        ["建照號碼", "銓興營造有限公司"],
+      /*   */  ["投資興建", "亞果遊艇集團"],
+        ["營造公司", "銓興營造有限公司"],
         ["建築設計", "許清俊建築師事務所"],
     ],
     gtmCode: ["GTM-0000000"], // 可放置多個
@@ -30,12 +30,12 @@ export default {
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
-          room_type: {
+       /*   room_type: {
         title: "需求房型",
         hold: "請選擇房型",
         option: ["兩房", "三房", "四房"],
         bypass:false,　
-      },
+      }, */
       budget: {
         title: "購屋預算",
         hold: "請選擇區間",
