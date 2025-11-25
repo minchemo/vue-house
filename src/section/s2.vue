@@ -1,7 +1,6 @@
 <template>
   <article class="s2" data-aos="fade" data-aos-delay="0">
     <div class="bg absolute" data-aos="fade" data-aos-delay="0"></div>
-    <div class="box absolute" data-aos="fade-left" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">壹念敦南，壹遇四維｜經典傳世</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">The Aesthetics of Silence </h3>

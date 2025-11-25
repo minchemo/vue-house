@@ -1,7 +1,5 @@
 <template>
   <article class="s9">
-    <div class="box1 absolute" data-aos="fade-up" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
-    <div class="box2 absolute" data-aos="fade-down" data-aos-delay="800"><img src="./s1/box.jpg" alt=""></div>
     <div class="txt">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">引風逐光，靜謐共生｜人性空間</h3>
       <h3 class="en" data-aos="fade-up" data-aos-delay="0">Free and Bright</h3>
@@ -18,7 +16,7 @@
         </SplideSlide>
       </Splide>
     </div>
-    <div class="bottomen absolute" data-aos="fade-up" data-aos-delay="0">The Aesthetics of Silence</div>
+  <!-- <div class="bottomen absolute" data-aos="fade-up" data-aos-delay="0">The Aesthetics of Silence</div> -->  
   </article>
 </template>
 
@@ -27,17 +25,17 @@
 @import "@/assets/style/function.scss";
 
 .s9 {
-  @apply w-full relative text-[#0c7494];
+  @apply w-full relative text-[#fff];
  // height: size(1336);
  /* background-image: url("@/section/s2/bg.jpg");
   background-size: cover; */
-  background: #FFF;
-  padding: sizem(80) 0 10em 0;
+//  background: #FFF;
+  padding: sizem(60) 0 0em 0;
   font-size: sizem(13);
   line-height: 1.7;
   font-weight: 600;
 @media screen and (min-width: 768px) {
-  padding: size(190) 0 15em 0;
+  padding: size(160) 0 4em 0;
   font-size: size(17);
 }
 .txt {margin:0 auto 3.5em;

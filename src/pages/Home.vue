@@ -21,20 +21,6 @@
     class="home relative bg-[#fff] overflow-hidden font-['Noto_Serif_TC',serif] pb-[64px] md:pb-0"
   >
   <div class="allbg">
-    <!-- bg內容想做成滾動視差 去符合 allbg 的高度-->
-  <div class="bg">
-    <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
-    <img class="wave" src="@/section/s1/wave.gif" alt="" srcset="" />
-    <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
-    <img class="wave" src="@/section/s1/wave.gif" alt="" srcset="" />
-    <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
-    <img class="wave" src="@/section/s1/wave.gif" alt="" srcset="" />
-    <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
-    <img class="wave" src="@/section/s1/wave.gif" alt="" srcset="" />
-    <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
-    <img class="wave" src="@/section/s1/wave.gif" alt="" srcset="" />
-    <img class="cloud" src="@/section/s1/cloud.gif" alt="" srcset="" />
-  </div>
   </div>
     <S1 />
     <S2 />
@@ -61,41 +47,18 @@ img {
 
 // .home {}
 .allbg{
-  position: absolute;
+  position: fixed;
   top: 0;left: 0;right: 0;bottom: 0;height: 100%;
-  background: url("@/section/s1/bg3.jpg") center top;
-  background-size: 270% auto;
+  background: url("@/section/s1/bg.jpg") center top;
+  background-size: 100% auto;
     @media screen and (min-width: 768px) {
-      background-size: 100% auto;
+      background-size: 50% auto;
     }
 
 img {
   width: 100%;
   height: auto;
 }
-  .bg{width: 100%;//height: 100%;
-  background: url("@/section/s1/bg.jpg") center top;
-  background-size: 270% auto;
-    transform: translateY(0); // 初始位置
-    transition: transform 0.2s ease-out; // 平滑過渡效果（可選）
-    @media screen and (min-width: 768px) {
-      background-size: 100% auto;
-    }
-  }
-    .cloud{position:relative;width: 378%;
-            mix-blend-mode: overlay;
-    @media screen and (min-width: 768px) {
-      width: 140%;
-    }
-    }
-    .wave {
-      position:relative;width: 1350%;height:216vw;
-      opacity: 0.6;object-fit:fill;
-      mix-blend-mode: overlay;
-    @media screen and (min-width: 768px) {
-      width: 500%;height:80vw;
-    }
-    }
 
 }
 .splide__pagination{
@@ -146,8 +109,16 @@ const config = ref({
 
 
 onMounted(() => {
-  let ticking = false; // 確保在一幀內只處理一次滾動事件
-  const allbg = document.querySelector(".allbg .bg");
+
+  window.onload = function () {
+    isLoading.value = false;
+    AOS.init({
+      offset: 0,
+      duration: 1500,
+    });
+  };
+ /* let ticking = false; // 確保在一幀內只處理一次滾動事件
+ // const allbg = document.querySelector(".allbg .bg");
 
   const handleScroll = () => {
     if (!ticking) {
@@ -165,17 +136,9 @@ onMounted(() => {
   // 綁定滾動事件
   window.addEventListener("scroll", handleScroll);
 
-  window.onload = function () {
-    isLoading.value = false;
-    AOS.init({
-      offset: 0,
-      duration: 1500,
-    });
-  };
-
   // 在組件卸載時清理事件
   onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
-  });
+  });*/
 });
 </script>

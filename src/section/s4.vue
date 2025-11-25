@@ -1,7 +1,6 @@
 <template>
   <article class="s4">
     <div class="bg absolute" data-aos="fade" data-aos-delay="0"></div>
-    <div class="box absolute" data-aos="fade-left" data-aos-delay="600"><img src="./s1/box.jpg" alt=""></div>
     <div class="box-w absolute"></div>
     <div class="txt">
     <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">對望遠企匯流國際，豐饒商圈盡在這裡</h4>

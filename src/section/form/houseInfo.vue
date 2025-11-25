@@ -43,7 +43,7 @@
     margin: 0 auto;
     padding: sizem(40) sizem(0) sizem(100) sizem(0);
     font-family: 'Noto Serif TC';
-    background: #30859966;
+  //  background: #30859966;
     @media screen and (min-width:768px) {
         // padding: size(116) size(0);
         padding: size(150) 0;

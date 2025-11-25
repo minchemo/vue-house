@@ -175,9 +175,9 @@
     gap: size(20);
 
     .contact-item {
-      background: #fff;
-      //border: 2px solid #FFF;
-      color: #1d536b;
+      //background: #fff;
+      border: 2px solid #FFF;
+      color:#FFF; //#1d536b;
       width: 100%;
       padding: 0 size(55);
       border-radius: size(0);
@@ -191,12 +191,13 @@
       gap: size(20);
 
       &:hover {
-        background-color: #36677f;
+        background-color: #09466466;
         color: #fff;
 
         img {
-          filter: brightness(1) invert(1);
-        }
+         filter: brightness(1) invert(1);
+       //   filter: invert(37%) sepia(18%) saturate(1106%) hue-rotate(155deg) brightness(94%) contrast(96%);
+ }
       }
 
       img {
@@ -204,8 +205,8 @@
         height: auto;
         max-height: size(27);
         // filter: brightness(1) invert(1);
-        filter: invert(37%) sepia(18%) saturate(1106%) hue-rotate(155deg) brightness(94%) contrast(96%);
-
+          filter: brightness(1) invert(1);
+        
         transition: all 0.5s;
       }
 
@@ -220,7 +221,7 @@
         border-right-width: 0px;
         color: #1d536b;
         @apply basis-2/3 ;
-        cursor:auto;
+        cursor:auto; background-color: #fff;
         &:hover {
           
         background-color: #fff;
@@ -229,10 +230,10 @@
       }
 
       &.googlemap {
-        background-color: #36677f;
+       // background-color: #36677f;
         color: #fff;
         border: 0;
-        //border: 1px solid #fff;
+        border: 2px solid #fff;
         gap: size(20);
         @apply basis-1/3 ;
 
@@ -242,7 +243,7 @@
         }
 
         &:hover {
-          background-color: #094664;
+          background-color: #09466466;
           color: #fff;
 
           img {
