@@ -8,7 +8,7 @@ export default {
   },
   address1: "", //按鈕區的--- 如空白會只呈現地址
   address2: "建案位置", //map點下確認的--- 如空白會顯示"導航地址"
-  address: "台北市大安區四維路226號",
+  address: "台北市大安區敦化南路二段126號",
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3615.250134968979!2d121.54527070000002!3d25.025584000000016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc32fad8cc5%3A0xb66cbc81bee5716d!2z5pWm5Y2X6Kmg5qW9!5e0!3m2!1szh-TW!2stw!4v1739850735373!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/XNbjLYhKi7yJqQ1q9",
