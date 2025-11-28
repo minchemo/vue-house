@@ -105,7 +105,7 @@
     line-height: 1.13;
     letter-spacing: 0.46em;
     text-indent: 0.46em;
-    font-weight: 300;z-index: 3;color: #FFF;margin-top:size(55);
+    font-weight: 300;z-index: 3;color: #FFF;margin-top:size(10);
     }
     .en2{ width: size(510);position: relative;z-index: 3;margin-top:size(22);mix-blend-mode: screen;}
     .en3{ width: size(510);position: relative;z-index: 3;margin-top:size(18);}
@@ -136,13 +136,13 @@
 
   .t1{position: relative;
     width: sizem(101);
-    margin-bottom: sizem(80);
+    margin-bottom: sizem(70);
     margin-top: sizem(-60);
     }
 
   .logo{
     position: relative;
-    width: sizem(222);
+    width: sizem(192);
     margin-bottom: sizem(20);
     margin-top: sizem(20);
   }  

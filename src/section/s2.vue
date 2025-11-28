@@ -127,7 +127,7 @@
     .txt{margin-left: 0;}
     .img{width: sizem(245);
       img{margin: sizem(26) 0 sizem(4) 0;
-      &:last-child{width:82%;}
+      &:last-child{width:98%;}
       }
     }
   
