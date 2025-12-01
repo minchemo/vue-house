@@ -41,7 +41,7 @@
   @media screen and (min-width: 768px) {
     height: 100vh;
     max-height: size(1130);
-    min-height: size(1130);
+    min-height: size(900);
     background-image: url("./s1/bg.png");
     font-size: size(50);
   }
@@ -72,7 +72,8 @@
 
     @media screen and (min-width: 768px) {
       left: size(106);
-      top: size(153);
+      // top: size(153);
+      top: calc(20% + #{size(153 - 1100 * .2)});
       width: size(188);
     }
   }
