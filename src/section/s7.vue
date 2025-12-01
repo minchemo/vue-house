@@ -5,7 +5,7 @@
     <div class="semicircle"></div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">歐洲設計獎團隊<br>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">歐洲設計獎團隊<br v-if="isMobile">
           形塑德式建築品味</h3>
         <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">Modern Design Aesthetics</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="600">
@@ -37,11 +37,11 @@
   @apply relative flex items-center justify-center bg-[#FAE3BF];
   width: 100%;
   height: auto;
-  padding: 11em 0 10em 0;
+  padding: 0em 0 10em 0;
   font-size: size(20);
-  gap: 4em;
+  gap: 2em;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
 
   .spot {
     position: absolute;
@@ -53,9 +53,10 @@
     pointer-events: none;
     z-index: 2;
   @media screen and (min-width: 768px) {
-    top: size(-520);
-    right:0;
-    width: size(760); }
+    top: size(-290);
+    right: size(-50);;
+    transform: rotate(0deg);
+    width: size(600); }
   }
 
   .semicircle {
@@ -77,8 +78,6 @@
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
-    width: size(590);
     flex-direction: column;
     text-align: justify;
     position: relative;
@@ -98,21 +97,19 @@
 
   .slider {
     margin: 0 0 0 0;
-    flex-basis: size(840);
-    width: size(840);
-    height: size(560);
+      height: size(844);
+    width: size(1500);
 
     .slide-item {
       @apply bg-cover;
-      flex-basis: size(840);
-      width: size(840);
-      height: size(560);
-
+      width: 100%;
+    flex-basis: size(1500);
+      height: size(844);
     }
 
     .splide__pagination {
-      right: calc(100% + 3em);
       justify-content: flex-end;
+      bottom: -2em;
     }
   }
 }
@@ -223,8 +220,9 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s4/1.jpg", import.meta.url).href,
-    caption: "斗六車站"
+    img: new URL("./s7/1.jpg", import.meta.url).href,
+    caption: "3D外觀模擬示意圖"
   },
 ]
 </script>
+

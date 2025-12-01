@@ -3,6 +3,15 @@
 
     <img src="./s3/spot.png" class="spot">
     <div class="semicircle"></div>
+    <img :src="currentData.en" class="en">
+    <div class="main">
+      <div class="txt">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200" v-html="currentData.title"></h3>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0" v-html="currentData.subtitle"></h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="600" v-html="currentData.desc"></p>
+        <img :src="currentData.t" alt="img" class="img" />
+      </div>
+    </div>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -10,19 +19,8 @@
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.en" class="en">
-          <div class="main">
-            <div class="txt">
-              <h3 class="title" data-aos="fade-up" data-aos-delay="200" v-html="img.title"></h3>
-              <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0" v-html="img.subtitle"></h4>
-              <p class="desc" data-aos="fade-up" data-aos-delay="600" v-html="img.desc"></p>
-              <img :src="img.t" alt="img" class="imgv" />
-            </div>
-          </div>
-          <div class="img">
-            <img :src="img.img" :alt="img.caption">
-            <span class="caption">{{ img.caption }}</span>
-          </div>
+          <img :src="img.img" :alt="img.caption">
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -39,13 +37,24 @@
   @apply relative flex items-center justify-center bg-[#ddd];
   width: 100%;
   height: auto;
-  padding: 0 0 10 0;
+  padding: 11em 0 10em 0;
   font-size: size(20);
   gap: 4em;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
+  .en{
+    position: absolute;
+    top: sizem(0);
+    left: sizem(0);
+    width:100%;
+    opacity: .53;
+  @media screen and (min-width: 768px) {
+    left: size(15);
+    width: size(910);
 
+  }
+  }
 
   .spot {
     position: absolute;
@@ -61,7 +70,7 @@
       left: auto;
       right: size(300);
       width: size(650);
-      transform: rotate(180deg);
+    transform: rotate(180deg);
     }
   }
 
@@ -72,7 +81,7 @@
     aspect-ratio: 1/1;
     pointer-events: none;
     width: sizem(600);
-    background: linear-gradient(180deg, #fbe4c000 45.90%, #ffdca566 100%);
+   background: linear-gradient(180deg, #fbe4c000 45.90%, #ffdca566 100%);
     border-radius: 50%;
     z-index: 1;
 
@@ -97,10 +106,10 @@
 
   .txt {
     // margin: auto auto 3vw auto;
-    padding: 2.5em 0 0 0;
+    padding:2.5em 0 0 0;
     text-align: center;
 
-
+    
     .subtitle {
       font-weight: 300;
       font-size: 1.8em;
@@ -109,14 +118,12 @@
       margin-bottom: 2em;
     }
 
-    img.imgv {
+    .img {
       margin-top: 4em;
       width: 100%;
-      height: auto;
-
-      @media screen and (min-width: 768px) {
-        width: 90%;
-      }
+    @media screen and (min-width: 768px) {
+      width: 90%;
+    }
     }
   }
 
@@ -124,45 +131,22 @@
 
   .slider {
     margin: 0 0 0 0;
-    flex-basis: 100%;
-    width: 100%;
-    height: 100%;
+    flex-basis: size(792);
+    width: size(792);
+    height: size(755);
 
     .slide-item {
       @apply bg-cover;
-    flex-basis: 100%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  padding:8em 0;
-img.en {
-    position: absolute;
-    top: sizem(0);
-    left: sizem(0);
-    height: auto;
-    width: 100%;
-    opacity: .53;
-
-    @media screen and (min-width: 768px) {
-      left: size(15);
-      width: size(910);
-
-    }
-  }
-  .img{
-    width: size(860);
-    height: size(755);}
+      flex-basis: size(792);
+      width: size(792);
+      height: size(755);
 
     }
 
     .splide__pagination {
-      right:0; left: 0;
-      bottom: 6em;
-      justify-content: center;
+      right: calc(100% - 3em);
+      bottom:-4em;
+      justify-content: flex-end;
     }
   }
 }
@@ -177,6 +161,7 @@ img.en {
   .s8 {
     @apply flex-col;
     height: auto;
+    padding: 0 0 2em;
     font-size: sizem(15);
     flex-wrap: nowrap;
     margin-bottom: 0em;
@@ -192,12 +177,11 @@ img.en {
     .txt {
       margin: 4em auto 2em;
       padding: 0;
-
-      .subtitle {
-        font-size: 1.3em;
-        letter-spacing: 0.25em;
-        margin-bottom: 1.5em;
-      }
+    .subtitle {
+      font-size: 1.3em;
+      letter-spacing: 0.25em;
+      margin-bottom: 1.5em;
+    }
     }
 
 
@@ -212,30 +196,24 @@ img.en {
       }
 
       .slide-item {
-        @apply bg-cover flex-col;
+        @apply bg-cover;
         flex-basis: auto;
-        padding: 0em 0;
-      //  height: sizem(295);
-
-      
-  .img{
-    width: sizem(335);
-    height: sizem(295);
+        height: sizem(295);
+        img{
+          width: 82%;
           display: block;
           margin: auto;
-        img{object-fit: contain;}
         }
-      }
 
-      .arrows {
-
-        .prev,
-        .next {
-          background-image: url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23666' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E");
-        }
       }
+  .arrows {
+    .prev,
+    .next {
+      background-image: url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23666' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") ;
     }
-
+  }
+    }
+    
   }
 }
 </style>
@@ -273,34 +251,34 @@ const imgs = [
   {
     title: "匠心建築 王正偉",
     subtitle: "城市策劃師 定義美學新風貌",
-    desc: isMobile ?
-      "擅長以國際視野融合在地紋理，<br>將生活美學注入建築量體之中。<br>從立面語彙到空間留白，<br>每一筆都兼具場域精神與當代感，<br>讓建築成為人與城市之間最柔軟的對話。" :
-      "擅長以國際視野融合在地紋理，將生活美學注入建築量體之中。<br>從立面語彙到空間留白，每一筆都兼具場域精神與當代感，<br>讓建築成為人與城市之間最柔軟的對話。",
+    desc: isMobile?
+    "擅長以國際視野融合在地紋理，<br>將生活美學注入建築量體之中。<br>從立面語彙到空間留白，<br>每一筆都兼具場域精神與當代感，<br>讓建築成為人與城市之間最柔軟的對話。":
+    "擅長以國際視野融合在地紋理，將生活美學注入建築量體之中。<br>從立面語彙到空間留白，每一筆都兼具場域精神與當代感，<br>讓建築成為人與城市之間最柔軟的對話。",
     en: new URL("./s8/en1.svg", import.meta.url).href,
     t: new URL("./s8/1.svg", import.meta.url).href,
-    img:  isMobile ?new URL("./s8/1m.webp", import.meta.url).href : new URL("./s8/1.webp", import.meta.url).href,
+    img: new URL("./s8/1.png", import.meta.url).href,
     caption: ""
   },
   {
     title: "名品公設 集藝設計",
     subtitle: "以空間書寫生活故事/詹易儒",
-    desc: isMobile ?
-      "以人為本的空間設計，<br>帶入經典美學質材與考量實用功能，<br>打造出具有生命力的風格場域，<br>讓空間活出居者專屬的生活品味。<br> <br>" :
-      "以人為本的空間設計，帶入經典美學質材與考量實用功能，<br>打造出具有生命力的風格場域，<br>讓空間活出居者專屬的生活品味。",
+    desc: isMobile?
+    "以人為本的空間設計，<br>帶入經典美學質材與考量實用功能，<br>打造出具有生命力的風格場域，<br>讓空間活出居者專屬的生活品味。<br> <br>":
+    "以人為本的空間設計，帶入經典美學質材與考量實用功能，<br>打造出具有生命力的風格場域，<br>讓空間活出居者專屬的生活品味。",
     en: new URL("./s8/en2.svg", import.meta.url).href,
     t: new URL("./s8/2.svg", import.meta.url).href,
-    img: new URL("./s8/2.webp", import.meta.url).href,
+    img: new URL("./s8/2.png", import.meta.url).href,
     caption: ""
   },
   {
     title: "景觀設計 綠點景觀",
     subtitle: "四季綠景策展人/施仁人",
-    desc: isMobile ?
-      "專注「藝術生活化、生活藝術化」理念，<br>將自然語彙注入城市肌理，<br>以綠意展演四季風景，風光水融入地景，<br>日常與綠意完美交融。<br> <br>" :
-      "專注「藝術生活化、生活藝術化」理念，<br>將自然語彙注入城市肌理，<br>以綠意展演四季風景，風光水融入地景，<br>日常與綠意完美交融。",
+    desc: isMobile?
+     "專注「藝術生活化、生活藝術化」理念，<br>將自然語彙注入城市肌理，<br>以綠意展演四季風景，風光水融入地景，<br>日常與綠意完美交融。<br> <br>":
+     "專注「藝術生活化、生活藝術化」理念，<br>將自然語彙注入城市肌理，<br>以綠意展演四季風景，風光水融入地景，<br>日常與綠意完美交融。",
     en: new URL("./s8/en3.svg", import.meta.url).href,
     t: new URL("./s8/3.svg", import.meta.url).href,
-    img: new URL("./s8/3.webp", import.meta.url).href,
+    img: new URL("./s8/3.png", import.meta.url).href,
     caption: ""
   },
 ]

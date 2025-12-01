@@ -40,7 +40,7 @@
   font-size: size(20);
   gap: 4em;
   flex-wrap: wrap;
-  overflow: hidden;
+  //overflow: hidden;
   //flex-direction:row-reverse;
 
   .spot {
@@ -52,7 +52,7 @@
     z-index: 2;
   @media screen and (min-width: 768px) {
     top: size(10);
-    left: 0;
+    left: 0;right: auto;
     width: size(420);
     
   }
@@ -196,7 +196,27 @@ const options = {
 const imgs = [
   {
     img: new URL("./s4/1.jpg", import.meta.url).href,
-    caption: "斗六車站"
+    caption: "台中超巨蛋/資料來源台中市政府"
+  },
+  {
+    img: new URL("./s4/2.jpg", import.meta.url).href,
+    caption: "水湳轉運中心/現場實景"
+  },
+  {
+    img: new URL("./s4/3.jpg", import.meta.url).href,
+    caption: "捷運橘線(機場線)/情境示意"
+  },
+  {
+    img: new URL("./s4/4.jpg", import.meta.url).href,
+    caption: "國際會展中心/現場實景"
+  },
+  {
+    img: new URL("./s4/5.jpg", import.meta.url).href,
+    caption: "台中綠美圖/現場實景"
+  },
+  {
+    img: new URL("./s4/6.jpg", import.meta.url).href,
+    caption: "流行影音中心/現場實景"
   },
 ]
 </script>

@@ -223,8 +223,28 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s4/1.jpg", import.meta.url).href,
-    caption: "斗六車站"
+    img: new URL("./s5/1.jpg", import.meta.url).href,
+    caption: "文華高中站/現場實景"
+  },
+  {
+    img: new URL("./s5/2.jpg", import.meta.url).href,
+    caption: "愛買水湳店/現場實景"
+  },
+  {
+    img: new URL("./s5/3.jpg", import.meta.url).href,
+    caption: "家樂福水湳店/現場實景"
+  },
+  {
+    img: new URL("./s5/4.jpg", import.meta.url).href,
+    caption: "中清路商圈/現場實景"
+  },
+  {
+    img: new URL("./s5/5.jpg", import.meta.url).href,
+    caption: "逢甲商圈/現場實景"
+  },
+  {
+    img: new URL("./s5/6.jpg", import.meta.url).href,
+    caption: "全聯/現場實景"
   },
 ]
 </script>

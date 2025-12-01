@@ -53,7 +53,7 @@
   .t0 {
     position: absolute;
     width: 100%;
-    top: -14vw;
+    top: 0;
     left: 0;
     pointer-events: none;
     z-index: 10;

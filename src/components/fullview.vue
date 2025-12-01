@@ -17,7 +17,7 @@
     background: #eee;
 
     > img {
-        height: 100%;
+       width: 100%;
         max-width: unset;
     //    background:url("@/section/s3/view.jpg") 50%;
     //    background-size: 100% auto;
@@ -31,6 +31,7 @@
         overflow: hidden;
 
         img {
+       width: auto;
             height: 100%;
         }
 

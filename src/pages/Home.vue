@@ -170,7 +170,7 @@ img {
     @apply absolute flex justify-center w-full;
     bottom: 0;
     gap: 1.2em;
-    color: #fff;
+    color: #E0AB57;
 
     li {
       button {

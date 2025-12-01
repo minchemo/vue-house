@@ -155,6 +155,11 @@
     justify-content: center;
     flex-wrap: wrap;
     z-index: 3;
+      font-size: sizem(17);
+      @media screen and (min-width: 768px) {
+        
+        font-size: size(30);
+      }
 
     div {
       position: relative;
@@ -186,22 +191,18 @@
       position: relative;
       z-index: 2;
       font-weight: 700;
-      font-size: sizem(17);
       margin-bottom: .3em;
-
       @media screen and (min-width: 768px) {
         margin-bottom: .6em;
-        font-size: size(30);
       }
     }
 
     .t {
       position: relative;
       z-index: 2;
-      height: sizem(26);
+      height: 1.6em;
 
       @media screen and (min-width: 768px) {
-        font-size: size(50);
       }
     }
   }

@@ -1,6 +1,5 @@
 <template>
   <article class="s6" ref="s6">
-    <img src="./s3/spot.png" class="spot">
     <div class="semicircle"></div>
     <div class="main">
       <div class="txt">
@@ -40,7 +39,7 @@
   font-size: size(20);
   gap: 4em;
   flex-wrap: wrap;
-  overflow: hidden;
+  //overflow: hidden;
   //flex-direction:row-reverse;
 
   .spot {
@@ -195,8 +194,28 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s4/1.jpg", import.meta.url).href,
-    caption: "斗六車站"
+    img: new URL("./s6/1.jpg", import.meta.url).href,
+    caption: "子曰幼兒園/現場實景"
+  },
+  {
+    img: new URL("./s6/2.jpg", import.meta.url).href,
+    caption: "大鵬國小/現場實景"
+  },
+  {
+    img: new URL("./s6/3.jpg", import.meta.url).href,
+    caption: "大德國中/現場實景"
+  },
+  {
+    img: new URL("./s6/4.jpg", import.meta.url).href,
+    caption: "中央公園/現場實景"
+  },
+  {
+    img: new URL("./s6/5.jpg", import.meta.url).href,
+    caption: "中國醫大水湳校區/現場實景"
+  },
+  {
+    img: new URL("./s6/6.jpg", import.meta.url).href,
+    caption: "老樹公園/現場實景"
   },
 ]
 </script>

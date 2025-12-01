@@ -1,15 +1,19 @@
 <template>
-  <article class="s8" ref="s8">
+  <article class="s9" ref="s9">
 
     <img src="./s3/spot.png" class="spot">
-    <div class="semicircle"></div>
+    <div class="semicircle" v-if="!isMobile"></div>
+    <img src="./s9/en.svg" class="en">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">繁華捷運都心<br>
-          豐盛生活全就位</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">Life in Full Motion</h4>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200"><img src="./s9/icon.svg" alt="icon" class="icon" />麗寶集團✕麗盛建設</h3>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">深耕全台近半世紀硬實力</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          家門外的超市百貨，腳步可及的熱鬧商圈，採買、休閒等生活機能全部到位。捷運綠線與國道一號並行，無論日常通勤或遠行，都能從容出發。</p>
+          橫跨飯店、主題商場、不動產等多元領域，<br>
+近50年深厚建築實力，<br>
+自有甲級營造廠與精準選址眼光，<br>
+打造長住久安的理想宅。</p>
+<img src="./s9/img.svg" alt="img" class="img" />
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -33,15 +37,28 @@
 
 
 
-.s8 {
-  @apply relative flex items-center justify-center bg-[#FAE3BF];
+.s9 {
+  @apply relative flex items-center justify-center bg-[#E6E6E6];
   width: 100%;
   height: auto;
-  padding: 11em 0 10em 0;
+  padding: 11em 0 7em 0;
   font-size: size(20);
   gap: 4em;
   flex-wrap: wrap;
   flex-direction: row;
+  .en{
+    position: absolute;
+    top: sizem(0);
+    left: sizem(0);
+    width: 100%;
+    opacity: .53;
+    z-index: 2;
+  @media screen and (min-width: 768px) {
+    left: size(15);
+    width: size(910);
+
+  }
+  }
 
   .spot {
     position: absolute;
@@ -65,11 +82,11 @@
     aspect-ratio: 1/1;
     pointer-events: none;
     width: sizem(750);
-    background: linear-gradient(180deg, #de680866 0%, #DF6A0700 70%);
+    background: linear-gradient(180deg, #fff3 0%, #fff0 70%);
     border-radius: 50%;
     z-index: 1;
   @media screen and (min-width: 768px) {
-    top: size(-200);
+    top: size(-0);
     left: size(-777);
     width: size(1554);}
   }
@@ -88,10 +105,20 @@
   .txt {
     // margin: auto auto 3vw auto;
     padding: 0;
+    text-align: center;
+    .title {
+      .icon {
+        width: auto;
+        height: 1.4em;
+        margin-right:.3em;
+        vertical-align: middle;
+      }
+    }
 
     .subtitle {
       font-weight: 400;
     }
+.img{width: 100%;margin-top: 3em;}
   }
 
   // size(110)
@@ -111,8 +138,9 @@
     }
 
     .splide__pagination {
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left:0;
+      bottom: -3em;
+      justify-content:flex-start;
     }
   }
 }
@@ -124,7 +152,7 @@
 @media screen and (max-width: 767px) {
 
 
-  .s8 {
+  .s9 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -133,42 +161,21 @@
     margin-bottom: 0em;
     gap: 0em;
 
-    .img {
-      bottom: auto;
-      top: sizem(370);
-
-      .oo1 {
-        right: sizem(-260);
-        width: sizem(480);
-      }
-
-      .bubble1 {
-        right: sizem(-110);
-        width: sizem(250);
-        bottom: sizem(-35);
-      }
-
-      .g {
-        right: sizem(30);
-        width: sizem(100);
-        bottom: sizem(40);
-      }
-    }
-
-    .bubble2 {
-      left: sizem(130);
-      width: sizem(218);
-      top: sizem(-170);
-    }
 
     .main {
-      padding: 0 sizem(32.5);
+      padding: 0 sizem(10);
       width: 100%;
     }
 
     .txt {
       margin: 3em auto 2em;
       padding: 0 ;
+    .title {
+      margin: 0 -1em;
+    }
+    .subtitle {margin-bottom: 1.5em;
+    }
+.img{margin: 2em auto -1em auto;}
     }
 
 
@@ -223,8 +230,24 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s4/1.jpg", import.meta.url).href,
-    caption: "斗六車站"
+    img: new URL("./s9/1.jpg", import.meta.url).href,
+    caption: "麗寶 Outlet Mall"
+  },
+  {
+    img: new URL("./s9/2.jpg", import.meta.url).href,
+    caption: "福容大飯店"
+  },
+  {
+    img: new URL("./s9/3.jpg", import.meta.url).href,
+    caption: "麗盛大璽"
+  },
+  {
+    img: new URL("./s9/4.jpg", import.meta.url).href,
+    caption: "麗盛南京"
+  },
+  {
+    img: new URL("./s9/5.jpg", import.meta.url).href,
+    caption: "微笑歐洲"
   },
 ]
 </script>
