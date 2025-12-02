@@ -3,7 +3,7 @@
     <img src="./s3/spot.png" class="spot">
     <div class="semicircle"></div>
     <div class="txt">
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">十大關鍵價值登場 <br v-if="isMobile">台中置產最想解答</h3>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">十大關鍵價值登場 <br v-if="isMobile">台中置產最佳解答</h3>
     </div>
     <div class=" oall">
       <div>
