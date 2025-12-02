@@ -6,8 +6,8 @@ export default {
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
     address: "241新北市三重區吉祥街61號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.3413185411673!2d121.48696487635216!3d25.090304936020143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af2a4135146b%3A0xe3513a6e90931f61!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5ZCJ56Wl6KGXNjHomZ8!5e0!3m2!1szh-TW!2stw!4v1709622200235!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/Y9hqF78fVecC7fqx8",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3613.3579285003116!2d121.48823228576524!3d25.089742427027822!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af3158704313%3A0xb2be58c7f4e58f31!2z5b6u56yR5a-T5omA!5e0!3m2!1szh-TW!2stw!4v1764641768619!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/U2tLSCSNRj7fdrcU7",
     phone: "02-2855-9933",
     fbLink: "https://www.facebook.com/61556636163046",
     fbMessage: "https://m.me/61556636163046",
