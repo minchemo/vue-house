@@ -71,17 +71,17 @@ export default {
             offsetmo: "0",
         },{
             name: "巨好機能",
-            target: ".s5",
+            target: ".s4",
             offset: "-60",
             offsetmo: "0",
         },{
             name: "建築鉅作",
-            target: ".s6",
+            target: ".s7",
             offset: "-60",
             offsetmo: "0",
         },{
             name: "麗寶集團",
-            target: ".s7",
+            target: ".s9",
             offset: "-60",
             offsetmo: "0",
         },{

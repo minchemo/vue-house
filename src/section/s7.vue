@@ -97,14 +97,14 @@
 
   .slider {
     margin: 0 0 0 0;
-      height: size(844);
+      height: size(1080);
     width: size(1500);
 
     .slide-item {
       @apply bg-cover;
       width: 100%;
     flex-basis: size(1500);
-      height: size(844);
+      height: size(1080);
     }
 
     .splide__pagination {
