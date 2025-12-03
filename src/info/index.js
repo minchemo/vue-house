@@ -1,11 +1,11 @@
 const caseName = "佳展建設"
 export default {
   caseid: "91184de3-cfb1-4bcc-8ca2-d91ef7142c5b",
-    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
-    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3671.102501250292!2d120.21575487603715!3d23.05670341505229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDAzJzI0LjEiTiAxMjDCsDEzJzA2LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1757579588157!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/5qWPKRUKT6wnM8aq8",
+    address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
+    address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
+    address: "臺南市安南區台江大道一段827號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.156179302903!2d120.21670199999998!3d23.0547351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e770066e5bc7f%3A0xfcd4753571942f0b!2z5L2z5bGV5a6J5ZKMIOaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1764729663548!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/h6hAZiikBa8qFf7f6",
     phone: "(06)262-8888",
     fbLink: "https://www.facebook.com/61578255539676/",
     fbMessage: "https://m.me/61578255539676/",
