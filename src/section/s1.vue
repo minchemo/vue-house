@@ -2,7 +2,7 @@
   <article class="s1 font-[Amiri,serif,'Noto_Serif_TC']" id="s1">
    <!-- <img src="./s1/mo.jpg" class="t0">  -->
     <div class="txt">
-      <div class="t1" data-aos="fade-right" data-aos-delay="0">市心<b>2</b>字頭<img src="./s1/logo.svg" class="logo" data-aos="fade-right" data-aos-delay="200" /></div>
+      <div class="t1" data-aos="fade-right" data-aos-delay="0"><!-- 市心<b>2</b>字頭  --><img src="./s1/logo.svg" class="logo" data-aos="fade-right" data-aos-delay="200" /></div>
       <div class="t2" data-aos="fade-right" data-aos-delay="400">全聯當鄰居<b>2-4</b>房&ensp;北外環<b>5</b><span>分鐘</span></div>
       <div class="t3" data-aos="fade-right" data-aos-delay="600">THE LANDMARK<span>262-8888</span></div>
   </div>
@@ -62,7 +62,7 @@ font-size: 4.4em;
  }
  .logo{display: block;width: 2.52em;margin: -.1em -.1em auto .0em;
   @media screen and (min-width: 768px) {
-    display: inline-block;width: 2.52em;margin: -.3em -.1em auto .36em;}
+    display: inline-block;width: 2.52em;margin: -.3em -.1em auto .0em;}
 }
  .t2{font-size: 2em;letter-spacing: -.04em;margin:.7em auto auto auto;
   b{font-size: 1.2em;margin: auto .0em auto .08em;vertical-align: -.03em;}
