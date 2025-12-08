@@ -200,7 +200,7 @@ const imgs = [
   },
   {
     img: new URL("./s4/2.jpg", import.meta.url).href,
-    caption: "水湳轉運中心/現場實景"
+    caption: "水湳轉運中心/現場實景經合成示意"
   },
   {
     img: new URL("./s4/3.jpg", import.meta.url).href,
