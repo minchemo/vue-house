@@ -66,7 +66,7 @@ export default {
             offsetmo: "0",
         },{
             name: "10大看點",
-            target: ".s4",
+            target: ".s3",
             offset: "-60",
             offsetmo: "0",
         },{
