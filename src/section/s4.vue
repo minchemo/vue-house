@@ -50,12 +50,14 @@
     width: sizem(188);
     pointer-events: none;
     z-index: 2;
-  @media screen and (min-width: 768px) {
-    top: size(10);
-    left: 0;right: auto;
-    width: size(420);
-    
-  }
+
+    @media screen and (min-width: 768px) {
+      top: size(10);
+      left: 0;
+      right: auto;
+      width: size(420);
+
+    }
   }
 
   .semicircle {
@@ -68,11 +70,12 @@
     background: linear-gradient(180deg, #de680866 0%, #DF6A0700 70%);
     border-radius: 50%;
     z-index: 1;
-  @media screen and (min-width: 768px) {
-    top: 0;
-    right: size(-777);
-    width: size(1554);
-  }
+
+    @media screen and (min-width: 768px) {
+      top: 0;
+      right: size(-777);
+      width: size(1554);
+    }
   }
 
   .main {
@@ -107,6 +110,16 @@
       flex-basis: size(840);
       width: size(840);
       height: size(560);
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #00000040;
+        pointer-events: none;
+      }
 
     }
 
