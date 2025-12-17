@@ -10,7 +10,6 @@
 
     <img src="./s1/img.svg" class="img" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/t2.png" class="t3" data-aos="fade-up" data-aos-delay="800">
-    <img src="./s1/bg.png" class="t4" data-aos="" data-aos-delay="0">
   </article>
 </template>
 
@@ -80,13 +79,13 @@ mix-blend-mode: overlay;opacity: .8;
     right: size(-200);
     margin: auto;
     width: size(560);
-    top: calc(50% - #{size(300)});
+    top: calc(50% - #{size(500)});
     filter: drop-shadow(size(10) size(12) size(10) #000C);
 
     @media screen and (max-width: 767px) {
       right: sizem(-30);
       width: sizem(165);
-      top: calc(50% - #{sizem(180)});
+      top: calc(50% - #{sizem(280)});
       filter: drop-shadow(sizem(5) sizem(6) sizem(5) #000C);
     }
   }
@@ -127,25 +126,7 @@ mix-blend-mode: overlay;opacity: .8;
     }
   }
 
-  //人臉
-
-  .t4 {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    margin: auto;
-    width: size(1920);
-    top: 0;
-
-    @media screen and (max-width: 767px) {
-      left: 0;
-      right: 0;
-      width: sizem(270);
-      top: calc(50% - #{sizem(100)});
-    }
-  }
-
-  //bg
+  //人臉  
 
   @keyframes ann {
     to {
