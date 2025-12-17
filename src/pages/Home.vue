@@ -10,7 +10,7 @@
     <img class="w-32" src="//h35.banner.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-   <Nav v-if="info.navList.length > 0" />
+  <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_sans_tc',sans-serif] bg-[#ECE7E2]">
     <S1 />
     <S4 />
@@ -18,7 +18,7 @@
     <S2 />
     <S5 />
     <S6 />
-   <!--
+    <!--
    <S2 />
     <S3 />
      <S2v />
@@ -47,10 +47,18 @@
 
 @keyframes an1 {
   to {
-     transform:scale(1);opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
-.oq{position: absolute;top: 0;left: 0;width: 0;}
+
+.oq {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+}
+
 /*
   .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
     span{
@@ -66,10 +74,13 @@
   */
 
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.2s;
 }
-.fade-enter, .fade-leave-to {
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 
