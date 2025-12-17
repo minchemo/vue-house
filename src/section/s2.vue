@@ -1,5 +1,3 @@
-
-
 <template>
   <article class="s2">
     <div class="bg">
@@ -10,7 +8,7 @@
       <div class="txt">
         <p class="desc" data-aos="fade-left" data-aos-delay="0">區內5大主題公園，讓自然成為日常生活的一部分</p>
       </div>
-        <img src="./s2/en.svg" class="en" data-aos="fade-left" data-aos-delay="500">
+      <img src="./s2/en.svg" class="en" data-aos="fade-left" data-aos-delay="500">
     </div>
 
   </article>
@@ -20,26 +18,34 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden flex  justify-center text-[#FFF];
+  @apply relative overflow-hidden flex justify-center text-[#FFF];
   min-height: size(1080);
   max-height: size(1080);
   background: #65632A;
   width: 100%;
-  height:auto;
+  height: auto;
   //padding:7em 0 7em 0;
-  font-size:size(32);
-  gap:4.4em;
+  font-size: size(32);
+  gap: 4.4em;
   flex-direction: row;
-  align-items:stretch;
+  align-items: stretch;
   flex-wrap: wrap;
   align-content: flex-end;
   justify-content: flex-end;
 
 
 
-  .bg{overflow: hidden;width: 100%;height: 100%;position: absolute;
-  .bg1{width: 100%;height: 100%;}
-}
+  .bg {
+    overflow: hidden;
+    width: 100%;
+    height: 65%;
+    position: absolute;
+
+    .bg1 {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
 
   .main {
@@ -47,23 +53,39 @@
     position: relative;
     padding-right: size(30);
     padding-bottom: size(50);
-    .txt{text-align: justify}
 
-   .en{width: size(680);
-       z-index: 99;
+    .txt {
+      text-align: justify
+    }
+
+    .en {
+      width: size(680);
+      z-index: 99;
       position: relative;
-      margin-top: size(50)} 
-}
+      margin-top: size(50)
+    }
+  }
+
   .timg {
     @apply flex;
-  flex-direction: column;
+    flex-direction: column;
     width: size(735);
-    height: auto;margin:.5em 0;
-    text-align: center;justify-content:space-between;
-    .t2{width: size(735);}
-    .t3{width: size(588);margin:auto auto 0;}
+    height: auto;
+    margin: .5em 0;
+    text-align: center;
+    justify-content: space-between;
+
+    .t2 {
+      width: size(735);
+    }
+
+    .t3 {
+      width: size(588);
+      margin: auto auto 0;
+    }
   }
 }
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -71,37 +93,47 @@
 @media screen and (max-width: 767px) {
 
   .s2 {
-  height: calc(100vh - 63px);
-  min-height: sizem(604);
-  max-height: sizem(700);
-  padding:1em 0;
-  font-size:sizem(14);
-  margin-bottom:0em;
-  gap:0;
-  flex-direction: row;
-  align-items:stretch;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  justify-content: flex-end;
+    height: calc(100vh - 63px);
+    min-height: sizem(604);
+    max-height: sizem(700);
+    padding: 1em 0;
+    font-size: sizem(14);
+    margin-bottom: 0em;
+    gap: 0;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: flex-end;
 
 
-  .bg{overflow: hidden;width: 100%; position: absolute; height: auto; top: sizem(30);
-  .bg1{width: 100%;}
-}
+    .bg {
+      overflow: hidden;
+      width: 100%;
+      position: absolute;
+      height: auto;
+      top: sizem(30);
 
-  .main {
-    width: auto;
-    padding-right: sizem(30);
-    padding-bottom: sizem(10);
-    text-align: right;
+      .bg1 {
+        width: 100%;
+      }
+    }
+
+    .main {
+      width: auto;
+      padding-right: sizem(30);
+      padding-bottom: sizem(10);
+      text-align: right;
 
       .txt {
-    line-height: 2.3;
-  }
+        line-height: 2.3;
+      }
 
-  .en{width: sizem(300);}
-}
-    
+      .en {
+        width: sizem(300);
+      }
+    }
+
 
 
 
@@ -144,4 +176,3 @@ const imgs = [
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
-
