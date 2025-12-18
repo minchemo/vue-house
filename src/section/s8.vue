@@ -17,7 +17,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s7 {
+.s8 {
     @apply relative overflow-hidden flex justify-center text-[#FFF];
     min-height: size(1080);
     max-height: size(1080);
