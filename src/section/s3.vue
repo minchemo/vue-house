@@ -6,7 +6,7 @@
     </div>
     <div class="main">
       <div class="txt">
-        <p class="desc" data-aos="fade-left" data-aos-delay="0">鄰近國道及主要幹道，快速通勤，暢行無阻<br>桃捷綠線G09，散步就到</p>
+        <p class="desc" data-aos="fade-left" data-aos-delay="0">鄰近國道及主要幹道，快速通勤，暢行無阻</p>
       </div>
       <img src="./s3/en.svg" class="en" data-aos="fade-left" data-aos-delay="500">
     </div>

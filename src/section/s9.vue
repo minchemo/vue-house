@@ -1,15 +1,13 @@
 <template>
-    <article class="s7">
-        <div class="bg">
-            <img src="./s7/s71_img.png" class="bg1" v-if="!isMobile">
-            <img src="./s7/bgm.webp" class="bg1" v-else>
-        </div>
+    <article class="s9">
         <div class="main">
-            <div class="txt">
-                <p class="desc" data-aos="fade-left" data-aos-delay="0">桃捷綠線G09,散步就到</p>
-            </div>
-            <img src="./s7/s7-txt-convenient.svg" class="en" data-aos="fade-left" data-aos-delay="500">
+            <img src="./s9/s92_finger.svg" class="en" data-aos="zoom-in" data-aos-delay="500">
         </div>
+        <div class="bg">
+            <img src="./s9/s91_map.png" class="bg1" v-if="!isMobile">
+            <img src="./s9/bgm.webp" class="bg1" v-else>
+        </div>
+
 
     </article>
 </template>
@@ -17,7 +15,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s7 {
+.s9 {
     @apply relative overflow-hidden flex justify-center text-[#FFF];
     min-height: size(1080);
     max-height: size(1080);
@@ -33,12 +31,10 @@
     align-content: flex-end;
     justify-content: flex-end;
 
-
-
     .bg {
         overflow: hidden;
         width: 100%;
-        height: 70%;
+        height: 100%;
         position: absolute;
 
         .bg1 {
@@ -54,15 +50,12 @@
         padding-right: size(30);
         padding-bottom: size(50);
 
-        .txt {
-            text-align: right;
-        }
-
         .en {
             width: size(680);
             z-index: 99;
             position: relative;
-            margin-top: size(50)
+            right: 420px;
+            top: size(-350)
         }
     }
 
@@ -92,7 +85,7 @@
 
 @media screen and (max-width: 767px) {
 
-    .s7 {
+    .s9 {
         height: calc(100vh - 33px);
         min-height: sizem(604);
         max-height: sizem(700);
@@ -128,6 +121,8 @@
             .txt {
                 line-height: 2.3;
             }
+
+            .map-mask {}
 
             .en {
                 width: sizem(300);
