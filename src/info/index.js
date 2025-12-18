@@ -10,7 +10,7 @@ export default {
     address: "桃園市桃園區大仁路50巷17號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d904.2043117493027!2d121.32188136965512!3d24.972331714343376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f19115d0bf5%3A0x600fd0878a3dc2a6!2z6bO05pel5LmL5Z-OLeaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1735177430232!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/XV4WL3ZWX2AQP63Z7",
-    phone: "02-7754-2628",
+    phone: "02-2267-6789",
     fbLink: "https://www.facebook.com/61557529449820",
     fbMessage: "https://m.me/61557529449820",
     caseName: caseName,
