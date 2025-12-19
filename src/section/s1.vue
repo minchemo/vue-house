@@ -123,7 +123,7 @@ mix-blend-mode: overlay;opacity: .8;
     margin: auto;
     width: size(1400);
     //top: calc(50% - #{size(200)});
-    top: size(365);
+    top: size(250);
 
     @media screen and (max-width: 767px) {
       left: 0;

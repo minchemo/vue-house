@@ -1,8 +1,5 @@
 <template>
     <article class="s9">
-        <div class="main">
-            <img src="./s9/s92_finger.svg" class="en" data-aos="zoom-in" data-aos-delay="500">
-        </div>
         <div class="bg">
             <img src="./s9/s91_map.png" class="bg1" v-if="!isMobile">
             <img src="./s9/bgm.webp" class="bg1" v-else>

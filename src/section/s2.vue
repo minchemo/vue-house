@@ -38,7 +38,7 @@
   .bg {
     overflow: hidden;
     width: 100%;
-    height: 65%;
+    height: 100%;
     position: absolute;
 
     .bg1 {
