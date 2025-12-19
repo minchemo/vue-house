@@ -1,17 +1,6 @@
 <template>
-  <article class="s10">
-
-    <div class="main">
-      <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">公設饗宴</h3>
-        <img class="en" src="./s10/en.svg">
-      </div>
-    </div>
+  <article class="s12">
     <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
           <span class="caption">{{ img.caption }}</span>
@@ -25,13 +14,13 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s10 {
+.s12 {
   @apply relative flex flex-col items-center justify-center;
   width: 100%;
-  background: url("@/section/s10/bg.webp") 50%;
+  background: url("@/section/s12/bg.webp") 50%;
   background-size: cover;
   // height: size(800);
-  padding: 0 0 7em 0;
+  padding: 0 0 0 0;
   font-size: size(18);
   gap: 1.5em;
   flex-wrap: nowrap;
@@ -160,12 +149,7 @@
         }
       }
     }
-
-
   }
-
-
-
 }
 
 /* 螢幕尺寸標準 */
@@ -174,7 +158,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s6 {
+  .s12 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -294,20 +278,20 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s10/1.png", import.meta.url).href,
-    caption: "迎賓大廳現場實景拍攝"
+    img: new URL("./s12/s12-1.png", import.meta.url).href,
+    caption: "家具配置參考"
   },
   {
-    img: new URL("./s10/2.png", import.meta.url).href,
-    caption: "信箱區現場實景拍攝"
+    img: new URL("./s12/s12-2.png", import.meta.url).href,
+    caption: "實品屋實景拍攝"
   },
   {
-    img: new URL("./s10/3.png", import.meta.url).href,
-    caption: "後門聽現場實景拍攝"
+    img: new URL("./s12/s12-3.png", import.meta.url).href,
+    caption: "實品屋實景拍攝"
   },
   {
-    img: new URL("./s10/4.png", import.meta.url).href,
-    caption: "健身房現場實景拍攝"
+    img: new URL("./s12/s12-4.png", import.meta.url).href,
+    caption: "實品屋實景拍攝"
   },
 ]
 /*
