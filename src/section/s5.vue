@@ -2,7 +2,7 @@
     <article class="s5">
         <div class="s5bg">
             <img src="./s5/s51_img.png" class="s5bg " v-if="!isMobile">
-            <img src="./s5/bgm.webp" class="bg5" v-else>
+            <img src="./s5/s51_m.png" class="bg5" v-else>
         </div>
         <div class="s5-main">
             <img src="./s5/s52_txt.svg" class="en" data-aos="fade-left" data-aos-delay="500">
@@ -34,6 +34,7 @@
         overflow: hidden;
         width: 100%;
         height: 100%;
+        padding-bottom: 32vw;
         position: absolute;
 
         .bg5 {
@@ -54,7 +55,7 @@
         }
 
         .en {
-            width: size(680);
+            width: 60vw;
             z-index: 99;
             position: relative;
             margin-top: size(50)

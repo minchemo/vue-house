@@ -19,11 +19,9 @@
 
 .s3 {
   @apply relative overflow-hidden flex justify-center text-[#FFF];
-  min-height: size(1080);
-  max-height: size(1080);
   background: #936101;
   width: 100%;
-  height: auto;
+  height: calc(100vh - 300px);
   //padding:7em 0 7em 0;
   font-size: size(32);
   gap: 4.4em;
@@ -47,10 +45,10 @@
 
 
   .main {
-    margin: auto 0;
+    margin: 0 0;
     position: relative;
     padding-right: size(30);
-    padding-bottom: size(50);
+    padding-top: 2vw;
 
     .txt {
       text-align: justify;
@@ -61,7 +59,7 @@
       width: size(687);
       z-index: 99;
       position: relative;
-      margin-top: size(50)
+      margin-top: size(10)
     }
   }
 
@@ -95,7 +93,7 @@
     height: calc(100vh - 63px);
     min-height: sizem(604);
     max-height: sizem(700);
-    padding: 1em 0;
+    padding: 0;
     font-size: sizem(14);
     margin-bottom: 0em;
     gap: 0;
@@ -109,9 +107,10 @@
     .bg {
       overflow: hidden;
       width: 100%;
-      position: absolute;
-      height: auto;
-      top: sizem(30);
+      position: relative;
+      //height: auto;
+      height: 450px;
+      top: -48vw;
 
       .bg1 {
         width: 100%;
@@ -121,8 +120,9 @@
     .main {
       width: auto;
       padding-right: sizem(30);
-      padding-bottom: sizem(10);
+      padding-bottom: sizem(2);
       text-align: right;
+      top: -22vw;
 
       .txt {
         line-height: 2.3;

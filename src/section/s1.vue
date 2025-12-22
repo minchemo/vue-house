@@ -1,11 +1,14 @@
 <template>
   <article class="s1" id="s1">
 
-    <img src="" class="t1" data-aos="flip-down" data-aos-delay="400">
-    <img src="./s1/t1.png" class="img" data-aos="flip-down" data-aos-delay="800" v-if="isMobile">
+    <img src="./s1/t11.png" class="t0" data-aos="flip-down" data-aos-delay="400">
+    <img src="" class="t0" data-aos="flip-down" data-aos-delay="800" v-if="isMobile">
+    <img src="./s1/t11.png" class="t1" data-aos="flip-down" data-aos-delay="400" v-else>
+
+    <img src="./s1/t12m.svg" class="t1" data-aos="flip-down" data-aos-delay="800" v-if="isMobile">
     <img src="./s1/t12.svg" class="t1" data-aos="flip-down" data-aos-delay="400" v-else>
 
-    <img src="./s1/bg.png" class="t2" data-aos="flip-down" data-aos-delay="400" v-if="isMobile">
+    <img src="" class="t2" data-aos="flip-down" data-aos-delay="400" v-if="isMobile">
     <img src="./s1/t1.png" class="t2" data-aos="flip-down" data-aos-delay="400" v-else>
 
     <img src="./s1/img.svg" class="img" data-aos="zoom-in" data-aos-delay="0">
@@ -37,7 +40,7 @@ mix-blend-mode: overlay;opacity: .8;
   //padding: size(20);
 
   @media screen and (max-width: 767px) {
-    height: calc(100vh);
+    height: sizem(375);
     min-height: sizem(50);
     max-height: sizem(667);
     font-size: sizem(15);
@@ -47,12 +50,20 @@ mix-blend-mode: overlay;opacity: .8;
 
   .t0 {
     position: absolute;
-    width: 100%;
-    top: 0vw;
-    left: 0;
-    pointer-events: none;
-    opacity: .0;
-    height: 100%;
+    z-index: 20;
+    left: -0.583333vw;
+    //right: 0;
+    margin: auto;
+    width: size(817);
+    //top: calc(50% - #{size(0)});
+    top: -0.75vw;
+    //top: calc(50% + #{size(600 - 1080 * .5)});
+
+    @media screen and (max-width: 767px) {
+      width: 64vw;
+      top: 0vw;
+      //top: calc(50% - #{sizem(40)});
+    }
   }
 
   .t1 {
@@ -67,8 +78,8 @@ mix-blend-mode: overlay;opacity: .8;
     //top: calc(50% + #{size(600 - 1080 * .5)});
 
     @media screen and (max-width: 767px) {
-      width: sizem(483);
-      top: calc(50% + #{sizem(600 - 604 * .5)});
+      width: 51vw;
+      top: calc(50% + 4vw);
       //top: calc(50% - #{sizem(40)});
     }
   }
@@ -88,9 +99,9 @@ mix-blend-mode: overlay;opacity: .8;
     //filter: drop-shadow(size(10) size(12) size(10) #000C);
 
     @media screen and (max-width: 767px) {
-      right: sizem(-30);
+      right: -90vw;
       width: sizem(165);
-      top: calc(50% - #{sizem(280)});
+      top: calc(50% - 25vw);
       filter: drop-shadow(sizem(5) sizem(6) sizem(5) #000C);
     }
   }
@@ -117,18 +128,18 @@ mix-blend-mode: overlay;opacity: .8;
 
   .t3 {
     position: absolute;
-    z-index: 7;
+    z-index: 20;
     //left: calc(50% - #{size(250)});
     left: size(500);
     margin: auto;
     width: size(1400);
-    top: calc(50% - #{size(290)});
+    top: calc(50% - 15vw);
 
     @media screen and (max-width: 767px) {
       left: 28vw;
       right: 0;
       width: sizem(270);
-      top: calc(50% - -46vmin);
+      top: calc(50% + 7vw);
     }
   }
 

@@ -23,7 +23,7 @@
   max-height: size(1080);
   background: #65632A;
   width: 100%;
-  height: auto;
+  height: 480px;
   //padding:7em 0 7em 0;
   font-size: size(32);
   gap: 4.4em;
@@ -32,14 +32,14 @@
   flex-wrap: wrap;
   align-content: flex-end;
   justify-content: flex-end;
-
-
+  padding: 0;
 
   .bg {
     overflow: hidden;
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
 
     .bg1 {
       width: 100%;
@@ -49,7 +49,7 @@
 
 
   .main {
-    margin: auto 0;
+    margin: 0;
     position: relative;
     padding-right: size(30);
     padding-bottom: size(50);
@@ -62,7 +62,7 @@
       width: size(680);
       z-index: 99;
       position: relative;
-      margin-top: size(50)
+      margin-top: 0;
     }
   }
 
