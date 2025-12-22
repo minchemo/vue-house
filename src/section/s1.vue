@@ -122,14 +122,13 @@ mix-blend-mode: overlay;opacity: .8;
     left: size(500);
     margin: auto;
     width: size(1400);
-    //top: calc(50% - #{size(200)});
-    top: size(250);
+    top: calc(50% - #{size(290)});
 
     @media screen and (max-width: 767px) {
-      left: 0;
+      left: 28vw;
       right: 0;
       width: sizem(270);
-      top: calc(50% - #{sizem(100)});
+      top: calc(50% - -46vmin);
     }
   }
 
