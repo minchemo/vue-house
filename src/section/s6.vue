@@ -4,7 +4,7 @@
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">公設饗宴</h3>
-        <img class="en" src="./s6/en.svg">
+        <img class="en" src="./s6/en60.svg">
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -63,7 +63,7 @@
     }
 
     .title {
-      font-size: 2em;
+      font-size: 3em;
       font-weight: 700;
     }
 
