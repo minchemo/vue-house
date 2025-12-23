@@ -6,9 +6,9 @@
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image -->
-      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="泰嘉拓真" srcset=""
+      <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="icon" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="泰嘉拓真" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="icon" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
 
       <!-- Custom Image -->

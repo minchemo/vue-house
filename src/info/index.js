@@ -2,9 +2,9 @@ const caseName = "快樂王國/理享城"
 
 export default {
     caseid: "1ee49fb7-53f3-47af-80bd-de96cfe7b21e",
-    address: "接待中心：新北市五股區成泰路三段516號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d903.2465631250577!2d121.4519698!3d25.1023267!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDA2JzA4LjIiTiAxMjHCsDI3JzA4LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1751442050376!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/SmqM2S9yH7ko7pPX8",
+    address: "新北市五股區成洲五路55號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1806.4954659605296!2d121.4516154!3d25.1021683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af513f2a7d9d%3A0x1b84702512f77a15!2zMjQ45paw5YyX5biC5LqU6IKh5Y2A5oiQ5rSy5LqU6LevNTXomZ8!5e0!3m2!1szh-TW!2stw!4v1766478007123!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/iB3ARqV6j2uXFPgeA",
     phone: "02-2295-3888",
     fbLink: "https://www.facebook.com/wl2.debang/",
     fbMessage: "https://m.me/wl2.debang/",
