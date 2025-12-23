@@ -1,10 +1,10 @@
 <template>
-  <article class="s12">
+  <article class="s7">
 
-    <div class="main" v-if="isMobile">
+    <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">兩房</h3>
-        <p class="subtitle" data-aos="fade-up" data-aos-delay="0">A2 32.17坪</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">公設饗宴</h3>
+        <img class="en" src="./s7/en60.svg">
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -25,13 +25,13 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s12 {
+.s7 {
   @apply relative flex flex-col items-center justify-center;
   width: 100%;
-  background: url("@/section/s12/bg.webp") 50%;
+  background: url("@/section/s7/bg.webp") 50%;
   background-size: cover;
   // height: size(800);
-  padding: 0;
+  padding: 0 0 7em 0;
   font-size: size(18);
   gap: 1.5em;
   flex-wrap: nowrap;
@@ -73,17 +73,18 @@
 
   }
 
-  
   .slider {
     @apply relative;
     margin: 0;
-    height: size(1080);
-    width: size(1920);
+    flex-basis: size(812);
+    height: size(812);
+    width: size(1682);
 
     .slide-item {
       @apply bg-cover;
       width: 100%;
-      height: size(1080);
+      flex-basis: size(1682);
+      height: size(812);
 
     }
 
@@ -173,7 +174,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s12 {
+  .s7 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -188,6 +189,8 @@
     }
 
     .txt {
+      padding-top: 2.2em;
+
       .title {
 
         &::after,
@@ -200,10 +203,6 @@
         font-size: 2em;
         font-weight: 700;
       }
-    .subtitle {
-      font-size: 1.8em;
-      font-weight: 700;
-    }
 
       .en {
         margin-top: sizem(10);
@@ -271,7 +270,6 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
 
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
@@ -298,38 +296,50 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s12/s12-1.jpg", import.meta.url).href,
-  // caption: "家具配置參考"
+    img: new URL("./s7/1.webp", import.meta.url).href,
+    caption: "迎賓大廳現場實景拍攝"
   },
   {
-    img: new URL("./s12/s12-2.jpg", import.meta.url).href,
-  //  caption: "實品屋實景拍攝"
+    img: new URL("./s7/2.webp", import.meta.url).href,
+    caption: "信箱區現場實景拍攝"
   },
   {
-    img: new URL("./s12/s12-3.jpg", import.meta.url).href,
- //   caption: "實品屋實景拍攝"
+    img: new URL("./s7/3.webp", import.meta.url).href,
+    caption: "後門聽現場實景拍攝"
   },
   {
-    img: new URL("./s12/s12-4.jpg", import.meta.url).href,
- //   caption: "實品屋實景拍攝"
+    img: new URL("./s7/4.webp", import.meta.url).href,
+    caption: "健身房現場實景拍攝"
+  },
+  {
+    img: new URL("./s7/5.webp", import.meta.url).href,
+    caption: "韻律室現場實景拍攝"
+  },
+  {
+    img: new URL("./s7/6.webp", import.meta.url).href,
+    caption: "撞球室現場實景拍攝"
+  },
+  {
+    img: new URL("./s7/7.webp", import.meta.url).href,
+    caption: "閱覽交誼廳現場實景拍攝"
   },
 ]
 /*
 const imgs = [
   {
-    img: getImg('s12/1'),
+    img: getImg('s7/1'),
     caption: "內湖 豁達達禮"
   },
   {
-    img: getImg('s12/2'),
+    img: getImg('s7/2'),
     caption: "林口 長耀PARK"
   },
   {
-    img: getImg('s12/3'),
+    img: getImg('s7/3'),
     caption: "林口 長耀初"
   },
   {
-    img: getImg('s12/4'),
+    img: getImg('s7/4'),
     caption: "林口 長耀里"
   },
 ]

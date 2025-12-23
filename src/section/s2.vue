@@ -1,88 +1,55 @@
 <template>
   <article class="s2">
-    <div class="bg">
-      <img src="./s2/bg.webp" class="bg1" v-if="!isMobile">
-      <img src="./s2/bgm.webp" class="bg1" v-else>
+    <!--   -->
+    <div class="txt">
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">桃園核心精華 小檜溪重劃區</h3>
+      <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">雙溪匯聚，五大主題公園，站前、中正藝文、大有三大商圈環抱</h4>
     </div>
-    <div class="main">
-      <div class="txt">
-        <p class="desc" data-aos="fade-left" data-aos-delay="0">區內5大主題公園，讓自然成為日常生活的一部分</p>
-      </div>
-      <img src="./s2/en.svg" class="en" data-aos="fade-left" data-aos-delay="500">
-    </div>
-
+    <Fullview />
+    <div class="caption">空拍實景美化圖</div>
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden flex justify-center text-[#FFF];
-  min-height: size(1080);
-  max-height: size(1080);
-  background: #65632A;
+  @apply relative overflow-hidden bg-[#005890] text-[#fff];
   width: 100%;
-  height: 480px;
-  //padding:7em 0 7em 0;
-  font-size: size(32);
-  gap: 4.4em;
-  flex-direction: row;
-  align-items: stretch;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  justify-content: flex-end;
-  padding: 0;
+  // height: size(1059);
+  font-size: size(20);
 
-  .bg {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-
-    .bg1 {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-
-  .main {
-    margin: 0;
-    position: relative;
-    padding-right: size(30);
-    padding-bottom: size(50);
-
-    .txt {
-      text-align: justify
-    }
-
-    .en {
-      width: size(680);
-      z-index: 99;
-      position: relative;
-      margin-top: 0;
-    }
-  }
-
-  .timg {
-    @apply flex;
-    flex-direction: column;
-    width: size(735);
-    height: auto;
-    margin: .5em 0;
+  .txt {
     text-align: center;
-    justify-content: space-between;
+    position: relative;
+    padding-top: 1.8em;
+    z-index: 10;
+    margin-bottom: -6.3em;
+    padding-bottom: 2.5em;
 
-    .t2 {
-      width: size(735);
+    .title {
+      font-size: 2em;
+      font-weight: 700;
     }
 
-    .t3 {
-      width: size(588);
-      margin: auto auto 0;
+    .subtitle {
+      font-size: 1.25em;
+      margin-top: .4em;
+      font-weight: 500;
     }
+  }
+
+  .viewbox {
+    z-index: 2;
+    margin: 0 0 -5vw 0;
+    top: -5vw;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: size(20);
+    left: size(20);
+    z-index: 3;
   }
 }
 
@@ -93,48 +60,30 @@
 @media screen and (max-width: 767px) {
 
   .s2 {
-    height: calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(700);
-    padding: 1em 0;
-    font-size: sizem(14);
-    margin-bottom: 0em;
-    gap: 0;
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    justify-content: flex-end;
+    // height: sizem(550);
+    font-size: sizem(15);
 
+    .txt {
+      //text-align: justify;
+      padding-top: 1.3em;
+      width: sizem(310);
+      margin: auto auto -9.5em auto;
 
-    .bg {
-      overflow: hidden;
-      width: 100%;
-      position: absolute;
-      height: auto;
-      top: sizem(30);
+      .title {
+        font-size: 1.5em;
+      }
 
-      .bg1 {
-        width: 100%;
+      .subtitle {
+        font-size: 1em;
+        font-weight: 400;
       }
     }
 
-    .main {
-      width: auto;
-      padding-right: sizem(30);
-      padding-bottom: sizem(10);
-      text-align: right;
-
-      .txt {
-        line-height: 2.3;
-      }
-
-      .en {
-        width: sizem(300);
-      }
+    .viewbox {
+      height: sizem(550);
+      margin: 0;
+      top: 0;
     }
-
-
 
 
   }
@@ -142,37 +91,8 @@
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
+import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+
 const isMobile = computed(() => globals.$isMobile());
-
-const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-  return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
-
-const splide = ref();
-
-const currentSlideIndex = ref(0);
-
-const moved = (newIdx, prevIdx, destIdx) => {
-  currentSlideIndex.value = prevIdx
-}
-
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
-const imgs = [
-  /*{
-    img:new URL("./s4/0.jpg", import.meta.url).href ,
-    caption: "中華西路接軌九份子重劃區、86快速道路"
-  },*/
-]
-const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>

@@ -1,6 +1,14 @@
 <template>
   <article class="s1" id="s1">
 
+     <img src="./s1/tl.jpg" class="tl" alt="tl">
+     <img src="./s1/br.png" class="br" alt="br">
+     <img src="./s1/leaf.png" class="leaf" alt="leaf">
+     <img src="./s1/logo.svg" class="logo" alt="logo">
+     <img src="./s1/t1.svg" class="t1" alt="t1">
+<!--
+    <img src="./s1/mo.jpg" class="t0">
+
     <img src="./s1/t11.png" class="t0" data-aos="flip-down" data-aos-delay="400">
     <img src="" class="t0" data-aos="flip-down" data-aos-delay="800" v-if="isMobile">
     <img src="./s1/t11.png" class="t1" data-aos="flip-down" data-aos-delay="400" v-else>
@@ -12,12 +20,17 @@
     <img src="./s1/t1.png" class="t2" data-aos="flip-down" data-aos-delay="400" v-else>
 
     <img src="./s1/img.svg" class="img" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/t2.png" class="t3" data-aos="fade-up" data-aos-delay="800">
+    <img src="./s1/t2.png" class="t3" data-aos="fade-up" data-aos-delay="800">  -->
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
+@keyframes an {
+ to {
+     transform: skewX(0)
+  }
+}
 
 /*
 @keyframes op {
@@ -40,14 +53,94 @@ mix-blend-mode: overlay;opacity: .8;
   //padding: size(20);
 
   @media screen and (max-width: 767px) {
-    height: sizem(375);
-    min-height: sizem(50);
-    max-height: sizem(667);
+    height: sizem(457);
+    min-height: sizem(457);
+    max-height: sizem(457);
     font-size: sizem(15);
     background: (#EFD3C5);
 
   }
 
+  .t0{position: absolute;
+    z-index: 20;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  }
+  .logo{
+    position: absolute;
+    z-index: 2;
+      width: sizem(205);
+      left: sizem(74);
+      top: sizem(128);
+
+    @media screen and (min-width: 768px) {
+    width: size(443);
+    left: size(578);
+    top: size(316);
+    }
+  }
+  .t1{
+    position: absolute;
+    z-index: 2;
+      width: sizem(219);
+      left: sizem(15);
+      top: sizem(246);
+
+    @media screen and (min-width: 768px) {
+    width: size(800);
+    left: size(214);
+    top: size(588);
+    }
+  }
+  .tl{
+    position: absolute;
+    z-index: 2;
+      width: sizem(191);
+    left: 0;
+    top: 0;
+      transform-origin: 50% 0;
+      transform: skewX(-5deg);
+      animation: an 3s linear alternate infinite;
+
+    @media screen and (min-width: 768px) {
+    width: size(760);
+    }
+  }
+  .br{
+    position: absolute;
+    z-index: 2;
+      width: sizem(215);
+    right: sizem(-90);
+    bottom: 0;
+   
+
+    @media screen and (min-width: 768px) {
+    width: size(800);
+    right: 0;
+    }
+  }
+  .leaf{
+    position: absolute;
+    z-index: 2;
+      width: sizem(280);
+      animation: an 3s linear alternate infinite;
+      transform: rotate(5deg);
+      transform-origin: 50% -10%;
+    left: sizem(10);
+    bottom: sizem(20);
+   
+
+    @media screen and (min-width: 768px) {
+    width: size(1012);
+    left: size(413);
+    bottom: size(0);
+    }
+  }
+/*
   .t0 {
     position: absolute;
     z-index: 20;
@@ -65,7 +158,8 @@ mix-blend-mode: overlay;opacity: .8;
       //top: calc(50% - #{sizem(40)});
     }
   }
-
+    
+  
   .t1 {
     position: absolute;
     z-index: 20;
@@ -145,11 +239,11 @@ mix-blend-mode: overlay;opacity: .8;
 
   //人臉  
 
-  @keyframes ann {
+  @keyframes ann { 
     to {
       transform: translateX(0%);
     }
-  }
+  }*/
 }
 </style>
 <script setup>

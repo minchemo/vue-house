@@ -1,5 +1,5 @@
 <template>
-  <article class="s8">
+  <article class="s12">
     <div class="slider" data-aos="fade">
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
@@ -14,10 +14,10 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s8 {
+.s12 {
   @apply relative flex flex-col items-center justify-center;
   width: 100%;
-  background: #C6E2E2;
+  background: url("@/section/s12/bg.webp") 50%;
   background-size: cover;
   // height: size(800);
   padding: 0 0 0 0;
@@ -64,16 +64,16 @@
 
   .slider {
     @apply relative;
-    margin: 0 0 0 0;
+    margin: 0;
     //flex-basis: size(812);
     height: size(812);
     width: 100%;
 
     .slide-item {
       @apply bg-cover;
-      width: 100%;
       //flex-basis: size(1682);
       height: size(812);
+      width: 100%;
 
     }
 
@@ -278,12 +278,40 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s8/s8-1.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s12/s12-1.png", import.meta.url).href,
+    caption: "家具配置參考"
   },
   {
-    img: new URL("./s8/s8-2.png", import.meta.url).href,
-    caption: " "
+    img: new URL("./s12/s12-2.png", import.meta.url).href,
+    caption: "實品屋實景拍攝"
   },
-] 
+  {
+    img: new URL("./s12/s12-3.png", import.meta.url).href,
+    caption: "實品屋實景拍攝"
+  },
+  {
+    img: new URL("./s12/s12-4.png", import.meta.url).href,
+    caption: "實品屋實景拍攝"
+  },
+]
+/*
+const imgs = [
+  {
+    img: getImg('s6/1'),
+    caption: "內湖 豁達達禮"
+  },
+  {
+    img: getImg('s6/2'),
+    caption: "林口 長耀PARK"
+  },
+  {
+    img: getImg('s6/3'),
+    caption: "林口 長耀初"
+  },
+  {
+    img: getImg('s6/4'),
+    caption: "林口 長耀里"
+  },
+]
+*/
 </script>

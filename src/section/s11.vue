@@ -1,6 +1,17 @@
 <template>
   <article class="s11">
+
+    <div class="main" v-if="isMobile">
+      <div class="txt">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">三房</h3>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="0">A3  46.67坪</p>
+      </div>
+    </div>
     <div class="slider" data-aos="fade">
+      <div class="arrows">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
           <span class="caption">{{ img.caption }}</span>
@@ -20,7 +31,7 @@
   background: url("@/section/s11/bg.webp") 50%;
   background-size: cover;
   // height: size(800);
-  padding: 0 0 0 0;
+  padding: 0;
   font-size: size(18);
   gap: 1.5em;
   flex-wrap: nowrap;
@@ -52,7 +63,11 @@
     }
 
     .title {
-      font-size: 2em;
+      font-size: 3em;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.8em;
       font-weight: 700;
     }
 
@@ -65,15 +80,13 @@
   .slider {
     @apply relative;
     margin: 0;
-    //flex-basis: size(812);
-    height: size(812);
-    width: 100%;
+    height: size(1080);
+    width: size(1920);
 
     .slide-item {
       @apply bg-cover;
       width: 100%;
-      //flex-basis: size(1682);
-      height: size(812);
+      height: size(1080);
 
     }
 
@@ -163,14 +176,14 @@
 
 @media screen and (max-width: 767px) {
 
-  .s6 {
+  .s11 {
     @apply flex-col;
     height: auto;
     padding: 0;
     font-size: sizem(12);
     flex-wrap: nowrap;
     margin-bottom: 0em;
-    gap: 2em;
+    gap: 0;
 
     .main {
       padding: 0 sizem(32.5);
@@ -257,6 +270,7 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
@@ -283,38 +297,38 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s11/s11-1.png", import.meta.url).href,
-    caption: "家具配置參考"
+    img: new URL("./s11/s11-1.jpg", import.meta.url).href,
+  //  caption: "家具配置參考"
   },
   {
-    img: new URL("./s11/s11-2.png", import.meta.url).href,
-    caption: "實品屋實景拍攝"
+    img: new URL("./s11/s11-2.jpg", import.meta.url).href,
+   // caption: "實品屋實景拍攝"
   },
   {
-    img: new URL("./s11/s11-3.png", import.meta.url).href,
-    caption: "實品屋實景拍攝"
+    img: new URL("./s11/s11-3.jpg", import.meta.url).href,
+  //  caption: "實品屋實景拍攝"
   },
   {
-    img: new URL("./s11/s11-4.png", import.meta.url).href,
-    caption: "實品屋實景拍攝"
+    img: new URL("./s11/s11-4.jpg", import.meta.url).href,
+   // caption: "實品屋實景拍攝"
   },
 ]
 /*
 const imgs = [
   {
-    img: getImg('s6/1'),
+    img: getImg('s11/1'),
     caption: "內湖 豁達達禮"
   },
   {
-    img: getImg('s6/2'),
+    img: getImg('s11/2'),
     caption: "林口 長耀PARK"
   },
   {
-    img: getImg('s6/3'),
+    img: getImg('s11/3'),
     caption: "林口 長耀初"
   },
   {
-    img: getImg('s6/4'),
+    img: getImg('s11/4'),
     caption: "林口 長耀里"
   },
 ]

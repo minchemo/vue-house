@@ -2,7 +2,8 @@
   <article class="s3">
     <div class="bg">
       <img src="./s3/bg.webp" class="bg1" v-if="!isMobile">
-      <img src="./s3/bgm.webp" class="bg1" v-else>
+      <img src="./s3/bgm.jpg" class="bg1" v-else>
+<div class="caption">示意圖僅供參考</div>
     </div>
     <div class="main">
       <div class="txt">
@@ -10,7 +11,6 @@
       </div>
       <img src="./s3/en.svg" class="en" data-aos="fade-left" data-aos-delay="500">
     </div>
-
   </article>
 </template>
 
@@ -21,10 +21,10 @@
   @apply relative overflow-hidden flex justify-center text-[#FFF];
   background: #936101;
   width: 100%;
-  height: calc(100vh - 300px);
+  height:size(1080);
   //padding:7em 0 7em 0;
   font-size: size(32);
-  gap: 4.4em;
+  gap: 0;
   flex-direction: row;
   align-items: stretch;
   flex-wrap: wrap;
@@ -42,13 +42,21 @@
       height: 100%;
     }
   }
+  .caption{
+    position: absolute;
+    bottom:0.5em;
+    right: .5em;
+    font-size: size(14);
+    color: #fff;
+    z-index: 99;
+  }
 
 
   .main {
     margin: 0 0;
     position: relative;
     padding-right: size(30);
-    padding-top: 2vw;
+    padding-bottom: 2vw;
 
     .txt {
       text-align: justify;
@@ -90,9 +98,12 @@
 @media screen and (max-width: 767px) {
 
   .s3 {
-    height: calc(100vh - 63px);
+   /*
+   height: calc(100vh - 63px);
     min-height: sizem(604);
     max-height: sizem(700);
+    */
+    height: auto;
     padding: 0;
     font-size: sizem(14);
     margin-bottom: 0em;
@@ -109,23 +120,28 @@
       width: 100%;
       position: relative;
       //height: auto;
-      height: 450px;
-      top: -48vw;
+      height: sizem(260);
+      top: 0;
 
       .bg1 {
         width: 100%;
       }
     }
+  .caption{
+    left:auto;
+    right: .5em;
+    font-size: sizem(12);
+  }
 
     .main {
       width: auto;
-      padding-right: sizem(30);
-      padding-bottom: sizem(2);
+      padding:sizem(30) sizem(20) sizem(50) 0;
       text-align: right;
-      top: -22vw;
+    //  top: -22vw;
 
       .txt {
         line-height: 2.3;
+        margin-bottom: 0em;
       }
 
       .en {
