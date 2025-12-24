@@ -1,20 +1,33 @@
 <template>
   <article class="s1" id="s1">
-    <img src="./s1/bgm.svg" class="bg" v-if="isMobile">
+    <img src="./s1/mo.jpg" class="t0" v-if="isMobile">
+    <img src="./s1/pc.jpg" class="t0" v-else>
+
+    <img src="./s1/tl.svg" class="tl" alt="tl">
+    <img src="./s1/slogo.svg" class="slogo" alt="logo">
+    <img src="./s1/logo.svg" class="logo" alt="logo">
+    <img src="./s1/t1.svg" class="t1" alt="t1">
+    <img src="./s1/t2.svg" class="t2" alt="t2">
+    <img src="./s1/t3.svg" class="t3" alt="t3">
+
+
+
+
+    <!--   <img src="./s1/bgm.svg" class="bg" v-if="isMobile">
     <img src="./s1/bg.svg" class="bg" v-else>
     <div class="txt">
       <img src="./s1/logo.svg" class="logo" alt="曼谷青玉" data-aos="zoom-in" data-aos-delay="0">
       <img src="./s1/t1.svg" class="t1" alt="曼谷新都心 置產新標地" data-aos="zoom-in" data-aos-delay="400">
       <div class="t2" data-aos="zoom-in" data-aos-delay="400"><span>7.5坪-15坪　室內輕裝</span><b>海外買房一站式服務</b></div>
     </div>
-   <!-- <img src="./s1/mo.jpg" class="t0">
+  <img src="./s1/mo.jpg" class="t0">
     <img src="./s1/mo.jpg" class="t0">
     <div class="txt">
       <div class="t1" data-aos="fade-right" data-aos-delay="0">市心<b>2</b>字頭<img src="./s1/logo.svg" class="logo" data-aos="fade-right" data-aos-delay="200" /></div>
       <div class="t2" data-aos="fade-right" data-aos-delay="400">日系選冊宅<b>2-4</b>房&ensp;北外環<b>5</b><span>分鐘</span></div>
       <div class="t3" data-aos="fade-right" data-aos-delay="600">THE LANDMARK<span>262-8888</span></div>
   </div>  -->
-     <!--  <div class="caption" data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200">佳展建設✕燿鴻廣告</div>
+    <!--  <div class="caption" data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200">佳展建設✕燿鴻廣告</div>
   <img src="./s1/img.webp" class="img" data-aos="fade-up" data-aos-delay="700" data-aos-offset="-200">  -->
   </article>
 </template>
@@ -24,40 +37,122 @@
 
 @keyframes op {
   50% {
-     opacity: 0;
+    opacity: 0;
   }
 }
+
 @keyframes an {
   to {
     transform: translateX(0%);
   }
 }
+
 .s1 {
-  @apply relative; 
+  @apply relative;
   display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   height:calc(100vh - #{sizem(63)});
-    max-height:sizem(770);
-    min-height:sizem(605);
-  //background: #d62051;
-  background: url("./s1/bgm.jpg") center;
-  background-size:cover ;
+  max-height: sizem(770);
+  min-height: sizem(605);
+  // background: #d62051;
+  // background: url("./s1/bgm.jpg") center;
+  background-size: cover;
   color: #FFF;
   font-size: sizem(14);
- 
+
   @media screen and (min-width: 768px) {
-    background-image: url("./s1/bg.jpg");
-    height:100vh;
-    max-height:size(1080);
-    min-height:size(900);
-  font-size: size(35);
+    // background-image: url("./s1/bg.jpg");
+    height: 100vh;
+    max-height: size(1080);
+    min-height: size(900);
+    font-size: size(35);
   }
+
   //background: #E60012;
-// padding-bottom: size(140);V
- // &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
- .t0{position: absolute; top: 0;left: 0;width: 100%;opacity: .0;}
+  // padding-bottom: size(140);V
+  // &::after{content: "";position: absolute;bottom: 0;height: 1px;width: size(1552);left: 0;right: 0;margin: auto;background: #0006;}
+  .t0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: .5;
+  }
+
+  .tl {
+    width: sizem(150);
+    position: absolute;
+    top:0;
+    left: 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(280);
+    }
+}
+
+  .slogo {
+    width: sizem(150);
+    position: absolute;
+    top:0;
+    right: 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(105);
+    top:size(52);
+    right:size(75);
+    }
+}
+  .logo {
+    width: sizem(150);
+    position: absolute;
+    top:0;
+    left: 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(398);
+    top:size(231);
+    left:size(355);
+    }
+}
+  .t1 {
+    width: sizem(150);
+    position: absolute;
+    top:0;
+    left: 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(610);
+    top:size(215);
+    left:size(775);
+    }
+}
+  .t2 {
+    width: sizem(150);
+    position: absolute;
+    top:0;
+    left: 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(895);
+    top:size(382);
+    left:size(338);
+    }
+}
+  .t3 {
+    width: sizem(150);
+    position: absolute;
+    top:0;
+    left: 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(370);
+    top:size(655);
+    left:size(590);
+    }
+}
+    /*
  .bg{position: absolute; top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;pointer-events: none;user-select: none;}
 
 .txt{font-weight: 500; line-height: 1.7;width: auto;position: relative;user-select: none;text-align: center;pointer-events: none;
@@ -81,8 +176,8 @@ padding:0;display: block;
   b{
     font-weight: 500;font-size: 1.37em;color: #EFEF92;letter-spacing: .01em;}
 }
-
-/*
+*/
+    /*
  .txt{font-weight: 500; line-height: 1.3;width: auto;position: relative;user-select: none;
   b{font-weight: 400;letter-spacing: 0;}
 }
@@ -121,11 +216,9 @@ font-size: 4.4em;
   }
 }
 */
-}
-
-</style>
+  }</style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref, inject } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
