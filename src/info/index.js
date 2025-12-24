@@ -1,12 +1,12 @@
-const caseName = "ChinLife"
+const caseName = "天好運3"
 export default {
   caseid: "9b21683f-e2b7-4cfa-a538-c5c713df2c47",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "VJ4F+3XJ อนุสาวรีย์ Anusawari, Bang Khen, Bangkok 10220泰國",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7747.4606763402335!2d100.62232227940933!3d13.855218699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d630001525237%3A0x75d850054ffce29f!2sChin%20Life%20Ramintra%20KM.4!5e0!3m2!1szh-TW!2stw!4v1759201771332!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/YU4xHJCycoM9Kfj79",
-    phone: "06-2916208",
+    address: "新北市土城區科技路29號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.1694022454835!2d121.41999857607709!3d24.960350441251833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ce9e58be8bf%3A0xe3f7bae02b2b2aa1!2zMjM25paw5YyX5biC5Zyf5Z-O5Yy656eR5oqA6LevMjnomZ8!5e0!3m2!1szh-TW!2stw!4v1766573085157!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/EwVuqbt5uoKZyk289",
+   // phone: "06-2916208",
     fbLink: "https://www.facebook.com/61581502310202/",
     fbMessage: "https://m.me/61581502310202/",
     line: "https://lin.ee/VOzO2Sx",
@@ -36,10 +36,16 @@ export default {
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["兩房","三房"],
+          //bypass:false,
+        },
         budget: {
           title: "購屋預算",
           hold: "請選擇區間",
-          option: ["300萬以下", "301萬-600萬", "601萬-1000萬", "1000萬以上"],
+          option: ["1000萬內", "1000-1500萬", "1500-2000萬"],
           //bypass:false,
         },
         //budget: {

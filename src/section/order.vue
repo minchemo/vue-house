@@ -1,7 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title font-['Noto_Serif_TC',serif] text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
       <!-- Form -->
@@ -83,9 +83,9 @@
       <!-- Send --><div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 700;
     line-height: 3.3;height:3.3em">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-  立即預約
+  送出表單
 </button>
-<div v-else class="send-load text-[#333]" style="letter-spacing: 0.7em;
+<div v-else class="send-load text-[#fff]" style="letter-spacing: 0.7em;
   text-indent: 0.9em;
   height:100%;">
   <svg
@@ -219,16 +219,17 @@ $o-title-c:#fff; //.order-title
   .send {
   font-size:20px;
     font-size:inherit;
-    background-color: #085C5C;
-    border: 1px solid #FFF;
-   // border:0;
+    background: linear-gradient(90deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%);
+
+    //border: 1px solid #FFF;
+    border:0;
   letter-spacing: 0.9em;
     text-indent: 0.9em;
     height:100%;
-    border-radius: .5em;
+    border-radius: 2em;
     width: 410px;
     z-index: 10;
-    color: #fff;
+    color: #76539B;
     position: relative;
   }
 
@@ -486,7 +487,7 @@ if (formData.msg.trim() === "") {
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.msg}
+      &msg=${formData.room_type}；${formData.budget}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
