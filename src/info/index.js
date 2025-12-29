@@ -1,15 +1,15 @@
 const caseName = "天好運3"
 export default {
-  caseid: "9b21683f-e2b7-4cfa-a538-c5c713df2c47",
+  caseid: "592c1522-ab1f-4c54-99f2-f02c4ae1a428",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市土城區科技路29號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.1694022454835!2d121.41999857607709!3d24.960350441251833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ce9e58be8bf%3A0xe3f7bae02b2b2aa1!2zMjM25paw5YyX5biC5Zyf5Z-O5Yy656eR5oqA6LevMjnomZ8!5e0!3m2!1szh-TW!2stw!4v1766573085157!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/EwVuqbt5uoKZyk289",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d904.2922068752301!2d121.4223254!3d24.96037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d000fed952d%3A0xc9a2477491287f2f!2z5aSp5aW96YGLMg!5e0!3m2!1szh-TW!2stw!4v1766721032335!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/ADi3Z6PAZ4PiEGAYA",
    // phone: "06-2916208",
-    fbLink: "https://www.facebook.com/61581502310202/",
-    fbMessage: "https://m.me/61581502310202/",
-    line: "https://lin.ee/VOzO2Sx",
+    fbLink: "https://www.facebook.com/100057418720587/",
+    fbMessage: "https://m.me/100057418720587/",
+   // line: "https://lin.ee/VOzO2Sx",
     caseName: caseName,
     houseInfos: [
         /*
@@ -22,7 +22,7 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-     gtmCode: ["GTM-KLGH2X3M"], // 可放置多個
+     gtmCode: ["GTM-000000"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
