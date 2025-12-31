@@ -3,8 +3,8 @@
  <!--  <img src="./s1/mo.jpg" class="t0" v-if="isMobile">
     <img src="./s1/pc.jpg" class="t0" v-else> -->  
 
-    <img src="./s1/train.png" class="train" alt="train" data-aos="fade-left" data-aos-duration="3000" data-aos-offset="-300">
-    <img src="./s1/light.png" class="light" alt="light" data-aos="fade-left" data-aos-delay="200" data-aos-offset="-300"
+    <img src="./s1/train.png" class="train" alt="train" data-aos="fade-left" data-aos-duration="3000" data-aos-offset="-800">
+    <img src="./s1/light.png" class="light" alt="light" data-aos="fade-left" data-aos-delay="200" data-aos-offset="-800"
       data-aos-duration="1000">
     <img src="./s1/tl.svg" class="tl" alt="tl" data-aos="fade-down" data-aos-delay="200">
     <img src="./s1/slogo.svg" class="slogo" alt="slogo" data-aos="zoom-in" data-aos-delay="200">
