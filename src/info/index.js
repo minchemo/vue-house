@@ -1,6 +1,8 @@
+// const caseName = "TEST"
 const caseName = "成大之森"
 export default {
-    caseid: "5050ed58-93cf-4a7b-ab71-4d9802ed8878",
+   // caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+   caseid: "5050ed58-93cf-4a7b-ab71-4d9802ed8878",
    //case_code: "csl",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
@@ -20,8 +22,8 @@ export default {
       */
     ],
     gtmCode: ["GTM-KGPCM5TH"], // 可放置多個
-    // recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    // recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
