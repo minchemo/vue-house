@@ -1,6 +1,8 @@
 const caseName = "高大π計畫"
+// const caseName = "test"
 export default {
-  caseid: "9584cf78-47b2-43eb-8f42-1997bf4f4f2c",
+   caseid: "9584cf78-47b2-43eb-8f42-1997bf4f4f2c",
+    // caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市楠梓區藍田路x大學西路口",
