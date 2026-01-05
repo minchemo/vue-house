@@ -3,8 +3,8 @@
 
     <div class="main" v-if="isMobile">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">三房</h3>
-        <p class="subtitle" data-aos="fade-up" data-aos-delay="0">A3  46.67坪</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">兩房</h3>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="0">A2 32.17坪</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -66,6 +66,7 @@
       font-size: 3em;
       font-weight: 700;
     }
+
     .subtitle {
       font-size: 1.8em;
       font-weight: 700;
@@ -298,19 +299,19 @@ const options = {
 const imgs = [
   {
     img: new URL("./s11/s11-1.jpg", import.meta.url).href,
-  //  caption: "家具配置參考"
+    //  caption: "家具配置參考"
   },
   {
     img: new URL("./s11/s11-2.jpg", import.meta.url).href,
-   // caption: "實品屋實景拍攝"
+    // caption: "實品屋實景拍攝"
   },
   {
     img: new URL("./s11/s11-3.jpg", import.meta.url).href,
-  //  caption: "實品屋實景拍攝"
+    //  caption: "實品屋實景拍攝"
   },
   {
     img: new URL("./s11/s11-4.jpg", import.meta.url).href,
-   // caption: "實品屋實景拍攝"
+    // caption: "實品屋實景拍攝"
   },
 ]
 /*

@@ -3,8 +3,8 @@
 
     <div class="main" v-if="isMobile">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">兩房</h3>
-        <p class="subtitle" data-aos="fade-up" data-aos-delay="0">A2 32.17坪</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">三房</h3>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="0">A3 46.67坪</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -73,7 +73,7 @@
 
   }
 
-  
+
   .slider {
     @apply relative;
     margin: 0;
@@ -180,7 +180,7 @@
     font-size: sizem(12);
     flex-wrap: nowrap;
     margin-bottom: 0em;
-    gap:0;
+    gap: 0;
 
     .main {
       padding: 0 sizem(32.5);
@@ -200,10 +200,11 @@
         font-size: 2em;
         font-weight: 700;
       }
-    .subtitle {
-      font-size: 1.8em;
-      font-weight: 700;
-    }
+
+      .subtitle {
+        font-size: 1.8em;
+        font-weight: 700;
+      }
 
       .en {
         margin-top: sizem(10);
@@ -299,19 +300,19 @@ const options = {
 const imgs = [
   {
     img: new URL("./s12/s12-1.jpg", import.meta.url).href,
-  // caption: "家具配置參考"
+    // caption: "家具配置參考"
   },
   {
     img: new URL("./s12/s12-2.jpg", import.meta.url).href,
-  //  caption: "實品屋實景拍攝"
+    //  caption: "實品屋實景拍攝"
   },
   {
     img: new URL("./s12/s12-3.jpg", import.meta.url).href,
- //   caption: "實品屋實景拍攝"
+    //   caption: "實品屋實景拍攝"
   },
   {
     img: new URL("./s12/s12-4.jpg", import.meta.url).href,
- //   caption: "實品屋實景拍攝"
+    //   caption: "實品屋實景拍攝"
   },
 ]
 /*
