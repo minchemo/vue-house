@@ -4,8 +4,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市土城區科技路29號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d904.2923772051616!2d121.42192976961327!3d24.960346814462365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ce9e58be8bf%3A0xe3f7bae02b2b2aa1!2zMjM25paw5YyX5biC5Zyf5Z-O5Yy656eR5oqA6LevMjnomZ8!5e0!3m2!1szh-TW!2stw!4v1767084441453!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/AERT3QFcDWusZjdeA",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.178339549067!2d121.42242759999999!3d24.9600463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d00580a232d%3A0xb6aa67a9366e82db!2z5aSp5aW96YGLMw!5e0!3m2!1szh-TW!2stw!4v1767664041150!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/oNpJMsMVCxAxvoBg9",
    // phone: "06-2916208",
     fbLink: "https://www.facebook.com/100057418720587/",
     fbMessage: "https://m.me/100057418720587/",
