@@ -5,9 +5,9 @@ export default {
   //case_code: "chi-fa-construction",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "屏東縣東港鎮大和街50號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3685.571342811699!2d120.4500642!3d22.5202606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1f0069b27aeb%3A0x65588ed70e46d40b!2z5reH55m85pm25rmb!5e0!3m2!1szh-TW!2stw!4v1754299397233!5m2!1szh-TW!2stw",//嵌入的
-  googleLink: "https://maps.app.goo.gl/QtAQ2XzGSq5SYjmz5",//導航網址
+  address: "新園鄉港崗路50號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.5674852304637!2d120.4508605762805!3d22.520405234879508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1e6b514c1ae7%3A0xed3ba0334e33163b!2zOTMy5bGP5p2x57ij5paw5ZyS6YSJ5riv5bSX6LevNTDomZ8!5e0!3m2!1szh-TW!2stw!4v1767755614063!5m2!1szh-TW!2stw",//嵌入的
+  googleLink: "https://maps.app.goo.gl/sCdSL3mCGdhNbaTW8",//導航網址
   phone: "08-8352-888",
   fbLink: "https://www.facebook.com/61578948028617/",
   fbMessage: "https://www.facebook.com/messages/t/61578948028617/",
