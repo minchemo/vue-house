@@ -11,7 +11,7 @@
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div> 
-    <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"> -->
+    <img src="@/section/s1/logo.svg" class="logo" alt=""> -->
 
       <div class="flex justify-between w-full contact-item-box">
         <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
@@ -19,7 +19,7 @@
           <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
           <div>{{ info.phone }}</div>
         </div>
-        <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+        <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'">
           <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
           <div>Facebook 諮詢</div>
         </div>
@@ -78,7 +78,7 @@
       <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+    <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'">
       <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
@@ -94,11 +94,11 @@
       <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <!-- <div class="flex flex-col contact-item justify-center items-center"
+    <!--  --><div class="flex flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
       <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
-    </div> -->
+    </div>
   </div>
 
    <!-- Modal -->
@@ -107,11 +107,11 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img//form/line.svg" alt="line" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/fb.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img/form/line.svg" alt="line" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{
        modalType == 'phone' ? '賞屋專線' :
@@ -508,14 +508,10 @@ const go = () => {
     setTimeout(() => {
       window.location.href = "phoneThanks";
     }, 1000);
-  } else if (modalType.value == 'fb') {
+  } else if (modalType.value == 'messenger') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
-  } else if (modalType.value == 'gmap1') {
-    window.open("https://maps.app.goo.gl/bXY3zJ7temvb53JH6");
-  } else if (modalType.value == 'gmap2') {
-    window.open("https://maps.app.goo.gl/yM8wgo7q5i9c7vwa6");
   }
 }
 
