@@ -6,8 +6,8 @@ export default {
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "屏東縣東港新園鄉港崗路50號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.5676173958436!2d120.45086057529902!3d22.52040027952889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1e6b514c1ae7%3A0xed3ba0334e33163b!2zOTMy5bGP5p2x57ij5paw5ZyS6YSJ5riv5bSX6LevNTDomZ8!5e0!3m2!1szh-TW!2stw!4v1767758074848!5m2!1szh-TW!2stw",//嵌入的
-  googleLink: "https://maps.app.goo.gl/UBP94NsaHNc2PW7DA",//導航網址
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.5676168498535!2d120.4534355!3d22.5204003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1e6b514c1ae7%3A0xed3ba0334e33163b!2zOTMy5bGP5p2x57ij5paw5ZyS6YSJ5riv5bSX6LevNTDomZ8!5e0!3m2!1szh-TW!2stw!4v1767767095094!5m2!1szh-TW!2stw",//嵌入的
+  googleLink: "https://maps.app.goo.gl/4asWBxFaJdzC2XHa9",//導航網址
   phone: "08-8352-888",
   fbLink: "https://www.facebook.com/61578833014291/",
   fbMessage: "https://www.facebook.com/messages/t/61578833014291/",
