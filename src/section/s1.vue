@@ -51,7 +51,7 @@
       data-aos-delay="0"
     />
     <div class="t1" data-aos="fade-up" data-aos-delay="200">集賢大道 ｜ 靜巷好宅    </div>
-    <div class="t2" data-aos="fade-up" data-aos-delay="200">2房23坪｜3房36坪<span>全新完工</span></div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="200">2房23坪｜3房36坪<span>圓滿完銷</span></div>
     <div class="t3" data-aos="fade-up" data-aos-delay="400">
       接待中心｜新北市三重區仁安街108號<span v-if="!$isMobile()"> 　 </span><br v-else>
       禮賓專線｜02-8282-8088
