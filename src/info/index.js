@@ -32,7 +32,7 @@ export default {
 5R729NRG"
         */
     ],
-    gtmCode: ["GTM-5R729NRG"], // 可放置多個
+    gtmCode: ["GTM-5R729NRG","GTM-M58NRV56"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
