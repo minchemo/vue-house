@@ -3,7 +3,8 @@
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <div class="order-subTitle text-center" v-if="info.order.subTitle"
+        v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle"></div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -15,37 +16,37 @@
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"><span>姓名<span>(必填)</span></span>
-          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-            @input="(event) => (formData.name = event.target.value)" /></label>
-            <label class="row"><span>手機<span>(必填)</span></span>
-              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" /></label>
+            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+              @input="(event) => (formData.name = event.target.value)" /></label>
+          <label class="row"><span>手機<span>(必填)</span></span>
+            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+              @input="(event) => (formData.phone = event.target.value)" /></label>
 
           <label class="row" v-if="info.room_type"><span>需求房型</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
-          </select></label>
+              <option value="" selected disabled>請選擇房型</option>
+              <option v-for="room in info.room_type" :value="room" v-text="room"></option>
+            </select></label>
           <label class="row" v-if="info.budget"><span>購屋預算</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
-          </select>
-        </label>
+              <option value="" selected disabled>請選擇預算</option>
+              <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
+            </select>
+          </label>
           <label class="row"><span>居住縣市</span>
-          <select class="select w-full rounded-none" v-model="formData.city">
-            <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value">
-              {{ city.label }}
-            </option>
-          </select></label>
+            <select class="select w-full rounded-none" v-model="formData.city">
+              <option value="" selected disabled>請選擇城市</option>
+              <option v-for="city in cityList" :value="city.value">
+                {{ city.label }}
+              </option>
+            </select></label>
           <label class="row"><span>居住地區</span>
-          <select class="select w-full rounded-none" v-model="formData.area">
-            <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value">
-              {{ area.label }}
-            </option>
-          </select></label>
+            <select class="select w-full rounded-none" v-model="formData.area">
+              <option value="" selected disabled>請選擇地區</option>
+              <option v-for="area in areaList" :value="area.value">
+                {{ area.label }}
+              </option>
+            </select></label>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -70,7 +71,7 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending ? '發送中..' : '立即預約' }}
       </div>
 
       <!-- Contact Info -->
@@ -92,9 +93,9 @@
 
 .order-section {
   position: relative;
- // padding-top: size(406);
-   overflow: hidden;
-    min-height: size(500);
+  // padding-top: size(406);
+  overflow: hidden;
+  min-height: size(500);
 
   .bg-image {
     position: absolute;
@@ -133,7 +134,7 @@
     font-size: size(40);
     font-weight: 700;
     color: #FFF;
-    padding-top:1.5em;
+    padding-top: 1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
@@ -141,13 +142,15 @@
     width: size(1008);
     margin-bottom: size(155);
   }
-  .order-subTitle{
+
+  .order-subTitle {
     font-size: size(17);
     color: #FFF;
-    padding-top:.8em;
+    padding-top: .8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
+
   .cus-divider {
     margin: 0 auto;
     width: size(300);
@@ -185,38 +188,60 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
-      display: flex;width: 100%;
-    align-items:center;
-      > span{
+
+    .row {
+      background: #FFF;
+      border: 1px solid #CCC;
+      color: #000;
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      >span {
         width: 5.5em;
-        text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        text-align: left;
+        padding-left: 1em;
+
+        >span {
+          color: #F00;
+          font-size: 12px;
+        }
       }
-      input,select{background: inherit;flex: 1;}
-      option{color: #666;}
-      select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
-      background-size:auto 200%;
-      transition: background .3s;
-      &:focus{
-        background-position:calc(100% - .5em) 0%;
+
+      input,
+      select {
+        background: inherit;
+        flex: 1;
       }
+
+      option {
+        color: #666;
+      }
+
+      select {
+        background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
+        background-size: auto 200%;
+        transition: background .3s;
+
+        &:focus {
+          background-position: calc(100% - .5em) 0%;
+        }
       }
     }
   }
 
   .send {
-    font-size:20px;
+    font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
     background-color: #8b6c3d;
     //border: 1px solid #FFF9;
-    border:0;
+    border: 0;
     border-radius: .5em;
 
     width: 308px;
-    height:3.3em;
+    height: 3.3em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 400;
@@ -235,7 +260,7 @@
     min-height: sizem(800);
     position: relative;
     // overflow: hidden;
-   // padding-top: sizem(200);
+    // padding-top: sizem(200);
 
     .bg-image {
       position: absolute;
@@ -250,7 +275,7 @@
     width: 100%;
     padding-bottom: sizem(63);
     // border-radius: sizem(68) sizem(68) 0 0;
-   /* padding-top: sizem(0);
+    /* padding-top: sizem(0);
     margin-top: sizem(0);
 
     .order-title-img {
@@ -275,11 +300,12 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top:1.5em;
+      padding-top: 1.5em;
     }
-    .order-subTitle{
+
+    .order-subTitle {
       font-size: sizem(13);
-      padding-top:0;
+      padding-top: 0;
     }
 
 
@@ -300,7 +326,8 @@
       .right {
         width: 100%;
         height: sizem(100);
-        .row{
+
+        .row {
           height: 7em;
         }
       }
@@ -332,7 +359,7 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import { computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
@@ -360,7 +387,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "email", "room_type", "budget", "city", "area"]
 
 //中文對照
 const formDataRef = ref([

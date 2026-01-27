@@ -1,7 +1,7 @@
-const caseName = "松陽馥麗"
+const caseName = "豐秀大境"
 
 export default {
-    caseid: "e35e238b-6a62-4722-b340-a3a799ef3e58",
+    caseid: "10de2364-633a-4991-b149-4aba5646ff47",
     //case_code: "zhsd",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
@@ -13,22 +13,22 @@ export default {
     fbMessage: "https://m.me/61576581560017/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "宸實建設股份有限公司"],
-        ["建築設計", "周劍平建築師事務所"],
-        ["建照號碼", "113土建字第00215號"],
-        ["行銷企劃", "五率國際地產行銷"],
-        ["經 紀 人", "何成英 (112)新北經字第004095號"],
+        ["投資興建", "XX建設股份有限公司"],
+        ["建築設計", "XXX建築師事務所"],
+        ["建照號碼", "113土建字第XXXXX號"],
+        ["行銷企劃", "XX國際地產行銷"],
+        ["經 紀 人", "XXX (112)新北經字第004095號"],
     ],
     gtmCode: ["GTM-MKH2GFP3",], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-   // recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    // recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "複利未來 從一次預約展開",
-        subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
-        subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
+        title: "預約賞屋",
+        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        subTitle_mo: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
@@ -46,14 +46,14 @@ export default {
     //      option: ["2388~2588萬","2688~2888萬"],
     //      bypass:false, //必填開啟使用
     //    },
-        /*
-        use_type: {
-          title: "使用用途",
-          hold: "請選擇用途",
-          option: ["自住", "投資", "租賃"]
-      },
-        */
-  //},
+    /*
+    use_type: {
+      title: "使用用途",
+      hold: "請選擇用途",
+      option: ["自住", "投資", "租賃"]
+  },
+    */
+    //},
 
     navList: [
         {
@@ -61,54 +61,54 @@ export default {
             target: ".s3",
             offset: "-60",
             offsetmo: "0",
-        },{
+        }, {
             name: "交通複利",
             target: ".s4",
             offset: "-60",
             offsetmo: "0",
-        },{
+        }, {
             name: "科技複利",
             target: ".s5",
             offset: "-60",
             offsetmo: "0",
-        },{
+        }, {
             name: "健康複利",
             target: ".s6",
             offset: "-60",
             offsetmo: "0",
-        },{
+        }, {
             name: "知識複利",
             target: ".s7",
             offset: "-60",
             offsetmo: "0",
-        },{
+        }, {
             name: "核心複利",
             target: ".s8",
             offset: "-60",
             offsetmo: "0",
-        },{
+        }, {
             name: "品牌複利",
             target: ".s9",
             offset: "-60",
             offsetmo: "0",
-        },{
+        }, {
             name: "建築複利",
             target: ".s10",
             offset: "-60",
             offsetmo: "0",
-        },{
+        }, {
             name: "立即來電",
             target: ".contact-info",
             offset: "",
             type: 'btn'
         },
         {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
+            name: "地圖導航",
+            target: ".gmap",
+            offset: "",
+            type: "btn",
         }
-        ,{
+        , {
             name: "立即預約",
             target: ".order",
             offset: "",

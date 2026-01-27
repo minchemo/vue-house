@@ -9,11 +9,12 @@
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-   <Nav v-if="config.showNav" />
+  <!--navigate-->
+  <Nav v-if="config.showNav" />
   <div class="home bg-[#000000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-    
-    <img src="@/section/s1/bgm667.webp" class="bgh mob">
-    <img src="@/section/s1/bg.webp" class="bgh pc">
+
+    <img src="@/section/s1/bgm667.png" class="bgh mob">
+    <img src="@/section/s1/bgm2.png" class="bgh pc">
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
@@ -21,16 +22,16 @@
     <S1 />
     <!-- <S2v /> -->
     <!--S2 /-->
-    <S12 />
-    <S3 />
-    <S4 />
-    <S5 />
-    <S6 />
-    <S7 />
-    <S8 />
-    <S9 />
-    <S10 />
-  <!--
+    <!-- <S12 />-->
+    <!--<S3 />-->
+    <!--<S4 />-->
+    <!--<S5 />-->
+    <!--<S6 />-->
+    <!--<S7 />-->
+    <!--<S8 />-->
+    <!--<S9 />-->
+    <!--<S10 />-->
+    <!--
     <S11 />
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -49,47 +50,71 @@
 
 @keyframes an1 {
   to {
-     transform:scale(1);opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-.mob{
-    display: none;
-  }
- .pc{
-  display: block;
- }
+.mob {
+  display: none;
+}
 
-  .bg{position: absolute;width: 100%;height: 0;top:0;left: 0;
-    span{
-      position: absolute;
-      display: block;width: 1em;height: 1em;
-      background: radial-gradient(ellipse at center, #fff 0%,#fff6 20%,#fff3 30%,#fff0 50%);
-   transform: scale(.5);opacity: 0;
-   animation: an1 2s ease-in-out infinite alternate;
-      &:nth-child(2){animation-delay: 1s;}
-      &:nth-child(3){animation-delay: 1.5s;}
+.pc {
+  display: block;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+
+  span {
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    background: radial-gradient(ellipse at center, #fff 0%, #fff6 20%, #fff3 30%, #fff0 50%);
+    transform: scale(.5);
+    opacity: 0;
+    animation: an1 2s ease-in-out infinite alternate;
+
+    &:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1.5s;
     }
   }
-
-  
-  .bgh{
-    opacity: .3;
-    margin: 0 auto;
-    text-align: center;
-  }
+}
 
 
-.fade-enter-active, .fade-leave-active {
+.bgh {
+  opacity: .3;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.2s;
 }
-.fade-enter, .fade-leave-to {
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 
-.home > .bgh{position: fixed;width: 100%;
-  top: 0;left: 0;
+.home>.bgh {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
+
 img {
   display: inline;
   max-width: unset;
@@ -97,37 +122,41 @@ img {
   margin: 0 auto;
 }
 
-  .caption{
-      @apply absolute;
-      right:1em;
-      bottom: .5em;
-      font-weight: 300;
-      font-size: size(15);
-      color: #FFF;
-      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);}
+.caption {
+  @apply absolute;
+  right: 1em;
+  bottom: .5em;
+  font-weight: 300;
+  font-size: size(15);
+  color: #FFF;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+}
 
 
-      .txt {
-    position: relative;
-    font-weight: 300;
-    letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;
-  .title-sub{
+.txt {
+  position: relative;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1.7;
+  width: 100%;
+
+  .title-sub {
     font-size: size(20);
     text-align: center;
     margin-top: 2em;
     font-weight: 500;
-  } 
-  .title{
+  }
+
+  .title {
     font-size: 2.2em;
     margin: 0em 0 0em;
     line-height: 1.4;
     font-weight: 700;
-    color:#fff;
+    color: #fff;
     text-align: center;
+
     &::after,
-    &::before{
+    &::before {
       content: "";
       width: 15.7em;
       height: 1px;
@@ -137,133 +166,167 @@ img {
       margin: auto 1em;
     }
   }
-  .subtitle{
+
+  .subtitle {
     font-size: size(30);
     font-weight: 700;
     margin: 0 0 .8em;
-    color:#fff;
+    color: #fff;
     line-height: 1.5;
   }
-  .desc{
+
+  .desc {
     margin: 0 0 1em;
-    b{color:#C9A063;}
+
+    b {
+      color: #C9A063;
+    }
   }
-  }
+}
+
 .slider {
   @apply relative;
-  .arrows{
+
+  .arrows {
     @apply absolute z-10 w-full flex justify-between top-1/2 -translate-y-1/2;
-    padding: 0; 
+    padding: 0;
     height: 100%;
     pointer-events: none;
+
     .prev,
-    .next{
-      width:5%;
+    .next {
+      width: 5%;
       display: flex;
       pointer-events: stroke;
       cursor: pointer;
-      
-  justify-content: center;
-  align-items:center;
-    background:url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
-    background-size: 50% auto;
-    transition:background-color .5s ;
-    &:hover{background-color: #0003;}
+
+      justify-content: center;
+      align-items: center;
+      background: url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+      background-size: 50% auto;
+      transition: background-color .5s;
+
+      &:hover {
+        background-color: #0003;
+      }
     }
-    .prev{transform: scaleX(-1);
+
+    .prev {
+      transform: scaleX(-1);
     }
+
     img {
       margin: unset;
       @apply cursor-pointer hover:opacity-50;
     }
   }
+
   .splide__pagination {
     @apply absolute flex justify-center w-full;
     bottom: 0;
     gap: .5em;
     color: #fff;
+
     li {
       button {
-        @apply rounded-full  hover:opacity-50;
+        @apply rounded-full hover:opacity-50;
         width: 1em;
         height: 1em;
         border: 2px solid currentColor;
 
-        &.is-active{
-          background:currentColor;
-      }
+        &.is-active {
+          background: currentColor;
+        }
       }
     }
   }
 }
+
 @media screen and (max-width: 767px) {
 
 
-.mob{
+  .mob {
     display: block;
   }
- .pc{
-  display: none;
- }
-  
 
-.home > .bgh{
-  width: 100%;
-  text-align: center;
-  left: 0%;
-  top: 0%;
-}
-  .caption{
-      font-size: sizem(12);}
-
-      .txt {
-  .title-sub{
-    font-size: sizem(15);
-    text-align: center;
-  }       
-  .title{
-    font-size: sizem(23);
-    text-align: center;
-    &::after,
-    &::before{
-      width: 0em !important;
-      position: absolute;}
-  }
-  .subtitle{
-    font-size: sizem(20);
-    text-align: center
-  }
-  .desc{
-    font-size: sizem(14);
-  }
-  }
-.slider {
-  @apply relative;
-  .arrows{
-    .prev,
-    .next{
-      width: 8%;
-    }
-  }
-  .splide__pagination {
-    @apply absolute flex justify-center w-full;
+  .pc {
     display: none;
-    bottom: sizem(6.7);
-    gap: sizem(2.5);
-    li {
-      button {
-        @apply rounded-full  hover:opacity-50;
-        width: sizem(10.3);
-        height: sizem(3.34);
-        border: sizem(1) solid #fff;
+  }
 
-        &.is-active{
-          @apply bg-white;
+
+  .home>.bgh {
+    width: 100%;
+    text-align: center;
+    left: 0%;
+    top: 0%;
+  }
+
+  .caption {
+    font-size: sizem(12);
+  }
+
+  .txt {
+    .title-sub {
+      font-size: sizem(15);
+      text-align: center;
+    }
+
+    .title {
+      font-size: sizem(23);
+      text-align: center;
+
+      &::after,
+      &::before {
+        width: 0em !important;
+        position: absolute;
       }
+    }
+
+    .subtitle {
+      font-size: sizem(20);
+      text-align: center
+    }
+
+    .desc {
+      font-size: sizem(14);
+    }
+  }
+
+  .slider {
+    @apply relative;
+
+    .arrows {
+
+      .prev,
+      .next {
+        width: 8%;
+      }
+    }
+
+    .splide__pagination {
+      @apply absolute flex justify-center w-full;
+      display: none;
+      bottom: sizem(6.7);
+      gap: sizem(2.5);
+
+      li {
+        button {
+          @apply rounded-full hover:opacity-50;
+          width: sizem(10.3);
+          height: sizem(3.34);
+          border: sizem(1) solid #fff;
+
+          &.is-active {
+            @apply bg-white;
+          }
+        }
       }
     }
   }
 }
+
+#order {
+  background: #352118;
 }
 </style>
 
@@ -272,15 +335,15 @@ import info from "@/info"
 import S1 from "@/section/s1.vue"
 //import S2 from "@/section/s2.vue"
 // import S2v from "@/section/s2v.vue"
-import S3 from "@/section/s3.vue"
-import S4 from "@/section/s4.vue"
-import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
-import S12 from "@/section/s12.vue"
-import S10 from "@/section/s10.vue"
+//import S3 from "@/section/s3.vue"
+//import S4 from "@/section/s4.vue"
+//import S5 from "@/section/s5.vue"
+//import S6 from "@/section/s6.vue"
+//import S7 from "@/section/s7.vue"
+//import S8 from "@/section/s8.vue"
+//import S9 from "@/section/s9.vue"
+//import S12 from "@/section/s12.vue"
+//import S10 from "@/section/s10.vue"
 // import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue"
@@ -296,7 +359,7 @@ import AOS from 'aos';
 const isLoading = ref(true)
 const gtmNoScript = ref('')
 const config = ref({
-  showNav: true
+  showNav: false
 })
 
 onMounted(() => {
