@@ -134,7 +134,7 @@
     font-size: size(40);
     font-weight: 700;
     color: #FFF;
-    padding-top: 1.5em;
+    padding-top: 0.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
@@ -146,8 +146,8 @@
   .order-subTitle {
     font-size: size(17);
     color: #FFF;
-    padding-top: .8em;
-    letter-spacing: .1em;
+    padding-top: 0.8em;
+    letter-spacing: 0.1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
@@ -300,7 +300,7 @@
 
     .order-title {
       font-size: sizem(25);
-      padding-top: 1.5em;
+      padding-top: 0.5em !important;
     }
 
     .order-subTitle {

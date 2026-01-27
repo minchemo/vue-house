@@ -1,7 +1,5 @@
 <template>
   <article class="s10">
-
-
     <div class="main">
       <div class="txt">
         <transition name="fade" mode="out-in">

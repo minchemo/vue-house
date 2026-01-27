@@ -125,7 +125,7 @@
     font-size: size(40);
     font-weight: 700;
     color: #F8F66F;
-    padding-top: 2em;
+    padding-top: 1em;
 
     //padding-bottom:.3em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -304,7 +304,7 @@
 
     .order-title {
       font-size: sizem(27);
-      padding-top: 10em;
+      padding-top: 1em;
       padding-bottom: .3em;
 
       .line {

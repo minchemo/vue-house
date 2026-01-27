@@ -2,8 +2,8 @@
   <article class="s1 relative" id="s1">
     <img src="./s1/pc.jpg" class="t0">
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
-    <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
+    <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
+    <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
     <!--  
     <img src="./s1/t2m.svg" class="t2" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
     <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="400" v-else>
@@ -35,6 +35,7 @@
 .s1 {
   // height:calc(100vh - 63px);
   //height: sizem(604); 
+  // overflow: hidden;
   height: sizem(604);
   background: url("./s1/bgm2.png");
   background-size: cover;
@@ -45,7 +46,6 @@
   color: #fff;
   font-size: sizem(32);
   line-height: 1.3;
-  // overflow: hidden;
 
   @media screen and (min-width: 768px) {
     background: url("./s1/bg1.png");
@@ -55,24 +55,31 @@
   }
 
   .logo {
+    /*
+    margin: sizem(100) auto sizem(16);
     width: sizem(300);
-    /*margin: sizem(100) auto sizem(16);*/
     margin: 10vw 55vw 4vw 3vw;
+    */
+    width: 80vw;
+    margin: 9vw 0vw 4vw 0vw;
   }
 
   .slogo {
-    width: sizem(76);
     position: absolute;
-    bottom: sizem(-30);
-    left: sizem(-78);
-    /*bottom: -30vw;
-      left: -78vw;*/
+    width: 7vw;
+    bottom: 5vw;
+    left: 6vw;
+    /*width: sizem(76);
+      bottom: sizem(-30);
+      left: sizem(-78);*/
   }
 
   .t1 {
-    width: sizem(300);
-    /* margin: 0 auto sizem(50);*/
-    margin: 1vw 49vw 4vw 3vw;
+    /* margin: 0 auto sizem(50);
+    width: sizem(300);*/
+    width: 60vw;
+    margin: 0vw 24vw 4vw 3vw;
+    filter: drop-shadow(2px 2px 1px #353535);
   }
 
   .t2 {
@@ -88,18 +95,17 @@
   @media screen and (min-width: 768px) {
     .logo {
       width: size(700);
-
       margin: 7vw 50vw 6vw 0vw;
       /* margin: size(120) auto size(50);*/
 
     }
 
     .slogo {
-      width: size(133);
-
+      position: absolute;
+      width: 6vw;
       /* bottom: size(20);
       right: size(50);*/
-      bottom: 20vw;
+      bottom: 5vw;
       left: 5vw;
     }
 
