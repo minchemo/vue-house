@@ -97,7 +97,7 @@
   // padding-top: size(406);
   overflow: hidden;
   min-height: size(500);
-  background: url("@/section/form/bg1.png");
+  background: url("@/section/form/bg2.png");
   background-size: auto;
   background-position: top;
 
