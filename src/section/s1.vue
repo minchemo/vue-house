@@ -48,8 +48,10 @@
   font-size: sizem(32);
   line-height: 1.3;
 
+  //pc
   @media screen and (min-width: 768px) {
-    background: url("./s1/bg1.png");
+    background-image: url("./s1/bg1.png");
+    //background-size: 100%;
     height: 110vw;
     padding: 0;
     font-size: size(56);
@@ -93,6 +95,7 @@
     margin: 0 auto sizem(0);
   }
 
+  //pc
   @media screen and (min-width: 768px) {
     .logo {
       width: size(700);
