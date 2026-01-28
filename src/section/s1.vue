@@ -68,7 +68,7 @@
   .slogo {
     position: absolute;
     width: 7vw;
-    bottom: -3vw;
+    bottom: -2vw;
     left: 6vw;
     /*width: sizem(76);
       bottom: sizem(-30);
