@@ -113,10 +113,7 @@
 
 .order {
   width: 100%;
-  padding-top: size(10);
-
-
-
+  // padding-top: size(10);
   // background: linear-gradient(to bottom, #195c45, #000704);
 
 

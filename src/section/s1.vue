@@ -36,7 +36,8 @@
   // height:calc(100vh - 63px);
   //height: sizem(604); 
   // overflow: hidden;
-  height: sizem(604);
+  // height: sizem(604)
+  height: 112vw;
   background: url("./s1/bgm2.png");
   background-size: cover;
   display: flex;
@@ -49,7 +50,7 @@
 
   @media screen and (min-width: 768px) {
     background: url("./s1/bg1.png");
-    height: size(2165);
+    height: 110vw;
     padding: 0;
     font-size: size(56);
   }
@@ -67,7 +68,7 @@
   .slogo {
     position: absolute;
     width: 7vw;
-    bottom: 5vw;
+    bottom: -2vw;
     left: 6vw;
     /*width: sizem(76);
       bottom: sizem(-30);
