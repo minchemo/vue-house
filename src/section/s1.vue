@@ -37,7 +37,7 @@
   //height: sizem(604); 
   // overflow: hidden;
   // height: sizem(604)
-  height: 112vw;
+  height: 178vw;
   background: url("./s1/bgm2.png");
   background-size: cover;
   display: flex;
@@ -68,7 +68,7 @@
   .slogo {
     position: absolute;
     width: 7vw;
-    bottom: -2vw;
+    bottom: 24vw;
     left: 6vw;
     /*width: sizem(76);
       bottom: sizem(-30);
@@ -103,10 +103,10 @@
 
     .slogo {
       position: absolute;
-      width: 6vw;
+      width: 4.5vw;
       /* bottom: size(20);
       right: size(50);*/
-      bottom: 5vw;
+      bottom: 13vw;
       left: 5vw;
     }
 
