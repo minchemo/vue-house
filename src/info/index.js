@@ -11,6 +11,7 @@ export default {
     phone: "02-2915-9797",
     fbLink: "https://www.facebook.com/PlentyLand/",
     fbMessage: "https://m.me/PlentyLand/",
+    line: "https://lin.ee/uzbHOpK",// 客戶加賴
     caseName: caseName,
     houseInfos: [/*
         ["投資興建", "鵬程建設股份有限公司"],
