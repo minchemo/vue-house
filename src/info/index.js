@@ -33,29 +33,30 @@ export default {
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
     //  表單欄位
-    /*
-    room_type: ["兩房","三房"],
+
+    room_type: ["兩房", "三房"],
     selectFields: {
         room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
-          option: ["三房"],
-         bypass:false,
-       },
-       budget: {
-         title: "購屋預算",
-         hold: "請選擇區間",
-         option: ["2388~2588萬","2688~2888萬"],
-         bypass:false, //必填開啟使用
-       },
-  
-    use_type: {
-      title: "使用用途",
-      hold: "請選擇用途",
-      option: ["自住", "投資", "租賃"]
+            title: "需求房型",
+            hold: "請選擇房型",
+            option: ["三房"],
+            bypass: false,
+        },
+        /*
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇區間",
+          option: ["2388~2588萬","2688~2888萬"],
+          bypass:false, //必填開啟使用
+        },
+   
+     use_type: {
+       title: "使用用途",
+       hold: "請選擇用途",
+       option: ["自住", "投資", "租賃"]
+     },
+     */
     },
-    },
-    */
 
     navList: [
         {
