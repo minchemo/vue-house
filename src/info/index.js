@@ -12,12 +12,12 @@ export default {
     fbLink: "https://www.facebook.com/PlentyLand/",
     fbMessage: "https://m.me/PlentyLand/",
     caseName: caseName,
-    houseInfos: [
+    houseInfos: [/*
         ["投資興建", "鵬程建設股份有限公司"],
         ["投資興建", "良昱建設股份有限公司"],
         ["建照號碼", "113土建字第XXXXX號"],
         ["行銷企劃", "XX國際地產行銷"],
-        ["經 紀 人", "XXX (112)新北經字第004095號"],
+        ["經 紀 人", "XXX (112)新北經字第004095號"],*/
     ],
     gtmCode: ["GTM-W69C8322",], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
