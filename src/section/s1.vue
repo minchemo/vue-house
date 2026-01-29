@@ -109,7 +109,7 @@
       width: 4.5vw;
       /* bottom: size(20);
       right: size(50);*/
-      bottom: 13vw;
+      bottom: 19vw;
       left: 5vw;
     }
 
