@@ -5,21 +5,21 @@ export default {
     //case_code: "zhsd",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新北市土城區中央路三段93號旁",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d760.3711699011237!2d121.43634903487587!3d24.967638101711515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU4JzAyLjciTiAxMjHCsDI2JzE0LjciRQ!5e0!3m2!1szh-TW!2stw!4v1751529969832!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/FPx9trbBsL5vFKcM8",
-    phone: "02-2268-8388",
-    fbLink: "https://www.facebook.com/61576581560017",
-    fbMessage: "https://m.me/61576581560017/",
+    address: "新北市新店區北宜路一段60號1F",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.296031925978!2d121.53568507632609!3d24.956040841424485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468018798e2df99%3A0x4c3e3d305e003b1c!2zMjMxNTLmlrDljJfluILmlrDlupfljYDljJflrpzot6_kuIDmrrU2MOiZnzFm!5e0!3m2!1szh-TW!2stw!4v1769652954424!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/TcvV1bUe7u3PgnVt7",
+    phone: "02-2915-9797",
+    fbLink: "https://www.facebook.com/PlentyLand/",
+    fbMessage: "https://m.me/PlentyLand/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "XX建設股份有限公司"],
-        ["建築設計", "XXX建築師事務所"],
+        ["投資興建", "鵬程建設股份有限公司"],
+        ["投資興建", "良昱建設股份有限公司"],
         ["建照號碼", "113土建字第XXXXX號"],
         ["行銷企劃", "XX國際地產行銷"],
         ["經 紀 人", "XXX (112)新北經字第004095號"],
     ],
-    gtmCode: ["GTM-MKH2GFP3",], // 可放置多個
+    gtmCode: ["GTM-W69C8322",], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     // recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -32,28 +32,30 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
-    // room_type: ["兩房","三房"],
-    //selectFields: {
-    //    room_type: {
-    //      title: "需求房型",
-    //      hold: "請選擇房型",
-    //      option: ["三房"],
-    //      bypass:false,
-    //    },
-    //    budget: {
-    //      title: "購屋預算",
-    //      hold: "請選擇區間",
-    //      option: ["2388~2588萬","2688~2888萬"],
-    //      bypass:false, //必填開啟使用
-    //    },
+    //  表單欄位
     /*
+    room_type: ["兩房","三房"],
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["三房"],
+         bypass:false,
+       },
+       budget: {
+         title: "購屋預算",
+         hold: "請選擇區間",
+         option: ["2388~2588萬","2688~2888萬"],
+         bypass:false, //必填開啟使用
+       },
+  
     use_type: {
       title: "使用用途",
       hold: "請選擇用途",
       option: ["自住", "投資", "租賃"]
-  },
+    },
+    },
     */
-    //},
 
     navList: [
         {
