@@ -1,5 +1,8 @@
 <template>
   <div>
+    <a :href="info.line" target="_blank" v-if="!isMobile && info.line">
+      <img src="@/section/s1/lineicon.png" class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]" />
+    </a>
     <div class="contact-info-img">
     </div>
     <div class="contact-info mx-auto  flex flex-col items-center justify-between">
@@ -30,6 +33,11 @@
           @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
           <div>導航 GoogleMap</div>
+        </div>
+        <div class="flex flex-1 flex-col contact-item justify-center items-center"
+          @click="modalOpen = true; modalType = 'line'" v-if="info.line">
+          <img src="//h35.banner.tw/img//form/line.svg" alt="Line" srcset="" />
+          <div>Line</div>
         </div>
       </div>
 
