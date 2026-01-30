@@ -67,7 +67,7 @@
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'line'" v-if="info.line">
-      <img src="//h35.banner.tw/img//form/line.svg" alt="Line" srcset="https://lin.ee/pNsK1vE" />
+      <img src="//h35.banner.tw/img//form/line.svg" alt="Line" srcset="" />
       <div>Line</div>
     </div>
   </div>
