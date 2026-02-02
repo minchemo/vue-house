@@ -103,7 +103,7 @@
         {{
           modalType == 'phone' ? '撥打電話' :
             modalType == 'messenger' ? '立即諮詢' :
-              modalType == 'fb' ? '前往粉絲專頁' :
+              modalType == 'fb' ? '立即諮詢' :
                 modalType == 'line' ? '加入' :
                   modalType == 'gmap' ? '開啟導航' :
                     ''
@@ -117,8 +117,7 @@
           'btline': modalType == 'line',
           'btcontac': modalType == 'phone'
         }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-          '開啟導航'
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' : '開啟導航'
         }}</div>
     </div>
   </div>
