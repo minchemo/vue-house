@@ -245,29 +245,36 @@ const props = defineProps({
 
 const imgs = [
   {
+    img:new URL("./s4/5.jpg", import.meta.url).href ,
+    //link:'https://cfyd.tw/',
+    name: "富科大苑",
+    area: "高雄市楠梓區",
+    caption: "總價2788-4888萬"
+  },
+  {
     img:new URL("./s4/1.jpg", import.meta.url).href ,
-    link:'https://cfyd.tw/',
+    // link:'https://cfyd.tw/',
     name: "春福御邸",
     area: "台南市安平區",
     caption: "3-4房 (42-52坪)"
   },
   {
     img:new URL("./s4/2.jpg", import.meta.url).href ,
-    link:'https://cfanan.tw/',
+    // link:'https://cfanan.tw/',
     name: "春福安安",
     area: "台南市安南區",
     caption: "2-3房 (24-36坪)"
   },
   {
     img:new URL("./s4/3.jpg", import.meta.url).href ,
-    link:'https://sjsj.sanjin.tw/',
+    // link:'https://sjsj.sanjin.tw/',
     name: "三景三錦",
     area: "高雄市鳳山區國泰路二段13巷6號",
     caption: "總價3588-4680萬"
   },
   {
     img:new URL("./s4/4.jpg", import.meta.url).href ,
-    link:'https://ry2.botb.tw/',
+    // link:'https://ry2.botb.tw/',
     name: "如邑Ⅱ",
     area: "台南市安平區府前四街147號",
     caption: "總價3880-5300萬"
