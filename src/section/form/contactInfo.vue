@@ -427,7 +427,7 @@ const go = () => {
     setTimeout(() => {
       window.location.href = "phoneThanks";
     }, 1000);
-  } else if (modalType.value == 'fb') {
+  } else if (modalType.value == 'messenger') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
