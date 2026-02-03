@@ -33,7 +33,7 @@
 
 
 
-          <!--  -->
+
           <label class="row"><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
@@ -41,13 +41,16 @@
                 {{ city.label }}
               </option>
             </select></label>
+
+          <!-- 
           <label class="row"><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
-            </select></label>
+            </select>
+          </label> -->
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -97,7 +100,7 @@
   // padding-top: size(406);
   overflow: hidden;
   min-height: size(500);
-  background: url("@/section/form/bg2.png");
+  background: url("@/section/form/form-bg.png");
   background-size: auto;
   background-position: top;
 
@@ -159,14 +162,14 @@
     //  height: 350px;
     gap: size(80);
     margin-top: 0.5vw;
-    margin-bottom: size(80);
+    margin-bottom: 2vw;
     z-index: 50;
     align-items: stretch;
 
     .left {
       position: relative;
       flex: 1;
-      gap: size(32);
+      gap: 1.3vw;
       align-items: flex-start;
       //   width: size(419);
     }
@@ -386,7 +389,6 @@ const requiredFields = {
   email: "信箱",
   msg: "備註訊息",
   city: "居住縣市",
-  area: "居住地區",
   policyChecked: "個資告知事項聲明",
   r_verify: "機器人驗證"
 }

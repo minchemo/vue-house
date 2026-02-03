@@ -1,6 +1,6 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/pc.jpg" class="t0">
+    <img src="./s1/pc.png" class="t0">
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
     <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
@@ -21,7 +21,7 @@
   top: 0px;
   left: 0px;
   pointer-events: none;
-  visibility: hidden;
+  visibility: visible;
   z-index: 9;
   opacity: 0;
 }
@@ -36,8 +36,8 @@
   // height:calc(100vh - 63px);
   //height: sizem(604); 
   // overflow: hidden;
-  // height: sizem(604)
-  height: 178vw;
+  // mobile
+  height: 62vw;
   background: url("./s1/bgm2.png");
   background-size: cover;
   display: flex;
@@ -50,9 +50,9 @@
 
   //pc
   @media screen and (min-width: 768px) {
-    background-image: url("./s1/bg1.png");
+    background-image: url("./s1/pc.png");
     //background-size: 100%;
-    height: 110vw;
+    height: 62.7vw;
     padding: 0;
     font-size: size(56);
   }
@@ -63,25 +63,33 @@
     width: sizem(300);
     margin: 10vw 55vw 4vw 3vw;
     */
-    width: 80vw;
-    margin: 9vw 0vw 4vw 0vw;
+    width: 70vw;
+    /* margin: 9vw 0vw 4vw 0vw;  */
+    margin: 4vw 0vw 0vw -3vw;
   }
 
   .slogo {
     position: absolute;
+    width: 100vw;
+    bottom: 0vw;
+    left: 0vw;
+    /*mobile
     width: 7vw;
-    bottom: 24vw;
-    left: 6vw;
-    /*width: sizem(76);
+      bottom: 24vw;
+      left: 6vw;
+      width: sizem(76);
       bottom: sizem(-30);
       left: sizem(-78);*/
   }
 
   .t1 {
     /* margin: 0 auto sizem(50);
-    width: sizem(300);*/
-    width: 60vw;
-    margin: 0vw 24vw 4vw 3vw;
+    width: sizem(300);
+    width: 45vw;
+    margin: 0vw 24vw 4vw 3vw;*/
+    width: 51vw;
+    margin: 0vw 17vw 0vw 17vw;
+
     filter: drop-shadow(2px 2px 1px #353535);
   }
 
@@ -98,25 +106,32 @@
   //pc
   @media screen and (min-width: 768px) {
     .logo {
+      width: 71vw;
+      margin: 4vw 3vw 57.6px 0vw 0vw;
+      /*
       width: size(700);
-      margin: 7vw 50vw 6vw 0vw;
-      /* margin: size(120) auto size(50);*/
+      margin: 7vw 50vw 6vw 0vw; 
+      margin: size(120) auto size(50);*/
 
     }
 
     .slogo {
       position: absolute;
-      width: 4.5vw;
+      width: 100vw;
+      bottom: 0vw;
+      left: 0vw;
+
       /* bottom: size(20);
-      right: size(50);*/
-      bottom: 19vw;
-      left: 5vw;
+      right: size(50);
+       width: 4.5vw;
+       bottom: 19vw;
+      left: 5vw;*/
     }
 
     .t1 {
-      width: 38vw;
-      /* margin: 0 auto size(260);*/
-      margin: 1vw 49vw 0vw -2vw;
+      /*PC     */
+      width: 51vw;
+      margin: 0vw 17vw 0vw 17vw;
     }
 
     /*
