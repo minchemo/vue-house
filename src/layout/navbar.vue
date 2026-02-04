@@ -175,7 +175,7 @@
             }
 
             &.btn2 {
-                background: #CCE7FB;
+                background: #8cb2cd;
                 color: #000;
                 border-radius: 2em;
                 margin-right: -1em;

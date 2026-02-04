@@ -160,6 +160,9 @@
   background-color: #12325f;
 }
 
+.lineicon {
+  filter: drop-shadow(0px 0px 10px #8cdfca);
+}
 
 .contact-info-img {
   @apply relative;
@@ -200,6 +203,7 @@
     }
   }
 
+
   .contact-item-box {
     position: relative;
     margin-top: size(20);
@@ -208,7 +212,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #CCE7FB;
+      background-color: #9FD8F6;
       color: #000;
       width: 100%;
       flex: 1;
@@ -225,7 +229,7 @@
       gap: 1em;
 
       &:hover {
-        background-color: #8cb2cd;
+        background-color: #37acff;
         color: #000;
 
         img {
@@ -316,7 +320,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background: #fffec9;
+    background: #efea45;
 
     .contact-item {
       height: 100%;
