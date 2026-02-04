@@ -1,7 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title text-center font-['Noto_Serif_TC',serif]" v-if="info.order.title"
+      <div class="order-title text-center font-['Noto Sans TC',serif]" v-if="info.order.title"
         v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle"></div>
