@@ -391,6 +391,7 @@ const requiredFields = {
   phone: "手機",
   email: "信箱",
   msg: "備註訊息",
+  area: "居住地區",
   city: "居住縣市",
   policyChecked: "個資告知事項聲明",
   r_verify: "機器人驗證"
