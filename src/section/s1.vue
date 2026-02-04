@@ -9,8 +9,8 @@
     <img src="./s1/bgm.svg" class="bg" v-else />
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-out" data-aos-delay="200" />
     <img src="./s1/slogo.svg" class="slogo" data-aos="zoom-out" data-aos-delay="0" />
-    <div class="t1" data-aos="zoom-out" data-aos-delay="300">安平港灣特<span>區•</span>國際級旅遊渡假宅</div>
-    <div class="t2" data-aos="zoom-out" data-aos-delay="500">21-75<span>坪 •</span>悅榕集<span>團 •</span>跨界聯名</div>
+    <div class="t1" data-aos="zoom-out" data-aos-delay="300">一戶一海<span>景•</span>國際級酒店居所</div>
+    <div class="t2" data-aos="zoom-out" data-aos-delay="500">43-75<span>坪 •</span>悅榕集<span>團 •</span>跨界聯名</div>
 
 
   </article>
