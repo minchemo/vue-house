@@ -3,15 +3,16 @@ const caseName = "豐秀大境"
 export default {
     caseid: "10de2364-633a-4991-b149-4aba5646ff47",
     //case_code: "zhsd",
-    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
+    address1: "接待中心",
+    //按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新北市新店區北宜路一段60號1F",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.296031925978!2d121.53568507632609!3d24.956040841424485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468018798e2df99%3A0x4c3e3d305e003b1c!2zMjMxNTLmlrDljJfluILmlrDlupfljYDljJflrpzot6_kuIDmrrU2MOiZnzFm!5e0!3m2!1szh-TW!2stw!4v1769652954424!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/TcvV1bUe7u3PgnVt7",
-    phone: "02-2915-9797",
-    fbLink: "https://www.facebook.com/PlentyLand/",
-    fbMessage: "https://m.me/PlentyLand/",
-    line: "https://lin.ee/pNsK1vE",// 客戶加賴
+    address: "桃園市新屋區中山東路二段777號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3617.0858794291444!2d121.1466186!3d24.9631926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468245d3e4ab351%3A0xdec61165b606235!2zMzI35qGD5ZyS5biC5paw5bGL5Y2A5Lit5bGx5p2x6Lev5LqM5q61Nzc36Jmf!5e0!3m2!1szh-TW!2stw!4v1770194713805!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/tJR6QnPxEVGVTStk6",
+    phone: "03-490-5553",
+    fbLink: "https://www.facebook.com/profile.php?id=61579968897663",
+    fbMessage: "https://m.me/61579968897663/",
+    line: "https://lin.ee/eVsJqdc",// 客戶加賴
     caseName: caseName,
     houseInfos: [/*
         ["投資興建", "鵬程建設股份有限公司"],
@@ -20,10 +21,10 @@ export default {
         ["行銷企劃", "XX國際地產行銷"],
         ["經 紀 人", "XXX (112)新北經字第004095號"],*/
     ],
-    gtmCode: ["GTM-W69C8322",], // 可放置多個
-    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
-    //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-    // recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    gtmCode: ["GTM-12345678",], // 可放置多個
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主1
+    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主2
+    // recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
 
