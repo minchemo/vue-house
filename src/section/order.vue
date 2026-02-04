@@ -42,7 +42,7 @@
               </option>
             </select></label>
 
-          <!-- 
+
           <label class="row"><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
@@ -50,7 +50,8 @@
                 {{ area.label }}
               </option>
             </select>
-          </label> -->
+          </label>
+          <!--  -->
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"

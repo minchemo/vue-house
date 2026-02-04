@@ -40,13 +40,14 @@ export default {
 
     room_type: ["兩房", "三房"],
     selectFields: {
+        /*
         room_type: {
             title: "需求房型",
             hold: "請選擇房型",
             option: ["二房", "三房"],
             bypass: false,
         },
-        /*
+       
         budget: {
           title: "購屋預算",
           hold: "請選擇區間",
