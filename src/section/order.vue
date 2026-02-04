@@ -100,7 +100,8 @@
   // padding-top: size(406);
   overflow: hidden;
   min-height: size(500);
-  background-color: #00be6e;
+  //background-color: #00be6e;
+  background-image: url("./s1/order-bg.png");
   background-size: auto;
   background-position: top;
   margin-top: -4.5vw;
