@@ -12,8 +12,8 @@
     <!-- 這個版本因為客戶沒fb才調整成這個 如果開啟了要另一個檔案 contactInfo有fb版.vue  -->
     <div class="flex justify-between w-full contact-item-box" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000">
       <div class="flex contact-item justify-center items-center contact-phone" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
-        <div>{{ info.phone }}</div>
+       <!-- <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" /> -->
+          <div>貴賓專線：{{ info.phone }}<br>營業時間：9:30-18:30&ensp;</div>
       </div>
     
     <div class="flex justify-between w-full no-gap contact-add" v-if="info.address">
@@ -22,7 +22,7 @@
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -35,21 +35,21 @@
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-      <img src="//h35.banner.tw/img//form/phone.svg" alt="撥打電話" srcset="" />
+      <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'" v-if="info.fbMessage">
-      <img src="//h35.banner.tw/img//form/messenger.svg" alt="FB 諮詢" srcset="" />
+      <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img//form/pen.svg" alt="預約賞屋" srcset="" />
+      <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
-      <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
+      <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -60,15 +60,16 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/messenger.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/messenger.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
       `${info.address2?info.address2:'導航地址'}`
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+      <div class="text-md mt-2 text-md-phone" v-if="modalType == 'phone'" v-html="info.phone"></div>
+      <div class="text-md mt-4">{{ modalType == 'phone' ? "營業時間:9:30-18:30" : modalType == 'fb' ? '線上諮詢' :
       `${info.address}`
       }}</div>
       <!-- btn -->
@@ -224,6 +225,10 @@
   img{ filter: invert(16%) sepia(25%) saturate(5653%) hue-rotate(220deg) brightness(96%) contrast(108%);
   }
 }
+.text-md-phone{font-size: sizem(27);
+      @media screen and (min-width:768px) {
+        font-size: size(29);
+      }}
 
 @media screen and (max-width:768px) {
 
@@ -298,7 +303,7 @@
           transform: translateX(-50%);
         }
         div{
-          text-indent: 2em;
+         // text-indent: 2em;
         }
 
         &.address {
