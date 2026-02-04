@@ -13,7 +13,7 @@
     <div class="flex justify-between w-full contact-item-box" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000">
       <div class="flex contact-item justify-center items-center contact-phone" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
        <!-- <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" /> -->
-          <div>貴賓專線：{{ info.phone }}<br>營業時間：9:30-18:30&ensp;</div>
+          <div>貴賓專線：{{ info.phone }}<br>營業時間：9:30-18:30</div>
       </div>
     
     <div class="flex justify-between w-full no-gap contact-add" v-if="info.address">
@@ -117,6 +117,15 @@
     font-size:19px;
     line-height: 1.6;
   padding:3.4em 0;
+  
+@media screen and (max-width:1120px) {
+
+    font-size:16px;
+}
+@media screen and (max-width:768px) {
+    font-size:18px;
+
+}
 
   .logo {position: relative;
     width: size(377);
@@ -129,24 +138,25 @@
   .contact-item-box {
     position: relative;
     margin-top: 1.25em;
-    gap: 1.25em;
-    width: size(1200);
-    min-width: 750px;
+    gap: .5em;
+    width: 90%;
+    max-width: 1200px;
+    min-width: 720px;
 
-    .contact-phone{flex: 2;}
-    .contact-add{flex:3;}
+    .contact-phone{flex: 3;}
+    .contact-add{flex:8;}
     .contact-item {
       background: #D0D3D3;
       color: #162783;
       width: 100%;
-      flex: 1;
+     // flex: 1;
       padding: 1.1em 0;
    // border-radius: 1em;
       letter-spacing: 0em;
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      gap: 1em;
+      gap: .3em;
       font-weight: 700;
       img {
         width:1.68em;
@@ -176,7 +186,7 @@
         // border-radius: 999px 0 0 999px;
       //  max-width: 9999px;
         justify-content: center;
-        margin-right: -1.4em;
+        // margin-right: -1.4em;
 
         &::before {
           content: "";
@@ -196,7 +206,7 @@
 
 
       &.googlemap {
-        flex:1;
+        flex:1.1;
   //    background-color: #9B1E44;
       border-left-width: 0;
       //  color: #fff;

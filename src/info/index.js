@@ -13,9 +13,12 @@ export default {
     // line: "https://lin.ee/FTYKISC",
     caseName: caseName,
     houseInfos: [
-      /*   */  ["投資興建", "亞果遊艇集團"],
-        ["營造公司", "銓興營造有限公司"],
+      /*   */  ["建設開發", "亞果遊艇集團"],
+        ["飯店管理", "悅榕集團"],
         ["建築設計", "許清俊建築師事務所"],
+        ["景觀規劃", "鼎昕景觀設計"],
+        ["燈光設計", "偶得設計"],
+        ["營造公司", "銓興營造"],
     ],
     gtmCode: ["GTM-0000000"], // 可放置多個
     // recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -30,17 +33,17 @@ export default {
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
-       /*   room_type: {
+          room_type: {
         title: "需求房型",
         hold: "請選擇房型",
-        option: ["兩房", "三房", "四房"],
-        bypass:false,　
-      }, */
+        option: [ "一房","兩房", "三房"],
+        bypass:true,　
+      }, 
       budget: {
         title: "購屋預算",
         hold: "請選擇區間",
         option: ["1000萬以下", "1000萬～1500萬", "1500萬～2000萬", "2000萬以上"],
-        bypass:false, //必填開啟使用1000萬-1500萬、1501萬-2000萬、2001萬以上
+        bypass:true, //必填開啟使用1000萬-1500萬、1501萬-2000萬、2001萬以上
       },
 
         /*

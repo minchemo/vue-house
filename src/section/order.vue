@@ -142,6 +142,13 @@
   width: 100%;
   padding-top: size(40);
   font-size:16px;
+@media screen and (max-width:1120px) {
+    font-size:14px;
+}
+@media screen and (max-width:768px) {
+    font-size:16px;
+
+}
 
 .order-section {
   position: relative;
@@ -192,10 +199,11 @@ margin:auto -.3em auto .3em;
   }
 
   .form {
-    width: size(1100);
-    min-width: 750px;
+    width: 90%;
+    max-width: 1200px;
+    min-width: 720px;
     //  height: 350px;
-    gap: 6em;
+    gap: 4em;
     margin-top: 3em;
     margin-bottom: 3em;
     z-index: 50;
@@ -225,9 +233,9 @@ margin:auto -.3em auto .3em;
       display: flex;width: 100%;
     align-items:center;
       > span{
-        width: 5.5em;
+        width: 5.6em;
         font-weight: 700;
-        text-align: left;padding-left:1em ;
+        text-align: left;padding-left:.9em ;
         > span{color: #F00;
           }
       }
@@ -252,6 +260,10 @@ margin:auto -.3em auto .3em;
   .sendall{
     font-size:28px;
     margin-bottom: 4em;
+@media screen and (max-width:1120px) {
+
+    font-size:20px;
+}
   }
   .send {
   // font-size:25px;

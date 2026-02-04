@@ -6,7 +6,7 @@
             <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                 <div class="item flex items-center w-full whitespace-nowrap"
                     v-for="item in info.houseInfos" :key="item">
-                    <p class="sub mr-5 pl-2 text-[#fff]" v-html="item[0]"></p>
+                    <p class="sub pl-2 text-[#fff]" v-html="item[0]"></p>
                     <p class="whitespace-pre-line leading-normal text-left" v-html="item[1]">
                     </p>
                 </div>
@@ -44,7 +44,7 @@ $house-c2:#333;
     width: 700px;
 
     .title {
-        font-size:1.8em;
+        font-size:28px;
         color: $house-c1;
         margin: 0 auto .5em auto;
     }
@@ -58,10 +58,13 @@ $house-c2:#333;
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
-            border-left: 2px solid $house-c1;
+           // border-r: 2px solid $house-c1;
 
              .sub{
               color: $house-c1;
+              border-right: 2px solid $house-c1;
+              padding-right: .8em;
+              margin-right: .8em;
                 // min-width: 4.5em;
             }
         }
