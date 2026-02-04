@@ -100,9 +100,10 @@
   // padding-top: size(406);
   overflow: hidden;
   min-height: size(500);
-  background: url("@/section/form/form-bg.png");
+  background-color: #00be6e;
   background-size: auto;
   background-position: top;
+  margin-top: -4.5vw;
 
   .bg-image {
     position: absolute;
@@ -123,7 +124,7 @@
 
   .order-title {
     font-size: size(40);
-    font-weight: 700;
+    font-weight: 500;
     color: #F8F66F;
     padding-top: 1em;
 
@@ -274,7 +275,7 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
-    background: url("@/section/form/bgm2.png");
+    background-color: #00be6e;
     background-size: cover;
     // overflow: hidden;
     // padding-top: sizem(200);

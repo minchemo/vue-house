@@ -4,11 +4,14 @@
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
     <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
-    <!--  
-    <img src="./s1/t2m.svg" class="t2" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
-    <img src="./s1/t2.svg" class="t2" data-aos="zoom-in" data-aos-delay="400" v-else>
-    -->
-    <img src="./s1/slogo.svg" class="slogo" data-aos="zoom-in" data-aos-delay="0">
+    <!--    -->
+    <img src="" class="t2">
+    <img src="./s1/t2m.png" class="t2" v-if="isMobile">
+    <img src="./s1/t2.png" class="t2" v-else>
+
+    <img src="./s1/slogo.svg" class="slogo" data-aos="flip-up" data-aos-delay="0">
+    <img src="./s1/t3m.png" class="t3" data-aos="flip-left" data-aos-delay="400" v-if="isMobile">
+    <img src="./s1/t3.png" class="t3" data-aos="flip-left" data-aos-delay="400" v-else>
   </article>
 </template>
 
@@ -33,9 +36,6 @@
 }
 
 .s1 {
-  // height:calc(100vh - 63px);
-  //height: sizem(604); 
-  // overflow: hidden;
   // mobile
   height: 62vw;
   background: url("./s1/bgm2.png");
@@ -52,20 +52,15 @@
   @media screen and (min-width: 768px) {
     background-image: url("./s1/pc.png");
     //background-size: 100%;
-    height: 62.7vw;
+    height: 58vw;
     padding: 0;
     font-size: size(56);
   }
 
   .logo {
-    /*
-    margin: sizem(100) auto sizem(16);
-    width: sizem(300);
-    margin: 10vw 55vw 4vw 3vw;
-    */
     width: 70vw;
-    /* margin: 9vw 0vw 4vw 0vw;  */
-    margin: 4vw 0vw 0vw -3vw;
+    /* pc*/
+    margin: 2vw 0vw 0vw -3vw;
   }
 
   .slogo {
@@ -73,111 +68,91 @@
     width: 100vw;
     bottom: 0vw;
     left: 0vw;
-    /*mobile
-    width: 7vw;
-      bottom: 24vw;
-      left: 6vw;
-      width: sizem(76);
-      bottom: sizem(-30);
-      left: sizem(-78);*/
+    z-index: 10;
   }
 
   .t1 {
-    /* margin: 0 auto sizem(50);
-    width: sizem(300);
-    width: 45vw;
-    margin: 0vw 24vw 4vw 3vw;*/
     width: 51vw;
     margin: 0vw 17vw 0vw 17vw;
+  }
 
-    filter: drop-shadow(2px 2px 1px #353535);
+  @keyframes an {
+    to {
+      transform: rotate(0);
+    }
   }
 
   .t2 {
-    width: sizem(149);
-    margin: 0 auto sizem(20);
+    // mobile
+    width: 9vw;
+    margin: 0 auto;
+    margin-top: 4.5vw;
+    margin-left: 54vw;
+    z-index: 10;
+    // animation
+    transform: rotate(20deg);
+    animation: an 2s ease-in-out alternate infinite;
+    transform-origin: 50% 100%;
   }
+
+
 
   .t3 {
-    width: sizem(226);
-    margin: 0 auto sizem(0);
+    // mobile
+    width: 20vw;
+    margin: 0vw auto 0vw;
+    margin-top: -16vw;
+    z-index: 11;
+
   }
 
-  //pc
+
   @media screen and (min-width: 768px) {
     .logo {
       width: 71vw;
+      //mobile
       margin: 4vw 3vw 57.6px 0vw 0vw;
-      /*
-      width: size(700);
-      margin: 7vw 50vw 6vw 0vw; 
-      margin: size(120) auto size(50);*/
 
     }
 
     .slogo {
       position: absolute;
       width: 100vw;
-      bottom: 0vw;
+      bottom: 4.5vw;
       left: 0vw;
-
-      /* bottom: size(20);
-      right: size(50);
-       width: 4.5vw;
-       bottom: 19vw;
-      left: 5vw;*/
+      /*PC*/
     }
 
     .t1 {
-      /*PC     */
+      /*PC*/
       width: 51vw;
       margin: 0vw 17vw 0vw 17vw;
     }
 
-    /*
-.t2{
-  width:size(520);
-  margin: 0 auto size(60);
-}
- */
+    // pc 
+    .t2 {
+      width: 10vw;
+      margin: 0 auto;
+      margin-top: 0vw;
+      margin-left: 53vw;
+      z-index: 10;
+
+      transform: rotate(20deg);
+      animation: an 2s ease-in-out alternate infinite;
+      transform-origin: 50% 100%;
+
+    }
+
     .t3 {
-      width: size(720);
-      margin: 0 auto size(35);
+      // pc
+      width: 20vw;
+      margin: 0 auto;
+      margin-top: -15vw;
+      z-index: 99;
     }
 
   }
 
-  /*
-.tree{
-  position: absolute;bottom: 0;left:calc(50% - #{sizem(850 * .5)});width: sizem(850); 
-  transform: skewX(-5deg);
-  transform-origin: 50% 100%;
-  animation: an 5s linear alternate infinite;
-  filter:drop-shadow(0 0 .3vw #fff);
-  @media screen and (min-width: 768px) {
-    bottom: calc(20% + #{size(0 - 1080 * .2)});
-    left:calc(50% - #{size(2280 * .5)});
-    width: size(2280); 
-  }
-}
-
-.t1{font-weight: 900;}
-.hr{height: 1.5em;background: #fff;width: 1px;margin: .3em auto .4em auto;
-}
-.t2{width: 8.5em;margin: 0 auto 1em;position: relative;z-index: 5;
-
-  @media screen and (min-width: 768px) {margin: 0 auto 2.3em;}
-}
-
-  .bg{position: absolute;
-    top:0;left:0;
-    height: 100%; transform: translateX(calc(-100% + 100vw));
-    animation: an 20s linear alternate infinite;
-    @media screen and (min-width: 768px) {
-      height: auto;width:size(2300);top:calc(50% + #{size(0 - 1080 * .5)});
-    }
-  }
-    */
 }
 </style>
 <script setup>
