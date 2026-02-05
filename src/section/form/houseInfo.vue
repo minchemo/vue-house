@@ -2,7 +2,7 @@
     <!--  -->
     <div class="house" v-if="info.houseInfos.length > 0">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
-            
+
             <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
                     <div class="title">建案資訊</div>
@@ -42,14 +42,23 @@
 //     background-position: center;
 //     background-repeat: no-repeat;
 // }
-.displaynone{display: none;}
-.house {
-   // height: auto;
-    color: #FFF;
-    font-size: size(22);
-    // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
+.displaynone {
+    display: none;
 }
+
+.house {
+    // height: auto;
+    color: #FFF;
+    background: #00be6e;
+    font-size: size(22);
+
+    // height:4em;
+    img {
+        height: 1.3em;
+        vertical-align: middle;
+    }
+}
+
 .info-box {
     width: size(800);
 
@@ -79,11 +88,12 @@
 }
 
 @media screen and (max-width:768px) {
-.house {
-    // background:#fff;
-  //  height: sizem(400);
-    font-size: sizem(14);
-}
+    .house {
+        background: #00be6e;
+        //  height: sizem(400);
+        font-size: sizem(14);
+    }
+
     .footer {
         margin-bottom: sizem(0);
         //margin-bottom: sizem(63);
