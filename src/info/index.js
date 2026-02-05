@@ -1,7 +1,7 @@
 const caseName = "豐秀大境"
 
 export default {
-    caseid: "10de2364-633a-4991-b149-4aba5646ff47",
+    caseid: "2dcbcbc2-2afa-4a21-9349-85b3a1b3f2d8",
     //case_code: "zhsd",
     address1: "接待中心",
     //按鈕區的--- 如空白會只呈現地址
