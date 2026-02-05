@@ -22,9 +22,11 @@ export default {
         ["經 紀 人", "XXX (112)新北經字第004095號"],*/
     ],
     gtmCode: ["GTM-12345678",], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主1
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主2
-    // recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主3
+
+    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    // recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
 
@@ -37,8 +39,7 @@ export default {
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
     //  表單欄位
-
-    room_type: ["兩房", "三房"],
+    // room_type: ["兩房", "三房"],
     selectFields: {
         /*
         room_type: {
