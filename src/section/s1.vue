@@ -73,7 +73,7 @@
 
   .t1 {
     width: 51vw;
-    margin: 0vw 17vw 0vw 17vw;
+    margin: 4vw 17vw 0vw 17vw;
   }
 
   @keyframes an {
@@ -133,7 +133,7 @@
     .t2 {
       width: 10vw;
       margin: 0 auto;
-      margin-top: 0vw;
+      margin-top: 2vw;
       margin-left: 53vw;
       z-index: 10;
 
@@ -147,7 +147,7 @@
       // pc
       width: 20vw;
       margin: 0 auto;
-      margin-top: -15vw;
+      margin-top: -16vw;
       z-index: 99;
     }
 
