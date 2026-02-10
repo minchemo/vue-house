@@ -311,7 +311,7 @@ const list1 = [
     t1: ["v1", "已完成"],
     t2: "115/01/16",
     t3: "補正第2次專案小組修正版報告書",
-    link:"",
+    link:"https://drive.google.com/file/d/1RnFC4r2we1D6lCndaRJpVssTAsKF1Tet/view?usp=sharing",
   }, 
   {
     t1: ["v2", "進行中"],
