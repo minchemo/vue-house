@@ -148,7 +148,7 @@
       flex: 1;
       //padding: 0.5em 0;
    // border-radius: 1em;
-   min-height: size(70);
+   min-height: 70px;
       letter-spacing: 0em;
       z-index: 1;
       transition: all .3s;
