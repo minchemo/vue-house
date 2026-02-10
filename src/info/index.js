@@ -20,7 +20,7 @@ export default {
         ["燈光設計", "偶得設計"],
         ["營造公司", "銓興營造"],
     ],
-    gtmCode: ["GTM-0000000"], // 可放置多個
+    gtmCode: ["GTM-KBSZPWCS"], // 可放置多個
     // recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
