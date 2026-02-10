@@ -1,8 +1,8 @@
 <template>
   <article class="s1" id="s1">
- <!--  <img src="./s1/mo.jpg" class="t0" v-if="isMobile">
-    <img src="./s1/pc.jpg" class="t0" v-else> -->  
-
+ <!--   -->  <img src="./s1/mo.jpg" class="t0" v-if="isMobile">
+    <img src="./s1/pc.jpg" class="t0" v-else>
+<!--
     <img src="./s1/train.png" class="train" alt="train" data-aos="fade-left" data-aos-duration="3000" data-aos-offset="-800">
     <img src="./s1/light.png" class="light" alt="light" data-aos="fade-left" data-aos-delay="200" data-aos-offset="-800"
       data-aos-duration="1000">
@@ -22,23 +22,8 @@
     </div>
 
 
-
-    <!--   <img src="./s1/bgm.svg" class="bg" v-if="isMobile">
-    <img src="./s1/bg.svg" class="bg" v-else>
-    <div class="txt">
-      <img src="./s1/logo.svg" class="logo" alt="曼谷青玉" data-aos="zoom-in" data-aos-delay="0">
-      <img src="./s1/t1.svg" class="t1" alt="曼谷新都心 置產新標地" data-aos="zoom-in" data-aos-delay="400">
-      <div class="t2" data-aos="zoom-in" data-aos-delay="400"><span>7.5坪-15坪　室內輕裝</span><b>海外買房一站式服務</b></div>
-    </div>
-  <img src="./s1/mo.jpg" class="t0">
-    <img src="./s1/mo.jpg" class="t0">
-    <div class="txt">
-      <div class="t1" data-aos="fade-right" data-aos-delay="0">市心<b>2</b>字頭<img src="./s1/logo.svg" class="logo" data-aos="fade-right" data-aos-delay="200" /></div>
-      <div class="t2" data-aos="fade-right" data-aos-delay="400">日系選冊宅<b>2-4</b>房&ensp;北外環<b>5</b><span>分鐘</span></div>
-      <div class="t3" data-aos="fade-right" data-aos-delay="600">THE LANDMARK<span>262-8888</span></div>
-  </div>  -->
-    <!--  <div class="caption" data-aos="fade-up" data-aos-delay="800" data-aos-offset="-200">佳展建設✕燿鴻廣告</div>
-  <img src="./s1/img.webp" class="img" data-aos="fade-up" data-aos-delay="700" data-aos-offset="-200">  -->
+-->
+    
   </article>
 </template>
 
