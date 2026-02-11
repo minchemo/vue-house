@@ -310,7 +310,7 @@ const list1 = [
   {
     t1: ["v1", "已完成"],
     t2: "115/01/16",
-    t3: "補正第2次專案小組修正版報告書",
+    t3: "補正第2次專案小組修正版報告書<br>（此尚處都更審議中，相關選配單元、應分配權值及補貼等，仍以最終核定內容為準； 惟因審議過程所致之異動，亦將依都更條例程序辦理通知及後續相關作業。）",
     link:"https://drive.google.com/file/d/1RnFC4r2we1D6lCndaRJpVssTAsKF1Tet/view?usp=sharing",
   }, 
   {
