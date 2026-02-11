@@ -7,8 +7,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7347.440582495402!2d120.21994078972126!3d22.960526121169366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDU3JzM3LjkiTiAxMjDCsDEzJzIzLjciRQ!5e0!3m2!1szh-TW!2stw!4v1770779988629!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/UD2SMgnNhJkAvUWB7",
     phone: "06-2899868",
-    fbLink: "https://www.facebook.com//",
-    fbMessage: "https://m.me//",
+    fbLink: "https://www.facebook.com/61588124000520/",
+    fbMessage: "https://m.me/61588124000520/",
    // line: "https://lin.ee/VOzO2Sx",
     caseName: caseName,
     houseInfos: [
@@ -22,9 +22,9 @@ export default {
         ["行銷企劃", "自售"],
         */
     ],
-     gtmCode: ["GTM-00000000"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+     gtmCode: ["GTM-NK8K23RN"], // 可放置多個
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
