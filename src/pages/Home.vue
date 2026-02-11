@@ -20,8 +20,7 @@
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />
-    <!-- <S2v /> -->
-    <!--S2 /-->
+    <S2 />
     <!-- <S12 />-->
     <!--<S3 />-->
     <!--<S4 />-->
@@ -333,7 +332,7 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-//import S2 from "@/section/s2.vue"
+import S2 from "@/section/s2.vue"
 // import S2v from "@/section/s2v.vue"
 //import S3 from "@/section/s3.vue"
 //import S4 from "@/section/s4.vue"

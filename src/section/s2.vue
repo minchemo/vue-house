@@ -1,12 +1,14 @@
 <template>
   <article class="s2">
     <div class="txt">
-      <div class="sub">「當時你眼光真好！」</div>
-      <h2 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">未來的你，註定盛讚現在的自己</h2>
+      <h2 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">EVERYTHING <br /> IS PERFECT
+      </h2>
+      <div class="sub">地段決定身價,眼界決定境界。 <br /> 站在關埔的最核心,您的眼界,已領先一步 <br /> 時間醞釀的答卷,獻給懂完美的你。</div>
       <ul>
-        <li data-aos="fade-up" data-aos-delay="100">錯過台北車站、板橋車站、南港車站</li>
-        <li data-aos="fade-up" data-aos-delay="200">桃園新站特區最大開發，千億未來盛大擘劃</li>
-        <li data-aos="fade-up" data-aos-delay="300">這一次，即刻先馳得點！</li>
+        <li data-aos="fade-up" data-aos-delay="100">完美的名字</li>
+        <li data-aos="fade-up" data-aos-delay="200">昌益鉑翡 EVERYTHING IS PERFECT</li>
+        <li data-aos="fade-up" data-aos-delay="300">限量早鳥!即將公開 <br /> 捷足先登 !現在開始</li>
+        <li data-aos="fade-up" data-aos-delay="400"> 本圖片為AI情境模擬,以實際完工現況為準。</li>
       </ul>
     </div>
     <div class="caption"></div>
@@ -25,7 +27,7 @@
   height: 100vh;
   padding: 0;
   font-size: size(18);
-  background: url("./s2/bg1.png") 50% 40%;
+  background: url("./s2/s2.png") 50% 40%;
   background-size: cover;
 
   .txt {
@@ -36,10 +38,10 @@
     letter-spacing: 0;
     line-height: 1.7;
     font-size: size(20);
-    color: #000;
+    color: #fff;
 
     .sub {
-      color: #000;
+      color: #fff;
       margin: 0 0 .6em;
       text-align: center;
       font-size: size(20);
@@ -50,7 +52,7 @@
       margin: 0 0 .6em;
       line-height: 1.4;
       font-weight: 700;
-      color: #001764;
+      color: #CEA93C;
       text-align: center;
 
       &::after,
