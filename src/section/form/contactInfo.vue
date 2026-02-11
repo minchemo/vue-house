@@ -1,10 +1,5 @@
 <template>
   <div class="contact-info-img relative">
-    <img src="@/section/s1/1.png" alt="" class="f1" />
-    <img src="@/section/s1/2.png" alt="" class="f2" />
-    <img src="@/section/s1/3.png" alt="" class="f3" />
-    <img src="@/section/s1/4.png" alt="" class="f4" />
-    <img src="@/section/s1/5.png" alt="" class="f5" />
   </div>
   <div class="contact-bg">
     <div class="contact-info mx-auto  flex flex-col items-center justify-between">
@@ -169,11 +164,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #76539B;
+  background-color: #006a00;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #3E2A5A;
+  background-color: #00a89a;
 }
 
 .mo-contact-info {
@@ -222,7 +217,7 @@
 .contact-bg {
   position: relative;
   z-index: 3;
-  background: linear-gradient(90deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%), #FFF;
+  // background: linear-gradient(90deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%), #FFF;
 }
 
 .contact-info-img {
@@ -296,12 +291,12 @@
     // min-width: 680px;
 
     .contact-item {
-      background: linear-gradient(90deg, #76539B 0%, #3E2A5A 100%);
-      color: #fff;
+      background:#fff;
+      color: #00744a;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-       border-radius: 2em;
+       border-radius: .9em;
       font-size: 16px;
       font-weight: 700;
       line-height: 1.6; //3.8
@@ -315,7 +310,7 @@
       gap: 1em;
 
       &:hover {
-        background: #3E2A5A;
+        background: #0c0;
         color: #fff;
 
         img {
@@ -327,13 +322,13 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        filter:  invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #fff;
+        background-color: #ddd;
         background-image: none;
         color: #000;
         z-index: 0;
@@ -391,7 +386,7 @@
 
 .modal-box {
   img {
-    filter:  invert(37%) sepia(36%) saturate(825%) hue-rotate(227deg) brightness(88%) contrast(84%);
+    filter:  invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
   }
 }
 
@@ -407,7 +402,7 @@
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-background: linear-gradient(0deg, #76539B 0%, #3E2A5A 100%), #04836E;
+background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
 
     .contact-item {
       flex: 1;

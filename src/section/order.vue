@@ -147,6 +147,7 @@ $o-title-c:#fff; //.order-title
   position: relative;
   overflow: hidden;
   min-height: size(500);
+  background: linear-gradient(0deg, #006a00 15%,#006a0066 70%, #006a0000);
 }
 .order-title {
   font-size: size(45);
@@ -219,7 +220,7 @@ $o-title-c:#fff; //.order-title
   .send {
   font-size:20px;
     font-size:inherit;
-    background: linear-gradient(90deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%);
+    background:#0c0;
 
     //border: 1px solid #FFF;
     border:0;
@@ -229,7 +230,7 @@ $o-title-c:#fff; //.order-title
     border-radius: 2em;
     width: 410px;
     z-index: 10;
-    color: #76539B;
+    color: #fff;
     position: relative;
   }
 
@@ -242,24 +243,16 @@ $o-title-c:#fff; //.order-title
 }
 
 @media screen and (max-width:768px) {
-  .order-section {
-    min-height: sizem(800);
-    position: relative;
-    // overflow: hidden;
-   // padding-top: sizem(200);
-
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
-    }
-
-  }
-
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+  .order-section {
+    min-height: sizem(800);
+    position: relative;
+  background: linear-gradient(0deg, #006a00 20%,#006a0099 80%, #006a0000);
+
+  }
+
 
     .cus-divider {
       margin: 0 auto;

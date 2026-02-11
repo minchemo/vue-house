@@ -10,13 +10,13 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#76539B] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#089EFB] text-[#000]">
     <S1 />
+    <S2 />
+    <S3 />
     
     <!-- <S2v /> -->
   <!--
-    <S2 />
-    <S3 />
     <S4 />
     <S5 />
     <S6 />
@@ -53,21 +53,22 @@
   opacity: 0;
 }
 
-.home{ /*
-  background:linear-gradient(to bottom, #009e41 0%,#00a6e9 100%);
-  &::before{content: "";
-  //background: url("@/section/s3/1.webp") center;background-size: 100% auto;
-  width: 120%;height: 120vw;position: fixed;
-  left: -10%;right: 0;top: calc(50% - 60vw);bottom: 0;
-transform: translateX(0%) rotate(360deg);filter: blur(10px);
-  animation: bg 40s linear infinite;
-  @media screen and (max-width: 767px) {
-    width: 240%;
-    height: 240vw;
-    left: -70%;
-    top: calc(50% - 120vw);
+.home{ 
+  
+    &::before{content: "";
+  background: url("@/section/form/bgm.png") center;
+  background-size: 100% auto;
+  width: 100%;height: 100%;position: fixed;
+  left:0;right: 0;top: 0;bottom: 0;
+  @media screen and (min-width: 768px) {
+  background: url("@/section/form/bg.png") center;
+  width: 100%;height: 100%;
   }
 }
+  
+  /*
+  background:linear-gradient(to bottom, #009e41 0%,#00a6e9 100%);
+
   */
 }
 
@@ -87,8 +88,8 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-// import S2 from "@/section/s2.vue"
-// import S3 from "@/section/s3.vue"
+import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
 /* 
