@@ -14,7 +14,7 @@
   <div class="home bg-[#000000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
 
     <img src="@/section/s1/bgm667.png" class="bgh mob">
-    <img src="@/section/s1/bgm2.png" class="bgh pc">
+    <img src="@/section/s1/bg.png" class="bgh pc">
     <!--   <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />

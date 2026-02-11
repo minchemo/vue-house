@@ -2,8 +2,8 @@
   <article class="s1 relative" id="s1">
     <img src="./s1/pc.png" class="t0">
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
-    <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
+    <img src="./s1/t1.png" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
+    <img src="./s1/t1m.png" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
     <!--    -->
     <img src="" class="t2">
     <img src="./s1/t2m.png" class="t2" v-if="isMobile">
@@ -38,7 +38,7 @@
 .s1 {
   // mobile
   height: 62vw;
-  background: url("./s1/bgm2.png");
+  background: url("./s1/bg.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@
 
   //pc
   @media screen and (min-width: 768px) {
-    background-image: url("./s1/pc.png");
+    background-image: url("./s1/bg.png");
     //background-size: 100%;
     height: 58vw;
     padding: 0;
@@ -58,9 +58,9 @@
   }
 
   .logo {
-    width: 70vw;
+    width: 25vw;
     /* pc*/
-    margin: 2vw 0vw 0vw -3vw;
+    margin: 15vw 0vw 0vw 0vw;
   }
 
   .slogo {
@@ -69,11 +69,15 @@
     bottom: 0vw;
     left: 0vw;
     z-index: 10;
+    visibility: hidden;
   }
 
   .t1 {
+    /* pc
     width: 51vw;
-    margin: 4vw 17vw 0vw 17vw;
+    margin: 4vw 17vw 0vw 17vw;*/
+    width: 12vw;
+    margin: -26vw 17vw 0vw 15vw;
   }
 
   @keyframes an {
@@ -93,9 +97,8 @@
     transform: rotate(20deg);
     animation: an 2s ease-in-out alternate infinite;
     transform-origin: 50% 100%;
+    visibility: hidden;
   }
-
-
 
   .t3 {
     // mobile
@@ -103,13 +106,12 @@
     margin: 0vw auto 0vw;
     margin-top: -16vw;
     z-index: 11;
-
+    visibility: hidden;
   }
-
 
   @media screen and (min-width: 768px) {
     .logo {
-      width: 71vw;
+      width: 25vw;
       //mobile
       margin: 4vw 3vw 57.6px 0vw 0vw;
 
@@ -120,13 +122,14 @@
       width: 100vw;
       bottom: 4.5vw;
       left: 0vw;
+      visibility: hidden;
       /*PC*/
     }
 
     .t1 {
       /*PC*/
-      width: 51vw;
-      margin: 0vw 17vw 0vw 17vw;
+      width: 12vw;
+      margin: -26vw 17vw 0vw 15vw;
     }
 
     // pc 
@@ -136,11 +139,10 @@
       margin-top: 2vw;
       margin-left: 53vw;
       z-index: 10;
-
       transform: rotate(20deg);
       animation: an 2s ease-in-out alternate infinite;
       transform-origin: 50% 100%;
-
+      visibility: hidden;
     }
 
     .t3 {
@@ -149,6 +151,7 @@
       margin: 0 auto;
       margin-top: -16vw;
       z-index: 99;
+      visibility: hidden;
     }
 
   }

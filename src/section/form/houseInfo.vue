@@ -49,7 +49,7 @@
 .house {
     // height: auto;
     color: #FFF;
-    background: #00be6e;
+    background-image: url("../s1/bg.png");
     font-size: size(22);
 
     // height:4em;
