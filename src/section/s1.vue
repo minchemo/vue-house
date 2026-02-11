@@ -2,7 +2,7 @@
   <article class="s1" id="s1">
  <!--  <img src="./s1/mo.jpg" class="t0" v-if="isMobile">
     <img src="./s1/pc.jpg" class="t0" v-else>  --> 
-    <img src="./s1/bg.png" class="bg" data-aos="zoom-in" data-aos-delay="0">
+    <div class="bg"><img src="./s1/bg.png" data-aos="zoom-in" data-aos-delay="0"></div>
     <div class="cover"></div>
     <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="500">
     
@@ -24,7 +24,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:calc(100vh - #{sizem(63)});
+  height:calc(100dvh - #{sizem(63)});
   min-height: sizem(604);
   max-height: sizem(750);
   // background: #d62051;
@@ -56,9 +56,21 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
-    top: 0;left: 0;
+    top: 50%;left: 0;transform: translateY(-50%);
     z-index: 1;
-    transform-origin: 50% 20%;
+    img{
+      width: 100%;
+    height: 100%;
+      object-fit: cover;
+    transform-origin: 50% 29%;
+  @media screen and (min-width: 768px) {
+    height: auto;
+    }
+    }
+
+  @media screen and (min-width: 768px) {
+    height: auto;
+    }
   }
   .cover {
     position: absolute;

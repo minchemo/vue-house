@@ -24,9 +24,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height:calc(100vh - #{sizem(63)});
-  min-height: sizem(604);
-  max-height: sizem(604);
+  height:sizem(604);
   // background: #d62051;
   background: #089EFB url("./s3/bgm.jpg") no-repeat;
   background-size: 100% auto;
@@ -42,7 +40,7 @@
     background-size: cover;
     background-position: 50% 50%;
     height: 100dvh;
-    min-height: size(1070);
+    min-height: size(900);
     max-height: size(1080);
     font-size: size(34);
     justify-content: center;

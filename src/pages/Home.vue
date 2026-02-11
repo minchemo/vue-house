@@ -61,7 +61,7 @@
   width: 100%;height: 100%;position: fixed;
   left:0;right: 0;top: 0;bottom: 0;
   @media screen and (min-width: 768px) {
-  background: url("@/section/form/bg.png") center;
+  background-image: url("@/section/form/bg.png");
   width: 100%;height: 100%;
   }
 }
