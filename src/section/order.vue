@@ -129,9 +129,8 @@
     font-weight: 500;
     color: #F8F66F;
     padding-top: 2em;
+    margin-left: -4em;
 
-    //padding-bottom:.3em;
-    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
     .line {
       width: size(439);
     }
@@ -164,7 +163,7 @@
     min-width: 750px;
     //  height: 350px;
     gap: size(80);
-    margin-top: 0.5vw;
+    margin-top: 3vw;
     margin-bottom: 2vw;
     z-index: 50;
     align-items: stretch;
