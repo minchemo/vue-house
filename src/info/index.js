@@ -36,8 +36,8 @@ export default {
 
     order: {
         title: "預約賞屋",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
-        subTitle_mo: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        subTitle: "",
+        subTitle_mo: "",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
