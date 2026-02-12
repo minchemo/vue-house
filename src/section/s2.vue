@@ -63,8 +63,9 @@
   }
 
   .txt4 {
-    margin-left: -60em;
-    margin-top: 18em;
+    margin-left: -45em;
+    margin-top: 0em;
+    width: 119em;
   }
 
   .txt {
