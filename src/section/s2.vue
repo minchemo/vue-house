@@ -33,19 +33,29 @@
 
 
   .txt1 {
-    margin-top: 5em;
+    margin-top: 2.8em;
     margin-bottom: 2em;
-    margin-left: -60em;
+    margin-left: -34em;
     font-weight: 200;
-    font-size: 1em;
+    font-size: 1.3em;
+  }
+
+  .sub {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: -38em;
+    margin-top: -1em;
+    text-align: center;
+    font-size: size(23);
   }
 
   .txt3 {
-    margin-top: 3em;
+    margin-top: 1em;
     margin-bottom: 2em;
-    margin-left: -60em;
+    margin-left: -23em;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 2em;
     background-clip: text;
     background: linear-gradient(to bottom, #ffc71f 0%, #ffffff 50%, #f2bd00 100%);
     -webkit-background-clip: text;
@@ -67,13 +77,7 @@
     font-size: size(20);
     color: #fff;
 
-    .sub {
-      color: #fff;
-      margin: 0 0 .6em;
-      margin-left: -60em;
-      text-align: center;
-      font-size: size(20);
-    }
+
 
     .title {
       font-size: 4em;
