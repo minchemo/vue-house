@@ -128,7 +128,7 @@
     font-size: size(40);
     font-weight: 500;
     color: #F8F66F;
-    padding-top: 1em;
+    padding-top: 2em;
 
     //padding-bottom:.3em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))

@@ -34,9 +34,10 @@
 
     //text-shadow: 0 0 5px
     .title {
-      font-size: 1.5em;
+      font-size: 1.75em;
       margin: 0 auto;
-      margin-left: 2em;
+      margin-left: 4em;
+      margin-top: -1.2em;
       text-align: left;
       line-height: 1.4;
       font-weight: 200;
