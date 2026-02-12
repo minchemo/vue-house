@@ -3,12 +3,13 @@
     <div class="txt">
       <h2 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">EVERYTHING <br /> IS PERFECT
       </h2>
-      <div class="sub">地段決定身價,眼界決定境界。 <br /> 站在關埔的最核心,您的眼界,已領先一步 <br /> 時間醞釀的答卷,獻給懂完美的你。</div>
       <ul>
-        <li data-aos="fade-up" data-aos-delay="100">完美的名字</li>
-        <li data-aos="fade-up" data-aos-delay="200">昌益鉑翡 EVERYTHING IS PERFECT</li>
-        <li data-aos="fade-up" data-aos-delay="300">限量早鳥!即將公開 <br /> 捷足先登 !現在開始</li>
-        <li data-aos="fade-up" data-aos-delay="400"> 本圖片為AI情境模擬,以實際完工現況為準。</li>
+        <li class="txt1" data-aos="fade-up" data-aos-delay="100">地段決定身價,眼界決定境界。 <br /> 站在關埔的最核心,您的眼界,已領先一步 <br />
+          時間醞釀的答卷,獻給懂完美的你。</li>
+        <div class="sub">完美的名字 <br /> 昌益鉑翡 EVERYTHING IS PERFECT</div>
+        <li data-aos="fade-up" data-aos-delay="200"></li>
+        <li class="txt3" data-aos="fade-up" data-aos-delay="300">限量早鳥!即將公開 <br /> 捷足先登 !現在開始</li>
+        <li class="txt4" data-aos="fade-up" data-aos-delay="400"> 本圖片為AI情境模擬,以實際完工現況為準。</li>
       </ul>
     </div>
     <div class="caption"></div>
@@ -30,6 +31,30 @@
   background: url("./s2/s2.png") 50% 40%;
   background-size: cover;
 
+
+  .txt1 {
+    margin-top: 5em;
+    margin-bottom: 2em;
+    font-weight: 200;
+    font-size: 1em;
+  }
+
+  .txt3 {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    font-weight: 500;
+    font-size: 1em;
+    background-clip: text;
+    background: linear-gradient(to bottom, #ffc71f 0%, #ffffff 50%, #f2bd00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .txt4 {
+    margin-left: -65em;
+    margin-top: 18em;
+  }
+
   .txt {
     z-index: 5;
     margin: 2em auto;
@@ -49,7 +74,7 @@
 
     .title {
       font-size: 2em;
-      margin: 0 0 .6em;
+      margin: 0 auto;
       line-height: 1.4;
       font-weight: 700;
       color: #CEA93C;
@@ -60,6 +85,8 @@
         content: "";
         width: 0 !important;
         height: 0 !important;
+        display: none;
+        ;
       }
     }
   }
