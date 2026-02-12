@@ -1,11 +1,14 @@
 <template>
   <article class="s3">
 
-  
+
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">站在土城AI科技走廊上<br>直抵世界供應鏈的心臟</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">土城永寧位居板南線關鍵節點，台灣最強7公里AI科技廊道核心，全球目光都聚集在這裡。更掌握新板與土城兩大城市中心脈動，預定板南線未來10年最關鍵的成長軸線，成就城市菁英的居住首選。從科技產業發展到城市生活機能，「松陽馥麗」完美演繹了這片土地上的無限潛力。</p>
+        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">
+          站在土城AI科技走廊上<br>直抵世界供應鏈的心臟</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+          土城永寧位居板南線關鍵節點，台灣最強7公里AI科技廊道核心，全球目光都聚集在這裡。更掌握新板與土城兩大城市中心脈動，預定板南線未來10年最關鍵的成長軸線，成就城市菁英的居住首選。從科技產業發展到城市生活機能，「松陽馥麗」完美演繹了這片土地上的無限潛力。
+        </p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -29,43 +32,49 @@
 .s3 {
   @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
-  height:auto;
-  padding:7em 0;
-  font-size:size(18);
-  gap:3em;
+  height: auto;
+  padding: 7em 0;
+  font-size: size(18);
+  gap: 3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  .bg{
-    span{
-      &:nth-child(1){
+
+  .bg {
+    span {
+      &:nth-child(1) {
         top: 1vw;
         left: 10vw;
         font-size: 3.5vw;
       }
-      &:nth-child(2){
+
+      &:nth-child(2) {
         top: 12vw;
         left: 2vw;
         font-size: 2vw;
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         top: 3vw;
         left: 7vw;
         font-size: 9vw;
         transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
+        background: radial-gradient(ellipse at center, #64c8da33 65%, #fff0 70%);
         animation-delay: 1.8s;
       }
-      &:nth-child(4){
+
+      &:nth-child(4) {
         top: 5vw;
         left: 26vw;
         font-size: 1.5vw;
       }
-      &:nth-child(5){
+
+      &:nth-child(5) {
         top: 12vw;
         right: 33vw;
         font-size: 4.5vw;
       }
-      &:nth-child(6){
+
+      &:nth-child(6) {
         top: 12vw;
         right: 1vw;
         font-size: 2.5vw;
@@ -80,40 +89,46 @@
     @apply flex;
     margin: 0;
     flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
-}
+    flex-direction: column;
+    text-align: justify;
+  }
 
-.txt {
-  
-  .title{
-    &::after,
-    &::before{
-      width: 11.1em;
+  .txt {
+
+    .title {
+
+      &::after,
+      &::before {
+        width: 11.1em;
+      }
     }
   }
-}
+
   .slider {
     margin: 0;
     flex-basis: size(840);
     width: size(840);
-      height: size(560);
+    height: size(560);
+
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
+      flex-basis: size(840);
       height: size(560);
-      
+
     }
-    .splide__pagination{
+
+    .splide__pagination {
       left: calc(100% + 3em);
       justify-content: flex-start;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #529130;
-    }
+      color: #C5C5C5;
+
+      li button.is-active {
+        color: #529130;
+      }
     }
   }
 }
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -121,72 +136,82 @@
 @media screen and (max-width: 767px) {
 
   .s3 {
-  flex-direction: column-reverse;
-  height: auto;
-  padding:0 0 5em 0;
-  font-size:sizem(12);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:2em;
-
-.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
-.bg{
-    span{
-      &:nth-child(1){
-        top: 4vw;
-        left: 82vw;
-        font-size: 6vw;
-      }
-      &:nth-child(2){
-        top: 57vw;
-        left: 2vw;
-        font-size: 8vw;
-      }
-      &:nth-child(3){
-        top: 3vw;
-        left: 77vw;
-        font-size: 23vw;
-      }
-    }
-  }
-
-  .main {
-    padding: 0 sizem(30);
-    width: 100%;
-}
-
-.txt {
-  .title{
-    &::after,
-    &::before{
-      width: 0;
-    }
-  }
-  .hr{
-    width: sizem(100);
-    margin: sizem(20) auto sizem(10);
-    }
-}
-
-
-
-  .slider {
+    flex-direction: column-reverse;
     height: auto;
-    width: 100%;
+    padding: 0 0 5em 0;
+    font-size: sizem(12);
+    flex-wrap: nowrap;
+    margin-bottom: 0em;
+    gap: 2em;
 
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
+    .img {
+      bottom: sizem(230);
+      right: sizem(-30);
+      width: sizem(250);
     }
-    .slide-item {
-      @apply bg-cover;
+
+    .bg {
+      span {
+        &:nth-child(1) {
+          top: 4vw;
+          left: 82vw;
+          font-size: 6vw;
+        }
+
+        &:nth-child(2) {
+          top: 57vw;
+          left: 2vw;
+          font-size: 8vw;
+        }
+
+        &:nth-child(3) {
+          top: 3vw;
+          left: 77vw;
+          font-size: 23vw;
+        }
+      }
+    }
+
+    .main {
+      padding: 0 sizem(30);
       width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
     }
-  }
+
+    .txt {
+      .title {
+
+        &::after,
+        &::before {
+          width: 0;
+        }
+      }
+
+      .hr {
+        width: sizem(100);
+        margin: sizem(20) auto sizem(10);
+      }
+    }
+
+
+
+    .slider {
+      height: auto;
+      width: 100%;
+
+      .caption {
+        font-size: sizem(12);
+        right: sizem(5);
+        bottom: sizem(5);
+      }
+
+      .slide-item {
+        @apply bg-cover;
+        width: 100%;
+        flex-basis: auto;
+        height: sizem(250);
+
+      }
+    }
   }
 }
 </style>
@@ -220,19 +245,18 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.webp", import.meta.url).href ,
+    img: new URL("./s3/1.webp", import.meta.url).href,
     caption: "頂埔科學園區"
   },
   {
-    img:new URL("./s3/2.webp", import.meta.url).href ,
+    img: new URL("./s3/2.webp", import.meta.url).href,
     caption: "嵿埔之星科技廣場"
   },
   {
-    img:new URL("./s3/3.webp", import.meta.url).href ,
+    img: new URL("./s3/3.webp", import.meta.url).href,
     caption: "土城鴻海"
   },
-  
+
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
-
