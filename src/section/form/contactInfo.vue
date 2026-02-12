@@ -460,7 +460,7 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
 
         &.address {
           font-size: sizem(15);
-          // border-radius: .5em  .5em 0 0;
+           border-radius: .9em  .9em 0 0;
           padding: 1.1em 0;
           margin: sizem(25) auto 0;
           //font-size: .9em;
@@ -474,7 +474,7 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
         }
 
         &.address+div {
-          //  border-radius: 0 0 .5em .5em;
+            border-radius: 0 0 .9em .9em;
         }
 
         &.googlemap {
