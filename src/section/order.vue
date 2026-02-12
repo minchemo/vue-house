@@ -262,7 +262,7 @@
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #000;
+    color: #fff;
     //background-color: #F8F66F; 
     background: linear-gradient(to bottom, #fbcf00 5%, #cb9b0c 25%, #cb9b0c 70%, #ffe87b 95%);
     //border: 1px solid #FFF9;

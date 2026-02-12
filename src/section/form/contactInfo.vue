@@ -206,13 +206,13 @@
 
   .contact-item-box {
     position: relative;
-    margin-top: size(20);
+    margin-top: 0.6vw;
     gap: size(20);
     width: size(920);
     // min-width: 680px;
 
     .contact-item {
-      background-color: #9FD8F6;
+      background-color: #ffffff;
       color: #000;
       width: 100%;
       flex: 1;
@@ -227,6 +227,8 @@
       cursor: pointer;
       //border: 1px solid #C29267;
       gap: 1em;
+      border-radius: 0.5em;
+      margin-left: -13px;
 
       &:hover {
         background-color: #37acff;
