@@ -45,20 +45,28 @@ export default {
     // room_type: ["兩房", "三房"],
     selectFields: {
         /*
+        use_type: {
+            title: "年齡",
+            hold: "請選擇年齡",
+            option: ["20-30歲", "30-40歲", "40-50歲", "50-60歲", "60歲以上"]
+        },
+        */
+
         room_type: {
             title: "需求房型",
             hold: "請選擇房型",
             option: ["二房", "三房"],
             bypass: false,
         },
-       
+
         budget: {
-          title: "購屋預算",
-          hold: "請選擇區間",
-          option: ["2388~2588萬","2688~2888萬"],
-          bypass:false, //必填開啟使用
+            title: "購屋預算",
+            hold: "請選擇區間",
+            option: ["2388~2588萬", "2688~2888萬"],
+            bypass: false, //必填開啟使用
         },
-   
+
+        /*
      use_type: {
        title: "使用用途",
        hold: "請選擇用途",

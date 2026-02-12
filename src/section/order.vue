@@ -11,7 +11,17 @@
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row name"><span>姓名<span>*</span></span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)" /></label>
+              @input="(event) => (formData.name = event.target.value)" />
+          </label>
+
+
+          <div class="gender">
+            <label><input type="radio" name="gender" value="男"
+                @input="(event) => (formData.gender = event.target.value)">先生</label>
+            <label><input type="radio" name="gender" value="女"
+                @input="(event) => (formData.gender = event.target.value)">女士</label>
+          </div>
+
 
           <label class="row"><span>手機<span>*</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
@@ -30,10 +40,6 @@
             </label>
           </template>
           <!-- 動態 select end-->
-
-
-
-
           <label class="row"><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
@@ -228,7 +234,11 @@
         }
       }
 
-      //&.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+      &.name {
+        width: calc(100% - 3.8em);
+      }
+
+      //沒有性別的話這條槓掉
     }
 
     .gender {
@@ -236,6 +246,7 @@
       position: absolute;
       right: 0;
       flex-direction: column;
+      color: #fff;
 
       label:first-child {
         margin-bottom: .3em;
@@ -255,7 +266,7 @@
     background-color: #F8F66F;
     //border: 1px solid #FFF9;
     border: 0;
-    border-radius: .5em;
+    border-radius: 2em;
 
     width: 308px;
     height: 3.3em;
