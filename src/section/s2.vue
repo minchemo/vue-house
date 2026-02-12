@@ -35,6 +35,7 @@
   .txt1 {
     margin-top: 5em;
     margin-bottom: 2em;
+    margin-left: -60em;
     font-weight: 200;
     font-size: 1em;
   }
@@ -42,6 +43,7 @@
   .txt3 {
     margin-top: 3em;
     margin-bottom: 2em;
+    margin-left: -60em;
     font-weight: 500;
     font-size: 1em;
     background-clip: text;
@@ -51,7 +53,7 @@
   }
 
   .txt4 {
-    margin-left: -65em;
+    margin-left: -60em;
     margin-top: 18em;
   }
 
@@ -68,17 +70,21 @@
     .sub {
       color: #fff;
       margin: 0 0 .6em;
+      margin-left: -60em;
       text-align: center;
       font-size: size(20);
     }
 
     .title {
-      font-size: 2em;
+      font-size: 4em;
       margin: 0 auto;
       line-height: 1.4;
       font-weight: 700;
       color: #CEA93C;
       text-align: center;
+      margin-top: -0.4em;
+      margin-left: -11em;
+
 
       &::after,
       &::before {

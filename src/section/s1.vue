@@ -23,10 +23,10 @@
   width: 100%;
   top: 0px;
   left: 0px;
-  pointer-events: none;
+  pointer-events: visible;
   visibility: visible;
   z-index: 9;
-  opacity: 0;
+  opacity: 0.2;
 }
 
 @keyframes an {
