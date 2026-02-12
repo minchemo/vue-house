@@ -1,8 +1,11 @@
 <template>
   <article class="s12">
-   <!--   <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">淡水正核心 贏接市中心</h3>
-      </div> --> 
+    <!-- -->
+    <div class="txt">
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">在關埔,我們重新定義了「完美」的座標
+        <br />關埔一期、二期交匯核心,竹科門戶基地<br />三面臨路,COSTCO慈雲路生活圈
+      </h3>
+    </div>
     <Fullview />
     <div class="caption">空拍合成示意圖</div>
   </article>
@@ -15,39 +18,47 @@
   @apply relative overflow-hidden bg-[#008DD5];
   width: 100%;
   height: size(1080);
-  padding-top:0;
-  font-size:size(18);
+  padding-top: 0;
+  font-size: size(18);
+
   .txt {
     @apply absolute z-10;
     top: 4em;
-    left:0;right: 0;text-align: center;
+    left: 0;
+    right: 0;
+    text-align: center;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.7;
     color: #fff;
+
     //text-shadow: 0 0 5px
-  .title{
-    font-size: 2em;
-    margin: 0 0 .2em;
-    line-height: 1.4;
-    font-weight: 700;
-    &::after,
-    &::before{
-      content: "";
-      width: 11.3em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
+    .title {
+      font-size: 2em;
+      margin: 0 0 .2em;
+      line-height: 1.4;
+      font-weight: 700;
+      /* 水平線裝飾
+      &::after,
+      &::before {
+        content: "";
+        width: 11.3em;
+        height: 1px;
+        background: currentColor;
+        display: inline-block;
+        vertical-align: middle;
+        margin: auto .5em;
+      }*/
     }
-  }
-  .desc{
-    font-size: 1.5em;
-    letter-spacing: .1em;
-  }
+
+    /* 水平線裝飾
+    .desc {
+      font-size: 1.5em;
+      letter-spacing: .1em;
+    } */
   }
 }
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -56,23 +67,30 @@
 
   .s12 {
     height: sizem(667);
-  font-size:sizem(14);
-  .txt {
-    top: 4em;
-  .title{
-    font-size: 1.8em;
-    &::after,
-    &::before{
-      width: 1em;}
-  }
-  .desc{
-    font-size: 1.1em;
-    letter-spacing: .1em;
-  }
-  }
-  .caption {
-    font-size: sizem(12);
-  }
+    font-size: sizem(14);
+
+    .txt {
+      top: 4em;
+
+      .title {
+        font-size: 1.8em;
+        /* 水平線裝飾
+        &::after,
+        &::before {
+          width: 1em;
+        }*/
+      }
+
+      /* 水平線裝飾 
+      .desc {
+        font-size: 1.1em;
+        letter-spacing: .1em;
+      }*/
+    }
+
+    .caption {
+      font-size: sizem(12);
+    }
   }
 }
 </style>
