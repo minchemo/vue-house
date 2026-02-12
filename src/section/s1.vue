@@ -24,7 +24,7 @@
   top: 0px;
   left: 0px;
   pointer-events: visible;
-  visibility: visible;
+  visibility: hidden;
   z-index: 9;
   opacity: 0.2;
 }
