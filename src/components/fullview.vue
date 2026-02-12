@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s12/txt.svg" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s12/map.png" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -16,10 +16,10 @@
     height: 100%;
     background: #eee;
 
-    > img {
+    >img {
         height: 100%;
         max-width: unset;
-        background:url("@/section/s12/map.webp") 50%;
+        background: url("@/section/s12/map.png") 50%;
         background-size: 100% auto;
     }
 
@@ -67,32 +67,32 @@ import { onMounted, ref, computed, getCurrentInstance } from 'vue';
 const viewbox = ref();
 const viewImg = ref();
 const swiped = ref(false);
-const offsetRatio = 1.15; 
+const offsetRatio = 1.15;
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
 
 onMounted(() => {
-  viewImg.value.addEventListener('load', () => {
-    if (isMobile.value) {
-      let scroll = new BScroll(viewbox.value, {
-        probeType: 2,
-        scrollX: true,
-        scrollY: true,
-        disableTouch: false,
-        disableMouse: false,
-        bindToWrapper: true,
-        eventPassthrough: "vertical",
-        bounce: false,
-      });
+    viewImg.value.addEventListener('load', () => {
+        if (isMobile.value) {
+            let scroll = new BScroll(viewbox.value, {
+                probeType: 2,
+                scrollX: true,
+                scrollY: true,
+                disableTouch: false,
+                disableMouse: false,
+                bindToWrapper: true,
+                eventPassthrough: "vertical",
+                bounce: false,
+            });
 
-      scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
-      setTimeout(() => {
-        scroll.on("scroll", () => {
-          swiped.value = true;
-        });
-      }, 1000);
-    }
-  });
+            scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
+            setTimeout(() => {
+                scroll.on("scroll", () => {
+                    swiped.value = true;
+                });
+            }, 1000);
+        }
+    });
 });
 </script>

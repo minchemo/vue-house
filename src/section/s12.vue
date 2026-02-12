@@ -34,11 +34,14 @@
 
     //text-shadow: 0 0 5px
     .title {
-      font-size: 2em;
-      margin: 0 0 .2em;
+      font-size: 1.5em;
+      margin: 0 auto;
+      margin-left: 2em;
+      text-align: left;
       line-height: 1.4;
-      font-weight: 700;
-      /* 水平線裝飾
+      font-weight: 200;
+
+      /* 水平線裝飾*/
       &::after,
       &::before {
         content: "";
@@ -47,8 +50,9 @@
         background: currentColor;
         display: inline-block;
         vertical-align: middle;
-        margin: auto .5em;
-      }*/
+        visibility: hidden;
+        display: none;
+      }
     }
 
     /* 水平線裝飾
@@ -78,6 +82,7 @@
         &::after,
         &::before {
           width: 1em;
+          visibility: hidden;
         }*/
       }
 
