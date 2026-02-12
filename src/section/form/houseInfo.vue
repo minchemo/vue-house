@@ -3,7 +3,7 @@
     <div class="house" v-if="info.houseInfos.length > 0">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
 
-            <div class="flex-1 items-center justify-center py-16 font-['Noto_Sans_TC']">
+            <div class="flex-1 items-center justify-center py-32 font-['Noto_Sans_TC']">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
                     <div class="title">建案資訊</div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
