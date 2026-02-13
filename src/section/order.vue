@@ -129,18 +129,27 @@
   // background: linear-gradient(to bottom, #195c45, #000704);
 
 
-
-  .order-title {
-    font-size: size(40);
-    font-weight: 500;
-    color: #F8F66F;
-    padding-top: 2em;
-    margin-left: -4em;
-
-    .line {
-      width: size(439);
-    }
+.order-title {
+  font-size: size(45);
+  font-weight: 700;
+  color: #FFF;
+  padding-top:1.5em;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+    width: size(920);
+    min-width: 750px;
+    margin: auto;
+    gap: 1em;
+  &::before,
+  &::after{
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: currentColor;
   }
+}
 
   .order-title-img {
     width: size(1008);
@@ -320,6 +329,8 @@
       font-size: sizem(27);
       padding-top: 1em;
       padding-bottom: .3em;
+      width: sizem(310);
+      min-width: 0;
 
       .line {
         width: sizem(258);

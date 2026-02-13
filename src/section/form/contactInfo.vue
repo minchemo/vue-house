@@ -153,11 +153,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #204f90;
+  background-color: #005366;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #12325f;
+  background-color: #002e38;
 }
 
 .lineicon {
@@ -231,11 +231,11 @@
       margin-left: -13px;
 
       &:hover {
-        background-color: #37acff;
-        color: #000;
+        background-color: #005366;
+        color: #FFF;
 
         img {
-          filter: brightness(0) invert(0);
+          filter: brightness(0) invert(1);
         }
       }
 
@@ -249,7 +249,7 @@
       }
 
       &.address {
-        background-color: #fff;
+        background-color: #DDD;
         color: #000;
         z-index: 0;
         position: relative;
@@ -288,10 +288,10 @@
 
         &:hover {
           //     background-color: #C29267;
-          color: #000;
+          color: #FFF;
 
           img {
-            filter: brightness(0) invert(0);
+          filter: brightness(0) invert(1);
           }
         }
       }
@@ -305,7 +305,7 @@
 
 .modal-box {
   img {
-    filter: invert(73%) sepia(83%) saturate(4141%) hue-rotate(1deg) brightness(92%) contrast(108%);
+    filter: invert(21%) sepia(81%) saturate(1277%) hue-rotate(160deg) brightness(93%) contrast(104%);
   }
 }
 
@@ -322,7 +322,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.301);
-    background: #efea45;
+    background: #ebc830;
 
     .contact-item {
       height: 100%;

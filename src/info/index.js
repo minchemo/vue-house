@@ -1,30 +1,30 @@
-const caseName = "豐秀大境"
+const caseName = "鉑翡"
 
 export default {
-    caseid: "2dcbcbc2-2afa-4a21-9349-85b3a1b3f2d8",
+    caseid: "89bc6349-43a3-45d5-944f-f8e1b1ebb05b",
     //case_code: "zhsd",
     address1: "接待中心",
     //按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市新屋區中山東路二段777號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3617.0858794291444!2d121.1466186!3d24.9631926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468245d3e4ab351%3A0xdec61165b606235!2zMzI35qGD5ZyS5biC5paw5bGL5Y2A5Lit5bGx5p2x6Lev5LqM5q61Nzc36Jmf!5e0!3m2!1szh-TW!2stw!4v1770194713805!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/tJR6QnPxEVGVTStk6",
-    phone: "03-490-5553",
-    fbLink: "https://www.facebook.com/profile.php?id=61579968897663",
-    fbMessage: "https://m.me/61579968897663/",
-    line: "https://lin.ee/eVsJqdc",// 客戶加賴
+    address: "新竹市埔頂路125號旁",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3622.0057977027254!2d121.00936399999998!3d24.795254999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzQyLjkiTiAxMjHCsDAwJzMzLjciRQ!5e0!3m2!1szh-TW!2stw!4v1770952234719!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/npq1JaKkDg6pwvE17",
+    phone: "03-5717088",
+    fbLink: "https://www.facebook.com/profile.php?id=61587817653943",
+    fbMessage: "https://m.me/61587817653943/",
+    // line: "https://lin.ee/eVsJqdc",// 客戶加賴
     caseName: caseName,
     houseInfos: [
-        ["起造興建", "和創建設有限公司"],
+     /*  ["起造興建", "和創建設有限公司"],
         ["建築設計", "張金城建築師事務所"],
         ["建照照號", "113桃市都建執照字第會屋01379號"],
         ["樓層規劃", "地上5層"],
         ["樓層規劃", "2房2衛|電梯寓所"],
         ["企劃行銷", "鴻智廣告有限公司"],
         ["經 紀 人", "陳怡靜 (104)新北經字第000884號"],
-        ["銷售中心", "接待會館：新竹市東區埔頂路125號對面"],
-    ], /**/
-    gtmCode: ["GTM-12345678",], // 可放置多個
+        ["銷售中心", "接待會館：新竹市東區埔頂路125號對面"],*/
+    ], 
+    gtmCode: ["GTM-NGDKWJGM",], // 可放置多個
 
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
@@ -35,7 +35,7 @@ export default {
 
 
     order: {
-        title: "預約賞屋",
+        title: "我要預約",
         subTitle: "",
         subTitle_mo: "",
     },
@@ -55,9 +55,10 @@ export default {
         room_type: {
             title: "需求房型",
             hold: "請選擇房型",
-            option: ["二房", "三房"],
+            option: ["二房", "三房", "四房"],
             bypass: false,
         },
+        /*
 
         budget: {
             title: "購屋預算",
@@ -66,7 +67,6 @@ export default {
             bypass: false, //必填開啟使用
         },
 
-        /*
      use_type: {
        title: "使用用途",
        hold: "請選擇用途",
