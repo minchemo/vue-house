@@ -1,6 +1,6 @@
 const caseName = "南青山"
 export default {
-  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", // 測試專案1d2db7f2-157b-4a33-acbc-f4abfde91846
+  caseid: "193fbd94-1181-4da1-8f3b-d1ae0cbc61dc", // 測試專案1d2db7f2-157b-4a33-acbc-f4abfde91846
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台南市二空路181號",
@@ -23,14 +23,14 @@ export default {
         */
     ],
      gtmCode: ["GTM-NK8K23RN"], // 可放置多個
-    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+     //   subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
@@ -39,22 +39,16 @@ export default {
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
-          option: ["兩房","三房"],
+          option: ["兩房","三房","四房"],
           //bypass:false,
         },
+        /*
         budget: {
           title: "購屋預算",
           hold: "請選擇區間",
           option: ["1000萬內", "1000-1500萬", "1500-2000萬"],
           //bypass:false,
         },
-        //budget: {
-        //  title: "購屋預算",
-        //  hold: "請選擇區間",
-        //  option: ["1600-2000萬", "2000-2500萬", "2500萬以上"],
-        //  bypass:false, //必填開啟使用
-        //},
-        /*
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",

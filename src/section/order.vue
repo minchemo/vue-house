@@ -10,12 +10,12 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
-       <!--   <div class="gender">
+       <!--   --> <div class="gender">
           <label><input  type="radio" name="gender" value="男" 
               @input="(event) => (formData.gender = event.target.value)">先生</label>
           <label><input  type="radio" name="gender" value="女" 
               @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div> -->
+        </div>
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -154,6 +154,21 @@ $o-title-c:#fff; //.order-title
   font-weight: 700;
   color: $o-title-c;
   padding-top:1.5em;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+    width: size(1200);
+    min-width: 750px;
+    margin: auto;
+    gap: 1em;
+  &::before,
+  &::after{
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+  }
 }
   .order-subTitle{
     font-size: size(20);
@@ -210,9 +225,10 @@ $o-title-c:#fff; //.order-title
         background-position:calc(100% - .5em) 0%;
       }
       }
-      // &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+       &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
     }
     .gender{display: flex;position: absolute;right: 0; flex-direction:column;
+      color: #fff;
       label:first-child{margin-bottom: .3em;}
       input{margin-right: .3em;}
     }
@@ -264,6 +280,8 @@ $o-title-c:#fff; //.order-title
 
     .order-title {
       font-size:29px;
+      width: sizem(310);
+      min-width: 0;
     /*  font-size: sizem(27);
       padding-top:2em;
       .line{width: sizem(258);
