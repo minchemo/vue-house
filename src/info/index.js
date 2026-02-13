@@ -36,13 +36,13 @@ export default {
     // 控制固定板的新欄位
     // room_type: ["兩房","三房"],
     selectFields: {
-          /*  
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
           option: ["三房","四房"],
           //bypass:false,
         },
+          /*  
     
         budget: {
           title: "購屋預算",
