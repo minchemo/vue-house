@@ -1,6 +1,6 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/pc.png" class="t0">
+    <!-- <img src="./s1/pc.png" class="t0">  -->
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/t1.png" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
     <img src="./s1/t1m.png" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
