@@ -169,6 +169,12 @@
       font-weight: 500;
     }
 
+    .txt4 {
+      margin-left: -45em;
+      margin-top: 28em;
+      width: 119em;
+    }
+
     .txt {
       margin: 4em auto auto auto;
       font-size: sizem(14);

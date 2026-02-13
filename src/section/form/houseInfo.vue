@@ -67,6 +67,7 @@
         font-weight: 700;
         color: #fff;
         margin: 0 auto 1em auto;
+        margin-top: -1em;
     }
 
     .info-items {
@@ -89,7 +90,7 @@
 
 @media screen and (max-width:768px) {
     .house {
-        background: #00be6e;
+        //background: #00be6e;
         //  height: sizem(400);
         font-size: sizem(14);
     }

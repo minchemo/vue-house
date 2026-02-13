@@ -78,7 +78,11 @@
       top: 4em;
 
       .title {
-        font-size: 1.8em;
+        font-size: 1.1em;
+        margin: 0 auto;
+        margin-left: 4em;
+        margin-top: 1em;
+
         /* 水平線裝飾
         &::after,
         &::before {

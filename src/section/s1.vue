@@ -59,9 +59,10 @@
   }
 
   .logo {
-    width: 25vw;
+    width: 45vw;
     /* pc*/
-    margin: 15vw 0vw 0vw 0vw;
+    margin: 15vw 0vw -12vw 0vw;
+
   }
 
   .slogo {
@@ -112,10 +113,9 @@
 
   @media screen and (min-width: 768px) {
     .logo {
-      width: 25vw;
+      width: 44vw;
       //mobile
-      margin: 4vw 3vw 57.6px 0vw 0vw;
-
+      margin: 15vw 0vw -11vw 0vw;
     }
 
     .slogo {

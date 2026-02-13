@@ -8,7 +8,7 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市大林路7號",
+    address: "接待會館：新竹市東區埔頂路125號對面",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d904.0875022521666!2d121.3166766696226!3d24.988220114185737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ee52bdba827%3A0x709762564c2f2567!2zMzMw5qGD5ZyS5biC5qGD5ZyS5Y2A5aSn5p6X6LevN-iZnw!5e0!3m2!1szh-TW!2stw!4v1732520660174!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/B7H6uZt97cy68RoWA",
     phone: "03-364-2277",
