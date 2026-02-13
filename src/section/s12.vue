@@ -17,7 +17,6 @@
 .s12 {
   @apply relative overflow-hidden bg-[#008DD5];
   width: 100%;
-  height: size(1080);
   padding-top: 0;
   font-size: size(18);
 
@@ -44,9 +43,11 @@
 
       /* 水平線裝飾*/
       &::after,
-      &::before {
-      }
+      &::before {}
+
+
     }
+
 
     /* 水平線裝飾
     .desc {
@@ -54,15 +55,17 @@
       letter-spacing: .1em;
     } */
   }
-  
+
   .caption {
     position: absolute;
     bottom: .5em;
     left: .5em;
     font-size: sizem(12);
-  @media screen and (min-width: 768px) {
-    font-size: size(15);}
-    
+
+    @media screen and (min-width: 768px) {
+      font-size: size(15);
+    }
+
   }
 }
 
@@ -75,6 +78,7 @@
   .s12 {
     height: sizem(667);
     font-size: sizem(14);
+
 
     .txt {
       top: 4em;

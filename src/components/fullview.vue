@@ -19,7 +19,7 @@
     >img {
         height: 100%;
         max-width: unset;
-   /*    background: url("@/section/s12/map.jpg") 50%;
+        /*    background: url("@/section/s12/map.jpg") 50%;
         background-size: 100% auto; */
     }
 
@@ -67,7 +67,7 @@ import { onMounted, ref, computed, getCurrentInstance } from 'vue';
 const viewbox = ref();
 const viewImg = ref();
 const swiped = ref(false);
-const offsetRatio = 1.15;
+const offsetRatio = 2;
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
