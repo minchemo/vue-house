@@ -108,10 +108,10 @@
   overflow: hidden;
   min-height: size(500);
   //background-color: #00be6e;
-  background-image: url("./s1/bg.png");
+  background-image: url("./s1/bg.jpg");
   background-size: auto;
   background-position: top;
-  margin-top: -4.5vw;
+ // margin-top: -4.5vw;
 
   .bg-image {
     position: absolute;

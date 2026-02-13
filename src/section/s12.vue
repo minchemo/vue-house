@@ -7,7 +7,7 @@
       </h3>
     </div>
     <Fullview />
-    <div class="caption">空拍合成示意圖</div>
+    <div class="caption">空拍示意圖 實際環境依現況為主</div>
   </article>
 </template>
 
@@ -45,14 +45,6 @@
       /* 水平線裝飾*/
       &::after,
       &::before {
-        content: "";
-        width: 11.3em;
-        height: 1px;
-        background: currentColor;
-        display: inline-block;
-        vertical-align: middle;
-        visibility: hidden;
-        display: none;
       }
     }
 
@@ -61,6 +53,16 @@
       font-size: 1.5em;
       letter-spacing: .1em;
     } */
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: .5em;
+    left: .5em;
+    font-size: sizem(12);
+  @media screen and (min-width: 768px) {
+    font-size: size(15);}
+    
   }
 }
 
@@ -80,8 +82,9 @@
       .title {
         font-size: 1.1em;
         margin: 0 auto;
-        margin-left: 4em;
-        margin-top: 1em;
+        //margin-left:em;
+        margin-top: -1em;
+        text-align: center;
 
         /* 水平線裝飾
         &::after,
@@ -98,9 +101,6 @@
       }*/
     }
 
-    .caption {
-      font-size: sizem(12);
-    }
   }
 }
 </style>

@@ -10,10 +10,10 @@
         <div class="sub">完美的名字 <br /> 昌益鉑翡 EVERYTHING IS PERFECT</div>
         <li data-aos="fade-up" data-aos-delay="200"></li>
         <li class="txt3" data-aos="fade-up" data-aos-delay="300">限量早鳥!即將公開 <br /> 捷足先登 !現在開始</li>
-        <li class="txt4" data-aos="fade-up" data-aos-delay="400"> 本圖片為AI情境模擬,以實際完工現況為準。</li>
+  
       </ul>
     </div>
-    <div class="caption"></div>
+    <div class="caption">本圖片為AI情境模擬,以實際完工現況為準。</div>
 
   </article>
 </template>
@@ -29,7 +29,7 @@
   height: 99vh;
   padding: 0;
   font-size: size(18);
-  background: url("./s2/s2.png");
+  background: url("./s2/s2.jpg");
 
   .txt1 {
     margin-top: 2.8em;
@@ -61,10 +61,14 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .txt4 {
-    margin-left: -45em;
-    margin-top: 0em;
-    width: 119em;
+  .caption {
+    position: absolute;
+    bottom: .5em;
+    left: .5em;
+    font-size: sizem(12);
+  @media screen and (min-width: 768px) {
+    font-size: size(15);}
+    
   }
 
   .txt {
@@ -133,8 +137,8 @@
 @media screen and (max-width: 767px) {
 
   .s1 .logo {
-    width: 40vw;
-    margin: 15vw 0vw 0vw 0vw;
+  //  width: 40vw;
+  //  margin: 15vw 0vw 0vw 0vw;
   }
 
 
@@ -144,7 +148,7 @@
     max-height: sizem(1080);
     height: 277vw;
     font-size: sizem(14) !important;
-    background: url("./s2/s2m.png") 50% 100% no-repeat;
+    background: url("./s2/s2m.jpg") 50% 100% no-repeat;
     background-size: 100% auto;
 
     .sub {
@@ -167,12 +171,6 @@
       margin-bottom: 2em;
       margin-left: 0em;
       font-weight: 500;
-    }
-
-    .txt4 {
-      margin-left: -45em;
-      margin-top: 28em;
-      width: 119em;
     }
 
     .txt {

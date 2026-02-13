@@ -39,7 +39,7 @@
 .s1 {
   // mobile
   height: 62vw;
-  background: url("./s1/bg.png");
+  background: url("./s1/bg.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -47,114 +47,55 @@
   align-items: center;
   color: #fff;
   font-size: sizem(32);
+  height: 100vh;
+  min-height: sizem(667);
+  max-height: sizem(812);
   line-height: 1.3;
 
   //pc
   @media screen and (min-width: 768px) {
-    background-image: url("./s1/bg.png");
+    background-image: url("./s1/bg.jpg");
     //background-size: 100%;
-    height: 58vw;
+   // height: 58vw;
+  min-height: size(900);
+  max-height: size(1080);
     padding: 0;
     font-size: size(56);
   }
 
   .logo {
-    width: 45vw;
+   // width: 45vw;
     /* pc*/
-    margin: 15vw 0vw -12vw 0vw;
+   // margin: 15vw 0vw -12vw 0vw;
+    position: absolute;
+    left: 0;
+    right: 0;margin: auto;
+    top: sizem(230);
+    top:calc(50% + #{sizem(230 - 667 * .5)});
+    width:  sizem(200);
+  @media screen and (min-width: 768px) {
+    top: size(300);
+    top:calc(50% + #{size(300 - 1080 * .5)});
+    width:  size(600);
 
   }
 
-  .slogo {
-    position: absolute;
-    width: 100vw;
-    bottom: 0vw;
-    left: 0vw;
-    z-index: 10;
-    visibility: hidden;
   }
 
   .t1 {
-    /* pc
-    width: 51vw;
-    margin: 4vw 17vw 0vw 17vw;*/
-    width: 12vw;
-    margin: -26vw 17vw 0vw 15vw;
-  }
-
-  @keyframes an {
-    to {
-      transform: rotate(0);
-    }
-  }
-
-  .t2 {
-    // mobile
-    width: 9vw;
-    margin: 0 auto;
-    margin-top: 4.5vw;
-    margin-left: 54vw;
-    z-index: 10;
-    // animation
-    transform: rotate(20deg);
-    animation: an 2s ease-in-out alternate infinite;
-    transform-origin: 50% 100%;
-    visibility: hidden;
-  }
-
-  .t3 {
-    // mobile
-    width: 20vw;
-    margin: 0vw auto 0vw;
-    margin-top: -16vw;
-    z-index: 11;
-    visibility: hidden;
-  }
-
+    position: absolute;
+    top: sizem(205);
+    top:calc(50% + #{sizem(205 - 667 * .5)});
+    width:  sizem(100);
+    position: absolute;
+    left: 0;
+    right: 0;margin: auto;
   @media screen and (min-width: 768px) {
-    .logo {
-      width: 44vw;
-      //mobile
-      margin: 15vw 0vw -11vw 0vw;
-    }
+    top: size(240);
+    top:calc(50% + #{size(240 - 1080 * .5)});
+    width:  size(300);
 
-    .slogo {
-      position: absolute;
-      width: 100vw;
-      bottom: 4.5vw;
-      left: 0vw;
-      visibility: hidden;
-      /*PC*/
-    }
-
-    .t1 {
-      /*PC*/
-      width: 12vw;
-      margin: -26vw 17vw 0vw 15vw;
-    }
-
-    // pc 
-    .t2 {
-      width: 10vw;
-      margin: 0 auto;
-      margin-top: 2vw;
-      margin-left: 53vw;
-      z-index: 10;
-      transform: rotate(20deg);
-      animation: an 2s ease-in-out alternate infinite;
-      transform-origin: 50% 100%;
-      visibility: hidden;
-    }
-
-    .t3 {
-      // pc
-      width: 20vw;
-      margin: 0 auto;
-      margin-top: -16vw;
-      z-index: 99;
-      visibility: hidden;
-    }
-
+  }
   }
 
 }

@@ -9,20 +9,18 @@
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-  <!--navigate-->
-  <Nav v-if="config.showNav" />
+  <!--navigate
+  <Nav v-if="config.showNav" />-->
   <div class="home bg-[#000000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
 
-    <img src="@/section/s1/bgm667.png" class="bgh mob">
-    <img src="@/section/s1/bg.png" class="bgh pc">
     <!--  
-    <div class="bg">
-      <img src="@/section/s1/bg1.png" class="bg1" />
-      <img src="@/section/s1/bg2.png" class="bg2" />
-    </div>-->
+    <img src="@/section/s1/bg.png" class="bgh pc">
+    <img src="@/section/s1/bgm667.png" class="bgh mob">
+    -->
     <S1 />
     <S2 />
-    <S12 /><!-- -->
+    <S12 />
+  <!--   -->
     <!--<S3 />-->
     <!--<S4 />-->
     <!--<S5 />-->
@@ -33,11 +31,6 @@
     <!--<S10 />-->
     <!--
     <S11 />
-    <div class="bg">
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-    </div>
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -154,7 +147,7 @@ img {
     font-weight: 700;
     color: #fff;
     text-align: center;
-
+/*
     &::after,
     &::before {
       content: "";
@@ -165,6 +158,7 @@ img {
       vertical-align: middle;
       margin: auto 1em;
     }
+      */
   }
 
   .subtitle {
@@ -335,6 +329,7 @@ import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import S12 from "@/section/s12.vue"
+/**/
 //import S3 from "@/section/s3.vue"
 //import S4 from "@/section/s4.vue"
 //import S5 from "@/section/s5.vue"
@@ -348,7 +343,7 @@ import S12 from "@/section/s12.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
+// import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
