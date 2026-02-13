@@ -305,7 +305,7 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-     // border: 1px solid #fff;
+      border: 1px solid #0c0;
 
       gap: 1em;
 
@@ -334,7 +334,7 @@
         z-index: 0;
         position: relative;
         flex: 2.17;
-        // border-radius: 999px 0 0 999px;
+        border: 0;
         //  max-width: 9999px;
         justify-content: center;
         margin: 0 -3.8em 0 0;
@@ -360,7 +360,7 @@
       &.googlemap {
         flex: 1;
         //    background-color: #9B1E44;
-        border-left-width: 0;
+       // border-left-width: 0;
         //  color: #fff;
         /*
         img {

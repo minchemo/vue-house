@@ -1,14 +1,14 @@
-const caseName = "南青山"
+const caseName = "森蘊"
 export default {
-  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", // 測試專案1d2db7f2-157b-4a33-acbc-f4abfde91846
+  caseid: "1b27124e-650f-442e-9526-340f8146e83a", // 測試專案1d2db7f2-157b-4a33-acbc-f4abfde91846
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台南市二空路181號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7347.440582495402!2d120.21994078972126!3d22.960526121169366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDU3JzM3LjkiTiAxMjDCsDEzJzIzLjciRQ!5e0!3m2!1szh-TW!2stw!4v1770779988629!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/UD2SMgnNhJkAvUWB7",
-    phone: "06-2899868",
-    fbLink: "https://www.facebook.com/61588124000520/",
-    fbMessage: "https://m.me/61588124000520/",
+    address: "新竹市埔頂路125號旁",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3622.0057977027254!2d121.00936399999998!3d24.795254999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzQyLjkiTiAxMjHCsDAwJzMzLjciRQ!5e0!3m2!1szh-TW!2stw!4v1770875733105!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/npq1JaKkDg6pwvE17",
+    phone: "03-5717088",
+    fbLink: "https://www.facebook.com/61588073453303/",
+    fbMessage: "https://m.me/61588073453303/",
    // line: "https://lin.ee/VOzO2Sx",
     caseName: caseName,
     houseInfos: [
@@ -20,17 +20,19 @@ export default {
         ["建築設計", "弘憲聯合建築師事務所"],
         ["使照號碼", "王朝雍建築師事務所"],
         ["行銷企劃", "自售"],
+
+        <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         */
     ],
-     gtmCode: ["GTM-NK8K23RN"], // 可放置多個
-    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+     gtmCode: ["GTM-TTK6WW52"], // 可放置多個
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "預約賞屋",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        title: "我要預約",
+      //  subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位

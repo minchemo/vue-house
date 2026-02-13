@@ -1,11 +1,14 @@
 <template>
   <article class="s1" id="s1">
- <!--  <img src="./s1/mo.jpg" class="t0" v-if="isMobile">
-    <img src="./s1/pc.jpg" class="t0" v-else>  --> 
+ <!--   <img src="./s1/mo.jpg" class="t0" v-if="isMobile">
+    <img src="./s1/pc.jpg" class="t0" v-else>  -->
+ <img src="./s1/slogo.svg" class="slogo" alt="logo" data-aos="zoom-in" data-aos-delay="500" />
+ <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="500" />
+    <!--
     <div class="bg"><img src="./s1/bg.png" data-aos="zoom-in" data-aos-delay="0"></div>
     <div class="cover"></div>
     <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="500">
-    
+    -->
   </article>
 </template>
 
@@ -28,17 +31,16 @@
   min-height: sizem(604);
   max-height: sizem(750);
   // background: #d62051;
-  background: url("./s1/bg.jpg");
-  background-size: auto 100%;
-  background-position: 50% 0%;
+  background: url("./s1/bgm.jpg");
+  background-size:cover;
+    background-position: 50% 50%;
   color: #FFF;
   font-size: sizem(14);
 
   @media screen and (min-width: 768px) {
-    background-position: 50% 50%;
-  background-size:cover;
+  background-image: url("./s1/bg.jpg");
     height: 100dvh;
-    min-height: size(900);
+    min-height: size(1070);
     max-height: size(1080);
     font-size: size(35);
   }
@@ -51,6 +53,34 @@
     pointer-events: none;user-select:none;
     z-index: 99;
   }
+  .slogo {
+    width: sizem(130);
+    position: absolute;
+    top: sizem(225);
+    top:calc(50% + #{sizem(225 - 604 * .5)});
+    left: 0;right: 0;margin: auto; z-index: 2;
+
+    @media screen and (min-width: 768px) {
+      width: size(340);
+      top: size(350);
+      top:calc(50% + #{size(350 - 1080 * .5)});
+    }
+  }
+
+  .logo {
+    width: sizem(200);
+    position: absolute;
+    top: sizem(260);
+    top:calc(50% + #{sizem(260 - 604 * .5)});
+    left: 0;right: 0;margin: auto; z-index: 2;
+
+    @media screen and (min-width: 768px) {
+      width: size(490);
+      top: size(440);
+      top:calc(50% + #{size(440 - 1080 * .5)});
+    }
+  }
+/*
   .bg {
     width: 100%;
     height: 100%;
@@ -83,197 +113,7 @@
     top: 20%;height: 160%;
     }
   }
-  .logo {
-    width: sizem(246);
-    position: absolute;
-    top: sizem(372);
-      top:calc(50% + #{sizem(372 - 604 * .5)});
-    left: 0;right: 0;margin: auto; z-index: 2;
-
-    @media screen and (min-width: 768px) {
-      width: size(663);
-      top: size(525);
-      top:calc(60% + #{size(520 - 1080 * .6)});
-    }
-  }
-/*
-  .train {
-    width: 177%;
-    position: absolute;
-    bottom: 0;
-    left: -57%;
-    // opacity: .3;
-
-    @media screen and (min-width: 768px) {
-      width: 100%;
-      bottom: 0;
-      left: 0;
-    }
-  }
-
-  .light {
-    width: sizem(568);
-    position: absolute;
-    bottom: sizem(45);
-    left: sizem(-180);
-    mix-blend-mode: screen;
-
-    @media screen and (min-width: 768px) {
-      width: size(1635);
-      bottom: size(118);
-      left: size(100);
-    }
-  }
-
-  .tl {
-    width: sizem(94);
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    @media screen and (min-width: 768px) {
-      width: size(280);
-    }
-  }
-
-  .slogo {
-    width: sizem(36);
-    position: absolute;
-    top: sizem(12);
-    right: sizem(15);
-
-    pointer-events: none;user-select:none;
-    @media screen and (min-width: 768px) {
-      width: size(105);
-      top: size(52);
-      right: size(75);
-    }
-  }
-
-
-  .t1 {
-    width: sizem(218);
-    position: absolute;
-    top: sizem(197);
-    left: sizem(33);
-    filter: drop-shadow(0 0 sizem(8) rgba(39, 13, 73, 0.92));
-
-    pointer-events: none;user-select:none;
-    @media screen and (min-width: 768px) {
-      width: size(610);
-      top: size(215);
-      left: size(775);
-      filter: drop-shadow(0 0 size(12) rgba(39, 13, 73, 0.92));
-    }
-  }
-
-  .t2 {
-    width: sizem(229);
-    position: absolute;
-    top: sizem(276);
-    left: sizem(36);
-    filter: drop-shadow(0 0 sizem(8) rgba(39, 13, 73, 0.6));
-
-    pointer-events: none;user-select:none;
-    @media screen and (min-width: 768px) {
-      width: size(895);
-      top: size(382);
-      left: size(338);
-      filter: drop-shadow(0 0 size(12) rgba(39, 13, 73, 0.92));
-    }
-  }
-
-  .t3 {
-    width: sizem(169);
-    position: absolute;
-    top: sizem(385);
-    left: sizem(44);
-    filter: drop-shadow(0 0 sizem(4) rgba(39, 13, 73, 0.92));
-
-    pointer-events: none;user-select:none;
-    @media screen and (min-width: 768px) {
-      width: size(370);
-      top: size(655);
-      left: size(590);
-      filter: drop-shadow(0 0 size(8) rgba(39, 13, 73, 0.92));
-    }
-  }
-
-  .img {
-    width: sizem(215);
-    position: absolute;
-    top: sizem(240);
-    right: sizem(0);
-
-    pointer-events: none;user-select:none;
-    @media screen and (min-width: 768px) {
-      width: size(370);
-      top: size(380);
-      right: size(455);
-    }
-
-    .people {
-      width: sizem(232);
-
-      @media screen and (min-width: 768px) {
-        width: size(556);
-      }
-    }
-
-    .bub {
-      position: absolute;
-      top: sizem(-81);
-      right: sizem(33);
-      //  right: sizem(20);
-      font-size: sizem(18);
-      line-height: 1.1;
-      text-align: center;
-      color: #493366;
-      font-weight: 700;
-      z-index: 3;
-      animation: an 1.5s linear infinite alternate;
-      transform: rotate(-5deg);
-      transform-origin: -15% 190%;
-
-    filter: drop-shadow(sizem(1) sizem(2) sizem(8) rgba(39, 13, 73, 0.92));
-
-      @media screen and (min-width: 768px) {
-        top: size(-115);
-        right: size(-240);
-        //   right: size(50);
-        font-size: size(50);
-        transform-origin: -15% 190%;
-      filter: drop-shadow(size(2) size(2) size(15) rgba(39, 13, 73, 0.92));
-      }
-
-      span {
-        display: block;
-        font-size: .7em;
-      }
-
-      >div {
-        animation: an 1.5s linear infinite alternate;
-        transform: rotate(2deg);
-      }
-
-      img {
-        width: 5.4em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -46%)rotate(-47deg);
-        transform-origin: 50% 46%;
-        z-index: -1;
-
-        //opacity: .5;
-        @media screen and (min-width: 768px) {
-
-          transform: translate(-50%, -46%);
-        }
-      }
-    }
-  }
-*/
+    */
 
 }
 </style>
