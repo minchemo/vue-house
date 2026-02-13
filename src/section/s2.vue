@@ -1,7 +1,8 @@
 <template>
   <article class="s2">
     <div class="txt">
-      <h2 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">EVERYTHING <br /> IS PERFECT
+      <h2 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">
+        <img class=" " src="./s2/s2-h1.png" />
       </h2>
       <ul>
         <li class="txt1" data-aos="fade-up" data-aos-delay="100">地段決定身價,眼界決定境界。 <br /> 站在關埔的最核心,您的眼界,已領先一步 <br />
@@ -25,12 +26,10 @@
   width: 100%;
   min-height: size(900);
   max-height: size(1080);
-  height: 100vh;
+  height: 99vh;
   padding: 0;
   font-size: size(18);
-  background: url("./s2/s2.png") 50% 40%;
-  background-size: cover;
-
+  background: url("./s2/s2.png");
 
   .txt1 {
     margin-top: 2.8em;
@@ -85,9 +84,15 @@
       margin: 0 auto;
       line-height: 1.4;
       font-weight: 700;
-      color: #CEA93C;
+      //color: #CEA93C;
+      //background: url("./s2/s2-h1.png") no-repeat; 
+      //background-clip: text;
+      //background: linear-gradient(to bottom, #ffc71f 0%, #ffffff 50%, #f2bd00 100%);
+      //-webkit-background-clip: text;
+      //-webkit-text-fill-color: transparent;
+
       text-align: center;
-      margin-top: -0.4em;
+      margin-top: 1em;
       margin-left: -11em;
 
 
@@ -97,7 +102,6 @@
         width: 0 !important;
         height: 0 !important;
         display: none;
-        ;
       }
     }
   }
@@ -124,16 +128,46 @@
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
+
+/* mo */
 @media screen and (max-width: 767px) {
+
+  .s1 .logo {
+    width: 40vw;
+    margin: 15vw 0vw 0vw 0vw;
+  }
+
 
   .s2 {
     @apply flex-col;
     min-height: sizem(0);
     max-height: sizem(1080);
-    height: sizem(667);
+    height: 277vw;
     font-size: sizem(14) !important;
-    background: #1691CF url("./s2/bgm.webp") 50% 100% no-repeat;
+    background: url("./s2/s2m.png") 50% 100% no-repeat;
     background-size: 100% auto;
+
+    .sub {
+      color: #fff;
+      margin: 0 auto;
+      margin-left: 0em;
+      margin-top: -1em;
+    }
+
+    .txt1 {
+      margin-top: 2.8em;
+      margin-bottom: 2em;
+      margin-left: 0em;
+      font-weight: 200;
+      font-size: 1.3em;
+    }
+
+    .txt3 {
+      margin-top: 1em;
+      margin-bottom: 2em;
+      margin-left: 0em;
+      font-weight: 500;
+    }
 
     .txt {
       margin: 4em auto auto auto;
@@ -146,6 +180,12 @@
       .title {
         font-size: sizem(22) !important;
         font-weight: 700;
+
+        img {
+          width: 12em;
+          margin: 0 auto;
+          margin-left: 12em;
+        }
       }
     }
 
@@ -154,6 +194,8 @@
       height: sizem(220);
       bottom: sizem(50);
       right: sizem(30);
+
+
     }
 
   }

@@ -4,14 +4,15 @@
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/t1.png" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
     <img src="./s1/t1m.png" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
-    <!--    -->
+    <!--   
     <img src="" class="t2">
     <img src="./s1/t2m.png" class="t2" v-if="isMobile">
     <img src="./s1/t2.png" class="t2" v-else>
 
     <img src="./s1/slogo.svg" class="slogo" data-aos="flip-up" data-aos-delay="0">
     <img src="./s1/t3m.png" class="t3" data-aos="flip-left" data-aos-delay="400" v-if="isMobile">
-    <img src="./s1/t3.png" class="t3" data-aos="flip-left" data-aos-delay="400" v-else>
+    <img src="./s1/t3.png" class="t3" data-aos="flip-left" data-aos-delay="400" v-else> 
+    -->
   </article>
 </template>
 
