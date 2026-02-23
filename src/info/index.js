@@ -3,7 +3,7 @@ export default {
   caseid: "193fbd94-1181-4da1-8f3b-d1ae0cbc61dc", // 測試專案1d2db7f2-157b-4a33-acbc-f4abfde91846
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台南市二空路181號",
+    // address: "台南市二空路181號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7347.440582495402!2d120.21994078972126!3d22.960526121169366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDU3JzM3LjkiTiAxMjDCsDEzJzIzLjciRQ!5e0!3m2!1szh-TW!2stw!4v1770779988629!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/UD2SMgnNhJkAvUWB7",
     phone: "06-2899868",
@@ -39,7 +39,7 @@ export default {
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
-          option: ["三房","四房"],
+          option: ["兩房","三房","四房"],
           //bypass:false,
         },
           /*  
