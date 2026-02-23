@@ -25,6 +25,8 @@
           <div>前往粉絲專頁</div>
         </div>
       </div>
+
+      <!--  v-if="info.address" 地圖連動開關 -->
       <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
         <div class="flex contact-item justify-center items-center address">
           <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
@@ -291,7 +293,7 @@
           color: #FFF;
 
           img {
-          filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
           }
         }
       }
