@@ -6,7 +6,7 @@ export default {
     address1: "接待中心",
     //按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "新竹市埔頂路125號旁",
+    address: "",//新竹市埔頂路125號旁
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3622.0057977027254!2d121.00936399999998!3d24.795254999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzQyLjkiTiAxMjHCsDAwJzMzLjciRQ!5e0!3m2!1szh-TW!2stw!4v1770952234719!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/npq1JaKkDg6pwvE17",
     phone: "03-5717088",
