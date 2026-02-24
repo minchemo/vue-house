@@ -291,8 +291,8 @@
     // min-width: 680px;
 
     .contact-item {
-      background:#fff;
-      color: #00744a;
+      background:#1163A1;
+      color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -305,7 +305,7 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      border: 1px solid #0c0;
+     // border: 1px solid #0c0;
 
       gap: 1em;
 
@@ -322,13 +322,13 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter:  invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
+        filter:  brightness(0) invert(1);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #ddd;
+        background-color: #fff;
         background-image: none;
         color: #000;
         z-index: 0;
