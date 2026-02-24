@@ -40,7 +40,7 @@
   @media screen and (min-width: 768px) {
   background-image: url("./s1/bg.jpg");
     height: 100dvh;
-    min-height: size(1070);
+    min-height: size(900);
     max-height: size(1080);
     font-size: size(35);
   }

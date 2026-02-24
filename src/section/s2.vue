@@ -55,7 +55,7 @@
     background-position: 50% 50%;
     */
     height: 100dvh;
-    min-height: size(1080);
+    min-height: size(900);
     max-height: size(1080);
     font-size: size(49);
    // justify-content: flex-end;
