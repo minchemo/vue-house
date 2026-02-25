@@ -53,11 +53,12 @@
       <img src="//h35.banner.tw/img//form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <!--  <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink && (!info.address || !info.phone)">
       <img src="//h35.banner.tw/img//form/fb.svg" alt="粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
-    </div>
+    </div> 手機腳頁按鈕 -->
+
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img//form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
