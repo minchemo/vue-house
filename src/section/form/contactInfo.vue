@@ -225,40 +225,6 @@
   height: 0;width: 100%;
   z-index: 1;
 
-  .f1 {
-    position: absolute;
-    width: size(405);
-    top: size(-386);
-    left: size(-144);
-  }
-
-  .f2 {
-    position: absolute;
-    width: size(339);
-    top: size(-221);
-    left: size(164);
-  }
-
-  .f3 {
-    position: absolute;
-    width: size(376);
-    top: size(-137);
-    left: size(384);
-  }
-
-  .f4 {
-    position: absolute;
-    width: size(488);
-    top: size(-204);
-    right: size(107);
-  }
-
-  .f5 {
-    position: absolute;
-    width: size(465);
-    top: size(-312);
-    right: size(-169);
-  }
 
 }
 
@@ -296,7 +262,7 @@
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-       border-radius: .9em;
+      border-radius: .5em;
       font-size: 16px;
       font-weight: 700;
       line-height: 1.6; //3.8

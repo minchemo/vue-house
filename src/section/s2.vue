@@ -1,23 +1,14 @@
 <template>
   <article class="s2" id="s2">
-    <div class="t1" data-aos="fade-up" data-aos-delay="0">科三門戶特區</div>
- 
-    <div class="t2" data-aos="fade-up" data-aos-delay="400"><img src="./s1/slogo.svg" class="slogo" alt="slogo" /><br v-if="isMobile"><span>年度鉅獻</span></div>
+    <div class="t1" data-aos="fade-up" data-aos-delay="0">全球與大台北之間<br>
+都在您的遊沐之間</div>
+  <div class="line"></div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="400">轉身即達台64，串聯雙北的快速路網
+一路接軌淡江大橋，馳騁另一邊台北
+光速前進，悠遊為常
+全球與大台北之間，都由您游沐日常</div>
  
  <div class="line"></div>
-    <div class="t3" data-aos="fade-up" data-aos-delay="400">限量早鳥預約起跑<br v-if="isMobile">
-快馬搶先</div>
-    <div class="t4" data-aos="fade-up" data-aos-delay="400">即將公開
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 37">
-  <defs>
-    <linearGradient id="lg" x1="0" y1="0" x2="0" y2="37"  gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#d6f1ff00"/>
-      <stop offset="1" stop-color="#c2e5ff"/>
-    </linearGradient>
-  </defs>
-    <path d="M73.7,0l-36.8,36.8L0,0" fill="url(#lg)"/>
-</svg></div>
-<img src="./s2/en.svg" class="en" alt="en" />
 
   </article>
 </template>
@@ -38,9 +29,10 @@
   justify-content: center;
   align-items: center;
   height:sizem(604);
-  background: linear-gradient(180deg, #0085E5 0%, #19B2FF 50%, #67D2FF 100%);
+  //background: linear-gradient(180deg, #0085E5 0%, #19B2FF 50%, #67D2FF 100%);
   // background: #d62051;
- /* background: #089EFB url("./s2/bgm.jpg") no-repeat;
+  background:url("./s2/bgm.jpg") no-repeat;
+ /* 
   background-size: 100% auto;
   background-position: 50% 100%;*/
   color: #FFF;
@@ -50,10 +42,10 @@
   letter-spacing: .1em;
 
   @media screen and (min-width: 768px) {
-   /* background-image: url("./s2/bg.jpg");
+    background-image: url("./s2/bg.jpg");
     background-size: cover;
     background-position: 50% 50%;
-    */
+    
     height: 100dvh;
     min-height: size(900);
     max-height: size(1080);

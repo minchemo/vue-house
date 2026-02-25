@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
    <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#fff] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Serif_TC',serif] bg-[#fff] text-[#000]">
     <S1 />
     <S2 />
     <S3 />
@@ -54,14 +54,12 @@
 }
 
 .home{
-  
-    &::before{content: "";
-  background: url("@/section/form/bgm.jpg") no-repeat 0 100%;
-  background-size: 100% auto;
+ &::before{content: "";
+  background: url("@/section/form/bg.jpg");
+  background-size: auto;
   width: 100%;position: fixed;
   left:0;right: 0;top: 0;bottom: 63px;
   @media screen and (min-width: 768px) {
-  background-image: url("@/section/form/bg.jpg");
   width: 100%;height: 100%;bottom: 0;
   }
 } /*

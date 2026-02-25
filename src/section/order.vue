@@ -83,7 +83,7 @@
       <!-- Send --><div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 700;
     line-height: 3.3;height:3.3em">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-  送出表單
+  送出預約資訊
 </button>
 <div v-else class="send-load text-[#fff]" style="letter-spacing: 0.7em;
   text-indent: 0.9em;
@@ -147,7 +147,7 @@ $o-title-c:#077707; //.order-title
   position: relative;
   overflow: hidden;
   min-height: size(500);
-  background: linear-gradient(180deg, #fff0 0, #fff size(200), #fff size(220),#fff0 size(500));
+//  background: linear-gradient(180deg, #fff0 0, #fff size(200), #fff size(220),#fff0 size(500));
 
 }
 .order-title {
@@ -158,24 +158,26 @@ $o-title-c:#077707; //.order-title
   letter-spacing: 0.1em;
   display: flex;
   align-items: center;
+  text-align: center;
+  justify-content: center;
     width: size(1200);
     min-width: 750px;
     margin: auto;
     gap: 1em;
-  &::before,
+  /*&::before,
   &::after{
     content: "";
     display: block;
     flex: 1;
     height: 1px;
     background: currentColor;
-  }
+  }*/
 }
   .order-subTitle{
     font-size: size(20);
     padding-top:.5em;
     letter-spacing: .1em;
-  color: #fff;
+  color: #333;
   }
 
   .form {
@@ -236,14 +238,14 @@ $o-title-c:#077707; //.order-title
   .send {
   font-size:20px;
     font-size:inherit;
-    background:#0c0;
+    background:#1163A1;
 
     //border: 1px solid #FFF;
     border:0;
   letter-spacing: 0.9em;
     text-indent: 0.9em;
     height:100%;
-    border-radius: 2em;
+    border-radius: .5em;
     width: 410px;
     z-index: 10;
     color: #fff;

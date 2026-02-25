@@ -1,10 +1,11 @@
 <template>
   <article class="s3" id="s3">
-    <div class="t1" data-aos="fade-up" data-aos-delay="0">自然之森&ensp;明日之藴</div>
-    <div class="t2" data-aos="fade-up" data-aos-delay="200"><span><span class="i">4,500</span><span class="s">坪</span>森態都芯</span>
-      定義未來，就從回歸初心開始</div>
-    <div class="c">空拍示意圖 實際環境依現況為主
-    </div>
+    <div class="t1" data-aos="fade-up" data-aos-delay="0">建義的光系列 住近世界門面</div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="200">台北港特定區 未來自城 2-3房</div>
+    <div class="line" data-aos="fade-up" data-aos-delay="200"></div>
+    <img src="./s3/slogo1.svg" alt="麗寶集團 建義建設" />
+    <img src="./s3/slogo2.svg" alt="鈞義廣告" />
+    <div class="c"></div>
 
   </article>
 </template>
@@ -25,10 +26,6 @@
   justify-content: flex-start;
   align-items: center;
   height:sizem(615);
-  // background: #d62051;
-  background: #089EFB url("./s3/bgm.jpg") no-repeat;
-  background-size: 100% auto;
-  background-position: 50% 100%;
   color: #FFF;
   font-size: sizem(14);
   // text-align: center;
@@ -36,9 +33,6 @@
   letter-spacing: .1em;
 
   @media screen and (min-width: 768px) {
-    background-image: url("./s3/bg.jpg");
-    background-size: cover;
-    background-position: 50% 100%;
     height: size(1345);
     font-size: size(34);
     justify-content: flex-start;
@@ -48,23 +42,24 @@
 
 
   .t1 {
-    font-size: sizem(32);
+    font-size: sizem(13);
     line-height: 1.3;
     font-weight: 500;
     position: relative;
     z-index: 3;
     margin: 2.7em auto .2em;
     letter-spacing: .10em;
+    color: #397493;
 
     @media screen and (min-width: 768px) {
-      font-size: size(105);
+      font-size: size(50);
     margin: 1.2em auto .25em;
     letter-spacing: .14em;
     }
   }
 
   .t2 {
-   font-size: sizem(12);
+   font-size: sizem(17);
     font-weight: 400;
     margin-bottom: .6em;
     position: relative;
@@ -73,34 +68,13 @@
     color: #000;
     text-align: center;
     line-height: 1.35;
-    > span{display: block;
-    font-size: 1.9em;
-    letter-spacing: 0.05em;
-    text-indent: 0.05em;
-    }
-    .i{
-    letter-spacing: 0em;
-    }
-    .s{
-      font-size: 0.45em;margin-right: 0.2em;
-    }
-
+  
     @media screen and (min-width: 768px) {
-      font-size: size(40);
+      font-size: size(66);
     }
   }
+  .line{background: #000;height: 1px;width: 5em;}
 
-  .c {
-    position: absolute;
-    bottom: 0.5em;
-    right: 0.5em;
-    letter-spacing: 0em;
-    font-size: sizem(10);
-
-    @media screen and (min-width: 768px) {
-      font-size: size(13);
-    }
-  }
 
 }
 </style>

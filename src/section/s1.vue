@@ -1,14 +1,14 @@
 <template>
   <article class="s1" id="s1">
- <!--   <img src="./s1/mo.jpg" class="t0" v-if="isMobile">
-    <img src="./s1/pc.jpg" class="t0" v-else>  -->
- <img src="./s1/slogo.svg" class="slogo" alt="logo" data-aos="zoom-in" data-aos-delay="500" />
- <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="500" />
-    <!--
-    <div class="bg"><img src="./s1/bg.png" data-aos="zoom-in" data-aos-delay="0"></div>
-    <div class="cover"></div>
-    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="zoom-in" data-aos-delay="500">
-    -->
+    <img src="./s1/mo.jpg" class="t0" alt="" v-if="isMobile">
+    <img src="./s1/pc.jpg" class="t0" alt="" v-else>
+  <div class="t1" data-aos="fade-up" data-aos-delay="0"><img src="./s1/quotes.svg" alt="quotes" /><br>迎向世界<br>
+目不轉睛</div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="400">當世界走進，您就成為耀眼的光，遠見國際經濟頻率<br>
+擁抱台灣布魯克林，住近台北港的雙臂</div>
+    <div class="t3" data-aos="fade-up" data-aos-delay="400">未來在等您<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 51">
+  <path d="M1,50L23,1" fill="none" stroke="#fff" /></svg>您目不轉睛</div>
+    <img src="./s1/en.svg" alt="brooklyn" />
   </article>
 </template>
 
@@ -36,13 +36,15 @@
     background-position: 50% 50%;
   color: #FFF;
   font-size: sizem(14);
+  font-weight: 300;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
   background-image: url("./s1/bg.jpg");
     height: 100dvh;
     min-height: size(900);
     max-height: size(1080);
-    font-size: size(35);
+    font-size: size(30);
   }
   .t0 {
     position: absolute;
@@ -53,6 +55,17 @@
     pointer-events: none;user-select:none;
     z-index: 99;
   }
+  .t1{font-size: size(55);
+  letter-spacing: 0.06em;line-height: 1;
+img{margin-bottom: -1.5em;}
+}
+  .t2{
+  
+}
+  .t3{margin-top: 1.1em;
+    svg{display: inline-block;height: 1em;}
+}
+  /*
   .slogo {
     width: sizem(130);
     position: absolute;
@@ -80,7 +93,7 @@
       top:calc(50% + #{size(440 - 1080 * .5)});
     }
   }
-/*
+
   .bg {
     width: 100%;
     height: 100%;
