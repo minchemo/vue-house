@@ -2,10 +2,10 @@
   <div id="order" class="order relative text-center">
     <div class="order-section">
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <div class="order-subTitle font-['Noto_Sans_TC',sans-serif] text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
       <!-- Form -->
-      <div class="form mx-auto relative flex justify-center">
+      <div class="form mx-auto relative flex justify-center  font-['Noto_Sans_TC',sans-serif]">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
@@ -66,7 +66,7 @@
       </div>
 
       <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control">
+      <div class="flex gap-2 items-center justify-center control font-['Noto_Sans_TC',sans-serif]">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
         <p class="text-[#000]">
@@ -80,7 +80,7 @@
       <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send --><div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 700;
+      <!-- Send --><div class="sendall mt-8 mb-12 mx-auto font-['Noto_Sans_TC',sans-serif]" style="font-size:20px;font-weight: 700;
     line-height: 3.3;height:3.3em">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
   送出預約資訊
@@ -136,7 +136,6 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$o-title-c:#077707; //.order-title
 
 .order {
   width: 100%;
@@ -151,10 +150,10 @@ $o-title-c:#077707; //.order-title
 
 }
 .order-title {
-  font-size: size(45);
-  font-weight: 700;
-  color: $o-title-c;
-  padding-top:1.5em;
+  font-size: size(40);
+  font-weight: 500;
+  color: #000;
+  padding-top:.8em;
   letter-spacing: 0.1em;
   display: flex;
   align-items: center;
@@ -174,9 +173,9 @@ $o-title-c:#077707; //.order-title
   }*/
 }
   .order-subTitle{
-    font-size: size(20);
+    font-size: size(17);
     padding-top:.5em;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
   color: #333;
   }
 
@@ -242,7 +241,7 @@ $o-title-c:#077707; //.order-title
 
     //border: 1px solid #FFF;
     border:0;
-  letter-spacing: 0.9em;
+  letter-spacing: 0.3em;
     text-indent: 0.9em;
     height:100%;
     border-radius: .5em;
@@ -268,7 +267,7 @@ $o-title-c:#077707; //.order-title
   .order-section {
     min-height: sizem(800);
     position: relative;
-  background: linear-gradient(180deg, #fff sizem(70),#fff0 sizem(250));
+ // background: linear-gradient(180deg, #fff sizem(70),#fff0 sizem(250));
   }
 
 

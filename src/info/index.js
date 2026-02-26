@@ -1,14 +1,14 @@
 const caseName = "紐約沐光"
 export default {
-  caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", // 測試專案1d2db7f2-157b-4a33-acbc-f4abfde91846
+  caseid: "c3ac2b0e-7492-42af-ba1b-b548d7923aa2", // 測試專案1d2db7f2-157b-4a33-acbc-f4abfde91846
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市八里區商港路2號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3622.0057977027254!2d121.00936399999998!3d24.795254999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzQyLjkiTiAxMjHCsDAwJzMzLjciRQ!5e0!3m2!1szh-TW!2stw!4v1770875733105!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/npq1JaKkDg6pwvE17",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3611.7443866121916!2d121.3951871!3d25.1443313!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a4536fd66a97%3A0xe03659a66bcb8ef7!2zMjQ55paw5YyX5biC5YWr6YeM5Y2A5ZWG5riv6LevMuiZnw!5e0!3m2!1szh-TW!2stw!4v1772069340977!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/pDA5nnT3mt6sFqYz7",
     phone: "02-2610-1786",
-    fbLink: "https://www.facebook.com//",
-    fbMessage: "https://m.me//",
+    fbLink: "https://www.facebook.com/61587351398010/",
+    fbMessage: "https://m.me/61587351398010/",
    // line: "https://lin.ee/VOzO2Sx",
     caseName: caseName,
     houseInfos: [
@@ -25,9 +25,9 @@ export default {
         */
     ],
      gtmCode: ["GTM-00000000"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
-    //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
@@ -49,7 +49,7 @@ export default {
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
-          option: ["兩房","三房","四房"],
+          option: ["兩房","三房"],
           //bypass:false,
         }, /*
         use_type: {

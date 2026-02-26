@@ -2,7 +2,9 @@
   <div class="contact-info-img relative">
   </div>
   <div class="contact-bg">
-    <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+    <div class="contact-info mx-auto font-['Noto_Sans_TC',sans-serif] flex flex-col items-center justify-between">
+      
+    <img src="@/section/s1/logo.png" class="logo" alt="紐約沐光" />
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div> 
@@ -164,11 +166,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #006a00;
+  background-color: #1163A1;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #00a89a;
+  background-color: #009fe8;
 }
 
 .mo-contact-info {
@@ -184,10 +186,6 @@
   font-weight: 500;
 
   //backdrop-filter: blur(3px);
-  .logo {
-    height: 90%;
-    margin: 0em auto 0 1.5em;
-  }
 
   .contact-item {
     height: 100%;
@@ -229,9 +227,9 @@
 }
 
 .contact-info {
-  padding: size(55) size(0) size(55) size(0);
+  padding: 0 size(0) size(55) size(0);
   width: size(1440);
-  margin-top: size(60);
+  margin-top: 0;
   min-width: 680px;
   position: relative;
   z-index: 50;
@@ -239,7 +237,7 @@
 
   .logo {
     position: relative;
-    width: size(540);
+    width: size(350);
     // height: size(172);
     // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
@@ -276,7 +274,7 @@
       gap: 1em;
 
       &:hover {
-        background: #0c0;
+        background: #009fe8;
         color: #fff;
 
         img {
@@ -352,7 +350,7 @@
 
 .modal-box {
   img {
-    filter:  invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
+    filter: invert(39%) sepia(99%) saturate(859%) hue-rotate(166deg) brightness(100%) contrast(104%);
   }
 }
 
@@ -368,7 +366,8 @@
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
+    background: #1163A1;
+// background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
 
     .contact-item {
       flex: 1;
@@ -384,14 +383,14 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
   .contact-info {
     width: 100%;
     min-width: 0;
-    padding: sizem(40) 0 sizem(40) 0;
-    margin-top: sizem(60);
+    padding: sizem(0) 0 sizem(40) 0;
+    margin-top: sizem(0);
     position: relative;
     justify-content: space-between;
     background-size: sizem(450) auto;
 
     .logo {
-      width: sizem(290);
+      width: sizem(200);
       margin: sizem(40) auto sizem(30) auto;
     }
 
@@ -426,7 +425,7 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
 
         &.address {
           font-size: sizem(15);
-           border-radius: .9em  .9em 0 0;
+           border-radius: .5em .5em 0 0;
           padding: 1.1em 0;
           margin: sizem(25) auto 0;
           //font-size: .9em;
@@ -440,7 +439,7 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
         }
 
         &.address+div {
-            border-radius: 0 0 .9em .9em;
+            border-radius: 0 0 .5em .5em;
         }
 
         &.googlemap {

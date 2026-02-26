@@ -1,14 +1,20 @@
 <template>
   <article class="s2" id="s2">
-    <div class="t1" data-aos="fade-up" data-aos-delay="0">全球與大台北之間<br>
+    <div class="t1" data-aos="fade-up" data-aos-delay="0">
+      
+        <img src="./s1/quotes1.svg" class="quotesl" alt="quotesl" />
+        <img src="./s1/quotes1.svg" class="quotesr" alt="quotesr" />
+        全球與大台北之間<br>
 都在您的遊沐之間</div>
-  <div class="line"></div>
-    <div class="t2" data-aos="fade-up" data-aos-delay="400">轉身即達台64，串聯雙北的快速路網
-一路接軌淡江大橋，馳騁另一邊台北
-光速前進，悠遊為常
+  <div class="line" data-aos="fade-up" data-aos-delay="200"></div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="400" v-if="isMobile">轉身即達台64，串聯雙北的快速路網<br>
+一路接軌淡江大橋，馳騁另一邊台北<br>
+光速前進，悠遊為常<br>
 全球與大台北之間，都由您游沐日常</div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="400" v-else>轉身即達台64，串聯雙北的快速路網，一路接軌淡江大橋，馳騁另一邊台北<br>
+光速前進，悠遊為常，全球與大台北之間，都由您游沐日常</div>
  
- <div class="line"></div>
+ <div class="line" data-aos="fade-up" data-aos-delay="600"></div>
 
   </article>
 </template>
@@ -26,91 +32,78 @@
   @apply relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height:sizem(604);
+  height:sizem(640);
   //background: linear-gradient(180deg, #0085E5 0%, #19B2FF 50%, #67D2FF 100%);
   // background: #d62051;
-  background:url("./s2/bgm.jpg") no-repeat;
+  background:url("./s2/bgm.jpg");
+  background-size: cover;
  /* 
   background-size: 100% auto;
   background-position: 50% 100%;*/
   color: #FFF;
-  font-size: sizem(20);
+  font-size: sizem(14);
+  font-weight: 300;
   text-align: center;
-  line-height: 1.6;
-  letter-spacing: .1em;
 
   @media screen and (min-width: 768px) {
     background-image: url("./s2/bg.jpg");
     background-size: cover;
     background-position: 50% 50%;
     
-    height: 100dvh;
-    min-height: size(900);
-    max-height: size(1080);
-    font-size: size(49);
+    height: size(1060);
+  /*  min-height: size(900);
+    max-height: size(1080);*/
+    font-size: size(30);
    // justify-content: flex-end;
   }
 
-
-  .t1 {
-    font-size: sizem(38);
-    line-height: 1.2;
+.t1 {
+  
+    margin-top: sizem(75);
+    font-size: sizem(25);
+    letter-spacing: 0.06em;
+    line-height: 1.55;
     font-weight: 500;
-      position: relative;
-      z-index: 3;
-      letter-spacing: .1em;
-      margin-bottom: 1.2em;
+    margin-bottom: .6em;
+    position: relative;
+    display: inline-block;
 
-    @media screen and (min-width: 768px) {
-      font-size: size(95);
-      letter-spacing: .19em;
-      text-indent: .19em;
-      margin-bottom: .25em;
+    img {
+      height: .53em;
     }
-  }
 
-  .t2 {
-    font-size: sizem(17);
-    font-weight: 500;
-      position: relative;
-      z-index: 3;
-img{width: sizem(130);
-      margin-bottom: .8em;}
-    span {
-      display: inline-block;
-      margin-top: 0;
-      width: sizem(130);
-      border: 1px solid currentColor;
-      letter-spacing: .5em;text-indent: .5em;
+    .quotesl {
+      position: absolute;
+      top: .4em;
+      left: -1.35em;
+    }
+
+    .quotesr {
+      position: absolute;
+      transform: rotate(180deg);
+      top: .4em;
+      right: -1.2em;
     }
 
     @media screen and (min-width: 768px) {
-      font-size: size(35);
-      margin-bottom: 0em;
-img{width: size(350);
-      margin-bottom: .8em;margin-right: 1em;}
-
-    span {
-      width: size(268);vertical-align: .3em;
-    }
+    margin-top: size(110);
+      font-size: size(55);
     }
   }
+
 
   .line {
       position: relative;
-    width: 1px;
-    height: 5.5em;
+    width:3em;
+    height: 1px;
     background: currentColor;
-    margin: 1.4em 0em 1.4em 0em;
+    margin: .8em 0em .8em 0em;
       z-index: 3;
 
     @media screen and (min-width: 768px) {
-    width: 13.5em;
-    height: 1px;
-    margin: .8em 0em 1.4em 0em;
-     // display: none;
+  //  margin: .8em 0em 1.4em 0em;
     }
 
   }
