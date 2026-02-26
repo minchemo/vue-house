@@ -21,7 +21,6 @@ export default {
         ["使照號碼", "王朝雍建築師事務所"],
         ["行銷企劃", "自售"],
 
-        <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         */
     ],
      gtmCode: ["GTM-00000000"], // 可放置多個
