@@ -163,27 +163,27 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/1.webp", import.meta.url).href ,
-    caption: "瑞隆商圈"
+    caption: "瑞隆商圈實景照"
   },
   {
     img:new URL("./s4/2.webp", import.meta.url).href ,
-    caption: "保泰商圈"
+    caption: "保泰商圈實景照"
   },
   {
     img:new URL("./s4/3.webp", import.meta.url).href ,
-    caption: "五甲商圈"
+    caption: "五甲商圈實景照"
   },
   {
     img:new URL("./s4/4.webp", import.meta.url).href ,
-    caption: "大明商圈"
+    caption: "大明商圈實景照"
   },
   {
     img:new URL("./s4/5.webp", import.meta.url).href ,
-    caption: "海洋商圈"
+    caption: "海洋商圈實景照"
   },
   {
     img:new URL("./s4/6.webp", import.meta.url).href ,
-    caption: "武慶商圈"
+    caption: "武慶商圈實景照"
   },
 ]
 </script>

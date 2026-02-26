@@ -177,40 +177,105 @@ const options = {
 const imgs = [
   {
     img:new URL("./s7/01.webp", import.meta.url).href ,
-    caption: "KS1"
+    caption: "KS1-3D模擬示意圖"
   },
   {
     img:new URL("./s7/02.webp", import.meta.url).href ,
-    caption: "珈柏麗"
+    caption: "珈柏麗實景拍攝"
   },
   {
     img:new URL("./s7/03.webp", import.meta.url).href ,
-    caption: "美廳苑"
+    caption: "美廳苑3D模擬示意圖"
   },
   {
     img:new URL("./s7/04.webp", import.meta.url).href ,
-    caption: "御廳苑"
+    caption: "御廳苑實景拍攝"
   },
   {
     img:new URL("./s7/05.webp", import.meta.url).href ,
-    caption: "新都廳"
+    caption: "新都廳實景拍攝"
   },
   {
     img:new URL("./s7/06.webp", import.meta.url).href ,
-    caption: "帝品苑"
+    caption: "帝品苑實景拍攝"
   },
   {
     img:new URL("./s7/07.webp", import.meta.url).href ,
-    caption: "帝匯"
+    caption: "帝匯實景拍攝"
   },
   {
     img:new URL("./s7/08.webp", import.meta.url).href ,
-    caption: "帝之匯"
+    caption: "帝之匯實景拍攝"
   },
   {
     img:new URL("./s7/09.webp", import.meta.url).href ,
-    caption: "都廳苑"
+    caption: "都廳苑3D模擬示意圖"
   },
+  {
+    img:new URL("./s7/10.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/11.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/12.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/13.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/14.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/15.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/16.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/17.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/18.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/19.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/20.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/21.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/22.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/23.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/24.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  {
+    img:new URL("./s7/25.jpg", import.meta.url).href ,
+    caption: "公設實景拍攝"
+  },
+  /*
   {
     img:new URL("./s7/10.webp", import.meta.url).href ,
     caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
@@ -238,7 +303,7 @@ const imgs = [
   {
     img:new URL("./s7/16.webp", import.meta.url).href ,
     caption: "此為公設3D參考示意圖，實際以完工後為準，建設公司保有修正之權利"
-  },
+  },*/
 ]
 </script>
 

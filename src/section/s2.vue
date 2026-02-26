@@ -164,15 +164,15 @@ const options = {
 const imgs = [
   {
     img:new URL("./s2/1.webp", import.meta.url).href ,
-    caption: "大遠百"
+    caption: "大遠百實景照"
   },
   {
     img:new URL("./s2/2.webp", import.meta.url).href ,
-    caption: "統一時代"
+    caption: "統一時代實景照"
   },
   {
     img:new URL("./s2/3.webp", import.meta.url).href ,
-    caption: "SKM"
+    caption: "SKM實景照"
   },
   {
     img:new URL("./s2/4.webp", import.meta.url).href ,

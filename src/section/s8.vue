@@ -6,7 +6,7 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
@@ -147,27 +147,27 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s8/01.webp", import.meta.url).href ,
+    img:new URL("./s8/1.jpg", import.meta.url).href ,
     caption: ""
   },
   {
-    img:new URL("./s8/02.webp", import.meta.url).href ,
+    img:new URL("./s8/2.jpg", import.meta.url).href ,
     caption: ""
   },
   {
-    img:new URL("./s8/03.webp", import.meta.url).href ,
+    img:new URL("./s8/3.jpg", import.meta.url).href ,
     caption: ""
   },
   {
-    img:new URL("./s8/04.webp", import.meta.url).href ,
+    img:new URL("./s8/4.jpg", import.meta.url).href ,
     caption: ""
   },
   {
-    img:new URL("./s8/05.webp", import.meta.url).href ,
+    img:new URL("./s8/5.jpg", import.meta.url).href ,
     caption: ""
   },
   {
-    img:new URL("./s8/06.webp", import.meta.url).href ,
+    img:new URL("./s8/6.jpg", import.meta.url).href ,
     caption: ""
   },
 ]

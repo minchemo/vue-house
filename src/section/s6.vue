@@ -15,7 +15,7 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
@@ -146,13 +146,46 @@ const options = {
 
 const imgs = [
   {
+    img:new URL("./s6/1.jpg", import.meta.url).href ,
+    caption: "外觀日景實景拍攝"
+  },
+  {
+    img:new URL("./s6/2.jpg", import.meta.url).href ,
+    caption: "外觀仰角實景拍攝"
+  },
+  {
+    img:new URL("./s6/3.jpg", import.meta.url).href ,
+    caption: "外觀夜景實景拍攝"
+  },
+  {
+    img:new URL("./s6/4.jpg", import.meta.url).href ,
+    caption: "外觀夜景實景拍攝"
+  },
+  {
+    img:new URL("./s6/5.jpg", import.meta.url).href ,
+    caption: "外觀大門實景拍攝"
+  },
+  {
+    img:new URL("./s6/6.jpg", import.meta.url).href ,
+    caption: "外觀大門實景拍攝"
+  },
+  {
+    img:new URL("./s6/7.jpg", import.meta.url).href ,
+    caption: "外觀基座實景拍攝"
+  },
+  {
+    img:new URL("./s6/8.jpg", import.meta.url).href ,
+    caption: "外觀基座實景拍攝"
+  },
+  /*
+  {
     img:new URL("./s6/1.webp", import.meta.url).href ,
     caption: "3D示意圖，相關距離建物座向位置及周邊建物與環境、綠意等，以實景為準"
   },
   {
     img:new URL("./s6/2.webp", import.meta.url).href ,
     caption: "3D示意圖，相關距離建物座向位置及周邊建物與環境、綠意等，以實景為準"
-  },
+  },*/
 ]
 /*
 const imgs = [

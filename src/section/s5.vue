@@ -204,23 +204,23 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.webp", import.meta.url).href ,
-    caption: "正義國小"
+    caption: "正義國小實景照"
   },
   {
     img:new URL("./s5/2.webp", import.meta.url).href ,
-    caption: "五甲國中"
+    caption: "五甲國中實景照"
   },
   {
     img:new URL("./s5/3.webp", import.meta.url).href ,
-    caption: "瑞豐國小"
+    caption: "瑞豐國小實景照"
   },
   {
     img:new URL("./s5/4.webp", import.meta.url).href ,
-    caption: "衛武營國家藝文中心"
+    caption: "衛武營國家藝文中心實景照"
   },
   {
     img:new URL("./s5/5.webp", import.meta.url).href ,
-    caption: "高雄市立圖書館"
+    caption: "高雄市立圖書館實景照"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);

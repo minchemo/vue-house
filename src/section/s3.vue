@@ -205,23 +205,23 @@ const options = {
 const imgs = [
   {
     img:new URL("./s3/1.webp", import.meta.url).href ,
-    caption: "中山路"
+    caption: "中山路實景照"
   },
   {
     img:new URL("./s3/2.webp", import.meta.url).href ,
-    caption: "三多路"
+    caption: "三多路實景照"
   },
   {
     img:new URL("./s3/3.webp", import.meta.url).href ,
-    caption: "五甲路"
+    caption: "五甲路實景照"
   },
   {
     img:new URL("./s3/4.webp", import.meta.url).href ,
-    caption: "保泰路"
+    caption: "保泰路實景照"
   },
   {
     img:new URL("./s3/5.webp", import.meta.url).href ,
-    caption: "南華路"
+    caption: "南華路實景照"
   },
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
