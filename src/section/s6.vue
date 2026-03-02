@@ -110,10 +110,10 @@ background: #6A3F12;
       width:8%;
     }
   }
-.caption{
+/* .caption{
       font-size: sizem(10.2);text-align: center;
       padding: 5em 1em .5em 1em;
-} 
+} */
   }
 }
 </style>

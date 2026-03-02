@@ -83,7 +83,7 @@ img {
       right: 0;
       bottom: 0;
       font-weight: 300;
-      font-size: size(15);
+      font-size: size(18);
       padding: 5em 1em .5em 0;
       width: 100%;
       color: #FFF;

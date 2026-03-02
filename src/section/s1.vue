@@ -2,10 +2,10 @@
   <article class="s1" id="s1">
     <!-- <img src="./s1/pc.jpg" class="t0" alt="">
     <img src="./s1/mo.png" class="t0" alt="">  -->
-    <div class="img" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000">
-      <img src="./s1/1.webp" class="img1 absolute" alt="" />
-      <img src="./s1/2.webp" class="img2 absolute" alt="" />      
-    <div class="img3 absolute"><img src="./s1/3.webp" alt="" /></div>
+    <div class="img">
+      <div class="img1 absolute"  data-aos="zoom-in" data-aos-delay="800" data-aos-duration="3000"><img src="./s1/1.webp" alt="" /></div>
+      <div class="img2 absolute" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="2000"><img src="./s1/2.webp" alt="" /></div>      
+    <div class="img3 absolute" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000"><div><img src="./s1/3.webp" alt="" /></div></div>
       
     </div>
     <img src="./s1/slogo1.svg" class="slogo1 absolute" alt="" data-aos="zoom-in" data-aos-delay="0"
@@ -130,22 +130,30 @@
         width: 196%;
         top: -38%;
         right: -57%;
+        transform-origin: 100% 0;
+        img{
+        width: 100%;
         transform: rotate(-2deg);
         transform-origin: 100% 0;
-        animation: an 5s ease-in-out alternate infinite;
+        animation: an 5s ease-in-out alternate infinite;}
       }
     .img2{
         width: 114%;
         top: -20%;
         right: 38%;
+        transform-origin: 100% 0;
+        img{
+        width: 100%;
         transform: rotate(-2.5deg);
         transform-origin: 100% 0;
-        animation: an 5s -.5s ease-in-out alternate infinite;
+        animation: an 5s -.5s ease-in-out alternate infinite;}
       }
     .img3{
         width: 182.6%;
         top: -49%;
         right: 64%;
+        transform-origin: 100% 0;
+        div{width: 100%;}
         img{
         width: 100%;
         transform: rotate(-3deg);
@@ -169,7 +177,8 @@
         width: 300%;
         top: -71%;
         right: -38%;
-        transform: rotate(-15deg);
+        div{transform: rotate(-15deg);}
+        
         }
 
       }
