@@ -19,8 +19,9 @@
     -->
     <S1 />
     <S2 />
+    <S3 />
     <S12 />
-  <!--   -->
+    <!--   -->
     <!--<S3 />-->
     <!--<S4 />-->
     <!--<S5 />-->
@@ -147,7 +148,7 @@ img {
     font-weight: 700;
     color: #fff;
     text-align: center;
-/*
+    /*
     &::after,
     &::before {
       content: "";
@@ -328,6 +329,7 @@ img {
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
 import S12 from "@/section/s12.vue"
 /**/
 //import S3 from "@/section/s3.vue"
