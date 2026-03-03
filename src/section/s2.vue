@@ -1,6 +1,9 @@
 <template>
   <article class="s2">
-    <!-- -->
+    
+    <img src="./s2/1.jpg" class="t1" v-if="isMobile">
+    <img src="./s2/2.jpg" class="t1" v-else>
+    <!--
     <div class="txt">
       <h2 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">
         <img class=" " src="./s2/s2-h1.png" />
@@ -17,7 +20,7 @@
       </ul>
     </div>
     <div class="caption">本圖片為AI情境模擬,以實際完工現況為準。</div>
-
+ -->
   </article>
 </template>
 
@@ -27,13 +30,16 @@
 .s2 {
   @apply relative overflow-hidden;
   width: 100%;
-  min-height: size(900);
-  max-height: size(1080);
-  height: 99vh;
+ // min-height: size(900);
+ // max-height: size(1080);
+ // height: 99vh;
   padding: 0;
   font-size: size(18);
-  background: url("./s2/s2.jpg");
 
+
+  .t1{width: 100%;}
+ // background: url("./s2/s2.jpg");
+/*
   .txt1 {
     margin-top: 2.8em;
     margin-bottom: 2em;
@@ -128,7 +134,7 @@
       width: 50%;
       margin: 0 0 2vw;
     }
-  }
+  }*/
 }
 
 /* 螢幕尺寸標準 */
@@ -147,13 +153,13 @@
 
   .s2 {
     @apply flex-col;
-    min-height: sizem(0);
+   /* min-height: sizem(0);
     max-height: sizem(1080);
     height: 277vw;
     font-size: sizem(14) !important;
     background: url("./s2/s2m.png") 50% 100% no-repeat;
-    background-size: 100% auto;
-
+    background-size: 100% auto;*/
+/*
     .sub {
       color: #fff;
       margin: 0 auto;
@@ -203,7 +209,7 @@
       right: sizem(30);
 
 
-    }
+    }*/
 
   }
 }
@@ -212,6 +218,8 @@
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
+/*
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -234,4 +242,5 @@ const options = {
   gap: 0,
   type: 'loop'
 }
+  */
 </script>

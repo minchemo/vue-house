@@ -36,7 +36,7 @@
       font-size: 1.75em;
       margin: 0 auto;
       margin-left: 4em;
-      margin-top: -1.2em;
+      margin-top: 3em;
       text-align: left;
       line-height: 1.4;
       font-weight: 200;
