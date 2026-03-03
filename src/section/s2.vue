@@ -1,5 +1,6 @@
 <template>
   <article class="s2">
+    <!-- -->
     <div class="txt">
       <h2 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">
         <img class=" " src="./s2/s2-h1.png" />
@@ -9,8 +10,10 @@
           時間醞釀的答卷,獻給懂完美的你。</li>
         <div class="sub">完美的名字 <br /> 昌益鉑翡 EVERYTHING IS PERFECT</div>
         <li data-aos="fade-up" data-aos-delay="200"></li>
-        <li class="txt3" data-aos="fade-up" data-aos-delay="300">限量早鳥!即將公開 <br /> 捷足先登 !現在開始</li>
-  
+        <li class="txt3" data-aos="fade-up" data-aos-delay="300">
+          <img class=" " src="./s2/S2T3-2.png" />
+        </li>
+
       </ul>
     </div>
     <div class="caption">本圖片為AI情境模擬,以實際完工現況為準。</div>
@@ -34,7 +37,7 @@
   .txt1 {
     margin-top: 2.8em;
     margin-bottom: 2em;
-    margin-left: -34em;
+    margin-left: 0em;
     font-weight: 200;
     font-size: 1.3em;
   }
@@ -43,16 +46,15 @@
     color: #fff;
     text-align: center;
     margin: 0 auto;
-    margin-left: -38em;
     margin-top: -1em;
     text-align: center;
     font-size: size(23);
   }
 
   .txt3 {
-    margin-top: 1em;
+    margin-top: 3em;
     margin-bottom: 2em;
-    margin-left: -23em;
+    margin-left: 0em;
     font-weight: 500;
     font-size: 2em;
     background-clip: text;
@@ -66,9 +68,11 @@
     bottom: .5em;
     left: .5em;
     font-size: sizem(12);
-  @media screen and (min-width: 768px) {
-    font-size: size(15);}
-    
+
+    @media screen and (min-width: 768px) {
+      font-size: size(15);
+    }
+
   }
 
   .txt {
@@ -93,8 +97,7 @@
       //background-clip: text;
       //background: linear-gradient(to bottom, #ffc71f 0%, #ffffff 50%, #f2bd00 100%);
       //-webkit-background-clip: text;
-      //-webkit-text-fill-color: transparent;
-
+      //-webkit-text-fill-color: transparent; 
       text-align: center;
       margin-top: 1em;
       margin-left: -11em;
@@ -137,8 +140,8 @@
 @media screen and (max-width: 767px) {
 
   .s1 .logo {
-  //  width: 40vw;
-  //  margin: 15vw 0vw 0vw 0vw;
+    //  width: 40vw;
+    //  margin: 15vw 0vw 0vw 0vw;
   }
 
 
@@ -148,18 +151,18 @@
     max-height: sizem(1080);
     height: 277vw;
     font-size: sizem(14) !important;
-    background: url("./s2/s2m.jpg") 50% 100% no-repeat;
+    background: url("./s2/s2m.png") 50% 100% no-repeat;
     background-size: 100% auto;
 
     .sub {
       color: #fff;
       margin: 0 auto;
       margin-left: 0em;
-      margin-top: -1em;
+      margin-top: 6em;
     }
 
     .txt1 {
-      margin-top: 2.8em;
+      margin-top: 3em;
       margin-bottom: 2em;
       margin-left: 0em;
       font-weight: 200;
@@ -167,7 +170,7 @@
     }
 
     .txt3 {
-      margin-top: 1em;
+      margin-top: 4em;
       margin-bottom: 2em;
       margin-left: 0em;
       font-weight: 500;
