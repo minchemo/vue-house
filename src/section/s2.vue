@@ -12,6 +12,7 @@
         <li data-aos="fade-up" data-aos-delay="200"></li>
         <li class="txt3" data-aos="fade-up" data-aos-delay="300">
           <img class=" " src="./s2/S2T3-2.png" />
+
         </li>
 
       </ul>
