@@ -8,15 +8,15 @@
     </div>  -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
+        <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="//h35.banner.tw/img//form/messenger.svg" alt="Facebook 諮詢" srcset="" />
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'">
+        <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
-        <img src="//h35.banner.tw/img//form/fb.svg" alt="前往粉絲專頁" srcset="" />
+        <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -26,7 +26,7 @@
       </div>
       <div class="flex contact-item justify-center items-center googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -38,21 +38,21 @@
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-      <img src="//h35.banner.tw/img//form/phone.svg" alt="撥打電話" srcset="" />
+      <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'">
-      <img src="//h35.banner.tw/img//form/messenger.svg" alt="FB 諮詢" srcset="" />
+      @click="modalOpen = true; modalType = 'messenger'">
+      <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img//form/pen.svg" alt="預約賞屋" srcset="" />
+      <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
-      <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
+      <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -63,9 +63,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/messenger.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/messenger.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
       `${info.address2?info.address2:'導航地址'}`
@@ -77,21 +77,21 @@
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
+        'btlead': modalType == 'messenger',
         'btsearch': modalType == 'gmap',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' :
         '開啟導航'
         }}</div>
       <!-- btn phone -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'fb',
+        'btlead': modalType == 'messenger',
         'btsearch': modalType == 'gmap',
         'btcontac': modalType == 'phone'
       }">
-        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' :
         '開啟導航'
         }}</div>
     </div>
@@ -120,8 +120,6 @@
 
   .logo {position: relative;
     width: size(367);
-   // height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -143,13 +141,10 @@
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-  //  border-radius: .5em;
       letter-spacing: 0em;
-     // max-width: size(280);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
-      //border: 1px solid #C29267;
       gap: 1em;
       img {
         width:1.68em;
@@ -176,8 +171,6 @@
         z-index: 0;
         position: relative;
         flex:2.17;
-        // border-radius: 999px 0 0 999px;
-      //  max-width: 9999px;
         justify-content: center;
 
         &::before {
@@ -199,22 +192,7 @@
 
       &.googlemap {
         flex:1;
-  //    background-color: #9B1E44;
       border-left-width: 0;
-      //  color: #fff;
-/*
-        img {
-          filter: brightness(0) invert(0);
-        }
-
-        &:hover {
-   //     background-color: #C29267;
-          color: #000;
-          img {
-            filter: brightness(0) invert(0);
-          }
-        }
-          */
       }
     }
 
@@ -271,7 +249,6 @@
     .logo {
       width: sizem(257);
     margin: sizem(40) auto sizem(30) auto;
-     // margin-bottom: sizem(47);
     }
 
     .contact-item-box {
@@ -301,8 +278,6 @@
         &.address {
           border-radius: 0;
           padding: 1.1em 0;
-        //  margin-top: sizem(25);
-          //font-size: .9em;
 
           &::before {
             width: 100%;
@@ -342,7 +317,7 @@ const go = () => {
      setTimeout(() => {
        window.location.href = "phoneThanks";
      }, 1000);
-  } else if (modalType.value == 'fb') {
+  } else if (modalType.value == 'messenger') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
