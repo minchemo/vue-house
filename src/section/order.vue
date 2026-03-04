@@ -371,7 +371,7 @@ const formData = reactive({
 })
 
 // bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["email", "msg", "city", "area"]
+const staticBypass = ["email", "msg", "city", "area", "r_verify"]
 const bypass = [
   ...staticBypass,
   ...Object.entries(selectFields)
@@ -398,13 +398,13 @@ watch(
   }
 )
 // 新系統這裡需調整
+/*
 const onRecaptchaVerify = (token) => {
   formData.r_verify = token;
 }
 const onRecaptchaUnVerify = () => {
   formData.r_verify = false
-}
-
+}*/
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const utmSource = urlParams.get("utm_source") || "null"; // 确保有有效的来源
@@ -422,7 +422,7 @@ const send = () => {
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
   
 
-  const presend = new FormData();
+  const presend = {};
   let pass = true;
   let unfill = [];
   let idx = 0;
@@ -446,17 +446,20 @@ if (formData.msg.trim() === "") {
     unfill.push(formDataRef[key] || key)
     pass = false
   }
+  /*
   if (key !== "r_verify" && key !== "policyChecked") {
-    presend.append(key, value)
-  }
+    presend[key] = value
+  }*/
 }
   
-  presend.append("utm_source", utmSource);
-  presend.append("utm_medium", utmMedium);
-  presend.append("utm_content", utmContent);
-  presend.append("utm_campaign", utmCampaign);
-  presend.append("message", formData.msg);
-  presend.append("case_code", info.case_code?info.case_code:info.caseid );
+presend.utm_source = utmSource;
+presend.utm_medium = utmMedium;
+presend.utm_content = utmContent;
+presend.utm_campaign = utmCampaign;
+presend.message = formData.msg;
+presend.case_code = info.case_code ? info.case_code : info.caseid;
+presend.caseId = info.caseid;
+delete presend.r_verify
 
   // 如果有必填字段为空，返回
   if (!pass) {
@@ -494,10 +497,13 @@ if (formData.msg.trim() === "") {
       }
     );
    //caseid 在index.js裡設定
-    fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
-      method: "POST",
-      body: presend,
-    })
+    fetch("https://mail-service-735828106799.asia-east1.run.app/submit", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(presend),
+})
       .then((response) => {
         if (response.status === 200) {
           window.location.href = "formThanks";
