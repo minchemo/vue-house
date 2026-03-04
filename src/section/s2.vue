@@ -1,234 +1,52 @@
 <template>
   <article class="s2">
-    <div class="txt">
-      <h2 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">
-        <img class=" " src="./s2/s2-h1.png" />
-      </h2>
-      <ul>
-        <li class="txt1" data-aos="fade-up" data-aos-delay="100">地段決定身價,眼界決定境界。 <br /> 站在關埔的最核心,您的眼界,已領先一步 <br />
-          時間醞釀的答卷,獻給懂完美的你。</li>
-        <div class="sub">完美的名字 <br /> 昌益鉑翡 EVERYTHING IS PERFECT</div>
-        <li data-aos="fade-up" data-aos-delay="200"></li>
-        <li class="txt3" data-aos="fade-up" data-aos-delay="300">限量早鳥!即將公開 <br /> 捷足先登 !現在開始</li>
-  
-      </ul>
-    </div>
-    <div class="caption">本圖片為AI情境模擬,以實際完工現況為準。</div>
-
+   <!--   -->  <div class="txt">
+    <h3 class="title" data-aos="fade-up" data-aos-delay="0">新北第一環  水岸第一景</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">前景×美景  好景成雙</h4>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">位處重陽重劃區核心地段，奢享山河豪景，靜藏雙公園漫翠，三大建設重心齊發，置身未來增值中央，遙望台北大好江山</p>
+   
+      </div>
+    <Fullview />
+    <div class="caption">基地空拍實景經後製修飾</div>
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden;
+  @apply relative overflow-hidden bg-[#00398A] text-[#fff];
   width: 100%;
-  min-height: size(900);
-  max-height: size(1080);
-  height: 99vh;
-  padding: 0;
-  font-size: size(18);
-  background: url("./s2/s2.jpg");
-
-  .txt1 {
-    margin-top: 2.8em;
-    margin-bottom: 2em;
-    margin-left: -34em;
-    font-weight: 200;
-    font-size: 1.3em;
+ // height: size(1059);
+  font-size:size(19);
+  .txt {text-align: center;position: relative;
+  padding-top:3.2em;z-index: 10;margin-bottom:-9.3em ;
   }
-
-  .sub {
-    color: #fff;
-    text-align: center;
-    margin: 0 auto;
-    margin-left: -38em;
-    margin-top: -1em;
-    text-align: center;
-    font-size: size(23);
-  }
-
-  .txt3 {
-    margin-top: 1em;
-    margin-bottom: 2em;
-    margin-left: -23em;
-    font-weight: 500;
-    font-size: 2em;
-    background-clip: text;
-    background: linear-gradient(to bottom, #ffc71f 0%, #ffffff 50%, #f2bd00 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .caption {
-    position: absolute;
-    bottom: .5em;
-    left: .5em;
-    font-size: sizem(12);
-  @media screen and (min-width: 768px) {
-    font-size: size(15);}
-    
-  }
-
-  .txt {
-    z-index: 5;
-    margin: 2em auto;
-    text-align: center;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-    font-size: size(20);
-    color: #fff;
-
-
-
-    .title {
-      font-size: 4em;
-      margin: 0 auto;
-      line-height: 1.4;
-      font-weight: 700;
-      //color: #CEA93C;
-      //background: url("./s2/s2-h1.png") no-repeat; 
-      //background-clip: text;
-      //background: linear-gradient(to bottom, #ffc71f 0%, #ffffff 50%, #f2bd00 100%);
-      //-webkit-background-clip: text;
-      //-webkit-text-fill-color: transparent;
-
-      text-align: center;
-      margin-top: 1em;
-      margin-left: -11em;
-
-
-      &::after,
-      &::before {
-        content: "";
-        width: 0 !important;
-        height: 0 !important;
-        display: none;
-      }
-    }
-  }
-
-  .st {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: size(60);
-    height: size(740);
-    bottom: calc(50% - 16vw);
-    right: size(120);
-    background-image: linear-gradient(180deg, #fff0 0%, #FFF 50%, #fff0 100%);
-
-    img {
-      width: 50%;
-      margin: 0 0 2vw;
-    }
-  }
+  .viewbox{z-index: 2;}
 }
-
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
-
-/* mo */
 @media screen and (max-width: 767px) {
 
-  .s1 .logo {
-  //  width: 40vw;
-  //  margin: 15vw 0vw 0vw 0vw;
-  }
-
-
   .s2 {
-    @apply flex-col;
-    min-height: sizem(0);
-    max-height: sizem(1080);
-    height: 277vw;
-    font-size: sizem(14) !important;
-    background: url("./s2/s2m.jpg") 50% 100% no-repeat;
-    background-size: 100% auto;
+   // height: sizem(550);
+  font-size:sizem(15);
 
-    .sub {
-      color: #fff;
-      margin: 0 auto;
-      margin-left: 0em;
-      margin-top: -1em;
-    }
+  .txt {text-align: justify;
+  padding-top:4.2em;width:sizem(310);margin:auto auto -4.3em auto;
+  }
+  .viewbox{height: sizem(550);}
 
-    .txt1 {
-      margin-top: 2.8em;
-      margin-bottom: 2em;
-      margin-left: 0em;
-      font-weight: 200;
-      font-size: 1.3em;
-    }
-
-    .txt3 {
-      margin-top: 1em;
-      margin-bottom: 2em;
-      margin-left: 0em;
-      font-weight: 500;
-    }
-
-    .txt {
-      margin: 4em auto auto auto;
-      font-size: sizem(14);
-
-      .sub {
-        font-size: sizem(18) !important;
-      }
-
-      .title {
-        font-size: sizem(22) !important;
-        font-weight: 700;
-
-        img {
-          width: 12em;
-          margin: 0 auto;
-          margin-left: 12em;
-        }
-      }
-    }
-
-    .st {
-      width: sizem(20);
-      height: sizem(220);
-      bottom: sizem(50);
-      right: sizem(30);
-
-
-    }
 
   }
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
+import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-  return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
-
-const splide = ref();
-
-const currentSlideIndex = ref(0);
-
-const moved = (newIdx, prevIdx, destIdx) => {
-  currentSlideIndex.value = prevIdx
-}
-
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
+const isMobile = computed(() => globals.$isMobile());
 </script>

@@ -1,24 +1,24 @@
 <template>
-  <article class="s3">
-
-
+  <article class="s3" ref="s3">
+    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃" v-if="!isMobile">
+    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃">
+	<img src="./s1/oo.svg" alt="oo" class="oo1">
     <div class="main">
       <div class="txt">
-        <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">
-          站在土城AI科技走廊上<br>直抵世界供應鏈的心臟</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          土城永寧位居板南線關鍵節點，台灣最強7公里AI科技廊道核心，全球目光都聚集在這裡。更掌握新板與土城兩大城市中心脈動，預定板南線未來10年最關鍵的成長軸線，成就城市菁英的居住首選。從科技產業發展到城市生活機能，「松陽馥麗」完美演繹了這片土地上的無限潛力。
-        </p>
-      </div>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">便捷三重奏 <br v-if="isMobile"> 一橋北市二捷三線</h3>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">重陽橋×捷運Y22站  好"運"成雙</h4>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">一橋(重陽橋)迅抵台北大士林生活圈，捷運北環段Y22/Y23站(預計2031年完工)隨侍左右，輕鬆串接精華三線：新蘆線、信義線、文湖線，交通動能多元完善，坐車開車都是PLAN A。</p>
+    </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows">
+      <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
+        <SplideSlide class="slide-item" v-for="img in imgs">
+          <img :src="img.img" :alt="img.caption">
+      <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -29,106 +29,60 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s3 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  height: auto;
-  padding: 7em 0;
-  font-size: size(18);
-  gap: 3em;
-  flex-direction: row-reverse;
+  height:auto;
+  padding:11em 0 10em 0;
+  font-size:size(19);
+  gap:3em;
   flex-wrap: wrap;
+	.eggbg1{position: absolute;
+    display: block;
+    top: size(-250);left:size(630);width:size(700);
+		transform:translateY(-10%);
+		animation: an 2s ease-in-out infinite alternate-reverse;}
+	.eggbg2{position: absolute;
+    display: block;
+    top: size(850);right:size(400);width:size(150);
+		transform:translateY(-50%);
+		animation: an 4s ease-in-out infinite alternate;}
+  .oo1{position: absolute;top:size(225);height:size(50);left:size(60);
+		transform: translateX(20%);
+		animation: an 3s ease-in-out infinite alternate;}
 
-  .bg {
-    span {
-      &:nth-child(1) {
-        top: 1vw;
-        left: 10vw;
-        font-size: 3.5vw;
-      }
-
-      &:nth-child(2) {
-        top: 12vw;
-        left: 2vw;
-        font-size: 2vw;
-      }
-
-      &:nth-child(3) {
-        top: 3vw;
-        left: 7vw;
-        font-size: 9vw;
-        transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%, #fff0 70%);
-        animation-delay: 1.8s;
-      }
-
-      &:nth-child(4) {
-        top: 5vw;
-        left: 26vw;
-        font-size: 1.5vw;
-      }
-
-      &:nth-child(5) {
-        top: 12vw;
-        right: 33vw;
-        font-size: 4.5vw;
-      }
-
-      &:nth-child(6) {
-        top: 12vw;
-        right: 1vw;
-        font-size: 2.5vw;
-        animation-delay: 1.5s;
-      }
-    }
-  }
-
-
-
+  .img{position: absolute;bottom:size(-30);left:size(-270);width:size(660);
+  &::before{content: "";width:120%;
+  height: 20%;border-radius: 50%;background: #1691CF;display: block;
+  position: absolute;bottom: -10%;left: -10%;
+}
+  img{width: 100%;position: relative;}}
   .main {
     @apply flex;
     margin: 0;
     flex-basis: size(590);
-    flex-direction: column;
-    text-align: justify;
-  }
-
-  .txt {
-
-    .title {
-
-      &::after,
-      &::before {
-        width: 11.1em;
-      }
-    }
-  }
-
+  flex-direction: column;
+  text-align: justify;
+}
   .slider {
     margin: 0;
     flex-basis: size(840);
     width: size(840);
-    height: size(560);
-
+      height: size(560);
     .slide-item {
       @apply bg-cover;
-      flex-basis: size(840);
+    flex-basis: size(840);
       height: size(560);
-
+      
     }
-
-    .splide__pagination {
-      left: calc(100% + 3em);
-      justify-content: flex-start;
-      color: #C5C5C5;
-
-      li button.is-active {
-        color: #529130;
-      }
+    .splide__pagination{
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     }
   }
 }
-
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
@@ -136,90 +90,54 @@
 @media screen and (max-width: 767px) {
 
   .s3 {
-    flex-direction: column-reverse;
+  @apply flex-col;
     height: auto;
-    padding: 0 0 5em 0;
-    font-size: sizem(12);
-    flex-wrap: nowrap;
-    margin-bottom: 0em;
-    gap: 2em;
+    padding: 0;
+  font-size:sizem(15);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:0em;
+	.eggbg2{
+    top: sizem(-160);right:sizem(-80);width:sizem(280);
+  transform: translateY(-10%);}
+  .oo1{top:sizem(30);height:sizem(20);left:auto;right:sizem(100);}
+  .img{position: absolute;top:sizem(300);left: auto;
+    right:sizem(-155);width:sizem(260);bottom: auto;}
 
-    .img {
-      bottom: sizem(230);
-      right: sizem(-30);
-      width: sizem(250);
+  .main {
+    padding: 0 sizem(32.5);
+    width: 100%;
+}
+
+.txt {margin: 4.4em auto 1.3em;
+}
+
+
+  .slider {
+    height: auto;
+    width: 100%;
+
+    .caption {
+    font-size:sizem(12);  
+    right:sizem(5);
+    bottom:sizem(5);
     }
-
-    .bg {
-      span {
-        &:nth-child(1) {
-          top: 4vw;
-          left: 82vw;
-          font-size: 6vw;
-        }
-
-        &:nth-child(2) {
-          top: 57vw;
-          left: 2vw;
-          font-size: 8vw;
-        }
-
-        &:nth-child(3) {
-          top: 3vw;
-          left: 77vw;
-          font-size: 23vw;
-        }
-      }
-    }
-
-    .main {
-      padding: 0 sizem(30);
+    .slide-item {
+      @apply bg-cover;
       width: 100%;
+    flex-basis: auto;
+      height: sizem(250);
+      
     }
-
-    .txt {
-      .title {
-
-        &::after,
-        &::before {
-          width: 0;
-        }
-      }
-
-      .hr {
-        width: sizem(100);
-        margin: sizem(20) auto sizem(10);
-      }
-    }
-
-
-
-    .slider {
-      height: auto;
-      width: 100%;
-
-      .caption {
-        font-size: sizem(12);
-        right: sizem(5);
-        bottom: sizem(5);
-      }
-
-      .slide-item {
-        @apply bg-cover;
-        width: 100%;
-        flex-basis: auto;
-        height: sizem(250);
-
-      }
-    }
+  }
   }
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -245,18 +163,17 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s3/1.webp", import.meta.url).href,
-    caption: "頂埔科學園區"
+    img:new URL("./s3/1.webp", import.meta.url).href ,
+    caption: "重陽橋"
   },
   {
-    img: new URL("./s3/2.webp", import.meta.url).href,
-    caption: "嵿埔之星科技廣場"
+    img:new URL("./s3/2.webp", import.meta.url).href ,
+    caption: "北環段捷運情境示意圖"
   },
   {
-    img: new URL("./s3/3.webp", import.meta.url).href,
-    caption: "土城鴻海"
+    img:new URL("./s3/3.webp", import.meta.url).href ,
+    caption: "新蘆線捷運徐匯中學站"
   },
-
 ]
-const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
+

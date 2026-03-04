@@ -1,29 +1,26 @@
 <template>
   <div id="order" class="order relative text-center">
+    <img src="./s1/bg2.webp" class="eggbg3" alt="蛋黃">
+    <img src="./s1/bg3.webp" class="eggbg4" alt="蛋黃">
+    <img src="./s1/oo.svg" alt="oo" class="oo3">
     <div class="order-section">
-      <div class="order-title text-center font-['Noto Sans TC',serif]" v-if="info.order.title"
-        v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle"
-        v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle"></div>
+      <!-- Title -->
+      <div class="order-title text-center">{{ info.order.title }}</div>
+      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
+      <!-- <div class="cus-divider"></div> -->
+
+      <!-- Title Image
+      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
+ -->
+      <!-- Custom Image -->
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名<span>*</span></span>
+          <label class="row name"><span>姓名<span>(必填)</span></span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)" />
-          </label>
-
-
-          <div class="gender">
-            <label><input type="radio" name="gender" value="男"
-                @input="(event) => (formData.gender = event.target.value)">先生</label>
-            <label><input type="radio" name="gender" value="女"
-                @input="(event) => (formData.gender = event.target.value)">女士</label>
-          </div>
-
-
-          <label class="row"><span>手機<span>*</span></span>
+              @input="(event) => (formData.name = event.target.value)" /></label>
+          <label class="row"><span>手機<span>(必填)</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" /></label>
 
@@ -40,6 +37,7 @@
             </label>
           </template>
           <!-- 動態 select end-->
+          <!--  -->
           <label class="row"><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
@@ -47,21 +45,17 @@
                 {{ city.label }}
               </option>
             </select></label>
-
-
           <label class="row"><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
-            </select>
-          </label>
-          <!--  -->
+            </select></label>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="(非必填) 請輸入您的留言"></textarea>
+            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
         </div>
       </div>
 
@@ -71,7 +65,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFF] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -81,8 +75,26 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending ? '發送中..' : '立即預約' }}
+      <div class="sendall mt-8 mx-auto" style="font-size:20px;font-weight: 400;
+    line-height: 3.3;height:3.3em">
+        <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
+          即刻預約
+        </button>
+        <div v-else class="send-load text-[#0466CA]" style="letter-spacing: 0.7em;
+  text-indent: 0.9em;
+  height:100%;
+  z-index: 10;
+  position: relative;">
+          <svg class="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            style=" display: inline-block;margin:0 .8em">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+              <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 12 12"
+                to="360 12 12" dur="1s" repeatCount="indefinite" />
+            </path>
+          </svg>
+          <span>發送中...</span>
+        </div>
       </div>
 
       <!-- Contact Info -->
@@ -102,16 +114,41 @@
 @import "@/assets/style/function.scss";
 
 
+.eggbg3 {
+  position: absolute;
+  display: block;
+  top: size(-150);
+  right: size(100);
+  width: size(700);
+  transform: translateY(-10%);
+  animation: an 2s ease-in-out infinite alternate-reverse;
+}
+
+.eggbg4 {
+  position: absolute;
+  display: block;
+  top: size(400);
+  left: size(230);
+  width: size(160);
+  transform: translateY(-50%);
+  animation: an 4s ease-in-out infinite alternate;
+}
+
+.oo3 {
+  position: absolute;
+  top: size(120);
+  height: size(50);
+  right: size(60);
+  transform: translateX(20%);
+  animation: an 3s ease-in-out infinite alternate;
+}
+
 .order-section {
   position: relative;
   // padding-top: size(406);
   overflow: hidden;
   min-height: size(500);
-  //background-color: #00be6e;
-  background-image: url("./s1/bg.jpg");
-  background-size: auto;
-  background-position: top;
- // margin-top: -4.5vw;
+  background: transparent;
 
   .bg-image {
     position: absolute;
@@ -124,32 +161,36 @@
 }
 
 .order {
+  position: relative;
   width: 100%;
-  // padding-top: size(10);
-  // background: linear-gradient(to bottom, #195c45, #000704);
+  padding-top: 0;
 
 
-.order-title {
-  font-size: size(45);
-  font-weight: 700;
-  color: #FFF;
-  padding-top:1.5em;
-  letter-spacing: 0.1em;
-  display: flex;
-  align-items: center;
-    width: size(920);
-    min-width: 750px;
-    margin: auto;
-    gap: 1em;
-  &::before,
-  &::after{
-    content: "";
-    display: block;
-    flex: 1;
-    height: 1px;
-    background: currentColor;
+  .bird {
+    @apply absolute;
+    width: size(155);
+    top: size(420);
+    right: size(450);
+    animation: fly 6s ease-in-out infinite alternate-reverse;
+
+    @keyframes fly {
+      from {
+        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
+      }
+
+      to {
+        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
+
+      }
+    }
   }
-}
+
+  .order-title {
+    font-size: size(40);
+    font-weight: 700;
+    color: #fff;
+    padding-top: 2em;
+  }
 
   .order-title-img {
     width: size(1008);
@@ -158,11 +199,10 @@
 
   .order-subTitle {
     font-size: size(17);
-    color: #F8F66F;
+    color: #fff;
     padding-top: .8em;
-    padding-bottom: 1em;
-    letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    letter-spacing: 0em;
+    font-weight: 500;
   }
 
   .cus-divider {
@@ -170,24 +210,22 @@
     width: size(300);
     height: size(2);
     margin-bottom: size(50);
-    //  background-color: #055F76;
+    background-color: #055F76;
   }
 
   .form {
     width: size(920);
-    min-width: 750px;
+    min-width: 680px;
     //  height: 350px;
     gap: size(80);
-    margin-top: 3vw;
-    margin-bottom: 2vw;
+    margin-top: size(45);
+    margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
 
     .left {
-      position: relative;
       flex: 1;
-      gap: 1.3vw;
-      align-items: flex-start;
+      gap: size(20);
       //   width: size(419);
     }
 
@@ -201,31 +239,34 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #0003;
+      background-color: #fff;
       position: absolute;
     }
 
     .row {
-      background: #fff;
-      border: 1px solid #999;
-      color: #000;
+      background: #ffffff;
+      border: 1px solid #CCC; //color: #000;
+      font-weight: 500;
       display: flex;
       width: 100%;
+
       align-items: center;
 
       >span {
+        color: #000;
         width: 5.5em;
         text-align: left;
         padding-left: 1em;
 
         >span {
-          color: #F00; //font-size: 12px;
+          color: #F00;
+          font-size: 12px;
         }
       }
 
       input,
       select {
-        background: inherit;
+        background: none;
         flex: 1;
       }
 
@@ -237,32 +278,11 @@
         background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
+        //filter: brightness(0) invert(1);
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
         }
-      }
-
-      &.name {
-        width: calc(100% - 3.8em);
-      }
-
-      //沒有性別的話這條槓掉
-    }
-
-    .gender {
-      display: flex;
-      position: absolute;
-      right: 0;
-      flex-direction: column;
-      color: #fff;
-
-      label:first-child {
-        margin-bottom: .3em;
-      }
-
-      input {
-        margin-right: .3em;
       }
     }
   }
@@ -271,18 +291,17 @@
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    //background-color: #F8F66F; 
-    background: linear-gradient(to bottom, #fbcf00 5%, #cb9b0c 25%, #cb9b0c 70%, #ffe87b 95%);
+    color: #FFF;
+    background: #0466CA;
     //border: 1px solid #FFF9;
     border: 0;
-    border-radius: 2em;
+    border-radius: .5em;
 
     width: 308px;
     height: 3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 400;
+    font-weight: 700;
     position: relative;
   }
 
@@ -294,11 +313,29 @@
 }
 
 @media screen and (max-width:768px) {
+  .eggbg3 {
+    top: sizem(-10);
+    right: sizem(-100);
+    width: sizem(300);
+  }
+
+  .eggbg4 {
+    top: sizem(400);
+    left: sizem(0);
+    width: sizem(50);
+  }
+
+  .oo3 {
+    top: sizem(10);
+    height: sizem(20);
+    left: auto;
+    right: sizem(30);
+  }
+
+
   .order-section {
     min-height: sizem(800);
     position: relative;
-    background-color: #00be6e;
-    background-size: cover;
     // overflow: hidden;
     // padding-top: sizem(200);
 
@@ -314,7 +351,21 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+    // border-radius: sizem(68) sizem(68) 0 0;
+    /* padding-top: sizem(0);
+    margin-top: sizem(0);
 
+    .order-title-img {
+      width: sizem(315);
+      margin-bottom: sizem(22);
+    } */
+
+    .bird {
+      @apply absolute;
+      width: sizem(48.8);
+      top: sizem(205);
+      right: sizem(40);
+    }
 
     .cus-divider {
       margin: 0 auto;
@@ -322,24 +373,16 @@
       height: sizem(2);
       margin-bottom: sizem(25);
       background-color: #055F76;
-
     }
 
     .order-title {
-      font-size: sizem(27);
-      padding-top: 1em;
-      padding-bottom: .3em;
-      width: sizem(310);
-      min-width: 0;
-
-      .line {
-        width: sizem(258);
-      }
+      font-size: sizem(25);
+      // padding-top:4.5em;
     }
 
     .order-subTitle {
       font-size: sizem(13);
-      padding-bottom: 0;
+      padding-top: 0;
     }
 
 
@@ -347,14 +390,18 @@
       width: sizem(310);
       min-width: 0;
       height: auto;
-      gap: sizem(15);
+      gap: 0;
       margin-bottom: sizem(20);
       flex-direction: column;
       margin-top: sizem(20);
 
       .left {
         width: 100%;
-        gap: sizem(15);
+        gap: 0;
+
+        .row {
+          margin: 0 0 sizem(15);
+        }
       }
 
       .right {
@@ -405,6 +452,7 @@ import { useToast } from "vue-toastification"
 const toast = useToast()
 
 const sending = ref(false)
+const submitted = ref(false)
 
 // 後端那 name phone email msg 為必要欄位 請勿刪除
 const requiredFields = {
@@ -413,8 +461,8 @@ const requiredFields = {
   phone: "手機",
   email: "信箱",
   msg: "備註訊息",
-  area: "居住地區",
   city: "居住縣市",
+  area: "居住地區",
   policyChecked: "個資告知事項聲明",
   r_verify: "機器人驗證"
 }
@@ -475,6 +523,7 @@ const send = () => {
   const utmMedium = urlParams.get("utm_medium") || "null";
   const utmContent = urlParams.get("utm_content") || "null";
   const utmCampaign = urlParams.get("utm_campaign") || "null";
+  const pad = (n) => String(n).padStart(2, '0');
   const time = new Date();
   const year = time.getFullYear();
   const month = time.getMonth() + 1;
@@ -484,10 +533,17 @@ const send = () => {
   const sec = time.getSeconds();
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
 
+
   const presend = new FormData();
   let pass = true;
   let unfill = [];
   let idx = 0;
+
+  //有性別的話 性別顯示
+  if (formData.gender) {
+    formData.name = `${formData.name}(${formData.gender})`;
+  }
+
 
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
@@ -498,9 +554,6 @@ const send = () => {
     if (key !== "r_verify" && key !== "policyChecked") {
       presend.append(key, value)
     }
-  }
-  if (formData.msg.trim() === "") {
-    formData.msg = "無留言";
   }
 
   presend.append("utm_source", utmSource);
@@ -526,8 +579,11 @@ const send = () => {
   // 如果通过验证
   if (pass && !sending.value) {
     sending.value = true;
+    submitted.value = true;
+    /*
+    */
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
@@ -566,5 +622,4 @@ const send = () => {
       });
   }
 };
-
 </script>

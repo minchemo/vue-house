@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s12/map.jpg" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s2/map.svg" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -16,11 +16,12 @@
     height: 100%;
     background: #eee;
 
-    >img {
+    > img {
         height: 100%;
         max-width: unset;
-        /*    background: url("@/section/s12/map.jpg") 50%;
-        background-size: 100% auto; */
+        background:url("@/section/s2/map.webp") 50%;
+        background-size: 100% auto;
+        width: 100%;
     }
 
 }
@@ -33,6 +34,10 @@
         img {
             height: 100%;
         }
+    > img {
+        width: auto
+    }
+
 
         .mask {
             position: absolute;
@@ -47,7 +52,7 @@
             pointer-events: none;
             opacity: 1;
             transition: all 1s;
-            background-color: rgba($color: #001D05, $alpha: 0.5);
+            background-color: rgba($color: #00398A, $alpha: 0.5);
 
             img {
                 height: 47px;
@@ -67,32 +72,32 @@ import { onMounted, ref, computed, getCurrentInstance } from 'vue';
 const viewbox = ref();
 const viewImg = ref();
 const swiped = ref(false);
-const offsetRatio = 2;
+const offsetRatio = 6.5; 
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
 
 onMounted(() => {
-    viewImg.value.addEventListener('load', () => {
-        if (isMobile.value) {
-            let scroll = new BScroll(viewbox.value, {
-                probeType: 2,
-                scrollX: true,
-                scrollY: true,
-                disableTouch: false,
-                disableMouse: false,
-                bindToWrapper: true,
-                eventPassthrough: "vertical",
-                bounce: false,
-            });
+  viewImg.value.addEventListener('load', () => {
+    if (isMobile.value) {
+      let scroll = new BScroll(viewbox.value, {
+        probeType: 2,
+        scrollX: true,
+        scrollY: true,
+        disableTouch: false,
+        disableMouse: false,
+        bindToWrapper: true,
+        eventPassthrough: "vertical",
+        bounce: false,
+      });
 
-            scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
-            setTimeout(() => {
-                scroll.on("scroll", () => {
-                    swiped.value = true;
-                });
-            }, 1000);
-        }
-    });
+      scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
+      setTimeout(() => {
+        scroll.on("scroll", () => {
+          swiped.value = true;
+        });
+      }, 1000);
+    }
+  });
 });
 </script>
