@@ -70,7 +70,7 @@
     position: relative;
     letter-spacing: 0.06em;
     z-index: 3;
-    color: #000;
+    color: #0008;
     text-align: center;
     line-height: 1.35;
     > span{display: block;
@@ -93,12 +93,14 @@
   .c {
     position: absolute;
     bottom: 0.5em;
-    right: 0.5em;
+    left: 0.5em;
     letter-spacing: 0em;
     font-size: sizem(10);
+    text-shadow: 1px 1px 3px #000;opacity: .6;
 
     @media screen and (min-width: 768px) {
       font-size: size(13);
+    bottom: 20.5em;
     }
   }
 
