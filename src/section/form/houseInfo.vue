@@ -7,7 +7,8 @@
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos">
-                            <p class="mr-5 border-l-2 border-[#fa9612] pl-2 text-[#fa9612] font-[700]" v-html="item[0]"></p>
+                            <p class="mr-5 border-l-2 border-[#fa9612] pl-2 text-[#fa9612] font-[700]" v-html="item[0]">
+                            </p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal"
                                 v-html="item[1]">
                             </p>
@@ -19,7 +20,7 @@
     </div>
     <!-- 
     <div class="bg-[#ceaa6d]  py-5 flex items-center justify-center">
-            <p class="db"><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
+            <p class="db"><img src="@/section/form/dblogo.png" alt="得邦廣告" srcset=""></p>
     </div> -->
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
@@ -40,14 +41,22 @@
 //     background-position: center;
 //     background-repeat: no-repeat;
 // }
-.displaynone{display: none;}
+.displaynone {
+    display: none;
+}
+
 .house {
-   // height: auto;
+    // height: auto;
     font-size: size(22);
     background: #FFF;
-   // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
+
+    // height:4em;
+    img {
+        height: 1.3em;
+        vertical-align: middle;
+    }
 }
+
 .info-box {
     width: size(800);
 
@@ -75,12 +84,14 @@
         }
     }
 }
+
 @media screen and (max-width:768px) {
-.house {
-    // background:#fff;
-  //  height: sizem(400);
-    font-size: sizem(14);
-}
+    .house {
+        // background:#fff;
+        //  height: sizem(400);
+        font-size: sizem(14);
+    }
+
     .footer {
         margin-bottom: sizem(0);
         //margin-bottom: sizem(63);

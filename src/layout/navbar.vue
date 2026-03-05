@@ -34,7 +34,7 @@
     /*   .logo {
         width: size(145);
         height: size(50);
-        background-image: url('@/section/s1/logo.svg');
+        background-image: url('@/section/s1/logo.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
