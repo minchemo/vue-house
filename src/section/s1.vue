@@ -186,9 +186,9 @@
     position: absolute;
     height: size(50);
     left: 0px;
-    bottom: 200px;
-    /* right: size(-100);
-    top: calc(50% + #{size(970 - 1140 * .5)}); */
+    bottom: 300px;
+    right: size(-100);
+    /*top: calc(50% + #{size(970 - 1140 * .5)}); */
 
     img {
       width: 100%;
