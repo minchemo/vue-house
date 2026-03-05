@@ -37,7 +37,7 @@
   color: #FFF;
   line-height: 1.3;
   font-weight: 700;
-  background: url("./s1/bg.webp");
+  background: url("./s1/bg.png");
   background-size: cover;
 
   .t0 {
