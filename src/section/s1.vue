@@ -16,7 +16,7 @@
     <div class="img">
       <img src="./s1/mark.png" alt="">
       <img src="./s1/img.png" alt="">
-      <img src="./s1/mark.png" alt="">
+      <img src="" alt="">
     </div>
 
 
@@ -77,7 +77,7 @@
     img {
       position: relative;
       top: 23vw;
-      left: 33vw;
+      left: 29vw;
 
       &:first-child {
         position: absolute;
@@ -85,7 +85,7 @@
         width: 100;
         //left: -5%;
         top: 22vw;
-        left: 35vw;
+        left: 29vw;
       }
 
       &:last-child {
