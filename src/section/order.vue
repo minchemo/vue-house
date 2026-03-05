@@ -407,120 +407,116 @@ const onRecaptchaUnVerify = () => {
 }*/
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source") || "null"; // 确保有有效的来源
+
+  const utmSource = urlParams.get("utm_source") || "null";
   const utmMedium = urlParams.get("utm_medium") || "null";
   const utmContent = urlParams.get("utm_content") || "null";
   const utmCampaign = urlParams.get("utm_campaign") || "null";
-  const pad = (n) => String(n).padStart(2, '0');
-  const time = new Date();
-  const year = time.getFullYear();
-  const month = time.getMonth() + 1;
-  const day = time.getDate();
-  const hour = time.getHours();
-  const min = time.getMinutes();
-  const sec = time.getSeconds();
-  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
-  
 
-  const presend = {};
+  const time = new Date();
+  const date = `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
+
   let pass = true;
   let unfill = [];
-  let idx = 0;
 
-//有性別的話 性別顯示
-if (formData.gender) {
-  const genderTag = `(${formData.gender})`;
-  if (!formData.name.endsWith(genderTag)) {
-    formData.name += genderTag;
+  // 性別加入姓名
+  if (formData.gender) {
+    const genderTag = `(${formData.gender})`;
+    if (!formData.name.endsWith(genderTag)) {
+      formData.name += genderTag;
+    }
   }
-}
-/*
-if (formData.msg.trim() === "") {
-  formData.msg = "無留言";
-}
-  */
 
-  // 验证必填字段
+  // 必填驗證
   for (const [key, value] of Object.entries(formData)) {
-  if (!bypass.includes(key) && (value === "" || value === false)) {
-    unfill.push(formDataRef[key] || key)
-    pass = false
+    if (!bypass.includes(key) && (value === "" || value === false)) {
+      unfill.push(formDataRef[key] || key);
+      pass = false;
+    }
   }
-  /*
-  if (key !== "r_verify" && key !== "policyChecked") {
-    presend[key] = value
-  }*/
-}
-  
-presend.utm_source = utmSource;
-presend.utm_medium = utmMedium;
-presend.utm_content = utmContent;
-presend.utm_campaign = utmCampaign;
-presend.message = formData.msg;
-presend.case_code = info.case_code ? info.case_code : info.caseid;
-presend.caseId = info.caseid;
-delete presend.r_verify
 
-  // 如果有必填字段为空，返回
   if (!pass) {
     toast.error(`「${unfill.join(", ")}」為必填或必選`);
     return;
   }
 
-  // 手机格式验证
+  // 手機驗證
   const MobileReg = /^(09)[0-9]{8}$/;
   if (!formData.phone.match(MobileReg)) {
-    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
+    toast.error("手機格式錯誤 (09開頭10位數字)");
     return;
   }
 
-  // 如果通过验证
-  if (pass && !sending.value) {
+  if (sending.value) return;
+
   sending.value = true;
   submitted.value = true;
-    /*
-    */
-    fetch(
-      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
-      &phone=${formData.phone}
-      &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.msg}
-      &utm_source=${utmSource}
-      &utm_medium=${utmMedium}
-      &utm_content=${utmContent}
-      &utm_campaign=${utmCampaign}
-      &date=${date}
-      &campaign_name=${info.caseName}`,
-      {
-        method: "GET"
-      }
-    );
-   //caseid 在index.js裡設定
-    fetch("https://mail-service-735828106799.asia-east1.run.app/submit", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(presend),
-})
-      .then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        } else {
-          return response.json().then(err => {
-            console.error("後端錯誤訊息：", err);
-            toast.error(err.message || "提交失敗");
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("傳送失敗：", error);
-        toast.error("無法連線或伺服器錯誤");
-      })
-      .finally(() => {
-        sending.value = false;
-      });
+
+  // ===== 建立 API 結構 =====
+  const presend = {
+    caseId: info.caseid,
+    form: {}
+  };
+
+  // 塞入所有表單資料
+  for (const [key, value] of Object.entries(formData)) {
+    if (key !== "policyChecked" && key !== "r_verify") {
+      presend.form[key] = value;
+    }
   }
+
+  // msg 改成 note
+  presend.form.note = formData.msg;
+  delete presend.form.msg;
+
+  // UTM
+  presend.form.utm_source = utmSource;
+  presend.form.utm_medium = utmMedium;
+  presend.form.utm_content = utmContent;
+  presend.form.utm_campaign = utmCampaign;
+
+  // ===== Google Sheet 備份 =====
+  fetch(
+    `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
+    &phone=${formData.phone}
+    &email=${formData.email}
+    &cityarea=${formData.city}${formData.area}
+    &msg=${formData.room_type || ""}；${formData.msg}
+    &utm_source=${utmSource}
+    &utm_medium=${utmMedium}
+    &utm_content=${utmContent}
+    &utm_campaign=${utmCampaign}
+    &date=${date}
+    &campaign_name=${info.caseName}`,
+    {
+      method: "GET"
+    }
+  );
+
+  // ===== API =====
+  fetch("https://mail-service-735828106799.asia-east1.run.app/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(presend)
+  })
+    .then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      } else {
+        return response.json().then((err) => {
+          console.error("後端錯誤訊息：", err);
+          toast.error(err.message || "提交失敗");
+        });
+      }
+    })
+    .catch((error) => {
+      console.error("傳送失敗：", error);
+      toast.error("無法連線或伺服器錯誤");
+    })
+    .finally(() => {
+      sending.value = false;
+    });
 };
 </script>
