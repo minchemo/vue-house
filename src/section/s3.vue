@@ -5,7 +5,25 @@
       定義未來，就從回歸初心開始</div>
     <div class="c">空拍示意圖 實際環境依現況為主
     </div>
-
+<svg class="water" viewBox="0 5 1920 460">
+  <defs>
+    <filter id="water">
+      <feTurbulence type="turbulence" baseFrequency="0.02"
+        numOctaves="3" result="turb">
+        <animate attributeName="baseFrequency"
+          values="0.018; 0.020; 0.018"
+          dur="20s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="turb"
+        scale="12" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+        <image href="./s3/bg2w.jpg"
+    width="100%" height="100%"
+    filter="url(#water)"/>
+        
+      </svg>
+  <img src="./s3/bg2.png" class="water">
   </article>
 </template>
 
@@ -39,7 +57,7 @@
     background-image: url("./s3/bg.jpg");
     background-size: cover;
     background-position: 50% 100%;
-    height: size(1345);
+    height: size(1335);
     font-size: size(34);
     justify-content: flex-start;
     margin-bottom: size(-250);
@@ -96,13 +114,14 @@
     left: 0.5em;
     letter-spacing: 0em;
     font-size: sizem(10);
-    text-shadow: 1px 1px 3px #000;opacity: .6;
+    text-shadow: 1px 1px 3px #000;opacity: .6;z-index: 5;
 
     @media screen and (min-width: 768px) {
       font-size: size(13);
     bottom: 20.5em;
     }
   }
+  .water{bottom:0;position: absolute;width: 100%;left: 0;opacity: 1;}
 
 }
 </style>
