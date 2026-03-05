@@ -2,7 +2,7 @@
   <article class="s3" ref="s3">
     <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃" v-if="!isMobile">
     <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃">
-	<img src="./s1/oo.svg" alt="oo" class="oo1">
+	<img src="./s1/oo.png" alt="oo" class="oo1">
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">便捷三重奏 <br v-if="isMobile"> 一橋北市二捷三線</h3>

@@ -10,11 +10,11 @@
     <div class="txt">
       <img src="./s1/bg3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="eggbg" alt="蛋黃">
       <img src="./s1/logo.png" alt="logo" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" class="logo">
-      <img src="./s1/txt.svg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" alt="txt" class="txt1">
+      <img src="./s1/txt.png" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" alt="txt" class="txt1">
     </div>
     <!-- <div class="img"><img src="./s1/b.webp" alt="多會微笑!"><img src="./s1/img.webp" alt="李多慧"><img src="./s1/mark.svg" alt="李多慧"></div> -->
-    <img src="./s1/oo.svg" alt="oo" class="oo1">
-    <div class="oo2"><img src="./s1/oo.svg" alt="oo"></div>
+    <img src="./s1/oo.png" alt="oo" class="oo1">
+    <div class="oo2"><img src="./s1/oo.png" alt="oo"></div>
 
   </article>
 </template>

@@ -2,7 +2,7 @@
   <div id="order" class="order relative text-center">
     <img src="./s1/bg2.webp" class="eggbg3" alt="蛋黃">
     <img src="./s1/bg3.png" class="eggbg4" alt="蛋黃">
-    <img src="./s1/oo.svg" alt="oo" class="oo3">
+    <img src="./s1/oo.png" alt="oo" class="oo3">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>

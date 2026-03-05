@@ -1,7 +1,7 @@
 <template>
   <article class="s5">
     <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
-    <img src="./s1/oo.svg" alt="oo" class="oo1">
+    <img src="./s1/oo.png" alt="oo" class="oo1">
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">新購屋經濟學 <br v-if="isMobile"> 房貸瘦身術</h3>

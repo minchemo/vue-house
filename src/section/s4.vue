@@ -2,7 +2,7 @@
   <article class="s4" ref="s4">
     <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
     <img src="./s1/bg3.png" class="eggbg2" alt="蛋黃" v-if="!isMobile">
-    <img src="./s1/oo.svg" alt="oo" class="oo1" v-if="!isMobile">
+    <img src="./s1/oo.png" alt="oo" class="oo1" v-if="!isMobile">
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">北士科半價  最甜補漲區</h3>
