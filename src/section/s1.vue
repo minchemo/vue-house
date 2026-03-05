@@ -16,7 +16,7 @@
     <div class="img">
       <img src="./s1/mark.png" alt="">
       <img src="./s1/img.png" alt="">
-      <img src="" alt="">
+      <img src="./s1/mark.png" alt="">
     </div>
 
 
