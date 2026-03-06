@@ -1,14 +1,10 @@
 <template>
   <article class="s4" ref="s4">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃">
-    <img src="./s1/bg3.png" class="eggbg2" alt="蛋黃" v-if="!isMobile">
-    <img src="./s1/oo.png" alt="oo" class="oo1" v-if="!isMobile">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">北士科半價  最甜補漲區</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">好地段×大品牌  增值成雙</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          坐擁5分鐘直達士林燙金地段，北士科半價輕鬆挺進新士林生活圈，加上麗寶集團大品牌效益、未來捷運網路、銀新未來城等利多加持，享受未來紅利增值爆發期。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">義大健康園區 全新醫療聚落</h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">未來集醫療、娛樂、百貨於一身的生活聚落,不僅提供完善醫療資源,
+          也承載未來的退休照護,結合百貨商城,所帶來的不只有便利, 更是源源不絕的人口紅利與錢潮動能,讓世代安居之際, 同步擁抱店舖的無限潛力。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -41,35 +37,18 @@
   gap: 3em;
   flex-wrap: wrap;
   flex-direction: row-reverse;
+  background: url("./s1/bg.png");
+  background-size: cover;
 
-  .eggbg1 {
-    position: absolute;
-    display: block;
-    top: size(-50);
-    left: size(-30);
-    width: size(500);
-    transform: translateY(-10%);
-    animation: an 2s ease-in-out infinite alternate-reverse;
+  h3.title {
+    color: #BE771A;
   }
 
-  .eggbg2 {
-    position: absolute;
-    display: block;
-    top: size(870);
-    right: size(-30);
-    width: size(350);
-    transform: translateY(-50%);
-    animation: an 4s ease-in-out infinite alternate;
+  p.desc {
+    color: #5B5959;
   }
 
-  .oo1 {
-    position: absolute;
-    top: size(350);
-    height: size(50);
-    right: size(60);
-    transform: translateX(20%);
-    animation: an 3s ease-in-out infinite alternate;
-  }
+
 
 
   .img {
@@ -218,16 +197,16 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s4/1.webp", import.meta.url).href,
-    caption: "士林生活圈實景"
+    img: new URL("./s4/301.png", import.meta.url).href,
+    caption: "情境示意圖"
   },
   {
-    img: new URL("./s4/2.webp", import.meta.url).href,
-    caption: "士林商圈實景"
+    img: new URL("./s4/302.png", import.meta.url).href,
+    caption: "外觀3D數位影像合成示意圖、情境示意圖"
   },
   {
-    img: new URL("./s4/3.webp", import.meta.url).href,
-    caption: "士林科教館實景"
+    img: new URL("./s4/303.png", import.meta.url).href,
+    caption: "情境示意圖"
   },
 ]
 </script>

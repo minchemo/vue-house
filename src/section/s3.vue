@@ -2,9 +2,14 @@
   <article class="s3" ref="s3">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">便捷三重奏 <br v-if="isMobile"> 一橋北市二捷三線</h3>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">
+          樓下展開事業藍圖
+           <br v-if="isMobile" />
+          <br />
+          樓上享受家的溫度
+        </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          一橋(重陽橋)迅抵台北大士林生活圈，捷運北環段Y22/Y23站(預計2031年完工)隨侍左右，輕鬆串接精華三線：新蘆線、信義線、文湖線，交通動能多元完善，坐車開車都是PLAN A。</p>
+          不論是品牌旗艦、美學沙龍、醫美診所、美食餐館…等, 「春陽沄集」給您一個具備地段、人潮、產權、 潛力的「全能金店」,實現您心目中的事業藍圖。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -38,8 +43,9 @@
   background: url("./s3/bg.png") 0% 0%;
   background-size: cover;
 
-  h3 {
+  h3.title {
     color: #BE771A;
+    font-style: 'Noto Serif TC';
   }
 
   p.desc {
@@ -227,15 +233,11 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s3/301.png", import.meta.url).href,
+    img: new URL("./s3/s41.png", import.meta.url).href,
     caption: "情境示意圖"
   },
   {
-    img: new URL("./s3/302.png", import.meta.url).href,
-    caption: "外觀3D數位影像合成示意圖、情境示意圖"
-  },
-  {
-    img: new URL("./s3/303.png", import.meta.url).href,
+    img: new URL("./s3/s42.png", import.meta.url).href,
     caption: "情境示意圖"
   },
 ]

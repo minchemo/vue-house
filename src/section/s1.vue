@@ -45,6 +45,7 @@
   color: #FFF;
   line-height: 1.3;
   font-weight: 700;
+
   background: url("./s1/bg.png");
   background-size: cover;
 
@@ -79,13 +80,18 @@
       top: 23vw;
       left: 29vw;
 
+      width: 300%;
+      top: 23vw;
+      left: 26vw;
+
       &:first-child {
         position: absolute;
-        //top: 19.5%;
-        width: 100;
-        //left: -5%;
-        top: 22vw;
-        left: 29vw;
+        //top: 19.5%; 
+        //left: -5%; 
+
+        width: 300%;
+        top: 23vw;
+        left: 26vw;
       }
 
       &:last-child {
@@ -96,12 +102,9 @@
       }
 
       &:nth-child(2) {
-        height: 100%;
-        transform: rotate(1deg);
-        transform-origin: 30% 90%;
-        animation: an 3s ease-in-out infinite alternate-reverse;
+        width: 430%;
         top: 23vw;
-        left: -30vw;
+        left: -38vw;
       }
     }
 
@@ -186,7 +189,7 @@
     position: absolute;
     height: size(50);
     left: 0px;
-    bottom: 300px;
+    bottom: 985px;
     right: size(-100);
     /*top: calc(50% + #{size(970 - 1140 * .5)}); */
 
@@ -217,13 +220,13 @@
       top: calc(35% + #{sizem(135 - 604 * .35)});
       left: sizem(232);
       min-height: sizem(430);
-      height: 60%;
+      //height: 60%;
 
       img {
         &:first-child {
-          top: -15%;
-          width: 79%;
-          left: -28%;
+          width: 66%;
+          top: 22vw;
+          left: 29vw;
         }
 
         &:last-child {
