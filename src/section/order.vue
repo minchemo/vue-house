@@ -1,8 +1,5 @@
 <template>
   <div id="order" class="order relative text-center">
-    <img src="./s1/bg2.webp" class="eggbg3" alt="蛋黃">
-    <img src="./s1/bg3.png" class="eggbg4" alt="蛋黃">
-    <img src="./s1/oo.png" alt="oo" class="oo3">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
@@ -63,7 +60,7 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-personal-info">
           本人知悉並同意<label for="policy-modal"
             class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
@@ -114,41 +111,13 @@
 @import "@/assets/style/function.scss";
 
 
-.eggbg3 {
-  position: absolute;
-  display: block;
-  top: size(-150);
-  right: size(100);
-  width: size(700);
-  transform: translateY(-10%);
-  animation: an 2s ease-in-out infinite alternate-reverse;
-}
-
-.eggbg4 {
-  position: absolute;
-  display: block;
-  top: size(400);
-  left: size(230);
-  width: size(160);
-  transform: translateY(-50%);
-  animation: an 4s ease-in-out infinite alternate;
-}
-
-.oo3 {
-  position: absolute;
-  top: size(120);
-  height: size(50);
-  right: size(60);
-  transform: translateX(20%);
-  animation: an 3s ease-in-out infinite alternate;
-}
-
 .order-section {
   position: relative;
   // padding-top: size(406);
   overflow: hidden;
   min-height: size(500);
   background: transparent;
+
 
   .bg-image {
     position: absolute;
@@ -164,6 +133,10 @@
   position: relative;
   width: 100%;
   padding-top: 0;
+
+  background: url("./s1/bg.png");
+  background-size: cover;
+
 
 
   .bird {
@@ -185,10 +158,19 @@
     }
   }
 
+
+  p.desc {
+    color: #5B5959;
+  }
+
+  .slider .splide__pagination li button {
+    background: #999999;
+  }
+
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #fff;
+    color: #BE771A !important;
     padding-top: 2em;
   }
 
@@ -199,7 +181,7 @@
 
   .order-subTitle {
     font-size: size(17);
-    color: #fff;
+    color: #5B5959 !important;
     padding-top: .8em;
     letter-spacing: 0em;
     font-weight: 500;
@@ -211,6 +193,10 @@
     height: size(2);
     margin-bottom: size(50);
     background-color: #055F76;
+  }
+
+  .text-personal-info {
+    color: #5B5959;
   }
 
   .form {
@@ -313,24 +299,6 @@
 }
 
 @media screen and (max-width:768px) {
-  .eggbg3 {
-    top: sizem(-10);
-    right: sizem(-100);
-    width: sizem(300);
-  }
-
-  .eggbg4 {
-    top: sizem(400);
-    left: sizem(0);
-    width: sizem(50);
-  }
-
-  .oo3 {
-    top: sizem(10);
-    height: sizem(20);
-    left: auto;
-    right: sizem(30);
-  }
 
 
   .order-section {

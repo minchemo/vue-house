@@ -1,12 +1,8 @@
 <template>
   <article class="s6" ref="s6">
-    <img src="./s1/bg2.webp" class="eggbg1" alt="蛋黃" v-if="isMobile">
-    <img src="./s1/bg3.webp" class="eggbg2" alt="蛋黃">
-    <img src="./s1/oo.png" alt="oo" class="oo1" v-if="!isMobile">
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">兩代完美共融 <br v-if="isMobile"> 獨立空間不打擾</h3>
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">陪伴×孝親  盡孝成雙</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
           除了自住同步收租，也可規劃一間自住一間孝親，兩代同堂不同室，獨立門戶享充足隱私，近鄰雙公園、家樂福，方便隨時出門散步、購物共聚天倫，家人之間的親情不再因居住距離而降溫。</p>
       </div>
@@ -40,26 +36,18 @@
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
+  background: url("./s1/bg.png");
+  background-size: cover;
 
-  .eggbg2 {
-    position: absolute;
-    display: block;
-    top: size(60);
-    right: size(260);
-    width: size(500);
-    transform: translateY(-20%);
-    animation: an 4s ease-in-out infinite alternate;
+
+  h3.title {
+    color: #BE771A;
   }
 
-  .oo1 {
-    position: absolute;
-    bottom: size(-50);
-    height: size(50);
-    left: size(1000);
-    transform: translateX(20%);
-    z-index: 2;
-    animation: an 3s ease-in-out infinite alternate;
+  P.desc {
+    color: #5B5959;
   }
+
 
   .img {
     position: absolute;
@@ -111,6 +99,11 @@
     .splide__pagination {
       right: calc(100% + 3em);
       justify-content: flex-end;
+
+      li button {
+        background: #999999;
+
+      }
     }
   }
 }
@@ -129,17 +122,7 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    background: linear-gradient(135deg, #71A3A5 0%, #E0C663 30%, #E1A843 50%);
 
-    .eggbg1 {
-      position: absolute;
-      display: block;
-      top: sizem(50);
-      left: sizem(-100);
-      width: sizem(500);
-      transform: translateY(-10%);
-      animation: an 2s ease-in-out infinite alternate-reverse;
-    }
 
     .img {
       position: absolute;
@@ -164,6 +147,10 @@
       height: auto;
       width: 100%;
 
+      .splide__pagination li button {
+        background: #999999 !important;
+      }
+
       .caption {
         font-size: sizem(12);
         right: sizem(5);
@@ -177,6 +164,7 @@
         height: sizem(250);
 
       }
+
     }
   }
 }

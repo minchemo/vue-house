@@ -48,9 +48,6 @@
     color: #5B5959;
   }
 
-
-
-
   .img {
     position: absolute;
     bottom: size(-30);
@@ -101,6 +98,11 @@
     .splide__pagination {
       left: calc(100% + 3em);
       justify-content: flex-start;
+
+      li button {
+        background: #999999;
+
+      }
     }
   }
 }
@@ -121,10 +123,8 @@
     margin-bottom: 0em;
     gap: 0em;
 
-    .eggbg1 {
-      top: sizem(-40);
-      left: sizem(-50);
-      width: sizem(400);
+    .slider .splide__pagination li button {
+      background: #999999;
     }
 
     .img {

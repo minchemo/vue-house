@@ -52,6 +52,12 @@
     color: #5B5959;
   }
 
+  .slider .splide__pagination li button {
+    background: #999999;
+
+  }
+
+
   .eggbg1 {
     position: absolute;
     display: block;

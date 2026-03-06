@@ -48,24 +48,7 @@
     color: #5B5959;
   }
 
-  .eggbg1 {
-    position: absolute;
-    display: block;
-    top: size(600);
-    left: size(-50);
-    width: size(1000);
-    transform: translateY(-10%);
-    animation: an 2s ease-in-out infinite alternate-reverse;
-  }
 
-  .oo1 {
-    position: absolute;
-    bottom: size(0);
-    height: size(50);
-    left: size(60);
-    transform: translateX(20%);
-    animation: an 3s ease-in-out infinite alternate;
-  }
 
   .main {
     @apply flex;
@@ -97,6 +80,11 @@
     .splide__pagination {
       justify-content: flex-end;
       bottom: -2em;
+
+      li button {
+        background: #999999;
+
+      }
     }
   }
 }

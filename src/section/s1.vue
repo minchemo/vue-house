@@ -89,8 +89,8 @@
         //top: 19.5%; 
         //left: -5%; 
 
-        width: 300%;
-        top: 23vw;
+        width: 100%;
+        top: 21vw;
         left: 26vw;
       }
 
@@ -102,9 +102,9 @@
       }
 
       &:nth-child(2) {
-        width: 430%;
+        width: 130%;
         top: 23vw;
-        left: -38vw;
+        left: -25vw;
       }
     }
 
@@ -189,7 +189,7 @@
     position: absolute;
     height: size(50);
     left: 0px;
-    bottom: 985px;
+    bottom: 247px;
     right: size(-100);
     /*top: calc(50% + #{size(970 - 1140 * .5)}); */
 

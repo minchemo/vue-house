@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="contact-info-img">
-      <img src="@/section/s1/bg3.png" class="eggbg" alt="蛋黃">
+      <img src="@/section/form/order-bg.png" class="" alt="">
     </div>
     <div class="contact-info mx-auto  flex flex-col items-center justify-between">
       <div class="logo"></div>
@@ -99,7 +99,7 @@
               modalType == 'line' ? '' :
                 modalType == 'gmap' ? `${info.address}` :
                   ''
-        }}</div>
+      }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
         v-if="modalType != 'phone'" v-bind:class="{
@@ -153,7 +153,10 @@
   @apply relative;
   height: 0;
   z-index: 2;
-  top: -1.5vw;
+
+  width: 158%;
+  top: 16.5vw;
+  left: -29vw;
 
   img {
     width: 64%;
