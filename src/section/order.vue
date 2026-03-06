@@ -318,7 +318,6 @@ $o-title-c:#A30C24; //.order-title
   }
 }
 </style>
-
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
@@ -328,13 +327,13 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import { computed, getCurrentInstance, ref, reactive, watch } from "vue"
+
+// ✅ 保留 VueRecaptcha
 import { VueRecaptcha } from "vue-recaptcha"
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
-
-// const selectFields = info.selectFields
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
@@ -342,9 +341,10 @@ const toast = useToast()
 const sending = ref(false)
 const submitted = ref(false)
 
-// 後端那 name phone email msg 為必要欄位 請勿刪除
+// ✅ v2 SITE_KEY
+const RECAPTCHA_SITE_KEY = "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz"
+
 const requiredFields = {
-  // 固定必要欄位 (請勿刪)
   name: "姓名",
   phone: "手機",
   email: "信箱",
@@ -355,10 +355,8 @@ const requiredFields = {
   r_verify: "機器人驗證"
 }
 
-// selectFields
 const selectFields = info.selectFields || {}
 
-// 初始 formData（包含 selectFields 欄位）
 const formData = reactive({
   ...Object.keys(requiredFields).reduce((acc, key) => {
     acc[key] = key === "policyChecked" || key === "r_verify" ? false : ""
@@ -370,8 +368,7 @@ const formData = reactive({
   }, {})
 })
 
-// bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["email", "msg", "city", "area", "r_verify"]
+const staticBypass = ["email", "msg", "city", "area"]
 const bypass = [
   ...staticBypass,
   ...Object.entries(selectFields)
@@ -379,7 +376,6 @@ const bypass = [
     .map(([key]) => key)
 ]
 
-// 中文對照（formDataRef）
 const formDataRef = {
   ...requiredFields,
   ...Object.entries(selectFields).reduce((acc, [key, val]) => {
@@ -392,22 +388,25 @@ const areaList = ref([])
 
 watch(
   () => formData.city,
-  (newVal, oldVal) => {
+  (newVal) => {
     areaList.value = renderAreaList(newVal)
     formData.area = areaList.value[0].value
   }
 )
-// 新系統這裡需調整
-/*
+
+// ✅ v2 勾選成功 → 儲存 token
 const onRecaptchaVerify = (token) => {
-  formData.r_verify = token;
+  formData.r_verify = token
 }
-const onRecaptchaUnVerify = () => {
+
+// ✅ v2 過期 → 清除 token，要求重新勾選
+const onRecaptchaExpired = () => {
   formData.r_verify = false
-}*/
+  toast.warning("機器人驗證已過期，請重新勾選")
+}
+
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
-
   const utmSource = urlParams.get("utm_source") || "null";
   const utmMedium = urlParams.get("utm_medium") || "null";
   const utmContent = urlParams.get("utm_content") || "null";
@@ -419,7 +418,6 @@ const send = () => {
   let pass = true;
   let unfill = [];
 
-  // 性別加入姓名
   if (formData.gender) {
     const genderTag = `(${formData.gender})`;
     if (!formData.name.endsWith(genderTag)) {
@@ -427,7 +425,7 @@ const send = () => {
     }
   }
 
-  // 必填驗證
+  // ✅ r_verify 照常參與前端必填驗證（使用者必須先勾選）
   for (const [key, value] of Object.entries(formData)) {
     if (!bypass.includes(key) && (value === "" || value === false)) {
       unfill.push(formDataRef[key] || key);
@@ -440,7 +438,6 @@ const send = () => {
     return;
   }
 
-  // 手機驗證
   const MobileReg = /^(09)[0-9]{8}$/;
   if (!formData.phone.match(MobileReg)) {
     toast.error("手機格式錯誤 (09開頭10位數字)");
@@ -455,21 +452,23 @@ const send = () => {
   // ===== 建立 API 結構 =====
   const presend = {
     caseId: info.caseid,
-    form: {}
+    form: {},
+    // ✅ 加入 validation，token 來自 v2 勾選後的回傳值
+    validation: {
+      siteKey: RECAPTCHA_SITE_KEY,
+      recaptchaToken: formData.r_verify
+    }
   };
 
-  // 塞入所有表單資料
   for (const [key, value] of Object.entries(formData)) {
     if (key !== "policyChecked" && key !== "r_verify") {
       presend.form[key] = value;
     }
   }
 
-  // msg 改成 note
   presend.form.note = formData.msg;
   delete presend.form.msg;
 
-  // UTM
   presend.form.utm_source = utmSource;
   presend.form.utm_medium = utmMedium;
   presend.form.utm_content = utmContent;
@@ -488,17 +487,13 @@ const send = () => {
     &utm_campaign=${utmCampaign}
     &date=${date}
     &campaign_name=${info.caseName}`,
-    {
-      method: "GET"
-    }
+    { method: "GET" }
   );
 
   // ===== API =====
   fetch("https://mail-service-735828106799.asia-east1.run.app/submit", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(presend)
   })
     .then((response) => {

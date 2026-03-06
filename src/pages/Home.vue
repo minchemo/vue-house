@@ -9,7 +9,7 @@
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-  <div class="home overflow-hidden font-[com4f,'Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
   <!--
     <S1 />
     <S1new />
