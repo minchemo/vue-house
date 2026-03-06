@@ -5,13 +5,13 @@ export default {
     case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    // address: "000",
+    address: "XXXXX",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7359.266492949288!2d120.3097038172106!3d22.74186923554725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ0JzMwLjciTiAxMjDCsDE4JzUzLjUiRQ!5e0!3m2!1szh-TW!2stw!4v1725006447269!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
-    //phone: "0000",
+    phone: "0000",
     fbLink: "https://www.facebook.com/",
     fbMessage: "https://m.me/",
-   // line: "https://lin.ee/fpSDucI",
+    line: "https://lin.ee/fpSDucI",
     caseName: caseName,
     houseInfos: [
         ["空間設計", "相即空間設計"],

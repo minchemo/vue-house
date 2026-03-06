@@ -54,7 +54,6 @@
       <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-     
     <div class="flex flex-col contact-item justify-center items-center" @click="open(info.fbLink)">
       <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
