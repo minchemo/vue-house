@@ -15,11 +15,11 @@
 
     .caption {
         position: absolute;
-        color: #fff;
         font-size: size(14);
         right: size(45);
         bottom: size(25);
-        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8))
+        color: #fff;
+        filter: drop-shadow(4px 3px 4px rgba(0, 0, 0, 0.8))
     }
 }
 
@@ -86,7 +86,7 @@ const options = {
     autoplay: true,
     interval: 4000,
     gap: 5,
-    type:'loop'
+    type: 'loop'
 }
 
 const width = ref(0);
