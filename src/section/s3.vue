@@ -43,6 +43,10 @@
   background: url("./s3/bg.png") 0% 0%;
   background-size: cover;
 
+  .slider .slide-item img {
+    border-radius: 0;
+  }
+
   h3.title {
     color: #BE771A;
     font-style: 'Noto Serif TC';
@@ -57,35 +61,6 @@
 
   }
 
-
-  .eggbg1 {
-    position: absolute;
-    display: block;
-    top: size(-250);
-    left: size(630);
-    width: size(700);
-    transform: translateY(-10%);
-    animation: an 2s ease-in-out infinite alternate-reverse;
-  }
-
-  .eggbg2 {
-    position: absolute;
-    display: block;
-    top: size(850);
-    right: size(400);
-    width: size(150);
-    transform: translateY(-50%);
-    animation: an 4s ease-in-out infinite alternate;
-  }
-
-  .oo1 {
-    position: absolute;
-    top: size(225);
-    height: size(50);
-    left: size(60);
-    transform: translateX(20%);
-    animation: an 3s ease-in-out infinite alternate;
-  }
 
   .img {
     position: absolute;

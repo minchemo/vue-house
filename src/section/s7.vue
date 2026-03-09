@@ -38,6 +38,10 @@
   background: url("./s1/bg.png");
   background-size: cover;
 
+  .slider .slide-item img {
+    border-radius: 0;
+  }
+
   h3.title {
     color: #BE771A;
   }
@@ -77,12 +81,12 @@
     .splide__pagination {
       justify-content: flex-end;
       bottom: -2em;
-      
+
     }
 
-        .splide__pagination li button {
-          background: #999999 !important;
-        }
+    .splide__pagination li button {
+      background: #999999 !important;
+    }
   }
 }
 

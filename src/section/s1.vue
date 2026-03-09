@@ -35,7 +35,7 @@
 .s1 {
   @apply relative w-full h-screen;
   min-height: size(950);
-  max-height: size(1140);
+  max-height: size(1080);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -84,6 +84,7 @@
       top: 23vw;
       left: 26vw;
 
+
       &:first-child {
         position: absolute;
         //top: 19.5%; 
@@ -121,8 +122,8 @@
     top: size(115.2);
     /* 
     top: calc(50% + #{size(157 - 1140 * .5)});
+    top: calc(50% + #{size(970 - 1140 * .5)}); 
         right: size(-100);
-        top: calc(50% + #{size(970 - 1140 * .5)}); 
         */
     text-align: center;
     width: size(726);
@@ -142,9 +143,9 @@
       display: block;
       margin: auto;
       z-index: 3;
-      width: 87%;
+      width: 80%;
 
-      top: 4.2vw;
+      top: 2.2vw;
       left: 14.5vw;
 
     }
@@ -154,9 +155,9 @@
       display: block;
       margin: 4% auto auto auto;
       z-index: 3;
-      width: 97%;
+      width: 80%;
       left: 37%;
-      top: 5.7vw;
+      top: 1.7vw;
     }
   }
 
@@ -187,11 +188,11 @@
 
   .hill {
     position: absolute;
-    height: size(50);
+    //height: size(50);
     left: 0px;
-    bottom: 247px;
-    right: size(-100);
-    /*top: calc(50% + #{size(970 - 1140 * .5)}); */
+    bottom: 0px;
+    //right: size(-100);
+    //bottom: calc(50% + #{size(0 - 1080 * .5)}); 
 
     img {
       width: 100%;
