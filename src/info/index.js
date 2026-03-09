@@ -1,4 +1,4 @@
-const caseName = "高大Σ計畫"
+const caseName = "000"
 
 export default {
     meta: {
@@ -25,7 +25,7 @@ export default {
         ["證照號碼", "(112)雲縣地字000229號"],
         ["經紀人", "廖哲志"], 
     ],
-    gtmCode: ["GTM-M8N6GNQ"], // 可放置多個
+    gtmCode: ["GTM-00000000"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
