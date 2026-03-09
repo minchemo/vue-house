@@ -314,10 +314,10 @@ const list1 = [
     link:"https://drive.google.com/file/d/1RnFC4r2we1D6lCndaRJpVssTAsKF1Tet/view?usp=sharing",
   }, 
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "115/02/12",
-    t3: "第二次專案小組審議",
-    link:"",
+    t3: "第二次專案小組審議(本都更案現於審議階段尚未核定，僅供閱覽參考，所附圖面僅為過往議題研議版本之一，現已非屬後續執行圖面。)",
+    link:"https://drive.google.com/file/d/1ewt773l_E8O_7YQtzmyP-V-S_o_mhTAi/view?usp=sharing",
   }, 
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
@@ -363,6 +363,13 @@ const list3 = [
     t3: "市府發補正函",
     link:"",
     link_t:"",
+  },
+  {
+    t1: ["v2", "進行中"],
+    t2: "115/03/22 ",
+    t3: "地方說明會(針對本案執行內容與進度說明)<br>時間: 115/3/22(日) 下午2時30分至4時(2:15進場報到)<br>地點: 永和區頂溪國小4樓視聽教室(新北市永和區文化路133號4樓)",
+    link:"",
+    link_t:"會議通知",
   },
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
