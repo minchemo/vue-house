@@ -10,12 +10,12 @@
 			<div class="t1" >蘆洲下一站 萬坪公園城</div>
 			<div class="t2" data-aos="fade-up" data-aos-delay="100">年度鉅獻 敬邀珍藏 夢想與理想一次到位</div>
 			<div class="t3" data-aos="fade-up" data-aos-delay="200">一期夢想實現，二期理想啟城</div>
-			<div class="t4" v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="200">「快樂王國」NO.1夢享城熱銷，信手拈來公園水岸捷運美好總和<br />
-				NO.2理享城以國際眼界的視角，於蘆洲捷運、五泰輕軌黃金雙軸<br />
+			<div class="t4" v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="200">夢享城熱銷，信手拈來公園水岸捷運美好總和<br />
+				理享城以國際眼界的視角，於蘆洲捷運、五泰輕軌黃金雙軸<br />
 				用萬坪公園造鎮的氣魄倚水為貴 ，共譜蘆洲下一站世紀建築傳奇<br />
 			</div>
 			<div class="t4" v-else data-aos="fade-up" data-aos-delay="300">
-				「快樂王國」NO.1夢享城熱銷，信手拈來公園水岸捷運美好總和，NO.2理享城以國際眼界的視角，於蘆洲捷運、五泰輕軌黃金雙軸，用萬坪公園造鎮的氣魄倚水為貴
+				夢享城熱銷，信手拈來公園水岸捷運美好總和，理享城以國際眼界的視角，於蘆洲捷運、五泰輕軌黃金雙軸，用萬坪公園造鎮的氣魄倚水為貴
 				，共譜蘆洲下一站世紀建築傳奇。
 			</div>
 		</div>
@@ -24,7 +24,7 @@
 				<div class="t1"> 洲子洋最大萬坪公園造鎮計畫</div>
 				<div class="t2">勇奪美法澳洲四大設計獎 榮耀國際建築頂尖工藝</div>
 				<div class="t3" v-if="$isMobile()">
-					「快樂王國」夢享城與理享城<br />
+					夢享城與理享城<br />
 					獲獎殊榮，捷報不斷，從建築到公設<br />
 					連續榮獲美國泰坦地產、法國NDA設計獎<br />
 					澳洲雪梨設計獎、美國MUSE設計獎四大殊榮肯定<br />
@@ -35,7 +35,7 @@
 				<img class="logos"   src="@/section/s3/logos.webp" alt="" srcset="">
 			</div>
 			<div class="divi" v-if="!$isMobile()"></div>
-			<div class="r" v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="0">「快樂王國」夢享城與理享城<br />
+			<div class="r" v-if="!$isMobile()" data-aos="fade-up" data-aos-delay="0">夢享城與理享城<br />
 				獲獎殊榮，捷報不斷，從建築到公設<br />
 				連續榮獲美國泰坦地產、法國NDA設計獎<br />
 				澳洲雪梨設計獎、美國MUSE設計獎四大殊榮肯定<br />

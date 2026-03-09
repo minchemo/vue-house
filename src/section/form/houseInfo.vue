@@ -8,7 +8,7 @@
                 <!--index.js的houseInfos-->
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                        v-for="item in info.houseInfos">
+                        v-for="item in info.houseInfos" :key="item">
                         <p class="mr-5 border-l-4 border-[#FF3EA1] pl-2 text-[#FF3EA1]" v-html="item[0]"></p>
                         <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal" v-html="item[1]">
                         </p>
@@ -20,7 +20,7 @@
                     
                 </div>
                 <div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-5 border-l-4 border-[#FF3EA1] pl-2 text-[#FF3EA1]" >接待會館</p>
-                    <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal">五股區成泰路三段516號</p>
+                    <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal">五股區成泰路三段540號</p>
                 </div>
                 <div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-5 border-l-4 border-[#FF3EA1] pl-2 text-[#FF3EA1]" >賞屋專線</p>
                     <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal">02-2295-3888</p></div></div>
