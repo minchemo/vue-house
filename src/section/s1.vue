@@ -4,20 +4,20 @@
     <!--<img src="./s1/pc.png" class="t0">-->
     <h2>
       <span style="display: none;">淇發寸白</span>
-      <img src="./s1/淇發建設.png" alt="淇發寸白">
+      <img src="./s1/slogo.png" alt="淇發建設">
     </h2>
     <h1 data-aos="fade-up" data-aos-delay="400">
       <span style="display: none;">淇發寸白</span>
-      <img src="./s1/淇發寸白.png" alt="淇發寸白">
+      <img src="./s1/logo.png" alt="淇發寸白">
     </h1>
     <h3 data-aos="fade-up" data-aos-delay="400">
       <span style="display: none;">淇發寸白</span>
       488
-      <img src="./s1/萬起.png" alt="萬起">
+      <img src="./s1/t1.png" alt="萬起">
     </h3>
     <h4 data-aos="fade-up" data-aos-delay="800">
       <span style="display: none;">淇發寸白</span>
-      <img src="./s1/寸方皆巧白派3房.png" alt="寸方皆巧白派3房">
+      <img src="./s1/t2.png" alt="寸方皆巧白派3房">
     </h4>
     <p>
       <span style="display: none;">淇發寸白</span>
