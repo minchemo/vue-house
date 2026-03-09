@@ -38,8 +38,8 @@
 }
 .home{  
     &::before{content: "";
-  background: url("@/section/s1/bgm1.jpg") no-repeat 0 100%;
-  background-size: 100% auto;
+  background: url("@/section/s1/bgm1.jpg") 0 100%;
+  background-size: cover;
   width: 100%;position: fixed;
   left:0;right: 0;top: 0;bottom: 63px;
   @media screen and (min-width: 768px) {
