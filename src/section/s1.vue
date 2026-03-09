@@ -188,9 +188,9 @@
 
   .hill {
     position: absolute;
-    //height: size(50);
     left: 0px;
     bottom: 0px;
+    //height: size(50);
     //right: size(-100);
     //bottom: calc(50% + #{size(0 - 1080 * .5)}); 
 
@@ -247,25 +247,30 @@
       width: sizem(224);
 
       .eggbg {
-        top: -49%;
-        width: 163%;
+
+        top: 114%;
+        width: 57%;
         left: -31.5%;
       }
 
     }
 
     .oo1 {
-      top: sizem(140);
-      height: sizem(20);
-      left: sizem(-20);
-      top: calc(50% + #{sizem(140 - 604 * .5)});
+      top: 9vw;
+      height: 16vw;
+      left: -22vw;
+      //top: sizem(140);
+      //height: sizem(20);
+      //left: sizem(-20);
+      //top: calc(50% + #{sizem(140 - 604 * .5)});
     }
 
     .hill {
-      top: sizem(490);
+      bottom: 38px;
       height: sizem(20);
       right: sizem(-65);
-      top: calc(50% + #{sizem(490 - 604 * .5)});
+      //top: sizem(490);
+      //top: calc(50% + #{sizem(490 - 604 * .5)});
     }
 
 

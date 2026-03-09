@@ -52,6 +52,7 @@
         justify-content: center;
         position: relative;
         z-index: 1;
+        visibility: hidden;
 
         p {
             transition: all .5s;
@@ -283,6 +284,7 @@
             padding: 0;
             font-size: sizem(20);
             margin: sizem(10);
+            visibility: hidden;
 
             p {
                 font-size: sizem(14);
