@@ -98,9 +98,10 @@
 .order {
   width: 100%;
   padding-top: size(115);
-  background: url("./s1/bg2.png");
+ /* background: url("./s1/bg2.png");
   background-size: 100%;
   background-repeat: no-repeat;
+  */
 
 
   .leaf-left {
@@ -368,9 +369,10 @@
     height: sizem(2210);
     min-height: sizem(2210);
     max-height: sizem(2210);
-    background: url("./s1/bgm2.png");
+  /*  background: url("./s1/bgm2.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    */
 
     .leaf-left {
       width: 100%;

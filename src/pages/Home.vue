@@ -36,6 +36,18 @@
 .fade-leave-to {
   opacity: 0;
 }
+.home{  
+    &::before{content: "";
+  background: url("@/section/s1/bgm1.jpg") no-repeat 0 100%;
+  background-size: 100% auto;
+  width: 100%;position: fixed;
+  left:0;right: 0;top: 0;bottom: 63px;
+  @media screen and (min-width: 768px) {
+  background-image: url("@/section/s1/bg1.jpg");
+  width: 100%;height: 100%;bottom: 0;
+  }
+}
+}
 
 img {
   display: inline;
