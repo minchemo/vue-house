@@ -1,9 +1,9 @@
 <template>
   <article class="s1" id="s1">
-
-    <a href="https://lin.ee/jX9Xyhz" target="_blank" v-if="!isMobile">
+    <!--<a href="https://lin.ee/jX9Xyhz" target="_blank" v-if="!isMobile">
       <img src="./s1/lineicon.png" class="lineicon" data-aos="zoom-in" data-aos-delay="200" />
-    </a>
+    </a>  -->
+
     <!-- 
     <img src="./s1/pc.png" class="t0">
     <img src="./s1/mo.png" class="t0">-->
@@ -19,9 +19,12 @@
       <img src="" alt="">
     </div>
 
-
-    <img src="./s1/oo.png" alt="oo" class="oo1">
-    <div class="hill"><img src="./s1/hill.png" alt="oo">
+    <div class="cloud">
+      <img src="./s1/cloud.png" alt="oo1" class="oo1">
+    </div>
+    <div class="hill">
+      <img src="./s1/hill-pc.png" alt="oo" v-if="!isMobile">
+      <img src="./s1/hill-mo.png" alt="oo" v-else>
     </div>
 
   </article>
@@ -59,6 +62,7 @@
     z-index: 50;
   }
 
+  /*  
   .lineicon {
     position: fixed;
     width: size(80);
@@ -67,108 +71,52 @@
     bottom: size(120);
     z-index: 99;
   }
+   */
 
-  .img {
+  img {
     position: absolute;
-    //top: size(190);
-    //left: size(1343);
-    //height: size(992); 
+    position: relative;
     z-index: 2;
-
-    img {
-      position: relative;
-      top: 23vw;
-      left: 29vw;
-
-      width: 300%;
-      top: 23vw;
-      left: 26vw;
-
-
-      &:first-child {
-        position: absolute;
-        //top: 19.5%; 
-        //left: -5%; 
-
-        width: 100%;
-        top: 21vw;
-        left: 26vw;
-      }
-
-      &:last-child {
-        position: absolute;
-        top: 680%;
-        width: 46%;
-        left: 100%;
-      }
-
-      &:nth-child(2) {
-        width: 130%;
-        top: 23vw;
-        left: -25vw;
-      }
-    }
-
-
   }
+
+
 
   .txt {
     position: absolute;
-
-    left: 154px;
-    right: 0;
     margin: auto;
-    top: 6.177083vw;
-    top: size(115.2);
-    /* 
-    top: calc(50% + #{size(157 - 1140 * .5)});
-    top: calc(50% + #{size(970 - 1140 * .5)}); 
-        right: size(-100);
-        */
     text-align: center;
-    width: size(726);
+  }
 
+  .eggbg {
+    position: absolute;
+    display: block;
 
+    top: 17%;
+    width: 21%;
+    left: 4%;
+    //pc
+  }
 
-    .eggbg {
-      position: absolute;
-      top: -19%;
-      display: block;
-      width: 90%;
-      left: -80%;
-    }
-
-    .logo {
-      position: relative;
-      display: block;
-      margin: auto;
-      z-index: 3;
-      width: 80%;
-
-      top: 2.2vw;
-      left: 14.5vw;
-
-    }
-
-    .txt1 {
-      position: relative;
-      display: block;
-      margin: 4% auto auto auto;
-      z-index: 3;
-      width: 80%;
-      left: 37%;
-      top: 1.7vw;
-    }
+  .logo {
+    position: relative;
+    display: block;
+    margin: auto;
+    top: -5vw;
+    left: 10vw;
+    //pc
   }
 
   .txt1 {
     position: relative;
     display: block;
-    margin: 4% auto auto auto;
+    margin: 0 auto auto auto;
     z-index: 3;
-    width: 97%;
-    left: 37%;
-    top: 5.7vw;
+    //width: 113%;
+    //left: 13%;
+    // top: 1.7vw;
+
+    top: -3vw;
+    left: 9%;
   }
 
   .oo1 {
@@ -188,15 +136,11 @@
 
   .hill {
     position: absolute;
-    left: 0px;
+    right: 0;
     bottom: 0px;
-    //height: size(50);
-    //right: size(-100);
-    //bottom: calc(50% + #{size(0 - 1080 * .5)}); 
+    width: 100%;
 
-    img {
-      width: 100%;
-    }
+    img {}
   }
 }
 
@@ -215,43 +159,41 @@
     background-position: center;
     background-size: 170% 100%;
 
-    .img {
-      position: absolute;
-      top: sizem(135);
-      top: calc(35% + #{sizem(135 - 604 * .35)});
-      left: sizem(232);
-      min-height: sizem(430);
-      //height: 60%;
+    .logo {
+      //mo
+      position: relative;
+      display: block;
+      margin: auto;
 
-      img {
-        &:first-child {
-          width: 66%;
-          top: 22vw;
-          left: 29vw;
-        }
-
-        &:last-child {
-          top: 82%;
-          width: 61%;
-          left: -34%;
-        }
-      }
+      width: 62%;
+      top: -27vw;
+      left: 2%;
     }
 
-    .txt {
-      top: sizem(246);
-      left: 0;
-      right: 0;
-      margin: auto;
-      top: calc(50% + #{sizem(246 - 604 * .5)});
-      width: sizem(224);
+    .txt1 {
+      //mo
+      position: relative;
+      display: block;
+      margin: 3% auto auto auto;
+      z-index: 3;
+      width: 62%;
+      top: -25vw;
+      left: 2%;
+    }
 
-      .eggbg {
+    .eggbg {
+      top: 30%;
+      width: 37%;
+      left: -1%;
+    }
 
-        top: 114%;
-        width: 57%;
-        left: -31.5%;
-      }
+    .cloud img {
+      position: relative;
+      height: 20vw;
+
+      top: -250px;
+      right: 12vw;
+      width: 121%;
 
     }
 
@@ -259,18 +201,11 @@
       top: 9vw;
       height: 16vw;
       left: -22vw;
-      //top: sizem(140);
-      //height: sizem(20);
-      //left: sizem(-20);
-      //top: calc(50% + #{sizem(140 - 604 * .5)});
     }
 
     .hill {
-      bottom: 38px;
-      height: sizem(20);
-      right: sizem(-65);
-      //top: sizem(490);
-      //top: calc(50% + #{sizem(490 - 604 * .5)});
+      bottom: 0px;
+      left: -9vw;
     }
 
 

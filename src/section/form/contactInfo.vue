@@ -158,6 +158,8 @@
   top: 16.5vw;
   left: -29vw;
 
+
+
   img {
     width: 64%;
   }
@@ -294,10 +296,10 @@
   .contact-info-img {
     height: 0;
     z-index: 2;
-    top: 70vw;
+    top: 20vw;
 
     img {
-      width: 200%;
+      width: 90%;
       margin: -50%;
     }
   }
@@ -311,7 +313,7 @@
     height: sizem(63);
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) #000c;
-    background: #0051a1;
+    background: #cb944b;
 
     .contact-item {
       height: 100%;

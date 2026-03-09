@@ -104,7 +104,7 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    background: linear-gradient(135deg, #3F94CA 0%, #71A3A5 20%, #E0C663 50%, #E1A843 70%);
+    background: url("./s6/bg.png") 0% 0%;
 
     .eggbg1 {
       top: sizem(50);

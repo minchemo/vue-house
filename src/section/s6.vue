@@ -36,8 +36,8 @@
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
-  background: url("./s1/bg.png");
   background-size: cover;
+  background: url("./s1/bg.png") 0% 0%;
 
   .slider .slide-item img {
     border-radius: 0;
@@ -125,6 +125,7 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
+    background: url("./s6/bg.png") 0% 0%;
 
 
     .img {

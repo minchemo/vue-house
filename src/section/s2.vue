@@ -2,7 +2,7 @@
   <article class="s2">
     <!--   -->
     <div class="txt">
-      <h3 class="title" data-aos="fade-up" data-aos-delay="0">自成一隅繁華，也近一城核心。</h3>
+      <h3 class="title" data-aos="fade-up" data-aos-delay="0">自成一隅繁華， <br v-if="isMobile" />也近一城核心。</h3>
       <p class="desc" data-aos="fade-up" data-aos-delay="400">
         「春陽沄集」整排臨路店面,自帶繁華氣息,也貼近內埔核心,擁天后宮、廣濟路、文化路3大商圈,同享國道三號、未來義大健康園區,百億建設座落、人潮車流並進,一墅搶進財位,傳家致富正當時! </p>
 

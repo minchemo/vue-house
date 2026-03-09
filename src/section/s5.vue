@@ -29,16 +29,18 @@
 @import '@/assets/style/function.scss';
 
 .s5 {
-  @apply relative flex flex-col items-center justify-center text-[#fff];
+  //@apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
   // height: size(800);
   padding: 10em 0 10em 0;
   font-size: size(18);
   gap: 1.5em;
   flex-wrap: nowrap;
-  flex-direction: column-reverse;
-  background: url("./s1/bg.png");
+
+  flex-wrap: wrap;
+  background: url("./s5/bg.png") 0% 0%;
   background-size: cover;
+
 
   .slider .slide-item img {
     border-radius: 0;
@@ -106,7 +108,7 @@
     font-size: sizem(15);
     flex-wrap: nowrap;
     gap: 0em;
-    background: linear-gradient(135deg, #3F94CA 0%, #71A3A5 20%, #E0C663 50%, #E1A843 70%);
+    background: url("./s5/bg.png") 0% 0%;
 
     .eggbg1 {
       top: sizem(50);
