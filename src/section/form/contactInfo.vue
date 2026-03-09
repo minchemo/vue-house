@@ -7,7 +7,7 @@
       <div class="flex w-full contact-info-box">
         <div class="w-full logo-box">
           <h2 class="logo">
-            <img src="./淇發寸白.png" alt="淇發寸白" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
+            <img src="./logo1.png" alt="淇發寸白" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
           </h2>
           <div class="flex justify-between w-full contact-item-box" data-aos="fade-up" data-aos-delay="300">
             <div class="flex contact-item justify-center items-center green btlead-fb" @click="open()">
@@ -23,7 +23,7 @@
         </div>
         <div class="w-full logo-box">
           <h2 class="logo">
-            <img src="./淇發詠旭.png" alt="淇發詠旭" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
+            <img src="./logo2.png" alt="淇發詠旭" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" />
           </h2>
           <div class="flex justify-between contact-item-box" data-aos="fade-up" data-aos-delay="300">
             <div class="flex contact-item justify-center items-center dark-green btlead-fb2" @click="open2()">

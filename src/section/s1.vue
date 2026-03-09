@@ -5,32 +5,32 @@
 
     <img class="circle" src="./s1/circle.png">
     <h1>
-      <img src="./s1/淇發建設.png" alt="淇發建設">
+      <img src="./s1/slogo.png" alt="淇發建設">
     </h1>
     <h4>
-      <img data-aos="fade-down-right" data-aos-delay="200" src="./s1/光.png" alt="光">
-      <img data-aos="fade-down-left" data-aos-delay="400" class="dot" src="./s1/光點.png" alt="光">
+      <img data-aos="fade-down-right" data-aos-delay="200" src="./s1/t1.png" alt="光">
+      <img data-aos="fade-down-left" data-aos-delay="400" class="dot" src="./s1/t12.png" alt="光">
     </h4>
     <h5>
-      <img data-aos="fade-down-left" data-aos-delay="600" src="./s1/影.png" alt="影">
-      <img data-aos="zoom-in" data-aos-delay="800" class="dot" src="./s1/影點.png" alt="影">
+      <img data-aos="fade-down-left" data-aos-delay="600" src="./s1/shadow.png" alt="影">
+      <img data-aos="zoom-in" data-aos-delay="800" class="dot" src="./s1/shadow2.png" alt="影">
     </h5>
     <h6>
-      <img data-aos="fade-right" data-aos-delay="1000" src="./s1/之間.png" alt="之間">
-      <img data-aos="zoom-in" data-aos-delay="1200" class="dot" src="./s1/之點.png" alt="之">
-      <img data-aos="zoom-in" data-aos-delay="1200" class="dot2" src="./s1/間點.png" alt="間">
+      <img data-aos="fade-right" data-aos-delay="1000" src="./s1/t3.png" alt="之間">
+      <img data-aos="zoom-in" data-aos-delay="1200" class="dot" src="./s1/t31.png" alt="之">
+      <img data-aos="zoom-in" data-aos-delay="1200" class="dot2" src="./s1/t32.png" alt="間">
     </h6>
     <h2 data-aos="fade-up" data-aos-delay="400">488
-      <img src="./s1/萬起.png" alt="萬起">
-      <img class="dot" data-aos="fade-up" data-aos-delay="600" src="./s1/大高屏生活圈.png" alt="大高屏生活圈">
+      <img src="./s1/t4.png" alt="萬起">
+      <img class="dot" data-aos="fade-up" data-aos-delay="600" src="./s1/t5.png" alt="大高屏生活圈">
     </h2>
     <h3 data-aos="fade-up" data-aos-delay="800">
-      <img src="./s1/白派3-4房comingsoon.png" alt="白派3-4房comingsoon">
+      <img src="./s1/t6.png" alt="白派3-4房comingsoon">
     </h3>
     <p>
-      <img data-aos="fade-right" data-aos-delay="1400" src="./s1/悄然留住.png" alt="悄然留住">
-      <img data-aos="fade-right" data-aos-delay="2000" class="dot" src="./s1/一寸.png" alt="一寸">
-      <img data-aos="fade-right" data-aos-delay="2600" class="dot2" src="./s1/生活的靜好.png" alt="生活的靜好">
+      <img data-aos="fade-right" data-aos-delay="1400" src="./s1/t7.png" alt="悄然留住">
+      <img data-aos="fade-right" data-aos-delay="2000" class="dot" src="./s1/t8.png" alt="一寸">
+      <img data-aos="fade-right" data-aos-delay="2600" class="dot2" src="./s1/t9.png" alt="生活的靜好">
     </p>
   </article>
 </template>
