@@ -161,8 +161,7 @@ $o-title-c:#A30C24; //.order-title
   }
 
   .form {
-    width: size(920);
-    min-width: 750px;
+  width: min(1200px,95%); //最大1200px
     //  height: 350px;
     gap: 4em;
     margin-top: 2.8em;

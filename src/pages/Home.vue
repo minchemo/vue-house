@@ -6,7 +6,7 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
-    <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
+    <img class="w-32" src="//h35.banner.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
@@ -41,13 +41,6 @@ img {
   max-width: unset;
   height: unset;
   margin: 0 auto;
-}
-
-// 字體
-@font-face {
-  font-family: 'com4f';
-  src: local("COM4tFine"),local("COM4t Fine Regular"),
-  url('@/section/form/com4f.ttf') format("opentype"),
 }
 
 </style>
