@@ -62,7 +62,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-personal-info">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-info cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -137,6 +137,9 @@
   background: url("./s1/bg.png");
   background-size: cover;
 
+  .text-info {
+    color: #BE771A;
+  }
 
 
   .bird {
@@ -278,7 +281,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #FFF;
-    background: #0466CA;
+    background: #B81C25;
     //border: 1px solid #FFF9;
     border: 0;
     border-radius: .5em;

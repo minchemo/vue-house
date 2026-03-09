@@ -141,11 +141,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background: #0466CA;
+  background: #DFA962;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #014d99;
+  background-color: #be771a;
 }
 
 
@@ -189,7 +189,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #0466CA;
+      background: #DFA962;
       color: #FFF;
       width: 100%;
       font-weight: 700;
@@ -207,7 +207,7 @@
       gap: 1em;
 
       &:hover {
-        background: #014d99;
+        background: #be771a;
         color: #fff;
 
         img {

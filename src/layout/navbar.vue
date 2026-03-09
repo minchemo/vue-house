@@ -174,14 +174,14 @@
             }
 
             &.btn2 {
-                background: #0466CA;
+                background: #DFA962;
                 ;
                 border-radius: 2em;
                 margin-right: -1em;
                 padding: .7em 1.5em;
 
                 &:hover {
-                    background: #014d99;
+                    background: #be771a;
 
                     &:after {
                         width: 0;
