@@ -38,7 +38,7 @@
 }
 .home{  
     &::before{content: "";
-  background: url("@/section/s1/bgm1.jpg") 0 100%;
+  background: url("@/section/s1/bgm1.jpg") 50% 50%;
   background-size: cover;
   width: 100%;position: fixed;
   left:0;right: 0;top: 0;bottom: 63px;
