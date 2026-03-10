@@ -45,6 +45,7 @@
     border-radius: 0;
   }
 
+
   h3.title {
     color: #BE771A;
   }

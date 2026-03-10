@@ -103,6 +103,7 @@
     margin: auto;
     top: -5vw;
     left: 10vw;
+    width: size(634);
     //pc
   }
 
@@ -111,6 +112,7 @@
     display: block;
     margin: 0 auto auto auto;
     z-index: 3;
+    width: size(706);
     //width: 113%;
     //left: 13%;
     // top: 1.7vw;
