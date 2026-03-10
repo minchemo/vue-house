@@ -3,7 +3,7 @@
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">
-          樓下展開事業藍圖 <br v-if="isMobile" /> 樓上享受家的溫度
+          樓下展開事業藍圖 <br /> 樓上享受家的溫度
         </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
           不論是品牌旗艦、美學沙龍、醫美診所、美食餐館…等, 「春陽沄集」給您一個具備地段、人潮、產權、 潛力的「全能金店」,實現您心目中的事業藍圖。</p>

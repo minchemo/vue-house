@@ -72,12 +72,12 @@ img {
 }
 
 .caption {
-  @apply absolute;
+  //@apply absolute;
   right: 1em;
   bottom: .5em;
   font-weight: 300;
   font-size: size(15);
-  color: #fbff00;
+  color: #fff;
   z-index: 3;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
 }

@@ -41,7 +41,6 @@
   background: url("./s5/bg.png") 0% 0%;
   background-size: cover;
 
-
   .slider .slide-item img {
     border-radius: 0;
   }
@@ -70,7 +69,7 @@
   }
 
   .slider {
-    margin: 0;
+    margin: 0 auto;
     flex-basis: size(840);
     height: size(844);
     width: size(1500);
@@ -84,6 +83,7 @@
     }
 
     .splide__pagination {
+      visibility: hidden;
       justify-content: flex-end;
       bottom: -2em;
 
@@ -135,6 +135,7 @@
     .slider {
       height: auto;
       width: 100%;
+      margin: 0 auto;
 
       .caption {
         font-size: sizem(12);
@@ -176,18 +177,14 @@ const options = {
   arrows: false,
   pagination: true,
   autoplay: true,
-  interval: 4000,
+  interval: 0,
   gap: 0,
   type: 'loop'
 }
 
 const imgs = [
   {
-    img: new URL("./s5/S5-1.png", import.meta.url).href,
-    caption: "外觀3D數位影像合成示意圖、情境示意圖"
-  },
-  {
-    img: new URL("./s5/S5-1.png", import.meta.url).href,
+    img: new URL("./s5/S5-2.png", import.meta.url).href,
     caption: "外觀3D數位影像合成示意圖、情境示意圖"
   },
 ]

@@ -8,7 +8,7 @@
     <img src="./s1/pc.png" class="t0">
     <img src="./s1/mo.png" class="t0">-->
     <div class="txt">
-      <img src="./s1/bg3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="eggbg" alt="蛋黃">
+      <img src="./s1/bg3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="eggbg" alt="">
       <img src="./s1/logo.png" alt="logo" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" class="logo">
       <img src="./s1/txt.png" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" alt="txt" class="txt1">
     </div>
@@ -182,7 +182,7 @@
     }
 
     .eggbg {
-      top: 30%;
+      top: 70%;
       width: 37%;
       left: -1%;
     }

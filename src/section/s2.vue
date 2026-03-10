@@ -1,5 +1,6 @@
 <template>
   <article class="s2">
+    <div class="caption">基地空拍實景經後製修飾</div>
     <!--   -->
     <div class="txt">
       <h3 class="title" data-aos="fade-up" data-aos-delay="0">自成一隅繁華， <br v-if="isMobile" />也近一城核心。</h3>
@@ -8,7 +9,6 @@
 
     </div>
     <Fullview />
-    <div class="caption">基地空拍實景經後製修飾</div>
   </article>
 </template>
 
@@ -16,10 +16,18 @@
 @import '@/assets/style/function.scss';
 
 .s2 {
-  @apply relative overflow-hidden bg-[#00398A] text-[#fff];
+  //@apply relative overflow-hidden bg-[#00398A] text-[#fff];
   width: 100%;
   // height: size(1059);
   font-size: size(19);
+  margin-left: -1px;
+
+  .caption {
+    background: #1367af;
+
+    text-align: right;
+    padding: 0 1em 1em 1em;
+  }
 
   .txt {
     text-align: center;
@@ -27,6 +35,14 @@
     padding-top: 3.2em;
     z-index: 10;
     margin-bottom: -9.3em;
+
+    .title {
+      color: #fff;
+    }
+
+    p.desc {
+      color: #fff;
+    }
   }
 
   .viewbox {
@@ -43,16 +59,54 @@
   .s2 {
     // height: sizem(550);
     font-size: sizem(15);
+    background: rgb(19 103 173);
+
+    bottom: 10vw;
+    margin-left: -1px;
+
+    .caption {
+      background: transparent;
+      text-align: right;
+    }
+
+    .viewbox {
+      margin-top: 5em;
+
+      .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: -110px;
+        background: linear-gradient(to bottom, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+      }
+    }
+
 
     .txt {
       text-align: justify;
-      padding-top: 4.2em;
+      padding-top: 0em;
       width: sizem(310);
-      margin: auto auto -4.3em auto;
+      margin: auto auto -5em auto;
+
+      .title {
+        color: #fff;
+        padding-top: 1em;
+      }
+
+      p.desc {
+        color: #fff;
+      }
+    }
+
+
+    p.desc {
+      color: #fff;
     }
 
     .viewbox {
       height: sizem(550);
+
     }
 
 
