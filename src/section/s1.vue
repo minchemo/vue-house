@@ -140,7 +140,9 @@
     bottom: 0px;
     width: 100%;
 
-    img {}
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -182,7 +184,7 @@
     }
 
     .eggbg {
-      top: 70%;
+      top: 55%;
       width: 37%;
       left: -1%;
     }
@@ -205,7 +207,7 @@
 
     .hill {
       bottom: 0px;
-      left: -9vw;
+      left: 0vw;
     }
 
 

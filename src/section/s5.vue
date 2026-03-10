@@ -74,6 +74,10 @@
     height: size(844);
     width: size(1500);
 
+    .splide__slide img {
+      width: 100%;
+    }
+
     .slide-item {
       @apply bg-cover;
       width: 100%;

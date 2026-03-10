@@ -3,10 +3,10 @@
     <div class="main">
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">
-          樓下展開事業藍圖 <br /> 樓上享受家的溫度
+          義大健康園區 <br /> 全新醫療聚落
         </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          不論是品牌旗艦、美學沙龍、醫美診所、美食餐館…等, 「春陽沄集」給您一個具備地段、人潮、產權、 潛力的「全能金店」,實現您心目中的事業藍圖。</p>
+          未來集醫療、娛樂、百貨於一身的生活聚落,不僅提供完善醫療資源, 也承載未來的退休照護,結合百貨商城,所帶來的不只有便利, 更是源源不絕的人口紅利與錢潮動能,讓世代安居之際, 同步擁抱店舖的無限潛力。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">

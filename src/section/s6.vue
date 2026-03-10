@@ -2,9 +2,9 @@
   <article class="s6" ref="s6">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">兩代完美共融 <br v-if="isMobile"> 獨立空間不打擾</h3>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">漫步生命之河<br v-if="isMobile">&nbsp;&nbsp;徜徉公園綠意</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          除了自住同步收租，也可規劃一間自住一間孝親，兩代同堂不同室，獨立門戶享充足隱私，近鄰雙公園、家樂福，方便隨時出門散步、購物共聚天倫，家人之間的親情不再因居住距離而降溫。</p>
+          日常裡,步伐放慢,沿著龍頸溪畔漫步, 讓水岸綠意成為生活的一部分。 週末時光,轉身走進六堆紀念公園, 奔跑、打球、嬉戲,為生活注入滿滿活力。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -203,24 +203,20 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s6/1.webp", import.meta.url).href,
-    caption: "五華國小實景"
+    img: new URL("./s6/s6-g1.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s6/2.webp", import.meta.url).href,
-    caption: "淡水河畔公園實景"
+    img: new URL("./s6/s6-g2.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s6/3.webp", import.meta.url).href,
-    caption: "家樂福商圈實景"
+    img: new URL("./s6/s6-g3.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s6/4.webp", import.meta.url).href,
-    caption: "星巴克重陽集賢門市實景"
-  },
-  {
-    img: new URL("./s6/5.webp", import.meta.url).href,
-    caption: "親水公園實景"
+    img: new URL("./s6/s6-g4.png", import.meta.url).href,
+    caption: ""
   },
 ]
 </script>
