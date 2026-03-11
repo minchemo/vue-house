@@ -48,6 +48,7 @@
 
   h3.title {
     color: #BE771A;
+    font-family: Noto Serif TC;
   }
 
   p.desc {

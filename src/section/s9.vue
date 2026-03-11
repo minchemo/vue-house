@@ -1,11 +1,10 @@
 <template>
-  <article class="s6" ref="s6">
+  <article class="s9" ref="s9">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">國道╳鐵路 <br v-if="isMobile" /> 多元交通路網
-        </h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">鄰近國道三號與西勢車站,交通路線隨心選擇,便利,融入每日的步調;移動,不再是生活負擔,
-          南來北往、通勤或旅遊,從容抵達每一個目的地。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">漫步生命之河<br v-if="isMobile">&nbsp;&nbsp;徜徉公園綠意</h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+          日常裡,步伐放慢,沿著龍頸溪畔漫步, 讓水岸綠意成為生活的一部分。 週末時光,轉身走進六堆紀念公園, 奔跑、打球、嬉戲,為生活注入滿滿活力。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -29,7 +28,7 @@
 
 
 
-.s6 {
+.s9 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
@@ -37,24 +36,21 @@
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
-  flex-wrap: wrap;
-  background: url("./s6/bg.png") 0% 0%;
   background-size: cover;
-  flex-direction: row-reverse;
+  background: url("./s1/bg.png") 0% 0%;
 
   .slider .slide-item img {
     border-radius: 0;
   }
 
   h3.title {
-    width: 17em;
     color: #BE771A;
-    font-family: Noto Serif TC;
   }
 
-  p.desc {
+  P.desc {
     color: #5B5959;
   }
+
 
   .img {
     position: absolute;
@@ -104,8 +100,8 @@
     }
 
     .splide__pagination {
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
 
       li button {
         background: #999999;
@@ -121,8 +117,7 @@
 
 @media screen and (max-width: 767px) {
 
-
-  .s6 {
+  .s9 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -130,11 +125,8 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    background: url("./s6/bg.png") 0% 0%;
+    background: url("./s9/bg.png") 0% 0%;
 
-    .slider .splide__pagination li button {
-      background: #999999;
-    }
 
     .img {
       position: absolute;
@@ -159,6 +151,10 @@
       height: auto;
       width: 100%;
 
+      .splide__pagination li button {
+        background: #999999 !important;
+      }
+
       .caption {
         font-size: sizem(12);
         right: sizem(5);
@@ -172,6 +168,7 @@
         height: sizem(250);
 
       }
+
     }
   }
 }
@@ -206,12 +203,20 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s6/s6-g1.png", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s9/s9-g1.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s6/s6-g2.png", import.meta.url).href,
-    caption: "國道3號、情境示意圖"
+    img: new URL("./s9/s9-g2.png", import.meta.url).href,
+    caption: ""
+  },
+  {
+    img: new URL("./s9/s9-g3.png", import.meta.url).href,
+    caption: ""
+  },
+  {
+    img: new URL("./s9/s9-g4.png", import.meta.url).href,
+    caption: ""
   },
 ]
 </script>

@@ -1,11 +1,11 @@
 <template>
-  <article class="s6" ref="s6">
+  <article class="s8" ref="s8">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">國道╳鐵路 <br v-if="isMobile" /> 多元交通路網
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">樓下展開事業藍圖 <br v-if="isMobile" /> 樓上享受家的溫度
         </h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">鄰近國道三號與西勢車站,交通路線隨心選擇,便利,融入每日的步調;移動,不再是生活負擔,
-          南來北往、通勤或旅遊,從容抵達每一個目的地。</p>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">不論是品牌旗艦、美學沙龍、醫美診所、美食餐館…等, 「春陽沄集」給您一個具備地段、人潮、產權、
+          潛力的「全能金店」,實現您心目中的事業藍圖。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -29,7 +29,7 @@
 
 
 
-.s6 {
+.s8 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
@@ -38,7 +38,7 @@
   gap: 3em;
   flex-wrap: wrap;
   flex-wrap: wrap;
-  background: url("./s6/bg.png") 0% 0%;
+  background: url("./s8/bg.png") 0% 0%;
   background-size: cover;
   flex-direction: row-reverse;
 
@@ -122,7 +122,7 @@
 @media screen and (max-width: 767px) {
 
 
-  .s6 {
+  .s8 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -130,7 +130,7 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    background: url("./s6/bg.png") 0% 0%;
+    background: url("./s8/bg.png") 0% 0%;
 
     .slider .splide__pagination li button {
       background: #999999;
@@ -206,12 +206,20 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s6/s6-g1.png", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s8/S8-g1.png", import.meta.url).href,
+    caption: "國道3號、情境示意圖"
   },
   {
-    img: new URL("./s6/s6-g2.png", import.meta.url).href,
-    caption: "國道3號、情境示意圖"
+    img: new URL("./s8/S8-g2.png", import.meta.url).href,
+    caption: ""
+  },
+  {
+    img: new URL("./s8/S8-g3.png", import.meta.url).href,
+    caption: ""
+  },
+  {
+    img: new URL("./s8/S8-g4.png", import.meta.url).href,
+    caption: ""
   },
 ]
 </script>

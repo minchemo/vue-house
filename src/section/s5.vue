@@ -39,17 +39,17 @@
   flex-wrap: wrap;
   background: url("./s5/bg.png") 0% 0%;
   background-size: cover;
-
+  
   .slider .slide-item img {
     border-radius: 0;
   }
-
   h3.title {
     color: #BE771A;
-    font-style: 'Noto Serif TC';
+    font-family: Noto Serif TC;
   }
 
   p.desc {
+
     color: #5B5959;
   }
 
