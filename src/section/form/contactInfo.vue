@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="contact-info-img">
-      <img src="@/section/form/order-bg.png" class="" alt="">
-    </div>
+    <!--<div class="contact-info-img">
+      <img src="@/section/form/bg.png" class="" alt="">
+    </div>  -->
     <div class="contact-info mx-auto  flex flex-col items-center justify-between">
       <!--  <div class="logo"></div>-->
       <div class="flex justify-between w-full contact-item-box">
@@ -157,6 +157,10 @@
   width: 158%;
   top: 16.5vw;
   left: -29vw;
+  background-image: url("@/section/form/bg.png");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
 
 
 
@@ -171,7 +175,7 @@
   min-width: 680px;
   position: relative;
   z-index: 50;
-  // background: #045147;
+  // background: #045147; 
 
   .logo {
     width: size(540);

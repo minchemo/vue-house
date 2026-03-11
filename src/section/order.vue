@@ -3,7 +3,7 @@
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center">{{ info.order.subTitle }}</div>
+      <div class="order-subTitle text-center"> 若想了解更多資訊，歡迎填寫表單或來電洽詢， <br v-if="isMobile">將由專人為您服務，謝謝！</div>
       <!-- <div class="cus-divider"></div> -->
 
       <!-- Title Image
@@ -323,6 +323,10 @@
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+    background-image: url("@/section/form/bg.png");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: cover;
     // border-radius: sizem(68) sizem(68) 0 0;
     /* padding-top: sizem(0);
     margin-top: sizem(0);

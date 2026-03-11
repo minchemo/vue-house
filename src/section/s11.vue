@@ -131,6 +131,7 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
+    flex-direction: column-reverse;
 
     .eggbg2 {
       top: sizem(-160);

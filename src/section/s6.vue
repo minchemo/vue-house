@@ -41,7 +41,6 @@
   flex-wrap: wrap;
   background: url("./s6/bg.png") 0% 0%;
   background-size: cover;
-  flex-direction: row-reverse;
 
   .slider .slide-item img {
     border-radius: 0;
@@ -128,7 +127,7 @@
 
 
   .s6 {
-    @apply flex-col;
+    //@apply flex-col;
     height: auto;
     padding: 0;
     font-size: sizem(15);
@@ -136,6 +135,7 @@
     margin-bottom: 0em;
     gap: 0em;
     background: url("./s6/bg.png") 0% 0%;
+    flex-direction: column-reverse;
 
     .slider .splide__pagination li button {
       background: #999999;

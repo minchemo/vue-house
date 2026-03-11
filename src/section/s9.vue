@@ -132,6 +132,7 @@
     margin-bottom: 0em;
     gap: 0em;
     background: url("./s9/bg.png") 0% 0%;
+    flex-direction: column-reverse;
 
 
     .img {

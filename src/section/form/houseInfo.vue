@@ -66,6 +66,7 @@
         font-weight: 700;
         color: #be771a;
         margin: 0 auto 1em auto;
+        font-family: Noto Serif TC;
     }
 
     .houseInfo-h3 {

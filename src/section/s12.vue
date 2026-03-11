@@ -46,13 +46,19 @@
 @media screen and (max-width: 767px) {
 
   .s12 {
-    @apply flex-col;
+    //@apply flex-col;
     height: auto;
-    padding: 0;
     font-size: sizem(15);
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
+    padding: 109px 0;
+
+    background: url("./s12/s12bg-mo.png") 0% 0%;
+
+    .main img {
+      width: 67vw;
+    }
 
     .eggbg2 {
       top: sizem(-160);
@@ -73,13 +79,13 @@
       top: sizem(300);
       left: auto;
       right: sizem(-155);
-      width: sizem(260);
       bottom: auto;
     }
 
     .main {
       padding: 0 sizem(32.5);
       width: 100%;
+
     }
 
     .txt {
@@ -114,67 +120,4 @@
 }
 </style>
 <script setup>
-/* 
-import { computed, getCurrentInstance, ref } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const isMobile = computed(() => globals.$isMobile());
-const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-  return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
-
-const splide = ref();
-
-const currentSlideIndex = ref(0);
-
-const moved = (newIdx, prevIdx, destIdx) => {
-  currentSlideIndex.value = prevIdx
-}
-
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
-const imgs = [
-  {
-    img: new URL("./s12/s12-1.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s12/s12-2.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s12/s12-3.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s12/s12-4.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s12/s12-5.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s12/s12-6.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s12/s12-7.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s12/s12-8.png", import.meta.url).href,
-    caption: ""
-  },
-]
-*/
 </script>

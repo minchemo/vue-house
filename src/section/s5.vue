@@ -131,12 +131,11 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
+    flex-direction: column-reverse;
+    background: url("./s5/s5bg-mo.png") 0% 0%;
 
-    .eggbg2 {
-      top: sizem(-160);
-      right: sizem(-80);
-      width: sizem(280);
-      transform: translateY(-10%);
+    .splide__track {
+      padding-top: 50px;
     }
 
     .oo1 {

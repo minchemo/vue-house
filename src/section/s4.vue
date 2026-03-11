@@ -124,7 +124,7 @@
 
 
   .s4 {
-    @apply flex-col;
+    //@apply flex-col;
     height: auto;
     padding: 0;
     font-size: sizem(15);
@@ -132,6 +132,7 @@
     margin-bottom: 0em;
     gap: 0em;
     background: url("./s4/bg.png") 0% 0%;
+    flex-direction: column-reverse;
 
     .slider .splide__pagination li button {
       background: #999999;
