@@ -1,14 +1,5 @@
 <template>
-  <article class="s3" ref="s3">
-    <div class="main">
-      <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">
-          義大健康園區 <br /> 全新醫療聚落
-        </h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          未來集醫療、娛樂、百貨於一身的生活聚落,不僅提供完善醫療資源, 也承載未來的退休照護,結合百貨商城,所帶來的不只有便利, 更是源源不絕的人口紅利與錢潮動能,讓世代安居之際, 同步擁抱店舖的無限潛力。</p>
-      </div>
-    </div>
+  <article class="s3 relative flex flex-col items-center justify-center text-[#fff];">
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -21,21 +12,31 @@
         </SplideSlide>
       </Splide>
     </div>
-
+    <div class="main">
+      <div class="txt">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">一間店舖 <br v-if="isMobile">一棟電梯墅 </h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+          繼日出莊園系列別墅後，百春陽回到內埔，再推全新鉅作「春陽沄集」，
+          稀有透天電梯店墅。樓下全能金店，樓上三代共享的<br />
+          豪宅雙富規劃，跳脫老街舊屋框架，以現代簡約揉合大器石材，
+          形塑聚客門面，成就一棟傳家、傳富、傳承世代的別墅。</p>
+      </div>
+    </div>
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-
 .s3 {
-  @apply relative flex items-center justify-center text-[#fff];
+  //@apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
-  height: auto;
-  padding: 11em 0 10em 0;
-  font-size: size(19);
-  gap: 3em;
+  // height: size(800);
+  padding: 10em 0 10em 0;
+  font-size: size(18);
+  gap: 1.5em;
+  flex-wrap: nowrap;
+
   flex-wrap: wrap;
   background: url("./s3/bg.png") 0% 0%;
   background-size: cover;
@@ -44,69 +45,57 @@
     border-radius: 0;
   }
 
+
   h3.title {
     color: #BE771A;
-    font-style: 'Noto Serif TC';
   }
 
   p.desc {
     color: #5B5959;
   }
 
-  .slider .splide__pagination li button {
-    background: #999999;
 
-  }
-
-
-  .img {
-    position: absolute;
-    bottom: size(-30);
-    left: size(-270);
-    width: size(660);
-
-    &::before {
-      content: "";
-      width: 120%;
-      height: 20%;
-      border-radius: 50%;
-      background: #1691CF;
-      display: block;
-      position: absolute;
-      bottom: -10%;
-      left: -10%;
-    }
-
-    img {
-      width: 100%;
-      position: relative;
-    }
-  }
 
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
     flex-direction: column;
-    text-align: justify;
+    text-align: center;
+    width: 100%;
+  }
+
+  .txt {
+    margin: auto;
+    width: size(1500);
   }
 
   .slider {
-    margin: 0;
-    flex-basis: size(840);
-    width: size(840);
-    height: size(560);
+    margin: 0 auto;
+    //flex-basis: size(840);
+    height: size(534);
+    width: size(1725);
+
+    .splide__slide img {
+      width: 100%;
+    }
 
     .slide-item {
       @apply bg-cover;
-      flex-basis: size(840);
-      height: size(560);
+      width: 100%;
+
+      height: size(534);
 
     }
 
     .splide__pagination {
-      right: calc(100% + 3em);
+      visibility: hidden;
       justify-content: flex-end;
+      bottom: -2em;
+
+      li button {
+        background: #999999;
+
+      }
     }
   }
 }
@@ -123,30 +112,20 @@
     padding: 0;
     font-size: sizem(15);
     flex-wrap: nowrap;
-    margin-bottom: 0em;
     gap: 0em;
+    background: url("./s3/bg.png") 0% 0%;
 
-    .eggbg2 {
-      top: sizem(-160);
-      right: sizem(-80);
-      width: sizem(280);
-      transform: translateY(-10%);
+    .eggbg1 {
+      top: sizem(50);
+      left: sizem(100);
+      width: sizem(400);
     }
 
     .oo1 {
-      top: sizem(30);
+      top: sizem(20);
       height: sizem(20);
-      left: auto;
-      right: sizem(100);
-    }
-
-    .img {
-      position: absolute;
-      top: sizem(300);
-      left: auto;
-      right: sizem(-155);
-      width: sizem(260);
-      bottom: auto;
+      left: sizem(10);
+      right: auto;
     }
 
     .main {
@@ -158,13 +137,12 @@
       margin: 4.4em auto 1.3em;
     }
 
-
     .slider {
       height: auto;
       width: 100%;
+      margin: 0 auto;
 
       .caption {
-        color: #acff2d;
         font-size: sizem(12);
         right: sizem(5);
         bottom: sizem(5);
@@ -184,8 +162,8 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
+
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -204,19 +182,15 @@ const options = {
   arrows: false,
   pagination: true,
   autoplay: true,
-  interval: 4000,
+  interval: 0,
   gap: 0,
   type: 'loop'
 }
 
 const imgs = [
   {
-    img: new URL("./s3/s41.png", import.meta.url).href,
-    caption: "情境示意圖"
-  },
-  {
-    img: new URL("./s3/s42.png", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s3/S3-2.png", import.meta.url).href,
+    caption: "外觀3D數位影像合成示意圖、情境示意圖"
   },
 ]
 </script>
