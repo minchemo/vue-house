@@ -46,6 +46,9 @@
     border-radius: 0;
   }
 
+  .slider .splide__pagination li button.is-active {
+    background: #be771a;
+  }
 
   h3.title {
     width: 17em;

@@ -39,9 +39,14 @@
   flex-wrap: wrap;
   background: url("./s10/bg.png") 0% 0%;
   background-size: cover;
+  flex-direction: row-reverse;
 
   .slider .slide-item img {
     border-radius: 0;
+  }
+
+  .slider .splide__pagination li button.is-active {
+    background: #be771a;
   }
 
   h3.title {
@@ -130,6 +135,7 @@
     gap: 0em;
     background: url("./s10/bg.png") 0% 0%;
     flex-direction: column-reverse;
+
 
     .slider .splide__pagination li button {
       background: #999999;

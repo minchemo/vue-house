@@ -41,6 +41,11 @@
   flex-wrap: wrap;
   background: url("./s6/bg.png") 0% 0%;
   background-size: cover;
+  flex-direction: row-reverse;
+  
+  .slider .splide__pagination li button.is-active {
+      background: #be771a;
+    }  //slider btn active color
 
   .slider .slide-item img {
     border-radius: 0;

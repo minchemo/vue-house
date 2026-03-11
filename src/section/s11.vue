@@ -40,6 +40,10 @@
   flex-wrap: wrap;
   background: url("./s11/bg.png") 0% 0%;
   background-size: cover;
+  
+  .slider .splide__pagination li button.is-active {
+      background: #be771a;
+    }
 
   .slider .slide-item img {
     border-radius: 0;

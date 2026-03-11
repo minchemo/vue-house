@@ -41,6 +41,11 @@
   background: url("./s7/bg.png") 0% 0%;
   background-size: cover;
 
+  .slider .splide__pagination li button.is-active {
+    background: #be771a;
+  }
+
+  //slider btn active color
   .slider .slide-item img {
     border-radius: 0;
   }
@@ -132,6 +137,7 @@
     margin-bottom: 0em;
     gap: 0em;
     flex-direction: column-reverse;
+
 
     .eggbg2 {
       top: sizem(-160);
