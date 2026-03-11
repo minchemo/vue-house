@@ -1,8 +1,9 @@
 <template>
-  <article class="s8" ref="s8">
+  <article class="s10" ref="s10">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">世界精品建材<br v-if="isMobile" />體現家的品味</h3>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">世界精品建材<br v-if="isMobile" />體現家的品味
+        </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">每一處細節,嚴選世界級知名建材,不張揚,卻在每一次使用中被感受。
           百春陽把對品質的堅持,融入日常生活,讓家的品味,不只看得見,更住得出來。</p>
       </div>
@@ -28,7 +29,7 @@
 
 
 
-.s8 {
+.s10 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
@@ -37,7 +38,7 @@
   gap: 3em;
   flex-wrap: wrap;
   flex-wrap: wrap;
-  background: url("./s8/bg.png") 0% 0%;
+  background: url("./s10/bg.png") 0% 0%;
   background-size: cover;
   flex-direction: row-reverse;
 
@@ -121,7 +122,7 @@
 @media screen and (max-width: 767px) {
 
 
-  .s8 {
+  .s10 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -129,7 +130,7 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    background: url("./s8/bg.png") 0% 0%;
+    background: url("./s10/bg.png") 0% 0%;
 
     .slider .splide__pagination li button {
       background: #999999;
@@ -205,19 +206,15 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s8/S8-g1.png", import.meta.url).href,
-    caption: "國道3號、情境示意圖"
-  },
-  {
-    img: new URL("./s8/S8-g2.png", import.meta.url).href,
+    img: new URL("./s10/s10-g1.png", import.meta.url).href,
     caption: ""
   },
   {
-    img: new URL("./s8/S8-g3.png", import.meta.url).href,
+    img: new URL("./s10/s10-g2.png", import.meta.url).href,
     caption: ""
   },
   {
-    img: new URL("./s8/S8-g4.png", import.meta.url).href,
+    img: new URL("./s10/s10-g3.png", import.meta.url).href,
     caption: ""
   },
 ]

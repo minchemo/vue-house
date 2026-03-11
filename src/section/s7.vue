@@ -1,10 +1,12 @@
 <template>
-  <article class="s8" ref="s8">
+  <article class="s7" ref="s7">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">世界精品建材<br v-if="isMobile" />體現家的品味</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">每一處細節,嚴選世界級知名建材,不張揚,卻在每一次使用中被感受。
-          百春陽把對品質的堅持,融入日常生活,讓家的品味,不只看得見,更住得出來。</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">
+          內埔生活主場 <br v-if="isMobile" /> 人潮自然匯聚
+        </h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+          坐擁進出內埔市心、上下國道的核心位置,全天車流不息, 並鄰近在地商圈、傳統市場、全聯、小北、寶雅…等商家, 不僅廣迎人潮、穩接商機,日常採買與食材選擇更是豐富, 為生活帶來全時便利。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -27,8 +29,7 @@
 @import '@/assets/style/function.scss';
 
 
-
-.s8 {
+.s7 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
@@ -36,24 +37,28 @@
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
-  flex-wrap: wrap;
-  background: url("./s8/bg.png") 0% 0%;
+  background: url("./s7/bg.png") 0% 0%;
   background-size: cover;
-  flex-direction: row-reverse;
 
   .slider .slide-item img {
     border-radius: 0;
   }
 
   h3.title {
-    width: 17em;
     color: #BE771A;
     font-family: Noto Serif TC;
   }
 
   p.desc {
+
     color: #5B5959;
   }
+
+  .slider .splide__pagination li button {
+    background: #999999;
+
+  }
+
 
   .img {
     position: absolute;
@@ -87,13 +92,11 @@
     text-align: justify;
   }
 
-
-
   .slider {
     margin: 0;
     flex-basis: size(840);
-    height: size(560);
     width: size(840);
+    height: size(560);
 
     .slide-item {
       @apply bg-cover;
@@ -103,13 +106,8 @@
     }
 
     .splide__pagination {
-      left: calc(100% + 3em);
-      justify-content: flex-start;
-
-      li button {
-        background: #999999;
-
-      }
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     }
   }
 }
@@ -120,8 +118,7 @@
 
 @media screen and (max-width: 767px) {
 
-
-  .s8 {
+  .s7 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -129,10 +126,19 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    background: url("./s8/bg.png") 0% 0%;
 
-    .slider .splide__pagination li button {
-      background: #999999;
+    .eggbg2 {
+      top: sizem(-160);
+      right: sizem(-80);
+      width: sizem(280);
+      transform: translateY(-10%);
+    }
+
+    .oo1 {
+      top: sizem(30);
+      height: sizem(20);
+      left: auto;
+      right: sizem(100);
     }
 
     .img {
@@ -153,12 +159,17 @@
       margin: 4.4em auto 1.3em;
     }
 
+    h3.title {
+      color: #BE771A;
+      font-family: Noto Serif TC;
+    }
 
     .slider {
       height: auto;
       width: 100%;
 
       .caption {
+        color: #acff2d;
         font-size: sizem(12);
         right: sizem(5);
         bottom: sizem(5);
@@ -205,20 +216,12 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s8/S8-g1.png", import.meta.url).href,
-    caption: "國道3號、情境示意圖"
+    img: new URL("./s7/s7-g1.png", import.meta.url).href,
+    caption: "情境示意圖"
   },
   {
-    img: new URL("./s8/S8-g2.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s8/S8-g3.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s8/S8-g4.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s7/s7-g2.png", import.meta.url).href,
+    caption: "廣濟路商圈,內譜黃昏市場實景拍攝"
   },
 ]
 </script>

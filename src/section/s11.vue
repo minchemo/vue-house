@@ -1,11 +1,12 @@
 <template>
-  <article class="s7">
+  <article class="s11" ref="s11">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">水岸公園美景 <br v-if="isMobile"> 全室設計師美裝</h3>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">
+          細節追求極致<br v-if="isMobile" /> 建築 以人為本
+        </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          緊鄰淡水河畔公園，限量水岸景觀席飽覽壯闊河景，窗景萬千，白天臨摹震撼人心的山水畫作，晚上畫風一轉，增豔而成撫慰心靈的百萬夜景。景美室更美，步入大廳猶如置身精品飯店，全室設計師精緻裝潢傢俱，一卡皮箱開啟質感水岸人生。
-        </p>
+          從生活出發,回歸人的本質,百春陽始終以居住者為設計起點, 反覆推敲空間尺度、細緻雕琢每一處平面, 讓建築,真正回應日常生活真正的需求。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -20,22 +21,23 @@
         </SplideSlide>
       </Splide>
     </div>
+
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s7 {
-  @apply relative flex flex-col items-center justify-center text-[#fff];
+
+.s11 {
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  // height: size(800);
-  padding: 10em 0 10em 0;
-  font-size: size(18);
-  gap: 1.5em;
-  flex-wrap: nowrap;
-  flex-direction: column-reverse;
-  background: url("./s1/bg.png");
+  height: auto;
+  padding: 11em 0 10em 0;
+  font-size: size(19);
+  gap: 3em;
+  flex-wrap: wrap;
+  background: url("./s11/bg.png") 0% 0%;
   background-size: cover;
 
   .slider .slide-item img {
@@ -44,48 +46,68 @@
 
   h3.title {
     color: #BE771A;
+    font-family: Noto Serif TC;
   }
 
-  P.desc {
+  p.desc {
+
     color: #5B5959;
   }
 
+  .slider .splide__pagination li button {
+    background: #999999;
+
+  }
+
+
+  .img {
+    position: absolute;
+    bottom: size(-30);
+    left: size(-270);
+    width: size(660);
+
+    &::before {
+      content: "";
+      width: 120%;
+      height: 20%;
+      border-radius: 50%;
+      background: #1691CF;
+      display: block;
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+    }
+
+    img {
+      width: 100%;
+      position: relative;
+    }
+  }
 
   .main {
     @apply flex;
     margin: 0;
+    flex-basis: size(590);
     flex-direction: column;
-    text-align: center;
-    width: 100%;
-  }
-
-  .txt {
-    margin: auto;
-    width: size(1500);
+    text-align: justify;
   }
 
   .slider {
     margin: 0;
-    flex-basis: size(1000);
-    height: size(1000);
-    width: size(1500);
+    flex-basis: size(840);
+    width: size(840);
+    height: size(560);
 
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-      flex-basis: size(1500);
-      height: size(1000);
+      flex-basis: size(840);
+      height: size(560);
 
     }
 
     .splide__pagination {
+      right: calc(100% + 3em);
       justify-content: flex-end;
-      bottom: -2em;
-
-    }
-
-    .splide__pagination li button {
-      background: #999999 !important;
     }
   }
 }
@@ -96,7 +118,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s7 {
+  .s11 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -104,12 +126,28 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    background: url("./s6/bg.png") 0% 0%;
 
-    .eggbg1 {
-      top: sizem(50);
-      left: sizem(100);
-      width: sizem(400);
+    .eggbg2 {
+      top: sizem(-160);
+      right: sizem(-80);
+      width: sizem(280);
+      transform: translateY(-10%);
+    }
+
+    .oo1 {
+      top: sizem(30);
+      height: sizem(20);
+      left: auto;
+      right: sizem(100);
+    }
+
+    .img {
+      position: absolute;
+      top: sizem(300);
+      left: auto;
+      right: sizem(-155);
+      width: sizem(260);
+      bottom: auto;
     }
 
     .main {
@@ -121,11 +159,17 @@
       margin: 4.4em auto 1.3em;
     }
 
+    h3.title {
+      color: #BE771A;
+      font-family: Noto Serif TC;
+    }
+
     .slider {
       height: auto;
       width: 100%;
 
       .caption {
+        color: #acff2d;
         font-size: sizem(12);
         right: sizem(5);
         bottom: sizem(5);
@@ -145,8 +189,8 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -172,36 +216,32 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s7/1.webp", import.meta.url).href,
-    caption: "外觀實景經電腦修飾"
+    img: new URL("./s11/s11-1.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s7/2.webp", import.meta.url).href,
-    caption: "外觀實景經電腦修飾"
+    img: new URL("./s11/s11-2.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s7/3.webp", import.meta.url).href,
-    caption: "外觀實景經電腦修飾"
+    img: new URL("./s11/s11-3.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s7/4.webp", import.meta.url).href,
-    caption: "社區梯廳實景"
+    img: new URL("./s11/s11-4.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s7/5.webp", import.meta.url).href,
-    caption: "社區門面實景"
+    img: new URL("./s11/s11-5.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s7/6.webp", import.meta.url).href,
-    caption: "接待大廳實景"
+    img: new URL("./s11/s11-6.png", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s7/7.webp", import.meta.url).href,
-    caption: "淡水河畔公園實景"
-  },
-  {
-    img: new URL("./s7/8.webp", import.meta.url).href,
-    caption: "淡水河畔公園實景"
+    img: new URL("./s11/s11-7.png", import.meta.url).href,
+    caption: ""
   },
 ]
 </script>
