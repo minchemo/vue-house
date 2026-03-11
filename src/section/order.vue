@@ -175,6 +175,7 @@
     font-weight: 700;
     color: #BE771A !important;
     padding-top: 2em;
+    font-family: Noto Serif TC;
   }
 
   .order-title-img {
@@ -348,6 +349,7 @@
 
     .order-title {
       font-size: sizem(25);
+      font-family: Noto Serif TC;
       // padding-top:4.5em;
     }
 

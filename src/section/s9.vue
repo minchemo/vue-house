@@ -2,6 +2,7 @@
   <article class="s9" ref="s9">
     <div class="main">
       <div class="txt">
+        <img src="./s9/s9-T3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s9-t3">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">漫步生命之河<br v-if="isMobile">&nbsp;&nbsp;徜徉公園綠意</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
           日常裡,步伐放慢,沿著龍頸溪畔漫步, 讓水岸綠意成為生活的一部分。 週末時光,轉身走進六堆紀念公園, 奔跑、打球、嬉戲,為生活注入滿滿活力。</p>
@@ -36,15 +37,20 @@
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
+  background: url("./s9/bg.png") 0% 0%;
   background-size: cover;
-  background: url("./s1/bg.png") 0% 0%;
 
   .slider .slide-item img {
     border-radius: 0;
   }
 
+  img.s9-t3 {
+    width: size(222);
+  }
+
   h3.title {
     color: #BE771A;
+    font-family: Noto Serif TC;
   }
 
   P.desc {

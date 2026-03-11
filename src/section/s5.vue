@@ -2,6 +2,7 @@
   <article class="s5" ref="s5">
     <div class="main">
       <div class="txt">
+        <img src="./s5/s5-t3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s5-t3" alt="">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">
           義大健康園區 <br v-if="isMobile" />全新醫療聚落
         </h3>
@@ -37,12 +38,17 @@
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
-  background: url("./s5/bg.png") 0% 0%;
+  background: url("./s5/s5bg.png") 0% 0%;
   background-size: cover;
-  
+
   .slider .slide-item img {
     border-radius: 0;
   }
+
+  img.s5-t3 {
+    width: size(250);
+  }
+
   h3.title {
     color: #BE771A;
     font-family: Noto Serif TC;

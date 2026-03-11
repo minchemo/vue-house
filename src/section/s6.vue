@@ -2,6 +2,7 @@
   <article class="s6" ref="s6">
     <div class="main">
       <div class="txt">
+        <img src="./s6/s6-t3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s6-t3" alt="">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">國道╳鐵路 <br v-if="isMobile" /> 多元交通路網
         </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
@@ -44,6 +45,10 @@
 
   .slider .slide-item img {
     border-radius: 0;
+  }
+
+  img.s6-t3 {
+    width: size(200);
   }
 
   h3.title {

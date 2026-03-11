@@ -2,6 +2,7 @@
   <article class="s11" ref="s11">
     <div class="main">
       <div class="txt">
+        <img src="./s11/s11-T3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s11-t3">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">
           細節追求極致<br v-if="isMobile" /> 建築 以人為本
         </h3>
@@ -42,6 +43,10 @@
 
   .slider .slide-item img {
     border-radius: 0;
+  }
+
+  img.s11-t3 {
+    width: size(230);
   }
 
   h3.title {

@@ -4,7 +4,7 @@
       <img src="@/section/form/order-bg.png" class="" alt="">
     </div>
     <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-      <div class="logo"></div>
+      <!--  <div class="logo"></div>-->
       <div class="flex justify-between w-full contact-item-box">
         <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
           v-if="info.phone">

@@ -2,9 +2,10 @@
   <article class="s8" ref="s8">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">世界精品建材<br v-if="isMobile" />體現家的品味</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">每一處細節,嚴選世界級知名建材,不張揚,卻在每一次使用中被感受。
-          百春陽把對品質的堅持,融入日常生活,讓家的品味,不只看得見,更住得出來。</p>
+        <img src="./s8/s8-t3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s8-t3" alt="">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">校園咫尺為鄰 <br v-if="isMobile" />完整成長動能</h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">成長,就在校園環繞的日常之中, 東寧國小、內埔國中、美和高中、美和科大、 屏東科大等學府齊聚, 從啟蒙到深耕,
+          陪伴孩子走過每一段重要學習歷程,為孩子的成長,奠定更好的背景與更寬廣的未來。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -43,6 +44,10 @@
 
   .slider .slide-item img {
     border-radius: 0;
+  }
+
+  img.s8-t3 {
+    width: size(315);
   }
 
   h3.title {

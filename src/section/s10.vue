@@ -2,8 +2,7 @@
   <article class="s10" ref="s10">
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="0">世界精品建材<br v-if="isMobile" />體現家的品味
-        </h3>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="0">世界精品建材<br v-if="isMobile" />體現家的品味 </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">每一處細節,嚴選世界級知名建材,不張揚,卻在每一次使用中被感受。
           百春陽把對品質的堅持,融入日常生活,讓家的品味,不只看得見,更住得出來。</p>
       </div>

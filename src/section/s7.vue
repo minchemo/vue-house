@@ -2,6 +2,7 @@
   <article class="s7" ref="s7">
     <div class="main">
       <div class="txt">
+        <img src="./s7/s7-t3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s7-t3" alt="">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">
           內埔生活主場 <br v-if="isMobile" /> 人潮自然匯聚
         </h3>
@@ -42,6 +43,10 @@
 
   .slider .slide-item img {
     border-radius: 0;
+  }
+
+  img.s7-t3 {
+    width: size(190);
   }
 
   h3.title {
