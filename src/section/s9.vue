@@ -45,7 +45,7 @@
   }
 
   img.s9-t3 {
-    width: size(222);
+    width: size(440);
   }
 
   h3.title {

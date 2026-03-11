@@ -46,7 +46,7 @@
   }
 
   img.s11-t3 {
-    width: size(230);
+    width: size(460);
   }
 
   h3.title {

@@ -153,7 +153,7 @@
         @apply bg-cover;
         width: 100%;
         flex-basis: auto;
-        height: sizem(250);
+        height: sizem(116);
 
       }
     }

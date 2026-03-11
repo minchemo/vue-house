@@ -46,6 +46,7 @@
     border-radius: 0;
   }
 
+
   h3.title {
     width: 17em;
     color: #BE771A;

@@ -48,7 +48,7 @@
   }
 
   img.s6-t3 {
-    width: size(200);
+    width: size(400);
   }
 
   h3.title {
