@@ -141,7 +141,7 @@
     flex-direction: column-reverse;
     background-image: url("./s5/s5bg-mo.png");
 
-    //滿版撐開 簡寫覆蓋
+    //滿版撐開 避免簡寫覆蓋
     background-size: cover;
 
 
