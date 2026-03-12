@@ -43,7 +43,9 @@
 
   .slider .splide__pagination li button.is-active {
     background: #be771a;
-  }//slider btn active color
+  }
+
+  //slider btn active color
 
   .slider .slide-item img {
     border-radius: 0;
@@ -135,8 +137,13 @@
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
+
     flex-direction: column-reverse;
-    background: url("./s5/s5bg-mo.png") 0% 0%;
+    background-image: url("./s5/s5bg-mo.png");
+
+    //滿版撐開 簡寫覆蓋
+    background-size: cover;
+
 
     .splide__track {
       padding-top: 50px;
