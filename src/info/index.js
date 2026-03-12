@@ -6,11 +6,11 @@ export default {
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
     address: "屏東縣內埔鄉勝利路650號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3613.3579285003116!2d121.48823228576524!3d25.089742427027822!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af3158704313%3A0xb2be58c7f4e58f31!2z5b6u56yR5a-T5omA!5e0!3m2!1szh-TW!2stw!4v1764641768619!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/U2tLSCSNRj7fdrcU7",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.862050175205!2d120.55723177628218!3d22.62162603116982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e22e8da6432f3%3A0xb53a058c50bb71a2!2zOTEy5bGP5p2x57ij5YWn5Z-U6YSJ5Yud5Yip6LevNjUw6Jmf!5e0!3m2!1szh-TW!2stw!4v1773281500673!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/cbEZc3dhpk175f948",
     phone: "08-7788760",
-    fbLink: "https://www.facebook.com/61556636163046",
-    fbMessage: "https://m.me/61556636163046",
+    fbLink: "https://www.facebook.com/61588580858859",
+    fbMessage: "https://m.me/61588580858859",
     line: "https://lin.ee/jX9Xyhz",
     caseName: caseName,
     houseInfos: [
