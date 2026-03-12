@@ -56,7 +56,7 @@
 
     background-image: url("./s12/s12bg-mo.png");
 
-    //滿版撐開 簡寫覆蓋
+    //滿版撐開 避免簡寫覆蓋
     background-size: cover;
 
     .main img {
