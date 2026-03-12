@@ -10,7 +10,7 @@
     <div class="txt">
       <img src="./s1/bg3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="eggbg" alt="">
       <img src="./s1/logo.png" alt="logo" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" class="logo">
-      <img src="./s1/txt.png" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" alt="txt" class="txt1">
+      <img src="./s1/txt.svg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" alt="txt" class="txt1">
     </div>
     <!-- 
     <div class="img">
@@ -24,8 +24,8 @@
       <img src="./s1/cloud.png" alt="oo1" class="oo1">
     </div>
     <div class="hill">
-      <img src="./s1/hill-pc.png" alt="oo" v-if="!isMobile">
-      <img src="./s1/hill-mo.png" alt="oo" v-else>
+      <img src="./s1/hill-pc.svg" alt="oo" v-if="!isMobile">
+      <img src="./s1/hill-mo.svg" alt="oo" v-else>
     </div>
 
   </article>
@@ -193,13 +193,12 @@
     }
 
     .cloud img {
+      display: none;
       position: relative;
       height: 20vw;
-
       top: -250px;
       right: 12vw;
       width: 121%;
-
     }
 
     .oo1 {
