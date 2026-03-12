@@ -12,12 +12,13 @@
       <img src="./s1/logo.png" alt="logo" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" class="logo">
       <img src="./s1/txt.png" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" alt="txt" class="txt1">
     </div>
-    <!--  -->
+    <!-- 
     <div class="img">
       <img src="./s1/mark.png" alt="">
       <img src="./s1/img.png" alt="">
       <img src="" alt="">
-    </div>
+    </div> 
+    -->
 
     <div class="cloud">
       <img src="./s1/cloud.png" alt="oo1" class="oo1">

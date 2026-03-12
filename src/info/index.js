@@ -11,7 +11,7 @@ export default {
     phone: "08-7788760",
     fbLink: "https://www.facebook.com/61588580858859",
     fbMessage: "https://m.me/61588580858859",
-    line: "https://lin.ee/jX9Xyhz",
+    //line: "https://lin.ee/jX9Xyhz",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "百春陽建設股份有限公司"],
@@ -31,6 +31,8 @@ export default {
     },
     //底下2個 沒項目就會隱藏
     selectFields: {
+
+        /* ..
         room_type: {
             title: "需求房型",
             hold: "請選擇房型",
@@ -42,7 +44,7 @@ export default {
             hold: "請選擇區間",
             option: ["1000-1500萬", "1500-2000萬", "2000-2500萬", "2500-3000萬"],
             //bypass: true, //必填開啟使用
-        },
+        },. */
     },
 
     navList: [{
