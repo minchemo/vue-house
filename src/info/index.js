@@ -1,27 +1,25 @@
-const caseName = "微笑寓所"
+const caseName = "春陽沄集"
 
 export default {
-    caseid: "edac4bb5-19ff-47be-a468-16f67d8d07d8",
+    caseid: "d8fe067d-8064-4a5c-9c54-3444fde66b68",
     // case_code: "wsys",
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
     address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "241新北市三重區吉祥街61號",
+    address: "屏東縣內埔鄉勝利路650號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3613.3579285003116!2d121.48823228576524!3d25.089742427027822!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af3158704313%3A0xb2be58c7f4e58f31!2z5b6u56yR5a-T5omA!5e0!3m2!1szh-TW!2stw!4v1764641768619!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/U2tLSCSNRj7fdrcU7",
-    phone: "02-2855-9933",
+    phone: "08-7788760",
     fbLink: "https://www.facebook.com/61556636163046",
     fbMessage: "https://m.me/61556636163046",
     line: "https://lin.ee/jX9Xyhz",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "茂群國際投資有限公司"],
-        ["建築設計", "曾聰憲建築師"],
-        ["結構設計", "林慶榮結構技師"],
-        ["工程營造", "笙泰營造"],
-        ["企劃銷售", "欣和地產股份有限公司"],
-        ["使用執照", "110重使字第00336號"],
+        ["投資興建", "百春陽建設股份有限公司"],
+        ["建築設計", "李季岡建築師事務所"],
+        ["企劃銷售", "自售"],
+        ["使用執照", "(115)屏府城管使(內)字第00145-00159號"],
     ],
-    gtmCode: ["GTM-W6PJV9QK"], // 可放置多個
+    gtmCode: ["GTM-P49QXNXC"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
