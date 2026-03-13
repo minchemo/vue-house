@@ -21,7 +21,7 @@
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s2 {
+.s3 {
   @apply relative overflow-hidden w-full;
 font-size: 15px;
 line-height: 1.5;
