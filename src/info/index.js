@@ -44,14 +44,14 @@ export default {
           hold: "請選擇房型",
           option: ["兩房", "三房"],
           bypass:false,
-        },
+        }, /*
         budget: {
           title: "購屋預算",
           hold: "請選擇區間",
           option: ["1000", "2000", "3000"],
-          bypass:true, //必填開啟使用
+          //bypass:true, //必填開啟使用
         },
-        /*
+       
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",

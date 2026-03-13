@@ -341,7 +341,7 @@ const sending = ref(false)
 const submitted = ref(false)
 
 // ✅ v2 SITE_KEY
-const RECAPTCHA_SITE_KEY = "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz"
+const RECAPTCHA_SITE_KEY = info.recaptcha_site_key_v2
 
 const requiredFields = {
   name: "姓名",
@@ -491,26 +491,24 @@ const send = () => {
 
   // ===== API =====
   fetch("https://mail-service-735828106799.asia-east1.run.app/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(presend)
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(presend)
+})
+  .then((response) => response.json())
+  .then((data) => {
+    if (data.converted === true) {
+      window.location.href = "formThanks";
+    } else {
+      window.location.href = "form-Thanks";
+    }
   })
-    .then((response) => {
-      if (response.status === 200) {
-        window.location.href = "formThanks";
-      } else {
-        return response.json().then((err) => {
-          console.error("後端錯誤訊息：", err);
-          toast.error(err.message || "提交失敗");
-        });
-      }
-    })
-    .catch((error) => {
-      console.error("傳送失敗：", error);
-      toast.error("無法連線或伺服器錯誤");
-    })
-    .finally(() => {
-      sending.value = false;
-    });
+  .catch((error) => {
+    console.error("傳送失敗：", error);
+    toast.error("無法連線或伺服器錯誤");
+  })
+  .finally(() => {
+    sending.value = false;
+  });
 };
 </script>

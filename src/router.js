@@ -11,6 +11,12 @@ const routes = [{
         component: () =>
             import ("@/pages/FormThanks.vue"),
     },
+    {//回傳錯誤時
+        path: "/form-Thanks",
+        name: "form-hanks",
+        component: () =>
+            import ("@/pages/FormThanks.vue"),
+    },
     {
         path: "/phoneThanks",
         name: "phoneThanks",
