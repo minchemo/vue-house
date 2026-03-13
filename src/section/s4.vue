@@ -138,6 +138,10 @@
     background: url("./s4/bg.png") 0% 0%;
     flex-direction: column-reverse;
 
+    p.desc {
+      font-size: 1.3em;
+    }
+
     .slider .splide__pagination li button {
       background: #999999;
     }

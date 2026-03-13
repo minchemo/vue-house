@@ -61,8 +61,8 @@
   }
 
   p.desc {
-
     color: #5B5959;
+    font-size: 1.5em;
   }
 
   .slider .splide__pagination li button {
@@ -144,6 +144,9 @@
     //滿版撐開 避免簡寫覆蓋
     background-size: cover;
 
+    p.desc {
+      font-size: 1.3em;
+    }
 
     .splide__track {
       padding-top: 50px;

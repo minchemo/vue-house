@@ -59,7 +59,7 @@
   }
 
   p.desc {
-
+    font-size: 1.5em;
     color: #5B5959;
   }
 
@@ -136,6 +136,10 @@
     margin-bottom: 0em;
     gap: 0em;
     flex-direction: column-reverse;
+
+    p.desc {
+      font-size: 1.3em;
+    }
 
     .eggbg2 {
       top: sizem(-160);

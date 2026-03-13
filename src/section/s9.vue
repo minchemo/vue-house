@@ -61,6 +61,7 @@
 
   P.desc {
     color: #5B5959;
+    font-size: 1.5em;
   }
 
 
@@ -139,6 +140,10 @@
     gap: 0em;
     background: url("./s9/bg.png") 0% 0%;
     flex-direction: column-reverse;
+
+    p.desc {
+      font-size: 1.3em;
+    }
 
     .img {
       position: absolute;

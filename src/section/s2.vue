@@ -45,6 +45,7 @@
       color: #fff;
       font-size: 1.5em;
       width: 43em;
+      width: 20em;
       margin: 0 auto;
     }
   }
@@ -101,13 +102,10 @@
       p.desc {
         color: #fff;
         font-size: 1em;
+        width: 19em;
       }
     }
 
-
-    p.desc {
-      color: #fff;
-    }
 
     .viewbox {
       height: sizem(550);

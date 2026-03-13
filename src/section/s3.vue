@@ -115,6 +115,10 @@
     gap: 0em;
     background: url("./s3/bg.png") 0% 0%;
 
+    p.desc {
+      font-size: 1.3em;
+    }
+
     .eggbg1 {
       top: sizem(50);
       left: sizem(100);

@@ -64,6 +64,7 @@
 
   p.desc {
     color: #5B5959;
+    font-size: 1.5em;
   }
 
   .img {
@@ -142,6 +143,10 @@
     gap: 0em;
     background: url("./s8/bg.png") 0% 0%;
     flex-direction: column-reverse;
+
+    p.desc {
+      font-size: 1.3em;
+    }
 
     .slider .splide__pagination li button {
       background: #999999;

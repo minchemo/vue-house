@@ -184,7 +184,7 @@
   }
 
   .order-subTitle {
-    font-size: size(17);
+    font-size: size(15);
     color: #5B5959 !important;
     padding-top: .8em;
     letter-spacing: 0em;
@@ -358,7 +358,7 @@
     }
 
     .order-subTitle {
-      font-size: sizem(13);
+      font-size: sizem(15);
       padding-top: 0;
     }
 

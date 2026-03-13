@@ -187,9 +187,9 @@
     }
 
     .eggbg {
-      top: 65%;
-      width: 37%;
-      left: -1%;
+      top: 51%;
+      width: 46%;
+      left: 27%;
     }
 
     .cloud img {
@@ -210,6 +210,10 @@
     .hill {
       bottom: 0px;
       left: 0vw;
+
+      img {
+        margin-bottom: -1px;
+      }
     }
 
 
