@@ -39,6 +39,7 @@
     .title {
       color: #fff;
       padding-top: 3.2em;
+      font-family: Noto Serif TC;
     }
 
     p.desc {
@@ -97,6 +98,7 @@
       .title {
         color: #fff;
         padding-top: 1em;
+        font-family: Noto Serif TC;
       }
 
       p.desc {
