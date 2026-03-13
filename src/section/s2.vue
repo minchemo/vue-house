@@ -21,6 +21,7 @@
   // height: size(1059);
   font-size: size(19);
   margin-left: -1px;
+  background: #1367af;
 
   .caption {
     background: #1367af;
@@ -32,16 +33,19 @@
   .txt {
     text-align: center;
     position: relative;
-    padding-top: 3.2em;
     z-index: 10;
     margin-bottom: -9.3em;
 
     .title {
       color: #fff;
+      padding-top: 3.2em;
     }
 
     p.desc {
       color: #fff;
+      font-size: 1.5em;
+      width: 43em;
+      margin: 0 auto;
     }
   }
 
