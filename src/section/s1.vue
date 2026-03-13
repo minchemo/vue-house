@@ -24,7 +24,7 @@
       <img src="./s1/cloud.png" alt="oo1" class="oo1">
     </div>
     <div class="hill">
-      <img src="./s1/hill-pc.svg" alt="oo" v-if="!isMobile">
+      <img src="./s1/hill-pc.png" alt="oo" v-if="!isMobile">
       <img src="./s1/hill-mo.svg" alt="oo" v-else>
     </div>
 
@@ -133,7 +133,7 @@
     top: 10vw;
     left: 2vw;
     width: 120%;
-    top: 30vw;
+    top: 35vw;
 
   }
 
@@ -187,7 +187,7 @@
     }
 
     .eggbg {
-      top: 55%;
+      top: 65%;
       width: 37%;
       left: -1%;
     }

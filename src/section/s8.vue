@@ -33,7 +33,7 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
-  padding: 11em 0 10em 0;
+  padding: 5em 0 5em 0;
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
@@ -41,12 +41,12 @@
   background: url("./s8/bg.png") 0% 0%;
   background-size: cover;
   flex-direction: row-reverse;
-  
+
   .slider .splide__pagination li button.is-active {
-      background: #be771a;
-    }
-  
-    //slider btn active color
+    background: #be771a;
+  }
+
+  //slider btn active color
 
   .slider .slide-item img {
     border-radius: 0;

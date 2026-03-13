@@ -16,7 +16,7 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
-  padding: 6em 0 10em 0;
+  padding: 6em 0 5em 0;
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;

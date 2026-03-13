@@ -34,16 +34,16 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
-  padding: 11em 0 10em 0;
+  padding: 5em 0 5em 0;
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
   background: url("./s11/bg.png") 0% 0%;
   background-size: cover;
-  
+
   .slider .splide__pagination li button.is-active {
-      background: #be771a;
-    }
+    background: #be771a;
+  }
 
   .slider .slide-item img {
     border-radius: 0;
@@ -247,10 +247,6 @@ const imgs = [
   },
   {
     img: new URL("./s11/s11-6.png", import.meta.url).href,
-    caption: ""
-  },
-  {
-    img: new URL("./s11/s11-7.png", import.meta.url).href,
     caption: ""
   },
 ]

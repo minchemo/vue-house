@@ -96,6 +96,7 @@
 
       p.desc {
         color: #fff;
+        font-size: 1em;
       }
     }
 

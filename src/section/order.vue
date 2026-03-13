@@ -326,7 +326,7 @@
     background-image: url("@/section/form/bg.png");
     background-repeat: repeat-y;
     background-position: center;
-    background-size: cover;
+    background-size: revert;
     // border-radius: sizem(68) sizem(68) 0 0;
     /* padding-top: sizem(0);
     margin-top: sizem(0);

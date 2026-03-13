@@ -33,7 +33,7 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height: auto;
-  padding: 11em 0 10em 0;
+  padding: 5em 0 5em 0;
   font-size: size(19);
   gap: 3em;
   flex-wrap: wrap;
@@ -58,6 +58,7 @@
 
   p.desc {
     color: #5B5959;
+    font-size: 1.5em;
   }
 
   .img {

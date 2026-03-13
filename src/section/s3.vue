@@ -16,9 +16,7 @@
       <div class="txt">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">一間店舖 <br v-if="isMobile">一棟電梯墅 </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          繼日出莊園系列別墅後，百春陽回到內埔，再推全新鉅作「春陽沄集」，
-          稀有透天電梯店墅。樓下全能金店，樓上三代共享的<br />
-          豪宅雙富規劃，跳脫老街舊屋框架，以現代簡約揉合大器石材，
+          繼日出莊園系列別墅後，百春陽回到內埔，再推全新鉅作「春陽沄集」，稀有透天電梯店墅。樓下全能金店，樓上三代共享的豪宅雙富規劃，跳脫老街舊屋框架，以現代簡約揉合大器石材，
           形塑聚客門面，成就一棟傳家、傳富、傳承世代的別墅。</p>
       </div>
     </div>
@@ -32,7 +30,7 @@
   //@apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
   // height: size(800);
-  padding: 10em 0 10em 0;
+  padding: 10em 0 1em 0;
   font-size: size(18);
   gap: 1.5em;
   flex-wrap: nowrap;
@@ -53,6 +51,7 @@
 
   p.desc {
     color: #5B5959;
+    font-size: 1.5em;
   }
 
 
