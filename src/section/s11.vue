@@ -230,27 +230,31 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s11/s11-1.png", import.meta.url).href,
+    img: new URL("./s11/s11-1.jpg", import.meta.url).href,
     caption: ""
   },
   {
-    img: new URL("./s11/s11-2.png", import.meta.url).href,
+    img: new URL("./s11/s11-2.jpg", import.meta.url).href,
     caption: ""
   },
   {
-    img: new URL("./s11/s11-3.png", import.meta.url).href,
+    img: new URL("./s11/s11-3.jpg", import.meta.url).href,
     caption: ""
   },
   {
-    img: new URL("./s11/s11-4.png", import.meta.url).href,
+    img: new URL("./s11/s11-4.jpg", import.meta.url).href,
     caption: ""
   },
   {
-    img: new URL("./s11/s11-5.png", import.meta.url).href,
+    img: new URL("./s11/s11-5.jpg", import.meta.url).href,
     caption: ""
   },
   {
-    img: new URL("./s11/s11-6.png", import.meta.url).href,
+    img: new URL("./s11/s11-6.jpg", import.meta.url).href,
+    caption: ""
+  },
+  {
+    img: new URL("./s11/s11-7.jpg", import.meta.url).href,
     caption: ""
   },
 ]
