@@ -72,7 +72,7 @@
   .slider {
     margin: 0 auto;
     //flex-basis: size(840);
-    height: size(534);
+    height: size(793);
     width: size(1725);
 
     .splide__slide img {
@@ -83,7 +83,7 @@
       @apply bg-cover;
       width: 100%;
 
-      height: size(534);
+      height: size(793);
 
     }
 
