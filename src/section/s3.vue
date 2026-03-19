@@ -193,7 +193,7 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s3/S3-2.png", import.meta.url).href,
+    img: new URL("./s3/S3-2.jpg", import.meta.url).href,
     caption: "外觀3D數位影像合成示意圖、情境示意圖"
   },
 ]
