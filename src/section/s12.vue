@@ -1,7 +1,7 @@
 <template>
   <article class="s12" ref="s12">
     <div class="main">
-      <img src="./s12/logomap.png" alt="logo" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+      <img src="./s12/logomap.svg" alt="logo" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
         class="logo">
     </div>
 
