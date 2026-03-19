@@ -33,7 +33,7 @@
     text-align: justify;
 
     img {
-      width: size(600);
+      width: size(530);
     }
 
   }
