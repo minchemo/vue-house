@@ -144,8 +144,8 @@
     .slider {
       height: auto;
       width: 100%;
-      //height: size(793);
-      //width: size(1725);
+      //height: sizem(793);
+      //width: sizem(1725);
       margin: 0 auto;
 
       .caption {
