@@ -67,6 +67,7 @@
   .txt {
     margin: auto;
     width: size(1500);
+    margin-left: 5em;
   }
 
   .slider {
