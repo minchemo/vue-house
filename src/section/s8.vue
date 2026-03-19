@@ -164,10 +164,14 @@
     .main {
       padding: 0 sizem(32.5);
       width: 100%;
+
+      .txt img {
+        width: 41vw;
+      }
     }
 
     .txt {
-      margin: 4.4em auto 1.3em;
+      margin: 3em auto 3em;
     }
 
 

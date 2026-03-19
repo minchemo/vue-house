@@ -160,7 +160,7 @@
     }
 
     .txt {
-      margin: 4.4em auto 1.3em;
+      margin: 3em auto 3em;
     }
 
 

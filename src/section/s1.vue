@@ -73,14 +73,16 @@
     z-index: 99;
   }
    */
+  .cloud img {
+    top: 47vw;
+  }
 
   img {
     position: absolute;
     position: relative;
     z-index: 2;
+    margin-top: -14vw;
   }
-
-
 
   .txt {
     position: absolute;
@@ -91,8 +93,7 @@
   .eggbg {
     position: absolute;
     display: block;
-
-    top: 17%;
+    top: 72%;
     width: 21%;
     left: 4%;
     //pc
@@ -102,7 +103,7 @@
     position: relative;
     display: block;
     margin: auto;
-    top: -5vw;
+    top: -9vw;
     left: 10vw;
     width: size(634);
     //pc
@@ -187,7 +188,7 @@
     }
 
     .eggbg {
-      top: 51%;
+      top: 79%;
       width: 46%;
       left: 27%;
     }

@@ -101,6 +101,10 @@
     flex-basis: size(590);
     flex-direction: column;
     text-align: justify;
+
+    .txt img {
+      width: 41vw;
+    }
   }
 
   .slider {
@@ -174,7 +178,7 @@
     }
 
     .txt {
-      margin: 4.4em auto 1.3em;
+      margin: 3em auto 3em;
     }
 
     h3.title {
