@@ -222,20 +222,20 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s8/S8-g1.png", import.meta.url).href,
-    caption: "國道3號、情境示意圖"
+    img: new URL("./s8/S8-g1.jpg", import.meta.url).href,
+    caption: "屏東科大實景拍攝"
   },
   {
-    img: new URL("./s8/S8-g2.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s8/S8-g2.jpg", import.meta.url).href,
+    caption: "內埔國中實景拍攝"
   },
   {
-    img: new URL("./s8/S8-g3.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s8/S8-g3.jpg", import.meta.url).href,
+    caption: "東寧國小實景拍攝"
   },
   {
-    img: new URL("./s8/S8-g4.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s8/S8-g4.jpg", import.meta.url).href,
+    caption: "美和科大實景拍攝"
   },
 ]
 </script>

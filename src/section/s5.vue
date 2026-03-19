@@ -234,11 +234,11 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s5/s41.png", import.meta.url).href,
+    img: new URL("./s5/s5-1.jpg", import.meta.url).href,
     caption: "情境示意圖"
   },
   {
-    img: new URL("./s5/s42.png", import.meta.url).href,
+    img: new URL("./s5/s5-2.jpg", import.meta.url).href,
     caption: "情境示意圖"
   },
 ]

@@ -231,11 +231,11 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s7/s7-g1.png", import.meta.url).href,
+    img: new URL("./s7/s7-g1.jpg", import.meta.url).href,
     caption: "情境示意圖"
   },
   {
-    img: new URL("./s7/s7-g2.png", import.meta.url).href,
+    img: new URL("./s7/s7-g2.jpg", import.meta.url).href,
     caption: "廣濟路商圈,內譜黃昏市場實景拍攝"
   },
 ]

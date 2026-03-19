@@ -216,15 +216,15 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s4/301.png", import.meta.url).href,
+    img: new URL("./s4/401.png", import.meta.url).href,
     caption: "情境示意圖"
   },
   {
-    img: new URL("./s4/302.png", import.meta.url).href,
+    img: new URL("./s4/402.jpg", import.meta.url).href,
     caption: "外觀3D數位影像合成示意圖、情境示意圖"
   },
   {
-    img: new URL("./s4/303.png", import.meta.url).href,
+    img: new URL("./s4/403.png", import.meta.url).href,
     caption: "情境示意圖"
   },
 ]

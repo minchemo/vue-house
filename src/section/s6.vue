@@ -223,12 +223,12 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s6/s6-g1.png", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s6/s6-g1.jpg", import.meta.url).href,
+    caption: "國道3號情境示意圖"
   },
   {
-    img: new URL("./s6/s6-g2.png", import.meta.url).href,
-    caption: "國道3號、情境示意圖"
+    img: new URL("./s6/s6-g2.jpg", import.meta.url).href,
+    caption: "鐵路情境示意圖"
   },
 ]
 </script>

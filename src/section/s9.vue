@@ -220,20 +220,20 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s9/s9-g1.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s9/s9-g1.jpg", import.meta.url).href,
+    caption: "六堆紀念公園"
   },
   {
-    img: new URL("./s9/s9-g2.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s9/s9-g3.jpg", import.meta.url).href,
+    caption: "龍頸溪溪畔公園"
   },
   {
-    img: new URL("./s9/s9-g3.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s9/s9-g4.jpg", import.meta.url).href,
+    caption: "六堆紀念公園"
   },
   {
-    img: new URL("./s9/s9-g4.png", import.meta.url).href,
-    caption: ""
+    img: new URL("./s9/s9-g2.jpg", import.meta.url).href,
+    caption: "龍頸溪溪畔公園"
   },
 ]
 </script>

@@ -215,7 +215,7 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s10/s10-g1.png", import.meta.url).href,
+    img: new URL("./s10/s10-g1.jpg", import.meta.url).href,
     caption: ""
   },
   {
