@@ -144,6 +144,8 @@
     .slider {
       height: auto;
       width: 100%;
+      //height: size(793);
+      //width: size(1725);
       margin: 0 auto;
 
       .caption {
@@ -155,8 +157,9 @@
       .slide-item {
         @apply bg-cover;
         width: 100%;
+        // width: size(1725);
         flex-basis: auto;
-        height: sizem(116);
+        height: sizem(155);
 
       }
     }
