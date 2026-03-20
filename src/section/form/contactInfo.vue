@@ -215,8 +215,9 @@
     // min-width: 680px;
 
     .contact-item {
-      background-color: #ffffff;
-      color: #000;
+      background-color: #693331;
+      color: #EDDCAB;
+
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
@@ -230,29 +231,30 @@
       cursor: pointer;
       //border: 1px solid #C29267;
       gap: 1em;
-      border-radius: 0.5em;
+      border-radius: 0em;
       margin-left: -13px;
 
       &:hover {
-        background-color: #005366;
-        color: #FFF;
+        background-color: #313f6c;
+        color: #EDDCAB;
 
         img {
-          filter: brightness(0) invert(1);
+          // filter: brightness(0) invert(1); //SVG 顏色
+          filter: invert(87%) sepia(24%) saturate(371%) hue-rotate(4deg) brightness(98%) contrast(92%);
         }
       }
 
       img {
+        filter: invert(87%) sepia(24%) saturate(371%) hue-rotate(4deg) brightness(98%) contrast(92%);
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
         transition: all .5s;
         margin: 0;
       }
 
       &.address {
-        background-color: #DDD;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -283,10 +285,11 @@
         flex: 1;
         //    background-color: #9B1E44;
         border-left-width: 0;
-        color: #000;
+        color: #EDDCAB;
 
         img {
-          filter: brightness(0) invert(0);
+          // 黑白 filter: brightness(0) invert(0.5);
+          filter: invert(87%) sepia(24%) saturate(371%) hue-rotate(4deg) brightness(98%) contrast(92%);
         }
 
         &:hover {

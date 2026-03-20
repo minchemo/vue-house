@@ -35,15 +35,22 @@ export default {
 
 
     order: {
-        title: "我要預約",
-        subTitle: "",
-        subTitle_mo: "",
+        title: "預約賞屋",
+        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        subTitle_mo: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
     //  表單欄位
     // room_type: ["兩房", "三房"],
     selectFields: {
+
+        budget: {
+            title: "購屋預算",
+            hold: "請選擇區間",
+            option: ["3500~4000萬", "4000萬以上"],
+            bypass: false, //必填開啟使用
+        },
         /*
         use_type: {
             title: "年齡",
@@ -59,13 +66,6 @@ export default {
                   bypass: false,
               },
             
-      
-              budget: {
-                  title: "購屋預算",
-                  hold: "請選擇區間",
-                  option: ["2388~2588萬", "2688~2888萬"],
-                  bypass: false, //必填開啟使用
-              },
       
            use_type: {
              title: "使用用途",

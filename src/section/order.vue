@@ -14,13 +14,14 @@
               @input="(event) => (formData.name = event.target.value)" />
           </label>
 
-
+          <!-- 性別
           <div class="gender">
             <label><input type="radio" name="gender" value="男"
                 @input="(event) => (formData.gender = event.target.value)">先生</label>
             <label><input type="radio" name="gender" value="女"
                 @input="(event) => (formData.gender = event.target.value)">女士</label>
           </div>
+          -->
 
 
           <label class="row"><span>手機<span>*</span></span>
@@ -69,9 +70,8 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFF] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        <p class="">
+          本人知悉並同意<label for="policy-modal" class="modal-button  cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -111,7 +111,12 @@
   background-image: url("./s1/bg.jpg");
   background-size: auto;
   background-position: top;
+
   // margin-top: -4.5vw;
+  .cursor-pointer {
+    cursor: pointer;
+    color: #FFF900;
+  }
 
   .bg-image {
     position: absolute;
@@ -131,8 +136,8 @@
 
   .order-title {
     font-size: size(45);
-    font-weight: 700;
-    color: #FFF;
+    font-weight: 500;
+    color: #4A2321;
     padding-top: 1.5em;
     letter-spacing: 0.1em;
     display: flex;
@@ -159,7 +164,7 @@
 
   .order-subTitle {
     font-size: size(17);
-    color: #F8F66F;
+    color: #4A2321;
     padding-top: .8em;
     padding-bottom: 1em;
     letter-spacing: .1em;
@@ -244,9 +249,7 @@
         }
       }
 
-      &.name {
-        width: calc(100% - 3.8em);
-      }
+      //&.name {  width: calc(100% - 3.8em); }
 
       //沒有性別的話這條槓掉
     }
@@ -272,12 +275,12 @@
     font-size: 20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    //background-color: #F8F66F; 
-    background: linear-gradient(to bottom, #fbcf00 5%, #cb9b0c 25%, #cb9b0c 70%, #ffe87b 95%);
+    color: #EDDCAB;
+    background-color: #860700;
+    //background: linear-gradient(to bottom, #fbcf00 5%, #cb9b0c 25%, #cb9b0c 70%, #ffe87b 95%); 
     //border: 1px solid #FFF9;
     border: 0;
-    border-radius: 2em;
+    border-radius: 0.5em;
 
     width: 308px;
     height: 3.3em;
