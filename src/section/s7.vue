@@ -174,9 +174,9 @@
       padding: 0 sizem(32.5);
       width: 100%;
 
-      .txt img.s5-t3 {
-        width: sizem(400);
-        margin-left: 2em;
+      .txt img.s7-t3 {
+        width: sizem(150);
+        margin-left: -0.5em;
       }
     }
 

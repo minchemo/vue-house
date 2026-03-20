@@ -170,8 +170,9 @@
       padding: 0 sizem(32.5);
       width: 100%;
 
-      .txt img {
-        width: 41vw;
+      .txt img.s6-t3 {
+        width: sizem(150);
+        margin-left: 0em;
       }
 
     }
