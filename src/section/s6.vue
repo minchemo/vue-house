@@ -2,7 +2,7 @@
   <article class="s6" ref="s6">
     <div class="main">
       <div class="txt">
-        <img src="./s6/s6-t3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s6-t3" alt="">
+        <img src="./s6/multi.svg" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s6-t3" alt="">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">國道╳鐵路 <br v-if="isMobile" /> 多元交通路網
         </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
@@ -98,6 +98,10 @@
     flex-basis: size(590);
     flex-direction: column;
     text-align: justify;
+
+    .txt img {
+      width: size(326);
+    }
   }
 
 

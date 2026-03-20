@@ -2,7 +2,7 @@
   <article class="s5" ref="s5">
     <div class="main">
       <div class="txt">
-        <img src="./s5/s5-t3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s5-t3" alt="">
+        <img src="./s5/eda.svg" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s5-t3" alt="">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">
           義大健康園區 <br v-if="isMobile" />全新醫療聚落
         </h3>
@@ -49,10 +49,7 @@
 
   .slider .slide-item img {
     border-radius: 0;
-  }
 
-  img.s5-t3 {
-    width: size(500);
   }
 
   h3.title {
@@ -75,7 +72,7 @@
     position: absolute;
     bottom: size(-30);
     left: size(-270);
-    width: size(660);
+    width: size(179);
 
     &::before {
       content: "";
@@ -102,8 +99,8 @@
     flex-direction: column;
     text-align: justify;
 
-    .txt img {
-      width: 41vw;
+    .txt img.s5-t3 {
+      width: size(400);
     }
   }
 

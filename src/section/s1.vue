@@ -81,7 +81,7 @@
     position: absolute;
     position: relative;
     z-index: 2;
-    margin-top: -12vw;
+    margin-top: -10vw;
   }
 
   .txt {

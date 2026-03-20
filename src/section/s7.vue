@@ -2,7 +2,7 @@
   <article class="s7" ref="s7">
     <div class="main">
       <div class="txt">
-        <img src="./s7/s7-t3.png" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s7-t3" alt="">
+        <img src="./s7/neipu.svg" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s7-t3" alt="">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">
           內埔生活主場 <br v-if="isMobile" /> 人潮自然匯聚
         </h3>
@@ -100,6 +100,10 @@
     flex-basis: size(590);
     flex-direction: column;
     text-align: justify;
+
+    .txt img {
+      width: size(400);
+    }
   }
 
   .slider {
