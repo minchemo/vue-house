@@ -1,13 +1,14 @@
 <template>
   <article class="s1" id="s1">
-    <!-- 
-    <img src="./s1/pc.jpg" class="t0" v-if="!isMobile" />
+    <!--   -->
+    <img src="./s1/pc.png" class="t0" v-if="!isMobile" />
     <img src="./s1/mo.jpg" class="t0" v-else />
-  -->
+    <img src="./s1/tl.svg" class="tl" alt="tl" data-aos="fade-right" data-aos-delay="200">
 
+<!-- 
     <img src="./s1/smilecity.svg" alt="smilecity" class="smilecity" />
     <img src="./s1/logo.svg" class="logo" />
-    <img src="./s1/t1.svg" class="t1" />
+    <img src="./s1/t1.svg" class="t1" />  -->
   </article>
 </template>
 
@@ -33,16 +34,17 @@
   justify-content: center;
   align-items: center;
   height: sizem(604);
-  background: center;
-  background-image: url("./s1/bgm.png");
-  background-size: cover;
+  background:#7C519F center;
+
+ /* background-image: url("./s1/bgm.png");
+  background-size: cover;*/
   font-size: sizem(16);
 
   @media screen and (min-width: 768px) {
     height: 100vh;
     max-height: size(1130);
     min-height: size(900);
-    background-image: url("./s1/bg.png");
+   // background-image: url("./s1/bg.png");
     font-size: size(50);
   }
 
@@ -57,8 +59,21 @@
     left: 0;
     pointer-events: none;
     z-index: 10;
-    opacity: .3;
+    opacity: .5;
   }
+  
+  .tl {
+    width: sizem(94);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(280);
+    top: size(60);
+    }
+  }
+  /*
 
   .bg {
     width: 100%;
@@ -110,7 +125,7 @@
       font-size: 1.15em;
       top: calc(50% + #{size(150 - 1100 * .5)});
     }
-  }
+  }*/
 }
 
 

@@ -65,17 +65,47 @@ export default {
 
     navList: [
         /*
+    */
         {
-            name: "雙核心地段",
+            name: "天選美地",
             target: ".s3",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "交通中軸",
+            name: "八達交通",
             target: ".s4",
             offset: "-60",
             offsetmo: "0",
-        }
-    */
+        },{
+            name: "好運機能",
+            target: ".s4",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "鴻運建築",
+            target: ".s4",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "質選建材",
+            target: ".s4",
+            offset: "-60",
+            offsetmo: "0",
+        },{
+            name: "立即來電",
+            target: ".contact-info",
+            offset: "",
+            type: 'btn'
+        },{
+              name: "地圖導航",
+              target: ".gmap",
+              offset: "",
+              type: "btn",
+        }        ,{
+            name: "立即預約",
+            target: ".order",
+            offset: "",
+            type: 'btn'
+        },
     ],
-}
+} 
