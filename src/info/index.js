@@ -1,29 +1,28 @@
-const caseName = "微笑巨蛋"
-
+const caseName = "天好運3"
 export default {
-    caseid: "d169ba44-a9d5-47e6-8560-0ac3d3439412",
-    //case_code: "test",
+  caseid: "592c1522-ab1f-4c54-99f2-f02c4ae1a428",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市北屯區中平路462號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7279.507544607291!2d120.66214477940933!3d24.180366699999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917bed29f255f%3A0x556410feadace9f1!2z5b6u56yR5beo6JuL5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1759469807543!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/HSefMcEY7U9fQenH8",
-    phone: "04-2293-1199",
-    fbLink: "https://www.facebook.com/dome.smilehouse/",
-    fbMessage: "https://m.me/dome.smilehouse/",
-    line: "https://lin.ee/fpSDucI",
+    address: "新北市土城區科技路27號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.178339549067!2d121.42242759999999!3d24.9600463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d00580a232d%3A0xb6aa67a9366e82db!2z5aSp5aW96YGLMw!5e0!3m2!1szh-TW!2stw!4v1767664041150!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/oNpJMsMVCxAxvoBg9",
+   // phone: "06-2916208",
+    fbLink: "https://www.facebook.com/100057418720587/",
+    fbMessage: "https://m.me/100057418720587/",
+   // line: "https://lin.ee/VOzO2Sx",
     caseName: caseName,
     houseInfos: [
-        /*["投資興建", "長昇事業夥伴 冠奕建設"],
-        ["建築設計", "王朝雍建築師事務所"],
-        ["工程營造", "又廣營造"],
+        /*
         ["空間設計", "相即空間設計"],
         ["企劃銷售", "低碳健康樂活行銷"],
         ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
         ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
+        ["建築設計", "弘憲聯合建築師事務所"],
+        ["使照號碼", "王朝雍建築師事務所"],
+        ["行銷企劃", "自售"],
         */
     ],
-    gtmCode: ["GTM-K5S4RNMF"], // 可放置多個
+     gtmCode: ["GTM-PHJZS3QV"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -31,24 +30,31 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋",
-        // subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
-        // subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
+        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
+    // 控制固定板的新欄位
+    // room_type: ["兩房","三房"],
     selectFields: {
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
-          option: ["一房", "兩房"],
-          bypass:false,
+          option: ["兩房","三房"],
+          //bypass:false,
         },
         budget: {
           title: "購屋預算",
           hold: "請選擇區間",
-          option: ["800-1000萬", "1000-1200萬", "1200-1400萬"],
-          bypass:false, //必填開啟使用
+          option: ["1000萬內", "1000-1500萬", "1500-2000萬"],
+          //bypass:false,
         },
-       /* 
+        //budget: {
+        //  title: "購屋預算",
+        //  hold: "請選擇區間",
+        //  option: ["1600-2000萬", "2000-2500萬", "2500萬以上"],
+        //  bypass:false, //必填開啟使用
+        //},
+        /*
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",
@@ -58,50 +64,18 @@ export default {
   },
 
     navList: [
-        /*  */
+        /*
         {
-            name: "微笑巨蛋",
-            target: ".s1",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "10大看點",
+            name: "雙核心地段",
             target: ".s3",
             offset: "-60",
             offsetmo: "0",
         },{
-            name: "巨好機能",
+            name: "交通中軸",
             target: ".s4",
             offset: "-60",
             offsetmo: "0",
-        },{
-            name: "建築鉅作",
-            target: ".s7",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "麗寶集團",
-            target: ".s9",
-            offset: "-60",
-            offsetmo: "0",
-        },{
-            name: "立即來電",
-            target: ".contact-info",
-            offset: "",
-            type: 'btn'
-        },
-        {
-              name: "地圖導航",
-              target: ".gmap",
-              offset: "",
-              type: "btn",
         }
-        ,{
-            name: "立即預約",
-            target: ".order",
-            offset: "",
-            type: 'btn'
-        },
-  
+    */
     ],
 }

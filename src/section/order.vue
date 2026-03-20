@@ -1,17 +1,8 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="ball1a"></div>
-      <div class="ball2a"></div>
-      <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-      <!-- <div class="cus-divider"></div> -->
-
-      <!-- Title Image
-      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
- -->
-      <!-- Custom Image -->
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
@@ -19,6 +10,12 @@
           <label class="row name"><span>姓名<span>*</span></span>
           <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
             @input="(event) => (formData.name = event.target.value)" /></label>
+       <!--   <div class="gender">
+          <label><input  type="radio" name="gender" value="男" 
+              @input="(event) => (formData.gender = event.target.value)">先生</label>
+          <label><input  type="radio" name="gender" value="女" 
+              @input="(event) => (formData.gender = event.target.value)">女士</label>
+        </div> -->
             <label class="row"><span>手機<span>*</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
@@ -80,15 +77,15 @@
       <Policy />
 
       <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 relative z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
-      <!-- Send --><div class="sendall mt-8 mx-auto" style="font-size:20px;font-weight: 400;
+      <!-- Send --><div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 700;
     line-height: 3.3;height:3.3em">
       <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
   送出表單
 </button>
-<div v-else class="send-load text-[#333]" style="letter-spacing: 0.7em;
+<div v-else class="send-load text-[#fff]" style="letter-spacing: 0.7em;
   text-indent: 0.9em;
   height:100%;">
   <svg
@@ -123,9 +120,9 @@
 </div>
 </div>
 
-    </div>
       <!-- Contact Info -->
       <ContactInfo />
+    </div>
 
 
     <!-- Map -->
@@ -139,96 +136,45 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
-.order-section {
-  position: relative;
- // padding-top: size(406);
-   overflow: hidden;
-    min-height: size(500);
-    padding-bottom:size(80);
- background: linear-gradient(66deg, #FFC38B 5%, #f0700f 40%,#f0700f 55%, #b64a07 90%); 
-  @media screen and (min-width: 768px) {
- &::before{
-  content: "";position: absolute;top: 0;left: 0;
-  width: 100%;
-  height: 100%;  
-  background-image: url("@/section/s1/bg1.png");background-size: 100% auto;
- }}
-@media screen and (max-width:767px) {
-    padding-bottom:sizem(80);}
-  &::after{content: "";display: block;clear: both;}
-}
-.ball1a{position: absolute;top:size(-510);right: size(-510);width: size(1020);
-height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37515 70%, #FFC38B 85%);
-@media screen and (max-width:768px) {
-  width: sizem(600);top:sizem(-300);right: sizem(-300);
-  height: sizem(600);
-}
-
-
-}
-.ball2a{position: absolute;bottom:size(-510);left: size(-510);width: size(1020);
-height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37515 30%, #FFC38B 50%);
-
-@media screen and (max-width:768px) {
-  width: sizem(600);bottom:sizem(-300);left: sizem(-300);
-  height: sizem(600);
-}
-}
+$o-title-c:#fff; //.order-title
 
 .order {
   width: 100%;
-  // padding-top: size(140);
+  padding-top: size(40);
+  font-size:16px;
+
+.order-section {
+  position: relative;
   overflow: hidden;
-  // background: #666;
-  //background: #195c45;
- // background: linear-gradient(to bottom, #195c45, #000704);
-  
-
-  .order-title {
-    position: relative;
-    z-index: 2;
-    font-size: 32px;
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    color: #000;
-    padding-top:2.5em;
-    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-  }
-
-  .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
-  }
+  min-height: size(500);
+}
+.order-title {
+  font-size: size(45);
+  font-weight: 700;
+  color: $o-title-c;
+  padding-top:1.5em;
+}
   .order-subTitle{
-    font-size: size(17);
-    color: #fff;
-    // color: #fff;
-    padding-top:.8em;
+    font-size: size(20);
+    padding-top:.5em;
     letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-  }
-  .cus-divider {
-    margin: 0 auto;
-    width: size(300);
-    height: size(2);
-    margin-bottom: size(50);
-  //  background-color: #055F76;
+  color: #fff;
   }
 
   .form {
-    width: size(1100);
-    min-width: 680px;
+    width: size(1200);
+    min-width: 750px;
     //  height: 350px;
-    gap: size(80);
-    margin-top: size(45);
-    margin-bottom: size(50);
+    gap: 4em;
+    margin-top: 2.8em;
+    margin-bottom: 3em;
     z-index: 50;
     align-items: stretch;
 
-    .left {
+    .left {position: relative;
       flex: 1;
-      gap: size(20);
+      gap: 1.25em;
+      align-items: flex-start;
       //   width: size(419);
     }
 
@@ -240,60 +186,58 @@ height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37
 
     &::after {
       content: "";
-      width: size(1);
+      width: 1px;
       height: 100%;
       background-color: #fff6;
       position: absolute;
     }
-    textarea{font-size: 1em;}
-      textarea::placeholder,
-      input::placeholder {color: #0009;}
-    .row{background: #fff;border: 1px solid #CCC;color: #333;
-      display: flex;width: 100%; // border-radius: 0.3em;
+    .row{background: #fff;border: 1px solid #999;color: #000;
+      display: flex;width: 100%;
     align-items:center;
       > span{
         width: 5.5em;
         text-align: left;padding-left:1em ;
-        > span{color: #c00;}
+        > span{color: #F00;
+          }
       }
-      input,select{background: none;flex: 1;border-radius: 0.5em;font-size: 1em;}
+      input,select{background: inherit;flex: 1;}
       option{color: #666;}
       select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
-       filter: invert(50%);
-      color: #000;
       background-size:auto 200%;
       transition: background .3s;
-
       &:focus{
         background-position:calc(100% - .5em) 0%;
       }
       }
+      // &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+    }
+    .gender{display: flex;position: absolute;right: 0; flex-direction:column;
+      label:first-child{margin-bottom: .3em;}
+      input{margin-right: .3em;}
     }
   }
-
   .send {
-    font-size:20px;
-    letter-spacing: 0.9em;
-    text-indent: 0.9em;
-    color: #fff;
-    background:linear-gradient(90deg, #FFC38B 0%, #f87612 53%, #b84a07 100%);
-    //border: 1px solid #FFF9;
-    border:0;
-    border-radius: 1.7em;
+  font-size:20px;
+    font-size:inherit;
+    background: linear-gradient(90deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%);
 
-    width: 308px;
-    height:3.3em;
-    line-height: 3.3;
+    //border: 1px solid #FFF;
+    border:0;
+  letter-spacing: 0.9em;
+    text-indent: 0.9em;
+    height:100%;
+    border-radius: 2em;
+    width: 410px;
     z-index: 10;
-    font-weight: 400;
+    color: #76539B;
     position: relative;
   }
 
   .control {
-    font-size: size(16);
+    font-size: 16px;
     color: #000;
     position: relative;
-    z-index: 5;
+    font-weight: 700;
   }
 }
 
@@ -310,29 +254,12 @@ height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37
       left: -#{sizem(30)};
       bottom: sizem(590);
     }
-  .o1{width:sizem(265);margin:sizem(40) auto sizem(20) ;}
-  .o2{width:sizem(265);}
 
   }
 
   .order {
     width: 100%;
     padding-bottom: sizem(63);
-    // border-radius: sizem(68) sizem(68) 0 0;
-   /* padding-top: sizem(0);
-    margin-top: sizem(0);
-
-    .order-title-img {
-      width: sizem(315);
-      margin-bottom: sizem(22);
-    } */
-
-    .bird {
-      @apply absolute;
-      width: sizem(48.8);
-      top: sizem(205);
-      right: sizem(40);
-    }
 
     .cus-divider {
       margin: 0 auto;
@@ -343,11 +270,16 @@ height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37
     }
 
     .order-title {
-      font-size: sizem(25);
-      padding-top:2.5em;
+      font-size:29px;
+    /*  font-size: sizem(27);
+      padding-top:2em;
+      .line{width: sizem(258);
+      
+      }*/
     }
     .order-subTitle{
-      font-size: sizem(13);
+      font-size:14px;
+     // font-size: sizem(13);
       padding-top:0;
     }
 
@@ -355,20 +287,23 @@ height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37
     .form {
       width: sizem(310);
       min-width: 0;
-      height: auto;
+      flex-direction: column;
+      gap: 0;margin: 2em auto 1.1em;
+    /*  height: auto;
       gap: sizem(15);
       margin-bottom: sizem(20);
-      flex-direction: column;
-      margin-top: sizem(20);
+      margin-top: sizem(20);*/
 
       .left {
         width: 100%;
-        gap: sizem(15);
+        //gap: sizem(15);
       }
 
       .right {
         width: 100%;
-        height: sizem(100);
+        height:6.25em;
+        margin-top: 1.1em;
+
         .row{
           height: 7em;
         }
@@ -378,15 +313,12 @@ height:  size(1020);border-radius: 50%;background: linear-gradient(225deg,  #f37
         display: none;
       }
     }
-
     .send {
-      font-size: sizem(21);
       width: sizem(310);
-      height: sizem(72);
     }
 
     .control {
-      font-size: sizem(14.6);
+      font-size: 14px;
     }
   }
 }
@@ -502,9 +434,16 @@ const send = () => {
 
 //有性別的話 性別顯示
 if (formData.gender) {
-  formData.name = `${formData.name}(${formData.gender})`;
+  const genderTag = `(${formData.gender})`;
+  if (!formData.name.endsWith(genderTag)) {
+    formData.name += genderTag;
+  }
 }
-
+/*
+if (formData.msg.trim() === "") {
+  formData.msg = "無留言";
+}
+  */
 
   // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
@@ -544,7 +483,7 @@ if (formData.gender) {
     /*
     */
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
