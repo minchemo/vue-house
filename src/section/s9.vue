@@ -97,7 +97,7 @@
     text-align: justify;
 
     .txt img {
-      width: size(400);
+      width: size(320);
     }
   }
 

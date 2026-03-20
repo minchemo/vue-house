@@ -172,6 +172,12 @@
     .main {
       padding: 0 sizem(32.5);
       width: 100%;
+
+      .txt img.s5-t3 {
+        width: sizea(400);
+        margin-left: 2em;
+      }
+
     }
 
     .txt {

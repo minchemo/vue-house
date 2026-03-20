@@ -99,7 +99,8 @@
     text-align: justify;
 
     .txt img {
-      width: size(500);
+      width: size(450);
+      margin-left: -1em;
     }
   }
 
