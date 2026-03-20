@@ -229,7 +229,7 @@ const options = {
 const imgs = [
   {
     img: new URL("./s6/s6-g1.jpg", import.meta.url).href,
-    caption: "國道3號情境示意圖"
+    caption: "國道3號實景拍攝圖"
   },
   {
     img: new URL("./s6/s6-g2.jpg", import.meta.url).href,
