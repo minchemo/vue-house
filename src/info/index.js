@@ -1,16 +1,17 @@
-const caseName = "鉑翡"
+const caseName = "春福莫內161"
 
 export default {
-    caseid: "89bc6349-43a3-45d5-944f-f8e1b1ebb05b",  //case_code: "zhsd",
+
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //測試中   //case_code: "zhsd",
     address1: "",//接待中心   //按鈕區的--- 如空白會只呈現地址
     address2: "",//接待中心 //map點下確認的--- 如空白會顯示"導航地址"
-    //address: " ",//新竹市埔頂路125號旁  //地圖連動
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3622.0057977027254!2d121.00936399999998!3d24.795254999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzQyLjkiTiAxMjHCsDAwJzMzLjciRQ!5e0!3m2!1szh-TW!2stw!4v1770952234719!5m2!1szh-TW!2stw",
+    address: "台南市東區中華東路三段391號",//地圖連動
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4931.308525610808!2d120.22051789999999!3d22.9734008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75004ff45f73%3A0xb67a2a7629db6f8a!2z5pil56aP6I6r5YWnMTYx5o6l5b6F5Lit5b-D!5e1!3m2!1szh-TW!2stw!4v1773986581955!5m2!1szh-TW!2stw",
     //地圖連動
-    googleLink: "https://maps.app.goo.gl/npq1JaKkDg6pwvE17", //地圖連動
-    phone: "03-5717088",
-    fbLink: "https://www.facebook.com/profile.php?id=61587817653943",
-    fbMessage: "https://m.me/61587817653943/",
+    googleLink: "https://maps.app.goo.gl/F7vH1fgSYBSJGp2r7", //地圖連動
+    phone: "06-2686161",
+    fbLink: "https://www.facebook.com/61585313904175/",
+    fbMessage: "https://m.me/61585313904175/",
     // line: "https://lin.ee/eVsJqdc",// 客戶加賴
     caseName: caseName,
     houseInfos: [
