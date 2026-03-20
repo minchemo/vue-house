@@ -111,7 +111,7 @@
   background-image: url("./s1/bg.jpg");
   background-size: auto;
   background-position: top;
- // margin-top: -4.5vw;
+  // margin-top: -4.5vw;
 
   .bg-image {
     position: absolute;
@@ -129,27 +129,28 @@
   // background: linear-gradient(to bottom, #195c45, #000704);
 
 
-.order-title {
-  font-size: size(45);
-  font-weight: 700;
-  color: #FFF;
-  padding-top:1.5em;
-  letter-spacing: 0.1em;
-  display: flex;
-  align-items: center;
+  .order-title {
+    font-size: size(45);
+    font-weight: 700;
+    color: #FFF;
+    padding-top: 1.5em;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
     width: size(920);
     min-width: 750px;
     margin: auto;
     gap: 1em;
-  &::before,
-  &::after{
-    content: "";
-    display: block;
-    flex: 1;
-    height: 1px;
-    background: currentColor;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      flex: 1;
+      height: 1px;
+      background: currentColor;
+    }
   }
-}
 
   .order-title-img {
     width: size(1008);

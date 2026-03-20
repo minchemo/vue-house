@@ -13,26 +13,7 @@
   <Nav v-if="config.showNav" />-->
   <div class="home bg-[#000000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
 
-    <!--  
-    <img src="@/section/s1/bg.png" class="bgh pc">
-    <img src="@/section/s1/bgm667.png" class="bgh mob">
-    -->
     <S1 />
-    <S2 />
-    <S12 />
-  <!--   -->
-    <!--<S3 />-->
-    <!--<S4 />-->
-    <!--<S5 />-->
-    <!--<S6 />-->
-    <!--<S7 />-->
-    <!--<S8 />-->
-    <!--<S9 />-->
-    <!--<S10 />-->
-    <!--
-    <S11 />
-    <S1new />
-    <S1new2 /> -->
     <Order />
   </div>
 </template>
@@ -147,7 +128,7 @@ img {
     font-weight: 700;
     color: #fff;
     text-align: center;
-/*
+    /*
     &::after,
     &::before {
       content: "";
@@ -327,21 +308,6 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
-import S12 from "@/section/s12.vue"
-/**/
-//import S3 from "@/section/s3.vue"
-//import S4 from "@/section/s4.vue"
-//import S5 from "@/section/s5.vue"
-//import S6 from "@/section/s6.vue"
-//import S7 from "@/section/s7.vue"
-//import S8 from "@/section/s8.vue"
-//import S9 from "@/section/s9.vue"
-//import S10 from "@/section/s10.vue"
-// import S11 from "@/section/s11.vue"
-/* 
-import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue" */
 import Order from "@/section/order.vue"
 // import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

@@ -6,7 +6,7 @@ export default {
     address1: "",//接待中心   //按鈕區的--- 如空白會只呈現地址
     address2: "",//接待中心 //map點下確認的--- 如空白會顯示"導航地址"
     address: "台南市東區中華東路三段391號",//地圖連動
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4931.308525610808!2d120.22051789999999!3d22.9734008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75004ff45f73%3A0xb67a2a7629db6f8a!2z5pil56aP6I6r5YWnMTYx5o6l5b6F5Lit5b-D!5e1!3m2!1szh-TW!2stw!4v1773986581955!5m2!1szh-TW!2stw",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.361603713859!2d120.2193484568695!3d22.973726770001775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75004ff45f73%3A0xb67a2a7629db6f8a!2z5pil56aP6I6r5YWnMTYx5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1773989055212!5m2!1szh-TW!2stw",
     //地圖連動
     googleLink: "https://maps.app.goo.gl/F7vH1fgSYBSJGp2r7", //地圖連動
     phone: "06-2686161",
