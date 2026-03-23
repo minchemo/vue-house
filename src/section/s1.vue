@@ -120,7 +120,7 @@
     // top: 1.7vw;
 
     top: -3vw;
-    left: 9%;
+    left: 10%;
   }
 
   .oo1 {
