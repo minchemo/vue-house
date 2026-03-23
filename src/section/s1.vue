@@ -2,7 +2,7 @@
   <article class="s1 relative" id="s1">
     <!--  畫面圖片跟他的CSS 檔名自己改 -->
     <img src="./s1/pc-s0.png" class="t0" v-if="!isMobile" />
-    <img src="./s1/mo-s0.jpg" class="t0" v-else />
+    <img src="./s1/mo-s0.png" class="t0" v-else />
 
     <!--  
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
