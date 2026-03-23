@@ -5,7 +5,7 @@
         <img src="./s9/lei.svg" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" class="s9-t3">
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">漫步生命之河<br v-if="isMobile"> 徜徉公園綠意</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          日常裡,步伐放慢,沿著龍頸溪畔漫步, 讓水岸綠意成為生活的一部分。 週末時光,轉身走進六堆紀念公園, 奔跑、打球、嬉戲,為生活注入滿滿活力。</p>
+          日常裡，步伐放慢，沿著龍頸溪畔漫步，讓水岸綠意成為生活的一部分。 週末時光，轉身走進六堆紀念公園，奔跑、打球、嬉戲，為生活注入滿滿活力。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">

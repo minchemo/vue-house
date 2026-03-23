@@ -6,7 +6,7 @@
         <h3 class="title" data-aos="fade-up" data-aos-delay="0">國道╳鐵路 <br v-if="isMobile" /> 多元交通路網
         </h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          鄰近國道三號與西勢車站,交通路線隨心選擇,便利,融入每日的步調;移動,不再是生活負擔,南來北往、通勤或旅遊,從容抵達每一個目的地。</p>
+          鄰近國道三號與西勢車站，交通路線隨心選擇，便利，融入每日的步調；移動，不再是生活負擔，南來北往、通勤或旅遊，從容抵達每一個目的地。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
