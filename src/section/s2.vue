@@ -52,7 +52,7 @@
       color: #fff;
       font-size: 1.5em;
       width: 43em;
-      width: 29em;
+      width: 31em;
       margin: 0 auto;
     }
   }
