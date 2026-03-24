@@ -62,7 +62,7 @@
   width: 100%;
   padding: 0;
   font-size: size(18);
-  margin-bottom: -7px;
+  margin-bottom: 0px;
 
   .t1 {
     width: 100%;
