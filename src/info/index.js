@@ -24,7 +24,7 @@ export default {
            ["經 紀 人", "陳怡靜 (104)新北經字第000884號"],
            ["銷售中心", "接待會館：新竹市東區埔頂路125號對面"],*/
     ],
-    gtmCode: ["GTM-5RH473P9",], // 可放置多個
+    gtmCode: ["GTM-5RH473P9", GTM-PLC5C8ZR,], // 可放置多個
 
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
