@@ -1,8 +1,8 @@
 <template>
   <article class="s1 relative" id="s1">
     <!--  畫面圖片跟他的CSS 檔名自己改 -->
-    <img src="./s1/pc-s0.png" class="t0" v-if="!isMobile" />
-    <img src="./s1/mo-s0.png" class="t0" v-else />
+    <img src="./s1/pc-s0.png" class="t1" v-if="!isMobile" />
+    <img src="./s1/mo-s0.png" class="t1" v-else />
 
     <!--  
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
@@ -69,19 +69,18 @@
   }
 
   //pc
-  @media screen and (min-width: 768px) {
+    /* pc
+     @media screen and (min-width: 768px) {
     background-image: url("./s1/bg.jpg");
-    //background-size: 100%;
-    // height: 58vw;
     min-height: size(900);
     max-height: size(1080);
     padding: 0;
     font-size: size(56);
-  }
-
+  }*/
+   /* 
   .logo {
     // width: 45vw;
-    /* pc*/
+   
     // margin: 15vw 0vw -12vw 0vw;
     position: absolute;
     left: 0;
@@ -89,9 +88,7 @@
     margin: auto;
     top: sizem(230);
     top:calc(50% + #{sizem(230 - 667 * .5)});
-    width: sizem(200);
-
-    @media screen and (min-width: 768px) {
+    width: sizem(200);    @media screen and (min-width: 768px) {
       top: size(300);
       top:calc(50% + #{size(300 - 1080 * .5)});
       width: size(600);
@@ -105,7 +102,6 @@
     top: sizem(205);
     top:calc(50% + #{sizem(205 - 667 * .5)});
     width: sizem(100);
-    position: absolute;
     left: 0;
     right: 0;
     margin: auto;
@@ -117,6 +113,8 @@
 
     }
   }
+*/
+
 
 }
 </style>
