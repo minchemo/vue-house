@@ -148,6 +148,9 @@
       //height: sizem(793);
       //width: sizem(1725);
       margin: 0 auto;
+      .arrows {
+          visibility: hidden; 
+        }
 
       .caption {
         font-size: sizem(12);

@@ -168,7 +168,6 @@
     .slider {
       height: auto;
       width: 100%;
-
       .caption {
         font-size: sizem(12);
         right: sizem(5);
