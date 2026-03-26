@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#e86f00] text-[#333]">
+  <div class="home overflow-hidden font-['Noto_Serif_TC',serif]  text-[#333]">
     <S1 />
     <S2 />
     <S3 />
@@ -20,10 +20,9 @@
     <S7 />
     <S8 />
     <S9 />
+    <S10 />
     <!-- <S2v /> -->
     <!--
-    <S10 />
-    <S11 />
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
       <img src="@/section/s1/bg.jpg" />
@@ -56,15 +55,21 @@
   opacity: 0;
 }
 
-.bg {
-  background: linear-gradient(90deg, #17A9AF 0%, #007CBB 87%);
-}
-
 img {
   display: inline;
   max-width: unset;
   height: unset;
   margin: 0 auto;
+}
+
+.home {
+    background: url("@/section/s1/bg.jpg") fixed 0 0;
+    background-size:sizem(450) auto;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+    background-size:size(900) auto;
+    }
 }
 
 .caption {
@@ -81,22 +86,35 @@ img {
 
 .txt {
   position: relative;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.7;
+  line-height: 1.6;
   width: 100%;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   text-align: justify;
   z-index: 3;
 
   .title {
     // @apply font-['Noto_serif_TC',serif];
-    font-size: 2.6em;
-    margin: 0 auto 0em;
-    line-height: 1.5;
+    font-size: 2.2em;
+    margin: -.1em auto 0em;
+    line-height: 1.2;
     font-weight: 700;
-    letter-spacing: 0.06em;
-    text-align: center;
+    letter-spacing: 0em;
+
+    // text-align: center;
+    b {
+      font-size: 1.2em;
+      line-height: 1;
+    }
+  }
+
+  .hr {
+    width: 100%;
+    height: 0;
+    margin: 1.2em 0;
+    border: 0;
+    border-bottom: 1px solid currentColor;
   }
 
   .subtitle {
@@ -108,13 +126,6 @@ img {
     letter-spacing: 0.06em;
   }
 
-  // .hr{width: 100%; height: size(100);margin: -1.5em 0;}
-  .desc {
-    margin: 0 0 0;
-    color: #444;
-
-    b {}
-  }
 }
 
 .slider {
@@ -168,24 +179,43 @@ img {
 
   .splide__pagination {
     @apply absolute flex justify-center w-full;
+    font-size: size(15);
     bottom: 0;
-    gap: 1.2em;
-    color: #E0AB57;
+    gap: .5em;
+    color: #fff;
 
     li {
       button {
-        @apply rounded-full;
+        @apply rounded-full relative;
         width: 1em;
         height: 1em;
-        background: currentColor;
+        background: transparent;
         transition: transform .5s;
+        border: 2px solid currentColor;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: currentColor;
+          border-radius: 50%;
+          opacity: .5;
+          left: 0;
+          top: 0;
+          transform: scale(0);
+          transition: transform .5s, opacity .5s;
+        }
 
         &:hover {
           transform: scale(.8);
         }
 
         &.is-active {
-          transform: scale(1.5);
+          &::before {
+            transform: scale(1.3);
+            opacity: 1;
+          }
         }
       }
     }
@@ -210,10 +240,6 @@ img {
 
     .subtitle {
       font-size: 1.1em;
-    }
-
-    .hr {
-      height: sizem(70);
     }
   }
 
@@ -273,16 +299,6 @@ img {
   height: unset;
   margin: 0 auto;
 }
-
-
-
-.txt {
-  position: relative;
-  font-weight: 300;
-  letter-spacing: 0;
-  line-height: 1.85;
-  width: 100%;
-}
 </style>
 
 <script setup>
@@ -299,6 +315,7 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
+import S10 from "@/section/s10.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

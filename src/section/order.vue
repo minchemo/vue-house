@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order relative text-center">
+  <div id="order" class="order relative text-center bg-[#7D51A0]">
     <div class="order-section">
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
@@ -278,9 +278,10 @@ $o-title-c:#fff; //.order-title
       }*/
     }
     .order-subTitle{
-      font-size:14px;
+      font-size:13px;
      // font-size: sizem(13);
       padding-top:0;
+      letter-spacing: 0;
     }
 
 

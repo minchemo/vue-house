@@ -1,7 +1,6 @@
 <template>
     <!--  -->
     <div class="house" v-if="info.houseInfos.length > 0">
-    <img src="@/section/s1/bg1m.png" alt="bg" class="houbg" v-if="isMobile">
         <div class="flex h-full flex-col md:flex-row items-center justify-between">
             
             <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
@@ -19,8 +18,6 @@
                 </div>
             </div>
         </div>
-    <img src="@/section/s1/hr.webp" alt="hr" class="houseimg" v-if="!isMobile" />
-    <img src="@/section/s1/hrm.webp" alt="hr" class="houseimg" v-else />
     </div>
     <!--
     <div class="house bg-[#b6006499] flex items-center justify-center py-6 ">
@@ -36,7 +33,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#fff;
+$house-c1:#E8DBA2;
 $house-c2:#fff;
 .displaynone{display: none;}
 .house {
@@ -46,16 +43,7 @@ $house-c2:#fff;
     color: $house-c2;
     font-size: size(22);
     // height:4em;
-    background: linear-gradient(246deg, #FFC38B 0%, #e97721 55%, #b64a07 100%);
-  @media screen and (min-width: 768px) {
-    background: linear-gradient(136deg, #FFC38B 0%, #e97721 55%, #b64a07 100%);
- &::before{
-  content: "";position: absolute;top: 0;left: 0;
-  width: 100%;
-  height: 100%;  
-  background-image: url("@/section/s1/bg1.png");background-size: 100% auto;
- }}
- .houbg{position: absolute;top:0;left: 0;width: 100%;transform: translateY(-50%);}
+    background: #7C519F;
 }
 .info-box {position: relative;z-index: 30;
     width: 50em;
@@ -64,7 +52,7 @@ $house-c2:#fff;
     .title {
         font-size:2em;
         font-weight: 700;
-        color: #000;//$house-c1;
+        color: #E8DBA2;//$house-c1;
         margin: 0.6em auto 0.5em auto;
     }
 
@@ -72,18 +60,19 @@ $house-c2:#fff;
         row-gap:1.4em;
         column-gap:1em;
 
-        margin-bottom:5em;
+        margin-bottom:3em;
         .item {
             line-height: size(17);
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
-           // border-left: 2px solid $house-c1;
-           &::before{
+            border-left: 2px solid $house-c1;
+         /*  &::before{
             content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3CradialGradient id='fg' cx='9' cy='9' fx='7' fy='7' r='13' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f7dd9e'/%3E%3Cstop offset='.4' stop-color='%23ffa813'/%3E%3Cstop offset='1' stop-color='%23ac572e'/%3E%3C/radialGradient%3E%3Ccircle fill='url(%23fg)' cx='10' cy='10' r='10'/%3E%3C/svg%3E");
             display: block;
             width: .7em;
         }
+            */
 
              .sub{
               color: $house-c1;

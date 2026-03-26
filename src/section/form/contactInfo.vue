@@ -462,10 +462,10 @@ background: linear-gradient(0deg, #76539B 0%, #3E2A5A 100%), #04836E;
         div {
           text-indent: 2em;
         }
-
+        $bor-radius: 2em;
         &.address {
           font-size: sizem(15);
-          // border-radius: .5em  .5em 0 0;
+           border-radius: $bor-radius $bor-radius 0 0;
           padding: 1.1em 0;
           margin: sizem(25) auto 0;
           //font-size: .9em;
@@ -479,7 +479,7 @@ background: linear-gradient(0deg, #76539B 0%, #3E2A5A 100%), #04836E;
         }
 
         &.address+div {
-          //  border-radius: 0 0 .5em .5em;
+            border-radius: 0 0 $bor-radius $bor-radius;
         }
 
         &.googlemap {

@@ -6,20 +6,23 @@ export default {
     address: "新北市土城區科技路27號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.178339549067!2d121.42242759999999!3d24.9600463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d00580a232d%3A0xb6aa67a9366e82db!2z5aSp5aW96YGLMw!5e0!3m2!1szh-TW!2stw!4v1767664041150!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/oNpJMsMVCxAxvoBg9",
-   // phone: "06-2916208",
+    phone: "02-2268-8765",
     fbLink: "https://www.facebook.com/100057418720587/",
     fbMessage: "https://m.me/100057418720587/",
    // line: "https://lin.ee/VOzO2Sx",
     caseName: caseName,
     houseInfos: [
+        ["投資興建", "福美國際建設x永京建設"],
+        ["建照號碼", "114土建字第00319號"],
+        ["行銷企劃", "海沃創意行銷"],
+        ["經 紀 人", "周美秀(90)嘉縣字第00016號"], 
         /*
-        ["空間設計", "相即空間設計"],
-        ["企劃銷售", "低碳健康樂活行銷"],
-        ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
-        ["經紀人", "(91)北市經證字第00692號 陳子瑞"], 
         ["建築設計", "弘憲聯合建築師事務所"],
         ["使照號碼", "王朝雍建築師事務所"],
-        ["行銷企劃", "自售"],
+        ["行銷企劃", "自售"],投資興建｜福美國際建設x永京建設
+建照號碼｜114土建字第00319號
+行銷企劃｜海沃創意行銷
+經紀人｜周美秀(90)嘉縣字第00016號
         */
     ],
      gtmCode: ["GTM-PHJZS3QV"], // 可放置多個
@@ -31,6 +34,7 @@ export default {
     order: {
         title: "預約賞屋",
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+      //  subTitle_mo: "歡迎預約，將有專人與您聯絡<br>我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
     // 控制固定板的新欄位
@@ -78,17 +82,17 @@ export default {
             offsetmo: "0",
         },{
             name: "好運機能",
-            target: ".s4",
+            target: ".s6",
             offset: "-60",
             offsetmo: "0",
         },{
             name: "鴻運建築",
-            target: ".s4",
+            target: ".s8",
             offset: "-60",
             offsetmo: "0",
         },{
             name: "質選建材",
-            target: ".s4",
+            target: ".s10",
             offset: "-60",
             offsetmo: "0",
         },{
