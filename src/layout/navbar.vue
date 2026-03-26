@@ -11,7 +11,7 @@
             <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
             <template v-for="item, in info.navList" :key="item">
             <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
-                @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
+                @click="handleNavClick(item)">
                 <span>{{ item.name }}</span>
             </div>
             </template>
@@ -404,11 +404,6 @@ const scrollPos = ref(0)
 
 onMounted(() => {
     const ratio = window.innerHeight / window.innerWidth
-
-    // if (!globals.$isMobile() && ratio > 0.46875) {
-    //     higherScreen.value = true
-    // }
-
     window.addEventListener('scroll', (event) => {
         let scroll = window.pageYOffset || document.documentElement.scrollTop;
         scrollPos.value = scroll
@@ -429,5 +424,22 @@ const scrollTo = (el, offset) => {
         });
     }
     menuOpen.value = false;
+}
+const contactModal = inject('contactModal')
+
+const handleNavClick = (item) => {
+  // 👉 這裡放你那段
+  if (item.action === 'phone' || item.action === 'gmap') {
+    contactModal.modalType.value = item.action
+    contactModal.modalOpen.value = true
+  } else {
+    // 原本 scroll 行為
+    scrollTo(
+      item.target,
+      isMobile.value ? item.offsetmo || item.offset : item.offset
+    )
+  }
+
+  menuOpen.value = false
 }
 </script>

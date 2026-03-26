@@ -8,10 +8,6 @@
   </div>
   <div class="contact-bg">
     <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-      <!--  <div class="logo">
-      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div> 
-    <img src="@/section/s1/logo.svg" class="logo" alt=""> -->
 
       <div class="flex justify-between w-full contact-item-box">
         <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
@@ -43,36 +39,12 @@
         <div>導航 GoogleMap</div>
       </div>
     </div>
-      <!--
-     
-      <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
-        <div class="flex contact-item justify-center items-center address">
-          <div><span v-if="info.address1">臺北辦事處：</span>台北市松山區八德路二段374號12F</div>
-        </div>
-        <div class="flex contact-item justify-center items-center googlemap"
-          @click="modalOpen = true; modalType = 'gmap1'">
-          <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
-          <div>導航 GoogleMap</div>
-        </div>
-      </div>
-      <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
-        <div class="flex contact-item justify-center items-center address">
-          <div><span v-if="info.address1">臺南總公司：</span>台南市南區健康路二段545號3樓</div>
-        </div>
-        <div class="flex contact-item justify-center items-center googlemap"
-          @click="modalOpen = true; modalType = 'gmap2'">
-          <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
-          <div>導航 GoogleMap</div>
-        </div>
-      </div>-->
 
     </div>
   </div>
 
   <!-- Mobile contact info -->
   <div class="bg-white mo-contact-info flex justify-end w-full contact-item-box items-center">
-    <!--  <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"  v-if="!$isMobile()"  @click="scrollTo('.s1')"> -->
-
     <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
       v-if="info.phone">
       <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
@@ -499,9 +471,11 @@ background: linear-gradient(0deg, #76539B 0%, #3E2A5A 100%), #04836E;
 <script setup>
 import info from "@/info"
 import { inject, ref } from "vue";
-const modalOpen = ref(false);
-const modalType = ref('');
-
+const contactModal = inject('contactModal')
+/* const modalOpen = ref(false);
+const modalType = ref(''); */
+const modalOpen = contactModal.modalOpen
+const modalType = contactModal.modalType
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;

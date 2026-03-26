@@ -318,7 +318,7 @@ import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
-import { onMounted, ref } from "vue"
+import { onMounted, ref, provide } from "vue"
 
 import AOS from 'aos';
 
@@ -333,5 +333,12 @@ onMounted(() => {
     });
   };
 
+})
+const modalOpen = ref(false)
+const modalType = ref('')
+
+provide('contactModal', {
+  modalOpen,
+  modalType
 })
 </script>

@@ -70,7 +70,7 @@
     @media screen and (min-width: 768px) {
       position: absolute;
       padding: 0;
-      top: size(175);
+      top: size(100);
       width: size(700);
       left: size(210);
 
