@@ -366,13 +366,21 @@ const list3 = [
     link_t:"",
   },
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "115/03/22 ",
     t3: "地方說明會(針對本案執行內容與進度說明)<br>時間: 115/3/22(日) 下午2時30分至4時(2:15進場報到)<br>地點: 永和區頂溪國小4樓視聽教室(新北市永和區文化路133號4樓)",
     link:"https://drive.google.com/file/d/1ZLshFN_hZQFY7iPrwyRRupukXBVEHSv6/view?usp=sharing",
     link_t:"會議通知",
   },
+  {
+    t1: ["v1", "已完成"],
+    t2: "115/03/22 ",
+    t3: "本案於115年3月22日於頂溪國小召開說明會，內容參見會議記錄",
+    link:"https://drive.google.com/file/d/1DoLUVZAUemXtvgEzw2d-euSGdoBnQjly/view?usp=sharing",
+    link_t:"會議記錄",
+  },
   //link 設定#開頭  不會另開 放網址才會另開視窗
+  // t1: ["v2", "進行中"],
 ];
 
 
