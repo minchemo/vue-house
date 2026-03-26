@@ -2,7 +2,7 @@ const caseName = "春福莫內161"
 
 export default {
 
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //測試中   //case_code: "zhsd",
+    caseid: "1b256c41-fd3b-4822-884a-7a15512925a7",   //case_code: " ",
     address1: "",//接待中心   //按鈕區的--- 如空白會只呈現地址
     address2: "",//接待中心 //map點下確認的--- 如空白會顯示"導航地址"
     address: "台南市東區中華東路三段391號",//地圖連動
