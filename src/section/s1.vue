@@ -14,11 +14,11 @@
       <div class="p8"><img src="./s1/s1p2.png" alt="flower" /></div>
     </div>
     <img src="./s1/tl.svg" class="tl" alt="tl" data-aos="fade-right" data-aos-delay="200">
-    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="fade-up" data-aos-delay="200">
+    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="fade-up" data-aos-delay="0">
     <img src="./s1/t1.svg" class="t1" alt="雙捷加持 天生好運" data-aos="fade-up" data-aos-delay="200">
-    <img src="./s1/t2.svg" v-if="!isMobile" class="t2" alt="板南三鶯雙捷運" data-aos="fade-up" data-aos-delay="200">
-    <img src="./s1/t2m.svg" v-else class="t2" alt="板南三鶯雙捷運" data-aos="fade-up" data-aos-delay="200">
-    <img src="./s1/slogo.svg" class="slogo" alt="slogo" data-aos="fade-right" data-aos-delay="200">
+    <img src="./s1/t2.svg" v-if="!isMobile" class="t2" alt="板南三鶯雙捷運" data-aos="fade-up" data-aos-delay="400">
+    <img src="./s1/t2m.svg" v-else class="t2" alt="板南三鶯雙捷運" data-aos="fade-up" data-aos-delay="400">
+    <img src="./s1/slogo.svg" class="slogo" alt="slogo" data-aos="fade-up" data-aos-delay="600">
 
     <!-- 
     <img src="./s1/smilecity.svg" alt="smilecity" class="smilecity" />
@@ -56,7 +56,7 @@
   @media screen and (min-width: 768px) {
     height: 100vh;
     max-height: size(1070);
-    min-height: size(1070);
+    min-height: size(900);
     font-size: size(50);
   }
 
@@ -257,7 +257,8 @@
 
     @media screen and (min-width: 768px) {
       top: size(144);
-      width: size(607);
+      top: calc(45% + #{size(144 - 1070 * .45)});
+      width: size(620);
     }
   }
 
@@ -271,6 +272,7 @@
 
     @media screen and (min-width: 768px) {
       top: size(668);
+      top: calc(45% + #{size(668 - 1070 * .45)});
       width: size(486);
     }
   }
@@ -285,6 +287,7 @@
 
     @media screen and (min-width: 768px) {
       top: size(758);
+      top: calc(45% + #{size(758 - 1070 * .45)});
       width: size(907);
     }
   }
@@ -299,6 +302,7 @@
 
     @media screen and (min-width: 768px) {
       top: size(985);
+      top: calc(75% + #{size(985 - 1070 * .75)});
       width: size(420);
     }
   }
