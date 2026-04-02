@@ -61,11 +61,11 @@
       <h2 class="title font-['noto_Serif_tc']">四、聯絡我們</h2>
       <div class="icon">
         <a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="./s1/email.svg"></a>
-        <a class="link" href="https://lin.ee/fPSCu1Z" target="_blank"><img class="linkimg" src="@/section/s1/A.jpg"></a>
+<!--         <a class="link" href="https://lin.ee/fPSCu1Z" target="_blank"><img class="linkimg" src="@/section/s1/A.jpg"></a>
         <a class="link" href="https://lin.ee/OscVx32" target="_blank"><img class="linkimg" src="@/section/s1/B.jpg"></a>
-        <a class="link" href="https://lin.ee/givWoOW" target="_blank"><img class="linkimg" src="@/section/s1/CD.jpg"></a>
+        <a class="link" href="https://lin.ee/givWoOW" target="_blank"><img class="linkimg" src="@/section/s1/CD.jpg"></a> -->
         <a class="link" href="https://drive.google.com/file/d/1MHWeqSJ-jVorN_-RmtdYE0ZgWGU-7KJL/view?usp=sharing" target="_blank"><img class="linkimg" src="./s1/letter.svg"></a>
-        
+        <a class="link" href="https://lin.ee/tNV80D4" target="_blank"><img class="linkimg" src="@/section/s1/qr.svg"></a>
         <!--a class="link" href="mailto:dachen.five@gmail.com" target="_blank"><img class="linkimg" src="@/section/s1/gmail.svg"></a-->
       </div>
     </div>
@@ -320,6 +320,13 @@ const list1 = [
     t3: "第二次專案小組審議(本都更案現於審議階段尚未核定，僅供閱覽參考，所附圖面僅為過往議題研議版本之一，現已非屬後續執行圖面。)",
     link:"https://drive.google.com/file/d/1ewt773l_E8O_7YQtzmyP-V-S_o_mhTAi/view?usp=sharing",
   }, 
+  {
+    t1: ["v2", "進行中"],
+    t2: "115/4/13~<br>115/5/13",
+    t3: "重新選配期間",
+    link:"https://docs.google.com/spreadsheets/d/1pI4dcovZTH3bUMexjojpsCmLxlRsvi4KQsuDCGG5ze4/edit?usp=sharing",
+    link_t:"查詢",
+  }, 
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
 const list3 = [
@@ -378,6 +385,13 @@ const list3 = [
     t3: "本案於115年3月22日於頂溪國小召開說明會，內容參見會議記錄",
     link:"https://drive.google.com/file/d/1DoLUVZAUemXtvgEzw2d-euSGdoBnQjly/view?usp=sharing",
     link_t:"會議記錄",
+  },
+  {
+    t1: ["v2", "進行中"],
+    t2: "115/4/12",
+    t3: "選配說明會<br>時間  115 / 3/ 22 （日）下午2時30分至3時30分（2:15進場報到）<br>地點:永和區頂溪國小4樓視聽教室(新北市永和區文化路133號4樓)",
+    link:"https://lin.ee/tNV80D4",
+    link_t:"預約登記",
   },
   //link 設定#開頭  不會另開 放網址才會另開視窗
   // t1: ["v2", "進行中"],
