@@ -1,14 +1,14 @@
-const caseName = "0000"
+const caseName = "天好運3"
 export default {
-    //caseid: "592c1522-ab1f-4c54-99f2-f02c4ae1a428",
+    caseid: "592c1522-ab1f-4c54-99f2-f02c4ae1a428",
     
-    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    //caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市土城區科技路27號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.178339549067!2d121.42242759999999!3d24.9600463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d00580a232d%3A0xb6aa67a9366e82db!2z5aSp5aW96YGLMw!5e0!3m2!1szh-TW!2stw!4v1767664041150!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/oNpJMsMVCxAxvoBg9",
-    phone: "02-2268-8765",
+    phone: "02-8076-3333",
     fbLink: "https://www.facebook.com/100057418720587/",
     fbMessage: "https://m.me/100057418720587/",
     // line: "https://lin.ee/VOzO2Sx",
