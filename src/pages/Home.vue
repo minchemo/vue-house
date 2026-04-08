@@ -45,7 +45,7 @@ img {
 }
 
 .bg {
-  background: url("@/section/s1/bg.png");
+  background: url("@/section/s1/bg.webp");
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -111,7 +111,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .bg {
-    background: url("@/section/s1/bgm.png");
+    background: url("@/section/s1/bgm.webp");
     background-size: 100%;
     background-repeat: no-repeat;
   }

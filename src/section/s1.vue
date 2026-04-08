@@ -12,7 +12,7 @@
     </h1>
     <h3 data-aos="fade-up" data-aos-delay="400">
       <span style="display: none;">淇發寸白</span>
-      488
+      513
       <img src="./s1/t1.png" alt="萬起">
     </h3>
     <h4 data-aos="fade-up" data-aos-delay="800">
@@ -21,7 +21,7 @@
     </h4>
     <p>
       <span style="display: none;">淇發寸白</span>
-      <img src="./s1/b.png">
+      <img src="./s1/b.webp" alt="外觀">
     </p>
   </article>
 </template>

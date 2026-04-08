@@ -194,6 +194,7 @@
       display: flex;
       width: 100%;
       align-items: center;
+      border-bottom: 1px solid #0003;
 
       >span {
         width: 5.5em;
