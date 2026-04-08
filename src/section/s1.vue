@@ -1,7 +1,7 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/ph.png" class="t0">
-    <!--<img src="./s1/pc.png" class="t0">-->
+    <!--<img src="./s1/ph.png" class="t0">
+    <img src="./s1/pc.png" class="t0">-->
     <h2>
       <span style="display: none;">淇發寸白</span>
       <img src="./s1/slogo.png" alt="淇發建設">
