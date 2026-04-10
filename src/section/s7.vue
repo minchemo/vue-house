@@ -219,15 +219,15 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s7/1.webp", import.meta.url).href ,
+    img:new URL("./s7/1.png", import.meta.url).href ,
     caption: "土城國中"
   },
   {
-    img:new URL("./s7/2.webp", import.meta.url).href ,
+    img:new URL("./s7/2.png", import.meta.url).href ,
     caption: "土城國小"
   },
   {
-    img:new URL("./s7/3.webp", import.meta.url).href ,
+    img:new URL("./s7/3.png", import.meta.url).href ,
     caption: "土城國小"
   },
   

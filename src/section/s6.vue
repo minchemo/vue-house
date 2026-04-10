@@ -1,11 +1,11 @@
 <template>
-  <article class="s5" ref="s5">  
+  <article class="s6" ref="s6">  
     <div class="main">
       <div class="txt">
      
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">光影流動的朗闊生活</h4>
+        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">方正高坪效格局，搭配3.2至3.4米的舒心挑高</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          每一扇窗都私藏一幅風景，在風與光共織的靜謐裡，綻放最具質感的日常美學，讓暖陽與微風成為空間的主角，客餐廳交織，映襯半開放廚房的通透視覺，間間皆能容納雙人床的餘裕，讓家不僅是起居，更是身心的歸屬，極致收納智慧完美隱於無形。
+          撐起家人的自在尺度，讓生活不再受限。
         </p>
       </div>
     </div>
@@ -30,8 +30,8 @@
 
 
 
-.s5 {
-  @apply relative flex items-center justify-center bg-[#84DBFF];
+.s6 {
+  @apply relative flex items-center justify-center bg-[#FFFFFF];
   width: 100%;
   height: auto;
   padding: 0em 0 10em 0;
@@ -119,7 +119,7 @@
 @media screen and (max-width: 767px) {
 
 
-  .s5 {
+  .s6 {
     @apply flex-col;
     height: auto;
     padding: 0;
@@ -218,15 +218,15 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s5/1.png", import.meta.url).href,
+    img: new URL("./s6/1.png", import.meta.url).href,
     caption: "3D外觀模擬示意圖"
   },
   {
-    img: new URL("./s5/2.png", import.meta.url).href,
+    img: new URL("./s6/2.png", import.meta.url).href,
     caption: "3D外觀模擬示意圖"
   },
   {
-    img: new URL("./s5/3.png", import.meta.url).href,
+    img: new URL("./s6/3.png", import.meta.url).href,
     caption: "3D外觀模擬示意圖"
   },
 ]
