@@ -4,9 +4,8 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">從通勤到城市戰略<br>永寧站已超越永寧站</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">散步約900米距離直抵板南線永寧站，更迎來萬大線、三鶯線雙軌通車，構築三捷共構的黃金轉運樞紐。
-永寧轉運站正式啟用，聯動桃園與雙北交通動脈，串起居住、就業與生活的快速網絡。搭配國道三號、土城交流道與台65線，貫穿土城、板橋、新莊與新店，讓通勤效率、城市連結與資產流動性同時放大，真正落實交通複利的長效增值，打造比肩信義與新板的城市交通規格。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">4444<br>444444</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">4444444444</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -36,6 +35,7 @@
   gap:3em;
   //flex-direction: row-reverse;
   flex-wrap: wrap;
+  background: #C8E632;
 
   
   .bg{ 

@@ -4,8 +4,8 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">不必刻意養生<br>森活就會自己養你</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">當城市不再只是水泥與鋼筋，生活才真正回歸本質。「松陽馥麗」坐擁天上山、向天山、文筆山三大森林步道，萬坪綠意就是日常風景，成為你日常健康的靠山，構築難以被複製的森活版圖。<br>每一次與自然的連結，都是對身心健康的長期投資。當散步、呼吸、沉靜與運動融入日常節奏，森活日常便化為一種無聲的健康複利，年年累積、日日生息，讓回家的每一步都更接近理想人生。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">66666<br>666666</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">6666666666</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,6 +35,7 @@
   gap:3em;
   //flex-direction: row-reverse;
   flex-wrap: wrap;
+  background: #C8E632;
   .bg{
     span{
       &:nth-child(1){

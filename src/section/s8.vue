@@ -4,8 +4,8 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">坐鎮雙城正核心<br>城市繁華等你一聲號令</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">一座城不夠看，板橋土城雙城才痛快！「松陽馥麗」定錨新土城永寧生活圈，緊臨新板特區，精準踏穩雙城生活圈正核心。<br>向北可快速連接板橋大遠百百貨、威秀影城與國際級商辦，向南則坐擁永寧商圈、大全聯、公園、學區等成熟生活機能。都市生活不再只有單一選擇，而是從容切換繁華與靜謐、效率與自在的雙軸平衡。生活的每一步都走在最核心的節奏上，雙城資源無縫接軌。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">8888<br>88888</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">8888888</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,6 +35,8 @@
   gap:3em;
   //flex-direction: row-reverse;
   flex-wrap: wrap;
+  background: #C8E632;
+
   .bg{
     span{
       &:nth-child(1){

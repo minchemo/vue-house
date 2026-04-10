@@ -4,8 +4,8 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">土城國中升學率新北第一</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">「松陽馥麗」正對在地明星學區土城國中以及附設幼兒園，鄰近土城國小、學府路文教軸線，打造穩定且優質的完整學區環境。周邊預定3700坪「You-niverse」青創基地，新北市府強力推動，將結合創業育成、科技研發、藝術展演與國際交流四大機能，未來將成為新北版華山文創園區。<br>基礎教育的穩定扎根，到創新實踐的場域拓展，學習不再只是過程，而是一場會隨時間逐層加值的知識複利，為孩子的人生拉出更長遠的上升曲線。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">7777777777</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">77777777777</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">

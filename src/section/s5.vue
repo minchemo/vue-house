@@ -4,8 +4,10 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">錨定土城AI 科技圈C位<br>每一天都比昨天更值錢</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">站上科技廊道起點，土城成為新北最受矚目的AI智匯科技城。從頂埔科技園區鴻海總部、中工雲宇宙智慧園區到遠東通訊園區，構成完整科技金三角，吸引Google亞洲最大研發中心、微軟、Amazon、Ericsson等國際巨擘相繼佈局，創造百萬高薪職缺，形塑菁英就業磁場。<br>人口持續流入，帶動居住紅利需求逐步推升，形成一股價值累積的正向循環。「松陽馥麗」鼎足AI科技與森態生活的黃金交界，與科技產業共振成長，時間即是價值的倍增器。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">55555</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+         55555555555
+        </p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,6 +37,7 @@
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
+  background: #84DBFF;
   .bg{
     span{
       &:nth-child(1){

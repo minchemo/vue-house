@@ -4,8 +4,8 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">坐擁過嶺、頭洲<br>雙生活圈核心</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">中壢好市多商圈也在生活半徑內，採買輕鬆到位。緊鄰66快速道路，串聯國道與高鐵南路，盡享便捷交通網絡，鄰近頭洲國小、過嶺國中，孩子上學安心便利，在離塵不離城的繁華轉身處，環抱翠綠與靜謐湖泊景致。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">11111<br>11111</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">333333333。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
