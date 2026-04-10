@@ -88,7 +88,10 @@
 }
 
 .txt { 
-      color: #000;
+  color: #000;
+  h4 {
+    color: #000 !important;
+  }
   .title{
     &::after,
     &::before{

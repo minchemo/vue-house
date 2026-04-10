@@ -28,10 +28,10 @@
     <S6 />
     <S7 />
     <S8 />
-    <S9 />
+       <!-- <S9 />
     <S10 />
     <S11 />
-    <!--
+
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
       <img src="@/section/s1/bg.jpg" />
@@ -137,11 +137,7 @@ img {
   letter-spacing: 0;
   line-height: 1.7;
   width: 100%;
-  margin-top: -13em;
-  color:#000;
-  h4 {
-      color: #000 !important;
-    } 
+  margin-top: -13em; 
   
 
 

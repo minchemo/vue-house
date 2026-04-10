@@ -4,7 +4,7 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">11111<br>11111</h4>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">33333<br>33333</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">333333333。</p>
       </div>
     </div>
@@ -84,7 +84,7 @@
     text-align: justify;
 }
 
-.txt {
+.txt { 
   .title{
     &::after,
     &::before{

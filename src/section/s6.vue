@@ -35,7 +35,7 @@
   gap:3em;
   //flex-direction: row-reverse;
   flex-wrap: wrap;
-  background: #C8E632;
+  background: #EFEFEF;
   .bg{
     span{
       &:nth-child(1){
