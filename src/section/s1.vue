@@ -4,9 +4,8 @@
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-if="isMobile">
     <img src="./s1/t1m.svg" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
-    <!--    -->
-    <img src="" class="t2">
-    <img src="./s1/t2m.png" class="t2" v-if="isMobile">
+    <!--    --> 
+    <img src="./s1/t2m.png" class="t2m" v-if="isMobile">
     <img src="./s1/t2.png" class="t2" v-else>
 
     <img src="./s1/slogo.svg" class="slogo" data-aos="flip-up" data-aos-delay="0">
@@ -28,6 +27,19 @@
   z-index: 9;
   opacity: 0;
 }
+
+
+.t2 {
+  width: 10vw;
+  margin: 0 auto;
+  margin-top: 7vw;
+  margin-left: 53vw;
+  z-index: 10;
+    
+  transform: rotate(20deg);
+  animation: an 2s ease-in-out alternate infinite;
+  transform-origin: 50% 100%;
+  }
 
 @keyframes an {
   to {
@@ -93,16 +105,22 @@
     transform: rotate(20deg);
     animation: an 2s ease-in-out alternate infinite;
     transform-origin: 50% 100%;
+
   }
 
+    .t2m {
+        margin: 0vw auto 0vw;
+        width: 15vw;
+        margin-left: 52vw;
+      }
 
 
   .t3 {
     // mobile
     width: 20vw;
-    margin: 0vw auto 0vw;
-    margin-top: -16vw;
+    margin: 0vw auto 0vw; 
     z-index: 11;
+    margin-top: -18VW;
 
   }
 
@@ -115,10 +133,14 @@
 
     }
 
+    .t2m {
+      width: 10vw;  
+    }
+
     .slogo {
       position: absolute;
       width: 100vw;
-      bottom: 4.5vw;
+      bottom: 0vw;
       left: 0vw;
       /*PC*/
     }
@@ -133,10 +155,9 @@
     .t2 {
       width: 10vw;
       margin: 0 auto;
-      margin-top: 2vw;
+      margin-top: 8vw;
       margin-left: 53vw;
       z-index: 10;
-
       transform: rotate(20deg);
       animation: an 2s ease-in-out alternate infinite;
       transform-origin: 50% 100%;
@@ -147,7 +168,7 @@
       // pc
       width: 20vw;
       margin: 0 auto;
-      margin-top: -16vw;
+      margin-top: -17vw;
       z-index: 99;
     }
 

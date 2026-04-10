@@ -4,8 +4,8 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">站在土城AI科技走廊上<br>直抵世界供應鏈的心臟</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">土城永寧位居板南線關鍵節點，台灣最強7公里AI科技廊道核心，全球目光都聚集在這裡。更掌握新板與土城兩大城市中心脈動，預定板南線未來10年最關鍵的成長軸線，成就城市菁英的居住首選。從科技產業發展到城市生活機能，「松陽馥麗」完美演繹了這片土地上的無限潛力。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">坐擁過嶺、頭洲<br>雙生活圈核心</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">中壢好市多商圈也在生活半徑內，採買輕鬆到位。緊鄰66快速道路，串聯國道與高鐵南路，盡享便捷交通網絡，鄰近頭洲國小、過嶺國中，孩子上學安心便利，在離塵不離城的繁華轉身處，環抱翠綠與靜謐湖泊景致。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -80,17 +80,16 @@
     @apply flex;
     margin: 0;
     flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
+    flex-direction: column;
+    text-align: justify;
 }
 
 .txt {
-  
   .title{
     &::after,
     &::before{
       width: 11.1em;
-    }
+    }  
   }
 }
   .slider {
@@ -107,9 +106,9 @@
     .splide__pagination{
       left: calc(100% + 3em);
       justify-content: flex-start;
-    color: #C5C5C5; 
+      color: #C5C5C5; 
     li button.is-active{
-      color: #529130;
+      color: #4FC1EF;
     }
     }
   }
@@ -156,6 +155,7 @@
 }
 
 .txt {
+      margin-top: 0em;
   .title{
     &::after,
     &::before{

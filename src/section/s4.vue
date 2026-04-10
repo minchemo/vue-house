@@ -36,7 +36,9 @@
   gap:3em;
   //flex-direction: row-reverse;
   flex-wrap: wrap;
-  .bg{
+
+  
+  .bg{ 
     span{
       &:nth-child(1){
         top: 1vw;
@@ -48,7 +50,7 @@
         left: 2vw;
         font-size: 2vw;
       }
-      &:nth-child(3){
+      &:nth-child(3){ 
         top: 3vw;
         left: 7vw;
         font-size: 9vw;
@@ -85,13 +87,13 @@
   text-align: justify;
 }
 
-.txt {
-  
+.txt { 
+      color: #000;
   .title{
     &::after,
     &::before{
       width: 11.1em;
-    }
+    } 
   }
 }
   .slider {

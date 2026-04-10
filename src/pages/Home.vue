@@ -11,28 +11,27 @@
   <!--loading end-->
   <!--navigate-->
   <Nav v-if="config.showNav" />
-  <div class="home bg-[#000000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
-
+  <div class="home bg-[#0EAE70] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+    <!--
     <img src="@/section/s1/bgm667.png" class="bgh mob">
     <img src="@/section/s1/bgm2.png" class="bgh pc">
-    <!--   <div class="bg">
+     
+    <div class="bg">
       <img src="@/section/s1/bg1.png" class="bg1" />
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
-    <S1 />
-    <!-- <S2v /> -->
-    <!--S2 /-->
-    <!-- <S12 />-->
-    <!--<S3 />-->
-    <!--<S4 />-->
-    <!--<S5 />-->
-    <!--<S6 />-->
-    <!--<S7 />-->
-    <!--<S8 />-->
-    <!--<S9 />-->
-    <!--<S10 />-->
-    <!--
+    <S1 />  
+    <S12 />
+    <S3 />
+    <S4 />
+    <S5 />
+    <S6 />
+    <S7 />
+    <S8 />
+    <S9 />
+    <S10 />
     <S11 />
+    <!--
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
       <img src="@/section/s1/bg.jpg" />
@@ -132,13 +131,19 @@ img {
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
 }
 
-
 .txt {
   position: relative;
   font-weight: 300;
   letter-spacing: 0;
   line-height: 1.7;
   width: 100%;
+  margin-top: -13em;
+  color:#000;
+  h4 {
+      color: #000 !important;
+    } 
+  
+
 
   .title-sub {
     font-size: size(20);
@@ -232,7 +237,7 @@ img {
         @apply rounded-full hover:opacity-50;
         width: 1em;
         height: 1em;
-        border: 2px solid currentColor;
+        border: 10px solid currentColor;
 
         &.is-active {
           background: currentColor;
@@ -313,8 +318,8 @@ img {
         button {
           @apply rounded-full hover:opacity-50;
           width: sizem(10.3);
-          height: sizem(3.34);
-          border: sizem(1) solid #fff;
+          height: sizem(3.34); 
+          border: 10px solid currentColor;
 
           &.is-active {
             @apply bg-white;
@@ -326,25 +331,24 @@ img {
 }
 
 #order {
-  background: #352118;
+  background: #0eae70;
 }
 </style>
 
 <script setup>
 import info from "@/info"
-import S1 from "@/section/s1.vue"
-//import S2 from "@/section/s2.vue"
+import S1 from "@/section/s1.vue" 
 // import S2v from "@/section/s2v.vue"
-//import S3 from "@/section/s3.vue"
-//import S4 from "@/section/s4.vue"
-//import S5 from "@/section/s5.vue"
-//import S6 from "@/section/s6.vue"
-//import S7 from "@/section/s7.vue"
-//import S8 from "@/section/s8.vue"
-//import S9 from "@/section/s9.vue"
-//import S12 from "@/section/s12.vue"
-//import S10 from "@/section/s10.vue"
-// import S11 from "@/section/s11.vue"
+import S3 from "@/section/s3.vue"
+import S4 from "@/section/s4.vue"
+import S5 from "@/section/s5.vue"
+import S6 from "@/section/s6.vue"
+import S7 from "@/section/s7.vue"
+import S8 from "@/section/s8.vue"
+import S9 from "@/section/s9.vue"
+import S10 from "@/section/s10.vue"
+import S11 from "@/section/s11.vue"
+import S12 from "@/section/s12.vue"
 /* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */
