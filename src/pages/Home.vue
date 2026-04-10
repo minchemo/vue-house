@@ -319,7 +319,7 @@ img {
           @apply rounded-full hover:opacity-50;
           width: sizem(10.3);
           height: sizem(3.34); 
-          border: 10px solid currentColor;
+          border: 10px solid #fff;
 
           &.is-active {
             @apply bg-white;

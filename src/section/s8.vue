@@ -110,8 +110,7 @@
     }
     .splide__pagination{
       right: calc(100% + 3em);
-      justify-content: flex-end;
-    color: #C5C5C5; 
+      justify-content: flex-end;color: #fff;
     li button.is-active{
       color: #4FC1EF;
     }
