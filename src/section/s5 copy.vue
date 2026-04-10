@@ -1,11 +1,11 @@
 <template>
-  <article class="s3">
-
-  
+  <article class="s5">
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">33333<br>33333</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">333333333。</p>
+    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">55555</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">
+         55555555555
+        </p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -26,7 +26,7 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s3 {
+.s5 {
   @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
   width: 100%;
   height:auto;
@@ -35,6 +35,7 @@
   gap:3em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
+  background: #84DBFF;
   .bg{
     span{
       &:nth-child(1){
@@ -80,16 +81,17 @@
     @apply flex;
     margin: 0;
     flex-basis: size(590);
-    flex-direction: column;
-    text-align: justify;
+  flex-direction: column;
+  text-align: justify;
 }
 
-.txt { 
+.txt {
+  
   .title{
     &::after,
     &::before{
       width: 11.1em;
-    }  
+    }
   }
 }
   .slider {
@@ -105,8 +107,7 @@
     }
     .splide__pagination{
       left: calc(100% + 3em);
-      justify-content: flex-start;
-      color: #fff; 
+      justify-content: flex-start;color: #fff;
     li button.is-active{
       color: #4FC1EF;
     }
@@ -119,7 +120,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s3 {
+  .s5 {
   flex-direction: column-reverse;
   height: auto;
   padding:0 0 5em 0;
@@ -155,7 +156,6 @@
 }
 
 .txt {
-      margin-top: 0em;
   .title{
     &::after,
     &::before{
@@ -220,16 +220,16 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s3/1.png", import.meta.url).href ,
-    caption: "頂埔科學園區"
+    img:new URL("./s5/1.webp", import.meta.url).href ,
+    caption: "板橋遠東通訊園區"
   },
   {
-    img:new URL("./s3/2.png", import.meta.url).href ,
-    caption: "嵿埔之星科技廣場"
+    img:new URL("./s5/2.webp", import.meta.url).href ,
+    caption: "鴻海富士康"
   },
   {
-    img:new URL("./s3/3.png", import.meta.url).href ,
-    caption: "土城鴻海"
+    img:new URL("./s5/3.webp", import.meta.url).href ,
+    caption: "中工雲宇宙智慧園區"
   },
   
 ]

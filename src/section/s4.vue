@@ -225,19 +225,19 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.webp", import.meta.url).href ,
+    img:new URL("./s4/1.png", import.meta.url).href ,
     caption: "永寧捷運站"
   },
   {
-    img:new URL("./s4/2.webp", import.meta.url).href ,
+    img:new URL("./s4/2.png", import.meta.url).href ,
     caption: "永寧捷運站"
   },
   {
-    img:new URL("./s4/3.webp", import.meta.url).href ,
+    img:new URL("./s4/3.png", import.meta.url).href ,
     caption: "永寧捷運站"
   },
   {
-    img:new URL("./s4/4.webp", import.meta.url).href ,
+    img:new URL("./s4/4.png", import.meta.url).href ,
     caption: "國道3號、65快速道路"
   },
 ]
