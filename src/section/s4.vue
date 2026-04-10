@@ -111,8 +111,8 @@
       right: calc(100% + 3em);
       justify-content: flex-end;
     color: #C5C5C5; 
-    li button.is-active{
-      color: #529130;
+    li button.is-active{ 
+      color: #4FC1EF;
     }
     }
   }

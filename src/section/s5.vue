@@ -109,7 +109,7 @@
       justify-content: flex-start;
     color: #C5C5C5; 
     li button.is-active{
-      color: #529130;
+      color: #4FC1EF;
     }
     }
   }

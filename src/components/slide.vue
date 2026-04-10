@@ -48,6 +48,7 @@
 
             &.is-active {
                 opacity: 1;
+                color: #4FC1EF;
 
                 &::after {
                     opacity: 0;

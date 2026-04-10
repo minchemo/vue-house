@@ -112,7 +112,7 @@
       justify-content: flex-end;
     color: #C5C5C5; 
     li button.is-active{
-      color: #B78E63;
+      color: #4FC1EF;
     }
     }
   }
