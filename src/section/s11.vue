@@ -6,13 +6,13 @@
   </div>
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">富而不奢的國際精品味，<br />新富生活質感對位</h4>
+    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">假字假字假字，<br />假字假字假字</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">
-          日系精工與德國極致工藝<br />
-讓療癒廚房與衛浴，解放超載疲累的身心<br />
-降噪地板與隔音氣密窗，日藏每個舒適又靜好時光<br />
-完善的淨水系統，讓每一滴水都乾淨又純粹<br />
-嚴格精選，專鑄細節，用心呈現美好您的日常
+         假字假字假字假字假字假字<br />
+         假字假字假字假字假字假字<br />
+         假字假字假字假字假字假字<br />
+         假字假字假字假字假字假字<br />
+         假字假字假字假字假字假字
         </p>
       </div>
     </div>
