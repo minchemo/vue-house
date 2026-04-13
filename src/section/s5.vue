@@ -229,5 +229,13 @@ const imgs = [
     img: new URL("./s5/3.png", import.meta.url).href,
     caption: "3D外觀模擬示意圖"
   },
+  {
+    img: new URL("./s5/4.png", import.meta.url).href,
+    caption: "3D外觀模擬示意圖"
+  },
+  {
+    img: new URL("./s5/5.png", import.meta.url).href,
+    caption: "3D外觀模擬示意圖"
+  },
 ]
 </script>

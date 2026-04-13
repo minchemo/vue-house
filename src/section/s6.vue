@@ -102,7 +102,7 @@
       @apply bg-cover;
       width: 100%;
       flex-basis: size(1500);
-      height: size(1080);
+      height: size(844);
     }
 
     .splide__pagination {
@@ -227,6 +227,14 @@ const imgs = [
   },
   {
     img: new URL("./s6/3.png", import.meta.url).href,
+    caption: "3D外觀模擬示意圖"
+  },
+  {
+    img: new URL("./s6/4.png", import.meta.url).href,
+    caption: "3D外觀模擬示意圖"
+  },
+  {
+    img: new URL("./s6/5.png", import.meta.url).href,
     caption: "3D外觀模擬示意圖"
   },
 ]
