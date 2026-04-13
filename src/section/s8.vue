@@ -98,14 +98,14 @@
 
   .slider {
     margin: 0 0 0 0;
-    height: size(1080);
-    width: size(1500);
+    height: size(560);
+    width: size(990);
 
     .slide-item {
       @apply bg-cover;
       width: 100%;
-      flex-basis: size(1500);
-      height: size(1080);
+      flex-basis: size(990);
+      height: size(560);
     }
 
     .splide__pagination {
@@ -226,14 +226,6 @@ const imgs = [
   },
   {
     img: new URL("./s8/2.png", import.meta.url).href,
-    caption: "3D外觀模擬示意圖"
-  },
-  {
-    img: new URL("./s8/3.png", import.meta.url).href,
-    caption: "3D外觀模擬示意圖"
-  },
-  {
-    img: new URL("./s8/4.png", import.meta.url).href,
     caption: "3D外觀模擬示意圖"
   },
 ]
