@@ -44,13 +44,14 @@ export default {
     //  表單欄位
     // room_type: ["兩房", "三房"],
     selectFields: {
-
+        /*
         budget: {
             title: "購屋預算",
             hold: "請選擇區間",
             option: ["3500~4000萬", "4000萬以上"],
             bypass: false, //必填開啟使用
         },
+         */
         /*
         use_type: {
             title: "年齡",
