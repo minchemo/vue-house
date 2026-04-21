@@ -18,7 +18,7 @@ export default {
         ["建照號碼", "109高市建築字第01797號"],
         ["行銷企劃", "上宸國際"],
     ],
-    gtmCode: ["GTM-W2JR8PCQ"], // 可放置多個
+    gtmCode: ["GTM-W2JR8PCQ","GTM-WVRDJFVG"], // 可放置多個
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
