@@ -2,9 +2,9 @@
   <article class="s1">
    <!--  <img src="./s1/1.png" class="img1" alt="" />
     <img src="./s1/2.png" class="img2" alt="" />
-    <img src="./s1/3.png" class="img3" alt="" /> -->
+    <img src="./s1/3.png" class="img3" alt="" /> 
     <img src="./s1/img1.webp" class="img1" alt="" />
-    <img src="./s1/img2.webp" class="img2" alt="" />
+    <img src="./s1/img2.webp" class="img2" alt="" />-->
     <img
       src="./s1/logo.svg"
       class="logo"
@@ -44,7 +44,7 @@
     @apply z-10;
     position: absolute;
     top: size(280);
-    left: size(675);
+    left: size(965);
     top: calc(50% + #{size(280-(1080 * 0.5))});
     width: size(556);
   }

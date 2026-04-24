@@ -95,7 +95,8 @@
 .s2 {
   @apply relative w-full z-0;
   height: size(2250);
-  background-image:linear-gradient(0deg, #093948 70%, rgba(15, 35, 81, 0) 100%);
+  background-image:linear-gradient(0deg, #28154a 70%, rgba(15, 35, 81, 0) 100%); 
+  border-top:2px solid #ceaa6d;   
   &::after {
     @apply absolute w-full h-full z-10;
     content: "";
@@ -179,7 +180,7 @@
 @media screen and (max-width: 767px) {
   .s2 {
     height: sizem(1920);
-    background-image:linear-gradient(0deg, #093948 75%, rgba(15, 35, 81, 0) 100%);
+    background-image:linear-gradient(0deg, #28154a 75%, rgba(15, 35, 81, 0) 100%);
   
    // background: #1b527a;
     &::after {

@@ -159,7 +159,7 @@
   &:before {
     content: "";
     width: 100%;
-    height: 50%;
+    height: 45%;
     position: absolute;
     top: 0;
     left: 0;
@@ -173,17 +173,17 @@
   &:after {
     content: "";
     width: 100%;
-    height: 50%;
+    height: 55%;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 0;
     background: linear-gradient(
-      0deg,
-      #074544 0%,
-      #083f46 33%,
-      #0c2f4c 76%,
-      #0f2351 100%
+      0deg, 
+       #100036 0%,
+       #120037 33%,
+       #16003a 76%,
+       #47005c 100%,
     );
   }
 }
