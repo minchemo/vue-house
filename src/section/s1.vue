@@ -10,8 +10,9 @@
       class="logo"
       alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="0"
       data-aos-duration="1600"
+      data-aos-offset="-200"
     />
   </article>
 </template>

@@ -2,12 +2,12 @@ const caseName = "文華苑"
 
 export default {
   caseid: "dd5e36f7-230f-4c1d-8b06-6f652f060e1f",
-  address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
-  address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
-  address: "新北市新莊區中原路101號對面",
+  address1: "建案位置", //按鈕區的--- 如空白會只呈現地址
+  address2: "導航地址", //map點下確認的--- 如空白會顯示"導航地址"
+  address: "新北市新莊區中原路189之1號對面",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3614.3968571642185!2d121.45341507611329!3d25.05453483746298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE2LjMiTiAxMjHCsDI3JzIxLjYiRQ!5e0!3m2!1szh-TW!2stw!4v1701853096132!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/izBcPxPhYjCMDFjV9",
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3614.3998809140135!2d121.4526788!3d25.0544323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90035ec62d1%3A0x821cc34552d0a24e!2z5paH6I-v6IuR!5e0!3m2!1szh-TW!2stw!4v1777014884074!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/CgrbpKCFXH8LJpYFA",
   phone: "02-2279-1188",
   fbLink: "https://www.facebook.com/61554320400557",
   fbMessage: "https://m.me/61554320400557",

@@ -30,7 +30,7 @@
 
 
   <!-- Mobile contact info -->
-  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+  <div v-if="$isMobile()" class="mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
       <img src="//h35.banner.tw/img/form/phone.svg" alt="文華苑" srcset="" />
@@ -63,11 +63,11 @@
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="文華苑" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-        '接待會館'
+        '導航地址'
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-        `接待中心：${info.address}`
+        `${info.address}`
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
@@ -233,14 +233,13 @@
     width: sizem(375);
     height: sizem(63);
     gap: sizem(1);
-
+background:#8d62a0;padding: 1px 0 0 0;
     .contact-item {
       height: 100%;
-      background-color: #CEAA6D;
+      background: linear-gradient(to top,  #17002a ,#5c0083);
       font-size: sizem(16);
       font-weight: 400;
       color: #fff;
-
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
