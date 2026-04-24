@@ -15,10 +15,9 @@
   <div
     class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC'] pb-[64px] md:pb-0"
   >
-  <div class="bgs1s2">
     <S1 />
     <!-- <Vid /> -->
-    <S2 /></div>
+    <S2 />
     <S3 />
     <S4 />
   <!--<S5 />-->
@@ -38,6 +37,7 @@ img {
 .home {
   background: #efefef;
 }
+/*
 .bgs1s2{
   background-image: url("@/section/s1/bg1.jpg");
     background-size: 100%;
@@ -49,6 +49,7 @@ img {
   background-image: url("@/section/s1/bg1m.jpg");
 }
 }
+*/
 </style>
 
 <script setup>

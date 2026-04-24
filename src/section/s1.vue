@@ -108,8 +108,8 @@
       left: auto;
       right: auto;
       margin: auto;
-      top: calc(50% + #{sizem(130-(604 * 0.5))});
-      width: sizem(271);
+      top: calc(50% + #{sizem(70-(604 * 0.5))});
+      width: sizem(215);
     }
 
     .img1 {

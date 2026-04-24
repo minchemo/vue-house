@@ -144,7 +144,7 @@
 
 .order-section {
   position: relative;
-  padding-top: size(280);
+  padding-top: size(200);
   overflow: hidden;
   min-height: size(500);
 
@@ -155,7 +155,7 @@
     bottom: size(50);
     vertical-align: middle;
   }
-
+/*
   &:before {
     content: "";
     width: 100%;
@@ -186,6 +186,7 @@
        #47005c 100%,
     );
   }
+    */
 }
 
 .order {
@@ -193,6 +194,8 @@
   width: 100%;
   padding-top: 0;
 
+  background-image: url("@/section/s1/bg1.jpg");
+    background-size:cover;
   .bird {
     @apply absolute;
     width: size(155);
@@ -331,20 +334,17 @@
 @media screen and (max-width: 768px) {
   .order-section {
     min-height: sizem(800);
-    position: relative;
+    position: relative;  
+      padding-top: sizem(90);
     // overflow: hidden;
     // padding-top: sizem(200);
 
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
-    }
   }
 
   .order {
     width: 100%;
+  background-image: url("@/section/form/bgm.jpg");
+    
     // padding-bottom: sizem(63);
     // border-radius: sizem(68) sizem(68) 0 0;
     /* padding-top: sizem(0);

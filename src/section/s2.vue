@@ -95,20 +95,29 @@
 .s2 {
   @apply relative w-full z-0;
   height: size(2250);
-  background-image:linear-gradient(0deg, #28154a 70%, rgba(15, 35, 81, 0) 100%); 
+  
+  background-image: url("@/section/s1/bg1.jpg");
+    background-size:cover;
+ // background-image:linear-gradient(0deg, #28154a 70%, rgba(15, 35, 81, 0) 100%); 
   border-top:2px solid #ceaa6d;   
   &::after {
-    @apply absolute w-full h-full z-10;
+    @apply absolute ;
     content: "";
-   // background-image: url("@/section/s2/bg.png");
-    background-position: top;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    top: size(1067);
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    z-index: 21;
+height: size(500);transform: translateY(-50%);
+// background:#6663;
+background: linear-gradient(0deg,  #330c5300, #330c53 , #330c5300);
   }
 
   .leaf-box {
-    @apply left-1/2 -translate-x-1/2 top-0 z-20 absolute;
+    @apply left-1/2 -translate-x-1/2 top-0  absolute;
     top: size(640);
+    z-index: 22;
     .leafs {
       @apply flex;
       width: size(1594);
@@ -180,22 +189,16 @@
 @media screen and (max-width: 767px) {
   .s2 {
     height: sizem(1920);
-    background-image:linear-gradient(0deg, #28154a 75%, rgba(15, 35, 81, 0) 100%);
-  
-   // background: #1b527a;
-    &::after {
-      @apply absolute w-full h-full z-10;
-      content: "";
-    //  background-image: url("@/section/s2/bgm.jpg");
-      background-position: top;
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
+    
+  &::after {
+    top: sizem(1092);
+height: sizem(100); }
 
     .splide {
-      @apply absolute w-full z-20;
+      @apply absolute w-full;
       height: sizem(190);
       top: sizem(500);
+      z-index: 22;
       .splide__slide {
         @apply relative cursor-pointer;
         background-size: contain;
@@ -220,18 +223,18 @@
       }
     }
     .leaf-img {
-      @apply absolute z-20;
+      @apply absolute z-30;
       width: sizem(330);
       top: sizem(700);
       left: sizem(22.5);
     }
     .leaf-arrow {
-      @apply absolute z-20;
+      @apply absolute z-30;
       top: sizem(950);
       right: sizem(22.5);
     }
     .gor,.gol{
-      @apply absolute z-20;
+      @apply absolute z-30;
       top: sizem(500);
       right: 0;
       width:  sizem(100);height:  sizem(750);
