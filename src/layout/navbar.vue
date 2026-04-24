@@ -152,7 +152,7 @@
     border-radius: 0;
     padding: size(100) 0;
     backdrop-filter: blur(2px);
-    background: rgba(0, 40, 86, 0.8);
+    background: #4b006bb9;
 
     .menu-item-wrapper {
       @apply flex flex-col relative;
