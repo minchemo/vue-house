@@ -34,7 +34,8 @@
   line-height: 1.3;
   font-weight: 700;
   background-image: url("./s1/bg.jpg");
- // background-position: top center;
+  background-size: cover;
+  background-position: center;
  // background-size: 100%;
 
   .bg {
@@ -99,9 +100,9 @@
     min-height: sizem(604);
     max-height: sizem(750);
     font-size: sizem(14);
-    background-size: 105%;
+    background-size: cover;
     background-image: url("@/section/s1/bgm.jpg");
-    background-position: top;
+    background-position: bottom center;
 
     .logo {
       position: absolute;
@@ -109,7 +110,7 @@
       left: auto;
       right: auto;
       margin: auto;
-      top: calc(50% + #{sizem(70-(604 * 0.5))});
+      top: calc(30% + #{sizem(70-(604 * 0.3))});
       width: sizem(215);
     }
 
