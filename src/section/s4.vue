@@ -1,20 +1,19 @@
 <template>
   <article class="s4">
-
-  
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">4444<br>444444</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">4444444444</p>
+        <h4 class="title" data-aos="fade-up" data-aos-delay="200">戶戶景觀×低密度<br v-if="isMobile">  電梯寓所</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">白馬磁磚的深灰丁掛磚為主調，搭配白色系二丁掛磚與木紋線條勾勒層次，一樓正面外牆磚為白色文化石，沉穩中帶著溫度，頂部提籃設計結合夜間燈光計畫，讓建築在暮色中更顯立體與質感，單純22戶社區，鄰里單純、出入安靜，在城市裡，保留一份難得的從容與寧靜。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows">
+      <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
+          <img :src="img.img" :alt="img.caption">
           <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
@@ -26,174 +25,95 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s4 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#FFF];
-  width: 100%;
-  height:auto;
-  padding:7em 0;
-  font-size:size(18);
-  gap:3em;
-  //flex-direction: row-reverse;
-  flex-wrap: wrap;
-  background: #C8E632;
 
-  
-  .bg{ 
-    span{
-      &:nth-child(1){
-        top: 1vw;
-        left: 10vw;
-        font-size: 3.5vw;
-      }
-      &:nth-child(2){
-        top: 12vw;
-        left: 2vw;
-        font-size: 2vw;
-      }
-      &:nth-child(3){ 
-        top: 3vw;
-        left: 7vw;
-        font-size: 9vw;
-        transform: scale(.8);
-        background: radial-gradient(ellipse at center, #64c8da33 65%,  #fff0 70%);
-        animation-delay: 1.8s;
-      }
-      &:nth-child(4){
-        top: 5vw;
-        left: 26vw;
-        font-size: 1.5vw;
-      }
-      &:nth-child(5){
-        top: 12vw;
-        right: 33vw;
-        font-size: 4.5vw;
-      }
-      &:nth-child(6){
-        top: 12vw;
-        right: 1vw;
-        font-size: 2.5vw;
-        animation-delay: 1.5s;
-      }
+
+.s4 {
+  @apply relative flex items-center justify-center ;
+  width: 100%;
+  height: auto;
+  padding: 0em 0 3.5em 0;
+  font-size: sizem(16);
+  gap: 0;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  background:#C8E632 url("./s3/bottommo.svg") no-repeat 0 100%;
+  background-size: 100% auto;
+      color:#1F1F1F;
+  @media screen and (min-width: 768px) {
+  background-image: url("./s3/bottom.svg");
+  font-size: size(20);
+  flex-direction: column;
+  padding: 0em 0 13em 0;
+  gap: 1.5em;
+  }
+   .txt  { 
+      text-align: justify;
+      width:sizem(310); 
+  @media screen and (min-width: 768px) {
+      text-align: center;
+      width:size(1500); 
+
+  }
+    }
+  .spot {
+    position: absolute;
+    top: sizem(120);
+    right: sizem(-50);
+    width: sizem(188);
+    transform: rotate(-90deg);
+    transform-origin: 100% 100%;
+    pointer-events: none;
+    z-index: 2;
+
+    @media screen and (min-width: 768px) {
+      top: size(290);
+      right: size(-50);
+      ;
+      transform: rotate(0deg);
+      width: size(600);
     }
   }
 
-
+ 
 
   .main {
     @apply flex;
     margin: 0;
-    flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
-}
+    flex-direction: column;
+    text-align: justify;
+    position: relative;
+    z-index: 3;
+  }
 
-.txt { 
-  color: #000;
-  h4 {
-    color: #000 !important;
+  .txt {
+    // margin: auto auto 3vw auto;
+    padding: 0;
+
+    .subtitle {
+      font-weight: 400;
+    }
   }
-  .title{
-    &::after,
-    &::before{
-      width: 11.1em;
-    } 
-  }
-}
+
+  // size(110)
+
   .slider {
-    margin: 0;
-    flex-basis: size(840);
-    width: size(840);
-      height: size(560);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
-      
-    }
-    .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;color: #fff;
-    li button.is-active{ 
-      color: #4FC1EF;
-    }
-    }
-  }
-}
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
+    margin: 0 0 0 0;
+    height: size(1000);
+    width: size(1500);
 @media screen and (max-width: 767px) {
-
-  .s4 {
-  flex-direction: column-reverse;
-  height: auto;
-  padding:0 0 5em 0;
-  font-size:sizem(12);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:2em;
-
-.img{bottom:sizem(230);right:sizem(-30);width:sizem(250);}
-.bg{
-    span{
-      &:nth-child(1){
-        top: 4vw;
-        left: 82vw;
-        font-size: 6vw;
-      }
-      &:nth-child(2){
-        top: 57vw;
-        left: 2vw;
-        font-size: 8vw;
-      }
-      &:nth-child(3){
-        top: 3vw;
-        left: 77vw;
-        font-size: 23vw;
-      }
-    }
-  }
-
-  .main {
-    padding: 0 sizem(30);
-    width: 100%;
-}
-
-.txt {
-  .title{
-    &::after,
-    &::before{
-      width: 0;
-    }
-  }
-  .hr{
-    width: sizem(100);
-    margin: sizem(20) auto sizem(10);
-    }
-}
-
-
-
-  .slider {
-    height: auto;
+    height: sizem(255);
     width: 100%;
 
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
+}
+
+
+    .splide__pagination {
+      justify-content: center;
+      bottom: -3em;
     }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
-    }
-  }
   }
 }
+
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
@@ -225,22 +145,18 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.png", import.meta.url).href ,
-    caption: "永寧捷運站"
+    img: new URL("./s4/1.webp", import.meta.url).href,
+    caption: "建築外觀3D示意圖"
   },
   {
-    img:new URL("./s4/2.png", import.meta.url).href ,
-    caption: "永寧捷運站"
+    img: new URL("./s4/2.webp", import.meta.url).href,
+    caption: "建築外觀3D示意圖"
   },
   {
-    img:new URL("./s4/3.png", import.meta.url).href ,
-    caption: "永寧捷運站"
+    img: new URL("./s4/3.webp", import.meta.url).href,
+    caption: "建築外觀3D示意圖"
   },
-  {
-    img:new URL("./s4/4.png", import.meta.url).href ,
-    caption: "國道3號、65快速道路"
-  },
+
 ]
 const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>
-

@@ -4,8 +4,11 @@
   
     <div class="main">
       <div class="txt">
-    <h4 class="subtitle font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="200">7777777777</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">77777777777</p>
+    <h4 class="title" data-aos="fade-up" data-aos-delay="200">延續大合系列卓越口碑
+第三期全新預售正式公開</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">從透天別墅到電梯寓所，我們始終堅持低公設、高坪效、高品質，讓首購也能擁有頂級實績的精工品質。
+● ︎觀音區｜和創大合（第一期）    珍稀6戶臨路別墅
+● ︎新屋區｜合豐大墅（第二期）    21戶質感社區別墅</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">

@@ -1,12 +1,9 @@
 <template>
-  <article class="s5" ref="s5">  
+  <article class="s5">
     <div class="main">
       <div class="txt">
-     
-        <h4 class="subtitle" data-aos="fade-up" data-aos-delay="0">光影流動的朗闊生活</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          每一扇窗都私藏一幅風景，在風與光共織的靜謐裡，綻放最具質感的日常美學，讓暖陽與微風成為空間的主角，客餐廳交織，映襯半開放廚房的通透視覺，間間皆能容納雙人床的餘裕，讓家不僅是起居，更是身心的歸屬，極致收納智慧完美隱於無形。
-        </p>
+        <h4 class="title" data-aos="fade-up" data-aos-delay="200">光影流動的朗闊生活</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">每一扇窗都私藏一幅風景，在風與光共織的靜謐裡，綻放最具質感的日常美學，讓暖陽與微風成為空間的主角，客餐廳交織，映襯半開放廚房的通透視覺，間間皆能容納雙人床的餘裕，讓家不僅是起居，更是身心的歸屬，極致收納智慧完美隱於無形。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -15,7 +12,7 @@
         <div class="next" @click="splide.splide.go('>')"></div>
       </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
+        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
           <img :src="img.img" :alt="img.caption">
           <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
@@ -31,26 +28,32 @@
 
 
 .s5 {
-  @apply relative flex items-center justify-center bg-[#84DBFF];
+  @apply relative flex items-center justify-center ;
   width: 100%;
   height: auto;
-  padding: 0em 0 10em 0;
-  font-size: size(20);
-  gap: 2em;
+  padding: 0em 0 3.5em 0;
+  font-size: sizem(16);
+  gap: 0;
   flex-wrap: wrap;
+  flex-direction: column-reverse;
+  background:#84DBFF url("./s3/bottommo.svg") no-repeat 0 100%;
+  background-size: 100% auto;
+      color:#1F1F1F;
+  @media screen and (min-width: 768px) {
+  background-image: url("./s3/bottom.svg");
+  font-size: size(20);
   flex-direction: column;
-
-
+  padding: 0em 0 13em 0;
+  gap: 1.5em;
+  }
    .txt  { 
+      text-align: justify;
+      width:sizem(310); 
+  @media screen and (min-width: 768px) {
       text-align: center;
-      margin-top: 0;
-      h4 {
-      color:#000;
-      padding-top: size(120); 
-      }
-      p{ 
-      width: 75rem;
-      }
+      width:size(1500); 
+
+  }
     }
   .spot {
     position: absolute;
@@ -95,104 +98,28 @@
 
   .slider {
     margin: 0 0 0 0;
-    height: size(1080);
+    height: size(1000);
     width: size(1500);
+@media screen and (max-width: 767px) {
+    height: sizem(255);
+    width: 100%;
 
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-      flex-basis: size(1500);
-      height: size(1080);
-    }
+}
+
 
     .splide__pagination {
-      justify-content: flex-end;
-      bottom: -2em;
+      justify-content: center;
+      bottom: -3em;
     }
   }
 }
 
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-@media screen and (max-width: 767px) {
-
-
-  .s5 {
-    @apply flex-col;
-    height: auto;
-    padding: 0;
-    font-size: sizem(15);
-    flex-wrap: nowrap;
-    margin-bottom: 0em;
-    gap: 0em;
-
-    .img {
-      bottom: auto;
-      top: sizem(370);
-
-      .oo1 {
-        right: sizem(-260);
-        width: sizem(480);
-      }
-
-      .bubble1 {
-        right: sizem(-110);
-        width: sizem(250);
-        bottom: sizem(-35);
-      }
-
-      .g {
-        right: sizem(30);
-        width: sizem(100);
-        bottom: sizem(40);
-      }
-    }
-
-    .bubble2 {
-      left: sizem(130);
-      width: sizem(218);
-      top: sizem(-170);
-    }
-
-    .main {
-      padding: 0 sizem(32.5);
-      width: 100%;
-    }
-
-    .txt {
-      margin: 3em auto 2em;
-      padding: 0;
-    }
-
-
-    .slider {
-      height: auto;
-      width: 100%;
-
-      .caption {
-        font-size: sizem(12);
-        right: sizem(5);
-        bottom: sizem(5);
-      }
-
-      .slide-item {
-        @apply bg-cover;
-        width: 100%;
-        flex-basis: auto;
-        height: sizem(250);
-
-      }
-    }
-  }
-}
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
+
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -218,24 +145,26 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s5/1.png", import.meta.url).href,
-    caption: "3D外觀模擬示意圖"
+    img: new URL("./s5/1.webp", import.meta.url).href,
+    caption: "室內3D渲染圖"
   },
   {
-    img: new URL("./s5/2.png", import.meta.url).href,
-    caption: "3D外觀模擬示意圖"
+    img: new URL("./s5/2.webp", import.meta.url).href,
+    caption: "室內3D渲染圖"
   },
   {
-    img: new URL("./s5/3.png", import.meta.url).href,
-    caption: "3D外觀模擬示意圖"
+    img: new URL("./s5/3.webp", import.meta.url).href,
+    caption: "室內3D渲染圖"
   },
   {
-    img: new URL("./s5/4.png", import.meta.url).href,
-    caption: "3D外觀模擬示意圖"
+    img: new URL("./s5/4.webp", import.meta.url).href,
+    caption: "室內3D渲染圖"
   },
   {
-    img: new URL("./s5/5.png", import.meta.url).href,
-    caption: "3D外觀模擬示意圖"
+    img: new URL("./s5/5.webp", import.meta.url).href,
+    caption: "室內3D渲染圖"
   },
+
 ]
+const currentImg = computed(() => imgs[currentSlideIndex.value]);
 </script>

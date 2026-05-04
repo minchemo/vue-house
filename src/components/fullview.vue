@@ -29,6 +29,16 @@
     .viewbox {
         height: 100%;
         overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            background: linear-gradient(180deg, #1fbcff, #1fbcff00);
+        }
 
         img {
             height: 100%;
@@ -67,7 +77,7 @@ import { onMounted, ref, computed, getCurrentInstance } from 'vue';
 const viewbox = ref();
 const viewImg = ref();
 const swiped = ref(false);
-const offsetRatio = 1.15; 
+const offsetRatio = 2.17; 
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());

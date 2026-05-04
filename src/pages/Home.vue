@@ -21,7 +21,7 @@
       <img src="@/section/s1/bg2.png" class="bg2" />
     </div> -->
     <S1 />  
-    <S12 />
+    <S2 />
     <S3 />
     <S4 />
     <S5 />
@@ -123,12 +123,14 @@ img {
 
 .caption {
   @apply absolute;
-  right: 1em;
-  bottom: .5em;
+  right:0;
+  bottom: 0;
   font-weight: 300;
   font-size: size(15);
-  color: #FFF;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  background: #d9d9d9cc;
+  color: #2C2C2C;
+  padding: .5em 1em;
+ // text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
 }
 
 .txt {
@@ -137,7 +139,6 @@ img {
   letter-spacing: 0;
   line-height: 1.7;
   width: 100%;
-  margin-top: -13em; 
   
 
 
@@ -149,13 +150,13 @@ img {
   }
 
   .title {
-    font-size: 2.2em;
-    margin: 0em 0 0em;
+    font-size: 2.5em;
+    margin: 2.2em 0 .6em;
     line-height: 1.4;
     font-weight: 700;
-    color: #fff;
-    text-align: center;
-
+   // color: #fff;
+    // text-align: center;
+/*
     &::after,
     &::before {
       content: "";
@@ -166,6 +167,7 @@ img {
       vertical-align: middle;
       margin: auto 1em;
     }
+      */
   }
 
   .subtitle {
@@ -225,22 +227,32 @@ img {
   .splide__pagination {
     @apply absolute flex justify-center w-full;
     bottom: 0;
-    gap: .5em;
-    color: #fff;
+    gap: .9em;
+    color: #4FC1EF;
 
     li {
       button {
         @apply rounded-full hover:opacity-50;
         width: 1em;
         height: 1em;
-        border: 10px solid currentColor;
+        border: .9em solid currentColor;
+        
+          filter: brightness(0) invert(1);
 
         &.is-active {
           background: currentColor;
+          filter: brightness(1) invert(0);
         }
       }
     }
   }
+    .slide-item {
+      width: 100%;
+      height: 100%;
+      img{
+      width: 100%;
+      height: 100%;}
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -267,29 +279,17 @@ img {
   }
 
   .txt {
+  line-height: 1.5;
     .title-sub {
       font-size: sizem(15);
       text-align: center;
     }
 
     .title {
-      font-size: sizem(23);
-      text-align: center;
-
-      &::after,
-      &::before {
-        width: 0em !important;
-        position: absolute;
-      }
-    }
-
-    .subtitle {
-      font-size: sizem(20);
-      text-align: center
-    }
-
-    .desc {
-      font-size: sizem(14);
+    margin: 1.3em 0 .6em;
+    font-size: 1.55em;
+    
+    // font-size: sizem(23);
     }
   }
 
@@ -334,6 +334,7 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue" 
+import S2 from "@/section/s2.vue"
 // import S2v from "@/section/s2v.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
@@ -341,10 +342,10 @@ import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
+/*import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
 import S11 from "@/section/s11.vue"
-import S12 from "@/section/s12.vue"
+import S12 from "@/section/s12.vue"*/
 /* 
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue" */
