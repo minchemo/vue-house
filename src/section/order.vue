@@ -101,11 +101,11 @@
   // padding-top: size(406);
   overflow: hidden;
   min-height: size(500);
-  //background-color: #00be6e;
-  background-image: url("./s1/order-bg.png");
+  background-color: #0EAE70;
+  //background-image: url("./s1/order-bg.png");
   background-size: auto;
   background-position: top;
-  margin-top: -4.5vw;
+  //margin-top: -4.5vw;
 
   .bg-image {
     position: absolute;
@@ -119,13 +119,14 @@
 
 .order {
   width: 100%;
+  font-size: 15px;
   // padding-top: size(10);
   // background: linear-gradient(to bottom, #195c45, #000704);
 
 
 
   .order-title {
-    font-size: size(40);
+    font-size: size(50);
     font-weight: 500;
     color: #F8F66F;
     padding-top: 1em;
@@ -143,12 +144,12 @@
   }
 
   .order-subTitle {
-    font-size: size(17);
-    color: #F8F66F;
+    font-size: size(21);
+    color: #fff;
     padding-top: .8em;
     padding-bottom: 1em;
     letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    font-weight: 300;//filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
 
   .cus-divider {
@@ -187,7 +188,7 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #0003;
+      background-color: #fff6;
       position: absolute;
     }
 
@@ -213,6 +214,10 @@
       select {
         background: inherit;
         flex: 1;
+        font-size: inherit;
+      }
+      textarea {
+        font-size: inherit;
       }
 
       option {
@@ -277,7 +282,6 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
-    background-color: #00be6e;
     background-size: cover;
     // overflow: hidden;
     // padding-top: sizem(200);
@@ -308,7 +312,7 @@
     .order-title {
       font-size: sizem(27);
       padding-top: 1em;
-      padding-bottom: .3em;
+     // padding-bottom: .3em;
 
       .line {
         width: sizem(258);
@@ -317,7 +321,7 @@
 
     .order-subTitle {
       font-size: sizem(13);
-      padding-bottom: 0;
+      letter-spacing: 0.02em;
     }
 
 

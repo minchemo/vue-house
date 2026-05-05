@@ -2,7 +2,7 @@
   <article class="s6">
     <div class="main">
       <div class="txt">
-        <h4 class="title" data-aos="fade-up" data-aos-delay="200">方正高坪效格局，搭配3.2至3.4米的舒心挑高</h4>
+        <h4 class="title" data-aos="fade-up" data-aos-delay="200">方正高坪效格局，<br v-if="isMobile">搭配3.2至3.4米的舒心挑高</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">撐起家人的自在尺度，讓生活不再受限。</p>
       </div>
     </div>
@@ -14,7 +14,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
           <img :src="img.img" :alt="img.caption">
-          <span class="caption">{{ img.caption }}</span>
+          <span class="caption" v-if="img.caption" v-html="img.caption"></span>
         </SplideSlide>
       </Splide>
     </div>
@@ -36,15 +36,16 @@
   gap: 0;
   flex-wrap: wrap;
   flex-direction: column-reverse;
-  background:#84DBFF url("./s3/bottommo.svg") no-repeat 0 100%;
-  background-size: 100% auto;
+  background:url("./s3/bottommo.svg") no-repeat 0 100%, url("./s6/bg.png") ;
+  background-size:100% auto ,sizem(150) auto;
       color:#1F1F1F;
   @media screen and (min-width: 768px) {
-  background-image: url("./s3/bottom.svg");
+  background-image:url("./s6/bottom.svg"), url("./s6/bg.png");
+  background-size:100% auto ,size(200) auto;
   font-size: size(20);
   flex-direction: column;
   padding: 0em 0 13em 0;
-  gap: 1.5em;
+  gap: 0em;
   }
    .txt  { 
       text-align: justify;
@@ -98,13 +99,26 @@
 
   .slider {
     margin: 0 0 0 0;
-    height: size(1000);
     width: size(1500);
+    height: size(844);
 @media screen and (max-width: 767px) {
-    height: sizem(255);
+    height: sizem(295);
     width: 100%;
 
 }
+
+  .caption {
+    left: 0;
+    background: none;
+    text-align: center;
+ // font-size: size(17);
+@media screen and (max-width: 767px) {
+    text-align: left;
+    font-size: sizem(9);
+
+
+}
+  }
 
 
     .splide__pagination {
@@ -145,24 +159,24 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s6/1.png", import.meta.url).href,
-    caption: ""
+    img: isMobile.value ? new URL("./s6/1m.webp", import.meta.url).href : new URL("./s6/1.png", import.meta.url).href,
+    caption:isMobile.value ? "傢俱配置參考圖｜<br>本圖隔間及傢俱配置示意圖僅供參考<br>其銷售平面係依合約附圖及地政機關登記為主" : "傢俱配置參考圖｜本圖隔間及傢俱配置示意圖僅供參考，其銷售平面係依合約附圖及地政機關登記為主"
   },
   {
-    img: new URL("./s6/2.png", import.meta.url).href,
-    caption: ""
+    img: isMobile.value ? new URL("./s6/2m.webp", import.meta.url).href : new URL("./s6/2.png", import.meta.url).href,
+    caption: isMobile.value ? "傢俱配置參考圖｜<br>本圖隔間及傢俱配置示意圖僅供參考<br>其銷售平面係依合約附圖及地政機關登記為主" : "傢俱配置參考圖｜本圖隔間及傢俱配置示意圖僅供參考，其銷售平面係依合約附圖及地政機關登記為主"
   },
   {
-    img: new URL("./s6/3.png", import.meta.url).href,
-    caption: ""
+    img: isMobile.value ? new URL("./s6/3m.webp", import.meta.url).href : new URL("./s6/3.png", import.meta.url).href,
+    caption: isMobile.value ? "傢俱配置參考圖｜<br>本圖隔間及傢俱配置示意圖僅供參考<br>其銷售平面係依合約附圖及地政機關登記為主" : "傢俱配置參考圖｜本圖隔間及傢俱配置示意圖僅供參考，其銷售平面係依合約附圖及地政機關登記為主"
   },
   {
-    img: new URL("./s6/4.png", import.meta.url).href,
-    caption: ""
+    img: isMobile.value ? new URL("./s6/4m.webp", import.meta.url).href : new URL("./s6/4.png", import.meta.url).href,
+    caption: isMobile.value ? "傢俱配置參考圖｜<br>本圖隔間及傢俱配置示意圖僅供參考<br>其銷售平面係依合約附圖及地政機關登記為主" : "傢俱配置參考圖｜本圖隔間及傢俱配置示意圖僅供參考，其銷售平面係依合約附圖及地政機關登記為主"
   },
   {
-    img: new URL("./s6/5.png", import.meta.url).href,
-    caption: ""
+    img: isMobile.value ? new URL("./s6/5m.webp", import.meta.url).href : new URL("./s6/5.png", import.meta.url).href,
+    caption: isMobile.value ? "傢俱配置參考圖｜<br>本圖隔間及傢俱配置示意圖僅供參考<br>其銷售平面係依合約附圖及地政機關登記為主" : "傢俱配置參考圖｜本圖隔間及傢俱配置示意圖僅供參考，其銷售平面係依合約附圖及地政機關登記為主"
   },
 
 ]

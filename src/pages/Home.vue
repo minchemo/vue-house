@@ -195,6 +195,8 @@ img {
     padding: 0;
     height: 100%;
     pointer-events: none;
+filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.60));
+
 
     .prev,
     .next {
@@ -209,9 +211,10 @@ img {
       background-size: 50% auto;
       transition: background-color .5s;
 
-      &:hover {
+    /*  &:hover {
         background-color: #0003;
       }
+        */
     }
 
     .prev {
@@ -246,12 +249,16 @@ img {
       }
     }
   }
+  .splide,
+  .splide__track{height: 100%;}
     .slide-item {
       width: 100%;
       height: 100%;
       img{
       width: 100%;
-      height: 100%;}
+      height: 100%;
+      object-fit: cover;
+      }
     }
 }
 

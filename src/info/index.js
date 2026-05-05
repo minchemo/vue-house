@@ -1,4 +1,4 @@
-const caseName = "豐秀大境"
+const caseName = "傳家大合"
 
 export default {
     caseid: "2dcbcbc2-2afa-4a21-9349-85b3a1b3f2d8",
@@ -12,7 +12,7 @@ export default {
     phone: "03-490-5553",
     fbLink: "https://www.facebook.com/profile.php?id=61579968897663",
     fbMessage: "https://m.me/61579968897663/",
-    line: "https://lin.ee/eVsJqdc",// 客戶加賴
+    // line: "https://lin.ee/eVsJqdc",// 客戶加賴
     caseName: caseName,
     houseInfos: [
         ["起造興建", "和創建設有限公司"],

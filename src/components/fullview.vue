@@ -1,8 +1,8 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s12/map.png" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s2/map.png" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
-            <img src="@/components/fullview/finger.png" alt="" srcset="">
+            <img src="@/components/fullview/finger.svg" alt="" srcset="">
         </div>
     </div>
 </template>
@@ -17,10 +17,10 @@
     background: #eee;
 
     > img {
-        //height: 100%;
+        height: 100%;
         //max-width: unset;
-        //background:url("@/section/s12/map.png") 50%;
-        //background-size: 100% auto;
+        background:url("@/section/s2/map.jpg") 50%;
+        background-size: cover;
     }
 
 }
@@ -57,7 +57,7 @@
             pointer-events: none;
             opacity: 1;
             transition: all 1s;
-            background-color: rgba($color: #001D05, $alpha: 0.5);
+            background-color: rgba($color: #006791, $alpha: 0.3);
 
             img {
                 height: 47px;

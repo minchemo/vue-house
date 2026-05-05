@@ -2,7 +2,7 @@
   <article class="s4">
     <div class="main">
       <div class="txt">
-        <h4 class="title" data-aos="fade-up" data-aos-delay="200">戶戶景觀×低密度<br v-if="isMobile">  電梯寓所</h4>
+        <h4 class="title" data-aos="fade-up" data-aos-delay="200">戶戶景觀×<br v-if="isMobile">低密度電梯寓所</h4>
         <p class="desc" data-aos="fade-up" data-aos-delay="400">白馬磁磚的深灰丁掛磚為主調，搭配白色系二丁掛磚與木紋線條勾勒層次，一樓正面外牆磚為白色文化石，沉穩中帶著溫度，頂部提籃設計結合夜間燈光計畫，讓建築在暮色中更顯立體與質感，單純22戶社區，鄰里單純、出入安靜，在城市裡，保留一份難得的從容與寧靜。</p>
       </div>
     </div>
@@ -14,7 +14,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
           <img :src="img.img" :alt="img.caption">
-          <span class="caption">{{ img.caption }}</span>
+          <span class="caption" v-if="img.caption" v-html="img.caption"></span>
         </SplideSlide>
       </Splide>
     </div>

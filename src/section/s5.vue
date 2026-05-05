@@ -14,7 +14,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
           <img :src="img.img" :alt="img.caption">
-          <span class="caption">{{ img.caption }}</span>
+          <span class="caption" v-if="img.caption" v-html="img.caption"></span>
         </SplideSlide>
       </Splide>
     </div>
@@ -36,11 +36,11 @@
   gap: 0;
   flex-wrap: wrap;
   flex-direction: column-reverse;
-  background:#84DBFF url("./s3/bottommo.svg") no-repeat 0 100%;
+  background:#84DBFF url("./s5/bottommo.svg") no-repeat 0 100%;
   background-size: 100% auto;
       color:#1F1F1F;
   @media screen and (min-width: 768px) {
-  background-image: url("./s3/bottom.svg");
+  background-image: url("./s5/bottom.svg");
   font-size: size(20);
   flex-direction: column;
   padding: 0em 0 13em 0;
@@ -101,9 +101,9 @@
     height: size(1000);
     width: size(1500);
 @media screen and (max-width: 767px) {
-    height: sizem(255);
+    height: sizem(285);
     width: 100%;
-
+background: #000;
 }
 
 

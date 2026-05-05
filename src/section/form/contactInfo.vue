@@ -173,8 +173,8 @@
 .contact-info {
   //padding: size(55) size(0) size(55) size(0);
   padding: 2vw 0vw 2vw 0vw;
-  width: size(1440);
-  min-width: 680px;
+    width: size(920);
+    min-width: 750px;
   position: relative;
   z-index: 50;
   // background: #045147;
@@ -208,7 +208,7 @@
     position: relative;
     margin-top: size(20);
     gap: size(20);
-    width: size(920);
+   // width: size(920);
     // min-width: 680px;
 
     .contact-item {
@@ -218,7 +218,7 @@
       flex: 1;
       padding: 1.1em 0;
       //  border-radius: .5em;
-      font-size: size(16);
+     // font-size: size(16);
       line-height: 1.6; //3.8
       letter-spacing: 0em;
       // max-width: size(280);
@@ -326,15 +326,15 @@
       height: 100%;
       font-size: sizem(16);
       font-weight: 400;
-      color: #000;
-      border-left: 1px solid #fff7;
+      color: #360A01;
+      border-left: 1px solid #360A0133;
 
       img {
         margin-bottom: sizem(5);
         max-width: sizem(16.5);
         height: auto;
         max-height: sizem(16.5);
-        filter: brightness(0) invert(0);
+        filter: invert(7%) sepia(51%) saturate(4186%) hue-rotate(12deg) brightness(87%) contrast(105%);
       }
 
     }

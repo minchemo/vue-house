@@ -8,9 +8,9 @@
                     <div class="title">建案資訊</div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                            v-for="item in info.houseInfos">
+                            v-for="item in info.houseInfos" :key="item">
                             <p class="mr-5 border-l-2 border-[#fff] pl-2 text-[#fff]" v-html="item[0]"></p>
-                            <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-normal"
+                            <p class="whitespace-pre-line leading-normal text-left text-[#fff] font-[300]"
                                 v-html="item[1]">
                             </p>
                         </div>
@@ -49,8 +49,8 @@
 .house {
     // height: auto;
     color: #FFF;
-    background: #00be6e;
-    font-size: size(22);
+    background: #0EAE70;
+    font-size: 15px;
 
     // height:4em;
     img {
@@ -60,7 +60,8 @@
 }
 
 .info-box {
-    width: size(800);
+    width: size(920);
+    min-width: 750px;
 
     .title {
         font-size: size(40);
@@ -70,12 +71,11 @@
     }
 
     .info-items {
-        row-gap: size(20);
-        column-gap: size(20);
+        row-gap:1.33em;
+        column-gap: 1.33em;
 
         .item {
-            line-height: size(17);
-            font-size: size(16);
+           // font-size: size(16);
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
@@ -89,19 +89,17 @@
 
 @media screen and (max-width:768px) {
     .house {
-        background: #00be6e;
-        //  height: sizem(400);
         font-size: sizem(14);
     }
 
     .footer {
         margin-bottom: sizem(0);
-        //margin-bottom: sizem(63);
     }
 
     .info-box {
-        width: sizem(313);
+        width: sizem(310);
         padding: 0;
+    min-width: sizem(310);
 
         .title {
             font-size: sizem(29);

@@ -2,8 +2,8 @@
   <article class="s8">
     <div class="main">
       <div class="txt">
-        <h4 class="title" data-aos="fade-up" data-aos-delay="200">光影流動的朗闊生活</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">每一扇窗都私藏一幅風景，在風與光共織的靜謐裡，綻放最具質感的日常美學，讓暖陽與微風成為空間的主角，客餐廳交織，映襯半開放廚房的通透視覺，間間皆能容納雙人床的餘裕，讓家不僅是起居，更是身心的歸屬，極致收納智慧完美隱於無形。</p>
+        <h4 class="title" data-aos="fade-up" data-aos-delay="200">質感生活，從細節開始</h4>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">精選國內外指標品牌，打造安心、<br v-if="isMobile">舒適、耐用的質感家。</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -14,7 +14,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
           <img :src="img.img" :alt="img.caption">
-          <span class="caption">{{ img.caption }}</span>
+          <span class="caption" v-if="img.caption" v-html="img.caption"></span>
         </SplideSlide>
       </Splide>
     </div>
@@ -35,19 +35,19 @@
   font-size: sizem(16);
   gap: 0;
   flex-wrap: wrap;
-  flex-direction: column-reverse;
-  background:#ECECEC url("./s3/bottommo.svg") no-repeat 0 100%;
-  background-size: 100% auto;
-      color:#1F1F1F;
-  @media screen and (min-width: 768px) {
-  background-image: url("./s3/bottom.svg");
-  font-size: size(20);
   flex-direction: column;
+  background:#ECECEC url("./s8/bottommo.svg") no-repeat 0 100%;
+  background-size: 100% auto;
+  color:#1F1F1F;
+  @media screen and (min-width: 768px) {
+  background-image: url("./s8/bottom.svg");
+  background-color: #ECECEC;
+  font-size: size(20);
   padding: 0em 0 13em 0;
   gap: 1.5em;
   }
    .txt  { 
-      text-align: justify;
+      text-align: center;
       width:sizem(310); 
   @media screen and (min-width: 768px) {
       text-align: center;
@@ -98,12 +98,38 @@
 
   .slider {
     margin: 0 0 0 0;
-    height: size(1000);
     width: size(1500);
+    height: size(560);
 @media screen and (max-width: 767px) {
     height: sizem(255);
     width: 100%;
 
+}
+.slide-item {
+      img{margin: 0 auto;
+        display: block;
+      width: 100%;
+      height: 100%;
+    
+@media screen and (min-width: 768px) {
+
+      width: auto;
+}
+    }
+      .caption{
+        display: block;
+        font-size: sizem(15);
+padding: 0.1em .5em 0.1em 2em;
+        background: linear-gradient(90deg, #0eae7000, #0eae70cc 2em);
+        color: #fff;bottom: auto;top: 0;right: 0;
+@media screen and (min-width: 768px) {
+        font-size: size(30);
+        right: calc(50% - #{size(840 * .5)});
+
+
+}
+
+      }
 }
 
 
@@ -145,24 +171,36 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s8/1.webp", import.meta.url).href,
-    caption: "室內3D渲染圖"
+    img: isMobile.value ? new URL("./s8/1m.png", import.meta.url).href : new URL("./s8/1.webp", import.meta.url).href,
+    caption: ""
   },
   {
     img: new URL("./s8/2.webp", import.meta.url).href,
-    caption: "室內3D渲染圖"
+    caption: "FAULTLESS 四合一電子鎖 示意圖"
   },
   {
     img: new URL("./s8/3.webp", import.meta.url).href,
-    caption: "室內3D渲染圖"
+    caption: "大同氣密窗 示意圖"
   },
   {
     img: new URL("./s8/4.webp", import.meta.url).href,
-    caption: "室內3D渲染圖"
+    caption: "白馬磁磚 示意圖"
   },
   {
     img: new URL("./s8/5.webp", import.meta.url).href,
-    caption: "室內3D渲染圖"
+    caption: "櫻花廚具 示意圖"
+  },
+  {
+    img: new URL("./s8/6.webp", import.meta.url).href,
+    caption: "TOTO全套衛浴 示意圖"
+  },
+  {
+    img: new URL("./s8/7.webp", import.meta.url).href,
+    caption: "智能櫃 示意圖"
+  },
+  {
+    img: new URL("./s8/8.webp", import.meta.url).href,
+    caption: "歐特斯熱泵熱水器 示意圖"
   },
 
 ]

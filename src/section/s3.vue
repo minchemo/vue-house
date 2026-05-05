@@ -14,7 +14,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index">
           <img :src="img.img" :alt="img.caption">
-          <span class="caption">{{ img.caption }}</span>
+          <span class="caption" v-if="img.caption" v-html="img.caption"></span>
         </SplideSlide>
       </Splide>
     </div>
