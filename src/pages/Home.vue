@@ -53,20 +53,24 @@ import S1 from "@/section/s1.vue"
 /* 
 import S2 from "@/section/s2.vue" */
 import Order from "@/section/order.vue"
-import { onMounted, ref } from "vue"
-
-import AOS from 'aos';
+import { onMounted, nextTick, ref } from "vue"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const isLoading = ref(true)
-const gtmNoScript = ref('')
-onMounted(() => {
-  window.onload = function () {
-    isLoading.value = false
-    AOS.init({
-      offset: 0,
-      duration: 2000
-    });
-  };
+
+onMounted(async () => {
+  await nextTick()
+
+  isLoading.value = false
+
+  AOS.init({
+    once: true,
+    duration: 2000,
+  //  delay: 200,
+  })
+
+  AOS.refresh()
 
 })
 </script>

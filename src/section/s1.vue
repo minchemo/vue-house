@@ -1,17 +1,30 @@
 <template>
   <article class="s1 relative" id="s1">
     <!-- <img src="./s1/mo.png" class="t0"> -->
-    <img src="./s1/en.svg" alt="luxurious" class="en">
-    <div class="logo">
-      <img src="./s1/diamond.webp" alt="" class="p1">
+    <img src="./s1/en.svg" alt="luxurious" class="en" data-aos="zoom-in">
+    <div class="logo" data-aos="zoom-in" data-aos-delay="400">
+      <img src="./s1/diamond.webp" alt="" class="p1" >
       <img src="./s1/logo.svg" alt="logo" class="p2">
       <img src="./s1/l.webp" alt="logo" class="p3">
       <img src="./s1/l.webp" alt="logo" class="p4">
       <img src="./s1/l.webp" alt="logo" class="p5">
     </div>
-    <img src="./s1/t1.svg" alt="" class="t1" v-if="!isMobile">
-    <img src="./s1/t1m.svg" alt="" class="t1" v-else>
-    <img src="./s1/coming.svg" alt="" class="coming">
+    
+    <picture>
+      <source
+        srcset="./s1/t1m.svg"
+        media="(max-width: 768px)"
+      >
+
+      <img
+        src="./s1/t1.svg"
+        alt=""
+        class="t1"
+        data-aos="zoom-in"
+        data-aos-delay="600"
+      >
+    </picture>
+    <img src="./s1/coming.svg" alt="" class="coming" data-aos="zoom-in" data-aos-delay="800">
   </article>
 </template>
 
