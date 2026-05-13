@@ -27,8 +27,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#A30C24;
-$house-c2:#000;
+$house-c1:#2EA7E0;
+$house-c2:#fff;
 .displaynone{display: none;}
 .house {
    // height: auto;

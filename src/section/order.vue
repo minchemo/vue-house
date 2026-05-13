@@ -1,12 +1,15 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-
+      
+    <img src="./s1/title.svg" alt="" class="order-title-img" v-if="!isMobile">
+    <img src="./s1/titlem.svg" alt="" class="order-title-img" v-else>
+<!--
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
-
+  -->
       <!-- FORM -->
       <div class="form mx-auto relative flex justify-center">
 
@@ -94,8 +97,8 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#666]">
-          本人知悉並同意<label for="policy-modal" class="text-[#A30C24] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-[#fff]">
+          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -133,7 +136,7 @@ $o-title-c: #A30C24; //.order-title
 
 .order {
   width: 100%;
-  padding-top: size(40);
+  padding-top: size(155);
   font-size: 16px;
 
   .order-section {
@@ -142,6 +145,12 @@ $o-title-c: #A30C24; //.order-title
     min-height: size(500);
   }
 
+.order-title-img{
+  width:sizem(310);
+  @media screen and (min-width: 768px) {
+    width: min(1200px, 95%); //最大1200px
+  }
+}
   .order-title {
     font-size: 2.5em;
     font-weight: 400;
@@ -177,15 +186,16 @@ $o-title-c: #A30C24; //.order-title
       height: auto;
       //  width: size(419);
     }
-
+/*
     &::after {
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #0003;
+      background-color: #8dcaff99;
       position: absolute;
+      top: 0;left:0;right: 0;margin: auto;
     }
-
+*/
 
     .row {
       background: #fff;
@@ -239,6 +249,7 @@ $o-title-c: #A30C24; //.order-title
       right: 0;
       flex-direction: column;
       margin-left: .7em;
+      color: #fff;
 
       label:first-child {
         margin-bottom: .3em;
@@ -251,20 +262,22 @@ $o-title-c: #A30C24; //.order-title
   }
 
   .send {
-    font-size: 1.5em;
-    background-color: #A30C24;
+    font-size: 1.4em;
+    background-color: #2EA7E0;
     //border: 1px solid #FFF9;
     border: 0;
-    padding: .5em 0;
-    letter-spacing: 0.9em;
+    padding: .7em 0;
+    letter-spacing: 0.5em;
     line-height: 1.5;
-    text-indent: 0.9em;
+    text-indent: 0.5em;
     border-radius: .5em;
+    text-align: center;
     width: 14em;
     z-index: 10;
     color: #fff;
     position: relative;
     transition: transform .5s;
+    margin-bottom: 2em;
     &:hover{transform: scale(1.1);}
   }
 
@@ -272,7 +285,9 @@ $o-title-c: #A30C24; //.order-title
     font-size: 16px;
     color: #000;
     position: relative;
+    input[type="checkbox"] {border: 1px solid #fff;}
   }
+ 
 }
 
 @media screen and (max-width:768px) {
@@ -293,6 +308,7 @@ $o-title-c: #A30C24; //.order-title
 
   .order {
     width: 100%;
+  padding-top: sizem(96);
     padding-bottom: sizem(63);
 
     .cus-divider {

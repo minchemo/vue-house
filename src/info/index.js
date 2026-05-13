@@ -7,21 +7,21 @@ export default {
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "XXXXX",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7359.266492949288!2d120.3097038172106!3d22.74186923554725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ0JzMwLjciTiAxMjDCsDE4JzUzLjUiRQ!5e0!3m2!1szh-TW!2stw!4v1725006447269!5m2!1szh-TW!2stw",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14458.048771030857!2d121.4580448144107!3d25.050623448985966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1778658685959!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
-  phone: "0000",
+  phone: "02-8993-6888",
   fbLink: "https://www.facebook.com/",
   fbMessage: "https://m.me/",
-  line: "https://lin.ee/fpSDucI",
+  // line: "https://lin.ee/fpSDucI",
   caseName: caseName,
   houseInfos: [
-    ["空間設計", "相即空間設計"],
-    ["企劃銷售", "低碳健康樂活行銷"],
-    ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
-    ["經紀人", "(91)北市經證字第00692號 陳子瑞"],
-    ["建築設計", "弘憲聯合建築師事務所"],
-    ["使照號碼", "王朝雍建築師事務所"],
-    ["行銷企劃", "自售"],
+  /*  ["空間設計", "xxx"],
+    ["企劃銷售", "xxx"],
+    ["建照號碼", "xxx"],
+    ["經&ensp;紀&ensp;人", "xxx"],
+    ["建築設計", "xxx"],
+    ["使照號碼", "xxx"],
+    ["行銷企劃", "xxx"],*/
     /*
     */
   ],
@@ -51,14 +51,14 @@ export default {
       type: "select",
       hold: "請選擇房型",
       option: ["兩房", "三房"],
-      required: true, //必填開啟使用
+      required: false, //必填開啟使用
     }, 
-    bbb: {
-      title: "需求tes",
+    budget: {
+      title: "購屋預算",
       type: "select",
-      hold: "請選擇房型",
+      hold: "請選擇區間",
       option: ["兩房", "三房"],
-      required: true, //必填開啟使用
+      required: false, //必填開啟使用
     }, 
   },
   //縣市地區

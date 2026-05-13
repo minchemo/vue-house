@@ -9,9 +9,9 @@
     <img class="w-32" src="//h35.banner.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
-  <!--
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#04004D] text-[#000]">
     <S1 />
+    <!--
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -47,7 +47,8 @@ img {
 
 <script setup>
 import info from "@/info"
-// import S2v from "@/section/s2v.vue"
+import S1 from "@/section/s1.vue"
+// 
 // import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue" */

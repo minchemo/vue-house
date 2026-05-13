@@ -1,69 +1,161 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!-- <img src="./s1/mo.jpg" class="t0"> -->
-    <img src="./s1/bg.webp" class="bg">
-    
-    <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
-     <!-- <img src="./s1/building.webp" class="building" data-aos="zoom-in" data-aos-delay="200">
-   <img src="./s1/bottom.svg" class="bottom" data-aos="zoom-in" data-aos-delay="200"> -->
+    <!-- <img src="./s1/mo.png" class="t0"> -->
+    <img src="./s1/en.svg" alt="luxurious" class="en">
+    <div class="logo">
+      <img src="./s1/diamond.webp" alt="" class="p1">
+      <img src="./s1/logo.svg" alt="logo" class="p2">
+      <img src="./s1/l.webp" alt="logo" class="p3">
+      <img src="./s1/l.webp" alt="logo" class="p4">
+      <img src="./s1/l.webp" alt="logo" class="p5">
+    </div>
+    <img src="./s1/t1.svg" alt="" class="t1" v-if="!isMobile">
+    <img src="./s1/t1m.svg" alt="" class="t1" v-else>
+    <img src="./s1/coming.svg" alt="" class="coming">
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:0px;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
+
+.t0 {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  pointer-events: none;
+  z-index: 9;
+  opacity: .3;
+}
+
 @keyframes an {
   to {
     transform: translateX(0%);
   }
 }
-  .s1 {
-    height:  sizem(604);
-  //  height:sizem(667);
-  /*  height:calc(100vh - 63px);
-  min-height: sizem(604);
+
+.s1 {
+  height: calc(100dvh - #{sizem(63)});
+    min-height: sizem(604);
     max-height: sizem(750);
-    */
+  background: linear-gradient(180deg, #04004D 47.12%, #03317D 65.69%, #0189D3 96.53%, #0189D3 100%);
   display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  
-@media screen and (min-width: 768px) {
-    height:100vh;
+
+  @media screen and (min-width: 768px) {
+    height: 100dvh;
     // height: size(1070);
     min-height: size(900);
     max-height: size(1080);
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 0;
-}
-  .bg{position: absolute;
-    top:0;left:0;
-    height: 100%; transform: translateX(calc(-100% + 100vw));
-    animation: an 20s linear alternate infinite;
+  }
+
+
+  .en {
+    position: absolute;
+    top:sizem(154);left:0;right: 0;
+    top:calc(55% + #{sizem(154 - 750 * .55)});
+    margin: 0 auto 0;
+    width: sizem(248);
+    margin: 0 auto;
     @media screen and (min-width: 768px) {
-      height: auto;width:size(2300);top:calc(50% + #{size(0 - 1080 * .5)});
+      width: size(1270);
+    top:size(81);
+    top:calc(20% + #{size(81 - 1080 * .2)});
+      margin:0 auto;
     }
   }
-  .logo{width:sizem(290);margin:sizem(110) auto sizem(67);
+  @keyframes shimmer {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes rotate-light {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+  .logo {
+    position: absolute;
+    top: sizem(220);left:0;right: 0;
+    top:calc(55% + #{sizem(220 - 750 * .55)});
+    margin: 0 auto 0;
+    width: sizem(180);
+    .p1{width: 100%;}
+    .p2{position: absolute;
+    top: 31%;
+    left: 38%;
+    width: 24.1%;
+    }
+    .p3{position: absolute;
+    top: 7%;
+    left: 49%;
+    width: 15%;mix-blend-mode: screen;
+    transform-origin: center center;
+    animation:
+      shimmer 2.8s ease-in-out infinite,
+      rotate-light 12s linear infinite;
+    }
+    .p4{position: absolute;
+    top: 52%;
+    left: 66%;
+    width: 15%;mix-blend-mode: screen;
+    transform-origin: center center;
+    animation:
+      shimmer 3.4s ease-in-out infinite 0.6s,  // 延遲讓光芒錯開
+      rotate-light 18s linear infinite reverse;  // 反向旋轉
+    }
+    .p5{position: absolute;
+    top: 4%;
+    left: 0%;
+    width: 50%;mix-blend-mode: screen;
+    mix-blend-mode: screen;
+    transform-origin: center center;
+    animation:
+      shimmer 4.1s ease-in-out infinite 1.2s,
+      rotate-light 24s linear infinite;
+    }
     @media screen and (min-width: 768px) {
-      position: relative;top:calc(20% - #{size(180)});
-      width:size(608);margin:auto;}
+      width: size(340);top: size(325);
+    top:calc(50% + #{size(325 - 1080 * .5)});
+    }
   }
-  .building{
-    width:sizem(110);transform-origin: 50% 100%;
-    @media screen and (min-width: 768px) {width:size(208);}
+
+  .t1 {
+    position: absolute;
+    top:sizem(453);left:0;right: 0;
+    top:calc(60% + #{sizem(453 - 750 * .6)});
+    margin: 0 auto;
+    width: sizem(142);
+    @media screen and (min-width: 768px) {
+      width: size(1265);
+    top:size(490);
+      margin:0 auto;
+    top:calc(50% + #{size(490 - 1080 * .5)});
+    }
   }
-  .bottom{
-    width:sizem(330);transform-origin: 50% 0%;background: url("./s1/bottom.webp");background-size: cover;
-    @media screen and (min-width: 768px) {position: absolute;bottom:0;right:0;
-      width:size(658);}
+  .coming {
+    position: absolute;
+    top:sizem(588);left:0;right: 0;
+    top:calc(60% + #{sizem(588 - 750 * .6)});
+    margin: 0 auto;
+    width: sizem(175);
+    @media screen and (min-width: 768px) {
+      width: size(401);
+    top:size(870);
+    top:calc(70% + #{size(870 - 1080 * .7)});
+      margin:0 auto;
+    }
   }
+
+
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref, inject } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
