@@ -322,11 +322,13 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
   .mo-contact-info {
     display: flex;
+    flex-wrap: wrap;
     top: auto;
     bottom: 0;
+    height: auto;
     width: sizem(375);
-    height: sizem(63);
-    gap: sizem(1);
+   // 
+   // gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
 background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
@@ -335,6 +337,8 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
       flex: 1;
       padding: 0;
       color: #fff;
+      min-width: 4em;
+      height: sizem(63);
 
       img {
         filter: brightness(0) invert(1);

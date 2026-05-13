@@ -11,11 +11,11 @@
       <div class="form mx-auto relative flex justify-center">
 
         <div class="left h-full flex flex-col justify-between items-center">
-
+          <div class="name">
           <!-- 姓名 -->
-          <label class="row name">
+          <label class="row">
             <span>姓名<span>*</span></span>
-            <input v-model="formData.name" type="text" class="input w-full rounded-none" />
+            <input v-model="formData.name" type="text" class="input w-full" placeholder="請填寫姓名" />
           </label>
 
           <!-- 性別（可開關） -->
@@ -27,11 +27,12 @@
               <input type="radio" value="女" v-model="formData.gender" />女士
             </label>
           </div>
+          </div>
 
           <!-- 手機 -->
           <label class="row">
             <span>手機<span>*</span></span>
-            <input v-model="formData.phone" type="text" class="input w-full rounded-none" />
+            <input v-model="formData.phone" type="text" class="input w-full" placeholder="請填寫電話" />
           </label>
 
           <!-- 動態欄位 -->
@@ -51,7 +52,7 @@
                 </option>
               </select>
 
-              <input v-else v-model="formData[key]" type="text" class="input w-full rounded-none"
+              <input v-else v-model="formData[key]" type="text" class="input w-full"
                 :placeholder="field.hold" />
             </label>
           </template>
@@ -60,7 +61,7 @@
           <label class="row" v-if="info.locationConfig?.city?.enabled">
             <span>居住縣市<span v-if="info.locationConfig?.city?.required">*</span></span>
 
-            <select v-model="formData.city">
+            <select v-model="formData.city" class="select w-full">
               <option value="" disabled>請選擇城市</option>
               <option v-for="c in cityList" :key="c.value" :value="c.value">
                 {{ c.label }}
@@ -72,7 +73,7 @@
           <label class="row" v-if="info.locationConfig?.area?.enabled && formData.city">
             <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
 
-            <select v-model="formData.area">
+            <select v-model="formData.area" class="select w-full">
               <option value="" disabled>請選擇地區</option>
               <option v-for="a in areaList" :key="a.value" :value="a.value">
                 {{ a.label }}
@@ -94,10 +95,7 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
         <p class="text-[#666]">
-          本人同意
-          <label for="policy-modal" class="text-[#A30C24] cursor-pointer">
-            個資告知事項聲明
-          </label>
+          本人知悉並同意<label for="policy-modal" class="text-[#A30C24] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -110,7 +108,7 @@
       <!-- submit -->
       <div class="sendall mt-8 mb-12 mx-auto">
 
-        <button v-if="!submitted" class="send btn" :disabled="sending" @click="send">
+        <button v-if="!submitted" class="send" :disabled="sending" @click="send">
           送出表單
         </button>
 
@@ -188,6 +186,7 @@ $o-title-c: #A30C24; //.order-title
       position: absolute;
     }
 
+
     .row {
       background: #fff;
       border: 1px solid #999;
@@ -197,7 +196,7 @@ $o-title-c: #A30C24; //.order-title
       align-items: center;
 
       >span {
-        width: 5.5em;
+        min-width: 5.5em;
         text-align: left;
         padding-left: 1em;
 
@@ -226,18 +225,20 @@ $o-title-c: #A30C24; //.order-title
         }
       }
 
-      &.name {
-        width: calc(100% - 3.8em);
-      }
-
       //沒有性別的話這條槓掉
     }
 
+      .name {
+        width: 100%;
+        display: flex;
+        .row{flex: 1;}
+      // width: calc(100% - 3.8em);
+      }
     .gender {
       display: flex;
-      position: absolute;
       right: 0;
       flex-direction: column;
+      margin-left: .7em;
 
       label:first-child {
         margin-bottom: .3em;
@@ -250,19 +251,21 @@ $o-title-c: #A30C24; //.order-title
   }
 
   .send {
-    font-size: 20px;
-    font-size: inherit;
+    font-size: 1.5em;
     background-color: #A30C24;
     //border: 1px solid #FFF9;
     border: 0;
+    padding: .5em 0;
     letter-spacing: 0.9em;
+    line-height: 1.5;
     text-indent: 0.9em;
-    height: 100%;
     border-radius: .5em;
-    width: 308px;
+    width: 14em;
     z-index: 10;
     color: #fff;
     position: relative;
+    transition: transform .5s;
+    &:hover{transform: scale(1.1);}
   }
 
   .control {
@@ -398,6 +401,21 @@ const formData = reactive({
 })
 
 // ==========================
+// 🔥 FIELD LABEL MAP
+// ==========================
+const fieldLabelMap = {
+  name: "姓名",
+  phone: "手機",
+  gender: "性別",
+  city: "居住縣市",
+  area: "居住地區",
+  // 動態欄位從 selectFields 自動取 title
+  ...Object.fromEntries(
+    Object.entries(selectFields).map(([k, v]) => [k, v.title])
+  )
+}
+
+// ==========================
 // 🔥 AREA LIST CONTROL
 // ==========================
 const areaList = ref([])
@@ -478,10 +496,11 @@ const send = async () => {
     }
   }
 
-  if (unfill.length) {
-    toast.error(`請填寫：${unfill.join(", ")}`)
-    return
-  }
+if (unfill.length) {
+  const labels = unfill.map(k => fieldLabelMap[k] || k)
+  toast.error(`請填寫：${labels.join(", ")}`)
+  return
+}
 
   const phoneReg = /^(09)[0-9]{8}$/
   if (!phoneReg.test(formData.phone)) {
@@ -547,7 +566,7 @@ const send = async () => {
     fetch("https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec")
 
     const [resA, resB] = await Promise.all([
-      fetch("https://mail-service-735828106799.asia-east1.run.app/submit", {
+      fetch("https://leads.lixin.com.tw/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(presendA)

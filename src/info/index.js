@@ -33,8 +33,8 @@ export default {
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
     title: "測試表單",
-    subTitle: "將有專人與您聯絡，我們將竭誠為您服務",
-    subTitle_mo: "將有專人與您聯絡，我們將竭誠為您服務",
+    subTitle: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
+    subTitle_mo: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
   },
   // 控制表單欄位
   //性別
