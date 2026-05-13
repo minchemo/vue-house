@@ -40,8 +40,8 @@ export default {
   //性別
   formConfig: {
     gender: {
-      enabled: true,     // ✅ 控制顯示 / 隱藏
-      required: false    // ✅ 是否必填（通常不會必填）
+      enabled: true, 
+      required: true 
     }
   },
   //各種欄位
@@ -53,20 +53,13 @@ export default {
       option: ["兩房", "三房"],
       required: true, //必填開啟使用
     }, 
-    /*
-        budget: {
-          title: "購屋預算",
-          hold: "請選擇區間",
-          option: ["1000", "2000", "3000"],
-          //bypass:true, //必填開啟使用
-        },
-       
-        use_type: {
-          title: "使用用途",
-          hold: "請選擇用途",
-          option: ["自住", "投資", "租賃"]
-      },
-        */
+    bbb: {
+      title: "需求tes",
+      type: "select",
+      hold: "請選擇房型",
+      option: ["兩房", "三房"],
+      required: true, //必填開啟使用
+    }, 
   },
   //縣市地區
   locationConfig: {
@@ -75,7 +68,7 @@ export default {
     required: false
   },
   area: {
-    enabled: false,     // ⚠️ 不能單獨 true
+    enabled: true,     // ⚠️ 不能單獨 true
     required: false
   }
 },
