@@ -69,14 +69,14 @@
       margin:0 auto;
     }
   }
-  @keyframes shimmer {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; transform: rotate(0deg) scale(1); }
+  50%       { opacity: 1;   transform: rotate(180deg) scale(1.08); }
 }
 
-@keyframes rotate-light {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+@keyframes shimmer-slow {
+  0%, 100% { opacity: 0.4; transform: rotate(0deg) scale(1); }
+  50%       { opacity: 0.85; transform: rotate(180deg) scale(1.05); }
 }
   .logo {
     position: absolute;
@@ -90,34 +90,34 @@
     left: 38%;
     width: 24.1%;
     }
-    .p3{position: absolute;
-    top: 7%;
-    left: 49%;
-    width: 15%;mix-blend-mode: screen;
-    transform-origin: center center;
-    animation:
-      shimmer 2.8s ease-in-out infinite,
-      rotate-light 12s linear infinite;
-    }
-    .p4{position: absolute;
-    top: 52%;
-    left: 66%;
-    width: 15%;mix-blend-mode: screen;
-    transform-origin: center center;
-    animation:
-      shimmer 3.4s ease-in-out infinite 0.6s,  // 延遲讓光芒錯開
-      rotate-light 18s linear infinite reverse;  // 反向旋轉
-    }
-    .p5{position: absolute;
-    top: 4%;
-    left: 0%;
-    width: 50%;mix-blend-mode: screen;
-    mix-blend-mode: screen;
-    transform-origin: center center;
-    animation:
-      shimmer 4.1s ease-in-out infinite 1.2s,
-      rotate-light 24s linear infinite;
-    }
+.p3 {
+  position: absolute;
+  top: 7%;
+  left: 49%;
+  width: 15%;
+  mix-blend-mode: screen;
+  transform-origin: center center;
+  animation: shimmer 3.2s ease-in-out infinite;
+}
+
+.p4 {
+  position: absolute;
+  top: 52%;
+  left: 66%;
+  width: 15%;
+  mix-blend-mode: screen;
+  transform-origin: center center;
+  animation: shimmer 4s ease-in-out infinite 1.1s;
+}
+.p5 {
+  position: absolute;
+  top: 4%;
+  left: 0%;
+  width: 50%;
+  mix-blend-mode: screen;
+  transform-origin: center center;
+  animation: shimmer-slow 5.5s ease-in-out infinite 0.6s;
+}
     @media screen and (min-width: 768px) {
       width: size(340);top: size(325);
     top:calc(50% + #{size(325 - 1080 * .5)});
