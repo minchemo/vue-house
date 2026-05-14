@@ -1,18 +1,18 @@
-const caseName = "test-one"
+const caseName = "新莊榮富"
 
 export default {
-  caseidA: "fc32f231-8202-4932-b9c7-04010740849f",
-  caseidB: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
-  case_code: "test",
+  caseid: "e88599e2-8705-4604-b94b-a60df90c9030",
+// caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
+  // case_code: "test", //某些舊案資料庫要單獨設定名稱
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "XXXXX",
   googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14458.048771030857!2d121.4580448144107!3d25.050623448985966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1778658685959!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
   phone: "02-8993-6888",
-  fbLink: "https://www.facebook.com/",
+  fbLink: "https://www.facebook.com/",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
   fbMessage: "https://m.me/",
-  // line: "https://lin.ee/fpSDucI",
+  line: "https://lin.ee/qakWswp",
   caseName: caseName,
   houseInfos: [
   /*  ["空間設計", "xxx"],
@@ -41,7 +41,7 @@ export default {
   formConfig: {
     gender: {
       enabled: true, 
-      required: true 
+      required: false //必填開啟使用
     }
   },
   //各種欄位
@@ -57,7 +57,12 @@ export default {
       title: "購屋預算",
       type: "select",
       hold: "請選擇區間",
-      option: ["兩房", "三房"],
+      option: [
+        "1800-2000萬", 
+        "2100-2500萬", 
+        "2600-3000萬", 
+        "3100萬以上", 
+      ],
       required: false, //必填開啟使用
     }, 
   },

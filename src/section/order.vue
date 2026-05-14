@@ -280,6 +280,7 @@ $o-title-c: #A30C24; //.order-title
     margin-bottom: 2em;
     &:hover{transform: scale(1.1);}
   }
+  .send-load{color: #fff;}
 
   .control {
     font-size: 16px;
@@ -533,7 +534,7 @@ if (unfill.length) {
   // A API
   // ======================
   const presendA = {
-    caseId: info.caseidA,
+    caseId: info.caseid,
     form: {},
     validation: {
       siteKey: info.recaptcha_site_key_v2,
@@ -572,28 +573,46 @@ if (unfill.length) {
 
   presendB.append(
     "case_code",
-    info.case_code || info.caseidB || info.caseidA
+    info.case_code || info.caseid_j || info.caseid
   )
 
   // ======================
   // SUBMIT
   // ======================
-  try {
-    fetch("https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec")
+  const DEBUG_ONLY_A = false  // 👈 測試時開啟，上線前改回 false / true
 
-    const [resA, resB] = await Promise.all([
+  try {
+    if (!DEBUG_ONLY_A) {
+      fetch("https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec")
+    }
+
+    const requests = [
       fetch("https://leads.lixin.com.tw/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(presendA)
-      }),
-      fetch("https://service-sys.lixin.com.tw/reserve/" + info.caseidB, {
-        method: "POST",
-        body: presendB
       })
-    ])
+    ]
 
-    if (resA.ok || resB.ok) {
+    if (!DEBUG_ONLY_A) {
+      requests.push(
+        fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+          method: "POST",
+          body: presendB
+        })
+      )
+    }
+
+    const [resA, resB] = await Promise.allSettled(requests)
+
+    const aOk = resA.status === "fulfilled" && resA.value.ok
+    const bOk = DEBUG_ONLY_A ? true : (resB.status === "fulfilled" && resB.value.ok)
+
+    if (!aOk) {
+      console.warn("A API 發送失敗，B 與 Google Script 仍繼續")
+    }
+
+    if (DEBUG_ONLY_A ? aOk : bOk) {
       window.location.href = "formThanks"
     } else {
       toast.error("送出失敗")

@@ -142,11 +142,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #006a00;
+  background-color: #0189D3;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #00a89a;
+  background-color: #04004D;
 }
 
 
@@ -218,7 +218,7 @@ justify-content: center;
 // ── 變數 ──────────────────────────────────────────
 $border-radius: 0.9em; //按鈕圓角尺寸
 $gap:           15px; //間距
-$cols:          3;   // 上排按鈕欄數，改這裡就好
+$cols:          4;   // 上排按鈕欄數，改這裡就好
 
 // 導航按鈕寬度 = 上排每欄寬度
 // 公式：(100% - gap * (欄數-1)) / 欄數
@@ -313,7 +313,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter:  invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
+    filter: invert(37%) sepia(60%) saturate(5826%) hue-rotate(182deg) brightness(101%) contrast(101%);
   }
 }
 
@@ -326,7 +326,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     bottom: 0;
     width: sizem(375);
     height: sizem(63);
-    gap: sizem(1);
+    gap: 0;
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
     font-size: sizem(16);
 background: linear-gradient(0deg,#04004D, #0189D3);
@@ -370,8 +370,8 @@ background: linear-gradient(0deg,#04004D, #0189D3);
 
         .contact-item {
           &.address {
-            border: 1.5px solid #00744a;
-            border-bottom: none;
+           // border: 1.5px solid #00744a;
+         //   border-bottom: none;
             border-radius: $border-radius $border-radius 0 0;
             white-space: normal;
           }
