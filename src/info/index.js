@@ -12,7 +12,7 @@ export default {
   phone: "0000",
   fbLink: "https://www.facebook.com/",
   fbMessage: "https://m.me/",
-  line: "https://lin.ee/fpSDucI",
+  line: "https://lin.ee/qakWswp",
   caseName: caseName,
   houseInfos: [
     ["空間設計", "相即空間設計"],
