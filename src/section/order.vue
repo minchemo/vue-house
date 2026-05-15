@@ -136,7 +136,7 @@ $o-title-c: #A30C24; //.order-title
 
 .order {
   width: 100%;
-  padding-top: size(155);
+  padding-top: size(100);
   font-size: 16px;
 
   .order-section {
@@ -149,6 +149,7 @@ $o-title-c: #A30C24; //.order-title
   width:sizem(310);
   @media screen and (min-width: 768px) {
     width: min(1200px, 95%); //最大1200px
+    margin-bottom: size(20);
   }
 }
   .order-title {
