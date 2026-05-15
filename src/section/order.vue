@@ -525,39 +525,35 @@ if (unfill.length) {
     }
   }
 
-  for (const [k, v] of Object.entries(formData)) {
-    if (["policyChecked", "r_verify"].includes(k)) continue
+for (const [k, v] of Object.entries(formData)) {
+  if (["policyChecked", "r_verify"].includes(k)) continue
+  if (k === "area" && !v) continue
+  presendA.form[k] = v
+}
 
-    // ❌ area 沒值不送
-    if (k === "area" && !v) continue
-
-    presendA.form[k] = v
-  }
-
-  presendA.form.note = formData.msg
-  delete presendA.form.msg
+presendA.form.note = formData.msg
+delete presendA.form.msg
 
   Object.assign(presendA.form, utm)
 
-  // ======================
-  // B API
-  // ======================
-  const presendB = new FormData()
+// ======================
+// B API
+// ======================
+const presendB = new FormData()
 
-  for (const [k, v] of Object.entries(formData)) {
-    if (["policyChecked", "r_verify"].includes(k)) continue
-    if (k === "area" && !v) continue
+for (const [k, v] of Object.entries(formData)) {
+  if (["policyChecked", "r_verify", "msg"].includes(k)) continue  // 👈 排除 msg
+  if (k === "area" && !v) continue
+  presendB.append(k, v)  // 👈 這裡是 presendB，不是 presendA
+}
 
-    presendB.append(k, v)
-  }
+Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
+presendB.append("message", formData.msg)
 
-  Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
-  presendB.append("message", formData.msg)
-
-  presendB.append(
-    "case_code",
-    info.case_code || info.caseidB || info.caseidA
-  )
+presendB.append(
+  "case_code",
+  info.case_code || info.caseidB || info.caseidA
+)
 
   // ======================
   // SUBMIT
