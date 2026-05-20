@@ -5,9 +5,9 @@ export default {
     case_code: "zhsd",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "桃園市大林路7號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d904.0875022521666!2d121.3166766696226!3d24.988220114185737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ee52bdba827%3A0x709762564c2f2567!2zMzMw5qGD5ZyS5biC5qGD5ZyS5Y2A5aSn5p6X6LevN-iZnw!5e0!3m2!1szh-TW!2stw!4v1732520660174!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/B7H6uZt97cy68RoWA",
+    address: "桃園區昆明路與樹林四街口（同基地位置)",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.4653026281558!2d121.31112527607773!3d24.98430044028975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f0051a653f7%3A0x46981af0a5f5d47f!2z57ix5qmr5pmC5Luj56S-5Y2ALeWxleW_l-W7uuiorQ!5e0!3m2!1szh-TW!2stw!4v1779270251776!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/iGWaWzZjev6FjhHM6",
     phone: "03-364-2277",
     fbLink: "https://www.facebook.com/61565182162397",
     fbMessage: "https://m.me/61565182162397",
@@ -17,7 +17,7 @@ export default {
         ["建築設計", "李俊利建築師事務所"],
         ["行銷企劃", "錦盒建築行銷有限公司"],
         ["建照號碼", "(111)桃市都建執照字第會桃00148-01號"],
-        ["基地位置", "桃園市延平路及樹林四街路口"],
+        ["基地位置", "桃園區昆明路與樹林四街口"],
     ],
     gtmCode: ["GTM-TLNH82HB","GTM-5BP5WN26"], // 可放置多個
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
