@@ -325,8 +325,9 @@
     img {
       margin-top: 0.2em;
       margin-bottom: 0.6em;
-      width: 3em;
-      aspect-ratio: 1/1;
+      height:3em;
+      max-width: 3em;
+     // aspect-ratio: 1/1;
       filter: brightness(1) invert(1);
     }
   }
@@ -354,7 +355,7 @@
       img {
         margin-top: 0.3em;
         margin-bottom: 0.3em;
-        width: 1.2em;
+        height: 1.2em;
       }
     }
 
