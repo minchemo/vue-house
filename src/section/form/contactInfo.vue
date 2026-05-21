@@ -302,6 +302,11 @@
     //  border-bottom: 1px solid #fff6;
     flex: 1 size(100);
     position: relative;
+    cursor: pointer;
+    transition: background .3s;
+    &:hover{
+       background-color: #215772;
+    }
 
     &::after {
       content: "";
