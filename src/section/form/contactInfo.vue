@@ -282,51 +282,55 @@
 .mo-contact-info {
   z-index: 9999;
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 0;
   gap: 0;
   background-size: cover;
   font-size: size(12);letter-spacing: 0.06em;
   display: flex;
-  justify-content: space-between;
+  justify-content:flex-end;
   align-items: stretch;
-  flex-direction: column;
-  width: size(90);
-  box-shadow: 0 0 1.1em #fff4,0 0 .3em #fff6;
+  flex-direction: row;
+  width:100%;
+  background: linear-gradient(to right,
+   #36677F00,
+    #36677F00,
+    #36677F00,
+    #36677Fcc,
+    #2d5c74);
+  // box-shadow: 0 0 1.1em #fff4,0 0 .3em #fff6;
 
 
   .contact-item {
-    background-color: #36677F;
+   // background-color: #36677F;
     font-weight: 400;
     color: #fff;
     //  border-bottom: 1px solid #fff6;
-    flex: 1 size(100);
+    flex: 0 size(100);
     position: relative;
     cursor: pointer;
     transition: background .3s;
+    height: 7em;
     &:hover{
-       background-color: #215772;
+       background-color: #21577299;
     }
 
     &::after {
       content: "";
       display: block;
-      width: 4em;
-      height: 1px;
+      height: 6em;
+      width: 1px;
       background: #FFF6;
-      position: absolute;left: 0;right: 0;bottom: 0;margin: auto;
+      position: absolute;left: 0;right:auto;top: 0;bottom: 0;margin: auto;
     }
 
-    &:last-child {
-      //  border: 0;
-      &::after {display: none;}
-    }
 
     img {
       margin-top: 0.2em;
       margin-bottom: 0.6em;
-      width: 3em;
-      aspect-ratio: 1/1;
+      height: 3em;
+      max-width: 3em;
+      //aspect-ratio: 1/1;
       filter: brightness(1) invert(1);
     }
   }
@@ -340,13 +344,19 @@
     flex-direction: row;
     width: 100%;
   box-shadow: 0 0 1em rgba(0, 37, 85, 0.6);
+  top: auto;
+  bottom: 0;
+
 
     .contact-item {
+    background-color: #36677F;
       border: 0;
-      border-right: 1px solid rgba(0, 24, 92, 0.6);
+      border-right: 1px solid #fff6;
       height: 100%;
       flex: 1;
-
+&::after {
+        display: none;
+      }
       &:last-child {
         border: 0;
       }
