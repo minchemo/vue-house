@@ -364,7 +364,7 @@
       img {
         margin-top: 0.3em;
         margin-bottom: 0.3em;
-        width: 1.2em;
+        height: 1.2em;
       }
     }
 
