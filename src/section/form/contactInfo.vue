@@ -216,7 +216,7 @@ justify-content: center;
   }
 
 // ── 變數 ──────────────────────────────────────────
-$border-radius: 0.9em; //按鈕圓角尺寸
+$border-radius: 0.5em; //按鈕圓角尺寸
 $gap:           15px; //間距
 $cols:          3;   // 上排按鈕欄數，改這裡就好
 
@@ -231,9 +231,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #2EA7E099;
+  background: #00216E;
   color: #fff;
-  //border: 1px solid #fff9;
+  border: 1px solid #3BEDFF99;
   border-radius: $border-radius;
   font-size: 16px;
   font-weight: 700;
@@ -246,7 +246,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     height: 1.65em;
     object-fit: contain;
     flex-shrink: 0;
-    filter:  brightness(0) invert(1); ;
+    filter:  brightness(0) invert(1);
     transition: filter 0.25s;    margin: 0;
   }
 

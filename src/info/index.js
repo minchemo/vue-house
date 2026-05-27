@@ -1,18 +1,18 @@
-const caseName = "新莊榮富"
+const caseName = "青園綠境"
 
 export default {
-  caseid: "e88599e2-8705-4604-b94b-a60df90c9030",
+  caseid: "fb6eb0c4-9485-498d-a532-e929dbf8a8ca",
 // caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
   // case_code: "test", //某些舊案資料庫要單獨設定名稱
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  // address: "XXXXX",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14458.048771030857!2d121.4580448144107!3d25.050623448985966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1778658685959!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
-  // phone: "02-8993-6888",
-  fbLink: "https://www.facebook.com/61589892236402",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
-  fbMessage: "https://m.me/61589892236402",
-  line: "https://lin.ee/qakWswp",
+  address: "台中市南屯區龍富二路408號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3641.364423882099!2d120.6452467790985!3d24.123836885000067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d000961aecb%3A0xa9a42acd7055ed6!2z6Z2S5ZyS57ag5aKDIHwg5Y2B5LiJ5pyf5paw5qGIIOaOpeW-heacg-mkqCB8!5e0!3m2!1szh-TW!2stw!4v1779776773158!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/tKF5RVfJ3WkmiGK49",
+  phone: "04-23698899",
+  fbLink: "https://www.facebook.com/61589494772234",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
+  fbMessage: "https://m.me/61589494772234",
+  // line: "https://lin.ee/qakWswp",
   caseName: caseName,
   houseInfos: [
   /*  ["空間設計", "xxx"],
@@ -32,25 +32,25 @@ export default {
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    title: "測試表單",
-    subTitle: "將有專人與您聯絡，我們將竭誠為您服務",
-    subTitle_mo: "將有專人與您聯絡，我們將竭誠為您服務",
+    title: "預約賞屋",
+   // subTitle: "將有專人與您聯絡，我們將竭誠為您服務",
+   // subTitle_mo: "將有專人與您聯絡，我們將竭誠為您服務",
   },
   // 控制表單欄位
   //性別
   formConfig: {
     gender: {
-      enabled: true, 
+      enabled: false, 
       required: false //必填開啟使用
     }
   },
   //各種欄位
   selectFields: {
     room_type: {
-      title: "需求房型",
+      title: "聯絡時段",
       type: "select",
-      hold: "請選擇房型",
-      option: ["兩房", "三房"],
+      hold: "請選擇時段",
+      option: ["上午", "下午", "晚上", "全天"],
       required: false, //必填開啟使用
     }, 
     budget: {
@@ -58,10 +58,9 @@ export default {
       type: "select",
       hold: "請選擇區間",
       option: [
+        "1500-1700萬", 
         "1800-2000萬", 
-        "2100-2500萬", 
-        "2600-3000萬", 
-        "3100萬以上", 
+        "2100-2300萬"
       ],
       required: false, //必填開啟使用
     }, 
@@ -69,11 +68,11 @@ export default {
   //縣市地區
   locationConfig: {
   city: {
-    enabled: true,
+    enabled: false,
     required: false
   },
   area: {
-    enabled: true,     // ⚠️ 不能單獨 true
+    enabled: false,     // ⚠️ 不能單獨 true
     required: false
   }
 },

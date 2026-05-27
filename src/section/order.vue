@@ -1,15 +1,11 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      
-    <img src="./s1/title.svg" alt="" class="order-title-img" v-if="!isMobile">
-    <img src="./s1/titlem.svg" alt="" class="order-title-img" v-else>
-<!--
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title text-center font-['Noto_Serif_TC',serif]" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
-  -->
+<!--  -->
       <!-- FORM -->
       <div class="form mx-auto relative flex justify-center">
 
@@ -111,8 +107,8 @@
       <!-- submit -->
       <div class="sendall mt-8 mb-12 mx-auto">
 
-        <button v-if="!submitted" class="send" :disabled="sending" @click="send">
-          送出表單
+        <button v-if="!submitted" class="send font-['Noto_Serif_TC',serif]" :disabled="sending" @click="send">
+          立即預約
         </button>
 
         <div v-else class="send-load">
@@ -132,7 +128,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$o-title-c: #A30C24; //.order-title
+$o-title-c: #3BEDFF; //.order-title
 
 .order {
   width: 100%;
@@ -144,7 +140,7 @@ $o-title-c: #A30C24; //.order-title
     overflow: hidden;
     min-height: size(500);
   }
-
+/*
 .order-title-img{
   width:sizem(310);
   @media screen and (min-width: 768px) {
@@ -152,11 +148,18 @@ $o-title-c: #A30C24; //.order-title
     margin-bottom: size(20);
   }
 }
+  */
   .order-title {
-    font-size: 2.5em;
+    width: min(1200px, 95%); //最大1200px
+    margin: 0 auto;
+    font-size: 2.3em;
     font-weight: 400;
     color: $o-title-c;
-    padding-top: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    border: 1px solid #fff9;
+    border-width: 1px 0 1px 0;
+    padding: .1em 0;
   }
 
   .order-subTitle {
@@ -187,21 +190,22 @@ $o-title-c: #A30C24; //.order-title
       height: auto;
       //  width: size(419);
     }
-/*
+
     &::after {
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #8dcaff99;
+      background-color: #fff9;
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
-*/
+
 
     .row {
-      background: #fff;
-      border: 1px solid #999;
-      color: #000;
+      background: transparent;
+      border: 0px solid #999;
+      border-width: 0 0 1px 0;
+      color: #fff;
       display: flex;
       width: 100%;
       align-items: center;
@@ -212,7 +216,7 @@ $o-title-c: #A30C24; //.order-title
         padding-left: 1em;
 
         >span {
-          color: #F00;
+          color: #Ff0;
         }
       }
 
@@ -230,6 +234,7 @@ $o-title-c: #A30C24; //.order-title
         background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
+    filter:  brightness(0) invert(1);
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
@@ -265,13 +270,14 @@ $o-title-c: #A30C24; //.order-title
   .send {
     font-size: 1.4em;
     background-color: #2EA7E0;
+    background: linear-gradient(166deg, #182987 8.17%, #006FB6 30.35%, #182987 62.13%);
     //border: 1px solid #FFF9;
     border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
     line-height: 1.5;
     text-indent: 0.5em;
-    border-radius: .5em;
+    border-radius: 2em;
     text-align: center;
     width: 14em;
     z-index: 10;
@@ -322,6 +328,8 @@ $o-title-c: #A30C24; //.order-title
     }
 
     .order-title {
+      font-size: 25px;
+      width: sizem(310);
       /*  font-size: sizem(27);
       padding-top:2em;
       .line{width: sizem(258);
@@ -535,7 +543,7 @@ if (unfill.length) {
   // A API
   // ======================
   const presendA = {
-    caseId: info.caseidA,
+    caseId: info.caseid,
     form: {},
     validation: {
       siteKey: info.recaptcha_site_key_v2,
@@ -560,9 +568,13 @@ delete presendA.form.msg
 const presendB = new FormData()
 
 for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify", "msg"].includes(k)) continue  // 👈 排除 msg
+  if (["policyChecked", "r_verify", "msg"].includes(k)) continue
   if (k === "area" && !v) continue
-  presendB.append(k, v)  // 👈 這裡是 presendB，不是 presendA
+
+  // B API 欄位對應
+  const apiKey = selectFields[k]?.apiB || k
+
+  presendB.append(apiKey, v)
 }
 
 Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
@@ -570,7 +582,7 @@ presendB.append("message", formData.msg)
 
 presendB.append(
   "case_code",
-  info.case_code || info.caseidB || info.caseidA
+  info.case_code || info.caseid_j || info.caseid
 )
 
 

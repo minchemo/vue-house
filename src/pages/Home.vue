@@ -42,6 +42,15 @@ img {
   height: unset;
   margin: 0 auto;
 }
+.home {
+  
+  background:url('@/section/s1/pcbg.webp') center 0;
+  background-size:122% auto;
+  @media screen and (min-width: 768px) {
+    background-position:center size(-1035);
+  background-size:100% auto;
+  }
+}
 
 </style>
 
@@ -60,17 +69,17 @@ import 'aos/dist/aos.css'
 const isLoading = ref(true)
 
 onMounted(async () => {
-  await nextTick()
-
   isLoading.value = false
+
+  await nextTick()
 
   AOS.init({
     once: true,
-    duration: 2000,
-  //  delay: 200,
+    duration: 1500,
+  //  disableMutationObserver: false,
   })
 
-  AOS.refresh()
-
+  await nextTick()
+  AOS.refreshHard()
 })
 </script>
