@@ -54,6 +54,7 @@ export default {
     required: false,
     apiB: "room_type" // B API 對應欄位
   },
+  /*
     budget: {
       title: "購屋預算",
       type: "select",
@@ -65,6 +66,7 @@ export default {
       ],
       required: false, //必填開啟使用
     }, 
+    */
   },
   //縣市地區
   locationConfig: {
