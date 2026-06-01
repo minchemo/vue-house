@@ -1,17 +1,17 @@
 <template>
-<div class="contact">
-    <a :href="info.line" target="_blank" v-if="!isMobile&&info.line" class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
-    <img src="//h35.banner.tw/img/form/line.svg" /> 
+  <div class="contact">
+    <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
+      class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
+      <img src="//h35.banner.tw/img/form/line.svg" />
     </a>
-    <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+      <img src="@/section/s1/f4.webp" class="contact-bg" alt="">
+    <div class="contact-info mx-auto  flex flex-col items-center justify-between z-2 relative">
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
     <img src="@/section/s1/logo.svg" class="logo" alt="">  -->
-
-  <div class="contact-row">
-        <div class="contact-item" @click="modalOpen = true; modalType = 'phone'"
-          v-if="info.phone">
+      <div class="contact-row">
+        <div class="contact-item" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
           <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
           <div>{{ info.phone }}</div>
         </div>
@@ -29,15 +29,14 @@
         </div>
       </div>
       <div class="contact-row bottom" v-if="info.address">
-      <div class="contact-item address">
-        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
+        <div class="contact-item address">
+          <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
+        </div>
+        <div class="contact-item googlemap" @click="modalOpen = true; modalType = 'gmap'">
+          <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+          <div>導航 GoogleMap</div>
+        </div>
       </div>
-      <div class="contact-item googlemap"
-        @click="modalOpen = true; modalType = 'gmap'">
-        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
-        <div>導航 GoogleMap</div>
-      </div>
-    </div>
 
     </div>
   </div>
@@ -51,11 +50,12 @@
       <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'">
+    <div class="flex flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'messenger'">
       <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-   <!--  <div class="flex flex-col contact-item justify-center items-center" @click="open(info.fbLink)">
+    <!--  <div class="flex flex-col contact-item justify-center items-center" @click="open(info.fbLink)">
       <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
     </div> -->
@@ -63,8 +63,9 @@
       <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <!--  --><div class="flex flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
+    <!--  -->
+    <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'gmap'"
+      v-if="info.address">
       <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
@@ -74,63 +75,66 @@
     </div>
   </div>
 
-   <!-- Modal -->
+  <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
   <div class="modal -mt-20 md:-mt-72">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img/form/messenger.svg"
+        alt="messenger" srcset="" />
       <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/fb.svg" alt="fb" srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img/form/line.svg" alt="line" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{
-       modalType == 'phone' ? '賞屋專線' :
-       modalType == 'messenger' ? 'Facebook Messenger' :
-       modalType == 'fb' ? 'Facebook 粉絲專頁' :
-       modalType == 'line' ? 'LINE賞屋客服' :
-       modalType == 'gmap' ? `${info.address2?info.address2:'導航地址'}` : 
-       ''
+        modalType == 'phone' ? '賞屋專線' :
+          modalType == 'messenger' ? 'Facebook Messenger' :
+            modalType == 'fb' ? 'Facebook 粉絲專頁' :
+              modalType == 'line' ? 'LINE賞屋客服' :
+                modalType == 'gmap' ? `${info.address2 ? info.address2 : '導航地址'}` :
+                  ''
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ 
-      modalType == 'phone' ? info.phone : 
-      modalType == 'messenger' ? '線上諮詢' : 
-      modalType == 'fb' ? '' :
-      modalType == 'line' ? '' :
-      modalType == 'gmap' ? `${info.address}` : 
-      ''
-      }}</div>
+      <div class="text-md mt-4">{{
+        modalType == 'phone' ? info.phone :
+          modalType == 'messenger' ? '線上諮詢' :
+            modalType == 'fb' ? '' :
+              modalType == 'line' ? '' :
+                modalType == 'gmap' ? `${info.address}` :
+                  ''
+        }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'messenger',
-        'btfanpage': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btline': modalType == 'line',
-        'btcontac': modalType == 'phone'
-      }">
-        {{ 
-        modalType == 'phone' ? '撥打電話' : 
-        modalType == 'messenger' ? '立即諮詢' : 
-        modalType == 'fb' ? '前往粉絲專頁' :
-        modalType == 'line' ? '加入' :
-        modalType == 'gmap' ? '開啟導航' : 
-        ''
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
+        v-if="modalType != 'phone'" v-bind:class="{
+          'hidden': modalType == 'phone' && !$isMobile(),
+          'btlead': modalType == 'messenger',
+          'btfanpage': modalType == 'fb',
+          'btsearch': modalType == 'gmap',
+          'btline': modalType == 'line',
+          'btcontac': modalType == 'phone'
+        }">
+        {{
+          modalType == 'phone' ? '撥打電話' :
+            modalType == 'messenger' ? '立即諮詢' :
+              modalType == 'fb' ? '前往粉絲專頁' :
+                modalType == 'line' ? '加入' :
+                  modalType == 'gmap' ? '開啟導航' :
+                    ''
         }}</div>
       <!-- btn phone -->
-      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
-        'hidden': modalType == 'phone' && !$isMobile(),
-        'btlead': modalType == 'messenger',
-        'btfanpage': modalType == 'fb',
-        'btsearch': modalType == 'gmap',
-        'btline': modalType == 'line',
-        'btcontac': modalType == 'phone'
-      }">
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else
+        v-bind:class="{
+          'hidden': modalType == 'phone' && !$isMobile(),
+          'btlead': modalType == 'messenger',
+          'btfanpage': modalType == 'fb',
+          'btsearch': modalType == 'gmap',
+          'btline': modalType == 'line',
+          'btcontac': modalType == 'phone'
+        }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'messenger' ? '立即諮詢' : modalType == 'fb' ? '前往粉絲專頁' :
-        '開啟導航'
+          '開啟導航'
         }}</div>
     </div>
   </div>
@@ -150,13 +154,14 @@
 }
 
 
-.lineicon{
-background: #06c755;
-border-radius: 20%;
-aspect-ratio: 1/1;
-display: flex;
-align-items: center;
-justify-content: center;
+.lineicon {
+  background: #06c755;
+  border-radius: 20%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   img {
     width: 71%;
     filter: brightness(0) invert(1);
@@ -202,23 +207,42 @@ justify-content: center;
   }
 }
 
-
-
-  .logo {
-    position: relative;
-    width: size(540);
-    // height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: size(60) auto size(30);
+@keyframes an {
+  to {
+    transform: translateX(0%);
   }
+}
+.contact-bg {
+  position: absolute;
+  bottom:sizem(-250);
+  right:sizem(-190);
+  width:  sizem(600);
+  object-fit: cover;
+  pointer-events: none;
+    animation: an 4s ease-in-out infinite alternate;
+    transform: rotate(5deg);
+  @media screen and (min-width: 768px) {
+  bottom:size(-500);
+  right:size(-260);
+  width:  size(1090);}
+}
+
+
+.logo {
+  position: relative;
+  width: size(540);
+  // height: size(172);
+  // background-image: url("@/section/s1/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: size(60) auto size(30);
+}
 
 // ── 變數 ──────────────────────────────────────────
 $border-radius: 0.5em; //按鈕圓角尺寸
-$gap:           15px; //間距
-$cols:          3;   // 上排按鈕欄數，改這裡就好
+$gap: 15px; //間距
+$cols: 2; // 上排按鈕欄數，改這裡就好
 
 // 導航按鈕寬度 = 上排每欄寬度
 // 公式：(100% - gap * (欄數-1)) / 欄數
@@ -231,9 +255,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #00216E;
+  background: #bf1924;
   color: #fff;
-  border: 1px solid #3BEDFF99;
+  border: 0px solid #3BEDFF99;
   border-radius: $border-radius;
   font-size: 16px;
   font-weight: 700;
@@ -246,21 +270,23 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     height: 1.65em;
     object-fit: contain;
     flex-shrink: 0;
-    filter:  brightness(0) invert(1);
-    transition: filter 0.25s;    margin: 0;
+    filter: brightness(0) invert(1);
+    transition: filter 0.25s;
+    margin: 0;
   }
 
   &:hover {
-    background: #2EA7E0;
+    background: #96000a;
     color: #fff;
     //border-color: #c00;
 
-   // img { filter: brightness(0) invert(1); }
+    // img { filter: brightness(0) invert(1); }
   }
 }
+
 // ── 主體 ───────────────────────────────────────────
 .contact-info {
-  width: min(1200px,95%); //最大1200px
+  width: min(1200px, 95%); //最大1200px
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -329,7 +355,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     gap: 0;
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
     font-size: sizem(16);
-background: linear-gradient(0deg,#04004D, #0189D3);
+  background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
 
     .contact-item {
       flex: 1;
@@ -342,27 +368,30 @@ background: linear-gradient(0deg,#04004D, #0189D3);
     }
   }
 
-    .logo {
-      width: sizem(290);
-      margin: sizem(40) auto sizem(30) auto;
-    }
+  .logo {
+    width: sizem(290);
+    margin: sizem(40) auto sizem(30) auto;
+  }
+
   .contact-info {
-    
-      width: sizem(310);
+
+    width: sizem(310);
+
     .contact-row {
       grid-template-columns: 1fr;
       gap: 12px;
-      .contact-item {
-  position: relative;
-  justify-content: center;  // 文字置中
 
-  img {
-    position: absolute;
-    left: 3em; // 所有 icon 靠左同一條線
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
+      .contact-item {
+        position: relative;
+        justify-content: center; // 文字置中
+
+        img {
+          position: absolute;
+          left: 3em; // 所有 icon 靠左同一條線
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
 
       &.bottom {
         grid-template-columns: 1fr;
@@ -370,8 +399,8 @@ background: linear-gradient(0deg,#04004D, #0189D3);
 
         .contact-item {
           &.address {
-           // border: 1.5px solid #00744a;
-         //   border-bottom: none;
+            // border: 1.5px solid #00744a;
+            //   border-bottom: none;
             border-radius: $border-radius $border-radius 0 0;
             white-space: normal;
           }

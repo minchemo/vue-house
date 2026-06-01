@@ -1,7 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title text-center font-['Noto_Serif_TC',serif]" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
@@ -93,8 +93,8 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-[#000]">
+          本人知悉並同意<label for="policy-modal" class="text-[#c00] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -107,8 +107,8 @@
       <!-- submit -->
       <div class="sendall mt-8 mb-12 mx-auto">
 
-        <button v-if="!submitted" class="send font-['Noto_Serif_TC',serif]" :disabled="sending" @click="send">
-          立即預約
+        <button v-if="!submitted" class="send" :disabled="sending" @click="send">
+          確認送出
         </button>
 
         <div v-else class="send-load">
@@ -128,7 +128,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$o-title-c: #3BEDFF; //.order-title
+$o-title-c: #BF1924; //.order-title
 
 .order {
   width: 100%;
@@ -152,14 +152,22 @@ $o-title-c: #3BEDFF; //.order-title
   .order-title {
     width: min(1200px, 95%); //最大1200px
     margin: 0 auto;
-    font-size: 2.3em;
-    font-weight: 400;
+    font-size: 2.9em;
+    letter-spacing: .3em;
+    font-weight: 500;
     color: $o-title-c;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
-    border: 1px solid #fff9;
-    border-width: 1px 0 1px 0;
+    margin-top: 1.8em;
+    margin-bottom: 0em;
     padding: .1em 0;
+    display: flex;
+    align-items: center;
+    &::after{
+      content: "";
+      flex:1;
+      height: 1px;
+      margin-left: .2em;
+      background-color: $o-title-c;
+    }
   }
 
   .order-subTitle {
@@ -195,17 +203,16 @@ $o-title-c: #3BEDFF; //.order-title
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #fff9;
+      background-color: #bf1924;
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
 
 
     .row {
-      background: transparent;
-      border: 0px solid #999;
-      border-width: 0 0 1px 0;
-      color: #fff;
+      background: #fff;
+      border: 0px;
+      color: #000;
       display: flex;
       width: 100%;
       align-items: center;
@@ -216,7 +223,7 @@ $o-title-c: #3BEDFF; //.order-title
         padding-left: 1em;
 
         >span {
-          color: #Ff0;
+          color: #c00;
         }
       }
 
@@ -234,7 +241,7 @@ $o-title-c: #3BEDFF; //.order-title
         background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
-    filter:  brightness(0) invert(1);
+    // filter:  brightness(0) invert(1); //select的箭頭顏色
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
@@ -255,7 +262,7 @@ $o-title-c: #3BEDFF; //.order-title
       right: 0;
       flex-direction: column;
       margin-left: .7em;
-      color: #fff;
+      color: #bf1924;
 
       label:first-child {
         margin-bottom: .3em;
@@ -269,8 +276,7 @@ $o-title-c: #3BEDFF; //.order-title
 
   .send {
     font-size: 1.4em;
-    background-color: #2EA7E0;
-    background: linear-gradient(166deg, #182987 8.17%, #006FB6 30.35%, #182987 62.13%);
+  background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
     //border: 1px solid #FFF9;
     border: 0;
     padding: .7em 0;
@@ -293,7 +299,7 @@ $o-title-c: #3BEDFF; //.order-title
     font-size: 16px;
     color: #000;
     position: relative;
-    input[type="checkbox"] {border: 1px solid #fff;}
+    input[type="checkbox"] {border: 2px solid #666;}
   }
  
 }
@@ -328,7 +334,7 @@ $o-title-c: #3BEDFF; //.order-title
     }
 
     .order-title {
-      font-size: 25px;
+      font-size: 20px;
       width: sizem(310);
       /*  font-size: sizem(27);
       padding-top:2em;
