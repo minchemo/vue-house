@@ -1,9 +1,9 @@
 <template>
   <div class="contact">
-    <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
+    <!-- <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
       <img src="//h35.banner.tw/img/form/line.svg" />
-    </a>
+    </a> -->
       <img src="@/section/s1/f4.webp" class="contact-bg" alt="">
     <div class="contact-info mx-auto  flex flex-col items-center justify-between z-2 relative">
       <!--  <div class="logo">
@@ -242,7 +242,7 @@
 // ── 變數 ──────────────────────────────────────────
 $border-radius: 0.5em; //按鈕圓角尺寸
 $gap: 15px; //間距
-$cols: 2; // 上排按鈕欄數，改這裡就好
+$cols: 3; // 上排按鈕欄數，改這裡就好
 
 // 導航按鈕寬度 = 上排每欄寬度
 // 公式：(100% - gap * (欄數-1)) / 欄數

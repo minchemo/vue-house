@@ -18,7 +18,8 @@
       <div class="t3 font-['Noto_Serif_TC',serif]" data-aos="zoom-in" data-aos-delay="600">北市成家 溫暖首選</div>
       <div class="t4 font-['Noto_Serif_TC',serif]" data-aos="zoom-in" data-aos-delay="800">敬<i />請<i />期<i />待</div>
       <img src="./s1/coming.svg" alt="coming soon" class="coming" data-aos="zoom-in" data-aos-delay="1000">
-      <img src="./s1/line.svg" alt="line" class="line" data-aos="zoom-in" data-aos-delay="1200">
+      <a :href="info.line" target="_blank"><img src="./s1/line.svg" alt="line" class="line" data-aos="zoom-in" data-aos-delay="1200">
+    </a>
     </div>
     <div class="box2"></div>
   </article>
@@ -397,6 +398,7 @@
 }
 </style>
 <script setup>
+import info from "@/info"
 import { computed, getCurrentInstance, ref, inject } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 

@@ -10,9 +10,9 @@ export default {
   googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3641.364423882099!2d120.6452467790985!3d24.123836885000067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d000961aecb%3A0xa9a42acd7055ed6!2z6Z2S5ZyS57ag5aKDIHwg5Y2B5LiJ5pyf5paw5qGIIOaOpeW-heacg-mkqCB8!5e0!3m2!1szh-TW!2stw!4v1779776773158!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/tKF5RVfJ3WkmiGK49",
   // phone: "04-23698899",
-  fbLink: "https://www.facebook.com/61589494772234",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
-  fbMessage: "https://m.me/61589494772234",
-  // line: "https://lin.ee/qakWswp",
+  fbLink: "https://www.facebook.com/100071211256585",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
+  fbMessage: "https://m.me/100071211256585",
+  line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
   /*  ["空間設計", "xxx"],
@@ -25,7 +25,7 @@ export default {
     /*
     */
   ],
-  gtmCode: ["GTM-MHSDGRVJ"], // 可放置多個
+  // gtmCode: ["GTM-MHSDGRVJ"], // 可放置多個
   recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
