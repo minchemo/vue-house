@@ -535,7 +535,7 @@ if (unfill.length) {
   // A API
   // ======================
   const presendA = {
-    caseId: info.caseidA,
+    caseId: info.caseid,
     form: {},
     validation: {
       siteKey: info.recaptcha_site_key_v2,
@@ -570,7 +570,7 @@ presendB.append("message", formData.msg)
 
 presendB.append(
   "case_code",
-  info.case_code || info.caseidB || info.caseidA
+  info.case_code || info.caseid_j || info.caseid
 )
 
 
