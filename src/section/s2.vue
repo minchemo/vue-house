@@ -321,11 +321,11 @@ const list1 = [
     link:"https://drive.google.com/file/d/1ewt773l_E8O_7YQtzmyP-V-S_o_mhTAi/view?usp=sharing",
   }, 
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "115/4/13~<br>115/5/13",
     t3: "重新選配期間",
-    link:"https://docs.google.com/spreadsheets/d/1pI4dcovZTH3bUMexjojpsCmLxlRsvi4KQsuDCGG5ze4/edit?usp=sharing",
-    link_t:"查詢",
+    //link:"https://docs.google.com/spreadsheets/d/1pI4dcovZTH3bUMexjojpsCmLxlRsvi4KQsuDCGG5ze4/edit?usp=sharing",
+    //link_t:"查詢",
   }, 
   //link 設定#開頭  不會另開 放網址才會另開視窗
 ];
@@ -387,11 +387,24 @@ const list3 = [
     link_t:"會議記錄",
   },
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "115/4/12",
     t3: "選配說明會<br>時間  115 / 3/ 22 （日）下午2時30分至3時30分（2:15進場報到）<br>地點:永和區頂溪國小4樓視聽教室(新北市永和區文化路133號4樓)",
     link:"https://lin.ee/tNV80D4",
     link_t:"預約登記",
+  },
+  {
+    t1: ["v1", "已完成"],
+    t2: "115/5/23",
+    t3: "辦理地方說明會，內容參見會議記錄",
+    link:"https://drive.google.com/file/d/1T6xBZJiQPInOPDE5lZG0weP7SrMIQ6kk/view?usp=sharing",
+    link_t:"會議記錄",
+  },
+  {
+    t1: ["v2", "進行中"],
+    t2: "115/5/28",
+    t3: "有關本案預計原訂6月底重新辦理選配一事，因應新北市政府新北府城更字第11545557531號函要求實施者暫停辦理選配及地主陳情輿論，本案即刻暫停後續選配作業，倘有進一步時程安排會再公告及函文通知各位所有權人",
+
   },
   //link 設定#開頭  不會另開 放網址才會另開視窗
   // t1: ["v2", "進行中"],
