@@ -484,10 +484,10 @@ const send = async () => {
   const urlParams = new URLSearchParams(window.location.search)
 
   const utm = {
-    source: urlParams.get("utm_source") || "null",
-    medium: urlParams.get("utm_medium") || "null",
-    content: urlParams.get("utm_content") || "null",
-    campaign: urlParams.get("utm_campaign") || "null"
+    utm_source: urlParams.get("utm_source") || "null",
+    utm_medium: urlParams.get("utm_medium") || "null",
+    utm_content: urlParams.get("utm_content") || "null",
+    utm_campaign: urlParams.get("utm_campaign") || "null"
   }
 
   // ======================
