@@ -1,8 +1,8 @@
 const caseName = "青園綠境"
 
 export default {
-  caseid: "	fb6eb0c4-9485-498d-a532-e929dbf8a8ca",
-  // caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+  caseid: "fb6eb0c4-9485-498d-a532-e929dbf8a8ca",
+ //caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
 // caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
   // case_code: "test", //某些舊案資料庫要單獨設定名稱
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
