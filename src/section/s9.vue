@@ -4,7 +4,7 @@
     <div class="t1 font-['Noto_Serif_TC',serif]" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000" v-if="!isMobile">三鐵匯聚｜全雙併均質3房</div>
     <div class="t1 font-['Noto_Serif_TC',serif]" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000" v-else>三鐵匯聚<br>全雙併均質3房</div>
     <img src="./s9/logo.svg" class="logo" alt="" data-aos="zoom-out" data-aos-delay="0" data-aos-duration="1000"/>
-    <div class="t2 font-['Noto_Serif_TC',serif]" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000">稀有地段｜即將公開｜03-364-2277</div>
+    <div class="t2 font-['Noto_Serif_TC',serif]" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="1000">稀有地段｜全新完工｜03-364-2277</div>
   </article>
 </template>
 
