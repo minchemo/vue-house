@@ -8,9 +8,9 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    // address: "xxxxxx",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14456.713232321394!2d121.54841739999999!3d25.06194495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1729134765760!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/rsbphVJs6tyPo45J9",
+    address: "高雄市大社區翠屏路84巷1號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14719.817077410187!2d120.34122582685178!3d22.7299410639108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e102c3a255555%3A0xa07256fb8afd1692!2zODE16auY6ZuE5biC5aSn56S-5Y2A56We6L6y6YeM57-g5bGP6LevODTlt7cx6Jmf!5e0!3m2!1szh-TW!2stw!4v1780626742542!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/8dfeK6PwfKfCm3wk9",
     phone: "07-352-1660",
     fbLink: "https://www.facebook.com/61567278457423/",
     fbMessage: "https://m.me/61567278457423/",

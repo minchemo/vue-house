@@ -1,7 +1,7 @@
 <template>
   <article class="s10 relative" id="s10">
-     <img src="./s1/bg.webp" class="bg" /> 
-     <div class="txt">
+    <img src="./s1/bg.webp" class="bg" />
+    <div class="txt">
       <logo class="logo relative" data-aos="zoom-in" data-aos-delay="400"></logo>
 
       <div class="ts relative" v-if="!isMobile">
@@ -13,81 +13,145 @@
         <div class="t2">當代新質感建築/精粹2-3房<br>25%低公設更安逸/即將公開</div>
       </div>
 
-      <img src="./s10/t3.svg" class="t3 relative" data-aos="zoom-in" data-aos-delay="600">
-     <img src="./s10/slogo.svg" class="slogo relative" data-aos="zoom" data-aos-delay="800">
+      <img src="./s10/t3.svg" class="t3 relative" data-aos="zoom-in" data-aos-delay="600"  @click="modalOpen = true; modalType = 'phone'">
+      <div class="t4" data-aos="zoom-in" data-aos-delay="800"  @click="modalOpen = true; modalType = 'gmap'">接待中心：高雄市大社區翠屏路84巷1號</div>
+      <img src="./s10/slogo.svg" class="slogo relative" data-aos="zoom" data-aos-delay="800">
     </div>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
+
 @keyframes an {
   to {
     transform: translateX(0%);
   }
 }
-  .s10 {
-    height: sizem(500);
+
+.s10 {
+  height: sizem(500);
   display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items:center;
- // background: #000;
- // overflow: hidden;
-  
-@media screen and (min-width: 768px) {
+  justify-content: center;
+  align-items: center;
+  // background: #000;
+  // overflow: hidden;
+
+  @media screen and (min-width: 768px) {
     height: size(1080);
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 0 0 0 0;
     background-size: cover;
-}
-  .bg{width:220%;height:sizem(840);position: absolute;
-    top: 0;left:50%;transform: translateX(-39%);
-    @media screen and (min-width: 768px) {height: auto;
-      left: size(0);width:100%;transform: translateX(0);
-      
+  }
+
+  .bg {
+    width: 220%;
+    height: sizem(840);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-39%);
+
+    @media screen and (min-width: 768px) {
+      height: auto;
+      left: size(0);
+      width: 100%;
+      transform: translateX(0);
+
     }
   }
-  .logo{width:sizem(235);margin: sizem(30) auto 0;
-   @media screen and (min-width: 768px) {
-    width:size(650);//left: size(255);
-    margin:size(150) auto 0;
+
+  .logo {
+    width: sizem(235);
+    margin: sizem(30) auto 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(650); //left: size(255);
+      margin: size(150) auto 0;
     }
   }
-  .ts{
-    text-align: center;left: 0;right: 0;width:sizem(360);
-    font-size:sizem(16);margin:1.5em auto;
-      line-height: 1.4;
-    @media screen and (min-width: 768px) {width:100%;
-      font-size:size(34);
+
+  .ts {
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: sizem(360);
+    font-size: sizem(16);
+    margin: 1.5em auto;
+    line-height: 1.4;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      font-size: size(34);
       letter-spacing: 0.06em;
     }
   }
-  .t1{color: #fff;}
-  .t2{color: #dca66b;margin-top: .4em;}
-  @media screen and (min-width: 768px) {
-  .t2{letter-spacing: 0.1em;margin-top: .1em}
+
+  .t1 {
+    color: #fff;
   }
-  
-  
-  .t3{width:sizem(235);
-    margin: auto;display: block;
-   @media screen and (min-width: 768px) {
-    width:size(530);
-   // top: size(730);
+
+  .t2 {
+    color: #dca66b;
+    margin-top: .4em;
+  }
+
+  @media screen and (min-width: 768px) {
+    .t2 {
+      letter-spacing: 0.1em;
+      margin-top: .1em
     }
   }
-  .slogo{width:sizem(235);
-    margin: auto;display: block;margin:sizem(25) auto 0;
-   @media screen and (min-width: 768px) {
-    width:size(530);margin:size(47) auto 0;
+
+
+  .t3 {
+    width: sizem(235);
+    margin: auto;
+    display: block;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      width: size(530);
+      // top: size(730);
+    }
+  }
+
+  .t4 {
+    position: relative;
+    z-index: 2;
+    color: #dca66b;
+    margin: 1em auto;
+    display: block;
+    text-align: center;
+    font-size: sizem(12);
+    letter-spacing: 0.02em;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+    font-size: size(27);
+      // top: size(730);
+    }
+
+    &::before{content: "";display: inline-block;width: .8em;aspect-ratio: 1/1;background: currentColor;margin: 0 .4em 0 0;vertical-align: -.05em;}
+  }
+
+  .slogo {
+    width: sizem(235);
+    margin: auto;
+    display: block;
+    margin: sizem(25) auto 0;
+
+    @media screen and (min-width: 768px) {
+      width: size(530);
+      margin: size(47) auto 0;
     }
   }
 }
 </style>
 <script setup>
 import logo from './s1/logo.vue';
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
+import { computed, getCurrentInstance, ref, inject } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
@@ -98,4 +162,6 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
+const modalOpen = inject('modalOpen')
+const modalType = inject('modalType')
 </script>

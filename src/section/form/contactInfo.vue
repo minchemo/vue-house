@@ -345,8 +345,9 @@
 <script setup>
 import info from "@/info"
 import { inject, ref } from "vue";
-const modalOpen = ref(false);
-const modalType = ref('');
+
+const modalOpen = inject('modalOpen')
+const modalType = inject('modalType')
 
 const go = () => {
   if (modalType.value == 'phone') {
