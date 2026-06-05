@@ -6,11 +6,11 @@
 
       <div class="ts relative" v-if="!isMobile">
         <div class="t1 font-['Noto_Sans_TC',sans-serif]">約15Min 台積電/約15Min 高鐵/約15Min 巨蛋/繁華鄰距離</div>
-        <div class="t2">當代新質感建築/精粹2-3房/25%低公設更安逸/即將公開</div>
+        <div class="t2">當代新質感建築/精粹2-3房/25%低公設更安逸</div>
       </div>
       <div class="ts relative" v-else>
         <div class="t1 font-['Noto_Sans_TC',sans-serif]">約15Min 台積電/約15Min 高鐵<br>約15Min 巨蛋/繁華鄰距離</div>
-        <div class="t2">當代新質感建築/精粹2-3房<br>25%低公設更安逸/即將公開</div>
+        <div class="t2">當代新質感建築/精粹2-3房<br>25%低公設更安逸</div>
       </div>
 
       <img src="./s10/t3.svg" class="t3 relative" data-aos="zoom-in" data-aos-delay="600"  @click="modalOpen = true; modalType = 'phone'">
