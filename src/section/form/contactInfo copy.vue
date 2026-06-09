@@ -59,8 +59,8 @@
       <div>粉絲專頁</div>
     </div>
     <div class="flex flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
-      <div>預約賞屋</div>
+      <img src="//h35.banner.tw/img/form/pen.svg" alt="VIP預約" srcset="" />
+      <div>VIP預約</div>
     </div>
     <!--  --><div class="flex flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
@@ -86,10 +86,10 @@
       <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img/form/line.svg" alt="line" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{
-       modalType == 'phone' ? '賞屋專線' :
+       modalType == 'phone' ? '聯絡專線' :
        modalType == 'messenger' ? 'Facebook Messenger' :
        modalType == 'fb' ? 'Facebook 粉絲專頁' :
-       modalType == 'line' ? 'LINE賞屋客服' :
+       modalType == 'line' ? 'LINE客服' :
        modalType == 'gmap' ? `${info.address2?info.address2:'導航地址'}` : 
        ''
       }}</div>
