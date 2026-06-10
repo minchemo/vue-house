@@ -3,19 +3,10 @@
   <!-- <img src="./s1/mo.png" class="t0"> --> 
     <div class="bg"><img src="./s1/bg.webp" alt="bg" class="bg-img"></div>
 
-  <div class="visual">
-  <div class="building">
-    <img src="./s1/building.webp">
-  </div>
-
-  <div class="light1">
-    <img src="./s1/light1.webp">
-  </div>
-
-  <div class="light2">
-    <img src="./s1/light2.webp">
-  </div>
-</div>
+    <div class="light2"><img src="./s1/light2.webp" alt="bg"></div>
+    <div class="building"><img src="./s1/building.webp" alt="bg" class="bg-img">
+    </div>
+    <div class="light1"><img src="./s1/light1.webp" alt="bg"></div>
     <div class="bott">
       <div></div>
     </div>
@@ -72,7 +63,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100dvh - sizem(63));
+    height: sizem(675);
     pointer-events: none;
     user-select: none;
     img {
@@ -93,17 +84,17 @@
   .light2,
   .light1 {
     position: absolute;
-    top: sizem(380);
+    top: sizem(440);
     left: 0;
-    height: sizem(610);
+    height: sizem(540);
     width: 100%;
     mix-blend-mode: screen;
     pointer-events: none;
     user-select: none;
   @media screen and (min-width: 768px) {
-    top: size(560);
+    top: size(700);
     left: 0;
-    height: size(1015);
+    height: size(850);
 
   }
 
@@ -112,11 +103,11 @@
   .light2 img {
     position: sticky;
     width: sizem(56);
-  top: calc(100dvh - sizem(380));
+  top: calc(100dvh - sizem(395));
     left: sizem(265);
   @media screen and (min-width: 768px) {
     width: size(155);
-    top: size(215);
+    top: size(-150);
     left: size(686);
 
   }
@@ -125,11 +116,11 @@
   .light1 img {
     position: sticky;
     width: sizem(237);
-  top: calc(100dvh - sizem(380));
+  top: calc(100dvh - sizem(395));
     left: sizem(70);
   @media screen and (min-width: 768px) {
     width: size(648);
-      top: size(215);
+    top: size(-150);
     left: size(152);
 
   }
@@ -151,7 +142,7 @@
       left: sizem(55);
     }
   @media screen and (min-width: 768px) {
-    top: size(460);
+    top: size(0);
     left: 0;right: auto;
     height: size(1115);
     img {
@@ -329,31 +320,26 @@ const target = ref(null)
 const isVisible = ref(false)
 
 onMounted(() => {
-  const mobileOffset = window.innerWidth * 476 / 375
-
-  const desktopOffset = window.innerWidth * 800 / 1920
-  // 800 可依實際桌機 txt2 的出現位置再微調
-
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
         isVisible.value = true
       } else {
-        // 只有往上滑離開時才隱藏
+        // 元素跑到畫面下方
         if (entry.boundingClientRect.top > 0) {
           isVisible.value = false
         }
       }
     },
-    {
-      rootMargin: isMobile.value
-        ? `0px 0px -${mobileOffset}px 0px`
-        : `0px 0px -${desktopOffset}px 0px`
-    }
+    isMobile.value
+      ? {
+          rootMargin: '-0% 0px -60% 0px'
+        }
+      : {
+          rootMargin: '-0% 0px -30% 0px'
+        }
   )
 
-  if (target.value) {
-    observer.observe(target.value)
-  }
+  observer.observe(target.value)
 })
 </script>

@@ -27,11 +27,12 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#2EA7E0;
-$house-c2:#fff;
+$house-c1:#1B2F61;
+$house-c2:#000;
 .displaynone{display: none;}
 .house {
    // height: auto;
+   background: #CCC;
     color: $house-c2;
     font-size: size(22);
     padding: 3em 0;
@@ -43,7 +44,7 @@ $house-c2:#fff;
 
     .title {
         font-size: size(40);
-       // font-weight: 700;
+        font-weight: 700;
         color: $house-c1;
         margin: 0 auto 0em auto;
     }
@@ -62,6 +63,7 @@ $house-c2:#fff;
 
              .sub{
               color: $house-c1;
+        font-weight: 700; 
                 // min-width: 4.5em;
             }
         }

@@ -4,8 +4,9 @@
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
       <img src="//h35.banner.tw/img/form/line.svg" />
     </a> -->
-      <img src="@/section/s1/f4.webp" class="contact-bg" alt="">
     <div class="contact-info mx-auto  flex flex-col items-center justify-between z-2 relative">
+      
+      <img src="@/section/s1/logo-c.png"  class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
@@ -177,7 +178,7 @@
   left: 0;
   width: 100%;
   height: size(60);
-  background: linear-gradient(90deg, #fff0 70%, #fff9);
+  background: linear-gradient(180deg, #110B60 , #3FA1D2);
   font-size: size(16);
   font-weight: 500;
 
@@ -212,31 +213,21 @@
     transform: translateX(0%);
   }
 }
-.contact-bg {
-  position: absolute;
-  bottom:sizem(-250);
-  right:sizem(-190);
-  width:  sizem(600);
-  object-fit: cover;
-  pointer-events: none;
-    animation: an 4s ease-in-out infinite alternate;
-    transform: rotate(5deg);
-  @media screen and (min-width: 768px) {
-  bottom:size(-500);
-  right:size(-260);
-  width:  size(1090);}
+.contact{
+   background: url("@/section/s1/bg-c.webp") center  size(215) no-repeat;
+   background-size: 100% auto;
 }
 
 
 .logo {
   position: relative;
-  width: size(540);
+  width: size(651);
   // height: size(172);
   // background-image: url("@/section/s1/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: size(60) auto size(30);
+  margin: size(60) auto size(140);
 }
 
 // ── 變數 ──────────────────────────────────────────
@@ -255,8 +246,8 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #bf1924;
-  color: #fff;
+background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -12.43%, #F3EFB2 25.25%, #DAAF68 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
+  color: #160A00;
   border: 0px solid #3BEDFF99;
   border-radius: $border-radius;
   font-size: 16px;
@@ -270,14 +261,14 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     height: 1.65em;
     object-fit: contain;
     flex-shrink: 0;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(0);
     transition: filter 0.25s;
     margin: 0;
   }
 
   &:hover {
-    background: #96000a;
-    color: #fff;
+    background: linear-gradient(149deg, #DAAF68 -75.22%, #9D6F3E -54.29%, #F3EFB2 -12.43%, #fff 25.25%, #F3EFB2 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
+    color: #000;
     //border-color: #c00;
 
     // img { filter: brightness(0) invert(1); }
@@ -355,7 +346,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     gap: 0;
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
     font-size: sizem(16);
-  background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
+  // background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
 
     .contact-item {
       flex: 1;
@@ -367,10 +358,14 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
       }
     }
   }
+  .contact{
+   background-position: center sizem(40);
+   background-size: 400% auto;
+}
 
   .logo {
-    width: sizem(290);
-    margin: sizem(40) auto sizem(30) auto;
+    width: sizem(310);
+    margin: sizem(40) auto sizem(50) auto;
   }
 
   .contact-info {

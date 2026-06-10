@@ -93,8 +93,8 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal" class="text-[#c00] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-[#fff]">
+          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -128,11 +128,11 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$o-title-c: #BF1924; //.order-title
+$o-title-c: #fff; //.order-title
 
 .order {
   width: 100%;
-  padding-top: size(100);
+  padding-top: size(60);
   font-size: 16px;
 
   .order-section {
@@ -203,7 +203,7 @@ $o-title-c: #BF1924; //.order-title
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #bf1924;
+      background-color: #fff;
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
@@ -262,7 +262,7 @@ $o-title-c: #BF1924; //.order-title
       right: 0;
       flex-direction: column;
       margin-left: .7em;
-      color: #bf1924;
+      color: #fff;
 
       label:first-child {
         margin-bottom: .3em;
@@ -276,9 +276,9 @@ $o-title-c: #BF1924; //.order-title
 
   .send {
     font-size: 1.4em;
-  background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
-    //border: 1px solid #FFF9;
-    border: 0;
+  background: #1B2F61;
+    border: 1px solid #FFFC;
+    // border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
     line-height: 1.5;
@@ -322,7 +322,7 @@ $o-title-c: #BF1924; //.order-title
 
   .order {
     width: 100%;
-  padding-top: sizem(96);
+  padding-top: sizem(0);
     padding-bottom: sizem(63);
 
     .cus-divider {
@@ -334,7 +334,7 @@ $o-title-c: #BF1924; //.order-title
     }
 
     .order-title {
-      font-size: 20px;
+      font-size: 19px;
       width: sizem(310);
       /*  font-size: sizem(27);
       padding-top:2em;
@@ -354,7 +354,7 @@ $o-title-c: #BF1924; //.order-title
       min-width: 0;
       flex-direction: column;
       gap: 0;
-      margin: 2em auto 1.1em;
+      margin: 1em auto 1.1em;
       /*  height: auto;
       gap: sizem(15);
       margin-bottom: sizem(20);

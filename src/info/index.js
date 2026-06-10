@@ -1,24 +1,24 @@
-const caseName = "福容京都"
+const caseName = "麗寶ACE"
 
 export default {
-  caseid: "8ab5e890-f03d-476d-87d4-b79befb7c1f6",
+  caseid: "56482bc0-d610-40de-b536-2b2d2564a550",
 // caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
   // case_code: "test", //某些舊案資料庫要單獨設定名稱
-  address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
-  address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
- // address: "台中市南屯區龍富二路408號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3641.364423882099!2d120.6452467790985!3d24.123836885000067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d000961aecb%3A0xa9a42acd7055ed6!2z6Z2S5ZyS57ag5aKDIHwg5Y2B5LiJ5pyf5paw5qGIIOaOpeW-heacg-mkqCB8!5e0!3m2!1szh-TW!2stw!4v1779776773158!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/tKF5RVfJ3WkmiGK49",
-  // phone: "04-23698899",
-  fbLink: "https://www.facebook.com/100071211256585",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
-  fbMessage: "https://m.me/100071211256585",
-  line: "https://lin.ee/88Y9fk9",
+  address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
+  address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
+  address: "台中市東區南京路86號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.2228896713307!2d120.68874657804871!3d24.140446166940976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d004316b727%3A0x6ae5ff5117070033!2z6bqX5a-2QUNFIOm1rOeoi-WPsOS4reaZuuWMr-e4vemDqA!5e0!3m2!1szh-TW!2stw!4v1781059674070!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/shZNPyYY4fjqjCod6",
+  phone: "04-2211-0333",
+  fbLink: "https://www.facebook.com/61589890269981",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
+  fbMessage: "https://m.me/61589890269981",
+  // line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
-  /*  ["空間設計", "xxx"],
+   /*["空間設計", "xxx"],
     ["企劃銷售", "xxx"],
     ["建照號碼", "xxx"],
-    ["經&ensp;紀&ensp;人", "xxx"],
+     ["經&ensp;紀&ensp;人", "xxx"],
     ["建築設計", "xxx"],
     ["使照號碼", "xxx"],
     ["行銷企劃", "xxx"],*/
