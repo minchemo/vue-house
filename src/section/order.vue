@@ -68,17 +68,20 @@
             </select>
           </label>
 
-          <!-- 地區 -->
-          <label class="row" v-if="info.locationConfig?.area?.enabled && formData.city">
-            <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
-
-            <select v-model="formData.area" class="select w-full">
-              <option value="" disabled>請選擇地區</option>
-              <option v-for="a in areaList" :key="a.value" :value="a.value">
-                {{ a.label }}
-              </option>
-            </select>
-          </label>
+          <!-- 地區 --><Transition name="area-drop">
+  <label 
+    class="row" 
+    v-if="info.locationConfig?.area?.enabled && formData.city"
+  >
+    <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
+    <select v-model="formData.area" class="select w-full">
+      <option value="" disabled>請選擇地區</option>
+      <option v-for="a in areaList" :key="a.value" :value="a.value">
+        {{ a.label }}
+      </option>
+    </select>
+  </label>
+</Transition>
 
         </div>
 
@@ -127,7 +130,18 @@
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
+.area-drop-enter-active {
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+.area-drop-enter-from {
+  max-height: 0;
+  opacity: 0;
+}
+.area-drop-enter-to {
+  max-height: 4em;
+  opacity: 1;
+}
 $o-title-c: #EB6120; //.order-title
 
 .order {
