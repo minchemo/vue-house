@@ -276,7 +276,7 @@ $o-title-c: #BF1924; //.order-title
 
   .send {
     font-size: 1.4em;
-  background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
+  background: #00BBDD;
     //border: 1px solid #FFF9;
     border: 0;
     padding: .7em 0;

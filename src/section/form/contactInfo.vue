@@ -1,11 +1,13 @@
 <template>
   <div class="contact">
+    <img src="@/section/s1/c1.png" class="c1" alt="" />
+    <img src="@/section/s1/c2.png" class="c2" alt="" />
     <!-- <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
       <img src="//h35.banner.tw/img/form/line.svg" />
     </a> -->
-      <img src="@/section/s1/f4.webp" class="contact-bg" alt="">
     <div class="contact-info mx-auto  flex flex-col items-center justify-between z-2 relative">
+      <img src="@/section/s1/logo.svg" class="logo" alt="" data-aos="zoom-out" />
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
@@ -104,7 +106,7 @@
               modalType == 'line' ? '' :
                 modalType == 'gmap' ? `${info.address}` :
                   ''
-        }}</div>
+      }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
         v-if="modalType != 'phone'" v-bind:class="{
@@ -170,31 +172,49 @@
 
 
 .mo-contact-info {
-  display: none;
+  display: flex;
   z-index: 99;
   position: fixed;
-  top: 0;
+  top: auto;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: size(60);
+  height: sizem(63);
   background: linear-gradient(90deg, #fff0 70%, #fff9);
-  font-size: size(16);
   font-weight: 500;
+  gap: 0;
+  font-size: sizem(16);
+  background: #FE7A92;
+  box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
 
+  @media screen and (min-width:768px) {
+    display: none;
+    top: 0;
+    height: size(60);
+    box-shadow: none;
+    font-size: size(16);
+  }
 
   .contact-item {
+    flex: 1;
     height: 100%;
-    color: #857550;
     border-left: 1px solid #fff9;
-    padding: 0 .6em;
+    padding: 0;
     transition: background .3s;
+    color: #fff;
+
+    @media screen and (min-width:768px) {
+      flex: 0;
+      padding: 0 .6em;
+      color: #857550
+    }
 
     img {
       margin-bottom: 0.3em;
       max-width: 1.03em;
       height: auto;
       max-height: 1.03em;
-      filter: invert(50%) sepia(20%) saturate(662%) hue-rotate(4deg) brightness(88%) contrast(90%);
+      filter: brightness(0) invert(1);
     }
 
     &:first-child {
@@ -212,31 +232,17 @@
     transform: translateX(0%);
   }
 }
-.contact-bg {
-  position: absolute;
-  bottom:sizem(-250);
-  right:sizem(-190);
-  width:  sizem(600);
-  object-fit: cover;
-  pointer-events: none;
-    animation: an 4s ease-in-out infinite alternate;
-    transform: rotate(5deg);
-  @media screen and (min-width: 768px) {
-  bottom:size(-500);
-  right:size(-260);
-  width:  size(1090);}
-}
-
 
 .logo {
   position: relative;
-  width: size(540);
-  // height: size(172);
-  // background-image: url("@/section/s1/logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: size(60) auto size(30);
+  width: sizem(290);
+  margin: sizem(40) auto sizem(30) auto;
+
+  @media screen and (min-width:768px) {
+    width: size(455);
+    margin: size(60) auto size(30);
+
+  }
 }
 
 // ── 變數 ──────────────────────────────────────────
@@ -255,7 +261,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #bf1924;
+  background: #6DAA43;
   color: #fff;
   border: 0px solid #3BEDFF99;
   border-radius: $border-radius;
@@ -285,8 +291,47 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 }
 
 // ── 主體 ───────────────────────────────────────────
+.contact {
+  background: #EB6120;
+  position: relative;
+
+  .c1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: sizem(400);
+    transform: translateX(-10%)translateY(-100%);
+    transform-origin: 50%;
+    animation: an2 5s linear infinite alternate;
+  @media screen and (min-width:768px) {
+    width: size(985);
+  }
+
+  }
+
+  .c2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: sizem(500);
+    transform: skewX(-15deg)translateY(-100%);
+    transform-origin: 50% 0;
+    animation: an2 5s linear infinite alternate;
+  @media screen and (min-width:768px) {
+    width: size(1453);
+  }
+
+  }
+
+  @keyframes an2 {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+}
+
 .contact-info {
-  width: min(1200px, 95%); //最大1200px
+  width: sizem(310);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -294,12 +339,22 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   gap: $gap;
   padding: 0 0 2em;
 
+  @media screen and (min-width:768px) {
+    width: min(1200px, 95%); //最大1200px
+  }
+
   // ── 第一排：N 欄平均分配 ──
   .contact-row {
     display: grid;
     width: 100%;
-    gap: $gap;
-    grid-template-columns: repeat(#{$cols}, 1fr);
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    @media screen and (min-width:768px) {
+      gap: $gap;
+      grid-template-columns: repeat(#{$cols}, 1fr);
+
+    }
 
     .contact-item {
       @include contact-item-base;
@@ -309,6 +364,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     &.bottom {
       gap: 0;
       grid-template-columns: 1fr $btn-w;
+    @media screen and (min-width:768px) {
+        grid-template-columns: 1fr;
+    }
 
       .contact-item {
         @include contact-item-base;
@@ -320,7 +378,10 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
           cursor: default;
           white-space: normal;
           text-align: center;
+            border-radius: $border-radius $border-radius 0 0;
+    @media screen and (min-width:768px) {
           border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
+    }
 
           &:hover {
             background: #fff;
@@ -329,7 +390,10 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
         }
 
         &.googlemap {
+            border-radius: 0 0 $border-radius $border-radius;
+    @media screen and (min-width:768px) {
           border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
+    }
         }
       }
     }
@@ -346,40 +410,10 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 @media screen and (max-width:768px) {
 
 
-  .mo-contact-info {
-    display: flex;
-    top: auto;
-    bottom: 0;
-    width: sizem(375);
-    height: sizem(63);
-    gap: 0;
-    box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
-    font-size: sizem(16);
-  background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
-
-    .contact-item {
-      flex: 1;
-      padding: 0;
-      color: #fff;
-
-      img {
-        filter: brightness(0) invert(1);
-      }
-    }
-  }
-
-  .logo {
-    width: sizem(290);
-    margin: sizem(40) auto sizem(30) auto;
-  }
-
   .contact-info {
 
-    width: sizem(310);
 
     .contact-row {
-      grid-template-columns: 1fr;
-      gap: 12px;
 
       .contact-item {
         position: relative;
@@ -393,23 +427,6 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
         }
       }
 
-      &.bottom {
-        grid-template-columns: 1fr;
-        gap: 0;
-
-        .contact-item {
-          &.address {
-            // border: 1.5px solid #00744a;
-            //   border-bottom: none;
-            border-radius: $border-radius $border-radius 0 0;
-            white-space: normal;
-          }
-
-          &.googlemap {
-            border-radius: 0 0 $border-radius $border-radius;
-          }
-        }
-      }
     }
   }
 }
