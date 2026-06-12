@@ -282,7 +282,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   }
 
   &:hover {
-    background: #96000a;
+    background: #45811d;
     color: #fff;
     //border-color: #c00;
 
@@ -302,7 +302,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(400);
     transform: translateX(-10%)translateY(-100%);
     transform-origin: 50%;
-    animation: an2 5s linear infinite alternate;
+   // animation: an2 5s linear infinite alternate;
   @media screen and (min-width:768px) {
     width: size(985);
   }
@@ -363,9 +363,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     // ── 第二排：地址 + 導航，緊貼成一塊 ──
     &.bottom {
       gap: 0;
-      grid-template-columns: 1fr $btn-w;
-    @media screen and (min-width:768px) {
         grid-template-columns: 1fr;
+    @media screen and (min-width:768px) {
+      grid-template-columns: 1fr $btn-w;
     }
 
       .contact-item {
@@ -378,9 +378,10 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
           cursor: default;
           white-space: normal;
           text-align: center;
-            border-radius: $border-radius $border-radius 0 0;
+            border-radius: $border-radius $border-radius 0 0;font-size: 15px;
     @media screen and (min-width:768px) {
           border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
+          font-size: 16px;
     }
 
           &:hover {

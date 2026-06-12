@@ -94,7 +94,7 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
         <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal" class="text-[#c00] cursor-pointer">「個資告知事項聲明」</label>內容
+          本人知悉並同意<label for="policy-modal" class="text-[#EB6120] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -128,7 +128,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$o-title-c: #BF1924; //.order-title
+$o-title-c: #EB6120; //.order-title
 
 .order {
   width: 100%;
@@ -203,7 +203,7 @@ $o-title-c: #BF1924; //.order-title
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #bf1924;
+      background-color: #EB6120;
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
@@ -262,7 +262,7 @@ $o-title-c: #BF1924; //.order-title
       right: 0;
       flex-direction: column;
       margin-left: .7em;
-      color: #bf1924;
+      color: #EB6120;
 
       label:first-child {
         margin-bottom: .3em;

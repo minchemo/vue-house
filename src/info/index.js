@@ -1,28 +1,31 @@
-const caseName = "福容京都"
+const caseName = "國華綻"
 
 export default {
-  caseid: "8ab5e890-f03d-476d-87d4-b79befb7c1f6",
+  caseid: "f802d14d-9172-47b3-9668-dba01906e90d",
 // caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
   // case_code: "test", //某些舊案資料庫要單獨設定名稱
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
- // address: "台中市南屯區龍富二路408號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3641.364423882099!2d120.6452467790985!3d24.123836885000067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d000961aecb%3A0xa9a42acd7055ed6!2z6Z2S5ZyS57ag5aKDIHwg5Y2B5LiJ5pyf5paw5qGIIOaOpeW-heacg-mkqCB8!5e0!3m2!1szh-TW!2stw!4v1779776773158!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/tKF5RVfJ3WkmiGK49",
-  phone: "02-86772888",
-  fbLink: "https://www.facebook.com/100071211256585",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
-  fbMessage: "https://m.me/100071211256585",
+  address: "新北市鶯歌區建國路280-2號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7234.759861138862!2d121.34143481775472!3d24.95318512732956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f8706c42839%3A0xa23b80f99b5a8e6c!2z5ZyL6I-v57a75o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1781242674159!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/X7a3vdcTvzh4q3id8",
+  phone: "02-8677-2888",
+  fbLink: "https://www.facebook.com/986758843897156",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
+  fbMessage: "https://m.me/986758843897156",
   // line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
-  /*  ["空間設計", "xxx"],
-    ["企劃銷售", "xxx"],
-    ["建照號碼", "xxx"],
-    ["經&ensp;紀&ensp;人", "xxx"],
-    ["建築設計", "xxx"],
-    ["使照號碼", "xxx"],
-    ["行銷企劃", "xxx"],*/
+    ["投資興建", "國鉅建設"],
+    ["建築設計", "謝樹林建築師"],
+    ["建照號碼", "113鶯建字第00119-01號"],
+    ["行銷企劃", "澄品廣告"],
+    ["經&ensp;紀&ensp;人", "陳佳享(112)新北經字第004521號"],
     /*
+投資興建:國鉅建設
+建築設計:謝樹林建築師
+建照號碼:113鶯建字第00119-01號
+行銷企劃:澄品廣告
+經紀人:陳佳享(112)新北經字第004521號
     */
   ],
   // gtmCode: ["GTM-MHSDGRVJ"], // 可放置多個
