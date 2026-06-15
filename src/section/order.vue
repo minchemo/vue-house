@@ -104,7 +104,7 @@
       <Policy />
 
       <!-- recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
+      <vue-recaptcha class="flex justify-center mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
         @expired="onRecaptchaExpired" />
 
       <!-- submit -->
@@ -313,6 +313,7 @@ $o-title-c: #EB6120; //.order-title
     font-size: 16px;
     color: #000;
     position: relative;
+    z-index: 10;
     input[type="checkbox"] {border: 2px solid #666;}
   }
  

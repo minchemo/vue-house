@@ -302,6 +302,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(400);
     transform: translateX(-10%)translateY(-100%);
     transform-origin: 50%;
+  pointer-events: none;
    // animation: an2 5s linear infinite alternate;
   @media screen and (min-width:768px) {
     width: size(985);
@@ -316,7 +317,8 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(500);
     transform: skewX(-15deg)translateY(-100%);
     transform-origin: 50% 0;
-    animation: an2 5s linear infinite alternate;
+    animation: an2 5s linear infinite alternate;    
+  pointer-events: none;
   @media screen and (min-width:768px) {
     width: size(1453);
   }
