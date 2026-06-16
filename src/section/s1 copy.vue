@@ -7,9 +7,10 @@
     </div>
     <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="200">
     <img src="./s1/t1.svg" alt="logo" class="t1" data-aos="zoom-in" data-aos-delay="200">
-    
-    <img v-if="canPlayWebP" src="./s1/0607.webp" class="unicorn" alt="unicorn">
-<img v-else src="./s1/0609.png" class="unicorn" alt="unicorn">
+    <video v-if="!isIOS" autoplay muted loop playsinline class="unicorn">
+      <source src="./s1/0606.webm" type="video/webm">
+    </video>
+  <img src="./s1/0608.png" class="unicorn" alt="unicorn">
   </article>
 </template>
 
@@ -151,8 +152,10 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
-const canPlayWebP = document.createElement('canvas')
-  .toDataURL('image/webp')
-  .startsWith('data:image/webp')
 
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+  || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+
+const canPlayWebM = !isIOS && document.createElement('video')
+  .canPlayType('video/webm; codecs="vp9"') !== ''
 </script>

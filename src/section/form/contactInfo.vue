@@ -448,7 +448,12 @@ const go = () => {
       window.location.href = "phoneThanks";
     }, 1000);
   } else if (modalType.value == 'messenger') {
-    window.open(info.fbMessage);
+    let url = info.fbMessage;
+  // Line 瀏覽器強制外開參數
+  if (/Line/i.test(navigator.userAgent)) {
+    url += (url.includes('?') ? '&' : '?') + 'openExternalBrowser=1';
+  }
+  window.open(url, '_blank', 'noopener,noreferrer');
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
   }
