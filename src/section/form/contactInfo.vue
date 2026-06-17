@@ -268,7 +268,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: linear-gradient(90deg, #76539B 0%, #3E2A5A 100%);
+      background: #583686 linear-gradient(90deg, #76539B 0%, #3E2A5A 100%);
       color: #fff;
       width: 100%;
       flex: 1;
@@ -287,7 +287,7 @@
       gap: 1em;
 
       &:hover {
-        background: #3E2A5A;
+        background: #33214d;
         color: #fff;
 
         img {

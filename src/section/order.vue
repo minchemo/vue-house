@@ -1,169 +1,184 @@
 <template>
   <div id="order" class="order relative text-center bg-[#7D51A0]">
     <div class="order-section">
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-
-      <!-- Form -->
+      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-subTitle text-center" v-if="info.order.subTitle"
+        v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
+      </div>
+<!--  -->
+      <!-- FORM -->
       <div class="form mx-auto relative flex justify-center">
+
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名<span>*</span></span>
-          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-            @input="(event) => (formData.name = event.target.value)" /></label>
-       <!--   <div class="gender">
-          <label><input  type="radio" name="gender" value="男" 
-              @input="(event) => (formData.gender = event.target.value)">先生</label>
-          <label><input  type="radio" name="gender" value="女" 
-              @input="(event) => (formData.gender = event.target.value)">女士</label>
-        </div> -->
-            <label class="row"><span>手機<span>*</span></span>
-              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" /></label>
+          <div class="name">
+          <!-- 姓名 -->
+          <label class="row">
+            <span>姓名<span>*</span></span>
+            <input v-model="formData.name" type="text" class="input w-full" placeholder="請填寫姓名" />
+          </label>
 
-<!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
-<template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
-    <label class="row">
-      <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
-      <select
-        class="select w-full rounded-none bg-white"
-        v-model="formData[fieldKey]"
-      >
-        <option value="" disabled>{{ fieldData.hold }}</option>
-        <option
-          v-for="option in fieldData.option"
-          :value="option"
-          :key="option"
-        >
-          {{ option }}
-        </option>
-      </select>
-    </label>
-  </template>
-<!-- 動態 select end-->
+          <!-- 性別（可開關） -->
+          <div v-if="info.formConfig?.gender?.enabled" class="gender">
+            <label>
+              <input type="radio" value="男" v-model="formData.gender" />先生
+            </label>
+            <label>
+              <input type="radio" value="女" v-model="formData.gender" />女士
+            </label>
+          </div>
+          </div>
 
+          <!-- 手機 -->
+          <label class="row">
+            <span>手機<span>*</span></span>
+            <input v-model="formData.phone" type="text" class="input w-full" placeholder="請填寫電話" />
+          </label>
 
+          <!-- 動態欄位 -->
+          <template v-for="(field, key) in selectFields" :key="key">
+            <label class="row" v-if="!field.hidden">
 
-        <!--  -->
-          <label class="row"><span>居住縣市</span>
-          <select class="select w-full rounded-none" v-model="formData.city">
-            <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value" :key="city">
-              {{ city.label }}
-            </option>
-          </select></label>
-          <label class="row"><span>居住地區</span>
-          <select class="select w-full rounded-none" v-model="formData.area">
-            <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value" :key="area">
-              {{ area.label }}
-            </option>
-          </select></label>
+              <span>
+                {{ field.title }}
+                <span v-if="field.required">*</span>
+              </span>
+
+              <select v-if="field.type === 'select'" v-model="formData[key]" class="select w-full rounded-none">
+
+                <option value="" disabled>{{ field.hold }}</option>
+                <option v-for="opt in field.option" :key="opt" :value="opt">
+                  {{ opt }}
+                </option>
+              </select>
+
+              <input v-else v-model="formData[key]" type="text" class="input w-full"
+                :placeholder="field.hold" />
+            </label>
+          </template>
+
+          <!-- 縣市 -->
+          <label class="row" v-if="info.locationConfig?.city?.enabled">
+            <span>居住縣市<span v-if="info.locationConfig?.city?.required">*</span></span>
+
+            <select v-model="formData.city" class="select w-full">
+              <option value="" disabled>請選擇城市</option>
+              <option v-for="c in cityList" :key="c.value" :value="c.value">
+                {{ c.label }}
+              </option>
+            </select>
+          </label>
+
+          <!-- 地區 --><Transition name="area-drop">
+  <label 
+    class="row" 
+    v-if="info.locationConfig?.area?.enabled && formData.city"
+  >
+    <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
+    <select v-model="formData.area" class="select w-full">
+      <option value="" disabled>請選擇地區</option>
+      <option v-for="a in areaList" :key="a.value" :value="a.value">
+        {{ a.label }}
+      </option>
+    </select>
+  </label>
+</Transition>
+
         </div>
+
+        <!-- 留言 -->
         <div class="right">
-          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" placeholder="(非必填) 請輸入您的留言"></textarea>
+          <textarea v-model="formData.msg" class="row textarea w-full h-full rounded-none"
+            placeholder="(非必填) 請輸入您的留言"></textarea>
         </div>
+
       </div>
 
-      <!-- Policy -->
+      <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
-        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-          class="checkbox bg-white rounded-md" />
+        <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
         <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
+
       <Policy />
 
-      <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+      <!-- recaptcha -->
+      <vue-recaptcha class="flex justify-center mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
+        @expired="onRecaptchaExpired" />
 
-      <!-- Send --><div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 700;
-    line-height: 3.3;height:3.3em">
-      <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-  送出表單
-</button>
-<div v-else class="send-load text-[#fff]" style="letter-spacing: 0.7em;
-  text-indent: 0.9em;
-  height:100%;">
-  <svg
-    class="h-5 w-5 mr-2"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24" style=" display: inline-block;margin:0 .8em"
-  >
-    <circle
-      class="opacity-25"
-      cx="12"
-      cy="12"
-      r="10"
-      stroke="currentColor"
-      stroke-width="4"
-    ></circle>
-    <path
-      class="opacity-75"
-      fill="currentColor"
-      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-    >
-    <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="rotate"
-      from="0 12 12"
-      to="360 12 12"
-      dur="1s"
-      repeatCount="indefinite" /></path>
-  </svg>
-  <span>發送中...</span>
-</div>
-</div>
+      <!-- submit -->
+      <div class="sendall mt-8 mb-12 mx-auto">
 
-      <!-- Contact Info -->
+        <button v-if="!submitted" class="send" :disabled="sending" @click="send">
+          送出表單
+        </button>
+
+        <div v-else class="send-load">
+          發送中...
+        </div>
+
+      </div>
+
       <ContactInfo />
     </div>
 
-
-    <!-- Map -->
     <Map v-if="info.address" />
-
-    <!-- HouseInfo -->
     <HouseInfo />
+
   </div>
 </template>
-
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
-$o-title-c:#fff; //.order-title
+.area-drop-enter-active {
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+.area-drop-enter-from {
+  max-height: 0;
+  opacity: 0;
+}
+.area-drop-enter-to {
+  max-height: 4em;
+  opacity: 1;
+}
+$o-title-c: #fff; //.order-title
 
 .order {
   width: 100%;
   padding-top: size(40);
-  font-size:16px;
+  font-size: 16px;
 
-.order-section {
-  position: relative;
-  overflow: hidden;
-  min-height: size(500);
+  .order-section {
+    position: relative;
+    overflow: hidden;
+    min-height: size(500);
+  }
+/*
+.order-title-img{
+  width:sizem(310);
+  @media screen and (min-width: 768px) {
+    width: min(1200px, 95%); //最大1200px
+    margin-bottom: size(20);
+  }
 }
-.order-title {
+  */
+  .order-title {
   font-size: size(45);
   font-weight: 700;
   color: $o-title-c;
   padding-top:1.5em;
-}
-  .order-subTitle{
-    font-size: size(20);
-    padding-top:.5em;
+  }
+
+  .order-subTitle {
+    font-size: 1.2em;
+    padding-top: .5em;
     letter-spacing: .1em;
   color: #fff;
   }
 
   .form {
-    width: size(1200);
-    min-width: 750px;
+    width: min(1200px, 95%); //最大1200px
     //  height: 350px;
     gap: 4em;
     margin-top: 2.8em;
@@ -171,7 +186,8 @@ $o-title-c:#fff; //.order-title
     z-index: 50;
     align-items: stretch;
 
-    .left {position: relative;
+    .left {
+      position: relative;
       flex: 1;
       gap: 1.25em;
       align-items: flex-start;
@@ -190,55 +206,105 @@ $o-title-c:#fff; //.order-title
       height: 100%;
       background-color: #fff6;
       position: absolute;
+      top: 0;left:0;right: 0;margin: auto;
     }
-    .row{background: #fff;border: 1px solid #999;color: #000;
-      display: flex;width: 100%;
-    align-items:center;
-      > span{
-        width: 5.5em;
-        text-align: left;padding-left:1em ;
-        > span{color: #F00;
-          }
+
+
+    .row {
+      background: #fff;
+      border: 0px;
+      color: #000;
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      >span {
+        min-width: 5.5em;
+        text-align: left;
+        padding-left: 1em;
+
+        >span {
+          color: #c00;
+        }
       }
-      input,select{background: inherit;flex: 1;}
-      option{color: #666;}
-      select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
-      background-size:auto 200%;
-      transition: background .3s;
-      &:focus{
-        background-position:calc(100% - .5em) 0%;
+
+      input,
+      select {
+        background: inherit;
+        flex: 1;
       }
+
+      option {
+        color: #666;
       }
-      // &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
+
+      select {
+        background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
+        background-size: auto 200%;
+        transition: background .3s;
+    // filter:  brightness(0) invert(1); //select的箭頭顏色
+
+        &:focus {
+          background-position: calc(100% - .5em) 0%;
+        }
+      }
+
+      //沒有性別的話這條槓掉
     }
-    .gender{display: flex;position: absolute;right: 0; flex-direction:column;
-      label:first-child{margin-bottom: .3em;}
-      input{margin-right: .3em;}
+
+      .name {
+        width: 100%;
+        display: flex;
+        .row{flex: 1;}
+      // width: calc(100% - 3.8em);
+      }
+    .gender {
+      display: flex;
+      right: 0;
+      flex-direction: column;
+      margin-left: .7em;
+      color: #EB6120;
+
+      label:first-child {
+        margin-bottom: .3em;
+      }
+
+      input {
+        margin-right: .3em;
+      }
     }
   }
-  .send {
-  font-size:20px;
-    font-size:inherit;
-    background: linear-gradient(90deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%);
 
-    //border: 1px solid #FFF;
-    border:0;
-  letter-spacing: 0.9em;
-    text-indent: 0.9em;
-    height:100%;
+  .send {
+    font-size: 1.4em;
+    background: linear-gradient(90deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%);
+    //border: 1px solid #FFF9;
+    border: 0;
+    padding: .7em 0;
+    letter-spacing: 0.5em;
+    line-height: 1.5;
+    text-indent: 0.5em;
     border-radius: 2em;
-    width: 410px;
+    text-align: center;
+    width: 18em;
     z-index: 10;
     color: #76539B;
     position: relative;
+    transition: transform .5s;
+    margin-bottom: 2em;
+    font-weight: 700;
+    &:hover{transform: scale(1.1);}
   }
+  .send-load{color: #fff;}
 
   .control {
     font-size: 16px;
     color: #000;
     position: relative;
-    font-weight: 700;
+    z-index: 10;
+    input[type="checkbox"] {border: 2px solid #666;background-color:#fff;}
   }
+ 
 }
 
 @media screen and (max-width:768px) {
@@ -246,7 +312,7 @@ $o-title-c:#fff; //.order-title
     min-height: sizem(800);
     position: relative;
     // overflow: hidden;
-   // padding-top: sizem(200);
+    // padding-top: sizem(200);
 
     .bg-image {
       position: absolute;
@@ -259,6 +325,7 @@ $o-title-c:#fff; //.order-title
 
   .order {
     width: 100%;
+  padding-top: sizem(96);
     padding-bottom: sizem(63);
 
     .cus-divider {
@@ -270,18 +337,18 @@ $o-title-c:#fff; //.order-title
     }
 
     .order-title {
-      font-size:29px;
-    /*  font-size: sizem(27);
+      font-size: 20px;
+      width: sizem(310);
+      /*  font-size: sizem(27);
       padding-top:2em;
       .line{width: sizem(258);
       
       }*/
     }
-    .order-subTitle{
-      font-size:13px;
-     // font-size: sizem(13);
-      padding-top:0;
-      letter-spacing: 0;
+
+    .order-subTitle {
+      // font-size: sizem(13);
+      padding-top: 0;
     }
 
 
@@ -289,8 +356,9 @@ $o-title-c:#fff; //.order-title
       width: sizem(310);
       min-width: 0;
       flex-direction: column;
-      gap: 0;margin: 2em auto 1.1em;
-    /*  height: auto;
+      gap: 0;
+      margin: 2em auto 1.1em;
+      /*  height: auto;
       gap: sizem(15);
       margin-bottom: sizem(20);
       margin-top: sizem(20);*/
@@ -302,10 +370,10 @@ $o-title-c:#fff; //.order-title
 
       .right {
         width: 100%;
-        height:6.25em;
+        height: 6.25em;
         margin-top: 1.1em;
 
-        .row{
+        .row {
           height: 7em;
         }
       }
@@ -314,6 +382,7 @@ $o-title-c:#fff; //.order-title
         display: none;
       }
     }
+
     .send {
       width: sizem(310);
     }
@@ -324,7 +393,6 @@ $o-title-c:#fff; //.order-title
   }
 }
 </style>
-
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
@@ -332,195 +400,248 @@ import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"
-
 import { cityList, renderAreaList } from "@/info/address.js"
-import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import { ref, reactive, watch, computed, getCurrentInstance } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
-
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
-
-// const selectFields = info.selectFields
-
 import { useToast } from "vue-toastification"
-const toast = useToast()
 
+const toast = useToast()
 const sending = ref(false)
 const submitted = ref(false)
 
-// 後端那 name phone email msg 為必要欄位 請勿刪除
-const requiredFields = {
-  // 固定必要欄位 (請勿刪)
-  name: "姓名",
-  phone: "手機",
-  email: "信箱",
-  msg: "備註訊息",
-  city: "居住縣市",
-  area: "居住地區",
-  policyChecked: "個資告知事項聲明",
-  r_verify: "機器人驗證"
-}
+const globals = getCurrentInstance().appContext.config.globalProperties
+const isMobile = computed(() => globals.$isMobile())
 
-// selectFields
 const selectFields = info.selectFields || {}
+const formConfig = info.formConfig || {}
+const locationConfig = info.locationConfig || {}
 
-// 初始 formData（包含 selectFields 欄位）
+// ==========================
+// 🔥 FORM DATA
+// ==========================
 const formData = reactive({
-  ...Object.keys(requiredFields).reduce((acc, key) => {
-    acc[key] = key === "policyChecked" || key === "r_verify" ? false : ""
-    return acc
-  }, {}),
-  ...Object.keys(selectFields).reduce((acc, key) => {
-    acc[key] = ""
+  name: "",
+  phone: "",
+  msg: "",
+  city: "",
+  area: "",
+  gender: "",
+  policyChecked: false,
+  r_verify: false,
+
+  ...Object.keys(selectFields).reduce((acc, k) => {
+    acc[k] = ""
     return acc
   }, {})
 })
 
-// bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["email", "msg", "city", "area"]
-const bypass = [
-  ...staticBypass,
-  ...Object.entries(selectFields)
-    .filter(([_, field]) => field.bypass !== true)
-    .map(([key]) => key)
-]
-
-// 中文對照（formDataRef）
-const formDataRef = {
-  ...requiredFields,
-  ...Object.entries(selectFields).reduce((acc, [key, val]) => {
-    acc[key] = val.title || key
-    return acc
-  }, {})
+// ==========================
+// 🔥 FIELD LABEL MAP
+// ==========================
+const fieldLabelMap = {
+  name: "姓名",
+  phone: "手機",
+  gender: "性別",
+  city: "居住縣市",
+  area: "居住地區",
+  // 動態欄位從 selectFields 自動取 title
+  ...Object.fromEntries(
+    Object.entries(selectFields).map(([k, v]) => [k, v.title])
+  )
 }
 
+// ==========================
+// 🔥 AREA LIST CONTROL
+// ==========================
 const areaList = ref([])
 
-watch(
-  () => formData.city,
-  (newVal, oldVal) => {
-    areaList.value = renderAreaList(newVal)
-    formData.area = areaList.value[0].value
+watch(() => formData.city, (val) => {
+  if (!val) {
+    formData.area = ""
+    areaList.value = []
+    return
   }
-)
-// 新系統這裡需調整
+
+  areaList.value = renderAreaList(val)
+  formData.area = ""
+})
+
+// ==========================
+// 🔥 REQUIRED RULE ENGINE
+// ==========================
+const isRequired = (key) => {
+  if (key === "name" || key === "phone") return true
+
+  if (key === "gender") return formConfig.gender?.required
+  if (key === "city") return locationConfig.city?.required
+  if (key === "area") return locationConfig.area?.required
+
+  if (selectFields[key]) return selectFields[key].required
+
+  return false
+}
+
+// ==========================
+// 🔥 RECAPTCHA
+// ==========================
 const onRecaptchaVerify = (token) => {
-  formData.r_verify = token;
+  formData.r_verify = token
 }
-const onRecaptchaUnVerify = () => {
+
+const onRecaptchaExpired = () => {
   formData.r_verify = false
+  toast.warning("驗證已過期")
 }
 
-const send = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source") || "null"; // 确保有有效的来源
-  const utmMedium = urlParams.get("utm_medium") || "null";
-  const utmContent = urlParams.get("utm_content") || "null";
-  const utmCampaign = urlParams.get("utm_campaign") || "null";
-  const pad = (n) => String(n).padStart(2, '0');
-  const time = new Date();
-  const year = time.getFullYear();
-  const month = time.getMonth() + 1;
-  const day = time.getDate();
-  const hour = time.getHours();
-  const min = time.getMinutes();
-  const sec = time.getSeconds();
-  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
-  
+// ==========================
+// 🔥 SUBMIT
+// ==========================
+const send = async () => {
 
-  const presend = new FormData();
-  let pass = true;
-  let unfill = [];
-  let idx = 0;
+  const urlParams = new URLSearchParams(window.location.search)
 
-//有性別的話 性別顯示
-if (formData.gender) {
-  const genderTag = `(${formData.gender})`;
-  if (!formData.name.endsWith(genderTag)) {
-    formData.name += genderTag;
+  const utm = {
+    utm_source: urlParams.get("utm_source") || "null",
+    utm_medium: urlParams.get("utm_medium") || "null",
+    utm_content: urlParams.get("utm_content") || "null",
+    utm_campaign: urlParams.get("utm_campaign") || "null"
   }
-}
-/*
-if (formData.msg.trim() === "") {
-  formData.msg = "無留言";
-}
-  */
 
-  // 验证必填字段
+  // ======================
+  // gender tag
+  // ======================
+  if (formData.gender && formConfig.gender?.enabled) {
+    const tag = `(${formData.gender})`
+    if (!formData.name.includes(tag)) {
+      formData.name += tag
+    }
+  }
+
+  // ======================
+  // validation
+  // ======================
+  const unfill = []
+
   for (const [key, value] of Object.entries(formData)) {
-  if (!bypass.includes(key) && (value === "" || value === false)) {
-    unfill.push(formDataRef[key] || key)
-    pass = false
+
+    if (!isRequired(key)) continue
+
+    if (value === "" || value === false) {
+      unfill.push(key)
+    }
   }
-  if (key !== "r_verify" && key !== "policyChecked") {
-    presend.append(key, value)
+
+if (unfill.length) {
+  const labels = unfill.map(k => fieldLabelMap[k] || k)
+  toast.error(`請填寫：${labels.join(", ")}`)
+  return
+}
+
+  const phoneReg = /^(09)[0-9]{8}$/
+  if (!phoneReg.test(formData.phone)) {
+    toast.error("手機格式錯誤")
+    return
+  }
+
+  if (sending.value) return
+
+  sending.value = true
+  submitted.value = true
+
+  // ======================
+  // A API
+  // ======================
+  const presendA = {
+    caseId: info.caseid,
+    form: {},
+    validation: {
+      siteKey: info.recaptcha_site_key_v2,
+      recaptchaToken: formData.r_verify
+    }
+  }
+
+for (const [k, v] of Object.entries(formData)) {
+  if (["policyChecked", "r_verify"].includes(k)) continue
+  if (k === "area" && !v) continue
+  presendA.form[k] = v
+}
+
+presendA.form.note = formData.msg
+delete presendA.form.msg
+
+  Object.assign(presendA.form, utm)
+
+// ======================
+// B API
+// ======================
+const presendB = new FormData()
+
+for (const [k, v] of Object.entries(formData)) {
+  if (["policyChecked", "r_verify", "msg"].includes(k)) continue
+  if (k === "area" && !v) continue
+
+  // B API 欄位對應
+  const apiKey = selectFields[k]?.apiB || k
+
+  presendB.append(apiKey, v)
+}
+
+Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
+presendB.append("message", formData.msg)
+
+presendB.append(
+  "case_code",
+  info.case_code || info.caseid_j || info.caseid
+)
+
+
+  // ======================
+  // SUBMIT
+  // ======================
+  const DEBUG_ONLY_A = false  // 👈 測試時開啟，上線前改回 false / true
+
+  try {
+    if (!DEBUG_ONLY_A) {
+      fetch("https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec")
+    }
+
+    const requests = [
+      fetch("https://leads.lixin.com.tw/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(presendA)
+      })
+    ]
+
+    if (!DEBUG_ONLY_A) {
+      requests.push(
+        fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+          method: "POST",
+          body: presendB
+        })
+      )
+    }
+
+    const [resA, resB] = await Promise.allSettled(requests)
+
+    const aOk = resA.status === "fulfilled" && resA.value.ok
+    const bOk = DEBUG_ONLY_A ? true : (resB.status === "fulfilled" && resB.value.ok)
+
+    if (!aOk) {
+      console.warn("A API 發送失敗，B 與 Google Script 仍繼續")
+    }
+
+    if (DEBUG_ONLY_A ? aOk : bOk) {
+      window.location.href = "formThanks"
+    } else {
+      toast.error("送出失敗")
+    }
+
+  } catch (err) {
+    console.error(err)
+    toast.error("系統錯誤")
+  } finally {
+    sending.value = false
   }
 }
-  
-  presend.append("utm_source", utmSource);
-  presend.append("utm_medium", utmMedium);
-  presend.append("utm_content", utmContent);
-  presend.append("utm_campaign", utmCampaign);
-  presend.append("message", formData.msg);
-  presend.append("case_code", info.case_code?info.case_code:info.caseid );
-
-  // 如果有必填字段为空，返回
-  if (!pass) {
-    toast.error(`「${unfill.join(", ")}」為必填或必選`);
-    return;
-  }
-
-  // 手机格式验证
-  const MobileReg = /^(09)[0-9]{8}$/;
-  if (!formData.phone.match(MobileReg)) {
-    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
-    return;
-  }
-
-  // 如果通过验证
-  if (pass && !sending.value) {
-  sending.value = true;
-  submitted.value = true;
-    /*
-    */
-    fetch(
-      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
-      &phone=${formData.phone}
-      &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.budget}；${formData.msg}
-      &utm_source=${utmSource}
-      &utm_medium=${utmMedium}
-      &utm_content=${utmContent}
-      &utm_campaign=${utmCampaign}
-      &date=${date}
-      &campaign_name=${info.caseName}`,
-      {
-        method: "GET"
-      }
-    );
-   //caseid 在index.js裡設定
-    fetch("https://service-sys.lixin.com.tw/reserve/"+ info.caseid, {
-      method: "POST",
-      body: presend,
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        } else {
-          return response.json().then(err => {
-            console.error("後端錯誤訊息：", err);
-            toast.error(err.message || "提交失敗");
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("傳送失敗：", error);
-        toast.error("無法連線或伺服器錯誤");
-      })
-      .finally(() => {
-        sending.value = false;
-      });
-  }
-};
 </script>
