@@ -1,11 +1,12 @@
 <template>
-  <div id="order" class="order relative text-center ">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
+
+      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
-<!--  -->
+
       <!-- FORM -->
       <div class="form mx-auto relative flex justify-center">
 
@@ -68,20 +69,17 @@
             </select>
           </label>
 
-          <!-- 地區 --><Transition name="area-drop">
-  <label 
-    class="row" 
-    v-if="info.locationConfig?.area?.enabled && formData.city"
-  >
-    <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
-    <select v-model="formData.area" class="select w-full">
-      <option value="" disabled>請選擇地區</option>
-      <option v-for="a in areaList" :key="a.value" :value="a.value">
-        {{ a.label }}
-      </option>
-    </select>
-  </label>
-</Transition>
+          <!-- 地區 -->
+          <label class="row" v-if="info.locationConfig?.area?.enabled && formData.city">
+            <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
+
+            <select v-model="formData.area" class="select w-full">
+              <option value="" disabled>請選擇地區</option>
+              <option v-for="a in areaList" :key="a.value" :value="a.value">
+                {{ a.label }}
+              </option>
+            </select>
+          </label>
 
         </div>
 
@@ -96,15 +94,15 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal" class="text-[#c00] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-[#666]">
+          本人知悉並同意<label for="policy-modal" class="text-[#A30C24] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
       <Policy />
 
       <!-- recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
+      <vue-recaptcha class="flex justify-center mt-8" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
         @expired="onRecaptchaExpired" />
 
       <!-- submit -->
@@ -130,18 +128,7 @@
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
-.area-drop-enter-active {
-  transition: all 0.35s ease;
-  overflow: hidden;
-}
-.area-drop-enter-from {
-  max-height: 0;
-  opacity: 0;
-}
-.area-drop-enter-to {
-  max-height: 4em;
-  opacity: 1;
-}
+
 $o-title-c: #A30C24; //.order-title
 
 .order {
@@ -154,24 +141,16 @@ $o-title-c: #A30C24; //.order-title
     overflow: hidden;
     min-height: size(500);
   }
-/*
-.order-title-img{
-  width:sizem(310);
-  @media screen and (min-width: 768px) {
-    width: min(1200px, 95%); //最大1200px
-    margin-bottom: size(20);
-  }
-}
-  */
+
   .order-title {
-  font-size: size(45);
-  font-weight: 700;
-  color: $o-title-c;
-  padding-top:1.5em;
+    font-size: 2.5em;
+    font-weight: 400;
+    color: $o-title-c;
+    padding-top: 1.5em;
   }
 
   .order-subTitle {
-    font-size: 1.2em;
+    font-size: 1.0625em;
     padding-top: .5em;
     letter-spacing: .1em;
   }
@@ -205,13 +184,12 @@ $o-title-c: #A30C24; //.order-title
       height: 100%;
       background-color: #0003;
       position: absolute;
-      top: 0;left:0;right: 0;margin: auto;
     }
 
 
     .row {
       background: #fff;
-      border: 0px;
+      border: 1px solid #999;
       color: #000;
       display: flex;
       width: 100%;
@@ -223,7 +201,7 @@ $o-title-c: #A30C24; //.order-title
         padding-left: 1em;
 
         >span {
-          color: #c00;
+          color: #F00;
         }
       }
 
@@ -241,13 +219,13 @@ $o-title-c: #A30C24; //.order-title
         background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
-    // filter:  brightness(0) invert(1); //select的箭頭顏色
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
         }
       }
 
+      //沒有性別的話這條槓掉
     }
 
       .name {
@@ -273,35 +251,28 @@ $o-title-c: #A30C24; //.order-title
   }
 
   .send {
-    font-size: 1.4em;
+    font-size: 1.5em;
     background-color: #A30C24;
     //border: 1px solid #FFF9;
     border: 0;
-    padding: .7em 0;
-    letter-spacing: 0.5em;
+    padding: .5em 0;
+    letter-spacing: 0.9em;
     line-height: 1.5;
-    text-indent: 0.5em;
-    border-radius: 2em;
-    text-align: center;
-    width: 18em;
+    text-indent: 0.9em;
+    border-radius: .5em;
+    width: 14em;
     z-index: 10;
     color: #fff;
     position: relative;
     transition: transform .5s;
-    margin-bottom: 2em;
-    font-weight: 700;
     &:hover{transform: scale(1.1);}
   }
-  .send-load{color: #fff;}
 
   .control {
     font-size: 16px;
     color: #000;
     position: relative;
-    z-index: 10;
-    input[type="checkbox"] {border: 2px solid #666;background-color:#fff;}
   }
- 
 }
 
 @media screen and (max-width:768px) {
@@ -322,7 +293,6 @@ $o-title-c: #A30C24; //.order-title
 
   .order {
     width: 100%;
-  padding-top: sizem(96);
     padding-bottom: sizem(63);
 
     .cus-divider {
@@ -334,8 +304,6 @@ $o-title-c: #A30C24; //.order-title
     }
 
     .order-title {
-      font-size: 20px;
-      width: sizem(310);
       /*  font-size: sizem(27);
       padding-top:2em;
       .line{width: sizem(258);
@@ -498,10 +466,10 @@ const send = async () => {
   const urlParams = new URLSearchParams(window.location.search)
 
   const utm = {
-    utm_source: urlParams.get("utm_source") || "null",
-    utm_medium: urlParams.get("utm_medium") || "null",
-    utm_content: urlParams.get("utm_content") || "null",
-    utm_campaign: urlParams.get("utm_campaign") || "null"
+    source: urlParams.get("utm_source") || "null",
+    medium: urlParams.get("utm_medium") || "null",
+    content: urlParams.get("utm_content") || "null",
+    campaign: urlParams.get("utm_campaign") || "null"
   }
 
   // ======================
@@ -549,7 +517,7 @@ if (unfill.length) {
   // A API
   // ======================
   const presendA = {
-    caseId: info.caseid,
+    caseId: info.caseidA,
     form: {},
     validation: {
       siteKey: info.recaptcha_site_key_v2,
@@ -574,13 +542,9 @@ delete presendA.form.msg
 const presendB = new FormData()
 
 for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify", "msg"].includes(k)) continue
+  if (["policyChecked", "r_verify", "msg"].includes(k)) continue  // 👈 排除 msg
   if (k === "area" && !v) continue
-
-  // B API 欄位對應
-  const apiKey = selectFields[k]?.apiB || k
-
-  presendB.append(apiKey, v)
+  presendB.append(k, v)  // 👈 這裡是 presendB，不是 presendA
 }
 
 Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
@@ -588,9 +552,8 @@ presendB.append("message", formData.msg)
 
 presendB.append(
   "case_code",
-  info.case_code || info.caseid_j || info.caseid
+  info.case_code || info.caseidB || info.caseidA
 )
-
 
   // ======================
   // SUBMIT
@@ -612,7 +575,7 @@ presendB.append(
 
     if (!DEBUG_ONLY_A) {
       requests.push(
-        fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+        fetch("https://service-sys.lixin.com.tw/reserve/" + info.caseidB, {
           method: "POST",
           body: presendB
         })
