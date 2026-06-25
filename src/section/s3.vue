@@ -1,12 +1,12 @@
 <template>
-  <article class="s1 relative" id="s1">
+  <article class="s3 relative" id="s3">
    <picture>
   <source
     media="(max-width: 768px)"
-    srcset="./s1/s1m.jpg"
+    srcset="./s1/s3m.jpg"
   />
   <img
-    src="./s1/s1.jpg"
+    src="./s1/s3.jpg"
     alt="000"
   />
 </picture>
@@ -16,13 +16,8 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:0px;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
-@keyframes an {
-  to {
-    transform: translateX(0%);
-  }
-}
-  .s1 {
+
+  .s3{
 img{width: 100%;height: 100%;object-fit:cover;}
 }
 </style>

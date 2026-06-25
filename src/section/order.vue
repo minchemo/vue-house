@@ -2,7 +2,7 @@
   <div id="order" class="order relative text-center ">
     <div class="order-section">
       <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle"
+      <div class="order-subTitle text-center text-[#fff]" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
 <!--  -->
@@ -18,7 +18,7 @@
           </label>
 
           <!-- 性別（可開關） -->
-          <div v-if="info.formConfig?.gender?.enabled" class="gender">
+          <div v-if="info.formConfig?.gender?.enabled" class="gender text-[#fff]">
             <label>
               <input type="radio" value="男" v-model="formData.gender" />先生
             </label>
@@ -96,8 +96,8 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal" class="text-[#c00] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-[#fff]">
+          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -142,7 +142,7 @@
   max-height: 4em;
   opacity: 1;
 }
-$o-title-c: #A30C24; //.order-title
+$o-title-c: #fff; //.order-title
 
 .order {
   width: 100%;
@@ -171,7 +171,7 @@ $o-title-c: #A30C24; //.order-title
   }
 
   .order-subTitle {
-    font-size: 1.2em;
+    font-size: 1em;
     padding-top: .5em;
     letter-spacing: .1em;
   }
@@ -274,7 +274,7 @@ $o-title-c: #A30C24; //.order-title
 
   .send {
     font-size: 1.4em;
-    background-color: #A30C24;
+    background-color: #055F76;
     //border: 1px solid #FFF9;
     border: 0;
     padding: .7em 0;
@@ -334,8 +334,9 @@ $o-title-c: #A30C24; //.order-title
     }
 
     .order-title {
-      font-size: 20px;
+      font-size: 30px;
       width: sizem(310);
+      margin: auto;
       /*  font-size: sizem(27);
       padding-top:2em;
       .line{width: sizem(258);

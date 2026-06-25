@@ -6,9 +6,9 @@
     <div class="contact-info mx-auto  flex flex-col items-center justify-between">
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
-    </div>  -->
+    </div> 
     <img src="@/section/s1/logo.svg" class="logo" alt="">
-
+ -->
   <div class="contact-row">
         <div class="contact-item" @click="modalOpen = true; modalType = 'phone'"
           v-if="info.phone">
@@ -54,11 +54,11 @@
     <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'">
       <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
-    </div>
+    </div><!--
     <div class="flex flex-col contact-item justify-center items-center" @click="open(info.fbLink)">
       <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
-    </div>
+    </div> -->
     <div class="flex flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
@@ -218,7 +218,7 @@ justify-content: center;
 // ── 變數 ──────────────────────────────────────────
 $border-radius: 0.9em; //按鈕圓角尺寸
 $gap:           15px; //間距
-$cols:          4;   // 上排按鈕欄數，改這裡就好
+$cols:          3;   // 上排按鈕欄數，改這裡就好
 
 // 導航按鈕寬度 = 上排每欄寬度
 // 公式：(100% - gap * (欄數-1)) / 欄數
@@ -231,9 +231,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #ccc;
-  color: #00744a;
-  border: 1.5px solid #00744a;
+  background: #492680;
+  color: #fff;
+  border: 0 solid #00744a;
   border-radius: $border-radius;
   font-size: 16px;
   font-weight: 700;
@@ -246,14 +246,14 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     height: 1.65em;
     object-fit: contain;
     flex-shrink: 0;
-    filter: invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
+    filter: brightness(0) invert(1); 
     transition: filter 0.25s;    margin: 0;
   }
 
   &:hover {
-    background: #c00;
+    background: rgb(44, 0, 95);
     color: #fff;
-    border-color: #c00;
+   // border-color: #c00;
 
     img { filter: brightness(0) invert(1); }
   }
@@ -331,7 +331,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
    // gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
+background: #492680;
 
     .contact-item {
       flex: 1;

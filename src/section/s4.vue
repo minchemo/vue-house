@@ -1,12 +1,12 @@
 <template>
-  <article class="s1 relative" id="s1">
+  <article class="s4 relative" id="s4">
    <picture>
   <source
     media="(max-width: 768px)"
-    srcset="./s1/s1m.jpg"
+    srcset="./s1/s4m.jpg"
   />
   <img
-    src="./s1/s1.jpg"
+    src="./s1/s4.jpg"
     alt="000"
   />
 </picture>
@@ -16,14 +16,15 @@
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-  .t0{position: absolute;width: 100%;top:0px;left: 0; pointer-events: none;z-index: 9;opacity: .3;}
-@keyframes an {
-  to {
-    transform: translateX(0%);
-  }
-}
-  .s1 {
+
+  .s4{margin-bottom: sizem(-370);
 img{width: 100%;height: 100%;object-fit:cover;}
+
+@media screen and (min-width:768px) {
+
+  margin-bottom: size(-270);
+}
+
 }
 </style>
 <script setup>
