@@ -1,16 +1,16 @@
-const caseName = "永和大陳"
+const caseName = "家河大陳"
 
 export default {
   caseid: "1087f36a-f31d-4048-b6c2-91c418118f00",
  // caseid_j: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //兩邊id一樣可以不用有
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "XXXXX",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7359.266492949288!2d120.3097038172106!3d22.74186923554725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQ0JzMwLjciTiAxMjDCsDE4JzUzLjUiRQ!5e0!3m2!1szh-TW!2stw!4v1725006447269!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
-  phone: "02-2920-5858",
-  fbLink: "https://www.facebook.com/",
-  fbMessage: "https://m.me/",
+  address: "新北市永和區永和路二段46號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.6894714433797!2d121.51221757644582!3d25.01066553922868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9e9e5a1ba85%3A0x4b1c028428aaef7b!2zMjM05paw5YyX5biC5rC45ZKM5Y2A5q2j6IiI6YeM5rC45ZKM6Lev5LqM5q61NDbomZ8!5e0!3m2!1szh-TW!2stw!4v1782441359655!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/aFxeedWKAYfXgSmX8",
+  phone: "02-29205858",
+  fbLink: "https://www.facebook.com/61590298962464",
+  fbMessage: "https://m.me/61590298962464",
   // line: "https://lin.ee/qakWswp",
   caseName: caseName,
   houseInfos: [/*

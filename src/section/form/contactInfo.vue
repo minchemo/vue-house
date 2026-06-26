@@ -142,11 +142,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #006a00;
+  background-color: #492680;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #00a89a;
+  background-color: #2b0766;
 }
 
 
@@ -313,7 +313,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter:  invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
+    filter:invert(15%) sepia(37%) saturate(4095%) hue-rotate(250deg) brightness(96%) contrast(95%);
   }
 }
 
