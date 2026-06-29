@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img ref="viewImg" src="@/section/s1/map.jpg" alt="" srcset="">
+        <img ref="viewImg" src="@/section/s1/map.svg" alt="" srcset="">
         <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
             <img src="@/components/fullview/finger.png" alt="" srcset="">
         </div>
@@ -19,6 +19,8 @@
     > img {
        width: 100%;
         max-width: unset;
+        background: url("@/section/s1/map.webp");
+        background-size: cover;
     }
 
 }
