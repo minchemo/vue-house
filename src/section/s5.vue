@@ -1,10 +1,14 @@
 <template>
   <article class="s5 " ref="s5">
-    <div class="flower" v-if="!isMobile" data-aos="zoom-in">
-      <div class="p2"><img src="./s5/2.png" alt="flower" /></div>
-      <div class="p3"><img src="./s5/3.png" alt="flower" /></div>
-      <div class="p1"><img src="./s1/s1p3.png" alt="flower" /></div>
+    <div class="main">
+    <div class="txt">
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">捷運雙線 · 自在切換</h3>
+      <div class="subtitle" data-aos="fade-up" data-aos-delay="0">精彩生活  一鍵啟動</div>
+      <p class="desc" data-aos="fade-up" data-aos-delay="0">坐擁中山路×中正路雙軸，<br v-if="isMobile" />捷運紅線串連高鐵、機場兩大門戶，<br v-if="isMobile" />捷運橘線漫遊駁二、文化中心、衛武營，<br v-if="isMobile" />藝文風景一路綻放。</p>
+      <div class="en font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Easily Accessible</div>
+      </div>
     </div>
+
     <div class="slider">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -27,96 +31,54 @@
 
 
 .s5 {
-  @apply relative flex flex-row-reverse items-center justify-center;
+  @apply relative flex items-center justify-center text-[#fff] bg-[#5D8EB3];
   width: 100%;
   height: auto;
-  padding: 3.2em 0 ;
-  font-size: size(20);
-  gap: 4em;
+  padding: 4em 0 2.7em;
+  font-size:size(22);
+  gap: 2.3em;
   flex-wrap: wrap;
   //overflow: hidden;
-  //flex-direction:row-reverse;
+  flex-direction:column;
+  .txt{
+    text-align: center;
+
+
+    
+  .en{position: absolute;top: size(760);left: calc(50% - 6.5em);}
+  }
 
 
 
 
   .slider {
-    background: #fff;
+   // background: #fff;
     margin: 0;
-    width: size(860);
-    height: size(860);
-    border: size(3) solid #7C519F;
-    padding: size(10);
+    width: size(1500);
+    height: size(670);
+    overflow: hidden;
+    border-radius: 0 size(180) 0 0;
+   // border: size(3) solid #7C519F;
+  //  padding: size(10);
+
 
     .slide-item {
       @apply bg-cover;
       width: 100%;
-      height:100%;
+    height: size(630);
 
     }
 
     .splide__pagination {
    //   left: calc(100% + 3em);
    bottom: -2.2em;
-      justify-content:center;
-      color: #7C519F;
+      justify-content:flex-end;
+      color: #fff;
+      z-index: 10;
     }
   }
   
 
-  .flower {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    div {
-      position: absolute;
-    }
-
-    img {
-      width: 100%;
-    }
-    
-    .p1 {
-      transform: rotate(5deg);
-      transform-origin: 10% 10%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-    .p2 {
-      transform: rotate(5deg);
-      transform-origin: 100% 100%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-    .p3 {
-      transform: rotate(3deg);
-      transform-origin: 50% 100%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-
-    @media screen and (min-width: 768px) {
-      .p1 {
-        bottom: size(25);
-        right: size(290);
-        width: size(480);
-        img{
-          transform: rotate(45deg);}
-      }
-
-      .p2 {
-        bottom: size(240);
-        left: size(370);
-        width: size(280);
-      }
-
-      .p3 {
-        bottom: size(50);
-        left: size(285);
-        width: size(1334);
-      }
-    }
-  }
 }
 
 /* 螢幕尺寸標準 */
@@ -129,29 +91,29 @@
   .s5 {
     @apply flex-col;
     height: auto;
-    padding: 0;
-    font-size: sizem(15);
+    font-size: sizem(12);
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
+  padding: 5em 0 0;
+  .txt{margin-bottom: 3em;
+  
+  .en{top: sizem(395);left: calc(50% - 6em);}
+  }
 
 
     .slider {
       height: auto;
       width: 100%;padding: 0;
       border: 0;
+    border-radius:0;
 
-      .caption {
-        font-size: sizem(12);
-        right: sizem(5);
-        bottom: sizem(5);
-      }
 
       .slide-item {
         @apply bg-cover;
         width: 100%;
         flex-basis: auto;
-       // height: sizem(250);
+        height: sizem(250);
 
       }
     }
@@ -188,16 +150,16 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s5/1.jpg", import.meta.url).href,
-    caption: ""
+    img:isMobile?new URL("./s5/1.jpg", import.meta.url).href: new URL("./s5/1.webp", import.meta.url).href,
+    caption: "情境示意圖"
   },
   {
-    img: new URL("./s5/2.jpg", import.meta.url).href,
-    caption: ""
+    img: isMobile?new URL("./s5/2.jpg", import.meta.url).href: new URL("./s5/2.webp", import.meta.url).href,
+    caption: "情境示意圖"
   },
   {
-    img: new URL("./s5/3.jpg", import.meta.url).href,
-    caption: ""
+    img:isMobile?new URL("./s5/3.jpg", import.meta.url).href:  new URL("./s5/3.webp", import.meta.url).href,
+    caption: "情境示意圖"
   },
 ]
 </script>

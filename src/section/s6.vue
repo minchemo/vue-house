@@ -1,18 +1,25 @@
 <template>
   <article class="s6" ref="s6">
-    <div class="flower" data-aos="zoom-out">
-      <div class="p1"><img src="./s1/s1p3.png" alt="flower" /></div>
-      <div class="p2"><img src="./s5/2.png" alt="flower" /></div>
-    </div>
     <div class="main">
-      <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">百貨影城多商圈<br>城市樂活新體驗</h3>
-        <hr class="hr" data-aos="fade-up" data-aos-delay="400" />
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          捷運商圈機能就位，日常採買到中央路商圈，逛街看電影吃異國料理就到日月光廣場，在慢活居住步調中盡享豐富生活機能。</p>
+      
+    <div class="txt">
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">一站中央公園<br v-if="!isMobile">
+一步城市心</h3>
+      <div class="subtitle" data-aos="fade-up" data-aos-delay="0">萬坪城市綠洲 繁華之上，綠意之中</div>
+      <p class="desc" data-aos="fade-up" data-aos-delay="0">萬坪城市綠洲、療癒森活主場，是城市最奢侈的留白，<br>
+讓心靈節奏自在切換，找到快與慢之間，剛剛好的平衡。
+</p>
+      <div class="en font-['Noto_Serif_TC',serif]">URBAN NATURE</div>
       </div>
     </div>
+    
     <div class="slider" data-aos="fade">
+<img src="./s6/1.webp" alt="">
+          <span class="caption">情境示意圖</span>
+
+
+    </div>
+   <!--  <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -23,7 +30,7 @@
           <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
-    </div>
+    </div> -->
 
   </article>
 </template>
@@ -34,82 +41,18 @@
 
 
 .s6 {
-  @apply relative flex flex-row-reverse items-center justify-center bg-[#7D51A0];
+  @apply relative flex flex-row items-center justify-center bg-[#7D51A0];
   width: 100%;
   height: auto;
-  padding: 7em 0 ;
-  font-size: size(24);
+  padding: 5em 0 18em 0 ;
+  font-size: size(22);
   gap: 4em;
   flex-wrap: wrap;
   color: #fff;
   overflow: hidden;
+  background:#0254DC url("./s6/bg.webp") no-repeat center center;
+  background-size: cover;
 
-  
-  .flower {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    div {
-      position: absolute;
-    }
-
-    img {
-      width: 100%;
-    }
-    .p1 {
-      transform: rotate(5deg);
-      transform-origin: 50% 50%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-    .p2 {
-      transform: rotate(3deg);
-      transform-origin: 50% 50%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-
-    @media screen and (max-width: 768px) {
-      .p1 {
-        top: sizem(-120);
-        right: sizem(30);
-        width: sizem(170);
-        img {
-          transform: rotate(0deg);
-        }
-      }
-      .p2 {
-        top: sizem(-50);
-        right: sizem(-40);
-        width: sizem(120);
-        img {
-          transform: rotate(-100deg);
-        }
-      }
-    }
-
-    @media screen and (min-width: 768px) {
-      .p1 {
-        bottom: size(-200);
-        right: size(70);
-        width: size(377);
-        img {
-          transform: rotate(45deg);
-        }
-      }
-
-      .p2 {
-        bottom: size(-70);
-        right: size(-80);
-        width: size(300);
-        img {
-          transform: rotate(50deg);
-        }
-      }
-      
-    }
-  }
 
   .main {
     @apply flex;
@@ -119,25 +62,18 @@
     text-align: justify;
     position: relative;
     z-index: 3;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .txt {
     // margin: auto auto 3vw auto;
     padding: 0 0 0 0;
-    width: size(485);
-    .title {
-      color: #fff;
-    }
-
-    .hr {
-      color: #fff;
-    }
-
-
-    .subtitle {
-      font-weight: 400;
-    }
+    width: 100%;
+    text-align: left;
+    .subtitle{text-align: left;}
+    
+  .en{position: absolute;top: size(-190);left:-.7em; width: 9em;transform: rotate(90deg);transform-origin: 0 0;}
   }
 
 
@@ -145,6 +81,9 @@
     margin: 0;
     width: size(840);
     height: size(560);
+    border-radius: 0 0 0 size(180) ;
+    overflow: hidden;
+    img{width: 100%;}
 
     .slide-item {
       @apply bg-cover;
@@ -171,11 +110,13 @@
   .s6 {
     @apply flex-col;
     height: auto;
-    padding: 0;
-    font-size: sizem(15);
+    padding: 1.5em 0 15em 0;
+    font-size: sizem(12);
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
+    background-position: 50% 120%;
+  background-size: 220% auto;
 
     .main {
       padding: 0 sizem(32.5);
@@ -186,18 +127,15 @@
       margin: 4em auto 3em;
       padding: 0;
       width: auto;
+      
+  .en{top: sizem(490);left:-.9em; width: 9em;transform: rotate(0deg);}
     }
 
 
     .slider {
       height: auto;
-      width: 100%;
-
-      .caption {
-        font-size: sizem(12);
-        right: sizem(5);
-        bottom: sizem(5);
-      }
+      width:sizem(310);
+    border-radius: sizem(80) 0 0 0 ;
 
       .slide-item {
         @apply bg-cover;
@@ -239,29 +177,5 @@ const options = {
 }
 
 const imgs = [
-  {
-    img: new URL("./s6/1.jpg", import.meta.url).href,
-    caption: "全聯中州店"
-  },
-  {
-    img: new URL("./s6/2.jpg", import.meta.url).href,
-    caption: "大全聯土城店"
-  },
-  {
-    img: new URL("./s6/3.jpg", import.meta.url).href,
-    caption: "頂埔站商圈"
-  },
-  {
-    img: new URL("./s6/4.jpg", import.meta.url).href,
-    caption: "日月光廣場"
-  },
-  {
-    img: new URL("./s6/5.jpg", import.meta.url).href,
-    caption: "頂埔站商圈"
-  },
-  {
-    img: new URL("./s6/6.jpg", import.meta.url).href,
-    caption: "頂埔黃昏市場"
-  },
 ]
 </script>

@@ -1,33 +1,33 @@
-const caseName = "天好運3"
+const caseName = "華雄明日之星"
 export default {
   caseid: "592c1522-ab1f-4c54-99f2-f02c4ae1a428",
 
   //caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846", 測試
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "新北市土城區科技路27號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.178339549067!2d121.42242759999999!3d24.9600463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d00580a232d%3A0xb6aa67a9366e82db!2z5aSp5aW96YGLMw!5e0!3m2!1szh-TW!2stw!4v1767664041150!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/oNpJMsMVCxAxvoBg9",
-  phone: "02-8076-3333",
-  fbLink: "https://www.facebook.com/100057418720587/",
-  fbMessage: "https://m.me/100057418720587/",
+  address: "高雄市三民區中華三路353號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7364.89714569431!2d120.28767955543806!3d22.637058030603423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0460ddae342b%3A0xde3bf5d6e2a6ffd9!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A6bOz5YyX6YeM5Lit6I-v5LiJ6LevMzUz6Jmf!5e0!3m2!1szh-TW!2stw!4v1782873908881!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/3hn8osg2mhX2heNm9",
+  phone: "07-281-8811",
+  fbLink: "https://www.facebook.com/61590660418467/",
+  fbMessage: "https://m.me/61590660418467/",
   // line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
-    ["投資興建", "福美國際建設x永京建設"],
-    ["建照號碼", "114土建字第00319號"],
-    ["行銷企劃", "海沃創意行銷"],
-    ["經 紀 人", "周美秀(90)嘉縣字第00016號"],
+    ["投資興建", "豪鎂建設實業有限公司"],
+    ["工程營造", "華總營造 "],
+    ["建築设計", "原東聯合建築師事務所 "],
+    ["廣告代銷", "上宸開發有限公司"],
   ],
-  gtmCode: ["GTM-PHJZS3QV"], // 可放置多個
+  gtmCode: ["GTM-000000"], // 可放置多個
   recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   // recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    title: "預約賞屋",
-    subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+    title: "立即預約",
+   // subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
    // subTitle_mo: "將有專人與您聯絡，我們將竭誠為您服務",
   },
   // 控制表單欄位
@@ -71,28 +71,33 @@ export default {
 
   navList: [
     {
-      name: "天選美地",
-      target: ".s3",
+      name: "明日之星",
+      target: ".s1",
       offset: "-60",
       offsetmo: "0",
     }, {
-      name: "八達交通",
+      name: "新站特區",
+      target: ".s2",
+      offset: "-60",
+      offsetmo: "0",
+    }, {
+      name: "黃金地段",
       target: ".s4",
       offset: "-60",
       offsetmo: "0",
     }, {
-      name: "好運機能",
-      target: ".s6",
+      name: "交通優勢",
+      target: ".s5",
       offset: "-60",
       offsetmo: "0",
     }, {
-      name: "鴻運建築",
+      name: "繁華生活",
+      target: ".s7",
+      offset: "-60",
+      offsetmo: "0",
+    }, {
+      name: "明星生活圈",
       target: ".s8",
-      offset: "-60",
-      offsetmo: "0",
-    }, {
-      name: "質選建材",
-      target: ".s10",
       offset: "-60",
       offsetmo: "0",
     }, {

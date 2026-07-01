@@ -124,7 +124,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #493366b3;
+        background: #110862b3;
         width:100%;
         height: size(60);
         z-index: 5;

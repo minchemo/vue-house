@@ -1,7 +1,7 @@
 <template>
-  <div id="order" class="order relative text-center bg-[#7D51A0]">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title font-['Noto_Serif_TC',serif]" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
@@ -111,7 +111,7 @@
       <div class="sendall mt-8 mb-12 mx-auto">
 
         <button v-if="!submitted" class="send" :disabled="sending" @click="send">
-          送出表單
+          確認送出
         </button>
 
         <div v-else class="send-load">
@@ -165,9 +165,22 @@ $o-title-c: #fff; //.order-title
   */
   .order-title {
   font-size: size(45);
-  font-weight: 700;
+  font-weight: 600;
   color: $o-title-c;
   padding-top:1.5em;
+  margin: auto;
+    width: min(1200px, 95%); //最大1200px
+display: flex;
+align-items: center;
+gap: .5em;
+&::after,
+&::before{
+  content: "";
+  height: 1px;
+  background: currentColor;
+  flex: 1;
+}
+
   }
 
   .order-subTitle {
@@ -277,9 +290,9 @@ $o-title-c: #fff; //.order-title
 
   .send {
     font-size: 1.4em;
-    background: linear-gradient(90deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%);
-    //border: 1px solid #FFF9;
-    border: 0;
+    background:#006A70;
+    border: 1px solid #FFF9;
+    //border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
     line-height: 1.5;
@@ -288,10 +301,10 @@ $o-title-c: #fff; //.order-title
     text-align: center;
     width: 18em;
     z-index: 10;
-    color: #76539B;
+    color: #fff;
     position: relative;
     transition: transform .5s;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     font-weight: 700;
     &:hover{transform: scale(1.1);}
   }
@@ -325,7 +338,7 @@ $o-title-c: #fff; //.order-title
 
   .order {
     width: 100%;
-  padding-top: sizem(96);
+  padding-top: sizem(30);
     padding-bottom: sizem(63);
 
     .cus-divider {

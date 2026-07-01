@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Serif_TC',serif]  text-[#333]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#4DB0B5] text-[#333]">
     <S1 />
     <S2 />
     <S3 />
@@ -20,7 +20,6 @@
     <S7 />
     <S8 />
     <S9 />
-    <S10 />
     <!-- <S2v /> -->
     <!--
     <div class="bg">
@@ -63,12 +62,9 @@ img {
 }
 
 .home {
-    background: url("@/section/s1/bg.jpg") fixed 0 0;
-    background-size:sizem(450) auto;
     width: 100%;
 
     @media screen and (min-width: 768px) {
-    background-size:size(900) auto;
     }
 }
 
@@ -77,54 +73,62 @@ img {
   right: 1em;
   bottom: .5em;
   font-weight: 300;
-  font-size: size(15);
+  font-size: sizem(9);
   color: #FFF;
   z-index: 3;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+    @media screen and (min-width: 768px) {
+  font-size: size(15);
+    }
 }
 
 
 .txt {
   position: relative;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 0;
   line-height: 1.6;
   width: 100%;
-  letter-spacing: 0.05em;
+  letter-spacing: 0em;
   text-align: justify;
   z-index: 3;
 
   .title {
-    // @apply font-['Noto_serif_TC',serif];
-    font-size: 2.2em;
-    margin: -.1em auto 0em;
-    line-height: 1.2;
+    font-size: 2.1em;
+    margin: 0em auto 0.3em;
+    line-height: 1.38;
     font-weight: 700;
     letter-spacing: 0em;
-
-    // text-align: center;
     b {
       font-size: 1.2em;
       line-height: 1;
     }
-  }
+  @media screen and (min-width: 768px) {
+    font-size: 3.18em;
+    margin: 0em auto 0.1em;
 
-  .hr {
-    width: 100%;
-    height: 0;
-    margin: 1.2em 0;
-    border: 0;
-    border-bottom: 1px solid currentColor;
+  }
   }
 
   .subtitle {
-    font-size: 1.15em;
+    font-size: 1.2em;
     font-weight: 500;
-    margin: .6em auto 0.45em;
     text-align: center;
-    line-height: 1.5;
-    letter-spacing: 0.06em;
+    line-height: 1.3;
+    letter-spacing: 0em;
+  margin-bottom: 0.4em;
+  @media screen and (min-width: 768px) {
+    font-size: 1.54em;
+    
   }
+  }
+  .en{ font-size:2.5em;
+    line-height: 1.1;
+    font-weight: 700;
+  margin-bottom: 0.2em;
+  @media screen and (min-width: 768px) {font-size:5em;
+    
+  }}
 
 }
 
@@ -189,31 +193,33 @@ img {
         @apply rounded-full relative;
         width: 1em;
         height: 1em;
+        display: block;
         background: transparent;
         transition: transform .5s;
-        border: 2px solid currentColor;
 
         &::before {
           content: '';
           position: absolute;
           width: 100%;
           height: 100%;
+        display: block;
           background-color: currentColor;
-          border-radius: 50%;
+          border-radius: 0;
           opacity: .5;
           left: 0;
           top: 0;
-          transform: scale(0);
+          transform: scale(1);
           transition: transform .5s, opacity .5s;
         }
 
         &:hover {
-          transform: scale(.8);
+          transform: scale(1);
+          opacity: 1;
         }
 
         &.is-active {
           &::before {
-            transform: scale(1.3);
+            transform: scale(1);
             opacity: 1;
           }
         }
@@ -221,7 +227,7 @@ img {
     }
   }
 }
-
+/*
 @media screen and (max-width: 767px) {
 
 
@@ -283,7 +289,7 @@ img {
   }
 }
 
-
+*/
 
 
 
@@ -315,7 +321,6 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
-import S10 from "@/section/s10.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref, provide } from "vue"

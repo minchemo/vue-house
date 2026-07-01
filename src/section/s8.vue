@@ -1,18 +1,18 @@
 <template>
-  <article class="s8" ref="s8">
-    <div class="flower" data-aos="zoom-out">
-      <div class="p1"><img src="./s1/s1p3.png" alt="flower" /></div>
-      <div class="p2"><img src="./s5/2.png" alt="flower" /></div>
-    </div>
+  <article class="s8 " ref="s8">
     <div class="main">
-      <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">摩登山巒意象<br>型塑城市新風貌</h3>
-        <hr class="hr" data-aos="fade-up" data-aos-delay="400" />
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          「天好運3」以名宅規格打造耐震、智慧、節能建築。外觀融入山巒意象，型塑城市最美端景。純粹81席以挑高3米4室內空間的餘裕，讓生活風格在此自由開展。</p>
+    <div class="txt">
+      <div class="t1">
+    <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">雙百貨核心 生活主角席</h3>
+      <div class="en font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0"><img src="./s8/c.webp" alt="c">OLLECT</div></div>
+      <div class="subtitle" data-aos="fade-up" data-aos-delay="0">明星光環自帶 全場鎂光聚焦，這一次換你當主角</div>
+      <p class="desc" data-aos="fade-up" data-aos-delay="0">捷運一站近五福商圈，大立精品、漢神百貨優雅相迎，<br v-if="isMobile">兩站即達三多商圈，<br>
+新光三越、SOGO、大遠百時尚加冕，<br v-if="isMobile">
+樣樣吸睛、時時耀眼——每一天都是最華麗的出場！</p>
       </div>
     </div>
-    <div class="slider" data-aos="fade">
+
+    <div class="slider">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -34,128 +34,59 @@
 
 
 .s8 {
-  @apply relative flex flex-row-reverse items-center justify-center bg-[#7D51A0];
+  @apply relative flex items-center justify-center text-[#fff] ;
   width: 100%;
   height: auto;
-  padding: 5.5em 0;
-  font-size: size(24);
-  gap: 4em;
+  padding: 5.5em 0 ;
+  font-size:size(22);
+  gap: 2.3em;
   flex-wrap: wrap;
-  color: #fff;
-  overflow: hidden;
-  .flower {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  //overflow: hidden;
+  flex-direction:column;
 
-    div {
-      position: absolute;
-    }
+  .txt{
+    text-align: center;
+    .t1{display: inline-block;margin: 0 0 .8em 14em;}
+.title{text-align: left;line-height: 1.0;}
+.en{text-align: left;
+  line-height: 1.0;
+img{position: absolute;bottom: -.3em;left: -2.1em;height: 2.4em;}
+}
 
-    img {
-      width: 100%;
-    }
-    .p1 {
-      transform: rotate(5deg);
-      transform-origin: 50% 50%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-    .p2 {
-      transform: rotate(3deg);
-      transform-origin: 50% 50%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-
-
-    @media screen and (max-width: 768px) {
-      .p1 {
-        top: sizem(-120);
-        right: sizem(30);
-        width: sizem(170);
-        img {
-          transform: rotate(0deg);
-        }
-      }
-      .p2 {
-        top: sizem(-50);
-        right: sizem(-40);
-        width: sizem(120);
-        img {
-          transform: rotate(-100deg);
-        }
-      }
-    }
-
-    @media screen and (min-width: 768px) {
-      .p1 {
-        bottom: size(-200);
-        right: size(70);
-        width: size(377);
-        img {
-          transform: rotate(45deg);
-        }
-      }
-
-      .p2 {
-        bottom: size(-70);
-        right: size(-80);
-        width: size(300);
-        img {
-          transform: rotate(50deg);
-        }
-      }
-      
-    }
+    
+  // .en{position: absolute;top: size(760);left: calc(50% - 6.5em);}
   }
 
-  .main {
-    @apply flex;
-    margin: 0;
-    width: size(590);
-    flex-direction: column;
-    text-align: justify;
-    position: relative;
-    z-index: 3;
-    align-items: flex-end;
-  }
 
-  .txt {
-    // margin: auto auto 3vw auto;
-    padding: 0 0 0 0;
-    width: size(485);
-    .title {
-      color: #fff;
-    }
-
-    .hr {
-      color: #fff;
-    }
-
-
-    .subtitle {
-      font-weight: 400;
-    }
-  }
 
 
   .slider {
+   // background: #fff;
     margin: 0;
-    width: size(840);
-    height: size(690);
+    width: size(1500);
+    height: size(550);
+    overflow: hidden;
+    border-radius: 0;
+   // border: size(3) solid #7C519F;
+  //  padding: size(10);
 
     .slide-item {
       @apply bg-cover;
-      height: size(690);
+      width: 100%;
+    height: size(500);
 
     }
 
     .splide__pagination {
-      left: calc(100% + 3em);
-      justify-content: flex-start;
+   //   left: calc(100% + 3em);
+   bottom: -2.2em;
+      justify-content:flex-start;
+      color: #fff;
+      z-index: 10;
     }
   }
+  
+
 }
 
 /* 螢幕尺寸標準 */
@@ -168,27 +99,24 @@
   .s8 {
     @apply flex-col;
     height: auto;
-    padding: 0;
-    font-size: sizem(15);
+    font-size: sizem(12);
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-
-    .main {
-      padding: 0 sizem(32.5);
-      width: 100%;
-    }
-
-    .txt {
-      margin: 4em auto 3em;
-      padding: 0;
-      width: auto;
-    }
+  padding: 6em 0 0;
+  .txt{margin-bottom: 3em;
+    .t1{display: inline-block;margin: 0 0 1em 7em;}
+  .title{font-size: 1.8em; margin-bottom: -.1em;}
+  .en{font-size: 4.4em;
+img{height: 2.2em;left: -1.9em;}}
+  }
 
 
     .slider {
       height: auto;
-      width: 100%;
+      width: 100%;padding: 0;
+      border: 0;
+    border-radius:0;
 
       .caption {
         font-size: sizem(12);
@@ -200,7 +128,7 @@
         @apply bg-cover;
         width: 100%;
         flex-basis: auto;
-        height: sizem(308);
+        height: sizem(250);
 
       }
     }
@@ -237,12 +165,16 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s8/1.jpg", import.meta.url).href,
-    caption: "外觀日景3D示意"
+    img: isMobile ? new URL("./s8/1m.webp", import.meta.url).href :new URL("./s8/1.webp", import.meta.url).href,
+    caption: "大立精品"
   },
   {
-    img: new URL("./s8/2.jpg", import.meta.url).href,
-    caption: "外觀夜景3D示意"
+    img: isMobile ? new URL("./s8/2m.webp", import.meta.url).href :new URL("./s8/2.webp", import.meta.url).href,
+    caption: "漢神百貨"
+  },
+  {
+    img:isMobile ? new URL("./s8/3m.webp", import.meta.url).href :new URL("./s8/3.webp", import.meta.url).href,
+    caption: "漢神百貨"
   },
 ]
 </script>

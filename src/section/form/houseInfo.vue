@@ -33,17 +33,17 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#E8DBA2;
+$house-c1:#fFF;
 $house-c2:#fff;
 .displaynone{display: none;}
 .house {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
    // height: auto;
     color: $house-c2;
     font-size: size(22);
     // height:4em;
-    background: #7C519F;
+    background: #A4A428;
 }
 .info-box {position: relative;z-index: 30;
     width: 50em;
@@ -52,7 +52,7 @@ $house-c2:#fff;
     .title {
         font-size:2em;
         font-weight: 700;
-        color: #E8DBA2;//$house-c1;
+        color: $house-c1;
         margin: 0.6em auto 0.5em auto;
     }
 

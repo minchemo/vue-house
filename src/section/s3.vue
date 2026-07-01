@@ -1,63 +1,92 @@
 <template>
-  <article class="s3">
-   <!--    <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">中央軸心盛大開場</h3>
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">重量級建設共演 台中未來從此綻放</h4>   
-      </div> -->
-    <Fullview />
-    <div class="caption">空拍實景經電腦後製</div>
+  <article class="s3" ref="s3">
+    <div class="txt">
+      <div class="en font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Bright Future</div>
+      <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">新站啟程
+未來到站</h3>
+      <div class="subtitle" data-aos="fade-up" data-aos-delay="0">高雄百億新站特區
+城市榮景全面升級
+</div>
+      <p class="desc" data-aos="fade-up" data-aos-delay="0">
+        「亞灣2.0」聯動海空雙港優勢，<br v-if="isMobile" />高鐵南延共構三鐵未來，<br />
+引領高雄車站第一環大翻轉，<br v-if="isMobile" />城市核心榮耀全面升等！</p>
+    </div>
+    <div class="caption">圖中為開發模擬示意圖。圖/高雄市政府都發局</div>
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s3 {
-  @apply relative overflow-hidden bg-[#005890] text-[#fff];
+  @apply relative flex flex-col;
   width: 100%;
- // height: size(1059);
-  font-size:size(20);
-  .txt {text-align: center;position: absolute;
-    top: 0;left: 0;right: 0;margin: auto;
+  height: sizem(444);
+  padding: 5.3em 0 3.8em 0;
+  font-size: sizem(12);
+  overflow: hidden;
+  color: #FFF;
+  background:#328FED center bottom;
+    background-image: url("./s3/bgm.webp");
+  background-size: 100% auto;
+  /*background: url("./s3/bgm.jpg") center;
+  background-size: cover;*/
 
-  padding-top:3em;z-index: 10;//margin-bottom:-6.3em ;
-  
-  .subtitle{font-size: 1.4em;margin-top: .2em;letter-spacing: 0.4em;font-weight: 300;}
+  @media screen and (min-width: 768px) {
+    background-image: url("./s3/bg.jpg");
+  background-size: cover;
+    height: size(1080);
+  padding: 3.5em 0 2em 0;
+    font-size: size(22);
   }
-  .viewbox{z-index: 2;
-    margin: 0 0 0 0;
-   // top: -5vw;
-  }
-}
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
-@media screen and (max-width: 767px) {
+  .txt {
+    text-align: center;
 
-  .s3 {
-   // height: sizem(550);
-  font-size:sizem(15);
-  background: #007CBB;
-/*
-  .txt {//text-align: justify;
-  padding-top:3.5em;width:sizem(310);margin:auto auto -4.3em auto;
-  .subtitle{font-size: 1em;letter-spacing: 0.05em;
+    .title {
+    }
+
+    .subtitle {
+
+
+      @media screen and (min-width: 768px) {
       }
+    }
   }
-      */
-  .viewbox{height: sizem(770);
-    margin:sizem(0) 0 0 0;
-    top:0;}
 
 
-  }
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
-import Fullview from '../components/fullview.vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+const getImg = (path) => {
+  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
+  return new URL(`./${path}_m.jpg`, import.meta.url).href
+}
+
+const splide = ref();
+
+const currentSlideIndex = ref(0);
+
+const moved = (newIdx, prevIdx, destIdx) => {
+  currentSlideIndex.value = prevIdx
+}
+
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: true,
+  autoplay: true,
+  interval: 4000,
+  gap: 0,
+  type: 'loop'
+}
+
+const imgs = [
+]
 </script>
