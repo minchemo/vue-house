@@ -163,18 +163,18 @@ const options = {
   type: 'loop'
 }
 
-const imgs = [
+const imgs = computed(() => [
   {
-    img: isMobile ? new URL("./s8/1m.webp", import.meta.url).href :new URL("./s8/1.webp", import.meta.url).href,
+    img: isMobile.value ? new URL("./s8/1m.webp", import.meta.url).href :new URL("./s8/1.webp", import.meta.url).href,
     caption: "大立精品"
   },
   {
-    img: isMobile ? new URL("./s8/2m.webp", import.meta.url).href :new URL("./s8/2.webp", import.meta.url).href,
+    img: isMobile.value ? new URL("./s8/2m.webp", import.meta.url).href :new URL("./s8/2.webp", import.meta.url).href,
     caption: "漢神百貨"
   },
   {
-    img:isMobile ? new URL("./s8/3m.webp", import.meta.url).href :new URL("./s8/3.webp", import.meta.url).href,
+    img:isMobile.value ? new URL("./s8/3m.webp", import.meta.url).href :new URL("./s8/3.webp", import.meta.url).href,
     caption: "漢神百貨"
   },
-]
+]);
 </script>

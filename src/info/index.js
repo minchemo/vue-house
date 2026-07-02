@@ -6,8 +6,8 @@ export default {
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "高雄市三民區中華三路353號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7364.89714569431!2d120.28767955543806!3d22.637058030603423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0460ddae342b%3A0xde3bf5d6e2a6ffd9!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A6bOz5YyX6YeM5Lit6I-v5LiJ6LevMzUz6Jmf!5e0!3m2!1szh-TW!2stw!4v1782873908881!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/3hn8osg2mhX2heNm9",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7364.837083095928!2d120.28898681753928!3d22.63817848493313!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDM4JzE2LjEiTiAxMjDCsDE3JzMyLjkiRQ!5e0!3m2!1szh-TW!2stw!4v1782978340599!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/g1f8vNk25sGTxjm4A",
   phone: "07-281-8811",
   fbLink: "https://www.facebook.com/61590660418467/",
   fbMessage: "https://m.me/61590660418467/",

@@ -167,18 +167,18 @@ const options = {
   type: 'loop'
 }
 
-const imgs = [
+const imgs = computed(() => [
   {
-    img: isMobile ? new URL("./s7/1m.webp", import.meta.url).href : new URL("./s7/1.webp", import.meta.url).href,
+    img: isMobile.value ? new URL("./s7/1m.webp", import.meta.url).href : new URL("./s7/1.webp", import.meta.url).href,
     caption: "情境示意圖"
   },
   {
-    img: isMobile ? new URL("./s7/2m.webp", import.meta.url).href : new URL("./s7/2.webp", import.meta.url).href,
-    caption: "六合國際觀光夜市"
+    img: isMobile.value ? new URL("./s7/2m.webp", import.meta.url).href : new URL("./s7/2.webp", import.meta.url).href,
+    caption: isMobile.value ?"六合國際觀光夜市":""
   },
-  ...(isMobile ? [{
+  ...(isMobile.value ? [{
     img: new URL("./s7/3m.webp", import.meta.url).href,
     caption: ""
   }] : []),
-]
+]);
 </script>
