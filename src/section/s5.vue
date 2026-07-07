@@ -31,10 +31,11 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:0em 0 0em 0;
+  padding:$pc-pa-tb 0 $pc-pa-tb 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
+    flex-direction:row-reverse;
   background: #003838cc;
   z-index: 2;
 
@@ -57,9 +58,9 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
+      left: calc(100% + 3em);
       bottom: 13em;
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
   }
 }

@@ -19,6 +19,7 @@
     <S1 />
     <S2 />
     <S3 />
+    <S9 />
     <S4 />
     <S5 />
     <S6 />
@@ -65,7 +66,7 @@ img {
 
 .allbg{
   position: absolute;
-  top: 0;left: 0;right: 0;bottom: 0;height: 100%;z-index: 1;
+  top: 0;left: 0;right: 0;bottom: 0;height: 100%;z-index:0;
   // background: url("@/section/s1/bg.jpg") center top;
   // background-size: 270% auto;
     @media screen and (min-width: 768px) {
@@ -253,6 +254,7 @@ import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
+import S9 from "@/section/s9.vue"
 import Order from "@/section/order.vue"
 import { computed, getCurrentInstance, ref, onMounted, onUnmounted } from "vue";
 

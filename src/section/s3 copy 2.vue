@@ -1,11 +1,9 @@
 <template>
-  <article class="s4" ref="s4">
+  <article class="s3" ref="s3">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">陶瓷之都</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">獲選國際宜居城市獎  強調鶯歌生活感<br>
-老街(陶瓷藝品文藝氣息)，美術館，博物館，國際認證的宜居城市
-</p>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">高速捷遊 鐵道樂活</h2>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">台鐵地下化，鶯歌下一站鳳鳴站100米 (臨時站興建中)，35分鐘到台北車站；約3分鐘上大湳交流道國道2號，轉身機場出境；三鶯線預計2025年通車，1100米到鶯桃福德站，未來延伸八德段。 </p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -26,20 +24,17 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
-
-
-
-.s4 {
+.s3 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:$pc-pa-tb 0 $pc-pa-tb 0;
+  padding:10em 0 10em 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-    flex-direction:row;
-    background: #003838cc;
-    z-index: 2;
+  background: #003838cc;
+  z-index: 2;
+
   .main {
     @apply flex;
     margin: 0;
@@ -47,9 +42,6 @@
   flex-direction: column;
   text-align: justify;
 }
-
-
-
   .slider {
     margin: 0;
     flex-basis: size(840);
@@ -73,43 +65,42 @@
 
 @media screen and (max-width: 767px) {
 
+  .s3 {
+    @apply flex-col-reverse;
+    height: auto;
+    padding: 0;
+  font-size:sizem(15);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:0em;
 
-.s4 {
-  @apply flex-col-reverse;
-  height: auto;
-  padding: 0;
-font-size:sizem(15);
-flex-wrap:nowrap;
-margin-bottom:0em;
-gap:0em;
-
-.main {
-  padding: 0 sizem(32.5);
-  width: 100%;
+  .main {
+    padding: 0 sizem(32.5);
+    width: 100%;
 }
 
 .txt {margin: 2em auto 5em;
 }
 
 
-.slider {
-  height: auto;
-  width: 100%;
-
-  .caption {
-  font-size:sizem(12);  
-  right:sizem(5);
-  bottom:sizem(5);
-  }
-  .slide-item {
-    @apply bg-cover;
+  .slider {
+    height: auto;
     width: 100%;
-  flex-basis: auto;
-    height: sizem(250);
-    
+
+    .caption {
+    font-size:sizem(12);  
+    right:sizem(5);
+    bottom:sizem(5);
+    }
+    .slide-item {
+      @apply bg-cover;
+      width: 100%;
+    flex-basis: auto;
+      height: sizem(250);
+      
+    }
   }
-}
-}
+  }
 }
 </style>
 <script setup>
@@ -142,16 +133,12 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: "鶯歌陶瓷博物館"
+    img:new URL("./s3/1.jpg", import.meta.url).href ,
+    caption: "鶯陶福德站"
   },
   {
-    img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "鶯歌陶瓷博物館"
-  },
-  {
-    img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "陶瓷老街"
+    img:new URL("./s3/2.jpg", import.meta.url).href ,
+    caption: "鳳鳴車站"
   },
 ]
 </script>

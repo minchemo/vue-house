@@ -1,10 +1,9 @@
 <template>
-  <article class="s4" ref="s4">
+  <article class="s9" ref="s9">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">陶瓷之都</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">獲選國際宜居城市獎  強調鶯歌生活感<br>
-老街(陶瓷藝品文藝氣息)，美術館，博物館，國際認證的宜居城市
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">地段</h2>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">鶯桃商圈(麥當勞、星巴克、大樹等)、站前商圈(百貨林立)、新三沅傳統市場、都在我們的生活圈
 </p>
     </div>
     </div>
@@ -29,7 +28,7 @@
 
 
 
-.s4 {
+.s9 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
@@ -37,7 +36,7 @@
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-    flex-direction:row;
+    flex-direction:row-reverse;
     background: #003838cc;
     z-index: 2;
   .main {
@@ -62,8 +61,8 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     }
   }
 }
@@ -74,7 +73,7 @@
 @media screen and (max-width: 767px) {
 
 
-.s4 {
+.s9 {
   @apply flex-col-reverse;
   height: auto;
   padding: 0;
@@ -140,18 +139,14 @@ const options = {
   type: 'loop'
 }
 
-const imgs = [
+const imgs =  [
   {
-    img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: "鶯歌陶瓷博物館"
+    img:new URL("./s9/1.jpg", import.meta.url).href ,
+    caption: "新三沅傳統市場"
   },
   {
-    img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "鶯歌陶瓷博物館"
-  },
-  {
-    img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "陶瓷老街"
+    img:new URL("./s9/2.jpg", import.meta.url).href ,
+    caption: "鶯桃商圈-麥當勞"
   },
 ]
 </script>

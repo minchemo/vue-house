@@ -2,14 +2,14 @@
     <div class="nav fixed z-[100]"
         v-bind:class="{ 'r16-9': higherScreen }">
         <h1 class="h1">{{ info.caseName }}</h1>
-        <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
+        <!--  -->
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
             v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
         </div>
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
-           <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>  -->
+           <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
             <template v-for="item, in info.navList" :key="item">
             <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
                 @click="scrollTo(item.target,$isMobile()?item.offsetmo?item.offsetmo:item.offset:item.offset)" v-if="!(item.name === '地圖導航' && !info.address)&&!(item.name === '立即來電' && !info.phone)">
@@ -30,21 +30,20 @@
 
 .nav {
     position: relative;
-    right: size(114);
-    top: size(51);
+    right: size(0);
+    top: size(10);
     .h1{position: absolute;top: 0;left: 0;transform: translate(-200%);
         pointer-events: none;color: #fff0;}
- /*   .logo {
-        width: size(145);
-        height: size(50);
-        background-image: url('@/section/s1/logo.svg');
+ /*  */  .logo {
+        width: size(200);
+        height: size(40);
+        background-image: url('@/section/s1/logo_n.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        position: absolute;
-        left:1em;
+        margin: 0 auto 0 0 ; 
     }
-    */
+   
 
     .menu-btn {
         background-color: transparent;
@@ -263,15 +262,18 @@
         // padding: 0 sizem(8);
         height:auto;
         border-radius: 9999px;
+        position: fixed;
 
         .logo {
-            width: sizem(80);
-            height: sizem(42);
-            transition: all .2s;
-            top: sizem(13);
-            left:sizem(10);
+            width: sizem(120);
+            height: sizem(45);
+            //transition: all .2s;
+            top: sizem(10);
+            left:0;
+            margin: 0 auto auto 0 ;
 
             &.open {
+          //  left:sizem(-360);
               //  filter: brightness(0) invert(1);
             }
         }
@@ -357,6 +359,8 @@
             &.btn2{
                 margin:0 auto -.5em auto;
                 padding: 0.4em 4em;
+            &:nth-last-child(2){
+            margin: 0 0 auto 0 ;}
             }
 
             }

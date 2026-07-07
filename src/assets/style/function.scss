@@ -6,3 +6,5 @@
     $c-size: calc(100vw * $size / 375);
     @return #{$c-size};
 }
+
+$pc-pa-tb: 6em;

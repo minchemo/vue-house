@@ -31,20 +31,30 @@ export default {
         title: "立即預約",
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
-    //底下2個 沒項目就會隱藏
 
-    selectFields: {
-        room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
-          option: ["2房","3房","3+1"],
-          bypass:false,
-        },
-       /*  budget: {
+  // 控制表單欄位
+  //性別
+  formConfig: {
+    gender: {
+      enabled: false,     // ✅ 控制顯示 / 隱藏
+      required: false    // ✅ 是否必填（通常不會必填）
+    }
+  },
+  //各種欄位
+  selectFields: {
+    room_type: {
+      title: "需求房型",
+      type: "select",
+      hold: "請選擇房型",
+    option: ["2房","3房","3+1"],
+      required: false, //必填開啟使用
+    }, 
+    /*
+        budget: {
           title: "購屋預算",
-          hold: "請選擇預算",
-          option: ["1000-1500","1500-2000","2000以上"],
-          bypass:false, //必填開啟使用
+          hold: "請選擇區間",
+          option: ["1000", "2000", "3000"],
+          //bypass:true, //必填開啟使用
         },
        
         use_type: {
@@ -54,6 +64,18 @@ export default {
       },
         */
   },
+  //縣市地區
+  locationConfig: {
+  city: {
+    enabled: true,
+    required: false
+  },
+  area: {
+    enabled: true,     // ⚠️ 不能單獨 true
+    required: false
+  }
+},
+
 
 
     navList: [{

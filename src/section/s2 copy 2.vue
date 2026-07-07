@@ -1,12 +1,10 @@
 <template>
-  <article class="s4" ref="s4">
+  <article class="s2" ref="s2">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">陶瓷之都</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">獲選國際宜居城市獎  強調鶯歌生活感<br>
-老街(陶瓷藝品文藝氣息)，美術館，博物館，國際認證的宜居城市
-</p>
-    </div>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">新北門戶 黃金中軸</h2>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">桃鶯路往北→桃園車站 遠百統領威秀百貨商圈<span v-if="!isMobile">。</span><br>鶯桃路往東南→三鶯市區 三鶯之心 陶瓷博物館 鶯歌老街 新北美術館。</p>
+      </div>
     </div>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
@@ -16,7 +14,7 @@
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
+          <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
     </div>
@@ -29,41 +27,37 @@
 
 
 
-.s4 {
+.s2 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:$pc-pa-tb 0 $pc-pa-tb 0;
+  padding:10em 0 10em 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-    flex-direction:row;
-    background: #003838cc;
-    z-index: 2;
+  flex-direction:row-reverse;
+  background:linear-gradient(180deg, #00383800 0%, #003838cc 100%);
+  z-index: 2;
   .main {
     @apply flex;
     margin: 0;
     flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
-}
-
-
-
+    flex-direction: column;
+    text-align: justify;
+  }
   .slider {
     margin: 0;
     flex-basis: size(840);
     width: size(840);
-      height: size(560);
+    height: size(560);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
+      flex-basis: size(840);
       height: size(560);
-      
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     }
   }
 }
@@ -72,24 +66,21 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-
-
-.s4 {
+.s2 {
   @apply flex-col-reverse;
   height: auto;
   padding: 0;
-font-size:sizem(15);
-flex-wrap:nowrap;
-margin-bottom:0em;
-gap:0em;
-
-.main {
-  padding: 0 sizem(32.5);
-  width: 100%;
-}
-
-.txt {margin: 2em auto 5em;
-}
+  font-size:sizem(15);
+  flex-wrap:nowrap;
+  margin-bottom:0em;
+  gap:0em;
+  .main {
+    padding: 0 sizem(32.5);
+    width: 100%;
+  }
+  .txt {
+    margin: 2em auto 5em;
+  }
 
 
 .slider {
@@ -142,16 +133,24 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: "鶯歌陶瓷博物館"
+    img:new URL("./s2/1.jpg", import.meta.url).href ,
+    caption: "桃園車站"
   },
   {
-    img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "鶯歌陶瓷博物館"
+    img:new URL("./s2/2.jpg", import.meta.url).href ,
+    caption: "統領廣場"
   },
   {
-    img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "陶瓷老街"
+    img:new URL("./s2/3.jpg", import.meta.url).href ,
+    caption: "鶯歌老街"
+  },
+  {
+    img:new URL("./s2/4.jpg", import.meta.url).href ,
+    caption: "陶瓷博物館"
+  },
+  {
+    img:new URL("./s2/5.jpg", import.meta.url).href ,
+    caption: "新北美術館"
   },
 ]
 </script>

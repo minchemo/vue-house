@@ -1,7 +1,7 @@
 <template>
   <article class="s8" id="s8">
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-  <div class="t1 font-['Noto_Serif_TC',serif]" data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王<br>2~3房25~34坪</div>
+  <div class="t1 font-['Noto_Serif_TC',serif]" data-aos="zoom-in" data-aos-delay="200">2500坪鶯歌地王</div>
   </article>
 </template>
 
@@ -15,7 +15,7 @@
  // min-height: size(950);
  // max-height: size(1140);
  // height: 100vh;
- height: sizem(604);
+ height: sizem(450);
   font-size:sizem(33);
   display: flex;
   flex-direction: column;

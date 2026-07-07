@@ -31,7 +31,7 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:10em 0 10em 0;
+  padding:$pc-pa-tb 0 $pc-pa-tb 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
@@ -82,12 +82,13 @@ font-size:sizem(15);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
+    background:linear-gradient(0deg, #00383800 0%, #003838cc 30%);
 
 .main {
   padding: 0 sizem(32.5);
   width: 100%;
 }
-.txt {margin: 2em auto 5em;
+.txt {margin: 2em auto 10em;
 }
 
 

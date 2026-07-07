@@ -11,8 +11,8 @@
     <h2 class="h2">{{ info.caseName }}</h2>
     <h3 class="txt">
 三鶯線通車在即<br>搶進首波通車點
-<span class="st1">鶯歌稀有2500坪 壯闊基地</span>
-<span class="st2">市心地標 珍稀2-3房</span>
+<span>鶯歌稀有2500坪 壯闊基地</span>
+<span></span>市心地標 珍稀2-3房
     </h3>
     <!-- 
   <img src="./s1/logo.svg" alt="鳴日之城logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
@@ -31,7 +31,7 @@
   min-height: sizem(604);
   max-height: sizem(700);
   height: calc(100vh - 63px);
-  font-size:sizem(40);
+  font-size:sizem(33);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +43,7 @@
   min-height: size(900);
   max-height: size(1080);
   height: 100vh;
-  font-size:size(83);
+  font-size:size(53);
   }
 
 .h2{position: absolute;top: 0;left: 0;transform: translate(-200%);
@@ -56,21 +56,9 @@
     width:size(424);margin-top:0em;
   }
 }
-  .txt{text-align: center;line-height: 1.5;
-    margin:auto;
-    padding: 0 0 2.5em;
-    @media screen and (min-width: 768px) {
-    padding: 0;
-    }
+  .t1{margin-top: .8em;text-align: center;
   }
-  .st1{display:block;font-size:.5em;
-    border: 1px solid currentColor;
-    margin:.5em auto .3em auto;
-    padding: 0em 1em;
-    width: fit-content;
-    color: #ff0;
-  }
-  .st2{font-size:.78em;display:block;}
+  .txt{text-align: center;}
 }
 </style>
 <script setup>

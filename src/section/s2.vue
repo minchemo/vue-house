@@ -2,8 +2,11 @@
   <article class="s2" ref="s2">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">新北門戶 黃金中軸</h2>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">桃鶯路往北→桃園車站 遠百統領威秀百貨商圈<span v-if="!isMobile">。</span><br>鶯桃路往東南→三鶯市區 三鶯之心 陶瓷博物館 鶯歌老街 新北美術館。</p>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">交通 快速串聯</h2>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">約4分鐘上大湳交流道，串聯高鐵、逛街購物、機場<br>
+約6分鐘上國道3號，南來北往快速抵達工商重鎮<br>
+約10分鐘上國道1號，林口三井OUTLET美食購物
+</p>
       </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -31,7 +34,7 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:10em 0 10em 0;
+  padding:$pc-pa-tb 0 $pc-pa-tb 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
@@ -70,7 +73,7 @@
   @apply flex-col-reverse;
   height: auto;
   padding: 0;
-  font-size:sizem(15);
+  font-size:sizem(13);
   flex-wrap:nowrap;
   margin-bottom:0em;
   gap:0em;
@@ -134,8 +137,8 @@ const options = {
 const imgs = [
   {
     img:new URL("./s2/1.jpg", import.meta.url).href ,
-    caption: "桃園車站"
-  },
+    caption: "捷運頂埔站"
+  },/*
   {
     img:new URL("./s2/2.jpg", import.meta.url).href ,
     caption: "統領廣場"
@@ -151,7 +154,7 @@ const imgs = [
   {
     img:new URL("./s2/5.jpg", import.meta.url).href ,
     caption: "新北美術館"
-  },
+  },*/
 ]
 </script>
 

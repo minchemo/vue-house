@@ -1,82 +1,91 @@
 <template>
-  <div>
-  <div class="contact-info-img">
-</div>
-  <div class="contact-info mx-auto  flex flex-col items-center justify-between">
-    <div class="logo"></div>
-    <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
-        <div>{{ info.phone }}</div>
+<div class="contact">
+    <a :href="info.line" target="_blank" v-if="!isMobile&&info.line" class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
+    <img src="//h35.banner.tw/img/form/line.svg" /> 
+    </a>
+    <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+      <!--  <div class="logo">
+      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+    </div>  -->
+    <img src="@/section/s1/logo.svg" class="logo" alt="">
+
+  <div class="contact-row">
+        <div class="contact-item" @click="modalOpen = true; modalType = 'phone'"
+          v-if="info.phone">
+          <img src="//h35.banner.tw/img/form/phone.svg" alt="電話" srcset="" />
+          <div>{{ info.phone }}</div>
+        </div>
+        <div class="contact-item" v-if="info.fbMessage" @click="modalOpen = true; modalType = 'messenger'">
+          <img src="//h35.banner.tw/img/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
+          <div>Facebook 諮詢</div>
+        </div>
+        <div class="contact-item btfanpage" v-if="info.fbLink" @click="open(info.fbLink)">
+          <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
+          <div>前往粉絲專頁</div>
+        </div>
+        <div class="contact-item btline" v-if="info.line" @click="open(info.line)">
+          <img src="//h35.banner.tw/img/form/line.svg" alt="官方LINE" srcset="" />
+          <div>官方LINE</div>
+        </div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
-        <img src="//h35.banner.tw/img//form/messenger.svg" alt="Facebook 諮詢" srcset="" />
-        <div>Facebook 諮詢</div>
+      <div class="contact-row bottom" v-if="info.address">
+      <div class="contact-item address">
+        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink">
-      <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
-        <img src="//h35.banner.tw/img//form/fb.svg" alt="前往粉絲專頁" srcset="" />
-        <div>前往粉絲專頁</div>
-      </div>
-    </div>
-    <div class="flex justify-between w-full contact-item-box no-gap" v-if="info.address">
-      <div class="flex contact-item justify-center items-center address">
-        <div><span v-if="info.address1">{{ info.address1 }}：<br v-if="$isMobile()"></span>{{ info.address }}</div>
-      </div>
-      <div class="flex contact-item justify-center items-center googlemap"
+      <div class="contact-item googlemap"
         @click="modalOpen = true; modalType = 'gmap'">
-        <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
 
+    </div>
   </div>
-</div>
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
-      @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
-      <img src="//h35.banner.tw/img//form/phone.svg" alt="撥打電話" srcset="" />
+  <div class="bg-white mo-contact-info flex justify-end w-full contact-item-box items-center">
+    <!--  <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"  v-if="!$isMobile()"  @click="scrollTo('.s1')"> -->
+
+    <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
+      v-if="info.phone">
+      <img src="//h35.banner.tw/img/form/phone.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'messenger'" v-if="info.fbMessage">
-      <img src="//h35.banner.tw/img//form/messenger.svg" alt="FB 諮詢" srcset="" />
+    <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'messenger'">
+      <img src="//h35.banner.tw/img/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink&&(!info.address||!info.phone)">
-      <img src="//h35.banner.tw/img//form/fb.svg" alt="粉絲專頁" srcset="" />
+    <!--
+    <div class="flex flex-col contact-item justify-center items-center" @click="open(info.fbLink)">
+      <img src="//h35.banner.tw/img/form/fb.svg" alt="前往粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
+    </div> -->
+    <div class="flex flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+      <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
+      <div>預約賞屋</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img//form/pen.svg" alt="即刻預約" srcset="" />
-      <div>即刻預約</div>
-    </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <!--  --><div class="flex flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
-      <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
+      <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'line'"  v-if="info.line" >
-      <img src="//h35.banner.tw/img//form/line.svg" alt="Line" srcset="" />
-      <div>Line</div>
+    <div class="flex flex-col contact-item justify-center items-center" v-if="info.line" @click="open(info.line)">
+      <img src="//h35.banner.tw/img/form/line.svg" alt="官方LINE" srcset="" />
+      <div>官方LINE</div>
     </div>
   </div>
 
-  <!-- Modal -->
+   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
   <div class="modal -mt-20 md:-mt-72">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img//form/line.svg" alt="line" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'messenger'" src="//h35.banner.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/fb.svg" alt="fb" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img/form/line.svg" alt="line" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{
        modalType == 'phone' ? '賞屋專線' :
@@ -141,239 +150,246 @@
 }
 
 
-.contact-info-img{
-  @apply relative;
-  height: 0;z-index: 2;
-  top: -1.5vw;
-  img{width: 64%;}
+
+.lineicon{
+background: #06c755;
+border-radius: 20%;
+aspect-ratio: 1/1;
+display: flex;
+align-items: center;
+justify-content: center;
+  img {
+    width: 71%;
+    filter: brightness(0) invert(1);
+  }
 }
-.contact-info {
-  padding: size(105) size(0) size(55) size(0);
-    width: size(1440);
-    min-width: 680px;
-  position: relative;
-  z-index: 50;
-  // background: #045147;
+
+
+.mo-contact-info {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: size(60);
+  background: linear-gradient(90deg, #fff0 70%, #fff9);
+  font-size: size(16);
+  font-weight: 500;
+
+
+  .contact-item {
+    height: 100%;
+    color: #857550;
+    border-left: 1px solid #fff9;
+    padding: 0 .6em;
+    transition: background .3s;
+
+    img {
+      margin-bottom: 0.3em;
+      max-width: 1.03em;
+      height: auto;
+      max-height: 1.03em;
+      filter: invert(50%) sepia(20%) saturate(662%) hue-rotate(4deg) brightness(88%) contrast(90%);
+    }
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:hover {
+      background: #fff9;
+    }
+  }
+}
+
+
 
   .logo {
+    position: relative;
     width: size(540);
-    height: size(172);
-    background-image: url("@/section/s1/logo.svg");
+    // height: size(172);
+    // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: size(0) auto size(60) auto;
+    margin: size(60) auto size(30);
   }
 
-  .contact-item-box {
-    position: relative;
-    margin-top: size(20);
-    gap: size(20);
+// ── 變數 ──────────────────────────────────────────
+$border-radius: 0.9em; //按鈕圓角尺寸
+$gap:           15px; //間距
+$cols:          3;   // 上排按鈕欄數，改這裡就好
+
+// 導航按鈕寬度 = 上排每欄寬度
+// 公式：(100% - gap * (欄數-1)) / 欄數
+$btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
+
+// ── 共用 mixin ─────────────────────────────────────
+@mixin contact-item-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+  padding: 1.1em 1em;
+  background:linear-gradient(180deg, #FFE6AE 0%, #E89F00 49%, #BA7F00 50%, #B27700 100%);
+  color: #fff;
+  border-radius: $border-radius;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+  white-space: nowrap;
+
+  img {
+    width: 1.65em;
+    height: 1.65em;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: brightness(0) invert(1);
+    transition: filter 0.25s;    margin: 0;
+  }
+
+  &:hover {
+    color: #fff;
+    background:linear-gradient(180deg, #FFE6AE 0%, #c97900 49%, #a35c00 50%, #7a4100 100%);
+        
+
+    img { filter: brightness(0) invert(1); }
+  }
+}
+// ── 主體 ───────────────────────────────────────────
+.contact-info {
     width: size(920);
-    // min-width: 680px;
+    min-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+  padding: 0 0 2em;
+  position: relative;
+  z-index: 5;
+
+  // ── 第一排：N 欄平均分配 ──
+  .contact-row {
+    display: grid;
+    width: 100%;
+    gap: $gap;
+    grid-template-columns: repeat(#{$cols}, 1fr);
 
     .contact-item {
-      background:linear-gradient(180deg, #FFE6AE 0%, #E89F00 49%, #BA7F00 50%, #B27700 100%);
-      color: #FFF;
-      width: 100%;
-    font-weight: 700;
-      flex: 1;
-      padding: 1.1em 0;
-    border-radius: .5em;
-      font-size: size(16);
-      line-height: 1.6;//3.8
-      letter-spacing: 0em;
-     // max-width: size(280);
-      z-index: 1;
-      transition: all .3s;
-      cursor: pointer;
-      //border: 1px solid #C29267;
-      gap: 1em;
-
-      &:hover {
-        background:linear-gradient(180deg, #FFE6AE 0%, #c97900 49%, #a35c00 50%, #7a4100 100%);
-        color: #fff;
-
-        img {
-          filter: brightness(0) invert(1);
-        }
-      }
-
-      img {
-        max-width: size(27);
-        height: auto;
-        max-height: size(27);
-        filter: brightness(0) invert(1);
-        transition: all .5s;
-        margin: 0;
-      }
-
-      &.address {
-        background: #fff;
-        color: #000;
-        z-index: 0;
-        position: relative;
-        flex:2.17;
-        // border-radius: 999px 0 0 999px;
-      //  max-width: 9999px;
-    border-radius: .5em 0 0 .5em;
-        justify-content: center;
-
-        &::before {
-          content: "";
-          position: absolute;
-          width: 8em;
-          height: 100%;
-          background-color: transparent;
-          left: calc(100% - 4em);
-          z-index: -1;
-        }
-        div{
-          text-indent:0em;
-          white-space: normal;
-          padding: 0 1em;
-        }
-      }
-
-
-      &.googlemap {
-        margin: 0;
-        flex:1;
-  //    background-color: #9B1E44;
-      border-left-width: 0;
-    border-radius: 0 .5em .5em 0;
-        color: #FFF;
-
-        img {
-          filter: brightness(0) invert(1);
-        }
-
-        &:hover {
-   //     background-color: #C29267;
-          color: #fff;
-          img {
-            filter: brightness(0) invert(1);
-          }
-        }
-      }
+      @include contact-item-base;
     }
 
-    &.no-gap {
-      gap: 0 !important;
+    // ── 第二排：地址 + 導航，緊貼成一塊 ──
+    &.bottom {
+      gap: 0;
+      grid-template-columns: 1fr $btn-w;
+
+      .contact-item {
+        @include contact-item-base;
+
+        &.address {
+          border: none;
+          background: #fff;
+          color: #000;
+          cursor: default;
+          white-space: normal;
+          text-align: center;
+          border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
+
+          &:hover {
+            background: #fff;
+            color: #000;
+          }
+        }
+
+        &.googlemap {
+          border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
+        }
+      }
     }
   }
 }
-.modal-box{
-  img{filter: invert(48%) sepia(76%) saturate(1464%) hue-rotate(143deg) brightness(87%) contrast(106%);
+
+
+.modal-box {
+  img {
+    filter: invert(48%) sepia(76%) saturate(1464%) hue-rotate(143deg) brightness(87%) contrast(106%);
   }
 }
 
 @media screen and (max-width:768px) {
 
-  
-.contact-info-img{
-  height: 0;z-index: 2;
-  top: 70vw;
-  img{width: 200%;margin:-50%;}
-}
-  .mo-contact-info {
-    z-index: 99;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: sizem(375);
-    height: sizem(63);
-    gap: sizem(1);
-    box-shadow: 0 0 sizem(50) #000c;
-    background:#00494A;
 
+  .mo-contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    top: auto;
+    bottom: 0;
+    height: auto;
+    width: sizem(375);
+   // 
+   // gap: sizem(1);
+    box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
+    font-size: sizem(16);
+
+    background:#00494A;
     .contact-item {
-      height: 100%;      
-      font-size: sizem(14);
+      flex: 1;
+      padding: 0;
       color: #fff;
+      min-width: 4em;
+      height: sizem(63);
       border-left:1px solid #fff7;
-    font-weight: 700;
+
       img {
-        margin-bottom: sizem(5);
-        max-width: sizem(16.5);
-        height: auto;
-        max-height: sizem(16.5);
         filter: brightness(0) invert(1);
       }
-
     }
   }
 
-  .contact-info {
-    width: 100%;
-    min-width:0;
-    // height: sizem(400);
-    // border-radius: sizem(68);
-    //padding: sizem(0) sizem(0);
-    padding: sizem(80) 0 sizem(40) 0;
-    margin-top: sizem(0);
-    position: relative;
-    justify-content: space-between;
-  background-size: sizem(450) auto;
-
     .logo {
-      width: sizem(257);
-      height: sizem(140);
-    margin: sizem(0) auto sizem(60) auto;
-     // margin-bottom: sizem(47);
+      width: sizem(290);
+      margin: sizem(40) auto sizem(30) auto;
     }
-
-    .contact-item-box {
-      position: relative;
-      margin-top: sizem(0);
-      //gap: sizem(20);
-      flex-direction: column;
-    width: sizem(310);
-
+  .contact-info {
+    
+      width: sizem(310);
+    min-width: 0;
+    .contact-row {
+      grid-template-columns: 1fr;
+      gap: 12px;
       .contact-item {
-        padding: 1.1em sizem(80);
-        font-size: sizem(16);
-        max-width: 100%;
-        white-space: nowrap;
-        margin: 5px 0px;
+  position: relative;
+  justify-content: center;  // 文字置中
 
-        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-          max-width: sizem(27);
-          height: auto;
-          max-height: sizem(27);
-          margin: unset;
-          position: absolute;
-          left: calc(50% - 5em);
-          transform: translateX(-50%);
-        }
-        div{
-          text-indent: 2em;
-        }
+  img {
+    position: absolute;
+    left: 3em; // 所有 icon 靠左同一條線
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 
-        &.address {
-          font-size: sizem(15);
-    border-radius: .5em .5em 0 0;
-          padding: 1.1em 0;
-          margin: sizem(20) 0px 0px 0px;
-          //font-size: .9em;
+      &.bottom {
+        grid-template-columns: 1fr;
+        gap: 0;
 
-          &::before {
-            width: 100%;
-            height: 100%;
-            bottom: -50%;
-            left: 0;
+        .contact-item {
+          &.address {
+            // border: 1.5px solid #00744a;
+            border-bottom: none;
+            border-radius: $border-radius $border-radius 0 0;
+            white-space: normal;
+        span{display:block;}
+          }
+
+          &.googlemap {
+            border-radius: 0 0 $border-radius $border-radius;
           }
         }
-
-        &.address+div {
-        }
-      &.googlemap {
-    border-radius: 0 0 .5em .5em;
-      }
-      }
-
-      &.no-gap {
-        gap: 0 !important;
       }
     }
   }
@@ -389,19 +405,18 @@ const modalType = ref('');
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;
-     setTimeout(() => {
-       window.location.href = "phoneThanks";
-     }, 1000);
+    setTimeout(() => {
+      window.location.href = "phoneThanks";
+    }, 1000);
   } else if (modalType.value == 'messenger') {
     window.open(info.fbMessage);
-  } else if (modalType.value == 'fb') {
-    window.open(info.fbLink);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
-  } else if (modalType.value == 'line') {
-    window.open(info.line);
-
   }
+}
+
+const open = (link) => {
+  window.open(link);
 }
 
 

@@ -2,8 +2,11 @@
   <article class="s3" ref="s3">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">高速捷遊 鐵道樂活</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">台鐵地下化，鶯歌下一站鳳鳴站100米 (臨時站興建中)，35分鐘到台北車站；約3分鐘上大湳交流道國道2號，轉身機場出境；三鶯線預計2025年通車，1100米到鶯桃福德站，未來延伸八德段。 </p>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">大眾交通 包裝共構
+</h2>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">台鐵鳳鳴站通勤約25分鐘前進新板特區，<br>約35分鐘直通台北車站，連接雙北兩大車站<br>
+捷運三鶯線，預計2026年中通車，串聯雙北含金量最高的<br>板南線至頂埔、板橋、連結東區SOGO、信義商圈…
+</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -28,7 +31,7 @@
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
-  padding:10em 0 10em 0;
+  padding:$pc-pa-tb 0 $pc-pa-tb 0;
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
@@ -134,11 +137,15 @@ const options = {
 const imgs = [
   {
     img:new URL("./s3/1.jpg", import.meta.url).href ,
-    caption: "鶯陶福德站"
+    caption: "北二高匝道"
   },
   {
     img:new URL("./s3/2.jpg", import.meta.url).href ,
-    caption: "鳳鳴車站"
+    caption: "國三接國二往機場"
+  },
+  {
+    img:new URL("./s3/3.jpg", import.meta.url).href ,
+    caption: "桃機一航廈"
   },
 ]
 </script>
