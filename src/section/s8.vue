@@ -4,7 +4,7 @@
     <div class="main">
       <div class="txt">
         <h2 class="title" data-aos="fade-up" data-aos-delay="200">建築領航者<br>新世代指標</h2>
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">城揚建設集團『高雄名宅˙建築首席』，創立於民國83年，陪伴這片土地走過30年的歲月，穩健前行的企業步伐，始終致力於土地和建築，為新世代家庭打造一座座的理想家園！</p>
+        <p class="desc" data-aos="fade-up" data-aos-delay="600">城揚建設集團『高雄名宅˙建築首席』，創立於民國83年，陪伴這片土地走過{{ years }}年的歲月，穩健前行的企業步伐，始終致力於土地和建築，為新世代家庭打造一座座的理想家園！</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -171,5 +171,10 @@ const imgs = [
     caption: "2024惟美術"
   },
 ]
+const foundedYear = 1994 // 民國83年
+
+const years = computed(() => {
+  return new Date().getFullYear() - foundedYear
+})
 </script>
 
