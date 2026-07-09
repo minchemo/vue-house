@@ -2,10 +2,9 @@
   <article class="s2" ref="s2">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">交通 快速串聯</h2>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">約4分鐘上大湳交流道，串聯高鐵、逛街購物、機場<br>
-約6分鐘上國道3號，南來北往快速抵達工商重鎮<br>
-約10分鐘上國道1號，林口三井OUTLET美食購物
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>新北門戶</span> 城市起飛 價值先行</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">三鐵新門戶 鶯歌新地標</h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="400">三鶯線即將通車，城市價值正式起飛！未來捷運、台鐵、國道同步到位，「鳴日之城」坐擁2500坪完整街廓，以難得的大基地尺度，打造鶯歌珍稀少見的新地標聚落。
 </p>
       </div>
     </div>

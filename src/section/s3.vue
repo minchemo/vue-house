@@ -2,10 +2,9 @@
   <article class="s3" ref="s3">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">大眾交通 包裝共構
-</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">台鐵鳳鳴站通勤約25分鐘前進新板特區，<br>約35分鐘直通台北車站，連接雙北兩大車站<br>
-捷運三鶯線，預計2026年中通車，串聯雙北含金量最高的<br>板南線至頂埔、板橋、連結東區SOGO、信義商圈…
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>三鐵競速</span>國道 × 台鐵 × 捷運</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">三高奔馳 高速移動之城</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">大湳交流道快速串聯國道2號，直達桃園機場、高鐵桃園站：約6分鐘上國道3號，南下北上串聯土城、中和、板橋等科技與產業聚落；約10分鐘上國道1號，林口三井、內湖台北，生活、商務、休閒一次到位。
 </p>
     </div>
     </div>

@@ -2,8 +2,9 @@
   <article class="s9" ref="s9">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">地段</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">鶯桃商圈(麥當勞、星巴克、大樹等)、站前商圈(百貨林立)、新三沅傳統市場、都在我們的生活圈
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>雙軌並行</span>國道 × 台鐵 × 捷運</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">北北桃精華 輕鬆速可達</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">捷運三鶯線風光通車，串聯雙北含金量最高的板南線，往返東區、信義商圈；台鐵鳳鳴站約25分鐘板橋車站，約35分鐘台北車站；「鳴日之城」透過UBIKE+公車＋捷運＋台鐵多元轉乘，輕鬆移動雙城生活，大幅提升通勤效率。
 </p>
     </div>
     </div>

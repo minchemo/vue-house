@@ -2,9 +2,9 @@
   <article class="s4" ref="s4">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">陶瓷之都</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">獲選國際宜居城市獎  強調鶯歌生活感<br>
-老街(陶瓷藝品文藝氣息)，美術館，博物館，國際認證的宜居城市
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>鶯桃舒適圈</span>站前百貨 鶯桃共享</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">成熟商圈 共享繁華</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">坐擁市心便利機能，鶯桃商圈、桃園站前百貨、新三沅市場，串聯星巴克、麥當勞、大樹藥局、連鎖超市與生活品牌；鳳福公園親子遊憩、鳳鳴國中國小學區完善，成熟機能完美融入日常生活節奏。
 </p>
     </div>
     </div>

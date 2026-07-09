@@ -108,18 +108,28 @@ img {
     text-align:justify;
     z-index: 3;
   .title{
-    @apply font-['Noto_serif_TC',serif];
-    font-size: 2.22em;
-    margin:0 auto 0.35em;
+    @apply font-['Noto_Sans_TC',sans-serif];
+    font-size: 1.5em;
+    margin:-1em auto 0.15em;
     line-height: 1.5;
-    font-weight: 900;
+    font-weight: 700;
     color: #FD3;
     text-shadow: 0 0 10px #003838,0 0 3px #003838;
+    span{
+      border: 1px solid currentColor;
+      display: block;
+      width: fit-content;
+      padding: 0em 0.5em;
+    font-size: .7em;vertical-align: middle;
+    color: #fff;
+
+    }
   }
   .subtitle{
-    font-size: 1.1em;
-    font-weight: 700;
-    margin:0 auto 0.45em;
+    @apply font-['Noto_Serif_TC',serif];
+    font-size: 2.2em;
+    font-weight: 900;
+    margin:0.2em auto 0.25em;
     line-height: 1.5;letter-spacing: 0.06em;
   }
   .desc{
