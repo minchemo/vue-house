@@ -1,14 +1,13 @@
 <template>
-  <article class="s7">
-    <img class="bg" src="./s7/0.jpg" alt="">
-   <!-- <div class="main">
+  <article class="s11">
+    <div class="main">
       <div class="txt">
         <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>鶯歌地王</span>2500坪大社區 多元公設</h2>
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">鶯歌捷捷向上 鳴日大大有禮</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">捷運三鶯線通車，「鳴日之城」價值浮現，搶佔三鶯線房市第一波通車行情，起始站LB12鶯桃福德站+2500坪市心地王大基地＋桃園站前共同生活圈，三大地利優勢迎向鶯歌嶄新的生活時代，翻轉未來、快趁現在。
 </p>
     </div>
-    </div> 
+    </div>
     <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
@@ -20,24 +19,24 @@
       <span class="caption">{{ img.caption }}</span>
         </SplideSlide>
       </Splide>
-    </div>--> 
+    </div>
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s7 {
+.s11 {
   @apply relative flex flex-col items-center justify-center text-[#fff];
   width: 100%;
   // height: size(800);
-  padding:0;
+  padding:$pc-pa-tb 0 $pc-pa-tb 0;
   font-size:size(18);
+  gap:1.5em;
   flex-wrap:nowrap;
     flex-direction:column-reverse;
     background: #003838cc;
     z-index: 2;
-    .bg{width: 100%;}/*
   .main {
     @apply flex;
     margin: 0;
@@ -47,7 +46,7 @@
 }
 
 .txt {
-  margin: auto;
+  margin:2em auto 0 auto;
   width: size(1500);
 }
 
@@ -72,16 +71,15 @@
       justify-content: flex-end;
       bottom: -2em;
     }
-  }*/
+  }
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-/*
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
 
-  .s7 {
+  .s11 {
     @apply flex-col-reverse;
     height: auto;
     padding: 0;
@@ -115,7 +113,6 @@ gap:0em;
   }
   }
 }
-*/
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
@@ -145,4 +142,30 @@ const options = {
   type: 'loop'
 }
 
+const imgs = [
+  {
+    img:new URL("./s11/1.jpg", import.meta.url).href ,
+    caption: "大廳"
+  },
+  {
+    img:new URL("./s11/2.jpg", import.meta.url).href ,
+    caption: "交誼廳"
+  },
+  {
+    img:new URL("./s11/3.jpg", import.meta.url).href ,
+    caption: "KTV"
+  },
+  {
+    img:new URL("./s11/4.jpg", import.meta.url).href ,
+    caption: "兒童遊戲區"
+  },
+  {
+    img:new URL("./s11/5.jpg", import.meta.url).href ,
+    caption: "親子教室"
+  },
+  {
+    img:new URL("./s11/6.jpg", import.meta.url).href ,
+    caption: "健身房"
+  },
+]
 </script>

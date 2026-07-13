@@ -1,11 +1,9 @@
 <template>
-  <article class="s9" ref="s9">
+  <article class="s7" ref="s7">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>雙軌並行</span>國道 × 台鐵 × 捷運</h2>
-        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">北北桃精華 輕鬆速可達</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">捷運三鶯線風光通車，串聯雙北含金量最高的板南線，往返東區、信義商圈；台鐵鳳鳴站約25分鐘板橋車站，約35分鐘台北車站；「鳴日之城」透過UBIKE+公車＋捷運＋台鐵多元轉乘，輕鬆移動雙城生活，大幅提升通勤效率。
-</p>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">質感建材精品<br v-if="isMobile"> 舒適寧靜環保</h2>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">嚴選TOTO日本百年衛浴、櫻花廚具料理美味、晶鑽木地板溫潤寧境、大合石膏磚環保輕隔間綠建材、耶魯美國知名電子門鎖…不只安全健康舒適，更全面提升居家質感品味。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -29,7 +27,7 @@
 
 
 
-.s9 {
+.s7 {
   @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
   height:auto;
@@ -38,8 +36,10 @@
   gap:3em;
   flex-wrap: wrap;
     flex-direction:row-reverse;
-    background: #003838cc;
+    background:linear-gradient(0deg, #00383800 0%, #003838cc 100%);
     z-index: 2;
+
+
   .main {
     @apply flex;
     margin: 0;
@@ -74,7 +74,7 @@
 @media screen and (max-width: 767px) {
 
 
-.s9 {
+.s7 {
   @apply flex-col-reverse;
   height: auto;
   padding: 0;
@@ -82,13 +82,13 @@ font-size:sizem(15);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
+    background:linear-gradient(0deg, #00383800 0%, #003838cc 30%);
 
 .main {
   padding: 0 sizem(32.5);
   width: 100%;
 }
-
-.txt {margin: 2em auto 5em;
+.txt {margin: 2em auto 10em;
 }
 
 
@@ -140,22 +140,26 @@ const options = {
   type: 'loop'
 }
 
-const imgs =  [
+const imgs = [
   {
-    img:new URL("./s9/1.jpg", import.meta.url).href ,
-    caption: "三鶯線 鶯桃福德"
+    img:new URL("./s7/1.jpg", import.meta.url).href ,
+    caption: "晶鑽木地板"
   },
   {
-    img:new URL("./s9/2.jpg", import.meta.url).href ,
-    caption: "三鶯線 鶯桃福德"
+    img:new URL("./s7/2.jpg", import.meta.url).href ,
+    caption: "大合石膏磚"
   },
   {
-    img:new URL("./s9/3.jpg", import.meta.url).href ,
-    caption: "台鐵鳳鳴車站"
+    img:new URL("./s7/3.jpg", import.meta.url).href ,
+    caption: "耶魯電子鎖"
   },
   {
-    img:new URL("./s9/4.jpg", import.meta.url).href ,
-    caption: "台鐵鳳鳴車站"
+    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    caption: "TOTO衛浴示意圖"
+  },
+  {
+    img:new URL("./s7/5.jpg", import.meta.url).href ,
+    caption: "櫻花廚具示意圖"
   },
 ]
 </script>

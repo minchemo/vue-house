@@ -10,7 +10,7 @@
     
     <h2 class="h2">{{ info.caseName }}</h2>
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-    <h3 class="txt">
+    <h3 class="txt" data-aos="zoom-in" data-aos-delay="200">
 搶進三鶯首站 市心公園宅
 <span class="st1">2500坪壯闊美域｜邊間 2-3房</span>
     </h3>

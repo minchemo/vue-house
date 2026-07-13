@@ -143,15 +143,19 @@ const options = {
 const imgs = [
   {
     img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: "鶯歌陶瓷博物館"
+    caption: "新光三越 站前商圈"
   },
   {
     img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "鶯歌陶瓷博物館"
+    caption: "桃鶯全聯星巴克"
   },
   {
     img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "陶瓷老街"
+    caption: "新三沅市場"
+  },
+  {
+    img:new URL("./s4/4.jpg", import.meta.url).href ,
+    caption: "鶯桃商圈"
   },
 ]
 </script>

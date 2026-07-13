@@ -17,13 +17,16 @@
     -->
   <div class="home relative overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <S1 />
-    <S2 />
+    <S20 />
+   <!-- <S2 /> --> 
     <S3 />
     <S9 />
     <S4 />
-    <S5 />
-    <S6 />
+    <S10 />
+   <!--  <S5 /> --> 
+     <!-- <S6 /> --> 
     <S7 />
+    <S11 />
     <S8 />
     <Order />
   <div class="allbg">
@@ -212,6 +215,7 @@ img {
       font-size: sizem(12);}
 
       .txt {line-height: 1.6;letter-spacing: 0.01em;
+        padding: sizem(32.5) 0 ;
   .title{
     font-size: 1.9em;
   }
@@ -257,6 +261,7 @@ import info from "@/info"
 import AOS from 'aos';
 import Nav from "@/layout/navbar.vue"
 import S1 from "@/section/s1.vue"
+import S20 from "@/section/s20.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
@@ -265,6 +270,8 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
+import S10 from "@/section/s10.vue"
+import S11 from "@/section/s11.vue"
 import Order from "@/section/order.vue"
 import { computed, getCurrentInstance, ref, onMounted, onUnmounted } from "vue";
 
