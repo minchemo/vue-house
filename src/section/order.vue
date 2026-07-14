@@ -1,11 +1,18 @@
 <template>
   <div id="order" class="order relative text-center">
+  <!-- <picture>
+      <source media="(max-width: 768px)" srcset="./s1/3m.jpg" />
+      <img src="./s1/3.jpg" alt="" class="t0" />
+    </picture>  -->
     <div class="order-section">
-      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title-img">
+        <img src="./form/title.svg" alt="" />
+      </div>
+<!--       <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
-<!--  -->
+ -->
       <!-- FORM -->
       <div class="form mx-auto relative flex justify-center">
 
@@ -96,8 +103,8 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal" class="text-[#EB6120] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-[#fff]">
+          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -130,6 +137,16 @@
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
+.t0 {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  pointer-events: none;
+  z-index: 9;
+  opacity: .5;
+}
 .area-drop-enter-active {
   transition: all 0.35s ease;
   overflow: hidden;
@@ -146,8 +163,10 @@ $o-title-c: #EB6120; //.order-title
 
 .order {
   width: 100%;
-  padding-top: size(100);
+  padding-top: size(150);
   font-size: 16px;
+  background: url("./form/bg.jpg") no-repeat center top;
+  background-size: cover;
 
   .order-section {
     position: relative;
@@ -155,16 +174,25 @@ $o-title-c: #EB6120; //.order-title
     min-height: size(500);
   }
 /*
+  */
 .order-title-img{
   width:sizem(310);
+  margin: 0 auto;
+  text-align: left;
+  img{
+    width: 100%;
+  }
   @media screen and (min-width: 768px) {
-    width: min(1200px, 95%); //最大1200px
+    width: min(1300px, 95%); //最大1200px
     margin-bottom: size(20);
+
+  img{
+    width: 50%;
+  }
   }
 }
-  */
   .order-title {
-    width: min(1200px, 95%); //最大1200px
+    width: min(1300px, 95%); //最大1200px
     margin: 0 auto;
     font-size: 2.9em;
     letter-spacing: .3em;
@@ -191,7 +219,7 @@ $o-title-c: #EB6120; //.order-title
   }
 
   .form {
-    width: min(1200px, 95%); //最大1200px
+    width: min(1300px, 95%); //最大1200px
     //  height: 350px;
     gap: 4em;
     margin-top: 2.8em;
@@ -217,7 +245,7 @@ $o-title-c: #EB6120; //.order-title
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #EB6120;
+      background-color: #fff;
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
@@ -276,7 +304,7 @@ $o-title-c: #EB6120; //.order-title
       right: 0;
       flex-direction: column;
       margin-left: .7em;
-      color: #EB6120;
+      color: #fff;
 
       label:first-child {
         margin-bottom: .3em;
@@ -290,7 +318,7 @@ $o-title-c: #EB6120; //.order-title
 
   .send {
     font-size: 1.4em;
-  background: #00BBDD;
+  background: #D59F5F;
     //border: 1px solid #FFF9;
     border: 0;
     padding: .7em 0;
@@ -314,7 +342,7 @@ $o-title-c: #EB6120; //.order-title
     color: #000;
     position: relative;
     z-index: 10;
-    input[type="checkbox"] {border: 2px solid #666;}
+    input[type="checkbox"] {border: 2px solid #666; background-color: #fff;}
   }
  
 }

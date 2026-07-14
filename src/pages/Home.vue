@@ -11,6 +11,7 @@
   <!--loading end-->
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFE8BD] text-[#000]">
     <S1 />
+    <S2 />
     <!--
     <S1new />
     <S1new2 /> -->
@@ -49,10 +50,10 @@ img {
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
 // 
 // import S11 from "@/section/s11.vue"
-/* 
-import S2 from "@/section/s2.vue" */
+/*  */
 import Order from "@/section/order.vue"
 import { onMounted, nextTick, ref } from "vue"
 import AOS from 'aos'

@@ -1,14 +1,14 @@
 <template>
   <div class="contact">
+    <!-- 
     <img src="@/section/s1/c1.png" class="c1" alt="" />
-    <img src="@/section/s1/c2.png" class="c2" alt="" />
-    <!-- <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
+    <img src="@/section/s1/c2.png" class="c2" alt="" /><a :href="info.line" target="_blank" v-if="!isMobile && info.line"
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
       <img src="//h35.banner.tw/img/form/line.svg" />
     </a> -->
     <div class="contact-info mx-auto  flex flex-col items-center justify-between z-2 relative">
-      <img src="@/section/s1/logo.svg" class="logo" alt="" data-aos="zoom-out" />
-      <!--  <div class="logo">
+      
+      <!-- <img src="@/section/s1/logo.svg" class="logo" alt="" data-aos="zoom-out" /> <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
     <img src="@/section/s1/logo.svg" class="logo" alt="">  -->
@@ -44,7 +44,7 @@
   </div>
 
   <!-- Mobile contact info -->
-  <div class="bg-white mo-contact-info flex justify-end w-full contact-item-box items-center">
+  <div class="bg-white mo-contact-info flex w-full contact-item-box items-center">
     <!--  <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"  v-if="!$isMobile()"  @click="scrollTo('.s1')"> -->
 
     <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
@@ -148,11 +148,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #0189D3;
+  background-color: #7B4507;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #04004D;
+  background-color: #5c3100;
 }
 
 
@@ -188,11 +188,16 @@
   box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
 
   @media screen and (min-width:768px) {
-    display: none;
-    top: 0;
+    background: transparent;
+    // display: none;
+    top: size(56);
+    left: size(34);
     height: size(60);
     box-shadow: none;
     font-size: size(16);
+    flex-direction: column;
+    width: size(60);
+    gap: 1em;
   }
 
   .contact-item {
@@ -202,11 +207,40 @@
     padding: 0;
     transition: background .3s;
     color: #fff;
+    transition: all .5s;
+    position: relative;
 
     @media screen and (min-width:768px) {
       flex: 0;
-      padding: 0 .6em;
-      color: #857550
+      padding: 0 0;
+      //  color: #857550;
+      border-left: 0px solid #fff9;
+      background: #efefef;
+      aspect-ratio: 1 / 1;
+      width: size(32);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      >div {
+        position: absolute;
+        top: 0.33em;
+        left: calc(100% - .5em);
+        white-space: nowrap;
+        opacity: 0;
+        transition: all .5s;
+        // display: none;
+      }
+    &:hover {
+        >div {
+        left: calc(100% + .5em);
+          opacity: 1;
+        }
+      
+    }
+
+
     }
 
     img {
@@ -214,7 +248,13 @@
       max-width: 1.03em;
       height: auto;
       max-height: 1.03em;
-      filter: brightness(0) invert(1);
+      filter: brightness(0) invert(.5);
+
+      @media screen and (min-width:768px) {
+
+        margin: auto;
+      }
+
     }
 
     &:first-child {
@@ -222,7 +262,8 @@
     }
 
     &:hover {
-      background: #fff9;
+      background: #fff;
+    //  transform: scale(1.2);
     }
   }
 }
@@ -261,9 +302,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #6DAA43;
+  background: #7B4507;
   color: #fff;
-  border: 0px solid #3BEDFF99;
+  border: 0px solid ;
   border-radius: $border-radius;
   font-size: 16px;
   font-weight: 700;
@@ -282,7 +323,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   }
 
   &:hover {
-    background: #45811d;
+  background: #5c3100;
     color: #fff;
     //border-color: #c00;
 
@@ -292,7 +333,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 // ── 主體 ───────────────────────────────────────────
 .contact {
-  background: #EB6120;
+  // background: #EB6120;
   position: relative;
 
   .c1 {
@@ -302,11 +343,12 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(400);
     transform: translateX(-10%)translateY(-100%);
     transform-origin: 50%;
-  pointer-events: none;
-   // animation: an2 5s linear infinite alternate;
-  @media screen and (min-width:768px) {
-    width: size(985);
-  }
+    pointer-events: none;
+
+    // animation: an2 5s linear infinite alternate;
+    @media screen and (min-width:768px) {
+      width: size(985);
+    }
 
   }
 
@@ -317,11 +359,12 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(500);
     transform: skewX(-15deg)translateY(-100%);
     transform-origin: 50% 0;
-    animation: an2 5s linear infinite alternate;    
-  pointer-events: none;
-  @media screen and (min-width:768px) {
-    width: size(1453);
-  }
+    animation: an2 5s linear infinite alternate;
+    pointer-events: none;
+
+    @media screen and (min-width:768px) {
+      width: size(1453);
+    }
 
   }
 
@@ -365,10 +408,11 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     // ── 第二排：地址 + 導航，緊貼成一塊 ──
     &.bottom {
       gap: 0;
-        grid-template-columns: 1fr;
-    @media screen and (min-width:768px) {
-      grid-template-columns: 1fr $btn-w;
-    }
+      grid-template-columns: 1fr;
+
+      @media screen and (min-width:768px) {
+        grid-template-columns: 1fr $btn-w;
+      }
 
       .contact-item {
         @include contact-item-base;
@@ -380,11 +424,13 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
           cursor: default;
           white-space: normal;
           text-align: center;
-            border-radius: $border-radius $border-radius 0 0;font-size: 15px;
-    @media screen and (min-width:768px) {
-          border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
-          font-size: 16px;
-    }
+          border-radius: $border-radius $border-radius 0 0;
+          font-size: 15px;
+
+          @media screen and (min-width:768px) {
+            border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
+            font-size: 16px;
+          }
 
           &:hover {
             background: #fff;
@@ -393,10 +439,11 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
         }
 
         &.googlemap {
-            border-radius: 0 0 $border-radius $border-radius;
-    @media screen and (min-width:768px) {
-          border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
-    }
+          border-radius: 0 0 $border-radius $border-radius;
+
+          @media screen and (min-width:768px) {
+            border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
+          }
         }
       }
     }
@@ -406,7 +453,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter: invert(37%) sepia(60%) saturate(5826%) hue-rotate(182deg) brightness(101%) contrast(101%);
+    filter:invert(26%) sepia(75%) saturate(630%) hue-rotate(354deg) brightness(97%) contrast(98%);
   }
 }
 
@@ -449,11 +496,11 @@ const go = () => {
     }, 1000);
   } else if (modalType.value == 'messenger') {
     let url = info.fbMessage;
-  // Line 瀏覽器強制外開參數
-  if (/Line/i.test(navigator.userAgent)) {
-    url += (url.includes('?') ? '&' : '?') + 'openExternalBrowser=1';
-  }
-  window.open(url, '_blank', 'noopener,noreferrer');
+    // Line 瀏覽器強制外開參數
+    if (/Line/i.test(navigator.userAgent)) {
+      url += (url.includes('?') ? '&' : '?') + 'openExternalBrowser=1';
+    }
+    window.open(url, '_blank', 'noopener,noreferrer');
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
   }

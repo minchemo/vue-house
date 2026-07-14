@@ -1,27 +1,41 @@
 <template>
-  <article class="s2">
-    <div class="cloud">
-      <img src="./s1/cloud.png" alt="cloud" />
-    </div>
-    <img src="./s1/slogo.svg" class="slogo" alt="">
-    <!--    -->
-    <div class="txt">
-      <picture>
-        <source media="(max-width: 768px)" srcset="./s1/s3t1m.svg" />
-        <img src="./s1/s3t1.svg" alt="頂溪帝標．再寫新章2920-5858" class="t1" />
-      </picture>
-      <p class="d">偉大的領航者，都用時間證明視野——<br v-if="isMobile">超過30個重劃區、上萬戶家庭落址<br>
-        茂德建設，成就的不只是數字，更是信任——<br v-if="isMobile">25年，是我們開始定義「世界級」的起點<br><br>
-        三橋二快雙捷運，速度格局同步升級<br v-if="isMobile"><span v-else>；</span>成熟捷運商圈核心、千億建設挹注領漲<br>
-        準備看見，大台北從來沒有的眼界</p>
-    </div>
-    <Fullview />
-    <div class="caption">鳥瞰實景拍攝輔以電腦合成示意圖</div>
+  <article class="s1 relative" id="s1">
+<!--     --> <picture>
+      <source media="(max-width: 768px)" srcset="./s1/2m.jpg" />
+      <img src="./s1/2.jpg" alt="" class="t0" />
+    </picture>
+    <picture>
+      <source media="(max-width: 768px)" srcset="./s2/bgm.jpg" />
+      <img src="./s2/bg.jpg" alt="" class="bg" />
+    </picture>
+      <img src="./s2/t1.svg" alt="" class="t1" />
+      <img src="./s1/joyofmissingout.svg" alt="" class="joyofmissingout" />
+<div class="t2">住的是城心，佇的是自己<br><br>
+美好的城市機能相間<br>
+號召專屬的生活節奏回歸<br><br>
+昌益在這裡，開啟松弛時光的邀約
+      <div class="thread"></div></div>
+
+
+      <div class="s1-btn">
+        <button @click="scrollTo('#s2')" class="btn btn-primary">下一頁</button></div>
+
+    
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
+
+.t0 {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  pointer-events: none;
+  z-index: 9;
+  opacity: .2;
+}
 
 @keyframes an {
   to {
@@ -29,153 +43,159 @@
   }
 }
 
-.s2 {
-  @apply relative bg-[#818dc1] text-[#fff];
-  width: 100%;
-  // height: size(1059);
-  font-size: size(16);
+.s1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: sizem(10);
+  background: #EB6120;
+  height: sizem(667);
 
-  @media screen and (max-width: 767px) {
-    padding: sizem(0) 0 sizem(60) 0;
-    height: sizem(800);
-    font-size: sizem(12);
+  @media screen and (min-width: 768px) {
+    font-size: size(22);
+    justify-content: space-between;
+    padding: 0;
+    height: 100vh;
+    min-height: size(900);
+    max-height: size(1080);
+
   }
+.joyofmissingout{
+  position: fixed;
+  display: none;
 
-  .cloud {
-    position: absolute;
-    top: sizem(98);
-    top: calc(50% + #{sizem(58 - 750 * .5)});
-    right: sizem(-20);
-    width: sizem(130);
-    z-index: 12;
+  @media screen and (min-width: 768px) {
+    bottom: size(55);
+    left: size(53);
+    width: size(22);
+  display: block;
+
+  }
+}
+
+  .bg {
+    width: 100%;
+    height: 100%;
+  // position: absolute;
+    bottom: sizem(-100);
+    left: sizem(0);
 
     img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
       width: 100%;
-      transform: translateX(-30%);
-      animation: an 6s linear alternate infinite;
+
     }
 
-    @media screen and (min-width: 767px) {
-      top: size(450);
-      top: calc(70% + #{size(217 - 1080 * .7)});
-      right: size(270);
-      width: size(300);
-    }
-  }
-
-  .slogo {
-    position: absolute;
-    width: sizem(50);
-    top: sizem(15);
-    left: sizem(70);
-    z-index: 12;
-
-    @media screen and (min-width: 767px) {
-      width: size(125);
-      top: size(95);
-      left: size(173);
-
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      top: 0;
+     // bottom: calc(30% + #{size(-70 - 1080 * .3)});
+      right: 0;
+      left: auto;
     }
 
   }
 
-  .txt {
+
+  .t1 {
     position: absolute;
-    width: sizem(310);
-    top: sizem(30);
-    left: 0;
-    right: 0;
+    top: sizem(485);
+   //right: 0;
+    left:sizem(35);
     margin: auto;
-    z-index: 12;
-    text-align: center;
+    width: sizem(220);
 
-    @media screen and (min-width: 767px) {
-      width: size(650);
-      top: size(10);
+    @media screen and (min-width: 768px) {
+      top: size(277);
+     // top: calc(50% + #{size(238 - 1080 * .50)});
+      margin: 0;
+      left: size(285);
+     // left: auto;
+      width: size(590);
+
     }
+  }
+  .t2{
+    position: absolute;
+    top: sizem(520);
+    left:sizem(35);
+    width: sizem(200);
+    color: #fff;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.05em;
 
-    .t1 {
-      width: sizem(207);
-      margin-bottom: sizem(18);
+    @media screen and (min-width: 768px) {
+      top: size(402);
+     // top: calc(50% + #{size(569 - 1080 * .50)});
+      margin: 0;
+      left: size(285);
+    line-height: 1.65;
+     // left: auto;
+      width: size(480);
 
-      @media screen and (min-width: 767px) {
-        width: size(615);
-        margin-bottom: size(-88);
+      img{
+        width: 100%;
       }
     }
-
-
-  }
-
-  .mm {
-    width: 100%;
-    pointer-events: none;
+  .thread{
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-  }
-
-  &::before {
-    content: "";
-    width: 100%;
-    height: 3em;
-    display: block;
-    position: absolute;
-    pointer-events: none;
-    z-index: 3;
-    left: 0;
-    background: linear-gradient(to bottom, #818dc100, #818dc1, #818dc100);
-    top: 0;
-    transform: translateY(-50%);
-  }
-
-  &::after {
-    content: "";
-    width: 100%;
-    height: sizem(370);
-    display: block;
-    position: absolute;
-    pointer-events: none;
-    z-index: 3;
-    left: 0;
-    background: linear-gradient(to bottom, #818dc1, #818dc1 60%, #818dc100);
-    top: 0;
-    transform: translateY(0%);
+    display: none;
 
     @media screen and (min-width: 768px) {
-      height: sizem(70);
+    display: block;
+      bottom: -7em;
+      margin: 0 0;
+      left: -.1em;
+      width: 32.5em;
+      height: 5.5em;
+
+      border: 1px solid #fff;
+      border-width: 0px 0px 1px 1px;
 
     }
   }
-
-  .caption {
+  }
+  .slogo{
     position: absolute;
-    padding: .5em;
-    bottom: 0;
+    top: sizem(310);
+    right: 0;
     left: 0;
-
-    @media screen and (max-width: 767px) {
-      bottom: sizem(60);
-
-    }
-
-
-  }
-
-  .viewbox {
-    padding: 50vw 0 0 0;
+    margin: auto;
+    width: sizem(244);
 
     @media screen and (min-width: 768px) {
-      padding: 9vw 0 0 0
+      top: size(810);
+      top: calc(50% + #{size(810 - 1080 * .50)});
+      margin: 0;
+      right: size(468);
+      left: auto;
+      width: size(244);
+
     }
   }
+
+
 }
 </style>
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
-import Fullview from '../components/fullview.vue';
+import info from "@/info"
+import { computed, getCurrentInstance, ref, inject } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
+const canPlayWebP = document.createElement('canvas')
+  .toDataURL('image/webp')
+  .startsWith('data:image/webp')
+
 </script>

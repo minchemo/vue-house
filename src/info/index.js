@@ -1,7 +1,7 @@
-const caseName = "國華綻"
+const caseName = "小東光"
 
 export default {
-  caseid: "f802d14d-9172-47b3-9668-dba01906e90d",
+  caseid: "9c636397-02d6-40cf-98fe-0ed62ed12606",
 // caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
   // case_code: "test", //某些舊案資料庫要單獨設定名稱
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
@@ -15,17 +15,12 @@ export default {
   // line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
-    ["投資興建", "國鉅建設"],
+    /*  ["投資興建", "國鉅建設"],
     ["建築設計", "謝樹林建築師"],
     ["建照號碼", "113鶯建字第00119-01號"],
     ["行銷企劃", "澄品廣告"],
     ["經&ensp;紀&ensp;人", "陳佳享(112)新北經字第004521號"],
-    /*
-投資興建:國鉅建設
-建築設計:謝樹林建築師
-建照號碼:113鶯建字第00119-01號
-行銷企劃:澄品廣告
-經紀人:陳佳享(112)新北經字第004521號
+  
     */
   ],
   gtmCode: ["GTM-MVCDVQJ6"], // 可放置多個

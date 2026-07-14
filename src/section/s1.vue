@@ -1,15 +1,19 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/mo.jpg" class="t0">
-    <div class="bg">
-      <img src="./s1/i2.webp" alt="i2">
-      <img src="./s1/i1.webp" alt="i1">
-    </div>
-    <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="200">
-    <img src="./s1/t1.svg" alt="logo" class="t1" data-aos="zoom-in" data-aos-delay="200">
+    <picture>
+      <source media="(max-width: 768px)" srcset="./s1/bgm.jpg" />
+      <img src="./s1/bg.jpg" alt="" class="bg" />
+    </picture>
+      <img src="./s1/t1.svg" alt="" class="t1" />
+      <div class="t2">
+      <div class="thread"></div>
+      <img src="./s1/t2.svg" alt="" /></div>
+      <img src="./s1/slogo.svg" alt="" class="slogo" />
+      <img src="./s1/joyofmissingout.svg" alt="" class="joyofmissingout" />
+      <div class="s1-btn">
+        <button @click="scrollTo('#s2')" class="btn btn-primary">下一頁</button></div>
+
     
-    <img v-if="canPlayWebP" src="./s1/0607.webp" class="unicorn" alt="unicorn">
-<img v-else src="./s1/0609.png" class="unicorn" alt="unicorn">
   </article>
 </template>
 
@@ -23,7 +27,7 @@
   left: 0;
   pointer-events: none;
   z-index: 9;
-  opacity: .0;
+  opacity: .5;
 }
 
 @keyframes an {
@@ -38,8 +42,7 @@
   justify-content: center;
   align-items: center;
   font-size: sizem(11);
-  background: #EB6120;
-  height: sizem(667);
+  height: sizem(635);
 
   @media screen and (min-width: 768px) {
     font-size: size(27);
@@ -50,87 +53,115 @@
     max-height: size(1080);
 
   }
+.joyofmissingout{
+  position: fixed;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    bottom: size(55);
+    left: size(53);
+    width: size(22);
+  display: block;
+
+  }
+}
 
   .bg {
-    width: 253%;
+      position: absolute;
+    width: 100%;
     height: 100%;
-    position: absolute;
-    bottom: sizem(-100);
+  // position: absolute;
+    top: sizem(0);
     left: sizem(0);
 
     img {
-      position: absolute;
       bottom: 0;
       right: 0;
       width: 100%;
-
-      &:nth-child(1) {
-        width: 106.5%;
-        transform: translateX(2%);
-        transform-origin: 0 100%;
-        animation: an 10s linear infinite alternate;
-      }
-
+      height: 100%;
+      object-fit: cover;
 
     }
 
     @media screen and (min-width: 768px) {
       width: 100%;
-      bottom: calc(30% + #{size(-70 - 1080 * .3)});
+      top: 0;
+     // bottom: calc(30% + #{size(-70 - 1080 * .3)});
       right: 0;
       left: auto;
     }
 
   }
 
-  .unicorn {
-    position: absolute;
-    top: sizem(385);
-    left: sizem(18);
-    width: sizem(320);
-    display: block;
-    aspect-ratio: 1/1;
-
-    @media screen and (min-width: 768px) {
-      top: size(204);
-      top: calc(50% + #{size(204 - 1080 * .5)});
-      left: size(103);
-      width: size(822);
-
-    }
-  }
-
-  .logo {
-    position: absolute;
-    top: sizem(106);
-    right: sizem(46);
-    width: sizem(280);
-    margin: 0;
-
-    @media screen and (min-width: 768px) {
-      top: size(159);
-      top: calc(55% + #{size(159 - 1080 * .55)});
-      right: size(230);
-      width: size(714);
-
-    }
-  }
 
   .t1 {
     position: absolute;
-    top: sizem(310);
+    top: sizem(50);
     right: 0;
     left: 0;
     margin: auto;
-    width: sizem(244);
+    width: sizem(275);
 
     @media screen and (min-width: 768px) {
-      top: size(610);
-      top: calc(55% + #{size(610 - 1080 * .55)});
+      top: size(238);
+      top: calc(50% + #{size(238 - 1080 * .50)});
       margin: 0;
-      right: size(317);
+      right: size(160);
       left: auto;
-      width: size(549);
+      width: size(854);
+
+    }
+  }
+  .t2{
+    position: absolute;
+    top: sizem(500);
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: sizem(195);
+
+    @media screen and (min-width: 768px) {
+      top: size(569);
+      top: calc(50% + #{size(569 - 1080 * .50)});
+      margin: 0;
+      right: size(350);
+      left: auto;
+      width: size(480);
+
+      img{
+        width: 100%;
+      }
+    }
+  .thread{
+    position: absolute;
+    background: #fff;
+
+    @media screen and (min-width: 768px) {
+      top: size(-160);
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 1px;
+
+      height: size(184);
+    }
+  }
+  }
+  .slogo{
+    position: absolute;
+    top: sizem(580);
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: sizem(100);
+
+    @media screen and (min-width: 768px) {
+      top: size(810);
+      top: calc(50% + #{size(810 - 1080 * .50)});
+      margin: 0;
+      right: size(468);
+      left: auto;
+      width: size(244);
 
     }
   }
