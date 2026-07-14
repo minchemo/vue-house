@@ -17,14 +17,11 @@
     -->
   <div class="home relative overflow-hidden font-['Noto_Sans_TC',sans-serif]">
     <S1 />
-    <S20 />
-   <!-- <S2 /> --> 
+    <S2 />
     <S3 />
     <S9 />
     <S4 />
     <S10 />
-   <!--  <S5 /> --> 
-     <!-- <S6 /> --> 
     <S7 />
     <S11 />
     <S8 />
@@ -261,7 +258,6 @@ import info from "@/info"
 import AOS from 'aos';
 import Nav from "@/layout/navbar.vue"
 import S1 from "@/section/s1.vue"
-import S20 from "@/section/s20.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"

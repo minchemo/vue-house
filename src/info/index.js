@@ -80,32 +80,37 @@ export default {
 
     navList: [{
         name: "新北門戶",
-        target: ".s1",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "高速樂活",
         target: ".s2",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "美術生活",
+        name: "三鐵競速",
         target: ".s3",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "雙巨擘聯手",
+        name: "雙軌並行",
+        target: ".s9",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "鶯桃舒適圈",
         target: ".s4",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "美學地標",
-        target: ".s5",
+        name: "文化城市",
+        target: ".s10",
         offset: "-60",
         offsetmo: "0",
   },{
         name: "質感建材",
-        target: ".s6",
+        target: ".s7",
+        offset: "-60",
+        offsetmo: "0",
+  },{
+        name: "鶯歌地王",
+        target: ".s11",
         offset: "-60",
         offsetmo: "0",
   },{
