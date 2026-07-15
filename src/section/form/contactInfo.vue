@@ -333,7 +333,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 // ── 主體 ───────────────────────────────────────────
 .contact {
-  // background: #EB6120;
+  background: #1C7391;
   position: relative;
 
   .c1 {
@@ -382,7 +382,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   flex-direction: column;
   align-items: center;
   gap: $gap;
-  padding: 0 0 2em;
+  padding: 2em 0 2em;
 
   @media screen and (min-width:768px) {
     width: min(1200px, 95%); //最大1200px

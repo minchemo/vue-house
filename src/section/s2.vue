@@ -1,7 +1,7 @@
-<template>
-  <article class="s1 relative" id="s1">
+s2<template>
+  <article class="s2 relative" id="s2">
 <!--     --> <picture>
-      <source media="(max-width: 768px)" srcset="./s1/2m.jpg" />
+      <source media="(max-width: 768px)" srcset="./s2/2m.jpg" />
       <img src="./s1/2.jpg" alt="" class="t0" />
     </picture>
     <picture>
@@ -9,7 +9,7 @@
       <img src="./s2/bg.jpg" alt="" class="bg" />
     </picture>
       <img src="./s2/t1.svg" alt="" class="t1" />
-      <img src="./s1/joyofmissingout.svg" alt="" class="joyofmissingout" />
+      <img src="./s2/joyofmissingout.svg" alt="" class="joyofmissingout" />
 <div class="t2">住的是城心，佇的是自己<br><br>
 美好的城市機能相間<br>
 號召專屬的生活節奏回歸<br><br>
@@ -17,7 +17,7 @@
       <div class="thread"></div></div>
 
 
-      <div class="s1-btn">
+      <div class="s2-btn">
         <button @click="scrollTo('#s2')" class="btn btn-primary">下一頁</button></div>
 
     
@@ -43,7 +43,7 @@
   }
 }
 
-.s1 {
+.s2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,6 +51,7 @@
   font-size: sizem(10);
   background: #EB6120;
   height: sizem(667);
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     font-size: size(22);
