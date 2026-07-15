@@ -142,7 +142,7 @@
   max-height: 4em;
   opacity: 1;
 }
-$o-title-c: #A30C24; //.order-title
+$o-title-c: #000; //.order-title
 
 .order {
   width: 100%;
