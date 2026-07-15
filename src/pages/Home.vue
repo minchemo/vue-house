@@ -10,6 +10,8 @@
   </div>
   <!--loading end-->
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFE8BD] text-[#000]">
+
+    <img src="@/section/s1/joyofmissingout.svg" alt="" class="joyofmissingout" />
     <S1 />
     <S2 />
     <!--
@@ -25,10 +27,13 @@
 
 
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.2s;
 }
-.fade-enter, .fade-leave-to {
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 
@@ -39,12 +44,24 @@ img {
   height: unset;
   margin: 0 auto;
 }
+
 .home {
-  
+
+.joyofmissingout{
+  position: fixed;
+  display: none;
+  z-index: 3;
+
   @media screen and (min-width: 768px) {
+    bottom: size(55);
+    left: size(53);
+    width: size(22);
+  display: block;
+
   }
 }
 
+}
 </style>
 
 <script setup>
@@ -69,7 +86,7 @@ onMounted(async () => {
   AOS.init({
     once: true,
     duration: 1500,
-  //  disableMutationObserver: false,
+    //  disableMutationObserver: false,
   })
 
   await nextTick()

@@ -1,5 +1,7 @@
 <template>
   <article class="s1 relative" id="s1">
+    <!--
+  -->
     <picture>
       <source media="(max-width: 768px)" srcset="./s1/bgm.jpg" />
       <img src="./s1/bg.jpg" alt="" class="bg" />
@@ -9,7 +11,6 @@
       <div class="thread"></div>
       <img src="./s1/t2.svg" alt="" /></div>
       <img src="./s1/slogo.svg" alt="" class="slogo" />
-      <img src="./s1/joyofmissingout.svg" alt="" class="joyofmissingout" />
       <div class="s1-btn">
         <button @click="scrollTo('#s2')" class="btn btn-primary">下一頁</button></div>
 
@@ -53,19 +54,6 @@
     max-height: size(1080);
 
   }
-.joyofmissingout{
-  position: fixed;
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    bottom: size(55);
-    left: size(53);
-    width: size(22);
-  display: block;
-
-  }
-}
-
   .bg {
       position: absolute;
     width: 100%;

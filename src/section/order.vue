@@ -14,7 +14,7 @@
       </div>
  -->
       <!-- FORM -->
-      <div class="form mx-auto relative flex justify-center">
+      <div class="form mx-auto relative flex-col flex justify-center">
 
         <div class="left h-full flex flex-col justify-between items-center">
           <div class="name">
@@ -240,7 +240,7 @@ $o-title-c: #EB6120; //.order-title
       height: auto;
       //  width: size(419);
     }
-
+/*
     &::after {
       content: "";
       width: 1px;
@@ -249,7 +249,7 @@ $o-title-c: #EB6120; //.order-title
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
-
+*/
 
     .row {
       background: #fff;

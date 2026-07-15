@@ -1,9 +1,9 @@
 s2<template>
   <article class="s2 relative" id="s2">
-<!--     --> <picture>
+<!--   <picture>
       <source media="(max-width: 768px)" srcset="./s2/2m.jpg" />
       <img src="./s1/2.jpg" alt="" class="t0" />
-    </picture>
+    </picture>   -->
     <picture>
       <source media="(max-width: 768px)" srcset="./s2/bgm.jpg" />
       <img src="./s2/bg.jpg" alt="" class="bg" />
