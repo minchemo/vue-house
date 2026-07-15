@@ -23,7 +23,7 @@ export default {
 
         */
     ],
-     gtmCode: ["GTM-00000000"], // 可放置多個
+     gtmCode: ["GTM-MDG64LCX"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -34,23 +34,33 @@ export default {
         subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
         subTitle_mo: "若想了解更多資訊，歡迎填寫表單或來電洽詢<br>將由專人為您服務，謝謝！",
     },
-    // 底下2個 沒項目就會隱藏
-    // 控制固定板的新欄位
-    // room_type: ["兩房","三房"],
-    selectFields: {
+  // 控制表單欄位
+  //性別
+  formConfig: {
+    gender: {
+      enabled: true,     // ✅ 控制顯示 / 隱藏
+      required: false    // ✅ 是否必填（通常不會必填）
+    }
+  },
+  //各種欄位
+  selectFields: {
+    
+    contact_time: {
+    title: "聯絡時段",
+    type: "select",
+    hold: "請選擇時段",
+    option: ["上午", "下午", "晚上", "全天"],
+    required: false,
+    apiB: "budget" // B API 對應欄位
+  },
+    room_type: {
+      title: "需求房型",
+      type: "select",
+      hold: "請選擇房型",
+      option: ["兩房","三房"],
+      required: false, //必填開啟使用
+    }, /*
        
-        budget: {
-          title: "聯絡時間",
-          hold: "請選擇時間",
-          option: ["上午", "中午", "下午", "全天"],
-          //bypass:false,
-        },
-        room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
-          option: ["兩房","三房"],
-          //bypass:false,
-        }, /*
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",
@@ -58,6 +68,18 @@ export default {
       },
         */
   },
+  //縣市地區
+  locationConfig: {
+  city: {
+    enabled: true,
+    required: false
+  },
+  area: {
+    enabled: true,     // ⚠️ 不能單獨 true
+    required: false
+  }
+},
+
 
     navList: [
         /*
