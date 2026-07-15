@@ -9,7 +9,6 @@ s2<template>
       <img src="./s2/bg.jpg" alt="" class="bg" />
     </picture>
       <img src="./s2/t1.svg" alt="" class="t1" />
-      <img src="./s2/joyofmissingout.svg" alt="" class="joyofmissingout" />
 <div class="t2">住的是城心，佇的是自己<br><br>
 美好的城市機能相間<br>
 號召專屬的生活節奏回歸<br><br>
