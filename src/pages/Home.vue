@@ -85,7 +85,7 @@ onMounted(async () => {
 
   AOS.init({
     once: true,
-    duration: 1500,
+    duration: 2000,
     //  disableMutationObserver: false,
   })
 

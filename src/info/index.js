@@ -7,11 +7,11 @@ export default {
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "0000",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7234.759861138862!2d121.34143481775472!3d24.95318512732956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f8706c42839%3A0xa23b80f99b5a8e6c!2z5ZyL6I-v57a75o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1781242674159!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/X7a3vdcTvzh4q3id8",
-  phone: "000",
-  fbLink: "https://www.facebook.com/",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
-  fbMessage: "https://m.me/",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14486.647347395723!2d120.98396482061217!3d24.807030447791842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1784102131651!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/pgnYdgtZjvCyFmgS7",
+  phone: "03-5717088",
+  fbLink: "https://www.facebook.com/61591797629069",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
+  fbMessage: "https://m.me/61591797629069",
   // line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
@@ -23,7 +23,7 @@ export default {
   
     */
   ],
-  gtmCode: ["GTM-MVCDVQJ6"], // 可放置多個
+ //  gtmCode: ["GTM-MVCDVQJ6"], // 可放置多個
   recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3

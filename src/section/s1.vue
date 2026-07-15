@@ -6,11 +6,11 @@
       <source media="(max-width: 768px)" srcset="./s1/bgm.jpg" />
       <img src="./s1/bg.jpg" alt="" class="bg" />
     </picture>
-      <img src="./s1/t1.svg" alt="" class="t1" />
-      <div class="t2">
+      <img src="./s1/t1.svg" alt="" class="t1"  data-aos="fade-up" data-aos-delay="0" />
+      <div class="t2"  data-aos="fade-up" data-aos-delay="200">
       <div class="thread"></div>
       <img src="./s1/t2.svg" alt="" /></div>
-      <img src="./s1/slogo.svg" alt="" class="slogo" />
+      <img src="./s1/slogo.svg" alt="" class="slogo" data-aos="fade-up" data-aos-delay="400" />
       <button @click="scrollTo('#s2')" class="scroll-down"></button>
 
     
@@ -50,7 +50,7 @@
     padding: 0;
     height: 100vh;
     min-height: size(900);
-    max-height: size(1080);
+    max-height: size(1060);
 
   }
   .bg {
