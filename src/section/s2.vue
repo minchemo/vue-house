@@ -17,8 +17,7 @@ s2<template>
       <div class="thread"></div></div>
 
 
-      <div class="s2-btn">
-        <button @click="scrollTo('#s2')" class="btn btn-primary">下一頁</button></div>
+      <button @click="scrollTo('#order')" class="scroll-down"></button>
 
     
   </article>
@@ -50,7 +49,7 @@ s2<template>
   align-items: center;
   font-size: sizem(10);
   background: #EB6120;
-  height: sizem(667);
+ // height: sizem(667);
   overflow: hidden;
 
   @media screen and (min-width: 768px) {
@@ -62,18 +61,6 @@ s2<template>
     max-height: size(1080);
 
   }
-.joyofmissingout{
-  position: fixed;
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    bottom: size(55);
-    left: size(53);
-    width: size(22);
-  display: block;
-
-  }
-}
 
   .bg {
     width: 100%;
@@ -178,6 +165,28 @@ s2<template>
 
     }
   }
+  
+  .scroll-down {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  width: 2em;
+  height:2em;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before{content: "";width: 1em; height: 1em;border: 0px solid #fff;
+  border-width: 0 3px 3px 0;
+transform: rotate(45deg);
+opacity: .7;
+}
+  &:hover:before {
+opacity: 1;
+  }
+}
 
 
 }

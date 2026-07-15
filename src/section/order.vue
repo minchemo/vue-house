@@ -99,9 +99,9 @@
         </div>
 
       </div>
-
+<div class="b">
       <!-- 同意 -->
-      <div class="flex gap-2 items-center justify-center control">
+      <div class="flex gap-2 control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
         <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
@@ -111,7 +111,7 @@
       <Policy />
 
       <!-- recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
+      <vue-recaptcha class="flex mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
         @expired="onRecaptchaExpired" />
 
       <!-- submit -->
@@ -126,7 +126,7 @@
         </div>
 
       </div>
-
+ </div>
       <ContactInfo />
     </div>
 
@@ -165,8 +165,8 @@ $o-title-c: #EB6120; //.order-title
   width: 100%;
   padding-top: size(150);
   font-size: 16px;
-  background: url("./form/bg.jpg") no-repeat center top;
-  background-size: cover;
+  background: #ecb05a url("./form/bg.jpg") no-repeat center top;
+  background-size: 100% auto;
 
   .order-section {
     position: relative;
@@ -183,7 +183,7 @@ $o-title-c: #EB6120; //.order-title
     width: 100%;
   }
   @media screen and (min-width: 768px) {
-    width: min(1300px, 95%); //最大1200px
+    width: min(1300px, 80%); //最大1200px
     margin-bottom: size(20);
 
   img{
@@ -192,7 +192,7 @@ $o-title-c: #EB6120; //.order-title
   }
 }
   .order-title {
-    width: min(1300px, 95%); //最大1200px
+    width: min(1300px, 80%); //最大1200px
     margin: 0 auto;
     font-size: 2.9em;
     letter-spacing: .3em;
@@ -217,11 +217,18 @@ $o-title-c: #EB6120; //.order-title
     padding-top: .5em;
     letter-spacing: .1em;
   }
+.b{
+    width: min(1300px, 80%); //最大1200px
+  margin: auto;
+  align-items:flex-start;
+  justify-content: flex-start;
+  text-align: left;
 
+  }
   .form {
-    width: min(1300px, 95%); //最大1200px
+    width: min(1300px, 80%); //最大1200px
     //  height: 350px;
-    gap: 4em;
+    gap: 1.25em;
     margin-top: 2.8em;
     margin-bottom: 3em;
     z-index: 50;
@@ -232,12 +239,14 @@ $o-title-c: #EB6120; //.order-title
       flex: 1;
       gap: 1.25em;
       align-items: flex-start;
+      width: 50%;
       //   width: size(419);
     }
 
     .right {
       flex: 1;
       height: auto;
+      width: 50%;
       //  width: size(419);
     }
 /*
@@ -327,7 +336,7 @@ $o-title-c: #EB6120; //.order-title
     text-indent: 0.5em;
     border-radius: 2em;
     text-align: center;
-    width: 14em;
+    width: 50%;
     z-index: 10;
     color: #fff;
     position: relative;
@@ -367,6 +376,8 @@ $o-title-c: #EB6120; //.order-title
     width: 100%;
   padding-top: sizem(96);
     padding-bottom: sizem(63);
+  background-image: url("./form/bgm.jpg");
+
 
     .cus-divider {
       margin: 0 auto;

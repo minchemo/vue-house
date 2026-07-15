@@ -184,7 +184,7 @@
   font-weight: 500;
   gap: 0;
   font-size: sizem(16);
-  background: #FE7A92;
+  background: #7B4507;
   box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
 
   @media screen and (min-width:768px) {
@@ -248,11 +248,12 @@
       max-width: 1.03em;
       height: auto;
       max-height: 1.03em;
-      filter: brightness(0) invert(.5);
+      filter: brightness(0) invert(1);
 
       @media screen and (min-width:768px) {
 
         margin: auto;
+      filter: brightness(0) invert(.5);
       }
 
     }
@@ -333,7 +334,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 // ── 主體 ───────────────────────────────────────────
 .contact {
-  background: #1C7391;
+  // background: #D59F5F;
   position: relative;
 
   .c1 {
@@ -385,7 +386,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   padding: 2em 0 2em;
 
   @media screen and (min-width:768px) {
-    width: min(1200px, 95%); //最大1200px
+    width: min(1300px, 80%); //最大1200px
   }
 
   // ── 第一排：N 欄平均分配 ──

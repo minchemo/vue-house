@@ -11,8 +11,7 @@
       <div class="thread"></div>
       <img src="./s1/t2.svg" alt="" /></div>
       <img src="./s1/slogo.svg" alt="" class="slogo" />
-      <div class="s1-btn">
-        <button @click="scrollTo('#s2')" class="btn btn-primary">下一頁</button></div>
+      <button @click="scrollTo('#s2')" class="scroll-down"></button>
 
     
   </article>
@@ -80,8 +79,6 @@
     }
 
   }
-
-
   .t1 {
     position: absolute;
     top: sizem(50);
@@ -153,6 +150,28 @@
 
     }
   }
+  .scroll-down {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  width: 2em;
+  height:2em;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before{content: "";width: 1em; height: 1em;border: 0px solid #fff;
+  border-width: 0 3px 3px 0;
+transform: rotate(45deg);
+opacity: .7;
+}
+  &:hover:before {
+opacity: 1;
+  }
+}
+
 
 
 }
