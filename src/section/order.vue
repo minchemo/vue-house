@@ -334,17 +334,13 @@ $o-title-c: #000; //.order-title
     }
 
     .order-title {
-      font-size: 20px;
-      width: sizem(310);
-      /*  font-size: sizem(27);
+        font-size: sizem(27);
       padding-top:2em;
-      .line{width: sizem(258);
-      
-      }*/
+      padding-bottom:.5em;
     }
 
     .order-subTitle {
-      // font-size: sizem(13);
+      font-size: sizem(13);
       padding-top: 0;
     }
 
