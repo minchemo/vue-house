@@ -1,18 +1,16 @@
 <template>
   <div id="order" class="order relative text-center">
+  <div class="img"></div>
   <!-- <picture>
       <source media="(max-width: 768px)" srcset="./s1/3m.jpg" />
       <img src="./s1/3.jpg" alt="" class="t0" />
     </picture>  -->
     <div class="order-section">
-      <div class="order-title-img">
-        <img src="./form/title.svg" alt="" />
-      </div>
-<!--       <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
+     <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
- -->
+<!--   -->
       <!-- FORM -->
       <div class="form mx-auto relative flex-col flex justify-center">
 
@@ -99,9 +97,8 @@
         </div>
 
       </div>
-<div class="b">
       <!-- 同意 -->
-      <div class="flex gap-2 control">
+      <div class="flex gap-2 control justify-center">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
         <p class="text-[#fff]">
           本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
@@ -111,7 +108,7 @@
       <Policy />
 
       <!-- recaptcha -->
-      <vue-recaptcha class="flex mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
+      <vue-recaptcha class="flex mt-8 relative z-10  justify-center" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
         @expired="onRecaptchaExpired" />
 
       <!-- submit -->
@@ -126,12 +123,7 @@
         </div>
 
       </div>
- </div>
-      <ContactInfo />
     </div>
-
-    <Map v-if="info.address" />
-    <HouseInfo />
 
   </div>
 </template>
@@ -163,15 +155,22 @@ $o-title-c: #EB6120; //.order-title
 
 .order {
   width: 100%;
-  padding-top: size(150);
+  padding: 0;
   font-size: 16px;
-  background: #ecb05a url("./form/bg.jpg") no-repeat center top;
   background-size: 100% auto;
+  display: flex;
+  min-height: 100vh;
+
+
+  .img{flex: 1;
+  background: #ecb05a url("./form/bg.png") no-repeat center top;background-size: cover;
+}
 
   .order-section {
     position: relative;
     overflow: hidden;
     min-height: size(500);
+    width:size(900);
   }
 /*
   */
@@ -239,14 +238,14 @@ $o-title-c: #EB6120; //.order-title
       flex: 1;
       gap: 1.25em;
       align-items: flex-start;
-      width: 50%;
+      width: 100%;
       //   width: size(419);
     }
 
     .right {
       flex: 1;
       height: auto;
-      width: 50%;
+      width: 100%;
       //  width: size(419);
     }
 /*
@@ -327,7 +326,7 @@ $o-title-c: #EB6120; //.order-title
 
   .send {
     font-size: 1.4em;
-  background: #D59F5F;
+  background: #ED6C34;
     //border: 1px solid #FFF9;
     border: 0;
     padding: .7em 0;
@@ -341,7 +340,7 @@ $o-title-c: #EB6120; //.order-title
     color: #fff;
     position: relative;
     transition: transform .5s;
-    margin-bottom: 2em;
+   // margin-bottom: 2em;
     &:hover{transform: scale(1.1);}
   }
   .send-load{color: #fff;}
@@ -357,26 +356,22 @@ $o-title-c: #EB6120; //.order-title
 }
 
 @media screen and (max-width:768px) {
-  .order-section {
-    min-height: sizem(800);
-    position: relative;
-    // overflow: hidden;
-    // padding-top: sizem(200);
-
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
-    }
-
-  }
 
   .order {
     width: 100%;
-  padding-top: sizem(96);
-    padding-bottom: sizem(63);
-  background-image: url("./form/bgm.jpg");
+  flex-direction:column;
+  .img{width: 100%;
+    height: sizem(400);flex: auto;
+  background-position: center center;
+}
+  .order-section {
+    min-height: sizem(800);
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+    // padding-top: sizem(200);
+
+  }
 
 
     .cus-divider {
@@ -446,10 +441,6 @@ $o-title-c: #EB6120; //.order-title
 </style>
 <script setup>
 import Policy from "@/section/form/policy.vue"
-import ContactInfo from "@/section/form/contactInfo.vue"
-import Map from "@/section/form/map.vue"
-import HouseInfo from "@/section/form/houseInfo.vue"
-
 import info from "@/info"
 import { cityList, renderAreaList } from "@/info/address.js"
 import { ref, reactive, watch, computed, getCurrentInstance } from "vue"
@@ -495,6 +486,8 @@ const fieldLabelMap = {
   gender: "性別",
   city: "居住縣市",
   area: "居住地區",
+  policyChecked: "個資聲明",
+  r_verify: "我不是機器人",
   // 動態欄位從 selectFields 自動取 title
   ...Object.fromEntries(
     Object.entries(selectFields).map(([k, v]) => [k, v.title])
@@ -522,7 +515,8 @@ watch(() => formData.city, (val) => {
 // ==========================
 const isRequired = (key) => {
   if (key === "name" || key === "phone") return true
-
+  if (key === "policyChecked") return true
+  if (key === "r_verify") return true
   if (key === "gender") return formConfig.gender?.required
   if (key === "city") return locationConfig.city?.required
   if (key === "area") return locationConfig.area?.required

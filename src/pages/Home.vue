@@ -9,11 +9,9 @@
     <img class="w-32" src="//h35.banner.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFE8BD] text-[#000]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#591D00] text-[#000]">
 
-    <img src="@/section/s1/joyofmissingout.svg" alt="" class="joyofmissingout" />
-    <S1 />
-    <S2 />
+
     <!--
     <S1new />
     <S1new2 /> -->
@@ -47,27 +45,12 @@ img {
 
 .home {
 
-.joyofmissingout{
-  position: fixed;
-  display: none;
-  z-index: 3;
-
-  @media screen and (min-width: 768px) {
-    bottom: size(55);
-    left: size(53);
-    width: size(22);
-  display: block;
-
-  }
-}
 
 }
 </style>
 
 <script setup>
 import info from "@/info"
-import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
 // 
 // import S11 from "@/section/s11.vue"
 /*  */
