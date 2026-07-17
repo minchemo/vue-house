@@ -25,13 +25,13 @@ export default {
     /*
     */
   ],
-  // gtmCode: ["GTM-MHSDGRVJ"], // 可放置多個
+  gtmCode: ["GTM-N7NSHD2L"], // 可放置多個
   recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
-  order: {
+  order: { 
     title: "立即預約",
    // subTitle: "將有專人與您聯絡，我們將竭誠為您服務",
    // subTitle_mo: "將有專人與您聯絡，我們將竭誠為您服務",
