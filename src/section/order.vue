@@ -441,6 +441,8 @@ const fieldLabelMap = {
   gender: "性別",
   city: "居住縣市",
   area: "居住地區",
+  policyChecked: "個資聲明",
+  r_verify: "我不是機器人",
   // 動態欄位從 selectFields 自動取 title
   ...Object.fromEntries(
     Object.entries(selectFields).map(([k, v]) => [k, v.title])
@@ -468,7 +470,8 @@ watch(() => formData.city, (val) => {
 // ==========================
 const isRequired = (key) => {
   if (key === "name" || key === "phone") return true
-
+  if (key === "policyChecked") return true
+  if (key === "r_verify") return true
   if (key === "gender") return formConfig.gender?.required
   if (key === "city") return locationConfig.city?.required
   if (key === "area") return locationConfig.area?.required
@@ -599,7 +602,36 @@ presendB.append(
 
   try {
     if (!DEBUG_ONLY_A) {
-      fetch("https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec")
+      // 修改處
+      const scriptParams = new URLSearchParams();
+
+      for (const [k, v] of Object.entries(formData)) {
+        if (["policyChecked", "r_verify"].includes(k)) continue;
+        if (k === "area" && !v) continue;
+
+        // msg 轉成 message 或保持 msg 都可以
+        scriptParams.append(k, v ?? "");
+      }
+
+      // UTM
+      Object.entries(utm).forEach(([k, v]) => {
+        scriptParams.append(k, v);
+      });
+
+      // 額外固定欄位
+      scriptParams.append("date", new Date().toISOString());
+      scriptParams.append("campaign_name", info.caseName || "");
+      scriptParams.append(
+        "case_code",
+        info.case_code || info.caseid_j || info.caseid || ""
+      );
+
+      fetch(
+        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`,
+        {
+          method: "GET",
+        }
+      );
     }
 
     const requests = [
