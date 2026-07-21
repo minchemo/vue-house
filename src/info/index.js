@@ -7,8 +7,8 @@ export default {
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "新竹市埔頂路125號旁",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d905.502193996141!2d121.0080639696319!3d24.795153016095696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346837b303d26bad%3A0x5b05aed7e6d9ead6!2z5piM55uK5bu656-J6aSoLeaWsOeruemkqA!5e0!3m2!1szh-TW!2stw!4v1784108202536!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/TTumdzLtGNW6oqAv7",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d905.4995934164648!2d121.00880926955716!3d24.795509216092317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzQzLjgiTiAxMjHCsDAwJzM0LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1784604167409!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/8Bwy98b9mdE4TWZk7",
   phone: "03-5717088",
   fbLink: "https://www.facebook.com/61591797629069",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
   fbMessage: "https://m.me/61591797629069",
@@ -20,6 +20,9 @@ export default {
     ["建照號碼", "113鶯建字第00119-01號"],
     ["行銷企劃", "澄品廣告"],
     ["經&ensp;紀&ensp;人", "陳佳享(112)新北經字第004521號"],
+    <iframe src="
+    https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d905.4995934164648!2d121.00880926955716!3d24.795509216092317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzQzLjgiTiAxMjHCsDAwJzM0LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1784604167409!5m2!1szh-TW!2stw
+    " width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
   
     */
   ],

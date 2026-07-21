@@ -2,6 +2,12 @@
   <article class="s1 relative" id="s1">
     <!--
   -->
+  <div class="hero-light-fx" aria-hidden="true">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+    <span class="orb o4"></span>
+  </div>
     <picture>
       <source media="(max-width: 768px)" srcset="./s1/bgm.jpg" />
       <img src="./s1/bg.jpg" alt="" class="bg" />
@@ -16,10 +22,47 @@
     
   </article>
 </template>
-
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
+.hero-light-fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;z-index:3;
+}
+
+.orb {
+  position: absolute;
+  bottom: -60px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  mix-blend-mode: soft-light;
+  background: radial-gradient(
+    circle,
+    rgba(255, 224, 156, 0.7) 0%,
+    rgba(255, 230, 190, 0.2) 45%,
+    rgba(255, 230, 190, 0) 70%
+  );
+  opacity: 0;
+}
+
+.o1 { left: 15%; width: sizem(240);  animation: floatUp 9s  ease-in infinite; animation-delay: 0s;
+  @media screen and (min-width: 768px) {left: 15%;width: size(240);}}
+.o2 { left: 35%; width: sizem(360);  animation: floatUp 12s ease-in infinite; animation-delay: 3s; 
+  @media screen and (min-width: 768px) {left: 45%;width: size(360);}}
+.o3 { left: -10%; width: sizem(200);  animation: floatUp 10s ease-in infinite; animation-delay: 6s;
+  @media screen and (min-width: 768px) {left: 70%;width: size(200);} }
+.o4 { left: 50%; width: sizem(160);  animation: floatUp 11s ease-in infinite; animation-delay: 8s; 
+  @media screen and (min-width: 768px) {left: 30%;width: size(160);}}
+
+@keyframes floatUp {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  15%  { opacity: 0.8; }
+  50%  { transform: translateY(-150%) translateX(20%); }
+  85%  { opacity: 0.4; }
+  100% { transform: translateY(-320%) translateX(-15%); opacity: 0; }
+}
 .t0 {
   position: absolute;
   width: 100%;
