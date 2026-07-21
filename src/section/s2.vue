@@ -19,7 +19,7 @@ s2<template>
 <div class="t2"  data-aos="fade-up" data-aos-delay="200">住的是城心，佇的是自己<br><br>
 美好的城市機能相間<br>
 號召專屬的生活節奏回歸<br><br>
-昌益在這裡，開啟松弛時光的邀約
+昌益在這裡，開啟鬆弛時光的邀約
       <div class="thread"></div></div>
 
 
