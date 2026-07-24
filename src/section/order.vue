@@ -107,10 +107,10 @@
   // padding-top: size(406);
   overflow: hidden;
   min-height: size(500);
-  //background-color: #00be6e;
-  background-image: url("./s1/bg.jpg");
-  background-size: auto;
-  background-position: top;
+  background: #e28b93 no-repeat;
+  background-image: url("./s1/bg1.jpg");
+  background-size: 100% auto;
+  background-position:center top;
 
   // margin-top: -4.5vw;
   .cursor-pointer {
@@ -301,8 +301,8 @@
   .order-section {
     min-height: sizem(800);
     position: relative;
-    background-color: #00be6e;
-    background-size: cover;
+    //background-color: #00be6e;
+    //background-size: cover;
     // overflow: hidden;
     // padding-top: sizem(200);
 
