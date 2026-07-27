@@ -602,7 +602,36 @@ presendB.append(
 
   try {
     if (!DEBUG_ONLY_A) {
-      fetch("https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec")
+      // 修改處
+      const scriptParams = new URLSearchParams();
+
+      for (const [k, v] of Object.entries(formData)) {
+        if (["policyChecked", "r_verify"].includes(k)) continue;
+        if (k === "area" && !v) continue;
+
+        // msg 轉成 message 或保持 msg 都可以
+        scriptParams.append(k, v ?? "");
+      }
+
+      // UTM
+      Object.entries(utm).forEach(([k, v]) => {
+        scriptParams.append(k, v);
+      });
+
+      // 額外固定欄位
+      scriptParams.append("date", new Date().toISOString());
+      scriptParams.append("campaign_name", info.caseName || "");
+      scriptParams.append(
+        "case_code",
+        info.case_code || info.caseid_j || info.caseid || ""
+      );
+
+      fetch(
+        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`,
+        {
+          method: "GET",
+        }
+      );
     }
 
     const requests = [
