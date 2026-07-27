@@ -10,8 +10,6 @@
         src="./s1/bg.jpg"
         alt=""
         class="bg"
-        data-aos="zoom-in"
-        data-aos-delay="600"
       >
     </picture>
       <img
@@ -19,15 +17,15 @@
         alt=""
         class="logo"
         data-aos="zoom-in"
-        data-aos-delay="600"
+        data-aos-delay="0"
       >
       <img
         src="./s1/t1.svg"
         alt=""
         class="t1"
         data-aos="zoom-in"
-        data-aos-delay="600"
-      >
+        data-aos-delay="200"
+      ><div class="c">3D透視模擬合成示意圖</div>
   </article>
 </template>
 
@@ -55,14 +53,17 @@
 .s1 {
   width: 100%;
   padding: 0;
-  font-size: size(18);
+  font-size: sizem(12);
   margin-bottom: 0px;
      height: sizem(470);
 
   
     @media screen and (min-width: 768px) {
      height: size(1080);
+  font-size: size(15);
     }
+    .c{position: absolute;bottom: 0.5em;right: 1em;color: #fff;
+      text-shadow: 0 0.2em .2em #000;}
 .bg{width: 100%; object-fit: cover;height: 100%;}
   .logo {
     position: absolute;

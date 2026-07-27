@@ -11,7 +11,7 @@
   <!--loading end-->
   <!--navigate
   <Nav v-if="config.showNav" />-->
-  <div class="home bg-[#000000] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
+  <div class="home bg-[#a9a09b] overflow-hidden font-['Noto_Sans_TC',sans-serif]">
 
     <S1 />
     <Order />
@@ -300,9 +300,6 @@ img {
   }
 }
 
-#order {
-  background: #352118;
-}
 </style>
 
 <script setup>
