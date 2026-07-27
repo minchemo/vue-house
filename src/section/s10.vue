@@ -2,7 +2,7 @@
   <article class="s10" ref="s10">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>文化城市</span>術館 陶博館 藝術聚落</h2>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>文化城市</span>美術館 陶博館 藝術聚落</h2>
         <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">藝術 自然成為每天的風景</h3>
     <p class="desc" data-aos="fade-up" data-aos-delay="400">鶯歌，不只是陶瓷之都，更擁有「國際宜居城市」的肯定。新北市美術館、陶瓷博物館、鳶山步道…形塑獨有的人文風景。充滿文化溫度的城市性格，從藝術展覽到假日散步，有如一場品味與靈感的美學小旅行。
 </p>
