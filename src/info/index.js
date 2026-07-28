@@ -9,7 +9,7 @@ export default {
   // address: "XXXXX",
   googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14458.048771030857!2d121.4580448144107!3d25.050623448985966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1778658685959!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/eLWxyc2yPaKc228G9",
-  // phone: "02-8993-6888",
+  phone: "02-8993-6888",
   fbLink: "https://www.facebook.com/61589892236402",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
   fbMessage: "https://m.me/61589892236402",
   line: "https://lin.ee/qakWswp",

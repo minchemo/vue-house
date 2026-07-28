@@ -24,7 +24,7 @@
         data-aos-delay="600"
       >
     </picture>
-    <img src="./s1/coming.svg" alt="" class="coming" data-aos="zoom-in" data-aos-delay="800">
+    <img src="./s1/t2.svg" alt="" class="coming" data-aos="zoom-in" data-aos-delay="800">
   </article>
 </template>
 
