@@ -316,7 +316,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter: invert(48%) sepia(76%) saturate(1464%) hue-rotate(143deg) brightness(87%) contrast(106%);
+    filter: brightness(0) invert(.3);
   }
 }
 
@@ -335,7 +335,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
 
-    background:#00494A;
+    background:linear-gradient(0deg, #900,#c00,#f30);
     .contact-item {
       flex: 1;
       padding: 0;
@@ -399,8 +399,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 <script setup>
 import info from "@/info"
 import { inject, ref } from "vue";
-const modalOpen = ref(false);
-const modalType = ref('');
+const contactModal = inject('contactModal')
+const modalOpen = contactModal.modalOpen
+const modalType = contactModal.modalType
 
 const go = () => {
   if (modalType.value == 'phone') {

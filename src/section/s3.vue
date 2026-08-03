@@ -1,5 +1,7 @@
 <template>
   <article class="s3" ref="s3">
+    <div class="img">
+    <img src="./s1/img.webp" data-aos="zoom-in-right"></div>
     <div class="main">
       <div class="txt">
         <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>三鐵競速</span>國道 × 台鐵 × 捷運</h2>
@@ -34,9 +36,18 @@
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-  background: #003838cc;
+ // background: #003838cc;
   z-index: 2;
 
+  .img{
+  left: auto;
+  transform: scaleX(-1);
+  right: 0;
+  @media screen and (max-width: 767px) {
+    transform: rotate(-90deg) translate(100%, 0%);
+    bottom: -30vw;
+  }
+}
   .main {
     @apply flex;
     margin: 0;

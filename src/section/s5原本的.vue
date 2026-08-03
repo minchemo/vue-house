@@ -1,11 +1,9 @@
 <template>
-  <article class="s11">
+  <article class="s5" ref="s5">
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>鶯歌地王</span>2500坪大社區 多元公設</h2>
-        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">鶯歌捷捷向上 鳴日大大有禮</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">捷運三鶯線通車，「鳴日之城」價值浮現，搶佔三鶯線房市第一波通車行情，起始站LB12鶯桃福德站+2500坪市心地王大基地＋桃園站前共同生活圈，三大地利優勢迎向鶯歌嶄新的生活時代，翻轉未來、快趁現在。
-</p>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0">溪福機構 × 新月建設<br>雙巨擘聯手</h2>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">在地深耕、品質卓越，以「第芬尼」、「富景」、「世界W」、「綠富綠」…等區域地標累積品牌實力；「鳴日之城」翻轉鶯桃雙城中軸，仰望微軟數據園區、遊賞千坪公園綠意，打造藝術科技城心鉅作。</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -20,56 +18,49 @@
         </SplideSlide>
       </Splide>
     </div>
+
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s11 {
-  @apply relative flex flex-col items-center justify-center text-[#fff];
+
+
+.s5 {
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  // height: size(800);
+  height:auto;
   padding:$pc-pa-tb 0 $pc-pa-tb 0;
   font-size:size(18);
-  gap:1.5em;
-  flex-wrap:nowrap;
-    flex-direction:column-reverse;
-    background: #003838cc;
-    z-index: 2;
+  gap:3em;
+  flex-wrap: wrap;
+    flex-direction:row-reverse;
+ // background: #003838cc;
+  z-index: 2;
+
   .main {
     @apply flex;
     margin: 0;
+    flex-basis: size(590);
   flex-direction: column;
-  text-align: center;
-    width: 100%;
+  text-align: justify;
 }
-
-.txt {
-  margin:2em auto 0 auto;
-  width: size(1500);
-}
-
   .slider {
     margin: 0;
     flex-basis: size(840);
     width: size(840);
-      height: size(844);
-    width: size(1500);
-    .caption {
-      left:1em;
-    }
+      height: size(1040);
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-    flex-basis: size(1500);
-      height: size(844);
+    flex-basis: size(840);
+      height: size(1040);
       
     }
-
     .splide__pagination{
-      justify-content: flex-end;
-      bottom: -2em;
+      left: calc(100% + 3em);
+      bottom: 13em;
+      justify-content: flex-start;
     }
   }
 }
@@ -79,20 +70,23 @@
 
 @media screen and (max-width: 767px) {
 
-  .s11 {
+  .s5 {
     @apply flex-col-reverse;
     height: auto;
     padding: 0;
   font-size:sizem(15);
   flex-wrap:nowrap;
-gap:0em;
+  margin-bottom:0em;
+  gap:0em;
 
   .main {
     padding: 0 sizem(32.5);
     width: 100%;
 }
+
 .txt {margin: 2em auto 5em;
 }
+
 
   .slider {
     height: auto;
@@ -100,14 +94,17 @@ gap:0em;
 
     .caption {
     font-size:sizem(12);  
-    left:sizem(5);
+    right:sizem(65);
     bottom:sizem(5);
     }
     .slide-item {
-      @apply bg-cover;
+      // @apply bg-cover;
       width: 100%;
     flex-basis: auto;
-      height: sizem(250);
+      height: sizem(330);
+  img{
+    object-fit: contain;
+  }
       
     }
   }
@@ -117,8 +114,8 @@ gap:0em;
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -144,28 +141,21 @@ const options = {
 
 const imgs = [
   {
-    img:new URL("./s11/1.jpg", import.meta.url).href ,
-    caption: "大廳"
+    img:new URL("./s5/1.jpg", import.meta.url).href ,
+    caption: "第芬尼"
   },
   {
-    img:new URL("./s11/2.jpg", import.meta.url).href ,
-    caption: "交誼廳"
+    img:new URL("./s5/2.jpg", import.meta.url).href ,
+    caption: "富景"
   },
   {
-    img:new URL("./s11/3.jpg", import.meta.url).href ,
-    caption: "KTV"
+    img:new URL("./s5/3.jpg", import.meta.url).href ,
+    caption: "世界W"
   },
   {
-    img:new URL("./s11/4.jpg", import.meta.url).href ,
-    caption: "兒童遊戲區"
-  },
-  {
-    img:new URL("./s11/5.jpg", import.meta.url).href ,
-    caption: "親子教室"
-  },
-  {
-    img:new URL("./s11/6.jpg", import.meta.url).href ,
-    caption: "健身房"
+    img:new URL("./s5/4.jpg", import.meta.url).href ,
+    caption: "綠富綠"
   },
 ]
 </script>
+

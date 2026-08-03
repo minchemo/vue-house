@@ -90,17 +90,17 @@ export default {
         offsetmo: "0",
     },{
         name: "雙軌並行",
-        target: ".s9",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "鶯桃舒適圈",
         target: ".s4",
         offset: "-60",
         offsetmo: "0",
     },{
+        name: "鶯桃舒適圈",
+        target: ".s5",
+        offset: "-60",
+        offsetmo: "0",
+    },{
         name: "文化城市",
-        target: ".s10",
+        target: ".s6",
         offset: "-60",
         offsetmo: "0",
   },{
@@ -110,26 +110,24 @@ export default {
         offsetmo: "0",
   },{
         name: "鶯歌地王",
-        target: ".s11",
+        target: ".s8",
         offset: "-60",
         offsetmo: "0",
-  },{
-        name: "立即來電",
-        target: ".contact-info",
-        offset: "",
-        type: 'btn'
-    },
-    {
-          name: "地圖導航",
-          target: ".gmap",
-          offset: "",
-          type: "btn",
-    }
-    ,{
-        name: "立即預約",
-        target: ".order",
-        offset: "",
-        type: 'btn'
+    }, {
+      name: "立即來電",
+      action: "phone",
+      offset: "",
+      type: 'btn'
+    }, {
+      name: "地圖導航",
+      action: "gmap",
+      offset: "",
+      type: "btn",
+    }, {
+      name: "立即預約",
+      target: ".order",
+      offset: "",
+      type: 'btn'
     },
 ],
 

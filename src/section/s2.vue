@@ -8,7 +8,7 @@
 </p>
       </div>
     <Fullview />
-    <div class="caption">圖說</div>
+    <div class="caption">基地空拍電腦修飾圖</div>
   </article>
 </template>
 
@@ -18,14 +18,14 @@
 .s2{
   @apply relative overflow-hidden bg-[#005890] text-[#fff];
   width: 100%;
- // height: size(1059);
   font-size:size(18);
+  z-index: 3;
   .txt {text-align: center;position: absolute;
-    top: 0;left: 0;right: 0;margin: auto;
+    top: 2em;left: 0;right: 0;margin: auto;
+    text-shadow: 0 0 15px #06C,0 0 3px #06CC;
 
 
-  padding-top:3em;z-index: 10;//margin-bottom:-6.3em ;
-    text-shadow: 0 0 10px #003838,0 0 3px #003838;
+  padding-top:3em;z-index: 10;
     span{
       border: 1px solid currentColor;
       display: block;
@@ -37,11 +37,9 @@
 
     }
   
-  //.subtitle{font-size: 1.4em;margin-top: .2em;letter-spacing: 0.4em;font-weight: 300;}
   }
   .viewbox{z-index: 2;
     margin: 0 0 0 0;
-   // top: -5vw;
   }
 }
 /* 螢幕尺寸標準 */
@@ -53,14 +51,14 @@
   .s2 {
    // height: sizem(550);
   font-size:sizem(15);
-  background: #007CBB;
+  background: #0060a4;
 /*   */
   .txt {//text-align: justify;
   padding-top:3.5em;width:sizem(310);margin:auto auto -4.3em auto;
       }
    
   .viewbox{height: sizem(770);
-    margin:sizem(0) 0 0 0;
+    margin:sizem(100) 0 0 0;
     top:0;}
 
 

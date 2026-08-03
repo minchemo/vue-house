@@ -9,7 +9,7 @@
     <img class="w-32" src="//h35.banner.tw/img//loading_w.gif" alt="loading" srcset="">
   </div>
   <!-- loading end -->
-  <Nav v-if="info.navList.length > 0" />
+   <Nav />
     <!-- 主字體 3選1
      font-['Noto_Serif_TC',serif]
      font-['Noto_Sans_TC',sans-serif]
@@ -19,13 +19,18 @@
     <S1 />
     <S2 />
     <S3 />
-    <S4 />
-    <S5 />
-    <S6 />
-    <S7 />
-    <S8 />
     <S9 />
+    <S4 />
+    <S10 />
+    <S7 />
+    <S11 />
+    <S8 />
     <Order />
+  <div class="allbg">
+    <!-- bg內容想做成滾動視差 去符合 allbg 的高度-->
+  <div class="bg">
+  </div>
+</div>
   <!--
     <S9 />
     <S1new />
@@ -58,18 +63,30 @@ img {
   height: unset;
   margin: 0 auto;
 }
-.home {
-  &::before {
-    content: "";
-    position:fixed;
-    z-index: -1;
-    top: 0;
-    left: 0; 
-    right: 0;
-    bottom: 0;
 
-  background: url("@/section/s1/bg.png") center top;
-  background-size: auto 100%;}
+.allbg{
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;height: 100%;z-index:0;
+  // background: url("@/section/s1/bg.jpg") center top;
+  // background-size: 270% auto;
+    @media screen and (min-width: 768px) {
+      background-size: 100% auto;
+    }
+
+img {
+  width: 100%;
+  height: auto;
+}
+  .bg{width: 100%;height: calc(100% + 100vw);
+  background: url("@/section/s1/bg.webp") center top;
+  background-size: 270% auto;
+    transform: translateY(0); // 初始位置
+    transition: transform 0.5s ease-out; // 平滑過渡效果（可選）
+    @media screen and (min-width: 768px) {
+      background-size: 100% auto;
+    }
+  }
+
 }
 
   .caption{
@@ -89,7 +106,6 @@ img {
     line-height: 1.7;
     width: 100%;letter-spacing: 0.03em;
     text-align:justify;
-    text-shadow: 0 0 10px #f60,0 0 3px #c00;
     z-index: 3;
   .title{
     @apply font-['Noto_Sans_TC',sans-serif];
@@ -98,6 +114,7 @@ img {
     line-height: 1.5;
     font-weight: 700;
     color: #FD3;
+    text-shadow: 0 0 10px #003838,0 0 3px #003838;
     span{
       border: 1px solid currentColor;
       display: block;
@@ -117,21 +134,10 @@ img {
   }
   .desc{
     margin: 0 0 0;
+    text-shadow: 0 0 10px #003838,0 0 3px #003838;
     b{}
   }
   }
-  
-  .img{position: absolute;top:calc(50% - #{size(1190*.5)});left: 0;width: auto;height: size(1190);object-fit: cover;z-index: -1;pointer-events: none;
-  img{height: 100%;width: auto;object-fit: cover;}
-  @media screen and (max-width: 767px) {
-    transform: rotate(-90deg) translate(100%, 0%);
-    transform-origin: 100% 100%;
-    top:auto;
-    left:auto;
-    bottom: 0;right: -5vw;height: 110vw;
-  img{height: 100%;}
-  }
-}
 .slider {
   @apply relative;
   z-index: 2;
@@ -249,6 +255,7 @@ img {
 </style>
 <script setup>
 import info from "@/info"
+import AOS from 'aos';
 import Nav from "@/layout/navbar.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
@@ -259,30 +266,30 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
-//import S11 from "@/section/s11.vue"
+import S10 from "@/section/s10.vue"
+import S11 from "@/section/s11.vue"
 import Order from "@/section/order.vue"
+import { computed, getCurrentInstance, ref, onMounted, onUnmounted } from "vue";
 
-import { onMounted, ref, provide } from "vue"
-
-import AOS from 'aos';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
+
+const config = ref({
+  showNav: false
+})
+
 onMounted(() => {
   window.onload = function () {
-    isLoading.value = false
+    isLoading.value = false;
     AOS.init({
       offset: 0,
-      duration: 2000
+      duration: 1500,
     });
   };
 
-})
-const modalOpen = ref(false)
-const modalType = ref('')
+});
 
-provide('contactModal', {
-  modalOpen,
-  modalType
-})
 </script>

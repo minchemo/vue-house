@@ -160,7 +160,7 @@ $o-title-c: #A30C24; //.order-title
     min-width: 800px;
   border-radius: 50px 50px 0px 0px;
   pointer-events: none;
-  background: linear-gradient(180deg, #003838 0%, rgba(0, 56, 56, 0.00) 100%);
+  background: linear-gradient(180deg, #C00 0%, #C000 100%);
  }
   }
   .order-title {
@@ -278,7 +278,9 @@ $o-title-c: #A30C24; //.order-title
 
   .send {
     font-size: 1.4em;
-    background:#056;
+    //background:#056;
+    background:linear-gradient(180deg, #FFE6AE 0%, #E89F00 49%, #BA7F00 50%, #B27700 100%);
+ 
     //border: 1px solid #FFF9;
     border: 0;
     padding: .7em 0;
@@ -600,7 +602,36 @@ presendB.append(
 
   try {
     if (!DEBUG_ONLY_A) {
-      fetch("https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec")
+      // 修改處
+      const scriptParams = new URLSearchParams();
+
+      for (const [k, v] of Object.entries(formData)) {
+        if (["policyChecked", "r_verify"].includes(k)) continue;
+        if (k === "area" && !v) continue;
+
+        // msg 轉成 message 或保持 msg 都可以
+        scriptParams.append(k, v ?? "");
+      }
+
+      // UTM
+      Object.entries(utm).forEach(([k, v]) => {
+        scriptParams.append(k, v);
+      });
+
+      // 額外固定欄位
+      scriptParams.append("date", new Date().toISOString());
+      scriptParams.append("campaign_name", info.caseName || "");
+      scriptParams.append(
+        "case_code",
+        info.case_code || info.caseid_j || info.caseid || ""
+      );
+
+      fetch(
+        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`,
+        {
+          method: "GET",
+        }
+      );
     }
 
     const requests = [

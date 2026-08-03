@@ -5,16 +5,14 @@
 <img src="./s1/lineicon.png" class="lineicon" data-aos="zoom-in" data-aos-delay="200" /> 
 </a>  -->
 	<!-- 
-		<img src="./s1/pc.jpg" class="t0">
-		<img src="./s1/00.jpg" class="t0">  -->
-    <div class="img">
-    <img src="./s1/img.webp" data-aos="zoom-in-right"></div>
+		<img src="./s1/pc.jpg" class="t0">  -->
+		<img src="./s1/00.jpg" class="t0">
+    <img src="./s1/img.webp" class="img"> 
     <h2 class="h2">{{ info.caseName }}</h2>
-    <h3 class="txt font-['Noto_Sans_TC',sans-serif]">
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-  <div class="t1" data-aos="zoom-in" data-aos-delay="200">2500坪壯闊美域</div>
-  <div class="t2" data-aos="zoom-in" data-aos-delay="400">市心公園宅</div>
-  <div class="t3" data-aos="zoom-in" data-aos-delay="600">邊間<span>2-3</span>房</div>
+    <h3 class="txt" data-aos="zoom-in" data-aos-delay="200">
+搶進三鶯首站 市心公園宅
+<span class="st1">2500坪壯闊美域｜邊間 2-3房</span>
     </h3>
     <!-- 
 <span class="st2">市心地標 珍稀2-3房</span>
@@ -48,56 +46,46 @@
   height: 100vh;
   font-size:size(63);
   }
+  .img{position: absolute;top: 0;left: 0;width: auto;height: 100%;object-fit: cover;z-index: -1;pointer-events: none;
+  @media screen and (max-width: 767px) {
+    transform: rotate(-90deg) translate(100%, 0%);
+    transform-origin: 100% 100%;
+    top:auto;
+    left:auto;
+    bottom: 0;right: 0;height: 100vw;
+  }
+}
 
 .h2{position: absolute;top: 0;left: 0;transform: translate(-200%);
         pointer-events: none;color: #fff0;}
 
   .t0{position: absolute;width: 100%;top: 0;left: 0; 
 	pointer-events: none;opacity: .3;z-index: 50;}
-  .logo{width:sizem(220);display: block;
-  //  margin: auto auto 1em auto;
+  .logo{width:sizem(246);
+    margin: auto auto 1em auto;
   @media screen and (min-width: 768px) {
     width:size(424);
- //   margin: auto auto 1em auto;
- //  left: 3em;
+    margin: auto auto 1em auto;
+    left: 3em;
 
   }
 }
-  .txt{text-align: center;line-height: 1.4;
-    margin: auto;
-    padding: 0 0 6.5em 0;
-    font-weight: 900;
-    font-size: 1.4em;
-    letter-spacing: 0.03em;
+  .txt{text-align: center;line-height: 1.5;
+    margin: 0 auto auto auto;
+    padding: 0 0 2.5em  0;
     @media screen and (min-width: 768px) {
     padding: 0;
-    left: 2.5em;
-    font-size: 1.2em;
-    }
-    .t1{margin-top: .8em;margin-bottom: -.2em;
-    }
-    .t2{/*border: 0px solid #fff;
-    border-width:0 1px;*/
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0;
-    &::before,
-    &::after{content: "";display: inline-block;width: 1px;height: 1em;background: #fff;vertical-align:  -0.1em;margin: 0 .5em;}
-
-    
-    @media screen and (min-width: 768px) {
-      display: inline-block; font-size: .65em;vertical-align: middle;
-      &::before{display: none;}
-    }
-    }
-    .t3{vertical-align: middle;font-size: .9em;margin-top: .5em;
-      span{color: #ff9;font-size: 1.3em;vertical-align: -0.1em;}
-    @media screen and (min-width: 768px) {
-      display: inline-block;margin-top: 0em;font-size: .65em;
-      span{line-height: 1;}
-    }
+    left: 3em;
     }
   }
+  .st1{display:block;font-size:.72em;
+    border: 1px solid currentColor;
+    margin:.5em auto .3em auto;
+    padding: 0em 1em;
+    width: fit-content;
+    color: #ff0;
+  }
+  .st2{font-size:.78em;display:block;}
 }
 </style>
 <script setup>

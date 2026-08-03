@@ -1,9 +1,13 @@
 <template>
   <article class="s5" ref="s5">
+    <div class="img">
+    <img src="./s1/img.webp" data-aos="zoom-in-right"></div>
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">溪福機構 × 新月建設<br>雙巨擘聯手</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">在地深耕、品質卓越，以「第芬尼」、「富景」、「世界W」、「綠富綠」…等區域地標累積品牌實力；「鳴日之城」翻轉鶯桃雙城中軸，仰望微軟數據園區、遊賞千坪公園綠意，打造藝術科技城心鉅作。</p>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>鶯桃舒適圈</span>站前百貨 鶯桃共享</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">成熟商圈 共享繁華</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">坐擁市心便利機能，鶯桃商圈、桃園站前百貨、新三沅市場，串聯星巴克、麥當勞、大樹藥局、連鎖超市與生活品牌；鳳福公園親子遊憩、鳳鳴國中國小學區完善，成熟機能完美融入日常生活節奏。
+</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -35,10 +39,19 @@
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-    flex-direction:row-reverse;
-  background: #003838cc;
-  z-index: 2;
-
+    flex-direction:row;
+   // background: #003838cc;
+    z-index: 2;
+    
+  .img{
+  left: auto;
+  transform: scaleX(-1);
+  right: 0;
+  @media screen and (max-width: 767px) {
+    transform: rotate(-90deg) translate(100%, 0%);
+    bottom: -30vw;
+  }
+}
   .main {
     @apply flex;
     margin: 0;
@@ -46,21 +59,23 @@
   flex-direction: column;
   text-align: justify;
 }
+
+
+
   .slider {
     margin: 0;
     flex-basis: size(840);
     width: size(840);
-      height: size(1040);
+      height: size(560);
     .slide-item {
       @apply bg-cover;
     flex-basis: size(840);
-      height: size(1040);
+      height: size(560);
       
     }
     .splide__pagination{
-      left: calc(100% + 3em);
-      bottom: 13em;
-      justify-content: flex-start;
+      right: calc(100% + 3em);
+      justify-content: flex-end;
     }
   }
 }
@@ -70,45 +85,43 @@
 
 @media screen and (max-width: 767px) {
 
-  .s5 {
-    @apply flex-col-reverse;
-    height: auto;
-    padding: 0;
-  font-size:sizem(15);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:0em;
 
-  .main {
-    padding: 0 sizem(32.5);
-    width: 100%;
+.s5 {
+  @apply flex-col-reverse;
+  height: auto;
+  padding: 0;
+font-size:sizem(15);
+flex-wrap:nowrap;
+margin-bottom:0em;
+gap:0em;
+
+.main {
+  padding: 0 sizem(32.5);
+  width: 100%;
 }
 
 .txt {margin: 2em auto 5em;
 }
 
 
-  .slider {
-    height: auto;
-    width: 100%;
+.slider {
+  height: auto;
+  width: 100%;
 
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(65);
-    bottom:sizem(5);
-    }
-    .slide-item {
-      // @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(330);
-  img{
-    object-fit: contain;
+  .caption {
+  font-size:sizem(12);  
+  right:sizem(5);
+  bottom:sizem(5);
   }
-      
-    }
+  .slide-item {
+    @apply bg-cover;
+    width: 100%;
+  flex-basis: auto;
+    height: sizem(250);
+    
   }
-  }
+}
+}
 }
 </style>
 <script setup>
@@ -142,19 +155,19 @@ const options = {
 const imgs = [
   {
     img:new URL("./s5/1.jpg", import.meta.url).href ,
-    caption: "第芬尼"
+    caption: "新光三越 站前商圈"
   },
   {
     img:new URL("./s5/2.jpg", import.meta.url).href ,
-    caption: "富景"
+    caption: "桃鶯全聯星巴克"
   },
   {
     img:new URL("./s5/3.jpg", import.meta.url).href ,
-    caption: "世界W"
+    caption: "新三沅市場"
   },
   {
     img:new URL("./s5/4.jpg", import.meta.url).href ,
-    caption: "綠富綠"
+    caption: "鶯桃商圈"
   },
 ]
 </script>

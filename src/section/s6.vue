@@ -1,9 +1,13 @@
 <template>
-  <article class="s6">
+  <article class="s6" ref="s6">
+    <div class="img">
+    <img src="./s1/img.webp" data-aos="zoom-in-right"></div>
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0">當代美學地標<br v-if="isMobile"> 榮耀整座城市</h2>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">鶯歌市心地王開天闢地！2500坪大砌開發前所未有！全新美麗的現代建築群壯闊氣勢，外觀造型拉高天際線，簡潔對稱典雅氣質，營造沉穩內斂的和諧美感，創新優雅街廓，重塑都市景觀，成為鄰里美好的菁英生活聚落。</p>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>文化城市</span>美術館 陶博館 藝術聚落</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">藝術 自然成為每天的風景</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">鶯歌，不只是陶瓷之都，更擁有「國際宜居城市」的肯定。新北市美術館、陶瓷博物館、鳶山步道…形塑獨有的人文風景。充滿文化溫度的城市性格，從藝術展覽到假日散步，有如一場品味與靈感的美學小旅行。
+</p>
     </div>
     </div>
     <div class="slider" data-aos="fade">
@@ -18,56 +22,55 @@
         </SplideSlide>
       </Splide>
     </div>
+
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s6 {
-  @apply relative flex flex-col items-center justify-center text-[#fff];
+  @apply relative flex items-center justify-center text-[#fff];
   width: 100%;
-  // height: size(800);
+  height:auto;
   padding:$pc-pa-tb 0 $pc-pa-tb 0;
   font-size:size(18);
-  gap:1.5em;
-  flex-wrap:nowrap;
-    flex-direction:column-reverse;
-    background: #003838cc;
+  gap:3em;
+  flex-wrap: wrap;
+    flex-direction:row-reverse;
+    //background: #003838cc;
     z-index: 2;
+  .img{
+  @media screen and (max-width: 767px) {
+    bottom: -30vw;
+  }
+}
   .main {
     @apply flex;
     margin: 0;
+    flex-basis: size(590);
   flex-direction: column;
-  text-align: center;
-    width: 100%;
+  text-align: justify;
 }
 
-.txt {
-  margin: auto;
-  width: size(1500);
-}
+
 
   .slider {
     margin: 0;
     flex-basis: size(840);
     width: size(840);
-      height: size(844);
-    width: size(1500);
-    .caption {
-      left:1em;
-    }
+      height: size(560);
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-    flex-basis: size(1500);
-      height: size(844);
+    flex-basis: size(840);
+      height: size(560);
       
     }
-
     .splide__pagination{
-      justify-content: flex-end;
-      bottom: -2em;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     }
   }
 }
@@ -77,46 +80,50 @@
 
 @media screen and (max-width: 767px) {
 
-  .s6 {
-    @apply flex-col-reverse;
-    height: auto;
-    padding: 0;
-  font-size:sizem(15);
-  flex-wrap:nowrap;
+
+.s6 {
+  @apply flex-col-reverse;
+  height: auto;
+  padding: 0;
+font-size:sizem(15);
+flex-wrap:nowrap;
+margin-bottom:0em;
 gap:0em;
 
-  .main {
-    padding: 0 sizem(32.5);
-    width: 100%;
+.main {
+  padding: 0 sizem(32.5);
+  width: 100%;
 }
+
 .txt {margin: 2em auto 5em;
 }
 
-  .slider {
-    height: auto;
-    width: 100%;
 
-    .caption {
-    font-size:sizem(12);  
-    left:sizem(5);
-    bottom:sizem(5);
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
-    }
+.slider {
+  height: auto;
+  width: 100%;
+
+  .caption {
+  font-size:sizem(12);  
+  right:sizem(5);
+  bottom:sizem(5);
   }
+  .slide-item {
+    @apply bg-cover;
+    width: 100%;
+  flex-basis: auto;
+    height: sizem(250);
+    
   }
+}
+}
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -140,22 +147,18 @@ const options = {
   type: 'loop'
 }
 
-const imgs = [
+const imgs =  [
+  {
+    img:new URL("./s6/3.jpg", import.meta.url).href ,
+    caption: "鶯歌老街"
+  },
   {
     img:new URL("./s6/1.jpg", import.meta.url).href ,
-    caption: "外觀3D 日禾 日"
+    caption: "鶯歌美術館"
   },
   {
     img:new URL("./s6/2.jpg", import.meta.url).href ,
-    caption: "外觀3D 日禾 夜"
-  },
-  {
-    img:new URL("./s6/3.jpg", import.meta.url).href ,
-    caption: "外觀3D 日安 日"
-  },
-  {
-    img:new URL("./s6/4.jpg", import.meta.url).href ,
-    caption: "外觀3D 日安 夜"
+    caption: "鶯歌陶瓷博物館"
   },
 ]
 </script>

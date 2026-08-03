@@ -1,10 +1,12 @@
 <template>
   <article class="s4" ref="s4">
+    <div class="img">
+    <img src="./s1/img.webp" data-aos="zoom-in-right"></div>
     <div class="main">
       <div class="txt">
-        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>鶯桃舒適圈</span>站前百貨 鶯桃共享</h2>
-        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">成熟商圈 共享繁華</h3>
-    <p class="desc" data-aos="fade-up" data-aos-delay="400">坐擁市心便利機能，鶯桃商圈、桃園站前百貨、新三沅市場，串聯星巴克、麥當勞、大樹藥局、連鎖超市與生活品牌；鳳福公園親子遊憩、鳳鳴國中國小學區完善，成熟機能完美融入日常生活節奏。
+        <h2 class="title" data-aos="fade-up" data-aos-delay="0"><span>雙軌並行</span>國道 × 台鐵 × 捷運</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="0">北北桃精華 輕鬆速可達</h3>
+    <p class="desc" data-aos="fade-up" data-aos-delay="400">捷運三鶯線風光通車，串聯雙北含金量最高的板南線，往返東區、信義商圈；台鐵鳳鳴站約25分鐘板橋車站，約35分鐘台北車站；「鳴日之城」透過UBIKE+公車＋捷運＋台鐵多元轉乘，輕鬆移動雙城生活，大幅提升通勤效率。
 </p>
     </div>
     </div>
@@ -37,9 +39,15 @@
   font-size:size(18);
   gap:3em;
   flex-wrap: wrap;
-    flex-direction:row;
-    background: #003838cc;
+    flex-direction:row-reverse;
+    // background: #003838cc;
     z-index: 2;
+    
+  .img{
+  @media screen and (max-width: 767px) {
+    bottom: -30vw;
+  }
+}
   .main {
     @apply flex;
     margin: 0;
@@ -62,8 +70,8 @@
       
     }
     .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     }
   }
 }
@@ -140,22 +148,22 @@ const options = {
   type: 'loop'
 }
 
-const imgs = [
+const imgs =  [
   {
     img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: "新光三越 站前商圈"
+    caption: "三鶯線 鶯桃福德"
   },
   {
     img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: "桃鶯全聯星巴克"
+    caption: "三鶯線 鶯桃福德"
   },
   {
     img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: "新三沅市場"
+    caption: "台鐵鳳鳴車站"
   },
   {
     img:new URL("./s4/4.jpg", import.meta.url).href ,
-    caption: "鶯桃商圈"
+    caption: "台鐵鳳鳴車站"
   },
 ]
 </script>
