@@ -1,45 +1,29 @@
 <template>
-  <article class="s1" id="s1">
-    <!--  
-    <img src="./s1/pc.jpg" class="t0" v-if="!isMobile" />
-    <img src="./s1/mo.jpg" class="t0" v-else />  -->
-    <img src="./s1/bg.jpg" class="bg" />
-    <img src="./s1/top.png" class="top" alt="top" data-aos="fade" data-aos-delay="200">
-    <div class="img" data-aos="fade-right" data-aos-delay="200">
-    <img src="./s1/img.webp" alt="img"></div>
-    <img src="./s1/logo.svg" class="logo" />
-    <div class="t1 font-['Noto_Serif_TC',serif]">城市C位 3亮登場！<br>訂簽3％、捷運3分鐘、完美3房</div>
-    <!-- <div class="flower" data-aos="zoom-out">
-      <div class="p1"><img src="./s1/s1p1.png" alt="flower" /></div>
-      <div class="p2" v-if="!isMobile"><img src="./s1/s1p2.png" alt="flower" /></div>
-      <div class="p3"><img src="./s1/s1p3.png" alt="flower" /></div>
-      <div class="p4" v-if="!isMobile"><img src="./s1/s1p4.png" alt="flower" /></div>
-      <div class="p5"><img src="./s1/s1p5.png" alt="flower" /></div>
-      <div class="p6"><img src="./s1/s1p6.png" alt="flower" /></div>
-      <div class="p7"><img src="./s1/s1p7.png" alt="flower" /></div>
-      <div class="p8"><img src="./s1/s1p2.png" alt="flower" /></div>
+  <article class="s1 relative" id="s1">
+    <img src="./s1/mo.jpg" class="t0">
+    <div class="bg">
+      <img src="./s1/i2.webp" alt="i2">
+      <img src="./s1/i1.webp" alt="i1">
     </div>
-    <img src="./s1/tl.svg" class="tl" alt="tl" data-aos="fade-right" data-aos-delay="200">
-    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="fade-up" data-aos-delay="0">
-    <img src="./s1/t1.svg" class="t1" alt="雙捷加持 天生好運" data-aos="fade-up" data-aos-delay="200">
-    <img src="./s1/t2.svg" v-if="!isMobile" class="t2" alt="板南三鶯雙捷運" data-aos="fade-up" data-aos-delay="400">
-    <img src="./s1/t2m.svg" v-else class="t2" alt="板南三鶯雙捷運" data-aos="fade-up" data-aos-delay="400">
-    <img src="./s1/slogo.svg" class="slogo" alt="slogo" data-aos="fade-up" data-aos-delay="600">
-  -->
-    <!-- 
-    <img src="./s1/smilecity.svg" alt="smilecity" class="smilecity" />
-    <img src="./s1/logo.svg" class="logo" />
-    <img src="./s1/t1.svg" class="t1" />  -->
+    <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./s1/t1.svg" alt="logo" class="t1" data-aos="zoom-in" data-aos-delay="200">
+    
+    <img v-if="canPlayWebP" src="./s1/0607.webp" class="unicorn" alt="unicorn">
+<img v-else src="./s1/0609.png" class="unicorn" alt="unicorn">
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-@keyframes op {
-  50% {
-    opacity: 0;
-  }
+.t0 {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  pointer-events: none;
+  z-index: 9;
+  opacity: .0;
 }
 
 @keyframes an {
@@ -49,124 +33,113 @@
 }
 
 .s1 {
-  @apply relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    height: calc(100dvh - sizem(63));
-    min-height: sizem(604);
-    max-height: sizem(750);
-  background: #192C57;
-  /* background: url("./s1/bg.jpg") center center;
-  background-size: cover; */
-
+  font-size: sizem(11);
+  background: #EB6120;
+  height: sizem(667);
 
   @media screen and (min-width: 768px) {
+    font-size: size(27);
+    justify-content: space-between;
+    padding: 0;
     height: 100vh;
     min-height: size(900);
-    max-height: size(1070);
+    max-height: size(1080);
+
   }
 
-  .t0 {
+  .bg {
+    width: 253%;
+    height: 100%;
     position: absolute;
-    width: 100%;
-   top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 10;
-    opacity: .2;
-  }
-  .bg{
-    position: absolute;
-    left: 0;
-    top:  sizem(-40);
-    width: 100%;
-    object-fit: cover;
-    height: calc(100% - sizem(165));
-    @media screen and (min-width: 768px) {
-    left: 0;
-    top: calc(80% + #{size(0 - 1080 * .80)});
-    width: 100%;
-    height: auto;
+    bottom: sizem(-100);
+    left: sizem(0);
 
-    }
-  
-  }
-  .top{
-    position: absolute;
-    left:sizem(-194);
-    top: 0;
-    width: sizem(764);
-    @media screen and (min-width: 768px) {
-    top: calc(30% + #{size(0 - 1080 * .30)});
-    left: 0;
-    width: 100%;
-    }
-  
-  }
-  .img{
-    position: absolute;
-    left:30%;
-    top:  sizem(31);
-//background: #0006;
-   //top: calc(50% + #{size(81 - 1080 * .50)});
-    width: auto;
-    height:calc(100% - #{sizem(255)}) ;
-    img{height: 100%;transform: translateX(-68%);}
-    @media screen and (min-width: 768px) {
-    left:50%;
-    top:  size(81);
-      height:calc(100% - #{size(130)}) ;
-    img{transform: translateX(-118%);}
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+
+      &:nth-child(1) {
+        width: 106.5%;
+        transform: translateX(2%);
+        transform-origin: 0 100%;
+        animation: an 10s linear infinite alternate;
+      }
+
 
     }
-  
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      bottom: calc(30% + #{size(-70 - 1080 * .3)});
+      right: 0;
+      left: auto;
+    }
+
   }
 
+  .unicorn {
+    position: absolute;
+    top: sizem(385);
+    left: sizem(18);
+    width: sizem(320);
+    display: block;
+    aspect-ratio: 1/1;
+
+    @media screen and (min-width: 768px) {
+      top: size(204);
+      top: calc(50% + #{size(204 - 1080 * .5)});
+      left: size(103);
+      width: size(822);
+
+    }
+  }
 
   .logo {
     position: absolute;
-    left:sizem(32);
-    width: sizem(309);
-    top: auto;
-    bottom:sizem(100);
+    top: sizem(106);
+    right: sizem(46);
+    width: sizem(280);
+    margin: 0;
 
     @media screen and (min-width: 768px) {
-    bottom:auto;
-    left:  size(928);
-    top: calc(30% + #{size(240 - 1080 * .30)});
-    width: size(590);
+      top: size(159);
+      top: calc(55% + #{size(159 - 1080 * .55)});
+      right: size(230);
+      width: size(714);
+
     }
   }
 
   .t1 {
     position: absolute;
-    bottom: sizem(45);
-    left: 0;
+    top: sizem(310);
     right: 0;
-    color: #fff;
-    text-align: center;
-  font-size: sizem(22);
-  text-shadow: 0 0.02em 0.37em #00165E;
+    left: 0;
+    margin: auto;
+    width: sizem(244);
 
     @media screen and (min-width: 768px) {
-    bottom:auto;
-    top: calc(50% + #{size(528 - 1080 * .50)});
-    left: size(615);
-     // top: calc(45% + #{size(668 - 1070 * .45)});
-   //   width: size(486);
-      font-size: size(46);
-      line-height: 1.4;
-      font-weight: 700;
+      top: size(610);
+      top: calc(55% + #{size(610 - 1080 * .55)});
+      margin: 0;
+      right: size(317);
+      left: auto;
+      width: size(549);
+
     }
   }
 
 
 }
-
 </style>
 <script setup>
+import info from "@/info"
 import { computed, getCurrentInstance, ref, inject } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
@@ -178,4 +151,8 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
+const canPlayWebP = document.createElement('canvas')
+  .toDataURL('image/webp')
+  .startsWith('data:image/webp')
+
 </script>
