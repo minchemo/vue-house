@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#4DB0B5] text-[#333]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFE8BD] text-[#333]">
     <S1 />
     <S2 />
     <S3 />
@@ -18,9 +18,9 @@
     <S5 />
     <S6 />
     <S7 />
-    <S8 />
+    <!-- <S8 />
     <S9 />
-    <!-- <S2v /> -->
+    <S2v /> -->
     <!--
     <div class="bg">
       <img src="@/section/s1/bg.jpg" />
@@ -63,8 +63,10 @@ img {
 
 .home {
     width: 100%;
+  font-size: sizem(12);
 
     @media screen and (min-width: 768px) {
+  font-size: size(22);
     }
 }
 
@@ -85,40 +87,41 @@ img {
 
 .txt {
   position: relative;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.6;
   width: 100%;
   letter-spacing: 0em;
-  text-align: justify;
+  text-align: center;
   z-index: 3;
 
   .title {
-    font-size: 2.1em;
-    margin: 0em auto 0.3em;
+    font-size: 1.9em;
+    margin: 0em auto 0.5em;
     line-height: 1.38;
     font-weight: 700;
     letter-spacing: 0em;
+    Font-family: 'Noto Serif TC',serif;
     b {
       font-size: 1.2em;
       line-height: 1;
     }
   @media screen and (min-width: 768px) {
-    font-size: 3.18em;
-    margin: 0em auto 0.1em;
+    font-size: 2.1em;
+    margin: 0em auto 0.3em;
+  text-align: justify;
 
   }
   }
 
   .subtitle {
     font-size: 1.2em;
-    font-weight: 500;
-    text-align: center;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0em;
   margin-bottom: 0.4em;
   @media screen and (min-width: 768px) {
-    font-size: 1.54em;
+    font-size: 1.1em;
     
   }
   }
@@ -186,7 +189,7 @@ img {
     font-size: size(15);
     bottom: 0;
     gap: .5em;
-    color: #fff;
+    color: #CCC;
 
     li {
       button {
@@ -203,13 +206,14 @@ img {
           width: 100%;
           height: 100%;
         display: block;
-          background-color: currentColor;
-          border-radius: 0;
-          opacity: .5;
+       //   background-color: currentColor;
+          border-radius: 50%;
+      //    opacity: .5;
           left: 0;
           top: 0;
           transform: scale(1);
           transition: transform .5s, opacity .5s;
+          border: 3px solid currentColor;
         }
 
         &:hover {
@@ -218,6 +222,7 @@ img {
         }
 
         &.is-active {
+      color: #FFF;
           &::before {
             transform: scale(1);
             opacity: 1;
@@ -319,8 +324,8 @@ import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
+/* import S8 from "@/section/s8.vue"
+import S9 from "@/section/s9.vue"  */
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref, provide } from "vue"

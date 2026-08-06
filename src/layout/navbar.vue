@@ -124,7 +124,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #110862b3;
+        background: #e73636cc;
         width:100%;
         height: size(60);
         z-index: 5;
@@ -166,14 +166,14 @@
                 }
             }
             &.btn2{
-                background: linear-gradient(80deg, #C4A46F 14%, #E9DCA2 46%, #D1BC86 74%, #E5D69C 99%);
+                background: #6DAA43;
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
-                color: #493366;
+                color: #fff;
 
                 &:hover {
-                    background:linear-gradient(60deg, #C4A46F 14%, #fff4c3 46%, #D1BC86 74%, #E5D69C 99%);
+                    background:#528a2d;
                     &:after {
                         width:0;
                     }

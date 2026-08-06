@@ -1,7 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <div class="order-title font-['Noto_Serif_TC',serif]" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
@@ -96,8 +96,8 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-[#000]">
+          本人知悉並同意<label for="policy-modal" class="text-[#C00] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -142,11 +142,11 @@
   max-height: 4em;
   opacity: 1;
 }
-$o-title-c: #fff; //.order-title
+$o-title-c: #EB6120; //.order-title
 
 .order {
   width: 100%;
-  padding-top: size(40);
+  padding-top: size(100);
   font-size: 16px;
 
   .order-section {
@@ -164,30 +164,30 @@ $o-title-c: #fff; //.order-title
 }
   */
   .order-title {
-  font-size: size(45);
-  font-weight: 600;
-  color: $o-title-c;
-  padding-top:1.5em;
-  margin: auto;
     width: min(1200px, 95%); //最大1200px
-display: flex;
-align-items: center;
-gap: .5em;
-&::after,
-&::before{
-  content: "";
-  height: 1px;
-  background: currentColor;
-  flex: 1;
-}
-
+    margin: 0 auto;
+    font-size: 2.9em;
+    letter-spacing: .3em;
+    font-weight: 500;
+    color: $o-title-c;
+    margin-top: 1.8em;
+    margin-bottom: 0em;
+    padding: .1em 0;
+    display: flex;
+    align-items: center;
+    &::after{
+      content: "";
+      flex:1;
+      height: 1px;
+      margin-left: .2em;
+      background-color: $o-title-c;
+    }
   }
 
   .order-subTitle {
-    font-size: 1.2em;
+    font-size: 1.0625em;
     padding-top: .5em;
     letter-spacing: .1em;
-  color: #fff;
   }
 
   .form {
@@ -217,7 +217,7 @@ gap: .5em;
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #fff6;
+      background-color: #EB6120;
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
@@ -290,22 +290,21 @@ gap: .5em;
 
   .send {
     font-size: 1.4em;
-    background:#006A70;
-    border: 1px solid #FFF9;
-    //border: 0;
+  background: #00BBDD;
+    //border: 1px solid #FFF9;
+    border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
     line-height: 1.5;
     text-indent: 0.5em;
     border-radius: 2em;
     text-align: center;
-    width: 18em;
+    width: 14em;
     z-index: 10;
     color: #fff;
     position: relative;
     transition: transform .5s;
-    margin-bottom: 4em;
-    font-weight: 700;
+    margin-bottom: 2em;
     &:hover{transform: scale(1.1);}
   }
   .send-load{color: #fff;}
@@ -315,7 +314,9 @@ gap: .5em;
     color: #000;
     position: relative;
     z-index: 10;
-    input[type="checkbox"] {border: 2px solid #666;background-color:#fff;}
+    input[type="checkbox"] {border: 2px solid #666;
+    background-color: #fff;
+    }
   }
  
 }
@@ -338,7 +339,7 @@ gap: .5em;
 
   .order {
     width: 100%;
-  padding-top: sizem(30);
+  padding-top: sizem(60);
     padding-bottom: sizem(63);
 
     .cus-divider {
@@ -457,6 +458,8 @@ const fieldLabelMap = {
   gender: "性別",
   city: "居住縣市",
   area: "居住地區",
+  policyChecked: "個資聲明",
+  r_verify: "我不是機器人",
   // 動態欄位從 selectFields 自動取 title
   ...Object.fromEntries(
     Object.entries(selectFields).map(([k, v]) => [k, v.title])
@@ -484,7 +487,8 @@ watch(() => formData.city, (val) => {
 // ==========================
 const isRequired = (key) => {
   if (key === "name" || key === "phone") return true
-
+  if (key === "policyChecked") return true
+  if (key === "r_verify") return true
   if (key === "gender") return formConfig.gender?.required
   if (key === "city") return locationConfig.city?.required
   if (key === "area") return locationConfig.area?.required

@@ -1,16 +1,26 @@
 <template>
-  <article class="s5 " ref="s5">
+  <article class="s5" ref="s5">
+    <div class="bg">
+      <img src="./s1/c3.png" alt="i2">
+    </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">捷運雙線 · 自在切換</h3>
-        <div class="subtitle" data-aos="fade-up" data-aos-delay="0">精彩生活 一鍵啟動</div>
-        <p class="desc" data-aos="fade-up" data-aos-delay="0">坐擁中山路×中正路雙軸，<br v-if="isMobile" />捷運紅線串連高鐵、機場兩大門戶，<br
-            v-if="isMobile" />捷運橘線漫遊駁二、文化中心、衛武營，<br v-if="isMobile" />藝文風景一路綻放。</p>
-        <div class="en font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">Easily Accessible</div>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">國鉅機構全球榮耀<br>
+世界級設計殊榮</h3>
+       <!--  <hr class="hr" data-aos="fade-up" data-aos-delay="400" /> -->
+        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+          【國華綻】榮獲 2025 MUSE Design Awards<br>
+美國繆思設計大獎 建築外觀設計金獎殊榮<br>
+【國華綻】營造團隊-德川營造<br>
+榮獲國家優良營造商認證標章 第一品牌<br>&nbsp;
+</p>
+        <div class="subtitle" data-aos="fade-up" data-aos-delay="200">防水保固五年 購屋十八大保證</div>
+        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+          國鉅機構深耕大台北，從新莊、三峽、中和、五股到八里、鶯歌，精選潛力地段，擘劃城市未來。從建築美學到營建品質，贏得世界級大賞與國家品質認證，完善售服與保固，讓家成為品味人生的豐盛收藏。<br>&nbsp;
+</p>
       </div>
     </div>
-
-    <div class="slider">
+    <div class="slider" data-aos="fade">
       <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
@@ -28,63 +38,93 @@
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
-
+@keyframes an {
+  to {
+    transform: translateX(0%);
+  }
+}
 
 
 .s5 {
-  @apply relative flex items-center justify-center text-[#fff] bg-[#5D8EB3];
+  @apply relative flex justify-center bg-[#FFE8BD];
   width: 100%;
   height: auto;
-  padding: 4em 0 2.7em;
-  font-size: size(22);
-  gap: 2.3em;
+  padding: 6.9em 0 6.9em 0;
+  gap: 4em;
   flex-wrap: wrap;
-  //overflow: hidden;
-  flex-direction: column;
-
-  .txt {
-    text-align: center;
+  flex-direction: row-reverse;
+  align-items: center;
 
 
+  .bg {
+    width: 253%;
+    height: 100%;
+    position: absolute;
+    bottom: sizem(-100);
+      right: 0;
+      transform: scaleX(-1);
 
-    .en {
+    img {
       position: absolute;
-      top: size(760);
-      left: calc(50% - 6.5em);
+      bottom: 0;
+      right: 0;
+        width: 100%;
+        transform: translateX(-2%);
+        transform-origin: 0 100%;
+        animation: an 5s linear infinite alternate;
+
+
     }
+
+    @media screen and (min-width: 768px) {
+      width: 35%;
+      bottom: 0;
+      left: auto;
+    }
+
+  }
+  .main {
+    @apply flex;
+    margin: 0;
+    width: size(590);
+    flex-direction: column;
+    text-align: justify;
+    position: relative;
+    z-index: 3;
+}
+  .txt {
+    // margin: auto auto 3vw auto;
+    padding: 0;
+  //  width: size(455);
+      color: #666;
+
+    .title {
+      color: #EB6120;
+    }
+
   }
 
-
-
+  // size(110)
 
   .slider {
-    // background: #fff;
-    margin: 0;
-    width: size(1500);
-    height: size(670);
-    overflow: hidden;
-    border-radius: 0 size(180) 0 0;
-    // border: size(3) solid #7C519F;
-    //  padding: size(10);
-
+    margin: 0 0 0 0;
+    flex-basis: size(840);
+    width: size(840);
+    height: size(560);
 
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-      height: size(630);
+      flex-basis: size(840);
+      width: size(840);
+      height: size(560);
 
     }
 
     .splide__pagination {
-      //   left: calc(100% + 3em);
-      bottom: -2.2em;
-      justify-content: flex-end;
-      color: #fff;
-      z-index: 10;
+      left: calc(100% + 3em);
+      justify-content: flex-start;
     }
   }
-
-
 }
 
 /* 螢幕尺寸標準 */
@@ -95,31 +135,43 @@
 
 
   .s5 {
-    @apply flex-col;
+  flex-direction: column-reverse;
     height: auto;
-    font-size: sizem(12);
+    padding: 0;
+    font-size: sizem(13);
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    padding: 5em 0 0;
+
+.bg{
+  // top:sizem(270);
+  bottom: sizem(0);
+  width: 70%;
+}
+
+
+
+    .main {
+      padding: 0 sizem(32.5);
+      width: 100%;
+    }
 
     .txt {
-      margin-bottom: 3em;
-
-      .en {
-        top: sizem(395);
-        left: calc(50% - 6em);
-      }
+      margin: 4em auto 7em;
+      padding: 0;
+      width: auto;
     }
 
 
     .slider {
       height: auto;
       width: 100%;
-      padding: 0;
-      border: 0;
-      border-radius: 0;
 
+      .caption {
+        font-size: sizem(12);
+        right: sizem(5);
+        bottom: sizem(5);
+      }
 
       .slide-item {
         @apply bg-cover;
@@ -160,18 +212,14 @@ const options = {
   type: 'loop'
 }
 
-const imgs = computed(() => [
+const imgs = [
   {
-    img: isMobile.value ? new URL("./s5/1.jpg", import.meta.url).href : new URL("./s5/1.webp", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s5/1.jpg", import.meta.url).href,
+    caption: "國華站"
   },
   {
-    img: isMobile.value ? new URL("./s5/2.jpg", import.meta.url).href : new URL("./s5/2.webp", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s5/2.jpg", import.meta.url).href,
+    caption: "鶯歌車站"
   },
-  {
-    img: isMobile.value ? new URL("./s5/3.jpg", import.meta.url).href : new URL("./s5/3.webp", import.meta.url).href,
-    caption: "情境示意圖"
-  },
-]);
+]
 </script>

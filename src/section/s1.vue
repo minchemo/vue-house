@@ -1,6 +1,6 @@
 <template>
   <article class="s1 relative" id="s1">
-    <img src="./s1/mo.jpg" class="t0">
+    <!-- <img src="./s1/pc.jpg" class="t0"> -->
     <div class="bg">
       <img src="./s1/i2.webp" alt="i2">
       <img src="./s1/i1.webp" alt="i1">
@@ -23,7 +23,7 @@
   left: 0;
   pointer-events: none;
   z-index: 9;
-  opacity: .0;
+  opacity: .3;
 }
 
 @keyframes an {
@@ -39,8 +39,10 @@
   align-items: center;
   font-size: sizem(11);
   background: #EB6120;
-  height: sizem(667);
-
+  height: sizem(667);   // 給不支援 svh 的舊瀏覽器當 fallback
+  height: 100svh;  // 手機工具列跳動问题的正解，數值固定不受工具列影響
+    min-height: sizem(667);
+    max-height: sizem(812);
   @media screen and (min-width: 768px) {
     font-size: size(27);
     justify-content: space-between;
@@ -55,7 +57,7 @@
     width: 253%;
     height: 100%;
     position: absolute;
-    bottom: sizem(-100);
+    bottom: sizem(-20);
     left: sizem(0);
 
     img {
@@ -85,7 +87,7 @@
 
   .unicorn {
     position: absolute;
-    top: sizem(385);
+    bottom: sizem(45);
     left: sizem(18);
     width: sizem(320);
     display: block;
@@ -102,14 +104,16 @@
 
   .logo {
     position: absolute;
-    top: sizem(106);
+    top: sizem(76);
+      top: calc(55% + #{sizem(76 - 667 * .55)});
+
     right: sizem(46);
     width: sizem(280);
     margin: 0;
 
     @media screen and (min-width: 768px) {
       top: size(159);
-      top: calc(55% + #{size(159 - 1080 * .55)});
+      top: calc(50% + #{size(159 - 1080 * .50)});
       right: size(230);
       width: size(714);
 
@@ -118,7 +122,8 @@
 
   .t1 {
     position: absolute;
-    top: sizem(310);
+    top: sizem(260);
+      top: calc(50% + #{sizem(260 - 667 * .50)});
     right: 0;
     left: 0;
     margin: auto;
@@ -128,9 +133,9 @@
       top: size(610);
       top: calc(55% + #{size(610 - 1080 * .55)});
       margin: 0;
-      right: size(317);
+      right: size(234);
       left: auto;
-      width: size(549);
+      width: size(710);
 
     }
   }

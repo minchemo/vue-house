@@ -87,15 +87,60 @@ export default {
     /*
 */
     {
-        name: "雙核心地段",
+        name: "新北門戶",
         target: ".s3",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "交通中軸",
+        name: "三鐵競速",
         target: ".s4",
         offset: "-60",
         offsetmo: "0",
+    },{
+        name: "雙軌併行",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "鶯歌市心",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "文化城市",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "國鉅建設",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "3D外觀",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "五星公設",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    }, {
+      name: "立即來電",
+      action: "phone",
+      offset: "",
+      type: 'btn'
+    }, {
+      name: "地圖導航",
+      action: "gmap",
+      offset: "",
+      type: "btn",
+    }, {
+      name: "立即預約",
+      target: ".order",
+      offset: "",
+      type: 'btn'
     }
   ],
 }

@@ -1,14 +1,14 @@
 <template>
   <article class="s7 " ref="s7">
+    <div class="bg">
+      <img src="./s1/i2.webp" alt="i2">
+      <img src="./s1/i1.webp" alt="i1">
+    </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">繁華核心 魅力生活 一見傾心</h3>
-        <div class="subtitle" data-aos="fade-up" data-aos-delay="0">公園、美食、藝文、捷運，近在身邊風華自在盛放</div>
-        <p class="desc" data-aos="fade-up" data-aos-delay="0">六合夜市、南華商圈繁華在側，捷運橘線如雙臂舒展，<br
-            v-if="isMobile">駁二藝術特區、文化中心左右輝映，<br>
-          一路延伸至衛武營國家藝文中心，匯聚視聽焦點，<br v-if="isMobile">
-          以最高規格的款待——獻給真正懂生活的您！</p>
-        <div class="en font-['Noto_Serif_TC',serif]">CULTURAL HUB</div>
+        <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">歐風莊園 奢尚公設<br v-if="isMobile"> 樂享日常度假感</h3>
+        <p class="desc" data-aos="fade-up" data-aos-delay="0">庭園以林蔭步道、花卉植栽、街角綠意串聯社區與城市；豪宅級第二門廳規劃，挑高迎賓大廳到公設空間，<br v-if="!isMobile">
+延續大理石、幾何拼花、藝術吊燈…以一致的歐風美學串聯生活風景，讓回家的每一步，都沉浸在莊園度假的愜意氛圍、感受精品飯店般的輕奢時尚。​</p>
       </div>
     </div>
 
@@ -34,15 +34,48 @@
 
 
 .s7 {
-  @apply relative flex items-center justify-center text-[#fff] bg-[#A4A428];
+  @apply relative flex items-center justify-center text-[#fff] bg-[#EB6120];
   width: 100%;
   height: auto;
-  padding: 4em 0 1em 0;
+  padding: 4em 0 12em 0;
   font-size: size(22);
   gap: 2.3em;
   flex-wrap: wrap;
   //overflow: hidden;
   flex-direction: column;
+
+  .bg {
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    bottom: sizem(-70);
+    left: sizem(0);
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+
+      &:nth-child(1) {
+        width: 106.5%;
+        transform: translateX(2%);
+        transform-origin: 0 100%;
+        animation: an 10s linear infinite alternate;
+      }
+
+
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      bottom: size(-70);
+      right: 0;
+      left: auto;
+    }
+
+  }
+
 
   .txt {
     text-align: center;
@@ -66,7 +99,7 @@
     // background: #fff;
     margin: 0;
     width: size(1500);
-    height: size(680);
+    height: size(884);
     overflow: hidden;
     border-radius: 0;
     // border: size(3) solid #7C519F;
@@ -75,7 +108,7 @@
     .slide-item {
       @apply bg-cover;
       width: 100%;
-      height: size(600);
+      height: size(884);
 
     }
 
@@ -83,7 +116,6 @@
       //   left: calc(100% + 3em);
       bottom: -2.2em;
       justify-content: flex-start;
-      color: #fff;
       z-index: 10;
     }
   }
@@ -99,24 +131,19 @@
 
 
   .s7 {
-    @apply flex-col;
+  flex-direction: column-reverse;
     height: auto;
-    font-size: sizem(12);
+    font-size: sizem(13);
     flex-wrap: nowrap;
     margin-bottom: 0em;
     gap: 0em;
-    padding: 5em 0 0;
+    padding: 0 0 0;
+    overflow: hidden;
 
     .txt {
-      margin-bottom: 3em;
+      width: sizem(310);
+      margin: 3em auto 9em auto;
 
-      .en {
-        top: sizem(395);
-        left: -1em;
-        width: 9em;
-        transform: rotate(0deg);
-        transform-origin: 0 0;
-      }
     }
 
 
@@ -169,16 +196,8 @@ const options = {
 
 const imgs = computed(() => [
   {
-    img: isMobile.value ? new URL("./s7/1m.webp", import.meta.url).href : new URL("./s7/1.webp", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s7/1.jpg", import.meta.url).href,
+    caption: "林蔭大道"
   },
-  {
-    img: isMobile.value ? new URL("./s7/2m.webp", import.meta.url).href : new URL("./s7/2.webp", import.meta.url).href,
-    caption: isMobile.value ?"六合國際觀光夜市":""
-  },
-  ...(isMobile.value ? [{
-    img: new URL("./s7/3m.webp", import.meta.url).href,
-    caption: ""
-  }] : []),
 ]);
 </script>

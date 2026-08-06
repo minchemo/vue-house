@@ -139,9 +139,6 @@
       }
     }
 
-    .subtitle {
-      font-weight: 400;
-    }
   }
 
   .logos {
