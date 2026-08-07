@@ -22,6 +22,7 @@
     <div class="txt" data-aos="zoom-in">
       <img src="./s1/logo.webp" alt="logo" class="logo">
       <img src="./s1/t1.svg" alt="t1" class="t1">
+      <img src="./s1/slogo.svg" alt="logo" class="slogo">
     </div>
     <div ref="target" class="txt2">
       <div :class="{ show: isVisible }" class="txt2-content">
@@ -212,7 +213,7 @@
 
   .txt {
     position: absolute;
-    top: sizem(45);
+    top: sizem(35);
     left: 0;
     right: 0;
     display: flex;
@@ -248,6 +249,17 @@ flex-direction:row;
   
       margin: 0 0 size(10) 0;
       width: size(610);
+}
+    }
+    .slogo {
+      flex: 0;
+      margin: 0 0 sizem(10) 0;
+      width: sizem(100);
+@media screen and (min-width:768px) {
+  position: absolute;
+  top: size(380);right: size(475);
+      margin: 0 0 size(10) 0;
+      width: size(200);
 }
     }
   }
