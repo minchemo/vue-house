@@ -21,10 +21,10 @@
       </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
+     <!--  <div class="arrows" v-if="isMobile">
         <div class="prev" @click="splide.splide.go('<')"></div>
         <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
+      </div> -->
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -110,13 +110,13 @@
     margin: 0 0 0 0;
     flex-basis: size(840);
     width: size(840);
-    height: size(560);
+    height: size(630);
 
     .slide-item {
       @apply bg-cover;
       flex-basis: size(840);
       width: size(840);
-      height: size(560);
+      height: size(630);
 
     }
 
@@ -208,8 +208,8 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
-  autoplay: true,
+  pagination: false,
+  autoplay: false,
   interval: 4000,
   gap: 0,
   type: 'loop'
@@ -218,11 +218,7 @@ const options = {
 const imgs = [
   {
     img: new URL("./s5/1.jpg", import.meta.url).href,
-    caption: "國華站"
-  },
-  {
-    img: new URL("./s5/2.jpg", import.meta.url).href,
-    caption: "鶯歌車站"
+    caption: ""
   },
 ]
 </script>

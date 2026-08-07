@@ -2,18 +2,13 @@
   <div class="contact">
     <img src="@/section/s1/c1.png" class="c1" alt="" />
     <img src="@/section/s1/c2.png" class="c2" alt="" />
-      <a  class="fb-messenger-fab z-[99] right-[1vw] bottom-[8vw] w-[4vw]"
-      v-if="!isMobile && info.fbMessage"
-      @click="modalOpen = true; modalType = 'messenger'"
-    aria-label="與我們在 Messenger 聊天"
-  >
-    <svg viewBox="0 0 36 36" class="fb-messenger-fab__icon" aria-hidden="true">
-      <path
-        fill="#fff"
-        d="M18 7.5c-6.1 0-11 4.4-11 9.9 0 3.1 1.6 5.9 4.1 7.7v3.8l3.8-2.1c1 .3 2 .4 3.1.4 6.1 0 11-4.4 11-9.8S24.1 7.5 18 7.5zm1.1 13.3l-2.8-3-5.5 3 6-6.4 2.9 3 5.4-3-6 6.4z"
-      />
-    </svg><span>專人服務</span>
-  </a>
+    <a class="fb-messenger-fab z-[99] right-[1vw] bottom-[8vw] w-[4vw]" v-if="!isMobile && info.fbMessage"
+      @click="modalOpen = true; modalType = 'messenger'" aria-label="與我們在 Messenger 聊天">
+      <svg viewBox="0 0 36 36" class="fb-messenger-fab__icon" aria-hidden="true">
+        <path fill="#fff"
+          d="M18 7.5c-6.1 0-11 4.4-11 9.9 0 3.1 1.6 5.9 4.1 7.7v3.8l3.8-2.1c1 .3 2 .4 3.1.4 6.1 0 11-4.4 11-9.8S24.1 7.5 18 7.5zm1.1 13.3l-2.8-3-5.5 3 6-6.4 2.9 3 5.4-3-6 6.4z" />
+      </svg><span>專人服務</span><span class="b">了解更多<br>歡迎私訊<br>專人回應</span>
+    </a>
     <!-- <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
       <img src="//h35.banner.tw/img/form/line.svg" />
@@ -197,17 +192,44 @@
   &__icon {
     width: 100%;
     height: 100%;
-  background: #0070f6;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: #0070f6;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
+
   span {
     font-size: 0.9rem;
     color: #fff;
-  text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, .8);
+    text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, .8);
     margin-top: 0.25rem;
+
+    &.b {
+      position: absolute;
+      display: block;
+      top: 0%;
+      right: 110%;
+      font-size: 1em;
+      line-height: 1.4;
+      text-align: center;
+      color: #333;
+      background: #fff1d9;
+      border-radius: 0.5em;
+      text-shadow: none;
+      white-space: nowrap;
+     // width: 10em;
+      padding: 0.5em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transform: translateX(50%);
+      opacity: 0;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
   }
+    &:hover {span.b {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    }
 
 }
 
@@ -342,11 +364,12 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(400);
     transform: translateX(-10%)translateY(-100%);
     transform-origin: 50%;
-  pointer-events: none;
-   // animation: an2 5s linear infinite alternate;
-  @media screen and (min-width:768px) {
-    width: size(985);
-  }
+    pointer-events: none;
+
+    // animation: an2 5s linear infinite alternate;
+    @media screen and (min-width:768px) {
+      width: size(985);
+    }
 
   }
 
@@ -357,11 +380,12 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(500);
     transform: skewX(-15deg)translateY(-100%);
     transform-origin: 50% 0;
-    animation: an2 5s linear infinite alternate;    
-  pointer-events: none;
-  @media screen and (min-width:768px) {
-    width: size(1453);
-  }
+    animation: an2 5s linear infinite alternate;
+    pointer-events: none;
+
+    @media screen and (min-width:768px) {
+      width: size(1453);
+    }
 
   }
 
@@ -405,10 +429,11 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     // ── 第二排：地址 + 導航，緊貼成一塊 ──
     &.bottom {
       gap: 0;
-        grid-template-columns: 1fr;
-    @media screen and (min-width:768px) {
-      grid-template-columns: 1fr $btn-w;
-    }
+      grid-template-columns: 1fr;
+
+      @media screen and (min-width:768px) {
+        grid-template-columns: 1fr $btn-w;
+      }
 
       .contact-item {
         @include contact-item-base;
@@ -420,11 +445,13 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
           cursor: default;
           white-space: normal;
           text-align: center;
-            border-radius: $border-radius $border-radius 0 0;font-size: 15px;
-    @media screen and (min-width:768px) {
-          border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
-          font-size: 16px;
-    }
+          border-radius: $border-radius $border-radius 0 0;
+          font-size: 15px;
+
+          @media screen and (min-width:768px) {
+            border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
+            font-size: 16px;
+          }
 
           &:hover {
             background: #fff;
@@ -433,10 +460,11 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
         }
 
         &.googlemap {
-            border-radius: 0 0 $border-radius $border-radius;
-    @media screen and (min-width:768px) {
-          border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
-    }
+          border-radius: 0 0 $border-radius $border-radius;
+
+          @media screen and (min-width:768px) {
+            border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
+          }
         }
       }
     }
@@ -475,15 +503,16 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 }
 
 //
-
 </style>
 
 <script setup>
 import info from "@/info"
 import { inject, ref } from "vue";
-const modalOpen = ref(false);
-const modalType = ref('');
-
+const contactModal = inject('contactModal')
+/* const modalOpen = ref(false);
+const modalType = ref(''); */
+const modalOpen = contactModal.modalOpen
+const modalType = contactModal.modalType
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;
@@ -491,12 +520,7 @@ const go = () => {
       window.location.href = "phoneThanks";
     }, 1000);
   } else if (modalType.value == 'messenger') {
-    let url = info.fbMessage;
-  // Line 瀏覽器強制外開參數
-  if (/Line/i.test(navigator.userAgent)) {
-    url += (url.includes('?') ? '&' : '?') + 'openExternalBrowser=1';
-  }
-  window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
   }
@@ -513,4 +537,5 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
+
 </script>
