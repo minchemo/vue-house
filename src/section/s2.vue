@@ -67,7 +67,7 @@
 
     @media screen and (min-width: 768px) {
   
-      bottom:size(-150);
+      bottom:size(-250);
       left: auto;
         width: 120%;
         right: -19%;
@@ -211,19 +211,11 @@ const options = {
 const imgs = [
   {
     img: new URL("./s2/1.jpg", import.meta.url).href,
-    caption: "國道三號"
+    caption: "國華站"
   },
   {
     img: new URL("./s2/2.jpg", import.meta.url).href,
-    caption: "國道三號"
-  },
-  {
-    img: new URL("./s2/3.jpg", import.meta.url).href,
-    caption: "三鶯交流道"
-  },
-  {
-    img: new URL("./s2/4.jpg", import.meta.url).href,
-    caption: "國三接國二"
+    caption: "鶯歌車站"
   },
 ]
 </script>

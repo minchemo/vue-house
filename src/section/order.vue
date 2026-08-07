@@ -339,7 +339,7 @@ $o-title-c: #EB6120; //.order-title
 
   .order {
     width: 100%;
-  padding-top: sizem(60);
+  padding-top: sizem(30);
     padding-bottom: sizem(63);
 
     .cus-divider {

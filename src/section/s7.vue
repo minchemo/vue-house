@@ -100,7 +100,7 @@
     margin: 0;
     width: size(1500);
     height: size(884);
-    overflow: hidden;
+   // overflow: hidden;
     border-radius: 0;
     // border: size(3) solid #7C519F;
     //  padding: size(10);
@@ -115,7 +115,7 @@
     .splide__pagination {
       //   left: calc(100% + 3em);
       bottom: -2.2em;
-      justify-content: flex-start;
+      justify-content: center;
       z-index: 10;
     }
   }
@@ -198,6 +198,34 @@ const imgs = computed(() => [
   {
     img: new URL("./s7/1.jpg", import.meta.url).href,
     caption: "林蔭大道"
+  },
+  {
+    img: new URL("./s7/2.jpg", import.meta.url).href,
+    caption: "第二門廳"
+  },
+  {
+    img: new URL("./s7/3.jpg", import.meta.url).href,
+    caption: "Lobby"
+  },
+  {
+    img: new URL("./s7/4.jpg", import.meta.url).href,
+    caption: "書香閱覽室"
+  },
+  {
+    img: new URL("./s7/5.jpg", import.meta.url).href,
+    caption: "廚藝教室"
+  },
+  {
+    img: new URL("./s7/6.jpg", import.meta.url).href,
+    caption: "活力瑜珈室"
+  },
+  {
+    img: new URL("./s7/7.jpg", import.meta.url).href,
+    caption: "兒童遊戲室"
+  },
+  {
+    img: new URL("./s7/8.jpg", import.meta.url).href,
+    caption: "空中花園"
   },
 ]);
 </script>

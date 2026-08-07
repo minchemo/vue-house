@@ -67,7 +67,7 @@
 
     @media screen and (min-width: 768px) {
   
-      bottom:size(-150);
+      bottom:size(-250);
       left: auto;
         width: 120%;
         right: -19%;

@@ -94,6 +94,9 @@ img {
   letter-spacing: 0em;
   text-align: center;
   z-index: 3;
+  @media screen and (min-width: 768px) {
+    text-align: justify;
+  }
 
   .title {
     font-size: 1.9em;
@@ -109,7 +112,6 @@ img {
   @media screen and (min-width: 768px) {
     font-size: 2.1em;
     margin: 0em auto 0.3em;
-  text-align: justify;
 
   }
   }
@@ -191,6 +193,8 @@ img {
     gap: .5em;
     color: #CCC;
 
+@media screen and (max-width: 767px) {
+      display: none;}
     li {
       button {
         @apply rounded-full relative;

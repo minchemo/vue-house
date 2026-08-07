@@ -121,7 +121,7 @@
     }
 
     .splide__pagination {
-      left: calc(100% + 3em);
+      left: calc(100% + 6em);
       justify-content: flex-start;
     }
   }
@@ -180,6 +180,9 @@
         height: sizem(250);
 
       }
+    .splide__pagination {
+      display: none;
+    }
     }
   }
 }

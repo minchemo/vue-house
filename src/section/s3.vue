@@ -210,11 +210,19 @@ const options = {
 const imgs = [
   {
     img: new URL("./s3/1.jpg", import.meta.url).href,
-    caption: "國華站"
+    caption: "國道三號"
   },
   {
     img: new URL("./s3/2.jpg", import.meta.url).href,
-    caption: "鶯歌車站"
+    caption: "國道三號"
+  },
+  {
+    img: new URL("./s3/3.jpg", import.meta.url).href,
+    caption: "三鶯交流道"
+  },
+  {
+    img: new URL("./s3/4.jpg", import.meta.url).href,
+    caption: "國三接國二"
   },
 ]
 </script>
