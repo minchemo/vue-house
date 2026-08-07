@@ -2,6 +2,18 @@
   <div class="contact">
     <img src="@/section/s1/c1.png" class="c1" alt="" />
     <img src="@/section/s1/c2.png" class="c2" alt="" />
+      <a  class="fb-messenger-fab z-[99] right-[1vw] bottom-[8vw] w-[4vw]"
+      v-if="!isMobile && info.fbMessage"
+      @click="modalOpen = true; modalType = 'messenger'"
+    aria-label="與我們在 Messenger 聊天"
+  >
+    <svg viewBox="0 0 36 36" class="fb-messenger-fab__icon" aria-hidden="true">
+      <path
+        fill="#fff"
+        d="M18 7.5c-6.1 0-11 4.4-11 9.9 0 3.1 1.6 5.9 4.1 7.7v3.8l3.8-2.1c1 .3 2 .4 3.1.4 6.1 0 11-4.4 11-9.8S24.1 7.5 18 7.5zm1.1 13.3l-2.8-3-5.5 3 6-6.4 2.9 3 5.4-3-6 6.4z"
+      />
+    </svg>
+  </a>
     <!-- <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
       <img src="//h35.banner.tw/img/form/line.svg" />
@@ -148,7 +160,7 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #0189D3;
+  background-color: #0070f6;
 }
 
 .hover\:bg-color2:hover {
@@ -170,6 +182,27 @@
   }
 }
 
+.fb-messenger-fab {
+  background: #0070f6;
+  position: fixed;
+  border-radius: 50%;
+  display: flex;
+  aspect-ratio: 1/1;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+
+}
 
 .mo-contact-info {
   display: flex;
@@ -406,7 +439,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter: invert(37%) sepia(60%) saturate(5826%) hue-rotate(182deg) brightness(101%) contrast(101%);
+    filter: invert(30%) sepia(97%) saturate(3399%) hue-rotate(203deg) brightness(98%) contrast(102%);
   }
 }
 
@@ -433,6 +466,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     }
   }
 }
+
+//
+
 </style>
 
 <script setup>
@@ -470,5 +506,4 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
-
 </script>
