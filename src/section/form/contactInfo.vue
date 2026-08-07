@@ -12,7 +12,7 @@
         fill="#fff"
         d="M18 7.5c-6.1 0-11 4.4-11 9.9 0 3.1 1.6 5.9 4.1 7.7v3.8l3.8-2.1c1 .3 2 .4 3.1.4 6.1 0 11-4.4 11-9.8S24.1 7.5 18 7.5zm1.1 13.3l-2.8-3-5.5 3 6-6.4 2.9 3 5.4-3-6 6.4z"
       />
-    </svg>
+    </svg><span>專人服務</span>
   </a>
     <!-- <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
@@ -183,15 +183,12 @@
 }
 
 .fb-messenger-fab {
-  background: #0070f6;
   position: fixed;
-  border-radius: 50%;
   display: flex;
-  aspect-ratio: 1/1;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease;
+  flex-direction: column;
 
   &:hover {
     transform: scale(1.08);
@@ -200,6 +197,16 @@
   &__icon {
     width: 100%;
     height: 100%;
+  background: #0070f6;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  span {
+    font-size: 0.9rem;
+    color: #fff;
+  text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, .8);
+    margin-top: 0.25rem;
   }
 
 }
