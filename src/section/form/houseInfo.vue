@@ -20,7 +20,7 @@
 
     <div class="ho bg-[#B7A999] flex items-center justify-center text-[#000]">
     <img src="@/section/form/logobottom.svg" class="logo" alt="logo" srcset="">
-    <span><span>連絡電話/<span>06 251 9025</span></span>
+    <span><span>連絡電話/<span>06 269-0111</span></span>
     <span>通訊地址/<span>臺南市安平區平通路71號3樓</span></span></span>
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
