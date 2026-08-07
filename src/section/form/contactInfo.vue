@@ -178,6 +178,8 @@
 }
 
 .fb-messenger-fab {
+  
+      font-size: size(18);
   position: fixed;
   display: flex;
   align-items: center;
@@ -199,17 +201,17 @@
   }
 
   span {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     color: #fff;
     text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, .8);
-    margin-top: 0.25rem;
+    margin-top: 0.25em;
 
     &.b {
       position: absolute;
       display: block;
       top: 0%;
       right: 110%;
-      font-size: 1em;
+    font-size: 0.9em;
       line-height: 1.4;
       text-align: center;
       color: #333;
@@ -507,7 +509,10 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 <script setup>
 import info from "@/info"
-import { inject, ref } from "vue";
+import {  computed, getCurrentInstance, inject, ref } from "vue";
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
 const contactModal = inject('contactModal')
 /* const modalOpen = ref(false);
 const modalType = ref(''); */
