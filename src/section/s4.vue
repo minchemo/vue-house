@@ -197,7 +197,7 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: true,
-  autoplay: true,
+  autoplay: false,
   interval: 4000,
   gap: 0,
   type: 'loop'
