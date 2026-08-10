@@ -1,22 +1,13 @@
 <template>
   <article class="s1" id="s1">
     <!-- 
-<picture>
-      <source srcset="./s1/1.png" media="(min-width: 768px)" />
-      <img src="./s1/1m.png" class="t0" />
-    </picture>
+    <img src="./s1/pc.jpg" class="t0" v-if="!isMobile" />
+    <img src="./s1/mo.jpg" class="t0" v-else />
   -->
-      <img src="./s1/table.webp" class="table" />
-<picture>
-      <source srcset="./s1/img.webp" media="(min-width: 768px)" />
-      <img src="./s1/img_m.webp"  class="img" data-aos="fade-right" />
-    </picture>
-      <div class="txt">
-     <img src="./s1/txt.svg"  data-aos="zoom-in" />
-  </div>
-<!--      <img src="./s1/smilecity.svg" alt="smilecity" class="smilecity" />
+
+    <img src="./s1/smilecity.svg" alt="smilecity" class="smilecity" />
     <img src="./s1/logo.svg" class="logo" />
-    <img src="./s1/t1.svg" class="t1" />  -->
+    <img src="./s1/t1.svg" class="t1" />
   </article>
 </template>
 
@@ -42,14 +33,16 @@
   justify-content: center;
   align-items: center;
   height: sizem(604);
-  background: #009ce1;
+  background: center;
+  background-image: url("./s1/bgm.png");
+  background-size: cover;
   font-size: sizem(16);
 
   @media screen and (min-width: 768px) {
     height: 100vh;
+    max-height: size(1130);
     min-height: size(900);
-    max-height: size(1070);
-    //background-image: url("./s1/bg.png");
+    background-image: url("./s1/bg.png");
     font-size: size(50);
   }
 
@@ -67,48 +60,6 @@
     opacity: .3;
   }
 
-  .table{
-    position: absolute;right: 0;margin: auto;
-    pointer-events: none;
-    bottom: sizem(-5);
-    width:sizem(400);
-    left: sizem(50);
-  @media screen and (min-width: 768px) {
-    bottom: 0;
-    width: size(907);
-    left: size(565);
-  }
-  }
-  .img{
-    position: absolute;
-    bottom: 0;left:sizem(-100);margin: auto;
-    pointer-events: none;
-    bottom: 0;
-    width:sizem(405);
-    right:0;
-  @media screen and (min-width: 768px) {
-    bottom: 0;left: 0;
-    width:size(770);
-    right: size(999);
-  }
-  }
-  .txt{
-    position: absolute;right: 0;margin: auto;
-    pointer-events: none;
-    top:sizem(63);
-    height:sizem(232);
-    width:fit-content;
-    left:0;
-    img{height:100%;}
-  @media screen and (min-width: 768px) {
-    top:size(200);
-    top:calc(50% + #{size(200 - 1070 * .5)});
-    height:calc(50% + #{size(50)});
-    left: auto;right:36%;
-    transform: translateX(50%);
-  }
-  }
-/*
   .bg {
     width: 100%;
   }
@@ -159,7 +110,7 @@
       font-size: 1.15em;
       top: calc(50% + #{size(150 - 1100 * .5)});
     }
-  }*/
+  }
 }
 
 
