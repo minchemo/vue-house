@@ -15,6 +15,7 @@ export default {
   phone: "02-2707-9988",
   fbLink: "https://www.facebook.com/61564023519818/",
   fbMessage: "https://m.me/61564023519818/",
+  line: "https://lin.ee/yo2j7Qo",
   caseName: caseName,
   houseInfos: [
     ["投資興建", "精誠國際建設企業股份有限公司"],

@@ -59,6 +59,10 @@
       <img src="@/section/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
+    <div class="flex flex-col contact-item justify-center items-center" v-if="info.line" @click="open(info.line)">
+      <img src="//h35.banner.tw/img/form/line.svg" alt="官方LINE" srcset="" />
+      <div>官方LINE</div>
+    </div>
   </div>
 
   <!-- Modal -->
@@ -328,8 +332,8 @@
     img {
       margin-top: 0.2em;
       margin-bottom: 0.6em;
-      height: 3em;
-      max-width: 3em;
+      height: 2.5em;
+      max-width: 2.5em;
       //aspect-ratio: 1/1;
       filter: brightness(1) invert(1);
     }
@@ -340,12 +344,12 @@
 @media screen and (max-width: 768px) {
   .mo-contact-info {
     height: sizem(63);
-    font-size: sizem(16);
+    font-size: sizem(15);
     flex-direction: row;
     width: 100%;
   box-shadow: 0 0 1em rgba(0, 37, 85, 0.6);
   top: auto;
-  bottom: 0;
+  bottom: 0;letter-spacing: 0;
 
 
     .contact-item {
