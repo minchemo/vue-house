@@ -12,7 +12,7 @@
           <img src="@/section/form/messenger.svg" alt="Facebook 諮詢" srcset="" />
           <div>Facebook 諮詢</div>
         </div>
-        <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'"
+        <div class="flex contact-item justify-center items-center"  @click="open(info.fbLink)"
           v-if="info.fbLink">
           <!-- <div class="flex contact-item justify-center items-center btfanpage" @click="open()"> -->
           <img src="@/section/form/fb.svg" alt="前往粉絲專頁" srcset="" />
@@ -45,8 +45,7 @@
       <img src="@/section/form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink && (!info.address || !info.phone)">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="open(info.fbLink)" v-if="info.fbLink && (!info.address || !info.phone)">
       <img src="@/section/form/fb.svg" alt="粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
     </div>
@@ -489,8 +488,9 @@ const go = () => {
 }
 
 
-const open = () => {
-  window.open(info.fbLink)
+
+const open = (link) => {
+  window.open(link);
 }
 
 const smoothScroll = inject("smoothScroll")
