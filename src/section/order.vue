@@ -68,20 +68,17 @@
             </select>
           </label>
 
-          <!-- 地區 --><Transition name="area-drop">
-  <label 
-    class="row" 
-    v-if="info.locationConfig?.area?.enabled && formData.city"
-  >
-    <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
-    <select v-model="formData.area" class="select w-full">
-      <option value="" disabled>請選擇地區</option>
-      <option v-for="a in areaList" :key="a.value" :value="a.value">
-        {{ a.label }}
-      </option>
-    </select>
-  </label>
-</Transition>
+          <!-- 地區 -->
+          <label class="row" v-if="info.locationConfig?.area?.enabled && formData.city">
+            <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
+
+            <select v-model="formData.area" class="select w-full">
+              <option value="" disabled>請選擇地區</option>
+              <option v-for="a in areaList" :key="a.value" :value="a.value">
+                {{ a.label }}
+              </option>
+            </select>
+          </label>
 
         </div>
 
@@ -96,15 +93,15 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal" class="text-[#C00] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-[#fff]">
+          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
       <Policy />
 
       <!-- recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
+      <vue-recaptcha class="flex justify-center mt-8" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
         @expired="onRecaptchaExpired" />
 
       <!-- submit -->
@@ -130,23 +127,12 @@
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
-.area-drop-enter-active {
-  transition: all 0.35s ease;
-  overflow: hidden;
-}
-.area-drop-enter-from {
-  max-height: 0;
-  opacity: 0;
-}
-.area-drop-enter-to {
-  max-height: 4em;
-  opacity: 1;
-}
-$o-title-c: #EB6120; //.order-title
+
+$o-title-c: #fff; //.order-title
 
 .order {
   width: 100%;
-  padding-top: size(100);
+  padding-top: size(60);
   font-size: 16px;
 
   .order-section {
@@ -217,7 +203,7 @@ $o-title-c: #EB6120; //.order-title
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #EB6120;
+      background-color: #fff;
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
@@ -276,7 +262,7 @@ $o-title-c: #EB6120; //.order-title
       right: 0;
       flex-direction: column;
       margin-left: .7em;
-      color: #EB6120;
+      color: #fff;
 
       label:first-child {
         margin-bottom: .3em;
@@ -290,9 +276,9 @@ $o-title-c: #EB6120; //.order-title
 
   .send {
     font-size: 1.4em;
-  background: #00BBDD;
-    //border: 1px solid #FFF9;
-    border: 0;
+  background: #1B2F61;
+    border: 1px solid #FFFC;
+    // border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
     line-height: 1.5;
@@ -313,10 +299,7 @@ $o-title-c: #EB6120; //.order-title
     font-size: 16px;
     color: #000;
     position: relative;
-    z-index: 10;
-    input[type="checkbox"] {border: 2px solid #666;
-    background-color: #fff;
-    }
+    input[type="checkbox"] {border: 2px solid #666;}
   }
  
 }
@@ -339,7 +322,7 @@ $o-title-c: #EB6120; //.order-title
 
   .order {
     width: 100%;
-  padding-top: sizem(30);
+  padding-top: sizem(0);
     padding-bottom: sizem(63);
 
     .cus-divider {
@@ -351,7 +334,7 @@ $o-title-c: #EB6120; //.order-title
     }
 
     .order-title {
-      font-size: 20px;
+      font-size: 19px;
       width: sizem(310);
       /*  font-size: sizem(27);
       padding-top:2em;
@@ -371,7 +354,7 @@ $o-title-c: #EB6120; //.order-title
       min-width: 0;
       flex-direction: column;
       gap: 0;
-      margin: 2em auto 1.1em;
+      margin: 1em auto 1.1em;
       /*  height: auto;
       gap: sizem(15);
       margin-bottom: sizem(20);
@@ -458,8 +441,6 @@ const fieldLabelMap = {
   gender: "性別",
   city: "居住縣市",
   area: "居住地區",
-  policyChecked: "個資聲明",
-  r_verify: "我不是機器人",
   // 動態欄位從 selectFields 自動取 title
   ...Object.fromEntries(
     Object.entries(selectFields).map(([k, v]) => [k, v.title])
@@ -487,8 +468,7 @@ watch(() => formData.city, (val) => {
 // ==========================
 const isRequired = (key) => {
   if (key === "name" || key === "phone") return true
-  if (key === "policyChecked") return true
-  if (key === "r_verify") return true
+
   if (key === "gender") return formConfig.gender?.required
   if (key === "city") return locationConfig.city?.required
   if (key === "area") return locationConfig.area?.required

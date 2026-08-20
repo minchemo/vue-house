@@ -124,7 +124,7 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #e73636cc;
+        background: #100a61cc;
         width:100%;
         height: size(60);
         z-index: 5;
@@ -166,14 +166,14 @@
                 }
             }
             &.btn2{
-                background: #6DAA43;
+                background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -12.43%, #F3EFB2 25.25%, #DAAF68 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
                 border-radius: 2em;
                 margin-right:-1em;
                 padding:.7em 1.5em;
-                color: #fff;
+                color: #160A00;
 
                 &:hover {
-                    background:#528a2d;
+                    background:linear-gradient(149deg, #be974e -75.22%, #775127 -54.29%, #aa8446 -12.43%, #dad598 25.25%, #a78043 60.63%, #4e2d14 98.88%, #bd914a 134.1%);
                     &:after {
                         width:0;
                     }

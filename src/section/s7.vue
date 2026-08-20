@@ -1,231 +1,65 @@
 <template>
-  <article class="s7 " ref="s7">
-    <div class="bg">
-      <img src="./s1/i2.webp" alt="i2">
-      <img src="./s1/i1.webp" alt="i1">
-    </div>
-    <div class="main">
-      <div class="txt">
-        <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">歐風莊園 奢尚公設<br v-if="isMobile"> 樂享日常度假感</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="0">庭園以林蔭步道、花卉植栽、街角綠意串聯社區與城市；豪宅級第二門廳規劃，挑高迎賓大廳到公設空間，<br v-if="!isMobile">
-延續大理石、幾何拼花、藝術吊燈…以一致的歐風美學串聯生活風景，讓回家的每一步，都沉浸在莊園度假的愜意氛圍、感受精品飯店般的輕奢時尚。​</p>
-      </div>
-    </div>
-
-    <div class="slider">
-      <div class="arrows" v-if="isMobile">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption">
-          <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
-
+  <article class="s7">
+    <Fullview
+      :mapImage="mapImage"
+      :bgImage="bgImage"
+      :offsetRatio="1.98"
+    />
+    <div class="caption">空拍實景經電腦後製</div>
   </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-
-
 .s7 {
-  @apply relative flex items-center justify-center text-[#fff] bg-[#EB6120];
+  @apply relative overflow-hidden bg-[#005890] text-[#fff];
   width: 100%;
-  height: auto;
-  padding: 4em 0 12em 0;
-  font-size: size(22);
-  gap: 2.3em;
-  flex-wrap: wrap;
-  //overflow: hidden;
-  flex-direction: column;
+ // height: size(1059);
+  font-size:size(20);
+  .txt {text-align: center;position: absolute;
+    top: 0;left: 0;right: 0;margin: auto;
 
-  .bg {
-    width: 200%;
-    height: 100%;
-    position: absolute;
-    bottom: sizem(-70);
-    left: sizem(0);
-
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-
-      &:nth-child(1) {
-        width: 106.5%;
-        transform: translateX(2%);
-        transform-origin: 0 100%;
-        animation: an 10s linear infinite alternate;
-      }
-
-
-    }
-
-    @media screen and (min-width: 768px) {
-      width: 100%;
-      bottom: size(-70);
-      right: 0;
-      left: auto;
-    }
-
+  padding-top:3em;z-index: 10;//margin-bottom:-6.3em ;
+  
+  .subtitle{font-size: 1.4em;margin-top: .2em;letter-spacing: 0.4em;font-weight: 300;}
   }
-
-
-  .txt {
-    text-align: center;
-
-
-
-    .en {
-      position: absolute;
-      top: size(-50);
-      left: 13em;
-      width: 9em;
-      transform: rotate(90deg);
-      transform-origin: 0 0;
-    }
+  .viewbox{z-index: 2;
+    margin: 0 0 0 0;
+   // top: -5vw;
   }
-
-
-
-
-  .slider {
-    // background: #fff;
-    margin: 0;
-    width: size(1500);
-    height: size(884);
-   // overflow: hidden;
-    border-radius: 0;
-    // border: size(3) solid #7C519F;
-    //  padding: size(10);
-
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-      height: size(884);
-
-    }
-
-    .splide__pagination {
-      //   left: calc(100% + 3em);
-      bottom: -2.2em;
-      justify-content: center;
-      z-index: 10;
-    }
-  }
-
-
 }
-
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
 
-
   .s7 {
-  flex-direction: column-reverse;
-    height: auto;
-    font-size: sizem(13);
-    flex-wrap: nowrap;
-    margin-bottom: 0em;
-    gap: 0em;
-    padding: 0 0 0;
-    overflow: hidden;
-
-    .txt {
-      width: sizem(310);
-      margin: 3em auto 9em auto;
-
-    }
-
-
-    .slider {
-      height: auto;
-      width: 100%;
-      padding: 0;
-      border: 0;
-      border-radius: 0;
-
-
-      .slide-item {
-        @apply bg-cover;
-        width: 100%;
-        flex-basis: auto;
-        height: sizem(250);
-
+   // height: sizem(550);
+  font-size:sizem(15);
+/*
+  .txt {//text-align: justify;
+  padding-top:3.5em;width:sizem(310);margin:auto auto -4.3em auto;
+  .subtitle{font-size: 1em;letter-spacing: 0.05em;
       }
-    }
+  }
+      */
+  .viewbox{height: sizem(667);
+    margin:sizem(0) 0 0 0;
+    top:0;}
+
+
   }
 }
 </style>
+
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
+import { computed, getCurrentInstance } from 'vue';
+import Fullview from '../components/fullview.vue';
+import mapImage from '@/section/s7/map.png';
+import bgImage from '@/section/s7/map.webp';
+
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
-const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-  return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
-
-const splide = ref();
-
-const currentSlideIndex = ref(0);
-
-const moved = (newIdx, prevIdx, destIdx) => {
-  currentSlideIndex.value = prevIdx
-}
-
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: false,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
-const imgs = computed(() => [
-  {
-    img: new URL("./s7/1.jpg", import.meta.url).href,
-    caption: "林蔭大道"
-  },
-  {
-    img: new URL("./s7/2.jpg", import.meta.url).href,
-    caption: "第二門廳"
-  },
-  {
-    img: new URL("./s7/3.jpg", import.meta.url).href,
-    caption: "Lobby"
-  },
-  {
-    img: new URL("./s7/4.jpg", import.meta.url).href,
-    caption: "書香閱覽室"
-  },
-  {
-    img: new URL("./s7/5.jpg", import.meta.url).href,
-    caption: "廚藝教室"
-  },
-  {
-    img: new URL("./s7/6.jpg", import.meta.url).href,
-    caption: "活力瑜珈室"
-  },
-  {
-    img: new URL("./s7/7.jpg", import.meta.url).href,
-    caption: "兒童遊戲室"
-  },
-  {
-    img: new URL("./s7/8.jpg", import.meta.url).href,
-    caption: "空中花園"
-  },
-]);
 </script>

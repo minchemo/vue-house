@@ -8,7 +8,7 @@
                     <div class="title">建案資訊</div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                            v-for="item in info.houseInfos">
+                            v-for="item in info.houseInfos" :key="item">
                             <p class="sub mr-5 pl-2 text-[#fff]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left font-normal"
                                 v-html="item[1]">
@@ -33,8 +33,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#fFF;
-$house-c2:#fff;
+$house-c1:#1B2F61;
+$house-c2:#000;
 .displaynone{display: none;}
 .house {
     position: relative;
@@ -43,7 +43,7 @@ $house-c2:#fff;
     color: $house-c2;
     font-size: size(22);
     // height:4em;
-    background: #A4A428;
+    background: #CCC;
 }
 .info-box {position: relative;z-index: 30;
     width: 50em;

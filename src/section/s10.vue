@@ -1,193 +1,174 @@
 <template>
   <article class="s10" ref="s10">
-    <div class="flower" data-aos="zoom-out">
-      <div class="p1"><img src="./s1/s1p3.png" alt="flower" /></div>
-      <div class="p2"><img src="./s5/2.png" alt="flower" /></div>
+    <div class="shine-row">
+      <div class="shine-dot dot-iri">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-y">
+        <div class="shine-inner"></div>
+      </div>
     </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">質感建材選品<br>住進精緻系捷運宅
-        </h3>
-        <hr class="hr" data-aos="fade-up" data-aos-delay="400" />
+        <img src="./s10/t1.svg" alt="en" class="t1" data-aos="fade-up" data-aos-delay="0">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">迎向全球ESG浪潮<br>
+傲立台中新商辦</h3>
+        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="400">
         <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          從科技人視角出發，精選美、日、德、韓口碑建材，定調捷運精品系小宅風範。建築5年防水保固、15年結構保固，安心居住、好好生活。</p>
+          以國際級眼光打造，美國TITAN金獎實力肯定，<br>
+          全方位對接永續標竿的王牌總部大樓。<br><br>
+
+19樓玻璃帷幕地標，於站前門戶璀璨立足。<br>
+低碳綠能系統和空中綠洲，搭配充電車位及極速網路，<br>
+為頂尖企業打造極致高效的發展基石。</p>
+        <img src="./s10/awards.png" alt="awards" class="awards" data-aos="fade-up" data-aos-delay="400">
       </div>
-      <img src="./s10/imgm.svg" alt="logos" class="logos"  v-if="isMobile" />
-      <img src="./s10/img.svg" alt="logos" class="logos" v-else />
     </div>
+          <span class="caption">外觀實景電腦修飾</span>
+	
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+@keyframes an {
+  to {
+    transform: translateX(0%);
+  }
+}
 
 
 .s10 {
-  @apply relative;
+  @apply relative flex;
   width: 100%;
-  padding: 0;
-  font-size: sizem(15);
+  height: sizem(940);
+  padding: sizem(20) 0 0 0;
+  gap: 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #FFF;
+    background: url("./s10/bgm.webp") center bottom;
+
+    background-size: 100% auto;
 
   @media screen and (min-width: 768px) {
-    font-size: size(24);
-  }
-  
-  .flower {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    flex-direction: row;
+  height: auto;
+    padding: 0 0 0 50.5em;
+ //   padding: 6.9em 0 6.9em 0;
+    flex-wrap: wrap;
+    gap:0em;
+    background-image: url("./s10/bg.jpg");
+    background-size: cover;
 
-    div {
-      position: absolute;
-    }
-
-    img {
-      width: 100%;
-    }
-    .p1 {
-      transform: rotate(5deg);
-      transform-origin: 50% 50%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-    .p2 {
-      transform: rotate(3deg);
-      transform-origin: 50% 50%;
-      animation: an 5s ease-in-out infinite alternate;
-    }
-
-
-    @media screen and (max-width: 768px) {
-      .p1 {
-        bottom: sizem(-100);
-        left: sizem(70);
-        width: sizem(150);
-        img {
-          transform: rotate(-50deg);
-        }
-      }
-      .p2 {
-        bottom: sizem(-40);
-        left: sizem(-0);
-        width: sizem(120);
-        img {
-          transform: rotate(50deg);
-        }
-      }
-    }
-
-    @media screen and (min-width: 768px) {
-      .p1 {
-        bottom: size(-235);
-        right: size(-110);
-        width: size(377);
-        img {
-          transform: rotate(45deg);
-        }
-      }
-
-      .p2 {
-        bottom: size(-130);
-        right: size(200);
-        width: size(300);
-        img {
-          transform: rotate(50deg);
-        }
-      }
-      
-    }
   }
 
   .main {
-    position: relative;
-    display: flex;
-    margin: 0;
-    z-index: 3;
-    justify-content: flex-end;
+    @apply flex;
+    padding: 0 sizem(30);
+    width: 100%;
     flex-direction: column;
+    text-align: justify;
+    position: relative;
+    z-index: 3;
 
     @media screen and (min-width: 768px) {
-      height: size(750);
+      padding: size(200) 0 size(100) 0;
+      width: size(590);
+      background: linear-gradient(180deg, #316ca833 0%, #001b3780 100%);
+backdrop-filter: blur(2px);
     }
   }
 
   .txt {
-    width: sizem(310);
-    margin: 4em auto 2em;
-
+    padding: sizem(40) 0 sizem(40);
     @media screen and (min-width: 768px) {
-      position: absolute;
       padding: 0;
-      top: size(0);
-      width: size(460);
-      left: size(210);
+      .title{
+      font-size: 2.2em;
 
-    }
-
-    .title {
-      color: #7C519F;
-    }
-
-    .hr {
-      color: #7C519F;
-      width: sizem(310);
-
-      @media screen and (min-width: 768px) {
-        width: size(460);
       }
     }
-
+    .awards{width: 9em;margin-top: 2em;
+    @media screen and (min-width: 768px) {width: 12em;margin-top: 2em;}
   }
 
-  .logos {
-    width: sizem(310);
-    position: relative;
-   
-    margin: auto auto sizem(40) auto;
-
-    @media screen and (min-width: 768px) {
-    position: absolute;
-      width: size(1093);
-    top:size(50);
-    left: auto;
-    right: size(85);
-    margin: 0;
-    }
   }
-
-
 
   // size(110)
 
   .slider {
-    margin: 0 0 0 0;
-    flex-basis: size(840);
+    margin:0;
+      width:100%;
+      height: auto;
+      @media screen and (min-width: 768px) {
     width: size(840);
-    height: size(560);
+      }
 
     .slide-item {
       @apply bg-cover;
-      flex-basis: size(840);
+        width: 100%;
+        height: sizem(250);
+      @media screen and (min-width: 768px) {
       width: size(840);
       height: size(560);
+
+      }
 
     }
 
     .splide__pagination {
-      right: calc(100% + 3em);
-      justify-content: flex-end;
-      color: #7C519F;
+      left: calc(100% + 6em);
+      justify-content: flex-start;
     }
   }
+  .shine-row {
+    top: 12em;
+    left: -.5em;
+    @media screen and (min-width: 768px) {
+    top: 2.5em;
+    }
+  }
+
 }
+
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
 const isMobile = computed(() => globals.$isMobile());
+const getImg = (path) => {
+  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
+  return new URL(`./${path}_m.jpg`, import.meta.url).href
+}
 
+const splide = ref()
 
+const currentSlideIndex = ref(0);
+
+const moved = (newIdx, prevIdx, destIdx) => {
+  currentSlideIndex.value = prevIdx
+}
+
+const options = {
+  rewind: false,
+  arrows: false,
+  pagination: false,
+  autoplay: false,
+  interval: 4000,
+  gap: 0,
+//  drag: false
+  type: 'loop'
+}
+
+const imgs = [
+  {
+    img: new URL("./s10/1.webp", import.meta.url).href,
+    caption: "外觀實景電腦修飾",
+  },
+]
 </script>

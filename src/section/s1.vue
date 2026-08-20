@@ -1,15 +1,64 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!-- <img src="./s1/pc.jpg" class="t0"> -->
-    <div class="bg">
-      <img src="./s1/i2.webp" alt="i2">
-      <img src="./s1/i1.webp" alt="i1">
+    <!-- 
+    <picture>
+      <source srcset="./s1/mo.png" media="(max-width: 768px)">
+      <img src="./s1/pc.png" class="t0">
+    </picture> -->
+    <div class="shine-row rt">
+      <div class="shine-dot dot-iri">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-y">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-b">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-b">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-l">
+      </div>
+      <div class="shine-dot dot-y">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-l">
+      </div>
+      <div class="shine-dot dot-iri">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot">
+      </div>
+      <div class="shine-dot dot-b">
+        <div class="shine-inner"></div>
+      </div>
     </div>
-    <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="200">
-    <img src="./s1/t1.svg" alt="logo" class="t1" data-aos="zoom-in" data-aos-delay="200">
-    
-    <img v-if="canPlayWebP" src="./s1/0607.webp" class="unicorn" alt="unicorn">
-<img v-else src="./s1/0609.png" class="unicorn" alt="unicorn">
+    <div class="shine-row br">
+      <div class="shine-dot dot-b">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-iri">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-y">
+        <div class="shine-inner"></div>
+      </div>
+    </div>
+    <img src="./s1/logo.webp" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="200">
+    <div class="visual">
+      <div class="building">
+        <img src="./s1/building.webp">
+      </div>
+
+      <div class="light1">
+        <img src="./s1/light1.webp">
+      </div>
+
+      <div class="light2">
+        <img src="./s1/light2.webp">
+      </div>
+    </div>
   </article>
 </template>
 
@@ -19,11 +68,11 @@
 .t0 {
   position: absolute;
   width: 100%;
-  top: 0px;
+  top:0px;
   left: 0;
   pointer-events: none;
   z-index: 9;
-  opacity: .3;
+  opacity: .0;
 }
 
 @keyframes an {
@@ -33,89 +82,54 @@
 }
 
 .s1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-size: sizem(11);
-  background: #EB6120;
-  height: sizem(667);   // 給不支援 svh 的舊瀏覽器當 fallback
-  height: 100svh;  // 手機工具列跳動问题的正解，數值固定不受工具列影響
-    min-height: sizem(667);
-    max-height: sizem(812);
+  height: 100svh; // 手機工具列跳動问题的正解，數值固定不受工具列影響
+  min-height: sizem(604);
+  max-height: sizem(604);
+    background: url("./s1/bg.jpg");
+    background-size:cover;
+
   @media screen and (min-width: 768px) {
     font-size: size(27);
-    justify-content: space-between;
-    padding: 0;
     height: 100vh;
-    min-height: size(900);
+    min-height: size(1070);
     max-height: size(1080);
-
   }
 
-  .bg {
-    width: 253%;
-    height: 100%;
+  .lt {
     position: absolute;
-    bottom: sizem(-20);
-    left: sizem(0);
-
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-
-      &:nth-child(1) {
-        width: 106.5%;
-        transform: translateX(2%);
-        transform-origin: 0 100%;
-        animation: an 10s linear infinite alternate;
-      }
-
-
-    }
-
+    top: 0;
+    left: 0;
+    width: sizem(135);
+    z-index: 1;
     @media screen and (min-width: 768px) {
-      width: 100%;
-      bottom: calc(30% + #{size(-70 - 1080 * .3)});
-      right: 0;
-      left: auto;
-    }
-
+    width: size(323);}
   }
 
-  .unicorn {
+  .rb {
     position: absolute;
-    bottom: sizem(45);
-    left: sizem(18);
-    width: sizem(320);
-    display: block;
-    aspect-ratio: 1/1;
-
+    bottom:0;
+    right:0;
+    width: sizem(79);
+    z-index: 1;
     @media screen and (min-width: 768px) {
-      top: size(204);
-      top: calc(50% + #{size(204 - 1080 * .5)});
-      left: size(103);
-      width: size(822);
-
-    }
+    width: size(193);}
   }
 
   .logo {
     position: absolute;
-    top: sizem(76);
-      top: calc(55% + #{sizem(76 - 667 * .55)});
+   // top: sizem(76);
+    top: calc(55% + #{sizem(145 - 604 * .55)});
 
     right: sizem(46);
     width: sizem(280);
     margin: 0;
 
     @media screen and (min-width: 768px) {
-      top: size(159);
-      top: calc(50% + #{size(159 - 1080 * .50)});
-      right: size(230);
-      width: size(714);
+      top: size(360);
+      // top: calc(50% + #{size(323 - 1080 * .50)});
+      right: size(365);
+      width: size(725);
 
     }
   }
@@ -123,7 +137,7 @@
   .t1 {
     position: absolute;
     top: sizem(260);
-      top: calc(50% + #{sizem(260 - 667 * .50)});
+    top: calc(50% + #{sizem(260 - 604 * .50)});
     right: 0;
     left: 0;
     margin: auto;
@@ -140,6 +154,89 @@
     }
   }
 
+  .visual {
+    position: absolute;
+    bottom: 0;
+    left: sizem(5);
+    overflow: hidden;
+    height: sizem(480);
+    pointer-events: none;
+    user-select: none;
+
+
+    @media screen and (min-width: 768px) {
+      height: size(957);
+      left: size(105);
+
+    }
+  }
+
+  .building {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    bottom: -26%;
+
+    img {
+      height: 100%
+    }
+
+    @media screen and (min-width: 768px) {
+      bottom: -23%;
+    }
+  }
+
+  .light2,
+  .light1 {
+    position: absolute;
+    width: 100%;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    user-select: none;
+      top:30%;
+      left: 0;
+      height: 100%;
+
+    @media screen and (min-width: 768px) {
+      top:30%;
+      left: 0;
+      height: 100%;
+
+    }
+  }
+
+  .light2 img {
+    position: absolute;
+      width: 10%;
+      top:25%;
+      left: 85%;
+
+  }
+
+  .light1 img {
+    position: absolute;
+      width: 88%;
+      top:0%;
+      left: 5%;
+
+  }
+  .shine-row.rt {
+    top: -.5em;
+    left: -.5em;
+    gap: 0em;
+    flex-direction: row;
+    flex-wrap:wrap;justify-content: flex-start;
+    width: 3em;z-index: 3;
+  }
+  .shine-row.br {
+    bottom: -.5em;
+    right:  -.5em;
+    gap: .1em;
+    flex-direction: row;
+    flex-wrap:wrap-reverse;
+  align-items: flex-end;justify-content: flex-end;
+    width: 3em;z-index: 3;
+  }
 
 }
 </style>

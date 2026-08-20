@@ -1,20 +1,12 @@
 <template>
   <div class="contact">
-    <img src="@/section/s1/c1.png" class="c1" alt="" />
-    <img src="@/section/s1/c2.png" class="c2" alt="" />
-    <a class="fb-messenger-fab z-[99] right-[1vw] bottom-[8vw] w-[4vw]" v-if="!isMobile && info.fbMessage"
-      @click="modalOpen = true; modalType = 'messenger'" aria-label="與我們在 Messenger 聊天">
-      <svg viewBox="0 0 36 36" class="fb-messenger-fab__icon" aria-hidden="true">
-        <path fill="#fff"
-          d="M18 7.5c-6.1 0-11 4.4-11 9.9 0 3.1 1.6 5.9 4.1 7.7v3.8l3.8-2.1c1 .3 2 .4 3.1.4 6.1 0 11-4.4 11-9.8S24.1 7.5 18 7.5zm1.1 13.3l-2.8-3-5.5 3 6-6.4 2.9 3 5.4-3-6 6.4z" />
-      </svg><span>專人服務</span><span class="b">了解更多<br>歡迎私訊<br>專人回應</span>
-    </a>
     <!-- <a :href="info.line" target="_blank" v-if="!isMobile && info.line"
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
       <img src="//h35.banner.tw/img/form/line.svg" />
     </a> -->
     <div class="contact-info mx-auto  flex flex-col items-center justify-between z-2 relative">
-      <img src="@/section/s1/logo.svg" class="logo" alt="" data-aos="zoom-out" />
+      
+      <img src="@/section/s1/logo-c.png"  class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
@@ -113,7 +105,7 @@
               modalType == 'line' ? '' :
                 modalType == 'gmap' ? `${info.address}` :
                   ''
-      }}</div>
+        }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()"
         v-if="modalType != 'phone'" v-bind:class="{
@@ -155,7 +147,7 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #0070f6;
+  background-color: #0189D3;
 }
 
 .hover\:bg-color2:hover {
@@ -177,108 +169,33 @@
   }
 }
 
-.fb-messenger-fab {
-  
-      font-size: size(18);
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-  flex-direction: column;
-
-  &:hover {
-    transform: scale(1.08);
-  }
-
-  &__icon {
-    width: 100%;
-    height: 100%;
-    background: #0070f6;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  }
-
-  span {
-    font-size: 0.9em;
-    color: #fff;
-    text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, .8);
-    margin-top: 0.25em;
-
-    &.b {
-      position: absolute;
-      display: block;
-      top: 0%;
-      right: 110%;
-    font-size: 0.9em;
-      line-height: 1.4;
-      text-align: center;
-      color: #333;
-      background: #fff1d9;
-      border-radius: 0.5em;
-      text-shadow: none;
-      white-space: nowrap;
-     // width: 10em;
-      padding: 0.5em;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-      transform: translateX(50%);
-      opacity: 0;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-  }
-    &:hover {span.b {
-      opacity: 1;
-      transform: translateX(0%);
-    }
-    }
-
-}
 
 .mo-contact-info {
-  display: flex;
+  display: none;
   z-index: 99;
   position: fixed;
-  top: auto;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  height: sizem(63);
-  background: linear-gradient(90deg, #fff0 70%, #fff9);
+  height: size(60);
+  background: linear-gradient(180deg, #110B60 , #3FA1D2);
+  font-size: size(16);
   font-weight: 500;
-  gap: 0;
-  font-size: sizem(16);
-  background: #FE7A92;
-  box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
 
-  @media screen and (min-width:768px) {
-    display: none;
-    top: 0;
-    height: size(60);
-    box-shadow: none;
-    font-size: size(16);
-  }
 
   .contact-item {
-    flex: 1;
     height: 100%;
+    color: #857550;
     border-left: 1px solid #fff9;
-    padding: 0;
+    padding: 0 .6em;
     transition: background .3s;
-    color: #fff;
-
-    @media screen and (min-width:768px) {
-      flex: 0;
-      padding: 0 .6em;
-      color: #857550
-    }
 
     img {
       margin-bottom: 0.3em;
       max-width: 1.03em;
       height: auto;
       max-height: 1.03em;
-      filter: brightness(0) invert(1);
+      filter: invert(50%) sepia(20%) saturate(662%) hue-rotate(4deg) brightness(88%) contrast(90%);
     }
 
     &:first-child {
@@ -296,17 +213,21 @@
     transform: translateX(0%);
   }
 }
+.contact{
+   background: url("@/section/s1/bg-c.webp") center  size(215) no-repeat;
+   background-size: 100% auto;
+}
+
 
 .logo {
   position: relative;
-  width: sizem(290);
-  margin: sizem(40) auto sizem(30) auto;
-
-  @media screen and (min-width:768px) {
-    width: size(455);
-    margin: size(60) auto size(30);
-
-  }
+  width: size(651);
+  // height: size(172);
+  // background-image: url("@/section/s1/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: size(60) auto size(140);
 }
 
 // ── 變數 ──────────────────────────────────────────
@@ -325,8 +246,8 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #6DAA43;
-  color: #fff;
+background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -12.43%, #F3EFB2 25.25%, #DAAF68 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
+  color: #160A00;
   border: 0px solid #3BEDFF99;
   border-radius: $border-radius;
   font-size: 16px;
@@ -340,14 +261,14 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     height: 1.65em;
     object-fit: contain;
     flex-shrink: 0;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(0);
     transition: filter 0.25s;
     margin: 0;
   }
 
   &:hover {
-    background: #45811d;
-    color: #fff;
+    background: linear-gradient(149deg, #DAAF68 -75.22%, #9D6F3E -54.29%, #F3EFB2 -12.43%, #fff 25.25%, #F3EFB2 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
+    color: #000;
     //border-color: #c00;
 
     // img { filter: brightness(0) invert(1); }
@@ -355,51 +276,8 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 }
 
 // ── 主體 ───────────────────────────────────────────
-.contact {
-  background: #EB6120;
-  position: relative;
-
-  .c1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: sizem(400);
-    transform: translateX(-10%)translateY(-100%);
-    transform-origin: 50%;
-    pointer-events: none;
-
-    // animation: an2 5s linear infinite alternate;
-    @media screen and (min-width:768px) {
-      width: size(985);
-    }
-
-  }
-
-  .c2 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: sizem(500);
-    transform: skewX(-15deg)translateY(-100%);
-    transform-origin: 50% 0;
-    animation: an2 5s linear infinite alternate;
-    pointer-events: none;
-
-    @media screen and (min-width:768px) {
-      width: size(1453);
-    }
-
-  }
-
-  @keyframes an2 {
-    to {
-      transform: translateY(-100%);
-    }
-  }
-}
-
 .contact-info {
-  width: sizem(310);
+  width: min(1200px, 95%); //最大1200px
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -407,22 +285,12 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   gap: $gap;
   padding: 0 0 2em;
 
-  @media screen and (min-width:768px) {
-    width: min(1200px, 95%); //最大1200px
-  }
-
   // ── 第一排：N 欄平均分配 ──
   .contact-row {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr;
-    gap: 12px;
-
-    @media screen and (min-width:768px) {
-      gap: $gap;
-      grid-template-columns: repeat(#{$cols}, 1fr);
-
-    }
+    gap: $gap;
+    grid-template-columns: repeat(#{$cols}, 1fr);
 
     .contact-item {
       @include contact-item-base;
@@ -431,11 +299,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     // ── 第二排：地址 + 導航，緊貼成一塊 ──
     &.bottom {
       gap: 0;
-      grid-template-columns: 1fr;
-
-      @media screen and (min-width:768px) {
-        grid-template-columns: 1fr $btn-w;
-      }
+      grid-template-columns: 1fr $btn-w;
 
       .contact-item {
         @include contact-item-base;
@@ -447,13 +311,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
           cursor: default;
           white-space: normal;
           text-align: center;
-          border-radius: $border-radius $border-radius 0 0;
-          font-size: 15px;
-
-          @media screen and (min-width:768px) {
-            border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
-            font-size: 16px;
-          }
+          border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
 
           &:hover {
             background: #fff;
@@ -462,11 +320,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
         }
 
         &.googlemap {
-          border-radius: 0 0 $border-radius $border-radius;
-
-          @media screen and (min-width:768px) {
-            border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
-          }
+          border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
         }
       }
     }
@@ -476,17 +330,51 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter: invert(30%) sepia(97%) saturate(3399%) hue-rotate(203deg) brightness(98%) contrast(102%);
+    filter: invert(37%) sepia(60%) saturate(5826%) hue-rotate(182deg) brightness(101%) contrast(101%);
   }
 }
 
 @media screen and (max-width:768px) {
 
 
+  .mo-contact-info {
+    display: flex;
+    top: auto;
+    bottom: 0;
+    width: sizem(375);
+    height: sizem(63);
+    gap: 0;
+    box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
+    font-size: sizem(16);
+  // background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
+
+    .contact-item {
+      flex: 1;
+      padding: 0;
+      color: #fff;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+  .contact{
+   background-position: center sizem(40);
+   background-size: 400% auto;
+}
+
+  .logo {
+    width: sizem(310);
+    margin: sizem(40) auto sizem(50) auto;
+  }
+
   .contact-info {
 
+    width: sizem(310);
 
     .contact-row {
+      grid-template-columns: 1fr;
+      gap: 12px;
 
       .contact-item {
         position: relative;
@@ -500,24 +388,34 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
         }
       }
 
+      &.bottom {
+        grid-template-columns: 1fr;
+        gap: 0;
+
+        .contact-item {
+          &.address {
+            // border: 1.5px solid #00744a;
+            //   border-bottom: none;
+            border-radius: $border-radius $border-radius 0 0;
+            white-space: normal;
+          }
+
+          &.googlemap {
+            border-radius: 0 0 $border-radius $border-radius;
+          }
+        }
+      }
     }
   }
 }
-
-//
 </style>
 
 <script setup>
 import info from "@/info"
-import {  computed, getCurrentInstance, inject, ref } from "vue";
-const globals = getCurrentInstance().appContext.config.globalProperties;
+import { inject, ref } from "vue";
+const modalOpen = ref(false);
+const modalType = ref('');
 
-const isMobile = computed(() => globals.$isMobile());
-const contactModal = inject('contactModal')
-/* const modalOpen = ref(false);
-const modalType = ref(''); */
-const modalOpen = contactModal.modalOpen
-const modalType = contactModal.modalType
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;

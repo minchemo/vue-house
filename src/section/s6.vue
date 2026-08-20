@@ -1,10 +1,38 @@
 <template>
-  <article class="s6 " ref="s6">
+  <article class="s6" ref="s6">
+    <div class="shine-row">
+      <div class="shine-dot dot-y">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-b">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-iri">
+        <div class="shine-inner"></div>
+      </div>
+    </div>
+    <div class="slider" data-aos="fade">
+      <div class="arrows">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
+      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+        <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
+          <img :src="img.img" :alt="img.caption">
+          <span class="caption">{{ img.caption }}</span>
+        </SplideSlide>
+      </Splide>
+    </div>
     <div class="main">
       <div class="txt">
-        <h3 class="title font-['Noto_Serif_TC',serif]" data-aos="fade-up" data-aos-delay="0">千坪歐式雙塔美學<br v-if="isMobile"> 古典拱廊對話當代</h3>
-        <p class="desc" data-aos="fade-up" data-aos-delay="0">千坪壯闊基地，雙塔雄偉聳立；花崗岩基座融合新古典結構理性與巴洛克裝飾雕刻，散發出古羅馬圓拱門廊的恢弘氣勢，<br v-if="!isMobile">
-浮雕和山牆展現出精巧而富有戲劇性的細節；垂直線條挺拔而上，結合框景式立面，打造鶯歌最具藝術美感的歐式巨擘地標。</p>
+        <img src="./s6/t1.svg" alt="en" class="t1" data-aos="fade-up" data-aos-delay="0">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">前店後廠自由港<br>
+串聯全球供應鏈</h3>
+        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="400">
+        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+          台中正迎來轉型機遇，全力打造強大的商務引擎。<br>
+          麗寶ACE以樞紐之姿串聯人流與資源，將產品推展至全球，<br>
+與這座城市一同昂首榮耀。</p>
       </div>
     </div>
 
@@ -14,71 +42,97 @@
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+@keyframes an {
+  to {
+    transform: translateX(0%);
+  }
+}
 
 
 .s6 {
-  @apply relative flex text-[#fff] bg-[#A4A428];
+  @apply relative flex justify-center;
   width: 100%;
   height: auto;
-  padding: 6em 0 1em 0;
-  font-size: size(22);
-  gap: 2.3em;
+  padding:0 0 sizem(20) 0;
+  gap: 0;
   flex-wrap: wrap;
-  //overflow: hidden;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  background: #234F98 url('./s6/bg.webp') no-repeat center center;
-  background-size: cover;
-  height: size(1244);
-@media screen and (max-width: 767px) {
-    background-position: center bottom;
-  background-size:sizem(534) auto;
-}
+  color: #FFF;
 
-  .txt {
-    text-align: center;
-@media screen and (max-width: 767px) {
-    width: sizem(310);
-
-}
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    padding: 5.5em 0 7.5em 0;
+ //   padding: 6.9em 0 6.9em 0;
+    flex-wrap: wrap;
+    gap: 4em;
+    background-size: size(113) auto;
   }
 
-@media screen and (max-width: 767px) {
-    height: sizem(540);
-    font-size: sizem(13);
-    flex-wrap: nowrap;
-    margin-bottom: 0em;
-    gap: 0em;
-    padding: 5em 0 0;
-}
+  .main {
+    @apply flex;
+    padding: 0 sizem(32.5);
+    width: 100%;
+    flex-direction: column;
+    text-align: justify;
+    position: relative;
+    z-index: 3;
 
-}
-
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-/*
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-@media screen and (max-width: 767px) {
-
-
-  .s6 {
-    @apply flex-col;
-    height: auto;
-    font-size: sizem(12);
-    flex-wrap: nowrap;
-    margin-bottom: 0em;
-    gap: 0em;
-    padding: 5em 0 0;
-
-    .txt {
-      margin-bottom: 3em;
-
+    @media screen and (min-width: 768px) {
+      padding: 0;
+      width: size(590);
     }
   }
+
+  .txt {
+    padding: sizem(40) 0 sizem(40);
+    @media screen and (min-width: 768px) {
+      padding: 0;
+      .title{
+      font-size: 2em;
+
+      }
+    }
+
+  }
+
+  // size(110)
+
+  .slider {
+    margin:0;
+      width:100%;
+      height: auto;
+      @media screen and (min-width: 768px) {
+    width: size(840);
+      }
+
+    .slide-item {
+      @apply bg-cover;
+        width: 100%;
+        height: sizem(250);
+      @media screen and (min-width: 768px) {
+      width: size(840);
+      height: size(560);
+
+      }
+
+    }
+
+    .splide__pagination {
+      left: calc(100% + 6em);
+      justify-content: flex-start;
+    }
+  }
+  .shine-row {
+    bottom: 3.5em;
+    right: -.5em;
+    @media screen and (min-width: 768px) {
+    bottom: 1.5em;
+    }
+  }
+
 }
-*/
+
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
@@ -90,7 +144,7 @@ const getImg = (path) => {
   return new URL(`./${path}_m.jpg`, import.meta.url).href
 }
 
-const splide = ref();
+const splide = ref()
 
 const currentSlideIndex = ref(0);
 
@@ -101,25 +155,30 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
-  autoplay: true,
+  pagination: false,
+  autoplay: false,
   interval: 4000,
   gap: 0,
+//  drag: false
   type: 'loop'
 }
 
-const imgs = computed(() => [
+const imgs = [
   {
-    img: isMobile.value ? new URL("./s6/1m.webp", import.meta.url).href : new URL("./s6/1.webp", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s6/1.webp", import.meta.url).href,
+    caption: "交通圖"
   },
   {
-    img: isMobile.value ? new URL("./s6/2m.webp", import.meta.url).href : new URL("./s6/2.webp", import.meta.url).href,
-    caption: isMobile.value ?"六合國際觀光夜市":""
+    img: new URL("./s6/2.webp", import.meta.url).href,
+    caption: "台中車站"
   },
-  ...(isMobile.value ? [{
-    img: new URL("./s6/3m.webp", import.meta.url).href,
-    caption: ""
-  }] : []),
-]);
+  {
+    img: new URL("./s6/3.webp", import.meta.url).href,
+    caption: "台中機場示意"
+  },
+  {
+    img: new URL("./s6/4.webp", import.meta.url).href,
+    caption: "台中港示意"
+  },
+]
 </script>

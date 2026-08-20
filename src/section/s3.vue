@@ -1,22 +1,17 @@
 <template>
   <article class="s3" ref="s3">
-    <div class="bg">
-      <img src="./s1/c3.png" alt="i2">
-    </div>
-    <div class="main">
-      <div class="txt">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">國道 × 台鐵 × 捷運<br>
-三高奔馳 高速移動之城</h3>
-       <!--  <hr class="hr" data-aos="fade-up" data-aos-delay="400" /> -->
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
-          連接國道3號，南下北上串聯土城、中和、板橋等科技與產業聚落；串聯國道2號，直達桃園機場、高鐵桃園站，前往國道1號，林口三井、內湖台北，生活、商務、休閒一次到位。</p>
+    <div class="shine-row">
+      <div class="shine-dot dot-y">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-iri">
+        <div class="shine-inner"></div>
+      </div>
+      <div class="shine-dot dot-b">
+        <div class="shine-inner"></div>
       </div>
     </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows" v-if="isMobile">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -24,12 +19,24 @@
         </SplideSlide>
       </Splide>
     </div>
+    <div class="main">
+      <div class="txt">
+        <img src="./s3/art.svg" alt="en" class="en" data-aos="fade-up" data-aos-delay="0">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="200">藝術靈魂</h3>
+        <hr class="hr" data-aos="fade-up" data-aos-delay="400" />
+        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+          攜手麗寶文化藝術基金會，<br>
+          讓藝廊美學融入辦公日常，<br>
+          淬鍊美學品味。</p>
+      </div>
+    </div>
 
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+
 @keyframes an {
   to {
     transform: translateX(0%);
@@ -38,62 +45,52 @@
 
 
 .s3 {
-  @apply relative flex justify-center bg-[#6DAA43];
+  @apply relative flex justify-center;
   width: 100%;
   height: auto;
-  padding: 6.9em 0 6.9em 0;
-  gap: 4em;
+  padding: sizem(60) 0 sizem(20) 0;
+  gap: 0;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
-      color: #FFF;
+  color: #FFF;
+  font-size: sizem(13);
 
-  .bg {
-    width: 253%;
-    height: 100%;
-    position: absolute;
-    bottom: sizem(-100);
-    left: sizem(0);
-
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-        width: 100%;
-        transform: translateX(-2%);
-        transform-origin: 0 100%;
-        animation: an 5s linear infinite alternate;
-
-
-    }
-
-    @media screen and (min-width: 768px) {
-      width: 35%;
-      bottom: 0;
-      left: 0;
-     // left: auto;
-    }
-
+  @media screen and (min-width: 768px) {
+    font-size: size(30);
+    flex-direction: row;
+    padding: 5.5em 0;
+    //   padding: 6.9em 0 6.9em 0;
+    flex-wrap: wrap;
+    gap: 4em;
+    background-size: size(113) auto;
   }
+
   .main {
     @apply flex;
-    margin: 0;
-    width: size(590);
+    padding: 0 sizem(32.5);
+    width: 100%;
     flex-direction: column;
     text-align: justify;
     position: relative;
     z-index: 3;
-}
-  .txt {
-    // margin: auto auto 3vw auto;
-    padding: 0;
-  //  width: size(455);
 
-    .title {
+    @media screen and (min-width: 768px) {
+      padding: 0;
+      width: size(590);
     }
+  }
 
-    .hr {
-  //    color: #7C519F;
+  .txt {
+    padding: sizem(40) 0 sizem(40);
+
+    @media screen and (min-width: 768px) {
+      padding: 0;
+
+      .title {
+        font-size: 2em;
+
+      }
     }
 
   }
@@ -101,16 +98,24 @@
   // size(110)
 
   .slider {
-    margin: 0 0 0 0;
-    flex-basis: size(840);
-    width: size(840);
-    height: size(560);
+    margin: 0;
+    width: sizem(310);
+    height: auto;
+
+    @media screen and (min-width: 768px) {
+      width: size(840);
+    }
 
     .slide-item {
       @apply bg-cover;
-      flex-basis: size(840);
-      width: size(840);
-      height: size(560);
+      width: 100%;
+      height: sizem(207);
+
+      @media screen and (min-width: 768px) {
+        width: size(840);
+        height: size(560);
+
+      }
 
     }
 
@@ -119,64 +124,15 @@
       justify-content: flex-start;
     }
   }
-}
 
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-@media screen and (max-width: 767px) {
-
-
-  .s3 {
-  flex-direction: column-reverse;
-    height: auto;
-    padding: 0;
-    font-size: sizem(13);
-    flex-wrap: nowrap;
-    margin-bottom: 0em;
-    gap: 0em;
-
-.bg{
-  // top:sizem(270);
-  bottom: sizem(0);
-  left: sizem(0);
-  width: 70%;
-}
-
-
-
-    .main {
-      padding: 0 sizem(32.5);
-      width: 100%;
-    }
-
-    .txt {
-      margin: 4em auto 7em;
-      padding: 0;
-      width: auto;
-    }
-
-
-    .slider {
-      height: auto;
-      width: 100%;
-
-      .caption {
-        font-size: sizem(12);
-        right: sizem(5);
-        bottom: sizem(5);
-      }
-
-      .slide-item {
-        @apply bg-cover;
-        width: 100%;
-        flex-basis: auto;
-        height: sizem(250);
-
-      }
-    }
+  .shine-row {
+    top: 5.6em;
+    left: -.5em;
+      @media screen and (min-width: 768px) {
+    top: 1.3em;
   }
+  }
+
 }
 </style>
 <script setup>
@@ -189,7 +145,7 @@ const getImg = (path) => {
   return new URL(`./${path}_m.jpg`, import.meta.url).href
 }
 
-const splide = ref();
+const splide = ref()
 
 const currentSlideIndex = ref(0);
 
@@ -200,29 +156,18 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: true,
+  pagination: false,
   autoplay: false,
   interval: 4000,
   gap: 0,
-  type: 'loop'
+  drag: false
+  //type: 'loop'
 }
 
 const imgs = [
   {
-    img: new URL("./s3/2.jpg", import.meta.url).href,
-    caption: "國道三號"
-  },
-  {
     img: new URL("./s3/1.jpg", import.meta.url).href,
-    caption: "國道三號"
-  },
-  {
-    img: new URL("./s3/3.jpg", import.meta.url).href,
-    caption: "三鶯交流道"
-  },
-  {
-    img: new URL("./s3/4.jpg", import.meta.url).href,
-    caption: "國三接國二"
+    caption: ""
   },
 ]
 </script>
