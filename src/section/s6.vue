@@ -165,7 +165,7 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s6/1.webp", import.meta.url).href,
+    img: new URL("./s6/1.png", import.meta.url).href,
     caption: "交通圖"
   },
   {

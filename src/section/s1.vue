@@ -5,6 +5,7 @@
       <source srcset="./s1/mo.png" media="(max-width: 768px)">
       <img src="./s1/pc.png" class="t0">
     </picture> -->
+      <img src="./s1/bg.jpg" alt="bg" class="bg">
     <div class="shine-row rt">
       <div class="shine-dot dot-iri">
         <div class="shine-inner"></div>
@@ -86,36 +87,28 @@
   height: 100svh; // 手機工具列跳動问题的正解，數值固定不受工具列影響
   min-height: sizem(604);
   max-height: sizem(604);
-    background: url("./s1/bg.jpg");
+   /* background: url("./s1/bg.jpg");
     background-size:cover;
+    */
 
   @media screen and (min-width: 768px) {
     font-size: size(27);
     height: 100vh;
-    min-height: size(1070);
+    min-height: size(900);
     max-height: size(1080);
   }
 
-  .lt {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: sizem(135);
-    z-index: 1;
-    @media screen and (min-width: 768px) {
-    width: size(323);}
-  }
-
-  .rb {
-    position: absolute;
-    bottom:0;
-    right:0;
-    width: sizem(79);
-    z-index: 1;
-    @media screen and (min-width: 768px) {
-    width: size(193);}
-  }
-
+.bg{
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0px;
+  left: 0;
+  pointer-events: none;
+  object-fit: cover;
+ // z-index: 9;
+}
   .logo {
     position: absolute;
    // top: sizem(76);
