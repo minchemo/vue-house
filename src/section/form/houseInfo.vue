@@ -86,7 +86,7 @@ $house-c2:#000;
 .house {
     // background:#fff;
   //  height: sizem(400);
-    font-size: sizem(13);
+ //   font-size: sizem(13);
 }
 
 .houseimg{width: 100%;object-fit: cover;height: 16.5vw;}
@@ -96,7 +96,8 @@ $house-c2:#000;
     }
 
     .info-box {
-        width: sizem(313);
+        width: fit-content;
+        max-width: sizem(310);
         padding: 0;
 
         .title {

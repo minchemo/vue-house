@@ -39,7 +39,6 @@
   color: #FFF;
   background: url("./s2/bg.svg");
   background-size: sizem(56) auto;
-  font-size: sizem(13);
 
   @media screen and (min-width: 768px) {
     padding: 2em 0;

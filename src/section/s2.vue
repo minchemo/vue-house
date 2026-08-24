@@ -15,17 +15,17 @@
     <div class="main">
       <div class="txt">
         <img src="./s2/slogo.png" alt="slogo" class="slogo" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">國際級企業總部<br>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="100">國際級企業總部<br>
           讓台灣被世界看見</h3>
-        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="400">
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="200">
+        <p class="desc" data-aos="fade-up" data-aos-delay="300">
           台灣已成國際經濟樞紐，需要對應高度的企業總部。<br>
           麗寶集團以50年深厚底蘊，打造ACE王牌計畫新商辦。</p>
       </div>
     </div>
     <picture>
       <source srcset="./s2/imgm.png" media="(max-width: 768px)">
-      <img src="./s2/img.png" loading="lazy" class="img" data-aos="fade-up" data-aos-delay="800">
+      <img src="./s2/img.png" loading="lazy" class="img" data-aos="fade-up" data-aos-delay="400">
     </picture>
 
   </article>

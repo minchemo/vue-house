@@ -7,8 +7,8 @@ export default {
   address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
   address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
   address: "台中市東區南京路86號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.2228896713307!2d120.68874657804871!3d24.140446166940976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d004316b727%3A0x6ae5ff5117070033!2z6bqX5a-2QUNFIOm1rOeoi-WPsOS4reaZuuWMr-e4vemDqA!5e0!3m2!1szh-TW!2stw!4v1781059674070!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/shZNPyYY4fjqjCod6",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7281.820200933396!2d120.68387568670232!3d24.13979509349411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d004316b727%3A0x6ae5ff5117070033!2z6bqX5a-2QUNFIOm1rOeoi-WPsOS4reaZuuWMr-e4vemDqA!5e0!3m2!1szh-TW!2stw!4v1787539205034!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/zpEi4cvw4bgzsMTw5",
   phone: "04-2211-0333",
   fbLink: "https://www.facebook.com/61589890269981",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
   fbMessage: "https://m.me/61589890269981",

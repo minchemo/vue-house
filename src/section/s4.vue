@@ -19,9 +19,9 @@
     <div class="main">
       <div class="txt">
         <img src="./s3/core.svg" alt="en" class="en" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">核心地段</h3>
-        <hr class="hr" data-aos="fade-up" data-aos-delay="400" />
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="100">核心地段</h3>
+        <hr class="hr" data-aos="fade-up" data-aos-delay="200" />
+        <p class="desc" data-aos="fade-up" data-aos-delay="300">
           精準鎖定高鐵捷運交會處與<br>
           產業聚落，以絕對地段優勢，<br>
           掌握城市發展脈動。</p>
@@ -51,7 +51,6 @@
   flex-direction: column;
   align-items: center;
   color: #FFF;
-  font-size: sizem(13);
 
   @media screen and (min-width: 768px) {
     font-size: size(30);

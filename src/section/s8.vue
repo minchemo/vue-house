@@ -23,10 +23,10 @@
     <div class="main">
       <div class="txt">
         <img src="./s8/t1.svg" alt="en" class="t1" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">600億大台中車站計畫<br>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="100">600億大台中車站計畫<br>
 區域機能全方位</h3>
-        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="400">
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="200">
+        <p class="desc" data-aos="fade-up" data-aos-delay="300">
 台中市政府重點都市計畫，透過鐵路高架化、<br>
 落實四鐵共構與7轉7接的立體路網。<br>
  麗寶ACE緊鄰台中車站、湧泉公園，<br>

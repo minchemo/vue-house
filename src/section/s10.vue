@@ -11,10 +11,10 @@
     <div class="main">
       <div class="txt">
         <img src="./s10/t1.svg" alt="en" class="t1" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">迎向全球ESG浪潮<br>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="100">迎向全球ESG浪潮<br>
 傲立台中新商辦</h3>
-        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="400">
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="200">
+        <p class="desc" data-aos="fade-up" data-aos-delay="300">
           以國際級眼光打造，美國TITAN金獎實力肯定，<br>
           全方位對接永續標竿的王牌總部大樓。<br><br>
 

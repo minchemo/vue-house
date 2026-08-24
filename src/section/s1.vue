@@ -46,7 +46,7 @@
         <div class="shine-inner"></div>
       </div>
     </div>
-    <img src="./s1/logo.webp" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./s1/logo.webp" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <div class="visual">
       <div class="building">
         <img src="./s1/building.webp">

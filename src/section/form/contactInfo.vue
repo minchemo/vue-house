@@ -77,8 +77,8 @@
   </div>
 
   <!-- Modal -->
-  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
-  <div class="modal -mt-20 md:-mt-72">
+  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle " />
+  <div class="modal -mt-20 md:-mt-72 text-[#000]">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
@@ -89,7 +89,7 @@
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <img class="h-12" v-else-if="modalType == 'line'" src="//h35.banner.tw/img/form/line.svg" alt="line" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{
+      <div class="text-xl mt-4 font-bold ">{{
         modalType == 'phone' ? '賞屋專線' :
           modalType == 'messenger' ? 'Facebook Messenger' :
             modalType == 'fb' ? 'Facebook 粉絲專頁' :
@@ -413,9 +413,11 @@ background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -1
 <script setup>
 import info from "@/info"
 import { inject, ref } from "vue";
-const modalOpen = ref(false);
-const modalType = ref('');
-
+const contactModal = inject('contactModal')
+/* const modalOpen = ref(false);
+const modalType = ref(''); */
+const modalOpen = contactModal.modalOpen
+const modalType = contactModal.modalType
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;

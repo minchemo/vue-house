@@ -9,8 +9,7 @@
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption" class="bg">
           <div class="text">
-            <span class="title">{{ img.title }}</span><img src="./s2/icon.svg" alt="icon" class="icon"
-              data-aos="fade-up" data-aos-delay="400">
+            <span class="title">{{ img.title }}</span><img src="./s2/icon.svg" alt="icon" class="icon">
 
             <span class="desc">{{ img.desc }}</span>
           </div>

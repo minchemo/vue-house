@@ -1,18 +1,18 @@
 <template>
-  <article class="s7">
+  <article class="s60">
     <Fullview
       :mapImage="mapImage"
       :bgImage="bgImage"
-      :offsetRatio="1.98"
+      :offsetRatio="1.5"
     />
-    <div class="caption">空拍實景經電腦後製</div>
+    <div class="caption">交通圖</div>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.s7 {
+.s60 {
   @apply relative overflow-hidden bg-[#005890] text-[#fff];
   width: 100%;
  // height: size(1059);
@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 767px) {
 
-  .s7 {
+  .s60 {
    // height: sizem(550);
 /*
   .txt {//text-align: justify;
@@ -55,8 +55,8 @@
 <script setup>
 import { computed, getCurrentInstance } from 'vue';
 import Fullview from '../components/fullview.vue';
-import mapImage from '@/section/s7/map.png';
-import bgImage from '@/section/s7/map.webp';
+import mapImage from '@/section/s6/1.png';
+//import bgImage from '@/section/s60/map.webp';
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());

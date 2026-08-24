@@ -23,7 +23,7 @@
     text-align: center;
 
     > img {
-        width: auto;
+        width: 100%;
         height: 100%;
         max-width: unset;
     background-repeat: no-repeat;
@@ -38,6 +38,10 @@
         overflow: hidden;
 
         img {
+            width: auto;
+            height: 100%;
+        }
+        > img {
             width: auto;
             height: 100%;
         }

@@ -22,9 +22,9 @@
     <div class="main">
       <div class="txt">
         <img src="./s3/art.svg" alt="en" class="en" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">藝術靈魂</h3>
-        <hr class="hr" data-aos="fade-up" data-aos-delay="400" />
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+        <h3 class="title" data-aos="fade-up" data-aos-delay="100">藝術靈魂</h3>
+        <hr class="hr" data-aos="fade-up" data-aos-delay="200" />
+        <p class="desc" data-aos="fade-up" data-aos-delay="300">
           攜手麗寶文化藝術基金會，<br>
           讓藝廊美學融入辦公日常，<br>
           淬鍊美學品味。</p>
@@ -54,7 +54,6 @@
   flex-direction: column;
   align-items: center;
   color: #FFF;
-  font-size: sizem(13);
 
   @media screen and (min-width: 768px) {
     font-size: size(30);

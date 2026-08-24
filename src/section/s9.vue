@@ -22,7 +22,7 @@
     <div class="main">
       <div class="txt">
         <img src="./s9/t1.svg" alt="en" class="t1" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">當代地標建築<br>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="100">當代地標建築<br>
 極緻美學思維</h3>
         <ul class="desc" data-aos="fade-up">
           <li>
@@ -136,7 +136,7 @@
     .slide-item {
       @apply bg-cover;
         width: 100%;
-        height: sizem(211);
+        height: sizem(305);
       @media screen and (min-width: 768px) {
       height: size(844);
 
@@ -192,7 +192,7 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s9/1.webp", import.meta.url).href,
+    img:globals.$isMobile()? new URL("./s9/1m.jpg", import.meta.url).href: new URL("./s9/1.webp", import.meta.url).href,
     caption: ""
   },
 ]

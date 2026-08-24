@@ -26,12 +26,12 @@
     <div class="main">
       <div class="txt">
         <img src="./s6/t1.svg" alt="en" class="t1" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="200">前店後廠自由港<br>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="100">前店後廠自由港<br>
 串聯全球供應鏈</h3>
-        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="400">
-        <p class="desc" data-aos="fade-up" data-aos-delay="600">
+        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="200">
+        <p class="desc" data-aos="fade-up" data-aos-delay="300">
           台中正迎來轉型機遇，全力打造強大的商務引擎。<br>
-          麗寶ACE以樞紐之姿串聯人流與資源，將產品推展至全球，<br>
+          麗寶ACE以樞紐之姿串聯人流與資源，<br v-if="isMobile">將產品推展至全球，<br>
 與這座城市一同昂首榮耀。</p>
       </div>
     </div>
@@ -164,10 +164,10 @@ const options = {
 }
 
 const imgs = [
-  {
+  /*{
     img: new URL("./s6/1.png", import.meta.url).href,
     caption: "交通圖"
-  },
+  },*/
   {
     img: new URL("./s6/2.webp", import.meta.url).href,
     caption: "台中車站"
