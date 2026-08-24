@@ -33,8 +33,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#1B2F61;
-$house-c2:#000;
+$house-c1:#F9D896;
+$house-c2:#CCC;
 .displaynone{display: none;}
 .house {
     position: relative;
@@ -43,7 +43,7 @@ $house-c2:#000;
     color: $house-c2;
     font-size: size(22);
     // height:4em;
-    background: #CCC;
+    background: #002B69;
 }
 .info-box {position: relative;z-index: 30;
     width: 50em;

@@ -10,22 +10,11 @@
   </div>
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#000] text-[#fff]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#000] text-[#FFF]">
     <div class="light-h light1"></div>
     <div class="light-h light2"></div>
     <div class="light-h light3"></div>
     <S1 />
-    <!-- 
-    <S9 />
-    <S2v /> -->
-    <!--
-    <div class="bg">
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-    </div>
-    <S1new />
-    <S1new2 /> -->
     <Order />
   </div>
 </template>
@@ -88,8 +77,9 @@ img {
     position: absolute;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
+    // border-radius: 50%;
     font-size: size(1470);
+    overflow: hidden;
     &::before,
     &::after{
       content: "";
@@ -114,12 +104,22 @@ mix-blend-mode: plus-lighter;}
     left:size(-840);
   }
   .light2{
+    top:sizem(404);
+    right: 0;
+    &::before,
+    &::after{
+    left: size(788);}
+   // right:size(-788);
+    @media screen and (min-width: 768px) {
     top:size(364);
-    right:size(-788);
+    }
   }
   .light3{
-    top:size(1444);
+    top:sizem(1444);
     left:size(-840);
+    @media screen and (min-width: 768px) {
+    top:size(1444);
+    }
   }
 }
 

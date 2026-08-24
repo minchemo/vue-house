@@ -6,27 +6,33 @@ export default {
   // case_code: "test", //某些舊案資料庫要單獨設定名稱
   address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
   address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
-  //address: "台中市東區南京路86號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.2228896713307!2d120.68874657804871!3d24.140446166940976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d004316b727%3A0x6ae5ff5117070033!2z6bqX5a-2QUNFIOm1rOeoi-WPsOS4reaZuuWMr-e4vemDqA!5e0!3m2!1szh-TW!2stw!4v1781059674070!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/shZNPyYY4fjqjCod6",
-  //phone: "04-2211-0333",
-  fbLink: "https://www.facebook.com/",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
-  fbMessage: "https://m.me/",
+  address: "台北市中山區長春路372號",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.39889597534!2d121.54285269999998!3d25.054465699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe7330ed55d%3A0x722eb865fe7fe6db!2zMTA0OTHoh7rljJfluILkuK3lsbHljYDlvqnoj6_ph4zplbfmmKXot68zNzLomZ8!5e0!3m2!1szh-TW!2stw!4v1787553224469!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/Bd2GDdxtXQZJMKRS7",
+  phone: "02-8770-5588",
+  fbLink: "https://www.facebook.com/61589706388074",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
+  fbMessage: "https://m.me/61589706388074",
   // line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
-  //  ["投資興建", "鵬程建設股份有限公司"],
-  //  ["行銷企劃", "海沃創意行銷"],
-   /*投資興建
-鵬程建設股份有限公司
-行銷企劃
-海沃創意行銷
-    ["建照號碼", "xxx"],
-     ["經&ensp;紀&ensp;人", "xxx"],
-    ["建築設計", "xxx"],
-    ["使照號碼", "xxx"],
-    ["行銷企劃", "xxx"],*/
-    /*
+    ["坪數規劃", "18-52坪"],
+    ["投資興建", "大將開發股份有限公司"],
+    ["工程營造", "豐興營造"],
+    ["建築規劃", "王克強建築師事務所"],
+    ["公設設計", "美合設計"],
+    ["建築行銷", "泰瑀行銷股份有限公司"],
+    ["建照執照", "114建字第0013號"],
+    ["經紀人", "(113)新北經字第004687號"],
+   /*接待會館｜台北市中山區長春路372號
+預約專線｜02-8770-5588
+坪數規劃｜18-52坪
+投資興建｜大將開發股份有限公司
+工程營造｜豐興營造
+建築規劃｜王克強建築師事務所
+公設設計｜美合設計
+建築行銷｜泰瑀行銷股份有限公司
+建照執照｜114建字第0013號
+經紀人｜(113)新北經字第004687號
     */
   ],
    gtmCode: ["GTM-M555LZ6L"], // 可放置多個

@@ -1,77 +1,17 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!-- 
-    <picture>
-      <source srcset="./s1/mo.png" media="(max-width: 768px)">
-      <img src="./s1/pc.png" class="t0">
-    </picture>
-      <img src="./s1/bg.jpg" alt="bg" class="bg">
-    <div class="shine-row rt">
-      <div class="shine-dot dot-iri">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-y">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-b">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-b">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-l">
-      </div>
-      <div class="shine-dot dot-y">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-l">
-      </div>
-      <div class="shine-dot dot-iri">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot">
-      </div>
-      <div class="shine-dot dot-b">
-        <div class="shine-inner"></div>
-      </div>
-    </div>
-    <div class="shine-row br">
-      <div class="shine-dot dot-b">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-iri">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-y">
-        <div class="shine-inner"></div>
-      </div>
-    </div>
-    <img src="./s1/logo.webp" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="200">
-    <div class="visual">
-      <div class="building">
-        <img src="./s1/building.webp">
-      </div>
-
-      <div class="light1">
-        <img src="./s1/light1.webp">
-      </div>
-
-      <div class="light2">
-        <img src="./s1/light2.webp">
-      </div>
-    </div> -->
     <div class="text">
-      <div class="logo">
+      <div class="logo" data-aos="zoom-in">
         <img src="./s1/logo.svg" alt="logo" />
         <img src="./s1/light.png" alt="light" class="light" />
       </div>
-      <div class="t1">仕紳高端選址<br v-if="isMobile" /><span v-else>．</span>隱富長春首席</div>
-      <div class="t2"><span class="t2-1">捷運南京復興站<span><span>270</span>米 </span></span>
+      <div class="t1" data-aos="zoom-in" data-aos-delay="100">仕紳高端選址<br v-if="isMobile" /><span v-else>．</span>隱富長春首席</div>
+      <div class="t2" data-aos="zoom-in" data-aos-delay="200"><span class="t2-1">捷運南京復興站<span><span>270</span>米 </span></span>
         <span class="t2-2">
           <span><span>18-52</span>坪 </span><span class="hr"></span><span>屏息以待</span>
         </span>
       </div>
-      <div class="t3">大將開發 股票代號<span>1453</span></div>
+      <div class="t3" data-aos="zoom-in" data-aos-delay="300">大將開發 股票代號<span>1453</span></div>
     </div>
   </article>
 </template>
@@ -99,7 +39,7 @@
   font-size: sizem(20);
   height: 100svh; // 手機工具列跳動问题的正解，數值固定不受工具列影響
   min-height: sizem(604);
-  max-height: sizem(604);
+  max-height: sizem(750);
   font-weight: 300;
   display: flex;
   justify-content: center;
@@ -111,7 +51,7 @@
   @media screen and (min-width: 768px) {
     font-size: size(42);
     height: 100vh;
-    min-height: size(1080);
+    min-height: size(900);
     max-height: size(1080);
   }
 
