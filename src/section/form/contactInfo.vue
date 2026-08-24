@@ -6,7 +6,10 @@
     </a> -->
     <div class="contact-info mx-auto  flex flex-col items-center justify-between z-2 relative">
       
-      <img src="@/section/s1/logo-c.png"  class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+      <div class="logo" data-aos="zoom-in">
+        <img src="@/section/s1/logo.svg" alt="logo" />
+        <img src="@/section/s1/light.png" alt="light" class="light" />
+      </div>
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
@@ -78,7 +81,7 @@
 
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
-  <div class="modal -mt-20 md:-mt-72">
+  <div class="modal -mt-20 md:-mt-72 text-[#000]">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
@@ -219,16 +222,36 @@
 }
 
 
-.logo {
-  position: relative;
-  width: size(651);
-  // height: size(172);
-  // background-image: url("@/section/s1/logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: size(60) auto size(140);
+  .logo {
+    width: sizem(250);
+    margin: 0 auto  sizem(30);
+
+    @media screen and (min-width: 768px) {
+      //  top: size(360);
+      width: size(356);
+    margin: 0 auto  size(50);
+
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .light {
+      position: absolute;
+      width: 40.16%;
+      top: 0%;
+      left: 26%;
+      mix-blend-mode: screen;
+      animation: light 4s infinite;
+    }
+  }
+  @keyframes light {
+  0%   {transform: rotate(0) scale(1); }
+  50%   {transform: rotate(180) scale(2); }
+  100% {transform: rotate(360deg) scale(1);}
 }
+
 
 // ── 變數 ──────────────────────────────────────────
 $border-radius: 0.5em; //按鈕圓角尺寸
@@ -346,6 +369,7 @@ background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -1
     gap: 0;
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
     font-size: sizem(16);
+    background: linear-gradient(180deg, #04003A 0.24%, #0091DA 99.76%);
   // background: linear-gradient(90deg, #FD4B13 , #E90F13, #9C1A84);
 
     .contact-item {
@@ -363,10 +387,6 @@ background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -1
    background-size: 400% auto;
 }
 
-  .logo {
-    width: sizem(310);
-    margin: sizem(40) auto sizem(50) auto;
-  }
 
   .contact-info {
 

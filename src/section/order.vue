@@ -172,7 +172,7 @@ $o-title-c: #fff; //.order-title
   }
 
   .order-subTitle {
-    font-size: 1.0625em;
+    font-size: 1em;
     padding-top: .5em;
     letter-spacing: .1em;
   }
@@ -204,19 +204,20 @@ $o-title-c: #fff; //.order-title
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #fff;
+      background-color: #98E4FF66;
       position: absolute;
       top: 0;left:0;right: 0;margin: auto;
     }
 
 
     .row {
-      background: #fff;
+      background: #00193b99;
       border: 0px;
-      color: #000;
+      color: #fff;
       display: flex;
       width: 100%;
-      align-items: center;
+      align-items: center;border-radius: 0.5em;
+border: 1px solid #98E4FF66;
 
       >span {
         min-width: 5.5em;
@@ -224,13 +225,13 @@ $o-title-c: #fff; //.order-title
         padding-left: 1em;
 
         >span {
-          color: #c00;
+          color: #ff0;
         }
       }
 
       input,
       select {
-        background: inherit;
+        background: transparent;
         flex: 1;
       }
 
@@ -242,7 +243,7 @@ $o-title-c: #fff; //.order-title
         background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
-    // filter:  brightness(0) invert(1); //select的箭頭顏色
+     filter:  brightness(0) invert(1); //select的箭頭顏色
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
@@ -277,9 +278,9 @@ $o-title-c: #fff; //.order-title
 
   .send {
     font-size: 1.4em;
-  background: #1B2F61;
-    border: 1px solid #FFFC;
-    // border: 0;
+  background: #0099D0;
+   // border: 1px solid #FFFC;
+     border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
     line-height: 1.5;
@@ -345,7 +346,7 @@ $o-title-c: #fff; //.order-title
     }
 
     .order-subTitle {
-      // font-size: sizem(13);
+      font-size: sizem(11);
       padding-top: 0;
     }
 

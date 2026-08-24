@@ -63,9 +63,6 @@
   }
 
   .logo {
-    //position: absolute;
-    // top: sizem(76);
-    // top: calc(55% + #{sizem(145 - 604 * .55)});
     width: sizem(142);
     margin: 0 auto;
 

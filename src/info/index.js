@@ -43,7 +43,7 @@ export default {
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
     title: "立即預約",
-   // subTitle: "將有專人與您聯絡，我們將竭誠為您服務",
+    subTitle: "請輸入您的聯絡方式，我們將盡快請專人回覆，謝謝您!",
    // subTitle_mo: "將有專人與您聯絡，我們將竭誠為您服務",
   },
   // 控制表單欄位
@@ -55,8 +55,18 @@ export default {
     }
   },
   //各種欄位
-  selectFields: {/*
-    company: {
+  selectFields: {
+    
+    room_type: {
+      title: "需求房型",
+      type: "select",
+      hold: "請選擇房型",
+      option: ["2房", "3房", "4房"],
+      required: false,
+      //apiB: "room_type" // B API 對應欄位
+    },
+    /*
+    room_type: {
     title: "公司行號",
     type: "input",
     hold: "請填寫公司行號(公司名)",
