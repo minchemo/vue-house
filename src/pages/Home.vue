@@ -11,19 +11,10 @@
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#000] text-[#fff]">
+    <div class="light-h light1"></div>
+    <div class="light-h light2"></div>
+    <div class="light-h light3"></div>
     <S1 />
-    <S2 />
-    <S3 />
-    <S4 />
-    <S5 />
-    <S6 />
-    <S7 />
-    <S8 />
-    <S9 />
-    <S10 />
-    <S11 />
-    <S12 />
-    <S13 />
     <!-- 
     <S9 />
     <S2v /> -->
@@ -75,7 +66,63 @@ img {
   @media screen and (min-width: 768px) {
     font-size: size(22);
   }
+
+  &::before {
+    content: "";
+    background: url("@/section/s1/bgm.jpg");
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (min-width: 768px) {
+      background-image: url("@/section/s1/bg.jpg");
+    }
+  }
+
+  .light-h {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    font-size: size(1470);
+    &::before,
+    &::after{
+      content: "";
+      display: block;
+    position: absolute;
+      width: 100%;
+      height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    mix-blend-mode: overlay;
+   // background: #fff;
+    }
+     &::after{
+opacity: 0.7;
+background: radial-gradient(50% 50% at 50% 50%, rgba(152, 228, 255, 0.50) 0%, rgba(152, 228, 255, 0.00) 100%);
+mix-blend-mode: plus-lighter;}
+  }
+  .light1{
+    top:size(-716);
+    left:size(-840);
+  }
+  .light2{
+    top:size(364);
+    right:size(-788);
+  }
+  .light3{
+    top:size(1444);
+    left:size(-840);
+  }
 }
+
 
 .caption {
   @apply absolute;
@@ -197,10 +244,12 @@ img {
     padding: 0;
     height: 100%;
     pointer-events: none;
-    filter: drop-shadow(0em 0.2em 0.2em rgba(0, 0, 0, .5));overflow: hidden;
+    filter: drop-shadow(0em 0.2em 0.2em rgba(0, 0, 0, .5));
+    overflow: hidden;
 
     .prev,
-    .next {position: relative;
+    .next {
+      position: relative;
       width: 5%;
       display: flex;
       pointer-events: stroke;
@@ -211,12 +260,26 @@ img {
       background: url("data:image/svg+xml,%3Csvg width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline stroke='%23FFF' stroke-width='4' points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
       background-size: 50% auto;
       transition: background-color .5s;
-      &::before{content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #0003;transform: translateX(100%);transition:transform .2s ;    filter:none;overflow: hidden;}
 
-    @media screen and (min-width: 768px) {
-      &:hover:before {transform: translateX(0%);
-      //  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0003;
+        transform: translateX(100%);
+        transition: transform .2s;
+        filter: none;
+        overflow: hidden;
       }
+
+      @media screen and (min-width: 768px) {
+        &:hover:before {
+          transform: translateX(0%);
+          //  
+        }
       }
     }
 
@@ -284,104 +347,17 @@ img {
   }
 }
 
-@keyframes bg {
-  to {
-    transform: translateX(0%);
-  }
-}
-
 img {
   display: inline;
   max-width: unset;
   height: unset;
   margin: 0 auto;
 }
-
-
-  .shine-row {
-    position: absolute;
-  display: flex;
-   flex-direction:column;
-  gap: 0;
-  align-items: center;
-  font-size: sizem(55);
-    @media screen and (min-width: 768px) {
-  font-size: size(130);
-    }
-.shine-dot {
-  width:1em;
-  height: 1em;
-  border-radius: 50%;
-  position: relative;
-  padding: .03em; /* 留白邊寬度，要更寬把這裡改大 */
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;/* 換成你自己的三個圓形圖 */
-&.dot-y   { background-image: url("@/section/s3/y.svg"); }
-&.dot-b   { background-image: url("@/section/s3/b.svg"); }
-&.dot-iri { background-image: url("@/section/s3/iri.png"); background-size: 180% 180%; }
-&.dot-l   { background-image: url("@/section/s3/l.svg"); }
-
-}
-
-$pot:140%;
-.shine-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-&::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    115deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.5) 47%,
-    rgba(255, 255, 255, 0.85) 50%,
-    rgba(255, 255, 255, 0.5) 53%,
-    transparent 65%
-  );
-  background-size: 300% 300%;
-  background-position: -$pot 50%;
-  mix-blend-mode: screen;
-  opacity: 0;
-  animation: shine-sweep 4s ease-in-out infinite;
-}
-}
-
-
-/* 三顆依序做出前後差，不會同時掃 */
-.shine-dot:nth-child(2) .shine-inner::after { animation-delay: 0.5s; }
-.shine-dot:nth-child(3) .shine-inner::after { animation-delay: 1s; }
-
-@keyframes shine-sweep {
-  0%   { background-position: -$pot 50%; opacity: 0; }
-  12%  { opacity: 1; }
-  50%  { background-position: $pot 50%; opacity: 1; }
-  62%  { opacity: 0; }
-  100% { background-position: $pot 50%; opacity: 0; }
-}
-
-}
 </style>
 
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
-import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue"
-import S4 from "@/section/s4.vue"
-import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
-import S9 from "@/section/s9.vue"
-import S10 from "@/section/s10.vue"
-import S11 from "@/section/s11.vue"
-import S12 from "@/section/s12.vue"
-import S13 from "@/section/s13.vue"
 /* import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"  */
 import Order from "@/section/order.vue"

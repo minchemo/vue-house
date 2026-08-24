@@ -4,7 +4,7 @@
     <picture>
       <source srcset="./s1/mo.png" media="(max-width: 768px)">
       <img src="./s1/pc.png" class="t0">
-    </picture> -->
+    </picture>
       <img src="./s1/bg.jpg" alt="bg" class="bg">
     <div class="shine-row rt">
       <div class="shine-dot dot-iri">
@@ -59,6 +59,19 @@
       <div class="light2">
         <img src="./s1/light2.webp">
       </div>
+    </div> -->
+    <div class="text">
+      <div class="logo">
+        <img src="./s1/logo.svg" alt="logo" />
+        <img src="./s1/light.png" alt="light" class="light" />
+      </div>
+      <div class="t1">仕紳高端選址<br v-if="isMobile" /><span v-else>．</span>隱富長春首席</div>
+      <div class="t2"><span class="t2-1">捷運南京復興站<span><span>270</span>米 </span></span>
+        <span class="t2-2">
+          <span><span>18-52</span>坪 </span><span class="hr"></span><span>屏息以待</span>
+        </span>
+      </div>
+      <div class="t3">大將開發 股票代號<span>1453</span></div>
     </div>
   </article>
 </template>
@@ -69,11 +82,11 @@
 .t0 {
   position: absolute;
   width: 100%;
-  top:0px;
+  top: 0px;
   left: 0;
   pointer-events: none;
   z-index: 9;
-  opacity: .0;
+  opacity: .3;
 }
 
 @keyframes an {
@@ -83,154 +96,152 @@
 }
 
 .s1 {
-  font-size: sizem(11);
+  font-size: sizem(20);
   height: 100svh; // 手機工具列跳動问题的正解，數值固定不受工具列影響
   min-height: sizem(604);
   max-height: sizem(604);
-   /* background: url("./s1/bg.jpg");
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  /* background: url("./s1/bg.jpg");
     background-size:cover;
     */
 
   @media screen and (min-width: 768px) {
-    font-size: size(27);
+    font-size: size(42);
     height: 100vh;
-    min-height: size(900);
+    min-height: size(1080);
     max-height: size(1080);
   }
 
-.bg{
-  
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top:0px;
-  left: 0;
-  pointer-events: none;
-  object-fit: cover;
- // z-index: 9;
-}
-  .logo {
-    position: absolute;
-   // top: sizem(76);
-    top: calc(55% + #{sizem(145 - 604 * .55)});
-
-    right: sizem(46);
-    width: sizem(280);
-    margin: 0;
-
-    @media screen and (min-width: 768px) {
-      top: size(360);
-      // top: calc(50% + #{size(323 - 1080 * .50)});
-      right: size(365);
-      width: size(725);
-
-    }
-  }
-
-  .t1 {
-    position: absolute;
-    top: sizem(260);
-    top: calc(50% + #{sizem(260 - 604 * .50)});
-    right: 0;
-    left: 0;
+  .text {
+    text-align: center;
+    flex: 0 0 auto;
+    height: auto;
     margin: auto;
-    width: sizem(244);
-
-    @media screen and (min-width: 768px) {
-      top: size(610);
-      top: calc(55% + #{size(610 - 1080 * .55)});
-      margin: 0;
-      right: size(234);
-      left: auto;
-      width: size(710);
-
-    }
   }
 
-  .visual {
-    position: absolute;
-    bottom: 0;
-    left: sizem(5);
-    overflow: hidden;
-    height: sizem(480);
-    pointer-events: none;
-    user-select: none;
-
+  .logo {
+    //position: absolute;
+    // top: sizem(76);
+    // top: calc(55% + #{sizem(145 - 604 * .55)});
+    width: sizem(142);
+    margin: 0 auto;
 
     @media screen and (min-width: 768px) {
-      height: size(957);
-      left: size(105);
+      //  top: size(360);
+      width: size(356);
 
     }
-  }
-
-  .building {
-    position: relative;
-    height: 100%;
-    margin: 0;
-    bottom: -26%;
 
     img {
-      height: 100%
+      width: 100%;
+    }
+
+    .light {
+      position: absolute;
+      width: 40.16%;
+      top: 0%;
+      left: 26%;
+      mix-blend-mode: screen;
+      animation: light 4s infinite;
+    }
+  }
+  @keyframes light {
+  0%   {transform: rotate(0) scale(1); }
+  50%   {transform: rotate(180) scale(2); }
+  100% {transform: rotate(360deg) scale(1);}
+}
+
+  .t1 {
+    color: #F9D896;
+    font-size: 2.2em;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-top: .7em;
+    margin-bottom: .4em;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.8em;
+      margin-top: .5em;
+      margin-bottom: 0.1em;
+    }
+  }
+
+  .t2 {
+    line-height: 1.2;
+
+    .t2-1 {
+      font-size: 1.3em;
+
+      span {
+        color: #F9D896;
+
+        span {
+          font-size: 1.6em;
+          vertical-align: -.1em;
+          letter-spacing: -0.03em;
+          font-family: Arial;
+        }
+      }
+    }
+
+    .t2-2 {
+      font-size: 1.3em;
+
+      span {
+        span {
+          font-size: 1.2em;
+          letter-spacing: -0.01em;
+          font-family: Arial;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .t2-1 {
+        display: block;
+      }
+
+      .t2-2 {
+        display: flex;
+        font-size: 1.1em;
+        align-items: center;
+        justify-content: center;
+
+        .hr {
+          flex: 1;
+          height: 1px;
+          background: #fff;
+          margin: auto .5em;
+        }
+      }
+    }
+
+
+  }
+
+  .t3 {
+    letter-spacing: 0.25em;
+
+    margin-top: .6em;
+    margin-bottom: 0em;
+
+    span {
+      font-size: 1.25em;
+      font-family: Arial;
+      letter-spacing: 0;
+      font-weight: 500;
     }
 
     @media screen and (min-width: 768px) {
-      bottom: -23%;
-    }
-  }
-
-  .light2,
-  .light1 {
-    position: absolute;
-    width: 100%;
-    mix-blend-mode: screen;
-    pointer-events: none;
-    user-select: none;
-      top:30%;
-      left: 0;
-      height: 100%;
-
-    @media screen and (min-width: 768px) {
-      top:30%;
-      left: 0;
-      height: 100%;
+      margin-top: .3em;
+    margin-bottom: 1em;
 
     }
   }
-
-  .light2 img {
-    position: absolute;
-      width: 10%;
-      top:25%;
-      left: 85%;
-
-  }
-
-  .light1 img {
-    position: absolute;
-      width: 88%;
-      top:0%;
-      left: 5%;
-
-  }
-  .shine-row.rt {
-    top: -.5em;
-    left: -.5em;
-    gap: 0em;
-    flex-direction: row;
-    flex-wrap:wrap;justify-content: flex-start;
-    width: 3em;z-index: 3;
-  }
-  .shine-row.br {
-    bottom: -.5em;
-    right:  -.5em;
-    gap: .1em;
-    flex-direction: row;
-    flex-wrap:wrap-reverse;
-  align-items: flex-end;justify-content: flex-end;
-    width: 3em;z-index: 3;
-  }
-
 }
 </style>
 <script setup>

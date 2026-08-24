@@ -161,6 +161,7 @@ $o-title-c: #fff; //.order-title
     padding: .1em 0;
     display: flex;
     align-items: center;
+    &::before,
     &::after{
       content: "";
       flex:1;

@@ -214,8 +214,8 @@
   }
 }
 .contact{
-   background: url("@/section/s1/bg-c.webp") center  size(215) no-repeat;
-   background-size: 100% auto;
+  // background: url("@/section/s1/bg-c.webp") center  size(215) no-repeat;
+ //  background-size: 100% auto;
 }
 
 
