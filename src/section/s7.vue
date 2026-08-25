@@ -55,8 +55,8 @@
 <script setup>
 import { computed, getCurrentInstance } from 'vue';
 import Fullview from '../components/fullview.vue';
-import mapImage from '@/section/s7/map.png';
-import bgImage from '@/section/s7/map.webp';
+import mapImage from '@/section/s7/map.svg';
+import bgImage from '@/section/s7/map.jpg';
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());

@@ -5,7 +5,8 @@
       <source srcset="./s1/mo.png" media="(max-width: 768px)">
       <img src="./s1/pc.png" class="t0">
     </picture> -->
-      <img src="./s1/bg.jpg" alt="bg" class="bg">
+    <img src="./s1/bg.jpg" alt="bg" class="bg">
+    <!-- 
     <div class="shine-row rt">
       <div class="shine-dot dot-iri">
         <div class="shine-inner"></div>
@@ -46,7 +47,8 @@
         <div class="shine-inner"></div>
       </div>
     </div>
-    <img src="./s1/logo.webp" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
+     -->
+    <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
     <div class="visual">
       <div class="building">
         <img src="./s1/building.webp">
@@ -69,7 +71,7 @@
 .t0 {
   position: absolute;
   width: 100%;
-  top:0px;
+  top: 0px;
   left: 0;
   pointer-events: none;
   z-index: 9;
@@ -87,7 +89,7 @@
   height: 100svh; // 手機工具列跳動问题的正解，數值固定不受工具列影響
   min-height: sizem(604);
   max-height: sizem(604);
-   /* background: url("./s1/bg.jpg");
+  /* background: url("./s1/bg.jpg");
     background-size:cover;
     */
 
@@ -98,29 +100,32 @@
     max-height: size(1080);
   }
 
-.bg{
-  
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top:0px;
-  left: 0;
-  pointer-events: none;
-  object-fit: cover;
- // z-index: 9;
-}
+  .bg {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    pointer-events: none;
+    object-fit: cover;
+    // z-index: 9;
+  }
+
   .logo {
     position: absolute;
-   // top: sizem(76);
+    // top: sizem(76);
     top: calc(55% + #{sizem(145 - 604 * .55)});
 
     right: sizem(46);
     width: sizem(280);
     margin: 0;
+    background: url("./s1/logo.webp");
+    background-size: cover;
 
     @media screen and (min-width: 768px) {
       top: size(360);
-      // top: calc(50% + #{size(323 - 1080 * .50)});
+      top: calc(50% + #{size(360 - 1080 * .50)});
       right: size(365);
       width: size(725);
 
@@ -175,7 +180,7 @@
     }
 
     @media screen and (min-width: 768px) {
-      bottom: -23%;
+      bottom: -18%;
     }
   }
 
@@ -186,12 +191,12 @@
     mix-blend-mode: screen;
     pointer-events: none;
     user-select: none;
-      top:30%;
-      left: 0;
-      height: 100%;
+    top: 30%;
+    left: 0;
+    height: 100%;
 
     @media screen and (min-width: 768px) {
-      top:30%;
+      top: 30%;
       left: 0;
       height: 100%;
 
@@ -200,35 +205,41 @@
 
   .light2 img {
     position: absolute;
-      width: 10%;
-      top:25%;
-      left: 85%;
+    width: 10%;
+    top: 25%;
+    left: 85%;
 
   }
 
   .light1 img {
     position: absolute;
-      width: 88%;
-      top:0%;
-      left: 5%;
+    width: 88%;
+    top: 0%;
+    left: 5%;
 
   }
+
   .shine-row.rt {
     top: -.5em;
     left: -.5em;
     gap: 0em;
     flex-direction: row;
-    flex-wrap:wrap;justify-content: flex-start;
-    width: 3em;z-index: 3;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 3em;
+    z-index: 3;
   }
+
   .shine-row.br {
     bottom: -.5em;
-    right:  -.5em;
+    right: -.5em;
     gap: .1em;
     flex-direction: row;
-    flex-wrap:wrap-reverse;
-  align-items: flex-end;justify-content: flex-end;
-    width: 3em;z-index: 3;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 3em;
+    z-index: 3;
   }
 
 }

@@ -14,9 +14,9 @@
         <h3 class="title" data-aos="fade-up" data-aos-delay="100">國際進化</h3>
         <hr class="hr" data-aos="fade-up" data-aos-delay="200" />
         <p class="desc" data-aos="fade-up" data-aos-delay="300">
-          以國際獎項印證卓越實力，<br>
-          結合集團豐富資源，<br>
-          構築企業新標竿。</p>
+          以國際獎項印證卓越實力<br>
+          結合集團豐富資源<br>
+          構築企業新標竿</p>
       </div>
     </div>
 

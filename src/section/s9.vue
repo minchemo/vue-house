@@ -138,7 +138,7 @@
         width: 100%;
         height: sizem(305);
       @media screen and (min-width: 768px) {
-      height: size(844);
+      height: size(793);
 
       }
 
@@ -192,7 +192,7 @@ const options = {
 
 const imgs = [
   {
-    img:globals.$isMobile()? new URL("./s9/1m.jpg", import.meta.url).href: new URL("./s9/1.webp", import.meta.url).href,
+    img:globals.$isMobile()? new URL("./s9/1m.jpg", import.meta.url).href: new URL("./s9/1.jpg", import.meta.url).href,
     caption: ""
   },
 ]

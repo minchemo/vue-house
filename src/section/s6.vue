@@ -173,12 +173,12 @@ const imgs = [
     caption: "台中車站"
   },
   {
-    img: new URL("./s6/3.webp", import.meta.url).href,
-    caption: "台中機場示意"
+    img: new URL("./s6/3.jpg", import.meta.url).href,
+    caption: "台中機場 經電腦修飾"
   },
   {
-    img: new URL("./s6/4.webp", import.meta.url).href,
-    caption: "台中港示意"
+    img: new URL("./s6/4.jpg", import.meta.url).href,
+    caption: "台中港 經電腦修飾"
   },
 ]
 </script>
