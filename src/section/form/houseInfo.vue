@@ -6,8 +6,8 @@
             <div class="flex-1 items-center justify-center py-10 font-['Noto_Sans_TC']">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
                     <div class="title">建案資訊</div>
-                    <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
-                        <div class="item font-bold flex items-center w-full whitespace-nowrap"
+                    <div class="info-items mt-4 grid md:grid-cols-2 ">
+                        <div class="item font-bold flex items-center whitespace-nowrap"
                             v-for="item in info.houseInfos" :key="item">
                             <p class="sub mr-5 pl-2 text-[#fff]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left font-normal"
@@ -46,7 +46,7 @@ $house-c2:#000;
     background: #CCC;
 }
 .info-box {position: relative;z-index: 30;
-    width: 50em;
+    width: 40em;
     font-size: 16px;
 
     .title {
@@ -58,7 +58,7 @@ $house-c2:#000;
 
     .info-items {
         row-gap:1.4em;
-        column-gap:1em;
+        column-gap:4em;
 
         margin-bottom:3em;
         .item {
