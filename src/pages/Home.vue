@@ -9,6 +9,7 @@
     <img class="w-32" src="//h35.banner.tw/img/loading_w.gif" alt="loading" srcset="">
   </div>
   <!--loading end-->
+  <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
   <!--
     <S1 />
@@ -51,8 +52,11 @@ import info from "@/info"
 // import S11 from "@/section/s11.vue"
 /* 
 import S2 from "@/section/s2.vue" */
+import Nav from "@/layout/navbar.vue"
 import Order from "@/section/order.vue"
-import { onMounted, ref } from "vue"
+import { onMounted, ref, provide } from "vue"
+
+
 
 import AOS from 'aos';
 
@@ -67,5 +71,12 @@ onMounted(() => {
     });
   };
 
+})
+const modalOpen = ref(false)
+const modalType = ref('')
+
+provide('contactModal', {
+  modalOpen,
+  modalType
 })
 </script>

@@ -393,8 +393,9 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
 <script setup>
 import info from "@/info"
 import { inject, ref } from "vue";
-const modalOpen = ref(false);
-const modalType = ref('');
+const contactModal = inject('contactModal')
+const modalOpen = contactModal.modalOpen
+const modalType = contactModal.modalType
 
 const go = () => {
   if (modalType.value == 'phone') {

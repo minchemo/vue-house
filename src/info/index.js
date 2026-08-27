@@ -49,9 +49,10 @@ export default {
       title: "需求房型",
       type: "select",
       hold: "請選擇房型",
-      option: ["兩房", "三房"],
-      required: true, //必填開啟使用
-    }, 
+      option: ["2房", "3房", "4房"],
+      required: false,
+      //apiB: "room_type" // B API 對應欄位
+    },
     /*
         budget: {
           title: "購屋預算",
@@ -80,18 +81,51 @@ export default {
 },
 
   navList: [
-    /*
     {
-        name: "雙核心地段",
-        target: ".s3",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "交通中軸",
-        target: ".s4",
-        offset: "-60",
-        offsetmo: "0",
-    }
-*/
+      name: "明日之星",
+      target: ".s1",
+      offset: "-60",
+      offsetmo: "0",
+    }, {
+      name: "新站特區",
+      target: ".s2",
+      offset: "-60",
+      offsetmo: "0",
+    }, {
+      name: "黃金地段",
+      target: ".s4",
+      offset: "-60",
+      offsetmo: "0",
+    }, {
+      name: "交通優勢",
+      target: ".s5",
+      offset: "-60",
+      offsetmo: "0",
+    }, {
+      name: "繁華生活",
+      target: ".s7",
+      offset: "-60",
+      offsetmo: "0",
+    }, {
+      name: "明星生活圈",
+      target: ".s8",
+      offset: "-60",
+      offsetmo: "0",
+    }, {
+      name: "立即來電",
+      action: "phone",
+      offset: "",
+      type: 'btn'
+    }, {
+      name: "地圖導航",
+      action: "gmap",
+      offset: "",
+      type: "btn",
+    }, {
+      name: "立即預約",
+      target: ".order",
+      offset: "",
+      type: 'btn'
+    },
   ],
 }
