@@ -141,28 +141,36 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1 {
-  background-color: #006a00;
+.logo {
+  position: relative;
+  width: size(540);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: size(60) auto size(30);
 }
 
-.hover\:bg-color2:hover {
-  background-color: #00a89a;
-}
+.lineicon {
+  background: #06c755;
+  border-radius: 20%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-.lineicon{
-background: #06c755;
-border-radius: 20%;
-aspect-ratio: 1/1;
-display: flex;
-align-items: center;
-justify-content: center;
   img {
     width: 71%;
     filter: brightness(0) invert(1);
   }
 }
 
+.bg-color1 {
+  background-color: #006A00;
+}
+
+.hover\:bg-color2:hover {
+  background-color: #00A89A;
+}
 
 .mo-contact-info {
   display: none;
@@ -172,56 +180,15 @@ justify-content: center;
   left: 0;
   width: 100%;
   height: size(60);
-  background: linear-gradient(90deg, #fff0 70%, #fff9);
   font-size: size(16);
   font-weight: 500;
-
-
-  .contact-item {
-    height: 100%;
-    color: #857550;
-    border-left: 1px solid #fff9;
-    padding: 0 .6em;
-    transition: background .3s;
-
-    img {
-      margin-bottom: 0.3em;
-      max-width: 1.03em;
-      height: auto;
-      max-height: 1.03em;
-      filter: invert(50%) sepia(20%) saturate(662%) hue-rotate(4deg) brightness(88%) contrast(90%);
-    }
-
-    &:first-child {
-      border-left: 0;
-    }
-
-    &:hover {
-      background: #fff9;
-    }
-  }
 }
 
-
-
-  .logo {
-    position: relative;
-    width: size(540);
-    // height: size(172);
-    // background-image: url("@/section/s1/logo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: size(60) auto size(30);
-  }
-
 // ── 變數 ──────────────────────────────────────────
-$border-radius: 0.9em; //按鈕圓角尺寸
-$gap:           15px; //間距
-$cols:          4;   // 上排按鈕欄數，改這裡就好
+$border-radius: 0.9em;
+$gap: 15px;
+$cols: 4;
 
-// 導航按鈕寬度 = 上排每欄寬度
-// 公式：(100% - gap * (欄數-1)) / 欄數
 $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 // ── 共用 mixin ─────────────────────────────────────
@@ -231,7 +198,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #ccc;
+  background: #cccccc;
   color: #00744a;
   border: 1.5px solid #00744a;
   border-radius: $border-radius;
@@ -246,21 +213,23 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     height: 1.65em;
     object-fit: contain;
     flex-shrink: 0;
-    filter: invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
-    transition: filter 0.25s;    margin: 0;
+    filter: brightness(0) invert(1);
+    transition: filter 0.25s;
+    margin: 0;
   }
 
   &:hover {
-    background: #c00;
+    background: #cc0000;
     color: #fff;
-    border-color: #c00;
+    border-color: #cc0000;
 
     img { filter: brightness(0) invert(1); }
   }
 }
+
 // ── 主體 ───────────────────────────────────────────
 .contact-info {
-  width: min(1200px,95%); //最大1200px
+  width: min(1200px, 95%);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -268,7 +237,6 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   gap: $gap;
   padding: 0 0 2em;
 
-  // ── 第一排：N 欄平均分配 ──
   .contact-row {
     display: grid;
     width: 100%;
@@ -279,7 +247,6 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
       @include contact-item-base;
     }
 
-    // ── 第二排：地址 + 導航，緊貼成一塊 ──
     &.bottom {
       gap: 0;
       grid-template-columns: 1fr $btn-w;
@@ -289,37 +256,34 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
         &.address {
           border: none;
-          background: #fff;
-          color: #000;
+          background: #FFFFFF;
+          color: #000000;
           cursor: default;
           white-space: normal;
           text-align: center;
-          border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
+          border-radius: $border-radius 0 0 $border-radius;
 
           &:hover {
-            background: #fff;
-            color: #000;
+            background: #FFFFFF;
+            color: #000000;
           }
         }
 
         &.googlemap {
-          border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
+          border-radius: 0 $border-radius $border-radius 0;
         }
       }
     }
   }
 }
 
-
 .modal-box {
   img {
-    filter:  invert(30%) sepia(26%) saturate(2642%) hue-rotate(123deg) brightness(98%) contrast(101%);
+    filter: brightness(0) invert(1);
   }
 }
 
-@media screen and (max-width:768px) {
-
-
+@media screen and (max-width: 768px) {
   .mo-contact-info {
     display: flex;
     flex-wrap: wrap;
@@ -327,11 +291,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     bottom: 0;
     height: auto;
     width: sizem(375);
-   // 
-   // gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
+    background: linear-gradient(0deg, #00A89A 0%, #006A00 100%);
 
     .contact-item {
       flex: 1;
@@ -346,27 +308,29 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
     }
   }
 
-    .logo {
-      width: sizem(290);
-      margin: sizem(40) auto sizem(30) auto;
-    }
+  .logo {
+    width: sizem(290);
+    margin: sizem(40) auto sizem(30) auto;
+  }
+
   .contact-info {
-    
-      width: sizem(310);
+    width: sizem(310);
+
     .contact-row {
       grid-template-columns: 1fr;
       gap: 12px;
-      .contact-item {
-  position: relative;
-  justify-content: center;  // 文字置中
 
-  img {
-    position: absolute;
-    left: 3em; // 所有 icon 靠左同一條線
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
+      .contact-item {
+        position: relative;
+        justify-content: center;
+
+        img {
+          position: absolute;
+          left: 3em;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
 
       &.bottom {
         grid-template-columns: 1fr;
@@ -388,6 +352,9 @@ background: linear-gradient(0deg, #00a89a 0%, #006a00 100%), #04836E;
     }
   }
 }
+
+
+
 </style>
 
 <script setup>
