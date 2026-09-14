@@ -59,6 +59,7 @@ img {
   &::before {
     content: "";
     background: url("@/section/s1/bgm.jpg");
+    background-size: 100% auto;
     display: block;
     position: fixed;
     left: 0;
