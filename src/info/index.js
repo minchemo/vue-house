@@ -47,15 +47,15 @@ export default {
   },
   //各種欄位
   selectFields: {
-  /* contact_time: {
-    title: "聯絡時段",
-    type: "select",
-    hold: "請選擇時段",
-    option: ["上午", "下午", "晚上", "全天"],
+line: {
+    title: "LINE ID",
+    type: "input",
+    hold: "請填寫LINE ID",
+    // option: ["上午", "下午", "晚上", "全天"],
     required: false,
     apiB: "room_type" // B API 對應欄位
   },
- 
+   /* 
     budget: {
       title: "購屋預算",
       type: "select",
