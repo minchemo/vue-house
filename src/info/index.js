@@ -32,24 +32,41 @@ export default {
         title: "我要預約",
      //   subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
-    // 底下2個 沒項目就會隱藏
-    // 控制固定板的新欄位
-    // room_type: ["兩房","三房"],
-    selectFields: {
-        room_type: {
-          title: "需求房型",
-          hold: "請選擇房型",
+
+// 控制表單欄位
+  //性別
+  formConfig: {
+    gender: {
+      enabled: true,     // ✅ 控制顯示 / 隱藏
+      required: false    // ✅ 是否必填（通常不會必填）
+    }
+  },
+  //各種欄位
+  selectFields: {
+line: {
+    title: "LINE ID",
+    type: "input",
+    hold: "請填寫LINE ID",
+    // option: ["上午", "下午", "晚上", "全天"],
+    required: false,
+    apiB: "budget" // B API 對應欄位
+  },
+    room_type: {
+      title: "需求房型",
+      type: "select",
+      hold: "請選擇房型",
           option: ["兩房","三房","四房"],
-          //bypass:false,
-        },
-          /*  
-    
+      required: false,
+      //apiB: "room_type" // B API 對應欄位
+    },
+    /*
         budget: {
           title: "購屋預算",
           hold: "請選擇區間",
-          option: ["1000萬內", "1000-1500萬", "1500-2000萬"],
-          //bypass:false,
+          option: ["1000", "2000", "3000"],
+          //bypass:true, //必填開啟使用
         },
+       
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",
@@ -57,7 +74,17 @@ export default {
       },
         */
   },
-
+  //縣市地區
+  locationConfig: {
+  city: {
+    enabled: true,
+    required: false
+  },
+  area: {
+    enabled: true,     // ⚠️ 不能單獨 true
+    required: false
+  }
+},
     navList: [
         /*
         {
