@@ -96,8 +96,8 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal" class="text-[#c00] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p>
+          本人知悉並同意<label for="policy-modal" class="cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
@@ -130,6 +130,7 @@
 </template>
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
 .area-drop-enter-active {
   transition: all 0.35s ease;
   overflow: hidden;
@@ -142,43 +143,35 @@
   max-height: 4em;
   opacity: 1;
 }
-$o-title-c: #A30C24; //.order-title
-
+$o-title-c: #918177; //.order-title
 .order {
   width: 100%;
-  padding-top: size(40);
-  font-size: 16px;
+  padding-top: 3.5em;
+  font-size: 15px;
+  background-color: #e9e6e2;
 
   .order-section {
     position: relative;
     overflow: hidden;
     min-height: size(500);
   }
-/*
-.order-title-img{
-  width:sizem(310);
-  @media screen and (min-width: 768px) {
-    width: min(1200px, 95%); //最大1200px
-    margin-bottom: size(20);
-  }
-}
-  */
+
   .order-title {
-  font-size: size(45);
-  font-weight: 700;
-  color: $o-title-c;
-  padding-top:1.5em;
+    font-size: 2.8em;
+    font-weight: 700;
+    color: $o-title-c;
+    padding-top: .4em;
   }
 
   .order-subTitle {
     font-size: 1.2em;
     padding-top: .5em;
     letter-spacing: .1em;
+    color: #000000;
   }
 
   .form {
-    width: min(1200px, 95%); //最大1200px
-    //  height: 350px;
+    width: min(1200px, 95%);
     gap: 4em;
     margin-top: 2.8em;
     margin-bottom: 3em;
@@ -190,47 +183,54 @@ $o-title-c: #A30C24; //.order-title
       flex: 1;
       gap: 1.25em;
       align-items: flex-start;
-      //   width: size(419);
     }
 
     .right {
       flex: 1;
       height: auto;
-      //  width: size(419);
+      display: flex;
+
+      textarea { flex: 1; height: 100%; }
     }
 
     &::after {
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #0003;
+      background-color: rgba(0, 0, 0, 0.10);
       position: absolute;
-      top: 0;left:0;right: 0;margin: auto;
+      top: 0; left: 0; right: 0; margin: auto;
     }
 
-
     .row {
-      background: #fff;
-      border: 0px;
-      color: #000;
+      background: rgba(255, 255, 255, 1.00);
+      color: #000000;
       display: flex;
       width: 100%;
       align-items: center;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
 
-      >span {
+      > span {
         min-width: 5.5em;
         text-align: left;
         padding-left: 1em;
+        color: #7f4848;
 
-        >span {
-          color: #c00;
+        > span {
+          color: #cc0000;
         }
       }
 
       input,
       select {
-        background: inherit;
+        background: transparent;
         flex: 1;
+        color: inherit;
+      }
+
+      input::placeholder {
+        color: rgba(102, 102, 102, 0.80);
       }
 
       option {
@@ -241,26 +241,27 @@ $o-title-c: #A30C24; //.order-title
         background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
-    // filter:  brightness(0) invert(1); //select的箭頭顏色
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
         }
       }
-
     }
 
-      .name {
-        width: 100%;
-        display: flex;
-        .row{flex: 1;}
-      // width: calc(100% - 3.8em);
-      }
+    .name {
+      width: 100%;
+      display: flex;
+      gap: .7em;
+      .row { flex: 1; }
+    }
+
     .gender {
       display: flex;
       right: 0;
       flex-direction: column;
+      justify-content: center;
       margin-left: .7em;
+      color: #7f4848;
 
       label:first-child {
         margin-bottom: .3em;
@@ -272,10 +273,29 @@ $o-title-c: #A30C24; //.order-title
     }
   }
 
+  .control {
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+
+    p {
+      color: #000000;
+    }
+
+    label[for="policy-modal"] {
+      color: #cc0000;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      border: 2px solid #666;
+      background-color: #fff;
+    }
+  }
+
   .send {
-    font-size: 1.4em;
-    background-color: #A30C24;
-    //border: 1px solid #FFF9;
+    font-size: 1.250rem;
+    background-color: #9f8a7a;
     border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
@@ -290,26 +310,15 @@ $o-title-c: #A30C24; //.order-title
     transition: transform .5s;
     margin-bottom: 2em;
     font-weight: 700;
-    &:hover{transform: scale(1.1);}
+    &:hover { transform: scale(1.1); }
   }
-  .send-load{color: #fff;}
-
-  .control {
-    font-size: 16px;
-    color: #000;
-    position: relative;
-    z-index: 10;
-    input[type="checkbox"] {border: 2px solid #666;background-color:#fff;}
-  }
- 
+  .send-load { color: #fff; }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .order-section {
     min-height: sizem(800);
     position: relative;
-    // overflow: hidden;
-    // padding-top: sizem(200);
 
     .bg-image {
       position: absolute;
@@ -317,37 +326,21 @@ $o-title-c: #A30C24; //.order-title
       left: -#{sizem(30)};
       bottom: sizem(590);
     }
-
   }
 
   .order {
     width: 100%;
-  padding-top: sizem(96);
+    padding-top: sizem(96);
     padding-bottom: sizem(63);
-
-    .cus-divider {
-      margin: 0 auto;
-      width: sizem(117);
-      height: sizem(2);
-      margin-bottom: sizem(25);
-      background-color: #055F76;
-    }
+    font-size: 15px;
 
     .order-title {
-      font-size: 20px;
       width: sizem(310);
-      /*  font-size: sizem(27);
-      padding-top:2em;
-      .line{width: sizem(258);
-      
-      }*/
     }
 
     .order-subTitle {
-      // font-size: sizem(13);
       padding-top: 0;
     }
-
 
     .form {
       width: sizem(310);
@@ -355,14 +348,9 @@ $o-title-c: #A30C24; //.order-title
       flex-direction: column;
       gap: 0;
       margin: 2em auto 1.1em;
-      /*  height: auto;
-      gap: sizem(15);
-      margin-bottom: sizem(20);
-      margin-top: sizem(20);*/
 
       .left {
         width: 100%;
-        //gap: sizem(15);
       }
 
       .right {
@@ -389,6 +377,7 @@ $o-title-c: #A30C24; //.order-title
     }
   }
 }
+
 </style>
 <script setup>
 import Policy from "@/section/form/policy.vue"

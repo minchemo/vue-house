@@ -165,11 +165,11 @@
 }
 
 .bg-color1 {
-  background-color: #006A00;
+  background-color: #808080;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #00A89A;
+  background-color: #3b3b3b;
 }
 
 .mo-contact-info {
@@ -198,9 +198,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #cccccc;
-  color: #00744a;
-  border: 1.5px solid #00744a;
+  background: #5c5c5c;
+  color: #ffffff;
+  border: 0px solid #003320;
   border-radius: $border-radius;
   font-size: 16px;
   font-weight: 700;
@@ -219,11 +219,9 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   }
 
   &:hover {
-    background: #cc0000;
+    background: #3f2727;
     color: #fff;
-    border-color: #cc0000;
-
-    img { filter: brightness(0) invert(1); }
+    border-color: #3f2727;
   }
 }
 
@@ -256,7 +254,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
         &.address {
           border: none;
-          background: #FFFFFF;
+          background: #ffffff;
           color: #000000;
           cursor: default;
           white-space: normal;
@@ -264,7 +262,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
           border-radius: $border-radius 0 0 $border-radius;
 
           &:hover {
-            background: #FFFFFF;
+            background: #ffffff;
             color: #000000;
           }
         }
@@ -279,7 +277,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(43%) sepia(0%) saturate(1053%) hue-rotate(143deg) brightness(92%) contrast(83%);
   }
 }
 
@@ -293,16 +291,18 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(375);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-    background: linear-gradient(0deg, #00A89A 0%, #006A00 100%);
+    background: #524f5f;
 
     .contact-item {
       flex: 1;
       padding: 0;
       color: #fff;
       min-width: 4em;
+      border-left: 1px solid #fff6;
       height: sizem(63);
 
       img {
+        height: 1.03em;
         filter: brightness(0) invert(1);
       }
     }
@@ -338,7 +338,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
         .contact-item {
           &.address {
-            border: 1.5px solid #00744a;
+            border: 0px solid #003320;
             border-bottom: none;
             border-radius: $border-radius $border-radius 0 0;
             white-space: normal;
@@ -352,8 +352,6 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     }
   }
 }
-
-
 
 </style>
 
