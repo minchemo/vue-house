@@ -2,7 +2,7 @@ const caseName = "test-one"
 
 export default {
   caseid: "fc32f231-8202-4932-b9c7-04010740849f",
-  caseid_j: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //兩邊id一樣可以不用有
+  caseid_j: "1d2dZ", //兩邊id一樣可以不用有
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "XXXXX",
@@ -50,6 +50,14 @@ export default {
       type: "select",
       hold: "請選擇房型",
       option: ["2房", "3房", "4房"],
+      required: false,
+      //apiB: "room_type" // B API 對應欄位
+    },
+    time: {
+      title: "聯絡時段",
+      type: "select",
+      hold: "請選擇時段",
+      option: ["上午", "下午", "晚上"],
       required: false,
       //apiB: "room_type" // B API 對應欄位
     },
