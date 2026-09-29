@@ -318,6 +318,7 @@ $o-title-c:#A30C24; //.order-title
   }
 }
 </style>
+
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
@@ -325,191 +326,311 @@ import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"
-
 import { cityList, renderAreaList } from "@/info/address.js"
-import { computed, getCurrentInstance, ref, reactive, watch } from "vue"
-
-
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
-
+import { ref, reactive, watch, computed, getCurrentInstance } from "vue"
+import { VueRecaptcha } from "vue-recaptcha"
 import { useToast } from "vue-toastification"
-const toast = useToast()
 
+const toast = useToast()
 const sending = ref(false)
 const submitted = ref(false)
 
-// ✅ reCAPTCHA v3 SITE_KEY（替換成你的）
-const RECAPTCHA_SITE_KEY = "6LdKd4EsAAAAANVY9APbVVtkSWaSVhWIfO0FcKG2"
-
-const requiredFields = {
-  name: "姓名",
-  phone: "手機",
-  email: "信箱",
-  msg: "備註訊息",
-  city: "居住縣市",
-  area: "居住地區",
-  policyChecked: "個資告知事項聲明",
-}
+const globals = getCurrentInstance().appContext.config.globalProperties
+const isMobile = computed(() => globals.$isMobile())
 
 const selectFields = info.selectFields || {}
+const formConfig = info.formConfig || {}
+const locationConfig = info.locationConfig || {}
 
+// ==========================
+// 🔥 FORM DATA
+// ==========================
 const formData = reactive({
-  ...Object.keys(requiredFields).reduce((acc, key) => {
-    acc[key] = key === "policyChecked" ? false : ""
-    return acc
-  }, {}),
-  ...Object.keys(selectFields).reduce((acc, key) => {
-    acc[key] = ""
+  name: "",
+  phone: "",
+  email: "",
+  msg: "",
+  city: "",
+  area: "",
+  gender: "",
+  policyChecked: false,
+  r_verify: false,
+
+  ...Object.keys(selectFields).reduce((acc, k) => {
+    acc[k] = ""
     return acc
   }, {})
 })
 
-const staticBypass = ["email", "msg", "city", "area"]
-const bypass = [
-  ...staticBypass,
-  ...Object.entries(selectFields)
-    .filter(([_, field]) => field.bypass !== true)
-    .map(([key]) => key)
-]
-
-const formDataRef = {
-  ...requiredFields,
-  ...Object.entries(selectFields).reduce((acc, [key, val]) => {
-    acc[key] = val.title || key
-    return acc
-  }, {})
+// ==========================
+// 🔥 FIELD LABEL MAP
+// ==========================
+const fieldLabelMap = {
+  name: "姓名",
+  phone: "手機",
+  email: "信箱",
+  gender: "性別",
+  city: "居住縣市",
+  area: "居住地區",
+  policyChecked: "個資聲明",
+  r_verify: "我不是機器人",
+  ...Object.fromEntries(
+    Object.entries(selectFields).map(([k, v]) => [k, v.title])
+  )
 }
 
+// ==========================
+// 🔥 AREA LIST CONTROL
+// ==========================
 const areaList = ref([])
 
-watch(
-  () => formData.city,
-  (newVal) => {
-    areaList.value = renderAreaList(newVal)
-    formData.area = areaList.value[0].value
-  }
-)
-
-const send = async () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source") || "null";
-  const utmMedium = urlParams.get("utm_medium") || "null";
-  const utmContent = urlParams.get("utm_content") || "null";
-  const utmCampaign = urlParams.get("utm_campaign") || "null";
-
-  const time = new Date();
-  const date = `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
-
-  let pass = true;
-  let unfill = [];
-
-  if (formData.gender) {
-    const genderTag = `(${formData.gender})`;
-    if (!formData.name.endsWith(genderTag)) {
-      formData.name += genderTag;
-    }
-  }
-
-  const frontendBypass = [...bypass, "r_verify"]
-
-  for (const [key, value] of Object.entries(formData)) {
-    if (!frontendBypass.includes(key) && (value === "" || value === false)) {
-      unfill.push(formDataRef[key] || key);
-      pass = false;
-    }
-  }
-
-  if (!pass) {
-    toast.error(`「${unfill.join(", ")}」為必填或必選`);
-    return;
-  }
-
-  const MobileReg = /^(09)[0-9]{8}$/;
-  if (!formData.phone.match(MobileReg)) {
-    toast.error("手機格式錯誤 (09開頭10位數字)");
-    return;
-  }
-
-  if (sending.value) return;
-
-  sending.value = true;
-  submitted.value = true;
-
-  // ✅ 向 Google 取得 reCAPTCHA v3 token
-  let recaptchaToken = ""
-  try {
-    recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: "form_submit" })
-  } catch (err) {
-    console.error("reCAPTCHA 執行失敗：", err)
-    toast.error("機器人驗證失敗，請重新整理後再試")
-    sending.value = false
+watch(() => formData.city, (val) => {
+  if (!val) {
+    formData.area = ""
+    areaList.value = []
     return
   }
 
-  // ===== 建立 API 結構 =====
-  const presend = {
-    caseId: info.caseid,
-    form: {},
-    // ✅ 加入 validation 物件（工程師要求的格式）
-    validation: {
-      siteKey: RECAPTCHA_SITE_KEY,
-      recaptchaToken: recaptchaToken
-    }
-  };
+  areaList.value = renderAreaList(val)
+  formData.area = ""
+})
 
-  for (const [key, value] of Object.entries(formData)) {
-    if (key !== "policyChecked" && key !== "r_verify") {
-      presend.form[key] = value;
+// ==========================
+// 🔥 REQUIRED RULE ENGINE
+// ==========================
+const isRequired = (key) => {
+  if (key === "name" || key === "phone") return true
+  if (key === "policyChecked") return true
+  if (key === "r_verify") return true
+  if (key === "gender") return formConfig.gender?.required
+  if (key === "city") return locationConfig.city?.required
+  if (key === "area") return locationConfig.area?.required
+
+  if (selectFields[key]) return selectFields[key].required
+
+  return false
+}
+
+// ==========================
+// 🔥 RECAPTCHA
+// ==========================
+const onRecaptchaVerify = (token) => {
+  formData.r_verify = token
+}
+
+const onRecaptchaExpired = () => {
+  formData.r_verify = false
+  toast.warning("驗證已過期")
+}
+
+// ==========================
+// 🔥 SUBMIT (正式發送)
+// ==========================
+const send = async () => {
+  const urlParams = new URLSearchParams(window.location.search)
+
+  const utmSource = urlParams.get("utm_source") || "null"
+  const utmMedium = urlParams.get("utm_medium") || "null"
+  const utmContent = urlParams.get("utm_content") || "null"
+  const utmCampaign = urlParams.get("utm_campaign") || "null"
+
+  const utm = {
+    utm_source: utmSource,
+    utm_medium: utmMedium,
+    utm_content: utmContent,
+    utm_campaign: utmCampaign
+  }
+
+  // 1. 性別標籤處理
+  if (formData.gender && formConfig.gender?.enabled) {
+    const tag = `(${formData.gender})`
+    if (!formData.name.includes(tag)) {
+      formData.name += tag
     }
   }
 
-  presend.form.note = formData.msg;
-  delete presend.form.msg;
+  // 2. 必填欄位驗證
+  const unfill = []
+  for (const [key, value] of Object.entries(formData)) {
+    if (!isRequired(key)) continue
+    if (value === "" || value === false) {
+      unfill.push(key)
+    }
+  }
 
-  presend.form.utm_source = utmSource;
-  presend.form.utm_medium = utmMedium;
-  presend.form.utm_content = utmContent;
-  presend.form.utm_campaign = utmCampaign;
+  if (unfill.length) {
+    const labels = unfill.map(k => fieldLabelMap[k] || k)
+    toast.error(`請填寫：${labels.join(", ")}`)
+    return
+  }
 
-  // ===== Google Sheet 備份 =====
-  fetch(
-    `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
-    &phone=${formData.phone}
-    &email=${formData.email}
-    &cityarea=${formData.city}${formData.area}
-    &msg=${formData.room_type || ""}；${formData.msg}
-    &utm_source=${utmSource}
-    &utm_medium=${utmMedium}
-    &utm_content=${utmContent}
-    &utm_campaign=${utmCampaign}
-    &date=${date}
-    &campaign_name=${info.caseName}`,
-    { method: "GET" }
-  );
+  const phoneReg = /^(09)[0-9]{8}$/
+  if (!phoneReg.test(formData.phone)) {
+    toast.error("手機格式錯誤")
+    return
+  }
 
-  // ===== API =====
-  fetch("https://mail-service-735828106799.asia-east1.run.app/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(presend)
-  })
-    .then((response) => {
-      if (response.status === 200) {
-        window.location.href = "formThanks";
-      } else {
-        return response.json().then((err) => {
-          console.error("後端錯誤訊息：", err);
-          toast.error(err.message || "提交失敗");
-        });
-      }
-    })
-    .catch((error) => {
-      console.error("傳送失敗：", error);
-      toast.error("無法連線或伺服器錯誤");
-    })
-    .finally(() => {
-      sending.value = false;
-    });
-};
+  if (sending.value) return
+  sending.value = true
+  submitted.value = true
+
+  // ====================================================
+  // 📦 1. A 系統資料組裝 (leads.lixin - 主要系統)
+  // ====================================================
+  const presendA = {
+    caseId: info.caseid,
+    form: {},
+    validation: {
+      siteKey: info.recaptcha_site_key_v2,
+      recaptchaToken: formData.r_verify
+    }
+  }
+
+  for (const [k, v] of Object.entries(formData)) {
+    if (["policyChecked", "r_verify"].includes(k)) continue
+    if (k === "area" && !v) continue
+    presendA.form[k] = v
+  }
+  presendA.form.note = formData.msg
+  delete presendA.form.msg
+  Object.assign(presendA.form, utm)
+
+  // ====================================================
+  // 📦 2. B 系統資料組裝 (service-sys - 舊系統)
+  // ====================================================
+  const presendB = new FormData()
+
+  // 基本標準欄位
+  presendB.append("name", formData.name || "")
+  presendB.append("phone", formData.phone || "")
+  if (formData.email) presendB.append("email", formData.email)
+  if (formData.gender) presendB.append("gender", formData.gender)
+  if (formData.city) presendB.append("city", formData.city)
+  if (formData.area) presendB.append("area", formData.area)
+
+  const assignedBFields = {
+    room_type: false,
+    budget: false
+  }
+  const extraFieldsForBMessage = []
+
+  // 走訪 selectFields 依據 apiB 歸類，多餘項目放入留言
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (!val) continue
+
+    const label = fieldConfig.title || key
+    const targetBKey = fieldConfig.apiB || key
+
+    if (targetBKey === "room_type" && !assignedBFields.room_type) {
+      presendB.append("room_type", val)
+      assignedBFields.room_type = true
+    } else if (targetBKey === "budget" && !assignedBFields.budget) {
+      presendB.append("budget", val)
+      assignedBFields.budget = true
+    } else {
+      extraFieldsForBMessage.push(`${label}：${val}`)
+    }
+  }
+
+  // 留言組裝 (雙重傳遞 message 與 msg)
+  if (formData.msg) {
+    if (extraFieldsForBMessage.length > 0) {
+      extraFieldsForBMessage.push(`留言：${formData.msg}`)
+    } else {
+      extraFieldsForBMessage.push(formData.msg)
+    }
+  }
+
+  const combinedBMessage = extraFieldsForBMessage.join(" / ")
+  presendB.append("message", combinedBMessage)
+  presendB.append("msg", combinedBMessage)
+
+  // UTM 與案件號
+  Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
+  presendB.append(
+    "case_code",
+    info.case_code || info.caseid_j || info.caseid || ""
+  )
+
+  // ====================================================
+  // 📦 3. C 系統資料組裝 (Google Apps Script - 備份試算表)
+  // ====================================================
+  const dynamicMsgParts = []
+
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (val) {
+      const label = fieldConfig.title || key
+      dynamicMsgParts.push(`${label}：${val}`)
+    }
+  }
+
+  if (formData.msg) {
+    if (dynamicMsgParts.length > 0) {
+      dynamicMsgParts.push(`留言：${formData.msg}`)
+    } else {
+      dynamicMsgParts.push(formData.msg)
+    }
+  }
+
+  const combinedCMsg = dynamicMsgParts.join(" / ")
+
+  const scriptParams = new URLSearchParams()
+  scriptParams.append("name", formData.name || "")
+  scriptParams.append("phone", formData.phone || "")
+  scriptParams.append("email", formData.email || "")
+  scriptParams.append("cityarea", `${formData.city || ""}${formData.area || ""}`)
+  scriptParams.append("msg", combinedCMsg)
+  scriptParams.append("utm_source", utmSource)
+  scriptParams.append("utm_medium", utmMedium)
+  scriptParams.append("utm_content", utmContent)
+  scriptParams.append("utm_campaign", utmCampaign)
+  scriptParams.append("date", new Date().toISOString())
+  scriptParams.append("campaign_name", info.caseName || "")
+
+  const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
+
+  // ====================================================
+  // 🚀 發送流程：ABC 平行平行發送，任意一個成功即判定成功
+  // ====================================================
+  try {
+    const results = await Promise.allSettled([
+      // A 系統
+      fetch("https://leads.lixin.com.tw/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(presendA)
+      }),
+      // B 系統
+      fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+        method: "POST",
+        body: presendB
+      }),
+      // C 系統 (Google Script)
+      fetch(scriptUrl, {
+        method: "GET",
+        mode: "no-cors",
+        keepalive: true
+      })
+    ])
+
+    const aSuccess = results[0].status === "fulfilled" && results[0].value.ok
+    const bSuccess = results[1].status === "fulfilled" && results[1].value.ok
+    const cSuccess = results[2].status === "fulfilled"
+
+    // 只要 A, B, C 有任意一個發送成功，就跳轉至感謝頁
+    if (aSuccess || bSuccess || cSuccess) {
+      window.location.href = "formThanks"
+    } else {
+      toast.error("送出失敗，請稍後再試")
+    }
+
+  } catch (err) {
+    console.error("表單送出未預期異常:", err)
+    toast.error("系統錯誤")
+  } finally {
+    sending.value = false
+  }
+}
 </script>

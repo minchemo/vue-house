@@ -2,7 +2,7 @@ const caseName = "test-one"
 
 export default {
   caseid: "fc32f231-8202-4932-b9c7-04010740849f",
-  caseid_j: "1d2dZ", //兩邊id一樣可以不用有
+  caseid_j: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //兩邊id一樣可以不用有
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "XXXXX",
@@ -14,13 +14,13 @@ export default {
   line: "https://lin.ee/qakWswp",
   caseName: caseName,
   houseInfos: [
-    ["空間設計", "相即空間設計"],
-    ["企劃銷售", "低碳健康樂活行銷"],
-    ["建照號碼", "(111)桃市都建執照字第會德00701-02號"],
-    ["經紀人", "(91)北市經證字第00692號 陳子瑞"],
-    ["建築設計", "弘憲聯合建築師事務所"],
-    ["使照號碼", "王朝雍建築師事務所"],
-    ["行銷企劃", "自售"],
+    ["空間設計", "xxx"],
+    ["企劃銷售", "xxxxxx"],
+    ["建照號碼", "xxxx"],
+    ["經紀人", "xxxxxxxxx"],
+    ["建築設計", "xx"],
+    ["使照號碼", "xxxxxxxxxxx"],
+    ["行銷企劃", "x"],
     /*
     */
   ],
@@ -53,7 +53,7 @@ export default {
       required: false,
       //apiB: "room_type" // B API 對應欄位
     },
-    time: {
+    contact_time: {
       title: "聯絡時段",
       type: "select",
       hold: "請選擇時段",
@@ -62,18 +62,30 @@ export default {
       //apiB: "room_type" // B API 對應欄位
     },
     /*
-        budget: {
-          title: "購屋預算",
-          hold: "請選擇區間",
-          option: ["1000", "2000", "3000"],
-          //bypass:true, //必填開啟使用
-        },
-       
-        use_type: {
-          title: "使用用途",
-          hold: "請選擇用途",
-          option: ["自住", "投資", "租賃"]
-      },
+    budget: {
+      title: "購屋預算",
+      type: "select",
+      hold: "請選擇區間",
+      option: ["1000萬", "2000萬", "3000萬"],
+      required: false,
+      //apiB: "budget" // B API 對應欄位
+    },
+    line: {
+      title: "LINE ID",
+      type: "input",
+      hold: "請填寫LINE ID",
+      // option: ["上午", "下午", "晚上", "全天"],
+      required: false,
+      // apiB: "room_type" // B API 對應欄位
+    },
+    use_type: {
+      title: "使用用途",
+      type: "select",
+      hold: "請選擇用途",
+      option: ["自住", "投資", "租賃"]
+      required: false,
+      //apiB: "budget" // B API 對應欄位
+    },
         */
   },
   //縣市地區

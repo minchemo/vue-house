@@ -364,7 +364,9 @@
 
 
 </style>
+
 <script setup>
+// 2026-09-24 修正版
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
@@ -393,6 +395,7 @@ const locationConfig = info.locationConfig || {}
 const formData = reactive({
   name: "",
   phone: "",
+  email: "",
   msg: "",
   city: "",
   area: "",
@@ -412,12 +415,12 @@ const formData = reactive({
 const fieldLabelMap = {
   name: "姓名",
   phone: "手機",
+  email: "信箱",
   gender: "性別",
   city: "居住縣市",
   area: "居住地區",
   policyChecked: "個資聲明",
   r_verify: "我不是機器人",
-  // 動態欄位從 selectFields 自動取 title
   ...Object.fromEntries(
     Object.entries(selectFields).map(([k, v]) => [k, v.title])
   )
@@ -468,22 +471,24 @@ const onRecaptchaExpired = () => {
 }
 
 // ==========================
-// 🔥 SUBMIT
+// 🔥 SUBMIT (正式發送)
 // ==========================
 const send = async () => {
-
   const urlParams = new URLSearchParams(window.location.search)
 
+  const utmSource = urlParams.get("utm_source") || "null"
+  const utmMedium = urlParams.get("utm_medium") || "null"
+  const utmContent = urlParams.get("utm_content") || "null"
+  const utmCampaign = urlParams.get("utm_campaign") || "null"
+
   const utm = {
-    utm_source: urlParams.get("utm_source") || "null",
-    utm_medium: urlParams.get("utm_medium") || "null",
-    utm_content: urlParams.get("utm_content") || "null",
-    utm_campaign: urlParams.get("utm_campaign") || "null"
+    utm_source: utmSource,
+    utm_medium: utmMedium,
+    utm_content: utmContent,
+    utm_campaign: utmCampaign
   }
 
-  // ======================
-  // gender tag
-  // ======================
+  // 1. 性別標籤處理
   if (formData.gender && formConfig.gender?.enabled) {
     const tag = `(${formData.gender})`
     if (!formData.name.includes(tag)) {
@@ -491,25 +496,20 @@ const send = async () => {
     }
   }
 
-  // ======================
-  // validation
-  // ======================
+  // 2. 必填欄位驗證
   const unfill = []
-
   for (const [key, value] of Object.entries(formData)) {
-
     if (!isRequired(key)) continue
-
     if (value === "" || value === false) {
       unfill.push(key)
     }
   }
 
-if (unfill.length) {
-  const labels = unfill.map(k => fieldLabelMap[k] || k)
-  toast.error(`請填寫：${labels.join(", ")}`)
-  return
-}
+  if (unfill.length) {
+    const labels = unfill.map(k => fieldLabelMap[k] || k)
+    toast.error(`請填寫：${labels.join(", ")}`)
+    return
+  }
 
   const phoneReg = /^(09)[0-9]{8}$/
   if (!phoneReg.test(formData.phone)) {
@@ -518,13 +518,12 @@ if (unfill.length) {
   }
 
   if (sending.value) return
-
   sending.value = true
   submitted.value = true
 
-  // ======================
-  // A API
-  // ======================
+  // ====================================================
+  // 📦 1. A 系統資料組裝 (leads.lixin - 主要系統)
+  // ====================================================
   const presendA = {
     caseId: info.caseid,
     form: {},
@@ -534,114 +533,148 @@ if (unfill.length) {
     }
   }
 
-for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify"].includes(k)) continue
-  if (k === "area" && !v) continue
-  presendA.form[k] = v
-}
-
-presendA.form.note = formData.msg
-delete presendA.form.msg
-
+  for (const [k, v] of Object.entries(formData)) {
+    if (["policyChecked", "r_verify"].includes(k)) continue
+    if (k === "area" && !v) continue
+    presendA.form[k] = v
+  }
+  presendA.form.note = formData.msg
+  delete presendA.form.msg
   Object.assign(presendA.form, utm)
 
-// ======================
-// B API
-// ======================
-const presendB = new FormData()
+  // ====================================================
+  // 📦 2. B 系統資料組裝 (service-sys - 舊系統)
+  // ====================================================
+  const presendB = new FormData()
 
-for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify", "msg"].includes(k)) continue
-  if (k === "area" && !v) continue
+  // 基本標準欄位
+  presendB.append("name", formData.name || "")
+  presendB.append("phone", formData.phone || "")
+  if (formData.email) presendB.append("email", formData.email)
+  if (formData.gender) presendB.append("gender", formData.gender)
+  if (formData.city) presendB.append("city", formData.city)
+  if (formData.area) presendB.append("area", formData.area)
 
-  // B API 欄位對應
-  const apiKey = selectFields[k]?.apiB || k
+  const assignedBFields = {
+    room_type: false,
+    budget: false
+  }
+  const extraFieldsForBMessage = []
 
-  presendB.append(apiKey, v)
-}
+  // 走訪 selectFields 依據 apiB 歸類，多餘項目放入留言
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (!val) continue
 
-Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
-presendB.append("message", formData.msg)
+    const label = fieldConfig.title || key
+    const targetBKey = fieldConfig.apiB || key
 
-presendB.append(
-  "case_code",
-  info.case_code || info.caseid_j || info.caseid
-)
-
-
-  // ======================
-  // SUBMIT
-  // ======================
-  const DEBUG_ONLY_A = false  // 👈 測試時開啟，上線前改回 false / true
-
-  try {
-    if (!DEBUG_ONLY_A) {
-      // 修改處
-      const scriptParams = new URLSearchParams();
-
-      for (const [k, v] of Object.entries(formData)) {
-        if (["policyChecked", "r_verify"].includes(k)) continue;
-        if (k === "area" && !v) continue;
-
-        // msg 轉成 message 或保持 msg 都可以
-        scriptParams.append(k, v ?? "");
-      }
-
-      // UTM
-      Object.entries(utm).forEach(([k, v]) => {
-        scriptParams.append(k, v);
-      });
-
-      // 額外固定欄位
-      scriptParams.append("date", new Date().toISOString());
-      scriptParams.append("campaign_name", info.caseName || "");
-      scriptParams.append(
-        "case_code",
-        info.case_code || info.caseid_j || info.caseid || ""
-      );
-
-      fetch(
-        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`,
-        {
-          method: "GET",
-        }
-      );
+    if (targetBKey === "room_type" && !assignedBFields.room_type) {
+      presendB.append("room_type", val)
+      assignedBFields.room_type = true
+    } else if (targetBKey === "budget" && !assignedBFields.budget) {
+      presendB.append("budget", val)
+      assignedBFields.budget = true
+    } else {
+      extraFieldsForBMessage.push(`${label}：${val}`)
     }
+  }
 
-    const requests = [
+  // 留言組裝 (雙重傳遞 message 與 msg)
+  if (formData.msg) {
+    if (extraFieldsForBMessage.length > 0) {
+      extraFieldsForBMessage.push(`留言：${formData.msg}`)
+    } else {
+      extraFieldsForBMessage.push(formData.msg)
+    }
+  }
+
+  const combinedBMessage = extraFieldsForBMessage.join(" / ")
+  presendB.append("message", combinedBMessage)
+  presendB.append("msg", combinedBMessage)
+
+  // UTM 與案件號
+  Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
+  presendB.append(
+    "case_code",
+    info.case_code || info.caseid_j || info.caseid || ""
+  )
+
+  // ====================================================
+  // 📦 3. C 系統資料組裝 (Google Apps Script - 備份試算表)
+  // ====================================================
+  const dynamicMsgParts = []
+
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (val) {
+      const label = fieldConfig.title || key
+      dynamicMsgParts.push(`${label}：${val}`)
+    }
+  }
+
+  if (formData.msg) {
+    if (dynamicMsgParts.length > 0) {
+      dynamicMsgParts.push(`留言：${formData.msg}`)
+    } else {
+      dynamicMsgParts.push(formData.msg)
+    }
+  }
+
+  const combinedCMsg = dynamicMsgParts.join(" / ")
+
+  const scriptParams = new URLSearchParams()
+  scriptParams.append("name", formData.name || "")
+  scriptParams.append("phone", formData.phone || "")
+  scriptParams.append("email", formData.email || "")
+  scriptParams.append("cityarea", `${formData.city || ""}${formData.area || ""}`)
+  scriptParams.append("msg", combinedCMsg)
+  scriptParams.append("utm_source", utmSource)
+  scriptParams.append("utm_medium", utmMedium)
+  scriptParams.append("utm_content", utmContent)
+  scriptParams.append("utm_campaign", utmCampaign)
+  scriptParams.append("date", new Date().toISOString())
+  scriptParams.append("campaign_name", info.caseName || "")
+
+  const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
+
+  // ====================================================
+  // 🚀 發送流程：ABC 平行平行發送，任意一個成功即判定成功
+  // ====================================================
+  try {
+    const results = await Promise.allSettled([
+      // A 系統
       fetch("https://leads.lixin.com.tw/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(presendA)
+      }),
+      // B 系統
+      fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+        method: "POST",
+        body: presendB
+      }),
+      // C 系統 (Google Script)
+      fetch(scriptUrl, {
+        method: "GET",
+        mode: "no-cors",
+        keepalive: true
       })
-    ]
+    ])
 
-    if (!DEBUG_ONLY_A) {
-      requests.push(
-        fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
-          method: "POST",
-          body: presendB
-        })
-      )
-    }
+    const aSuccess = results[0].status === "fulfilled" && results[0].value.ok
+    const bSuccess = results[1].status === "fulfilled" && results[1].value.ok
+    const cSuccess = results[2].status === "fulfilled"
 
-    const [resA, resB] = await Promise.allSettled(requests)
-
-    const aOk = resA.status === "fulfilled" && resA.value.ok
-    const bOk = DEBUG_ONLY_A ? true : (resB.status === "fulfilled" && resB.value.ok)
-
-    if (!aOk) {
-      console.warn("A API 發送失敗，B 與 Google Script 仍繼續")
-    }
-
-    if (DEBUG_ONLY_A ? aOk : bOk) {
+    // 只要 A, B, C 有任意一個發送成功，就跳轉至感謝頁
+    if (aSuccess || bSuccess || cSuccess) {
       window.location.href = "formThanks"
     } else {
-      toast.error("送出失敗")
+      toast.error("送出失敗，請稍後再試")
     }
 
   } catch (err) {
-    console.error(err)
+    console.error("表單送出未預期異常:", err)
     toast.error("系統錯誤")
   } finally {
     sending.value = false
