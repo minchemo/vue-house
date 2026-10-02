@@ -11,8 +11,8 @@
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
-  <!--
     <S1 />
+    <!--
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -48,6 +48,7 @@ img {
 
 <script setup>
 import info from "@/info"
+import S1 from "@/section/s1.vue" 
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
 /* 
