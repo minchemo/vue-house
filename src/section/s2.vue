@@ -180,10 +180,16 @@ const list1 = [
 
 const list2 = [
   {
-    t1: ["v2", "進行中"],
+    t1: ["v1", "已完成"],
     t2: "114/05/21",
     t3: "召開自辦公聽會",
     link:"https://drive.google.com/file/d/1iUiftnRbrbjvRPC2njWtrOPSOjl_1MwN/view?usp=sharing",
+  },
+  {
+    t1: ["v2", "進行中"],
+    t2: "115/10/05",
+    t3: "擬訂臺北市大同區圓環段三小段11地號等14筆土地都市更新事業計畫案公辦公聽會簡報",
+    link:"https://drive.google.com/file/d/1K9c4IA7ne78CBRJBx-elHK_a0mBt3x4e/view?usp=sharing",
   },
   //{
   //  t1: ["v1", "已完成"],
