@@ -187,8 +187,8 @@ const list2 = [
   },
   {
     t1: ["v2", "進行中"],
-    t2: "115/10/05",
-    t3: "擬訂臺北市大同區圓環段三小段11地號等14筆土地都市更新事業計畫案公辦公聽會簡報",
+    t2: "115/10/30",
+    t3: "召開公辦公聽會",
     link:"https://drive.google.com/file/d/1K9c4IA7ne78CBRJBx-elHK_a0mBt3x4e/view?usp=sharing",
   },
   //{
