@@ -62,7 +62,7 @@
     </div> -->
     <div class="flex flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
-      <div>預約賞屋</div>
+      <div>了解詳情</div>
     </div>
     <!--  -->
     <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'gmap'"
