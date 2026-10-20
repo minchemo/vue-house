@@ -1,7 +1,11 @@
 <template>
   <article class="s1 relative" id="s1">
+    <picture>
+      <source media="(max-width: 768px)" srcset="./s1/mo.jpg" />
+      <img src="./s1/pc.jpg" alt="" class="t0" />
+    </picture>
     <!--
-  -->
+
   <div class="hero-light-fx" aria-hidden="true">
     <span class="orb o1"></span>
     <span class="orb o2"></span>
@@ -19,12 +23,12 @@
       <img src="./s1/slogo.svg" alt="" class="slogo" data-aos="fade-up" data-aos-delay="400" />
       <button @click="scrollTo('#s2')" class="scroll-down"></button>
 
-    
+      -->
   </article>
 </template>
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-
+/*
 .hero-light-fx {
   position: absolute;
   inset: 0;
@@ -63,6 +67,7 @@
   85%  { opacity: 0.4; }
   100% { transform: translateY(-320%) translateX(-15%); opacity: 0; }
 }
+  */
 .t0 {
   position: absolute;
   width: 100%;
@@ -70,9 +75,19 @@
   left: 0;
   pointer-events: none;
   z-index: 9;
-  opacity: .5;
+  opacity: .3;
 }
 
+.s1 {
+  height: sizem(604);
+
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+    min-height: size(1070);
+    max-height: size(1070);
+  }
+  }
+/*
 @keyframes an {
   to {
     transform: translateX(0%);
@@ -217,7 +232,7 @@ opacity: 1;
 
 
 
-}
+}*/
 </style>
 <script setup>
 import info from "@/info"
