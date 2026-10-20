@@ -63,7 +63,6 @@ export default {
       type: "select",
       hold: "請選擇區間",
       option: [
-        "20-50坪",
         "51-100坪",
         "101-150坪",
         "151-300坪",
