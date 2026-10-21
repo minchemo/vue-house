@@ -5,13 +5,15 @@ s2<template>
       <img src="./s5/bg.jpg" alt="" class="bg" />
     </picture>
 
-      <h3 class="title1" data-aos="fade-up">巨蛋<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 0l20 20M0 20L20 0" stroke="#13e000"/></svg>好市多商圈</h3>
+      <h3 class="title1" data-aos="zoom-in" data-aos-delay="0">巨蛋<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 0l20 20M0 20L20 0" stroke="#13e000"/></svg>好市多商圈</h3>
       <div class="txt">
-      <h4 class="title" data-aos="fade-up">軌道到哪 繁榮就到哪</h4>
-<div class="subtitle">南台南副都心<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 20"><path d="M4 0V20" stroke="#13e000"/></svg>捷運藍線<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 0l20 20M0 20L20 0" stroke="#13e000"/></svg>雙鐵交匯</div>
-<p>副都心小巨蛋計畫<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 0l20 20M0 20L20 0" stroke="#13e000"/></svg>三大龍頭好市多、全聯、統一萬家福<br>
+      <h4 class="title" data-aos="zoom-in" data-aos-delay="0">軌道到哪 繁榮就到哪</h4>
+<div class="subtitle" data-aos="zoom-in" data-aos-delay="200">南台南副都心<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 20"><path d="M4 0V20" stroke="#13e000"/></svg>捷運藍線<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 0l20 20M0 20L20 0" stroke="#13e000"/></svg>雙鐵交匯</div>
+<p data-aos="zoom-in" data-aos-delay="400">副都心小巨蛋計畫<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 0l20 20M0 20L20 0" stroke="#13e000"/></svg>三大龍頭好市多、全聯、統一萬家福<br>
 同一個未來 唯一的答案</p>
       </div>
+    <div class="caption">好市多台南二店(興建中)、大巨蛋(規劃中)｜開幕及營業資訊依品牌官方公告</div>
+    <div class="caption caption2">本圖片為AI情境模擬</div>
   </article>
 </template>
 
@@ -41,12 +43,13 @@ s2<template>
     height: 100%;
     z-index: 1;  
   }
-  svg{height:.8em; display: inline-block;vertical-align: middle;margin: 0 .1em .2em;}
+  svg{height:.8em; display: inline-block;vertical-align: middle;margin: 0 .15em .2em;}
   .title1{position: relative; color: #fff;
     z-index: 2;
-    font-size: sizem(20);
+    font-size: sizem(35);
     font-weight: 400;
-    margin: sizem(0) auto auto;
+    margin: sizem(64) auto auto;
+    letter-spacing: .06em;
 @media screen and (min-width: 768px){  
     font-size: size(100);
     margin: size(120) auto auto;
@@ -58,21 +61,45 @@ s2<template>
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    margin: 0 auto size(45);
+    margin: 0 auto sizem(45);
+@media screen and (min-width: 768px){
+    margin: 0 auto size(45);}
   .title{
+    font-size: sizem(26);
+    letter-spacing: .03em;
+    font-weight: 500;
+@media screen and (min-width: 768px){
     font-size: size(52);
-    letter-spacing: .03em;
-    font-weight: 500;}
+
+}}
   .subtitle{
+    font-size: sizem(15);
+    letter-spacing: .06em;
+    font-weight: 500;
+@media screen and (min-width: 768px){
     font-size: size(30);
-    letter-spacing: .03em;
-    font-weight: 500;}
+  
+}}
   p{
-    margin: 0.6em auto 0;
-    font-size: size(21);
-    letter-spacing: .1em;}
+    margin: 0.5em auto 0;
+    font-size: sizem(12);
+    letter-spacing: .11em;
+@media screen and (min-width: 768px){
+    font-size: size(22);
+  
+}}
 
 }
+  .caption{position: absolute;
+    bottom: 0.5em;left: 0.5em;z-index: 2;font-size: sizem(8);
+    color: #fff;
+  
+  @media screen and (min-width: 768px) {
+    font-size: size(12);
+  }
+  &.caption2{left:auto;right: 0.5em;}
+
+} 
 }
 </style>
 <script setup>

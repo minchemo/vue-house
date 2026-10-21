@@ -1,20 +1,28 @@
-const caseName = "小東光"
+const caseName = "富都心四季"
 
 export default {
-  caseid: "9c636397-02d6-40cf-98fe-0ed62ed12606",
+  caseid: "571369eb-efea-42ba-8eef-40c50b49d591",
 // caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
   // case_code: "test", //某些舊案資料庫要單獨設定名稱
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "新竹市埔頂路125號旁",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d905.4995934164648!2d121.00880926955716!3d24.795509216092317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzQzLjgiTiAxMjHCsDAwJzM0LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1784604167409!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/8Bwy98b9mdE4TWZk7",
-  phone: "03-5717088",
-  fbLink: "https://www.facebook.com/61591797629069",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
-  fbMessage: "https://m.me/61591797629069",
+  address: "臺南市仁德區仁愛里保仁路68號(仁和國小對面)",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.7172086361347!2d120.22209695!3d22.960639599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e73653fdd4397%3A0x6d2124e95de436dd!2zNzE36Ie65Y2X5biC5LuB5b635Y2A5LuB5oSb6YeM5L-d5LuB6LevNjjomZ8!5e0!3m2!1szh-TW!2stw!4v1792571923995!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/bkHoGiJXFQLCHnVC7",
+  phone: "06-2899868",
+  fbLink: "https://www.facebook.com/61594433322145/",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
+  fbMessage: "https://m.me/61594433322145/",
   // line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
+     ["建築規劃", "昌益事業群"],
+     ["起造興建", "理銘開發股份有限公司"],
+     ["建築設計", "林裕豐建築師事務所"],
+     ["建照號碼", "(111)南工造字第00187號"],
+     ["樓層規劃", "地上15層，地下3層"],
+     ["格局規劃", "2~4房"],
+     ["企劃行銷", "全昌益房屋仲介股份有限公司"],
+     ["經&ensp;紀&ensp;人", "林世烽(90)竹市字第000050號(換發)"],
     /*  ["投資興建", "國鉅建設"],
     ["建築設計", "謝樹林建築師"],
     ["建照號碼", "113鶯建字第00119-01號"],

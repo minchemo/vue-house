@@ -1,14 +1,14 @@
 s2<template>
   <article class="s4 relative" id="s4">
     <div class="tbox">
-      <h3 class="title" data-aos="fade-up">雙鐵交匯 黃金副都心</h3>
-      <div class="txt" data-aos="fade-up">        
+      <h3 class="title" data-aos="zoom-in" data-aos-delay="0">雙鐵交匯 黃金副都心</h3>
+      <div class="txt" data-aos="fade-up" data-aos-delay="200">        
 雙鐵匯聚、巨蛋擘劃、好市多商圈成形<br />
 就在東區的崇聖路旁 昌益以18,000坪旗艦造鎮的壯闊闊擘劃<br />
 預告南台南下一座全新都心的誕生
       </div>
     </div>
-    <div class="caption">空拍示意圖 實際環境依現況為主</div>
+    <div class="caption">實景拍攝修飾</div>
     <Fullview />
   </article>
 </template>
@@ -22,7 +22,7 @@ s2<template>
   justify-content: center;
   align-items: center;
   font-size: sizem(10);
-  height: sizem(604);
+  height: sizem(667);
   overflow: hidden;
   color: #fff;
 
@@ -34,22 +34,27 @@ s2<template>
 
   }
   .tbox{
-    position: absolute;top: 0;left: 0;right: 0;margin: auto;z-index: 2; }
+    position: absolute;top: 0;left: 0;right: 0;margin: auto;z-index: 11; }
   .title{ text-align: center;
-    font-size: sizem(20);
-    font-weight: 600;
-    margin: sizem(100) auto sizem(30);
+    font-size: sizem(30);
+    font-weight: 500;
+    margin: sizem(20) auto sizem(14);
+    letter-spacing: .06em;
   @media screen and (min-width: 768px) {
     font-size: size(90);
+    font-weight: 600;
     margin: size(37) auto size(45);
     letter-spacing: .13em;
   }
   }
   .txt{
+    text-align: center;
+    font-size: sizem(12);
+    letter-spacing: .06em;
   @media screen and (min-width: 768px) {
     font-size: size(20);
     margin:0 auto 0 size(145);
-    letter-spacing: .06em;
+    letter-spacing: .06em;text-align: left;
   }
   }
   .viewbox{width: 100%;
@@ -59,7 +64,12 @@ s2<template>
     margin:sizem(0) 0 0 0;
     top:0;}
   }}
-  .caption{position: absolute;bottom: sizem(10);left: 0;right: 0;margin: auto;z-index: 2;font-size: sizem(8);}
+  .caption{position: absolute;
+    bottom: 0.5em;left: 0.5em;z-index: 2;font-size: sizem(8);
+  
+  @media screen and (min-width: 768px) {
+    font-size: size(12);
+  }}
 }
 </style>
 <script setup>

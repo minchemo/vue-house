@@ -148,11 +148,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #7B4507;
+  background-color: #0ea800;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #5c3100;
+  background-color: #0a7900;
 }
 
 
@@ -184,12 +184,12 @@
   font-weight: 500;
   gap: 0;
   font-size: sizem(16);
-  background: #7B4507;
+  background: #0ead00;
   box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
 
   @media screen and (min-width:768px) {
     background: transparent;
-    // display: none;
+    display: none;
     top: size(56);
     left: size(34);
     height: size(60);
@@ -303,7 +303,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #7B4507;
+  background: #0ea800;
   color: #fff;
   border: 0px solid ;
   border-radius: $border-radius;
@@ -324,7 +324,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   }
 
   &:hover {
-  background: #5c3100;
+  background: #0a7900;
     color: #fff;
     //border-color: #c00;
 
@@ -386,7 +386,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   padding: 2em 0 2em;
 
   @media screen and (min-width:768px) {
-    width: min(1300px, 80%); //最大1200px
+    width: min(1000px, 95%); //最大1200px
   }
 
   // ── 第一排：N 欄平均分配 ──
@@ -454,8 +454,8 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter:invert(26%) sepia(75%) saturate(630%) hue-rotate(354deg) brightness(97%) contrast(98%);
-  }
+   
+    filter: brightness(0) invert(40%) sepia(52%) saturate(1501%) hue-rotate(79deg) brightness(101%) contrast(107%);  }
 }
 
 @media screen and (max-width:768px) {

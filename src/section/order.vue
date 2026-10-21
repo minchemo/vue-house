@@ -1,20 +1,13 @@
 <template>
-  <div id="order" class="order relative text-center">
-  <!-- <picture>
-      <source media="(max-width: 768px)" srcset="./s1/3m.jpg" />
-      <img src="./s1/3.jpg" alt="" class="t0" />
-    </picture>  -->
+  <div id="order" class="order relative text-center ">
     <div class="order-section">
-      <div class="order-title-img">
-        <img src="./form/title.svg" alt="" />
-      </div>
-<!--       <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
- -->
+<!--  -->
       <!-- FORM -->
-      <div class="form mx-auto relative flex-col flex justify-center">
+      <div class="form mx-auto relative flex justify-center">
 
         <div class="left h-full flex flex-col justify-between items-center">
           <div class="name">
@@ -99,26 +92,26 @@
         </div>
 
       </div>
-<div class="b">
+
       <!-- 同意 -->
-      <div class="flex gap-2 control">
+      <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal" class="text-[#ff0] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p>
+          本人知悉並同意<label for="policy-modal" class="cursor-pointer">「個資告知事項聲明」</label>內容
         </p>
       </div>
 
       <Policy />
 
       <!-- recaptcha -->
-      <vue-recaptcha class="flex mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
+      <vue-recaptcha class="flex justify-center mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
         @expired="onRecaptchaExpired" />
 
       <!-- submit -->
       <div class="sendall mt-8 mb-12 mx-auto">
 
         <button v-if="!submitted" class="send" :disabled="sending" @click="send">
-          確認送出
+          送出表單
         </button>
 
         <div v-else class="send-load">
@@ -126,7 +119,7 @@
         </div>
 
       </div>
- </div>
+
       <ContactInfo />
     </div>
 
@@ -138,15 +131,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.t0 {
-  position: absolute;
-  width: 100%;
-  top: 0px;
-  left: 0;
-  pointer-events: none;
-  z-index: 9;
-  opacity: .5;
-}
+
 .area-drop-enter-active {
   transition: all 0.35s ease;
   overflow: hidden;
@@ -159,78 +144,40 @@
   max-height: 4em;
   opacity: 1;
 }
-$o-title-c: #EB6120; //.order-title
 
 .order {
   width: 100%;
-  padding-top: size(150);
-  font-size: 16px;
-  background: #ecb05a url("./form/bg.jpg") no-repeat center top;
-  background-size: 100% auto;
+  padding-top: 6.5em;
+  font-size: 15px;
+  background: #61FD00 url("@/section/s2/bg.svg") no-repeat center top;
+ // background-color: #E9E6E2FF;
 
   .order-section {
     position: relative;
     overflow: hidden;
     min-height: size(500);
   }
-/*
-  */
-.order-title-img{
-  width:sizem(310);
-  margin: 0 auto;
-  text-align: left;
-  img{
-    width: 100%;
-  }
-  @media screen and (min-width: 768px) {
-    width: min(1300px, 80%); //最大1200px
-    margin-bottom: size(20);
 
-  img{
-    width: 50%;
-  }
-  }
-}
   .order-title {
-    width: min(1300px, 80%); //最大1200px
-    margin: 0 auto;
-    font-size: 2.9em;
-    letter-spacing: .3em;
-    font-weight: 500;
-    color: $o-title-c;
-    margin-top: 1.8em;
-    margin-bottom: 0em;
-    padding: .1em 0;
-    display: flex;
-    align-items: center;
-    &::after{
-      content: "";
-      flex:1;
-      height: 1px;
-      margin-left: .2em;
-      background-color: $o-title-c;
-    }
+    font-size: 2.4em;
+    font-weight: 700;
+    color: #FFF;
+    padding-top: .4em;
+    Text-shadow: 0px 0px 10px #4d8800;
   }
 
   .order-subTitle {
-    font-size: 1.0625em;
+    font-size: 1.05em;
     padding-top: .5em;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
+    color: #000000;
   }
-.b{
-    width: min(1300px, 80%); //最大1200px
-  margin: auto;
-  align-items:flex-start;
-  justify-content: flex-start;
-  text-align: left;
 
-  }
   .form {
-    width: min(1300px, 80%); //最大1200px
-    //  height: 350px;
-    gap: 1.25em;
-    margin-top: 2.8em;
-    margin-bottom: 3em;
+    width: min(1000px, 95%);
+    gap: 4em;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
     z-index: 50;
     align-items: stretch;
 
@@ -239,51 +186,55 @@ $o-title-c: #EB6120; //.order-title
       flex: 1;
       gap: 1.25em;
       align-items: flex-start;
-      width: 50%;
-      //   width: size(419);
     }
 
     .right {
       flex: 1;
       height: auto;
-      width: 50%;
-      //  width: size(419);
+      display: flex;
+
+      textarea { flex: 1; height: 100%; }
     }
-/*
+
     &::after {
       content: "";
       width: 1px;
       height: 100%;
-      background-color: #fff;
+      background-color: #00000026;
       position: absolute;
-      top: 0;left:0;right: 0;margin: auto;
+      top: 0; left: 0; right: 0; margin: auto;
     }
-*/
 
     .row {
-      background: #fff;
-      border: 0px;
-      color: #000;
+      background: #FFFFFFFF;
+      color: #000000;
       display: flex;
       width: 100%;
       align-items: center;
+      border: 1px solid #FFFFFFFF;
+      border-radius: 10px;
 
-      >span {
+      > span {
         min-width: 5.5em;
         text-align: left;
         padding-left: 1em;
+        color: #000000;
 
-        >span {
-          color: #c00;
+        > i {
+          color: #d9534f;
         }
       }
 
       input,
       select {
-        background: inherit;
+        background: transparent;
         flex: 1;
+        color: inherit;
       }
 
+      input::placeholder {
+        color: #999999;
+      }
       option {
         color: #666;
       }
@@ -292,43 +243,58 @@ $o-title-c: #EB6120; //.order-title
         background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
-    // filter:  brightness(0) invert(1); //select的箭頭顏色
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
         }
       }
-
-      //沒有性別的話這條槓掉
     }
 
-      .name {
-        width: 100%;
-        display: flex;
-        .row{flex: 1;}
-      // width: calc(100% - 3.8em);
-      }
+    .name {
+      width: 100%;
+      display: flex;
+      gap: .7em;
+      .row { flex: 1; }
+    }
+
     .gender {
       display: flex;
       right: 0;
       flex-direction: column;
+      justify-content: center;
       margin-left: .7em;
-      color: #fff;
+      color: #000000;
 
       label:first-child {
         margin-bottom: .3em;
       }
-
       input {
         margin-right: .3em;
       }
     }
   }
 
+  .control {
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+
+    p {
+      color: #000000;
+    }
+    label[for="policy-modal"] {
+      color: #c0392b;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      border: 1px solid #666;
+      background-color: #fff;
+    }
+  }
+
   .send {
-    font-size: 1.4em;
-  background: #D59F5F;
-    //border: 1px solid #FFF9;
+    font-size: 1.125rem;
+    background-color: #4CD812;
     border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
@@ -336,70 +302,32 @@ $o-title-c: #EB6120; //.order-title
     text-indent: 0.5em;
     border-radius: 2em;
     text-align: center;
-    width: 50%;
+    width: 16em;
     z-index: 10;
     color: #fff;
     position: relative;
-    transition: transform .5s;
+    transition: transform .3s;
     margin-bottom: 2em;
-    &:hover{transform: scale(1.1);}
+    font-weight: 700;
+    &:hover { transform: scale(.9); }
   }
-  .send-load{color: #fff;}
-
-  .control {
-    font-size: 16px;
-    color: #000;
-    position: relative;
-    z-index: 10;
-    input[type="checkbox"] {border: 2px solid #666; background-color: #fff;}
-  }
- 
+  .send-load { color:#000000; }
 }
-
 @media screen and (max-width:768px) {
+  .order {
+    width: 100%;
+  padding-top: 4.5em;
+    padding-bottom: sizem(63);
+  background-image: url("@/section/s2/bgm.svg") ;
   .order-section {
     min-height: sizem(800);
     position: relative;
-    // overflow: hidden;
-    // padding-top: sizem(200);
-
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
-    }
 
   }
-
-  .order {
-    width: 100%;
-  padding-top: sizem(96);
-    padding-bottom: sizem(63);
-  background-image: url("./form/bgm.jpg");
-
-
-    .cus-divider {
-      margin: 0 auto;
-      width: sizem(117);
-      height: sizem(2);
-      margin-bottom: sizem(25);
-      background-color: #055F76;
-    }
-
-    .order-title {
-      font-size: 20px;
+    .order-title,
+    .order-subTitle{
       width: sizem(310);
-      /*  font-size: sizem(27);
-      padding-top:2em;
-      .line{width: sizem(258);
-      
-      }*/
-    }
-
-    .order-subTitle {
-      // font-size: sizem(13);
-      padding-top: 0;
+      margin: 0 auto;
     }
 
 
@@ -408,23 +336,18 @@ $o-title-c: #EB6120; //.order-title
       min-width: 0;
       flex-direction: column;
       gap: 0;
-      margin: 2em auto 1.1em;
-      /*  height: auto;
-      gap: sizem(15);
-      margin-bottom: sizem(20);
-      margin-top: sizem(20);*/
+      margin: 2em auto 2em;
 
       .left {
         width: 100%;
-        //gap: sizem(15);
       }
 
       .right {
         width: 100%;
-        height: 6.25em;
+        height:6.25em;
         margin-top: 1.1em;
 
-        .row {
+        .row{
           height: 7em;
         }
       }
@@ -433,7 +356,6 @@ $o-title-c: #EB6120; //.order-title
         display: none;
       }
     }
-
     .send {
       width: sizem(310);
     }
@@ -443,8 +365,12 @@ $o-title-c: #EB6120; //.order-title
     }
   }
 }
+
+
 </style>
+
 <script setup>
+// 2026-09-24 修正版
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
@@ -473,6 +399,7 @@ const locationConfig = info.locationConfig || {}
 const formData = reactive({
   name: "",
   phone: "",
+  email: "",
   msg: "",
   city: "",
   area: "",
@@ -492,12 +419,12 @@ const formData = reactive({
 const fieldLabelMap = {
   name: "姓名",
   phone: "手機",
+  email: "信箱",
   gender: "性別",
   city: "居住縣市",
   area: "居住地區",
   policyChecked: "個資聲明",
   r_verify: "我不是機器人",
-  // 動態欄位從 selectFields 自動取 title
   ...Object.fromEntries(
     Object.entries(selectFields).map(([k, v]) => [k, v.title])
   )
@@ -548,22 +475,24 @@ const onRecaptchaExpired = () => {
 }
 
 // ==========================
-// 🔥 SUBMIT
+// 🔥 SUBMIT (正式發送)
 // ==========================
 const send = async () => {
-
   const urlParams = new URLSearchParams(window.location.search)
 
+  const utmSource = urlParams.get("utm_source") || "null"
+  const utmMedium = urlParams.get("utm_medium") || "null"
+  const utmContent = urlParams.get("utm_content") || "null"
+  const utmCampaign = urlParams.get("utm_campaign") || "null"
+
   const utm = {
-    utm_source: urlParams.get("utm_source") || "null",
-    utm_medium: urlParams.get("utm_medium") || "null",
-    utm_content: urlParams.get("utm_content") || "null",
-    utm_campaign: urlParams.get("utm_campaign") || "null"
+    utm_source: utmSource,
+    utm_medium: utmMedium,
+    utm_content: utmContent,
+    utm_campaign: utmCampaign
   }
 
-  // ======================
-  // gender tag
-  // ======================
+  // 1. 性別標籤處理
   if (formData.gender && formConfig.gender?.enabled) {
     const tag = `(${formData.gender})`
     if (!formData.name.includes(tag)) {
@@ -571,25 +500,20 @@ const send = async () => {
     }
   }
 
-  // ======================
-  // validation
-  // ======================
+  // 2. 必填欄位驗證
   const unfill = []
-
   for (const [key, value] of Object.entries(formData)) {
-
     if (!isRequired(key)) continue
-
     if (value === "" || value === false) {
       unfill.push(key)
     }
   }
 
-if (unfill.length) {
-  const labels = unfill.map(k => fieldLabelMap[k] || k)
-  toast.error(`請填寫：${labels.join(", ")}`)
-  return
-}
+  if (unfill.length) {
+    const labels = unfill.map(k => fieldLabelMap[k] || k)
+    toast.error(`請填寫：${labels.join(", ")}`)
+    return
+  }
 
   const phoneReg = /^(09)[0-9]{8}$/
   if (!phoneReg.test(formData.phone)) {
@@ -598,13 +522,12 @@ if (unfill.length) {
   }
 
   if (sending.value) return
-
   sending.value = true
   submitted.value = true
 
-  // ======================
-  // A API
-  // ======================
+  // ====================================================
+  // 📦 1. A 系統資料組裝 (leads.lixin - 主要系統)
+  // ====================================================
   const presendA = {
     caseId: info.caseid,
     form: {},
@@ -614,114 +537,148 @@ if (unfill.length) {
     }
   }
 
-for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify"].includes(k)) continue
-  if (k === "area" && !v) continue
-  presendA.form[k] = v
-}
-
-presendA.form.note = formData.msg
-delete presendA.form.msg
-
+  for (const [k, v] of Object.entries(formData)) {
+    if (["policyChecked", "r_verify"].includes(k)) continue
+    if (k === "area" && !v) continue
+    presendA.form[k] = v
+  }
+  presendA.form.note = formData.msg
+  delete presendA.form.msg
   Object.assign(presendA.form, utm)
 
-// ======================
-// B API
-// ======================
-const presendB = new FormData()
+  // ====================================================
+  // 📦 2. B 系統資料組裝 (service-sys - 舊系統)
+  // ====================================================
+  const presendB = new FormData()
 
-for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify", "msg"].includes(k)) continue
-  if (k === "area" && !v) continue
+  // 基本標準欄位
+  presendB.append("name", formData.name || "")
+  presendB.append("phone", formData.phone || "")
+  if (formData.email) presendB.append("email", formData.email)
+  if (formData.gender) presendB.append("gender", formData.gender)
+  if (formData.city) presendB.append("city", formData.city)
+  if (formData.area) presendB.append("area", formData.area)
 
-  // B API 欄位對應
-  const apiKey = selectFields[k]?.apiB || k
+  const assignedBFields = {
+    room_type: false,
+    budget: false
+  }
+  const extraFieldsForBMessage = []
 
-  presendB.append(apiKey, v)
-}
+  // 走訪 selectFields 依據 apiB 歸類，多餘項目放入留言
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (!val) continue
 
-Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
-presendB.append("message", formData.msg)
+    const label = fieldConfig.title || key
+    const targetBKey = fieldConfig.apiB || key
 
-presendB.append(
-  "case_code",
-  info.case_code || info.caseid_j || info.caseid
-)
-
-
-  // ======================
-  // SUBMIT
-  // ======================
-  const DEBUG_ONLY_A = false  // 👈 測試時開啟，上線前改回 false / true
-
-  try {
-    if (!DEBUG_ONLY_A) {
-      // 修改處
-      const scriptParams = new URLSearchParams();
-
-      for (const [k, v] of Object.entries(formData)) {
-        if (["policyChecked", "r_verify"].includes(k)) continue;
-        if (k === "area" && !v) continue;
-
-        // msg 轉成 message 或保持 msg 都可以
-        scriptParams.append(k, v ?? "");
-      }
-
-      // UTM
-      Object.entries(utm).forEach(([k, v]) => {
-        scriptParams.append(k, v);
-      });
-
-      // 額外固定欄位
-      scriptParams.append("date", new Date().toISOString());
-      scriptParams.append("campaign_name", info.caseName || "");
-      scriptParams.append(
-        "case_code",
-        info.case_code || info.caseid_j || info.caseid || ""
-      );
-
-      fetch(
-        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`,
-        {
-          method: "GET",
-        }
-      );
+    if (targetBKey === "room_type" && !assignedBFields.room_type) {
+      presendB.append("room_type", val)
+      assignedBFields.room_type = true
+    } else if (targetBKey === "budget" && !assignedBFields.budget) {
+      presendB.append("budget", val)
+      assignedBFields.budget = true
+    } else {
+      extraFieldsForBMessage.push(`${label}：${val}`)
     }
+  }
 
-    const requests = [
+  // 留言組裝 (雙重傳遞 message 與 msg)
+  if (formData.msg) {
+    if (extraFieldsForBMessage.length > 0) {
+      extraFieldsForBMessage.push(`留言：${formData.msg}`)
+    } else {
+      extraFieldsForBMessage.push(formData.msg)
+    }
+  }
+
+  const combinedBMessage = extraFieldsForBMessage.join(" / ")
+  presendB.append("message", combinedBMessage)
+  presendB.append("msg", combinedBMessage)
+
+  // UTM 與案件號
+  Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
+  presendB.append(
+    "case_code",
+    info.case_code || info.caseid_j || info.caseid || ""
+  )
+
+  // ====================================================
+  // 📦 3. C 系統資料組裝 (Google Apps Script - 備份試算表)
+  // ====================================================
+  const dynamicMsgParts = []
+
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (val) {
+      const label = fieldConfig.title || key
+      dynamicMsgParts.push(`${label}：${val}`)
+    }
+  }
+
+  if (formData.msg) {
+    if (dynamicMsgParts.length > 0) {
+      dynamicMsgParts.push(`留言：${formData.msg}`)
+    } else {
+      dynamicMsgParts.push(formData.msg)
+    }
+  }
+
+  const combinedCMsg = dynamicMsgParts.join(" / ")
+
+  const scriptParams = new URLSearchParams()
+  scriptParams.append("name", formData.name || "")
+  scriptParams.append("phone", formData.phone || "")
+  scriptParams.append("email", formData.email || "")
+  scriptParams.append("cityarea", `${formData.city || ""}${formData.area || ""}`)
+  scriptParams.append("msg", combinedCMsg)
+  scriptParams.append("utm_source", utmSource)
+  scriptParams.append("utm_medium", utmMedium)
+  scriptParams.append("utm_content", utmContent)
+  scriptParams.append("utm_campaign", utmCampaign)
+  scriptParams.append("date", new Date().toISOString())
+  scriptParams.append("campaign_name", info.caseName || "")
+
+  const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
+
+  // ====================================================
+  // 🚀 發送流程：ABC 平行平行發送，任意一個成功即判定成功
+  // ====================================================
+  try {
+    const results = await Promise.allSettled([
+      // A 系統
       fetch("https://leads.lixin.com.tw/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(presendA)
+      }),
+      // B 系統
+      fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+        method: "POST",
+        body: presendB
+      }),
+      // C 系統 (Google Script)
+      fetch(scriptUrl, {
+        method: "GET",
+        mode: "no-cors",
+        keepalive: true
       })
-    ]
+    ])
 
-    if (!DEBUG_ONLY_A) {
-      requests.push(
-        fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
-          method: "POST",
-          body: presendB
-        })
-      )
-    }
+    const aSuccess = results[0].status === "fulfilled" && results[0].value.ok
+    const bSuccess = results[1].status === "fulfilled" && results[1].value.ok
+    const cSuccess = results[2].status === "fulfilled"
 
-    const [resA, resB] = await Promise.allSettled(requests)
-
-    const aOk = resA.status === "fulfilled" && resA.value.ok
-    const bOk = DEBUG_ONLY_A ? true : (resB.status === "fulfilled" && resB.value.ok)
-
-    if (!aOk) {
-      console.warn("A API 發送失敗，B 與 Google Script 仍繼續")
-    }
-
-    if (DEBUG_ONLY_A ? aOk : bOk) {
+    // 只要 A, B, C 有任意一個發送成功，就跳轉至感謝頁
+    if (aSuccess || bSuccess || cSuccess) {
       window.location.href = "formThanks"
     } else {
-      toast.error("送出失敗")
+      toast.error("送出失敗，請稍後再試")
     }
 
   } catch (err) {
-    console.error(err)
+    console.error("表單送出未預期異常:", err)
     toast.error("系統錯誤")
   } finally {
     sending.value = false

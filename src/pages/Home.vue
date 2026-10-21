@@ -11,7 +11,6 @@
   <!--loading end-->
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFE8BD] text-[#000]">
 
-    <img src="@/section/s1/joyofmissingout.svg" alt="" class="joyofmissingout" />
     <S1 />
     <S2 />
     <S3 />
@@ -50,19 +49,6 @@ img {
 
 .home {
 
-.joyofmissingout{
-  position: fixed;
-  display: none;
-  z-index: 3;
-
-  @media screen and (min-width: 768px) {
-    bottom: size(55);
-    left: size(53);
-    width: size(22);
-  display: block;
-
-  }
-}
 
 }
 </style>
@@ -90,7 +76,7 @@ onMounted(async () => {
   await nextTick()
 
   AOS.init({
-    once: true,
+    once: false,
     duration: 2000,
     //  disableMutationObserver: false,
   })

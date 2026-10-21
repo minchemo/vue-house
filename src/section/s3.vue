@@ -4,9 +4,9 @@ s2<template>
       <source media="(max-width: 768px)" srcset="./s3/bgm.jpg" />
       <img src="./s3/bg.jpg" alt="" class="bg" />
     </picture>
-    <h3 class="t1">緊鄰東區<br> 更勝東區</h3>
-    <h4 class="t2">崇聖路旁</h4>
-    <div class="t3">旗艦造鎮</div>
+    <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">緊鄰東區<br> 更勝東區</h3>
+    <h4 class="t2" data-aos="zoom-in" data-aos-delay="200">崇聖路旁</h4>
+    <div class="t3" data-aos="zoom-in" data-aos-delay="0">旗艦造鎮</div>
   </article>
 </template>
 

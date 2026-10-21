@@ -1,12 +1,12 @@
 s2<template>
   <article class="s2 relative" id="s2">
     <picture>
-      <source media="(max-width: 768px)" srcset="./s2/bgm.jpg" />
-      <img src="./s2/bg.webp" alt="" class="bg" />
+      <source media="(max-width: 768px)" srcset="./s2/bgm.svg" />
+      <img src="./s2/bg.svg" alt="" class="bg" />
     </picture>
-
-    <img src="./s2/logo.svg" alt="" class="logo" />
-    <img src="./s2/t1.svg" alt="" class="t1" />
+<div class="l"></div>
+    <img src="./s2/logo.svg" alt="" class="logo" data-aos="zoom-in" />
+    <img src="./s2/t1.svg" alt="" class="t1" data-aos="zoom-in" data-aos-delay="200" />
 <!--   <picture>
       <source media="(max-width: 768px)" srcset="./s2/2m.jpg" />
       <img src="./s1/2.jpg" alt="" class="t0" />
@@ -38,6 +38,7 @@ s2<template>
 
 
 .s2 {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,6 +53,25 @@ s2<template>
     min-height: size(1070);
     max-height: size(1070);
 
+  }
+  @keyframes an {
+  to {
+    transform: translateX(0%);
+  }
+}
+  .l{ position: absolute;top: sizem(130);left: 0;z-index: 2;mix-blend-mode: color-dodge;
+    width:sizem(211);
+    height:sizem(211);
+    transform: translateX(77%);
+    background:radial-gradient(50% 50% at 50% 50%, #003D7A 19%, #003060 30%, #001B36 52%, #000C18 71%, #000306 88%, #000 100%);
+  animation: an 4s ease-in-out alternate infinite;
+  @media screen and (min-width: 768px) {
+    top: size(130);left: size(460);
+    width:size(530);
+    height:size(530);
+   transform: translateX(82%);
+  }
+  
   }
   .bg {
     position: absolute;top: 0;left: 0;
