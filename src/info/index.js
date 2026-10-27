@@ -1,22 +1,28 @@
-const caseName = "麗寶ACE"
+const caseName = "梓園NEXT"
 
 export default {
-  caseid: "56482bc0-d610-40de-b536-2b2d2564a550",
+    caseid: "4af555cf-93db-4f2a-8dc5-555f2169b8b3",
 // caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
   // case_code: "test", //某些舊案資料庫要單獨設定名稱
-  address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
-  address2: "接待會館",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "台中市東區南京路86號",
+    address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
+  address2: "",//map點下確認的--- 如空白會顯示"導航地址"
+  address: "臺北市南港區忠孝東路七段539號",
   googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7281.820200933396!2d120.68387568670232!3d24.13979509349411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d004316b727%3A0x6ae5ff5117070033!2z6bqX5a-2QUNFIOm1rOeoi-WPsOS4reaZuuWMr-e4vemDqA!5e0!3m2!1szh-TW!2stw!4v1787539205034!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/zpEi4cvw4bgzsMTw5",
-  phone: "04-2211-0333",
-  fbLink: "https://www.facebook.com/61589890269981",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
-  fbMessage: "https://m.me/61589890269981",
+  googleLink: "https://maps.app.goo.gl/",
+  phone: "02-2788-1999",
+    fbLink: "https://www.facebook.com/61578977057760/",
+    fbMessage: "https://m.me/61578977057760/",
   // line: "https://lin.ee/88Y9fk9",
   caseName: caseName,
   houseInfos: [
-    ["投資興建", "鵬程建設股份有限公司"],
-    ["行銷企劃", "海沃創意行銷"],
+    ["投資興建", "梓園建設股份有限公司"],
+    ["建築規劃", "邱聖幃建築師事務所"],
+    ["營造工程", "宏偉營造股份有限公司（甲級）"],
+    ["結構顧問", "宏偉營造股份有限公司（甲級）"],
+    ["建照號碼", "（114）汐建字第00326號"],
+    ["企劃銷售", "忠勝行銷有限公司"],
+    ["經&ensp;紀&ensp;人", "羅尹辰"],
+    ["經紀人證號", "（115）北市字第01943號"],
    /*投資興建
 鵬程建設股份有限公司
 行銷企劃
@@ -29,17 +35,16 @@ export default {
     /*
     */
   ],
-   gtmCode: ["GTM-MP7M2ZPK"], // 可放置多個
-  recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
-  //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
-  //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-  recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
-  recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
-  order: {
-    title: "了解詳情",
-   // subTitle: "將有專人與您聯絡，我們將竭誠為您服務",
-   // subTitle_mo: "將有專人與您聯絡，我們將竭誠為您服務",
-  },
+    gtmCode: ["GTM-KDXX3P9J"], // 可放置多個
+    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
+    recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
+    order: {
+        title: "預約賞屋",
+        subTitle: "如果您需要預約，可點選下方聯絡方式"
+    },
   // 控制表單欄位
   //性別
   formConfig: {
@@ -50,7 +55,7 @@ export default {
   },
   //各種欄位
   selectFields: {
-    company: {
+   /* company: {
     title: "公司行號",
     type: "input",
     hold: "請填寫公司行號(公司名)",
@@ -71,6 +76,7 @@ export default {
       ],
       required: false, //必填開啟使用
     },
+    */
   /* contact_time: {
     title: "聯絡時段",
     type: "select",
@@ -151,7 +157,7 @@ export default {
       offset: "",
       type: "btn",
     }, {
-      name: "了解詳情",
+      name: "預約賞屋",
       target: ".order",
       offset: "",
       type: 'btn'

@@ -1,21 +1,6 @@
 <template>
   <article class="s6" ref="s6">
-    <div class="shine-row">
-      <div class="shine-dot dot-y">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-b">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-iri">
-        <div class="shine-inner"></div>
-      </div>
-    </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -25,14 +10,10 @@
     </div>
     <div class="main">
       <div class="txt">
-        <img src="./s6/t1.svg" alt="en" class="t1" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="100">前店後廠自由港<br>
-串聯全球供應鏈</h3>
-        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="200">
+         <h3 class="title" data-aos="fade-up" data-aos-delay="100">梓園 × 築本 × 宏偉  精工智築</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="300">
-          台中正迎來轉型機遇，全力打造強大的商務引擎。<br>
-          麗寶ACE以樞紐之姿串聯人流與資源，<br v-if="isMobile">將產品推展至全球，<br>
-與這座城市一同昂首榮耀。</p>
+          梓園建設成立於民國91年，結合築本科技的BIM專業與宏偉甲級營造經驗，整合設計、施工及管理。設計總監黃中彥與建築師邱聖幃聯手，從外觀比例到生活細節，打造兼具質感與機能的當代居所。
+</p>
       </div>
     </div>
 
@@ -59,10 +40,11 @@
   flex-direction: column;
   align-items: center;
   color: #FFF;
+  background: #036EB5;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    padding: 5.5em 0 7.5em 0;
+    padding: 6em 0;
  //   padding: 6.9em 0 6.9em 0;
     flex-wrap: wrap;
     gap: 4em;
@@ -87,6 +69,7 @@
   .txt {
     padding: sizem(40) 0 sizem(40);
     @media screen and (min-width: 768px) {
+      text-align: left;
       padding: 0;
       .title{
       font-size: 2em;
@@ -100,7 +83,7 @@
 
   .slider {
     margin:0;
-      width:100%;
+      width: 100%;
       height: auto;
       @media screen and (min-width: 768px) {
     width: size(840);
@@ -123,14 +106,6 @@
       justify-content: flex-start;
     }
   }
-  .shine-row {
-    bottom: 3.5em;
-    right: -.5em;
-    @media screen and (min-width: 768px) {
-    bottom: 1.5em;
-    }
-  }
-
 }
 
 </style>
@@ -164,21 +139,29 @@ const options = {
 }
 
 const imgs = [
-  /*{
-    img: new URL("./s6/1.png", import.meta.url).href,
-    caption: "交通圖"
-  },*/
   {
-    img: new URL("./s6/2.webp", import.meta.url).href,
-    caption: "台中車站"
+    img: new URL("./s6/1.jpg", import.meta.url).href,
+    caption: "梓園建設業績-廣豐公園NO2集合住宅"
+  },
+  {
+    img: new URL("./s6/2.jpg", import.meta.url).href,
+    caption: "梓園建設業績-三峽北大安置住宅"
   },
   {
     img: new URL("./s6/3.jpg", import.meta.url).href,
-    caption: "台中機場 經電腦修飾"
+    caption: "梓園建設業績-園堡一期"
   },
   {
     img: new URL("./s6/4.jpg", import.meta.url).href,
-    caption: "台中港 經電腦修飾"
+    caption: ""
+  },
+  {
+    img: new URL("./s6/5.jpg", import.meta.url).href,
+    caption: "金仁寶北士科總部BIM技術服務及管理"
+  },
+  {
+    img: new URL("./s6/6.jpg", import.meta.url).href,
+    caption: "桃園機場第三航廈BIM技術服務"
   },
 ]
 </script>

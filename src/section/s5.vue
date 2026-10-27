@@ -10,13 +10,10 @@
     </div>
     <div class="main">
       <div class="txt">
-        <img src="./s3/evol.svg" alt="en" class="en" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="100">國際進化</h3>
-        <hr class="hr" data-aos="fade-up" data-aos-delay="200" />
+         <h3 class="title" data-aos="fade-up" data-aos-delay="100">繁華與綠意  都是日常風景</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="300">
-          以國際獎項印證卓越實力<br>
-          結合集團豐富資源<br>
-          構築企業新標竿</p>
+          LaLaport、CITYLINK與星級飯店，豐富購物、餐飲與休閒選擇；車程約5分鐘到汐止好市多，家庭採買輕鬆補給。橫科市場、全聯與美廉社照顧日常所需，橫科、新富、富康公園與四分河濱公園，讓生活在便利與綠意間自在切換。
+</p>
       </div>
     </div>
 
@@ -43,11 +40,11 @@
   flex-direction: column;
   align-items: center;
   color: #FFF;
+  background: #003F69;
 
   @media screen and (min-width: 768px) {
-    font-size: size(30);
     flex-direction: row;
-    padding: 5.5em 0;
+    padding: 6em 0;
  //   padding: 6.9em 0 6.9em 0;
     flex-wrap: wrap;
     gap: 4em;
@@ -72,6 +69,7 @@
   .txt {
     padding: sizem(40) 0 sizem(40);
     @media screen and (min-width: 768px) {
+      text-align: left;
       padding: 0;
       .title{
       font-size: 2em;
@@ -85,7 +83,7 @@
 
   .slider {
     margin:0;
-      width: sizem(310);
+      width: 100%;
       height: auto;
       @media screen and (min-width: 768px) {
     width: size(840);
@@ -94,7 +92,7 @@
     .slide-item {
       @apply bg-cover;
         width: 100%;
-        height: sizem(207);
+        height: sizem(250);
       @media screen and (min-width: 768px) {
       width: size(840);
       height: size(560);
@@ -108,7 +106,6 @@
       justify-content: flex-start;
     }
   }
-
 }
 
 </style>
@@ -137,14 +134,30 @@ const options = {
   autoplay: false,
   interval: 4000,
   gap: 0,
-  drag: false
-  //type: 'loop'
+//  drag: false
+  type: 'loop'
 }
 
 const imgs = [
   {
-    img: new URL("./s3/3.jpg", import.meta.url).href,
-    caption: ""
+    img: new URL("./s5/1.jpg", import.meta.url).href,
+    caption: "LaLaport百貨"
+  },
+  {
+    img: new URL("./s5/2.jpg", import.meta.url).href,
+    caption: "五星飯店環聚"
+  },
+  {
+    img: new URL("./s5/3.jpg", import.meta.url).href,
+    caption: "汐止好市多"
+  },
+  {
+    img: new URL("./s5/4.jpg", import.meta.url).href,
+    caption: "橫科市場"
+  },
+  {
+    img: new URL("./s5/5.jpg", import.meta.url).href,
+    caption: "公園綠意生活"
   },
 ]
 </script>

@@ -11,21 +11,23 @@
   <!--loading end-->
   <Nav v-if="info.navList.length > 0" />
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#000] text-[#fff]">
+    
+    <Sphere />
     <S1 />
     <S2 />
     <S3 />
     <S4 />
     <S5 />
-    <S60 />
     <S6 />
     <S7 />
     <S8 />
     <S9 />
     <S10 />
+   <!-- <S60 />
     <S11 />
     <S12 />
     <S13 />
-    <!-- 
+     
     <S9 />
     <S2v /> -->
     <!--
@@ -74,7 +76,7 @@ img {
   line-height: 1.7;
 
   @media screen and (min-width: 768px) {
-    font-size: size(22);
+    font-size: size(18);
   }
 }
 
@@ -108,20 +110,20 @@ img {
   }
 
   .title {
-    font-size: 1.9em;
+    font-size: 1.75em;
     margin: 0em auto 0.5em;
     line-height: 1.38;
     font-weight: 700;
     letter-spacing: 0em;
 
-    // Font-family: 'Noto Serif TC',serif;
+    font-family: 'Noto Serif TC',serif;
     b {
       font-size: 1.2em;
       line-height: 1;
     }
 
     @media screen and (min-width: 768px) {
-      font-size: 2.25em;
+      font-size: 2.15em;
       margin: 0em auto 0.3em;
 
     }
@@ -297,75 +299,25 @@ img {
   height: unset;
   margin: 0 auto;
 }
+.sphere-wrap{position: fixed;
+  bottom:sizem(-250);left: sizem(-100);z-index: 1;
+
+  pointer-events: none;
+   width: sizem(575);
+  @media screen and (min-width: 768px) {
+top:50%;left: size(0);
+transform: translate(-45% ,-50%);
+   width:auto;
+   height: 120vh;
+   height: 120svh;
+    min-height: size(900);
+    max-height: size(1280);
 
 
-  .shine-row {
-    position: absolute;
-  display: flex;
-   flex-direction:column;
-  gap: 0;
-  align-items: center;
-  font-size: sizem(55);
-    @media screen and (min-width: 768px) {
-  font-size: size(130);
-    }
-.shine-dot {
-  width:1em;
-  height: 1em;
-  border-radius: 50%;
-  position: relative;
-  padding: .03em; /* 留白邊寬度，要更寬把這裡改大 */
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;/* 換成你自己的三個圓形圖 */
-&.dot-y   { background-image: url("@/section/s3/y.svg"); }
-&.dot-b   { background-image: url("@/section/s3/b.svg"); }
-&.dot-iri { background-image: url("@/section/s3/iri.png"); background-size: 180% 180%; }
-&.dot-l   { background-image: url("@/section/s3/l.svg"); }
+  }
 
 }
 
-$pot:140%;
-.shine-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-&::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    115deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.5) 47%,
-    rgba(255, 255, 255, 0.85) 50%,
-    rgba(255, 255, 255, 0.5) 53%,
-    transparent 65%
-  );
-  background-size: 300% 300%;
-  background-position: -$pot 50%;
-  mix-blend-mode: screen;
-  opacity: 0;
-  animation: shine-sweep 4s ease-in-out infinite;
-}
-}
-
-
-/* 三顆依序做出前後差，不會同時掃 */
-.shine-dot:nth-child(2) .shine-inner::after { animation-delay: 0.5s; }
-.shine-dot:nth-child(3) .shine-inner::after { animation-delay: 1s; }
-
-@keyframes shine-sweep {
-  0%   { background-position: -$pot 50%; opacity: 0; }
-  12%  { opacity: 1; }
-  50%  { background-position: $pot 50%; opacity: 1; }
-  62%  { opacity: 0; }
-  100% { background-position: $pot 50%; opacity: 0; }
-}
-
-}
 </style>
 
 <script setup>
@@ -375,15 +327,16 @@ import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
-import S60 from "@/section/s60.vue"
 import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
-import S11 from "@/section/s11.vue"
+import Sphere from "@/section/sphere.vue"
+/*import S11 from "@/section/s11.vue"
 import S12 from "@/section/s12.vue"
 import S13 from "@/section/s13.vue"
+*/
 /* import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"  */
 import Order from "@/section/order.vue"

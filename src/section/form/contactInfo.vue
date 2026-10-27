@@ -4,9 +4,9 @@
       class="lineicon fixed z-[99] right-[1vw] bottom-[8vw] w-[4vw]">
       <img src="//h35.banner.tw/img/form/line.svg" />
     </a> -->
-    <div class="contact-info mx-auto  flex flex-col items-center justify-between z-2 relative">
+    <div class="contact-info mx-auto  flex flex-col items-center justify-between z-3 relative">
       
-      <img src="@/section/s1/logo-c.png"  class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+      <img src="@/section/s1/logo.svg"  class="logo" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
@@ -62,7 +62,7 @@
     </div> -->
     <div class="flex flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img/form/pen.svg" alt="預約賞屋" srcset="" />
-      <div>了解詳情</div>
+      <div>預約賞屋</div>
     </div>
     <!--  -->
     <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'gmap'"
@@ -214,8 +214,7 @@
   }
 }
 .contact{
-   background: url("@/section/s1/bg-c.webp") center  size(215) no-repeat;
-   background-size: 100% auto;
+   background:#004594bf;
 }
 
 
@@ -227,7 +226,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: size(60) auto size(140);
+  margin: size(70) auto size(10);
 }
 
 // ── 變數 ──────────────────────────────────────────
@@ -246,8 +245,8 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -12.43%, #F3EFB2 25.25%, #DAAF68 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
-  color: #160A00;
+background: #003F69;
+  color: #fff;
   border: 0px solid #3BEDFF99;
   border-radius: $border-radius;
   font-size: 16px;
@@ -261,14 +260,14 @@ background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -1
     height: 1.65em;
     object-fit: contain;
     flex-shrink: 0;
-    filter: brightness(0) invert(0);
+    filter: brightness(0) invert(1);
     transition: filter 0.25s;
     margin: 0;
   }
 
   &:hover {
-    background: linear-gradient(149deg, #DAAF68 -75.22%, #9D6F3E -54.29%, #F3EFB2 -12.43%, #fff 25.25%, #F3EFB2 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
-    color: #000;
+    background: #014;
+    color: #fff;
     //border-color: #c00;
 
     // img { filter: brightness(0) invert(1); }
@@ -284,6 +283,8 @@ background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -1
   align-items: center;
   gap: $gap;
   padding: 0 0 2em;
+  position: relative;
+  z-index: 3;
 
   // ── 第一排：N 欄平均分配 ──
   .contact-row {
@@ -365,7 +366,7 @@ background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -1
 
   .logo {
     width: sizem(310);
-    margin: sizem(40) auto sizem(50) auto;
+    margin: sizem(60) auto sizem(20) auto;
   }
 
   .contact-info {

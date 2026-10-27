@@ -1,16 +1,5 @@
 <template>
   <article class="s3" ref="s3">
-   <!--  --> <div class="shine-row">
-      <div class="shine-dot dot-y">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-iri">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-b">
-        <div class="shine-inner"></div>
-      </div>
-    </div>
     <div class="slider" data-aos="fade">
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
@@ -21,13 +10,9 @@
     </div>
     <div class="main">
       <div class="txt">
-        <img src="./s3/art.svg" alt="en" class="en" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="100">藝術靈魂</h3>
-        <hr class="hr" data-aos="fade-up" data-aos-delay="200" />
-        <p class="desc" data-aos="fade-up" data-aos-delay="300">
-          攜手麗寶文化藝術基金<br>
-          讓藝廊美學融入辦公日<br>
-          淬鍊美學品味</p>
+        <h3 class="title" data-aos="fade-up" data-aos-delay="100">前瞻南港  接軌NEXT新未來</h3>
+        <p class="desc" data-aos="fade-up">近享440公頃東區門戶計畫的發展願景，串聯南港軟體園區、展覽會展與科技產業聚落。梓園NEXT以便利區位，為科技菁英與現代家庭開啟與城市同步的生活。
+        </p>
       </div>
     </div>
 
@@ -46,9 +31,10 @@
 
 .s3 {
   @apply relative flex justify-center;
+  background: #659EC4;
   width: 100%;
   height: auto;
-  padding: sizem(60) 0 sizem(20) 0;
+  padding:0 0 sizem(20) 0;
   gap: 0;
   flex-wrap: wrap;
   flex-direction: column;
@@ -56,12 +42,11 @@
   color: #FFF;
 
   @media screen and (min-width: 768px) {
-    font-size: size(30);
-    flex-direction: row;
-    padding: 5.5em 0;
-    //   padding: 6.9em 0 6.9em 0;
+    flex-direction: column;
+  padding: 6em 0 6em 0;
+ //   padding: 6.9em 0 6.9em 0;
     flex-wrap: wrap;
-    gap: 4em;
+  gap: 1.5em;
     background-size: size(113) auto;
   }
 
@@ -76,19 +61,41 @@
 
     @media screen and (min-width: 768px) {
       padding: 0;
-      width: size(590);
+      width: size(1500);
     }
   }
 
   .txt {
+      display: flex;
+      flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
     padding: sizem(40) 0 sizem(40);
+      .t1{margin: auto 1.5em auto 1em;}
+      .title{
+        margin: auto ;
+    //  font-size: 2em;
 
+      }
+      .desc{
+      span{color: #BC8518; white-space: nowrap;}}
+    @media screen and (max-width: 767px) {
+      .desc{margin: 1.5em 0 0;
+        li{display: flex;margin: .2em auto;}
+      }
+
+    }
     @media screen and (min-width: 768px) {
-      padding: 0;
+//width: 100%;
+    padding:0 0 0;
+      .t1{margin: auto 2.5em auto 3.4em;}
+      .title{
+        margin: auto ;
+        letter-spacing: 0.03em;
 
-      .title {
-        font-size: 2em;
-
+      }
+      .desc{
+        letter-spacing: 0.01em;
       }
     }
 
@@ -97,22 +104,19 @@
   // size(110)
 
   .slider {
-    margin: 0;
-    width: sizem(310);
-    height: auto;
-
-    @media screen and (min-width: 768px) {
-      width: size(840);
-    }
+    margin:0;
+      width:100%;
+      height: auto;
+      @media screen and (min-width: 768px) {
+    width: size(1500);
+      }
 
     .slide-item {
       @apply bg-cover;
-      width: 100%;
-      height: sizem(207);
-
+        width: 100%;
+        height: sizem(190);
       @media screen and (min-width: 768px) {
-        width: size(840);
-        height: size(560);
+      height: size(762);
 
       }
 
@@ -124,15 +128,8 @@
     }
   }
 
-  .shine-row {
-    top: 5.6em;
-    left: -.5em;
-      @media screen and (min-width: 768px) {
-    top: 1.3em;
-  }
-  }
-
 }
+
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
@@ -159,14 +156,18 @@ const options = {
   autoplay: false,
   interval: 4000,
   gap: 0,
-  drag: false
-  //type: 'loop'
+//  drag: false
+  type: 'loop'
 }
 
 const imgs = [
   {
     img: new URL("./s3/1.jpg", import.meta.url).href,
-    caption: ""
+    caption: "梓園NEXT基地位置"
+  },
+  {
+    img: new URL("./s3/2.jpg", import.meta.url).href,
+    caption: "南港軟體園區"
   },
 ]
 </script>

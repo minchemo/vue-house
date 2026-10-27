@@ -1,8 +1,7 @@
 <template>
-    <div class="nav fixed z-[100]"
-        v-bind:class="{ 'r16-9': higherScreen }">
+    <div class="nav fixed z-[100]" v-bind:class="{ 'r16-9': higherScreen }">
         <!-- <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div> -->
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"  v-if="$isMobile()"
+        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen" v-if="$isMobile()"
             v-bind:class="{ 'open': menuOpen }">
             <!-- <p class="uppercase text-color2 z-10">menu</p> -->
             <div class="bar"></div>
@@ -10,22 +9,29 @@
         <div class="menu flex items-center justify-center" v-bind:class="{ open: menuOpen }">
             <div class="logo cursor-pointer z-10" v-bind:class="{ 'open': menuOpen }" @click="scrollTo('.s1')"></div>
             <template v-for="item, in info.navList" :key="item">
-            <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] " v-bind:class="{ btn2: item.type }"
-                @click="handleNavClick(item)">
-                <span>{{ item.name }}</span>
-            </div>
+                <div class="menu-item cursor-pointer text-white font-['noto_sans_tc'] "
+                    v-bind:class="{ btn2: item.type }" @click="handleNavClick(item)">
+                    <span>{{ item.name }}</span>
+                </div>
             </template>
-            <div class="close" @click="menuOpen = !menuOpen"  v-if="$isMobile()">
+            <div class="close" @click="menuOpen = !menuOpen" v-if="$isMobile()">
             </div>
         </div>
     </div>
     <div class="gotop fixed z-[98] cursor-pointer" v-bind:class="{ show: scrollPos > 100 }" @click="scrollTo('.s1')">
     </div>
+    <!--
     <div class="orderbtn fixed z-[98] cursor-pointer" @click="scrollTo('.order')">
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" stroke="currentColor" fill="currentColor" stroke-linejoin="round">
-  <path stroke-linejoin="round" d="M18.3,3l2.7,2.7-10,10-2.7-2.7L18.3,3ZM20.2,1.1l-.9.9,2.7,2.7.9-.9-2.7-2.7ZM8.3,16.7l-.9-.9-.5,1.3,1.3-.5Z"/>
-  <path fill="none" d="M11.1,15.7l-4.1,1.4,1.4-4.1M3.1,7.9h4.8V3.1M20.9,10.1v10.9H3.1V7.9L7.9,3.1h6.1M16.9,17.1H6.9"/>
-</svg>了解詳情</div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24" stroke="currentColor"
+            fill="currentColor" stroke-linejoin="round">
+            <path stroke-linejoin="round"
+                d="M18.3,3l2.7,2.7-10,10-2.7-2.7L18.3,3ZM20.2,1.1l-.9.9,2.7,2.7.9-.9-2.7-2.7ZM8.3,16.7l-.9-.9-.5,1.3,1.3-.5Z" />
+            <path fill="none"
+                d="M11.1,15.7l-4.1,1.4,1.4-4.1M3.1,7.9h4.8V3.1M20.9,10.1v10.9H3.1V7.9L7.9,3.1h6.1M16.9,17.1H6.9" />
+        </svg>預約賞屋
+    </div>
+
+    -->
 </template>
 
 
@@ -35,11 +41,12 @@
 .nav {
     right: size(114);
     top: size(51);
+
     .logo {
         width: size(145);
         height: size(50);
         position: absolute;
-        left:1em;
+        left: 1em;
     }
 
     .menu-btn {
@@ -73,7 +80,7 @@
                 bottom: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 3px 0 #0366;
+                box-shadow: 0 3px 0 #0366;
                 //transform: translateX(-10%);
             }
 
@@ -84,7 +91,7 @@
                 top: -#{size(10)};
                 position: absolute;
                 background-color: currentColor;
-            box-shadow: 0 3px 0 #0366;
+                box-shadow: 0 3px 0 #0366;
                 //transform: translateX(-10%);
             }
         }
@@ -129,8 +136,8 @@
         flex-direction: row;
         top: 0;
         right: 0;
-        background: #100a61cc;
-        width:100%;
+        background: #036eb5cc;
+        width: 100%;
         height: size(60);
         z-index: 5;
         padding: 0;
@@ -139,7 +146,7 @@
         padding: 0 3em 0 0;
         font-weight: 700;
         backdrop-filter: blur(2px);
-        justify-content:flex-end;
+        justify-content: flex-end;
 
         .menu-item {
             position: relative;
@@ -170,17 +177,19 @@
                     width: 100%;
                 }
             }
-            &.btn2{
-                background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -12.43%, #F3EFB2 25.25%, #DAAF68 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
+
+            &.btn2 {
+                background: #003F69;
                 border-radius: 2em;
-                margin-right:-1em;
-                padding:.7em 1.5em;
-                color: #160A00;
+                margin-right: -1em;
+                padding: .7em 1.5em;
+                color: #fff;
 
                 &:hover {
-                     background: linear-gradient(149deg, #DAAF68 -75.22%, #9D6F3E -54.29%, #F3EFB2 -12.43%, #fff 25.25%, #F3EFB2 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
-         &:after {
-                        width:0;
+                    background: #04004D;
+
+                    &:after {
+                        width: 0;
                     }
                 }
             }
@@ -245,9 +254,11 @@
 }
 
 .orderbtn {
-        font-size: size(20);font-weight: 700;
-        line-height: 1.2;
-        color: #160A00;text-align: center;
+    font-size: size(20);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #160A00;
+    text-align: center;
     width: size(49.4);
     height: auto;
     right: size(20);
@@ -256,16 +267,24 @@
     transform: translateY(200%);
     transition: all .5s;
     background: linear-gradient(149deg, #ECC272 -75.22%, #9D6F3E -54.29%, #DAAF68 -12.43%, #F3EFB2 25.25%, #DAAF68 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
-border-radius: 2em;transform: translateY(0%);
-svg{width: 1.2em;height: 1.2em;vertical-align: middle;
-margin:auto auto .5em auto;}
-                &:hover {
-                     background: linear-gradient(149deg, #DAAF68 -75.22%, #9D6F3E -54.29%, #F3EFB2 -12.43%, #fff 25.25%, #F3EFB2 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
- 
-                }
+    border-radius: 2em;
+    transform: translateY(0%);
+
+    svg {
+        width: 1.2em;
+        height: 1.2em;
+        vertical-align: middle;
+        margin: auto auto .5em auto;
+    }
+
+    &:hover {
+        background: linear-gradient(149deg, #DAAF68 -75.22%, #9D6F3E -54.29%, #F3EFB2 -12.43%, #fff 25.25%, #F3EFB2 60.63%, #6C4323 98.88%, #DAAF68 134.1%);
+
+    }
 
 
 }
+
 @media screen and (max-width:768px) {
 
     .gotop {
@@ -277,10 +296,10 @@ margin:auto auto .5em auto;}
 
     .nav {
         // width: sizem(350);
-        right:0;
-        top:0;
+        right: 0;
+        top: 0;
         // padding: 0 sizem(8);
-        height:auto;
+        height: auto;
         border-radius: 9999px;
 
         .logo {
@@ -288,17 +307,17 @@ margin:auto auto .5em auto;}
             height: sizem(42);
             transition: all .2s;
             top: sizem(13);
-            left:sizem(10);
+            left: sizem(10);
 
             &.open {
-              //  filter: brightness(0) invert(1);
+                //  filter: brightness(0) invert(1);
             }
         }
 
         .menu-btn {
             width: sizem(40);
             height: sizem(40);
-            padding:0;
+            padding: 0;
             font-size: sizem(20);
             margin: sizem(10);
 
@@ -321,6 +340,7 @@ margin:auto auto .5em auto;}
 
             &.open {
                 display: none;
+
                 p {
                     color: #fff;
                 }
@@ -357,26 +377,27 @@ margin:auto auto .5em auto;}
 
         .menu {
             height: 100%;
-          //  z-index: 0;
+            //  z-index: 0;
             transform: translateX(150%);
             transition: all .5s;
-           // padding: 0;
-           font-size: sizem(18);
+            // padding: 0;
+            font-size: sizem(18);
             gap: sizem(23);
             justify-content: center;
             flex-direction: column;
-        padding: 0;
-          //  background-image: url('@/section/menubgm.png');
+            padding: 0;
+            //  background-image: url('@/section/menubgm.png');
 
             .menu-item {
 
                 img {
                     width: sizem(30);
                 }
-            &.btn2{
-                margin:0 auto -.5em auto;
-                padding: 0.4em 4em;
-            }
+
+                &.btn2 {
+                    margin: 0 auto -.5em auto;
+                    padding: 0.4em 4em;
+                }
 
             }
 
@@ -398,18 +419,34 @@ margin:auto auto .5em auto;}
                 left: unset;
                 bottom: 0;
                 transform: translateX(0);
-                top: sizem(10);right: sizem(10);
+                top: sizem(10);
+                right: sizem(10);
                 width: sizem(44);
                 height: sizem(44);
                 cursor: pointer;
-                margin:0;
-                display:flex;
+                margin: 0;
+                display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items:center;
-                &::before,&::after{content:"";background: #FFF;height: 2px;width: 100%;display: block;}
-                &::before{transform: rotate(45deg);margin-bottom:-2px;}
-                &::after{transform: rotate(-45deg);}
+                align-items: center;
+
+                &::before,
+                &::after {
+                    content: "";
+                    background: #FFF;
+                    height: 2px;
+                    width: 100%;
+                    display: block;
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                    margin-bottom: -2px;
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
             }
         }
     }
@@ -417,7 +454,7 @@ margin:auto auto .5em auto;}
 </style>
 
 <script setup>
-import { inject,computed, getCurrentInstance, onMounted, ref } from 'vue';
+import { inject, computed, getCurrentInstance, onMounted, ref } from 'vue';
 import info from "@/info"
 
 const menuOpen = ref(false)
@@ -455,18 +492,18 @@ const scrollTo = (el, offset) => {
 const contactModal = inject('contactModal')
 
 const handleNavClick = (item) => {
-  // 👉 這裡放你那段
-  if (item.action === 'phone' || item.action === 'gmap') {
-    contactModal.modalType.value = item.action
-    contactModal.modalOpen.value = true
-  } else {
-    // 原本 scroll 行為
-    scrollTo(
-      item.target,
-      isMobile.value ? item.offsetmo || item.offset : item.offset
-    )
-  }
+    // 👉 這裡放你那段
+    if (item.action === 'phone' || item.action === 'gmap') {
+        contactModal.modalType.value = item.action
+        contactModal.modalOpen.value = true
+    } else {
+        // 原本 scroll 行為
+        scrollTo(
+            item.target,
+            isMobile.value ? item.offsetmo || item.offset : item.offset
+        )
+    }
 
-  menuOpen.value = false
+    menuOpen.value = false
 }
 </script>

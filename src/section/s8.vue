@@ -1,18 +1,6 @@
 <template>
   <article class="s8" ref="s8">
-    <div class="shine-row">
-      <div class="shine-dot dot-b">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-y">
-        <div class="shine-inner"></div>
-      </div>
-    </div>
     <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -22,16 +10,10 @@
     </div>
     <div class="main">
       <div class="txt">
-        <img src="./s8/t1.svg" alt="en" class="t1" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="100">600億大台中車站計畫<br>
-區域機能全方位</h3>
-        <img src="./s2/icon.svg" alt="icon" class="icon" data-aos="fade-up" data-aos-delay="200">
+         <h3 class="title" data-aos="fade-up" data-aos-delay="100">耐震認證  智慧節能好宅</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="300">
-台中市政府重點都市計畫，透過鐵路高架化、<br>
-落實四鐵共構與7轉7接的立體路網。<br>
- 麗寶ACE緊鄰台中車站、湧泉公園，<br>
-轉身即享秀泰生活、LaLaport等百貨商場，<br>
-為人才提供身心平衡的空間。</p>
+          採國家級耐震標章認證與黃金級智慧建築標章，並符合建築能效評估系統（BERS）第2級規範。結構選用亞東預拌混凝土與東和耐震鋼材，結合結構安全、智慧機能及節能設計，照顧每一天的居住品質。
+</p>
       </div>
     </div>
 
@@ -58,10 +40,11 @@
   flex-direction: column;
   align-items: center;
   color: #FFF;
+  background: #036EB5;
 
   @media screen and (min-width: 768px) {
-    flex-direction: row-reverse;
-    padding: 5.5em 0 7.5em 0;
+    flex-direction: row;
+    padding: 6em 0;
  //   padding: 6.9em 0 6.9em 0;
     flex-wrap: wrap;
     gap: 4em;
@@ -86,6 +69,7 @@
   .txt {
     padding: sizem(40) 0 sizem(40);
     @media screen and (min-width: 768px) {
+      text-align: left;
       padding: 0;
       .title{
       font-size: 2em;
@@ -99,7 +83,7 @@
 
   .slider {
     margin:0;
-      width:100%;
+      width: 100%;
       height: auto;
       @media screen and (min-width: 768px) {
     width: size(840);
@@ -122,14 +106,6 @@
       justify-content: flex-start;
     }
   }
-  .shine-row {
-    top: 4.6em;
-    left: -.5em;
-    @media screen and (min-width: 768px) {
-    top: 0em;
-    }
-  }
-
 }
 
 </style>
@@ -164,16 +140,16 @@ const options = {
 
 const imgs = [
   {
-    img: new URL("./s8/1.webp", import.meta.url).href,
-    caption: "台中車站"
+    img: new URL("./s8/1.jpg", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s8/2.webp", import.meta.url).href,
-    caption: "湧泉公園"
+    img: new URL("./s8/2.jpg", import.meta.url).href,
+    caption: ""
   },
   {
-    img: new URL("./s8/3.webp", import.meta.url).href,
-    caption: "秀泰生活"
+    img: new URL("./s8/3.jpg", import.meta.url).href,
+    caption: ""
   },
 ]
 </script>

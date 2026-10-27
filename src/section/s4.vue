@@ -1,13 +1,5 @@
 <template>
   <article class="s4" ref="s4">
-    <div class="shine-row">
-      <div class="shine-dot dot-b">
-        <div class="shine-inner"></div>
-      </div>
-      <div class="shine-dot dot-y">
-        <div class="shine-inner"></div>
-      </div>
-    </div>
     <div class="slider" data-aos="fade">
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
@@ -18,13 +10,10 @@
     </div>
     <div class="main">
       <div class="txt">
-        <img src="./s3/core.svg" alt="en" class="en" data-aos="fade-up" data-aos-delay="0">
-        <h3 class="title" data-aos="fade-up" data-aos-delay="100">核心地段</h3>
-        <hr class="hr" data-aos="fade-up" data-aos-delay="200" />
+         <h3 class="title" data-aos="fade-up" data-aos-delay="100">捷運約700米  約30秒上環東</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="300">
-          精準鎖定高鐵捷運交會處與<br>
-          產業聚落，以絕對地段優勢<br>
-          掌握城市發展脈動</p>
+          南港展覽館站約700米，享板南線與文湖線雙捷運，串聯南軟、內科與信義區。開車約30秒上環東大道，近享南港高鐵、台鐵、捷運與客運轉運機能，讓通勤與週末出行更從容。
+</p>
       </div>
     </div>
 
@@ -51,11 +40,11 @@
   flex-direction: column;
   align-items: center;
   color: #FFF;
+  background: #036EB5;
 
   @media screen and (min-width: 768px) {
-    font-size: size(30);
     flex-direction: row;
-    padding: 5.5em 0;
+    padding: 6em 0;
  //   padding: 6.9em 0 6.9em 0;
     flex-wrap: wrap;
     gap: 4em;
@@ -80,6 +69,7 @@
   .txt {
     padding: sizem(40) 0 sizem(40);
     @media screen and (min-width: 768px) {
+      text-align: left;
       padding: 0;
       .title{
       font-size: 2em;
@@ -93,7 +83,7 @@
 
   .slider {
     margin:0;
-      width: sizem(310);
+      width: 100%;
       height: auto;
       @media screen and (min-width: 768px) {
     width: size(840);
@@ -102,7 +92,7 @@
     .slide-item {
       @apply bg-cover;
         width: 100%;
-        height: sizem(207);
+        height: sizem(250);
       @media screen and (min-width: 768px) {
       width: size(840);
       height: size(560);
@@ -116,14 +106,6 @@
       justify-content: flex-start;
     }
   }
-  .shine-row {
-    bottom: 1.2em;
-    right: -.5em;
-    @media screen and (min-width: 768px) {
-    bottom: 1.5em;
-    }
-  }
-
 }
 
 </style>
@@ -152,14 +134,22 @@ const options = {
   autoplay: false,
   interval: 4000,
   gap: 0,
-  drag: false
-  //type: 'loop'
+//  drag: false
+  type: 'loop'
 }
 
 const imgs = [
   {
-    img: new URL("./s3/2.jpg", import.meta.url).href,
-    caption: "情境示意圖"
+    img: new URL("./s4/1.jpg", import.meta.url).href,
+    caption: "南港展覽館站約700米"
+  },
+  {
+    img: new URL("./s4/2.jpg", import.meta.url).href,
+    caption: "約30秒上環東大道"
+  },
+  {
+    img: new URL("./s4/3.jpg", import.meta.url).href,
+    caption: "一站南港四鐵共構"
   },
 ]
 </script>
