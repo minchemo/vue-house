@@ -1,6 +1,10 @@
 <template>
   <article class="s6" ref="s6">
     <div class="slider" data-aos="fade">
+      <div class="arrows" v-if="isMobile">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -10,7 +14,7 @@
     </div>
     <div class="main">
       <div class="txt">
-         <h3 class="title" data-aos="fade-up" data-aos-delay="100">梓園 × 築本 × 宏偉  精工智築</h3>
+         <h3 class="title" data-aos="fade-up" data-aos-delay="100">梓園建設 × 築本科技 精工智築</h3>
         <p class="desc" data-aos="fade-up" data-aos-delay="300">
           梓園建設成立於民國91年，結合築本科技的BIM專業與宏偉甲級營造經驗，整合設計、施工及管理。設計總監黃中彥與建築師邱聖幃聯手，從外觀比例到生活細節，打造兼具質感與機能的當代居所。
 </p>
@@ -102,7 +106,7 @@
     }
 
     .splide__pagination {
-      left: calc(100% + 6em);
+      left: calc(100% + 5em);
       justify-content: flex-start;
     }
   }
@@ -130,9 +134,9 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
-  autoplay: false,
-  interval: 4000,
+  pagination: true,
+  autoplay: true,
+  interval: 6000,
   gap: 0,
 //  drag: false
   type: 'loop'

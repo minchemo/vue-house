@@ -157,9 +157,9 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
-  autoplay: false,
-  interval: 4000,
+  pagination: true,
+  autoplay: true,
+  interval: 6000,
   gap: 0,
   type: 'loop'
 }

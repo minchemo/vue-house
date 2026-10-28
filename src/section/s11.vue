@@ -191,8 +191,8 @@ const options = {
   rewind: false,
   arrows: false,
   pagination: false,
-  autoplay: false,
-  interval: 4000,
+  autoplay: true,
+  interval: 6000,
   gap: 0,
   //  drag: false
   type: 'loop'

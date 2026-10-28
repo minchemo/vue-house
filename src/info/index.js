@@ -7,8 +7,8 @@ export default {
     address1: "接待會館",//按鈕區的--- 如空白會只呈現地址
   address2: "",//map點下確認的--- 如空白會顯示"導航地址"
   address: "臺北市南港區忠孝東路七段539號",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7281.820200933396!2d120.68387568670232!3d24.13979509349411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d004316b727%3A0x6ae5ff5117070033!2z6bqX5a-2QUNFIOm1rOeoi-WPsOS4reaZuuWMr-e4vemDqA!5e0!3m2!1szh-TW!2stw!4v1787539205034!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/",
+  googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.441890059034!2d121.612949!3d25.0530077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab596be2915f%3A0x5c55bd7bac2adcb8!2zMTE16Ie65YyX5biC5Y2X5riv5Y2A5Lit5Y2X6YeM5b-g5a2d5p2x6Lev5LiD5q61NTM56Jmf!5e0!3m2!1szh-TW!2stw!4v1793089426653!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/kMfdiJooKszKez2CA/",
   phone: "02-2788-1999",
     fbLink: "https://www.facebook.com/61578977057760/",
     fbMessage: "https://m.me/61578977057760/",
@@ -117,33 +117,43 @@ export default {
 
   navList: [
     {
-        name: "王牌計畫",
+        name: "梓園NEXT",
         target: ".s1",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "榮耀再現",
+        name: "NEXT未來",
+        target: ".s2",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "便捷交通",
+        target: ".s4",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "豐盛生活",
+        target: ".s5",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "建築團隊",
         target: ".s6",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "王牌地段",
+        name: "奢雅生活",
+        target: ".s7",
+        offset: "-60",
+        offsetmo: "0",
+    },{
+        name: "安心結構",
         target: ".s8",
         offset: "-60",
         offsetmo: "0",
     },{
-        name: "王牌團隊",
+        name: "名家設備",
         target: ".s9",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "王牌總部",
-        target: ".s10",
-        offset: "-60",
-        offsetmo: "0",
-    },{
-        name: "王牌優勢",
-        target: ".s13",
         offset: "-60",
         offsetmo: "0",
     }, {

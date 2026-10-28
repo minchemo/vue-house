@@ -1,6 +1,10 @@
 <template>
   <article class="s3" ref="s3">
     <div class="slider" data-aos="fade">
+      <div class="arrows" v-if="isMobile">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -123,8 +127,8 @@
     }
 
     .splide__pagination {
-      left: calc(100% + 6em);
-      justify-content: flex-start;
+      bottom: -1.5em;
+      justify-content: flex-end;
     }
   }
 
@@ -152,9 +156,9 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
-  autoplay: false,
-  interval: 4000,
+  pagination: true,
+  autoplay: true,
+  interval: 6000,
   gap: 0,
 //  drag: false
   type: 'loop'
@@ -168,6 +172,14 @@ const imgs = [
   {
     img: new URL("./s3/2.jpg", import.meta.url).href,
     caption: "南港軟體園區"
+  },
+  {
+    img: new URL("./s3/3.jpg", import.meta.url).href,
+    caption: "南港科技聚落"
+  },
+  {
+    img: new URL("./s3/4.jpg", import.meta.url).href,
+    caption: "台北流行音樂中心"
   },
 ]
 </script>

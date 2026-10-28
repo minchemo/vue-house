@@ -1,6 +1,10 @@
 <template>
   <article class="s8" ref="s8">
     <div class="slider" data-aos="fade">
+      <div class="arrows" v-if="isMobile">
+        <div class="prev" @click="splide.splide.go('<')"></div>
+        <div class="next" @click="splide.splide.go('>')"></div>
+      </div>
       <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
         <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
@@ -102,7 +106,7 @@
     }
 
     .splide__pagination {
-      left: calc(100% + 6em);
+      left: calc(100% + 5em);
       justify-content: flex-start;
     }
   }
@@ -130,9 +134,9 @@ const moved = (newIdx, prevIdx, destIdx) => {
 const options = {
   rewind: false,
   arrows: false,
-  pagination: false,
-  autoplay: false,
-  interval: 4000,
+  pagination: true,
+  autoplay: true,
+  interval: 6000,
   gap: 0,
 //  drag: false
   type: 'loop'
@@ -149,7 +153,11 @@ const imgs = [
   },
   {
     img: new URL("./s8/3.jpg", import.meta.url).href,
-    caption: ""
+    caption: "亞東預拌抗震型混凝土"
+  },
+  {
+    img: new URL("./s8/4.jpg", import.meta.url).href,
+    caption: "東和鋼鐵 耐震鋼材"
   },
 ]
 </script>
