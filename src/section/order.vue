@@ -366,7 +366,7 @@
 </style>
 
 <script setup>
-// 2026-09-24 修正版
+// 2026-10-28 修正版
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
@@ -639,45 +639,39 @@ const send = async () => {
   const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
 
   // ====================================================
-  // 🚀 發送流程：ABC 平行平行發送，任意一個成功即判定成功
+  // 🚀 發送流程：ABC 
   // ====================================================
   try {
-    const results = await Promise.allSettled([
-      // A 系統
-      fetch("https://leads.lixin.com.tw/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(presendA)
-      }),
-      // B 系統
-      fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
-        method: "POST",
-        body: presendB
-      }),
-      // C 系統 (Google Script)
-      fetch(scriptUrl, {
-        method: "GET",
-        mode: "no-cors",
-        keepalive: true
-      })
-    ])
+  // C：備份，不等待
+  fetch(scriptUrl, {
+    method: "GET",
+    mode: "no-cors",
+    keepalive: true
+  }).catch(() => {})
 
-    const aSuccess = results[0].status === "fulfilled" && results[0].value.ok
-    const bSuccess = results[1].status === "fulfilled" && results[1].value.ok
-    const cSuccess = results[2].status === "fulfilled"
+  // B：過渡期仍使用，不擋跳轉，但失敗要留紀錄
+  fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+    method: "POST",
+    body: presendB,
+    keepalive: true
+  }).catch((e) => console.warn("B 系統送出失敗", e))
 
-    // 只要 A, B, C 有任意一個發送成功，就跳轉至感謝頁
-    if (aSuccess || bSuccess || cSuccess) {
-      window.location.href = "formThanks"
-    } else {
-      toast.error("送出失敗，請稍後再試")
-    }
+  // A：主要系統，等它成功才跳轉
+  const resA = await fetch("https://leads.lixin.com.tw/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(presendA),
+    keepalive: true
+  })
 
-  } catch (err) {
-    console.error("表單送出未預期異常:", err)
-    toast.error("系統錯誤")
-  } finally {
-    sending.value = false
-  }
+  if (!resA.ok) throw new Error("A not ok")
+
+  window.location.href = "formThanks"
+} catch (err) {
+  console.error("A 系統送出失敗:", err)
+  toast.error("送出失敗，請稍後再試")
+  sending.value = false
+  submitted.value = false
+}
 }
 </script>
