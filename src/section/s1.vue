@@ -108,7 +108,7 @@ display: flex;
 }
 
 // 桌機設定
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 660px) {
   .s1 {
     .video_container {
       height: 0;

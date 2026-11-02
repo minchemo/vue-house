@@ -239,7 +239,7 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:660px) {
 
     .gotop {
         width: sizem(34.24);

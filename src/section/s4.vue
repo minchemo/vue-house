@@ -26,7 +26,7 @@ s2<template>
   overflow: hidden;
   color: #fff;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     height: auto;
    // height: 100vh;
     //min-height: auto;
@@ -40,7 +40,7 @@ s2<template>
     font-weight: 500;
     margin: sizem(20) auto sizem(14);
     letter-spacing: .06em;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     font-size: size(90);
     font-weight: 600;
     margin: size(37) auto size(45);
@@ -51,7 +51,7 @@ s2<template>
     text-align: center;
     font-size: sizem(12);
     letter-spacing: .06em;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     font-size: size(20);
     margin:0 auto 0 size(145);
     letter-spacing: .06em;text-align: left;
@@ -59,7 +59,7 @@ s2<template>
   }
   .viewbox{width: 100%;
     margin: 0 0 0 0;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
   .viewbox{height: sizem(667);
     margin:sizem(0) 0 0 0;
     top:0;}
@@ -67,7 +67,7 @@ s2<template>
   .caption{position: absolute;
     bottom: 0.5em;left: 0.5em;z-index: 2;font-size: sizem(8);
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     font-size: size(12);
   }}
 }

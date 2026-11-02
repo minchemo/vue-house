@@ -42,7 +42,7 @@
   background: #EB6120;
   height: sizem(667);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     font-size: size(27);
     justify-content: space-between;
     padding: 0;
@@ -75,7 +75,7 @@
 
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 660px) {
       width: 100%;
       bottom: calc(30% + #{size(-70 - 1080 * .3)});
       right: 0;
@@ -92,7 +92,7 @@
     display: block;
     aspect-ratio: 1/1;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 660px) {
       top: size(204);
       top: calc(50% + #{size(204 - 1080 * .5)});
       left: size(103);
@@ -108,7 +108,7 @@
     width: sizem(280);
     margin: 0;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 660px) {
       top: size(159);
       top: calc(55% + #{size(159 - 1080 * .55)});
       right: size(230);
@@ -125,7 +125,7 @@
     margin: auto;
     width: sizem(244);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 660px) {
       top: size(610);
       top: calc(55% + #{size(610 - 1080 * .55)});
       margin: 0;

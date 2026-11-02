@@ -44,7 +44,7 @@
   </div>
 
   <!-- Mobile contact info -->
-  <div class="bg-white mo-contact-info flex w-full contact-item-box items-center">
+  <div class="bg-white mo-contact-info flex w-full contact-item-box">
     <!--  <img src="@/section/s1/logo.svg" class="logo" alt="雲禾月logo"  v-if="!$isMobile()"  @click="scrollTo('.s1')"> -->
 
     <div class="flex flex-col contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'"
@@ -176,6 +176,8 @@
   z-index: 99;
   position: fixed;
   top: auto;
+  align-items: center;
+  justify-content: flex-end;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -187,7 +189,13 @@
   background: #0ead00;
   box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
 
-  @media screen and (min-width:768px) {
+@media screen and (min-width: 660px) and (max-width: 1024px) {
+  font-size: sizet(16);
+  height: sizet(63);
+  box-shadow: 0 0 sizet(50) rgba(0, 0, 0, 0.5);
+
+}
+@media screen and (min-width: 1025px) {
     background: transparent;
     display: none;
     top: size(56);
@@ -209,8 +217,12 @@
     color: #fff;
     transition: all .5s;
     position: relative;
+@media screen and (min-width: 660px) and (max-width: 1024px) {
+  
+    flex: 0 12.5%;
+}
 
-    @media screen and (min-width:768px) {
+@media screen and (min-width: 1025px) {
       flex: 0;
       padding: 0 0;
       //  color: #857550;
@@ -250,7 +262,7 @@
       max-height: 1.03em;
       filter: brightness(0) invert(1);
 
-      @media screen and (min-width:768px) {
+      @media screen and (min-width:1025px) {
 
         margin: auto;
       filter: brightness(0) invert(.5);
@@ -258,12 +270,14 @@
 
     }
 
+@media screen and (max-width: 660px) {
     &:first-child {
       border-left: 0;
     }
+    }
 
     &:hover {
-      background: #fff;
+      // background: #fff;
     //  transform: scale(1.2);
     }
   }
@@ -280,7 +294,7 @@
   width: sizem(290);
   margin: sizem(40) auto sizem(30) auto;
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width:660px) {
     width: size(455);
     margin: size(60) auto size(30);
 
@@ -347,7 +361,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     pointer-events: none;
 
     // animation: an2 5s linear infinite alternate;
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:660px) {
       width: size(985);
     }
 
@@ -363,7 +377,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     animation: an2 5s linear infinite alternate;
     pointer-events: none;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:660px) {
       width: size(1453);
     }
 
@@ -385,7 +399,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   gap: $gap;
   padding: 2em 0 2em;
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width:660px) {
     width: min(1000px, 95%); //最大1200px
   }
 
@@ -396,7 +410,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     grid-template-columns: 1fr;
     gap: 12px;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:660px) {
       gap: $gap;
       grid-template-columns: repeat(#{$cols}, 1fr);
 
@@ -411,7 +425,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
       gap: 0;
       grid-template-columns: 1fr;
 
-      @media screen and (min-width:768px) {
+      @media screen and (min-width:660px) {
         grid-template-columns: 1fr $btn-w;
       }
 
@@ -428,7 +442,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
           border-radius: $border-radius $border-radius 0 0;
           font-size: 15px;
 
-          @media screen and (min-width:768px) {
+          @media screen and (min-width:660px) {
             border-radius: $border-radius 0 0 $border-radius; // 只有左側圓角
             font-size: 16px;
           }
@@ -442,7 +456,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
         &.googlemap {
           border-radius: 0 0 $border-radius $border-radius;
 
-          @media screen and (min-width:768px) {
+          @media screen and (min-width:660px) {
             border-radius: 0 $border-radius $border-radius 0; // 只有右側圓角
           }
         }
@@ -458,7 +472,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     filter: brightness(0) invert(40%) sepia(52%) saturate(1501%) hue-rotate(79deg) brightness(101%) contrast(107%);  }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:660px) {
 
 
   .contact-info {

@@ -313,7 +313,7 @@
   }
   .send-load { color:#000000; }
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:660px) {
   .order {
     width: 100%;
   padding-top: 4.5em;

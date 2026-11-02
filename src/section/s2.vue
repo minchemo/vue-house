@@ -1,14 +1,14 @@
 s2<template>
   <article class="s2 relative" id="s2">
     <picture>
-      <source media="(max-width: 768px)" srcset="./s2/bgm.svg" />
+      <source media="(max-width: 660px)" srcset="./s2/bgm.svg" />
       <img src="./s2/bg.svg" alt="" class="bg" />
     </picture>
 <div class="l"></div>
     <img src="./s2/logo.svg" alt="" class="logo" data-aos="zoom-in" />
     <img src="./s2/t1.svg" alt="" class="t1" data-aos="zoom-in" data-aos-delay="200" />
 <!--   <picture>
-      <source media="(max-width: 768px)" srcset="./s2/2m.jpg" />
+      <source media="(max-width: 660px)" srcset="./s2/2m.jpg" />
       <img src="./s1/2.jpg" alt="" class="t0" />
     </picture> 
     
@@ -48,7 +48,7 @@ s2<template>
   height: sizem(604);
   overflow: hidden;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     height: 100vh;
     min-height: size(1070);
     max-height: size(1070);
@@ -65,7 +65,7 @@ s2<template>
     transform: translateX(77%);
     background:radial-gradient(50% 50% at 50% 50%, #003D7A 19%, #003060 30%, #001B36 52%, #000C18 71%, #000306 88%, #000 100%);
   animation: an 4s ease-in-out alternate infinite;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     top: size(130);left: size(460);
     width:size(530);
     height:size(530);
@@ -84,7 +84,7 @@ s2<template>
     width: sizem(244);
     z-index: 2;
     margin: sizem(0) auto sizem(60);
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     width: size(610);
     margin: size(100) auto size(100);
   }
@@ -93,7 +93,7 @@ s2<template>
     width: sizem(296);
     z-index: 2;
     filter: drop-shadow(size(2.8) size(2.8) size(3.8) rgba(20, 40, 102, 0.75));
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     width: size(980); 
     filter: drop-shadow(size(2.5) size(2.5) size(2) rgba(20, 40, 102, .8));
     

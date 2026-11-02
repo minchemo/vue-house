@@ -329,7 +329,7 @@ justify-content: center;
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:660px) {
 
 
   .mo-contact-info {

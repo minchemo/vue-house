@@ -70,7 +70,7 @@ $house-c2:#fffc;
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:660px) {
 .house {
     // background:#fff;
   //  height: sizem(400);

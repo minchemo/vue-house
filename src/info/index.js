@@ -7,8 +7,8 @@ export default {
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "臺南市仁德區仁愛里保仁路68號(仁和國小對面)",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.7172086361347!2d120.22209695!3d22.960639599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e73653fdd4397%3A0x6d2124e95de436dd!2zNzE36Ie65Y2X5biC5LuB5b635Y2A5LuB5oSb6YeM5L-d5LuB6LevNjjomZ8!5e0!3m2!1szh-TW!2stw!4v1792571923995!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/bkHoGiJXFQLCHnVC7",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3673.751024156242!2d120.22224708171896!3d22.959394735045247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDU3JzM0LjMiTiAxMjDCsDEzJzIwLjIiRQ!5e0!3m2!1szh-TW!2stw!4v1793239115764!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/kX7eNgmRvoxPxW1d7",
   phone: "06-2899868",
   fbLink: "https://www.facebook.com/61594433322145/",  // 開關這個 跑版 contactInfo.vue css 有寫註解 改上排按鈕數
   fbMessage: "https://m.me/61594433322145/",

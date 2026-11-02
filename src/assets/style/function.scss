@@ -1,8 +1,17 @@
+// 電腦：以 1920px 為基準
 @function size($size) {
-    $c-size: calc(100vw * $size / 1920);
-    @return #{$c-size};
+  $c-size: calc(100vw * $size / 1920);
+  @return #{$c-size};
 }
+
+// 平板：以 1024px 為基準
+@function sizet($size) {
+  $c-size: calc(100vw * $size / 1024);
+  @return #{$c-size};
+}
+
+// 手機：以 375px 為基準
 @function sizem($size) {
-    $c-size: calc(100vw * $size / 375);
-    @return #{$c-size};
+  $c-size: calc(100vw * $size / 375);
+  @return #{$c-size};
 }

@@ -1,7 +1,7 @@
 s2<template>
   <article class="s3 relative" id="s3">
     <picture>
-      <source media="(max-width: 768px)" srcset="./s3/bgm.jpg" />
+      <source media="(max-width: 660px)" srcset="./s3/bgm.jpg" />
       <img src="./s3/bg.jpg" alt="" class="bg" />
     </picture>
     <h3 class="t1" data-aos="zoom-in" data-aos-delay="0">緊鄰東區<br> 更勝東區</h3>
@@ -25,7 +25,7 @@ s2<template>
   overflow: hidden;
   color: #fff;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
   font-size: size(80);
     height: 100vh;
     min-height: size(1070);
@@ -84,7 +84,7 @@ s2<template>
   ) 1;
     }
   }
-  @media screen and (min-width: 768px) {position: relative;
+  @media screen and (min-width: 660px) {position: relative;
     margin: size(75) auto size(40);
   font-size: 1.36em;
     letter-spacing: .095em;
@@ -100,7 +100,7 @@ s2<template>
     text-indent: .5em;
     margin: size(0) auto auto;
     
-  @media screen and (min-width: 768px) {position: relative;
+  @media screen and (min-width: 660px) {position: relative;
     margin: size(0) auto auto;
   }
   }
@@ -113,7 +113,7 @@ s2<template>
   text-shadow: .02em .02em .03em rgba(20, 40, 102, 0.75);
     margin: size(0) auto sizem(138);
     
-  @media screen and (min-width: 768px) {position: relative;
+  @media screen and (min-width: 660px) {position: relative;
     margin: size(0) auto size(85);
   font-size: 1.46em;
   }

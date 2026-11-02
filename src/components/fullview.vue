@@ -1,7 +1,7 @@
 <template>
     <div class="viewbox" ref="viewbox">
         <img ref="viewImg" src="@/section/s4/map.svg" alt="" srcset="">
-        <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
+        <div class="mask" v-bind:class="{ hide: swiped }">
             <img src="@/components/fullview/finger.svg" alt="" srcset="">
         </div>
     </div>
@@ -15,6 +15,11 @@
     width: 100%;
     height: 100%;
     background: #eee;
+    overflow: hidden;
+
+        .mask {
+            display: none;
+        }
 
     > img {
         height: 100%;
@@ -25,10 +30,8 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
     .viewbox {
-        height: 100%;
-        overflow: hidden;
 
         img {
             height: 100%;

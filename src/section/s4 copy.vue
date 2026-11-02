@@ -1,7 +1,7 @@
 s2<template>
   <article class="s4 relative" id="s4">
     <picture>
-      <source media="(max-width: 768px)" srcset="./s2/bg.webp" />
+      <source media="(max-width: 660px)" srcset="./s2/bg.webp" />
       <img src="./s2/bg.webp" alt="" class="bg" />
     </picture>
 
@@ -27,7 +27,7 @@ s2<template>
   height: sizem(604);
   overflow: hidden;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     height: 100vh;
     min-height: size(1070);
     max-height: size(1070);
@@ -44,7 +44,7 @@ s2<template>
     width: sizem(244);
     z-index: 2;
     margin: sizem(0) auto sizem(60);
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     width: size(610);
     margin: size(100) auto size(100);
   }
@@ -53,7 +53,7 @@ s2<template>
     width: sizem(296);
     z-index: 2;
     filter: drop-shadow(size(2.8) size(2.8) size(3.8) rgba(20, 40, 102, 0.75));
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     width: size(980); 
     filter: drop-shadow(size(2.5) size(2.5) size(2) rgba(20, 40, 102, .8));
     

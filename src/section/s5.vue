@@ -1,7 +1,7 @@
 s2<template>
   <article class="s5 relative" id="s5">
     <picture>
-      <source media="(max-width: 768px)" srcset="./s5/bgm.jpg" />
+      <source media="(max-width: 660px)" srcset="./s5/bgm.jpg" />
       <img src="./s5/bg.jpg" alt="" class="bg" />
     </picture>
 
@@ -31,7 +31,7 @@ s2<template>
   overflow: hidden;
   text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     height: 100vh;
     min-height: size(1070);
     max-height: size(1070);
@@ -50,7 +50,7 @@ s2<template>
     font-weight: 400;
     margin: sizem(64) auto auto;
     letter-spacing: .06em;
-@media screen and (min-width: 768px){  
+@media screen and (min-width: 660px){  
     font-size: size(100);
     margin: size(120) auto auto;
 }
@@ -62,13 +62,13 @@ s2<template>
   justify-content: center;
   align-items: center;
     margin: 0 auto sizem(45);
-@media screen and (min-width: 768px){
+@media screen and (min-width: 660px){
     margin: 0 auto size(45);}
   .title{
     font-size: sizem(26);
     letter-spacing: .03em;
     font-weight: 500;
-@media screen and (min-width: 768px){
+@media screen and (min-width: 660px){
     font-size: size(52);
 
 }}
@@ -76,7 +76,7 @@ s2<template>
     font-size: sizem(15);
     letter-spacing: .06em;
     font-weight: 500;
-@media screen and (min-width: 768px){
+@media screen and (min-width: 660px){
     font-size: size(30);
   
 }}
@@ -84,7 +84,7 @@ s2<template>
     margin: 0.5em auto 0;
     font-size: sizem(12);
     letter-spacing: .11em;
-@media screen and (min-width: 768px){
+@media screen and (min-width: 660px){
     font-size: size(22);
   
 }}
@@ -94,7 +94,7 @@ s2<template>
     bottom: 0.5em;left: 0.5em;z-index: 2;font-size: sizem(8);
     color: #fff;
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 660px) {
     font-size: size(12);
   }
   &.caption2{left:auto;right: 0.5em;}
