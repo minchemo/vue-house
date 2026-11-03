@@ -1,9 +1,9 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      
-    <img src="./s1/title.svg" alt="" class="order-title-img" v-if="!isMobile">
-    <img src="./s1/titlem.svg" alt="" class="order-title-img" v-else>
+      <img src="./s1/title.svg" alt="" class="order-title-img">
+   <!--  <img src="./s1/title.svg" alt="" class="order-title-img" v-if="!isMobile">
+    <img src="./s1/titlem.svg" alt="" class="order-title-img" v-else> -->
 <!--
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
@@ -146,10 +146,13 @@ $o-title-c: #A30C24; //.order-title
   }
 
 .order-title-img{
-  width:sizem(310);
+  width:sizem(250);
   @media screen and (min-width: 768px) {
-    width: min(1200px, 95%); //最大1200px
+ //  width: min(1200px, 95%); //最大1200px
+  width:size(500);
     margin-bottom: size(20);
+  margin: 0 auto 0 auto;
+  display: block;
   }
 }
   .order-title {
@@ -264,7 +267,7 @@ $o-title-c: #A30C24; //.order-title
 
   .send {
     font-size: 1.4em;
-    background-color: #2EA7E0;
+    background-color: #2ea724;
     //border: 1px solid #FFF9;
     border: 0;
     padding: .7em 0;

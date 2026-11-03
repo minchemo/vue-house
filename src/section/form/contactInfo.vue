@@ -142,11 +142,11 @@
 @import "@/assets/style/function.scss";
 
 .bg-color1 {
-  background-color: #0189D3;
+  background-color: #2ea724;
 }
 
 .hover\:bg-color2:hover {
-  background-color: #04004D;
+  background-color: #12690a;
 }
 
 
@@ -231,7 +231,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   justify-content: center;
   gap: 0.75em;
   padding: 1.1em 1em;
-  background: #2EA7E099;
+  background: #2ea72499;
   color: #fff;
   //border: 1px solid #fff9;
   border-radius: $border-radius;
@@ -251,7 +251,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   }
 
   &:hover {
-    background: #2EA7E0;
+    background: #2ea724;
     color: #fff;
     //border-color: #c00;
 
@@ -313,7 +313,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
 
 .modal-box {
   img {
-    filter: invert(37%) sepia(60%) saturate(5826%) hue-rotate(182deg) brightness(101%) contrast(101%);
+    filter:  invert(48%) sepia(99%) saturate(447%) hue-rotate(68deg) brightness(89%) contrast(87%);
   }
 }
 
@@ -329,7 +329,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     gap: 0;
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.5);
     font-size: sizem(16);
-background: linear-gradient(0deg,#04004D, #0189D3);
+background: linear-gradient(0deg,#043100, #2ea724);
 
     .contact-item {
       flex: 1;
