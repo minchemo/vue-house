@@ -117,8 +117,10 @@
     }
   }
 @keyframes shimmer {
-  0%, 100% { opacity: 0.5; transform: rotate(0deg) scale(1); }
-  40%       { opacity: 1;   transform: rotate(180deg) scale(.3); }
+  0% { opacity: 0.5; transform: rotate(0deg) scale(1); }
+  20% { opacity: 1;   transform: rotate(72deg) scale(.4); }
+  80% { opacity: 1;   transform: rotate(288deg) scale(.3); }
+  100% { opacity: 0.5; transform: rotate(360deg) scale(1); }
 }
 
   .light{
@@ -126,7 +128,7 @@
     width: 10.5%;
     top: 25%;
     left: 38%;
-  animation: shimmer 3s ease-in-out infinite;
+  animation: shimmer 4s linear infinite;
 
     @media screen and (min-width: 768px) {
         width: 27%;
@@ -137,7 +139,7 @@
   }
   .light2{
     position: absolute;display: none;
-  animation: shimmer 3s ease-in-out infinite;
+  animation: shimmer 4s linear infinite;
 
     @media screen and (min-width: 768px) {
       display: block;
