@@ -148,10 +148,6 @@ const imgs = [
     caption: "LaLaport百貨"
   },
   {
-    img: new URL("./s5/2.jpg", import.meta.url).href,
-    caption: "五星飯店環聚"
-  },
-  {
     img: new URL("./s5/3.jpg", import.meta.url).href,
     caption: "汐止好市多"
   },
