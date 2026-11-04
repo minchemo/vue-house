@@ -155,5 +155,9 @@ const imgs = [
     img: new URL("./s4/3.jpg", import.meta.url).href,
     caption: "一站南港四鐵共構"
   },
+  {
+    img: new URL("./s4/4.jpg", import.meta.url).href,
+    caption: "捷運南港展覽館五號出口"
+  },
 ]
 </script>

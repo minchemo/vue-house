@@ -163,5 +163,9 @@ const imgs = [
     img: new URL("./s5/5.jpg", import.meta.url).href,
     caption: "公園綠意生活"
   },
+  {
+    img: new URL("./s5/6.jpg", import.meta.url).href,
+    caption: "台北漢來大飯店-戶外無邊際泳池"
+  },
 ]
 </script>

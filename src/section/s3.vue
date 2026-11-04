@@ -181,5 +181,9 @@ const imgs = [
     img: new URL("./s3/4.jpg", import.meta.url).href,
     caption: "台北流行音樂中心"
   },
+  {
+    img: new URL("./s3/5.jpg", import.meta.url).href,
+    caption: "台北漢來大飯店-戶外無邊際泳池"
+  },
 ]
 </script>
