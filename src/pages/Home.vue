@@ -11,12 +11,12 @@
   <!--loading end-->
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#FFE8BD] text-[#000]">
 
-    <S1 />
     <S2 />
     <S3 />
     <S4 />
     <S5 />
     <!--
+    <S1 />
     <S1new />
     <S1new2 /> -->
     <Order />
@@ -55,7 +55,7 @@ img {
 
 <script setup>
 import info from "@/info"
-import S1 from "@/section/s1.vue"
+// import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
