@@ -5,27 +5,27 @@
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
-<!--  -->
+      <!--  -->
       <!-- FORM -->
       <div class="form mx-auto relative flex justify-center">
 
         <div class="left h-full flex flex-col justify-between items-center">
           <div class="name">
-          <!-- 姓名 -->
-          <label class="row">
-            <span>姓名<span>*</span></span>
-            <input v-model="formData.name" type="text" class="input w-full" placeholder="請填寫姓名" />
-          </label>
+            <!-- 姓名 -->
+            <label class="row">
+              <span>姓名<span>*</span></span>
+              <input v-model="formData.name" type="text" class="input w-full" placeholder="請填寫姓名" />
+            </label>
 
-          <!-- 性別（可開關） -->
-          <div v-if="info.formConfig?.gender?.enabled" class="gender">
-            <label>
-              <input type="radio" value="男" v-model="formData.gender" />先生
-            </label>
-            <label>
-              <input type="radio" value="女" v-model="formData.gender" />女士
-            </label>
-          </div>
+            <!-- 性別（可開關） -->
+            <div v-if="info.formConfig?.gender?.enabled" class="gender">
+              <label>
+                <input type="radio" value="男" v-model="formData.gender" />先生
+              </label>
+              <label>
+                <input type="radio" value="女" v-model="formData.gender" />女士
+              </label>
+            </div>
           </div>
 
           <!-- 手機 -->
@@ -51,8 +51,7 @@
                 </option>
               </select>
 
-              <input v-else v-model="formData[key]" type="text" class="input w-full"
-                :placeholder="field.hold" />
+              <input v-else v-model="formData[key]" type="text" class="input w-full" :placeholder="field.hold" />
             </label>
           </template>
 
@@ -68,20 +67,18 @@
             </select>
           </label>
 
-          <!-- 地區 --><Transition name="area-drop">
-  <label 
-    class="row" 
-    v-if="info.locationConfig?.area?.enabled && formData.city"
-  >
-    <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
-    <select v-model="formData.area" class="select w-full">
-      <option value="" disabled>請選擇地區</option>
-      <option v-for="a in areaList" :key="a.value" :value="a.value">
-        {{ a.label }}
-      </option>
-    </select>
-  </label>
-</Transition>
+          <!-- 地區 -->
+          <Transition name="area-drop">
+            <label class="row" v-if="info.locationConfig?.area?.enabled && formData.city">
+              <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
+              <select v-model="formData.area" class="select w-full">
+                <option value="" disabled>請選擇地區</option>
+                <option v-for="a in areaList" :key="a.value" :value="a.value">
+                  {{ a.label }}
+                </option>
+              </select>
+            </label>
+          </Transition>
 
         </div>
 
@@ -104,8 +101,8 @@
       <Policy />
 
       <!-- recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
-        @expired="onRecaptchaExpired" />
+      <vue-recaptcha class="flex justify-center mt-8 relative z-10" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaExpired" />
 
       <!-- submit -->
       <div class="sendall mt-8 mb-12 mx-auto">
@@ -136,10 +133,12 @@
   transition: all 0.35s ease;
   overflow: hidden;
 }
+
 .area-drop-enter-from {
   max-height: 0;
   opacity: 0;
 }
+
 .area-drop-enter-to {
   max-height: 4em;
   opacity: 1;
@@ -191,7 +190,10 @@
       height: auto;
       display: flex;
 
-      textarea { flex: 1; height: 100%; }
+      textarea {
+        flex: 1;
+        height: 100%;
+      }
     }
 
     &::after {
@@ -200,7 +202,10 @@
       height: 100%;
       background-color: #00000026;
       position: absolute;
-      top: 0; left: 0; right: 0; margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
 
     .row {
@@ -212,13 +217,13 @@
       border: 1px solid #FFFFFFFF;
       border-radius: 10px;
 
-      > span {
+      >span {
         min-width: 5.5em;
         text-align: left;
         padding-left: 1em;
         color: #000000;
 
-        > i {
+        >i {
           color: #d9534f;
         }
       }
@@ -233,6 +238,7 @@
       input::placeholder {
         color: #999999;
       }
+
       option {
         color: #666;
       }
@@ -252,7 +258,10 @@
       width: 100%;
       display: flex;
       gap: .7em;
-      .row { flex: 1; }
+
+      .row {
+        flex: 1;
+      }
     }
 
     .gender {
@@ -266,6 +275,7 @@
       label:first-child {
         margin-bottom: .3em;
       }
+
       input {
         margin-right: .3em;
       }
@@ -280,10 +290,12 @@
     p {
       color: #000000;
     }
+
     label[for="policy-modal"] {
       color: #c0392b;
       cursor: pointer;
     }
+
     input[type="checkbox"] {
       border: 1px solid #666;
       background-color: #fff;
@@ -307,21 +319,30 @@
     transition: transform .3s;
     margin-bottom: 2em;
     font-weight: 700;
-    &:hover { transform: scale(.9); }
+
+    &:hover {
+      transform: scale(.9);
+    }
   }
-  .send-load { color:#000000; }
+
+  .send-load {
+    color: #000000;
+  }
 }
+
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
     padding-bottom: sizem(63);
-  .order-section {
-    min-height: sizem(800);
-    position: relative;
 
-  }
+    .order-section {
+      min-height: sizem(800);
+      position: relative;
+
+    }
+
     .order-title,
-    .order-subTitle{
+    .order-subTitle {
       width: sizem(310);
       margin: 0 auto;
     }
@@ -340,10 +361,10 @@
 
       .right {
         width: 100%;
-        height:6.25em;
+        height: 6.25em;
         margin-top: 1.1em;
 
-        .row{
+        .row {
           height: 7em;
         }
       }
@@ -352,6 +373,7 @@
         display: none;
       }
     }
+
     .send {
       width: sizem(310);
     }
@@ -361,8 +383,6 @@
     }
   }
 }
-
-
 </style>
 
 <script setup>
@@ -633,7 +653,10 @@ const send = async () => {
   scriptParams.append("utm_medium", utmMedium)
   scriptParams.append("utm_content", utmContent)
   scriptParams.append("utm_campaign", utmCampaign)
-  scriptParams.append("date", new Date().toISOString())
+  const t = new Date(Date.now() + 8 * 60 * 60 * 1000)
+  const pad = (n) => String(n).padStart(2, "0")
+  const date = `${t.getUTCFullYear()}-${pad(t.getUTCMonth() + 1)}-${pad(t.getUTCDate())} ${pad(t.getUTCHours())}:${pad(t.getUTCMinutes())}:${pad(t.getUTCSeconds())}`
+  scriptParams.append("date", date)
   scriptParams.append("campaign_name", info.caseName || "")
 
   const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
@@ -642,36 +665,36 @@ const send = async () => {
   // 🚀 發送流程：ABC 
   // ====================================================
   try {
-  // C：備份，不等待
-  fetch(scriptUrl, {
-    method: "GET",
-    mode: "no-cors",
-    keepalive: true
-  }).catch(() => {})
+    // C：備份，不等待
+    fetch(scriptUrl, {
+      method: "GET",
+      mode: "no-cors",
+      keepalive: true
+    }).catch(() => { })
 
-  // B：過渡期仍使用，不擋跳轉，但失敗要留紀錄
-  fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
-    method: "POST",
-    body: presendB,
-    keepalive: true
-  }).catch((e) => console.warn("B 系統送出失敗", e))
+    // B：過渡期仍使用，不擋跳轉，但失敗要留紀錄
+    fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+      method: "POST",
+      body: presendB,
+      keepalive: true
+    }).catch((e) => console.warn("B 系統送出失敗", e))
 
-  // A：主要系統，等它成功才跳轉
-  const resA = await fetch("https://leads.lixin.com.tw/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(presendA),
-    keepalive: true
-  })
+    // A：主要系統，等它成功才跳轉
+    const resA = await fetch("https://leads.lixin.com.tw/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(presendA),
+      keepalive: true
+    })
 
-  if (!resA.ok) throw new Error("A not ok")
+    if (!resA.ok) throw new Error("A not ok")
 
-  window.location.href = "formThanks"
-} catch (err) {
-  console.error("A 系統送出失敗:", err)
-  toast.error("送出失敗，請稍後再試")
-  sending.value = false
-  submitted.value = false
-}
+    window.location.href = "formThanks"
+  } catch (err) {
+    console.error("A 系統送出失敗:", err)
+    toast.error("送出失敗，請稍後再試")
+    sending.value = false
+    submitted.value = false
+  }
 }
 </script>
