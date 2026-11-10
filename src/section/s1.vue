@@ -1,7 +1,7 @@
 <template>
   <article class="s1 relative" id="s1">
-    <!-- <img src="./s1/mo.jpg" class="t0"> -->
-    <img src="./s1/bg.webp" class="bg">
+    <!-- <img src="./s1/mo.jpg" class="t0">
+    <img src="./s1/bg.webp" class="bg"> -->
     
     <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
      <!-- <img src="./s1/building.webp" class="building" data-aos="zoom-in" data-aos-delay="200">
