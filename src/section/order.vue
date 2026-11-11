@@ -688,7 +688,7 @@ const send = async () => {
 
     if (!resA.ok) throw new Error("A not ok")
 
-   // window.location.href = "formThanks"
+    window.location.href = "formThanks"
   } catch (err) {
     console.error("A 系統送出失敗:", err)
     toast.error("送出失敗，請稍後再試")
