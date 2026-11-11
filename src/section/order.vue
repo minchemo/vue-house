@@ -544,6 +544,9 @@ const send = async () => {
   // ====================================================
   // 📦 1. A 系統資料組裝 (leads.lixin - 主要系統)
   // ====================================================
+  // 留言：沒填時一律送「無留言」（B 系統留言空白會被擋）
+  const msgText = (formData.msg || "").trim() || "無留言"
+
   const presendA = {
     caseId: info.caseid,
     form: {},
@@ -558,7 +561,7 @@ const send = async () => {
     if (k === "area" && !v) continue
     presendA.form[k] = v
   }
-  presendA.form.note = formData.msg
+  presendA.form.note = msgText
   delete presendA.form.msg
   Object.assign(presendA.form, utm)
 
@@ -601,12 +604,10 @@ const send = async () => {
   }
 
   // 留言組裝 (雙重傳遞 message 與 msg)
-  if (formData.msg) {
-    if (extraFieldsForBMessage.length > 0) {
-      extraFieldsForBMessage.push(`留言：${formData.msg}`)
-    } else {
-      extraFieldsForBMessage.push(formData.msg)
-    }
+  if (extraFieldsForBMessage.length > 0) {
+    extraFieldsForBMessage.push(`留言：${msgText}`)
+  } else {
+    extraFieldsForBMessage.push(msgText)
   }
 
   const combinedBMessage = extraFieldsForBMessage.join(" / ")
@@ -633,12 +634,10 @@ const send = async () => {
     }
   }
 
-  if (formData.msg) {
-    if (dynamicMsgParts.length > 0) {
-      dynamicMsgParts.push(`留言：${formData.msg}`)
-    } else {
-      dynamicMsgParts.push(formData.msg)
-    }
+  if (dynamicMsgParts.length > 0) {
+    dynamicMsgParts.push(`留言：${msgText}`)
+  } else {
+    dynamicMsgParts.push(msgText)
   }
 
   const combinedCMsg = dynamicMsgParts.join(" / ")
@@ -689,7 +688,7 @@ const send = async () => {
 
     if (!resA.ok) throw new Error("A not ok")
 
-    window.location.href = "formThanks"
+   // window.location.href = "formThanks"
   } catch (err) {
     console.error("A 系統送出失敗:", err)
     toast.error("送出失敗，請稍後再試")
