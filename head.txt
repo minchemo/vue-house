@@ -3,6 +3,7 @@ src: 'https://fudu.tw/',
 title: '昌益・富都心四季｜雙鐵x巨蛋x好市多商圈｜官網',
 description: '軌道推進，商圈匯聚，崇聖路旁18,000坪 旗艦造鎮。接待中心：臺南市仁德區仁愛里保仁路68號(仁和國小對面)；電話：06-2899868',
 keyword: '昌益富都心,台南買房,好市多商圈,台南東區買房,南台南副都心',
+image: 'https://fudu.tw/og.png',
 -->
 
 <!-- 基本 SEO 設定 -->
@@ -19,11 +20,19 @@ keyword: '昌益富都心,台南買房,好市多商圈,台南東區買房,南台
 <meta property="og:site_name" content="昌益・富都心四季｜雙鐵x巨蛋x好市多商圈｜官網">
 <meta property="og:url" content="https://fudu.tw/">
 
+<!-- 社群分享圖片 (LINE / FB 預覽圖) -->
+<meta property="og:image" content="https://fudu.tw/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="昌益・富都心四季｜雙鐵x巨蛋x好市多商圈｜官網">
+
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="昌益・富都心四季｜雙鐵x巨蛋x好市多商圈｜官網">
 <meta name="twitter:description" content="軌道推進，商圈匯聚，崇聖路旁18,000坪 旗艦造鎮。接待中心：臺南市仁德區仁愛里保仁路68號(仁和國小對面)；電話：06-2899868">
+<meta name="twitter:image" content="https://fudu.tw/og.png">
 
 <!-- 結構化資料 / Schema.org -->
 <meta itemprop="name" content="昌益・富都心四季｜雙鐵x巨蛋x好市多商圈｜官網">
 <meta itemprop="description" content="軌道推進，商圈匯聚，崇聖路旁18,000坪 旗艦造鎮。接待中心：臺南市仁德區仁愛里保仁路68號(仁和國小對面)；電話：06-2899868">
+<meta itemprop="image" content="https://fudu.tw/og.png">

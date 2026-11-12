@@ -370,7 +370,7 @@
 </style>
 
 <script setup>
-// 2026-09-24 修正版
+// 新發信系統（A: leads.lixin 主要 / B: service-sys 過渡 / C: GAS 備份）
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
@@ -383,6 +383,9 @@ import { VueRecaptcha } from "vue-recaptcha"
 import { useToast } from "vue-toastification"
 
 const toast = useToast()
+
+// ⚠️ 測試用：true = 送出後不跳頁，並在 Console 印出 A / B 回應。上線前務必改回 false
+const DEBUG_NO_REDIRECT = false
 const sending = ref(false)
 const submitted = ref(false)
 
@@ -453,9 +456,9 @@ const isRequired = (key) => {
   if (key === "name" || key === "phone") return true
   if (key === "policyChecked") return true
   if (key === "r_verify") return true
-  if (key === "gender") return formConfig.gender?.required
-  if (key === "city") return locationConfig.city?.required
-  if (key === "area") return locationConfig.area?.required
+  if (key === "gender") return formConfig.gender?.enabled && formConfig.gender?.required
+  if (key === "city") return locationConfig.city?.enabled && locationConfig.city?.required
+  if (key === "area") return locationConfig.area?.enabled && locationConfig.area?.required
 
   if (selectFields[key]) return selectFields[key].required
 
@@ -528,6 +531,9 @@ const send = async () => {
   // ====================================================
   // 📦 1. A 系統資料組裝 (leads.lixin - 主要系統)
   // ====================================================
+  // 留言：沒填時一律送「無留言」（B 系統留言空白會被擋）
+  const msgText = (formData.msg || "").trim() || "無留言"
+
   const presendA = {
     caseId: info.caseid,
     form: {},
@@ -542,7 +548,7 @@ const send = async () => {
     if (k === "area" && !v) continue
     presendA.form[k] = v
   }
-  presendA.form.note = formData.msg
+  presendA.form.note = msgText
   delete presendA.form.msg
   Object.assign(presendA.form, utm)
 
@@ -585,13 +591,9 @@ const send = async () => {
   }
 
   // 留言組裝 (雙重傳遞 message 與 msg)
-  if (formData.msg) {
-    if (extraFieldsForBMessage.length > 0) {
-      extraFieldsForBMessage.push(`留言：${formData.msg}`)
-    } else {
-      extraFieldsForBMessage.push(formData.msg)
-    }
-  }
+  extraFieldsForBMessage.push(
+    extraFieldsForBMessage.length ? `留言：${msgText}` : msgText
+  )
 
   const combinedBMessage = extraFieldsForBMessage.join(" / ")
   presendB.append("message", combinedBMessage)
@@ -617,15 +619,14 @@ const send = async () => {
     }
   }
 
-  if (formData.msg) {
-    if (dynamicMsgParts.length > 0) {
-      dynamicMsgParts.push(`留言：${formData.msg}`)
-    } else {
-      dynamicMsgParts.push(formData.msg)
-    }
-  }
+  dynamicMsgParts.push(dynamicMsgParts.length ? `留言：${msgText}` : msgText)
 
   const combinedCMsg = dynamicMsgParts.join(" / ")
+
+  // 固定台灣時間（UTC+8，台灣無夏令時間），不受訪客電腦時區影響
+  const t = new Date(Date.now() + 8 * 60 * 60 * 1000)
+  const pad = (n) => String(n).padStart(2, "0")
+  const date = `${t.getUTCFullYear()}-${pad(t.getUTCMonth() + 1)}-${pad(t.getUTCDate())} ${pad(t.getUTCHours())}:${pad(t.getUTCMinutes())}:${pad(t.getUTCSeconds())}`
 
   const scriptParams = new URLSearchParams()
   scriptParams.append("name", formData.name || "")
@@ -637,51 +638,58 @@ const send = async () => {
   scriptParams.append("utm_medium", utmMedium)
   scriptParams.append("utm_content", utmContent)
   scriptParams.append("utm_campaign", utmCampaign)
-  scriptParams.append("date", new Date().toISOString())
+  scriptParams.append("date", date)
   scriptParams.append("campaign_name", info.caseName || "")
 
   const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
 
   // ====================================================
-  // 🚀 發送流程：ABC 平行平行發送，任意一個成功即判定成功
+  // 🚀 發送：C、B 不等待；A 成功才跳轉
   // ====================================================
   try {
-    const results = await Promise.allSettled([
-      // A 系統
-      fetch("https://leads.lixin.com.tw/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(presendA)
-      }),
-      // B 系統
-      fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
-        method: "POST",
-        body: presendB
-      }),
-      // C 系統 (Google Script)
-      fetch(scriptUrl, {
-        method: "GET",
-        mode: "no-cors",
-        keepalive: true
+    fetch(scriptUrl, {
+      method: "GET",
+      mode: "no-cors",
+      keepalive: true
+    }).catch(() => {})
+
+    const reqB = fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+      method: "POST",
+      body: presendB,
+      keepalive: true
+    })
+      .then(async (res) => {
+        const text = await res.text().catch(() => "")
+        if (DEBUG_NO_REDIRECT) console.log("【DEBUG】B 系統回應", res.status, text)
+        if (!res.ok) console.warn("B 系統回應錯誤", res.status, text)
       })
-    ])
+      .catch((e) => console.warn("B 系統送出失敗", e))
 
-    const aSuccess = results[0].status === "fulfilled" && results[0].value.ok
-    const bSuccess = results[1].status === "fulfilled" && results[1].value.ok
-    const cSuccess = results[2].status === "fulfilled"
+    const resA = await fetch("https://leads.lixin.com.tw/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(presendA),
+      keepalive: true
+    })
 
-    // 只要 A, B, C 有任意一個發送成功，就跳轉至感謝頁
-    if (aSuccess || bSuccess || cSuccess) {
-      window.location.href = "formThanks"
-    } else {
-      toast.error("送出失敗，請稍後再試")
+    if (!resA.ok) throw new Error("A not ok")
+
+    // 測試模式：不跳頁，等 B 回應後印在 Console
+    if (DEBUG_NO_REDIRECT) {
+      console.log("【DEBUG】A 系統回應", resA.status, await resA.text().catch(() => ""))
+      await reqB
+      toast.success("【測試模式】已送出，未跳頁，請看 Console")
+      sending.value = false
+      submitted.value = false
+      return
     }
 
+    window.location.href = "formThanks"
   } catch (err) {
-    console.error("表單送出未預期異常:", err)
-    toast.error("系統錯誤")
-  } finally {
+    console.error("A 系統送出失敗:", err)
+    toast.error("送出失敗，請稍後再試")
     sending.value = false
+    submitted.value = false
   }
 }
 </script>
