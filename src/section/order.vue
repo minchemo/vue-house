@@ -539,6 +539,9 @@ const send = async () => {
   // ====================================================
   // 📦 1. A 系統資料組裝 (leads.lixin - 主要系統)
   // ====================================================
+  // 留言：沒填時一律送「無留言」（B 系統留言空白會被擋）
+  const msgText = (formData.msg || "").trim() || "無留言"
+
   const presendA = {
     caseId: info.caseid,
     form: {},
@@ -553,7 +556,7 @@ const send = async () => {
     if (k === "area" && !v) continue
     presendA.form[k] = v
   }
-  presendA.form.note = formData.msg
+  presendA.form.note = msgText
   delete presendA.form.msg
   Object.assign(presendA.form, utm)
 
@@ -596,12 +599,10 @@ const send = async () => {
   }
 
   // 留言組裝 (雙重傳遞 message 與 msg)
-  if (formData.msg) {
-    if (extraFieldsForBMessage.length > 0) {
-      extraFieldsForBMessage.push(`留言：${formData.msg}`)
-    } else {
-      extraFieldsForBMessage.push(formData.msg)
-    }
+  if (extraFieldsForBMessage.length > 0) {
+    extraFieldsForBMessage.push(`留言：${msgText}`)
+  } else {
+    extraFieldsForBMessage.push(msgText)
   }
 
   const combinedBMessage = extraFieldsForBMessage.join(" / ")
@@ -628,12 +629,10 @@ const send = async () => {
     }
   }
 
-  if (formData.msg) {
-    if (dynamicMsgParts.length > 0) {
-      dynamicMsgParts.push(`留言：${formData.msg}`)
-    } else {
-      dynamicMsgParts.push(formData.msg)
-    }
+  if (dynamicMsgParts.length > 0) {
+    dynamicMsgParts.push(`留言：${msgText}`)
+  } else {
+    dynamicMsgParts.push(msgText)
   }
 
   const combinedCMsg = dynamicMsgParts.join(" / ")
@@ -648,7 +647,10 @@ const send = async () => {
   scriptParams.append("utm_medium", utmMedium)
   scriptParams.append("utm_content", utmContent)
   scriptParams.append("utm_campaign", utmCampaign)
-  scriptParams.append("date", new Date().toISOString())
+  const t = new Date(Date.now() + 8 * 60 * 60 * 1000)
+  const pad = (n) => String(n).padStart(2, "0")
+  const date = `${t.getUTCFullYear()}-${pad(t.getUTCMonth() + 1)}-${pad(t.getUTCDate())} ${pad(t.getUTCHours())}:${pad(t.getUTCMinutes())}:${pad(t.getUTCSeconds())}`
+  scriptParams.append("date", date)
   scriptParams.append("campaign_name", info.caseName || "")
 
   const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
@@ -657,36 +659,36 @@ const send = async () => {
   // 🚀 發送流程：ABC 
   // ====================================================
   try {
-  // C：備份，不等待
-  fetch(scriptUrl, {
-    method: "GET",
-    mode: "no-cors",
-    keepalive: true
-  }).catch(() => {})
+    // C：備份，不等待
+    fetch(scriptUrl, {
+      method: "GET",
+      mode: "no-cors",
+      keepalive: true
+    }).catch(() => { })
 
-  // B：過渡期仍使用，不擋跳轉，但失敗要留紀錄
-  fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
-    method: "POST",
-    body: presendB,
-    keepalive: true
-  }).catch((e) => console.warn("B 系統送出失敗", e))
+    // B：過渡期仍使用，不擋跳轉，但失敗要留紀錄
+    fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+      method: "POST",
+      body: presendB,
+      keepalive: true
+    }).catch((e) => console.warn("B 系統送出失敗", e))
 
-  // A：主要系統，等它成功才跳轉
-  const resA = await fetch("https://leads.lixin.com.tw/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(presendA),
-    keepalive: true
-  })
+    // A：主要系統，等它成功才跳轉
+    const resA = await fetch("https://leads.lixin.com.tw/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(presendA),
+      keepalive: true
+    })
 
-  if (!resA.ok) throw new Error("A not ok")
+    if (!resA.ok) throw new Error("A not ok")
 
-  window.location.href = "formThanks"
-} catch (err) {
-  console.error("A 系統送出失敗:", err)
-  toast.error("送出失敗，請稍後再試")
-  sending.value = false
-  submitted.value = false
+    window.location.href = "formThanks"
+  } catch (err) {
+    console.error("A 系統送出失敗:", err)
+    toast.error("送出失敗，請稍後再試")
+    sending.value = false
+    submitted.value = false
+  }
 }
-}
-</script>
+</script>
