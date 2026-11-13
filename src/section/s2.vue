@@ -81,11 +81,11 @@ s2<template>
   
   }
   .logo{ position: relative;
-    width: sizem(244);
+    width: sizem(254);
     z-index: 2;
     margin: sizem(0) auto sizem(60);
   @media screen and (min-width: 660px) {
-    width: size(610);
+    width: size(640);
     margin: size(100) auto size(100);
   }
   }
