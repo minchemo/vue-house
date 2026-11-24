@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="960 0 960 1249">
+  <defs>
+    <linearGradient id="bg-left" x1="-156" x2="156.1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006045"/>
+      <stop offset=".3" stop-color="#009e4b"/>
+      <stop offset=".7" stop-color="#00b55a"/>
+      <stop offset="1" stop-color="#00d26d"/>
+    </linearGradient>
+    <!-- 四角星：中心在 (0,0)，半徑 156 -->
+    <path id="star" d="M0-156c0 86.1 69.8 156 156 156-86.1 0-156 69.8-156 156 0-86.1-69.8-156-156-156 86.1 0 156-69.8 156-156Z"/>
+    <!-- 圓 -->
+    <circle id="dot" r="156"/>
+    <!-- 半圓：平邊在上、往下凸，中心在 (0,0) -->
+    <path id="half" d="M-156 0A156 156 0 0 0 156 0Z"/>
+  </defs>
+
+  <!-- 四角星 -->
+  <use xlink:href="#star" x="1920"   y="311.7" fill="#00e652"/>
+  <use xlink:href="#star" x="1920"   y="623.6" fill="#00e652"/>
+  <use xlink:href="#star" x="1608.1" y="935.5" fill="#00e652"/>
+  <use xlink:href="#star" x="1607.6" y="311.7" fill="#00ca74"/>
+  <use xlink:href="#star" x="1296.2" y="935.5" fill="#00ba68"/>
+
+  <!-- 圓 -->
+  <use xlink:href="#dot" x="1764.1" y="467.6"  fill="#006c48"/>
+  <use xlink:href="#dot" x="1764.1" y="1091.4" fill="#006c48"/>
+
+  <!-- 半圓（70% 透明） -->
+  <g fill="#008eba" opacity=".7">
+    <use xlink:href="#half" x="1763.5" y="157.7"/>
+    <use xlink:href="#half" x="1452.1" y="1091.4"/>
+    <use xlink:href="#half" transform="translate(1452.1 155.7) rotate(180)"/>
+    <use xlink:href="#half" transform="translate(1763.6 779.5) rotate(90)"/>
+  </g>
+
+  <use xlink:href="#star" x="1920" y="936.6" fill="#006c48"/>
+
+  <!-- 左側大星（漸層）
+  <use xlink:href="#star" transform="translate(.6 623.1) scale(1.043)" fill="url(#bg-left)"/>
+ --></svg>

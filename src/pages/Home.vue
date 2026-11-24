@@ -73,7 +73,11 @@ img {
     font-size: size(15);
   }
 }
-
+.en{
+  font-family: "trajan-pro-3", serif;
+font-weight: 400;
+font-style: normal;
+}
 .txt {
   position: relative;
   font-weight: 400;
