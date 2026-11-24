@@ -7,8 +7,8 @@ export default {
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市新店區北宜路一段60號1F",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.296031925978!2d121.53568507632609!3d24.956040841424485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468018798e2df99%3A0x4c3e3d305e003b1c!2zMjMxNTLmlrDljJfluILmlrDlupfljYDljJflrpzot6_kuIDmrrU2MOiZnzFm!5e0!3m2!1szh-TW!2stw!4v1769652954424!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/TcvV1bUe7u3PgnVt7",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2941331564143!2d121.53610269214659!3d24.956105467571483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34680148cc5a6579%3A0xd30582faab2b44ee!2z6LGQ56eA5aSn5aKD5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1795504984879!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/wP58uXcAA5Nfgyvi7",
     phone: "02-2915-9797",
     fbLink: "https://www.facebook.com/PlentyLand/",
     fbMessage: "https://m.me/PlentyLand/",
