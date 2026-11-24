@@ -1,0 +1,38 @@
+<!--
+src: 'https://fengxiudajing.tw/',
+title: '豐秀大境 | 新店4字頭3房景觀宅，捷運6分鐘',
+description: '新店秀水段千坪造鎮，27–36坪正三房，坐擁樹海新視野。新店捷運站6分鐘，20分鐘直達信義區，用北市1/3價住進新店最美風景，麗寶集團 接待中心：新北市新店區北宜路一段60號，電話：02-2915-9797',
+keyword: '豐秀大境, 新店建案, 新店首購, 新店建案推薦, 新店景觀宅',
+image: 'https://fengxiudajing.tw/og.png',
+-->
+
+<!-- 基本 SEO 設定 -->
+<title>豐秀大境 | 新店4字頭3房景觀宅，捷運6分鐘</title>
+<meta name="description" content="新店秀水段千坪造鎮，27–36坪正三房，坐擁樹海新視野。新店捷運站6分鐘，20分鐘直達信義區，用北市1/3價住進新店最美風景，麗寶集團 接待中心：新北市新店區北宜路一段60號，電話：02-2915-9797">
+<meta name="keywords" content="豐秀大境, 新店建案, 新店首購, 新店建案推薦, 新店景觀宅">
+<link rel="canonical" href="https://fengxiudajing.tw/">
+
+<!-- Open Graph (社群分享 / LINE / Facebook) -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="website">
+<meta property="og:title" content="豐秀大境 | 新店4字頭3房景觀宅，捷運6分鐘">
+<meta property="og:description" content="新店秀水段千坪造鎮，27–36坪正三房，坐擁樹海新視野。新店捷運站6分鐘，20分鐘直達信義區，用北市1/3價住進新店最美風景，麗寶集團 接待中心：新北市新店區北宜路一段60號，電話：02-2915-9797">
+<meta property="og:site_name" content="豐秀大境 | 新店4字頭3房景觀宅，捷運6分鐘">
+<meta property="og:url" content="https://fengxiudajing.tw/">
+
+<!-- 社群分享圖片 (LINE / FB 預覽圖) -->
+<meta property="og:image" content="https://fengxiudajing.tw/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="豐秀大境 | 新店4字頭3房景觀宅，捷運6分鐘">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="豐秀大境 | 新店4字頭3房景觀宅，捷運6分鐘">
+<meta name="twitter:description" content="新店秀水段千坪造鎮，27–36坪正三房，坐擁樹海新視野。新店捷運站6分鐘，20分鐘直達信義區，用北市1/3價住進新店最美風景，麗寶集團 接待中心：新北市新店區北宜路一段60號，電話：02-2915-9797">
+<meta name="twitter:image" content="https://fengxiudajing.tw/og.png">
+
+<!-- 結構化資料 / Schema.org -->
+<meta itemprop="name" content="豐秀大境 | 新店4字頭3房景觀宅，捷運6分鐘">
+<meta itemprop="description" content="新店秀水段千坪造鎮，27–36坪正三房，坐擁樹海新視野。新店捷運站6分鐘，20分鐘直達信義區，用北市1/3價住進新店最美風景，麗寶集團 接待中心：新北市新店區北宜路一段60號，電話：02-2915-9797">
+<meta itemprop="image" content="https://fengxiudajing.tw/og.png">

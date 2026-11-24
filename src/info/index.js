@@ -2,7 +2,8 @@ const caseName = "豐秀大境"
 
 export default {
     caseid: "10de2364-633a-4991-b149-4aba5646ff47",
-    //case_code: "zhsd",
+    // caseid_j: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // 不同時才需要開啟
+    //case_code: "zhsd", //某些舊案資料庫要單獨設定名稱
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市新店區北宜路一段60號1F",
@@ -31,32 +32,50 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
         subTitle_mo: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
-    // 底下2個 沒項目就會隱藏
-    // 控制固定板的新欄位
-    //  表單欄位
-
-    room_type: ["兩房", "三房"],
+    // 控制表單欄位
+    //性別
+    formConfig: {
+        gender: {
+            enabled: false,
+            required: false //必填開啟使用
+        }
+    },
+    //各種欄位
     selectFields: {
         room_type: {
             title: "需求房型",
+            type: "select",
             hold: "請選擇房型",
             option: ["二房", "三房"],
-            bypass: false,
+            required: false, //必填開啟使用
         },
         /*
         budget: {
           title: "購屋預算",
+          type: "select",
           hold: "請選擇區間",
           option: ["2388~2588萬","2688~2888萬"],
-          bypass:false, //必填開啟使用
+          required: false, //必填開啟使用
         },
-   
-     use_type: {
-       title: "使用用途",
-       hold: "請選擇用途",
-       option: ["自住", "投資", "租賃"]
-     },
-     */
+        use_type: {
+          title: "使用用途",
+          type: "select",
+          hold: "請選擇用途",
+          option: ["自住", "投資", "租賃"],
+          required: false,
+        },
+        */
+    },
+    //縣市地區
+    locationConfig: {
+        city: {
+            enabled: true,
+            required: false
+        },
+        area: {
+            enabled: true,     // ⚠️ 不能單獨 true
+            required: false
+        }
     },
 
     navList: [
