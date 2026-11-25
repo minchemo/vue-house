@@ -1,11 +1,12 @@
 <template>
   <div id="order" class="order relative text-center ">
     <div class="order-section">
-      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
+      <div class="en">BOOK A VISIT</div>
+      <!--  <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
-      <!--  -->
+      -->
       <!-- FORM -->
       <div class="form mx-auto relative flex justify-center">
 
@@ -129,31 +130,26 @@
 @import "@/assets/style/function.scss";
 
 
-.area-drop-enter-active {
-  transition: all 0.35s ease;
-  overflow: hidden;
-}
-
-.area-drop-enter-from {
-  max-height: 0;
-  opacity: 0;
-}
-
-.area-drop-enter-to {
-  max-height: 4em;
-  opacity: 1;
-}
-
 .order {
   width: 100%;
-  padding-top: 3.5em;
+  padding-top: 10.5em;
   font-size: 15px;
-  background-color: #E9E6E2FF;
+  @media screen and (max-width:768px) {
+  padding-top: 3.5em;
+  }
 
   .order-section {
     position: relative;
     overflow: hidden;
     min-height: size(500);
+      .en {
+        color: #EB5B1A;
+        font-size: sizem(22);
+
+        @media screen and (min-width: 768px) {
+          font-size: size(45);
+        }
+      }
   }
 
   .order-title {
@@ -190,10 +186,7 @@
       height: auto;
       display: flex;
 
-      textarea {
-        flex: 1;
-        height: 100%;
-      }
+      textarea { flex: 1; height: 100%; }
     }
 
     &::after {
@@ -202,29 +195,26 @@
       height: 100%;
       background-color: #00000026;
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
+      top: 0; left: 0; right: 0; margin: auto;
     }
 
     .row {
-      background: #FFFFFFFF;
+      background: #FFFFFF66;
       color: #000000;
       display: flex;
       width: 100%;
       align-items: center;
-      border: 1px solid #FFFFFFFF;
-      border-radius: 10px;
+      border: 1px solid #0000004D;
+      border-radius: 0px;
 
-      >span {
+      > span {
         min-width: 5.5em;
         text-align: left;
         padding-left: 1em;
-        color: #000000;
+        color: #444444;
 
-        >i {
-          color: #d9534f;
+        > span {
+          color: #cc0000;
         }
       }
 
@@ -238,7 +228,6 @@
       input::placeholder {
         color: #999999;
       }
-
       option {
         color: #666;
       }
@@ -258,10 +247,7 @@
       width: 100%;
       display: flex;
       gap: .7em;
-
-      .row {
-        flex: 1;
-      }
+      .row { flex: 1; }
     }
 
     .gender {
@@ -270,12 +256,11 @@
       flex-direction: column;
       justify-content: center;
       margin-left: .7em;
-      color: #000000;
+      color: #444444;
 
       label:first-child {
         margin-bottom: .3em;
       }
-
       input {
         margin-right: .3em;
       }
@@ -290,12 +275,10 @@
     p {
       color: #000000;
     }
-
     label[for="policy-modal"] {
       color: #c0392b;
       cursor: pointer;
     }
-
     input[type="checkbox"] {
       border: 1px solid #666;
       background-color: #fff;
@@ -303,50 +286,39 @@
   }
 
   .send {
-    font-size: 1.125rem;
-    background-color: #9f8a7a;
+    font-size: 1.438rem;
+    background-color: #024E54;
     border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
     line-height: 1.5;
     text-indent: 0.5em;
-    border-radius: 2em;
+    border-radius: 0cm;
     text-align: center;
-    width: 16em;
+    width: 18em;
     z-index: 10;
     color: #fff;
     position: relative;
     transition: transform .3s;
-    margin-bottom: 2em;
     font-weight: 700;
-
-    &:hover {
-      transform: scale(.9);
-    }
+    &:hover { transform: scale(.9); }
   }
-
-  .send-load {
-    color: #000000;
-  }
+  .send-load { color:#000000; }
 }
-
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
     padding-bottom: sizem(63);
+  .order-section {
+    min-height: sizem(800);
+    position: relative;
 
-    .order-section {
-      min-height: sizem(800);
-      position: relative;
-
-    }
-
+  }
     .order-title,
-    .order-subTitle {
+    .order-subTitle{
       width: sizem(310);
       margin: 0 auto;
     }
-
 
     .form {
       width: sizem(310);
@@ -361,10 +333,10 @@
 
       .right {
         width: 100%;
-        height: 6.25em;
+        height:6.25em;
         margin-top: 1.1em;
 
-        .row {
+        .row{
           height: 7em;
         }
       }
@@ -373,7 +345,6 @@
         display: none;
       }
     }
-
     .send {
       width: sizem(310);
     }
@@ -383,6 +354,21 @@
     }
   }
 }
+
+.area-drop-enter-active {
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+.area-drop-enter-from {
+  max-height: 0;
+  opacity: 0;
+}
+.area-drop-enter-to {
+  max-height: 4em;
+  opacity: 1;
+}
+
+
 </style>
 
 <script setup>

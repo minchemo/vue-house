@@ -18,8 +18,9 @@
             <p class=""><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
     </div> -->
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
-        <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="//h35.banner.tw/img//footerLogo.gif" alt="立炘數位" srcset=""></a>
+    <a href="https://www.lixin.com.tw/" target="_blank"
+      ><img class="hover:opacity-50" width="79" height="15" src="https://h35.banner.tw/img/footerlogo.svg" alt="Lixin" srcset=""
+    /></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
     </div>
 </template>
@@ -27,8 +28,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$house-c1:#A30C24;
-$house-c2:#000;
+$house-c1:#024E54;
+$house-c2:#444;
 .displaynone{display: none;}
 .house {
    // height: auto;
@@ -46,6 +47,8 @@ $house-c2:#000;
        // font-weight: 700;
         color: $house-c1;
         margin: 0 auto 0em auto;
+    font-family: 'Noto Serif TC',serif;
+    font-weight: 700;
     }
 
     .info-items {
@@ -62,6 +65,7 @@ $house-c2:#000;
 
              .sub{
               color: $house-c1;
+    font-weight: 700;
                 // min-width: 4.5em;
             }
         }
