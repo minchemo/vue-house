@@ -1,38 +1,38 @@
 <!--
-src: 'https://soho360.tw',
-title: 'SOHO360｜高訂3米6｜官網',
-description: '一橋西門町 對接台北雙星、訂簽5% 工程期0付款 三重區成功路50巷73號旁 02-22706789',
-keyword: '三重區,2房,集美街,三重站,大都會公園',
-image: 'https://soho360.tw/og.png',
+src: 'https://park32.tw',
+title: 'PARK 32｜全民住平實｜官網',
+description: '一座城市新的中心，南紡未來中央開始，公園首排的景觀，平實首席的身段。我們不是看見平實，我們是在看見台南下一個二十年。',
+keyword: '站中央 第一位,PARK 32,平實首席 公園首排,2-4房,近二千坪基地',
+image: 'https://park32.tw/og.png',
 -->
 
 <!-- 基本 SEO 設定 -->
-<title>SOHO360｜高訂3米6｜官網</title>
-<meta name="description" content="一橋西門町 對接台北雙星、訂簽5% 工程期0付款 三重區成功路50巷73號旁 02-22706789">
-<meta name="keywords" content="三重區,2房,集美街,三重站,大都會公園">
-<link rel="canonical" href="https://soho360.tw">
+<title>PARK 32｜全民住平實｜官網</title>
+<meta name="description" content="一座城市新的中心，南紡未來中央開始，公園首排的景觀，平實首席的身段。我們不是看見平實，我們是在看見台南下一個二十年。">
+<meta name="keywords" content="站中央 第一位,PARK 32,平實首席 公園首排,2-4房,近二千坪基地">
+<link rel="canonical" href="https://park32.tw">
 
 <!-- Open Graph (社群分享 / LINE / Facebook) -->
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SOHO360｜高訂3米6｜官網">
-<meta property="og:description" content="一橋西門町 對接台北雙星、訂簽5% 工程期0付款 三重區成功路50巷73號旁 02-22706789">
-<meta property="og:site_name" content="SOHO360｜高訂3米6｜官網">
-<meta property="og:url" content="https://soho360.tw">
+<meta property="og:title" content="PARK 32｜全民住平實｜官網">
+<meta property="og:description" content="一座城市新的中心，南紡未來中央開始，公園首排的景觀，平實首席的身段。我們不是看見平實，我們是在看見台南下一個二十年。">
+<meta property="og:site_name" content="PARK 32｜全民住平實｜官網">
+<meta property="og:url" content="https://park32.tw">
 
 <!-- 社群分享圖片 (LINE / FB 預覽圖) -->
-<meta property="og:image" content="https://soho360.tw/og.png">
+<meta property="og:image" content="https://park32.tw/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SOHO360｜高訂3米6｜官網">
+<meta property="og:image:alt" content="PARK 32｜全民住平實｜官網">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SOHO360｜高訂3米6｜官網">
-<meta name="twitter:description" content="一橋西門町 對接台北雙星、訂簽5% 工程期0付款 三重區成功路50巷73號旁 02-22706789">
-<meta name="twitter:image" content="https://soho360.tw/og.png">
+<meta name="twitter:title" content="PARK 32｜全民住平實｜官網">
+<meta name="twitter:description" content="一座城市新的中心，南紡未來中央開始，公園首排的景觀，平實首席的身段。我們不是看見平實，我們是在看見台南下一個二十年。">
+<meta name="twitter:image" content="https://park32.tw/og.png">
 
 <!-- 結構化資料 / Schema.org -->
-<meta itemprop="name" content="SOHO360｜高訂3米6｜官網">
-<meta itemprop="description" content="一橋西門町 對接台北雙星、訂簽5% 工程期0付款 三重區成功路50巷73號旁 02-22706789">
-<meta itemprop="image" content="https://soho360.tw/og.png">
+<meta itemprop="name" content="PARK 32｜全民住平實｜官網">
+<meta itemprop="description" content="一座城市新的中心，南紡未來中央開始，公園首排的景觀，平實首席的身段。我們不是看見平實，我們是在看見台南下一個二十年。">
+<meta itemprop="image" content="https://park32.tw/og.png">

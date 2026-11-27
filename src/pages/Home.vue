@@ -13,14 +13,8 @@
   <div class="home overflow-hidden font-['Noto_Sans_TC',sans-serif] bg-[#E0E0E0] text-[#000]">
   
     <S1 />
-    <hr />
     <S2 />
-    <hr />
-    <S3 />
-    <hr />
-    <S4 />
-    <hr />
-    <S5 /><!--
+   <!-- 
     <S1 />
     <S1new />
     <S1new2 /> -->
@@ -60,10 +54,12 @@ img {
   width: 100%;
   font-size: sizem(13);
   line-height: 1.7;
-  background: url("@/section/s1/bg.jpg") fixed;
+  background: url("@/section/s1/bg.webp") 0 20% fixed;
+  background-size: 172% auto;
 
   @media screen and (min-width: 768px) {
     font-size: size(22);
+  background-size: 100% auto;
   }
 }
 
@@ -83,19 +79,8 @@ img {
     font-size: size(15);
   }
 }
-hr{height: 4px;width: 100%;border: 0;
-background-image: linear-gradient(90deg, #846C37 0%, #907A47 20%, #A49261 30%, #C0B386 40%, #F5F2CA 50%, #E1D3A8 60%, #CEB589 70%, #C0A073 80%, #B89465 90%, #846C37 100%);
-// 漸層寬度為 hr 的 2 倍並橫向重複，位置從 100% 跑到 -100% = 剛好位移一整段，無縫循環、光往右跑
-background-size: 200% 100%;
-background-repeat: repeat-x;
-animation: hr-shine 3s linear infinite;
-}
-@keyframes hr-shine {
-  from { background-position: 100% 0; }
-  to   { background-position: -100% 0; }
-}
 .en{
-  font-family: "trajan-pro-3", serif;
+  font-family: "Times New Roman", serif;
 font-weight: 400;
 font-style: normal;
 }
@@ -103,7 +88,7 @@ font-style: normal;
   position: relative;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.6;
+  line-height: 1.8;
   width: 100%;
   letter-spacing: 0em;
   text-align: center;
@@ -112,25 +97,6 @@ font-style: normal;
   @media screen and (min-width: 768px) {
   }
 
-  .title {
-    font-size: 2.2em;
-    margin: 0em auto 0.7em;
-    line-height: 1.38;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    font-family: 'Noto Serif TC',serif;
-    b {
-      font-size: 1.2em;
-      line-height: 1;
-    }
-
-    @media screen and (min-width: 768px) {
-      font-size: 3.1em;
-      margin: 0em auto 0.3em;
-    letter-spacing: 0.05em;
-
-    }
-  }
 
   .subtitle {
     font-size: 1.2em;
@@ -288,9 +254,6 @@ font-style: normal;
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
-import S3 from "@/section/s3.vue"
-import S4 from "@/section/s4.vue"
-import S5 from "@/section/s5.vue"
 // import S2v from "@/section/s2v.vue"
 // import S11 from "@/section/s11.vue"
 /* 

@@ -1,177 +1,127 @@
 <template>
-  <article class="s2 relative" id="s2">
-    <img src="./s2/bg.jpg" class="bg">
-    <div class="t1" data-aos="fade-up" data-aos-delay="400">台北雙星</div>
-    <div class="t2" data-aos="fade-up" data-aos-delay="500">西門商圈</div>
+  <article class="s2">
+    <Fullview :mapImage="mapImage" :bgImage="bgImage" :offsetRatio="2.4" />
+    <div class="img">
+      <img src="./s1/img.png">
+    </div>
+
     <div class="txt">
-      <div class="en" data-aos="fade-up" data-aos-delay="0">LOCATION & GLOBAL GATEWAY</div>
-      <h2 class="title" data-aos="fade-up" data-aos-delay="100">一橋西門町 對接台北雙星</h2>
+      <h2 class="title" data-aos="fade-up" data-aos-delay="100">中央公園第一排 首席身段第一景</h2>
       <p data-aos="fade-up" data-aos-delay="200">
-        直達千億西區門戶，卡位資產增值第一排
-        <span class="subtitle">捷運三重站×機捷A21雙軌交匯</span>
-        用台北市過半的起漲價，入主成功二街靜巷豪邸
+        「PARK
+        32」正對南北向中央綠帶的中段。往北銜接小東路與平實轉運門戶，往南連結平實路與南紡商圈。在平實，能同時佔據公園中段與首排的基地，本就難得，城市的中央公園、首排景觀的價值，會隨著樹木密植成長、公共建設完工而持續放大，保值抗跌、傳承家業，站上第一排就有話語權。
       </p>
 
     </div>
-    <div class="caption">中興橋實景情境示意</div>
   </article>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
-.t0 {
-  position: absolute;
-  width: 100%;
-  top: 0px;
-  left: 0;
-  pointer-events: none;
-  z-index: 9;
-  opacity: .0;
-}
-
 @keyframes an {
   to {
     transform: translateX(0%);
   }
 }
-
 .s2 {
-  position: relative;
-  height: sizem(667);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #FFF;
+  @apply relative text-[#fff];
+  width: 100%;
   font-size: sizem(12);
-  background: #00459d;
+  margin-top: 0;
 
   @media screen and (min-width: 768px) {
-    height: auto;
-    /* height: size(1070);
-    min-height: size(900);
-    max-height: size(1080);
-    */
-    justify-content: space-between;
-    padding: 0;
-    font-size: size(18);
-
+    font-size: size(16);
+    margin-top: size(150);
   }
-
-  .bg {
-    position: relative;
-    width: 100%;
-  @media screen and (max-width: 767px) {
+  .img {
     position: absolute;
-    bottom: 0;
-    width:auto;
-    left: -87%;
-    height: 70%;
+    width: sizem(480);
+      top: sizem(500);
+      left:  sizem(-30);
+      transform: rotate(-90deg)scale(-1 ,1.3);
+      transform-origin: 0% -8%;
+      img{width: 100%;
+      transform: skewX(-8deg)translateX(-3%);
+      transform-origin: 0 0;
+      animation: an 6s linear infinite alternate;}
 
-  }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 
+  // height: size(1059);
   .txt {
-    position: absolute;
-    top:  sizem(75);
-    left: 0;
-    width: 100%;
-  @media screen and (min-width: 768px) {
-    top: size(115);
-    left: size(230);
-    width: size(700);
-  }
-
-    .en {
-      color: #EB5B1A;
-      font-size: 1.3em;
-  @media screen and (min-width: 768px) {
-      font-size: 1.7em;
-  }
-    }
-
-    p {
-      letter-spacing: 0.1em;
-    }
-
-    span {
-      display: block;
-      font-family: 'Noto Serif TC', serif;
-      font-size: 1.7em;
-      letter-spacing: 0.1em;
-      margin: 0.2em auto 0.3em;
-    }
-  }
-
-  .t1,
-  .t2 {
-    color: #FCEE21;
-    width: 1em;
     text-align: center;
-    line-height: 1.2;
-    font-size: 1em;
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-    top: sizem(275);
-  @media screen and (min-width: 768px) {
-    font-size: 0.8em;
-    top: size(240);
-  }
-  }
+    // position: absolute;
+    margin: sizem(20) auto;
+    width: sizem(350);
+    padding: sizem(40) sizem(20);
+    letter-spacing: 0.04em;
+    z-index: 10; //margin-bottom:-6.3em ;
+    color: #595757;
+    background: #fff9;
 
-  .t1 {
-    left: sizem(-150);
-  @media screen and (min-width: 768px) {
-    left: size(100);}
-  }
-
-  .t2 {
-    left: sizem(250);
-  @media screen and (min-width: 768px) {
-    left: size(1035);
-}
-    &::after {
-      content: "";
-      display: block;
-      width: 1px;
-      background: currentColor;
-      height: 7em;
-      margin: .5em auto;
-      opacity: .7;
-  @media screen and (min-width: 768px) {
-      height: 13.6em;
-}
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      text-align: justify;
+      width: size(620);
+      top: 6.7em;
+      left: auto;
+      margin: 0;
+      right: size(150);
+      color: #fff;
+      padding: 0;
+      background: transparent;
+      text-shadow: 0 0 8px #0369;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translate(-50%, 50%);
-      display: block;
-      width: size(413);
-      background: radial-gradient(50% 50% at 50% 50%, #FCEE21 1%,  #ffc66b 1.5%,#ffc66b66 20%, rgba(255, 213, 145, 0) 100%);
-      height: size(239);
-      margin: .5em auto;
+
+    .title {
+      font-size: 1.6em;
+      margin: 0em auto 0.7em;
+      line-height: 1.38;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-family: 'Noto Serif TC', serif;
+      color: #133C36;
+
+      @media screen and (min-width: 768px) {
+        font-size: 2.6em;
+        margin: 0em auto 0.7em;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+        color: #fff;
+
+      }
+    }
+
+    // .subtitle{font-size: 1.4em;margin-top: .2em;letter-spacing: 0.4em;font-weight: 300;}
+  }
+
+  .viewbox {
+    z-index: 2;
+    margin: 0 auto 0 auto;
+    width: size(1794);
+    //height: sizem(880);
+
+    @media screen and (max-width: 767px) {
+      height: sizem(550);
+      width: 100%;
+      top: 0;
     }
   }
 
 }
 </style>
+
 <script setup>
-import { computed, getCurrentInstance, ref, inject } from 'vue';
+import { computed, getCurrentInstance } from 'vue';
+import Fullview from '../components/fullview.vue';
+import mapImage from '@/section/s2/map.svg';
+import bgImage from '@/section/s2/map.jpg';
+
 const globals = getCurrentInstance().appContext.config.globalProperties;
-
 const isMobile = computed(() => globals.$isMobile());
-
-const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-  smoothScroll({
-    scrollTo: document.querySelector(el)
-  })
-}
 </script>

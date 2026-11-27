@@ -1,7 +1,11 @@
 <template>
   <div id="order" class="order relative text-center ">
     <div class="order-section">
-      <div class="en">BOOK A VISIT</div>
+    <div class="img">
+      <img src="./s1/img.png">
+    </div>
+
+      <div class="en">CONTACT US</div>
       <!--  <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
@@ -109,7 +113,7 @@
       <div class="sendall mt-8 mb-12 mx-auto">
 
         <button v-if="!submitted" class="send" :disabled="sending" @click="send">
-          送出表單
+          即刻預約<span>APPOINTMENT</span>
         </button>
 
         <div v-else class="send-load">
@@ -133,23 +137,45 @@
 .order {
   width: 100%;
   padding-top: 10.5em;
-  font-size: 15px;
+  font-size: 16px;
   @media screen and (max-width:768px) {
   padding-top: 3.5em;
+  font-size: 15px;
   }
 
   .order-section {
     position: relative;
-    overflow: hidden;
+  //  overflow: hidden;
     min-height: size(500);
       .en {
-        color: #EB5B1A;
-        font-size: sizem(22);
+        color: #133C36;
+        font-size: sizem(32);
 
         @media screen and (min-width: 768px) {
-          font-size: size(45);
+          font-size: size(63);
         }
       }
+@keyframes an {
+  to {
+    transform: translateX(0%);
+  }
+}
+  .img {
+    position: absolute;
+    width: sizem(480);
+      bottom: 0;
+      right:  0;
+      transform: rotate(-17deg)scale(-1 ,-1.5);
+      transform-origin: 60% 50%;
+      img{width: 100%;
+      transform: skewX(-8deg)translateX(-3%);
+      transform-origin: 0 0;
+      animation: an 6s linear infinite alternate;}
+
+    @media screen and (min-width: 768px) {
+    width: size(1780);
+    }
+  }
   }
 
   .order-title {
@@ -167,7 +193,7 @@
   }
 
   .form {
-    width: min(1000px, 95%);
+    width: min(1200px, 95%);
     gap: 4em;
     margin-top: 2.5em;
     margin-bottom: 2.5em;
@@ -287,7 +313,7 @@
 
   .send {
     font-size: 1.438rem;
-    background-color: #024E54;
+    background: #133C36 url("@/section/s1/bg2.jpg");
     border: 0;
     padding: .7em 0;
     letter-spacing: 0.5em;
@@ -297,10 +323,19 @@
     text-align: center;
     width: 18em;
     z-index: 10;
-    color: #fff;
+    color: #ffe893;
     position: relative;
     transition: transform .3s;
-    font-weight: 700;
+    font-weight: 400;
+    &::before{content: "";
+  position: absolute;
+  width: 100%;top: 0;left: 0;height: 100%;
+
+mix-blend-mode: overlay;
+  border: 8px solid;
+  border-color: #DDD #444 #222  #444;
+  }
+    span{font-size: .5em;letter-spacing: 0.4em;display: block;font-weight: 400;text-indent: -0.01em;}
     &:hover { transform: scale(.9); }
   }
   .send-load { color:#000000; }

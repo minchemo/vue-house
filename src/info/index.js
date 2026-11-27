@@ -1,23 +1,23 @@
-const caseName = "Soho360"
+const caseName = "PARK32"
 
 export default {
-  caseid: "68bfd49b-ac6c-4a6e-8331-7355a837268a",
+  caseid: "ee6a9758-c21b-4f22-a0d6-11f0f55d9b65",
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-  address: "台北市三重區成功路50巷73號旁",
-  googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d903.6345881084212!2d121.48684226961335!3d25.049736213574366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAyJzU5LjEiTiAxMjHCsDI5JzE1LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1795596644806!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/RLRNZH42KpAcuZoK9",
-  phone: "02-22706789",
+  address: "台南市東區中華東路一段與平實七街口",
+    googleSrc: "https://www.google.com/maps?q=%E5%8F%B0%E5%8D%97%E5%B8%82%E6%9D%B1%E5%8D%80%E4%B8%AD%E8%8F%AF%E6%9D%B1%E8%B7%AF%E4%B8%80%E6%AE%B5%20%26%20%E5%B9%B3%E5%AF%A6%E4%B8%83%E8%A1%97&output=embed",
+    googleLink: "https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8D%97%E5%B8%82%E6%9D%B1%E5%8D%80%E4%B8%AD%E8%8F%AF%E6%9D%B1%E8%B7%AF%E4%B8%80%E6%AE%B5%20%26%20%E5%B9%B3%E5%AF%A6%E4%B8%83%E8%A1%97",
+    phone: "06-2008822",
   fbLink: "https://www.facebook.com/",
   fbMessage: "https://m.me/",
  // line: "https://lin.ee/qakWswp",
   caseName: caseName,
   houseInfos: [
+    /*
     ["建築興建", "詮美建設股份有限公司"],
     ["建照號碼", "111重建字第00422號"],
     ["建築設計", "莊志寬建築師事務所"],
     ["建築行銷", "聯頡廣告事業有限公司"],
-    /*
     */
   ],
   // gtmCode: ["GTM-0"], // 可放置多個

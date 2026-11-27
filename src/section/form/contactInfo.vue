@@ -8,7 +8,7 @@
       <!--  <div class="logo">
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>  -->
-      <img src="@/section/s1/logo2.svg" class="logo" alt="">
+      <img src="@/section/s1/logo2.png" class="logo" alt="">
 
       <div class="contact-row">
         <div class="contact-item" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
@@ -205,7 +205,7 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
   padding: 1.1em 1em;
   background: transparent;
   color: #444;
-  border: 1px solid #024E5499;
+  border: 1px solid #133C36;
   border-radius: $border-radius;
   font-size: 16px;
   font-weight: 700;
@@ -219,14 +219,16 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     object-fit: contain;
     flex-shrink: 0;
     filter: brightness(0) invert(13%) sepia(75%) saturate(1003%) hue-rotate(122deg) brightness(93%) contrast(101%);
-    transition: filter 0.25s;
+    // transition: filter 0s;
     margin: 0;
   }
 
   &:hover {
-    background: #fff6;
-    color: #444;
-    border-color: #000
+    background: #133C36;
+    color: #ffe893;
+     img { filter: brightness(0) invert(96%) sepia(3%) saturate(6303%) hue-rotate(328deg) brightness(90%) contrast(142%);
+     }
+    border-color: #133C36
   }
 }
 
@@ -260,11 +262,11 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
         &.address {
           border: none;
           background: transparent;
-          color: #000000;
+          color: #3b3b3b;
           cursor: default;
           white-space: normal;
           text-align: center;
-          border: 1px solid #024E54;
+          border: 1px solid #133C36;
           border-right: 0;
           border-radius: $border-radius 0 0 $border-radius;
         }
@@ -293,7 +295,8 @@ $btn-w: calc((100% - #{$gap} * #{$cols - 1}) / #{$cols});
     width: sizem(375);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     font-size: sizem(16);
-    background: #024E54;
+    background: #133C36 url("@/section/s1/bg2.jpg");
+    background-size: 100% auto;
 
     .contact-item {
       flex: 1;
