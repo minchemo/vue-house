@@ -9,7 +9,7 @@
 
       <img src="./s1/img.png" class="img">
     <img src="./s1/slogo.svg" class="slogo" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/logo.svg" class="logo" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/logo.svg " class="logo" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/t1.svg" class="t1" data-aos="zoom-in" data-aos-delay="400">
     
     <div class="button" data-aos="zoom-in" data-aos-delay="600" @click="scrollTo('.order')">
